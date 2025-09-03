@@ -1,52 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code, CheckCircle, Star, TrendingUp, Clock, Award, Phone, Mail, MapPin } from 'lucide-react';
-=======
-<<<<<<< HEAD
-import Head from 'next/head';
-import { 
-  ArrowRight, 
-  CheckCircle, 
-  Star, 
-  Users, 
-  Zap, 
-  Shield, 
-  Globe, 
-  TrendingUp, 
-  Award, 
-  Clock, 
-  Brain, 
-  Cloud, 
-  Database, 
-  Network, 
-  Target, 
-  Phone, 
-  Mail,
-  MapPin,
-  MessageCircle,
-  Eye,
-  FileText,
-  Settings,
-  Link as LinkIcon,
-  CheckSquare,
-  ShoppingCart,
-  UserCheck,
-  AlertTriangle,
-  Wifi,
-  Link2,
-  Glasses,
-  Bot,
-  Cpu,
-  Layers,
-  Activity
-} from 'lucide-react';
->>>>>>> main
-
-export default function Home() {
-  const stats = [
-=======
 import { ModernHeader } from '../src/components/header/ModernHeader';
 import { SimpleFooter } from '../src/components/layout/SimpleFooter';
 import { 
@@ -66,7 +20,20 @@ import {
   Rocket,
   Mail,
   Phone,
-  MapPin
+  MapPin,
+  Award,
+  Clock,
+  BarChart3,
+  Server,
+  Network,
+  Target,
+  MessageCircle,
+  Eye,
+  FileText,
+  Settings,
+  Bot,
+  Cpu,
+  Activity
 } from 'lucide-react';
 
 export default function Home() {
@@ -137,71 +104,83 @@ export default function Home() {
     }
   ];
 
+  const newServices = [
+    {
+      icon: MessageCircle,
+      title: 'Affiliate Marketing Tracking',
+      description: 'Advanced affiliate marketing platform with fraud protection and automated payments',
+      pricing: '$2,500 - $8,000/month',
+      category: 'Micro SaaS'
+    },
+    {
+      icon: BarChart3,
+      title: 'Website Analytics for SMBs',
+      description: 'Intuitive business intelligence dashboard for small business owners',
+      pricing: '$1,500 - $5,000/month',
+      category: 'Micro SaaS'
+    },
+    {
+      icon: Users,
+      title: 'IT Helpdesk Software',
+      description: 'Custom ticketing system for Managed IT Service Providers',
+      pricing: '$3,000 - $12,000/month',
+      category: 'IT Services'
+    },
+    {
+      icon: FileText,
+      title: 'AI Content Creation Tools',
+      description: 'AI-powered content generation with SEO optimization and personalization',
+      pricing: '$1,500 - $5,000/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Settings,
+      title: 'E-Commerce Return Management',
+      description: 'Automated return process management for e-commerce businesses',
+      pricing: '$2,000 - $6,000/month',
+      category: 'Micro SaaS'
+    }
+  ];
+
   return (
     <>
       <Head>
-<<<<<<< HEAD
         <title>Zion Tech Group - Leading AI, Cloud & Technology Solutions</title>
         <meta name="description" content="Transform your business with our comprehensive suite of AI services, micro SaaS solutions, cloud infrastructure, and cutting-edge technology innovations. Contact us at +1 302 464 0950." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="keywords" content="AI services, micro SaaS, cloud solutions, IT services, cybersecurity, data analytics, technology consulting" />
-      </Head>
-      
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 py-20 sm:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="flex items-center justify-center mb-4">
-              <Award className="h-6 w-6 text-blue-600 mr-2" />
-              <span className="text-base font-semibold leading-7 text-blue-600">Leading Technology Solutions</span>
-            </div>
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Transform Your Business with{' '}
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Advanced Technology
-              </span>
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600 max-w-3xl mx-auto">
-              We deliver cutting-edge AI services, micro SaaS solutions, cloud infrastructure, and innovative technology platforms that drive real business results.
-=======
-        <title>Zion Tech Group - Leading AI & Technology Solutions</title>
-        <meta name="description" content="Transform your business with cutting-edge AI, cloud architecture, DevOps, and innovative development services. Expert technology solutions for modern enterprises." />
-        <meta name="keywords" content="AI solutions, cloud architecture, DevOps, cybersecurity, digital transformation, micro SaaS, technology consulting, enterprise solutions" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https://ziontechgroup.com" />
       </Head>
       
       <ModernHeader />
       
       <main className="min-h-screen bg-white">
-<<<<<<< HEAD
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20">
-=======
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20 sm:py-32">
+        <section className="bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 py-20 sm:py-32">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-                Transform Your Business with
-                <span className="text-blue-600 block">Cutting-Edge Technology</span>
+              <div className="flex items-center justify-center mb-4">
+                <Award className="h-6 w-6 text-blue-600 mr-2" />
+                <span className="text-base font-semibold leading-7 text-blue-600">Leading Technology Solutions</span>
+              </div>
+              <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+                Transform Your Business with{' '}
+                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                  Advanced Technology
+                </span>
               </h1>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-                Leading provider of revolutionary AI services, cloud solutions, and innovative micro SaaS platforms. 
-                We help enterprises scale, secure, and optimize their digital infrastructure.
+              <p className="mt-6 text-lg leading-8 text-gray-600 max-w-3xl mx-auto">
+                We deliver cutting-edge AI services, micro SaaS solutions, cloud infrastructure, and innovative technology platforms that drive real business results.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="mt-10 flex items-center justify-center gap-x-6">
                 <Link
                   href="/contact"
-                  className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors font-semibold text-lg inline-flex items-center justify-center"
+                  className="rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                 >
                   Get Started Today
-                  <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
-                <Link
-                  href="/services"
-                  className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition-colors font-semibold text-lg inline-flex items-center justify-center"
-                >
-                  Explore Services
+                <Link href="/services" className="text-sm font-semibold leading-6 text-gray-900">
+                  Explore Services <span aria-hidden="true">→</span>
                 </Link>
               </div>
             </div>
