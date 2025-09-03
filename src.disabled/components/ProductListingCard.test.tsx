@@ -1,2 +1,0 @@
-describe("ProductListingCard", () => { it("renders without crashing", () => { render(<ProductListingCard />) ; expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; it("displays expected content", () => { render(<ProductListingCard />) ;
-}}))
