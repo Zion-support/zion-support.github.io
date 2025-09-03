@@ -2,8 +2,7 @@
 const ComprehensivePricingGuide2030: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState(
   'all')';
-  const [searchTerm, setSearchTerm] = useState(';
-  ');
+  const [searchTerm, setSearchTerm] = useState();
     ...innovativeAIServices2030,
     ...innovativeCybersecurityServices2030,
     ...innovativeCloudDevOpsServices2030;
@@ -43,18 +42,12 @@ const ComprehensivePricingGuide2030: React.FC = () => {
   ',Mobile app access';
       ],
 features[';Basic AI features',
-  ';
-        'Email support;
-  ',';
-  'Up to 5 users',
-  ';
-        'Standard integrations;
-  ',';
-  'Community forum access',
-  ';
-        'Basic analytics;
-  ',';
-  'Mobile app access';
+  Email support;
+  ',Up to 5 users',
+  Standard integrations;
+  ',Community forum access',
+  Basic analytics;
+  ',Mobile app access';
       ],';
       color: 'from-cyan-500 to-blue-600,
       popular: false,
@@ -169,8 +162,7 @@ features[';Basic AI features',
                   onClick={() => setActiveCategory(category.id)}
                   className={`flex items-center gap-2 px-4 py-2 rounded-lg border transition-all ${
                     activeCategory === category.id,
-  ? 'bg-purple-600 border-purple-500 text-white';
-  ': 'bg-white/10 border-white/20 text-white hover:bg-white/20`}`}
+  ? 'bg-purple-600 border-purple-500 text-white: 'bg-white/10 border-white/20 text-white hover:bg-white/20`}`}
 '
                   <category.icon className='w-4 h-4' />
                   <span>{category.name}</span>'
@@ -329,8 +321,7 @@ features[';Basic AI features',
   y: 0}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}';
-            className='text-center mb-16';
-';
+            className='text-center mb-16;
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
               Why Our Pricing is Competitive
             </h2>'
@@ -342,27 +333,27 @@ features[';Basic AI features',
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {[{
                 icon: DollarSign,';
-                title: 'Transparent Pricing',';
+                title: 'Transparent Pricing,;
                 description: 'No hidden fees or surprise charges. Clear, upfront pricing for all services.'},
               {
                 icon: Award,';
-                title: 'Premium Quality',';
+                title: 'Premium Quality,;
                 description: 'Enterprise-grade solutions at competitive prices. Quality that exceeds expectations.'},
               {
                 icon: Users,';
-                title: 'Scalable Plans',';
+                title: 'Scalable Plans,;
                 description: 'Start small and scale up as your business grows. Flexible pricing options.'},
               {
                 icon: Zap,';
-                title: 'Fast ROI',';
+                title: 'Fast ROI,;
                 description: 'Our services deliver measurable results quickly, maximizing your investment.'},
               {
                 icon: Shield,';
-                title: 'Risk-Free Trial',';
+                title: 'Risk-Free Trial,;
                 description: 'Try our services with confidence. Free trials and money-back guarantees.'},
               {
                 icon: Clock,';
-                title: '24/7 Support',';
+                title: '24/7 Support,;
                 description: 'Round-the-clock support included in all plans. No additional support fees.'
             ].map ( (benefit, index) => (
               <motion.div;
@@ -377,8 +368,7 @@ features[';Basic AI features',
   { duration: 0.5,
   delay: index * 0.1}}
                 viewport={{ once: true }}';
-                className='text-center';
-';
+                className='text-center;
                 <div className='w-16 h-16 bg-purple-600/20 border border-purple-500/30 rounded-full flex items-center justify-center mx-auto mb-4'>'
                   <benefit.icon className='w-8 h-8 text-purple-400' />
                 </div>'

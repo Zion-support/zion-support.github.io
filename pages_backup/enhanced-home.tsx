@@ -20,7 +20,7 @@ import SecurityEnhancer from '../components/SecurityEnhancer';
 
 const EnhancedHome: React.FC = () => {
   const features = [
-    {
+  {
       icon: Brain,
       title: 'AI-Powered Solutions',
       description:
@@ -65,14 +65,14 @@ const EnhancedHome: React.FC = () => {
   ];
 
   const stats = [
-    { number: '500+', label: 'Projects Completed' },
+  { number: '500+', label: 'Projects Completed' },
     { number: '99.9%', label: 'Uptime Guarantee' },
     { number: '50+', label: 'Expert Team Members' },
     { number: '24/7', label: 'Support Available' },
   ];
 
   const testimonials = [
-    {
+  {
       name: 'Sarah Johnson',
       role: 'CTO, TechCorp',
       content:

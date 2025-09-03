@@ -1,7 +1,7 @@
 :src.disabled/components/ErrorBoundary.tsx;
 import React, { Component, ErrorInfo, ReactNode } from;
   'react'';interface Props {
-  import React, { Component, ErrorInfo, ReactNode} from 'react'';interface Props {
+  import React, { Component, ErrorInfo, ReactNode}  from 'react;interface Props {
    export class ErrorBoundary extends Component < Props, State> {
    children: ReactNode;
    fallback?: ReactNode}interface State {

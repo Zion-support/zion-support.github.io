@@ -64,7 +64,7 @@ import {
   Award,
   Leaf,
   Sun,
-  Wind
+  Wind,
 } from 'lucide-react';
 
 interface SidebarProps extends React.PropsWithChildren<{}> {
@@ -106,7 +106,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           { name: 'Machine Learning', href: '/services/machine-learning' },
           { name: 'Natural Language Processing', href: '/services/nlp' },
           { name: 'Computer Vision', href: '/services/computer-vision' },
-        ]
+        ],
       },
       {
         name: 'Cloud & Infrastructure',
@@ -116,7 +116,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           { name: 'DevOps', href: '/services/devops' },
           { name: 'Microservices', href: '/services/microservices' },
           { name: 'Containerization', href: '/services/containerization' },
-        ]
+        ],
       },
       {
         name: 'Web Development',
@@ -126,17 +126,20 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           { name: 'Backend Development', href: '/services/backend' },
           { name: 'Full-Stack Development', href: '/services/fullstack' },
           { name: 'E-commerce Solutions', href: '/services/ecommerce' },
-        ]
+        ],
       },
       {
         name: 'Cybersecurity',
         icon: Shield,
         children: [
           { name: 'Security Audits', href: '/services/security-audits' },
-          { name: 'Penetration Testing', href: '/services/penetration-testing' },
+          {
+            name: 'Penetration Testing',
+            href: '/services/penetration-testing',
+          },
           { name: 'Compliance', href: '/services/compliance' },
           { name: 'Incident Response', href: '/services/incident-response' },
-        ]
+        ],
       },
     ],
     solutions: [
@@ -148,7 +151,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           { name: 'Finance', href: '/solutions/finance' },
           { name: 'Education', href: '/solutions/education' },
           { name: 'Manufacturing', href: '/solutions/manufacturing' },
-        ]
+        ],
       },
       {
         name: 'Technology Solutions',
@@ -158,7 +161,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           { name: 'Blockchain', href: '/solutions/blockchain' },
           { name: 'Quantum Computing', href: '/solutions/quantum' },
           { name: 'AR/VR', href: '/solutions/ar-vr' },
-        ]
+        ],
       },
     ],
     resources: [
@@ -174,7 +177,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       { name: 'Contact Support', href: '/support', icon: LifeBuoy },
       { name: 'Status Page', href: '/status', icon: Server },
       { name: 'Community', href: '/community', icon: Users },
-    ]
+    ],
   };
 
   const renderNavigationItem = (item: any, level = 0) => {
@@ -263,14 +266,26 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">Z</span>
               </div>
-              <span className="ml-3 text-xl font-bold text-gray-900">Zion Tech</span>
+              <span className="ml-3 text-xl font-bold text-gray-900">
+                Zion Tech
+              </span>
             </div>
             <button
               onClick={onClose}
               className="lg:hidden p-2 rounded-lg hover:bg-gray-100"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
               </svg>
             </button>
           </div>

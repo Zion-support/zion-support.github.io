@@ -1,4 +1,10 @@
+<<<<<<< HEAD
+import React from 'react';
+import { useState, useEffect } from "react";
+
+=======
 import { useState, useEffect } from 'react';
+>>>>>>> main
 interface ResponsiveState {
   screenWidth: number;
   screenHeight: number;

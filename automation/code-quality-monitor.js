@@ -22,7 +22,7 @@ class CodeQualityMonitor {
     this.metrics = {
   complexity: 0, maintainability: 0, testCoverage: 0, performance: 0, lastUpdated: new Date().toISOString()
 }
-    this.logFile = path.join(__dirname, , logs', 'code-quality.log')}
+    this.logFile = path.join(__dirname, , logs,code-quality.log')}
   log(message) {
     const timestamp = new Date().toISOString()
     const logMessage = `[${timestamp}] ${message}\n`
@@ -424,7 +424,7 @@ class CodeQualityMonitor {
   'No security vulnerabilities found')
     } catch (error) {
       this.log(
-  'Security vulnerabilities detected, consider running npm audit fix', 'WARN')
+  'Security vulnerabilities detected, consider running npm audit fix,WARN')
   async cleanupOldReports() {
     this.log(
   'Cleaning up old reports...')
@@ -458,7 +458,7 @@ class CodeQualityMonitor {
   'Quality rules update completed')
   findSourceFiles() {
     const extensions = [
-  '.ts', '.tsx', '.js', '.jsx']
+  '.ts,.tsx,.js,.jsx']
     const files = []
     function traverse(dir) {
       const items = fs.readdirSync(dir)
@@ -476,7 +476,7 @@ class CodeQualityMonitor {
     walkDir(projectRoot)
     return files}
   saveMetrics() {
-    const metricsFile = path.join(__dirname, 'logs', 'code-quality-metrics.json')
+    const metricsFile = path.join(__dirname, 'logs,code-quality-metrics.json')
     fs.writeFileSync(metricsFile, JSON.stringify(this.metrics, null, 2))}
 }
 const monitor = new CodeQualityMonitor()

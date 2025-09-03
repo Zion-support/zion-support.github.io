@@ -13,7 +13,7 @@ class TypeScriptSyntaxFixer {
   constructor() {
     this.projectRoot = process.cwd();
     this.logFile = path.join(
-      this.projectRoot,logs',
+      this.projectRoot, 'logs',
       'typescript-syntax-fixer.log'
     );
     this.fixesLog = path.join(this.projectRoot, 'logs', 'syntax-fixes.json');

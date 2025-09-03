@@ -1,6 +1,5 @@
 'use client'
-import { useState } from 'react'
-interface InstanceCardProps {
+import { useState }  from 'react';interface InstanceCardProps {
   instance: { id: string;
    name: string;
    slug: string;
@@ -60,8 +59,7 @@ export function InstanceCard({ instance }: InstanceCardProps) {
             </span>
             <span className={`px-2 py-1 rounded-full text-xs font-medium border ${getGovernanceColor(instance.governanceType)}`}>
               {instance.governanceType.replace(
-  '_',
-  ' ')}
+  '_, ')}
             </span>
           </div>
         </div>

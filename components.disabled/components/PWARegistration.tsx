@@ -12,7 +12,8 @@ interface BeforeInstallPromptEvent extends Event {
 }
 
 const PWARegistration: React.FC = () => {
-  const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
+  const [deferredPrompt, setDeferredPrompt] =
+    useState<BeforeInstallPromptEvent | null>(null);
   const [showInstallPrompt, setShowInstallPrompt] = useState(false);
   const [isInstalled, setIsInstalled] = useState(false);
 
@@ -41,17 +42,21 @@ const PWARegistration: React.FC = () => {
 
     // Register service worker
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js')
-        .then((registration) => {
+      navigator.serviceWorker
+        .register('/sw.js')
+        .then(registration => {
           console.log('Service Worker registered successfully:', registration);
         })
-        .catch((error) => {
+        .catch(error => {
           console.log('Service Worker registration failed:', error);
         });
     }
 
     return () => {
-      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+      window.removeEventListener(
+        'beforeinstallprompt',
+        handleBeforeInstallPrompt
+      );
       window.removeEventListener('appinstalled', handleAppInstalled);
     };
   }, []);
@@ -61,13 +66,13 @@ const PWARegistration: React.FC = () => {
 
     deferredPrompt.prompt();
     const { outcome } = await deferredPrompt.userChoice;
-    
+
     if (outcome === 'accepted') {
       console.log('User accepted the install prompt');
     } else {
       console.log('User dismissed the install prompt');
     }
-    
+
     setDeferredPrompt(null);
     setShowInstallPrompt(false);
   };
@@ -97,7 +102,9 @@ const PWARegistration: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900">Install App</h3>
-                  <p className="text-sm text-gray-600">Get quick access to our platform</p>
+                  <p className="text-sm text-gray-600">
+                    Get quick access to our platform
+                  </p>
                 </div>
               </div>
               <button

@@ -1,8 +1,7 @@
 import * as React from,
   react' const ThemeProvider = ({ children }) => { const [theme, setTheme] = React.useState(
   'system') React.useEffect(() => { const root = window.document.documentElement root.classList.remove(
-  'light',
-  'dark') if (theme ===;
+  'light,dark') if (theme ===;
   'system') { const systemTheme = window.matchMedia(
   '(prefers-color-scheme: dark)').matches ?;
   'dark' :

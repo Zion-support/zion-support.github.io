@@ -1,16 +1,28 @@
-import React from 'react';
+<<<<<<< HEAD
+import React from 'react;
 import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import financial-solutions from './financial-solutions';
+import @testing-library/jest-dom';
+import financial-solutions from './financial-solutions;
 
 describe('financial-solutions', () => {
-  it('renders without crashing', () => {
+  it(renders without crashing', () => {
     render(<financial-solutions />);
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+    expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument();
   });
 
+=======
+import React from 'react'
+import { render, screen } from '@testing-library/react'
+import '@testing-library/jest-dom'
+import financial-solutions from './financial-solutions'
+describe('financial-solutions', () => {
+  it('renders without crashing', () => {
+    render(<financial-solutions />)
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()
+  })
+>>>>>>> main
   it('displays expected content', () => {
-    render(<financial-solutions />);
+    render(<financial-solutions />)
     // Add more specific tests here
-  });
-});
+  })
+})

@@ -39,7 +39,7 @@ import {
 
 const AICodeAssistant: React.FC = () => {
   const features = [
-    {
+  {
       icon: Code,
       title: 'AI Code Generation',
       description: 'Generate high-quality code in multiple languages with natural language prompts',
@@ -78,11 +78,11 @@ const AICodeAssistant: React.FC = () => {
   ];
 
   const developmentTools = [
-    {
+  {
       title: 'Code Generation',
       description: 'AI-powered code generation for faster development and prototyping',
       icon: Code,
-      benefits: ['Multi-language support', 'Context-aware generation', 'Code completion', 'Snippet library'],
+      benefits: ['Multi-language support,Context-aware generation,Code completion,Snippet library'],
       pricing: '$29/month',
       color: 'from-blue-500 to-cyan-500'
     },
@@ -90,7 +90,7 @@ const AICodeAssistant: React.FC = () => {
       title: 'Debug Assistant',
       description: 'Intelligent debugging with error analysis and fix suggestions',
       icon: Bug,
-      benefits: ['Error detection', 'Fix suggestions', 'Performance analysis', 'Security scanning'],
+      benefits: ['Error detection,Fix suggestions,Performance analysis,Security scanning'],
       pricing: '$39/month',
       color: 'from-green-500 to-emerald-500'
     },
@@ -98,7 +98,7 @@ const AICodeAssistant: React.FC = () => {
       title: 'Test Automation',
       description: 'Automated test generation and execution for comprehensive coverage',
       icon: TestTube,
-      benefits: ['Unit test generation', 'Integration tests', 'Coverage analysis', 'CI/CD integration'],
+      benefits: ['Unit test generation,Integration tests,Coverage analysis,CI/CD integration'],
       pricing: '$49/month',
       color: 'from-purple-500 to-pink-500'
     },
@@ -106,36 +106,18 @@ const AICodeAssistant: React.FC = () => {
       title: 'Code Review',
       description: 'AI-powered code review with best practices and optimization suggestions',
       icon: Search,
-      benefits: ['Code quality analysis', 'Best practices', 'Performance optimization', 'Security review'],
+      benefits: ['Code quality analysis,Best practices,Performance optimization,Security review'],
       pricing: '$59/month',
       color: 'from-yellow-500 to-orange-500'
     }
   ];
 
   const benefits = [
-    'Write code 3x faster',
-    'Reduce bugs by 70%',
-    'Improve code quality',
-    'Automated testing',
-    'Real-time assistance',
-    'Multi-language support',
-    'IDE integration',
-    'Team collaboration'
+    'Write code 3x faster,Reduce bugs by 70%,Improve code quality,Automated testing,Real-time assistance,Multi-language support,IDE integration,Team collaboration'
   ];
 
   const supportedLanguages = [
-    'JavaScript/TypeScript',
-    'Python',
-    'Java',
-    'C#',
-    'Go',
-    'Rust',
-    'PHP',
-    'Ruby',
-    'Swift',
-    'Kotlin',
-    'C++',
-    'React/Vue/Angular'
+    'JavaScript/TypeScript,Python,Java,C#,Go,Rust,PHP,Ruby,Swift,Kotlin,C++,React/Vue/Angular'
   ];
 
   return (
