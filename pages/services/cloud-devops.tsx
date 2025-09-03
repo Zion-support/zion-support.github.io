@@ -166,7 +166,7 @@ const CloudDevOps = () => {
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
                 Scale your infrastructure with our comprehensive cloud migration and DevOps automation services. 
-                From cloud migration to continuous deployment, we've got you covered.
+                From cloud migration to continuous deployment, we&apos;ve got you covered.
               </p>
               <div className="flex items-center justify-center space-x-4 text-sm text-gray-400">
                 <div className="flex items-center">

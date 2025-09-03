@@ -299,7 +299,7 @@ const Cybersecurity = () => {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold mb-4">Secure Your Business Today</h2>
             <p className="text-xl mb-8 text-cyan-100">
-              Don't wait for a security breach. Get comprehensive protection now.
+              Don&apos;t wait for a security breach. Get comprehensive protection now.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

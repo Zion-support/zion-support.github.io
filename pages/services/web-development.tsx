@@ -246,7 +246,7 @@ export default function WebDevelopment() {
               Ready to Build Your Next Web Application?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Let's discuss your project requirements and create a custom web solution that drives your business forward.
+              Let&apos;s discuss your project requirements and create a custom web solution that drives your business forward.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
