@@ -76,6 +76,66 @@ export default function ServicesCatalog() {
             'Audit‑ready reports and reminders'
           ],
           link: '/micro-saas'
+        },
+        {
+          name: 'AI-Powered Email Follow-Up Automation',
+          blurb: 'Intelligent email sequences that adapt based on recipient behavior, engagement metrics, and response patterns.',
+          price: '$199 – $899/month',
+          eta: '1–2 weeks',
+          bullets: [
+            'Behavioral triggers and smart timing optimization',
+            'A/B testing for subject lines and content',
+            'Integration with CRM and marketing platforms',
+            'Advanced analytics and conversion tracking'
+          ],
+          link: '/micro-saas',
+          refs: [
+            { label: 'Mailchimp', href: 'https://mailchimp.com' },
+            { label: 'HubSpot', href: 'https://hubspot.com' }
+          ]
+        },
+        {
+          name: 'E-Commerce Return Management SaaS',
+          blurb: 'Streamlined return processing with automated workflows, fraud detection, and customer satisfaction tracking.',
+          price: '$299 – $1,299/month',
+          eta: '2–3 weeks',
+          bullets: [
+            'Automated return authorization and tracking',
+            'Fraud detection and prevention algorithms',
+            'Customer self-service portal integration',
+            'Analytics dashboard for return patterns'
+          ],
+          link: '/micro-saas'
+        },
+        {
+          name: 'Mobile-First Survey & Feedback Platform',
+          blurb: 'Adaptive surveys that personalize based on responses, with real-time analytics and sentiment analysis.',
+          price: '$149 – $699/month',
+          eta: '1–2 weeks',
+          bullets: [
+            'Dynamic question branching and personalization',
+            'Real-time sentiment analysis and insights',
+            'Multi-channel distribution (SMS, email, web)',
+            'Advanced reporting and data visualization'
+          ],
+          link: '/micro-saas'
+        },
+        {
+          name: 'AI Content Creation & SEO Suite',
+          blurb: 'End-to-end content generation with SEO optimization, plagiarism detection, and performance tracking.',
+          price: '$399 – $1,999/month',
+          eta: '2–4 weeks',
+          bullets: [
+            'AI-powered content generation and optimization',
+            'SEO analysis and keyword research automation',
+            'Plagiarism detection and originality scoring',
+            'Content performance tracking and optimization'
+          ],
+          link: '/micro-saas',
+          refs: [
+            { label: 'OpenAI GPT', href: 'https://openai.com' },
+            { label: 'Ahrefs', href: 'https://ahrefs.com' }
+          ]
         }
       ]
     },
@@ -125,6 +185,66 @@ export default function ServicesCatalog() {
             'Works with Zendesk, Intercom, Freshdesk'
           ],
           link: '/ai-services'
+        },
+        {
+          name: 'AI-Powered Email Responder',
+          blurb: 'Intelligent email management that reads, categorizes, and responds to emails with human oversight.',
+          price: '$800 – $4,000/month',
+          eta: '2–4 weeks',
+          bullets: [
+            'Automatic email classification and prioritization',
+            'Smart response suggestions with tone matching',
+            'Integration with existing email systems',
+            'Learning from user feedback and corrections'
+          ],
+          link: '/ai-services',
+          refs: [
+            { label: 'Gmail API', href: 'https://developers.google.com/gmail' },
+            { label: 'Outlook API', href: 'https://docs.microsoft.com/en-us/graph/api/resources/mail-api-overview' }
+          ]
+        },
+        {
+          name: 'Computer Vision Analytics Platform',
+          blurb: 'Advanced image and video analysis for quality control, security, and business intelligence.',
+          price: '$2,500 – $12,000/month',
+          eta: '4–8 weeks',
+          bullets: [
+            'Real-time object detection and classification',
+            'Quality control and defect detection',
+            'Facial recognition and access control',
+            'Custom model training and deployment'
+          ],
+          link: '/ai-services'
+        },
+        {
+          name: 'AI-Powered Business Intelligence',
+          blurb: 'Automated insights generation from business data with natural language querying and predictive analytics.',
+          price: '$1,500 – $7,000/month',
+          eta: '3–6 weeks',
+          bullets: [
+            'Natural language data querying',
+            'Automated insight generation and alerts',
+            'Predictive analytics and forecasting',
+            'Interactive dashboards and reports'
+          ],
+          link: '/ai-services'
+        },
+        {
+          name: 'Voice AI & Speech Processing',
+          blurb: 'Advanced speech recognition, synthesis, and voice analytics for customer service and accessibility.',
+          price: '$1,000 – $5,000/month',
+          eta: '3–5 weeks',
+          bullets: [
+            'Multi-language speech recognition',
+            'Voice synthesis and text-to-speech',
+            'Sentiment analysis from voice patterns',
+            'Real-time transcription and translation'
+          ],
+          link: '/ai-services',
+          refs: [
+            { label: 'Google Speech-to-Text', href: 'https://cloud.google.com/speech-to-text' },
+            { label: 'Azure Speech Services', href: 'https://azure.microsoft.com/en-us/services/cognitive-services/speech-services/' }
+          ]
         }
       ]
     },
@@ -169,6 +289,79 @@ export default function ServicesCatalog() {
             'Snowflake/BigQuery/Redshift warehousing',
             'BI with Looker/Metabase',
             'Data catalog and access governance'
+          ],
+          link: '/it-services'
+        },
+        {
+          name: 'Zero Trust Security Architecture',
+          blurb: 'Comprehensive security framework with identity verification, network segmentation, and continuous monitoring.',
+          price: '$8,000 – $40,000 fixed or $160 – $220/hr',
+          eta: '4–10 weeks',
+          bullets: [
+            'Identity and access management (IAM) implementation',
+            'Network micro-segmentation and policy enforcement',
+            'Continuous security monitoring and threat detection',
+            'Security awareness training and incident response'
+          ],
+          link: '/it-services',
+          refs: [
+            { label: 'Okta', href: 'https://okta.com' },
+            { label: 'CrowdStrike', href: 'https://crowdstrike.com' }
+          ]
+        },
+        {
+          name: 'Kubernetes & Container Orchestration',
+          blurb: 'Production-ready containerization with auto-scaling, service mesh, and monitoring.',
+          price: '$5,000 – $25,000 fixed or $140 – $200/hr',
+          eta: '3–8 weeks',
+          bullets: [
+            'Kubernetes cluster setup and configuration',
+            'Service mesh implementation (Istio/Linkerd)',
+            'Auto-scaling and load balancing configuration',
+            'Monitoring, logging, and observability setup'
+          ],
+          link: '/it-services'
+        },
+        {
+          name: 'API Gateway & Microservices Architecture',
+          blurb: 'Scalable microservices architecture with API management, rate limiting, and security.',
+          price: '$4,000 – $20,000 fixed or $130 – $190/hr',
+          eta: '3–6 weeks',
+          bullets: [
+            'API gateway configuration and management',
+            'Microservices design and implementation',
+            'Rate limiting and traffic management',
+            'API documentation and developer portal'
+          ],
+          link: '/it-services',
+          refs: [
+            { label: 'Kong', href: 'https://konghq.com' },
+            { label: 'AWS API Gateway', href: 'https://aws.amazon.com/api-gateway/' }
+          ]
+        },
+        {
+          name: 'Disaster Recovery & Business Continuity',
+          blurb: 'Comprehensive backup, replication, and disaster recovery solutions with RTO/RPO optimization.',
+          price: '$3,000 – $18,000 fixed or $120 – $180/hr',
+          eta: '2–6 weeks',
+          bullets: [
+            'Automated backup and replication systems',
+            'Disaster recovery testing and validation',
+            'Business continuity planning and documentation',
+            'Recovery time and point objectives optimization'
+          ],
+          link: '/it-services'
+        },
+        {
+          name: 'Performance Optimization & Monitoring',
+          blurb: 'Application and infrastructure performance tuning with comprehensive monitoring and alerting.',
+          price: '$2,500 – $15,000 fixed or $120 – $180/hr',
+          eta: '2–5 weeks',
+          bullets: [
+            'Performance profiling and bottleneck identification',
+            'Database optimization and query tuning',
+            'Infrastructure scaling and resource optimization',
+            'Real-time monitoring and alerting setup'
           ],
           link: '/it-services'
         }
