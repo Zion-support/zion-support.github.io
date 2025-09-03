@@ -1,29 +1,29 @@
 {
-  "timestamp": "2025-09-03T20:39:24.988Z",
+  "timestamp": "2025-09-03T20:45:34.066Z",
   "status": "failed",
   "steps": [
     {
-      "timestamp": "2025-09-03T20:39:24.988Z",
+      "timestamp": "2025-09-03T20:45:34.066Z",
       "type": "info",
       "message": "Starting CI/CD Automation Pipeline"
     },
     {
-      "timestamp": "2025-09-03T20:39:24.990Z",
+      "timestamp": "2025-09-03T20:45:34.075Z",
       "type": "info",
       "message": "Installing dependencies..."
     },
     {
-      "timestamp": "2025-09-03T20:39:24.990Z",
+      "timestamp": "2025-09-03T20:45:34.075Z",
       "type": "info",
       "message": "Starting: Installing dependencies"
     },
     {
-      "timestamp": "2025-09-03T20:39:28.458Z",
+      "timestamp": "2025-09-03T20:45:35.374Z",
       "type": "error",
-      "message": "Failed: Installing dependencies - Command failed: npm ci\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error code ENOTEMPTY\nnpm error syscall rmdir\nnpm error path /workspace/node_modules/@istanbuljs\nnpm error errno -39\nnpm error ENOTEMPTY: directory not empty, rmdir '/workspace/node_modules/@istanbuljs'\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-03T20_39_25_037Z-debug-0.log\n"
+      "message": "Failed: Installing dependencies - Command failed: npm ci\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error code ENOTEMPTY\nnpm error syscall rmdir\nnpm error path /workspace/node_modules/date-fns/locale/fr/_lib\nnpm error errno -39\nnpm error ENOTEMPTY: directory not empty, rmdir '/workspace/node_modules/date-fns/locale/fr/_lib'\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-03T20_45_34_194Z-debug-0.log\n"
     },
     {
-      "timestamp": "2025-09-03T20:39:28.459Z",
+      "timestamp": "2025-09-03T20:45:35.375Z",
       "type": "error",
       "message": "CI/CD Pipeline failed: Failed to install dependencies"
     }
@@ -31,12 +31,12 @@
   "errors": [
     {
       "step": "Installing dependencies",
-      "error": "Command failed: npm ci\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error code ENOTEMPTY\nnpm error syscall rmdir\nnpm error path /workspace/node_modules/@istanbuljs\nnpm error errno -39\nnpm error ENOTEMPTY: directory not empty, rmdir '/workspace/node_modules/@istanbuljs'\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-03T20_39_25_037Z-debug-0.log\n",
-      "timestamp": "2025-09-03T20:39:28.458Z"
+      "error": "Command failed: npm ci\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error code ENOTEMPTY\nnpm error syscall rmdir\nnpm error path /workspace/node_modules/date-fns/locale/fr/_lib\nnpm error errno -39\nnpm error ENOTEMPTY: directory not empty, rmdir '/workspace/node_modules/date-fns/locale/fr/_lib'\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-03T20_45_34_194Z-debug-0.log\n",
+      "timestamp": "2025-09-03T20:45:35.375Z"
     }
   ],
   "summary": {
     "error": "Failed to install dependencies",
-    "duration": 3471
+    "duration": 1309
   }
 }
