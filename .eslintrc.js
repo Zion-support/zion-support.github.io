@@ -1,3 +1,4 @@
+// Use CommonJS export to avoid ESM issues during Next.js build
 module.exports = {
   extends: [
     'next/core-web-vitals',
@@ -5,6 +6,10 @@ module.exports = {
   ],
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint'],
+  env: {
+    node: true,
+    es6: true,
+  },
   rules: {
     '@typescript-eslint/no-unused-vars': 'warn',
     '@typescript-eslint/no-explicit-any': 'warn',

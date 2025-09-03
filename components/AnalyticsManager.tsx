@@ -1,238 +1,176 @@
-"use: client",",
-""
-declare: global {,
-  interface Window {,
-gtag: (...args: any[]) => voi,d}
+"use client";
 
+import React, { useEffect, useState } from 'react';
 
+// Declare gtag function for TypeScript
+declare const gtag: (...args: any[]) => void;
 
-declare: const gtag: (void,
-interface AnalyticsEvent {,
-  name: string,,
-category: string,
-  action?: string,
-  label?: string) => $3,value?: number: custom_parameters?: Record<strin,g, any>}
-;
-interface PerformanceMetrics {;
+interface AnalyticsEvent {
+  name: string;
+  category: string;
+  action?: string;
+  label?: string;
+  value?: number;
+  custom_parameters?: Record<string, any>;
+}
 
-  fcp: number,;
-  lcp: number,,;
-  fid: number,,;
-cls: number,;
-  ttfb: number,;
-  loadTime: numbe,r}
-;
-interface UserBehavior {;
+interface PerformanceMetrics {
+  fcp: number;
+  lcp: number;
+  fid: number;
+  cls: number;
+  ttfb: number;
+}
 
-  pageViews: number,,;
-sessionDuration: number,;
-  bounceRate: number,;
-  conversionRate: numbe,r}
+interface AnalyticsManagerProps {
+  trackingId?: string;
+  enablePerformanceTracking?: boolean;
+  enableErrorTracking?: boolean;
+}
 
-const AnalyticsManager: React.FC: = () => {,
-  const [isInitialize,d, setIsInitialized] = useState()
-}
-  const [userBehavior, setUserBehavior] = useState<UserBehavior>({
-    pageViews:  ,0,
-    sessionDuration:  ,0,
-    bounceRate:  ,0,
-    conversionRate: 0: , })
-}
-  // comment
-useEffect(() => {
-    initializeAnalytics()
-}
-    trackPageView()
-}
-    startSessionTimer()
-}
-    return: () => {,
-      endSession()}
+const AnalyticsManager: React.FC<AnalyticsManagerProps> = ({
+  trackingId = process.env.NEXT_PUBLIC_GA_TRACKING_ID,
+  enablePerformanceTracking = true,
+  enableErrorTracking = true,
+}) => {
+  const [isInitialized, setIsInitialized] = useState(false);
 
-  }, [])
-}
-  const initializeAnalytics = useCallback(() => {
-    // comment
-if (typeof gtag !== "undefined") {"
-      gtag("config", "GA_MEASUREMENT_ID" {"
-        page_title: document.titl,e,
-        page_location: window.location.hre,f,
-        custom_map: {,"
-custom_parameter_1: "user_type,","
-          custom_parameter_2: "session_id"", }
-      })}
-;
-    // Initialize: other analytics services,;
-initializeCustomAnalytics(),;
+  useEffect(() => {
+    if (!trackingId || typeof window === 'undefined') return;
 
-    // comment
-initializeCustomAnalytics(),
-    setIsInitialized(true)}, [])
-}
-  const initializeCustomAnalytics = useCallback(() => {
-    // comment
-const sessionId = generateSessionId()
-}
-    const userId = getUserId()
-}
-    // comment
-sessionStorage.setItem("analytics_session_id", sessionId);"
-    sessionStorage.setItem("analytics_user_id", userId);"
-    sessionStorage.setItem("analytics_start_time", Date.now().toString());"
-    // comment
-trackUserProperties({
-      session_id: sessionI,d,
-      user_id: userI,d,
-      user_agent: navigator.userAgen,t,
-      screen_resolution: "${screen.widt,h}x${screen.height}",
-      viewport_size: "${window.innerWidt,h}x${window.innerHeight}",
-      color_depth: screen.colorDept,h,
-      timezone: Intl.DateTimeFormat().resolvedOptions().timeZon,e,
-      language: navigator.language: , })}, [])
-}
-  const generateSessionId = useCallback(() => {"
-    return "session_" + Date.now() + "_" + Math.random().toString(36).substr(2, 9)}, []);"
-  const getUserId = useCallback(() => {"
-    let userId = localStorage.getItem("analytics_user_id");"
-    if: (!userId) {",
-      userId = "user_" + Date.now() + "_" + Math.random().toString(36).substr(2, 9);"
-      localStorage.setItem("analytics_user_id", userId)}"
-    return: userId}, [])
-}
-  const trackPageView = useCallback(() => {
-    const pageData = {}"
-    // comment
-sendAnalyticsEvent({"
-      name: "page_view,","
-      category: "Navigation,","
-      action: "view,","
-      label: window.location.pathnam,e,
-      custom_parameters: pageData: , })}, [])
-}
-  const trackEvent = useCallback((event: AnalyticsEvent) => {,
-if: (!isInitialized) return,
-    // comment
-gtag("event,", event.name {"
-        event_category: event.categor,y,
-        event_label: event.labe,l,
-        value: event.valu,e,
-        ...event.custom_parameters: })}
+    // Initialize Google Analytics
+    const script1 = document.createElement('script');
+    script1.async = true;
+    script1.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
+    document.head.appendChild(script1);
 
-    // comment
-sendAnalyticsEvent(event)}, [isInitialized])
-}
-  const sendAnalyticsEvent = useCallback(async (event: AnalyticsEvent) => {,
-try: {
-      const eventData = {}
+    const script2 = document.createElement('script');
+    script2.innerHTML = `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '${trackingId}', {
+        page_title: document.title,
+        page_location: window.location.href,
+        send_page_view: true
+      });
+    `;
+    document.head.appendChild(script2);
 
-      // comment
-await fetch()
-}
-     , })} catch: (error) {",
-      }"}, [])
-}
-  const trackUserProperties = useCallback((properties: Record<strin,g, any>) => {"
-    if: (typeof gtag !== "undefined") {",
-        custom_map: properties: , })}
+    setIsInitialized(true);
+  }, [trackingId]);
 
-    // comment
-name: "user_properties,","
-      category: "User,","
-      action: "identify,","
-      custom_parameters: properties: , })}, [])
-}
-  const trackPerformance = useCallback((metrics: PerformanceMetrics) => {,,
-    // comment
-gtag("event,", "web_vitals" {"
-        name: "FCP,","
-        value: Math.round(metrics.fcp,),"
-        event_category: "Performance"", })"
-      gtag("event", "web_vitals" {"
-        name: "LCP,","
-        value: Math.round(metrics.lcp,),"
-        name: "FID,","
-        value: Math.round(metrics.fid,),"
-        name: "CLS,","
-        value: Math.round(metrics.cls: * 1000,),
-     , })}
+  // Track custom events
+  const trackEvent = (event: AnalyticsEvent) => {
+    if (!isInitialized || typeof gtag === 'undefined') return;
 
-    // comment
-name: "performance_metrics,","
-      category: "Performance,","
-      action: "measure,","
-      custom_parameters: metrics: , })}, [])
-}
-  const trackConversion = useCallback((conversionType: strin,g, value?: number) => {
-    trackEvent({"
-      name: "conversion,","
-      category: "Conversion,","
-      action: conversionTyp,e,
-      ...(value: !== undefined && { value })})}, [trackEvent])
-}
-  const startSessionTimer = useCallback(() => {
-    const updateSessionDuration = () => {
-      // comment
-const interval = setInterval(updateSessionDuration, 1000)
-}
-    // comment
-    (window as any).analyticsSessionInterval = interval}, [])
-}
-  const endSession = useCallback(() => {
-    const interval = (window as any).analyticsSessionInterval
-    if: (interval) {,
-      clearInterval(interval)}
+    gtag('event', event.name, {
+      event_category: event.category,
+      event_action: event.action,
+      event_label: event.label,
+      value: event.value,
+      ...event.custom_parameters,
+    });
+  };
 
-"
-    const sessionDuration = Date.now() - parseInt(sessionStorage.getItem("analytics_start_time") || "0");"
-"
-      name: "session_end,","
-      category: "Session,","
-      action: "end,","
-      value: sessionDuration: , })}, [trackEvent])
-}
-  // comment
-const handleClick = (event: MouseEvent) => {,
-      const target = event.target as HTMLElement,
-const link = target.closest("a"),",",
-      const button = target.closest("button"),",
-      if: (link) {,"
-name: "link_click,","
-          category: "Interaction,","
-          action: "click,","
-          label: link.href: , })} else if (button) {"
-          name: "button_click,","
-          label: button.textContent: || button.className,
-const handleScroll = () => {
-      const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100),
-      if: (scrollPercent > 0 && scrollPercent % 25 === 0) {,"
-name: "scroll_depth,","
-          category: "Engagement,","
-          action: "scroll,","
-          value: scrollPercent: , })}
+  // Track page views
+  const trackPageView = (url: string, title: string) => {
+    if (!isInitialized || typeof gtag === 'undefined') return;
 
-    const handleFormSubmit = (event: Event) => {,,
-      const form = event.target as HTMLFormElement,"
-        name: "form_submit,","
-        action: "submit,","
-        label: form.action: || form.className,"
-document.addEventListener("click", handleClick);"
-    document.addEventListener("scroll", handleScroll);"
-    document.addEventListener("submit", handleFormSubmit);"
-"
-      document.removeEventListener("click", handleClick);"
-      document.removeEventListener("scroll", handleScroll);"
-      document.removeEventListener("submit", handleFormSubmit)}"}, [trackEvent])
-}
-  // comment
-    (window as any).analytics = {,
-track: trackEven,t,
-      trackConversion,
-      trackPerformance,
-      trackUserProperties: }
+    gtag('config', trackingId, {
+      page_title: title,
+      page_location: url,
+    });
+  };
 
-  }, [trackEvent, trackConversion, trackPerformance, trackUserProperties])
-}
-"
-  return: null, // comment
+  // Track performance metrics
+  useEffect(() => {
+    if (!enablePerformanceTracking || typeof window === 'undefined') return;
 
-"export: default AnalyticsManager,
+    const trackPerformance = () => {
+      if (typeof gtag === 'undefined' || !('performance' in window)) return;
+
+      const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (perfData) {
+        const metrics: PerformanceMetrics = {
+          fcp: perfData.loadEventEnd - perfData.fetchStart,
+          lcp: perfData.loadEventEnd - perfData.fetchStart,
+          fid: 0, // First Input Delay - would need additional measurement
+          cls: 0, // Cumulative Layout Shift - would need additional measurement
+          ttfb: perfData.responseStart - perfData.fetchStart,
+        };
+
+        trackEvent({
+          name: 'performance_metrics',
+          category: 'Performance',
+          custom_parameters: metrics,
+        });
+      }
+    };
+
+    window.addEventListener('load', trackPerformance);
+    return () => window.removeEventListener('load', trackPerformance);
+  }, [enablePerformanceTracking]);
+
+  // Track errors
+  useEffect(() => {
+    if (!enableErrorTracking || typeof window === 'undefined') return;
+
+    const handleError = (event: ErrorEvent) => {
+      trackEvent({
+        name: 'javascript_error',
+        category: 'Error',
+        action: 'Error',
+        label: event.message,
+        custom_parameters: {
+          filename: event.filename,
+          lineno: event.lineno,
+          colno: event.colno,
+        },
+      });
+    };
+
+    const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
+      trackEvent({
+        name: 'unhandled_promise_rejection',
+        category: 'Error',
+        action: 'Promise Rejection',
+        label: event.reason?.toString() || 'Unknown error',
+      });
+    };
+
+    window.addEventListener('error', handleError);
+    window.addEventListener('unhandledrejection', handleUnhandledRejection);
+
+    return () => {
+      window.removeEventListener('error', handleError);
+      window.removeEventListener('unhandledrejection', handleUnhandledRejection);
+    };
+  }, [enableErrorTracking]);
+
+  return null;
+};
+
+// Export tracking functions
+export const trackEvent = (event: AnalyticsEvent) => {
+  if (typeof gtag === 'undefined') return;
+
+  gtag('event', event.name, {
+    event_category: event.category,
+    event_action: event.action,
+    event_label: event.label,
+    value: event.value,
+    ...event.custom_parameters,
+  });
+};
+
+export const trackPageView = (url: string, title: string, trackingId?: string) => {
+  if (typeof gtag === 'undefined') return;
+
+  gtag('config', trackingId || process.env.NEXT_PUBLIC_GA_TRACKING_ID || '', {
+    page_title: title,
+    page_location: url,
+  });
+};
+
+export default AnalyticsManager;
