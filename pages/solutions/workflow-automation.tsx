@@ -19,7 +19,7 @@ import {
 
 export default function WorkflowAutomation() {
   const features = [
-    {
+  {
       icon: Zap,
       title: 'Process Automation',
       description:
@@ -59,6 +59,14 @@ export default function WorkflowAutomation() {
 
   return (
     <>
+<<<<<<< HEAD
+      <SEO
+        title="Workflow Automation Platform - Zion Tech Group"
+        description="Streamline business processes with custom workflow automation and integration capabilities. Boost efficiency."
+        keywords="workflow automation, process automation, business automation, integration, workflow management"
+      />
+=======
+>>>>>>> main
       <Head>
         <title>Workflow Automation Platform - Zion Tech Group</title>
       </Head>

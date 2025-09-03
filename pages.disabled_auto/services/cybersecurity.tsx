@@ -68,6 +68,7 @@ export default function Cybersecurity() {
         </h2>
         <div className="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 text-sm">
           {[
+<<<<<<< HEAD
             'NIST CSF',
             'ISO 27001',
             'SOC 2',
@@ -78,6 +79,9 @@ export default function Cybersecurity() {
             'Wazuh',
             'Cloudflare',
             'Defender for Cloud',
+=======
+            'NIST CSF,ISO 27001,SOC 2,OWASP ASVS,CIS Benchmarks,OSQuery,Falco,Wazuh,Cloudflare,Defender for Cloud',
+>>>>>>> main
           ].map(t => (
             <div
               key={t}

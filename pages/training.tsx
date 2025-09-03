@@ -1,13 +1,27 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { BookOpen, Users, Award, Clock, Star, Play, Download, ArrowRight, CheckCircle, Globe, Target, Lightbulb } from 'lucide-react';
+import {
+  BookOpen,
+  Users,
+  Award,
+  Clock,
+  Star,
+  Play,
+  Download,
+  ArrowRight,
+  CheckCircle,
+  Globe,
+  Target,
+  Lightbulb,
+} from 'lucide-react';
 
 export default function Training() {
   const trainingPrograms = [
-    {
+  {
       title: 'AI & Machine Learning Fundamentals',
-      description: 'Learn the basics of AI and machine learning with hands-on projects',
+      description:
+        'Learn the basics of AI and machine learning with hands-on projects',
       duration: '40 hours',
       level: 'Beginner',
       format: 'Online',
@@ -15,19 +29,24 @@ export default function Training() {
       rating: 4.9,
       students: 1250,
       features: [
+<<<<<<< HEAD
         'Introduction to AI concepts',
         'Machine learning algorithms',
         'Data preprocessing',
         'Model training and evaluation',
         'Real-world projects',
-        'Certificate of completion'
+        'Certificate of completion',
+=======
+        'Introduction to AI concepts,Machine learning algorithms,Data preprocessing,Model training and evaluation,Real-world projects,Certificate of completion'
+>>>>>>> main
       ],
       instructor: 'Dr. Sarah Johnson',
-      category: 'AI & ML'
+      category: 'AI & ML',
     },
     {
       title: 'Cloud Architecture & DevOps',
-      description: 'Master cloud computing and DevOps practices for scalable applications',
+      description:
+        'Master cloud computing and DevOps practices for scalable applications',
       duration: '60 hours',
       level: 'Intermediate',
       format: 'Hybrid',
@@ -35,19 +54,24 @@ export default function Training() {
       rating: 4.8,
       students: 890,
       features: [
+<<<<<<< HEAD
         'Cloud platform fundamentals',
         'Containerization with Docker',
         'Kubernetes orchestration',
         'CI/CD pipelines',
         'Infrastructure as Code',
-        'Monitoring and logging'
+        'Monitoring and logging',
+=======
+        'Cloud platform fundamentals,Containerization with Docker,Kubernetes orchestration,CI/CD pipelines,Infrastructure as Code,Monitoring and logging'
+>>>>>>> main
       ],
       instructor: 'Michael Chen',
-      category: 'Cloud & DevOps'
+      category: 'Cloud & DevOps',
     },
     {
       title: 'Cybersecurity Essentials',
-      description: 'Comprehensive cybersecurity training for modern threats and defenses',
+      description:
+        'Comprehensive cybersecurity training for modern threats and defenses',
       duration: '50 hours',
       level: 'Intermediate',
       format: 'Online',
@@ -55,15 +79,19 @@ export default function Training() {
       rating: 4.9,
       students: 1100,
       features: [
+<<<<<<< HEAD
         'Threat landscape analysis',
         'Security frameworks',
         'Penetration testing',
         'Incident response',
         'Compliance and governance',
-        'Security tools and techniques'
+        'Security tools and techniques',
+=======
+        'Threat landscape analysis,Security frameworks,Penetration testing,Incident response,Compliance and governance,Security tools and techniques'
+>>>>>>> main
       ],
       instructor: 'Alex Rodriguez',
-      category: 'Security'
+      category: 'Security',
     },
     {
       title: 'Full-Stack Development',
@@ -75,111 +103,205 @@ export default function Training() {
       rating: 4.7,
       students: 2100,
       features: [
+<<<<<<< HEAD
         'Frontend development (React)',
         'Backend development (Node.js)',
         'Database design',
         'API development',
         'Deployment strategies',
-        'Project portfolio'
+        'Project portfolio',
+=======
+        'Frontend development (React),Backend development (Node.js),Database design,API development,Deployment strategies,Project portfolio'
+>>>>>>> main
       ],
       instructor: 'Emily Davis',
-      category: 'Development'
-    }
+      category: 'Development',
+    },
   ];
 
   const certificationPaths = [
-    {
+  {
       title: 'Zion Tech AI Specialist',
       description: 'Certify your expertise in AI and machine learning',
       duration: '3 months',
+<<<<<<< HEAD
       requirements: ['AI Fundamentals', 'ML Advanced', 'Project Portfolio'],
-      benefits: ['Industry recognition', 'Career advancement', 'Exclusive resources']
+      benefits: [
+        'Industry recognition',
+        'Career advancement',
+        'Exclusive resources',
+      ],
+=======
+      requirements: ['AI Fundamentals,ML Advanced,Project Portfolio'],
+      benefits: ['Industry recognition,Career advancement,Exclusive resources']
+>>>>>>> main
     },
     {
       title: 'Zion Tech Cloud Architect',
       description: 'Become a certified cloud architecture expert',
       duration: '4 months',
-      requirements: ['Cloud Fundamentals', 'DevOps Practices', 'Architecture Design'],
-      benefits: ['High-demand skills', 'Salary increase', 'Consulting opportunities']
+<<<<<<< HEAD
+      requirements: [
+        'Cloud Fundamentals',
+        'DevOps Practices',
+        'Architecture Design',
+      ],
+      benefits: [
+        'High-demand skills',
+        'Salary increase',
+        'Consulting opportunities',
+      ],
+=======
+      requirements: ['Cloud Fundamentals,DevOps Practices,Architecture Design'],
+      benefits: ['High-demand skills,Salary increase,Consulting opportunities']
+>>>>>>> main
     },
     {
       title: 'Zion Tech Security Professional',
       description: 'Master cybersecurity and become a security expert',
       duration: '3 months',
-      requirements: ['Security Fundamentals', 'Penetration Testing', 'Incident Response'],
-      benefits: ['Security clearance', 'Government contracts', 'Leadership roles']
+<<<<<<< HEAD
+      requirements: [
+        'Security Fundamentals',
+        'Penetration Testing',
+        'Incident Response',
+      ],
+      benefits: [
+        'Security clearance',
+        'Government contracts',
+        'Leadership roles',
+      ],
+    },
+=======
+      requirements: ['Security Fundamentals,Penetration Testing,Incident Response'],
+      benefits: ['Security clearance,Government contracts,Leadership roles']
     }
+>>>>>>> main
   ];
 
   const learningFormats = [
-    {
+  {
       title: 'Self-Paced Online',
-      description: 'Learn at your own pace with pre-recorded videos and materials',
+      description:
+        'Learn at your own pace with pre-recorded videos and materials',
       icon: Play,
-      features: ['24/7 access', 'Lifetime access', 'Mobile friendly', 'Progress tracking']
+<<<<<<< HEAD
+      features: [
+        '24/7 access',
+        'Lifetime access',
+        'Mobile friendly',
+        'Progress tracking',
+      ],
+=======
+      features: ['24/7 access,Lifetime access,Mobile friendly,Progress tracking']
+>>>>>>> main
     },
     {
       title: 'Live Online Classes',
       description: 'Interactive live sessions with expert instructors',
       icon: Users,
-      features: ['Real-time Q&A', 'Group projects', 'Peer networking', 'Instructor feedback']
+<<<<<<< HEAD
+      features: [
+        'Real-time Q&A',
+        'Group projects',
+        'Peer networking',
+        'Instructor feedback',
+      ],
+=======
+      features: ['Real-time Q&A,Group projects,Peer networking,Instructor feedback']
+>>>>>>> main
     },
     {
       title: 'In-Person Workshops',
       description: 'Hands-on training in our state-of-the-art facilities',
       icon: Globe,
-      features: ['Lab access', 'Equipment training', 'Networking events', 'Certification exams']
+<<<<<<< HEAD
+      features: [
+        'Lab access',
+        'Equipment training',
+        'Networking events',
+        'Certification exams',
+      ],
+=======
+      features: ['Lab access,Equipment training,Networking events,Certification exams']
+>>>>>>> main
     },
     {
       title: 'Corporate Training',
       description: 'Customized training programs for your organization',
       icon: Target,
-      features: ['Custom curriculum', 'Team training', 'On-site delivery', 'ROI tracking']
-    }
+<<<<<<< HEAD
+      features: [
+        'Custom curriculum',
+        'Team training',
+        'On-site delivery',
+        'ROI tracking',
+      ],
+    },
   ];
 
   const testimonials = [
     {
+      quote:
+        'The AI training program completely transformed my career. I went from a traditional developer to an AI specialist in just 3 months.',
+      author: 'Jennifer Liu',
+      title: 'AI Engineer',
+      company: 'Tech Corp',
+      rating: 5,
+=======
+      features: ['Custom curriculum,Team training,On-site delivery,ROI tracking']
+    }
+  ];
+
+  const testimonials = [
+  {
       quote: "The AI training program completely transformed my career. I went from a traditional developer to an AI specialist in just 3 months.",
       author: "Jennifer Liu",
       title: "AI Engineer",
       company: "Tech Corp",
       rating: 5
+>>>>>>> main
     },
     {
-      quote: "The cloud architecture course gave me the skills I needed to lead our digital transformation initiative. Highly recommended!",
-      author: "David Park",
-      title: "Cloud Architect",
-      company: "Enterprise Solutions",
-      rating: 5
+      quote:
+        'The cloud architecture course gave me the skills I needed to lead our digital transformation initiative. Highly recommended!',
+      author: 'David Park',
+      title: 'Cloud Architect',
+      company: 'Enterprise Solutions',
+      rating: 5,
     },
     {
-      quote: "The cybersecurity training was comprehensive and practical. I now feel confident handling security challenges in my role.",
-      author: "Maria Garcia",
-      title: "Security Analyst",
-      company: "Financial Services",
-      rating: 5
-    }
+      quote:
+        'The cybersecurity training was comprehensive and practical. I now feel confident handling security challenges in my role.',
+      author: 'Maria Garcia',
+      title: 'Security Analyst',
+      company: 'Financial Services',
+      rating: 5,
+    },
   ];
 
   return (
     <>
       <Head>
         <title>Training & Education - Zion Tech Group</title>
-        <meta name="description" content="Professional training and certification programs in AI, cloud computing, cybersecurity, and software development. Advance your career with Zion Tech Group." />
+        <meta
+          name="description"
+          content="Professional training and certification programs in AI, cloud computing, cybersecurity, and software development. Advance your career with Zion Tech Group."
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      
+
       <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20 sm:py-32">
             <div className="text-center">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
                 Training & Education
               </h1>
               <p className="text-xl sm:text-2xl text-blue-100 max-w-4xl mx-auto mb-8">
-                Advance your career with professional training programs in cutting-edge technologies.
+                Advance your career with professional training programs in
+                cutting-edge technologies.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Link href="#programs">
@@ -209,18 +331,26 @@ export default function Training() {
                 Choose the learning format that works best for you
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {learningFormats.map((format, index) => (
-                <div key={index} className="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
+                <div
+                  key={index}
+                  className="bg-white rounded-xl shadow-lg p-6 text-center hover: shadow-xl transition-shadow"
+                >
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <format.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{format.title}</h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    {format.title}
+                  </h3>
                   <p className="text-gray-600 mb-4">{format.description}</p>
                   <ul className="space-y-2 text-left">
                     {format.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-700">
+                      <li
+                        key={featureIndex}
+                        className="flex items-center text-sm text-gray-700"
+                      >
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
@@ -234,7 +364,7 @@ export default function Training() {
 
         {/* Training Programs */}
         <section id="programs" className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
                 Training Programs
@@ -243,29 +373,40 @@ export default function Training() {
                 Comprehensive training programs designed by industry experts
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {trainingPrograms.map((program, index) => (
-                <div key={index} className="bg-gray-50 rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+                <div
+                  key={index}
+                  className="bg-gray-50 rounded-xl shadow-lg p-8 hover: shadow-xl transition-shadow"
+                >
                   <div className="flex items-start justify-between mb-6">
                     <div className="flex-1">
                       <div className="flex items-center space-x-3 mb-3">
                         <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">
                           {program.category}
                         </span>
-                        <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
-                          program.level === 'Beginner' ? 'bg-green-100 text-green-800' :
-                          program.level === 'Intermediate' ? 'bg-yellow-100 text-yellow-800' :
-                          'bg-red-100 text-red-800'
-                        }`}>
+                        <span
+                          className={`px-3 py-1 rounded-full text-sm font-semibold ${
+                            program.level === 'Beginner'
+                              ? 'bg-green-100 text-green-800'
+                              : program.level === 'Intermediate'
+                                ? 'bg-yellow-100 text-yellow-800'
+                                : 'bg-red-100 text-red-800'
+                          }`}
+                        >
                           {program.level}
                         </span>
                       </div>
-                      <h3 className="text-2xl font-bold text-gray-900 mb-3">{program.title}</h3>
-                      <p className="text-gray-600 mb-4">{program.description}</p>
+                      <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                        {program.title}
+                      </h3>
+                      <p className="text-gray-600 mb-4">
+                        {program.description}
+                      </p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-center justify-between mb-6">
                     <div className="flex items-center space-x-6 text-sm text-gray-500">
                       <div className="flex items-center">
@@ -282,26 +423,38 @@ export default function Training() {
                       </div>
                     </div>
                     <div className="text-right">
-                      <div className="text-2xl font-bold text-blue-600">{program.price}</div>
-                      <div className="text-sm text-gray-500">{program.format}</div>
+                      <div className="text-2xl font-bold text-blue-600">
+                        {program.price}
+                      </div>
+                      <div className="text-sm text-gray-500">
+                        {program.format}
+                      </div>
                     </div>
                   </div>
-                  
+
                   <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-3">What You'll Learn:</h4>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-3">
+                      What You&apos;ll Learn:{' '}
+                    </h4>
+                    '
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
                       {program.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-700">
+                        <li
+                          key={featureIndex}
+                          className="flex items-center text-sm text-gray-700"
+                        >
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                           {feature}
                         </li>
                       ))}
                     </ul>
                   </div>
-                  
+
                   <div className="flex items-center justify-between">
                     <div className="text-sm text-gray-600">
-                      <p className="font-semibold">Instructor: {program.instructor}</p>
+                      <p className="font-semibold">
+                        Instructor: {program.instructor}
+                      </p>
                     </div>
                     <Link href="/contact">
                       <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
@@ -318,7 +471,7 @@ export default function Training() {
 
         {/* Certification Paths */}
         <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
                 Certification Paths
@@ -327,43 +480,60 @@ export default function Training() {
                 Earn industry-recognized certifications to advance your career
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {certificationPaths.map((path, index) => (
-                <div key={index} className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
+                <div
+                  key={index}
+                  className="bg-white rounded-xl shadow-lg p-8 text-center hover: shadow-xl transition-shadow"
+                >
                   <div className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Award className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">{path.title}</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                    {path.title}
+                  </h3>
                   <p className="text-gray-600 mb-4">{path.description}</p>
-                  <div className="text-blue-600 font-semibold mb-6">Duration: {path.duration}</div>
-                  
+                  <div className="text-blue-600 font-semibold mb-6">
+                    Duration: {path.duration}
+                  </div>
+
                   <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-3">Requirements:</h4>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-3">
+                      Requirements:
+                    </h4>
                     <ul className="space-y-2">
                       {path.requirements.map((req, reqIndex) => (
-                        <li key={reqIndex} className="flex items-center text-sm text-gray-700">
+                        <li
+                          key={reqIndex}
+                          className="flex items-center text-sm text-gray-700"
+                        >
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                           {req}
                         </li>
                       ))}
                     </ul>
                   </div>
-                  
+
                   <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-3">Benefits:</h4>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-3">
+                      Benefits:{' '}
+                    </h4>
                     <ul className="space-y-2">
                       {path.benefits.map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="flex items-center text-sm text-gray-700">
+                        <li
+                          key={benefitIndex}
+                          className="flex items-center text-sm text-gray-700"
+                        >
                           <Lightbulb className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
                           {benefit}
                         </li>
                       ))}
                     </ul>
                   </div>
-                  
+
                   <Link href="/contact">
-                    <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
+                    <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover: from-blue-700 hover:to-purple-700 transition-all duration-300">
                       Start Certification
                       <ArrowRight className="w-4 h-4 ml-2 inline" />
                     </button>
@@ -376,7 +546,7 @@ export default function Training() {
 
         {/* Testimonials */}
         <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
                 Student Success Stories
@@ -385,13 +555,16 @@ export default function Training() {
                 Hear from our successful graduates
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-gray-50 rounded-xl p-8">
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                      <Star
+                        key={i}
+                        className="w-5 h-5 text-yellow-400 fill-current"
+                      />
                     ))}
                   </div>
                   <blockquote className="text-gray-700 mb-6 italic">
@@ -402,9 +575,13 @@ export default function Training() {
                       <Users className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <p className="font-semibold text-gray-900">{testimonial.author}</p>
+                      <p className="font-semibold text-gray-900">
+                        {testimonial.author}
+                      </p>
                       <p className="text-gray-600">{testimonial.title}</p>
-                      <p className="text-blue-600 font-semibold">{testimonial.company}</p>
+                      <p className="text-blue-600 font-semibold">
+                        {testimonial.company}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -415,12 +592,13 @@ export default function Training() {
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
               Ready to Advance Your Career?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Join thousands of professionals who have transformed their careers with our training programs.
+              Join thousands of professionals who have transformed their careers
+              with our training programs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link href="/contact">

@@ -19,7 +19,7 @@ import {
 
 export default function ProjectManagement() {
   const features = [
-    {
+  {
       icon: Target,
       title: 'Task Management',
       description:
@@ -59,6 +59,14 @@ export default function ProjectManagement() {
 
   return (
     <>
+<<<<<<< HEAD
+      <SEO
+        title="Project Management Platform - Zion Tech Group"
+        description="Advanced project management tools with team collaboration, task tracking, and reporting. Streamline your projects."
+        keywords="project management, task management, team collaboration, time tracking, project planning"
+      />
+=======
+>>>>>>> main
       <Head>
         <title>Project Management Platform - Zion Tech Group</title>
       </Head>

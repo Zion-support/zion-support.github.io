@@ -1,10 +1,8 @@
 #!/usr/bin/env node;
 import { execSync, spawn } from;
   'child_process';
-import fs from "fs";
-  'fs';
-import path from "path";
-  'path';
+import fs from "fsfs';
+import path from "pathpath';
 class DependencyErrorResolver {
   constructor() {
     this.checkInterval = process.env.CHECK_INTERVAL || 600000 // 10 minutes;
@@ -164,8 +162,7 @@ class DependencyErrorResolver {
   async checkDependencyConflicts(report) {
     try {
       const packageJson = JSON.parse(fs.readFileSync(
-  'package.json',
-  'utf8'));
+  'package.json,utf8'));
       const conflicts = [];
       // Check for peer dependency conflicts;
       if (packageJson.peerDependencies) {

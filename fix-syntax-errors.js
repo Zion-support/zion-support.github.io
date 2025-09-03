@@ -11,50 +11,65 @@ function fixSyntaxErrors(filePath) {
     let modified = false;
 
     // Fix malformed imports - add missing semicolons
-    content = content.replace(/import\s+{[^}]+}\s+from\s+['"][^'"]+['"]\s*(?!;)/g, (match) => {
-      if (!match.endsWith(';')) {
-        modified = true;
-        return match + ';';
+    content = content.replace(
+      /import\s+{[^}]+}\s+from\s+['"][^'"]+['"]\s*(?!;)/g,
+      match => {
+        if (!match.endsWith(';')) {
+          modified = true;
+          return match + ';';
+        }
+        return match;
       }
-      return match;
-    });
+    );
 
     // Fix broken import statements with missing commas
-    content = content.replace(/import\s+{\s*([^}]+)\s*}\s+from\s+['"][^'"]+['"]/g, (match, imports) => {
-      // Check if imports have proper comma separation
-      if (imports.includes(' ') && !imports.includes(',')) {
-        modified = true;
-        const fixedImports = imports.split(/\s+/).join(', ');
-        return match.replace(imports, fixedImports);
+    content = content.replace(
+      /import\s+{\s*([^}]+)\s*}\s+from\s+['"][^'"]+['"]/g,
+      (match, imports) => {
+        // Check if imports have proper comma separation
+        if (imports.includes(' ') && !imports.includes(',')) {
+          modified = true;
+          const fixedImports = imports.split(/\s+/).join(', ');
+          return match.replace(imports, fixedImports);
+        }
+        return match;
       }
-      return match;
-    });
+    );
 
     // Fix missing semicolons after variable declarations
-    content = content.replace(/(const|let|var)\s+\w+\s*=\s*[^;]+(?!;)\s*(?=\n|$)/g, (match) => {
-      if (!match.endsWith(';')) {
-        modified = true;
-        return match + ';';
+    content = content.replace(
+      /(const|let|var)\s+\w+\s*=\s*[^;]+(?!;)\s*(?=\n|$)/g,
+      match => {
+        if (!match.endsWith(';')) {
+          modified = true;
+          return match + ';';
+        }
+        return match;
       }
-      return match;
-    });
+    );
 
     // Fix broken JSX syntax - missing closing tags
-    content = content.replace(/<(\w+)([^>]*)>(?!.*<\/\1>)/g, (match, tagName, attributes) => {
-      // Only fix if it's not a self-closing tag and doesn't have a closing tag
-      if (!match.endsWith('/>') && !content.includes(`</${tagName}>`)) {
-        modified = true;
-        return match + `</${tagName}>`;
+    content = content.replace(
+      /<(\w+)([^>]*)>(?!.*<\/\1>)/g,
+      (match, tagName, attributes) => {
+        // Only fix if it's not a self-closing tag and doesn't have a closing tag
+        if (!match.endsWith('/>') && !content.includes(`</${tagName}>`)) {
+          modified = true;
+          return match + `</${tagName}>`;
+        }
+        return match;
       }
-      return match;
-    });
+    );
 
     // Fix malformed function declarations
-    content = content.replace(/export\s+{\s*function\s*}\s*export\s+default\s+function/g, 'export default function');
-    
+    content = content.replace(
+      /export\s+{\s*function\s*}\s*export\s+default\s+function/g,
+      'export default function'
+    );
+
     // Fix broken arrow functions
     content = content.replace(/=>\s*\(\s*\)\s*=>/g, '=> () =>');
-    
+
     // Fix malformed object literals
     content = content.replace(/\{\s*([^}]*)\s*\}\s*}/g, (match, content) => {
       if (content.includes('{') && !content.includes('}')) {
@@ -72,8 +87,15 @@ function fixSyntaxErrors(filePath) {
 
     // Fix missing commas in arrays and objects
     content = content.replace(/\[\s*([^\]]*)\s*\]/g, (match, arrayContent) => {
-      if (arrayContent && !arrayContent.endsWith(',') && !arrayContent.endsWith(';')) {
-        const items = arrayContent.split(',').map(item => item.trim()).filter(item => item);
+      if (
+        arrayContent &&
+        !arrayContent.endsWith(',') &&
+        !arrayContent.endsWith(';')
+      ) {
+        const items = arrayContent
+          .split(',')
+          .map(item => item.trim())
+          .filter(item => item);
         if (items.length > 1) {
           modified = true;
           return `[${items.join(', ')}]`;
@@ -97,15 +119,19 @@ function fixSyntaxErrors(filePath) {
 // Function to find all TypeScript and JavaScript files
 function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
   let files = [];
-  
+
   try {
     const items = fs.readdirSync(dir);
-    
+
     for (const item of items) {
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+
+      if (
+        stat.isDirectory() &&
+        !item.startsWith('.') &&
+        item !== 'node_modules'
+      ) {
         files = files.concat(findFiles(fullPath, extensions));
       } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
         files.push(fullPath);
@@ -114,30 +140,32 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
   } catch (error) {
     console.error(`Error reading directory ${dir}:`, error.message);
   }
-  
+
   return files;
 }
 
 // Main execution
 function main() {
   console.log('Starting syntax error fixes...');
-  
+
   const srcDir = path.join(process.cwd(), 'src');
   const files = findFiles(srcDir);
-  
+
   let fixedCount = 0;
   let totalCount = files.length;
-  
+
   console.log(`Found ${totalCount} files to check...`);
-  
+
   for (const file of files) {
     if (fixSyntaxErrors(file)) {
       fixedCount++;
     }
   }
-  
-  console.log(`\nFixed syntax errors in ${fixedCount} out of ${totalCount} files.`);
-  
+
+  console.log(
+    `\nFixed syntax errors in ${fixedCount} out of ${totalCount} files.`
+  );
+
   // Run linting to check remaining errors
   console.log('\nRunning linting to check remaining errors...');
   try {

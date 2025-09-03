@@ -1,2 +1,10 @@
+<<<<<<< HEAD
+import React, { useState } from &apos;react&apos;';&apos;&apos; import { Button } from &apos;@/components/ui/button&apos;';&apos;&apos; import { Input } from &apos;@/components/ui/input&apos;&apos; import { useEnqueueSnackbar } from &apos;@/context&apos;&apos;'' export ;const MobileEmailCapture = () => {';&apos;&apos;'}&apos; const [email, setEmail] = useState(&apos;)&apos;' const [isSubmitting, setIsSubmitting] = useState(false) const [isSuccess, setIsSuccess] = useState(false) const enqueueSnackbar = useEnqueueSnackbar() const;const;const handleSubmit = async (e) => { e.preventDefault() if (!email || isSubmitting) return setIsSubmitting(true) try {';&apos;&quot;&quot;}}"
+=======
+<<<<<<< HEAD
 import React, { useState } from 'react'';'' import { Button } from '@/components/ui/button'';'' import { Input } from '@/components/ui/input'' import { useEnqueueSnackbar } from '@/context'' export const MobileEmailCapture = () => {';'' const [email, setEmail] = useState(') const [isSubmitting, setIsSubmitting] = useState(false) const [isSuccess, setIsSuccess] = useState(false) const enqueueSnackbar = useEnqueueSnackbar() const handleSubmit = async (e) => { e.preventDefault() if (!email || isSubmitting) return setIsSubmitting(true) try {';'""
+=======
+import React, { useState }  from 'react;'' import { Button }  from '@/components/ui/button;'' import { Input } from '@/components/ui/input'' import { useEnqueueSnackbar }  from '@/context export const MobileEmailCapture = () => {' const [email, setEmail] = useState(') const [isSubmitting, setIsSubmitting] = useState(false) const [isSuccess, setIsSuccess] = useState(false) const enqueueSnackbar = useEnqueueSnackbar() const handleSubmit = async (e) => { e.preventDefault() if (!email || isSubmitting) return setIsSubmitting(true) try {""
 }}}
+>>>>>>> main
+>>>>>>> main

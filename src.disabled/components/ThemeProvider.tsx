@@ -10,9 +10,7 @@ import React, { createContext, useContext, useEffect, useState } from;
   children: React.ReactNode} export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => { const [theme, setTheme] = useState<Theme>(() => { if (typeof window !==,
   undefined') { const saved = localStorage.getItem(
   'theme') as Theme if (saved && [;
-  'light',
-  'dark',
-  'system'].includes(saved)) { return saved } } return;
+  'light,dark,system'].includes(saved)) { return saved } } return;
   'system' }) const [isDark, setIsDark] = useState(false) useEffect(() => { const root = window.document.documentElement const updateTheme = () => { let effectiveTheme: 'light' |;
   'dark' if (theme ===;
   'system') { effectiveTheme = window.matchMedia(
