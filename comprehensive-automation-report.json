@@ -1,28 +1,73 @@
 {
-    ],
-    "errors: [
-      auto-fixer.js failed: Command failed: node scripts/auto-fixer.js\nfile:///workspace/scripts/auto-fixer.js:95\n      .replace(/.replace(/// Clean up any remaining artifacts\n               ^^^^^^^^^^^\n\nSyntaxError: Invalid regular expression: /.replace(/: Unterminated group\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\nNode.js v22.16.0\n"
-    ],
-    "warnings: [
-      ESLint had issues: Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node: 6135) ESLintIgnoreWarning: The \".eslintignore\" file is no longer supported. Switch to using the \ignores\ property in \"eslint.config.js\": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files\n(Use `node --trace-warnings ...` to show where the warning was created)\n,
-      TypeScript had issues: Command failed: npm run type-check\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n",
-      "Build had issues: Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nwarn  - You have enabled experimental features (esmExternals, newNextLinkBehavior) in next.config.js.\nwarn  - Experimental features are not covered by semver, and may cause unexpected or broken application behavior. Use at your own risk.\n\ntsconfig.json(119,1): error TS1185: Merge conflict marker encountered.\n\n
-    ],
-    metrics": {}
-  },
-  "recommendations: [
-    Address all errors before deployment",
-    "Implement continuous integration for automated testing,
-    Set up automated deployment pipeline",
-    "Monitor performance metrics in production,
-    Regular security audits and dependency updates"
+  "timestamp": "2025-09-03T13:40:03.780Z",
+  "status": "completed",
+  "scripts": [
+    {
+      "script": "scripts/health-check.cjs",
+      "description": "Health Check",
+      "status": "failed",
+      "error": "spawnSync /bin/sh ETIMEDOUT"
+    },
+    {
+      "script": "scripts/performance-monitor.cjs",
+      "description": "Performance Monitor",
+      "status": "failed",
+      "error": "Command failed: node scripts/performance-monitor.cjs\n/workspace/scripts/performance-monitor.cjs:19\n}\n^\n\nSyntaxError: Unexpected token '}'\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
+    },
+    {
+      "script": "scripts/security-audit.cjs",
+      "description": "Security Audit",
+      "status": "failed",
+      "error": "Command failed: node scripts/security-audit.cjs\n/workspace/scripts/security-audit.cjs:10\n}\n^\n\nSyntaxError: Unexpected token '}'\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
+    }
   ],
-  "nextSteps: [
-    Review the comprehensive automation report",
-    "Address any critical errors identified,
-    Implement recommended optimizations",
-    "Set up monitoring for production environment,
-    Schedule regular automation runs",
-    "Document any custom automation workflows"
-  ]
+  "tests": [
+    {
+      "test": "npm run lint",
+      "description": "Linting check",
+      "status": "failed",
+      "error": "Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\nOops! Something went wrong! :(\n\nESLint: 8.57.1\n\nReferenceError: Cannot read config file: /workspace/.eslintrc.js\nError: module is not defined\n    at file:///workspace/.eslintrc.js:1:1\n    at ModuleJobSync.runSync (node:internal/modules/esm/module_job:400:35)\n    at ModuleLoader.importSyncForRequire (node:internal/modules/esm/loader:427:47)\n    at loadESMFromCJS (node:internal/modules/cjs/loader:1561:24)\n    at Module._compile (node:internal/modules/cjs/loader:1712:5)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n"
+    },
+    {
+      "test": "npm run format:check",
+      "description": "Format check",
+      "status": "failed",
+      "error": "spawnSync /bin/sh ENOBUFS"
+    },
+    {
+      "test": "npm test",
+      "description": "Unit tests",
+      "status": "failed",
+      "error": "Command failed: npm test\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: jest: not found\n"
+    }
+  ],
+  "improvements": [
+    {
+      "type": "new_scripts",
+      "count": 3,
+      "scripts": [
+        "scripts/performance-monitor-enhanced.cjs",
+        "scripts/code-quality-checker.cjs",
+        "scripts/deployment-automation-enhanced.cjs"
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "script": "scripts/health-check.cjs",
+      "error": "spawnSync /bin/sh ETIMEDOUT"
+    },
+    {
+      "script": "scripts/performance-monitor.cjs",
+      "error": "Command failed: node scripts/performance-monitor.cjs\n/workspace/scripts/performance-monitor.cjs:19\n}\n^\n\nSyntaxError: Unexpected token '}'\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
+    },
+    {
+      "script": "scripts/security-audit.cjs",
+      "error": "Command failed: node scripts/security-audit.cjs\n/workspace/scripts/security-audit.cjs:10\n}\n^\n\nSyntaxError: Unexpected token '}'\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
+    }
+  ],
+  "git": {
+    "status": "completed",
+    "commit": "Automated improvements and fixes - 2025-09-03T13:41:10.077Z"
+  }
 }

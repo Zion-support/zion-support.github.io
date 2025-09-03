@@ -1,14 +1,11 @@
 {
-  "timestamp": "2025-09-02T21:53:35.511Z",
+  "timestamp": "2025-09-03T13:56:00.957Z",
   "memory": {
-    "rss": 48603136,
-    "heapTotal": 5570560,
-    "heapUsed": 4222712,
-    "external": 1461306,
-    "arrayBuffers": 10515},
-  "uptime": 0.014364044,
-  "cpu": {
-    "user": 12337,
-    "system": 4112},
-  "buildSize": 375214,
-  "nodeModulesSize": 363397017}
+    "rss": 44474368,
+    "heapTotal": 5308416,
+    "heapUsed": 3642768,
+    "external": 1178203,
+    "arrayBuffers": 10515
+  },
+  "uptime": 0.011953286
+}

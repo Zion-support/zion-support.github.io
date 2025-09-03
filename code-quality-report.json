@@ -1,42 +1,13 @@
 {
-  "timestamp": "2025-09-03T05:05:33.745Z",
+  "timestamp": "2025-09-03T13:56:00.983Z",
   "checks": [
     {
-      "name": "Code Style",
-      "status": "failed",
-      "message": "Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: next: not found\n",
-      "timestamp": "2025-09-03T05:05:33.827Z"
+      "name": "package.json",
+      "status": "exists"
     },
     {
-      "name": "Complexity",
-      "status": "warning",
-      "message": "High complexity detected",
-      "timestamp": "2025-09-03T05:05:35.041Z"
-    },
-    {
-      "name": "Duplication",
-      "status": "passed",
-      "message": "No significant duplication found",
-      "timestamp": "2025-09-03T05:06:44.316Z"
-    },
-    {
-      "name": "Security",
-      "status": "passed",
-      "message": "No security vulnerabilities found",
-      "timestamp": "2025-09-03T05:06:44.827Z"
-    },
-    {
-      "name": "Performance",
-      "status": "failed",
-      "message": "Build failed",
-      "timestamp": "2025-09-03T05:06:44.999Z"
+      "name": "node_modules",
+      "status": "exists"
     }
-  ],
-  "score": 70,
-  "summary": {
-    "passed": 2,
-    "failed": 2,
-    "warnings": 0,
-    "warning": null
-  }
+  ]
 }
