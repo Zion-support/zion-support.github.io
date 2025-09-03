@@ -18,16 +18,17 @@ aggressive-*.js
 app-improvement-*.cjs
 analyze-*.cjs
 code-quality-*.js
-components/*.dynamic.jsx
-components/Accessibility*.tsx
-components/Accessibility*.jsx
-components/AdvancedAIAssistant.tsx
-components/AdvancedDataVisualization.tsx
-components/AdvancedNotificationCenter.tsx
-components/Analytics.tsx
-components/AnalyticsManager.tsx
-components/AnalyticsTracker.tsx
-components/ContactForm.tsx
+# Allow main components to be linted
+# components/*.dynamic.jsx
+# components/Accessibility*.tsx
+# components/Accessibility*.jsx
+# components/AdvancedAIAssistant.tsx
+# components/AdvancedDataVisualization.tsx
+# components/AdvancedNotificationCenter.tsx
+# components/Analytics.tsx
+# components/AnalyticsManager.tsx
+# components/AnalyticsTracker.tsx
+# components/ContactForm.tsx
 api/create-payment-intent.js
 api/newsletter/subscribe.js
 api/quotes.js
