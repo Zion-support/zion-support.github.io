@@ -515,7 +515,7 @@ export default function Home() {
                     <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <p className="text-zion-slate-light mb-4 italic">"{testimonial.content}"</p>
+                <p className="text-zion-slate-light mb-4 italic">&ldquo;{testimonial.content}&rdquo;</p>
                 <div className="flex items-center">
                   <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mr-3">
                     <span className="text-white font-semibold">{testimonial.name.charAt(0)}</span>

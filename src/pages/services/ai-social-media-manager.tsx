@@ -439,7 +439,7 @@ export default function AISocialMediaManager() {
                 ))}
               </div>
               <p className="text-gray-600 mb-4">
-                "AI Social Media Manager increased our engagement by 300% and saved us 20 hours per week. The AI content generation is incredible!"
+                &ldquo;AI Social Media Manager increased our engagement by 300% and saved us 20 hours per week. The AI content generation is incredible!&rdquo;
               </p>
               <div className="flex items-center">
                 <div className="w-10 h-10 bg-gray-200 rounded-full mr-3"></div>
@@ -456,7 +456,7 @@ export default function AISocialMediaManager() {
                 ))}
               </div>
               <p className="text-gray-600 mb-4">
-                "The analytics and insights are game-changing. We can now make data-driven decisions and our ROI has improved by 250%."
+                &ldquo;The analytics and insights are game-changing. We can now make data-driven decisions and our ROI has improved by 250%.&rdquo;
               </p>
               <div className="flex items-center">
                 <div className="w-10 h-10 bg-gray-200 rounded-full mr-3"></div>
@@ -473,7 +473,7 @@ export default function AISocialMediaManager() {
                 ))}
               </div>
               <p className="text-gray-600 mb-4">
-                "Finally, a tool that understands our brand voice and creates content that resonates with our audience. Highly recommended!"
+                &ldquo;Finally, a tool that understands our brand voice and creates content that resonates with our audience. Highly recommended!&rdquo;
               </p>
               <div className="flex items-center">
                 <div className="w-10 h-10 bg-gray-200 rounded-full mr-3"></div>
