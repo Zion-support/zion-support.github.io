@@ -27,20 +27,25 @@ export interface RevolutionaryITInfrastructureService2029 {
    growthRate: string;
    variant: string;
    contactInfo: { mobile: string;
-   email: string;
-   address: string}
+   emai,
+    l: string;
+   addres,
+    s: string}
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
-  rating: number;
-  reviews: number;
+  ratin,
+    g: number;
+  review,
+    s: number;
   isPopular?: boolean;
   isNew?: boolean}
 export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastructureService2029[] =;
   [;
-    // Zero Trust Network Access{
-      id: 'zero-trust-network-access',
+    // Zero Trust Network Access{'
+      i,
+    d: 'zero-trust-network-access',
       name: 'Zero Trust Network Access',
       tagline: 'Secure access to applications with zero trust principles',
       price: '$199',
@@ -63,7 +68,8 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       icon: '🛡️',
       color: 'from-red-600 to-pink-700',
       textColor: 'text-red-200',
-      link: 'https://ziontechgroup.com/services/zero-trust-network-access',
+      link: 'http,
+    s://ziontechgroup.com/services/zero-trust-network-access',
       marketPosition: 'Zero trust security for modern enterprises',
       targetAudience: ['Security', 'IT', 'DevOps'],
       trialDays: 30,
@@ -83,8 +89,9 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       marketSize: '$30B Zero Trust Security',
       growthRate: '25% CAGR',
       variant: 'security-zero-trust',
-      contactInfo: {
-        mobile: '+1 302 464 0950',
+      contactInfo: {'
+        mobil,
+    e: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709'},
       realImplementation: true,
@@ -95,7 +102,7 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       rating: 4.9,
       reviews: 22,
       isPopular: true},
-    // Cloud FinOps Optimizer{
+    // Cloud FinOps Optimizer{'
       id: 'cloud-finops-optimizer',
       name: 'Cloud FinOps Optimizer',
       tagline: 'Optimize cloud costs with AI-driven insights',
@@ -119,7 +126,8 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       icon: '💰',
       color: 'from-green-600 to-emerald-700',
       textColor: 'text-green-200',
-      link: 'https://ziontechgroup.com/services/cloud-finops-optimizer',
+      link: 'http,
+    s://ziontechgroup.com/services/cloud-finops-optimizer',
       marketPosition: 'AI-powered cloud cost optimization',
       targetAudience: ['Cloud', 'Finance', 'DevOps'],
       trialDays: 14,
@@ -136,8 +144,9 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       marketSize: '$15B Cloud Management',
       growthRate: '20% CAGR',
       variant: 'cloud-finops',
-      contactInfo: {
-        mobile: '+1 302 464 0950',
+      contactInfo: {'
+        mobil,
+    e: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709'},
       realImplementation: true,
@@ -147,7 +156,7 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       rating: 4.7,
       reviews: 35,
       isPopular: true},
-    // AI-Powered Compliance Assistant{
+    // AI-Powered Compliance Assistant{'
       id: 'ai-compliance-assistant',
       name: 'AI Compliance Assistant',
       tagline: 'Automate compliance with intelligent AI monitoring',
@@ -171,7 +180,8 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       icon: '📋',
       color: 'from-blue-600 to-indigo-700',
       textColor: 'text-blue-200',
-      link: 'https://ziontechgroup.com/services/ai-compliance-assistant',
+      link: 'http,
+    s://ziontechgroup.com/services/ai-compliance-assistant',
       marketPosition: 'AI-powered compliance for modern organizations',
       targetAudience: ['Compliance', 'Legal', 'Risk Management'],
       trialDays: 21,
@@ -188,8 +198,9 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       marketSize: '$25B GRC Market',
       growthRate: '18% CAGR',
       variant: 'compliance-ai',
-      contactInfo: {
-        mobile: '+1 302 464 0950',
+      contactInfo: {'
+        mobil,
+    e: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709'},
       realImplementation: true,
@@ -199,7 +210,7 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       rating: 4.8,
       reviews: 24,
       isNew: true},
-    // Advanced Threat Intelligence Platform{
+    // Advanced Threat Intelligence Platform{'
       id: 'advanced-threat-intelligence',
       name: 'Advanced Threat Intelligence Platform',
       tagline: 'Proactive threat detection with AI-powered intelligence',
@@ -223,7 +234,8 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       icon: '🔍',
       color: 'from-purple-600 to-violet-700',
       textColor: 'text-purple-200',
-      link: 'https://ziontechgroup.com/services/advanced-threat-intelligence',
+      link: 'http,
+    s://ziontechgroup.com/services/advanced-threat-intelligence',
       marketPosition: 'AI-powered threat intelligence for enterprise security',
       targetAudience: [;
         'Security Operations',
@@ -246,8 +258,9 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       marketSize: '$20B Threat Intelligence',
       growthRate: '22% CAGR',
       variant: 'threat-intelligence',
-      contactInfo: {
-        mobile: '+1 302 464 0950',
+      contactInfo: {'
+        mobil,
+    e: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709'},
       realImplementation: true,
@@ -256,7 +269,7 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       customers: 28,
       rating: 4.9,
       reviews: 18},
-    // Quantum-Ready Infrastructure{
+    // Quantum-Ready Infrastructure{'
       id: 'quantum-ready-infrastructure',
       name: 'Quantum-Ready Infrastructure',
       tagline: 'Future-proof your infrastructure for quantum computing',
@@ -280,7 +293,8 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       icon: '⚛️',
       color: 'from-cyan-600 to-blue-700',
       textColor: 'text-cyan-200',
-      link: 'https://ziontechgroup.com/services/quantum-ready-infrastructure',
+      link: 'http,
+    s://ziontechgroup.com/services/quantum-ready-infrastructure',
       marketPosition:;
         'Quantum-ready infrastructure for forward-thinking organizations',
       targetAudience: ['IT Infrastructure', 'Security', 'Research'],
@@ -304,8 +318,9 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       marketSize: '$50B Quantum Computing',
       growthRate: '35% CAGR',
       variant: 'quantum-infrastructure',
-      contactInfo: {
-        mobile: '+1 302 464 0950',
+      contactInfo: {'
+        mobil,
+    e: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709'},
       realImplementation: true,
@@ -316,7 +331,7 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       rating: 4.8,
       reviews: 12,
       isNew: true},
-    // Edge Computing Security{
+    // Edge Computing Security{'
       id: 'edge-computing-security',
       name: 'Edge Computing Security',
       tagline: 'Secure edge computing with zero-trust principles',
@@ -340,7 +355,8 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       icon: '🌐',
       color: 'from-orange-600 to-red-700',
       textColor: 'text-orange-200',
-      link: 'https://ziontechgroup.com/services/edge-computing-security',
+      link: 'http,
+    s://ziontechgroup.com/services/edge-computing-security',
       marketPosition: 'Comprehensive security for edge computing',
       targetAudience: ['Edge Computing', 'IoT', 'Security'],
       trialDays: 21,
@@ -357,8 +373,9 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       marketSize: '$40B Edge Computing',
       growthRate: '30% CAGR',
       variant: 'edge-security',
-      contactInfo: {
-        mobile: '+1 302 464 0950',
+      contactInfo: {'
+        mobil,
+    e: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709'},
       realImplementation: true,
@@ -368,7 +385,7 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       customers: 31,
       rating: 4.7,
       reviews: 19},
-    // AI-Powered Network Monitoring{
+    // AI-Powered Network Monitoring{'
       id: 'ai-network-monitoring',
       name: 'AI Network Monitoring',
       tagline: 'Intelligent network monitoring with AI insights',
@@ -392,7 +409,8 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       icon: '📡',
       color: 'from-yellow-600 to-amber-700',
       textColor: 'text-yellow-200',
-      link: 'https://ziontechgroup.com/services/ai-network-monitoring',
+      link: 'http,
+    s://ziontechgroup.com/services/ai-network-monitoring',
       marketPosition: 'AI-powered network monitoring for modern networks',
       targetAudience: ['Network Operations', 'DevOps', 'IT'],
       trialDays: 14,
@@ -412,8 +430,9 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       marketSize: '$18B Network Monitoring',
       growthRate: '16% CAGR',
       variant: 'network-ai',
-      contactInfo: {
-        mobile: '+1 302 464 0950',
+      contactInfo: {'
+        mobil,
+    e: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709'},
       realImplementation: true,
@@ -422,7 +441,7 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       customers: 53,
       rating: 4.6,
       reviews: 28},
-    // DevSecOps Automation Platform{
+    // DevSecOps Automation Platform{'
       id: 'devsecops-automation',
       name: 'DevSecOps Automation Platform',
       tagline: 'Automate security in your DevOps pipeline',
@@ -446,7 +465,8 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       icon: '🔧',
       color: 'from-indigo-600 to-purple-700',
       textColor: 'text-indigo-200',
-      link: 'https://ziontechgroup.com/services/devsecops-automation',
+      link: 'http,
+    s://ziontechgroup.com/services/devsecops-automation',
       marketPosition: 'Comprehensive DevSecOps for modern development',
       targetAudience: ['DevOps', 'Security', 'Development'],
       trialDays: 21,
@@ -460,8 +480,9 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       marketSize: '$12B DevSecOps',
       growthRate: '24% CAGR',
       variant: 'devsecops',
-      contactInfo: {
-        mobile: '+1 302 464 0950',
+      contactInfo: {'
+        mobil,
+    e: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709'},
       realImplementation: true,
@@ -472,7 +493,7 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       rating: 4.8,
       reviews: 21,
       isPopular: true},
-    // Data Privacy & Governance Platform{
+    // Data Privacy & Governance Platform{'
       id: 'data-privacy-governance',
       name: 'Data Privacy & Governance Platform',
       tagline: 'Manage data privacy and governance with AI',
@@ -496,7 +517,8 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       icon: '🔒',
       color: 'from-slate-600 to-gray-700',
       textColor: 'text-slate-200',
-      link: 'https://ziontechgroup.com/services/data-privacy-governance',
+      link: 'http,
+    s://ziontechgroup.com/services/data-privacy-governance',
       marketPosition: 'AI-powered data privacy and governance',
       targetAudience: ['Privacy', 'Legal', 'Data Governance'],
       trialDays: 30,
@@ -510,8 +532,9 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       marketSize: '$20B Data Privacy',
       growthRate: '20% CAGR',
       variant: 'privacy-governance',
-      contactInfo: {
-        mobile: '+1 302 464 0950',
+      contactInfo: {'
+        mobil,
+    e: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709'},
       realImplementation: true,
@@ -520,7 +543,7 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       customers: 26,
       rating: 4.7,
       reviews: 16},
-    // Hybrid Cloud Management{
+    // Hybrid Cloud Management{'
       id: 'hybrid-cloud-management',
       name: 'Hybrid Cloud Management',
       tagline: 'Manage hybrid cloud environments seamlessly',
@@ -544,7 +567,8 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       icon: '☁️',
       color: 'from-blue-600 to-cyan-700',
       textColor: 'text-blue-200',
-      link: 'https://ziontechgroup.com/services/hybrid-cloud-management',
+      link: 'http,
+    s://ziontechgroup.com/services/hybrid-cloud-management',
       marketPosition: 'Unified hybrid cloud management for enterprises',
       targetAudience: ['Cloud', 'Infrastructure', 'DevOps'],
       trialDays: 21,
@@ -561,8 +585,9 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       marketSize: '$35B Cloud Management',
       growthRate: '18% CAGR',
       variant: 'hybrid-cloud',
-      contactInfo: {
-        mobile: '+1 302 464 0950',
+      contactInfo: {'
+        mobil,
+    e: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709'},
       realImplementation: true,
@@ -585,7 +610,6 @@ export const getNewITInfrastructureServices = () => {
 export const getITInfrastructureServicesByPriceRange = (
   minPrice: number,
   maxPrice: number) => {
-  return revolutionaryITInfrastructureServices2029.filter(service => {
-    const price = parseInt(service.price.replace('$', '').replace(',', ''));
+  return revolutionaryITInfrastructureServices2029.filter(service => {'
+    const price = parseInt(service.price.replace('$', '').replace(',, ''));
     return price >= minPrice && price <= maxPrice})}
-;

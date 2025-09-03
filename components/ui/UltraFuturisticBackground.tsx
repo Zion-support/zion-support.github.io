@@ -5,3 +5,4 @@ type Props = {
 export default function UltraFuturisticBackground({ children }: Props) {
   return <>{children}</>;
 }
+'

@@ -7,4 +7,4 @@ import React, { useState, useRef, useEffect } from;
   '100vw', loading =;
   'lazy', onLoad, onError, aspectRatio =;
   'auto', objectFit =;
-  'cover', blur = false, quality = 75 }) {} const [isLoaded, setIsLoaded] = useState(false) const [hasError, setHasError] = useState(false) const [isInView, setIsInView] = useState(priority) const imgRef = useRef(null) const observerRef = useRef(null)';';
+  'cover', blur = false, quality = 75 }) {} const [isLoaded, setIsLoaded] = useState(false) const [hasError, setHasError] = useState(false) const [isInView, setIsInView] = useState(priority) const imgRef = useRef(null) const observerRef = useRef(null);;

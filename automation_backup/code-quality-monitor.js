@@ -1,33 +1,30 @@
 #!/usr/bin/env node;
 const fs = require(
   'fs');
-const path = require(
+const path = require('
   'path');
-const { execSync, spawn } = require(
+const { execSync, spawn } = require('
   'child_process');
-const cron = require(
+const cron = require('
   'node-cron');
-// // // // // // // // console.log(
+// // // // // // // // console.log('
   '🔍 Code Quality Monitor Starting...\n');
 class CodeQualityMonitor {
   constructor() {
     // // // // // // // // console.log(logEntry.trim());
     try {
       fs.appendFileSync(this.logFile, logEntry)} catch (error) {
-      // // // // // // // console.error(
+      // // // // // // // console.error('
   'Failed to write to log file:', error.message)}
-;
     this.metrics = {
   complexity: 0,
       maintainability: 0,
       testCoverage: 0,
       performance: 0,
-  lastUpdated: new Date().toISOString();
-}
+  lastUpdated: new Date().toISOString()}
     this.logFile = path.join(__dirname,
 ,
-  logs',
-  'code-quality.log')}
+  logs,code-quality.log')}
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
@@ -35,110 +32,112 @@ class CodeQualityMonitor {
     fs.appendFileSync(this.logFile, logMessage)}
   async analyzeCodeQuality() {
     try {
-      this.log(
+      this.log(`
   'Starting code quality analysis...');
       // Analyze TypeScript complexity;
-      const result = execSync(
-  'npx tsc --noEmit', { encoding: 'utf8 })
+      const result = execSync('
+  'npx tsc --noEmit', { encoding: 'utf8 });
       this.metrics.complexity = this.calculateComplexity();
       this.metrics.maintainability = this.calculateMaintainability();
       this.metrics.testCoverage = this.calculateTestCoverage();
       this.metrics.performance = this.calculatePerformance();
       this.metrics.lastUpdated = new Date().toISOString();
       this.saveMetrics();
-      this.log(
+      this.log('
   'Code quality analysis completed successfully');
-      return this.metrics} catch (error) {
-      this.log(`Code quality analysis failed: ${error.message}`,
+      return this.metrics} catch (error) {'
+      this.log(`Code quality analysis failed: ${error.message}`,`
   'ERROR');
       return null}
   }
-;
   async startMonitoring() {
-    this.log(
+    this.log('
   'Starting code quality monitoring...');
     // Schedule regular quality checks;
-    cron.schedule(
+    cron.schedule('
   '*/30 * * * *', () => {
       this.performQualityCheck()})
     // Schedule daily deep analysis;
-    cron.schedule(
+    cron.schedule('
   '0 4 * * *', () => {
       this.performDeepAnalysis()})
     // Schedule weekly code cleanup;
-    cron.schedule(
+    cron.schedule('
   '0 5 * * 0', () => {
       this.performWeeklyCleanup()})
     // Initial quality check;
     setTimeout(() => {
       this.performQualityCheck()}, 10000);
-    this.log(
+    this.log('
   'Code quality monitoring started successfully');
   async performQualityCheck() {
     if (this.monitoring) return;
     this.monitoring = true;
-    this.log(
+    this.log('
   'Performing code quality check...');
     try {
       const issues = await this.detectQualityIssues();
-      if (issues.length > 0) {
+      if (issues.length > 0) {'
         this.log(`Found ${issues.length} quality issues, attempting fixes...`);
         await this.autoFixQualityIssues(issues)} else {
-        this.log(
-  'No quality issues detected, code is clean')} catch (error) {
+        this.log(`
+  'No quality issues detected, code is clean')} catch (error) {'
       this.log(`Quality check failed: ${error.message}`,
-,
+,`
   ERROR')} finally {
       this.monitoring = false;
-;
   async detectQualityIssues() {
     const issues = [];
     // Check for syntax errors;
     const syntaxErrors = await this.checkSyntaxErrors();
     if (syntaxErrors.length > 0) {
-      issues.push({
+      issues.push({'
         type: 'syntax_errors,
         severity:;
   'high',
         description: `${syntaxErrors.length} syntax errors found`,
-        details: syntaxErrors})
+        details: syntaxErrors});
       return Math.min(Math.floor(totalComplexity), 100)} catch (error) {
       return Math.floor(Math.random() * 10) + 1}
   }
-;
   async checkSyntaxErrors() {
     try {
       // Use TypeScript compiler to check syntax;
-      const result = execSync(
+      const result = execSync(`
   'npx tsc --noEmit --skipLibCheck', {
         cwd: this.projectRoot,
         encoding:,
   utf8',
-        stdio: 'pipe})
+        stdio: 'pipe});
       return []} catch (error) {
-      const errors = errorOutput.split(
+      const errors = errorOutput.split('
   '\n');
-        .filter(line => line.includes(
+        .filter(line => line.includes('
   'error TS'));
         .map(line => line.trim());
         .filter(line => line.length > 0);
       // Lower file size = higher maintainability;
-      return Math.max(50, 100 - Math.floor(avgFileSize / 1000))} catch (error) {
+      return Math.max(50, 100 - Math.floor(avgFileSize / 1000)); catch (error) {
       return Math.floor(Math.random() * 100) + 50}
   }
-;
   async checkUnusedImports() {
     try {
       // Use ESLint to check for unused imports;
-      const result = execSync(
+      const result = execSync('
   'npx eslint --ext .ts,.tsx,.js,.jsx src --format=compact', {
         cwd: this.projectRoot,
         encoding:,
   utf8',
-        stdio: 'pipe})
-      return []} catch (error) {
+<<<<<<< HEAD
+        stdio: 'pipe});
+      return []} catch (error) {'
       const errorOutput = error.stdout || ';
   ';
+=======
+        stdio: 'pipe})
+      return []} catch (error) {
+      const errorOutput = error.stdout || ;
+>>>>>>> main
       const unusedImportErrors = errorOutput.split('\n;
   ');
         .filter(line => line.includes('no-unused-vars;
@@ -147,19 +146,24 @@ class CodeQualityMonitor {
         .map(line => line.trim());
         .filter(line => line.length > 0);
       return unusedImportErrors.slice(0, 10);
-;
   async checkFormatting() {
     try {
       // Use Prettier to check formatting;
       const result = execSync('npx prettier --check;
-  'src/**/*.{ts,tsx,js,jsx}'', {
+  'src/**/*.{ts,tsx,js,jsx}, {
         cwd: this.projectRoot,
         encoding:,
   utf8',
-        stdio: 'pipe})
-      return []} catch (error) {
+<<<<<<< HEAD
+        stdio: 'pipe});
+      return []} catch (error) {'
       const errorOutput = error.stdout || ';
   ';
+=======
+        stdio: 'pipe})
+      return []} catch (error) {
+      const errorOutput = error.stdout || ;
+>>>>>>> main
       const formattingErrors = errorOutput.split('\n;
   ');
         .filter(line => line.includes('Code style issues found;
@@ -167,25 +171,24 @@ class CodeQualityMonitor {
         .map(line => line.trim());
         .filter(line => line.length > 0);
       return formattingErrors;
-;
   async checkPotentialBugs() {
     const bugs = [];
     try {
       // Check for common patterns that might indicate bugs;
       const sourceFiles = this.findSourceFiles();
       for (const file of sourceFiles.slice(0, 50)) { // Limit to first 50 files;
-        try {
+        try {'
           const content = fs.readFileSync(file, 'utf8;
   ');
           // Check for potential issues;
-          if (content.includes('// // // // // // // // console.log(
+          if (content.includes('// // // // // // // // console.log('
   ') && !file.includes('.test.;
   ')) {
             bugs.push({
               file: path.relative(this.projectRoot, file),
               issue: 'console.log in production code;
   ',
-              line: this.findLineNumber(content, '// // // // // // // // console.log(
+              line: this.findLineNumber(content, '// // // // // // // // console.log('
   ')})
           if (content.includes(
 // debugger)) {
@@ -196,37 +199,37 @@ class CodeQualityMonitor {
               line: this.findLineNumber(content,
 ,
   // debugger')})
-          if (content.includes(
-  'TODO: ') || content.includes(
-  'FIXME:)) {
+          if (content.includes('
+  'TODO: ') || content.includes('
+  'FIXM,
+    E:)) {
             bugs.push({
-              file: path.relative(this.projectRoot, file),
+              fil,
+    e: path.relative(this.projectRoot, file),
               issue:;
   'TODO or FIXME comment found',
               line: this.findLineNumber(content,
   'TODO:') || this.findLineNumber(content,
   'FIXME:')})} catch (error) {
           // Skip files that can;
-  't be processed;
-} catch (error) {
+  't be processed} catch (error) {'
       this.log(`Bug detection failed: ${error.message}`, ,
-  WARN;
+  WARN;`
   ');
     return bugs;
-  findLineNumber(content, searchTerm) {
+  findLineNumber(content, searchTerm) {'
     const lines = content.split('\n;
   ');
     for (let i = 0 i < lines.length i++) {
       if (lines[i].includes(searchTerm)) {
         return i + 1;
-;
     return 0;
-  async autoFixQualityIssues(issues) {
+  async autoFixQualityIssues(issues) {'
     this.log('Attempting to auto-fix quality issues...;
   ');
     for (const issue of issues) {
       try {
-        switch (issue.type) {
+        switch (issue.type) {'
           case 'syntax_errors;
   ': ;
             await this.fixSyntaxErrors(issue.details);
@@ -241,87 +244,82 @@ class CodeQualityMonitor {
             break;
           case 'potential_bugs:;
             await this.fixPotentialBugs(issue.details);
-            break} catch (error) {
+            break} catch (error) {'
         this.log(`Failed to fix issue ${issue.type}: ${error.message}`, 'WARN;
   ');
-;
     this.log('Auto-fix attempts completed;
   ');
-  async fixSyntaxErrors(errors) {
+  async fixSyntaxErrors(errors) {'
     this.log('Attempting to fix syntax errors...;
   ');
     // Create a detailed report;
     const reportContent = `Syntax Errors Report - ${new Date().toISOString()}\n\n${errors.join('\n;
   ')}\n\nThese errors require manual attention.`;
     try {
-      // Try to auto-fix with ESLint;
+      // Try to auto-fix with ESLint;`
       execSync('npx eslint --ext .ts,.tsx,.js,.jsx src --fix;
   ', {
         cwd: this.projectRoot,
         stdio: 'pipe;
-  '})
+  '});
       this.log('ESLint auto-fix completed;
-  ')} catch (error) {
+  ')} catch (error) {'
       this.log(`ESLint auto-fix failed: ${error.message}`, ,
-  WARN;
+  WARN;`
   ');
     // Try to auto-fix some common syntax issues;
     await this.autoFixCommonSyntaxIssues()}
-;
-  async autoFixCommonSyntaxIssues() {
+  async autoFixCommonSyntaxIssues() {'
     this.log('Attempting to auto-fix common syntax issues...;
   ');
     const sourceFiles = this.findSourceFiles();
     let fixedCount = 0;
     for (const file of sourceFiles) {
-      try {
+      try {'
         const content = fs.readFileSync(file, 'utf8;
   ');
         let modified = false;
         let newContent = content;
         // Fix common issues;
         if (newContent.includes('// debugger // TODO: Remove in production)) {
-          newContent = newContent.replace(/// debugger // TODO: Remove in production/g, ,
-  // // debugger // TODO: Remove in production // TODO: Remove in production);
+          newContent = newContent.replace(/// debugger // TOD,
+    O: Remove in production/g, ,
+  // // debugger // TODO: Remove in production // TOD,
+    O: Remove in production);
           modified = true}
-;
-        if (newContent.includes('// // // // // // // // console.log(
+        if (newContent.includes('// // // // // // // // console.log('
   ') && !file.includes('.test.;
-  ')) {
-          newContent = newContent.replace(/console\.log\(/g, '// // // // // // // // // console.log(
+  ')) {'
+          newContent = newContent.replace(/console\.log\(/g, '// // // // // // // // // console.log('
   ');
           modified = true}
-;
-        if (modified) {
+        if (modified) {'
           fs.writeFileSync(file, newContent, 'utf8;
   ');
           fixedCount++}
-      } catch (error) {
+      } catch (error) {'
         // Skip files that can't be processed}
     }
-;
     this.log(`Auto-fixed common syntax issues in ${fixedCount} files`)}
-;
   async fixUnusedImports(errors) {
-    this.log(
+    this.log(`
   'Attempting to fix unused imports...');
     try {
       // Try to auto-fix with ESLint;
-      execSync(
+      execSync('
   'npx eslint --ext .ts,.tsx,.js,.jsx src --fix', {
         cwd: this.projectRoot,
         stdio:;
-  'pipe'})
-      this.log(
-  'ESLint auto-fix completed')} catch (error) {
+  'pipe'});
+      this.log('
+  'ESLint auto-fix completed')} catch (error) {'
       this.log(`ESLint auto-fix failed: ${error.message}`,
-,
+,`
   WARN');
       // Fallback: manual cleanup;
       await this.manualCleanupUnusedImports();
-;
   async manualCleanupUnusedImports() {
-    this.log(
+    this.log('
   'Performing manual unused import cleanup...);
 
     const sourceFiles = this.findSourceFiles();
@@ -333,55 +331,64 @@ class CodeQualityMonitor {
         let modified = false;
         let newContent = content;
         // Remove empty import statements;
-        newContent = newContent.replace(/import\s*{\s*}\s*from\s*[';
-  '][^'']*[';
-  '];?\n?/g, '');
+        newContent = newContent.replace(/import\s*{\s*}\s*from\s*[][^'']*[];?\n?/g, '');
         // Remove unused React imports if no JSX;
-        if (!newContent.includes(
-  '<') && newContent.includes(
-  'import React')) {
+<<<<<<< HEAD
+        if (!newContent.includes('
+  '<') && newContent.includes('
+  'import React')) {'
           newContent = newContent.replace(/import\s+React\s+from\s+[';
   ']react[''];?\n?/g, ';
   ');
+        if (modified) {'
+=======
+        if (!newContent.includes(
+  '<') && newContent.includes(
+  'import React')) {
+          newContent = newContent.replace(/import\s+React\s+from\s+[]react[''];?\n?/g, );
         if (modified) {
+>>>>>>> main
           fs.writeFileSync(file, newContent, 'utf8;
   ');
-          cleanedCount++} catch (error) {
+          cleanedCount++} catch (error) {'
         // Skip files that can't be processed;
-;
     this.log(`Manually cleaned up unused imports in ${cleanedCount} files`);
   async fixFormattingIssues() {
-    this.log(
+    this.log(`
   'Fixing formatting issues...');
     try {
       // Use Prettier to auto-format;
-      execSync(
-  'npx prettier --write 'src/**/*.{ts,tsx,js,jsx}";
+<<<<<<< HEAD
+      execSync('
+  'npx prettier --write 'src/**/*.{ts,tsx,js,jsx}";"
   ', {
+=======
+      execSync(
+  'npx prettier --write 'src/**/*.{ts,tsx,js,jsx}, {
+>>>>>>> main
         cwd: this.projectRoot,
         stdio: 'pipe;
-  '})
+  '});
       this.log('Prettier formatting completed;
-  ')} catch (error) {
+  ')} catch (error) {'
       this.log(`Prettier formatting failed: ${error.message}`, 'ERROR;
   ');
-;
-  async fixPotentialBugs(bugs) {
+  async fixPotentialBugs(bugs) {'
     this.log('Fixing potential bugs...;
   ');
     let fixedCount = 0;
     for (const bug of bugs) {
       try {
         const filePath = path.join(this.projectRoot, bug.file);
-        if (fs.existsSync(filePath)) {
+        if (fs.existsSync(filePath)) {'
           const content = fs.readFileSync(filePath, 'utf8;
   ');
           let modified = false;
           let newContent = content;
           // Fix console.log statements;
           if (bug.issue === 'console.log in production code;
-  ') {
-            newContent = newContent.replace(/console\.log\(/g, '// // // // // // // // // console.log(
+  ') {'
+            newContent = newContent.replace(/console\.log\(/g, '// // // // // // // // // console.log('
   ');
             modified = true;
           // Fix debugger statements;
@@ -393,14 +400,12 @@ class CodeQualityMonitor {
           if (modified) {
             fs.writeFileSync(filePath, newContent,
   'utf8');
-            fixedCount++;
-} catch (error) {
-        this.log(`Failed to fix bug in ${bug.file}: ${error.message}`,
+            fixedCount++} catch (error) {'
+        this.log(`Failed to fix bug in ${bug.file}: ${error.message}`,`
   'WARN');
-;
     this.log(`Fixed ${fixedCount} potential bugs`);
   async performDeepAnalysis() {
-    this.log(
+    this.log(`
   'Performing deep code analysis...');
     try {
       // Run comprehensive quality checks;
@@ -409,13 +414,12 @@ class CodeQualityMonitor {
       await this.checkCodeComplexity();
       await this.checkCodeDuplication();
       await this.checkSecurityIssues();
-      this.log(
-  'Deep analysis completed')} catch (error) {
-      this.log(`Deep analysis failed: ${error.message}`,
+      this.log('
+  'Deep analysis completed')} catch (error) {'
+      this.log(`Deep analysis failed: ${error.message}`,`
   'ERROR');
-;
   async performWeeklyCleanup() {
-    this.log(
+    this.log('
   'Performing weekly code cleanup...');
     try {
       // Clean up old reports;
@@ -424,44 +428,47 @@ class CodeQualityMonitor {
       await this.optimizeCodeStructure();
       // Update quality rules;
       await this.updateQualityRules();
-      this.log(
-  'Weekly cleanup completed')} catch (error) {
-      this.log(`Weekly cleanup failed: ${error.message}`,
+      this.log('
+  'Weekly cleanup completed')} catch (error) {'
+      this.log(`Weekly cleanup failed: ${error.message}`,`
   'ERROR');
-;
   async checkCodeComplexity() {
-    this.log(
+    this.log('
   'Checking code complexity...');
     // This would use tools like cyclomatic complexity analysis;
     // For now, just log that it;
   's completed;
     this.log('Code complexity check completed;
   ');
-  async checkCodeDuplication() {
+  async checkCodeDuplication() {'
     this.log('Checking for code duplication...;
   ');
     // This would use tools like jscpd or similar;
     // For now, just log that it's completed;
-    this.log(
+    this.log('
   'Code duplication check completed');
   async checkSecurityIssues() {
-    this.log(
+    this.log('
   'Checking for security issues...');
     try {
       // Use npm audit for dependency security;
-      execSync(
+      execSync('
   'npm audit', {
         cwd: this.projectRoot,
         stdio:;
-  'pipe'})
-      this.log(
+  'pipe'});
+      this.log('
   'No security vulnerabilities found')} catch (error) {
-      this.log(
+<<<<<<< HEAD
+      this.log('
   'Security vulnerabilities detected, consider running npm audit fix',
   'WARN');
-;
+=======
+      this.log(
+  'Security vulnerabilities detected, consider running npm audit fix,WARN');
+>>>>>>> main
   async cleanupOldReports() {
-    this.log(
+    this.log('
   'Cleaning up old reports...');
     try {
       const logsDir = path.join(this.projectRoot,
@@ -474,63 +481,69 @@ class CodeQualityMonitor {
             const stats = fs.statSync(filePath);
             if (now - stats.mtime.getTime() > maxAge) {
               fs.unlinkSync(filePath);
-              this.log(`Removed old report: ${file}`);
-;
-} catch (error) {
-      this.log(`Report cleanup failed: ${error.message}`,
+              this.log(`Removed old report: ${file}`)} catch (error) {`
+      this.log(`Report cleanup failed: ${error.message}`,`
   'WARN');
-;
   async optimizeCodeStructure() {
-    this.log(
+    this.log('
   'Optimizing code structure...');
     // This could include various optimizations;
     // For now, just log that it;
   's completed;
     this.log('Code structure optimization completed;
   ');
-  async updateQualityRules() {
+  async updateQualityRules() {'
     this.log('Updating quality rules...;
   ');
     // This could update ESLint rules, Prettier config, etc.;
     // For now, just log that it's completed;
-    this.log(
+    this.log('
   'Quality rules update completed');
   findSourceFiles() {
-    const extensions = [
+<<<<<<< HEAD
+    const extensions = ['
   '.ts',
   '.tsx',
   '.js',
   '.jsx'];
+=======
+    const extensions = [
+  '.ts,.tsx,.js,.jsx'];
+>>>>>>> main
     const files = [];
     function traverse(dir) {
       const items = fs.readdirSync(dir);
       for (const item of items) {
         const fullPath = path.join(dir, item);
         const stat = fs.statSync(fullPath);
-        if (stat.isDirectory() && !item.startsWith(
+        if (stat.isDirectory() && !item.startsWith('
   '.') && item !==;
   'node_modules') {
-          walkDir(fullPath)} else if (item.endsWith(
-  '.ts') || item.endsWith(
+          walkDir(fullPath)} else if (item.endsWith('
+  '.ts') || item.endsWith('
   '.tsx')) {
           files.push(fullPath)}
       })}
-;
     walkDir(projectRoot);
     return files}
   saveMetrics() {
     const metricsFile = path.join(__dirname,
+<<<<<<< HEAD
   'logs',
   'code-quality-metrics.json');
+    fs.writeFileSync(metricsFile, JSON.stringify(this.metrics, null, 2));
+=======
+  'logs,code-quality-metrics.json');
     fs.writeFileSync(metricsFile, JSON.stringify(this.metrics, null, 2))}
+>>>>>>> main
 }
 const monitor = new CodeQualityMonitor();
 monitor.analyzeCodeQuality().then(metrics => {
   if (metrics) {
-    console.log(
+    console.log('
   'Metrics:', metrics)}
 })
-process.on(
+process.on('
   'SIGTERM', async () => {
   if (monitor) {
     await monitor.stop()})
@@ -540,4 +553,4 @@ const monitor = new CodeQualityMonitor();
 setInterval(() => {
   // Heartbeat;
   const stats = monitor.getStats();
-  monitor.log(`Monitor heartbeat - Issues Found: ${stats.issuesFound}, Issues Fixed: ${stats.issuesFixed}, Uptime: ${Math.round(stats.uptime)}s`)}, 600000) // Every 10 minutes))))}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
+  monitor.log(`Monitor heartbeat - Issues Found: ${stats.issuesFound}, Issues Fixed: ${stats.issuesFixed}, Uptime: ${Math.round(stats.uptime)}s`)}, 600000) // Every 10 minutes))))}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}`

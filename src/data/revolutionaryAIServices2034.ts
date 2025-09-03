@@ -1,5 +1,9 @@
-export interface RevolutionaryAIService2034 {
+<<<<<<< HEAD
+export interface RevolutionaryAIService2034 {;
   id: string;
+=======
+export interface RevolutionaryAIService2034 {id: string;
+>>>>>>> main
    title: string;
    description: string;
    category: string;
@@ -17,7 +21,22 @@ export interface RevolutionaryAIService2034 {
    marketPrice: string;
    roi: string;
    innovationLevel: string;
-   contactInfo: { phone: string;
+   contactInfo: {  phone: string;
    email: string;
-   website: string;
+<<<<<<< HEAD
+   websit,
+    e: string
+   addres,
+    s: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string securit,
+    y: string[] complianc,
+    e: string[]  } competitors: string[] marketTrend: string aiModel?: string trainingData?: string marketingContent: { headline: string valueProposition: string keyFeature,
+    s: string[] competitiveAdvantage,
+    s: string[] testimonials?: string[] caseStudies?: string[]  } } export const REVOLUTIONARY_AI_SERVICES_2034: RevolutionaryAIService2034[] = [;
+=======
+   website: string
+<<<<<<< HEAD
+   address: string} technicalSpecs?: {technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[] compliance: string[]  } competitors: string[] marketTrend: string aiModel?: string trainingData?: string marketingContent: {headline: string valueProposition: string keyFeatures: string[] competitiveAdvantages: string[] testimonials?: string[] caseStudies?: string[]  } } export const REVOLUTIONARY_AI_SERVICES_2034: RevolutionaryAIService2034[] = [;
+=======
    address: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[] compliance: string[]  } competitors: string[] marketTrend: string aiModel?: string trainingData?: string marketingContent: { headline: string valueProposition: string keyFeatures: string[] competitiveAdvantages: string[] testimonials?: string[] caseStudies?: string[]  } } export const REVOLUTIONARY_AI_SERVICES_2034: RevolutionaryAIService2034[] = [;
+>>>>>>> main
+>>>>>>> main

@@ -11,7 +11,8 @@ export interface RealAdditionService2025Q3 {
    link: string;
    trialDays?: number;
    setupTime?: string;
-   realService: boolean;
+   realServic,
+    e: boolean;
    technology?: string[];
    integrations?: string[];
    useCases?: string[];
@@ -23,7 +24,9 @@ export interface RealAdditionService2025Q3 {
    customers?: number;
    rating?: number;
    reviews?: number;
-  export const realAdditions2025Q3: RealAdditionService2025Q3[] = [ { id:, ai-email-copilot', name: 'AI Email Responder Copilot, tagline:, Auto-draft, classify, and reply to inbound emails with policy guardrails', description: Reduce response times with an AI copilot that prioritizes, drafts, and routes emails across shared inboxes. Includes approval flows, tone controls, and CRM sync., , price: '$79, period:, /month', category: 'AI Assistants, features[ 'Priority inbox and intent detection', 'Policy-aware auto-drafting with approvals', 'CRM sync and follow-up reminders', 'Tone and brand voice controls', 'Analytics and SLA tracking' ], popular: true, link:, https: //ziontechgroup.com/ai-email-copilot, trialDays: 14, setupTime: '30 minutes', realService: true, technology[, Next.js', 'OpenAI', 'PostgreSQL'], integrations[ 'Gmail', 'Outlook', 'HubSpot', 'Salesforce'], useCases[ 'Shared inboxes', 'Lead response', 'Support triage'], roi: 'Cut average first response by 60%, competitors[, Superhuman AI', 'Gmail HelpMeWrite'], marketSize: '$10B+ email productivity, growthRate:, 20% CAGR', launchDate: '2025-06-01, customers: 140, rating: 4.7, reviews: 62},
+  export const realAdditions2025Q,
+    3: RealAdditionService2025Q3[] = [ { i,
+    d:, ai-email-copilot', name: 'AI Email Responder Copilot, tagline:, Auto-draft, classify, and reply to inbound emails with policy guardrails', description: Reduce response times with an AI copilot that prioritizes, drafts, and routes emails across shared inboxes. Includes approval flows, tone controls, and CRM sync., , price: '$79, period:, /month', category: 'AI Assistants, features[ 'Priority inbox and intent detection', 'Policy-aware auto-drafting with approvals', 'CRM sync and follow-up reminders', 'Tone and brand voice controls', 'Analytics and SLA tracking' ], popular: true, link:, https: //ziontechgroup.com/ai-email-copilot, trialDays: 14, setupTime: '30 minutes', realService: true, technology[, Next.js', 'OpenAI', 'PostgreSQL'], integrations[ 'Gmail', 'Outlook', 'HubSpot', 'Salesforce'], useCases[ 'Shared inboxes', 'Lead response', 'Support triage'], roi: 'Cut average first response by 60%, competitors[, Superhuman AI', 'Gmail HelpMeWrite'], marketSize: '$10B+ email productivity, growthRate:, 20% CAGR', launchDate: '2025-06-01, customers: 140, rating: 4.7, reviews: 62},
 	{
 		id:,
   affiliate-tracking-lite',
@@ -134,7 +137,7 @@ export interface RealAdditionService2025Q3 {
 		category: 'IT Operations,
 		features[;
   'Email-to-ticket with SLA timers',
-  'Asset discovery (agentless + agent)',
+  'Asset discovery (agentless + agent),
   'Knowledge base and macros',
   'AI reply suggestions',
   'Reports and CSAT';
@@ -184,7 +187,7 @@ export interface RealAdditionService2025Q3 {
   'Topic segmentation and speakers',
   'Action items with owners',
   'Email and Slack summaries',
-  'Templates (standups, reviews)';
+  'Templates (standups, reviews);
 		],
 		popular: false,
 		link:,
@@ -401,7 +404,7 @@ export interface RealAdditionService2025Q3 {
 		roi: 'Reduce vuln MTTR 30–50%,
 		competitors[,
   Snyk',
-  'Dependabot (partial)'],
+  'Dependabot (partial)],
 		marketSize: '$6B AppSec,
 		growthRate:,
   20% CAGR',
@@ -422,7 +425,7 @@ export interface RealAdditionService2025Q3 {
   /month',
 		category: 'Compliance Automation,
 		features[;
-  'Questionnaire templates (SOC2/ISO/NIST)',
+  'Questionnaire templates (SOC2/ISO/NIST),
   'Evidence upload and mapping',
   'Automated reminders and tasks',
   'Risk scoring and approvals',
@@ -469,7 +472,7 @@ export interface RealAdditionService2025Q3 {
   /month',
 		category: 'Reliability & SRE,
 		features[;
-  'Channel orchestration (Slack/PagerDuty)',
+  'Channel orchestration (Slack/PagerDuty),
   'Templates per severity',
   'Timeline auto-build from events',
   'Customer-ready summaries',
@@ -495,7 +498,7 @@ export interface RealAdditionService2025Q3 {
   'Compliance'],
 		roi: 'Cut comms toil 60%,
 		competitors[,
-  Rootly (partial)'],
+  Rootly (partial)],
 		marketSize: '$10B+ incident mgmt,
 		growthRate:,
   18% CAGR',

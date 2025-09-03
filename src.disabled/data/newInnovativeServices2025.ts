@@ -1,4 +1,7 @@
-export type ServiceItem = { id: string title: string description: string category:,
+export type ServiceItem = { id: string titl,
+    e: string descriptio,
+    n: string categor,
+    y:,
   Micro SaaS' |;
   'IT Services' |;
   'AI Solutions' |;
