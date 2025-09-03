@@ -7,8 +7,7 @@ import React, { useState } from;
   '../data/specializedMicroSaasServices2030' import { COMPREHENSIVE_PRICING_GUIDE_2030 } from;
   '../data/comprehensivePricingGuide2030' import { SEO } from;
   '../components/SEO'  const EnhancedServicesShowcase2030: React.FC = () => { const [activeCategory, setActiveCategory] = useState(
-  'all') const [searchTerm, setSearchTerm] = useState(';
-  ') const [sortBy, setSortBy] = useState('rating
+  'all') const [searchTerm, setSearchTerm] = useState() const [sortBy, setSortBy] = useState('rating
   ') const [viewMode, setViewMode] = useState<'grid;
   ' | 'list;
   '>('grid

@@ -1,6 +1,5 @@
 'use client,
-import { useState } from 'react;
-  ';
+import { useState }  from 'react;;
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: ',
@@ -10,8 +9,7 @@ export default function ContactForm() {
     phone:,
   ',
     service: ',
-    message: ';
-  '})
+    message: })
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {

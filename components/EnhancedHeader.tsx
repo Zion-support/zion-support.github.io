@@ -30,7 +30,7 @@ export default function EnhancedHeader() {
   };
 
   const navigation = [
-    { name: 'Home', href: '/' },
+  { name: 'Home', href: '/' },
     {
       name: 'Services',
       href: '/services',

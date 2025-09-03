@@ -1,26 +1,46 @@
-import React from 'react';';
-import { render, screen, fireEvent } from '@testing-library/react';';
-import '@testing-library/jest-dom';';
-import SecurityDashboard from '../components/SecurityDashboard';';
-  describe('SecurityDashboard', () => {';
-  test('renders without crashing', () => {';
+<<<<<<< HEAD
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import SecurityDashboard from '../components/SecurityDashboard';
+
+describe('SecurityDashboard', () => {
+  test('renders without crashing', () => {
     render(<SecurityDashboard />);
-    expect(screen.getByTestId('securitydashboard')).toBeInTheDocument();';
+    expect(screen.getByTestId('securitydashboard')).toBeInTheDocument();
   });
-;
-  test('displays correct content', () => {';
+
+  test('displays correct content', () => {
     render(<SecurityDashboard />);
-    // Add specific content tests based on component;
+=======
+import React   from 'react''
+import { render, screen, fireEvent }   from '@testing-library/react''
+import '@testing-library/jest-dom
+import SecurityDashboard   from '../components/SecurityDashboard''
+  describe('SecurityDashboard', () => {'
+  test('renders without crashing', () => {'
+    render(<SecurityDashboard  />)
+    expect(screen.getByTestId('securitydashboard')).toBeInTheDocument();'
+  })
+
+  test('displays correct content', () => {'
+    render(<SecurityDashboard  />)
+>>>>>>> main
+    // Add specific content tests based on component
   });
-;
-  test('handles user interactions', () => {';
-    render(<SecurityDashboard />);
-    // Add interaction tests based on component functionality;
+
+  test('handles user interactions', () => {'
+    render(<SecurityDashboard  />)
+    // Add interaction tests based on component functionality
   });
-;
-  test('applies correct styling', () => {';
-    render(<SecurityDashboard />);
-    // Add styling tests if needed;
+
+  test('applies correct styling', () => {'
+    render(<SecurityDashboard  />)
+    // Add styling tests if needed
+<<<<<<< HEAD
   });
 });
-;
+=======
+  })
+})
+>>>>>>> main

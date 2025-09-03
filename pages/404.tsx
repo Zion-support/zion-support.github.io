@@ -5,7 +5,7 @@ import { Home, ArrowLeft, Phone, Mail, FileText, Briefcase, Users, BookOpen, Dol
 
 export default function Custom404() {
   const quickLinks = [
-    { name: 'Home', url: '/', icon: Home }, 
+  { name: 'Home', url: '/', icon: Home }, 
     { name: 'Services', url: '/services', icon: Briefcase },
     { name: 'Solutions', url: '/solutions', icon: Award },
     { name: 'About', url: '/about', icon: Users }, 

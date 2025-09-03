@@ -7,30 +7,26 @@ const Footer: React.FC = () => {
 
   const footerLinks = {
     services: [
-      { name: 'AI Services', href: '/ai-services' },
-      { name: 'IT Services', href: '/it-services' },
-      { name: 'Micro SaaS', href: '/micro-saas' },
-      { name: 'All Services', href: '/services' }
+      { name: 'AI Services', href: '/services/ai-services' },
+      { name: 'IT Services', href: '/services/it-services' },
+      { name: 'Micro SaaS', href: '/services/micro-saas' }
     ], 
     solutions: [
       { name: 'Custom Development', href: '/solutions/custom-development' }, 
       { name: 'Digital Transformation', href: '/solutions/digital-transformation' }, 
-      { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
-      { name: 'All Solutions', href: '/solutions' }
+      { name: 'Enterprise Solutions', href: '/solutions/enterprise' }
     ], 
     company: [
       { name: 'About Us', href: '/about' }, 
       { name: 'Our Team', href: '/team' }, 
-      { name: 'Careers', href: '/careers' },
-      { name: 'Partners', href: '/partners' },
+      { name: 'Careers', href: '/careers' }, 
       { name: 'Contact', href: '/contact' }
     ], 
     resources: [
       { name: 'Blog', href: '/blog' }, 
       { name: 'Case Studies', href: '/case-studies' }, 
       { name: 'Documentation', href: '/docs' }, 
-      { name: 'Support', href: '/help' },
-      { name: 'Pricing', href: '/pricing' }
+      { name: 'Support', href: '/support' }
     ]
   };
 
@@ -49,15 +45,15 @@ const Footer: React.FC = () => {
             <div className='space-y-3'>
               <div className='flex items-center text-gray-300'>
                 <Mail className='h-5 w-5 mr-3 text-blue-400' />
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-400 transition-colors">kleber@ziontechgroup.com</a>
+                <span>info@ziontechgroup.com</span>
               </div>
               <div className='flex items-center text-gray-300'>
                 <Phone className='h-5 w-5 mr-3 text-blue-400' />
-                <a href="tel:+13024640950" className="hover:text-blue-400 transition-colors">+1 302 464 0950</a>
+                <span>+1 (302) 464-0950</span>
               </div>
               <div className='flex items-center text-gray-300'>
                 <MapPin className='h-5 w-5 mr-3 text-blue-400' />
-                <span>364 E Main St STE 1008, Middletown DE 19709</span>
+                <span>Delaware, USA</span>
               </div>
             </div>
             {/* Social Links */}

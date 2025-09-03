@@ -3,14 +3,7 @@ const CACHE_NAME =,
   zion-tech-group-dev-v1';
 // Files to cache in development;
 const STATIC_FILES = [
-  '/',
-  '/index.html',
-  '/favicon.svg',
-  '/favicon.ico',
-  '/og-image.svg',
-  '/manifest.json',
-  '/offline.html',
-  '/vite.svg';
+  '/,/index.html,/favicon.svg,/favicon.ico,/og-image.svg,/manifest.json,/offline.html,/vite.svg';
 ];
 // Install event - cache static files;
 self.addEventListener(
@@ -67,8 +60,7 @@ self.addEventListener(,
         // // // // // // // console.warn(
   'Dev SW: External request failed:, url.href, error);
 // Return empty response for failed external requests// Return empty response for failed external requests;
-return new Response(';
-  ', { status: 204 })}));
+return new Response(, { status: 204 })}));
     return;
   // For development, always try network first, then cache;
   event.respondWith(

@@ -1,21 +1,88 @@
+<<<<<<< HEAD
+import Link from 'next/link';
+import { Phone, Mail, MapPin, Linkedin, Twitter, Facebook, Instagram } from 'lucide-react';
+=======
 import React from 'react';
 import Link from 'next/link';
 import { Phone, Mail, MapPin, Linkedin, Twitter, Facebook, Instagram, Globe, ArrowUp } from 'lucide-react';
+>>>>>>> main
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
-  const scrollToTop = () => {
+<<<<<<< HEAD
+  const footerSections = [
+    {
+      title: 'Services', links: [
+        { name: 'AI Solutions', href: '/services/ai-solutions' }, { name: 'Cloud Services', href: '/services/cloud-services' }, { name: 'Cybersecurity', href: '/services/cybersecurity' }, { name: 'Digital Transformation', href: '/services/digital-transformation' }
+      ]
+    }, {
+      title: 'Company',
+      links: [
+        { name: 'About Us', href: '/about' },
+        { name: 'Our Team', href: '/team' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Contact', href: '/contact' }
+      ]
+    }, {
+      title: 'Resources',
+      links: [
+        { name: 'Blog', href: '/blog' },
+        { name: 'Case Studies', href: '/case-studies' },
+        { name: 'Documentation', href: '/documentation' },
+        { name: 'Support', href: '/support' }
+      ]
+    }
+  ];
+
+  const socialLinks = [
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: Linkedin }, { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
+    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook }, { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram }
+  ];
+
+  return (
+    <footer className="bg-gray-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
+=======
+<<<<<<< HEAD
+  return (
+    <footer className="bg-gray-900 text-white">
+      <div className="container mx-auto px-4 py-12">
+=======
+  const scrollToTop = () => {;
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+>>>>>>> main
+>>>>>>> main
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
+<<<<<<< HEAD
+              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-xl">Z</span>
+              </div>
+              <div className="text-xl font-bold">Zion Tech Group</div>
+            </div>
+            <p className="text-gray-300 text-sm">
+              Leading provider of AI-powered solutions, cloud infrastructure, and digital transformation services.
+            </p>
+            <div className="flex space-x-4">
+              <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
+                <Twitter className="w-5 h-5" />
+              </a>
+              <a href="https://facebook.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a href="https://instagram.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
+=======
               <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
                 <Globe className="w-5 h-5 text-white" />
               </div>
@@ -36,11 +103,87 @@ export default function Footer() {
                 <Facebook className="w-5 h-5" />
               </a>
               <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">
+>>>>>>> main
                 <Instagram className="w-5 h-5" />
               </a>
             </div>
           </div>
 
+<<<<<<< HEAD
+          {/* Contact Info */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">Contact Info</h3>
+            <div className="space-y-3">
+              <div className="flex items-center space-x-3">
+                <Mail className="w-4 h-4 text-blue-400" />
+                <span className="text-sm text-gray-300">info@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Phone className="w-4 h-4 text-blue-400" />
+                <span className="text-sm text-gray-300">+1 (555) 123-4567</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <MapPin className="w-4 h-4 text-blue-400" />
+                <span className="text-sm text-gray-300">San Francisco, CA</span>
+              </div>
+            </div>
+          </div>
+
+<<<<<<< HEAD
+          {/* Footer Links */}
+          {footerSections.map((section) => (
+            <div key={section.title}>
+              <h3 className="text-lg font-semibold mb-4">{section.title}</h3>
+              <ul className="space-y-2">
+                {section.links.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      href={link.href}
+                      className="text-gray-400 hover: text-white transition-colors"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+=======
+          {/* Quick Links */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">Quick Links</h3>
+            <div className="space-y-2">
+              <Link href="/about" className="block text-sm text-gray-300 hover:text-white transition-colors">
+                About Us
+              </Link>
+              <Link href="/services" className="block text-sm text-gray-300 hover:text-white transition-colors">
+                Services
+              </Link>
+              <Link href="/products" className="block text-sm text-gray-300 hover:text-white transition-colors">
+                Products
+              </Link>
+              <Link href="/contact" className="block text-sm text-gray-300 hover:text-white transition-colors">
+                Contact
+              </Link>
+>>>>>>> main
+            </div>
+          </div>
+
+          {/* Services */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">Services</h3>
+            <div className="space-y-2">
+              <Link href="/ai-services" className="block text-sm text-gray-300 hover:text-white transition-colors">
+                AI Services
+              </Link>
+              <Link href="/it-services" className="block text-sm text-gray-300 hover:text-white transition-colors">
+                IT Services
+              </Link>
+              <Link href="/micro-saas" className="block text-sm text-gray-300 hover:text-white transition-colors">
+                Micro SaaS
+              </Link>
+              <Link href="/consulting" className="block text-sm text-gray-300 hover:text-white transition-colors">
+                Consulting
+              </Link>
+=======
           {/* Services */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Services</h3>
@@ -48,7 +191,9 @@ export default function Footer() {
               <li><Link href="/ai-services" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">AI Services</Link></li>
               <li><Link href="/it-services" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">IT Services</Link></li>
               <li><Link href="/micro-saas" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Micro SaaS</Link></li>
+              <li><Link href="/services" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">All Services</Link></li>
               <li><Link href="/solutions" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Solutions</Link></li>
+              <li><Link href="/pricing" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Pricing</Link></li>
             </ul>
           </div>
 
@@ -57,8 +202,10 @@ export default function Footer() {
             <h3 className="text-lg font-semibold">Company</h3>
             <ul className="space-y-2">
               <li><Link href="/about" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">About Us</Link></li>
+              <li><Link href="/team" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Our Team</Link></li>
               <li><Link href="/careers" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Careers</Link></li>
               <li><Link href="/blog" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Blog</Link></li>
+              <li><Link href="/case-studies" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Case Studies</Link></li>
               <li><Link href="/partners" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Partners</Link></li>
             </ul>
           </div>
@@ -86,10 +233,50 @@ export default function Footer() {
                   Middletown DE 19709
                 </span>
               </div>
+>>>>>>> main
             </div>
           </div>
         </div>
 
+<<<<<<< HEAD
+        {/* Bottom Bar */}
+        <div className="border-t border-gray-800 mt-8 pt-8">
+<<<<<<< HEAD
+          <div className="flex flex-col md: flex-row justify-between items-center">
+            <div className="flex space-x-6 mb-4 md:mb-0">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover: text-white transition-colors"
+                >
+                  <social.icon className="h-5 w-5" />
+                </a>
+              ))}
+            </div>
+=======
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+>>>>>>> main
+            <div className="text-sm text-gray-400">
+              © {currentYear} Zion Tech Group. All rights reserved.
+            </div>
+            <div className="flex space-x-6 text-sm">
+              <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
+                Privacy Policy
+              </Link>
+              <Link href="/terms" className="text-gray-400 hover:text-white transition-colors">
+                Terms of Service
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
+=======
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-gray-400 text-sm">
@@ -120,3 +307,4 @@ export default function Footer() {
     </footer>
   );
 }
+>>>>>>> main

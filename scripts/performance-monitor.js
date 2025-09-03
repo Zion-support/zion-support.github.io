@@ -83,6 +83,14 @@ class PerformanceMonitor {
       const nodeModulesPath = path.join(this.projectRoot, 'node_modules');
       if (fs.existsSync(nodeModulesPath)) {
         const nodeModulesSize = this.getDirectorySize(nodeModulesPath);
+<<<<<<< HEAD
+        this.metrics.application.dependenciesSize = Math.round(nodeModulesSize / 1024 / 1024) // MB}
+      // Check source code size
+      const srcPath = path.join(this.projectRoot,src');
+      if (fs.existsSync(srcPath)) {
+        const srcSize = this.getDirectorySize(srcPath);
+        this.metrics.application.sourceSize = Math.round(srcSize / 1024) // KB}
+=======
         this.metrics.application.dependenciesSize = Math.round(nodeModulesSize / 1024 / 1024); // MB
       }
       // Check source code size
@@ -91,11 +99,12 @@ class PerformanceMonitor {
         const srcSize = this.getDirectorySize(srcPath);
         this.metrics.application.sourceSize = Math.round(srcSize / 1024); // KB
       }
+>>>>>>> main
       // Count files
       this.metrics.application.fileCounts = {
-        source: this.countFiles(srcPath, ['.ts', '.tsx', '.js', '.jsx']),
-        styles: this.countFiles(path.join(this.projectRoot, 'styles'), ['.css', '.scss', '.sass']),
-        tests: this.countFiles(path.join(this.projectRoot, 'tests'), ['.test.js', '.test.ts', '.spec.js', '.spec.ts'])
+        source: this.countFiles(srcPath, ['.ts,.tsx,.js,.jsx']),
+        styles: this.countFiles(path.join(this.projectRoot, 'styles'), ['.css,.scss,.sass']),
+        tests: this.countFiles(path.join(this.projectRoot, 'tests'), ['.test.js,.test.ts,.spec.js,.spec.ts'])
       };
     } catch (error) {
       console.warn('⚠️  Could not collect application metrics:', error.message);
@@ -103,13 +112,15 @@ class PerformanceMonitor {
   }
   async collectBuildMetrics() {
     try {
+<<<<<<< HEAD
+      console.log(
+  '🔨 Collecting build metrics...');
+=======
       console.log('🔨 Collecting build metrics...');
+>>>>>>> main
       // Check if build artifacts exist
       const buildFiles = [
-        'dist/index.html',
-        'dist/css',
-        'dist/js',
-        'dist/assets'
+        'dist/index.html,dist/css,dist/js,dist/assets'
       ];
       this.metrics.build.artifacts = {};
       buildFiles.forEach(file => {
@@ -167,7 +178,7 @@ class PerformanceMonitor {
     return count;
   }
   async saveMetrics() {
-    const metricsPath = path.join(this.projectRoot, 'logs', 'performance-metrics.json');
+    const metricsPath = path.join(this.projectRoot, 'logs,performance-metrics.json');
     try {
       fs.writeFileSync(metricsPath, JSON.stringify(this.metrics, null, 2));
       console.log(`📊 Metrics saved to: ${metricsPath}`);

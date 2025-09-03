@@ -45,14 +45,7 @@ if (conflictFiles.length === 0) {
 
 // Strategy: Accept main branch changes for most files, but preserve our key improvements
 const preserveOurChanges = [
-  'src/components/SEO.tsx',
-  'next.config.js',
-  'scripts/clean-console-logs.js',
-  'scripts/performance-optimizer.js',
-  'scripts/typescript-improver.js',
-  'scripts/fix-missing-imports.js',
-  'scripts/fix-layout-conflicts.js',
-  'COMPREHENSIVE_IMPROVEMENTS_REPORT.md'
+  'src/components/SEO.tsx,next.config.js,scripts/clean-console-logs.js,scripts/performance-optimizer.js,scripts/typescript-improver.js,scripts/fix-missing-imports.js,scripts/fix-layout-conflicts.js,COMPREHENSIVE_IMPROVEMENTS_REPORT.md'
 ];
 
 let resolvedCount = 0;

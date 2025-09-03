@@ -7,7 +7,7 @@ import { ArrowRight, Award, Brain, Code, Globe, Shield, Users, Zap } from 'lucid
 
 export default function Team() {
   const teamMembers = [
-    {
+  {
       name: 'Kleber Santos',
       role: 'CEO & Founder',
       expertise: 'AI & Machine Learning',
@@ -58,7 +58,7 @@ export default function Team() {
   ];
 
   const values = [
-    {
+  {
       icon: Brain,
       title: 'Innovation First',
       description: 'We push the boundaries of technology to deliver cutting-edge solutions.'

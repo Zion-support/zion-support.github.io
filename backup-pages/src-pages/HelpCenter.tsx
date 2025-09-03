@@ -316,10 +316,8 @@ export function HelpCenter() {
   'getting-started']))
   const [selectedCategory, setSelectedCategory] = useState<string>(
   'All');
-    if (query.trim() === ';
-  ') {
-setSearchQuery(query)'    if (query.trim() === ';
-  ') {
+    if (query.trim() === ) {
+setSearchQuery(query)'    if (query.trim() === ) {
       setFilteredFAQs(faqData);
       return;
     setFilteredFAQs (filtered) }
@@ -523,8 +521,7 @@ setSearchQuery(query)'    if (query.trim() === ';
                                             article.difficulty ===;
   'Intermediate' ?;
   'bg-yellow-500/20 text-yellow-400' :;
-  ';
-                                            'bg-red-500/20 text-red-400`}`}>{article.difficulty}
+  bg-red-500/20 text-red-400`}`}>{article.difficulty}
                                           </span>'
                                           <span className='text-gray-500 text-sm flex items-center'>'
                                             <Clock className='w-4 h-4 mr-1'  />
@@ -547,8 +544,7 @@ setSearchQuery(query)'    if (query.trim() === ';
                                         article.difficulty ===;
   'Intermediate' ?;
   'bg-yellow-500/20 text-yellow-400' :;
-  ';
-                                        'bg-red-500/20 text-red-400`}`}>{article.difficulty}
+  bg-red-500/20 text-red-400`}`}>{article.difficulty}
                                       </span>'
                                       <span className='text-gray-500 text-sm flex items-center'>'
                                         <Clock className='w-4 h-4 mr-1'  />                                        {article.readTime}

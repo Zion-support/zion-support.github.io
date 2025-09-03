@@ -5,10 +5,8 @@
  */;
 import fs from,
   fs';
-import path from "path";
-  'path';
-import { fileURLToPath } from "url";
-  'url';
+import path from "pathpath';
+import { fileURLToPath } from "urlurl';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 console.log(

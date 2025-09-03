@@ -133,7 +133,7 @@ const PerformanceEnhancer: React.FC = () => {
   // Send metrics to analytics
   const sendToAnalytics = useCallback((metricName: string, value: number) => {
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'web_vitals', {
+      (window as any).gtag('event,web_vitals', {
         name: metricName,
         value: Math.round(value),
         event_category: 'Performance',

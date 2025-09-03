@@ -1,7 +1,7 @@
-import { useState, useMemo, useCallback } from 'react';"
-import { motion, AnimatePresence } from 'framer-motion';"
-import { ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown } from 'lucide-react';"
-import { useVirtualScroll } from '../hooks/useVirtualScroll.jsx';"
+import { useState, useMemo, useCallback } from 'react
+import { motion, AnimatePresence } from 'framer-motion
+import { ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown } from 'lucide-react
+import { useVirtualScroll } from '../hooks/useVirtualScroll.jsx
 export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = '', onRowClick, onSelectionChange, onExport }) => {
     const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true",
 })'
@@ -78,8 +78,8 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
 '''
                 return prev.direction === 'asc'''''
                     ? { key, direction: 'desc' }''
-                    : null}''';"
-            return { key, direction: 'asc' }})';'
+                    : null}''
+            return { key, direction: 'asc' }})
         trackEvent('table',column_sorted', String(key))}, [enableSorting, trackEvent])
     // Handle filter change
     const handleFilterChange = useCallback((key, value, operator) => {}
@@ -126,7 +126,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
         const headers = columns.map(col => col.header).join(',)
         const rows = data.map(item => columns.map(col => {}"
 ''''
-            const value = item[col.key]'';'''
+            const value = item[col.key]'''
             return typeof value === 'string' && value.includes(',) ? `'${value}'` : value}).join(',))'
         return [headers, ...rows].join('\n')}
     // Download CSV
@@ -135,7 +135,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
 ''
 '''
         const blob = new Blob([content], { type: 'text/csv' })'
-        const url = window.URL.createObjectURL(blob)';'
+        const url = window.URL.createObjectURL(blob)
         const a = document.createElement('a')
         a.href = url
         a.download = filename

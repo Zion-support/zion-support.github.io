@@ -2,8 +2,7 @@
 
 import fs from 'fs'
 import path from 'path'
-import { glob } from 'glob'
-/**
+import { glob }  from 'glob';/**
  * Performance optimization script for Zion Tech Group
  * Implements various performance improvements
  */
@@ -12,7 +11,7 @@ const OPTIMIZATIONS = {
   // Image optimization
   images: {
     enabled: true,
-    formats: ['webp', 'avif'],
+    formats: ['webp,avif'],
     quality: 85,
     sizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840]
   },
@@ -53,7 +52,7 @@ function optimizeNextConfig() {
   experimental: {
     ...config.experimental,
     optimizeCss: true,
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
+    optimizePackageImports: ['lucide-react,@radix-ui/react-icons'],
     turbo: {
       rules: {
         '*.svg': {
@@ -67,7 +66,7 @@ function optimizeNextConfig() {
   // Image optimization
   images: {
     ...config.images,
-    formats: ['image/webp', 'image/avif'],
+    formats: ['image/webp,image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 60,
@@ -147,16 +146,11 @@ function optimizePackageJson() {
   // Add performance scripts
   packageJson.scripts = {
     ...packageJson.scripts,
-    'build:analyze': 'ANALYZE=true npm run build',
-    'build:production': 'NODE_ENV=production npm run build',
-    'perf:audit': 'npm run build:analyze',
-    'perf:lighthouse': 'lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html',
+    'build:analyze': 'ANALYZE=true npm run build,build:production': 'NODE_ENV=production npm run build,perf:audit': 'npm run build:analyze,perf:lighthouse': 'lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html',
   }
   // Add performance dependencies if not present
   const perfDeps = {
-    '@next/bundle-analyzer': '^15.5.2',
-    'lighthouse': '^12.0.0',
-    'web-vitals': '^5.1.0'
+    '@next/bundle-analyzer': '^15.5.2,lighthouse': '^12.0.0,web-vitals': '^5.1.0'
   }
   for (const [dep, version] of Object.entries(perfDeps)) {
     if (!packageJson.devDependencies[dep]) {
@@ -177,8 +171,7 @@ function createPerformanceComponents() {
   
   // Create optimized image component
   const optimizedImageComponent = `import React from 'react'
-import Image from 'next/image'
-interface OptimizedImageProps {
+import Image  from 'next/image';interface OptimizedImageProps {
   src: string
   alt: string
   width?: number
@@ -216,8 +209,7 @@ export default OptimizedImage
 `
   fs.writeFileSync(path.join(componentsDir, 'OptimizedImage.tsx'), optimizedImageComponent)
   // Create lazy loading component
-  const lazyLoadingComponent = `import React, { Suspense, lazy } from 'react'
-interface LazyComponentProps {
+  const lazyLoadingComponent = `import React, { Suspense, lazy }  from 'react';interface LazyComponentProps {
   component: () => Promise<{ default: React.ComponentType<any> }>
   fallback?: React.ReactNode
   [key: string]: any
@@ -250,7 +242,7 @@ function optimizeImages() {
   }
   
   // Create images directory structure
-  const imageDirs = ['images', 'images/optimized', 'images/thumbnails']
+  const imageDirs = ['images,images/optimized,images/thumbnails']
   for (const dir of imageDirs) {
     const fullPath = path.join(publicDir, dir)
     if (!fs.existsSync(fullPath)) {
@@ -273,7 +265,7 @@ function optimizeImages() {
 function main() {
   console.log('🚀 Starting performance optimization...')
   const optimizations = [
-    { name: 'Next.js Config', fn: optimizeNextConfig },
+  { name: 'Next.js Config', fn: optimizeNextConfig },
     { name: 'Package.json', fn: optimizePackageJson },
     { name: 'Performance Components', fn: createPerformanceComponents },
     { name: 'Image Directories', fn: optimizeImages }
