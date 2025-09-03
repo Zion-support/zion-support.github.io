@@ -411,7 +411,6 @@ this.log(`Dashboard generated successfully at ${htmlPath}`);
 }">${dashboard.codeQuality.metrics.typescript.status}</span>;
                             : "bg-red-500 text-white";,
 }>${dashboard.codeQuality.metrics.typescript.status}</span>;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
                         <span class=ml-2 text-gray-400>${dashboard.codeQuality.metrics.typescript.errors} errors</span>;
                     </div>;
                 </div>;
@@ -427,7 +426,6 @@ this.log(`Dashboard generated successfully at ${htmlPath}`);
                             : `bg-red-500 text-white`;,
 }>${dashboard.codeQuality.metrics.eslint.status}</span>;
                         <span class=ml-2 text-gray-400">${dashboard.codeQuality.metrics.eslint.issues} issues</span>;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
                     </div>;
                 </div>;
             </div>;

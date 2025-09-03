@@ -245,7 +245,6 @@ class $1 {
 }
 ;,
 }
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
 ;
   async checkUnusedImports() {
@@ -297,7 +296,6 @@ class $1 {
 }
     } catch (error) {
   console.error("❌ Failed to auto-fix TypeScript errors: ", error)}
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
 ;
   async autoFixImportIssues() {
@@ -323,7 +321,6 @@ class $1 {
 }
     } catch (error) {
   console.error("❌ Failed to auto-fix import issues: ", error)}
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
 ;
   async autoFixSyntaxIssues() {
@@ -349,7 +346,6 @@ class $1 {
 }
     } catch (error) {
   console.error("❌ Failed to auto-fix syntax issues: ", error)}
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
 ;
   async autoFixUnusedImports() {
@@ -375,7 +371,6 @@ class $1 {
 }
     } catch (error) {
   console.error("❌ Failed to auto-fix unused imports: ", error)}
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
 ;
   async getSourceFiles() {

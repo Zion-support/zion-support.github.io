@@ -294,7 +294,6 @@ export default [
 });,
 }
     }
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
 ;
   async fixTypeScriptErrors() {
@@ -552,7 +551,6 @@ export default [
           await this.fixESLintError(filePath, parseInt(line), parseInt(column), message);,
 }
         }
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
     }
   }

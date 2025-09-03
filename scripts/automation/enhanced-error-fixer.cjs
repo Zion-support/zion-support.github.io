@@ -678,7 +678,6 @@ async function runFinalChecks() {
 ;
     console.log("  🔍 Running final build check...");
     console.log("  🔍 Running final build check...");
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
     try {
   execSync("npm run build", { stdio: "pipe" });
       console.log(`  ✅ Build check passed`);,

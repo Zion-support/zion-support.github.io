@@ -149,7 +149,6 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
-<<<<<<< HEAD
     // Intelligent Dependency Manager - Dependency analysis and management
     {
       name: 'intelligent-dependency-manager',
@@ -263,11 +262,7 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
-    // Enhanced CI/CD Automation - CI/CD pipeline management
-=======
-    // Enhanced CI/CD Automation
->>>>>>> main
-    {
+    // Enhanced CI/CD Automation - CI/CD pipeline management    {
       name: 'enhanced-ci-cd-automation',
       script: './scripts/automation/enhanced-ci-cd-automation.cjs',
       instances: 1,
@@ -280,36 +275,22 @@ module.exports = {
         PIPELINE_ORCHESTRATION: 'true',
         ENVIRONMENT_MANAGEMENT: 'true',
       },
-<<<<<<< HEAD
-      cron_restart: '0 */4 * * *', // Restart every 4 hours
-=======
-      cron_restart: '0 */1 * * *', // Restart every hour
->>>>>>> main
-      log_file: './logs/enhanced-ci-cd-automation.log',
+      cron_restart: '0 */4 * * *', // Restart every 4 hours      log_file: './logs/enhanced-ci-cd-automation.log',
       error_file: './logs/enhanced-ci-cd-automation-error.log',
       out_file: './logs/enhanced-ci-cd-automation-out.log',
       merge_logs: true,
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
-<<<<<<< HEAD
     // Enhanced Testing Automation - Comprehensive testing strategies
     {
       name: 'enhanced-testing-automation',
-      script: './scripts/automation/enhanced-testing-automation.cjs',
-=======
-    // Intelligent Repository Manager
-    {
-      name: 'intelligent-repository-manager',
-      script: './scripts/automation/intelligent-repository-manager.cjs',
->>>>>>> main
-      instances: 1,
+      script: './scripts/automation/enhanced-testing-automation.cjs',      instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-<<<<<<< HEAD
         TESTING_AUTOMATION_MODE: 'true',
         PARALLEL_TESTING: 'true',
         COVERAGE_ANALYSIS: 'true',
@@ -364,25 +345,11 @@ module.exports = {
       cron_restart: '0 */2 * * *', // Restart every 2 hours
       log_file: './logs/project-health-monitor.log',
       error_file: './logs/project-health-monitor-error.log',
-      out_file: './logs/project-health-monitor-out.log',
-=======
-        REPOSITORY_MANAGEMENT_MODE: 'true',
-      },
-      cron_restart: '0 */1 * * *', // Restart every hour
-      log_file: './logs/intelligent-repository-manager.log',
-      error_file: './logs/intelligent-repository-manager-error.log',
-      out_file: './logs/intelligent-repository-manager-out.log',
->>>>>>> main
-      merge_logs: true,
+      out_file: './logs/project-health-monitor-out.log',      merge_logs: true,
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
-<<<<<<< HEAD
-    // PM2 Sync Automation - PM2 process synchronization
-=======
-    // Advanced Development Intelligence
->>>>>>> main
-    {
+    // PM2 Sync Automation - PM2 process synchronization    {
       name: 'advanced-development-intelligence',
       script: './scripts/automation/advanced-development-intelligence.cjs',
       instances: 1,
@@ -391,7 +358,6 @@ module.exports = {
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-<<<<<<< HEAD
         PM2_SYNC_MODE: 'true',
         PROCESS_MONITORING: 'true',
         AUTO_RECOVERY: 'true',
@@ -400,20 +366,10 @@ module.exports = {
       cron_restart: '0 */1 * * *', // Restart every hour
       log_file: './logs/pm2-sync-automation.log',
       error_file: './logs/pm2-sync-automation-error.log',
-      out_file: './logs/pm2-sync-automation-out.log',
-=======
-        DEVELOPMENT_INTELLIGENCE_MODE: 'true',
-      },
-      cron_restart: '0 */2 * * *', // Restart every 2 hours
-      log_file: './logs/advanced-development-intelligence.log',
-      error_file: './logs/advanced-development-intelligence-error.log',
-      out_file: './logs/advanced-development-intelligence-out.log',
->>>>>>> main
-      merge_logs: true,
+      out_file: './logs/pm2-sync-automation-out.log',      merge_logs: true,
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
-<<<<<<< HEAD
     // Link Checker Automation - Link validation and monitoring
     {
       name: 'link-checker-automation',
@@ -570,26 +526,7 @@ module.exports = {
       cron_restart: '0 2 * * *', // Restart daily at 2 AM
       log_file: './logs/daily-build-test.log',
       error_file: './logs/daily-build-test-error.log',
-      out_file: './logs/daily-build-test-out.log',
-=======
-    // Intelligent Deployment Orchestrator
-    {
-      name: 'intelligent-deployment-orchestrator',
-      script: './scripts/automation/intelligent-deployment-orchestrator.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        DEPLOYMENT_ORCHESTRATION_MODE: 'true',
-      },
-      cron_restart: '0 */3 * * *', // Restart every 3 hours
-      log_file: './logs/intelligent-deployment-orchestrator.log',
-      error_file: './logs/intelligent-deployment-orchestrator-error.log',
-      out_file: './logs/intelligent-deployment-orchestrator-out.log',
->>>>>>> main
-      merge_logs: true,
+      out_file: './logs/daily-build-test-out.log',      merge_logs: true,
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
   ],
@@ -607,21 +544,10 @@ module.exports = {
     staging: {
       user: 'node',
       host: 'localhost',
-<<<<<<< HEAD
       ref: 'origin/develop',
       repo: 'git@github.com:Zion-Holdings/zion.app.git',
       path: '/var/www/staging',
-      'post-deploy': 'npm install && pm2 reload ecosystem.enhanced.cjs --env staging',
-=======
-      ref: 'origin/main',
-      repo: 'https://github.com/Zion-Holdings/zion.app.git',
-      path: '/Users/miami2/zion-app-dev',
-      'pre-deploy-local': '',
-      'post-deploy':
-        'npm install && npm run build && pm2 reload ecosystem.enhanced.cjs --env development',
-      'pre-setup': '',
->>>>>>> main
-    },
+      'post-deploy': 'npm install && pm2 reload ecosystem.enhanced.cjs --env staging',    },
   },
 
   // PM2 Settings

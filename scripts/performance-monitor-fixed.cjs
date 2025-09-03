@@ -77,7 +77,6 @@ class PerformanceMonitor {
     this.reportFile = path.join(process.cwd(), "performance-report.json"),
 }
     try {}
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   async collectSystemMetrics() {
     try {
       console.log("💻 Collecting system metrics...")
@@ -202,7 +201,6 @@ class PerformanceMonitor {
       console.error("Error collecting web metrics: ", error.message),
 }
       console.warn("⚠️  Could not collect build metrics: ", error.message)}
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259,
 }
 
   getDirectorySize(dirPath) {

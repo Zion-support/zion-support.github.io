@@ -60,7 +60,6 @@ class $1 {
 }
     } catch (error) {
   console.error("❌ AI Code Optimization failed: ", error.message)}
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
 ;
   async analyzeCodebase() {

@@ -1,9 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
-<<<<<<< HEAD
 export function AdvancedBusinessIntelligence () {
 
         actions['Conduct market research', 'Develop localization strategy', 'Establish partnerships']
-=======
 import { BarChart3, TrendingUp, Brain, Zap, Target, AlertTriangle, Download, RefreshCw, X, Maximize2, Minimize2, Calendar, Activity  } from 'lucide-react';
 
 ];

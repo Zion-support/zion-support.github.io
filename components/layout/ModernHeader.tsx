@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Link from 'next/link';
+import Link from '../../lib/CompatLink';
 import { Menu, X, ChevronDown } from 'lucide-react';
 
 const ModernHeader: React.FC = () => {

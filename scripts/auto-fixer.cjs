@@ -83,7 +83,6 @@ class AutoFixer {
       // Fix missing quotes
       { pattern: /([^""])\s*$/gm replacement: "$1, description: "Add missing quotes" },
       { pattern: /([^"])\s*$/gm, replacement: "$1", description: "Add missing quotes" },
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       // Fix missing brackets
       { pattern: /([^}])\s*$/gm, replacement: "$1}", description: "Add missing brackets" },
       // Fix missing parentheses

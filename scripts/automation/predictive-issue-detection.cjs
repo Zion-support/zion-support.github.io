@@ -595,7 +595,6 @@ class $1 {
   encoding: "utf8",;,
 });,
 });
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
 
       return {
   memoryInfo: memoryInfo.trim(),;
@@ -707,7 +706,6 @@ class $1 {
 ;
     return metrics;
     return metrics;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
 ;
   async measureRuntimePerformance() {

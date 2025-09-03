@@ -46,8 +46,7 @@
       "status": "failed",
       "endTime": 1756875933730,
       "duration": 21,
-      "error": "Command failed: node scripts/security-audit.cjs\n/workspace/scripts/security-audit.cjs:30\n>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259\n   ^^^\n\nSyntaxError: Unexpected token '>>>'\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
-    },
+      "error": "Command failed: node scripts/security-audit.cjs\n/workspace/scripts/security-audit.cjs:30\n    },
     {
       "name": "Code Quality Check",
       "description": "Code quality analysis and improvement",
@@ -134,8 +133,7 @@
     },
     {
       "type": "fix",
-      "message": "Fix Security Audit: Command failed: node scripts/security-audit.cjs\n/workspace/scripts/security-audit.cjs:30\n>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259\n   ^^^\n\nSyntaxError: Unexpected token '>>>'\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
-    },
+      "message": "Fix Security Audit: Command failed: node scripts/security-audit.cjs\n/workspace/scripts/security-audit.cjs:30\n    },
     {
       "type": "fix",
       "message": "Fix Maintenance: Command failed: node scripts/maintenance.cjs\n/workspace/scripts/maintenance.cjs:2\nconst fs = require('fs')';const path = require('path')';const { execSync } = require('child_process')';';class MaintenanceScript {\n                        ^^^^^^^^^^^^^^^^^^^^^^^^\n\nSyntaxError: Unexpected string\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"

@@ -56,7 +56,6 @@ async function $1() {
 ;
     // 3. Detect build errors;
     // 3. Detect build errors;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
     console.log("🔍 Detecting build errors...");
     try {
   const buildResult = execSync("npm run build", {

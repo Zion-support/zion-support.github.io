@@ -5,8 +5,6 @@ const path = require("path");
 const { execSync, spawn } = require("child_process");
 const cron = require("node-cron");
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { execSync, spawn } = require('child_process');
@@ -444,83 +442,6 @@ class PM2ErrorAutomationOrchestrator {
       isRunning: this.isRunning,
       scheduledJobs: this.scheduledJobs.map(({ name, schedule }) => ({ name, schedule })),
       config: this.config
-=======
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
-=======
-class $1 {
-  constructor() {
-  this.projectRoot = process.cwd();
-    this.logsDir = path.join(this.projectRoot, ""automation/logs");
-    this.reportsDir = path.join(this.projectRoot, "automation/reports"");
-    this.config = this.loadConfig();
-    this.isRunning = false;
-    this.scheduledJobs = [];
-    // Ensure directories exist;
-    this.ensureDirectories();,
-}
-;
-  ensureDirectories() {
-  ["this.logsDir", "this.reportsDir"].forEach(dir => {
-  if (!fs.existsSync(dir)) {
-  fs.mkdirSync(dir, { recursive: true });,
-}
-    });,
-}
-;
-  loadConfig() {
-  const configPath = path.join(this.projectRoot, "automation-config.json");
-    if (fs.existsSync(configPath)) {
-  return JSON.parse(fs.readFileSync(configPath, "utf8"));,
-}
-    ;
-    // Default configuration;
-    return {
-  // Default configuration;
-    return {
-  errorCheckInterval: "*/15 * * * *", // Every 15 minutes;
-      comprehensiveFixInterval: "0 */2 * * *", // Every 2 hours;
-      typeScriptFixInterval: "*/30 * * * *", // Every 30 minutes;
-      buildCheckInterval: "0 */1 * * *", // Every hour;
-      dependencyCheckInterval: "0 6,18 * * *", // Twice daily;
-      securityCheckInterval: "0 3,15 * * *", // Twice daily;
-      performanceCheckInterval: "0 */4 * * *", // Every 4 hours;
-      maxConcurrentJobs: 3,;
-      enableNotifications: true,;
-      logLevel: `info`;,
-}
-  }
-;
-  log(message, level = `info`) {
-  const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`;
-    console.log(`logMessage);
-    ;
-    console.log(`logMessage);`);
-    `);
-    // Write to log fileconst logFile = path.join(this.logsDir, orchestrator-${new Date().toISOString().split("T")[0]}.log`);
-    fs.appendFileSync(logFile, logMessage + `\n`);,
-}
-;
-  async start() {
-  if (this.isRunning) {
-  this.log(`Orchestrator is already running`, "warn");
-      return;,
-}
-;
-    this.log("Starting PM2 Error Automation Orchestrator...", "info");
-    this.isRunning = true;
-    try {
-  // Initialize PM2 if not already running;
-      await this.initializePM2();
-      // Start scheduled jobs;
-      await this.startScheduledJobs();
-      // Start monitoring;
-      await this.startMonitoring();
-      this.log(`PM2 Error Automation Orchestrator started successfully`, `success`);
->>>>>>> main
-
     try {
   // Initialize PM2 if not already running;
       await this.initializePM2();
@@ -567,7 +488,6 @@ class $1 {
   this.log("PM2 logrotate already configured or failed to configure", "warn");,
 } catch (error) {
   this.log("PM2 logrotate already configured or failed to configure", "warn");
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
   }
 ;
@@ -978,32 +898,18 @@ console.log(🎉 PM2 Error Automation Orchestrator completed successfully!);cons
   console.error(❌ PM2 Error Automation Orchestrator failed: ",;
       error.message;
     );
-<<<<<<< HEAD
     return {
       initialErrors: 0,
       fixesApplied: 0,
       remainingErrors: 0,
       success: false,
       error: error.message,
->>>>>>> main
-    };
-=======
-    return {
-  initialErrors: 0,;
-      fixesApplied: 0,;
-      remainingErrors: 0,;
-      success: false,;
-      error: error.message,;,
-}
->>>>>>> main
-  }
+    };  }
 }
 ;
 // Export the class;
 module.exports = PM2ErrorAutomationOrchestrator;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 // Export the class
 module.exports = PM2ErrorAutomationOrchestrator;
 
@@ -1011,46 +917,7 @@ module.exports = PM2ErrorAutomationOrchestrator;
 if (require.main === module) {
   const orchestrator = new PM2ErrorAutomationOrchestrator();
   orchestrator.start().catch(console.error);
-}
-=======
-async function detectAllErrors() {
-  try {
-    // Import and run the enhanced error detector
-    const { detectAllErrors } = require('./enhanced-error-detector.cjs');
-    return await detectAllErrors();
-  } catch (error) {
-    console.error('❌ Error detection failed:', error.message);
-    return {
-      typescript: [],
-      linting: [],
-      build: [],
-      dependencies: [],
-      syntax: [],
-      timestamp: new Date().toISOString(),
-    };
-=======
-// If run directly, start the orchestrator;
-if (require.main === module) {
-  const orchestrator = new PM2ErrorAutomationOrchestrator();
-  orchestrator.start().catch(console.error);,
-}
-async function detectAllErrors() {
-  try {
-  // Import and run the enhanced error detector;
-    const { detectAllErrors } = require("./enhanced-error-detector.cjs");
-    return await detectAllErrors();,
-} catch (error) {
-  console.error("❌ Error detection failed: ", error.message);
-    return {
-  typescript: [],;
-      linting: [],;
-      build: [],;
-      dependencies: [],;
-      syntax: [],;
-      timestamp: new Date().toISOString(),;,
-}
->>>>>>> main
-  }
+}  }
 }
 ;
 async function applyIntelligentFixes(errors) {
@@ -1296,18 +1163,9 @@ if (require.main === module) {
         process.exit(1);,
 });,
 }
-<<<<<<< HEAD
 
 module.exports = {
   runErrorAutomationOrchestrator,
   startContinuousMonitoring,
 };
->>>>>>> main
-=======
-}
-;
-module.exports = {
-  runErrorAutomationOrchestrator,;
-  startContinuousMonitoring,;,
-}
 >>>>>>> main

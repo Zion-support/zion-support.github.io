@@ -508,7 +508,6 @@ class $1 {
   // Add npm scripts for faster installs;
     try {
   // Add npm scripts for faster installs;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
       const packagePath = path.join(this.projectRoot, "package.json");
       if (fs.existsSync(packagePath)) {
   const pkg = JSON.parse(fs.readFileSync(packagePath, "utf8"));

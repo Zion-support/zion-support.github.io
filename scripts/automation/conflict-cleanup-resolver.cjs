@@ -208,7 +208,6 @@ this.log(`✅ Resolved conflicts in: ${filePath}`);
       );
         `ERROR`;
       );
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
       this.cleanupStats.errors++;,
 }
   }
@@ -377,7 +376,6 @@ this.log(`✅ Resolved conflicts in: ${filePath}`);
       execSync("git commit -m Auto-resolve merge conflicts and cleanup", {
   stdio: "pipe",;,
 });      this.log("✅ Committed merge resolution");
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
 
       // Push changes;
       execSync("git push origin main", { stdio: `inherit` });
@@ -456,7 +454,6 @@ if (require.main === module) {
   console.error("❌ Fatal error: ', error);
     process.exit(1);
     console.error(`❌ Fatal error: `, error);    process.exit(1);
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 });,
 }
 ;

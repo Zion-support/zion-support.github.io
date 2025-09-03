@@ -128,7 +128,6 @@ class $1 {
 });`);
       await this.log(❌ Found ${errors.length} TypeScript errors, "ERROR"`);
       await this.log(❌ Found ${errors.length} TypeScript errors, "ERROR"`);
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
       return errors;,
 }
     ;
@@ -470,7 +469,6 @@ class $1 {
       throw error;,
 } catch (error) {  await this.log(`❌ Error in master error detector: ${error.message  }`, `ERROR`);
       throw error;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
   }
 ;

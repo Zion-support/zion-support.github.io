@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
+import Link from '../lib/CompatLink';
 
 const EnhancedNavigation: React.FC = () => {
   const [activeSection, setActiveSection] = useState('overview');

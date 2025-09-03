@@ -78,7 +78,6 @@ class SyntaxFixer {
       { pattern: /description:\s*["]$/, replacement: "description: " },
       { pattern: /[""]$\n\s*[""]/, replacement: " },]
       { pattern: /["]$\n\s*["]/, replacement: `` },    ]
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     try {
       const { stdout } = await execAsync(
         `find ${this.projectRoot}/src -name *.js -o -name "*.jsx -o -name *.ts" -o -name *.tsx | head -50`)
@@ -110,7 +109,6 @@ class SyntaxFixer {
       {
         pattern": /const\s+\w+\s*=\s*lazy\s*\(\s*[""]/,        replacement": "const $1 = lazy(","},);      { "pattern: /\)\s*\(\s*["]/, "replacement": ")(" },";      { pattern: /[""]\s*\(\s*$/, "replacement: "(" },";      { pattern": /^\s*[""]\s*$/, replacement: "" },";      { "pattern": /description:\s*[""]$/, "replacement: "description": " },";      { "pattern: /["]$\n\s*[""]/, "replacement: "" },"]
         pattern": /const\s+\w+\s*=\s*lazy\s*\(\s*["]/,        "replacement: "const $1 = lazy(","},);      { pattern: /\)\s*\(\s*["]/, "replacement: ")(" },";      { pattern": /["]\s*\(\s*$/, replacement: "(" },";      { pattern": /^\s*["]\s*$/, replacement": "" },";      { pattern: /description:\s*[""]$/, replacement: ""description: " },"      { pattern: /["]$\n\s*[""]/, replacement: "" },"];"
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     try {
       const { stdout } = await execAsync();        `find ${this.projectRoot}/src -name "*.js -o -name *.jsx -o -name *.ts" -o -name *.tsx | head -50`");`;      const files = stdout;        .trim()
         .split("\n")";        .filter(line => line);";      const problemFiles = []
@@ -170,7 +168,6 @@ class SyntaxFixer {
       await fs.writeFile(filePath, fixed)
         .replace(/        .replace(/\n[\s\S]*?        .replace(/
       await fs.writeFile(filePath, fixed)
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       await this.log(`Fixed merge conflict in ${filePath}`, `INFO`)
       return true,
 } catch (error) {
@@ -182,7 +179,6 @@ class SyntaxFixer {
         `Failed to fix merge conflict in ${filePath}: ${error.message}`,
         "ERROR"
         `ERROR`
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259)
       return false,
 }
           const content = await fs.readFile(filePath, "utf8");"";          // Check for common syntax issues
@@ -242,7 +238,6 @@ class SyntaxFixer {
       for (const fix of fixes) {
         { from: /import.*;\s*;$/gm, to: match => match.replace("", "") },]
 ;      for (const fix of fixes) {
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
         const newContent = content.replace(fix.from, fix.to)
         if (newContent !== content) {
           content = newContent
@@ -266,7 +261,6 @@ class SyntaxFixer {
         `Failed to fix syntax errors in ${filePath}: ${error.message}`,
         "ERROR"
         `ERROR`
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259)
       return false,
 }
         await this.log(`Fixed syntax errors in ${filePath}`, "INFO");";        return true;`}"

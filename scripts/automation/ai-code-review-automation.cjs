@@ -381,7 +381,6 @@ this.log(`Found ${fileStats.length} changed files`);
     ];
         severity: "MEDIUM",;,
 },    ];
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
 
     for (const pattern of securityPatterns) {
   const matches = content.match(pattern.pattern);

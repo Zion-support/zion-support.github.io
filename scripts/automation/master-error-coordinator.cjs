@@ -326,7 +326,6 @@ class $1 {
       throw error;,
 } catch (error) {  await this.log(`❌ Master Error Coordinator failed: ${error.message  }`);
       throw error;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
   }
 }

@@ -562,7 +562,6 @@ ${`);
     : "";,
 }
 }
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
 
 ### 🔍 Type Checking;
 - **Status**: ${this.ciResults.typeCheck.status === "success" ? "✅ Success" : "❌ Failed"}
@@ -662,7 +661,6 @@ ${
       process.exit(1);,
 } catch (error) {
   console.error("❌ Pipeline failed: ", error);      process.exit(1);
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
   }
 }

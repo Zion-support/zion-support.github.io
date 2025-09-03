@@ -45,7 +45,6 @@ class $1 {
   encoding: "utf8",;
           cwd: process.cwd(),;,
 }      );
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
 
       this.testResults.unit.status = "success";
       this.testResults.unit.results = output;
@@ -83,7 +82,6 @@ class $1 {
       // Run integration tests;
       const output = execSync(npm run test: integration || echo "No integration tests found",;
       const output = execSync(npm run test: integration || echo "No integration tests found",;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
         {
   encoding: "utf8",;
           cwd: process.cwd(),;
@@ -130,7 +128,6 @@ class $1 {
   console.log("🎭 Running Playwright tests...");
         const output = execSync(npm run test: e2e || npx playwright test || echo "No Playwright tests found,;
         const output = execSync(npm run test: e2e || npx playwright test || echo "No Playwright tests found",;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
           {
   encoding: "utf8",;
             cwd: process.cwd(),;,
@@ -141,7 +138,6 @@ class $1 {
   console.log("🎭 Running Cypress tests...");
         const output = execSync(npm run test: e2e || npx cypress run || echo "No Cypress tests found,;
         const output = execSync(npm run test: e2e || npx cypress run || echo "No Cypress tests found"",;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
           {
   encoding: "utf8",;
             cwd: process.cwd(),;,
@@ -183,7 +179,6 @@ class $1 {
   console.log("💡 Running Lighthouse performance tests...");
         const output = execSync(npm run test: lighthouse || npx lhci autorun || echo "No Lighthouse tests found",;
         const output = execSync(npm run test: lighthouse || npx lhci autorun || echo "No Lighthouse tests found",;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
           {
   encoding: "utf8",;
             cwd: process.cwd(),;,
@@ -244,7 +239,6 @@ class $1 {
   encoding: "utf8",;
             cwd: process.cwd(),;,
 }        );
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
         this.testResults.accessibility.results = output;,
 } else {
   console.log("♿ Running basic accessibility checks...");
@@ -294,7 +288,6 @@ class $1 {
   console.log("📊 Coverage data found generating report...");
         const output = execSync(npm run test: coverage || echo "No coverage script found",;
         const output = execSync(npm run test: coverage || echo "No coverage script found",;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
           {
   encoding: "utf8",;
             cwd: process.cwd(),;,
@@ -318,7 +311,6 @@ class $1 {
               cwd: process.cwd(),;,
 }
             }
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
           );
           this.testResults.coverage.results = output;,
 } catch (coverageError) {this.testResults.coverage.results = Coverage generation failed: ${coverageError.message}

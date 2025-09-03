@@ -377,7 +377,6 @@ export default function MicroSaaS() {
       delivery: '2-3 weeks',
       category: 'Finance SaaS'
     },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'Smart Healthcare Appointment Scheduler',
       description: 'AI-powered healthcare scheduling with patient preference learning and resource optimization',

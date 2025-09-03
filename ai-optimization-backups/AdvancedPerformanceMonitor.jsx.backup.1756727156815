@@ -3,7 +3,6 @@ import { <<<<<<< HEAD Activity, BarChart3, TrendingUp, Zap, Database, Network, C
  from 'lucide-react';
 
 const mockSystemMetrics = [{
->>>>>>> main
 
     id: '1',
     name: 'CPU Usage',

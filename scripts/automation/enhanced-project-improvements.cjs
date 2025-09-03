@@ -181,7 +181,6 @@ export const securityConfig = {
 },;
   csp: {default-src": ["self""]script-src": ["self", "unsafe-inline""],style-src": ["self", ""unsafe-inline""],img-src": [""self", "data: ", "https: "]connect-src": ["self", "https: "],font-src": ["self", "https: "],object-src": ["none""],media-src": [""self""],frame-src": [""none""];,
 },;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
   ;
   // Security headers;
   headers: {X-Content-Type-Options": "nosniff",X-Frame-Options": "DENY",X-XSS-Protection": "1; mode=block",Referrer-Policy": "strict-origin-when-cross-origin",Permissions-Policy": "camera=(), microphone=(), geolocation=()";,

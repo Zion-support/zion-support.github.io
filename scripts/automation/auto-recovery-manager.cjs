@@ -486,7 +486,6 @@ this.log(`✅ Merge conflicts recovered in ${filePath}`);
       );
         `ERROR`;
       );
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
       return false;,
 }
   }
@@ -529,7 +528,6 @@ this.log(`❌ Could not recover encoding issues in ${filePath}`);
       );
         `ERROR`;
       );
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
       return false;,
 }
   }
@@ -590,7 +588,6 @@ this.log(✅ Unreadable file recovered: ${filePath}`);
       );
         `ERROR`;
       );
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
       return false;,
 }
   }

@@ -74,7 +74,6 @@ class ComprehensiveErrorFixer {
       "src/context/auth/useAuthEventHandlers.ts",;
     ];
     ];
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
 
     for (const filePath of filesToFix) {
   if (fs.existsSync(filePath)) {
@@ -351,7 +350,6 @@ class ComprehensiveErrorFixer {
   this.log(`Error during automation: ${error.message  }`);,
 } catch (error) {
   this.log(`Error during automation: ${error.message  }`);
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
         this.errorReport.errorsFound.push({
   type: `automation_error`,;
           message: error.message,;
@@ -509,7 +507,6 @@ class ComprehensiveErrorFixer {
   this.log(`Error in Comprehensive Error Fixer: ${error.message  }`);,
 } catch (error) {
   this.log(`Error in Comprehensive Error Fixer: ${error.message  }`);
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
   }
 ;
@@ -568,7 +565,6 @@ class ComprehensiveErrorFixer {
   this.log("Lint failed");,
 } catch (error) {
   this.log("Lint failed");
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
       return false;,
 }
   }

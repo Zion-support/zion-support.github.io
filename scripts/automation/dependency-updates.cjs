@@ -78,7 +78,6 @@ async function runDependencyUpdates() {
 ;
     // Check for major version updates;
     // Check for major version updates;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
     console.log("🔍 Checking for major version updates...");
     try {
   const outdatedOutput = execSync("npm outdated --json", {
@@ -213,7 +212,6 @@ process.on("SIGINT", () => {
   console.log("🛑 Received SIGINT, shutting down gracefully...");
 process.on(`SIGINT`, () => {
   console.log("🛑 Received SIGINT, shutting down gracefully...");
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
   process.exit(0);,
 });
 

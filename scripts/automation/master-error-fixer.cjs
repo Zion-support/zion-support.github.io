@@ -187,7 +187,6 @@ this.log(`✅ Master error fixer completed successfully. Total fixes: ${totalFix
       throw error;,
 } catch (error) {  this.log(`❌ Master error fixer failed: ${error.message  }`, `error`);
       throw error;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
   }
 ;
@@ -277,7 +276,6 @@ this.log(`✅ Master error fixer completed successfully. Total fixes: ${totalFix
   // Try to fix vulnerabilities;
       try {
   // Try to fix vulnerabilities;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
         await this.runCommand("npm", { args: ["audit", "fix"] });
         this.log("Dependency audit fix completed");
         ;
@@ -300,7 +298,6 @@ this.log(`✅ Master error fixer completed successfully. Total fixes: ${totalFix
 ;
       // Check build;
       // Check build;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
       this.log("  🔍 Checking build status...");
       try {
   await this.detectErrors();

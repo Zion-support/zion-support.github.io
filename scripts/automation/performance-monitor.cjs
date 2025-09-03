@@ -40,7 +40,6 @@ async function runPerformanceMonitor() {
 ;
     // Run Lighthouse performance tests if available;
     // Run Lighthouse performance tests if available;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
     console.log("🔍 Running Lighthouse performance tests...");
     try {
   if (fs.existsSync("lighthouserc.json")) {

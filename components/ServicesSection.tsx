@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import Link from '../lib/CompatLink';
 import { 
   Brain, 
   Cloud, 

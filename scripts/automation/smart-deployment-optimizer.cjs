@@ -315,7 +315,6 @@ class $1 {
       ];
         this.deploymentMetrics.bundleSizes.length - 1;
       ];
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
     if (latestBundleSize && latestBundleSize.size > 1024 * 1024) {
   this.deploymentMetrics.optimizationSuggestions.push({
   type: "code_splitting",;
@@ -477,7 +476,6 @@ class $1 {
     );
       process.cwd(),deployment-optimization-report.json`;
     );
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
     fs.writeFileSync(latestReportPath, JSON.stringify(report, null, 2));
 console.log(`📊 Deployment optimization report saved to ${reportPath});,
 }
@@ -560,7 +558,6 @@ console.log(`📊 Deployment optimization report saved to ${reportPath});,
       ];
         this.deploymentMetrics.bundleSizes.length - 1;
       ];
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
     return latest ? latest.size : 0;,
 }
 }

@@ -370,7 +370,6 @@ class $1 {
         );
           `WARN`;
         );
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
     }
 ;
@@ -759,7 +758,6 @@ this.log(`Tests failed: ${error.message}`, `ERROR`);,
           );
             `ERROR`;
           );
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
       }
     } catch (error) {  this.log(`Auto-fix process failed: ${error.message  }`, `ERROR`);,

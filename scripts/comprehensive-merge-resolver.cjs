@@ -56,12 +56,10 @@ class ComprehensiveMergeResolver {
       let content = fs.readFileSync(filePath, "utf8")
       let originalContent = content
       // Remove merge conflict markers and keep main branch version
-      content = content.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n>>>>>>> [^\n]+\n/g, "$1")
-      // Remove any remaining conflict markers
+      content = content.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n      // Remove any remaining conflict markers
       content = content.replace(/\n/g, "")
       content = content.replace(/\n/g, "")
-      content = content.replace(/>>>>>>> [^\n]+\n/g, "")
-      if (content !== originalContent) {
+      content = content.replace(/      if (content !== originalContent) {
         fs.writeFileSync(filePath, content, "utf8")
         this.resolvedFiles.push(filePath)
         this.log(`✅ Resolved conflicts in ${filePath}`),

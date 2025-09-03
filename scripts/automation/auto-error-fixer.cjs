@@ -342,7 +342,6 @@ class AutoErrorFixer {
   fs.writeFileSync(file, content);
         if (content !== fs.readFileSync(file, `utf8`)) {
   fs.writeFileSync(file, content);
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
           this.log(`✅ Fixed ESLint issues in ${file}`);
           this.fixesApplied++;
           this.errorsFixed.push({ file, type: `eslint` });

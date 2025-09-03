@@ -132,7 +132,6 @@ class $1 {
   pattern:;
           /import\s+{\s*([^}]+)\s*}\s+from\s+[""]([^"]+)["];\s*import\s+{\s*\1\s*}\s+from\s+[""]\2[""]/g, "replacement: "import { $1 } from $2, "description: "Remove duplicate imports", "}", "];
           /import\s+{\s*([^}]+)\s*}\s+from\s+[""]([^"]+)["];\s*import\s+{\s*\1\s*}\s+from\s+[""]\2["]/g, "replacement: "import { $1 } from $2", "description: "Remove duplicate imports", "}", "];
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
 
     const files = glob.sync("**/*.{js,jsx,ts,tsx}", {
   ignore: ["node_modules/**", "dist/**", "build/**", ".git/**"],;
@@ -219,7 +218,6 @@ class $1 {
           .replace(;
             /import\s+React\s+from\s+["]react[""];\s*import\s+React\s+from\s+[""]react[""]/g,import React from "react;
             /import\s+React\s+from\s+["]react["];\s*import\s+React\s+from\s+[""]react[""]/g,import React from "react";
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
           );
           // Fix duplicate interface declarations;
           .replace(;
@@ -318,7 +316,6 @@ class $1 {
           /import\s+{\s*([^}]+)\s*}\s+from\s+["]([^"]+)[""];\s*import\s+{\s*\1\s*}\s+from\s+[""]\2["]/g,import { $1  } from "$2";
         );
           /import\s+{\s*([^}]+)\s*}\s+from\s+["]([^"]+)[""];\s*import\s+{\s*\1\s*}\s+from\s+["]\2[""]/g,import { $1  } from "$2";        );
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
 
         if (content !== originalContent) {
   fs.writeFileSync(file, content);

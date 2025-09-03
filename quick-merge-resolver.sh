@@ -62,8 +62,7 @@ conflict_files=()
 for dir in src pages components scripts; do
     if [ -d "$dir" ]; then
         while IFS= read -r -d '' file; do
-            if grep -l "<<<<<<< HEAD\|=======\|>>>>>>> " "$file" 2>/dev/null; then
-                conflict_files+=("$file")
+            if grep -l "<<<<<<< HEAD\|=======\|                conflict_files+=("$file")
             fi
         done < <(find "$dir" -type f \( -name "*.js" -o -name "*.jsx" -o -name "*.ts" -o -name "*.tsx" -o -name "*.json" -o -name "*.md" \) -print0 2>/dev/null)
     fi
@@ -87,8 +86,7 @@ if [ ${#conflict_files[@]} -gt 0 ]; then
         if sed -i.tmp '
             /<<<<<<< HEAD/,/=======/!b
             /<<<<<<< HEAD/d
-            /=======/,/>>>>>>> /d
-        ' "$file" 2>/dev/null; then
+            /=======/,/        ' "$file" 2>/dev/null; then
             conflicts_resolved=$((conflicts_resolved + 1))
             log_success "Resolved conflicts in: $file"
             rm -f "$file.tmp" "$file.backup" 2>/dev/null
@@ -109,8 +107,7 @@ fi
 log "🔄 Cleaning up any remaining conflict markers..."
 for dir in src pages components scripts; do
     if [ -d "$dir" ]; then
-        find "$dir" -type f \( -name "*.js" -o -name "*.jsx" -o -name "*.ts" -o -name "*.tsx" \) -exec grep -l "<<<<<<< HEAD\|=======\|>>>>>>> " {} \; 2>/dev/null | while read file; do
-            log "Additional cleanup for: $file"
+        find "$dir" -type f \( -name "*.js" -o -name "*.jsx" -o -name "*.ts" -o -name "*.tsx" \) -exec grep -l "<<<<<<< HEAD\|=======\|            log "Additional cleanup for: $file"
             # Alternative approach: accept current version
             git checkout --ours "$file" 2>/dev/null && log_success "Accepted our version: $file"
         done

@@ -78,7 +78,6 @@ class $1 {
 =======;
         timeout: 60000;
 <<<<<<< HEAD      });
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-1c7d;
       this.log(`ESLint passed`);
       return true;,
 } catch (error) {  this.log(`ESLint failed: ${error.message  }`, true);
@@ -282,7 +281,6 @@ class $1 {
 =======;
         timeout: 120000;
 <<<<<<< HEAD      });
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-1c7d;
       this.log(`Tests passed`);
       return true;,
 } catch (error) {  this.log(`Tests failed: ${error.message  }`, true);

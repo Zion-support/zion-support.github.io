@@ -52,8 +52,7 @@ else
     find src pages components -name "*.js" -o -name "*.jsx" -o -name "*.ts" -o -name "*.tsx" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null | while read file; do
         log "Resolving: $file"
         # Keep HEAD version, remove conflict markers
-        sed -i.bak '/<<<<<<< HEAD/,/=======/d; />>>>>>> /d' "$file" 2>/dev/null
-        rm -f "$file.bak"
+        sed -i.bak '/<<<<<<< HEAD/,/=======/d; /        rm -f "$file.bak"
     done
     
     # Stage resolved files

@@ -90,7 +90,6 @@ async function runFrontMaximizer() {
     ;
     // Check for JavaScript bundle optimization;
     // Check for JavaScript bundle optimization;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
     console.log("📦 Checking JavaScript bundle optimization...");
     try {
   execSync("node "scripts/analyze-bundle.js"", { stdio: "inherit" });
@@ -131,7 +130,6 @@ async function runFrontMaximizer() {
   console.error(`❌ Continuous front maximizer failed: `, error.message);,
 } catch (error) {
   console.error(`❌ Continuous front maximizer failed: `, error.message);
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
     // Don`t exit, just log the error and continue;,
 }
 }
@@ -177,7 +175,6 @@ async function runContinuous() {console.log(🚀 Starting continuous front maxim
   await runFrontMaximizer();
   setInterval(async () => {
   await runFrontMaximizer();
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }, AUTOMATION_INTERVAL);
   console.log(✅ Continuous front maximizer running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes``);,
 }

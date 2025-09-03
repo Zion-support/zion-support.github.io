@@ -137,7 +137,6 @@ class $1 {
           );
           this.log( `Failed to parse error report ${file  }: ${error.message}`,WARN`;
           );
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
       }
     }

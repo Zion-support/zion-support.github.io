@@ -140,7 +140,6 @@ class $1 {
       );
         `ERROR`;
       );
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
       this.mergeStats.errors++;,
 }
   }
@@ -168,7 +167,6 @@ class $1 {
         );
         this.log(⚠️ Merge conflicts detected in ${branchName  }, attempting to resolve...`;
         );
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
         return await this.resolveMergeConflicts(branchName);,
 } else {
   return { success: false, error: error.message }
@@ -473,7 +471,6 @@ if (require.main === module) {
   console.error("❌ Fatal error: ', error);
     process.exit(1);
     console.error(`❌ Fatal error: `, error);    process.exit(1);
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 });,
 }
 ;

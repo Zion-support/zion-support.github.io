@@ -4,8 +4,7 @@
 echo "Fixing merge conflicts in all files...
 
 # Find all files with merge conflict markers
-files_with_conflicts=$(grep -r -l \|\|>>>>>>> " . --exclude-dir=node_modules --exclude-dir=.git --exclude="*.log --exclude=*.txt" --exclude="*.json 2>/dev/null)
-
+files_with_conflicts=$(grep -r -l \|\|
 for file in $files_with_conflicts; do
     echo Fixing conflicts in: $file"
     
@@ -14,12 +13,10 @@ for file in $files_with_conflicts; do
     
     # Use sed to remove merge conflict markers and keep the HEAD version
     sed -i '/^$/,/^$/d' "$file
-    sed -i '/^>>>>>>> .*$/d' $file"
-    
+    sed -i '/^    
     # Remove any remaining conflict markers
     sed -i '/^$/d' "$file
     sed -i '/^$/d' $file"
-    sed -i '/^>>>>>>> .*$/d' "$file
-done
+    sed -i '/^done
 
 echo Merge conflicts fixed in all files."

@@ -5,7 +5,6 @@ import { <<<<<<< HEAD AlertTriangle, RefreshCw, Home, ArrowLeft, Bug, Shield, Za
 import { Link, useNavigate  } from 'react-router-dom';
 
 ) {
->>>>>>> main
 
   const navigate = useNavigate();
   const maxRetries = 3;

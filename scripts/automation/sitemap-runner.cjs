@@ -159,7 +159,6 @@ Disallow: /api/;
   console.error(`❌ Continuous sitemap runner failed: `, error.message);,
 } catch (error) {
   console.error(`❌ Continuous sitemap runner failed: `, error.message);
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
     // Don`t exit, just log the error and continue;,
 }
 }

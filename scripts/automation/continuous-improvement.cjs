@@ -76,7 +76,6 @@ async function runContinuousImprovement() {
 ;
     // Generate performance report;
     // Generate performance report;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
     console.log("📊 Generating performance report...");
     try {
   execSync("npm run build", { stdio: "inherit" });
@@ -178,7 +177,6 @@ process.on("SIGINT", () => {
   console.log("🛑 Received SIGINT, shutting down gracefully...");
 process.on(`SIGINT`, () => {
   console.log("🛑 Received SIGINT, shutting down gracefully...");
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
   process.exit(0);,
 });
 

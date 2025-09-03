@@ -64,7 +64,6 @@ class $1 {
 }
     } catch (error) {
   console.error("❌ Smart Dependency Analysis failed: ", error.message)}
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
 ;
   async loadDependencies() {
@@ -363,7 +362,6 @@ console.log(`✅ Applied ${updatesApplied} smart updates`);,
   return null;,
 } catch (error) {
   return null;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
   }
 ;

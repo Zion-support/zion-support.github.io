@@ -1,5 +1,5 @@
 import React, { useState, useCallback, memo } from 'react';
-import Link from 'next/link';
+import Link from '../lib/CompatLink';
 import Navigation from '../src/components/Navigation';
 import Footer from '../src/components/Footer';
 import Sidebar from '../src/components/Sidebar';

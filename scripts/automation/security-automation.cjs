@@ -185,7 +185,6 @@ this.log(`Found ${outdatedCount} outdated packages");
       );
         `outdated-packages.json";
       );
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
       fs.writeFileSync(;
         outdatedReportFile,;
         JSON.stringify(outdatedData, null, 2);
@@ -396,7 +395,6 @@ if (require.main === module) {
   const security = new SecurityAutomation();
 if (require.main === module) {
   const security = new SecurityAutomation();
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
   security.run().catch(error => {
   console.error("Security automation failed: ', error);
     process.exit(1);,

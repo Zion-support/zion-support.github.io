@@ -1,16 +1,6 @@
-<<<<<<< HEAD
 module.exports = {
   apps: [
-<<<<<<< HEAD
-    // Main application server
-=======
-<<<<<<< HEAD
-    // Main application - Development server (not for production PM2)
-=======
-    // Main application
->>>>>>> main
->>>>>>> main
-    {
+    // Main application server    {
       name: 'zion-website',
       script: 'npm',
       args: 'run dev',
@@ -32,22 +22,10 @@ module.exports = {
       error_file: './logs/zion-website-error.log',
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
       merge_logs: true,
-<<<<<<< HEAD
       // Disable this process for now as it's meant for development
-      disabled: true
-=======
-      max_restarts: 5,
-      min_uptime: '10s',
-      restart_delay: 5000
->>>>>>> main
-    },
+      disabled: true    },
 
-<<<<<<< HEAD
-    // Error monitoring and detection
-=======
-    // Error Monitor - Continuously monitors for errors
->>>>>>> main
-    {
+    // Error monitoring and detection    {
       name: 'error-monitor',
       script: './scripts/automation/error-monitor.cjs',
       cwd: '/workspace',
@@ -63,12 +41,7 @@ module.exports = {
       cron_restart: '0 */2 * * *' // Restart every 2 hours
     },
 
-<<<<<<< HEAD
-    // Health monitoring and checking
-=======
-    // Syntax Fixer - Automatically fixes syntax errors
->>>>>>> main
-    {
+    // Health monitoring and checking    {
       name: 'syntax-fixer',
       script: './scripts/automation/syntax-fixer.cjs',
       cwd: '/workspace',
@@ -84,16 +57,7 @@ module.exports = {
       cron_restart: '0 */6 * * *' // Restart every 6 hours
     },
 
-<<<<<<< HEAD
-    // Automatic error fixing
-=======
-<<<<<<< HEAD
-    // Dependency Manager - Manages dependencies and vulnerabilities
-=======
-    // Dependency Manager - Manages dependencies and security
->>>>>>> main
->>>>>>> main
-    {
+    // Automatic error fixing    {
       name: 'dependency-manager',
       script: './scripts/automation/dependency-manager.cjs',
       cwd: '/workspace',
@@ -126,10 +90,8 @@ module.exports = {
       cron_restart: '0 */4 * * *' // Restart every 4 hours
     },
 
-<<<<<<< HEAD
     // Auto Fix and Build - Automated build testing
     {
-<<<<<<< HEAD
       name: 'security-audit',
       script: 'scripts/automation-wrapper.js',
       args: 'security',
@@ -261,36 +223,18 @@ module.exports = {
       error_file: 'logs/sitemap-runner-error.log'
     },
 
-    // Automated Build & Lint fixer
-=======
-      name: 'auto-fix-and-build',
-      script: './scripts/auto-fix-and-build.sh',
-=======
-    // Auto Fix and Build - Automated build and lint fixing
->>>>>>> main
-    {
+    // Automated Build & Lint fixer    {
       name: 'auto-fix-and-build',
       script: 'bash',
       args: '-lc "npm install --silent && npm run lint || true && npm run type-check || true && npm run build"',
->>>>>>> main
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
-<<<<<<< HEAD
-      env: { NODE_ENV: 'production' },
-=======
-<<<<<<< HEAD
-      env: { 
-        NODE_ENV: 'production',
-        PATH: '/home/ubuntu/.nvm/versions/node/v22.16.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
-      },
->>>>>>> main
-      cron_restart: '0 */6 * * *',
+      env: { NODE_ENV: 'production' },      cron_restart: '0 */6 * * *',
       log_file: 'logs/auto-fix-and-build.log',
       out_file: 'logs/auto-fix-and-build-out.log',
       error_file: 'logs/auto-fix-and-build-error.log'
-<<<<<<< HEAD
     },
 
     // AI Code Review - Runs AI-powered code review
@@ -358,47 +302,19 @@ module.exports = {
       cron_restart: '0 */8 * * *', // Every 8 hours
       log_file: './logs/intelligent-build-pipeline.log',
       error_file: './logs/intelligent-build-pipeline-error.log',
-      out_file: './logs/intelligent-build-pipeline-out.log'
-=======
-=======
-      env: { NODE_ENV: 'production' },
-      cron_restart: '0 */6 * * *', // Every 6 hours
-      log_file: './logs/auto-fix-and-build.log',
-      out_file: './logs/auto-fix-and-build-out.log',
-      error_file: './logs/auto-fix-and-build-error.log',
-      max_restarts: 3,
-      min_uptime: '30s',
-      restart_delay: 10000
->>>>>>> main
->>>>>>> main
-    },
+      out_file: './logs/intelligent-build-pipeline-out.log'    },
 
-<<<<<<< HEAD
     // Syntax error fixing automation
     {
       name: 'syntax-fixer',
-      script: './scripts/syntax-fixer.js',
-=======
-    // Dev Watch Build - Watches for changes and rebuilds
-    {
-      name: 'dev-watch-build',
-<<<<<<< HEAD
-      script: './scripts/dev-watch-build.sh',
-=======
-      script: 'bash',
-      args: '-lc "npm run build"',
->>>>>>> main
->>>>>>> main
-      instances: 1,
+      script: './scripts/syntax-fixer.js',      instances: 1,
       watch: ['src', 'public', 'postcss.config.js', 'vite.config.ts'],
       ignore_watch: ['dist', 'node_modules', 'logs'],
       max_memory_restart: '1G',
-<<<<<<< HEAD
       env: { 
         NODE_ENV: 'development',
         PATH: '/home/ubuntu/.nvm/versions/node/v22.16.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
       },
-<<<<<<< HEAD
       error_file: './logs/syntax-fixer-error.log',
       out_file: './logs/syntax-fixer-out.log',
       log_file: './logs/syntax-fixer-combined.log',
@@ -553,24 +469,7 @@ module.exports = {
       min_uptime: '45s',
       restart_delay: 15000,
       cron_restart: '0 1 * * *', // Run daily at 1 AM
-      pmx: true
-=======
-      log_file: 'logs/dev-watch-build.log',
-      out_file: 'logs/dev-watch-build-out.log',
-      error_file: 'logs/dev-watch-build-error.log',
-      // Disable this process for now as it's meant for development
-      disabled: true
-=======
-      env: { NODE_ENV: 'development' },
-      log_file: './logs/dev-watch-build.log',
-      out_file: './logs/dev-watch-build-out.log',
-      error_file: './logs/dev-watch-build-error.log',
-      max_restarts: 3,
-      min_uptime: '20s',
-      restart_delay: 5000
->>>>>>> main
->>>>>>> main
-    }
+      pmx: true    }
   ],
 
   // PM2 configuration
@@ -579,19 +478,9 @@ module.exports = {
       user: 'deploy',
       host: 'localhost',
       ref: 'origin/main',
-<<<<<<< HEAD
       repo: 'git@github.com:username/repo.git',
       path: '/var/www/production',
-      'post-deploy': 'npm install && pm2 reload ecosystem.config.cjs --env production'
-=======
-      repo: 'https://github.com/Zion-Holdings/zion.app.git',
-      path: '/var/www/zion.app',
-      'pre-deploy-local': '',
-      'post-deploy': 'npm install --legacy-peer-deps && npm run build && pm2 reload ecosystem.config.cjs --env production',
-      'pre-setup': 'mkdir -p /var/www/zion.app/logs'
->>>>>>> main
-    }
-=======
+      'post-deploy': 'npm install && pm2 reload ecosystem.config.cjs --env production'    }
 module.exports = {
   apps: [
   // Main application;
@@ -619,7 +508,6 @@ module.exports = {
   NODE_ENV: "production,;
         NODE_OPTIONS: --max-old-space-size=6144 --openssl-legacy-provider;,
 }
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 },;
     // Backend server;
     {
@@ -636,7 +524,6 @@ module.exports = {
 }
         NODE_ENV: production;,
 }
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 },;
     // PM2 Error Prevention Automation - runs every 5 minutes (HIGHEST PRIORITY);
     {
@@ -661,7 +548,6 @@ module.exports = {
       error_file: ./automation/logs/pm2-error-prevention-error.log,;
       out_file: ./automation/logs/pm2-error-prevention-out.log";,
 },;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
     // Continuous console error fixer - runs every 15 minutes (HIGHEST PRIORITY);
     {
   name: "console-error-fixer;
@@ -677,7 +563,6 @@ module.exports = {
         NODE_ENV: production",;
         AUTOMATION_INTERVAL: "900000 // 15 minutes;,
 }
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
     // Comprehensive error fixer - runs every 30 minutes (HIGH PRIORITY);
     {
@@ -694,7 +579,6 @@ module.exports = {
         NODE_ENV: "production,;
         AUTOMATION_INTERVAL: 1800000 // 30 minutes;,
 }
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 },;
     // TypeScript error fixer - runs every 45 minutes (HIGH PRIORITY);
     {
@@ -711,7 +595,6 @@ module.exports = {
         NODE_ENV: production,;
         AUTOMATION_INTERVAL: 2700000 // 45 minutes;,
 }
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
     // JSX error fixer - runs every 40 minutes (HIGH PRIORITY);
     {
@@ -728,7 +611,6 @@ module.exports = {
         NODE_ENV: production,;
         AUTOMATION_INTERVAL: 2400000" // 40 minutes;,
 }
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 },;
     // Master error fixer - runs every hour (COORDINATES ALL ERROR FIXERS);
     {
@@ -745,7 +627,6 @@ module.exports = {
         NODE_ENV: production",;
         AUTOMATION_INTERVAL: "3600000 // 1 hour;,
 }
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
     // Continuous link checker - runs every 30 minutes;
     {
@@ -762,7 +643,6 @@ module.exports = {
         NODE_ENV: "production,;
         AUTOMATION_INTERVAL: 1800000 // 30 minutes;,
 }
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 },;
     // Continuous improvement - runs every 2 hours;
     {
@@ -779,7 +659,6 @@ module.exports = {
         NODE_ENV: production,;
         AUTOMATION_INTERVAL: 7200000 // 2 hours;,
 }
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
     // Continuous build and test - runs every hour;
     {
@@ -796,7 +675,6 @@ module.exports = {
         NODE_ENV: production,;
         AUTOMATION_INTERVAL: 3600000" // 1 hour;,
 }
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 },;
     // Continuous security audit - runs every 4 hours;
     {
@@ -813,7 +691,6 @@ module.exports = {
         NODE_ENV: production",;
         AUTOMATION_INTERVAL: "14400000 // 4 hours;,
 }
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
     // Continuous dependency updates - runs every 6 hours;
     {
@@ -830,7 +707,6 @@ module.exports = {
         NODE_ENV: "production,;
         AUTOMATION_INTERVAL: 21600000 // 6 hours;,
 }
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 },;
     // Continuous performance monitoring - runs every 2 hours;
     {
@@ -847,7 +723,6 @@ module.exports = {
         NODE_ENV: production,;
         AUTOMATION_INTERVAL: 7200000 // 2 hours;,
 }
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
     // Continuous quality checks - runs every 3 hours;
     {
@@ -864,7 +739,6 @@ module.exports = {
         NODE_ENV: production,;
         AUTOMATION_INTERVAL: 10800000" // 3 hours;,
 }
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 },;
     // Continuous link integrity checker - runs every 2 hours;
     {
@@ -881,7 +755,6 @@ module.exports = {
         NODE_ENV: production",;
         AUTOMATION_INTERVAL: "7200000 // 2 hours;,
 }
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
     // Continuous front maximizer - runs every 4 hours;
     {
@@ -898,7 +771,6 @@ module.exports = {
         NODE_ENV: "production,;
         AUTOMATION_INTERVAL: 14400000 // 4 hours;,
 }
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 },;
     // Continuous sitemap runner - runs every 6 hours;
     {
@@ -915,7 +787,6 @@ module.exports = {
         NODE_ENV: production,;
         AUTOMATION_INTERVAL: 21600000 // 6 hours;,
 }
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
     // Auto-fix and build automation;
     {
@@ -946,7 +817,6 @@ module.exports = {
       "post-deploy": npm install && npm run build && pm2 reload ecosystem.config.cjs --env production,;
       "pre-setup": ;,
 }
->>>>>>> main
   }
 }
     {
@@ -1247,7 +1117,6 @@ module.exports = {
   }
 }
   ],;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
   deploy: {
   production: {
   user: "deploy",;

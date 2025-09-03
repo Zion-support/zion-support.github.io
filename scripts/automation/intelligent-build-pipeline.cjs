@@ -128,7 +128,6 @@ class $1 {
       );
         this.projectRoot,build-pipeline.config.json`;
       );
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
       fs.writeFileSync(;
         configPath,;
         JSON.stringify(this.pipelineConfig, null, 2);
@@ -570,7 +569,6 @@ class $1 {
   return [];,
 } catch (error) {
   return [];
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
   }
 ;
@@ -625,7 +623,6 @@ class $1 {
   return true;
           ) {
   return true;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
         }
       }
@@ -677,7 +674,6 @@ class $1 {
   return [];,
 } catch (error) {
   return [];
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
   }
 ;
@@ -1161,7 +1157,6 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
   const cachePath = path.join(this.projectRoot, "cacheDir);
       for (const cacheDir of cacheDirs) {
   const cachePath = path.join(this.projectRoot, "cacheDir);
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
         if (!fs.existsSync(cachePath)) {
   fs.mkdirSync(cachePath", { recursive: true });,
 }
@@ -1196,7 +1191,6 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
   // Remove unused dependencies;
     try {
   // Remove unused dependencies;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
       const unusedDeps = await this.findUnusedDependencies();
       if (unusedDeps.length > 0) {
   const packageJsonPath = path.join(this.projectRoot, "package.json");
@@ -1273,7 +1267,6 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
   // Update package.json scripts with memory optimization;
     try {
   // Update package.json scripts with memory optimization;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
       const packageJsonPath = path.join(this.projectRoot, "package.json");
       const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8"));
 

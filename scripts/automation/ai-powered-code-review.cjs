@@ -157,7 +157,6 @@ class $1 {
   console.error(`❌ Error during code review: `, error);,
 } catch (error) {
   console.error(`❌ Error during code review: `, error);
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
       this.logError(`Code review failed`, error);,
 }
   }
@@ -264,7 +263,6 @@ class $1 {
         ;,
 } catch (error) {  console.error(Error reviewing React component ${file  }:, error`);,
 }
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
   }
 ;
@@ -392,7 +390,6 @@ class $1 {
         ;,
 } catch (error) {
   console.error("Error parsing package.json: ", error)}
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
     ;
     return results;,
@@ -495,7 +492,6 @@ class $1 {
     // Analyze patterns and generate intelligent suggestions;
     const patterns = this.analyzeCodePatterns(results);
     const patterns = this.analyzeCodePatterns(results);
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
     ;
     for (const pattern of patterns) {
   results.improvements.push({
@@ -693,7 +689,6 @@ class $1 {
 }
     } catch (error) {
   console.error("Error logging review results: ", error)}
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
 ;
   logError(message, error) {
@@ -719,7 +714,6 @@ class $1 {
 }
     } catch (error) {
   console.error("Error logging error: ", error)}
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
 ;
   watchForChanges() {

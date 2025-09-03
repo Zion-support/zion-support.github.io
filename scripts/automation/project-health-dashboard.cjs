@@ -111,8 +111,7 @@ class $1 {
   try {
   const result = execSync("git log -1 --format="%H %s %an %ad, {
   const result = execSync("git log -1 --format=%H %s %an %ad", {
-  >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
-        cwd: this.projectRoot,;
+          cwd: this.projectRoot,;
         stdio: "pipe",;
         encoding: "utf8",;,
 });
@@ -123,7 +122,6 @@ class $1 {
   return "Unknown";,
 } catch (error) {
   return "Unknown";
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
   }
 ;
@@ -200,7 +198,6 @@ class $1 {
   const outdated = await this.checkOutdatedDependencies();
       try {
   const outdated = await this.checkOutdatedDependencies();
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
         health.outdatedDeps = outdated.length;
 
         if (outdated.length > 0) {health.issues.push(`Found ${outdated.length} outdated dependencies`);,
@@ -296,7 +293,6 @@ class $1 {
   return [];,
 } catch {
   return [];
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
       }
       return [];,
@@ -645,7 +641,6 @@ class $1 {
 ;
     return count;
     return count;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
 ;
   async getPM2Health() {

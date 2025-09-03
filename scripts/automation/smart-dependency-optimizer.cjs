@@ -390,7 +390,6 @@ class $1 {
 ;
     return false;
     return false;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
 ;
   async analyzeDependencyConflicts() {
@@ -528,7 +527,6 @@ class $1 {
       );
         `package.json`;
       );
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
       if (fs.existsSync(packageJsonPath)) {
   const pkg = JSON.parse(fs.readFileSync(packageJsonPath, "utf8"));
         return pkg.version;,

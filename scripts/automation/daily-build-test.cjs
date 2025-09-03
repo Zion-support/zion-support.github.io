@@ -59,7 +59,6 @@ async function runDailyBuildTest() {
 ;
     // Run type checking;
     // Run type checking;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
     console.log("🔍 Running type checking...");
     try {
   execSync("npm run type-check", { stdio: "inherit" });
@@ -87,7 +86,6 @@ async function runDailyBuildTest() {
 ;
     // Build project;
     // Build project;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
     console.log("🏗️ Building project...");
     try {
   execSync("npm run build", { stdio: "inherit" });

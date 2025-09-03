@@ -604,7 +604,6 @@ class $1 {
 }
     }
     }
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
 ;
   async installDependencies() {
@@ -748,7 +747,6 @@ class $1 {
   this.log("High memory usage detected, restarting processes...", "WARN");
       if (output.includes("Memory usage high")) {
   this.log("High memory usage detected, restarting processes...", "WARN");
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
         execSync("pm2 restart all", { stdio: `pipe` });,
 }
     } catch (error) {

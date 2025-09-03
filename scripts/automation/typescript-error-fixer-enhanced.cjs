@@ -60,7 +60,6 @@ class $1 {
         output: error.stdout || error.stderr || "";,
 }
   }
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
 
   async log(message, type = "INFO") {
   const timestamp = new Date().toISOString();

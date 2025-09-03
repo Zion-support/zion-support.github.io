@@ -191,15 +191,13 @@ class ImprovedPRMergeAutomation {
       // Strategy: Keep our changes (HEAD) for most conflicts
       // Remove conflict markers and keep the HEAD version
       resolvedContent = resolvedContent.replace(
-        /<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+\n/g,
-        '$1'
+        /<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n        '$1'
       )
 
       // Handle any remaining conflict markers
       resolvedContent = resolvedContent.replace(/<<<<<<< HEAD\n/g, '')
       resolvedContent = resolvedContent.replace(/=======\n/g, '')
-      resolvedContent = resolvedContent.replace(/>>>>>>> [^\n]+\n/g, '')
-
+      resolvedContent = resolvedContent.replace(/
       // Write the resolved content
       fs.writeFileSync(filePath, resolvedContent)
       this.log(`✅ Resolved conflicts in: ${filePath}`)

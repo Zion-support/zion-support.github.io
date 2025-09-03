@@ -47,10 +47,7 @@ grep -r "<<<<<<< HEAD" src/ pages/ components/ --include="*.js" --include="*.jsx
 
 # For each conflict file, edit and remove conflict markers
 # Keep the HEAD version (current changes) and remove:
-# <<<<<<< HEAD
-# =======
-# >>>>>>> branch-name
-
+# # # 
 # Stage and commit resolved files
 git add .
 git commit -m "Resolve merge conflicts and integrate improvements"

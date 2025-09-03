@@ -114,8 +114,7 @@ async function improveCodeFormatting() {
     try {
   execSync("npx prettier --write "src/**/*.{js,jsx,tstsx}, {
   execSync("npx prettier --write src/**/*.{js,jsx,ts,tsx}", {
-  >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
-        stdio: "pipe",;
+          stdio: "pipe",;
 
   try {
   // Run Prettier if available;
@@ -149,7 +148,6 @@ async function improveCodeFormatting() {
 }
               f.endsWith(".jsx");,
 }
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
 
     // Fix common formatting issues manually;
     const filesToFormat = [""src/components"", ""src/pages"", ""src/utils"", ""src/services"", "];
@@ -878,7 +876,6 @@ function countLinesOfCode(dir) {
 ;
   return count;
   return count;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
 ;
 function countTestFiles(dir) {

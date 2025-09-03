@@ -82,7 +82,6 @@ class AutomationSuiteRunner {
         description: "Build Application"
 };
     ]
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     const results = []
     for() {
       const result = await this.runCommand(script.command, script.description);
@@ -327,7 +326,6 @@ class AutomationSuiteRunner {
       await this.runCommand("npm run type-check", "TypeScript Error Detection")
 } catch(error) {
       this.log(`TypeScript errors found: ${error.message}`);
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 }
 ;
     // Check for linting errors

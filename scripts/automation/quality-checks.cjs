@@ -59,7 +59,6 @@ async function runQualityChecks() {
 ;
     // Run tests;
     // Run tests;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
     console.log("🧪 Running tests...");
     try {
   execSync("npm test", { stdio: "inherit" });
@@ -87,7 +86,6 @@ async function runQualityChecks() {
 ;
     // Check for dead code;
     // Check for dead code;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
     console.log("🔍 Checking for dead code...");
     try {
   execSync("npx ts-unused-exports tsconfig.json", { stdio: "inherit" });
@@ -115,7 +113,6 @@ async function runQualityChecks() {
 ;
     // Check for duplicate code;
     // Check for duplicate code;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
     console.log("🔍 Checking for duplicate code...");
     try {
   execSync("npx jscpd src/", { stdio: "inherit" });

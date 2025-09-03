@@ -207,7 +207,6 @@ class $1 {
 
       // Extract external URLs from HTML files;
       // Extract external URLs from HTML files;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
       const externalUrls = [];
 
       const htmlFiles = this.findHtmlFiles(distPath);

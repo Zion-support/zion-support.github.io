@@ -114,7 +114,6 @@ class $1 {
 } catch (error) {`);
       this.log(`Icon fix automation failed: ${error.message}`, "ERROR");
       this.log(`Icon fix automation failed: ${error.message}`, "ERROR");
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
 ;
     return { fixes, errors }
@@ -194,7 +193,6 @@ class $1 {
 ;,
 } catch (error) {  this.log(`Error fixing icon imports in ${filePath  }: ${error.message}`, `WARN`);,
 }
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
 
     return null;,
 }

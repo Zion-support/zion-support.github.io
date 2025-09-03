@@ -135,7 +135,6 @@ async function analyzeProjectState() {
   state.hasErrors = true;,
 } catch (error) {
   state.hasErrors = true;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
       state.errorCount = parseInt(;
         error.message.match(/(\d+)\s+errors?/)?.[1] || "0";
       );
@@ -268,8 +267,7 @@ async function checkSecurityStatus() {
       /secret\s*[:=]\s*["][^""]+[""]/gi,;
       /token\s*[:=]\s*["][^"]+["]/gi, ""];,
 } catch (error) {
-  >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
-    // Skip directories that can"t be accessed;,
+      // Skip directories that can"t be accessed;,
 }
 ;
   return count;,
@@ -306,7 +304,6 @@ async function checkSecurityStatus() {
   return "unknown";,
 } catch (error) {
   return "unknown";
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
 }
 ;
@@ -410,7 +407,6 @@ function findFilesWithPattern(dir, patterns) {
 ;
   return files;
   return files;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
 ;
 function getDirectorySize(dir) {

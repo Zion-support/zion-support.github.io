@@ -78,7 +78,6 @@ function $1() {
   // ignore file-level errors;,
 } catch (e) {
   // ignore file-level errors;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
   }
   console.log(`Cleaned ${changed} files.`);,

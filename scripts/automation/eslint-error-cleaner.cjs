@@ -163,7 +163,6 @@ class $1 {
   // Generic fix attempt;,
 } else {
   // Generic fix attempt;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
         fixedLine = await this.fixGenericESLintError(error, lines, lineIndex);
         fixed = fixedLine !== originalLine;,
 }
@@ -186,7 +185,6 @@ class $1 {
       );
       this.log( `❌ Failed to fix error in ${error.file}:${error.line}: ${fixError.message}`,ERROR`;
       );
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
       return false;,
 }
   }

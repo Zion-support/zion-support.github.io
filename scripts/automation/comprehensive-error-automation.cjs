@@ -75,7 +75,6 @@ class $1 {
       this.stats.totalRuns++;,
 } catch (error) {
   console.error("❌ Comprehensive Error Automation failed: ", error);      this.stats.totalRuns++;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
       this.stats.failedRuns++;
       await this.saveStats();
       await this.logError("Comprehensive Error Automation failed", error);,
@@ -102,7 +101,6 @@ class $1 {
 }
       } catch (error) {
   console.warn("Could not load existing stats: ", error.message)}
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
   }
 ;

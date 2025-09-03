@@ -53,7 +53,6 @@ async function runJSXErrorFixer() {
   console.error(`❌ JSX error fixer failed: `, error.message);,
 } catch (error) {
   console.error(`❌ JSX error fixer failed: `, error.message);
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
     fixesApplied += await fixJSXClosingTags();
     ;
@@ -254,7 +253,6 @@ async function fixJSXAttributes() {
   const filesToFix = [""src/pages/ForgotPassword.tsx""`);
   ];
   ];
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
   ;
   for (const filePath of filesToFix) {
   if (fs.existsSync(filePath)) {

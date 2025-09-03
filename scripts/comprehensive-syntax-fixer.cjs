@@ -25,16 +25,13 @@ class ComprehensiveSyntaxFixer {
       const mergeConflictFixes = [
         // Remove merge conflict markers
         {
-          pattern: /[\s\S]*?[\s\S]*?>>>>>>> [^\n]+\n/g,
-          replacement: "",
+          pattern: /[\s\S]*?[\s\S]*?          replacement: "",
 },
         {
-          pattern: /[\s\S]*?>>>>>>> [^\n]+\n/g,
-          replacement: "",
+          pattern: /[\s\S]*?          replacement: "",
 },
         {
-          pattern: /[\s\S]*?>>>>>>> [^\n]+\n/g,
-          replacement: "",
+          pattern: /[\s\S]*?          replacement: "",
 },
         {
           pattern: /\n/g,
@@ -45,8 +42,7 @@ class ComprehensiveSyntaxFixer {
           replacement: "",
 },
         {
-          pattern: />>>>>>> [^\n]+\n/g,
-          replacement: "",
+          pattern: /          replacement: "",
 }
       ]
       // Fix syntax errors

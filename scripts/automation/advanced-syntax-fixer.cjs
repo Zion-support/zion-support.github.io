@@ -48,7 +48,6 @@ function fixAdvancedSyntaxErrors(filePath) {
     ];
       /^\s*}, \[\]\);\s*$/gm,      /^\s*}, \[\]\), \[\]\);\s*$/gm;
     ];
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
     ;
     orphanedPatterns.forEach(pattern => {
   content = content.replace(pattern, ");,

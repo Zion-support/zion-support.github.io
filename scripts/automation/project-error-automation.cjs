@@ -523,7 +523,6 @@ class $1 {
       throw error;,
 } catch (error) {  await this.log(`❌ Error in automation: ${error.message  }`);
       throw error;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
   }
 }

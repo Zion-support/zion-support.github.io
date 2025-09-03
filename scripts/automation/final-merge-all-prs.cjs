@@ -340,7 +340,6 @@ this.log(`✅ Resolved conflicts in: ${filePath}`);,
   this.log(`❌ Failed to push changes: ${error.message}`, "ERROR");,
 }
     }
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
 ;
   delay(ms) {

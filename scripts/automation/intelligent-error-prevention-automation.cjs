@@ -245,7 +245,6 @@ class $1 {
         ;,
 } catch (error) {  this.log(`Error processing ${file  }: ${error.message}`, `warning`);,
 }
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
     this.log(`Fixed ${errorsFixed} JSX errors`, `success`);,
 }

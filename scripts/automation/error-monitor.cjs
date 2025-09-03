@@ -171,7 +171,6 @@ class $1 {
 } catch (error) {this.log("error", Error scanning directory ${dir}:, error.message`);,
 }
       }
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
     ;
     if (fs.existsSync(srcDir)) {
@@ -341,7 +340,6 @@ class $1 {
   this.log(`error`, `Health check failed: `, error.message);,
 } catch (error) {
   this.log(`error`, `Health check failed: `, error.message);
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
   }
 ;

@@ -66,7 +66,6 @@ class $1 {
       `);
       await fs.writeFile(eslintPath, fixedConfig`);
       await fs.writeFile(eslintPath, fixedConfig`);
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
       await this.log("✅ ESLint configuration fixed");
       this.fixesApplied.push({
   type: `eslint-config-fix`,;
@@ -187,7 +186,6 @@ class $1 {
       throw error;,
 } catch (error) {  await this.log(`❌ Linting Error Fixer failed: ${error.message  }`);
       throw error;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
   }
 }

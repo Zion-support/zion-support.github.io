@@ -174,7 +174,6 @@ class $1 {
 ;
     this.saveFixHistory();
     this.saveFixHistory();
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
 ;
   async runWeeklyFixes() {
@@ -209,7 +208,6 @@ class $1 {
 ;
     this.saveFixHistory();
     this.saveFixHistory();
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
 ;
   async runMonthlyFixes() {
@@ -244,7 +242,6 @@ class $1 {
 ;
     this.saveFixHistory();
     this.saveFixHistory();
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
 ;
   async runQuickFixes() {
@@ -401,7 +398,6 @@ execSync(node ${tempFile}, { cwd: this.projectRoot, stdio: "inherit" }`);
 }
     } catch (error) {
   console.error("❌ Comprehensive error fixer failed: ", error)}
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
 ;
   async runUnusedImportFixes() {
@@ -419,7 +415,6 @@ execSync(node ${tempFile}, { cwd: this.projectRoot, stdio: "inherit" }`);
 }
     } catch (error) {
   console.error("❌ Unused import fixes failed: ", error)}
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
 ;
   async runFullTypeCheck() {
@@ -489,7 +484,6 @@ execSync(node ${tempFile}, { cwd: this.projectRoot, stdio: "inherit" }`);
 }
     } catch (error) {
   console.error("❌ Project health report generation failed: ", error)}
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
 ;
   async getProjectStats() {

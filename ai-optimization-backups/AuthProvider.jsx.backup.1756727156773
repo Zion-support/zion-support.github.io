@@ -134,13 +134,7 @@ export default function Page() {
                     // // // // // // // // console.error("Error fetching user profile:", error);
                     setUser(null);
 
-<<<<<<< HEAD
-                        console.error("Error fetching user profile:", error);
-=======
-"
-                        // console.error("Error fetching user profile:", error);
->>>>>>> main
-                        setUser(null)}
+                        console.error("Error fetching user profile:", error);                        setUser(null)}
                 }
                 catch(error) {
 "

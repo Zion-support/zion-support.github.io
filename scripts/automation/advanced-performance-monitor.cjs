@@ -418,7 +418,6 @@ class $1 {
   return 0;,
 } catch (error) {
   return 0;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
   }
 ;
@@ -696,7 +695,6 @@ class $1 {
         this.performanceHistory[this.performanceHistory.length - 1];
       const metrics =;
         this.performanceHistory[this.performanceHistory.length - 1];
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
       if (metrics.system.cpu.usage > 95) {
   execSync("pm2 scale all 1", { cwd: this.projectRoot, stdio: "pipe" });
         return {

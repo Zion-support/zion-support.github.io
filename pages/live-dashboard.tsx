@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
+import Link from '../lib/CompatLink';
 
 const LiveDashboard: React.FC = () => {
   const [currentTime, setCurrentTime] = useState(new Date());

@@ -82,7 +82,6 @@ module.exports = {
 const { execSync } = require("$1");
 const fs = require("$1");
 const path = require("path")
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 class PerformanceMonitor {
   constructor() {
     this.reportsDir = path.join(process.cwd(), "performance-reports")
@@ -108,7 +107,6 @@ class PerformanceMonitor {
       const command = "npx lighthouse http: //localhost:3000 --output=html --output-path=./performance-reports/lighthouse-report.html --chrome-flags="--headless""
       execSync(command, { stdio: "inherit" })
       console.log("✅ Lighthouse audit completed")
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259,
 } catch (error) {
       console.log("❌ Lighthouse audit failed: ", error.message),
 }
@@ -307,7 +305,6 @@ monitor.runBundleAnalysis()
         this.log(`  ${index + 1}. [${opt.impact.toUpperCase()}] ${opt.description}`, "INFO"),
 })
       this.log(`❌ Performance script creation failed: ${error.message}`)
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259,
 }
   }
 
