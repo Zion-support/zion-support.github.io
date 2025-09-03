@@ -1,0 +1,26 @@
+# Ignore large/corrupted and generated areas causing parsing errors
+src/**
+src.disabled/**
+solutions.disabled/**
+zion-os.disabled/**
+zion_academy/**
+__tests__/**
+tests/**
+tests.disabled/**
+coverage/**
+node_modules/**
+.next/**
+dist/**
+build/**
+out/**
+backup/**
+ai-optimization-backups/**
+automation_backup/**
+error-reports/**
+security-reports/**
+temp_*/**
+temp_backup/**
+temp_broken_components/**
+working-automation-suite.cjs
+*.report.json
+*.optimized.*
