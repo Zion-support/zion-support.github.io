@@ -1,7 +1,7 @@
 {
-  "timestamp": "2025-09-03T04:40:48.301Z",
+  "timestamp": "2025-09-03T05:05:33.705Z",
   "metrics": {
-    "bundleSize": "18M",
+    "bundleSize": 0,
     "buildTime": 0,
     "pageLoadTime": 0,
     "memoryUsage": 0
@@ -790,8 +790,6 @@
         "@radix-ui/react-toggle-group",
         "@radix-ui/react-tooltip",
         "@supabase/supabase-js",
-        "@types/node",
-        "@types/react",
         "@types/react-dom",
         "class-variance-authority",
         "framer-motion",

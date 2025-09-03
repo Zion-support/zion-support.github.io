@@ -1,5 +1,5 @@
-import React from
-  'react''
-  'framer-motion''
-  'react-router-dom''
-  'lucide-react';';'
+import React from;
+  "react"";
+  "framer-motion"";
+  "react-router-dom"";
+  "lucide-react";";'

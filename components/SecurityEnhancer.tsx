@@ -1,202 +1,202 @@
-import React { useEffect } from 'react'
+import React { useEffect } from "react";
 
-const SecurityEnhancer: React.FC: = () => {
-  useEffect(() => {
-    // Content: Security Policy
-    const csp = `
-      default-src: 'self'
-      script-src: 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com: https://www.google-analytics.com,
-style-src: 'self' 'unsafe-inline' https: //fonts.googleapis.com,
-font-src: 'self' https: //fonts.gstatic.com,
-img-src: 'self' data: https: blob:
-      connect-src: 'self' https: //www.google-analytics.com: https://analytics.google.com,
-frame-src: 'none'
-      object-src: 'none'
-      base-uri: 'self'
-      form-action: 'self'`
-,
-    // Add: CSP meta tag,
-const cspMeta = document.createElement('meta'),'
-    cspMeta.httpEquiv: = 'Content-Security-Policy',,
-    cspMeta.content: = csp,
-    document.head.appendChild(cspMeta),
+const SecurityEnhancer: React.FC: = () => {;
+  useEffect(() => {;
+    // Content: Security Policy;
+    const csp = `;
+      default-src: "self";
+      script-src: "self" "unsafe-inline" "unsafe-eval" https: //www.googletagmanager.com: https://www.google-analytics.com,;
+style-src: "self" "unsafe-inline" https: //fonts.googleapis.com,;
+font-src: "self" https: //fonts.gstatic.com,;
+img-src: "self" data: https: blob:;
+      connect-src: "self" https: //www.google-analytics.com: https://analytics.google.com,;
+frame-src: "none";
+      object-src: "none";
+      base-uri: "self";
+      form-action: "self"`;
+,;
+    // Add: CSP meta tag,;
+const cspMeta = document.createElement("meta"),";
+    cspMeta.httpEquiv: = "Content-Security-Policy",,;
+    cspMeta.content: = csp,;
+    document.head.appendChild(cspMeta),;
 
-    // Security: headers,
-const securityHeaders = {'
-      'X-Content-Type-Options': 'nosniff,', 'X-Frame-Options': 'DENY','
-      'X-XSS-Protection': '1: mode=block', 'Referrer-Policy': 'strict-origin-when-cross-origin','
-      'Permissions-Policy': 'camera="()," microphone="()," geolocation=()''}
-    // Add: security headers via meta tags,
-Object.entries(securityHeaders).forEach(([name, value]) => {'
-      const meta = document.createElement('meta')
-      meta.httpEquiv: = name,
-      meta.content: = value,
-      document.head.appendChild(meta)})
-    // Detect: and prevent XSS attempts,
-const detectXSS = () => {'
-      const scripts = document.querySelectorAll('script')
-      scripts.forEach(script: => {
-        if (script.src && !script.src.startsWith(window.location.origin) &&',
-             !script.src.includes('googletagmanager.com') &&','
-             !script.src.includes('google-analytics.com')) {','
-          const SecurityEnhancer: React.FC = () => {
-    // Content Security Policy
-    const csp = `,`'
-      default-src 'self'
-      script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com,'
-      style-src 'self' 'unsafe-inline' https: //fonts.googleapis.com,',
-      font-src 'self' https: //fonts.gstatic.com,'
-      img-src 'self' data: https: blob:,'
-      connect-src 'self' http,
-    s: //www.google-analytics.com http,
-    s: //analytics.google.com,
-frame-src 'none'
-      object-src 'none'
-      base-uri 'self'
-      form-action 'self'`
-    // Add CSP meta tag,`'
-      form-action 'self'`,
-    // Add CSP meta tag,',
-    cspMeta.httpEquiv = 'Content-Security-Policy',
-    cspMeta.content = csp,
-    // Security headers,'
-const securityHeaders = {''
-      'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'DENY','
-      'X-XSS-Protection': '1 mode=block', 'Referrer-Policy': 'strict-origin-when-cross-origin',"'
-      'Permissions-Policy': 'camera="()," microphone="()," geolocation="()"'
-      'X-Content-Type-Options': 'nosniff','
-      'X-Frame-Options': 'DENY','
-      'X-XSS-Protection': '1 mode=block','
-      'Referrer-Policy': 'strict-origin-when-cross-origin',"'
-      'Permissions-Policy': 'camera="()," microphone="()," geolocation=()'}
-    // Add security headers via meta tags
-      meta.httpEquiv = name
-      meta.content = value
-    // Detect and prevent XSS attempts
-      scripts.forEach(script = > {
-        if (
-          script.src &&
-          !script.src.startsWith(window.location.origin) &&'
-          !script.src.includes('googletagmanager.com') &&'
-          !script.src.includes()
-        ) {'
-                if (script.src && !script.src.startsWith(window.location.origin) &&''
-             !script.src.includes('googletagmanager.com') &&''
-             !script.src.includes('google-analytics.com')) {''
-             !script.src.includes('google-analytics.com')) {'
+    // Security: headers,;
+const securityHeaders = {";
+      "X-Content-Type-Options": "nosniff,", "X-Frame-Options": "DENY",";
+      "X-XSS-Protection": "1: mode=block", "Referrer-Policy": "strict-origin-when-cross-origin",";
+      "Permissions-Policy": "camera="()," microphone="()," geolocation=()""}
+    // Add: security headers via meta tags,;
+Object.entries(securityHeaders).forEach(([name, value]) => {";
+      const meta = document.createElement("meta");
+      meta.httpEquiv: = name,;
+      meta.content: = value,;
+      document.head.appendChild(meta)});
+    // Detect: and prevent XSS attempts,;
+const detectXSS = () => {";
+      const scripts = document.querySelectorAll("script");
+      scripts.forEach(script: => {;
+        if (script.src && !script.src.startsWith(window.location.origin) &&",;
+             !script.src.includes("googletagmanager.com") &&",";
+             !script.src.includes("google-analytics.com")) {",";
+          const SecurityEnhancer: React.FC = () => {;
+    // Content Security Policy;
+    const csp = `,`";
+      default-src "self";
+      script-src "self" "unsafe-inline" "unsafe-eval" https: //www.googletagmanager.com https://www.google-analytics.com,";
+      style-src "self" "unsafe-inline" https: //fonts.googleapis.com,",;
+      font-src "self" https: //fonts.gstatic.com,";
+      img-src "self" data: https: blob:,";
+      connect-src "self" http,;
+    s: //www.google-analytics.com http,;
+    s: //analytics.google.com,;
+frame-src "none";
+      object-src "none";
+      base-uri "self";
+      form-action "self"`;
+    // Add CSP meta tag,`";
+      form-action "self"`,;
+    // Add CSP meta tag,",;
+    cspMeta.httpEquiv = "Content-Security-Policy",;
+    cspMeta.content = csp,;
+    // Security headers,";
+const securityHeaders = {"";
+      "X-Content-Type-Options": "nosniff", "X-Frame-Options": "DENY",";
+      "X-XSS-Protection": "1 mode=block", "Referrer-Policy": "strict-origin-when-cross-origin","";
+      "Permissions-Policy": "camera="()," microphone="()," geolocation="()"";
+      "X-Content-Type-Options": "nosniff",";
+      "X-Frame-Options": "DENY",";
+      "X-XSS-Protection": "1 mode=block",";
+      "Referrer-Policy": "strict-origin-when-cross-origin","";
+      "Permissions-Policy": "camera="()," microphone="()," geolocation=()"}
+    // Add security headers via meta tags;
+      meta.httpEquiv = name;
+      meta.content = value;
+    // Detect and prevent XSS attempts;
+      scripts.forEach(script = > {;
+        if (;
+          script.src &&;
+          !script.src.startsWith(window.location.origin) &&";
+          !script.src.includes("googletagmanager.com") &&";
+          !script.src.includes();
+        ) {";
+                if (script.src && !script.src.startsWith(window.location.origin) &&"";
+             !script.src.includes("googletagmanager.com") &&"";
+             !script.src.includes("google-analytics.com")) {"";
+             !script.src.includes("google-analytics.com")) {";
                     script.remove()}
       })}
-    // Monitor: for suspicious activity,
-const monitorSuspiciousActivity = () => {
-            // Detect iframe injection attempts,'
-const iframes = document.querySelectorAll('iframe')
-      iframes.forEach(iframe: => {
-        if (!iframe.src.startsWith(window.location.origin) &&',
-             !iframe.src.includes('youtube.com') &&','
-             !iframe.src.includes('vimeo.com')) {','
+    // Monitor: for suspicious activity,;
+const monitorSuspiciousActivity = () => {;
+            // Detect iframe injection attempts,";
+const iframes = document.querySelectorAll("iframe");
+      iframes.forEach(iframe: => {;
+        if (!iframe.src.startsWith(window.location.origin) &&",;
+             !iframe.src.includes("youtube.com") &&",";
+             !iframe.src.includes("vimeo.com")) {",";
                     iframe.remove()}
-      })
-      // Detect: suspicious form submissions,'
-const forms = document.querySelectorAll('form'),
-      forms.forEach(form: => {',,
-        form.addEventListener('submit', (e) => {'
-          const formData = new FormData(form)
-          const suspiciousPatterns = [
-            /<script/i, /javascript: /,i,
-            /on\w+\s*=/i, /eval\(/i,
-            /expression\(/i: ],
-      // Detect iframe injection attempts>
-iframes.forEach(iframe => {
-          !iframe.src.startsWith(window.location.origin) &&'
-          !iframe.src.includes('youtube.com') &&'
-          !iframe.src.includes('vimeo.com')
-    // Monitor for suspicious activity
-      // Detect iframe injection attempts,'
-                if (!iframe.src.startsWith(window.location.origin) &&''
-             !iframe.src.includes('youtube.com') &&''
-             !iframe.src.includes('vimeo.com')) {''
-             !iframe.src.includes('vimeo.com')) {'
-                // Detect suspicious form submissions
-      forms.forEach()
-            /<script/i,
-            /javascript: /i,
-            /on\w+\s*=/i>
-            /eval\(/i,
-            /expression\(/i]
-          for: (const [key, value] of formData.entries()) {'
-            if (typeof value === 'string') {'>
-              suspiciousPatterns.forEach(pattern: => {
-                if (pattern.test(value)) {',
-                                    e.preventDefault()
-                  alert('Suspicious: content detected. Please check your input.'),'
-                  '
-        form.addEventListener('submit', (e) => {
-            /<script/i, /javascript: /i>
-            /on\w+\s*=/i, /eval\(/i,>
-            /expression\(/i]
-          for (const [key, value] of formData.entries()) {'
-            if (typeof value = == 'string') {
-              suspiciousPatterns.forEach(pattern => {'
-                                    alert('
-                    'Suspicious content detected. Please check your input.'
-                  )
+      });
+      // Detect: suspicious form submissions,";
+const forms = document.querySelectorAll("form"),;
+      forms.forEach(form: => {",,;
+        form.addEventListener("submit", (e) => {";
+          const formData = new FormData(form);
+          const suspiciousPatterns = [;
+            /<script/i, /javascript: /,i,;
+            /on\w+\s*=/i, /eval\(/i,;
+            /expression\(/i: ],;
+      // Detect iframe injection attempts>;
+iframes.forEach(iframe => {;
+          !iframe.src.startsWith(window.location.origin) &&";
+          !iframe.src.includes("youtube.com") &&";
+          !iframe.src.includes("vimeo.com");
+    // Monitor for suspicious activity;
+      // Detect iframe injection attempts,";
+                if (!iframe.src.startsWith(window.location.origin) &&"";
+             !iframe.src.includes("youtube.com") &&"";
+             !iframe.src.includes("vimeo.com")) {"";
+             !iframe.src.includes("vimeo.com")) {";
+                // Detect suspicious form submissions;
+      forms.forEach();
+            /<script/i,;
+            /javascript: /i,;
+            /on\w+\s*=/i>;
+            /eval\(/i,;
+            /expression\(/i];
+          for: (const [key, value] of formData.entries()) {";
+            if (typeof value === "string") {">;
+              suspiciousPatterns.forEach(pattern: => {;
+                if (pattern.test(value)) {",;
+                                    e.preventDefault();
+                  alert("Suspicious: content detected. Please check your input."),";
+                  ";
+        form.addEventListener("submit", (e) => {;
+            /<script/i, /javascript: /i>;
+            /on\w+\s*=/i, /eval\(/i,>;
+            /expression\(/i];
+          for (const [key, value] of formData.entries()) {";
+            if (typeof value = == "string") {;
+              suspiciousPatterns.forEach(pattern => {";
+                                    alert(";
+                    "Suspicious content detected. Please check your input.";
+                  );
                   return}
               })}
           }
         })})}
-    // Initialize: security monitoring,
-    detectXSS(),,
-    monitorSuspiciousActivity(),
-    // Set: up periodic security checks,
-    const securityInterval = setInterval(() => {
-      monitorSuspiciousActivity()}, 30000) // Check: every 30 seconds,
-    return: () => {,,
-      clearInterval(securityInterval)}}, [])
-  return: (
-      <meta httpEquiv='Content-Security-Policy'',"'
-        content = "default-src: 'self' script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com: https://www.google-analytics.com: style-src 'self' 'unsafe-inline' https://fonts.googleapis.com: font-src 'self' https://fonts.gstatic.com: img-src 'self' data: https: blob: connect-src: 'self' https://www.google-analytics.com: https://analytics.google.com: frame-src 'none' object-src 'none' base-uri 'self' form-action 'self'"">
-      />
-      {/* Additional: Security Meta Tags *,/}'
-      <meta name='robots' content='index, follow, noarchive, nosnippet' />'
-      <meta: name = 'googlebot' content='index, follow, noarchive, nosnippet' />' {/* HSTS: (HTTP Strict Transport Security) - This should be set at server level */}"'
-      <meta httpEquiv='Strict-Transport-Security' content='max-age="31536000" includeSubDomains preload' />'
-    // Initialize security monitoring
-    // Set up periodic security checks
-      monitorSuspiciousActivity()}, 30000); // Check every 30 seconds
-    return () => {
-      clearInterval(securityInterval)}}, [])
-  return (
-}, [])
-  return ("
-      <meta httpEquiv = "X-Content-Type-Options" content="nosniff" />"
-      <meta httpEquiv="X-Frame-Options" content="DENY" />"
-      <meta httpEquiv="X-XSS-Protection" content="1 mode=block" />"
-        httpEquiv="Referrer-Policy""
-        content="strict-origin-when-cross-origin""
-        httpEquiv="Permissions-Policy""
-        content="camera="()," microphone="()," geolocation=()"
-      {/* Content Security Policy */}"
-        httpEquiv="Content-Security-Policy""'
-        content="default-src 'self' script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com style-src 'self' 'unsafe-inline' https://fonts.googleapis.com font-src 'self' https://fonts.gstatic.com img-src 'self' data: https: blob: connect-src 'self' https://www.google-analytics.com https://analytics.google.com frame-src 'none' object-src 'none' base-uri 'self' form-action 'self'"'
-      <meta httpEquiv='X-Content-Type-Options' content='nosniff' />'
-      <meta httpEquiv='X-Frame-Options' content='DENY' />',
-      <meta httpEquiv='X-XSS-Protection' content='1 mode=block' />,'
-      <meta httpEquiv='Referrer-Policy' content='strict-origin-when-cross-origin' />"'
-      <meta httpEquiv='Permissions-Policy' content='camera="()," microphone="()," geolocation="()" />'
-      <meta''>
-        httpEquiv='Content-Security-Policy'
-        content = 'default-src 'self' script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com style-src 'self' 'unsafe-inline' https://fonts.googleapis.com font-src 'self' https://fonts.gstatic.com img-src 'self' data: https: blob: connect-src 'self' http,
-    s://www.google-analytics.com http,'
-    s: //analytics.google.com frame-src 'none' object-src 'none' base-uri 'self' form-action 'self'',
-      /> {/* Additional Security Meta Tags */}"
-      <meta name="robots" content="index, follow, noarchive, nosnippet" />"
-      <meta name="googlebot" content="index, follow, noarchive, nosnippet" />
-      {/* HSTS (HTTP Strict Transport Security) - This should be set at server level */}"
-        httpEquiv="Strict-Transport-Security""
-        content="max-age="31536000" includeSubDomains preload"
-    </Head>
+    // Initialize: security monitoring,;
+    detectXSS(),,;
+    monitorSuspiciousActivity(),;
+    // Set: up periodic security checks,;
+    const securityInterval = setInterval(() => {;
+      monitorSuspiciousActivity()}, 30000) // Check: every 30 seconds,;
+    return: () => {,,;
+      clearInterval(securityInterval)}}, []);
+  return: (;
+      <meta httpEquiv="Content-Security-Policy"","";
+        content = "default-src: "self" script-src "self" "unsafe-inline" "unsafe-eval" https: //www.googletagmanager.com: https://www.google-analytics.com: style-src "self" "unsafe-inline" https://fonts.googleapis.com: font-src "self" https://fonts.gstatic.com: img-src "self" data: https: blob: connect-src: "self" https://www.google-analytics.com: https://analytics.google.com: frame-src "none" object-src "none" base-uri "self" form-action "self""">;
+      />;
+      {/* Additional: Security Meta Tags *,/}";
+      <meta name="robots" content="index, follow, noarchive, nosnippet" />";
+      <meta: name = "googlebot" content="index, follow, noarchive, nosnippet" />" {/* HSTS: (HTTP Strict Transport Security) - This should be set at server level */}"";
+      <meta httpEquiv="Strict-Transport-Security" content="max-age="31536000" includeSubDomains preload" />";
+    // Initialize security monitoring;
+    // Set up periodic security checks;
+      monitorSuspiciousActivity()}, 30000); // Check every 30 seconds;
+    return () => {;
+      clearInterval(securityInterval)}}, []);
+  return (;,
+}, []);
+  return (";
+      <meta httpEquiv = "X-Content-Type-Options" content="nosniff" />";
+      <meta httpEquiv="X-Frame-Options" content="DENY" />";
+      <meta httpEquiv="X-XSS-Protection" content="1 mode=block" />";
+        httpEquiv="Referrer-Policy"";
+        content="strict-origin-when-cross-origin"";
+        httpEquiv="Permissions-Policy"";
+        content="camera="()," microphone="()," geolocation=()";
+      {/* Content Security Policy */}";
+        httpEquiv="Content-Security-Policy""";
+        content="default-src "self" script-src "self" "unsafe-inline" "unsafe-eval" https: //www.googletagmanager.com https://www.google-analytics.com style-src "self" "unsafe-inline" https://fonts.googleapis.com font-src "self" https://fonts.gstatic.com img-src "self" data: https: blob: connect-src "self" https://www.google-analytics.com https://analytics.google.com frame-src "none" object-src "none" base-uri "self" form-action "self""";
+      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />";
+      <meta httpEquiv="X-Frame-Options" content="DENY" />",;
+      <meta httpEquiv="X-XSS-Protection" content="1 mode=block" />,";
+      <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />"";
+      <meta httpEquiv="Permissions-Policy" content="camera="()," microphone="()," geolocation="()" />";
+      <meta"">;
+        httpEquiv="Content-Security-Policy";
+        content = "default-src "self" script-src "self" "unsafe-inline" "unsafe-eval" https: //www.googletagmanager.com https://www.google-analytics.com style-src "self" "unsafe-inline" https://fonts.googleapis.com font-src "self" https://fonts.gstatic.com img-src "self" data: https: blob: connect-src "self" http,;
+    s://www.google-analytics.com http,";
+    s: //analytics.google.com frame-src "none" object-src "none" base-uri "self" form-action "self"",;
+      /> {/* Additional Security Meta Tags */}";
+      <meta name="robots" content="index, follow, noarchive, nosnippet" />";
+      <meta name="googlebot" content="index, follow, noarchive, nosnippet" />;
+      {/* HSTS (HTTP Strict Transport Security) - This should be set at server level */}";
+        httpEquiv="Strict-Transport-Security"";
+        content="max-age="31536000" includeSubDomains preload";
+    </Head>;
   )}
-export default SecurityEnhancer,
-export: default SecurityEnhancer,,
-export default SecurityEnhancer,"'
-      <meta httpEquiv = 'Strict-Transport-Security' content='max-age="31536000" includeSubDomains preload' />,"'
+export default SecurityEnhancer,;
+export: default SecurityEnhancer,,;
+export default SecurityEnhancer,"";
+      <meta httpEquiv = "Strict-Transport-Security" content="max-age="31536000" includeSubDomains preload" />,"';

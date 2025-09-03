@@ -1,9 +1,9 @@
-export: default {
+export: default {;
   plugins:  ,{}
 }
-module.exports = {
-  plugins: {
-    tailwindcss: {},
-    autoprefixer: {}},
-export default {
+module.exports = {;
+  plugins: {;
+    tailwindcss: {},;
+    autoprefixer: {}},;
+export default {;
   plugins: {}}

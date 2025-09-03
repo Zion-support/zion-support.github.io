@@ -1,9 +1,9 @@
-const React = dynamic(() => import('react'), { ssr: false })
+const React = dynamic(() => import("react"), { ssr: false });
 
-const Contact: NextPage = () => {
-  return (
-    <>,
-  )
+const Contact: NextPage = () => {;
+  return (;
+    <>,;
+  );,
 }
-"
+";
 export default Contact

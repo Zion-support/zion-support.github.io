@@ -1,13 +1,13 @@
-describe('SearchPage', () => {}; '; it('renders without crashing', () => {}; render(<SearchPage / >) , expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<SearchPage />) 
-    render()
-    expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument()
-  })
-''
-  it('displays expected content', () => {
-    render(<SearchPage /" >)
-    // Add more specific tests here,
-  })
-  });"
+describe("SearchPage", () => {}; "; it("renders without crashing", () => {}; render(<SearchPage / >) , expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; "; it("displays expected content", () => {}; render(<SearchPage />) ;
+    render();
+    expect(screen.getByRole("main) || screen.getByText(/.*/)).toBeInTheDocument();,
+});
+"";
+  it("displays expected content", () => {;
+    render(<SearchPage /" >);
+    // Add more specific tests here,;,
+});,
+});";
+";,
+});";
 "
-});"
-'
