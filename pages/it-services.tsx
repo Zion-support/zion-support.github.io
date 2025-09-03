@@ -1298,6 +1298,213 @@ export default function ITServices() {
         'Advanced data processing and analysis'
       ],
       category: 'High-Performance Computing'
+    },
+    {
+      icon: Brain,
+      name: 'AI Infrastructure & MLOps',
+      description: 'Complete AI infrastructure setup with machine learning operations, model deployment, and AI governance.',
+      features: [
+        'MLOps pipeline setup and automation',
+        'Model versioning and experiment tracking',
+        'AI model deployment and serving infrastructure',
+        'Data pipeline and feature store implementation',
+        'Model monitoring and drift detection',
+        'AI governance and compliance frameworks'
+      ],
+      pricing: '$8,000 – $50,000/project',
+      projectPricing: '$3,000 – $15,000/month managed',
+      timeline: '4–12 weeks',
+      benefits: [
+        'Faster AI model deployment',
+        'Improved model performance monitoring',
+        'Reduced AI operational costs',
+        'Enhanced AI governance and compliance'
+      ],
+      category: 'AI & Machine Learning'
+    },
+    {
+      icon: Globe,
+      name: 'Edge Computing & IoT Solutions',
+      description: 'Edge computing infrastructure and IoT device management for distributed computing environments.',
+      features: [
+        'Edge computing infrastructure design',
+        'IoT device management and monitoring',
+        'Edge-to-cloud data synchronization',
+        'Real-time data processing at the edge',
+        'Edge security and device authentication',
+        'Distributed computing orchestration'
+      ],
+      pricing: '$5,000 – $35,000/project',
+      projectPricing: '$1,500 – $8,000/month managed',
+      timeline: '3–10 weeks',
+      benefits: [
+        'Reduced latency and improved performance',
+        'Lower bandwidth costs',
+        'Enhanced data privacy and security',
+        'Real-time decision making capabilities'
+      ],
+      category: 'Edge Computing'
+    },
+    {
+      icon: Database,
+      name: 'Data Engineering & Analytics Platform',
+      description: 'Modern data platform implementation with real-time analytics, data lakes, and business intelligence.',
+      features: [
+        'Data lake and warehouse architecture design',
+        'Real-time data streaming and processing',
+        'ETL/ELT pipeline development',
+        'Data quality and governance implementation',
+        'Business intelligence and analytics setup',
+        'Data visualization and reporting tools'
+      ],
+      pricing: '$10,000 – $75,000/project',
+      projectPricing: '$2,500 – $12,000/month managed',
+      timeline: '6–16 weeks',
+      benefits: [
+        'Unified data platform for all business needs',
+        'Real-time insights and decision making',
+        'Improved data quality and governance',
+        'Scalable analytics infrastructure'
+      ],
+      category: 'Data & Analytics'
+    },
+    {
+      icon: Smartphone,
+      name: 'Mobile App Development & DevOps',
+      description: 'Native and cross-platform mobile app development with CI/CD pipelines and app store optimization.',
+      features: [
+        'Native iOS and Android app development',
+        'Cross-platform development (React Native, Flutter)',
+        'Mobile CI/CD pipeline setup',
+        'App store optimization and deployment',
+        'Mobile app testing and quality assurance',
+        'Performance monitoring and analytics'
+      ],
+      pricing: '$15,000 – $100,000/project',
+      projectPricing: '$5,000 – $25,000/month managed',
+      timeline: '8–20 weeks',
+      benefits: [
+        'High-performance mobile applications',
+        'Faster time-to-market',
+        'Automated testing and deployment',
+        'Enhanced user experience and engagement'
+      ],
+      category: 'Mobile Development'
+    },
+    {
+      icon: LinkIcon,
+      name: 'API Gateway & Microservices Architecture',
+      description: 'API management platform with microservices architecture, service mesh, and API security.',
+      features: [
+        'API gateway setup and configuration',
+        'Microservices architecture design',
+        'Service mesh implementation (Istio, Linkerd)',
+        'API security and authentication',
+        'Rate limiting and traffic management',
+        'API documentation and developer portal'
+      ],
+      pricing: '$8,000 – $45,000/project',
+      projectPricing: '$2,000 – $10,000/month managed',
+      timeline: '4–12 weeks',
+      benefits: [
+        'Scalable and maintainable architecture',
+        'Enhanced API security and governance',
+        'Improved developer experience',
+        'Better system resilience and fault tolerance'
+      ],
+      category: 'API & Integration'
+    },
+    {
+      icon: Server,
+      name: 'Hybrid Cloud & Multi-Cloud Management',
+      description: 'Hybrid and multi-cloud infrastructure management with unified monitoring and cost optimization.',
+      features: [
+        'Hybrid cloud architecture design',
+        'Multi-cloud workload distribution',
+        'Cloud cost optimization and management',
+        'Unified monitoring and logging',
+        'Disaster recovery across clouds',
+        'Cloud security and compliance'
+      ],
+      pricing: '$12,000 – $80,000/project',
+      projectPricing: '$3,000 – $18,000/month managed',
+      timeline: '6–16 weeks',
+      benefits: [
+        'Optimized cloud costs and performance',
+        'Reduced vendor lock-in risks',
+        'Enhanced disaster recovery capabilities',
+        'Unified cloud management and monitoring'
+      ],
+      category: 'Cloud & Infrastructure'
+    },
+    {
+      icon: TestTube,
+      name: 'Quality Assurance & Test Automation',
+      description: 'Comprehensive testing strategy with automated testing frameworks and continuous quality assurance.',
+      features: [
+        'Test automation framework development',
+        'Performance and load testing',
+        'Security testing and vulnerability assessment',
+        'API testing and integration testing',
+        'Mobile app testing automation',
+        'Continuous testing in CI/CD pipelines'
+      ],
+      pricing: '$5,000 – $30,000/project',
+      projectPricing: '$1,500 – $8,000/month managed',
+      timeline: '3–10 weeks',
+      benefits: [
+        'Faster and more reliable testing',
+        'Reduced manual testing effort',
+        'Improved software quality',
+        'Early bug detection and prevention'
+      ],
+      category: 'Quality Assurance'
+    },
+    {
+      icon: BookOpen,
+      name: 'Technical Documentation & Knowledge Management',
+      description: 'Comprehensive technical documentation, API documentation, and knowledge management systems.',
+      features: [
+        'Technical documentation creation and maintenance',
+        'API documentation and developer guides',
+        'Knowledge management system setup',
+        'Documentation automation and CI/CD integration',
+        'User training materials and tutorials',
+        'Documentation analytics and optimization'
+      ],
+      pricing: '$3,000 – $20,000/project',
+      projectPricing: '$1,000 – $5,000/month managed',
+      timeline: '2–8 weeks',
+      benefits: [
+        'Improved developer onboarding',
+        'Reduced support tickets and inquiries',
+        'Better knowledge sharing and collaboration',
+        'Enhanced user experience and adoption'
+      ],
+      category: 'Documentation'
+    },
+    {
+      icon: Wrench,
+      name: 'IT Infrastructure Monitoring & Management',
+      description: 'Comprehensive IT infrastructure monitoring, alerting, and proactive management solutions.',
+      features: [
+        'Infrastructure monitoring and alerting setup',
+        'Performance metrics and capacity planning',
+        'Log aggregation and analysis',
+        'Incident management and response automation',
+        'Infrastructure health dashboards',
+        'Predictive maintenance and optimization'
+      ],
+      pricing: '$4,000 – $25,000/project',
+      projectPricing: '$1,200 – $6,000/month managed',
+      timeline: '2–6 weeks',
+      benefits: [
+        'Proactive issue detection and resolution',
+        'Reduced downtime and service disruptions',
+        'Improved system performance and reliability',
+        'Better resource utilization and cost optimization'
+      ],
+      category: 'Infrastructure Management'
     }
   ];
 

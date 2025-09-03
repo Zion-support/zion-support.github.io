@@ -1022,6 +1022,160 @@ export default function AIServices() {
         'Improved fleet efficiency',
         'Advanced autonomous capabilities'
       ]
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Email Intelligence',
+      description: 'Advanced email analysis and automation system that understands context, sentiment, and intent for intelligent responses.',
+      features: [
+        'Context-aware email understanding and classification',
+        'Automated response generation with personalization',
+        'Email thread analysis and conversation tracking',
+        'Priority scoring and urgent message detection',
+        'Multi-language support and translation',
+        'Integration with CRM and productivity tools'
+      ],
+      pricing: '$2,500 – $12,000 setup',
+      perUnit: '$0.05 – $0.25 per email',
+      timeline: '3–6 weeks',
+      benefits: [
+        '85% reduction in email response time',
+        'Improved email organization and prioritization',
+        'Enhanced customer communication quality',
+        'Reduced email management overhead'
+      ]
+    },
+    {
+      icon: Database,
+      name: 'AI Data Quality & Cleansing',
+      description: 'Intelligent data validation, cleansing, and enrichment platform for enterprise data management.',
+      features: [
+        'Automated data quality assessment and scoring',
+        'Intelligent data cleansing and standardization',
+        'Duplicate detection and record matching',
+        'Data enrichment and augmentation',
+        'Real-time data validation and monitoring',
+        'Compliance and privacy protection'
+      ],
+      pricing: '$3,000 – $15,000 setup',
+      perUnit: '$0.01 – $0.05 per record',
+      timeline: '4–8 weeks',
+      benefits: [
+        '95% improvement in data accuracy',
+        'Automated data quality monitoring',
+        'Reduced data management costs',
+        'Enhanced business intelligence quality'
+      ]
+    },
+    {
+      icon: Shield,
+      name: 'AI Fraud Detection & Prevention',
+      description: 'Advanced fraud detection system using machine learning to identify and prevent fraudulent activities in real-time.',
+      features: [
+        'Real-time transaction monitoring and analysis',
+        'Behavioral pattern recognition and anomaly detection',
+        'Risk scoring and threat assessment',
+        'Automated fraud prevention workflows',
+        'Multi-channel fraud detection (online, mobile, in-store)',
+        'Continuous learning and model improvement'
+      ],
+      pricing: '$5,000 – $25,000 setup',
+      perUnit: '$0.02 – $0.10 per transaction',
+      timeline: '6–10 weeks',
+      benefits: [
+        '99.8% fraud detection accuracy',
+        '60% reduction in false positives',
+        'Real-time fraud prevention',
+        'Significant cost savings on fraud losses'
+      ]
+    },
+    {
+      icon: Mic,
+      name: 'AI Voice Analytics & Processing',
+      description: 'Advanced voice recognition, analysis, and processing system for customer interactions and business intelligence.',
+      features: [
+        'Real-time speech-to-text conversion',
+        'Voice sentiment and emotion analysis',
+        'Speaker identification and verification',
+        'Call quality monitoring and optimization',
+        'Automated call transcription and summarization',
+        'Voice biometric authentication'
+      ],
+      pricing: '$2,000 – $10,000 setup',
+      perUnit: '$0.10 – $0.50 per minute',
+      timeline: '4–8 weeks',
+      benefits: [
+        '98% accuracy in speech recognition',
+        'Enhanced customer interaction insights',
+        'Automated call documentation',
+        'Improved customer service quality'
+      ]
+    },
+    {
+      icon: Code,
+      name: 'AI Code Review & Optimization',
+      description: 'Intelligent code analysis, review, and optimization platform for software development teams.',
+      features: [
+        'Automated code quality assessment',
+        'Security vulnerability detection',
+        'Performance optimization suggestions',
+        'Code style and best practices enforcement',
+        'Automated testing and bug detection',
+        'Technical debt analysis and recommendations'
+      ],
+      pricing: '$1,500 – $8,000 setup',
+      perUnit: '$0.05 – $0.20 per line of code',
+      timeline: '2–4 weeks',
+      benefits: [
+        '50% reduction in code review time',
+        'Early detection of security vulnerabilities',
+        'Improved code quality and maintainability',
+        'Faster development cycles'
+      ]
+    },
+    {
+      icon: Search,
+      name: 'AI-Powered Search & Discovery',
+      description: 'Intelligent search engine with natural language understanding and personalized results.',
+      features: [
+        'Natural language query processing',
+        'Semantic search and understanding',
+        'Personalized search results and recommendations',
+        'Multi-modal search (text, image, voice)',
+        'Real-time search analytics and optimization',
+        'Integration with existing systems and databases'
+      ],
+      pricing: '$3,000 – $15,000 setup',
+      perUnit: '$0.01 – $0.05 per search',
+      timeline: '4–8 weeks',
+      benefits: [
+        '90% improvement in search relevance',
+        'Enhanced user experience and engagement',
+        'Reduced search abandonment rates',
+        'Better content discovery and utilization'
+      ]
+    },
+    {
+      icon: Cog,
+      name: 'AI Process Automation & RPA',
+      description: 'Intelligent robotic process automation with AI decision-making capabilities for complex business processes.',
+      features: [
+        'Intelligent document processing and extraction',
+        'Automated decision-making workflows',
+        'Exception handling and human-in-the-loop processes',
+        'Process optimization and continuous improvement',
+        'Integration with legacy systems and APIs',
+        'Compliance monitoring and audit trails'
+      ],
+      pricing: '$4,000 – $20,000 setup',
+      perUnit: '$0.10 – $1.00 per process',
+      timeline: '6–12 weeks',
+      benefits: [
+        '80% reduction in manual processing time',
+        '99% accuracy in automated processes',
+        'Significant cost savings and efficiency gains',
+        'Improved compliance and audit capabilities'
+      ]
     }
   ];
 
