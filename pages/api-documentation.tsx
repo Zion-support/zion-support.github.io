@@ -2,14 +2,14 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 ;
-const APIDocumentation: React.FC = () => {;
-  return (;
+const APIDocumentation: React.FC = () => {
+  return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">;
-      <Head>;
+      <Head>
         <title>API Documentation - Zion App</title>;
         <meta name="description" content="Comprehensive API documentation for Zion App services and integrations" />;
         <meta name="keywords" content="API, documentation, Zion App, integration, services" />;
-      </Head>;
+      </Head>
 
       <div className="container mx-auto px-4 py-8">;
         <div className="max-w-4xl mx-auto">;

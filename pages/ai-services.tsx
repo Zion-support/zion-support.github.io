@@ -2,25 +2,24 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowRight, Award, BarChart3, Bot, Brain, Bug, CheckCircle, Clock, Code, Cpu, Cross, Deep, Eye, FileText, From, Globe, Grid, Image, Mail, MessageSquare, Mic, Minimize, Monitor, Network, Phone, Search, Server, Settings, Shield, Star, Target, TrendingUp, Users, Video, Zap, Heart, Satellite, Car, TreePine } from 'lucide-react';
-import Navigation from '../src/components/Navigation';
-import Footer from '../src/components/Footer';
-export default function AIServices() {;
+import Navigation from '../components/Navigation';
+import { Footer } from '../components/Footer';
+export default function AIServices() {
   const title = 'AI Services — Zion Tech Group';
-  const description =;
-    'Cutting-edge AI solutions including autonomous systems, machine learning, natural language processing, and intelligent automation.';
+  const description = 'Cutting-edge AI solutions including autonomous systems, machine learning, natural language processing, and intelligent automation.';
 
-  const aiServices = [;
-  {;
+  const aiServices = [
+  {
       title: 'AI-Powered Email Responder',;
       description: 'Automated email responses with sentiment analysis and intelligent categorization',;
       icon: MessageSquare,;
-      features: [;
-        'Smart email categorization and prioritization,Automated response generation with personalization,Sentiment analysis and escalation triggers,Integration with CRM and helpdesk systems,Multi-language support and compliance',;
-      ],;
-      pricing: '$2,500 - $8, 000/month',;
-      delivery: '2-3 weeks',;
-      category: 'Communication AI',;,
-},;
+      features: [
+        'Smart email categorization and prioritization,Automated response generation with personalization,Sentiment analysis and escalation triggers,Integration with CRM and helpdesk systems,Multi-language support and compliance',
+      ],
+      pricing: '$2,500 - $8,000/month',
+      delivery: '2-3 weeks',
+      category: 'Communication AI',
+  },
     {;
       title: 'AI Content Creation Suite',;
       description: 'Comprehensive AI-powered content generation for marketing, social media, and documentation',;
