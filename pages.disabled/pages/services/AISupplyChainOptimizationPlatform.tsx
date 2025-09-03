@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ;
 :pages.disabled/pages/services/AISupplyChainOptimizationPlatform.tsx
 const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
@@ -415,5 +414,3 @@ export default AISupplyChainOptimizationPlatform;'"`'"`
   )};
 
 export default AISupplyChainOptimizationPlatform;'"`
-=======
->>>>>>> main

@@ -1,9 +1,5 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
->>>>>>> main
 interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
 
   size?: 'sm' | 'md' | 'lg';
@@ -12,8 +8,6 @@ interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
   showProgress?: boolean;
   progress?: number}
 
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 interface EnhancedLoadingSpinnerProps {
   // Add your props here
 
@@ -95,7 +89,6 @@ export function EnhancedLoadingSpinner({
   // Auto - complete effect
   useEffect(() => {
     if(autoComplete && enabled) {
-<<<<<<< HEAD
       const timer = setTimeout(() => {
         setLoadingState({
           type: 'success',
@@ -104,9 +97,6 @@ export function EnhancedLoadingSpinner({
           estimatedTime: 0
         }) ;
 
-=======
-
->>>>>>> main
         setTimeout(() => {
           setIsVisible(false) ;
           onComplete?.() }, 1000) }, autoCompleteDelay) ;
@@ -116,7 +106,6 @@ export function EnhancedLoadingSpinner({
 
   if(!enabled || !isVisible) return null;
 
-<<<<<<< HEAD
   const renderSpinner = () => {
     switch(variant) {
       case 'futuristic':
@@ -165,15 +154,8 @@ export function EnhancedLoadingSpinner({
                 }}
               />) ) }
           </div>) ;
-=======
-  
-<<<<<<< HEAD
->>>>>>> main
 
       case 'minimal':
-=======
-'      case 'minimal':
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         return ()
           <motion.div"
             className="w-full h-full border-2 border-zion-cyan border-t-transparent rounded-full"
@@ -250,22 +232,12 @@ export function EnhancedLoadingSpinner({
 export default function EnhancedLoadingSpinner() {
 
   ;
-=======
-'
-  sm: 'w-8 h-8','
-    md: 'w-12 h-12',;  ;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   ;
   lg: 'w-16 h-16'}};
 
   ;
-=======
-'
-  sm: 'text-sm','
-    md: 'text-base',;  ;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   ;

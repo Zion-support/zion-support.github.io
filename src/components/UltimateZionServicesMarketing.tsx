@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
 const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -518,8 +514,3 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
       </section>;
     </div>;) };
 export default UltimateZionServicesMarketing;'"`
-=======
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

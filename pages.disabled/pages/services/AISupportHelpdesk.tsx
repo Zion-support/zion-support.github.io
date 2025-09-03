@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ;
 export { function };
 :pages.disabled/pages/services/AISupportHelpdesk.tsx
@@ -701,5 +700,3 @@ export default function AISupportHelpdesk(...args[]):  {}
     </>
   )}'"`
 '"`'"`
-=======
->>>>>>> main

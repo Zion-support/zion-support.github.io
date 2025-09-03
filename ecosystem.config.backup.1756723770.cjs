@@ -235,7 +235,6 @@ module.exports = {
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
-<<<<<<< HEAD
       env: {
         NODE_ENV: 'production'
       },
@@ -343,38 +342,3 @@ module.exports = {
       log_file: './logs/intelligent-build-pipeline.log',
       error_file: './logs/intelligent-build-pipeline-error.log',
       out_file: './logs/intelligent-build-pipeline-out.log'
-=======
-      env: { NODE_ENV: 'production' },
-      cron_restart: '0 */6 * * *',
-      log_file: 'logs/auto-fix-and-build.log',
-      out_file: 'logs/auto-fix-and-build-out.log',
-      error_file: 'logs/auto-fix-and-build-error.log'
-    },
-
-    // Watcher to rebuild on changes
-    {
-      name: 'dev-watch-build',
-      script: 'bash',
-      args: '-lc "npm run build"',
-      instances: 1,
-      watch: ['src', 'public', 'postcss.config.js', 'vite.config.ts'],
-      ignore_watch: ['dist', 'node_modules', 'logs'],
-      max_memory_restart: '1G',
-      env: { NODE_ENV: 'development' },
-      log_file: 'logs/dev-watch-build.log',
-      out_file: 'logs/dev-watch-build-out.log',
-      error_file: 'logs/dev-watch-build-error.log'
-    }
-  ],
-
-  deploy: {
-    production: {
-      user: 'node',
-      host: 'localhost',
-      ref: 'origin/main',
-      repo: 'git@github.com:username/repo.git',
-      path: '/var/www/production',
-      'post-deploy': 'npm install && pm2 reload ecosystem.config.cjs --env production'
-    }
-  }
-};

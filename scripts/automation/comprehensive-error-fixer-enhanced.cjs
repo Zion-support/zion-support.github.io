@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -497,233 +496,6 @@ class ComprehensiveErrorFixer {
 // Run the error fixer
 const errorFixer = new ComprehensiveErrorFixer();
 errorFixer.run().catch(console.error);
-=======
-#!/usr/bin/env node;
-const fs = require("fs");
-const path = require("path");
-const { execSync, spawn } = require("child_process");
-const crypto = require("crypto");
-const glob = require("glob");
-
-class $1 {
-  constructor() {
-  this.projectRoot = process.cwd();
-    this.logsDir = path.join(this.projectRoot, "automation/logs");
-    this.reportsDir = path.join(this.projectRoot, `automation/reports`);
-    this.backupDir = path.join(this.projectRoot, `automation/backups`);
-    this.errors = [];
-    this.fixes = [];
-    this.startTime = Date.now();
-    ;
-    this.ensureDirectories();
-    this.setupLogging();,
-}
-;
-  ensureDirectories() {
-  [this.logsDir, this.reportsDir, this.backupDir].forEach(dir => {
-  if (!fs.existsSync(dir)) {
-  fs.mkdirSync(dir, { recursive: true });,
-}
-    });,
-}
-;
-  setupLogging() {
-  this.logFile = path.join(this.logsDir, `comprehensive-error-fixer-${Date.now()}.log`);
-    this.reportFile = path.join(this.reportsDir, `error-fix-report-${Date.now()}.json`);,
-}
-;
-  log(message, level = `INFO`) {
-  log(message, level = "INFO") {
-  const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}`;
-    console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + `\n`);,
-}
-;
-  async run() {
-  this.log(`Starting Comprehensive Error Fixer...`, "INFO");
-    try {
-  // Phase 1: Detect all errors;
-      await this.detectErrors();
-      // Phase 2: Fix errors systematically;
-      await this.fixErrors();
-      // Phase 3: Verify fixes;
-      await this.verifyFixes();
-      // Phase 4: Generate report;
-      await this.generateReport();
-      this.log(`Comprehensive Error Fixer completed successfully`, `SUCCESS`);,
-} catch (error) {
-  this.log(`Error in comprehensive error fixer: ${error.message  }`, `ERROR`);
-      throw error;,
-}
-  }
-;
-  async detectErrors() {
-  this.log(`Phase 1: Detecting errors...`, `INFO`);
-    // Detect TypeScript errors;
-    await this.detectTypeScriptErrors();
-    // Detect ESLint errors;
-    await this.detectESLintErrors();
-    // Detect build errors;
-    await this.detectBuildErrors();
-    // Detect dependency issues;
-    await this.detectDependencyIssues();
-    // Detect file structure issues;
-    await this.detectFileStructureIssues();
-    this.log(`Detected ${this.errors.length} total errors`, `INFO`);,
-}
-;
-  async detectTypeScriptErrors() {
-  this.log(`Detecting TypeScript errors...`, "INFO");
-    try {
-  const result = execSync("npx tsc --noEmit --pretty false", {
-  encoding: "utf8", ;
-        cwd: this.projectRoot,;
-        stdio: "pipe";,
-});
-      // If we get here, no TypeScript errors;
-      this.log("No TypeScript errors detected", "SUCCESS");,
-} catch (error) {
-  const output = error.stdout || error.stderr || "";
-      const lines = output.split("\n").filter(line => line.trim());
-      lines.forEach(line => {
-  if (line.includes("error TS")) {
-  this.errors.push({
-  type: `typescript`,;
-            message: line,;
-            severity: `error`,;
-            file: this.extractFilePath(line),;
-            line: this.extractLineNumber(line);,
-});,
-}
-      });
-      this.log(`Detected ${this.errors.filter(e => e.type === "typescript").length} TypeScript errors`, `WARN`);,
-}
-  }
-;
-  async detectESLintErrors() {
-  this.log(`Detecting ESLint errors...`, "INFO");
-    try {
-  const result = execSync("npx eslint . --ext .js,.jsx,.ts,.tsx --format=compact", {
-  encoding: "utf8", ;
-        cwd: this.projectRoot,;
-        stdio: "pipe";,
-});
-      ;
-      this.log("No ESLint errors detected", "SUCCESS");,
-} catch (error) {
-  const output = error.stdout || error.stderr || "";
-      const lines = output.split("\n").filter(line => line.trim());
-      lines.forEach(line => {
-  if (line.includes("error") || line.includes("warning")) {
-  this.errors.push({
-  type: "eslint",;
-            message: line,;
-            severity: line.includes("error") ? `error` : `warning`,;
-            file: this.extractFilePath(line),;
-            line: this.extractLineNumber(line);,
-});,
-}
-      });
-      this.log(`Detected ${this.errors.filter(e => e.type === "eslint").length} ESLint errors`, `WARN`);,
-}
-  }
-;
-  async detectBuildErrors() {
-  this.log(`Detecting build errors...`, "INFO");
-    try {
-  const result = execSync("npm run build", {
-  encoding: "utf8", ;
-        cwd: this.projectRoot,;
-        stdio: "pipe";,
-} catch (error) {
-  const output = error.stdout || error.stderr || ";
-      const lines = output.split("\n").filter(line => line.trim());
-      ;
-      lines.forEach(line => {
-  if (line.includes("error") || line.includes("warning")) {
-  this.errors.push({
-  type: "eslint",;
-            message: line,;
-            severity: line.includes("error") ? "error" : "warning",;
-            file: this.extractFilePath(line),;
-            line: this.extractLineNumber(line);,
-});,
-}
-      });
-      ;
-      this.log(`Detected ${this.errors.filter(e => e.type === "eslint").length} ESLint errors`, "WARN");,
-}
-  }
-;
-  async detectBuildErrors() {
-  this.log("Detecting build errors...", "INFO");
-    ;
-    try {
-  const result = execSync("npm run build", {
-  encoding: "utf8", ;
-        cwd: this.projectRoot,;
-        stdio: "pipe";,
-});
-      ;
-      this.log("No build errors detected", "SUCCESS");,
-} catch (error) {
-  const output = error.stdout || error.stderr || "";
-      const lines = output.split("\n").filter(line => line.trim());
-      lines.forEach(line => {
-  if (line.includes("error") || line.includes("Failed to compile")) {
-  this.errors.push({
-  type: `build`,;
-            message: line,;
-            severity: `error`,;
-            file: this.extractFilePath(line),;
-            line: this.extractLineNumber(line);,
-});,
-}
-      });
-      this.log(`Detected ${this.errors.filter(e => e.type === "build").length} build errors`, `WARN`);,
-}
-  }
-;
-  async detectDependencyIssues() {
-  this.log(`Detecting dependency issues...`, "INFO");
-    try {
-  const result = execSync("npm audit --audit-level=moderate", {
-  encoding: "utf8", ;
-        cwd: this.projectRoot,;
-        stdio: "pipe";,
-} catch (error) {
-  const output = error.stdout || error.stderr || ";
-      const lines = output.split("\n").filter(line => line.trim());
-      ;
-      lines.forEach(line => {
-  if (line.includes("error") || line.includes("Failed to compile")) {
-  this.errors.push({
-  type: "build",;
-            message: line,;
-            severity: "error",;
-            file: this.extractFilePath(line),;
-            line: this.extractLineNumber(line);,
-});,
-}
-      });
-      ;
-      this.log(`Detected ${this.errors.filter(e => e.type === "build").length} build errors`, "WARN");,
-}
-  }
-;
-  async detectDependencyIssues() {
-  this.log("Detecting dependency issues...", "INFO");
-    ;
-    try {
-  const result = execSync("npm audit --audit-level=moderate", {
-  encoding: "utf8", ;
-        cwd: this.projectRoot,;
-        stdio: "pipe";,
-});
-        stdio: "pipe";,
-});
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
       ;
       this.log("No critical dependency issues detected", "SUCCESS");,
 } catch (error) {
@@ -800,7 +572,6 @@ class $1 {
           file: file,;
           line: null;
           file: file,          line: null;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 });,
 }
     });
@@ -1606,7 +1377,6 @@ class $1 {
   "name": next;,
 }
                     "name: next"                  }
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
                 ],;
                 paths: {
   @/*: ["./src/*];,
@@ -1759,7 +1529,6 @@ module.exports = nextConfig`;
   // No vulnerabilities or error occurred;,
 } catch (error) {
   // No vulnerabilities or error occurred;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
       this.log("No security vulnerabilities found", "info");,
 }
   }
@@ -1923,4 +1692,3 @@ if (require.main === module) {
 module.exports = ComprehensiveErrorFixer;
 const errorFixer = new ComprehensiveErrorFixer();
 errorFixer.run().catch(console.error)
->>>>>>> main

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
   const blogPosts = [{
       id: '1',
@@ -42,11 +39,4 @@
       </div>;
     </section>;) }
 '"`
-=======
-<<<<<<< HEAD
 export function BlogSection(...args[]): {
-=======
-
->>>>>>> main
->>>>>>> main
->>>>>>> main

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Link  } from 'react-router-dom';
 
 export default function Page() {
@@ -399,7 +398,6 @@ const pricingModels = [{ id: 'all', name: 'All Pricing' },
           </div>
         </div>
       </div>
-<<<<<<< HEAD
     </div>
   );
 }</></></></></></>);
@@ -415,16 +413,7 @@ export { MicroSaasServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard 
 export { MicroSaasServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard };
 
 export { MicroSaasServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard };
-=======
-    </div>) ;
-}</></></></></></>) ;
-=======
-<<<<<<< HEAD
 import React from 'react'; export default function MicroSaasServicesPage () { import {MICRO_SAAS_SERVICES, import {Star, const categories = [{ id: "all", name: "All Services", icon: <Globe className="w-5 h-5"/>, count: MICRO_SAAS_SERVICES.length }, { id: "AI Services", name: "AI Services", icon: <Zap className="w-5 h-5"/>, count: getMicroSaasServicesByCategory("AI Services") .length }, { id: "IT Services", name: "IT Services", icon: <Code className="w-5 h-5"/>, count: getMicroSaasServicesByCategory("IT Services") .length }, { id: "Business Solutions", name: "Business Solutions", icon: <TrendingUp className="w-5 h-5"/>, count: getMicroSaasServicesByCategory("Business Solutions") .length } ]; const pricingModels = [{ id: "all", name: "All Pricing" }, { id: "monthly", name: "Monthly" }, { id: "yearly", name: "Yearly" }, { id: "one - time", name: "One - time" }, { id: "usage - based", name: "Usage - based" } ]; const [selectedCategory, setSelectedCategory] = useState("all"); const [selectedPricing, setSelectedPricing] = useState("all"); const [searchQuery, setSearchQuery] = useState("); const [filteredServices, setFilteredServices] = useState(MICRO_SAAS_SERVICES); const [sortBy, setSortBy] = useState("rating"); useEffect(() => { let filtered = MICRO_SAAS_SERVICES;
-=======
-import React from "react"; export default function MicroSaasServicesPage () { const pricingModels = []; const [selectedCategory, setSelectedCategory] = useState("all"); const [selectedPricing, setSelectedPricing] = useState("all"); const [searchQuery, setSearchQuery] = useState("); const [filteredServices, setFilteredServices] = useState(MICRO_SAAS_SERVICES); const [sortBy, setSortBy] = useState("rating"); useEffect(() => { let filtered = MICRO_SAAS_SERVICES;"
- export default function MicroSaasServicesPage() {,"});,"})" const pricingModels = []; const [selectedCategory, setSelectedCategory] = useState("all"); const [selectedPricing, setSelectedPricing] = useState("all"); const [searchQuery, setSearchQuery] = useState("); const [filteredServices, setFilteredServices] = useState(MICRO_SAAS_SERVICES); const [sortBy, setSortBy] = useState("rating"); useEffect(() => { let filtered = MICRO_SAAS_SERVICES,"});,"})
->>>>>>> main
 }
  export default function MicroSaasServicesPage() {"
  export: default function MicroSaasServicesPage() {",";";"""
@@ -435,5 +424,3 @@ import React from "react"; export default function MicroSaasServicesPage () { co
   { id: "crm - saas", title: "ZionCRM Pro", description: "Complete customer relationship management solution with sales automation, lead tracking, and analytics.", icon: <Users className="h-8 w-8 text-blue -500"/" >, price: 29, currency: "$", features: [ "Contact Management,Sales Pipeline,Lead Scoring,Email Automation,Analytics Dashboard,Mobile App" ], category: "Business Tools", badge: "Popular", link: "https:};"
 ;"
 }}}}}""
->>>>>>> main
->>>>>>> main

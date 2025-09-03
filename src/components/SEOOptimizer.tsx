@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 
 export default function Page() {
@@ -117,10 +114,7 @@ autoAnalyze:  true,;
   // Analyze SEO
   
     setIsAnalyzing(true) ;
-<<<<<<< HEAD
 
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     // Simulate analysis delay
     await new Promise(resolve => setTimeout (resolve, 2000) ) ;
 
@@ -150,14 +144,8 @@ autoAnalyze:  true,;
   };
 
   // Filter issues by category
-<<<<<<< HEAD
   
     if(selectedCategory === 'all') return analysis?.issues || [];
-=======
-  const filteredIssues = useMemo(() => {;'    if(selectedCategory === 'all') return analysis?.issues || [];
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-=======
->>>>>>> main
     return analysis?.issues.filter(issue => issue.category === selectedCategory) || []}, [analysis, selectedCategory]) ;
 
   // Filter suggestions by priority
@@ -488,9 +476,3 @@ autoAnalyze:  true,;
     optimizePage
   }};
 '"`
-=======
-
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

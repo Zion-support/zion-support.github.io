@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 ;
 ;
@@ -97,8 +96,6 @@ export default function MicroSAASServicesPage() {}
                 professional: "$89/month",""""
                 enterprise: "$199/month""""
             },""""
-=======
-<<<<<<< HEAD
 import { Building, Users, BarChart3, MessageSquare, Calendar, FileText, CreditCard, Globe, TrendingUp, CheckCircle, Star, Phone, Mail, MapPin, ExternalLink, BarChart, Shield, Zap  } from 'lucide-react';
 export default function Page() {
 ,
@@ -125,7 +122,6 @@ export default function Page() {
                 professional: "$89 / month",
                 enterprise: "$199 / month"
             },
->>>>>>> main
             freeTrial: "21 days",
             rating: 4.9,
             reviewCount: 189
@@ -1022,7 +1018,6 @@ export default function Page() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
     </div>)}
 
 
@@ -1035,9 +1030,3 @@ export { MicroSAASServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard 
 export { MicroSAASServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard };
 
 export { MicroSAASServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard };
-=======
-    </div>) }
-=======
-import React from 'react'; export default function MicroSaasServicesPage () { import {MICRO_SAAS_SERVICES, import {Star, const categories = [{ id: "all", name: "All Services", icon: <Globe className="w-5 h-5"/>, count: MICRO_SAAS_SERVICES.length }, { id: "AI Services", name: "AI Services", icon: <Zap className="w-5 h-5"/>, count: getMicroSaasServicesByCategory("AI Services") .length }, { id: "IT Services", name: "IT Services", icon: <Code className="w-5 h-5"/>, count: getMicroSaasServicesByCategory("IT Services") .length }, { id: "Business Solutions", name: "Business Solutions", icon: <TrendingUp className="w-5 h-5"/>, count: getMicroSaasServicesByCategory("Business Solutions") .length } ]; const pricingModels = [{ id: "all", name: "All Pricing" }, { id: "monthly", name: "Monthly" }, { id: "yearly", name: "Yearly" }, { id: "one - time", name: "One - time" }, { id: "usage - based", name: "Usage - based" } ]; const [selectedCategory, setSelectedCategory] = useState("all"); const [selectedPricing, setSelectedPricing] = useState("all"); const [searchQuery, setSearchQuery] = useState("); const [filteredServices, setFilteredServices] = useState(MICRO_SAAS_SERVICES); const [sortBy, setSortBy] = useState("rating"); useEffect(() => { let filtered = MICRO_SAAS_SERVICES;
->>>>>>> main
->>>>>>> main

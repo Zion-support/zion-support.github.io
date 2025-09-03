@@ -66,7 +66,6 @@ sleep 5
 print_status "Checking PM2 status..."
 pm2 status
 
-<<<<<<< HEAD
 # Show logs for error fixing processes
 print_status "Showing recent logs for error fixing processes..."
 echo ""
@@ -126,64 +125,3 @@ echo "📁 Log files are stored in: automation/logs/"
 echo "📄 Reports are generated in the project root"
 
 print_success "Error fixing automation system is ready!"
-=======
-# Show logs
-print_status "Recent logs from error fixing automation:"
-pm2 logs --lines 20
-
-# Create a monitoring script
-cat > monitor-error-fixing.sh << 'EOF'
-#!/bin/bash
-echo "🔍 Monitoring Error Fixing Automation..."
-echo "========================================"
-pm2 status
-echo ""
-echo "📊 Recent Logs:"
-pm2 logs --lines 10
-echo ""
-echo "📈 Error Fixing Reports:"
-ls -la *.json | grep -E "(error|fixing|report)" || echo "No reports found yet"
-EOF
-
-chmod +x monitor-error-fixing.sh
-
-# Create a stop script
-cat > stop-error-fixing.sh << 'EOF'
-#!/bin/bash
-echo "🛑 Stopping Error Fixing Automation..."
-pm2 stop ecosystem-error-fixing.config.cjs
-pm2 delete ecosystem-error-fixing.config.cjs
-echo "✅ Error fixing automation stopped"
-EOF
-
-chmod +x stop-error-fixing.sh
-
-# Create a restart script
-cat > restart-error-fixing.sh << 'EOF'
-#!/bin/bash
-echo "🔄 Restarting Error Fixing Automation..."
-pm2 restart ecosystem-error-fixing.config.cjs
-echo "✅ Error fixing automation restarted"
-EOF
-
-chmod +x restart-error-fixing.sh
-
-print_success "Error fixing automation system started successfully!"
-print_status "Useful commands:"
-echo "  ./monitor-error-fixing.sh  - Monitor the automation"
-echo "  ./stop-error-fixing.sh     - Stop the automation"
-echo "  ./restart-error-fixing.sh  - Restart the automation"
-echo "  pm2 logs                   - View all logs"
-echo "  pm2 status                 - Check process status"
-
-print_status "The automation will now continuously fix errors in your project:"
-echo "  • TypeScript errors (every 15-30 minutes)"
-echo "  • ESLint errors (every 20 minutes)"
-echo "  • JSX errors (every 30 minutes)"
-echo "  • Console statements (every 15 minutes)"
-echo "  • Build errors (every 10 minutes)"
-echo "  • Import/export errors (continuous)"
-echo "  • Unused variables (continuous)"
-
-print_success "Your project errors will be automatically fixed! 🎉"
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-1571

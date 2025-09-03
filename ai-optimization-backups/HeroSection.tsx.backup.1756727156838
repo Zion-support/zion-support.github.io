@@ -1,11 +1,9 @@
-<<<<<<< HEAD
 import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
 
 export default function Page() {
 []}
 ;
 const heroSlides: HeroSlide[] = [=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   {
 
     id: 'ai-solutions',
@@ -107,11 +105,6 @@ const heroSlides: HeroSlide[] = [=======
     
       if(e.key === 'ArrowRight') nextSlide();
       if(e.key === ' ') {
-=======
-'
-      if(e.key === 'ArrowLeft') prevSlide();'
-      if(e.key === 'ArrowRight') nextSlide();'      if(e.key === ' ') {
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
         e.preventDefault();
         setIsAutoPlaying(!isAutoPlaying)}

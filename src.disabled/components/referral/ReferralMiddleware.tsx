@@ -1,5 +1,1 @@
-<<<<<<< HEAD
 interface Props { children: React.ReactNode   } export function ReferralMiddleware({ children }: Props) { const { user } = useAuth(); useEffect(() => { const params = new URLSearchParams(window.location.search); const code = params.get("ref"); if(code) { localStorage.setItem("referralCode", code); } }, []); useEffect(() => { async function sendReferral() { try {" const code = localStorage.getItem("referralCode"); if(!code || !user?.id || !user?.email) return;
-=======
-interface Props { children: React.ReactNode } export function ReferralMiddleware({ children }: Props) { const { user } = useAuth(); useEffect(() => { const params = new URLSearchParams(window.location.search); const code = params.get("ref); if(code) { localStorage.setItem(referralCode, code)} }, []); useEffect(() => { async function sendReferral() { try { const code = localStorage.getItem("referralCode"); if(!code || !user?.id || !user?.email) return
->>>>>>> main

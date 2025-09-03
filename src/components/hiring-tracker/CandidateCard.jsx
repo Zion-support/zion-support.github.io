@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from "react";
 import { Draggable } from "@hello-pangea/dnd";
 import { formatDistanceToNow } from "date-fns";
@@ -44,30 +43,6 @@ export function CandidateCard({ application, index }) {
               <div className="flex justify-between items-start mb-2">""""
                 <div className="flex items-center gap-2">""""
                   <Avatar className="h-8 w-8">""""
-=======
-import React, { useState } from 'react';
-import { useState } from 'react';
-export default function Page() {
- from 'react-router-dom';"
-import { Card, CardContent } from '@/components/ui/card';"
-import { Avatar } from '@/components/ui/avatar';"
-import { Button } from '@/components/ui/button';"
-import { Textarea } from '@/components/ui/textarea';"
-import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, BriefcaseIcon import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';"
-import { ScoreBadge } from '@/components/jobs/applications/ScoreBadge';"
-import { toast } from '@/hooks/use-toast';"
-import { HireConfirmationModal } from './HireConfirmationModal';
-export default function Page() {
-)};
-    return (<>
-      <Draggable draggableId={application.id} index={index}>"
-        {(provided) => (<Card className="mb-2 p-0 shadow-sm border" ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>"
-            <CardContent className="p-3">
-              {/* Candidate Header */}"
-              <div className="flex justify-between items-start mb-2">"
-                <div className="flex items-center gap-2">"
-                  <Avatar className="h-8 w-8">"
->>>>>>> main
                     {application.talent_profile?.profile_picture_url ? (<img src={application.talent_profile.profile_picture_url} alt={application.talent_profile.full_name || "Candidate"}/>) : (<User className="h-4 w-4"/>)}
                   </Avatar>
                   <div>"

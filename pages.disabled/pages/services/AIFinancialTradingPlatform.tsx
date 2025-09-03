@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIFinancialTradingPlatform.tsx
 :pages.disabled/pages/services/AIFinancialTradingPlatform.tsx
 <:pages.disabled/pages/services/AIFinancialTradingPlatform.tsx
@@ -807,5 +806,3 @@ export default function AIFinancialTradingPlatform(...args[]):  {}
 '"`'"`
   )}
 '"`
-=======
->>>>>>> main

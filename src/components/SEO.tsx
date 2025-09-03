@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
  * SEO function
  * @param {*} params - Function parameters
@@ -9,13 +6,10 @@
 function SEO({
 
 interface SEOProps {  title?: string;
-=======
-<<<<<<< HEAD
 import { Helmet  } from 'react-helmet-async';
 
 interface SEOProps {
   title?: string;
->>>>>>> main
   description?: string;
   keywords?: string;
   image?: string;
@@ -29,7 +23,6 @@ export const SEO: React.FC<SEOProps> = ({
   keywords = 'AI, cybersecurity, cloud infrastructure, digital transformation, technology solutions, Zion Tech Group',
   image = '/og-image.svg',
   url = 'https://ziontechgroup.com',
-<<<<<<< HEAD
   type = 'website',
   author = 'Zion Tech Group',
   publishedTime,
@@ -88,13 +81,6 @@ export const SEO: React.FC<SEOProps> = ({
       </script>
     </Helmet>) }
 '"`
-=======
-  type = 'website'
-}) => {
-  return(<Helmet>
-      {/* Basic Meta Tags */}
-      <title>{title}</title>
->>>>>>> main
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content="Zion Tech Group" />
@@ -138,17 +124,6 @@ export const SEO: React.FC<SEOProps> = ({
             "contactType": "customer service"
           }
         })}
-=======
-import Head from "next/head"
-import React from "react"
-import { Helmet  } from "react - helmet-async", SEOProps {title?: string;description?: string
-export const SEO: React.FC < SEOProps> = ({,
-"
-export default function Page() {
-export default function Page() {;
-
-interface SEOProps {
-<<<<<<< HEAD  title?: string;
    description?: string;
    keywords?: string;
    image?: string;
@@ -424,7 +399,6 @@ ursor/automate-test-fix-improve-and-merge-code-48f3}
       <script type = "application/ld+json">
         {JSON.stringify(structuredData)}
 
->>>>>>> main
       </script>
     </Helmet>
   );
@@ -504,14 +478,3 @@ ursor/automate-test-fix-improve-and-merge-code-48f3}
       <meta name="author" content="Zion Tech Group" /" >"
     </Head>
   )}
-<<<<<<< HEAD
-=======
-
-"
-export default SEO;"
-""
-  )}
-};";
-"
->>>>>>> main
->>>>>>> main

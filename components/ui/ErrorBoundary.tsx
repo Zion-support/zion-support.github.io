@@ -1,17 +1,9 @@
-<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react;
 import { AlertTriangle, RefreshCw } from 'lucide-react;
 
 interface Props {children: ReactNode;
   fallback?: ReactNode;
 }
-=======
-const Component = () => {
-import React { Component, ErrorInfo, ReactNode } from "react" Props {children: ReactNode,"
-ursor/automate-test-fix-improve-and-merge-code-99d1,"interface Props {"
-  children: ReactNode,
-   fallback?: ReactNod,e}
->>>>>>> main
 
 interface State {
   hasError: boolean,;
@@ -23,20 +15,11 @@ class: ErrorBoundary extends Component<Props, State> {public state: State: = {ha
     return { hasError: tru,e, error: }
   }
 
-<<<<<<< HEAD
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
 console.error('ErrorBoundary caught an error: ', error, errorInfo);
 '  }'private handleRetry = () => {
     this.setState({ hasError: false, error: undefined });
   };
-=======
-  public componentDidCatch(error: Erro,r, errorInfo: ErrorInfo) {,
-console.error,(,"
-  ErrorBoundary: caught an error: , error, errorInfo)"  }"
-  "private: handleRetry = () => {",
-    this.setState({ hasError: fals,e, error: undefined})}";interface Props {""
-interface Props {;
->>>>>>> main
 
   fallback?: ReactNode}
 ;
@@ -45,7 +28,6 @@ interface Props {;
 class ErrorBoundary extends Component<Props, State> {;
 public state: State = {hasError: false}
 
-<<<<<<< HEAD
       return (
 <div className="min-h-screen flex items-center justify-center bg-gray-50>          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6 text-center">"            <div className="flex justify-center mb-4>              <AlertTriangle className="w-12 h-12 text-red-500" />"            </div>"            <h2 className="text-xl font-semibold text-gray-900 mb-2>              Something went wrong"            </h2>
             <p className="text-gray-600 mb-6>              We&apos;re sorry, but something unexpected happened. Please try refreshing the page.
@@ -58,26 +40,6 @@ public state: State = {hasError: false}
           </div>
         </div>
       );
-=======
-  public state: State = { hasError: false }
-
-  public static getDerivedStateFromError(error: Error): State {,
-    return { hasError: true, error }}
-
-  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {",,
-    public state: State = {hasErro,
-    r: false}
-
-    return { hasErro,
-    r: true, error }"
-  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {",
-  }
-
-"
-"  }""
-  "private handleRetry = () => {"
-    this.setState({ hasError: false, error: undefined })}"
->>>>>>> main
     }
 
   private handleRetry = () => {

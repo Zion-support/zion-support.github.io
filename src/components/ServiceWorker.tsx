@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
 interface ServiceWorkerState {
 
   isInstalled: boolean;
@@ -127,8 +123,3 @@ setSwState(prev: > ({ ;
       )};
     </AnimatePresence>;
   )}'"
-=======
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

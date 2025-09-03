@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {}
   Heart,
   Stethoscope,
@@ -660,5 +659,3 @@ const AIHealthcarePlatform: React.FC = () => {}
 
 export default AIHealthcarePlatform;'"`
 '"`'"`
-=======
->>>>>>> main

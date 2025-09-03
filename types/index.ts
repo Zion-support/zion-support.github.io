@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Global types for the Zion Tech Group application
 
 export interface Service {
@@ -17,7 +16,6 @@ export interface Service {
   features: string[];
   technologies: string[];
   deliveryTime: string;
-<<<<<<< HEAD
   support: string;
   image?: string;
   popular?: boolean;
@@ -206,90 +204,8 @@ export interface CompanyInfo {
     phone: string;
     email: string;
     website: string;
-=======
-  complexity: 'basic' | 'intermediate' | 'advanced' | 'enterprise';
-  targetAudience: string[];
-  useCases: string[];
-  benefits: string[];
-  requirements: string[];
-  support: {
-    included: string[];
-    additional: string[];
-  };
-  customization: {
-    available: boolean;
-    options: string[];
-  };
-  integration: {
-    supported: boolean;
-    platforms: string[];
-  };
-  scalability: {
-    horizontal: boolean;
-    vertical: boolean;
-    autoScaling: boolean;
-  };
-  security: {
-    level: 'basic' | 'standard' | 'enterprise' | 'military';
-    features: string[];
-    compliance: string[];
-  };
-  performance: {
-    uptime: number;
-    responseTime: string;
-    throughput: string;
-  };
-  deployment: {
-    options: string[];
-    recommended: string;
-    timeToDeploy: string;
-  };
-  maintenance: {
-    included: boolean;
-    frequency: string;
-    updates: string;
-  };
-  training: {
-    included: boolean;
-    format: string[];
-    duration: string;
-  };
-  documentation: {
-    user: boolean;
-    technical: boolean;
-    api: boolean;
-  };
-  testing: {
-    unit: boolean;
-    integration: boolean;
-    e2e: boolean;
-    performance: boolean;
-  };
-  monitoring: {
-    included: boolean;
-    tools: string[];
-    alerts: boolean;
-  };
-  backup: {
-    included: boolean;
-    frequency: string;
-    retention: string;
-  };
-  disasterRecovery: {
-    included: boolean;
-    rto: string;
-    rpo: string;
-  };
-  compliance: {
-    gdpr: boolean;
-    hipaa: boolean;
-    sox: boolean;
-    pci: boolean;
-    iso27001: boolean;
->>>>>>> main
   };
   certifications: string[];
-<<<<<<< HEAD
 }
 
 export interface ErrorInfo {
@@ -326,96 +242,6 @@ export interface FormField {
     max?: number;
     pattern?: string;
     message?: string;
-=======
-  awards: string[];
-  testimonials: {
-    name: string;
-    company: string;
-    role: string;
-    quote: string;
-    rating: number;
-  }[];
-  caseStudies: {
-    title: string;
-    company: string;
-    industry: string;
-    challenge: string;
-    solution: string;
-    results: string[];
-    metrics: {
-      improvement: string;
-      value: string;
-    };
-  }[];
-  faq: {
-    question: string;
-    answer: string;
-    category: string;
-  }[];
-  pricing: {
-    model: 'fixed' | 'hourly' | 'subscription' | 'usage-based';
-    tiers: {
-      name: string;
-      price: number;
-      features: string[];
-      limitations: string[];
-    }[];
-    discounts: {
-      type: string;
-      amount: number;
-      conditions: string[];
-    }[];
-  };
-  timeline: {
-    phase: string;
-    duration: string;
-    deliverables: string[];
-    milestones: string[];
-  }[];
-  team: {
-    role: string;
-    experience: string;
-    skills: string[];
-    certifications: string[];
-  }[];
-  technology: {
-    frontend: string[];
-    backend: string[];
-    database: string[];
-    cloud: string[];
-    devops: string[];
-    ai: string[];
-    blockchain: string[];
-    iot: string[];
-  };
-  innovation: {
-    patents: string[];
-    research: string[];
-    partnerships: string[];
-    awards: string[];
-  };
-  sustainability: {
-    carbonNeutral: boolean;
-    renewableEnergy: boolean;
-    wasteReduction: string;
-    socialImpact: string[];
-  };
-  accessibility: {
-    wcag: string;
-    features: string[];
-    testing: boolean;
-  };
-  internationalization: {
-    languages: string[];
-    currencies: string[];
-    timezones: string[];
-    regulations: string[];
-  };
-  future: {
-    roadmap: string[];
-    emerging: string[];
-    vision: string;
->>>>>>> main
   };
 }
 
@@ -472,7 +298,6 @@ export interface Project {
   }[];
 }
 
-<<<<<<< HEAD
 export interface User {
   id: string;
   email: string;
@@ -515,32 +340,16 @@ export interface Notification {
   id: string;
   type: 'info' | 'success' | 'warning' | 'error';
   title: string;
-=======
-// Utility types
-export type Optional<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>;
-export type RequiredFields<T, K extends keyof T> = T & Required<Pick<T, K>>;
-export type DeepPartial<T> = {
-  [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P];
-};
 
-// Component prop types
-<<<<<<< HEAD
-
-=======
->>>>>>> main
 export interface BaseComponentProps {
   className?: string;
   children?: React.ReactNode;
   id?: string;
-<<<<<<< HEAD
 
-=======
->>>>>>> main
   'data-testid'?: string;
 }
 
 export interface ButtonProps extends BaseComponentProps {
-<<<<<<< HEAD
   variant?: 'primary' |
   'secondary' |
   'outline' |
@@ -549,10 +358,6 @@ export interface ButtonProps extends BaseComponentProps {
   size?: 'sm' |
   'md' |
   'lg';
-=======
-  variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger';
-  size?: 'sm' | 'md' | 'lg';
->>>>>>> main
   disabled?: boolean;
   loading?: boolean;
   onClick?: () => void;
@@ -560,7 +365,6 @@ export interface ButtonProps extends BaseComponentProps {
 }
 
 export interface InputProps extends BaseComponentProps {
-<<<<<<< HEAD
   type?:
   'text' |
   'email' |
@@ -568,9 +372,6 @@ export interface InputProps extends BaseComponentProps {
   'tel' |
   'url' |
   'number';
-=======
-  type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number';
->>>>>>> main
   placeholder?: string;
   value?: string;
   onChange?: (value: string) => void;
@@ -580,13 +381,9 @@ export interface InputProps extends BaseComponentProps {
 }
 
 // API types
-<<<<<<< HEAD
 
-=======
->>>>>>> main
 export interface ApiError {
   status: number;
->>>>>>> main
   message: string;
   timestamp: Date;
   read: boolean;
@@ -599,7 +396,6 @@ export interface ApiError {
   expires?: Date;
 }
 
-<<<<<<< HEAD
 export interface ApiRequest {
   method:
   'GET' |
@@ -620,55 +416,6 @@ export interface Environment {
   'development' |
   'production' |
   'test';
-=======
-export interface Analytics {
-  pageViews: number;
-  uniqueVisitors: number;
-  bounceRate: number;
-  avgSessionDuration: number;
-  topPages: {
-    path: string;
-    views: number;
-    uniqueViews: number;
-  }[];
-  trafficSources: {
-    source: string;
-    medium: string;
-    sessions: number;
-    percentage: number;
-  }[];
-  devices: {
-    type: string;
-    count: number;
-    percentage: number;
-  }[];
-  browsers: {
-    name: string;
-    version: string;
-    count: number;
-    percentage: number;
-  }[];
-  countries: {
-    name: string;
-    code: string;
-    count: number;
-    percentage: number;
-  }[];
-  conversions: {
-    goal: string;
-    count: number;
-    rate: number;
-    value: number;
-  }[];
-  performance: {
-    metric: string;
-    value: number;
-    target: number;
-    status: 'good' | 'needs-improvement' | 'poor';
-  }[];
-}
-
-<<<<<<< HEAD
 export interface SEO {
   title: string;
   description: string;
@@ -820,16 +567,8 @@ export interface Configuration {
     endTime?: Date;
   };
 }
-=======
-// Environment types
-export interface Environment {
-  NODE_ENV: 'development' | 'production' | 'test';
->>>>>>> main
   NEXT_PUBLIC_API_URL?: string;
   NEXT_PUBLIC_APP_URL?: string;
   NEXT_PUBLIC_GA_ID?: string;
   NEXT_PUBLIC_SENTRY_DSN?: string;
 }
-=======
->>>>>>> main
->>>>>>> main

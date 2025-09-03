@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -59,14 +58,6 @@ const nextConfig = {
 };
 
 export default nextConfig;
-=======
-/** @type {import("next").NextConfig} */;
-const nextConfig = {
-  reactStrictMode: true,;
-  poweredByHeader: false,;
-  eslint: {
-  ignoreDuringBuilds: true,;
-<<<<<<< HEAD;,
 },:next.config.js;
   typescript: {
   // Allow production builds to successfully complete even if;
@@ -111,8 +102,6 @@ const nextConfig = {
       net: false,;
       tls: false}
     return config;
-=======;
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-1c7d;,
 },;
   typescript: {
   ignoreBuildErrors: true,;,
@@ -161,4 +150,3 @@ const nextConfig = {
 },;,
 }
 module.exports = nextConfig
->>>>>>> main

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 export interface Listing {
   id: string;
   title: string;
@@ -67,17 +64,4 @@ export interface ServiceListing extends Listing {
   listingId: string;
   type: 'product' | 'service' | 'talent';
   addedAt: string}
-=======
-<<<<<<< HEAD
 export interface Listing { id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number; reviews: number  }; location: string; ;
-=======
-// comment
-export interface listingsType {
-  id: string
-  name: string
-  createdAt: Date
-}
-  updatedAt: Date,export default listingsType
->>>>>>> main
->>>>>>> main
->>>>>>> main

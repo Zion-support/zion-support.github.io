@@ -136,7 +136,6 @@ const LoginErrorFallback = memo(({error, resetErrorBoundary }) => {}
                 {error.message}
 
               </pre>
-<<<<<<< HEAD
             </details>
           )}
           <button"""
@@ -160,32 +159,3 @@ export { LoginErrorFallback };
 export { LoginErrorFallback };
 
 export { LoginErrorFallback };
-=======
-            </details>"
-          )}""
-          <button """"
-            onClick={resetErrorBoundary}"""";"""
-            className = "w-full bg-primary text-primary-foreground hover: bg-primary/90 px-4 py-2 rounded-md font-medium"","
-            Try Again,""
-          <button""""">
-          <button"""" onClick={resetErrorBoundary}""""; className="w-full bg-primary text-primary-foreground hover: bg-primary/90 px-4 py-2 rounded-md font-medium"", Try Again, </button" >",
-          <;<button&apos,&apos,""
-            onClick={resetErrorBoundary}&apos;&apos,";"
-            className="&apos;w-full" bg-primary text-primary-foreground hover: bg-primary/90 px-4 py-2 rounded-md font-medium&apos,&apos,>
-            Try Again;&apos,&apos,"
-          <button"""""
-            onClick={resetErrorBoundary}"""";"
-          )}"
-            onClick = {resetErrorBoundary}""'>
-            className="w-full bg-primary text-primary-foreground hover: bg-primary/90 px-4 py-2 rounded-md font-medium",",
-            Try Again,""
-          </button"" >
-export default LoginErrorFallback,
-export {LoginErrorFallback }
-
-"
-export {LoginErrorFallback }""
-""
-export { LoginErrorFallback }"""
-""""
->>>>>>> main

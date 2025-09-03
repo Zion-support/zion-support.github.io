@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
 export default function AIAutonomousVehiclePlatform() {
     'Advanced computer vision and sensor fusion',;'
@@ -444,5 +443,3 @@ export default function AIAutonomousVehiclePlatform(function AIAutonomousVehicle
   )}}}'"`'"`
     </>
   )}}}'"`
-=======
->>>>>>> main

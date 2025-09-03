@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :pages.disabled/pages/services/AILegalTech.tsx
 import { Scale, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, FileText, Zap, Shield, Gavel, BarChart3 export default function AILegalTech() {
     'Automated compliance monitoring and reporting',;'
@@ -232,5 +231,3 @@ import { Scale, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, FileText, Z
   )}}'"'"
     </div>;
   )}}'""
-=======
->>>>>>> main

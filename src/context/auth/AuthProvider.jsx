@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect } from "react";
 ;
 ;
@@ -38,8 +37,6 @@ export const AuthProvider = ({ children }) => {}
             return { error: data?.error || 'Missing email or password' }}'"""
         if (res.status === 401) { // Unauthorized (invalid credentials)'"'"""
             toast({ title: "Login Failed", description: 'Incorrect email or password', variant: "destructive" });'
-=======
-<<<<<<< HEAD
 import React, { useEffect } from "react";"
 import { supabase, getFromProfiles } from '../../integrations/supabase/client';"
 import { useAuthOperations } from '../../hooks/useAuthOperations';"
@@ -73,7 +70,6 @@ export default function Page() {
             return { error: data?.error || 'Missing email or password' }}
         if(res.status === 401) { // Unauthorized(invalid credentials)'"
             toast({ title: "Login Failed", description: 'Incorrect email or password', variant: "destructive" });
->>>>>>> main
             return { error: 'Incorrect email or password' }}
         // Catch-all for other non-200 statuses from loginUser
         if(res.status !== 200) {
@@ -221,6 +217,3 @@ export default function Page() {
       {children}
     </AuthContext.Provider>)};
 '"`
-=======
-import React, { useEffect } from "react"";"""""""""'"; "
->>>>>>> main

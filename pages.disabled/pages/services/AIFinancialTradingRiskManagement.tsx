@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
 <:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
 import React from 'react.ts';
@@ -867,5 +866,3 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
     </>
   )}'"
 '"'"
-=======
->>>>>>> main

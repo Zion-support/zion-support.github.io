@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
   interface Stat {
     number: string;
     label: string;
@@ -49,8 +45,3 @@
     </section>) }
 export default StatsSection;
 '"
-=======
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

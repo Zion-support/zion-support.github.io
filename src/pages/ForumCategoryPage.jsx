@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from "react";""""
 import { useParams, Link } from "react-router-dom";""""
 import { Suspense } from "react";""""
@@ -159,5 +158,3 @@ export { CategoryContent, ForumCategoryPage, IconComponent };
 export { CategoryContent, ForumCategoryPage, IconComponent };
 
 export { CategoryContent, IconComponent };
-=======
->>>>>>> main

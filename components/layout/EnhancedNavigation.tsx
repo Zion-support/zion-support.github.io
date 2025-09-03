@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react;
 import Link from 'next/link;
 import { Menu, X, ChevronDown } from 'lucide-react;
@@ -7,13 +6,9 @@ const EnhancedNavigation: React.FC = () => {const [isOpen, setIsOpen] = useState
 
   const [servicesOpen, setServicesOpen] = useState(false);
   const [solutionsOpen, setSolutionsOpen] = useState(false);
-=======
-import React, { useState } from "react"
->>>>>>> main
 
 const EnhancedNavigation = () => {
   return (
-<<<<<<< HEAD
     <nav className="bg-white shadow-lg sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
@@ -133,8 +128,6 @@ const EnhancedNavigation = () => {
               <div className="pt-4">
                 <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors cursor-pointer inline-block w-full text-center">Get Started</Link>
               </div>
-=======
-<<<<<<< HEAD
 <nav className="bg-white shadow-lg sticky top-0 z-50>      <div className="container mx-auto px-4">"        <div className="flex justify-between items-center py-4>          {/* Logo */}"          <Link href="/" className="flex items-center space-x-2>            <div className="flex items-center space-x-2">"              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center>                <span className="text-white font-bold text-xl">Z</span>"              </div>"              <div className="text-xl font-bold text-gray-800>Zion Tech Group</div>            </div>"          </Link>
 
           {/* Desktop Navigation */}
@@ -209,7 +202,6 @@ className="lg:hidden text-gray-600 hover:text-gray-900            onClick={() =>
               <Link href="/careers" className="block py-2 text-gray-600 hover:text-blue-600>                Careers"              </Link>
               <Link href="/contact" className="block py-2 text-gray-600 hover:text-blue-600>                Contact"              </Link>
               <div className="pt-4>                <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors cursor-pointer inline-block w-full text-center>                  Get Started"                </Link></div>
->>>>>>> main
             </div>
           </div>
         )}
@@ -219,31 +211,3 @@ className="lg:hidden text-gray-600 hover:text-gray-900            onClick={() =>
 };
 
 export default EnhancedNavigation;
-<<<<<<< HEAD
-=======
-=======
-    <nav className="bg-white shadow-lg">"
-      <div className="container mx-auto px-4">"
-        <div className="flex justify-between items-center py-4">"
-          <Link href="/" className="text-2xl font-bold text-blue-600">
-            Zion Tech Group,
-          </Link>"
-          <div className="hidden md: flex space-x-8">"
-            <Link href="/services" className="text-gray-700 hover:text-blue-600">
-              Services,
-            </Link>"
-            <Link href="/solutions" className="text-gray-700 hover:text-blue-600">
-              Solutions,
-            </Link>"
-            <Link href="/about" className="text-gray-700 hover:text-blue-600">
-              About,
-            </Link>"
-            <Link href="/contact" className="text-gray-700 hover:text-blue-600">
-              Contact,
-            </Link>
-          </div>
-    </nav>;,
-  ),
-"'export default EnhancedNavigation
->>>>>>> main
->>>>>>> main

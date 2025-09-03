@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ;
 export { function };export default function IoTEdge(...args: []):  {}
   return()
@@ -609,5 +608,3 @@ export { function };export default function IoTEdge(...args: []):  {}
   )}}}}}}'"'"
     </>
   )}}}}}}'""
-=======
->>>>>>> main

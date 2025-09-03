@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {}
   Shield,
   Globe,
@@ -153,6 +152,3 @@ export default function SecurityHeadersCSPManager(...args: any[]): any {}
 '"'"
   )}
 '""
-=======
->>>>>>> 92e970263e01302a6ec9ed9848ce724c6698ab78;
->>>>>>> main

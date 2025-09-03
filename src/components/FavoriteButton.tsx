@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { Heart  } from 'lucide-react';
  from 'react';
 export /**
@@ -56,9 +53,3 @@ className: {`w-4 h-4 transition-all duration-300 ${;
       />;
     </button>;) }
 '`
-=======
-
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

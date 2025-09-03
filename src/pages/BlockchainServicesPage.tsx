@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-=======
-import React from 'react';
-import { Link } from "react-router-dom";
-import { Link as LinkIcon, DollarSign as Coins, Shield, Zap, Database, Globe, TrendingUp, CheckCircle, ArrowRight, Lock, Network, Wallet, BarChart3 } from "lucide-react";
-<<<<<<< HEADconst blockchainServices = [
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
@@ -324,4 +318,3 @@ export default function BlockchainServicesPage() {return ("
   )
 }
 }""
->>>>>>> main

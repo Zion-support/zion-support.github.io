@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { Suspense, lazy, memo, useMemo, useCallback } from 'react';
 import { LoadingSpinner } from './ui / loading -spinner';
 
@@ -136,19 +135,6 @@ export function PerformanceOptimizations() {
         </h2>"
         <p className="text-zion-slate-light text-lg">
           Advanced performance features for better user experience
-=======
-import React from "react"
-import { SEO } from "@/components/SEO"
-;,"});,"})
-}
-export default function PerformanceOptimizations() {return ("
-    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
-      <SEO title="PerformanceOptimizations - Zion Tech Group" description="Professional PerformanceOptimizations services by Zion Tech Group"  />"
-      <div className="container mx-auto px-4 py-20">"
-        <h1 className="text-4xl font-bold text-white mb-8">PerformanceOptimizations</h1>"
-        <p className="text-gray-300 text-lg">
-          Professional PerformanceOptimizations services to help your business grow.
->>>>>>> main
         </p>
       </div>
   )

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {  import { motion, AnimatePresence  } from 'framer-motion';
  from 'lucide-react';
 
@@ -524,9 +521,3 @@ export function AdvancedAnalyticsDashboard({
     </>
   )}
 '"`
-=======
-
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

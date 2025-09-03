@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 
 export default function Page() {
@@ -220,16 +217,12 @@ modals.forEach(modal:  > {;
 
   // Skip to main content link
   useEffect(() => {
-<<<<<<< HEAD
   // TODO: Add dependencies if needed
 
   return () => {
     // Cleanup function
   };
 }, []);, []);
-<<<<<<< HEAD
-=======
->>>>>>> main
 
     skipLink.href = '#main-content';
     skipLink.textContent = 'Skip to main content';
@@ -621,9 +614,3 @@ if(typeof document !== 'undefined') {
   document.head.appendChild(style) }
 export default EnhancedAccessibility;
 '"`
-=======
-
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

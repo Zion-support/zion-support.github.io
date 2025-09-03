@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 ;
 ;
@@ -55,8 +54,6 @@ const ComprehensiveServicesShowcase = () => {    const [selectedCategory, setSel
         { id: 'enterprise-security-soc', name: 'Enterprise Security & SOC', count: allServices.filter(s => s.category.includes('Enterprise') && (s.category.includes('Security') || s.category.includes('SOC'))).length },'
         { id: 'enterprise-governance', name: 'Enterprise Data Governance', count: allServices.filter(s => s.category.includes('Enterprise') && s.category.includes('Data Governance')).length },'
         { id: 'enterprise-workflow-automation', name: 'Enterprise Workflow & Automation', count: allServices.filter(s => s.category.includes('Enterprise') && (s.category.includes('Workflow') || s.category.includes('Automation'))).length },'
-=======
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { comprehensiveMicroSaasServices2025 } from '../../data / 2025 - comprehensive - micro - saas -services';
 export default function Page() {
@@ -101,11 +98,9 @@ export default function Page() {
         { id: 'enterprise-security-soc', name: 'Enterprise Security & SOC', count: allServices.filter(s => s.category.includes('Enterprise') && (s.category.includes('Security') || s.category.includes('SOC'))).length },
         { id: 'enterprise-governance', name: 'Enterprise Data Governance', count: allServices.filter(s => s.category.includes('Enterprise') && s.category.includes('Data Governance')).length },
         { id: 'enterprise-workflow-automation', name: 'Enterprise Workflow & Automation', count: allServices.filter(s => s.category.includes('Enterprise') && (s.category.includes('Workflow') || s.category.includes('Automation'))).length },
->>>>>>> main
         { id: 'enterprise-digital-twin-iot', name: 'Enterprise Digital Twin & IoT', count: allServices.filter(s => s.category.includes('Enterprise') && (s.category.includes('Digital Twin') || s.category.includes('IoT'))).length }
     ];
     const filteredServices = selectedCategory === 'all'
-<<<<<<< HEAD
         ? allServices;
         : allServices.filter(service => {}
             const category = categories.find(c => c.id === selectedCategory);
@@ -124,23 +119,6 @@ export { ComprehensiveServicesShowcase };
 export { ComprehensiveServicesShowcase };
 
 export { ComprehensiveServicesShowcase };
-=======
-        ? allServices
-        : allServices.filter(service => {
-=======
-import { motion } from "framer-motion";,"});,"})"
-;,"});,"})"
-const ComprehensiveServicesShowcase = () => {    const [selectedCategory, setSelectedCategory] = useState("all");,"});,"})"
-    const [selectedService, setSelectedService] = useState(null);,"});,"})"
-    const allServices = [];,"});,"})"
-        ...comprehensiveMicroSaasServices2025,,"});,"})"
-        ...innovativeITAIServices2025,,"});,"})"
-        ...expandedInnovativeServices2025,,"});,"})"
-        ...emergingTechInnovationServices2025,,"});,"})"
-        ...enterpriseITInnovationServices2025,"});,"})"
-    ],"});,"})"
-    const categories = []{}
->>>>>>> main
 
 "
     id: "micro - saas","",
@@ -821,4 +799,3 @@ import React { useState }  from "react,"
 "
 
 export default Component
->>>>>>> main

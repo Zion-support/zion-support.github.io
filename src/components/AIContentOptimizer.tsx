@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {  import { motion, AnimatePresence  } from 'framer-motion';
-=======
->>>>>>> main
 
-<<<<<<< HEAD
  from 'lucide-react';
 
 interface ContentAnalysis {
@@ -465,8 +459,3 @@ export function AIContentOptimizer({
       </AnimatePresence>
     </>
   )}
-=======
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

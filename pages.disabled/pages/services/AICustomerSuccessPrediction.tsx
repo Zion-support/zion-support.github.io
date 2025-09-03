@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx
       ],;''
 import {}
@@ -1280,5 +1279,3 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {}
 '"`'"`
   )}
 '"`
-=======
->>>>>>> main

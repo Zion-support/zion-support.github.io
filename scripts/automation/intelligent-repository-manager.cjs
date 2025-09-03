@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
 #!/usr/bin/env node
 
 /**
  * Intelligent Repository Manager
  * 
-<<<<<<< HEAD
  * This automation handles:
  * - Intelligent branch management
  * - Automated PR creation and review
@@ -15,14 +10,6 @@
  * - Repository health monitoring
  * - Automated merging strategies
  * - Code quality gates
-=======
- * This script provides intelligent automation for:
- * - Git repository management
- * - Branch health monitoring
- * - Automated merging and conflict resolution
- * - Repository optimization
- * - Development workflow automation
->>>>>>> main
  */
 
 const { execSync, spawn } = require('child_process');
@@ -31,7 +18,6 @@ const path = require('path');
 const crypto = require('crypto');
 
 class IntelligentRepositoryManager {
-<<<<<<< HEAD
     constructor() {
         this.projectRoot = process.cwd();
         this.logFile = path.join(this.projectRoot, 'logs', 'intelligent-repository-manager.log');
@@ -728,292 +714,6 @@ Examples:
 }
 
 module.exports = IntelligentRepositoryManager;
-=======
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.logFile = path.join(this.projectRoot, 'logs', 'intelligent-repository-manager.log');
-    this.config = this.loadConfig();
-    this.mergeHistory = [];
-    this.conflictHistory = [];
-  }
-
-  loadConfig() {
-    const configPath = path.join(this.projectRoot, 'scripts', 'automation', 'config', 'repo-manager.config.json');
-    try {
-      if (fs.existsSync(configPath)) {
-        return JSON.parse(fs.readFileSync(configPath, 'utf8'));
-      }
-    } catch (error) {
-      this.log('Error loading config, using defaults', 'error');
-    }
-
-    return {
-      autoMergeEnabled: true,
-      conflictResolutionEnabled: true,
-      branchCleanupEnabled: true,
-      maxOpenPRs: 50,
-      mergeStrategy: 'squash',
-      conflictThreshold: 3,
-      autoRebaseEnabled: true,
-      healthCheckInterval: 300000, // 5 minutes
-      mergeBatchSize: 5
-    };
-  }
-
-  log(message, level = 'info') {
-    const timestamp = new Date().toISOString();
-    const logEntry = `[${timestamp}] [${level.toUpperCase()}] ${message}`;
-    
-    console.log(logEntry);
-    
-    // Ensure logs directory exists
-    const logsDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logsDir)) {
-      fs.mkdirSync(logsDir, { recursive: true });
-    }
-    
-    fs.appendFileSync(this.logFile, logEntry + '\n');
-  }
-
-  async executeCommand(command, options = {}) {
-    return new Promise((resolve, reject) => {
-      const child = spawn(command, [], {
-        shell: true,
-        stdio: 'pipe',
-        cwd: this.projectRoot,
-        ...options
-      });
-
-      let stdout = '';
-      let stderr = '';
-
-      child.stdout.on('data', (data) => {
-        stdout += data.toString();
-      });
-
-      child.stderr.on('data', (data) => {
-        stderr += data.toString();
-      });
-
-      child.on('close', (code) => {
-        if (code === 0) {
-          resolve(stdout.trim());
-        } else {
-          reject(new Error(`Command failed with code ${code}: ${stderr}`));
-        }
-      });
-
-      child.on('error', (error) => {
-        reject(error);
-      });
-    });
-  }
-
-  async getRepositoryStatus() {
-    try {
-      const status = await this.executeCommand('git status --porcelain');
-      const branch = await this.executeCommand('git branch --show-current');
-      const remote = await this.executeCommand('git remote get-url origin');
-      
-      return {
-        hasChanges: status.length > 0,
-        currentBranch: branch,
-        remoteUrl: remote,
-        changes: status.split('\n').filter(line => line.trim())
-      };
-    } catch (error) {
-      this.log(`Error getting repository status: ${error.message}`, 'error');
-      return null;
-    }
-  }
-
-  async analyzePullRequests() {
-    try {
-      // Fetch latest from remote
-      await this.executeCommand('git fetch origin');
-      
-      // Get list of open PRs (this would need GitHub API integration for full functionality)
-      const branches = await this.executeCommand('git branch -r --format="%(refname:short)"');
-      const featureBranches = branches
-        .split('\n')
-        .filter(branch => branch.includes('cursor/'))
-        .map(branch => branch.replace('origin/', ''));
-
-      this.log(`Found ${featureBranches.length} feature branches to analyze`);
-
-      const analysisResults = [];
-      
-      for (const branch of featureBranches) {
-        try {
-          const analysis = await this.analyzeBranch(branch);
-          analysisResults.push(analysis);
-        } catch (error) {
-          this.log(`Error analyzing branch ${branch}: ${error.message}`, 'error');
-        }
-=======
-#!/""usr/bin/env"" node;
-/**;
- * Intelligent Repository Manager;
- * ;
- * This automation system provides intelligent Git repository management including: * - Automated PR merging with conflict resolution; * - Intelligent branch management;
- * - Automated conflict resolution;
- * - Repository health monitoring;
- * - Smart deployment coordination;
- * ;
- * @author Zion Tech Group;
- * @version 2.0.0;
- */;
- * ;
- * @author Zion Tech Group;
- * @version 2.0.0;
- */;
-const { execSync, spawn } = require("child_process");
-const fs = require("fs");
-const path = require("path");
-const { promisify } = require("util");
-// Configuration;
-const CONFIG = {
-  REPO_PATH: process.cwd(),;
-  MAIN_BRANCH: "main",;
-  STAGING_BRANCH: "staging",;
-  DEVELOPMENT_BRANCH: "develop",;
-  CURSOR_BRANCH_PREFIX: "cursor/",;
-  BACKUP_BRANCH_PREFIX: "backup/",;
-  MERGE_BRANCH_PREFIX: "merge/",;
-  LOG_DIR: "./logs",;
-  MAX_CONCURRENT_MERGES: 3,;
-  CONFLICT_RESOLUTION_STRATEGY: "intelligent", // intelligent, aggressive, conservative;
-  AUTO_MERGE_ENABLED: process.env.AUTO_MERGE_ENABLED === "true",;
-  CONFLICT_RESOLUTION_MODE: process.env.CONFLICT_RESOLUTION_MODE || "intelligent",;
-  GIT_AUTOMATION_MODE: process.env.GIT_AUTOMATION_MODE === "true",;
-  PM2_PATH: process.env.PM2_PATH || `pm2`;,
-}
-// Utility functions;
-const log = (message, level = `INFO`) => {
-  const timestamp = new Date().toISOString();
-  const logMessage = `[${timestamp}] [${level}] ${message}`;
-  console.log(`logMessage);
-  // Ensure log directory exists;
-  if (!fs.existsSync(CONFIG.LOG_DIR)) {
-  fs.mkdirSync(CONFIG.LOG_DIR, { recursive: true });,
-}
-  ;
-  // Write to log file;
-  fs.appendFileSync(path.join(CONFIG.LOG_DIR, `intelligent-repository-manager.log`), logMessage + `\n`);,
-}
-const executeCommand = (command, options = {}) => {
-  try {
-  const result = execSync(command, {
-  cwd: CONFIG.REPO_PATH,;
-      encoding: "utf8",;
-      stdio: options.silent ? "pipe" : `inherit`,;
-      ...options;,
-});
-    return { success: true, output: result }
-  } catch (error) {
-  return { success: false, error: error.message, output: error.stdout || ``   }
-  }
-}
-;,
-} catch (error) {
-  return { success: false, error: error.message, output: error.stdout || "" };`);,
-}`);,
-};`);
-`);
-const gitCommand = (command, options = {}) => {return executeCommand(git ${command}, options`);,
-}
-const isGitRepository = () => {
-  return fs.existsSync(path.join(CONFIG.REPO_PATH, `.git`));,
-}
-const getCurrentBranch = () => {
-  const result = gitCommand(`branch --show-current`, { silent: true });
-
-const isGitRepository = () => {
-  return fs.existsSync(path.join(CONFIG.REPO_PATH, ".git"));,
-}
-;
-const getCurrentBranch = () => {
-  const result = gitCommand("branch --show-current", { silent: true });
-  return result.success ? result.output.trim() : null;,
-}
-;
-const getRemoteBranches = () => {
-  const result = gitCommand("branch -r", { silent: true });
-  if (!result.success) return [];
-  return result.output;
-    .split("\n");
-    .map(branch => branch.trim());
-    .filter(branch => branch && !branch.includes("HEAD"));
-    .map(branch => branch.replace(`origin/`, ``));,
-}
-;
-const getCursorBranches = () => {
-  const branches = getRemoteBranches();
-  return branches.filter(branch => branch.startsWith(CONFIG.CURSOR_BRANCH_PREFIX));,
-}
-;
-const getBranchInfo = (branchName) => {const result = gitCommand(`log --oneline ${CONFIG.MAIN_BRANCH}..origin/${branchName}`, { silent: true });
-  if (!result.success) return { commits: 0, files: [] }
-  const commits = result.output.split(`\n`).filter(line => line.trim()).length;
-  // Get changed filesconst filesResult = gitCommand(`diff --name-only ${CONFIG.MAIN_BRANCH}..origin/${branchName}`, { silent: true });
-  const files = filesResult.success ? filesResult.output.split(`\n`).filter(line => line.trim()) : [];
-  return { commits, files }
-}
-const createBackupBranch = () => {
-  const timestamp = new Date().toISOString().replace(/[:.]/g, `-`);const backupBranch = `${CONFIG.BACKUP_BRANCH_PREFIX}${timestamp}`;
-  ;
-  const commits = result.output.split("\n").filter(line => line.trim()).length;
-  ;
-  // Get changed filesconst filesResult = gitCommand(`diff --name-only ${CONFIG.MAIN_BRANCH}..origin/${branchName}`, { silent: true });
-  const files = filesResult.success ? filesResult.output.split("\n").filter(line => line.trim()) : [];
-  ;
-  return { commits, files }
-}
-;
-const createBackupBranch = () => {
-  const timestamp = new Date().toISOString().replace(/[:.]/g, "-");const backupBranch = `${CONFIG.BACKUP_BRANCH_PREFIX}${timestamp}`;
-  log(`Creating backup branch: ${backupBranch}`);
-  ;
-  // Create backup of current mainconst result = gitCommand(`checkout -b ${backupBranch}`, { silent: true });
-  if (result.success) {gitCommand(`push origin ${backupBranch}`, { silent: true });log(`Backup branch created and pushed: ${backupBranch}`);
-    return backupBranch;,
-}
-  log(`Failed to create backup branch: ${result.error}`, `ERROR`);
-  return null;,
-}
-;
-const intelligentConflictResolution = (conflictedFiles, branchName) => {log(`Resolving conflicts for branch: ${branchName}`);
-  const resolutionStrategies = {
-  intelligent: () => {
-  // Intelligent conflict resolution based on file type and content;
-      conflictedFiles.forEach(file => {
-  const fileExt = path.extname(file);
-        const fileContent = fs.readFileSync(file, `utf8`);
-        if (fileExt === `.json` || fileExt === ".js" || fileExt === ".ts" || fileExt === `.jsx` || fileExt === `.tsx`) {
-  // For code files, try to merge intelligently;
-          try {const result = gitCommand(`checkout --ours "${file}`, { silent: true });
-            if (result.success) {log(`Resolved conflict in ${file} using `ours` strategy`);,
-}
-          } catch (error) {  log(`Failed to resolve conflict in ${file  }: ${error}`, `ERROR`);,
-}
-        } else if (fileExt === `.md` || fileExt === `.txt`) {
-  ,
-} else if (fileExt === ".md" || fileExt === ".txt") {
-  // For documentation, try to merge both versions;
-          try {const result = gitCommand(`checkout --theirs ${file}`, { silent: true });
-            if (result.success) {log(`Resolved conflict in ${file} using `theirs` strategy`);,
-}
-          } catch (error) {  log(`Failed to resolve conflict in ${file  }: ${error}`, `ERROR`);,
-}
-        } else {
-  ,
-} else {
-  // For other files, use default strategy;
-          try {const result = gitCommand(`checkout --ours ${file}"`, { silent: true });,
-} else {
-  // For other files, use default strategy;
-          try {const result = gitCommand(`checkout --ours "${file}`, { silent: true });
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
             if (result.success) {log(`Resolved conflict in ${file} using default strategy`);,
 }
           } catch (error) {  log(`Failed to resolve conflict in ${file  }: ${error}`, `ERROR`);,
@@ -1271,7 +971,6 @@ const executeIntelligentMerging = async () => {
     ;
     // Small delay between merges;
     // Small delay between merges;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
     await new Promise(resolve => setTimeout(resolve, 1000));,
 }
   ;
@@ -1361,7 +1060,6 @@ const cleanupOldBranches = () => {
   cleanedCount++;log(`Successfully deleted old branch: ${branch}`);,
 } else {log(`Failed to delete old branch ${branch}: ${deleteResult.error}`, `ERROR`);,
 }
->>>>>>> main
       }
 
       return analysisResults;
@@ -1369,7 +1067,6 @@ const cleanupOldBranches = () => {
       this.log(`Error analyzing pull requests: ${error.message}`, 'error');
       return [];
     }
-<<<<<<< HEAD
   }
 
   async analyzeBranch(branchName) {
@@ -1628,11 +1325,6 @@ const cleanupOldBranches = () => {
       throw error;
     }
   }
-=======
-  });
-  log(`Cleanup completed. Deleted ${cleanedCount} old branches`);
-  return cleanedCount;,
->>>>>>> main
 }
 // Main execution loop;
 const main = async () => {
@@ -1662,7 +1354,6 @@ process.on(`SIGINT`, () => {
   process.exit(0);,
 });
 
-<<<<<<< HEAD
 // Start the manager if run directly
 if (require.main === module) {
   const manager = new IntelligentRepositoryManager();
@@ -1673,30 +1364,3 @@ if (require.main === module) {
 }
 
 module.exports = IntelligentRepositoryManager;
-=======
-process.on("SIGTERM", () => {
-  log("Received SIGTERM. Shutting down gracefully...');
-  process.exit(0);,
-});
-// Start the main loop;
-if (require.main === module) {
-  main();
-
-// Start the main loop;
-if (require.main === module) {
-  main();
-  ;
-  // Schedule next execution;
-  const interval = 15 * 60 * 1000; // 15 minutes;
-  setInterval(main, interval);,
-}
-;
-module.exports = {
-  executeIntelligentMerging,;
-  monitorRepositoryHealth,;
-  cleanupOldBranches,;
-  intelligentConflictResolution,;
-  calculateBranchPriority;,
-}
->>>>>>> main
->>>>>>> main

@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEADimport React from "react"
 export const Form = ({ children, ...props }) => {}
 
 "

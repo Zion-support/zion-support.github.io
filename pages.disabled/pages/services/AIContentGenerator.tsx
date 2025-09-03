@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIContentGenerator.tsx
 <:pages.disabled/pages/services/AIContentGenerator.tsx
 import React from 'react';
@@ -805,5 +804,3 @@ export default function AIContentGenerator(...args[]):  {}
     </>
   )}'"`
 '"`'"`
-=======
->>>>>>> main

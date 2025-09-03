@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useEffect, useState, useCallback, useRef } from 'react';
 export /**
 import { motion, AnimatePresence  } from 'framer-motion';
@@ -112,10 +109,7 @@ function AdvancedAnalytics({
         firstPaint: paint.find(entry => entry.name === 'first - paint') ?.startTime || 0,
         firstContentfulPaint: paint.find(entry => entry.name === 'first - contentful - paint') ?.startTime || 0,
         largestContentfulPaint: 0, // Will be updated by observer
-<<<<<<< HEAD
         timestamp: new Date () .toISOString () };
-=======
->>>>>>> main
 
       // Update local state
       setAnalyticsData(prev => ({
@@ -152,22 +146,13 @@ function AdvancedAnalytics({
     trackPerformance () ;
 
     // Setup click tracking
-<<<<<<< HEAD
     const handleClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
       const position = { x: e.clientX, y: e.clientY };
 
       trackInteraction('click', { target, position }) ;
 
-=======
-
-      '      trackInteraction('click', { target, position });
-      
->>>>>>> main
       // Add to heatmap data
-=======
-        timestamp: new Date () .toISOString () };      // Add to heatmap data
->>>>>>> main
       if(enableHeatmap) {
 
         setHeatmapData(prev => [...prev, { x: position.x, y: position.y, type: 'click' }])}    };
@@ -484,9 +469,3 @@ function AdvancedAnalytics({
       </AnimatePresence>
     </>
   )}}}}}}}}}}}}}'"`
-=======
-
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

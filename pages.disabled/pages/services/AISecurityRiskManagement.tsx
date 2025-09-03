@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :pages.disabled/pages/services/AISecurityRiskManagement.tsx
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityRiskManagement() {
     'Automated risk identification and prioritization',;'
@@ -232,5 +231,3 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
   )}}'"'"
     </div>;
   )}}'""
-=======
->>>>>>> main

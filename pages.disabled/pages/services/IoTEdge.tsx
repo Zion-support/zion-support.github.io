@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :pages.disabled/pages/services/IoTEdge.tsx
 export default function IoTEdge(...args: []):  {
 
@@ -485,5 +484,3 @@ export default function IoTEdge(...args: []):  {}
   )}}}}'"'"
     </div>;
   )}}}}'""
-=======
->>>>>>> main

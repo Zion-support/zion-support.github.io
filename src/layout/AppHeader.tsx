@@ -1,13 +1,9 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEADimport React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Search, User, Bell, ChevronDown } from 'lucide-react';
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-<<<<<<< HEAD  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -17,12 +13,9 @@ export function AppHeader() {
     }
   };
 
-<<<<<<< HEAD
   // Organized Services Categories
   const servicesCategories = [{
       title: 'AI & Machine Learning',
-=======
-<<<<<<< HEAD  const toggleDropdown = (dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
 
@@ -76,7 +69,6 @@ export function AppHeader() {
     {
       name: 'AI Solutions',
       href: '/ai-solutions',
->>>>>>> main
       icon: Brain,
       color: 'from-zion-cyan to-zion-purple',
       dropdown: [
@@ -102,7 +94,6 @@ export function AppHeader() {
       ]
     }
   ];
-<<<<<<< HEAD
         setServicesDropdownOpen(true);
         setSolutionsDropdownOpen(false);
         setCompanyDropdownOpen(false);
@@ -174,63 +165,6 @@ export function AppHeader() {
                     <div className="relative">
                       <button
                         onClick={() => {
-=======
-
-  const quickActions = [
-    { name: 'Get Quote', href: '/contact', icon: MessageCircle, color: 'from-zion-cyan to-zion-blue' },
-    { name: 'Book Demo', href: '/demo', icon: Video, color: 'from-zion-purple to-zion-pink' },
-    { name: 'Support', href: '/support', icon: MessageCircle, color: 'from-zion-green to-zion-cyan' }
-  ];
-  return (
-    <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled 
-          ? 'bg-zion-slate-dark/95 backdrop-blur-md border-b border-zion-cyan/20' 
-          : 'bg-transparent'
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center space-x-2 group">
-              <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
-                <span className="text-white font-bold text-lg">Z</span>
-              </div>
-              <span className="text-xl font-bold text-white group-hover:text-zion-cyan transition-colors">
-                Zion Tech Group
-              </span>
-            </Link>
-          </div>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                to={item.href}
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                  item.current
-                    ? 'text-zion-cyan bg-zion-cyan/10'
-                    : 'text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10'
-                }`}
-              >
-                {item.name}
-              </Link>
-            ))}
-
-            {/* Services Dropdown */}
-            <div className="relative dropdown-container">
-              <button
-                onClick={() => toggleDropdown('services')}
-                className="flex items-center px-3 py-2 rounded-md text-sm font-medium text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 transition-colors"
-                aria-expanded={activeDropdown === 'services'}
-                aria-haspopup="true"
-              >
-                Services
-                <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />
-              </button>
->>>>>>> main
 
               <AnimatePresence>
                 {activeDropdown === 'services' && (
@@ -839,4 +773,3 @@ export function AppHeader() {
       </AnimatePresence>
     </header>  );
 }
->>>>>>> main

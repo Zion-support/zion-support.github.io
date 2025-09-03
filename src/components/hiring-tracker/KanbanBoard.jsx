@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import { DragDropContext } from "@hello-pangea/dnd";
 import { useJobApplications } from "@/hooks/useJobApplications";
@@ -35,41 +34,6 @@ const COLUMNS = [
         description: "Not moving forward",
     },];
 export function KanbanBoard({ jobId }) {}
-=======
-import React, { useState } from 'react';
-import { useState, useEffect } from 'react';
-import { DragDropContext } from '@hello-pangea/dnd';
-import { useJobApplications } from '@/hooks/useJobApplications';
-import { Card, CardContent, CardHeader } from '@/components/ui/card';
-import { Skeleton } from '@/components/ui/skeleton';
-import { toast } from '@/hooks/use-toast';
-import { KanbanColumn } from './KanbanColumn';
-import { useIsMobile } from '@/hooks/use-mobile';
-,
-  {
-
-    id: 'shortlisted',
-    title: 'Shortlisted',
-    description: 'Candidates selected for review'},
-  {
-
-    id: 'interview',
-    title: 'Interview',
-    description: 'Scheduled for interview'},
-  {
-
-    id: 'hired',
-    title: 'Hired',
-    description: 'Successful candidates'},
-  {
-
-    id: 'rejected',
-    title: 'Rejected',
-    description: 'Not moving forward'},
-];
-export function KanbanBoard({ jobId }) {
-
->>>>>>> main
   const { applications, isLoading, updateApplicationStatus } =
     useJobApplications(jobId);
   const [columns, setColumns] = useState({

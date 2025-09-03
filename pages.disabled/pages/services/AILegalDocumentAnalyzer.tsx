@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {}
   FileText,
   Shield,
@@ -737,5 +736,3 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {}
 
 export default AILegalDocumentAnalyzer;'"`
 '"`'"`
-=======
->>>>>>> main

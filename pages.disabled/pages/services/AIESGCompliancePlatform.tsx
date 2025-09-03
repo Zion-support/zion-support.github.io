@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {}
   Leaf,
   TrendingUp,
@@ -511,5 +510,3 @@ export default function AIESGCompliancePlatform(function AIESGCompliancePlatform
     </div>
   )}'"`
 '"`'"`
-=======
->>>>>>> main

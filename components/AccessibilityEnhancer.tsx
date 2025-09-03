@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 
 interface AccessibilityEnhancerProps {
@@ -18,51 +17,13 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     // Apply accessibility settings from localStorage
     const savedHighContrast = localStorage.getItem('highContrast') === 'true';
     const savedFontSize = localStorage.getItem('fontSize') || 'normal';
+    const savedReducedMotion = localStorage.getItem('reducedMotion') === 'true';
     
     setIsHighContrast(savedHighContrast);
     setFontSize(savedFontSize);
-=======
-import React, { useEffect } from "react"
-const AccessibilityEnhancer: React.FC = () => {
-  useEffect(() => {"
-    if (typeof window !== "undefined") {,
-      // comment
-const handleKeyDown = (event: KeyboardEvent) => {"
-        if (event.key === "Tab") {",
-          document.body.classList.add("keyboard-navigation"),
-        }
+    setReducedMotion(savedReducedMotion);
+  }, []);
 
-      }
-
-      const handleMouseDown = () => {"
-        document.body.classList.remove("keyboard-navigation")
-}
-
-"
-      document.addEventListener("keydown", handleKeyDown)
-}
-      document.addEventListener("mousedown", handleMouseDown)
-}
-      // comment
-const style = document.createElement("style")
-}
-      style.textContent = "
-        .keyboard-navigation *:focus {
-          outline: 2px solid #3B82F6 !important,
-          outline-offset: 2px !important,
-      "
-      document.head.appendChild(style)
-}
-      return () => {"
-        document.removeEventListener("keydown", handleKeyDown)
-}
-        document.removeEventListener("mousedown", handleMouseDown)
-}
->>>>>>> main
-
-    }
-
-<<<<<<< HEAD
   const applyAccessibilityStyles = (highContrast: boolean, fontSize: string, reducedMotion: boolean) => {
     const root = document.documentElement;
     
@@ -166,11 +127,3 @@ const style = document.createElement("style")
 };
 
 export default AccessibilityEnhancer;
-=======
-  }, [])
-}
-  return null
-
-
-'export default AccessibilityEnhancer
->>>>>>> main

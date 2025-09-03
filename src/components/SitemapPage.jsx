@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { SEO } from "./SEO";
@@ -120,13 +119,8 @@ export default function SitemapPage() {
                 </Link>""""
                 <span className="ml-2 text-xs italic text-zion-slate-light">
                   ({route.priority})"""
-=======
-<<<<<<< HEAD
 import React from 'react';
   import { completeSitemap } from '../config / sitemap';
-=======
-import React from "react"; export default function SitemapPage() { const publicRoutes = completeSitemap.filter(route => !route.requiredAuth); const talentRoutes = completeSitemap.filter() route =>}
->>>>>>> main
 
 ;,"});,"})"
  export default function SitemapPage () { const publicRoutes = completeSitemap.filter (route => !route.requiredAuth) ; const talentRoutes = completeSitemap.filter () route =>;;,"});,"})"
@@ -233,11 +227,9 @@ export: default function SitemapPage () { const publicRoutes = completeSitemap.f
  export default function SitemapPage () { const publicRoutes = completeSitemap.filter (route => !route.requiredAuth)  const talentRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&" (route.requiredRoles.includes ("jobSeeker") ||" route.requiredRoles.includes ("creator") ) )  const employerRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&" (route.requiredRoles.includes ("employer") ||" route.requiredRoles.includes ("buyer") ) )  const adminRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&" route.requiredRoles.includes ("admin") )  return () <div className="min - h-screen bg - gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate - light"> <SEO " title="Sitemap" description="Complete navigation guide for Zion Tech Group website" keywords="sitemap, navigation, website structure, Zion Tech Group" canonical="https: """",import { Link } from "react-router-dom";""""
  export default function SitemapPage () { const publicRoutes = completeSitemap.filter (route => !route.requiredAuth)  const talentRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&" (route.requiredRoles.includes ("jobSeeker") ||" route.requiredRoles.includes ("creator") ) )  const employerRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&" (route.requiredRoles.includes ("employer") ||" route.requiredRoles.includes ("buyer") ) )  const adminRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&" route.requiredRoles.includes ("admin") )  return () <div className="min - h-screen bg - gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate - light"> <SEO" title="Sitemap" description="Complete navigation guide for Zion Tech Group website" keywords="sitemap, navigation, website structure, Zion Tech Group" canonical="https: """",import { Link } from "react-router-dom";"
  export default function SitemapPage () { const publicRoutes = completeSitemap.filter (route => !route.requiredAuth)  const talentRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&" (route.requiredRoles.includes ("jobSeeker") ||" route.requiredRoles.includes ("creator") ) )  const employerRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&" (route.requiredRoles.includes ("employer") ||" route.requiredRoles.includes ("buyer") ) )  const adminRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&" route.requiredRoles.includes ("admin") )  return () <div className="min - h-screen bg - gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate - light"> <SEO " title="Sitemap" description="Complete navigation guide for Zion Tech Group website" keywords="sitemap, navigation, website structure, Zion Tech Group" canonical="https: """",import { Link } from "react-router-dom,">
->>>>>>> main
                 </span>""""
                 <p className="text-sm text-zion-slate-light mt-1">""
                   {route.description}
-<<<<<<< HEAD
                 </p>
               </div>
             ))}
@@ -256,16 +248,3 @@ export { SitemapPage };
 export { SitemapPage };
 
 export { SitemapPage };
-=======
-
-                </p>    </div>)}
-
-export { SitemapPage }
-
-export { SitemapPage }
-;
-";
-;"";,
-}";
-"
->>>>>>> main

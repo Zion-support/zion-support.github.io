@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useState } from 'react';
 export /**
 export default BenefitsSection;}}}}</motion.div></motion.div></motion.div>}
@@ -34,9 +31,5 @@ export default function Page() {
       "Bulk discount options","
       "Transparent cost structure"
     ]
-=======
->>>>>>> main
 
 ;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main

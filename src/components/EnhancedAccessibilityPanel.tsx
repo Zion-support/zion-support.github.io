@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 
  params - Function parameters
@@ -142,16 +139,12 @@ export function EnhancedAccessibilityPanel() {
 
   // Load settings from localStorage
   useEffect(() => {
-<<<<<<< HEAD
   // TODO: Add dependencies if needed
 
   return () => {
     // Cleanup function
   };
 }, []);, []);
-<<<<<<< HEAD
-=======
->>>>>>> main
 
     if(saved) {
       try {
@@ -624,9 +617,3 @@ export function EnhancedAccessibilityPanel() {
       </AnimatePresence>
     </>) }
 '"`
-=======
-
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

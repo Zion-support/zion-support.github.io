@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { Link, useLocation  } from 'react-router-dom';
 
 export default function Page() {
@@ -262,16 +259,12 @@ className:  '',;
   const [isScrolled, setIsScrolled] = useState(false);
   
   useEffect(() => {
-<<<<<<< HEAD
   // TODO: Add dependencies if needed
 
   return () => {
     // Cleanup function
   };
 }, []);, []);
-<<<<<<< HEAD
-=======
->>>>>>> main
     const handleScroll = () => {;
       setIsScrolled(window.scrollY > 10) ;
     };
@@ -307,36 +300,7 @@ className:  '',;
 
     localStorage.setItem('zion - theme', newTheme) ;
   }, [onThemeChange]) ;
-<<<<<<< HEAD
-=======
-    
-      setIsScrolled(window.scrollY > 10) };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll)}, []);
-
-  useEffect(() => {
-  // TODO: Add dependencies if needed
-
-  return () => {
-    // Cleanup function
-  };
-}, []);, []);
-    setIsOpen(false);
-    setActiveDropdown(null)}, [location]);
-
-    setTheme(newTheme);
-    onThemeChange?.(newTheme);
-
-    root.classList.remove('light',dark');
-    '
-    if(newTheme = == 'system') {;
-      
-      root.classList.add(systemTheme)} else {
->>>>>>> main
-
-=======
->>>>>>> main
       root.classList.add(newTheme)}
     '
     localStorage.setItem('zion-theme', newTheme)}, [onThemeChange])}};
@@ -560,9 +524,3 @@ className:  '',;
       </AnimatePresence>
     </nav>
   )};'"`
-=======
-
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main
