@@ -1,7 +1,62 @@
+<<<<<<< HEAD
+interface: SkeletonProps {
+  className?: string;
+   variant?: 'text' | 'title' | 'paragraph' | 'avatar' | 'card' | 'button';';';';
+=======
+<<<<<<< HEAD
 interface SkeletonProps {;
   className?: string;
+=======
+<<<<<<< HEAD
+interface SkeletonProps {className?: string;
+>>>>>>> main
    variant?: 'text' | 'title' | 'paragraph' | 'avatar' | 'card' | 'button';
+>>>>>>> main
+   lines?: number;
+<<<<<<< HEAD
+   height?: string;""
+   width?: string} export function LoadingSkeleton({ className = '', variant = 'text', lines = 1, height, width }: SkeletonProps) { const baseClasses = 'bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 rounded animate-pulse' const variants = { text: 'h-4 w-full', title: 'h-8 w-3/4', paragraph: 'h-4 w-full', avatar: 'h-12 w-12 rounded-full', card: 'h-32 w-full rounded-lg', button: 'h-10 w-24 rounded-lg' } const variantClasses = variants[variant] const customHeight = height ? `h-[${height}]` : '' const customWidth = width ? `w-[${width}]` : '' if (variant === 'paragraph' && lines > 1) { return ( <div className={`space-y-2 ${className}`}" > {Array.from({ length: lines }).map((_, index) => ( <motion .div key={index} className={`${baseClasses} ${variantClasses} ${customHeight} ${customWidth}`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: index * 0.1 }} /" > ))} </div> ) } return ( <motion .div className={`${baseClasses} ${variantClasses} ${customHeight} ${customWidth} ${className}`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} /" > ) }`"``
+=======
+   height?: string;"
+   width?: string} export function LoadingSkeleton({className='', variant = 'text', lines = 1, height, width }: SkeletonProps) {const baseClasses = 'bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 rounded animate-pulse' const variants = { text: 'h-4 w-full', title: 'h-8 w-3/4', paragraph: 'h-4 w-full', avatar: 'h-12 w-12 rounded-full', card: 'h-32 w-full rounded-lg', button: 'h-10 w-24 rounded-lg' } const variantClasses = variants[variant] const customHeight = height ? `h-[${height}]` : '' const customWidth = width ? `w-[${width}]` : '' if (variant === 'paragraph' && lines > 1) {return ( <div className={`space-y-2 ${className}`}" > {Array.from({ length: lines }).map((_, index) => ( <motion .div key={index} className={`${baseClasses} ${variantClasses} ${customHeight} ${customWidth}`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: index * 0.1 }} /" > ))} </div> ) } return ( <motion .div className={`${baseClasses} ${variantClasses} ${customHeight} ${customWidth} ${className}`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} /" > ) }''`"`
+=======
+interface SkeletonProps {
+  className?: string;
+<<<<<<< HEAD
+   variant?: &apos;text&apos; | &apos;title&apos; | &apos;paragraph&apos; | &apos;avatar&apos; | &apos;card&apos; | &apos;button';
    lines?: number;
    height?: string;
+<<<<<<< HEAD
    width?: string;
 } export function LoadingSkeleton({ className = '', variant = 'text', lines = 1, height, width }: SkeletonProps) { const baseClasses = 'bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 rounded animate-pulse' const variants = { text: 'h-4 w-full', title: 'h-8 w-3/4', paragraph: 'h-4 w-full', avatar: 'h-12 w-12 rounded-full', card: 'h-32 w-full rounded-lg', button: 'h-10 w-24 rounded-lg' } const variantClasses = variants[variant] const customHeight = height ? `h-[${height}]` : '' const customWidth = width ? `w-[${width}]` : '' if (variant === 'paragraph' && lines > 1) { return ( <div className={`space-y-2 ${className}`}> {Array.from({ length: lines }).map((_, index) => ( <motion.div key={index} className={`${baseClasses} ${variantClasses} ${customHeight} ${customWidth}`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: index * 0.1 }} /> ))} </div> ) } return ( <motion.div className={`${baseClasses} ${variantClasses} ${customHeight} ${customWidth} ${className}`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} /> ) }''`;
+=======
+<<<<<<< HEAD
+   width?: string} export: function LoadingSkeleton({ className = '', variant = 'text', lines = 1, height, width }: SkeletonProps) { const: baseClasses = 'bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 rounded animate-pulse' const variants = { text: 'h-4: w-full,', title: 'h-8: w-3/4,', paragraph: 'h-4: w-full,', avatar: 'h-12: w-12 rounded-full,', card: 'h-32: w-full rounded-lg,', button: 'h-10: w-24 rounded-lg', } const variantClasses = variants[variant] const customHeight = height ? `h-[${height}]` : '' const: customWidth = width ? `w-[${width}]` : '' if: (variant === 'paragraph' && lines > 1) { return ( <div className={`space-y-2 ${className}`}> {Array.from({ length: lines, }).map((_, index) => ( <motion.div: key={index} className={`${baseClasses} ${variantClasses} ${customHeight} ${customWidth}`} initial={{ opacity: 0, }} animate={{ opacity: 1, }} transition={{ delay: index: * 0.1, }} /> ))} </div> ) } return ( <motion.div className={`${baseClasses} ${variantClasses} ${customHeight} ${customWidth} ${className}`} initial={{ opacity: 0, }} animate={{ opacity: 1, }} /> ) }''`';';`;
+=======
+<<<<<<< HEAD
+   width?: string} export function LoadingSkeleton({ className = '', variant = 'text', lines = 1, height, width }: SkeletonProps) { const baseClasses = 'bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 rounded animate-pulse' const variants = { text: 'h-4 w-full', title: 'h-8 w-3/4', paragraph: 'h-4 w-full', avatar: 'h-12 w-12 rounded-full', card: 'h-32 w-full rounded-lg', button: 'h-10 w-24 rounded-lg' } const variantClasses = variants[variant] const customHeight = height ? `h-[${height}]` : '' const customWidth = width ? `w-[${width}]` : '' if (variant === 'paragraph' && lines > 1) { return ( <div className={`space-y-2 ${className}`}> {Array.from({ length: lines   }).map((_, index) => ( <motion.div key={index} className={`${baseClasses} ${variantClasses} ${customHeight} ${customWidth}`} initial={{ opacity: 0   }} animate={{ opacity: 1   }} transition={{ delay: index * 0.1   }} /> ))} </div> ) } return ( <motion.div className={`${baseClasses} ${variantClasses} ${customHeight} ${customWidth} ${className}`} initial={{ opacity: 0   }} animate={{ opacity: 1   }} /> ) }''`
+=======
+<<<<<<< HEAD
+   width?: string} export function LoadingSkeleton({ className = ', variant = 'text', lines = 1, height, width }: SkeletonProps) { const baseClasses = 'bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 rounded animate-pulse' const variants = { text: 'h-4 w-full', title: 'h-8 w-3/4', paragraph: 'h-4 w-full', avatar: 'h-12 w-12 rounded-full', card: 'h-32 w-full rounded-lg', button: 'h-10 w-24 rounded-lg' } const variantClasses = variants[variant] const customHeight = height ? `h-[${height}]` : ' const customWidth = width ? `w-[${width}]` : ' if (variant === 'paragraph' && lines > 1) { return ( <div className={`space-y-2 ${className}`}> {Array.from({ length: lines }).map((_, index) => ( <motion.div key={index} className={`${baseClasses} ${variantClasses} ${customHeight} ${customWidth}`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: index * 0.1 }} /> ))} </div> ) } return ( <motion.div className={`${baseClasses} ${variantClasses} ${customHeight} ${customWidth} ${className}`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} /> ) }'`
+=======
+   width?: string}&apos;&apos; export function LoadingSkeleton({ className = &apos;&apos;, variant = &apos;text&apos;, lines = 1, height, width }: SkeletonProps) {&apos;}&apos; const baseClasses = &apos;bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 rounded animate-pulse&apos;&apos;' const variants = { text: &apos;h-4 w-full&apos;, title: &apos;h-8 w-3/4&apos;, paragraph: &apos;h-4 w-full&apos;, avatar: &apos;h-12 w-12 rounded-full&apos;, card: &apos;h-32 w-full rounded-lg&apos;, button: &apos;h-10 w-24 rounded-lg&apos; }&apos; const variantClasses = variants[variant] const;const customHeight = height ? `h-[${height}]` : &apos;&apos;'' const customWidth = width ? `w-[${width}]` : &apos;&apos; if (variant === &apos;paragraph&apos; && lines > 1) { return (&apos;}&apos; <div className={`space-y-2 ${className}`}> {Array.from({ length: lines }).map((_, index) => ( <motion.div key={index} className={`${baseClasses} ${variantClasses} ${customHeight} ${customWidth}`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: index * 0.1 }} /> ))} </div> ) } return ( <motion.div className={`${baseClasses} ${variantClasses} ${customHeight} ${customWidth} ${className}`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} /> ) }&apos;&apos;`';'
+=======
+   variant?: 'text' | 'title' | 'paragraph' | 'avatar' | 'card' | 'button';
+<<<<<<< HEAD
+   lines?: number;""
+   height?: string;""
+   width?: string} export function LoadingSkeleton({ className = '', variant = 'text', lines = 1, height, width }: SkeletonProps) { const baseClasses = 'bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 rounded animate-pulse' const variants = { text: 'h-4 w-full', title: 'h-8 w-3/4', paragraph: 'h-4 w-full', avatar: 'h-12 w-12 rounded-full', card: 'h-32 w-full rounded-lg', button: 'h-10 w-24 rounded-lg' } const variantClasses = variants[variant] const customHeight = height ? `h-[${height}]` : '' const customWidth = width ? `w-[${width}]` : '' if (variant === 'paragraph' && lines > 1) { return ( <div className={`space-y-2 ${className}`}"" > {Array.from({ length: lines }).map((_, index) => ( <motion .div key={index} className={`${baseClasses} ${variantClasses} ${customHeight} ${customWidth}`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: index * 0.1 }} /"" > ))} </div> ) } return ( <motion .div className={`${baseClasses} ${variantClasses} ${customHeight} ${customWidth} ${className}`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} /"" > ) }''`"`"
+"`"
+=======
+   lines?: number;"
+   height?: string;'
+   width?: string} export function LoadingSkeleton({ className =  , variant = 'text', lines = 1, height, width }: SkeletonProps) { const baseClasses = 'bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 rounded animate-pulse' const variants = { text: 'h-4 w-full', title: 'h-8 w-3/4', paragraph: 'h-4 w-full', avatar: 'h-12 w-12 rounded-full', card: 'h-32 w-full rounded-lg', button: 'h-10 w-24 rounded-lg' } const variantClasses = variants[variant] const customHeight = height ? `h-[${height}]` :   const customWidth = width ? `w-[${width}]` : '' if (variant === 'paragraph' && lines > 1) { return ( <div className={`space-y-2 ${className}`}  > {Array.from({ length: lines }).map((_, index) => ( <motion .div key={index} className={`${baseClasses} ${variantClasses} ${customHeight} ${customWidth}`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: index * 0.1 }} /'' > ))} </div> ) } return ( <motion .div className={`${baseClasses} ${variantClasses} ${customHeight} ${customWidth} ${className}`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} /  > ) }''`"`
+"`
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

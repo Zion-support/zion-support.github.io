@@ -1,7 +1,10 @@
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['@testing-library/jest-dom', '<rootDir>/src/test/setup.ts'],
+  setupFilesAfterEnv: [
+    '@testing-library/jest-dom',
+    '<rootDir>/src/test/setup.ts',
+  ],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
@@ -41,7 +44,7 @@ module.exports = {
     '^@/middleware/(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
     '^vitest$': '<rootDir>/tests/__mocks__/vitestMock.js',
     // Special module mocks
-    '^msw/node$': require.resolve('msw/node'),
+    '^msw/node$': '<rootDir>/tests/__mocks__/emptyModule.js',
     '^next/router$': 'next-router-mock',
     '^next/navigation$': '<rootDir>/tests/__mocks__/emptyModule.js',
     'react-router-dom$': '<rootDir>/src/stubs/react-router-dom.tsx',

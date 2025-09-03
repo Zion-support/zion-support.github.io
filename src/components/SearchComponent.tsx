@@ -1,3 +1,44 @@
+<<<<<<< HEAD
+import React, { useState, useRef, useEffect } from 'react' import { motion, AnimatePresence    } from 'framer-motion' import { Search, X, Clock, TrendingUp, Star    } from 'lucide-react' interface SearchResult { id: string title: string description: string typ,
+    e: 'service' | 'page' | 'feature' ur,
+    l: string icon?: React.ComponentType<>  } interface SearchComponentProps { placeholder?: string onSearch?: (query: string) => void className?: string } const SearchComponent: React.FC<SearchComponentProps> = ({ placeholder = 'Search services, features, and more...', onSearch, className = '' }) => { const [query, setQuery] = useState('') const [isOpen, setIsOpen] = useState(false) const [selectedIndex, setSelectedIndex] = useState(-1) const inputRef = useRef<HTMLInputElement>(null) const resultsRef = useRef<HTMLDivElement>(null);"
+}"
+=======
+<<<<<<< HEAD
+import React, {useState, useRef, useEffect } from 'react' ;
+import {motion, AnimatePresence    } from 'framer-motion' import {Search, X, Clock, TrendingUp, Star    } from 'lucide-react' interface SearchResult {id: string title: string description: string type: 'service' | 'page' | 'feature' url: string icon?: React.ComponentType<>  } interface SearchComponentProps {placeholder?: string onSearch?: (query: string) => void className?: string } const SearchComponent: React.FC<SearchComponentProps> = ({placeholder = 'Search services, features, and more...', onSearch, className='' }) => {const [query, setQuery] = useState('') const [isOpen, setIsOpen] = useState(false) const [selectedIndex, setSelectedIndex] = useState(-1) const inputRef = useRef<HTMLInputElement>(null) const resultsRef = useRef<HTMLDivElement>(null);"
+}
+=======
+<<<<<<< HEAD
 
 ;
+<<<<<<< HEAD
 import React, { useState, useRef, useEffect } from 'react' import { motion, AnimatePresence    } from 'framer-motion' import { Search, X, Clock, TrendingUp, Star    } from 'lucide-react' interface SearchResult { id: string title: string description: string type: 'service' | 'page' | 'feature' url: string icon?: React.ComponentType<any>  } interface SearchComponentProps { placeholder?: string onSearch?: (query: string) => void className?: string } const SearchComponent: React.FC<SearchComponentProps> = ({ placeholder = 'Search services, features, and more...', onSearch, className = '' }) => { const [query, setQuery] = useState('') const [isOpen, setIsOpen] = useState(false) const [selectedIndex, setSelectedIndex] = useState(-1) const inputRef = useRef<HTMLInputElement>(null) const resultsRef = useRef<HTMLDivElement>(null);
+=======
+<<<<<<< HEAD
+import: React, { useState, useRef, useEffect } from 'react' import { motion, AnimatePresence    } from 'framer-motion' import { Search, X, Clock, TrendingUp, Star    } from 'lucide-react' interface SearchResult { id: string: title: string: description: string: type: 'service' | 'page' | 'feature' url: string: icon?: React.ComponentType<any> , } interface: SearchComponentProps { placeholder?: string: onSearch?: (query: string) => void: className?: string, } const: SearchComponent: React.FC<SearchComponentProps> = ({ placeholder: = 'Search service,s, features, and more...', onSearch, className = '' }) => { const [query, setQuery] = useState('') const [isOpen, setIsOpen] = useState(false) const [selectedIndex, setSelectedIndex] = useState(-1) const inputRef = useRef<HTMLInputElement>(null) const resultsRef = useRef<HTMLDivElement>(null)';';';
+=======
+<<<<<<< HEAD
+import React, { useState, useRef, useEffect } from 'react' import { motion, AnimatePresence    } from 'framer-motion' import { Search, X, Clock, TrendingUp, Star    } from 'lucide-react' interface SearchResult { id: string title: string description: string type: 'service' | 'page' | 'feature' url: string icon?: React.ComponentType<any>    } interface SearchComponentProps { placeholder?: string onSearch?: (query: string) => void className?: string } const SearchComponent: React.FC<SearchComponentProps> = ({ placeholder = 'Search services, features, and more...', onSearch, className = '' }) => { const [query, setQuery] = useState('') const [isOpen, setIsOpen] = useState(false) const [selectedIndex, setSelectedIndex] = useState(-1) const inputRef = useRef<HTMLInputElement>(null) const resultsRef = useRef<HTMLDivElement>(null)
+=======
+<<<<<<< HEAD
+import React, { useState, useRef, useEffect } from 'react' import { motion, AnimatePresence    } from 'framer-motion' import { Search, X, Clock, TrendingUp, Star    } from 'lucide-react' interface SearchResult { id: string title: string description: string type: 'service' | 'page' | 'feature' url: string icon?: React.ComponentType<any>  } interface SearchComponentProps { placeholder?: string onSearch?: (query: string) => void className?: string } const SearchComponent: React.FC<SearchComponentProps> = ({ placeholder = 'Search services, features, and more...', onSearch, className = ' }) => { const [query, setQuery] = useState(') const [isOpen, setIsOpen] = useState(false) const [selectedIndex, setSelectedIndex] = useState(-1) const inputRef = useRef<HTMLInputElement>(null) const resultsRef = useRef<HTMLDivElement>(null)
+=======
+import React, { useState, useRef, useEffect } from &apos;react&apos; import { motion, AnimatePresence    } from &apos;framer-motion&apos; import { Search, X, Clock, TrendingUp, Star    } from &apos;lucide-react&apos; interface SearchResult { id: string title: string description: string type: &apos;service&apos; | &apos;page&apos; | &apos;feature&apos; ur,l: string icon?: React.ComponentType&apos;}<any>  } interface SearchComponentProps { placeholder?: string onSearch?: (query: string) => void className?: string } const SearchComponent: React.FC<SearchComponentProps> = ({ placeholder = &apos;Search services, features, and more...&apos;, onSearch, className = &apos;&apos; }) => {&apos;}&apos; const [query, setQuery] = useState(&apos;&apos;)&apos;&apos; const [isOpen, setIsOpen] = useState(false) const [selectedIndex, setSelectedIndex] = useState(-1) const inputRef = useRef<HTMLInputElement>(null) const resultsRef = useRef<;<;<HTMLDivElement>(null);
+=======
+<<<<<<< HEAD
+import React, { useState, useRef, useEffect } from 'react' import { motion, AnimatePresence    } from 'framer-motion' import { Search, X, Clock, TrendingUp, Star    } from 'lucide-react' interface SearchResult { id: string title: string description: string type: 'service' | 'page' | 'feature' url: string icon?: React.ComponentType<>  } interface SearchComponentProps { placeholder?: string onSearch?: (query: string) => void className?: string } const SearchComponent: React.FC<SearchComponentProps> = ({ placeholder = 'Search services, features, and more...', onSearch, className = '' }) => { const [query, setQuery] = useState('') const [isOpen, setIsOpen] = useState(false) const [selectedIndex, setSelectedIndex] = useState(-1) const inputRef = useRef<HTMLInputElement>(null) const resultsRef = useRef<HTMLDivElement>(null);","
+}
+""
+=======
+import React, { useState, useRef, useEffect } from 'react' import { motion, AnimatePresence    } from 'framer-motion' import { Search, X, Clock, TrendingUp, Star    }  from 'lucide-react';interface SearchResult { id: string title: string description: string type: 'service' | 'page' | 'feature' url: string icon?: React.ComponentType<>  } interface SearchComponentProps { placeholder?: string onSearch?: (query: string) => void className?: string } const SearchComponent: React.FC<SearchComponentProps> = ({ placeholder = 'Search services, features, and more...', onSearch, className = '' }) => { const [query, setQuery] = useState('') const [isOpen, setIsOpen] = useState(false) const [selectedIndex, setSelectedIndex] = useState(-1) const inputRef = useRef<HTMLInputElement>(null) const resultsRef = useRef<HTMLDivElement>(null);",
+}
+"
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
