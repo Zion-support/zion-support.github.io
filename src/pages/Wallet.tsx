@@ -1,33 +1,60 @@
-import React from "react";''; ; const Wallet: any = () => {}; const { data, isLoading } = useQuery({}; '; ''; '''; queryKey: ['wallet'] queryFn: getWallet}); ; if(isLoading) {}return (
-    <div""";" <h1 className="text-2xl font-bold">Wallet</h1>""";" <Skeleton className="h-6 w-24" />""";" <Skeleton className="h-32 w-full" />; </div>; )}; const points: any = data?.points ?? 0; const history: any = data?.history ?? [];" ";" return(""";" <div className="p-4">"""," <h1 className="text-2xl font-bold mb-4">Wallet</h1>"""," <section className="mb-4">"""," <h2 className="text-lg font-semibold">Points</h2>, <p>{points}</p>;" </section>";" <section>""";" <h2 className="text-lg font-semibold">Transaction History</h2> {history.length === 0 ? (;" <p>No transactions yet.</p>";" ) : (""";" <ul className="space-y-2"> {history.map((item, idx) => (; <li key="{idx}">{}</li>; ))}; </ul>; )}; </section>; </div>; )}; ;" export default Wallet;";" '"";""
-'''; ; const Wallet: any="()" => {}; const { data, isLoading } = useQuery({}; '; ''; '''; queryKey: ['wallet'] queryFn: getWallet}); ; if(isLoading) {}; return (); <div className="p-4 space-y-4">""";" <h1 className="text-2xl font-bold">Wallet</h1>""";" <Skeleton className="h-6 w-24" />""";" <Skeleton className="h-32 w-full" />; </div>; )}; const points: any="data?.points" ?? 0; const history: any="data?.history" ?? [];" ";" return (""";" <div className="p-4">"""," <h1 className="text-2xl font-bold mb-4">Wallet</h1>"""," <section className="mb-4">"""," <h2 className="text-lg font-semibold">Points</h2>, <p>{points}</p>;" </section>";" <section>""";" <h2 className="text-lg font-semibold">Transaction History</h2> {history.length === 0 ? (;" <p>No transactions yet.</p>";" ) : (""";" <ul className="space-y-2"> {history.map((item, idx) => (; <li key="{idx}">{}</li>; ))}; </ul>; )}; </section>; </div>; )}; ;" export default Wallet;";" '"";";,"});,"})"
-'; queryKey: ['wallet'], queryFn: getWallet})  if(isLoading) {} return () <div className="p-4 space-y-4">"""" <h1 className="text-2xl font-bold">Wallet</h1>"""" <Skeleton className="h-6 w-24" />"""" <Skeleton className="h-32 w-full" /> </div> ) } const points: any = data?.points ?? 0 const history: any = data?.history ?? []'," return ("""" <div className="p-4">"""" <h1 className="text-2xl font-bold mb-4">Wallet</h1>"""" <section className="mb-4">"""" <h2 className="text-lg font-semibold">Points</h2> <p>{points}</p>" </section>"" <section>"""" <h2 className="text-lg font-semibold">Transaction History</h2> {history.length === 0 ? (" <p>No transactions yet.</p>"" ) : ("""" <ul className="space-y-2"> {history.map((item, idx) => ( <li key="{idx}">{}</li> ))} </ul> )} </section> </div> ) } " export default Wallet'; "
-';; queryKey: ['wallet'], queryFn: getWallet})  if(isLoading) {} return () <div className="p-4 space-y-4">'''' <h1 className="text-2xl font-bold">Wallet</h1>'''' <Skeleton className="h-6 w-24" />'''' <Skeleton className="h-32 w-full" /> </div> ) } const points: any = data?.points ?? 0 const history: any = data?.history ?? []',' return ('''' <div className="p-4">'''' <h1 className="text-2xl font-bold mb-4">Wallet</h1>'''' <section className="mb-4">'''' <h2 className="text-lg font-semibold">Points</h2> <p>{points}</p>' </section>'' <section>'''' <h2 className="text-lg font-semibold">Transaction History</h2> {history.length === 0 ? (' <p>No transactions yet.</p>'' ) : ('''' <ul className="space-y-2"> {history.map((item, idx) => ( <li key="{idx}">{}</li> ))} </ul> )} </section> </div> ) } ' export default Wallet'; ''''';"
-' ';';"
-'; ''''';';"
-' '
-'; '''''
-' queryKey: ['wallet'], queryFn: getWallet})  if(isLoading) {} return () <div className = "p-4 space-y-4">"""" <h1 className="text-2xl font-bold">Wallet</h1>"""" <Skeleton className="h-6 w-24" />"""" <Skeleton className="h-32 w-full" /> </div> ) } const points: any = data?.points ?? 0 const histor,";
-    y: any = data?.history ?? []" return ("""" <div className="p-4">"""" <h1 className="text-2xl font-bold mb-4">Wallet</h1>"""" <section className="mb-4">"""" <h2 className="text-lg font-semibold">Points</h2> <p>{points}</p>" </section>"" <section>"""" <h2 className="text-lg font-semibold">Transaction History</h2> {history.length === 0 ? (" <p>No transactions yet.</p>"" ) : ("""" <ul className="space-y-2"> {history.map((item, idx) => ( <li key="{idx}">{}</li> ))} </ul> )} </section> </div> ) } " export default Wallet'; ''
-'; queryKey: ['wallet'], queryFn: getWallet})  if(isLoading) {} return () <div className = "p-4 space-y-4>"' <h1 className="text-2xl font-bold">Wallet</h1>'''' <Skeleton className="h-6 w-24" />''' <Skeleton className="h-32 w-full" /> </div> ) } const points: any = data?.points ?? 0 const histor,";
-    y: any = data?.history ?? []' return ('''' <div className="p-4>"' <h1 className="text-2xl font-bold mb-4">Wallet</h1>'''' <section className="mb-4>"' <h2 className="text-lg font-semibold">Points</h2> <p>{points}</p>' </section>'' <section>'''' <h2 className="text-lg font-semibold">Transaction History</h2> {history.length === 0 ? (' <p>No transactions yet.</p>'' ) : ('''' <ul className="space-y-2"> {history.map((item, idx) => ( <li key="{idx}">{}</li> ))} </ul> )} </section> </div> ) } ' export default Wallet'; ''''';"
-' ;"
-'; ''';"
-' '
-'; ''''';"
-'@tanstack/react-query&apos;&apos;@/api/wallet&apos;&apos;@/components/ui/skeleton&apos;&apos,  const Wallet: any = () => {} ;const { data, isLoading } = useQuery({}';&apos; queryKey: [&apos,wallet&apos], queryFn: getWallet})  if(isLoading) {} return ()&apos;&apos; <div className="&quot;p-4" space-y-4&quot;>"&quot;&quot;"&quot;&quot; <h1 className="&quot;text-2xl" font-bold&quot;>Wallet&quot;</h1>&quot;&quot;"&quot;&quot;" <Skeleton className="&quot;h-6" w-24&quot; />&quot;&quot;"&quot;&quot;" <Skeleton className="&quot;h-32" w-full&quot; />&quot; </div> ) } const points: any = data?.points ?? 0 const,const histor,y: any = data?.history ?? []&apos;&quot; return (&quot;&quot;"&quot;&quot;" <div className="&quot;p-4&quot;">"&quot;&quot;"&quot;&quot; <h1 className="&quot;text-2xl" font-bold mb-4&quot;>Wallet&quot;</h1>&quot;&quot;"&quot;&quot;" <section className="&quot;mb-4&quot;">"&quot;&quot;"&quot;&quot, <h2 className="&quot,text-lg" font-semibold&quot,>Points&quot,</h2> <p>{points}</p>&quot;&quot;" </section>&quot;&quot;"" <section>&quot;&quot;"&quot;&quot;" <h2 className="&quot;text-lg" font-semibold&quot;>Transaction History&quot;</h2> {history.length === 0 ? (&quot;&quot}" <p>No transactions yet.</p>&quot;&quot) : (&quot;&quot;"&quot;&quot;" <ul className="&quot;space-y-2&quot;"> {history.map((item, idx) => (&quot} <li key="{idx}">{}</li> ))} </ul> )} </section> </div> ) } &quot;&quot;" export;export default Wallet'; "
-';@tanstack/react-query&apos;&apos;@/api/wallet&apos;&apos;@/components/ui/skeleton&apos;&apos,  const Wallet: any = () => {} ;const { data, isLoading } = useQuery({}';&apos; queryKey: [&apos,wallet&apos], queryFn: getWallet})  if(isLoading) {} return ()&apos;&apos; <div className="&apos;p-4" space-y-4&apos;>'&apos;&apos,&apos;&apos; <h1 className="&apos;text-2xl" font-bold&apos;>Wallet&apos;</h1>&apos;&apos,&apos;&apos, <Skeleton className="&apos;h-6" w-24&apos; />&apos;&apos,&apos;&apos, <Skeleton className="&apos;h-32" w-full&apos; />&apos; </div> ) } const points: any = data?.points ?? 0 const,const histor,y: any = data?.history ?? []&apos;&apos; return (&apos,&apos,&apos;&apos, <div className="&apos;p-4&apos;">'&apos;&apos,&apos;&apos; <h1 className="&apos;text-2xl" font-bold mb-4&apos;>Wallet&apos;</h1>&apos;&apos,&apos;&apos, <section className="&apos;mb-4&apos;">'&apos;&apos,&apos;&apos; <h2 className="&apos,text-lg" font-semibold&apos,>Points&apos,</h2> <p>{points}</p>&apos;&apos, </section>&apos;&apos,' <section>&apos;&apos,&apos;&apos, <h2 className="&apos;text-lg" font-semibold&apos;>Transaction History&apos;</h2> {history.length === 0 ? (&apos;&apos}' <p>No transactions yet.</p>&apos;&apos) : (&apos;&apos,&apos;&apos, <ul className="&apos;space-y-2&apos;"> {history.map((item, idx) => (&apos} <li key="{idx}">{}</li> ))} </ul> )} </section> </div> ) } &apos;&apos, export;export default Wallet'; &apos;&apos,&apos,
-&apos,"
-' '"
-'; ''''';""
-'; queryKey: ['wallet'], queryFn: getWallet})  if(isLoading) {} return () <div className = "p-4 space-y-4">"""" <h1 className="text-2xl font-bold">Wallet</h1>"""" <Skeleton className="h-6 w-24" /" >"""" <Skeleton className="h-32 w-full" /" > </div> ) } const points: any = data?.points ?? 0 const history: any = data?.history ?? []'," return ("""" <div className="p-4">"""" <h1 className="text-2xl font-bold mb-4">Wallet</h1>"""" <section className="mb-4">"""" <h2 className="text-lg font-semibold">Points</h2> <p>{points}</p>" </section>"" <section>"""" <h2 className="text-lg font-semibold">Transaction History</h2> {history.length === 0 ? (" <p>No transactions yet.</p>"" ) : ("""" <ul className="space-y-2"> {history.map((item, idx) => ( <li key={idx}" >{}</li> ))} </ul> )} </section> </div> ) } " export default Wallet''";
-';; queryKey: ['wallet'], queryFn: getWallet})  if(isLoading) {} return () <div className="p-4 space-y-4">'''' <h1 className="text-2xl font-bold">Wallet</h1>'''' <Skeleton className="h-6 w-24" /" >'''' <Skeleton className="h-32 w-full" /" > </div> ) } const points: any = data?.points ?? 0 const history: any = data?.history ?? []',' return ('''' <div className="p-4">'''' <h1 className="text-2xl font-bold mb-4">Wallet</h1>'''' <section className="mb-4">'''' <h2 className="text-lg font-semibold">Points</h2> <p>{points}</p>' </section>'' <section>'''' <h2 className="text-lg font-semibold">Transaction History</h2> {history.length === 0 ? (' <p>No transactions yet.</p>'' ) : ('''' <ul className="space-y-2"> {history.map((item, idx) => ( <li key={idx}" >{}</li> ))} </ul> )} </section> </div> ) } ' export default Wallet'; '''''"
-"""
-' '
-'; ''''';"
-'const Wallet: any = () => {} const { data, isLoading } = useQuery({} queryKey: ['wallet'], queryFn: getWallet})  if(isLoading) {} return () <div className="p-4 space-y-4">"""" <h1 className="text-2xl font-bold">Wallet</h1>"""" <Skeleton className="h-6 w-24" /" >"""" <Skeleton className="h-32 w-full" /" > </div> ) } const points: any = data?.points ?? 0 const history: any = data?.history ?? []' return ("""" <div className="p-4">"""" <h1 className="text-2xl font-bold mb-4">Wallet</h1>"""" <section className="mb-4">"""" <h2 className="text-lg font-semibold">Points</h2> <p>{points}</p>" </section>"" <section>"""" <h2 className="text-lg font-semibold">Transaction History</h2> {history.length === 0 ? (" <p>No transactions yet.</p>"" ) : ("""" <ul className="space-y-2"> {history.map((item, idx) => ( <li key={idx}" >{}</li> ))} </ul> )} </section> </div> ) } " export default Wallet";
-';const Wallet: any = () => {} const { data, isLoading } = useQuery({} queryKey: ['wallet'], queryFn: getWallet})  if(isLoading) {} return () <div className="p-4 space-y-4">'''' <h1 className="text-2xl font-bold">Wallet</h1>'''' <Skeleton className="h-6 w-24" /" >'''' <Skeleton className="h-32 w-full" /" > </div> ) } const points: any = data?.points ?? 0 const history: any = data?.history ?? []'' return ('''' <div className="p-4">'''' <h1 className="text-2xl font-bold mb-4">Wallet</h1>'''' <section className="mb-4">'''' <h2 className="text-lg font-semibold">Points</h2> <p>{points}</p>' </section>'' <section>'''' <h2 className="text-lg font-semibold">Transaction History</h2> {history.length === 0 ? (' <p>No transactions yet.</p>'' ) : ('''' <ul className="space-y-2"> {history.map((item, idx) => ( <li key={idx}" >{}</li> ))} </ul> )} </section> </div> ) } ' export default Wallet''';
-'const Wallet: any = () => {} const { data, isLoading } = useQuery({}';; queryKey: ['wallet'], queryFn: getWallet})  if(isLoading) {} return () <div className = "p-4 space-y-4">"""" <h1 className="text-2xl font-bold">Wallet</h1>"""" <Skeleton className="h-6 w-24" /" >"""" <Skeleton className="h-32 w-full" /" > </div> ) } const points: any = data?.points ?? 0 const history: any = data?.history ?? [] return ("""" <div className="p-4">"""" <h1 className="text-2xl font-bold mb-4">Wallet</h1>"""" <section className="mb-4">"""" <h2 className="text-lg font-semibold">Points</h2> <p>{points}</p>" </section>"" <section>"""" <h2 className="text-lg font-semibold">Transaction History</h2> {history.length === 0 ? (" <p>No transactions yet.</p>"" ) : ("""" <ul className="space-y-2"> {history.map((item, idx) => ( <li key={idx}" >{}</li> ))} </ul> )} </section> </div> ) } " export default Wallet';
-';const Wallet: any = () => {} const { data, isLoading } = useQuery({}';; queryKey: ['wallet'], queryFn: getWallet})  if(isLoading) {} return () <div className = "p-4 space-y-4">'''' <h1 className="text-2xl font-bold">Wallet</h1>'''' <Skeleton className="h-6 w-24" /" >'''' <Skeleton className="h-32 w-full" /" > </div> ) } const points: any = data?.points ?? 0 const history: any = data?.history ?? [] return ('''' <div className="p-4">'''' <h1 className="text-2xl font-bold mb-4">Wallet</h1>'''' <section className="mb-4">'''' <h2 className="text-lg font-semibold">Points</h2> <p>{points}</p>' </section>'' <section>'''' <h2 className="text-lg font-semibold">Transaction History</h2> {history.length === 0 ? (' <p>No transactions yet.</p>'' ) : ('''' <ul className="space-y-2"> {history.map((item, idx) => ( <li key={idx}" >{}</li> ))} </ul> )} </section> </div> ) } ' export default Wallet''''
-"";
-";
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+
+const Wallet = () => {
+  return (
+    <>
+      <Head>
+        <title>Wallet - Zion Tech Group</title>
+        <meta name="description" content="Professional Wallet services" />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-8">
+              Wallet
+            </h1>
+            <p className="text-xl text-gray-600 mb-12">
+              Professional Wallet services and solutions
+            </p>
+            
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h2 className="text-2xl font-semibold mb-4">Our Services</h2>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Professional Solutions</li>
+                  <li>• Expert Implementation</li>
+                  <li>• 24/7 Support</li>
+                  <li>• Custom Development</li>
+                </ul>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Industry Expertise</li>
+                  <li>• Proven Results</li>
+                  <li>• Scalable Solutions</li>
+                  <li>• Competitive Pricing</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                View Pricing
+              </Link>
+              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
+                Contact Us
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Wallet;

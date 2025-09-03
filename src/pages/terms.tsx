@@ -1,78 +1,25 @@
-import React from "react";
-const Terms: React.FC = () => {
-  return(<>
-      <SEO title="Terms - Zion Tech Group" />"
-      <div className="min-h-screen bg-white py-20">"
-        <div className="max-w-4xl mx-auto px-4">"
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Terms</h1>"
-          <p className="text-lg text-gray-600">Content coming soon...</p>
+import React from 'react';
+import Link from 'next/link';
+import { ArrowRight, Phone, Mail } from 'lucide-react';
+
+export default function Terms() {
+  return (
+    <div className="min-h-screen bg-white">
+      <div className="max-w-4xl mx-auto px-6 py-16">
+        <h1 className="text-4xl font-bold text-gray-900 mb-8">Terms</h1>
+        <p className="text-lg text-gray-600 mb-8">
+          This is a placeholder component for terms.
+        </p>
+        
+        <div className="flex flex-col sm:flex-row gap-4">
+          <Link href="/contact" className="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors inline-flex items-center">
+            Contact Us <ArrowRight className="w-4 h-4 ml-2" />
+          </Link>
+          <Link href="/" className="px-6 py-3 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors inline-flex items-center">
+            Go Home <Phone className="w-4 h-4 ml-2" />
+          </Link>
         </div>
-    </>,
-  )};
-
-export default Terms;"
-,"});,"})","});,"})"
-;,"});,"})"
-export default function Page() {,"});,"})"
-const Terms: React.FC = () => {,"});,"})"
-  return (<>;,"});,"})"
-      <SEO title="Terms - Zion Tech Group" />;,"});,"})"
-      <div className="min-h-screen bg-white py-20">;,"});,"})"
-        <div className="max-w-4xl mx-auto px-4">;,"});,"})"
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Terms</h1>;,"});,"})"
-          <p className="text-lg text-gray-600">Content coming soon...</p>;,"});,"})"
-        </div>;,"});,"})"
-    </>"});,"})"
-  );,"});,"});"
-};,"});,"})"
-export default Terms,"});,"})'"
-      <div: className="min - h-screen bg-white py-20">',;"
-        <div: className="max - w-4xl mx-auto px-4">',;"
-          <h1: className="text - 4xl font-bold text-gray-900 mb-8">Terms</h1>',;"
-          <p: className="text-lg text-gray-600">Content coming soon...</p>',,,
-;,
-export: default Terms;
-  return (<>;
-      <SEO title='Terms - Zion Tech Group' />;"
-      <div className="min-h-screen bg-white py-20">;"
-        <div className="max-w-4xl mx-auto px-4">;"
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Terms</h1>,"
-          <p className="text-lg text-gray-600">Content coming soon...</p>,,
-        </div>,
-    </>'
-export default function Page()   {const Terms: React.FC = () => {',,../components/SEO';&apos;&apos;
-
-export default function Page() {}
-const Terms: React.FC = () =>  {,
-  return (}<>";
-      <;<SEO title="&apos;Terms" - Zion Tech Group&apos; />&apos;"
-      <div className="&apos;min-h-screen" bg-white py-20&apos;>&apos,"
-        <div className="&apos;max-w-4xl" mx-auto px-4&apos;>&apos,"
-          <h1 className="&apos;text-4xl" font-bold text-gray-900 mb-8&apos;>Terms&apos;</h1>"
-          <p className="&apos;text-lg" text-gray-600&apos;>Content coming soon...&apos;</p>
-    <;</>'
-const Terms: React.FC = () => {'
-  return (<>"""
-      <SEO title='Terms - Zion Tech Group' /" >"""
-      <div className="min-h-screen bg-white py-20">"""
-        <div className="max-w-4xl mx-auto px-4">"""
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Terms</h1>"""
-const Terms: React.FC = () => {"""
-      <SEO title='Terms - Zion Tech Group' /"" >""
-  return (<>'
-      <SEO title='Terms - Zion Tech Group' />"
-      <div className="min-h-screen bg-white py-20">"
-        <div className="max-w-4xl mx-auto px-4">"
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Terms</h1>"
-const Terms: React.FC = () => {""
-  return (<>"
-      <SEO title='Terms - Zion Tech Group' /  >'
-      <div className="min-h-screen bg-white py-20">""
-        <div className="max-w-4xl mx-auto px-4">""
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Terms</h1>""
-          <p className="text-lg text-gray-600">Content coming soon...</p>,,
-  )}";
-"";
-}"
-""
-"
+      </div>
+    </div>
+  );
+}

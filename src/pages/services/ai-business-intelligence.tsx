@@ -1,520 +1,161 @@
-import React from 'react';"""""../../components / SEO',
-  AlertTriangle, Zap,;"
-  Globe, Clock;", "
-} from 'lucide-react'
+import React from 'react';
+import Link from 'next/link';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
 
-const AIBusinessIntelligence: React.FC = () => {
-  const features = [,
-    {,"
-icon: BarChart3, """
-      title: 'Real-Time Dashboards',"""
-      description: 'Interactive dashboards with live data updates and customizable widgets', ""
-  {"
-      icon: BarChart3,"
-      title: 'Real-Time Dashboards,'
-      description: 'Interactive dashboards with live data updates and customizable widgets,'
-      color: 'from-blue-500 to-cyan-500'}, {"
-      icon: Brain,"""
-      title: 'AI-Powered Insights', """
-      description: 'Machine learning algorithms that identify trends and predict future outcomes',""
-      color: 'from-green-500 to-emerald-500'},
-    {"
-      icon: Database, """
-      title: 'Data Integration',"""
-      description: 'Connect to 100+ data sources including CRM, ERP, and cloud platforms', """
-      icon: Brain,"
-      title: 'AI-Powered Insights,'
-      description: 'Machine learning algorithms that identify trends and predict future outcomes,'
-      color: 'from-green-500 to-emerald-500'},
-    {"
-      icon: Database,"
-      title: 'Data Integration,'
-      description: 'Connect to 100+ data sources including CRM, ERP, and cloud platforms,'
-      color: 'from-purple-500 to-pink-500'}, {"
-      icon: Zap,"""
-      title: 'Automated Reporting', """
-      description: 'Generate and distribute reports automatically with AI-driven insights',""
-      color: 'from-yellow-500 to-orange-500'},
-    {"
-      icon: Shield, """
-      title: 'Enterprise Security',"""
-      description: 'Bank-level security with role-based access and data encryption', ""
-      color: 'from-red-500 to-pink-500'}, {"
-      icon: Globe,"""
-      title: 'Multi-Platform Access', """
-      description: 'Access your data from anywhere with web, mobile, and API access',""
-      color: 'from-indigo-500 to-blue-500'}
-  ]
+export default function AiBusinessIntelligence() {
+  const features = [
+    'AI-powered ai business intelligence optimization',
+    'Automated ai business intelligence management',
+    'Real-time ai business intelligence analytics',
+    'Predictive ai business intelligence insights',
+    'Custom AI models for ai business intelligence',
+    'Enterprise-grade security and compliance'
+  ];
 
-  const analyticsTypes = ["
-    {"""
-      title: 'Sales Analytics', ""
-      description: 'Track sales performance, pipeline health, and revenue forecasting',"
-      icon: TrendingUp, """
-      benefits: ['Revenue tracking', 'Pipeline analysis', 'Forecasting', 'Performance metrics'], """
-      pricing: '$79/month',""
-      color: 'from-blue-500 to-cyan-500'},"
-    {"""
-      title: 'Marketing Analytics', ""
-      description: 'Measure campaign effectiveness and customer acquisition costs',"
-      icon: Target, """
-      benefits: ['Campaign ROI', 'Customer journey', 'Attribution modeling', 'A/B testing'], """
-      pricing: '$69/month',""
-      color: 'from-green-500 to-emerald-500'},"
-    {"""
-      title: 'Financial Analytics', ""
-      description: 'Monitor cash flow, profitability, and financial health indicators',"
-      icon: PieChart, """
-      benefits: ['Cash flow analysis', 'Profit margins', 'Budget tracking', 'Financial forecasting'], """
-      pricing: '$89/month',""
-      color: 'from-purple-500 to-pink-500'},"
-    {"""
-      title: 'Operational Analytics', ""
-      description: 'Optimize operations with efficiency metrics and process insights',"
-      icon: Activity, """
-      benefits: ['Process optimization', 'Resource utilization', 'Performance monitoring', 'Efficiency metrics'], """
-      pricing: '$99/month',""
-      color: 'from-yellow-500 to-orange-500'}
-  ]
-"
-  const benefits = ["""
-    'Make data-driven decisions', """
-    'Increase revenue by 25%',"""
-    'Reduce reporting time by 80%', """
-    'Identify growth opportunities',"""
-    'Predict market trends', """;
-    'Optimize operations',""";
-    'Improve customer insights', "";
-    'Real-time monitoring',;
-];
-"
-  const dataSources = ["""
-    'Salesforce', """
-    'HubSpot',"""
-    'Google Analytics', """
-    'QuickBooks',"""
-    'Shopify', """
-    'Stripe',"""
-    'Mailchimp', """
-    'Slack',"""
-    'Microsoft Dynamics', """
-    'SAP',"""
-    'Oracle', """
-      icon: Zap,"
-      title: 'Automated Reporting,'
-      description: 'Generate and distribute reports automatically with AI-driven insights,'
-      color: 'from-yellow-500 to-orange-500'},
-    {"
-      icon: Shield,"
-      title: 'Enterprise Security,'
-      description: 'Bank-level security with role-based access and data encryption,'
-      color: 'from-red-500 to-pink-500'},
-    {"
-      icon: Globe,"
-      title: 'Multi-Platform Access,'
-      description: 'Access your data from anywhere with web, mobile, and API access,'
-      color: 'from-indigo-500 to-blue-500'}
-  ]
+  const benefits = [
+    'Improve ai business intelligence performance by 50-80%',
+    'Reduce operational costs by 35-65%',
+    'Enhance scalability and reliability',
+    'Optimize resource utilization',
+    'Scale operations efficiently',
+    'Maximize ROI and efficiency'
+  ];
 
-  const analyticsTypes = ["
-  {"
-      title: 'Sales Analytics,'
-      description: 'Track sales performance, pipeline health, and revenue forecasting',"
-      icon: TrendingUp,""
-      benefits: ['Revenue tracking,Pipeline analysis,Forecasting,Performance metrics'],"'
-      pricing: '$79/month,'
-      color: 'from-blue-500 to-cyan-500'},"
-    {"
-      title: 'Marketing Analytics,'
-      description: 'Measure campaign effectiveness and customer acquisition costs',"
-      icon: Target,""
-      benefits: ['Campaign ROI,Customer journey,Attribution modeling,A/B testing'],"'
-      pricing: '$69/month,'
-      color: 'from-green-500 to-emerald-500'},"
-    {"
-      title: 'Financial Analytics,'
-      description: 'Monitor cash flow, profitability, and financial health indicators',"
-      icon: PieChart,""
-      benefits: ['Cash flow analysis,Profit margins,Budget tracking,Financial forecasting'],"'
-      pricing: '$89/month,'
-      color: 'from-purple-500 to-pink-500'},"
-    {"
-      title: 'Operational Analytics,'
-      description: 'Optimize operations with efficiency metrics and process insights',"
-      icon: Activity,""
-      benefits: ['Process optimization,Resource utilization,Performance monitoring,Efficiency metrics'],"'
-      pricing: '$99/month,'
-      color: 'from-yellow-500 to-orange-500'}
-  ]
-"
-  const benefits = ["
-    'Make data-driven decisions,'
-    'Increase revenue by 25%,'
-    'Reduce reporting time by 80%,'
-    'Identify growth opportunities,'
-    'Predict market trends,;
-    'Optimize operations,;
-    'Improve customer insights,;
-    'Real-time monitoring',;
-];
-"
-  const dataSources = ["
-    'Salesforce,'
-    'HubSpot,'
-    'Google Analytics,'
-    'QuickBooks,'
-    'Shopify,'
-    'Stripe,'
-    'Mailchimp,'
-    'Slack,'
-    'Microsoft Dynamics,;
-    'SAP,;
-    'Oracle,;
-    'MySQL',;
-];
-"
-  return ("""
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
-      <SEO """
-        title="AI Business Intelligence - Zion Tech Group""
-        description="Advanced AI-powered business intelligence platform. Transform data into actionable insights with real-time analytics, predictive modeling, and automated reporting.""
-        keywords="business intelligence, data analytics, AI insights, business dashboards, predictive analytics, data visualization, Zion Tech Group""
-        ogType="website""
-      /" >"
-"
-      {/*   */}"""
-      <section className="relative overflow-hidden py-20 lg: py-32">"""
-        <div className="container-responsive">"""
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">,
-            <motion .div,"
-initial="{{" opacity: 0, x: -50 }}"
-              animate="{{" opacity: 1, x: 0 }}"
-              transition="{{" duration: 0.8 }}"""
-              className="space-y-8"" >""
-              <div className="inline-flex items-center gap-3 px-4 py-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 rounded-full text-blue-400 text-sm font-medium">"""
-                <Brain className="w-4 h-4" /" >"
-                AI Business Intelligence"
-              </div>"""
-              <h1 className="text-4xl lg: text-6xl font-bold text-white leading-tight">"
-                AI Business"""
-                <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  Intelligence,
-                </span>"
-              </h1>"""
-              <p className="text-xl text-gray-300 leading-relaxed">,
-                Transform your data into competitive advantage with our AI-powered business intelligence platform. Get real-time insights, predictive analytics, and automated reporting that drives growth."
-              </p>"""
-              <div className="flex flex-col sm: flex-row gap-4">"""
-                <button className="btn-futuristic bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700">"""
-                  <BarChart3 className="w-5 h-5" /" >"
-                  View Dashboard"
-                </button>"""
-                <button className="btn-futuristic-outline">"""
-                  <Download className="w-5 h-5" /" >"
-                  Download Report,
-                </button>
-              </div>
-            </motion.div>,
-            <motion .div,"
-initial="{{" opacity: 0, x: 50 }}"
-              animate="{{" opacity: 1, x: 0 }}"
-              transition="{{" duration: 0.8, delay: 0.2 }}"""
-              className="relative"" >""
-              <div className="relative z-10">"""
-                <div className="w-full h-96 bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-pink-500/20 rounded-2xl border border-blue-500/30 flex items-center justify-center">"""
-                  <div className="text-center">"""
-                    <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">"""
-                      <BarChart3 className="w-12 h-12 text-white" /" >""
-                    </div>"""
-                    <h3 className="text-2xl font-bold text-white mb-2">AI Analytics</h3>"""
-                    <p className="text-gray-300">Intelligent Insights</p>
-                  </div>
-                </div>"
-              </div>"""
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl blur-3xl"></div>
-            </motion.div>
+  const useCases = [
+    'Software Development',
+    'E-commerce & Retail',
+    'Financial Services',
+    'Healthcare & Life Sciences',
+    'Media & Entertainment',
+    'Technology & SaaS'
+  ];
+
+  const pricing = [
+    {
+      name: 'Starter',
+      price: '$299/mo',
+      details: ['Up to 10 users', 'Basic features', 'Email support', 'Standard SLA']
+    },
+    {
+      name: 'Professional',
+      price: '$799/mo',
+      details: ['Up to 50 users', 'Advanced features', 'Priority support', '99.9% SLA']
+    },
+    {
+      name: 'Enterprise',
+      price: '$1,999/mo',
+      details: ['Unlimited users', 'Custom AI models', 'Full ai business intelligence suite', '24/7 dedicated support']
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-white">
+      <section className="bg-gradient-to-br from-indigo-500 via-blue-500 to-cyan-500 py-20 text-center">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
+            <Database className="w-4 h-4 mr-2" />
+            AI-Powered Ai Business Intelligence Intelligence
           </div>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">Ai Business Intelligence Platform</h1>
+          <p className="text-indigo-100 text-xl">
+            Transform your ai business intelligence operations with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.
+          </p>
         </div>
       </section>
-"
-      {/*   */}"""
-      <section className="py-20 bg-slate-800/50">"""
-        <div className="container-responsive">
-          <motion .div,"
-initial="{{" opacity: 0, y: 30 }}"
-            whileInView="{{" opacity: 1, y: 0 }}"
-            transition="{{" duration: 0.8 }}"
-            viewport="{{" once: true }}"""
-            className="text-center mb-16"" >""
-            <h2 className="text-3xl lg: text-5xl font-bold text-white mb-6">
-              Advanced Analytics Features"
-            </h2>"""
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered business intelligence platform combines cutting-edge analytics with machine learning to deliver actionable insights.
-            </p>"
-          </motion.div>"""
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
-            {features.map((feature, index) => (
-              <motion .div,"
-key="{feature.title}""
-                initial="{{" opacity: 0, y: 30 }}"
-                whileInView="{{" opacity: 1, y: 0 }}"
-                transition="{{" duration: 0.6, delay: index * 0.1 }}"
-                viewport="{{" once: true }}"""
-                className="group p-6 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover: border-blue-500/50 transition-all duration-300 hover:bg-slate-700/50"" >`",
-                <div className="{`w-16" h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}` >""
-                  <feature .icon className="w-8 h-8 text-white" /" >""
-                </div>"""
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>"""
-                <p className="text-gray-400 leading-relaxed">{feature.description}</p>
-              </motion.div>
-            ))}
+
+      <section className="py-16 max-w-6xl mx-auto px-6">
+        <div className="grid md:grid-cols-2 gap-10">
+          <div>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced Ai Business Intelligence Features</h2>
+            <ul className="space-y-3">
+              {features.map((feature, index) => (
+                <li key={index} className="flex items-start">
+                  <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700">{feature}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-6 text-sm text-gray-600">
+              Built with enterprise-grade security, SOC 2 compliance, and 99.9% uptime SLA.
+            </div>
           </div>
-        </div>
-      </section>
-"
-      {/*   */}"""
-      <section className="py-20">"""
-        <div className="container-responsive">
-          <motion .div,"
-initial="{{" opacity: 0, y: 30 }}"
-            whileInView="{{" opacity: 1, y: 0 }}"
-            transition="{{" duration: 0.8 }}"
-            viewport="{{" once: true }}"""
-            className="text-center mb-16"" >""
-            <h2 className="text-3xl lg: text-5xl font-bold text-white mb-6">
-              Analytics Solutions"
-            </h2>"""
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">,
-              Comprehensive analytics solutions for every aspect of your business, powered by advanced AI and machine learning.
-            </p>"
-          </motion.div>"""
-          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">,
-            {analyticsTypes.map((analytics, index) => (
-              <motion .div,"
-key="{analytics.title}""
-                initial="{{" opacity: 0, x: index % 2 === 0 ? -30 : 30 }}"
-                whileInView="{{" opacity: 1, x: 0 }}"
-                transition="{{" duration: 0.6, delay: index * 0.1 }}"
-                viewport="{{" once: true }}"""
-                className="p-8 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover: border-blue-500/50 transition-all duration-300"" >""
-                <div className="{`flex" items-start gap-4 mb-6`>`",
-                  <div className="{`w-16" h-16 bg-gradient-to-br ${analytics.color} rounded-xl flex items-center justify-center flex-shrink-0`}` >`}"
-                    <analytics .icon className="w-8 h-8 text-white" /" >"
-                  </div>"
-                  <div>"""
-                    <h3 className="text-2xl font-semibold text-white mb-2">{analytics.title}</h3>"""
-                    <p className="text-gray-400 leading-relaxed mb-2">{analytics.description}</p>"""
-                    <div className="text-2xl font-bold text-blue-400">{analytics.pricing}</div>
-                  </div>"
-                </div>"""
-                <div className="space-y-3">"""
-                  <h4 className="text-lg font-semibold text-white">Key Features: </h4>"""
-                  <ul className="space-y-2">",
-                    {analytics.benefits.map((benefit, idx) => ("""
-                      <li key="{idx}" className="flex items-center gap-3 text-gray-300">"""
-                        <CheckCircle className="w-5 h-5 text-blue-400 flex-shrink-0" /" >"
-                        {benefit}
-                      </li>
+          <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4">Competitive Pricing</h3>
+            <div className="grid md:grid-cols-3 gap-4">
+              {pricing.map((tier, index) => (
+                <div key={index} className="rounded-lg p-4 border border-gray-200 hover:border-indigo-300 transition-colors">
+                  <div className="text-lg font-semibold mb-1">{tier.name}</div>
+                  <div className="text-2xl font-bold text-indigo-600 mb-2">{tier.price}</div>
+                  <ul className="text-sm text-gray-600 space-y-1">
+                    {tier.details.map((detail, detailIndex) => (
+                      <li key={detailIndex}>{detail}</li>
                     ))}
                   </ul>
                 </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-"
-      {/*   */}"""
-      <section className="py-20 bg-slate-800/50">"""
-        <div className="container-responsive">
-          <motion .div,"
-initial="{{" opacity: 0, y: 30 }}"
-            whileInView="{{" opacity: 1, y: 0 }}"
-            transition="{{" duration: 0.8 }}"
-            viewport="{{" once: true }}"""
-            className="text-center mb-16"" >""
-            <h2 className="text-3xl lg: text-5xl font-bold text-white mb-6">
-              Why Choose AI Business Intelligence?"
-            </h2>"""
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Transform your business with data-driven insights that drive growth and competitive advantage.
-            </p>"
-          </motion.div>"""
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">,
-            {benefits.map((benefit, index) => (
-              <motion .div,"
-key="{benefit}""
-                initial="{{" opacity: 0, scale: 0.8 }}"
-                whileInView="{{" opacity: 1, scale: 1 }}"
-                transition="{{" duration: 0.6, delay: index * 0.1 }}"
-                viewport="{{" once: true }}"""
-                className="p-6 bg-slate-700/50 rounded-xl border border-slate-600/50 text-center hover: border-blue-500/50 transition-all duration-300 hover:bg-slate-600/50"" >""
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">"""
-                  <TrendingUp className="w-6 h-6 text-white" /" >""
-                </div>""",
-                <p className="text-white font-medium text-sm leading-relaxed">{benefit}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-"
-      {/*   */}"""
-      <section className="py-20">"""
-        <div className="container-responsive">
-          <motion .div,"
-initial="{{" opacity: 0, y: 30 }}"
-            whileInView="{{" opacity: 1, y: 0 }}"
-            transition="{{" duration: 0.8 }}"
-            viewport="{{" once: true }}"""
-            className="text-center mb-16"" >""
-            <h2 className="text-3xl lg: text-5xl font-bold text-white mb-6">
-              Connect Your Data Sources"
-            </h2>"""
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Seamlessly integrate with your existing tools and platforms to create a unified view of your business.
-            </p>"
-          </motion.div>"""
-          <div className="grid grid-cols-3 md:grid-cols-6 gap-6">,
-            {dataSources.map((source, index) => (
-              <motion .div,"
-key="{source}""
-                initial="{{" opacity: 0, y: 30 }}"
-                whileInView="{{" opacity: 1, y: 0 }}"
-                transition="{{" duration: 0.6, delay: index * 0.1 }}"
-                viewport="{{" once: true }}"""
-                className="p-6 bg-slate-800/50 rounded-xl border border-slate-700/50 text-center hover: border-blue-500/50 transition-all duration-300 hover:bg-slate-700/50 group"" >""
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">"""
-                  <Database className="w-6 h-6 text-white" /" >""
-                </div>""",
-                <p className="text-white font-medium text-sm leading-relaxed">{source}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-"
-      {/*   */}"""
-      <section className="py-20 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10">"""
-        <div className="container-responsive text-center">
-          <motion .div,"
-initial="{{" opacity: 0, y: 30 }}"
-            whileInView="{{" opacity: 1, y: 0 }}"
-            transition="{{" duration: 0.8 }}"
-            viewport="{{" once: true }}"""
-            className="max-w-4xl mx-auto"" >""
-            <h2 className="text-3xl lg: text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Data?"
-            </h2>"""
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses using AI Business Intelligence to make smarter decisions and drive growth."
-            </p>"""
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"""
-              <button className="btn-futuristic bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700">"""
-                <MessageCircle className="w-5 h-5" /" >"
-                Start Free Trial"
-              </button>"""
-              <button className="btn-futuristic-outline">"""
-                <Phone className="w-5 h-5" /" >"
-                Schedule Demo,
-              </button>
+              ))}
             </div>
-          </motion.div>
-        </div>
-      </section>
-",
-      {/*   */}"""
-      <section className="py-20">"""
-        <div className="container-responsive">"""
-          <div className="grid grid-cols-1 lg: grid-cols-2 gap-12">,
-            <motion .div,"
-initial="{{" opacity: 0, x: -30 }}"
-              whileInView="{{" opacity: 1, x: 0 }}"
-              transition="{{" duration: 0.8 }}"
-              viewport="{{" once: true }}" >""
-              <h2 className="text-3xl lg: text-4xl font-bold text-white mb-6">
-                Get Started Today"
-              </h2>"""
-              <p className="text-gray-300 mb-8 leading-relaxed">
-                Ready to unlock the power of your data? Our AI Business Intelligence team is here to help you implement advanced analytics that drive results."
-              </p>"""
-              <div className="space-y-6">"""
-                <div className="flex items-center gap-4">"""
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">"""
-                    <Phone className="w-6 h-6 text-white" /" >"
-                  </div>"
-                  <div>"""
-                    <p className="text-white font-semibold">Phone</p>"""
-                    <p className="text-gray-300">+1 302 464 0950</p>
-                  </div>"
-                </div>"""
-                <div className="flex items-center gap-4">"""
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">"""
-                    <Mail className="w-6 h-6 text-white" /" >"
-                  </div>"
-                  <div>"""
-                    <p className="text-white font-semibold">Email</p>"""
-                    <p className="text-gray-300">kleber@ziontechgroup.com</p>
-                  </div>"
-                </div>"""
-                <div className="flex items-center gap-4">"""
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">"""
-                    <MapPin className="w-6 h-6 text-white" /" >"
-                  </div>"
-                  <div>"""
-                    <p className="text-white font-semibold">Address</p>"""
-                    <p className="text-gray-300">364 E Main St STE 1008<br /" >Middletown DE 19709</p>"
-                  </div>
-                </div>
-              </div>
-            </motion.div>,
-            <motion .div,"
-initial="{{" opacity: 0, x: 30 }}"
-              whileInView="{{" opacity: 1, x: 0 }}"
-              transition="{{" duration: 0.8, delay: 0.2 }}"
-              viewport="{{" once: true }}"""
-              className="p-8 bg-slate-800/50 rounded-2xl border border-slate-700/50"" >""
-              <h3 className="text-2xl font-semibold text-white mb-6">Request Analytics Demo</h3>"""
-              <form className="space-y-6">"""
-                <div className="grid grid-cols-1 md: grid-cols-2 gap-4">"
-                  <input """
-                    type="text""
-                    placeholder="First Name""
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent""
-                  /" >""
-                  <input """
-                    type="text""
-                    placeholder="Last Name""
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent""
-                  /" >"
-                </div>"
-                <input """
-                  type="email""
-                  placeholder="Email Address""
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent""
-                /" >""
-                <input """
-                  type="text""
-                  placeholder="Company""
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent""
-                /" >""
-                <textarea """
-                  placeholder="Tell us about your analytics needs..."">
-                  rows={4}"""
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"" ></textarea>""
-                <button """
-                  type="submit""
-                  className="w-full btn-futuristic bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700"" >""
-                  <MessageCircle className="w-5 h-5" /" >"
-                  Request Demo,
-                </button>
-              </form>
-            </motion.div>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <Link href="/pricing" className="px-5 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors inline-flex items-center">
+                View Full Pricing <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
+              <Link href="/contact" className="px-5 py-3 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors inline-flex items-center">
+                Contact Sales <Phone className="w-4 h-4 ml-2" />
+              </Link>
+            </div>
           </div>
         </div>
-      </section>;
-    </div>;,
-  )};
-"
-export default AIBusinessIntelligence;"`""
+      </section>
+
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Key Benefits</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
+                <div className="flex items-center mb-3">
+                  <Zap className="w-6 h-6 text-indigo-600 mr-3" />
+                  <h3 className="text-lg font-semibold text-gray-900">Performance</h3>
+                </div>
+                <p className="text-gray-600">{benefit}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Industries We Serve</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {useCases.map((industry, index) => (
+              <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                <div className="flex items-center mb-3">
+                  <Target className="w-5 h-5 text-indigo-600 mr-3" />
+                  <h3 className="text-lg font-semibold text-gray-900">{industry}</h3>
+                </div>
+                <p className="text-gray-600">Comprehensive ai business intelligence solutions tailored for {industry.toLowerCase()}.</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-indigo-600">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Ai Business Intelligence?</h2>
+          <p className="text-indigo-100 text-xl mb-8">
+            Get started with our AI-powered ai business intelligence platform today.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/contact" className="px-8 py-3 bg-white text-indigo-600 rounded-lg hover:bg-gray-100 transition-colors inline-flex items-center">
+              Get Started <ArrowRight className="w-4 h-4 ml-2" />
+            </Link>
+            <Link href="/demo" className="px-8 py-3 border border-white text-white rounded-lg hover:bg-white/10 transition-colors inline-flex items-center">
+              Schedule Demo <Mail className="w-4 h-4 ml-2" />
+            </Link>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

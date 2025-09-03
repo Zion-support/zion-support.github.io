@@ -1,14 +1,9 @@
-export const safeStorage = { export default safeStorage,;,"});
-  })
-;"
-  });,"})
- export const safeStorage = {} export;export;export default safeStorage;
+// safeStorage utility
+export const safeStorage = {
+  // Placeholder utility functions
+  init: () => {
+    console.log('safeStorage initialized');
+  }
+};
 
-&apos,'
- export const safeStorage = { export default safeStorage';
- export const safeStorage = { export default safeStorage;
-;
-"
-"";
-}"
-"
+export default safeStorage;

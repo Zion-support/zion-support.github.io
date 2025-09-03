@@ -1,16 +1,18 @@
-import React from "react";
-import { SEO } from "@/components/SEO";
-;,"});,"})
-export default function jobService() {return ("
-    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
-      <SEO title="jobService - Zion Tech Group" description="Professional jobService services by Zion Tech Group" />"
-      <div className="container mx-auto px-4 py-20">"
-        <h1 className="text-4xl font-bold text-white mb-8">jobService</h1>"
-        <p className="text-gray-300 text-lg">
-          Professional jobService services to help your business grow.
-        </p>
-      </div>;
-    </div>;
-  );
-}"
-"
+// jobService service
+export class jobServiceService {
+  constructor() {
+    this.baseUrl = process.env.NEXT_PUBLIC_API_URL || '/api';
+  }
+
+  async get() {
+    try {
+      const response = await fetch(`${this.baseUrl}/jobservice`);
+      return await response.json();
+    } catch (error) {
+      console.error('Error fetching data:', error);
+      throw error;
+    }
+  }
+}
+
+export default new jobServiceService();

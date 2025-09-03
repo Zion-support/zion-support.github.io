@@ -1,33 +1,60 @@
-import React from "react";
-const RequestQuote: React.FC = () => {
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+
+const RequestQuote = () => {
   return (
-    <div className="mx-auto max-w-3xl px-4 py-12">"
-      <h1 className="text-3xl font-bold text-gray-900">Request a Quote</h1>"
-      <p className="mt-4 text-gray-700">
-        Tell us about your project. We will reach out with a tailored proposal.
-      </p>"
-      <form className="mt-8 space-y-4">
-        <div>"
-          <label className="block text-sm font-medium text-gray-700">Name</label>"
-          <input className="mt-1 w-full rounded-md border border-gray-300 px-3 py-2" placeholder="Your name" />
+    <>
+      <Head>
+        <title>Request Quote - Zion Tech Group</title>
+        <meta name="description" content="Professional Request Quote services" />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-8">
+              Request Quote
+            </h1>
+            <p className="text-xl text-gray-600 mb-12">
+              Professional Request Quote services and solutions
+            </p>
+            
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h2 className="text-2xl font-semibold mb-4">Our Services</h2>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Professional Solutions</li>
+                  <li>• Expert Implementation</li>
+                  <li>• 24/7 Support</li>
+                  <li>• Custom Development</li>
+                </ul>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Industry Expertise</li>
+                  <li>• Proven Results</li>
+                  <li>• Scalable Solutions</li>
+                  <li>• Competitive Pricing</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                View Pricing
+              </Link>
+              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
+                Contact Us
+              </Link>
+            </div>
+          </div>
         </div>
-        <div>"
-          <label className="block text-sm font-medium text-gray-700">Email</label>"
-          <input type="email" className="mt-1 w-full rounded-md border border-gray-300 px-3 py-2" placeholder="you@example.com" />
-        </div>
-        <div>"
-          <label className="block text-sm font-medium text-gray-700">Company</label>"
-          <input className="mt-1 w-full rounded-md border border-gray-300 px-3 py-2" placeholder="Company name" />
-        </div>
-        <div>"
-          <label className="block text-sm font-medium text-gray-700">Project details</label>",
-          <textarea className="mt-1 w-full rounded-md border border-gray-300 px-3 py-2" rows="{5}" placeholder="Describe what you need" />
-        </div>"
-        <button type="submit" className="rounded-md bg-blue-600 px-5 py-2.5 text-white hover: bg-blue-700">Submit</button>
-      </form>,
-    </div>,,
-  )};
+      </div>
+    </>
+  );
+};
 
 export default RequestQuote;
-"
-"
