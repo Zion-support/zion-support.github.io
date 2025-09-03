@@ -23,41 +23,50 @@ export interface Service {
 export const services: Service[] = [
   // Micro SaaS Services
   {
-    id:,
-  ai-content-generator',
-    name: 'AI Content Generator Pro,
-    category:,
-  micro-saas',
-    description: Advanced AI-powered content generation platform for blogs, social media, and marketing materials with GPT-4 integration.,
-  ,
+    id: 'ai-content-generator',
+    name: 'AI Content Generator Pro',
+    category: 'micro-saas',
+    description: 'Advanced AI-powered content generation platform for blogs, social media, and marketing materials with GPT-4 integration.',
+    icon: 'Brain',
     features: [
-  'Multi-language content generation,
-  'SEO-optimized content,Brand voice customization,Content scheduling,Analytics dashboard,API integration,Plagiarism detection,Content templates library'
+      'Multi-language content generation',
+      'SEO-optimized content',
+      'Brand voice customization',
+      'Content scheduling',
+      'Analytics dashboard',
+      'API integration',
+      'Plagiarism detection',
+      'Content templates library'
     ],
     pricing: {
       starter: 29,
       professional: 79,
       enterprise: 199,
-      currency:,
-  USD'
+      currency: 'USD'
     },
     benefits: [
-  '10x faster content creation,
-,
-  Consistent brand messaging,SEO optimization built-in,Multi-platform publishing,Cost-effective content marketing'
+      '10x faster content creation',
+      'Consistent brand messaging',
+      'SEO optimization built-in',
+      'Multi-platform publishing',
+      'Cost-effective content marketing'
     ],
     useCases: [
-  'Blog content creation,
-,
-  Social media management,Email marketing campaigns,Product descriptions,Marketing copywriting'
+      'Blog content creation',
+      'Social media management',
+      'Email marketing campaigns',
+      'Product descriptions',
+      'Marketing copywriting'
     ],
     technologies: [
-  'OpenAI GPT-4,
-,
-  React,Node.js,PostgreSQL,Stripe'],
-    link: 'https://ziontechgroup.com/services/ai-content-generator,
-    icon:,
-  📝'
+      'OpenAI GPT-4',
+      'React',
+      'Node.js',
+      'PostgreSQL',
+      'Stripe'
+    ],
+    link: 'https://ziontechgroup.com/services/ai-content-generator',
+    icon: '📝'
   },
   {
     id: 'ai-meeting-notes-assistant,

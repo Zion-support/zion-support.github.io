@@ -1,96 +1,60 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const baseUrl = 'https: //ziontechgroup.com';
+  const baseUrl = 'https://ziontechgroup.com';
   
   const staticPages = [
-<<<<<<< HEAD
     '', '/about',
     '/contact', '/services',
-    '/products', '/talent',
-    '/blog', '/blockchain-solutions',
-    '/iot-platforms', '/enhanced-home',
+    '/ai-services', '/it-services',
+    '/micro-saas', '/solutions',
+    '/blog', '/talent',
     '/auth', '/auth/callback',
     '/auth/forgot-password', '/auth/reset-password',
-    '/auth/verify',  ];
+    '/auth/verify'
+  ];
 
   const blogPages = [
-    '/blog/5g-technology-and-its-impact-on-iot-chat', '/blog/ai-powered-marketplaces-the-future-of-digital-commerce-chat',
-    '/blog/api-first-development-building-scalable-systems-chat', '/blog/augmented-reality-in-enterprise-applications-chat',
-    '/blog/blockchain-technology-in-modern-business-solutions-chat', '/blog/cloud-native-architecture-best-practices-chat',
-    '/blog/cybersecurity-trends-for-2024-and-beyond-chat', '/blog/data-analytics-in-digital-transformation-chat',
-    '/blog/devops-automation-strategies-for-modern-teams-chat', '/blog/digital-twins-revolutionizing-industry-4-0-chat',
-    '/blog/machine-learning-applications-in-enterprise-software-chat', '/blog/microservices-architecture-benefits-and-challenges-chat',
-    '/blog/quantum-computing-implications-for-business-chat', '/blog/sustainable-technology-green-computing-solutions-chat',
-    '/blog/the-rise-of-edge-computing-in-iot-applications-chat',  ];
+    '/blog/5g-technology-and-its-impact-on-iot',
+    '/blog/ai-powered-marketplaces-the-future-of-digital-commerce',
+    '/blog/api-first-development-building-scalable-systems',
+    '/blog/augmented-reality-in-enterprise-applications',
+    '/blog/blockchain-technology-in-modern-business-solutions',
+    '/blog/cloud-native-architecture-best-practices'
+  ];
 
   const servicePages = [
-    '/services/ai-model-development-chat', '/services/api-development-chat',
-    '/services/business-intelligence-chat', '/services/cloud-migration-services-chat',
-    '/services/data-pipeline-engineering-chat', '/services/database-design-chat',
-    '/services/mobile-app-development-chat', '/services/network-security-chat',
-    '/services/performance-optimization-chat', '/services/quality-assurance-testing-chat',
-    '/services/security-auditing-chat', '/services/system-administration-chat',
-    '/services/technical-documentation-chat', '/services/ui-ux-design-chat',
-    '/services/web-application-development-chat',  ];
-
-  const categoryPages = [
-    '/category/ai-consulting-chat', '/category/business-intelligence-chat',
-    '/category/cloud-architecture-chat', '/category/cybersecurity-chat',
-    '/category/data-science-chat', '/category/database-administration-chat',
-    '/category/devops-automation-chat', '/category/mobile-development-chat',
-    '/category/network-engineering-chat', '/category/product-management-chat',
-    '/category/quality-assurance-chat', '/category/system-administration-chat',
-    '/category/technical-writing-chat', '/category/ui-ux-design-chat',
-    '/category/web-development-chat',  ];
-
-  const chatContentPages = [
-    '/chat-content/ai-powered-business-solutions-discussion', '/chat-content/cloud-computing-strategies',
-    '/chat-content/cybersecurity-best-practices', '/chat-content/data-analytics-implementation',
-    '/chat-content/digital-transformation-insights', '/chat-content/emerging-technology-trends',
-    '/chat-content/future-of-work-and-automation', '/chat-content/innovation-in-enterprise-technology',
-    '/chat-content/sustainable-technology-practices', '/chat-content/technology-implementation-strategies',
+    '/services/ai-autonomous-business-operations-platform',
+    '/services/ai-cybersecurity-threat-intelligence',
+    '/services/ai-financial-trading-platform',
+    '/services/ai-healthcare-diagnostics',
+    '/services/ai-supply-chain-optimization',
+    '/services/blockchain-solutions',
+    '/services/cloud-infrastructure',
+    '/services/iot-platforms'
   ];
 
-  const allPages = [
-    ...staticPages, ...blogPages,
-    ...servicePages, ...categoryPages,
-    ...chatContentPages,  ];
-
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">
-  ${allPages
-=======
-    '',
-    '/about',
-    '/services',
-    '/contact',
-    '/pricing',
-    '/careers',
-    '/team',
-    '/case-studies',
-    '/blog',
-    '/privacy',
-    '/terms'
-  ];
+  const allPages = [...staticPages, ...blogPages, ...servicePages];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  ${staticPages
->>>>>>> main
+  ${allPages
     .map((page) => {
+      const url = `${baseUrl}${page}`;
+      const priority = page === '' ? '1.0' : page.startsWith('/blog') ? '0.8' : '0.9';
+      const changefreq = page === '' ? 'daily' : page.startsWith('/blog') ? 'weekly' : 'monthly';
+      
       return `
-    <url>
-      <loc>${baseUrl}${page}</loc>
-      <lastmod>${new Date().toISOString()}</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>${page === '' ? '1.0' : '0.8'}</priority>
-    </url>`;
+  <url>
+    <loc>${url}</loc>
+    <lastmod>${new Date().toISOString()}</lastmod>
+    <changefreq>${changefreq}</changefreq>
+    <priority>${priority}</priority>
+  </url>`;
     })
     .join('')}
 </urlset>`;
 
   res.setHeader('Content-Type', 'text/xml');
-  res.write(sitemap);
-  res.end();
+  res.status(200).send(sitemap);
 }
