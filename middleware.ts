@@ -1,50 +1,48 @@
-import { NextResponse } from "next/server";
-import type { NextRequest } from "next/server";
+import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
 
-// Define public routes that don't require authentication
-const publicRoutes = [
-  "/",
-  "/about",
-  "/contact",
-  "/blog",
-  "/services",
-  "/products",
-  "/talent",
-  "/auth/login",
-  "/auth/register",
-  "/auth/forgot-password",
-  "/auth/reset-password",
-  "/auth/verify",
-];
+export function middleware(_request: NextRequest) {
+  const response = NextResponse.next();
 
-export function middleware(request: NextRequest) {
-  const { pathname } = request.nextUrl;
+  // Security headers
+<<<<<<< HEAD
+  response.headers.set('X-Content-Type-Options', 'nosniff');
+  response.headers.set('X-Frame-Options', 'DENY');
+  response.headers.set('X-XSS-Protection', '1; mode=block');
+  response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+  response.headers.set(
+    'Permissions-Policy',
+    'camera=(), microphone=(), geolocation=()'
+=======
+  response.headers.set('X-Frame-Options,DENY');
+  response.headers.set('X-XSS-Protection,1; mode=block');
+  response.headers.set('Referrer-Policy,strict-origin-when-cross-origin');
+  response.headers.set(
+    'Permissions-Policy,camera=(), microphone=(), geolocation=()'
+>>>>>>> main
+  );
 
-  // Allow public routes
-  if (publicRoutes.includes(pathname)) {
-    return NextResponse.next();
-  }
+  // Content Security Policy
+  const csp = [
+<<<<<<< HEAD
+    "default-src 'self'",
+    "script-src 'self' 'unsafe-eval' 'unsafe-inline'",
+    "style-src 'self' 'unsafe-inline'",
+    "img-src 'self' data: https:",
+    "font-src 'self'",
+    "connect-src 'self'",
+    "frame-ancestors 'none'",
+  ].join('; ');
+=======
+    "default-src 'self',script-src 'self' 'unsafe-eval' 'unsafe-inline',style-src 'self' 'unsafe-inline',img-src 'self' data: https:,font-src 'self',connect-src 'self',frame-ancestors 'none'"
+  ].join();
+>>>>>>> main
 
-  // Check for authentication cookie
-  const authCookie = request.cookies.get("auth-token");
+  response.headers.set('Content-Security-Policy', csp);
 
-  if (!authCookie) {
-    // Redirect to login if not authenticated
-    return NextResponse.redirect(new URL("/auth/login", request.url));
-  }
-
-  return NextResponse.next();
+  return response;
 }
 
 export const config = {
-  matcher: [
-    /*
-     * Match all request paths except for the ones starting with:
-     * - api (API routes)
-     * - _next/static (static files)
-     * - _next/image (image optimization files)
-     * - favicon.ico (favicon file)
-     */
-    "/((?!api|_next/static|_next/image|favicon.ico).*)",
-  ],
+  matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
 };

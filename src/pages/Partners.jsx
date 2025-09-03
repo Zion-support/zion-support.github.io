@@ -1,0 +1,18 @@
+<<<<<<< HEAD
+const partnershipTypes = [{ title: &apos;Technology Partners&apos;, description: &apos;Collaborate with leading tech companies to deliver cutting - edge solutions&apos;, icon: &apos;, benefits: [ &apos;Access to latest technologies&apos;, &apos;Joint product development&apos;, &apos;Shared marketing opportunities&apos;]}, { title: &apos;Channel Partners&apos;, description: &apos;Expand your reach through our global network of resellers and distributors&apos;, icon: &apos;, benefits: [&apos;Increased market presence&apos;, &apos;Revenue sharing programs&apos;, &apos;Training and certification&apos;]}, { title: &apos;Strategic Partners&apos;, description: &apos;Form long - term alliances for mutual growth and market expansion&apos;, icon: &apos;, benefits: [&apos;Joint ventures&apos;, &apos;Market expansion support&apos;, &apos;Shared R & D initiatives&apos;]}, { title: &apos;Academic Partners&apos;, description: &apos;Partner with universities and research institutions for innovation&apos;, icon: &apos;, benefits: [&apos;Research collaboration&apos;, &apos;Talent pipeline&apos;, &apos;Innovation programs&apos;]}]&apos; const;const existingPartners = [ { name: &apos;Microsoft&apos;, logo: &quot;https:;&quot;}
+=======
+<<<<<<< HEAD
+const partnershipTypes = [{ title: 'Technology Partners', description: 'Collaborate with leading tech companies to deliver cutting - edge solutions', icon: ', benefits: [ 'Access to latest technologies', 'Joint product development', 'Shared marketing opportunities']}, { title: 'Channel Partners', description: 'Expand your reach through our global network of resellers and distributors', icon: ', benefits: ['Increased market presence', 'Revenue sharing programs', 'Training and certification']}, { title: 'Strategic Partners', description: 'Form long - term alliances for mutual growth and market expansion', icon: ', benefits: ['Joint ventures', 'Market expansion support', 'Shared R & D initiatives']}, { title: 'Academic Partners', description: 'Partner with universities and research institutions for innovation', icon: ', benefits: ['Research collaboration', 'Talent pipeline', 'Innovation programs']}] const existingPartners = [ { name: 'Microsoft', logo: "https:;"
+<<<<<<< HEAD
+""
+}
+=======
+=======
+const partnershipTypes = [
+  { title: 'Technology Partners', description: 'Collaborate with leading tech companies to deliver cutting - edge solutions', icon: ', benefits: [ 'Access to latest technologies,Joint product development,Shared marketing opportunities']}, { title: 'Channel Partners', description: 'Expand your reach through our global network of resellers and distributors', icon: ', benefits: ['Increased market presence,Revenue sharing programs,Training and certification']}, { title: 'Strategic Partners', description: 'Form long - term alliances for mutual growth and market expansion', icon: ', benefits: ['Joint ventures,Market expansion support,Shared R & D initiatives']}, { title: 'Academic Partners', description: 'Partner with universities and research institutions for innovation', icon: ', benefits: ['Research collaboration,Talent pipeline,Innovation programs']}] const existingPartners = [
+  { name: 'Microsoft', logo: "https:;"
+"
+}
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
