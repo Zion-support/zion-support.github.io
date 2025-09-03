@@ -1,74 +1,65 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require('fs');
 const path = require('path');
-;
-function fixSyntaxErrors(filePath) {;
-  console.log(`Fixing syntax errors in: ${filePath}`);
-  ;
-  let content = fs.readFileSync(filePath, 'utf8');
-  ;
-  // Fix common syntax errors;
-  content = content;
-    // Remove extra semicolons after class declarations;
-    .replace(/class\s+\w+\s*\{;/g, (match) => match.replace('{;', '{'));
-    // Remove extra semicolons after method declarations;
-    .replace(/(\w+)\s*\([^)]*\)\s*\{;/g, '$1() {');
-    // Remove extra semicolons after if/for/while statements;
-    .replace(/(if|for|while|switch)\s*\([^)]*\)\s*\{;/g, '$1() {');
-    // Remove trailing commas before closing braces;
-    .replace(/,(\s*[}\]])/g, '$1');
-    // Remove extra semicolons after closing braces;
-    .replace(/\}(\s*;)/g, '}$1');
-    // Fix method declarations with extra semicolons;
-    .replace(/(\w+)\s*\([^)]*\)\s*\{;/g, '$1() {');
-    // Remove standalone semicolons;
-    .replace(/^\s*;\s*$/gm, '');
-    // Fix object property declarations;
-    .replace(/(\w+):\s*([^,}]+),;/g, '$1: $2,');
-    // Fix array declarations;
-    .replace(/\[\s*\]\s*;/g, '[]');
-    // Remove extra semicolons in function calls;
-    .replace(/\(\s*\)\s*;/g, '()');
-    // Fix constructor calls;
-    .replace(/new\s+(\w+)\s*\(\s*\)\s*;/g, 'new $1()');
-    // Clean up multiple semicolons;
-    .replace(/;+/g, ';');
-    // Remove semicolons at end of lines that shouldn't have them;
-    .replace(/;\s*$/gm, (match, offset, string) => {;
-      const lines = string.split('\n');
-      const lineIndex = string.substring(0, offset).split('\n').length - 1;
-      const line = lines[lineIndex];
-      ;
-      // Don't remove semicolons from statements that should have them;
-      if (line.match(/(const|let|var|return|throw|break|continue)\s/)) {;
-        return match;,
-}
-      ;
-      // Don't remove semicolons from object/array literals;
-      if (line.match(/[\[\{]\s*$/)) {;
-        return match;,
-}
-      ;
-      return match.replace(';', '');,
-});
-;
-  fs.writeFileSync(filePath, content);
-  console.log(`Fixed syntax errors in: ${filePath}`);,
-}
-;
-// Fix the main automation files;
-const filesToFix = [;
-  'simple-automation-orchestrator.cjs',;
-  'run-automation-suite.cjs';
+
+// List of files to fix
+const filesToFix = [
+  'advanced-app-improvement-suite.cjs',
+  'advanced-syntax-fixer.cjs', 
+  'aggressive-fix.cjs',
+  'aggressive-fix.js'
 ];
-;
-filesToFix.forEach(file => {;
-  if (fs.existsSync(file)) {;
-    fixSyntaxErrors(file);,
-} else {;
-    console.log(`File not found: ${file}`);,
+
+function fixSyntaxErrors(content) {
+  // Fix common syntax patterns
+  let fixed = content;
+  
+  // Remove extra semicolons and commas
+  fixed = fixed.replace(/;,;,/g, '');
+  fixed = fixed.replace(/;,/g, '');
+  fixed = fixed.replace(/;$/gm, '');
+  
+  // Fix class names
+  fixed = fixed.replace(/class \$1 \{/g, 'class SyntaxFixer {');
+  
+  // Fix function declarations
+  fixed = fixed.replace(/\{;/g, '{');
+  fixed = fixed.replace(/\};/g, '}');
+  
+  // Fix array declarations
+  fixed = fixed.replace(/\[;/g, '[');
+  fixed = fixed.replace(/\[,/g, '[');
+  fixed = fixed.replace(/,\];/g, ']');
+  
+  // Fix string literals with backticks
+  fixed = fixed.replace(/`([^`]*?)`;/g, '`$1`');
+  
+  // Fix JSX syntax
+  fixed = fixed.replace(/return \(;/g, 'return (');
+  fixed = fixed.replace(/<div className="([^"]*?)">;/g, '<div className="$1">');
+  
+  // Fix template literals
+  fixed = fixed.replace(/`\$\{([^}]*?)\`/g, '`${$1}`');
+  
+  // Fix method chaining
+  fixed = fixed.replace(/\.split\("-"\);/g, '.split("-")');
+  fixed = fixed.replace(/\.map\(([^)]*?)\);/g, '.map($1)');
+  fixed = fixed.replace(/\.join\(""\);/g, '.join("")');
+  
+  return fixed;
 }
+
+filesToFix.forEach(filePath => {
+  if (fs.existsSync(filePath)) {
+    console.log(`Fixing ${filePath}...`);
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixed = fixSyntaxErrors(content);
+    fs.writeFileSync(filePath, fixed);
+    console.log(`Fixed ${filePath}`);
+  } else {
+    console.log(`File not found: ${filePath}`);
+  }
 });
-;
-console.log('Syntax error fixing completed!');}}}}}}
+
+console.log('Syntax fixing complete!');
