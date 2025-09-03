@@ -2,10 +2,11 @@
   "name": "zion-tech-group-website",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "vite",
+    "build": "vite build",
+    "start": "vite preview",
     "postbuild": "echo 'Build completed successfully'",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
@@ -157,12 +158,18 @@
     "automation:full": "bash scripts/automation-suite.sh"
   },
   "dependencies": {
+    "@vitejs/plugin-react": "^5.0.2",
+    "framer-motion": "^12.23.12",
     "lucide-react": "^0.536.0",
     "next": "^10.2.3",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-helmet-async": "^2.0.5",
+    "react-router-dom": "^7.8.2",
+    "vite": "^7.1.4"
   },
   "devDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "^4.50.0",
     "@types/next": "^8.0.7",
     "@types/node": "^16.18.126",
     "@types/react": "^17.0.87",
