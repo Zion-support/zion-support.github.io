@@ -1,1 +1,15 @@
-export interface ServiceItem { id: string; title: string; category?: string; price?: number; rating?: number; image?: string} export async function fetchServices(category?: string, q?: string: any): Promise<ServiceItem[]> { if (category) params.append("category", category); if (q) params.append("q", q); if (!res.ok) { throw new Error("Failed to fetch services")} return res.json()} ";"""
+import React from 'react';
+import {SEO } from '@/components/SEO';
+
+export default function services() {return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+      <SEO title="services - Zion Tech Group" description="Professional services services by Zion Tech Group" />
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-4xl font-bold text-white mb-8">services</h1>
+        <p className="text-gray-300 text-lg">
+          Professional services services to help your business grow.
+        </p>
+      </div>
+    </div>
+  );
+}

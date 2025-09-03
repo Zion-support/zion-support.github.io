@@ -1,4 +1,4 @@
-import {}
+import: {}
   Target,
   Brain,
   Users,
@@ -23,7 +23,9 @@ import {}
   Calendar,
   GitBranch,
   PieChart,
-  AlertTriangle} from 'lucide-react.ts';
+<<<<<<< HEAD
+  AlertTriangle} from
+  'lucide-react.ts';
 
 :pages.disabled/pages/services/ai-project-management.tsx
 export default function AIProjectManagement(...args: any[]): any {
@@ -34,13 +36,32 @@ export default function AIProjectManagement(...args: any[]): any {
         title="AI Project Management Services - Zion Tech Group""
         description="Revolutionary AI-powered project management that optimizes planning, resource allocation, and risk management. Deliver projects faster, cheaper, and with higher success rates."
       />
+
 "{/* Hero Section */}""
+
+"
+export default function AIProjectManagement(...args: any[]): any {}
+  return()
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO""
+        title="AI Project Management Services - Zion Tech Group""
+        description="Revolutionary AI-powered project management that optimizes planning, resource allocation, and risk management. Deliver projects faster, cheaper, and with higher success rates.""
+      />
+
+      {/* Hero Section */}""
+>>>>>>> pr-10728
       <section className="relative overflow-hidden py-20 lg:py-32">""
         <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 via-red-500/10 to-pink-500/10"></div>"        <div className="container mx-auto px-4 relative z-10">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-project-management.tsx
+
             animate={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
+
+            animate={{ opacity: 1, y: 0 }}"
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}""
+>>>>>>> pr-10728
             className="text-center max-w-4xl mx-auto""
           >""
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-full border border-orange-400/30 mb-6">""
@@ -56,13 +77,120 @@ export default function AIProjectManagement(...args: any[]): any {
               </span>"
               <br />""
               <span className="text-white">That Delivers Results</span>
+
             </h1>"""
+
+            </h1>"
+                AI Project Management;
+              </span>            </div>
+""
+            <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">""
+              <span className="bg-gradient-to-r from-orange-400 via-red-500 to-pink-600 bg-clip-text text-transparent">
+                AI Project Management;
+              </span>
+              <br />""
+              <span className="text-white">That Delivers Results</span>
+            </h1>
+""
+>>>>>>> pr-10728
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+=======
+  AlertTriangle} from;
+  'lucide-react.ts';';
+:pages.disabled/pages/services/ai-project-management.tsx;
+export: default function AIProjectManagement(...args: any[]): any: {
+  return();
+<<<<<<< HEAD
+    <div: className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>'';
+      <SEO''';
+        title='AI: Project Management Services - Zion Tech Group'';';
+        description='Revolutionary: AI-powered project management that optimizes plannin,g, resource allocation, and risk management. Deliver projects faster, cheaper, and with higher success rates.'/>';
+'{/* Hero: Section */}''      <section className='relative overflow-hidden py-20 lg: py-32'>''';
+        <div: className='absolute inset-0 bg-gradient-to-r from-orange-500/10 via-red-500/10 to-pink-500/10'></div>'        <div className='container mx-auto px-4 relative z-10'>';
+          <motion.div;
+            initial={{ opacity: ,0, y: 20, }}
+:pages.disabled/pages/services/ai-project-management.tsx;
+            animate={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.8, }}''            className='text-center: max-w-4xl mx-auto''>''';
+            <div: className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-full border border-orange-400/30 mb-6'>''';
+              <Target: className='w-5 h-5 text-orange-400 mr-2'  />''';
+              <span: className='text-orange-300 font-medium'>';
+:pages.disabled/pages/services/ai-project-management.tsx;
+                AI: Project Management
+              </span>            </div>';';
+''';
+            <h1: className='text-5xl lg: text-7xl: font-bold text-white mb-6'>''';
+              <span: className='bg-gradient-to-r from-orange-400 via-red-500 to-pink-600 bg-clip-text text-transparent'>';
+                AI: Project Management
+              </span>'';
+              <br: />''';
+              <span: className='text-white'>That Delivers Results</span>';
+            </h1>'''            <p: className='text-xl lg:text-2xl: text-gray-300 mb-8 max-w-3xl mx-auto'>';
+              Transform: your project delivery with AI-powered management that;
+              optimizes: plannin,g, resource allocation, and risk management.;
+              Deliver: projects faster, cheaper, and with unprecedented success;
+              rates.;
+:pages.disabled/pages/services/ai-project-management.tsx: </p>';';
+''';
+            <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>';
+              <motion.button;
+                whileHover={{ scale: 1.05, }}';';
+                whileTap={{ scale: 0.95, }}'';';
+                className='px-8: py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover: from-orange-600: hover:to-red-600: transition-all duration-300 flex items-center justify-center''>''';
+                <Rocket: className='w-5 h-5 mr-2'  />                Start Free Trial';
+              </motion.button>
+              <motion.button;
+                whileHover={{ scale: 1.05, }}';';
+                whileTap={{ scale: 0.95, }}'';';
+                className='px-8: py-4 border border-orange-400/30 text-orange-300 font-semibold rounded-lg hover: bg-orange-400/10: transition-all duration-300 flex items-center justify-center''>''';
+                <Video: className='w-5 h-5 mr-2'  />                Watch Demo</motion.button>            </div>';
+          </motion.div>
+        </div>
+      </section>
+:pages.disabled/pages/services/ai-project-management.tsx: '{/* Features Section *,/}''      <section className='py-20'>''';
+        <div: className='container mx-auto px-4'>';
+=======
+    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>'
+      <SEO'''
+        title='AI Project Management Services - Zion Tech Group'';
+        description='Revolutionary AI-powered project management that optimizes planning, resource allocation, and risk management. Deliver projects faster, cheaper, and with higher success rates.'/>
+'{/* Hero Section */}      <section className='relative overflow-hidden py-20 lg:py-32>''
+        <div className='absolute inset-0 bg-gradient-to-r from-orange-500/10 via-red-500/10 to-pink-500/10'></div>'        <div className='container mx-auto px-4 relative z-10'>
+          <motion.div;
+            initial={{ opacit,
+    y: 0, y: 20 }}
+:pages.disabled/pages/services/ai-project-management.tsx;
+            animate={{ opacity: 1, y: 0 }}transition={{ duration: 0.8 }}            className='text-center max-w-4xl mx-auto>'
+            <div className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-full border border-orange-400/30 mb-6>''
+              <Target className='w-5 h-5 text-orange-400 mr-2'  />''
+              <span className='text-orange-300 font-medium'>
+<<<<<<< HEAD
+:pages.disabled/pages/services/ai-project-management.tsx
+                AI Project Management
+              </span>            </div>'
+''
+            <h1 className='text-5xl lg:text-7xl font-bold text-white mb-6'>''
+=======
+:pages.disabled/pages/services/ai-project-management.tsx;
+                AI Project Management'
+              </span>            </div>';
+'''
+            <h1 className='text-5xl lg:text-7xl font-bold text-white mb-6>''
+>>>>>>> main
+              <span className='bg-gradient-to-r from-orange-400 via-red-500 to-pink-600 bg-clip-text text-transparent'>
+                AI Project Management'
+              </span>''
+              <br />''
+              <span className='text-white'>That Delivers Results</span>'
+            </h1>'''            <p className='text-xl l,
+    g:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto'>
+>>>>>>> main
               Transform your project delivery with AI-powered management that;
-              optimizes planning, resource allocation, and risk management.
+              optimizes planning, resource allocation, and risk management.;
               Deliver projects faster, cheaper, and with unprecedented success;
+<<<<<<< HEAD
               rates.
 :pages.disabled/pages/services/ai-project-management.tsx
+<<<<<<< HEAD
             </p>"
 ""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -78,38 +206,131 @@ export default function AIProjectManagement(...args: any[]): any {
                 whileTap={{ scale: 0.95 }}""
                 className="px-8 py-4 border border-orange-400/30 text-orange-300 font-semibold rounded-lg hover:bg-orange-400/10 transition-all duration-300 flex items-center justify-center""
               >""
+
                 <Video className="w-5 h-5 mr-2"  />                Watch Demo</motion.button>
-            </div>
+
+                <Video className="w-5 h-5 mr-2"  />                Watch Demo
+            </p>
+""
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+=======
+            </p>'
+''
+=======
+              rates.;
+:pages.disabled/pages/services/ai-project-management.tsx'
+            </p>';
+'''
+>>>>>>> main
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+>>>>>>> main
+              <motion.button;
+                whileHover={{ scal,
+    e: 1.05 }};
+                whileTap={{ scale: 0.95 }};
+                className='px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover: from-orange-600 hove,
+    r:to-red-600 transition-all duration-300 flex items-center justify-center>'
+                <Rocket className='w-5 h-5 mr-2'  />                Start Free Trial
+              </motion.button>
+              <motion.button;
+                whileHover={{ scal,
+    e: 1.05 }};
+                whileTap={{ scale: 0.95 }};
+                className='px-8 py-4 border border-orange-400/30 text-orange-300 font-semibold rounded-lg hover:bg-orange-400/10 transition-all duration-300 flex items-center justify-center>'
+                <Video className='w-5 h-5 mr-2'  />                Watch Demo</motion.button>            </div>
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 :pages.disabled/pages/services/ai-project-management.tsx
+
 "{/* Features Section */}""
+
+"
+
+      {/* Features Section */}""
+>>>>>>> pr-10728
       <section className="py-20">""
         <div className="container mx-auto px-4">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-project-management.tsx
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
+
+            whileInView={{ opacity: 1, y: 0 }}"
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}""
+>>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/ai-project-management.tsx
+
               Advanced AI Technology for Better Project Delivery"</h2>""
+
+              Advanced AI Technology for Better Project Delivery"
+              Advanced AI Technology for Better Project Delivery;
+            </h2>""
+>>>>>>> pr-10728
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+=======
+:pages.disabled/pages/services/ai-project-management.tsx'
+'{/* Features Section */}      <section className='py-20>''
+        <div className='container mx-auto px-4'>
+>>>>>>> main
+          <motion.div;
+            initial={{ opacity:  ,0, y: 20, }}
+:pages.disabled/pages/services/ai-project-management.tsx;
+<<<<<<< HEAD
+            whileInView={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.8, }}''            className='text-center: mb-16''>''';
+            <h2: className='text-4xl lg: text-5xl: font-bold text-white mb-6'>';
+:pages.disabled/pages/services/ai-project-management.tsx: Advanced AI Technology for Better Project Delivery'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>';
+              Our: AI-powered project management platform combines machine;
+              learnin,g, predictive: analytics, and automation to deliver;
+              exceptional: project outcomes.
+            </p>
+:pages.disabled/pages/services/ai-project-management.tsx: </motion.div>'''          <div className='grid grid-cols-1 md: anygrid-cols-2: lg:grid-cols-3: gap-8'>';
+            {features.map((featur,e, index) => (
+=======
+            whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.8 }}            className='text-center mb-16>'
+            <h2 className='text-4xl lg:text-5xl font-bold text-white mb-6'>
+:pages.disabled/pages/services/ai-project-management.tsx'
+              Advanced AI Technology for Better Project Delivery'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+>>>>>>> main
               Our AI-powered project management platform combines machine;
-              learning, predictive analytics, and automation to deliver;
+              learning, predictive analytics, and automation to deliver
               exceptional project outcomes.
             </p>
+<<<<<<< HEAD
 :pages.disabled/pages/services/ai-project-management.tsx
+
           </motion.div>"""
+
+          </motion.div>"
+          </motion.div>
+""
+>>>>>>> pr-10728
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+=======
+:pages.disabled/pages/services/ai-project-management.tsx'
+          </motion.div>'''          <div className='grid grid-cols-1 md: anygrid-cols-2 l,
+    g:grid-cols-3 gap-8'>
+>>>>>>> main
             {features.map((feature, index) => (
+>>>>>>> main
               <motion.div;
                 key={index}
+<<<<<<< HEAD
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-project-management.tsx
+
                 whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6, delay: index * 0.1 }}""
+
+                whileInView={{ opacity: 1, y: 0 }}"
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}""
+>>>>>>> pr-10728
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-400/30 transition-all duration-300 group""
               >""
                 <div className="w-12 h-12 bg-gradient-to-br from-orange-400/20 to-red-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-orange-400/40 group-hover:to-red-500/40 transition-all duration-300">""
@@ -117,74 +338,256 @@ export default function AIProjectManagement(...args: any[]): any {
                   <feature.icon className="w-6 h-6 text-orange-400" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">
+
                   {feature.title}"</h3>""
+
+                  {feature.title}"
+                  <feature.icon className="w-6 h-6 text-orange-400" />
+                </div>""
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  {feature.title}
+                </h3>""
+>>>>>>> pr-10728
                 <p className="text-gray-300">{feature.description}</p>
+=======
+                initial={{ opacity:  ,0, y: 20, }}
+:pages.disabled/pages/services/ai-project-management.tsx;
+<<<<<<< HEAD
+                whileInView={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.,6, delay: index: * 0.1, }}''                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover: border-orange-400/30: transition-all duration-300 group''>''';
+                <div: className='w-12 h-12 bg-gradient-to-br from-orange-400/20 to-red-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-orange-400/40: group-hover:to-red-500/40: transition-all duration-300'>'';';
+:pages.disabled/pages/services/ai-project-management.tsx: <feature.icon className='w-6 h-6 text-orange-400' />'';
+                </div>''';
+                <h3: className='text-xl font-semibold text-white mb-3'>';
+                  {feature.titl,e}'</h3>''                <p: className='text-gray-300'>{feature.description}</p>';
+=======
+<<<<<<< HEAD
+                whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.6, delay: index * 0.1 }}''                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-400/30 transition-all duration-300 group''>''
+                <div className='w-12 h-12 bg-gradient-to-br from-orange-400/20 to-red-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-orange-400/40 group-hover:to-red-500/40 transition-all duration-300'>''
+:pages.disabled/pages/services/ai-project-management.tsx
+=======
+                whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.6, delay: index * 0.1 }}                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover: border-orange-400/30 transition-all duration-300 group>'
+                <div className='w-12 h-12 bg-gradient-to-br from-orange-400/20 to-red-500/20 rounded-lg flex items-center justify-center mb-4 group-hove,
+    r:from-orange-400/40 group-hove,
+    r:to-red-500/40 transition-all duration-300>';
+:pages.disabled/pages/services/ai-project-management.tsx'
+>>>>>>> main
+                  <feature.icon className='w-6 h-6 text-orange-400' />'
+                </div>'''
+                <h3 className='text-xl font-semibold text-white mb-3>
+                  {feature.title}</h3>''                <p className='text-gray-300'>{feature.description}</p>
+>>>>>>> main
+>>>>>>> main
               </motion.div>
             ))}
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 :pages.disabled/pages/services/ai-project-management.tsx
+
 "{/* Benefits Section */}""
+
+"
+
+      {/* Benefits Section */}""
+>>>>>>> pr-10728
       <section className="py-20 bg-slate-800/30">""
         <div className="container mx-auto px-4">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-project-management.tsx
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
+
+            whileInView={{ opacity: 1, y: 0 }}"
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}""
+>>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/ai-project-management.tsx
+
               Proven Results & Benefits"</h2>""
+
+              Proven Results & Benefits"
+              Proven Results & Benefits;
+            </h2>""
+>>>>>>> pr-10728
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI-powered project management delivers measurable improvements;
               in delivery time, cost reduction, and project success rates.
             </p>
 :pages.disabled/pages/services/ai-project-management.tsx
+
           </motion.div>"""
+
+          </motion.div>"
+          </motion.div>
+""
+>>>>>>> pr-10728
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+=======
+<<<<<<< HEAD
+:pages.disabled/pages/services/ai-project-management.tsx: '{/* Benefits Section */}''      <section className='py-20 bg-slate-800/30'>''';
+        <div: className='container mx-auto px-4'>';
+=======
+:pages.disabled/pages/services/ai-project-management.tsx'
+'{/* Benefits Section */}      <section className='py-20 bg-slate-800/30>''
+        <div className='container mx-auto px-4'>
+>>>>>>> main
+          <motion.div;
+            initial={{ opacity:  ,0, y: 20, }}
+:pages.disabled/pages/services/ai-project-management.tsx;
+<<<<<<< HEAD
+            whileInView={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.8, }}''            className='text-center: mb-16''>''';
+            <h2: className='text-4xl lg: text-5xl: font-bold text-white mb-6'>';
+:pages.disabled/pages/services/ai-project-management.tsx: Proven Results & Benefits'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>';
+              Our: AI-powered project management delivers measurable improvements;
+              in: delivery tim,e, cost reduction, and project success rates.
+            </p>
+:pages.disabled/pages/services/ai-project-management.tsx: </motion.div>'''          <div className='grid grid-cols-1 md: anygrid-cols-2: lg:grid-cols-3: gap-6'>';
+            {benefits.map((benefi,t, index) => (
+=======
+            whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.8 }}            className='text-center mb-16>'
+            <h2 className='text-4xl lg:text-5xl font-bold text-white mb-6'>
+:pages.disabled/pages/services/ai-project-management.tsx'
+              Proven Results & Benefits'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+              Our AI-powered project management delivers measurable improvements
+              in delivery time, cost reduction, and project success rates.
+            </p>
+:pages.disabled/pages/services/ai-project-management.tsx'
+          </motion.div>'''          <div className='grid grid-cols-1 md: anygrid-cols-2 l,
+    g:grid-cols-3 gap-6'>
+>>>>>>> main
             {benefits.map((benefit, index) => (
+>>>>>>> main
               <motion.div;
                 key={index}
+<<<<<<< HEAD
                 initial={{ opacity: 0, x: -20 }}
 :pages.disabled/pages/services/ai-project-management.tsx
+
                 whileInView={{ opacity: 1, x: 0 }}"transition={{ duration: 0.6, delay: index * 0.1 }}""
+
+                whileInView={{ opacity: 1, x: 0 }}"
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}""
+>>>>>>> pr-10728
                 className="flex items-center space-x-4 bg-slate-700/30 rounded-lg p-4""
               >""
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0"  />"                <span className="text-white font-medium">{benefit}</span>
+=======
+                initial={{ opacity:  ,0, x: -20, }}
+:pages.disabled/pages/services/ai-project-management.tsx;
+<<<<<<< HEAD
+                whileInView={{ opacity:  ,1, x: 0, }}'transition={{ duration: 0.,6, delay: index: * 0.1, }}''                className='flex items-center space-x-4 bg-slate-700/30 rounded-lg p-4''>''';
+                <CheckCircle: className='w-6 h-6 text-green-400 flex-shrink-0'  />'                <span className='text-white font-medium'>{benefit}</span>';
+=======
+                whileInView={{ opacity: 1, x: 0 }}transition={{ duration: 0.6, delay: index * 0.1 }}                className='flex items-center space-x-4 bg-slate-700/30 rounded-lg p-4>'
+                <CheckCircle className='w-6 h-6 text-green-400 flex-shrink-0'  />                <span className='text-white font-medium'>{benefit}</span>
+>>>>>>> main
+>>>>>>> main
               </motion.div>
             ))}
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 :pages.disabled/pages/services/ai-project-management.tsx
+
 "{/* Solutions Section */}""
+
+"
+
+      {/* Solutions Section */}""
+>>>>>>> pr-10728
       <section className="py-20">""
         <div className="container mx-auto px-4">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-project-management.tsx
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
+
+            whileInView={{ opacity: 1, y: 0 }}"
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}""
+>>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/ai-project-management.tsx
+
               Flexible Solutions for Every Project"</h2>""
+
+              Flexible Solutions for Every Project"
+              Flexible Solutions for Every Project;
+            </h2>""
+>>>>>>> pr-10728
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose from our range of AI-powered project management solutions;
               designed to meet your specific project needs and scale with your;
               organization.
             </p>
 :pages.disabled/pages/services/ai-project-management.tsx
+
           </motion.div>"""
+
+          </motion.div>"
+          </motion.div>
+""
+>>>>>>> pr-10728
           <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+=======
+<<<<<<< HEAD
+:pages.disabled/pages/services/ai-project-management.tsx: '{/* Solutions Section */}''      <section className='py-20'>''';
+        <div: className='container mx-auto px-4'>';
+=======
+:pages.disabled/pages/services/ai-project-management.tsx'
+'{/* Solutions Section */}      <section className='py-20>''
+        <div className='container mx-auto px-4'>
+>>>>>>> main
+          <motion.div;
+            initial={{ opacity:  ,0, y: 20, }}
+:pages.disabled/pages/services/ai-project-management.tsx;
+<<<<<<< HEAD
+            whileInView={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.8, }}''            className='text-center: mb-16''>''';
+            <h2: className='text-4xl lg: text-5xl: font-bold text-white mb-6'>';
+:pages.disabled/pages/services/ai-project-management.tsx: Flexible Solutions for Every Project'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>';
+              Choose: from our range of AI-powered project management solutions;
+              designed: to meet your specific project needs and scale with your;
+              organization.
+            </p>
+:pages.disabled/pages/services/ai-project-management.tsx: </motion.div>'''          <div className='grid grid-cols-1 md: anygrid-cols-2: gap-8'>';
+            {solutions.map((solutio,n, index) => (
+=======
+            whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.8 }}            className='text-center mb-16>'
+            <h2 className='text-4xl lg:text-5xl font-bold text-white mb-6'>
+:pages.disabled/pages/services/ai-project-management.tsx'
+              Flexible Solutions for Every Project'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+              Choose from our range of AI-powered project management solutions;
+              designed to meet your specific project needs and scale with your
+              organization.
+            </p>
+:pages.disabled/pages/services/ai-project-management.tsx'
+          </motion.div>'''          <div className='grid grid-cols-1 m,
+    d: anygrid-cols-2 gap-8'>
+>>>>>>> main
             {solutions.map((solution, index) => (
+>>>>>>> main
               <motion.div;
                 key={index}
+<<<<<<< HEAD
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-project-management.tsx
+
                 whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6, delay: index * 0.1 }}""
+
+                whileInView={{ opacity: 1, y: 0 }}"
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}""
+>>>>>>> pr-10728
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-orange-400/30 transition-all duration-300""
               >""
                 <h3 className="text-2xl font-semibold text-white mb-4">
@@ -195,7 +598,19 @@ export default function AIProjectManagement(...args: any[]): any {
 ""
                 <div className="space-y-3 mb-6">
                   {solution.features.map((feature, featureIndex) => (
+
                     <div"key={featureIndex}""
+
+                    <div"
+                  {solution.title}
+                </h3>""
+                <p className="text-gray-300 mb-6">{solution.description}</p>
+""
+                <div className="space-y-3 mb-6">
+                  {solution.features.map((feature, featureIndex) => (
+                    <div;
+                      key={featureIndex}""
+>>>>>>> pr-10728
                       className="flex items-center space-x-3""
                     >""
                       <CheckCircle className="w-5 h-5 text-orange-400 flex-shrink-0"  />"                      <span className="text-gray-300">{feature}</span>
@@ -205,55 +620,226 @@ export default function AIProjectManagement(...args: any[]): any {
                 </div>"
 ""
                 <div className="text-3xl font-bold text-orange-400 mb-6">
+
                   {solution.price}"</div>""
+
+                  {solution.price}"
+                </div>
+""
+                <div className="text-3xl font-bold text-orange-400 mb-6">
+                  {solution.price}
+                </div>""
+>>>>>>> pr-10728
                 <button className="w-full py-4 px-6 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300">
                   Get Started;
+=======
+                initial={{ opacity:  ,0, y: 20, }}
+:pages.disabled/pages/services/ai-project-management.tsx;
+<<<<<<< HEAD
+                whileInView={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.,6, delay: index: * 0.1, }}''                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover: border-orange-400/30: transition-all duration-300''>''';
+                <h3: className='text-2xl font-semibold text-white mb-4'>';
+:pages.disabled/pages/services/ai-project-management.tsx{solution.titl,e}'';
+                </h3>''';
+                <p: className='text-gray-300 mb-6'>{solution.description}</p>';';
+''';
+                <div: className='space-y-3 mb-6'>';
+                  {solution.features.map((feature, featureIndex) => (
+                    <div'key={featureIndex}''                      className='flex: items-center space-x-3''>''';
+                      <CheckCircle: className='w-5 h-5 text-orange-400 flex-shrink-0'  />'                      <span className='text-gray-300'>{feature}</span>';
+                    </div>
+                  ))}
+:pages.disabled/pages/services/ai-project-management.tsx: </div>';';
+''';
+                <div: className='text-3xl font-bold text-orange-400 mb-6'>';
+                  {solution.price}'</div>''                <button: className='w-full py-4 px-6 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover: from-orange-600: hover:to-red-600: transition-all duration-300'>';
+                  Get: Started
+=======
+<<<<<<< HEAD
+                whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.6, delay: index * 0.1 }}''                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-orange-400/30 transition-all duration-300''>''
+                <h3 className='text-2xl font-semibold text-white mb-4'>
+:pages.disabled/pages/services/ai-project-management.tsx{solution.title}'
+                </h3>''
+                <p className='text-gray-300 mb-6'>{solution.description}</p>'
+''
+=======
+                whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.6, delay: index * 0.1 }}                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-orange-400/30 transition-all duration-300>'
+                <h3 className='text-2xl font-semibold text-white mb-4>
+:pages.disabled/pages/services/ai-project-management.tsx{solution.title}
+                </h3>'''
+                <p className='text-gray-300 mb-6'>{solution.description}</p>';
+'''
+>>>>>>> main
+                <div className='space-y-3 mb-6'>
+                  {solution.features.map((feature, featureIndex) => ('
+                    <div'key={featureIndex}                      className='flex items-center space-x-3>'
+                      <CheckCircle className='w-5 h-5 text-orange-400 flex-shrink-0'  />                      <span className='text-gray-300'>{feature}</span>
+                    </div>
+                  ))}
+<<<<<<< HEAD
+:pages.disabled/pages/services/ai-project-management.tsx
+                </div>'
+''
+                <div className='text-3xl font-bold text-orange-400 mb-6'>
+                  {solution.price}'</div>''                <button className='w-full py-4 px-6 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300'>
+=======
+:pages.disabled/pages/services/ai-project-management.tsx'
+                </div>';
+'''
+                <div className='text-3xl font-bold text-orange-400 mb-6>
+                  {solution.price}</div>''                <button className='w-full py-4 px-6 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hove,
+    r:to-red-600 transition-all duration-300'>
+>>>>>>> main
+                  Get Started
+>>>>>>> main
+>>>>>>> main
                 </button>
               </motion.div>
-            ))}
+            ),)}
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 :pages.disabled/pages/services/ai-project-management.tsx
+
 "{/* Project Types Section */}""
+
+"
+
+      {/* Project Types Section */}""
+>>>>>>> pr-10728
       <section className="py-20 bg-slate-800/30">""
         <div className="container mx-auto px-4">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-project-management.tsx
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
+
+            whileInView={{ opacity: 1, y: 0 }}"
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}""
+>>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/ai-project-management.tsx
+
               Optimized for Any Project Type"</h2>""
+
+              Optimized for Any Project Type"
+              Optimized for Any Project Type;
+            </h2>""
+>>>>>>> pr-10728
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI-powered project management platform is designed to handle;
               diverse project types across all industries and complexity levels.
             </p>
 :pages.disabled/pages/services/ai-project-management.tsx
+
           </motion.div>"""
+
+          </motion.div>"
+          </motion.div>
+""
+>>>>>>> pr-10728
           <div className="grid grid-cols-2 md: anygrid-cols-3 lg:grid-cols-6 gap-6">
+=======
+<<<<<<< HEAD
+:pages.disabled/pages/services/ai-project-management.tsx: '{/* Project Types Section */}''      <section className='py-20 bg-slate-800/30'>''';
+        <div: className='container mx-auto px-4'>';
+=======
+:pages.disabled/pages/services/ai-project-management.tsx'
+'{/* Project Types Section */}      <section className='py-20 bg-slate-800/30>''
+        <div className='container mx-auto px-4'>
+>>>>>>> main
+          <motion.div;
+            initial={{ opacity:  ,0, y: 20, }}
+:pages.disabled/pages/services/ai-project-management.tsx;
+<<<<<<< HEAD
+            whileInView={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.8, }}''            className='text-center: mb-16''>''';
+            <h2: className='text-4xl lg: text-5xl: font-bold text-white mb-6'>';
+:pages.disabled/pages/services/ai-project-management.tsx: Optimized for Any Project Type'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>';
+              Our: AI-powered project management platform is designed to handle;
+              diverse: project types across all industries and complexity levels.
+            </p>
+:pages.disabled/pages/services/ai-project-management.tsx: </motion.div>'''          <div className='grid grid-cols-2 md: anygrid-cols-3: lg:grid-cols-6: gap-6'>';
+            {projectTypes.map((projectTyp,e, index) => (
+=======
+            whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.8 }}            className='text-center mb-16>'
+            <h2 className='text-4xl lg: text-5xl font-bold text-white mb-6'>
+:pages.disabled/pages/services/ai-project-management.tsx'
+              Optimized for Any Project Type'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+              Our AI-powered project management platform is designed to handle
+              diverse project types across all industries and complexity levels.
+            </p>
+:pages.disabled/pages/services/ai-project-management.tsx'
+          </motion.div>'''          <div className='grid grid-cols-2 m,
+    d: anygrid-cols-3 l,
+    g:grid-cols-6 gap-6'>
+>>>>>>> main
             {projectTypes.map((projectType, index) => (
+>>>>>>> main
               <motion.div;
                 key={index}
+<<<<<<< HEAD
                 initial={{ opacity: 0, scale: 0.8 }}
 :pages.disabled/pages/services/ai-project-management.tsx
+
                 whileInView={{ opacity: 1, scale: 1 }}"transition={{ duration: 0.6, delay: index * 0.1 }}""
+
+                whileInView={{ opacity: 1, scale: 1 }}"
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}""
+>>>>>>> pr-10728
                 className="bg-slate-700/30 rounded-lg p-4 text-center hover:bg-slate-700/50 transition-all duration-300""
               >""
                 <div className="w-12 h-12 bg-gradient-to-br from-orange-400/20 to-red-500/20 rounded-lg flex items-center justify-center mx-auto mb-3">""
 :pages.disabled/pages/services/ai-project-management.tsx
+
                   <GitBranch className="w-6 h-6 text-orange-400"  />"</div>""
+
+                  <GitBranch className="w-6 h-6 text-orange-400"  />"
+                  <GitBranch className="w-6 h-6 text-orange-400"  />
+                </div>""
+>>>>>>> pr-10728
                 <span className="text-white font-medium text-sm">
+=======
+                initial={{ opacity:  ,0, scale: 0.8, }}
+:pages.disabled/pages/services/ai-project-management.tsx;
+<<<<<<< HEAD
+                whileInView={{ opacity:  ,1, scale: 1, }}'transition={{ duration: 0.,6, delay: index: * 0.1, }}''                className='bg-slate-700/30 rounded-lg p-4 text-center hover: bg-slate-700/50: transition-all duration-300''>''';
+                <div: className='w-12 h-12 bg-gradient-to-br from-orange-400/20 to-red-500/20 rounded-lg flex items-center justify-center mx-auto mb-3'>'';';
+:pages.disabled/pages/services/ai-project-management.tsx: <GitBranch className='w-6 h-6 text-orange-400'  />'</div>''                <span className='text-white font-medium text-sm'>';
+                  {projectTyp,e}
+=======
+<<<<<<< HEAD
+                whileInView={{ opacity: 1, scale: 1 }}'transition={{ duration: 0.6, delay: index * 0.1 }}''                className='bg-slate-700/30 rounded-lg p-4 text-center hover:bg-slate-700/50 transition-all duration-300''>''
+                <div className='w-12 h-12 bg-gradient-to-br from-orange-400/20 to-red-500/20 rounded-lg flex items-center justify-center mx-auto mb-3'>''
+:pages.disabled/pages/services/ai-project-management.tsx
+                  <GitBranch className='w-6 h-6 text-orange-400'  />'</div>''                <span className='text-white font-medium text-sm'>
+=======
+                whileInView={{ opacity: 1, scale: 1 }}transition={{ duration: 0.6, delay: index * 0.1 }}                className='bg-slate-700/30 rounded-lg p-4 text-center hover:bg-slate-700/50 transition-all duration-300>'
+                <div className='w-12 h-12 bg-gradient-to-br from-orange-400/20 to-red-500/20 rounded-lg flex items-center justify-center mx-auto mb-3>';
+:pages.disabled/pages/services/ai-project-management.tsx'
+                  <GitBranch className='w-6 h-6 text-orange-400'  /></div>''                <span className='text-white font-medium text-sm'>
+>>>>>>> main
+>>>>>>> main
                   {projectType}
+>>>>>>> main
                 </span>              </motion.div>
             ))}
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 :pages.disabled/pages/services/ai-project-management.tsx
+
 "{/* CTA Section */}""
+
+"
+
+      {/* CTA Section */}""
+>>>>>>> pr-10728
       <section className="py-20 bg-gradient-to-r from-orange-500/10 via-red-500/10 to-pink-500/10">""
         <div className="container mx-auto px-4 text-center">
           <motion.div;
@@ -282,12 +868,111 @@ export default function AIProjectManagement(...args: any[]): any {
                 whileTap={{ scale: 0.95 }}""
                 className="px-8 py-4 border border-orange-400/30 text-orange-300 font-semibold rounded-lg hover:bg-orange-400/10 transition-all duration-300 flex items-center justify-center""
               >""
+
                 <Phone className="w-5 h-5 mr-2"  />                Call +1 302 464 0950</motion.button>
-            </div>
+
+                <Phone className="w-5 h-5 mr-2"  />                Call +1 302 464 0950
+            transition={{ duration: 0.8 }}
+          >""
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              Ready to Transform Your Project Delivery?
+            </h2>""
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+=======
+<<<<<<< HEAD
+:pages.disabled/pages/services/ai-project-management.tsx: '{/* CTA Section */}''      <section className='py-20 bg-gradient-to-r from-orange-500/10 via-red-500/10 to-pink-500/10'>''';
+        <div: className='container mx-auto px-4 text-center'>';
+=======
+:pages.disabled/pages/services/ai-project-management.tsx'
+'{/* CTA Section */}      <section className='py-20 bg-gradient-to-r from-orange-500/10 via-red-500/10 to-pink-500/10>''
+        <div className='container mx-auto px-4 text-center'>
+>>>>>>> main
+          <motion.div;
+            initial={{ opacity:  ,0, y: 20, }}
+            whileInView={{ opacity:  ,1, y: 0, }}
+:pages.disabled/pages/services/ai-project-management.tsx;
+<<<<<<< HEAD
+            transition={{ duration: 0.8, }}'>''';
+            <h2: className='text-4xl lg: text-5xl: font-bold text-white mb-6'>';
+              Ready: to Transform Your Project Delivery?'';
+            </h2>''';
+            <p: className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>';
+              Join: the AI revolution in project management and deliver projects;
+              faste,r, cheaper, and: with higher success rates.'';
+            </p>''';
+            <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>';
+              <motion.button;
+                whileHover={{ scale: 1.05, }}';';
+                whileTap={{ scale: 0.95, }}'';';
+                className='px-8: py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover: from-orange-600: hover:to-red-600: transition-all duration-300 flex items-center justify-center''>''';
+                <ArrowRight: className='w-5 h-5 mr-2'  />                Start Your Free Trial';
+              </motion.button>
+              <motion.button;
+                whileHover={{ scale: 1.05, }}';';
+                whileTap={{ scale: 0.95, }}'';';
+                className='px-8: py-4 border border-orange-400/30 text-orange-300 font-semibold rounded-lg hover: bg-orange-400/10: transition-all duration-300 flex items-center justify-center''>''';
+                <Phone: className='w-5 h-5 mr-2'  />                Call +1 302 464 0950</motion.button>            </div>';
+=======
+            transition={{ duration: 0.8 }}>'''
+            <h2 className='text-4xl lg:text-5xl font-bold text-white mb-6>
+              Ready to Transform Your Project Delivery?''
+            </h2>'''
+            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
+<<<<<<< HEAD
+              Join the AI revolution in project management and deliver projects
+              faster, cheaper, and with higher success rates.'
+            </p>''
+=======
+>>>>>>> main
+              Join the AI revolution in project management and deliver projects;
+              faster, cheaper, and with higher success rates.''
+            </p>'''
+>>>>>>> main
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <motion.button;
+                whileHover={{ scal,
+    e: 1.05 }};
+                whileTap={{ scale: 0.95 }};
+                className='px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover: from-orange-600 hove,
+    r:to-red-600 transition-all duration-300 flex items-center justify-center>'
+                <ArrowRight className='w-5 h-5 mr-2'  />                Start Your Free Trial
+              </motion.button>
+              <motion.button;
+                whileHover={{ scal,
+    e: 1.05 }};
+                whileTap={{ scale: 0.95 }};
+                className='px-8 py-4 border border-orange-400/30 text-orange-300 font-semibold rounded-lg hover:bg-orange-400/10 transition-all duration-300 flex items-center justify-center>'
+                <Phone className='w-5 h-5 mr-2'  />                Call +1 302 464 0950</motion.button>            </div>
+>>>>>>> main
           </motion.div>
         </div>
       </section>
     </div>
+<<<<<<< HEAD
 :pages.disabled/pages/services/ai-project-management.tsx
+
+  )}
+  '"
+'"'"
+
   )}'"
 '"'"
+  )}
+'""
+>>>>>>> pr-10728
+=======
+<<<<<<< HEAD
+:pages.disabled/pages/services/ai-project-management.tsx,)}
+  '';';
+''''';
+=======
+:pages.disabled/pages/services/ai-project-management.tsx)}
+<<<<<<< HEAD
+  ''
+''''
+=======
+  '';
+'''''
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
