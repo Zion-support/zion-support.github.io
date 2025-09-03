@@ -76,6 +76,70 @@ export default function ServicesCatalog() {
             'Audit‑ready reports and reminders'
           ],
           link: '/micro-saas'
+        },
+        {
+          name: 'AI Email Responder Pro',
+          blurb: 'Intelligent email automation with sentiment analysis, smart categorization, and contextual auto-responses.',
+          price: '$199 – $899/month',
+          eta: '1–3 weeks',
+          bullets: [
+            'AI-powered email classification and routing',
+            'Sentiment analysis and priority scoring',
+            'Automated response generation with human oversight',
+            'Integration with CRM and helpdesk systems'
+          ],
+          link: '/micro-saas',
+          refs: [
+            { label: 'OpenAI API', href: 'https://openai.com/api/' },
+            { label: 'Gmail API', href: 'https://developers.google.com/gmail/api' }
+          ]
+        },
+        {
+          name: 'E-Commerce Return Manager',
+          blurb: 'Automated return processing, label generation, and status tracking for online stores.',
+          price: '$99 – $599/month',
+          eta: '1–2 weeks',
+          bullets: [
+            'Automated return request processing',
+            'Dynamic return label generation',
+            'Real-time status tracking and notifications',
+            'Analytics and return pattern insights'
+          ],
+          link: '/micro-saas',
+          refs: [
+            { label: 'Shopify API', href: 'https://shopify.dev/api' },
+            { label: 'WooCommerce', href: 'https://woocommerce.com/' }
+          ]
+        },
+        {
+          name: 'AI Video Clip Generator',
+          blurb: 'Automatically creates social media clips from long-form videos with smart editing and optimization.',
+          price: '$149 – $799/month',
+          eta: '2–4 weeks',
+          bullets: [
+            'AI-powered highlight detection',
+            'Automatic clip generation for multiple platforms',
+            'Custom branding and watermarking',
+            'Batch processing and scheduling'
+          ],
+          link: '/micro-saas',
+          refs: [
+            { label: 'FFmpeg', href: 'https://ffmpeg.org/' },
+            { label: 'OpenCV', href: 'https://opencv.org/' }
+          ]
+        },
+        {
+          name: 'Mobile Survey Builder',
+          blurb: 'Create engaging, adaptive surveys optimized for mobile with real-time analytics and insights.',
+          price: '$79 – $399/month',
+          eta: '1–2 weeks',
+          bullets: [
+            'Mobile-first survey design',
+            'Adaptive questioning based on responses',
+            'Real-time analytics and reporting',
+            'Multi-channel distribution (SMS, email, web)'
+          ],
+          link: '/micro-saas'
         }
       ]
     },
@@ -125,6 +189,74 @@ export default function ServicesCatalog() {
             'Works with Zendesk, Intercom, Freshdesk'
           ],
           link: '/ai-services'
+        },
+        {
+          name: 'AI-Powered Talent Matching',
+          blurb: 'Advanced algorithms for connecting businesses with perfect tech talent based on skills, experience, and cultural fit.',
+          price: '$1,500 – $7,000/month',
+          eta: '3–6 weeks',
+          bullets: [
+            'Machine learning-based candidate matching',
+            'Skills assessment and verification',
+            'Cultural fit analysis and scoring',
+            'Automated interview scheduling and feedback'
+          ],
+          link: '/ai-services',
+          refs: [
+            { label: 'LinkedIn API', href: 'https://docs.microsoft.com/en-us/linkedin/' },
+            { label: 'Indeed API', href: 'https://ads.indeed.com/jobroll/xml-feed' }
+          ]
+        },
+        {
+          name: 'Computer Vision Analytics',
+          blurb: 'Image recognition, object detection, and visual analytics for business intelligence and automation.',
+          price: '$3,000 – $15,000/project',
+          eta: '4–8 weeks',
+          bullets: [
+            'Custom object detection and classification',
+            'Real-time image processing and analysis',
+            'Quality control and defect detection',
+            'Visual search and recommendation engines'
+          ],
+          link: '/ai-services',
+          refs: [
+            { label: 'TensorFlow', href: 'https://tensorflow.org/' },
+            { label: 'PyTorch', href: 'https://pytorch.org/' }
+          ]
+        },
+        {
+          name: 'AI Document Processing',
+          blurb: 'Intelligent document extraction, classification, and data entry automation for business workflows.',
+          price: '$2,000 – $10,000 setup, $0.05 – $0.50/document',
+          eta: '3–6 weeks',
+          bullets: [
+            'OCR and text extraction from various formats',
+            'Intelligent document classification',
+            'Data validation and error correction',
+            'Integration with existing business systems'
+          ],
+          link: '/ai-services',
+          refs: [
+            { label: 'AWS Textract', href: 'https://aws.amazon.com/textract/' },
+            { label: 'Google Document AI', href: 'https://cloud.google.com/document-ai' }
+          ]
+        },
+        {
+          name: 'AI Fraud Detection System',
+          blurb: 'Real-time fraud prevention with machine learning models for transactions and user behavior analysis.',
+          price: '$5,000 – $25,000 setup, $0.01 – $0.10/transaction',
+          eta: '4–10 weeks',
+          bullets: [
+            'Real-time transaction monitoring',
+            'Behavioral pattern analysis',
+            'Risk scoring and alerting',
+            'Continuous model improvement'
+          ],
+          link: '/ai-services',
+          refs: [
+            { label: 'AWS Fraud Detector', href: 'https://aws.amazon.com/fraud-detector/' },
+            { label: 'Google Cloud AI Platform', href: 'https://cloud.google.com/ai-platform' }
+          ]
         }
       ]
     },
@@ -171,6 +303,74 @@ export default function ServicesCatalog() {
             'Data catalog and access governance'
           ],
           link: '/it-services'
+        },
+        {
+          name: 'API Gateway & Microservices',
+          blurb: 'Design, implement, and manage scalable API architectures with rate limiting, monitoring, and security.',
+          price: '$8,000 – $35,000/project',
+          eta: '3–8 weeks',
+          bullets: [
+            'API gateway design and implementation',
+            'Rate limiting and throttling policies',
+            'Authentication and authorization',
+            'API monitoring and analytics'
+          ],
+          link: '/it-services',
+          refs: [
+            { label: 'Kong Gateway', href: 'https://konghq.com/' },
+            { label: 'AWS API Gateway', href: 'https://aws.amazon.com/api-gateway/' }
+          ]
+        },
+        {
+          name: 'Database Optimization & Migration',
+          blurb: 'Performance tuning, scaling, and migration to modern database solutions with zero downtime.',
+          price: '$5,000 – $25,000/project',
+          eta: '2–6 weeks',
+          bullets: [
+            'Database performance analysis and tuning',
+            'Migration planning and execution',
+            'High availability and disaster recovery',
+            'Monitoring and alerting setup'
+          ],
+          link: '/it-services',
+          refs: [
+            { label: 'PostgreSQL', href: 'https://postgresql.org/' },
+            { label: 'MongoDB', href: 'https://mongodb.com/' }
+          ]
+        },
+        {
+          name: 'Kubernetes & Container Orchestration',
+          blurb: 'Container deployment, scaling, and management with monitoring, security, and CI/CD integration.',
+          price: '$6,000 – $30,000/project',
+          eta: '3–8 weeks',
+          bullets: [
+            'Kubernetes cluster design and deployment',
+            'Container security and compliance',
+            'Auto-scaling and load balancing',
+            'Monitoring and logging integration'
+          ],
+          link: '/it-services',
+          refs: [
+            { label: 'Kubernetes', href: 'https://kubernetes.io/' },
+            { label: 'Docker', href: 'https://docker.com/' }
+          ]
+        },
+        {
+          name: 'Disaster Recovery & Backup Solutions',
+          blurb: 'Automated backup systems, disaster recovery planning, and business continuity solutions.',
+          price: '$4,000 – $20,000/project, $500 – $2,000/month managed',
+          eta: '2–5 weeks',
+          bullets: [
+            'Automated backup strategy and implementation',
+            'Disaster recovery planning and testing',
+            'Business continuity documentation',
+            'Recovery time and point objectives'
+          ],
+          link: '/it-services',
+          refs: [
+            { label: 'AWS Backup', href: 'https://aws.amazon.com/backup/' },
+            { label: 'Veeam', href: 'https://veeam.com/' }
+          ]
         }
       ]
     }
