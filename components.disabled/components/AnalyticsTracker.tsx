@@ -21,7 +21,7 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
     // Enhanced analytics tracking
     const trackPageView = () => {
       if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('config', 'GA_MEASUREMENT_ID', {
+        window.gtag('config,GA_MEASUREMENT_ID', {
           page_title: pageName,
           page_location: window.location.href,
           custom_map: {
@@ -32,7 +32,7 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
     };
     // Track user engagement
     const trackEngagement = () => {
-      let startTime = Date.now();
+      const startTime = Date.now();
       let isActive = true;
       const trackTimeOnPage = () => {
         if (isActive) {
@@ -41,7 +41,7 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
             // 30 seconds
             // Track meaningful engagement
             if (typeof window !== 'undefined' && window.gtag) {
-              window.gtag('event', 'engagement', {
+              window.gtag('event,engagement', {
                 event_category: 'user_behavior',
                 event_label: 'meaningful_engagement',
                 value: Math.floor(timeSpent / 1000),
@@ -56,7 +56,7 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
         isActive = false;
         const timeSpent = Date.now() - startTime;
         if (typeof window !== 'undefined' && window.gtag) {
-          window.gtag('event', 'page_exit', {
+          window.gtag('event,page_exit', {
             event_category: 'user_behavior',
             event_label: 'time_on_page',
             value: Math.floor(timeSpent / 1000),
@@ -73,7 +73,7 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
 
         if (scrollDepth >= 25 && scrollDepth < 50) {
           if (typeof window !== 'undefined' && window.gtag) {
-            window.gtag('event', 'scroll', {
+            window.gtag('event,scroll', {
               event_category: 'user_behavior',
               event_label: '25_percent_scroll',
               value: scrollDepth,
@@ -81,7 +81,7 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
           }
         } else if (scrollDepth >= 50 && scrollDepth < 75) {
           if (typeof window !== 'undefined' && window.gtag) {
-            window.gtag('event', 'scroll', {
+            window.gtag('event,scroll', {
               event_category: 'user_behavior',
               event_label: '50_percent_scroll',
               value: scrollDepth,
@@ -89,7 +89,7 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
           }
         } else if (scrollDepth >= 75) {
           if (typeof window !== 'undefined' && window.gtag) {
-            window.gtag('event', 'scroll', {
+            window.gtag('event,scroll', {
               event_category: 'user_behavior',
               event_label: '75_percent_scroll',
               value: scrollDepth,
@@ -106,7 +106,7 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
             target.closest('button')?.textContent ||
             'Unknown';
           if (typeof window !== 'undefined' && window.gtag) {
-            window.gtag('event', 'click', {
+            window.gtag('event,click', {
               event_category: 'button_click',
               event_label: buttonText,
               page_title: pageName,
@@ -127,7 +127,7 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
           target.tagName === 'SELECT'
         ) {
           if (typeof window !== 'undefined' && window.gtag) {
-            window.gtag('event', 'form_interaction', {
+            window.gtag('event,form_interaction', {
               event_category: 'form_engagement',
               event_label: target.name || target.id || 'unknown_field',
               page_title: pageName,
@@ -185,7 +185,7 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments)}
             gtag('js', new Date());
-            gtag('config', 'GA_MEASUREMENT_ID', {
+            gtag('config,GA_MEASUREMENT_ID', {
               page_title: '${pageName}', page_location: window.location.href,
               send_page_view: true
             })
@@ -198,7 +198,7 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
           __html: `
             // Track service interest
             function trackServiceInterest(serviceName, category) {
-              gtag('event', 'view_item', {
+              gtag('event,view_item', {
                 event_category: 'service_interest', event_label: serviceName,
                 items: [{
                   item_id: serviceName, item_name: serviceName,
@@ -208,14 +208,14 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
 
             // Track contact form submissions
             function trackContactSubmission(formType) {
-              gtag('event', 'generate_lead', {
+              gtag('event,generate_lead', {
                 event_category: 'contact', event_label: formType,
                 value: 1
               })}
 
             // Track demo requests
             function trackDemoRequest(demoType) {
-              gtag('event', 'request_demo', {
+              gtag('event,request_demo', {
                 event_category: 'demo', event_label: demoType,
                 value: 1
               })}

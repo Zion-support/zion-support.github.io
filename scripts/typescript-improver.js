@@ -10,44 +10,22 @@ let filesProcessed = 0;
 // Common type replacements
 const typeReplacements = {
   // React types
-  'any[]': 'React.ReactNode[]',
-  'any': 'unknown',
-  'any)': 'unknown)',
-  'any;': 'unknown;',
-  'any,': 'unknown,',
-  'any ': 'unknown ',
-  'any=': 'unknown=',
-  'any:': 'unknown:',
-  'any>': 'unknown>',
-  'any<': 'unknown<',
-  'any}': 'unknown}',
-  'any{': 'unknown{',
+  'any[]': 'React.ReactNode[],any': 'unknown,any)': 'unknown),any;': 'unknown;,any,': 'unknown,,any ': 'unknown ,any=': 'unknown=,any:': 'unknown:,any>': 'unknown>,any<': 'unknown<,any}': 'unknown},any{': 'unknown{',
   
   // Specific React component types
-  'React.ComponentType<any>': 'React.ComponentType<Record<string, unknown>>',
-  'React.FC<any>': 'React.FC<Record<string, unknown>>',
-  'React.Component<any>': 'React.Component<Record<string, unknown>>',
+  'React.ComponentType<any>': 'React.ComponentType<Record<string, unknown>>,React.FC<any>': 'React.FC<Record<string, unknown>>,React.Component<any>': 'React.Component<Record<string, unknown>>',
   
   // Event types
-  'React.ChangeEvent<any>': 'React.ChangeEvent<HTMLInputElement>',
-  'React.MouseEvent<any>': 'React.MouseEvent<HTMLButtonElement>',
-  'React.FormEvent<any>': 'React.FormEvent<HTMLFormElement>',
+  'React.ChangeEvent<any>': 'React.ChangeEvent<HTMLInputElement>,React.MouseEvent<any>': 'React.MouseEvent<HTMLButtonElement>,React.FormEvent<any>': 'React.FormEvent<HTMLFormElement>',
   
   // Function types
-  '() => any': '() => void',
-  '(value: any)': '(value: unknown)',
-  '(item: any)': '(item: unknown)',
-  '(data: any)': '(data: unknown)',
-  '(props: any)': '(props: Record<string, unknown>)',
-  '(event: any)': '(event: React.SyntheticEvent)',
+  '() => any': '() => void,(value: any)': '(value: unknown),(item: any)': '(item: unknown),(data: any)': '(data: unknown),(props: any)': '(props: Record<string, unknown>),(event: any)': '(event: React.SyntheticEvent)',
   
   // Array types
-  'any[]': 'unknown[]',
-  'Array<any>': 'Array<unknown>',
+  'any[]': 'unknown[],Array<any>': 'Array<unknown>',
   
   // Object types
-  'Record<string, any>': 'Record<string, unknown>',
-  '{ [key: string]: any }': '{ [key: string]: unknown }',
+  'Record<string, any>': 'Record<string, unknown>,{ [key: string]: any }': '{ [key: string]: unknown }',
 };
 
 // Interface definitions for common patterns
@@ -160,7 +138,7 @@ function improveTypeScriptFile(content, filePath) {
   const eventHandlerMatches = improved.match(eventHandlerRegex);
   if (eventHandlerMatches) {
     improved = improved.replace(eventHandlerRegex, (match, handlerName) => {
-      return match.replace('event: any', 'event: React.SyntheticEvent');
+      return match.replace('event: any,event: React.SyntheticEvent');
     });
     changes += eventHandlerMatches.length;
   }
@@ -170,7 +148,7 @@ function improveTypeScriptFile(content, filePath) {
   const apiCallMatches = improved.match(apiCallRegex);
   if (apiCallMatches) {
     improved = improved.replace(apiCallRegex, (match) => {
-      return match.replace('response: any', 'response: Response');
+      return match.replace('response: any,response: Response');
     });
     changes += apiCallMatches.length;
   }
@@ -204,13 +182,7 @@ function generateTypeScriptReport() {
       totalFilesProcessed: filesProcessed,
       totalTypeImprovements: totalImprovements,
       recommendations: [
-        'Consider using strict TypeScript configuration',
-        'Add proper error handling with typed error objects',
-        'Use discriminated unions for better type safety',
-        'Implement proper API response typing',
-        'Add JSDoc comments for complex functions',
-        'Use const assertions for immutable data',
-        'Consider using branded types for IDs',
+        'Consider using strict TypeScript configuration,Add proper error handling with typed error objects,Use discriminated unions for better type safety,Implement proper API response typing,Add JSDoc comments for complex functions,Use const assertions for immutable data,Consider using branded types for IDs',
       ]
     }
   };
@@ -224,22 +196,11 @@ async function main() {
   console.log('🔧 Starting TypeScript improvements...\n');
 
   const patterns = [
-    'src/**/*.{ts,tsx}',
-    'pages/**/*.{ts,tsx}',
-    'components/**/*.{ts,tsx}'
+    'src/**/*.{ts,tsx},pages/**/*.{ts,tsx},components/**/*.{ts,tsx}'
   ];
 
   const excludeDirs = [
-    'node_modules',
-    '.next',
-    'build',
-    'dist',
-    'scripts',
-    'automation',
-    'automation_backup',
-    'src.disabled',
-    'pages.disabled',
-    'components.disabled'
+    'node_modules,.next,build,dist,scripts,automation,automation_backup,src.disabled,pages.disabled,components.disabled'
   ];
 
   for (const pattern of patterns) {

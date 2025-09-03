@@ -29,7 +29,7 @@ class ImprovedDeploymentAutomation {
       console.log('🎯 Starting deployment automation pipeline...');
       // Define deployment steps;
       const deploymentSteps = [
-        {
+  {
           name: 'Pre-deployment Checks',
           command: 'npm run type-check',
           description: 'Run TypeScript type checking',

@@ -1,23 +1,23 @@
 
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import AIChatbot from "../components/AIChatbot.test";
-  describe('AIChatbot', () => {
+import React from 'react'
+import { render, screen, fireEvent } from '@testing-library/react'
+import '@testing-library/jest-dom'
+import AIChatbottest from '../components/AIChatbot.test'
+describe('AIChatbottest', () => {
   test('renders without crashing', () => {
-    render(<AIChatbot />);
-    expect(screen.getByTestId('aichatbot.test')).toBeInTheDocument();
-});
+    render(<AIChatbottest />)
+    expect(screen.getByTestId('aichatbot.test')).toBeInTheDocument()
+  })
   test('displays correct content', () => {
-    render(<AIChatbot />);
+    render(<AIChatbottest />)
     // Add specific content tests based on component
-});
+  })
   test('handles user interactions', () => {
-    render(<AIChatbot />);
+    render(<AIChatbottest />)
     // Add interaction tests based on component functionality
-});
+  })
   test('applies correct styling', () => {
-    render(<AIChatbot />);
+    render(<AIChatbottest />)
     // Add styling tests if needed
-});
-});
+  })
+})

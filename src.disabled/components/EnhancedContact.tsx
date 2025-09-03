@@ -22,7 +22,7 @@ export function EnhancedContact(...args[]: any):  {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const services = [
-    { value: 'general', label: 'General Inquiry' },
+  { value: 'general', label: 'General Inquiry' },
     { value: 'ai-solutions', label: 'AI Solutions' },
     { value: 'cloud-infrastructure', label: 'Cloud Infrastructure' },
     { value: 'cybersecurity', label: 'Cybersecurity' },
@@ -50,7 +50,7 @@ export function EnhancedContact(...args[]: any):  {
       setIsSubmitting(false)}
   }
   const contactInfo = [
-    {
+  {
       icon: Mail,
       title: 'Email',
       value: 'kleber@ziontechgroup.com',

@@ -5,12 +5,12 @@ interface EnhancedLoadingSpinnerProps {"
 }
 
 export default function EnhancedLoadingSpinner({"
-  size = 'md', text = 'Loading...', className = '',
-}: EnhancedLoadingSpinnerProps) {"
+  size = 'md', text = 'Loading...', className =  ,
+}: EnhancedLoadingSpinnerProps) {'
   const sizeClasses = { sm: 'w-8 h-8', md: 'w-12 h-12', lg: 'w-16 h-16',
 }
 "
-  const textSizes = { sm: 'text-sm',"
+  const textSizes = { sm: 'text-sm,
     md: 'text-base', lg: 'text-lg',
 }
 

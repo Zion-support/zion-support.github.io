@@ -5,45 +5,45 @@ import { Target, Users, Building, Zap, CheckCircle, ArrowRight, Globe, Shield, B
 
 export default function Solutions() {
   const solutions = [
-    {
+  {
       icon: Building,
       title: 'Enterprise Solutions',
       description: 'Comprehensive technology solutions for large organizations and enterprises.',
-      features: ['Scalable Architecture', 'Enterprise Security', 'Integration Services', '24/7 Support'],
+      features: ['Scalable Architecture,Enterprise Security,Integration Services,24/7 Support'],
       href: '/solutions/enterprise'
     },
     {
       icon: Users,
       title: 'Small Business Solutions',
       description: 'Cost-effective technology solutions designed for small and medium businesses.',
-      features: ['Affordable Pricing', 'Quick Deployment', 'Easy Management', 'Local Support'],
+      features: ['Affordable Pricing,Quick Deployment,Easy Management,Local Support'],
       href: '/solutions/small-business'
     },
     {
       icon: Zap,
       title: 'Startup Solutions',
       description: 'Rapid development and deployment solutions for startups and new ventures.',
-      features: ['Fast Time-to-Market', 'MVP Development', 'Scalable Infrastructure', 'Growth Support'],
+      features: ['Fast Time-to-Market,MVP Development,Scalable Infrastructure,Growth Support'],
       href: '/solutions/startups'
     },
     {
       icon: Target,
       title: 'Custom Development',
       description: 'Tailored software solutions built specifically for your unique business needs.',
-      features: ['Bespoke Solutions', 'Flexible Architecture', 'Custom Integrations', 'Ongoing Evolution'],
+      features: ['Bespoke Solutions,Flexible Architecture,Custom Integrations,Ongoing Evolution'],
       href: '/solutions/custom-development'
     },
     {
       icon: Globe,
       title: 'Digital Transformation',
       description: 'Transform your business processes with modern digital solutions.',
-      features: ['Process Automation', 'Digital Workflows', 'Data Analytics', 'Cloud Migration'],
+      features: ['Process Automation,Digital Workflows,Data Analytics,Cloud Migration'],
       href: '/solutions/digital-transformation'
     }
   ];
 
   const benefits = [
-    {
+  {
       icon: BarChart3,
       title: 'Improved Efficiency',
       description: 'Streamline operations and boost productivity with our technology solutions.'
@@ -66,14 +66,7 @@ export default function Solutions() {
   ];
 
   const industries = [
-    'Healthcare & Medical',
-    'Financial Services',
-    'E-commerce & Retail',
-    'Manufacturing',
-    'Education',
-    'Real Estate',
-    'Professional Services',
-    'Non-Profit Organizations'
+    'Healthcare & Medical,Financial Services,E-commerce & Retail,Manufacturing,Education,Real Estate,Professional Services,Non-Profit Organizations'
   ];
 
   return (

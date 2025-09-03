@@ -1,8 +1,6 @@
 #!/usr/bin/env node;
-import fs from "fs";
-  'fs';
-import path from "path";
-  'path';
+import fs from "fsfs';
+import path from "pathpath';
 function walk(dir, filelist = []) {
   const files = fs.readdirSync(dir, { withFileTypes: true })
   for (const entry of files) {

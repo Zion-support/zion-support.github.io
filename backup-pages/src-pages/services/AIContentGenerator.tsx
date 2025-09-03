@@ -20,55 +20,47 @@ import {
   ';
 export { function }
 export default function AIContentGenerator(...args[]):  {
-  const features = [{
+  const features = [
+  {
       icon: PenTool,
-      title: 'Multi-format Content',';
+      title: 'Multi-format Content,;
       description: 'Create blog posts, articles, social media content, emails, and marketing copy with AI assistance.'},
     {
       icon: Zap,';
-      title: 'Instant Generation',';
+      title: 'Instant Generation,;
       description: 'Generate content in seconds with customizable templates and intelligent suggestions.'},
     {
       icon: BarChart3,';
-      title: 'SEO Optimization',';
+      title: 'SEO Optimization,;
       description: 'AI-powered SEO recommendations and keyword optimization for better search rankings.'},
     {
       icon: Smartphone,';
-      title: 'Mobile-First Design',';
+      title: 'Mobile-First Design,;
       description: 'Create and edit content on  device with our responsive platform and mobile apps.'},
     {
       icon: Globe,';
-      title: 'Multi-language Support',';
+      title: 'Multi-language Support,;
       description: 'Generate content in over 50 languages with native-level quality and cultural adaptation.'}
   ]}
   ]}
   ];
-  const pricingPlans = [{
+  const pricingPlans = [
+  {
 ';
-      name: 'Content Creator',';
-      price: '$39',';
-      period: '/month',';
+      name: 'Content Creator,;
+      price: '$39,;
+      period: '/month,;
       description: 'Perfect for individual creators and small businesses',
-      features[';Up to 100 content pieces/month',';
-        'Basic AI writing tools',';
-        '5 content templates',';
-        'Standard SEO suggestions',';
-        'Mobile app access','        'Email support';
+      features[';Up to 100 content pieces/month',Basic AI writing tools',5 content templates',Standard SEO suggestions',Mobile app access,        'Email support';
       ],
       popular: false},
     {
 ';
-      name: 'Content Professional',';
-      price: '$99',';
-      period: '/month',';
+      name: 'Content Professional,;
+      price: '$99,;
+      period: '/month,;
       description: 'Ideal for growing businesses and content teams',
-      features[';Up to 500 content pieces/month',';
-        'Advanced AI capabilities',';
-        'Unlimited templates',';
-        'Advanced SEO tools',';
-        'Priority support',';
-        'API access',';
-        'Team collaboration';
+      features[';Up to 500 content pieces/month',Advanced AI capabilities',Unlimited templates',Advanced SEO tools',Priority support',API access',Team collaboration';
       ],
       popular: true},
     {
@@ -86,26 +78,21 @@ export default function AIContentGenerator(...args[]):  {
       description: 'Track content performance with AI-powered insights and optimization recommendations}
   ];
   Increase content production by 10x with AI assistance;
-  ',';Improve SEO rankings by 45% with optimized content;
-  ',';Reduce content creation costs by 60%;
-  ',';Boost engagement rates by 35% with targeted content;
-  ',';Save 20+ hours per week on content creation;
-  ',';Maintain consistent brand voice across all content;
+  ,;Improve SEO rankings by 45% with optimized content;
+  ,;Reduce content creation costs by 60%;
+  ,;Boost engagement rates by 35% with targeted content;
+  ,;Save 20+ hours per week on content creation;
+  ,;Maintain consistent brand voice across all content;
   ';
   ]';Advanced security features;
-  ',';Custom integrations;
+  ,;Custom integrations;
   ';
       ],';Unlimited AI-generated content;
-  ',';
-  'Unlimited image generation',
-  ';
-        'Custom AI model training;
-  ',';
-  'White-label solution',
-  ';
-        'Dedicated account manager;
-  ',';
-  'SLA guarantees',';Advanced security features',';Custom integrations';
+  ',Unlimited image generation',
+  Custom AI model training;
+  ',White-label solution',
+  Dedicated account manager;
+  ',SLA guarantees,;Advanced security features,;Custom integrations';
       ],';
       cta: 'Contact Sales,
       popular: false}
@@ -130,8 +117,7 @@ export default function AIContentGenerator(...args[]):  {
   { opacity: 1,
   y: 0}}
               transition={{ duration: 0.8 }}';
-              className='text-center max-w-4xl mx-auto';
-';
+              className='text-center max-w-4xl mx-auto;
               <h1 className='text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-500 to-red-600 bg-clip-text text-transparent'>
                 AI Content Generator
               </h1>'
@@ -161,8 +147,7 @@ export default function AIContentGenerator(...args[]):  {
   { opacity: 1,
   y: 0}}
               transition={{ duration: 0.8 }}';
-              className='text-center mb-16';
-';
+              className='text-center mb-16;
               <h2 className='text-4xl md:text-5xl font-bold mb-6 text-white'>
                 AI-Powered Content Creation
               </h2>'
@@ -185,8 +170,7 @@ export default function AIContentGenerator(...args[]):  {
                   transition = {
   { duration: 0.6,
   delay: index * 0.1}}';
-                  className='bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300 group';
-';
+                  className='bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300 group;
                   <div className='inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300'>'
                     <feature.icon className='w-6 h-6 text-white' />
                   </div>'
@@ -281,8 +265,7 @@ export default function AIContentGenerator(...args[]):  {
   { opacity: 1,
   y: 0}}
               transition={{ duration: 0.8 }}';
-              className='text-center mb-16';
-';
+              className='text-center mb-16;
               <h2 className='text-4xl md:text-5xl font-bold mb-6 text-white'>
                 Proven Results
               </h2>'
@@ -305,8 +288,7 @@ export default function AIContentGenerator(...args[]):  {
                   transition = {
   { duration: 0.6,
   delay: index * 0.1}}';
-                  className='flex items-start space-x-3';
-';
+                  className='flex items-start space-x-3;
                   <CheckCircle className='w-6 h-6 text-purple-400 mt-1 flex-shrink-0'  />'                  <span className='text-gray-300'>{benefit}</span>
                 </motion.div>
               ))}
@@ -324,8 +306,7 @@ export default function AIContentGenerator(...args[]):  {
   { opacity: 1,
   y: 0}}
               transition={{ duration: 0.8 }}';
-              className='text-center mb-16';
-';
+              className='text-center mb-16;
               <h2 className='text-4xl md:text-5xl font-bold mb-6 text-white'>
                 Simple, Transparent Pricing
               </h2>'
@@ -379,8 +360,7 @@ export default function AIContentGenerator(...args[]):  {
 `
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular,
-  ? 'bg-gradient-to-r from-purple-500 to-pink-600 hover: from-purple-600 hover:to-pink-700 text-white';
-  ';
+  ? 'bg-gradient-to-r from-purple-500 to-pink-600 hover: from-purple-600 hover:to-pink-700 text-white;
                       : 'border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white`}`}>{plan.cta}
                   </button>
                 </motion.div>
@@ -399,8 +379,7 @@ export default function AIContentGenerator(...args[]):  {
   { opacity: 1,
   y: 0}}
               transition={{ duration: 0.8 }}';
-              className='text-center max-w-4xl mx-auto';
-';
+              className='text-center max-w-4xl mx-auto;
               <h2 className='text-4xl md:text-5xl font-bold mb-6 text-white'>
                 Ready to Revolutionize Your Content Creation?
               </h2>'

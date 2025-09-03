@@ -103,7 +103,7 @@ export default function OptimizedImage({
     </div>
   )}`;
 
-    const componentsDir = path.join(this.projectRoot, 'src', 'components');
+    const componentsDir = path.join(this.projectRoot, 'src,components');
     if (!fs.existsSync(componentsDir)) {
       fs.mkdirSync(componentsDir, { recursive: true });
     }
@@ -133,7 +133,7 @@ const nextConfig = {
   
   // Optimize images
   images: {
-    formats: ['image/webp', 'image/avif'],
+    formats: ['image/webp,image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
@@ -141,7 +141,7 @@ const nextConfig = {
   // Enable experimental features
   experimental: {
     optimizeCss: true,
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
+    optimizePackageImports: ['lucide-react,@radix-ui/react-icons'],
   },
   
   // Webpack optimizations
@@ -237,7 +237,7 @@ export function usePerformanceMonitoring() {
 export function reportWebVitals(metric) {
   console.log('Web Vitals:', metric)}`;
 
-    const hooksDir = path.join(this.projectRoot, 'src', 'hooks');
+    const hooksDir = path.join(this.projectRoot, 'src,hooks');
     if (!fs.existsSync(hooksDir)) {
       fs.mkdirSync(hooksDir, { recursive: true });
     }
@@ -268,35 +268,24 @@ export function reportWebVitals(metric) {
   async createESLintConfig() {
     const eslintConfig = `module.exports = {
   extends: [
-    'next/core-web-vitals',
-    'eslint:recommended',
-    '@typescript-eslint/recommended',
+    'next/core-web-vitals,eslint:recommended,@typescript-eslint/recommended',
   ],
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint'],
   rules: {
     // Performance rules
-    'no-console': 'warn',
-    'no-debugger': 'error',
+    'no-console': 'warn,no-debugger': 'error',
     
     // Code quality rules
-    '@typescript-eslint/no-unused-vars': 'error',
-    '@typescript-eslint/no-explicit-any': 'warn',
-    '@typescript-eslint/prefer-const': 'error',
+    '@typescript-eslint/no-unused-vars': 'error,@typescript-eslint/no-explicit-any': 'warn,@typescript-eslint/prefer-const': 'error',
     
     // React rules
-    'react-hooks/exhaustive-deps': 'warn',
-    'react/no-unescaped-entities': 'off',
+    'react-hooks/exhaustive-deps': 'warn,react/no-unescaped-entities': 'off',
     
     // Accessibility rules
-    'jsx-a11y/alt-text': 'error',
-    'jsx-a11y/aria-props': 'error',
-    'jsx-a11y/aria-proptypes': 'error',
-    'jsx-a11y/aria-unsupported-elements': 'error',
-    'jsx-a11y/role-has-required-aria-props': 'error',
-    'jsx-a11y/role-supports-aria-props': 'error',
+    'jsx-a11y/alt-text': 'error,jsx-a11y/aria-props': 'error,jsx-a11y/aria-proptypes': 'error,jsx-a11y/aria-unsupported-elements': 'error,jsx-a11y/role-has-required-aria-props': 'error,jsx-a11y/role-supports-aria-props': 'error',
   },
-  ignorePatterns: ['node_modules/', '.next/', 'out/'],
+  ignorePatterns: ['node_modules/,.next/,out/'],
 }`;
 
     fs.writeFileSync(
@@ -377,22 +366,16 @@ export function middleware(request: NextRequest) {
   const response = NextResponse.next();
   
   // Security headers
-  response.headers.set('X-Content-Type-Options', 'nosniff');
-  response.headers.set('X-Frame-Options', 'DENY');
-  response.headers.set('X-XSS-Protection', '1; mode=block');
-  response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
-  response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
+  response.headers.set('X-Content-Type-Options,nosniff');
+  response.headers.set('X-Frame-Options,DENY');
+  response.headers.set('X-XSS-Protection,1; mode=block');
+  response.headers.set('Referrer-Policy,strict-origin-when-cross-origin');
+  response.headers.set('Permissions-Policy,camera=(), microphone=(), geolocation=()');
   
   // Content Security Policy
   const csp = [
-    "default-src 'self'",
-    "script-src 'self' 'unsafe-eval' 'unsafe-inline'",
-    "style-src 'self' 'unsafe-inline'",
-    "img-src 'self' data: https:",
-    "font-src 'self'",
-    "connect-src 'self'",
-    "frame-ancestors 'none'",
-  ].join('; ');
+    "default-src 'self',script-src 'self' 'unsafe-eval' 'unsafe-inline',style-src 'self' 'unsafe-inline',img-src 'self' data: https:,font-src 'self',connect-src 'self',frame-ancestors 'none'",
+  ].join();
   
   response.headers.set('Content-Security-Policy', csp);
   
@@ -414,7 +397,7 @@ export const config = {
     const envValidation = `import { z } from 'zod';
 
 const envSchema = z.object({
-  NODE_ENV: z.enum(['development', 'production', 'test']),
+  NODE_ENV: z.enum(['development,production,test']),
   NEXT_PUBLIC_APP_URL: z.string().url(),
   DATABASE_URL: z.string().url().optional(),
   NEXTAUTH_SECRET: z.string().min(32).optional(),
@@ -425,7 +408,7 @@ export const env = envSchema.parse(process.env);
 
 export type Env = z.infer<typeof envSchema>;`;
 
-    const libDir = path.join(this.projectRoot, 'src', 'lib');
+    const libDir = path.join(this.projectRoot, 'src,lib');
     if (!fs.existsSync(libDir)) {
       fs.mkdirSync(libDir, { recursive: true });
     }
@@ -471,7 +454,7 @@ export default function SEO({
   image = '/og-image.jpg',
   url,
   type = 'website',
-  keywords = ['technology', 'AI', 'digital transformation', 'consulting'],
+  keywords = ['technology,AI,digital transformation,consulting'],
   author = 'Zion Tech Group',
   publishedTime,
   modifiedTime,
@@ -484,7 +467,7 @@ export default function SEO({
     <Head>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={keywords.join(', ')} />
+      <meta name="keywords" content={keywords.join(,)} />
       <meta name="author" content={author} />
       <link rel="canonical" href={canonicalUrl} />
       
@@ -512,8 +495,7 @@ export default function SEO({
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Organization',
+            '@context': 'https://schema.org,@type': 'Organization',
             name: 'Zion Tech Group',
             url: 'https://ziontechgroup.com',
             logo: 'https://ziontechgroup.com/logo.png',
@@ -526,7 +508,7 @@ export default function SEO({
     </Head>
   )}`;
 
-    const componentsDir = path.join(this.projectRoot, 'src', 'components');
+    const componentsDir = path.join(this.projectRoot, 'src,components');
     if (!fs.existsSync(componentsDir)) {
       fs.mkdirSync(componentsDir, { recursive: true });
     }
@@ -543,12 +525,7 @@ import path from 'path';
 export async function generateSitemap() {
   const baseUrl = 'https://ziontechgroup.com';
   const pages = [
-    '/',
-    '/about',
-    '/services',
-    '/contact',
-    '/blog',
-    '/careers',
+    '/,/about,/services,/contact,/blog,/careers',
   ];
 
   const sitemap = \`<?xml version="1.0" encoding="UTF-8"?>
@@ -566,14 +543,14 @@ export async function generateSitemap() {
   .join('')}
 </urlset>\`;
 
-  fs.writeFileSync(path.join(process.cwd(), 'public', 'sitemap.xml'), sitemap);
+  fs.writeFileSync(path.join(process.cwd(), 'public,sitemap.xml'), sitemap);
   console.log('Sitemap generated successfully')}
 
 if (require.main === module) {
   generateSitemap()}`;
 
     fs.writeFileSync(
-      path.join(this.projectRoot, 'scripts', 'generate-sitemap.js'),
+      path.join(this.projectRoot, 'scripts,generate-sitemap.js'),
       sitemapGenerator
     );
 
@@ -593,7 +570,7 @@ Disallow: /_next/
 Disallow: /private/`;
 
     fs.writeFileSync(
-      path.join(this.projectRoot, 'public', 'robots.txt'),
+      path.join(this.projectRoot, 'public,robots.txt'),
       robotsTxt
     );
 
@@ -622,8 +599,8 @@ export const focusElement = (selector: string) => {
 
 export const announceToScreenReader = (message: string) => {
   const announcement = document.createElement('div');
-  announcement.setAttribute('aria-live', 'polite');
-  announcement.setAttribute('aria-atomic', 'true');
+  announcement.setAttribute('aria-live,polite');
+  announcement.setAttribute('aria-atomic,true');
   announcement.className = 'sr-only';
   announcement.textContent = message;
   
@@ -669,7 +646,7 @@ export const getContrastRatio = (color1: string, color2: string): number => {
 export const isHighContrast = (color1: string, color2: string): boolean => {
   return getContrastRatio(color1, color2) >= 4.5}`;
 
-    const utilsDir = path.join(this.projectRoot, 'src', 'utils');
+    const utilsDir = path.join(this.projectRoot, 'src,utils');
     if (!fs.existsSync(utilsDir)) {
       fs.mkdirSync(utilsDir, { recursive: true });
     }
@@ -695,7 +672,7 @@ export default function SkipLink() {
     </Link>
   )}`;
 
-    const componentsDir = path.join(this.projectRoot, 'src', 'components');
+    const componentsDir = path.join(this.projectRoot, 'src,components');
     if (!fs.existsSync(componentsDir)) {
       fs.mkdirSync(componentsDir, { recursive: true });
     }
@@ -776,7 +753,7 @@ export default function Skeleton({ className, lines = 1 }: SkeletonProps) {
     </div>
   )}`;
 
-    const componentsDir = path.join(this.projectRoot, 'src', 'components');
+    const componentsDir = path.join(this.projectRoot, 'src,components');
     if (!fs.existsSync(componentsDir)) {
       fs.mkdirSync(componentsDir, { recursive: true });
     }
@@ -857,7 +834,7 @@ export default class ErrorBoundary extends Component<Props, State> {
     return this.props.children}
 }`;
 
-    const componentsDir = path.join(this.projectRoot, 'src', 'components');
+    const componentsDir = path.join(this.projectRoot, 'src,components');
     if (!fs.existsSync(componentsDir)) {
       fs.mkdirSync(componentsDir, { recursive: true });
     }
@@ -953,7 +930,7 @@ function Toast({ toast, onRemove }: { toast: Toast; onRemove: (id: string) => vo
     </div>
   )}`;
 
-    const componentsDir = path.join(this.projectRoot, 'src', 'components');
+    const componentsDir = path.join(this.projectRoot, 'src,components');
     if (!fs.existsSync(componentsDir)) {
       fs.mkdirSync(componentsDir, { recursive: true });
     }
@@ -985,7 +962,7 @@ console.log('🔨 Running build optimizations...');
 // Clean previous builds
 const cleanBuild = () => {
   console.log('🧹 Cleaning previous builds...');
-  const dirsToClean = ['.next', 'out', 'dist'];
+  const dirsToClean = ['.next,out,dist'];
   
   dirsToClean.forEach(dir => {
     if (fs.existsSync(dir)) {
@@ -1018,7 +995,7 @@ const runOptimizations = () => {
 runOptimizations();`;
 
     fs.writeFileSync(
-      path.join(this.projectRoot, 'scripts', 'build-optimizer.js'),
+      path.join(this.projectRoot, 'scripts,build-optimizer.js'),
       buildOptimizer
     );
 
@@ -1051,7 +1028,7 @@ const withBundleAnalyzer = (nextConfig = {}) => {
 module.exports = withBundleAnalyzer;`;
 
     fs.writeFileSync(
-      path.join(this.projectRoot, 'scripts', 'bundle-analyzer.js'),
+      path.join(this.projectRoot, 'scripts,bundle-analyzer.js'),
       bundleAnalyzer
     );
 
@@ -1243,9 +1220,7 @@ GET /api/health
 **Response:**
 \`\`\`json
 {
-  "status": "healthy",
-  "timestamp": "2024-01-01T00:00:00.000Z",
-  "version": "1.0.0"
+  "status": "healthy,timestamp": "2024-01-01T00:00:00.000Z,version": "1.0.0"
 }
 \`\`\`
 
@@ -1260,9 +1235,7 @@ POST /api/contact
 **Request Body:**
 \`\`\`json
 {
-  "name": "John Doe",
-  "email": "john@example.com",
-  "message": "Hello, I'm interested in your services."
+  "name": "John Doe,email": "john@example.com,message": "Hello, I'm interested in your services."
 }
 \`\`\`
 
@@ -1281,11 +1254,8 @@ All errors follow a consistent format:
 \`\`\`json
 {
   "error": {
-    "code": "VALIDATION_ERROR",
-    "message": "Invalid input data",
-    "details": {
-      "field": "email",
-      "reason": "Invalid email format"
+    "code": "VALIDATION_ERROR,message": "Invalid input data,details": {
+      "field": "email,reason": "Invalid email format"
     }
   }
 }

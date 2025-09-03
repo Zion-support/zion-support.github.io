@@ -25,7 +25,7 @@ export default function SearchPage() {
       // Simulate search functionality
       // In a real implementation, this would call your search API
       const mockResults = [
-        {
+  {
           title: 'AI Services',
           description: 'Cutting-edge artificial intelligence solutions for your business',
           url: '/services/ai-services',

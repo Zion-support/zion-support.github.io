@@ -14,7 +14,7 @@ const syntaxFixes = [
   // Fix broken import statements
   {
     pattern: /import\s+(\w+)\s+from\s*;\s*\n\s*['"`]([^'"`]+)['"`];?/g,
-    replacement: "import $1 from '$2';"
+    replacement: "import $1 from '$2
   },
   // Fix broken console.log statements
   {pattern: /\/\/\s*\/\/\s*\/\/\s*\/\/\s*\/\/\s*\/\/\s*\/\/\s*console\.log\(\s*\n\s*['"`]([^'"`]+)['"`]\s*\)/g,
@@ -50,7 +50,7 @@ function fixFile(filePath) {
     syntaxFixes.forEach(fix => {
       content = content.replace(fix.pattern, fix.replacement)})
     
-    // Additional specific fixescontent = content.replace(/import\s+{\s*execSync\s*}\s+from\s*;\s*\n\s*['"`]child_process['"`];?/g, "import { execSync } from 'child_process';");content = content.replace(/import\s+fs\s+from\s*;\s*\n\s*['"`]fs['"`];?/g, "import fs from 'fs';");content = content.replace(/import\s+path\s+from\s*;\s*\n\s*['"`]path['"`];?/g, "import path from 'path';");
+    // Additional specific fixescontent = content.replace(/import\s+{\s*execSync\s*}\s+from\s*;\s*\n\s*['"`]child_process['"`];?/g, "import { execSync } from 'child_process);content = content.replace(/import\s+fs\s+from\s*;\s*\n\s*['"`]fs['"`];?/g, "import fs from 'fs);content = content.replace(/import\s+path\s+from\s*;\s*\n\s*['"`]path['"`];?/g, "import path from 'path);
     
     // Fix broken function callscontent = content.replace(/console\.log\(\s*,\s*\n\s*['"`]([^'"`]+)['"`]\s*\)/g, "console.log('$1')");content = content.replace(/console\.error\(\s*,\s*\n\s*['"`]([^'"`]+)['"`]\s*\)/g, "console.error('$1')");
     
@@ -97,8 +97,7 @@ async function main() {
     console.log('\n📋 Running syntax validation...');
     try {
       // Test a few key files
-      const testFiles = [scripts/automation-manager.js',
-        'scripts/performance-monitor.js',scripts/comprehensive-test-automation.js'
+      const testFiles = [scripts/automation-manager.js,scripts/performance-monitor.js',scripts/comprehensive-test-automation.js'
       ];
       
       for (const testFile of testFiles) {

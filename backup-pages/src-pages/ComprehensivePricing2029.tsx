@@ -1,9 +1,8 @@
 
-export default function ComprehensivePricing2029(...args: any[]): any {
+export default function ComprehensivePricing2029() {
   const [selectedCategory, setSelectedCategory] = useState(,
   All');
-  const [searchQuery, setSearchQuery] = useState(';
-  ');
+  const [searchQuery, setSearchQuery] = useState();
   const [viewMode, setViewMode] = useState<any>('grid;
   ')
   const [sortBy, setSortBy] = useState<any>('popularity;
@@ -15,11 +14,9 @@ export default function ComprehensivePricing2029(...args: any[]): any {
   ': return b.rating - a.rating;
 return parseFloat(a.price.replace('$, ,
   ').replace(
-  ',', ';
-  ')) - parseFloat(b.price.replace('$;
-  ', '').replace(
-  ',', ';
-  '))'      case;
+  ,, )) - parseFloat(b.price.replace('$;
+  ,').replace(
+  ,, ))'      case;
   'rating': return b.rating - a.rating';
       case;
   'popularity:;
@@ -194,8 +191,7 @@ return parseFloat(a.price.replace('$, ,
   grid;
   ' ';
                 ?;
-  'grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3';
-  ';
+  'grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3;
                 : 'grid-cols-1`}`}
           >
             <AnimatePresence>

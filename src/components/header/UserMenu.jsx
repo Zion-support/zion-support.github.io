@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect } from 'react';"
-import { Link } from 'react-router-dom';"
+import React, { useState, useRef, useEffect } from 'react
+import { Link } from 'react-router-dom
 import { User, Settings, LogOut, Bell, MessageSquare, Shield, CreditCard, HelpCircle } from 'lucide-react';
 
 export function UserMenu({ user }) {
@@ -24,44 +24,44 @@ export function UserMenu({ user }) {
 };
 
   const menuItems = [
-    {"
-      name: 'Profile',"
+  {"
+      name: 'Profile,
       href: '/profile',
       icon: User,"
       description: 'Manage your account',
 },
     {"
-      name: 'Dashboard',"
+      name: 'Dashboard,
       href: '/dashboard',
       icon: Settings,"
       description: 'View your projects',
 },
     {"
-      name: 'Messages',"
+      name: 'Messages,
       href: '/messages',
       icon: MessageSquare,"
       description: 'Check your inbox',
 },
     {"
-      name: 'Notifications',"
+      name: 'Notifications,
       href: '/notifications',
       icon: Bell,"
       description: 'Manage alerts',
 },
     {"
-      name: 'Security',"
+      name: 'Security,
       href: '/security',
       icon: Shield,"
       description: 'Privacy & security',
 },
     {"
-      name: 'Billing',"
+      name: 'Billing,
       href: '/billing',
       icon: CreditCard,"
       description: 'Payment methods',
 },
     {"
-      name: 'Help',"
+      name: 'Help,
       href: '/help',
       icon: HelpCircle,"
       description: 'Get support',
@@ -124,7 +124,7 @@ export function UserMenu({ user }) {
           {/* Logout */}"
           <div className="p-4 border-t border-zion-purple/20">
             <button onClick={handleLogout}"
-              className="flex items-center w-full px-4 py-2 text-red-400 hover:text-red-300 hover:bg-red-500/10 rounded-lg transition-colors"" >"
+              className='flex items-center w-full px-4 py-2 text-red-400 hover:text-red-300 hover:bg-red-500/10 rounded-lg transition-colors  >'
               <LogOut className="h-4 w-4 mr-3" /" >
               <span>Sign Out</span>
             </button>
