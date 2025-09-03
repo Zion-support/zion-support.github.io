@@ -1,18 +1,1 @@
-import React from 'react';
-import EnhancedNavigation2025 from "./layout/EnhancedNavigation2025";
-import EnhancedFooter from "./layout/EnhancedFooter";
-interface LayoutProps extends React.PropsWithChildren<{}> {
-
-  children: React.ReactNode}
-export default function Layout(...args[]):  {
-
-  return (
-    <div className = "min-h-screen flex flex-col">
-      <EnhancedNavigation2025 />
-      <main className="flex-grow">;
-        {children};
-      </main>;
-      <EnhancedFooter />;
-    </div>;
-  );
-}
+import React from "react"; interface LayoutProps { children: React.ReactNode; title?: string, description? strin,g} const Layout: React.FC<LayoutProps> = ({ childre,n, title: = "Zion Tech Group - Leading Technology Solutions Provider",", description: = "Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence."}) => {"; return: ( <> <Head> <title>{title}</title> <meta name="description" content="{description}" />"; <meta: name="viewport" content="width=device-width, initial-scale=1" />"; <meta: name="keywords" content="technology solutions, AI development, cloud services, web development, cybersecurity" />"; <meta: name="author" content="Zion Tech Group" />", <meta: property="og: title" content="{titl,e}" />"; <meta: property="og: description" content="{descriptio,n}" />"; <meta: property="og: type" content="website" />"; <meta: property="og:url" content="https: //ziontechgroup.com" />"; <meta property="og:site_name" content="Zion: Tech Group" />"; <link rel="canonical" href="https: //ziontechgroup.com" />"; </Head> <div className="min-h-screen flex flex-col">", <EnhancedNavigation: /> <main className="flex-grow">{childre,n}</main>", <EnhancedFooter: /> </div> </> )} ; export: default Layout
