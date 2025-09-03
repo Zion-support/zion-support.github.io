@@ -1,0 +1,109 @@
+{
+  "timestamp": "2025-09-03T20:14:26.801Z",
+  "status": "success",
+  "tasks": [
+    {
+      "timestamp": "2025-09-03T20:14:26.801Z",
+      "type": "info",
+      "message": "Starting Continuous Automation Pipeline"
+    },
+    {
+      "timestamp": "2025-09-03T20:14:26.808Z",
+      "type": "info",
+      "message": "Running automation scripts..."
+    },
+    {
+      "timestamp": "2025-09-03T20:14:26.808Z",
+      "type": "warn",
+      "message": "Script not found: scripts/automation/automation-orchestrator.cjs"
+    },
+    {
+      "timestamp": "2025-09-03T20:14:26.808Z",
+      "type": "warn",
+      "message": "Script not found: scripts/automation/comprehensive-continuous-automation.cjs"
+    },
+    {
+      "timestamp": "2025-09-03T20:14:26.808Z",
+      "type": "warn",
+      "message": "Some automation scripts failed"
+    },
+    {
+      "timestamp": "2025-09-03T20:14:26.808Z",
+      "type": "info",
+      "message": "Running marketing automation..."
+    },
+    {
+      "timestamp": "2025-09-03T20:14:26.808Z",
+      "type": "warn",
+      "message": "Marketing automation script not found"
+    },
+    {
+      "timestamp": "2025-09-03T20:14:26.808Z",
+      "type": "info",
+      "message": "Running security audit..."
+    },
+    {
+      "timestamp": "2025-09-03T20:14:26.808Z",
+      "type": "info",
+      "message": "Starting: Running security audit"
+    },
+    {
+      "timestamp": "2025-09-03T20:14:28.157Z",
+      "type": "error",
+      "message": "Failed: Running security audit - Command failed: npm audit\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
+    },
+    {
+      "timestamp": "2025-09-03T20:14:28.158Z",
+      "type": "warn",
+      "message": "Security audit found issues, attempting to fix..."
+    },
+    {
+      "timestamp": "2025-09-03T20:14:28.158Z",
+      "type": "info",
+      "message": "Starting: Fixing security issues"
+    },
+    {
+      "timestamp": "2025-09-03T20:14:31.106Z",
+      "type": "error",
+      "message": "Failed: Fixing security issues - Command failed: npm audit fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
+    },
+    {
+      "timestamp": "2025-09-03T20:14:31.107Z",
+      "type": "warn",
+      "message": "Security audit failed"
+    },
+    {
+      "timestamp": "2025-09-03T20:14:31.107Z",
+      "type": "info",
+      "message": "Generating automation reports..."
+    },
+    {
+      "timestamp": "2025-09-03T20:14:31.107Z",
+      "type": "info",
+      "message": "Summary report saved to: /workspace/automation-reports/continuous-automation-summary.json"
+    },
+    {
+      "timestamp": "2025-09-03T20:14:31.107Z",
+      "type": "success",
+      "message": "Continuous Automation Pipeline completed!"
+    }
+  ],
+  "errors": [
+    {
+      "task": "Running security audit",
+      "error": "Command failed: npm audit\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n",
+      "timestamp": "2025-09-03T20:14:28.158Z"
+    },
+    {
+      "task": "Fixing security issues",
+      "error": "Command failed: npm audit fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n",
+      "timestamp": "2025-09-03T20:14:31.107Z"
+    }
+  ],
+  "summary": {
+    "automation": false,
+    "marketing": true,
+    "security": false,
+    "duration": 4306
+  }
+}
