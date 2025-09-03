@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Layers, Cloud, FileText, Users, BarChart3, Mail, Clock, Shield, Zap, TrendingUp, Settings, Globe } from 'lucide-react';
+import { Cloud, FileText, Users, BarChart3, Mail, Shield, Zap, TrendingUp, Settings, Globe } from 'lucide-react';
 
 export default function MicroSaaS() {
   const contact = {

@@ -62,19 +62,15 @@ export default [
       'coverage/**',
 
       // Large/legacy sources and disabled dirs
-      'src/**',
       'src.corrupted/**',
       'src.disabled/**',
       'src.broken/**',
       'src.pages.disabled/**',
       'solutions.disabled/**',
       'components.disabled/**',
-      'components/**',
       'components.corrupted/**',
-      'hooks/**',
       'hooks.disabled/**',
       'lib.disabled/**',
-      'lib/**',
       'lib.corrupted/**',
       'zion-os.disabled/**',
       'zion_academy/**',
@@ -85,14 +81,11 @@ export default [
       'cypress_backup/**',
       'data/**',
       'e2e/**',
-      'pages/**',
       'pages.disabled/**',
       'pages.disabled_backup/**',
       'pages_backup/**',
       'supabase/**',
-      'types/**',
       'types.disabled/**',
-      'utils/**',
 
       // Tests and mocks
       '__tests__/**',
@@ -132,11 +125,6 @@ export default [
 
       // Root-level noisy files
       'api/**',
-      '*.js',
-      '.*.js',
-      '*.ts',
-      '*.tsx',
-      '*.jsx',
       'jest.config.*',
       'fix-*.js',
       'fix-*.jsx',
