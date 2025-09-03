@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import React from 'react';
 import { ReactNode } from "react";
+=======
+import React, { ReactNode } from "react";
+>>>>>>> main
 
 interface EnhancedLayoutProps {
   children: ReactNode;
