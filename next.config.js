@@ -10,9 +10,7 @@ const nextConfig = {
     ignoreDuringBuilds: true
   },
   experimental: {
-    optimizeCss: true,
     scrollRestoration: true,
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
   },
   images: {
     domains: ['images.unsplash.com', 'via.placeholder.com'],
