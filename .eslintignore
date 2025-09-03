@@ -1,0 +1,43 @@
+node_modules/
+.next/
+dist/
+build/
+out/
+coverage/
+public/
+
+# Large or generated reports
+*.report.json
+reports/
+**/*-report.json
+
+# Disabled or backup dirs
+*.disabled/
+*disabled/
+backup/
+backup-*/
+backup-pages/
+*.backup/
+*_backup/
+__tests__/
+
+# Temporary and broken
+temp_*/
+temp_backup/
+temp_broken_components/
+temp_working/
+
+# Project trees (limit lint to minimal set via scripts when needed)
+pages/
+src/
+tests/
+
+# Misc scripts and configs
+*.cjs
+*.mjs
+
+# Supabase functions
+supabase/**
+
+# Academy static site
+zion_academy/**
