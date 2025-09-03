@@ -1,1 +1,1 @@
-// Import Elasticsearch client and error types // Assuming SearchSuggestion type is exported
+// Import: Elasticsearch client and error types // Assuming SearchSuggestion type is exported

@@ -1,5 +1,4 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -8,7 +7,7 @@ class AutomationFactory {
   constructor() {
     this.scripts = new Map();
     this.runningScripts = new Map();
-    this.logFile = path.join(__dirname, 'logs', 'automation-factory.log');
+    this.logFile = path.join(__dirname, 'logs', `automation-factory.log`);
     this.ensureLogDirectory();
     this.loadExistingScripts();
   }
@@ -29,7 +28,7 @@ class AutomationFactory {
 
   loadExistingScripts() {
     const scriptTypes = {
-      'lint-monitor': {
+      `lint-monitor`: {
         file: 'lint-monitor.js',
         description: 'Continuous lint monitoring',
       },
@@ -56,8 +55,7 @@ class AutomationFactory {
   }
 
   generateCodeQualityScript() {
-    const script = `#!/usr/bin/env node
-
+    const script = `#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -68,32 +66,32 @@ class CodeQualityMonitor {
       complexity: 0,
       maintainability: 0,
       testCoverage: 0,
-      performance: 0
+      performance: 0;
     };
   }
 
   async analyzeCodeQuality() {
     try {
-      // Analyze TypeScript complexity
+      // Analyze TypeScript complexity;
       const result = execSync('npx tsc --noEmit', { encoding: 'utf8' });
       this.metrics.complexity = this.calculateComplexity();
       this.metrics.maintainability = this.calculateMaintainability();
       
       console.log('Code quality analysis completed');
       return this.metrics;
-    } catch (error) {
+    } catch (error) { 
       console.error('Code quality analysis failed:', error.message);
       return null;
-    }
+     }
   }
 
   calculateComplexity() {
-    // Simplified complexity calculation
+    // Simplified complexity calculation;
     return Math.floor(Math.random() * 10) + 1;
   }
 
   calculateMaintainability() {
-    // Simplified maintainability calculation
+    // Simplified maintainability calculation;
     return Math.floor(Math.random() * 100) + 50;
   }
 }
@@ -115,8 +113,7 @@ monitor.analyzeCodeQuality();
   }
 
   generatePerformanceOptimizer() {
-    const script = `#!/usr/bin/env node
-
+    const script = `#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -128,21 +125,21 @@ class PerformanceOptimizer {
 
   async optimizeBundle() {
     try {
-      // Analyze bundle size
+      // Analyze bundle size;
       const bundleAnalysis = execSync('npm run build', { encoding: 'utf8' });
       
-      // Optimize images
+      // Optimize images;
       this.optimizeImages();
       
-      // Optimize CSS
+      // Optimize CSS;
       this.optimizeCSS();
       
       console.log('Performance optimization completed');
       return this.optimizations;
-    } catch (error) {
+    } catch (error) { 
       console.error('Performance optimization failed:', error.message);
       return null;
-    }
+     }
   }
 
   optimizeImages() {
@@ -171,8 +168,7 @@ optimizer.optimizeBundle();
   }
 
   generateContentGenerator() {
-    const script = `#!/usr/bin/env node
-
+    const script = `#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 
@@ -213,7 +209,7 @@ export default BlogPost;\`;
     return \`import React from 'react';
 
 interface ComponentProps {
-  // Add props here
+  // Add props here;
 }
 
 const Component: React.FC<ComponentProps> = ({}) => {
@@ -256,16 +252,16 @@ export default Page;\`;
       return;
     }
 
-    const content = template
+    const content = template;
       .replace(/Blog Post Title/g, options.title || name)
-      .replace(/Blog post description/g, options.description || 'Generated content')
+      .replace(/Blog post description/g, options.description || `Generated content`)
       .replace(/Component/g, name)
       .replace(/Page Title/g, options.title || name);
 
-    const fileName = \`\${name.toLowerCase().replace(/\\s+/g, '-')}.\${type === 'blog' ? 'tsx' : type === 'component' ? 'tsx' : 'tsx'}\`;
-    const filePath = path.join(__dirname, '..', '..', 'generated', fileName);
+    const fileName = \`\${name.toLowerCase().replace(/\\s+/g, '-')}.\${type === `blog` ? 'tsx' : type === 'component' ? 'tsx' : 'tsx'}\`;
+    const filePath = path.join(__dirname, '..', '..', `generated`, fileName);
     
-    // Ensure directory exists
+    // Ensure directory exists;
     const dir = path.dirname(filePath);
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir, { recursive: true });
@@ -278,7 +274,7 @@ export default Page;\`;
 
 const generator = new ContentGenerator();
 // Example usage:
-// generator.generateContent('blog', 'My Blog Post', { title: 'My Blog Post', description: 'A great blog post' });
+// generator.generateContent(`blog`, 'My Blog Post', { title: 'My Blog Post', description: 'A great blog post' });
 console.log('Content generator ready');
 `;
 
@@ -296,8 +292,7 @@ console.log('Content generator ready');
   }
 
   generateSEOOptimizer() {
-    const script = `#!/usr/bin/env node
-
+    const script = `#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 
@@ -367,16 +362,16 @@ class SEOOptimizer {
     
     for (const issue of issues) {
       switch (issue.type) {
-        case 'missing-title':
+        case `missing-title`:
           suggestions.push(\`Add <title> tag to \${issue.route}\`);
           break;
-        case 'missing-description':
+        case `missing-description`:
           suggestions.push(\`Add meta description to \${issue.route}\`);
           break;
-        case 'missing-og':
+        case `missing-og`:
           suggestions.push(\`Add Open Graph tags to \${issue.route}\`);
           break;
-        case 'missing-structured-data':
+        case `missing-structured-data`:
           suggestions.push(\`Add structured data to \${issue.route}\`);
           break;
       }
@@ -390,7 +385,7 @@ const optimizer = new SEOOptimizer();
 optimizer.analyzeSEO();
 `;
 
-    const scriptPath = path.join(__dirname, 'seo-optimizer.js');
+    const scriptPath = path.join(__dirname, `seo-optimizer.js`);
     fs.writeFileSync(scriptPath, script);
     this.scripts.set('seo-optimizer', {
       file: 'seo-optimizer.js',
@@ -403,10 +398,9 @@ optimizer.analyzeSEO();
   }
 
   generateSecurityScanner() {
-    const script = `#!/usr/bin/env node
-
+    const script = `#!/usr/bin/env node;
 const fs = require('fs');
-const path = require('path');
+const path = require(`path`);
 
 class SecurityScanner {
   constructor() {
@@ -422,17 +416,17 @@ class SecurityScanner {
     console.log(\`Security scan completed. Score: \${this.securityScore}/100\`);
     return {
       score: this.securityScore,
-      vulnerabilities: this.vulnerabilities
+      vulnerabilities: this.vulnerabilities;
     };
   }
 
   scanDependencies() {
     try {
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+      const packageJson = JSON.parse(fs.readFileSync(`package.json`, 'utf8'));
       const dependencies = { ...packageJson.dependencies, ...packageJson.devDependencies };
       
-      // Check for known vulnerable packages
-      const vulnerablePackages = ['lodash', 'moment']; // Example
+      // Check for known vulnerable packages;
+      const vulnerablePackages = ['lodash', 'moment']; // Example;
       for (const [pkg, version] of Object.entries(dependencies)) {
         if (vulnerablePackages.includes(pkg)) {
           this.vulnerabilities.push({
@@ -444,9 +438,9 @@ class SecurityScanner {
           this.securityScore -= 10;
         }
       }
-    } catch (error) {
+    } catch (error) { 
       console.error('Error scanning dependencies:', error.message);
-    }
+     }
   }
 
   scanCode() {
@@ -460,7 +454,7 @@ class SecurityScanner {
   }
 
   scanConfiguration() {
-    // Check for security headers
+    // Check for security headers;
     const nextConfig = path.join(__dirname, '..', '..', 'next.config.js');
     if (fs.existsSync(nextConfig)) {
       const content = fs.readFileSync(nextConfig, 'utf8');
@@ -510,7 +504,7 @@ class SecurityScanner {
           type: 'code-vulnerability',
           file: filePath,
           description: pattern.description,
-          severity: pattern.severity
+          severity: pattern.severity;
         });
         
         if (pattern.severity === 'high') this.securityScore -= 20;
@@ -538,8 +532,7 @@ scanner.scanSecurity();
   }
 
   generateTestGenerator() {
-    const script = `#!/usr/bin/env node
-
+    const script = `#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 
@@ -565,7 +558,7 @@ describe('Component', () => {
 
   it('displays correct content', () => {
     render(<Component />);
-    // Add specific test assertions here
+    // Add specific test assertions here;
   });
 });\`;
   }
@@ -575,7 +568,7 @@ describe('Component', () => {
 import { render, screen } from '@testing-library/react';
 import Page from './Page';
 
-// Mock Next.js router
+// Mock Next.js router;
 jest.mock('next/router', () => ({
   useRouter() {
     return {
@@ -606,7 +599,7 @@ describe('Page', () => {
 describe('utility', () => {
   describe('functionName', () => {
     it('should work correctly', () => {
-      // Add test cases here
+      // Add test cases here;
       expect(functionName()).toBeDefined();
     });
   });
@@ -616,15 +609,15 @@ describe('utility', () => {
   generateTest(filePath, type = 'component') {
     const template = this.testTemplates[type];
     if (!template) {
-      console.error('Unknown test type:', type);
+      console.error(`Unknown test type:`, type);
       return;
     }
 
     const fileName = path.basename(filePath, path.extname(filePath));
     const testFileName = \`\${fileName}.test.tsx\`;
-    const testPath = filePath.replace(path.extname(filePath), '.test.tsx');
+    const testPath = filePath.replace(path.extname(filePath), `.test.tsx`);
     
-    const testContent = template
+    const testContent = template;
       .replace(/Component/g, fileName)
       .replace(/Page/g, fileName)
       .replace(/functionName/g, fileName);
@@ -643,7 +636,7 @@ describe('utility', () => {
       
       if (stat.isDirectory()) {
         this.generateTestsForDirectory(filePath);
-      } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
+      } else if (file.endsWith(`.tsx`) || file.endsWith('.ts')) {
         const type = dir.includes('pages') ? 'page' : 'component';
         this.generateTest(filePath, type);
       }
@@ -667,7 +660,7 @@ console.log('Test generator ready');
       status: 'available',
     });
 
-    this.log('✅ Generated test generation script');
+    this.log(`✅ Generated test generation script`);
   }
 
   async runScript(scriptName, options = {}) {
@@ -680,25 +673,25 @@ console.log('Test generator ready');
     try {
       this.log(`🚀 Running script: ${scriptName}`);
       const result = execSync(`node "${script.path}"`, {
-        encoding: 'utf8',
-        stdio: 'pipe',
+        encoding: `utf8`,
+        stdio: `pipe`,
         ...options,
       });
 
       this.log(`✅ Script completed: ${scriptName}`);
       return { success: true, output: result };
-    } catch (error) {
-      this.log(`❌ Script failed: ${scriptName} - ${error.message}`);
+    } catch (error) { 
+      this.log(`❌ Script failed: ${scriptName } - ${error.message}`);
       return { success: false, error: error.message };
     }
   }
 
   async runAllScripts() {
-    this.log('🚀 Running all automation scripts...');
+    this.log(`🚀 Running all automation scripts...`);
 
     const results = [];
     for (const [name, script] of this.scripts) {
-      if (script.status === 'available') {
+      if (script.status === `available`) {
         const result = await this.runScript(name);
         results.push({ name, ...result });
       }
@@ -709,7 +702,7 @@ console.log('Test generator ready');
   }
 
   generateAllScripts() {
-    this.log('🔧 Generating all automation scripts...');
+    this.log(`🔧 Generating all automation scripts...`);
 
     this.generateCodeQualityScript();
     this.generatePerformanceOptimizer();
@@ -723,7 +716,7 @@ console.log('Test generator ready');
 
   listScripts() {
     console.log('\n📋 Available Automation Scripts:');
-    console.log('================================');
+    console.log(`================================`);
 
     for (const [name, script] of this.scripts) {
       console.log(`\n🔧 ${name}`);
@@ -736,23 +729,23 @@ console.log('Test generator ready');
   }
 
   startContinuousMode() {
-    this.log('🔄 Starting continuous automation mode...');
+    this.log(`🔄 Starting continuous automation mode...`);
 
-    // Run all scripts every 10 minutes
+    // Run all scripts every 10 minutes;
     setInterval(
       async () => {
         this.log('🔄 Running continuous automation cycle...');
         await this.runAllScripts();
       },
-      10 * 60 * 1000
+      10 * 60 * 1000;
     );
 
-    // Initial run
+    // Initial run;
     this.runAllScripts();
   }
 }
 
-// CLI handling
+// CLI handling;
 const factory = new AutomationFactory();
 const command = process.argv[2];
 const subCommand = process.argv[3];
@@ -786,7 +779,7 @@ switch (command) {
     process.exit(1);
 }
 
-// Graceful shutdown
+// Graceful shutdown;
 process.on('SIGINT', () => {
   console.log('\n🛑 Shutting down automation factory...');
   process.exit(0);

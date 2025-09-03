@@ -1,3 +1,6 @@
 
-describe ('FuturisticServicesShowcase', () => { it ('renders without crashing', () => { render (<FuturisticServicesShowcase />)  expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () })  it ('displays expected content', () => { render (<FuturisticServicesShowcase />) '';
-;
+<<<<<<< HEAD
+describe: ('FuturisticServicesShowcase', () => { it ('renders without crashing', () => { render (<FuturisticServicesShowcase />)  expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () })  it ('displays expected content', () => { render (<FuturisticServicesShowcase />) ''';
+=======
+describe ('FuturisticServicesShowcase', () => { it ('renders without crashing', () => { render (<FuturisticServicesShowcase />)  expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () })  it ('displays expected content', () => { render (<FuturisticServicesShowcase />) '''
+>>>>>>> main
