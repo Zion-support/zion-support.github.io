@@ -1,6 +1,6 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
-import white-papers  from './white-papers';describe('white-papers', () => {
+import white-papers  from './white-papers'describe('white-papers', () => {
   it('renders without crashing', () => {
     render(<white-papers />)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()

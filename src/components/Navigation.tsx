@@ -19,9 +19,7 @@ import {
   Rocket,
   ShoppingCart,
   BarChart3,
-  Info,
-  Building,
-  Cpu
+  Info
 } from 'lucide-react';
 
 const Navigation = () => {
@@ -47,30 +45,30 @@ const Navigation = () => {
         { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Cutting-edge AI solutions' },
         { name: 'IT Services', href: '/it-services', icon: Network, description: 'Comprehensive IT solutions' },
         { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, description: 'Scalable SaaS solutions' },
-        { name: 'Services Overview', href: '/services-overview', icon: BarChart3, description: 'All services overview' },
-        { name: 'Blockchain Solutions', href: '/blockchain-solutions', icon: Shield, description: 'Blockchain & Web3' },
-        { name: 'IoT Solutions', href: '/iot-solutions', icon: Cpu, description: 'IoT & Edge Computing' }
+        { name: 'All Services', href: '/services', icon: Settings, description: 'Complete service overview' }
       ]
     },
     { 
       name: 'Solutions', 
       href: '/solutions',
       dropdown: [
-        { name: 'Enterprise Solutions', href: '/solutions', icon: Building, description: 'Enterprise-grade solutions' },
-        { name: 'Startup Solutions', href: '/solutions', icon: Rocket, description: 'Startup-focused solutions' },
-        { name: 'Industry Solutions', href: '/solutions', icon: Globe, description: 'Industry-specific solutions' }
+        { name: 'AI Solutions', href: '/solutions/ai', icon: Brain, description: 'AI-powered business solutions' },
+        { name: 'Cloud Solutions', href: '/solutions/cloud', icon: Cloud, description: 'Cloud infrastructure solutions' },
+        { name: 'Security Solutions', href: '/solutions/security', icon: Shield, description: 'Cybersecurity solutions' },
+        { name: 'Digital Transformation', href: '/solutions/digital', icon: Zap, description: 'Digital transformation services' }
       ]
     },
     { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Case Studies', href: '/case-studies' },
     { name: 'Blog', href: '/blog' },
+    { name: 'Contact', href: '/contact' },
     { name: 'Careers', href: '/careers' }
   ];
 
   const contactInfo = [
-    { icon: Phone, text: '+1 302 464 0950', href: 'tel:+13024640950' },
+  { icon: Phone, text: '+1 302 464 0950', href: 'tel:+13024640950' },
     { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
-    { icon: MapPin, text: '364 E Main St STE 1008, Middletown DE 19709', href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709' }
+    { icon: MapPin, text: '364 E Main St STE 1008, Middletown DE 19709', href: '#' }
   ];
 
   const toggleDropdown = (name: string) => {
@@ -110,7 +108,7 @@ const Navigation = () => {
                     >
                       <span>{item.name}</span>
                       <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                        activeDropdown === item.name ? 'rotate-180' :  
+                        activeDropdown === item.name ? 'rotate-180' : ''
                       }`} />
                     </button>
                     <AnimatePresence>
@@ -186,7 +184,7 @@ const Navigation = () => {
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
+            animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
             className="lg:hidden bg-gray-900/95 backdrop-blur-md border-t border-cyan-400/20"
@@ -222,15 +220,13 @@ const Navigation = () => {
                           className="flex items-center justify-between w-full text-left px-3 py-2 text-gray-300 hover:text-cyan-300 hover:bg-gray-800/50 rounded-lg transition-colors duration-200"
                         >
                           <span>{item.name}</span>
-                          <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                            activeDropdown === item.name ? 'rotate-180' :  
-                          }`} />
+                          <ChevronDown className="w-4 h-4" />
                         </button>
                         <AnimatePresence>
                           {activeDropdown === item.name && (
                             <motion.div
                               initial={{ opacity: 0, height: 0 }}
-                              animate={{ opacity: 1, height: 'auto' }}
+                              animate={{ opacity: 1, height: "auto" }}
                               exit={{ opacity: 0, height: 0 }}
                               transition={{ duration: 0.2 }}
                               className="ml-4 mt-2 space-y-1"

@@ -1,17 +1,28 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
+<<<<<<< HEAD
+=======
   Send,
+>>>>>>> main
   CheckCircle,
   AlertCircle,
   User,
   Mail,
   Phone,
   Building,
+<<<<<<< HEAD
+  MessageSquare,
+  Clock,
+  Calendar,
+  MapPin,
+  Send,
+=======
   MapPin,
   MessageSquare,
   Clock,
   Calendar,
+>>>>>>> main
   Globe
 } from 'lucide-react';
 import Link from 'next/link';
@@ -27,13 +38,21 @@ const EnhancedContactForm: React.FC = () => {
     timeline: '',
     message: ''
   });
+<<<<<<< HEAD
+  
+=======
+>>>>>>> main
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [selectedService, setSelectedService] = useState('');
 
   const services = [
+<<<<<<< HEAD
+    { id: 'ai-development', name: 'AI Development', icon: Globe, color: 'from-purple-500 to-pink-500' },
+=======
   { id: 'ai-development', name: 'AI Development', icon: Globe, color: 'from-purple-500 to-pink-500' },
+>>>>>>> main
     { id: 'cloud-architecture', name: 'Cloud Architecture', icon: Globe, color: 'from-blue-500 to-cyan-500' },
     { id: 'web-development', name: 'Web Development', icon: Globe, color: 'from-green-500 to-emerald-500' },
     { id: 'cybersecurity', name: 'Cybersecurity', icon: Globe, color: 'from-red-500 to-orange-500' },
@@ -43,7 +62,11 @@ const EnhancedContactForm: React.FC = () => {
   ];
 
   const budgetRanges = [
+<<<<<<< HEAD
+    { value: 'under-25k', label: 'Under $25K' },
+=======
   { value: 'under-25k', label: 'Under $25K' },
+>>>>>>> main
     { value: '25k-50k', label: '$25K - $50K' },
     { value: '50k-100k', label: '$50K - $100K' },
     { value: '100k-250k', label: '$100K - $250K' },
@@ -52,7 +75,11 @@ const EnhancedContactForm: React.FC = () => {
   ];
 
   const timelineOptions = [
+<<<<<<< HEAD
+    { value: 'asap', label: 'ASAP' },
+=======
   { value: 'asap', label: 'ASAP' },
+>>>>>>> main
     { value: '1-3-months', label: '1-3 Months' },
     { value: '3-6-months', label: '3-6 Months' },
     { value: '6-12-months', label: '6-12 Months' },
@@ -61,16 +88,35 @@ const EnhancedContactForm: React.FC = () => {
 
   const validateForm = () => {
     const newErrors: Record<string, string> = {};
+<<<<<<< HEAD
+    
+    if (!formData.name.trim()) {
+      newErrors.name = 'Name is required';
+    }
+    
+=======
 
     if (!formData.name.trim()) {
       newErrors.name = 'Name is required';
     }
 
+>>>>>>> main
     if (!formData.email.trim()) {
       newErrors.email = 'Email is required';
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       newErrors.email = 'Please enter a valid email address';
     }
+<<<<<<< HEAD
+    
+    if (!formData.message.trim()) {
+      newErrors.message = 'Message is required';
+    }
+    
+    if (!formData.service) {
+      newErrors.service = 'Please select a service';
+    }
+    
+=======
 
     if (!formData.message.trim()) {
       newErrors.message = 'Message is required';
@@ -80,12 +126,28 @@ const EnhancedContactForm: React.FC = () => {
       newErrors.service = 'Please select a service';
     }
 
+>>>>>>> main
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+<<<<<<< HEAD
+    
+    if (!validateForm()) {
+      return;
+    }
+    
+    setIsSubmitting(true);
+    
+    // Simulate API call
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    
+    setIsSubmitting(false);
+    setIsSubmitted(true);
+    
+=======
     if (!validateForm()) {
       return;
     }
@@ -98,6 +160,7 @@ const EnhancedContactForm: React.FC = () => {
     setIsSubmitting(false);
     setIsSubmitted(true);
 
+>>>>>>> main
     // Reset form after successful submission
     setTimeout(() => {
       setIsSubmitted(false);
@@ -119,11 +182,25 @@ const EnhancedContactForm: React.FC = () => {
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
     const { name, value } = e.target;
+<<<<<<< HEAD
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+    
+    // Clear error when user starts typing
+    if (errors[name]) {
+      setErrors(prev => ({
+        ...prev,
+        [name]: ''
+      }));
+=======
     setFormData(prev => ({ ...prev, [name]: value }));
 
     // Clear error when user starts typing
     if (errors[name]) {
       setErrors(prev => ({ ...prev, [name]: '' }));
+>>>>>>> main
     }
   };
 

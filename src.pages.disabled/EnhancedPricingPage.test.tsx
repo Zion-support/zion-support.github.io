@@ -1,6 +1,6 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
-import EnhancedPricingPage  from './EnhancedPricingPage';describe('EnhancedPricingPage', () => {
+import EnhancedPricingPage  from './EnhancedPricingPage'describe('EnhancedPricingPage', () => {
   it('renders without crashing', () => {
     render(<EnhancedPricingPage />)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()

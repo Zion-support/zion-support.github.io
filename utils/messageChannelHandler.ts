@@ -4,7 +4,7 @@ export const messageChannelHandler = {
     // eslint-disable-next-line no-console
     console.log('Sending message: ', message);
   },
-  receiveMessage: (_callback: (message: string) => void) => {
+  receiveMessage: () => {
     // Implementation for receiving messages
     // eslint-disable-next-line no-console
     console.log('Setting up message receiver');

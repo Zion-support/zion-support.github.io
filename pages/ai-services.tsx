@@ -947,6 +947,205 @@ export default function AIServices() {
       pricing: '$3,000 - $12,000/month',
       delivery: '4-6 weeks',
       category: 'Personalization AI'
+    },
+    {
+<<<<<<< HEAD
+      title: 'AI-Powered Quantum Computing Simulator',
+      description: 'Advanced quantum computing simulation and optimization platform for complex problem solving',
+      icon: Cpu,
+      features: [
+        'Quantum algorithm development and testing,Quantum circuit optimization and simulation,Quantum machine learning model training,Quantum cryptography and security protocols,Integration with classical computing systems,Real-time quantum state monitoring and analysis'
+      ],
+      pricing: '$15,000 - $50,000/month',
+      delivery: '12-20 weeks',
+      category: 'Quantum AI'
+    },
+    {
+      title: 'AI-Powered Autonomous Vehicle Management',
+      description: 'Intelligent fleet management and autonomous vehicle coordination system',
+      icon: Car,
+      features: [
+        'Autonomous vehicle fleet coordination and optimization,Real-time traffic analysis and route optimization,Predictive maintenance and safety monitoring,Passenger experience personalization,Integration with smart city infrastructure,Regulatory compliance and safety reporting'
+      ],
+      pricing: '$20,000 - $75,000/month',
+      delivery: '16-24 weeks',
+      category: 'Autonomous AI'
+    },
+    {
+      title: 'AI-Powered Space Technology Platform',
+      description: 'Advanced space mission planning and satellite management with AI optimization',
+      icon: Satellite,
+      features: [
+        'Satellite constellation optimization and management,Space mission planning and trajectory optimization,Earth observation data analysis and insights,Space debris tracking and collision avoidance,Planetary exploration mission design,Space weather prediction and monitoring'
+      ],
+      pricing: '$25,000 - $100,000/month',
+      delivery: '20-32 weeks',
+      category: 'Space AI'
+    },
+    {
+      title: 'AI-Powered Metaverse Development Platform',
+      description: 'Comprehensive metaverse creation and management with AI-driven content generation',
+      icon: Globe,
+      features: [
+        'AI-generated 3D environments and virtual worlds,Intelligent NPC behavior and interaction systems,Virtual economy management and optimization,Cross-platform metaverse integration,Real-time content generation and adaptation,User behavior analysis and personalization'
+      ],
+      pricing: '$10,000 - $40,000/month',
+      delivery: '12-20 weeks',
+      category: 'Metaverse AI'
+    },
+    {
+      title: 'AI-Powered Blockchain Intelligence Platform',
+      description: 'Advanced blockchain analysis and DeFi optimization with AI-driven insights',
+      icon: Network,
+      features: [
+        'Blockchain transaction analysis and pattern recognition,DeFi protocol optimization and yield farming strategies,Smart contract security auditing and optimization,Cryptocurrency market prediction and trading algorithms,NFT marketplace analysis and valuation,Cross-chain interoperability and bridge optimization'
+      ],
+      pricing: '$8,000 - $30,000/month',
+      delivery: '10-16 weeks',
+      category: 'Blockchain AI'
+    },
+    {
+      title: 'AI-Powered Digital Twin Platform',
+      description: 'Comprehensive digital twin creation and management for physical assets and processes',
+      icon: Monitor,
+      features: [
+        'Real-time asset monitoring and predictive maintenance,Process optimization and simulation modeling,Performance analytics and optimization recommendations,Integration with IoT sensors and data sources,3D visualization and augmented reality interfaces,Automated decision making and control systems'
+      ],
+      pricing: '$12,000 - $45,000/month',
+      delivery: '14-22 weeks',
+      category: 'Digital Twin AI'
+    },
+    {
+      title: 'AI-Powered Edge Computing Platform',
+      description: 'Intelligent edge computing with AI processing and real-time decision making',
+      icon: Cpu,
+      features: [
+        'Distributed AI model deployment and management,Real-time data processing and analysis,Edge-to-cloud synchronization and optimization,Low-latency inference and decision making,Resource optimization and load balancing,Integration with IoT devices and sensors'
+      ],
+      pricing: '$6,000 - $25,000/month',
+      delivery: '8-14 weeks',
+      category: 'Edge AI'
+    },
+    {
+      title: 'AI-Powered Cybersecurity Intelligence Platform',
+      description: 'Advanced threat detection and response with AI-driven security automation',
+      icon: Shield,
+      features: [
+        'Real-time threat detection and analysis,Automated incident response and remediation,Behavioral analysis and anomaly detection,Zero-day vulnerability identification,Security orchestration and automation,Compliance monitoring and reporting'
+      ],
+      pricing: '$15,000 - $60,000/month',
+      delivery: '12-20 weeks',
+      category: 'Cybersecurity AI'
+    },
+    {
+      title: 'AI-Powered Healthcare Diagnostics Platform',
+      description: 'Advanced medical imaging analysis and diagnostic assistance with AI',
+      icon: Heart,
+      features: [
+        'Medical image analysis and interpretation,Disease detection and early diagnosis,Treatment recommendation and optimization,Patient monitoring and risk assessment,Integration with EHR and medical devices,Regulatory compliance and clinical validation'
+      ],
+      pricing: '$20,000 - $80,000/month',
+      delivery: '16-24 weeks',
+      category: 'Healthcare AI'
+=======
+      title: 'AI-Powered Cybersecurity Threat Detection',
+      description: 'Advanced threat detection and response system with real-time monitoring and automated incident response',
+      icon: Shield,
+      features: [
+        'Real-time threat detection and analysis,Automated incident response and containment,Behavioral anomaly detection,Zero-day threat identification,Threat intelligence integration,Compliance monitoring and reporting'
+      ],
+      pricing: '$4,500 - $18,000/month',
+      delivery: '6-8 weeks',
+      category: 'Cybersecurity AI'
+    },
+    {
+      title: 'AI-Powered Medical Diagnosis Assistant',
+      description: 'Intelligent medical diagnosis support with image analysis and symptom correlation',
+      icon: Heart,
+      features: [
+        'Medical image analysis and interpretation,Symptom correlation and diagnosis suggestions,Patient data analysis and risk assessment,Drug interaction and allergy checking,Medical literature research and insights,Integration with EHR systems'
+      ],
+      pricing: '$8,000 - $35,000/month',
+      delivery: '10-16 weeks',
+      category: 'Medical AI'
+    },
+    {
+      title: 'AI-Powered Legal Document Analysis',
+      description: 'Intelligent legal document review and contract analysis with risk assessment',
+      icon: FileText,
+      features: [
+        'Automated contract review and analysis,Legal document summarization and key point extraction,Risk assessment and compliance checking,Legal research and precedent analysis,Document comparison and version control,Integration with legal case management systems'
+      ],
+      pricing: '$5,000 - $20,000/month',
+      delivery: '8-12 weeks',
+      category: 'Legal AI'
+    },
+    {
+      title: 'AI-Powered Financial Risk Assessment',
+      description: 'Intelligent financial risk analysis and credit scoring with predictive modeling',
+      icon: TrendingUp,
+      features: [
+        'Credit risk assessment and scoring,Market risk analysis and prediction,Fraud detection and prevention,Portfolio optimization and management,Regulatory compliance monitoring,Real-time financial alerts and recommendations'
+      ],
+      pricing: '$6,000 - $25,000/month',
+      delivery: '8-14 weeks',
+      category: 'Financial AI'
+    },
+    {
+      title: 'AI-Powered Environmental Monitoring',
+      description: 'Intelligent environmental data analysis and climate prediction with IoT integration',
+      icon: TreePine,
+      features: [
+        'Environmental data collection and analysis,Climate change prediction and modeling,Pollution monitoring and alert systems,Resource optimization and sustainability planning,Environmental compliance reporting,Integration with IoT sensors and satellite data'
+      ],
+      pricing: '$4,000 - $16,000/month',
+      delivery: '6-10 weeks',
+      category: 'Environmental AI'
+    },
+    {
+      title: 'AI-Powered Autonomous Vehicle Systems',
+      description: 'Advanced autonomous vehicle technology with real-time decision making and safety systems',
+      icon: Car,
+      features: [
+        'Real-time object detection and path planning,Traffic pattern analysis and optimization,Vehicle-to-vehicle communication,Autonomous parking and navigation,Safety system monitoring and alerts,Integration with smart city infrastructure'
+      ],
+      pricing: '$15,000 - $60,000/month',
+      delivery: '16-24 weeks',
+      category: 'Autonomous Vehicle AI'
+    },
+    {
+      title: 'AI-Powered Satellite Data Analysis',
+      description: 'Intelligent satellite imagery analysis for agriculture, urban planning, and disaster response',
+      icon: Satellite,
+      features: [
+        'Satellite imagery analysis and interpretation,Crop monitoring and yield prediction,Urban development tracking,Disaster damage assessment,Weather pattern analysis,Integration with GIS and mapping systems'
+      ],
+      pricing: '$7,000 - $28,000/month',
+      delivery: '10-16 weeks',
+      category: 'Satellite AI'
+    },
+    {
+      title: 'AI-Powered Energy Grid Optimization',
+      description: 'Intelligent energy grid management with demand forecasting and renewable energy integration',
+      icon: Zap,
+      features: [
+        'Energy demand forecasting and optimization,Smart grid management and control,Renewable energy integration and storage,Power outage prediction and prevention,Energy efficiency optimization,Integration with smart meters and IoT devices'
+      ],
+      pricing: '$8,000 - $32,000/month',
+      delivery: '12-20 weeks',
+      category: 'Energy AI'
+    },
+    {
+      title: 'AI-Powered Drug Discovery Platform',
+      description: 'Intelligent drug discovery and development with molecular analysis and clinical trial optimization',
+      icon: Heart,
+      features: [
+        'Molecular structure analysis and drug design,Clinical trial optimization and patient matching,Drug interaction and side effect prediction,Biomarker identification and analysis,Regulatory compliance and approval tracking,Integration with pharmaceutical databases'
+      ],
+      pricing: '$12,000 - $50,000/month',
+      delivery: '16-24 weeks',
+      category: 'Pharmaceutical AI'
+>>>>>>> cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-68a5
     }
   ];
   const aiTechnologies = [

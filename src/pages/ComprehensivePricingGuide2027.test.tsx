@@ -5,12 +5,12 @@ import ComprehensivePricingGuide2027 from './ComprehensivePricingGuide2027
 describe('ComprehensivePricingGuide2027', () => {"
   it('renders without crashing', () => {
     render(<ComprehensivePricingGuide2027 /" >);"
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
-});
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+})
 "
   it('displays expected content', () => {
-    render(<ComprehensivePricingGuide2027 /" >);
-    // Add more specific tests here,
-});,
+    render(<ComprehensivePricingGuide2027 /" >)
+    // Add more specific tests here
 });
+})
 "

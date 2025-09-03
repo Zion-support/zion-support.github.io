@@ -5,12 +5,12 @@ import EnhancedComprehensiveServices2026 from './EnhancedComprehensiveServices20
 describe('EnhancedComprehensiveServices2026', () => {"
   it('renders without crashing', () => {
     render(<EnhancedComprehensiveServices2026 /" >);"
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
-});
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+})
 "
   it('displays expected content', () => {
-    render(<EnhancedComprehensiveServices2026 /" >);
-    // Add more specific tests here,
-});,
+    render(<EnhancedComprehensiveServices2026 /" >)
+    // Add more specific tests here
 });
+})
 "
