@@ -48,31 +48,7 @@ class TargetedMergeResolver {;
         await this.processBranch(branch);
       }
 
-;
-  log(message, level = 'INFO') {;
-    const timestamp = new Date().toISOString();
-    const logEntry = `[${timestamp}] [${level}] ${message}`;
-    console.log(`logEntry);
-;
-    const logFile = path.join(this.logsDir, 'targeted-merge.log');
-    fs.appendFileSync(logFile, logEntry + '\n');
-  }
-;
-  async run() {;
-    this.log('🚀 Starting Targeted Merge Conflict Resolver...');
-;
-    try {;
-      // Step 1: Ensure we're on main branch;
-      await this.ensureMainBranch();
-;
-      // Step 2: Get priority branches (focus on the most important ones first);
-
-    try {
-      // Step 1: Ensure we're on main branch`);
-      await this.ensureMainBranch();`);
-`);
-      // Step 2: Get priority branches (focus on the most important ones first)`);
-      const priorityBranches = await this.getPriorityBranches();this.log(Found ${priorityBranches.length} priority branches to process`);
+<<<<<<< HEAD      const priorityBranches = await this.getPriorityBranches();this.log(Found ${priorityBranches.length} priority branches to process`);
 ;
       // Step 3: Process priority branches;
       for (const branch of priorityBranches) {;
@@ -150,42 +126,7 @@ class TargetedMergeResolver {;
       const limitedBranches = priorityBranches.slice(0, 50);
 
       this.log(Found ${limitedBranches.length} priority branches out of ${allBranches.length} total`
-;
-  async getPriorityBranches() {;
-    this.log('🔍 Identifying priority branches...');
-;
-    try {;
-      // Fetch all remote branches;
-      execSync('git fetch --all', { stdio: 'inherit' });
-;
-      // Get list of remote branches;
-      const branchesOutput = execSync('git branch -r', { encoding: 'utf8' });
-      const allBranches = branchesOutput;
-        .split('\n');
-        .map(line => line.trim());
-        .filter(;
-          line => line && !line.includes('HEAD') && !line.includes('main');
-        );
-        .map(line => line.replace('origin/', '));
-;
-      // Filter for priority branches (focus on feature branches and fixes);
-      const priorityBranches = allBranches.filter(branch => {;
-        return (;
-          branch.includes('fix-') ||;
-          branch.includes('feature-') ||;
-          branch.includes('enhance-') ||;
-          branch.includes('implement-') ||;
-          branch.includes('update-') ||;
-          branch.includes('add-') ||;
-          branch.includes('improve-');
-        );
-      });
-;
-      // Limit to first 50 branches to avoid overwhelming the system;
-      const limitedBranches = priorityBranches.slice(0, 50);
-;
-      this.log(Found ${limitedBranches.length} priority branches out of ${allBranches.length} total';
-      );
+<<<<<<< HEAD      );
       return limitedBranches;
     } catch (error) {  throw new Error(`Failed to get priority branches: ${error.message  }`);
     }
@@ -206,11 +147,16 @@ class TargetedMergeResolver {;
       }
     } catch (error) {  
       this.log(❌ Error processing branch ${branchName  }: ${error.message}`,
+<<<<<<< HEAD
         `ERROR`;
 } catch (error) {;
       this.log(❌ Error processing branch ${branchName}: ${error.message}',;
         'ERROR';
       );
+=======
+        `ERROR`
+<<<<<<< HEAD      );
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       this.mergeStats.errors++;
     }
   }
@@ -231,12 +177,17 @@ class TargetedMergeResolver {;
     } catch (error) {  
       // Check if there are merge conflicts;
       if (error.status === 1) {
+<<<<<<< HEAD
         this.log(⚠️ Merge conflicts detected in ${branchName  }, attempting to resolve...`;
 } catch (error) {;
       // Check if there are merge conflicts;
       if (error.status === 1) {;
         this.log(⚠️ Merge conflicts detected in ${branchName}, attempting to resolve...';
         );
+=======
+        this.log(⚠️ Merge conflicts detected in ${branchName  }, attempting to resolve...`
+<<<<<<< HEAD        );
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
         return await this.resolveMergeConflicts(branchName);
       } else {;
         return { success: false, error: error.message };
@@ -268,22 +219,7 @@ class TargetedMergeResolver {;
       // Add resolved files;
       execSync('git add .', { stdio: 'pipe' });
 
-;
-      if (conflictedFiles.length === 0) {;
-        // No conflicts, try to continue merge;
-        execSync('git merge --continue', { stdio: 'pipe' });
-        return { success: true };
-      }
-;
-      // Resolve conflicts in each file;
-      for (const file of conflictedFiles) {;
-        await this.resolveFileConflicts(file);
-      }
-;
-      // Add resolved files;
-      execSync('git add .', { stdio: 'pipe' });
-;
-      // Continue merge;
+<<<<<<< HEAD      // Continue merge;
       execSync('git merge --continue', { stdio: 'pipe' });
 ;
       this.mergeStats.conflictsResolved += conflictedFiles.length;
@@ -320,23 +256,7 @@ class TargetedMergeResolver {;
         )
         .map(line => line.substring(3));
     } catch (error) {  
-;
-  getConflictedFiles() {;
-    try {;
-      const statusOutput = execSync('git status --porcelain', {;
-        encoding: 'utf8',;
-      });
-      return statusOutput;
-        .split('\n');
-        .filter(;
-          line =>;
-            line.startsWith('UU ') ||;
-            line.startsWith('AA ') ||;
-            line.startsWith('DD ');
-        );
-        .map(line => line.substring(3));
-    } catch (error) {;
-      return [];
+<<<<<<< HEAD      return [];
       }
   }
 ;
@@ -403,18 +323,7 @@ this.log(`✅ Resolved conflicts in: ${filePath}');
       /([\s\S]*?)      '$1'
     );
 
-;
-    // Strategy: Keep incoming changes (after ) and remove conflict markers;
-    resolvedContent = resolvedContent.replace(;
-      /([\s\S]*?)      '$1';
-    );
-;
-    // Clean up any remaining conflict markers;
-    resolvedContent = resolvedContent.replace(;
-      /([\s\S]*?)      '$1';
-    );
-;
-    // For specific file types, apply additional cleanup;
+<<<<<<< HEAD    // For specific file types, apply additional cleanup;
     const fileExt = path.extname(filePath).toLowerCase();
 ;
     if (fileExt === '.json') {;
@@ -468,9 +377,7 @@ this.log(`✅ Resolved conflicts in: ${filePath}');
   }
 
   cleanupCode(content) {
-;
-  cleanupCode(content) {;
-    // Remove duplicate imports;
+<<<<<<< HEAD    // Remove duplicate imports;
     const lines = content.split('\n');
     const seenImports = new Set();
     const cleanedLines = [];
@@ -522,10 +429,9 @@ this.log(`✅ Resolved conflicts in: ${filePath}');
         branchesProcessed: this.mergeStats.branchesProcessed,
         conflictsResolved: this.mergeStats.conflictsResolved,
         mergesSuccessful: this.mergeStats.mergesSuccessful,
-        errors: this.mergeStats.errors},
-      successRate:
-        this.mergeStats.branchesProcessed > 0;
-          ? (
+        errors: this.mergeStats.errors,
+      },
+      successRate: this.mergeStats.branchesProcessed > 0;          ? (
               (this.mergeStats.mergesSuccessful /
                 this.mergeStats.branchesProcessed) *
               100;
@@ -545,6 +451,7 @@ this.log(`📄 Detailed report saved to: ${reportPath}`);
 if (require.main === module) {
   const resolver = new TargetedMergeResolver();
   resolver.run().catch(error => {
+<<<<<<< HEAD
     console.error(`❌ Fatal error:`, error);
 ;
     try {;
@@ -601,6 +508,9 @@ if (require.main === module) {;
   resolver.run().catch(error => {;
     console.error('❌ Fatal error:', error);
     process.exit(1);
+=======
+    console.error(`❌ Fatal error: `, error);    process.exit(1);
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   });
 }
 ;

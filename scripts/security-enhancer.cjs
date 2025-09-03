@@ -2,14 +2,12 @@
 const fs = require('fs');
 const path = require('path');
 #!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
-
 class SecurityEnhancer {
   constructor() {
     this.projectRoot = process.cwd();
+<<<<<<< HEAD
   }
 
   async addSecurityHeaders() {
@@ -102,18 +100,70 @@ module.exports = { cspHeader };
 
     fs.writeFileSync(path.join(this.projectRoot, 'csp.config.js'), cspConfig);
     console.log('✅ CSP configuration created');
+=======
+    this.securityEnhancements = [];    } catch (error) {
+      this.log(`❌ Security headers creation failed: ${error.message}`);
+    }
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   }
 
-  async run() {
-    await this.addSecurityHeaders();
-    await this.addCSP();
-    console.log('✅ Security enhancement completed!');
-  }
+  async createSecurityMiddleware() {
+    this.log('🛡️ Creating security middleware...');
+    try {
+      const securityMiddleware = `
+import { NextRequest, NextResponse } from 'next/server';
+import { securityHeaders, contentSecurityPolicy } from '../lib/security';
+
+export function securityMiddleware(request: NextRequest) {
+  const response = NextResponse.next();
+  
+  // Apply security headers
+  securityHeaders.forEach(({ key, value }) => {
+    response.headers.set(key, value);
+  });
+  
+  // Apply Content Security Policy
+  const cspString = Object.entries(contentSecurityPolicy.directives)
+    .map(([key, values]) => \`\${key} \${values.join(' ')}\`)
+    .join('; ');
+  
+  response.headers.set('Content-Security-Policy', cspString);
+  
+  // Rate limiting headers
+  response.headers.set('X-RateLimit-Limit', '100');
+  response.headers.set('X-RateLimit-Remaining', '99');
+  response.headers.set('X-RateLimit-Reset', new Date(Date.now() + 3600000).toISOString());
+  
+  return response;
 }
 
-const enhancer = new SecurityEnhancer();
-enhancer.run().catch(console.error);
-    this.reportsDir = path.join(this.projectRoot, 'security-reports');
+export const config = {
+  matcher: [
+    '/((?!api|_next/static|_next/image|favicon.ico).*)']};
+`;
+      
+      fs.writeFileSync(
+        path.join(this.projectRoot, 'middleware.security.ts'),
+        securityMiddleware
+      );
+      
+      this.securityEnhancements.push('Security middleware created');
+      this.log('✅ Security middleware created');
+    } catch (error) {
+      this.log(`❌ Security middleware creation failed: ${error.message}`);    }
+  }
+
+  async createSecurityAuditScript() {
+    this.log('🔍 Creating security audit script...');
+    try {
+      const auditScript = `
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+
+class SecurityAuditor {
+  constructor() {
+    this.reportsDir = path.join(process.cwd(), 'security-reports');
     this.ensureDirectories();
   }
 
@@ -123,22 +173,18 @@ enhancer.run().catch(console.error);
     }
   }
 
-  log(message) {
-    const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`);
-  }
-
-  async auditDependencies() {
-    this.log('🔍 Auditing dependencies for security vulnerabilities...');
-    
+  async runNpmAudit() {
+    console.log('🔍 Running npm audit...');
     try {
-      execSync('npm audit --audit-level=moderate', { cwd: this.projectRoot, stdio: 'inherit' });
-      this.log('✅ Dependency audit completed');
+      const command = 'npm audit --audit-level=moderate --json > ./security-reports/npm-audit.json';
+      execSync(command, { stdio: 'inherit' });
+      console.log('✅ NPM audit completed');
     } catch (error) {
-      this.log(`⚠️ Security vulnerabilities found: ${error.message}`);
+      console.log('❌ NPM audit failed:', error.message);
     }
   }
 
+<<<<<<< HEAD
   async createSecurityHeaders() {
     this.log('🛡️ Creating security headers configuration...');
     
@@ -229,104 +275,75 @@ export class SecurityUtils {
     const utilsDir = path.join(this.projectRoot, 'lib');
     if (!fs.existsSync(utilsDir)) {
       fs.mkdirSync(utilsDir, { recursive: true });
+=======
+  async runSnykAudit() {
+    console.log('🔍 Running Snyk audit...');
+    try {
+      const command = 'npx snyk test --json > ./security-reports/snyk-audit.json';
+      execSync(command, { stdio: 'inherit' });
+      console.log('✅ Snyk audit completed');
+    } catch (error) {
+      console.log('❌ Snyk audit failed:', error.message);
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     }
-    
-    const utilsPath = path.join(utilsDir, 'security.js');
-    fs.writeFileSync(utilsPath, securityUtils);
-    this.log('✅ Security utility functions created');
-  }
-
-  async createEnvironmentSecurity() {
-    this.log('🔒 Creating environment security configuration...');
-    
-    const envSecurity = `
-# Environment Security Configuration
-# Never commit sensitive data to version control
-
-# Database
-DATABASE_URL=your_database_url_here
-DATABASE_PASSWORD=your_secure_password_here
-
-# API Keys
-NEXT_PUBLIC_API_URL=https://api.yourdomain.com
-API_SECRET_KEY=your_secret_key_here
-
-# Authentication
-NEXTAUTH_SECRET=your_nextauth_secret_here
-NEXTAUTH_URL=https://yourdomain.com
-
-# Third-party Services
-STRIPE_SECRET_KEY=your_stripe_secret_key_here
-STRIPE_PUBLISHABLE_KEY=your_stripe_publishable_key_here
-
-# Security
-ENCRYPTION_KEY=your_encryption_key_here
-JWT_SECRET=your_jwt_secret_here
-
-# Monitoring
-SENTRY_DSN=your_sentry_dsn_here
-`;
-
-    const envPath = path.join(this.projectRoot, '.env.security.example');
-    fs.writeFileSync(envPath, envSecurity);
-    this.log('✅ Environment security template created');
   }
 
   async generateSecurityReport() {
-    this.log('📊 Generating security report...');
-    
+    console.log('📊 Generating security report...');
     const report = {
       timestamp: new Date().toISOString(),
-      securityMeasures: [
-        'Dependency audit completed',
-        'Security headers middleware created',
-        'Security utility functions implemented',
-        'Environment security template created'
-      ],
+      audits: {
+        npm: 'npm-audit.json',
+        snyk: 'snyk-audit.json'
+      },
       recommendations: [
-        'Regularly update dependencies',
+        'Keep dependencies updated',
+        'Use security headers',
         'Implement rate limiting',
-        'Use HTTPS in production',
-        'Enable security monitoring',
-        'Regular security audits',
-        'Implement proper authentication',
-        'Use environment variables for secrets',
-        'Enable CORS properly',
-        'Implement input validation',
-        'Use secure session management'
-      ],
-      nextSteps: [
-        'Review and customize security headers',
-        'Implement authentication system',
-        'Set up security monitoring',
-        'Configure rate limiting',
-        'Test security measures'
+        'Use HTTPS only',
+        'Validate all inputs',
+        'Use environment variables for secrets'
       ]
 };
     
-    const reportPath = path.join(this.reportsDir, 'security-enhancement-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log(`✅ Security report saved to ${reportPath}`);
-  }
-
-  async run() {
-    this.log('🛡️ Starting Security Enhancement');
+    fs.writeFileSync(
+      path.join(this.reportsDir, 'security-report.json'),
+      JSON.stringify(report, null, 2)
+    );
     
-    try {
-      await this.auditDependencies();
-      await this.createSecurityHeaders();
-      await this.createSecurityUtils();
-      await this.createEnvironmentSecurity();
-      await this.generateSecurityReport();
-      
-      this.log('🎉 Security Enhancement completed successfully');
-    } catch (error) {
-      this.log(`❌ Security enhancement failed: ${error.message}`);
-      process.exit(1);
-    }
+    console.log('✅ Security report generated');
   }
 }
 
-// Run the security enhancer
-const securityEnhancer = new SecurityEnhancer();
-securityEnhancer.run();
+const auditor = new SecurityAuditor();
+auditor.runNpmAudit();
+auditor.runSnykAudit();
+auditor.generateSecurityReport();
+`;
+      
+      fs.writeFileSync(
+        path.join(this.projectRoot, 'scripts', 'security-audit.cjs'),
+        auditScript
+      );
+      
+      this.securityEnhancements.push('Security audit script created');
+      this.log('✅ Security audit script created');
+    } catch (error) {
+      this.log(`❌ Security audit script creation failed: ${error.message}`);
+    }
+  }
+
+  async run() {
+    this.log('🚀 Starting security enhancement...');
+    
+    await this.createSecurityHeaders();
+    await this.createSecurityMiddleware();
+    await this.createSecurityAuditScript();
+    
+    this.log(`🎉 Security enhancement completed with ${this.securityEnhancements.length} enhancements`);
+    this.securityEnhancements.forEach(enhancement => this.log(`  - ${enhancement}`));
+  }
+}
+
+const enhancer = new SecurityEnhancer();
+enhancer.run().catch(console.error);

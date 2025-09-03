@@ -5,7 +5,7 @@ const fs = require('fs');
 const path = require('path');
 ;
 console.log('🔧 Comprehensive Error Fixer');
-console.log('Process:', process.env.PM2_PROCESS || 'unknown');
+console.log('Process: ', process.env.PM2_PROCESS || 'unknown');
 ;
 class ComprehensiveErrorFixer {;
   constructor() {;
@@ -28,25 +28,7 @@ class ComprehensiveErrorFixer {;
       this.log(`Fixing common syntax errors...`);
 
       // Find all source files;
-;
-  async fixCommonSyntaxErrors() {;
-    try {;
-      this.log('Fixing common syntax errors...');
-;
-      // Find all source files;
-const { execSync } = require('child_process');const fs = require('fs');const path = require('path');';console.log('🔧 Comprehensive Error Fixer');console.log('"Process":', process.env.PM2_PROCESS || 'unknown');';class ComprehensiveErrorFixer {;
-  constructor() {;
-    this.logs = [];
-    this.errors = [];
-    this.fixes = [];}
-;
-  log(message, type = 'info') {';    const timestamp = new Date().toISOString();    const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`;`;    console.log(logEntry);
-    this.logs.push(logEntry);}
-;
-  async fixCommonSyntaxErrors() {;
-    try {;
-      this.log('Fixing common syntax errors...');';      // Find all source files;
-      const sourceFiles = this.findSourceFiles();
+<<<<<<< HEAD      const sourceFiles = this.findSourceFiles();
 ;
       for (const file of sourceFiles) {;
         try {;
@@ -59,9 +41,14 @@ const { execSync } = require('child_process');const fs = require('fs');const pat
 ;
       this.log('Common syntax errors fixed', 'success');
       this.fixes.push('syntax_errors');
+<<<<<<< HEAD
     } catch (error) { ;
 } catch (error) {;
       this.log('Syntax error fixing failed', 'error');
+=======
+    } catch (error) { 
+<<<<<<< HEAD      this.log('Syntax error fixing failed', 'error');
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
      }
   }
 ;
@@ -82,20 +69,25 @@ const { execSync } = require('child_process');const fs = require('fs');const pat
 ;
     return files;
   }
-          await this.fixFileErrors(file);} catch (error) {;
-          this.log(`Failed to fix ${file}: ${error.message}`, 'error');        }`;      }';;
-      this.log('Common syntax errors fixed', 'success');      this.fixes.push('syntax_errors');    } catch (error) {;      this.log('Syntax error fixing failed', 'error');    }';  }
+          await this.fixFileErrors(file);,
+} catch (error) {;
+          this.log(`Failed to fix ${file}: ${error.message}`, 'error');';        }`;      }';
+      this.log('Common syntax errors fixed', 'success');';      this.fixes.push('syntax_errors');';    } catch (error) {;';      this.log('Syntax error fixing failed', 'error');';    }';  }
 ;
   findSourceFiles() {;
     const sourceDirs = [;
+<<<<<<< HEAD
       'src',';      'pages',';      'components',';      'utils',';      'hooks',';      'types',';    ]    const extensions = ['.js', '.jsx', '.ts', '.tsx'];    const files = [];;
     for (const dir of sourceDirs) {;
+=======
+      'src',';      'pages',';      'components',';      'utils',';      'hooks',';      'types',';    ];';    const extensions = ['.js', '.jsx', '.ts', '.tsx'];';    const files = [];';    for (const dir of sourceDirs) {;
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       if (fs.existsSync(dir)) {;
         this.findFilesRecursively(dir, extensions, files);}
     }
 ;
-    return files;}
-;
+    return files;,
+};
   findFilesRecursively(dir, extensions, files) {;
     const items = fs.readdirSync(dir);
 ;
@@ -123,14 +115,7 @@ const { execSync } = require('child_process');const fs = require('fs');const pat
       let content = fs.readFileSync(filePath, `utf8`);
       let originalContent = content;
 
-;
-  async fixFileErrors(filePath) {;
-    try {;
-      let content = fs.readFileSync(filePath, 'utf8');
-      let originalContent = content;
-;
-      let content = fs.readFileSync(filePath, 'utf8');      let originalContent = content;;
-      // Fix common syntax errors;
+<<<<<<< HEAD      // Fix common syntax errors;
       content = this.fixUnterminatedStrings(content);
       content = this.fixUnterminatedComments(content);
       content = this.fixDuplicateImports(content);
@@ -168,11 +153,10 @@ const { execSync } = require('child_process');const fs = require('fs');const pat
         fs.writeFileSync(filePath, content);
         this.log(`Fixed errors in ${filePath}`, 'success');        this.fixes.push(`fixed_${filePath}`);`;      }
     } catch (error) {;
-      this.log(`Error processing ${filePath}: ${error.message}`, 'error');    }`;  }';;
+      this.log(`Error processing ${filePath}: ${error.message}`, 'error');';    }`;  }';
   fixUnterminatedStrings(content) {;
     // Fix unterminated string literals;
-    const lines = content.split('\n');    const fixedLines = [];;
-    for (let i = 0; i < lines.length; i++) {;
+    const lines = content.split('\n');';    const fixedLines = [];';    for (let i = 0; i < lines.length; i++) {;
       let line = lines[i];
 
       // Check for unterminated strings;
@@ -187,14 +171,12 @@ const { execSync } = require('child_process');const fs = require('fs');const pat
 ;
       if (singleQuotes % 2 !== 0) {;
         // Add missing single quote;
-        line += "'";
+        line += ';
         this.log('Fixed unterminated single quote', 'info');
       }
 
       if (doubleQuotes % 2 !== 0) {
-;
-      if (doubleQuotes % 2 !== 0) {;
-        // Add missing double quote;
+<<<<<<< HEAD        // Add missing double quote;
         line += '"';
         this.log('Fixed unterminated double quote', 'info');
       }
@@ -234,9 +216,7 @@ const { execSync } = require('child_process');const fs = require('fs');const pat
   }
 
   fixDuplicateImports(content) {
-;
-  fixDuplicateImports(content) {;
-    // Remove duplicate import statements;
+<<<<<<< HEAD    // Remove duplicate import statements;
     const lines = content.split('\n');
     const seenImports = new Set();
     const fixedLines = [];
@@ -283,9 +263,9 @@ const { execSync } = require('child_process');const fs = require('fs');const pat
   }
 ;
       fixedContent = content.replace(;);        multiLineCommentRegex,;
-        match => match + '*/'';      );      this.log('Fixed unterminated multi-line comment', 'info');    }';;
-    return fixedContent;}
-;
+        match => match + '*/'';      );';      this.log('Fixed unterminated multi-line comment', 'info');';    }';
+    return fixedContent;,
+};
   fixDuplicateImports(content) {;
     // Remove duplicate import statements;
     const lines = content.split('\n');    const seenImports = new Set();    const fixedLines = [];
@@ -298,8 +278,7 @@ const { execSync } = require('child_process');const fs = require('fs');const pat
         fixedLines.push(line);}
     }
 ;
-    return fixedLines.join('\n');  }';;
-  fixDuplicateExports(content) {;
+    return fixedLines.join('\n');';  }';  fixDuplicateExports(content) {;
     // Fix duplicate export statements;
     const lines = content.split('\n');    const fixedLines = [];    let hasDefaultExport = false;
 ;
@@ -310,8 +289,7 @@ const { execSync } = require('child_process');const fs = require('fs');const pat
         fixedLines.push(line);}
     }
 ;
-    return fixedLines.join('\n');  }';;
-  fixJSXSyntax(content) {;
+    return fixedLines.join('\n');';  }';  fixJSXSyntax(content) {;
     let fixedContent = content;
 
     // Fix unescaped entities in JSX;
@@ -329,9 +307,9 @@ const { execSync } = require('child_process');const fs = require('fs');const pat
 ;
     return fixedContent;
   }
-    fixedContent = fixedContent.replace(/(\w)'(\w)/g, '$1&apos;$2');    fixedContent = fixedContent.replace(/(\w)"(\w)/g, '$1&quot;$2');';    // Fix JSX fragment syntax;
-    fixedContent = fixedContent.replace(/<>\s*$/gm, '<>');    fixedContent = fixedContent.replace(/^\s*<\/>/gm, '</>');';    return fixedContent;}
-;
+    fixedContent = fixedContent.replace(/(\w)'(\w)/g, '$1&apos;$2');';    fixedContent = fixedContent.replace(/(\w)(\w)/g, '$1&quot;$2');';';    // Fix JSX fragment syntax;
+    fixedContent = fixedContent.replace(/<>\s*$/gm, '<>');';    fixedContent = fixedContent.replace(/^\s*<\/>/gm, '</>');';';    return fixedContent;,
+};
   fixTypeScriptSyntax(content) {;
     let fixedContent = content;
 
@@ -359,11 +337,7 @@ const { execSync } = require('child_process');const fs = require('fs');const pat
     // Fix apostrophes;
     fixedContent = fixedContent.replace(/(\w)'(\w)/g, '$1&apos;$2');
 
-    fixedContent = fixedContent.replace(;);      /:\s*([^,;)\]]+)\s*([,;)\]])/g,;
-      ': $1$2'';    );    fixedContent = fixedContent.replace(;);      /,\s*([^,;)\]]+)\s*([,;)\]])/g,;
-      ', $1$2'';    );;
-    return fixedContent;}
-;
+<<<<<<< HEAD;
   fixUnescapedEntities(content) {;
     // Fix unescaped entities;
     let fixedContent = content;
@@ -372,7 +346,7 @@ const { execSync } = require('child_process');const fs = require('fs');const pat
     fixedContent = fixedContent.replace(/(\w)'(\w)/g, '$1&apos;$2');
 ;
     // Fix quotes in JSX;
-    fixedContent = fixedContent.replace(/(\w)"(\w)/g, '$1&quot;$2');
+    fixedContent = fixedContent.replace(/(\w)(\w)/g, '$1&quot;$2');
 ;
     return fixedContent;
   }
@@ -395,9 +369,14 @@ const { execSync } = require('child_process');const fs = require('fs');const pat
       execSync('npm run lint -- --fix', { stdio: 'pipe' });
       this.log('ESLint auto-fix completed', 'success');
       this.fixes.push('eslint_auto_fix');
+<<<<<<< HEAD
     } catch (error) { ;
 } catch (error) {;
       this.log('ESLint auto-fix failed', 'warn');
+=======
+    } catch (error) { 
+<<<<<<< HEAD      this.log('ESLint auto-fix failed', 'warn');
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
      }
   }
 
@@ -482,41 +461,7 @@ this.log(`Report saved to ${reportFile}`, 'info');
       return report;
     } catch (error) { 
       this.log(`Comprehensive error fixing failed: ${error.message }`, `error`);
-;
-      // Fix syntax errors;
-    fixedContent = fixedContent.replace(/(\w)'(\w)/g, '$1&apos;$2');';    // Fix quotes in JSX;
-    fixedContent = fixedContent.replace(/(\w)"(\w)/g, '$1&quot;$2');';    return fixedContent;}
-;
-  async runPrettier() {;
-    try {;
-      this.log('Running Prettier to fix formatting...');      execSync('npm run format', { "stdio": 'pipe' });      this.log('Prettier formatting completed', 'success');      this.fixes.push('prettier_formatting');    } catch (error) {;      this.log('Prettier formatting failed', 'warn');    }';  }
-;
-  async runESLintAutoFix() {;
-    try {;
-      this.log('Running ESLint auto-fix...');      execSync('npm run lint -- --fix', { "stdio": 'pipe' });      this.log('ESLint auto-fix completed', 'success');      this.fixes.push('eslint_auto_fix');    } catch (error) {;      this.log('ESLint auto-fix failed', 'warn');    }';  }
-;
-  async generateReport() {;
-    const report = {;
-      "timestamp": new Date().toISOString(),;";      "process": process.env.PM2_PROCESS || 'unknown',';      "summary": {;";        "totalFiles": this.fixes.length,;";        "fixes": this.fixes.length,;";        "success": this.errors.length === 0,;,";},;
-      "logs": this.logs,;";      "errors": this.errors,;";      "fixes": this.fixes,;";      "recommendations": this.generateRecommendations(),;,";};
-;
-    // Save report to file;
-    const reportFile = `comprehensive-error-fixer-report-${Date.now()}.json`;`;    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    this.log(`Report saved to ${reportFile}`, 'info');    return report;`;  }';;
-  generateRecommendations() {;
-    const recommendations = [];
-;
-    if (this.fixes.includes('syntax_errors')) {';      recommendations.push('Review fixed syntax errors to ensure correctness');    }';;
-    if (this.fixes.includes('prettier_formatting')) {';      recommendations.push('Code formatting has been standardized');    }';;
-    if (this.fixes.includes('eslint_auto_fix')) {';      recommendations.push('ESLint auto-fixes have been applied');    }';;
-    if (recommendations.length === 0) {;
-      recommendations.push('No fixes were applied, code appears to be clean');    }';;
-    return recommendations;}
-;
-  async runFullFix() {;
-    try {;
-      this.log('Starting comprehensive error fixing...');';      // Fix syntax errors;
-      await this.fixCommonSyntaxErrors();
+<<<<<<< HEAD      await this.fixCommonSyntaxErrors();
 ;
       // Run Prettier;
       await this.runPrettier();
@@ -540,10 +485,7 @@ this.log(`Report saved to ${reportFile}`, 'info');
 
 // Main execution;
 async function main() {
-;
-// Main execution;
-async function main() {;
-  const fixer = new ComprehensiveErrorFixer();
+<<<<<<< HEAD  const fixer = new ComprehensiveErrorFixer();
 ;
   try {;
     await fixer.runFullFix();
@@ -574,10 +516,7 @@ process.on('SIGINT', () => {;
 // Run the main function;
 main().catch(error => {
   console.error(`Fatal error: ${error.message}`);
-;
-// Run the main function;
-main().catch(error => {console.error(`Fatal error: ${error.message}`);
-  process.exit(1);
+<<<<<<< HEAD  process.exit(1);
 }
 ;
 // Handle process termination;
@@ -586,4 +525,5 @@ process.on('SIGTERM', () => {';  console.log('Received SIGTERM, shutting down gr
 process.on('SIGINT', () => {';  console.log('Received SIGINT, shutting down gracefully...');  process.exit(0);,';});
 ;
 // Run the main function;
-main().catch(error => {;);  console.error(`Fatal "error": ${error.message}`);`;  process.exit(1);});
+main().catch(error => {;);  console.error(`Fatal "error": ${error.message}`);`;  process.exit(1);,
+});

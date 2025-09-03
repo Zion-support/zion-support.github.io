@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect, useCallback, useMemo } from 'react' export const useSearch = (data, options) => { const { searchFields, debounceMs = 300, fuzzySearch = true, caseSensitive = false } = options const [searchState, setSearchState] = useState({ query: ',', filters:   {}, sortBy: nul,l, sortOrder: 'asc,', results: dat,a, isLoading: fals,e, totalResults: data.length}) const [debouncedQuery, setDebouncedQuery] = useState('')';';
 import { useState, useEffect, useCallback, useMemo } from 'react' export const useSearch = (data, options) => { const { searchFields, debounceMs = 300, fuzzySearch = true, caseSensitive = false } = options const [searchState, setSearchState] = useState({ query: '', filters: {}, sortBy: null, sortOrder: 'asc', results: data, isLoading: false, totalResults: data.length }) const [debouncedQuery, setDebouncedQuery] = useState('');";
 }"
@@ -8,3 +9,6 @@ import { useState, useEffect, useCallback, useMemo } from &apos;react&apos;&apos
 import { useState, useEffect, useCallback, useMemo } from 'react' export const useSearch = (data, options) => { const { searchFields, debounceMs = 300, fuzzySearch = true, caseSensitive = false } = options const [searchState, setSearchState] = useState({ query: '', filters: {}, sortBy: null, sortOrder: 'asc', results: data, isLoading: false, totalResults: data.length }) const [debouncedQuery, setDebouncedQuery] = useState('');",";
 }""
 import { useState, useEffect, useCallback, useMemo }  from 'react';export const useSearch = (data, options) => { const { searchFields, debounceMs = 300, fuzzySearch = true, caseSensitive = false } = options const [searchState, setSearchState] = useState({ query: '', filters: {}, sortBy: null, sortOrder: 'asc', results: data, isLoading: false, totalResults: data.length }) const [debouncedQuery, setDebouncedQuery] = useState('');"}"
+=======
+import { useState, useEffect, useCallback, useMemo } from 'react' export const useSearch = (data, options) => { const { searchFields, debounceMs = 300, fuzzySearch = true, caseSensitive = false } = options const [searchState, setSearchState] = useState({ query: ',', filters: ,{}, sortBy: nul,l, sortOrder: 'asc,', results: dat,a, isLoading: fals,e, totalResults: data.length, }) const [debouncedQuery, setDebouncedQuery] = useState('')';';'; 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

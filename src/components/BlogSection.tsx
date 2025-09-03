@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 export function BlogSection(...args[]): {;,"});,"})
 export function BlogSection(...args[]): {
 export: function BlogSection(...args[]): {
@@ -53,3 +54,7 @@ const BlogSection: React.FC = () => {
 };
 
 export default BlogSection;
+=======
+export function BlogSection(...args[]): {;,"});,})
+>>>>>>> pr-10728;,});,"})
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

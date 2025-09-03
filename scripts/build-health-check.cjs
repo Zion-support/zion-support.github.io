@@ -22,7 +22,7 @@ class BuildHealthCheck {;
       await fs.appendFile(this.logFile, logEntry);
       console.log(logEntry.trim());
     } catch (error) {;
-      console.error('Failed to write to log file:', error);
+      console.error('Failed to write to log file: ', error);
     }
   }
 ;
@@ -158,25 +158,7 @@ class BuildHealthCheck {;
     }
   }
 ;
-        const content = await fs.readFile(filePath, 'utf8');';        // Basic syntax check for JSON files;
-        if (config.endsWith('.json')) {';          JSON.parse(content);,';}
-;
-        results.push({ "file": config, "status": 'valid' });      } catch (error) {;        await this.log(Config file ${config} has "issues": ${error.message}',';          'ERROR'';        );        results.push({ "file": config, "status": 'invalid', "error": error.message });      }';    }
-;
-    return results;}
-;
-  async checkBuildAssets() {;
-    try {;
-      const distPath = path.join(this.projectRoot, 'dist');';      try {;
-        const stats = await fs.stat(distPath);
-        if (stats.isDirectory()) {;
-          const files = await fs.readdir(distPath);
-          await this.log(Build assets "found": ${files.length} files in dist/',';            'INFO'';          );          return { "status": 'exists', "fileCount": files.length };        }';      } catch {;
-        // dist doesn't exist, that's okay';      }';;
-      // Try to build;
-      await this.log('Attempting to build project', 'INFO');      const { stdout, stderr } = await execAsync(cd /workspace && npm run build'';      );;
-      if (stderr && !stderr.includes('warn')) {throw new Error(`Build "failed": ${stderr}`);      }`;      await this.log('Build completed successfully', 'INFO');      return { "status": 'built', "output": stdout };    } catch (error) {await this.log(`Build check "failed": ${error.message}`, 'ERROR');      return { "status": 'failed', "error": error.message };    }`;  }';;
-  async performHealthActions(results) {;
+<<<<<<< HEAD  async performHealthActions(results) {;
     const actions = [];
 ;
     // If dependencies are unhealthy, reinstall;
@@ -246,8 +228,7 @@ class BuildHealthCheck {;
         c => c.status === 'invalid';
       ).length;
       healthScore -= invalidConfigs * 10;
-      if (results.dependencies.status === 'failed') healthScore -= 40;      if (results.build.status === 'failed') healthScore -= 30;      const invalidConfigs = results.configs.filter(;);        c => c.status === 'invalid'';      ).length;      healthScore -= invalidConfigs * 10;
-;
+<<<<<<< HEAD;
       results.healthScore = Math.max(0, healthScore);
       results.status =;
         healthScore >= 70;
@@ -280,6 +261,5 @@ if (require.main === module) {;
     checker.log('Build health checker shutting down', 'INFO');
     process.exit(0);
   });
-  process.on('SIGINT', () => {';    checker.log('Build health checker shutting down', 'INFO');    process.exit(0);,';});}
-;
+};
 module.exports = BuildHealthCheck;

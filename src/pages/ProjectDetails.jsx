@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  export default function ProjectDetails () { function ProjectDetailsContent () { const router = useNavigate () ;,"});,"});
 }"});,"})
  export: default function ProjectDetails () { function ProjectDetailsContent () { const router = useNavigate () };
@@ -36,3 +37,7 @@ const ProjectDetails = () => {
 };
 
 export default ProjectDetails;
+=======
+ export default function ProjectDetails () { function ProjectDetailsContent () { const router = useNavigate () ;,"});,})
+}});,"})
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

@@ -65,8 +65,7 @@ class AutoFixer {
         const originalContent = content;
         
         // Remove merge conflict markers
-        content = content.replace(/[\s\S]*?[\s\S]*?        content = content.replace(/[\s\S]*?        content = content.replace(/[\s\S]*?        
-        if (content !== originalContent) {
+        content = content.replace(/[\s\S]*?[\s\S]*?        content = content.replace(/[\s\S]*?        content = content.replace(/[\s\S]*?                if (content !== originalContent) {
           fs.writeFileSync(file, content);
           this.log('info', `Fixed merge conflicts in ${file}`);
           fixedFiles++;
@@ -95,7 +94,11 @@ class AutoFixer {
       // Fix missing commas
       { pattern: /([^}])\s*$/gm, replacement: '$1,', description: 'Add missing commas' },
       // Fix missing quotes
+<<<<<<< HEAD
       { pattern: /([^"'])\s*$/gm, replacement: '$1", description: 'Add missing quotes' },
+=======
+      { pattern: /([^"'])\s*$/gm, replacement: '$1', description: 'Add missing quotes' },
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       // Fix missing brackets
       { pattern: /([^}])\s*$/gm, replacement: '$1}', description: 'Add missing brackets' },
       // Fix missing parentheses
@@ -148,8 +151,8 @@ class AutoFixer {
         const originalContent = content;
         
         // Fix common import issues
-        content = content.replace(/import\s+{\s*}\s+from\s+['"][^'"]+['"];?/g, '');
-        content = content.replace(/import\s+\*\s+as\s+\w+\s+from\s+['"][^'"]+['"];?/g, '');
+        content = content.replace(/import\s+{\s*}\s+from\s+['][^'"]+['"];?/g, '');
+        content = content.replace(/import\s+\*\s+as\s+\w+\s+from\s+['][^']+['"];?/g, '');
         content = content.replace(/import\s+\w+\s+from\s+['"][^'"]+['"];?/g, '');
         
         if (content !== originalContent) {
@@ -265,7 +268,7 @@ if (require.main === module) {
       process.exit(0);
     })
     .catch(error => {
-      console.error('Auto-fixer failed:', error);
+      console.error('Auto-fixer failed: ', error);
       process.exit(1);
     });
 }

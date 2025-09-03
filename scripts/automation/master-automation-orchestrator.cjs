@@ -28,6 +28,7 @@ class MasterAutomationOrchestrator {;
       const dirPath = path.join(this.projectRoot, 'dir);
       if (!fs.existsSync(dirPath)) {;
         fs.mkdirSync(dirPath', { recursive: true });
+<<<<<<< HEAD
     dirs.forEach(dir => {
       const dirPath = path.join(this.projectRoot, dir);
       if (!fs.existsSync(dirPath)) {
@@ -81,6 +82,9 @@ class MasterAutomationOrchestrator {;
     // Initialize performance monitoring;
     this.automationStatus.performanceMonitor.status = `active';
       }
+=======
+<<<<<<< HEAD      }
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     });
   }
 ;
@@ -156,28 +160,7 @@ class MasterAutomationOrchestrator {;
     setInterval(async () => {
       await this.runCodeQualityMonitoring();
     }, 60 * 60 * 1000); // Every hour;
-    ;
-    // Start error monitoring loop;
-    setInterval(async () => {;
-      await this.runErrorMonitoring();
-    }, 5 * 60 * 1000); // Every 5 minutes;
-    ;
-    // Start performance monitoring loop;
-    setInterval(async () => {;
-      await this.runPerformanceMonitoring();
-    }, 10 * 60 * 1000); // Every 10 minutes;
-    ;
-    // Start security scanning loop;
-    setInterval(async () => {;
-      await this.runSecurityScanning();
-    }, 30 * 60 * 1000); // Every 30 minutes;
-    ;
-    // Start code quality monitoring loop;
-    setInterval(async () => {;
-      await this.runCodeQualityMonitoring();
-    }, 60 * 60 * 1000); // Every hour;
-    ;
-    this.log('✅ Continuous monitoring started');
+<<<<<<< HEAD    this.log('✅ Continuous monitoring started');
   }
 ;
   async runErrorMonitoring() {;
@@ -226,25 +209,7 @@ class MasterAutomationOrchestrator {;
       
       // Analyze performance;
       if (buildResult.includes(`Build completed`)) {
-      this.log('✅ Error monitoring completed');
-      ;
-    } catch (error) {this.log(`❌ Error monitoring failed: ${error.message}`, 'ERROR');
-    }
-  }
-;
-  async runPerformanceMonitoring() {;
-    try {;
-      this.log('⚡ Running Performance Monitoring...');
-      ;
-      // Check bundle size;
-      const buildResult = execSync('npm run build', { ;
-        encoding: 'utf8',;
-        stdio: 'pipe';
-      });
-      ;
-      // Analyze performance;
-      if (buildResult.includes('Build completed')) {;
-        this.automationStatus.performanceMonitor.optimizations++;
+<<<<<<< HEAD        this.automationStatus.performanceMonitor.optimizations++;
         this.log(`✅ Performance optimization applied`);
       }
       ;
@@ -313,30 +278,7 @@ class MasterAutomationOrchestrator {;
 });
       
       if (lintResult.includes('0 errors`) && typeResult.includes(`0 errors`)) {
-      this.log('✅ Security scanning completed');
-      ;
-    } catch (error) {this.log(`❌ Security scanning failed: ${error.message}`, 'ERROR');
-    }
-  }
-;
-  async runCodeQualityMonitoring() {;
-    try {;
-      this.log('📝 Running Code Quality Monitoring...');
-      ;
-      // Run linting;
-      const lintResult = execSync('npm run lint', { ;
-        encoding: 'utf8',;
-        stdio: 'pipe';
-      });
-      ;
-      // Run type checking;
-      const typeResult = execSync('npm run type-check', { ;
-        encoding: 'utf8',;
-        stdio: 'pipe';
-      });
-      ;
-      if (lintResult.includes('0 errors') && typeResult.includes('0 errors')) {;
-        this.automationStatus.codeQuality.improvements++;
+<<<<<<< HEAD        this.automationStatus.codeQuality.improvements++;
         this.log(`✅ Code quality check passed`);
       }
       ;
@@ -399,7 +341,7 @@ class MasterAutomationOrchestrator {;
       execSync('npm run build', { stdio: 'pipe' });
       
       // Run comprehensive tests;
-      execSync('npm run test:coverage`, { stdio: `pipe` });
+      execSync('npm run test: coverage`, { stdio: `pipe` });
       
       this.log(`✅ Weekly maintenance completed`);
       ;
@@ -423,68 +365,7 @@ class MasterAutomationOrchestrator {;
         totalImprovements: this.automationStatus.codeQuality.improvements;
       },
       recommendations: this.generateRecommendations()
-    ;
-    // Weekly maintenance on Sundays;
-    if (now.getDay() === 0 && now.getHours() === 3 && now.getMinutes() === 0) {;
-      await this.runWeeklyMaintenance();
-    }
-  }
-;
-  async runDailyMaintenance() {;
-    this.log('🌅 Running Daily Maintenance...');
-    ;
-    try {;
-      // Clean up logs;
-      execSync('find logs -name "*.log" -mtime +7 -delete', { stdio: 'pipe' });
-      ;
-      // Update dependencies;
-      execSync('npm update', { stdio: 'pipe' });
-      ;
-      // Run tests;
-      execSync('npm test', { stdio: 'pipe' });
-      ;
-      this.log('✅ Daily maintenance completed');
-      ;
-    } catch (error) {this.log(`❌ Daily maintenance failed: ${error.message}`, 'ERROR');
-    }
-  }
-;
-  async runWeeklyMaintenance() {;
-    this.log('📅 Running Weekly Maintenance...');
-    ;
-    try {;
-      // Deep clean;
-      execSync('npm run clean', { stdio: 'pipe' });
-      ;
-      // Rebuild everything;
-      execSync('npm run build', { stdio: 'pipe' });
-      ;
-      // Run comprehensive tests;
-      execSync('npm run test:coverage', { stdio: 'pipe' });
-      ;
-      this.log('✅ Weekly maintenance completed');
-      ;
-    } catch (error) {this.log(`❌ Weekly maintenance failed: ${error.message}`, 'ERROR');
-    }
-  }
-;
-  async generateAutomationDashboard() {;
-    this.log('📊 Generating Automation Dashboard...');
-    ;
-    const dashboard = {;
-      timestamp: new Date().toISOString(),;
-      project: 'ZION TECH',;
-      automationStatus: this.automationStatus,;
-      summary: {;
-        totalAutomations: Object.keys(this.automationStatus).length,;
-        activeAutomations: Object.values(this.automationStatus).filter(s => s.status === 'active').length,;
-        totalErrorsFixed: this.automationStatus.errorFixer.errorsFixed,;
-        totalOptimizations: this.automationStatus.performanceMonitor.optimizations,;
-        totalVulnerabilities: this.automationStatus.securityScanner.vulnerabilities,;
-        totalImprovements: this.automationStatus.codeQuality.improvements;
-      },;
-      recommendations: this.generateRecommendations();
-    };
+<<<<<<< HEAD    };
     ;
     fs.writeFileSync(this.dashboardFile, JSON.stringify(dashboard, null, 2));
     ;
@@ -519,8 +400,7 @@ class MasterAutomationOrchestrator {;
 
   displayDashboard(dashboard) {
     console.log(``\n🎯 ZION TECH AUTOMATION DASHBOARD`);
-    console.log(``==`);console.log(📊 Status: ${dashboard.summary.activeAutomations}/${dashboard.summary.totalAutomations} automations active);console.log(🔧 Errors Fixed: ${dashboard.summary.totalErrorsFixed}``);console.log(`⚡ Optimizations: ${dashboard.summary.totalOptimizations}`);;console.log(`🔒 Vulnerabilities: ${dashboard.summary.totalVulnerabilities}`);;console.log(`📝 Improvements: ${dashboard.summary.totalImprovements}`);;
-    
+    console.log(``==`);console.log(📊 Status: ${dashboard.summary.activeAutomations}/${dashboard.summary.totalAutomations} automations active);console.log(🔧 Errors Fixed: ${dashboard.summary.totalErrorsFixed}``);console.log(`⚡ Optimizations: ${dashboard.summary.totalOptimizations}`);console.log(`🔒 Vulnerabilities: ${dashboard.summary.totalVulnerabilities}`);console.log(`📝 Improvements: ${dashboard.summary.totalImprovements}`);    
     console.log(``\n📋 Recommendations:`);dashboard.recommendations.forEach(rec => console.log(`   ${rec}));
     console.log(\n📄 Dashboard saved to: ${this.dashboardFile}``);
   }

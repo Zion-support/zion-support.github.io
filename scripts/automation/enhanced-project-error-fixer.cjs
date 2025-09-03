@@ -15,10 +15,7 @@ class EnhancedProjectErrorFixer {;
     this.reportFile = path.join(
       this.projectRoot,
       `enhanced-error-fixer-report.json`
-    this.reportFile = path.join(;
-      this.projectRoot,;
-      'enhanced-error-fixer-report.json';
-    );
+<<<<<<< HEAD    );
     this.fixesApplied = [];
     this.errorsFound = [];
     this.startTime = Date.now();
@@ -38,15 +35,7 @@ class EnhancedProjectErrorFixer {;
 
     // Append to log file;
     fs.appendFileSync(this.logFile, logMessage + `\n`);
-;
-  log(message, level = 'INFO') {;
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}`;
-    console.log(`logMessage);
-;
-    // Append to log file;
-    fs.appendFileSync(this.logFile, logMessage + '\n');
-  }
+<<<<<<< HEAD  }
 ;
   async run() {;
 
@@ -144,11 +133,7 @@ class EnhancedProjectErrorFixer {;
     try {
       // Check if node_modules exists;
       if (!fs.existsSync(path.join(this.projectRoot, 'node_modules'))) {
-;
-    try {;
-      // Check if node_modules exists;
-      if (!fs.existsSync(path.join(this.projectRoot, 'node_modules'))) {;
-        this.log('Installing dependencies...');
+<<<<<<< HEAD        this.log('Installing dependencies...');
         execSync('npm install', { cwd: this.projectRoot, stdio: 'inherit' });
         this.fixesApplied.push('INSTALLED_DEPENDENCIES');
       }
@@ -222,30 +207,7 @@ class EnhancedProjectErrorFixer {;
                 name: 'next'', '}', '']},
           include: ['next-env.d.ts'', '**/*.ts', '**/*.tsx'', '**/*.js', '**/*.jsx'', ''],
           exclude: ['node_modules', '.next', 'out', 'dist'],
-;
-        // Ensure proper configuration;
-        const updatedConfig = {;
-          ...tsConfig,;
-          compilerOptions: {;
-            ...tsConfig.compilerOptions,;
-            allowJs: true,;
-            skipLibCheck: true,;
-            noEmit: true,;
-            esModuleInterop: true,;
-            allowSyntheticDefaultImports: true,;
-            strict: false,;
-            forceConsistentCasingInFileNames: true,;
-            moduleResolution: 'node',;
-            resolveJsonModule: true,;
-            isolatedModules: true,;
-            jsx: 'preserve',;
-            incremental: true,;
-            plugins: ['{;
-                name: 'next', '}', '],;
-          },;
-          include: ['next-env.d.ts', '**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx', '],;
-          exclude: ['node_modules', '.next', 'out', 'dist'],;
-        };
+<<<<<<< HEAD        };
 ;
         fs.writeFileSync(tsConfigPath, JSON.stringify(updatedConfig, null, 2));
         this.fixesApplied.push(`FIXED_TYPESCRIPT_CONFIG`);
@@ -266,11 +228,7 @@ class EnhancedProjectErrorFixer {;
   async fixESLintConfig() {
     this.log(`🔧 Fixing ESLint configuration...');
 
-;
-  async fixESLintConfig() {;
-    this.log('🔧 Fixing ESLint configuration...');
-;
-    // Fix the .eslintrc.js file;
+<<<<<<< HEAD    // Fix the .eslintrc.js file;
     const eslintConfigPath = path.join(this.projectRoot, '.eslintrc.js');
 ;
     if (fs.existsSync(eslintConfigPath)) {;
@@ -303,14 +261,7 @@ class EnhancedProjectErrorFixer {;
     const patterns = ['src/**/*.ts'', 'src/**/*.tsx', 'pages/**/*.ts'', 'pages/**/*.tsx', 'components/**/*.ts'', 'components/**/*.tsx', ''];
 
     for (const pattern of patterns) {
-;
-  async fixTypeScriptErrors() {;
-    this.log('🔧 Fixing common TypeScript errors...');
-;
-    const patterns = ['src/**/*.ts', 'src/**/*.tsx', 'pages/**/*.ts', 'pages/**/*.tsx', 'components/**/*.ts', 'components/**/*.tsx', '];
-;
-    for (const pattern of patterns) {;
-      const files = glob.sync(pattern, { cwd: this.projectRoot });
+<<<<<<< HEAD      const files = glob.sync(pattern, { cwd: this.projectRoot });
 ;
       for (const file of files) {;
         const filePath = path.join(this.projectRoot, 'file);
@@ -332,18 +283,7 @@ class EnhancedProjectErrorFixer {;
               content.includes('export default') ||
               content.includes('export {')
             ) {
-          // Add missing React imports;
-          if (;
-            content.includes('React') &&;
-            !content.includes('import React') &&;
-            !content.includes('import * as React');
-          ) {;
-            if (;
-              content.includes('export default') ||;
-              content.includes('export {');
-            ) {;
-              content = "import React from 'react';\n" + content;
-              modified = true;
+              content = "import React from 'react';\n + content;              modified = true;
             }
           }
 
@@ -437,7 +377,7 @@ class EnhancedProjectErrorFixer {;
             !content.includes('import React') &&
             !content.includes('import * as React')
           ) {
-            content = "import React from 'react';\n` + content;
+            content = import React from 'react';\n` + content;
             modified = true;
           }
 
@@ -450,27 +390,7 @@ class EnhancedProjectErrorFixer {;
           content = content.replace(
             /className\s*=\s*\{([^}]+)\}/g,
             `className={$1}`
-          // Add missing React imports for JSX;
-          if (;
-            content.includes('return (') &&;
-            content.includes('<') &&;
-            !content.includes('import React') &&;
-            !content.includes('import * as React');
-          ) {;
-            content = "import React from 'react';\n' + content;
-            modified = true;
-          }
-;
-          // Fix fragment syntax;
-          content = content.replace(;
-            /<>\s*<\/>/g,<React.Fragment></React.Fragment>';
-          );
-;
-          // Fix common prop issues;
-          content = content.replace(;
-            /className\s*=\s*\{([^}]+)\}/g,;
-            'className={$1}';
-          );
+<<<<<<< HEAD          );
 ;
           if (modified) {;
             fs.writeFileSync(filePath, content);
@@ -513,18 +433,7 @@ class EnhancedProjectErrorFixer {;
             /from\s+['"]([^'"]+)['"]/g,
             (match, importPath) => {
               if (importPath.startsWith('.`) && !importPath.includes(`.`)) {return `from `${importPath}.js``;
-;
-          // Fix relative imports;
-          content = content.replace(;
-            /from\s+[']\.\.\/\.\.\/\.\.\/\.\.\//g,from '../../../";
-          );
-;
-          // Fix missing extensions;
-          content = content.replace(;
-            /from\s+['"]([^'"]+)['"]/g,;
-            (match, importPath) => {;
-              if (importPath.startsWith('.') && !importPath.includes('.')) {return `from '${importPath}.js'`;
-              }
+<<<<<<< HEAD              }
               return match;
             }
           );
@@ -557,17 +466,7 @@ class EnhancedProjectErrorFixer {;
       .filter(file => {
         const content = fs.readFileSync(
           path.join(this.projectRoot, 'file)', utf8'
-;
-  async fixFileExtensionIssues() {;
-    this.log('🔧 Fixing file extension issues...');
-;
-    // Find files with incorrect extensions;
-    const jsFilesWithJSX = glob;
-      .sync('**/*.js', { cwd: this.projectRoot });
-      .filter(file => {;
-        const content = fs.readFileSync(;
-          path.join(this.projectRoot, 'file)', utf8';
-        );
+<<<<<<< HEAD        );
         return (;
           content.includes('<') &&;
           content.includes('>') &&;
@@ -625,43 +524,7 @@ class EnhancedProjectErrorFixer {;
         execSync('npx prettier --write .', {
           cwd: this.projectRoot,
           stdio: 'pipe',
-;
-  async runComprehensiveFixes() {;
-    this.log('🔧 Running comprehensive fixes...');
-;
-    try {;
-      // Run TypeScript compiler to check for remaining errors;
-      try {;
-        execSync('npx tsc --noEmit', { cwd: this.projectRoot, stdio: 'pipe' });
-        this.log('✅ TypeScript compilation successful');
-      } catch (error) {this.log(`TypeScript errors remain: ${error.message}`, 'WARN');
-        this.errorsFound.push({;
-          type: 'TYPESCRIPT_ERRORS',;
-          message: error.message,;
-        });
-      }
-;
-      // Run ESLint;
-      try {;
-        execSync('npx eslint . --ext .js,.jsx,.ts,.tsx --fix', {;
-          cwd: this.projectRoot,;
-          stdio: 'pipe',;
-        });
-        this.log('✅ ESLint fixes applied');
-        this.fixesApplied.push('ESLINT_FIXES_APPLIED');
-      } catch (error) {this.log(`ESLint issues remain: ${error.message}`, 'WARN');
-        this.errorsFound.push({;
-          type: 'ESLINT_ERRORS',;
-          message: error.message,;
-        });
-      }
-;
-      // Run Prettier;
-      try {;
-        execSync('npx prettier --write .', {;
-          cwd: this.projectRoot,;
-          stdio: 'pipe',;
-        });
+<<<<<<< HEAD        });
         this.log('✅ Prettier formatting applied');
         this.fixesApplied.push(`PRETTIER_FORMATTING_APPLIED`);
       } catch (error) {  this.log(`Prettier issues: ${error.message  }`, `WARN`);
@@ -690,13 +553,7 @@ class EnhancedProjectErrorFixer {;
     this.log(`📊 Report generated`);this.log(`✅ Applied ${this.fixesApplied.length} fixes`);this.log(`⚠️  Found ${this.errorsFound.length} remaining errors`);
 
     if (this.errorsFound.length > 0) {
-      this.log(`Remaining errors:`);
-;
-    this.log('📊 Report generated');this.log(`✅ Applied ${this.fixesApplied.length} fixes`);this.log(`⚠️  Found ${this.errorsFound.length} remaining errors`);
-;
-    if (this.errorsFound.length > 0) {;
-      this.log('Remaining errors:');
-      this.errorsFound.forEach((error, index) => {this.log(`  ${index + 1}. ${error.type}: ${error.message}`);
+      this.log(`Remaining errors: `);      this.errorsFound.forEach((error, index) => {this.log(`  ${index + 1}. ${error.type}: ${error.message}`);
       });
     }
   }

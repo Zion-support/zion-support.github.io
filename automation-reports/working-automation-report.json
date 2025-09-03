@@ -1,9 +1,24 @@
 {
+<<<<<<< HEAD
   "timestamp": "2025-09-03T02:45:33.543Z",
   "securityAudit": {
     "success": true,
     "output": "found 0 vulnerabilities\n";
 },
+=======
+<<<<<<< HEAD
+  "timestamp": "2025-09-03T02:27:08.545Z",
+  "securityAudit": {
+    "success": false,
+    "error": "Command failed: npm audit --audit-level=moderate\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error code ENOLOCK\nnpm error audit This command requires an existing lockfile.\nnpm error audit Try creating one first with: npm i --package-lock-only\nnpm error audit Original error: loadVirtual requires existing shrinkwrap file\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-03T02_27_08_587Z-debug-0.log\n"
+=======
+  "timestamp": "2025-09-03T02:50:22.296Z",
+  "securityAudit": {
+    "success": false,
+    "error": "Command failed: npm audit --audit-level=moderate\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error code ENOLOCK\nnpm error audit This command requires an existing lockfile.\nnpm error audit Try creating one first with: npm i --package-lock-only\nnpm error audit Original error: loadVirtual requires existing shrinkwrap file\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-03T02_50_22_368Z-debug-0.log\n"
+>>>>>>> a4e4b61825d9486fa9e1113a59af8c11dc69fb90
+  },
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   "performanceCheck": {
     "success": false,
     "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error\n\n> Build error occurred\nSyntaxError: Unexpected token ';'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n";
@@ -41,6 +56,13 @@
           "@radix-ui/react-scroll-area",
           "@radix-ui/react-select",
           "@radix-ui/react-separator",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          "@radix-ui/react-sheet",
+=======
+>>>>>>> a4e4b61825d9486fa9e1113a59af8c11dc69fb90
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
           "@radix-ui/react-slider",
           "@radix-ui/react-slot",
           "@radix-ui/react-switch",
@@ -98,8 +120,17 @@
           "ts-jest",
           "typescript"
         ],
+<<<<<<< HEAD
         "totalDeps": 73;
 }
+=======
+<<<<<<< HEAD
+        "totalDeps": 75
+=======
+        "totalDeps": 74
+>>>>>>> a4e4b61825d9486fa9e1113a59af8c11dc69fb90
+      }
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     },
     {
       "name": "Configuration Check",
@@ -107,13 +138,20 @@
       "result": {
         "existing": [
           "next.config.js",
-          "tailwind.config.js",
-          "postcss.config.js",
           "eslint.config.js"
         ],
+<<<<<<< HEAD
         "missing": [],
         "coverage": 100;
 }
+=======
+        "missing": [
+          "tailwind.config.js",
+          "postcss.config.js"
+        ],
+        "coverage": 50
+      }
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     }
   ]
 }

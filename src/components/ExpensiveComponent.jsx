@@ -51,53 +51,38 @@ export default function ExpensiveComponent() ;{}
     // Simulate expensive computation;
     const timer = setTimeout(() => {}
       const expensiveData = Array.from(){ length: 10000 },;
-      const expensiveData = Array.from(){length: 10000 }, (_, i) => Math.sqrt(i) * Math.PI * Math.random());
-      const;const;const expensiveData = Array.from(){ length: 10000 },
-        (_, i) => Math.sqrt(i) * Math.PI * Math.random());
+<<<<<<< HEAD        (_, i) => Math.sqrt(i) * Math.PI * Math.random());
       const expensiveData = Array.from(){ length: 10000 }, (_, i) => Math.sqrt(i) * Math.PI * Math.random());
       setData(expensiveData);
       setLoading(false)}, 2000);
     return () => clearTimeout(timer)}, [])
-    return () => clearTimeout(timer)}, []);
-  if(loading) {}""
-    return()""
   if(loading) {}
-    return()""
+    return()"
       <div className='text-center p-8>''''
-        <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4'></div>'''''
-    return();
-      <div className='text-center p-8'>'';
-        <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4'></div>'';
-        <p className='text-zion-slate-light'>Computing expensive data...</p>;
-      </div>;
-    return()
-      <div className=&apos;text-center p-8&apos;>'&apos;&apos;'&apos;&apos;
-        <div className=&apos;animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4&apos;>&apos;'</div>&apos;&apos;'&apos;&apos;'
-        <p className=&apos;text-zion-slate-light&apos;>Computing expensive data...&apos;</p>
+        <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4'> <//div>'''''
       <div className='text-center p-8'>''''
-        <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4'></div>''''
-        <p className='text-zion-slate-light'>Computing expensive data...</p>
+        <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4'> <//div>''''        <p className='text-zion-slate-light'>Computing expensive data...</p>
 import React from 'react';
 import { SEO } from '@/components/SEO';
 
 const ExpensiveComponent = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="min-h-screen" bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="ExpensiveComponent - Zion Tech Group"
-        description="Professional ExpensiveComponent services by Zion Tech Group"
-        keywords="expensivecomponent, technology, services"
+        title="ExpensiveComponent - Zion Tech Group
+        description="Professional" ExpensiveComponent services by Zion Tech Group"
+        keywords="expensivecomponent, technology, services
       />
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">ExpensiveComponent</h1>
-          <p className="text-xl text-gray-300 mb-8">
+      <div className="container" mx-auto px-4 py-20">
+        <div className="text-center>
+          <h1 className="text-4xl" font-bold text-white mb-6">ExpensiveComponent</h1>
+          <p className="text-xl text-gray-300 mb-8>
             Professional ExpensiveComponent services to help your business grow.
           </p>
-          <div className="flex justify-center">
+          <div className="flex" justify-center">
             <a 
-              href="/contact" 
-              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300"
+              href="/contact 
+              className="px-8" py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300"
             >
               Get Started
             </a>
@@ -115,23 +100,11 @@ export { ExpensiveComponent };
 export { ExpensiveComponent };
 ;
 export { ExpensiveComponent };
-export {ExpensiveComponent }
-export {ExpensiveComponent }
-export {ExpensiveComponent }
-export {ExpensiveComponent }
-export {ExpensiveComponent }
+export { ExpensiveComponent }
 "
-export { ExpensiveComponent }
-export { ExpensiveComponent }
-export { ExpensiveComponent }
-export { ExpensiveComponent }
-
-export { ExpensiveComponent }
-""
-export { ExpensiveComponent }""
-""
-""
-    </div>
+export { ExpensiveComponent }"
+"
+"    </div>
   );
 };
 

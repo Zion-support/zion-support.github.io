@@ -1,6 +1,7 @@
 :src.pages.disabled/Sitemap.test.tsx
-describe ('Sitemap', () => {}; '; it ('renders without crashing', () => {}; render (<Sitemap />) ; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; '; it ('displays expected content', () => {}; render (<Sitemap />) ;
+describe ('Sitemap', () => {}; '; it ('renders without crashing', () => {}; render (<Sitemap />) ;'; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; '; it ('displays expected content', () => {}; render (<Sitemap />) ;
 
+<<<<<<< HEAD
 describe ('Sitemap', () => {}; '; it ('renders without crashing', () => {}; render (<Sitemap />) ; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; '; it ('displays expected content', () => {}; render (<Sitemap />) ;''';
 ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/Sitemap.test.tsx
 :src.pages.disabled/Sitemap.test.tsx;
@@ -21,3 +22,6 @@ import sitemap  from './sitemap'describe('sitemap', () => {
     // Add specific test assertions based on component content;
 });
 })
+=======
+describe ('Sitemap', () => {}; '; it ('renders without crashing', () => {}; render (<Sitemap />) ;'; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; '; it ('displays expected content', () => {}; render (<Sitemap />) ;''';
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

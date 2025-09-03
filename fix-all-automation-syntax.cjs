@@ -26,18 +26,17 @@ class AutomationSyntaxFixer {;
 ;
   fixImportStatements(content) {;
     // Fix incomplete import statements;
-    content = content.replace(/import fs from;/g, 'import fs from "fs";');    content = content.replace(/import path from;/g, 'import path from "path";');    content = content.replace(;);      /import { execSync } from;/g,;
-      'import { execSync } from "child_process";'';    );
-    content = content.replace(;);      /import axios from;/g,;
-      'import axios from "axios";'';    );
+    content = content.replace(/import fs from;/g, 'import fs from "fs;');';    content = content.replace(/import path from;/g, 'import path from path";');';    content = content.replace(;);      /import { execSync } from;/g,;
+      'import { execSync } from "child_process;'';    );    content = content.replace(;);      /import axios from;/g,;
+      'import axios from axios";'';    );
 ;
     return content;}
 ;
   fixStringLiterals(content) {;
     // Fix malformed string literals;
-    content = content.replace(;);      /this\.projectRoot,logs'/g,';      "this.projectRoot, 'logs'"";    );
-    content = content.replace(;);      /this\.projectRoot,reports'/g,';      "this.projectRoot, 'reports'"";    );
-    content = content.replace(;);      /this\.projectRoot,automation'/g,';      "this.projectRoot, 'automation'"";    );
+    content = content.replace(;);      /this\.projectRoot,logs'/g,';      "this.projectRoot, 'logs';    );
+    content = content.replace(;);      /this\.projectRoot,reports'/g,';      "this.projectRoot, 'reports'";    );
+    content = content.replace(;);      /this\.projectRoot,automation'/g,';      this.projectRoot, 'automation'"";    );
     content = content.replace(;);      /this\.projectRoot,dir\)/g,;
       'this.projectRoot, dir)'';    );
 ;
@@ -47,8 +46,8 @@ class AutomationSyntaxFixer {;
     // Fix malformed regex patterns;
     content = content.replace(;);      /const mergeConflictPattern = \/      changes\+\+;/g,;
       'const mergeConflictPattern = /\\n([\\s\\S]*?)\\n\\n([\\s\\S]*?)\\n;
-    return content;}
-;
+    return content;,
+};
   fixOptionalChaining(content) {;
     // Fix optional chaining syntax issues;
     content = content.replace(/\?\?/g, '?.');    content = content.replace(/\.\?\?/g, '?.');
@@ -56,7 +55,7 @@ class AutomationSyntaxFixer {;
 ;
   fixBracketIssues(content) {;
     // Fix missing brackets and parentheses;
-    content = content.replace(;);      /fs\.mkdirSync\(dirPath', \{ "recursive": true \}\);/g,';      'fs.mkdirSync(dirPath, { "recursive": true });'';    );
+    content = content.replace(;);      /fs\.mkdirSync\(dirPath', \{ recursive: true \}\);/g,';      'fs.mkdirSync(dirPath, { "recursive": true });'';    );
 ;
     return content;}
 ;
@@ -125,13 +124,15 @@ class AutomationSyntaxFixer {;
       content = this.fixBracketIssues(content);
 ;
       if (content !== originalContent) {;
-        fs.writeFileSync(filePath, content, 'utf8');        this.fixedFiles.push(filePath);
-        this.log(`✅ "Fixed": ${filePath}`);`;        return true;}
+        fs.writeFileSync(filePath, content, 'utf8');';        this.fixedFiles.push(filePath);
+        this.log(`✅ Fixed: ${filePath}`);`;        return true;,
+}
 ;
-      return false;} catch (error) {;
-      this.errors.push({ "file": filePath, "error": error.message });
-      this.log(`❌ Error fixing ${filePath}: ${error.message}`);`;      return false;}
-  }
+      return false;,
+} catch (error) {;
+      this.errors.push({ "file": filePath, error: error.message });
+      this.log(`❌ Error fixing ${filePath}: ${error.message}`);`;      return false;,
+}  }
 ;
   async run() {;
     this.log('🔧 Starting comprehensive automation syntax fixing...');
@@ -157,9 +158,9 @@ class AutomationSyntaxFixer {;
 ;
     // Generate report;
     const report = {;
-      "timestamp": new Date().toISOString(),;
+      timestamp: new Date().toISOString(),;
       "totalFiles": allFiles.length,;
-      "fixedFiles": fixedCount,;
+      fixedFiles: fixedCount,;
       "errors": this.errors,;
       "fixedFileList": this.fixedFiles,;};
 ;

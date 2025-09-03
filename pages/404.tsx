@@ -1,17 +1,10 @@
 import React from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
-const React = dynamic(() => import('react'), { ssr: false });;
+import dynamic from 'next/dynamic';
 import { motion } from 'framer-motion';
-<:pages/404.tsx
-
-=
-const SEO = dynamic(() => import('../components/SEO'), { ssr: false });;
->:pages/NotFound.tsx
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
-import React from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
 import {
   Home,

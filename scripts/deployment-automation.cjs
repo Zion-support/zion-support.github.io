@@ -99,7 +99,7 @@ class DeploymentAutomation {
       const gitStatus = execSync('git status --porcelain', { encoding: 'utf8' });
       if (gitStatus.trim()) {
         this.log('Warning: There are uncommitted changes', 'WARN');
-        this.log('Uncommitted files:', 'WARN');
+        this.log('Uncommitted files: ', 'WARN');
         this.log(gitStatus, 'WARN');
       }
     } catch (error) {
@@ -215,7 +215,7 @@ class DeploymentAutomation {
       try {
         await this.runStep(
           'Smoke tests',
-          'npm run test:smoke',
+          'npm run test: smoke',
           { continueOnError: true }
         );
       } catch (error) {
@@ -343,7 +343,7 @@ if (require.main === module) {
       process.exit(0);
     })
     .catch(error => {
-      console.error('\n❌ Deployment automation failed:', error.message);
+      console.error('\n❌ Deployment automation failed: ', error.message);
       process.exit(1);
     });
 }

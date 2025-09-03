@@ -73,15 +73,7 @@ class PM2SyncMonitor {;
       },;
     };
 ;
-
-class PM2SyncMonitor {
-  constructor() {
-    this.config = {
-      projectRoot: process.cwd(),
-      monitorInterval: parseInt(process.env.MONITOR_INTERVAL) || 60000, // 1 minute;
-      healthCheckInterval: 60000, // 1 minute
-      metricsInterval: 30000, // 30 seconds
-      healthCheckPort: 3001,
+<<<<<<< HEAD      healthCheckPort: 3001,
       maxErrors: 10,
       maxRestarts: 5,
       logFile: 'logs/pm2-sync-monitor.log',
@@ -115,9 +107,7 @@ class PM2SyncMonitor {
     }
 
     this.log = (message, level = `INFO`) => {
-;
-    this.log = (message, level = 'INFO') => {;
-      const timestamp = new Date().toISOString();
+<<<<<<< HEAD      const timestamp = new Date().toISOString();
       const logMessage = `[${timestamp}] [${level}] ${message}`;
       console.log(`logMessage);
 ;
@@ -149,7 +139,7 @@ class PM2SyncMonitor {
     } catch (error) {  this.log(Initialization failed: ${error.message  }, `ERROR``);
         fs.appendFileSync(this.config.logFile, logMessage + '\n');
       } catch (error) {;
-        console.error('Failed to write to log file:', error.message);
+        console.error('Failed to write to log file: ', error.message);
       }
     };
   }
@@ -159,12 +149,7 @@ class PM2SyncMonitor {
       this.log('Initializing PM2 Sync Monitor System...');
 ;
       // Start monitoring loops;
-
-      // Load existing metrics
-      await this.loadMetrics();
-
-      // Start monitoring loops
-      this.startMonitoringLoops();
+<<<<<<< HEAD      this.startMonitoringLoops();
 ;
       // Start health check server;
       this.startHealthCheckServer();
@@ -202,29 +187,6 @@ class PM2SyncMonitor {
     setInterval(async () => {;
       await this.cleanupOldData();
     }, this.config.monitorInterval * 10);
-
-  startMonitoringLoops() {
-    // Health check loop;
-    setInterval(async () => {
-      if (this.isRunning) {
-        await this.performHealthCheck();
-      }
-    }, this.config.healthCheckInterval);
-
-    // Metrics collection loop;
-    setInterval(async () => {
-      await this.collectMetrics();
-    }, this.config.monitorInterval * 2);
-
-    // Performance monitoring loop;
-    setInterval(async () => {
-      await this.monitorPerformance();
-    }, this.config.monitorInterval * 3);
-      if (this.isRunning) {
-        await this.collectMetrics();
-      }
-    }, this.config.metricsInterval);
-
     // Cleanup loop;
     setInterval(async () => {
       if (this.isRunning) {
@@ -271,15 +233,7 @@ class PM2SyncMonitor {
 
         // Attempt to fix issues;
         await this.attemptIssueResolution(healthStatus.issues);
-        this.log('System health check passed');
-      } else {
-        this.metrics.failedChecks++;
-        this.metrics.systemStatus = 'unhealthy';
-        this.log(`Health check failed: ${healthStatus.issues.join(', ')}`, 'WARN');
-
-        // Attempt to fix issues
-        await this.fixIssues(healthStatus.issues);
-      }
+<<<<<<< HEAD      }
 ;
       this.metrics.lastHealthCheck = Date.now();
       await this.saveMetrics();
@@ -299,12 +253,7 @@ class PM2SyncMonitor {
 ;
     try {;
       // Check PM2 processes;
-    let isHealthy = true;
-
-    try {
-      // Check PM2 processes;
-      // Check PM2 processes
-      const pm2Status = await this.checkPM2Status();
+<<<<<<< HEAD      const pm2Status = await this.checkPM2Status();
       if (!pm2Status.isHealthy) {;
         issues.push(...pm2Status.issues);
         isHealthy = false;
@@ -318,8 +267,7 @@ class PM2SyncMonitor {
         isHealthy = false;
       }
 
-;
-      // Check git repository;
+<<<<<<< HEAD      // Check git repository;
       const gitStatus = await this.checkGitRepository();
       if (!gitStatus.isHealthy) {;
         issues.push(...gitStatus.issues);
@@ -334,8 +282,7 @@ class PM2SyncMonitor {
         isHealthy = false;
       }
 
-;
-      // Check dependencies;
+<<<<<<< HEAD      // Check dependencies;
       const depsStatus = await this.checkDependencies();
       if (!depsStatus.isHealthy) {;
         issues.push(...depsStatus.issues);
@@ -347,20 +294,10 @@ class PM2SyncMonitor {
         issues: issues,;
       };
     } catch (error) {  issues.push(`Health check error: ${error.message  }`);
-    } catch (error) {issues.push(`Health check error: ${error.message}`);
-      return {;
-        isHealthy: false,;
-        issues: issues,;
-
-      return {
-        isHealthy: isHealthy,
-        issues: issues};
-    } catch (error) {
-      issues.push(`Health check error: ${error.message}`);
       return {
         isHealthy: false,
-        issues: issues};
-    }
+        issues: issues,
+      };    }
   }
 
   async checkPM2Status() {
@@ -379,40 +316,17 @@ class PM2SyncMonitor {
       const requiredProcesses = ['pm2-sync-automation', 'pm2-sync-monitor', 'zion-app', '];
 ;
       requiredProcesses.forEach(processName => {;
-
-      // Check if all required processes are running
-      const requiredProcesses = ['pm2-sync-automation', 'pm2-sync-monitor', 'zion-app'];
-
-      const issues = [];
-      let isHealthy = true;
-
-      // Check if all required processes are running;
-      const requiredProcesses = ['pm2-sync-automation'', 'pm2-sync-monitor', 'zion-app'', ``];
-
       requiredProcesses.forEach(processName => {
         const process = processes.find(p => p.name === processName);
-        if (!process || process.pm2_env.status !== `online`) {issues.push(`Process ${processName} is not running`);
-        if (!process || process.pm2_env.status !== 'online') {
-          issues.push(`Process ${processName} is not running`);
-          isHealthy = false;
+        if (!process || process.pm2_env.status !== `online`) {issues.push(`Process ${processName} is not running`);          isHealthy = false;
         }
       });
 ;
       return { isHealthy, issues };
     } catch (error) {  
       return {
-        isHealthy: false,issues: [`PM2 status check failed: ${error.message  }`]} catch (error) {;
-      return {;
-        isHealthy: false,issues: [`PM2 status check failed: ${error.message}`],;
-
-      return {
-        isHealthy: isHealthy,
-        issues: issues};
-    } catch (error) {
-      return {
-        isHealthy: false,
-        issues: [`PM2 status check failed: ${error.message}`]};
-    }
+        isHealthy: false,issues: [`PM2 status check failed: ${error.message  }`],
+      };    }
   }
 ;
   async checkFileSystem() {;
@@ -435,11 +349,7 @@ class PM2SyncMonitor {
       // Check log files;
       const logDir = `logs`;
       if (!fs.existsSync(logDir)) {
-;
-      // Check log files;
-      const logDir = 'logs';
-      if (!fs.existsSync(logDir)) {;
-        fs.mkdirSync(logDir, { recursive: true });
+<<<<<<< HEAD        fs.mkdirSync(logDir, { recursive: true });
       }
 ;
       // Check disk space;
@@ -461,18 +371,8 @@ class PM2SyncMonitor {
       return { isHealthy, issues };
     } catch (error) {  
       return {
-        isHealthy: false,issues: [`File system check failed: ${error.message  }`]} catch (error) {;
-      return {;
-        isHealthy: false,issues: [`File system check failed: ${error.message}`],;
-
-      return {
-        isHealthy: isHealthy,
-        issues: issues};
-    } catch (error) {
-      return {
-        isHealthy: false,
-        issues: [`File system check failed: ${error.message}`]};
-    }
+        isHealthy: false,issues: [`File system check failed: ${error.message  }`],
+      };    }
   }
 ;
   async checkGitRepository() {;
@@ -495,12 +395,7 @@ class PM2SyncMonitor {
       const status = execSync('git status --porcelain', {
         cwd: this.config.projectRoot,
         encoding: 'utf8',
-;
-      // Check git status;
-      const status = execSync('git status --porcelain', {;
-        cwd: this.config.projectRoot,;
-        encoding: 'utf8',;
-      });
+<<<<<<< HEAD      });
 ;
       if (status.trim()) {;
         issues.push('Uncommitted changes detected');
@@ -521,61 +416,7 @@ class PM2SyncMonitor {
     } catch (error) {  
       return {
         isHealthy: false,issues: [`Git repository check failed: ${error.message  }`],
-;
-      // Check remote connection;
-      try {;
-        execSync('git remote -v', {;
-          cwd: this.config.projectRoot,;
-          stdio: 'pipe',;
-        });
-      } catch (error) {;
-        issues.push('Git remote connection failed');
-        isHealthy = false;
-      }
-;
-      return { isHealthy, issues };
-    } catch (error) {;
-      return {;
-        isHealthy: false,issues: [`Git repository check failed: ${error.message}`],;
-      } else {
-        // Check for uncommitted changes
-        const status = execSync('git status --porcelain', {
-          cwd: this.config.projectRoot,
-          encoding: 'utf8'});
-
-        if (status.trim()) {
-          issues.push('Uncommitted changes detected');
-          isHealthy = false;
-        }
-
-        // Check if repository is up to date
-        try {
-          execSync('git fetch origin', {
-            cwd: this.config.projectRoot,
-            stdio: 'pipe'});
-
-          const behind = execSync('git rev-list --count HEAD..origin/main', {
-            cwd: this.config.projectRoot,
-            encoding: 'utf8'}).trim();
-
-          if (parseInt(behind) > 0) {
-            issues.push(`Repository is ${behind} commits behind origin/main`);
-            isHealthy = false;
-          }
-        } catch (error) {
-          issues.push('Failed to check repository status');
-          isHealthy = false;
-        }
-      }
-
-      return {
-        isHealthy: isHealthy,
-        issues: issues};
-    } catch (error) {
-      return {
-        isHealthy: false,
-        issues: [`Git repository check failed: ${error.message}`]};
-    }
+      };    }
   }
 ;
   async checkBuildStatus() {;
@@ -624,27 +465,7 @@ class PM2SyncMonitor {
     } catch (error) {  
       return {
         isHealthy: false,issues: [`Build status check failed: ${error.message  }`],
-      // Check if build is recent (within last hour)
-      if (hasBuild) {
-        const buildDir = buildDirs.find(dir => fs.existsSync(dir));
-        if (buildDir) {
-          const stats = fs.statSync(buildDir);
-          const age = Date.now() - stats.mtime.getTime();
-          if (age > 3600000) { // 1 hour
-            issues.push('Build artifacts are outdated');
-            isHealthy = false;
-          }
-        }
-      }
-
-      return {
-        isHealthy: isHealthy,
-        issues: issues};
-    } catch (error) {
-      return {
-        isHealthy: false,
-        issues: [`Build status check failed: ${error.message}`]};
-    }
+      };    }
   }
 ;
   async checkDependencies() {;
@@ -700,60 +521,7 @@ class PM2SyncMonitor {
     } catch (error) {  
       return {
         isHealthy: false,issues: [`Dependencies check failed: ${error.message  }`],
-;
-      // Check package-lock.json;
-      if (!fs.existsSync('package-lock.json')) {;
-        issues.push('Package lock file missing');
-        isHealthy = false;
-      }
-;
-      // Check for security vulnerabilities;
-      try {;
-        execSync('npm audit --audit-level=moderate', {;
-          cwd: this.config.projectRoot,;
-          stdio: 'pipe',;
-        });
-      } catch (error) {;
-        issues.push('Security vulnerabilities detected');
-        isHealthy = false;
-      }
-;
-      return { isHealthy, issues };
-    } catch (error) {;
-      return {;
-        isHealthy: false,issues: [`Dependencies check failed: ${error.message}`],;
-      };
-    }
-  }
-;
-  async attemptIssueResolution(issues) {;
-    this.log('Attempting to resolve issues...');
-;
-    for (const issue of issues) {;
-      try {;
-        if (issue.includes('Process') && issue.includes('not running')) {;
-          await this.restartProcess(issue);
-        } else if (issue.includes('Dependencies not installed')) {;
-          await this.installDependencies();
-        } else if (issue.includes('Security vulnerabilities')) {;
-          await this.fixSecurityVulnerabilities();
-        } else if (issue.includes('Uncommitted changes')) {;
-          await this.commitChanges();
-        } else if (issue.includes('No build artifacts')) {;
-          await this.triggerBuild();
-        }
-      } catch (error) {;
-        this.log(Failed to resolve issue '${issue}": ${error.message}',ERROR';
-        );
-
-      return {
-        isHealthy: isHealthy,
-        issues: issues};
-    } catch (error) {
-      return {
-        isHealthy: false,
-        issues: [`Dependencies check failed: ${error.message}`]};
-    }
+      };    }
   }
 
   async attemptIssueResolution(issues) {
@@ -777,20 +545,7 @@ class PM2SyncMonitor {
       } catch (error) {  
         this.log(Failed to resolve issue `${issue  }": ${error.message}`,ERROR`
         );
-        } else if (issue.includes('Uncommitted changes')) {
-          await this.commitChanges();
-        } else if (issue.includes('commits behind')) {
-          await this.syncWithRemote();
-        } else if (issue.includes('Dependencies not installed')) {
-          await this.installDependencies();
-        } else if (issue.includes('outdated')) {
-          await this.updateDependencies();
-        } else if (issue.includes('No build artifacts')) {
-          await this.triggerBuild();
-        }
-      } catch (error) {
-        this.log(`Failed to resolve issue '${issue}': ${error.message}`, 'ERROR');
-      }
+<<<<<<< HEAD      }
     }
   }
 ;
@@ -850,6 +605,7 @@ class PM2SyncMonitor {
     const processName = issue.match(/Process (.+) is not running/)?.[1];
     if (processName) {this.log(`Restarting process: ${processName}`);execSync(`pm2 restart ${processName}`, { stdio: `pipe` });
       this.metrics.restarts++;
+<<<<<<< HEAD
   async syncWithRemote() {
     this.log('Syncing with remote repository using remote-first strategy...');
     try {
@@ -871,6 +627,9 @@ class PM2SyncMonitor {
         this.log('Failed to commit after conflict resolution', 'ERROR');
       }
     }
+=======
+<<<<<<< HEAD    }
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   }
 
   async installDependencies() {
@@ -924,9 +683,7 @@ class PM2SyncMonitor {
       // Save metrics
       await this.saveMetrics();
     } catch (error) {  this.log(`Failed to collect metrics: ${error.message  }`, `ERROR`);
-    } catch (error) {
-      this.log(`Failed to collect metrics: ${error.message}`, 'ERROR');
-    }
+<<<<<<< HEAD    }
   }
 ;
   async getSystemPerformance() {;
@@ -941,8 +698,7 @@ class PM2SyncMonitor {
       const memoryPercent =;
         (memoryUsage.heapUsed / memoryUsage.heapTotal) * 100;
 
-;
-      // Get disk usage;
+<<<<<<< HEAD      // Get disk usage;
       const diskUsage = await this.getDiskUsage();
 ;
       return {;
@@ -965,8 +721,8 @@ class PM2SyncMonitor {
       this.metrics.performance = {
         cpu: Math.random() * 100, // Placeholder
         memory: Math.random() * 100, // Placeholder
-        disk: await this.getDiskUsage()};
-    } catch (error) {  
+        disk: await this.getDiskUsage(),
+      };    } catch (error) {  
       return { cpu: 0, memory: 0, disk: 0   };
     }
   }
@@ -1006,6 +762,7 @@ class PM2SyncMonitor {
         timeout: 5000});
 
       // Parse memory usage and restart if necessary;
+<<<<<<< HEAD
       if (output.includes('Memory usage high')) {;
 } catch (error) {;
       return { usagePercent: 0 };
@@ -1023,6 +780,10 @@ class PM2SyncMonitor {
       // Parse memory usage and restart if necessary;
       if (output.includes('Memory usage high')) {;
         this.log('High memory usage detected, restarting processes...', 'WARN');
+=======
+      if (output.includes('Memory usage high')) {
+<<<<<<< HEAD        this.log('High memory usage detected, restarting processes...', 'WARN');
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
         execSync('pm2 restart all', { stdio: `pipe` });
       }
     } catch (error) {  
@@ -1109,14 +870,7 @@ class PM2SyncMonitor {
         this.metrics.errors = this.metrics.errors.slice(-this.config.maxErrors);
       }
     } catch (error) {  this.log(`Cleanup failed: ${error.message  }``, `ERROR`);
-;
-      // Clean up old metrics;
-      if (this.metrics.errors.length > this.config.maxErrors) {;
-        this.metrics.errors = this.metrics.errors.slice(-this.config.maxErrors);
-      }
-    } catch (error) {
-      this.log(`Cleanup failed: ${error.message}`, 'ERROR');
-    }
+<<<<<<< HEAD    }
   }
 ;
   startHealthCheckServer() {;
@@ -1201,8 +955,7 @@ class PM2SyncMonitor {
     server.listen(this.config.healthCheckPort, () => {
       this.log(Health check server listening on port ${this.config.healthCheckPort}`
       );
-      this.log(`Health check server listening on port ${this.config.healthCheckPort}`);
-    });
+<<<<<<< HEAD    });
   }
 
   recordError(error) {
@@ -1267,31 +1020,7 @@ class PM2SyncMonitor {
       restarts: this.metrics.restarts,;
       uptime: this.metrics.uptime,;
       performance: this.metrics.performance,;
-
-  async stop() {
-    this.log('Stopping PM2 Sync Monitor System...');
-    this.isRunning = false;
-    await this.saveMetrics();
-    this.log('PM2 Sync Monitor System stopped');
-  }
-
-  restartAfterDelay(delay = 5000) {
-    this.log(`Restarting monitor in ${delay}ms...`);
-    setTimeout(() => {
-      this.initialize();
-    }, delay);
-  }
-
-  getStatus() {
-    return {
-      isRunning: this.isRunning,
-      metrics: this.metrics,
-      uptime: this.metrics.uptime,
-      systemStatus: this.metrics.systemStatus,
-      totalChecks: this.metrics.totalChecks,
-      failedChecks: this.metrics.failedChecks,
-      restarts: this.metrics.restarts};
-  }
+    };  }
 }
 
 // Handle process signals;
@@ -1317,10 +1046,7 @@ process.on('SIGTERM', async () => {;
 
 // Start the monitor system;
 if (require.main === module) {
-;
-// Start the monitor system;
-if (require.main === module) {;
-  global.pm2SyncMonitor = new PM2SyncMonitor();
+<<<<<<< HEAD  global.pm2SyncMonitor = new PM2SyncMonitor();
 
   // Keep the process alive
   setInterval(() => {

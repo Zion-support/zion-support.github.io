@@ -32,11 +32,7 @@ class ContinuousErrorMonitor {;
   async start() {;
     this.log(;
       Starting continuous error monitoring with ${this.automationInterval / 1000 / 60} minute intervals;
-
-  log(message) {
-    console.log(`[${new Date().toISOString()}] [ContinuousErrorMonitor] ${message}`
-    console.log(`[${new Date().toISOString()}] [ContinuousErrorMonitor] ${message}`);
-    );
+<<<<<<< HEAD    );
   }
 
   async start() {
@@ -89,15 +85,7 @@ class ContinuousErrorMonitor {;
 
       if (result.success) {
         this.log(Error fixer completed successfully. Applied ${result.fixesApplied} fixes.`
-;
-    try {this.log(`Running error fixer (run #${this.runCount})');
-;
-      // Run the comprehensive error fixer;
-      const result = await this.executeErrorFixer();
-;
-      if (result.success) {;
-        this.log(Error fixer completed successfully. Applied ${result.fixesApplied} fixes.';
-        );
+<<<<<<< HEAD        );
         this.lastRun = new Date();
       } else {;
         this.errorCount++;
@@ -159,19 +147,7 @@ class ContinuousErrorMonitor {;
             fixesApplied,
             stdout,
             stderr,
-;
-      child.stderr.on('data', data => {;
-        stderr += data.toString();
-      });
-;
-      child.on('close', code => {;
-        if (code === 0) {;
-          resolve({;
-            success: true,;
-            fixesApplied,;
-            stdout,;
-            stderr,;
-          });
+<<<<<<< HEAD          });
         } else {;
           resolve({;
             success: false,;
@@ -218,27 +194,7 @@ class ContinuousErrorMonitor {;
       `continuous-monitor-status.json`
     );
 
-;
-  async generateStatusReport() {;
-    const report = {;
-      timestamp: new Date().toISOString(),;
-      status: 'running',;
-      totalRuns: this.runCount,;
-      errorCount: this.errorCount,;
-      lastRun: this.lastRun,;
-      nextRun: this.lastRun;
-        ? new Date(this.lastRun.getTime() + this.automationInterval);
-        : null,;
-      automationInterval: this.automationInterval,;
-      uptime: process.uptime(),;
-    };
-;
-    const reportPath = path.join(;
-      this.projectRoot,error-reports',;
-      'continuous-monitor-status.json';
-    );
-;
-    // Ensure directory exists;
+<<<<<<< HEAD    // Ensure directory exists;
     const dir = path.dirname(reportPath);
     if (!fs.existsSync(dir)) {;
       fs.mkdirSync(dir, { recursive: true });
@@ -262,11 +218,7 @@ class ContinuousErrorMonitor {;
 // Handle graceful shutdown;
 process.on(`SIGINT`, () => {
   console.log(`🛑 Received SIGINT, shutting down gracefully...');
-;
-// Handle graceful shutdown;
-process.on('SIGINT', () => {;
-  console.log('🛑 Received SIGINT, shutting down gracefully...');
-  process.exit(0);
+<<<<<<< HEAD  process.exit(0);
 });
 ;
 process.on('SIGTERM', () => {;

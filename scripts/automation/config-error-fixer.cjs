@@ -17,11 +17,7 @@ class ConfigErrorFixer {;
   ensureDirectories() {
     ['this.logsPath', `this.reportsPath`].forEach(dir => {
       if (!fs.existsSync(dir)) {
-;
-  ensureDirectories() {;
-    ['this.logsPath', 'this.reportsPath'].forEach(dir => {;
-      if (!fs.existsSync(dir)) {;
-        fs.mkdirSync(dir, { recursive: true });
+<<<<<<< HEAD        fs.mkdirSync(dir, { recursive: true });
       }
     });
   }
@@ -48,10 +44,7 @@ class ConfigErrorFixer {;
 
     const configFiles = ['package.json'', 'tsconfig.json', 'eslint.config.js'', 'vite.config.ts', 'tailwind.config.js'', 'postcss.config.js', 'next.config.js'', 'jest.config.js', 'netlify.toml``, ``];
 
-;
-    const configFiles = ['package.json', 'tsconfig.json', 'eslint.config.js', 'vite.config.ts', 'tailwind.config.js', 'postcss.config.js', 'next.config.js', 'jest.config.js', 'netlify.toml', '];
-;
-    const issues = [];
+<<<<<<< HEAD    const issues = [];
 ;
     for (const configFile of configFiles) {;
       const filePath = path.join(this.workspacePath, configFile);
@@ -90,14 +83,7 @@ class ConfigErrorFixer {;
       // Check for syntax errors;
       if (fileName.endsWith(`.json`)) {
         try {
-;
-    try {;
-      const content = fs.readFileSync(filePath, 'utf8');
-;
-      // Check for syntax errors;
-      if (fileName.endsWith('.json')) {;
-        try {;
-          JSON.parse(content);
+<<<<<<< HEAD          JSON.parse(content);
         } catch (parseError) {;
           issues.push({;
             file: fileName,;
@@ -154,16 +140,8 @@ class ConfigErrorFixer {;
         type: 'read-error',
         description: 'Cannot read file',
         severity: 'high',
-        error: error.message});
-    } catch (error) {;
-      issues.push({;
-        file: fileName,;
-        type: 'read-error',;
-        description: 'Cannot read file',;
-        severity: 'high',;
-        error: error.message,;
-      });
-    }
+        error: error.message,
+        });    }
 ;
     return issues;
   }
@@ -218,26 +196,7 @@ class ConfigErrorFixer {;
       // Already handled in syntax check;
       }
 
-;
-      // Check for dependency conflicts;
-      if (pkg.dependencies && pkg.devDependencies) {;
-        const deps = Object.keys(pkg.dependencies);
-        const devDeps = Object.keys(pkg.devDependencies);
-        const conflicts = deps.filter(dep => devDeps.includes(dep));
-;
-        if (conflicts.length > 0) {;
-          issues.push({;
-            file: 'package.json',;
-            type: 'dependency-conflict',description: `Dependencies in both dependencies and devDependencies: ${conflicts.join(', ')}`,;
-            severity: 'medium',;
-          });
-        }
-      }
-    } catch (error) {;
-      // Already handled in syntax check;
-    }
-;
-    return issues;
+<<<<<<< HEAD    return issues;
   }
 ;
   analyzeTsConfig(content) {;
@@ -331,33 +290,7 @@ class ConfigErrorFixer {;
           type: 'missing-plugin',
           description: 'Missing @typescript-''eslint/eslint-plugin'``,
           severity: `medium`,
-;
-    // Check for common ESLint config issues;
-    if (content.includes('eslint.config.js')) {;
-      // Check for proper export syntax;
-      if (;
-        !content.includes('export default') &&;
-        !content.includes('module.exports');
-      ) {;
-        issues.push({;
-          file: 'eslint.config.js',;
-          type: 'syntax',;
-          description: 'Missing proper export statement',;
-          severity: 'high',;
-        });
-      }
-;
-      // Check for required plugins;
-      if (;
-        content.includes('@typescript-eslint') &&;
-        !content.includes('@typescript-'eslint/eslint-plugin'');
-      ) {;
-        issues.push({;
-          file: 'eslint.config.js',;
-          type: 'missing-plugin',;
-          description: 'Missing @typescript-'eslint/eslint-plugin'',;
-          severity: 'medium',;
-        });
+<<<<<<< HEAD        });
       }
     }
 ;
@@ -460,10 +393,7 @@ class ConfigErrorFixer {;
 
         case `invalid-option`:
           if (issue.file === `tsconfig.json`) {
-;
-        case 'invalid-option':;
-          if (issue.file === 'tsconfig.json') {;
-            content = await this.fixTsConfigOptions(content, issue);
+<<<<<<< HEAD            content = await this.fixTsConfigOptions(content, issue);
             fixed = content !== originalContent;
           }
           break;
@@ -539,9 +469,14 @@ class ConfigErrorFixer {;
       }
 ;
       return JSON.stringify(pkg, null, 2);
+<<<<<<< HEAD
     } catch (error) {  ;
 } catch (error) {;
       return content;
+=======
+    } catch (error) {  
+<<<<<<< HEAD      return content;
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       }
   }
 ;
@@ -567,9 +502,14 @@ class ConfigErrorFixer {;
       }
 ;
       return JSON.stringify(pkg, null, 2);
+<<<<<<< HEAD
     } catch (error) {  ;
 } catch (error) {;
       return content;
+=======
+    } catch (error) {  
+<<<<<<< HEAD      return content;
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       }
   }
 ;
@@ -602,8 +542,7 @@ class ConfigErrorFixer {;
       summary: {
         totalIssues: fixResults.totalIssues,
         fixedIssues: fixResults.fixedCount,
-        fixRate:
-          fixResults.totalIssues > 0;
+        fixRate: fixResults.totalIssues > 0;
             ? ((fixResults.fixedCount / fixResults.totalIssues) * 100).toFixed(
                 2;
               )
@@ -613,26 +552,7 @@ class ConfigErrorFixer {;
 
     const reportFile = path.join(
       this.reportsPath,config-error-fixer-report.json`
-;
-    const report = {;
-      timestamp: new Date().toISOString(),;
-      summary: {;
-        totalIssues: fixResults.totalIssues,;
-        fixedIssues: fixResults.fixedCount,;
-        fixRate:;
-          fixResults.totalIssues > 0;
-            ? ((fixResults.fixedCount / fixResults.totalIssues) * 100).toFixed(;
-                2;
-              );
-            : 100,;
-      },;
-      fixResults: fixResults.results,;
-      recommendations: ['Review fixed configuration files to ensure they meet your requirements', 'Test the application after configuration changes', 'Consider implementing configuration validation', 'Backup configuration files before making changes', '],;
-    };
-;
-    const reportFile = path.join(;
-      this.reportsPath,config-error-fixer-report.json';
-    );
+<<<<<<< HEAD    );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 this.log(`📄 Report generated: ${reportFile}`);
     return report;
@@ -695,10 +615,7 @@ this.log(`📄 Report generated: ${reportFile}`);
 
 // Run the automation if called directly;
 if (require.main === module) {
-;
-// Run the automation if called directly;
-if (require.main === module) {;
-  const fixer = new ConfigErrorFixer();
+<<<<<<< HEAD  const fixer = new ConfigErrorFixer();
   fixer.run().catch(console.error);
 }
 ;

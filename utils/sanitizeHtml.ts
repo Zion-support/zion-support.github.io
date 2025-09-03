@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // HTML sanitization utility to prevent CSP violations
 // HTML sanitization utility to prevent CSP violations
 export function sanitizeHtml(html: string): string {
@@ -63,6 +64,9 @@ export function sanitizeHtml(html: string): string {
   let sanitized = html.replace(/<script\b[^<]*(?: (?!<\/script>)<[^<]*)*<\/script>/gi, '');
   
   // Remove event handlers
+=======
+// HTML sanitization utility to prevent CSP violations export function sanitizeHtml(html: string) string { // Remove script tags let sanitized = html.replace(/<script\b[^<]*(?: (?!<\/script>)<[^<]*)*<\/script>/gi, ''); // Remove event handlers' sanitized = sanitized.replace(/\s*on\w+\s*=\s*['"][^']*[']/g, ''); // Remove javascript: URLs' sanitized = sanitized.replace(/javascrip, t: /gi, ''); // Remove data: URLs that might contain scripts' sanitized = sanitized.replace(/dat, a: text\/html/gi, ''); return sanitized; } export function sanitizeUrl(url: string): string { // Remove javascript: URLs return url.replace(/javascript/gi, ); } export function sanitizeCss(css string) string { // Remove potentially dangerous CSS return css.replace(/expression\s*\(/gi, ""); } export function sanitizeCss(css: string) string { // Remove potentially dangerous CSS' return css.replace(/expression\s*\(/gi, ''); }   // Remove event handlers
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   sanitized = sanitized.replace(/\s*on\w+\s*=\s*['"][^'"]*['"]/g, '');
   
   // Remove javascript: URLs
@@ -70,10 +74,14 @@ export function sanitizeHtml(html: string): string {
   
   // Remove data: URLs that might contain scripts
   sanitized = sanitized.replace(/data:text\/html/gi, "");
+<<<<<<< HEAD
   sanitized = sanitized.replace(/data:text\/html/gi, '');
   sanitized = sanitized.replace(/data:text\/html/gi, '');
   
   return sanitized;
+=======
+  sanitized = sanitized.replace(/data:text\/html/gi, '');  return sanitized;
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 }
 
 export function sanitizeUrl(url: string): string {
@@ -94,6 +102,10 @@ export function sanitizeCss(css: string): string {
 export function sanitizeCss(css: string): string {
   // Remove potentially dangerous CSS'
   return css.replace(/expression\s*\(/gi, '');
+<<<<<<< HEAD
 }
   return css.replace(/expression\s*\(/gi, '');
 }
+=======
+}
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

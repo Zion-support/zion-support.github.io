@@ -18,11 +18,7 @@ class ESLintErrorCleaner {;
   ensureDirectories() {
     ['this.logsPath', `this.reportsPath`].forEach(dir => {
       if (!fs.existsSync(dir)) {
-;
-  ensureDirectories() {;
-    ['this.logsPath', 'this.reportsPath'].forEach(dir => {;
-      if (!fs.existsSync(dir)) {;
-        fs.mkdirSync(dir, { recursive: true });
+<<<<<<< HEAD        fs.mkdirSync(dir, { recursive: true });
       }
     });
   }
@@ -56,20 +52,7 @@ class ESLintErrorCleaner {;
     } catch (error) {  
       if (error.stdout) {
         const errors = this.parseESLintErrors(error.stdout);this.log(❌ ESLint check failed with ${errors.length  } errors`);
-      const result = execSync('npm run lint', {;
-        cwd: this.workspacePath,;
-        encoding: 'utf8',;
-        stdio: 'pipe',;
-      });
-      this.log('✅ ESLint check passed - no errors found');
-      return { success: true, output: result, errors: [] };
-    } catch (error) {;
-      if (error.stdout) {;
-      this.log('✅ ESLint check passed - no errors found');`);
-      return { success: true, output: result, errors: [] };`);
-    } catch (error) {`);
-      if (error.stdout) {`);
-        const errors = this.parseESLintErrors(error.stdout);this.log(❌ ESLint check failed with ${errors.length} errors`);
+<<<<<<< HEAD        const errors = this.parseESLintErrors(error.stdout);this.log(❌ ESLint check failed with ${errors.length} errors`);
         return { success: false, output: error.stdout, errors };
       }
       return { success: false, output: error.message, errors: [] };
@@ -111,14 +94,7 @@ class ESLintErrorCleaner {;
 
     try {
       let content = fs.readFileSync(filePath, `utf8`);
-;
-    if (!fs.existsSync(filePath)) {this.log(`⚠️ File not found: ${filePath}`, 'WARN');
-      return false;
-    }
-;
-    try {;
-      let content = fs.readFileSync(filePath, 'utf8');
-      const lines = content.split('\n');
+<<<<<<< HEAD      const lines = content.split('\n');
       const lineIndex = error.line - 1;
 ;
       if (lineIndex < 0 || lineIndex >= lines.length) {;
@@ -176,6 +152,7 @@ class ESLintErrorCleaner {;
       } else if (error.message.includes(`no-useless-escape`)) {
         fixedLine = await this.fixUselessEscapeError(error, lines, lineIndex);
         fixed = fixedLine !== originalLine;
+<<<<<<< HEAD
       } else {;
 } else if (error.message.includes('no-prototype-builtins')) {;
         fixedLine = await this.fixPrototypeBuiltinsError(;
@@ -189,6 +166,10 @@ class ESLintErrorCleaner {;
         fixed = fixedLine !== originalLine;
       } else {;
         // Generic fix attempt;
+=======
+      } else {
+<<<<<<< HEAD        // Generic fix attempt;
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
         fixedLine = await this.fixGenericESLintError(error, lines, lineIndex);
         fixed = fixedLine !== originalLine;
       }
@@ -205,10 +186,15 @@ class ESLintErrorCleaner {;
 ;
       return false;
     } catch (fixError) {
+<<<<<<< HEAD
       this.log( `❌ Failed to fix error in ${error.file}:${error.line}: ${fixError.message}`,ERROR`;
 } catch (fixError) {;
       this.log( `❌ Failed to fix error in ${error.file}:${error.line}: ${fixError.message}',ERROR';
       );
+=======
+      this.log( `❌ Failed to fix error in ${error.file}:${error.line}: ${fixError.message}`,ERROR`
+<<<<<<< HEAD      );
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       return false;
     }
   }
@@ -258,15 +244,7 @@ class ESLintErrorCleaner {;
       line.includes(`console.warn`)
     ) {
       return `// ` + line;
-;
-    // Comment out console statements;
-    if (;
-      line.includes('console.log') ||;
-      line.includes('console.error') ||;
-      line.includes('console.warn');
-    ) {;
-      return '// ' + line;
-    }
+<<<<<<< HEAD    }
 ;
     return line;
   }
@@ -286,14 +264,7 @@ class ESLintErrorCleaner {;
         if (
           prevLine.includes(`const ${variable}`) ||prevLine.includes(`let ${variable}`) ||prevLine.includes(`var ${variable}`)
         ) {
-;
-      // Look for variable definition in previous lines;
-      for (let i = lineIndex - 1; i >= Math.max(0, lineIndex - 10); i--) {;
-        const prevLine = lines[i];
-        if (;
-          prevLine.includes(`const ${variable}`) ||prevLine.includes(`let ${variable}`) ||prevLine.includes(`var ${variable}`);
-        ) {;
-          // Variable is defined, this might be a scope issue;
+<<<<<<< HEAD          // Variable is defined, this might be a scope issue;
           return line;
         }
       }
@@ -313,11 +284,7 @@ class ESLintErrorCleaner {;
     const line = lines[lineIndex];
 
     // Remove extra semicolons;
-    return line.replace(/;;+/g, `;`);
-;
-    // Remove extra semicolons;
-    return line.replace(/;;+/g, ';');
-  }
+    return line.replace(/;+/g, `;`);  }
 ;
   async fixPrototypeBuiltinsError(error, lines, lineIndex) {;
     const line = lines[lineIndex];
@@ -336,8 +303,7 @@ class ESLintErrorCleaner {;
   async fixUselessEscapeError(error, lines, lineIndex) {;
     const line = lines[lineIndex];
 
-;
-    // Remove unnecessary escape characters;
+<<<<<<< HEAD    // Remove unnecessary escape characters;
     return line.replace(/\\([^\\])/g, '$1');
   }
 ;
@@ -412,16 +378,7 @@ class ESLintErrorCleaner {;
       } catch (fixError) {
         this.log(❌ Error fixing ${error.file}:${error.line}: ${fixError.message}`,
           `ERROR`
-;
-        // Track fix attemptsconst errorKey = `${error.file}:${error.line}:${error.message}';
-        this.fixAttempts.set(;
-          errorKey,;
-          (this.fixAttempts.get(errorKey) || 0) + 1;
-        );
-      } catch (fixError) {;
-        this.log(❌ Error fixing ${error.file}:${error.line}: ${fixError.message}',;
-          'ERROR';
-        );
+<<<<<<< HEAD        );
         fixResults.push({;
           error,;
           fixed: false,;
@@ -438,7 +395,7 @@ class ESLintErrorCleaner {;
   async runAutoFix() {
     try {
       this.log(`🔧 Running ESLint auto-fix...`);
-      const result = execSync(`npm run lint:fix`, {
+      const result = execSync(`npm run lint: fix`, {
         cwd: this.workspacePath,
         encoding: 'utf8',
         stdio: 'pipe'});
@@ -470,8 +427,7 @@ class ESLintErrorCleaner {;
       summary: {
         totalErrors: fixResults.totalErrors,
         fixedErrors: fixResults.fixedCount,
-        successRate:
-          fixResults.totalErrors > 0;
+        successRate: fixResults.totalErrors > 0;
             ? ((fixResults.fixedCount / fixResults.totalErrors) * 100).toFixed(
                 2;
               )
@@ -481,26 +437,7 @@ class ESLintErrorCleaner {;
 
     const reportFile = path.join(
       this.reportsPath,eslint-error-cleaner-report.json`
-;
-    const report = {;
-      timestamp: new Date().toISOString(),;
-      summary: {;
-        totalErrors: fixResults.totalErrors,;
-        fixedErrors: fixResults.fixedCount,;
-        successRate:;
-          fixResults.totalErrors > 0;
-            ? ((fixResults.fixedCount / fixResults.totalErrors) * 100).toFixed(;
-                2;
-              );
-            : 100,;
-      },;
-      fixResults: fixResults.results,;
-      recommendations: ['Review any remaining errors manually', 'Consider adding ESLint disable comments for intentional violations', 'Run npm run lint to verify fixes', 'Monitor for recurring error patterns', '],;
-    };
-;
-    const reportFile = path.join(;
-      this.reportsPath,eslint-error-cleaner-report.json';
-    );
+<<<<<<< HEAD    );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 this.log(`📄 Report generated: ${reportFile}`);
     return report;
@@ -569,10 +506,7 @@ this.log(`📄 Report generated: ${reportFile}`);
 
 // Run the automation if called directly;
 if (require.main === module) {
-;
-// Run the automation if called directly;
-if (require.main === module) {;
-  const cleaner = new ESLintErrorCleaner();
+<<<<<<< HEAD  const cleaner = new ESLintErrorCleaner();
   cleaner.run().catch(console.error);
 }
 ;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React { useEffect, useState } from 'react'; import { motion  } from 'framer-motion'; interface PerformanceMetrics { fcp: number; lcp: number; fid: number; cls: number; ttfb: number; fmp: number} const AdvancedPerformanceMonitor: React.FC = () => { const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null); const [isVisible, setIsVisible] = useState(false); useEffect(() => {
 import React { useEffect, useState } from 'react'; import { motion    } from 'framer-motion'; interface PerformanceMetrics { fcp: number; lcp: number; fid: number; cls: number; ttfb: number; fmp: number} const AdvancedPerformanceMonitor: React.FC = () => { const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null); const [isVisible, setIsVisible] = useState(false); useEffect(() => {
 
@@ -47,3 +48,6 @@ import React { useEffect, useState } from 'react' import { motion }  from 'frame
    fmp: number} const AdvancedPerformanceMonitor: React.FC = () => { const [metrics, setMetrics] = useState<PerformanceMetrics | null"" >(null) const [isVisible, setIsVisible] = useState(false) useEffect(() => {''}}
 ""
 "
+=======
+import React, { useEffect, useState } from 'react'; import { motion } from 'framer-motion'; interface PerformanceMetrics { fcp: number; lcp: number; fid: number; cls: number; ttfb: number; fmp number, } const AdvancedPerformanceMonitor: React.FC = () => { const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null); const [isVisible, setIsVisible] = useState(false); useEffect(() => { fcp: number; lcp: number; fid: number; cls number, ttf, b: number,"" fm, p: number} const AdvancedPerformanceMonitor React.FC = () => { const [metrics, setMetrics] = useState<PerformanceMetrics | null" >(null) const [isVisible, setIsVisible] = useState(false) useEffect(() => {'' }} 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

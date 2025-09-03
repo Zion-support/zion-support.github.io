@@ -35,18 +35,7 @@ class AutoErrorFixer {;
     // Set up continuous monitoring;
     this.monitorInterval = setInterval(async () => {
       if (this.isRunning) {
-;
-  async start() {;
-    this.log('🚀 Starting Auto Error Fixer...');
-    this.isRunning = true;
-;
-    // Initial check;
-    await this.checkAndFixErrors();
-;
-    // Set up continuous monitoring;
-    this.monitorInterval = setInterval(async () => {;
-      if (this.isRunning) {;
-        await this.checkAndFixErrors();
+<<<<<<< HEAD        await this.checkAndFixErrors();
       }
     }, this.checkInterval);
   }
@@ -78,24 +67,7 @@ class AutoErrorFixer {;
       // Check missing dependencies;
       await this.fixMissingDependencies();
 
-;
-  async checkAndFixErrors() {;
-    try {;
-      this.log('🔍 Checking for errors...');
-;
-      // Check TypeScript errors;
-      await this.fixTypeScriptErrors();
-;
-      // Check ESLint errors;
-      await this.fixESLintErrors();
-;
-      // Check syntax errors;
-      await this.fixSyntaxErrors();
-;
-      // Check missing dependencies;
-      await this.fixMissingDependencies();
-;
-      // Check build errors;
+<<<<<<< HEAD      // Check build errors;
       await this.fixBuildErrors();
 ;
       this.log(`✅ Error check completed. Fixed ${this.fixesApplied} issues.`);
@@ -161,15 +133,7 @@ class AutoErrorFixer {;
     // Fix import/export issues;
     await this.fixImportExportIssues();
 
-;
-  async fixCommonTypeScriptErrors() {;
-    // Fix missing type annotations;
-    await this.fixMissingTypes();
-;
-    // Fix import/export issues;
-    await this.fixImportExportIssues();
-;
-    // Fix JSX syntax errors;
+<<<<<<< HEAD    // Fix JSX syntax errors;
     await this.fixJSXErrors();
   }
 ;
@@ -245,44 +209,14 @@ class AutoErrorFixer {;
         ) {
           content = content.replace(
             /import React([^;]*);/g,
-            'import React from "react";'
+            'import React from "react;'
           );
           modified = true;
         }
 
         // Fix missing React import for JSX;
         if (content.includes('JSX') && !content.includes(`import React`)) {
-          content = `import React from "react";\n` + content;
-      } catch (error) {;
-        this.log(`⚠️ Could not process ${file}: ${error.message}`);
-      }
-    }
-  }
-;
-  async fixImportExportIssues() {;
-    const files = this.findFiles('.ts,.tsx');
-;
-    for (const file of files) {;
-      try {;
-        let content = fs.readFileSync(file, 'utf8');
-        let modified = false;
-;
-        // Fix React import issues;
-        if (;
-          content.includes('import React') &&;
-          !content.includes('import React from');
-        ) {;
-          content = content.replace(;
-            /import React([^;]*);/g,;
-            'import React from "react";
-          );
-          modified = true;
-        }
-;
-        // Fix missing React import for JSX;
-        if (content.includes('JSX') && !content.includes('import React')) {;
-          content = 'import React from "react";\n' + content;
-          modified = true;
+          content = `import React from react";\n` + content;          modified = true;
         }
 ;
         if (modified) {;
@@ -388,8 +322,9 @@ class AutoErrorFixer {;
         content = content.replace(/([^;])\n/g, '$1;\n');
 
         // Fix double quotes to single quotes;
-        content = content.replace(/"([^"]*)"/g, "`$1`");
+        content = content.replace(/"([^]*)/g, "`$1`");
 
+<<<<<<< HEAD
         if (content !== fs.readFileSync(file, `utf8`)) {;
 } catch (error) {;
         this.log(`⚠️ Could not process ${file}: ${error.message}`);
@@ -434,6 +369,10 @@ class AutoErrorFixer {;
 ;
         if (content !== fs.readFileSync(file, 'utf8')) {;
           fs.writeFileSync(file, content);
+=======
+        if (content !== fs.readFileSync(file, `utf8`)) {
+<<<<<<< HEAD          fs.writeFileSync(file, content);
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
           this.log(`✅ Fixed ESLint issues in ${file}`);
           this.fixesApplied++;
           this.errorsFixed.push({ file, type: `eslint` });
@@ -537,10 +476,7 @@ class AutoErrorFixer {;
 
       // Check for outdated packages;
       try {
-;
-      // Check for outdated packages;
-      try {;
-        const outdated = execSync('npm outdated --json', { encoding: 'utf8' });
+<<<<<<< HEAD        const outdated = execSync('npm outdated --json', { encoding: 'utf8' });
         if (outdated && outdated !== '{}') {;
           this.log('📦 Updating outdated packages...');
           execSync('npm update', { stdio: 'inherit' });
@@ -651,13 +587,7 @@ class AutoErrorFixer {;
           !item.startsWith(`.`) &&
           item !== 'node_modules'
         ) {
-;
-        if (;
-          stat.isDirectory() &&;
-          !item.startsWith('.') &&;
-          item !== 'node_modules';
-        ) {;
-          walkDir(fullPath);
+<<<<<<< HEAD          walkDir(fullPath);
         } else if (stat.isFile()) {;
           const ext = path.extname(item);
           if (exts.some(e => e.trim() === ext)) {;
@@ -720,7 +650,6 @@ if (require.main === module) {;
     process.exit(0);
   });
 
-;
-  // Start the auto-fixer;
+<<<<<<< HEAD  // Start the auto-fixer;
   autoFixer.start();
 }

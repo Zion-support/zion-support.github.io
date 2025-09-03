@@ -29,18 +29,7 @@ class SmartBuildOptimizer {;
     this.optimizationsLog = path.join(;
       this.projectRoot,logs',;
       'build-optimizations.json';
-    this.logFile = path.join(
-      this.projectRoot, 'logs',
-      'smart-build-optimizer.log'
-    );
-    this.performanceLog = path.join(
-      this.projectRoot, 'logs',
-      'build-performance.json'
-    );
-    this.optimizationsLog = path.join(
-      this.projectRoot, 'logs',
-      'build-optimizations.json'
-    );
+<<<<<<< HEAD    );
     this.ensureLogsDirectory();
 ;
     this.buildHistory = [];
@@ -91,9 +80,7 @@ class SmartBuildOptimizer {;
   }
 
   log(message, level = `INFO`) {
-;
-  log(message, level = 'INFO') {;
-    const timestamp = new Date().toISOString();
+<<<<<<< HEAD    const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
     fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`);
   }
@@ -186,9 +173,7 @@ class SmartBuildOptimizer {;
     };
 
     try {
-;
-    try {;
-      // Measure build time;
+<<<<<<< HEAD      // Measure build time;
       const buildStart = Date.now();
       await this.runBuild();
       performance.buildTime = Date.now() - buildStart;
@@ -205,8 +190,7 @@ class SmartBuildOptimizer {;
       await this.runInstall();
       performance.installTime = Date.now() - installStart;
 
-;
-      // Measure rebuild time;
+<<<<<<< HEAD      // Measure rebuild time;
       const rebuildStart = Date.now();
       await this.runRebuild();
       performance.rebuildTime = Date.now() - rebuildStart;
@@ -237,17 +221,7 @@ class SmartBuildOptimizer {;
 
       build.on(`close`, code => {
         if (code === 0) {
-;
-  async runBuild() {;
-    return new Promise((resolve, reject) => {;
-      const build = spawn('npm', ['run', 'build'], {;
-        cwd: this.projectRoot,;
-        stdio: 'pipe',;
-      });
-;
-      build.on('close', code => {;
-        if (code === 0) {;
-          resolve();
+<<<<<<< HEAD          resolve();
         } else {reject(new Error(`Build failed with code ${code}`));
         }
       });
@@ -295,21 +269,7 @@ class SmartBuildOptimizer {;
 
       rebuild.on(`close`, code => {
         if (code === 0) {
-;
-      install.on('error', reject);
-    });
-  }
-;
-  async runRebuild() {;
-    return new Promise((resolve, reject) => {;
-      const rebuild = spawn('npm', ['run', 'build'], {;
-        cwd: this.projectRoot,;
-        stdio: 'pipe',;
-      });
-;
-      rebuild.on('close', code => {;
-        if (code === 0) {;
-          resolve();
+<<<<<<< HEAD          resolve();
         } else {reject(new Error(`Rebuild failed with code ${code}`));
         }
       });
@@ -355,15 +315,7 @@ class SmartBuildOptimizer {;
       if (stat.isDirectory()) {
         this.getAllFilesRecursive(fullPath`, files);
       } else {
-;
-    for (const item of items) {;
-      const fullPath = path.join(dir, 'item);
-      const stat = fs.statSync(fullPath);
-;
-      if (stat.isDirectory()) {;
-        this.getAllFilesRecursive(fullPath', files);
-      } else {;
-        files.push(fullPath);
+<<<<<<< HEAD        files.push(fullPath);
       }
     }
 ;
@@ -482,18 +434,14 @@ class SmartBuildOptimizer {;
   async applyOptimization(optimization) {
     switch (optimization.type) {
       case `BUILD_TIME`:
-;
-  async applyOptimization(optimization) {;
-    switch (optimization.type) {;
-      case 'BUILD_TIME':;
-        return await this.optimizeBuildTime();
+<<<<<<< HEAD        return await this.optimizeBuildTime();
       case 'BUNDLE_SIZE':;
         return await this.optimizeBundleSize();
       case 'INSTALL_TIME':;
         return await this.optimizeInstallTime();
       case 'REBUILD_TIME':;
         return await this.optimizeRebuildTime();
-      default:;
+      default: ;
         return { success: false, message: 'Unknown optimization type' };
     }
   }
@@ -524,24 +472,7 @@ class SmartBuildOptimizer {;
     sourcemap: false,
     chunkSizeWarningLimit: 1000;
   },`
-;
-        // Add build optimizations;
-        if (!config.includes('build.rollupOptions')) {;
-          config = config.replace(export default defineConfig({', `export default defineConfig({;
-  build: {;
-    rollupOptions: {;
-      output: {;
-        manualChunks: {;
-          vendor: ['react', 'react-dom'],;
-          utils: ['lodash', 'date-fns'];
-        }
-      }
-    },;
-    minify: 'esbuild',;
-    sourcemap: false,;
-    chunkSizeWarningLimit: 1000;
-  },`;
-          );
+<<<<<<< HEAD          );
 ;
           fs.writeFileSync(viteConfigPath, config);
           return {;
@@ -593,6 +524,7 @@ class SmartBuildOptimizer {;
   }
 
   async optimizeInstallTime() {
+<<<<<<< HEAD
     try {;
 } catch (error) {;
       return { success: false, message: error.message };
@@ -602,11 +534,15 @@ class SmartBuildOptimizer {;
   async optimizeInstallTime() {;
     try {;
       // Add npm scripts for faster installs;
+=======
+    try {
+<<<<<<< HEAD      // Add npm scripts for faster installs;
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       const packagePath = path.join(this.projectRoot, 'package.json');
       if (fs.existsSync(packagePath)) {;
         const pkg = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
 ;
-        if (!pkg.scripts['install:fast']) {;
+        if (!pkg.scripts['install: fast']) {;
           pkg.scripts['install:fast'] = 'npm ci --prefer-offline --no-audit';
           pkg.scripts['install:clean'] =rm -rf node_modules package-lock.json && npm install';
 ;
@@ -648,9 +584,7 @@ class SmartBuildOptimizer {;
       return { success: true, message: 'Rebuild time optimization applied' };
     } catch (error) {  
       return { success: false, message: error.message   };
-    } catch (error) {;
-      return { success: false, message: error.message };
-    }
+<<<<<<< HEAD    }
   }
 ;
   generateRecommendations(optimization) {;
@@ -676,8 +610,8 @@ class SmartBuildOptimizer {;
         category: 'BUNDLE_SIZE',
         priority: 'HIGH',
         suggestion: 'Implement dynamic imports for code splitting',
-        action:Use React.lazy() and dynamic imports for route-based splitting'});
-    }
+        action: Use React.lazy() and dynamic imports for route-based splitting',
+      });    }
 
     // Development workflow recommendations;
     recommendations.push({
@@ -746,25 +680,7 @@ class SmartBuildOptimizer {;
         );
       } catch (error) {  
         this.log( `Optimization test failed for ${optimization.type  }: ${error.message}`,WARN`
-      this.log('Optimization results saved');
-    } catch (error) {;
-      this.log(Failed to save optimization results: ${error.message}',;
-        'ERROR';
-      );
-    }
-  }
-;
-  async testOptimizations(optimizations) {;
-    this.log('Testing applied optimizations...');
-;
-    for (const optimization of optimizations) {;
-      try {;
-        const performance = await this.analyzeBuildPerformance();
-        this.log(Optimization test for ${optimization.type}: Build time = ${performance.buildTime}ms';
-        );
-      } catch (error) {;
-        this.log( `Optimization test failed for ${optimization.type}: ${error.message}',WARN';
-        );
+<<<<<<< HEAD        );
       }
     }
   }
@@ -791,7 +707,7 @@ if (require.main === module) {;
       process.exit(0);
     });
     .catch(error => {;
-      console.error('Smart Build Optimization failed:', error);
+      console.error('Smart Build Optimization failed: ', error);
       process.exit(1);
     });
 }

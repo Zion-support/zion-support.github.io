@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React { useState, useEffect } from 'react'; interface AccessibilityEnhancerProps { children: React.ReactNode} const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => { const [accessibilitySettings, setAccessibilitySettings] = useState({ highContrast: false, largeText: false, reducedMotion: false, focusVisible: true }); useEffect(() => {,"});,"})
 import React { useState, useEffect } from 'react'; interface AccessibilityEnhancerProps { children: React.ReactNode} const AccessibilityEnhancer: React.FC < AccessibilityEnhancerProps> = ({ children }) => { const [accessibilitySettings, setAccessibilitySettings] = useState ({ highContrast: false, largeText: false, reducedMotion: false, focusVisible: true }) ; useEffect ( () => {'';,"});,"})
 ;,"});,"})
@@ -21,3 +22,6 @@ import React { useState, useEffect } from 'react' interface AccessibilityEnhance
 import React { useState, useEffect }  from 'react';interface AccessibilityEnhancerProps {
   children: React.ReactNode} const AccessibilityEnhancer: React.FC < AccessibilityEnhancerProps> = ({ children }) => { const [accessibilitySettings, setAccessibilitySettings] = useState ({ highContrast: false, largeText: false, reducedMotion: false, focusVisible: true })  useEffect ( () => {'}}
 "
+=======
+import React, { useState, useEffect } from 'react'; interface AccessibilityEnhancerProps { children: React.ReactNode;  } const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => { const [accessibilitySettings, setAccessibilitySettings] = useState({ highContrast: false, largeText: false, reducedMotion: false, focusVisible: true }); useEffect(() => {
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

@@ -11,11 +11,7 @@ function fixLintErrors(content) {
   // Fix missing semicolons after imports
   fixed = fixed.replace(/import\s+[^;]+$/gm, match => {
     if (!match.endsWith(';')) {
-      return match + ';
-  fixed = fixed.replace(/import\s+[^;]+$/gm, (match) => {
-    if (!match.endsWith()) {
-      return match + ;
-    }
+      return match + ';';    }
     return match;
   });
 
@@ -44,11 +40,7 @@ function fixLintErrors(content) {
   // Fix missing semicolons after variable declarations
   fixed = fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^;]+$/gm, match => {
     if (!match.endsWith(';')) {
-      return match + ';
-  fixed = fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^;]+$/gm, (match) => {
-    if (!match.endsWith()) {
-      return match + ;
-    }
+      return match + ';';    }
     return match;
   });
 

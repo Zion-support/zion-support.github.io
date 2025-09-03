@@ -8,43 +8,43 @@ export default function Index() {
       <Head>
         <title>Zion Tech Group - Leading Technology Solutions Provider</title>
         <meta
-          name="description"
-          content="Zion Tech Group delivers cutting-edge AI, cybersecurity, cloud infrastructure, and digital transformation services. Transform your business with our innovative technology solutions."
+          name="description
+          content=Zion Tech Group delivers cutting-edge AI, cybersecurity, cloud infrastructure, and digital transformation services. Transform your business with our innovative technology solutions."
         />
         <meta
-          name="keywords"
-          content="AI services, cybersecurity, cloud computing, digital transformation, technology consulting, Zion Tech Group"
+          name="keywords
+          content=AI services, cybersecurity, cloud computing, digital transformation, technology consulting, Zion Tech Group"
         />
         <meta
-          property="og: title"
-          content="Zion Tech Group - Leading Technology Solutions Provider"
+          property="og: title
+          content=Zion Tech Group - Leading Technology Solutions Provider"
         />
         <meta
-          property="og:description"
-          content="Transform your business with our cutting-edge AI, cybersecurity, and cloud solutions. Expert technology consulting and implementation services."
+          property="og:description
+          content=Transform your business with our cutting-edge AI, cybersecurity, and cloud solutions. Expert technology consulting and implementation services."
         />
-        <meta property="og: type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com" />
+        <meta property="og: type content=website" />
+        <meta property="og:url content=https://ziontechgroup.com" />
         <meta
-          property="og:image"
-          content="https://ziontechgroup.com/og-image.jpg"
+          property="og:image
+          content=https://ziontechgroup.com/og-image.jpg"
         />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:card content=summary_large_image" />
         <meta
-          name="twitter:title"
-          content="Zion Tech Group - Leading Technology Solutions Provider"
-        />
-        <meta
-          name="twitter:description"
-          content="Transform your business with our cutting-edge AI, cybersecurity, and cloud solutions."
+          name="twitter:title
+          content=Zion Tech Group - Leading Technology Solutions Provider"
         />
         <meta
-          name="twitter: image"
-          content="https://ziontechgroup.com/og-image.jpg"
+          name="twitter:description
+          content=Transform your business with our cutting-edge AI, cybersecurity, and cloud solutions."
         />
-        <link rel="canonical" href="https://ziontechgroup.com" />
+        <meta
+          name="twitter: image
+          content=https://ziontechgroup.com/og-image.jpg"
+        />
+        <link rel="canonical href=https://ziontechgroup.com" />
         <script
-          type="application/ld+json"
+          type="application/ld+json
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
@@ -52,8 +52,7 @@ export default function Index() {
               name: 'Zion Tech Group',
               url: 'https://ziontechgroup.com',
               logo: 'https://ziontechgroup.com/logo.png',
-              description:
-                'Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.',
+              description: 'Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.',
               address: {
                 '@type': 'PostalAddress',
                 addressCountry: 'US',
@@ -71,7 +70,7 @@ export default function Index() {
           }}
         />
       </Head>
-<<<<<<< HEAD:pages/index.p.tsx
+:pages/index.p.tsx
       <div
         style={{
           padding: '40px 20px',
@@ -119,7 +118,7 @@ export default function Index() {
           }}
         >
           <a
-            href="/services"
+            href=/services"
             style={{
               padding: '12px 24px',
               background: 'linear-gradient(45deg, #00d4ff, #0099cc)',
@@ -151,7 +150,6 @@ export default function Index() {
               e.target.style.color = '#0b1220';
             }}
             onMouseOut={e => {
-=======
       <div style={{
         padding: '40px 20px', color: '#fff',
         background: 'linear-gradient(135deg, #0b1220 0%, #1a2332 100%)', minHeight: '100vh',
@@ -203,7 +201,7 @@ export default function Index() {
               e.target.style.color = '#0b1220';
             }}
             onMouseOut={(e) => {;
->>>>>>> main:pages/index.p.tsx.disabled
+:pages/index.p.tsx.disabled
               e.target.style.background = 'transparent';
               e.target.style.color = '#00d4ff';
             }}
@@ -215,7 +213,6 @@ export default function Index() {
 </>
   );
 }
-<<<<<<< HEAD:pages/index.p.tsx
-=======
+:pages/index.p.tsx
 ;
->>>>>>> main:pages/index.p.tsx.disabled
+:pages/index.p.tsx.disabled

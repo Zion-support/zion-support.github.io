@@ -29,10 +29,7 @@ class ErrorMonitor {;
     process.on('SIGTERM', () => this.shutdown());
     process.on('SIGINT', () => this.shutdown());
     process.on('uncaughtException', (error) => {
-      this.log(`error`, `Uncaught exception:`, error);
-    process.on('uncaughtException', (error) => {;
-      this.log('error', 'Uncaught exception:', error);
-      this.shutdown();
+      this.log(`error`, `Uncaught exception: `, error);      this.shutdown();
     });
   }
 ;
@@ -60,14 +57,7 @@ class ErrorMonitor {;
           hasErrors,
           errorCount,
           warningCount,
-        const errorCount = hasErrors ? (stdout.match(/'error/g') || []).length : 0;
-        const warningCount = hasErrors ? (stdout.match(/'warning/g') || []).length : 0;
-        ;
-        resolve({;
-          hasErrors,;
-          errorCount,;
-          warningCount,;
-          output: stdout + stderr;
+<<<<<<< HEAD          output: stdout + stderr;
         });
       });
     });
@@ -101,11 +91,7 @@ class ErrorMonitor {;
         resolve({
           hasErrors,
           buildSuccess: !hasErrors,
-        ;
-        resolve({;
-          hasErrors,;
-          buildSuccess: !hasErrors,;
-          output: stdout + stderr;
+<<<<<<< HEAD          output: stdout + stderr;
         });
       });
     });
@@ -133,8 +119,8 @@ class ErrorMonitor {;
               if (
                 content.includes('Unterminated string literal') ||
                 content.match(/^'[^']*$/m) ||
-                content.match(/^"[^"]*$/m) ||
-                content.includes('                content.includes('                content.includes('Parsing error:') ||
+                content.match(/^"[^]*$/m) ||
+                content.includes('                content.includes('                content.includes('Parsing error: ') ||
                 content.length === 0;
               ) {
                 corruptedFiles.push({
@@ -184,6 +170,7 @@ class ErrorMonitor {;
           }
         }
       } catch (error) {  this.log(`error`, Error scanning directory ${dir  }:, error.message`);
+<<<<<<< HEAD
                 issues: ['read_error'];
 });`);
             }`);
@@ -191,6 +178,9 @@ class ErrorMonitor {;
         }`);
       } catch (error) {this.log('error', Error scanning directory ${dir}:, error.message`);
       }
+=======
+<<<<<<< HEAD      }
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     };
     ;
     if (fs.existsSync(srcDir)) {;
@@ -207,7 +197,7 @@ class ErrorMonitor {;
     ;
     if (content.includes('Unterminated string literal')) issues.push('unterminated_string');
     if (content.match(/^'[^']*$/m)) issues.push('unclosed_single_quote');
-    if (content.match(/^"[^"]*$/m)) issues.push('unclosed_double_quote');
+    if (content.match(/^[^"]*$/m)) issues.push('unclosed_double_quote');
     if (content.includes('Parsing error:')) issues.push('parsing_error');
     if (content.length === 0) issues.push('empty_file');
     if (content.includes('require is not defined')) issues.push('module_system_error');
@@ -251,38 +241,7 @@ class ErrorMonitor {;
     fs.writeFileSync(latestReportFile, JSON.stringify(report, null, 2));
     this.log(`info`, `Report generated: ${reportFile}`);this.log(`info`, `Total errors found: ${report.summary.totalErrors}`);this.log(`info`, `Corrupted files: ${report.summary.corruptedFiles}`);
     
-    ;
-    const ['lintResults', 'typeResults', 'buildResults', 'corruptedFiles'] = await Promise.all(['this.runLintCheck()', 'this.runTypeCheck()', 'this.runBuildCheck()', 'this.detectCorruptedFiles()']);
-    ;
-    const report = {;
-      timestamp,;
-      reportId,;
-      summary: {;
-        totalErrors: lintResults.errorCount + typeResults.errorCount,;
-        lintErrors: lintResults.errorCount,;
-        lintWarnings: lintResults.warningCount,;
-        typeErrors: typeResults.errorCount,;
-        buildSuccess: buildResults.buildSuccess,;
-        corruptedFiles: corruptedFiles.length;
-      },;
-      details: {;
-        lint: lintResults,;
-        typeCheck: typeResults,;
-        build: buildResults,;
-        corruptedFiles;
-      },;
-      recommendations: this.generateRecommendations(lintResults, typeResults, buildResults, corruptedFiles);
-    };
-    ;
-    // Save reportconst reportFile = path.join(this.reportDir, '`error-report-${reportId}.json`);
-    fs.writeFileSync(reportFile', JSON.stringify(report, null, 2));
-    ;
-    // Update latest report;
-    const latestReportFile = path.join(this.reportDir, 'latest-error-report.json');
-    fs.writeFileSync(latestReportFile, JSON.stringify(report, null, 2));
-    this.log('info', `Report generated: ${reportFile}`);this.log('info', `Total errors found: ${report.summary.totalErrors}`);this.log('info', `Corrupted files: ${report.summary.corruptedFiles}`);
-    ;
-    return report;
+<<<<<<< HEAD    return report;
   }
 ;
   generateRecommendations(lintResults, typeResults, buildResults, corruptedFiles) {;
@@ -358,13 +317,10 @@ class ErrorMonitor {;
     
     // Trigger syntax fixer for corrupted files;
     if (report.summary.corruptedFiles > 0) {
-    ;
-    // Trigger syntax fixer for corrupted files;
-    if (report.summary.corruptedFiles > 0) {;
-      this.log('info', 'Triggering syntax fixer...');
+<<<<<<< HEAD      this.log('info', 'Triggering syntax fixer...');
       exec('pm2 restart syntax-fixer', { cwd: this.projectRoot }, (error) => {;
         if (error) {;
-          this.log('error', 'Failed to trigger syntax fixer:', error.message);
+          this.log('error', 'Failed to trigger syntax fixer: ', error.message);
         } else {;
           this.log('info', 'Syntax fixer triggered successfully');
         }
@@ -379,7 +335,7 @@ class ErrorMonitor {;
       this.log('info', 'Running automatic lint fixes...');
       exec('npm run lint -- --fix', { cwd: this.projectRoot }, (error, stdout, stderr) => {;
         if (error) {;
-          this.log('error', 'Lint fix failed:', error.message);
+          this.log('error', 'Lint fix failed: ', error.message);
         } else {;
           this.log('info', 'Lint fixes applied successfully');
         }
@@ -400,9 +356,15 @@ class ErrorMonitor {;
           const onlineProcesses = (stdout.match(/''online/g``) || []).length;this.log(`info`, `PM2 processes online: ${onlineProcesses}`);
         }
       });
+<<<<<<< HEAD
       ;
 } catch (error) {  
       this.log(`error`, `Health check failed:`, error.message);
+=======
+      
+    } catch (error) {  
+      this.log(`error`, `Health check failed: `, error.message);
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       }
   }
 
@@ -416,33 +378,7 @@ class ErrorMonitor {;
     // Set up periodic checks;
     this.healthCheckInterval = setInterval(async () => {
       if (this.isRunning) {
-      ;
-      // Trigger automatic fixes if needed;
-      await this.triggerAutomaticFixes(report);
-      ;
-      // Check if PM2 processes are running;
-      exec('pm2 list', { cwd: this.projectRoot }, (error, stdout) => {;
-        if (!error) {;
-          const onlineProcesses = (stdout.match(/'online/g') || []).length;this.log('info', `PM2 processes online: ${onlineProcesses}`);
-        }
-      });
-      ;
-    } catch (error) {;
-      this.log('error', 'Health check failed:', error.message);
-    }
-  }
-;
-  async start() {;
-    this.log('info', 'Error Monitor starting...');
-    this.isRunning = true;
-    ;
-    // Initial health check;
-    await this.performHealthCheck();
-    ;
-    // Set up periodic checks;
-    this.healthCheckInterval = setInterval(async () => {;
-      if (this.isRunning) {;
-        await this.performHealthCheck();
+<<<<<<< HEAD        await this.performHealthCheck();
       }
     }, this.checkInterval);
     this.log(`info`, `Error Monitor started. Health checks every ${this.checkInterval / 1000 / 60} minutes.`);
@@ -463,10 +399,9 @@ class ErrorMonitor {;
   }
 }
 
-;
-// Start the monitor;
+<<<<<<< HEAD// Start the monitor;
 const monitor = new ErrorMonitor();
 monitor.start().catch(error => {;
-  console.error('Failed to start Error Monitor:', error);
+  console.error('Failed to start Error Monitor: ', error);
   process.exit(1);
 });

@@ -2,15 +2,7 @@
 /**
  * Intelligent Repository Manager;
  * 
- * This automation system provides intelligent Git repository management including:
-#!/'usr/bin/env' node;
-
-/**;
- * Intelligent Repository Manager;
- * ;
- * This automation system provides intelligent Git repository management including:;
- * - Automated PR merging with conflict resolution;
- * - Intelligent branch management;
+ * This automation system provides intelligent Git repository management including: * - Automated PR merging with conflict resolution; * - Intelligent branch management;
  * - Automated conflict resolution;
  * - Repository health monitoring;
  * - Smart deployment coordination;
@@ -72,52 +64,7 @@ const executeCommand = (command, options = {}) => {
     return { success: true, output: result };
   } catch (error) {  
     return { success: false, error: error.message, output: error.stdout || ``   };
-;
-// Configuration;
-const CONFIG = {;
-  REPO_PATH: process.cwd(),;
-  MAIN_BRANCH: 'main',;
-  STAGING_BRANCH: 'staging',;
-  DEVELOPMENT_BRANCH: 'develop',;
-  CURSOR_BRANCH_PREFIX: 'cursor/',;
-  BACKUP_BRANCH_PREFIX: 'backup/',;
-  MERGE_BRANCH_PREFIX: 'merge/',;
-  LOG_DIR: './logs',;
-  MAX_CONCURRENT_MERGES: 3,;
-  CONFLICT_RESOLUTION_STRATEGY: 'intelligent', // intelligent, aggressive, conservative;
-  AUTO_MERGE_ENABLED: process.env.AUTO_MERGE_ENABLED === 'true',;
-  CONFLICT_RESOLUTION_MODE: process.env.CONFLICT_RESOLUTION_MODE || 'intelligent',;
-  GIT_AUTOMATION_MODE: process.env.GIT_AUTOMATION_MODE === 'true',;
-  PM2_PATH: process.env.PM2_PATH || 'pm2';
-};
-;
-// Utility functions;
-const log = (message, level = 'INFO') => {;
-  const timestamp = new Date().toISOString();
-  const logMessage = `[${timestamp}] [${level}] ${message}`;
-  console.log(`logMessage);
-  ;
-  // Ensure log directory exists;
-  if (!fs.existsSync(CONFIG.LOG_DIR)) {;
-    fs.mkdirSync(CONFIG.LOG_DIR, { recursive: true });
-  }
-  ;
-  // Write to log file;
-  fs.appendFileSync(path.join(CONFIG.LOG_DIR, 'intelligent-repository-manager.log'), logMessage + '\n');
-};
-;
-const executeCommand = (command, options = {}) => {;
-  try {;
-    const result = execSync(command, {;
-      cwd: CONFIG.REPO_PATH,;
-      encoding: 'utf8',;
-      stdio: options.silent ? 'pipe' : 'inherit',;
-      ...options;
-    });
-    return { success: true, output: result };
-  } catch (error) {;
-    return { success: false, error: error.message, output: error.stdout || ' };
-  }
+<<<<<<< HEAD  }
 };
 ;
   } catch (error) {
@@ -153,13 +100,7 @@ const getRemoteBranches = () => {;
     .map(branch => branch.trim())
     .filter(branch => branch && !branch.includes('HEAD'))
     .map(branch => branch.replace(`origin/`, ``));
-  ;
-  return result.output;
-    .split('\n');
-    .map(branch => branch.trim());
-    .filter(branch => branch && !branch.includes('HEAD'));
-    .map(branch => branch.replace('origin/', '));
-};
+<<<<<<< HEAD};
 ;
 const getCursorBranches = () => {;
   const branches = getRemoteBranches();
@@ -210,17 +151,8 @@ const intelligentConflictResolution = (conflictedFiles, branchName) => {log(`Res
         const fileContent = fs.readFileSync(file, `utf8`);
         
         if (fileExt === `.json` || fileExt === '.js' || fileExt === '.ts' || fileExt === `.jsx` || fileExt === `.tsx`) {
-  ;
-  const resolutionStrategies = {;
-    intelligent: () => {;
-      // Intelligent conflict resolution based on file type and content;
-      conflictedFiles.forEach(file => {;
-        const fileExt = path.extname(file);
-        const fileContent = fs.readFileSync(file, 'utf8');
-        ;
-        if (fileExt === '.json' || fileExt === '.js' || fileExt === '.ts' || fileExt === '.jsx' || fileExt === '.tsx') {;
-          // For code files, try to merge intelligently;
-          try {const result = gitCommand(`checkout --ours "${file}"`, { silent: true });
+<<<<<<< HEAD          // For code files, try to merge intelligently;
+          try {const result = gitCommand(`checkout --ours "${file}`, { silent: true });
             if (result.success) {log(`Resolved conflict in ${file} using `ours` strategy`);
             }
           } catch (error) {  log(`Failed to resolve conflict in ${file  }: ${error}`, `ERROR`);
@@ -228,15 +160,21 @@ const intelligentConflictResolution = (conflictedFiles, branchName) => {log(`Res
         } else if (fileExt === `.md` || fileExt === `.txt`) {;
 } else if (fileExt === '.md' || fileExt === '.txt') {;
           // For documentation, try to merge both versions;
-          try {const result = gitCommand(`checkout --theirs "${file}"`, { silent: true });
+          try {const result = gitCommand(`checkout --theirs ${file}"`, { silent: true });
             if (result.success) {log(`Resolved conflict in ${file} using `theirs` strategy`);
             }
           } catch (error) {  log(`Failed to resolve conflict in ${file  }: ${error}`, `ERROR`);
           }
+<<<<<<< HEAD
         } else {;
 } else {;
           // For other files, use default strategy;
           try {const result = gitCommand(`checkout --ours "${file}"`, { silent: true });
+=======
+        } else {
+<<<<<<< HEAD          // For other files, use default strategy;
+          try {const result = gitCommand(`checkout --ours "${file}`, { silent: true });
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
             if (result.success) {log(`Resolved conflict in ${file} using default strategy`);
             }
           } catch (error) {  log(`Failed to resolve conflict in ${file  }: ${error}`, `ERROR`);
@@ -247,24 +185,13 @@ const intelligentConflictResolution = (conflictedFiles, branchName) => {log(`Res
     
     aggressive: () => {
       // Always use `ours` strategy;
-      conflictedFiles.forEach(file => {gitCommand(`checkout --ours "${file}"`, { silent: true });log(`Resolved conflict in ${file} using aggressive strategy`);
+      conflictedFiles.forEach(file => {gitCommand(`checkout --ours ${file}"`, { silent: true });log(`Resolved conflict in ${file} using aggressive strategy`);
       });
     },
     
     conservative: () => {
       // Always use `theirs` strategy;
-    },;
-    ;
-    aggressive: () => {;
-      // Always use 'ours' strategy;
-      conflictedFiles.forEach(file => {gitCommand(`checkout --ours "${file}"`, { silent: true });log(`Resolved conflict in ${file} using aggressive strategy`);
-      });
-    },;
-    ;
-    conservative: () => {;
-      // Always use 'theirs' strategy;
-      conflictedFiles.forEach(file => {gitCommand(`checkout --theirs "${file}"`, { silent: true });log(`Resolved conflict in ${file} using conservative strategy`);
-    });
+      conflictedFiles.forEach(file => {gitCommand(`checkout --theirs "${file}`, { silent: true });log(`Resolved conflict in ${file} using conservative strategy`);    });
     }
   };
   ;
@@ -312,22 +239,7 @@ const mergeBranch = async (branchName) => {log(`Attempting to merge branch: ${br
         // Stage resolved files;
         gitCommand(`add .`, { silent: true });
         
-    ;
-    // Get conflicted files;
-    const conflictedFilesResult = gitCommand('diff --name-only --diff-filter=U', { silent: true });
-    if (conflictedFilesResult.success) {;
-      const conflictedFiles = conflictedFilesResult.output.split('\n').filter(line => line.trim());
-      ;
-      if (conflictedFiles.length > 0) {log(`Conflicted files: ${conflictedFiles.join(', ')}`);
-        ;
-        // Resolve conflicts intelligently;
-        intelligentConflictResolution(conflictedFiles, branchName);
-        ;
-        // Stage resolved files;
-        gitCommand('add .', { silent: true });
-        ;
-        // Commit resolutionconst commitResult = gitCommand(`commit -m "Auto-resolve merge conflicts for ${branchName} - ${new Date().toISOString()}"`, { silent: true });
-        if (commitResult.success) {log(`Successfully resolved conflicts for ${branchName}`);
+        // Commit resolutionconst commitResult = gitCommand(`commit -m Auto-resolve merge conflicts for ${branchName} - ${new Date().toISOString()}"`, { silent: true });        if (commitResult.success) {log(`Successfully resolved conflicts for ${branchName}`);
           ;
           // Push resolved changesconst pushResult = gitCommand(`push origin ${CONFIG.MAIN_BRANCH}`, { silent: true });
           if (pushResult.success) {log(`Pushed conflict resolution to remote`);
@@ -363,12 +275,7 @@ const intelligentBranchAnalysis = (branches) => {log(`Analyzing ${branches.lengt
       branch,
       ...info,
       priority,
-    ;
-    return {;
-      branch,;
-      ...info,;
-      priority,;
-      mergeable: info.commits > 0 && info.files.length > 0;
+<<<<<<< HEAD      mergeable: info.commits > 0 && info.files.length > 0;
     };
   });
   ;
@@ -401,18 +308,7 @@ const calculateBranchPriority = (branch, info) => {;
   } else if (branch.includes(`feature`)) {
     priority += 50;
   } else if (branch.includes(`bugfix`)) {
-  ;
-  priority += codeFiles * 5;      // Code files are high priority;
-  priority += configFiles * 3;    // Config files are medium priority;
-  priority += docFiles * 1;       // Documentation is lower priority;
-  ;
-  // Priority based on branch name patterns;
-  if (branch.includes('hotfix') || branch.includes('critical')) {;
-    priority += 100;
-  } else if (branch.includes('feature')) {;
-    priority += 50;
-  } else if (branch.includes('bugfix')) {;
-    priority += 75;
+<<<<<<< HEAD    priority += 75;
   }
   ;
   // Priority based on age (newer branches get higher priority);
@@ -451,22 +347,7 @@ const executeIntelligentMerging = async () => {
     return;
   }
   
-;
-const executeIntelligentMerging = async () => {;
-  if (!CONFIG.AUTO_MERGE_ENABLED) {;
-    log('Auto-merge is disabled. Skipping intelligent merging.');
-    return;
-  }
-  ;
-  log('Starting intelligent repository management cycle');
-  ;
-  // Check if we're in a git repository;
-  if (!isGitRepository()) {;
-    log('Not in a git repository. Exiting.', 'ERROR');
-    return;
-  }
-  ;
-  // Get current branch;
+<<<<<<< HEAD  // Get current branch;
   const currentBranch = getCurrentBranch();
   if (currentBranch !== CONFIG.MAIN_BRANCH) {log(`Not on main branch (currently on ${currentBranch}). Switching to main.`);gitCommand(`checkout ${CONFIG.MAIN_BRANCH}`, { silent: true });
   }
@@ -556,6 +437,7 @@ const executeIntelligentMerging = async () => {;
     } catch (error) {  
       failureCount++;log(`Error processing branch ${branchInfo.branch  }: ${error.message}`, `ERROR`);
     }
+<<<<<<< HEAD
     ;
 } else {;
         failureCount++;log(`Failed to merge branch: ${branchInfo.branch}`, 'ERROR');
@@ -565,6 +447,10 @@ const executeIntelligentMerging = async () => {;
     }
     ;
     // Small delay between merges;
+=======
+    
+<<<<<<< HEAD    // Small delay between merges;
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     await new Promise(resolve => setTimeout(resolve, 1000));
   }
   ;
@@ -632,9 +518,7 @@ const monitorRepositoryHealth = () => {;
   // Log health metricslog(`Repository Health Metrics: ${JSON.stringify(healthMetrics, null, 2)}`);
   
   if (issues.length > 0) {log(`Repository Health Issues: ${issues.join('; ')}`, `WARN`);
-  ;
-  if (issues.length > 0) {log(`Repository Health Issues: ${issues.join('; ')}`, 'WARN');
-  }
+<<<<<<< HEAD  }
   ;
   return healthMetrics;
 };
@@ -699,37 +583,7 @@ const main = async () => {
 
 // Handle process signals;
 process.on(`SIGINT`, () => {
-;
-// Main execution loop;
-const main = async () => {;
-  log('Intelligent Repository Manager started');
-  ;
-  try {;
-    // Monitor repository health;
-    const healthMetrics = monitorRepositoryHealth();
-    ;
-    // Execute intelligent merging;
-    await executeIntelligentMerging();
-    ;
-    // Cleanup old branches;
-    const cleanedCount = cleanupOldBranches();
-    ;
-    // Generate summary report;
-    const summary = {;
-      timestamp: new Date().toISOString(),;
-      healthMetrics,;
-      cleanedBranches: cleanedCount,;
-      status: 'completed';
-    };
-    log(`Repository management cycle completed successfully: ${JSON.stringify(summary, null, 2)}`);
-    ;
-  } catch (error) {log(`Repository management cycle failed: ${error.message}`, 'ERROR');log(`Stack trace: ${error.stack}`, 'ERROR');
-  }
-};
-;
-// Handle process signals;
-process.on('SIGINT', () => {;
-  log('Received SIGINT. Shutting down gracefully...');
+<<<<<<< HEAD  log('Received SIGINT. Shutting down gracefully...');
   process.exit(0);
 });
 ;
@@ -757,11 +611,5 @@ module.exports = {
   monitorRepositoryHealth,
   cleanupOldBranches,
   intelligentConflictResolution,
-;
-module.exports = {;
-  executeIntelligentMerging,;
-  monitorRepositoryHealth,;
-  cleanupOldBranches,;
-  intelligentConflictResolution,;
-  calculateBranchPriority;
+<<<<<<< HEAD  calculateBranchPriority;
 };

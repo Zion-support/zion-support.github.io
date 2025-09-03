@@ -1,6 +1,7 @@
 :src.pages.disabled/Webinars.test.tsx
-describe ('Webinars', () => {}; '; it ('renders without crashing', () => {}; render (<Webinars />) ; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; '; it ('displays expected content', () => {}; render (<Webinars />) ;
+describe ('Webinars', () => {}; '; it ('renders without crashing', () => {}; render (<Webinars />) ;'; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; '; it ('displays expected content', () => {}; render (<Webinars />) ;
 
+<<<<<<< HEAD
 describe ('Webinars', () => {}; '; it ('renders without crashing', () => {}; render (<Webinars />) ; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; '; it ('displays expected content', () => {}; render (<Webinars />) ;''';
 ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/Webinars.test.tsx
 :src.pages.disabled/Webinars.test.tsx;
@@ -21,3 +22,6 @@ import webinars  from './webinars'describe('webinars', () => {
     // Add specific test assertions based on component content;
 });
 })
+=======
+describe ('Webinars', () => {}; '; it ('renders without crashing', () => {}; render (<Webinars />) ;'; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; '; it ('displays expected content', () => {}; render (<Webinars />) ;''';
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

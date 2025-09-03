@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect, useCallback } from 'react' export const useAccessibility = () => { const [preferences, setPreferences] = useState({ highContrast: fals,e, largeText: fals,e, reducedMotion: fals,e, focusIndicator: tru,e, screenReader: fals,e, keyboardNavigation: true}) const [settings, setSettings] = useState({ fontSize: 'medium,', colorScheme: 'default,', motionPreference: 'no-preference,', focusStyle: 'default'})';';
 import { useState, useEffect, useCallback } from 'react' export const useAccessibility = () => { const [preferences, setPreferences] = useState({ highContrast: false, largeText: false, reducedMotion: false, focusIndicator: true, screenReader: false, keyboardNavigation: true }) const [settings, setSettings] = useState({ fontSize: 'medium', colorScheme: 'default', motionPreference: 'no-preference', focusStyle: 'default' });";
 }"
@@ -7,3 +8,6 @@ import { useState, useEffect, useCallback } from &apos;react&apos;&apos;' export
 import { useState, useEffect, useCallback } from 'react' export const useAccessibility = () => { const [preferences, setPreferences] = useState({ highContrast: false, largeText: false, reducedMotion: false, focusIndicator: true, screenReader: false, keyboardNavigation: true }) const [settings, setSettings] = useState({ fontSize: 'medium', colorScheme: 'default', motionPreference: 'no-preference', focusStyle: 'default' });",";
 }""
 import { useState, useEffect, useCallback }  from 'react';export const useAccessibility = () => { const [preferences, setPreferences] = useState({ highContrast: false, largeText: false, reducedMotion: false, focusIndicator: true, screenReader: false, keyboardNavigation: true }) const [settings, setSettings] = useState({ fontSize: 'medium', colorScheme: 'default', motionPreference: 'no-preference', focusStyle: 'default' });"}"
+=======
+import { useState, useEffect, useCallback } from 'react' export const useAccessibility = () => { const [preferences, setPreferences] = useState({ highContrast: fals,e, largeText: fals,e, reducedMotion: fals,e, focusIndicator: tru,e, screenReader: fals,e, keyboardNavigation: true, }) const [settings, setSettings] = useState({ fontSize: 'medium,', colorScheme: 'default,', motionPreference: 'no-preference,', focusStyle: 'default', })';';'; 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

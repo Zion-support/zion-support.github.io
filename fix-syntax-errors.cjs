@@ -11,6 +11,7 @@ const path = require('path');
 const fixes = [
   // Fix import statements with comma issues
   {
+<<<<<<< HEAD
     pattern: /import\s+(\w+)\s+from\s*,\s*['"`]([^'"`]+)['"`]/g,
     replacement: "import $1 from '$2'";
 },
@@ -18,6 +19,15 @@ const fixes = [
     pattern: /import\s+(\w+)\s+from\s*,\s*([^;]+);/g,
     replacement: "import $1 from $2;";
 },
+=======
+    pattern: /import\s+(\w+)\s+from\s*,\s*['"`]([^'`]+)['`]/g,
+    replacement: "import $1 from '$2'"
+  },
+  {
+    pattern: /import\s+(\w+)\s+from\s*,\s*([^;]+);/g,
+    replacement: import $1 from $2;
+  },
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   
   // Fix missing semicolons in function calls
   {
@@ -27,7 +37,7 @@ const fixes = [
   
   // Fix unterminated strings
   {
-    pattern: /(['"`])([^'"`]*)\s*$/gm,
+    pattern: /(['`])([^'`]*)\s*$/gm,
     replacement: (match, quote, content) => {
       if (!content.includes(quote)) {
         return match + quote;
@@ -61,11 +71,16 @@ const fixes = [
   // Fix template literals with spaces
   {
     pattern: /\$\{\s*([^}]+)\s*\}/g,
+<<<<<<< HEAD
     replacement: '${$1}'},
     pattern: /(\w+\([^)]*\))\s*$/gm,
     replacement: "$1;";
 }
 ];
+=======
+    replacement: '${$1}',
+  },];
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 
 function fixFile(filePath) {
   try {
@@ -180,51 +195,7 @@ function fixSyntaxErrors(filePath) {
     
     // Only write if content changed
     if (content !== originalContent) {
-
-    // If the file is severely corrupted, create a minimal valid component
-    if (content.includes('Parsing error') || content.length < 100) {
-      const fileName = path.basename(filePath, path.extname(filePath));
-      const componentName = fileName.replace(/[-_]/g, '').replace(/\b\w/g, l => l.toUpperCase());
-      
-      content = `import React from 'react';
-import { SEO } from '@/components/SEO';
-
-const ${componentName}: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="${componentName} - Zion Tech Group"
-        description="Professional ${componentName} services by Zion Tech Group"
-        keywords="${componentName.toLowerCase()}, technology, services"
-      />
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">${componentName}</h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Professional ${componentName} services to help your business grow.
-          </p>
-          <div className="flex justify-center">
-            <a 
-              href="/contact" 
-              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300"
-            >
-              Get Started
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default ${componentName};`;
-      modified = true;
-    }
-
-    if (modified) {
-      fs.writeFileSync(filePath, content, `utf8`);
-      console.log(`Fixed syntax errors in: ${filePath}`);
-      fs.writeFileSync(filePath, content, 'utf8');
+<<<<<<< HEAD      fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
     }
@@ -274,9 +245,14 @@ function fixFilesInDirectory(dirPath) {
       file.endsWith('.ts') ||
       file.endsWith('.jsx') ||
       file.endsWith('.js')
+<<<<<<< HEAD
     ) {;
 } else if (file.endsWith('.tsx') || file.endsWith('.jsx') || file.endsWith('.ts') || file.endsWith('.js')) {
       if (fixSyntaxErrors(filePath)) {
+=======
+    ) {
+<<<<<<< HEAD      if (fixSyntaxErrors(filePath)) {
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
         fixedCount++;
       }
     }
@@ -307,5 +283,4 @@ console.log('Starting syntax error fixes...');
 const fixedCount = fixFilesInDirectory('./components');
 const fixedCount2 = fixFilesInDirectory('./pages');
 console.log(`Fixed ${fixedCount + fixedCount2} files`);
-const fixedCount = fixFilesInDirectory('./src');
-console.log(`Fixed ${fixedCount} files.`);
+<<<<<<< HEAD

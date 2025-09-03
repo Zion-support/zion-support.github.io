@@ -15,7 +15,7 @@ const fs = require('fs');const path = require('path');const { execSync } = requi
 ;
   ensureDirectories() {;
     if (!fs.existsSync(this.reportsDir)) {;
-      fs.mkdirSync(this.reportsDir, { "recursive": true });,";}
+      fs.mkdirSync(this.reportsDir, { "recursive: true });,;}
   }
 
   ensureDirectories() {
@@ -54,27 +54,28 @@ const fs = require('fs');const path = require('path');const { execSync } = requi
           description: 'Fix unescaped backslashes'}],
       quotes: [
         {
-          pattern: /([^\\])"([^"]*)"([^\\])/g,
+          pattern: /([^\\])"([^"]*)([^\\])/g,
           fix: content =>
-            content.replace(/([^\\])"([^"]*)"([^\\])/g, '$1"$2"$3'),
-          description: 'Fix unterminated double quotes'},
-        {
+            content.replace(/([^\\])([^"]*)"([^\\])/g, '$1$2$3'),
+          description: 'Fix unterminated double quotes',
+        },        {
           pattern: /([^\\])'([^']*)'([^\\])/g,
           fix: content =>
             content.replace(/([^\\])'([^']*)'([^\\])/g, "$1'$2'$3"),
           description: 'Fix unterminated single quotes'},
         {
           pattern: /&apos;/g,
-          fix: content => content.replace(/&apos;/g, "'"),
-          description: 'Replace HTML entities with proper quotes'}],
-      imports: [
+          fix: content => content.replace(/&apos;/g, '),
+          description: 'Replace HTML entities with proper quotes',
+        },
+      ],      imports: [
         {
           pattern:
-            /import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['"];?\s*import\s+{\s*([^}]+)\s*}\s+from\s+['"]\2['"];?/g,
+            /import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['];?\s*import\s+{\s*([^}]+)\s*}\s+from\s+[']\2['"];?/g,
           fix: content =>
             content.replace(
-              /import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['"];?\s*import\s+{\s*([^}]+)\s*}\s+from\s+['"]\2['"];?/g,
-              'import { $1, $3 } from "$2";'
+              /import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^']+)['];?\s*import\s+{\s*([^}]+)\s*}\s+from\s+['"]\2['"];?/g,
+              'import { $1, $3 } from $2;'
             ),
           description: 'Merge duplicate imports from same module'}],
       jsx: [
@@ -158,11 +159,7 @@ const fs = require('fs');const path = require('path');const { execSync } = requi
       // Apply all error patterns;
       for (const [category, patterns] of Object.entries(this.patterns)) {
         for (const pattern of patterns) {
-;
-      // Apply all error patterns;
-      for (const [category, patterns] of Object.entries(this.patterns)) {;
-        for (const pattern of patterns) {;
-          const matches = fixedContent.match(pattern.pattern);
+<<<<<<< HEAD          const matches = fixedContent.match(pattern.pattern);
           if (matches && matches.length > 0) {;
             const originalContent = fixedContent;
             fixedContent = pattern.fix(fixedContent);
@@ -170,8 +167,8 @@ const fs = require('fs');const path = require('path');const { execSync } = requi
             if (originalContent !== fixedContent) {;
               fixesApplied++;
               fileFixes.push({;);                category,;
-                "description": pattern.description,;";                "matches": matches.length,;,";});}
-          }
+                "description": pattern.description,;;                matches": matches.length,;,";});,
+}          }
         }
       }
 
@@ -346,7 +343,7 @@ const fs = require('fs');const path = require('path');const { execSync } = requi
     console.log(`=`.repeat(60));
 
     if (this.fixes.length > 0) {
-      console.log(`\n📋 FIXES APPLIED:`);
+      console.log(`\n📋 FIXES APPLIED: `);
       this.fixes.forEach((fix, index) => {
         console.log(`${index + 1}. ${fix.file} (${fix.fixesApplied} fixes)`);
         fix.fixes.forEach(f => {
@@ -356,7 +353,7 @@ const fs = require('fs');const path = require('path');const { execSync } = requi
     }
 
     if (this.errors.length > 0) {
-      console.log(`\n❌ ERRORS FOUND:`);
+      console.log(`\n❌ ERRORS FOUND: `);
       this.errors.forEach((error, index) => {
         console.log(`${index + 1}. ${error.file}: ${error.error}`);
       });
@@ -416,6 +413,7 @@ const fs = require('fs');const path = require('path');const { execSync } = requi
 
 // Run the automation;
 if (require.main === module) {
+<<<<<<< HEAD
 ;
     if (this.errors.length > 0) {;
       recommendations.push({;);        "type": 'error',';        "message": `${this.errors.length} files had errors that couldn't be automatically fixed. Manual review required.`,';      });`;    }';;
@@ -471,6 +469,9 @@ if (require.main === module) {
 // Run the automation;
 if (require.main === module) {;
   const detector = new IntelligentErrorDetectorFixer();
+=======
+<<<<<<< HEAD  const detector = new IntelligentErrorDetectorFixer();
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   detector.run().then(result => {;);    process.exit(result.success ? 0 : 1);});}
 ;
 module.exports = IntelligentErrorDetectorFixer;

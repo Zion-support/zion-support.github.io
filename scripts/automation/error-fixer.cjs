@@ -65,32 +65,7 @@ class ErrorFixer {;
         if (match) {
           if (currentError) {
             errors.push(currentError);
-;
-  async fixSyntaxErrors() {;
-    this.log('🔧 Starting syntax error fixes...');
-    ;
-    const srcDir = path.join(this.projectRoot, 'src');
-    const pagesDir = path.join(this.projectRoot, 'pages');
-    const scriptsDir = path.join(this.projectRoot, 'scripts');
-    ;
-    const directories = [srcDir, pagesDir, scriptsDir].filter(dir => fs.existsSync(dir));
-    ;
-    let fixedFiles = 0;
-    let totalErrors = 0;
-;
-    for (const dir of directories) {;
-      const files = this.getAllFiles(dir, ['.js', '.jsx', '.ts', '.tsx', '.cjs', '.mjs']);
-      ;
-      for (const file of files) {;
-        try {;
-          const content = fs.readFileSync(file, 'utf8');
-          const fixedContent = this.fixFileContent(content);
-          ;
-          if (content !== fixedContent) {;
-            fs.writeFileSync(file, fixedContent);
-            fixedFiles++;
-            this.log(`✅ Fixed syntax errors in: ${path.relative(this.projectRoot, file)}`);
-          }
+<<<<<<< HEAD          }
         } catch (error) {;
           this.log(`❌ Error processing ${file}: ${error.message}`);
           totalErrors++;
@@ -118,7 +93,7 @@ class ErrorFixer {;
   parseLintErrors(output) {
     const errorLines = output;
       .split(`\n`)
-      .filter(line => line.includes(`error`) || line.includes('Error:'));
+      .filter(line => line.includes(`error`) || line.includes('Error: '));
 
     return errorLines.map(line => ({
       message: line.trim(),
@@ -383,9 +358,9 @@ return new RegExp(`^${regexPattern}$`).test(relativePath);
       performance: {
         filesPerSecond:
           Math.round((this.filesProcessed / duration) * 1000 * 100) / 100,
-        errorsPerSecond:
-          Math.round((this.errorsFixed / duration) * 1000 * 100) / 100}};
-
+        errorsPerSecond: Math.round((this.errorsFixed / duration) * 1000 * 100) / 100,
+      },
+    };
     const reportPath = path.join(this.reportsDir, `error-fixer-report.json`);
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 this.log(`Report saved to ${reportPath}`);
@@ -467,11 +442,6 @@ this.log(`Report saved to ${reportPath}`);
 if (require.main === module) {
   const errorFixer = new ErrorFixer();
   errorFixer.run().catch(console.error);
-;
-// Run if called directly;
-if (require.main === module) {;
-  const fixer = new ErrorFixer();
-  fixer.run().catch(console.error);
-}
+<<<<<<< HEAD}
 ;
 module.exports = ErrorFixer;

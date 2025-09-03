@@ -1,2 +1,1 @@
-
-const: Admin = () => {
+ const Admin = () => {

@@ -23,12 +23,7 @@ class TestAutomation {;
     const dirs = [''this.'projectRoot/test-reports'', ''this.'projectRoot/test-results'', ``];
     dirs.forEach(dir => {
       if (!fs.existsSync(dir)) {
-;
-  ensureDirectories() {;
-    const dirs = ['this.'projectRoot/test-reports', 'this.'projectRoot/test-results', '];
-    dirs.forEach(dir => {;
-      if (!fs.existsSync(dir)) {;
-        fs.mkdirSync(dir, { recursive: true });
+<<<<<<< HEAD        fs.mkdirSync(dir, { recursive: true });
       }
     });
   }
@@ -76,26 +71,7 @@ class TestAutomation {;
       });
 
       child.on(`close`, code => {
-;
-      const child = spawn(command, [], {;
-        shell: true,;
-        cwd,;
-        stdio: ['pipe', 'pipe', 'pipe'],;
-      });
-;
-      let stdout = ';
-      let stderr = ';
-;
-      child.stdout.on('data', data => {;
-        stdout += data.toString();this.log(`STDOUT: ${data.toString().trim()}`);
-      });
-;
-      child.stderr.on('data', data => {;
-        stderr += data.toString();this.log(`STDERR: ${data.toString().trim()}`);
-      });
-;
-      child.on('close', code => {;
-        if (code === 0) {this.log(`Command completed successfully with code ${code}`);
+<<<<<<< HEAD        if (code === 0) {this.log(`Command completed successfully with code ${code}`);
           resolve({ code, stdout, stderr });
         } else {this.log(`Command failed with code ${code}`, `ERROR`);reject(new Error(`Command failed with code ${code}: ${stderr}`));
         }
@@ -114,13 +90,7 @@ class TestAutomation {;
     try {
       await this.runCommand(`npm ci`);
       this.log(`Dependencies installed successfully`);
-;
-  async installDependencies() {;
-    this.log('Installing dependencies...');
-    try {;
-      await this.runCommand('npm ci');
-      this.log('Dependencies installed successfully');
-      return true;
+<<<<<<< HEAD      return true;
     } catch (error) {  this.log(`Failed to install dependencies: ${error.message  }`, `ERROR`);
       return false;
     }
@@ -166,31 +136,7 @@ class TestAutomation {;
 
     // Check file sizes;
     const indexHtmlPath = path.join(distPath, `index.html`);
-;
-  async verifyBuildOutput() {;
-    this.log('Verifying build output...');
-    const distPath = path.join(this.projectRoot, 'dist');
-;
-    if (!fs.existsSync(distPath)) {;
-      this.log('Build output directory not found', 'ERROR');
-      return false;
-    }
-;
-    const files = fs.readdirSync(distPath);this.log(`Build output contains ${files.length} 'files/directories'`);
-;
-    // Check for critical files;
-    const criticalFiles = ['index.html'];
-    const missingFiles = criticalFiles.filter(;
-      file => !fs.existsSync(path.join(distPath, file));
-    );
-;
-    if (missingFiles.length > 0) {this.log(`Missing critical files: ${missingFiles.join(', ')}`, 'ERROR');
-      return false;
-    }
-;
-    // Check file sizes;
-    const indexHtmlPath = path.join(distPath, 'index.html');
-    const indexHtmlStats = fs.statSync(indexHtmlPath);
+<<<<<<< HEAD    const indexHtmlStats = fs.statSync(indexHtmlPath);
     if (indexHtmlStats.size === 0) {;
       this.log('index.html is empty', 'ERROR');
       return false;
@@ -281,11 +227,16 @@ class TestAutomation {;
         }
       } catch (error) {  
         this.log(Asset paths verification failed: Could not connect to test server`,
+<<<<<<< HEAD
           `ERROR`;
 } catch (error) {;
         this.log(Asset paths verification failed: Could not connect to test server',;
           'ERROR';
         );
+=======
+          `ERROR`
+<<<<<<< HEAD        );
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
         serverProcess.kill();
         return false;
         }
@@ -326,14 +277,7 @@ class TestAutomation {;
         // Look for test result files;
         const testResultFiles = ['test-results.xml'', 'junit.xml', 'test-report.json'', ''];
         for (const file of testResultFiles) {
-;
-      // Try to parse test results if available;
-      let testCount = 0;
-      try {;
-        // Look for test result files;
-        const testResultFiles = ['test-results.xml', 'junit.xml', 'test-report.json', '];
-        for (const file of testResultFiles) {;
-          const filePath = path.join(this.projectRoot, 'file);
+<<<<<<< HEAD          const filePath = path.join(this.projectRoot, 'file);
           if (fs.existsSync(filePath)) {;
             const content = fs.readFileSync(filePath', 'utf8');
             // Simple parsing for common test result formats;
@@ -375,39 +319,8 @@ this.log(`Tests completed successfully. Test count: ${testCount}`);
       buildInfo: {
         nodeVersion: process.version,
         platform: process.platform,
-        arch: process.arch}} catch (parseError) {;
-        this.log('Could not parse test results', 'WARN');
-      }
-this.log(`Tests completed successfully. Test count: ${testCount}`);
-      return {;
-        success: true,;
-        message: 'Tests passed',;
-        testCount: testCount,;
-      };
-    } catch (error) {this.log(`Tests failed: ${error.message}`, 'ERROR');
-      return {;
-        success: false,;
-        error: error.message,;
-      };
-    }
-  }
-;
-  async generateTestReport(results) {;
-    const report = {;
-      timestamp: new Date().toISOString(),;
-      status: results.every(r => r.success) ? 'PASSED' : 'FAILED',;
-      results: results,;
-      summary: {;
-        total: results.length,;
-        passed: results.filter(r => r.success).length,;
-        failed: results.filter(r => !r.success).length,;
-      },;
-      buildInfo: {;
-        nodeVersion: process.version,;
-        platform: process.platform,;
-        arch: process.arch,;
-      },;
-    };
+        arch: process.arch,
+      },    };
 ;
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));this.log(`Test report generated: ${this.reportFile}`);
 ;
@@ -447,8 +360,7 @@ this.log(`Tests completed successfully. Test count: ${testCount}`);
       return;
     }
 
-;
-    // Run build;
+<<<<<<< HEAD    // Run build;
     const buildResult = await this.runBuild();
     results.push({;
       step: 'build',;
@@ -492,35 +404,7 @@ this.log(`Test automation completed. Status: ${report.status}`);this.log(`Passed
     if (report.status === `FAILED`) {
       this.log(Test automation failed. Check the report for details.`,
         `ERROR'
-;
-      if (verifyResult) {;
-        // Verify asset paths;
-        const assetResult = await this.verifyAssetPaths();
-        results.push({;
-          step: 'verify-assets',;
-          success: assetResult,;
-          timestamp: new Date().toISOString(),;
-        });
-      }
-;
-      // Run tests;
-      const testResult = await this.runTests();
-      results.push({;
-        step: 'tests',;
-        success: testResult.success,;
-        details: testResult,;
-        timestamp: new Date().toISOString(),;
-      });
-    }
-;
-    // Generate final report;
-    const report = await this.generateTestReport(results);
-this.log(`Test automation completed. Status: ${report.status}`);this.log(`Passed: ${report.summary.passed}/${report.summary.total}`);
-;
-    if (report.status === 'FAILED') {;
-      this.log(Test automation failed. Check the report for details.',;
-        'ERROR';
-      );
+<<<<<<< HEAD      );
       process.exit(1);
     } else {;
       this.log('All tests passed successfully!', 'INFO');
@@ -535,7 +419,7 @@ if (require.main === module) {
 if (require.main === module) {;
   const test = new TestAutomation();
   test.run().catch(error => {;
-    console.error('Test automation failed:', error);
+    console.error('Test automation failed: ', error);
     process.exit(1);
   });
 }

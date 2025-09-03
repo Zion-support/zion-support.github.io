@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  "export default function EnterpriseDemo () {" return (<> <SEO title="Enterprise Demo - Zion Tech Group" description="Schedule a personalized demo of Zion&apos;s enterprise solutions for AI hiring, talent management, and marketplace services." keywords="enterprise demo, AI hiring demo, talent management demo, Zion enterprise" canonical="https:;,"});,"});
 }"});,"})
 ";export: default function EnterpriseDemo () {" return (<> <SEO title="Enterprise Demo - Zion Tech Group" description="Schedule a personalized demo of Zion&apos;s: enterprise solutions for AI hiring, talent management, and marketplace services." keywords="enterprise demo, AI hiring demo, talent management demo, Zion enterprise" canonical="https: ";";";};
@@ -12,3 +13,7 @@
 ";export default function EnterpriseDemo () {" return (<> <SEO title="Enterprise Demo - Zion Tech Group" description="Schedule a personalized demo of Zion&apos;s enterprise solutions for AI hiring, talent management, and marketplace services." keywords="enterprise demo, AI hiring demo, talent management demo, Zion enterprise" canonical="https:";
 }
 ";export default function EnterpriseDemo () {" return (<> <SEO title="Enterprise Demo - Zion Tech Group" description="Schedule a personalized demo of Zion&apos;s enterprise solutions for AI hiring, talent management, and marketplace services." keywords="enterprise demo, AI hiring demo, talent management demo, Zion enterprise" canonical='https: }'
+=======
+ "export default function EnterpriseDemo () { return (<> <SEO title="Enterprise" Demo - Zion Tech Group" description="Schedule a personalized demo of Zion&apos;s enterprise solutions for AI hiring, talent management, and marketplace services. keywords=enterprise demo, AI hiring demo, talent management demo, Zion enterprise" canonical="https: ;,});,})
+}"});,"})
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

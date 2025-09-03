@@ -60,8 +60,7 @@ function findFilesWithMergeConflicts(
             content.includes('            content.includes('cursor/automate-test-fix-improve-and-merge-code-99d1')) {
           
           // Remove all merge conflict markers and their content
-          content = content.replace(/[\s\S]*?[\s\S]*?          content = content.replace(/[\s\S]*?          content = content.replace(/[\s\S]*?          
-          // Remove cursor merge conflict remnants
+          content = content.replace(/[\s\S]*?[\s\S]*?          content = content.replace(/[\s\S]*?          content = content.replace(/[\s\S]*?                    // Remove cursor merge conflict remnants
           content = content.replace(/cursor\/automate-test-fix-improve-and-merge-code-99d1[\s\S]*?\n/g, '');
           content = content.replace(/ursor\/automate-test-fix-improve-and-merge-code-99d1[\s\S]*?\n/g, '');
           
@@ -167,100 +166,7 @@ function findFilesWithMergeConflicts(
         this.fixedFiles.forEach(file => {
           this.log(`  - ${file}`);
         });
-  scanDirectory(dir);
-  return files;
-}
-
-// Function to fix merge conflicts in a file;
-function fixMergeConflicts(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, `utf8`);
-
-    // Check if file has merge conflicts;
-    if (
-      !content.includes('      !content.includes('') &&
-      !content.includes(`>>>>>>>`)
-    ) {
-      return false; // No merge conflicts;
-    }
-
-    console.log(`Fixing merge conflicts in: ${filePath}`);
-
-    // Create a backup;
-    const backupPath = filePath + `.backup.` + Date.now();
-    fs.writeFileSync(backupPath, content);
-
-    // Remove merge conflict markers and keep the first version (HEAD)
-    let fixedContent = content;
-
-    // Remove all merge conflict sections;
-    const conflictRegex =
-      /
-    // Remove any remaining conflict markers;
-    fixedContent = fixedContent.replace(/    fixedContent = fixedContent.replace(/\s*/g, '');
-    fixedContent = fixedContent.replace(/
-    // Clean up any double newlines;
-    fixedContent = fixedContent.replace(/\n\s*\n\s*\n/g, `\n\n`);
-
-    // Write the fixed content;
-    fs.writeFileSync(filePath, fixedContent);
-
-    return true;
-  } catch (error) { 
-    console.error(`Error fixing ${filePath }:`, error.message);
-    return false;
-  }
-}
-
-// Function to remove completely corrupted files;
-function removeCorruptedFiles(dir) {
-  const corruptedFiles = [
-    `src/pages/soc2-compliance-automation.js.jsx`,
-    'src/pages/solutions/AIAutonomousBusiness.js.jsx',
-    'src/pages/solutions/AIAutonomousEcosystem.js.jsx',
-    'src/pages/solutions/AIAutonomousResearch.js.jsx',
-    'src/pages/solutions/AIBusinessIntelligence.js.jsx',
-    'src/pages/solutions/AIContentGeneration.js.jsx',
-    'src/pages/solutions/AIPoweredSecurity.js.jsx',
-    'src/pages/solutions/Enterprise.js.jsx',
-    'src/pages/solutions/EnterpriseSolutions.js.jsx',
-    'src/pages/solutions/FinancialSolutions.js.jsx',
-    'src/pages/solutions/GovernmentSolutions.js.jsx',
-    'src/pages/solutions/Healthcare.js.jsx',
-    'src/pages/solutions/HealthcareSolutions.js.jsx',
-    'src/pages/solutions/ManufacturingSolutions.js.jsx',
-    'src/pages/solutions/QuantumEdgeComputing.js.jsx',
-    'src/pages/solutions/QuantumNeuralNetwork.js.jsx',
-    'src/pages/solutions/RetailSolutions.js.jsx',
-    'src/pages/solutions/ServiceComparison.js.jsx',
-    'src/pages/solutions/ServiceInnovationHub.js.jsx',
-    'src/pages/solutions/ServicePortfolioDashboard.js.jsx',
-    'src/pages/solutions/ServiceRecommendations.js.jsx',
-    'src/pages/talent/[id].js.jsx',
-    'src/routes/AuthRoutes.js.jsx',
-    'src/routes/CommunityRoutes.jsx',
-    'src/routes/ContentRoutes.jsx',
-    'src/routes/DeveloperRoutes.jsx',
-    'src/routes/MobileAppRoutes.jsx',
-    'src/routes/TalentRoutes.jsx',
-    'src/utils/cartUtils.js.jsx',
-    'src/utils/contentQualityAnalyzer.js.jsx',
-    'src/utils/passwordStrength.js.jsx',
-    'src/utils/safeStorage.js.jsx',
-    'src/utils/searchUtils.js.jsx',
-    'src/utils/seoOptimizer.js.jsx',
-    'src/utils/sitemapGenerator.js.jsx',
-    `src/utils/wishlistSlice.js.jsx`];
-
-  for (const file of corruptedFiles) {
-    const fullPath = path.join(dir, file);
-    if (fs.existsSync(fullPath)) {
-      try {
-        fs.unlinkSync(fullPath);
-        console.log(`Removed corrupted file: ${file}`);
-      } catch (error) { 
-        console.log(`Could not remove ${file }:`, error.message);
-      }
+<<<<<<< HEAD      }
       
       return fixedCount;
     } catch (error) {
@@ -279,7 +185,7 @@ if (require.main === module) {
       process.exit(0);
     })
     .catch(error => {
-      console.error('❌ Merge conflict fix failed:', error);
+      console.error('❌ Merge conflict fix failed: ', error);
       process.exit(1);
     });
 }

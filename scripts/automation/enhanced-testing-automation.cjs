@@ -16,19 +16,7 @@ class EnhancedTestingAutomation {;
       performance: { status: 'pending', results: [] },;
       accessibility: { status: 'pending', results: [] },;
       coverage: { status: 'pending', results: [] },;
-
-console.log(`🧪 Starting Enhanced Testing Automation...`);
-
-class EnhancedTestingAutomation {
-  constructor() {
-    this.testResults = {
-      unit: { status: 'pending', results: [] },
-      integration: { status: 'pending', results: [] },
-      e2e: { status: 'pending', results: [] },
-      performance: { status: 'pending', results: [] },
-      accessibility: { status: 'pending', results: [] },
-      coverage: { status: 'pending', results: [] }};
-    this.reportDir = path.join(process.cwd(), 'test-reports');
+    };    this.reportDir = path.join(process.cwd(), 'test-reports');
     this.ensureReportDirectory();
   }
 ;
@@ -41,6 +29,7 @@ class EnhancedTestingAutomation {
   async runUnitTests() {;
     console.log(`'🧪 Running Unit Tests...');
     try {;
+<<<<<<< HEAD
       const output = execSync(npm run test:unit || npm test || echo 'No unit tests found",;
         {;
           encoding: 'utf8',;
@@ -54,6 +43,13 @@ class EnhancedTestingAutomation {
           encoding: 'utf8',
           cwd: process.cwd()}
       );
+=======
+      const output = execSync(npm run test: unit || npm test || echo 'No unit tests found"',;
+        {;
+          encoding: 'utf8',;
+          cwd: process.cwd(),;
+        }      );
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 ;
       this.testResults.unit.status = 'success';
       this.testResults.unit.results = output;
@@ -76,15 +72,14 @@ class EnhancedTestingAutomation {
     } catch (error) {;
       this.testResults.unit.status = 'failure';
       this.testResults.unit.results = error.message;
-      console.log('❌ Unit tests failed:', error.message);
+      console.log('❌ Unit tests failed: ', error.message);
       }
   }
 ;
   async runIntegrationTests() {;
     console.log('🔗 Running Integration Tests...');
     try {
-    try {;
-      // Build the application first;
+<<<<<<< HEAD      // Build the application first;
       console.log('🏗️ Building application for integration tests...');
       execSync('npm run build', {;
         stdio: 'inherit',;
@@ -92,7 +87,11 @@ class EnhancedTestingAutomation {
       });
 
       // Run integration tests;
+<<<<<<< HEAD
       const output = execSync(npm run test:integration || echo 'No integration tests found",
+=======
+      const output = execSync(npm run test: integration || echo 'No integration tests found',
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
         {
           encoding: 'utf8',
           cwd: process.cwd(),
@@ -115,16 +114,9 @@ class EnhancedTestingAutomation {
         output;
       );
     } catch (error) {  
-;
-      // Save results;
-      fs.writeFileSync(;
-        path.join(this.reportDir, 'integration-test-results.txt'),;
-        output;
-      );
-    } catch (error) {;
-      this.testResults.integration.status = 'failure';
+<<<<<<< HEAD      this.testResults.integration.status = 'failure';
       this.testResults.integration.results = error.message;
-      console.log('❌ Integration tests failed:', error.message);
+      console.log('❌ Integration tests failed: ', error.message);
       }
   }
 ;
@@ -145,7 +137,11 @@ class EnhancedTestingAutomation {
 ;
       if (hasPlaywright) {;
         console.log('🎭 Running Playwright tests...');
+<<<<<<< HEAD
         const output = execSync(npm run test:e2e || npx playwright test || echo 'No Playwright tests found",;
+=======
+        const output = execSync(npm run test: e2e || npx playwright test || echo 'No Playwright tests found',;
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
           {;
             encoding: 'utf8',;
             cwd: process.cwd(),;
@@ -154,7 +150,11 @@ class EnhancedTestingAutomation {
         this.testResults.e2e.results = output;
       } else if (hasCypress) {;
         console.log('🎭 Running Cypress tests...');
+<<<<<<< HEAD
         const output = execSync(npm run test:e2e || npx cypress run || echo 'No Cypress tests found",;
+=======
+        const output = execSync(npm run test: e2e || npx cypress run || echo 'No Cypress tests found"',;
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
           {;
             encoding: 'utf8',;
             cwd: process.cwd(),;
@@ -175,16 +175,9 @@ class EnhancedTestingAutomation {
         this.testResults.e2e.results;
       );
     } catch (error) {  
-;
-      // Save results;
-      fs.writeFileSync(;
-        path.join(this.reportDir, 'e2e-test-results.txt'),;
-        this.testResults.e2e.results;
-      );
-    } catch (error) {;
-      this.testResults.e2e.status = 'failure';
+<<<<<<< HEAD      this.testResults.e2e.status = 'failure';
       this.testResults.e2e.results = error.message;
-      console.log('❌ E2E tests failed:', error.message);
+      console.log('❌ E2E tests failed: ', error.message);
       }
   }
 ;
@@ -202,7 +195,11 @@ class EnhancedTestingAutomation {
 ;
       if (hasLighthouse) {;
         console.log('💡 Running Lighthouse performance tests...');
+<<<<<<< HEAD
         const output = execSync(npm run test:lighthouse || npx lhci autorun || echo 'No Lighthouse tests found",;
+=======
+        const output = execSync(npm run test: lighthouse || npx lhci autorun || echo 'No Lighthouse tests found"',;
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
           {;
             encoding: 'utf8',;
             cwd: process.cwd(),;
@@ -228,19 +225,9 @@ class EnhancedTestingAutomation {
         this.testResults.performance.results;
       );
     } catch (error) {  
-;
-      this.testResults.performance.status = 'success';
-      console.log('✅ Performance tests completed');
-;
-      // Save results;
-      fs.writeFileSync(;
-        path.join(this.reportDir, 'performance-test-results.txt'),;
-        this.testResults.performance.results;
-      );
-    } catch (error) {;
-      this.testResults.performance.status = 'failure';
+<<<<<<< HEAD      this.testResults.performance.status = 'failure';
       this.testResults.performance.results = error.message;
-      console.log('❌ Performance tests failed:', error.message);
+      console.log('❌ Performance tests failed: ', error.message);
       }
   }
 ;
@@ -258,6 +245,7 @@ class EnhancedTestingAutomation {
 ;
       if (hasAxe) {;
         console.log(`'♿ Running axe-core accessibility tests...');
+<<<<<<< HEAD
         const output = execSync(npm run test:accessibility || echo 'No accessibility tests found",;
           {;
             encoding: 'utf8',;
@@ -270,6 +258,13 @@ class EnhancedTestingAutomation {
             encoding: 'utf8',
             cwd: process.cwd()}
         );
+=======
+        const output = execSync(npm run test: accessibility || echo 'No accessibility tests found',;
+          {;
+            encoding: 'utf8',;
+            cwd: process.cwd(),;
+          }        );
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
         this.testResults.accessibility.results = output;
       } else {;
         console.log('♿ Running basic accessibility checks...');
@@ -298,23 +293,9 @@ class EnhancedTestingAutomation {
     } catch (error) {  
       this.testResults.accessibility.status = 'failure';
       this.testResults.accessibility.results = error.message;
-      console.log(`'❌ Accessibility tests failed:', error.message);
+      console.log(`'❌ Accessibility tests failed: ', error.message);
       }
-;
-      this.testResults.accessibility.status = 'success';
-      console.log('✅ Accessibility tests completed'``);
-;
-      // Save results;
-      fs.writeFileSync(;
-        path.join(this.reportDir, 'accessibility-test-results.txt'),;
-        this.testResults.accessibility.results;
-      );
-    } catch (error) {;
-      this.testResults.accessibility.status = 'failure';
-      this.testResults.accessibility.results = error.message;
-      console.log(`'❌ Accessibility tests failed:', error.message);
-    }
-  }
+<<<<<<< HEAD  }
 ;
   async generateCoverageReport() {;
     console.log(`'📊 Generating Coverage Report...');
@@ -332,7 +313,11 @@ class EnhancedTestingAutomation {
 ;
       if (hasCoverage) {;
         console.log('📊 Coverage data found, generating report...');
+<<<<<<< HEAD
         const output = execSync(npm run test:coverage || echo 'No coverage script found",;
+=======
+        const output = execSync(npm run test: coverage || echo 'No coverage script found',;
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
           {;
             encoding: 'utf8',;
             cwd: process.cwd(),;
@@ -348,6 +333,7 @@ class EnhancedTestingAutomation {
             {
               encoding: `utf8`,
               cwd: process.cwd(),
+<<<<<<< HEAD
         try {;
           const output = execSync(;
             'npm test -- --coverage || echo "Coverage generation failed",;
@@ -355,6 +341,9 @@ class EnhancedTestingAutomation {
               encoding: 'utf8',;
               cwd: process.cwd(),;
             }
+=======
+<<<<<<< HEAD            }
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
           );
           this.testResults.coverage.results = output;
         } catch (coverageError) {this.testResults.coverage.results = Coverage generation failed: ${coverageError.message};
@@ -382,7 +371,7 @@ class EnhancedTestingAutomation {
     } catch (error) {;
       this.testResults.coverage.status = 'failure';
       this.testResults.coverage.results = error.message;
-      console.log('❌ Coverage report generation failed:', error.message);
+      console.log('❌ Coverage report generation failed: ', error.message);
       }
   }
 ;
@@ -394,7 +383,7 @@ class EnhancedTestingAutomation {
       .map((['name', '_']) => name);
 ;
     if (failedTests.length > 0) {;
-      console.log(`'❌ Quality gates failed for:', failedTests.join(', '));
+      console.log(`'❌ Quality gates failed for: ', failedTests.join(', '));
       return false;
     } else {;
       console.log('✅ All quality gates passed!');
@@ -418,20 +407,7 @@ class EnhancedTestingAutomation {
       },;
       results: this.testResults,;
       qualityGates: await this.runQualityGates(),;
-
-    const report = {
-      timestamp: new Date().toISOString(),
-      summary: {
-        total: Object.keys(this.testResults).length,
-        passed: Object.values(this.testResults).filter(
-          r => r.status === 'success`);
-        ).length,`);
-        failed: Object.values(this.testResults).filter(`);
-          r => r.status === 'failure`);
-        ).length},
-      results: this.testResults,
-      qualityGates: await this.runQualityGates()};
-
+    };
     // Save JSON report;
     fs.writeFileSync(
       path.join(this.reportDir, 'test-report.json'),
@@ -483,36 +459,6 @@ ${Object.entries(report.results)
 
 ## Quality Gates;
 ${report.qualityGates ? `✅ All quality gates passed successfully!' : '❌ Some quality gates failed. Check individual test results above.`}
-;
-## Summary;
-- **Total Test Suites**: ${report.summary.total}
-- **Passed**: ${report.summary.passed} ✅;
-- **Failed**: ${report.summary.failed} ❌;
-- **Quality Gates**: ${report.qualityGates ? 'PASSED' : 'FAILED'} ${report.qualityGates ? '✅' : '❌'}
-;
-## Test Results;
-
-| Test Suite | Status | Details |;
-|------------|--------|---------|;
-${Object.entries(report.results);
-  .map(;
-    (['name', 'result']) =>| ${name.charAt(0).toUpperCase() + name.slice(1)} | ${result.status === 'success' ? '✅ PASS' : '❌ FAIL'} | ${result.results ? result.results.substring(0, 100) + '...' : 'No results'} |;
-  );
-  .join('\n')}
-;
-## Quality Gates;
-${report.qualityGates ? '✅ All quality gates passed successfully!' : '❌ Some quality gates failed. Check individual test results above.'}
-;
-## Recommendations;
-${;
-  report.summary.failed > 0? 1. Review failed test suites;
-2. Fix failing tests before deployment;
-3. Investigate root causes of failures;
-4. Update test coverage as needed;
-    : 1. All tests are passing - ready for deployment;
-2. Consider adding more test coverage;
-3. Monitor test performance trends';
-
 ## Recommendations;
 ${
   report.summary.failed > 0? 1. Review failed test suites;
@@ -537,15 +483,6 @@ ${
 
   async runAllTests(``) {
     console.log(``🚀 Starting comprehensive test suite...`);
-;
-  async runAllTests(``) {;
-    console.log(`'🚀 Starting comprehensive test suite...');
-;
-  }`);
-`);
-  async runAllTests(``) {
-    console.log(`🚀 Starting comprehensive test suite...`);
-
     await this.runUnitTests();
     await this.runIntegrationTests();
     await this.runE2ETests();
@@ -572,18 +509,12 @@ ${
 
 // Main execution;
 async function main() {
-;
-// Main execution;
-async function main() {;
-  const testing = new EnhancedTestingAutomation();
+<<<<<<< HEAD  const testing = new EnhancedTestingAutomation();
 ;
   try {;
     await testing.runAllTests();
   } catch (error) {  
-    console.error(`❌ Testing automation failed:`, error);
-  } catch (error) {;
-    console.error('❌ Testing automation failed:', error);
-    process.exit(1);
+    console.error(`❌ Testing automation failed: `, error);    process.exit(1);
     }
 }
 

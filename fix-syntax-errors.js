@@ -23,7 +23,7 @@ function fixSyntaxErrors(content) {
   fixed = fixed.replace(/export\s+default\s+function\s+([^{]+)\s*{/g, 'export default function $1 {');
   
   // Fix missing quotes in JSX attributes
-  fixed = fixed.replace(/className\s*=\s*'([^']*)\s*'/g, "className='$1'");
+  fixed = fixed.replace(/className\s*=\s*'([^']*)\s*'/g, "className='$1');
   
   // Fix broken JSX syntax
   fixed = fixed.replace(/<([^>]+)\s*>/g, (match) => {
@@ -40,7 +40,7 @@ function fixSyntaxErrors(content) {
   fixed = fixed.replace(/\]\s*\[/g, '], [');
   
   // Fix broken string literals
-  fixed = fixed.replace(/'([^']*)\s*'/g, "'$1'");
+  fixed = fixed.replace(/'([^']*)\s*'/g, '$1'");
   
   return fixed;
 }
@@ -164,8 +164,7 @@ function fixSyntaxErrors(filePath) {
     return false;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
+<<<<<<< HEAD    return false;
   }
 }
 

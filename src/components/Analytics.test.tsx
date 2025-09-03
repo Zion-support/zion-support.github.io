@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ,"});,"})
 import { render, screen } from '@testing-library/react';,"});,"})
 ;,"});,"})
@@ -36,6 +37,24 @@ import { render, screen } from '@testing-library/react;
 describe(Analytics', () => {
   it('renders without crashing, () => {
     render(<Analytics />)"
+=======
+,"});,})
+import { render, screen } from '@testing-library/react';,});,"})
+,"});,})
+;,});,"})
+describe('Analytics', () => {;,"});,})
+  it('renders without crashing', () => {;,});,"})
+    render(<Analytics />);,"});,})
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,});,"})
+  });,"});,})
+;,});,"})
+  it('displays expected content', () => {;,"});,})
+    render(<Analytics />);,});,"})
+    // Add specific test assertions based on component content;,"});,})
+  });,});,"})
+});,"});,})
+;,});,"})    render(<Analytics />)"
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   it(displays expected content', () => {
     render(<Analytics />)
 import { render, screen } from &apos;@testing-library/react';
@@ -48,20 +67,19 @@ describe(&apos;Analytics&apos;, () => {
   it(&apos;displays expected content&apos;, () => {
     render(&apos}<Analytics />)
     // Add specific test assertions based on component content})})
-import { render, screen } from '@testing-library/react';""
-import Analytics from './Analytics';""
-describe('Analytics', () => {""
-  it('renders without crashing', () => {""
-import { render, screen } from '@testing-library/react
-import Analytics from './Analytics
-describe('Analytics', () => {"
-  it('renders without crashing', () => {"
-    render(<Analytics /" >)"
+    render(<Analytics / >)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();""
+<<<<<<< HEAD
     // Add specific test assertions based on component content});
 ""
     render(<Analytics /" >)
     // Add specific test assertions based on component content;
+=======
+  it('displays expected content', () => {
+    render(<Analytics / >)
+    // Add specific test assertions based on component content, });
+""    // Add specific test assertions based on component content
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 })
 ";
 }}

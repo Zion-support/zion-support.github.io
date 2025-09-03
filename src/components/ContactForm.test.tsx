@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ,"});,"})
 import { render, screen } from '@testing-library/react';,"});,"})
 ;,"});,"})
@@ -36,6 +37,24 @@ import { render, screen } from '@testing-library/react;
 describe(ContactForm', () => {
   it('renders without crashing, () => {
     render(<ContactForm />)"
+=======
+,"});,})
+import { render, screen } from '@testing-library/react';,});,"})
+,"});,})
+;,});,"})
+describe('ContactForm', () => {;,"});,})
+  it('renders without crashing', () => {;,});,"})
+    render(<ContactForm />);,"});,})
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,});,"})
+  });,"});,})
+;,});,"})
+  it('displays expected content', () => {;,"});,})
+    render(<ContactForm />);,});,"})
+    // Add specific test assertions based on component content;,"});,})
+  });,});,"})
+});,"});,})
+;,});,"})    render(<ContactForm />)"
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   it(displays expected content', () => {
     render(<ContactForm />)
 import { render, screen } from &apos;@testing-library/react';
@@ -48,20 +67,19 @@ describe(&apos;ContactForm&apos;, () => {
   it(&apos;displays expected content&apos;, () => {
     render(&apos}<ContactForm />)
     // Add specific test assertions based on component content})})
-import { render, screen } from '@testing-library/react';""
-import ContactForm from './ContactForm';""
-describe('ContactForm', () => {""
-  it('renders without crashing', () => {""
-import { render, screen } from '@testing-library/react
-import ContactForm from './ContactForm
-describe('ContactForm', () => {"
-  it('renders without crashing', () => {"
-    render(<ContactForm /" >)"
+    render(<ContactForm / >)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();""
+<<<<<<< HEAD
     // Add specific test assertions based on component content});
 ""
     render(<ContactForm /" >)
     // Add specific test assertions based on component content;
+=======
+  it('displays expected content', () => {
+    render(<ContactForm / >)
+    // Add specific test assertions based on component content, });
+""    // Add specific test assertions based on component content
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 })
 ";
 }}

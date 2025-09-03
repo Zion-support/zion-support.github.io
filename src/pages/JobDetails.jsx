@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  export default function JobDetails () {;,"});,"});
 }"});,"})
  export: default function JobDetails () {;
@@ -21,3 +22,7 @@ export default function JobDetails() {return (
 }
  export default function JobDetails () {;
 };
+=======
+ export default function JobDetails () {;,"});,})
+}});,"})
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

@@ -47,24 +47,7 @@ class TypeScriptErrorFixer {;
       this.log('🔧 Fixing ''import/export'' errors...');
       fixesApplied += await this.fixImportExportErrors();
 
-;
-      // 1. Fix TypeScript compilation errors;
-      this.log('🔧 Fixing TypeScript compilation errors...');
-      fixesApplied += await this.fixTypeScriptCompilationErrors();
-;
-      // 2. Fix type annotation errors;
-      this.log('🔧 Fixing type annotation errors...');
-      fixesApplied += await this.fixTypeAnnotationErrors();
-;
-      // 3. Fix interface and type definition errors;
-      this.log('🔧 Fixing interface and type definition errors...');
-      fixesApplied += await this.fixInterfaceTypeErrors();
-;
-      // 4. Fix 'import/export' errors;
-      this.log('🔧 Fixing 'import/export' errors...');
-      fixesApplied += await this.fixImportExportErrors();
-;
-      // 5. Run TypeScript compiler to check for remaining errors;
+<<<<<<< HEAD      // 5. Run TypeScript compiler to check for remaining errors;
       this.log('🔧 Running TypeScript compiler check...');
       try {;
         const result = await this.runCommand('npm', { args: ['run', 'type-check'] });
@@ -130,17 +113,7 @@ class TypeScriptErrorFixer {;
           let content = fs.readFileSync(filePath, 'utf8');
           let originalContent = content;
 
-;
-    // Fix files with TypeScript compilation errors;
-    const filesToFix = [''src/components/MobileExperienceEnhancer.tsx'', ''src/components/ModernUIEnhancer.tsx'', ''src/components/NotificationSystem.tsx'', ''src/components/PerformanceOptimizedLoader.tsx'', ''src/components/ProjectManagementTimeline.tsx'', ''src/components/ResourceManagementSystem.tsx'', ''src/components/ServicesOverview.tsx'', ''src/components/UltimateServicesShowcase.tsx'', ''src/components/UltimateServicesShowcase2025.tsx'', ''src/context/auth/AuthContext.tsx'', ''src/context/auth/profileMapper.ts'', ''src/context/auth/useAuthEventHandlers.ts'', ''src/context/auth/useAuthState.ts'', ''src/hooks/usePerformanceOptimization.ts'', ''src/layout/AppHeader.tsx'', ''src/layout/AppLayout.tsx'', ''src/layout/MainNavigation.tsx'', ''src/layout/PrimaryNav.tsx'', ''src/legal/TermsOfService.tsx'', ''src/pages/AIServicesPage.tsx'', ''src/pages/ForgotPassword.tsx'', ''src/pages/admin/SupportRequests.tsx'', '];
-;
-    for (const filePath of filesToFix) {;
-      if (fs.existsSync(filePath)) {;
-        try {;
-          let content = fs.readFileSync(filePath, 'utf8');
-          let originalContent = content;
-;
-          // Fix 'any' type annotations with proper types;
+<<<<<<< HEAD          // Fix 'any' type annotations with proper types;
           content = content.replace(/:\s*any'/g, ': string');
           content = content.replace(/:\s*'anyany/g', ': any');
           content = content.replace(/:\s*'anystring/g', ': string');
@@ -157,8 +130,7 @@ class TypeScriptErrorFixer {;
           content = content.replace(/:\s*{\s*;/g, ': {');
           content = content.replace(/:\s*{\s*}/g, ': {}');
 
-;
-          // Fix property signatures;
+<<<<<<< HEAD          // Fix property signatures;
           content = content.replace(/action\?\s*:\s*{\s*;/g, 'action?: {');
           content = content.replace(/lastPost\?\s*:\s*{\s*;/g, 'lastPost?: {');
           content = content.replace(/post\s*:\s*{\s*;/g, 'post: {');
@@ -203,11 +175,7 @@ class TypeScriptErrorFixer {;
           // Fix callback function types;
           content = content.replace(
             /setUser:\s*any\(user:\s*User\s*\|\s*null\)\s*=>\s*''void/g'',setUser: (user: User | null) => void'
-;
-          // Fix callback function types;
-          content = content.replace(;
-            /setUser:\s*any\(user:\s*User\s*\|\s*null\)\s*=>\s*'void/g',setUser: (user: User | null) => void';
-          );
+<<<<<<< HEAD          );
           content = content.replace(;
             /setOnboardingStep:\s*any\(step:\s*number\)\s*=>\s*'void/g',;
             'setOnboardingStep: (step: number) => void';
@@ -236,16 +204,12 @@ class TypeScriptErrorFixer {;
           // Fix JSX expressions;
           content = content.replace(
             /transition=\{\{\s*duration:\s*any(\d+\.?\d*),\s*delay:\s*(\d+\.?\d*)\s*\}\}/g,transition={{ duration: $1, delay: $2 }}'
-;
-          // Fix JSX expressions;
+<<<<<<< HEAD          );
+          content = content.replace(/color: \s*any'([^']+)'/g, "color: '$1');
+          content = content.replace(/icon:\s*any'([^']+)'/g, icon: '$1'");
+          content = content.replace(/id:\s*any'([^']+)'/g, "id: '$1');
           content = content.replace(;
-            /transition=\{\{\s*duration:\s*any(\d+\.?\d*),\s*delay:\s*(\d+\.?\d*)\s*\}\}/g,transition={{ duration: $1, delay: $2 }}';
-          );
-          content = content.replace(/color:\s*any'([^']+)'/g, "color: '$1'");
-          content = content.replace(/icon:\s*any'([^']+)'/g, "icon: '$1'");
-          content = content.replace(/id:\s*any'([^']+)'/g, "id: '$1'");
-          content = content.replace(;
-            /property:\s*any'([^']+)'/g,property: '$1'";
+            /property:\s*any'([^']+)'/g,property: '$1';
           );
           content = content.replace(/rel:\s*any'([^']+)'/g, "rel: `$1``);
 
@@ -292,26 +256,7 @@ class TypeScriptErrorFixer {;
           content = content.replace(/''apiClient/g``, `apiClient`);
 
           if (content !== originalContent) {
-;
-    // Fix specific type annotation issues;
-    const filesToFix = [''src/context/auth/useAuthState.ts'', ''src/hooks/usePerformanceOptimization.ts'', ''src/utils/tokenRewards.ts'', '];
-;
-    for (const filePath of filesToFix) {;
-      if (fs.existsSync(filePath)) {;
-        try {;
-          let content = fs.readFileSync(filePath, 'utf8');
-          let originalContent = content;
-;
-          // Fix specific type errors;
-          content = content.replace(/'anynull/g', 'null');
-          content = content.replace(;
-            /'IntersectionObserverCallback/g',IntersectionObserverCallback';
-          );
-          content = content.replace(/'NodeJS/g', 'NodeJS');
-          content = content.replace(/'apiClient/g', 'apiClient');
-;
-          if (content !== originalContent) {;
-            fs.writeFileSync(filePath, content);
+<<<<<<< HEAD            fs.writeFileSync(filePath, content);
             fixes++;
             this.log(`  ✅ Fixed type annotation errors in ${filePath}`);
           }
@@ -348,36 +293,28 @@ class TypeScriptErrorFixer {;
           // Fix interface property definitions;
           content = content.replace(/action\?\s*:\s*{\s*;/g, 'action?: {');
           content = content.replace(;
-            /success:\s*any\(title:\s*string,\s*message:\s*string,\s*options\?\s*:\s*Partial<Notification>\)\s*=>\s*{/g,success: (title: string, message: string, options?: Partial<Notification>) => {';
+            /success: \s*any\(title:\s*string,\s*message: \s*string,\s*options\?\s*:\s*Partial<Notification>\)\s*=>\s*{/g,success: (title: string, message: string, options?: Partial<Notification>) => {';
           );
           content = content.replace(;
-            /warning:\s*any\(title:\s*string,\s*message:\s*string,\s*options\?\s*:\s*Partial<Notification>\)\s*=>\s*{/g,;
+            /warning: \s*any\(title:\s*string,\s*message: \s*string,\s*options\?\s*:\s*Partial<Notification>\)\s*=>\s*{/g,;
             'warning: (title: string, message: string, options?: Partial<Notification>) => {';
           );
           content = content.replace(;
-            /error:\s*\(title:\s*string,\s*message:\s*string,\s*options\?\s*:\s*Partial<Notification>\)\s*=>\s*{/g,error: (title: string, message: string, options?: Partial<Notification>) => {';
+            /error: \s*\(title:\s*string,\s*message: \s*string,\s*options\?\s*:\s*Partial<Notification>\)\s*=>\s*{/g,error: (title: string, message: string, options?: Partial<Notification>) => {';
           );
           content = content.replace(;
-            /info:\s*\(title:\s*string,\s*message:\s*string,\s*options\?\s*:\s*Partial<Notification>\)\s*=>\s*{/g,;
+            /info: \s*\(title:\s*string,\s*message: \s*string,\s*options\?\s*:\s*Partial<Notification>\)\s*=>\s*{/g,;
             'info: (title: string, message: string, options?: Partial<Notification>) => {';
           );
           content = content.replace(
-            /achievement:\s*\(title:\s*string,\s*message:\s*string,\s*options\?\s*:\s*Partial<Notification>\)\s*=>\s*{/g,achievement: (title: string, message: string, options?: Partial<Notification>) => {`
+            /achievement: \s*\(title:\s*string,\s*message: \s*string,\s*options\?\s*:\s*Partial<Notification>\)\s*=>\s*{/g,achievement: (title: string, message: string, options?: Partial<Notification>) => {`
           );
 
           // Fix form field type;
-          content = content.replace(/field:\s*any\{/g, `field: {`);
+          content = content.replace(/field: \s*any\{/g, `field: {`);
           content = content.replace(
             /onChange:\s*\(\)\s*=>\s*\{\s*\}\s*\}/g,onChange: () => {} }`
-          content = content.replace(;
-            /achievement:\s*\(title:\s*string,\s*message:\s*string,\s*options\?\s*:\s*Partial<Notification>\)\s*=>\s*{/g,achievement: (title: string, message: string, options?: Partial<Notification>) => {';
-          );
-;
-          // Fix form field type;
-          content = content.replace(/field:\s*any\{/g, 'field: {');
-          content = content.replace(;
-            /onChange:\s*\(\)\s*=>\s*\{\s*\}\s*\}/g,onChange: () => {} }';
-          );
+<<<<<<< HEAD          );
 ;
           if (content !== originalContent) {;
             fs.writeFileSync(filePath, content);
@@ -416,7 +353,7 @@ class TypeScriptErrorFixer {;
 
           // Fix function declarations;
           content = content.replace(
-            /const\s+AIServicesPage:\s*React\.FC\s*=\s*\(\)\s*=>\s*\{/g,
+            /const\s+AIServicesPage: \s*React\.FC\s*=\s*\(\)\s*=>\s*\{/g,
             'const AIServicesPage: React.FC = () => {'
 ;
     // Fix 'import/export' issues;
@@ -448,8 +385,7 @@ class TypeScriptErrorFixer {;
             fs.writeFileSync(filePath, content);
             fixes++;
             this.log(`  ✅ Fixed ``import/export`` errors in ${filePath}`);
-            this.log(`  ✅ Fixed 'import/export' errors in ${filePath}`);
-          }
+<<<<<<< HEAD          }
         } catch (error) {  this.log(`  ⚠️  Could not fix ${filePath  }: ${error.message}`);
         }
       }
@@ -480,14 +416,7 @@ class TypeScriptErrorFixer {;
       fixesApplied: 0, // This will be updated by runTypeScriptErrorFixer;
       summary: `TypeScript error fixer report`,
       status: `completed`,
-;
-  async generateReport() {;
-    const report = {;
-      timestamp: new Date().toISOString(),;
-      fixesApplied: 0, // This will be updated by runTypeScriptErrorFixer;
-      summary: 'TypeScript error fixer report',;
-      status: 'completed',;
-    };
+<<<<<<< HEAD    };
     return report;
   }
 }
@@ -521,28 +450,7 @@ async function runContinuous() {
 // Handle graceful shutdown;
 process.on(`SIGINT`, () => {
   console.log(`🛑 Received SIGINT, shutting down gracefully...');
-;
-// Main continuous loop;
-async function runContinuous() {;
-  console.log(🚀 Starting TypeScript error fixer with ${errorFixer.AUTOMATION_INTERVAL / 1000 / 60} minute intervals';
-  );
-;
-  // Run initial error fixer;
-  await errorFixer.runTypeScriptErrorFixer();
-;
-  // Set up continuous execution;
-  setInterval(async () => {;
-    await errorFixer.runTypeScriptErrorFixer();
-  }, errorFixer.AUTOMATION_INTERVAL);
-;
-  console.log( ✅ TypeScript error fixer running. Next check in ${errorFixer.AUTOMATION_INTERVAL / 1000 / 60} minutes;
-  `);
-}
-;
-// Handle graceful shutdown;
-process.on('SIGINT', () => {;
-  console.log('🛑 Received SIGINT, shutting down gracefully...');
-  process.exit(0);
+<<<<<<< HEAD  process.exit(0);
 });
 ;
 process.on('SIGTERM', () => {;
@@ -552,9 +460,5 @@ process.on('SIGTERM', () => {;
 
 // Start the TypeScript error fixer;
 runContinuous().catch(error => {
-;
-// Start the TypeScript error fixer;
-runContinuous().catch(error => {;
-  console.error('❌ Failed to start TypeScript error fixer:', error);
-  process.exit(1);
+  console.error('❌ Failed to start TypeScript error fixer: ', error);  process.exit(1);
 });

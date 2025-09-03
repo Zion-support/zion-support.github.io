@@ -20,10 +20,7 @@ class DependencyManager {;
     this.logFile = path.join(;
       this.projectRoot,logs',;
       'dependency-manager.log';
-    this.logFile = path.join(
-      this.projectRoot, 'logs',
-      'dependency-manager.log'
-    );
+<<<<<<< HEAD    );
     this.reportsDir = path.join(this.projectRoot, 'logs', `dependency-reports`);
     this.ensureLogsDirectory();
   }
@@ -60,21 +57,7 @@ class DependencyManager {;
       // 2. Fix package.json issues;
       if (status.packageJsonIssues.length > 0) {
         const packageFixes = await this.fixPackageJsonIssues(
-;
-  async runDependencyManagement() {;
-    this.log('Starting dependency management automation...');
-;
-    const actions = [];
-    const errors = [];
-;
-    try {;
-      // 1. Check current dependency status;
-      const status = await this.checkDependencyStatus();
-;
-      // 2. Fix package.json issues;
-      if (status.packageJsonIssues.length > 0) {;
-        const packageFixes = await this.fixPackageJsonIssues(;
-          status.packageJsonIssues;
+<<<<<<< HEAD          status.packageJsonIssues;
         );
         actions.push(...packageFixes);
       }
@@ -159,9 +142,7 @@ class DependencyManager {;
     };
 
     try {
-;
-    try {;
-      // Check package.json;
+<<<<<<< HEAD      // Check package.json;
       const packagePath = path.join(this.projectRoot, 'package.json');
       if (fs.existsSync(packagePath)) {;
         try {;
@@ -203,17 +184,7 @@ class DependencyManager {;
                   type: 'INVALID_DEV_VERSION',
                   dependency: dep,
                   current: version,
-;
-          if (packageJson.devDependencies) {;
-            for (const ['dep', 'version'] of Object.entries(;
-              packageJson.devDependencies;
-            )) {;
-              if (typeof version !== 'string' || version.trim() === ') {;
-                status.packageJsonIssues.push({;
-                  type: 'INVALID_DEV_VERSION',;
-                  dependency: dep,;
-                  current: version,;
-                });
+<<<<<<< HEAD                });
               }
             }
           }
@@ -255,15 +226,7 @@ class DependencyManager {;
       } catch (error) {  
         this.log(Failed to check outdated dependencies: ${error.message  }`,
           `WARN`
-;
-      // Check for outdated dependencies;
-      try {;
-        const outdated = await this.checkOutdatedDependencies();
-        status.outdatedDeps = outdated;
-      } catch (error) {;
-        this.log(Failed to check outdated dependencies: ${error.message}',;
-          'WARN';
-        );
+<<<<<<< HEAD        );
       }
     } catch (error) {  this.log(`Dependency status check failed: ${error.message  }`, `ERROR`);
     }
@@ -307,19 +270,7 @@ class DependencyManager {;
           corrupted.push({
             name: pkg,
             issue: `Missing package.json`,
-            path: pkgPath} catch {;
-            corrupted.push({;
-              name: pkg,;
-              issue: 'Invalid package.json',;
-              path: pkgPath,;
-            });
-          }
-        } else {;
-          corrupted.push({;
-            name: pkg,;
-            issue: 'Missing package.json',;
-            path: pkgPath,;
-          });
+            path: pkgPath,          });
         }
       }
     } catch (error) {  this.log(`Error scanning packages: ${error.message  }`, `WARN`);
@@ -360,6 +311,7 @@ class DependencyManager {;
             current: info.current,
             wanted: info.wanted,
             latest: info.latest}));
+<<<<<<< HEAD
         } catch {;
 } catch (error) {;
       // npm outdated returns non-zero exit code when there are outdated deps;
@@ -374,6 +326,10 @@ class DependencyManager {;
           }));
         } catch {;
           return [];
+=======
+        } catch {
+<<<<<<< HEAD          return [];
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
         }
       }
       return [];
@@ -449,11 +405,7 @@ class DependencyManager {;
     try {
       this.log(`Cleaning corrupted dependencies...`);
 
-;
-    try {;
-      this.log('Cleaning corrupted dependencies...');
-;
-      const nodeModulesPath = path.join(this.projectRoot, 'node_modules');
+<<<<<<< HEAD      const nodeModulesPath = path.join(this.projectRoot, 'node_modules');
       const packageLockPath = path.join(this.projectRoot, 'package-lock.json');
 ;
       if (fs.existsSync(nodeModulesPath)) {;
@@ -498,15 +450,7 @@ class DependencyManager {;
       execSync('npm install', {
         cwd: this.projectRoot,
         stdio: 'pipe',
-;
-    try {;
-      this.log('Reinstalling dependencies...');
-;
-      // Run npm install;
-      execSync('npm install', {;
-        cwd: this.projectRoot,;
-        stdio: 'pipe',;
-      });
+<<<<<<< HEAD      });
 ;
       this.log('Dependencies reinstalled successfully');
 
@@ -531,9 +475,7 @@ class DependencyManager {;
     const actions = [];
 
     try {
-;
-    try {;
-      // Check for outdated dependencies;
+<<<<<<< HEAD      // Check for outdated dependencies;
       const outdated = await this.checkOutdatedDependencies();
 ;
       if (outdated.length > 0) {this.log(`Found ${outdated.length} outdated dependencies`);
@@ -581,15 +523,7 @@ class DependencyManager {;
 
     // Major version should be the same;
     if (currentParts[0] !== wantedParts[0]) {
-;
-  isSafeUpdate(current, wanted) {;
-    // Only allow minor and patch updates (semver);
-    const currentParts = current.split('.').map(Number);
-    const wantedParts = wanted.split('.').map(Number);
-;
-    // Major version should be the same;
-    if (currentParts[0] !== wantedParts[0]) {;
-      return false;
+<<<<<<< HEAD      return false;
     }
 ;
     return true;
@@ -643,31 +577,7 @@ this.log(`Dependency report generated: ${reportFile}`);
 
 // Main execution;
 async function main() {
-;
-  async commitDependencyChanges(actions) {;
-    try {;
-      this.log('Committing dependency changes...');
-;
-      // Add package.json and package-lock.json;
-      execSync('git add package.json package-lock.json', {;
-        cwd: this.projectRoot,;
-        stdio: 'pipe',;
-      });
-;
-      // Commitconst commitMessage = `chore: Auto-manage dependencies (${actions.length} actions)`;execSync(`git commit -m "${commitMessage}"`, {;
-        cwd: this.projectRoot,;
-        stdio: 'pipe',;
-      });
-;
-      this.log('Dependency changes committed successfully');
-    } catch (error) {this.log(`Failed to commit dependency changes: ${error.message}`, 'WARN');
-    }
-  }
-}
-;
-// Main execution;
-async function main() {;
-  const manager = new DependencyManager();
+<<<<<<< HEAD  const manager = new DependencyManager();
 ;
   try {;
     const result = await manager.runDependencyManagement();

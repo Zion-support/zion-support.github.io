@@ -57,21 +57,7 @@ class SmartDeploymentAutomation {;
         duration: duration,
         error: error.message;
         });
-      this.deploymentSteps.push({;
-        name: stepName,;
-        status: 'success',;
-        duration: duration;
-      });
-      this.log(`✅ Step completed: ${stepName} (${duration}ms)`);
-    } catch (error) {;
-      const duration = Date.now() - stepStartTime;
-      this.deploymentSteps.push({;
-        name: stepName,;
-        status: 'failed',;
-        duration: duration,;
-        error: error.message;
-      });
-      this.log(`❌ Step failed: ${stepName} - ${error.message}`);
+<<<<<<< HEAD      this.log(`❌ Step failed: ${stepName} - ${error.message}`);
       throw error;
     }
   }
@@ -91,7 +77,7 @@ class SmartDeploymentAutomation {;
 
     // Check if tests pass;
     try {
-      execSync(`npm run test:ci`, { stdio: `pipe` });
+      execSync(`npm run test: ci`, { stdio: `pipe` });
     } catch (error) {  
       throw new Error('Tests are failing. Please fix tests before deployment.');
       }
@@ -148,19 +134,7 @@ class SmartDeploymentAutomation {;
     // Create backup of current build;
     if (fs.existsSync(`.next`)) {
       execSync(`cp -r .next ${backupPath}`, { stdio: `pipe` });
-    ;
-    const backupDir = path.join(this.projectRoot, 'deployment-backups');
-    if (!fs.existsSync(backupDir)) {;
-      fs.mkdirSync(backupDir, { recursive: true });
-    }
-;
-    const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-    const backupPath = path.join(backupDir, `backup-${timestamp}`);
-    ;
-    // Create backup of current build;
-    if (fs.existsSync('.next')) {;
-      execSync(`cp -r .next ${backupPath}`, { stdio: 'pipe' });
-    }
+<<<<<<< HEAD    }
 ;
     this.log(`✅ Backup created at: ${backupPath}`);
     return backupPath;
@@ -193,19 +167,10 @@ class SmartDeploymentAutomation {;
     process.env.NEXT_TELEMETRY_DISABLED = '1';
     
     // Run production build;
-    execSync('npm run build:production', { stdio: `pipe` });
+    execSync('npm run build: production', { stdio: `pipe` });
     
     this.log(`✅ Production optimization completed`);
-    ;
-    // Set production environment variables;
-    process.env.NODE_ENV = 'production';
-    process.env.NEXT_TELEMETRY_DISABLED = '1';
-    ;
-    // Run production build;
-    execSync('npm run build:production', { stdio: 'pipe' });
-    ;
-    this.log('✅ Production optimization completed');
-  }
+<<<<<<< HEAD  }
 ;
   async deployToEnvironment() {;
     this.log(`🚀 Deploying to ${this.environment} environment...`);
@@ -280,53 +245,7 @@ class SmartDeploymentAutomation {;
 };
     
     const reportPath = path.join(this.projectRoot, `automation/logs`, `deployment-report.json`);
-    ;
-    // Health check;
-    try {;
-      // Add your health check logic here;
-      // Example: fetch('https://your-app.com/health');
-      this.log('✅ Health check passed');
-    } catch (error) {;
-      throw new Error(`Health check failed: ${error.message}`);
-    }
-;
-    // Performance check;
-    try {;
-      // Add your performance check logic here;
-      this.log('✅ Performance check passed');
-    } catch (error) {;
-      this.log('⚠️ Performance check failed, but deployment is functional');
-    }
-  }
-;
-  async rollback(backupPath) {;
-    this.log('🔄 Rolling back deployment...');
-    ;
-    try {;
-      if (fs.existsSync(backupPath)) {;
-        execSync(`rm -rf .next && cp -r ${backupPath} .next`, { stdio: 'pipe' });
-        this.log('✅ Rollback completed');
-      } else {;
-        this.log('❌ Backup not found, cannot rollback');
-      }
-    } catch (error) {;
-      this.log(`❌ Rollback failed: ${error.message}`);
-    }
-  }
-;
-  async generateDeploymentReport() {;
-    this.log('📊 Generating deployment report...');
-    ;
-    const report = {;
-      timestamp: new Date().toISOString(),;
-      environment: this.environment,;
-      steps: this.deploymentSteps,;
-      totalDuration: Date.now() - this.startTime,;
-      success: this.deploymentSteps.every(step => step.status === 'success');
-    };
-    ;
-    const reportPath = path.join(this.projectRoot, 'automation/logs', 'deployment-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+<<<<<<< HEAD    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`Report saved to: ${reportPath}`);
     return report;
   }
@@ -359,18 +278,7 @@ class SmartDeploymentAutomation {;
       this.log(`❌ Deployment failed: ${error.message  }`);
       
       if (backupPath) {
-      await this.runStep('Post-deployment checks', () => this.postDeploymentChecks());
-      ;
-      const report = await this.generateDeploymentReport();
-      ;
-      this.log('✅ Smart deployment completed successfully!');
-      this.log(`Total deployment time: ${report.totalDuration}ms`);
-      ;
-    } catch (error) {;
-      this.log(`❌ Deployment failed: ${error.message}`);
-      ;
-      if (backupPath) {;
-        await this.rollback(backupPath);
+<<<<<<< HEAD        await this.rollback(backupPath);
       }
       ;
       const report = await this.generateDeploymentReport();
@@ -387,14 +295,7 @@ class SmartDeploymentAutomation {;
 if (require.main === module) {
   const deployment = new SmartDeploymentAutomation();
   deployment.deploy().catch(error => {
-    console.error(`❌ Deployment failed:`, error);
-;
-// Run deployment if called directly;
-if (require.main === module) {;
-  const deployment = new SmartDeploymentAutomation();
-  deployment.deploy().catch(error => {;
-    console.error('❌ Deployment failed:', error);
-    process.exit(1);
+    console.error(`❌ Deployment failed: `, error);    process.exit(1);
   });
 }
 ;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  export default function ForgotPassword () {;,"});,"});
 }"});,"})
  export: default function ForgotPassword () {;
@@ -21,3 +22,7 @@ export default function ForgotPassword() {return (
 }
  export default function ForgotPassword () {;
 };
+=======
+ export default function ForgotPassword () {;,"});,})
+}});,"})
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

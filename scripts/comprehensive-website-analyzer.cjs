@@ -20,12 +20,7 @@ const axios = require('axios');const fs = require('fs').promises;const path = re
     if (this.checkedUrls.has(url)) {;
       return;
     }
-    this.startTime = Date.now();}
-;
-  async checkUrl(url, parentUrl = null) {;
-    if (this.checkedUrls.has(url)) {;
-      return;}
-;
+<<<<<<< HEAD;
     this.checkedUrls.add(url);
 ;
     try {;
@@ -209,6 +204,7 @@ const axios = require('axios');const fs = require('fs').promises;const path = re
     console.log('Analysis completed!');
   }
 ;
+<<<<<<< HEAD
     const linkRegex = /href=["']([^"']+)["']/g;    let match;;
     while ((match = linkRegex.exec(html)) !== null) {;
       const link = match[1];
@@ -239,6 +235,9 @@ const axios = require('axios');const fs = require('fs').promises;const path = re
 ;
     console.log('Analysis completed!');  }';;
   generateReport() {;
+=======
+<<<<<<< HEAD  generateReport() {;
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     const endTime = Date.now();
     const duration = endTime - this.startTime;
 ;
@@ -282,7 +281,7 @@ const axios = require('axios');const fs = require('fs').promises;const path = re
       recommendations.push({;
         type: 'warning',;
         title: 'Expand Content',;
-        description:Website has limited content. Consider adding more pages and services.',;
+        description: Website has limited content. Consider adding more pages and services.',;
         actions: [;
           { action: 'Add more service pages', priority: 'medium' },;
           { action: 'Create blog section', priority: 'medium' },;
@@ -349,7 +348,7 @@ async function main() {;
       });
     }
   } catch (error) {;
-    console.error('Analysis failed:', error);
+    console.error('Analysis failed: ', error);
   }
 }
 ;

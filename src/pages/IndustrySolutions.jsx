@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'; export default IndustrySolutions; import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory, Store, Home, GraduationCap, Stethoscope const IndustrySolutions = () => { const [searchTerm, setSearchTerm] = useState("); const [selectedIndustry, setSelectedIndustry] = useState("all"); const [selectedSolutionType, setSelectedSolutionType] = useState("all");
  export default IndustrySolutions; import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory, Store, Home, GraduationCap, Stethoscope const IndustrySolutions = () => { const [searchTerm, setSearchTerm] = useState("); const [selectedIndustry, setSelectedIndustry] = useState("all"); const [selectedSolutionType, setSelectedSolutionType] = useState("all");,"});,"})
  export default IndustrySolutions import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory, Store, Home, GraduationCap, Stethoscope const IndustrySolutions = () => { const [searchTerm, setSearchTerm] = useState(') const [selectedIndustry, setSelectedIndustry] = useState('all') const [selectedSolutionType, setSelectedSolutionType] = useState('all");
@@ -12,3 +13,6 @@ import React from 'react'; export default IndustrySolutions; import { Search, Za
  export default IndustrySolutions import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory, Store, Home, GraduationCap, Stethoscope const IndustrySolutions = () => { const [searchTerm, setSearchTerm] = useState(') const [selectedIndustry, setSelectedIndustry] = useState('all') const [selectedSolutionType, setSelectedSolutionType] = useState('all");
 ;";
 }}}
+=======
+import React from 'react'; export default IndustrySolutions; import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory, Store, Home, GraduationCap, Stethoscope const IndustrySolutions = () => { const [searchTerm, setSearchTerm] = useState("); const [selectedIndustry, setSelectedIndustry] = useState(all); const [selectedSolutionType, setSelectedSolutionType] = useState("all");
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

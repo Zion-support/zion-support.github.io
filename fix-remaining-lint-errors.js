@@ -13,15 +13,15 @@ function fixRemainingLintErrors(content) {
 
   // Fix Next.js link issues - replace <a> with <Link> for internal navigation
   fixed = fixed.replace(
-    /<a\s+href="\/([^"]+)"([^>]*)>/g,
-    '<Link href="/$1"$2>'
+    /<a\s+href=\/([^]+)"([^>]*)>/g,
+    '<Link href="/$1$2>'
   );
   fixed = fixed.replace(/<\/a>/g, '</Link>');
 
   // Add Link import if not present
   if (
     fixed.includes('<Link') &&
-    !fixed.includes("import Link from 'next/link'")
+    !fixed.includes(import Link from 'next/link'")
   ) {
     fixed = fixed.replace(
       /import\s+([^;]+);/,

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type ServiceItem = { id: string; title: string; description: string; category: 'Micro SaaS' | 'IT Services' | 'AI Solutions' | 'Cybersecurity' | 'Data & Analytics' | 'Cloud & DevOps' | 'Quantum Computing' | 'Blockchain & Web3' | 'IoT & Edge' | 'Green Tech' | 'Space Tech' | 'BioTech & Health' | 'FinTech & DeFi' | 'Metaverse & AR/VR' | 'Autonomous Systems' | 'Sustainability' | 'Digital Transformation' | 'Enterprise Solutions'; price: string;
 
 export type ServiceItem = {; id: string; title: string; description: string; category: 'Micro SaaS' | 'IT Services' | 'AI Solutions' | 'Cybersecurity' | 'Data & Analytics' | 'Cloud & DevOps' | 'Quantum Computing' | 'Blockchain & Web3' | 'IoT & Edge' | 'Green Tech' | 'Space Tech' | 'BioTech & Health' | 'FinTech & DeFi' | 'Metaverse & AR/VR' | 'Autonomous Systems' | 'Sustainability' | 'Digital Transformation' | 'Enterprise Solutions'; price: string;'';,"});,"})
@@ -20,3 +21,6 @@ export type ServiceItem = { id: string title: string description: string categor
 ;
 ";
 }
+=======
+export type ServiceItem = { id: string; title: string; description: string; category: 'Micro SaaS' | 'IT Services' | 'AI Solutions' | 'Cybersecurity' | 'Data & Analytics' | 'Cloud & DevOps' | 'Quantum Computing' | 'Blockchain & Web3' | 'IoT & Edge' | 'Green Tech' | 'Space Tech' | 'BioTech & Health' | 'FinTech & DeFi' | 'Metaverse & AR/VR' | 'Autonomous Systems' | 'Sustainability' | 'Digital Transformation' | 'Enterprise Solutions'; price string, 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

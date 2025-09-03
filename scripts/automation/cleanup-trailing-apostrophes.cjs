@@ -25,27 +25,7 @@ function cleanContent(content) {
       .replace(/([;)}\]>])\s*'\s*$/u, '$1')
       .replace(/>\s*'\s*$/u, '>')
       .replace(/^'\s*$/u, '')
-;
-/**;
- * Returns true if the file should be processed;
- */;
-function shouldProcess(filePath) {;
-  const ext = path.extname(filePath);
-  return exts.has(ext);
-}
-;
-/**;
- * Clean content by removing stray trailing apostrophes introduced at EOL;
- */;
-function cleanContent(content) {;
-  // Line-level fixes;
-  const lines = content.split(/\r?\n/).map(line =>;
-    line;
-      // Remove a single trailing apostrophe after common closing tokens;
-      .replace(/([;)}\]>])\s*'\s*$/u, '$1');
-      .replace(/>\s*'\s*$/u, '>');
-      .replace(/^'\s*$/u, ');
-  );
+<<<<<<< HEAD  );
 ;
   let out = lines.join('\n');
 
@@ -95,9 +75,14 @@ function main() {;
         fs.writeFileSync(f, updated, 'utf8');
         changed += 1;
       }
+<<<<<<< HEAD
     } catch (e) {;
 } catch (e) {;
       // ignore file-level errors;
+=======
+    } catch (e) {
+<<<<<<< HEAD      // ignore file-level errors;
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     }
   }
   console.log(`Cleaned ${changed} files.`);

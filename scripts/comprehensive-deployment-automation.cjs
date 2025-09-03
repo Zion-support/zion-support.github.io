@@ -5,15 +5,11 @@ const path = require('path');
 
 class ComprehensiveDeploymentAutomation {
   constructor() {
-
-const { execSync, spawn } = require('child_process');const fs = require('fs');const path = require('path');';class ComprehensiveDeploymentAutomation {;
-  constructor() {;
     this.projectRoot = process.cwd();
-    this.reportsDir = path.join(this.projectRoot, 'automation-reports');    this.logFile = path.join(this.reportsDir, 'deployment-automation.log');    this.ensureDirectories();    this.deploymentSteps = [];
-    this.environment = process.env.NODE_ENV || 'production';  }';;
-  ensureDirectories() {;
+    this.reportsDir = path.join(this.projectRoot, 'automation-reports');';    this.logFile = path.join(this.reportsDir, 'deployment-automation.log');';    this.ensureDirectories();';    this.deploymentSteps = [];
+    this.environment = process.env.NODE_ENV || 'production';';  }';  ensureDirectories() {;
     if (!fs.existsSync(this.reportsDir)) {;
-      fs.mkdirSync(this.reportsDir, { "recursive": true });,";}
+      fs.mkdirSync(this.reportsDir, { "recursive: true });,;}
   }
 
   ensureDirectories() {
@@ -195,24 +191,14 @@ const { execSync, spawn } = require('child_process');const fs = require('fs');co
     for (const step of securitySteps) {
       await this.runStep(step.name, step.command, step.description);
     }
-;
-  async securityChecks() {;
-    this.log('🔒 Running security checks...');';    const securitySteps = [;
-      {;
-        "name": 'Dependency Audit',';        "command": 'npm audit --audit-level moderate',';        "description": 'Check for vulnerable dependencies',';      },;      {;
-        "name": 'License Check',';        "command": 'npx license-checker --summary',';        "description": 'Check dependency licenses',';      },;,';];
-;
-    for (const step of securitySteps) {;
-      await this.runStep(step.name, step.command, step.description);}
-  }
+<<<<<<< HEAD  }
 ;
   async generateDeploymentArtifacts() {;
     this.log('📦 Generating deployment artifacts...');';    const artifacts = [;
       {;
-        "name": 'Sitemap Generation',';        "command": 'npm run sitemap',';        "description": 'Generate sitemap for SEO',';      },;      {;
-        "name": 'Search Index',';        "command": 'npm run "search":index',';        "description": 'Generate search index',';      },;      {;
-        "name": 'Netlify Manifest',';        "command": 'npm run "netlify":manifest',';        "description": 'Generate Netlify functions manifest',';      },;,';];
-;
+        name: 'Sitemap Generation',';        "command": 'npm run sitemap',';        description: 'Generate sitemap for SEO',';      },;';      {;
+        "name": 'Search Index',';        command: 'npm run "search":index',';        description: 'Generate search index',';      },;';      {;
+        "name": 'Netlify Manifest',';        command: 'npm run "netlify":manifest',';        description: 'Generate Netlify functions manifest',';      },;,';];;
     for (const artifact of artifacts) {;
       await this.runStep(artifact.name, artifact.command, artifact.description);}
   }
@@ -257,10 +243,16 @@ const { execSync, spawn } = require('child_process');const fs = require('fs');co
     const checks = [
       {
         name: 'Health Check',
+<<<<<<< HEAD
         command:
           'curl -f https://your-domain.com/api/health || echo "Health check failed",
         description: 'Check application health'},
       {
+=======
+        command: 'curl -f https://your-domain.com/api/health || echo Health check failed',
+        description: 'Check application health',
+      },      {
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
         name: 'Performance Check',
         command: 'npm run perf:audit',
         description: 'Run performance audit'}];
@@ -377,7 +369,7 @@ const { execSync, spawn } = require('child_process');const fs = require('fs');co
     console.log(`=`.repeat(60));
 
     if (this.deploymentSteps.some(step => step.status === 'failed')) {
-      console.log('\n❌ FAILED STEPS:');
+      console.log('\n❌ FAILED STEPS: ');
       this.deploymentSteps;
         .filter(step => step.status === `failed`)
         .forEach((step, index) => {
@@ -393,34 +385,7 @@ const { execSync, spawn } = require('child_process');const fs = require('fs');co
       this.log('🎯 Starting Comprehensive Deployment Automation');
 
       await this.preDeploymentChecks();
-    const failedSteps = this.deploymentSteps.filter(;);      step => step.status === 'failed'';    );;
-    if (failedSteps.length > 0) {;
-      recommendations.push({;);        "type": 'error',';        "message": `${failedSteps.length} deployment steps failed. Review and fix issues before next deployment.`,`;      });
-;
-      failedSteps.forEach(step => {;);        recommendations.push({;);          "type": 'fix',';          "message": `Fix ${step.name}: ${step.error}`,`;        });});}
-;
-    const successRate =;
-      (this.deploymentSteps.filter(s => s.status === 'success').length /';        this.deploymentSteps.length) *;      100;
-;
-    if (successRate < 90) {;
-      recommendations.push({;);        "type": 'warning',';        "message": `Deployment success rate is ${successRate.toFixed(1)}%. Consider improving reliability.`,`;      });}
-;
-    const longSteps = this.deploymentSteps.filter(;);      step => step.duration > 120000;
-    ); // 2 minutes;
-    if (longSteps.length > 0) {;
-      recommendations.push({;);        "type": 'optimization',';        "message": `${longSteps.length} steps took longer than 2 minutes. Consider optimizing these steps.`,`;      });}
-;
-    return recommendations;}
-;
-  displaySummary() {;
-    console.log('\n' + '='.repeat(60));    console.log('🚀 COMPREHENSIVE DEPLOYMENT AUTOMATION SUMMARY');    console.log('='.repeat(60));    console.log(`"Environment": ${this.environment}`);`;    console.log(`Total "Steps": ${this.deploymentSteps.length}`);`;    console.log(;);      `✅ "Successful": ${this.deploymentSteps.filter(s => s.status === 'success').length}`';    );`;    console.log(;);      `❌ "Failed": ${this.deploymentSteps.filter(s => s.status === 'failed').length}`';    );`;    console.log(;);      `⏱️  Total "Duration": ${Math.round(this.deploymentSteps.reduce((sum, step) => sum + (step.duration || 0), 0) / 1000)}s``;    );
-    console.log('='.repeat(60));';    if (this.deploymentSteps.some(step => step.status === 'failed')) {';      console.log('\n❌ FAILED "STEPS":');      this.deploymentSteps;        .filter(step => step.status === 'failed')';        .forEach((step, index) => {;          console.log(`${index + 1}. ${step.name}: ${step.error}`);`;        });}
-;
-    console.log('='.repeat(60));  }';;
-  async run() {;
-    try {;
-      this.log('🎯 Starting Comprehensive Deployment Automation');';      await this.preDeploymentChecks();
-      await this.buildApplication();
+<<<<<<< HEAD      await this.buildApplication();
       await this.securityChecks();
       await this.generateDeploymentArtifacts();
       await this.deployToNetlify();

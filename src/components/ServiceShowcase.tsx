@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React { useState, useMemo } from 'react'; import { motion, AnimatePresence  } from 'framer-motion'; import { allServices, contactInfo } from '../data/services'; ; const ServiceShowcase: React.FC = React.memo(() => { const [selectedCategory, setSelectedCategory] = useState<string>('all'); const [sortBy, setSortBy] = useState<'name' | 'price' | 'popularity'>('popularity'); ;
 import React { useState, useMemo } from 'react'; import { motion, AnimatePresence    } from 'framer-motion'; import { allServices, contactInfo } from '../data/services'; ; const ServiceShowcase: React.FC = React.memo(() => { const [selectedCategory, setSelectedCategory] = useState<string>('all'); const [sortBy, setSortBy] = useState<'name' | 'price' | 'popularity'>('popularity'); ;
 
@@ -18,3 +19,6 @@ import React { useState, useMemo } from 'react' import { motion, AnimatePresence
 }
 import React { useState, useMemo } from 'react' import { motion, AnimatePresence } from 'framer - motion' import { allServices, contactInfo }  from '../data / services';const ServiceShowcase: React.FC = React.memo ( () => { const [selectedCategory, setSelectedCategory] = useState < string> ('all')  const [sortBy, setSortBy] = useState<'name' | 'price' | 'popularity'> ('popularity')  
 "
+=======
+import React, { useState, useMemo } from 'react'; import { motion, AnimatePresence  } from 'framer-motion'; import { allServices, contactInfo } from '../data/services'; ; const ServiceShowcase: React.FC = React.memo(() => {; const [selectedCategory, setSelectedCategory] = useState<string>('all'); const [sortBy, setSortBy] = useState<'name' | 'price' | 'popularity'>('popularity'); ;
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

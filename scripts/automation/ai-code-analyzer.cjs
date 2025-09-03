@@ -78,40 +78,9 @@ class AICodeAnalyzer {;
 
       console.log(``✅ AI code analysis completed successfully`);
     } catch (error) {  
-      console.error(`❌ AI code analysis failed:`, error.message);
+      console.error(`❌ AI code analysis failed: `, error.message);
       }
-;
-      // Analyze TypeScript files;
-      await this.analyzeTypeScriptFiles();
-;
-      // Analyze React components;
-      await this.analyzeReactComponents();
-;
-      // Analyze performance patterns;
-      await this.analyzePerformancePatterns();
-;
-      // Analyze security patterns;
-      await this.analyzeSecurityPatterns();
-;
-      // Generate AI suggestions;
-      await this.generateAISuggestions();
-;
-      // Calculate scores;
-      this.calculateScores();
-;
-      // Generate report;
-      await this.generateReport();
-;
-      console.log(`'✅ AI code analysis completed successfully');
-    } catch (error) {;
-`);
-      // Generate report`);
-      await this.generateReport();`);
-`);
-      console.log(`✅ AI code analysis completed successfully`);
-    } catch (error) {
-      console.error('❌ AI code analysis failed:', error.message);
-    }
+      console.error('❌ AI code analysis failed: ', error.message);    }
   }
 ;
   async analyzeTypeScriptFiles() {;
@@ -128,8 +97,8 @@ class AICodeAnalyzer {;
           file: path.relative(process.cwd(), file),
           type: `high_complexity`,
           severity: `medium`,description: Function complexity score: ${complexity}`,
-          suggestion:Consider breaking down complex functions into smaller, more manageable pieces`});
-      }
+          suggestion: Consider breaking down complex functions into smaller, more manageable pieces`,
+        });      }
 
       // Analyze import patterns;
       const importAnalysis = this.analyzeImports(content);
@@ -139,29 +108,7 @@ class AICodeAnalyzer {;
           type: `unused_imports`,
           severity: `low`,
           description: Found ${importAnalysis.unusedImports.length} unused imports`,
-          suggestion:Remove unused imports to improve code clarity and reduce bundle size`,
-;
-      // Analyze code complexity;
-      const complexity = this.calculateComplexity(content);
-      if (complexity > 10) {;
-        this.analysisResults.codeSmells.push({;
-          file: path.relative(process.cwd(), file),;
-          type: 'high_complexity',;
-          severity: 'medium',description: Function complexity score: ${complexity}',;
-          suggestion:Consider breaking down complex functions into smaller, more manageable pieces',;
-        });
-      }
-;
-      // Analyze import patterns;
-      const importAnalysis = this.analyzeImports(content);
-      if (importAnalysis.unusedImports.length > 0) {;
-        this.analysisResults.codeSmells.push({;
-          file: path.relative(process.cwd(), file),;
-          type: 'unused_imports',;
-          severity: 'low',;
-          description: Found ${importAnalysis.unusedImports.length} unused imports',;
-          suggestion:Remove unused imports to improve code clarity and reduce bundle size',;
-        });
+          suggestion: Remove unused imports to improve code clarity and reduce bundle size`,        });
       }
     }
   }
@@ -177,8 +124,7 @@ class AICodeAnalyzer {;
     for (const file of reactFiles) {;
       const content = fs.readFileSync(file, 'utf8');
 
-;
-      // Analyze component patterns;
+<<<<<<< HEAD      // Analyze component patterns;
       const componentAnalysis = this.analyzeReactComponent(content);
 ;
       if (componentAnalysis.largeComponent) {;
@@ -187,7 +133,7 @@ class AICodeAnalyzer {;
           type: 'large_component',;
           severity: 'medium',;
           description: 'Component has more than 200 lines',;
-          suggestion:Consider breaking down large components into smaller, focused components',;
+          suggestion: Consider breaking down large components into smaller, focused components',;
         });
       }
 ;
@@ -197,7 +143,7 @@ class AICodeAnalyzer {;
           type: 'missing_prop_types',;
           severity: 'low',;
           description: 'Component missing TypeScript interfaces or PropTypes',;
-          suggestion:Add proper type definitions for better code maintainability',;
+          suggestion: Add proper type definitions for better code maintainability',;
         });
       }
     }
@@ -220,20 +166,7 @@ class AICodeAnalyzer {;
             file: path.relative(process.cwd(), file),
             type: `expensive_operation`,
             severity: `medium`,description: Found ${matches.length} expensive operations`,
-            suggestion:Consider optimizing expensive operations or memoizing results`,
-;
-      // Check for expensive operations;
-      const expensivePatterns = ['/\.map\(.*=>.*\.filter\(/g', '/\.filter\(.*=>.*\.map\(/g', '/new Date\(\)/g', '/JSON\.parse\(/g', '/JSON\.stringify\(/g', '];
-;
-      expensivePatterns.forEach((pattern, index) => {;
-        const matches = content.match(pattern);
-        if (matches && matches.length > 2) {;
-          this.analysisResults.performanceIssues.push({;
-            file: path.relative(process.cwd(), file),;
-            type: 'expensive_operation',;
-            severity: 'medium',description: Found ${matches.length} expensive operations',;
-            suggestion:Consider optimizing expensive operations or memoizing results',;
-          });
+            suggestion: Consider optimizing expensive operations or memoizing results`,          });
         }
       });
     }
@@ -261,21 +194,7 @@ class AICodeAnalyzer {;
             type: type,
             severity: `high`,
             description: Found ${matches.length} potential security issues`,
-            suggestion:Review and secure these operations to prevent security vulnerabilities`,
-;
-      // Check for security vulnerabilities;
-      const securityPatterns = ['{ pattern: /innerHTML\s*=/g', 'type: 'xss_risk' }', '{ pattern: /eval\(/g', 'type: 'code_injection' }', '{ pattern: /document\.write\(/g', 'type: 'xss_risk' }', '{ pattern: /localStorage\.setItem\(/g', 'type: 'sensitive_data' }', '];
-;
-      securityPatterns.forEach(({ pattern, type }) => {;
-        const matches = content.match(pattern);
-        if (matches) {;
-          this.analysisResults.securityVulnerabilities.push({;
-            file: path.relative(process.cwd(), file),;
-            type: type,;
-            severity: 'high',;
-            description: Found ${matches.length} potential security issues',;
-            suggestion:Review and secure these operations to prevent security vulnerabilities',;
-          });
+            suggestion: Review and secure these operations to prevent security vulnerabilities`,          });
         }
       });
     }
@@ -337,10 +256,7 @@ class AICodeAnalyzer {;
 
     this.analysisResults.maintainabilityScore = Math.max(
       0,
-;
-    this.analysisResults.maintainabilityScore = Math.max(;
-      0,;
-      100 - totalIssues * 5;
+<<<<<<< HEAD      100 - totalIssues * 5;
     );
 ;
     // Calculate complexity score (0-100);
@@ -360,8 +276,7 @@ class AICodeAnalyzer {;
         totalFilesAnalyzed: this.findFiles('./src', ['.ts'', '.tsx', '.js'', `.jsx`, ``]).length,
         codeSmells: this.analysisResults.codeSmells.length,
         performanceIssues: this.analysisResults.performanceIssues.length,
-        securityVulnerabilities:
-          this.analysisResults.securityVulnerabilities.length,
+        securityVulnerabilities: this.analysisResults.securityVulnerabilities.length,
         maintainabilityScore: this.analysisResults.maintainabilityScore,
         complexityScore: this.analysisResults.complexityScore},
       details: this.analysisResults,
@@ -426,10 +341,7 @@ console.log(📊 AI analysis report saved to ${reportPath});
       } catch (error) {  
         // Skip directories that can`t be accessed;
         }
-      } catch (error) {;
-        // Skip directories that can't be accessed;
-      }
-    }
+<<<<<<< HEAD    }
 ;
     scanDirectory(dir);
     return files;
@@ -474,16 +386,7 @@ console.log(📊 AI analysis report saved to ${reportPath});
         .replace(/\.(js|ts|tsx|jsx)$/, ``);
       return (
         !content.includes(importName) ||content.indexOf(importName) === content.indexOf(import.*${importName}``)
-;
-    // Simplified unused import detection;
-    const unusedImports = imports.filter(imp => {;
-      const importName = imp;
-        .split('/');
-        .pop();
-        .replace(/\.(js|ts|tsx|jsx)$/, ');
-      return (;
-        !content.includes(importName) ||content.indexOf(importName) === content.indexOf(import.*${importName}``);
-      );
+<<<<<<< HEAD      );
     });
 ;
     return { imports, unusedImports };
@@ -493,22 +396,9 @@ console.log(📊 AI analysis report saved to ${reportPath});
     const lines = content.split(`\n`);
     const componentAnalysis = {
       largeComponent: lines.length > 200,
-      missingPropTypes:
-        !content.includes(`interface`) && !content.includes('PropTypes'),
+      missingPropTypes: !content.includes(`interface`) && !content.includes('PropTypes'),
       hasState: content.includes('useState') || content.includes('this.state'),
-      hasEffects:
-        content.includes(`useEffect`) || content.includes(`componentDidMount`),
-;
-  analyzeReactComponent(content) {;
-    const lines = content.split('\n');
-    const componentAnalysis = {;
-      largeComponent: lines.length > 200,;
-      missingPropTypes:;
-        !content.includes('interface') && !content.includes('PropTypes'),;
-      hasState: content.includes('useState') || content.includes('this.state'),;
-      hasEffects:;
-        content.includes('useEffect') || content.includes('componentDidMount'),;
-    };
+      hasEffects: content.includes(`useEffect`) || content.includes(`componentDidMount`),    };
 ;
     return componentAnalysis;
   }
@@ -541,19 +431,7 @@ async function runContinuous() {
 // Handle graceful shutdown;
 process.on(`SIGINT`, () => {
   console.log(`🛑 Received SIGINT, shutting down gracefully...');
-;
-  // Run initial analysis;
-  await analyzer.analyzeCodebase();
-;
-  // Set up continuous execution;
-  setInterval(async () => {;
-    await analyzer.analyzeCodebase();
-  }, AUTOMATION_INTERVAL);
-;
-  console.log( ✅ AI code analyzer running. Next analysis in ${AUTOMATION_INTERVAL / 1000 / 60} minutes;
-`);
-  console.log( ✅ AI code analyzer running. Next analysis in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
-  `);
+<<<<<<< HEAD  `);
 }
 ;
 // Handle graceful shutdown;
@@ -569,9 +447,5 @@ process.on('SIGTERM', () => {;
 
 // Start the AI code analyzer;
 runContinuous().catch(error => {
-;
-// Start the AI code analyzer;
-runContinuous().catch(error => {;
-  console.error('❌ Failed to start AI code analyzer:', error);
-  process.exit(1);
+  console.error('❌ Failed to start AI code analyzer: ', error);  process.exit(1);
 });

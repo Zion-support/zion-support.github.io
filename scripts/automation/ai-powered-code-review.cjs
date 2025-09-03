@@ -24,14 +24,7 @@ class AIPoweredCodeReview {;
     this.reviewHistory = path.join(;
       this.projectRoot,logs',;
       'code-review-history.json';
-    this.logFile = path.join(
-      this.projectRoot, 'logs',
-      'ai-code-review.log'
-    );
-    this.reviewHistory = path.join(
-      this.projectRoot, 'logs',
-      'code-review-history.json'
-    );
+<<<<<<< HEAD    );
     this.issuesFound = 0;
     this.improvementsSuggested = 0;
     this.autoFixesApplied = 0;
@@ -39,14 +32,9 @@ class AIPoweredCodeReview {;
 ;
   async initialize() {;
     console.log(`'🤖 AI-Powered Code Review System Initialized');
-
-  async initialize() {
-    console.log(`🤖 AI-Powered Code Review System Initialized`);
     this.ensureLogDirectory();
     this.loadReviewHistory();
-    
-    ;
-    // Start continuous monitoring;
+        // Start continuous monitoring;
     this.startContinuousReview();
   }
 ;
@@ -73,7 +61,7 @@ class AIPoweredCodeReview {;
         };
       }
     } catch (error) {  
-      console.error('Error loading review history:', error);
+      console.error('Error loading review history: ', error);
       this.history = {
         totalReviews: 0,
         totalIssues: 0,
@@ -98,20 +86,7 @@ class AIPoweredCodeReview {;
     console.log(`'🔍 Starting continuous code review...');
     ;
     // Initial review;
-
-  async startContinuousReview() {
-    console.log(`🔍 Starting continuous code review...`);
-    
-    // Initial review;
-    await this.performFullCodeReview();
-    
-    // Set up file watching for real-time reviews;
-    this.watchForChanges();
-    
-    // Periodic comprehensive reviews;
-    setInterval(async () => {
-    // Initial review
-    await this.performFullCodeReview();
+<<<<<<< HEAD    await this.performFullCodeReview();
     ;
     // Set up file watching for real-time reviews;
     this.watchForChanges();
@@ -187,9 +162,15 @@ class AIPoweredCodeReview {;
       this.logReviewResults(reviewResults);
       ;
       console.log(✅ Code review completed in ${reviewResults.duration}ms);console.log(📊 Found ${reviewResults.issues.length} issues, ${reviewResults.improvements.length} improvements``);
+<<<<<<< HEAD
       ;
 } catch (error) {  
       console.error(`❌ Error during code review:`, error);
+=======
+      
+    } catch (error) {  
+      console.error(`❌ Error during code review: `, error);
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       this.logError(`Code review failed`, error);
       }
   }
@@ -202,22 +183,7 @@ class AIPoweredCodeReview {;
     for (const file of tsFiles) {
       try {
         const content = fs.readFileSync(file, `utf8`);
-      ;
-    } catch (error) {;
-      console.error('❌ Error during code review:', error);
-      this.logError('Code review failed', error);
-    }
-  }
-;
-  async reviewTypeScriptFiles(results) {;
-    console.log(`'🔍 Reviewing 'TypeScript/JavaScript' files...');
-    ;
-    const tsFiles = this.findFiles(['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx']);
-    ;
-    for (const file of tsFiles) {;
-      try {;
-        const content = fs.readFileSync(file, 'utf8');
-        const fileResults = await this.analyzeTypeScriptFile(file, content);
+<<<<<<< HEAD        const fileResults = await this.analyzeTypeScriptFile(file, content);
         ;
         results.filesReviewed++;
         results.issues.push(...fileResults.issues);
@@ -243,27 +209,14 @@ class AIPoweredCodeReview {;
         file: filePath,
         type: `typescript`,
         severity: 'warning',
-        message: 'Usage of "any" type detected. Consider using proper TypeScript types.',
+        message: 'Usage of "any type detected. Consider using proper TypeScript types.',
         line: this.findLineNumber(content, 'any'),
         suggestion: 'Replace with specific interface or union type';
 });
     }
     
-    ;
-    // Check for common TypeScript issues;
-    if (content.includes('any')) {;
-      results.issues.push({;
-        file: filePath,;
-        type: 'typescript',;
-        severity: 'warning',;
-        message: 'Usage of "any" type detected. Consider using proper TypeScript types.',;
-        line: this.findLineNumber(content, 'any'),;
-        suggestion: 'Replace with specific interface or union type';
-      });
-    }
-    ;
-    // Check for unused imports;
-    const importMatches = content.match(/import\s+.*\s+from\s+['"][^'"]+['"]/g);
+<<<<<<< HEAD    // Check for unused imports;
+    const importMatches = content.match(/import\s+.*\s+from\s+['][^'"]+['"]/g);
     if (importMatches) {;
       for (const importStmt of importMatches) {;
         const importedItem = importStmt.match(/import\s+{?\s*(\w+)/)?.[1];
@@ -271,7 +224,7 @@ class AIPoweredCodeReview {;
           results.issues.push({
             file: filePath,
             type: `typescript`,
-            severity: `info`,message: `Unused import: ${importedItem}`,
+            severity: `info`,message: `Unused import ${importedItem}`,
             line: this.findLineNumber(content, importStmt),
             suggestion: `Remove unused import`
         if (importedItem && !content.includes(importedItem)) {;
@@ -295,17 +248,7 @@ class AIPoweredCodeReview {;
         message: 'Consider adding dependencies to useEffect or using ''useCallback/useMemo''',
         line: this.findLineNumber(content, 'useEffect'),
         suggestion: 'Review useEffect dependencies for optimization'
-    ;
-    // Check for performance issues;
-    if (content.includes('useEffect') && content.includes('[]')) {;
-      results.improvements.push({;
-        file: filePath,;
-        type: 'react',;
-        severity: 'info',;
-        message: 'Consider adding dependencies to useEffect or using 'useCallback/useMemo'',;
-        line: this.findLineNumber(content, 'useEffect'),;
-        suggestion: 'Review useEffect dependencies for optimization';
-      });
+<<<<<<< HEAD      });
     }
     ;
     return results;
@@ -332,11 +275,17 @@ class AIPoweredCodeReview {;
         ;
         results.issues.push(...componentResults.issues);
         results.improvements.push(...componentResults.improvements);
+<<<<<<< HEAD
         ;
 } catch (error) {  console.error(Error reviewing React component ${file  }:, error`);
         ;
       } catch (error) {console.error(Error reviewing React component ${file}:, error`);
       }
+=======
+        
+      } catch (error) {  console.error(Error reviewing React component ${file  }:, error`);
+<<<<<<< HEAD      }
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     }
   }
 ;
@@ -400,17 +349,7 @@ class AIPoweredCodeReview {;
     for (const configFile of configFiles) {;
       if (fs.existsSync(configFile)) {;
         try {;
-
-  async reviewConfigFiles(results) {
-    console.log(`⚙️ Reviewing configuration files...`);
-    
-    const configFiles = ['package.json'', 'tsconfig.json', 'next.config.js'', 'tailwind.config.js', 'eslint.config.js``];
-    
-    for (const configFile of configFiles) {
-      if (fs.existsSync(configFile)) {
-        try {
-          const content = fs.readFileSync(configFile, `utf8`);
-          const content = fs.readFileSync(configFile, 'utf8');
+<<<<<<< HEAD          const content = fs.readFileSync(configFile, 'utf8');
           const configResults = await this.analyzeConfigFile(configFile, content);
           ;
           results.issues.push(...configResults.issues);
@@ -441,22 +380,7 @@ class AIPoweredCodeReview {;
                 severity: `info`,message: `Consider pinning dependency version: ${dep}`,
                 line: this.findLineNumber(content, dep),
                 suggestion: `Use exact version for production stability`
-    ;
-    if (filePath === 'package.json') {;
-      try {;
-        const pkg = JSON.parse(content);
-        ;
-        // Check for outdated dependencies;
-        if (pkg.dependencies) {;
-          for (const ['dep', 'version'] of Object.entries(pkg.dependencies)) {;
-            if (version.startsWith('^') || version.startsWith('~')) {;
-              results.improvements.push({;
-                file: filePath,;
-                type: 'dependencies',;
-                severity: 'info',message: `Consider pinning dependency version: ${dep}`,;
-                line: this.findLineNumber(content, dep),;
-                suggestion: 'Use exact version for production stability';
-              });
+<<<<<<< HEAD              });
             }
           }
         }
@@ -472,6 +396,7 @@ class AIPoweredCodeReview {;
             suggestion: 'Remove --inspect flag from production scripts';
 });
         }
+<<<<<<< HEAD
         ;
 } catch (error) {  
         ;
@@ -490,6 +415,11 @@ class AIPoweredCodeReview {;
       } catch (error) {;
         console.error('Error parsing package.json:', error);
         }
+=======
+        
+      } catch (error) {  
+        console.error('Error parsing package.json: ', error);        }
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     }
     ;
     return results;
@@ -533,22 +463,7 @@ class AIPoweredCodeReview {;
         cwd: this.projectRoot,
         encoding: `utf8`,
         stdio: 'pipe'
-        for (const ['pkg', 'info'] of Object.entries(outdated)) {;
-          results.improvements.push({;
-            file: 'package.json',;
-            type: 'dependencies',;
-            severity: 'info',message: Outdated package: ${pkg} (current: ${info.current}, latest: ${info.latest}),;
-            line: 0,suggestion: `Update ${pkg} to latest version`;
-          }`);
-        }
-      }
-      ;
-      // Check for security vulnerabilities;
-      const auditCheck = execSync('npm audit --json', { ;
-        cwd: this.projectRoot,;
-        encoding: 'utf8',;
-        stdio: 'pipe';
-      });
+<<<<<<< HEAD      });
       ;
       if (auditCheck.trim()) {;
         const audit = JSON.parse(auditCheck);
@@ -581,6 +496,7 @@ class AIPoweredCodeReview {;
     console.log(`'🧠 Generating AI-powered suggestions...');
     ;
     // Analyze patterns and generate intelligent suggestions;
+<<<<<<< HEAD
       ;
 } catch (error) {  
       // npm commands might fail if no issues found;
@@ -611,6 +527,9 @@ class AIPoweredCodeReview {;
     
     // Analyze patterns and generate intelligent suggestions
     const patterns = this.analyzeCodePatterns(results);
+=======
+<<<<<<< HEAD    const patterns = this.analyzeCodePatterns(results);
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     ;
     for (const pattern of patterns) {;
       results.improvements.push({;
@@ -666,11 +585,7 @@ class AIPoweredCodeReview {;
   async applyAutoFixes(results) {;
     console.log(`'🔧 Applying automatic fixes...');
     ;
-
-  async applyAutoFixes(results) {
-    console.log(`🔧 Applying automatic fixes...`);
-    
-    let fixesApplied = 0;
+<<<<<<< HEAD    let fixesApplied = 0;
     
     for (const issue of results.issues) {
       if (issue.severity === `info` && issue.type === `typescript`) {
@@ -696,17 +611,7 @@ class AIPoweredCodeReview {;
         const importLine = lines[issue.line - 1];
         
         if (importLine.includes(`import`)) {
-;
-  async autoFixIssue(issue) {;
-    try {;
-      if (issue.message.includes('Unused import')) {;
-        // Remove unused import;
-        const content = fs.readFileSync(issue.file, 'utf8');
-        const lines = content.split('\n');
-        const importLine = lines[issue.line - 1];
-        ;
-        if (importLine.includes('import')) {;
-          lines.splice(issue.line - 1, 1);
+<<<<<<< HEAD          lines.splice(issue.line - 1, 1);
           fs.writeFileSync(issue.file, lines.join(`\n`));
           return true;
         }
@@ -750,9 +655,7 @@ class AIPoweredCodeReview {;
         const stat = fs.statSync(fullPath);
         
         if (stat.isDirectory() && !item.startsWith(`.`) && !item.includes('node_modules')) {
-        ;
-        if (stat.isDirectory() && !item.startsWith('.') && !item.includes('node_modules')) {;
-          walkDir(fullPath);
+<<<<<<< HEAD          walkDir(fullPath);
         } else if (stat.isFile() && this.matchesPattern(fullPath, pattern)) {;
           files.push(fullPath);
         }
@@ -797,18 +700,7 @@ class AIPoweredCodeReview {;
     try {
       fs.writeFileSync(this.reviewHistory, JSON.stringify(this.history, null, 2));
     } catch (error) {  
-    ;
-    // Update stats by type;
-    for (const issue of results.issues) {;
-      this.history.reviewStats[issue.type] = (this.history.reviewStats[issue.type] || 0) + 1;
-    }
-    ;
-    // Save updated history;
-    try {;
-      fs.writeFileSync(this.reviewHistory, JSON.stringify(this.history, null, 2));
-    } catch (error) {;
-      console.error('Error saving review history:', error);
-      }
+      console.error('Error saving review history: ', error);      }
   }
 
   logReviewResults(results) {
@@ -837,10 +729,15 @@ class AIPoweredCodeReview {;
     ;
     try {;
       fs.appendFileSync(this.logFile, JSON.stringify(logEntry) + '\n');
+<<<<<<< HEAD
     } catch (error) {  ;
 } catch (error) {;
       console.error('Error logging review results:', error);
       }
+=======
+    } catch (error) {  
+      console.error('Error logging review results: ', error);      }
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   }
 
   logError(message, error) {
@@ -859,10 +756,15 @@ class AIPoweredCodeReview {;
     ;
     try {;
       fs.appendFileSync(this.logFile, JSON.stringify(errorEntry) + '\n');
+<<<<<<< HEAD
     } catch (error) {  ;
 } catch (error) {;
       console.error('Error logging error:', error);
       }
+=======
+    } catch (error) {  
+      console.error('Error logging error: ', error);      }
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   }
 ;
   watchForChanges() {;
@@ -891,10 +793,7 @@ class AIPoweredCodeReview {;
       ;
       if (gitStatus.trim()) {;
         console.log(`'📝 Changes detected, performing quick review...');
-      
-      if (gitStatus.trim()) {
-        console.log(`📝 Changes detected, performing quick review...`);
-        await this.performQuickReview();
+<<<<<<< HEAD        await this.performQuickReview();
       }
     } catch (error) {  
       // Git might not be available;
@@ -931,14 +830,7 @@ class AIPoweredCodeReview {;
         .map(line => line.split(' ').pop())
         .filter(file => file && !file.startsWith('.'));
     } catch (error) {  
-      ;
-      return gitStatus;
-        .split('\n');
-        .filter(line => line.trim());
-        .map(line => line.split(' ').pop());
-        .filter(file => file && !file.startsWith('.'));
-    } catch (error) {;
-      return [];
+<<<<<<< HEAD      return [];
       }
   }
 ;

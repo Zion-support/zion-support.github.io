@@ -22,40 +22,7 @@ class ErrorReportGenerator {;
 ;
   log(message) {;
     console.log(`[${new Date().toISOString()}] [ErrorReportGenerator] ${message}';
-
-  log(message) {
-    console.log(`[${new Date().toISOString()}] [ErrorReportGenerator] ${message}`
-    );
-  }
-
-  async run() {
-    this.log(`Starting error report generation...`);
-
-    try {
-      await this.generateErrorReport();
-      this.log(`Error report generation completed.`);
-    } catch (error) {  
-      this.log(Error during report generation: ${error.message  }`);
-    }
-  }
-
-  async generateErrorReport() {
-    this.log(`Generating comprehensive error report...`);
-
-    const report = {
-      timestamp: new Date().toISOString(),
-      projectStatus: {},
-      errorSummary: {},
-      recommendations: []};
-
-    try {
-      // TypeScript check;
-      try {
-        const typeCheckResult = execSync(npx tsc --noEmit --pretty false 2>&1`,
-          {
-            encoding: 'utf8',
-    console.log(`[${new Date().toISOString()}] [ErrorReportGenerator] ${message}`);
-    );
+<<<<<<< HEAD    );
   }
 ;
   async run() {;
@@ -104,19 +71,7 @@ class ErrorReportGenerator {;
       // ESLint check;
       try {
         const lintResult = execSync('npx eslint . 2>&1', {
-          encoding: 'utf8'} catch (error) {;
-        report.projectStatus.typescript = {;
-          status: 'error',;
-          errorCount: 0,;
-          details: error.message,;
-        };
-      }
-;
-      // ESLint check;
-      try {;
-        const lintResult = execSync('npx eslint . 2>&1', {;
-          encoding: 'utf8',;
-        });
+          encoding: 'utf8',        });
         report.projectStatus.eslint = {;
           status: 'error',;
           errorCount: (lintResult.match(/'error/g') || []).length,;
@@ -198,14 +153,7 @@ class ErrorReportGenerator {;
 
     if (report.projectStatus.eslint?.errorCount > 0) {
       recommendations.push(`Run ESLint error fixer to address linting issues`);
-;
-    if (report.projectStatus.typescript?.errorCount > 0) {;
-      recommendations.push('Run TypeScript error fixer to address type issues');
-    }
-;
-    if (report.projectStatus.eslint?.errorCount > 0) {;
-      recommendations.push('Run ESLint error fixer to address linting issues');
-    }
+<<<<<<< HEAD    }
 ;
     if (report.projectStatus.build?.status === 'error') {;
       recommendations.push(Fix build errors to ensure project compiles correctly';

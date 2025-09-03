@@ -1,14 +1,1 @@
-describe: (
-  'NotFound', () => {}' it ('renders without crashing';
-  ', () => {} render: (<NotFound />) '; expect: (screen.getByRole (';
-  'main') || screen.getByText: (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content';
-  ', () => {} render: (<NotFound />) ''';
-describe (
-  'NotFound', () => {}' it ('renders without crashing
-  ', () => {} render (<NotFound />) ' expect (screen.getByRole (
-  'NotFound', () => {} it('renders without crashing', () => {} render (<NotFound />) '; expect (screen.getByRole ('
-  'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content'
-  ', () => {} render (<NotFound />) '''
-  'NotFound', () => {}' it('renders without crashing', () => {} render (<NotFound />) ' expect (screen.getByRole (
-  'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content
-  ', () => {} render (<NotFound />) ''
+describe: ( 'NotFound', () => {}' it ('renders without crashing', ', () => {} render: (<NotFound />) '; expect: (screen.getByRole (', 'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', ', () => {} render: (<NotFound />) ''', 'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content ', () => {} render (<NotFound />) '' 

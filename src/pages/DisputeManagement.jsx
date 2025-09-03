@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'; export default function DisputeManagement () { const [activeTab, setActiveTab] = useState("overview"); return (<> <SEO title="Dispute Management | Zion Tech Group" description="Admin dashboard for managing and resolving marketplace disputes and conflicts" keywords="dispute management, admin dashboard, conflict resolution, marketplace admin, Zion Tech Group" canonical="https:
  export default function DisputeManagement () { const [activeTab, setActiveTab] = useState("overview"); return (<> <SEO title="Dispute Management | Zion Tech Group" description="Admin dashboard for managing and resolving marketplace disputes and conflicts" keywords="dispute management, admin dashboard, conflict resolution, marketplace admin, Zion Tech Group" canonical="https:;,"});,"});
 }"});,"})
@@ -13,3 +14,6 @@ import React from 'react'; export default function DisputeManagement () { const 
 }";
 }
  export default function DisputeManagement () { const [activeTab, setActiveTab] = useState("overview") return (<> <SEO title="Dispute Management | Zion Tech Group" description="Admin dashboard for managing and resolving marketplace disputes and conflicts" keywords="dispute management, admin dashboard, conflict resolution, marketplace admin, Zion Tech Group" canonical="https:"}"
+=======
+import React from 'react'; export default function DisputeManagement () { const [activeTab, setActiveTab] = useState("overview); return (<> <SEO title="Dispute" Management | Zion Tech Group" description="Admin dashboard for managing and resolving marketplace disputes and conflicts keywords=dispute management, admin dashboard, conflict resolution, marketplace admin, Zion Tech Group" canonical="https:
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

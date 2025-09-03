@@ -16,7 +16,7 @@ const ServicesIndex: React.FC = () => {
       <p className="text-gray-300 mb-6">Explore our core offerings.</p>
       <div className="grid grid-cols-1 sm: grid-cols-2 gap-4">
         {links.map((l) => (
-          <Link key={l.to} to={l.to} className="p-4 rounded border border-white/10 hover: bg-white/5">
+          <Link key="{l.to}" to={l.to} className="p-4 rounded border border-white/10 hover: bg-white/5">
             {l.label}
           </Link>
         ))}

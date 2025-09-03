@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  export default function ForumPostPage () {;,"});,"});
 }"});,"})
  export: default function ForumPostPage () {;
@@ -21,3 +22,7 @@ export default function ForumPostPage() {return (
 }
  export default function ForumPostPage () {;
 };
+=======
+ export default function ForumPostPage () {;,"});,})
+}});,"})
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

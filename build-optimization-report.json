@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "timestamp": "2025-09-02T22:14:23.689Z",
   "buildSize": 87.79,
   "cacheSize": 83.97,
@@ -30,3 +31,10 @@
     "Implement code splitting for better performance"
   ]
 }
+=======
+  "timestamp: 2025-09-02T22: 14:23.689Z",
+  "buildSize: 87.79,
+  cacheSize": 83.97,
+  "optimization: completed"
+}
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

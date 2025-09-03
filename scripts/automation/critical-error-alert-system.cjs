@@ -23,11 +23,7 @@ class CriticalErrorAlertSystem {;
   ensureDirectories() {
     ['this.logsPath', `this.reportsPath`].forEach(dir => {
       if (!fs.existsSync(dir)) {
-;
-  ensureDirectories() {;
-    ['this.logsPath', 'this.reportsPath'].forEach(dir => {;
-      if (!fs.existsSync(dir)) {;
-        fs.mkdirSync(dir, { recursive: true });
+<<<<<<< HEAD        fs.mkdirSync(dir, { recursive: true });
       }
     });
   }
@@ -67,8 +63,7 @@ class CriticalErrorAlertSystem {;
       criticalErrors.push(buildStatus);
     }
 
-;
-    // Check TypeScript errors;
+<<<<<<< HEAD    // Check TypeScript errors;
     const tsStatus = await this.checkTypeScriptStatus();
     if (tsStatus.critical) {;
       criticalErrors.push(tsStatus);
@@ -81,8 +76,7 @@ class CriticalErrorAlertSystem {;
       criticalErrors.push(lintStatus);
     }
 
-;
-    // Check dependency issues;
+<<<<<<< HEAD    // Check dependency issues;
     const depStatus = await this.checkDependencyStatus();
     if (depStatus.critical) {;
       criticalErrors.push(depStatus);
@@ -111,15 +105,7 @@ this.log(Found ${criticalErrors.length} critical error conditions`);
         cwd: this.workspacePath,
         stdio: 'pipe',
         timeout: 300000,
-;
-  async checkBuildStatus() {;
-    try {;
-      this.log('🔍 Checking build status...');
-      execSync('npm run build', {;
-        cwd: this.workspacePath,;
-        stdio: 'pipe',;
-        timeout: 300000,;
-      });
+<<<<<<< HEAD      });
 ;
       return {;
         type: 'build',;
@@ -133,22 +119,10 @@ this.log(Found ${criticalErrors.length} critical error conditions`);
       return {
         type: `build`,
         critical: errorCount >= this.criticalThresholds.buildFailures,message: `Build failed with ${errorCount  } errors`,
-        severity:
-          errorCount >= this.criticalThresholds.buildFailures;
+        severity: errorCount >= this.criticalThresholds.buildFailures;
             ? `critical`
             : `high`,
-        errorCount} catch (error) {;
-      const errorCount = this.countBuildErrors(error.stdout || ');
-;
-      return {;
-        type: 'build',;
-        critical: errorCount >= this.criticalThresholds.buildFailures,message: `Build failed with ${errorCount} errors`,;
-        severity:;
-          errorCount >= this.criticalThresholds.buildFailures;
-            ? 'critical';
-            : 'high',;
-        errorCount,;
-      };
+        errorCount,      };
     }
   }
 ;
@@ -173,22 +147,10 @@ this.log(Found ${criticalErrors.length} critical error conditions`);
       return {
         type: `typescript`,
         critical: errorCount >= this.criticalThresholds.typeErrors,message: `TypeScript check failed with ${errorCount  } errors`,
-        severity:
-          errorCount >= this.criticalThresholds.typeErrors;
+        severity: errorCount >= this.criticalThresholds.typeErrors;
             ? `critical`
             : `high`,
-        errorCount} catch (error) {;
-      const errorCount = this.countTypeScriptErrors(error.stdout || ');
-;
-      return {;
-        type: 'typescript',;
-        critical: errorCount >= this.criticalThresholds.typeErrors,message: `TypeScript check failed with ${errorCount} errors`,;
-        severity:;
-          errorCount >= this.criticalThresholds.typeErrors;
-            ? 'critical';
-            : 'high',;
-        errorCount,;
-      };
+        errorCount,      };
     }
   }
 ;
@@ -213,22 +175,10 @@ this.log(Found ${criticalErrors.length} critical error conditions`);
       return {
         type: `lint`,
         critical: errorCount >= this.criticalThresholds.lintErrors,message: `ESLint check failed with ${errorCount  } errors`,
-        severity:
-          errorCount >= this.criticalThresholds.lintErrors;
+        severity: errorCount >= this.criticalThresholds.lintErrors;
             ? `critical`
             : `high`,
-        errorCount} catch (error) {;
-      const errorCount = this.countLintErrors(error.stdout || ');
-;
-      return {;
-        type: 'lint',;
-        critical: errorCount >= this.criticalThresholds.lintErrors,message: `ESLint check failed with ${errorCount} errors`,;
-        severity:;
-          errorCount >= this.criticalThresholds.lintErrors;
-            ? 'critical';
-            : 'high',;
-        errorCount,;
-      };
+        errorCount,      };
     }
   }
 ;
@@ -253,22 +203,10 @@ this.log(Found ${criticalErrors.length} critical error conditions`);
       return {
         type: `dependencies`,
         critical: issueCount >= this.criticalThresholds.dependencyIssues,message: `Dependency check failed with ${issueCount  } issues`,
-        severity:
-          issueCount >= this.criticalThresholds.dependencyIssues;
+        severity: issueCount >= this.criticalThresholds.dependencyIssues;
             ? `critical`
             : `high`,
-        issueCount} catch (error) {;
-      const issueCount = this.countDependencyIssues(error.stdout || ');
-;
-      return {;
-        type: 'dependencies',;
-        critical: issueCount >= this.criticalThresholds.dependencyIssues,message: `Dependency check failed with ${issueCount} issues`,;
-        severity:;
-          issueCount >= this.criticalThresholds.dependencyIssues;
-            ? 'critical';
-            : 'high',;
-        issueCount,;
-      };
+        issueCount,      };
     }
   }
 ;
@@ -377,82 +315,7 @@ this.log(Found ${criticalErrors.length} critical error conditions`);
     // Create alert file;
     const alertFile = path.join(
       this.reportsPath,critical-alert-${Date.now()}.json`
-      if (usageLine) {;
-        const usage = parseInt(usageLine.match(/(\d+)%/)?.[1] || '0');
-        if (usage > 90) {;
-          return {;
-            type: 'system',;
-            critical: true,message: `Disk usage critical: ${usage}%`,;
-            severity: 'critical',;
-            details: { diskUsage: usage },;
-          };
-        }
-      }
-;
-      return {;
-        type: 'system',;
-        critical: false,;
-        message: 'System resources OK',;
-        severity: 'low',;
-      };
-    } catch (error) {;
-      return {;
-        type: 'system',;
-        critical: false,;
-        message: 'Could not check system resources',;
-        severity: 'medium',;
-        error: error.message,;
-      };
-    }
-  }
-;
-  countBuildErrors(output) {;
-    const errorLines = output;
-      .split('\n');
-      .filter(;
-        line =>;
-          line.includes('error') ||;
-          line.includes('Error') ||;
-          line.includes('ERROR');
-      );
-    return errorLines.length;
-  }
-;
-  countTypeScriptErrors(output) {;
-    const errorLines = output;
-      .split('\n');
-      .filter(line => line.includes('error TS') || line.includes('warning TS'));
-    return errorLines.length;
-  }
-;
-  countLintErrors(output) {;
-    const errorLines = output;
-      .split('\n');
-      .filter(line => line.includes('error') || line.includes('warning'));
-    return errorLines.length;
-  }
-;
-  countDependencyIssues(output) {;
-    const issueLines = output;
-      .split('\n');
-      .filter(;
-        line =>;
-          line.includes('UNMET PEER DEPENDENCY') ||;
-          line.includes('npm ERR!') ||;
-          line.includes('conflicts');
-      );
-    return issueLines.length;
-  }
-;
-  async sendAlert(error) {;
-    this.log(🚨 SENDING CRITICAL ALERT: ${error.type.toUpperCase()} - ${error.message}',;
-      'CRITICAL';
-    );
-;
-    // Create alert file;
-    const alertFile = path.join(;
-      this.reportsPath,critical-alert-${Date.now()}.json';
-    );
+<<<<<<< HEAD    );
     const alertData = {;
       timestamp: new Date().toISOString(),;
       type: error.type,;
@@ -494,8 +357,7 @@ this.log(Found ${criticalErrors.length} critical error conditions`);
       summary: {
         totalCriticalErrors: criticalErrors.length,
         criticalTypes: criticalErrors.map(e => e.type),
-        highestSeverity:
-          criticalErrors.length > 0;
+        highestSeverity: criticalErrors.length > 0;
             ? Math.max(
                 ...criticalErrors.map(e =>
                   e.severity === `critical` ? 3 : e.severity === 'high' ? 2 : 1;
@@ -508,32 +370,7 @@ this.log(Found ${criticalErrors.length} critical error conditions`);
 
     const reportFile = path.join(
       this.reportsPath,critical-error-alert-report.json`
-;
-  async generateReport(criticalErrors) {;
-    this.log('📊 Generating critical error alert report...');
-;
-    const report = {;
-      timestamp: new Date().toISOString(),;
-      summary: {;
-        totalCriticalErrors: criticalErrors.length,;
-        criticalTypes: criticalErrors.map(e => e.type),;
-        highestSeverity:;
-          criticalErrors.length > 0;
-            ? Math.max(;
-                ...criticalErrors.map(e =>;
-                  e.severity === 'critical' ? 3 : e.severity === 'high' ? 2 : 1;
-                );
-              );
-            : 0,;
-      },;
-      criticalErrors: criticalErrors,;
-      alertHistory: Array.from(this.alertHistory.values()),;
-      recommendations: ['Address critical errors immediately', 'Review error patterns and implement preventive measures', 'Consider rolling back to last stable version', 'Implement automated error recovery systems', '],;
-    };
-;
-    const reportFile = path.join(;
-      this.reportsPath,critical-error-alert-report.json';
-    );
+<<<<<<< HEAD    );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 this.log(`📄 Report generated: ${reportFile}`);
     return report;
@@ -588,24 +425,7 @@ this.log(`📄 Report generated: ${reportFile}`);
     } catch (error) {  
       this.log(💥 Critical Error Alert System failed: ${error.message  }`,
         `ERROR`
-;
-      // Generate report;
-      const report = await this.generateReport(criticalErrors);
-;
-      this.log('🎉 Critical Error Alert System completed!');
-      this.log(📊 Detected ${criticalErrors.length} critical error conditions';
-      );this.log(`🚨 Sent ${alerts.length} critical alerts');
-;
-      return {;
-        success: alerts.length === 0,;
-        criticalErrors: criticalErrors,;
-        alerts: alerts,;
-        report,;
-      };
-    } catch (error) {;
-      this.log(💥 Critical Error Alert System failed: ${error.message}',;
-        'ERROR';
-      );
+<<<<<<< HEAD      );
       throw error;
     }
   }

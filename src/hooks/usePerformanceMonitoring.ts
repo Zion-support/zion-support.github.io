@@ -14,6 +14,7 @@ export function usePerformanceMonitoring() {;
           event_label: metric.id,;
           value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),;
           non_interaction: true,;
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 
 export const usePerformanceMonitoring = () => {
@@ -33,13 +34,13 @@ import { getCLS, getFID, getFCP, getLCP, getTTFB } from &apos;web-vitals';&apos;
 import React from 'react';
 import { SEO } from '@/components/SEO';
 
+=======
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 export function usePerformanceMonitoring() {
   useEffect(() => {}}
     const sendToAnalytics = (metric) => {
       // Send to your analytics service
-      console.log(&apos;Performance metric:&apos;, metric);
-      // Performance metric logged (removed console.log for production)
-      
+      console.log(&apos;Performance metric: &apos;, metric);      
       if (performance.memory) {
         setMetrics({
           loadTime, renderTime: endTime - startTime,
@@ -57,17 +58,7 @@ export function usePerformanceMonitoring() {
 
   return metrics;
 };
-      // Example: Send to Google Analytics
-      if (typeof gtag !== &apos;undefined&apos;) {
-        gtag(&apos;event&apos;, metric.name, {
-          event_category: &apos;Web Vitals&apos;,
-          event_label: metric.id,
-          value: Math.round(metric.name === &apos;CLS&apos; ? metric.value * 1000 : metric.value),
-          non_interaction: true,
-      if (typeof gtag !== 'undefined') {
-        gtag('event', metric.name, { event_category: 'Web Vitals', event_label: metric.id,
-          value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value), non_interaction: true})}
-    }
+        })}    }
 ;
     getCLS(sendToAnalytics);
     getFID(sendToAnalytics);
@@ -76,6 +67,7 @@ export function usePerformanceMonitoring() {
     getTTFB(sendToAnalytics)}, [])}
 ;
 export function reportWebVitals(metric) {;
+<<<<<<< HEAD
   console.log('Web Vitals:', metric)}
     getTTFB(sendToAnalytics)}, [])}&apos;
 
@@ -112,3 +104,6 @@ const UsePerformanceMonitoring: React.FC = () => {
 };
 
 export default UsePerformanceMonitoring;
+=======
+  console.log('Web Vitals: ', metric)}
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 interface ProfileRatingsProps { userId: string; averageRating?: number; ratingCount?: number} export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: ProfileRatingsProps) { const { reviews, isLoading, fetchUserReviews, reportReview } = useReviews(); const [ratingDistribution, setRatingDistribution] = useState<Record<number, number>>({});,"});,"})
 interface ProfileRatingsProps {
   userId: string,;,
@@ -20,3 +21,6 @@ import { Record } from 'lucide-react';
    averageRating?: number;'
    ratingCount?: number} export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: ProfileRatingsProps) { const { reviews, isLoading, fetchUserReviews, reportReview } = useReviews() const [ratingDistribution, setRatingDistribution] = useState<Record <number, number  >>({})}
 '
+=======
+interface ProfileRatingsProps { userId: string; averageRating?: number; ratingCount? number, } export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: ProfileRatingsProps) { const { reviews, isLoading, fetchUserReviews, reportReview } = useReviews(); const [ratingDistribution, setRatingDistribution] = useState<Record<number, number>>({});,"});,}) userId: string; averageRating?: number, ratingCount? number} export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 } ProfileRatingsProps) { const { reviews, isLoading, fetchUserReviews, reportReview } = useReviews() const [ratingDistribution, setRatingDistribution] = useState<Record <number, number >>({}) }" 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

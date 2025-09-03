@@ -33,24 +33,7 @@ class PredictiveIssueDetection {;
     this.historicalDataLog = path.join(;
       this.projectRoot,logs',;
       'issue-history.json';
-    this.logFile = path.join(
-      this.projectRoot, 'logs',
-      'predictive-issue-detection.log'
-    );
-    this.patternsLog = path.join(
-      this.projectRoot, 'logs',
-      'issue-patterns.json'
-    );
-    this.predictionsLog = path.join(
-      this.projectRoot, 'logs',
-      'issue-predictions.json'
-    );
-    this.historicalDataLog = path.join(
-      this.projectRoot,logs',
-      `issue-history.json`
-      this.projectRoot, 'logs',
-      'issue-history.json'
-    );
+<<<<<<< HEAD    );
     this.ensureLogsDirectory();
     this.issuePatterns = this.loadIssuePatterns();
     this.historicalData = this.loadHistoricalData();
@@ -77,12 +60,7 @@ class PredictiveIssueDetection {;
     try {
       if (fs.existsSync(this.patternsLog)) {
         return JSON.parse(fs.readFileSync(this.patternsLog, `utf8`));
-;
-  loadIssuePatterns() {;
-    try {;
-      if (fs.existsSync(this.patternsLog)) {;
-        return JSON.parse(fs.readFileSync(this.patternsLog, 'utf8'));
-      }
+<<<<<<< HEAD      }
     } catch (error) {  this.log(`Failed to load issue patterns: ${error.message  }`, `WARN`);
     }
 
@@ -270,76 +248,7 @@ class PredictiveIssueDetection {;
       );
 
       this.log(`Predictive Issue Detection analysis completed successfully`);
-;
-  initializeMLModels() {;
-    return {;
-      // Simple linear regression model for trend analysis;
-      trendAnalysis: {;
-        type: 'linear-regression',;
-        parameters: { learningRate: 0.01, epochs: 100 },;
-        trained: false,;
-        accuracy: 0,;
-      },;
-      // Pattern recognition model for issue classification;
-      patternRecognition: {;
-        type: 'pattern-matching',;
-        parameters: { similarityThreshold: 0.8 },;
-        trained: false,;
-        accuracy: 0,;
-      },;
-      // Anomaly detection model for outlier identification;
-      anomalyDetection: {;
-        type: 'statistical-analysis',;
-        parameters: { standardDeviations: 2 },;
-        trained: false,;
-        accuracy: 0,;
-      },;
-    };
-  }
-;
-  async runPredictiveIssueDetection() {;
-    this.log('Starting Predictive Issue Detection analysis...');
-;
-    try {;
-      // 1. Collect current project metrics;
-      const currentMetrics = await this.collectCurrentMetrics();
-;
-      // 2. Analyze historical trends;
-      const trendAnalysis = await this.analyzeHistoricalTrends(currentMetrics);
-;
-      // 3. Detect anomaly patterns;
-      const anomalyDetection = await this.detectAnomalies(currentMetrics);
-;
-      // 4. Generate issue predictions;
-      const predictions = await this.generateIssuePredictions(;
-        currentMetrics,;
-        trendAnalysis,;
-        anomalyDetection;
-      );
-;
-      // 5. Calculate prediction confidence;
-      const confidenceAnalysis =;
-        await this.calculatePredictionConfidence(predictions);
-;
-      // 6. Generate prevention recommendations;
-      const recommendations = await this.generatePreventionRecommendations(;
-        predictions,;
-        confidenceAnalysis;
-      );
-;
-      // 7. Update historical data;
-      await this.updateHistoricalData(currentMetrics, predictions);
-;
-      // 8. Generate prediction report;
-      const report = await this.generatePredictionReport(;
-        currentMetrics,;
-        predictions,;
-        confidenceAnalysis,;
-        recommendations;
-      );
-;
-      this.log('Predictive Issue Detection analysis completed successfully');
-      return report;
+<<<<<<< HEAD      return report;
     } catch (error) {  this.log(`Predictive Issue Detection failed: ${error.message  }`, `ERROR`);
       throw error;
     }
@@ -418,14 +327,7 @@ class PredictiveIssueDetection {;
       const buildResult = execSync(`npm run build`, {
         encoding: 'utf8',
         stdio: 'pipe',
-;
-    try {;
-      // Build time;
-      const startTime = Date.now();
-      const buildResult = execSync('npm run build', {;
-        encoding: 'utf8',;
-        stdio: 'pipe',;
-      });
+<<<<<<< HEAD      });
       const buildTime = Date.now() - startTime;
 ;
       buildMetrics.buildTime = buildTime;
@@ -448,16 +350,7 @@ class PredictiveIssueDetection {;
       buildMetrics.buildTime = 0;
       }
 
-;
-      // Memory usage during build;
-      buildMetrics.memoryUsage = process.memoryUsage();
-    } catch (error) {;
-      buildMetrics.buildSuccess = false;
-      buildMetrics.buildError = error.message;
-      buildMetrics.buildTime = 0;
-    }
-;
-    return buildMetrics;
+<<<<<<< HEAD    return buildMetrics;
   }
 ;
   calculateBundleSize(distPath) {;
@@ -505,13 +398,7 @@ class PredictiveIssueDetection {;
         const lines = content.split(`\n`).length;
         codeMetrics.totalLines += lines;
 
-;
-      for (const file of sourceFiles) {;
-        const content = fs.readFileSync(file, 'utf8');
-        const lines = content.split('\n').length;
-        codeMetrics.totalLines += lines;
-;
-        // Calculate complexity;
+<<<<<<< HEAD        // Calculate complexity;
         const complexity = this.calculateFileComplexity(content);
         codeMetrics.complexityScore += complexity;
       }
@@ -535,10 +422,7 @@ class PredictiveIssueDetection {;
     const sourceDirs = [`src`, 'components', 'utils', 'hooks', 'api'];
 
     for (const dir of sourceDirs) {
-    const sourceDirs = ['src', 'components', 'utils', 'hooks', 'api'];
-;
-    for (const dir of sourceDirs) {;
-      const dirPath = path.join(this.projectRoot, 'dir);
+<<<<<<< HEAD      const dirPath = path.join(this.projectRoot, 'dir);
       if (fs.existsSync(dirPath)) {;
         this.scanDirectory(dirPath', sourceFiles);
       }
@@ -599,13 +483,7 @@ class PredictiveIssueDetection {;
       const lintResult = execSync(`npm run lint`, {
         encoding: 'utf8',
         stdio: 'pipe',
-;
-    try {;
-      // Run ESLint for code quality;
-      const lintResult = execSync('npm run lint', {;
-        encoding: 'utf8',;
-        stdio: 'pipe',;
-      });
+<<<<<<< HEAD      });
       const lintIssues = this.parseLintOutput(lintResult);
 ;
       qualityMetrics.lintIssues = lintIssues.length;
@@ -656,9 +534,7 @@ class PredictiveIssueDetection {;
   }
 
   calculateDuplicationScore(files) {
-;
-  calculateDuplicationScore(files) {;
-    // Simplified duplication detection;
+<<<<<<< HEAD    // Simplified duplication detection;
     let totalDuplication = 0;
 ;
     for (let i = 0; i < files.length; i++) {;
@@ -705,12 +581,7 @@ class PredictiveIssueDetection {;
       const content = fs.readFileSync(file, `utf8`);
 
       for (const pattern of securityPatterns) {
-;
-    for (const file of files) {;
-      const content = fs.readFileSync(file, 'utf8');
-;
-      for (const pattern of securityPatterns) {;
-        const matches = content.match(pattern.pattern);
+<<<<<<< HEAD        const matches = content.match(pattern.pattern);
         if (matches) {;
           securityScore -= pattern.penalty * matches.length;
         }
@@ -752,6 +623,7 @@ class PredictiveIssueDetection {;
       const memoryInfo = execSync(`free -m`, { encoding: 'utf8' });
       const cpuInfo = execSync('top -bn1 | grep "Cpu(s)", {
         encoding: 'utf8',
+<<<<<<< HEAD
 ;
   async collectSystemMetrics() {;
     try {;
@@ -759,6 +631,9 @@ class PredictiveIssueDetection {;
       const cpuInfo = execSync('top -bn1 | grep "Cpu(s)", {;
         encoding: 'utf8',;
       });
+=======
+<<<<<<< HEAD      });
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 ;
       return {;
         memoryInfo: memoryInfo.trim(),;
@@ -779,13 +654,7 @@ class PredictiveIssueDetection {;
       const outdatedResult = execSync('npm outdated --json', {
         encoding: 'utf8',
         stdio: 'pipe',
-;
-    try {;
-      // Check for outdated packages;
-      const outdatedResult = execSync('npm outdated --json', {;
-        encoding: 'utf8',;
-        stdio: 'pipe',;
-      });
+<<<<<<< HEAD      });
       const outdatedPackages = JSON.parse(outdatedResult);
 ;
       dependencyMetrics.outdatedCount = Object.keys(outdatedPackages).length;
@@ -813,13 +682,7 @@ class PredictiveIssueDetection {;
       if (fs.existsSync(packageLockPath)) {
         const packageLock = JSON.parse(
           fs.readFileSync(packageLockPath, `utf8`)
-;
-      // Package lock analysis;
-      const packageLockPath = path.join(this.projectRoot, 'package-lock.json');
-      if (fs.existsSync(packageLockPath)) {;
-        const packageLock = JSON.parse(;
-          fs.readFileSync(packageLockPath, 'utf8');
-        );
+<<<<<<< HEAD        );
         dependencyMetrics.totalDependencies = Object.keys(;
           packageLock.dependencies || {}
         ).length;
@@ -851,19 +714,7 @@ class PredictiveIssueDetection {;
     } catch (error) {  
       this.log(Failed to collect performance metrics: ${error.message  }`,
         `WARN`
-;
-    try {;
-      // Build performance;
-      performanceMetrics.buildPerformance =;
-        await this.measureBuildPerformance();
-;
-      // Runtime performance;
-      performanceMetrics.runtimePerformance =;
-        await this.measureRuntimePerformance();
-    } catch (error) {;
-      this.log(Failed to collect performance metrics: ${error.message}',;
-        'WARN';
-      );
+<<<<<<< HEAD      );
     }
 ;
     return performanceMetrics;
@@ -894,12 +745,17 @@ class PredictiveIssueDetection {;
     } catch (error) {  
       metrics.error = error.message;
       }
+<<<<<<< HEAD
 ;
 } catch (error) {;
       metrics.error = error.message;
     }
 ;
     return metrics;
+=======
+
+<<<<<<< HEAD    return metrics;
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   }
 ;
   async measureRuntimePerformance() {;
@@ -918,8 +774,7 @@ class PredictiveIssueDetection {;
 ;
       metrics.fileSystemLatency = fsEnd - fsStart;
 
-;
-      // Measure memory allocation;
+<<<<<<< HEAD      // Measure memory allocation;
       const memoryTest = [];
       const memStart = process.memoryUsage();
 ;
@@ -961,23 +816,7 @@ class PredictiveIssueDetection {;
         `dependencies`,
         currentMetrics.dependencyMetrics.totalDependencies;
       ),
-;
-    const trends = {;
-      buildTime: this.analyzeTrend(buildTime',;
-        currentMetrics.buildMetrics.buildTime;
-      ),;
-      bundleSize: this.analyzeTrend(;
-        'bundleSize',;
-        currentMetrics.buildMetrics.bundleSize?.totalSize;
-      ),;
-      codeComplexity: this.analyzeTrend(codeComplexity',;
-        currentMetrics.codeMetrics.averageComplexity;
-      ),;
-      dependencies: this.analyzeTrend(;
-        'dependencies',;
-        currentMetrics.dependencyMetrics.totalDependencies;
-      ),;
-    };
+<<<<<<< HEAD    };
 ;
     return trends;
   }
@@ -995,8 +834,7 @@ class PredictiveIssueDetection {;
     const trend = this.calculateLinearTrend(values);
 
     return {
-      trend:
-        trend.slope > 0;
+      trend: trend.slope > 0;
           ? `INCREASING`
           : trend.slope < 0;
             ? 'DECREASING'
@@ -1004,18 +842,7 @@ class PredictiveIssueDetection {;
       slope: trend.slope,
       confidence: trend.confidence,
       prediction: this.predictNextValue(values, trend.slope),
-;
-    return {;
-      trend:;
-        trend.slope > 0;
-          ? 'INCREASING';
-          : trend.slope < 0;
-            ? 'DECREASING';
-            : 'STABLE',;
-      slope: trend.slope,;
-      confidence: trend.confidence,;
-      prediction: this.predictNextValue(values, trend.slope),;
-    };
+<<<<<<< HEAD    };
   }
 ;
   calculateLinearTrend(values) {;
@@ -1093,15 +920,7 @@ this.log(`Detected ${anomalies.length} anomalies`);
     if (buildTimeHistory.length > 0) {
       const buildTimeAnomaly = this.checkStatisticalAnomaly(
         metrics.buildMetrics.buildTime,
-;
-    // Check build time anomalies;
-    const buildTimeHistory = this.historicalData.buildHistory.map(;
-      h => h.buildTime;
-    );
-    if (buildTimeHistory.length > 0) {;
-      const buildTimeAnomaly = this.checkStatisticalAnomaly(;
-        metrics.buildMetrics.buildTime,;
-        buildTimeHistory;
+<<<<<<< HEAD        buildTimeHistory;
       );
       if (buildTimeAnomaly) {;
         anomalies.push(buildTimeAnomaly);
@@ -1153,17 +972,7 @@ this.log(`Detected ${anomalies.length} anomalies`);
         expectedRange: ['mean - 2 * stdDev', 'mean + 2 * stdDev'],
         zScore,
         severity: zScore > 3 ? 'HIGH' : 'MEDIUM',
-;
-    if (zScore > 2) {;
-      // More than 2 standard deviations;
-      return {;
-        type: 'STATISTICAL_ANOMALY',;
-        metric: 'buildTime',;
-        currentValue,;
-        expectedRange: ['mean - 2 * stdDev', 'mean + 2 * stdDev'],;
-        zScore,;
-        severity: zScore > 3 ? 'HIGH' : 'MEDIUM',;
-      };
+<<<<<<< HEAD      };
     }
 ;
     return null;
@@ -1237,31 +1046,7 @@ this.log(`Detected ${anomalies.length} anomalies`);
         severity: `MEDIUM`,
         threshold: 10 * 1024 * 1024,
         currentValue: metrics.buildMetrics.bundleSize.totalSize,
-;
-    // Build time threshold;
-    if (metrics.buildMetrics.buildTime > 60000) {;
-      // 1 minute;
-      anomalies.push({;
-        type: 'THRESHOLD_ANOMALY',;
-        metric: 'buildTime',;
-        description: 'Build time exceeds acceptable threshold',;
-        severity: 'MEDIUM',;
-        threshold: 60000,;
-        currentValue: metrics.buildMetrics.buildTime,;
-      });
-    }
-;
-    // Bundle size threshold;
-    if (metrics.buildMetrics.bundleSize?.totalSize > 10 * 1024 * 1024) {;
-      // 10MB;
-      anomalies.push({;
-        type: 'THRESHOLD_ANOMALY',;
-        metric: 'bundleSize',;
-        description: 'Bundle size exceeds acceptable threshold',;
-        severity: 'MEDIUM',;
-        threshold: 10 * 1024 * 1024,;
-        currentValue: metrics.buildMetrics.bundleSize.totalSize,;
-      });
+<<<<<<< HEAD      });
     }
 ;
     return anomalies;
@@ -1332,16 +1117,7 @@ this.log(`Generated ${predictions.length} issue predictions`);
           probability: Math.min(0.9, 0.5 + trend.confidence * 0.4),
           timeframe: this.estimateTimeframe(trend.slope),
           severity: `MEDIUM`,
-;
-    for (const ['metric', 'trend'] of Object.entries(trendAnalysis)) {;
-      if (trend.trend === 'INCREASING' && trend.confidence > 0.7) {;
-        predictions.push({;
-          type: 'TREND_BASED_PREDICTION',;
-          metric,description: `${metric} is trending upward, may cause issues`,;
-          probability: Math.min(0.9, 0.5 + trend.confidence * 0.4),;
-          timeframe: this.estimateTimeframe(trend.slope),;
-          severity: 'MEDIUM',;
-        });
+<<<<<<< HEAD        });
       }
     }
 ;
@@ -1369,16 +1145,7 @@ this.log(`Generated ${predictions.length} issue predictions`);
         timeframe: `IMMEDIATE`,
         severity: anomaly.severity,
         anomaly: anomaly,
-;
-    for (const anomaly of anomalyDetection) {;
-      predictions.push({;
-        type: 'ANOMALY_BASED_PREDICTION',;
-        metric: anomaly.metric,description: `Anomaly detected in ${anomaly.metric}: ${anomaly.description}`,;
-        probability: 0.8,;
-        timeframe: 'IMMEDIATE',;
-        severity: anomaly.severity,;
-        anomaly: anomaly,;
-      });
+<<<<<<< HEAD      });
     }
 ;
     return predictions;
@@ -1392,7 +1159,7 @@ this.log(`Generated ${predictions.length} issue predictions`);
       predictions.push({
         type: `METRIC_BASED_PREDICTION`,
         metric: 'buildTime',
-        description:Build time is approaching threshold, may cause ''CI/CD'' issues',
+        description: Build time is approaching threshold, may cause ''CI/CD'' issues',
         probability: 0.7,
         timeframe: 'SHORT_TERM',
         severity: 'MEDIUM'});
@@ -1403,7 +1170,7 @@ this.log(`Generated ${predictions.length} issue predictions`);
       predictions.push({
         type: 'METRIC_BASED_PREDICTION',
         metric: 'securityVulnerabilities',
-        description:Multiple security vulnerabilities may lead to security incidents',
+        description: Multiple security vulnerabilities may lead to security incidents',
         probability: 0.9,
         timeframe: 'IMMEDIATE',
         severity: 'HIGH',
@@ -1453,17 +1220,7 @@ this.log(`Generated ${predictions.length} issue predictions`);
         timeframe: 'MEDIUM_TERM',
         severity: 'MEDIUM',
         confidence: 0.8,
-    // Predict code quality degradation;
-    if (metrics.codeMetrics.averageComplexity > 8) {;
-      predictions.push({;
-        type: 'ML_PREDICTION',;
-        metric: 'codeQuality',;
-        description: 'ML model predicts code quality degradation',;
-        probability: 0.75,;
-        timeframe: 'MEDIUM_TERM',;
-        severity: 'MEDIUM',;
-        confidence: 0.8,;
-      });
+<<<<<<< HEAD      });
     }
 ;
     return predictions;
@@ -1506,10 +1263,7 @@ this.log(`Generated ${predictions.length} issue predictions`);
     // Adjust based on prediction type;
     switch (prediction.type) {
       case 'TREND_BASED_PREDICTION':
-    // Adjust based on prediction type;
-    switch (prediction.type) {;
-      case 'TREND_BASED_PREDICTION':;
-        confidence += 0.2;
+<<<<<<< HEAD        confidence += 0.2;
         break;
       case 'ANOMALY_BASED_PREDICTION':;
         confidence += 0.3;
@@ -1540,11 +1294,7 @@ this.log(`Generated ${predictions.length} issue predictions`);
   async generatePreventionRecommendations(predictions, confidenceAnalysis) {
     this.log(`Generating prevention recommendations...`);
 
-;
-  async generatePreventionRecommendations(predictions, confidenceAnalysis) {;
-    this.log('Generating prevention recommendations...');
-;
-    const recommendations = [];
+<<<<<<< HEAD    const recommendations = [];
 ;
     for (const prediction of confidenceAnalysis.predictions) {;
       if (prediction.confidence > 0.7) {;
@@ -1581,26 +1331,8 @@ this.log(`Generated ${recommendations.length} prevention recommendations`);
       METRIC_BASED_PREDICTION: {
         title: `Preventive Action`,description: `Take preventive action for ${prediction.metric}`,
         action: `implement_prevention`,
-        priority: prediction.severity === `HIGH` ? 'HIGH' : 'MEDIUM'},
-;
-  generateRecommendationForPrediction(prediction) {;
-    const recommendationTemplates = {;
-      TREND_BASED_PREDICTION: {;
-        title: 'Address Trending Issue',description: `Monitor and address the upward trend in ${prediction.metric}`,;
-        action: 'implement_monitoring',;
-        priority: prediction.severity === 'HIGH' ? 'HIGH' : 'MEDIUM',;
-      },;
-      ANOMALY_BASED_PREDICTION: {;
-        title: 'Investigate Anomaly',description: `Investigate the detected anomaly in ${prediction.metric}`,;
-        action: 'investigate_root_cause',;
-        priority: 'HIGH',;
-      },;
-      METRIC_BASED_PREDICTION: {;
-        title: 'Preventive Action',description: `Take preventive action for ${prediction.metric}`,;
-        action: 'implement_prevention',;
-        priority: prediction.severity === 'HIGH' ? 'HIGH' : 'MEDIUM',;
-      },;
-    };
+        priority: prediction.severity === `HIGH` ? 'HIGH' : 'MEDIUM',
+      },    };
 ;
     const template = recommendationTemplates[prediction.type];
     if (template) {;
@@ -1634,7 +1366,7 @@ this.log(`Generated ${recommendations.length} prevention recommendations`);
     if (confidenceAnalysis.overallConfidence > 0.8) {;
       recommendations.push({;
         title: 'High Confidence Predictions',;
-        description:Multiple high-confidence predictions suggest proactive measures needed',;
+        description: Multiple high-confidence predictions suggest proactive measures needed',;
         action: 'schedule_prevention_sprint',;
         priority: 'HIGH',;
         estimatedEffort: 'MEDIUM',;
@@ -1697,41 +1429,7 @@ this.log(`Generated ${recommendations.length} prevention recommendations`);
       predictions: predictions,
       metrics: currentMetrics});
 
-;
-  async updateHistoricalData(currentMetrics, predictions) {;
-    this.log('Updating historical data...');
-;
-    // Update build history;
-    this.historicalData.buildHistory.push({;
-      timestamp: currentMetrics.timestamp,;
-      buildTime: currentMetrics.buildMetrics.buildTime,;
-      bundleSize: currentMetrics.buildMetrics.bundleSize,;
-      buildSuccess: currentMetrics.buildMetrics.buildSuccess,;
-    });
-;
-    // Update error history;
-    if (currentMetrics.buildMetrics.buildError) {;
-      this.historicalData.errorHistory.push({;
-        timestamp: currentMetrics.timestamp,;
-        error: currentMetrics.buildMetrics.buildError,;
-        type: 'BUILD_ERROR',;
-      });
-    }
-;
-    // Update performance history;
-    this.historicalData.performanceHistory.push({;
-      timestamp: currentMetrics.timestamp,;
-      metrics: currentMetrics.performanceMetrics,;
-    });
-;
-    // Update issue history;
-    this.historicalData.issueHistory.push({;
-      timestamp: currentMetrics.timestamp,;
-      predictions: predictions,;
-      metrics: currentMetrics,;
-    });
-;
-    // Keep only last 50 entries;
+<<<<<<< HEAD    // Keep only last 50 entries;
     const maxEntries = 50;
     for (const key of Object.keys(this.historicalData)) {;
       if (Array.isArray(this.historicalData[key])) {;
@@ -1777,32 +1475,7 @@ this.log(`Generated ${recommendations.length} prevention recommendations`);
         confidenceAnalysis: confidenceAnalysis,
         recommendations: recommendations},
       nextSteps: this.generateNextSteps(predictions, recommendations),
-;
-  async generatePredictionReport(;
-    currentMetrics,;
-    predictions,;
-    confidenceAnalysis,;
-    recommendations;
-  ) {;
-    const report = {;
-      timestamp: new Date().toISOString(),;
-      summary: {;
-        totalPredictions: predictions.length,;
-        highConfidencePredictions: predictions.filter(p => p.confidence > 0.8);
-          .length,;
-        highSeverityPredictions: predictions.filter(p => p.severity === 'HIGH');
-          .length,;
-        overallConfidence: confidenceAnalysis.overallConfidence,;
-        recommendationsGenerated: recommendations.length,;
-      },;
-      details: {;
-        currentMetrics: currentMetrics,;
-        predictions: predictions,;
-        confidenceAnalysis: confidenceAnalysis,;
-        recommendations: recommendations,;
-      },;
-      nextSteps: this.generateNextSteps(predictions, recommendations),;
-    };
+<<<<<<< HEAD    };
 ;
     // Save report to file;
     const reportPath = path.join(;
@@ -1850,39 +1523,7 @@ this.log(`Prediction report generated: ${reportPath}`);
       nextSteps.push({
         timeframe: `LONG_TERM`,
         actions: longTermRecommendations.map(r => r.title),
-;
-    // Immediate actions;
-    const immediatePredictions = predictions.filter(;
-      p => p.timeframe === 'IMMEDIATE';
-    );
-    if (immediatePredictions.length > 0) {;
-      nextSteps.push({;
-        timeframe: 'IMMEDIATE',;
-        actions: immediatePredictions.map(p => `Address ${p.metric} issue: ${p.description}`;
-        ),;
-      });
-    }
-;
-    // Short-term actions;
-    const shortTermRecommendations = recommendations.filter(;
-      r => r.timeframe === 'SHORT_TERM';
-    );
-    if (shortTermRecommendations.length > 0) {;
-      nextSteps.push({;
-        timeframe: 'SHORT_TERM',;
-        actions: shortTermRecommendations.map(r => r.title),;
-      });
-    }
-;
-    // Long-term actions;
-    const longTermRecommendations = recommendations.filter(;
-      r => r.timeframe === 'LONG_TERM';
-    );
-    if (longTermRecommendations.length > 0) {;
-      nextSteps.push({;
-        timeframe: 'LONG_TERM',;
-        actions: longTermRecommendations.map(r => r.title),;
-      });
+<<<<<<< HEAD      });
     }
 ;
     return nextSteps;
@@ -1917,7 +1558,7 @@ if (require.main === module) {;
       process.exit(0);
     });
     .catch(error => {;
-      console.error('❌ Predictive Issue Detection failed:', error.message);
+      console.error('❌ Predictive Issue Detection failed: ', error.message);
       process.exit(1);
     });
 }

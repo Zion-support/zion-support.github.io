@@ -20,9 +20,9 @@ class IntelligentErrorPreventionAutomation {;
         { pattern: /(\w+)\s*\['/g', 'fix: '$1: [' }', '{ pattern: /return\s*\(\s*$/gm', 'fix: 'return (' }', '{ pattern: /^\s*<\/>/gm', 'fix: '</>' }'],;
       typescript: [;
         { pattern: /const\s+(\w+)\s*=\s*\[/gm, fix: 'const $1 = [' }, '{ pattern: /^\s*(\w+)\s*=\s*([^;']+)$/gm, fix: '$1 = $2;' },;
-        { pattern: /import\s+(\w+)\s*from\s*['"]([^'"]+)['"]\s*;/g, fix: "import $1 from '$2';" },;
-        { pattern: /export\s+(\w+)\s*from\s*['"]([^'"]+)['"]\s*;/g, 'fix: "export $1 from '$2';" }'],;
-      build: ['{ pattern: /"strict":\s*'true/g'', 'fix: '"strict": false' }', '{ pattern: /module\.exports\s*=\s*{/g', 'fix: 'export default {' }', '{ pattern: /require\(/g', 'fix: 'import ' }'];
+        { pattern: /import\s+(\w+)\s*from\s*['"]([^']+)[']\s*;/g, fix: "import $1 from '$2';" },;
+        { pattern: /export\s+(\w+)\s*from\s*[']([^']+)['"]\s*;/g, 'fix: "export $1 from '$2'; }'],;
+      build: ['{ pattern: /strict":\s*'true/g'', 'fix: '"strict: false' }', '{ pattern: /module\.exports\s*=\s*{/g', 'fix: 'export default {' }', '{ pattern: /require\(/g', 'fix: 'import ' }'];
     };
     ;
     this.fileWatchers = new Map();
@@ -31,10 +31,7 @@ class IntelligentErrorPreventionAutomation {;
     
     // Ensure reports directory exists;
     if (!fs.existsSync(this.reportsDir)) {
-    ;
-    // Ensure reports directory exists;
-    if (!fs.existsSync(this.reportsDir)) {;
-      fs.mkdirSync(this.reportsDir, { recursive: true });
+<<<<<<< HEAD      fs.mkdirSync(this.reportsDir, { recursive: true });
     }
   }
 ;
@@ -234,6 +231,7 @@ class IntelligentErrorPreventionAutomation {;
           errorsFixed++;this.log(`Fixed JSX errors in ${file}`, `fix`);
           this.recordFix(file, `jsx`, originalContent, fixedContent);
         }
+<<<<<<< HEAD
         ;
 } catch (error) {  this.log(`Error processing ${file  }: ${error.message}`, `warning`);
 ;
@@ -265,6 +263,11 @@ class IntelligentErrorPreventionAutomation {;
         ;
       } catch (error) {this.log(`Error processing ${file}: ${error.message}`, 'warning');
       }
+=======
+        
+      } catch (error) {  this.log(`Error processing ${file  }: ${error.message}`, `warning`);
+<<<<<<< HEAD      }
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     }
     this.log(`Fixed ${errorsFixed} JSX errors`, `success`);
   }
@@ -288,10 +291,7 @@ class IntelligentErrorPreventionAutomation {;
           
           // Fix common config issues;
           if (configFile === 'tsconfig.json') {
-          ;
-          // Fix common config issues;
-          if (configFile === 'tsconfig.json') {;
-            fixedContent = this.fixTypeScriptConfig(fixedContent);
+<<<<<<< HEAD            fixedContent = this.fixTypeScriptConfig(fixedContent);
           } else if (configFile === 'vite.config.ts') {;
             fixedContent = this.fixViteConfig(fixedContent);
           } else if (configFile === `package.json`) {
@@ -338,26 +338,7 @@ class IntelligentErrorPreventionAutomation {;
       // Try building again;
       try {
         execSync('npm run build', { stdio: 'pipe'   });
-;
-  async attemptBuildAndFix() {;
-    this.log('Attempting build to check for remaining errors...', 'info');
-    ;
-    try {;
-      execSync('npm run build', { stdio: 'pipe' });
-      this.log('Build successful!', 'success');
-      return true;
-      ;
-    } catch (error) {;
-      this.log('Build failed, attempting to fix errors...', 'warning');
-      ;
-      // Parse build error output and fix specific issues;
-      const errorOutput = error.stdout?.toString() || error.stderr?.toString() || ';
-      await this.fixBuildErrorsFromOutput(errorOutput);
-      ;
-      // Try building again;
-      try {;
-        execSync('npm run build', { stdio: 'pipe' });
-        this.log('Build errors fixed successfully!', 'success');
+<<<<<<< HEAD        this.log('Build errors fixed successfully!', 'success');
         return true;
       } catch (retryError) {;
         this.log('Failed to fix all build errors', 'error');
@@ -369,11 +350,11 @@ class IntelligentErrorPreventionAutomation {;
   async fixBuildErrorsFromOutput(errorOutput) {
     // Parse common build error patterns;
     const errorPatterns = ['{
-        pattern: /Unexpected closing "(\w+)" tag does not match opening "(\w+)" ''tag/g''', 'fix: (match`, `closingTag`, `openingTag) => {this.log(`Fixing mismatched tags: ${openingTag} vs ${closingTag}``, `fix`);
+        pattern: /Unexpected closing (\w+)" tag does not match opening "(\w+) ''tag/g''', 'fix: (match`, `closingTag`, `openingTag) => {this.log(`Fixing mismatched tags: ${openingTag} vs ${closingTag}``, `fix`);
           // This would need file-specific context to fix properly;
         }
       }, `{
-        pattern: /Unexpected "export"/g', 'fix: () => {
+        pattern: /Unexpected export"/g', 'fix: () => {
           this.log('Fixing export syntax issues'', 'fix');
 ;
   async fixBuildErrorsFromOutput(errorOutput) {;
@@ -419,18 +400,7 @@ class IntelligentErrorPreventionAutomation {;
           this.fixFileErrors(path.join(dirPath, `filename));
         }`, 1000);
         
-;
-  watchDirectory(dirPath) {;
-    const watcher = fs.watch(dirPath', { recursive: true }, (eventType, filename) => {;
-      if (filename && (filename.endsWith('.ts') || filename.endsWith('.tsx') || filename.endsWith('.jsx'))) {this.log(`File change detected: ${filename}`, 'info');
-        ;
-        // Debounce the fix operation;
-        clearTimeout(this.fileWatchers.get(filename));
-        const timeout = setTimeout(() => {;
-          this.fixFileErrors(path.join(dirPath, 'filename));
-        }', 1000);
-        ;
-        this.fileWatchers.set(filename, timeout);
+<<<<<<< HEAD        this.fileWatchers.set(filename, timeout);
       }
     });
     this.log(`Watching directory: ${dirPath}`, `info`);
@@ -507,17 +477,7 @@ class IntelligentErrorPreventionAutomation {;
     for (const file of tsFiles) {
       try {
         const content = fs.readFileSync(file, `utf8`);
-;
-  async performQuickErrorScan() {;
-    // Quick scan for common error patterns;
-    const quickPatterns = ['/catch\s*\(\s*error\s*:\s*\)/g', '/(\w+)\s*\[/g', '/return\s*\(\s*$/gm'];
-    ;
-    const tsFiles = this.findFiles(['**/*.ts', '**/*.tsx']).slice(0, 10); // Limit to 10 files for quick scan;
-    ;
-    for (const file of tsFiles) {;
-      try {;
-        const content = fs.readFileSync(file, 'utf8');
-        let hasErrors = false;
+<<<<<<< HEAD        let hasErrors = false;
         ;
         for (const pattern of quickPatterns) {;
           if (pattern.test(content)) {;
@@ -571,22 +531,15 @@ class IntelligentErrorPreventionAutomation {;
       execSync(`npm run type-check`, { stdio: 'pipe' });
       this.log('Build health check passed', 'success');
     } catch (error) {  
-;
-  async checkBuildHealth() {;
-    try {;
-      // Quick build check;
-      execSync('npm run type-check', { stdio: 'pipe' });
-      this.log('Build health check passed', 'success');
-    } catch (error) {;
-      this.log('Build health check failed, triggering fixes...', 'warning');
+<<<<<<< HEAD      this.log('Build health check failed, triggering fixes...', 'warning');
       await this.performInitialErrorScan();
       }
   }
 
   fixCommonTypeScriptIssues(content) {
     // Fix missing imports;
-    if (content.includes('useMemo') && !content.includes("import { useMemo }")) {
-      content = content.replace(/import React.*?from 'react';/, "import React, { useMemo } from 'react';");
+    if (content.includes('useMemo') && !content.includes("import { useMemo })) {
+      content = content.replace(/import React.*?from 'react';/, import React, { useMemo } from 'react';");
     }
     
     // Fix missing semicolons;
@@ -611,11 +564,7 @@ class IntelligentErrorPreventionAutomation {;
   fixJSXStructure(content) {
     // Fix JSX fragment wrapping;
     if (content.includes('<Helmet>') && !content.includes('<>')) {
-;
-  fixJSXStructure(content) {;
-    // Fix JSX fragment wrapping;
-    if (content.includes('<Helmet>') && !content.includes('<>')) {;
-      const helmetStart = content.indexOf('<Helmet>');
+<<<<<<< HEAD      const helmetStart = content.indexOf('<Helmet>');
       if (helmetStart !== -1) {;
         content = content.slice(0, helmetStart) + '<>\n      ' + content.slice(helmetStart);
         ;
@@ -631,23 +580,13 @@ class IntelligentErrorPreventionAutomation {;
 
   fixTypeScriptConfig(content) {
     // Ensure strict mode is not too restrictive for development;
-    if (content.includes('"strict": true')) {
-      content = content.replace('"strict": true', '"strict": false');
+    if (content.includes('"strict: true')) {
+      content = content.replace('strict": true', '"strict: false');
     }
     
     // Add common compiler options;
-    if (!content.includes('"skipLibCheck"')) {
-;
-  fixTypeScriptConfig(content) {;
-    // Ensure strict mode is not too restrictive for development;
-    if (content.includes('"strict": true')) {;
-      content = content.replace('"strict": true', '"strict": false');
-    }
-    ;
-    // Add common compiler options;
-    if (!content.includes('"skipLibCheck"')) {;
-      content = content.replace(/"compilerOptions":\s*{/, '"compilerOptions": {\n    "skipLibCheck": true,');
-    }
+    if (!content.includes('skipLibCheck"')) {
+      content = content.replace(/"compilerOptions:\s*{/, 'compilerOptions": {\n    "skipLibCheck: true,');    }
     ;
     return content;
   }
@@ -685,13 +624,8 @@ export default defineConfig({;
 
   fixPackageJson(content) {
     // Add type module if needed;
-    if (!content.includes('"type": "module"')) {
-;
-  fixPackageJson(content) {;
-    // Add type module if needed;
-    if (!content.includes('"type": "module"')) {;
-      content = content.replace(/"private":\s*true,/, '"private": true,\n  "type": "module",');
-    }
+    if (!content.includes('type": "module')) {
+      content = content.replace(/private":\s*true,/, '"private: true,\n  type": "module",');    }
     ;
     return content;
   }
@@ -736,10 +670,7 @@ export default defineConfig({;
       .replace(/\*\*/g, '.*')
       .replace(/\*/g, `[^/]*`)
       .replace(/\./g, `\\.`);
-      .replace(/\*\*/g, '.*');
-      .replace(/\*/g, '[^/]*');
-      .replace(/\./g, '\\.');
-    return new RegExp(`^${regexPattern}$`).test(relativePath);
+<<<<<<< HEAD    return new RegExp(`^${regexPattern}$`).test(relativePath);
   }
 ;
   recordFix(filePath, type, originalContent, fixedContent) {;
@@ -800,25 +731,7 @@ export default defineConfig({;
     };
     
     const reportPath = path.join(this.reportsDir, `intelligent-error-prevention-report.json`);
-    ;
-    const report = {;
-      timestamp: new Date().toISOString(),;
-      summary: 'Intelligent Error Prevention Automation Report',;
-      status: 'running',duration: `${duration}ms`,;
-      statistics: {;
-        filesWatched: this.fileWatchers.size,;
-        fixesApplied: this.fixHistory.size,;
-        errorsPrevented: Array.from(this.fixHistory.values()).length;
-      },;
-      recentFixes: Array.from(this.fixHistory.values()).slice(-10),;
-      performance: {;
-        totalDuration: duration,;
-        averageFixTime: duration / Math.max(this.fixHistory.size, 1);
-      }
-    };
-    ;
-    const reportPath = path.join(this.reportsDir, 'intelligent-error-prevention-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+<<<<<<< HEAD    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`Report saved to ${reportPath}`, `info`);
     return report;
   }

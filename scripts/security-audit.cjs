@@ -1,13 +1,11 @@
-#!/usr/bin/env node
 
+const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
 class SecurityAuditor {
   constructor() {
-    this.projectRoot = process.cwd();
-    this.reportsDir = path.join(this.projectRoot, 'automation-reports');
+    this.reportsDir = path.join(process.cwd(), 'security-reports');
     this.ensureDirectories();
   }
 
@@ -17,13 +15,10 @@ class SecurityAuditor {
     }
   }
 
-  log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
-
-  async runCommand(command, description) {
-    this.log(`🚀 Starting: ${description}`);
+  async runNpmAudit() {
+    console.log('🔍 Running npm audit...');
     try {
+<<<<<<< HEAD
       const result = execSync(command, {
         cwd: this.projectRoot,
         encoding: 'utf8',
@@ -31,19 +26,24 @@ class SecurityAuditor {
 });
       this.log(`✅ Completed: ${description}`);
       return { success: true, output: result };
+=======
+      const command = 'npm audit --audit-level=moderate --json > ./security-reports/npm-audit.json';
+      execSync(command, { stdio: 'inherit' });
+      console.log('✅ NPM audit completed');
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     } catch (error) {
-      this.log(`❌ Failed: ${description} - ${error.message}`);
-      return { success: false, error: error.message };
+      console.log('❌ NPM audit failed:', error.message);
     }
   }
 
-  async auditDependencies() {
-    this.log('🔍 Auditing dependencies for vulnerabilities...');
-    
+  async runSnykAudit() {
+    console.log('🔍 Running Snyk audit...');
     try {
-      const result = await this.runCommand('npm audit --audit-level=moderate', 'Dependency Security Audit');
-      return result;
+      const command = 'npx snyk test --json > ./security-reports/snyk-audit.json';
+      execSync(command, { stdio: 'inherit' });
+      console.log('✅ Snyk audit completed');
     } catch (error) {
+<<<<<<< HEAD
       // npm audit returns non-zero exit code when vulnerabilities are found
       // This is expected behavior, so we'll treat it as a successful audit with findings
       return { 
@@ -264,13 +264,40 @@ class SecurityAuditor {
     }
 
     return report;
+=======
+      console.log('❌ Snyk audit failed:', error.message);
+    }
+  }
+
+  async generateSecurityReport() {
+    console.log('📊 Generating security report...');
+    const report = {
+      timestamp: new Date().toISOString(),
+      audits: {
+        npm: 'npm-audit.json',
+        snyk: 'snyk-audit.json'
+      },
+      recommendations: [
+        'Keep dependencies updated',
+        'Use security headers',
+        'Implement rate limiting',
+        'Use HTTPS only',
+        'Validate all inputs',
+        'Use environment variables for secrets'
+      ]
+    };
+    
+    fs.writeFileSync(
+      path.join(this.reportsDir, 'security-report.json'),
+      JSON.stringify(report, null, 2)
+    );
+    
+    console.log('✅ Security report generated');
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   }
 }
 
-// Run the security auditor
-if (require.main === module) {
-  const auditor = new SecurityAuditor();
-  auditor.run().catch(console.error);
-}
-
-module.exports = SecurityAuditor;
+const auditor = new SecurityAuditor();
+auditor.runNpmAudit();
+auditor.runSnykAudit();
+auditor.generateSecurityReport();

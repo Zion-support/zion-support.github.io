@@ -19,7 +19,7 @@ const ${pageName}: NextPage = () => {
     <div>
       <Head>
         <title>${pageName} - Zion Tech Solutions</title>
-        <meta name="description" content="${pageName} page" />
+        <meta name="description content=${pageName} page" />
       </Head>
       
       <main>
@@ -44,13 +44,13 @@ const ${pageName}: NextPage = () => {
     <div>
       <Head>
         <title>${pageName} - Zion Tech Solutions</title>
-        <meta name="description" content="${pageName} blog post" />
+        <meta name="description content=${pageName} blog post" />
       </Head>
       
       <main>
         <h1>${pageName}</h1>
         <p>Blog content coming soon...</p>
-        <Link href="/blog">Back to Blog</Link>
+        <Link href="/blog>Back to Blog</Link>
       </main>
     </div>
   );
@@ -70,13 +70,13 @@ const ${pageName}: NextPage = () => {
     <div>
       <Head>
         <title>${pageName} - Zion Tech Solutions</title>
-        <meta name="description" content="${pageName} service" />
+        <meta name=description" content="${pageName} service />
       </Head>
       
       <main>
         <h1>${pageName}</h1>
         <p>Service details coming soon...</p>
-        <Link href="/services">Back to Services</Link>
+        <Link href=/services">Back to Services</Link>
       </main>
     </div>
   );
@@ -156,8 +156,6 @@ function fixCorruptedFiles(directory) {
 
 // Start fixing from the pages and components directories;
 console.log('Fixing corrupted TypeScript files with proper templates...');
-// Start fixing from the pages and components directories
-// Fixing corrupted TypeScript files with proper templates...
-fixCorruptedFiles('./pages');
+<<<<<<< HEADfixCorruptedFiles('./pages');
 fixCorruptedFiles('./components');
 // Finished fixing corrupted files with proper templates.

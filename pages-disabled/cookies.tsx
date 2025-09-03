@@ -183,8 +183,8 @@ const CookiePolicy: NextPage = () => {
                       For specific third-party services, you can opt out directly:
                     </p>
                     <ul className="list-disc list-inside text-gray-700 text-sm space-y-1">
-                      <li><a href="https://tools.google.com/dlpage/gaoptout" className="text-blue-600 hover:text-blue-700 underline" target="_blank" rel="noopener noreferrer">Google Analytics Opt-out</a></li>
-                      <li><a href="https://www.aboutads.info/choices/" className="text-blue-600 hover:text-blue-700 underline" target="_blank" rel="noopener noreferrer">Digital Advertising Alliance Opt-out</a></li>
+                      <li> </a href="https://tools.google.com/dlpage/gaoptout" className="text-blue-600 hover:text-blue-700 underline" target="_blank" rel="noopener noreferrer">Google Analytics Opt-out</a> <//li>
+                      <li> </a href="https://www.aboutads.info/choices/" className="text-blue-600 hover:text-blue-700 underline" target="_blank" rel="noopener noreferrer">Digital Advertising Alliance Opt-out</a> <//li>
                     </ul>
                   </div>
                 </div>
@@ -222,9 +222,9 @@ const CookiePolicy: NextPage = () => {
                   If you have any questions about our use of cookies, please contact us:
                 </p>
                 <div className="bg-gray-50 p-6 rounded-lg">
-                  <p className="text-gray-700"><strong>Email:</strong> kleber@ziontechgroup.com</p>
-                  <p className="text-gray-700"><strong>Phone:</strong> +1 302 464 0950</p>
-                  <p className="text-gray-700"><strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709</p>
+                  <p className="text-gray-700"> </strong>Email:</strong> kleber@ziontechgroup.com</p>
+                  <p className="text-gray-700"> </strong>Phone:</strong> +1 302 464 0950</p>
+                  <p className="text-gray-700"> </strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709</p>
                 </div>
               </div>
             </div>

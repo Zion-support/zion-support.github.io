@@ -47,12 +47,7 @@ class SmartDependencyManager {;
     console.log(`'🔍 Starting Smart Dependency Analysis...');
 ;
     try {;
-
-  async runDependencyAnalysis() {
-    console.log(`🔍 Starting Smart Dependency Analysis...`);
-
-    try {
-      await this.loadDependencies();
+<<<<<<< HEAD      await this.loadDependencies();
       await this.analyzeDependencies();
       await this.detectConflicts();
       await this.checkVulnerabilities();
@@ -62,6 +57,7 @@ class SmartDependencyManager {;
       await this.generateReport();
 ;
       console.log(`'✅ Smart Dependency Analysis completed successfully');
+<<<<<<< HEAD
     } catch (error) {  ;
 } catch (error) {;
 
@@ -69,6 +65,10 @@ class SmartDependencyManager {;
     } catch (error) {
       console.error('❌ Smart Dependency Analysis failed:', error.message);
       }
+=======
+    } catch (error) {  
+      console.error('❌ Smart Dependency Analysis failed: ', error.message);      }
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   }
 ;
   async loadDependencies() {;
@@ -95,7 +95,7 @@ class SmartDependencyManager {;
         Development: ${Object.keys(this.dependencies.development).length}
         Peer: ${Object.keys(this.dependencies.peer).length}Optional: ${Object.keys(this.dependencies.optional).length});
     } catch (error) {  
-      console.error(`❌ Failed to load dependencies:`, error.message);
+      console.error(`❌ Failed to load dependencies: `, error.message);
       }
   }
 
@@ -106,20 +106,7 @@ class SmartDependencyManager {;
       // Get outdated packages;
       const outdatedOutput = execSync(`npm outdated --json`, {
         encoding: `utf8`,
-        cwd: process.cwd()} catch (error) {;
-      console.error('❌ Failed to load dependencies:', error.message);
-    }
-  }
-;
-  async analyzeDependencies() {;
-    console.log('🔍 Analyzing dependency patterns...');
-;
-    try {;
-      // Get outdated packages;
-      const outdatedOutput = execSync('npm outdated --json', {;
-        encoding: 'utf8',;
-        cwd: process.cwd(),;
-      });
+        cwd: process.cwd(),      });
 ;
       const outdatedData = JSON.parse(outdatedOutput);
       this.analysis.outdated = Object.keys(outdatedData).map(pkg => ({;
@@ -133,7 +120,7 @@ class SmartDependencyManager {;
       console.log(📊 Found ${this.analysis.outdated.length} outdated packages`
       `);
     } catch (error) {  
-      console.log(``⚠️  Could not check outdated packages:`, error.message);
+      console.log(``⚠️  Could not check outdated packages: `, error.message);
       }
   }
 
@@ -190,20 +177,7 @@ class SmartDependencyManager {;
             version1: prodVersions.get(pkg),
             version2: version,
             severity: `medium`,
-;
-      // Check for version conflicts in production dependencies;
-      const prodVersions = new Map();
-      for (const ['pkg', 'version'] of Object.entries(;
-        this.dependencies.production;
-      )) {;
-        if (prodVersions.has(pkg)) {;
-          conflicts.push({;
-            type: 'version',;
-            package: pkg,;
-            version1: prodVersions.get(pkg),;
-            version2: version,;
-            severity: 'medium',;
-          });
+<<<<<<< HEAD          });
         } else {;
           prodVersions.set(pkg, version);
         }
@@ -212,7 +186,7 @@ class SmartDependencyManager {;
       this.analysis.conflicts = conflicts;
       console.log(⚠️  Found ${conflicts.length} dependency conflicts);
     } catch (error) {  
-      console.log(`⚠️  Could not detect conflicts:`, error.message);
+      console.log(`⚠️  Could not detect conflicts: `, error.message);
       }
   }
 
@@ -222,17 +196,7 @@ class SmartDependencyManager {;
     try {
       const auditOutput = execSync(`npm audit --audit-level moderate --json`, {
         encoding: `utf8`,
-        cwd: process.cwd()} catch (error) {;
-      console.log('⚠️  Could not detect conflicts:', error.message);
-    }
-  }
-;
-  async checkVulnerabilities() {;
-    }`);
-  }`);
-`);
-  async checkVulnerabilities() {`);
-    console.log('🛡️  Checking for vulnerabilities...'`);
+        cwd: process.cwd(),    console.log('🛡️  Checking for vulnerabilities...'`);
 ;
     try {;
       const auditOutput = execSync('npm audit --audit-level moderate --json', {;
@@ -263,7 +227,7 @@ class SmartDependencyManager {;
       console.log(`🛡️  Found ${this.analysis.vulnerabilities.length} vulnerabilities`);
       );
     } catch (error) {;
-      console.log('⚠️  Could not check vulnerabilities:', error.message);
+      console.log('⚠️  Could not check vulnerabilities: ', error.message);
     }
   }
 ;
@@ -284,62 +248,11 @@ class SmartDependencyManager {;
       };
 ;
       console.log(📊 Found ${this.analysis.unused.dependencies.length} unused production dependencies';
-
-      console.log(📊 Found ${this.analysis.unused.dependencies.length} unused production dependencies`
-      );
-      console.log( 📊 Found ${this.analysis.unused.devDependencies.length} unused development dependencies;
-      );
-    } catch (error) {  
-      console.log(`⚠️  Could not find unused dependencies:`, error.message);
-      }
-  }
-
-  async generateRecommendations() {
-    console.log(`💡 Generating smart recommendations...'`);
-
-    const recommendations = [];
-
-    // Security recommendations;
-    if (this.analysis.vulnerabilities.length > 0) {
-      recommendations.push({
-        type: `security`,
-        priority: `critical`,message: Update ${this.analysis.vulnerabilities.length} vulnerable packages immediately,
-        action: `run npm audit fix`});
-    }
-
-    // Conflict resolution recommendations;
-    for (const conflict of this.analysis.conflicts) {
-      if (conflict.severity === `high`) {
-        recommendations.push({
-          type: `conflict`,
-          priority: `high`,message: Resolve peer dependency conflict for ${conflict.package}`,action: `update ${conflict.package} to compatible version`}`);
-      }
-    }
-
-    // Update recommendations;
-    const criticalUpdates = this.analysis.outdated.filter(pkg =>
-      this.isMajorVersionUpdate(pkg.current, pkg.latest)
-    );
-
-    if (criticalUpdates.length > 0) {
-      recommendations.push({
-        type: `update`,
-        priority: `high`,message: `Consider major version updates for ${criticalUpdates.length} packages`,
-        action: `review and update major versions carefully`});
-    }
-
-    // Cleanup recommendations;
-    if (this.analysis.unused.dependencies.length > 0) {
-      recommendations.push({
-        type: `cleanup`,
-        priority: `medium`,message: `Remove ${this.analysis.unused.dependencies.length} unused production dependencies`,
-        action: `remove unused dependencies to reduce bundle size`,
-      console.log(📊 Found ${this.analysis.unused.dependencies.length} unused production dependencies`);
-      );
+<<<<<<< HEAD      );
       console.log( 📊 Found ${this.analysis.unused.devDependencies.length} unused development dependencies;
       );
     } catch (error) {;
-      console.log('⚠️  Could not find unused dependencies:', error.message);
+      console.log('⚠️  Could not find unused dependencies: ', error.message);
     }
   }
 ;
@@ -403,11 +316,6 @@ class SmartDependencyManager {;
     if (this.analysis.vulnerabilities.length > 0) {;
       try {;
         console.log(`'🛡️  Applying security fixes...');
-
-  async applySmartUpdates() {
-    console.log(``🔧 Applying smart updates...`);
-    console.log(`🔧 Applying smart updates...`);
-
     let updatesApplied = 0;
 
     // Apply security fixes first;
@@ -417,13 +325,13 @@ class SmartDependencyManager {;
         execSync('npm audit fix', { stdio: `inherit` });
         updatesApplied++;
       } catch (error) {  
-        console.log(``⚠️  Security fixes failed:`, error.message);
+        console.log(``⚠️  Security fixes failed: `, error.message);
         }
         console.log(`🛡️  Applying security fixes...`);
         execSync('npm audit fix', { stdio: 'inherit' });
         updatesApplied++;
       } catch (error) {;
-        console.log(`'⚠️  Security fixes failed:', error.message);
+        console.log(`'⚠️  Security fixes failed: ', error.message);
       }
     }
 ;
@@ -434,20 +342,7 @@ class SmartDependencyManager {;
 ;
     for (const pkg of safeUpdates.slice(0, 5)) {;
       // Limit to 5 updates at a time;
-
-    // Apply safe minor updates;
-    const safeUpdates = this.analysis.outdated.filter(
-      pkg => !this.isMajorVersionUpdate(pkg.current, pkg.wanted)
-    );
-
-    for (const pkg of safeUpdates.slice(0, 5)) {
-      // Limit to 5 updates at a time;
-      try {console.log(📦 Updating ${pkg.name} to ${pkg.wanted}...);execSync(npm install ${pkg.name}@${pkg.wanted}, { stdio: `pipe` }`);
-    );`);
-`);
-    for (const pkg of safeUpdates.slice(0, 5)) {`);
-      // Limit to 5 updates at a time`);
-      try {console.log(📦 Updating ${pkg.name} to ${pkg.wanted}...);execSync(npm install ${pkg.name}@${pkg.wanted}, { stdio: 'pipe' }`);
+<<<<<<< HEAD      try {console.log(📦 Updating ${pkg.name} to ${pkg.wanted}...);execSync(npm install ${pkg.name}@${pkg.wanted}, { stdio: 'pipe' }`);
         updatesApplied++;
       } catch (error) {  console.log(`⚠️  Failed to update ${pkg.name  }:`, error.message);
       }
@@ -476,9 +371,14 @@ console.log(`✅ Applied ${updatesApplied} smart updates`);
     try {const packageJsonPath = require.resolve(`${packageName}/package.json`);
       const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, `utf8`));
       return packageJson.version;
+<<<<<<< HEAD
     } catch (error) {  ;
 } catch (error) {;
       return null;
+=======
+    } catch (error) {  
+<<<<<<< HEAD      return null;
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       }
   }
 
@@ -516,7 +416,7 @@ console.log(`✅ Applied ${updatesApplied} smart updates`);
         outdated: this.analysis.outdated.length,;
         vulnerabilities: this.analysis.vulnerabilities.length,;
         conflicts: this.analysis.conflicts.length,;
-        unused:;
+        unused: ;
           this.analysis.unused.dependencies.length +;
           this.analysis.unused.devDependencies.length,;
       },;
@@ -527,10 +427,7 @@ console.log(`✅ Applied ${updatesApplied} smart updates`);
 
     const reportPath = path.join(
       this.reportDir,dependency-analysis-${Date.now()}.json`
-;
-    const reportPath = path.join(;
-      this.reportDir,dependency-analysis-${Date.now()}.json';
-    );
+<<<<<<< HEAD    );
     await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
 console.log(`📊 Dependency analysis report saved to ${reportPath}`);
   }
@@ -562,19 +459,8 @@ async function runSmartDependencyManager() {;
       await manager.runDependencyAnalysis();
     }, AUTOMATION_INTERVAL);
   } catch (error) {  
-    console.error(`❌ Smart Dependency Manager failed:', error.message);
+    console.error(`❌ Smart Dependency Manager failed: ', error.message);
     }
-;
-    // Run analysis;
-    await manager.runDependencyAnalysis();
-;
-    // Schedule recurring analysis;
-    setInterval(async () => {;
-      await manager.runDependencyAnalysis();
-    }, AUTOMATION_INTERVAL);
-  } catch (error) {;
-    console.error('❌ Smart Dependency Manager failed:', error.message);
-  }
-}
+<<<<<<< HEAD}
 ;
 runSmartDependencyManager();

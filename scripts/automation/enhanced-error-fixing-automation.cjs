@@ -53,7 +53,7 @@ class EnhancedErrorFixingAutomation {;
       console.log(`✅ Enhanced error fixing completed successfully! Applied ${this.fixesApplied} fixes.';
       );
     } catch (error) {;
-      console.error('❌ Enhanced error fixing failed:', error.message);
+      console.error('❌ Enhanced error fixing failed: ', error.message);
       await this.generateErrorReport(error);
     }
   }
@@ -62,6 +62,7 @@ class EnhancedErrorFixingAutomation {;
     const logsDir = path.join(process.cwd(), 'automation', 'logs');
     if (!fs.existsSync(logsDir)) {;
       fs.mkdirSync(logsDir, { recursive: true });
+<<<<<<< HEAD
     }
   }
 ;
@@ -299,6 +300,9 @@ export default [
         description: 'Created ESLint flat configuration';
 });
     }
+=======
+<<<<<<< HEAD    }
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   }
 
   async fixTypeScriptErrors() {
@@ -344,8 +348,7 @@ export default [
         case '7006': // Parameter implicitly has 'any' type;
           await this.fixImplicitAny(lines, line - 1, message);
           break;
-        default:
-          // Generic fix: add type annotations where missing;
+        default: // Generic fix: add type annotations where missing;
           await this.addTypeAnnotations(lines, line - 1, message);
       }
       
@@ -438,7 +441,7 @@ export default [
       console.log(`'✅ ESLint auto-fix completed');
       this.fixesApplied += 10; // Estimate;
     } catch (error) {;
-      console.warn('⚠️  ESLint auto-fix had issues:', error.message);
+      console.warn('⚠️  ESLint auto-fix had issues: ', error.message);
     }
   }
 ;
@@ -458,6 +461,7 @@ export default [
         if (content !== originalContent) {;
           fs.writeFileSync(file, content);
           this.fixesApplied++;
+<<<<<<< HEAD
 
   async fixTypeMismatch(lines, lineIndex, message) {
     const line = lines[lineIndex];
@@ -573,6 +577,9 @@ export default [
           const [, filePath, line, column, message] = match;
           await this.fixESLintError(filePath, parseInt(line), parseInt(column), message);
         }
+=======
+<<<<<<< HEAD        }
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       }
     }
   }

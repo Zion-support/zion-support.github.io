@@ -48,22 +48,22 @@ class AICodeOptimizer {;
     console.log(`'🚀 Starting AI Code Optimization...');
 ;
     try {;
-
-  async runOptimization() {
-    console.log(`🚀 Starting AI Code Optimization...`);
-
-    try {
-      await this.analyzeCodebase();
+<<<<<<< HEAD      await this.analyzeCodebase();
       await this.identifyOptimizationOpportunities();
       await this.applyOptimizations();
       await this.measureImprovements();
       await this.generateReport();
 ;
       console.log('✅ AI Code Optimization completed successfully');
+<<<<<<< HEAD
     } catch (error) {  ;
 } catch (error) {;
       console.error('❌ AI Code Optimization failed:', error.message);
       }
+=======
+    } catch (error) {  
+      console.error('❌ AI Code Optimization failed: ', error.message);      }
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   }
 
   async analyzeCodebase() {
@@ -119,13 +119,7 @@ class AICodeOptimizer {;
       const content = await fs.readFile(filePath, `utf8`);
       const analysis = this.performCodeAnalysis(content, filePath);
 
-;
-  async analyzeFile(filePath) {;
-    try {;
-      const content = await fs.readFile(filePath, 'utf8');
-      const analysis = this.performCodeAnalysis(content, filePath);
-;
-      // Store analysis results;
+<<<<<<< HEAD      // Store analysis results;
       this.optimizations.performance.push(...analysis.performance);
       this.optimizations.memory.push(...analysis.memory);
       this.optimizations.security.push(...analysis.security);
@@ -192,27 +186,7 @@ class AICodeOptimizer {;
         issue: 'Potential XSS vulnerability',
         suggestion: 'Sanitize HTML content before rendering',
         priority: 'critical',
-;
-    // Memory optimizations;
-    if (content.includes('useState(') && content.includes('useEffect(')) {;
-      analysis.memory.push({;
-        type: 'memory',;
-        file: filePath,;
-        issue: 'Potential memory leak with useState and useEffect',;
-        suggestion: 'Add cleanup function to useEffect',;
-        priority: 'high',;
-      });
-    }
-;
-    // Security optimizations;
-    if (content.includes('dangerouslySetInnerHTML')) {;
-      analysis.security.push({;
-        type: 'security',;
-        file: filePath,;
-        issue: 'Potential XSS vulnerability',;
-        suggestion: 'Sanitize HTML content before rendering',;
-        priority: 'critical',;
-      });
+<<<<<<< HEAD      });
     }
 ;
     if (content.includes('eval(')) {;
@@ -243,30 +217,9 @@ class AICodeOptimizer {;
         issue: 'Missing ARIA roles',
         suggestion: 'Add appropriate ARIA roles for better accessibility',
         priority: `medium`,
-;
-    // Maintainability optimizations;
-    if (content.length > 500) {;
-      analysis.maintainability.push({;
-        type: 'maintainability',;
-        file: filePath,;
-        issue: 'Large file detected',;
-        suggestion: 'Consider breaking into smaller components',;
-        priority: 'medium',;
       });
     }
-;
-    // Accessibility optimizations;
-    if (content.includes('<div') && !content.includes('role=')) {;
-      analysis.accessibility.push({;
-        type: 'accessibility',;
-        file: filePath,;
-        issue: 'Missing ARIA roles',;
-        suggestion: 'Add appropriate ARIA roles for better accessibility',;
-        priority: 'medium',;
-      });
-    }
-;
-    return analysis;
+;    return analysis;
   }
 
   async identifyOptimizationOpportunities() {
@@ -309,16 +262,7 @@ console.log(`📊 Found ${totalOptimizations} optimization opportunities:;
     // Apply critical security fixes first;
     for (const optimization of this.optimizations.security) {
       if (optimization.priority === `critical`) {
-;
-  async applyOptimizations() {;
-    console.log('🔧 Applying optimizations...');
-;
-    let appliedCount = 0;
-;
-    // Apply critical security fixes first;
-    for (const optimization of this.optimizations.security) {;
-      if (optimization.priority === 'critical') {;
-        await this.applyOptimization(optimization);
+<<<<<<< HEAD        await this.applyOptimization(optimization);
         appliedCount++;
       }
     }
@@ -338,11 +282,7 @@ console.log(`📊 Found ${totalOptimizations} optimization opportunities:;
     // Apply memory optimizations;
     for (const optimization of this.optimizations.memory) {
       if (optimization.priority === `high`) {
-;
-    // Apply memory optimizations;
-    for (const optimization of this.optimizations.memory) {;
-      if (optimization.priority === 'high') {;
-        await this.applyOptimization(optimization);
+<<<<<<< HEAD        await this.applyOptimization(optimization);
         appliedCount++;
       }
     }
@@ -396,46 +336,7 @@ console.log(`📊 Found ${totalOptimizations} optimization opportunities:;
         case `accessibility`:
           optimizedContent = this.applyAccessibilityOptimization(
             content,
-      const content = await fs.readFile(filePath, 'utf8');
-;
-      // Create backup;
-      const backupPath = path.join(;
-        this.backupDir,${path.basename(filePath)}.backup.${Date.now()}';
-      );
-      await fs.writeFile(backupPath, content);
-;
-      // Apply optimization based on type;
-      let optimizedContent = content;
-;
-      switch (optimization.type) {;
-        case 'performance':;
-          optimizedContent = this.applyPerformanceOptimization(;
-            content,;
-            optimization;
-          );
-          break;
-        case 'memory':;
-          optimizedContent = this.applyMemoryOptimization(;
-            content,;
-            optimization;
-          );
-          break;
-        case 'security':;
-          optimizedContent = this.applySecurityOptimization(;
-            content,;
-            optimization;
-          );
-          break;
-        case 'maintainability':;
-          optimizedContent = this.applyMaintainabilityOptimization(;
-            content,;
-            optimization;
-          );
-          break;
-        case 'accessibility':;
-          optimizedContent = this.applyAccessibilityOptimization(;
-            content,;
-            optimization;
+<<<<<<< HEAD            optimization;
           );
           break;
       }
@@ -472,16 +373,7 @@ console.log(`📊 Found ${totalOptimizations} optimization opportunities:;
     }
 
     if (optimization.issue.includes('Console statements')) {
-;
-    if (optimization.issue.includes('Missing dependency array')) {;
-      // Add empty dependency array to useEffect;
-      optimized = optimized.replace(;
-        /useEffect\(\(\) => \{/g,useEffect(() => {\n  // TODO: Add dependencies if needed\n}, []);
-      );
-    }
-;
-    if (optimization.issue.includes('Console statements')) {;
-      // Comment out console statements;
+<<<<<<< HEAD      // Comment out console statements;
       optimized = optimized.replace(/console\.log\(/g, '// console.log(`');
     }
 ;
@@ -494,13 +386,7 @@ console.log(`📊 Found ${totalOptimizations} optimization opportunities:;
     if (optimization.issue.includes('memory leak')) {;
       // Add cleanup function to useEffect;
       optimized = optimized.replace(;
-        /useEffect\(\(\) => \{([^}]+)\}/g,useEffect(() => {$1\n  return () => {\n    // Cleanup function\n  };\n}, []);
-
-    if (optimization.issue.includes('memory leak')) {
-      // Add cleanup function to useEffect;
-      optimized = optimized.replace(
-        /useEffect\(\(\) => \{([^}]+)\}/g,useEffect(() => {$1\n  return () => {\n    // Cleanup function\n  };\n}, []);`);
-      );
+        /useEffect\(\(\) => \{([^}]+)\}/g,useEffect(() => {$1\n  return () => {\n    // Cleanup function\n  };\n}, []);';      );
     }
 ;
     return optimized;
@@ -535,8 +421,7 @@ console.log(`📊 Found ${totalOptimizations} optimization opportunities:;
       // Comment out eval usage;
       optimized = optimized.replace(
         /eval\(/g,// SECURITY: Replace eval() with safer alternative - eval(`
-        /eval\(/g,// SECURITY: Replace eval() with safer alternative - eval(`);
-      );
+<<<<<<< HEAD      );
     }
 ;
     return optimized;
@@ -555,10 +440,7 @@ console.log(`📊 Found ${totalOptimizations} optimization opportunities:;
   }
 ;
   applyAccessibilityOptimization(content, optimization`) {;
-  }`);
-`);
-  applyAccessibilityOptimization(content, optimization`) {
-    let optimized = content;
+<<<<<<< HEAD    let optimized = content;
 
     if (optimization.issue.includes(`Missing ARIA roles`)) {
       // Add role attribute to div elements;
@@ -577,11 +459,6 @@ console.log(`📊 Found ${totalOptimizations} optimization opportunities:;
 ;
     // Run performance tests;
     try {;
-
-  async measureImprovements() {
-    console.log(``📈 Measuring improvements...`);
-    console.log(`📈 Measuring improvements...`);
-
     // Run performance tests;
     try {
       const buildTime = await this.measureBuildTime();
@@ -609,12 +486,7 @@ console.log(`📊 Found ${totalOptimizations} optimization opportunities:;
       const endTime = Date.now();
       return endTime - startTime;
     } catch (error) {  
-    try {;
-      execSync('npm run build', { stdio: 'pipe' });
-      const endTime = Date.now();
-      return endTime - startTime;
-    } catch (error) {;
-      return 0;
+<<<<<<< HEAD      return 0;
       }
   }
 ;
@@ -658,17 +530,7 @@ console.log(`📊 Found ${totalOptimizations} optimization opportunities:;
     );
     await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
 console.log(📊 AI optimization report saved to ${reportPath}``);
-;
-    const reportPath = path.join(;
-      this.reportDir,ai-optimization-report-${Date.now()}.json';
-    );
-    await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
-`);
-    const reportPath = path.join(`);
-      this.reportDir,ai-optimization-report-${Date.now()}.json`);
-    );`);
-    await fs.writeFile(reportPath, JSON.stringify(report, null, 2));`);
-console.log(📊 AI optimization report saved to ${reportPath}'`);
+<<<<<<< HEADconsole.log(📊 AI optimization report saved to ${reportPath}'`);
   }
 ;
   generateRecommendations() {;
@@ -715,8 +577,7 @@ const AUTOMATION_INTERVAL =;
 const AUTOMATION_INTERVAL =
   parseInt(process.env.AUTOMATION_INTERVAL) || 3600000; // 1 hour;
 async function runAICodeOptimizer() {
-async function runAICodeOptimizer() {;
-  console.log('🤖 Starting AI Code Optimizer...');
+<<<<<<< HEAD  console.log('🤖 Starting AI Code Optimizer...');
 ;
   const optimizer = new AICodeOptimizer();
 ;
@@ -731,17 +592,7 @@ async function runAICodeOptimizer() {;
       await optimizer.runOptimization();
     }, AUTOMATION_INTERVAL);
   } catch (error) {  
-;
-    // Run optimization;
-    await optimizer.runOptimization();
-;
-    // Schedule recurring optimization;
-    setInterval(async () => {;
-      await optimizer.runOptimization();
-    }, AUTOMATION_INTERVAL);
-  } catch (error) {;
-    console.error('❌ AI Code Optimizer failed:', error.message);
-    }
+    console.error('❌ AI Code Optimizer failed: ', error.message);    }
 }
 ;
 runAICodeOptimizer();

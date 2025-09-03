@@ -435,5 +435,4 @@ if (require.main === module) {
 }
 
 module.exports = ComprehensiveAutomationOrchestrator;
-const orchestrator = new ComprehensiveAutomationOrchestrator();
-orchestrator.run();
+<<<<<<< HEAD

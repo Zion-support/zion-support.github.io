@@ -43,12 +43,7 @@ async function checkLinks() {
       return;
       }
 
-    console.log(`🔗 Running link check at ${new Date().toISOString()});`);
-`);
-    // Build the project first`);
-    console.log(`📦 Building project...`);
-    try {
-      execSync('npm run build', { stdio: 'inherit' });
+<<<<<<< HEAD      execSync('npm run build', { stdio: 'inherit' });
       console.log('✅ Build completed'`);
     } catch (error) {;
       console.log('⚠️  Build failed but continuing...');
@@ -137,28 +132,10 @@ async function checkLinks() {
     const reportPath = path.join(process.cwd(), `link-checker-report.json`);
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log(📊 Report saved to ${reportPath}`);
   } catch (error) {  
-    console.error(`❌ Link check failed:`, error.message);
+    console.error(`❌ Link check failed: `, error.message);
     // Don`t exit, just log the error and continue;
     }
-;
-    if (brokenReferences.length > 0) {;
-      console.log(`'⚠️  Broken references found:');
-      brokenReferences.forEach(ref => {console.log(`  - ${ref.file}: ${ref.reference});
-      });
-    }
-;
-    if (!hasIssues) {;
-      console.log(`'✅ No broken references found');
-
-    if (brokenReferences.length > 0) {
-      console.log(`⚠️  Broken references found:`);
-      brokenReferences.forEach(ref => {console.log(`  - ${ref.file}: ${ref.reference});
-      });`);
-    }`);
-`);
-    if (!hasIssues) {`);
-      console.log(`✅ No broken references found`);
-    }
+<<<<<<< HEAD    }
 ;
     // Generate report;
     const report = {;
@@ -172,7 +149,7 @@ async function checkLinks() {
     const reportPath = path.join(process.cwd(), 'link-checker-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log(📊 Report saved to ${reportPath}`);
   } catch (error) {;
-    console.error('❌ Link check failed:', error.message);
+    console.error('❌ Link check failed: ', error.message);
     // Don't exit, just log the error and continue;
   }
 }
@@ -199,12 +176,11 @@ function findHtmlFiles(dir) {;
 function findReferences(content) {;
   const references = [];
 
-;
-  // Find href attributes;
-  const hrefMatches = content.match(/href=["']([^"']+)["']/g);
+<<<<<<< HEAD  // Find href attributes;
+  const hrefMatches = content.match(/href=["']([^']+)[']/g);
   if (hrefMatches) {;
     hrefMatches.forEach(match => {;
-      const href = match.match(/href=["']([^"']+)["']/)[1];
+      const href = match.match(/href=["']([^"']+)[']/)[1];
       if (;
         href &&;
         !href.startsWith('#') &&;
@@ -218,11 +194,10 @@ function findReferences(content) {;
 
 ;
   // Find src attributes;
-  const srcMatches = content.match(/src=["']([^"']+)["']/g);
+  const srcMatches = content.match(/src=[']([^"']+)["']/g);
   if (srcMatches) {;
     srcMatches.forEach(match => {;
-      const src = match.match(/src=["']([^"']+)["']/)[1];
-      if (
+      const src = match.match(/src=[']([^']+)["']/)[1];      if (
         src &&
         !src.startsWith('data:') &&
         !src.startsWith('blob:') &&
@@ -244,10 +219,7 @@ function findReferences(content) {;
 
 function isValidReference(ref, distPath) {
   if (ref.startsWith(`/`)) {
-;
-function isValidReference(ref, distPath) {;
-  if (ref.startsWith('/')) {;
-    ref = ref.substring(1);
+<<<<<<< HEAD    ref = ref.substring(1);
   }
 ;
   const fullPath = path.join(distPath, ref);
@@ -290,9 +262,7 @@ process.on(`SIGINT`, () => {
   }, AUTOMATION_INTERVAL);
 ;
   console.log( ✅ Continuous link checker running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes;
-`);
-  console.log( ✅ Continuous link checker running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
-  `);
+<<<<<<< HEAD  `);
 }
 ;
 // Handle graceful shutdown;
@@ -308,9 +278,5 @@ process.on('SIGTERM', () => {;
 
 // Start the continuous link checker;
 runContinuous().catch(error => {
-;
-// Start the continuous link checker;
-runContinuous().catch(error => {;
-  console.error('❌ Failed to start continuous link checker:', error);
-  process.exit(1);
+  console.error('❌ Failed to start continuous link checker: ', error);  process.exit(1);
 });

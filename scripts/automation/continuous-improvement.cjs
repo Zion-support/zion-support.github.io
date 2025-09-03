@@ -48,14 +48,7 @@ async function runContinuousImprovement() {
       console.log('⚠️  Linting issues found but continuing...');
       }
 
-    console.log(`🚀 Running continuous improvement at ${new Date().toISOString()}`);
-    );
-`);
-    // Check for any pending improvements`);
-    console.log(`📋 Checking for pending improvements...`);
-
-    // Run quality checks
-    console.log('🔍 Running quality checks...');
+<<<<<<< HEAD    console.log('🔍 Running quality checks...');
     try {;
       execSync('npm run lint', { stdio: 'inherit' });
       console.log('✅ Linting completed');
@@ -83,12 +76,17 @@ async function runContinuousImprovement() {
     } catch (error) {  
       console.log('✅ All dependencies are up to date');
       }
+<<<<<<< HEAD
 ;
 } catch (error) {;
       console.log('✅ All dependencies are up to date');
     }
 ;
     // Generate performance report;
+=======
+
+<<<<<<< HEAD    // Generate performance report;
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     console.log('📊 Generating performance report...');
     try {;
       execSync('npm run build', { stdio: 'inherit' });
@@ -124,7 +122,7 @@ async function runContinuousImprovement() {
 
     console.log(`✅ Continuous improvement completed successfully`);
   } catch (error) {  
-    console.error(`❌ Continuous improvement failed:`, error.message);
+    console.error(`❌ Continuous improvement failed: `, error.message);
     // Don`t exit, just log the error and continue;
     }
 }
@@ -147,6 +145,7 @@ async function runContinuous() {
 }
 
 // Handle graceful shutdown;
+<<<<<<< HEAD
 process.on(`SIGINT`, () => {;
 } catch (error) {;
       console.log('⚠️  Bundle analysis failed but continuing...');
@@ -192,6 +191,10 @@ async function runContinuous() {;
 // Handle graceful shutdown;
 process.on('SIGINT', () => {;
   console.log('🛑 Received SIGINT, shutting down gracefully...');
+=======
+process.on(`SIGINT`, () => {
+<<<<<<< HEAD  console.log('🛑 Received SIGINT, shutting down gracefully...');
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   process.exit(0);
 });
 ;
@@ -202,9 +205,5 @@ process.on('SIGTERM', () => {;
 
 // Start the continuous improvement;
 runContinuous().catch(error => {
-;
-// Start the continuous improvement;
-runContinuous().catch(error => {;
-  console.error('❌ Failed to start continuous improvement:', error);
-  process.exit(1);
+  console.error('❌ Failed to start continuous improvement: ', error);  process.exit(1);
 });

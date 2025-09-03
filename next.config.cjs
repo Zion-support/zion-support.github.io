@@ -1,20 +1,23 @@
 /** @type {import('next').NextConfig} */
-/** @type {import(
-  'next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   eslint: {
-    ignoreDuringBuilds: true},
-:next.config.js
+    ignoreDuringBuilds: true,
+  },:next.config.js
   typescript: {
     // Allow production builds to successfully complete even if
     // there are type errors.
+<<<<<<< HEAD
   experimental: {
     // Removed deprecated options;
 },
   typescript: {
     ignoreBuildErrors: true},
   images: {
+=======
+    ignoreBuildErrors: true,
+  },  images: {
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     domains: ['ziontechgroup.com'],
     unoptimized: true},
   compiler: {

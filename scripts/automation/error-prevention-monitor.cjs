@@ -18,11 +18,7 @@ class ErrorPreventionMonitor {;
   ensureDirectories() {
     ['this.logsPath', `this.reportsPath`].forEach(dir => {
       if (!fs.existsSync(dir)) {
-;
-  ensureDirectories() {;
-    ['this.logsPath', 'this.reportsPath'].forEach(dir => {;
-      if (!fs.existsSync(dir)) {;
-        fs.mkdirSync(dir, { recursive: true });
+<<<<<<< HEAD        fs.mkdirSync(dir, { recursive: true });
       }
     });
   }
@@ -102,13 +98,7 @@ this.log(Found ${potentialErrors.length} potential error patterns`);
           !file.startsWith(`.`) &&
           !file.startsWith(`node_modules')
         ) {
-;
-        if (;
-          stat.isDirectory() &&;
-          !file.startsWith('.') &&;
-          !file.startsWith('node_modules');
-        ) {;
-          scanDirectory(filePath);
+<<<<<<< HEAD          scanDirectory(filePath);
         } else if (stat.isFile() && /\.(js|jsx|ts|tsx)$/.test(file)) {;
           sourceFiles.push(filePath);
         }
@@ -217,21 +207,7 @@ this.log(Found ${potentialErrors.length} potential error patterns`);
 
   async applyPreventiveFixes(potentialErrors) {
     this.log(🔧 Applying preventive fixes for ${potentialErrors.length} potential issues...`
-;
-  detectTypeIssue(line) {;
-    const typeIssuePatterns = ['/:\s*any\s*[=', ']/,;
-      /as\s+any/,;
-      /<any>/,;
-      /any\[\]/,;
-      /Record<string,\s*any>/,;
-      /{[^}]*:\s*any['^}]*}/', '];
-;
-    return typeIssuePatterns.some(pattern => pattern.test(line));
-  }
-;
-  async applyPreventiveFixes(potentialErrors) {;
-    this.log(🔧 Applying preventive fixes for ${potentialErrors.length} potential issues...';
-    );
+<<<<<<< HEAD    );
 ;
     let fixedCount = 0;
     const fixResults = [];
@@ -280,11 +256,7 @@ this.log(Found ${potentialErrors.length} potential error patterns`);
     try {
       let content = fs.readFileSync(filePath, `utf8`);
       const lines = content.split(`\n');
-;
-    try {;
-      let content = fs.readFileSync(filePath, 'utf8');
-      const lines = content.split('\n');
-      const lineIndex = error.line - 1;
+<<<<<<< HEAD      const lineIndex = error.line - 1;
 ;
       if (lineIndex < 0 || lineIndex >= lines.length) {;
         return false;
@@ -327,11 +299,16 @@ this.log(Found ${potentialErrors.length} potential error patterns`);
       return false;
     } catch (fixError) {
       this.log(❌ Failed to apply preventive fix: ${fixError.message}`,
+<<<<<<< HEAD
         `ERROR`;
 } catch (fixError) {;
       this.log(❌ Failed to apply preventive fix: ${fixError.message}',;
         'ERROR';
       );
+=======
+        `ERROR`
+<<<<<<< HEAD      );
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       return false;
     }
   }
@@ -371,12 +348,7 @@ this.log(Found ${potentialErrors.length} potential error patterns`);
     if (line.includes('addEventListener')) {
       fixedLine = line.replace(
         /addEventListener\s*\((['^', '']+),\s*(['^', '']+),\s*false\)/g,addEventListener($1, $2, { once: true })'
-;
-    // Add cleanup for event listeners;
-    if (line.includes('addEventListener')) {;
-      fixedLine = line.replace(;
-        /addEventListener\s*\((['^', ']+),\s*(['^', ']+),\s*false\)/g,addEventListener($1, $2, { once: true })';
-      );
+<<<<<<< HEAD      );
     }
 ;
     return fixedLine;
@@ -387,11 +359,7 @@ this.log(Found ${potentialErrors.length} potential error patterns`);
 
     // Add error handling for promises;
     if (line.includes('.then(') && !line.includes('.catch(')) {
-;
-    // Add error handling for promises;
-    if (line.includes('.then(') && !line.includes('.catch(')) {;
-      fixedLine = line + "\n  .catch(error => console.error('Error:', error))";
-    }
+      fixedLine = line + "\n  .catch(error => console.error('Error: ', error))";    }
 ;
     return fixedLine;
   }
@@ -423,8 +391,7 @@ this.log(Found ${potentialErrors.length} potential error patterns`);
       summary: {
         totalIssues: fixResults.totalIssues,
         fixedIssues: fixResults.fixedCount,
-        preventionRate:
-          fixResults.totalIssues > 0;
+        preventionRate: fixResults.totalIssues > 0;
             ? ((fixResults.fixedCount / fixResults.totalIssues) * 100).toFixed(
                 2;
               )
@@ -434,26 +401,7 @@ this.log(Found ${potentialErrors.length} potential error patterns`);
 
     const reportFile = path.join(
       this.reportsPath,error-prevention-monitor-report.json`
-;
-    const report = {;
-      timestamp: new Date().toISOString(),;
-      summary: {;
-        totalIssues: fixResults.totalIssues,;
-        fixedIssues: fixResults.fixedCount,;
-        preventionRate:;
-          fixResults.totalIssues > 0;
-            ? ((fixResults.fixedCount / fixResults.totalIssues) * 100).toFixed(;
-                2;
-              );
-            : 100,;
-      },;
-      fixResults: fixResults.results,;
-      recommendations: ['Review applied fixes to ensure they meet your requirements', 'Consider adding more specific type annotations', 'Implement proper error handling for async operations', 'Regularly review code for potential security issues', '],;
-    };
-;
-    const reportFile = path.join(;
-      this.reportsPath,error-prevention-monitor-report.json';
-    );
+<<<<<<< HEAD    );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 ;
     this.log(`📄 Report generated: ${reportFile}`);
@@ -520,10 +468,7 @@ this.log(Found ${potentialErrors.length} potential error patterns`);
 
 // Run the automation if called directly;
 if (require.main === module) {
-;
-// Run the automation if called directly;
-if (require.main === module) {;
-  const monitor = new ErrorPreventionMonitor();
+<<<<<<< HEAD  const monitor = new ErrorPreventionMonitor();
   monitor.run().catch(console.error);
 }
 ;

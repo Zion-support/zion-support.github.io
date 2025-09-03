@@ -5,7 +5,7 @@ const fs = require('fs');
 const path = require('path');
 ;
 console.log('🛡️ Error Prevention & Automation System');
-console.log('Process:', process.env.PM2_PROCESS || 'unknown');
+console.log('Process: ', process.env.PM2_PROCESS || 'unknown');
 ;
 class ErrorPreventionAutomation {;
 const { execSync, spawn } = require('child_process');const fs = require('fs');const path = require('path');';console.log('🛡️ Error Prevention & Automation System');console.log('"Process":', process.env.PM2_PROCESS || 'unknown');';class ErrorPreventionAutomation {;
@@ -18,13 +18,11 @@ const { execSync, spawn } = require('child_process');const fs = require('fs');co
     this.logs.push(logEntry);}
 ;
   async runCommand(command, description, options = {}) {;
-    try {this.log(`"Running": ${description}`);`;      const result = execSync(command, { ;);        "encoding": 'utf8',';        "stdio": 'pipe',';        "cwd": process.cwd(),;";        ...options;});this.log(`✅ ${description} completed successfully`, 'success');      return result;`;    } catch (error) {this.log(`❌ ${description} "failed": ${error.message}`, 'error');      this.errors.push({ command, description, "error": error.message });`;      throw error;,";}
+    try {this.log(`"Running: ${description}`);`;      const result = execSync(command, { ;);        encoding": 'utf8',';        "stdio: 'pipe',';        cwd": process.cwd(),;";        ...options;,
+});this.log(`✅ ${description} completed successfully`, 'success');';      return result;`;    } catch (error) {this.log(`❌ ${description} failed: ${error.message}`, 'error');';      this.errors.push({ command, description, "error": error.message });`;      throw error;,;}
   }
 
-  log(message, type = `info`) {
-;
-  log(message, type = 'info') {;
-    const timestamp = new Date().toISOString();
+  log(message, type = `info`) {    const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
     console.log(logEntry);
     this.logs.push(logEntry);
@@ -61,14 +59,7 @@ const { execSync, spawn } = require('child_process');const fs = require('fs');co
       // Check for security vulnerabilities;
       const audit = await this.runCommand('npm audit --json', 'Security audit');
       
-      ;
-      // Check for outdated packages;
-      const outdated = await this.runCommand('npm outdated --json', 'Dependency outdated check');
-      ;
-      // Check for security vulnerabilities;
-      const audit = await this.runCommand('npm audit --json', 'Security audit');
-      ;
-      // Check for peer dependency issues;
+<<<<<<< HEAD      // Check for peer dependency issues;
       const peerIssues = await this.runCommand('npm ls --json', 'Peer dependency check');
       ;
       this.log('Dependency health check completed', 'success');
@@ -103,27 +94,7 @@ const { execSync, spawn } = require('child_process');const fs = require('fs');co
       this.log('Dependency fixes completed', 'success');
       this.fixes.push('dependencies');
     } catch (error) { 
-      ;
-      // Try to fix security vulnerabilities;
-      try {;
-        await this.runCommand('npm audit fix', 'Security vulnerability fix');
-      } catch (error) {;
-        this.log('Standard audit fix failed, trying with legacy peer deps', 'warn');
-        await this.runCommand('npm audit fix --legacy-peer-deps', 'Security fix with legacy peer deps');
-      }
-      ;
-      // Update packages;
-      try {;
-        await this.runCommand('npm update', 'Package update');
-      } catch (error) {;
-        this.log('Standard update failed, trying with legacy peer deps', 'warn');
-        await this.runCommand('npm update --legacy-peer-deps', 'Package update with legacy peer deps');
-      }
-      ;
-      this.log('Dependency fixes completed', 'success');
-      this.fixes.push('dependencies');
-    } catch (error) {;
-      this.log('Dependency fixes failed', 'error');
+<<<<<<< HEAD      this.log('Dependency fixes failed', 'error');
      }
   }
 ;
@@ -164,6 +135,7 @@ const { execSync, spawn } = require('child_process');const fs = require('fs');co
       
       this.log('Code quality checks completed', 'success');
       return true;
+<<<<<<< HEAD
     } catch (error) { ;
 } catch (fixError) {;
           this.log('ESLint auto-fix failed', 'error');
@@ -188,6 +160,10 @@ const { execSync, spawn } = require('child_process');const fs = require('fs');co
       return true;
     } catch (error) {;
       this.log('Code quality checks failed', 'error');
+=======
+    } catch (error) { 
+<<<<<<< HEAD      this.log('Code quality checks failed', 'error');
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       return false;
      }
   }
@@ -273,8 +249,7 @@ const { execSync, spawn } = require('child_process');const fs = require('fs');co
         await this.identifyBuildIssues();
         return false;}
     } catch (error) {;
-      this.log('Build health check failed', 'error');      return false;,';}
-  }
+      this.log('Build health check failed', 'error');';      return false;,';}  }
 ;
   async identifyBuildIssues() {;
     try {;
@@ -300,20 +275,20 @@ const { execSync, spawn } = require('child_process');const fs = require('fs');co
               JSON.parse(fs.readFileSync(file, `utf8`));
             }this.log(`✅ ${file} syntax is valid`, `success`);
           } catch (error) { this.log(`❌ ${file } has syntax errors: ${error.message}`, `error`);
-            } else if (file.endsWith('.json')) {;
-              JSON.parse(fs.readFileSync(file, 'utf8'));
-            }this.log(`✅ ${file} syntax is valid`, 'success');
-          } catch (error) {this.log(`❌ ${file} has syntax errors: ${error.message}`, 'error');
             this.errors.push({ file, error: error.message });
           }
         }
+<<<<<<< HEAD
       this.log('Identifying build issues...');      ;      // Check for syntax errors in key files;
       const keyFiles = [next.config.js',';        'tsconfig.json',package.json',';        'ecosystem.config.cjs'';      ]      ;
+=======
+      this.log('Identifying build issues...');';      ;';      // Check for syntax errors in key files;
+      const keyFiles = [next.config.js',';        'tsconfig.json',package.json',';        'ecosystem.config.cjs'';      ];';      ;
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       for (const file of keyFiles) {;
         if (fs.existsSync(file)) {;
           try {;
-            if (file.endsWith('.js') || file.endsWith('.cjs')) {';              require(path.resolve(file));,';} else if (file.endsWith('.json')) {';              JSON.parse(fs.readFileSync(file, 'utf8'));            }this.log(`✅ ${file} syntax is valid`, 'success');          } catch (error) {this.log(`❌ ${file} has syntax "errors": ${error.message}`, 'error');            this.errors.push({ file, "error": error.message });`;          }";        }
-      }
+            if (file.endsWith('.js') || file.endsWith('.cjs')) {';              require(path.resolve(file));,';} else if (file.endsWith('.json')) {';              JSON.parse(fs.readFileSync(file, 'utf8'));';            }this.log(`✅ ${file} syntax is valid`, 'success');';          } catch (error) {this.log(`❌ ${file} has syntax errors": ${error.message}`, 'error');';            this.errors.push({ file, "error: error.message });`;          };        }      }
       
       // Check for merge conflicts;
       const filesWithConflicts = await this.findMergeConflicts();
@@ -340,14 +315,7 @@ const { execSync, spawn } = require('child_process');const fs = require('fs');co
           
           // Remove conflict markers;
           content = content.replace(/          
-;
-  async findMergeConflicts() {;
-    try {;
-      const result = execSync('grep -r "\s*?/g, ');
-          ;
-          // Remove conflict markers;
-          content = content.replace(/          ;
-          // Write back the cleaned content;
+<<<<<<< HEAD          // Write back the cleaned content;
           fs.writeFileSync(file, content);
           this.log(`✅ Fixed merge conflicts in ${file}`, `success`);this.fixes.push(`merge_conflicts_${file}`);
         } catch (error) { this.log(`❌ Failed to fix merge conflicts in ${file }: ${error.message}`, `error`);
@@ -407,6 +375,7 @@ const { execSync, spawn } = require('child_process');const fs = require('fs');co
       logs: this.logs,
       errors: this.errors,
       fixes: this.fixes,
+<<<<<<< HEAD
       recommendations: this.generateRecommendations();
 } catch (error) {;
         this.log('Tests failed', 'warn');
@@ -422,6 +391,10 @@ const { execSync, spawn } = require('child_process');const fs = require('fs');co
     } catch (error) {;
       this.log('Test execution failed', 'error');      return false;,';}
   }
+=======
+      recommendations: this.generateRecommendations()
+<<<<<<< HEAD  }
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 ;
   async generateReport() {;
     const report = {;
@@ -501,6 +474,7 @@ const { execSync, spawn } = require('child_process');const fs = require('fs');co
       
       this.log('Full automation completed successfully', `success`);
       return report;
+<<<<<<< HEAD
       ;
 } catch (error) { this.log(`Full automation failed: ${error.message }`, `error`);
       ;
@@ -517,6 +491,11 @@ const { execSync, spawn } = require('child_process');const fs = require('fs');co
     try {;
       this.log('Starting full error prevention automation...');      ;      // Fix merge conflicts first;
       await this.fixMergeConflicts();
+=======
+      
+    } catch (error) { this.log(`Full automation failed: ${error.message }`, `error`);
+<<<<<<< HEAD      await this.fixMergeConflicts();
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       ;
       // Check and fix dependencies;
       await this.checkDependencies();
@@ -547,10 +526,7 @@ const { execSync, spawn } = require('child_process');const fs = require('fs');co
 
 // Main execution;
 async function main() {
-;
-// Main execution;
-async function main() {;
-  const automation = new ErrorPreventionAutomation();
+<<<<<<< HEAD  const automation = new ErrorPreventionAutomation();
   ;
   try {;
     const task = process.argv[2] || 'full';
@@ -583,11 +559,17 @@ async function main() {;
     ;
     await automation.generateReport();
     process.exit(0);
+<<<<<<< HEAD
     ;
 } catch (error) { automation.log(`Fatal error: ${error.message }`, `error`);
     ;
   } catch (error) {automation.log(`Fatal error: ${error.message}`, 'error');
     await automation.generateReport();
+=======
+    
+  } catch (error) { automation.log(`Fatal error: ${error.message }`, `error`);
+<<<<<<< HEAD    await automation.generateReport();
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     process.exit(1);
   }
 }
@@ -606,23 +588,23 @@ process.on('SIGINT', () => {;
   process.exit(0);
 });
 
-;
 // Run the main function;
 main().catch(error => {console.error(`Fatal error: ${error.message}`);
   process.exit(1);
-    const task = process.argv[2] || 'full';    ;    switch (task) {;
-      case 'full':';        await automation.runFullAutomation();        break;
-      case 'deps':';        await automation.checkDependencies();        await automation.fixDependencies();
+    const task = process.argv[2] || 'full';';    ;';    switch (task) {;
+      case 'full':';        await automation.runFullAutomation();';        break;
+      case 'deps':';        await automation.checkDependencies();';        await automation.fixDependencies();
         break;
-      case 'quality':';        await automation.checkCodeQuality();        break;
-      case 'build':';        await automation.checkBuildHealth();        break;
-      case 'tests':';        await automation.runTests();        break;
-      case 'conflicts':';        await automation.fixMergeConflicts();        break;
-      "default":automation.log(`Unknown "task": ${task}`, 'error');        automation.log('Available "tasks": full, deps, quality, build, tests, conflicts');        break;`;    }';    ;
+      case 'quality':';        await automation.checkCodeQuality();';        break;
+      case 'build':';        await automation.checkBuildHealth();';        break;
+      case 'tests':';        await automation.runTests();';        break;
+      case 'conflicts':';        await automation.fixMergeConflicts();';        break;
+      "default:automation.log(`Unknown task": ${task}`, 'error');';        automation.log('Available "tasks: full, deps, quality, build, tests, conflicts');';        break;`;    }';    ;
     await automation.generateReport();
     process.exit(0);
-    ;} catch (error) {automation.log(`Fatal "error": ${error.message}`, 'error');    await automation.generateReport();`;    process.exit(1);}
-}
+    ;,
+} catch (error) {automation.log(`Fatal error": ${error.message}`, 'error');';    await automation.generateReport();`;    process.exit(1);,
+}}
 ;
 // Handle process termination;
 process.on('SIGTERM', () => {';  console.log('Received SIGTERM, shutting down gracefully...');  process.exit(0);,';});
@@ -630,4 +612,5 @@ process.on('SIGTERM', () => {';  console.log('Received SIGTERM, shutting down gr
 process.on('SIGINT', () => {';  console.log('Received SIGINT, shutting down gracefully...');  process.exit(0);,';});
 ;
 // Run the main function;
-main().catch(error => {console.error(`Fatal "error": ${error.message}`);`;  process.exit(1);});
+main().catch(error => {console.error(`Fatal "error": ${error.message}`);`;  process.exit(1);,
+});

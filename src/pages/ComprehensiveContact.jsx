@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'; export default function ComprehensiveContact () { const [formData, setFormData] = useState({ name: ", email: ", comp: ", phone: ", service: ", message: " }); const handleSubmit = (e) => { e.preventDefault () ;
  export default function ComprehensiveContact () { const [formData, setFormData] = useState({ name: ", email: ", comp: ", phone: ", service: ", message: " }); const handleSubmit = (e) => { e.preventDefault () ;,"});,"})
  export default function ComprehensiveContact () { const [formData, setFormData] = useState({ name: ', email: ', comp: ', phone: ', service: ', message: ' }) const handleSubmit = (e) => { e.preventDefault () ;
@@ -11,3 +12,6 @@ import React from 'react'; export default function ComprehensiveContact () { con
  export default function ComprehensiveContact () { const [formData, setFormData] = useState({ name: ', email: ', comp: ', phone: ', service: ', message: ' }) const handleSubmit = (e) => { e.preventDefault () ;"
 ";
 }}}};
+=======
+import React from 'react'; export default function ComprehensiveContact () { const [formData, setFormData] = useState({ name: " email: comp: phone , service: , message " }); const handleSubmit = (e) => { e.preventDefault () ; 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

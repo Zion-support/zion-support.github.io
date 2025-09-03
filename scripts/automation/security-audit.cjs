@@ -40,11 +40,7 @@ async function runSecurityAudit() {
 
     // Run npm audit;
     console.log(``🔍 Running npm security audit...`);
-    console.log(`🔒 Running security audit at ${new Date().toISOString()});`);
-`);
-    // Run npm audit`);
-    console.log(`🔍 Running npm security audit...`);
-    try {
+<<<<<<< HEAD    try {
       execSync(`npm audit --audit-level=moderate`, { stdio: 'inherit' });
       console.log('✅ Security audit completed - no issues found'`);
     } catch (error) {  
@@ -62,8 +58,7 @@ async function runSecurityAudit() {
       }
     }
 
-;
-    // Check for known vulnerabilities in dependencies;
+<<<<<<< HEAD    // Check for known vulnerabilities in dependencies;
     console.log('📦 Checking for known vulnerabilities...');
     try {;
       execSync('npm audit --json', { stdio: 'pipe' });
@@ -83,12 +78,17 @@ async function runSecurityAudit() {
     } catch (error) {  
       console.log('✅ All packages are up to date');
       }
+<<<<<<< HEAD
 ;
 } catch (error) {;
       console.log('✅ All packages are up to date');
     }
 ;
     // Run security scan if available;
+=======
+
+<<<<<<< HEAD    // Run security scan if available;
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     console.log('🔍 Running additional security scans...');
     try {;
       if (fs.existsSync('security-scan.js')) {;
@@ -109,7 +109,7 @@ async function runSecurityAudit() {
 
     console.log(`✅ Continuous security audit completed successfully`);
   } catch (error) {  
-    console.error(`❌ Continuous security audit failed:`, error.message);
+    console.error(`❌ Continuous security audit failed: `, error.message);
     // Don`t exit, just log the error and continue;
     }
 }
@@ -184,9 +184,5 @@ process.on('SIGTERM', () => {;
 
 // Start the continuous security audit;
 runContinuous().catch(error => {
-;
-// Start the continuous security audit;
-runContinuous().catch(error => {;
-  console.error('❌ Failed to start continuous security audit:', error);
-  process.exit(1);
+  console.error('❌ Failed to start continuous security audit: ', error);  process.exit(1);
 });

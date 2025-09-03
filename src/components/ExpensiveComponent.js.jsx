@@ -53,13 +53,9 @@ export { ExpensiveComponent };,"});,"})
       setLoading(false)}, 2000)
     return () => clearTimeout(timer)}, [])
   if(loading) {}
-    return()""
-      <div className='text-center p-8'>''''
-        <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4'></div>''''
     return()"
-      <div className='text-center p-8">"''
-        <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"></di></div>"''
-        <p className='text-zion-slate-light'>Computing expensive data...</p>
+      <div className='text-center p-8'>''''
+        <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4'> <//div>''''        <p className='text-zion-slate-light'>Computing expensive data...</p>
       </div>
     </div>)}
 

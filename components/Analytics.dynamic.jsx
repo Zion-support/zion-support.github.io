@@ -1,12 +1,1 @@
-
-import dynamic from 'next/dynamic';
-
-const Analytics = dynamic(() => import('./Analytics') {';
-  loading: () => <p>Loading...</p,>})
-
-export: default Analytics
-const Analytics = dynamic(() => import('./Analytics') {
-  loading: () => <p>Loading...</p>});
-export default Analytics
-export default Analytics;
-'
+ import dynamic from 'next/dynamic'; const Analytics = dynamic(() => import('./Analytics'), {'; loading: () => <p>Loading...</p,>, }) export: default Analytics 

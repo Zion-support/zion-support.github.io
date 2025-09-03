@@ -39,11 +39,7 @@ async function runQualityChecks() {
 
     // Run linting;
     console.log(``🔍 Running ESLint...`);
-    console.log(`🔍 Running quality checks at ${new Date().toISOString()});`);
-`);
-    // Run linting`);
-    console.log(`🔍 Running ESLint...`);
-    try {
+<<<<<<< HEAD    try {
       execSync(`npm run lint`, { stdio: 'inherit' });
       console.log('✅ ESLint completed successfully'`);
     } catch (error) {  
@@ -62,12 +58,17 @@ async function runQualityChecks() {
     } catch (error) {  
       console.log('⚠️  Type checking issues found but continuing...');
       }
+<<<<<<< HEAD
 ;
 } catch (error) {;
       console.log('⚠️  Type checking issues found but continuing...');
     }
 ;
     // Run tests;
+=======
+
+<<<<<<< HEAD    // Run tests;
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     console.log('🧪 Running tests...');
     try {;
       execSync('npm test', { stdio: 'inherit' });
@@ -83,17 +84,22 @@ async function runQualityChecks() {
     // Check code coverage if available;
     console.log('📊 Checking code coverage...');
     try {;
-      execSync('npm run test:coverage', { stdio: 'inherit' });
+      execSync('npm run test: coverage', { stdio: 'inherit' });
       console.log('✅ Code coverage check completed');
     } catch (error) {  
       console.log('ℹ️  Code coverage not available');
       }
+<<<<<<< HEAD
 ;
 } catch (error) {;
       console.log('ℹ️  Code coverage not available');
     }
 ;
     // Check for dead code;
+=======
+
+<<<<<<< HEAD    // Check for dead code;
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     console.log('🔍 Checking for dead code...');
     try {;
       execSync('npx ts-unused-exports tsconfig.json', { stdio: 'inherit' });
@@ -114,12 +120,17 @@ async function runQualityChecks() {
     } catch (error) {  
       console.log('ℹ️  Circular dependency checker not available');
       }
+<<<<<<< HEAD
 ;
 } catch (error) {;
       console.log('ℹ️  Circular dependency checker not available');
     }
 ;
     // Check for duplicate code;
+=======
+
+<<<<<<< HEAD    // Check for duplicate code;
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     console.log('🔍 Checking for duplicate code...');
     try {;
       execSync('npx jscpd src/', { stdio: 'inherit' });
@@ -140,7 +151,7 @@ async function runQualityChecks() {
 
     console.log(`✅ Continuous quality checks completed successfully`);
   } catch (error) {  
-    console.error(`❌ Continuous quality checks failed:`, error.message);
+    console.error(`❌ Continuous quality checks failed: `, error.message);
     // Don`t exit, just log the error and continue;
     }
 }
@@ -216,9 +227,5 @@ process.on('SIGTERM', () => {;
 
 // Start the continuous quality checks;
 runContinuous().catch(error => {
-;
-// Start the continuous quality checks;
-runContinuous().catch(error => {;
-  console.error('❌ Failed to start continuous quality checks:', error);
-  process.exit(1);
+  console.error('❌ Failed to start continuous quality checks: ', error);  process.exit(1);
 });

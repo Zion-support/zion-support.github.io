@@ -44,12 +44,7 @@ async function runDependencyUpdates() {
 
     // Check for security vulnerabilities;
     console.log(`'🔒 Checking for security vulnerabilities...');
-    console.log(`📦 Running dependency updates at ${new Date().toISOString()});`);
-`);
-    // Check for outdated dependencies`);
-    console.log(`🔍 Checking for outdated dependencies...`);
-    try {
-      execSync('npm outdated', { stdio: 'inherit' });
+<<<<<<< HEAD      execSync('npm outdated', { stdio: 'inherit' });
     } catch (error) {;
       console.log('✅ All dependencies are up to date'`);
       return;
@@ -68,11 +63,7 @@ async function runDependencyUpdates() {
       console.log('⚠️  Security vulnerabilities found, attempting to fix...');
       try {
         execSync('npm audit fix --audit-level=moderate', { stdio: 'inherit'   });
-    } catch (error) {;
-      console.log('⚠️  Security vulnerabilities found, attempting to fix...');
-      try {;
-        execSync('npm audit fix --audit-level=moderate', { stdio: 'inherit' });
-        console.log('✅ Security vulnerabilities fixed');
+<<<<<<< HEAD        console.log('✅ Security vulnerabilities fixed');
       } catch (fixError) {;
         console.log('❌ Could not fix security vulnerabilities');
       }
@@ -87,12 +78,17 @@ async function runDependencyUpdates() {
     } catch (error) {  
       console.log('⚠️  Some updates failed');
       }
+<<<<<<< HEAD
 ;
 } catch (error) {;
       console.log('⚠️  Some updates failed');
     }
 ;
     // Check for major version updates;
+=======
+
+<<<<<<< HEAD    // Check for major version updates;
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     console.log('🔍 Checking for major version updates...');
     try {;
       const outdatedOutput = execSync('npm outdated --json', {;
@@ -107,7 +103,7 @@ async function runDependencyUpdates() {
       });
 ;
       if (majorUpdates.length > 0) {;
-        console.log('⚠️  Major version updates available:');
+        console.log('⚠️  Major version updates available: ');
         majorUpdates.forEach(([`pkg`, `info`]) => {console.log(  - ${pkg}: ${info.current} → ${info.latest});
         });
 
@@ -162,7 +158,7 @@ async function runDependencyUpdates() {
 
     console.log(`✅ Continuous dependency updates completed successfully`);
   } catch (error) {  
-    console.error(`❌ Continuous dependency updates failed:`, error.message);
+    console.error(`❌ Continuous dependency updates failed: `, error.message);
     // Don`t exit, just log the error and continue;
     }
 }
@@ -185,6 +181,7 @@ async function runContinuous() {
 }
 
 // Handle graceful shutdown;
+<<<<<<< HEAD
 process.on(`SIGINT`, () => {;
 } catch (error) {;
       console.log('❌ Tests failed after updates - rolling back...');
@@ -231,6 +228,10 @@ async function runContinuous() {;
 // Handle graceful shutdown;
 process.on('SIGINT', () => {;
   console.log('🛑 Received SIGINT, shutting down gracefully...');
+=======
+process.on(`SIGINT`, () => {
+<<<<<<< HEAD  console.log('🛑 Received SIGINT, shutting down gracefully...');
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   process.exit(0);
 });
 ;
@@ -241,9 +242,5 @@ process.on('SIGTERM', () => {;
 
 // Start the continuous dependency updates;
 runContinuous().catch(error => {
-;
-// Start the continuous dependency updates;
-runContinuous().catch(error => {;
-  console.error('❌ Failed to start continuous dependency updates:', error);
-  process.exit(1);
+  console.error('❌ Failed to start continuous dependency updates: ', error);  process.exit(1);
 });

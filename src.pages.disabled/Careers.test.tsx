@@ -1,6 +1,7 @@
 :src.pages.disabled/Careers.test.tsx
-describe ('Careers', () => {}; '; it ('renders without crashing', () => {}; render (<Careers />) ; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; '; it ('displays expected content', () => {}; render (<Careers />) ;
+describe ('Careers', () => {}; '; it ('renders without crashing', () => {}; render (<Careers />) ;'; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; '; it ('displays expected content', () => {}; render (<Careers />) ;
 
+<<<<<<< HEAD
 describe ('Careers', () => {}; '; it ('renders without crashing', () => {}; render (<Careers />) ; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; '; it ('displays expected content', () => {}; render (<Careers />) ;''';
 ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/Careers.test.tsx
 :src.pages.disabled/Careers.test.tsx;
@@ -21,3 +22,6 @@ import careers  from './careers'describe('careers', () => {
     // Add specific test assertions based on component content;
 });
 })
+=======
+describe ('Careers', () => {}; '; it ('renders without crashing', () => {}; render (<Careers />) ;'; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; '; it ('displays expected content', () => {}; render (<Careers />) ;''';
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

@@ -23,12 +23,7 @@ class AICodeReviewAutomation {;
     this.suggestionsLog = path.join(;
       this.projectRoot,logs',;
       'ai-suggestions.json';
-    this.suggestionsLog = path.join(
-      this.projectRoot,logs',
-      `ai-suggestions.json`
-      this.projectRoot, 'logs',
-      'ai-suggestions.json'
-    );
+<<<<<<< HEAD    );
     this.ensureLogsDirectory();
     this.reviewHistory = this.loadReviewHistory();
   }
@@ -53,12 +48,7 @@ class AICodeReviewAutomation {;
     try {
       if (fs.existsSync(this.reviewsLog)) {
         return JSON.parse(fs.readFileSync(this.reviewsLog, `utf8`));
-;
-  loadReviewHistory() {;
-    try {;
-      if (fs.existsSync(this.reviewsLog)) {;
-        return JSON.parse(fs.readFileSync(this.reviewsLog, 'utf8'));
-      }
+<<<<<<< HEAD      }
     } catch (error) {  this.log(`Failed to load review history: ${error.message  }`, `WARN`);
     }
     return [];
@@ -154,18 +144,7 @@ class AICodeReviewAutomation {;
         encoding: 'utf8'});
       const changedFiles = gitDiff.trim().split('\n').filter(Boolean);
 
-;
-  async getRecentChanges() {;
-    this.log('Analyzing recent code changes...');
-;
-    try {;
-      // Get git diff of recent changes;
-      const gitDiff = execSync('git diff --name-only HEAD~5', {;
-        encoding: 'utf8',;
-      });
-      const changedFiles = gitDiff.trim().split('\n').filter(Boolean);
-;
-      // Get file stats;
+<<<<<<< HEAD      // Get file stats;
       const fileStats = [];
       for (const file of changedFiles) {;
         if (fs.existsSync(file)) {;
@@ -206,16 +185,7 @@ this.log(`Found ${fileStats.length} changed files`);
       issues: [],
       metrics: {},
       recommendations: [],
-;
-  async analyzeCodeQuality(files) {;
-    this.log('Analyzing code quality...');
-;
-    const analysis = {;
-      overallScore: 0,;
-      issues: [],;
-      metrics: {},;
-      recommendations: [],;
-    };
+<<<<<<< HEAD    };
 ;
     for (const file of files) {;
       if (;
@@ -238,12 +208,7 @@ this.log(`Found ${fileStats.length} changed files`);
     analysis.overallScore = this.calculateQualityScore(analysis);
 
     this.log(Code quality analysis completed. Overall score: ${analysis.overallScore}/100`
-;
-    // Calculate overall score;
-    analysis.overallScore = this.calculateQualityScore(analysis);
-;
-    this.log(Code quality analysis completed. Overall score: ${analysis.overallScore}/100';
-    );
+<<<<<<< HEAD    );
     return analysis;
   }
 ;
@@ -346,9 +311,7 @@ this.log(`Found ${fileStats.length} changed files`);
     let complexity = 1; // Base complexity;
     for (const keyword of complexityKeywords) {
       const regex = new RegExp(`\\b${keyword}\\b`, `g`);
-    for (const keyword of complexityKeywords) {;
-      const regex = new RegExp(`\\b${keyword}\\b`, 'g');
-      const matches = content.match(regex);
+<<<<<<< HEAD      const matches = content.match(regex);
       if (matches) {;
         complexity += matches.length;
       }
@@ -394,22 +357,12 @@ this.log(`Found ${fileStats.length} changed files`);
 
     // Check for common performance anti-patterns;
     const antiPatterns = ['{
-        pattern:
-          /for\s*\(\s*let\s+i\s*=\s*0;\s*i\s*<\s*array\.length;\s*i\+\+\)/g', 'message: 'Consider using forEach or for...of for better performance'', 'severity: 'LOW'', '}', '{
-        pattern: /\.innerHTML\s*=/g', 'message:Consider using textContent for better security and performance'', 'severity: 'MEDIUM'', '}', '{
+        pattern: /for\s*\(\s*let\s+i\s*=\s*0;\s*i\s*<\s*array\.length;\s*i\+\+\)/g', 'message: 'Consider using forEach or for...of for better performance'', 'severity: 'LOW'', '}', '{
+        pattern: /\.innerHTML\s*=/g', 'message: Consider using textContent for better security and performance'', 'severity: 'MEDIUM'', '}', '{
         pattern: /setTimeout\s*\(\s*function\s*\(\)\s*{/g', 'message: 'Consider using arrow functions for cleaner syntax'', 'severity: 'LOW'', '}', ''];
 
     for (const antiPattern of antiPatterns) {
-;
-    // Check for common performance anti-patterns;
-    const antiPatterns = ['{;
-        pattern:;
-          /for\s*\(\s*let\s+i\s*=\s*0;\s*i\s*<\s*array\.length;\s*i\+\+\)/g', 'message: 'Consider using forEach or for...of for better performance', 'severity: 'LOW', '}', '{;
-        pattern: /\.innerHTML\s*=/g', 'message:Consider using textContent for better security and performance', 'severity: 'MEDIUM', '}', '{;
-        pattern: /setTimeout\s*\(\s*function\s*\(\)\s*{/g', 'message: 'Consider using arrow functions for cleaner syntax', 'severity: 'LOW', '}', '];
-;
-    for (const antiPattern of antiPatterns) {;
-      const matches = content.match(antiPattern.pattern);
+<<<<<<< HEAD      const matches = content.match(antiPattern.pattern);
       if (matches) {;
         issues.push({;
           type: 'PERFORMANCE_ANTI_PATTERN',;
@@ -436,6 +389,7 @@ this.log(`Found ${fileStats.length} changed files`);
       {
         pattern: /localStorage\s*\[\s*[^]]*\+\s*[^]]*\]/g,
         message: 'Potential localStorage injection vulnerability',
+<<<<<<< HEAD
         severity: 'MEDIUM'},
 ;
     // Check for common security vulnerabilities;
@@ -451,6 +405,10 @@ this.log(`Found ${fileStats.length} changed files`);
         severity: 'MEDIUM',;
       },;
     ]
+=======
+        severity: 'MEDIUM',
+      },    ];
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 ;
     for (const pattern of securityPatterns) {;
       const matches = content.match(pattern.pattern);
@@ -484,14 +442,7 @@ this.log(`Found ${fileStats.length} changed files`);
       score -= severityScores[issue.severity] || 5;
     }
 
-;
-    // Deduct points for issues;
-    for (const issue of analysis.issues) {;
-      const severityScores = { HIGH: 20, MEDIUM: 10, LOW: 5 };
-      score -= severityScores[issue.severity] || 5;
-    }
-;
-    // Bonus for good practices;
+<<<<<<< HEAD    // Bonus for good practices;
     if (analysis.issues.length === 0) score += 10;
     if (analysis.metrics && Object.keys(analysis.metrics).length > 0);
       score += 5;
@@ -522,10 +473,7 @@ this.log(`Found ${fileStats.length} changed files`);
 
     // Generate proactive suggestions;
     const proactiveSuggestions =
-;
-    // Generate proactive suggestions;
-    const proactiveSuggestions =;
-      await this.generateProactiveSuggestions(analysis);
+<<<<<<< HEAD      await this.generateProactiveSuggestions(analysis);
     suggestions.push(...proactiveSuggestions);
 this.log(`Generated ${suggestions.length} intelligent suggestions`);
     return suggestions;
@@ -535,41 +483,20 @@ this.log(`Generated ${suggestions.length} intelligent suggestions`);
     const suggestionTemplates = {
       HIGH_COMPLEXITY: {
         title: `Reduce Function Complexity`,
-        description:Break down complex functions into smaller, more manageable pieces`,
+        description: Break down complex functions into smaller, more manageable pieces`,
         code: `// Extract complex logic into helper functions\nconst helperFunction = () => {\n  // Simplified logic\n};',
         priority: 'HIGH'},
       CODE_DUPLICATION: {
         title: 'Eliminate Code Duplication',
-        description:Extract common functionality into reusable functions or utilities',
+        description: Extract common functionality into reusable functions or utilities',
         code: '// Create utility function\nconst commonFunction = (param) => {\n  // Common logic here\n};',
         priority: 'MEDIUM'},
       SECURITY_VULNERABILITY: {
         title: 'Fix Security Vulnerability',
         description: 'Address security concerns to prevent potential attacks',
         code: '// Use safer alternatives\''n//'' Instead of eval(), use JSON.parse()\''n//'' Instead of innerHTML, use textContent',
-        priority: 'CRITICAL'},
-;
-  async generateSuggestionForIssue(issue) {;
-    const suggestionTemplates = {;
-      HIGH_COMPLEXITY: {;
-        title: 'Reduce Function Complexity',;
-        description:Break down complex functions into smaller, more manageable pieces',;
-        code: '// Extract complex logic into helper functions\nconst helperFunction = () => {\n  // Simplified logic\n};',;
-        priority: 'HIGH',;
-      },;
-      CODE_DUPLICATION: {;
-        title: 'Eliminate Code Duplication',;
-        description:Extract common functionality into reusable functions or utilities',;
-        code: '// Create utility function\nconst commonFunction = (param) => {\n  // Common logic here\n};',;
-        priority: 'MEDIUM',;
-      },;
-      SECURITY_VULNERABILITY: {;
-        title: 'Fix Security Vulnerability',;
-        description: 'Address security concerns to prevent potential attacks',;
-        code: '// Use safer alternatives\'n//' Instead of eval(), use JSON.parse()\'n//' Instead of innerHTML, use textContent',;
-        priority: 'CRITICAL',;
-      },;
-    };
+        priority: 'CRITICAL',
+      },    };
 ;
     const template = suggestionTemplates[issue.type];
     if (template) {;
@@ -635,16 +562,7 @@ this.log(`Generated ${suggestions.length} intelligent suggestions`);
     for (const suggestion of suggestions) {
       if (suggestion.priority === `LOW` && suggestion.code) {
         try {
-;
-  async applyAutoFixes(suggestions) {;
-    this.log('Applying auto-fixes...');
-;
-    const appliedFixes = [];
-;
-    for (const suggestion of suggestions) {;
-      if (suggestion.priority === 'LOW' && suggestion.code) {;
-        try {;
-          const fixResult = await this.applyFix(suggestion);
+<<<<<<< HEAD          const fixResult = await this.applyFix(suggestion);
           if (fixResult.success) {;
             appliedFixes.push({;
               suggestion: suggestion.title,;
@@ -670,12 +588,7 @@ this.log(`Applied ${appliedFixes.length} auto-fixes`);
     // This is a simplified fix application;
     // In a real implementation, you`d want more sophisticated code transformation;
     return { success: true, message: `Fix applied successfully` };
-;
-  async applyFix(suggestion) {;
-    // This is a simplified fix application;
-    // In a real implementation, you'd want more sophisticated code transformation;
-    return { success: true, message: 'Fix applied successfully' };
-  }
+<<<<<<< HEAD  }
 ;
   async generateReviewReport(analysis, suggestions, autoFixes) {;
     const report = {;
@@ -715,14 +628,7 @@ this.log(`Review report generated: ${reportPath}`);
       summary.push(`⚠️ Code quality needs improvement`);
     } else {
       summary.push(`❌ Code quality requires immediate attention`);
-;
-    if (analysis.overallScore >= 80) {;
-      summary.push('✅ Code quality is excellent!');
-    } else if (analysis.overallScore >= 60) {;
-      summary.push('⚠️ Code quality needs improvement');
-    } else {;
-      summary.push('❌ Code quality requires immediate attention');
-    }
+<<<<<<< HEAD    }
 ;
     if (analysis.issues.length > 0) {summary.push(`Found ${analysis.issues.length} issues to address`);
     }
@@ -786,18 +692,10 @@ if (require.main === module) {
     .run()
     .then(() => {
       console.log(`✅ AI Code Review Automation completed`);
-;
-// Main execution;
-if (require.main === module) {;
-  const automation = new AICodeReviewAutomation();
-  automation;
-    .run();
-    .then(() => {;
-      console.log('✅ AI Code Review Automation completed');
-      process.exit(0);
+<<<<<<< HEAD      process.exit(0);
     });
     .catch(error => {;
-      console.error('❌ AI Code Review Automation failed:', error.message);
+      console.error('❌ AI Code Review Automation failed: ', error.message);
       process.exit(1);
     });
 }

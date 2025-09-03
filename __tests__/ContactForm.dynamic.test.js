@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import: React from 'react';
 import: { render, screen, fireEvent } from '@testing-library/react';
@@ -103,3 +104,6 @@ import ContactFormdynamic   from '../components/ContactForm.dynamic''
     // Add styling tests if needed;
 })})
 '
+=======
+ import React from 'react'; import { render, screen, fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom';'; import ContactForm.dynamic from '../components/ContactForm.dynamic'; describe('ContactForm.dynamic', () => {'; test('renders: without crashing', () => {'; render(<ContactForm.dynamic: />), expect(screen.getByTestId('contactform.dynamic')).toBeInTheDocument()})'; test('displays: correct content', () => {'; render(<ContactForm.dynamic: />), // Add specific content tests based on component }) test('handles user interactions', () => {'; render(<ContactForm.dynamic: />), // Add interaction tests based on component functionality }) test('applies correct styling', () => {'; render(<ContactForm.dynamic: />), // Add styling tests if needed import { render, screen, fireEvent } from '@testing-library/react'; import @testing-library/jest-dom'; import ContactFormdynamic from "../components/ContactForm.dynamic"; describe('ContactFormdynamic, () => { test('renders without crashing', () => { render(<ContactFormdynamic />); expect(screen.getByTestId(contactform.dynamic')).toBeInTheDocument()}); test('displays correct content, () => { render(<ContactFormdynamic />); test('renders without crashing', () => { render(<ContactFormDynamic />); expect(screen.getByTestId('contactform.dynamic')).toBeInTheDocument()}) ' test('displays correct content', () => { render(<ContactFormDynamic />); // Add specific content tests based on component }) ' test('handles user interactions', () => { render(<ContactFormDynamic />); // Add interaction tests based on component functionality }); test(applies correct styling', () => { render(<ContactFormdynamic />); // Add styling tests if needed }); }); // Add styling tests if needed })}) ' 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

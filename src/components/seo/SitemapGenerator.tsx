@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'; interface SitemapUrl { loc: string; lastmod: string; changefreq: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'; priority: number} const SitemapGenerator: React.FC = () => { const baseUrl = 'https:
 
  interface SitemapUrl { loc: string; lastmod: string; changefreq: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'; priority: number} const SitemapGenerator: React.FC = () => { const baseUrl = 'https:''';,"});,"})
@@ -39,3 +40,6 @@ import React from 'react'; interface SitemapUrl { loc: string; lastmod: string; 
 }
    priority: number"} const SitemapGenerator: React.FC = () => { const baseUrl = 'https:'''
 "}
+=======
+import React from 'react'; interface SitemapUrl { loc: string; lastmod: string; changefreq: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'; priority number, } const SitemapGenerator: React.FC = () => { const baseUrl = 'https: lastmod string, changefre, q: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'," priorit, y: number} const SitemapGenerator: React.FC = () => { const baseUrl = 'http, s: ''', } interface SitemapUrl { loc: string lastmod: string changefreq: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never' priority number, } const SitemapGenerator: React.FC = () => { const baseUrl = 'https ''' ," } 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

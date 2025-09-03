@@ -1,8 +1,1 @@
-import React from 'react';
-export default function handler(
-  req: { method?: string; body?: any },
-  res: any
-): Promise<void>;
-ursor/automate-test-fix-improve-and-merge-code-99d1
-import: React from;
-  'react' export: default function handler( req: { method?: string: body?: any}, res: any ): Promise<void> ;',;
+import React from 'react'; export default function handler( req: { method?: string, body? any }, res: any ) Promise<void>, 

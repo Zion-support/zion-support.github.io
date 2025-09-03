@@ -39,19 +39,7 @@ class MasterErrorDetectorFixer {;
   ensureDirectories() {
     [`this.logDir`, `this.reportsDir`].forEach(dir => {
       if (!fs.existsSync(dir)) {
-    this.logDir = path.join(this.projectRoot, ''automation/logs');
-    this.reportsDir = path.join(this.projectRoot, 'automation/reports'');
-    this.errors = [];
-    this.fixes = [];
-    this.startTime = new Date();
-    ;
-    // Ensure directories exist;
-    this.ensureDirectories();
-    ;
-    console.log(`'🚀 Master Error Detector & Fixer Started');
-    
-    console.log(`🚀 Master Error Detector & Fixer Started`);
-    console.log(`📁 Project Root: ${this.projectRoot});console.log(📊 Log Directory: ${this.logDir}``);
+<<<<<<< HEAD    console.log(`📁 Project Root: ${this.projectRoot});console.log(📊 Log Directory: ${this.logDir}``);
   }
 ;
   ensureDirectories() {;
@@ -130,6 +118,7 @@ class MasterErrorDetectorFixer {;
         details: errors,;
         severity: 'high';
       });
+<<<<<<< HEAD
       this.errors.push({
         type: `typescript`,
         count: errors.length,
@@ -144,6 +133,9 @@ class MasterErrorDetectorFixer {;
         severity: 'high'`);
       });`);
       await this.log(❌ Found ${errors.length} TypeScript errors, 'ERROR'`);
+=======
+<<<<<<< HEAD      await this.log(❌ Found ${errors.length} TypeScript errors, 'ERROR'`);
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       return errors;
     }
     ;
@@ -205,9 +197,7 @@ class MasterErrorDetectorFixer {;
     }
     
     await this.log(`✅ No ESLint errors found`);
-    ;
-    await this.log('✅ No ESLint errors found');
-    return [];
+<<<<<<< HEAD    return [];
   }
 ;
   parseLintingErrors(output) {;
@@ -254,9 +244,7 @@ class MasterErrorDetectorFixer {;
     }
     
     await this.log(`✅ No build errors found`);
-    ;
-    await this.log('✅ No build errors found');
-    return [];
+<<<<<<< HEAD    return [];
   }
 ;
   parseBuildErrors(output) {;
@@ -264,7 +252,7 @@ class MasterErrorDetectorFixer {;
     const errors = [];
     ;
     for (const line of lines) {;
-      if (line.includes('Type error:') || line.includes('Failed to compile')) {;
+      if (line.includes('Type error: ') || line.includes('Failed to compile')) {;
         errors.push({;
           type: 'build',;
           message: line.trim();
@@ -316,20 +304,7 @@ class MasterErrorDetectorFixer {;
     await this.log(`🔧 Fixing TypeScript errors...`);
     
     const typescriptErrors = this.errors.find(e => e.type === `typescript`);
-      } catch (e) {;
-        // Ignore JSON parse errors;
-      }
-    }
-    ;
-    await this.log('✅ No dependency issues found');
-    return null;
-  }
-;
-  async fixTypeScriptErrors() {;
-    await this.log('🔧 Fixing TypeScript errors...');
-    ;
-    const typescriptErrors = this.errors.find(e => e.type === 'typescript');
-    if (!typescriptErrors) return;
+<<<<<<< HEAD    if (!typescriptErrors) return;
     ;
     for (const error of typescriptErrors.details) {;
       try {;
@@ -382,18 +357,7 @@ class MasterErrorDetectorFixer {;
     const result = await this.executeCommand(`npm run lint -- --fix', { silent: true });
     
     if (result.success) {
-    ;
-    await writeFile(error.file, lines.join('\n'));await this.log(`Fixed TypeScript error in ${error.file}`);
-  }
-;
-  async fixLintingErrors() {;
-    await this.log('🔧 Fixing ESLint errors...');
-    ;
-    // Try to auto-fix ESLint errors;
-    const result = await this.executeCommand('npm run lint -- --fix', { silent: true });
-    ;
-    if (result.success) {;
-      await this.log('✅ ESLint errors auto-fixed');
+<<<<<<< HEAD      await this.log('✅ ESLint errors auto-fixed');
     } else {;
       await this.log('⚠️ Some ESLint errors could not be auto-fixed', 'WARN');
     }
@@ -439,8 +403,7 @@ class MasterErrorDetectorFixer {;
   async fixDependencyIssues() {;
     await this.log('🔧 Fixing dependency issues...');
     
-    ;
-    // Try to fix security vulnerabilities;
+<<<<<<< HEAD    // Try to fix security vulnerabilities;
     const result = await this.executeCommand('npm audit fix', { silent: true });
     ;
     if (result.success) {;
@@ -506,8 +469,7 @@ class MasterErrorDetectorFixer {;
       await this.detectBuildErrors();
       await this.detectDependencyIssues();
       
-      ;
-      // Fix errors;
+<<<<<<< HEAD      // Fix errors;
       await this.fixTypeScriptErrors();
       await this.fixLintingErrors();
       await this.fixBuildErrors();
@@ -519,11 +481,17 @@ class MasterErrorDetectorFixer {;
       await this.log(`✅ Error detection and fixing completed!`);await this.log(`📊 Total errors found: ${report.totalErrors}`);await this.log(`🔧 Errors fixed: ${this.fixes.length}`);
       ;
       return report;
+<<<<<<< HEAD
       ;
 } catch (error) {  await this.log(`❌ Error in master error detector: ${error.message  }`, `ERROR`);
       ;
     } catch (error) {await this.log(`❌ Error in master error detector: ${error.message}`, 'ERROR');
       throw error;
+=======
+      
+    } catch (error) {  await this.log(`❌ Error in master error detector: ${error.message  }`, `ERROR`);
+<<<<<<< HEAD      throw error;
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     }
   }
 ;
@@ -543,10 +511,7 @@ class MasterErrorDetectorFixer {;
 
 // Main execution;
 if (require.main === module) {
-;
-// Main execution;
-if (require.main === module) {;
-  const detector = new MasterErrorDetectorFixer();
+<<<<<<< HEAD  const detector = new MasterErrorDetectorFixer();
   ;
   const args = process.argv.slice(2);
   const continuous = args.includes(`--continuous') || args.includes('-c');
@@ -558,7 +523,7 @@ if (require.main === module) {;
     detector.run().then(() => {;
       process.exit(0);
     }).catch((error) => {;
-      console.error('Error:', error);
+      console.error('Error: ', error);
       process.exit(1);
     });
   }

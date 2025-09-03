@@ -7,8 +7,7 @@ function fixMergeConflicts(filePath) {
     let modified = false;
 
     // Remove merge conflict markers and keep the HEAD version
-    const mergeConflictRegex = /\n([\s\S]*?)\n\n([\s\S]*?)\n    const matches = content.match(mergeConflictRegex);
-    
+    const mergeConflictRegex = /\n([\s\S]*?)\n\n([\s\S]*?)\n    const matches = content.match(mergeConflictRegex);    
     if (matches) {
       content = content.replace(mergeConflictRegex, (match, headContent, otherContent) => {
         modified = true;
@@ -145,36 +144,4 @@ function processDirectory(dirPath) {
 console.log('Starting merge conflict resolution...');
 const fixedCount = walkDirectory('./src');
 console.log(`Fixed ${fixedCount} files with merge conflicts.`);
-  return totalFixed;
-}
-
-function resolveConflicts(filePath) {
-  console.log(`Fixing conflicts in: ${filePath}`);
-  
-  let content = fs.readFileSync(filePath, `utf8`);
-  
-  // Remove all merge conflict markers and keep HEAD version;
-  content = content.replace(/  // Clean up any remaining conflict markers;
-  content = content.replace(/  content = content.replace(/\n?/g, '');
-  content = content.replace(/  
-  fs.writeFileSync(filePath, content, 'utf8');
-}
-
-// Find and fix all files with conflicts;
-const filesWithConflicts = findFilesWithConflicts(`.`);
-console.log(`Found ${filesWithConflicts.length} files with merge conflicts`);
-
-for (const file of filesWithConflicts) {
-  try {
-    resolveConflicts(file);
-  } catch (error) { 
-    console.error(`Error fixing ${file }:`, error.message);
-  }
-}
-
-console.log(`Merge conflicts resolved!`);
-// Main execution
-console.log('Starting merge conflict resolution...');
-const totalFixed = processDirectory('.');
-console.log(`\nResolved conflicts in ${totalFixed} files.`);
-console.log('Merge conflict resolution complete!');
+<<<<<<< HEAD

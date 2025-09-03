@@ -34,12 +34,7 @@ class ComprehensiveErrorAutomation {;
     console.log(`'🚀 Starting Comprehensive Error Automation...');
 ;
     try {;
-
-  async run() {
-    console.log(`🚀 Starting Comprehensive Error Automation...`);
-
-    try {
-      this.ensureDirectories();
+<<<<<<< HEAD      this.ensureDirectories();
       await this.loadStats();
 
       // Run comprehensive error fixing;
@@ -81,10 +76,15 @@ class ComprehensiveErrorAutomation {;
       await this.saveStats();
 ;
       console.log('✅ Comprehensive Error Automation completed successfully!');
+<<<<<<< HEAD
     } catch (error) {  ;
 } catch (error) {;
       console.error('❌ Comprehensive Error Automation failed:', error);
       this.stats.totalRuns++;
+=======
+    } catch (error) {  
+      console.error('❌ Comprehensive Error Automation failed: ', error);      this.stats.totalRuns++;
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       this.stats.failedRuns++;
       await this.saveStats();
       await this.logError('Comprehensive Error Automation failed', error);
@@ -104,10 +104,15 @@ class ComprehensiveErrorAutomation {;
     if (fs.existsSync(statsFile)) {;
       try {;
         this.stats = JSON.parse(fs.readFileSync(statsFile, 'utf8'));
+<<<<<<< HEAD
       } catch (error) {  ;
 } catch (error) {;
         console.warn('Could not load existing stats:', error.message);
         }
+=======
+      } catch (error) {  
+        console.warn('Could not load existing stats: ', error.message);        }
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     }
   }
 ;
@@ -140,9 +145,7 @@ class ComprehensiveErrorAutomation {;
     console.log('🔍 Running Code Quality Checks...');
 
     try {
-;
-    try {;
-      // Run ESLint;
+<<<<<<< HEAD      // Run ESLint;
       console.log('  Running ESLint...');
       execSync('npm run lint', {;
         cwd: this.projectRoot,;
@@ -157,8 +160,7 @@ class ComprehensiveErrorAutomation {;
         stdio: 'pipe',;
       });
 
-;
-      // Run Prettier format check;
+<<<<<<< HEAD      // Run Prettier format check;
       console.log('  Running Prettier format check...');
       execSync('npx prettier --check "src/**/*.{js,jsx,ts,tsx}", {;
         cwd: this.projectRoot,;
@@ -174,9 +176,7 @@ class ComprehensiveErrorAutomation {;
     console.log('⚡ Running Performance Optimizations...');
 
     try {
-;
-    try {;
-      // Bundle analysis;
+<<<<<<< HEAD      // Bundle analysis;
       console.log('  Analyzing bundle...');
       execSync('npm run build', {;
         cwd: this.projectRoot,;
@@ -200,9 +200,7 @@ class ComprehensiveErrorAutomation {;
     console.log('🔒 Running Security Checks...');
 
     try {
-;
-    try {;
-      // Run npm audit;
+<<<<<<< HEAD      // Run npm audit;
       console.log('  Running npm audit...');
       execSync('npm audit', {;
         cwd: this.projectRoot,;
@@ -226,9 +224,7 @@ class ComprehensiveErrorAutomation {;
     console.log('📦 Running Dependency Updates...');
 
     try {
-;
-    try {;
-      // Check for outdated packages;
+<<<<<<< HEAD      // Check for outdated packages;
       console.log('  Checking for outdated packages...');
       execSync('npm outdated', {;
         cwd: this.projectRoot,;
@@ -260,8 +256,7 @@ class ComprehensiveErrorAutomation {;
                 (this.stats.successfulRuns / this.stats.totalRuns) * 100;
               )
             : 0,
-        averageFixesPerRun:
-          this.stats.totalRuns > 0;
+        averageFixesPerRun: this.stats.totalRuns > 0;
             ? Math.round(this.stats.totalFixes / this.stats.totalRuns)
             : 0,
         totalErrorsRemaining: this.stats.totalErrors},
@@ -318,16 +313,9 @@ console.log(📄 Comprehensive report saved to: ${reportFile}``);
       recommendations.push({
         priority: `high`,
         category: `code_quality`,
-        message:High number of errors detected. Consider code review and refactoring.',
+        message: High number of errors detected. Consider code review and refactoring.',
         action: 'Review and fix critical errors first, then address warnings.',
-;
-    if (this.stats.totalErrors > 100) {;
-      recommendations.push({;
-        priority: 'high',;
-        category: 'code_quality',;
-        message:High number of errors detected. Consider code review and refactoring.',;
-        action: 'Review and fix critical errors first, then address warnings.',;
-      });
+<<<<<<< HEAD      });
     }
 ;
     if (this.stats.failedRuns > 0) {;

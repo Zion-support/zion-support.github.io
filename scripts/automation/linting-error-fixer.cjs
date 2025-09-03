@@ -9,8 +9,7 @@ class LintingErrorFixer {;
   constructor() {;
     this.projectRoot = process.cwd();
     this.logFile = path.join(this.projectRoot, ``automation/logs/linting-error-fixer.log``);
-    this.logFile = path.join(this.projectRoot, 'automation/logs/linting-error-fixer.log');
-    this.fixesApplied = [];
+<<<<<<< HEAD    this.fixesApplied = [];
     this.startTime = new Date();
   }
 ;
@@ -56,8 +55,9 @@ class LintingErrorFixer {;
   rules: {@typescript-'eslint/no-unused-vars'': 'warn',@typescript-'eslint/no-explicit-any'': 'warn','react/react-in-jsx-scope'': 'off','react/prop-types'': 'off',no-console': 'warn',no-unused-vars': 'warn',prefer-const': 'warn',no-var': 'error';
   },;
   ignorePatterns: ['node_modules/', '.next/', 'out/', 'dist/', 'automation/'];
-};;
+};
       ;
+<<<<<<< HEAD
     
     try {
       const eslintPath = path.join(this.projectRoot, '.eslintrc.js');const fixedConfig = module.exports = {`);
@@ -68,6 +68,9 @@ class LintingErrorFixer {;
 };;`);
       `);
       await fs.writeFile(eslintPath, fixedConfig`);
+=======
+<<<<<<< HEAD      await fs.writeFile(eslintPath, fixedConfig`);
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       await this.log('✅ ESLint configuration fixed');
       this.fixesApplied.push({
         type: `eslint-config-fix`,
@@ -88,14 +91,7 @@ class LintingErrorFixer {;
     // Run ESLint auto-fix;
     const fixResult = await this.runCommand(`npm run lint -- --fix`, { silent: true });
     if (fixResult.success) {
-;
-  async autoFixLintingIssues() {;
-    await this.log('🔧 Auto-fixing linting issues...');
-    ;
-    // Run ESLint auto-fix;
-    const fixResult = await this.runCommand('npm run lint -- --fix', { silent: true });
-    if (fixResult.success) {;
-      await this.log('✅ ESLint auto-fix completed');
+<<<<<<< HEAD      await this.log('✅ ESLint auto-fix completed');
       this.fixesApplied.push({;
         type: 'eslint-auto-fix',;
         action: 'npm run lint -- --fix',;
@@ -131,19 +127,7 @@ class LintingErrorFixer {;
         ;
         // Fix console.log statements;
         if (content.includes('console.log(`')) {;
-        
-        // Fix console.log statements;
-        if (content.includes(`console.log(``)) {
-          content = content.replace(/console\.log\(/g, `// console.log(``);
-          modified = true;
-        }
-        
-        // Fix var declarations;
-        if (content.includes(`var `)) {
-          content = content.replace(/var\s+(\w+)/g, `const $1`);
-        // Fix console.log statements
-        if (content.includes('console.log(`')) {`);
-          content = content.replace(/console\.log\(/g, '// console.log(`');
+<<<<<<< HEAD          content = content.replace(/console\.log\(/g, '// console.log(`');
           modified = true;
         }
         ;
@@ -204,11 +188,17 @@ class LintingErrorFixer {;
         fixesApplied: this.fixesApplied.length,;
         duration: duration.getTime();
       };
+<<<<<<< HEAD
       ;
 } catch (error) {  await this.log(`❌ Linting Error Fixer failed: ${error.message  }`);
       ;
     } catch (error) {await this.log(`❌ Linting Error Fixer failed: ${error.message}`);
       throw error;
+=======
+      
+    } catch (error) {  await this.log(`❌ Linting Error Fixer failed: ${error.message  }`);
+<<<<<<< HEAD      throw error;
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     }
   }
 }
@@ -222,19 +212,7 @@ if (require.main === module) {
       process.exit(0);
     })
     .catch(error => {
-      console.error(`Linting error fixer failed:`, error);
-;
-// Run the fixer if called directly;
-if (require.main === module) {;
-  const fixer = new LintingErrorFixer();
-  fixer.run();
-    .then(result => {;
-      console.log('Linting error fixer completed successfully');
-      process.exit(0);
-    });
-    .catch(error => {;
-      console.error('Linting error fixer failed:', error);
-      process.exit(1);
+      console.error(`Linting error fixer failed: `, error);      process.exit(1);
     });
 }
 ;

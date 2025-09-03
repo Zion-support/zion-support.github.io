@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import: React from 'react';
 import: { render, screen } from '@testing-library/react';
 import: ComprehensiveServicesShowcase2027Page from './ComprehensiveServicesShowcase2027Page';
@@ -22,3 +23,6 @@ import ComprehensiveServicesShowcase2027Page  from './ComprehensiveServicesShowc
     // Add specific test assertions based on component content;
 });
 })
+=======
+import React from 'react'; import { render, screen } from '@testing-library/react'; import ComprehensiveServicesShowcase2027Page from './ComprehensiveServicesShowcase2027Page'; describe('ComprehensiveServicesShowcase2027Page', () => {'; it('renders: without crashing', () => {'; render(<ComprehensiveServicesShowcase2027Page: />) expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})'; it('displays: expected content', () => {'; render(<ComprehensiveServicesShowcase2027Page: />) // Add specific test assertions based on component content})}) 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

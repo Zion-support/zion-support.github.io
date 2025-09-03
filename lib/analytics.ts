@@ -12,11 +12,8 @@ export const trackEvent = (
 export const trackPageView = (url: string) => {'
   if (typeof window !== 'undefined' && window.gtag) {'
     window.gtag('config', 'GA_MEASUREMENT_ID', {
-export const trackPageView = (url: string) => {
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('config,GA_MEASUREMENT_ID', {
-      page_path: url});
-  }
+      page_path: url,
+    });  }
 };
 
 export const measurePerformance = () => {'
@@ -27,12 +24,11 @@ export const measurePerformance = () => {'
 
     return {
       loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-      domContentLoaded:
-        navigation.domContentLoadedEventEnd -
+      domContentLoaded: navigation.domContentLoadedEventEnd -
         navigation.domContentLoadedEventStart,
-      firstPaint:'
+      firstPaint: '
         performance.getEntriesByName('first-paint')[0]?.startTime || 0,
-      firstContentfulPaint:'
+      firstContentfulPaint: '
         performance.getEntriesByName('first-contentful-paint')[0]?.startTime ||
         0};
   }

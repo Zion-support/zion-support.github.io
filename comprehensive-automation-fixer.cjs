@@ -23,7 +23,7 @@ class ComprehensiveAutomationFixer {
 
       console.log(`✅ Fixed ${this.fixedCount} scripts`);
     } catch (error) { 
-      console.error(`Error fixing scripts:`, error.message);
+      console.error(`Error fixing scripts: `, error.message);
      }
   log(message) {
     console.log(`[${new Date().toISOString()}] ${message}`);
@@ -61,56 +61,7 @@ class ComprehensiveAutomationFixer {
       }
     } catch (error) { 
       console.error(`❌ Error fixing ${filename }:`, error.message);
-    } catch (error) {
-      console.error(`❌ Error fixing ${filename}:`, error.message);
-  fixRemainingTestFiles() {
-    this.log('🔧 Fixing remaining test file issues');
-
-    const testFiles = this.getAllTestFiles(this.projectRoot);
-    let fixedCount = 0;
-
-    for (const testFile of testFiles) {
-      try {
-        const content = fs.readFileSync(testFile, 'utf8');
-
-        // Fix common issues
-        let fixedContent = content;
-
-        // Fix unterminated strings and syntax errors
-        if (content.includes('render(<') && content.includes(')"')) {
-          fixedContent = content.replace(
-            /render\(<[^>]*>\)\s*\)"/g,
-            'render(<Component />);'
-          );
-        }
-
-        // Fix import issues with hyphens
-        if (content.includes('import case-studies')) {
-          fixedContent = content.replace(
-            /import case-studies/g,
-            'import CaseStudies'
-          );
-        }
-
-        // Fix missing semicolons and brackets
-        if (
-          content.includes('expect(screen.getByRole') &&
-          !content.includes(';')
-        ) {
-          fixedContent = content.replace(
-            /expect\([^)]*\)\.toBeInTheDocument\(\)\s*\)\s*\}\)/g,
-            "expect(screen.getByRole('main')).toBeInTheDocument();\n  });"
-          );
-        }
-
-        if (fixedContent !== content) {
-          fs.writeFileSync(testFile, fixedContent);
-          fixedCount++;
-        }
-      } catch (error) {
-        this.errors.push({ file: testFile, error: error.message });
-      }
-    }
+<<<<<<< HEAD    }
 
     this.log(`✅ Fixed ${fixedCount} additional test files`);
     return fixedCount;
@@ -148,9 +99,8 @@ class ComprehensiveAutomationFixer {
 
     // Fix malformed path.join calls;
     content = content.replace(
-      /path\.join\(([^]+),\s*'([^']+)',\s*'([^']+)'\)/g,
-      "path.join($1, '$2', '$3')"
-    );
+      /path\.join\(([^,]+),\s*'([^']+)',\s*'([^']+)'\)/g,
+      "path.join($1, '$2', '$3')    );
 
     // Fix arrays with malformed path.join calls;
     content = content.replace(
@@ -165,7 +115,7 @@ class ComprehensiveAutomationFixer {
             if (parts && parts[1]) {
               const pathParts = parts[1]
                 .split(',')
-                .map(p => p.trim().replace(/['"]/g, '`));
+                .map(p => p.trim().replace(/[']/g, '`));
               return ``${pathParts.join('/')}``;
             }
             return pathJoinMatch;
@@ -187,7 +137,7 @@ class ComprehensiveAutomationFixer {
       match => {
         if (
           !match.includes("'") &&
-          !match.includes('"') &&
+          !match.includes('') &&
           !match.includes('path.join') &&
           !match.includes('require') &&
           !match.includes('process.') &&
@@ -378,8 +328,8 @@ module.exports = ({ children }) => React.createElement('div', {}, children);`;
           ) {
             performanceIssues.push({
               file,
-              issue: 'Potential infinite re-render - check dependencies'});
-          }
+              issue: 'Potential infinite re-render - check dependencies'
+            });          }
         } catch (error) {
           // Skip files that can't be read;
 }
@@ -388,7 +338,7 @@ module.exports = ({ children }) => React.createElement('div', {}, children);`;
 
     // Fix malformed require statements;
     content = content.replace(
-      /require\(([^)]*[^`",\s][^)]*)\)/g,
+      /require\(([^)]*[^`,\s][^)]*)\)/g,
       (match, requirePath) => {
         if (!requirePath.includes("'") && !requirePath.includes('"`)) {
           return `require(`${requirePath}`)`;
@@ -453,6 +403,7 @@ module.exports = ({ children }) => React.createElement('div', {}, children);`;
     );
 
     return content;
+<<<<<<< HEAD
     }
 
     return { issues: securityIssues, count: securityIssues.length };
@@ -627,6 +578,9 @@ module.exports = ({ children }) => React.createElement('div', {}, children);`;
       throw error;
     }
   }
+=======
+<<<<<<< HEAD  }
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 }
 
 // Run the fixer;
@@ -642,7 +596,7 @@ fixer
     console.log(`🎉 Comprehensive automation script fixing completed!');
   })
   .catch(error => {
-    console.error('💥 Error:', error);
+    console.error('💥 Error: ', error);
     process.exit(1);
   });
 fixer.run()
@@ -651,6 +605,6 @@ fixer.run()
     process.exit(0);
   })
   .catch(error => {
-    console.error('❌ Comprehensive Automation Fixer failed:', error.message);
+    console.error('❌ Comprehensive Automation Fixer failed: ', error.message);
     process.exit(1);
   });

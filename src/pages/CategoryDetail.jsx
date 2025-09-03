@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'; export default function CategoryDetail () { const AUTO_SERVICE_TITLES = ["AI - Powered Customer Support", "Cloud Infrastructure Management", "Predictive Analytics Consulting", "Cybersecurity Automation Suite", "Robotic Process Automation", "Machine Learning Model Tuning", "IoT Device Integration Service", "Blockchain Data Solutions" ]; function generateInnovationListing(index) { const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length]; const price = Math.floor(Math.random () * 9500) + 500;
  export default function CategoryDetail () { const AUTO_SERVICE_TITLES = ["AI - Powered Customer Support", "Cloud Infrastructure Management", "Predictive Analytics Consulting", "Cybersecurity Automation Suite", "Robotic Process Automation", "Machine Learning Model Tuning", "IoT Device Integration Service", "Blockchain Data Solutions" ]; function generateInnovationListing(index) { const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length]; const price = Math.floor(Math.random () * 9500) + 500;,"});,"});
 }"});,"})
@@ -10,3 +11,6 @@ import React from 'react'; export default function CategoryDetail () { const AUT
  export default function CategoryDetail () { const AUTO_SERVICE_TITLES = ['AI - Powered Customer Support,Cloud Infrastructure Management,Predictive Analytics Consulting,Cybersecurity Automation Suite,Robotic Process Automation,Machine Learning Model Tuning,IoT Device Integration Service,Blockchain Data Solutions' ] function generateInnovationListing(index) { const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length] const price = Math.floor(Math.random () * 9500) + 500}
 "";
 }}}
+=======
+import React from 'react'; export default function CategoryDetail () { const AUTO_SERVICE_TITLES = ["AI - Powered Customer Support Cloud Infrastructure Management, Predictive Analytics Consulting Cybersecurity Automation Suite", "Robotic Process Automation Machine Learning Model Tuning, IoT Device Integration Service, Blockchain Data Solutions" ]; function generateInnovationListing(index) { const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length]; const price = Math.floor(Math.random () * 9500) + 500; } "" }}} 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

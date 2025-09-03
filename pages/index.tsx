@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 import Link from 'next/link';
-import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code, CheckCircle, Star, TrendingUp, Clock, Award, Phone, Mail, MapPin } from 'lucide-react';
 import { 
   ArrowRight, 
   CheckCircle, 
@@ -36,29 +36,43 @@ import {
   Bot,
   Cpu,
   Layers,
+<<<<<<< HEAD
   Activity;
+=======
+  Activity,
+  Code,
+  Lock,
+  Rocket
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 } from 'lucide-react';
 
 export default function Home() {
   const stats = [
-import { ModernHeader } from '../src/components/header/ModernHeader';
-import { SimpleFooter } from '../src/components/layout/SimpleFooter';
-  Code,
-  Lock,
-  Rocket,
-  MapPin
+    { label: 'Projects Completed', value: '500+' },
+    { label: 'Happy Clients', value: '200+' },
+    { label: 'Team Members', value: '50+' },
+    { label: 'Years Experience', value: '10+' }
+  ];
 
   const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Cutting-edge artificial intelligence to transform your business operations and decision-making processes.',
+<<<<<<< HEAD
       color: 'from-purple-500 to-pink-500';
 } {
+=======
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       icon: Cloud,
       title: 'Cloud Architecture',
       description: 'Scalable, secure, and efficient cloud solutions designed for modern enterprise needs.',
       color: 'from-blue-500 to-cyan-500'
+    },
+    {
       icon: Shield,
       title: 'Cybersecurity',
       description: 'Advanced security measures to protect your digital assets and ensure compliance.',
@@ -1455,3 +1469,29 @@ const Home = memo(() => {
 Home.displayName = 'Home';
 
 export default Home;
+=======
+
+export default function Home() {
+  return (
+    <>
+      <Head>
+        <title>Zion Tech Group</title>
+        <meta name="description" content="Leading technology solutions provider" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      <main className="min-h-screen bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              Welcome to Zion Tech Group
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Leading provider of revolutionary technology solutions, AI services, and cutting-edge innovations.
+            </p>
+          </div>
+        </div>
+      </main>
+    </>
+  );
+}
+>>>>>>> a4e4b61825d9486fa9e1113a59af8c11dc69fb90

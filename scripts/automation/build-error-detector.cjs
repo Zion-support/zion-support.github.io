@@ -17,11 +17,7 @@ class BuildErrorDetector {;
   ensureDirectories() {
     ['this.logsPath', `this.reportsPath`].forEach(dir => {
       if (!fs.existsSync(dir)) {
-;
-  ensureDirectories() {;
-    ['this.logsPath', 'this.reportsPath'].forEach(dir => {;
-      if (!fs.existsSync(dir)) {;
-        fs.mkdirSync(dir, { recursive: true });
+<<<<<<< HEAD        fs.mkdirSync(dir, { recursive: true });
       }
     });
   }
@@ -55,20 +51,7 @@ class BuildErrorDetector {;
     } catch (error) {  
       if (error.stdout) {
         const errors = this.parseBuildErrors(error.stdout);this.log(❌ Build check failed with ${errors.length  } errors`);
-      const result = execSync('npm run build', {;
-        cwd: this.workspacePath,;
-        encoding: 'utf8',;
-        stdio: 'pipe',;
-      });
-      this.log('✅ Build check passed successfully');
-      return { success: true, output: result, errors: [] };
-    } catch (error) {;
-      if (error.stdout) {;
-      this.log('✅ Build check passed successfully');`);
-      return { success: true, output: result, errors: [] };`);
-    } catch (error) {`);
-      if (error.stdout) {`);
-        const errors = this.parseBuildErrors(error.stdout);this.log(❌ Build check failed with ${errors.length} errors`);
+<<<<<<< HEAD        const errors = this.parseBuildErrors(error.stdout);this.log(❌ Build check failed with ${errors.length} errors`);
         return { success: false, output: error.stdout, errors };
       }
       return { success: false, output: error.message, errors: [] };
@@ -130,13 +113,7 @@ class BuildErrorDetector {;
           error,
           fixed: false,
           error: fixError.message,
-          timestamp: new Date().toISOString()} catch (fixError) {this.log(`❌ Error fixing build error: ${fixError.message}`, 'ERROR');
-        fixResults.push({;
-          error,;
-          fixed: false,;
-          error: fixError.message,;
-          timestamp: new Date().toISOString(),;
-        });
+          timestamp: new Date().toISOString(),        });
       }
     }
 this.log(`✅ Fixed ${fixedCount} out of ${errors.length} build errors`);
@@ -184,21 +161,7 @@ this.log(`✅ Fixed ${fixedCount} out of ${errors.length} build errors`);
         stdio: `pipe`});
 
       this.log(`✅ Memory error fix applied`);
-;
-      // Clear build cache;
-      execSync('rm -rf dist build .next 'node_modules/.cache'', {;
-        cwd: this.workspacePath,;
-        stdio: 'pipe',;
-      });
-;
-      // Reinstall dependencies;
-      execSync('npm install', {;
-        cwd: this.workspacePath,;
-        stdio: 'pipe',;
-      });
-;
-      this.log('✅ Memory error fix applied');
-      return true;
+<<<<<<< HEAD      return true;
     } catch (error) {  this.log(`❌ Failed to fix memory error: ${error.message  }`, `ERROR`);
       return false;
     }
@@ -246,24 +209,12 @@ this.log(`✅ Fixed ${fixedCount} out of ${errors.length} build errors`);
       this.log(`🔧 Fixing syntax error...`);
 
       // Run lint fix;
-      execSync('npm run lint:fix', {
+      execSync('npm run lint: fix', {
         cwd: this.workspacePath,
         stdio: `pipe`});
 
       this.log(`✅ Syntax error fix applied`);
-;
-  async fixSyntaxError() {;
-    try {;
-      this.log('🔧 Fixing syntax error...');
-;
-      // Run lint fix;
-      execSync('npm run lint:fix', {;
-        cwd: this.workspacePath,;
-        stdio: 'pipe',;
-      });
-;
-      this.log('✅ Syntax error fix applied');
-      return true;
+<<<<<<< HEAD      return true;
     } catch (error) {  this.log(`❌ Failed to fix syntax error: ${error.message  }`, `ERROR`);
       return false;
     }
@@ -305,8 +256,7 @@ this.log(`✅ Fixed ${fixedCount} out of ${errors.length} build errors`);
       summary: {
         totalErrors: fixResults.totalErrors,
         fixedErrors: fixResults.fixedCount,
-        successRate:
-          fixResults.totalErrors > 0;
+        successRate: fixResults.totalErrors > 0;
             ? ((fixResults.fixedCount / fixResults.totalErrors) * 100).toFixed(
                 2;
               )
@@ -316,29 +266,7 @@ this.log(`✅ Fixed ${fixedCount} out of ${errors.length} build errors`);
 
     const reportFile = path.join(
       this.reportsPath,build-error-detector-report.json`
-;
-  async generateReport(fixResults) {;
-    this.log('📊 Generating build error detection report...');
-;
-    const report = {;
-      timestamp: new Date().toISOString(),;
-      summary: {;
-        totalErrors: fixResults.totalErrors,;
-        fixedErrors: fixResults.fixedCount,;
-        successRate:;
-          fixResults.totalErrors > 0;
-            ? ((fixResults.fixedCount / fixResults.totalErrors) * 100).toFixed(;
-                2;
-              );
-            : 100,;
-      },;
-      fixResults: fixResults.results,;
-      recommendations: ['Review any remaining build errors manually', 'Check for memory constraints in build process', 'Verify all dependencies are properly installed', 'Monitor build performance and optimize if needed', '],;
-    };
-;
-    const reportFile = path.join(;
-      this.reportsPath,build-error-detector-report.json';
-    );
+<<<<<<< HEAD    );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 this.log(`📄 Report generated: ${reportFile}`);
     return report;
@@ -401,10 +329,7 @@ this.log(`📄 Report generated: ${reportFile}`);
 
 // Run the automation if called directly;
 if (require.main === module) {
-;
-// Run the automation if called directly;
-if (require.main === module) {;
-  const detector = new BuildErrorDetector();
+<<<<<<< HEAD  const detector = new BuildErrorDetector();
   detector.run().catch(console.error);
 }
 ;

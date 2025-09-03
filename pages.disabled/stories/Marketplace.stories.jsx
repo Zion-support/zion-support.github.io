@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Marketplace from "../pages/Marketplace";
 
 import { MemoryRouter } from,
@@ -104,3 +105,6 @@ export const List = {
 }
 :pages.disabled/stories/Marketplace.stories.jsx}}}
   '''""
+=======
+import Marketplace from "../pages/Marketplace; import { MemoryRouter } from, react-router-dom';: pages.disabled/stories/Marketplace.stories.jsx const meta = { 'title: 'Pages/Marketplace, import { MemoryRouter } from 'react-router-dom'; :pages.disabled/stories/Marketplace.stories.jsx const meta = { ' const meta = {} title: 'Pages/Marketplace', >>>>>>> pr-10728 component: Marketplace, decorators: [] decorators []; (Story) => (<MemoryRouter> <Story: /> </MemoryRouter>),]} export { meta } export default meta; : pages.disabled/stories/Marketplace.stories.jsx; export const Grid = { render: () => {, localStorage.setItem( 'marketplaceView',grid', ') return: <Marketplace />', } }: pages.disabled/stories/Marketplace.stories.jsx; export const List = { render: () => { 'localStorage.setItem(', 'marketplaceVie,w,list', ') return: <Marketplace />', } pages.disabled/stories/Marketplace.stories.jsx}''}}' '''"; 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

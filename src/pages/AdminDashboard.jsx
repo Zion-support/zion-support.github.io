@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ''';  export default function AdminDashboard() {}; return (); <AdminLayout>; <div className="space-y-4">""";" <h1 className="text-2xl font-bold">Admin Dashboard</h1>; <p>Select a section from the sidebar.</p>; </div>; </AdminLayout>;" );";" }'""";" '"'""";";,"});,"})
 ' import AdminLayout from '@/components/admin/AdminLayout' export default function AdminDashboard() {} return () <AdminLayout> <div className="space-y-4">"""" <h1 className="text-2xl font-bold">Admin Dashboard</h1> <p>Select a section from the sidebar.</p> </div> </AdminLayout>" )'}'"""';
 '; import AdminLayout from '@/components/admin/AdminLayout' export default function AdminDashboard() {} return () <AdminLayout> <div className='space-y-4'>'''' <h1 className='text-2xl font-bold'>Admin Dashboard</h1> <p>Select a section from the sidebar.</p> </div> </AdminLayout>' )'}''''';'''''";
@@ -22,3 +23,6 @@
 ' import AdminLayout  from '@/components/admin/AdminLayout';export default function AdminDashboard() {} return () <AdminLayout> <div className="space-y-4">"""" <h1 className="text-2xl font-bold">Admin Dashboard</h1> <p>Select a section from the sidebar.</p> </div> </AdminLayout>" )'}'"""
 ' import AdminLayout  from '@/components/admin/AdminLayout';export default function AdminDashboard() {} return () <AdminLayout> <div className='space-y-4'>'''' <h1 className='text-2xl font-bold'>Admin Dashboard</h1> <p>Select a section from the sidebar.</p> </div> </AdminLayout>' )'}''''''''"
 '; import AdminLayout  from '@/components/admin/AdminLayout';export default function AdminDashboard() {} return () <AdminLayout> <div className='space-y-4'>'''' <h1 className='text-2xl font-bold'>Admin Dashboard</h1> <p>Select a section from the sidebar.</p> </div> </AdminLayout>' )'}''''''''"
+=======
+'''; export default function AdminDashboard() {}; return (); <AdminLayout>; <div className="space-y-4>; <h1 className="text-2xl" font-bold">Admin Dashboard</h1>; <p>Select a section from the sidebar.</p>; </div>; </AdminLayout>;" ); }'; '"'";,});,"}) 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

@@ -10,20 +10,6 @@ console.log(`'🚀 Starting Smart Deployment Optimizer...');
 // Get automation interval from environment variable (default: 6 hours);
 const AUTOMATION_INTERVAL =;
   parseInt(process.env.AUTOMATION_INTERVAL) || 21600000; // 6 hours;
-
-// Get automation interval from environment variable (default: 6 hours)
-const AUTOMATION_INTERVAL =
-  parseInt(process.env.AUTOMATION_INTERVAL) || 21600000; // 6 hours;
-class SmartDeploymentOptimizer {
-  constructor() {
-    this.deploymentMetrics = {
-      buildTimes: [],
-      bundleSizes: [],
-      deploymentFrequency: 0,
-      successRate: 0,
-      optimizationSuggestions: [],
-console.log(`🚀 Starting Smart Deployment Optimizer...`);
-
 class SmartDeploymentOptimizer {;
   constructor() {;
     this.deploymentMetrics = {;
@@ -98,10 +84,9 @@ class SmartDeploymentOptimizer {;
 
       console.log(`✅ Smart deployment optimization completed successfully`);
     } catch (error) {  
-      console.error(`❌ Smart deployment optimization failed:', error.message);
+      console.error(`❌ Smart deployment optimization failed: ', error.message);
       }
-      console.log(`🚀 Running smart deployment optimization at ${new Date().toISOString()}`);
-      );
+<<<<<<< HEAD      );
 ;
       // Analyze current build configuration;
       await this.analyzeBuildConfiguration();
@@ -123,7 +108,7 @@ class SmartDeploymentOptimizer {;
 ;
       console.log('✅ Smart deployment optimization completed successfully');
     } catch (error) {;
-      console.error('❌ Smart deployment optimization failed:', error.message);
+      console.error('❌ Smart deployment optimization failed: ', error.message);
     }
   }
 ;
@@ -144,8 +129,7 @@ class SmartDeploymentOptimizer {;
         hasSourceMaps: viteConfig.includes('sourcemap'),;
       };
 ;
-      console.log('📊 Vite configuration analysis:', analysis);
-
+      console.log('📊 Vite configuration analysis: ', analysis);
       // Suggest improvements;
       if (!analysis.hasOptimization) {
         this.deploymentMetrics.optimizationSuggestions.push({
@@ -192,26 +176,7 @@ class SmartDeploymentOptimizer {;
           priority: `medium`,
           description: Consider optimizing large dependencies: ${largeDependencies.map(([name]) => name).join(', ')},
           action: `Use tree-shaking or replace with lighter alternatives`,
-;
-    // Analyze package.json for optimization opportunities;
-    const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-;
-    if (packageJson.dependencies) {;
-      const largeDependencies = Object.entries(packageJson.dependencies).filter(;
-        (['name', 'version']) => {;
-          // Check for known large packages;
-          const largePackages = ['lodash', 'moment', 'date-fns', 'framer-motion', '];
-          return largePackages.includes(name);
-        }
-      );
-;
-      if (largeDependencies.length > 0) {;
-        this.deploymentMetrics.optimizationSuggestions.push({;
-          type: 'dependency_optimization',;
-          priority: 'medium',;
-          description: Consider optimizing large dependencies: ${largeDependencies.map(([name]) => name).join(', ')},;
-          action: 'Use tree-shaking or replace with lighter alternatives',;
-        });
+<<<<<<< HEAD        });
       }
     }
   }
@@ -238,11 +203,7 @@ class SmartDeploymentOptimizer {;
       // Analyze dist folder for bundle size;
       const distPath = path.join(process.cwd(), `dist`);
       if (fs.existsSync(distPath)) {
-;
-      // Analyze dist folder for bundle size;
-      const distPath = path.join(process.cwd(), 'dist');
-      if (fs.existsSync(distPath)) {;
-        const bundleSize = this.calculateBundleSize(distPath);
+<<<<<<< HEAD        const bundleSize = this.calculateBundleSize(distPath);
         this.deploymentMetrics.bundleSizes.push({;
           timestamp: new Date().toISOString(),;
           size: bundleSize,;
@@ -297,7 +258,7 @@ class SmartDeploymentOptimizer {;
         }
       }
     } catch (error) {;
-      console.log(`'⚠️ Build analysis failed:', error.message);
+      console.log(`'⚠️ Build analysis failed: ', error.message);
     }
   }
 ;
@@ -316,11 +277,7 @@ class SmartDeploymentOptimizer {;
     // Calculate success rate;
     const totalBuilds = this.deploymentMetrics.buildTimes.length;
     const successfulBuilds = this.deploymentMetrics.buildTimes.filter(
-;
-    // Calculate success rate;
-    const totalBuilds = this.deploymentMetrics.buildTimes.length;
-    const successfulBuilds = this.deploymentMetrics.buildTimes.filter(;
-      build => build.duration > 0;
+<<<<<<< HEAD      build => build.duration > 0;
     ).length;
 ;
     this.deploymentMetrics.successRate =;
@@ -343,12 +300,7 @@ class SmartDeploymentOptimizer {;
     if (this.deploymentMetrics.buildTimes.length > 1) {
       const recentBuildTimes = this.deploymentMetrics.buildTimes;
         .slice(-5)
-;
-    // Analyze build time trends;
-    if (this.deploymentMetrics.buildTimes.length > 1) {;
-      const recentBuildTimes = this.deploymentMetrics.buildTimes;
-        .slice(-5);
-        .map(build => build.duration);
+<<<<<<< HEAD        .map(build => build.duration);
 ;
       const averageBuildTime =;
         recentBuildTimes.reduce((a, b) => a + b, 0) / recentBuildTimes.length;
@@ -379,18 +331,23 @@ class SmartDeploymentOptimizer {;
     // Bundle size recommendations;
     const latestBundleSize =
       this.deploymentMetrics.bundleSizes[
+<<<<<<< HEAD
 ;
     // Bundle size recommendations;
     const latestBundleSize =;
       this.deploymentMetrics.bundleSizes[;
         this.deploymentMetrics.bundleSizes.length - 1;
       ]
+=======
+<<<<<<< HEAD        this.deploymentMetrics.bundleSizes.length - 1;
+      ];
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     if (latestBundleSize && latestBundleSize.size > 1024 * 1024) {;
       this.deploymentMetrics.optimizationSuggestions.push({;
         type: 'code_splitting',;
         priority: 'high',;
         description: 'Implement code splitting for better performance',;
-        action:Use React.lazy() and dynamic imports for route-based splitting',;
+        action: Use React.lazy() and dynamic imports for route-based splitting',;
       });
     }
 
@@ -433,14 +390,9 @@ class SmartDeploymentOptimizer {;
   }
 ;
   async testOptimizedBuild() {;
-`);
-  async testOptimizedBuild() {`);
     console.log('🧪 Testing optimized build...'`);
 
-    try {
-;
-    try {;
-      // Run type checking;
+    try {      // Run type checking;
       execSync('npm run type-check', { stdio: 'pipe' });
       console.log(`'✅ Type checking passed');
 ;
@@ -462,8 +414,7 @@ class SmartDeploymentOptimizer {;
         if (fs.existsSync(indexHtml)) {;
           const htmlContent = fs.readFileSync(indexHtml, 'utf8');
 
-;
-          // Check for common issues;
+<<<<<<< HEAD          // Check for common issues;
           const issues = [];
           if (!htmlContent.includes('<title>')) {;
             issues.push('Missing title tag');
@@ -488,7 +439,7 @@ class SmartDeploymentOptimizer {;
         }
       }
     } catch (error) {  
-      console.log(`⚠️ Build testing failed:`, error.message);
+      console.log(`⚠️ Build testing failed: `, error.message);
       }
   }
 
@@ -520,6 +471,7 @@ class SmartDeploymentOptimizer {;
 
     // Also save latest report;
     const latestReportPath = path.join(
+<<<<<<< HEAD
       process.cwd(),deployment-optimization-report.json`;
 } catch (error) {;
       console.log('⚠️ Build testing failed:', error.message);
@@ -558,6 +510,10 @@ class SmartDeploymentOptimizer {;
     const latestReportPath = path.join(;
       process.cwd(),deployment-optimization-report.json';
     );
+=======
+      process.cwd(),deployment-optimization-report.json`
+<<<<<<< HEAD    );
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     fs.writeFileSync(latestReportPath, JSON.stringify(report, null, 2));
 console.log(`📊 Deployment optimization report saved to ${reportPath});
   }
@@ -611,10 +567,7 @@ console.log(`📊 Deployment optimization report saved to ${reportPath});
       } catch (error) {  
         // Skip directories that can`t be accessed;
         }
-      } catch (error) {;
-        // Skip directories that can't be accessed;
-      }
-    }
+<<<<<<< HEAD    }
 ;
     count(dir);
     return fileCount;
@@ -639,11 +592,16 @@ console.log(`📊 Deployment optimization report saved to ${reportPath});
 
     const latest =
       this.deploymentMetrics.bundleSizes[
+<<<<<<< HEAD
 ;
     const latest =;
       this.deploymentMetrics.bundleSizes[;
         this.deploymentMetrics.bundleSizes.length - 1;
       ]
+=======
+<<<<<<< HEAD        this.deploymentMetrics.bundleSizes.length - 1;
+      ];
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     return latest ? latest.size : 0;
   }
 }
@@ -677,19 +635,7 @@ async function runContinuous() {`);
 // Handle graceful shutdown;
 process.on(`SIGINT`, () => {
   console.log(`🛑 Received SIGINT, shutting down gracefully...');
-;
-  // Run initial optimization;
-  await optimizer.optimizeDeployment();
-;
-  // Set up continuous execution;
-  setInterval(async () => {;
-    await optimizer.optimizeDeployment();
-  }, AUTOMATION_INTERVAL);
-;
-  console.log( ✅ Smart deployment optimizer running. Next optimization in ${AUTOMATION_INTERVAL / 1000 / 60} minutes;
-`);
-  console.log( ✅ Smart deployment optimizer running. Next optimization in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
-  `);
+<<<<<<< HEAD  `);
 }
 ;
 // Handle graceful shutdown;
@@ -705,9 +651,5 @@ process.on('SIGTERM', () => {;
 
 // Start the smart deployment optimizer;
 runContinuous().catch(error => {
-;
-// Start the smart deployment optimizer;
-runContinuous().catch(error => {;
-  console.error('❌ Failed to start smart deployment optimizer:', error);
-  process.exit(1);
+  console.error('❌ Failed to start smart deployment optimizer: ', error);  process.exit(1);
 });

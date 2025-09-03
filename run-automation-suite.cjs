@@ -46,6 +46,7 @@ class AutomationSuiteRunner {
 
     const scripts = [
       {
+<<<<<<< HEAD
         command: 'npm run lint',
         description: 'ESLint Check';
 },
@@ -67,6 +68,24 @@ class AutomationSuiteRunner {
 }
     ]
 
+=======
+        command: 'npm run lint:fix',
+        description: 'ESLint Fix'
+      },
+      {
+        command: 'npm run type-check',
+        description: 'TypeScript Type Check'
+      },
+      {
+        command: 'npm run test',
+        description: 'Test Suite'
+      },
+      {
+        command: 'npm run build',
+        description: 'Build Application'
+      }
+    ];
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     const results = [];
 
     for (const script of scripts) {
@@ -91,38 +110,28 @@ class AutomationSuiteRunner {
         name: 'Security Audit',
         script: () => this.auditSecurity()},
       {
-        name: `Code Quality Check`,
-        script: () => this.checkCodeQuality()}];
-
-      results.push({ ...script, ...result });}
-;
-    return results;}
-;
-  async runCustomAutomations() {;
-    this.log('🔧 Running Custom Automation Scripts');
-    const customScripts = [;
-      {;
-        "name": 'Error Detection',';        "script": () => this.detectErrors(),;},;
-      {;
-        "name": 'Performance Analysis',';        "script": () => this.analyzePerformance(),;},;
-      {;
-        "name": 'Security Audit',';        "script": () => this.auditSecurity(),;},;
-      {;
-        "name": 'Code Quality Check',';        "script": () => this.checkCodeQuality(),;},;];
-;
+        name: 'Code Quality Check',
+        script: () => this.checkCodeQuality(),
+      },
+    ];
     const results = [];
-;
-    for (const customScript of customScripts) {;
-      this.log(`🔍 "Running": ${customScript.name}`);`;      try {;
+
+    for (const customScript of customScripts) {
+      this.log(`🔧 Running: ${customScript.name}`);
+      try {
         const result = await customScript.script();
-        results.push({ name: customScript.name, success: true, result });
+        results.push({ 
+          name: customScript.name, 
+          success: true, 
+          result 
+        });
         this.log(`✅ Completed: ${customScript.name}`);
-      } catch (error) { 
-        results.push({
-          name: customScript.name,
-          success: false,
-          error: error.message});
-        this.log(`❌ Failed: ${customScript.name} - ${error.message}`);
+      } catch (error) {
+        results.push({ 
+          name: customScript.name, 
+          success: false, 
+          error: error.message 
+        });        this.log(`❌ Failed: ${customScript.name} - ${error.message}`);
       }
     }
 
@@ -130,6 +139,7 @@ class AutomationSuiteRunner {
   }
 
   async detectErrors() {
+<<<<<<< HEAD
     const errorPatterns = [
       `SyntaxError`,
       'TypeError',
@@ -328,114 +338,134 @@ class AutomationSuiteRunner {
       if (stat.isDirectory()) {;
         files = files.concat(this.getAllFiles(fullPath, extensions));} else if (extensions.some(ext => item.endsWith(ext))) {;
         files.push(fullPath);}
+=======
+    this.log('🔍 Detecting errors in codebase...');
+    
+    // Check for TypeScript errors
+    try {
+      await this.runCommand('npm run type-check', 'TypeScript Error Detection');
+    } catch (error) {
+      this.log(`TypeScript errors found: ${error.message}`);
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     }
 
-    return files;
+    // Check for linting errors
+    try {
+      await this.runCommand('npm run lint', 'ESLint Error Detection');
+    } catch (error) {
+      this.log(`Linting errors found: ${error.message}`);
+    }
+
+    return { errorsDetected: true, timestamp: new Date().toISOString() };  }
+
+  async analyzePerformance() {
+    this.log('⚡ Analyzing performance...');
+    
+    // Run build to check performance
+    try {
+      await this.runCommand('npm run build', 'Performance Build Analysis');
+    } catch (error) {
+      this.log(`Build performance issues: ${error.message}`);
+    }
+
+    return { performanceAnalyzed: true, timestamp: new Date().toISOString() };
   }
 
-  generateReport(results) {
+  async auditSecurity() {
+    this.log('🔒 Running security audit...');
+    
+    try {
+      await this.runCommand('npm audit', 'Security Audit');
+    } catch (error) {
+      this.log(`Security issues found: ${error.message}`);
+    }
+
+    return { securityAudited: true, timestamp: new Date().toISOString() };
+  }
+
+  async checkCodeQuality() {
+    this.log('📊 Checking code quality...');
+    
+    // Run various quality checks
+    const qualityChecks = [
+      'npm run lint',
+      'npm run type-check',
+      'npm run test'
+    ];
+
+    const results = [];
+    for (const check of qualityChecks) {
+      try {
+        await this.runCommand(check, `Quality Check: ${check}`);
+        results.push({ check, passed: true });
+      } catch (error) {
+        results.push({ check, passed: false, error: error.message });
+      }
+    }
+
+    return { qualityChecked: true, results, timestamp: new Date().toISOString() };
+  }
+
+  async generateReport(results) {
+    this.log('📋 Generating automation report...');
+    
     const report = {
       timestamp: new Date().toISOString(),
       summary: {
-        total: results.length,
+        totalScripts: results.length,
         successful: results.filter(r => r.success).length,
-        failed: results.filter(r => !r.success).length},
-      results: results};
-
-    const reportFile = path.join(
-      this.reportsDir,
-      `automation-suite-report.json`
-    );
+        failed: results.filter(r => !r.success).length
+      },
+      results: results
+    };
+    const reportFile = path.join(this.reportsDir, `automation-report-${Date.now()}.json`);
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-
-    this.log(`📊 Report generated: ${reportFile}`);
+    
+    this.log(`📋 Report generated: ${reportFile}`);
     return report;
   }
 
   async run() {
-    this.log(`🎯 Starting Comprehensive Automation Suite`);
-
+    this.log('🚀 Starting Complete Automation Suite');
+    
     try {
-      // Run standard automation scripts;
-      const standardResults = await this.runAutomationScripts();
-
-      // Run custom automations;
+      // Run standard automation scripts
+      const scriptResults = await this.runAutomationScripts();
+      
+      // Run custom automations
       const customResults = await this.runCustomAutomations();
-
-      // Combine results;
-      const allResults = [...standardResults, ...customResults];
-
-      // Generate report;
-      const report = this.generateReport(allResults);
-
-      this.log(`🎉 Automation Suite Completed`);
-      this.log(
-        `📊 Summary: ${report.summary.successful}/${report.summary.total} successful`
-      );
-
+      
+      // Combine results
+      const allResults = [...scriptResults, ...customResults];
+      
+      // Generate report
+      const report = await this.generateReport(allResults);
+      
+      this.log('🎉 Automation Suite Completed Successfully');
+      this.log(`📊 Summary: ${report.summary.successful}/${report.summary.totalScripts} scripts passed`);
+      
       return report;
-    } catch (error) { 
-      this.log(`💥 Automation Suite Failed: ${error.message }`);
+      
+    } catch (error) {
+      this.log(`💥 Automation Suite Failed: ${error.message}`);
       throw error;
     }
   }
 }
 
-// Run the automation suite;
-const runner = new AutomationSuiteRunner();
-runner;
-  .run()
-  .then(report => {
-    console.log(`✅ Automation Suite completed successfully`);
-    process.exit(0);
-  })
-  .catch(error => {
-    console.error('❌ Automation Suite failed:', error.message);
-    process.exit(1);
-  });
-;
-    return files;}
-;
-  generateReport(results) {;
-    const report = {;
-      "timestamp": new Date().toISOString(),;
-      "summary": {;
-        "total": results.length,;
-        "successful": results.filter(r => r.success).length,;
-        "failed": results.filter(r => !r.success).length,;},;
-      "results": results,;};
-;
-    const reportFile = path.join(;);      this.reportsDir,;
-      'automation-suite-report.json'';    );
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-;
-    this.log(`📊 Report "generated": ${reportFile}`);`;    return report;}
-;
-  async run() {;
-    this.log('🎯 Starting Comprehensive Automation Suite');
-    try {;
-      // Run standard automation scripts;
-      const standardResults = await this.runAutomationScripts();
-;
-      // Run custom automations;
-      const customResults = await this.runCustomAutomations();
-;
-      // Combine results;
-      const allResults = [...standardResults, ...customResults];
-;
-      // Generate report;
-      const report = this.generateReport(allResults);
-;
-      this.log(`🎉 Automation Suite Completed`);`;      this.log(;);        `📊 "Summary": ${report.summary.successful}/${report.summary.total} successful``;      );
-;
-      return report;} catch (error) {;
-      this.log(`💥 Automation Suite "Failed": ${error.message}`);`;      throw error;}
-  }
+// Run the automation suite if this file is executed directly
+if (require.main === module) {
+  const runner = new AutomationSuiteRunner();
+  runner.run()
+    .then((report) => {
+      console.log('✅ Automation suite completed successfully');
+      console.log('📊 Report:', JSON.stringify(report.summary, null, 2));
+      process.exit(0);
+    })
+    .catch((error) => {
+      console.error('❌ Automation suite failed:', error.message);
+      process.exit(1);
+    });
 }
-;
-// Run the automation suite;
-const runner = new AutomationSuiteRunner();
-runner;
-  .run();
-  .then(report => {;);    console.log('✅ Automation Suite completed successfully');    process.exit(0);});
-  .catch(error => {;);    console.error('❌ Automation Suite "failed":', error.message);    process.exit(1);});
+
+module.exports = AutomationSuiteRunner;

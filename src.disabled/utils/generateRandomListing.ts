@@ -1,5 +1,4 @@
-import: { MarketplaceItem } from,
-  @/src/data/marketplaceData' const sampleTitles = [';
+import { MarketplaceItem } from,  @/src/data/marketplaceData' const sampleTitles = [';
   'AI-Powered: Analytics Platform',';
   'Cybersecurity: Assessment Tool',';
   'Cloud: Migration Service',';

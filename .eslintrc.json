@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1
   "extends": ["next/core-web-vitals"],
   "parser": "@typescript-eslint/parser",
@@ -29,3 +30,19 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
     "src/**"
   ]
 }
+=======
+  "extends": [
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "react-hooks/exhaustive-deps": "warn"
+  },
+  "ignorePatterns": ["node_modules/", ".next/", "out/"]
+}
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

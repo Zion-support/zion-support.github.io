@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React { useState, useEffect } from 'react'; import { motion, AnimatePresence  } from 'framer-motion'; export const AccessibilityPanel = ({ isOpen, onToggle }) => { const [settings, setSettings] = useState({ highContrast: false,; fontSize: 100,; colorBlindness: 'none',; reducedMotion: false,; screenReader: false,; keyboardNavigation: false,; focusIndicator: true,; colorBlindness: 'none'}); const [accessibilityScore, setAccessibilityScore] = useState(85); const [activeTab, setActiveTab] = useState('general'); useEffect(() => {
 import React { useState, useEffect } from 'react'; import { motion, AnimatePresence    } from 'framer-motion'; export const AccessibilityPanel = ({ isOpen, onToggle }) => { const [settings, setSettings] = useState({ highContrast: false,; fontSize: 100,; colorBlindness: 'none',; reducedMotion: false,; screenReader: false,; keyboardNavigation: false,; focusIndicator: true,; colorBlindness: 'none'}); const [accessibilityScore, setAccessibilityScore] = useState(85); const [activeTab, setActiveTab] = useState('general'); useEffect(() => {
 
@@ -16,3 +17,6 @@ import React { useState, useEffect } from 'react' import { motion, AnimatePresen
 }}
 import React { useState, useEffect } from 'react' import { motion, AnimatePresence }  from 'framer-motion';export const AccessibilityPanel = ({ isOpen, onToggle }) => { const [settings, setSettings] = useState({ highContrast: false, fontSize: 100, colorBlindness: 'none', reducedMotion: false, screenReader: false, keyboardNavigation: false, focusIndicator: true, colorBlindness: 'none' }) const [accessibilityScore, setAccessibilityScore] = useState(85) const [activeTab, setActiveTab] = useState('general') useEffect(() => {
 "
+=======
+import React, { useState, useEffect } from 'react'; import { motion, AnimatePresence  } from 'framer-motion'; export const AccessibilityPanel = ({ isOpen, onToggle }) => {; const [settings, setSettings] = useState({; highContrast: false,; fontSize: 100,; colorBlindness: 'none',; reducedMotion: false,; screenReader: false,; keyboardNavigation: false,; focusIndicator: true,; colorBlindness: 'none'; }); const [accessibilityScore, setAccessibilityScore] = useState(85); const [activeTab, setActiveTab] = useState('general'); useEffect(() => {;
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

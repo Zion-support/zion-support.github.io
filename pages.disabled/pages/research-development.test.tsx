@@ -34,10 +34,7 @@ describe(
   ', () => {render (<research - development />) ;
 
 describe ('research - development', () => {
-  ', () => {render (<research - development />)     // Add specific test assertions based on component content})}) '
-describe('research-development', () => {
-  it(renders without crashing', () => {
-    render(<research-development />);
+<<<<<<< HEAD    render(<research-development />);
     expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument();
   });
 '

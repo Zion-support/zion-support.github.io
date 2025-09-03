@@ -64,12 +64,7 @@ async function fixAllErrors() {
 
     const reportPath = path.join(
       process.cwd(),intelligent-error-fixer-report.json`
-    console.log(`🤖 Running intelligent error fixer at ${new Date().toISOString()}`);
-    );
-`);
-    // 1. Fix missing dependencies`);
-    console.log(`🔧 Fixing missing dependencies...`);
-    totalFixes += await fixMissingDependencies();
+<<<<<<< HEAD    totalFixes += await fixMissingDependencies();
 ;
     // 2. Fix TypeScript errors;
     console.log('🔧 Fixing TypeScript errors...');
@@ -109,10 +104,7 @@ async function fixAllErrors() {
 ;
     return totalFixes;
   } catch (error) {  
-    console.error(`❌ Intelligent error fixer failed:`, error.message);
-  } catch (error) {;
-    console.error('❌ Intelligent error fixer failed:', error.message);
-    return totalFixes;
+    console.error(`❌ Intelligent error fixer failed: `, error.message);    return totalFixes;
     }
 }
 ;
@@ -145,7 +137,7 @@ async function fixTypeScriptErrors() {;
   const commonFixes = [
     {
       pattern:
-        /import\s+\{\s*ErrorBoundary\s*\}\s+from\s+[`"]react-error-boundary[`"];?/g, `replacement: `import { ErrorBoundary } from "react-error-boundary";'', 'description: 'Fix react-error-boundary import'', '}', '{
+        /import\s+\{\s*ErrorBoundary\s*\}\s+from\s+[`"]react-error-boundary[`];?/g, `replacement: `import { ErrorBoundary } from react-error-boundary";'', 'description: 'Fix react-error-boundary import'', '}', '{
       pattern: /:\s*any\s*;/g', 'replacement: ': unknown;'', 'description: 'Replace any with unknown'', '}', '{
       pattern: /const\s+(\w+)\s*:\s*any\s*=/g', 'replacement: 'const $1: unknown ='', 'description: 'Fix any type annotations'', '}', '{
       pattern: /function\s+(\w+)\s*\(\s*\)\s*:\s*any\s*{/g', 'replacement: 'function $1(): unknown {'', 'description: 'Fix function return types'', '}', ''];
@@ -156,23 +148,7 @@ async function fixTypeScriptErrors() {;
     if (file.endsWith('.tsx') || file.endsWith(`.ts`)) {
       try {
         let content = fs.readFileSync(file, `utf8`);
-;
-  // Common TypeScript fixes;
-  const commonFixes = [;
-    {;
-      pattern:;
-        /import\s+\{\s*ErrorBoundary\s*\}\s+from\s+['"]react-error-boundary['"];?/g, 'replacement: 'import { ErrorBoundary } from "react-error-boundary";', 'description: 'Fix react-error-boundary import', '}', '{;
-      pattern: /:\s*any\s*;/g', 'replacement: ': unknown;', 'description: 'Replace any with unknown', '}', '{;
-      pattern: /const\s+(\w+)\s*:\s*any\s*=/g', 'replacement: 'const $1: unknown =', 'description: 'Fix any type annotations', '}', '{;
-      pattern: /function\s+(\w+)\s*\(\s*\)\s*:\s*any\s*{/g', 'replacement: 'function $1(): unknown {', 'description: 'Fix function return types', '}', '];
-;
-  const files = getAllSourceFiles();
-;
-  for (const file of files) {;
-    if (file.endsWith('.tsx') || file.endsWith('.ts')) {;
-      try {;
-        let content = fs.readFileSync(file, 'utf8');
-        let originalContent = content;
+<<<<<<< HEAD        let originalContent = content;
 ;
         for (const fix of commonFixes) {;
           if (fix.pattern.test(content)) {;
@@ -237,11 +213,7 @@ async function fixLintingErrors() {;
         fs.writeFileSync(file, content);
       }
     } catch (error) {  console.log(⚠️  Could not fix ${file  }: ${error.message}``);
-`);
-      if (content !== originalContent) {`);
-        fs.writeFileSync(file, content);`);
-      }`);
-    } catch (error) {console.log(⚠️  Could not fix ${file}: ${error.message}``);
+<<<<<<< HEAD    } catch (error) {console.log(⚠️  Could not fix ${file}: ${error.message}``);
     }
   }
 ;
@@ -348,27 +320,7 @@ async function fixSyntaxErrors() {;
 
       for (const fix of syntaxFixes) {
         if (fix.pattern.test(content)) {
-;
-  for (const file of files) {;
-    try {;
-      let content = fs.readFileSync(file, 'utf8');
-      let originalContent = content;
-;
-      // Fix common syntax issues;
-      const syntaxFixes = ['// Fix missing semicolons;
-        {;
-          pattern: /(\w+)\s*=\s*(\w+)\s*$/gm', 'replacement: '$1 = $2;', 'condition: line =>;
-            !line.includes('import') &&;
-            !line.includes('export') &&;
-            !line.includes('function')', '}', '// Fix unmatched brackets;
-        {;
-          pattern: /{\s*$/gm', 'replacement: '{\n', 'condition: () => true', '}', '// Fix trailing commas;
-        {;
-          pattern: /', '\s*}/g', 'replacement: '}', 'condition: () => true', '}', '];
-;
-      for (const fix of syntaxFixes) {;
-        if (fix.pattern.test(content)) {;
-          content = content.replace(fix.pattern, fix.replacement);console.log(🔧 Applied syntax fix in ${file}``);
+<<<<<<< HEAD          content = content.replace(fix.pattern, fix.replacement);console.log(🔧 Applied syntax fix in ${file}``);
           fixes++;
         }
       }
@@ -416,12 +368,7 @@ function getAllSourceFiles() {;
   for (const dir of sourceDirs) {
     if (fs.existsSync(dir)) {
       function traverse(currentDir) {
-  const sourceDirs = ['src', 'components', 'pages', 'utils', 'hooks'];
-;
-  for (const dir of sourceDirs) {;
-    if (fs.existsSync(dir)) {;
-      function traverse(currentDir) {;
-        const items = fs.readdirSync(currentDir);
+<<<<<<< HEAD        const items = fs.readdirSync(currentDir);
         for (const item of items) {;
           const fullPath = path.join(currentDir, item);
           const stat = fs.statSync(fullPath);
@@ -449,19 +396,7 @@ if (require.main === module) {
       process.exit(0);
     })
     .catch(error => {
-      console.error(`❌ Intelligent error fixer failed:`, error);
-;
-// Run the intelligent error fixer;
-if (require.main === module) {;
-  fixAllErrors();
-    .then(fixes => {;
-      console.log(🎉 Intelligent error fixer completed with ${fixes} fixes applied';
-      );
-      process.exit(0);
-    });
-    .catch(error => {;
-      console.error('❌ Intelligent error fixer failed:', error);
-      process.exit(1);
+      console.error(`❌ Intelligent error fixer failed: `, error);      process.exit(1);
     });
 }
 ;

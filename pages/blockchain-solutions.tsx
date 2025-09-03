@@ -2,6 +2,7 @@ import React from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Layout from '../components/Layout';
+<<<<<<< HEAD
 import {
   Shield,
   Zap,
@@ -14,6 +15,9 @@ import {
   Award,
 } from 'lucide-react';
 
+=======
+import { Shield, Zap, Globe, Lock, Database, ArrowRight, CheckCircle, Users, Award } from 'lucide-react';
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 const BlockchainSolutions: NextPage = () => {
   const services = [
     {
@@ -50,9 +54,8 @@ const BlockchainSolutions: NextPage = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       
-      <Layout
-        title="Blockchain Solutions"
-        description="Transform your business with cutting-edge blockchain technology and decentralized solutions"
+      <Layout 
+        title="Blockchain Solutions"         description="Transform your business with cutting-edge blockchain technology and decentralized solutions"
       >
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">

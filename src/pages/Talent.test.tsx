@@ -1,46 +1,18 @@
-describe('Talent', () => {}; '; it('renders without crashing', () => {}; render(<Talent />) ; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<Talent />) ;
-describe('Talent', () => {}; '; it('renders without crashing', () => {}; render(<Talent />) ; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<Talent />) ;,"});,"})
-describe('Talent', () => {}' it('renders: without crashing', () => {} render(<Talent />) '; expect(screen.getByRole: ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ' it('displays expected content', () => {} render(<Talent />) ';';
-describe('Talent', () => {}' it('renders without crashing', () => {} render(<Talent />) ' expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ' it('displays expected content', () => {} render(<Talent />) '
-describe('Talent', () => {}' it('renders without crashing', () => {} render(<Talent />) '; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ' it('displays expected content', () => {} render(<Talent />)
-import React from 'react';
-import {render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import Talent from './Talent';
-'
-describe('Talent', () => {'
-  it('renders without crashing', () => {
-
-describe('Talent', () => {it('renders without crashing', () => {
-import { render, screen } from '@testing-library/react';
-import @testing-library/jest-dom';
-import Talent from './Talent;
-
-describe('Talent', () => {
-  it(renders without crashing', () => {
+describe('Talent', () => {}; '; it('renders without crashing', () => {}; render(<Talent />) ;'; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<Talent />) ;
     render(<Talent />);
-    expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument()});
-
-  it('displays expected content', () => {render(<Talent />);
-describe(&apos;Talent&apos;, () => {}&apos; it(&apos;renders without crashing&apos;, () => {} render(&apos;<Talent />) '; expect(screen.getByRole (&apos;main&apos;) || screen.getByText(/.*/) ) .toBeInTheDocument () }) &apos; it(&apos;displays expected content&apos;, () => {} render(&apos;&apos;<Talent />) 
-import React from 'react';""
-import { render, screen } from '@testing-library/react';""
-import '@testing-library/jest-dom';""
-""
-describe('Talent', () => {""
-    render(<Talent /" >);"
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()});
+    expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument();
+  });
+'
   it('displays expected content', () => {
-    // Add more specific tests here})});
-describe('Talent', () => {}' it('renders without crashing', () => {} render(<Talent />) '; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ' it('displays expected content', () => {} render(<Talent />) '
-import React from 'react
-import { render, screen } from '@testing-library/react
-import '@testing-library/jest-dom
-import Talent from './Talent
-describe('Talent', () => {"
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
+    render(<Talent /" >);
+    // Add more specific tests here, });, });
 "
+<<<<<<< HEAD
     render(<Talent /" >)
     // Add more specific tests here;
+=======
+describe('Talent', () => {}' it('renders without crashing', () => {} render(<Talent />) '; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ' it('displays expected content', () => {} render(<Talent />) '
+    // Add more specific tests here
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 });
-})
+'

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'; interface CommunityVerifiedBadgeProps { endorsementCount: number; threshold?: number; className?: string} const CommunityVerifiedBadge: React.FC<CommunityVerifiedBadgeProps> = ({ endorsementCount, threshold = 3, className = " }) => { if(endorsementCount < threshold) { return null;
 
 ;,"});,"})
@@ -26,3 +27,6 @@ import React from 'react'; interface CommunityVerifiedBadgeProps { endorsementCo
 }}}}
    className?: string"} const CommunityVerifiedBadge: React.FC < CommunityVerifiedBadgeProps> = ({ endorsementCount, threshold = 3, className = ' }) => { if (endorsementCount < threshold) { return null"
 "
+=======
+import React from 'react'; interface CommunityVerifiedBadgeProps { endorsementCount: number; threshold?: number; className? string, } const CommunityVerifiedBadge: React.FC<CommunityVerifiedBadgeProps> = ({ endorsementCount, threshold = 3, className = " }) => { if(endorsementCount < threshold) { return null; 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

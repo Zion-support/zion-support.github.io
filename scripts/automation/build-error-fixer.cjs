@@ -9,8 +9,7 @@ class BuildErrorFixer {;
   constructor() {;
     this.projectRoot = process.cwd();
     this.logFile = path.join(this.projectRoot, ``automation/logs/build-error-fixer.log``);
-    this.logFile = path.join(this.projectRoot, 'automation/logs/build-error-fixer.log');
-    this.fixesApplied = [];
+<<<<<<< HEAD    this.fixesApplied = [];
     this.startTime = new Date();
   }
 ;
@@ -58,16 +57,7 @@ class BuildErrorFixer {;
     await this.log('🗑️  Clearing npm cache...');
     await this.runCommand('npm cache clean --force', { silent: true });
     
-    ;
-    // Clean build artifacts;
-    await this.log('🧹 Cleaning build artifacts...');
-    await this.runCommand('rm -rf .next out dist build', { silent: true });
-    ;
-    // Clear npm cache if needed;
-    await this.log('🗑️  Clearing npm cache...');
-    await this.runCommand('npm cache clean --force', { silent: true });
-    ;
-    // Reinstall dependencies;
+<<<<<<< HEAD    // Reinstall dependencies;
     await this.log('📦 Reinstalling dependencies...');
     const installResult = await this.runCommand('npm install --legacy-peer-deps');
     if (installResult.success) {;
@@ -125,13 +115,9 @@ const nextConfig = {;
   }
 };
 ;
-module.exports = nextConfig;;
+module.exports = nextConfig;
       ;
-};`);
-`);
-module.exports = nextConfig;;`);
-      `);
-      await fs.writeFile(nextConfigPath, fixedConfig`);
+<<<<<<< HEAD      await fs.writeFile(nextConfigPath, fixedConfig`);
       await this.log('✅ Next.js configuration fixed');
       this.fixesApplied.push({
         type: `next-config-fix`,
@@ -155,17 +141,7 @@ module.exports = nextConfig;;`);
       
       // Update compiler options;
       if (!tsConfig.compilerOptions) {
-;
-  async fixTypeScriptConfig() {;
-    await this.log('🔧 Fixing TypeScript configuration...');
-    ;
-    try {;
-      const tsConfigPath = path.join(this.projectRoot, 'tsconfig.json');
-      const tsConfig = JSON.parse(await fs.readFile(tsConfigPath, 'utf8'));
-      ;
-      // Update compiler options;
-      if (!tsConfig.compilerOptions) {;
-        tsConfig.compilerOptions = {};
+<<<<<<< HEAD        tsConfig.compilerOptions = {};
       }
       ;
       tsConfig.compilerOptions = {;
@@ -215,17 +191,7 @@ module.exports = nextConfig;;`);
       
       // Ensure required scripts exist;
       if (!packageJson.scripts) {
-;
-  async fixPackageJson() {;
-    await this.log('🔧 Fixing package.json...');
-    ;
-    try {;
-      const packageJsonPath = path.join(this.projectRoot, 'package.json');
-      const packageJson = JSON.parse(await fs.readFile(packageJsonPath, 'utf8'));
-      ;
-      // Ensure required scripts exist;
-      if (!packageJson.scripts) {;
-        packageJson.scripts = {};
+<<<<<<< HEAD        packageJson.scripts = {};
       }
       ;
       packageJson.scripts = {;
@@ -271,28 +237,7 @@ module.exports = nextConfig;;`);
     try {
       await this.log(`🚀 Starting Build Error Fixer`);
       
-;
-  async testBuild() {;
-    await this.log('🧪 Testing build...');
-    ;
-    const buildResult = await this.runCommand('npm run build', { silent: true });
-    if (buildResult.success) {;
-      await this.log('✅ Build test successful');
-      this.fixesApplied.push({;
-        type: 'build-test',;
-        result: 'success',;
-        timestamp: new Date().toISOString();
-      });
-    } else {;
-      await this.log('❌ Build test failed');await this.log(`Build error: ${buildResult.output}`);
-    }
-  }
-;
-  async run() {;
-    try {;
-      await this.log('🚀 Starting Build Error Fixer');
-      ;
-      await this.fixNextConfig();
+<<<<<<< HEAD      await this.fixNextConfig();
       await this.fixTypeScriptConfig();
       await this.fixPackageJson();
       await this.fixBuildErrors();
@@ -325,19 +270,7 @@ if (require.main === module) {
       process.exit(0);
     })
     .catch(error => {
-      console.error(`Build error fixer failed:`, error);
-;
-// Run the fixer if called directly;
-if (require.main === module) {;
-  const fixer = new BuildErrorFixer();
-  fixer.run();
-    .then(result => {;
-      console.log('Build error fixer completed successfully');
-      process.exit(0);
-    });
-    .catch(error => {;
-      console.error('Build error fixer failed:', error);
-      process.exit(1);
+      console.error(`Build error fixer failed: `, error);      process.exit(1);
     });
 }
 ;

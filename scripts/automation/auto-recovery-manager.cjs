@@ -18,11 +18,7 @@ class AutoRecoveryManager {;
   ensureDirectories() {
     ['this.logsPath', `this.reportsPath`].forEach(dir => {
       if (!fs.existsSync(dir)) {
-;
-  ensureDirectories() {;
-    ['this.logsPath', 'this.reportsPath'].forEach(dir => {;
-      if (!fs.existsSync(dir)) {;
-        fs.mkdirSync(dir, { recursive: true });
+<<<<<<< HEAD        fs.mkdirSync(dir, { recursive: true });
       }
     });
   }
@@ -68,29 +64,7 @@ class AutoRecoveryManager {;
       }
     }
 
-;
-    // Check for common system issues;
-    const checks = ['{ name: 'npm', 'command: 'npm --version', 'issue: 'npm not available' }', '{;
-        name: 'node', 'command: 'node --version', 'issue: 'Node.js not available', '}', '{ name: 'git', 'command: 'git --version', 'issue: 'Git not available' }', '{ name: 'disk-space', 'command: 'df -h .', 'issue: 'Low disk space' }', '{ name: 'memory', 'command: 'free -h', 'issue: 'Low memory' }', '];
-;
-    for (const check of checks) {;
-      try {;
-        execSync(check.command, {;
-          cwd: this.workspacePath,;
-          stdio: 'pipe',;
-          timeout: 10000,;
-        });
-      } catch (error) {;
-        issues.push({;
-          type: 'system',;
-          name: check.name,;
-          description: check.issue,;
-          severity: 'high',;
-        });
-      }
-    }
-;
-    // Check for project-specific issues;
+<<<<<<< HEAD    // Check for project-specific issues;
     const projectIssues = await this.checkProjectIssues();
     issues.push(...projectIssues);
 `);
@@ -183,35 +157,7 @@ this.log(Found ${issues.length} system issues`);
           name: `unreadable-file`,description: `Cannot read file ${filePath  }`,
           severity: `high`,
           file: filePath,
-;
-        // Check for common corruption patterns;
-        if (;
-          content.includes(') ||;
-          content.includes('>>>>>>>');
-        ) {;
-          corruptedFiles.push({;
-            type: 'corruption',;
-            name: 'merge-conflicts',description: `Merge conflicts detected in ${filePath}`,;
-            severity: 'high',;
-            file: filePath,;
-          });
-        }
-;
-        if (content.includes(') || content.includes(')) {;
-          corruptedFiles.push({;
-            type: 'corruption',;
-            name: 'encoding-issues',description: `Encoding issues detected in ${filePath}`,;
-            severity: 'medium',;
-            file: filePath,;
-          });
-        }
-      } catch (error) {;
-        corruptedFiles.push({;
-          type: 'corruption',;
-          name: 'unreadable-file',description: `Cannot read file ${filePath}`,;
-          severity: 'high',;
-          file: filePath,;
-        });
+<<<<<<< HEAD        });
       }
     }
 ;
@@ -251,10 +197,7 @@ this.log(Found ${issues.length} system issues`);
 
   async applyRecoveryStrategies(issues) {this.log(`🔧 Applying recovery strategies for ${issues.length} issues...`);
 
-;
-  async applyRecoveryStrategies(issues) {this.log(`🔧 Applying recovery strategies for ${issues.length} issues...');
-;
-    let recoveredCount = 0;
+<<<<<<< HEAD    let recoveredCount = 0;
     const recoveryResults = [];
 ;
     for (const issue of issues) {;
@@ -286,9 +229,7 @@ this.log(Found ${issues.length} system issues`);
     }
 
     this.log(✅ Recovered from ${recoveredCount} out of ${issues.length} issues`
-;
-    this.log(✅ Recovered from ${recoveredCount} out of ${issues.length} issues';
-    );
+<<<<<<< HEAD    );
     return {;
       recoveredCount,;
       totalIssues: issues.length,;
@@ -382,31 +323,7 @@ this.log(Found ${issues.length} system issues`);
       // For now, we`ll just log the issue;
       this.log(⚠️ Node.js recovery requires system-level intervention`,
         `WARN`
-;
-      // Try to reinstall npm globally;
-      execSync('npm install -g npm@latest', {;
-        cwd: this.workspacePath,;
-        stdio: 'pipe',;
-        timeout: 300000,;
-      });
-;
-      this.log('✅ npm recovered successfully');
-      return true;
-    } catch (error) {;
-      this.log(`❌ Failed to recover npm: ${error.message}`, 'ERROR');
-      return false;
-    }
-  }
-;
-  async recoverNode() {;
-    try {;
-      this.log('🔧 Recovering Node.js...');
-;
-      // This would typically require system-level intervention;
-      // For now, we'll just log the issue;
-      this.log(⚠️ Node.js recovery requires system-level intervention',;
-        'WARN';
-      );
+<<<<<<< HEAD      );
       return false;
     } catch (error) {  this.log(`❌ Failed to recover Node.js: ${error.message  }`, `ERROR`);
       return false;
@@ -455,21 +372,7 @@ this.log(Found ${issues.length} system issues`);
       );
 
       this.log(`✅ Disk space recovered successfully`);
-;
-  async recoverDiskSpace() {;
-    try {;
-      this.log('🔧 Recovering disk space...');
-;
-      // Clear temporary files and caches;
-      execSync(rm -rf /tmp/* ~/.cache/* 'node_modules/.cache' dist build .next',;
-        {;
-          cwd: this.workspacePath,;
-          stdio: 'pipe',;
-        }
-      );
-;
-      this.log('✅ Disk space recovered successfully');
-      return true;
+<<<<<<< HEAD      return true;
     } catch (error) {  this.log(`❌ Failed to recover disk space: ${error.message  }`, `ERROR`);
       return false;
     }
@@ -514,8 +417,8 @@ this.log(Found ${issues.length} system issues`);
         description: 'Recovered project',
         main: 'index.js',
         scripts: {
-          test: 'echo "Error: no test specified" && exit 1'},
-        keywords: [],
+          test: 'echo "Error: no test specified && exit 1',
+        },        keywords: [],
         author: '',
         license: 'ISC'};
 
@@ -567,20 +470,7 @@ this.log(Found ${issues.length} system issues`);
         timeout: 300000});
 
       this.log(`✅ Dependencies recovered successfully`);
-;
-  async recoverDependencies() {;
-    try {;
-      this.log('🔧 Recovering dependencies...');
-;
-      // Reinstall dependencies;
-      execSync('npm install', {;
-        cwd: this.workspacePath,;
-        stdio: 'pipe',;
-        timeout: 300000,;
-      });
-;
-      this.log('✅ Dependencies recovered successfully');
-      return true;
+<<<<<<< HEAD      return true;
     } catch (error) {  this.log(`❌ Failed to recover dependencies: ${error.message  }`, `ERROR`);
       return false;
     }
@@ -615,11 +505,16 @@ this.log(`✅ Merge conflicts recovered in ${filePath}`);
       return true;
     } catch (error) {  
       this.log(❌ Failed to recover merge conflicts in ${filePath  }: ${error.message}`,
+<<<<<<< HEAD
         `ERROR`;
 } catch (error) {;
       this.log(❌ Failed to recover merge conflicts in ${filePath}: ${error.message}',;
         'ERROR';
       );
+=======
+        `ERROR`
+<<<<<<< HEAD      );
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       return false;
     }
   }
@@ -657,11 +552,16 @@ this.log(`❌ Could not recover encoding issues in ${filePath}`);
       return false;
     } catch (error) {  
       this.log(❌ Failed to recover encoding issues in ${filePath  }: ${error.message}`,
+<<<<<<< HEAD
         `ERROR`;
 } catch (error) {;
       this.log(❌ Failed to recover encoding issues in ${filePath}: ${error.message}',;
         'ERROR';
       );
+=======
+        `ERROR`
+<<<<<<< HEAD      );
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       return false;
     }
   }
@@ -681,7 +581,7 @@ this.log(`❌ Could not recover encoding issues in ${filePath}`);
       switch (extension) {
         case '.js':
         case '.jsx':
-          content = '// Recovered file\nconsole.log(`"File recovered");\n';
+          content = '// Recovered file\nconsole.log(`File recovered");\n';
           break;
         case '.ts':
         case '.tsx':
@@ -716,6 +616,7 @@ this.log(✅ Unreadable file recovered: ${filePath}`);
       return true;
     } catch (error) {  
       this.log(❌ Failed to recover unreadable file ${filePath  }: ${error.message}`,
+<<<<<<< HEAD
         `ERROR`;
 } catch (error) {;
       this.log(❌ Failed to recover unreadable file ${filePath}: ${error.message}',;
@@ -724,6 +625,10 @@ this.log(✅ Unreadable file recovered: ${filePath}`);
       this.log(❌ Failed to recover unreadable file ${filePath}: ${error.message}',`);
         'ERROR`);
       );
+=======
+        `ERROR`
+<<<<<<< HEAD      );
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       return false;
     }
   }
@@ -736,8 +641,7 @@ this.log(✅ Unreadable file recovered: ${filePath}`);
       summary: {
         totalIssues: recoveryResults.totalIssues,
         recoveredIssues: recoveryResults.recoveredCount,
-        recoveryRate:
-          recoveryResults.totalIssues > 0;
+        recoveryRate: recoveryResults.totalIssues > 0;
             ? (
                 (recoveryResults.recoveredCount / recoveryResults.totalIssues) *
                 100;
@@ -801,28 +705,7 @@ this.log(✅ Unreadable file recovered: ${filePath}`);
 
       this.log(`🎉 Auto Recovery Manager completed!`);
       this.log(📊 Recovered from ${recoveryResults.recoveredCount} out of ${recoveryResults.totalIssues} issues`
-;
-  async run() {;
-    this.log('🚀 Starting Auto Recovery Manager...');
-;
-    try {;
-      // Detect system issues;
-      const issues = await this.detectSystemIssues();
-;
-      if (issues.length === 0) {;
-        this.log('🎉 No system issues detected!');
-        return { success: true, issues: [], recovered: 0 };
-      }
-;
-      // Apply recovery strategies;
-      const recoveryResults = await this.applyRecoveryStrategies(issues);
-;
-      // Generate report;
-      const report = await this.generateReport(recoveryResults);
-;
-      this.log('🎉 Auto Recovery Manager completed!');
-      this.log(📊 Recovered from ${recoveryResults.recoveredCount} out of ${recoveryResults.totalIssues} issues';
-      );
+<<<<<<< HEAD      );
 ;
       return {;
         success: recoveryResults.recoveredCount > 0,;

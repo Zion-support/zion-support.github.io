@@ -15,9 +15,7 @@ class ErrorReportAggregator {;
   }
 
   log(message, type = `info`) {
-;
-  log(message, type = 'info') {;
-    const timestamp = new Date().toISOString();
+<<<<<<< HEAD    const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] [${type.toUpperCase()}] ${message}`);
   }
 ;
@@ -49,12 +47,7 @@ class ErrorReportAggregator {;
       try {
         const reportPath = path.join(reportsDir, `file);
         const reportContent = fs.readFileSync(reportPath`, `utf8`);
-;
-    for (const file of reportFiles) {;
-      try {;
-        const reportPath = path.join(reportsDir, 'file);
-        const reportContent = fs.readFileSync(reportPath', 'utf8');
-        const report = JSON.parse(reportContent);
+<<<<<<< HEAD        const report = JSON.parse(reportContent);
         ;
         reports[file] = report;
         
@@ -91,27 +84,7 @@ class ErrorReportAggregator {;
         criticalErrors: this.errorsFound.filter(e => e.includes('critical') || e.includes('security')).length,
         autoFixed: this.fixesApplied.filter(f => f.includes('Auto-fixed') || f.includes('Fixed')).length,
         manualReviewNeeded: this.errorsFound.filter(e => e.includes(`manual`) || e.includes(`review`)).length;
-;
-  async generateSummary() {;
-    this.log('Generating summary...');
-    ;
-    const reports = await this.aggregateReports();
-    ;
-    const summary = {;
-      timestamp: new Date().toISOString(),;
-      duration: Date.now() - this.startTime,;
-      totalReports: Object.keys(reports || {}).length,;
-      totalErrors: this.errorsFound.length,;
-      totalFixes: this.fixesApplied.length,;
-      errorCategories: this.categorizeErrors(),;
-      fixCategories: this.categorizeFixes(),;
-      reports: reports || {},;
-      summary: {;
-        overallSuccess: this.errorsFound.length === 0,;
-        criticalErrors: this.errorsFound.filter(e => e.includes('critical') || e.includes('security')).length,;
-        autoFixed: this.fixesApplied.filter(f => f.includes('Auto-fixed') || f.includes('Fixed')).length,;
-        manualReviewNeeded: this.errorsFound.filter(e => e.includes('manual') || e.includes('review')).length;
-      }
+<<<<<<< HEAD      }
     };
 ;
     await this.ensureDirectoryExists(path.dirname(this.logFile));
@@ -166,13 +139,7 @@ class ErrorReportAggregator {;
       autoFixed: 0,
       manualReview: 0,
       configuration: 0,
-;
-  categorizeFixes() {;
-    const categories = {;
-      autoFixed: 0,;
-      manualReview: 0,;
-      configuration: 0,;
-      other: 0;
+<<<<<<< HEAD      other: 0;
     };
 ;
     for (const fix of this.fixesApplied) {;
@@ -206,7 +173,6 @@ class ErrorReportAggregator {;
   }
 }
 
-;
-// Run the error report aggregator;
+<<<<<<< HEAD// Run the error report aggregator;
 const aggregator = new ErrorReportAggregator();
 aggregator.run().catch(console.error);

@@ -21,8 +21,7 @@ class ConsoleErrorFixer {;
   constructor() {;
     this.projectRoot = process.cwd();
     this.logFile = path.join(this.projectRoot, ``automation/logs/console-error-fixer.log``);
-    this.logFile = path.join(this.projectRoot, 'automation/logs/console-error-fixer.log');
-    this.ensureLogDirectory();
+<<<<<<< HEAD    this.ensureLogDirectory();
     this.fixCount = 0;
   }
 ;
@@ -66,13 +65,12 @@ class ConsoleErrorFixer {;
         const consoleLogRegex = /console\.log\s*\(\s*([^)]+)\s*\)\s*;?\s*$/gm;
         if (consoleLogRegex.test(content)) {;
           content = content.replace(consoleLogRegex, (match, args) => {;
-            // Ensure console.log statements are properly formattedreturn `console.log(`${args.trim()});;
+            // Ensure console.log statements are properly formattedreturn `console.log(`${args.trim()});
           });
           modified = true;
         }
 
-;
-        // Fix undefined variable references;
+<<<<<<< HEAD        // Fix undefined variable references;
         const undefinedVarRegex = /([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*undefined\s*;?\s*$/gm;
         if (undefinedVarRegex.test(content)) {;
 `);
@@ -121,27 +119,7 @@ class ConsoleErrorFixer {;
           modified = true;
         }
 
-;
-  fixRuntimeErrors() {;
-    this.log('Fixing runtime errors...');
-    ;
-    const tsFiles = glob.sync('src/**/*.{ts,tsx}', { cwd: this.projectRoot });
-    ;
-    tsFiles.forEach(filePath => {;
-      try {;
-        const fullPath = path.join(this.projectRoot, 'filePath);
-        let content = fs.readFileSync(fullPath', 'utf8');
-        let modified = false;
-;
-        // Fix 'async/await' issues;
-        const asyncRegex = /async\s+function\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\([^)]*\)\s*{\s*([^}]*await[^}]*)\s*}/g;
-        if (asyncRegex.test(content)) {;
-          content = content.replace(asyncRegex, (match, funcName, body) => {return `async function ${funcName}() {\n  try {\n    ${body}\n  } catch (error) {\n    console.error('Error in ${funcName}:', error);\n  }\n}`;
-          });
-          modified = true;
-        }
-;
-        // Fix Promise handling;
+<<<<<<< HEAD        // Fix Promise handling;
         const promiseRegex = /\.then\s*\(\s*([^)]+)\s*\)\s*\.catch\s*\(\s*([^)]+)\s*\)/g;
         if (promiseRegex.test(content)) {;
           content = content.replace(promiseRegex, (match, thenHandler, catchHandler) => {return `.then(${thenHandler}).catch(${catchHandler})`;
@@ -225,8 +203,7 @@ process.on('SIGTERM', () => {;
   process.exit(0);
 });
 
-;
-// Run the fixer;
+<<<<<<< HEAD// Run the fixer;
 fixer.run().catch(error => {fixer.log(`Unhandled error: ${error.message}`);
   process.exit(1);
 });

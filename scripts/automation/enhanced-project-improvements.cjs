@@ -54,13 +54,7 @@ class EnhancedProjectImprovements {;
       // Step 5: Documentation Improvements;
       await this.applyDocumentationImprovements();
       
-    dirs.forEach(dir => {;
-      const dirPath = path.join(this.projectRoot, 'dir);
-      if (!fs.existsSync(dirPath)) {;
-        fs.mkdirSync(dirPath', { recursive: true });
-      if (!fs.existsSync(dirPath)) {
-        fs.mkdirSync(dirPath, { recursive: true });
-      }
+<<<<<<< HEAD      }
     });
   }
 ;
@@ -142,13 +136,7 @@ class EnhancedProjectImprovements {;
 // Performance monitoring utility;
 export const performanceMonitor = {
   measure: (name, fn) => {
-;
-    // Add performance monitoring;
-    this.log('  - Adding performance monitoring...');const performanceMonitor = `;
-// Performance monitoring utility;
-export const performanceMonitor = {;
-  measure: (name, fn) => {;
-    const start = performance.now();
+<<<<<<< HEAD    const start = performance.now();
     const result = fn();
     const end = performance.now();
     console.log(`\\${name} took \${end - start}ms\`);
@@ -162,12 +150,9 @@ export const performanceMonitor = {;
   measureBetween: (startMark, endMark) => {;
     performance.measure(startMark, startMark, endMark);
   }
-};;
+};
     
-    fs.writeFileSync(path.join(this.projectRoot, ``src/utils/performanceMonitor.ts`'), performanceMonitor);
-    ;
-    fs.writeFileSync(path.join(this.projectRoot, 'src/utils/performanceMonitor.ts'), performanceMonitor);
-    this.improvementsApplied++;
+    fs.writeFileSync(path.join(this.projectRoot, ``src/utils/performanceMonitor.ts`'), performanceMonitor);    this.improvementsApplied++;
     this.improvementsList.push('Performance monitoring utility');
   }
 ;
@@ -179,7 +164,7 @@ export const performanceMonitor = {;
 // Enhanced security configuration;
 export const securityConfig = {;
   // Content Security Policy;
-  csp: {default-src': ["'self'],script-src': ["'self'", "'unsafe-inline'],style-src': ["'self'", "'unsafe-inline'],img-src': ["'self'", 'data:', 'https:'],connect-src': ["'self'", 'https:'],font-src': ["'self'", 'https:'],object-src': ["'none'],media-src': ["'self'],frame-src': ["'none'];
+  csp: {default-src': ["'self'],script-src': ['self', "'unsafe-inline'],style-src': ["'self', 'unsafe-inline'],img-src': ["'self'", 'data: ', 'https: '],connect-src': ['self', 'https: '],font-src': ["'self'", 'https: '],object-src': ['none'],media-src': ['self'],frame-src': ["'none'];
   },;
   ;
   // Security headers;
@@ -205,14 +190,17 @@ export const securityConfig = {;
 // Enhanced security configuration
 export const securityConfig = {
   // Content Security Policy;
+<<<<<<< HEAD
   csp: {default-src': ["'self''],script-src': ["'self'", "'unsafe-inline''],style-src': ["'self'", "'unsafe-inline''],img-src': ["'self'", 'data:', 'https:'],connect-src': ["'self'", 'https:'],font-src': ["'self'", 'https:'],object-src': ["'none''],media-src': ["'self''],frame-src': ["'none''];
 },
+=======
+  csp: {default-src': ['self''],script-src': ['self'", "'unsafe-inline''],style-src': ['self', "'unsafe-inline''],img-src': ["'self', 'data: ', 'https: '],connect-src': ['self'", 'https: '],font-src': ["'self', 'https: '],object-src': ['none''],media-src': ["'self''],frame-src': ["'none'']
+  },
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   
   // Security headers;
   headers: {X-Content-Type-Options': 'nosniff',X-Frame-Options': 'DENY',X-XSS-Protection': '1; mode=block',Referrer-Policy': 'strict-origin-when-cross-origin',Permissions-Policy': 'camera=(), microphone=(), geolocation=()'
-  // Security headers
-  headers: {X-Content-Type-Options': 'nosniff',X-Frame-Options': 'DENY',X-XSS-Protection': '1; mode=block',Referrer-Policy': 'strict-origin-when-cross-origin',Permissions-Policy': 'camera=(), microphone=(), geolocation=()`);
-  },
+<<<<<<< HEAD  },
   
   // Input validation;
   validation: {
@@ -223,10 +211,9 @@ export const securityConfig = {
     
     sanitizeInput: (input) => {
       // Basic input sanitization;
-      return input.replace(/[<>\"']/g, '');
-    }
+      return input.replace(/[<>\']/g, '');    }
   }
-};;
+};
     ;
     fs.writeFileSync(path.join(this.projectRoot, 'src/utils/enhancedSecurity.ts'), securityConfig);
     this.improvementsApplied++;
@@ -284,22 +271,12 @@ export const securityConfig = {
     
     // Add ESLint rules for better code quality;
     const eslintConfig = '
-    ;
-    // Add ESLint rules for better code quality;
-    const eslintConfig = ';
-module.exports = {;
-  extends: ['eslint:recommended', 'plugin:'react/recommended'', 'plugin:react-'hooks/recommended'', 'plugin:@typescript-'eslint/recommended'', 'plugin:'prettier/recommended''],;
-  plugins: ['react', '@typescript-eslint', 'prettier'],;
-  rules: {'prettier/prettier'': 'error','react/react-in-jsx-scope'': 'off','react/prop-types'': 'off',@typescript-'eslint/no-unused-vars'': 'error',@typescript-'eslint/no-explicit-any'': 'warn',@typescript-'eslint/explicit-function-return-type'': 'warn',@typescript-'eslint/no-non-null-assertion'': 'warn',prefer-const': 'error',no-var': 'error',object-shorthand': 'error',prefer-template': 'error';
-    `);
-    // Add ESLint rules for better code quality`);
-    const eslintConfig = `);
-module.exports = {
-  extends: ['eslint:recommended'', 'plugin:''react/recommended''', 'plugin:react-''hooks/recommended'''', 'plugin:@typescript-''eslint/recommended''', 'plugin:''prettier/recommended''''],
+<<<<<<< HEADmodule.exports = {
+  extends: ['eslint:recommended'', 'plugin: ''react/recommended''', 'plugin: react-''hooks/recommended'''', 'plugin: @typescript-''eslint/recommended''', 'plugin: ''prettier/recommended''''],
   plugins: ['react', '@typescript-eslint', 'prettier'],
   rules: {''prettier/prettier''': 'error',''react/react-in-jsx-scope''': 'off',''react/prop-types''': 'off',@typescript-''eslint/no-unused-vars''': 'error',@typescript-''eslint/no-explicit-any''': 'warn',@typescript-''eslint/explicit-function-return-type''': 'warn',@typescript-''eslint/no-non-null-assertion''': 'warn',prefer-const': 'error',no-var': 'error',object-shorthand': 'error',prefer-template': 'error`);
   }
-};;
+};
     ;
     fs.writeFileSync(path.join(this.projectRoot, '.eslintrc.cjs'), eslintConfig);
     this.improvementsApplied++;
@@ -353,12 +330,12 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 };
 ;
   return (;
-    <div className="flex flex-col items-center justify-center p-4">;
+    <div className=flex flex-col items-center justify-center p-4">;
       <div className={\`\${sizeMap[size]} animate-spin rounded-full border-4 border-gray-200 border-t-\${color}\`}></div>;
       {text && <p className="mt-2 text-sm text-gray-600'>{text}</p>}
     </div>;
   );
-};;
+};
     ;
     fs.writeFileSync(path.join(this.projectRoot, 'src/components/ui/LoadingSpinner.tsx'), loadingComponent);
     this.improvementsApplied++;
@@ -379,10 +356,7 @@ interface State {;
 
 export class ErrorBoundary extends Component<Props, State> {
   public state: State = {
-;
-export class ErrorBoundary extends Component<Props, State> {;
-  public state: State = {;
-    hasError: false;
+<<<<<<< HEAD    hasError: false;
   };
 ;
   public static getDerivedStateFromError(error: Error): State {;
@@ -396,9 +370,9 @@ export class ErrorBoundary extends Component<Props, State> {;
   public render() {
     if (this.state.hasError) {
       return this.props.fallback || (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+        <div className=min-h-screen flex items-center justify-center bg-gray-50>
           <div className="text-center">
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>
+            <h1 className=text-2xl font-bold text-gray-900 mb-4>Something went wrong</h1>
             <p className="text-gray-600 mb-4">We're sorry, but something unexpected happened.</p>
             <button;
               onClick={() => window.location.reload()}
@@ -443,13 +417,6 @@ export class ErrorBoundary extends Component<Props, State> {;
     const readme = `# ZION TECH - Enhanced AI-Powered Platform;
 ## 🚀 Overview;
 ZION TECH is a cutting-edge AI-powered platform that provides comprehensive business solutions, automation, and intelligent services.
-    ;
-    // Create comprehensive README;
-    const readme = `# ZION TECH - Enhanced AI-Powered Platform;
-
-## 🚀 Overview;
-ZION TECH is a cutting-edge AI-powered platform that provides comprehensive business solutions, automation, and intelligent services.;
-
 ## ✨ Features;
 - **AI-Powered Services**: Comprehensive AI solutions for business automation;
 - **Error Automation**: Self-healing system that automatically detects and fixes issues;
@@ -480,25 +447,7 @@ chmod +x start-error-automation.sh;
 ./start-error-automation.sh\`\`\`
 
 ## 🔧 Available Scripts- \`npm run dev\` - Start development server- \`npm run build\` - Build for production- \`npm run start\` - Start production server- \`npm run lint\` - Run ESLint- \`npm run type-check\' - Run TypeScript checks;
-
-## 🚀 Getting Started;
-
-### Prerequisites;
-- Node.js 18+;
-- npm or yarn;
-- PM2 (for automation);
-
-### Installation\`\`\`bash;
-npm install;
-npm run dev\`\`\`;
-
-### Automation Setup\`\`\`bash;
-chmod +x start-error-automation.sh;
-./start-error-automation.sh\`\`\`;
-
-## 🔧 Available Scripts- \`npm run dev\` - Start development server- \`npm run build\` - Build for production- \`npm run start\` - Start production server- \`npm run lint\` - Run ESLint- \`npm run type-check\' - Run TypeScript checks;
-
-## 📊 Automation Features;
+<<<<<<< HEAD## 📊 Automation Features;
 - **Error Prevention**: Automatically detects and prevents errors;
 - **Performance Monitoring**: Continuous performance optimization;
 - **Code Quality**: Automated code quality improvements;
@@ -542,29 +491,9 @@ module.exports = {
       lines: 70,
       statements: 70}},
   testMatch: ['<rootDir>/src/**/__tests__/**/*.{js', 'jsx', 'ts', 'tsx}'', '<rootDir>/src/**/*.{test, 'spec}.{js', 'jsx', 'ts', 'tsx}'', ''],
-  transform: {^.+\\.(js|jsx|ts|tsx)$': 'babel-jest'},
-    ;
-    // Enhanced test configuration;
-    const jestConfig = `;
-module.exports = {;
-  testEnvironment: 'jsdom',;
-  setupFilesAfterEnv: ['<rootDir>/'src/setupTests.ts''],;
-  moduleNameMapping: {^@/(.*)$': '<rootDir>/src/$1',\\.(css|less|scss|sass)$': 'identity-obj-proxy',;
-  },;
-  collectCoverageFrom: ['src/**/*.{js', 'jsx', 'ts', 'tsx}', '!src/**/*.d.ts', '!'src/index.tsx'', '!'src/serviceWorker.ts'', '],;
-  coverageThreshold: {;
-    global: {;
-      branches: 70,;
-      functions: 70,;
-      lines: 70,;
-      statements: 70,;
-    },;
-  },;
-  testMatch: ['<rootDir>/src/**/__tests__/**/*.{js', 'jsx', 'ts', 'tsx}', '<rootDir>/src/**/*.{test, 'spec}.{js', 'jsx', 'ts', 'tsx}', '],;
-  transform: {^.+\\.(js|jsx|ts|tsx)$': 'babel-jest',;
-  },;
-};;
-    ;
+  transform: {^.+\\.(js|jsx|ts|tsx)$': 'babel-jest',
+  },
+};    ;
     fs.writeFileSync(path.join(this.projectRoot, 'jest.config.js'), jestConfig);
     this.improvementsApplied++;
     this.improvementsList.push('Enhanced Jest configuration');
@@ -589,7 +518,7 @@ const customRender = (;
 ) => render(ui, { wrapper: AllTheProviders, ...options });
 ;
 export * from '@testing-'library/react'';
-export { customRender as render };;
+export { customRender as render };
     ;
     fs.writeFileSync(path.join(this.projectRoot, 'src/utils/test-utils.tsx'), testUtils);
     this.improvementsApplied++;
@@ -680,7 +609,7 @@ const nextConfig = {;
   },;
 };
 ;
-module.exports = nextConfig;;
+module.exports = nextConfig;
     ;
     fs.writeFileSync(path.join(this.projectRoot, 'next.config.js'), nextConfig);
     this.improvementsApplied++;
@@ -699,16 +628,7 @@ module.exports = nextConfig;;
     this.log(`📊 Improvements Report Generated`);this.log(`✅ Total improvements applied: ${this.improvementsApplied}`);this.log(`📄 Report saved to: ${this.improvementsFile}`);
     
     console.log(``\n🎉 PROJECT IMPROVEMENTS COMPLETED!`);console.log(`📊 Total improvements: ${this.improvementsApplied});
-    console.log(``📋 Applied improvements:`);
-    ;
-    this.log('📊 Improvements Report Generated');this.log(`✅ Total improvements applied: ${this.improvementsApplied}`);this.log(`📄 Report saved to: ${this.improvementsFile}`);
-    ;
-    console.log(`'\n🎉 PROJECT IMPROVEMENTS COMPLETED!');console.log(`📊 Total improvements: ${this.improvementsApplied});
-    console.log(`'📋 Applied improvements:');
-    
-    console.log(`\n🎉 PROJECT IMPROVEMENTS COMPLETED!`);console.log(`📊 Total improvements: ${this.improvementsApplied});`);
-    console.log(`📋 Applied improvements:`);
-    this.improvementsList.forEach((improvement, index) => {console.log(   ${index + 1}. ${improvement}`);
+    console.log(``📋 Applied improvements: `);    this.improvementsList.forEach((improvement, index) => {console.log(   ${index + 1}. ${improvement}`);
     });
   }
 }

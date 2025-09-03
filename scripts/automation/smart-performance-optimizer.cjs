@@ -29,11 +29,7 @@ class SmartPerformanceOptimizer {;
       bundle: ['{ name: 'Tree Shaking'', 'command: 'npm run build:analyze'', 'impact: 'HIGH' }', '{ name: 'Code Splitting'', 'command: 'npm run build:split'', 'impact: 'HIGH' }', '{ name: 'Minification'', 'command: 'npm run build:minify'', 'impact: 'MEDIUM' }', '{ name: 'Gzip Compression'', 'command: 'npm run build:gzip'', 'impact: 'MEDIUM' }'],
       runtime: ['{ name: 'Lazy Loading'', 'command: 'npm run optimize:lazy'', 'impact: 'HIGH' }', '{ name: 'Memoization'', 'command: 'npm run optimize:memo'', 'impact: 'MEDIUM' }', '{ name: 'Virtual Scrolling'', 'command: 'npm run optimize:virtual'', 'impact: 'MEDIUM' }'],
       build: ['{ name: 'Parallel Builds'', 'command: 'npm run build:parallel'', 'impact: 'HIGH' }', '{ name: 'Incremental Builds'', 'command: 'npm run build:incremental'', 'impact: 'MEDIUM' }', '{ name: 'Cache Optimization'', 'command: 'npm run build:cache'', 'impact: 'MEDIUM` }`]
-    this.optimizationStrategies = {;
-      bundle: ['{ name: 'Tree Shaking', 'command: 'npm run build:analyze', 'impact: 'HIGH' }', '{ name: 'Code Splitting', 'command: 'npm run build:split', 'impact: 'HIGH' }', '{ name: 'Minification', 'command: 'npm run build:minify', 'impact: 'MEDIUM' }', '{ name: 'Gzip Compression', 'command: 'npm run build:gzip', 'impact: 'MEDIUM' }'],;
-      runtime: ['{ name: 'Lazy Loading', 'command: 'npm run optimize:lazy', 'impact: 'HIGH' }', '{ name: 'Memoization', 'command: 'npm run optimize:memo', 'impact: 'MEDIUM' }', '{ name: 'Virtual Scrolling', 'command: 'npm run optimize:virtual', 'impact: 'MEDIUM' }'],;
-      build: ['{ name: 'Parallel Builds', 'command: 'npm run build:parallel', 'impact: 'HIGH' }', '{ name: 'Incremental Builds', 'command: 'npm run build:incremental', 'impact: 'MEDIUM' }', '{ name: 'Cache Optimization', 'command: 'npm run build:cache', 'impact: 'MEDIUM' }'];
-    };
+<<<<<<< HEAD    };
   }
 ;
   ensureLogsDirectory() {;
@@ -67,23 +63,7 @@ class SmartPerformanceOptimizer {;
       const distPath = path.join(this.projectRoot, `dist`);
       if (!fs.existsSync(distPath)) {
         throw new Error(`Build output not found`);
-;
-  async analyzeBundleSize() {;
-    this.log('Analyzing bundle size...');
-    ;
-    try {;
-      // Run build with analysis;
-      const buildOutput = execSync('npm run build', { ;
-        encoding: 'utf8', ;
-        cwd: this.projectRoot,;
-        stdio: 'pipe';
-      });
-      ;
-      // Analyze dist folder;
-      const distPath = path.join(this.projectRoot, 'dist');
-      if (!fs.existsSync(distPath)) {;
-        throw new Error('Build output not found');
-      }
+<<<<<<< HEAD      }
       ;
       const bundleStats = this.analyzeDistFolder(distPath);
       const analysis = {;
@@ -141,18 +121,7 @@ class SmartPerformanceOptimizer {;
         
         // Estimate compression potential;
         if (file.endsWith(`.js`) || file.endsWith(`.css`)) {
-        ;
-        if (size > 100 * 1024) { // Files larger than 100KB;
-          stats.largestFiles.push({;
-            file: path.relative(distPath, file),;
-            size: size,;
-            sizeKB: Math.round(size / 1024);
-          });
-        }
-        ;
-        // Estimate compression potential;
-        if (file.endsWith('.js') || file.endsWith('.css')) {;
-          stats.compressionPotential += Math.round(size * 0.3); // Assume 30% compression;
+<<<<<<< HEAD          stats.compressionPotential += Math.round(size * 0.3); // Assume 30% compression;
         }
       } catch (error) {  this.log(`Error analyzing file ${file  }: ${error.message}`, `WARN`);
       }
@@ -199,14 +168,7 @@ class SmartPerformanceOptimizer {;
         type: 'BUNDLE_SIZE',
         message: 'Bundle size is quite large. Consider code splitting and tree shaking.',
         potentialSavings: Math.round(bundleStats.compressionPotential / 1024) + 'KB'
-    ;
-    if (bundleStats.totalSize > 2 * 1024 * 1024) { // > 2MB;
-      recommendations.push({;
-        priority: 'HIGH',;
-        type: 'BUNDLE_SIZE',;
-        message: 'Bundle size is quite large. Consider code splitting and tree shaking.',;
-        potentialSavings: Math.round(bundleStats.compressionPotential / 1024) + 'KB';
-      });
+<<<<<<< HEAD      });
     }
     ;
     if (bundleStats.largestFiles.length > 0) {;
@@ -230,15 +192,7 @@ class SmartPerformanceOptimizer {;
         message: 'High number of files. Consider bundling strategies.',
         current: bundleStats.fileCount,
         target: '< 20'
-    ;
-    if (bundleStats.fileCount > 20) {;
-      recommendations.push({;
-        priority: 'LOW',;
-        type: 'FILE_COUNT',;
-        message: 'High number of files. Consider bundling strategies.',;
-        current: bundleStats.fileCount,;
-        target: '< 20';
-      });
+<<<<<<< HEAD      });
     }
     ;
     return recommendations;
@@ -296,25 +250,7 @@ class SmartPerformanceOptimizer {;
     
     try {
       // Simulate performance metrics (in real implementation, use Lighthouse or similar)
-      ;
-    } catch (error) {this.log(`Runtime performance measurement failed: ${error.message}`, 'ERROR');
-      return null;
-    }
-  }
-;
-  async runPerformanceTests() {;
-    const metrics = {;
-      timestamp: new Date().toISOString(),;
-      firstContentfulPaint: 0,;
-      largestContentfulPaint: 0,;
-      timeToInteractive: 0,;
-      totalBlockingTime: 0,;
-      cumulativeLayoutShift: 0;
-    };
-    ;
-    try {;
-      // Simulate performance metrics (in real implementation, use Lighthouse or similar);
-      metrics.firstContentfulPaint = Math.random() * 2000 + 500; // 500-2500ms;
+<<<<<<< HEAD      metrics.firstContentfulPaint = Math.random() * 2000 + 500; // 500-2500ms;
       metrics.largestContentfulPaint = Math.random() * 3000 + 1000; // 1000-4000ms;
       metrics.timeToInteractive = Math.random() * 4000 + 2000; // 2000-6000ms;
       metrics.totalBlockingTime = Math.random() * 500 + 100; // 100-600ms;
@@ -377,56 +313,7 @@ class SmartPerformanceOptimizer {;
         encoding: `utf8`, 
         cwd: this.projectRoot,
         stdio: `pipe`
-;
-  async optimizeBuildProcess() {;
-    this.log('Optimizing build process...');
-    ;
-    const optimizations = [];
-    ;
-    try {;
-      // Check current build time;
-      const startTime = Date.now();
-      execSync('npm run build', { ;
-        encoding: 'utf8', ;
-        cwd: this.projectRoot,;
-        stdio: 'pipe';
-      });
-      const buildTime = Date.now() - startTime;
-      ;
-      // Apply build optimizations;
-      for (const strategy of this.optimizationStrategies.build) {;
-        try {this.log(`Applying build optimization: ${strategy.name}`);
-          execSync(strategy.command, { ;
-            encoding: 'utf8', ;
-            cwd: this.projectRoot,;
-            stdio: 'pipe';
-          });
-          ;
-          optimizations.push({;
-            name: strategy.name,;
-            impact: strategy.impact,;
-            status: 'SUCCESS',;
-            timestamp: new Date().toISOString();
-          });
-          ;
-        } catch (error) {this.log(`Build optimization ${strategy.name} failed: ${error.message}`, 'WARN');
-          optimizations.push({;
-            name: strategy.name,;
-            impact: strategy.impact,;
-            status: 'FAILED',;
-            error: error.message,;
-            timestamp: new Date().toISOString();
-          });
-        }
-      }
-      ;
-      // Measure optimized build time;
-      const optimizedStartTime = Date.now();
-      execSync('npm run build', { ;
-        encoding: 'utf8', ;
-        cwd: this.projectRoot,;
-        stdio: 'pipe';
-      });
+<<<<<<< HEAD      });
       const optimizedBuildTime = Date.now() - optimizedStartTime;
       ;
       const timeImprovement = buildTime - optimizedBuildTime;
@@ -491,27 +378,7 @@ class SmartPerformanceOptimizer {;
             status: `FAILED`,
             error: error.message,
             timestamp: new Date().toISOString())
-          execSync(strategy.command, { ;
-            encoding: 'utf8', ;
-            cwd: this.projectRoot,;
-            stdio: 'pipe';
-          });
-          ;
-          optimizations.push({;
-            name: strategy.name,;
-            impact: strategy.impact,;
-            status: 'SUCCESS',;
-            timestamp: new Date().toISOString();
-          });
-          ;
-        } catch (error) {this.log(`Runtime optimization ${strategy.name} failed: ${error.message}`, 'WARN');
-          optimizations.push({;
-            name: strategy.name,;
-            impact: strategy.impact,;
-            status: 'FAILED',;
-            error: error.message,;
-            timestamp: new Date().toISOString());
-          });
+<<<<<<< HEAD          });
         }
       }
       ;
@@ -578,8 +445,7 @@ class SmartPerformanceOptimizer {;
       report.summary.failedOptimizations += report.runtimeOptimizations.filter(o => o.status === `FAILED`).length;
     }
     
-    ;
-    // Save report;
+<<<<<<< HEAD    // Save report;
     await this.saveOptimizationResults(report);
     this.log(`Optimization report generated. ${report.summary.successfulOptimizations}/${report.summary.totalOptimizations} optimizations successful`);
     ;
@@ -633,7 +499,6 @@ class SmartPerformanceOptimizer {;
   }
 }
 
-;
-// Start the Smart Performance Optimizer;
+<<<<<<< HEAD// Start the Smart Performance Optimizer;
 const optimizer = new SmartPerformanceOptimizer();
 optimizer.run();

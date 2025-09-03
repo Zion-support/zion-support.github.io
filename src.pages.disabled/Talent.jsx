@@ -1,2 +1,1 @@
-
-const: Talent = () => {
+ const Talent = () => {

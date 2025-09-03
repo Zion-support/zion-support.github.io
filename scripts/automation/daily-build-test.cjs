@@ -39,11 +39,7 @@ async function runDailyBuildTest() {
 
     // Install dependencies;
     console.log(``📦 Installing dependencies...`);
-    console.log(`🏗️ Running build and test at ${new Date().toISOString()});`);
-`);
-    // Install dependencies`);
-    console.log(`📦 Installing dependencies...`);
-    try {
+<<<<<<< HEAD    try {
       execSync(`npm ci`, { stdio: 'inherit' });
       console.log('✅ Dependencies installed'`);
     } catch (error) {  
@@ -62,12 +58,17 @@ async function runDailyBuildTest() {
     } catch (error) {  
       console.log('⚠️  Linting failed but continuing...');
       }
+<<<<<<< HEAD
 ;
 } catch (error) {;
       console.log('⚠️  Linting failed but continuing...');
     }
 ;
     // Run type checking;
+=======
+
+<<<<<<< HEAD    // Run type checking;
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     console.log('🔍 Running type checking...');
     try {;
       execSync('npm run type-check', { stdio: 'inherit' });
@@ -88,12 +89,17 @@ async function runDailyBuildTest() {
     } catch (error) {  
       console.log('⚠️  Tests failed but continuing...');
       }
+<<<<<<< HEAD
 ;
 } catch (error) {;
       console.log('⚠️  Tests failed but continuing...');
     }
 ;
     // Build project;
+=======
+
+<<<<<<< HEAD    // Build project;
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     console.log('🏗️ Building project...');
     try {;
       execSync('npm run build', { stdio: 'inherit' });
@@ -123,8 +129,7 @@ async function runDailyBuildTest() {
 ;
     console.log('✅ Build verification completed');
 
-;
-    // Run performance tests;
+<<<<<<< HEAD    // Run performance tests;
     console.log('📊 Running performance tests...');
     try {;
       execSync('npm run lighthouse', { stdio: 'inherit' });
@@ -144,7 +149,7 @@ async function runDailyBuildTest() {
 
     console.log(`✅ Continuous build and test completed successfully`);
   } catch (error) {  
-    console.error(`❌ Continuous build and test failed:`, error.message);
+    console.error(`❌ Continuous build and test failed: `, error.message);
     // Don`t exit, just log the error and continue;
     }
 }
@@ -219,9 +224,5 @@ process.on('SIGTERM', () => {;
 
 // Start the continuous build and test;
 runContinuous().catch(error => {
-;
-// Start the continuous build and test;
-runContinuous().catch(error => {;
-  console.error('❌ Failed to start continuous build and test:', error);
-  process.exit(1);
+  console.error('❌ Failed to start continuous build and test: ', error);  process.exit(1);
 });

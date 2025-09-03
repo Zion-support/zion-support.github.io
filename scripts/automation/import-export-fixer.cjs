@@ -65,12 +65,7 @@ class ImportExportFixer {;
     this.log(`Starting import/export fixing automation...`);
 
     try {
-;
-  async run() {;
-    this.log('Starting import/export fixing automation...');
-;
-    try {;
-      await this.fixImportExportIssues();
+<<<<<<< HEAD      await this.fixImportExportIssues();
       this.log(;
         `Import/export fixing completed. Applied ${this.fixesApplied} fixes.`;
       );
@@ -99,9 +94,8 @@ class ImportExportFixer {;
       let modified = false;
       let newContent = content;
 
-;
-      // Fix relative imports;
-      const importRegex = /import\s+.*\s+from\s+['"]([^'"]+)['"]/g;
+<<<<<<< HEAD      // Fix relative imports;
+      const importRegex = /import\s+.*\s+from\s+['"]([^']+)[']/g;
       let match;
       ;
       while ((match = importRegex.exec(newContent)) !== null) {;
@@ -142,11 +136,7 @@ class ImportExportFixer {;
             if (!found) {
               // Remove the import if file doesn't exist;
               newContent = newContent.replace(match[0], '');
-            ;
-            if (!found) {;
-              // Remove the import if file doesn't exist;
-              newContent = newContent.replace(match[0], ');
-            }
+<<<<<<< HEAD            }
             ;
             modified = true;
           }
@@ -174,8 +164,7 @@ class ImportExportFixer {;
         }
       }
 
-;
-      // Add named exports for components;
+<<<<<<< HEAD      // Add named exports for components;
       const componentRegex = /(?:export\s+)?(?:function|const)\s+(\w+)(?:\s*[:=]\s*(?:React\.)?(?:FC|FunctionComponent))?/g;
       let componentMatch;
       const components = [];
@@ -221,14 +210,7 @@ class ImportExportFixer {;
       fixes: this.fixes,
       summary: {
         totalFixes: this.fixes.length,
-    ;
-    const report = {;
-      timestamp: new Date().toISOString(),;
-      duration: duration,;
-      fixes: this.fixes,;
-      summary: {;
-        totalFixes: this.fixes.length,;
-        success: true;
+<<<<<<< HEAD        success: true;
       }
     };
 ;
@@ -270,13 +252,7 @@ class ImportExportFixer {;
           content.includes(`export default`) &&
           !content.includes(`export {`)
         ) {
-;
-        // Fix default export issues;
-        if (;
-          content.includes('export default') &&;
-          !content.includes('export {');
-        ) {;
-          const exportMatch = content.match(/export default\s+(\w+)/);
+<<<<<<< HEAD          const exportMatch = content.match(/export default\s+(\w+)/);
           if (exportMatch) {;
             const componentName = exportMatch[1];
             if (!content.includes(`export { ${componentName} }`)) {;
@@ -304,9 +280,7 @@ class ImportExportFixer {;
         }
       } catch (error) {  
         this.log(`Error fixing import/export in ${file  }: ${error.message}`);
-      } catch (error) {;
-        this.log(`Error fixing import/export in ${file}: ${error.message}`);
-      }
+<<<<<<< HEAD      }
     }
   }
 }

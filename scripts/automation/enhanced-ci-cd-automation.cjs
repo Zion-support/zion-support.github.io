@@ -31,13 +31,7 @@ class EnhancedCICDAutomation {;
   async installDependencies() {;
     console.log(`'📦 Installing dependencies...');
     try {;
-    }`);
-  }`);
-`);
-  async installDependencies() {`);
-    console.log(`📦 Installing dependencies...`);
-    try {
-      const startTime = Date.now();
+<<<<<<< HEAD      const startTime = Date.now();
       const output = execSync('npm install', {
         encoding: 'utf8',
         cwd: process.cwd(),
@@ -53,28 +47,9 @@ console.log(✅ Dependencies installed in ${duration}ms``);
       this.ciResults.dependencies.status = `failure`;
       this.ciResults.dependencies.result = {
         error: error.message,
-        output: error.stdout || error.stderr || `Unknown error`};
-      const output = execSync('npm install', {;
-        encoding: 'utf8',;
-        cwd: process.cwd(),;
-        stdio: 'pipe',;
-      });
-      const duration = Date.now() - startTime;
-;
-      this.ciResults.dependencies.status = 'success';
-      this.ciResults.dependencies.result = {;
-        duration: ${duration}ms,;
-        output: 'Dependencies installed successfully',;
-      };
-console.log(✅ Dependencies installed in ${duration}ms``);
-    } catch (error) {;
-      this.ciResults.dependencies.status = 'failure';
-      this.ciResults.dependencies.result = {;
-        error: error.message,;
-        output: error.stdout || error.stderr || 'Unknown error',;
-      };
-      console.log(`'❌ Dependency installation failed:', error.message);
-      throw error;
+        output: error.stdout || error.stderr || `Unknown error`,
+        };
+      console.log(`'❌ Dependency installation failed: ', error.message);      throw error;
     }
   }
 ;
@@ -104,9 +79,9 @@ console.log(✅ Linting completed in ${duration}ms``);
       this.ciResults.linting.result = {
         error: error.message,
         output: error.stdout || error.stderr || `Unknown error`,
-        issues: this.parseLintOutput(error.stdout || error.stderr || '')};
-      console.log(`'❌ Linting failed:', error.message);
-    }
+        issues: this.parseLintOutput(error.stdout || error.stderr || ''),
+        };
+      console.log(`'❌ Linting failed: ', error.message);    }
   }
 
   parseLintOutput(output) {
@@ -161,19 +136,7 @@ console.log(✅ Linting completed in ${duration}ms``);
         warnings: warningMatches.length};
     } catch (error) {  
       return { total: 0, errors: 0, warnings: 0   };
-;
-      // Parse text output;
-      const errorMatches = output.match(/'error/g') || [];
-      const warningMatches = output.match(/'warning/g') || [];
-;
-      return {;
-        total: errorMatches.length + warningMatches.length,;
-        errors: errorMatches.length,;
-        warnings: warningMatches.length,;
-      };
-    } catch (error) {;
-      return { total: 0, errors: 0, warnings: 0 };
-    }
+<<<<<<< HEAD    }
   }
 ;
   async runTypeCheck() {;
@@ -202,29 +165,9 @@ console.log(✅ Type checking completed in ${duration}ms``);
       this.ciResults.typeCheck.result = {
         error: error.message,
         output: error.stdout || error.stderr || `Unknown error`,
-        issues: this.parseTypeCheckOutput(error.stdout || error.stderr || '')};
-      const output = execSync('npm run type-check', {;
-        encoding: 'utf8',;
-        cwd: process.cwd(),;
-        stdio: 'pipe',;
-      });
-      const duration = Date.now() - startTime;
-;
-      this.ciResults.typeCheck.status = 'success';
-      this.ciResults.typeCheck.result = {duration: ${duration}ms,;
-        output: output,;
-        issues: this.parseTypeCheckOutput(output),;
-      };
-console.log(✅ Type checking completed in ${duration}ms``);
-    } catch (error) {;
-      this.ciResults.typeCheck.status = 'failure';
-      this.ciResults.typeCheck.result = {;
-        error: error.message,;
-        output: error.stdout || error.stderr || 'Unknown error',;
-        issues: this.parseTypeCheckOutput(error.stdout || error.stderr || '),;
-      };
-      console.log(`'❌ Type checking failed:', error.message);
-    }
+        issues: this.parseTypeCheckOutput(error.stdout || error.stderr || ''),
+        };
+      console.log(`'❌ Type checking failed: ', error.message);    }
   }
 ;
   parseTypeCheckOutput(output) {;
@@ -270,28 +213,9 @@ console.log(✅ Build completed in ${duration}ms``);
       this.ciResults.build.status = `failure`;
       this.ciResults.build.result = {
         error: error.message,
-        output: error.stdout || error.stderr || `Unknown error`};
-      const output = execSync('npm run build', {;
-        encoding: 'utf8',;
-        cwd: process.cwd(),;
-        stdio: 'pipe',;
-      });
-      const duration = Date.now() - startTime;
-;
-      this.ciResults.build.status = 'success';
-      this.ciResults.build.result = {duration: ${duration}ms,;
-        output: 'Build completed successfully',;
-        buildSize: this.calculateBuildSize(),;
-      };
-console.log(✅ Build completed in ${duration}ms``);
-    } catch (error) {;
-      this.ciResults.build.status = 'failure';
-      this.ciResults.build.result = {;
-        error: error.message,;
-        output: error.stdout || error.stderr || 'Unknown error',;
-      };
-      console.log(`'❌ Build failed:', error.message);
-      throw error;
+        output: error.stdout || error.stderr || `Unknown error`,
+        };
+      console.log(`'❌ Build failed: ', error.message);      throw error;
     }
   }
 ;
@@ -338,24 +262,8 @@ return ${size.toFixed(2)} ${units[unitIndex]};
   async runTests() {;
     console.log(`'🧪 Running tests...');
     try {;
-
-      while (size >= 1024 && unitIndex < units.length - 1) {
-        size /= 1024;`);
-        unitIndex++;`);
-      }`);
-return ${size.toFixed(2)} ${units[unitIndex]};`);
-    } catch (error`) {
-      return `Unknown`;
-    }
-  }
-
-  async runTests() {
-    console.log(``🧪 Running tests...`);
-    console.log(`🧪 Running tests...`);
     try {
       const startTime = Date.now();
-
-;
       // Check if tests are available;
       const packagePath = path.join(process.cwd(), 'package.json');
       const packageData = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
@@ -384,12 +292,7 @@ return ${size.toFixed(2)} ${units[unitIndex]};`);
         encoding: 'utf8',
         cwd: process.cwd(),
         stdio: `pipe`,
-;
-      const output = execSync(testCommand, {;
-        encoding: 'utf8',;
-        cwd: process.cwd(),;
-        stdio: 'pipe',;
-      });
+<<<<<<< HEAD      });
 ;
       const duration = Date.now() - startTime;
       testOutput = output;
@@ -403,9 +306,9 @@ console.log(✅ Tests completed in ${duration}ms``);
       this.ciResults.testing.status = `failure`;
       this.ciResults.testing.result = {
         error: error.message,
-        output: error.stdout || error.stderr || `Unknown error`};
-      console.log(`'❌ Tests failed:', error.message);
-    }
+        output: error.stdout || error.stderr || `Unknown error`,
+        };
+      console.log(`'❌ Tests failed: ', error.message);    }
   }
 
   parseTestOutput(output) {
@@ -471,9 +374,7 @@ console.log(✅ Tests completed in ${duration}ms``);
       };
     } catch (error) {  
       return { passed: 0, failed: 0, skipped: 0, total: 0   };
-    } catch (error) {;
-      return { passed: 0, failed: 0, skipped: 0, total: 0 };
-    }
+<<<<<<< HEAD    }
   }
 ;
   async runQualityChecks() {;
@@ -496,8 +397,8 @@ console.log(✅ Tests completed in ${duration}ms``);
         lintingPassed: this.ciResults.linting.status === 'success',
         typeCheckPassed: this.ciResults.typeCheck.status === 'success',
         testsPassed: this.ciResults.testing.status === 'success',
-        dependenciesInstalled: this.ciResults.dependencies.status === 'success'};
-;
+        dependenciesInstalled: this.ciResults.dependencies.status === 'success',
+      };;
       const totalChecks = Object.keys(qualityResults).length;
       const passedChecks = Object.values(qualityResults).filter(Boolean).length;
       const qualityScore = ((passedChecks / totalChecks) * 100).toFixed(2);
@@ -516,9 +417,9 @@ console.log(`✅ Quality checks completed. Score: ${qualityScore}%);
         error: error.message,
         score: 0,
         passed: 0,
-        total: 0};
-      console.log(`❌ Quality checks failed:`, error.message);
-    }
+        total: 0,
+        };
+      console.log(`❌ Quality checks failed: `, error.message);    }
   }
 
   async generateCIReport() {
@@ -581,35 +482,7 @@ console.log(`✅ Quality checks completed. Score: ${qualityScore}%);
     const markdownReport = this.generateMarkdownReport(report);
     fs.writeFileSync(
       path.join(this.reportDir, 'CI_CD_REPORT.md'),
-    const report = {;
-      timestamp: new Date().toISOString(),duration: ${totalDuration}ms,;
-      summary: {;
-        total: Object.keys(this.ciResults).length,;
-        passed: Object.values(this.ciResults).filter(;
-          r => r.status === 'success';
-        ).length,;
-        failed: Object.values(this.ciResults).filter(;
-          r => r.status === 'failure';
-        ).length,;
-        skipped: Object.values(this.ciResults).filter(;
-          r => r.status === 'skipped';
-        ).length,;
-      },;
-      results: this.ciResults,;
-      quality: this.ciResults.quality.result,;
-    };
-;
-    // Save JSON report;
-    fs.writeFileSync(;
-      path.join(this.reportDir, 'ci-cd-report.json'),;
-      JSON.stringify(report, null, 2);
-    );
-;
-    // Generate markdown report;
-    const markdownReport = this.generateMarkdownReport(report);
-    fs.writeFileSync(;
-      path.join(this.reportDir, 'CI_CD_REPORT.md'),;
-      markdownReport;
+<<<<<<< HEAD      markdownReport;
     );
 ;
     console.log(`'📋 'CI/CD' report generated successfully');
@@ -678,6 +551,7 @@ ${
 ### Ready for:
 1. Code review approval;
 2. Merge to main branch3. Production deployment`
+<<<<<<< HEAD
 
 ### 📦 Dependencies;
 - **Status**: ${this.ciResults.dependencies.status === 'success' ? '✅ Success' : '❌ Failed'}
@@ -700,6 +574,9 @@ ${`);
   this.ciResults.linting.result?.issues? `- **Issues**: ${this.ciResults.linting.result.issues.total} (${this.ciResults.linting.result.issues.errors} errors, ${this.ciResults.linting.result.issues.warnings} warnings``)`
     : '';
 }
+=======
+<<<<<<< HEAD}
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 ;
 ### 🔍 Type Checking;
 - **Status**: ${this.ciResults.typeCheck.status === 'success' ? '✅ Success' : '❌ Failed'}
@@ -765,28 +642,7 @@ ${;
 ## 🔄 Next Steps;
 
 ## 🔄 Next Steps;
-1. **Review Results**: Carefully review all check results;
-2. **Address Issues**: Fix any failed checks;
-3. **Re-run Pipeline**: Execute pipeline again after fixes;
-4. **Deploy**: Proceed with deployment if all checks pass;
----
-*Report generated by Enhanced ``CI/CD`' Automation*;
-  }
-
-  async runPipeline() {
-    console.log(`'🚀 Starting ''CI/CD'` pipeline...`);
-
-    try {
-
----;
-*Report generated by Enhanced 'CI/CD' Automation*;
-  }
-;
-  async runPipeline() {;
-    console.log(`'🚀 Starting 'CI/CD' pipeline...');
-;
-    try {;
-      await this.installDependencies();
+<<<<<<< HEAD      await this.installDependencies();
       await this.runLinting();
       await this.runTypeCheck();
       await this.runBuild();
@@ -820,10 +676,15 @@ ${;
       }
 ;
       return report;
+<<<<<<< HEAD
     } catch (error) {  ;
 } catch (error) {;
       console.error('❌ Pipeline failed:', error);
       process.exit(1);
+=======
+    } catch (error) {  
+      console.error('❌ Pipeline failed: ', error);      process.exit(1);
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       }
   }
 }
@@ -838,10 +699,7 @@ async function main() {;
   try {;
     await ci.runPipeline();
   } catch (error) {  
-    console.error('❌ ''CI/CD'' automation failed:', error);
-  } catch (error) {;
-    console.error('❌ 'CI/CD' automation failed:', error);
-    process.exit(1);
+    console.error('❌ ''CI/CD'' automation failed: ', error);    process.exit(1);
     }
 }
 

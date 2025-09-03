@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "timestamp": "2025-09-02T22:04:25.517Z",
   "fileStructure": {
     "directories": {
@@ -39,3 +40,34 @@
     "issues": [];
 }
 }
+=======
+  "timestamp: 2025-09-02T22: 04:25.517Z",
+  "fileStructure: {
+    directories": {
+      "src: true,
+      public": true,
+      "pages: true
+    },
+    files": {
+      "package.json: true,
+      next.config.js": true,
+      "tsconfig.json: true
+    },
+    issues": []
+  },
+  "configuration: {
+    packageJson": {
+      "valid: true,
+      issues": []
+    },
+    "nextConfig: {
+      valid": true,
+      "issues: []
+    },
+    tsConfig": {
+      "valid: true,
+      issues": []
+    }
+  ]
+}
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

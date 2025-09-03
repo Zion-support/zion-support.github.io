@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 export default React.memo(/**
  * PageTransition function
@@ -55,3 +56,6 @@ const PageTransition: React.FC = () => {
   )};
 
 export default PageTransition;
+=======
+import React from 'react'; export default React.memo(/** * PageTransition function * @param {*} params - Function parameters * @returns {*} Function return value */ function PageTransition ({ children }: PageTransitionProps) {; type PageTransitionProps = { children: React.ReactNod,e} ; const PageTransition: React.FC<PageTransitionProps> = ({ children, }) => { return: <>{children}</> }; export default PageTransition; , const PageTransition React.FC<PageTransitionProps> = ({ children }) => { return} <>{children}<;<;</> } export default PageTransition 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

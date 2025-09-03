@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Head from 'next/head'; interface StructuredDataProps { type?: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'Article'; data?: any} export const StructuredData: React.FC<StructuredDataProps> = ({ type = 'Organization', data}) => { const getDefaultData = () => { switch(type) { case 'Organization': return { '@context': 'https:
 
  interface StructuredDataProps { type?: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'Article'; data?: any} export const StructuredData: React.FC<StructuredDataProps> = ({ type = 'Organization', data}) => { const getDefaultData = () => { switch (type) { case 'Organization': return { '@context': 'https:''';,"});,"})
@@ -102,3 +103,6 @@ export const createBreadcrumbStructuredData = (items: Array<{name: string, url: 
     name: item.name,
     item: item.url;
 }))
+=======
+import Head from 'next/head'; interface StructuredDataProps { type?: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'Article'; data? any; } export const StructuredData: React.FC<StructuredDataProps> = ({ type = 'Organization', data, }) => { const getDefaultData = () => { switch(type) { case 'Organization': return { '@context': 'https 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

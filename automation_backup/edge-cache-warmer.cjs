@@ -48,11 +48,11 @@ async function warmCache() {
   if (!urls.length) return { ok: false, reason: 'no_sitemap' };
 
   const preferred = [
-    'https://zion.app/',
-    'https://zion.app/automation',
-    'https://zion.app/main/front',
-    'https://zion.app/newsroom'];
-
+    'https: //zion.app/',
+    'https: //zion.app/automation',
+    'https: //zion.app/main/front',
+    'https: //zion.app/newsroom',
+  ];
   const unique = Array.from(new Set([...preferred, ...urls])).slice(0, 40);
   const results = [];
 

@@ -24,15 +24,7 @@ class IntelligentPerformanceMonitor {;
     this.performanceHistory = path.join(;
       this.projectRoot,logs',;
       'performance-history.json';
-    this.logFile = path.join(
-      this.projectRoot, 'logs',
-      'performance-monitor.log'
-    );
-    this.performanceHistory = path.join(
-      this.projectRoot, 'logs',
-      'performance-history.json'
-    );
-    this.metrics = {
+    );    this.metrics = {
       buildTime: 0,
       bundleSize: 0,
       loadTime: 0,
@@ -56,21 +48,14 @@ class IntelligentPerformanceMonitor {;
       memoryUsage: 512 * 1024 * 1024, // 512MB;
       cpuUsage: 80, // 80%
       errorRate: 5 // 5%
-      cpuUsage: 80, // 80%;
-      errorRate: 5 // 5%;
-    };
+<<<<<<< HEAD    };
   }
 ;
   async initialize() {;
     console.log(`'📊 Intelligent Performance Monitor Initialized');
-
-  async initialize() {
-    console.log(`📊 Intelligent Performance Monitor Initialized`);
     this.ensureLogDirectory();
     this.loadPerformanceHistory();
-    
-    ;
-    // Start continuous monitoring;
+        // Start continuous monitoring;
     this.startContinuousMonitoring();
   }
 ;
@@ -98,7 +83,7 @@ class IntelligentPerformanceMonitor {;
         };
       }
     } catch (error) {  
-      console.error('Error loading performance history:', error);
+      console.error('Error loading performance history: ', error);
       this.history = {
         totalMeasurements: 0,
         averageBuildTime: 0,
@@ -126,24 +111,7 @@ class IntelligentPerformanceMonitor {;
     console.log(`'🔍 Starting continuous performance monitoring...');
     ;
     // Initial performance measurement;
-
-  startContinuousMonitoring() {
-    console.log(``🔍 Starting continuous performance monitoring...`);
-    
-    // Initial performance measurement;
-    this.measurePerformance();
-    
-    // Set up periodic monitoring;
-    setInterval(() => {
-      this.measurePerformance();
-    }, 5 * 60 * 1000); // Every 5 minutes;
-    // Set up build monitoring;
-    this.monitorBuilds();
-    
-    console.log(`🔍 Starting continuous performance monitoring...`);
-    
-    // Initial performance measurement
-    this.measurePerformance();
+<<<<<<< HEAD    this.measurePerformance();
     ;
     // Set up periodic monitoring;
     setInterval(() => {;
@@ -193,30 +161,19 @@ class IntelligentPerformanceMonitor {;
       // Update history and metrics;
       this.updatePerformanceHistory(measurement);
       
-;
-    try {;
-      // Measure build performance;
-      await this.measureBuildPerformance(measurement);
-      ;
-      // Measure bundle size;
-      await this.measureBundleSize(measurement);
-      ;
-      // Measure runtime performance;
-      await this.measureRuntimePerformance(measurement);
-      ;
-      // Analyze performance and generate recommendations;
-      await this.analyzePerformance(measurement);
-      ;
-      // Update history and metrics;
-      this.updatePerformanceHistory(measurement);
-      ;
-      // Log results;
+<<<<<<< HEAD      // Log results;
       this.logPerformanceResults(measurement);
       ;
       console.log(✅ Performance measurement completed in ${Date.now() - startTime}ms);
+<<<<<<< HEAD
       ;
 } catch (error) {  
       console.error(`❌ Error during performance measurement:`, error);
+=======
+      
+    } catch (error) {  
+      console.error(`❌ Error during performance measurement: `, error);
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       this.logError(`Performance measurement failed`, error);
       }
       ;
@@ -232,8 +189,7 @@ class IntelligentPerformanceMonitor {;
     try {;
       const buildStart = Date.now();
       
-      ;
-      // Run a test build;
+<<<<<<< HEAD      // Run a test build;
       const buildResult = await this.runTestBuild();
       ;
       measurement.buildTime = Date.now() - buildStart;
@@ -248,6 +204,7 @@ class IntelligentPerformanceMonitor {;
           suggestion: `Consider optimizing build configuration, using build caching, or parallel builds`;
 }`);
       }
+<<<<<<< HEAD
       ;
 } catch (error) {  
       console.error(`Error measuring build performance:`, error);
@@ -264,6 +221,11 @@ class IntelligentPerformanceMonitor {;
     } catch (error) {;
       console.error('Error measuring build performance:', error);
       measurement.buildTime = -1;
+=======
+      
+    } catch (error) {  
+      console.error(`Error measuring build performance: `, error);      measurement.buildTime = -1;
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       measurement.buildSuccess = false;
       }
   }
@@ -307,16 +269,7 @@ class IntelligentPerformanceMonitor {;
         execSync('npm run build', { 
           cwd: this.projectRoot,
           stdio: 'pipe',
-      ;
-      // Check if it's a Vite project;
-      if (fs.existsSync('vite.config.js') || fs.existsSync('vite.config.ts')) {;
-        const buildStart = Date.now();
-        ;
-        // Run Vite build;
-        execSync('npm run build', { ;
-          cwd: this.projectRoot,;
-          stdio: 'pipe',;
-          timeout: 120000;
+<<<<<<< HEAD          timeout: 120000;
         });
         ;
         return {;
@@ -361,14 +314,7 @@ class IntelligentPerformanceMonitor {;
     ;
     try {;
       // Check for build output directory;
-
-  async measureBundleSize(measurement) {
-    console.log(`📦 Measuring bundle size...`);
-    
-    try {
-      // Check for build output directory;
-      // Check for build output directory
-      const buildDirs = ['dist', 'build', '.next', 'out'];
+<<<<<<< HEAD      const buildDirs = ['dist', 'build', '.next', 'out'];
       let totalSize = 0;
       ;
       for (const dir of buildDirs) {;
@@ -388,6 +334,7 @@ class IntelligentPerformanceMonitor {;
           suggestion: `Consider code splitting, tree shaking, or removing unused dependencies`;
 }`);
       }
+<<<<<<< HEAD
       ;
 } catch (error) {  
       console.error(`Error measuring bundle size:`, error);
@@ -404,6 +351,11 @@ class IntelligentPerformanceMonitor {;
     } catch (error) {;
       console.error('Error measuring bundle size:', error);
       measurement.bundleSize = -1;
+=======
+      
+    } catch (error) {  
+      console.error(`Error measuring bundle size: `, error);      measurement.bundleSize = -1;
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       }
   }
 ;
@@ -435,11 +387,7 @@ class IntelligentPerformanceMonitor {;
   formatBytes(bytes) {
     if (bytes === 0) return `0 Bytes`;
     
-;
-  formatBytes(bytes) {;
-    if (bytes === 0) return '0 Bytes';
-    ;
-    const k = 1024;
+<<<<<<< HEAD    const k = 1024;
     const sizes = ['Bytes', 'KB', 'MB', 'GB'];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
     ;
@@ -480,6 +428,7 @@ class IntelligentPerformanceMonitor {;
           suggestion: `Optimize algorithms, implement caching, or use worker threads for heavy operations`;
 });
       }
+<<<<<<< HEAD
       ;
 } catch (error) {  
       console.error(`Error measuring runtime performance:`, error);
@@ -505,6 +454,11 @@ class IntelligentPerformanceMonitor {;
     } catch (error) {;
       console.error('Error measuring runtime performance:', error);
       measurement.memoryUsage = -1;
+=======
+      
+    } catch (error) {  
+      console.error(`Error measuring runtime performance: `, error);      measurement.memoryUsage = -1;
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       measurement.cpuUsage = -1;
       }
   }
@@ -522,6 +476,7 @@ class IntelligentPerformanceMonitor {;
       const cpuUsage = process.cpuUsage();
       const cpu = Math.round((cpuUsage.user + cpuUsage.system) / 1000000); // Convert to percentage approximation;
       return { memory, cpu };
+<<<<<<< HEAD
       ;
 } catch (error) {  
       ;
@@ -530,6 +485,11 @@ class IntelligentPerformanceMonitor {;
     } catch (error) {;
       console.error('Error getting system metrics:', error);
       return { memory: 0, cpu: 0   };
+=======
+      
+    } catch (error) {  
+      console.error('Error getting system metrics: ', error);      return { memory: 0, cpu: 0   };
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     }
   }
 ;
@@ -587,38 +547,7 @@ class IntelligentPerformanceMonitor {;
             severity: 'info',
             message: 'Bundle size is trending upward',
             suggestion: 'Review recent dependencies and code changes for size impact'
-      ;
-      // Calculate trend for build time;
-      if (recentTrends.length > 1) {;
-        const buildTimeTrend = this.calculateTrend(;
-          recentTrends.map(t => t.buildTime),;
-          measurement.buildTime;
-        );
-        ;
-        if (buildTimeTrend > 0.1) { // 10% increase;
-          measurement.recommendations.push({;
-            type: 'trend',;
-            severity: 'info',;
-            message: 'Build time is trending upward',;
-            suggestion: 'Investigate recent changes that may be affecting build performance';
-          });
-        }
-      }
-      ;
-      // Calculate trend for bundle size;
-      if (recentTrends.length > 1) {;
-        const bundleSizeTrend = this.calculateTrend(;
-          recentTrends.map(t => t.bundleSize),;
-          measurement.bundleSize;
-        );
-        ;
-        if (bundleSizeTrend > 0.1) { // 10% increase;
-          measurement.recommendations.push({;
-            type: 'trend',;
-            severity: 'info',;
-            message: 'Bundle size is trending upward',;
-            suggestion: 'Review recent dependencies and code changes for size impact';
-          });
+<<<<<<< HEAD          });
         }
       }
     }
@@ -687,15 +616,7 @@ class IntelligentPerformanceMonitor {;
         priority: 'high',
         suggestion: 'Implement build caching using tools like Turborepo or Nx',
         expectedImpact: '20-40% reduction in build time'
-    ;
-    // Build optimizations;
-    if (measurement.buildTime > this.thresholds.buildTime) {;
-      optimizations.push({;
-        category: 'build',;
-        priority: 'high',;
-        suggestion: 'Implement build caching using tools like Turborepo or Nx',;
-        expectedImpact: '20-40% reduction in build time';
-      });
+<<<<<<< HEAD      });
       ;
       optimizations.push({;
         category: 'build',;
@@ -737,15 +658,7 @@ class IntelligentPerformanceMonitor {;
         priority: 'high',
         suggestion: 'Implement memory pooling and object reuse',
         expectedImpact: '25-40% reduction in memory usage'
-    ;
-    // Runtime optimizations;
-    if (measurement.memoryUsage > this.thresholds.memoryUsage) {;
-      optimizations.push({;
-        category: 'runtime',;
-        priority: 'high',;
-        suggestion: 'Implement memory pooling and object reuse',;
-        expectedImpact: '25-40% reduction in memory usage';
-      });
+<<<<<<< HEAD      });
     }
     ;
     measurement.optimizations = optimizations;
@@ -788,46 +701,7 @@ class IntelligentPerformanceMonitor {;
     try {
       fs.writeFileSync(this.performanceHistory, JSON.stringify(this.history, null, 2));
     } catch (error) {  
-;
-  updatePerformanceHistory(measurement) {;
-    // Add to trends;
-    this.history.performanceTrends.push({;
-      timestamp: measurement.timestamp,;
-      buildTime: measurement.buildTime,;
-      bundleSize: measurement.bundleSize,;
-      loadTime: measurement.loadTime,;
-      memoryUsage: measurement.memoryUsage,;
-      cpuUsage: measurement.cpuUsage;
-    });
-    ;
-    // Keep only last 100 measurements;
-    if (this.history.performanceTrends.length > 100) {;
-      this.history.performanceTrends = this.history.performanceTrends.slice(-100);
-    }
-    ;
-    // Update averages;
-    this.history.totalMeasurements++;
-    this.history.averageBuildTime = this.calculateRunningAverage(;
-      this.history.averageBuildTime,;
-      measurement.buildTime,;
-      this.history.totalMeasurements;
-    );
-    this.history.averageBundleSize = this.calculateRunningAverage(;
-      this.history.averageBundleSize,;
-      measurement.bundleSize,;
-      this.history.totalMeasurements;
-    );
-    ;
-    // Add bottlenecks and optimizations;
-    this.history.bottlenecks.push(...measurement.bottlenecks);
-    this.history.optimizations.push(...measurement.optimizations);
-    ;
-    // Save updated history;
-    try {;
-      fs.writeFileSync(this.performanceHistory, JSON.stringify(this.history, null, 2));
-    } catch (error) {;
-      console.error('Error saving performance history:', error);
-      }
+      console.error('Error saving performance history: ', error);      }
   }
 ;
   calculateRunningAverage(currentAverage, newValue, count) {;
@@ -864,10 +738,15 @@ class IntelligentPerformanceMonitor {;
     ;
     try {;
       fs.appendFileSync(this.logFile, JSON.stringify(logEntry) + '\n');
+<<<<<<< HEAD
     } catch (error) {  ;
 } catch (error) {;
       console.error('Error logging performance results:', error);
       }
+=======
+    } catch (error) {  
+      console.error('Error logging performance results: ', error);      }
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   }
 
   logError(message, error) {
@@ -886,10 +765,15 @@ class IntelligentPerformanceMonitor {;
     ;
     try {;
       fs.appendFileSync(this.logFile, JSON.stringify(errorEntry) + '\n');
+<<<<<<< HEAD
     } catch (error) {  ;
 } catch (error) {;
       console.error('Error logging error:', error);
       }
+=======
+    } catch (error) {  
+      console.error('Error logging error: ', error);      }
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   }
 ;
   monitorBuilds() {;
@@ -927,20 +811,7 @@ class IntelligentPerformanceMonitor {;
     
     // Monitor unhandled rejections;
     process.on('unhandledRejection', (reason, promise) => {
-    ;
-    // Monitor process events;
-    process.on('exit', () => {;
-      this.onProcessExit();
-    });
-    ;
-    // Monitor uncaught exceptions;
-    process.on('uncaughtException', (error) => {;
-      this.onUncaughtException(error);
-    });
-    ;
-    // Monitor unhandled rejections;
-    process.on('unhandledRejection', (reason, promise) => {;
-      this.onUnhandledRejection(reason, promise);
+<<<<<<< HEAD      this.onUnhandledRejection(reason, promise);
     });
   }
 ;
@@ -950,12 +821,12 @@ class IntelligentPerformanceMonitor {;
   }
 ;
   onUncaughtException(error) {;
-    console.error('💥 Uncaught exception:', error);
+    console.error('💥 Uncaught exception: ', error);
     this.logError('Uncaught exception', error);
   }
 ;
   onUnhandledRejection(reason, promise) {;
-    console.error('💥 Unhandled rejection:', reason);
+    console.error('💥 Unhandled rejection: ', reason);
     this.logError('Unhandled rejection', { reason, promise });
   }
 }

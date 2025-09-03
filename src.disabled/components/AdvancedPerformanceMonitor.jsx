@@ -1,4 +1,1 @@
-
-const: mockSystemMetrics = [ {
-const mockSystemMetrics = [
-  {
+ const mockSystemMetrics = [ { 

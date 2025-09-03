@@ -24,28 +24,11 @@ async function detectAllErrors() {;
       const tsResult = execSync('npx tsc --noEmit', {;
         encoding: 'utf8',;
         stdio: 'pipe',;
-
-console.log(`🔍 Starting enhanced error detector...`);
-
-async function detectAllErrors() {
-  const errors = {
-    typescript: [],
-    linting: [],
-    build: [],
-    dependencies: [],
-    syntax: [],
-    timestamp: new Date().toISOString()};
-
-  try {
-    // 1. Detect TypeScript errors;
-    console.log(`'🔍 Detecting TypeScript errors...');
-    // 1. Detect TypeScript errors
-    console.log(`🔍 Detecting TypeScript errors...`);
     try {
       const tsResult = execSync('npx tsc --noEmit', {
         encoding: 'utf8',
-        stdio: 'pipe'});
-    } catch (error) {  
+        stdio: 'pipe',
+      });    } catch (error) {  
       const tsOutput = error.stdout || error.stderr || '';
       errors.typescript = parseTypeScriptErrors(tsOutput);
       }
@@ -66,6 +49,7 @@ async function detectAllErrors() {
       const lintOutput = error.stdout || error.stderr || '';
       errors.linting = parseLintingErrors(lintOutput);
       }
+<<<<<<< HEAD
 ;
 } catch (error) {;
       const lintOutput = error.stdout || error.stderr || ';
@@ -73,6 +57,10 @@ async function detectAllErrors() {
     }
 ;
     // 3. Detect build errors;
+=======
+
+<<<<<<< HEAD    // 3. Detect build errors;
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     console.log('🔍 Detecting build errors...');
     try {;
       const buildResult = execSync('npm run build', {;
@@ -108,26 +96,13 @@ async function detectAllErrors() {
 
     // Save error report;
     const reportPath = path.join(process.cwd(), `error-detection-report.json`);
-    } catch (error) {;
-      console.log('⚠️  Could not run npm audit');
-    }
-;
-    // 5. Detect syntax errors in source files;
-    console.log('🔍 Detecting syntax errors...');
-    errors.syntax = await detectSyntaxErrors();
-;
-    // Save error report;
-    const reportPath = path.join(process.cwd(), 'error-detection-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(errors, null, 2));
+<<<<<<< HEAD    fs.writeFileSync(reportPath, JSON.stringify(errors, null, 2));
 ;
     console.log(✅ Error detection completed. Found:);console.log(   - ${errors.typescript.length} TypeScript errors``);console.log(`   - ${errors.linting.length} linting errors`);console.log(`   - ${errors.build.length} build errors`);console.log(`   - ${errors.dependencies.length} dependency issues`);console.log(`   - ${errors.syntax.length} syntax errors`);console.log(`📊 Report saved to: ${reportPath}`);
 ;
     return errors;
   } catch (error) {  
-    console.error(`❌ Error detection failed:`, error.message);
-  } catch (error) {;
-    console.error('❌ Error detection failed:', error.message);
-    return errors;
+    console.error(`❌ Error detection failed: `, error.message);    return errors;
     }
 }
 ;
@@ -217,17 +192,7 @@ function parseDependencyIssues(auditData) {;
         severity: vuln.severity,
         title: vuln.title,
         type: 'dependency',
-;
-  if (auditData.vulnerabilities) {;
-    for (const ['packageName', 'vuln'] of Object.entries(;
-      auditData.vulnerabilities;
-    )) {;
-      issues.push({;
-        package: packageName,;
-        severity: vuln.severity,;
-        title: vuln.title,;
-        type: 'dependency',;
-      });
+<<<<<<< HEAD      });
     }
   }
 ;
@@ -288,9 +253,7 @@ function getAllFiles(dir) {;
     const items = fs.readdirSync(currentDir);
     for (const item of items) {
       const fullPath = path.join(currentDir, `item);
-    for (const item of items) {;
-      const fullPath = path.join(currentDir, 'item);
-      const stat = fs.statSync(fullPath);
+<<<<<<< HEAD      const stat = fs.statSync(fullPath);
 ;
       if (stat.isDirectory()) {;
         traverse(fullPath);
@@ -318,8 +281,7 @@ function checkSyntaxErrors(content', filePath) {;
     const line = lines[i];
     const lineNumber = i + 1;
 
-;
-    // Check for unmatched brackets;
+<<<<<<< HEAD    // Check for unmatched brackets;
     const openBrackets = (line.match(/\{/g) || []).length;
     const closeBrackets = (line.match(/\}/g) || []).length;
     const openParens = (line.match(/\(/g) || []).length;
@@ -384,15 +346,10 @@ function checkSyntaxErrors(content', filePath) {;
 if (require.main === module) {
   detectAllErrors()
     .then(errors => {
-;
-// Run the error detection;
-if (require.main === module) {;
-  detectAllErrors();
-    .then(errors => {;
-      process.exit(0);
+<<<<<<< HEAD      process.exit(0);
     });
     .catch(error => {;
-      console.error('❌ Error detection failed:', error);
+      console.error('❌ Error detection failed: ', error);
       process.exit(1);
     });
 }

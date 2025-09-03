@@ -14,7 +14,7 @@ try {;
 const manifest = { functions: [], generatedAt: new Date().toISOString() };
 try {;
   fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
-  console.log('[netlify:manifest] wrote', manifestPath);
+  console.log('[netlify: manifest] wrote', manifestPath);
 } catch (e) {;
   console.log('[netlify:manifest] skipped (write failed)');
 }

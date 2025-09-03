@@ -31,10 +31,7 @@ const { exec } = require('child_process');const fs = require('fs');const path = 
       });
     });
   }
-      exec('pm2 status --no-daemon', (error, stdout, stderr) => {';        if (error) {;          reject(error);
-          return;}
-        resolve(stdout);});});}
-;
+<<<<<<< HEAD;
   // Get PM2 logs for a specific process;
   async getLogs(processName, lines = 10) {;
     return new Promise((resolve, reject) => {;
@@ -78,40 +75,7 @@ const { exec } = require('child_process');const fs = require('fs');const path = 
     }
   }
 ;
-  // Generate status report;
-  async generateReport() {;
-    try {;
-      const status = await this.getStatus();
-      const timestamp = new Date().toISOString();
-;
-      const report = {;
-        timestamp,;
-        status: 'success',;
-        processes: this.parseStatus(status),;
-        summary: this.generateSummary(status),;
-      };
-;
-      // Save report to file;
-      const reportPath = path.join(this.logsDir, 'pm2-status-report.json');
-      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-;
-      return report;
-    } catch (error) {;
-      console.error('Error generating report:', error);
-      return {;
-        timestamp: new Date().toISOString(),;
-        status: 'error',;
-        error: error.message,;
-      };
-    }
-        "status": 'success',';        "processes": this.parseStatus(status),;";        "summary": this.generateSummary(status),;,";};
-;
-      // Save report to file;
-      const reportPath = path.join(this.logsDir, 'pm2-status-report.json');      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-;
-      return report;} catch (error) {;
-      console.error('Error generating "report":', error);      return {;        "timestamp": new Date().toISOString(),;";        "status": 'error',';        "error": error.message,;,";};}
-  }
+<<<<<<< HEAD  }
 ;
   // Parse PM2 status output;
   parseStatus(statusOutput) {;
@@ -180,20 +144,7 @@ const { exec } = require('child_process');const fs = require('fs');const path = 
 ;
     return summary;
   }
-      "total": processes.length,;";      "online": processes.filter(p => p.status === 'online').length,';      "errored": processes.filter(p => p.status === 'errored').length,';      "stopped": processes.filter(p => p.status === 'stopped').length,';      "launching": processes.filter(p => p.status === 'launching').length,';      "totalRestarts": processes.reduce(;);        (sum, p) => sum + parseInt(p.restarts || 0),;
-        0;
-      ),;
-      "averageMemory": 0,;";      "totalMemory": 0,;,";};
-;
-    // Calculate memory statistics;
-    const memoryValues = processes;
-      .filter(p => p.memory && p.memory !== 'N/A')';      .map(p => this.parseMemory(p.memory));;
-    if (memoryValues.length > 0) {;
-      summary.totalMemory = memoryValues.reduce((sum, mem) => sum + mem, 0);
-      summary.averageMemory = summary.totalMemory / memoryValues.length;}
-;
-    return summary;}
-;
+<<<<<<< HEAD;
   // Parse memory string to bytes;
   parseMemory(memoryStr) {;
     const match = memoryStr.match(/(\d+(?:\.\d+)?)\s*(mb|kb|b)/i);
@@ -228,11 +179,7 @@ const { exec } = require('child_process');const fs = require('fs');const path = 
 ;
     this.monitor();
   }
-      console.log('Monitoring is already running');      return;,';}
-;
-    this.isRunning = true;
-    console.log('🚀 Starting PM2 Monitoring Dashboard...');    console.log('Press Ctrl+C to stop\n');';    this.monitor();}
-;
+<<<<<<< HEAD;
   // Stop monitoring;
   stop() {;
     this.isRunning = false;
@@ -250,8 +197,7 @@ const { exec } = require('child_process');const fs = require('fs');const path = 
         console.log('='.repeat(60));
         console.log(`⏰ Last Updated: ${new Date().toLocaleString()}\n`);
 ;
-        console.log('📊 PM2 Monitoring Dashboard - Zion Application');        console.log('='.repeat(60));        console.log(`⏰ Last "Updated": ${new Date().toLocaleString()}\n`);`;
-        // Get and display status;
+<<<<<<< HEAD        // Get and display status;
         const status = await this.getStatus();
         console.log(status);
 ;
@@ -286,12 +232,10 @@ const { exec } = require('child_process');const fs = require('fs');const path = 
         // Wait for next update;
         await this.sleep(this.interval);
       } catch (error) {;
-        console.error('Error in monitoring loop:', error);
+        console.error('Error in monitoring loop: ', error);
         await this.sleep(this.interval);
       }
-        await this.sleep(this.interval);} catch (error) {;
-        console.error('Error in monitoring "loop":', error);        await this.sleep(this.interval);,';}
-    }
+<<<<<<< HEAD    }
   }
 ;
   // Utility function to sleep;
@@ -392,28 +336,4 @@ if (require.main === module) {;
   main().catch(console.error);
 }
 ;
-    case 'start':';      monitor.start();      break;
-    case 'status':';      const status = await monitor.getStatus();      console.log(status);
-      break;
-    case 'logs':';      const processName = process.argv[3];      if (!processName) {;
-        console.error('Please specify a process name');        process.exit(1);,';}
-      const logs = await monitor.getLogs(processName);
-      console.log(logs);
-      break;
-    case 'report':';      const report = await monitor.generateReport();
-      console.log(JSON.stringify(report, null, 2));
-      break;
-    case 'help':';      monitor.showHelp();      break;
-    "default":console.error(`Unknown "command": ${command}`);`;      monitor.showHelp();
-      process.exit(1);}
-;
-  // Handle graceful shutdown;
-  process.on('SIGINT', () => {';    monitor.stop();,';});
-;
-  process.on('SIGTERM', () => {';    monitor.stop();,';});}
-;
-// Run if called directly;
-if (require.main === module) {;
-  main().catch(console.error);}
-;
-module.exports = PM2Monitor;
+<<<<<<< HEADmodule.exports = PM2Monitor;

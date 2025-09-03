@@ -10,20 +10,6 @@ console.log(`'📚 Starting Smart Documentation Generator...');
 // Get automation interval from environment variable (default: 24 hours);
 const AUTOMATION_INTERVAL =;
   parseInt(process.env.AUTOMATION_INTERVAL) || 86400000; // 24 hours;
-
-// Get automation interval from environment variable (default: 24 hours)
-const AUTOMATION_INTERVAL =
-  parseInt(process.env.AUTOMATION_INTERVAL) || 86400000; // 24 hours;
-class SmartDocumentationGenerator {
-  constructor() {
-    this.documentationMetrics = {
-      generatedDocs: [],
-      documentationCoverage: 0,
-      missingDocs: [],
-      documentationSuggestions: [],
-      docPatterns: new Map(),
-console.log(`📚 Starting Smart Documentation Generator...`);
-
 class SmartDocumentationGenerator {;
   constructor() {;
     this.documentationMetrics = {;
@@ -103,21 +89,7 @@ class SmartDocumentationGenerator {;
 ;
       console.log(`'✅ Smart documentation generation completed successfully');
     } catch (error) {;
-
-      // Generate report;
-      await this.generateReport();
-
-      console.log(``✅ Smart documentation generation completed successfully`);
-    } catch (error) {  
-      console.error(`❌ Smart documentation generation failed:', error.message);
-      }
-      // Generate report
-      await this.generateReport();`);
-`);
-      console.log(`✅ Smart documentation generation completed successfully`);
-    } catch (error) {
-      console.error('❌ Smart documentation generation failed:', error.message);
-    }
+      console.error('❌ Smart documentation generation failed: ', error.message);    }
   }
 ;
   async analyzeCodebaseStructure() {;
@@ -229,10 +201,7 @@ class SmartDocumentationGenerator {;
 
     // Check for missing component documentation;
     const undocumentedComponents = structure.components.filter(
-;
-    // Check for missing component documentation;
-    const undocumentedComponents = structure.components.filter(;
-      comp => !comp.hasDocs;
+<<<<<<< HEAD      comp => !comp.hasDocs;
     );
     if (undocumentedComponents.length > 0) {;
       missingDocs.push({;
@@ -257,8 +226,7 @@ class SmartDocumentationGenerator {;
       });
     }
 
-;
-    // Check for missing hook documentation;
+<<<<<<< HEAD    // Check for missing hook documentation;
     const undocumentedHooks = structure.hooks.filter(hook => !hook.hasDocs);
     if (undocumentedHooks.length > 0) {;
       missingDocs.push({;
@@ -299,15 +267,7 @@ class SmartDocumentationGenerator {;
     console.log(`📖 Generating API documentation...`);
 
     const structure = this.documentationMetrics.docPatterns.get(`structure');
-    console.log(📊 Found ${missingDocs.length} categories of missing documentation';
-    );
-  }
-;
-  async generateAPIDocumentation() {;
-    console.log('📖 Generating API documentation...');
-;
-    const structure = this.documentationMetrics.docPatterns.get('structure');
-    if (!structure) return;
+<<<<<<< HEAD    if (!structure) return;
 ;
     const apiDocs = [];
 
@@ -354,17 +314,7 @@ class SmartDocumentationGenerator {;
 console.log(✅ Generated API documentation for ${service.name}`);
       } catch (error) {  
         console.log(⚠️ Failed to generate API docs for ${service.name  }:`,
-;
-        this.documentationMetrics.generatedDocs.push({;
-          type: 'api',;
-          path: docPath,;
-          service: service.name,;
-          timestamp: new Date().toISOString(),;
-        });
-console.log(✅ Generated API documentation for ${service.name}');
-      } catch (error) {;
-        console.log(⚠️ Failed to generate API docs for ${service.name}:',;
-          error.message;
+<<<<<<< HEAD          error.message;
         `);
       }
     }
@@ -394,21 +344,7 @@ console.log(✅ Generated API documentation for ${service.name}');
           ${component.name.toLowerCase()}.md;
         );
 
-;
-    // Generate documentation for components;
-    for (const component of structure.components.slice(0, 10)) {;
-      // Limit to 10 components per run;
-      try {;
-        const componentPath = path.join(process.cwd(), 'src', component.path);
-        const content = fs.readFileSync(componentPath, 'utf8');
-;
-        const componentDoc = this.generateComponentDoc(component, content);
-        const docPath = path.join(;
-          this.docsDir,components',;
-          ${component.name.toLowerCase()}.md;
-        );
-;
-        // Ensure components docs directory exists;
+<<<<<<< HEAD        // Ensure components docs directory exists;
         const componentsDocsDir = path.dirname(docPath);
         if (!fs.existsSync(componentsDocsDir)) {;
           fs.mkdirSync(componentsDocsDir, { recursive: true });
@@ -434,18 +370,7 @@ console.log(✅ Generated API documentation for ${service.name}');
       } catch (error) {;
         console.log( ⚠️ Failed to generate component docs for ${component.name}:,;
           error.message;
-
-        console.log(`✅ Generated component documentation for ${component.name}`
-        );
-      } catch (error) {  
-        console.log( ⚠️ Failed to generate component docs for ${component.name  }:,
-          error.message;
-        console.log(`✅ Generated component documentation for ${component.name}`);
-        );
-      } catch (error) {
-        console.log( ⚠️ Failed to generate component docs for ${component.name}:,`);
-          error.message`);
-        `);
+<<<<<<< HEAD        `);
       }
     }
   }
@@ -466,8 +391,7 @@ console.log(✅ Generated API documentation for ${service.name}');
     const installPath = path.join(this.docsDir, `installation.md');
     fs.writeFileSync(installPath, installationGuide);
 
-;
-    // Generate development guide;
+<<<<<<< HEAD    // Generate development guide;
     const developmentGuide = this.generateDevelopmentGuide();
     const devPath = path.join(this.docsDir, 'development.md');
     fs.writeFileSync(devPath, developmentGuide);
@@ -506,12 +430,7 @@ console.log(✅ Generated API documentation for ${service.name}');
     console.log(`'📝 Updating README...');
 ;
     try {;
-
-  async updateREADME() {
-    console.log(`📝 Updating README...`);
-
-    try {
-      const readmePath = path.join(process.cwd(), 'README.md');
+<<<<<<< HEAD      const readmePath = path.join(process.cwd(), 'README.md');
       let readmeContent = ';
 ;
       if (fs.existsSync(readmePath)) {;
@@ -529,10 +448,15 @@ console.log(✅ Generated API documentation for ${service.name}');
       });
 ;
       console.log('✅ Updated README');
+<<<<<<< HEAD
     } catch (error) {  ;
 } catch (error) {;
       console.log('⚠️ Failed to update README:', error.message);
       }
+=======
+    } catch (error) {  
+      console.log('⚠️ Failed to update README: ', error.message);      }
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   }
 
   async calculateDocumentationCoverage() {
@@ -593,42 +517,7 @@ console.log(✅ Generated API documentation for ${service.name}');
     const latestReportPath = path.join(
       process.cwd(),
       `documentation-report.json`
-;
-    console.log(📊 Documentation coverage: ${this.documentationMetrics.documentationCoverage.toFixed(1)}%';
-    );
-  }
-;
-  async generateReport() {;
-    console.log('📊 Generating documentation report...');
-;
-    const report = {;
-      timestamp: new Date().toISOString(),;
-      summary: {;
-        totalFilesAnalyzed: this.documentationMetrics.docPatterns.get(structure';
-        );
-          ? Object.values(;
-              this.documentationMetrics.docPatterns.get('structure');
-            ).reduce((sum, arr) => sum + arr.length, 0);
-          : 0,;
-        generatedDocs: this.documentationMetrics.generatedDocs.length,;
-        missingDocs: this.documentationMetrics.missingDocs.length,;
-        documentationCoverage: this.documentationMetrics.documentationCoverage,;
-      },;
-      metrics: this.documentationMetrics,;
-      generated: this.documentationMetrics.generatedDocs,;
-      missing: this.documentationMetrics.missingDocs,;
-    };
-;
-    const reportPath = path.join(;
-      this.reportDir,documentation-${Date.now()}.json';
-    );
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-;
-    // Also save latest report;
-    const latestReportPath = path.join(;
-      process.cwd(),;
-      'documentation-report.json';
-    );
+<<<<<<< HEAD    );
     fs.writeFileSync(latestReportPath, JSON.stringify(report, null, 2));
 console.log(📊 Documentation report saved to ${reportPath});
   }
@@ -667,13 +556,7 @@ console.log(📊 Documentation report saved to ${reportPath});
     const basePath = filePath.replace(/\.(ts|tsx|js|jsx)$/, '');
 
     return docExtensions.some(ext => {
-;
-  hasExistingDocs(filePath) {;
-    const docExtensions = ['.md', '.mdx', '.txt'];
-    const basePath = filePath.replace(/\.(ts|tsx|js|jsx)$/, ');
-;
-    return docExtensions.some(ext => {;
-      const docPath = basePath + ext;
+<<<<<<< HEAD      const docPath = basePath + ext;
       return fs.existsSync(docPath);
     });
   }
@@ -734,14 +617,6 @@ import { ${service.name} } from `./${service.path}`;
 
 // Example usage;
 const result = await ${service.name}.methodName(params`);\`\`\`
-\\`\`typescript;
-import { ${service.name} } from './${service.path}';
-;
-// Example usage;
-const result = await ${service.name}.methodName(params`);\`\`\';
-
-## Parameters;
-
 ## Parameters;
 ${this.extractServiceParameters(content)}
 
@@ -789,32 +664,6 @@ function App() {
     />
   );
 }\`\`\`
-;
-  generateComponentDoc(component, content) {;
-    return '# ${component.name}
-;
-## Overview;
-
-${component.name} is a React component that ${this.extractComponentPurpose(content)}.;
-
-## Props;
-
-${this.extractComponentProps(content)}
-;
-## Usage;
-\`\`\`tsx;
-import { ${component.name} } from './${component.path}';
-;
-function App() {;
-  return (;
-    <${component.name} ;
-      // Add your props here;
-    />;
-  );
-}\`\`\';
-
-## Examples;
-
 ## Examples;
 ${this.generateComponentExamples(component.name)}
 
@@ -858,36 +707,7 @@ VITE_APP_ENV=development\`\`\`
 ## Available Scripts;
 - \`npm run dev\` - Start development server- \`npm run build\` - Build for production- \`npm run preview\` - Preview production build- \`npm run lint\` - Run ESLint- \`npm run type-check\` - Run TypeScript type checking;
 ---
-## Prerequisites;
-
-- Node.js (v18 or higher);
-- npm or yarn;
-- Git;
-
-## Quick Start;
-
-1. Clone the repository:\`\`\`bash;
-git clone <repository-url>;
-cd zion-app\`\`\`;
-
-2. Install dependencies:\`\`\`bash;
-npm install\`\`\`;
-
-3. Start the development server:\`\`\`bash;
-npm run dev\`\`\`;
-4. Open your browser and navigate to \`http://localhost:5173\`;
-
-## Environment Setup;
-Create a \`.env\` file in the root directory:;
-\`\`\`env;
-VITE_API_URL=your_api_url_here;
-VITE_APP_ENV=development\`\`\`;
-
-## Available Scripts;
-- \`npm run dev\` - Start development server- \`npm run build\` - Build for production- \`npm run preview\` - Preview production build- \`npm run lint\` - Run ESLint- \`npm run type-check\' - Run TypeScript type checking;
-
----;
-*Generated automatically by Smart Documentation Generator*;
+<<<<<<< HEAD*Generated automatically by Smart Documentation Generator*;
   }
 ;
   generateDevelopmentGuide() {;
@@ -916,18 +736,7 @@ src/;
 4. Run linting: \`npm run lint\'
 5. Submit a pull request;
 ## Code Style;
-└── styles/        # CSS and styling files\`\`\`;
-
-## Development Workflow;
-
-1. Create a feature branch from main;
-2. Make your changes3. Run tests: \`npm test\`;
-4. Run linting: \`npm run lint\';
-5. Submit a pull request;
-
-## Code Style;
-
-- Use TypeScript for all new code;
+<<<<<<< HEAD- Use TypeScript for all new code;
 - Follow ESLint configuration;
 - Use Prettier for code formatting;
 - Write meaningful commit messages;
@@ -963,7 +772,7 @@ src/;
   generateDeploymentGuide() {
     return '# Deployment Guide;
 ## Production Build;
-1. Build the application:\`\`\`bash;
+1. Build the application: \`\`\`bash;
 npm run build\`\`\`
 2. The build output will be in the \`dist\` directory;
 ## Deployment Options;
@@ -995,50 +804,7 @@ VITE_APP_ENV=production\`\`\'
 
   generateUpdatedREADME(originalContent) {
     const packageJson = JSON.parse(fs.readFileSync(`package.json`, `utf8`));
-## Production Build;
-
-1. Build the application:\`\`\`bash;
-npm run build\`\`\`;
-2. The build output will be in the \`dist\` directory;
-
-## Deployment Options;
-
-### Netlify (Recommended);
-
-1. Connect your repository to Netlify2. Set build command: \`npm run build\`;
-3. Set publish directory: \`dist\`;
-4. Deploy automatically on push to main branch;
-
-### Vercel;
-
-1. Import your repository to Vercel2. Set build command: \`npm run build\`;
-3. Set output directory: \`dist\`;
-4. Deploy;
-
-### Manual Deployment;
-1. Upload the contents of \`dist\` directory to your web server2. Configure your server to serve \`index.html\` for all routes;
-3. Set up proper caching headers;
-
-## Environment Variables;
-
-Set the following environment variables in production:;
-\`\`\`env;
-VITE_API_URL=https://your-production-api.com;
-VITE_APP_ENV=production\`\`\';
-
-## Monitoring;
-
-- Set up error tracking (Sentry, LogRocket);
-- Monitor performance metrics;
-- Set up uptime monitoring;
-
----;
-*Generated automatically by Smart Documentation Generator*;
-  }
-;
-  generateUpdatedREADME(originalContent) {;
-    const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-return `# ${packageJson.name}
+<<<<<<< HEADreturn `# ${packageJson.name}
 ;
 ${packageJson.description || 'A modern React application built with Vite and TypeScript.'}
 ;
@@ -1092,28 +858,7 @@ This project uses intelligent PM2 automations for continuous improvement:
 ## 📊 Reports;
 View automation reports in the project root:- \`ai-analysis-report.json\` - AI code analysis results- \`deployment-optimization-report.json\` - Deployment optimization metrics- \`test-generation-report.json\` - Test generation statistics- \`refactoring-report.json\` - Code refactoring progress- \`documentation-report.json\' - Documentation coverage;
 ## 🤝 Contributing;
-
-## 📦 Available Scripts;
-- \`npm run dev\` - Start development server- \`npm run build\` - Build for production- \`npm run preview\` - Preview production build- \`npm run lint\` - Run ESLint- \`npm run type-check\` - Run TypeScript type checking- \`npm test\` - Run tests;
-
-## 🤖 Automation;
-
-This project uses intelligent PM2 automations for continuous improvement:;
-
-- **AI Code Analyzer** - Analyzes code quality and suggests improvements;
-- **Smart Deployment Optimizer** - Optimizes build and deployment processes;
-- **Adaptive Test Generator** - Generates tests based on code changes;
-- **Intelligent Code Refactorer** - Suggests and applies code refactoring;
-- **Smart Documentation Generator** - Maintains up-to-date documentation;
-- **Predictive Maintenance Monitor** - Monitors system health and predicts issues;
-
-## 📊 Reports;
-
-View automation reports in the project root:- \`ai-analysis-report.json\` - AI code analysis results- \`deployment-optimization-report.json\` - Deployment optimization metrics- \`test-generation-report.json\` - Test generation statistics- \`refactoring-report.json\` - Code refactoring progress- \`documentation-report.json\' - Documentation coverage;
-
-## 🤝 Contributing;
-
-1. Fork the repository;
+<<<<<<< HEAD1. Fork the repository;
 2. Create a feature branch;
 3. Make your changes;
 4. Run tests and linting;
@@ -1142,15 +887,7 @@ This project is licensed under the MIT License.;
           line.includes(`=`) &&
           line.includes(`(`))
       ) {
-;
-    for (const line of lines) {;
-      if (;
-        line.includes('export function') ||;
-        (line.includes('export const') &&;
-          line.includes('=') &&;
-          line.includes('('));
-      ) {;
-        const match = line.match(/export\s+(?:function|const)\s+(\w+)/);
+<<<<<<< HEAD        const match = line.match(/export\s+(?:function|const)\s+(\w+)/);
         if (match) {;
           functions.push(match[1]);
         }
@@ -1270,36 +1007,7 @@ const result = await ${serviceName}.createItem({;
     }
 
     return `Performs the specified operation`;
-// With props;
-<${componentName} className="custom-class">;
-  <p>Custom content</p>;
-</${componentName}>\`\`\``;
-  }
-;
-  extractComponentStyling(content) {return 'This component uses Tailwind CSS classes for styling. Custom styles can be added via the `className` prop.';
-  }
-;
-  generateFunctionDescription(funcName) {;
-    // Generate basic descriptions based on function name;
-    const descriptions = {;
-      fetch: 'Fetches data from the API',;
-      create: 'Creates a new resource',;
-      update: 'Updates an existing resource',;
-      delete: 'Deletes a resource',;
-      get: 'Retrieves data',;
-      set: 'Sets data',;
-      validate: 'Validates input data',;
-      format: 'Formats data for display',;
-    };
-;
-    for (const ['key', 'description'] of Object.entries(descriptions)) {;
-      if (funcName.toLowerCase().includes(key)) {;
-        return description;
-      }
-    }
-;
-    return 'Performs the specified operation';
-  }
+<<<<<<< HEAD  }
 }
 ;
 // Main continuous loop;
@@ -1329,19 +1037,7 @@ async function runContinuous() {
 // Handle graceful shutdown;
 process.on(`SIGINT`, () => {
   console.log(`🛑 Received SIGINT, shutting down gracefully...');
-;
-  // Run initial documentation generation;
-  await generator.generateDocumentation();
-;
-  // Set up continuous execution;
-  setInterval(async () => {;
-    await generator.generateDocumentation();
-  }, AUTOMATION_INTERVAL);
-;
-  console.log( ✅ Smart documentation generator running. Next generation in ${AUTOMATION_INTERVAL / 1000 / 60} minutes;
-`);
-  console.log( ✅ Smart documentation generator running. Next generation in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
-  `);
+<<<<<<< HEAD  `);
 }
 ;
 // Handle graceful shutdown;
@@ -1357,9 +1053,5 @@ process.on('SIGTERM', () => {;
 
 // Start the smart documentation generator;
 runContinuous().catch(error => {
-;
-// Start the smart documentation generator;
-runContinuous().catch(error => {;
-  console.error('❌ Failed to start smart documentation generator:', error);
-  process.exit(1);
+  console.error('❌ Failed to start smart documentation generator: ', error);  process.exit(1);
 });

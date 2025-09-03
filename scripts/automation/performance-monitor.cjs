@@ -4,18 +4,6 @@ const fs = require('fs');
 const path = require(`path`);
 
 console.log(`📊 Starting continuous performance monitoring automation...`);
-#!/'usr/bin/env' node;
-
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
-;
-console.log('📊 Starting continuous performance monitoring automation...');
-;
-// Get automation interval from environment variable (default: 2 hours);
-const AUTOMATION_INTERVAL =;
-  parseInt(process.env.AUTOMATION_INTERVAL) || 7200000; // 2 hours;
-
 async function runPerformanceMonitor() {;
   try {;
     console.log(`📊 Running performance monitoring at ${new Date().toISOString()}`);
@@ -48,12 +36,17 @@ async function runPerformanceMonitor() {
     } catch (error) {  
       console.log('⚠️  Bundle analysis failed but continuing...');
       }
+<<<<<<< HEAD
 ;
 } catch (error) {;
       console.log('⚠️  Bundle analysis failed but continuing...');
     }
 ;
     // Run Lighthouse performance tests if available;
+=======
+
+<<<<<<< HEAD    // Run Lighthouse performance tests if available;
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     console.log('🔍 Running Lighthouse performance tests...');
     try {;
       if (fs.existsSync('lighthouserc.json')) {;
@@ -106,7 +99,7 @@ async function runPerformanceMonitor() {
 
     console.log(`✅ Continuous performance monitoring completed successfully`);
   } catch (error) {  
-    console.error(❌ Continuous performance monitoring failed:`,
+    console.error(❌ Continuous performance monitoring failed: `,
       error.message;
     );
     // Don`t exit, just log the error and continue;
@@ -174,10 +167,7 @@ function findLargeFiles(dir, maxSize = 1024 * 1024) {;
 
       for (const item of items) {
         const fullPath = path.join(currentDir, `item);
-;
-      for (const item of items) {;
-        const fullPath = path.join(currentDir, 'item);
-        const stat = fs.statSync(fullPath);
+<<<<<<< HEAD        const stat = fs.statSync(fullPath);
 ;
         if (stat.isDirectory()) {;
           scanDirectory(fullPath);
@@ -226,10 +216,7 @@ function getDirectorySize(dir) {;
     } catch (error) {  
       // Skip directories that can`t be accessed;
       }
-    } catch (error) {;
-      // Skip directories that can't be accessed;
-    }
-  }
+<<<<<<< HEAD  }
 ;
   calculateSize(dir);
   return totalSize;
@@ -286,9 +273,5 @@ process.on('SIGTERM', () => {;
 
 // Start the continuous performance monitor;
 runContinuous().catch(error => {
-;
-// Start the continuous performance monitor;
-runContinuous().catch(error => {;
-  console.error('❌ Failed to start continuous performance monitoring:', error);
-  process.exit(1);
+  console.error('❌ Failed to start continuous performance monitoring: ', error);  process.exit(1);
 });

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  "export default function Analytics () {";,"});,"});
 }"});,"})
 ";export: default function Analytics () {"";";";
@@ -26,3 +27,7 @@ export default function Analytics() {return (
 ";export default function Analytics () {", ",";
 }""
 ";export default function Analytics () {,}"
+=======
+ "export default function Analytics () {;,});,"})
+}"});,"})
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

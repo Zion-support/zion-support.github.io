@@ -32,22 +32,7 @@ class IntelligentDependencyManager {;
     this.updateRecommendations = path.join(;
       this.projectRoot,logs',;
       'update-recommendations.json';
-    this.logFile = path.join(
-      this.projectRoot, 'logs',
-      'intelligent-dependency-manager.log'
-    );
-    this.dependencyAnalysis = path.join(
-      this.projectRoot, 'logs',
-      'dependency-analysis.json'
-    );
-    this.vulnerabilityReport = path.join(
-      this.projectRoot, 'logs',
-      'vulnerability-report.json'
-    );
-    this.updateRecommendations = path.join(
-      this.projectRoot, 'logs',
-      'update-recommendations.json'
-    );
+<<<<<<< HEAD    );
     this.ensureLogsDirectory();
 ;
     this.dependencyHistory = [];
@@ -77,9 +62,7 @@ class IntelligentDependencyManager {;
   }
 
   log(message, level = `INFO`) {
-;
-  log(message, level = 'INFO') {;
-    const timestamp = new Date().toISOString();
+<<<<<<< HEAD    const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 ;
     fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`);
@@ -143,14 +126,7 @@ class IntelligentDependencyManager {;
     try {
       const packagePath = path.join(this.projectRoot, `package.json`);
       const packageContent = fs.readFileSync(packagePath, `utf8`);
-;
-  async analyzePackageJson() {;
-    this.log('Analyzing package.json...');
-;
-    try {;
-      const packagePath = path.join(this.projectRoot, 'package.json');
-      const packageContent = fs.readFileSync(packagePath, 'utf8');
-      const packageData = JSON.parse(packageContent);
+<<<<<<< HEAD      const packageData = JSON.parse(packageContent);
 ;
       const analysis = {;
         dependencies: {;
@@ -205,24 +181,7 @@ class IntelligentDependencyManager {;
             sizeKB: Math.round(stats.size / 1024),
             lastModified: stats.mtime,
             exists: true,
-;
-  async analyzeLockFiles() {;
-    this.log('Analyzing lock files...');
-;
-    try {;
-      const lockFiles = [];
-      const lockFileTypes = ['package-lock.json', 'yarn.lock', 'pnpm-lock.yaml', '];
-;
-      for (const lockFile of lockFileTypes) {;
-        const lockPath = path.join(this.projectRoot, 'lockFile);
-        if (fs.existsSync(lockPath)) {;
-          const stats = fs.statSync(lockPath);
-          lockFiles.push({;
-            name: lockFile', size: stats.size,;
-            sizeKB: Math.round(stats.size / 1024),;
-            lastModified: stats.mtime,;
-            exists: true,;
-          });
+<<<<<<< HEAD          });
         } else {;
           lockFiles.push({;
             name: lockFile,;
@@ -279,17 +238,7 @@ class IntelligentDependencyManager {;
         encoding: 'utf8',
         cwd: this.projectRoot,
         stdio: 'pipe',
-;
-  async scanVulnerabilities() {;
-    this.log('Scanning for vulnerabilities...');
-;
-    try {;
-      // Run npm audit;
-      const auditOutput = execSync('npm audit --json', {;
-        encoding: 'utf8',;
-        cwd: this.projectRoot,;
-        stdio: 'pipe',;
-      });
+<<<<<<< HEAD      });
 ;
       const auditData = JSON.parse(auditOutput);
       const vulnerabilities = [];
@@ -355,19 +304,7 @@ class IntelligentDependencyManager {;
         encoding: 'utf8',
         cwd: this.projectRoot,
         stdio: 'pipe',
-;
-  async detectConflicts() {;
-    this.log('Detecting dependency conflicts...');
-;
-    try {;
-      const conflicts = [];
-;
-      // Check for peer dependency conflicts;
-      const peerCheckOutput = execSync('npm ls --depth=0', {;
-        encoding: 'utf8',;
-        cwd: this.projectRoot,;
-        stdio: 'pipe',;
-      });
+<<<<<<< HEAD      });
 ;
       const lines = peerCheckOutput.split('\n');
       for (const line of lines) {
@@ -415,16 +352,7 @@ class IntelligentDependencyManager {;
         encoding: 'utf8',
         cwd: this.projectRoot,
         stdio: 'pipe',
-;
-  async checkOutdated() {;
-    this.log('Checking for outdated packages...');
-;
-    try {;
-      const outdatedOutput = execSync('npm outdated --json', {;
-        encoding: 'utf8',;
-        cwd: this.projectRoot,;
-        stdio: 'pipe',;
-      });
+<<<<<<< HEAD      });
 ;
       const outdatedData = JSON.parse(outdatedOutput);
       const outdated = [];
@@ -440,10 +368,7 @@ class IntelligentDependencyManager {;
         const priority = this.calculateUpdatePriority(
           updateType,
           current,
-        const priority = this.calculateUpdatePriority(;
-          updateType,;
-          current,;
-          latest;
+<<<<<<< HEAD          latest;
         );
 ;
         outdated.push({;
@@ -514,16 +439,7 @@ class IntelligentDependencyManager {;
               versions: [...new Set(versions)],
               severity: `HIGH`,
               action: `RESOLVE_VERSIONS`,
-;
-        for (const ['packageName', 'versions'] of Object.entries(packageVersions)) {;
-          if (versions.length > 1 && new Set(versions).size > 1) {;
-            conflicts.push({;
-              type: 'VERSION_CONFLICT',;
-              package: packageName,;
-              versions: [...new Set(versions)],;
-              severity: 'HIGH',;
-              action: 'RESOLVE_VERSIONS',;
-            });
+<<<<<<< HEAD            });
           }
         }
       }
@@ -557,8 +473,7 @@ class IntelligentDependencyManager {;
 ;
     let priority = basePriority[updateType];
 
-;
-    // Add priority based on how old the current version is;
+<<<<<<< HEAD    // Add priority based on how old the current version is;
     const currentDate = new Date();
     const daysSinceUpdate = Math.floor(;
       (currentDate - new Date()) / (1000 * 60 * 60 * 24);
@@ -625,12 +540,7 @@ class IntelligentDependencyManager {;
           // Check if it`s a package (has package.json)
           const packageJsonPath = path.join(itemPath, `package.json`);
           if (fs.existsSync(packageJsonPath)) {
-;
-        if (stats.isDirectory()) {;
-          // Check if it's a package (has package.json);
-          const packageJsonPath = path.join(itemPath, 'package.json');
-          if (fs.existsSync(packageJsonPath)) {;
-            count++;
+<<<<<<< HEAD            count++;
           }
         }
       }
@@ -678,31 +588,7 @@ class IntelligentDependencyManager {;
     if (analysis.outdated.length > 0) {
       const majorUpdates = analysis.outdated.filter(
         p => p.updateType === `MAJOR`
-;
-      if (criticalVulns.length > 0) {;
-        recommendations.push({;
-          priority: 'CRITICAL',;
-          type: 'SECURITY',message: `Immediate action required: ${criticalVulns.length} critical vulnerabilities detected`,;
-          action: 'UPDATE_IMMEDIATE',;
-          packages: criticalVulns.map(v => v.package),;
-        });
-      }
-;
-      if (highVulns.length > 0) {;
-        recommendations.push({;
-          priority: 'HIGH',;
-          type: 'SECURITY',message: `Urgent action required: ${highVulns.length} high-severity vulnerabilities detected`,;
-          action: 'UPDATE_URGENT',;
-          packages: highVulns.map(v => v.package),;
-        });
-      }
-    }
-;
-    // Update-based recommendations;
-    if (analysis.outdated.length > 0) {;
-      const majorUpdates = analysis.outdated.filter(;
-        p => p.updateType === 'MAJOR';
-      );
+<<<<<<< HEAD      );
       const minorUpdates = analysis.outdated.filter(;
         p => p.updateType === 'MINOR';
       );
@@ -778,11 +664,7 @@ class IntelligentDependencyManager {;
   async generateReport() {
     this.log(`Generating dependency management report...`);
 
-;
-  async generateReport() {;
-    this.log('Generating dependency management report...');
-;
-    const analysis = await this.analyzeDependencies();
+<<<<<<< HEAD    const analysis = await this.analyzeDependencies();
     if (!analysis) return null;
 ;
     const report = {;
@@ -843,11 +725,7 @@ class IntelligentDependencyManager {;
     // Immediate actions;
     const criticalVulns = analysis.vulnerabilities.filter(
       v => v.severity === 'CRITICAL'
-;
-    // Immediate actions;
-    const criticalVulns = analysis.vulnerabilities.filter(;
-      v => v.severity === 'CRITICAL';
-    );
+<<<<<<< HEAD    );
     if (criticalVulns.length > 0) {;
       actions.push({;
         priority: 'IMMEDIATE',;
@@ -880,14 +758,7 @@ class IntelligentDependencyManager {;
         priority: 'MEDIUM',
         action: 'npm update',
         description: `Update patch versions safely`,
-;
-    // Medium priority actions;
-    if (analysis.outdated.filter(p => p.updateType === 'PATCH').length > 0) {;
-      actions.push({;
-        priority: 'MEDIUM',;
-        action: 'npm update',;
-        description: 'Update patch versions safely',;
-      });
+<<<<<<< HEAD      });
     }
 ;
     return actions;
@@ -910,7 +781,7 @@ class IntelligentDependencyManager {;
         // Display top recommendations;
         const topRecommendations = report.recommendations.slice(0, 3);
         if (topRecommendations.length > 0) {
-          this.log(`Top Recommendations:`);
+          this.log(`Top Recommendations: `);
           topRecommendations.forEach((rec, index) => {this.log(`  ${index + 1}. ${rec.message} (${rec.priority})`);
           });
         }
@@ -921,22 +792,7 @@ class IntelligentDependencyManager {;
     } catch (error) {  
       this.log(Intelligent Dependency Manager failed: ${error.message  }`,
         `ERROR`
-;
-        // Display top recommendations;
-        const topRecommendations = report.recommendations.slice(0, 3);
-        if (topRecommendations.length > 0) {;
-          this.log('Top Recommendations:');
-          topRecommendations.forEach((rec, index) => {this.log(`  ${index + 1}. ${rec.message} (${rec.priority})');
-          });
-        }
-      }
-;
-      // Schedule next analysis;
-      setTimeout(() => this.run(), 7200000); // 2 hours;
-    } catch (error) {;
-      this.log(Intelligent Dependency Manager failed: ${error.message}',;
-        'ERROR';
-      );
+<<<<<<< HEAD      );
       setTimeout(() => this.run(), 1800000); // 30 minutes on error;
     }
   }

@@ -27,16 +27,7 @@ class IntelligentConflictResolver {;
   }
 
   log(message, level = `INFO`) {
-;
-  setupLogging() {;
-    this.logFile = path.join(this.logsDir, 'intelligent-conflict-resolver.log');
-    this.errorFile = path.join(;
-      this.logsDir,intelligent-conflict-resolver-error.log';
-    );
-  }
-;
-  log(message, level = 'INFO') {;
-    const timestamp = new Date().toISOString();
+<<<<<<< HEAD    const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}`;
 ;
     console.log(`logMessage);
@@ -69,18 +60,7 @@ class IntelligentConflictResolver {;
 
       if (conflictFiles.length === 0) {
         this.log(`No merge conflicts detected`);
-;
-    try {;
-      // Check git status for conflicts;
-      const status = execSync('git status --porcelain', { encoding: 'utf8' });
-      const conflictFiles = status;
-        .split('\n');
-        .filter(line => line.startsWith('UU '));
-        .map(line => line.substring(3));
-;
-      if (conflictFiles.length === 0) {;
-        this.log('No merge conflicts detected');
-        return [];
+<<<<<<< HEAD        return [];
       }
 
       if (conflictFiles.length === 0) {`);
@@ -123,12 +103,7 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);
       if (analysis.resolvable) {
         analysis.recommendations = this.generateResolutionStrategy(
           conflictMarkers,
-;
-      // Generate resolution recommendations;
-      if (analysis.resolvable) {;
-        analysis.recommendations = this.generateResolutionStrategy(;
-          conflictMarkers,;
-          filePath;
+<<<<<<< HEAD          filePath;
         );
       }
 ;
@@ -167,11 +142,7 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);
         // Find the end marker;
         for (let j = marker.separator + 1; j < lines.length; j++) {
           if (lines[j].startsWith('>>>>>>>')) {
-;
-        // Find the end marker;
-        for (let j = marker.separator + 1; j < lines.length; j++) {;
-          if (lines[j].startsWith('>>>>>>>')) {;
-            marker.end = j;
+<<<<<<< HEAD            marker.end = j;
             marker.endMarker = lines[j];
             marker.otherBranch = lines[j].substring(8).trim();
             break;
@@ -303,12 +274,7 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);
           break;
         default:
           strategies.push(`Manual review required`);
-        case 'style':;
-          strategies.push('Merge style classes, avoiding conflicts');
-          break;
-        default:;
-          strategies.push('Manual review required');
-      }
+<<<<<<< HEAD      }
     });
 ;
     return strategies;
@@ -342,24 +308,7 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);
           case `config-file`:
             resolvedContent = this.resolveConfigFileConflict(
               resolvedContent,
-;
-        switch (type) {;
-          case 'package-json':;
-            resolvedContent = this.resolvePackageJsonConflict(;
-              resolvedContent,;
-              marker;
-            );
-            break;
-          case 'lock-file':;
-            resolvedContent = this.resolveLockFileConflict(;
-              resolvedContent,;
-              marker;
-            );
-            break;
-          case 'config-file':;
-            resolvedContent = this.resolveConfigFileConflict(;
-              resolvedContent,;
-              marker;
+<<<<<<< HEAD              marker;
             );
             break;
           default:this.log(`Cannot auto-resolve ${type} conflict in ${filePath}`);
@@ -442,28 +391,7 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);
     } else {
       return content.replace(
         this.getConflictRange(content, marker),
-;
-  resolveLockFileConflict(content, marker) {;
-    // For lock files, suggest regeneration;
-    this.log('Lock file conflict detected - recommend running npm install');
-    return content;
-  }
-;
-  resolveConfigFileConflict(content, marker) {;
-    // For config files, prefer development settings;
-    const startSection = this.getConflictSection(content, marker, 'start');
-    const endSection = this.getConflictSection(content, marker, 'end');
-;
-    // Simple strategy: take the section with more configuration options;
-    if (startSection.length > endSection.length) {;
-      return content.replace(;
-        this.getConflictRange(content, marker),;
-        startSection;
-      );
-    } else {;
-      return content.replace(;
-        this.getConflictRange(content, marker),;
-        endSection;
+<<<<<<< HEAD        endSection;
       );
     }
   }
@@ -530,10 +458,7 @@ this.log(`Conflict resolution report saved to ${reportPath}`);
 
     if (conflicts.length === 0) {
       recommendations.push(`No conflicts detected - repository is clean`);
-;
-    if (conflicts.length === 0) {;
-      recommendations.push('No conflicts detected - repository is clean');
-      return recommendations;
+<<<<<<< HEAD      return recommendations;
     }
 ;
     const autoResolvable = conflicts.filter(c => c.resolvable);
@@ -554,10 +479,7 @@ this.log(`Conflict resolution report saved to ${reportPath}`);
 
     if (conflicts.some(c => c.type === `lock-file`)) {
       recommendations.push(Regenerate lock files after resolving package.json conflicts`
-;
-    if (conflicts.some(c => c.type === 'lock-file')) {;
-      recommendations.push(Regenerate lock files after resolving package.json conflicts';
-      );
+<<<<<<< HEAD      );
     }
 ;
     if (conflicts.some(c => c.type === 'package-json')) {;
@@ -603,10 +525,7 @@ this.log(`Conflict resolution report saved to ${reportPath}`);
 
         // Attempt auto-resolution;
         if (analysis.resolvable) {
-;
-        // Attempt auto-resolution;
-        if (analysis.resolvable) {;
-          const resolved = await this.autoResolveConflict(filePath, analysis);
+<<<<<<< HEAD          const resolved = await this.autoResolveConflict(filePath, analysis);
           if (resolved) resolvedCount++;
         }
       }
@@ -654,36 +573,7 @@ this.log(`Conflict resolution report saved to ${reportPath}`);
         this.log(`Conflict resolver heartbeat...`);
       }, 60000); // Every minute;
     } catch (error) {  this.log(`Failed to start conflict resolver: ${error.message  }`, `ERROR`);
-;
-  async start() {;
-    this.log('Starting intelligent conflict resolver...');
-;
-    try {;
-      // Run initial conflict resolution;
-      await this.runConflictResolution();
-;
-      // Set up periodic conflict checking;
-      setInterval(;
-        async () => {;
-          try {;
-            await this.runConflictResolution();
-          } catch (error) {;
-            this.log(Periodic conflict resolution failed: ${error.message}',;
-              'ERROR';
-            );
-          }
-        },;
-        30 * 60 * 1000;
-      ); // Every 30 minutes;
-
-      this.log('Intelligent conflict resolver started successfully');
-;
-      // Keep the process running;
-      setInterval(() => {;
-        this.log('Conflict resolver heartbeat...');
-      }, 60000); // Every minute;
-    } catch (error) {this.log(`Failed to start conflict resolver: ${error.message}`, 'ERROR');
-      throw error;
+<<<<<<< HEAD      throw error;
     }
   }
 }

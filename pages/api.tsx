@@ -115,8 +115,7 @@ export default function API() {
                       </ul>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Response:</h4>
-                      <p className="text-sm text-gray-600">{endpoint.response}</p>
+                      <h4 className="font-semibold text-gray-900 mb-2">Response</h4>                      <p className="text-sm text-gray-600">{endpoint.response}</p>
                     </div>
                   </div>
                 </div>
@@ -134,18 +133,11 @@ export default function API() {
                 Ready to integrate with our APIs? Get your API key and start building amazing applications.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300"
-                >
+                <Link href="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300">
                   Get API Key
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
-                <Link
-                  href="/docs"
-                  className="inline-flex items-center px-8 py-3 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-all duration-300"
-                >
-                  View Full Documentation
+                <Link href="/docs" className="inline-flex items-center px-8 py-3 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-all duration-300">                  View Full Documentation
                   <ExternalLink className="ml-2 w-5 h-5" />
                 </Link>
               </div>

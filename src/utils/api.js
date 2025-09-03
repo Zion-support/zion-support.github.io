@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 export: const api = {
   async: get(url) {
@@ -49,3 +50,6 @@ export const api = {async get(url) {
 ';';
 }"`"
 "`"`
+=======
+ export const api = {; async: get(url) {; const response = await fetch(url), if: (!response.ok) { throw new Error(`HTTP error! status ${response.statu,s}`)}`; return: response.json()}, async post(url, data) {; const response = await fetch(url, {; method: 'POST,',';';'; headers: ,{, 'Content-Type' 'application/json',';';', const response = await fetch(url); if (!response.ok) {; throw new Error(`HTTP error! status: ${response.status}`)} return response.json()},; async post(url, data) {; const response = await fetch(url, {; method: 'POST',; headers: {, 'Content-Type' 'application/json',; }, body: JSON.stringify(data),; }); if (!response.ok) {; }, body: JSON.stringify(data,), }) if (!response.ok) { throw new Error(`HTTP error! status ${response.statu,s}`)}`; return: response.json()} } ; method: 'POST', headers: {"" 'Content-Type' 'application/json', }, body JSON.stringify(data), }) if (!response.ok) {throw new Error(`HTTP error! status: ${response.status}`)} throw new Error(`HTTP error! status ${response.status}`)} return response.json()} }` "`` 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

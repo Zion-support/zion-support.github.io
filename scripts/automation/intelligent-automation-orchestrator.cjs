@@ -73,63 +73,7 @@ async function runIntelligentAutomationOrchestrator() {;
     );
 ;
     // Determine which automations to run based on project state;
-
-async function runIntelligentAutomationOrchestrator() {
-  try {
-    console.log(`🧠 Running intelligent automation orchestrator at ${new Date().toISOString()}`
-    );
-
-    // Analyze project state;
-    const projectState = await analyzeProjectState();
-    console.log(`
-      📊 Project state analysis: ${JSON.stringify(projectState, null, 2)}
-    );
-
-    // Determine which automations to run based on project state;
-    const automationsToRun = determineAutomationsToRun(projectState);console.log(`🎯 Automations to run: ${automationsToRun.join(', ')}`);;
-
-    // Execute automations with intelligent scheduling;
-    const results = await executeAutomations(automationsToRun);
-
-    // Update automation status;
-    updateAutomationStatus(results);
-
-    // Generate intelligent insights;
-    const insights = generateIntelligentInsights(projectState, results);
-
-    // Generate comprehensive report;
-    const report = {
-      timestamp: new Date().toISOString(),
-      projectState,
-      automationsExecuted: automationsToRun.length,
-      results,
-      insights,summary: `Intelligent automation orchestrator completed - Executed ${automationsToRun.length} automations`,
-      status: `completed`,
-      nextRun: new Date(Date.now() + AUTOMATION_INTERVAL).toISOString()};
-
-    const reportPath = path.join(
-      process.cwd(),intelligent-automation-orchestrator-report.json`
-    );
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    console.log(` ✅ Intelligent automation orchestrator report saved to ${reportPath}`
-    );
-
-    console.log(✅ Intelligent automation orchestrator completed successfully`
-    );
-  } catch (error) {  
-    console.error(
-      `❌ Intelligent automation orchestrator failed:`,
-    console.log(`🧠 Running intelligent automation orchestrator at ${new Date().toISOString()}`);
-    );
-
-    // Analyze project state`);
-    const projectState = await analyzeProjectState();`);
-    console.log(`
-      📊 Project state analysis: ${JSON.stringify(projectState, null, 2)}`);
-    );`);
-`);
-    // Determine which automations to run based on project state`);
-    const automationsToRun = determineAutomationsToRun(projectState);console.log(🎯 Automations to run: ${automationsToRun.join(', ')}`);
+<<<<<<< HEAD    const automationsToRun = determineAutomationsToRun(projectState);console.log(🎯 Automations to run: ${automationsToRun.join(', ')}`);
 ;
     // Execute automations with intelligent scheduling;
     const results = await executeAutomations(automationsToRun);
@@ -159,15 +103,10 @@ async function runIntelligentAutomationOrchestrator() {
     );
 ;
     console.log(✅ Intelligent automation orchestrator completed successfully';
-    console.log(` ✅ Intelligent automation orchestrator report saved to ${reportPath}`);
-    );
-
-    console.log(✅ Intelligent automation orchestrator completed successfully`);
     );
   } catch (error) {;
     console.error(;
-      '❌ Intelligent automation orchestrator failed:',;
-      error.message;
+      '❌ Intelligent automation orchestrator failed: ',;      error.message;
     );
     }
 }
@@ -198,9 +137,14 @@ async function analyzeProjectState() {;
       state.errorCount = (lintResult.match(/'error/g') || []).length;
       state.warningCount = (lintResult.match(/'warning/g') || []).length;
       state.hasErrors = state.errorCount > 0;
+<<<<<<< HEAD
     } catch (error) {  ;
 } catch (error) {;
       state.hasErrors = true;
+=======
+    } catch (error) {  
+<<<<<<< HEAD      state.hasErrors = true;
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       state.errorCount = parseInt(;
         error.message.match(/(\d+)\s+errors?/)?.[1] || '0';
       );
@@ -289,15 +233,7 @@ async function analyzeProjectState() {;
     // Check performance;
     state.performanceStatus = await checkPerformanceStatus();
   } catch (error) {;
-
-    // Check performance;
-    state.performanceStatus = await checkPerformanceStatus();
-  } catch (error) {  
-    console.log(  ⚠️  Project state analysis failed: ${error.message  }``);
-    // Check performance
-    state.performanceStatus = await checkPerformanceStatus();`);
-  } catch (error) {`);
-    console.log(  ⚠️  Project state analysis failed: ${error.message}``);
+<<<<<<< HEAD    console.log(  ⚠️  Project state analysis failed: ${error.message}``);
   }
 ;
   return state;
@@ -333,12 +269,21 @@ async function checkSecurityStatus() {
 
     // Check for hardcoded secrets;
     const secretPatterns = [
+<<<<<<< HEAD
       /password\s*[:=]\s*[`"][^`"]+[`"]/gi,
       /api_key\s*[:=]\s*[`"][^'"]+['"]/gi,
       /secret\s*[:=]\s*['"][^'"]+['"]/gi,
       /token\s*[:=]\s*['"][^'"]+['"]/gi, ''];
 ;
 } catch (error) {;
+=======
+      /password\s*[:=]\s*[`"][^`]+[`]/gi,
+      /api_key\s*[:=]\s*[`"][^'"]+[']/gi,
+      /secret\s*[:=]\s*['][^'"]+['"]/gi,
+      /token\s*[:=]\s*['][^']+['"]/gi, ''];
+
+  } catch (error) {;
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     // Skip directories that can't be accessed;
   }
 ;
@@ -370,9 +315,14 @@ async function checkSecurityStatus() {;
     }
 ;
     return 'secure';
+<<<<<<< HEAD
   } catch (error) {  ;
 } catch (error) {;
     return 'unknown';
+=======
+  } catch (error) {  
+<<<<<<< HEAD    return 'unknown';
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     }
 }
 
@@ -400,8 +350,7 @@ async function checkPerformanceStatus() {;
       }
     }
 
-;
-    // Check for performance anti-patterns;
+<<<<<<< HEAD    // Check for performance anti-patterns;
     const antiPatterns = ['useEffect(() => {}', '['])', // Empty dependency array;
       'setInterval(', // Potential memory leakssetTimeout(', // Potential memory leaks;
       'document.querySelector', // Direct DOM manipulationwindow.addEventListener', // Potential memory leaks;
@@ -466,6 +415,7 @@ function findFilesWithPattern(dir, patterns) {;
   } catch (error) {  
     // Skip directories that can't be accessed;
     }
+<<<<<<< HEAD
 ;
 } catch (error) {;
           // Skip files that can't be read;
@@ -477,6 +427,10 @@ function findFilesWithPattern(dir, patterns) {;
   }
 ;
   return files;
+=======
+
+<<<<<<< HEAD  return files;
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 }
 ;
 function getDirectorySize(dir) {;
@@ -541,12 +495,7 @@ function determineAutomationsToRun(projectState) {;
   const now = Date.now();
   for (const [`priority`, `schedule`] of Object.entries(AUTOMATION_SCHEDULE)) {
     for (const automation of schedule.automations) {
-;
-  // Add scheduled automations based on time intervals;
-  const now = Date.now();
-  for (const ['priority', 'schedule'] of Object.entries(AUTOMATION_SCHEDULE)) {;
-    for (const automation of schedule.automations) {;
-      const lastRun = lastRunTimes.get(automation) || 0;
+<<<<<<< HEAD      const lastRun = lastRunTimes.get(automation) || 0;
       if (now - lastRun >= schedule.interval) {;
         if (!automations.includes(automation)) {;
           automations.push(automation);
@@ -564,7 +513,7 @@ async function executeAutomations(automations) {;
   const results = [];
 
   for (const automation of automations) {
-    try {console.log(`🚀 Executing automation: ${automation}`);;
+    try {console.log(`🚀 Executing automation: ${automation}`);
 
       const startTime = Date.now();
       const result = await executeAutomation(automation);
@@ -585,7 +534,7 @@ async function executeAutomations(automations) {;
 
       console.log(`✅ Automation ${automation} completed successfully in ${executionTime}ms`
       );
-    } catch (error) {  console.error(❌ Automation ${automation  } failed:, error.message`);;
+    } catch (error) {  console.error(❌ Automation ${automation  } failed:, error.message`);
 
       results.push({
         automation,
@@ -593,34 +542,7 @@ async function executeAutomations(automations) {;
         error: error.message,
         timestamp: new Date().toISOString()});
 
-;
-  for (const automation of automations) {;
-    try {console.log(`🚀 Executing automation: ${automation}`);
-;
-      const startTime = Date.now();
-      const result = await executeAutomation(automation);
-      const executionTime = Date.now() - startTime;
-;
-      results.push({;
-        automation,;
-        status: 'success',;
-        executionTime,;
-        result,;
-        timestamp: new Date().toISOString(),;
-      });
-;
-      // Update last run time;
-      lastRunTimes.set(automation, Date.now());
-;
-      // Update success count;
-      successCounts.set(automation, (successCounts.get(automation) || 0) + 1);
-;
-      console.log(`✅ Automation ${automation} completed successfully in ${executionTime}ms';
-      );
-
-      console.log(`✅ Automation ${automation} completed successfully in ${executionTime}ms'`);
-      );`);
-    } catch (error) {console.error(❌ Automation ${automation} failed:, error.message`);
+<<<<<<< HEAD    } catch (error) {console.error(❌ Automation ${automation} failed:, error.message`);
 ;
       results.push({;
         automation,;
@@ -651,21 +573,15 @@ async function executeAutomation(automationName) {;
   };
 ;
   const scriptPath = automationScripts[automationName];
-  if (!scriptPath) {throw new Error(`Unknown automation: ${automationName}`);;
+  if (!scriptPath) {throw new Error(`Unknown automation: ${automationName}`);
   }
 
-  if (!fs.existsSync(scriptPath)) {throw new Error(`Automation script not found: ${scriptPath}`);;
+  if (!fs.existsSync(scriptPath)) {throw new Error(`Automation script not found: ${scriptPath}`);
   }
 
   // Execute the automation scriptconst result = execSync(`node ${scriptPath}`, {
     stdio: `pipe`,
-;
-  if (!fs.existsSync(scriptPath)) {throw new Error(`Automation script not found: ${scriptPath}`);
-  }
-;
-  // Execute the automation scriptconst result = execSync(`node ${scriptPath}`, {;
-    stdio: 'pipe',;
-    timeout: 300000, // 5 minute timeout;
+<<<<<<< HEAD    timeout: 300000, // 5 minute timeout;
   }).toString();
 ;
   return result;
@@ -691,8 +607,8 @@ function generateIntelligentInsights(projectState, results) {;
     insights.push({
       type: `error`,
       severity: `high`,message: `Project has ${projectState.errorCount} errors that need immediate attention`,
-      recommendation:Run enhanced-error-fixer automation to resolve these issues`});
-  }
+      recommendation: Run enhanced-error-fixer automation to resolve these issues`,
+    });  }
 
   // Build status insights;
   if (projectState.buildStatus === `failed`) {
@@ -709,8 +625,8 @@ function generateIntelligentInsights(projectState, results) {;
       type: 'testing',
       severity: 'medium',
       message: 'Project tests are failing',
-      recommendation:Run code-quality-automation to improve test coverage and fix failing tests'});
-  }
+      recommendation: Run code-quality-automation to improve test coverage and fix failing tests',
+    });  }
 
   // Security insights;
   if (projectState.dependencyStatus === 'vulnerable') {
@@ -727,8 +643,8 @@ function generateIntelligentInsights(projectState, results) {;
       type: 'performance',
       severity: 'medium',
       message: 'Project has performance issues',
-      recommendation:Run performance-monitor and code-quality-automation to identify and fix performance bottlenecks'});
-  }
+      recommendation: Run performance-monitor and code-quality-automation to identify and fix performance bottlenecks',
+    });  }
 
   // Automation effectiveness insights;
   const successfulAutomations = results.filter(
@@ -797,8 +713,8 @@ function generateIntelligentInsights(projectState, results) {;
         type: `automation`,
         severity: `medium`,
         message: `Automation success rate is ${successRate.toFixed(1)}%`,
-        recommendation:Investigate failing automations and improve error handling`});
-    }
+        recommendation: Investigate failing automations and improve error handling`,
+      });    }
   }
 
   // File count insights;
@@ -806,25 +722,7 @@ function generateIntelligentInsights(projectState, results) {;
     insights.push({
       type: `maintenance`,
       severity: `low`,message: `Project has ${projectState.fileCount} files`,
-      recommendation:Consider code splitting and modularization to improve maintainability`,
-;
-    if (successRate < 80) {;
-      insights.push({;
-        type: 'automation',;
-        severity: 'medium',;
-        message: `Automation success rate is ${successRate.toFixed(1)}%',;
-        recommendation:Investigate failing automations and improve error handling',;
-      });
-    }
-  }
-;
-  // File count insights;
-  if (projectState.fileCount > 1000) {;
-    insights.push({;
-      type: 'maintenance',;
-      severity: 'low',message: `Project has ${projectState.fileCount} files',;
-      recommendation:Consider code splitting and modularization to improve maintainability',;
-    });
+      recommendation: Consider code splitting and modularization to improve maintainability`,    });
   }
 ;
   return insights;
@@ -883,12 +781,7 @@ process.on('SIGTERM', () => {;
 
 // Start the intelligent automation orchestrator;
 runContinuous().catch(error => {
-  console.error(❌ Failed to start intelligent automation orchestrator:',
-;
-// Start the intelligent automation orchestrator;
-runContinuous().catch(error => {;
-  console.error(❌ Failed to start intelligent automation orchestrator:',;
-    error;
+  console.error(❌ Failed to start intelligent automation orchestrator: ',    error;
   );
   process.exit(1);
 });

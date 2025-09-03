@@ -1,9 +1,10 @@
-#!/usr/bin/env node
-const fs = require('fs');
+
+const { execSync } = require('child_process');const fs = require('fs');
 const path = require('path');
 
 class PerformanceMonitor {
   constructor() {
+<<<<<<< HEAD
     this.projectRoot = process.cwd();
     this.metrics = {
       buildTime: 0,
@@ -11,14 +12,22 @@ class PerformanceMonitor {
       memoryUsage: 0,
       timestamp: new Date().toISOString();
 };
+=======
+    this.reportsDir = path.join(process.cwd(), 'performance-reports');
+    this.ensureDirectories();
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   }
 
-  async monitorBuild() {
-    console.log('📊 Monitoring build performance...');
-    
-    const startTime = Date.now();
-    
+  ensureDirectories() {
+    if (!fs.existsSync(this.reportsDir)) {
+      fs.mkdirSync(this.reportsDir, { recursive: true });
+    }
+  }
+
+  async runLighthouse() {
+    console.log('🔍 Running Lighthouse audit...');
     try {
+<<<<<<< HEAD
       const { execSync } = require('child_process');
       execSync('NODE_OPTIONS="--max-old-space-size=8192" npm run build', {
         cwd: this.projectRoot,
@@ -36,39 +45,28 @@ class PerformanceMonitor {
       
       this.saveMetrics();
       console.log('✅ Performance monitoring completed');
+=======
+      const command = 'npx lighthouse http://localhost:3000 --output=html --output-path=./performance-reports/lighthouse-report.html --chrome-flags="--headless"';
+      execSync(command, { stdio: 'inherit' });
+      console.log('✅ Lighthouse audit completed');
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     } catch (error) {
-      console.error('❌ Build failed:', error.message);
+      console.log('❌ Lighthouse audit failed:', error.message);
     }
   }
 
-  getDirectorySize(dirPath) {
-    let size = 0;
-    const files = fs.readdirSync(dirPath);
-    
-    for (const file of files) {
-      const filePath = path.join(dirPath, file);
-      const stat = fs.statSync(filePath);
-      
-      if (stat.isDirectory()) {
-        size += this.getDirectorySize(filePath);
-      } else {
-        size += stat.size;
-      }
+  async runBundleAnalysis() {
+    console.log('📦 Running bundle analysis...');
+    try {
+      const command = 'ANALYZE=true npm run build';
+      execSync(command, { stdio: 'inherit' });
+      console.log('✅ Bundle analysis completed');
+    } catch (error) {
+      console.log('❌ Bundle analysis failed:', error.message);
     }
-    
-    return size;
-  }
-
-  saveMetrics() {
-    const reportPath = path.join(this.projectRoot, 'automation-reports', 'performance-metrics.json');
-    fs.writeFileSync(reportPath, JSON.stringify(this.metrics, null, 2));
-    console.log('📊 Performance metrics saved');
   }
 }
 
-if (require.main === module) {
-  const monitor = new PerformanceMonitor();
-  monitor.monitorBuild();
-}
-
-module.exports = PerformanceMonitor;
+const monitor = new PerformanceMonitor();
+monitor.runLighthouse();
+monitor.runBundleAnalysis();
