@@ -19,6 +19,10 @@ function Header(): any {
           <Link href="/" className="header-nav-link">Home</Link>
           <Link href="/services" className="header-nav-link">All Services</Link>
           <Link href="/services-catalog" className="header-nav-link">Catalog</Link>
+          <Link href="/cloud-devops" className="header-nav-link">Cloud DevOps</Link>
+          <Link href="/cybersecurity" className="header-nav-link">Cybersecurity</Link>
+          <Link href="/quantum-computing" className="header-nav-link">Quantum</Link>
+          <Link href="/docs" className="header-nav-link">Docs</Link>
           <Link href="/pricing" className="header-nav-link">Pricing</Link>
           <Link href="/contact" className="header-nav-cta">Contact</Link>
         </div>
@@ -37,6 +41,10 @@ function Header(): any {
         <Link href="/" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Home</Link>
         <Link href="/services" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>All Services</Link>
         <Link href="/services-catalog" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Catalog</Link>
+        <Link href="/cloud-devops" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Cloud DevOps</Link>
+        <Link href="/cybersecurity" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Cybersecurity</Link>
+        <Link href="/quantum-computing" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Quantum</Link>
+        <Link href="/docs" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Docs</Link>
         <Link href="/pricing" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
         <Link href="/contact" className="header-nav-cta" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
       </div>
@@ -66,12 +74,19 @@ function Footer(): any {
         <div className="footer-section">
           <h3>Services</h3>
           <Link href="/services">All Services</Link>
+          <Link href="/micro-saas">Micro SaaS Products</Link>
+          <Link href="/ai-services">AI Services</Link>
+          <Link href="/it-services">IT Services</Link>
+          <Link href="/cloud-devops">Cloud DevOps</Link>
+          <Link href="/cybersecurity">Cybersecurity</Link>
+          <Link href="/quantum-computing">Quantum Computing</Link>
           <Link href="/services-catalog">Services Catalog</Link>
+          <Link href="/docs">Documentation</Link>
           <Link href="/pricing">Pricing</Link>
           <div className="text-sm mt-2 space-y-1">
-            <div>• 39+ Micro SaaS Products</div>
-            <div>• 28+ AI Services</div>
-            <div>• 35+ IT Solutions</div>
+            <div>• 120+ Micro SaaS Products</div>
+            <div>• 80+ AI Services</div>
+            <div>• 80+ IT Solutions</div>
           </div>
         </div>
 
@@ -79,7 +94,9 @@ function Footer(): any {
         <div className="footer-section">
           <h3>Quick Links</h3>
           <Link href="/">Home</Link>
+          <Link href="/about">About Us</Link>
           <Link href="/contact">Contact Us</Link>
+          <Link href="/faq">FAQ</Link>
           <Link href="/privacy">Privacy Policy</Link>
           <Link href="/terms">Terms of Service</Link>
           <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer">Main Website</a>
