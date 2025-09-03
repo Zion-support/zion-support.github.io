@@ -1,1 +1,42 @@
 {
+  "timestamp": "2025-09-03T16:00:25.296Z",
+  "overall": "healthy",
+  "checks": [
+    {
+      "name": "Node Modules",
+      "status": "pass",
+      "duration": "1ms",
+      "timestamp": "2025-09-03T16:00:25.289Z"
+    },
+    {
+      "name": "Project Structure",
+      "status": "pass",
+      "duration": "0ms",
+      "timestamp": "2025-09-03T16:00:25.289Z"
+    },
+    {
+      "name": "System Resources",
+      "status": "pass",
+      "duration": "7ms",
+      "timestamp": "2025-09-03T16:00:25.296Z"
+    },
+    {
+      "name": "Dependencies",
+      "status": "pass",
+      "duration": "0ms",
+      "timestamp": "2025-09-03T16:00:25.296Z"
+    },
+    {
+      "name": "Build System",
+      "status": "pass",
+      "duration": "0ms",
+      "timestamp": "2025-09-03T16:00:25.296Z"
+    }
+  ],
+  "summary": {
+    "total": 5,
+    "passed": 5,
+    "failed": 0,
+    "warnings": 0
+  }
+}

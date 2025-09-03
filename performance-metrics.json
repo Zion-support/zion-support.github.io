@@ -1,24 +1,22 @@
 {
-  "timestamp": "2025-09-03T15:49:53.257Z",
+  "timestamp": "2025-09-03T16:00:33.614Z",
   "bundleSize": {
     ".next": {
-      "size": 41299017,
-      "sizeMB": "39.39"
+      "size": 33236411,
+      "sizeMB": "31.70"
     },
     "node_modules": {
-      "size": 874262097,
-      "sizeMB": "833.76"
+      "size": 497082119,
+      "sizeMB": "474.05"
     }
   },
   "fileCounts": {
-    ".tsx": 115,
-    ".ts": 9,
-    ".jsx": 40,
+    ".tsx": 7,
+    ".ts": 0,
+    ".jsx": 0,
     ".js": 0,
     ".css": 2,
     ".json": 0
   },
-  "recommendations": [
-    "Consider code splitting - many TypeScript files detected"
-  ]
+  "recommendations": []
 }

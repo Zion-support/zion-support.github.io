@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-export default function Home(): any {
-=======
 import Link from 'next/link';
 
 export default function Home() {
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-761f
   return (
     <main style={{padding:20}}>
       <h1>Zion Tech Group</h1>
