@@ -80,6 +80,8 @@ export function Footer() {
       title: "AI & Automation Services",
       icon: Brain,
       links: [
+        { name: "AI Email Responder", href: "/services/ai-email-responder", icon: Mail },
+        { name: "AI Talent Matching", href: "/services/ai-talent-matching", icon: Users },
         { name: "AI Business Intelligence", href: "/services/ai-business-intelligence-dashboard", icon: BarChart3 },
         { name: "AI Customer Support", href: "/services/ai-customer-support-automation", icon: MessageCircle },
         { name: "AI Project Management", href: "/services/ai-project-management-platform", icon: Workflow },
@@ -132,6 +134,8 @@ export function Footer() {
       title: "Micro SAAS Solutions",
       icon: Building2,
       links: [
+        { name: "Mobile Survey Tool", href: "/services/mobile-survey-tool", icon: Monitor },
+        { name: "E-Commerce Return Management", href: "/services/ecommerce-return-management", icon: ShoppingCart },
         { name: "Micro CRM", href: "/services/micro-crm", icon: Users },
         { name: "Micro SAAS Platform", href: "/services/micro-saas-solutions", icon: Building2 },
         { name: "Micro SAAS Solutions Comprehensive", href: "/services/micro-saas-solutions-comprehensive", icon: Layers },

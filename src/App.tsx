@@ -17,6 +17,10 @@ const ServicesOverview = lazy(() => import('./pages/services-overview'));
 const AIContentGenerationSuite = lazy(() => import('./pages/services/ai-content-generation-suite'));
 const CloudMigrationServices = lazy(() => import('./pages/services/cloud-migration-services'));
 const SmartCRMPlatform = lazy(() => import('./pages/services/smart-crm-platform'));
+const AIEmailResponder = lazy(() => import('./pages/services/ai-email-responder'));
+const MobileSurveyTool = lazy(() => import('./pages/services/mobile-survey-tool'));
+const AITalentMatching = lazy(() => import('./pages/services/ai-talent-matching'));
+const EcommerceReturnManagement = lazy(() => import('./pages/services/ecommerce-return-management'));
 
 // Simple Header component
 const Header = () => (
@@ -69,6 +73,10 @@ function App() {
             <Route path="/services/ai-content-generation-suite" element={<AIContentGenerationSuite />} />
             <Route path="/services/cloud-migration-services" element={<CloudMigrationServices />} />
             <Route path="/services/smart-crm-platform" element={<SmartCRMPlatform />} />
+            <Route path="/services/ai-email-responder" element={<AIEmailResponder />} />
+            <Route path="/services/mobile-survey-tool" element={<MobileSurveyTool />} />
+            <Route path="/services/ai-talent-matching" element={<AITalentMatching />} />
+            <Route path="/services/ecommerce-return-management" element={<EcommerceReturnManagement />} />
             <Route path="*" element={<HomePage />} />
           </Routes>
         </Suspense>

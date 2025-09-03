@@ -38,6 +38,8 @@
     ".next",
     "out",
     "dist",
+    "components/*.ts",
+    "components/*.tsx",
     "api-backup",
     "pages.disabled",
     "backup-pages",

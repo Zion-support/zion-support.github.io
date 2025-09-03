@@ -9,28 +9,28 @@ export default function Services() {
       name: "AI-Powered Solutions",
       description: "Revolutionary AI services that transform business operations",
       icon: Brain,
-      count: 25,
+      count: 30,
       color: "from-purple-400 to-pink-500",
       href: "/ai-services",
-      services: ["AI Revenue Optimization", "AI Customer Experience", "AI Autonomous DevOps", "AI Business Intelligence"]
+      services: ["AI Email Responder", "AI Talent Matching", "AI Revenue Optimization", "AI Customer Experience", "AI Autonomous DevOps", "AI Business Intelligence"]
     },
     {
       name: "Micro SAAS Platforms",
       description: "Innovative software solutions for modern businesses",
       icon: Database,
-      count: 35,
+      count: 40,
       color: "from-blue-400 to-cyan-500",
       href: "/micro-saas",
-      services: ["Content Creation Studio", "Project Management", "Customer Support", "Sales Analytics"]
+      services: ["Mobile Survey Tool", "E-Commerce Return Management", "Content Creation Studio", "Project Management", "Customer Support", "Sales Analytics"]
     },
     {
       name: "IT Infrastructure",
       description: "Enterprise-grade technology solutions and services",
       icon: Shield,
-      count: 20,
+      count: 25,
       color: "from-green-400 to-emerald-500",
       href: "/it-services",
-      services: ["Quantum Secure Infrastructure", "Edge Computing", "Cloud Migration", "Cybersecurity"]
+      services: ["Quantum Secure Infrastructure", "Edge Computing", "Cloud Migration", "Cybersecurity", "Network Security", "Data Protection"]
     }
   ]
 
@@ -71,6 +71,42 @@ export default function Services() {
       href: "/services/edge-computing-orchestration-platform",
       color: "from-green-400 to-teal-500",
       benefits: ["Reduce latency by 90%", "Improve performance by 70%", "Lower bandwidth costs by 60%", "Enable real-time decisions"]
+    },
+    {
+      title: "AI-Powered Email Responder",
+      description: "Automate email responses with AI intelligence. Reduce response time by 90% and increase customer satisfaction by 40%.",
+      price: "From $99/month",
+      features: ["AI Response Generation", "Smart Categorization", "24/7 Automation", "Performance Analytics"],
+      href: "/services/ai-email-responder",
+      color: "from-blue-400 to-purple-500",
+      benefits: ["Reduce response time by 90%", "Increase satisfaction by 40%", "Handle 10x more emails", "Eliminate repetitive tasks"]
+    },
+    {
+      title: "Mobile-First Survey Tool",
+      description: "Create engaging, mobile-optimized surveys that adapt based on user responses. Increase completion rates by 60%.",
+      price: "From $49/month",
+      features: ["Mobile-First Design", "Adaptive Questioning", "Real-Time Analytics", "Multi-Channel Distribution"],
+      href: "/services/mobile-survey-tool",
+      color: "from-green-400 to-blue-500",
+      benefits: ["Increase completion by 60%", "Reduce creation time by 80%", "3x more responses", "Real-time insights"]
+    },
+    {
+      title: "AI-Powered Talent Matching",
+      description: "Match businesses with tech professionals using AI algorithms. Reduce hiring time by 80% and increase success rate by 60%.",
+      price: "From $199/month",
+      features: ["AI-Powered Matching", "Precision Matching", "Rapid Deployment", "Quality Assurance"],
+      href: "/services/ai-talent-matching",
+      color: "from-purple-400 to-pink-500",
+      benefits: ["Reduce hiring time by 80%", "Increase success by 60%", "100K+ professionals", "95% matching accuracy"]
+    },
+    {
+      title: "E-Commerce Return Management",
+      description: "Streamline return process with intelligent automation. Reduce processing time by 70% and decrease fraud by 85%.",
+      price: "From $79/month",
+      features: ["Automated Processing", "Smart Inventory", "Shipping Integration", "Fraud Prevention"],
+      href: "/services/ecommerce-return-management",
+      color: "from-orange-400 to-red-500",
+      benefits: ["Reduce processing by 70%", "Decrease fraud by 85%", "Improve satisfaction by 45%", "Lower costs by 60%"]
     }
   ]
 

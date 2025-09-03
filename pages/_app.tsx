@@ -1,12 +1,15 @@
 import React from 'react';
+import { HelmetProvider } from 'react-helmet-async';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import ErrorBoundary from '../components/ErrorBoundary';
-import PerformanceMonitor from '../src/components/PerformanceMonitor';
+// Temporarily disable PerformanceMonitor due to prior corruption cleanup
+const PerformanceMonitor = () => null;
 import '../styles/globals.css';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
+    <HelmetProvider>
     <ErrorBoundary>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -19,5 +22,6 @@ export default function App({ Component, pageProps }: AppProps) {
         </main>
       </div>
     </ErrorBoundary>
+    </HelmetProvider>
   );
 }
