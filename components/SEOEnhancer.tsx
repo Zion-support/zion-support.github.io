@@ -1,6 +1,5 @@
 import React from 'react;
 import Head from 'next/head;
-;
 interface SEOEnhancerProps {title?: string;
   description?: string;
   keywords?: string;
@@ -10,12 +9,10 @@ interface SEOEnhancerProps {title?: string;
   noindex?: boolean;
   nofollow?: boolean;,
 }
-;
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({;
 title = 'Zion Tech Group - Leading Technology Solutions Provider', description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence with measurable results.', keywords = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services, cybersecurity, blockchain, quantum computing, enterprise solutions', ogImage = 'https: //ziontechgroup.com/og-image.jpg','  canonicalUrl = 'https: //ziontechgroup.com', structuredData,'  noindex = false, nofollow = false'}) => {;
   const defaultStructuredData = {;
     "@context": "https://schema.org", "@type": "Organization","    "name": "Zion Tech Group", "url": "https://ziontechgroup.com","    "logo": "https://ziontechgroup.com/logo.png", "description": description,"    "address": {"      "@type": "PostalAddress", "streetAddress": "364 E Main St STE 1008","      "addressLocality": "Middletown", "addressRegion": "DE","      "postalCode": "19709", "addressCountry": "US""    },"    "contactPoint": {"      "@type": "ContactPoint", "telephone": "+1-302-464-0950","      "contactType": "customer service", "email": "kleber@ziontechgroup.com""    },"    "sameAs": ["      "https://www.linkedin.com/company/zion-tech-group", "https: //github.com/Zion-Technologies""    ], "foundingDate": "2020","    "numberOfEmployees": "50-100", "services": ["      "AI Development","      "Cloud Architecture", "Cybersecurity","      "Blockchain Solutions", "Micro SaaS Development","      "Enterprise IT Services", "Digital Transformation""    ], "areaServed": "Worldwide","    "knowsAbout": ["      "Artificial Intelligence", "Machine Learning","      "Cloud Computing", "Cybersecurity","      "Blockchain Technology", "Quantum Computing","      "DevOps", "Data Analytics""    ]"  };const finalStructuredData = structuredData || defaultStructuredData;
-;
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({",;
   title = "Zion Tech Group - Leading Technology Solutions",";
   description = "Zion Tech Group provides cutting-edge AI, IT, and software development services.",";
@@ -38,12 +35,10 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({",;
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />"      <link rel="dns-prefetch" href="//www.google-analytics.com" />"      <link rel="dns-prefetch" href="//www.googletagmanager.com" />"      "      {/* Structured Data */}
       <script;
         type="application/ld+json""        dangerouslySetInnerHTML={{"          __html: JSON.stringify(finalStructuredData);,
-}}
+}
       />;
-      ;
       {/* Additional Performance Hints */}
 <meta httpEquiv="x-dns-prefetch-control" content="on" />"      <meta name="format-detection" content="telephone=no" />"      "      {/* Security Headers */}
-      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />"      <meta httpEquiv="X-Frame-Options" content="DENY" />"      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />"      <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />"    </Head>"  );};
-;
+      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />"      <meta httpEquiv="X-Frame-Options" content="DENY" />"      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />"      <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />"    </Head>"  );}
 export default SEOEnhancer;
 }

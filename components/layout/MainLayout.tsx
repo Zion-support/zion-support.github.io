@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-;
 interface MainLayoutProps {;
   children: React.ReactNode;
   title?: string;
@@ -8,7 +7,6 @@ interface MainLayoutProps {;
   keywords?: string;
   ogImage?: string;,
 }
-;
 const MainLayout: React.FC<MainLayoutProps> = ({;
   children,;
   title = 'Zion Tech Group - Leading Technology Solutions Provider',;
@@ -37,6 +35,5 @@ const MainLayout: React.FC<MainLayoutProps> = ({;
       </div>;
     </>;
   );,
-};
-;
+}
 export default MainLayout;

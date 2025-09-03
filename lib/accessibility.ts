@@ -15,20 +15,17 @@ export const accessibilityConfig = {;
     success: "Success",;
     warning: "Warning";,;,
 },;
-  ;
   // Focus management;
   focusManagement: {;
     skipToContent: true,;
     focusTrap: true,;
     focusVisible: true;,;,
 },;
-  ;
   // Color contrast;
   colorContrast: {;
     minimumRatio: 4.5,;
     enhancedRatio: 7.0;,;,
 },;
-  ;
   // Keyboard navigation;
   keyboardNavigation: {;
     tabIndex: 0,;
@@ -37,17 +34,14 @@ export const accessibilityConfig = {;
     enterKey: true,;
     spaceKey: true;,;,
 }
-}
 // Accessibility utilities;
 export const accessibilityUtils = {;
   // Generate unique IDs for ARIA attributes;
   generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2, 9)}`,;
-  ;
   // Check if element is visible;
   isVisible: ({;
     const style = window.getComputedStyle(element)) => $3;
     return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},;
-  ;
   // Announce to screen readers;
   announce: ({;
     const announcement = document.createElement("div")) => $3;
@@ -59,5 +53,4 @@ export const accessibilityUtils = {;
     setTimeout(() => {;
       document.body.removeChild(announcement);,;,
 }, 1000);,;,
-}
 }

@@ -22,7 +22,6 @@ const cspMeta = document.createElement("meta"),";
     document.head.appendChild(cspMeta),;
     // comment;
 const securityHeaders = {}
-;
     // comment;
 Object.entries(securityHeaders).forEach(([name, value]) => {";
       const meta = document.createElement("meta");,
@@ -60,7 +59,6 @@ frame-src "none";
     cspMeta.content = csp,;
     // comment;
 const securityHeaders = {}
-;
     // comment;
       meta.httpEquiv = name;
       meta.content = value;
@@ -79,7 +77,6 @@ const securityHeaders = {}
              !script.src.includes("google-analytics.com")) {"                    script.remove()}
 ;,
 })}
-;
     // comment;
 const monitorSuspiciousActivity = () => {;
             // comment;
@@ -144,7 +141,6 @@ iframes.forEach(iframe => {;
 }
 ;,
 })})}
-;
     // comment;
     detectXSS(),,;
     monitorSuspiciousActivity(),;
@@ -197,7 +193,6 @@ iframes.forEach(iframe => {;
         content="max-age="31536000" includeSubDomains preload";
     </Head>;
   )}
-;
 export default SecurityEnhancer,;
 export: default SecurityEnhancer,,;
 export default SecurityEnhancer,;

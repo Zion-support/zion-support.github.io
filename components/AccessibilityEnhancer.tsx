@@ -1,62 +1,49 @@
 import React, { useEffect, useState } from 'react';
-;
 interface AccessibilityEnhancerProps {;
   children: React.ReactNode;,
 }
-;
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {;
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [fontSize, setFontSize] = useState('normal');
   const [reducedMotion, setReducedMotion] = useState(false);
-;
   useEffect(() => {;
     // Check for user's motion preferences;
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     setReducedMotion(prefersReducedMotion);
-;
     // Apply accessibility settings from localStorage;
     const savedHighContrast = localStorage.getItem('highContrast') === 'true';
     const savedFontSize = localStorage.getItem('fontSize') || 'normal';
-    ;
     setIsHighContrast(savedHighContrast);
     setFontSize(savedFontSize);,
 }, []);
-;
   const applyAccessibilityStyles = (highContrast: boolean, fontSize: string, reducedMotion: boolean) => {;
     const root = document.documentElement;
-    ;
     // High contrast mode;
     if (highContrast) {;
       root.classList.add('high-contrast');,
 } else {;
       root.classList.remove('high-contrast');,
 }
-;
     // Font size adjustments;
     root.classList.remove('font-small', 'font-normal', 'font-large', 'font-extra-large');
     root.classList.add(`font-${fontSize}`);
-;
     // Reduced motion;
     if (reducedMotion) {;
       root.classList.add('reduced-motion');,
 } else {;
       root.classList.remove('reduced-motion');,
 }
-  };
-;
   const toggleHighContrast = () => {;
     const newValue = !isHighContrast;
     setIsHighContrast(newValue);
     localStorage.setItem('highContrast', newValue.toString());
     applyAccessibilityStyles(newValue, fontSize, reducedMotion);,
-};
-;
+}
   const changeFontSize = (newSize: string) => {;
     setFontSize(newSize);
     localStorage.setItem('fontSize', newSize);
     applyAccessibilityStyles(isHighContrast, newSize, reducedMotion);,
-};
-;
+}
   return (;
     <>;
       {/* Accessibility Controls */}
@@ -64,7 +51,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         <h3 className="text-sm font-semibold mb-2 text-gray-900 dark:text-white">;
           Accessibility Options;
         </h3>;
-        ;
         <div className="space-y-2">;
           <button;
             onClick={toggleHighContrast}
@@ -77,7 +63,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
           >;
             {isHighContrast ? 'Disable' : 'Enable'} High Contrast;
           </button>;
-          ;
           <div className="text-xs text-gray-600 dark:text-gray-300">;
             Font Size:;
           </div>;
@@ -121,6 +106,5 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       </div>;
     </>;
   );,
-};
-;
+}
 export default AccessibilityEnhancer;

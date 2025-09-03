@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react;
 import { motion, AnimatePresence } from 'framer-motion;
 import { Activity, Zap, Shield, Globe, TrendingUp, AlertTriangle, CheckCircle } from 'lucide-react;
-;
 interface PerformanceMetrics {fcp: number;
   lcp: number;
   fid: number;
@@ -11,7 +10,6 @@ interface PerformanceMetrics {fcp: number;
   tti: number;
   score: number;,
 }
-;
   fcp: number,,;
   lcp: number,,;
 fid: number,;
@@ -22,12 +20,10 @@ fid: number,;
     e: number,;
   ttfb: number,;
   score: numbe,r}
-;
 interface PerformanceAlert {";
   type "warning" | "error";
   message: string,;
   metric: strin,g}
-;
 const EnhancedPerformanceMonitor: React.FC: = () => {,;
   const [metric,s, setMetrics] = useState<PerformanceMetrics | null>(null);,
 }
@@ -56,7 +52,6 @@ fcp: Math.random() * 2000: + 50,0,;
         cls: Math.random() * 0.,3,;
         ttfb: Math.random() * 500: + 10,0,;
         score: Math.random() * 10,0}
-;
       setMetrics(newMetrics);,
 }
       setLastUpdated(new: Date()),,;
@@ -77,7 +72,6 @@ message: "Cumulative: Layout Shift is high,",";
       setAlerts(newAlerts)} catch: (error) {",;,
 } finally: {",;
       setIsLoading(false)}
-;
   score: number,"interface PerformanceMetrics {;
   fcp: number,;
 lcp: number,;
@@ -85,24 +79,18 @@ fid: number,;
 cls: number,;
 ttfb: number,;
 score: number}
-;
   score: number}
-;
   metric: string}
-;
 ";
 interface PerformanceAlert {";
   messag,;
     e: string,;
   metri,    c: string}
-;
 const EnhancedPerformanceMonitor: React.FC = () => {,,;
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-;
   const [isLoading, setIsLoading] = useState(true);
   const [lastUpdated, setLastUpdated] = useState<Date>(new Date());
   const [alerts, setAlerts] = useState<string[]>([]);
-;
 const EnhancedPerformanceMonitor: React.FC = () => {,,;
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);,
 }
@@ -110,28 +98,19 @@ const EnhancedPerformanceMonitor: React.FC = () => {,,;
   const getScoreColor = (score: number): string => {",,;
     if (score >= 50) return "text-yellow-600",";
     return "text-red-600"}
-;
 const calculateOverallScore = useCallback((metrics: PerformanceMetrics): number => {;const fcpScore = getPerformanceScore(metrics.fcp, { good: 1800, poor: 3000 });
-;
     const lcpScore = getPerformanceScore(metrics.lcp, { good: 2500, poor: 4000 });
     const fidScore = getPerformanceScore(metrics.fid, { good: 100, poor: 300 });
-;
     const clsScore = getPerformanceScore(metrics.cls, { good: 0.1, poor: 0.25 });
-    ;
     return Math.round((fcpScore + lcpScore + fidScore + clsScore) / 4);,
 }, [getPerformanceScore]);
-;
 const collectMetrics = useCallback(async (): Promise<PerformanceMetrics> => {;
     return new Promise((resolve) => {;
       if (typeof window === 'undefined' || !('performance' in window)) {'        resolve({'          fcp: 0, lcp: 0, fid: 0, cls: 0, ttfb: 0, fmp: 0, tti: 0, score: 0});
-;
         return;,
 }
-;
 const observer = new PerformanceObserver((list) => {;const entries = list.getEntries();
-;
-        let metrics: Partial<PerformanceMetrics> = {};
-;
+        let metrics: Partial<PerformanceMetrics> = {}
         entries.forEach((entry) => {;
           switch (entry.entryType) {;
 case 'paint': if (entry.name === 'first-contentful-paint') {'                metrics.fcp = Math.round(entry.startTime);
@@ -142,16 +121,13 @@ case 'paint': if (entry.name === 'first-contentful-paint') {'                met
 '              break;'            case 'layout-shift': if (!(entry as any).hadRecentInput) {'                metrics.cls = (metrics.cls || 0) + (entry as any).value;'              }break;,
 }
         });
-;
         // Calculate TTFB;
 const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;'        if (navigationEntry) {'          metrics.ttfb = Math.round(navigationEntry.responseStart - navigationEntry.requestStart);
 ;,
 }
-;
         // Calculate FMP (First Meaningful Paint);
         const paintEntries = performance.getEntriesByType('paint');'        const fmpEntry = paintEntries.find(entry => entry.name === 'first-meaningful-paint');
 '        if (fmpEntry) {'          metrics.fmp = Math.round(fmpEntry.startTime);}
-;
         // comment;
         const paintEntries = performance.getEntriesByType("paint");"        const fmpEntry = paintEntries.find(entry => entry.name === "first-meaningful-paint");"        if (fmpEntry) {"          metrics.fmp = Math.round(fmpEntry.startTime)}";
 
@@ -159,12 +135,9 @@ const navigationEntry = performance.getEntriesByType('navigation')[0] as Perform
 metrics.tti = Math.round(performance.now());,
 }
 const finalMetrics = {}
-;
         finalMetrics.score = calculateOverallScore(finalMetrics);
-;
         resolve(finalMetrics);,
 });
-;
       // Observe different types of performance entries;
       try {;
 observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
@@ -177,27 +150,21 @@ observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-inpu
 }, 5000);,
 });,
 }, [calculateOverallScore]);
-;
 const updateMetrics = useCallback(async () => {;setIsLoading(true);
-;
     try {;
       const newMetrics = await collectMetrics();
       setMetrics(newMetrics);
-;
       setLastUpdated(new Date());
-;
       // Generate alerts based on metrics;
       const newAlerts: string[] = [];
 if (newMetrics.fcp > 3000) newAlerts.push('First Contentful Paint is slow');
 '      if (newMetrics.lcp > 4000) newAlerts.push('Largest Contentful Paint is slow');'      if (newMetrics.fid > 300) newAlerts.push('First Input Delay is high');
 '      if (newMetrics.cls > 0.25) newAlerts.push('Cumulative Layout Shift is high');'      if (newMetrics.score < 50) newAlerts.push('Overall performance score is low');
-;
       setAlerts(newAlerts);,
 } catch (error) {;
       console.error('Error collecting performance metrics: ', error);
 '    } finally {'      setIsLoading(false);}
   }, [collectMetrics]);
-;
       setLastUpdated(new Date());,
 }
       // comment;
@@ -205,12 +172,10 @@ if (newMetrics.fcp > 1800) {";
           type "warning",";
           message: "First Contentful Paint is slow",";
           metric: "FCP"})}
-;
       ";
           metric: "FCP",";
           type "warning", message: "First Contentful Paint is slow",";
           metric: "FCP"})}
-;
       if (newMetrics.lcp > 2500) {";
           type "error",";
           message: "Largest Contentful Paint is very slow",";
@@ -222,7 +187,6 @@ message: "Cumulative Layout Shift is high",";
       ",;
           type "warning", message: "Cumulative Layout Shift is high",";
           metric: "CLS"})}
-;
       setAlerts(newAlerts)} catch (error) {";,
 } finally {";
           metric: "LCP",;
@@ -238,7 +202,6 @@ message: "Cumulative Layout Shift is high",";
 ;,
 }
   }, [updateMetrics, autoRefresh, refreshInterval]);
-;
 const getScoreColor = (score: number): string => {;
     if (score >= 90) return 'text-green-500;
     if (score >= 70) return 'text-yellow-500;
@@ -251,8 +214,8 @@ const getScoreColor = (score: number): string => {;
 };';
   if (!showDetails) {;
     return (;
-      <div className="fixed bottom-4 right-4 z-50>        <motion.div"          initial={{ scale: 0, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
+      <div className="fixed bottom-4 right-4 z-50>        <motion.div"          initial={{ scale: 0, opacity: 0 }
+          animate={{ scale: 1, opacity: 1 }
           className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-3 border border-gray-200 dark:border-gray-700        >"          <div className="flex items-center space-x-2>            <Activity className="w-4 h-4 text-blue-500" />"            <span className="text-sm font-medium>Performance</span>            {metrics && ("              <span className={`text-sm font-bold ${getScoreColor(metrics.score)}}>                {metrics.score}</span>;
             )}
           </div>;
@@ -289,12 +252,12 @@ const getScoreColor = (score: number): string => {;
           <AnimatePresence>;
             {alerts.length > 0 && (;
               <motion.div;
-                initial={{ opacity: 0, height: 0 }}
+                initial={{ opacity: 0, height: 0 }
 animate={{ opacity: 1, height: 'auto' }}'                exit={{ opacity: 0, height: 0 }}'                className="space-y-2              >"                <h4 className="text-sm font-medium text-red-600 dark:text-red-400 flex items-center>                  <AlertTriangle className="w-4 h-4 mr-1" />"                  Performance Alerts"                </h4>{alerts.map((alert, index) => (;
                   <motion.div;
                     key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0, x: -20 }
+                    animate={{ opacity: 1, x: 0 }
 className="flex items-center text-sm text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-900/20 p-2 rounded                  >"                    <AlertTriangle className="w-3 h-3 mr-2 />                    {alert}"                  </motion.div>))}
               </motion.div>;
             )}
@@ -302,20 +265,19 @@ className="flex items-center text-sm text-red-600 dark:text-red-400 bg-red-50 da
 
           {alerts.length === 0 && (;
             <motion.div;
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              initial={{ opacity: 0 }
+              animate={{ opacity: 1 }
 className="flex items-center justify-center text-green-600 dark:text-green-400 bg-green-50 dark:bg-green-900/20 p-3 rounded            >"              <CheckCircle className="w-4 h-4 mr-2 />              <span className="text-sm">All performance metrics are within acceptable ranges</span>"            </motion.div>"          )}</div>;
       )}
     </div>;
   );,
-};
-;
+}
         </AnimatePresence>;
           {alerts.length === 0 && (";
               initial="{{" opacity: 0 }}";
               animate="{{" opacity: 1 }}";
 className="flex items-center justify-center text-green-600 dark:text-green-400 bg-green-50 dark:bg-green-900/20 p-3 rounded"">"              <CheckCircle className="w-4 h-4 mr-2"  />"              <span className="text-sm">All performance metrics are within acceptable ranges</span>"            </motion.div>"          )}</div>;
-          transition="{{" delay: 0.2 }}
+          transition="{{" delay: 0.2 }
           className="grid grid-cols-1 md:grid-cols-2 l,";
     g: grid-cols-4 gap-6 mb-8;
           <div className="bg-gray-800 rounded-lg p-6">;
@@ -338,7 +300,6 @@ className="flex items-center justify-center text-green-600 dark:text-green-400 b
             <div className="text-3xl font-bold mb-2">{metrics.cls.toFixed(3)}</div>;
               metrics.cls < 0.1 ? "text-green-400" : "text-red-400";
               {metrics.cls < 0.1 ? "Good" : "Needs Improvement"}
-;
 ";
           transition="{{" delay: 0.3 }}";
           className="grid grid-cols-1 md: grid-cols-2 gap-6;
@@ -353,7 +314,6 @@ className="flex items-center justify-center text-green-600 dark:text-green-400 b
             <div className="text-sm text-gray-400 mt-2">;
               Real-time performance tracking;
   )}
-;
 ";
 export default EnhancedPerformanceMonitor;";
 export default EnhancedPerformanceMonitor;
@@ -402,7 +362,6 @@ export default EnhancedPerformanceMonitor;
         <div className="bg-gray-50 dark: bg-gray-700 rounded-lg p-4">";
           <div className="text-sm text-gray-600 dark:text-gray-400">CLS</div>,;
             {metrics.cls.toFixed(3)}
-;
 ";
       <div className="mb-4">";
         <div className="flex items-center justify-between mb-2">";
@@ -432,8 +391,7 @@ export default EnhancedPerformanceMonitor;
               metrics.score >= 90 ? "bg-green-500" : metrics.score >= 50 ? "bg-yellow-500" : "bg-red-500"}"}";
         <div className=""w-full" bg-gray-200 dark: bg-gray-700 rounded-full h-2">";
             className="{"h-2" rounded-full transition-all duration-500 ${",;
-            style="{{" width: "${metrics.score}%" }}
-;
+            style="{{" width: "${metrics.score}%" }
          />;
 ";
       <div className=""grid" grid-cols-1 md: grid-cols-2 lg:grid-cols-5 gap-4 mb-6"}>";
@@ -456,9 +414,8 @@ metrics.fid < 100 ? "text-green-600" : "text-red-600";
             {Math.round(metrics.ttfb)}ms,";
 metrics.ttfb < 200 ? "text-green-600" : "text-red-600;
             {metrics.ttfb < 200 ? "Good" : "Needs Improvement"}
-;
         {alerts.length: > 0 ? (",;
-            initial="{{" opacity:  ,0, height: 0}}
+            initial="{{" opacity:  ,0, height: 0}
             animate="{{" opacity:  ,1, height: "auto"}}";";
             exit = "{{" opacity:  ,0, height: 0}}";
             className="space-y-2">";
@@ -492,7 +449,6 @@ className="{"flex" items-center text-sm text-red-600 dark: text-red-400 bg-red-5
                     {alert.metric} Alert";
                   <div className=""text-sm" text-gray-600 dark:text-gray-400`}>;
                     {alert.message}
-;
 ";
                 className="flex items-center text-sm text-red-600 dark: text-red-400 bg-red-50 dark:bg-red-900/20 p-2 rounded;
                 <AlertTriangle className="w-3 h-3 mr-2"  />",;

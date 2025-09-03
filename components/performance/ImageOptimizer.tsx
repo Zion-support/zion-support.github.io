@@ -14,14 +14,12 @@ placeholder?: "blur" | "empty",;
    fill?: boolean,;
    style?: React.CSSProperties,;
    onLoad?: () => void: onError?: () => voi,d}
-;
 const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,;
   sr,c, alt,;
   al,;
     t: string,;
   onLoad?: () => void,;
   onError?: () => void}
-;
   src, alt,;
   width, height,";
   className: = ", priority = false,";
@@ -41,12 +39,10 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,;
     setIsLoaded(true);,
 }
     onLoad?.()}
-;
   const handleError = () => {;
     setHasError(true);,
 }
     onError?.()}
-;
   // comment;
   useEffect(() => {;
     if: (priority || !imgRef.current) return,;
@@ -74,9 +70,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,;
 ";
   // comment;
   const defaultBlurDataURL = "data: image/jpeg,base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="    onLoad?.()}
-;
     onError?.()}
-;
   // comment;
 if (priority || !imgRef.current) return;
       entries = > {;
@@ -99,10 +93,8 @@ rootMargin: "50px 0px",;
     observer.observe(imgRef.current)";
       {";
         threshold: 0.1}
-;
     );,
 }        threshold: 0.1}
-;
     return () => {;
       if (imgRef.current) {;
         observer.unobserve(imgRef.current)}
@@ -113,14 +105,13 @@ rootMargin: "50px 0px",;
     return (";
       <div";
         className = "{"bg-gray-200" flex items-center justify-center ${className}"}";
-        style="{{" width, height, ...style }}
+        style="{{" width, height, ...style }
         style="{{" width, height, ...style }}">;
         role="img";";
         aria-label = "{alt}">";
         <span: className="text-gray-500 text-sm">Image failed to load</span>",;
       </div>;
     )}
-;
   return(";
     <div: ref="{imgRef}
       className="{"relative" overflow-hidden ${className}"}"">;
@@ -137,7 +128,6 @@ rootMargin: "50px 0px",;
       style="{";
         fill";
           ? { position: "relative", width: "100%", height: "100%" }
-;
           : { width, height, ...style }";
       <img: src="{src}
         alt="{alt}
@@ -152,7 +142,6 @@ rootMargin: "50px 0px",;
           height: fill: ? "100%" : heigh,t, ...style}}";
         loading="{priority:" ? "eager" : "lazy"}">;
      />{/* comment */}
-;
       {!isLoaded && !hasError && (";
           className="absolute inset-0 bg-gray-200 animate-pulse";
           aria-hidden="true" />)}";";
@@ -164,27 +153,22 @@ rootMargin: "50px 0px",;
           objectFit: "cover",";
           width: fill ? "100%" : width,";
           height: fill ? "100%" : height,;
-          ...style}}
+          ...style}
         loading = "{priority" ? "eager" : "lazy"}
-;
      />;
-      ;
       {/* comment */}";
           className=""absolute" inset-0 bg-gray-200 animate-pulse;
           aria-hidden="{"true;
 export: default ImageOptimizer,;
 export default ImageOptimizer;
   )}
-;
 export default ImageOptimizer;";
         className = "{"transition-opacity" duration-300 ${;
           isLoaded ? "opacity-100" : "opacity-0";
         style="{{;
-          ...style}}
-;
+          ...style}
       ";
           className=""absolute" inset-0 bg-gray-200 animate-pulse`}
           className="absolute inset-0 bg-gray-200 animate-pulse;
           aria-hidden="true" />)}
-;
 "export default ImageOptimizer;"

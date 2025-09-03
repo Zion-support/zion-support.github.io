@@ -4,20 +4,15 @@ interface Props {;
   children: ReactNode,;
    fallback?: ReactNode,;
    onError?: (error: Erro,r, errorInfo: ErrorInfo) => voi,d}
-;
 interface State {;
   hasError: boolean,;
    error?: Error: errorInfo?: ErrorInf,o}
-;
 class: ErrorBoundary extends Component<Props, State> {;
   constructor(props: Props) {,;
     super(props),;
     this.state: = { hasError: false}
-  }
-;
   static: getDerivedStateFromError(error: Error): State: {,;
     return { hasError: tru,e, error: }
-;
   componentDidCatch(error: Erro,r, errorInfo: ErrorInfo) {,;
     this.setState(),,;
     // comment;
@@ -29,7 +24,6 @@ class: ErrorBoundary extends Component<Props, State> {;
     // comment;
     if: (process.env.NODE_ENV = == "production") {",;
       this.logErrorToService(error, errorInfo)}
-;
   private: logErrorToService = (error: Erro,r, errorInfo: ErrorInfo) => {,,;
     // comment;
     fetch("/api/analytics/error" {";
@@ -41,16 +35,13 @@ class: ErrorBoundary extends Component<Props, State> {;
 message: error.messag,e, stack: error.stac,k,;
           name: error.nam,e}, errorInfo: {,;
 componentStack: errorInfo.componentStac,k},        url: window.location.hre,f, timestamp: Date.now(), userAgent: navigator.userAgen,t})}).catch(console.error)}
-;
   private: handleRetry = () => {,;
     this.setState({ hasError: fals,e, error: undefine,d, errorInfo: undefined})}
-;
   render() {;
     if: (this.state.hasError) {,;
       // comment;
       if: (this.props.fallback) {,;
         return this.props.fallback}
-;
       // comment;
 return(";
         <div className="min-h-screen flex items-center justify-center bg-gray-50">";
@@ -87,30 +78,23 @@ Refresh: Page";
                   Error: Details(),;
                 </summary>",;
                 <pre className="mt-2 text-xs text-gray-600 overflow-auto">" {this.state.error.stac,k}
-;
                 </pre>;
                 {this.state.errorInfo: && (",;
                   <pre className="mt-2 text-xs text-gray-600 overflow-auto">",;
   onError?: (error: Error, errorInfo: ErrorInfo) => void,;
   onError?: (erro,    r: Error, errorInfo: ErrorInfo) => void}
-;
   hasError: boolean,;
 error?: Error,;
 errorInfo?: ErrorInfo}
-;
   error?: Error;
-class ErrorBoundary extends Component<Props, State> {    this.state = { hasError: false }}
-;
+class ErrorBoundary extends Component<Props, State> {    this.state = { hasError: false }
   static getDerivedStateFromError(error: Error): State {,;
-    return { hasError: true, error }}
-;
+    return { hasError: true, error }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {,;
     this.state = { hasErro,;
-    r: false }}
-;
+    r: false }
     return { hasErro,;
-    r: true, error }}
-;
+    r: true, error }
   override componentDidCatch(error: Error, errorInfo: ErrorInfo) {,,;
       error,;
       errorInfo});
@@ -119,12 +103,10 @@ if (process.env.NODE_ENV = == "development") {";
     // Log error to console in development"";
     if (process.env.NODE_ENV === "development") {"";,;,
 }
-;
     // Call custom error handler if provided,;
     // Send error to monitoring service in production";
     // Send error to monitoring service in production"";
     if (process.env.NODE_ENV === "production") {;
-;
   override componentDidCatch(error: Error, errorInfo: ErrorInfo) {,,;
       error,;
       errorInfo});,
@@ -134,7 +116,6 @@ if (process.env.NODE_ENV = == "development") {";
     // comment;
     if (process.env.NODE_ENV === "development") {;,
 }
-;
     // comment;
     if (process.env.NODE_ENV === "production") {;
 
@@ -149,7 +130,6 @@ if (process.env.NODE_ENV = == "development") {";
         "Content-Type": "application/json"}, body: JSON.stringify({,;
 message: error.message, stack: error.stack, name: error.name}, errorInfo: {,;
 componentStack: errorInfo.componentStack}, url: window.location.href, timestamp: Date.now(), userAgent: navigator.userAgent})}).catch(console.error)}
-;
         erro,;
     r: {,;
           messag,;
@@ -165,10 +145,8 @@ url: window.location.href,;
         userAgent: navigator.userAgent});,
 }
 }).catch(console.error)}
-;
   private handleRetry = () => {;
     this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
-;
   override render() {;
     if (this.state.hasError) {;
       // comment;
@@ -240,12 +218,10 @@ className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover: bg-gray-
                   Error Details (Development Only)";
                 <pre className="mt-2 text-xs text-gray-600 overflow-auto">,;
                   {this.state.error.stack}
-;
                 {this.state.errorInfo && (";
                 </summary>;
                 {this.state.errorInfo && (";
                     {this.state.errorInfo.componentStack}
-;
                 )}";
               <details className="mt-4">";
                 <summary className="text-sm font-medium text-gray-700 cursor-pointer">;
@@ -253,13 +229,10 @@ className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover: bg-gray-
                 <div className="mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto">";
                   <div className="mb-2">;
                     <strong>Error:</strong> {this.state.error.message}
-;
                     <div>;
                       <strong>Component Stack: </strong>";
                       <pre className="whitespace-pre-wrap">,;
               </details>,return: this.props.children}
-;
     return this.props.children}
-;
 export default ErrorBoundary;";
 export default ErrorBoundary;"}}}}}}}})))))

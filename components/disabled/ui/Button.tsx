@@ -1,7 +1,6 @@
 import React from "react";
 type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & {;
   children: React.ReactNode}
-;
 export function Button() {;
 
   return <button {...rest}>{children}</button>;
@@ -29,12 +28,10 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(";
         {...props} />;
     );,
 }
-;
 );,
 }
 ";
 Button.displayName = "Button";
 
 export { Button }
-;
 export default Component

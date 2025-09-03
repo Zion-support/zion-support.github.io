@@ -1,42 +1,1568 @@
 {
-  "timestamp": "2025-09-03T05:05:33.745Z",
-  "checks": [
-    {
-      "name": "Code Style",
-      "status": "failed",
-      "message": "Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: next: not found\n",
-      "timestamp": "2025-09-03T05:05:33.827Z"
+  "timestamp": "2025-09-03T15:42:30.590Z",
+  "files": {
+    "components/AIChatAssistant.js.test.ts": {
+      "path": "components/AIChatAssistant.js.test.ts",
+      "lines": 18,
+      "issues": [],
+      "complexity": 0
     },
-    {
-      "name": "Complexity",
-      "status": "warning",
-      "message": "High complexity detected",
-      "timestamp": "2025-09-03T05:05:35.041Z"
+    "components/AIChatAssistant.test.ts": {
+      "path": "components/AIChatAssistant.test.ts",
+      "lines": 18,
+      "issues": [],
+      "complexity": 0
     },
-    {
-      "name": "Duplication",
-      "status": "passed",
-      "message": "No significant duplication found",
-      "timestamp": "2025-09-03T05:06:44.316Z"
+    "components/AIChatbot.test.ts": {
+      "path": "components/AIChatbot.test.ts",
+      "lines": 15,
+      "issues": [],
+      "complexity": 0
     },
-    {
-      "name": "Security",
-      "status": "passed",
-      "message": "No security vulnerabilities found",
-      "timestamp": "2025-09-03T05:06:44.827Z"
+    "components/AIChatbotSystem.test.ts": {
+      "path": "components/AIChatbotSystem.test.ts",
+      "lines": 15,
+      "issues": [],
+      "complexity": 0
     },
-    {
-      "name": "Performance",
-      "status": "failed",
-      "message": "Build failed",
-      "timestamp": "2025-09-03T05:06:44.999Z"
+    "components/AICodeGenerator.test.ts": {
+      "path": "components/AICodeGenerator.test.ts",
+      "lines": 15,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/AccessibilityEnhancer.dynamic.jsx": {
+      "path": "components/AccessibilityEnhancer.dynamic.jsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/AccessibilityEnhancer.tsx": {
+      "path": "components/AccessibilityEnhancer.tsx",
+      "lines": 111,
+      "issues": [],
+      "complexity": 6
+    },
+    "components/AccessibilityManager.dynamic.jsx": {
+      "path": "components/AccessibilityManager.dynamic.jsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/AccessibilityManager.tsx": {
+      "path": "components/AccessibilityManager.tsx",
+      "lines": 117,
+      "issues": [],
+      "complexity": 5
+    },
+    "components/AdvancedAIAssistant.tsx": {
+      "path": "components/AdvancedAIAssistant.tsx",
+      "lines": 300,
+      "issues": [
+        {
+          "rule": "Duplicate Code",
+          "value": 9,
+          "message": "Potential duplicate code detected"
+        }
+      ],
+      "complexity": 6
+    },
+    "components/AdvancedDataVisualization.tsx": {
+      "path": "components/AdvancedDataVisualization.tsx",
+      "lines": 67,
+      "issues": [],
+      "complexity": 6
+    },
+    "components/AdvancedNotificationCenter.tsx": {
+      "path": "components/AdvancedNotificationCenter.tsx",
+      "lines": 157,
+      "issues": [],
+      "complexity": 11
+    },
+    "components/AdvancedSearch.tsx": {
+      "path": "components/AdvancedSearch.tsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/Analytics.dynamic.jsx": {
+      "path": "components/Analytics.dynamic.jsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/Analytics.tsx": {
+      "path": "components/Analytics.tsx",
+      "lines": 251,
+      "issues": [
+        {
+          "rule": "Complexity",
+          "value": 37,
+          "message": "High complexity detected"
+        },
+        {
+          "rule": "Duplicate Code",
+          "value": 16,
+          "message": "Potential duplicate code detected"
+        }
+      ],
+      "complexity": 37
+    },
+    "components/AnalyticsDashboard.tsx": {
+      "path": "components/AnalyticsDashboard.tsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/AnalyticsManager.dynamic.jsx": {
+      "path": "components/AnalyticsManager.dynamic.jsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/AnalyticsManager.tsx": {
+      "path": "components/AnalyticsManager.tsx",
+      "lines": 222,
+      "issues": [],
+      "complexity": 6
+    },
+    "components/AnalyticsTracker.dynamic.jsx": {
+      "path": "components/AnalyticsTracker.dynamic.jsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/AnalyticsTracker.tsx": {
+      "path": "components/AnalyticsTracker.tsx",
+      "lines": 153,
+      "issues": [],
+      "complexity": 11
+    },
+    "components/ContactForm.dynamic.jsx": {
+      "path": "components/ContactForm.dynamic.jsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/ContactFormEnhanced.dynamic.jsx": {
+      "path": "components/ContactFormEnhanced.dynamic.jsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/ContactFormEnhanced.tsx": {
+      "path": "components/ContactFormEnhanced.tsx",
+      "lines": 71,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/EnhancedAnalytics.dynamic.jsx": {
+      "path": "components/EnhancedAnalytics.dynamic.jsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/EnhancedAnalytics.tsx": {
+      "path": "components/EnhancedAnalytics.tsx",
+      "lines": 278,
+      "issues": [],
+      "complexity": 9
+    },
+    "components/EnhancedContactForm.tsx": {
+      "path": "components/EnhancedContactForm.tsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/EnhancedErrorBoundary.dynamic.jsx": {
+      "path": "components/EnhancedErrorBoundary.dynamic.jsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/EnhancedErrorBoundary.tsx": {
+      "path": "components/EnhancedErrorBoundary.tsx",
+      "lines": 342,
+      "issues": [
+        {
+          "rule": "Complexity",
+          "value": 21,
+          "message": "High complexity detected"
+        },
+        {
+          "rule": "Duplicate Code",
+          "value": 10,
+          "message": "Potential duplicate code detected"
+        }
+      ],
+      "complexity": 21
+    },
+    "components/EnhancedFooter.dynamic.jsx": {
+      "path": "components/EnhancedFooter.dynamic.jsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/EnhancedFooter.tsx": {
+      "path": "components/EnhancedFooter.tsx",
+      "lines": 206,
+      "issues": [
+        {
+          "rule": "Duplicate Code",
+          "value": 7,
+          "message": "Potential duplicate code detected"
+        }
+      ],
+      "complexity": 0
+    },
+    "components/EnhancedHeader.tsx": {
+      "path": "components/EnhancedHeader.tsx",
+      "lines": 230,
+      "issues": [
+        {
+          "rule": "Duplicate Code",
+          "value": 19,
+          "message": "Potential duplicate code detected"
+        }
+      ],
+      "complexity": 7
+    },
+    "components/EnhancedLayout.tsx": {
+      "path": "components/EnhancedLayout.tsx",
+      "lines": 162,
+      "issues": [
+        {
+          "rule": "Duplicate Code",
+          "value": 6,
+          "message": "Potential duplicate code detected"
+        }
+      ],
+      "complexity": 11
+    },
+    "components/EnhancedNavigation.dynamic.jsx": {
+      "path": "components/EnhancedNavigation.dynamic.jsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/EnhancedPerformanceMetrics.tsx": {
+      "path": "components/EnhancedPerformanceMetrics.tsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/EnhancedPerformanceMonitor.dynamic.jsx": {
+      "path": "components/EnhancedPerformanceMonitor.dynamic.jsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/EnhancedPerformanceMonitor.tsx": {
+      "path": "components/EnhancedPerformanceMonitor.tsx",
+      "lines": 466,
+      "issues": [
+        {
+          "rule": "Complexity",
+          "value": 47,
+          "message": "High complexity detected"
+        },
+        {
+          "rule": "Duplicate Code",
+          "value": 13,
+          "message": "Potential duplicate code detected"
+        }
+      ],
+      "complexity": 47
+    },
+    "components/EnhancedSEO.dynamic.jsx": {
+      "path": "components/EnhancedSEO.dynamic.jsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/EnhancedSEO.tsx": {
+      "path": "components/EnhancedSEO.tsx",
+      "lines": 295,
+      "issues": [
+        {
+          "rule": "Duplicate Code",
+          "value": 29,
+          "message": "Potential duplicate code detected"
+        }
+      ],
+      "complexity": 13
+    },
+    "components/EnhancedSecurityDashboard.tsx": {
+      "path": "components/EnhancedSecurityDashboard.tsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/ErrorBoundary.dynamic.jsx": {
+      "path": "components/ErrorBoundary.dynamic.jsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/ErrorBoundary.jsx": {
+      "path": "components/ErrorBoundary.jsx",
+      "lines": 3,
+      "issues": [],
+      "complexity": 1
+    },
+    "components/ErrorBoundary.tsx": {
+      "path": "components/ErrorBoundary.tsx",
+      "lines": 75,
+      "issues": [],
+      "complexity": 5
+    },
+    "components/FloatingContactWidget.tsx": {
+      "path": "components/FloatingContactWidget.tsx",
+      "lines": 124,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/Footer.dynamic.jsx": {
+      "path": "components/Footer.dynamic.jsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/Footer.tsx": {
+      "path": "components/Footer.tsx",
+      "lines": 195,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/Header.dynamic.jsx": {
+      "path": "components/Header.dynamic.jsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/HeroSection.tsx": {
+      "path": "components/HeroSection.tsx",
+      "lines": 86,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/ImageOptimizer.dynamic.jsx": {
+      "path": "components/ImageOptimizer.dynamic.jsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/InteractiveElements.dynamic.jsx": {
+      "path": "components/InteractiveElements.dynamic.jsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/Layout.dynamic.jsx": {
+      "path": "components/Layout.dynamic.jsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/Layout.tsx": {
+      "path": "components/Layout.tsx",
+      "lines": 41,
+      "issues": [],
+      "complexity": 4
+    },
+    "components/Loading.tsx": {
+      "path": "components/Loading.tsx",
+      "lines": 21,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/LoadingSpinner.dynamic.jsx": {
+      "path": "components/LoadingSpinner.dynamic.jsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/LoadingSpinner.tsx": {
+      "path": "components/LoadingSpinner.tsx",
+      "lines": 17,
+      "issues": [],
+      "complexity": 2
+    },
+    "components/MainLayout.dynamic.jsx": {
+      "path": "components/MainLayout.dynamic.jsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/MainSidebar.dynamic.jsx": {
+      "path": "components/MainSidebar.dynamic.jsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/MainSidebar.tsx": {
+      "path": "components/MainSidebar.tsx",
+      "lines": 191,
+      "issues": [],
+      "complexity": 6
+    },
+    "components/ModernLayout.dynamic.jsx": {
+      "path": "components/ModernLayout.dynamic.jsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/Navigation.dynamic.jsx": {
+      "path": "components/Navigation.dynamic.jsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/Navigation.tsx": {
+      "path": "components/Navigation.tsx",
+      "lines": 149,
+      "issues": [],
+      "complexity": 2
+    },
+    "components/NotificationSystem.tsx": {
+      "path": "components/NotificationSystem.tsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/OptimizedImage.dynamic.jsx": {
+      "path": "components/OptimizedImage.dynamic.jsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/OptimizedImage.tsx": {
+      "path": "components/OptimizedImage.tsx",
+      "lines": 134,
+      "issues": [
+        {
+          "rule": "Complexity",
+          "value": 23,
+          "message": "High complexity detected"
+        }
+      ],
+      "complexity": 23
+    },
+    "components/PWARegistration.dynamic.jsx": {
+      "path": "components/PWARegistration.dynamic.jsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/PWARegistration.tsx": {
+      "path": "components/PWARegistration.tsx",
+      "lines": 365,
+      "issues": [
+        {
+          "rule": "Duplicate Code",
+          "value": 8,
+          "message": "Potential duplicate code detected"
+        }
+      ],
+      "complexity": 17
+    },
+    "components/PerformanceEnhancer.dynamic.jsx": {
+      "path": "components/PerformanceEnhancer.dynamic.jsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/PerformanceEnhancer.tsx": {
+      "path": "components/PerformanceEnhancer.tsx",
+      "lines": 468,
+      "issues": [
+        {
+          "rule": "Complexity",
+          "value": 44,
+          "message": "High complexity detected"
+        },
+        {
+          "rule": "Duplicate Code",
+          "value": 22,
+          "message": "Potential duplicate code detected"
+        }
+      ],
+      "complexity": 44
+    },
+    "components/PerformanceMonitor.dynamic.jsx": {
+      "path": "components/PerformanceMonitor.dynamic.jsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/PerformanceMonitor.tsx": {
+      "path": "components/PerformanceMonitor.tsx",
+      "lines": 82,
+      "issues": [],
+      "complexity": 16
+    },
+    "components/PerformanceOptimizer.dynamic.jsx": {
+      "path": "components/PerformanceOptimizer.dynamic.jsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/PerformanceOptimizer.tsx": {
+      "path": "components/PerformanceOptimizer.tsx",
+      "lines": 68,
+      "issues": [],
+      "complexity": 16
+    },
+    "components/PricingGuide.tsx": {
+      "path": "components/PricingGuide.tsx",
+      "lines": 427,
+      "issues": [
+        {
+          "rule": "Duplicate Code",
+          "value": 6,
+          "message": "Potential duplicate code detected"
+        }
+      ],
+      "complexity": 6
+    },
+    "components/SEO.dynamic.jsx": {
+      "path": "components/SEO.dynamic.jsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/SEO.tsx": {
+      "path": "components/SEO.tsx",
+      "lines": 83,
+      "issues": [],
+      "complexity": 5
+    },
+    "components/SEOEnhancer.dynamic.jsx": {
+      "path": "components/SEOEnhancer.dynamic.jsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/SEOEnhancer.tsx": {
+      "path": "components/SEOEnhancer.tsx",
+      "lines": 44,
+      "issues": [],
+      "complexity": 10
+    },
+    "components/SEOHead.dynamic.jsx": {
+      "path": "components/SEOHead.dynamic.jsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/SEOHead.tsx": {
+      "path": "components/SEOHead.tsx",
+      "lines": 100,
+      "issues": [],
+      "complexity": 13
+    },
+    "components/SEOOptimizer.dynamic.jsx": {
+      "path": "components/SEOOptimizer.dynamic.jsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/SEOOptimizer.tsx": {
+      "path": "components/SEOOptimizer.tsx",
+      "lines": 138,
+      "issues": [],
+      "complexity": 19
+    },
+    "components/SecurityDashboard.dynamic.jsx": {
+      "path": "components/SecurityDashboard.dynamic.jsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/SecurityDashboard.tsx": {
+      "path": "components/SecurityDashboard.tsx",
+      "lines": 281,
+      "issues": [],
+      "complexity": 11
+    },
+    "components/SecurityEnhancer.dynamic.jsx": {
+      "path": "components/SecurityEnhancer.dynamic.jsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/SecurityEnhancer.tsx": {
+      "path": "components/SecurityEnhancer.tsx",
+      "lines": 199,
+      "issues": [],
+      "complexity": 9
+    },
+    "components/SecurityHeaders.dynamic.jsx": {
+      "path": "components/SecurityHeaders.dynamic.jsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/SecurityHeaders.tsx": {
+      "path": "components/SecurityHeaders.tsx",
+      "lines": 77,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/ServicesSection.dynamic.jsx": {
+      "path": "components/ServicesSection.dynamic.jsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/ServicesSection.tsx": {
+      "path": "components/ServicesSection.tsx",
+      "lines": 143,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/Sidebar.tsx": {
+      "path": "components/Sidebar.tsx",
+      "lines": 222,
+      "issues": [
+        {
+          "rule": "Duplicate Code",
+          "value": 11,
+          "message": "Potential duplicate code detected"
+        }
+      ],
+      "complexity": 5
+    },
+    "components/StructuredData.tsx": {
+      "path": "components/StructuredData.tsx",
+      "lines": 106,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/TestimonialsSection.dynamic.jsx": {
+      "path": "components/TestimonialsSection.dynamic.jsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/TestimonialsSection.tsx": {
+      "path": "components/TestimonialsSection.tsx",
+      "lines": 155,
+      "issues": [],
+      "complexity": 3
+    },
+    "components/WebVitals.dynamic.jsx": {
+      "path": "components/WebVitals.dynamic.jsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/WebVitals.tsx": {
+      "path": "components/WebVitals.tsx",
+      "lines": 24,
+      "issues": [],
+      "complexity": 3
+    },
+    "components/UI/InteractiveElements.tsx": {
+      "path": "components/UI/InteractiveElements.tsx",
+      "lines": 704,
+      "issues": [
+        {
+          "rule": "File Length",
+          "value": 1,
+          "message": "Files should be under 500 lines"
+        },
+        {
+          "rule": "Complexity",
+          "value": 64,
+          "message": "High complexity detected"
+        },
+        {
+          "rule": "Duplicate Code",
+          "value": 28,
+          "message": "Potential duplicate code detected"
+        }
+      ],
+      "complexity": 64
+    },
+    "components/accessibility/AccessibilityEnhancer.tsx": {
+      "path": "components/accessibility/AccessibilityEnhancer.tsx",
+      "lines": 251,
+      "issues": [
+        {
+          "rule": "Complexity",
+          "value": 36,
+          "message": "High complexity detected"
+        }
+      ],
+      "complexity": 36
+    },
+    "components/disabled/Layout.tsx": {
+      "path": "components/disabled/Layout.tsx",
+      "lines": 2,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/disabled/PerformanceOptimizer.tsx": {
+      "path": "components/disabled/PerformanceOptimizer.tsx",
+      "lines": 57,
+      "issues": [],
+      "complexity": 3
+    },
+    "components/disabled/SEO.tsx": {
+      "path": "components/disabled/SEO.tsx",
+      "lines": 91,
+      "issues": [],
+      "complexity": 7
+    },
+    "components/disabled/SEOEnhancer.tsx": {
+      "path": "components/disabled/SEOEnhancer.tsx",
+      "lines": 53,
+      "issues": [],
+      "complexity": 9
+    },
+    "components/error/ErrorBoundary.tsx": {
+      "path": "components/error/ErrorBoundary.tsx",
+      "lines": 238,
+      "issues": [
+        {
+          "rule": "Duplicate Code",
+          "value": 11,
+          "message": "Potential duplicate code detected"
+        }
+      ],
+      "complexity": 19
+    },
+    "components/layout/AuthLayout.tsx": {
+      "path": "components/layout/AuthLayout.tsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/layout/EnhancedFooter.tsx": {
+      "path": "components/layout/EnhancedFooter.tsx",
+      "lines": 98,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/layout/EnhancedLayout.tsx": {
+      "path": "components/layout/EnhancedLayout.tsx",
+      "lines": 14,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/layout/EnhancedNavigation.tsx": {
+      "path": "components/layout/EnhancedNavigation.tsx",
+      "lines": 186,
+      "issues": [
+        {
+          "rule": "Duplicate Code",
+          "value": 9,
+          "message": "Potential duplicate code detected"
+        }
+      ],
+      "complexity": 2
+    },
+    "components/layout/EnhancedSidebar2025.tsx": {
+      "path": "components/layout/EnhancedSidebar2025.tsx",
+      "lines": 976,
+      "issues": [
+        {
+          "rule": "File Length",
+          "value": 1,
+          "message": "Files should be under 500 lines"
+        },
+        {
+          "rule": "Complexity",
+          "value": 35,
+          "message": "High complexity detected"
+        },
+        {
+          "rule": "Duplicate Code",
+          "value": 54,
+          "message": "Potential duplicate code detected"
+        }
+      ],
+      "complexity": 35
+    },
+    "components/layout/Footer.tsx": {
+      "path": "components/layout/Footer.tsx",
+      "lines": 666,
+      "issues": [
+        {
+          "rule": "File Length",
+          "value": 1,
+          "message": "Files should be under 500 lines"
+        },
+        {
+          "rule": "Duplicate Code",
+          "value": 41,
+          "message": "Potential duplicate code detected"
+        }
+      ],
+      "complexity": 0
+    },
+    "components/layout/Header.tsx": {
+      "path": "components/layout/Header.tsx",
+      "lines": 938,
+      "issues": [
+        {
+          "rule": "File Length",
+          "value": 1,
+          "message": "Files should be under 500 lines"
+        },
+        {
+          "rule": "Duplicate Code",
+          "value": 87,
+          "message": "Potential duplicate code detected"
+        }
+      ],
+      "complexity": 13
+    },
+    "components/layout/ImprovedFooter.tsx": {
+      "path": "components/layout/ImprovedFooter.tsx",
+      "lines": 193,
+      "issues": [
+        {
+          "rule": "Duplicate Code",
+          "value": 6,
+          "message": "Potential duplicate code detected"
+        }
+      ],
+      "complexity": 0
+    },
+    "components/layout/ImprovedNavigation.tsx": {
+      "path": "components/layout/ImprovedNavigation.tsx",
+      "lines": 172,
+      "issues": [
+        {
+          "rule": "Duplicate Code",
+          "value": 10,
+          "message": "Potential duplicate code detected"
+        }
+      ],
+      "complexity": 2
+    },
+    "components/layout/Layout.tsx": {
+      "path": "components/layout/Layout.tsx",
+      "lines": 15,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/layout/MainLayout.tsx": {
+      "path": "components/layout/MainLayout.tsx",
+      "lines": 39,
+      "issues": [],
+      "complexity": 4
+    },
+    "components/layout/ModernFooter.tsx": {
+      "path": "components/layout/ModernFooter.tsx",
+      "lines": 69,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/layout/ModernHeader.tsx": {
+      "path": "components/layout/ModernHeader.tsx",
+      "lines": 111,
+      "issues": [],
+      "complexity": 1
+    },
+    "components/layout/Sidebar.tsx": {
+      "path": "components/layout/Sidebar.tsx",
+      "lines": 162,
+      "issues": [],
+      "complexity": 1
+    },
+    "components/layout/UltraAdvancedNavigation.tsx": {
+      "path": "components/layout/UltraAdvancedNavigation.tsx",
+      "lines": 5,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/layout/UltraFuturisticFooter2034.tsx": {
+      "path": "components/layout/UltraFuturisticFooter2034.tsx",
+      "lines": 8,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/performance/ImageOptimizer.tsx": {
+      "path": "components/performance/ImageOptimizer.tsx",
+      "lines": 174,
+      "issues": [
+        {
+          "rule": "Complexity",
+          "value": 33,
+          "message": "High complexity detected"
+        }
+      ],
+      "complexity": 33
+    },
+    "components/performance/PerformanceMonitor.tsx": {
+      "path": "components/performance/PerformanceMonitor.tsx",
+      "lines": 303,
+      "issues": [
+        {
+          "rule": "Complexity",
+          "value": 35,
+          "message": "High complexity detected"
+        },
+        {
+          "rule": "Duplicate Code",
+          "value": 19,
+          "message": "Potential duplicate code detected"
+        }
+      ],
+      "complexity": 35
+    },
+    "components/seo/SEOHead.tsx": {
+      "path": "components/seo/SEOHead.tsx",
+      "lines": 161,
+      "issues": [
+        {
+          "rule": "Duplicate Code",
+          "value": 9,
+          "message": "Potential duplicate code detected"
+        }
+      ],
+      "complexity": 13
+    },
+    "components/ui/AnimatedBackground.tsx": {
+      "path": "components/ui/AnimatedBackground.tsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 1
+    },
+    "components/ui/Badge.tsx": {
+      "path": "components/ui/Badge.tsx",
+      "lines": 43,
+      "issues": [],
+      "complexity": 6
+    },
+    "components/ui/Button.tsx": {
+      "path": "components/ui/Button.tsx",
+      "lines": 63,
+      "issues": [],
+      "complexity": 3
+    },
+    "components/ui/Card.tsx": {
+      "path": "components/ui/Card.tsx",
+      "lines": 95,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/ui/EnhancedButton.tsx": {
+      "path": "components/ui/EnhancedButton.tsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/ui/EnhancedCard.tsx": {
+      "path": "components/ui/EnhancedCard.tsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 1
+    },
+    "components/ui/EnhancedMarketplaceCard.tsx": {
+      "path": "components/ui/EnhancedMarketplaceCard.tsx",
+      "lines": 29,
+      "issues": [],
+      "complexity": 2
+    },
+    "components/ui/ErrorBoundary.tsx": {
+      "path": "components/ui/ErrorBoundary.tsx",
+      "lines": 94,
+      "issues": [],
+      "complexity": 6
+    },
+    "components/ui/FuturisticAnimatedBackground2029.tsx": {
+      "path": "components/ui/FuturisticAnimatedBackground2029.tsx",
+      "lines": 69,
+      "issues": [],
+      "complexity": 6
+    },
+    "components/ui/FuturisticHero.tsx": {
+      "path": "components/ui/FuturisticHero.tsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/ui/GlassmorphismCard.tsx": {
+      "path": "components/ui/GlassmorphismCard.tsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/ui/InteractiveNavigation.tsx": {
+      "path": "components/ui/InteractiveNavigation.tsx",
+      "lines": 22,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/ui/InteractiveSearch.tsx": {
+      "path": "components/ui/InteractiveSearch.tsx",
+      "lines": 30,
+      "issues": [],
+      "complexity": 3
+    },
+    "components/ui/InteractiveStats.tsx": {
+      "path": "components/ui/InteractiveStats.tsx",
+      "lines": 38,
+      "issues": [],
+      "complexity": 4
+    },
+    "components/ui/LoadingSpinner.tsx": {
+      "path": "components/ui/LoadingSpinner.tsx",
+      "lines": 21,
+      "issues": [],
+      "complexity": 2
+    },
+    "components/ui/OptimizedImage.tsx": {
+      "path": "components/ui/OptimizedImage.tsx",
+      "lines": 55,
+      "issues": [],
+      "complexity": 9
+    },
+    "components/ui/Pagination.tsx": {
+      "path": "components/ui/Pagination.tsx",
+      "lines": 104,
+      "issues": [],
+      "complexity": 11
+    },
+    "components/ui/ResponsiveGrid.tsx": {
+      "path": "components/ui/ResponsiveGrid.tsx",
+      "lines": 45,
+      "issues": [],
+      "complexity": 13
+    },
+    "components/ui/Skeleton.tsx": {
+      "path": "components/ui/Skeleton.tsx",
+      "lines": 41,
+      "issues": [],
+      "complexity": 11
+    },
+    "components/ui/UltraFuturisticBackground.tsx": {
+      "path": "components/ui/UltraFuturisticBackground.tsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/ui/UltraQuantumHolographicBackgroundV4.tsx": {
+      "path": "components/ui/UltraQuantumHolographicBackgroundV4.tsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/disabled/ui/Badge.tsx": {
+      "path": "components/disabled/ui/Badge.tsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/disabled/ui/Button.tsx": {
+      "path": "components/disabled/ui/Button.tsx",
+      "lines": 37,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/disabled/ui/Card.tsx": {
+      "path": "components/disabled/ui/Card.tsx",
+      "lines": 83,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/disabled/ui/ErrorBoundary.tsx": {
+      "path": "components/disabled/ui/ErrorBoundary.tsx",
+      "lines": 24,
+      "issues": [],
+      "complexity": 2
+    },
+    "components/disabled/ui/FuturisticAnimatedBackground2029.tsx": {
+      "path": "components/disabled/ui/FuturisticAnimatedBackground2029.tsx",
+      "lines": 294,
+      "issues": [
+        {
+          "rule": "Complexity",
+          "value": 30,
+          "message": "High complexity detected"
+        },
+        {
+          "rule": "Duplicate Code",
+          "value": 15,
+          "message": "Potential duplicate code detected"
+        }
+      ],
+      "complexity": 30
+    },
+    "components/disabled/ui/InteractiveNavigation.tsx": {
+      "path": "components/disabled/ui/InteractiveNavigation.tsx",
+      "lines": 8,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/disabled/ui/InteractiveStats.tsx": {
+      "path": "components/disabled/ui/InteractiveStats.tsx",
+      "lines": 36,
+      "issues": [],
+      "complexity": 3
+    },
+    "components/disabled/ui/LoadingSpinner.tsx": {
+      "path": "components/disabled/ui/LoadingSpinner.tsx",
+      "lines": 3,
+      "issues": [],
+      "complexity": 1
+    },
+    "components/disabled/ui/OptimizedImage.tsx": {
+      "path": "components/disabled/ui/OptimizedImage.tsx",
+      "lines": 55,
+      "issues": [],
+      "complexity": 8
+    },
+    "components/disabled/ui/Skeleton.tsx": {
+      "path": "components/disabled/ui/Skeleton.tsx",
+      "lines": 43,
+      "issues": [],
+      "complexity": 11
+    },
+    "components/disabled/ui/UltraFuturisticBackground.tsx": {
+      "path": "components/disabled/ui/UltraFuturisticBackground.tsx",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "components/disabled/ui/UltraQuantumHolographicBackgroundV4.tsx": {
+      "path": "components/disabled/ui/UltraQuantumHolographicBackgroundV4.tsx",
+      "lines": 10,
+      "issues": [],
+      "complexity": 0
+    },
+    "pages/_app.tsx": {
+      "path": "pages/_app.tsx",
+      "lines": 60,
+      "issues": [],
+      "complexity": 0
+    },
+    "pages/contact.tsx": {
+      "path": "pages/contact.tsx",
+      "lines": 11,
+      "issues": [],
+      "complexity": 0
+    },
+    "pages/index.tsx": {
+      "path": "pages/index.tsx",
+      "lines": 10,
+      "issues": [],
+      "complexity": 0
+    },
+    "pages/pricing.tsx": {
+      "path": "pages/pricing.tsx",
+      "lines": 88,
+      "issues": [],
+      "complexity": 0
+    },
+    "pages/privacy.tsx": {
+      "path": "pages/privacy.tsx",
+      "lines": 42,
+      "issues": [],
+      "complexity": 0
+    },
+    "pages/services-catalog.tsx": {
+      "path": "pages/services-catalog.tsx",
+      "lines": 251,
+      "issues": [],
+      "complexity": 1
+    },
+    "pages/services.tsx": {
+      "path": "pages/services.tsx",
+      "lines": 103,
+      "issues": [],
+      "complexity": 0
+    },
+    "lib/accessibility.ts": {
+      "path": "lib/accessibility.ts",
+      "lines": 56,
+      "issues": [],
+      "complexity": 0
+    },
+    "lib/analytics.ts": {
+      "path": "lib/analytics.ts",
+      "lines": 53,
+      "issues": [],
+      "complexity": 7
+    },
+    "lib/security.ts": {
+      "path": "lib/security.ts",
+      "lines": 44,
+      "issues": [],
+      "complexity": 0
+    },
+    "lib/utils.ts": {
+      "path": "lib/utils.ts",
+      "lines": 4,
+      "issues": [],
+      "complexity": 0
+    },
+    "scripts/clean-console-logs.js": {
+      "path": "scripts/clean-console-logs.js",
+      "lines": 1,
+      "issues": [],
+      "complexity": 10
+    },
+    "scripts/fix-import-concatenation.js": {
+      "path": "scripts/fix-import-concatenation.js",
+      "lines": 1,
+      "issues": [],
+      "complexity": 13
+    },
+    "scripts/linkedin-automation.ts": {
+      "path": "scripts/linkedin-automation.ts",
+      "lines": 3,
+      "issues": [],
+      "complexity": 0
+    },
+    "scripts/linkedin_automation.js": {
+      "path": "scripts/linkedin_automation.js",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "scripts/test-linkedin-automation.js": {
+      "path": "scripts/test-linkedin-automation.js",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
+    },
+    "scripts/test_linkedin_automation.js": {
+      "path": "scripts/test_linkedin_automation.js",
+      "lines": 1,
+      "issues": [],
+      "complexity": 0
     }
-  ],
-  "score": 70,
+  },
   "summary": {
-    "passed": 2,
-    "failed": 2,
-    "warnings": 0,
-    "warning": null
+    "totalFiles": 170,
+    "totalLines": 15340,
+    "averageComplexity": "5.04",
+    "issues": [
+      {
+        "file": "components/AdvancedAIAssistant.tsx",
+        "issues": [
+          {
+            "rule": "Duplicate Code",
+            "value": 9,
+            "message": "Potential duplicate code detected"
+          }
+        ]
+      },
+      {
+        "file": "components/Analytics.tsx",
+        "issues": [
+          {
+            "rule": "Complexity",
+            "value": 37,
+            "message": "High complexity detected"
+          },
+          {
+            "rule": "Duplicate Code",
+            "value": 16,
+            "message": "Potential duplicate code detected"
+          }
+        ]
+      },
+      {
+        "file": "components/EnhancedErrorBoundary.tsx",
+        "issues": [
+          {
+            "rule": "Complexity",
+            "value": 21,
+            "message": "High complexity detected"
+          },
+          {
+            "rule": "Duplicate Code",
+            "value": 10,
+            "message": "Potential duplicate code detected"
+          }
+        ]
+      },
+      {
+        "file": "components/EnhancedFooter.tsx",
+        "issues": [
+          {
+            "rule": "Duplicate Code",
+            "value": 7,
+            "message": "Potential duplicate code detected"
+          }
+        ]
+      },
+      {
+        "file": "components/EnhancedHeader.tsx",
+        "issues": [
+          {
+            "rule": "Duplicate Code",
+            "value": 19,
+            "message": "Potential duplicate code detected"
+          }
+        ]
+      },
+      {
+        "file": "components/EnhancedLayout.tsx",
+        "issues": [
+          {
+            "rule": "Duplicate Code",
+            "value": 6,
+            "message": "Potential duplicate code detected"
+          }
+        ]
+      },
+      {
+        "file": "components/EnhancedPerformanceMonitor.tsx",
+        "issues": [
+          {
+            "rule": "Complexity",
+            "value": 47,
+            "message": "High complexity detected"
+          },
+          {
+            "rule": "Duplicate Code",
+            "value": 13,
+            "message": "Potential duplicate code detected"
+          }
+        ]
+      },
+      {
+        "file": "components/EnhancedSEO.tsx",
+        "issues": [
+          {
+            "rule": "Duplicate Code",
+            "value": 29,
+            "message": "Potential duplicate code detected"
+          }
+        ]
+      },
+      {
+        "file": "components/OptimizedImage.tsx",
+        "issues": [
+          {
+            "rule": "Complexity",
+            "value": 23,
+            "message": "High complexity detected"
+          }
+        ]
+      },
+      {
+        "file": "components/PWARegistration.tsx",
+        "issues": [
+          {
+            "rule": "Duplicate Code",
+            "value": 8,
+            "message": "Potential duplicate code detected"
+          }
+        ]
+      },
+      {
+        "file": "components/PerformanceEnhancer.tsx",
+        "issues": [
+          {
+            "rule": "Complexity",
+            "value": 44,
+            "message": "High complexity detected"
+          },
+          {
+            "rule": "Duplicate Code",
+            "value": 22,
+            "message": "Potential duplicate code detected"
+          }
+        ]
+      },
+      {
+        "file": "components/PricingGuide.tsx",
+        "issues": [
+          {
+            "rule": "Duplicate Code",
+            "value": 6,
+            "message": "Potential duplicate code detected"
+          }
+        ]
+      },
+      {
+        "file": "components/Sidebar.tsx",
+        "issues": [
+          {
+            "rule": "Duplicate Code",
+            "value": 11,
+            "message": "Potential duplicate code detected"
+          }
+        ]
+      },
+      {
+        "file": "components/UI/InteractiveElements.tsx",
+        "issues": [
+          {
+            "rule": "File Length",
+            "value": 1,
+            "message": "Files should be under 500 lines"
+          },
+          {
+            "rule": "Complexity",
+            "value": 64,
+            "message": "High complexity detected"
+          },
+          {
+            "rule": "Duplicate Code",
+            "value": 28,
+            "message": "Potential duplicate code detected"
+          }
+        ]
+      },
+      {
+        "file": "components/accessibility/AccessibilityEnhancer.tsx",
+        "issues": [
+          {
+            "rule": "Complexity",
+            "value": 36,
+            "message": "High complexity detected"
+          }
+        ]
+      },
+      {
+        "file": "components/error/ErrorBoundary.tsx",
+        "issues": [
+          {
+            "rule": "Duplicate Code",
+            "value": 11,
+            "message": "Potential duplicate code detected"
+          }
+        ]
+      },
+      {
+        "file": "components/layout/EnhancedNavigation.tsx",
+        "issues": [
+          {
+            "rule": "Duplicate Code",
+            "value": 9,
+            "message": "Potential duplicate code detected"
+          }
+        ]
+      },
+      {
+        "file": "components/layout/EnhancedSidebar2025.tsx",
+        "issues": [
+          {
+            "rule": "File Length",
+            "value": 1,
+            "message": "Files should be under 500 lines"
+          },
+          {
+            "rule": "Complexity",
+            "value": 35,
+            "message": "High complexity detected"
+          },
+          {
+            "rule": "Duplicate Code",
+            "value": 54,
+            "message": "Potential duplicate code detected"
+          }
+        ]
+      },
+      {
+        "file": "components/layout/Footer.tsx",
+        "issues": [
+          {
+            "rule": "File Length",
+            "value": 1,
+            "message": "Files should be under 500 lines"
+          },
+          {
+            "rule": "Duplicate Code",
+            "value": 41,
+            "message": "Potential duplicate code detected"
+          }
+        ]
+      },
+      {
+        "file": "components/layout/Header.tsx",
+        "issues": [
+          {
+            "rule": "File Length",
+            "value": 1,
+            "message": "Files should be under 500 lines"
+          },
+          {
+            "rule": "Duplicate Code",
+            "value": 87,
+            "message": "Potential duplicate code detected"
+          }
+        ]
+      },
+      {
+        "file": "components/layout/ImprovedFooter.tsx",
+        "issues": [
+          {
+            "rule": "Duplicate Code",
+            "value": 6,
+            "message": "Potential duplicate code detected"
+          }
+        ]
+      },
+      {
+        "file": "components/layout/ImprovedNavigation.tsx",
+        "issues": [
+          {
+            "rule": "Duplicate Code",
+            "value": 10,
+            "message": "Potential duplicate code detected"
+          }
+        ]
+      },
+      {
+        "file": "components/performance/ImageOptimizer.tsx",
+        "issues": [
+          {
+            "rule": "Complexity",
+            "value": 33,
+            "message": "High complexity detected"
+          }
+        ]
+      },
+      {
+        "file": "components/performance/PerformanceMonitor.tsx",
+        "issues": [
+          {
+            "rule": "Complexity",
+            "value": 35,
+            "message": "High complexity detected"
+          },
+          {
+            "rule": "Duplicate Code",
+            "value": 19,
+            "message": "Potential duplicate code detected"
+          }
+        ]
+      },
+      {
+        "file": "components/seo/SEOHead.tsx",
+        "issues": [
+          {
+            "rule": "Duplicate Code",
+            "value": 9,
+            "message": "Potential duplicate code detected"
+          }
+        ]
+      },
+      {
+        "file": "components/disabled/ui/FuturisticAnimatedBackground2029.tsx",
+        "issues": [
+          {
+            "rule": "Complexity",
+            "value": 30,
+            "message": "High complexity detected"
+          },
+          {
+            "rule": "Duplicate Code",
+            "value": 15,
+            "message": "Potential duplicate code detected"
+          }
+        ]
+      }
+    ]
   }
 }

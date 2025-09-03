@@ -1,12 +1,9 @@
 import Head from "next/head";
 import React, { useEffect } from "react";
 interface PerformanceOptimizerProps {;
-;
   preloadImages?: string[];
   preloadFonts?: string[];
   preloadScripts?: string[];
-
-;
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,;
   preloadImages = [],;
   preloadFonts = [],;
@@ -57,5 +54,4 @@ preloadScripts.forEach(src = > {";
       <link rel="preconnect" href="https:// comment;
     </Head>,,;
   )}
-;
 ""export default PerformanceOptimizer

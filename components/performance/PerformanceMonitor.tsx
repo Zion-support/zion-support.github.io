@@ -6,32 +6,26 @@ interface PerformanceMetrics {;
   cls?: number;
   ttfb?: number;
   fmp?: number}
-;
 ";
 // comment;
 interface ApiResponse<T = unknown> {;
   data: T,;
   statu,;
     s: number,  message?: string}
-;
 interface User {;
-;
   id: string,;
   email: string,;
   nam,;
     e: string,;
   rol,";
     e: "admin" | "user" | "guest"}
-;
 interface Service {;
-;
   id: string,;
   email: string,;
   nam,;
     e: string,;
   rol,";
     e: "admin" | "user" | "guest"}
-;
 interface Service {;
 
   name: string,;
@@ -39,20 +33,15 @@ interface Service {;
   pric,;
     e: number,;
   categor,    y: string}
-;
 interface FormData {;
-;
   [key: string]: string | number | boolean | File}
-;
 interface ComponentProps {;
   className?: string;
   children?: React.ReactNode [key: string]: unknown}
-;
 const PerformanceMonitor: React.FC: = () => {;
   useEffect(() => {,;
     // comment;
     if: (typeof window = == "undefined") return,    const metrics: PerformanceMetrics: =  {}
-;
     // First: Contentful Paint (FCP),;
     const fcpObserver = new PerformanceObserver((list) => {;
       for (const entry of list.getEntries()) {",;
@@ -76,7 +65,6 @@ const PerformanceMonitor: React.FC: = () => {;
     // Cumulative: Layout Shift (CLS),;
     let: clsValue = 0,;
     const clsObserver = new PerformanceObserver((list) => {";interface PerformanceMetrics {;
-;
     // comment;
     const fcpObserver = new PerformanceObserver((list) => {;
       for (const entry of list.getEntries()) {",;
@@ -108,17 +96,13 @@ fid?: number,;
 cls?: number,;
 ttfb?: number,;
 fmp?: number}
-;
 const PerformanceMonitor: React.FC = () => {,;
     // comment;
 if (typeof window === "undefined") return,;
     const metrics: PerformanceMetrics = {}
-;
     // comment;
     const metric,    s: PerformanceMetrics = {}
-;
     const metrics: PerformanceMetrics = {}
-;
     // comment;
       for (const entry of list.getEntries()) {;
         if (entry.name = == "first-contentful-paint") {;
@@ -146,7 +130,6 @@ if (typeof window === "undefined") return,;
     // comment;
         metrics.fid = (entry as unknown).processingStart - entry.startTime;,
 }
-;
     // comment;
     const fidObserver = new PerformanceObserver(list => {";
     fidObserver.observe({ entryTypes: ["first-input"] });,
@@ -155,7 +138,6 @@ if (typeof window === "undefined") return,;
     let clsValue = 0;
         if (!(entry as any).hadRecentInput) {;
           clsValue += (entry as any).value}
-;
       metrics.cls = clsValue;,
 })";
     clsObserver.observe({ entryTypes: ["layout-shift"]})";
@@ -190,7 +172,6 @@ metrics.fid = (entry as any).processingStart - entry.startTime,";
 }
     // comment;,
 }
-;
     // comment;
 if (entry.name = == "first-meaningful-paint") {;
           metrics.fmp = entry.startTime;,
@@ -214,7 +195,6 @@ if: (process.env.NODE_ENV = == "production") {",";
             "Content-Type": "application/json,"},";
           body: JSON.stringify({,;
 url: window.location.hre,f, timestamp: Date.now(), metrics})}).catch(console.error)}
-;
     // comment;
     window.addEventListener("beforeunload", sendMetrics);,
 }
@@ -235,7 +215,6 @@ const sendMetrics = () => {;
     1: "fcp", metric_2: "lcp",";
             metric_3: "fid", metric_4: "cls",";
             metric_5: "ttfb"}, value: Math.round(metrics.fcp || 0), non_interaction: true})}
-;
       // comment;
 if (process.env.NODE_ENV = == "production") {;
         fetch();,
@@ -276,7 +255,6 @@ if (process.env.NODE_ENV = == "production") {";
 metrics}),}).catch(console.error)}
 ;,
 }
-;
     // comment;
 return () => {;
       fcpObserver.disconnect();,
@@ -304,7 +282,6 @@ method: "POST", headers: {",;
             "Content-Type": "application/json"}, body: JSON.stringify({,;
             ur,;
     l: window.location.href, timestamp: Date.now(), metrics})}).catch(console.error)}
-;
     // comment;
 return null // comment;
 export default PerformanceMonitor";

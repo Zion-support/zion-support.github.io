@@ -28,21 +28,18 @@ import {
 } from 'lucide-react';
 import { Button } from '../ui/Button';
 import { Badge } from '../ui/Badge';
-;
 const Header: React.FC = () => {;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
-;
   useEffect(() => {;
     const handleScroll = () => {;
       setIsScrolled(window.scrollY > 20);,
-};
+}
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);,
 }, []);
-;
   const navigation = [;
     { name: 'Home', href: '/' },;
     { name: 'Services', href: '/services' },;
@@ -81,7 +78,6 @@ const Header: React.FC = () => {;
     { name: 'Team', href: '/team', icon: Award },;
     { name: 'Contact', href: '/contact', icon: Phone }
   ];
-;
   const serviceCategories = [;
     { ;
       name: 'Micro SaaS', ;
@@ -102,7 +98,6 @@ const Header: React.FC = () => {;
       popular: ['Quantum ML', 'Autonomous Systems', 'AI Cybersecurity', 'Drug Discovery'];,
 },;
   ];
-;
   const serviceCategories = [;
     { name: 'AI Solutions', href: '/services/ai-solutions' },;
     { name: 'Cloud & DevOps', href: '/services/cloud' },;
@@ -111,13 +106,11 @@ const Header: React.FC = () => {;
     { name: 'Micro SaaS', href: '/services/micro-saas' },;
     { name: 'Digital Transformation', href: '/services/transformation' },;
   ];
-;
   const solutionCategories = [;
     { name: 'Enterprise', href: '/solutions/enterprise' },;
     { name: 'SMB', href: '/solutions/smb' },;
     { name: 'Startup', href: '/solutions/startup' },;
   ];
-;
   const resourceCategories = [;
     { name: 'Documentation', href: '/docs' },;
     { name: 'Blog', href: '/blog' },;
@@ -125,9 +118,7 @@ const Header: React.FC = () => {;
     { name: 'Team', href: '/team' },;
     { name: 'Careers', href: '/careers' },;
   ];
-;
   const isActive = (path: string) => location.pathname === path;
-;
   const resourceCategories = [;
     { name: 'Blog', href: '/blog' },;
     { name: 'Case Studies', href: '/case-studies' },;
@@ -137,7 +128,6 @@ const Header: React.FC = () => {;
     { name: 'Help Center', href: '/help' },;
     { name: 'FAQ', href: '/faq' },;
   ];
-;
   return (;
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${;
       isScrolled ;
@@ -181,15 +171,14 @@ const Header: React.FC = () => {;
                     <span>{item.name}</span>;
                   </Link>;
                 )}
-;
                 {/* Dropdown Menu */}
                 <AnimatePresence>;
                   {activeDropdown === item.name && item.dropdown && (;
                     <motion.div;
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
-                      transition={{ duration: 0.2 }}
+                      initial={{ opacity: 0, y: 10 }
+                      animate={{ opacity: 1, y: 0 }
+                      exit={{ opacity: 0, y: 10 }
+                      transition={{ duration: 0.2 }
                       className="absolute top-full left-0 mt-2 w-80 bg-slate-800 rounded-lg shadow-xl border border-slate-700 overflow-hidden";
                       onMouseEnter={() => setActiveDropdown(item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}
@@ -221,13 +210,11 @@ const Header: React.FC = () => {;
     { name: 'Careers', href: '/careers' },;
     { name: 'Contact', href: '/contact' },;
   ];
-;
   const serviceCategories = [;
     { name: 'Micro SaaS', href: '/services/micro-saas' },;
     { name: 'IT Services', href: '/services/it-services' },;
     { name: 'AI Services', href: '/services/ai-services' },;
   ];
-;
   return (;
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${;
       isScrolled ;
@@ -271,15 +258,14 @@ const Header: React.FC = () => {;
                     <span>{item.name}</span>;
                   </Link>;
                 )}
-;
                 {/* Dropdown Menu */}
                 <AnimatePresence>;
                   {activeDropdown === item.name && item.dropdown && (;
                     <motion.div;
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
-                      transition={{ duration: 0.2 }}
+                      initial={{ opacity: 0, y: 10 }
+                      animate={{ opacity: 1, y: 0 }
+                      exit={{ opacity: 0, y: 10 }
+                      transition={{ duration: 0.2 }
                       className="absolute top-full left-0 mt-2 w-80 bg-slate-800 rounded-lg shadow-xl border border-slate-700 overflow-hidden";
                       onMouseEnter={() => setActiveDropdown(item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}
@@ -324,7 +310,6 @@ const Header: React.FC = () => {;
           {/* Mobile Menu Button */}
           <button;
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-;
     window.addEventListener("scroll", handleScroll);,
 }
     return () => window.removeEventListener("scroll", handleScroll);,
@@ -344,12 +329,10 @@ const Header: React.FC = () => {;
         { name: "White Papers", href: "/white-papers", icon: FileText, description: "Research and insights" },";
         { name: "Webinars", href: "/webinars", icon: Calendar, description: "Expert-led sessions" },";
         { name: "Pricing Guide", href: "/pricing-guide", icon: DollarSign, description: "Comprehensive pricing info" }
-;
       ];,
 },";
     { name: "Team", href: "/team", icon: Award },";
     { name: "Contact", href: "/contact", icon: Phone }
-;
   ];
   const quickLinks = [];
   const serviceCategories = [];
@@ -363,17 +346,16 @@ const Header: React.FC = () => {;
                   <Link;
 to={item.href}
                     className={`flex items-center space-x-1 transition-colors ${                      isActive(item.href);
-;
                         ? 'text-blue-400;
                         : 'text-gray-300 hover:text-white;,
 }}'                  >`                    <item.icon className="w-4 h-4 />                    <span>{item.name}</span>"                  </Link>)}{/* Dropdown Menu */}
                 <AnimatePresence>;
                   {activeDropdown === item.name && item.dropdown && (;
                     <motion.div;
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
-                      transition={{ duration: 0.2 }}
+                      initial={{ opacity: 0, y: 10 }
+                      animate={{ opacity: 1, y: 0 }
+                      exit={{ opacity: 0, y: 10 }
+                      transition={{ duration: 0.2 }
                       className="absolute top-full left-0 mt-2 w-80 bg-slate-800 rounded-lg shadow-xl border border-slate-700 overflow-hidden";
                       onMouseEnter={() => setActiveDropdown(item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}
@@ -416,11 +398,9 @@ to={item.href}
           </div>;
                     </motion.div>;
                   )}
-;
                 </AnimatePresence>;
               </div>;
             ))}
-;
           </nav>;
           {/* comment */}";
           <div className="hidden lg: flex items-center space-x-4">";
@@ -437,7 +417,6 @@ to={item.href}
           <button onClick="{()" => setIsMenuOpen(!isMenuOpen)}";
             className="lg: hidden p-2 rounded-lg text-gray-300 hover:text-white hover:bg-slate-700 transition-colors">",;
             {isMenuOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
-;
           {/* CTA Buttons */}
 <div className="hidden lg: flex items-center space-x-4>            <Button variant="outline" size="sm">"              <Search className="w-4 h-4 mr-2 />              Search"            </Button>;
             <Button size="sm" className="bg-gradient-to-r from-blue-500 to-purple-600 text-white>              Get Started"            </Button></div>;
@@ -467,13 +446,11 @@ to={item.href}
                 className="text-gray-700 hover:text-blue-600 font-medium transition-colors">;
                 Home;
               </Link>;
-              ;
               <Link;
                 href="/about";
                 className="text-gray-700 hover:text-blue-600 font-medium transition-colors">;
                 About;
               </Link>;
-              ;
               {/* Services Dropdown */}
               <div className="relative group">;
                 <button className="text-gray-700 hover:text-blue-600 font-medium transition-colors flex items-center">;
@@ -499,10 +476,10 @@ to={item.href}
       <AnimatePresence>;
         {isMenuOpen && (;
           <motion.div;
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
+            initial={{ opacity: 0, height: 0 }
+            animate={{ opacity: 1, height: 'auto' }
+            exit={{ opacity: 0, height: 0 }
+            transition={{ duration: 0.3 }
             className="lg:hidden bg-slate-900 border-t border-slate-700">;
             <div className="px-4 py-6 space-y-4">;
               {navigation.map((item) => (;
@@ -632,8 +609,8 @@ to={item.href}
               aria-expanded={isMenuOpen}
             >;
               <motion.div;
-                animate={{ rotate: isMenuOpen ? 180 : 0 }}
-                transition={{ duration: 0.3 }}
+                animate={{ rotate: isMenuOpen ? 180 : 0 }
+                transition={{ duration: 0.3 }
               >;
                 {isMenuOpen ? (;
                   <X className="w-6 h-6 text-gray-700" />;
@@ -649,10 +626,10 @@ to={item.href}
             {isMenuOpen && (;
               <motion.div ;
                 className="lg:hidden border-t border-gray-200 py-4";
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.3 }}
+                initial={{ opacity: 0, height: 0 }
+                animate={{ opacity: 1, height: 'auto' }
+                exit={{ opacity: 0, height: 0 }
+                transition={{ duration: 0.3 }
               >;
               <div className="flex flex-col space-y-4">;
                 {navigation.map((item) => (;
@@ -665,7 +642,6 @@ to={item.href}
                     {item.name}
                   </Link>;
                 ))}
-                ;
                 {/* Mobile Services */}
                 <div className="border-t border-gray-200 pt-4">;
                   <div className="text-gray-700 font-medium mb-2">Services</div>;
@@ -676,7 +652,6 @@ to={item.href}
                 >;
                   Home;
                 </Link>;
-                ;
                 <Link;
                   href="/about";
                   className="text-gray-700 hover:text-blue-600 font-medium transition-colors";
@@ -684,7 +659,6 @@ to={item.href}
                 >;
                   About;
                 </Link>;
-                ;
                 {/* Mobile Services */}
                 <div className="border-t border-gray-200 pt-4">;
                   <div className="text-gray-700 font-medium mb-2">Services</div>;
@@ -814,18 +788,16 @@ to={item.href}
                       <item.icon className="w-5 h-5 />                      <span>{item.name}</span>"                    </Link>)}
                 </div>;
               ))}
-              ;
               <div className="pt-4 border-t border-slate-700 space-y-3>                <Button variant="outline" size="sm" className="w-full>                  <Search className="w-4 h-4 mr-2" />"                  Search"                </Button>;
                 <Button size="sm" className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white>                  Get Started"                </Button></div>;
             </div>;
           </button>;
         </div>;
       {/* comment */}
-;
       <AnimatePresence>;
         {isMenuOpen && (;
           <motion.div,";
-initial="{{" opacity: 0, height: 0 }}
+initial="{{" opacity: 0, height: 0 }
             animate="{{" opacity: 1, height: "auto" }}";
             exit="{{" opacity: 0, height: 0 }}";
             transition="{{" duration: 0.3 }}";
@@ -845,23 +817,19 @@ initial="{{" opacity: 0, height: 0 }}
                             to="{dropdownItem.href}
                             className="flex items-center space-x-2 text-gray-400 hover: text-white transition-colors"">;
                             onClick="{()" => setIsMenuOpen(false)}
-;
                           >";
                             <dropdownItem.icon className="w-4 h-4" />;
                             <span>{dropdownItem.name}</span>;
                           </Link>;
                         ))}
-;
                       </div>;
                   ) : (";
                     <Link key="{category.name}
                       href="{category.href}
                       className="block px-4 py-2 text-gray-700 hover: bg-blue-50 hover:text-blue-600 transition-colors">,;
                       {category.name}
-;
                     </Link>;
                   ))}
-;
                 </div>;
               {/* comment */}";
               <div className="flex items-center space-x-3">";
@@ -897,7 +865,7 @@ initial="{{" opacity: 0, height: 0 }}
       </nav>;
     </motion.header>;
   );,
-};
+}
 ,;
             {/* comment */}";
             <button className="lg: hidden p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"">;
@@ -906,29 +874,25 @@ initial="{{" opacity: 0, height: 0 }}
               aria-expanded="{isMenuOpen}">;
               <motion.div,";
 animate="{{" rotate: isMenuOpen ? 180 : 0 }}";
-                transition="{{" duration: 0.3 }}
-;
+                transition="{{" duration: 0.3 }
               >;
                 {isMenuOpen ? (";
                   <X className="w-6 h-6 text-gray-700"  />;
                 ) : (";
                   <Menu className="w-6 h-6 text-gray-700"  />;
                 )}
-;
               </motion.div>;
             </button>;
           </div>;
           {/* comment */}
-;
           <AnimatePresence>;
             {isMenuOpen && (;
               <motion.div,";
 className="lg: hidden border-t border-gray-200 py-4"">;
-                initial="{{" opacity: 0, height: 0 }}
+                initial="{{" opacity: 0, height: 0 }
                 animate="{{" opacity: 1, height: "auto" }}";
                 exit="{{" opacity: 0, height: 0 }}";
-                transition="{{" duration: 0.3 }}
-;
+                transition="{{" duration: 0.3 }
               >";
               <div className="flex flex-col space-y-4">;
                 {navigation.map((item) => (";
@@ -936,13 +900,10 @@ className="lg: hidden border-t border-gray-200 py-4"">;
                     href="{item.href}
                     className="text-gray-700 hover: text-blue-600 font-medium transition-colors"">;
                     onClick="{()" => setIsMenuOpen(false)}
-;
                   >;
                     {item.name}
-;
                   </Link>;
                 ))}
-;
                 {/* comment */}";
                 <div className="border-t border-gray-200 pt-4">";
                   <div className="text-gray-700 font-medium mb-2">Services</div>;
@@ -951,16 +912,13 @@ className="lg: hidden border-t border-gray-200 py-4"">;
                       href="{category.href}
                       className="block py-2 text-gray-600 hover: text-blue-600 transition-colors"">;
                       onClick="{()" => setIsMenuOpen(false)}
-;
                     >";
                       <item.icon className="w-5 h-5" />;
                       <span>{item.name}</span>;
                     </Link>;
                   )}
-;
                 </div>;
               ))}
-;
               ";
               <div className="pt-4 border-t border-slate-700 space-y-3">";
                 <Button variant="outline" size="sm" className="w-full">";
@@ -973,7 +931,6 @@ className="lg: hidden border-t border-gray-200 py-4"">;
               </div>;
           </motion.div>;
         )}
-;
       </AnimatePresence>;
     </header>;
   );,

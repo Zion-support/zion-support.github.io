@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Play, Star, Users, Award, Globe } from 'lucide-react';
-;
 const HeroSection: React.FC = () => {;
   return (;
     <>;
@@ -83,6 +82,5 @@ const HeroSection: React.FC = () => {;
       </section>;
     </>;
   );,
-};
-;
+}
 export default HeroSection;

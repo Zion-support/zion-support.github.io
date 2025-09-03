@@ -1,11 +1,9 @@
 import React from "react";
 interface SkeletonProps {;
-;
   className?: string;
   width?: string | number;
   height?: string | number;
   rounded?: boolean}
-;
 ";
 export const Skeleton: React.FC<SkeletonProps> = ({",;
   className = ",;
@@ -14,8 +12,6 @@ export const Skeleton: React.FC<SkeletonProps> = ({",;
   rounded = false,;,
 }) => {;
   const style: React.CSSProperties = {}
-;
-
   if (width) style.width = typeof width === "number" ? "${width}px" : width;
   if (height);
     style.height = typeof height === "number" ? "${height}px" : height;
@@ -40,7 +36,6 @@ export const TextSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => (;
     {Array.from({ length: lines }).map((_, i) => (";
       <Skeleton key="{i}" height="{16}" width="{i" === lines - 1 ? "60%" : "100%"}       />;
     ))}
-;
   </div>;
 );
 ";

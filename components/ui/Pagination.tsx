@@ -1,14 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-;
 interface PaginationProps {;
   currentPage: number;
   totalPages: number;
   baseUrl: string;
   className?: string;,
 }
-;
 const Pagination: React.FC<PaginationProps> = ({ ;
   currentPage, ;
   totalPages, ;
@@ -18,7 +16,6 @@ const Pagination: React.FC<PaginationProps> = ({ ;
   const getPageNumbers = () => {;
     const pages = [];
     const maxVisiblePages = 5;
-    ;
     if (totalPages <= maxVisiblePages) {;
       for (let i = 1; i <= totalPages; i++) {;
         pages.push(i);,
@@ -26,31 +23,23 @@ const Pagination: React.FC<PaginationProps> = ({ ;
     } else {;
       const startPage = Math.max(1, currentPage - 2);
       const endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
-      ;
       if (startPage > 1) {;
         pages.push(1);
         if (startPage > 2) {;
           pages.push('...');,
 }
-      }
-      ;
       for (let i = startPage; i <= endPage; i++) {;
         pages.push(i);,
 }
-      ;
       if (endPage < totalPages) {;
         if (endPage < totalPages - 1) {;
           pages.push('...');,
 }
         pages.push(totalPages);,
 }
-    }
-    ;
     return pages;,
-};
-;
+}
   if (totalPages <= 1) return null;
-;
   return (;
     <nav className={`flex items-center justify-center space-x-2 ${className}`}>;
       {/* Previous Button */}
@@ -67,7 +56,6 @@ const Pagination: React.FC<PaginationProps> = ({ ;
           Previous;
         </span>;
       )}
-;
       {/* Page Numbers */}
       <div className="flex items-center space-x-1">;
         {getPageNumbers().map((page, index) => {;
@@ -78,10 +66,8 @@ const Pagination: React.FC<PaginationProps> = ({ ;
               </span>;
             );,
 }
-;
           const pageNumber = page as number;
           const isCurrentPage = pageNumber === currentPage;
-;
           return (;
             <Link;
               key={pageNumber}
@@ -114,6 +100,5 @@ const Pagination: React.FC<PaginationProps> = ({ ;
       )}
     </nav>;
   );,
-};
-;
+}
 export default Pagination;

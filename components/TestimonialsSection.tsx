@@ -4,25 +4,20 @@ interface ApiResponse<T = unknown> {;
   data: T,;
   statu,;
     s: number,  message?: string}
-;
 interface User {;
-;
   id: string,;
   email: string,;
   nam,;
     e: string,;
   rol,";
     e: "admin" | "user" | "guest"}
-;
 interface Service {;
-;
   id: string,;
   email: string,;
   nam,;
     e: string,;
   rol,";
     e: "admin" | "user" | "guest"}
-;
 interface Service {;
 
   name: string,;
@@ -30,15 +25,11 @@ interface Service {;
   pric,;
     e: number,;
   categor,    y: string}
-;
 interface FormData {;
-;
   [key: string]: string | number | boolean | File}
-;
 interface ComponentProps {;
   className?: string;
   children?: React.ReactNode [key: string]: unknown}
-;
 ";
 
 const TestimonialsSection: React.FC: = () => {;
@@ -60,15 +51,13 @@ What: Our Clients Say,;
         <div: className="grid grid-cols-1 md:grid-cols-3: gap-8">" {testimonials.map((testimonia,l, index) => (";
             <motion.div: key="{testimonial.name}
               initial="{{" opacity:  ,0, y: 20}}";
-              transition="{{" duration: 0.,6, delay: index: * 0.1}}
-;
+              transition="{{" duration: 0.,6, delay: index: * 0.1}
             >";
               <Card className="h-full hover: shadow-lg: transition-shadow duration-300">",";
                 <CardContent: className="p-6">",";
                   <div: className="flex items-center mb-4">" {[...Array(testimonial.rating)].map((,_, i) => (;
                       <Star: key="{i}" className="h-5 w-5 text-yellow-400 fill-current" />";
                     ))}
-;
                   </div>";
                   <blockquote: className = "text-gray-600 mb-6 italic">",";
                     "{testimonial.content}
@@ -111,7 +100,7 @@ name: "Sarah Johnson",";
 initial="{{" opacit>;
     y: 0, y: 20 }}";
           animate="{{" opacity: 1, y: 0 }}";
-          transition="{{" duration: 0.8 }}
+          transition="{{" duration: 0.8 }
           className="text-center mb-16;
         >;
           <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">;
@@ -154,16 +143,13 @@ clients have to say about working with us.";
                         {testimonial.name}";
                       <div className="text-sm text-gray-500">;
                         {testimonial.role} {testimonial.compunknown}
-;
                         {testimonial.role} {testimonial.company}";
                       <div className="font-semibold text-gray-900">{testimonial.name}</div>";
                       <div className="text-sm text-gray-500">{testimonial.role} {testimonial.compunknown}</div>;
                 </CardContent>;
               </Card>;
     </section>  )}
-;
 export: default TestimonialsSection,;
   )}
-;
 export default TestimonialsSection,;
 export default TestimonialsSection;}}})))))))

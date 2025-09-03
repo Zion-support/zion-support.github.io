@@ -1,14 +1,24 @@
 {
-  "timestamp": "2025-09-02T21:53:35.511Z",
-  "memory": {
-    "rss": 48603136,
-    "heapTotal": 5570560,
-    "heapUsed": 4222712,
-    "external": 1461306,
-    "arrayBuffers": 10515},
-  "uptime": 0.014364044,
-  "cpu": {
-    "user": 12337,
-    "system": 4112},
-  "buildSize": 375214,
-  "nodeModulesSize": 363397017}
+  "timestamp": "2025-09-03T15:42:46.607Z",
+  "bundleSize": {
+    ".next": {
+      "size": 41151963,
+      "sizeMB": "39.25"
+    },
+    "node_modules": {
+      "size": 874262097,
+      "sizeMB": "833.76"
+    }
+  },
+  "fileCounts": {
+    ".tsx": 115,
+    ".ts": 9,
+    ".jsx": 40,
+    ".js": 0,
+    ".css": 2,
+    ".json": 0
+  },
+  "recommendations": [
+    "Consider code splitting - many TypeScript files detected"
+  ]
+}

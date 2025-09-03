@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react';
-;
 const ModernFooter: React.FC = () => {;
   return (;
     <footer className="bg-gray-900 text-white">;
@@ -66,6 +65,5 @@ const ModernFooter: React.FC = () => {;
       </div>;
     </footer>;
   );,
-};
-;
+}
 export default ModernFooter;

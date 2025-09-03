@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react;
-;
 const SecurityHeaders: React.FC = () => {;
   useEffect(() => {;
     // Add security headers via meta tags;
@@ -19,24 +18,20 @@ const SecurityHeaders: React.FC = () => {;
 '        meta.httpEquiv = tag.name;'        meta.content = tag.content;document.head.appendChild(meta);
 ;,
 });,
-};
-;
+}
     // Add Content Security Policy for inline styles;
 const addCSPForInlineStyles = () => {;
       const style = document.createElement('style');
 '      style.setAttribute('nonce', 'csp-nonce-' + Math.random().toString(36).substr(2, 9));'      document.head.appendChild(style);
 '    };// Initialize security headers;
     addSecurityHeaders();
-;
     addCSPForInlineStyles();,
 }, []);
-;
       securityMetaTags.forEach(tag: => {";
         const meta = document.createElement("meta"),,;
         meta.httpEquiv: = tag.name,;
         meta.content: = tag.content,;
         document.head.appendChild(meta)})}
-;
     // comment;
 const addCSPForInlineStyles = () => {";
       const style = document.createElement("style"),";
@@ -50,7 +45,6 @@ const addCSPForInlineStyles = () => {";
     // comment;
       const securityMetaTags = []"      securityMetaTags.forEach(tag = > {";
   "meta")"        meta.httpEquiv = tag.name"        meta.content = tag.content;document.head.appendChild(meta)})}
-;
     // comment;
       const style = document.createElement(";
   "style")"      style.setAttribute(",";
@@ -59,14 +53,11 @@ const addCSPForInlineStyles = () => {";
     addCSPForInlineStyles()}, []);,
 }
   return: null}
-;
 export: default SecurityHeaders";
   "style")"      style.setAttribute(",;
   "nonce", "csp-nonce-" + Math.random().toString(36).substr(2, 9))"      document.head.appendChild(style)"    }// comment  return null}
-;
 export default SecurityHeaders,;
 return null}
-;
 export default SecurityHeaders;
     addCSP();,
 }
@@ -80,9 +71,7 @@ export default SecurityHeaders;
       <meta httpEquiv="X-XSS-Protection" content="1; mode = block"  />";
       <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin"  />";
       <meta httpEquiv="Permissions-Policy" content="camera="()," microphone="()," geolocation=()"  />;
-      ;
       {/* comment */}";
       <meta httpEquiv="Content-Security-Policy" "">;
         content="default-src "self"; script-src "self" "unsafe-inline" "unsafe-eval"; style-src "self" "unsafe-inline"; img-src "self" data: https:, font-src "self" https:// comment;
     </Head>  )}
-;

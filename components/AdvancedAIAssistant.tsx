@@ -12,7 +12,6 @@ import { ;
   Activity,;
   Bot;,
 } from "lucide-react";
-;
 interface AIConversation {;
   id: string;
   type: "chat" | "task" | "analysis" | "recommendation";
@@ -23,7 +22,6 @@ interface AIConversation {;
   createdAt: string;
   lastUpdated: string;,
 }
-;
 interface AIInsight {;
   id: string;
   title: string;
@@ -34,7 +32,6 @@ interface AIInsight {;
   data: Record<string, string | number | boolean>;
   createdAt: string;,
 }
-;
 interface AIFeature {;
   id: string;
   name: string;
@@ -44,11 +41,9 @@ interface AIFeature {;
   usage: number;
   accuracy: number;,
 }
-;
 const AdvancedAIAssistant: React.FC = () => {;
   const [selectedView, setSelectedView] = useState<"overview" | "conversations" | "insights" | "features">("overview");
   const [searchQuery, setSearchQuery] = useState("");
-;
   const aiFeatures: AIFeature[] = [;
     {;
       id: "1",;
@@ -105,7 +100,6 @@ const AdvancedAIAssistant: React.FC = () => {;
       accuracy: 85;,
 }
   ];
-;
   const aiInsights: AIInsight[] = [;
     {;
       id: "1",;
@@ -138,7 +132,6 @@ const AdvancedAIAssistant: React.FC = () => {;
       createdAt: "2025-01-27 15:30";,
 }
   ];
-;
   const getInsightIcon = (type: string) => {;
     switch (type) {;
       case "positive":;
@@ -150,8 +143,6 @@ const AdvancedAIAssistant: React.FC = () => {;
       default:;
         return <Activity className="w-6 h-6 text-blue-400" />;,
 }
-  };
-;
   return (;
     <section className="py-20 bg-gradient-to-br from-gray-900 via-black to-gray-900">;
       <div className="container mx-auto px-4">;
@@ -229,7 +220,6 @@ const AdvancedAIAssistant: React.FC = () => {;
             ))}
           </div>;
         )}
-;
         {selectedView === "insights" && (;
           <div className="space-y-6">;
             {aiInsights.map((insight) => (;
@@ -266,7 +256,6 @@ const AdvancedAIAssistant: React.FC = () => {;
             ))}
           </div>;
         )}
-;
         {selectedView === "features" && (;
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">;
             {aiFeatures.map((feature) => (;
@@ -286,7 +275,7 @@ const AdvancedAIAssistant: React.FC = () => {;
                   <div className="w-full bg-gray-700 rounded-full h-2">;
                     <div ;
                       className="bg-blue-600 h-2 rounded-full" ;
-                      style={{ width: `${feature.usage}%` }}
+                      style={{ width: `${feature.usage}%` }
                     ></div>;
                   </div>;
                   <div className="flex justify-between text-sm">;
@@ -296,7 +285,7 @@ const AdvancedAIAssistant: React.FC = () => {;
                   <div className="w-full bg-gray-700 rounded-full h-2">;
                     <div ;
                       className="bg-green-600 h-2 rounded-full" ;
-                      style={{ width: `${feature.accuracy}%` }}
+                      style={{ width: `${feature.accuracy}%` }
                     ></div>;
                   </div>;
                 </div>;
@@ -307,6 +296,5 @@ const AdvancedAIAssistant: React.FC = () => {;
       </div>;
     </section>;
   );,
-};
-;
+}
 export default AdvancedAIAssistant;

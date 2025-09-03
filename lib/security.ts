@@ -42,4 +42,3 @@ export const contentSecurityPolicy = {;
     baseUri: [""self""],;
     formAction: [""self""];,;,
 }
-}

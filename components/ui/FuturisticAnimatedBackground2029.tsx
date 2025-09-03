@@ -4,7 +4,6 @@ import React from "react";
         // comment;
 draw() {;
         if (ctx) {;
-;
           const alpha = this.life / this.maxLife;
           ctx.save();,
 }
@@ -20,16 +19,11 @@ draw() {;
 ctx.shadowColor = this.color          ctx.restore()}
 ;,
 }
-;
       isDead() {;
-;
-;
     // Grid system,;
 class Grid {;
-;
       spacing: number,;
       offset: number,;
-;
     // comment;
 class Grid {;
 
@@ -43,10 +37,8 @@ for (let x = this.offset % this.spacing; x < canvas.width; x += this.spacing) {;
 }
             ctx.lineTo(x, canvas.height);,
 }            ctx.stroke()}
-;
     // Wave system,;
 class Wave {;
-;
     // comment;
 class Wave {;
 
@@ -57,7 +49,6 @@ frequency: number,;
           ctx.lineWidth = 2;
           for (let x = 0; x < canvas.width; x++) {;
       particles.push(new Particle())}
-;
     // comment;
 for (let i = 0; i < 3; i++) {";
       ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
@@ -72,17 +63,7 @@ const time = Date.now() * 0.001;
         const x = Math.cos(angle) * 100;
         const y = Math.sin(angle) * 100;
       animationId = requestAnimationFrame(animate)}
-;
     // comment;
 return () => {;
-        ;
-;
-;
-;
-;
-
-;
 ';
-
-;
 export default Component

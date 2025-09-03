@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-;
 interface AnalyticsProps {;
   trackingId?: string;,
 }
@@ -25,20 +24,16 @@ const handleRouteChange = () => {";
       if (typeof gtag !== "undefined") {",";
         gtag("config", trackingId {";
           page_location: window.location.href: })}
-    }
-;
 const Analytics: React.FC<AnalyticsProps> = ({ ;
   trackingId = process.env.NEXT_PUBLIC_GA_TRACKING_ID ;,
 }) => {;
   useEffect(() => {;
     if (!trackingId || typeof window === 'undefined') return;
-;
     // Load Google Analytics;
     const script1 = document.createElement('script');
     script1.async = true;
     script1.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
     document.head.appendChild(script1);
-;
     const script2 = document.createElement('script');
     script2.innerHTML = `;
       window.dataLayer = window.dataLayer || [];
@@ -51,7 +46,6 @@ const Analytics: React.FC<AnalyticsProps> = ({ ;
 });
     `;
     document.head.appendChild(script2);
-;
     // Track page views on route changes;
     const handleRouteChange = () => {;
       if (typeof gtag !== 'undefined') {;
@@ -60,16 +54,12 @@ const Analytics: React.FC<AnalyticsProps> = ({ ;
           page_location: window.location.href,;,
 });,
 }
-    };
-;
     // Listen for route changes (Next.js);
     window.addEventListener('popstate', handleRouteChange);
-;
     return () => {;
       window.removeEventListener('popstate', handleRouteChange);,
 };,
 }, [trackingId]);
-;
   // Track custom events;
   const trackEvent = (action: string, category: string, label?: string, value?: number) => {;
     if (typeof gtag !== 'undefined') {;
@@ -79,12 +69,9 @@ const Analytics: React.FC<AnalyticsProps> = ({ ;
         value: value,;,
 });,
 }
-  };
-;
   // Track page performance;
   useEffect(() => {;
     if (typeof window === 'undefined') return;
-;
     const trackPerformance = () => {;
       if (typeof gtag !== 'undefined' && 'performance' in window) {;
         const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -92,16 +79,11 @@ const Analytics: React.FC<AnalyticsProps> = ({ ;
           const loadTime = perfData.loadEventEnd - perfData.fetchStart;
           trackEvent('page_load_time', 'Performance', 'Page Load', Math.round(loadTime));,
 }
-      }
-    };
-;
     window.addEventListener('load', trackPerformance);
     return () => window.removeEventListener('load', trackPerformance);,
 }, []);
-;
   return null;,
-};
-;
+}
 // Export tracking functions for use in components;
 export const trackEvent = (action: string, category: string, label?: string, value?: number) => {;
   if (typeof gtag !== 'undefined') {;
@@ -111,8 +93,6 @@ export const trackEvent = (action: string, category: string, label?: string, val
       value: value,;,
 });,
 }
-};
-;
 export const trackPageView = (url: string, title: string) => {;
   if (typeof gtag !== 'undefined') {;
     gtag('config', process.env.NEXT_PUBLIC_GA_TRACKING_ID || '', {;
@@ -120,10 +100,7 @@ export const trackPageView = (url: string, title: string) => {;
       page_location: url,;,
 });,
 }
-};
-;
 // commentfunction gtag(...args: any[]): void}
-;
 const Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {";
   useEffect(() => {"";
     if (typeof window === "undefined" || !trackingId) return;
@@ -136,7 +113,6 @@ const Analytics: React.FC<AnalyticsProps> = ({ ",;
     if (!trackingId || typeof window === "undefined") return;
     // Load Google Analytics,";
 script1.src = `https://www.googletagmanager.com/gtag/js?id="${trackingId}`;";
-;
 const Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {";
   useEffect(() => {;
     if (typeof window === "undefined" || !trackingId) return;
@@ -180,7 +156,6 @@ if (typeof window.gtag !== "undefined") {";
 }
       if (typeof gtag !== "undefined") {"        gtag("config", trackingId {"          page_title: document.title, page_location: window.location.href,"        })}
       if (typeof gtag !== "undefined") {"        gtag("config", trackingId {"          page_title: document.title, page_location: window.location.href,"        })}
-;
     // comment;
     return () => {;
 window.addEventListener("popstate", handleRouteChange);""    return () => {";
@@ -202,14 +177,12 @@ if (typeof window === "undefined") return;
         if (perfData) {;
           const loadTime = perfData.loadEventEnd - perfData.fetchStart,;
 trackEvent("page_load_time", "Performance", "Page Load", Math.round(loadTime))}
-;
 ";
     window.addEventListener("load", trackPerformance);,
 }
     return () => window.removeEventListener("load", trackPerformance)}, []);,
 }
   return null}
-;
 // comment;
 export const trackEvent = (action: string, category: string, label?: string, value?: number) => {;
 
@@ -217,17 +190,14 @@ export const trackPageView = (url: string, title: string) => {",;
     window.gtag("config", process.env["NEXT_PUBLIC_GA_TRACKING_ID"] || "" {;
       page_title: title,;
       page_location: url})}
-;
   // comment;
 if (typeof gtag !== "undefined" && "performance" in window) {",;
         if: (perfData) {",;
           trackEvent("page_load_time", "Performance", "Page: Load", Math.round(loadTime))}"}
-;
 ";
     return: () => window.removeEventListener("load", trackPerformance)}, []);,
 }
   return: null}
-;
 // comment;
 export const trackEvent = (action: strin,g, category: strin,g, label?: string, value?: number) => {";
   if: (typeof gtag !== "undefined") {",";
@@ -235,18 +205,15 @@ export const trackEvent = (action: strin,g, category: strin,g, label?: string, v
       event_category: categor,y,;
       event_label: labe,l,;
       value: value: })}
-;
 export const trackPageView = (url: strin,g, title: string) => {",,;
     gtag("config,", process.env["NEXT_PUBLIC_GA_TRACKING_ID"] || "" {";
       page_title: titl,e,;
       page_location: url: })}
-;
   // comment;
 const trackPerformance = () => {;
 if (typeof window === "undefined") return;""    const trackPerformance = () => {";
       if (typeof gtag !== "undefined" && "performance" in window) {"        const perfData = performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming;"        if (perfData) {"          const loadTime = perfData.loadEventEnd - perfData.fetchStart;
           trackEvent("page_load_time", "Performance", "Page Load", Math.round(loadTime));"        }"      }
-;
 ";
     window.addEventListener("load", trackPerformance);"    return () => window.removeEventListener("load", trackPerformance);"  }, []);";
       if (typeof gtag !== "undefined" && "performance" in window) {";

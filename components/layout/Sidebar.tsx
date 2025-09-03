@@ -1,12 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
 import { X, Phone, Mail, MapPin, ArrowRight } from 'lucide-react';
-;
 interface SidebarProps {;
   isOpen: boolean;
   onClose: () => void;,
 }
-;
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
   const serviceCategories = [;
     {;
@@ -43,7 +41,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
       ];,
 }
   ];
-;
   const quickLinks = [;
     { name: 'About Us', href: '/about' },;
     { name: 'Careers', href: '/careers' },;
@@ -53,7 +50,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
     { name: 'Privacy Policy', href: '/privacy' },;
     { name: 'Terms of Service', href: '/terms' },;
   ];
-;
   return (;
     <>;
       {/* Overlay */}
@@ -63,7 +59,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
           onClick={onClose}
         />;
       )}
-;
       {/* Sidebar */}
       <div className={`fixed top-0 right-0 h-full w-80 bg-white shadow-2xl transform transition-transform duration-300 ease-in-out z-50 lg:hidden ${;
         isOpen ? 'translate-x-0' : 'translate-x-full';,
@@ -163,6 +158,5 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
       </div>;
     </>;
   );,
-};
-;
+}
 export default Sidebar;

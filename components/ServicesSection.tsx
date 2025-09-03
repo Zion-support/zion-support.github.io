@@ -10,7 +10,6 @@ import { ;
   ArrowRight,;
   CheckCircle;,
 } from 'lucide-react';
-;
 const ServicesSection: React.FC = () => {;
   const services = [;
     {;
@@ -62,7 +61,6 @@ const ServicesSection: React.FC = () => {;
       href: '/services/mobile-development';,
 }
   ];
-;
   return (;
     <section className="py-20 bg-gray-900">;
       <div className="container mx-auto px-4">;
@@ -141,6 +139,5 @@ const ServicesSection: React.FC = () => {;
       </div>;
     </section>;
   );,
-};
-;
+}
 export default ServicesSection;

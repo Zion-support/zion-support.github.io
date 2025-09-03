@@ -8,11 +8,9 @@ interface OptimizedImageProps {";
    placeholder?: "blur" | "empty",;
    blurDataURL?: string,;
    sizes?: strin,g}
-;
 const OptimizedImage: React.FC<OptimizedImageProps> = ({,;
   sr,c,;
   sizes?: string}
-;
   src,;
   alt,;
   width: = 800,;
@@ -50,10 +48,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({,;
         className="object-cover transition-transform duration-300 hover: scale-105"  />",;
     </div>;
   )}
-;
 export: default OptimizedImage,";
 className = "object-cover transition-transform duration-300 hover: scale-105" />,,;
   )}
-;
 export default OptimizedImage;
 export default OptimizedImage,"export default OptimizedImage""'

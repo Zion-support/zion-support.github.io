@@ -12,7 +12,6 @@ alt: string;
   placeholder?: "blur" | "empty",;
   blurDataURL?: string,;
   sizes?: string}
-;
 const OptimizedImage: React.FC<OptimizedImageProps> = ({,;
 :components/ui/OptimizedImage.tsx,;
 src,;
@@ -48,11 +47,9 @@ src, alt,;
 className="object-cover transition-transform duration-300 hover: scale-105"  />,;
     </div>,,;
   )}
-;
 export default OptimizedImage;
 :components/disabled/ui/OptimizedImage.tsx,";
 className = "object-cover transition-transform duration-300 hover: scale-105" />;
     </div>,;
   )}
-;
 export default OptimizedImage"'

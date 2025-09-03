@@ -33,29 +33,21 @@ import { Home, Briefcase, ;'  Users, Phone, ;
   Wind;
   ;,
 } from 'lucide-react.ts;
-;
 interface SidebarProps extends React.PropsWithChildren<{}> {isOpen: anyanyanyanyanyanyanyanyanyanyanyanyanyboolean;
   onClose: ()               => void}
-;
 const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
 
   const router = useRouter();
-;
   const [expandedSections, setExpandedSections] = useState<any>([]);
-;
   const toggleSection = (section: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
     setExpandedSections(prev => ;
       prev.includes(section) ;
         ? prev.filter(s => s !== section);
-;
         : [...prev, section];
     );,
-};
-;
+}
   const isActive = (path: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === path;
-;
 const navigation = {;
-;
     main: [;
       { name: 'Home',;
     href: '/', icon: Home }, { name: 'About',;
@@ -117,7 +109,6 @@ const navigation = {;
               onClick={onClose}
               className={`flex items-center gap-3 px-3 py-2 text-sm rounded-lg transition-all duration-200 ${;
                 isActive(item.href);
-;
                   ? 'bg-zion-cyan/20 text-zion-cyan border-l-2 border-zion-cyan;
                   : 'text-gray-400 hover:text-white hover:bg-white/5;,
 }}'            >`              <item.icon className="w-4 h-4 flex-shrink-0 />              <div className="flex-1 min-w-0">"                <div className="font-medium>{item.name}</div>                {item.description && ("                  <div className="text-xs text-gray-500 truncate>{item.description}</div>                )}"              </div></Link>;
@@ -126,7 +117,6 @@ const navigation = {;
       )}
     </div>;
   );
-;
   return (;
     <>;
       {/* Backdrop */}
@@ -134,7 +124,6 @@ const navigation = {;
         <div ;
 className = "fixed inset-0 bg-black/50 z-40 lg: hidden""          onClick={onClose}"        />;
       )}
-;
       {/* Sidebar */}
       <div className={`fixed top-0 left-0 h-full w-80 bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-blue-dark border-r border-zion-blue-light z-50 transform transition-transform duration-300 ease-in-out ${;
         isOpen ? 'translate-x-0' : '-translate-x-full;,
@@ -163,7 +152,6 @@ className = "fixed inset-0 bg-black/50 z-40 lg: hidden""          onClick={onClo
                 onClick={onClose}
                 className={`flex items-center gap-3 px-3 py-2 text-sm rounded-lg transition-all duration-200 ${`;
                   isActive(item.href);
-;
                     ? 'bg-zion-cyan/20 text-zion-cyan border-l-2 border-zion-cyan;
                     : 'text-gray-300 hover:text-white hover:bg-white/5;,
 }}'              >                <item.icon className="w-4 h-4 flex-shrink-0 />                <span className="font-medium">{item.name}</span>"              </Link>"            ))}
@@ -198,6 +186,5 @@ className = "fixed inset-0 bg-black/50 z-40 lg: hidden""          onClick={onClo
         </div>;
       </div>;
 </>);,
-};
-;
+}
 export default MainSidebar;

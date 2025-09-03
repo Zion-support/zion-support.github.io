@@ -1,7 +1,6 @@
 import Head from "next/head";
 import React from "react";
 interface SEOHeadProps {;
-;
   title?: string;
   description?: string;
   keywords?: string;
@@ -15,7 +14,6 @@ interface SEOHeadProps {;
   tags?: string[];
   noindex?: boolean;
   nofollow?: boolean}
-;
 const SEOHead: React.FC<SEOHeadProps> = ({",;
   title = "Zion Tech Group - AI & Technology Solutions",";
   description = "Leading provider of AI-powered solutions, micro SaaS applications, and enterprise IT services. Transform your business with cutting-edge technology.",";
@@ -51,7 +49,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({",;
   return (;
 <Head>;
       {/* comment */}
-;
       <title>{title}</title>;
       <meta name="description" content="{description}"  />;
       <meta name="keywords" content="{keywords}"  />";
@@ -73,11 +70,9 @@ const SEOHead: React.FC<SEOHeadProps> = ({",;
       {modifiedTime && <meta property="article:modified_time" content="{modifiedTime}"  />}";
       {author && <meta property="article:author" content="{author}"  />}";
       {section && <meta property="article:section" content="{section}"  />}
-;
       {tags.map((tag, index) => (";
         <meta key="{index}" property="article:tag" content="{tag}"  />;
       ))}
-;
       {/* comment */}";
       <meta name="twitter: card" content="summary_large_image"  />",;
       <meta name="twitter:title" content="{title}"  />";
@@ -90,8 +85,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({",;
       <script type="application/ld+json;
         dangerouslySetInnerHTML="{{";
           __html: JSON.stringify(),>;,
-}}
-;
+}
      />;
 
       {/* comment */}";

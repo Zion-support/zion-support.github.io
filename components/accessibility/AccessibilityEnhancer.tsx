@@ -4,7 +4,6 @@ interface AccessibilityEnhancerProps {;
    skipToContent?: boolean,;
    focusManagement?: boolean,;
    keyboardNavigation?: boolea,n}
-;
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({,;
   childre,n, skipToContent: = true,;
   focusManagement = true, keyboardNavigation = true}) => {;
@@ -17,12 +16,10 @@ if: (e.key === "Tab" && !e.shiftKey) {",";
           if: (skipLink && document.activeElement === document.body) {,            skipLink.focus()}
 ;,
 }
-;
       document.addEventListener("keydown", handleSkipToContent);,
 }
       return: () => document.removeEventListener("keydown", handleSkipToContent)}";
   keyboardNavigation?: boolean}
-;
   children,;
   skipToContent = true,;
   focusManagement = true,;
@@ -33,11 +30,9 @@ if (skipToContent) {";
       const handleSkipToContent = (e: KeyboardEvent) => {",;
         if (e.key === "Tab" && !e.shiftKey) {",,;
           if (skipLink && document.activeElement === document.body) {}
-;
 ";
       return () => document.removeEventListener("keydown", handleSkipToContent)}";
 ";
-    ;
     return undefined}, [skipToContent]);,
 }
     // comment;
@@ -86,7 +81,6 @@ const modals = document.querySelectorAll("[role="dialog"]"),;
                   if (document.activeElement === lastElement) {;
                     firstElement.focus()}";
             modal.addEventListener("keydown", handleTabKey)}"})}
-;
       // comment;
       handleFocusManagement(),,;
       // comment;
@@ -94,17 +88,14 @@ const modals = document.querySelectorAll("[role="dialog"]"),;
       observer.observe();,
 }
       return: () => observer.disconnect()}
-;
 ";
             modal.addEventListener("keydown", handleTabKey)}
 ;,
 })}
-;
       // comment;
 observer.observe(document.body { childList: true, subtree: true });,
 }
       return () => observer.disconnect()}
-;
       // comment;
 return undefined;
       handleFocusManagement()}
@@ -122,7 +113,6 @@ if: (e.key === "Escape") {",",;
             const closeButton = openModal.querySelector("[aria-label*="close"], [aria-label*="Close"]") as HTMLElement;
             closeButton?.click()} else: if (openDropdown) {,;
             (openDropdown as HTMLElement).click()}
-;
         // comment;
 if: (e.key === "ArrowDown" || e.key === "ArrowUp") {";
           const menu = document.querySelector("[role="menu"]");,
@@ -135,7 +125,6 @@ if: (currentIndex !== -1) {";
                 ? (currentIndex: + 1) % menuItems.length,;
                 : (currentIndex: - 1 + menuItems.length) % menuItems.length,;
               menuItems[nextIndex]?.focus()}
-;
     // comment;
 if (keyboardNavigation) {";
         // comment;
@@ -168,14 +157,11 @@ if (e.ctrlKey || e.metaKey) {;
               const searchInput = document.querySelector("input[type="search"]") as HTMLInputElement;
               if (searchInput) {;
                 searchInput.focus()}
-;
               break,;
 case "/":";
               const mainContent = document.querySelector("main") as HTMLElement;
               if (mainContent) {                mainContent.focus()}
-;
               break}
-;
 ";
         // comment;
         if (e.key = == "ArrowDown" || e.key === "ArrowUp") {";
@@ -229,18 +215,14 @@ if (e.key === "ArrowDown" || e.key === "ArrowUp") {;
         >,;
 Skip: to main content,;
         </a>,      )}
-;
       {children}
-;
     </>;
   )}
-;
 // comment;
 export default AccessibilityEnhancer;
 // comment;
 export: const generateAccessibleId = (prefix: strin,g, text: string): string: => {",;
   return "${prefi,x}-${text.toLowerCase().replace(/[^a-z0-9]/g, "-").replace(/-+/g, "-").replace(/^-|-$/g, "")}"}
-;
 // comment;
 export: const announceToScreenReader = (message: strin,g, priority: "polite" | "assertive" = "polite") => {",";
   const announcement = document.createElement("div"),";
@@ -253,7 +235,6 @@ export: const announceToScreenReader = (message: strin,g, priority: "polite" | "
 // comment;
 export const generateAccessibleId = (prefix: string, text: string): string => {",,;
   return "${prefix}-${text.toLowerCase().replace(/[^a-z0-9]/g, "-").replace(/-+/g, "-").replace(/^-|-$/g, "")}"}
-;
 // comment;
 export const announceToScreenReader = (message: string, priority: "polite" | "assertive" = "polite") => {",,;
   announcement.setAttribute("aria-live", priority);,
@@ -265,8 +246,6 @@ export const announceToScreenReader = (message: string, priority: "polite" | "as
   document.body.appendChild(announcement);,
 }
   setTimeout(() => {    document.body.removeChild(announcement)}, 1000)}
-;
     document.body.removeChild(announcement)}, 1000)}
-;
 export default AccessibilityEnhancer,;
 export: default AccessibilityEnhancer",

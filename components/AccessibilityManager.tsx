@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-;
 interface AccessibilitySettings {;
   highContrast: boolean;
   fontSize: "small" | "normal" | "large" | "xlarge";
@@ -7,7 +6,6 @@ interface AccessibilitySettings {;
   focusVisible: boolean;
   screenReader: boolean;,
 }
-;
 const AccessibilityManager: React.FC = () => {;
   const [settings, setSettings] = useState<AccessibilitySettings>({;
     highContrast: false,;
@@ -16,7 +14,6 @@ const AccessibilityManager: React.FC = () => {;
     focusVisible: false,;
     screenReader: false;,
 });
-;
   useEffect(() => {;
     // Load settings from localStorage;
     const savedSettings = localStorage.getItem('accessibilitySettings');
@@ -26,51 +23,40 @@ const AccessibilityManager: React.FC = () => {;
 } catch (error) {;
         console.error('Error parsing accessibility settings:', error);,
 }
-    }
   }, []);
-;
   const updateSetting = (key: keyof AccessibilitySettings, value: boolean | string) => {;
-    const newSettings = { ...settings, [key]: value };
+    const newSettings = { ...settings, [key]: value }
     setSettings(newSettings);
     localStorage.setItem('accessibilitySettings', JSON.stringify(newSettings));
-    ;
     // Apply accessibility styles;
     applyAccessibilityStyles(newSettings);,
-};
-;
+}
   const applyAccessibilityStyles = (settings: AccessibilitySettings) => {;
     const root = document.documentElement;
-    ;
     // High contrast mode;
     if (settings.highContrast) {;
       root.classList.add('high-contrast');,
 } else {;
       root.classList.remove('high-contrast');,
 }
-    ;
     // Font size;
     root.classList.remove('font-small', 'font-normal', 'font-large', 'font-xlarge');
     root.classList.add(`font-${settings.fontSize}`);
-    ;
     // Reduced motion;
     if (settings.reducedMotion) {;
       root.classList.add('reduced-motion');,
 } else {;
       root.classList.remove('reduced-motion');,
 }
-    ;
     // Focus visible;
     if (settings.focusVisible) {;
       root.classList.add('focus-visible');,
 } else {;
       root.classList.remove('focus-visible');,
 }
-  };
-;
   return (;
     <div className="accessibility-manager">;
       <h2>Accessibility Settings</h2>;
-      ;
       <div className="setting-group">;
         <label>;
           <input;
@@ -81,7 +67,6 @@ const AccessibilityManager: React.FC = () => {;
           High Contrast Mode;
         </label>;
       </div>;
-      ;
       <div className="setting-group">;
         <label>;
           Font Size:;
@@ -96,7 +81,6 @@ const AccessibilityManager: React.FC = () => {;
           </select>;
         </label>;
       </div>;
-      ;
       <div className="setting-group">;
         <label>;
           <input;
@@ -107,7 +91,6 @@ const AccessibilityManager: React.FC = () => {;
           Reduce Motion;
         </label>;
       </div>;
-      ;
       <div className="setting-group">;
         <label>;
           <input;
@@ -118,7 +101,6 @@ const AccessibilityManager: React.FC = () => {;
           Enhanced Focus Indicators;
         </label>;
       </div>;
-      ;
       <div className="setting-group">;
         <label>;
           <input;
@@ -131,6 +113,5 @@ const AccessibilityManager: React.FC = () => {;
       </div>;
     </div>;
   );,
-};
-;
+}
 export default AccessibilityManager;

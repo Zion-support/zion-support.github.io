@@ -36,7 +36,6 @@ export default function EnhancedFooter() {;
       { name: "Privacy Policy", href: "/privacy" },";
       { name: "Terms of Service", href: "/terms" },";
       { name: "Cookie Policy", href: "/cookies" }]}
-;
   const socialLinks = [];
 
   return (;
@@ -81,7 +80,6 @@ digital age.;
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>;
               </div>;
           {/* comment */}
-;
           <div>";
             <h3 className="text-lg font-semibold mb-4 flex items-center">";
               <Globe className="w-5 h-5 mr-2 text-blue-400"  />;
@@ -93,15 +91,12 @@ digital age.;
                   <Link href="{link.href}
                     className="text-gray-400 hover: text-white transition-colors text-sm">,;
                     {link.name}
-;
                   </Link>;
                 </li>;
               ))}
-;
             </ul>;
           </div>;
           {/* comment */}
-;
           <div>";
             <h3 className="text-lg font-semibold mb-4 flex items-center">";
               <Shield className="w-5 h-5 mr-2 text-green-400"  />;
@@ -113,15 +108,12 @@ digital age.;
                   <Link href="{link.href}
                     className="text-gray-400 hover: text-white transition-colors text-sm">,;
                     {link.name}
-;
                   </Link>;
                 </li>;
               ))}
-;
             </ul>;
           </div>;
           {/* comment */}
-;
           <div>";
             <h3 className="text-lg font-semibold mb-4 flex items-center">";
               <FileText className="w-5 h-5 mr-2 text-purple-400"  />;
@@ -133,15 +125,12 @@ digital age.;
                   <Link href="{link.href}
                     className="text-gray-400 hover: text-white transition-colors text-sm">,;
                     {link.name}
-;
                   </Link>;
                 </li>;
               ))}
-;
             </ul>;
           </div>;
           {/* comment */}
-;
           <div>";
             <h3 className="text-lg font-semibold mb-4 flex items-center">";
               <HelpCircle className="w-5 h-5 mr-2 text-yellow-400"  />;
@@ -153,11 +142,9 @@ digital age.;
                   <Link href="{link.href}
                     className="text-gray-400 hover: text-white transition-colors text-sm">,;
                     {link.name}
-;
                   </Link>;
                 </li>;
               ))}
-;
             </ul>";
             <h4 className="text-md font-semibold mb-3 text-gray-300">Legal</h4>";
             <ul className="space-y-2">;
@@ -166,11 +153,9 @@ digital age.;
                   <Link href="{link.href}
                     className="text-gray-400 hover: text-white transition-colors text-sm">,;
                     {link.name}
-;
                   </Link>;
                 </li>;
               ))}
-;
             </ul>;
           </div>;
         {/* comment */}";
@@ -210,7 +195,6 @@ company updates.;
                     <social.icon className="w-5 h-5" />;
                   </a>;
                 ))}
-;
               </div>;
       {/* comment */}";
       <button onClick="{scrollToTop}
