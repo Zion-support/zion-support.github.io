@@ -12,7 +12,7 @@ class HealthChecker {
 
   async checkDependencies() {
     try {
-      const packageJson = JSON.parse(fs.readFileSync(path.join(this.projectRoot, 'package.json'), 'utf8'));
+      JSON.parse(fs.readFileSync(path.join(this.projectRoot, 'package.json'), 'utf8'));
       const nodeModulesExists = fs.existsSync(path.join(this.projectRoot, 'node_modules'));
       
       if (!nodeModulesExists) {

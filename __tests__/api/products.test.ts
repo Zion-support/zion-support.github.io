@@ -18,15 +18,7 @@ jest.mock('@prisma/client', () => {
 
 let prisma: PrismaClient;
 
-interface ProductLike {
-  id: string;
-  name: string;
-  description?: string;
-  images?: unknown[];
-  price?: number | null;
-  currency?: string;
-  tags?: string[];
-}
+
 
 describe('/api/products API Endpoint', () => {
   beforeEach(() => {
