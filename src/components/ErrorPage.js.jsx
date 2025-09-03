@@ -23,8 +23,7 @@ export const ErrorPage = ({}"});,})
   );,"});,})
 };,});,"})
 export default ErrorPage;'";,"});,"})
-''"";,});,})
-  message = 'The page you are looking for does not exist.'}) => {}
+''"";,});,})  message = 'The page you are looking for does not exist.'}) => {}
   return()""
     <div className='min-h-screen bg-zion-blue flex items-center justify-center'>''''
       <div className='text-center text-white'>''''
@@ -44,5 +43,12 @@ export default ErrorPage;'";,"});,"})
   );
 };
 export default ErrorPage'';"
-export default ErrorPage'';';
+export default ErrorPage'';
 '''''";
+  )};""
+export default ErrorPage'';""
+'''''"'"
+  )};"
+export default ErrorPage'
+export default ErrorPage'
+'''''"

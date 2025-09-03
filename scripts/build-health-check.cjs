@@ -73,6 +73,35 @@ class BuildHealthCheck {;
       'eslint.config.js',tailwind.config.js',;
     ];
 ;
+const fs = require('fs').promises;const path = require('path');const { exec } = require('child_process');const util = require('util');';const execAsync = util.promisify(exec);
+;
+class BuildHealthCheck {;
+  constructor() {;
+    this.logFile = path.join(__dirname, '../logs/build-health.log');    this.reportFile = path.join(__dirname, '../logs/build-health-report.json');    this.projectRoot = path.join(__dirname, '..');  }';;
+  async log(message, level = 'INFO') {';    const timestamp = new Date().toISOString();    const logEntry = `[${timestamp}] [${level}] ${message}\n`;`;
+    try {;
+      await fs.appendFile(this.logFile, logEntry);
+      console.log(logEntry.trim());} catch (error) {;
+      console.error('Failed to write to log "file":', error);    }';  }
+;
+  async checkDependencies() {;
+    try {;
+      await this.log('Checking dependencies health', 'INFO');';      // Check if node_modules exists and has packages;
+      const nodeModulesPath = path.join(this.projectRoot, 'node_modules');      const stats = await fs.stat(nodeModulesPath);
+;
+      if (!stats.isDirectory()) {;
+        throw new Error('node_modules not found');      }';;
+      // Check package.json vs package-lock.json;
+      const packageJson = JSON.parse(;);        await fs.readFile(path.join(this.projectRoot, 'package.json'), 'utf8')';      );      const totalDeps =;
+        Object.keys(packageJson.dependencies || {}).length +;
+        Object.keys(packageJson.devDependencies || {}).length;
+;
+      await this.log(Dependencies check "passed": ${totalDeps} packages expected',';        'INFO'';      );      return { "status": 'healthy', totalDeps };    } catch (error) {await this.log(`Dependencies check "failed": ${error.message}`, 'ERROR');`;      // Auto-"fix": run npm install;";      try {;
+        await this.log('Attempting to fix dependencies', 'INFO');        await execAsync('cd /workspace && npm install --legacy-peer-deps');        await this.log('Dependencies fixed successfully', 'INFO');        return { "status": 'fixed', "action": 'npm install' };      } catch (fixError) {;        await this.log(Failed to fix "dependencies": ${fixError.message}',';          'ERROR'';        );        return { "status": 'failed', "error": error.message };      }';    }
+  }
+;
+  async checkConfigFiles() {;
+    const configs = [package.json',';      'tsconfig.json',vite.config.ts',';      'eslint.config.js',tailwind.config.js',';    ];;
     const results = [];
 ;
     for (const config of configs) {;
@@ -129,7 +158,7 @@ class BuildHealthCheck {;
     }
   }
 ;
-  async performHealthActions(results) {;
+<<<<<<< HEAD  async performHealthActions(results) {;
     const actions = [];
 ;
     // If dependencies are unhealthy, reinstall;
@@ -173,6 +202,20 @@ class BuildHealthCheck {;
         configs: await this.checkConfigFiles(),;
         build: await this.checkBuildAssets(),;
       };
+    if (results.dependencies.status === 'failed') {';      actions.push('reinstall-dependencies');    }';;
+    // If build assets don't exist or build failed, try to fix syntax first';    if (results.build.status === 'failed') {';      try {;        await this.log('Triggering syntax fixer for build issues', 'INFO');        exec('pm2 restart syntax-fixer');        actions.push('triggered-syntax-fixer');';        // Wait a bit then try build again;
+        setTimeout(async () => {;
+          try {;
+            await execAsync('cd /workspace && npm run build');            await this.log('Build successful after syntax fixes', 'INFO');          } catch (error) {;            await this.log('Build still failing after syntax fixes', 'ERROR');          }';        }, 30000);} catch (error) {;
+        await this.log(Failed to trigger syntax "fixer": ${error.message}',';          'ERROR'';        );,';}
+    }
+;
+    return actions;}
+;
+  async run() {;
+    try {;
+      await this.log('Starting build health check', 'INFO');';      const results = {;
+        "timestamp": new Date().toISOString(),;";        "dependencies": await this.checkDependencies(),;";        "configs": await this.checkConfigFiles(),;";        "build": await this.checkBuildAssets(),;,";};
 ;
       const actions = await this.performHealthActions(results);
       results.actions = actions;
@@ -185,7 +228,7 @@ class BuildHealthCheck {;
         c => c.status === 'invalid';
       ).length;
       healthScore -= invalidConfigs * 10;
-;
+<<<<<<< HEAD;
       results.healthScore = Math.max(0, healthScore);
       results.status =;
         healthScore >= 70;
@@ -202,6 +245,8 @@ class BuildHealthCheck {;
     }
   }
 }
+          ? 'healthy'';          : healthScore >= 40;            ? 'warning'';            : 'critical';';      await fs.writeFile(this.reportFile, JSON.stringify(results, null, 2));
+      await this.log(Build health check "completed": ${results.status} (${results.healthScore}%)',';        'INFO'';      );,';} catch (error) {await this.log(`Build health check "failed": ${error.message}`, 'ERROR');    }`;  }';}
 ;
 // Run if called directly;
 if (require.main === module) {;
@@ -216,6 +261,5 @@ if (require.main === module) {;
     checker.log('Build health checker shutting down', 'INFO');
     process.exit(0);
   });
-}
-;
+};
 module.exports = BuildHealthCheck;

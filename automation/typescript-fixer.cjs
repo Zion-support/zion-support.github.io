@@ -259,7 +259,7 @@ export {};`;
 
   async run() {
     this.log('🚀 Starting TypeScript Fixing Process...');
-    this.log('======================================');
+    this.log('===');
     
     try {
       await this.createTypeDeclarations();
@@ -268,7 +268,7 @@ export {};`;
       await this.runTypeCheck();
       
       this.log('\\n📊 TYPESCRIPT FIXING REPORT');
-      this.log('===========================');
+      this.log('======');
       this.log(`Fixes Applied: ${this.fixes.length}`);
       this.log(`Errors Found: ${this.errors.length}`);
       

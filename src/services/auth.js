@@ -1,6 +1,5 @@
  export default authService;'';,"});,})
-;,});,"})
-;
+;,});,"});
 import React from 'react';
 import {SEO } from '@/components/SEO';
 

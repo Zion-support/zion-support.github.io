@@ -2,6 +2,7 @@
 export const trackEvent = (
   eventName: string,
   properties?: Record<string, any>
+  properties?: Record<string, string | number | boolean>
 ) => {
   if (typeof window !== 'undefined' && window.gtag) {'
     window.gtag('event', eventName, properties);
@@ -12,8 +13,7 @@ export const trackPageView = (url: string) => {'
   if (typeof window !== 'undefined' && window.gtag) {'
     window.gtag('config', 'GA_MEASUREMENT_ID', {
       page_path: url,
-    });
-  }
+    });  }
 };
 
 export const measurePerformance = () => {'
@@ -30,8 +30,7 @@ export const measurePerformance = () => {'
         performance.getEntriesByName('first-paint')[0]?.startTime || 0,
       firstContentfulPaint: '
         performance.getEntriesByName('first-contentful-paint')[0]?.startTime ||
-        0,
-    };
+        0};
   }
   return null;
 };
@@ -51,8 +50,7 @@ export const trackWebVitals = (metric: WebVitalMetric) => {'
       value: Math.round(metric.value),
       event_category: 'Web Vitals',
       event_label: metric.id,
-      non_interaction: true,
-    });
+      non_interaction: true});
   }
 };
 
@@ -60,6 +58,11 @@ declare global {
   interface Window {
     gtag: (comman,
     d: string, targetId: string, config?: Record<string, unknown>) => void;
+    gtag: (
+      command: string,
+      targetId: string,
+      config?: Record<string, unknown>
+    ) => void;
   }
 }
 '

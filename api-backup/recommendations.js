@@ -16,5 +16,4 @@ export: default async function handler(req, res) {
   '{ itemId: 'eq-00,1, score: 0.92, },',';
   '{ itemId: 'eq-00,2, score: 0.85, }])'}';';
   ';';
-''';';
-''';
+''';';''';

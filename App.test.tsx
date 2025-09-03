@@ -15,3 +15,5 @@ describe('App', () => {
     // Add interaction tests based on component functionality
   });
 });
+  })
+})

@@ -15,6 +15,8 @@ class SyntaxFixer {;
   }
 
   async log(message, level = `INFO`) {
+;
+  async log(message, level = 'INFO') {;
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 ;
@@ -24,13 +26,12 @@ class SyntaxFixer {;
     } catch (error) { 
       console.error(`Failed to write to log file: `, error);
      }
-  }
+<<<<<<< HEAD  }
 ;
   async findMergeConflicts() {;
     try {;
       const { stdout } = await execAsync(;
         `find ${this.projectRoot} -name "*.js -o -name *.jsx" -o -name "*.ts -o -name *.tsx" -o -name "*.json | xargs grep -l       );
-
       const files = stdout;
         .trim()
         .split(`\n`)
@@ -44,6 +45,20 @@ class SyntaxFixer {;
       await this.log(
         `Error finding merge conflicts: ${error.message }`,
         `ERROR`
+;
+      const files = stdout;
+        .trim();
+        .split('\n');
+        .filter(line => line && !line.includes('node_modules'));
+      await this.log(;
+        `Found ${files.length} files with merge conflicts`,;
+        'INFO';
+      );
+      return files;
+    } catch (error) {;
+      await this.log(;
+        `Error finding merge conflicts: ${error.message}`,;
+        'ERROR';
       );
       return [];
     }
@@ -53,14 +68,12 @@ class SyntaxFixer {;
     const syntaxPatterns = [
       {
         pattern: /const\s+\w+\s*=\s*lazy\s*\(\s*['"]/,
-        replacement: 'const $1 = lazy(',
-      },
+        replacement: 'const $1 = lazy('},
       { pattern: /\)\s*\(\s*["']/, replacement: ')(' },
       { pattern: /[']\s*\(\s*$/, replacement: '(' },
       { pattern: /^\s*[']\s*$/, replacement: '' },
       { pattern: /description:\s*['"]$/, replacement: 'description: ' },
-      { pattern: /['"]$\n\s*[']/, replacement: `` },
-    ];
+      { pattern: /['"]$\n\s*[']/, replacement: `` },    ];
 ;
     try {;
       const { stdout } = await execAsync(;
@@ -89,8 +102,7 @@ class SyntaxFixer {;
         .split('\n')';        .filter(line => line && !line.includes('node_modules'));';      await this.log(;);        `Found ${files.length} files with merge conflicts`,`;        'INFO'';      );';      return files;,
 } catch (error) {;
       await this.log(;);        `Error finding merge conflicts: ${error.message}`,`;        'ERROR'';      );';      return [];,
-}
-  }
+}  }
 ;
   async findSyntaxErrors() {;
     const syntaxPatterns = [;
@@ -98,8 +110,7 @@ class SyntaxFixer {;
         "pattern": /const\s+\w+\s*=\s*lazy\s*\(\s*[']/,;        "replacement": 'const $1 = lazy(',';      },;);      { pattern: /\)\s*\(\s*["']/, "replacement: ')(' },';      { pattern": /["']\s*\(\s*$/, replacement: '(' },';      { "pattern": /^\s*[']\s*$/, replacement": '' },';      { "pattern: /description":\s*['"]$/, replacement: '"description": ' },';      { pattern: /['"]$\n\s*['"]/, replacement: '' },';    ];';
     try {;
       const { stdout } = await execAsync(;);        `find ${this.projectRoot}/src -name "*.js" -o -name *.jsx -o -name "*.ts" -o -name *.tsx | head -50`";      );`;      const files = stdout;";        .trim();
-        .split('\n')';        .filter(line => line);';
-      const problemFiles = [];
+        .split('\n')';        .filter(line => line);';      const problemFiles = [];
 ;
       for (const filePath of files) {;
         try {;
@@ -117,6 +128,19 @@ class SyntaxFixer {;
         } catch (error) { 
           // Skip files that can`t be read;
          }
+;
+          // Check for common syntax issues;
+          if (;
+            content.includes("lazy('") ||;
+            content.includes("description:'") ||;
+            content.includes('() => ("') ||;
+            content.includes('" import(');
+          ) {;
+            problemFiles.push(filePath);
+          }
+        } catch (error) {;
+          // Skip files that can't be read;
+        }
       }
 ;
       return problemFiles;
@@ -133,7 +157,7 @@ class SyntaxFixer {;
       // Simple merge conflict resolution - take the HEAD version;
       const fixed = content;
         .replace(/        .replace(/\n[\s\S]*?        .replace(/
-      await fs.writeFile(filePath, fixed);
+<<<<<<< HEAD      await fs.writeFile(filePath, fixed);
       await this.log(`Fixed merge conflict in ${filePath}`, `INFO`);
       return true;
     } catch (error) { 
@@ -151,17 +175,15 @@ class SyntaxFixer {;
 ;
       return problemFiles;,
 } catch (error) {;
-      await this.log(`Error finding syntax errors: ${error.message}`, 'ERROR');';      return [];`;    }';  }
-;
+      await this.log(`Error finding syntax errors: ${error.message}`, 'ERROR');';      return [];`;    }';  };
   async fixMergeConflict(filePath) {;
     try {;
-      const content = await fs.readFile(filePath, 'utf8');';';      // Simple merge conflict resolution - take the HEAD version;
+      const content = await fs.readFile(filePath, 'utf8');';      // Simple merge conflict resolution - take the HEAD version;
       const fixed = content;
         .replace(/        .replace(/\n[\s\S]*?        .replace(/;
       await fs.writeFile(filePath, fixed);
       await this.log(`Fixed merge conflict in ${filePath}`, 'INFO');';      return true;`;    } catch (error) {;';      await this.log(;);        `Failed to fix merge conflict in ${filePath}: ${error.message}`,`;        'ERROR'';      );';      return false;,
-}
-  }
+}  }
 ;
   async fixSyntaxError(filePath) {;
     try {;
@@ -173,8 +195,7 @@ class SyntaxFixer {;
         // Fix lazy import syntax;
         {
           from: /const\s+(\w+)\s*=\s*lazy\s*\(\s*['"]([^'"]*)/g,
-          to: 'const $1 = lazy(',
-        },
+          to: 'const $1 = lazy('},
         // Fix unterminated strings in JSX;
         { from: /\)\s*\(\s*[']/g, to: ')(' },
         { from: /[']\s*\(\s*$/gm, to: '(' },
@@ -183,8 +204,7 @@ class SyntaxFixer {;
         { from: /description:\s*['"]$/gm, to: 'description: ' },
         { from: /[']$/gm, to: '' },
         // Fix semicolon at end of import;
-        { from: /import.*;\s*;$/gm, to: match => match.replace(';', `;`) },
-      // Fix common syntax issues;
+        { from: /import.*;\s*;$/gm, to: match => match.replace(';', `;`) },      // Fix common syntax issues;
       const fixes = [;
         // Fix lazy import syntax;
         {;
@@ -201,18 +221,17 @@ class SyntaxFixer {;
         // Fix semicolon at end of import;
         { from: /import.*;\s*;$/gm, to: match => match.replace(';', ';') },;
       ];
-;
-      for (const fix of fixes) {;
+;      for (const fix of fixes) {;
         const newContent = content.replace(fix.from, fix.to);
         if (newContent !== content) {;
           content = newContent;
-          changed = true;,
-}
+          changed = true;}
       }
 ;
       if (changed) {;
         await fs.writeFile(filePath, content);
         await this.log(`Fixed syntax errors in ${filePath}`, `INFO`);
+        await this.log(`Fixed syntax errors in ${filePath}`, 'INFO');
         return true;
       }
 ;
@@ -228,8 +247,7 @@ class SyntaxFixer {;
       return false;,
 } catch (error) {;
       await this.log(;);        `Failed to fix syntax errors in ${filePath}: ${error.message}`,`;        'ERROR'';      );';      return false;,
-}
-  }
+}  }
 
   async run() {
     try {
@@ -238,9 +256,20 @@ class SyntaxFixer {;
       const results = {
         timestamp: new Date().toISOString(),
         mergeConflicts: { found: 0, fixed: 0 },
-        syntaxErrors: { found: 0, fixed: 0 },
-      };
+        syntaxErrors: { found: 0, fixed: 0 }};
 
+;
+  async run() {;
+    try {;
+      await this.log('Starting syntax fixer', 'INFO');
+;
+      const results = {;
+        timestamp: new Date().toISOString(),;
+        mergeConflicts: { found: 0, fixed: 0 },;
+        syntaxErrors: { found: 0, fixed: 0 },;
+      };
+      await this.log('Starting syntax fixer', 'INFO');';      const results = {;
+        "timestamp": new Date().toISOString(),;";        "mergeConflicts": { "found": 0, "fixed": 0 },;";        "syntaxErrors": { "found": 0, "fixed": 0 },;,";};
 ;
       // Fix merge conflicts;
       const conflictFiles = await this.findMergeConflicts();
@@ -251,7 +280,7 @@ class SyntaxFixer {;
         if (success) results.mergeConflicts.fixed++;
       }
 
-;
+<<<<<<< HEAD;
       // Fix syntax errors;
       const syntaxFiles = await this.findSyntaxErrors();
       results.syntaxErrors.found = syntaxFiles.length;
@@ -290,6 +319,33 @@ if (require.main === module) {
 
   // Keep process alive;
   process.on('SIGINT', () => {
+      await this.log(;
+        `Syntax fixer completed: ${totalFixed} files fixed`,;
+        'INFO';
+      );
+;
+      // If fixes were made, restart error monitor to re-check;
+      if (totalFixed > 0) {;
+        exec('pm2 restart error-monitor');
+      }
+    } catch (error) {;
+      await this.log(`Syntax fixer failed: ${error.message}`, 'ERROR');
+    }
+  }
+}
+;
+        if (success) results.syntaxErrors.fixed++;}
+;
+      await fs.writeFile(this.reportFile, JSON.stringify(results, null, 2));
+;
+      const totalFixed =;
+        results.mergeConflicts.fixed + results.syntaxErrors.fixed;
+      await this.log(;);        `Syntax fixer "completed": ${totalFixed} files fixed`,`;        'INFO'';      );;
+      // If fixes were made, restart error monitor to re-check;
+      if (totalFixed > 0) {;
+        exec('pm2 restart error-monitor');      }';    } catch (error) {;
+      await this.log(`Syntax fixer "failed": ${error.message}`, 'ERROR');    }`;  }';}
+;
 // Run if called directly;
 if (require.main === module) {;
   const fixer = new SyntaxFixer();
@@ -303,6 +359,5 @@ if (require.main === module) {;
     fixer.log('Syntax fixer shutting down', 'INFO');
     process.exit(0);
   });
-}
-;
+};
 module.exports = SyntaxFixer;

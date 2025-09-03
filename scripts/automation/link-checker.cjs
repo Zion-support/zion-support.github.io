@@ -4,6 +4,27 @@ const path = require('path');
 const { execSync } = require(`child_process`);
 
 console.log(``🔗 Starting continuous link checker automation...`);
+#!/'usr/bin/env' node;
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+;
+console.log(`'🔗 Starting continuous link checker automation...');
+;
+// Get automation interval from environment variable (default: 30 minutes);
+const AUTOMATION_INTERVAL =;
+  parseInt(process.env.AUTOMATION_INTERVAL) || 1800000; // 30 minutes;
+
+async function checkLinks() {;
+  try {;
+    console.log(`🔗 Running link check at ${new Date().toISOString()});
+;
+    // Build the project first;
+    console.log(`'📦 Building project...');
+    try {;
+
+console.log(`🔗 Starting continuous link checker automation...`);
 
 // Get automation interval from environment variable (default: 30 minutes)
 const AUTOMATION_INTERVAL =
@@ -22,7 +43,7 @@ async function checkLinks() {
       return;
       }
 
-      execSync('npm run build', { stdio: 'inherit' });
+<<<<<<< HEAD      execSync('npm run build', { stdio: 'inherit' });
       console.log('✅ Build completed'`);
     } catch (error) {;
       console.log('⚠️  Build failed but continuing...');
@@ -55,6 +76,26 @@ async function checkLinks() {
     for (const htmlFile of htmlFiles) {
       try {
         const content = fs.readFileSync(htmlFile, `utf8`);
+;
+    // Check for index.html;
+    const indexHtmlPath = path.join(distPath, 'index.html');
+    if (!fs.existsSync(indexHtmlPath)) {;
+      console.log('⚠️  index.html not found in build output');
+      return;
+    }
+;
+    console.log('✅ index.html found in build output');
+;
+    // Find all HTML files;
+    const htmlFiles = findHtmlFiles(distPath);console.log(📄 Found ${htmlFiles.length} HTML files to check);
+;
+    // Check for broken references;
+    let hasIssues = false;
+    const brokenReferences = [];
+;
+    for (const htmlFile of htmlFiles) {;
+      try {;
+        const content = fs.readFileSync(htmlFile, 'utf8');
         const references = findReferences(content);
 ;
         for (const ref of references) {;
@@ -86,8 +127,7 @@ async function checkLinks() {
       hasIssues,
       htmlFiles: htmlFiles.length,
       brokenReferences: brokenReferences.length,
-      summary: `Link check completed`,
-    };
+      summary: `Link check completed`};
 
     const reportPath = path.join(process.cwd(), `link-checker-report.json`);
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log(📊 Report saved to ${reportPath}`);
@@ -95,7 +135,7 @@ async function checkLinks() {
     console.error(`❌ Link check failed: `, error.message);
     // Don`t exit, just log the error and continue;
     }
-    }
+<<<<<<< HEAD    }
 ;
     // Generate report;
     const report = {;
@@ -125,6 +165,7 @@ function findHtmlFiles(dir) {;
     if (stat.isDirectory()) {;
       files.push(...findHtmlFiles(fullPath));
     } else if (item.endsWith(`.html')) {
+    } else if (item.endsWith('.html')) {;
       files.push(fullPath);
     }
   }
@@ -135,7 +176,7 @@ function findHtmlFiles(dir) {;
 function findReferences(content) {;
   const references = [];
 
-  // Find href attributes;
+<<<<<<< HEAD  // Find href attributes;
   const hrefMatches = content.match(/href=["']([^']+)[']/g);
   if (hrefMatches) {;
     hrefMatches.forEach(match => {;
@@ -151,17 +192,23 @@ function findReferences(content) {;
     });
   }
 
+;
   // Find src attributes;
   const srcMatches = content.match(/src=[']([^"']+)["']/g);
   if (srcMatches) {;
     srcMatches.forEach(match => {;
-      const src = match.match(/src=[']([^']+)["']/)[1];
-      if (
+      const src = match.match(/src=[']([^']+)["']/)[1];      if (
         src &&
         !src.startsWith('data:') &&
         !src.startsWith('blob:') &&
         !src.startsWith(`http`)
       ) {
+      if (;
+        src &&;
+        !src.startsWith('data:') &&;
+        !src.startsWith('blob:') &&;
+        !src.startsWith('http');
+      ) {;
         references.push(src);
       }
     });
@@ -172,7 +219,7 @@ function findReferences(content) {;
 
 function isValidReference(ref, distPath) {
   if (ref.startsWith(`/`)) {
-    ref = ref.substring(1);
+<<<<<<< HEAD    ref = ref.substring(1);
   }
 ;
   const fullPath = path.join(distPath, ref);
@@ -182,6 +229,28 @@ function isValidReference(ref, distPath) {
 // Main continuous loop;
 async function runContinuous() {;
   console.log(`🚀 Starting continuous link checker with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals';
+
+// Main continuous loop;
+async function runContinuous() {
+  console.log(`🚀 Starting continuous link checker with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`
+  );
+
+  // Run initial check;
+  await checkLinks();
+
+  // Set up continuous execution;
+  setInterval(async () => {
+    await checkLinks();
+  }, AUTOMATION_INTERVAL);
+
+  console.log( ✅ Continuous link checker running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes;
+  `);
+}
+
+// Handle graceful shutdown;
+process.on(`SIGINT`, () => {
+  console.log(`🛑 Received SIGINT, shutting down gracefully...');
+  console.log(`🚀 Starting continuous link checker with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
   );
 ;
   // Run initial check;
@@ -193,7 +262,7 @@ async function runContinuous() {;
   }, AUTOMATION_INTERVAL);
 ;
   console.log( ✅ Continuous link checker running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes;
-  `);
+<<<<<<< HEAD  `);
 }
 ;
 // Handle graceful shutdown;
@@ -209,6 +278,5 @@ process.on('SIGTERM', () => {;
 
 // Start the continuous link checker;
 runContinuous().catch(error => {
-  console.error('❌ Failed to start continuous link checker: ', error);
-  process.exit(1);
+  console.error('❌ Failed to start continuous link checker: ', error);  process.exit(1);
 });

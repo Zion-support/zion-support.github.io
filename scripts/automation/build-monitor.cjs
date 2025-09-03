@@ -1,4 +1,6 @@
 #!/''usr/bin/env'' node;
+#!/'usr/bin/env' node;
+
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -13,7 +15,7 @@ class BuildMonitor {;
   }
 
   log(message, type = `info`) {
-    const timestamp = new Date().toISOString();
+<<<<<<< HEAD    const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] [${type.toUpperCase()}] ${message}`);
   }
 ;
@@ -34,6 +36,18 @@ class BuildMonitor {;
       return { success: true, output: result };
     } catch (error) {  
       return { success: false, output: error.message, code: error.status   };
+;
+  async runCommand(command, options = {}) {;
+    try {;
+      const result = execSync(command, { ;
+        encoding: 'utf8', ;
+        cwd: this.projectRoot,;
+        stdio: 'pipe',;
+        ...options ;
+      });
+      return { success: true, output: result };
+    } catch (error) {;
+      return { success: false, output: error.message, code: error.status };
     }
   }
 ;
@@ -44,7 +58,7 @@ class BuildMonitor {;
     
     if (result.success) {
       this.log(`Build completed successfully`, `success`);
-      return true;
+<<<<<<< HEAD      return true;
     } else {this.log(`Build failed: ${result.output}`, `error`);this.errorsFound.push(`Build failed: ${result.output}`);
       return false;
     }
@@ -59,6 +73,16 @@ class BuildMonitor {;
       this.fixesApplied.push('Installed missing dependencies');
     }
     
+;
+  async fixBuildIssues(buildError) {;
+    this.log('Attempting to fix build issues...');
+    ;
+    // Try to install dependencies first;
+    const installResult = await this.runCommand('npm install');
+    if (installResult.success) {;
+      this.fixesApplied.push('Installed missing dependencies');
+    }
+    ;
     // Try to fix TypeScript errors;
     const typeCheckResult = await this.runCommand('npx tsc --noEmit');
     if (typeCheckResult.success) {;
@@ -67,7 +91,7 @@ class BuildMonitor {;
       this.fixesApplied.push('TypeScript errors detected - manual review needed');
     }
     
-    // Try to fix linting errors;
+<<<<<<< HEAD    // Try to fix linting errors;
     const lintResult = await this.runCommand('npx eslint --fix src/');
     if (lintResult.success) {;
       this.fixesApplied.push('Auto-fixed linting errors');
@@ -94,6 +118,11 @@ class BuildMonitor {;
     // For now, we'll just run a basic check;
     const result = await this.runCommand('node -c ''src/main.jsx'' 2>&1 || true');
     if (result.success) {
+    ;
+    // This would typically involve parsing files and checking syntax;
+    // For now, we'll just run a basic check;
+    const result = await this.runCommand('node -c 'src/main.jsx' 2>&1 || true');
+    if (result.success) {;
       this.log('No obvious syntax errors detected', 'success');
     }
   }
@@ -119,8 +148,7 @@ class BuildMonitor {;
       fixesApplied: this.fixesApplied,
       summary: {
         buildSuccessful: this.errorsFound.length === 0,
-        totalErrors: this.errorsFound.length,
-        totalFixes: this.fixesApplied.length;
+        totalErrors: this.errorsFound.length,        totalFixes: this.fixesApplied.length;
       }
     };
 ;
@@ -133,6 +161,11 @@ class BuildMonitor {;
     this.log(`Starting build monitoring process...`);
     
     try {
+;
+  async run() {;
+    this.log('Starting build monitoring process...');
+    ;
+    try {;
       const buildHealthy = await this.checkBuildHealth();
       ;
       if (!buildHealthy) {;
@@ -146,11 +179,12 @@ class BuildMonitor {;
       
       this.log(`Build monitoring completed`, `success`);
     } catch (error) {  this.log(`Error during build monitoring: ${error.message  }`, `error`);this.errorsFound.push(`Process error: ${error.message}`);
-      await this.generateReport();
+<<<<<<< HEAD      await this.generateReport();
     }
   }
 }
 
+;
 // Run the build monitor;
 const monitor = new BuildMonitor();
 monitor.run().catch(console.error);

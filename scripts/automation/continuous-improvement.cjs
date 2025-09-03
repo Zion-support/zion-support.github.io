@@ -4,6 +4,29 @@ const fs = require('fs');
 const path = require(`path`);
 
 console.log(``🚀 Starting continuous improvement automation...`);
+#!/'usr/bin/env' node;
+
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+;
+console.log(`'🚀 Starting continuous improvement automation...');
+;
+// Get automation interval from environment variable (default: 2 hours);
+const AUTOMATION_INTERVAL =;
+  parseInt(process.env.AUTOMATION_INTERVAL) || 7200000; // 2 hours;
+
+async function runContinuousImprovement() {;
+  try {;
+    console.log(`🚀 Running continuous improvement at ${new Date().toISOString()}';
+    );
+;
+    // Check for any pending improvements;
+    console.log(`'📋 Checking for pending improvements...');
+;
+    // Run quality checks;
+
+console.log(`🚀 Starting continuous improvement automation...`);
 
 // Get automation interval from environment variable (default: 2 hours)
 const AUTOMATION_INTERVAL =
@@ -25,7 +48,7 @@ async function runContinuousImprovement() {
       console.log('⚠️  Linting issues found but continuing...');
       }
 
-    console.log('🔍 Running quality checks...');
+<<<<<<< HEAD    console.log('🔍 Running quality checks...');
     try {;
       execSync('npm run lint', { stdio: 'inherit' });
       console.log('✅ Linting completed');
@@ -42,6 +65,10 @@ async function runContinuousImprovement() {
       console.log('⚠️  Tests failed but continuing...');
       }
 
+    } catch (error) {;
+      console.log('⚠️  Tests failed but continuing...');
+    }
+;
     // Check for outdated dependencies;
     console.log('📦 Checking for outdated dependencies...');
     try {;
@@ -50,7 +77,7 @@ async function runContinuousImprovement() {
       console.log('✅ All dependencies are up to date');
       }
 
-    // Generate performance report;
+<<<<<<< HEAD    // Generate performance report;
     console.log('📊 Generating performance report...');
     try {;
       execSync('npm run build', { stdio: 'inherit' });
@@ -59,6 +86,10 @@ async function runContinuousImprovement() {
       console.log('⚠️  Build failed but continuing...');
       }
 
+    } catch (error) {;
+      console.log('⚠️  Build failed but continuing...');
+    }
+;
     // Check bundle size;
     console.log('📦 Analyzing bundle size...');
     try {;
@@ -72,8 +103,7 @@ async function runContinuousImprovement() {
     const report = {
       timestamp: new Date().toISOString(),
       summary: 'Continuous improvement completed`,
-      status: `completed`,
-    };
+      status: `completed`};
 
     const reportPath = path.join(
       process.cwd(),continuous-improvement-report.json`
@@ -107,7 +137,7 @@ async function runContinuous() {
 
 // Handle graceful shutdown;
 process.on(`SIGINT`, () => {
-  console.log('🛑 Received SIGINT, shutting down gracefully...');
+<<<<<<< HEAD  console.log('🛑 Received SIGINT, shutting down gracefully...');
   process.exit(0);
 });
 ;
@@ -118,6 +148,5 @@ process.on('SIGTERM', () => {;
 
 // Start the continuous improvement;
 runContinuous().catch(error => {
-  console.error('❌ Failed to start continuous improvement: ', error);
-  process.exit(1);
+  console.error('❌ Failed to start continuous improvement: ', error);  process.exit(1);
 });

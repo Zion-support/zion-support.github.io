@@ -1,76 +1,13 @@
+
+const fs = require('fs');
+const path = require('path');
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
-
 class SecurityEnhancer {
   constructor() {
     this.projectRoot = process.cwd();
-    this.securityEnhancements = [];
-  }
-
-  log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
-
-  async createSecurityHeaders() {
-    this.log('🔒 Creating security headers configuration...');
-    try {
-      const securityConfig = `
-// Security headers configuration
-export const securityHeaders = [
-  {
-    key: 'X-DNS-Prefetch-Control',
-    value: 'on'
-  },
-  {
-    key: 'Strict-Transport-Security',
-    value: 'max-age=63072000; includeSubDomains; preload'
-  },
-  {
-    key: 'X-XSS-Protection',
-    value: '1; mode=block'
-  },
-  {
-    key: 'X-Frame-Options',
-    value: 'SAMEORIGIN'
-  },
-  {
-    key: 'X-Content-Type-Options',
-    value: 'nosniff'
-  },
-  {
-    key: 'Referrer-Policy',
-    value: 'origin-when-cross-origin'
-  },
-  {
-    key: 'Permissions-Policy',
-    value: 'camera=(), microphone=(), geolocation=(), interest-cohort=()'
-  }
-];
-
-export const contentSecurityPolicy = {
-  directives: {
-    defaultSrc: ["'self'"],
-    styleSrc: ["'self'", "'unsafe-inline'"],
-    scriptSrc: ["'self'"],
-    imgSrc: ["'self'", "data:", "https:"],
-    fontSrc: ["'self'"],
-    connectSrc: ["'self'"],
-    frameAncestors: ["'none'"],
-    baseUri: ["'self'"],
-    formAction: ["'self'"]
-  }
-};
-`;
-      
-      fs.writeFileSync(
-        path.join(this.projectRoot, 'lib', 'security.ts'),
-        securityConfig
-      );
-      
-      this.securityEnhancements.push('Security headers configuration created');
-      this.log('✅ Security headers configuration created');
-    } catch (error) {
+    this.securityEnhancements = [];    } catch (error) {
       this.log(`❌ Security headers creation failed: ${error.message}`);
     }
   }
@@ -107,9 +44,7 @@ export function securityMiddleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    '/((?!api|_next/static|_next/image|favicon.ico).*)',
-  ],
-};
+    '/((?!api|_next/static|_next/image|favicon.ico).*)']};
 `;
       
       fs.writeFileSync(
@@ -120,8 +55,7 @@ export const config = {
       this.securityEnhancements.push('Security middleware created');
       this.log('✅ Security middleware created');
     } catch (error) {
-      this.log(`❌ Security middleware creation failed: ${error.message}`);
-    }
+      this.log(`❌ Security middleware creation failed: ${error.message}`);    }
   }
 
   async createSecurityAuditScript() {

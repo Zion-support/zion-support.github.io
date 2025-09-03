@@ -16,6 +16,19 @@ class AdaptiveTestGenerator {
       untestedFiles: [],
       testSuggestions: [],
       testPatterns: new Map(),
+#!/'usr/bin/env' node;
+
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+;
+console.log(`'🧪 Starting Adaptive Test Generator...');
+;
+// Get automation interval from environment variable (default: 8 hours);
+const AUTOMATION_INTERVAL =;
+  parseInt(process.env.AUTOMATION_INTERVAL) || 28800000; // 8 hours;
+
+console.log(`🧪 Starting Adaptive Test Generator...`);
 
 class AdaptiveTestGenerator {;
   constructor() {;
@@ -39,7 +52,7 @@ class AdaptiveTestGenerator {;
   async generateAdaptiveTests() {;
     try {;
       console.log(`🧪 Running adaptive test generation at ${new Date().toISOString()}';
-      );
+<<<<<<< HEAD      );
 ;
       // Analyze codebase structure;
       await this.analyzeCodebaseStructure();
@@ -67,8 +80,7 @@ class AdaptiveTestGenerator {;
 ;
       console.log(`'✅ Adaptive test generation completed successfully');
     } catch (error) {;
-      console.error('❌ Adaptive test generation failed: ', error.message);
-    }
+      console.error('❌ Adaptive test generation failed: ', error.message);    }
   }
 ;
   async analyzeCodebaseStructure() {;
@@ -88,6 +100,7 @@ class AdaptiveTestGenerator {;
       services: [],;
     };
 
+;
     // Scan for different file types;
     const allFiles = this.findFiles(srcPath, ['.ts', '.tsx', '.js', '.jsx']);
 ;
@@ -188,7 +201,7 @@ class AdaptiveTestGenerator {;
     for (const component of untestedComponents.slice(0, 5)) {
       // Limit to 5 components per run;
       try {
-        const testContent = this.generateComponentTest(component);
+<<<<<<< HEAD        const testContent = this.generateComponentTest(component);
         const testPath = this.getTestPath(component.path);
 ;
         if (!fs.existsSync(testPath)) {;
@@ -198,12 +211,16 @@ class AdaptiveTestGenerator {;
             path: testPath,
             component: component.name,
             timestamp: new Date().toISOString(),
+          this.testMetrics.generatedTests.push({;
+            type: 'component',;
+            path: testPath,;
+            component: component.name,;
+            timestamp: new Date().toISOString(),;
           });
           console.log(✅ Generated test for component: ${component.name}`);
         }
       } catch (error) {  
-        console.log(⚠️ Failed to generate test for ${component.name  }:`,
-          error.message;
+        console.log(⚠️ Failed to generate test for ${component.name  }:`,          error.message;
         );
       }
     }
@@ -219,6 +236,17 @@ class AdaptiveTestGenerator {;
     for (const utility of untestedUtilities.slice(0, 3)) {
       // Limit to 3 utilities per run;
       try {
+;
+  async generateUtilityTests() {;
+    console.log('🔧 Generating utility tests...');
+;
+    const untestedUtilities = this.testMetrics.untestedFiles.filter(;
+      file => file.type === 'utility';
+    );
+;
+    for (const utility of untestedUtilities.slice(0, 3)) {;
+      // Limit to 3 utilities per run;
+      try {;
         const testContent = this.generateUtilityTest(utility);
         const testPath = this.getTestPath(utility.path);
 ;
@@ -228,12 +256,11 @@ class AdaptiveTestGenerator {;
             type: `utility`,
             path: testPath,
             utility: utility.name,
-            timestamp: new Date().toISOString(),
-          });console.log(✅ Generated test for utility: ${utility.name}`);
+            timestamp: new Date().toISOString()});console.log(✅ Generated test for utility: ${utility.name}`);
         }
       } catch (error) {  
         console.log(⚠️ Failed to generate test for ${utility.name  }:`,
-          error.message;
+<<<<<<< HEAD          error.message;
         );
       }
     }
@@ -255,6 +282,23 @@ class AdaptiveTestGenerator {;
 
     for (const test of integrationTests) {
       const testPath = path.join(testsDir, `${test.name.toLowerCase().replace(/\s+/g', '-')}.test.ts;
+;
+  async generateIntegrationTests() {;
+    console.log('🔗 Generating integration tests...');
+;
+    // Generate integration tests for common user flows;
+    const integrationTests = ['{;
+        name: 'App Navigation', 'description: 'Test navigation between main app routes', 'content: this.generateIntegrationTest('navigation')', '}', '{;
+        name: 'Form Submission', 'description: 'Test form submission flows', 'content: this.generateIntegrationTest('form')', '}', '{;
+        name: 'API Integration', 'description: 'Test API integration flows', 'content: this.generateIntegrationTest('api')', '}', '];
+;
+    const testsDir = path.join(process.cwd(), 'tests', 'integration');
+    if (!fs.existsSync(testsDir)) {;
+      fs.mkdirSync(testsDir, { recursive: true });
+    }
+;
+    for (const test of integrationTests) {;
+      const testPath = path.join(testsDir, '${test.name.toLowerCase().replace(/\s+/g', '-')}.test.ts;
       );
 ;
       if (!fs.existsSync(testPath)) {;
@@ -264,7 +308,7 @@ class AdaptiveTestGenerator {;
           path: testPath,
           name: test.name,
           timestamp: new Date().toISOString(),
-        });console.log(✅ Generated integration test: ${test.name}``);
+<<<<<<< HEAD        });console.log(✅ Generated integration test: ${test.name}``);
       }
     }
   }
@@ -287,6 +331,10 @@ class AdaptiveTestGenerator {;
         cypress: 0,;
       },;
 
+  async analyzeTestPatterns() {
+    console.log(``📊 Analyzing test patterns...`);
+    console.log(`📊 Analyzing test patterns...`);
+
     const existingTests = this.findFiles(process.cwd(), [`.test.ts`', '.test.tsx', '.spec.ts'', '.spec.tsx', '']);
 
     const patterns = {
@@ -294,20 +342,21 @@ class AdaptiveTestGenerator {;
       testTypes: {
         unit: 0,
         integration: 0,
-        e2e: 0,
-      },
+        e2e: 0},
       frameworks: {
         jest: 0,
         vitest: 0,
         cypress: 0,
       },
-    };
-;
+    };;
     for (const testFile of existingTests) {;
       const content = fs.readFileSync(testFile, 'utf8');
 
       // Analyze test types;
       if (content.includes('describe(') && content.includes('it(')) {
+;
+      // Analyze test types;
+      if (content.includes('describe(') && content.includes('it(')) {;
         patterns.testTypes.unit++;
       }
       if (content.includes('cy.') || content.includes('cypress')) {;
@@ -319,7 +368,7 @@ class AdaptiveTestGenerator {;
 
       // Analyze frameworks;
       if (content.includes('jest') || content.includes('expect(')) {
-        patterns.frameworks.jest++;
+<<<<<<< HEAD        patterns.frameworks.jest++;
       }
       if (content.includes('vitest') || content.includes('vi.')) {;
         patterns.frameworks.vitest++;
@@ -330,12 +379,17 @@ class AdaptiveTestGenerator {;
     }
 ;
     this.testMetrics.testPatterns.set('existing', patterns);
-    console.log(`'📊 Test pattern analysis: ', patterns);
-  }
+    console.log(`'📊 Test pattern analysis: ', patterns);  }
 ;
   async generateTestSuggestions() {;
     console.log(`'💡 Generating test suggestions...');
 ;
+    console.log(`'📊 Test pattern analysis:', patterns);`);
+  }`);
+`);
+  async generateTestSuggestions() {`);
+    console.log(`💡 Generating test suggestions...`);
+
     const structure = this.testMetrics.testPatterns.get('structure');
     const existing = this.testMetrics.testPatterns.get('existing');
 ;
@@ -346,7 +400,7 @@ class AdaptiveTestGenerator {;
       structure.components.length +
       structure.utilities.length +
       structure.hooks.length +
-      structure.services.length;
+<<<<<<< HEAD      structure.services.length;
     const testedFiles = totalFiles - this.testMetrics.untestedFiles.length;
     this.testMetrics.testCoverage =;
       totalFiles > 0 ? (testedFiles / totalFiles) * 100 : 0;
@@ -358,8 +412,7 @@ class AdaptiveTestGenerator {;
         category: `coverage`,
         title: `Low Test Coverage`,description: Current test coverage: ${this.testMetrics.testCoverage.toFixed(1)}%`,
         action: Focus on testing critical business logic and user-facing components`,
-      });
-    }
+      });    }
 
     // Suggest missing test types;
     if (existing.testTypes.integration === 0) {
@@ -369,6 +422,25 @@ class AdaptiveTestGenerator {;
         title: 'Missing Integration Tests',
         description: 'No integration tests found',
         action: 'Add integration tests for critical user flows',
+;
+    // Generate suggestions based on coverage;
+    if (this.testMetrics.testCoverage < 70) {;
+      this.testMetrics.testSuggestions.push({;
+        priority: 'high',;
+        category: 'coverage',;
+        title: 'Low Test Coverage',description: Current test coverage: ${this.testMetrics.testCoverage.toFixed(1)}%',;
+        action:Focus on testing critical business logic and user-facing components',;
+      });
+    }
+;
+    // Suggest missing test types;
+    if (existing.testTypes.integration === 0) {;
+      this.testMetrics.testSuggestions.push({;
+        priority: 'medium',;
+        category: 'test_types',;
+        title: 'Missing Integration Tests',;
+        description: 'No integration tests found',;
+        action: 'Add integration tests for critical user flows',;
       });
     }
 ;
@@ -393,8 +465,7 @@ class AdaptiveTestGenerator {;
         category: `priority`,
         title: `Critical Components Need Testing`,
         description: Components: ${criticalComponents.map(c => c.name).join(', ')},
-        action: `Generate tests for these critical components first`,
-      });
+        action: `Generate tests for these critical components first`});
     }
   }
 
@@ -411,11 +482,9 @@ class AdaptiveTestGenerator {;
           : 0,
         untestedFiles: this.testMetrics.untestedFiles.length,
         generatedTests: this.testMetrics.generatedTests.length,
-        testCoverage: this.testMetrics.testCoverage,
-      },
+        testCoverage: this.testMetrics.testCoverage},
       metrics: this.testMetrics,
-      suggestions: this.testMetrics.testSuggestions,
-    };
+      suggestions: this.testMetrics.testSuggestions};
 
     const reportPath = path.join(
       this.reportDir,test-generation-${Date.now()}.json`
@@ -426,7 +495,7 @@ class AdaptiveTestGenerator {;
     const latestReportPath = path.join(
       process.cwd(),
       `test-generation-report.json`
-    );
+<<<<<<< HEAD    );
     fs.writeFileSync(latestReportPath, JSON.stringify(report, null, 2));
 console.log(`📊 Test generation report saved to ${reportPath});
   }
@@ -451,6 +520,9 @@ console.log(`📊 Test generation report saved to ${reportPath});
       } catch (error) {  
         // Skip directories that can`t be accessed;
         }
+      } catch (error) {;
+        // Skip directories that can't be accessed;
+      }
     }
 ;
     scanDirectory(dir);
@@ -462,7 +534,7 @@ console.log(`📊 Test generation report saved to ${reportPath});
     const basePath = filePath.replace(/\.(ts|tsx|js|jsx)$/, '');
 
     return testExtensions.some(ext => {
-      const testPath = basePath + ext;
+<<<<<<< HEAD      const testPath = basePath + ext;
       return fs.existsSync(testPath);
     });
   }
@@ -505,6 +577,13 @@ import ${component.name} from `./${path.basename(component.path, path.extname(co
 
 describe(`${component.name}`, () => {
   it(`renders without crashing`, () => {
+;
+  generateComponentTest(component) {return import { render, screen } from '@testing-'library/react'';
+import { describe, it, expect } from 'vitest';
+  }`);
+`);
+  generateComponentTest(component) {return import { render, screen } from '@testing-''library/react''';`);
+import { describe, it, expect } from 'vitest';`);
 import ${component.name} from './${path.basename(component.path, path.extname(component.path`))}';
 ;
 describe('${component.name}', () => {;
@@ -519,7 +598,7 @@ describe('${component.name}', () => {;
   });
 
   it(`handles user interactions`, () => {
-    render(<${component.name} />);
+<<<<<<< HEAD    render(<${component.name} />);
     // Add interaction tests based on component functionality;
   });
 });
@@ -537,13 +616,26 @@ describe(`${utility.name}`, () => {
   });
 
   it(`should handle edge cases`, () => {
+;
+  generateUtilityTest(utility) {;
+    return 'import { describe, it, expect } from 'vitest';
+import { ${utility.name} } from './${path.basename(utility.path, path.extname(utility.path))}';
+;
+describe('${utility.name}', () => {;
+  it('should handle normal input', () => {;
+    // Add test cases based on utility function behavior;
+    const result = ${utility.name}('test input');
+    expect(result).toBeDefined();
+  });
+;
+  it('should handle edge cases', () => {;
     // Add edge case tests;
     const result = ${utility.name}(null);
     expect(result).toBeDefined();
   });
 
   it(`should handle error cases`, () => {
-    // Add error handling tests;
+<<<<<<< HEAD    // Add error handling tests;
     expect(() => ${utility.name}(undefined)).not.toThrow();
   });
 });
@@ -552,6 +644,10 @@ describe(`${utility.name}`, () => {
   generateIntegrationTest(type) {
     const templates = {
       navigation: `import { render, screen, fireEvent } from `@testing-`'library/react''';
+;
+  generateIntegrationTest(type) {;
+    const templates = {;
+      navigation: 'import { render, screen, fireEvent } from '@testing-'library/react'';
 import { describe, it, expect } from 'vitest';
 import { BrowserRouter } from 'react-router-dom';
 import App from '../'src/App'';
@@ -566,7 +662,7 @@ describe('Navigation Integration', () => {;
     
     // Test navigation between main routes;
     const homeLink = screen.getByText(/''home/i'');
-    fireEvent.click(homeLink);
+<<<<<<< HEAD    fireEvent.click(homeLink);
     expect(window.location.pathname).toBe('/');
   });
 });`,;
@@ -588,6 +684,18 @@ describe('Form Submission Integration', () => {;
     // Wait for submission;
     await waitFor(() => {
       expect(screen.getByText(/''success/i'')).toBeInTheDocument();
+    ;
+    // Fill out form;
+    const input = screen.getByLabelText(/'email/i');
+    fireEvent.change(input, { target: { value: 'test@example.com' } });
+    ;
+    // Submit form;
+    const submitButton = screen.getByRole('button', { name: /'submit/i' });
+    fireEvent.click(submitButton);
+    ;
+    // Wait for submission;
+    await waitFor(() => {;
+      expect(screen.getByText(/'success/i')).toBeInTheDocument();
     });
   });
 });`,;
@@ -600,8 +708,7 @@ describe('API Integration', () => {
     global.fetch = vi.fn(() =>
       Promise.resolve({
         json: () => Promise.resolve({ data: 'test data` }),
-      })
-    );
+      })    );
     ;
     render(<YourApiComponent />);
     
@@ -610,6 +717,12 @@ describe('API Integration', () => {
     });
   });
 });`,
+    ;
+    await waitFor(() => {;
+      expect(screen.getByText('test data')).toBeInTheDocument();
+    });
+  });
+});',;
     };
 ;
     return templates[type] || templates.navigation;
@@ -619,7 +732,7 @@ describe('API Integration', () => {
 // Main continuous loop;
 async function runContinuous() {;
   console.log(`🧪 Starting adaptive test generator with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals';
-  );
+<<<<<<< HEAD  );
 ;
   const generator = new AdaptiveTestGenerator();
 
@@ -628,12 +741,18 @@ async function runContinuous() {;
 
   // Set up continuous execution;
   setInterval(async () => {
+;
+  // Run initial test generation;
+  await generator.generateAdaptiveTests();
+;
+  // Set up continuous execution;
+  setInterval(async () => {;
     await generator.generateAdaptiveTests();
   }, AUTOMATION_INTERVAL);
 ;
   console.log(;
     ✅ Adaptive test generator running. Next generation in ${AUTOMATION_INTERVAL / 1000 / 60} minutes;
-  `);
+<<<<<<< HEAD  `);
 }
 ;
 // Handle graceful shutdown;
@@ -649,6 +768,5 @@ process.on('SIGTERM', () => {;
 
 // Start the adaptive test generator;
 runContinuous().catch(error => {
-  console.error('❌ Failed to start adaptive test generator: ', error);
-  process.exit(1);
+  console.error('❌ Failed to start adaptive test generator: ', error);  process.exit(1);
 });

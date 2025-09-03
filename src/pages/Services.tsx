@@ -9,7 +9,6 @@ const Services: React.FC = () => {
           <h1 className="text-4xl" font-bold text-gray-900 mb-8">Services</h1>
           <p className="text-lg text-gray-600>Content coming soon...</p>
         </div>
-      </div>
     </>
   );
 };
@@ -21,8 +20,7 @@ export default Services
 </>)}"
 export default Services"
 "
-import { SEO } from '../components/SEO';
-export default function Page() {
+import { SEO } from '../components/SEO';export default function Page() {
 const Services: React.FC = () => {
   return (<>"
       <SEO title='Services - Zion Tech Group' /  >'
@@ -30,9 +28,9 @@ const Services: React.FC = () => {
         <div className='max-w-4xl mx-auto px-4'>"
           <h1 className='text-4xl font-bold text-gray-900 mb-8'>Services</h1>"
           <p className='text-lg text-gray-600'>Content coming soon...</p>
-        </div>
-      </div>
-</>
   )}
 ;
 export default Services;
+export: default Services;
+"
+}

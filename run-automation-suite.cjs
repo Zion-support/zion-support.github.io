@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+
 const { execSync, spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -61,7 +62,6 @@ class AutomationSuiteRunner {
         description: 'Build Application'
       }
     ];
-
     const results = [];
 
     for (const script of scripts) {
@@ -78,22 +78,18 @@ class AutomationSuiteRunner {
     const customScripts = [
       {
         name: 'Error Detection',
-        script: () => this.detectErrors(),
-      },
+        script: () => this.detectErrors()},
       {
         name: 'Performance Analysis',
-        script: () => this.analyzePerformance(),
-      },
+        script: () => this.analyzePerformance()},
       {
         name: 'Security Audit',
-        script: () => this.auditSecurity(),
-      },
+        script: () => this.auditSecurity()},
       {
         name: 'Code Quality Check',
         script: () => this.checkCodeQuality(),
       },
     ];
-
     const results = [];
 
     for (const customScript of customScripts) {
@@ -111,8 +107,7 @@ class AutomationSuiteRunner {
           name: customScript.name, 
           success: false, 
           error: error.message 
-        });
-        this.log(`❌ Failed: ${customScript.name} - ${error.message}`);
+        });        this.log(`❌ Failed: ${customScript.name} - ${error.message}`);
       }
     }
 
@@ -136,8 +131,7 @@ class AutomationSuiteRunner {
       this.log(`Linting errors found: ${error.message}`);
     }
 
-    return { errorsDetected: true, timestamp: new Date().toISOString() };
-  }
+    return { errorsDetected: true, timestamp: new Date().toISOString() };  }
 
   async analyzePerformance() {
     this.log('⚡ Analyzing performance...');
@@ -199,7 +193,6 @@ class AutomationSuiteRunner {
       },
       results: results
     };
-
     const reportFile = path.join(this.reportsDir, `automation-report-${Date.now()}.json`);
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     

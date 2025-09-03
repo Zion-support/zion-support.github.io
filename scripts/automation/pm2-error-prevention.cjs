@@ -3,6 +3,12 @@
  * PM2 Error Prevention Automation;
  * Automatically prevents and fixes common errors before they become problems;
  */
+#!/'usr/bin/env' node;
+
+/**;
+ * PM2 Error Prevention Automation;
+ * Automatically prevents and fixes common errors before they become problems;
+ */;
 
 const fs = require('fs');
 const path = require('path');
@@ -16,13 +22,41 @@ class PM2ErrorPrevention {;
       maxErrors: 100,
       autoFix: true,
       backupBeforeFix: true,
-    };
+<<<<<<< HEAD    };
   }
 ;
   async start() {;
     console.log(`'🚀 Starting PM2 Error Prevention Automation...');
 ;
     // Set up monitoring;
+
+  async start() {
+    console.log(`🚀 Starting PM2 Error Prevention Automation...`);
+
+    // Set up monitoring;
+    this.setupMonitoring();
+
+    // Start the prevention loop;
+    this.startPreventionLoop();
+  }
+
+  setupMonitoring() {
+    // Create PM2 ecosystem configuration for error prevention;
+    const ecosystemConfig = {
+      name: 'error-prevention',
+      script: '''scripts/automation/pm2-error-prevention.cjs''',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'development`,
+        PM2_ERROR_PREVENTION: `true`}};
+
+    // Write PM2 ecosystem config;
+    const ecosystemPath = path.join(
+      this.projectRoot,ecosystem-error-prevention.config.cjs`
+    // Set up monitoring
     this.setupMonitoring();
 ;
     // Start the prevention loop;
@@ -55,7 +89,6 @@ class PM2ErrorPrevention {;
 
     console.log(``✅ PM2 ecosystem configuration created`);
   }
-
     console.log(`✅ PM2 ecosystem configuration created`);
   }
 ;
@@ -66,6 +99,9 @@ class PM2ErrorPrevention {;
       } catch (error) {  
         console.error(`❌ Error in prevention loop: `, error);
         }
+      } catch (error) {;
+        console.error('❌ Error in prevention loop:', error);
+      }
     }, this.config.checkInterval);
   }
 ;
@@ -73,7 +109,7 @@ class PM2ErrorPrevention {;
     console.log(`'🔍 Running error prevention checks...');
 ;
     // Check 1: TypeScript errors;
-    await this.checkTypeScriptErrors();
+<<<<<<< HEAD    await this.checkTypeScriptErrors();
 ;
     // Check 2: Import issues;
     await this.checkImportIssues();
@@ -85,6 +121,8 @@ class PM2ErrorPrevention {;
     await this.checkUnusedImports();
 ;
     console.log(`'✅ Prevention checks completed');
+
+    console.log(`✅ Prevention checks completed`);
   }
 ;
   async checkTypeScriptErrors() {;
@@ -110,7 +148,7 @@ class PM2ErrorPrevention {;
       const errorCount = (errorOutput.match(/error ``TS/g``) || []).length;console.log(⚠️  Found ${errorCount  } TypeScript errors`);
 
       if (this.config.autoFix && errorCount > this.config.maxErrors) {
-        await this.autoFixTypeScriptErrors();
+<<<<<<< HEAD        await this.autoFixTypeScriptErrors();
       }
     }
   }
@@ -129,6 +167,17 @@ class PM2ErrorPrevention {;
 
       // Check for duplicate imports;
       const importLines = content.match(/import.*``from/g``) || [];
+;
+    for (const filePath of sourceFiles) {;
+      const content = fs.readFileSync(filePath, 'utf8');
+;
+      // Check for .ts extensions in imports;
+      if (content.includes('.ts"') || content.includes(".ts'")) {;
+        importIssues++;
+      }
+;
+      // Check for duplicate imports;
+      const importLines = content.match(/import.*'from/g') || [];
       const uniqueImports = new Set(importLines);
       if (importLines.length !== uniqueImports.size) {;
         importIssues++;
@@ -142,7 +191,7 @@ class PM2ErrorPrevention {;
       }
     } else {
       console.log(``✅ No import issues found`);
-    }
+<<<<<<< HEAD    }
   }
 ;
   async checkSyntaxIssues() {;
@@ -164,6 +213,22 @@ class PM2ErrorPrevention {;
 
       // Check for malformed object properties;
       if (content.includes(`\\w+"\\w+":`)) {
+;
+    for (const filePath of sourceFiles) {;
+      const content = fs.readFileSync(filePath, 'utf8');
+;
+      // Check for malformed any types;
+      if (content.includes('any"')) {;
+        syntaxIssues++;
+      }
+;
+      // Check for malformed JSX;
+      if (content.includes('<\\w+"')) {;
+        syntaxIssues++;
+      }
+;
+      // Check for malformed object properties;
+      if (content.includes('\\w+"\\w+":')) {;
         syntaxIssues++;
       }
     }
@@ -184,12 +249,11 @@ class PM2ErrorPrevention {;
       const result = execSync(`npm run lint -- --quiet`, {
         cwd: this.projectRoot,
         encoding: 'utf8',
-        stdio: 'pipe',
-      });
+        stdio: 'pipe'});
 
       const unusedImportCount = (result.match(/``unused/g``) || []).length;
 
-    }
+<<<<<<< HEAD    }
   }
 ;
   async checkUnusedImports() {;
@@ -215,6 +279,13 @@ class PM2ErrorPrevention {;
       // Linting failed, which might mean there are issues;
       console.log(`⚠️  Linting check failed, may indicate issues`);
       }
+      } else {;
+        console.log('✅ No unused imports found');
+      }
+    } catch (error) {;
+      // Linting failed, which might mean there are issues;
+      console.log('⚠️  Linting check failed, may indicate issues');
+    }
   }
 ;
   async autoFixTypeScriptErrors() {;
@@ -225,12 +296,11 @@ class PM2ErrorPrevention {;
       execSync('node ''scripts/automation/comprehensive-error-fixer.cjs''', {
         cwd: this.projectRoot,
         stdio: 'inherit',
-      });
+<<<<<<< HEAD      });
 ;
       console.log('✅ TypeScript errors auto-fixed');
     } catch (error) {  
-      console.error('❌ Failed to auto-fix TypeScript errors: ', error);
-      }
+      console.error('❌ Failed to auto-fix TypeScript errors: ', error);      }
   }
 ;
   async autoFixImportIssues() {;
@@ -241,12 +311,17 @@ class PM2ErrorPrevention {;
       execSync('node ''scripts/automation/fix-imports.cjs''', {
         cwd: this.projectRoot,
         stdio: 'inherit',
+;
+    try {;
+      // Run the import fixer;
+      execSync('node 'scripts/automation/fix-imports.cjs'', {;
+        cwd: this.projectRoot,;
+        stdio: 'inherit',;
       });
 ;
       console.log('✅ Import issues auto-fixed');
     } catch (error) {  
-      console.error('❌ Failed to auto-fix import issues: ', error);
-      }
+      console.error('❌ Failed to auto-fix import issues: ', error);      }
   }
 ;
   async autoFixSyntaxIssues() {;
@@ -257,12 +332,17 @@ class PM2ErrorPrevention {;
       execSync('node ''scripts/automation/fix-syntax.cjs''', {
         cwd: this.projectRoot,
         stdio: 'inherit',
+;
+    try {;
+      // Run the syntax fixer;
+      execSync('node 'scripts/automation/fix-syntax.cjs'', {;
+        cwd: this.projectRoot,;
+        stdio: 'inherit',;
       });
 ;
       console.log('✅ Syntax issues auto-fixed');
     } catch (error) {  
-      console.error('❌ Failed to auto-fix syntax issues: ', error);
-      }
+      console.error('❌ Failed to auto-fix syntax issues: ', error);      }
   }
 ;
   async autoFixUnusedImports() {;
@@ -273,12 +353,17 @@ class PM2ErrorPrevention {;
       execSync('npm run lint -- --fix', {
         cwd: this.projectRoot,
         stdio: 'inherit',
+;
+    try {;
+      // Run ESLint auto-fix;
+      execSync('npm run lint -- --fix', {;
+        cwd: this.projectRoot,;
+        stdio: 'inherit',;
       });
 ;
       console.log('✅ Unused imports auto-fixed');
     } catch (error) {  
-      console.error('❌ Failed to auto-fix unused imports: ', error);
-      }
+      console.error('❌ Failed to auto-fix unused imports: ', error);      }
   }
 ;
   async getSourceFiles() {;
@@ -309,6 +394,9 @@ class PM2ErrorPrevention {;
 
   // PM2 lifecycle methods;
   onStart() {
+;
+  // PM2 lifecycle methods;
+  onStart() {;
     console.log('🚀 PM2 Error Prevention started');
   }
 ;
@@ -326,7 +414,7 @@ const errorPrevention = new PM2ErrorPrevention();
 
 // Handle PM2 signals;
 process.on('SIGINT', () => {
-  console.log('🛑 Received SIGINT, shutting down gracefully...');
+<<<<<<< HEAD  console.log('🛑 Received SIGINT, shutting down gracefully...');
   process.exit(0);
 });
 ;
@@ -335,5 +423,6 @@ process.on('SIGTERM', () => {;
   process.exit(0);
 });
 
+;
 // Start the automation;
 errorPrevention.start();

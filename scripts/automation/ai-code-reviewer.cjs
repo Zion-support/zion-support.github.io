@@ -3,6 +3,12 @@
  * AI Code Reviewer - PM2 Automation;
  * Intelligently analyzes code quality and suggests improvements;
  */
+#!/'usr/bin/env' node;
+
+/**;
+ * AI Code Reviewer - PM2 Automation;
+ * Intelligently analyzes code quality and suggests improvements;
+ */;
 
 const fs = require('fs');
 const path = require('path');
@@ -17,7 +23,7 @@ class AICodeReviewer {;
     this.learningData = path.join(;
       this.projectRoot,logs',;
       'ai-learning-data.json';
-    );
+<<<<<<< HEAD    );
     this.ensureLogsDirectory();
     this.loadLearningData();
   }
@@ -40,6 +46,18 @@ class AICodeReviewer {;
           patterns: {  },
           suggestions: {},
           performance: {},
+;
+  loadLearningData() {;
+    if (fs.existsSync(this.learningData)) {;
+      try {;
+        this.learningDataObj = JSON.parse(;
+          fs.readFileSync(this.learningData, 'utf8');
+        );
+      } catch (error) {;
+        this.learningDataObj = {;
+          patterns: {},;
+          suggestions: {},;
+          performance: {},;
         };
       }
     } else {;
@@ -55,7 +73,7 @@ class AICodeReviewer {;
   }
 
   log(message, level = `INFO`) {
-    const timestamp = new Date().toISOString();
+<<<<<<< HEAD    const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 ;
     fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`);
@@ -69,12 +87,21 @@ class AICodeReviewer {;
     const performance = {};
 
     try {
+;
+  async analyzeCodeQuality() {;
+    this.log('🤖 Starting AI-powered code quality analysis...');
+;
+    const reviews = [];
+    const suggestions = [];
+    const performance = {};
+;
+    try {;
       // 1. Analyze TypeScript files for patterns;
       const tsAnalysis = await this.analyzeTypeScriptFiles();
       reviews.push(...tsAnalysis.reviews);
       suggestions.push(...tsAnalysis.suggestions);
 
-      // 2. Analyze React components for best practices;
+<<<<<<< HEAD      // 2. Analyze React components for best practices;
       const reactAnalysis = await this.analyzeReactComponents();
       reviews.push(...reactAnalysis.reviews);
       suggestions.push(...reactAnalysis.suggestions);
@@ -83,6 +110,11 @@ class AICodeReviewer {;
       const perfAnalysis = await this.analyzePerformancePatterns();
       Object.assign(performance, perfAnalysis);
 
+;
+      // 3. Analyze performance patterns;
+      const perfAnalysis = await this.analyzePerformancePatterns();
+      Object.assign(performance, perfAnalysis);
+;
       // 4. Analyze security patterns;
       const securityAnalysis = await this.analyzeSecurityPatterns();
       reviews.push(...securityAnalysis.reviews);
@@ -105,7 +137,7 @@ class AICodeReviewer {;
       const appliedFixes = await this.autoApplySafeFixes(suggestions);
 
       this.log(✅ AI Code Review completed: ${reviews.length} issues found, ${suggestions.length} suggestions generated, ${appliedFixes.length} fixes applied`
-      );
+<<<<<<< HEAD      );
     } catch (error) {  this.log(`AI Code Review failed: ${error.message  }`, `ERROR`);
     }
 ;
@@ -123,6 +155,14 @@ class AICodeReviewer {;
       for (const file of tsFiles.slice(0, 50)) {
         // Limit to prevent overwhelming;
         const content = fs.readFileSync(file, `utf8`);
+;
+    try {;
+      // Find all TypeScript files;
+      const tsFiles = this.findFilesByExtension('.ts', '.tsx');
+;
+      for (const file of tsFiles.slice(0, 50)) {;
+        // Limit to prevent overwhelming;
+        const content = fs.readFileSync(file, 'utf8');
         const analysis = this.analyzeTypeScriptFile(content, file);
 ;
         if (analysis.issues.length > 0) {;
@@ -159,8 +199,7 @@ class AICodeReviewer {;
           line: lineNum,
           code: line.trim(),
           suggestion: 'Replace any" with proper TypeScript types',
-        });
-      }
+        });      }
 
       // Check for unused imports;
       if (
@@ -168,6 +207,32 @@ class AICodeReviewer {;
         line.includes('from') &&
         !line.includes('//')
       ) {
+;
+    // Analyze for common TypeScript anti-patterns;
+    const lines = content.split('\n');
+;
+    lines.forEach((line, index) => {;
+      const lineNum = index + 1;
+;
+      // Check for any types;
+      if (line.includes(': any') && !line.includes('// eslint-disable')) {;
+        issues.push({;
+          type: 'TYPESCRIPT_ANTI_PATTERN',;
+          severity: 'MEDIUM',;
+          message: 'Avoid using "any" type - consider proper typing',;
+          file: filePath,;
+          line: lineNum,;
+          code: line.trim(),;
+          suggestion: 'Replace "any" with proper TypeScript types',;
+        });
+      }
+;
+      // Check for unused imports;
+      if (;
+        line.includes('import') &&;
+        line.includes('from') &&;
+        !line.includes('//');
+      ) {;
         const importMatch = line.match(/import\s+{([^}]+)}\s+from/);
         if (importMatch) {;
           const imports = importMatch[1].split(',').map(i => i.trim());
@@ -177,7 +242,7 @@ class AICodeReviewer {;
 
       // Check for long functions;
       if (line.includes('function') || line.includes('=>')) {
-        const functionStart = index;
+<<<<<<< HEAD        const functionStart = index;
         let functionLength = 0;
 ;
         for (let i = index; i < lines.length; i++) {;
@@ -211,6 +276,12 @@ class AICodeReviewer {;
 
       for (const file of reactFiles.slice(0, 30)) {
         const content = fs.readFileSync(file, `utf8`);
+;
+    try {;
+      const reactFiles = this.findFilesByExtension('.tsx', '.jsx');
+;
+      for (const file of reactFiles.slice(0, 30)) {;
+        const content = fs.readFileSync(file, 'utf8');
         const analysis = this.analyzeReactComponent(content, file);
 ;
         reviews.push(...analysis.reviews);
@@ -230,7 +301,7 @@ class AICodeReviewer {;
     if (content.includes(`useState`) && content.includes('useEffect')) {
       // Check for missing dependency arrays;
       const useEffectRegex =
-        /useEffect\s*\(\s*\(\)\s*=>\s*{[^}]*}\s*,\s*\[\s*\]/g;
+<<<<<<< HEAD        /useEffect\s*\(\s*\(\)\s*=>\s*{[^}]*}\s*,\s*\[\s*\]/g;
       if (useEffectRegex.test(content)) {;
         suggestions.push({;
           type: 'REACT_BEST_PRACTICE',;
@@ -249,8 +320,7 @@ class AICodeReviewer {;
         severity: 'LOW',
         message: Consider using Context or state management for deep prop drilling',
         file: filePath,
-        suggestion: `Implement React Context or Redux for better state management`,
-      });
+        suggestion: `Implement React Context or Redux for better state management`,      });
     }
 ;
     return { reviews, suggestions };
@@ -270,6 +340,14 @@ class AICodeReviewer {;
         performance.bundleSize = bundleStats;
       }
 
+;
+    try {;
+      // Analyze bundle size;
+      if (fs.existsSync('dist')) {;
+        const bundleStats = this.analyzeBundleSize();
+        performance.bundleSize = bundleStats;
+      }
+;
       // Check for performance anti-patterns in code;
       const perfIssues = this.findPerformanceIssues();
       performance.renderOptimization = perfIssues;
@@ -285,7 +363,7 @@ class AICodeReviewer {;
     try {
       const distPath = path.join(this.projectRoot, `dist`);
       if (fs.existsSync(distPath)) {
-        const files = this.getAllFiles(distPath);
+<<<<<<< HEAD        const files = this.getAllFiles(distPath);
         let totalSize = 0;
 ;
         files.forEach(file => {;
@@ -299,6 +377,10 @@ class AICodeReviewer {;
         if (totalSize > 5 * 1024 * 1024) {
           // 5MB;
           stats.warning =Bundle size is large - consider code splitting and optimization`;
+;
+        if (totalSize > 5 * 1024 * 1024) {;
+          // 5MB;
+          stats.warning =Bundle size is large - consider code splitting and optimization';
         }
       }
     } catch (error) {  this.log(`Bundle size analysis failed: ${error.message  }`, `ERROR`);
@@ -322,8 +404,7 @@ class AICodeReviewer {;
             type: 'PERFORMANCE_ANTI_PATTERN`,
             message: Multiple array operations in render - consider memoization`,
             file: file,
-            suggestion: `Use useMemo or useCallback to optimize expensive calculations`,
-          });
+            suggestion: `Use useMemo or useCallback to optimize expensive calculations`,          });
         }
       }
     } catch (error) {  this.log(`Performance issue detection failed: ${error.message  }`, `ERROR`);
@@ -349,8 +430,7 @@ class AICodeReviewer {;
             severity: 'HIGH',
             message: 'dangerouslySetInnerHTML usage detected',
             file: file,
-            suggestion: 'Sanitize HTML content and consider safer alternatives',
-          });
+            suggestion: 'Sanitize HTML content and consider safer alternatives'});
         }
 
         // Check for hardcoded secrets;
@@ -365,6 +445,36 @@ class AICodeReviewer {;
             message: `Consider using environment variables for sensitive data`,
             file: file,
             suggestion: `Move sensitive data to environment variables`,
+;
+    try {;
+      const tsFiles = this.findFilesByExtension('.ts', '.tsx');
+;
+      for (const file of tsFiles.slice(0, 30)) {;
+        const content = fs.readFileSync(file, 'utf8');
+;
+        // Check for XSS vulnerabilities;
+        if (content.includes('dangerouslySetInnerHTML')) {;
+          reviews.push({;
+            type: 'SECURITY_RISK',;
+            severity: 'HIGH',;
+            message: 'dangerouslySetInnerHTML usage detected',;
+            file: file,;
+            suggestion: 'Sanitize HTML content and consider safer alternatives',;
+          });
+        }
+;
+        // Check for hardcoded secrets;
+        if (;
+          content.includes('api_key') ||;
+          content.includes('password') ||;
+          content.includes('secret');
+        ) {;
+          suggestions.push({;
+            type: 'SECURITY_BEST_PRACTICE',;
+            severity: 'MEDIUM',;
+            message: 'Consider using environment variables for sensitive data',;
+            file: file,;
+            suggestion: 'Move sensitive data to environment variables',;
           });
         }
       }
@@ -389,8 +499,7 @@ class AICodeReviewer {;
         type: `AI_SUGGESTION`,
         severity: 'MEDIUM',
         message: 'High number of TypeScript anti-patterns detected',
-        suggestion: Consider running a TypeScript refactoring session to improve code quality',
-      });
+        suggestion: Consider running a TypeScript refactoring session to improve code quality',      });
     }
 ;
     if (issueTypes.REACT_BEST_PRACTICE > 3) {;
@@ -408,14 +517,15 @@ class AICodeReviewer {;
         type: 'AI_SUGGESTION',
         severity: 'MEDIUM',
         message: 'Bundle size optimization needed',
-        suggestion: Implement code splitting, lazy loading, and tree shaking to reduce bundle size',
-      });
+        suggestion: Implement code splitting, lazy loading, and tree shaking to reduce bundle size',      });
     }
 ;
     return suggestions;
   }
 
   async updateLearningData(reviews, suggestions, performance) {
+;
+  async updateLearningData(reviews, suggestions, performance) {;
     // Update learning data with new patterns;
     const timestamp = new Date().toISOString();
 ;
@@ -427,7 +537,7 @@ class AICodeReviewer {;
       };
     }
 
-    // Keep only last 30 days of data;
+<<<<<<< HEAD    // Keep only last 30 days of data;
     const thirtyDaysAgo = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000);
     Object.keys(this.learningDataObj.patterns).forEach(date => {;
       if (new Date(date) < thirtyDaysAgo) {;
@@ -447,8 +557,7 @@ class AICodeReviewer {;
         criticalIssues: reviews.filter(r => r.severity === 'CRITICAL').length,
         highIssues: reviews.filter(r => r.severity === 'HIGH').length,
         mediumIssues: reviews.filter(r => r.severity === 'MEDIUM`).length,
-        lowIssues: reviews.filter(r => r.severity === `LOW`).length,
-      },
+        lowIssues: reviews.filter(r => r.severity === `LOW`).length},
       reviews: reviews.slice(0, 20), // Limit for readability;
       suggestions: suggestions.slice(0, 20),
       performance: performance,
@@ -457,11 +566,31 @@ class AICodeReviewer {;
         suggestions,
         performance;
       ),
+;
+  async generateReviewReport(reviews, suggestions, performance) {;
+    const report = {;
+      timestamp: new Date().toISOString(),;
+      summary: {;
+        totalIssues: reviews.length,;
+        totalSuggestions: suggestions.length,;
+        criticalIssues: reviews.filter(r => r.severity === 'CRITICAL').length,;
+        highIssues: reviews.filter(r => r.severity === 'HIGH').length,;
+        mediumIssues: reviews.filter(r => r.severity === 'MEDIUM').length,;
+        lowIssues: reviews.filter(r => r.severity === 'LOW').length,;
+      },;
+      reviews: reviews.slice(0, 20), // Limit for readability;
+      suggestions: suggestions.slice(0, 20),;
+      performance: performance,;
+      recommendations: this.generateRecommendations(;
+        reviews,;
+        suggestions,;
+        performance;
+      ),;
     };
 ;
     const reportPath = path.join(;
       this.projectRoot,logs', `ai-review-report-${Date.now()}.json`;
-    );
+<<<<<<< HEAD    );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 this.log(`📊 AI Review Report generated: ${reportPath}`);
     return report;
@@ -477,6 +606,14 @@ this.log(`📊 AI Review Report generated: ${reportPath}`);
 
     if (reviews.filter(r => r.severity === `HIGH').length > 5) {
       recommendations.push(🟠 High priority issues detected - schedule refactoring session'
+;
+    if (reviews.filter(r => r.severity === 'CRITICAL').length > 0) {;
+      recommendations.push(🔴 Critical issues detected - immediate attention required';
+      );
+    }
+;
+    if (reviews.filter(r => r.severity === 'HIGH').length > 5) {;
+      recommendations.push(🟠 High priority issues detected - schedule refactoring session';
       );
     }
 ;
@@ -506,7 +643,7 @@ this.log(`📊 AI Review Report generated: ${reportPath}`);
       for (const suggestion of safeSuggestions.slice(0, 5)) {
         // Limit to prevent overwhelming;
         try {
-          const fixResult = await this.applySuggestion(suggestion);
+<<<<<<< HEAD          const fixResult = await this.applySuggestion(suggestion);
           if (fixResult.success) {;
             appliedFixes.push({;
               suggestion: suggestion,;
@@ -526,6 +663,11 @@ this.log(`📊 AI Review Report generated: ${reportPath}`);
     // This is a simplified implementation;
     // In practice, you`d want more sophisticated fix application logic;
     return { success: true, message: `Suggestion applied successfully' };
+;
+  async applySuggestion(suggestion) {;
+    // This is a simplified implementation;
+    // In practice, you'd want more sophisticated fix application logic;
+    return { success: true, message: 'Suggestion applied successfully' };
   }
 ;
   findFilesByExtension(...extensions) {;
@@ -586,11 +728,13 @@ this.log(`📊 AI Review Report generated: ${reportPath}`);
       const result = await this.analyzeCodeQuality();
 this.log(`✅ AI Code Review completed successfully`);
       this.log(📊 Found ${result.reviews.length} issues and ${result.suggestions.length} suggestions`
-      );
+<<<<<<< HEAD      );
 ;
       return result;
     } catch (error) {  
       this.log(`❌ AI Code Review failed: ${error.message  }`, `ERROR`);
+    } catch (error) {;
+      this.log(`❌ AI Code Review failed: ${error.message}`, 'ERROR');
       throw error;
     }
   }
@@ -598,7 +742,7 @@ this.log(`✅ AI Code Review completed successfully`);
 
 // Run if called directly;
 if (require.main === module) {
-  const reviewer = new AICodeReviewer();
+<<<<<<< HEAD  const reviewer = new AICodeReviewer();
   reviewer.run().catch(console.error);
 }
 ;

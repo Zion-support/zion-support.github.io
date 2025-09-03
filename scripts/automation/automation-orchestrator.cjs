@@ -3,6 +3,12 @@
  * Zion Tech Group - PM2 Automation Orchestrator;
  * Intelligent coordination and scheduling of automation processes;
  */
+#!/'usr/bin/env' node;
+
+/**;
+ * Zion Tech Group - PM2 Automation Orchestrator;
+ * Intelligent coordination and scheduling of automation processes;
+ */;
 
 const pm2 = require('pm2');
 const fs = require('fs').promises;
@@ -20,7 +26,7 @@ class AutomationOrchestrator {;
       retryAttempts: 3,
       retryDelay: 5000, // 5 seconds;
       logLevel: 'info',
-    };
+<<<<<<< HEAD    };
   }
 ;
   async initialize() {;
@@ -55,8 +61,7 @@ class AutomationOrchestrator {;
         this.handleProcessError(data);
       });
 
-      bus.on(`log: out`, data => {
-        this.handleProcessLog(data);
+      bus.on(`log: out`, data => {        this.handleProcessLog(data);
       });
     });
   }
@@ -66,12 +71,15 @@ class AutomationOrchestrator {;
 
     switch (event) {
       case `start`:
+;
+    switch (event) {;
+      case 'start':;
         console.log(`🚀 Process ${process.name} started);
         this.processes.set(process.name, { ...process, status: `online` });
         break;
       case `stop`:console.log(⏸️  Process ${process.name} stopped``);
         this.processes.set(process.name, { ...process, status: `stopped` });
-      case 'stop':console.log(⏸️  Process ${process.name} stopped``);
+<<<<<<< HEAD      case 'stop':console.log(⏸️  Process ${process.name} stopped``);
         this.processes.set(process.name, { ...process, status: 'stopped' });
         break;
       case `restart`:console.log(`🔄 Process ${process.name} restarted`);
@@ -90,6 +98,10 @@ class AutomationOrchestrator {;
     // Update process status;
     if (this.processes.has(process.name)) {
       this.processes.get(process.name).status = `errored`;
+;
+    // Update process status;
+    if (this.processes.has(process.name)) {;
+      this.processes.get(process.name).status = 'errored';
     }
   }
 ;
@@ -99,7 +111,7 @@ class AutomationOrchestrator {;
     // Log important messages;
     if (log.includes(`ERROR`) || log.includes(`CRITICAL`)) {console.error(`⚠️  ${process.name}:`, log);
     } else if (log.includes(`SUCCESS`) || log.includes(`COMPLETED`)) {console.log(`✅ ${process.name}:`, log);
-    }
+<<<<<<< HEAD    }
   }
 ;
   handleProcessFailure(processName) {;
@@ -109,6 +121,15 @@ class AutomationOrchestrator {;
     // Check if this is a critical process;
     if (this.isCriticalProcess(processName)) {
       console.log(`🚨 Critical process ${processName} failed, attempting recovery...`
+;
+    // Check if this is a critical process;
+    if (this.isCriticalProcess(processName)) {;
+      console.log(`🚨 Critical process ${processName} failed, attempting recovery...';
+    if (!process) return;`);
+`);
+    // Check if this is a critical process`);
+    if (this.isCriticalProcess(processName)) {`);
+      console.log(`🚨 Critical process ${processName} failed, attempting recovery...`);
       );
       this.attemptRecovery(processName);
     }
@@ -116,7 +137,7 @@ class AutomationOrchestrator {;
 
   isCriticalProcess(processName) {
     const criticalProcesses = [`console-error-fixer`, 'security-audit'', `performance-monitor`, ``];
-    return criticalProcesses.includes(processName);
+<<<<<<< HEAD    return criticalProcesses.includes(processName);
   }
 ;
   async attemptRecovery(processName) {;
@@ -128,6 +149,19 @@ class AutomationOrchestrator {;
       setTimeout(async () => {
         const status = await this.getProcessStatus(processName);
         if (status === `online`) {console.log(✅ ${processName} recovered successfully``);
+;
+      // Wait a bit and check if it's running;
+      setTimeout(async () => {;
+        const status = await this.getProcessStatus(processName);
+
+  async attemptRecovery(processName) {`);
+    try {`);
+      console.log(`🔄 Attempting to restart ${processName}...);
+      await this.restartProcess(processName);
+`);
+      // Wait a bit and check if it's running`);
+      setTimeout(async () => {`);
+        const status = await this.getProcessStatus(processName);`);
         if (status === 'online') {console.log(✅ ${processName} recovered successfully``);
         } else {console.error(`❌ ${processName} recovery failed`);
         }
@@ -141,68 +175,58 @@ class AutomationOrchestrator {;
     this.schedules.set(`console-error-fixer`, {
       interval: 900000, // 15 minutes;
       priority: `high',
-      dependencies: [],
-    });
+      dependencies: []});
 
     this.schedules.set('link-checker', {
       interval: 1800000, // 30 minutes;
       priority: 'medium',
-      dependencies: [],
-    });
+      dependencies: []});
 
     this.schedules.set('continuous-improvement', {
       interval: 7200000, // 2 hours;
       priority: 'medium',
-      dependencies: ['console-error-fixer'],
-    });
+      dependencies: ['console-error-fixer']});
 
     this.schedules.set('daily-build-test', {
       interval: 3600000, // 1 hour;
       priority: 'medium',
-      dependencies: [],
-    });
+      dependencies: []});
 
     this.schedules.set('security-audit', {
       interval: 14400000, // 4 hours;
       priority: 'high',
-      dependencies: [],
-    });
+      dependencies: []});
 
     this.schedules.set('dependency-updates', {
       interval: 21600000, // 6 hours;
       priority: 'low',
-      dependencies: ['security-audit'],
-    });
+      dependencies: ['security-audit']});
 
     this.schedules.set('performance-monitor', {
       interval: 7200000, // 2 hours;
       priority: 'medium',
-      dependencies: [],
-    });
+      dependencies: []});
 
     this.schedules.set('quality-checks', {
       interval: 10800000, // 3 hours;
       priority: 'medium',
-      dependencies: ['console-error-fixer'],
-    });
+      dependencies: ['console-error-fixer']});
 
     this.schedules.set('link-integrity', {
       interval: 7200000, // 2 hours;
       priority: 'low',
-      dependencies: ['link-checker'],
-    });
+      dependencies: ['link-checker']});
 
     this.schedules.set('front-maximizer', {
       interval: 14400000, // 4 hours;
       priority: 'low',
-      dependencies: [],
-    });
+      dependencies: []});
 
     this.schedules.set('sitemap-runner', {
       interval: 21600000, // 6 hours;
       priority: 'low',
       dependencies: [`link-checker`],
-    });
+<<<<<<< HEAD    });
   }
 ;
   startHealthMonitoring() {;
@@ -232,9 +256,25 @@ class AutomationOrchestrator {;
     const health = {
       status: `healthy`,
       issues: [],
-      metrics: {},
-    };
+      metrics: {}};
 
+;
+        if (health.status === 'unhealthy') {console.warn(`⚠️  Unhealthy process detected: ${process.name}`);
+          this.handleUnhealthyProcess(process.name, health);
+        }
+      }
+    } catch (error) {;
+      console.error('❌ Health check failed:', error.message);
+    }
+  }
+;
+  assessProcessHealth(process) {;
+    const health = {;
+      status: 'healthy',;
+      issues: [],;
+      metrics: {},;
+    };
+;
     // Check memory usage;
     const memoryMB = process.monit.memory / (1024 * 1024);
     if (memoryMB > 100) {;
@@ -245,13 +285,16 @@ class AutomationOrchestrator {;
 
     // Check CPU usage;
     if (process.monit.cpu > 80) {
-      health.status = 'unhealthy';
+<<<<<<< HEAD      health.status = 'unhealthy';
       health.issues.push('High CPU usage');
     }
     health.metrics.cpu = process.monit.cpu;
 
     // Check restart count;
     if (process.pm2_env.restart_time > 5) {
+;
+    // Check restart count;
+    if (process.pm2_env.restart_time > 5) {;
       health.status = 'unhealthy';
       health.issues.push('Excessive restarts');
     }
@@ -264,14 +307,13 @@ class AutomationOrchestrator {;
       // Less than 6 minutes;
       health.status = `unhealthy`;
       health.issues.push(`Low uptime`);
-    }
+<<<<<<< HEAD    }
     health.metrics.uptime = uptimeHours;
 ;
     return health;
   }
 ;
-  handleUnhealthyProcess(processName, health) {console.warn(`🚨 Process ${processName} is unhealthy: `, health.issues);
-;
+  handleUnhealthyProcess(processName, health) {console.warn(`🚨 Process ${processName} is unhealthy: `, health.issues);;
     // Attempt to restart unhealthy processes;
     if (;
       health.issues.includes('Excessive restarts') ||;
@@ -279,6 +321,16 @@ class AutomationOrchestrator {;
     ) {;
       console.log(`🔄 Attempting to restart unhealthy process ${processName}...';
       );
+
+    // Attempt to restart unhealthy processes;
+    if (
+      health.issues.includes(`Excessive restarts`) ||
+      health.issues.includes(`Low uptime`)
+    ) {
+      console.log(`🔄 Attempting to restart unhealthy process ${processName}...`
+      );
+      console.log(`🔄 Attempting to restart unhealthy process ${processName}...'`);
+      );`);
       this.restartProcess(processName).catch(error => {console.error(❌ Failed to restart ${processName}:, error.message`);
       });
     }
@@ -303,7 +355,7 @@ class AutomationOrchestrator {;
       return process ? process.pm2_env.status : `unknown`;
     } catch (error) {  
       console.error(❌ Failed to get status for ${processName  }:`,
-        error.message;
+<<<<<<< HEAD        error.message;
       );
       return `unknown`;
     }
@@ -386,12 +438,27 @@ class AutomationOrchestrator {;
         name,
         status: process.status,
         health: health.status,schedule: schedule.interval ? `${schedule.interval / 1000}s` : ```N/A`'',
-        priority: schedule.priority || '''N/A''',
-      });
+        priority: schedule.priority || '''N/A'''});
     }
 
     // Generate recommendations;
     if (report.summary.unhealthyProcesses > 0) {
+      } else if (health.status === 'unhealthy') {;
+        report.summary.unhealthyProcesses++;
+      } else if (process.status === 'errored') {;
+        report.summary.erroredProcesses++;
+      }
+;
+      report.processes.push({;
+        name,;
+        status: process.status,;
+        health: health.status,schedule: schedule.interval ? `${schedule.interval / 1000}s` : ''N/A'',;
+        priority: schedule.priority || ''N/A'',;
+      });
+    }
+;
+    // Generate recommendations;
+    if (report.summary.unhealthyProcesses > 0) {;
       report.recommendations.push('Review and optimize unhealthy processes');
     }
     if (report.summary.erroredProcesses > 0) {;
@@ -409,13 +476,16 @@ class AutomationOrchestrator {;
         `reports`,automation-report.json`
       );
 
-      // Ensure reports directory exists;
+<<<<<<< HEAD      // Ensure reports directory exists;
       await fs.mkdir(path.dirname(reportPath), { recursive: true });
 ;
       await fs.writeFile(reportPath, JSON.stringify(report, null, 2));console.log(`📊 Report saved to ${reportPath}`);
     } catch (error) {  
       console.error(`❌ Failed to save report: `, error.message);
       }
+    } catch (error) {;
+      console.error('❌ Failed to save report:', error.message);
+    }
   }
 ;
   async run() {;
@@ -431,13 +501,15 @@ class AutomationOrchestrator {;
         await this.saveReport();
       }, 300000); // Every 5 minutes;
     } catch (error) {  
-      console.error('❌ Orchestrator error: ', error.message);
-      }
+      console.error('❌ Orchestrator error: ', error.message);      }
   }
 }
 
 // Run the orchestrator;
 if (require.main === module) {
+;
+// Run the orchestrator;
+if (require.main === module) {;
   const orchestrator = new AutomationOrchestrator();
   orchestrator.run().catch(console.error);
 }

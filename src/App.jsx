@@ -1,8 +1,7 @@
 import React, { Suspense, lazy } from 'react'; import { BrowserRouter as Router, Routes, Route  } from 'react-router-dom'; import { AppHeader } from './layout/AppHeader.jsx'; import { Footer } from './components/Footer.jsx'; import { ChatAssistant } from './components/ChatAssistant.tsx';
 import { ChatAssistant } from './components/ChatAssistant.tsx';
 (');
-// Home and main pages';
-const Home = lazy(() => import('./pages/Home.tsx'));
+// Home and main pages';const Home = lazy(() => import('./pages/Home.tsx'));
 const About = lazy(() => import('./pages/About.tsx'));
 const Contact = lazy(() => import('./pages/Contact.tsx'));
 const BlogPage = lazy(() => import('./pages/BlogPage.tsx'));
@@ -11,6 +10,15 @@ const Login = lazy(() => import('./pages/Login.tsx'));
 const FAQ = lazy(() => import('./pages/FAQ.tsx'));
 const Careers = lazy(() => import('./pages/Careers.tsx'));
 
+// Home and main pages""
+const Home = lazy(() => import('./pages/Home.tsx'));""
+const About = lazy(() => import('./pages/About.tsx'));""
+const Contact = lazy(() => import('./pages/Contact.tsx'));""
+const BlogPage = lazy(() => import('./pages/BlogPage.tsx'));""
+const PartnersPage = lazy(() => import('./pages/Partners.tsx'));""
+const Login = lazy(() => import('./pages/Login.tsx'));""
+const FAQ = lazy(() => import('./pages/FAQ.tsx'));""
+const Careers = lazy(() => import('./pages/Careers.tsx'));""
 // Home and main pages"
 const Home = lazy(() => import('./pages/Home.tsx'));"
 const About = lazy(() => import('./pages/About.tsx'));"
@@ -35,8 +43,7 @@ const LoadingSpinner = () => ("
   <div className='flex items-center justify-center min-h-screen'>"
     <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-zion-cyan'> <//div>
   </div>
-)
-// Simple Services page component
+)// Simple Services page component
 const ServicesPage = () => ('
   <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-24>
     <div className='container mx-auto px-4 py-16>
@@ -46,8 +53,7 @@ const ServicesPage = () => ('
           Our
 const ServicesPage = () => ("
   <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-24'>
-    <div className='container mx-auto px-4 py-16'>
-      <div className='text-center mb-16'>"
+    <div className='container mx-auto px-4 py-16'>      <div className='text-center mb-16'>"
         <h1 className='text-4xl md:text-6xl font-bold mb-6'>'
           Our{ }'
           <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400'>
@@ -66,14 +72,16 @@ const ServicesPage = () => ("
           </h3>'
           <h3 className='text-xl font-bold text-white mb-4'>
             AI & Machine Learning
-          </h3>"
-          <p className='text-gray-300'>
+          </h3>"          <p className='text-gray-300'>
             Cutting-edge artificial intelligence solutions for business
             automation and insights.
           </p>
         </div>'
         <div className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20>
           <h3 className='text-xl font-bold text-white mb-4'>Cybersecurity</h3>'
+        </div>""
+        <div className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20'>""
+          <h3 className='text-xl font-bold text-white mb-4'>Cybersecurity</h3>""
           <p className='text-gray-300'>
             Advanced security solutions with zero-trust architecture and threat
             detection.
@@ -81,7 +89,7 @@ const ServicesPage = () => ("
         </div>'
         <div className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20>
           <h3 className='text-xl font-bold text-white mb-4'>Cloud & DevOps</h3>'
-          <p className='text-gray-300'>
+<<<<<<< HEAD          <p className='text-gray-300'>
             Scalable cloud infrastructure and automated deployment solutions.
           </p>
         </div>
@@ -92,17 +100,14 @@ const ServicesPage = () => ("
 
 function App() {return (
     <Router>
-      <div className="&apos;min-h-screen" bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light&apos;>&apos;'
-        <AppHeader />
+      <div className="&apos;min-h-screen" bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light&apos;>&apos;'        <AppHeader />
         <main className="&apos;flex-1&apos;">&apos;'
           <Suspense fallback={}<LoadingSpinner />}>
-    <Router>"
-      <div className='min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light'>
+    <Router>"      <div className='min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light'>
         <AppHeader /" >
         <main className='flex-1'>
           <Suspense fallback={<LoadingSpinner / >}>"
-            <Routes>"
-            <Routes>
+            <Routes>"            <Routes>
               <Route path='/' element={<Home />} />
               <Route path='/about' element={<About />} />
               <Route path='/contact' element={<Contact />} />
@@ -131,6 +136,36 @@ function App() {return (
                         href='/''
                         className='bg-zion-purple text-white px-6 py-3 rounded-lg hover:bg-zion-purple-dark transition-colors'
                       >
+              <Route path='*' element={<div className='flex items-center justify-center min-h-screen'>
+              <Route path=&apos;/&apos; element={&apos;}&apos;<Home />} />
+              <Route path=&apos;/about&apos; element={&apos;}<About />} />
+              <Route path=&apos;/contact&apos; element={&apos;}<Contact />} />
+              <Route path=&apos;/blog&apos; element={&apos;}<BlogPage />} />
+              <Route path=&apos;/partners&apos; element={&apos;}<PartnersPage />} />
+              <Route path=&apos;/login&apos; element={&apos;}<Login />} />
+              <Route path=&apos;/faq&apos; element={&apos;}<FAQ />} />
+              <Route path=&apos;/careers&apos; element={&apos;}<Careers />} />
+              <Route path=&apos;/sitemap&apos; element={&apos;}<Sitemap />} />
+              <Route path=&apos;/pricing&apos; element={&apos;}<ComprehensivePricing />} />{/* Services routes */}
+              <Route path=&apos;/services&apos; element={&apos;}<ServicesPage />} />{/* Catch-all route for 404 */}
+              <Route
+                path=&apos;*'&apos;&apos;
+                element={}&apos;&apos;
+                  <div className=&apos;flex items-center justify-center min-h-screen&apos;>&apos;'
+                    <div className=&apos;text-center&apos;>&apos;'
+                      <h1 className=&apos;text-4xl font-bold text-zion-cyan mb-4&apos;>
+                        404 - Page Not Found&apos;
+                      </h1>
+                      <p className=&apos;text-zion-slate-light mb-6&apos;>
+                        The page you&apos;re looking for doesn&apos;t exist.&apos;
+                      </p>
+                      <a
+                        href=&apos;/'&apos;&apos;
+                        className=&apos;bg-zion-purple text-white px-6 py-3 rounded-lg hover:bg-zion-purple-dark transition-colors&apos;&apos;'&quot;>
+                        Go Home&quot;&apos;
+                path='*'''';'
+                element={}
+                  <div className='flex items-center justify-center min-h-screen'>
                     <div className='text-center'>
                       <h1 className='text-4xl font-bold text-zion-cyan mb-4'>
                         404 - Page Not Found
@@ -150,8 +185,7 @@ function App() {return (
               <Route path='/sitemap' element={<Sitemap / >} />"
               <Route path='/pricing' element={<ComprehensivePricing /" >} />
               {/* Services routes */}"
-              <Route path='/services' element={<ServicesPage /" >} />
-              {/* Catch-all route for 404 */}
+              <Route path='/services' element={<ServicesPage /" >} />              {/* Catch-all route for 404 */}
               <Route"
                 path='*'
                 element={"
@@ -165,20 +199,18 @@ function App() {return (
                       </p>
                       <a "
                         href='/'
-                        className='bg-zion-purple text-white px-6 py-3 rounded-lg hover: bg-zion-purple-dark transition-colors'" >
-                        Go Home
+                        className='bg-zion-purple text-white px-6 py-3 rounded-lg hover: bg-zion-purple-dark transition-colors'" >                        Go Home
                       </a>
                     </div>
-                  </div>, }
+                  </div>}
               />
             </Routes>
           </Suspense>
         </main>
         <Footer / >"
-        <ChatAssistant /" >"
-      </div>
+        <ChatAssistant /" >"      </div>
     </Router>
-  ), }
+  )}
 
 export default App;
 export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App }
@@ -192,3 +224,7 @@ export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Site
 export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App };
 ;
 export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App };
+export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App }
+
+export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App }
+""

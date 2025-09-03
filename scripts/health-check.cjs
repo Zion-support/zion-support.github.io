@@ -18,6 +18,11 @@ class HealthChecker {;
       checks: [];
     };
   }
+const fs = require('fs');const path = require('path');const { execSync } = require('child_process');';class HealthChecker {;
+  constructor() {;
+    this.checks = [];
+    this.results = {;
+      "timestamp": new Date().toISOString(),;";      "overall": 'healthy',';      "checks": [],;,";};}
 ;
   async runCheck(name, checkFn) {;
     try {;
@@ -90,11 +95,10 @@ class HealthChecker {;
     return this.results;
   }
 }
-;
+<<<<<<< HEAD;
 // Run health checks if called directly;
 if (require.main === module) {;
   const checker = new HealthChecker();
-  checker.runAllChecks().catch(console.error);,
-}
+  checker.runAllChecks().catch(console.error);}
 ;
 module.exports = HealthChecker;

@@ -5,6 +5,14 @@ const path = require(`path`);
 
 class QuickErrorChecker {
   constructor() {
+#!/'usr/bin/env' node;
+
+const { execSync } = require('child_process');
+const fs = require('fs').promises;
+const path = require('path');
+;
+class QuickErrorChecker {;
+  constructor() {;
     this.projectRoot = process.cwd();
     this.logFile = path.join(this.projectRoot, `automation/logs/quick-error-checker.log`);
     this.fixesApplied = [];
@@ -29,7 +37,7 @@ class QuickErrorChecker {
       return { success: true, output: result };
     } catch (error) {  
       return { success: false, output: error.stdout || error.stderr || error.message   };
-    }
+<<<<<<< HEAD    }
   }
 ;
   async checkSyntaxErrors() {;
@@ -37,6 +45,12 @@ class QuickErrorChecker {
     
     // Check for common syntax errors in JS files;
     const jsFiles = ['''automation/browser-error-fixer.js'''', '''scripts/automation/''*.cjs', '''scripts/automation/''*.js'
+    ;
+    // Check for common syntax errors in JS files;
+    const jsFiles = [''automation/browser-error-fixer.js'', ''scripts/automation/'*.cjs', ''scripts/automation/'*.js';
+    `);
+    // Check for common syntax errors in JS files`);
+    const jsFiles = ['''automation/browser-error-fixer.js'''', '''scripts/automation/''*.cjs', '''scripts/automation/''*.js`);
     ];
     ;
     for (const pattern of jsFiles) {;
@@ -57,7 +71,7 @@ class QuickErrorChecker {
               type: `syntax-fix`,
               file: file,
               timestamp: new Date().toISOString()
-          if (content.includes('}\n  }') || content.includes(']\n  }')) {await this.log(🔧 Fixing syntax in ${file}`);
+<<<<<<< HEAD          if (content.includes('}\n  }') || content.includes(']\n  }')) {await this.log(🔧 Fixing syntax in ${file}`);
             let fixedContent = content;
               .replace(/(\w+:\s*['^', '}']+)\s*\n\s*(\w+:)/g, '$1,\n  $2');
               .replace(/(\w+:\s*\[[^\]]*\])\s*\n\s*(\w+:)/g, '$1,\n  $2');
@@ -94,6 +108,26 @@ class QuickErrorChecker {
             type: `import-fix`,
             file: file,
             timestamp: new Date().toISOString()
+;
+  async checkImportErrors() {;
+    await this.log('🔍 Quick import check...');
+    ;
+    // Check for missing React imports in JSX files;
+    const jsxFiles = require('glob').sync('src/**/*.{jsx,tsx}', { cwd: this.projectRoot });
+    ;
+    for (const file of jsxFiles) {;
+      try {;
+        const filePath = path.join(this.projectRoot, 'file);
+        const content = await fs.readFile(filePath', 'utf8');
+        ;
+        // Check if file uses React but doesn't import it;
+        if ((content.includes('React.') || content.includes('<React.')) && !content.includes("import React")) {await this.log(`🔧 Adding React import to ${file}`);
+          const fixedContent = "import React from 'react';\n" + content;
+          await fs.writeFile(filePath, fixedContent);
+          this.fixesApplied.push({;
+            type: 'import-fix',;
+            file: file,;
+            timestamp: new Date().toISOString();
           });
         }
       } catch (error) {  await this.log(`❌ Error checking ${file  }: ${error.message}`);
@@ -106,7 +140,7 @@ class QuickErrorChecker {
     
     try {
       const eslintPath = path.join(this.projectRoot, `.eslintrc.js`);
-      const content = await fs.readFile(eslintPath, 'utf8');
+<<<<<<< HEAD      const content = await fs.readFile(eslintPath, 'utf8');
       ;
       if (!content.includes('module.exports')) {;
         await this.log('🔧 Fixing ESLint configuration...');const fixedConfig = `module.exports = {;
@@ -121,6 +155,10 @@ class QuickErrorChecker {
           type: `eslint-config-fix`,
           file: `.eslintrc.js`,
           timestamp: new Date().toISOString()
+        this.fixesApplied.push({;
+          type: 'eslint-config-fix',;
+          file: '.eslintrc.js',;
+          timestamp: new Date().toISOString();
         });
       }
     } catch (error) {  await this.log(`❌ Error checking ESLint config: ${error.message  }`);
@@ -131,7 +169,7 @@ class QuickErrorChecker {
     try {
       await this.log(`🚀 Starting Quick Error Check`);
       
-      await this.checkSyntaxErrors();
+<<<<<<< HEAD      await this.checkSyntaxErrors();
       await this.checkImportErrors();
       await this.checkESLintConfig();
       ;
@@ -146,6 +184,8 @@ class QuickErrorChecker {
       };
       
     } catch (error) {  await this.log(`❌ Quick Error Check failed: ${error.message  }`);
+      ;
+    } catch (error) {await this.log(`❌ Quick Error Check failed: ${error.message}`);
       throw error;
     }
   }
@@ -160,8 +200,7 @@ if (require.main === module) {
       process.exit(0);
     })
     .catch(error => {
-      console.error(`Quick error check failed: `, error);
-      process.exit(1);
+      console.error(`Quick error check failed: `, error);      process.exit(1);
     });
 }
 ;

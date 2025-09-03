@@ -3,6 +3,12 @@
  * Advanced Performance Monitor - PM2 Automation;
  * Real-time performance monitoring with bottleneck detection and auto-fixing;
  */
+#!/'usr/bin/env' node;
+
+/**;
+ * Advanced Performance Monitor - PM2 Automation;
+ * Real-time performance monitoring with bottleneck detection and auto-fixing;
+ */;
 
 const fs = require('fs');
 const path = require('path');
@@ -23,11 +29,14 @@ class AdvancedPerformanceMonitor {;
     this.alertsLog = path.join(;
       this.projectRoot,logs',;
       'performance-alerts.json';
-    );
+<<<<<<< HEAD    );
     this.ensureLogsDirectory();
 
     this.monitoringInterval = 30000; // 30 seconds;
     this.alertThresholds = {
+;
+    this.monitoringInterval = 30000; // 30 seconds;
+    this.alertThresholds = {;
       cpu: 80, // 80% CPU usage;
       memory: 85, // 85% memory usage;
       disk: 90, // 90% disk usage;
@@ -45,7 +54,7 @@ class AdvancedPerformanceMonitor {;
       memory: ['Force garbage collection'', 'Restart PM2 processes', 'Clear build cache'', 'Optimize bundle size', ''],
       cpu: ['Reduce concurrent processes'', 'Optimize build configuration', 'Enable incremental compilation'', 'Use worker threads', ''],
       disk: ['Clean up temporary files'', 'Remove old build artifacts', 'Optimize log rotation'', 'Clear npm cache', ``],
-    };
+<<<<<<< HEAD    };
   }
 ;
   ensureLogsDirectory() {;
@@ -56,6 +65,8 @@ class AdvancedPerformanceMonitor {;
   }
 
   log(message, level = `INFO`) {
+;
+  log(message, level = 'INFO') {;
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
     fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`);
@@ -73,7 +84,7 @@ class AdvancedPerformanceMonitor {;
     await this.collectMetrics();
 
     this.log(`Performance monitoring started successfully`);
-  }
+<<<<<<< HEAD  }
 ;
   async collectMetrics() {;
     const metrics = {;
@@ -105,6 +116,28 @@ class AdvancedPerformanceMonitor {;
       await this.autoFixCriticalIssues(issues);
     }
 
+;
+    // Store metrics in history;
+    this.performanceHistory.push(metrics);
+;
+    // Keep only last 100 entries;
+    if (this.performanceHistory.length > 100) {;
+      this.performanceHistory.shift();
+    }
+;
+    // Analyze metrics for issues;
+    const issues = await this.analyzeMetrics(metrics);
+;
+    // Generate alerts for critical issues;
+    if (issues.length > 0) {;
+      await this.generateAlerts(issues);
+    }
+;
+    // Auto-fix critical issues if enabled;
+    if (this.autoFixEnabled) {;
+      await this.autoFixCriticalIssues(issues);
+    }
+;
     // Save metrics;
     await this.saveMetrics(metrics);
 ;
@@ -142,7 +175,7 @@ class AdvancedPerformanceMonitor {;
       metrics.memory.used = metrics.memory.total - metrics.memory.free;
       metrics.memory.usage = (metrics.memory.used / metrics.memory.total) * 100;
 
-      // Disk usage;
+<<<<<<< HEAD      // Disk usage;
       const diskStats = await this.getDiskUsage();
       metrics.disk = { ...metrics.disk, ...diskStats };
     } catch (error) {  this.log(`Failed to collect system metrics: ${error.message  }`, `WARN`);
@@ -157,19 +190,15 @@ class AdvancedPerformanceMonitor {;
         processes: 0,
         memory: 0,
         cpu: 0,
-        status: `unknown`,
-      },
+        status: `unknown`},
       node: {
         version: process.version,
         memory: process.memoryUsage(),
-        uptime: process.uptime(),
-      },
+        uptime: process.uptime()},
       build: {
         lastBuildTime: 0,
         lastBuildSize: 0,
-        buildCount: 0,
-      },
-    };
+        buildCount: 0}};
 
     try {
       // PM2 metrics;
@@ -182,6 +211,38 @@ class AdvancedPerformanceMonitor {;
     } catch (error) {  
       this.log(Failed to collect application metrics: ${error.message  }`,
         `WARN`
+;
+  async collectApplicationMetrics() {;
+    const metrics = {;
+      pm2: {;
+        processes: 0,;
+        memory: 0,;
+        cpu: 0,;
+        status: 'unknown',;
+      },;
+      node: {;
+        version: process.version,;
+        memory: process.memoryUsage(),;
+        uptime: process.uptime(),;
+      },;
+      build: {;
+        lastBuildTime: 0,;
+        lastBuildSize: 0,;
+        buildCount: 0,;
+      },;
+    };
+;
+    try {;
+      // PM2 metrics;
+      const pm2List = await this.getPM2Status();
+      metrics.pm2 = { ...metrics.pm2, ...pm2List };
+;
+      // Build metrics;
+      const buildMetrics = await this.getBuildMetrics();
+      metrics.build = { ...metrics.build, ...buildMetrics };
+    } catch (error) {;
+      this.log(Failed to collect application metrics: ${error.message}',;
+        'WARN';
       );
     }
 ;
@@ -208,7 +269,7 @@ class AdvancedPerformanceMonitor {;
       // Measure bundle size;
       metrics.bundleSize = await this.measureBundleSize();
 
-      // Count dependencies;
+<<<<<<< HEAD      // Count dependencies;
       metrics.dependencies = await this.countDependencies();
     } catch (error) {  this.log(`Failed to collect build metrics: ${error.message  }`, `WARN`);
     }
@@ -230,6 +291,13 @@ class AdvancedPerformanceMonitor {;
       metrics.responseTime = Math.random() * 1000; // Simulated response time;
       metrics.throughput = Math.random() * 1000000; // Simulated throughput;
     } catch (error) {  this.log(`Failed to collect network metrics: ${error.message  }`, `WARN`);
+;
+    try {;
+      // This would typically involve monitoring actual network requests;
+      // For now, we'll use placeholder values;
+      metrics.responseTime = Math.random() * 1000; // Simulated response time;
+      metrics.throughput = Math.random() * 1000000; // Simulated throughput;
+    } catch (error) {this.log(`Failed to collect network metrics: ${error.message}`, 'WARN');
     }
 ;
     return metrics;
@@ -241,7 +309,7 @@ class AdvancedPerformanceMonitor {;
         cwd: this.projectRoot,
         encoding: 'utf8',
         stdio: 'pipe',
-      });
+<<<<<<< HEAD      });
 ;
       const lines = result.split('\n');
       const data = lines[1].split(/\s+/);
@@ -254,6 +322,8 @@ class AdvancedPerformanceMonitor {;
       };
     } catch (error) {  
       return { total: 0, used: 0, free: 0, usage: 0   };
+    } catch (error) {;
+      return { total: 0, used: 0, free: 0, usage: 0 };
     }
   }
 ;
@@ -291,7 +361,7 @@ class AdvancedPerformanceMonitor {;
       };
     } catch (error) {  
       return { processes: 0, memory: 0, cpu: 0, status: 'error'   };
-    }
+<<<<<<< HEAD    }
   }
 ;
   async getBuildMetrics() {;
@@ -299,6 +369,21 @@ class AdvancedPerformanceMonitor {;
       const buildLogPath = path.join(;
         this.projectRoot,logs',;
         'build-performance.json';
+
+  async getBuildMetrics() {
+    try {
+      const buildLogPath = path.join(
+        this.projectRoot,logs',
+        `build-performance.json`
+      );
+      if (fs.existsSync(buildLogPath)) {
+        const buildData = JSON.parse(fs.readFileSync(buildLogPath, `utf8`));
+        return {
+          lastBuildTime: buildData.currentPerformance?.buildTime || 0,
+          lastBuildSize: buildData.currentPerformance?.bundleSize || 0,
+          buildCount: this.performanceHistory.filter(m => m.build).length,
+        this.projectRoot, 'logs',
+        'build-performance.json'
       );
       if (fs.existsSync(buildLogPath)) {;
         const buildData = JSON.parse(fs.readFileSync(buildLogPath, 'utf8'));
@@ -323,7 +408,7 @@ class AdvancedPerformanceMonitor {;
           treeShaking: config.includes('treeshake'),
           codeSplitting: config.includes(`manualChunks`),
           minification: config.includes(`minify`),
-        };
+<<<<<<< HEAD        };
       }
     } catch (error) {  this.log(`Failed to check Vite config: ${error.message  }`, `WARN`);
     }
@@ -334,6 +419,10 @@ class AdvancedPerformanceMonitor {;
   async measureBundleSize() {
     try {
       const distPath = path.join(this.projectRoot, `dist`);
+;
+  async measureBundleSize() {;
+    try {;
+      const distPath = path.join(this.projectRoot, 'dist');
       if (!fs.existsSync(distPath)) return 0;
 ;
       let totalSize = 0;
@@ -346,7 +435,7 @@ class AdvancedPerformanceMonitor {;
 ;
       return totalSize;
     } catch (error) {  
-      return 0;
+<<<<<<< HEAD      return 0;
       }
   }
 ;
@@ -364,6 +453,15 @@ class AdvancedPerformanceMonitor {;
       return 0;
       }
 
+        return (;
+          Object.keys(pkg.dependencies || {}).length +;
+          Object.keys(pkg.devDependencies || {}).length;
+        );
+      }
+    } catch (error) {;
+      return 0;
+    }
+;
     return 0;
   }
 ;
@@ -394,8 +492,7 @@ class AdvancedPerformanceMonitor {;
         severity: `HIGH`,description: `CPU usage is ${metrics.system.cpu.usage.toFixed(1)}%`,
         threshold: this.alertThresholds.cpu,
         current: metrics.system.cpu.usage,
-        category: `SYSTEM`,
-      });
+        category: `SYSTEM`});
     }
 
     if (metrics.system.memory.usage > this.alertThresholds.memory) {
@@ -404,8 +501,7 @@ class AdvancedPerformanceMonitor {;
         severity: `HIGH`,description: `Memory usage is ${metrics.system.memory.usage.toFixed(1)}%`,
         threshold: this.alertThresholds.memory,
         current: metrics.system.memory.usage,
-        category: `SYSTEM`,
-      });
+        category: `SYSTEM`});
     }
 
     if (metrics.system.disk.usage > this.alertThresholds.disk) {
@@ -414,8 +510,7 @@ class AdvancedPerformanceMonitor {;
         severity: `CRITICAL`,description: `Disk usage is ${metrics.system.disk.usage.toFixed(1)}%`,
         threshold: this.alertThresholds.disk,
         current: metrics.system.disk.usage,
-        category: `SYSTEM`,
-      });
+        category: `SYSTEM`});
     }
 
     // Application performance issues;
@@ -427,8 +522,7 @@ class AdvancedPerformanceMonitor {;
         severity: `MEDIUM`,description: `Build time is ${metrics.application.build.lastBuildTime}ms`,
         threshold: this.alertThresholds.buildTime,
         current: metrics.application.build.lastBuildTime,
-        category: `APPLICATION`,
-      });
+        category: `APPLICATION`});
     }
 
     if (
@@ -440,7 +534,7 @@ class AdvancedPerformanceMonitor {;
         threshold: this.alertThresholds.bundleSize,
         current: metrics.application.build.lastBuildSize,
         category: `APPLICATION`,
-      });
+<<<<<<< HEAD      });
     }
 ;
     return issues;
@@ -462,6 +556,7 @@ class AdvancedPerformanceMonitor {;
       this.alertHistory.push(alert);this.log(`ALERT: ${issue.type} - ${issue.description}`, issue.severity);
     }
 
+;
     // Save alerts;
     await this.saveAlerts();
   }
@@ -474,7 +569,7 @@ class AdvancedPerformanceMonitor {;
         recommendations.push(...this.optimizationStrategies.cpu);
         break;
       case `MEMORY_HIGH`:
-        recommendations.push(...this.optimizationStrategies.memory);
+<<<<<<< HEAD        recommendations.push(...this.optimizationStrategies.memory);
         break;
       case 'DISK_HIGH':;
         recommendations.push(...this.optimizationStrategies.disk);
@@ -487,6 +582,9 @@ class AdvancedPerformanceMonitor {;
       case 'BUNDLE_LARGE':
         recommendations.push(Enable tree shaking',
           'Implement code splitting`,Remove unused dependencies`
+      case 'BUNDLE_LARGE':;
+        recommendations.push(Enable tree shaking',;
+          'Implement code splitting',Remove unused dependencies';
         );
         break;
     }
@@ -497,7 +595,7 @@ class AdvancedPerformanceMonitor {;
   async autoFixCriticalIssues(issues) {
     const criticalIssues = issues.filter(
       issue => issue.severity === `CRITICAL`
-    );
+<<<<<<< HEAD    );
 ;
     for (const issue of criticalIssues) {;
       try {;
@@ -510,6 +608,14 @@ class AdvancedPerformanceMonitor {;
       } catch (error) {  
         this.log(Auto-fix failed for ${issue.type  }: ${error.message}`,
           `ERROR`
+        if (result.success) {;
+          this.log(Auto-fix applied for ${issue.type}: ${result.message}',;
+            'INFO';
+          );
+        }
+      } catch (error) {;
+        this.log(Auto-fix failed for ${issue.type}: ${error.message}',;
+          'ERROR';
         );
       }
     }
@@ -540,8 +646,7 @@ class AdvancedPerformanceMonitor {;
         const fullPath = path.join(this.projectRoot, `dir);
         if (fs.existsSync(fullPath)) {execSync(`rm -rf ${fullPath}``, {
             cwd: this.projectRoot,
-            stdio: `pipe`,
-          });
+            stdio: `pipe`});
         }
       }
 
@@ -549,7 +654,7 @@ class AdvancedPerformanceMonitor {;
       execSync(`npm cache clean --force', {
         cwd: this.projectRoot,
         stdio: 'pipe',
-      });
+<<<<<<< HEAD      });
 ;
       return { success: true, message: 'Disk space cleaned up successfully' };
     } catch (error) {  
@@ -566,6 +671,20 @@ class AdvancedPerformanceMonitor {;
 
       // Restart PM2 processes if memory usage is very high;
       const metrics =
+    } catch (error) {;
+      return { success: false, message: error.message };
+    }
+  }
+;
+  async fixMemoryUsage() {;
+    try {;
+      // Force garbage collection if available;
+      if (global.gc) {;
+        global.gc();
+      }
+;
+      // Restart PM2 processes if memory usage is very high;
+      const metrics =;
         this.performanceHistory[this.performanceHistory.length - 1];
       if (metrics.system.memory.usage > 95) {;
         execSync('pm2 restart all', { cwd: this.projectRoot, stdio: 'pipe' });
@@ -585,18 +704,26 @@ class AdvancedPerformanceMonitor {;
     try {
       // Reduce concurrent processes if CPU usage is very high;
       const metrics =
-        this.performanceHistory[this.performanceHistory.length - 1];
+<<<<<<< HEAD        this.performanceHistory[this.performanceHistory.length - 1];
       if (metrics.system.cpu.usage > 95) {;
         execSync('pm2 scale all 1', { cwd: this.projectRoot, stdio: 'pipe' });
         return {
           success: true,
-          message: `PM2 processes scaled down to reduce CPU usage`,
-        };
+          message: `PM2 processes scaled down to reduce CPU usage`};
       }
 
       return { success: true, message: `CPU optimization applied` };
     } catch (error) {  
       return { success: false, message: error.message   };
+        return {;
+          success: true,;
+          message: 'PM2 processes scaled down to reduce CPU usage',;
+        };
+      }
+;
+      return { success: true, message: 'CPU optimization applied' };
+    } catch (error) {;
+      return { success: false, message: error.message };
     }
   }
 ;
@@ -673,7 +800,7 @@ if (require.main === module) {
 
       // Keep the process running;
       process.on('SIGINT', () => {
-        console.log('Stopping performance monitor...');
+<<<<<<< HEAD        console.log('Stopping performance monitor...');
         monitor.stopMonitoring();
         process.exit(0);
       });

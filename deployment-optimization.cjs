@@ -267,7 +267,7 @@ class ApplicationMonitor {
 
   generateReport() {
     console.log('Application Metrics Report');
-    console.log('========================');
+    console.log('===');
     console.log(\`Total Deployments: \${this.metrics.deployments}\`);
     console.log(\`Last Deployment: \${this.metrics.lastDeployment || 'Never'}\`);
     

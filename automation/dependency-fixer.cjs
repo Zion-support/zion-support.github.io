@@ -163,7 +163,7 @@ class DependencyFixer {
 
   async run() {
     this.log('🚀 Starting Dependency Fixing Process...');
-    this.log('=====================================');
+    this.log('==');
     
     try {
       await this.fixPackageJson();
@@ -176,7 +176,7 @@ class DependencyFixer {
       }
       
       this.log('\\n📊 DEPENDENCY FIXING REPORT');
-      this.log('==========================');
+      this.log('=====');
       this.log(`Fixes Applied: ${this.fixes.length}`);
       this.log(`Errors Found: ${this.errors.length}`);
       

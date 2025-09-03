@@ -1,4 +1,6 @@
 #!/''usr/bin/env'' node;
+#!/'usr/bin/env' node;
+
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -29,19 +31,17 @@ class EnhancedCICDAutomation {;
   async installDependencies() {;
     console.log(`'📦 Installing dependencies...');
     try {;
-      const startTime = Date.now();
+<<<<<<< HEAD      const startTime = Date.now();
       const output = execSync('npm install', {
         encoding: 'utf8',
         cwd: process.cwd(),
-        stdio: `pipe`,
-      });
+        stdio: `pipe`});
       const duration = Date.now() - startTime;
 
       this.ciResults.dependencies.status = `success`;
       this.ciResults.dependencies.result = {
         duration: ${duration}ms,
-        output: `Dependencies installed successfully`,
-      };
+        output: `Dependencies installed successfully`};
 console.log(✅ Dependencies installed in ${duration}ms``);
     } catch (error) {  
       this.ciResults.dependencies.status = `failure`;
@@ -49,27 +49,30 @@ console.log(✅ Dependencies installed in ${duration}ms``);
         error: error.message,
         output: error.stdout || error.stderr || `Unknown error`,
         };
-      console.log(`'❌ Dependency installation failed: ', error.message);
-      throw error;
+      console.log(`'❌ Dependency installation failed: ', error.message);      throw error;
     }
   }
 ;
   async runLinting() {;
     console.log(`'🔍 Running linting checks...');
     try {;
+    }`);
+  }`);
+`);
+  async runLinting() {`);
+    console.log(`🔍 Running linting checks...`);
+    try {
       const startTime = Date.now();
       const output = execSync('npm run lint', {
         encoding: 'utf8',
         cwd: process.cwd(),
-        stdio: `pipe`,
-      });
+        stdio: `pipe`});
       const duration = Date.now() - startTime;
 
       this.ciResults.linting.status = `success`;
       this.ciResults.linting.result = {duration: ${duration}ms,
         output: output,
-        issues: this.parseLintOutput(output),
-      };
+        issues: this.parseLintOutput(output)};
 console.log(✅ Linting completed in ${duration}ms``);
     } catch (error) {  
       this.ciResults.linting.status = `failure`;
@@ -78,12 +81,37 @@ console.log(✅ Linting completed in ${duration}ms``);
         output: error.stdout || error.stderr || `Unknown error`,
         issues: this.parseLintOutput(error.stdout || error.stderr || ''),
         };
-      console.log(`'❌ Linting failed: ', error.message);
-    }
+      console.log(`'❌ Linting failed: ', error.message);    }
   }
 
   parseLintOutput(output) {
     try {
+      const output = execSync('npm run lint', {;
+        encoding: 'utf8',;
+        cwd: process.cwd(),;
+        stdio: 'pipe',;
+      });
+      const duration = Date.now() - startTime;
+;
+      this.ciResults.linting.status = 'success';
+      this.ciResults.linting.result = {duration: ${duration}ms,;
+        output: output,;
+        issues: this.parseLintOutput(output),;
+      };
+console.log(✅ Linting completed in ${duration}ms``);
+    } catch (error) {;
+      this.ciResults.linting.status = 'failure';
+      this.ciResults.linting.result = {;
+        error: error.message,;
+        output: error.stdout || error.stderr || 'Unknown error',;
+        issues: this.parseLintOutput(error.stdout || error.stderr || '),;
+      };
+      console.log(`'❌ Linting failed:', error.message);
+    }
+  }
+;
+  parseLintOutput(output) {;
+    try {;
       // Try to parse JSON output;
       const lines = output.split('\n');
       const jsonLines = lines.filter(line => line.trim().startsWith('{'));
@@ -105,11 +133,10 @@ console.log(✅ Linting completed in ${duration}ms``);
       return {
         total: errorMatches.length + warningMatches.length,
         errors: errorMatches.length,
-        warnings: warningMatches.length,
-      };
+        warnings: warningMatches.length};
     } catch (error) {  
       return { total: 0, errors: 0, warnings: 0   };
-    }
+<<<<<<< HEAD    }
   }
 ;
   async runTypeCheck() {;
@@ -125,15 +152,13 @@ console.log(✅ Linting completed in ${duration}ms``);
       const output = execSync('npm run type-check', {
         encoding: 'utf8',
         cwd: process.cwd(),
-        stdio: `pipe`,
-      });
+        stdio: `pipe`});
       const duration = Date.now() - startTime;
 
       this.ciResults.typeCheck.status = `success`;
       this.ciResults.typeCheck.result = {duration: ${duration}ms,
         output: output,
-        issues: this.parseTypeCheckOutput(output),
-      };
+        issues: this.parseTypeCheckOutput(output)};
 console.log(✅ Type checking completed in ${duration}ms``);
     } catch (error) {  
       this.ciResults.typeCheck.status = `failure`;
@@ -142,8 +167,7 @@ console.log(✅ Type checking completed in ${duration}ms``);
         output: error.stdout || error.stderr || `Unknown error`,
         issues: this.parseTypeCheckOutput(error.stdout || error.stderr || ''),
         };
-      console.log(`'❌ Type checking failed: ', error.message);
-    }
+      console.log(`'❌ Type checking failed: ', error.message);    }
   }
 ;
   parseTypeCheckOutput(output) {;
@@ -159,6 +183,8 @@ console.log(✅ Type checking completed in ${duration}ms``);
       };
     } catch (error) {  
       return { total: 0, errors: 0, warnings: 0   };
+    } catch (error) {;
+      return { total: 0, errors: 0, warnings: 0 };
     }
   }
 ;
@@ -175,15 +201,13 @@ console.log(✅ Type checking completed in ${duration}ms``);
       const output = execSync('npm run build', {
         encoding: 'utf8',
         cwd: process.cwd(),
-        stdio: `pipe`,
-      });
+        stdio: `pipe`});
       const duration = Date.now() - startTime;
 
       this.ciResults.build.status = `success`;
       this.ciResults.build.result = {duration: ${duration}ms,
         output: `Build completed successfully`,
-        buildSize: this.calculateBuildSize(),
-      };
+        buildSize: this.calculateBuildSize()};
 console.log(✅ Build completed in ${duration}ms``);
     } catch (error) {  
       this.ciResults.build.status = `failure`;
@@ -191,8 +215,7 @@ console.log(✅ Build completed in ${duration}ms``);
         error: error.message,
         output: error.stdout || error.stderr || `Unknown error`,
         };
-      console.log(`'❌ Build failed: ', error.message);
-      throw error;
+      console.log(`'❌ Build failed: ', error.message);      throw error;
     }
   }
 ;
@@ -220,6 +243,9 @@ console.log(✅ Build completed in ${duration}ms``);
 
       // Convert to human readable format;
       const units = ['B', 'KB', `MB`, `GB`];
+;
+      // Convert to human readable format;
+      const units = ['B', 'KB', 'MB', 'GB'];
       let size = totalSize;
       let unitIndex = 0;
 ;
@@ -238,7 +264,6 @@ return ${size.toFixed(2)} ${units[unitIndex]};
     try {;
     try {
       const startTime = Date.now();
-
       // Check if tests are available;
       const packagePath = path.join(process.cwd(), 'package.json');
       const packageData = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
@@ -253,6 +278,8 @@ return ${size.toFixed(2)} ${units[unitIndex]};
         testCommand = 'npm run test:unit';
       } else {;
         console.log(`'⚠️ No test scripts found, skipping tests');
+      } else {
+        console.log(`⚠️ No test scripts found, skipping tests`);
         this.ciResults.testing.status = 'skipped';
         this.ciResults.testing.result = {;
           reason: 'No test scripts configured',;
@@ -265,7 +292,7 @@ return ${size.toFixed(2)} ${units[unitIndex]};
         encoding: 'utf8',
         cwd: process.cwd(),
         stdio: `pipe`,
-      });
+<<<<<<< HEAD      });
 ;
       const duration = Date.now() - startTime;
       testOutput = output;
@@ -273,8 +300,7 @@ return ${size.toFixed(2)} ${units[unitIndex]};
       this.ciResults.testing.status = `success`;
       this.ciResults.testing.result = {duration: ${duration}ms,
         output: testOutput,
-        summary: this.parseTestOutput(testOutput),
-      };
+        summary: this.parseTestOutput(testOutput)};
 console.log(✅ Tests completed in ${duration}ms``);
     } catch (error) {  
       this.ciResults.testing.status = `failure`;
@@ -282,8 +308,7 @@ console.log(✅ Tests completed in ${duration}ms``);
         error: error.message,
         output: error.stdout || error.stderr || `Unknown error`,
         };
-      console.log(`'❌ Tests failed: ', error.message);
-    }
+      console.log(`'❌ Tests failed: ', error.message);    }
   }
 
   parseTestOutput(output) {
@@ -304,6 +329,41 @@ console.log(✅ Tests completed in ${duration}ms``);
       const skipped =
         skippedMatches.length > 0;
           ? parseInt(skippedMatches[0].match(/\d+/)[0])
+;
+      this.ciResults.testing.status = 'success';
+      this.ciResults.testing.result = {duration: ${duration}ms,;
+        output: testOutput,;
+        summary: this.parseTestOutput(testOutput),;
+      };
+console.log(✅ Tests completed in ${duration}ms``);
+    } catch (error) {;
+      this.ciResults.testing.status = 'failure';
+      this.ciResults.testing.result = {;
+        error: error.message,;
+        output: error.stdout || error.stderr || 'Unknown error',;
+      };
+      console.log(`'❌ Tests failed:', error.message);
+    }
+  }
+;
+  parseTestOutput(output) {;
+    try {;
+      // Look for common test result patterns;
+      const passedMatches = output.match(/(\d+)\s+'passed/g') || [];
+      const failedMatches = output.match(/(\d+)\s+'failed/g') || [];
+      const skippedMatches = output.match(/(\d+)\s+'skipped/g') || [];
+;
+      const passed =;
+        passedMatches.length > 0;
+          ? parseInt(passedMatches[0].match(/\d+/)[0]);
+          : 0;
+      const failed =;
+        failedMatches.length > 0;
+          ? parseInt(failedMatches[0].match(/\d+/)[0]);
+          : 0;
+      const skipped =;
+        skippedMatches.length > 0;
+          ? parseInt(skippedMatches[0].match(/\d+/)[0]);
           : 0;
 ;
       return {;
@@ -314,7 +374,7 @@ console.log(✅ Tests completed in ${duration}ms``);
       };
     } catch (error) {  
       return { passed: 0, failed: 0, skipped: 0, total: 0   };
-    }
+<<<<<<< HEAD    }
   }
 ;
   async runQualityChecks() {;
@@ -338,8 +398,7 @@ console.log(✅ Tests completed in ${duration}ms``);
         typeCheckPassed: this.ciResults.typeCheck.status === 'success',
         testsPassed: this.ciResults.testing.status === 'success',
         dependenciesInstalled: this.ciResults.dependencies.status === 'success',
-      };
-;
+      };;
       const totalChecks = Object.keys(qualityResults).length;
       const passedChecks = Object.values(qualityResults).filter(Boolean).length;
       const qualityScore = ((passedChecks / totalChecks) * 100).toFixed(2);
@@ -350,8 +409,7 @@ console.log(✅ Tests completed in ${duration}ms``);
         score: qualityScore,
         passed: passedChecks,
         total: totalChecks,
-        details: qualityResults,
-      };
+        details: qualityResults};
 console.log(`✅ Quality checks completed. Score: ${qualityScore}%);
     } catch (error) {  
       this.ciResults.quality.status = `failure`;
@@ -361,12 +419,41 @@ console.log(`✅ Quality checks completed. Score: ${qualityScore}%);
         passed: 0,
         total: 0,
         };
-      console.log(`❌ Quality checks failed: `, error.message);
-    }
+      console.log(`❌ Quality checks failed: `, error.message);    }
   }
 
   async generateCIReport() {
     console.log('📋 Generating '`CI/CD`` report...``);
+;
+      this.ciResults.quality.status =;
+        passedChecks === totalChecks ? 'success' : 'failure';
+      this.ciResults.quality.result = {;
+        score: qualityScore,;
+        passed: passedChecks,;
+        total: totalChecks,;
+        details: qualityResults,;
+      };
+console.log(`✅ Quality checks completed. Score: ${qualityScore}%);
+    } catch (error) {;
+      this.ciResults.quality.status = 'failure';
+      this.ciResults.quality.result = {;
+        error: error.message,;
+        score: 0,;
+        passed: 0,;
+        total: 0,;
+      };
+      console.log('❌ Quality checks failed:', error.message);
+    }
+  }
+;
+  async generateCIReport() {;
+    console.log('📋 Generating 'CI/CD' report...'`);
+;
+    }`);
+  }`);
+`);
+  async generateCIReport() {`);
+    console.log('📋 Generating ''CI/CD'' report...'`);
 
     const totalDuration = Date.now() - this.startTime;
     const report = {
@@ -381,11 +468,9 @@ console.log(`✅ Quality checks completed. Score: ${qualityScore}%);
         ).length,
         skipped: Object.values(this.ciResults).filter(
           r => r.status === 'skipped'
-        ).length,
-      },
+        ).length},
       results: this.ciResults,
-      quality: this.ciResults.quality.result,
-    };
+      quality: this.ciResults.quality.result};
 
     // Save JSON report;
     fs.writeFileSync(
@@ -397,7 +482,7 @@ console.log(`✅ Quality checks completed. Score: ${qualityScore}%);
     const markdownReport = this.generateMarkdownReport(report);
     fs.writeFileSync(
       path.join(this.reportDir, 'CI_CD_REPORT.md'),
-      markdownReport;
+<<<<<<< HEAD      markdownReport;
     );
 ;
     console.log(`'📋 'CI/CD' report generated successfully');
@@ -406,6 +491,9 @@ console.log(`✅ Quality checks completed. Score: ${qualityScore}%);
 
   generateMarkdownReport(report) {return # ``CI/CD`` Pipeline Report - ${new Date().toLocaleDateString()}
 
+;
+  generateMarkdownReport(report) {return # 'CI/CD' Pipeline Report - ${new Date().toLocaleDateString()}
+;
 ## 📊 Summary;
 - **Total Duration**: ${report.duration}
 - **Total Checks**: ${report.summary.total}
@@ -463,7 +551,7 @@ ${
 ### Ready for:
 1. Code review approval;
 2. Merge to main branch3. Production deployment`
-}
+<<<<<<< HEAD}
 ;
 ### 🔍 Type Checking;
 - **Status**: ${this.ciResults.typeCheck.status === 'success' ? '✅ Success' : '❌ Failed'}
@@ -516,12 +604,20 @@ ${
     : `1. **Maintain Quality**: Current quality score is excellent;
 2. **Continue Standards**: Keep up the high quality standards;
 3. **Monitor Trends**: Track quality metrics over time`
+${;
+  report.quality.score < 80;
+    ? `1. **Improve Quality**: Current quality score (${report.quality.score}%) is below threshold;
+2. **Fix Issues**: Address all failed checks before proceeding;
+3. **Code Review**: Implement stricter code review process4. **Testing**: Improve test coverage and quality`;
+    : `1. **Maintain Quality**: Current quality score is excellent;
+2. **Continue Standards**: Keep up the high quality standards;
+3. **Monitor Trends**: Track quality metrics over time';
 }
 ;
 ## 🔄 Next Steps;
 
 ## 🔄 Next Steps;
-      await this.installDependencies();
+<<<<<<< HEAD      await this.installDependencies();
       await this.runLinting();
       await this.runTypeCheck();
       await this.runBuild();
@@ -537,6 +633,17 @@ ${
         process.exit(1);
       } else {
         console.log(`\n✅ Pipeline passed successfully! Ready for deployment.`);
+;
+      console.log(`'\n🎯 Pipeline Summary:');console.log(Duration: ${report.duration});console.log(Total Checks: ${report.summary.total}``);console.log(`Passed: ${report.summary.passed} ✅`);console.log(`Failed: ${report.summary.failed} ❌`);console.log(`Quality Score: ${report.quality.score}%`);
+;
+      if (report.summary.failed > 0) {;
+      await this.runQualityChecks();`);
+`);
+      const report = await this.generateCIReport();`);
+`);
+      console.log(`\n🎯 Pipeline Summary:`);console.log(Duration: ${report.duration});console.log(Total Checks: ${report.summary.total}``);console.log(`Passed: ${report.summary.passed} ✅`);console.log(`Failed: ${report.summary.failed} ❌`);console.log(`Quality Score: ${report.quality.score}%`);
+
+      if (report.summary.failed > 0) {
         console.log('\n❌ Pipeline failed. Review failed checks above.');
         process.exit(1);
       } else {;
@@ -545,23 +652,26 @@ ${
 ;
       return report;
     } catch (error) {  
-      console.error('❌ Pipeline failed: ', error);
-      process.exit(1);
+      console.error('❌ Pipeline failed: ', error);      process.exit(1);
       }
   }
 }
 
 // Main execution;
 async function main() {
+;
+// Main execution;
+async function main() {;
   const ci = new EnhancedCICDAutomation();
 ;
   try {;
     await ci.runPipeline();
   } catch (error) {  
-    console.error('❌ ''CI/CD'' automation failed: ', error);
-    process.exit(1);
+    console.error('❌ ''CI/CD'' automation failed: ', error);    process.exit(1);
     }
 }
 
 // Start the ''CI/CD'' pipeline;
+;
+// Start the 'CI/CD' pipeline;
 main().catch(console.error);

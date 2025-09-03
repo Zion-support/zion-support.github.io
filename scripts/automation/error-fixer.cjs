@@ -13,6 +13,21 @@ class ErrorFixer {
 
     // Ensure reports directory exists;
     if (!fs.existsSync(this.reportsDir)) {
+#!/usr/bin/env node;
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+;
+class ErrorFixer {;
+  constructor() {;
+    this.projectRoot = process.cwd();
+    this.reportsDir = path.join(this.projectRoot, 'automation-reports');
+    this.ensureDirectories();
+  }
+;
+  ensureDirectories() {;
+    if (!fs.existsSync(this.reportsDir)) {;
       fs.mkdirSync(this.reportsDir, { recursive: true });
     }
   }
@@ -50,7 +65,7 @@ class ErrorFixer {
         if (match) {
           if (currentError) {
             errors.push(currentError);
-          }
+<<<<<<< HEAD          }
         } catch (error) {;
           this.log(`❌ Error processing ${file}: ${error.message}`);
           totalErrors++;
@@ -82,8 +97,7 @@ class ErrorFixer {
 
     return errorLines.map(line => ({
       message: line.trim(),
-      type: 'eslint',
-    }));
+      type: 'eslint'}));
   }
 
   async fixCommonErrors() {
@@ -273,6 +287,46 @@ class ErrorFixer {
               files.push(fullPath);
               break;
             }
+;
+  fixFileContent(content) {;
+    let fixed = content;
+    ;
+    // Fix common syntax errors;
+    fixed = fixed.replace(/console\.log\(`([^`]*)\`\);/g, 'console.log(`$1`);');
+    fixed = fixed.replace(/console\.log\('([^']*)'\);/g, "console.log('$1');");
+    fixed = fixed.replace(/console\.log\("([^"]*)"\);/g, 'console.log("$1");');
+    ;
+    // Fix template literal issues;
+    fixed = fixed.replace(/`([^`]*)\`\);/g, '`$1`);');
+    fixed = fixed.replace(/'([^']*)'\);/g, "'$1');");
+    fixed = fixed.replace(/"([^"]*)"\);/g, '"$1");');
+    ;
+    // Fix missing semicolons;
+    fixed = fixed.replace(/([^;}])\n/g, '$1;\n');
+    ;
+    // Fix extra quotes;
+    fixed = fixed.replace(/'/g, "'");
+    fixed = fixed.replace(/"/g, '"');
+    ;
+    return fixed;
+  }
+;
+  getAllFiles(dir, extensions) {;
+    const files = [];
+    ;
+    const scanDirectory = (currentDir) => {;
+      const items = fs.readdirSync(currentDir);
+      ;
+      for (const item of items) {;
+        const itemPath = path.join(currentDir, item);
+        const stat = fs.statSync(itemPath);
+        ;
+        if (stat.isDirectory()) {;
+          scanDirectory(itemPath);
+        } else if (stat.isFile()) {;
+          const ext = path.extname(item);
+          if (extensions.includes(ext)) {;
+            files.push(itemPath);
           }
         }
       }
@@ -307,7 +361,6 @@ return new RegExp(`^${regexPattern}$`).test(relativePath);
         errorsPerSecond: Math.round((this.errorsFixed / duration) * 1000 * 100) / 100,
       },
     };
-
     const reportPath = path.join(this.reportsDir, `error-fixer-report.json`);
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 this.log(`Report saved to ${reportPath}`);
@@ -349,6 +402,37 @@ this.log(`Report saved to ${reportPath}`);
 
       return report;
     } catch (error) {  this.log(`Error Fixer failed: ${error.message  }`);
+;
+  async generateReport(results) {;
+    const timestamp = new Date().toISOString();
+    const report = {;
+      timestamp,;
+      type: 'error-fixer',;
+      results: {;
+        fixedFiles: results.fixedFiles,;
+        totalErrors: results.totalErrors,;
+        success: results.totalErrors === 0;
+      }
+    };
+;
+    const reportFile = path.join(this.reportsDir, `error-fixer-report-${timestamp.replace(/[:.]/g, '-')}.json`);
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+    ;
+    this.log(`📊 Report generated: ${reportFile}`);
+    return report;
+  }
+;
+  async run() {;
+    this.log('🚀 Starting Error Fixer Automation');
+    ;
+    try {;
+      const results = await this.fixSyntaxErrors();
+      const report = await this.generateReport(results);
+      ;
+      this.log('✅ Error Fixer completed successfully');
+      return report;
+    } catch (error) {;
+      this.log(`❌ Error Fixer failed: ${error.message}`);
       throw error;
     }
   }
@@ -358,6 +442,6 @@ this.log(`Report saved to ${reportPath}`);
 if (require.main === module) {
   const errorFixer = new ErrorFixer();
   errorFixer.run().catch(console.error);
-}
+<<<<<<< HEAD}
 ;
 module.exports = ErrorFixer;

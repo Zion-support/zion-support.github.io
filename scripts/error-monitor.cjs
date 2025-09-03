@@ -149,6 +149,147 @@ class ErrorMonitor {
         });
       } catch (error) {
         this.log('warn', `Could not read log file ${logFile}: ${error.message}`);
+const fs = require('fs').promises;
+const path = require('path');
+const { exec } = require('child_process');
+const util = require('util');
+;
+const execAsync = util.promisify(exec);
+;
+class ErrorMonitor {;
+  constructor() {;
+    this.logFile = path.join(__dirname, '../logs/error-monitor.log');
+    this.reportFile = path.join(__dirname, '../logs/error-report.json');
+    this.lastCheck = new Date();
+  }
+;
+  async log(message, level = 'INFO') {;
+    const timestamp = new Date().toISOString();
+    const logEntry = `[${timestamp}] [${level}] ${message}\n`;
+;
+    try {;
+      await fs.appendFile(this.logFile, logEntry);
+      console.log(logEntry.trim());
+    } catch (error) {;
+      console.error('Failed to write to log file:', error);
+    }
+  }
+;
+  async checkBuildErrors() {;
+    try {;
+      const { stdout, stderr } = await execAsync(cd /workspace && npm run build 2>&1';
+      );
+;
+      if (stderr || stdout.includes('error') || stdout.includes('Error')) {;
+        await this.log('Build errors detected', 'ERROR');
+        return {;
+          type: 'build',;
+          hasErrors: true,;
+          output: stdout + stderr,;
+          timestamp: new Date().toISOString(),;
+        };
+      }
+;
+      await this.log('Build check passed', 'INFO');
+      return {;
+        type: 'build',;
+        hasErrors: false,;
+        timestamp: new Date().toISOString(),;
+      };
+    } catch (error) {await this.log(`Build check failed: ${error.message}`, 'ERROR');
+      return {;
+        type: 'build',;
+        hasErrors: true,;
+        error: error.message,;
+        timestamp: new Date().toISOString(),;
+      };
+    }
+  }
+;
+  async checkLintErrors() {;
+    try {;
+      const { stdout, stderr } = await execAsync(cd /workspace && npm run lint 2>&1';
+      );
+;
+      if (stderr || stdout.includes('error') || stdout.includes('Error')) {;
+        await this.log('Lint errors detected', 'ERROR');
+        return {;
+          type: 'lint',;
+          hasErrors: true,;
+          output: stdout + stderr,;
+          timestamp: new Date().toISOString(),;
+        };
+      }
+;
+      await this.log('Lint check passed', 'INFO');
+      return {;
+        type: 'lint',;
+        hasErrors: false,;
+        timestamp: new Date().toISOString(),;
+      };
+    } catch (error) {await this.log(`Lint check failed: ${error.message}`, 'ERROR');
+      return {;
+        type: 'lint',;
+        hasErrors: true,;
+        error: error.message,;
+        timestamp: new Date().toISOString(),;
+      };
+    }
+  }
+;
+  async checkTypeErrors() {;
+    try {;
+      const { stdout, stderr } = await execAsync(cd /workspace && npm run type-check 2>&1';
+      );
+;
+      if (stderr || stdout.includes('error') || stdout.includes('Error')) {;
+        await this.log('TypeScript errors detected', 'ERROR');
+        return {;
+          type: 'typescript',;
+          hasErrors: true,;
+          output: stdout + stderr,;
+          timestamp: new Date().toISOString(),;
+        };
+      }
+;
+      await this.log('TypeScript check passed', 'INFO');
+      return {;
+        type: 'typescript',;
+        hasErrors: false,;
+        timestamp: new Date().toISOString(),;
+      };
+    } catch (error) {await this.log(`TypeScript check failed: ${error.message}`, 'ERROR');
+      return {;
+        type: 'typescript',;
+        hasErrors: true,;
+        error: error.message,;
+        timestamp: new Date().toISOString(),;
+      };
+    }
+  }
+;
+  async triggerFixes(errorTypes) {;
+    for (const errorType of errorTypes) {;
+      try {;
+        switch (errorType) {;
+          case 'build':;
+            await this.log('Triggering syntax fixer for build errors', 'INFO');
+            exec('pm2 restart syntax-fixer');
+            break;
+          case 'lint':;
+            await this.log('Auto-fixing lint errors', 'INFO');
+            await execAsync(cd /workspace && npm run lint -- --fix 2>/dev/null || true';
+            );
+            break;
+          case 'typescript':;
+            await this.log('Triggering TypeScript error fixer', 'INFO');
+            exec('pm2 restart syntax-fixer');
+            break;
+        }
+      } catch (error) {;
+        await this.log(Failed to trigger fix for ${errorType}: ${error.message}',;
+          'ERROR';
+        );
       }
     }
     
@@ -263,7 +404,7 @@ if (require.main === module) {
 }
 
 module.exports = ErrorMonitor;
-// Run if called directly;
+<<<<<<< HEAD// Run if called directly;
 if (require.main === module) {;
   const monitor = new ErrorMonitor();
 ;
@@ -276,6 +417,5 @@ if (require.main === module) {;
     monitor.log('Error monitor shutting down', 'INFO');
     process.exit(0);
   });
-}
-;
+};
 module.exports = ErrorMonitor;

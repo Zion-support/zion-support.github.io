@@ -20,8 +20,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     '/auth/reset-password',
     '/auth/verify'
   ];
-  
-  const blogPages = [
+    const blogPages = [
     '/blog/5g-technology-and-its-impact-on-iot',
     '/blog/ai-powered-marketplaces-the-future-of-digital-commerce',
     '/blog/api-first-development-building-scalable-systems',
@@ -29,8 +28,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     '/blog/blockchain-technology-in-modern-business-solutions',
     '/blog/cloud-native-architecture-best-practices'
   ];
-  
-  const servicePages = [
+    const servicePages = [
     '/services/ai-autonomous-business-operations-platform',
     '/services/ai-cybersecurity-threat-intelligence',
     '/services/ai-financial-trading-platform',
@@ -50,14 +48,12 @@ ${allPages.map((page) => {
   const priority = page === '' ? '1.0' : page.startsWith('/blog') ? '0.8' : '0.9';
   const changefreq = page === '' ? 'daily' : page.startsWith('/blog') ? 'weekly' : 'monthly';
   
-  return `  <url>
-    <loc>${url}</loc>
+  return `  <url>    <loc>${url}</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
   </url>`;
-}).join('\n')}
-</urlset>`;
+}).join('\n')}</urlset>`;
 
   res.setHeader('Content-Type', 'text/xml');
   res.status(200).send(sitemap);

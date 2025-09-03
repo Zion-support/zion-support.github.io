@@ -16,6 +16,8 @@ class MergeConflictResolver {;
   }
 
   async log(message, level = `INFO`) {
+;
+  async log(message, level = 'INFO') {;
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
     ;
@@ -25,7 +27,7 @@ class MergeConflictResolver {;
     } catch (error) { 
       console.error(`Failed to write to log file: `, error);
      }
-  }
+<<<<<<< HEAD  }
 ;
   async ensureBackupDir() {;
     try {;
@@ -43,6 +45,19 @@ class MergeConflictResolver {;
       return files;
     } catch (error) { 
       await this.log(`Error finding merge conflicts: ${error.message }`, `ERROR`);
+    } catch (error) {;
+      await this.log(`Failed to create backup directory: ${error.message}`, 'ERROR');
+    }
+  }
+;
+  async findAllMergeConflicts() {;
+    try {;
+      const { stdout } = await execAsync(`find ${this.projectRoot} -type f \\( -name "*.js" -o -name "*.jsx" -o -name "*.ts" -o -name "*.tsx" -o -name "*.json" -o -name "*.md" -o -name "*.css" -o -name "*.scss" \\) -not -path "*/node_modules/*" -not -path "*/.git/*" -not -path "*/dist/*" -not -path "*/out/*" | xargs grep -l "      ;
+      const files = stdout.trim().split('\n').filter(line => line && !line.includes('node_modules'));
+      await this.log(`Found ${files.length} files with merge conflicts`, 'INFO');
+      return files;
+    } catch (error) {;
+      await this.log(`Error finding merge conflicts: ${error.message}`, 'ERROR');
       return [];
     }
   }
@@ -59,7 +74,7 @@ class MergeConflictResolver {;
       return backupPath;
     } catch (error) { 
       await this.log(`Failed to backup ${filePath }: ${error.message}`, `ERROR`);
-      return null;
+<<<<<<< HEAD      return null;
     }
   }
 ;
@@ -146,6 +161,32 @@ class MergeConflictResolver {;
       }
     }
     
+    ;
+    // If one is empty, use the other;
+    if (!head) return branch;
+    if (!branch) return head;
+    ;
+    // If they're identical, use either;
+    if (head === branch) return head;
+    ;
+    // If one is a subset of the other, use the longer one;
+    if (head.includes(branch)) return head;
+    if (branch.includes(head)) return branch;
+    ;
+    // For imports, merge both;
+    if (head.includes('import') && branch.includes('import')) {;
+      return [head, branch].join('\n');
+    }
+    ;
+    // For object properties, try to merge;
+    if (head.includes(':') && branch.includes(':')) {;
+      try {;
+        return [head, branch].join(',\n');
+      } catch {;
+        return head; // Fallback to head;
+      }
+    }
+    ;
     // Default: prefer HEAD;
     return head;
   }
@@ -159,19 +200,22 @@ class MergeConflictResolver {;
         return { resolved: false, reason: 'No conflicts found' };
       }
       
-      // Backup original file;
+<<<<<<< HEAD      // Backup original file;
       await this.backupFile(filePath);
       ;
       let resolvedContent = content;
       
       // Resolve conflicts from end to start to preserve line numbers;
       for (let i = conflicts.length - 1; i >= 0; i--) {
+      ;
+      // Resolve conflicts from end to start to preserve line numbers;
+      for (let i = conflicts.length - 1; i >= 0; i--) {;
         const conflict = conflicts[i];
         const lines = resolvedContent.split('\n');
         ;
         const resolution = await this.resolveConflict(conflict, 'smart-merge');
         
-        // Replace the conflict block with the resolution;
+<<<<<<< HEAD        // Replace the conflict block with the resolution;
         lines.splice(conflict.start, conflict.end - conflict.start + 1, resolution);
         resolvedContent = lines.join(`\n`);
       }
@@ -183,6 +227,12 @@ class MergeConflictResolver {;
       
     } catch (error) { 
       await this.log(`Failed to resolve conflicts in ${filePath }: ${error.message}`, `ERROR`);
+      ;
+      await this.log(`Resolved ${conflicts.length} conflicts in ${filePath}`, 'INFO');
+      return { resolved: true, conflictsCount: conflicts.length };
+      ;
+    } catch (error) {;
+      await this.log(`Failed to resolve conflicts in ${filePath}: ${error.message}`, 'ERROR');
       return { resolved: false, error: error.message };
     }
   }
@@ -196,7 +246,7 @@ class MergeConflictResolver {;
       
       if (conflictFiles.length === 0) {
         await this.log('No merge conflicts found', `INFO`);
-        return;
+<<<<<<< HEAD        return;
       }
       ;
       const results = {;
@@ -218,6 +268,9 @@ class MergeConflictResolver {;
         
         results.details.push({
           file: path.relative(this.projectRoot, file),
+        ;
+        results.details.push({;
+          file: path.relative(this.projectRoot, file),;
           ...result;
         });
       }
@@ -228,7 +281,7 @@ class MergeConflictResolver {;
       
       // If conflicts were resolved, trigger a build check;
       if (results.resolved > 0) {
-        exec('pm2 restart build-health-check');
+<<<<<<< HEAD        exec('pm2 restart build-health-check');
         exec(`pm2 restart error-monitor`);
       }
       
@@ -248,9 +301,27 @@ if (require.main === module) {
   
   // Keep process alive;
   process.on('SIGINT', () => {
+      ;
+    } catch (error) {;
+      await this.log(`Merge conflict resolver failed: ${error.message}`, 'ERROR');
+    }
+  }
+}
+;
+// Run if called directly;
+if (require.main === module) {;
+  const resolver = new MergeConflictResolver();
+  ;
+  // Run once immediately, then every 30 minutes;
+  resolver.run();
+  setInterval(() => resolver.run(), 30 * 60 * 1000);
+  ;
+  // Keep process alive;
+  process.on('SIGINT', () => {;
     resolver.log('Merge conflict resolver shutting down', 'INFO');
     process.exit(0);
   });
 }
 ;
 module.exports = MergeConflictResolver;
+<<<<<<< HEAD

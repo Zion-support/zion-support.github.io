@@ -1,4 +1,6 @@
 #!/''usr/bin/env'' node;
+#!/'usr/bin/env' node;
+
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -28,7 +30,7 @@ class ErrorAnalyticsDashboard {;
   ensureDirectories() {
     ['this.logsPath', 'this.reportsPath', `this.errorReportsPath`].forEach(dir => {
       if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true });
+<<<<<<< HEAD        fs.mkdirSync(dir, { recursive: true });
       }
     });
   }
@@ -51,6 +53,25 @@ class ErrorAnalyticsDashboard {;
     // Collect from error reports;
     await this.collectFromErrorReports();
 
+;
+  log(message, level = 'INFO') {;
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] [${level}] ${message}`;
+    console.log(`logMessage);
+;
+    const logFile = path.join(this.logsPath, 'error-analytics-dashboard.log');
+    fs.appendFileSync(logFile, logMessage + '\n');
+  }
+;
+  async collectErrorData() {;
+    this.log('📊 Collecting error data from various sources...');
+;
+    // Collect from automation reports;
+    await this.collectFromAutomationReports();
+;
+    // Collect from error reports;
+    await this.collectFromErrorReports();
+;
     // Collect from logs;
     await this.collectFromLogs();
 ;
@@ -58,7 +79,7 @@ class ErrorAnalyticsDashboard {;
     await this.collectCurrentStatus();
 ;
     this.log(📈 Collected data for ${Object.values(this.errorData).flat().length} total errors';
-    );
+<<<<<<< HEAD    );
   }
 ;
   async collectFromAutomationReports() {;
@@ -76,6 +97,12 @@ class ErrorAnalyticsDashboard {;
           if (data.timestamp && data.errors) {;
             this.processErrorReport(data);
           }
+    for (const file of files) {
+      if (file.endsWith(`.json`)) {
+        try {
+          const content = fs.readFileSync(
+            path.join(this.reportsPath, `file)`, utf8`
+            path.join(this.reportsPath, 'file)', utf8`);
           );
           const data = JSON.parse(content);
 
@@ -83,7 +110,7 @@ class ErrorAnalyticsDashboard {;
             this.processErrorReport(data);
           }
         } catch (error) {  this.log(Failed to parse report ${file  }: ${error.message}, `WARN``);
-        } catch (error) {this.log(Failed to parse report ${file}: ${error.message}, 'WARN'`);
+<<<<<<< HEAD        } catch (error) {this.log(Failed to parse report ${file}: ${error.message}, 'WARN'`);
         }
       }
     }
@@ -98,6 +125,11 @@ class ErrorAnalyticsDashboard {;
         try {
           const content = fs.readFileSync(
             path.join(this.errorReportsPath, `file)`, utf8`
+    for (const file of files) {;
+      if (file.endsWith('.json')) {;
+        try {;
+          const content = fs.readFileSync(;
+            path.join(this.errorReportsPath, 'file)', utf8';
           );
           const data = JSON.parse(content);
 ;
@@ -106,7 +138,7 @@ class ErrorAnalyticsDashboard {;
           }
         } catch (error) {  
           this.log( `Failed to parse error report ${file  }: ${error.message}`,WARN`
-          );
+<<<<<<< HEAD          );
         }
       }
     }
@@ -118,6 +150,10 @@ class ErrorAnalyticsDashboard {;
     const logFiles = [`comprehensive-error-fixer.log', 'typescript-error-monitor.log'', 'eslint-error-cleaner.log', 'build-error-detector.log'', 'dependency-error-resolver.log', 'config-error-fixer.log'', 'error-prevention-monitor.log', 'auto-recovery-manager.log'', 'critical-error-alert-system.log', ''];
 
     for (const logFile of logFiles) {
+;
+    const logFiles = ['comprehensive-error-fixer.log', 'typescript-error-monitor.log', 'eslint-error-cleaner.log', 'build-error-detector.log', 'dependency-error-resolver.log', 'config-error-fixer.log', 'error-prevention-monitor.log', 'auto-recovery-manager.log', 'critical-error-alert-system.log', '];
+;
+    for (const logFile of logFiles) {;
       const logPath = path.join(this.logsPath, 'logFile);
       if (fs.existsSync(logPath)) {;
         await this.parseLogFile(logPath);
@@ -152,16 +188,14 @@ class ErrorAnalyticsDashboard {;
       execSync('npm run type-check', {
         cwd: this.workspacePath,
         stdio: 'pipe',
-        timeout: 60000,
-      });
+        timeout: 60000});
     } catch (error) {  
       const errorCount = this.countTypeScriptErrors(error.stdout || '');
       this.errorData.typescript.push({
         timestamp: new Date().toISOString(),
         count: errorCount,
         source: 'current-status',
-        details: error.stdout || '',
-        });
+        details: error.stdout || ''});
     }
 
     // Check ESLint errors;
@@ -169,16 +203,14 @@ class ErrorAnalyticsDashboard {;
       execSync('npm run lint', {
         cwd: this.workspacePath,
         stdio: 'pipe',
-        timeout: 60000,
-      });
+        timeout: 60000});
     } catch (error) {  
       const errorCount = this.countLintErrors(error.stdout || '');
       this.errorData.eslint.push({
         timestamp: new Date().toISOString(),
         count: errorCount,
         source: 'current-status',
-        details: error.stdout || '',
-        });
+        details: error.stdout || ''});
     }
 
     // Check build status;
@@ -186,8 +218,7 @@ class ErrorAnalyticsDashboard {;
       execSync('npm run build', {
         cwd: this.workspacePath,
         stdio: 'pipe',
-        timeout: 300000,
-      });
+        timeout: 300000});
     } catch (error) {  
       const errorCount = this.countBuildErrors(error.stdout || '');
       this.errorData.build.push({
@@ -195,8 +226,7 @@ class ErrorAnalyticsDashboard {;
         count: errorCount,
         source: 'current-status',
         details: error.stdout || '',
-        });
-    }
+        });    }
   }
 ;
   processErrorReport(data) {;
@@ -228,31 +258,57 @@ class ErrorAnalyticsDashboard {;
       this.addErrorData(`typescript`, {
         timestamp,
         count: 1,source: `log-${logFile}`,
-        details: line,
-      });
+        details: line});
     } else if (line.includes(`ESLint`) || line.includes(`lint`)) {
       this.addErrorData(`eslint`, {
         timestamp,
         count: 1,source: `log-${logFile}`,
-        details: line,
-      });
+        details: line});
     } else if (line.includes(`build`) || line.includes(`Build`)) {
       this.addErrorData(`build`, {
         timestamp,
         count: 1,source: `log-${logFile}`,
-        details: line,
-      });
+        details: line});
     } else if (line.includes(`dependency`) || line.includes(`npm`)) {
       this.addErrorData(`dependencies`, {
         timestamp,
         count: 1,source: `log-${logFile}`,
-        details: line,
-      });
+        details: line});
     } else if (line.includes(`merge`) || line.includes(`conflict`)) {
       this.addErrorData(`mergeConflicts`, {
         timestamp,
         count: 1,source: `log-${logFile}`,
         details: line,
+;
+    if (line.includes('TypeScript') || line.includes('tsc')) {;
+      this.addErrorData('typescript', {;
+        timestamp,;
+        count: 1,source: `log-${logFile}`,;
+        details: line,;
+      });
+    } else if (line.includes('ESLint') || line.includes('lint')) {;
+      this.addErrorData('eslint', {;
+        timestamp,;
+        count: 1,source: `log-${logFile}`,;
+        details: line,;
+      });
+    } else if (line.includes('build') || line.includes('Build')) {;
+      this.addErrorData('build', {;
+        timestamp,;
+        count: 1,source: `log-${logFile}`,;
+        details: line,;
+      });
+    } else if (line.includes('dependency') || line.includes('npm')) {;
+      this.addErrorData('dependencies', {;
+        timestamp,;
+        count: 1,source: `log-${logFile}`,;
+        details: line,;
+      });
+    } else if (line.includes('merge') || line.includes('conflict')) {;
+      this.addErrorData('mergeConflicts', {;
+        timestamp,;
+        count: 1,source: `log-${logFile}`,;
+        details: line,;
       });
     }
   }
@@ -287,13 +343,14 @@ class ErrorAnalyticsDashboard {;
           line.includes('error') ||
           line.includes('Error') ||
           line.includes('ERROR')
-      );
+<<<<<<< HEAD      );
     return errorLines.length;
   }
 ;
   analyzeTrends() {;
     this.log('📊 Analyzing error trends...');
 
+;
     // Group errors by time periods;
     const now = new Date();
     const oneDayAgo = new Date(now.getTime() - 24 * 60 * 60 * 1000);
@@ -305,7 +362,7 @@ class ErrorAnalyticsDashboard {;
 
       // Daily trends;
       const dailyErrors = errors.filter(
-        e => new Date(e.timestamp) >= oneDayAgo;
+<<<<<<< HEAD        e => new Date(e.timestamp) >= oneDayAgo;
       );
       this.trends.daily[errorType] = {;
         count: dailyErrors.length,;
@@ -315,6 +372,9 @@ class ErrorAnalyticsDashboard {;
 
       // Weekly trends;
       const weeklyErrors = errors.filter(
+;
+      // Weekly trends;
+      const weeklyErrors = errors.filter(;
         e => new Date(e.timestamp) >= oneWeekAgo;
       );
       this.trends.weekly[errorType] = {;
@@ -325,7 +385,7 @@ class ErrorAnalyticsDashboard {;
 
       // Monthly trends;
       const monthlyErrors = errors.filter(
-        e => new Date(e.timestamp) >= oneMonthAgo;
+<<<<<<< HEAD        e => new Date(e.timestamp) >= oneMonthAgo;
       );
       this.trends.monthly[errorType] = {;
         count: monthlyErrors.length,;
@@ -385,8 +445,7 @@ class ErrorAnalyticsDashboard {;
         category: 'typescript',
         action: Implement stricter TypeScript configuration and add type guards',
         impact: 'Reduce runtime errors and improve code quality',
-      });
-    }
+      });    }
 
     // ESLint errors;
     if (this.trends.daily.eslint?.totalErrors > 20) {
@@ -394,8 +453,7 @@ class ErrorAnalyticsDashboard {;
         priority: 'medium',
         category: 'code-quality',
         action: 'Set up pre-commit hooks and enforce ESLint rules',
-        impact: 'Maintain consistent code style and catch issues early',
-      });
+        impact: 'Maintain consistent code style and catch issues early'});
     }
 
     // Build errors;
@@ -404,8 +462,7 @@ class ErrorAnalyticsDashboard {;
         priority: 'high',
         category: 'build-process',
         action: 'Implement automated build testing and rollback procedures',
-        impact: 'Prevent broken builds from reaching production',
-      });
+        impact: 'Prevent broken builds from reaching production'});
     }
 
     // Dependencies;
@@ -414,8 +471,7 @@ class ErrorAnalyticsDashboard {;
         priority: 'medium',
         category: 'dependencies',
         action: 'Regular dependency audits and automated security updates',
-        impact: 'Reduce security vulnerabilities and compatibility issues',
-      });
+        impact: 'Reduce security vulnerabilities and compatibility issues'});
     }
 
     // Merge conflicts;
@@ -425,6 +481,54 @@ class ErrorAnalyticsDashboard {;
         category: 'git-workflow',
         action: 'Improve branch management and merge strategies',
         impact: 'Reduce development friction and merge conflicts',
+;
+    // TypeScript errors;
+    if (this.trends.daily.typescript?.totalErrors > 10) {;
+      recommendations.push({;
+        priority: 'high',;
+        category: 'typescript',;
+        action:Implement stricter TypeScript configuration and add type guards',;
+        impact: 'Reduce runtime errors and improve code quality',;
+      });
+    }
+;
+    // ESLint errors;
+    if (this.trends.daily.eslint?.totalErrors > 20) {;
+      recommendations.push({;
+        priority: 'medium',;
+        category: 'code-quality',;
+        action: 'Set up pre-commit hooks and enforce ESLint rules',;
+        impact: 'Maintain consistent code style and catch issues early',;
+      });
+    }
+;
+    // Build errors;
+    if (this.trends.daily.build?.totalErrors > 5) {;
+      recommendations.push({;
+        priority: 'high',;
+        category: 'build-process',;
+        action: 'Implement automated build testing and rollback procedures',;
+        impact: 'Prevent broken builds from reaching production',;
+      });
+    }
+;
+    // Dependencies;
+    if (this.trends.daily.dependencies?.totalErrors > 3) {;
+      recommendations.push({;
+        priority: 'medium',;
+        category: 'dependencies',;
+        action: 'Regular dependency audits and automated security updates',;
+        impact: 'Reduce security vulnerabilities and compatibility issues',;
+      });
+    }
+;
+    // Merge conflicts;
+    if (this.trends.daily.mergeConflicts?.totalErrors > 2) {;
+      recommendations.push({;
+        priority: 'low',;
+        category: 'git-workflow',;
+        action: 'Improve branch management and merge strategies',;
+        impact: 'Reduce development friction and merge conflicts',;
       });
     }
 ;
@@ -445,8 +549,7 @@ class ErrorAnalyticsDashboard {;
         .map(pattern => ({
           name: pattern.name,
           count: (errorMessages.match(pattern.regex) || []).length,
-        }))
-        .filter(p => p.count > 0);
+        }))        .filter(p => p.count > 0);
     });
 ;
     return patterns;
@@ -460,20 +563,40 @@ class ErrorAnalyticsDashboard {;
       overview: {
         totalErrors: Object.values(this.errorData).flat().length,
         errorTypes: Object.keys(this.errorData),
-        lastUpdated: new Date().toISOString(),
-      },
+        lastUpdated: new Date().toISOString()},
       errorData: this.errorData,
       trends: this.trends,
       insights: this.generateInsights(),
       charts: {
         errorTypeDistribution: this.generateErrorTypeDistribution(),
         errorTimeline: this.generateErrorTimeline(),
-        sourceBreakdown: this.generateSourceBreakdown(),
-      },
-    };
+        sourceBreakdown: this.generateSourceBreakdown()}};
 
     const dashboardFile = path.join(
       this.reportsPath,error-analytics-dashboard.json`
+;
+  async generateDashboard() {;
+    this.log('📊 Generating error analytics dashboard...');
+;
+    const dashboard = {;
+      timestamp: new Date().toISOString(),;
+      overview: {;
+        totalErrors: Object.values(this.errorData).flat().length,;
+        errorTypes: Object.keys(this.errorData),;
+        lastUpdated: new Date().toISOString(),;
+      },;
+      errorData: this.errorData,;
+      trends: this.trends,;
+      insights: this.generateInsights(),;
+      charts: {;
+        errorTypeDistribution: this.generateErrorTypeDistribution(),;
+        errorTimeline: this.generateErrorTimeline(),;
+        sourceBreakdown: this.generateSourceBreakdown(),;
+      },;
+    };
+;
+    const dashboardFile = path.join(;
+      this.reportsPath,error-analytics-dashboard.json';
     );
     fs.writeFileSync(dashboardFile, JSON.stringify(dashboard, null, 2));
 this.log(`📄 Dashboard generated: ${dashboardFile}`);
@@ -493,7 +616,7 @@ this.log(`📄 Dashboard generated: ${dashboardFile}`);
 
     const total = Object.values(distribution).reduce(
       (sum, d) => sum + d.totalErrors,
-      0;
+<<<<<<< HEAD      0;
     );
     Object.values(distribution).forEach(d => {;
       d.percentage = total > 0 ? Math.round((d.totalErrors / total) * 100) : 0;
@@ -517,8 +640,7 @@ this.log(`📄 Dashboard generated: ${dashboardFile}`);
         build: 0,
         dependencies: 0,
         system: 0,
-        mergeConflicts: 0,
-      };
+        mergeConflicts: 0};
 
       Object.keys(this.errorData).forEach(errorType => {
         const errors = this.errorData[errorType].filter(e => {
@@ -527,6 +649,28 @@ this.log(`📄 Dashboard generated: ${dashboardFile}`);
         });
         timeline[dateStr][errorType] = errors.reduce(
           (sum, e) => sum + e.count,
+;
+    // Last 7 days;
+    for (let i = 6; i >= 0; i--) {;
+      const date = new Date(now.getTime() - i * 24 * 60 * 60 * 1000);
+      const dateStr = date.toISOString().split('T')[0];
+;
+      timeline[dateStr] = {;
+        typescript: 0,;
+        eslint: 0,;
+        build: 0,;
+        dependencies: 0,;
+        system: 0,;
+        mergeConflicts: 0,;
+      };
+;
+      Object.keys(this.errorData).forEach(errorType => {;
+        const errors = this.errorData[errorType].filter(e => {;
+          const errorDate = new Date(e.timestamp).toISOString().split('T')[0];
+          return errorDate === dateStr;
+        });
+        timeline[dateStr][errorType] = errors.reduce(;
+          (sum, e) => sum + e.count,;
           0;
         );
       });
@@ -571,7 +715,7 @@ this.log(`📄 Dashboard generated: ${dashboardFile}`);
       this.log( `📈 Generated trends for ${Object.keys(this.trends).length} time periods`
       );
       this.log(💡 Generated ${dashboard.insights.recommendations.length} recommendations`
-      );
+<<<<<<< HEAD      );
 ;
       return {;
         success: true,;
@@ -581,6 +725,9 @@ this.log(`📄 Dashboard generated: ${dashboardFile}`);
     } catch (error) {  
       this.log(
         `💥 Error Analytics Dashboard failed: ${error.message  }`,ERROR`
+    } catch (error) {;
+      this.log(;
+        `💥 Error Analytics Dashboard failed: ${error.message}',ERROR';
       );
       throw error;
     }
@@ -589,7 +736,7 @@ this.log(`📄 Dashboard generated: ${dashboardFile}`);
 
 // Run the automation if called directly;
 if (require.main === module) {
-  const dashboard = new ErrorAnalyticsDashboard();
+<<<<<<< HEAD  const dashboard = new ErrorAnalyticsDashboard();
   dashboard.run().catch(console.error);
 }
 ;

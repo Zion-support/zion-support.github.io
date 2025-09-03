@@ -15,6 +15,8 @@ class ComprehensiveErrorFixer {;
   }
 
   log(message, type = `info`) {
+;
+  log(message, type = 'info') {;
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
     console.log(logEntry);
@@ -26,20 +28,21 @@ class ComprehensiveErrorFixer {;
       this.log(`Fixing common syntax errors...`);
 
       // Find all source files;
-      const sourceFiles = this.findSourceFiles();
+<<<<<<< HEAD      const sourceFiles = this.findSourceFiles();
 ;
       for (const file of sourceFiles) {;
         try {;
           await this.fixFileErrors(file);
         } catch (error) { 
           this.log(`Failed to fix ${file }: ${error.message}`, `error`);
+        } catch (error) {this.log(`Failed to fix ${file}: ${error.message}`, 'error');
         }
       }
 ;
       this.log('Common syntax errors fixed', 'success');
       this.fixes.push('syntax_errors');
     } catch (error) { 
-      this.log('Syntax error fixing failed', 'error');
+<<<<<<< HEAD      this.log('Syntax error fixing failed', 'error');
      }
   }
 ;
@@ -67,16 +70,13 @@ class ComprehensiveErrorFixer {;
 ;
   findSourceFiles() {;
     const sourceDirs = [;
-      'src',';      'pages',';      'components',';      'utils',';      'hooks',';      'types',';    ];';    const extensions = ['.js', '.jsx', '.ts', '.tsx'];';    const files = [];';
-    for (const dir of sourceDirs) {;
+      'src',';      'pages',';      'components',';      'utils',';      'hooks',';      'types',';    ];';    const extensions = ['.js', '.jsx', '.ts', '.tsx'];';    const files = [];';    for (const dir of sourceDirs) {;
       if (fs.existsSync(dir)) {;
-        this.findFilesRecursively(dir, extensions, files);,
-}
+        this.findFilesRecursively(dir, extensions, files);}
     }
 ;
     return files;,
-}
-;
+};
   findFilesRecursively(dir, extensions, files) {;
     const items = fs.readdirSync(dir);
 ;
@@ -91,6 +91,10 @@ class ComprehensiveErrorFixer {;
         if (extensions.includes(ext)) {;
           files.push(fullPath);
         }
+        this.findFilesRecursively(fullPath, extensions, files);} else if (stat.isFile()) {;
+        const ext = path.extname(item);
+        if (extensions.includes(ext)) {;
+          files.push(fullPath);}
       }
     }
   }
@@ -100,7 +104,7 @@ class ComprehensiveErrorFixer {;
       let content = fs.readFileSync(filePath, `utf8`);
       let originalContent = content;
 
-      // Fix common syntax errors;
+<<<<<<< HEAD      // Fix common syntax errors;
       content = this.fixUnterminatedStrings(content);
       content = this.fixUnterminatedComments(content);
       content = this.fixDuplicateImports(content);
@@ -121,18 +125,27 @@ class ComprehensiveErrorFixer {;
   }
 
   fixUnterminatedStrings(content) {
+;
+      // Only write if content changed;
+      if (content !== originalContent) {;
+        fs.writeFileSync(filePath, content);this.log(`Fixed errors in ${filePath}`, 'success');this.fixes.push(`fixed_${filePath}`);
+      }
+    } catch (error) {this.log(`Error processing ${filePath}: ${error.message}`, 'error');
+    }
+  }
+;
+  fixUnterminatedStrings(content) {;
     // Fix unterminated string literals;
     const lines = content.split('\n');
     const fixedLines = [];
 ;
         fs.writeFileSync(filePath, content);
-        this.log(`Fixed errors in ${filePath}`, 'success');';        this.fixes.push(`fixed_${filePath}`);`;      }
+        this.log(`Fixed errors in ${filePath}`, 'success');        this.fixes.push(`fixed_${filePath}`);`;      }
     } catch (error) {;
       this.log(`Error processing ${filePath}: ${error.message}`, 'error');';    }`;  }';
   fixUnterminatedStrings(content) {;
     // Fix unterminated string literals;
-    const lines = content.split('\n');';    const fixedLines = [];';
-    for (let i = 0; i < lines.length; i++) {;
+    const lines = content.split('\n');';    const fixedLines = [];';    for (let i = 0; i < lines.length; i++) {;
       let line = lines[i];
 
       // Check for unterminated strings;
@@ -140,13 +153,19 @@ class ComprehensiveErrorFixer {;
       const doubleQuotes = (line.match(/"/g) || []).length;
 
       if (singleQuotes % 2 !== 0) {
+;
+      // Check for unterminated strings;
+      const singleQuotes = (line.match(/'/g) || []).length;
+      const doubleQuotes = (line.match(/"/g) || []).length;
+;
+      if (singleQuotes % 2 !== 0) {;
         // Add missing single quote;
         line += ';
         this.log('Fixed unterminated single quote', 'info');
       }
 
       if (doubleQuotes % 2 !== 0) {
-        // Add missing double quote;
+<<<<<<< HEAD        // Add missing double quote;
         line += '"';
         this.log('Fixed unterminated double quote', 'info');
       }
@@ -158,6 +177,16 @@ class ComprehensiveErrorFixer {;
   }
 
   fixUnterminatedComments(content) {
+;
+      const singleQuotes = (line.match(/'/g) || []).length;      const doubleQuotes = (line.match(/"/g) || []).length;";";      if (singleQuotes % 2 !== 0) {;
+        // Add missing single quote;
+        line += "'";";        this.log('Fixed unterminated single quote', 'info');      }';;
+      if (doubleQuotes % 2 !== 0) {;
+        // Add missing double quote;
+        line += '"';        this.log('Fixed unterminated double quote', 'info');      }';;
+      fixedLines.push(line);}
+;
+    return fixedLines.join('\n');  }';;
   fixUnterminatedComments(content) {;
     // Fix unterminated comments;
     let fixedContent = content;
@@ -176,7 +205,7 @@ class ComprehensiveErrorFixer {;
   }
 
   fixDuplicateImports(content) {
-    // Remove duplicate import statements;
+<<<<<<< HEAD    // Remove duplicate import statements;
     const lines = content.split('\n');
     const seenImports = new Set();
     const fixedLines = [];
@@ -199,6 +228,8 @@ class ComprehensiveErrorFixer {;
   }
 
   fixDuplicateExports(content) {
+;
+  fixDuplicateExports(content) {;
     // Fix duplicate export statements;
     const lines = content.split('\n');
     const fixedLines = [];
@@ -223,44 +254,42 @@ class ComprehensiveErrorFixer {;
       fixedContent = content.replace(;);        multiLineCommentRegex,;
         match => match + '*/'';      );';      this.log('Fixed unterminated multi-line comment', 'info');';    }';
     return fixedContent;,
-}
-;
+};
   fixDuplicateImports(content) {;
     // Remove duplicate import statements;
-    const lines = content.split('\n');';    const seenImports = new Set();';    const fixedLines = [];
+    const lines = content.split('\n');    const seenImports = new Set();    const fixedLines = [];
 ;
     for (const line of lines) {;
-      if (line.trim().startsWith('import ')) {';        const importKey = line.trim();';        if (!seenImports.has(importKey)) {;
+      if (line.trim().startsWith('import ')) {';        const importKey = line.trim();        if (!seenImports.has(importKey)) {;
           seenImports.add(importKey);
-          fixedLines.push(line);,
-} else {;
-          this.log('Removed duplicate import', 'info');';        }';      } else {;
-        fixedLines.push(line);,
-}
+          fixedLines.push(line);} else {;
+          this.log('Removed duplicate import', 'info');        }';      } else {;
+        fixedLines.push(line);}
     }
 ;
-    return fixedLines.join('\n');';  }';
-  fixDuplicateExports(content) {;
+    return fixedLines.join('\n');';  }';  fixDuplicateExports(content) {;
     // Fix duplicate export statements;
-    const lines = content.split('\n');';    const fixedLines = [];';    let hasDefaultExport = false;
+    const lines = content.split('\n');    const fixedLines = [];    let hasDefaultExport = false;
 ;
     for (const line of lines) {;
-      if (line.trim().startsWith('export default ')) {';        if (!hasDefaultExport) {;';          hasDefaultExport = true;
-          fixedLines.push(line);,
-} else {;
-          this.log('Removed duplicate default export', 'info');';        }';      } else {;
-        fixedLines.push(line);,
-}
+      if (line.trim().startsWith('export default ')) {';        if (!hasDefaultExport) {;          hasDefaultExport = true;
+          fixedLines.push(line);} else {;
+          this.log('Removed duplicate default export', 'info');        }';      } else {;
+        fixedLines.push(line);}
     }
 ;
-    return fixedLines.join('\n');';  }';
-  fixJSXSyntax(content) {;
+    return fixedLines.join('\n');';  }';  fixJSXSyntax(content) {;
     let fixedContent = content;
 
     // Fix unescaped entities in JSX;
     fixedContent = fixedContent.replace(/(\w)'(\w)/g, '$1&apos;$2');
     fixedContent = fixedContent.replace(/(\w)"(\w)/g, '$1&quot;$2');
 
+;
+    // Fix unescaped entities in JSX;
+    fixedContent = fixedContent.replace(/(\w)'(\w)/g, '$1&apos;$2');
+    fixedContent = fixedContent.replace(/(\w)"(\w)/g, '$1&quot;$2');
+;
     // Fix JSX fragment syntax;
     fixedContent = fixedContent.replace(/<>\s*$/gm, '<>');
     fixedContent = fixedContent.replace(/^\s*<\/>/gm, '</>');
@@ -269,8 +298,7 @@ class ComprehensiveErrorFixer {;
   }
     fixedContent = fixedContent.replace(/(\w)'(\w)/g, '$1&apos;$2');';    fixedContent = fixedContent.replace(/(\w)(\w)/g, '$1&quot;$2');';';    // Fix JSX fragment syntax;
     fixedContent = fixedContent.replace(/<>\s*$/gm, '<>');';    fixedContent = fixedContent.replace(/^\s*<\/>/gm, '</>');';';    return fixedContent;,
-}
-;
+};
   fixTypeScriptSyntax(content) {;
     let fixedContent = content;
 
@@ -278,6 +306,10 @@ class ComprehensiveErrorFixer {;
     fixedContent = fixedContent.replace(
       /:\s*([^,;)\]]+)\s*([,;)\]])/g,
       ': $1$2'
+;
+    // Fix common TypeScript syntax errors;
+    fixedContent = fixedContent.replace(;
+      /:\s*([^,;)\]]+)\s*([,;)\]])/g,: $1$2';
     );
     fixedContent = fixedContent.replace(;
       /,\s*([^,;)\]]+)\s*([,;)\]])/g,;
@@ -294,7 +326,7 @@ class ComprehensiveErrorFixer {;
     // Fix apostrophes;
     fixedContent = fixedContent.replace(/(\w)'(\w)/g, '$1&apos;$2');
 
-;
+<<<<<<< HEAD;
   fixUnescapedEntities(content) {;
     // Fix unescaped entities;
     let fixedContent = content;
@@ -315,6 +347,7 @@ class ComprehensiveErrorFixer {;
       this.log('Prettier formatting completed', 'success');
       this.fixes.push('prettier_formatting');
     } catch (error) { 
+    } catch (error) {;
       this.log('Prettier formatting failed', 'warn');
      }
   }
@@ -326,7 +359,7 @@ class ComprehensiveErrorFixer {;
       this.log('ESLint auto-fix completed', 'success');
       this.fixes.push('eslint_auto_fix');
     } catch (error) { 
-      this.log('ESLint auto-fix failed', 'warn');
+<<<<<<< HEAD      this.log('ESLint auto-fix failed', 'warn');
      }
   }
 
@@ -337,18 +370,35 @@ class ComprehensiveErrorFixer {;
       summary: {
         totalFiles: this.fixes.length,
         fixes: this.fixes.length,
-        success: this.errors.length === 0,
-      },
+        success: this.errors.length === 0},
       logs: this.logs,
       errors: this.errors,
       fixes: this.fixes,
-      recommendations: this.generateRecommendations(),
-    };
+      recommendations: this.generateRecommendations()};
 
     // Save report to file;
     const reportFile = `comprehensive-error-fixer-report-${Date.now()}.json`;
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log(`Report saved to ${reportFile}`, `info`);
+;
+  async generateReport() {;
+    const report = {;
+      timestamp: new Date().toISOString(),;
+      process: process.env.PM2_PROCESS || 'unknown',;
+      summary: {;
+        totalFiles: this.fixes.length,;
+        fixes: this.fixes.length,;
+        success: this.errors.length === 0,;
+      },;
+      logs: this.logs,;
+      errors: this.errors,;
+      fixes: this.fixes,;
+      recommendations: this.generateRecommendations(),;
+    };
+;
+    // Save report to fileconst reportFile = `comprehensive-error-fixer-report-${Date.now()}.json`;
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+this.log(`Report saved to ${reportFile}`, 'info');
     return report;
   }
 ;
@@ -394,7 +444,7 @@ class ComprehensiveErrorFixer {;
       return report;
     } catch (error) { 
       this.log(`Comprehensive error fixing failed: ${error.message }`, `error`);
-      await this.fixCommonSyntaxErrors();
+<<<<<<< HEAD      await this.fixCommonSyntaxErrors();
 ;
       // Run Prettier;
       await this.runPrettier();
@@ -411,12 +461,14 @@ class ComprehensiveErrorFixer {;
       const report = await this.generateReport();
       return report;
     }
+      this.log('Comprehensive error fixing completed successfully', 'success');      return report;,';} catch (error) {;
+      this.log(`Comprehensive error fixing "failed": ${error.message}`, 'error');      const report = await this.generateReport();`;      return report;}
   }
 }
 
 // Main execution;
 async function main() {
-  const fixer = new ComprehensiveErrorFixer();
+<<<<<<< HEAD  const fixer = new ComprehensiveErrorFixer();
 ;
   try {;
     await fixer.runFullFix();
@@ -430,6 +482,11 @@ async function main() {
 
 // Handle process termination;
 process.on('SIGTERM', () => {
+    process.exit(0);} catch (error) {;
+    fixer.log(`Fatal "error": ${error.message}`, 'error');    await fixer.generateReport();`;    process.exit(1);}
+;
+// Handle process termination;
+process.on('SIGTERM', () => {;
   console.log('Received SIGTERM, shutting down gracefully...');
   process.exit(0);
 });
@@ -442,13 +499,13 @@ process.on('SIGINT', () => {;
 // Run the main function;
 main().catch(error => {
   console.error(`Fatal error: ${error.message}`);
-  process.exit(1);
+<<<<<<< HEAD  process.exit(1);
 }
 ;
 // Handle process termination;
-process.on('SIGTERM', () => {';  console.log('Received SIGTERM, shutting down gracefully...');';  process.exit(0);,';});
+process.on('SIGTERM', () => {';  console.log('Received SIGTERM, shutting down gracefully...');  process.exit(0);,';});
 ;
-process.on('SIGINT', () => {';  console.log('Received SIGINT, shutting down gracefully...');';  process.exit(0);,';});
+process.on('SIGINT', () => {';  console.log('Received SIGINT, shutting down gracefully...');  process.exit(0);,';});
 ;
 // Run the main function;
 main().catch(error => {;);  console.error(`Fatal "error": ${error.message}`);`;  process.exit(1);,

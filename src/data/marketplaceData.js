@@ -20,6 +20,27 @@ export const generateSearchSuggestions = () => [// Services
   'API Development',
   'Mobile Development',
   'Web Development',
+export const generateSearchSuggestions = () => [
+  // Services
+  'AI Services', ""
+  'Cloud Migration',""
+  'Cybersecurity', ""
+  'Digital Transformation',""
+  'IT Infrastructure', ""
+  'DevOps',""
+  'Machine Learning', ""
+  'Data Analytics',""
+  'Cloud Computing', ""
+  'Network Security',""
+  'Software Development', ""
+  'System Integration',""
+  'Business Intelligence', ""
+  'Automation',""
+  'IoT Solutions', ""
+  'Blockchain',""
+  'API Development', ""
+  'Mobile Development',""
+  'Web Development', ""
   'Database Management',
   
   // Solutions'
@@ -84,10 +105,14 @@ export const serviceCategories = [
     id: 'ai-ml',
   'Event Sourcing',
 ];
-
 export const serviceCategories = [{id: 'ai-ml',
     name: 'AI & Machine Learning',
     description: 'Intelligent solutions powered by artificial intelligence',
+export const serviceCategories = [
+  {""
+    id: 'ai-ml', ""
+    name: 'AI & Machine Learning',""
+    description: 'Intelligent solutions powered by artificial intelligence', ""
     icon: '🤖',
     services: ['
       'Machine Learning Models',
@@ -107,7 +132,7 @@ export const serviceCategories = [{id: 'ai-ml',
     icon: '☁️',
     services: ['
       'Cloud Migration',
-      'DevOps Automation',
+<<<<<<< HEAD      'DevOps Automation',
       'Container Orchestration',
       'Infrastructure as Code',
       'CI/CD Pipelines',
@@ -123,6 +148,11 @@ export const serviceCategories = [{id: 'ai-ml',
     icon: '🔒',
     services: ['
       'Security Audits',
+  {id: 'cybersecurity',
+    name: 'Cybersecurity',
+    description: 'Protection and compliance solutions',
+    icon: '🔒',
+    services: ['Security Audits',
       'Penetration Testing',
       'Vulnerability Assessment',
       'Incident Response',
@@ -139,7 +169,7 @@ export const serviceCategories = [{id: 'ai-ml',
     icon: '🚀',
     services: ['
       'Process Automation',
-      'Workflow Optimization',
+<<<<<<< HEAD      'Workflow Optimization',
       'Change Management',
       'Digital Strategy',
       'Legacy Modernization',
@@ -172,11 +202,55 @@ export const industrySolutions = [
     icon: '💳',
     solutions: ['
       'Digital Banking',
-]
-  }
+]  }
 ];
 
 export const industrySolutions = [
+  {""
+    id: 'manufacturing', ""
+    name: 'Manufacturing',""
+    description: 'Smart factory and Industry 4.0 solutions', ""
+    icon: '🏭',
+    solutions: [""
+      'Predictive Maintenance', ""
+      'Quality Control',""
+      'Supply Chain Optimization', ""
+      'Production Planning',""
+      'Asset Management', ""
+      'Performance Monitoring']
+  }, {""
+    id: 'financial',""
+    name: 'Financial Services', ""
+    description: 'FinTech and banking solutions',""
+    icon: '💳', solutions: [""
+      'Digital Banking',""
+      'Payment Processing', ""
+      'Risk Analytics',""
+      'Compliance Automation', ""
+      'Customer Onboarding',""
+      'Fraud Detection']
+  }, {""
+    id: 'healthcare',""
+    name: 'Healthcare', ""
+    description: 'Digital health and medical technology',""
+    icon: '🏥', solutions: [""
+      'Electronic Health Records',""
+      'Telemedicine Platforms', ""
+      'Medical Imaging',""
+      'Patient Management', ""
+      'Clinical Decision Support',""
+      'Healthcare Analytics']
+  }, {""
+    id: 'retail',""
+    name: 'Retail', ""
+    description: 'E-commerce and omnichannel solutions',""
+    icon: '🛒', solutions: [""
+      'E-commerce Platforms',""
+      'Inventory Management', ""
+      'Customer Analytics',""
+      'Omnichannel Integration', ""
+      'Personalization',""
+      'Mobile Commerce', 
   {"
     id: 'manufacturing', "
     name: 'Manufacturing',"
@@ -224,8 +298,7 @@ export const industrySolutions = [
       'Customer Analytics',"
       'Omnichannel Integration', "
       'Personalization',"
-      'Mobile Commerce', 
-      'Payment Processing',
+      'Mobile Commerce',       'Payment Processing',
       'Risk Analytics',
       'Compliance Automation',
       'Customer Onboarding',
@@ -239,6 +312,11 @@ export const industrySolutions = [
     icon: '🏥',
     solutions: ['
       'Electronic Health Records',
+  {id: 'healthcare',
+    name: 'Healthcare',
+    description: 'Digital health and medical technology',
+    icon: '🏥',
+    solutions: ['Electronic Health Records',
       'Telemedicine Platforms',
       'Medical Imaging',
       'Patient Management',
@@ -253,7 +331,7 @@ export const industrySolutions = [
     icon: '🛒',
     solutions: ['
       'E-commerce Platforms',
-      'Inventory Management',
+<<<<<<< HEAD      'Inventory Management',
       'Customer Analytics',
       'Omnichannel Integration',
       'Personalization',
@@ -293,8 +371,7 @@ export const testimonials = [{id: 1,
       'Risk Analytics,
       'Compliance Automation,
       'Customer Onboarding,
-      'Fraud Detection',
-]
+      'Fraud Detection']
   },
   {
     id: 'healthcare,
@@ -307,8 +384,7 @@ export const testimonials = [{id: 1,
       'Medical Imaging,
       'Patient Management,
       'Clinical Decision Support,
-      'Healthcare Analytics',
-]
+      'Healthcare Analytics']
   },
   {"
     id: 'retail,
@@ -322,8 +398,7 @@ export const testimonials = [{id: 1,
       'Omnichannel Integration,
       'Personalization,
       'Mobile Commerce',
-]
-  }
+]  }
 ];
 
 export const caseStudies = [
@@ -348,8 +423,7 @@ export const caseStudies = [
     content: 'Their digital transformation consulting helped us implement smart manufacturing solutions that increased our production efficiency by 40% and reduced waste by 25%.',
     rating: 5, "
     avatar: '/avatars/emily.jpg',
-}
-];
+}];
 
 export const caseStudies = [{id: 'cloud-migration-bank',
     title: 'Major Bank Cloud Migration',
@@ -365,26 +439,28 @@ export const caseStudies = [{id: 'cloud-migration-bank',
   },
   {'
     id: 'ai-manufacturing',
+  {id: 'ai-manufacturing',
     title: 'AI-Powered Manufacturing Optimization',
     industry: 'Manufacturing',
     challenge: 'Inefficient production processes and high defect rates',
     solution: 'Machine learning models for predictive maintenance and quality control',
     results: ['
       '30% reduction in production downtime',
-      '25% improvement in product quality',
+<<<<<<< HEAD      '25% improvement in product quality',
       '15% increase in overall efficiency'
     ],
     technologies: ['Python', 'TensorFlow', 'IoT Sensors', 'Real-time Analytics']
   },
   {'
     id: 'cybersecurity-healthcare',
+  {id: 'cybersecurity-healthcare',
     title: 'Healthcare Security Enhancement',
     industry: 'Healthcare',
     challenge: 'Increasing cyber threats and compliance requirements',
     solution: 'Comprehensive security framework with 24/7 monitoring',
     results: ['
       '100% compliance with HIPAA regulations',
-      'Zero security breaches in 2 years',
+<<<<<<< HEAD      'Zero security breaches in 2 years',
       '50% faster incident response time'
     ],
     technologies: ['SIEM', 'EDR', 'Vulnerability Scanning', 'Compliance Automation']
@@ -423,5 +499,4 @@ export const caseStudies = [
       'Zero security breaches in 2 years', "
       '50% faster incident response time',
 ], "
-    technologies: ['SIEM', 'EDR', 'Vulnerability Scanning', 'Compliance Automation'], }
-];"
+    technologies: ['SIEM', 'EDR', 'Vulnerability Scanning', 'Compliance Automation'], }];"

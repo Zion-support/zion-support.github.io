@@ -115,8 +115,7 @@ export default function API() {
                       </ul>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Response</h4>
-                      <p className="text-sm text-gray-600">{endpoint.response}</p>
+                      <h4 className="font-semibold text-gray-900 mb-2">Response</h4>                      <p className="text-sm text-gray-600">{endpoint.response}</p>
                     </div>
                   </div>
                 </div>
@@ -138,8 +137,7 @@ export default function API() {
                   Get API Key
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
-                <Link href="/docs" className="inline-flex items-center px-8 py-3 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-all duration-300">
-                  View Full Documentation
+                <Link href="/docs" className="inline-flex items-center px-8 py-3 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-all duration-300">                  View Full Documentation
                   <ExternalLink className="ml-2 w-5 h-5" />
                 </Link>
               </div>

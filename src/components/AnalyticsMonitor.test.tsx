@@ -13,9 +13,7 @@ describe('AnalyticsMonitor', () => {;,"});,})
     // Add specific test assertions based on component content;,"});,})
   });,});,"})
 });,"});,})
-;,});,"})
-    render(<AnalyticsMonitor />)"
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+;,});,"})    render(<AnalyticsMonitor />)"
   it(displays expected content', () => {
     render(<AnalyticsMonitor />)
 import { render, screen } from &apos;@testing-library/react';
@@ -23,18 +21,17 @@ import AnalyticsMonitor from &apos;./AnalyticsMonitor';
 
 describe(&apos;AnalyticsMonitor&apos;, () => {
   it(&apos;renders without crashing&apos;, () => {
-    render(&apos;}}&apos;<AnalyticsMonitor />)
+    render(&apos}}&apos;<AnalyticsMonitor />)
     expect(screen.getByRole(&apos;main&apos;) || screen.getByText(/.*/)).toBeInTheDocument()})
   it(&apos;displays expected content&apos;, () => {
-    render(&apos;}<AnalyticsMonitor />)
+    render(&apos}<AnalyticsMonitor />)
     // Add specific test assertions based on component content})})
     render(<AnalyticsMonitor / >)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();""
   it('displays expected content', () => {
     render(<AnalyticsMonitor / >)
     // Add specific test assertions based on component content, });
-""
-    // Add specific test assertions based on component content
+""    // Add specific test assertions based on component content
 })
 "
 }}

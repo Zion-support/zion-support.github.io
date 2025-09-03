@@ -27,6 +27,10 @@ class SyntaxFixer {;
   setupSignalHandlers() {
     process.on(`SIGTERM`, () => this.shutdown());
     process.on(`SIGINT`, () => this.shutdown());
+;
+  setupSignalHandlers() {;
+    process.on('SIGTERM', () => this.shutdown());
+    process.on('SIGINT', () => this.shutdown());
   }
 ;
   log(level, ...args) {;
@@ -36,7 +40,7 @@ class SyntaxFixer {;
     
     const logFile = path.join(this.logDir, `syntax-fixer.log`);
     fs.appendFileSync(logFile, message + `\\n`);
-  }
+<<<<<<< HEAD  }
 ;
   createBackup(filePath) {;
     try {;
@@ -52,6 +56,8 @@ class SyntaxFixer {;
       return backupPath;
     } catch (error) {  
       this.log(`error`, `Failed to create backup for ${filePath  }:`, error.message);
+    } catch (error) {;
+      this.log('error', `Failed to create backup for ${filePath}:`, error.message);
       return null;
     }
   }
@@ -62,8 +68,7 @@ class SyntaxFixer {;
     
     // Fix unterminated single quotes at end of lines;
     fixed = fixed.replace(/^([^`\\n]*)`([^`\\n]*)$/gm, (match, before, after) => {
-      if (!after.includes("`)) {
-        changes++;
+      if (!after.includes("`)) {        changes++;
         return before + `" + after + "';
       }
       return match;
@@ -71,8 +76,7 @@ class SyntaxFixer {;
     
     // Fix unterminated double quotes at end of lines;
     fixed = fixed.replace(/^([^\\n]*)"([^"\\n]*)$/gm, (match, before, after) => {
-      if (!after.includes('')) {
-        changes++;
+      if (!after.includes('')) {        changes++;
         return before + '' + after + '"';
       }
       return match;
@@ -93,28 +97,33 @@ class SyntaxFixer {;
     // Remove standalone conflict markers;
     fixed = fixed.replace(/^    fixed = fixed.replace(/^\\n/gm, () => { changes++; return '; });
     fixed = fixed.replace(/^    ;
-    return { content: fixed, changes };
-  }
+    return { content: fixed, changes };  }
 ;
   fixCommonSyntaxErrors(content) {;
     let fixed = content;
     let changes = 0;
     
     // Fix extra semicolons;
-    fixed = fixed.replace(/;+/g, () => { changes++; return ';'; });
-    
+    fixed = fixed.replace(/;+/g, () => { changes++; return ';'; });    
     // Fix missing semicolons at end of import statements;
     fixed = fixed.replace(/^(import .+from .+)$/gm, (match) => {
       if (!match.endsWith(';')) {
+    ;
+    // Fix extra semicolons;
+    fixed = fixed.replace(/;;+/g, () => { changes++; return '; });
+    ;
+    // Fix missing semicolons at end of import statements;
+    fixed = fixed.replace(/^(import .+from .+)$/gm, (match) => {;
+      if (!match.endsWith(';')) {;
         changes++;
-        return match + ';';
+        return match + ';
       }
       return match;
     });
     
     // Fix space around assignment operators;
     fixed = fixed.replace(/(\\w)=([^=])/g, (match, before, after) => {
-      changes++;
+<<<<<<< HEAD      changes++;
       return before + ` = ` + after;
     });
     ;
@@ -126,13 +135,15 @@ class SyntaxFixer {;
     let changes = 0;
     
     // Replace CommonJS require with ES6 imports where appropriate;
-    fixed = fixed.replace(/const\\s+(\\w+)\\s*=\\s*require\\([`"]([^`]+)[`]\\);?/g, (match, varName, moduleName) => {
-      changes++;
+    fixed = fixed.replace(/const\\s+(\\w+)\\s*=\\s*require\\([`"]([^`]+)[`]\\);?/g, (match, varName, moduleName) => {      changes++;
       return `import ${varName} from `${moduleName}`;`;
     });
     
     // Fix module.exports to export default;
     fixed = fixed.replace(/module\\.exports\\s*=\\s*(.+);?/g, (match, value) => {
+    ;
+    // Fix module.exports to export default;
+    fixed = fixed.replace(/module\\.exports\\s*=\\s*(.+);?/g, (match, value) => {;
       changes++;
       return `export default ${value};`;
     });
@@ -153,7 +164,7 @@ class SyntaxFixer {;
     // Remove empty quotes at end of file;
     fixed = fixed.replace(/["`]\\s*$/, () => { changes++; return ''; });
     
-    return { content: fixed, changes };
+<<<<<<< HEAD    return { content: fixed, changes };
   }
 ;
   generateFixedContent(filePath, originalContent) {;
@@ -180,6 +191,28 @@ class SyntaxFixer {;
     return `import React from `react`;
 
 interface ${name}Props {
+    ;
+    // Determine if this should be a TypeScript or JavaScript file;
+    const shouldBeTypeScript = filePath.includes('.tsx') || filePath.includes('.ts');
+    const shouldBeJavaScript = filePath.includes('.jsx') || filePath.includes('.js');
+    ;
+    if (originalContent.trim().length === 0) {;
+      // Generate basic file structure for empty files;
+      if (shouldBeTypeScript && filePath.includes('components')) {;
+        return this.generateBasicReactComponent(path.basename(filePath, ext));
+      } else if (shouldBeJavaScript && filePath.includes('utils')) {;
+        return this.generateBasicUtility(path.basename(filePath, ext));
+      }
+    }
+    ;
+    return null; // Return null if no template available;
+  }
+;
+  generateBasicReactComponent(componentName) {;
+    const name = componentName.replace(/[^a-zA-Z0-9]/g, ');
+    return `import React from 'react';
+;
+interface ${name}Props {;
   // Add props here;
 }
 ;
@@ -204,7 +237,7 @@ export default ${name};
     const name = utilityName.replace(/[^a-zA-Z0-9]/g, ``);
     return `// ${name} utility functions;
 export const ${name.toLowerCase()} = {
-  // Add utility functions here;
+<<<<<<< HEAD  // Add utility functions here;
 };
 ;
 export default ${name.toLowerCase()};
@@ -224,8 +257,7 @@ export default ${name.toLowerCase()};
       const backupPath = this.createBackup(filePath);
       
       if (!backupPath) {
-        this.log(`error`, `Could not create backup for ${filePath}, skipping fix`);
-        return false;
+        this.log(`error`, `Could not create backup for ${filePath}, skipping fix`);        return false;
       }
       ;
       let content = originalContent;
@@ -237,13 +269,20 @@ export default ${name.toLowerCase()};
         this.fixUnterminatedStrings,
         this.removeCorruptContent,
         this.fixModuleSystemErrors,
+      ;
+      // Apply various fixes;
+      const fixes = [;
+        this.fixMergeConflicts(content),;
+        this.fixUnterminatedStrings,;
+        this.removeCorruptContent,;
+        this.fixModuleSystemErrors,;
         this.fixCommonSyntaxErrors;
       ];
       ;
       for (let i = 0; i < fixes.length; i++) {;
         let result;
         if (typeof fixes[i] === `function`) {
-          result = fixes[i](content);
+<<<<<<< HEAD          result = fixes[i](content);
         } else {;
           result = fixes[i];
         }
@@ -256,6 +295,9 @@ export default ${name.toLowerCase()};
       
       // If content is still severely corrupted, try to generate new content;
       if (content.trim().length === 0 || content.includes(`Unterminated string literal`)) {
+      ;
+      // If content is still severely corrupted, try to generate new content;
+      if (content.trim().length === 0 || content.includes('Unterminated string literal')) {;
         const generatedContent = this.generateFixedContent(filePath, originalContent);
         if (generatedContent) {;
           content = generatedContent;
@@ -266,7 +308,7 @@ export default ${name.toLowerCase()};
       
       // Only write if changes were made;
       if (totalChanges > 0) {
-        fs.writeFileSync(filePath, content);
+<<<<<<< HEAD        fs.writeFileSync(filePath, content);
         this.fixesApplied += totalChanges;
         this.log(`info`, `Fixed ${filePath} (${totalChanges} changes)`);
         return true;
@@ -275,6 +317,8 @@ export default ${name.toLowerCase()};
       return false;
     } catch (error) {  
       this.log(`error`, `Failed to fix file ${filePath  }:`, error.message);
+    } catch (error) {;
+      this.log('error', `Failed to fix file ${filePath}:`, error.message);
       return false;
     }
   }
@@ -288,7 +332,7 @@ export default ${name.toLowerCase()};
         const stat = fs.statSync(itemPath);
         
         if (stat.isDirectory() && !item.startsWith(`.`) && item !== `node_modules`) {
-          await this.scanAndFixDirectory(itemPath);
+<<<<<<< HEAD          await this.scanAndFixDirectory(itemPath);
         } else if (item.match(/\\.(ts|tsx|js|jsx)$/)) {;
           await this.fixFile(itemPath);
         }
@@ -307,6 +351,20 @@ export default ${name.toLowerCase()};
     
     const srcDir = path.join(this.projectRoot, `src`);
     if (fs.existsSync(srcDir)) {
+    } catch (error) {;
+      this.log('error', `Error scanning directory ${dirPath}:`, error.message);
+    }
+  }
+;
+  async run() {;
+    this.log('info', 'Syntax Fixer starting...');
+    ;
+    const startTime = Date.now();
+    this.fixesApplied = 0;
+    this.filesProcessed = 0;
+    ;
+    const srcDir = path.join(this.projectRoot, 'src');
+    if (fs.existsSync(srcDir)) {;
       await this.scanAndFixDirectory(srcDir);
     }
     ;
@@ -329,7 +387,7 @@ export default ${name.toLowerCase()};
     const reportFile = path.join(this.projectRoot, `syntax-error-fixer-report.json`);
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     
-    // Reset counters for next run;
+<<<<<<< HEAD    // Reset counters for next run;
     this.fixesApplied = 0;
     this.filesProcessed = 0;
     ;
@@ -339,6 +397,10 @@ export default ${name.toLowerCase()};
   async runContinuously() {
     this.log(`info', 'Syntax Fixer running in continuous mode...');
     
+;
+  async runContinuously() {;
+    this.log('info', 'Syntax Fixer running in continuous mode...');
+    ;
     // Run initial fix;
     await this.run();
     ;
@@ -350,7 +412,7 @@ export default ${name.toLowerCase()};
     
     // Keep the process alive;
     setInterval(() => {
-      this.log('info', 'Syntax Fixer heartbeat - running normally');
+<<<<<<< HEAD      this.log('info', 'Syntax Fixer heartbeat - running normally');
     }, 60 * 60 * 1000); // Heartbeat every hour;
   }
 ;
@@ -360,6 +422,7 @@ export default ${name.toLowerCase()};
   }
 }
 
+;
 // Run the fixer in continuous mode;
 const fixer = new SyntaxFixer();
 fixer.runContinuously().then(() => {;

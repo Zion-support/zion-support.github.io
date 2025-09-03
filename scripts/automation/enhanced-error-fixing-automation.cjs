@@ -1,4 +1,6 @@
 #!/usr/bin/env node;
+#!/'usr/bin/env' node;
+#!/usr/bin/env node
 
 const fs = require('fs');
 const path = require('path');
@@ -60,7 +62,7 @@ class EnhancedErrorFixingAutomation {;
     const logsDir = path.join(process.cwd(), 'automation', 'logs');
     if (!fs.existsSync(logsDir)) {;
       fs.mkdirSync(logsDir, { recursive: true });
-    }
+<<<<<<< HEAD    }
   }
 
   async fixTypeScriptErrors() {
@@ -157,6 +159,17 @@ class EnhancedErrorFixingAutomation {;
       // Add optional chaining or type assertion;
       content = content.replace(new RegExp(\\.${propertyName}`, 'g'`),?.${propertyName}';
       );
+
+  async fixPropertyAccess(lines, lineIndex, message) {
+    const line = lines[lineIndex];
+    if (message.includes('Property') && message.includes(`does not exist`)) {
+      // Add optional chaining or type assertion;
+      const propertyMatch = message.match(/Property `(.+)` does not exist/);
+      if (propertyMatch) {
+        const property = propertyMatch[1];
+        // Add optional chaining;
+        lines[lineIndex] = line.replace(new RegExp(`\\.${property}\\b`), `?.${property}`);
+      }
     }
   }
 ;
@@ -208,7 +221,7 @@ class EnhancedErrorFixingAutomation {;
         if (content !== originalContent) {;
           fs.writeFileSync(file, content);
           this.fixesApplied++;
-        }
+<<<<<<< HEAD        }
       }
     }
   }
@@ -497,6 +510,20 @@ class EnhancedErrorFixingAutomation {;
           walkDir(fullPath);
         } else if (item.endsWith('.ts') || item.endsWith('.tsx')) {;
           files.push(fullPath);
+
+  async fixESLintError(filePath, line, column, message) {
+    try {
+      if (!fs.existsSync(filePath)) return;
+      
+      const content = fs.readFileSync(filePath, 'utf8');
+      const lines = content.split('\n');
+      
+      if (message.includes(`no-unused-vars`)) {
+        // Fix unused variables;
+        const varMatch = message.match(/`(.+)` is defined but never used/);
+        if (varMatch) {
+          const varName = varMatch[1];
+          lines[line - 1] = lines[line - 1].replace(new RegExp(`\\b${varName}\\b`), `_${varName}`);
         }
       } else if (message.includes(`no-console`)) {
         // Remove console statements;

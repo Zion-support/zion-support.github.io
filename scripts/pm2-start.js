@@ -89,58 +89,37 @@ startAutomation().catch(error => {;,});,"})
   '❌ Failed to start automation: ', error);,});,"})
   process.exit(1);,"});,})
 });,});,"})
-;,"});,})
-  '❌ PM2 is not installed. Please install it first: npm install -g pm2);
-  process.exit(1)}
+;,"});,})  '❌ PM2 is not installed. Please install it first: npm install -g pm2);
 // Function to start automation processes;
-async function startAutomation() {;
-  try {;
+async function startAutomation() {
     // Start the main application;
-    console.log(,;
   📱 Starting main application...');
     execSync('
-  'pm2 start ecosystem.config.cjs --only apps', { stdio: 'inherit });
-    // Wait a moment for apps to start;
+  'pm2 start ecosystem.config.cjs --only apps', { stdio: 'inherit });    // Wait a moment for apps to start;
     await new Promise(resolve => setTimeout(resolve, 2000));
     // Start automation processes;
-    console.log(,;
   🤖 Starting automation processes...');
     execSync('
-  'pm2 start ecosystem.config.cjs --only automation', { stdio: 'inherit });
-    // Save PM2 configuration;
-    console.log(,;
+  'pm2 start ecosystem.config.cjs --only automation', { stdio: 'inherit });    // Save PM2 configuration;
   💾 Saving PM2 configuration...');
     execSync('
-  'pm2 save', { stdio: 'inherit });
-    // Show status;
-    console.log(,;
+  'pm2 save', { stdio: 'inherit });    // Show status;
   📊 PM2 Status: ');
     execSync('
-  'pm2 list, { stdio:;
-  'inherit' });
-    console.log('
+  'pm2 list, { stdio:;  'inherit' });
   '✅ All PM2 processes started successfully!');
-    console.log('
   '📝 Use 'pm2 logs' to view logs');
-    console.log('
   '📊 Use 'pm2 monit' to monitor processes');
-    console.log('
   '🛑 Use 'pm2 stop all' to stop all processes')} catch (error) {
     console.error('
   '❌ Failed to start PM2 processes: ', error.message);
     process.exit(1)}
-}
-// Handle graceful shutdown;
+}// Handle graceful shutdown;
 process.on('
   'SIGINT', () => {
-  console.log('
   '🛑 Received SIGINT, shutting down gracefully...');
-  process.exit(0)})
-process.on('
   'SIGTERM', () => {
-  console.log('
-  '🛑 Received SIGTERM, shutting down gracefully...');
-  process.exit(0)});
+  console.log('  '🛑 Received SIGTERM, shutting down gracefully...');
 // Start automation;
 startAutomation().catch(error => {
   console.error('

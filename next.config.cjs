@@ -3,31 +3,44 @@ const nextConfig = {
   reactStrictMode: true,
   eslint: {
     ignoreDuringBuilds: true,
-  },
-:next.config.js
+  },:next.config.js
   typescript: {
     // Allow production builds to successfully complete even if
     // there are type errors.
     ignoreBuildErrors: true,
-  },
-  images: {
+  },  images: {
     domains: ['ziontechgroup.com'],
-    unoptimized: true,
-  },
+    unoptimized: true},
   compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
-  },
+    removeConsole: process.env.NODE_ENV === 'production'},
   webpack: (config, { dev, isServer }) => {
     // Completely exclude problematic directories from the build
 :next.config.js
     // Keep default TS/JS handling; we already ignore build errors via config
+    config.module.rules.push({
+      test: /\.(ts|tsx)$/,
+      exclude: [
+        /node_modules/,
+        /api-backup/,
+        /pages\.disabled/,
+        /backup-pages/,
+        /\.backup/,
+        /\.disabled/,
+        /automation\/backups/,
+        /automation_backup/,
+        /broken_files_backup/,
+        /contracts/,
+        /hardhat/,
+        /^components\//, // Exclude root components directory
+      ]});
+    
+
     // Add fallback for problematic modules
     config.resolve.fallback = {
       ...config.resolve.fallback,
       fs: false,
       net: false,
-      tls: false,
-    };
+      tls: false};
 
     return config;
   },
@@ -37,9 +50,7 @@ const nextConfig = {
     // period (in ms) where the server will keep pages in the buffer
     maxInactiveAge: 25 * 1000,
     // number of pages that should be kept simultaneously without being disposed
-    pagesBufferLength: 2,
-  },
-};
+    pagesBufferLength: 2}};
 
 export default nextConfig;
 /** @type {import('next').NextConfig} */

@@ -65,11 +65,7 @@ class AutoFixer {
         const originalContent = content;
         
         // Remove merge conflict markers
-        content = content.replace(/[\s\S]*?[\s\S]*?>>>>>>> [^\n]+/g, '');
-        content = content.replace(/[\s\S]*?>>>>>>> [^\n]+/g, '');
-        content = content.replace(/[\s\S]*?>>>>>>> [^\n]+/g, '');
-        
-        if (content !== originalContent) {
+        content = content.replace(/[\s\S]*?[\s\S]*?        content = content.replace(/[\s\S]*?        content = content.replace(/[\s\S]*?                if (content !== originalContent) {
           fs.writeFileSync(file, content);
           this.log('info', `Fixed merge conflicts in ${file}`);
           fixedFiles++;
@@ -96,14 +92,13 @@ class AutoFixer {
       // Fix missing semicolons
       { pattern: /([^;}])\s*$/gm, replacement: '$1;', description: 'Add missing semicolons' },
       // Fix missing commas
-      { pattern: /([^,}])\s*$/gm, replacement: '$1,', description: 'Add missing commas' },
+      { pattern: /([^}])\s*$/gm, replacement: '$1,', description: 'Add missing commas' },
       // Fix missing quotes
       { pattern: /([^"'])\s*$/gm, replacement: '$1', description: 'Add missing quotes' },
       // Fix missing brackets
       { pattern: /([^}])\s*$/gm, replacement: '$1}', description: 'Add missing brackets' },
       // Fix missing parentheses
-      { pattern: /([^)])\s*$/gm, replacement: '$1)', description: 'Add missing parentheses' },
-    ];
+      { pattern: /([^)])\s*$/gm, replacement: '$1)', description: 'Add missing parentheses' }];
     
     const files = this.getAllSourceFiles();
     

@@ -2,8 +2,7 @@
 /**
  * Intelligent Repository Manager;
  * 
- * This automation system provides intelligent Git repository management including: * - Automated PR merging with conflict resolution;
- * - Intelligent branch management;
+ * This automation system provides intelligent Git repository management including: * - Automated PR merging with conflict resolution; * - Intelligent branch management;
  * - Automated conflict resolution;
  * - Repository health monitoring;
  * - Smart deployment coordination;
@@ -11,6 +10,10 @@
  * @author Zion Tech Group;
  * @version 2.0.0;
  */
+ * ;
+ * @author Zion Tech Group;
+ * @version 2.0.0;
+ */;
 
 const { execSync, spawn } = require('child_process');
 const fs = require('fs');
@@ -61,7 +64,7 @@ const executeCommand = (command, options = {}) => {
     return { success: true, output: result };
   } catch (error) {  
     return { success: false, error: error.message, output: error.stdout || ``   };
-  }
+<<<<<<< HEAD  }
 };
 ;
   } catch (error) {
@@ -78,6 +81,13 @@ const isGitRepository = () => {
 
 const getCurrentBranch = () => {
   const result = gitCommand(`branch --show-current`, { silent: true });
+;
+const isGitRepository = () => {;
+  return fs.existsSync(path.join(CONFIG.REPO_PATH, '.git'));
+};
+;
+const getCurrentBranch = () => {;
+  const result = gitCommand('branch --show-current', { silent: true });
   return result.success ? result.output.trim() : null;
 };
 ;
@@ -90,7 +100,7 @@ const getRemoteBranches = () => {;
     .map(branch => branch.trim())
     .filter(branch => branch && !branch.includes('HEAD'))
     .map(branch => branch.replace(`origin/`, ``));
-};
+<<<<<<< HEAD};
 ;
 const getCursorBranches = () => {;
   const branches = getRemoteBranches();
@@ -110,6 +120,17 @@ const getBranchInfo = (branchName) => {const result = gitCommand(`log --oneline 
 
 const createBackupBranch = () => {
   const timestamp = new Date().toISOString().replace(/[:.]/g, `-`);const backupBranch = `${CONFIG.BACKUP_BRANCH_PREFIX}${timestamp}`;
+  ;
+  const commits = result.output.split('\n').filter(line => line.trim()).length;
+  ;
+  // Get changed filesconst filesResult = gitCommand(`diff --name-only ${CONFIG.MAIN_BRANCH}..origin/${branchName}`, { silent: true });
+  const files = filesResult.success ? filesResult.output.split('\n').filter(line => line.trim()) : [];
+  ;
+  return { commits, files };
+};
+;
+const createBackupBranch = () => {;
+  const timestamp = new Date().toISOString().replace(/[:.]/g, '-');const backupBranch = `${CONFIG.BACKUP_BRANCH_PREFIX}${timestamp}`;
   log(`Creating backup branch: ${backupBranch}`);
   ;
   // Create backup of current mainconst result = gitCommand(`checkout -b ${backupBranch}`, { silent: true });
@@ -130,13 +151,14 @@ const intelligentConflictResolution = (conflictedFiles, branchName) => {log(`Res
         const fileContent = fs.readFileSync(file, `utf8`);
         
         if (fileExt === `.json` || fileExt === '.js' || fileExt === '.ts' || fileExt === `.jsx` || fileExt === `.tsx`) {
-          // For code files, try to merge intelligently;
+<<<<<<< HEAD          // For code files, try to merge intelligently;
           try {const result = gitCommand(`checkout --ours "${file}`, { silent: true });
             if (result.success) {log(`Resolved conflict in ${file} using `ours` strategy`);
             }
           } catch (error) {  log(`Failed to resolve conflict in ${file  }: ${error}`, `ERROR`);
           }
         } else if (fileExt === `.md` || fileExt === `.txt`) {
+        } else if (fileExt === '.md' || fileExt === '.txt') {;
           // For documentation, try to merge both versions;
           try {const result = gitCommand(`checkout --theirs ${file}"`, { silent: true });
             if (result.success) {log(`Resolved conflict in ${file} using `theirs` strategy`);
@@ -144,7 +166,7 @@ const intelligentConflictResolution = (conflictedFiles, branchName) => {log(`Res
           } catch (error) {  log(`Failed to resolve conflict in ${file  }: ${error}`, `ERROR`);
           }
         } else {
-          // For other files, use default strategy;
+<<<<<<< HEAD          // For other files, use default strategy;
           try {const result = gitCommand(`checkout --ours "${file}`, { silent: true });
             if (result.success) {log(`Resolved conflict in ${file} using default strategy`);
             }
@@ -162,8 +184,7 @@ const intelligentConflictResolution = (conflictedFiles, branchName) => {log(`Res
     
     conservative: () => {
       // Always use `theirs` strategy;
-      conflictedFiles.forEach(file => {gitCommand(`checkout --theirs "${file}`, { silent: true });log(`Resolved conflict in ${file} using conservative strategy`);
-    });
+      conflictedFiles.forEach(file => {gitCommand(`checkout --theirs "${file}`, { silent: true });log(`Resolved conflict in ${file} using conservative strategy`);    });
     }
   };
   ;
@@ -211,8 +232,7 @@ const mergeBranch = async (branchName) => {log(`Attempting to merge branch: ${br
         // Stage resolved files;
         gitCommand(`add .`, { silent: true });
         
-        // Commit resolutionconst commitResult = gitCommand(`commit -m Auto-resolve merge conflicts for ${branchName} - ${new Date().toISOString()}"`, { silent: true });
-        if (commitResult.success) {log(`Successfully resolved conflicts for ${branchName}`);
+        // Commit resolutionconst commitResult = gitCommand(`commit -m Auto-resolve merge conflicts for ${branchName} - ${new Date().toISOString()}"`, { silent: true });        if (commitResult.success) {log(`Successfully resolved conflicts for ${branchName}`);
           ;
           // Push resolved changesconst pushResult = gitCommand(`push origin ${CONFIG.MAIN_BRANCH}`, { silent: true });
           if (pushResult.success) {log(`Pushed conflict resolution to remote`);
@@ -231,6 +251,9 @@ const mergeBranch = async (branchName) => {log(`Attempting to merge branch: ${br
     
     // Abort merge if we get here;
     gitCommand(`merge --abort`, { silent: true });log(`Aborted merge for branch: ${branchName}`);
+    ;
+    // Abort merge if we get here;
+    gitCommand('merge --abort', { silent: true });log(`Aborted merge for branch: ${branchName}`);
     return false;
   }
 };
@@ -245,7 +268,7 @@ const intelligentBranchAnalysis = (branches) => {log(`Analyzing ${branches.lengt
       branch,
       ...info,
       priority,
-      mergeable: info.commits > 0 && info.files.length > 0;
+<<<<<<< HEAD      mergeable: info.commits > 0 && info.files.length > 0;
     };
   });
   ;
@@ -259,6 +282,10 @@ const calculateBranchPriority = (branch, info) => {;
   // Base priority on commit count;
   priority += info.commits * 10;
   
+  ;
+  // Base priority on commit count;
+  priority += info.commits * 10;
+  ;
   // Priority based on file types;
   const fileTypes = info.files.map(file => path.extname(file));
   const codeFiles = fileTypes.filter(ext => [`.js`, `.ts`, '.jsx', '.tsx'].includes(ext)).length;
@@ -274,7 +301,7 @@ const calculateBranchPriority = (branch, info) => {;
   } else if (branch.includes(`feature`)) {
     priority += 50;
   } else if (branch.includes(`bugfix`)) {
-    priority += 75;
+<<<<<<< HEAD    priority += 75;
   }
   ;
   // Priority based on age (newer branches get higher priority);
@@ -290,6 +317,8 @@ const calculateBranchPriority = (branch, info) => {;
 ;
 const getBranchAge = (branchName) => {const result = gitCommand(`log -1 --format=%ct origin/${branchName}`, { silent: true });
   if (!result.success) return 999; // Default to old if can`t determine;
+  if (!result.success) return 999; // Default to old if can't determine;
+  ;
   const commitTime = parseInt(result.output.trim());
   const now = Math.floor(Date.now() / 1000);
   const ageInHours = (now - commitTime) / 3600;
@@ -311,7 +340,7 @@ const executeIntelligentMerging = async () => {
     return;
   }
   
-  // Get current branch;
+<<<<<<< HEAD  // Get current branch;
   const currentBranch = getCurrentBranch();
   if (currentBranch !== CONFIG.MAIN_BRANCH) {log(`Not on main branch (currently on ${currentBranch}). Switching to main.`);gitCommand(`checkout ${CONFIG.MAIN_BRANCH}`, { silent: true });
   }
@@ -350,6 +379,41 @@ const executeIntelligentMerging = async () => {
     return;
   }
   
+  ;
+  // Fetch latest changes;
+  log('Fetching latest changes from remote');
+  const fetchResult = gitCommand('fetch origin', { silent: true });
+  if (!fetchResult.success) {log(`Failed to fetch from remote: ${fetchResult.error}`, 'ERROR');
+    return;
+  }
+  ;
+  // Get cursor branches;
+  const cursorBranches = getCursorBranches();
+  if (cursorBranches.length === 0) {;
+    log('No cursor branches found. Nothing to merge.');
+    return;
+  }
+  log(`Found ${cursorBranches.length} cursor branches to analyze`);
+  ;
+  // Analyze branches intelligently;
+  const branchAnalysis = intelligentBranchAnalysis(cursorBranches);
+  ;
+  // Filter mergeable branches;
+  const mergeableBranches = branchAnalysis.filter(branch => branch.mergeable);
+  ;
+  if (mergeableBranches.length === 0) {;
+    log('No mergeable branches found.');
+    return;
+  }
+  log(`Found ${mergeableBranches.length} mergeable branches`);
+  ;
+  // Create backup before merging;
+  const backupBranch = createBackupBranch();
+  if (!backupBranch) {;
+    log('Failed to create backup branch. Aborting merge cycle.', 'ERROR');
+    return;
+  }
+  ;
   // Process branches in priority order;
   let successCount = 0;
   let failureCount = 0;
@@ -367,7 +431,7 @@ const executeIntelligentMerging = async () => {
       failureCount++;log(`Error processing branch ${branchInfo.branch  }: ${error.message}`, `ERROR`);
     }
     
-    // Small delay between merges;
+<<<<<<< HEAD    // Small delay between merges;
     await new Promise(resolve => setTimeout(resolve, 1000));
   }
   ;
@@ -401,6 +465,32 @@ const monitorRepositoryHealth = () => {
   
   if (healthMetrics.backupBranches > 20) {
     issues.push(`High number of backup branches - consider cleanup`);
+  ;
+  if (failureCount > 0) {log(`${failureCount} branches failed to merge. Check logs for details.`, 'WARN');
+  }
+};
+;
+const monitorRepositoryHealth = () => {;
+  log('Monitoring repository health');
+  ;
+  const healthMetrics = {;
+    timestamp: new Date().toISOString(),;
+    currentBranch: getCurrentBranch(),;
+    remoteBranches: getRemoteBranches().length,;
+    cursorBranches: getCursorBranches().length,;
+    backupBranches: getRemoteBranches().filter(b => b.startsWith(CONFIG.BACKUP_BRANCH_PREFIX)).length,;
+    mergeBranches: getRemoteBranches().filter(b => b.startsWith(CONFIG.MERGE_BRANCH_PREFIX)).length;
+  };
+  ;
+  // Check for potential issues;
+  const issues = [];
+  ;
+  if (healthMetrics.cursorBranches > 50) {;
+    issues.push('High number of cursor branches - consider cleanup');
+  }
+  ;
+  if (healthMetrics.backupBranches > 20) {;
+    issues.push('High number of backup branches - consider cleanup');
   }
   ;
   if (healthMetrics.currentBranch !== CONFIG.MAIN_BRANCH) {issues.push(`Not on main branch (${healthMetrics.currentBranch})`);
@@ -409,7 +499,7 @@ const monitorRepositoryHealth = () => {
   // Log health metricslog(`Repository Health Metrics: ${JSON.stringify(healthMetrics, null, 2)}`);
   
   if (issues.length > 0) {log(`Repository Health Issues: ${issues.join('; ')}`, `WARN`);
-  }
+<<<<<<< HEAD  }
   ;
   return healthMetrics;
 };
@@ -417,6 +507,10 @@ const monitorRepositoryHealth = () => {
 const cleanupOldBranches = () => {
   log(`Cleaning up old branches`);
   
+;
+const cleanupOldBranches = () => {;
+  log('Cleaning up old branches');
+  ;
   const branches = getRemoteBranches();
   const now = Date.now();
   const oneWeekAgo = now - (7 * 24 * 60 * 60 * 1000);
@@ -470,7 +564,7 @@ const main = async () => {
 
 // Handle process signals;
 process.on(`SIGINT`, () => {
-  log('Received SIGINT. Shutting down gracefully...');
+<<<<<<< HEAD  log('Received SIGINT. Shutting down gracefully...');
   process.exit(0);
 });
 ;
@@ -483,6 +577,11 @@ process.on('SIGTERM', () => {;
 if (require.main === module) {
   main();
   
+;
+// Start the main loop;
+if (require.main === module) {;
+  main();
+  ;
   // Schedule next execution;
   const interval = 15 * 60 * 1000; // 15 minutes;
   setInterval(main, interval);
@@ -493,5 +592,5 @@ module.exports = {
   monitorRepositoryHealth,
   cleanupOldBranches,
   intelligentConflictResolution,
-  calculateBranchPriority;
+<<<<<<< HEAD  calculateBranchPriority;
 };

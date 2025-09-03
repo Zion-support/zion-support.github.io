@@ -3,6 +3,12 @@
  * Smart Performance Optimizer - PM2 Automation;
  * Intelligently optimizes bundle size, runtime performance, and build optimizations;
  */
+#!/'usr/bin/env' node;
+
+/**;
+ * Smart Performance Optimizer - PM2 Automation;
+ * Intelligently optimizes bundle size, runtime performance, and build optimizations;
+ */;
 
 const fs = require('fs');
 const path = require('path');
@@ -23,7 +29,7 @@ class SmartPerformanceOptimizer {;
       bundle: ['{ name: 'Tree Shaking'', 'command: 'npm run build:analyze'', 'impact: 'HIGH' }', '{ name: 'Code Splitting'', 'command: 'npm run build:split'', 'impact: 'HIGH' }', '{ name: 'Minification'', 'command: 'npm run build:minify'', 'impact: 'MEDIUM' }', '{ name: 'Gzip Compression'', 'command: 'npm run build:gzip'', 'impact: 'MEDIUM' }'],
       runtime: ['{ name: 'Lazy Loading'', 'command: 'npm run optimize:lazy'', 'impact: 'HIGH' }', '{ name: 'Memoization'', 'command: 'npm run optimize:memo'', 'impact: 'MEDIUM' }', '{ name: 'Virtual Scrolling'', 'command: 'npm run optimize:virtual'', 'impact: 'MEDIUM' }'],
       build: ['{ name: 'Parallel Builds'', 'command: 'npm run build:parallel'', 'impact: 'HIGH' }', '{ name: 'Incremental Builds'', 'command: 'npm run build:incremental'', 'impact: 'MEDIUM' }', '{ name: 'Cache Optimization'', 'command: 'npm run build:cache'', 'impact: 'MEDIUM` }`]
-    };
+<<<<<<< HEAD    };
   }
 ;
   ensureLogsDirectory() {;
@@ -34,6 +40,8 @@ class SmartPerformanceOptimizer {;
   }
 
   log(message, level = `INFO`) {
+;
+  log(message, level = 'INFO') {;
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
     ;
@@ -55,7 +63,7 @@ class SmartPerformanceOptimizer {;
       const distPath = path.join(this.projectRoot, `dist`);
       if (!fs.existsSync(distPath)) {
         throw new Error(`Build output not found`);
-      }
+<<<<<<< HEAD      }
       ;
       const bundleStats = this.analyzeDistFolder(distPath);
       const analysis = {;
@@ -80,6 +88,17 @@ class SmartPerformanceOptimizer {;
       totalSize: 0,
       fileCount: 0,
       largestFiles: [],
+      ;
+    } catch (error) {this.log(`Bundle analysis failed: ${error.message}`, 'ERROR');
+      return null;
+    }
+  }
+;
+  analyzeDistFolder(distPath) {;
+    const stats = {;
+      totalSize: 0,;
+      fileCount: 0,;
+      largestFiles: [],;
       compressionPotential: 0;
     };
     ;
@@ -102,7 +121,7 @@ class SmartPerformanceOptimizer {;
         
         // Estimate compression potential;
         if (file.endsWith(`.js`) || file.endsWith(`.css`)) {
-          stats.compressionPotential += Math.round(size * 0.3); // Assume 30% compression;
+<<<<<<< HEAD          stats.compressionPotential += Math.round(size * 0.3); // Assume 30% compression;
         }
       } catch (error) {  this.log(`Error analyzing file ${file  }: ${error.message}`, `WARN`);
       }
@@ -111,6 +130,11 @@ class SmartPerformanceOptimizer {;
     // Sort largest files by size;
     stats.largestFiles.sort((a, b) => b.size - a.size);
     stats.largestFiles = stats.largestFiles.slice(0, 10); // Top 10;
+    ;
+    // Sort largest files by size;
+    stats.largestFiles.sort((a, b) => b.size - a.size);
+    stats.largestFiles = stats.largestFiles.slice(0, 10); // Top 10;
+    ;
     return stats;
   }
 ;
@@ -144,7 +168,7 @@ class SmartPerformanceOptimizer {;
         type: 'BUNDLE_SIZE',
         message: 'Bundle size is quite large. Consider code splitting and tree shaking.',
         potentialSavings: Math.round(bundleStats.compressionPotential / 1024) + 'KB'
-      });
+<<<<<<< HEAD      });
     }
     ;
     if (bundleStats.largestFiles.length > 0) {;
@@ -153,6 +177,9 @@ class SmartPerformanceOptimizer {;
         recommendations.push({
           priority: `MEDIUM`,
           type: `LARGE_FILE`,message: `Large file detected: ${largestFile.file} (${largestFile.sizeKB}KB). Consider splitting.`,
+        recommendations.push({;
+          priority: 'MEDIUM',;
+          type: 'LARGE_FILE',message: `Large file detected: ${largestFile.file} (${largestFile.sizeKB}KB). Consider splitting.`,;
           file: largestFile.file;
         });
       }
@@ -165,7 +192,7 @@ class SmartPerformanceOptimizer {;
         message: 'High number of files. Consider bundling strategies.',
         current: bundleStats.fileCount,
         target: '< 20'
-      });
+<<<<<<< HEAD      });
     }
     ;
     return recommendations;
@@ -187,6 +214,20 @@ class SmartPerformanceOptimizer {;
       // Run performance tests;
       const performanceMetrics = await this.runPerformanceTests();
       
+    ;
+    try {;
+      // Start dev server for performance testing;
+      const devProcess = spawn('npm', ['run', 'dev'], {;
+        cwd: this.projectRoot,;
+        stdio: 'pipe';
+      });
+      ;
+      // Wait for server to start;
+      await new Promise(resolve => setTimeout(resolve, 10000));
+      ;
+      // Run performance tests;
+      const performanceMetrics = await this.runPerformanceTests();
+      ;
       // Stop dev server;
       devProcess.kill();
       ;
@@ -209,7 +250,7 @@ class SmartPerformanceOptimizer {;
     
     try {
       // Simulate performance metrics (in real implementation, use Lighthouse or similar)
-      metrics.firstContentfulPaint = Math.random() * 2000 + 500; // 500-2500ms;
+<<<<<<< HEAD      metrics.firstContentfulPaint = Math.random() * 2000 + 500; // 500-2500ms;
       metrics.largestContentfulPaint = Math.random() * 3000 + 1000; // 1000-4000ms;
       metrics.timeToInteractive = Math.random() * 4000 + 2000; // 2000-6000ms;
       metrics.totalBlockingTime = Math.random() * 500 + 100; // 100-600ms;
@@ -217,6 +258,8 @@ class SmartPerformanceOptimizer {;
       this.log(`Performance metrics collected: FCP=${Math.round(metrics.firstContentfulPaint)}ms, LCP=${Math.round(metrics.largestContentfulPaint)}ms`);
       
     } catch (error) {  this.log(`Performance test execution failed: ${error.message  }`, `ERROR`);
+      ;
+    } catch (error) {this.log(`Performance test execution failed: ${error.message}`, 'ERROR');
     }
     ;
     return metrics;
@@ -270,7 +313,7 @@ class SmartPerformanceOptimizer {;
         encoding: `utf8`, 
         cwd: this.projectRoot,
         stdio: `pipe`
-      });
+<<<<<<< HEAD      });
       const optimizedBuildTime = Date.now() - optimizedStartTime;
       ;
       const timeImprovement = buildTime - optimizedBuildTime;
@@ -293,6 +336,23 @@ class SmartPerformanceOptimizer {;
   async applyRuntimeOptimizations() {
     this.log(`Applying runtime optimizations...`);
     
+      ;
+      return {;
+        originalBuildTime: buildTime,;
+        optimizedBuildTime: optimizedBuildTime,;
+        improvement: timeImprovement,;
+        improvementPercentage: improvementPercentage,;
+        optimizations: optimizations;
+      };
+      ;
+    } catch (error) {this.log(`Build optimization failed: ${error.message}`, 'ERROR');
+      return null;
+    }
+  }
+;
+  async applyRuntimeOptimizations() {;
+    this.log('Applying runtime optimizations...');
+    ;
     const optimizations = [];
     ;
     try {;
@@ -318,7 +378,7 @@ class SmartPerformanceOptimizer {;
             status: `FAILED`,
             error: error.message,
             timestamp: new Date().toISOString())
-          });
+<<<<<<< HEAD          });
         }
       }
       ;
@@ -348,6 +408,31 @@ class SmartPerformanceOptimizer {;
     
     // Calculate summary;
     if (report.buildOptimizations) {
+      ;
+    } catch (error) {this.log(`Runtime optimization failed: ${error.message}`, 'ERROR');
+      return [];
+    }
+  }
+;
+  async generateOptimizationReport() {;
+    this.log('Generating optimization report...');
+    ;
+    const report = {;
+      timestamp: new Date().toISOString(),;
+      bundle: await this.analyzeBundleSize(),;
+      performance: await this.measureRuntimePerformance(),;
+      buildOptimizations: await this.optimizeBuildProcess(),;
+      runtimeOptimizations: await this.applyRuntimeOptimizations(),;
+      summary: {;
+        totalOptimizations: 0,;
+        successfulOptimizations: 0,;
+        failedOptimizations: 0,;
+        estimatedImprovement: 0;
+      }
+    };
+    ;
+    // Calculate summary;
+    if (report.buildOptimizations) {;
       report.summary.totalOptimizations += report.buildOptimizations.optimizations.length;
       report.summary.successfulOptimizations += report.buildOptimizations.optimizations.filter(o => o.status === 'SUCCESS').length;
       report.summary.failedOptimizations += report.buildOptimizations.optimizations.filter(o => o.status === 'FAILED').length;
@@ -360,7 +445,7 @@ class SmartPerformanceOptimizer {;
       report.summary.failedOptimizations += report.runtimeOptimizations.filter(o => o.status === `FAILED`).length;
     }
     
-    // Save report;
+<<<<<<< HEAD    // Save report;
     await this.saveOptimizationResults(report);
     this.log(`Optimization report generated. ${report.summary.successfulOptimizations}/${report.summary.totalOptimizations} optimizations successful`);
     ;
@@ -395,11 +480,25 @@ class SmartPerformanceOptimizer {;
       // Schedule next optimization run;
       setTimeout(() => this.run(), 3600000); // 1 hour;
     } catch (error) {  this.log(`Smart Performance Optimizer failed: ${error.message  }`, `ERROR`);
+;
+  async run() {;
+    try {;
+      this.log('Smart Performance Optimizer started');
+      ;
+      // Generate comprehensive optimization report;
+      const report = await this.generateOptimizationReport();
+      ;
+      // Display summarythis.log(`Performance Optimization Summary:`);this.log(`  - Bundle Size: ${report.bundle ? Math.round(report.bundle.totalSize / 1024) + 'KB' : ''N/A''}`);this.log(`  - Build Time Improvement: ${report.buildOptimizations ? report.buildOptimizations.improvementPercentage + '%' : ''N/A''}`);this.log(`  - Successful Optimizations: ${report.summary.successfulOptimizations}/${report.summary.totalOptimizations}`);
+      ;
+      // Schedule next optimization run;
+      setTimeout(() => this.run(), 3600000); // 1 hour;
+      ;
+    } catch (error) {this.log(`Smart Performance Optimizer failed: ${error.message}`, 'ERROR');
       setTimeout(() => this.run(), 900000); // 15 minutes on error;
     }
   }
 }
 
-// Start the Smart Performance Optimizer;
+<<<<<<< HEAD// Start the Smart Performance Optimizer;
 const optimizer = new SmartPerformanceOptimizer();
 optimizer.run();

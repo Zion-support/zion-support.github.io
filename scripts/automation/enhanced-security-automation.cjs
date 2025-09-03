@@ -1,4 +1,6 @@
 #!/''usr/bin/env'' node;
+#!/'usr/bin/env' node;
+
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -13,8 +15,7 @@ class EnhancedSecurityAutomation {;
       codeAnalysis: { status: 'pending', issues: [], summary: {} },;
       secrets: { status: 'pending', findings: [] },;
       compliance: { status: 'pending', checks: [] },;
-    };
-    this.reportDir = path.join(process.cwd(), 'security-reports');
+    };    this.reportDir = path.join(process.cwd(), 'security-reports');
     this.ensureReportDirectory();
   }
 ;
@@ -31,12 +32,14 @@ class EnhancedSecurityAutomation {;
       const auditOutput = execSync('npm audit --audit-level moderate --json', {;
         encoding: 'utf8',;
         cwd: process.cwd(),;
-      });
-;
+      });;
       const auditData = JSON.parse(auditOutput);
 
       this.securityResults.audit.status = `success`;
       this.securityResults.audit.vulnerabilities =
+;
+      this.securityResults.audit.status = 'success';
+      this.securityResults.audit.vulnerabilities =;
         auditData.vulnerabilities || [];
       this.securityResults.audit.summary = {;
         total: auditData.metadata?.vulnerabilities?.total || 0,;
@@ -64,8 +67,7 @@ class EnhancedSecurityAutomation {;
         high: 0,
         critical: 0,
         };
-      console.log('❌ Security audit failed: ', error.message);
-    }
+      console.log('❌ Security audit failed: ', error.message);    }
   }
 ;
   async checkDependencies() {;
@@ -75,6 +77,11 @@ class EnhancedSecurityAutomation {;
       const outdatedOutput = execSync('npm outdated --json', {
         encoding: 'utf8',
         cwd: process.cwd(),
+    try {;
+      // Check for outdated packages;
+      const outdatedOutput = execSync('npm outdated --json', {;
+        encoding: 'utf8',;
+        cwd: process.cwd(),;
       });
 ;
       const outdatedData = JSON.parse(outdatedOutput);
@@ -84,7 +91,7 @@ class EnhancedSecurityAutomation {;
       const licenseOutput = execSync('npm list --json', {
         encoding: `utf8`,
         cwd: process.cwd(),
-      });
+<<<<<<< HEAD      });
 ;
       const licenseData = JSON.parse(licenseOutput);
       const licenses = this.extractLicenses(licenseData);
@@ -102,14 +109,35 @@ class EnhancedSecurityAutomation {;
         JSON.stringify(
           {
             outdated: outdatedData,
-            licenses: licenses,
-          },
+            licenses: licenses},
           null,
           2;
         )
       );
     } catch (error) {  
       this.securityResults.dependencies.status = `failure';
+;
+      this.securityResults.dependencies.status = 'success';
+      this.securityResults.dependencies.outdated = outdatedPackages;
+      this.securityResults.dependencies.licenses = licenses;
+;
+      console.log(✅ Dependency check completed. Found ${outdatedPackages.length} outdated packages';
+      );
+;
+      // Save dependency results;
+      fs.writeFileSync(;
+        path.join(this.reportDir, 'dependency-check.json'),;
+        JSON.stringify(;
+          {;
+            outdated: outdatedData,;
+            licenses: licenses,;
+          },;
+          null,;
+          2;
+        );
+      );
+    } catch (error) {;
+      this.securityResults.dependencies.status = 'failure';
       this.securityResults.dependencies.outdated = [];
       this.securityResults.dependencies.licenses = [];
       console.log('❌ Dependency check failed: ', error.message);
@@ -152,7 +180,7 @@ class EnhancedSecurityAutomation {;
         const lintOutput = execSync('npm run lint -- --format json', {
           encoding: 'utf8',
           cwd: process.cwd(),
-        });
+<<<<<<< HEAD        });
 ;
         const lintData = JSON.parse(lintOutput);
         const securityIssues = lintData.filter(;
@@ -183,6 +211,15 @@ class EnhancedSecurityAutomation {;
       issues.push(...securityPatterns);
 
       this.securityResults.codeAnalysis.status = `success`;
+      } catch (lintError) {;
+        console.log('⚠️ Lint security check failed:', lintError.message);
+      }
+;
+      // Check for common security patterns;
+      const securityPatterns = this.checkSecurityPatterns();
+      issues.push(...securityPatterns);
+;
+      this.securityResults.codeAnalysis.status = 'success';
       this.securityResults.codeAnalysis.issues = issues;
       this.securityResults.codeAnalysis.summary = {;
         total: issues.length,;
@@ -200,8 +237,7 @@ class EnhancedSecurityAutomation {;
         JSON.stringify(
           {
             issues: issues,
-            summary: this.securityResults.codeAnalysis.summary,
-          },
+            summary: this.securityResults.codeAnalysis.summary},
           null,
           2;
         )
@@ -215,8 +251,7 @@ class EnhancedSecurityAutomation {;
         medium: 0,
         low: 0,
         };
-      console.log('❌ Code analysis failed: ', error.message);
-    }
+      console.log('❌ Code analysis failed: ', error.message);    }
   }
 ;
   checkSecurityPatterns() {;
@@ -238,8 +273,7 @@ class EnhancedSecurityAutomation {;
             pattern: /localStorage\[.*\']\s*=/,
             rule: 'local-storage-security',
             severity: 1,
-            message: 'localStorage assignment detected',
-          },
+            message: 'localStorage assignment detected'},
           {
             pattern: /sessionStorage\['.*\]\s*=/', 'rule: 'session-storage-security'', 'severity: 1', 'message: 'sessionStorage assignment detected'', '}', ''];
 
@@ -254,13 +288,45 @@ class EnhancedSecurityAutomation {;
               file: filePath,
               line: content;
                 .substring(0, content.indexOf(matches[0]))
-                .split('\n').length,
-            });
+                .split('\n').length});
           }
         });
       } catch (error) {  
         // Skip files that can't be read;
         }
+;
+        // Check for dangerous patterns;
+        const patterns = ['{;
+            pattern: /eval\s*\(/', 'rule: 'no-eval', 'severity: 2', 'message: 'eval() usage detected', '}', '{;
+            pattern: /new\s+Function/', 'rule: 'no-new-func', 'severity: 2', 'message: 'new Function() usage detected', '}', '{;
+            pattern: /innerHTML\s*=/', 'rule: 'no-inner-html', 'severity: 1', 'message: 'innerHTML assignment detected', '}', '{;
+            pattern: /document\.write/', 'rule: 'no-document-write', 'severity: 1', 'message: 'document.write() usage detected', '}', '{;
+            pattern: /localStorage\[.*\']\s*=/,;
+            rule: 'local-storage-security',;
+            severity: 1,;
+            message: 'localStorage assignment detected',;
+          },;
+          {;
+            pattern: /sessionStorage\['.*\]\s*=/', 'rule: 'session-storage-security', 'severity: 1', 'message: 'sessionStorage assignment detected', '}', '];
+;
+        patterns.forEach(({ pattern, rule, severity, message }) => {;
+          const matches = content.match(pattern);
+          if (matches) {;
+            issues.push({;
+              type: 'pattern',;
+              severity: severity,;
+              message: message,;
+              rule: rule,;
+              file: filePath,;
+              line: content;
+                .substring(0, content.indexOf(matches[0]));
+                .split('\n').length,;
+            });
+          }
+        });
+      } catch (error) {;
+        // Skip files that can't be read;
+      }
     };
 ;
     const walkDir = dir => {;
@@ -299,10 +365,22 @@ class EnhancedSecurityAutomation {;
         },
         { pattern: /password\s*[:=]\s*['"][^'"]{8,}[']/i, type: 'Password' },
         { pattern: /secret\s*[:=]\s*['][^'"]{10,}['"]/i, type: 'Secret' },
-        { pattern: /token\s*[:=]\s*['][^']{10,}['"]/i, type: 'Token' },
-        {
-          pattern: /private[_-]?key\s*[:=]\s*['"][^'"]{10,}['"]/i, 'type: 'Private Key'', '}', ''];
+        { pattern: /token\s*[:=]\s*['][^']{10,}['"]/i, type: 'Token' },        {
+          pattern: /private[_-]?key\s*[:=]\s*['"][^'"]{10}['"]/i, 'type: 'Private Key'', '}', ''];
 
+;
+      // Check for hardcoded secrets in source files;
+      const secretPatterns = [;
+        {;
+          pattern: /api[_-]?key\s*[:=]\s*['"][^'"]{10}['"]/i,;
+          type: 'API Key',;
+        },;
+        { pattern: /password\s*[:=]\s*['"][^'"]{8}['"]/i, type: 'Password' },;
+        { pattern: /secret\s*[:=]\s*['"][^'"]{10}['"]/i, type: 'Secret' },;
+        { pattern: /token\s*[:=]\s*['"][^'"]{10}['"]/i, type: 'Token' },;
+        {;
+          pattern: /private[_-]?key\s*[:=]\s*['"][^'"]{10}['"]/i, 'type: 'Private Key', '}', '];
+;
       const srcDir = path.join(process.cwd(), 'src');
       if (fs.existsSync(srcDir)) {;
         const walkDir = dir => {;
@@ -331,14 +409,13 @@ class EnhancedSecurityAutomation {;
                       line: content;
                         .substring(0, content.indexOf(matches[0]))
                         .split('\n').length,
-                      match: matches[0].substring(0, 50) + '...`,
-                    });
+                      match: matches[0].substring(0, 50) + '...`});
                   }
                 });
               } catch (error) {  
                 // Skip files that can`t be read;
                 }
-            }
+<<<<<<< HEAD            }
           });
         };
 ;
@@ -348,8 +425,7 @@ class EnhancedSecurityAutomation {;
       this.securityResults.secrets.status = `success`;
       this.securityResults.secrets.findings = findings;
 ;
-      console.log(✅ Secret scan completed. Found ${findings.length} potential secrets';
-      );
+      console.log(✅ Secret scan completed. Found ${findings.length} potential secrets';      );
 ;
       // Save secret scan results;
       fs.writeFileSync(;
@@ -380,6 +456,12 @@ class EnhancedSecurityAutomation {;
       if (fs.existsSync(distDir)) {
         const htmlFiles = fs;
           .readdirSync(distDir)
+;
+      // Check for security headers in build output;
+      const distDir = path.join(process.cwd(), 'dist');
+      if (fs.existsSync(distDir)) {;
+        const htmlFiles = fs;
+          .readdirSync(distDir);
           .filter(file => file.endsWith('.html'));
 ;
         htmlFiles.forEach(file => {;
@@ -387,7 +469,7 @@ class EnhancedSecurityAutomation {;
           try {;
             const content = fs.readFileSync(filePath, 'utf8');
 
-            // Check for security meta tags;
+<<<<<<< HEAD            // Check for security meta tags;
             const hasCSP = content.includes('Content-Security-Policy');
             const hasXFrame = content.includes('X-Frame-Options');
             const hasXContent = content.includes('X-Content-Type-Options');
@@ -404,6 +486,12 @@ class EnhancedSecurityAutomation {;
         });
       }
 
+          } catch (error) {;
+            // Skip files that can't be read;
+          }
+        });
+      }
+;
       // Check package.json for security scripts;
       const packagePath = path.join(process.cwd(), 'package.json');
       if (fs.existsSync(packagePath)) {;
@@ -415,8 +503,7 @@ class EnhancedSecurityAutomation {;
             type: 'package-scripts`,
             hasSecurityScript: !!scripts.security,
             hasAuditScript: !!scripts.audit,
-            hasLintScript: !!scripts.lint,
-          });
+            hasLintScript: !!scripts.lint});
         } catch (error) {  
           // Skip if package.json can`t be parsed;
           }
@@ -425,8 +512,7 @@ class EnhancedSecurityAutomation {;
       this.securityResults.compliance.status = `success`;
       this.securityResults.compliance.checks = checks;
 ;
-      console.log(✅ Compliance checks completed. Performed ${checks.length} checks';
-      );
+      console.log(✅ Compliance checks completed. Performed ${checks.length} checks';      );
 ;
       // Save compliance results;
       fs.writeFileSync(;
@@ -475,6 +561,17 @@ class EnhancedSecurityAutomation {;
     const markdownReport = this.generateMarkdownReport(report);
     fs.writeFileSync(
       path.join(this.reportDir, 'SECURITY_REPORT.md'),
+;
+    // Save JSON report;
+    fs.writeFileSync(;
+      path.join(this.reportDir, 'security-report.json'),;
+      JSON.stringify(report, null, 2);
+    );
+;
+    // Generate markdown report;
+    const markdownReport = this.generateMarkdownReport(report);
+    fs.writeFileSync(;
+      path.join(this.reportDir, 'SECURITY_REPORT.md'),;
       markdownReport;
     );
 ;
@@ -491,13 +588,14 @@ class EnhancedSecurityAutomation {;
     if (high > 0 || this.securityResults.audit.summary.total > 10)
       return `MEDIUM`;
     return `LOW`;
-  }
+<<<<<<< HEAD  }
 ;
   generateMarkdownReport(report) {;
     return # Security Report - ${new Date().toLocaleDateString()}
 ;
 ## 🚨 Risk Level: ${report.riskLevel}
 
+;
 ## Summary;
 - **Total Vulnerabilities**: ${report.summary.totalVulnerabilities}
 - **Critical Vulnerabilities**: ${report.summary.criticalVulnerabilities} 🔴;
@@ -509,7 +607,7 @@ class EnhancedSecurityAutomation {;
 ## Detailed Results;
 
 ## Detailed Results;
-### 📋 Compliance;
+<<<<<<< HEAD### 📋 Compliance;
 - **Status**: ${this.securityResults.compliance.status === 'success' ? '✅ Completed' : '❌ Failed'}
 - **Checks Performed**: ${this.securityResults.compliance.checks.length}
 ;
@@ -532,17 +630,55 @@ ${
   report.summary.potentialSecrets > 0? 5. **SECRETS**: Remove or secure ${report.summary.potentialSecrets} hardcoded secrets;
 6. **SECRETS**: Use environment variables for sensitive data`
     : `3. ✅ No hardcoded secrets found`
+${;
+  report.summary.criticalVulnerabilities > 0? 1. **CRITICAL**: Fix ${report.summary.criticalVulnerabilities} critical vulnerabilities immediately;
+2. **CRITICAL**: Update packages with critical security issues;
+    : '1. ✅ No critical vulnerabilities found';
+}
+;
+${;
+  report.summary.highVulnerabilities > 0? 3. **HIGH**: Address ${report.summary.highVulnerabilities} high-risk vulnerabilities;
+4. **HIGH**: Review and update high-risk packages;
+    : '2. ✅ No high-risk vulnerabilities found';
+}
+;
+${;
+  report.summary.potentialSecrets > 0? 5. **SECRETS**: Remove or secure ${report.summary.potentialSecrets} hardcoded secrets;
+6. **SECRETS**: Use environment variables for sensitive data`;
+    : '3. ✅ No hardcoded secrets found';
+## 🚨 Immediate Actions Required
+
+${
+  report.summary.criticalVulnerabilities > 0? 1. **CRITICAL**: Fix ${report.summary.criticalVulnerabilities} critical vulnerabilities immediately`);
+2. **CRITICAL**: Update packages with critical security issues`);
+    : '1. ✅ No critical vulnerabilities found`);
+}
+
+${
+  report.summary.highVulnerabilities > 0? 3. **HIGH**: Address ${report.summary.highVulnerabilities} high-risk vulnerabilities
+4. **HIGH**: Review and update high-risk packages
+    : '2. ✅ No high-risk vulnerabilities found`);
+}
+
+${`);
+  report.summary.potentialSecrets > 0? 5. **SECRETS**: Remove or secure ${report.summary.potentialSecrets} hardcoded secrets`);
+6. **SECRETS**: Use environment variables for sensitive data`
+    : '3. ✅ No hardcoded secrets found'
 }
 ;
 ## 📚 Recommendations;
 
 ## 📚 Recommendations;
-*Report generated by Enhanced Security Automation*;
+<<<<<<< HEAD*Report generated by Enhanced Security Automation*;
   }
 ;
   async runAllSecurityChecks(```) {;
     console.log(`'🚀 Starting comprehensive security checks...');
 ;
+
+  async runAllSecurityChecks(```) {
+    console.log(``🚀 Starting comprehensive security checks...`);
+    console.log(`🚀 Starting comprehensive security checks...`);
 
     await this.runSecurityAudit();
     await this.checkDependencies();
@@ -553,7 +689,6 @@ ${
     const report = await this.generateSecurityReport();
 
     console.log(``\n🛡️ Security Check Summary:`);console.log(Vulnerabilities: ${report.summary.totalVulnerabilities});console.log(Critical: ${report.summary.criticalVulnerabilities} 🔴``);console.log(`High: ${report.summary.highVulnerabilities} 🟠`);console.log(`Risk Level: ${report.riskLevel}`);
-
     console.log(`\n🛡️ Security Check Summary:`);console.log(Vulnerabilities: ${report.summary.totalVulnerabilities});console.log(Critical: ${report.summary.criticalVulnerabilities} 🔴``);console.log(`High: ${report.summary.highVulnerabilities} 🟠`);console.log(`Risk Level: ${report.riskLevel}`);
 
     return report;
@@ -562,15 +697,18 @@ ${
 
 // Main execution;
 async function main() {
+;
+// Main execution;
+async function main() {;
   const security = new EnhancedSecurityAutomation();
 ;
   try {;
     await security.runAllSecurityChecks();
   } catch (error) {  
-    console.error(`❌ Security automation failed: `, error);
-    process.exit(1);
+    console.error(`❌ Security automation failed: `, error);    process.exit(1);
     }
 }
 
+;
 // Start the security automation;
 main().catch(console.error);

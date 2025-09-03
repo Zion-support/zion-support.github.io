@@ -3,6 +3,12 @@
  * Intelligent Performance Monitor - PM2 Automation;
  * Monitors application performance, identifies bottlenecks, and suggests optimizations;
  */
+#!/'usr/bin/env' node;
+
+/**;
+ * Intelligent Performance Monitor - PM2 Automation;
+ * Monitors application performance, identifies bottlenecks, and suggests optimizations;
+ */;
 
 const fs = require('fs');
 const path = require('path');
@@ -18,8 +24,7 @@ class IntelligentPerformanceMonitor {;
     this.performanceHistory = path.join(;
       this.projectRoot,logs',;
       'performance-history.json';
-    );
-    this.metrics = {
+    );    this.metrics = {
       buildTime: 0,
       bundleSize: 0,
       loadTime: 0,
@@ -28,21 +33,29 @@ class IntelligentPerformanceMonitor {;
       errorRate: 0;
     };
     this.thresholds = {
+    this.metrics = {;
+      buildTime: 0,;
+      bundleSize: 0,;
+      loadTime: 0,;
+      memoryUsage: 0,;
+      cpuUsage: 0,;
+      errorRate: 0;
+    };
+    this.thresholds = {;
       buildTime: 30000, // 30 seconds;
       bundleSize: 1024 * 1024, // 1MB;
       loadTime: 3000, // 3 seconds;
       memoryUsage: 512 * 1024 * 1024, // 512MB;
       cpuUsage: 80, // 80%
       errorRate: 5 // 5%
-    };
+<<<<<<< HEAD    };
   }
 ;
   async initialize() {;
     console.log(`'📊 Intelligent Performance Monitor Initialized');
     this.ensureLogDirectory();
     this.loadPerformanceHistory();
-    
-    // Start continuous monitoring;
+        // Start continuous monitoring;
     this.startContinuousMonitoring();
   }
 ;
@@ -80,6 +93,17 @@ class IntelligentPerformanceMonitor {;
         bottlenecks: [],
         optimizations: []
         };
+    } catch (error) {;
+      console.error('Error loading performance history:', error);
+      this.history = {;
+        totalMeasurements: 0,;
+        averageBuildTime: 0,;
+        averageBundleSize: 0,;
+        averageLoadTime: 0,;
+        performanceTrends: [],;
+        bottlenecks: [],;
+        optimizations: [];
+      };
     }
   }
 ;
@@ -87,7 +111,7 @@ class IntelligentPerformanceMonitor {;
     console.log(`'🔍 Starting continuous performance monitoring...');
     ;
     // Initial performance measurement;
-    this.measurePerformance();
+<<<<<<< HEAD    this.measurePerformance();
     ;
     // Set up periodic monitoring;
     setInterval(() => {;
@@ -104,6 +128,10 @@ class IntelligentPerformanceMonitor {;
   async measurePerformance() {;
     console.log(`'📈 Measuring application performance...');
     ;
+
+  async measurePerformance() {
+    console.log(``📈 Measuring application performance...`);
+    console.log(`📈 Measuring application performance...`);
     
     const startTime = Date.now();
     const measurement = {;
@@ -133,7 +161,7 @@ class IntelligentPerformanceMonitor {;
       // Update history and metrics;
       this.updatePerformanceHistory(measurement);
       
-      // Log results;
+<<<<<<< HEAD      // Log results;
       this.logPerformanceResults(measurement);
       ;
       console.log(✅ Performance measurement completed in ${Date.now() - startTime}ms);
@@ -142,6 +170,11 @@ class IntelligentPerformanceMonitor {;
       console.error(`❌ Error during performance measurement: `, error);
       this.logError(`Performance measurement failed`, error);
       }
+      ;
+    } catch (error) {;
+      console.error('❌ Error during performance measurement:', error);
+      this.logError('Performance measurement failed', error);
+    }
   }
 ;
   async measureBuildPerformance(measurement) {;
@@ -150,7 +183,7 @@ class IntelligentPerformanceMonitor {;
     try {;
       const buildStart = Date.now();
       
-      // Run a test build;
+<<<<<<< HEAD      // Run a test build;
       const buildResult = await this.runTestBuild();
       ;
       measurement.buildTime = Date.now() - buildStart;
@@ -167,8 +200,7 @@ class IntelligentPerformanceMonitor {;
       }
       
     } catch (error) {  
-      console.error(`Error measuring build performance: `, error);
-      measurement.buildTime = -1;
+      console.error(`Error measuring build performance: `, error);      measurement.buildTime = -1;
       measurement.buildSuccess = false;
       }
   }
@@ -183,6 +215,17 @@ class IntelligentPerformanceMonitor {;
         execSync('npm run build', { 
           cwd: this.projectRoot,
           stdio: 'pipe',
+;
+  async runTestBuild() {;
+    try {;
+      // Check if it's a Next.js project;
+      if (fs.existsSync('next.config.js') || fs.existsSync('next.config.mjs')) {;
+        const buildStart = Date.now();
+        ;
+        // Run Next.js build;
+        execSync('npm run build', { ;
+          cwd: this.projectRoot,;
+          stdio: 'pipe',;
           timeout: 120000 // 2 minutes timeout;
         });
         ;
@@ -201,7 +244,7 @@ class IntelligentPerformanceMonitor {;
         execSync('npm run build', { 
           cwd: this.projectRoot,
           stdio: 'pipe',
-          timeout: 120000;
+<<<<<<< HEAD          timeout: 120000;
         });
         ;
         return {;
@@ -224,6 +267,20 @@ class IntelligentPerformanceMonitor {;
         duration: 0,
         errors: [error.message]
         };
+      ;
+      // Generic build check;
+      return {;
+        success: true,;
+        duration: 0,;
+        errors: [];
+      };
+      ;
+    } catch (error) {;
+      return {;
+        success: false,;
+        duration: 0,;
+        errors: [error.message];
+      };
     }
   }
 ;
@@ -232,7 +289,7 @@ class IntelligentPerformanceMonitor {;
     ;
     try {;
       // Check for build output directory;
-      const buildDirs = ['dist', 'build', '.next', 'out'];
+<<<<<<< HEAD      const buildDirs = ['dist', 'build', '.next', 'out'];
       let totalSize = 0;
       ;
       for (const dir of buildDirs) {;
@@ -254,8 +311,7 @@ class IntelligentPerformanceMonitor {;
       }
       
     } catch (error) {  
-      console.error(`Error measuring bundle size: `, error);
-      measurement.bundleSize = -1;
+      console.error(`Error measuring bundle size: `, error);      measurement.bundleSize = -1;
       }
   }
 ;
@@ -267,6 +323,9 @@ class IntelligentPerformanceMonitor {;
       
       for (const item of items) {
         const fullPath = path.join(dirPath, `item);
+      ;
+      for (const item of items) {;
+        const fullPath = path.join(dirPath, 'item);
         const stat = fs.statSync(fullPath);
         ;
         if (stat.isDirectory()) {;
@@ -284,7 +343,7 @@ class IntelligentPerformanceMonitor {;
   formatBytes(bytes) {
     if (bytes === 0) return `0 Bytes`;
     
-    const k = 1024;
+<<<<<<< HEAD    const k = 1024;
     const sizes = ['Bytes', 'KB', 'MB', 'GB'];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
     ;
@@ -296,6 +355,13 @@ class IntelligentPerformanceMonitor {;
     ;
     try {;
       // Get system resource usage;
+
+  async measureRuntimePerformance(measurement) {
+    console.log(`⚡ Measuring runtime performance...`);
+    
+    try {
+      // Get system resource usage;
+      // Get system resource usage
       const systemMetrics = await this.getSystemMetrics();
       ;
       measurement.memoryUsage = systemMetrics.memory;
@@ -320,14 +386,16 @@ class IntelligentPerformanceMonitor {;
       }
       
     } catch (error) {  
-      console.error(`Error measuring runtime performance: `, error);
-      measurement.memoryUsage = -1;
+      console.error(`Error measuring runtime performance: `, error);      measurement.memoryUsage = -1;
       measurement.cpuUsage = -1;
       }
   }
 
   async getSystemMetrics() {
     try {
+;
+  async getSystemMetrics() {;
+    try {;
       // Get memory usage;
       const memUsage = process.memoryUsage();
       const memory = memUsage.heapUsed;
@@ -338,8 +406,7 @@ class IntelligentPerformanceMonitor {;
       return { memory, cpu };
       
     } catch (error) {  
-      console.error('Error getting system metrics: ', error);
-      return { memory: 0, cpu: 0   };
+      console.error('Error getting system metrics: ', error);      return { memory: 0, cpu: 0   };
     }
   }
 ;
@@ -352,6 +419,13 @@ class IntelligentPerformanceMonitor {;
     // Identify bottlenecks;
     this.identifyBottlenecks(measurement);
     
+    ;
+    // Analyze trends;
+    this.analyzePerformanceTrends(measurement);
+    ;
+    // Identify bottlenecks;
+    this.identifyBottlenecks(measurement);
+    ;
     // Generate optimization suggestions;
     this.generateOptimizationSuggestions(measurement);
   }
@@ -390,7 +464,7 @@ class IntelligentPerformanceMonitor {;
             severity: 'info',
             message: 'Bundle size is trending upward',
             suggestion: 'Review recent dependencies and code changes for size impact'
-          });
+<<<<<<< HEAD          });
         }
       }
     }
@@ -414,6 +488,15 @@ class IntelligentPerformanceMonitor {;
         message: 'Build time is critically slow',
         impact: 'High',
         suggestion: 'Immediate investigation required - check build configuration and dependencies'
+    ;
+    // Check for critical performance issues;
+    if (measurement.buildTime > this.thresholds.buildTime * 2) {;
+      bottlenecks.push({;
+        type: 'build',;
+        severity: 'critical',;
+        message: 'Build time is critically slow',;
+        impact: 'High',;
+        suggestion: 'Immediate investigation required - check build configuration and dependencies';
       });
     }
     ;
@@ -450,7 +533,7 @@ class IntelligentPerformanceMonitor {;
         priority: 'high',
         suggestion: 'Implement build caching using tools like Turborepo or Nx',
         expectedImpact: '20-40% reduction in build time'
-      });
+<<<<<<< HEAD      });
       ;
       optimizations.push({;
         category: 'build',;
@@ -467,6 +550,14 @@ class IntelligentPerformanceMonitor {;
         priority: 'high',
         suggestion: 'Implement dynamic imports and code splitting',
         expectedImpact: '30-50% reduction in initial bundle size'
+    ;
+    // Bundle optimizations;
+    if (measurement.bundleSize > this.thresholds.bundleSize) {;
+      optimizations.push({;
+        category: 'bundle',;
+        priority: 'high',;
+        suggestion: 'Implement dynamic imports and code splitting',;
+        expectedImpact: '30-50% reduction in initial bundle size';
       });
       ;
       optimizations.push({;
@@ -484,7 +575,7 @@ class IntelligentPerformanceMonitor {;
         priority: 'high',
         suggestion: 'Implement memory pooling and object reuse',
         expectedImpact: '25-40% reduction in memory usage'
-      });
+<<<<<<< HEAD      });
     }
     ;
     measurement.optimizations = optimizations;
@@ -527,8 +618,7 @@ class IntelligentPerformanceMonitor {;
     try {
       fs.writeFileSync(this.performanceHistory, JSON.stringify(this.history, null, 2));
     } catch (error) {  
-      console.error('Error saving performance history: ', error);
-      }
+      console.error('Error saving performance history: ', error);      }
   }
 ;
   calculateRunningAverage(currentAverage, newValue, count) {;
@@ -547,14 +637,26 @@ class IntelligentPerformanceMonitor {;
       },
       recommendations: measurement.recommendations,
       bottlenecks: measurement.bottlenecks,
+;
+  logPerformanceResults(measurement) {;
+    const logEntry = {;
+      timestamp: new Date().toISOString(),;
+      metrics: {;
+        buildTime: measurement.buildTime,;
+        bundleSize: measurement.bundleSize,;
+        loadTime: measurement.loadTime,;
+        memoryUsage: measurement.memoryUsage,;
+        cpuUsage: measurement.cpuUsage;
+      },;
+      recommendations: measurement.recommendations,;
+      bottlenecks: measurement.bottlenecks,;
       optimizations: measurement.optimizations;
     };
     ;
     try {;
       fs.appendFileSync(this.logFile, JSON.stringify(logEntry) + '\n');
     } catch (error) {  
-      console.error('Error logging performance results: ', error);
-      }
+      console.error('Error logging performance results: ', error);      }
   }
 
   logError(message, error) {
@@ -562,14 +664,19 @@ class IntelligentPerformanceMonitor {;
       timestamp: new Date().toISOString(),
       message,
       error: error.message,
+;
+  logError(message, error) {;
+    const errorEntry = {;
+      timestamp: new Date().toISOString(),;
+      message,;
+      error: error.message,;
       stack: error.stack;
     };
     ;
     try {;
       fs.appendFileSync(this.logFile, JSON.stringify(errorEntry) + '\n');
     } catch (error) {  
-      console.error('Error logging error: ', error);
-      }
+      console.error('Error logging error: ', error);      }
   }
 ;
   monitorBuilds() {;
@@ -578,6 +685,10 @@ class IntelligentPerformanceMonitor {;
     // Monitor for build commands;
     process.on('message', (message) => {
       if (message && message.type === 'build') {
+    ;
+    // Monitor for build commands;
+    process.on('message', (message) => {;
+      if (message && message.type === 'build') {;
         this.onBuildStart();
       }
     });
@@ -603,7 +714,7 @@ class IntelligentPerformanceMonitor {;
     
     // Monitor unhandled rejections;
     process.on('unhandledRejection', (reason, promise) => {
-      this.onUnhandledRejection(reason, promise);
+<<<<<<< HEAD      this.onUnhandledRejection(reason, promise);
     });
   }
 ;
@@ -627,5 +738,10 @@ class IntelligentPerformanceMonitor {;
 const performanceMonitor = new IntelligentPerformanceMonitor();
 performanceMonitor.initialize().catch(console.error);
 
+;
+// Start the intelligent performance monitor;
+const performanceMonitor = new IntelligentPerformanceMonitor();
+performanceMonitor.initialize().catch(console.error);
+;
 // Export for PM2;
 module.exports = performanceMonitor;

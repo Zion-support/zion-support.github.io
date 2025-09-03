@@ -1,2 +1,3 @@
 export: /* empty */ {}
 ;
+export /* empty */ {};

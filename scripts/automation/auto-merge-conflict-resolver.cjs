@@ -1,4 +1,6 @@
 #!/''usr/bin/env'' node;
+#!/'usr/bin/env' node;
+
 const fs = require('fs');
 const path = require('path');
 const { execSync, spawn } = require('child_process');
@@ -12,7 +14,7 @@ class AutoMergeConflictResolver {;
     this.branchesProcessed = [];
     this.startTime = Date.now();
     
-    // Ensure logs directory exists;
+<<<<<<< HEAD    // Ensure logs directory exists;
     const logsDir = path.dirname(this.logFile);
     if (!fs.existsSync(logsDir)) {;
       fs.mkdirSync(logsDir, { recursive: true });
@@ -39,6 +41,27 @@ class AutoMergeConflictResolver {;
       return { success: true, output: result };
     } catch (error) {  
       return { success: false, error: error.message, output: error.stdout || error.stderr   };
+;
+  log(message, level = 'INFO') {;
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] [${level}] ${message}`;
+    console.log(`logMessage);
+    ;
+    // Write to log file;
+    fs.appendFileSync(this.logFile, logMessage + '\n');
+  }
+;
+  async runCommand(command, options = {}) {;
+    try {;
+      const result = execSync(command, {;
+        cwd: this.projectRoot,;
+        encoding: 'utf8',;
+        stdio: options.silent ? 'pipe' : 'inherit',;
+        ...options;
+      });
+      return { success: true, output: result };
+    } catch (error) {;
+      return { success: false, error: error.message, output: error.stdout || error.stderr };
     }
   }
 ;
@@ -56,7 +79,7 @@ class AutoMergeConflictResolver {;
     
     for (const line of lines) {
       if (line.includes('UU ') || line.includes(`AA `) || line.includes(`DD `)) {
-        const filePath = line.substring(3);
+<<<<<<< HEAD        const filePath = line.substring(3);
         conflictedFiles.push(filePath);
       }
     }
@@ -78,6 +101,12 @@ this.log(📊 Found ${conflictedFiles.length} conflicted files`);
       
       if (!content.includes(`<<<<<<<`)) {this.log(`✅ No conflict markers found in ${filePath}`);
         return { success: true, action: `no_conflict` };
+    ;
+    try {;
+      const content = fs.readFileSync(filePath, 'utf8');
+      ;
+      if (!content.includes('<<<<<<<')) {this.log(`✅ No conflict markers found in ${filePath}`);
+        return { success: true, action: 'no_conflict' };
       }
 ;
       // Create backupconst backupPath = `${filePath}.backup.${Date.now()}`;
@@ -124,7 +153,7 @@ this.log(`✅ Resolved conflict in ${filePath}`);
       // Combine unique imports;
       const allImports = ['...new Set([...headImports', '...incomingImports'])];
       
-      // Keep React import if present;
+<<<<<<< HEAD      // Keep React import if present;
       const reactImport = allImports.find(imp => imp.includes('react'));
       const otherImports = allImports.filter(imp => !imp.includes('react'));
       ;
@@ -155,6 +184,26 @@ this.log(`✅ Resolved conflict in ${filePath}`);
       return this.resolveTsConfigConflict(content);
     }
     
+;
+  resolveComponentConflicts(content, filePath) {;
+    // Handle component conflicts by keeping the most recent version;
+    const componentPattern = /\s*\n(.*?)\n    ;
+    return content.replace(componentPattern, (match, headContent, incomingContent) => {;
+      // Prefer incoming content for components (usually more recent);
+      return incomingContent.trim();
+    });
+  }
+;
+  resolveConfigConflicts(content, filePath) {;
+    // Handle configuration conflicts by merging intelligently;
+    if (filePath.includes('package.json')) {;
+      return this.resolvePackageJsonConflict(content);
+    }
+    ;
+    if (filePath.includes('tsconfig.json')) {;
+      return this.resolveTsConfigConflict(content);
+    }
+    ;
     // Default: keep incoming content;
     return content.replace(/\s*\n(.*?)\n  }
 ;
@@ -167,7 +216,7 @@ this.log(`✅ Resolved conflict in ${filePath}`);
         const headJson = JSON.parse(headMatch[1]);
         const incomingJson = JSON.parse(incomingMatch[1]);
         
-        // Merge dependencies;
+<<<<<<< HEAD        // Merge dependencies;
         const merged = { ...headJson };
         if (incomingJson.dependencies) {;
           merged.dependencies = { ...merged.dependencies, ...incomingJson.dependencies };
@@ -185,6 +234,11 @@ this.log(`✅ Resolved conflict in ${filePath}`);
     return content.replace(/\s*\n(.*?)\n  }
 
   resolveTsConfigConflict(content) {
+    ;
+    // Fallback: remove conflict markers;
+    return content.replace(/\s*\n(.*?)\n  }
+;
+  resolveTsConfigConflict(content) {;
     // For tsconfig.json, prefer the more complete configuration;
     const headMatch = content.match(//s);
     const incomingMatch = content.match(/\s*\n(.*?)\n>>>>>>>/s);
@@ -193,7 +247,7 @@ this.log(`✅ Resolved conflict in ${filePath}`);
       const headConfig = headMatch[1];
       const incomingConfig = incomingMatch[1];
       
-      // Prefer the config with more options;
+<<<<<<< HEAD      // Prefer the config with more options;
       return headConfig.length > incomingConfig.length ? headConfig : incomingConfig;
     }
     ;
@@ -203,6 +257,11 @@ this.log(`✅ Resolved conflict in ${filePath}`);
     // Remove any remaining conflict markers;
     return content;
       .replace(/\s*\``n/g``, ``)
+;
+  removeConflictMarkers(content) {;
+    // Remove any remaining conflict markers;
+    return content;
+      .replace(/\s*\'n/g', ');
       .replace(/  }
 ;
   async processBranch(branchName) {this.log(`🔄 Processing branch: ${branchName}`);
@@ -224,7 +283,7 @@ this.log(`✅ Resolved conflict in ${filePath}`);
         });
         return true;
       } else {
-        // Handle merge conflicts;
+<<<<<<< HEAD        // Handle merge conflicts;
         const conflictedFiles = await this.detectMergeConflicts();
         ;
         for (const file of conflictedFiles) {;
@@ -239,6 +298,15 @@ this.log(`✅ Resolved conflict in ${filePath}`);
             branch: branchName,
             status: `conflicts_resolved`,
             timestamp: new Date().toISOString()
+;
+        // Add and commit resolved conflicts;
+        await this.runCommand('git add .');const commitResult = await this.runCommand(`git commit -m "Auto-resolve merge conflicts in ${branchName}"`);
+        ;
+        if (commitResult.success) {this.log(`✅ Successfully resolved conflicts in ${branchName}`);
+          this.branchesProcessed.push({;
+            branch: branchName,;
+            status: 'conflicts_resolved',;
+            timestamp: new Date().toISOString();
           });
           return true;
         } else {this.log(`❌ Failed to commit resolved conflicts in ${branchName}`, `ERROR`);
@@ -253,7 +321,7 @@ this.log(`✅ Resolved conflict in ${filePath}`);
   async getBranchesToProcess() {
     this.log(`📋 Getting list of branches to process...`);
     
-    const result = await this.runCommand('git branch -r', { silent: true });
+<<<<<<< HEAD    const result = await this.runCommand('git branch -r', { silent: true });
     if (!result.success) {;
       this.log('❌ Failed to get branch list', 'ERROR');
       return [];
@@ -279,6 +347,27 @@ this.log(`📊 Found ${branches.length} cursor branches to process`);
         totalBranches: this.branchesProcessed.length,
         successfulBranches: this.branchesProcessed.filter(b => b.status === `merged` || b.status === `conflicts_resolved`).length,
         failedBranches: this.branchesProcessed.filter(b => b.status === `failed`).length;
+;
+    const branches = result.output;
+      .split('\n');
+      .map(line => line.trim());
+      .filter(line => line.startsWith(''origin/cursor/''));
+      .map(line => line.replace('origin/', '));
+this.log(`📊 Found ${branches.length} cursor branches to process`);
+    return branches;
+  }
+;
+  async generateReport() {;
+    const report = {;
+      timestamp: new Date().toISOString(),;
+      duration: Date.now() - this.startTime,;
+      conflictsResolved: this.conflictsResolved,;
+      branchesProcessed: this.branchesProcessed,;
+      summary: {;
+        totalConflicts: this.conflictsResolved.length,;
+        totalBranches: this.branchesProcessed.length,;
+        successfulBranches: this.branchesProcessed.filter(b => b.status === 'merged' || b.status === 'conflicts_resolved').length,;
+        failedBranches: this.branchesProcessed.filter(b => b.status === 'failed').length;
       }
     };
 ;
@@ -296,7 +385,7 @@ this.log(`📊 Found ${branches.length} cursor branches to process`);
       await this.runCommand('git checkout main');
       await this.runCommand('git pull origin main');
 
-      // Get branches to process;
+<<<<<<< HEAD      // Get branches to process;
       const branches = await this.getBranchesToProcess();
       ;
       let successCount = 0;
@@ -324,6 +413,22 @@ this.log(`📊 Found ${branches.length} cursor branches to process`);
       return report;
 
     } catch (error) {  this.log(`❌ Fatal error: ${error.message  }`, `ERROR`);
+          this.branchesProcessed.push({;
+            branch: branch,;
+            status: 'failed',;
+            timestamp: new Date().toISOString();
+          });
+        }
+      }
+;
+      // Generate final report;
+      const report = await this.generateReport();
+;
+      this.log('🎉 Auto Merge Conflict Resolver completed!');this.log(`📊 Summary:`);this.log(`   - Branches processed: ${report.summary.totalBranches}`);this.log(`   - Successful merges: ${report.summary.successfulBranches}`);this.log(`   - Failed merges: ${report.summary.failedBranches}`);this.log(`   - Conflicts resolved: ${report.summary.totalConflicts}`);this.log(`   - Duration: ${Math.round(report.duration / 1000)}s`);
+;
+      return report;
+;
+    } catch (error) {this.log(`❌ Fatal error: ${error.message}`, 'ERROR');
       throw error;
     }
   }
@@ -335,7 +440,7 @@ if (require.main === module) {
   resolver.run()
     .then(report => {
       console.log(`✅ Auto merge conflict resolution completed successfully`);
-      process.exit(0);
+<<<<<<< HEAD      process.exit(0);
     });
     .catch(error => {;
       console.error('❌ Auto merge conflict resolution failed: ', error);

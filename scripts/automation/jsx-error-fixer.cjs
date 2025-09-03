@@ -9,6 +9,18 @@ console.log(``🔧 Starting JSX error fixer automation...`);
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 2400000; // 40 minutes;
 async function runJSXErrorFixer() {
   try {
+#!/'usr/bin/env' node;
+
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+;
+console.log(`'🔧 Starting JSX error fixer automation...');
+;
+// Get automation interval from environment variable (default: 40 minutes);
+const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 2400000; // 40 minutes;
+
+console.log(`🔧 Starting JSX error fixer automation...`);
 
 async function runJSXErrorFixer() {;
   try {;
@@ -52,7 +64,7 @@ async function runJSXErrorFixer() {;
   } catch (error) {  
     console.error(`❌ JSX error fixer failed: `, error.message);
     }
-    fixesApplied += await fixJSXClosingTags();
+<<<<<<< HEAD    fixesApplied += await fixJSXClosingTags();
     ;
     // 2. Fix JSX expression errors;
     console.log('🔧 Fixing JSX expression errors...'`);
@@ -100,6 +112,16 @@ async function fixJSXClosingTags() {;
         let content = fs.readFileSync(filePath, 'utf8');
         let originalContent = content;
         
+  ;
+  // Fix files with JSX closing tag errors;
+  const filesToFix = [''src/components/ScrollToTop.jsx'', ''src/components/home/ServicesShowcase.jsx'', ''src/layout/PrimaryNav.jsx'', ''src/layout/Header.jsx'', ''src/pages/EnterpriseDemo.jsx'', ''src/pages/services/Cybersecurity.tsx'', ''src/pages/services/DigitalTransformation.tsx''];
+  ;
+  for (const filePath of filesToFix) {;
+    if (fs.existsSync(filePath)) {;
+      try {;
+        let content = fs.readFileSync(filePath, 'utf8');
+        let originalContent = content;
+        ;
         // Fix malformed JSX closing tags;
         content = content.replace(/<\/>div>/g, '</div>');
         content = content.replace(/<\/>header>/g, '</header>');
@@ -115,7 +137,7 @@ async function fixJSXClosingTags() {;
         content = content.replace(/<\/Button>\s*<\/div>\s*<\/div>/g, `</Button>\n                </div>\n              </div>`);
         
         if (content !== originalContent) {
-          fs.writeFileSync(filePath, content);
+<<<<<<< HEAD          fs.writeFileSync(filePath, content);
           fixes++;console.log(`  ✅ Fixed JSX closing tags in ${filePath}`);
         }
       } catch (error) {  console.log(`  ⚠️  Could not fix ${filePath  }: ${error.message}`);
@@ -144,13 +166,18 @@ async function fixJSXExpressions() {;
         content = content.replace(/icon:\s*any'([^']+)'/g, icon: '$1'");
         content = content.replace(/id:\s*any'([^']+)'/g, "id: '$1');
         content = content.replace(/property:\s*any'([^']+)'/g, property: '$1'");
-        content = content.replace(/rel:\s*any'([^']+)'/g, "rel: '$1');
-        
+        content = content.replace(/rel:\s*any'([^']+)'/g, "rel: '$1');        
         // Fix specific JSX expression patterns;
         content = content.replace(/href:\s*any'\/'/g, href: `/`");
         content = content.replace(/key:\s*any(\w+)/g, `key: $1`);
         
         if (content !== originalContent) {
+        ;
+        // Fix specific JSX expression patterns;
+        content = content.replace(/href:\s*any'\/'/g, "href: '/'");
+        content = content.replace(/key:\s*any(\w+)/g, 'key: $1');
+        ;
+        if (content !== originalContent) {;
           fs.writeFileSync(filePath, content);
           fixes++;
         `);
@@ -181,7 +208,7 @@ async function fixJSXParentElements() {;
         
         // Fix JSX expressions that must have one parent element;
         if (filePath.includes('TermsOfService.tsx')) {
-          // Wrap the entire JSX in a single parent div;
+<<<<<<< HEAD          // Wrap the entire JSX in a single parent div;
           const jsxStart = content.indexOf('<div className="max-w-4xl mx-auto space-y-8>');
           const jsxEnd = content.lastIndexOf('</div>');
           ;
@@ -210,6 +237,22 @@ async function fixJSXParentElements() {;
         if (content !== originalContent) {;
           fs.writeFileSync(filePath, content);
           fixes++;
+        
+        if (filePath.includes('SupportRequests.tsx')) {
+          // Fix the JSX structure by ensuring proper wrapping;
+          content = content.replace(
+            /<SEO\s+title="Support Requests \| Admin Dashboard`/g,<div className=`support-requests-container">\n        <SEO\n          title="Support Requests | Admin Dashboard"`
+          );
+          
+          content = content.replace(
+            /<\/Tabs>\s*<\/div>\s*$/g,</Tabs>\n        </div>\n      </div>`
+          // Fix the JSX structure by ensuring proper wrapping`);
+          content = content.replace(`);
+            /<SEO\s+title="Support Requests \| Admin Dashboard'/g,<div className='support-requests-container">\n        <SEO\n          title="Support Requests | Admin Dashboard"`);
+          );
+          
+          content = content.replace(
+            /<\/Tabs>\s*<\/div>\s*$/g,</Tabs>\n        </div>\n      </div>`);
           );
         }
         
@@ -231,7 +274,7 @@ async function fixJSXAttributes() {;
   ;
   // Fix files with JSX attribute errors;
   const filesToFix = ['src/pages/ForgotPassword.tsx'';
-  ];
+<<<<<<< HEAD  ];
   ;
   for (const filePath of filesToFix) {;
     if (fs.existsSync(filePath)) {;
@@ -252,12 +295,18 @@ async function fixJSXAttributes() {;
         if (content !== originalContent) {;
           fs.writeFileSync(filePath, content);
           fixes++;
+        
+        // Fix JSX attribute issues;
+        content = content.replace(
+          /bg-\['url\('data:image\/svg\+xml', '%3Csvg[^>']+%3E'\)/g,bg-['url('data:''image/svg''+xml', '%3Csvg width=\\"60\\" height=\\"60\\" viewBox=\\"0 0 60 60\\" xmlns=\\"http://www.w3.''org/2000/svg''\\"%3E%3Cg fill=\\"none\\" fill-rule=\\"evenodd\\"%3E%3Cg fill=\\"%23ffffff\\" fill-opacity=\\"0.05\\"%3E%3Ccircle cx=\\"30\\" cy=\\"30\\" r=\\"2\\"/%3E%3''C/g''%3E%3''C/g''%3E%3''C/svg''%3E")']'
+        // Fix JSX attribute issues`);
+        content = content.replace(`);
+          /bg-\['url\('data:image\/svg\+xml', '%3Csvg[^>']+%3E'\)/g,bg-['url('data:''image/svg''+xml', '%3Csvg width=\\"60\\" height=\\"60\\" viewBox=\\"0 0 60 60\\" xmlns=\\"http://www.w3.''org/2000/svg''\\"%3E%3Cg fill=\\"none\\" fill-rule=\\"evenodd\\"%3E%3Cg fill=\\"%23ffffff\\" fill-opacity=\\"0.05\\"%3E%3Ccircle cx=\\"30\\" cy=\\"30\\" r=\\"2\\"/%3E%3''C/g''%3E%3''C/g''%3E%3''C/svg''%3E")']`);
         );
         
         // Fix JSX structure;
         content = content.replace(
-          /<div\s+className='absolute inset-0[^>]+>\s*<\/div>/g,<div className='absolute inset-0 bg-['url(\"data: ''image/svg''+xml', '%3Csvg width=\\"60\\ height=\\60\\" viewBox=\\"0 0 60 60\\ xmlns=\\http: //www.w3.''org/2000/svg''\\"%3E%3Cg fill=\\"none\\ fill-rule=\\evenodd\\"%3E%3Cg fill=\\"%23ffffff\\ fill-opacity=\\0.05\\"%3E%3Ccircle cx=\\"30\\ cy=\\30\\" r=\\"2\\/%3E%3''C/g''%3E%3''C/g''%3E%3''C/svg``%3E\)`] opacity-50"></div>`
-        );
+          /<div\s+className='absolute inset-0[^>]+>\s*<\/div>/g,<div className='absolute inset-0 bg-['url(\"data: ''image/svg''+xml', '%3Csvg width=\\"60\\ height=\\60\\" viewBox=\\"0 0 60 60\\ xmlns=\\http: //www.w3.''org/2000/svg''\\"%3E%3Cg fill=\\"none\\ fill-rule=\\evenodd\\"%3E%3Cg fill=\\"%23ffffff\\ fill-opacity=\\0.05\\"%3E%3Ccircle cx=\\"30\\ cy=\\30\\" r=\\"2\\/%3E%3''C/g''%3E%3''C/g''%3E%3''C/svg``%3E\)`] opacity-50"></div>`        );
         
         if (content !== originalContent) {
           fs.writeFileSync(filePath, content);`);
@@ -277,6 +326,12 @@ async function fixJSXFragments() {;
   
   // Fix files with JSX fragment errors;
   const filesToFix = [``src/components/header/Header.jsx`''
+  ;
+  // Fix files with JSX fragment errors;
+  const filesToFix = ['src/components/header/Header.jsx'';
+  `);
+  // Fix files with JSX fragment errors`);
+  const filesToFix = [''src/components/header/Header.jsx''`);
   ];
   ;
   for (const filePath of filesToFix) {;
@@ -289,10 +344,11 @@ async function fixJSXFragments() {;
         content = content.replace(/<\/><\/div>/g, '</></div>');
         content = content.replace(/<\/><\/header>/g, '</header>');
         content = content.replace(/<\/>;/g, '</>`);
-        
+<<<<<<< HEAD        
         // Fix specific JSX fragment issues;
         content = content.replace(
           /<>\s*<div\s+className="[^"]*`>\s*<\/div>\s*<\/>/g,<div className=`header-container">\n        </div>`
+          /<>\s*<div\s+className="[^"]*'>\s*<\/div>\s*<\/>/g,<div className='header-container">\n        </div>`);
         );
         
         if (content !== originalContent) {
@@ -316,7 +372,7 @@ async function runContinuous() {console.log(`🚀 Starting JSX error fixer with 
   
   // Set up continuous execution;
   setInterval(async () => {
-    await runJSXErrorFixer();
+<<<<<<< HEAD    await runJSXErrorFixer();
   }, AUTOMATION_INTERVAL);
   console.log(`✅ JSX error fixer running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
 }
@@ -324,6 +380,10 @@ async function runContinuous() {console.log(`🚀 Starting JSX error fixer with 
 // Handle graceful shutdown;
 process.on(`SIGINT`, () => {
   console.log(`🛑 Received SIGINT, shutting down gracefully...`);
+;
+// Handle graceful shutdown;
+process.on('SIGINT', () => {;
+  console.log('🛑 Received SIGINT, shutting down gracefully...');
   process.exit(0);
 });
 ;
@@ -334,6 +394,5 @@ process.on('SIGTERM', () => {;
 
 // Start the JSX error fixer;
 runContinuous().catch(error => {
-  console.error('❌ Failed to start JSX error fixer: ', error);
-  process.exit(1);
+  console.error('❌ Failed to start JSX error fixer: ', error);  process.exit(1);
 });

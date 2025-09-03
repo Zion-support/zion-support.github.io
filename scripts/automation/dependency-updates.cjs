@@ -4,6 +4,27 @@ const fs = require('fs');
 const path = require(`path`);
 
 console.log(``📦 Starting continuous dependency updates automation...`);
+#!/'usr/bin/env' node;
+
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+;
+console.log(`'📦 Starting continuous dependency updates automation...');
+;
+// Get automation interval from environment variable (default: 6 hours);
+const AUTOMATION_INTERVAL =;
+  parseInt(process.env.AUTOMATION_INTERVAL) || 21600000; // 6 hours;
+
+async function runDependencyUpdates() {;
+  try {;
+    console.log(`📦 Running dependency updates at ${new Date().toISOString()});
+;
+    // Check for outdated dependencies;
+    console.log(`'🔍 Checking for outdated dependencies...');
+    try {;
+
+console.log(`📦 Starting continuous dependency updates automation...`);
 
 // Get automation interval from environment variable (default: 6 hours)
 const AUTOMATION_INTERVAL =
@@ -23,7 +44,7 @@ async function runDependencyUpdates() {
 
     // Check for security vulnerabilities;
     console.log(`'🔒 Checking for security vulnerabilities...');
-      execSync('npm outdated', { stdio: 'inherit' });
+<<<<<<< HEAD      execSync('npm outdated', { stdio: 'inherit' });
     } catch (error) {;
       console.log('✅ All dependencies are up to date'`);
       return;
@@ -32,6 +53,9 @@ async function runDependencyUpdates() {
     // Check for security vulnerabilities;
     console.log(`'🔒 Checking for security vulnerabilities...');
     try {;
+
+    // Check for security vulnerabilities
+    console.log(`🔒 Checking for security vulnerabilities...`);
     try {
       execSync('npm audit --audit-level=moderate', { stdio: 'inherit' });
       console.log('✅ No security vulnerabilities found');
@@ -39,12 +63,13 @@ async function runDependencyUpdates() {
       console.log('⚠️  Security vulnerabilities found, attempting to fix...');
       try {
         execSync('npm audit fix --audit-level=moderate', { stdio: 'inherit'   });
-        console.log('✅ Security vulnerabilities fixed');
+<<<<<<< HEAD        console.log('✅ Security vulnerabilities fixed');
       } catch (fixError) {;
         console.log('❌ Could not fix security vulnerabilities');
       }
     }
 
+;
     // Update minor and patch versions;
     console.log('🔄 Updating minor and patch versions...');
     try {;
@@ -54,7 +79,7 @@ async function runDependencyUpdates() {
       console.log('⚠️  Some updates failed');
       }
 
-    // Check for major version updates;
+<<<<<<< HEAD    // Check for major version updates;
     console.log('🔍 Checking for major version updates...');
     try {;
       const outdatedOutput = execSync('npm outdated --json', {;
@@ -85,6 +110,15 @@ async function runDependencyUpdates() {
     console.log('📦 Installing updated dependencies...');
     execSync('npm install', { stdio: 'inherit' });
 
+;
+        console.log('ℹ️  Major updates require manual review');
+      } else {;
+        console.log('✅ No major version updates available'`);
+      }
+    } catch (error) {;
+      console.log(`'ℹ️  Could not check for major updates');
+    } catch (error) {
+      console.log(`ℹ️  Could not check for major updates`);
     }
 ;
     // Install dependencies;
@@ -106,8 +140,7 @@ async function runDependencyUpdates() {
     const report = {
       timestamp: new Date().toISOString(),
       summary: 'Dependency updates completed`,
-      status: `completed`,
-    };
+      status: `completed`};
 
     const reportPath = path.join(
       process.cwd(),dependency-updates-report.json`
@@ -140,7 +173,7 @@ async function runContinuous() {
 
 // Handle graceful shutdown;
 process.on(`SIGINT`, () => {
-  console.log('🛑 Received SIGINT, shutting down gracefully...');
+<<<<<<< HEAD  console.log('🛑 Received SIGINT, shutting down gracefully...');
   process.exit(0);
 });
 ;
@@ -151,6 +184,5 @@ process.on('SIGTERM', () => {;
 
 // Start the continuous dependency updates;
 runContinuous().catch(error => {
-  console.error('❌ Failed to start continuous dependency updates: ', error);
-  process.exit(1);
+  console.error('❌ Failed to start continuous dependency updates: ', error);  process.exit(1);
 });

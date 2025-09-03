@@ -1,4 +1,6 @@
 #!/''usr/bin/env'' node;
+#!/'usr/bin/env' node;
+
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -13,7 +15,7 @@ class SecurityMonitor {;
   }
 
   log(message, type = `info`) {
-    const timestamp = new Date().toISOString();
+<<<<<<< HEAD    const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] [${type.toUpperCase()}] ${message}`);
   }
 ;
@@ -53,6 +55,37 @@ class SecurityMonitor {;
           }
         } else {
           this.log(`No security vulnerabilities found`, `success`);
+;
+  async runCommand(command, options = {}) {;
+    try {;
+      const result = execSync(command, { ;
+        encoding: 'utf8', ;
+        cwd: this.projectRoot,;
+        stdio: 'pipe',;
+        ...options ;
+      });
+      return { success: true, output: result };
+    } catch (error) {;
+      return { success: false, output: error.message, code: error.status };
+    }
+  }
+;
+  async checkSecurityVulnerabilities() {;
+    this.log('Checking for security vulnerabilities...');
+    ;
+    const result = await this.runCommand('npm audit --json');
+    ;
+    if (result.success) {;
+      try {;
+        const auditData = JSON.parse(result.output);
+        ;
+        if (auditData.vulnerabilities) {;
+          const vulnCount = Object.keys(auditData.vulnerabilities).length;this.log(`Found ${vulnCount} security vulnerabilities`, 'warn');
+          ;
+          for (const ['packageName', 'vuln'] of Object.entries(auditData.vulnerabilities)) {this.errorsFound.push(`Security vulnerability in ${packageName}: ${vuln.title} (${vuln.severity})`);
+          }
+        } else {;
+          this.log('No security vulnerabilities found', 'success');
         }
         ;
         return auditData;
@@ -79,7 +112,7 @@ class SecurityMonitor {;
           }
         } else {
           this.log(`All dependencies are up to date`, `success`);
-        }
+<<<<<<< HEAD        }
         ;
         return outdatedData;
       } catch (error) {  this.log(`Error parsing outdated data: ${error.message  }`, `error`);
@@ -93,6 +126,10 @@ class SecurityMonitor {;
   async checkLicenseCompliance() {
     this.log(`Checking license compliance...`);
     
+;
+  async checkLicenseCompliance() {;
+    this.log('Checking license compliance...');
+    ;
     const result = await this.runCommand('npm ls --json');
     ;
     if (result.success) {;
@@ -107,7 +144,7 @@ class SecurityMonitor {;
           for (const [`name`, `info`] of Object.entries(deps)) {
             if (info.license) {
               for (const license of problematicLicenses) {
-                if (info.license.includes(license)) {licenseIssues.push(`${name}: ${info.license}`);
+<<<<<<< HEAD                if (info.license.includes(license)) {licenseIssues.push(`${name}: ${info.license}`);
                 }
               }
             }
@@ -122,6 +159,10 @@ class SecurityMonitor {;
         if (licenseIssues.length > 0) {this.log(`Found ${licenseIssues.length} potential license compliance issues`, `warn`);this.errorsFound.push(...licenseIssues.map(issue => `License issue: ${issue}`));
         } else {
           this.log(`No license compliance issues found`, `success`);
+        ;
+        if (licenseIssues.length > 0) {this.log(`Found ${licenseIssues.length} potential license compliance issues`, 'warn');this.errorsFound.push(...licenseIssues.map(issue => `License issue: ${issue}`));
+        } else {;
+          this.log('No license compliance issues found', 'success');
         }
         ;
         return licenseIssues;
@@ -135,7 +176,7 @@ class SecurityMonitor {;
   async checkEnvironmentVariables() {
     this.log(`Checking environment variables for security...`);
     
-    const envFiles = ['.env', '.env.local', '.env.development', '.env.production'];
+<<<<<<< HEAD    const envFiles = ['.env', '.env.local', '.env.development', '.env.production'];
     const securityIssues = [];
     ;
     for (const envFile of envFiles) {;
@@ -153,6 +194,12 @@ class SecurityMonitor {;
                   key.toLowerCase().includes('password') || 
                   key.toLowerCase().includes(`key`) ||
                   key.toLowerCase().includes(`token`)) {
+            if (value && value.length > 0) {;
+              // Check for sensitive data patterns;
+              if (key.toLowerCase().includes('secret') || ;
+                  key.toLowerCase().includes('password') || ;
+                  key.toLowerCase().includes('key') ||;
+                  key.toLowerCase().includes('token')) {;
                 if (value.length < 10) {securityIssues.push(`Weak ${key} in ${envFile}`);
                 }
               }
@@ -166,7 +213,7 @@ class SecurityMonitor {;
       this.errorsFound.push(...securityIssues);
     } else {
       this.log(`No environment variable security issues found`, 'success');
-    }
+<<<<<<< HEAD    }
     ;
     return securityIssues;
   }
@@ -174,18 +221,20 @@ class SecurityMonitor {;
   async fixSecurityIssues() {;
     this.log('Attempting to fix security issues...');
     
+    ;
     // Try to fix vulnerabilities;
     const fixResult = await this.runCommand('npm audit fix');
     if (fixResult.success) {;
       this.fixesApplied.push('Auto-fixed security vulnerabilities with npm audit fix');
     }
     
-    // Try to fix vulnerabilities with force;
+<<<<<<< HEAD    // Try to fix vulnerabilities with force;
     const fixForceResult = await this.runCommand('npm audit fix --force');
     if (fixForceResult.success) {;
       this.fixesApplied.push('Auto-fixed security vulnerabilities with npm audit fix --force');
     }
     
+    ;
     // Update outdated packages;
     const updateResult = await this.runCommand('npm update');
     if (updateResult.success) {;
@@ -206,7 +255,7 @@ class SecurityMonitor {;
         totalOutdated: this.errorsFound.filter(e => e.includes('Outdated')).length,
         totalLicenseIssues: this.errorsFound.filter(e => e.includes(`License`)).length,
         totalEnvIssues: this.errorsFound.filter(e => e.includes(`environment`)).length,
-        autoFixed: this.fixesApplied.length;
+<<<<<<< HEAD        autoFixed: this.fixesApplied.length;
       }
     };
 ;
@@ -219,6 +268,11 @@ class SecurityMonitor {;
     this.log(`Starting security monitoring process...`);
     
     try {
+;
+  async run() {;
+    this.log('Starting security monitoring process...');
+    ;
+    try {;
       await this.checkSecurityVulnerabilities();
       await this.checkOutdatedDependencies();
       await this.checkLicenseCompliance();
@@ -232,11 +286,12 @@ class SecurityMonitor {;
       
       this.log(`Security monitoring completed`, `success`);
     } catch (error) {  this.log(`Error during security monitoring: ${error.message  }`, `error`);this.errorsFound.push(`Process error: ${error.message}`);
-      await this.generateReport();
+<<<<<<< HEAD      await this.generateReport();
     }
   }
 }
 
+;
 // Run the security monitor;
 const monitor = new SecurityMonitor();
 monitor.run().catch(console.error);

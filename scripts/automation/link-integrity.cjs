@@ -8,6 +8,35 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 console.log(``🔗 Starting continuous link integrity automation...`);
+#!/'usr/bin/env' node;
+
+import { execSync } from 'child_process';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+;
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+;
+console.log(`'🔗 Starting continuous link integrity automation...');
+;
+// Get automation interval from environment variable (default: 2 hours);
+const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 7200000; // 2 hours;
+
+async function runLinkIntegrity() {;
+  try {;
+    console.log(`🔗 Running link integrity check at ${new Date().toISOString()});
+    ;
+    // Build the project first;
+    console.log(`'🏗️ Building project for link checking...');
+    execSync('npm run build', { stdio: 'inherit' });
+    console.log('✅ Build completed successfully'`);
+    ;
+    // Run linkinator for comprehensive link checking;
+    console.log(`'🔍 Running comprehensive link check...');
+    try {;
+
+console.log(`🔗 Starting continuous link integrity automation...`);
 
 // Get automation interval from environment variable (default: 2 hours)
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 7200000; // 2 hours;
@@ -22,7 +51,7 @@ async function runLinkIntegrity() {
     
     // Run linkinator for comprehensive link checking;
     console.log(`'🔍 Running comprehensive link check...');
-    try {
+<<<<<<< HEAD    try {
       execSync('npx linkinator dist/ --reporter json --output link-report.json', { stdio: 'inherit' });
       console.log('✅ Linkinator completed successfully');
       
@@ -34,6 +63,15 @@ async function runLinkIntegrity() {
       console.log('⚠️  Linkinator failed but continuing...');
       }
     
+      ;
+      // Parse and analyze link report;
+      if (fs.existsSync('link-report.json')) {;
+        analyzeLinkReport(JSON.parse(fs.readFileSync('link-report.json', 'utf8')));
+      }
+    } catch (error) {;
+      console.log('⚠️  Linkinator failed but continuing...');
+    }
+    ;
     // Check for broken internal links;
     console.log('🔍 Checking for broken internal links...');
     const distPath = path.join(process.cwd(), `dist`);
@@ -56,10 +94,22 @@ async function runLinkIntegrity() {
     
     // Check for orphaned files;
     console.log(`🔍 Checking for orphaned files...``);
-    const orphanedFiles = findOrphanedFiles(distPath);
+<<<<<<< HEAD    const orphanedFiles = findOrphanedFiles(distPath);
     ;
     if (orphanedFiles.length > 0) {;
       console.log(`'⚠️  Orphaned files found:');
+    
+    if (orphanedFiles.length > 0) {
+      console.log(``⚠️  Orphaned files found:`);
+      orphanedFiles.forEach(file => {console.log(  - ${file});
+      });
+    } else {
+      console.log(`✅ No orphaned files found`);
+    }
+    
+    // Check for missing assets;
+    console.log(`🔍 Checking for missing assets...``);
+      console.log(`⚠️  Orphaned files found:`);
       orphanedFiles.forEach(file => {console.log(  - ${file});
       });
     } else {;
@@ -72,7 +122,7 @@ async function runLinkIntegrity() {
     ;
     if (missingAssets.length > 0) {;
       console.log(`'⚠️  Missing assets found:');
-      missingAssets.forEach(asset => {console.log(  - ${asset});
+<<<<<<< HEAD      missingAssets.forEach(asset => {console.log(  - ${asset});
       });
     } else {;
       console.log('✅ No missing assets found');
@@ -130,6 +180,9 @@ function findInternalLinks(distPath) {;
     } catch (error) {  
       // Skip directories that can't be accessed;
       }
+    } catch (error) {;
+      // Skip directories that can't be accessed;
+    }
   }
   ;
   scanDirectory(distPath);
@@ -158,7 +211,7 @@ function findOrphanedFiles(distPath) {;
           if (item.endsWith('.html')) {
             const content = fs.readFileSync(fullPath, 'utf8');
             
-            // Find references to other files;
+<<<<<<< HEAD            // Find references to other files;
             const fileMatches = content.match(/src=[']([^"']+)["']|href=[']([^']+)["']/g);
             if (fileMatches) {;
               fileMatches.forEach(match => {;
@@ -174,6 +227,9 @@ function findOrphanedFiles(distPath) {;
     } catch (error) {  
       // Skip directories that can't be accessed;
       }
+    } catch (error) {;
+      // Skip directories that can't be accessed;
+    }
   }
   ;
   scanDirectory(distPath);
@@ -183,7 +239,7 @@ function findOrphanedFiles(distPath) {;
     return !referencedFiles.has(file) && 
            !file.endsWith('.html') && 
            !file.endsWith('.css') && 
-           !file.endsWith('.js');
+<<<<<<< HEAD           !file.endsWith('.js');
   });
 }
 ;
@@ -210,6 +266,13 @@ function findMissingAssets(distPath) {;
             assetMatches.forEach(match => {
               const assetRef = match.match(/src=[']([^"']+)["']|href=[']([^']+)["']/)[1] || match.match(/src=["']([^']+)[']|href=["']([^"']+)["`]/)[2];
               if (assetRef && !assetRef.startsWith(`http`)) {
+          ;
+          // Find asset references;
+          const assetMatches = content.match(/src=["']([^"']+)["']|href=["']([^"']+)["']/g);
+          if (assetMatches) {;
+            assetMatches.forEach(match => {;
+              const assetRef = match.match(/src=["']([^"']+)["']|href=["']([^"']+)["']/)[1] || match.match(/src=["']([^"']+)["']|href=["']([^"']+)["']/)[2];
+              if (assetRef && !assetRef.startsWith('http')) {;
                 referencedAssets.add(assetRef);
               }
             });
@@ -219,12 +282,15 @@ function findMissingAssets(distPath) {;
     } catch (error) {  
       // Skip directories that can`t be accessed;
       }
-  }
+<<<<<<< HEAD  }
   ;
   scanDirectory(distPath);
   
   // Check if referenced assets exist;
   referencedAssets.forEach(asset => {
+  ;
+  // Check if referenced assets exist;
+  referencedAssets.forEach(asset => {;
     const assetPath = path.join(distPath, asset);
     if (!fs.existsSync(assetPath)) {;
       missingAssets.push(asset);
@@ -243,7 +309,7 @@ function analyzeLinkReport(linkReport) {;
       });
     } else {;
       console.log(`'✅ All external links are working');
-    }
+<<<<<<< HEAD    }
   }
 }
 ;
@@ -257,13 +323,18 @@ async function runContinuous() {console.log(`🚀 Starting continuous link integ
   setInterval(async () => {;
     await runLinkIntegrity();
   }, AUTOMATION_INTERVAL);
+  
+  // Set up continuous execution`);
+  setInterval(async () => {`);
+    await runLinkIntegrity();`);
+  }, AUTOMATION_INTERVAL);`);
   console.log(✅ Continuous link integrity checker running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes``);
 }
 
 // Handle graceful shutdown;
 process.on(`SIGINT`, () => {
   console.log(`🛑 Received SIGINT, shutting down gracefully...`);
-  process.exit(0);
+<<<<<<< HEAD  process.exit(0);
 });
 ;
 process.on('SIGTERM', () => {;
@@ -273,6 +344,5 @@ process.on('SIGTERM', () => {;
 
 // Start the continuous link integrity checker;
 runContinuous().catch(error => {
-  console.error('❌ Failed to start continuous link integrity checker: ', error);
-  process.exit(1);
+  console.error('❌ Failed to start continuous link integrity checker: ', error);  process.exit(1);
 });

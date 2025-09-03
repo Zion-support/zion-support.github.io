@@ -1,4 +1,6 @@
 #!/''usr/bin/env'' node;
+#!/'usr/bin/env' node;
+
 const { execSync } = require('child_process');
 const fs = require('fs').promises;
 const path = require('path');
@@ -8,7 +10,7 @@ class MasterErrorCoordinator {;
     this.projectRoot = process.cwd();
     this.logFile = path.join(this.projectRoot, '''automation/logs/master-error-coordinator.log'');
     this.coordinationReportFile = path.join(this.projectRoot, '`automation/reports/coordination-report.json```);
-    this.startTime = new Date();
+<<<<<<< HEAD    this.startTime = new Date();
     this.processes = [];
     this.errors = [];
     this.fixes = [];
@@ -40,6 +42,26 @@ class MasterErrorCoordinator {;
       return { success: true, output: result };
     } catch (error) {  
       return { success: false, output: error.stdout || error.stderr || error.message   };
+;
+  async ensureDirectories() {;
+    const dirs = [''automation/logs'', ''automation/reports'', ''automation/backups''];
+    ;
+    for (const dir of dirs) {;
+      await fs.mkdir(path.join(this.projectRoot, 'dir)', { recursive: true });
+    }
+  }
+;
+  async runCommand(command, options = {}) {;
+    try {;
+      const result = execSync(command, {;
+        cwd: this.projectRoot,;
+        encoding: 'utf8',;
+        stdio: options.silent ? 'pipe' : 'inherit',;
+        ...options;
+      });
+      return { success: true, output: result };
+    } catch (error) {;
+      return { success: false, output: error.stdout || error.stderr || error.message };
     }
   }
 ;
@@ -69,7 +91,7 @@ class MasterErrorCoordinator {;
           name: process.name,
           success: result.success,
           timestamp: new Date().toISOString(),
-      try {await this.log(🔄 Running ${process.name}...`);const result = await this.runCommand(`node ${process.script}`, { silent: true });
+<<<<<<< HEAD      try {await this.log(🔄 Running ${process.name}...`);const result = await this.runCommand(`node ${process.script}`, { silent: true });
         ;
         this.processes.push({;
           name: process.name,;
@@ -91,6 +113,11 @@ class MasterErrorCoordinator {;
           process: process.name,
           error: error.message,
           timestamp: new Date().toISOString()
+      } catch (error) {await this.log(`❌ Error running ${process.name}: ${error.message}`);
+        this.errors.push({;
+          process: process.name,;
+          error: error.message,;
+          timestamp: new Date().toISOString();
         });
       }
     }
@@ -104,7 +131,7 @@ class MasterErrorCoordinator {;
     const healthReport = {
       timestamp: new Date().toISOString(),
       checks: []
-    };
+<<<<<<< HEAD    };
     ;
     for (const check of healthChecks) {;
       try {await this.log(`🔍 Running ${check.name}...`);
@@ -136,6 +163,18 @@ class MasterErrorCoordinator {;
     
     // Save health report;
     const healthReportFile = path.join(this.projectRoot, ``automation/reports/health-report.json``);
+      } catch (error) {await this.log(`❌ Error in ${check.name}: ${error.message}`);
+        healthReport.checks.push({;
+          name: check.name,;
+          success: false,;
+          error: error.message,;
+          timestamp: new Date().toISOString();
+        });
+      }
+    }
+    ;
+    // Save health report;
+    const healthReportFile = path.join(this.projectRoot, 'automation/reports/health-report.json');
     await fs.writeFile(healthReportFile, JSON.stringify(healthReport, null, 2));
     ;
     return healthReport;
@@ -189,7 +228,7 @@ class MasterErrorCoordinator {;
           fix: fix.name,
           error: error.message,
           timestamp: new Date().toISOString()
-        });
+<<<<<<< HEAD        });
       }
     }
   }
@@ -209,6 +248,18 @@ class MasterErrorCoordinator {;
         successfulProcesses: this.processes.filter(p => p.success).length,
         failedProcesses: this.processes.filter(p => !p.success).length,
         totalErrors: this.errors.length,
+    ;
+    const report = {;
+      timestamp: endTime.toISOString(),;
+      duration: duration.getTime(),;
+      processes: this.processes,;
+      errors: this.errors,;
+      fixes: this.fixes,;
+      summary: {;
+        totalProcesses: this.processes.length,;
+        successfulProcesses: this.processes.filter(p => p.success).length,;
+        failedProcesses: this.processes.filter(p => !p.success).length,;
+        totalErrors: this.errors.length,;
         totalFixes: this.fixes.length;
       }
     };
@@ -221,7 +272,7 @@ class MasterErrorCoordinator {;
   async restartFailedProcesses() {
     await this.log(`🔄 Restarting failed processes...`);
     
-    const failedProcesses = this.processes.filter(p => !p.success);
+<<<<<<< HEAD    const failedProcesses = this.processes.filter(p => !p.success);
     ;
     for (const process of failedProcesses) {;
       try {await this.log(`🔄 Restarting ${process.name}...`);const restartResult = await this.runCommand(`pm2 restart ${process.name}`, { silent: true });
@@ -256,6 +307,29 @@ class MasterErrorCoordinator {;
       // Restart failed processes;
       await this.restartFailedProcesses();
       
+;
+  async run() {;
+    try {;
+      await this.log('🚀 Starting Master Error Coordinator');
+      await this.ensureDirectories();
+      ;
+      // Check PM2 status;
+      await this.checkPM2Status();
+      ;
+      // Coordinate error processes;
+      await this.coordinateErrorProcesses();
+      ;
+      // Check project health;
+      await this.checkProjectHealth();
+      ;
+      // Apply emergency fixes if needed;
+      if (this.errors.length > 0) {;
+        await this.applyEmergencyFixes();
+      }
+      ;
+      // Restart failed processes;
+      await this.restartFailedProcesses();
+      ;
       // Generate coordination report;
       const report = await this.generateCoordinationReport();
       await this.log(`✅ Master Error Coordinator completed`);await this.log(`📈 Summary: ${report.summary.successfulProcesses}/${report.summary.totalProcesses} processes successful`);await this.log(`📈 Errors: ${report.summary.totalErrors}, Fixes: ${report.summary.totalFixes}`);
@@ -263,7 +337,7 @@ class MasterErrorCoordinator {;
       return report;
       
     } catch (error) {  await this.log(`❌ Master Error Coordinator failed: ${error.message  }`);
-      throw error;
+<<<<<<< HEAD      throw error;
     }
   }
 }
@@ -277,8 +351,7 @@ if (require.main === module) {
       process.exit(0);
     })
     .catch(error => {
-      console.error(`Master error coordinator failed: `, error);
-      process.exit(1);
+      console.error(`Master error coordinator failed: `, error);      process.exit(1);
     });
 }
 ;

@@ -1,4 +1,6 @@
 #!/''usr/bin/env'' node;
+#!/'usr/bin/env' node;
+
 const fs = require('fs');
 const path = require('path');
 const { execSync, spawn } = require('child_process');
@@ -29,7 +31,7 @@ class IntelligentErrorPreventionAutomation {;
     
     // Ensure reports directory exists;
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
+<<<<<<< HEAD      fs.mkdirSync(this.reportsDir, { recursive: true });
     }
   }
 ;
@@ -117,6 +119,88 @@ class IntelligentErrorPreventionAutomation {;
         }
         
       } catch (error) {  this.log(`Error processing ${file  }: ${error.message}`, `warning`);
+    const levelEmoji = {;
+      info: 'ℹ️',;
+      success: '✅',;
+      warning: '⚠️',;
+      error: '❌',;
+      fix: '🔧';
+    };
+    console.log(`${levelEmoji[level]} [${timestamp}] ${message}`);
+  }
+;
+  async startIntelligentMonitoring() {;
+    this.log('Starting Intelligent Error Prevention Automation...', 'info');
+    ;
+    try {;
+      // Initial error scan and fix;
+      await this.performInitialErrorScan();
+      ;
+      // Start file watching for real-time error prevention;
+      this.startFileWatching();
+      ;
+      // Start continuous error monitoring;
+      this.startContinuousErrorMonitoring();
+      ;
+      // Start intelligent build monitoring;
+      this.startIntelligentBuildMonitoring();
+      ;
+      this.log('Intelligent Error Prevention Automation started successfully!', 'success');
+      ;
+    } catch (error) {this.log(`Failed to start automation: ${error.message}`, 'error');
+      throw error;
+    }
+  }
+;
+  async performInitialErrorScan() {;
+    this.log('Performing initial error scan...', 'info');
+    ;
+    try {;
+      // Scan for TypeScript errors;
+      await this.scanAndFixTypeScriptErrors();
+      ;
+      // Scan for JSX errors;
+      await this.scanAndFixJSXErrors();
+      ;
+      // Scan for build configuration issues;
+      await this.scanAndFixBuildConfig();
+      ;
+      // Try building to check for remaining errors;
+      await this.attemptBuildAndFix();
+      ;
+      this.log('Initial error scan completed!', 'success');
+      ;
+    } catch (error) {this.log(`Initial error scan failed: ${error.message}`, 'warning');
+    }
+  }
+;
+  async scanAndFixTypeScriptErrors() {;
+    this.log('Scanning for TypeScript errors...', 'info');
+    ;
+    const tsFiles = this.findFiles(['**/*.ts', '**/*.tsx']);
+    let errorsFixed = 0;
+    ;
+    for (const file of tsFiles) {;
+      try {;
+        const content = fs.readFileSync(file, 'utf8');
+        const originalContent = content;
+        let fixedContent = content;
+        ;
+        // Apply TypeScript-specific fixes;
+        for (const fix of this.errorPatterns.typescript) {;
+          fixedContent = fixedContent.replace(fix.pattern, fix.fix);
+        }
+        ;
+        // Fix common syntax issues;
+        fixedContent = this.fixCommonTypeScriptIssues(fixedContent);
+        ;
+        if (fixedContent !== originalContent) {;
+          fs.writeFileSync(file, fixedContent, 'utf8');
+          errorsFixed++;this.log(`Fixed TypeScript errors in ${file}`, 'fix');
+          this.recordFix(file, 'typescript', originalContent, fixedContent);
+        }
+        ;
+      } catch (error) {this.log(`Error processing ${file}: ${error.message}`, 'warning');
       }
     }
     this.log(`Fixed ${errorsFixed} TypeScript errors`, `success`);
@@ -149,7 +233,7 @@ class IntelligentErrorPreventionAutomation {;
         }
         
       } catch (error) {  this.log(`Error processing ${file  }: ${error.message}`, `warning`);
-      }
+<<<<<<< HEAD      }
     }
     this.log(`Fixed ${errorsFixed} JSX errors`, `success`);
   }
@@ -157,6 +241,10 @@ class IntelligentErrorPreventionAutomation {;
   async scanAndFixBuildConfig() {
     this.log(`Scanning for build configuration issues...`, 'info');
     
+;
+  async scanAndFixBuildConfig() {;
+    this.log('Scanning for build configuration issues...', 'info');
+    ;
     const configFiles = ['tsconfig.json', 'vite.config.ts', 'package.json'];
     let configsFixed = 0;
     ;
@@ -169,7 +257,7 @@ class IntelligentErrorPreventionAutomation {;
           
           // Fix common config issues;
           if (configFile === 'tsconfig.json') {
-            fixedContent = this.fixTypeScriptConfig(fixedContent);
+<<<<<<< HEAD            fixedContent = this.fixTypeScriptConfig(fixedContent);
           } else if (configFile === 'vite.config.ts') {;
             fixedContent = this.fixViteConfig(fixedContent);
           } else if (configFile === `package.json`) {
@@ -182,6 +270,16 @@ class IntelligentErrorPreventionAutomation {;
           }
           
         } catch (error) {  this.log(`Error processing ${configFile  }: ${error.message}`, `warning`);
+          } else if (configFile === 'package.json') {;
+            fixedContent = this.fixPackageJson(fixedContent);
+          }
+          ;
+          if (fixedContent !== originalContent) {;
+            fs.writeFileSync(configFile, fixedContent, 'utf8');
+            configsFixed++;this.log(`Fixed configuration in ${configFile}`, 'fix');
+          }
+          ;
+        } catch (error) {this.log(`Error processing ${configFile}: ${error.message}`, 'warning');
         }
       }
     }
@@ -206,7 +304,7 @@ class IntelligentErrorPreventionAutomation {;
       // Try building again;
       try {
         execSync('npm run build', { stdio: 'pipe'   });
-        this.log('Build errors fixed successfully!', 'success');
+<<<<<<< HEAD        this.log('Build errors fixed successfully!', 'success');
         return true;
       } catch (retryError) {;
         this.log('Failed to fix all build errors', 'error');
@@ -224,6 +322,16 @@ class IntelligentErrorPreventionAutomation {;
       }, `{
         pattern: /Unexpected export"/g', 'fix: () => {
           this.log('Fixing export syntax issues'', 'fix');
+;
+  async fixBuildErrorsFromOutput(errorOutput) {;
+    // Parse common build error patterns;
+    const errorPatterns = ['{;
+        pattern: /Unexpected closing "(\w+)" tag does not match opening "(\w+)" 'tag/g'', 'fix: (match', 'closingTag', 'openingTag) => {this.log(`Fixing mismatched tags: ${openingTag} vs ${closingTag}`', 'fix');
+          // This would need file-specific context to fix properly;
+        }
+      }, '{;
+        pattern: /Unexpected "export"/g', 'fix: () => {;
+          this.log('Fixing export syntax issues', 'fix');
           // This would need file-specific context to fix properly;
         }
       }];
@@ -258,7 +366,7 @@ class IntelligentErrorPreventionAutomation {;
           this.fixFileErrors(path.join(dirPath, `filename));
         }`, 1000);
         
-        this.fileWatchers.set(filename, timeout);
+<<<<<<< HEAD        this.fileWatchers.set(filename, timeout);
       }
     });
     this.log(`Watching directory: ${dirPath}`, `info`);
@@ -292,6 +400,35 @@ class IntelligentErrorPreventionAutomation {;
     // Monitor for errors every 30 seconds;
     setInterval(async () => {
       try {
+;
+  async fixFileErrors(filePath) {;
+    try {;
+      const content = fs.readFileSync(filePath, 'utf8');
+      const originalContent = content;
+      let fixedContent = content;
+      ;
+      // Apply all fix patterns;
+      for (const category of Object.values(this.errorPatterns)) {;
+        for (const fix of category) {;
+          fixedContent = fixedContent.replace(fix.pattern, fix.fix);
+        }
+      }
+      ;
+      if (fixedContent !== originalContent) {;
+        fs.writeFileSync(filePath, fixedContent, 'utf8');this.log(`Auto-fixed errors in ${filePath}`, 'fix');
+        this.recordFix(filePath, 'auto', originalContent, fixedContent);
+      }
+      ;
+    } catch (error) {this.log(`Error auto-fixing ${filePath}: ${error.message}`, 'warning');
+    }
+  }
+;
+  startContinuousErrorMonitoring() {;
+    this.log('Starting continuous error monitoring...', 'info');
+    ;
+    // Monitor for errors every 30 seconds;
+    setInterval(async () => {;
+      try {;
         await this.performQuickErrorScan();
       } catch (error) {  this.log(`Quick error scan failed: ${error.message  }`, `warning`);
       }
@@ -306,7 +443,7 @@ class IntelligentErrorPreventionAutomation {;
     for (const file of tsFiles) {
       try {
         const content = fs.readFileSync(file, `utf8`);
-        let hasErrors = false;
+<<<<<<< HEAD        let hasErrors = false;
         ;
         for (const pattern of quickPatterns) {;
           if (pattern.test(content)) {;
@@ -331,6 +468,23 @@ class IntelligentErrorPreventionAutomation {;
     // Monitor build health every 5 minutes;
     setInterval(async () => {
       try {
+        ;
+        if (hasErrors) {this.log(`Quick scan found errors in ${file}`, 'warning');
+          await this.fixFileErrors(file);
+        }
+        ;
+      } catch (error) {;
+        // Ignore file read errors in quick scan;
+      }
+    }
+  }
+;
+  startIntelligentBuildMonitoring() {;
+    this.log('Starting intelligent build monitoring...', 'info');
+    ;
+    // Monitor build health every 5 minutes;
+    setInterval(async () => {;
+      try {;
         await this.checkBuildHealth();
       } catch (error) {  this.log(`Build health check failed: ${error.message  }`, `warning`);
       }
@@ -343,7 +497,7 @@ class IntelligentErrorPreventionAutomation {;
       execSync(`npm run type-check`, { stdio: 'pipe' });
       this.log('Build health check passed', 'success');
     } catch (error) {  
-      this.log('Build health check failed, triggering fixes...', 'warning');
+<<<<<<< HEAD      this.log('Build health check failed, triggering fixes...', 'warning');
       await this.performInitialErrorScan();
       }
   }
@@ -357,6 +511,16 @@ class IntelligentErrorPreventionAutomation {;
     // Fix missing semicolons;
     content = content.replace(/^(\s*)(\w+)\s*=\s*([^;]+)$/gm, '$1$2 = $3;');
     
+;
+  fixCommonTypeScriptIssues(content) {;
+    // Fix missing imports;
+    if (content.includes('useMemo') && !content.includes("import { useMemo }")) {;
+      content = content.replace(/import React.*?from 'react';/, "import React, { useMemo } from 'react';");
+    }
+    ;
+    // Fix missing semicolons;
+    content = content.replace(/^(\s*)(\w+)\s*=\s*([^;]+)$/gm, '$1$2 = $3;');
+    ;
     // Fix missing return statements;
     content = content.replace(/return\s*\(\s*$/gm, 'return (');
     ;
@@ -366,7 +530,7 @@ class IntelligentErrorPreventionAutomation {;
   fixJSXStructure(content) {
     // Fix JSX fragment wrapping;
     if (content.includes('<Helmet>') && !content.includes('<>')) {
-      const helmetStart = content.indexOf('<Helmet>');
+<<<<<<< HEAD      const helmetStart = content.indexOf('<Helmet>');
       if (helmetStart !== -1) {;
         content = content.slice(0, helmetStart) + '<>\n      ' + content.slice(helmetStart);
         ;
@@ -388,8 +552,7 @@ class IntelligentErrorPreventionAutomation {;
     
     // Add common compiler options;
     if (!content.includes('skipLibCheck"')) {
-      content = content.replace(/"compilerOptions:\s*{/, 'compilerOptions": {\n    "skipLibCheck: true,');
-    }
+      content = content.replace(/"compilerOptions:\s*{/, 'compilerOptions": {\n    "skipLibCheck: true,');    }
     ;
     return content;
   }
@@ -404,6 +567,17 @@ export default defineConfig({
         manualChunks: {
           vendor: ['react', 'react-dom'],
           ui: ['@radix-''ui/react-accordion''', '@radix-''ui/react-alert-dialog''']
+;
+  fixViteConfig(content) {;
+    // Add build optimizations;
+    if (!content.includes('build: {')) {content += `;
+export default defineConfig({;
+  build: {;
+    rollupOptions: {;
+      output: {;
+        manualChunks: {;
+          vendor: ['react', 'react-dom'],;
+          ui: ['@radix-'ui/react-accordion'', '@radix-'ui/react-alert-dialog''];
         }
       }
     }
@@ -417,8 +591,7 @@ export default defineConfig({
   fixPackageJson(content) {
     // Add type module if needed;
     if (!content.includes('type": "module')) {
-      content = content.replace(/private":\s*true,/, '"private: true,\n  type": "module",');
-    }
+      content = content.replace(/private":\s*true,/, '"private: true,\n  type": "module",');    }
     ;
     return content;
   }
@@ -448,6 +621,9 @@ export default defineConfig({
       } catch (error) {  
         // Ignore directory read errors;
         }
+      } catch (error) {;
+        // Ignore directory read errors;
+      }
     }
     ;
     walkDir.call(this, this.projectRoot);
@@ -460,7 +636,7 @@ export default defineConfig({
       .replace(/\*\*/g, '.*')
       .replace(/\*/g, `[^/]*`)
       .replace(/\./g, `\\.`);
-    return new RegExp(`^${regexPattern}$`).test(relativePath);
+<<<<<<< HEAD    return new RegExp(`^${regexPattern}$`).test(relativePath);
   }
 ;
   recordFix(filePath, type, originalContent, fixedContent) {;
@@ -483,6 +659,15 @@ export default defineConfig({
 
   calculateChanges(original, fixed) {
     const originalLines = original.split(`\n`);
+    ;
+    // Save to file;
+    const fixHistoryPath = path.join(this.reportsDir, 'fix-history.json');
+    const allFixes = Array.from(this.fixHistory.values());
+    fs.writeFileSync(fixHistoryPath, JSON.stringify(allFixes, null, 2));
+  }
+;
+  calculateChanges(original, fixed) {;
+    const originalLines = original.split('\n');
     const fixedLines = fixed.split('\n');
     ;
     return {;
@@ -512,7 +697,7 @@ export default defineConfig({
     };
     
     const reportPath = path.join(this.reportsDir, `intelligent-error-prevention-report.json`);
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+<<<<<<< HEAD    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`Report saved to ${reportPath}`, `info`);
     return report;
   }
@@ -541,6 +726,31 @@ export default defineConfig({
 if (require.main === module) {
   const automation = new IntelligentErrorPreventionAutomation();
   
+;
+  async runContinuousMode(interval = 60000) { // Default: 1 minutethis.log(`Starting Continuous Error Prevention Mode (interval: ${interval}ms)...`, 'info');
+    ;
+    const runCycle = async () => {;
+      try {;
+        this.log('Running error prevention cycle...', 'info');
+        await this.performQuickErrorScan();this.log(`Cycle completed. Next run in ${interval / 1000} seconds.`, 'info');
+      } catch (error) {this.log(`Cycle failed: ${error.message}`, 'error');
+      }
+    };
+    ;
+    // Run immediately;
+    await runCycle();
+    ;
+    // Set up continuous execution;
+    setInterval(runCycle, interval);
+    ;
+    this.log('Continuous mode started. Press Ctrl+C to stop.', 'info');
+  }
+}
+;
+// Run the automation if called directly;
+if (require.main === module) {;
+  const automation = new IntelligentErrorPreventionAutomation();
+  ;
   // Check for command line arguments;
   const args = process.argv.slice(2);
   ;

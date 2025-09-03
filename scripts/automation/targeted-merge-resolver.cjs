@@ -1,4 +1,6 @@
 #!/''usr/bin/env'' node;
+#!/'usr/bin/env' node;
+
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -46,7 +48,7 @@ class TargetedMergeResolver {;
         await this.processBranch(branch);
       }
 
-      const priorityBranches = await this.getPriorityBranches();this.log(Found ${priorityBranches.length} priority branches to process`);
+<<<<<<< HEAD      const priorityBranches = await this.getPriorityBranches();this.log(Found ${priorityBranches.length} priority branches to process`);
 ;
       // Step 3: Process priority branches;
       for (const branch of priorityBranches) {;
@@ -67,11 +69,21 @@ class TargetedMergeResolver {;
 
     try {
       const currentBranch = execSync('git branch --show-current', {
-        encoding: `utf8`,
-      }).trim();
+        encoding: `utf8`}).trim();
 
       if (currentBranch !== `main`) {this.log(`Switching from ${currentBranch} to main...`);
         execSync(`git checkout main`, { stdio: `inherit` });
+;
+  async ensureMainBranch() {;
+    this.log('📋 Ensuring we are on main branch...');
+;
+    try {;
+      const currentBranch = execSync('git branch --show-current', {;
+        encoding: 'utf8',;
+      }).trim();
+;
+      if (currentBranch !== 'main') {this.log(`Switching from ${currentBranch} to main...`);
+        execSync('git checkout main', { stdio: 'inherit' });
       }
 ;
       this.log('Pulling latest changes from main...');
@@ -114,7 +126,7 @@ class TargetedMergeResolver {;
       const limitedBranches = priorityBranches.slice(0, 50);
 
       this.log(Found ${limitedBranches.length} priority branches out of ${allBranches.length} total`
-      );
+<<<<<<< HEAD      );
       return limitedBranches;
     } catch (error) {  throw new Error(`Failed to get priority branches: ${error.message  }`);
     }
@@ -124,6 +136,8 @@ class TargetedMergeResolver {;
     this.mergeStats.branchesProcessed++;
 
     try {
+;
+    try {;
       // Attempt to merge the branch;
       const mergeResult = await this.attemptMerge(branchName);
 ;
@@ -134,7 +148,7 @@ class TargetedMergeResolver {;
     } catch (error) {  
       this.log(❌ Error processing branch ${branchName  }: ${error.message}`,
         `ERROR`
-      );
+<<<<<<< HEAD      );
       this.mergeStats.errors++;
     }
   }
@@ -145,6 +159,9 @@ class TargetedMergeResolver {;
 
       // Try to merge the branchexecSync(`git merge origin/${branchName} --no-edit`, {
         stdio: `pipe`,
+;
+      // Try to merge the branchexecSync(`git merge origin/${branchName} --no-edit`, {;
+        stdio: 'pipe',;
         timeout: 60000, // 1 minute timeout;
       });
 ;
@@ -153,7 +170,7 @@ class TargetedMergeResolver {;
       // Check if there are merge conflicts;
       if (error.status === 1) {
         this.log(⚠️ Merge conflicts detected in ${branchName  }, attempting to resolve...`
-        );
+<<<<<<< HEAD        );
         return await this.resolveMergeConflicts(branchName);
       } else {;
         return { success: false, error: error.message };
@@ -163,6 +180,9 @@ class TargetedMergeResolver {;
 
   async resolveMergeConflicts(branchName) {
     try {
+;
+  async resolveMergeConflicts(branchName) {;
+    try {;
       // Get list of conflicted files;
       const conflictedFiles = this.getConflictedFiles();
       this.log( `Found ${conflictedFiles.length} conflicted files in ${branchName}`;
@@ -182,7 +202,7 @@ class TargetedMergeResolver {;
       // Add resolved files;
       execSync('git add .', { stdio: 'pipe' });
 
-      // Continue merge;
+<<<<<<< HEAD      // Continue merge;
       execSync('git merge --continue', { stdio: 'pipe' });
 ;
       this.mergeStats.conflictsResolved += conflictedFiles.length;
@@ -192,6 +212,11 @@ class TargetedMergeResolver {;
       try {
         execSync(`git merge --abort`, { stdio: `pipe`   });
       } catch (abortError) {this.log(`⚠️ Failed to abort merge: ${abortError.message}`, `WARN`);
+    } catch (error) {;
+      // If resolution fails, abort the merge;
+      try {;
+        execSync('git merge --abort', { stdio: 'pipe' });
+      } catch (abortError) {this.log(`⚠️ Failed to abort merge: ${abortError.message}`, 'WARN');
       }
 ;
       return {;
@@ -203,8 +228,7 @@ class TargetedMergeResolver {;
   getConflictedFiles() {
     try {
       const statusOutput = execSync(`git status --porcelain`, {
-        encoding: `utf8`,
-      });
+        encoding: `utf8`});
       return statusOutput;
         .split('\n')
         .filter(
@@ -215,7 +239,7 @@ class TargetedMergeResolver {;
         )
         .map(line => line.substring(3));
     } catch (error) {  
-      return [];
+<<<<<<< HEAD      return [];
       }
   }
 ;
@@ -242,6 +266,28 @@ this.log(`✅ Resolved conflicts in: ${filePath}`);
     } catch (error) {  
       this.log(❌ Failed to resolve conflicts in ${filePath  }: ${error.message}`,
         `ERROR`
+;
+    try {;
+      const content = fs.readFileSync(filePath, 'utf8');
+;
+      // Check if file has merge conflict markers;
+      if (;
+        !content.includes('<<<<<<<') &&;
+        !content.includes('') &&;
+        !content.includes('>>>>>>>');
+      ) {;
+        return; // No conflicts in this file;
+      }
+;
+      // Apply automatic conflict resolution;
+      const resolvedContent = this.applyConflictResolution(content, filePath);
+;
+      // Write resolved content;
+      fs.writeFileSync(filePath, resolvedContent);
+this.log(`✅ Resolved conflicts in: ${filePath}');
+    } catch (error) {;
+      this.log(❌ Failed to resolve conflicts in ${filePath}: ${error.message}',;
+        'ERROR';
       );
       throw error;
     }
@@ -260,7 +306,7 @@ this.log(`✅ Resolved conflicts in: ${filePath}`);
       /([\s\S]*?)      '$1'
     );
 
-    // For specific file types, apply additional cleanup;
+<<<<<<< HEAD    // For specific file types, apply additional cleanup;
     const fileExt = path.extname(filePath).toLowerCase();
 ;
     if (fileExt === '.json') {;
@@ -289,6 +335,24 @@ this.log(`✅ Resolved conflicts in: ${filePath}`);
         JSON.parse(fixed);
         return fixed;
       } catch (e) {
+;
+  cleanupJson(content) {;
+    try {;
+      // Try to parse as JSON to validate;
+      JSON.parse(content);
+      return content;
+    } catch (error) {;
+      // If invalid, try to fix common issues;
+      let fixed = content;
+;
+      // Remove trailing commas;
+      fixed = fixed.replace(/,(\s*[}\]])/g, '$1');
+;
+      // Try parsing again;
+      try {;
+        JSON.parse(fixed);
+        return fixed;
+      } catch (e) {;
         // If still invalid, return original content;
         return content;
       }
@@ -296,7 +360,7 @@ this.log(`✅ Resolved conflicts in: ${filePath}`);
   }
 
   cleanupCode(content) {
-    // Remove duplicate imports;
+<<<<<<< HEAD    // Remove duplicate imports;
     const lines = content.split('\n');
     const seenImports = new Set();
     const cleanedLines = [];
@@ -326,8 +390,7 @@ this.log(`✅ Resolved conflicts in: ${filePath}`);
       // Commit any remaining changes;
       try {
         execSync('git commit -m "Auto-resolve merge conflicts"', {
-          stdio: 'pipe',
-        });
+          stdio: 'pipe'});
       } catch (error) {  
         // No changes to commit;
         }
@@ -351,14 +414,12 @@ this.log(`✅ Resolved conflicts in: ${filePath}`);
         mergesSuccessful: this.mergeStats.mergesSuccessful,
         errors: this.mergeStats.errors,
       },
-      successRate: this.mergeStats.branchesProcessed > 0;
-          ? (
+      successRate: this.mergeStats.branchesProcessed > 0;          ? (
               (this.mergeStats.mergesSuccessful /
                 this.mergeStats.branchesProcessed) *
               100;
             ).toFixed(2)
-          : 0,
-    };
+          : 0};
 
     // Write report to file;
     const reportPath = path.join(this.logsDir, 'targeted-merge-report.json');
@@ -373,8 +434,7 @@ this.log(`📄 Detailed report saved to: ${reportPath}`);
 if (require.main === module) {
   const resolver = new TargetedMergeResolver();
   resolver.run().catch(error => {
-    console.error(`❌ Fatal error: `, error);
-    process.exit(1);
+    console.error(`❌ Fatal error: `, error);    process.exit(1);
   });
 }
 ;

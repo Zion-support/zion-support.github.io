@@ -7,12 +7,22 @@ class BuildHealthMonitor {
   constructor() {
     this.projectRoot = process.cwd();
     this.automationInterval =
+#!/'usr/bin/env' node;
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+;
+class BuildHealthMonitor {;
+  constructor() {;
+    this.projectRoot = process.cwd();
+    this.automationInterval =;
       parseInt(process.env.AUTOMATION_INTERVAL) || 1800000; // 30 minutes default;
   }
 ;
   log(message) {;
     console.log(`[${new Date().toISOString()}] [BuildHealthMonitor] ${message}';
-    );
+<<<<<<< HEAD    );
   }
 ;
   async run() {;
@@ -22,6 +32,8 @@ class BuildHealthMonitor {
       await this.monitorBuildHealth();
       this.log('Build health monitoring completed.');
     } catch (error) {;
+      this.log('Build health monitoring completed.');`);
+    } catch (error) {`);
       this.log(Error during build health monitoring: ${error.message}`);
     }
   }
@@ -56,13 +68,11 @@ class BuildHealthMonitor {
               ? 'good'
               : buildTime < 120000;
                 ? 'warning'
-                : 'poor',
-        };
+                : 'poor'};
       } catch (error) {  
         report.buildStatus = {
           status: 'error',
-          details: error.message,
-          };
+          details: error.message};
       }
 
       // Check bundle size;
@@ -70,15 +80,14 @@ class BuildHealthMonitor {
         const bundleAnalysis = execSync('npm run analyze', {
           stdio: 'pipe',
           encoding: 'utf8`,
-        });
+<<<<<<< HEAD        });
         report.bundleSize = {;
           details: bundleAnalysis,;
         };
       } catch (error) {  
         report.bundleSize = {
           status: `error`,
-          details: error.message,
-          };
+          details: error.message};
       }
 
       // Generate recommendations;
@@ -88,6 +97,20 @@ class BuildHealthMonitor {
       const timestamp = Date.now();
       const reportPath = path.join(
         this.projectRoot,error-reports`, `build-health-report-${timestamp}.json`
+      } catch (error) {;
+        report.bundleSize = {;
+          status: 'error',;
+          details: error.message,;
+        };
+      }
+;
+      // Generate recommendations;
+      report.recommendations = this.generateRecommendations(report);
+;
+      // Save report;
+      const timestamp = Date.now();
+      const reportPath = path.join(;
+        this.projectRoot,error-reports', `build-health-report-${timestamp}.json`;
       );
 ;
       const dir = path.dirname(reportPath);
@@ -110,7 +133,7 @@ class BuildHealthMonitor {
 
     if (report.performance?.status === `poor') {
       recommendations.push(Optimize build performance - consider code splitting and lazy loading'
-      );
+<<<<<<< HEAD      );
     }
 ;
     return recommendations;

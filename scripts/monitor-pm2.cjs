@@ -15,6 +15,9 @@ class PM2Monitor {;
     this.interval = 5000; // 5 seconds;
     this.isRunning = false;
   }
+const { exec } = require('child_process');const fs = require('fs');const path = require('path');';class PM2Monitor {;
+  constructor() {;
+    this.logsDir = './logs';    this.interval = 5000; // 5 seconds;    this.isRunning = false;}
 ;
   // Get PM2 status;
   async getStatus() {;
@@ -28,34 +31,27 @@ class PM2Monitor {;
       });
     });
   }
-;
+<<<<<<< HEAD;
   // Get PM2 logs for a specific process;
   async getLogs(processName, lines = 10) {;
     return new Promise((resolve, reject) => {;
       exec(pm2 logs ${processName} --lines ${lines} --nostream',;
         (error, stdout, stderr) => {;
           if (error) {;
+      exec(pm2 logs ${processName} --lines ${lines} --nostream',';        (error, stdout, stderr) => {;          if (error) {;
             reject(error);
-            return;,
-}
-          resolve(stdout);,
-}
-      );,
-});,
-}
+            return;}
+          resolve(stdout);}
+      );});}
 ;
   // Get system information;
   async getSystemInfo() {;
     return new Promise((resolve, reject) => {;
-      exec('pm2 monit --no-daemon', (error, stdout, stderr) => {';        if (error) {;';          reject(error);
-          return;,
-}
-        resolve(stdout);,
-});,
-});,
-}
+      exec('pm2 monit --no-daemon', (error, stdout, stderr) => {';        if (error) {;          reject(error);
+          return;}
+        resolve(stdout);});});}
 ;
-  // Create logs directory if it doesn't exist';  ensureLogsDir() {;';    if (!fs.existsSync(this.logsDir)) {;
+  // Create logs directory if it doesn't exist';  ensureLogsDir() {;    if (!fs.existsSync(this.logsDir)) {;
       fs.mkdirSync(this.logsDir, { "recursive": true });,";}
   }
 ;
@@ -79,7 +75,7 @@ class PM2Monitor {;
     }
   }
 ;
-  }
+<<<<<<< HEAD  }
 ;
   // Parse PM2 status output;
   parseStatus(statusOutput) {;
@@ -108,6 +104,15 @@ class PM2Monitor {;
 ;
     return processes;
   }
+    const lines = statusOutput.split('\n');    const processes = [];;
+    for (const line of lines) {;
+      if (line.includes('│') && !line.includes('──') && !line.includes('id')) {';        const parts = line;          .split('│')';          .map(part => part.trim());          .filter(part => part);
+        if (parts.length >= 6) {;
+          processes.push({;);            "id": parts[0],;";            "name": parts[1],;";            "mode": parts[2],;";            "restarts": parts[3],;";            "status": parts[4],;";            "cpu": parts[5],;";            "memory": parts[6] || 'N/A',';          });,';}
+      }
+    }
+;
+    return processes;}
 ;
   // Generate summary statistics;
   generateSummary(statusOutput) {;
@@ -139,7 +144,7 @@ class PM2Monitor {;
 ;
     return summary;
   }
-;
+<<<<<<< HEAD;
   // Parse memory string to bytes;
   parseMemory(memoryStr) {;
     const match = memoryStr.match(/(\d+(?:\.\d+)?)\s*(mb|kb|b)/i);
@@ -158,6 +163,7 @@ class PM2Monitor {;
       default:;
         return 0;
     }
+      case 'mb':';        return value * 1024 * 1024;      case 'kb':';        return value * 1024;      case 'b':';        return value;      "default":;";        return 0;}
   }
 ;
   // Start monitoring;
@@ -173,13 +179,14 @@ class PM2Monitor {;
 ;
     this.monitor();
   }
-;
+<<<<<<< HEAD;
   // Stop monitoring;
   stop() {;
     this.isRunning = false;
     console.log('\n🛑 Monitoring stopped');
     process.exit(0);
   }
+    console.log('\n🛑 Monitoring stopped');    process.exit(0);,';}
 ;
   // Main monitoring loop;
   async monitor() {;
@@ -190,7 +197,7 @@ class PM2Monitor {;
         console.log('='.repeat(60));
         console.log(`⏰ Last Updated: ${new Date().toLocaleString()}\n`);
 ;
-        // Get and display status;
+<<<<<<< HEAD        // Get and display status;
         const status = await this.getStatus();
         console.log(status);
 ;
@@ -212,6 +219,13 @@ class PM2Monitor {;
           console.log('\n⚠️  WARNING: High number of restarts detected!');
         }
 ;
+        console.log('\n📈 Summary "Statistics":');console.log(`   Total "Processes": ${summary.total}`);console.log(`   "Online": ${summary.online} ✅`);console.log(`   "Errored": ${summary.errored} ❌`);console.log(`   "Stopped": ${summary.stopped} ⏸️`);console.log(`   "Launching": ${summary.launching} 🔄`);console.log(`   Total "Restarts": ${summary.totalRestarts}');        console.log(   Average "Memory": ${(summary.averageMemory / (1024 * 1024)).toFixed(2)} MB`);`;        );`);`;        console.log(`);`);`;          `   Total "Memory": ${(summary.totalMemory / (1024 * 1024)).toFixed(2)} MB``;        );
+;
+        // Check for issues;
+        if (summary.errored > 0) {;
+          console.log('\n⚠️  "WARNING": Some processes are in error state!');        }';;
+        if (summary.totalRestarts > 50) {;
+          console.log('\n⚠️  "WARNING": High number of restarts detected!');        }';;
         // Generate report;
         await this.generateReport();
 ;
@@ -221,7 +235,7 @@ class PM2Monitor {;
         console.error('Error in monitoring loop: ', error);
         await this.sleep(this.interval);
       }
-    }
+<<<<<<< HEAD    }
   }
 ;
   // Utility function to sleep;
@@ -255,6 +269,26 @@ async function main() {;
   const command = process.argv[2] || 'start';
 ;
   // Ensure logs directory exists;
+    return new Promise(resolve => setTimeout(resolve, ms));}
+;
+  // Display help information;
+  showHelp() {;
+    console.log('';PM2 Monitoring Dashboard - Usage;);"Commands":;";  start     - Start monitoring dashboard;
+  status    - Show current PM2 status;
+  logs <name> - Show logs for specific process;
+  report    - Generate status report;
+  help      - Show this help message;
+
+"Examples":;";  node scripts/monitor-pm2.js start;
+  node scripts/monitor-pm2.js status;
+  node scripts/monitor-pm2.js logs console-error-fixer;
+  node scripts/monitor-pm2.js report);}
+}
+;
+// Main execution;
+async function main() {;
+  const monitor = new PM2Monitor();
+  const command = process.argv[2] || 'start';';  // Ensure logs directory exists;
   monitor.ensureLogsDir();
 ;
   // Handle commands;
@@ -302,4 +336,4 @@ if (require.main === module) {;
   main().catch(console.error);
 }
 ;
-module.exports = PM2Monitor;
+<<<<<<< HEADmodule.exports = PM2Monitor;

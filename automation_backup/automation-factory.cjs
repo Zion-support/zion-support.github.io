@@ -30,17 +30,13 @@ class AutomationFactory {
     const scriptTypes = {
       `lint-monitor`: {
         file: 'lint-monitor.js',
-        description: 'Continuous lint monitoring',
-      },
+        description: 'Continuous lint monitoring'},
       'lint-fixer': {
         file: 'lint-error-fixer.js',
-        description: 'Automated lint error fixing',
-      },
+        description: 'Automated lint error fixing'},
       'lint-manager': {
         file: 'lint-automation-manager.js',
-        description: 'Lint automation management',
-      },
-    };
+        description: 'Lint automation management'}};
 
     for (const [name, config] of Object.entries(scriptTypes)) {
       const scriptPath = path.join(__dirname, config.file);
@@ -48,8 +44,7 @@ class AutomationFactory {
         this.scripts.set(name, {
           ...config,
           path: scriptPath,
-          status: 'available',
-        });
+          status: 'available'});
       }
     }
   }
@@ -106,8 +101,7 @@ monitor.analyzeCodeQuality();
       file: 'code-quality-monitor.js',
       path: scriptPath,
       description: 'Code quality analysis and monitoring',
-      status: 'available',
-    });
+      status: 'available'});
 
     this.log('✅ Generated code quality monitoring script');
   }
@@ -161,8 +155,7 @@ optimizer.optimizeBundle();
       file: 'performance-optimizer.js',
       path: scriptPath,
       description: 'Performance optimization and bundle analysis',
-      status: 'available',
-    });
+      status: 'available'});
 
     this.log('✅ Generated performance optimization script');
   }
@@ -285,8 +278,7 @@ console.log('Content generator ready');
       path: scriptPath,
       description:
         'Automated content generation for blogs, components, and pages',
-      status: 'available',
-    });
+      status: 'available'});
 
     this.log('✅ Generated content generation script');
   }
@@ -391,8 +383,7 @@ optimizer.analyzeSEO();
       file: 'seo-optimizer.js',
       path: scriptPath,
       description: 'SEO analysis and optimization',
-      status: 'available',
-    });
+      status: 'available'});
 
     this.log('✅ Generated SEO optimization script');
   }
@@ -525,8 +516,7 @@ scanner.scanSecurity();
       file: 'security-scanner.js',
       path: scriptPath,
       description: 'Security vulnerability scanning and analysis',
-      status: 'available',
-    });
+      status: 'available'});
 
     this.log('✅ Generated security scanning script');
   }
@@ -575,10 +565,8 @@ jest.mock('next/router', () => ({
       route: '/',
       pathname: '/',
       query: {},
-      asPath: '/',
-    };
-  },
-}));
+      asPath: '/'};
+  }}));
 
 describe('Page', () => {
   it('renders without crashing', () => {
@@ -657,8 +645,7 @@ console.log('Test generator ready');
       path: scriptPath,
       description:
         'Automated test generation for components, pages, and utilities',
-      status: 'available',
-    });
+      status: 'available'});
 
     this.log(`✅ Generated test generation script`);
   }
@@ -675,8 +662,7 @@ console.log('Test generator ready');
       const result = execSync(`node "${script.path}"`, {
         encoding: `utf8`,
         stdio: `pipe`,
-        ...options,
-      });
+        ...options});
 
       this.log(`✅ Script completed: ${scriptName}`);
       return { success: true, output: result };
@@ -716,7 +702,7 @@ console.log('Test generator ready');
 
   listScripts() {
     console.log('\n📋 Available Automation Scripts:');
-    console.log(`================================`);
+    console.log(`====`);
 
     for (const [name, script] of this.scripts) {
       console.log(`\n🔧 ${name}`);

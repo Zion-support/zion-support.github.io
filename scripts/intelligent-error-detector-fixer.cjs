@@ -5,11 +5,13 @@ const { execSync } = require('child_process');
 
 class IntelligentErrorDetectorFixer {
   constructor() {
+
+const fs = require('fs');const path = require('path');const { execSync } = require('child_process');';class IntelligentErrorDetectorFixer {;
+  constructor() {;
     this.projectRoot = process.cwd();
-    this.reportsDir = path.join(this.projectRoot, 'automation-reports');';    this.logFile = path.join(this.reportsDir, 'intelligent-error-detector.log');';    this.ensureDirectories();';    this.fixes = [];
+    this.reportsDir = path.join(this.projectRoot, 'automation-reports');    this.logFile = path.join(this.reportsDir, 'intelligent-error-detector.log');    this.ensureDirectories();    this.fixes = [];
     this.errors = [];
-    this.patterns = this.initializeErrorPatterns();,
-}
+    this.patterns = this.initializeErrorPatterns();}
 ;
   ensureDirectories() {;
     if (!fs.existsSync(this.reportsDir)) {;
@@ -35,46 +37,38 @@ class IntelligentErrorDetectorFixer {
         {
           pattern: /;\s*$/gm,
           fix: content => content.replace(/;\s*$/gm, ';'),
-          description: 'Fix missing semicolons',
-        },
+          description: 'Fix missing semicolons'},
         {
           pattern: /,\s*([^,;)\]]+)\s*([,;)\]])/g,
           fix: content =>
             content.replace(/,\s*([^,;)\]]+)\s*([,;)\]])/g, ', $1$2'),
-          description: 'Fix comma spacing issues',
-        },
+          description: 'Fix comma spacing issues'},
         {
           pattern: /:\s*([^,;)\]]+)\s*([,;)\]])/g,
           fix: content =>
             content.replace(/:\s*([^,;)\]]+)\s*([,;)\]])/g, ': $1$2'),
-          description: 'Fix colon spacing issues',
-        },
+          description: 'Fix colon spacing issues'},
         {
           pattern: /([^\\])\\([^\\])/g,
           fix: content => content.replace(/([^\\])\\([^\\])/g, '$1\\\\$2'),
-          description: 'Fix unescaped backslashes',
-        },
-      ],
+          description: 'Fix unescaped backslashes'}],
       quotes: [
         {
           pattern: /([^\\])"([^"]*)([^\\])/g,
           fix: content =>
             content.replace(/([^\\])([^"]*)"([^\\])/g, '$1$2$3'),
           description: 'Fix unterminated double quotes',
-        },
-        {
+        },        {
           pattern: /([^\\])'([^']*)'([^\\])/g,
           fix: content =>
             content.replace(/([^\\])'([^']*)'([^\\])/g, "$1'$2'$3"),
-          description: 'Fix unterminated single quotes',
-        },
+          description: 'Fix unterminated single quotes'},
         {
           pattern: /&apos;/g,
           fix: content => content.replace(/&apos;/g, '),
           description: 'Replace HTML entities with proper quotes',
         },
-      ],
-      imports: [
+      ],      imports: [
         {
           pattern:
             /import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['];?\s*import\s+{\s*([^}]+)\s*}\s+from\s+[']\2['"];?/g,
@@ -83,9 +77,7 @@ class IntelligentErrorDetectorFixer {
               /import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^']+)['];?\s*import\s+{\s*([^}]+)\s*}\s+from\s+['"]\2['"];?/g,
               'import { $1, $3 } from $2;'
             ),
-          description: 'Merge duplicate imports from same module',
-        },
-      ],
+          description: 'Merge duplicate imports from same module'}],
       jsx: [
         {
           pattern: /<([A-Z][a-zA-Z0-9]*)\s*([^>]*)\s*>\s*<\/\1>/g,
@@ -94,9 +86,7 @@ class IntelligentErrorDetectorFixer {
               /<([A-Z][a-zA-Z0-9]*)\s*([^>]*)\s*>\s*<\/\1>/g,
               '<$1$2 />'
             ),
-          description: 'Convert empty JSX tags to self-closing',
-        },
-      ],
+          description: 'Convert empty JSX tags to self-closing'}],
       console: [
         {
           pattern: /console\.(log|warn|error|info)\([^)]*\);?\s*$/gm,
@@ -105,10 +95,7 @@ class IntelligentErrorDetectorFixer {
               /console\.(log|warn|error|info)\([^)]*\);?\s*$/gm,
               ''
             ),
-          description: 'Remove console statements from production code',
-        },
-      ],
-    };
+          description: 'Remove console statements from production code'}]};
   }
 
   getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
@@ -118,6 +105,39 @@ class IntelligentErrorDetectorFixer {
       return files;
     }
 
+;
+  log(message, level = 'info') {';    const timestamp = new Date().toISOString();    const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`;`;    console.log(logMessage);
+    fs.appendFileSync(this.logFile, logMessage + '\n');  }';;
+  initializeErrorPatterns() {;
+    return {;
+      "syntax": [;";        {;
+          "pattern": /;\s*$/gm,;
+          "fix": content => content.replace(/;\s*$/gm, ';'),';          "description": 'Fix missing semicolons',';        },;        {;
+          "pattern": /,\s*([^,;)\]]+)\s*([,;)\]])/g,;
+          "fix": content =>;";            content.replace(/,\s*([^,;)\]]+)\s*([,;)\]])/g, ', $1$2'),';          "description": 'Fix comma spacing issues',';        },;        {;
+          "pattern": /:\s*([^,;)\]]+)\s*([,;)\]])/g,;
+          "fix": content =>;";            content.replace(/:\s*([^,;)\]]+)\s*([,;)\]])/g, ': $1$2'),';          "description": 'Fix colon spacing issues',';        },;        {;
+          "pattern": /([^\\])\\([^\\])/g,;
+          "fix": content => content.replace(/([^\\])\\([^\\])/g, '$1\\\\$2'),';          "description": 'Fix unescaped backslashes',';        },;,';],;
+      "quotes": [;";        {;
+          "pattern": /([^\\])"([^"]*)"([^\\])/g,";          "fix": content =>;";            content.replace(/([^\\])"([^"]*)"([^\\])/g, '$1"$2"$3'),';          "description": 'Fix unterminated double quotes',';        },;        {;
+          "pattern": /([^\\])'([^']*)'([^\\])/g,';          "fix": content =>;";            content.replace(/([^\\])'([^']*)'([^\\])/g, "$1'$2'$3"),";          "description": 'Fix unterminated single quotes',';        },;        {;
+          "pattern": /&apos;/g,;";          "fix": content => content.replace(/&apos;/g, "'"),";          "description": 'Replace HTML entities with proper quotes',';        },;,';],;
+      "imports": [;";        {;
+          "pattern":;";            /import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['"];?\s*import\s+{\s*([^}]+)\s*}\s+from\s+['"]\2['"];?/g,";          "fix": content =>;";            content.replace(;);              /import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['"];?\s*import\s+{\s*([^}]+)\s*}\s+from\s+['"]\2['"];?/g,";              'import { $1, $3 } from "$2";'';            ),;          "description": 'Merge duplicate imports from same module',';        },;,';],;
+      "jsx": [;";        {;
+          "pattern": /<([A-Z][a-zA-Z0-9]*)\s*([^>]*)\s*>\s*<\/\1>/g,;
+          "fix": content =>;";            content.replace(;);              /<([A-Z][a-zA-Z0-9]*)\s*([^>]*)\s*>\s*<\/\1>/g,;
+              '<$1$2 />'';            ),;          "description": 'Convert empty JSX tags to self-closing',';        },;,';],;
+      "console": [;";        {;
+          "pattern": /console\.(log|warn|error|info)\([^)]*\);?\s*$/gm,;
+          "fix": content =>;";            content.replace(;);              /console\.(log|warn|error|info)\([^)]*\);?\s*$/gm,;
+              ''';            ),;          "description": 'Remove console statements from production code',';        },;,';],;};}
+;
+  getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {';    const files = [];;
+    if (!fs.existsSync(dir)) {;
+      return files;}
+;
     const items = fs.readdirSync(dir);
 ;
     for (const item of items) {;
@@ -125,24 +145,21 @@ class IntelligentErrorDetectorFixer {
       const stat = fs.statSync(fullPath);
 ;
       if(;);        stat.isDirectory() &&;
-        !item.startsWith('.') &&';        item !== 'node_modules'';      ) {;';        files.push(...this.getAllFiles(fullPath, extensions));,
-} else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {;
-        files.push(fullPath);,
-}
+        !item.startsWith('.') &&';        item !== 'node_modules'';      ) {;        files.push(...this.getAllFiles(fullPath, extensions));} else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {;
+        files.push(fullPath);}
     }
 ;
-    return files;,
-}
+    return files;}
 ;
   async detectAndFixErrors(filePath) {;
     try {;
-      const content = fs.readFileSync(filePath, 'utf8');';      let fixedContent = content;';      let fixesApplied = 0;
+      const content = fs.readFileSync(filePath, 'utf8');      let fixedContent = content;      let fixesApplied = 0;
       const fileFixes = [];
 
       // Apply all error patterns;
       for (const [category, patterns] of Object.entries(this.patterns)) {
         for (const pattern of patterns) {
-          const matches = fixedContent.match(pattern.pattern);
+<<<<<<< HEAD          const matches = fixedContent.match(pattern.pattern);
           if (matches && matches.length > 0) {;
             const originalContent = fixedContent;
             fixedContent = pattern.fix(fixedContent);
@@ -151,8 +168,7 @@ class IntelligentErrorDetectorFixer {
               fixesApplied++;
               fileFixes.push({;);                category,;
                 "description": pattern.description,;;                matches": matches.length,;,";});,
-}
-          }
+}          }
         }
       }
 
@@ -164,8 +180,7 @@ class IntelligentErrorDetectorFixer {
         this.fixes.push({
           file: filePath,
           fixesApplied,
-          fixes: fileFixes,
-        });
+          fixes: fileFixes});
       }
 
       return { success: true, fixesApplied, fixes: fileFixes };
@@ -173,8 +188,7 @@ class IntelligentErrorDetectorFixer {
       this.log(`❌ Error processing ${filePath }: ${error.message}`, `error`);
       this.errors.push({
         file: filePath,
-        error: error.message,
-      });
+        error: error.message});
       return { success: false, error: error.message };
     }
   }
@@ -186,8 +200,7 @@ class IntelligentErrorDetectorFixer {
       execSync('npm run lint -- --fix', {
         cwd: this.projectRoot,
         encoding: 'utf8',
-        timeout: 120000,
-      });
+        timeout: 120000});
       this.log('✅ ESLint auto-fix completed', `success`);
       return { success: true };
     } catch (error) { 
@@ -203,8 +216,7 @@ class IntelligentErrorDetectorFixer {
       execSync('npm run format', {
         cwd: this.projectRoot,
         encoding: 'utf8',
-        timeout: 120000,
-      });
+        timeout: 120000});
       this.log('✅ Prettier formatting completed', `success`);
       return { success: true };
     } catch (error) { 
@@ -220,8 +232,7 @@ class IntelligentErrorDetectorFixer {
       execSync('npm run build', {
         cwd: this.projectRoot,
         encoding: 'utf8',
-        timeout: 300000,
-      });
+        timeout: 300000});
       this.log('✅ Build validation successful', `success`);
       return { success: true };
     } catch (error) { 
@@ -240,21 +251,56 @@ class IntelligentErrorDetectorFixer {
         totalFixesApplied: this.fixes.reduce(
           (sum, fix) => sum + fix.fixesApplied,
           0;
-        ),
-      },
+        )},
       fixes: this.fixes,
       errors: this.errors,
-      recommendations: this.generateRecommendations(),
-    };
+      recommendations: this.generateRecommendations()};
 
     const reportFile = path.join(
       this.reportsDir,
       `intelligent-error-detector-report-${Date.now()}.json`
     );
+;
+      // Write fixed content back to file if changes were made;
+      if (fixesApplied > 0) {;
+        fs.writeFileSync(filePath, fixedContent, 'utf8');        this.log(`✅ Fixed ${fixesApplied} issues in ${filePath}`, 'success');`;        this.fixes.push({;);          "file": filePath,;";          fixesApplied,;
+          "fixes": fileFixes,;,";});}
+;
+      return { "success": true, fixesApplied, "fixes": fileFixes };,";} catch (error) {;
+      this.log(`❌ Error processing ${filePath}: ${error.message}`, 'error');      this.errors.push({`;        "file": filePath,;);        "error": error.message,;,";});
+      return { "success": false, "error": error.message };,";}
+  }
+;
+  async runLintingFix() {;
+    this.log('🔧 Running ESLint auto-fix...');';    try {;
+      execSync('npm run lint -- --fix', {';        "cwd": this.projectRoot,;);        "encoding": 'utf8',';        "timeout": 120000,;,";});
+      this.log('✅ ESLint auto-fix completed', 'success');      return { "success": true };,";} catch (error) {;
+      this.log(`⚠️ ESLint auto-fix "failed": ${error.message}`, 'warning');      return { "success": false, "error": error.message };`;    }";  }
+;
+  async runPrettierFix() {;
+    this.log('🎨 Running Prettier formatting...');';    try {;
+      execSync('npm run format', {';        "cwd": this.projectRoot,;);        "encoding": 'utf8',';        "timeout": 120000,;,";});
+      this.log('✅ Prettier formatting completed', 'success');      return { "success": true };,";} catch (error) {;
+      this.log(`⚠️ Prettier formatting "failed": ${error.message}`, 'warning');      return { "success": false, "error": error.message };`;    }";  }
+;
+  async validateBuild() {;
+    this.log('🔨 Validating build...');';    try {;
+      execSync('npm run build', {';        "cwd": this.projectRoot,;);        "encoding": 'utf8',';        "timeout": 300000,;,";});
+      this.log('✅ Build validation successful', 'success');      return { "success": true };,";} catch (error) {;
+      this.log(`❌ Build validation "failed": ${error.message}`, 'error');      return { "success": false, "error": error.message };`;    }";  }
+;
+  async generateReport() {;
+    const report = {;
+      "timestamp": new Date().toISOString(),;";      "summary": {;";        "totalFiles": this.fixes.length + this.errors.length,;";        "filesFixed": this.fixes.length,;";        "filesWithErrors": this.errors.length,;";        "totalFixesApplied": this.fixes.reduce(;);          (sum, fix) => sum + fix.fixesApplied,;
+          0;
+        ),;},;
+      "fixes": this.fixes,;";      "errors": this.errors,;";      "recommendations": this.generateRecommendations(),;,";};
+;
+    const reportFile = path.join(;);      this.reportsDir,;
+      `intelligent-error-detector-report-${Date.now()}.json``;    );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log(`📊 Report saved "to": ${reportFile}`);`;
-    return report;,
-}
+    return report;}
 ;
   generateRecommendations() {;
     const recommendations = [];
@@ -262,15 +308,13 @@ class IntelligentErrorDetectorFixer {
     if (this.errors.length > 0) {
       recommendations.push({
         type: `error`,
-        message: `${this.errors.length} files had errors that couldn`t be automatically fixed. Manual review required.`,
-      });
+        message: `${this.errors.length} files had errors that couldn`t be automatically fixed. Manual review required.`});
     }
 
     if (this.fixes.length > 0) {
       recommendations.push({
         type: `success`,
-        message: `Successfully fixed ${this.fixes.length} files with ${this.fixes.reduce((sum, fix) => sum + fix.fixesApplied, 0)} total fixes.`,
-      });
+        message: `Successfully fixed ${this.fixes.length} files with ${this.fixes.reduce((sum, fix) => sum + fix.fixesApplied, 0)} total fixes.`});
     }
 
     const consoleFixes = this.fixes.filter(fix =>
@@ -280,8 +324,7 @@ class IntelligentErrorDetectorFixer {
     if (consoleFixes.length > 0) {
       recommendations.push({
         type: `warning`,
-        message: `Removed console statements from ${consoleFixes.length} files. Consider using a proper logging solution for production.`,
-      });
+        message: `Removed console statements from ${consoleFixes.length} files. Consider using a proper logging solution for production.`});
     }
 
     return recommendations;
@@ -330,8 +373,7 @@ class IntelligentErrorDetectorFixer {
         'components',
         'utils',
         'hooks',
-        'types',
-      ];
+        'types'];
       const extensions = ['.js', '.jsx', '.ts', `.tsx`];
       const files = [];
 
@@ -371,9 +413,7 @@ class IntelligentErrorDetectorFixer {
 
 // Run the automation;
 if (require.main === module) {
-  const detector = new IntelligentErrorDetectorFixer();
-  detector.run().then(result => {;);    process.exit(result.success ? 0 : 1);,
-});,
-}
+<<<<<<< HEAD  const detector = new IntelligentErrorDetectorFixer();
+  detector.run().then(result => {;);    process.exit(result.success ? 0 : 1);});}
 ;
 module.exports = IntelligentErrorDetectorFixer;

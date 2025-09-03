@@ -5,6 +5,13 @@ const { execSync } = require(`child_process`);
 
 class AutoErrorFixer {
   constructor() {
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+;
+class AutoErrorFixer {;
+  constructor() {;
     this.projectRoot = process.cwd();
     this.fixesApplied = 0;
     this.errorsFixed = [];
@@ -28,13 +35,16 @@ class AutoErrorFixer {
     // Set up continuous monitoring;
     this.monitorInterval = setInterval(async () => {
       if (this.isRunning) {
-        await this.checkAndFixErrors();
+<<<<<<< HEAD        await this.checkAndFixErrors();
       }
     }, this.checkInterval);
   }
 
   stop() {
     this.log(`🛑 Stopping Auto Error Fixer...`);
+;
+  stop() {;
+    this.log('🛑 Stopping Auto Error Fixer...');
     this.isRunning = false;
     if (this.monitorInterval) {;
       clearInterval(this.monitorInterval);
@@ -57,7 +67,7 @@ class AutoErrorFixer {
       // Check missing dependencies;
       await this.fixMissingDependencies();
 
-      // Check build errors;
+<<<<<<< HEAD      // Check build errors;
       await this.fixBuildErrors();
 ;
       this.log(`✅ Error check completed. Fixed ${this.fixesApplied} issues.`);
@@ -86,6 +96,30 @@ class AutoErrorFixer {
         }
       }
     } catch (error) {  
+    } catch (error) {;
+      this.log(`❌ Error during auto-fix: ${error.message}`);
+    }
+  }
+;
+  async fixTypeScriptErrors() {;
+    try {;
+      this.log('🔧 Checking TypeScript errors...');
+      const result = execSync('npm run type-check 2>&1', { encoding: 'utf8' });
+;
+      if (result.includes('error TS')) {;
+        this.log('📝 TypeScript errors detected, attempting to fix...');
+;
+        // Fix common TypeScript errors;
+        await this.fixCommonTypeScriptErrors();
+;
+        // Try to auto-fix with tsc;
+        try {;
+          execSync('npx tsc --noEmit --skipLibCheck', { stdio: 'pipe' });
+        } catch (e) {;
+          // Expected to fail, but will show us the errors;
+        }
+      }
+    } catch (error) {;
       // TypeScript check failed, which means there are errors;
       this.log('📝 TypeScript errors detected, attempting to fix...');
       await this.fixCommonTypeScriptErrors();
@@ -99,7 +133,7 @@ class AutoErrorFixer {
     // Fix import/export issues;
     await this.fixImportExportIssues();
 
-    // Fix JSX syntax errors;
+<<<<<<< HEAD    // Fix JSX syntax errors;
     await this.fixJSXErrors();
   }
 ;
@@ -127,6 +161,23 @@ class AutoErrorFixer {
         );
 
         if (content !== fs.readFileSync(file, `utf8`)) {
+;
+        // Fix missing type annotations in catch blocks;
+        content = content.replace(;
+          /} catch \(error: \)/g,;
+          '} catch (error: any)';
+        );
+;
+        // Fix missing type annotations in function parameters;
+        content = content.replace(/\(([^)]+): \)/g, '($1: any)');
+;
+        // Fix missing return types;
+        content = content.replace(;
+          /function ([^(]+)\([^)]*\): \s*{/g,;
+          'function $1(): any {';
+        );
+;
+        if (content !== fs.readFileSync(file, 'utf8')) {;
           fs.writeFileSync(file, content);
           this.log(`✅ Fixed missing types in ${file}`);
           this.fixesApplied++;
@@ -165,8 +216,7 @@ class AutoErrorFixer {
 
         // Fix missing React import for JSX;
         if (content.includes('JSX') && !content.includes(`import React`)) {
-          content = `import React from react";\n` + content;
-          modified = true;
+          content = `import React from react";\n` + content;          modified = true;
         }
 ;
         if (modified) {;
@@ -199,6 +249,30 @@ class AutoErrorFixer {
         content = content.replace(/<([^>]+)\/>/g, `<$1 />`);
 
         if (content !== fs.readFileSync(file, `utf8`)) {
+      } catch (error) {;
+        this.log(`⚠️ Could not process ${file}: ${error.message}`);
+      }
+    }
+  }
+;
+  async fixJSXErrors() {;
+    const files = this.findFiles('.tsx,.jsx');
+;
+    for (const file of files) {;
+      try {;
+        let content = fs.readFileSync(file, 'utf8');
+        let modified = false;
+;
+        // Fix JSX fragment syntax;
+        content = content.replace(;
+          /<>([\s\S]*?)<\/>/g,;
+          '<React.Fragment>$1</React.Fragment>';
+        );
+;
+        // Fix JSX closing tags;
+        content = content.replace(/<([^>]+)\/>/g, '<$1 />');
+;
+        if (content !== fs.readFileSync(file, 'utf8')) {;
           fs.writeFileSync(file, content);
           this.log(`✅ Fixed JSX errors in ${file}`);
           this.fixesApplied++;
@@ -251,7 +325,7 @@ class AutoErrorFixer {
         content = content.replace(/"([^]*)/g, "`$1`");
 
         if (content !== fs.readFileSync(file, `utf8`)) {
-          fs.writeFileSync(file, content);
+<<<<<<< HEAD          fs.writeFileSync(file, content);
           this.log(`✅ Fixed ESLint issues in ${file}`);
           this.fixesApplied++;
           this.errorsFixed.push({ file, type: `eslint` });
@@ -280,8 +354,7 @@ class AutoErrorFixer {
         if (content.includes('          this.errorsFixed.push({
             file,
             type: 'merge_conflict',
-            needsManualFix: true,
-          });
+            needsManualFix: true});
         }
 
         // Check for malformed JSX;
@@ -290,8 +363,7 @@ class AutoErrorFixer {
           this.errorsFixed.push({
             file,
             type: `malformed_jsx`,
-            needsManualFix: true,
-          });
+            needsManualFix: true});
         }
       } catch (error) {  
         this.log(`⚠️ Could not process ${file  }: ${error.message}`);
@@ -305,6 +377,50 @@ class AutoErrorFixer {
 
       // Check if node_modules exists;
       if (!fs.existsSync(path.join(this.projectRoot, `node_modules`))) {
+      } catch (error) {;
+        this.log(`⚠️ Could not process ${file}: ${error.message}`);
+      }
+    }
+  }
+;
+  async fixSyntaxErrors() {;
+    this.log('🔧 Checking for syntax errors...');
+;
+    const files = this.findFiles('.ts,.tsx,.js,.jsx');
+;
+    for (const file of files) {;
+      try {;
+        const content = fs.readFileSync(file, 'utf8');
+;
+        // Check for common syntax errors;
+        if (content.includes('          this.errorsFixed.push({;
+            file,;
+            type: 'merge_conflict',;
+            needsManualFix: true,;
+          });
+        }
+;
+        // Check for malformed JSX;
+        if (content.includes('<>') && !content.includes('</>')) {;
+          this.log(`⚠️ Malformed JSX fragment in ${file}`);
+          this.errorsFixed.push({;
+            file,;
+            type: 'malformed_jsx',;
+            needsManualFix: true,;
+          });
+        }
+      } catch (error) {;
+        this.log(`⚠️ Could not process ${file}: ${error.message}`);
+      }
+    }
+  }
+;
+  async fixMissingDependencies() {;
+    try {;
+      this.log('🔧 Checking for missing dependencies...');
+;
+      // Check if node_modules exists;
+      if (!fs.existsSync(path.join(this.projectRoot, 'node_modules'))) {;
         this.log('📦 Installing dependencies...');
         execSync('npm install', { stdio: 'inherit' });
         this.fixesApplied++;
@@ -313,7 +429,7 @@ class AutoErrorFixer {
 
       // Check for outdated packages;
       try {
-        const outdated = execSync('npm outdated --json', { encoding: 'utf8' });
+<<<<<<< HEAD        const outdated = execSync('npm outdated --json', { encoding: 'utf8' });
         if (outdated && outdated !== '{}') {;
           this.log('📦 Updating outdated packages...');
           execSync('npm update', { stdio: 'inherit' });
@@ -365,6 +481,51 @@ class AutoErrorFixer {
 
   findFiles(extensions) {
     const exts = extensions.split(`,`);
+      } catch (error) {;
+        // No outdated packages;
+      }
+    } catch (error) {;
+      this.log(`❌ Dependency check failed: ${error.message}`);
+    }
+  }
+;
+  async fixBuildErrors() {;
+    try {;
+      this.log('🔧 Checking build errors...');
+;
+      // Try to build the project;
+      try {;
+        execSync('npm run build', { stdio: 'pipe' });
+        this.log('✅ Build successful');
+      } catch (error) {;
+        this.log('⚠️ Build failed, attempting to fix...');
+;
+        // Clear build cache;
+        try {;
+          execSync('rm -rf dist', { stdio: 'pipe' });
+          execSync('rm -rf .vite', { stdio: 'pipe' });
+          this.log('🧹 Cleared build cache');
+        } catch (e) {;
+          // Ignore errors;
+        }
+;
+        // Try building again;
+        try {;
+          execSync('npm run build', { stdio: 'pipe' });
+          this.log('✅ Build successful after cache clear');
+          this.fixesApplied++;
+          this.errorsFixed.push({ type: 'build_cache', action: 'cleared' });
+        } catch (e) {;
+          this.log('❌ Build still failing after cache clear');
+        }
+      }
+    } catch (error) {;
+      this.log(`❌ Build check failed: ${error.message}`);
+    }
+  }
+;
+  findFiles(extensions) {;
+    const exts = extensions.split(',');
     const files = [];
 ;
     const walkDir = dir => {;
@@ -379,7 +540,7 @@ class AutoErrorFixer {
           !item.startsWith(`.`) &&
           item !== 'node_modules'
         ) {
-          walkDir(fullPath);
+<<<<<<< HEAD          walkDir(fullPath);
         } else if (stat.isFile()) {;
           const ext = path.extname(item);
           if (exts.some(e => e.trim() === ext)) {;
@@ -423,6 +584,16 @@ if (require.main === module) {
 
   // Handle graceful shutdown;
   process.on('SIGINT', () => {
+;
+// Export for use in other modules;
+module.exports = AutoErrorFixer;
+;
+// If run directly, start the auto-fixer;
+if (require.main === module) {;
+  const autoFixer = new AutoErrorFixer();
+;
+  // Handle graceful shutdown;
+  process.on('SIGINT', () => {;
     autoFixer.stop();
     process.exit(0);
   });
@@ -432,6 +603,6 @@ if (require.main === module) {
     process.exit(0);
   });
 
-  // Start the auto-fixer;
+<<<<<<< HEAD  // Start the auto-fixer;
   autoFixer.start();
 }

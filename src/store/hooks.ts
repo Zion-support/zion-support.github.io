@@ -1,7 +1,6 @@
 import { useDispatch, useSelector  } from 'react-redux'; ; export const useAppDispatch = () => useDispatch(); export const useAppSelector = useSelector; ;
 export const useAppDispatch = () => useDispatch();
 export const useAppSelector = useSelector;"
-
 const Hooks: React.FC = () => {
   return (
     <div className=min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -24,10 +23,6 @@ const Hooks: React.FC = () => {
               Get Started
             </a>
           </div>
-        </div>
-      </div>
-    </div>
-  );
-};
+  )};
 
 export default Hooks;

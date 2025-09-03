@@ -1,8 +1,6 @@
 
-      <link rel='canonical' href="{canonical}" /" >
-import { Helmet } from &apos;react-helmet-async';&apos;&apos;
+      <link rel='canonical' href="{canonical}" /" >import { Helmet } from &apos;react-helmet-async';&apos;&apos;
 
-export function SEO({
   title = &apos;Zion Tech Group&apos;,
   description = &apos;Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.&apos;,
   canonical = &apos;https: //ziontechgroup.com/&apos;,
@@ -25,7 +23,6 @@ export default SEO;
       <meta name='description' content="{description}" /  >'
       <meta name='keywords' content="{keywords}" /  >'
       <link rel='canonical' href="{canonical}" /  >
-    </Helmet>
-  )}'
+    </Helmet>  )}'
 export default SEO"
 "

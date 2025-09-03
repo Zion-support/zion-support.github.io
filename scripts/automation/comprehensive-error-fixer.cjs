@@ -12,6 +12,20 @@ const glob = require(`glob`);
 
 class ComprehensiveErrorFixer {
   constructor() {
+
+/**;
+ * Comprehensive Error Fixer Automation;
+ * Fixes multiple types of errors comprehensively;
+ * Runs every 30 minutes;
+ */;
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+const glob = require('glob');
+;
+class ComprehensiveErrorFixer {;
+  constructor() {;
     this.projectRoot = process.cwd();
     this.logFile = path.join(this.projectRoot, `automation/logs/comprehensive-error-fixer.log`);
     this.ensureLogDirectory();
@@ -25,7 +39,7 @@ class ComprehensiveErrorFixer {
     };
     this.startTime = Date.now();
     // Get automation interval from environment variable (default: 30 minutes)
-    this.AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 1800000; // 30 minutes;
+<<<<<<< HEAD    this.AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 1800000; // 30 minutes;
   }
 ;
   ensureLogDirectory() {;
@@ -36,6 +50,9 @@ class ComprehensiveErrorFixer {
   }
 
   log(message) {
+    console.log(`[${new Date().toISOString()}] ${message}`);;
+;
+  log(message) {;
     console.log(`[${new Date().toISOString()}] ${message}`);
   }
 ;
@@ -50,7 +67,7 @@ class ComprehensiveErrorFixer {
       'src/context/auth/AuthContext.tsx',
       'src/context/auth/profileMapper.ts',
       'src/context/auth/useAuthEventHandlers.ts',
-    ];
+<<<<<<< HEAD    ];
 ;
     for (const filePath of filesToFix) {;
       if (fs.existsSync(filePath)) {;
@@ -71,6 +88,20 @@ class ComprehensiveErrorFixer {
           content = content.replace(
             /logout: \s*any\(\)\s*=>\s*Promise<any>;/g,
             `logout: () => Promise<any>;`
+;
+          // Fix 'any' type annotations;
+          content = content.replace(/:\s*any'/g, ': string');
+          content = content.replace(/:\s*any/g, ': any');
+;
+          // Fix missing semicolons and colons;
+          content = content.replace(/\(\s*\)\s*=>\s*{/g, '() => {');
+          content = content.replace(/:\s*{\s*;/g, ': {');
+;
+          // Fix property signatures;
+          content = content.replace(/action\?\s*:\s*{\s*;/g, 'action?: {');
+          content = content.replace(;
+            /logout:\s*any\(\)\s*=>\s*Promise<any>;/g,;
+            'logout: () => Promise<any>;
           );
 ;
           if (content !== originalContent) {;
@@ -79,8 +110,7 @@ class ComprehensiveErrorFixer {
             this.log(`  ✅ Fixed TypeScript errors in ${filePath}`);
           }
         } catch (error) {  
-          this.log(`Error fixing TypeScript errors in ${filePath  }: ${error.message}`);
-        }
+          this.log(`Error fixing TypeScript errors in ${filePath  }: ${error.message}`);        }
       }
     }
 ;
@@ -96,6 +126,13 @@ class ComprehensiveErrorFixer {
       `src/components/home/ServicesShowcase.jsx`,
       `src/layout/PrimaryNav.jsx',
       'src/legal/TermsOfService.tsx',
+;
+    // Fix common JSX syntax errors;
+    const filesToFix = [;
+      'src/components/ScrollToTop.jsx',;
+      'src/components/home/ServicesShowcase.jsx',;
+      'src/layout/PrimaryNav.jsx',;
+      'src/legal/TermsOfService.tsx',;
     ];
 ;
     for (const filePath of filesToFix) {;
@@ -112,8 +149,7 @@ class ComprehensiveErrorFixer {
           // Fix JSX expressions;
           content = content.replace(
             /<div\s+className="max-w-4xl mx-auto space-y-8>\s*<div/g,
-            `<div className=max-w-4xl mx-auto space-y-8"><div`
-          );
+            `<div className=max-w-4xl mx-auto space-y-8"><div`          );
 ;
           if (content !== originalContent) {;
             fs.writeFileSync(filePath, content);
@@ -121,8 +157,7 @@ class ComprehensiveErrorFixer {
             this.log(`  ✅ Fixed JSX errors in ${filePath}`);
           }
         } catch (error) {  
-          this.log(`Error fixing JSX errors in ${filePath  }: ${error.message}`);
-        }
+          this.log(`Error fixing JSX errors in ${filePath  }: ${error.message}`);        }
       }
     }
 ;
@@ -139,12 +174,19 @@ class ComprehensiveErrorFixer {
       });
       
       if (result.includes(`Fixed`)) {
+;
+    try {;
+      // Run ESLint auto-fix;
+      const result = execSync('npx eslint . --ext .js,.jsx,.ts,.tsx --fix 2>&1', { ;
+        encoding: 'utf8' ;
+      });
+      ;
+      if (result.includes('Fixed')) {;
         fixes++;
         this.log(`  ✅ Fixed linting errors with ESLint auto-fix`);
       }
     } catch (error) {  
-      this.log(`Error running ESLint auto-fix: ${error.message  }`);
-    }
+      this.log(`Error running ESLint auto-fix: ${error.message  }`);    }
 ;
     return fixes;
   }
@@ -166,6 +208,21 @@ class ComprehensiveErrorFixer {
         // Remove unused React imports if no JSX;
         if (!content.includes('jsx') && !content.includes('JSX`)) {
           content = content.replace(/import\s+React\s+from\s+[`"]react[`"];?\n?/g, ``);
+;
+    // Find and remove unused imports;
+    const filesToCheck = glob.sync('src/**/*.{js,jsx,ts,tsx}');
+    ;
+    for (const filePath of filesToCheck) {;
+      try {;
+        let content = fs.readFileSync(filePath, 'utf8');
+        let originalContent = content;
+;
+        // Remove empty import statements;
+        content = content.replace(/import\s+{\s*}\s+from\s+['"][^'"]+['"];?\n?/g, ');
+        ;
+        // Remove unused React imports if no JSX;
+        if (!content.includes('jsx') && !content.includes('JSX')) {;
+          content = content.replace(/import\s+React\s+from\s+['"]react['"];?\n?/g, ');
         }
 ;
         if (content !== originalContent) {;
@@ -174,8 +231,7 @@ class ComprehensiveErrorFixer {
           this.log(`  ✅ Fixed unused imports in ${filePath}`);
         }
       } catch (error) {  
-        this.log(`Error fixing unused imports in ${filePath  }: ${error.message}`);
-      }
+        this.log(`Error fixing unused imports in ${filePath  }: ${error.message}`);      }
     }
 ;
     return fixes;
@@ -190,6 +246,13 @@ class ComprehensiveErrorFixer {
       `src/hooks/usePerformance.jsx`,
       `src/utils/productionLogger.js',
       'src/utils/safeStorage.js',
+;
+    // Replace console statements with proper logging;
+    const filesToFix = [;
+      'src/hooks/useAICodeGeneration.jsx',;
+      'src/hooks/usePerformance.jsx',;
+      'src/utils/productionLogger.js',;
+      'src/utils/safeStorage.js',;
     ];
 ;
     for (const filePath of filesToFix) {;
@@ -205,13 +268,12 @@ class ComprehensiveErrorFixer {
           content = content.replace(/console\.info\(/g, `// console.info(`);
 
           if (content !== originalContent) {
-            fs.writeFileSync(filePath, content);
+<<<<<<< HEAD            fs.writeFileSync(filePath, content);
             fixes++;
             this.log(`  ✅ Fixed console statements in ${filePath}`);
           }
         } catch (error) {  
-          this.log(`Error fixing console statements in ${filePath  }: ${error.message}`);
-        }
+          this.log(`Error fixing console statements in ${filePath  }: ${error.message}`);        }
       }
     }
 ;
@@ -314,6 +376,103 @@ class ComprehensiveErrorFixer {
         this.errorReport.errorsFound.push({
           type: `automation_error`,
           message: error.message,
+;
+  async fixMergeConflicts() {;
+    // Implementation for fixing merge conflicts;
+    this.log('Fixing merge conflicts...');
+    return 0;
+  }
+;
+  async fixESLintErrors() {;
+    // Implementation for fixing ESLint errors;
+    this.log('Fixing ESLint errors...');
+    return 0;
+  }
+;
+  async fixImportExportIssues() {;
+    // Implementation for fixing import/export issues;
+    this.log('Fixing import/export issues...');
+    return 0;
+  }
+;
+  async fixFileExtensionIssues() {;
+    // Implementation for fixing file extension issues;
+    this.log('Fixing file extension issues...');
+    return 0;
+  }
+;
+  async fixSyntaxErrors() {;
+    // Implementation for fixing syntax errors;
+    this.log('Fixing syntax errors...');
+    return 0;
+  }
+;
+  async fixDependencyIssues() {;
+    // Implementation for fixing dependency issues;
+    this.log('Fixing dependency issues...');
+    return 0;
+  }
+;
+  async runComprehensiveErrorFixer() {;
+    try {;
+      this.log(`🔧 Running comprehensive error fixer at ${new Date().toISOString()}`);
+;
+      let fixesApplied = 0;
+;
+      // 1. Fix TypeScript syntax errors;
+      this.log('🔧 Fixing TypeScript syntax errors...');
+      fixesApplied += await this.fixTypeScriptErrors();
+;
+      // 2. Fix JSX syntax errors;
+      this.log('🔧 Fixing JSX syntax errors...');
+      fixesApplied += await this.fixJSXErrors();
+;
+      // 3. Fix linting errors;
+      this.log('🔧 Fixing linting errors...');
+      fixesApplied += await this.fixLintingErrors();
+;
+      // 4. Fix unused imports and variables;
+      this.log('🔧 Fixing unused imports and variables...');
+      fixesApplied += await this.fixUnusedImports();
+;
+      // 5. Fix console statements;
+      this.log('🔧 Fixing console statements...');
+      fixesApplied += await this.fixConsoleStatements();
+;
+      // 6. Run auto-fix;
+      this.log('🔧 Running auto-fix...');
+      try {;
+        // Step 1: Fix merge conflicts;
+        await this.fixMergeConflicts();
+        ;
+        // Step 2: Fix TypeScript errors;
+        await this.fixTypeScriptErrors();
+        ;
+        // Step 3: Fix ESLint errors;
+        await this.fixESLintErrors();
+        ;
+        // Step 4: Fix import/export issues;
+        await this.fixImportExportIssues();
+        ;
+        // Step 5: Fix file extension issues;
+        await this.fixFileExtensionIssues();
+        ;
+        // Step 6: Fix syntax errors;
+        await this.fixSyntaxErrors();
+        ;
+        // Step 7: Fix dependency issues;
+        await this.fixDependencyIssues();
+        ;
+        // Step 8: Generate error report;
+        await this.generateErrorReport();
+        ;
+        this.log('Comprehensive error fixing completed successfully!');
+        ;
+      } catch (error) {;
+        this.log(`Error during automation: ${error.message}`);
+        this.errorReport.errorsFound.push({;
+          type: 'automation_error',;
+          message: error.message,;
           stack: error.stack;
         });
       } finally {;
@@ -327,8 +486,7 @@ class ComprehensiveErrorFixer {
         timestamp: new Date().toISOString(),
         fixesApplied: fixesApplied,
         summary: `Comprehensive error fixer completed`,
-        status: `completed`,
-      };
+        status: `completed`};
 
       const reportPath = path.join(
         process.cwd(),
@@ -387,13 +545,16 @@ class ComprehensiveErrorFixer {
 
   async fixImportIssues() {
     this.log(`🔧 Fixing import issues...`);
-    // Implementation for fixing import issues;
+<<<<<<< HEAD    // Implementation for fixing import issues;
     this.errorTypes.import++;
     this.fixCount++;
   }
 
   async fixComponentIssues() {
     this.log(`🔧 Fixing component issues...`);
+;
+  async fixComponentIssues() {;
+    this.log('🔧 Fixing component issues...');
     // Implementation for fixing component issues;
     this.errorTypes.component++;
     this.fixCount++;
@@ -401,7 +562,7 @@ class ComprehensiveErrorFixer {
 
   async fixDependencyIssues() {
     this.log(`🔧 Fixing dependency issues...');
-    // Implementation for fixing dependency issues;
+<<<<<<< HEAD    // Implementation for fixing dependency issues;
     this.errorTypes.dependency++;
     this.fixCount++;
   }
@@ -419,6 +580,7 @@ class ComprehensiveErrorFixer {
       execSync('npx tsc --noEmit', { stdio: 'pipe' });
       return true;
     } catch (error) {  
+    } catch (error) {;
       this.log('Type check failed');
       return false;
       }
@@ -430,7 +592,7 @@ class ComprehensiveErrorFixer {
       execSync('npx eslint . --fix', { stdio: 'pipe' });
       return true;
     } catch (error) {  
-      this.log('Lint failed');
+<<<<<<< HEAD      this.log('Lint failed');
       return false;
       }
   }
@@ -445,6 +607,17 @@ class ComprehensiveErrorFixer {
     };
     
     const reportPath = path.join(this.projectRoot, `automation/logs`, `comprehensive-error-fixer-report.json`);
+;
+  async generateReport() {;
+    this.log('🔧 Generating error report...');
+    const report = {;
+      timestamp: new Date().toISOString(),;
+      fixCount: this.fixCount,;
+      errorTypes: this.errorTypes,;
+      duration: Date.now() - this.startTime;
+    };
+    ;
+    const reportPath = path.join(this.projectRoot, 'automation/logs', 'comprehensive-error-fixer-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`Report saved to: ${reportPath}`);
     return report;
@@ -453,8 +626,7 @@ class ComprehensiveErrorFixer {
   async saveErrorReport() {;
     const timestamp = Date.now();
     const reportPath = path.join(this.projectRoot, `error-reports`, `error-fixer-report-${timestamp}.json`);
-    
-    // Ensure directory exists;
+        // Ensure directory exists;
     const dir = path.dirname(reportPath);
     if (!fs.existsSync(dir)) {;
       fs.mkdirSync(dir, { recursive: true });
@@ -494,6 +666,38 @@ process.on(`SIGTERM`, () => {
 
 // Run the fixer;
 fixer.runContinuous().catch(error => {
+  fixer.log(`Unhandled error: ${error.message}`);;
+;
+  // Main continuous loop;
+  async runContinuous() {;
+    this.log(`🚀 Starting comprehensive error fixer with ${this.AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+;
+    // Run initial error fixer;
+    await this.runComprehensiveErrorFixer();
+;
+    // Set up continuous execution;
+    setInterval(async () => {;
+      await this.runComprehensiveErrorFixer();
+    }, this.AUTOMATION_INTERVAL);
+;
+    this.log(`✅ Comprehensive error fixer running. Next check in ${this.AUTOMATION_INTERVAL / 1000 / 60} minutes`);
+  }
+}
+;
+// Start the comprehensive error fixer;
+const fixer = new ComprehensiveErrorFixer();
+fixer.runContinuous().catch(error => {;
+  console.error('❌ Failed to start comprehensive error fixer:', error);
+  process.exit(1);
+});
+;
+process.on('SIGTERM', () => {;
+  fixer.log('Received SIGTERM, shutting down gracefully...');
+  process.exit(0);
+});
+;
+// Run the fixer;
+fixer.runContinuous().catch(error => {;
   fixer.log(`Unhandled error: ${error.message}`);
   process.exit(1);
 });

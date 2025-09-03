@@ -276,7 +276,6 @@ module.exports = {
   }
 }; 
   ],
-
   deploy: {
     production: {
       user: 'deploy',

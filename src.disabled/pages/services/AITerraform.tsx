@@ -32,8 +32,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
   $2, 499/mo',  details: [;
   'Unlimited storage, Custom AI models;
   ',Full Terraform suite', 24/7 dedicated support;
-  '] }, ] ';Terraform optimization;
-  ',;Terraform management;
+  '] }, ] ';Terraform optimization;  ',;Terraform management;
   ',;Performance monitoring and analytics;
   ',;Security and compliance monitoring;
   ',;Automation and orchestration;

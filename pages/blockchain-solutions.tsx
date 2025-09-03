@@ -3,7 +3,6 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Layout from '../components/Layout';
 import { Shield, Zap, Globe, Lock, Database, ArrowRight, CheckCircle, Users, Award } from 'lucide-react';
-
 const BlockchainSolutions: NextPage = () => {
   const services = [
     {
@@ -41,8 +40,7 @@ const BlockchainSolutions: NextPage = () => {
       </Head>
       
       <Layout 
-        title="Blockchain Solutions" 
-        description="Transform your business with cutting-edge blockchain technology and decentralized solutions"
+        title="Blockchain Solutions"         description="Transform your business with cutting-edge blockchain technology and decentralized solutions"
       >
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">

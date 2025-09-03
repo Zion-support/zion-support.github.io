@@ -8,6 +8,34 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 console.log(``🚀 Starting continuous front maximizer automation...`);
+#!/'usr/bin/env' node;
+
+import { execSync } from 'child_process';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+;
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+;
+console.log(`'🚀 Starting continuous front maximizer automation...');
+;
+// Get automation interval from environment variable (default: 4 hours);
+const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 14400000; // 4 hours;
+
+async function runFrontMaximizer() {;
+  try {;
+    console.log(`🚀 Running front maximizer at ${new Date().toISOString()});
+    ;
+    // Build the project first;
+    console.log(`'🏗️ Building project for front-end optimization...');
+    try {;
+      execSync('npm run build', { stdio: 'inherit' });
+      console.log('✅ Build completed'`);
+    } catch (error) {;
+      console.log(`'⚠️  Build failed but continuing...');
+
+console.log(`🚀 Starting continuous front maximizer automation...`);
 
 // Get automation interval from environment variable (default: 4 hours)
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 14400000; // 4 hours;
@@ -17,7 +45,7 @@ async function runFrontMaximizer() {
     
     // Build the project first;
     console.log(``🏗️ Building project for front-end optimization...`);
-    try {
+<<<<<<< HEAD    try {
       execSync(`npm run build`, { stdio: 'inherit' });
       console.log('✅ Build completed'`);
     } catch (error) {  
@@ -25,6 +53,8 @@ async function runFrontMaximizer() {
       return;
       }
     
+    } catch (error) {
+      console.log(`⚠️  Build failed but continuing...`);
       return;
     }
     ;
@@ -35,7 +65,7 @@ async function runFrontMaximizer() {
       return;
     }
     
-    // Optimize images if available;
+<<<<<<< HEAD    // Optimize images if available;
     console.log('🖼️  Optimizing images...');
     try {;
       if (fs.existsSync(''scripts/optimize-images.js'')) {;
@@ -48,6 +78,10 @@ async function runFrontMaximizer() {
       console.log('⚠️  Image optimization failed but continuing...');
       }
     
+    } catch (error) {;
+      console.log('⚠️  Image optimization failed but continuing...');
+    }
+    ;
     // Check for unused CSS;
     console.log('🎨 Checking for unused CSS...');
     try {;
@@ -57,7 +91,7 @@ async function runFrontMaximizer() {
       console.log('ℹ️  CSS optimization not available');
       }
     
-    // Check for JavaScript bundle optimization;
+<<<<<<< HEAD    // Check for JavaScript bundle optimization;
     console.log('📦 Checking JavaScript bundle optimization...');
     try {;
       execSync('node 'scripts/analyze-bundle.js'', { stdio: 'inherit' });
@@ -66,6 +100,10 @@ async function runFrontMaximizer() {
       console.log('⚠️  Bundle analysis failed but continuing...');
       }
     
+    } catch (error) {;
+      console.log('⚠️  Bundle analysis failed but continuing...');
+    }
+    ;
     // Check for critical CSS;
     console.log('🔍 Checking critical CSS...');
     try {;
@@ -106,7 +144,7 @@ async function runContinuous() {console.log(🚀 Starting continuous front maxim
   
   // Set up continuous execution;
   setInterval(async () => {
-    await runFrontMaximizer();
+<<<<<<< HEAD    await runFrontMaximizer();
   }, AUTOMATION_INTERVAL);
   console.log(✅ Continuous front maximizer running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes``);
 }
@@ -114,6 +152,10 @@ async function runContinuous() {console.log(🚀 Starting continuous front maxim
 // Handle graceful shutdown;
 process.on(`SIGINT`, () => {
   console.log(`🛑 Received SIGINT, shutting down gracefully...');
+;
+// Handle graceful shutdown;
+process.on('SIGINT', () => {;
+  console.log('🛑 Received SIGINT, shutting down gracefully...');
   process.exit(0);
 });
 ;
@@ -124,6 +166,5 @@ process.on('SIGTERM', () => {;
 
 // Start the continuous front maximizer;
 runContinuous().catch(error => {
-  console.error('❌ Failed to start continuous front maximizer: ', error);
-  process.exit(1);
+  console.error('❌ Failed to start continuous front maximizer: ', error);  process.exit(1);
 });

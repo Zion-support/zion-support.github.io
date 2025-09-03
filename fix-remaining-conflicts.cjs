@@ -11,9 +11,7 @@ function resolveMergeConflicts(filePath) {
     let modified = false;
     
     // Pattern to match merge conflict markers
-    const conflictPattern = /\n([\s\S]*?)\n\n([\s\S]*?)\n>>>>>>> [^\n]+/g;
-    
-    content = content.replace(conflictPattern, (match, headContent, branchContent) => {
+    const conflictPattern = /\n([\s\S]*?)\n\n([\s\S]*?)\n        content = content.replace(conflictPattern, (match, headContent, branchContent) => {
       modified = true;
       // For most cases, prefer the branch content (after )
       // But handle special cases
@@ -55,9 +53,7 @@ function findFilesWithConflicts(dir) {
       } else if (stat.isFile() && /\.(tsx?|jsx?|js|ts|json)$/.test(item)) {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
-          if (content.includes('') || content.includes('') || content.includes('>>>>>>> ')) {
-            files.push(fullPath);
-          }
+          if (content.includes('') || content.includes('') || content.includes('            files.push(fullPath);          }
         } catch (error) {
           // Skip files that can't be read
         }

@@ -3,6 +3,12 @@
  * Project Health Dashboard - PM2 Automation;
  * Provides comprehensive project health monitoring and reporting;
  */
+#!/'usr/bin/env' node;
+
+/**;
+ * Project Health Dashboard - PM2 Automation;
+ * Provides comprehensive project health monitoring and reporting;
+ */;
 
 const fs = require('fs');
 const path = require('path');
@@ -14,7 +20,7 @@ class ProjectHealthDashboard {;
     this.logFile = path.join(;
       this.projectRoot,logs',;
       'project-health-dashboard.log';
-    );
+<<<<<<< HEAD    );
     this.dashboardDir = path.join(this.projectRoot, 'logs', `health-dashboard`);
     this.ensureLogsDirectory();
   }
@@ -31,6 +37,8 @@ class ProjectHealthDashboard {;
   }
 
   log(message, level = `INFO`) {
+;
+  log(message, level = 'INFO') {;
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
     fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`);
@@ -54,7 +62,7 @@ class ProjectHealthDashboard {;
 
       this.log(`Health dashboard generated successfully`);
     } catch (error) {  this.log(`Dashboard generation failed: ${error.message  }`, `ERROR`);
-    }
+<<<<<<< HEAD    }
   }
 ;
   async collectHealthData() {;
@@ -74,6 +82,7 @@ class ProjectHealthDashboard {;
       recommendations: [],;
     };
 
+;
     // Generate recommendations based on health data;
     healthData.recommendations = this.generateRecommendations(healthData);
 ;
@@ -86,7 +95,7 @@ class ProjectHealthDashboard {;
       if (fs.existsSync(packagePath)) {
         const packageJson = JSON.parse(fs.readFileSync(packagePath, `utf8`));
         return packageJson.name || `Unknown`;
-      }
+<<<<<<< HEAD      }
     } catch (error) {  this.log(`Failed to get project name: ${error.message  }`, `WARN`);
     }
     return `Unknown`;
@@ -98,6 +107,9 @@ class ProjectHealthDashboard {;
       if (fs.existsSync(packagePath)) {
         const packageJson = JSON.parse(fs.readFileSync(packagePath, `utf8`));
         return packageJson.version || `Unknown`;
+      if (fs.existsSync(packagePath)) {;
+        const packageJson = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
+        return packageJson.version || 'Unknown';
       }
     } catch (error) {  this.log(`Failed to get project version: ${error.message  }`, `WARN`);
     }
@@ -113,7 +125,7 @@ class ProjectHealthDashboard {;
       });
       return result.trim();
     } catch (error) {  
-      return 'Unknown';
+<<<<<<< HEAD      return 'Unknown';
       }
   }
 ;
@@ -126,6 +138,7 @@ class ProjectHealthDashboard {;
       });
       return result.trim();
     } catch (error) {  
+    } catch (error) {;
       return 'Unknown';
       }
   }
@@ -140,7 +153,7 @@ class ProjectHealthDashboard {;
     };
 
     try {
-      // Check package.json;
+<<<<<<< HEAD      // Check package.json;
       const packagePath = path.join(this.projectRoot, 'package.json');
       if (fs.existsSync(packagePath)) {;
         const packageJson = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
@@ -159,6 +172,17 @@ class ProjectHealthDashboard {;
       // Check node_modules;
       const nodeModulesPath = path.join(this.projectRoot, `node_modules`);
       if (fs.existsSync(nodeModulesPath)) {
+;
+        // Check for invalid versions;
+        for (const ['dep', 'version'] of Object.entries(deps)) {;
+          if (typeof version !== 'string' || version.trim() === ') {health.issues.push(`Invalid version for ${dep}: ${version}`);
+          }
+        }
+      }
+;
+      // Check node_modules;
+      const nodeModulesPath = path.join(this.projectRoot, 'node_modules');
+      if (fs.existsSync(nodeModulesPath)) {;
         const corrupted = await this.findCorruptedPackages(nodeModulesPath);
         health.corruptedDeps = corrupted.length;
 ;
@@ -170,7 +194,7 @@ class ProjectHealthDashboard {;
 
       // Check for outdated dependencies;
       try {
-        const outdated = await this.checkOutdatedDependencies();
+<<<<<<< HEAD        const outdated = await this.checkOutdatedDependencies();
         health.outdatedDeps = outdated.length;
 ;
         if (outdated.length > 0) {health.issues.push(`Found ${outdated.length} outdated dependencies`);
@@ -186,6 +210,17 @@ class ProjectHealthDashboard {;
         health.status = `CRITICAL`;
       } else if (health.issues.length > 0) {
         health.status = `WARNING`;
+      } catch (error) {;
+        // npm outdated returns non-zero when there are outdated deps;
+      }
+;
+      // Determine overall status;
+      if (health.issues.length === 0) {;
+        health.status = 'HEALTHY';
+      } else if (health.corruptedDeps > 0) {;
+        health.status = 'CRITICAL';
+      } else if (health.issues.length > 0) {;
+        health.status = 'WARNING';
       }
     } catch (error) {  health.issues.push(`Dependency check failed: ${error.message  }`);
       health.status = `ERROR`;
@@ -210,7 +245,7 @@ class ProjectHealthDashboard {;
           try {
             const pkgJson = JSON.parse(fs.readFileSync(pkgJsonPath, `utf8`));
             if (!pkgJson.name || !pkgJson.version) {
-              corrupted.push(pkg);
+<<<<<<< HEAD              corrupted.push(pkg);
             }
           } catch {;
             corrupted.push(pkg);
@@ -231,6 +266,13 @@ class ProjectHealthDashboard {;
         cwd: this.projectRoot,
         stdio: 'pipe',
         encoding: 'utf8',
+;
+  async checkOutdatedDependencies() {;
+    try {;
+      const result = execSync('npm outdated --json', {;
+        cwd: this.projectRoot,;
+        stdio: 'pipe',;
+        encoding: 'utf8',;
       });
 ;
       const outdated = JSON.parse(result);
@@ -241,7 +283,7 @@ class ProjectHealthDashboard {;
           const outdated = JSON.parse(error.stdout);
           return Object.keys(outdated);
           } catch {
-          return [];
+<<<<<<< HEAD          return [];
         }
       }
       return [];
@@ -259,6 +301,9 @@ class ProjectHealthDashboard {;
 
     try {
       // Count ''TypeScript/TSX'' files;
+;
+    try {;
+      // Count 'TypeScript/TSX' files;
       const srcPath = path.join(this.projectRoot, 'src');
       if (fs.existsSync(srcPath)) {;
         health.files = await this.countTypeScriptFiles(srcPath);
@@ -268,8 +313,7 @@ class ProjectHealthDashboard {;
       try {
         execSync('npm run type-check', {
           cwd: this.projectRoot,
-          stdio: 'pipe',
-        });
+          stdio: 'pipe'});
         health.status = 'HEALTHY';
       } catch (error) {  
         const output = error.stdout || error.stderr || '';
@@ -286,7 +330,7 @@ class ProjectHealthDashboard {;
         } else if (health.warnings > 0) {
           health.status = `WARNING`;
           health.issues.push(TypeScript compilation succeeded with ${health.warnings} warnings`
-          );
+<<<<<<< HEAD          );
         }
       }
     } catch (error) {  health.issues.push(`TypeScript check failed: ${error.message  }`);
@@ -322,6 +366,10 @@ class ProjectHealthDashboard {;
       // Skip inaccessible directories;
       }
 
+    } catch (error) {;
+      // Skip inaccessible directories;
+    }
+;
     return count;
   }
 ;
@@ -334,7 +382,7 @@ class ProjectHealthDashboard {;
     };
 
     try {
-      // Check if build script exists;
+<<<<<<< HEAD      // Check if build script exists;
       const packagePath = path.join(this.projectRoot, 'package.json');
       if (fs.existsSync(packagePath)) {;
         const packageJson = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
@@ -344,6 +392,7 @@ class ProjectHealthDashboard {;
         }
       }
 
+;
       // Check build configuration files;
       const viteConfigPath = path.join(this.projectRoot, 'vite.config.ts');
       const tsConfigPath = path.join(this.projectRoot, 'tsconfig.json');
@@ -362,7 +411,7 @@ class ProjectHealthDashboard {;
         execSync('npm run build', {
           cwd: this.projectRoot,
           stdio: `pipe`,
-        });
+<<<<<<< HEAD        });
         health.buildTime = Date.now() - startTime;
         health.status = `HEALTHY`;
       } catch (error) {  health.issues.push(`Build failed: ${error.message  }`);
@@ -381,8 +430,7 @@ class ProjectHealthDashboard {;
       totalFiles: 0,
       corruptedFiles: 0,
       backupFiles: 0,
-      issues: [],
-    };
+      issues: []};
 
     try {
       // Scan for corrupted files;
@@ -397,6 +445,29 @@ class ProjectHealthDashboard {;
         }
       }
 
+;
+  async getFileHealth() {;
+    const health = {;
+      status: 'UNKNOWN',;
+      totalFiles: 0,;
+      corruptedFiles: 0,;
+      backupFiles: 0,;
+      issues: [],;
+    };
+;
+    try {;
+      // Scan for corrupted files;
+      const srcPath = path.join(this.projectRoot, 'src');
+      if (fs.existsSync(srcPath)) {;
+        const corrupted = await this.scanForCorruptedFiles(srcPath);
+        health.corruptedFiles = corrupted.length;
+;
+        if (corrupted.length > 0) {;
+          health.issues.push(Found ${corrupted.length} corrupted source files';
+          );
+        }
+      }
+;
       // Find backup files;
       const backupFiles = await this.findBackupFiles();
       health.backupFiles = backupFiles.length;
@@ -414,7 +485,7 @@ class ProjectHealthDashboard {;
         health.status = `CRITICAL`;
       } else if (health.issues.length > 0) {
         health.status = `WARNING`;
-      }
+<<<<<<< HEAD      }
     } catch (error) {  health.issues.push(`File health check failed: ${error.message  }`);
       health.status = `ERROR`;
     }
@@ -450,6 +521,23 @@ class ProjectHealthDashboard {;
               corrupted.push(fullPath);
             }
           } catch (error) {  
+        } else if (;
+          file.isFile() &&;
+          (file.name.endsWith('.tsx') || file.name.endsWith('.ts'));
+        ) {;
+          try {;
+            const content = fs.readFileSync(fullPath, 'utf8');
+;
+            // Check for corruption patterns;
+            if (;
+              content.includes('import: {') ||;
+              content.includes('const:') ||;
+              content.includes('from,') ||;
+              content.includes('}, from,');
+            ) {;
+              corrupted.push(fullPath);
+            }
+          } catch (error) {;
             corrupted.push(fullPath);
             }
         }
@@ -465,7 +553,7 @@ class ProjectHealthDashboard {;
     const backupPatterns = [`*.backup.*`', '*.old.*', '*.bak'', '*_backup.*', '*_old.*``, ``];
 
     try {
-      const allFiles = await this.getAllFiles(this.projectRoot);
+<<<<<<< HEAD      const allFiles = await this.getAllFiles(this.projectRoot);
 ;
       for (const file of allFiles) {;
         const fileName = path.basename(file);
@@ -496,6 +584,12 @@ class ProjectHealthDashboard {;
           !item.name.startsWith(`.`) &&
           item.name !== 'node_modules'
         ) {
+;
+        if (;
+          item.isDirectory() &&;
+          !item.name.startsWith('.') &&;
+          item.name !== 'node_modules';
+        ) {;
           files.push(...(await this.getAllFiles(fullPath)));
         } else if (item.isFile()) {;
           files.push(fullPath);
@@ -513,7 +607,7 @@ class ProjectHealthDashboard {;
       .replace(/\./g, '\\.')
       .replace(/\*/g, `.*`)
       .replace(/\?/g, `.`);return new RegExp(`^${regex}$`).test(fileName);
-  }
+<<<<<<< HEAD  }
 ;
   async countTotalFiles(dir) {;
     let count = 0;
@@ -529,6 +623,12 @@ class ProjectHealthDashboard {;
           !item.name.startsWith(`.`) &&
           item.name !== `node_modules`
         ) {
+;
+        if (;
+          item.isDirectory() &&;
+          !item.name.startsWith('.') &&;
+          item.name !== 'node_modules';
+        ) {;
           count += await this.countTotalFiles(fullPath);
         } else if (item.isFile()) {;
           count++;
@@ -538,7 +638,7 @@ class ProjectHealthDashboard {;
       // Skip inaccessible directories;
       }
 
-    return count;
+<<<<<<< HEAD    return count;
   }
 ;
   async getPM2Health() {;
@@ -553,6 +653,12 @@ class ProjectHealthDashboard {;
       const result = execSync('pm2 list --json', {
         stdio: 'pipe',
         encoding: `utf8`,
+;
+    try {;
+      // Get PM2 process list;
+      const result = execSync('pm2 list --json', {;
+        stdio: 'pipe',;
+        encoding: 'utf8',;
       });
 ;
       const processes = JSON.parse(result);
@@ -577,7 +683,7 @@ class ProjectHealthDashboard {;
     } catch (error) {  
       health.issues.push(`PM2 health check failed: ${error.message  }`);
       health.status = `ERROR`;
-    }
+<<<<<<< HEAD    }
 ;
     return health;
   }
@@ -621,6 +727,43 @@ class ProjectHealthDashboard {;
 
     if (recommendations.length === 0) {
       recommendations.push(Project appears healthy, no immediate action required`
+;
+    // Dependency recommendations;
+    if (healthData.dependencies.status === 'CRITICAL') {;
+      recommendations.push(Remove corrupted node_modules and package-lock.json, then run npm install';
+      );
+    }
+;
+    if (healthData.dependencies.outdatedDeps > 0) {;
+      recommendations.push( `Update ${healthData.dependencies.outdatedDeps} outdated dependencies';
+      );
+    }
+;
+    // TypeScript recommendations;
+    if (healthData.typescript.errors > 0) {;
+      recommendations.push(Fix ${healthData.typescript.errors} TypeScript compilation errors';
+      );
+    }
+;
+    // Build recommendations;
+    if (healthData.build.status === 'ERROR') {;
+      recommendations.push('Fix build configuration issues');
+    }
+;
+    // File recommendations;
+    if (healthData.files.corruptedFiles > 0) {;
+      recommendations.push(Fix ${healthData.files.corruptedFiles} corrupted source files';
+      );
+    }
+;
+    if (healthData.files.backupFiles > 0) {;
+      recommendations.push(;
+        `Clean up ${healthData.files.backupFiles} backup files';
+      );
+    }
+;
+    if (recommendations.length === 0) {;
+      recommendations.push(Project appears healthy, no immediate action required';
       );
     }
 ;
@@ -636,7 +779,7 @@ class ProjectHealthDashboard {;
     <title>Project Health Dashboard</title>
     <style>
         body { font-family: -apple-system, BlinkMacSystemFont, `Segoe UI`, Roboto, sans-serif; margin: 0; padding: 20px; background: #f5f5f5; }
-        .container { max-width: 1200px; margin: 0 auto; }
+<<<<<<< HEAD        .container { max-width: 1200px; margin: 0 auto; }
         .header { background: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
         .status-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 20px; }
         .status-card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
@@ -719,6 +862,20 @@ class ProjectHealthDashboard {;
                     <span>Build Time:</span>
                     <span class="metric-value>${healthData.build.buildTime}ms</span></div>`
                     : ``
+            </div>;
+            ;
+            <div class="status-card status-${healthData.build.status.toLowerCase()}">;
+                <h3>🏗️ Build</h3>;
+                <div class="metric">;
+                    <span>Status:</span>;
+                    <span class="metric-value">${healthData.build.status}</span>;
+                </div>;
+                ${;
+                  healthData.build.buildTime;
+                    ? `<div class="metric">;
+                    <span>Build Time:</span>;
+                    <span class="metric-value">${healthData.build.buildTime}ms</span></div>`;
+                    : ';
                 }
                 ${this.renderIssues(healthData.build.issues)}
             </div>;
@@ -763,8 +920,7 @@ class ProjectHealthDashboard {;
             ${healthData.recommendations.map(rec => `<div class="recommendation>• ${rec}</div>`).join(``)}
         </div>
         
-        <div class=timestamp">
-            Generated at: ${new Date(healthData.timestamp).toLocaleString()}
+        <div class=timestamp">            Generated at: ${new Date(healthData.timestamp).toLocaleString()}
         </div>;
     </div>;
 </body></html>`;
@@ -789,6 +945,26 @@ class ProjectHealthDashboard {;
 
     // Save timestamp;
     const timestampFile = path.join(this.dashboardDir, `last-updated.txt`);
+;
+  renderIssues(issues) {;
+    if (!issues || issues.length === 0) {;
+      return '<div class="issues-list"><div class="issue" style="background: #f0fdf4; color: #059669;">✓ No issues found</div></div>';
+    }
+;
+    return `<div class="issues-list">${issues.map(issue => `<div class="issue">⚠️ ${issue}</div>`).join(')}</div>`;
+  }
+;
+  async saveDashboardFiles(dashboardHtml, healthData) {;
+    // Save HTML dashboard;
+    const htmlFile = path.join(this.dashboardDir, 'index.html');
+    fs.writeFileSync(htmlFile, dashboardHtml);
+;
+    // Save JSON data;
+    const jsonFile = path.join(this.dashboardDir, 'health-data.json');
+    fs.writeFileSync(jsonFile, JSON.stringify(healthData, null, 2));
+;
+    // Save timestamp;
+    const timestampFile = path.join(this.dashboardDir, 'last-updated.txt');
     fs.writeFileSync(timestampFile, new Date().toISOString());
   }
 ;
@@ -811,7 +987,7 @@ class ProjectHealthDashboard {;
     };
 
     const summaryFile = path.join(this.dashboardDir, `summary.json`);
-    fs.writeFileSync(summaryFile, JSON.stringify(summary, null, 2));
+<<<<<<< HEAD    fs.writeFileSync(summaryFile, JSON.stringify(summary, null, 2));
 this.log(`Summary report generated: ${summaryFile}`);
 ;
     return summary;
@@ -820,6 +996,10 @@ this.log(`Summary report generated: ${summaryFile}`);
   calculateOverallStatus(healthData) {
     const statuses = [`healthData.dependencies.status`, `healthData.typescript.status`, 'healthData.build.status', 'healthData.files.status', 'healthData.pm2.status', ''];
 
+;
+  calculateOverallStatus(healthData) {;
+    const statuses = ['healthData.dependencies.status', 'healthData.typescript.status', 'healthData.build.status', 'healthData.files.status', 'healthData.pm2.status', '];
+;
     if (statuses.includes('CRITICAL')) return 'CRITICAL';
     if (statuses.includes('ERROR')) return 'ERROR';
     if (statuses.includes('WARNING')) return 'WARNING';
@@ -833,7 +1013,7 @@ this.log(`Summary report generated: ${summaryFile}`);
       healthData.typescript.issues.length +
       healthData.build.issues.length +
       healthData.files.issues.length +
-      healthData.pm2.issues.length;
+<<<<<<< HEAD      healthData.pm2.issues.length;
     );
   }
 ;
@@ -849,6 +1029,14 @@ this.log(`Summary report generated: ${summaryFile}`);
 
 // Main execution;
 async function main() {
+    if (healthData.files.status === 'CRITICAL') count++;
+;
+    return count;
+  }
+}
+;
+// Main execution;
+async function main() {;
   const dashboard = new ProjectHealthDashboard();
 ;
   try {;

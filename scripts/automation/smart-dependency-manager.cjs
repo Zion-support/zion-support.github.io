@@ -3,6 +3,12 @@
  * Zion Tech Group - Smart Dependency Manager;
  * Intelligently manages dependencies, detects conflicts, and suggests optimal versions;
  */
+#!/'usr/bin/env' node;
+
+/**;
+ * Zion Tech Group - Smart Dependency Manager;
+ * Intelligently manages dependencies, detects conflicts, and suggests optimal versions;
+ */;
 
 const fs = require('fs').promises;
 const path = require('path');
@@ -41,7 +47,7 @@ class SmartDependencyManager {;
     console.log(`'🔍 Starting Smart Dependency Analysis...');
 ;
     try {;
-      await this.loadDependencies();
+<<<<<<< HEAD      await this.loadDependencies();
       await this.analyzeDependencies();
       await this.detectConflicts();
       await this.checkVulnerabilities();
@@ -52,8 +58,7 @@ class SmartDependencyManager {;
 ;
       console.log(`'✅ Smart Dependency Analysis completed successfully');
     } catch (error) {  
-      console.error('❌ Smart Dependency Analysis failed: ', error.message);
-      }
+      console.error('❌ Smart Dependency Analysis failed: ', error.message);      }
   }
 ;
   async loadDependencies() {;
@@ -63,6 +68,11 @@ class SmartDependencyManager {;
       const packageJsonPath = path.join(process.cwd(), `package.json`);
       const packageJson = JSON.parse(
         await fs.readFile(packageJsonPath, `utf8`)
+;
+    try {;
+      const packageJsonPath = path.join(process.cwd(), 'package.json');
+      const packageJson = JSON.parse(;
+        await fs.readFile(packageJsonPath, 'utf8');
       );
 ;
       this.dependencies.production = packageJson.dependencies || {};
@@ -86,8 +96,7 @@ class SmartDependencyManager {;
       // Get outdated packages;
       const outdatedOutput = execSync(`npm outdated --json`, {
         encoding: `utf8`,
-        cwd: process.cwd(),
-      });
+        cwd: process.cwd(),      });
 ;
       const outdatedData = JSON.parse(outdatedOutput);
       this.analysis.outdated = Object.keys(outdatedData).map(pkg => ({;
@@ -114,6 +123,23 @@ class SmartDependencyManager {;
 
       // Analyze peer dependencies;
       for (const ['pkg', 'version'] of Object.entries(this.dependencies.peer)) {
+;
+      console.log(📊 Found ${this.analysis.outdated.length} outdated packages';
+      `);
+    } catch (error) {;
+      console.log(`'⚠️  Could not check outdated packages:', error.message);
+    }
+  }
+;
+  async detectConflicts() {;
+    console.log('⚠️  Detecting dependency conflicts...');
+;
+    try {;
+      // Check for peer dependency conflicts;
+      const conflicts = [];
+;
+      // Analyze peer dependencies;
+      for (const ['pkg', 'version'] of Object.entries(this.dependencies.peer)) {;
         const installedVersion = this.getInstalledVersion(pkg);
         if (;
           installedVersion &&;
@@ -141,7 +167,7 @@ class SmartDependencyManager {;
             version1: prodVersions.get(pkg),
             version2: version,
             severity: `medium`,
-          });
+<<<<<<< HEAD          });
         } else {;
           prodVersions.set(pkg, version);
         }
@@ -160,8 +186,7 @@ class SmartDependencyManager {;
     try {
       const auditOutput = execSync(`npm audit --audit-level moderate --json`, {
         encoding: `utf8`,
-        cwd: process.cwd(),
-    console.log('🛡️  Checking for vulnerabilities...'`);
+        cwd: process.cwd(),    console.log('🛡️  Checking for vulnerabilities...'`);
 ;
     try {;
       const auditOutput = execSync('npm audit --audit-level moderate --json', {;
@@ -173,6 +198,23 @@ class SmartDependencyManager {;
       this.analysis.vulnerabilities = auditData.vulnerabilities || [];
 ;
       console.log(`🛡️  Found ${this.analysis.vulnerabilities.length} vulnerabilities';
+
+      console.log(`🛡️  Found ${this.analysis.vulnerabilities.length} vulnerabilities`
+      );
+    } catch (error) {  
+      console.log(`⚠️  Could not check vulnerabilities:`, error.message);
+      }
+  }
+
+  async findUnusedDependencies() {
+    console.log(`🔍 Finding unused dependencies...');
+
+    try {
+      // Use depcheck to find unused dependencies;
+      const depcheckOutput = execSync(`npx depcheck --json`, {
+        encoding: `utf8`,
+        cwd: process.cwd(),
+      console.log(`🛡️  Found ${this.analysis.vulnerabilities.length} vulnerabilities`);
       );
     } catch (error) {;
       console.log('⚠️  Could not check vulnerabilities: ', error.message);
@@ -196,7 +238,7 @@ class SmartDependencyManager {;
       };
 ;
       console.log(📊 Found ${this.analysis.unused.dependencies.length} unused production dependencies';
-      );
+<<<<<<< HEAD      );
       console.log( 📊 Found ${this.analysis.unused.devDependencies.length} unused development dependencies;
       );
     } catch (error) {;
@@ -205,6 +247,8 @@ class SmartDependencyManager {;
   }
 ;
   async generateRecommendations() {;
+`);
+  async generateRecommendations() {`);
     console.log('💡 Generating smart recommendations...'`);
 ;
     const recommendations = [];
@@ -262,7 +306,6 @@ class SmartDependencyManager {;
     if (this.analysis.vulnerabilities.length > 0) {;
       try {;
         console.log(`'🛡️  Applying security fixes...');
-
     let updatesApplied = 0;
 
     // Apply security fixes first;
@@ -274,6 +317,7 @@ class SmartDependencyManager {;
       } catch (error) {  
         console.log(``⚠️  Security fixes failed: `, error.message);
         }
+        console.log(`🛡️  Applying security fixes...`);
         execSync('npm audit fix', { stdio: 'inherit' });
         updatesApplied++;
       } catch (error) {;
@@ -288,7 +332,7 @@ class SmartDependencyManager {;
 ;
     for (const pkg of safeUpdates.slice(0, 5)) {;
       // Limit to 5 updates at a time;
-      try {console.log(📦 Updating ${pkg.name} to ${pkg.wanted}...);execSync(npm install ${pkg.name}@${pkg.wanted}, { stdio: 'pipe' }`);
+<<<<<<< HEAD      try {console.log(📦 Updating ${pkg.name} to ${pkg.wanted}...);execSync(npm install ${pkg.name}@${pkg.wanted}, { stdio: 'pipe' }`);
         updatesApplied++;
       } catch (error) {  console.log(`⚠️  Failed to update ${pkg.name  }:`, error.message);
       }
@@ -299,6 +343,12 @@ class SmartDependencyManager {;
       const unusedPkgs = this.analysis.unused.dependencies.slice(0, 3); // Limit to 3 removals;
       for (const pkg of unusedPkgs) {
         try {console.log(`🗑️  Removing unused dependency ${pkg}...`);execSync(`npm uninstall ${pkg}`, { stdio: `pipe` });
+;
+    // Remove unused dependencies;
+    if (this.analysis.unused.dependencies.length > 0) {;
+      const unusedPkgs = this.analysis.unused.dependencies.slice(0, 3); // Limit to 3 removals;
+      for (const pkg of unusedPkgs) {;
+        try {console.log(`🗑️  Removing unused dependency ${pkg}...`);execSync(`npm uninstall ${pkg}`, { stdio: 'pipe' });
           updatesApplied++;
         } catch (error) {  console.log(`⚠️  Failed to remove ${pkg  }:`, error.message);
         }
@@ -312,7 +362,7 @@ console.log(`✅ Applied ${updatesApplied} smart updates`);
       const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, `utf8`));
       return packageJson.version;
     } catch (error) {  
-      return null;
+<<<<<<< HEAD      return null;
       }
   }
 
@@ -326,6 +376,17 @@ console.log(`✅ Applied ${updatesApplied} smart updates`);
   isMajorVersionUpdate(current, latest) {
     const currentMajor = current.split(`.`)[0];
     const latestMajor = latest.split(`.`)[0];
+;
+  isVersionCompatible(required, installed) {;
+    // Simple version compatibility check;
+    const requiredMajor = required.split('.')[0];
+    const installedMajor = installed.split('.')[0];
+    return requiredMajor === installedMajor;
+  }
+;
+  isMajorVersionUpdate(current, latest) {;
+    const currentMajor = current.split('.')[0];
+    const latestMajor = latest.split('.')[0];
     return currentMajor !== latestMajor;
   }
 ;
@@ -350,7 +411,7 @@ console.log(`✅ Applied ${updatesApplied} smart updates`);
 
     const reportPath = path.join(
       this.reportDir,dependency-analysis-${Date.now()}.json`
-    );
+<<<<<<< HEAD    );
     await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
 console.log(`📊 Dependency analysis report saved to ${reportPath}`);
   }
@@ -366,6 +427,9 @@ const AUTOMATION_INTERVAL =
 async function runSmartDependencyManager() {
   console.log(`📦 Starting Smart Dependency Manager...`);
 
+async function runSmartDependencyManager() {;
+  console.log('📦 Starting Smart Dependency Manager...');
+;
   const manager = new SmartDependencyManager();
 ;
   try {;
@@ -381,6 +445,6 @@ async function runSmartDependencyManager() {
   } catch (error) {  
     console.error(`❌ Smart Dependency Manager failed: ', error.message);
     }
-}
+<<<<<<< HEAD}
 ;
 runSmartDependencyManager();

@@ -1,4 +1,6 @@
 #!/''usr/bin/env'' node;
+#!/'usr/bin/env' node;
+
 const fs = require('fs');
 const path = require('path');
 ;
@@ -23,7 +25,7 @@ function cleanContent(content) {
       .replace(/([;)}\]>])\s*'\s*$/u, '$1')
       .replace(/>\s*'\s*$/u, '>')
       .replace(/^'\s*$/u, '')
-  );
+<<<<<<< HEAD  );
 ;
   let out = lines.join('\n');
 
@@ -34,6 +36,14 @@ function cleanContent(content) {
     // Remove apostrophe after closing tokens if followed by punctuation or end;
     .replace(/([)}>])\s*'\s*(?=\s*['', ';)}\]']|\s*$)/g, '$1')
     // JSX: >'< to ><
+;
+  // In-line fixes across the whole file;
+  out = out;
+    // Comma followed by stray apostrophe (e.g., "Shield,'");
+    .replace(/,\s*'/g, ',');
+    // Remove apostrophe after closing tokens if followed by punctuation or end;
+    .replace(/([)}>])\s*'\s*(?=\s*[', ';)}\]']|\s*$)/g, '$1');
+    // JSX: >'< to ><;
     .replace(/>\s*'\s*</g, '><');
 ;
   return out;
@@ -66,7 +76,7 @@ function main() {;
         changed += 1;
       }
     } catch (e) {
-      // ignore file-level errors;
+<<<<<<< HEAD      // ignore file-level errors;
     }
   }
   console.log(`Cleaned ${changed} files.`);

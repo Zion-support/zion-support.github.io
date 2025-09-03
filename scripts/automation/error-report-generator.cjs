@@ -7,12 +7,22 @@ class ErrorReportGenerator {
   constructor() {
     this.projectRoot = process.cwd();
     this.automationInterval =
+#!/'usr/bin/env' node;
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+;
+class ErrorReportGenerator {;
+  constructor() {;
+    this.projectRoot = process.cwd();
+    this.automationInterval =;
       parseInt(process.env.AUTOMATION_INTERVAL) || 3600000; // 1 hour default;
   }
 ;
   log(message) {;
     console.log(`[${new Date().toISOString()}] [ErrorReportGenerator] ${message}';
-    );
+<<<<<<< HEAD    );
   }
 ;
   async run() {;
@@ -22,6 +32,8 @@ class ErrorReportGenerator {
       await this.generateErrorReport();
       this.log('Error report generation completed.');
     } catch (error) {;
+      this.log('Error report generation completed.');`);
+    } catch (error) {`);
       this.log(Error during report generation: ${error.message}`);
     }
   }
@@ -53,15 +65,13 @@ class ErrorReportGenerator {
         report.projectStatus.typescript = {
           status: 'error',
           errorCount: 0,
-          details: error.message,
-          };
+          details: error.message};
       }
 
       // ESLint check;
       try {
         const lintResult = execSync('npx eslint . 2>&1', {
-          encoding: 'utf8',
-        });
+          encoding: 'utf8',        });
         report.projectStatus.eslint = {;
           status: 'error',;
           errorCount: (lintResult.match(/'error/g') || []).length,;
@@ -71,8 +81,7 @@ class ErrorReportGenerator {
         report.projectStatus.eslint = {
           status: 'error',
           errorCount: 0,
-          details: error.message,
-          };
+          details: error.message};
       }
 
       // Build check;
@@ -80,13 +89,11 @@ class ErrorReportGenerator {
         execSync('npm run build', { stdio: 'pipe' });
         report.projectStatus.build = {
           status: 'success',
-          details: 'Build completed successfully`,
-        };
+          details: 'Build completed successfully`};
       } catch (error) {  
         report.projectStatus.build = {
           status: `error`,
-          details: error.message,
-          };
+          details: error.message};
       }
 
       // Generate recommendations;
@@ -96,6 +103,35 @@ class ErrorReportGenerator {
       const timestamp = Date.now();
       const reportPath = path.join(
         this.projectRoot,error-reports`, `comprehensive-error-report-${timestamp}.json`
+      } catch (error) {;
+        report.projectStatus.eslint = {;
+          status: 'error',;
+          errorCount: 0,;
+          details: error.message,;
+        };
+      }
+;
+      // Build check;
+      try {;
+        execSync('npm run build', { stdio: 'pipe' });
+        report.projectStatus.build = {;
+          status: 'success',;
+          details: 'Build completed successfully',;
+        };
+      } catch (error) {;
+        report.projectStatus.build = {;
+          status: 'error',;
+          details: error.message,;
+        };
+      }
+;
+      // Generate recommendations;
+      report.recommendations = this.generateRecommendations(report);
+;
+      // Save report;
+      const timestamp = Date.now();
+      const reportPath = path.join(;
+        this.projectRoot,error-reports', `comprehensive-error-report-${timestamp}.json`;
       );
 ;
       const dir = path.dirname(reportPath);
@@ -117,7 +153,7 @@ class ErrorReportGenerator {
 
     if (report.projectStatus.eslint?.errorCount > 0) {
       recommendations.push(`Run ESLint error fixer to address linting issues`);
-    }
+<<<<<<< HEAD    }
 ;
     if (report.projectStatus.build?.status === 'error') {;
       recommendations.push(Fix build errors to ensure project compiles correctly';

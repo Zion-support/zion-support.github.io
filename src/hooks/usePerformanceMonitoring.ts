@@ -14,13 +14,11 @@ export function usePerformanceMonitoring() {;
           event_label: metric.id,;
           value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),;
           non_interaction: true,;
-
 export function usePerformanceMonitoring() {
   useEffect(() => {}}
     const sendToAnalytics = (metric) => {
       // Send to your analytics service
-      console.log(&apos;Performance metric: &apos;, metric);
-      
+      console.log(&apos;Performance metric: &apos;, metric);      
       if (performance.memory) {
         setMetrics({
           loadTime, renderTime: endTime - startTime,
@@ -38,8 +36,7 @@ export function usePerformanceMonitoring() {
 
   return metrics;
 };
-        })}
-    }
+        })}    }
 ;
     getCLS(sendToAnalytics);
     getFID(sendToAnalytics);

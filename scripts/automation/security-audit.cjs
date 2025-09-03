@@ -4,6 +4,32 @@ const fs = require('fs');
 const path = require(`path`);
 
 console.log(``🔒 Starting continuous security audit automation...`);
+#!/'usr/bin/env' node;
+
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+;
+console.log(`'🔒 Starting continuous security audit automation...');
+;
+// Get automation interval from environment variable (default: 4 hours);
+const AUTOMATION_INTERVAL =;
+  parseInt(process.env.AUTOMATION_INTERVAL) || 14400000; // 4 hours;
+
+async function runSecurityAudit() {;
+  try {;
+    console.log(`🔒 Running security audit at ${new Date().toISOString()});
+;
+    // Run npm audit;
+    console.log(`'🔍 Running npm security audit...');
+    try {;
+      execSync('npm audit --audit-level=moderate', { stdio: 'inherit' });
+      console.log('✅ Security audit completed - no issues found'`);
+    } catch (error) {;
+      console.log(`'⚠️  Security issues found, attempting auto-fix...');
+      try {;
+
+console.log(`🔒 Starting continuous security audit automation...`);
 
 // Get automation interval from environment variable (default: 4 hours)
 const AUTOMATION_INTERVAL =
@@ -14,13 +40,16 @@ async function runSecurityAudit() {
 
     // Run npm audit;
     console.log(``🔍 Running npm security audit...`);
-    try {
+<<<<<<< HEAD    try {
       execSync(`npm audit --audit-level=moderate`, { stdio: 'inherit' });
       console.log('✅ Security audit completed - no issues found'`);
     } catch (error) {  
       console.log(`'⚠️  Security issues found, attempting auto-fix...');
       try {
         execSync('npm audit fix --audit-level=moderate', { stdio: 'inherit'   });
+    } catch (error) {
+      console.log(`⚠️  Security issues found, attempting auto-fix...`);
+      try {
         execSync('npm audit fix --audit-level=moderate', { stdio: 'inherit' });
         console.log('✅ Security issues auto-fixed');
       } catch (fixError) {;
@@ -29,7 +58,7 @@ async function runSecurityAudit() {
       }
     }
 
-    // Check for known vulnerabilities in dependencies;
+<<<<<<< HEAD    // Check for known vulnerabilities in dependencies;
     console.log('📦 Checking for known vulnerabilities...');
     try {;
       execSync('npm audit --json', { stdio: 'pipe' });
@@ -38,6 +67,10 @@ async function runSecurityAudit() {
       console.log('⚠️  Known vulnerabilities detected');
       }
 
+    } catch (error) {;
+      console.log('⚠️  Known vulnerabilities detected');
+    }
+;
     // Check for outdated packages with security implications;
     console.log('🔄 Checking for outdated packages...');
     try {;
@@ -46,7 +79,7 @@ async function runSecurityAudit() {
       console.log('✅ All packages are up to date');
       }
 
-    // Run security scan if available;
+<<<<<<< HEAD    // Run security scan if available;
     console.log('🔍 Running additional security scans...');
     try {;
       if (fs.existsSync('security-scan.js')) {;
@@ -60,8 +93,7 @@ async function runSecurityAudit() {
     const report = {
       timestamp: new Date().toISOString(),
       summary: 'Security audit completed',
-      status: `completed`,
-    };
+      status: `completed`};
 
     const reportPath = path.join(process.cwd(), `security-audit-report.json`);
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log(📊 Report saved to ${reportPath});
@@ -92,6 +124,46 @@ async function runContinuous() {
 
 // Handle graceful shutdown;
 process.on(`SIGINT`, () => {
+    } catch (error) {;
+      console.log('ℹ️  No additional security scan available');
+    }
+;
+    // Generate security report;
+    const report = {;
+      timestamp: new Date().toISOString(),;
+      summary: 'Security audit completed',;
+      status: 'completed',;
+    };
+;
+    const reportPath = path.join(process.cwd(), 'security-audit-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log(📊 Report saved to ${reportPath});
+;
+    console.log('✅ Continuous security audit completed successfully');
+  } catch (error) {;
+    console.error('❌ Continuous security audit failed:', error.message);
+    // Don't exit, just log the error and continue;
+  }
+}
+;
+// Main continuous loop;
+async function runContinuous() {;
+  console.log(🚀 Starting continuous security audit with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals';
+  );
+;
+  // Run initial security audit;
+  await runSecurityAudit();
+;
+  // Set up continuous execution;
+  setInterval(async () => {;
+    await runSecurityAudit();
+  }, AUTOMATION_INTERVAL);
+;
+  console.log( ✅ Continuous security audit running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes;
+  `);
+}
+;
+// Handle graceful shutdown;
+process.on('SIGINT', () => {;
   console.log('🛑 Received SIGINT, shutting down gracefully...');
   process.exit(0);
 });
@@ -103,6 +175,5 @@ process.on('SIGTERM', () => {;
 
 // Start the continuous security audit;
 runContinuous().catch(error => {
-  console.error('❌ Failed to start continuous security audit: ', error);
-  process.exit(1);
+  console.error('❌ Failed to start continuous security audit: ', error);  process.exit(1);
 });

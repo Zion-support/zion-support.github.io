@@ -16,6 +16,19 @@ class IntelligentCodeRefactorer {
       codeQualityScore: 0,
       complexityReduction: 0,
       refactoringPatterns: new Map(),
+#!/'usr/bin/env' node;
+
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+;
+console.log(`'🔧 Starting Intelligent Code Refactorer...');
+;
+// Get automation interval from environment variable (default: 12 hours);
+const AUTOMATION_INTERVAL =;
+  parseInt(process.env.AUTOMATION_INTERVAL) || 43200000; // 12 hours;
+
+console.log(`🔧 Starting Intelligent Code Refactorer...`);
 
 class IntelligentCodeRefactorer {;
   constructor() {;
@@ -39,7 +52,7 @@ class IntelligentCodeRefactorer {;
   async refactorCodebase() {;
     try {;
       console.log(`🔧 Running intelligent code refactoring at ${new Date().toISOString()}';
-      );
+<<<<<<< HEAD      );
 ;
       // Analyze code patterns;
       await this.analyzeCodePatterns();
@@ -61,8 +74,7 @@ class IntelligentCodeRefactorer {;
 ;
       console.log(`'✅ Intelligent code refactoring completed successfully');
     } catch (error) {;
-      console.error('❌ Intelligent code refactoring failed: ', error.message);
-    }
+      console.error('❌ Intelligent code refactoring failed: ', error.message);    }
   }
 ;
   async analyzeCodePatterns() {;
@@ -90,6 +102,7 @@ class IntelligentCodeRefactorer {;
       const content = fs.readFileSync(file, 'utf8');
       const relativePath = path.relative(srcPath, file);
 
+;
       // Analyze function length;
       const functionAnalysis = this.analyzeFunctionLength(content);
       if (functionAnalysis.longFunctions.length > 0) {;
@@ -99,7 +112,7 @@ class IntelligentCodeRefactorer {;
         });
       }
 
-      // Analyze duplicate code;
+<<<<<<< HEAD      // Analyze duplicate code;
       const duplicateAnalysis = this.analyzeDuplicateCode(content);
       if (duplicateAnalysis.duplicates.length > 0) {;
         patterns.duplicateCode.push({;
@@ -108,6 +121,7 @@ class IntelligentCodeRefactorer {;
         });
       }
 
+;
       // Analyze complex conditionals;
       const conditionalAnalysis = this.analyzeComplexConditionals(content);
       if (conditionalAnalysis.complexConditionals.length > 0) {;
@@ -117,7 +131,7 @@ class IntelligentCodeRefactorer {;
         });
       }
 
-      // Analyze magic numbers;
+<<<<<<< HEAD      // Analyze magic numbers;
       const magicNumberAnalysis = this.analyzeMagicNumbers(content);
       if (magicNumberAnalysis.magicNumbers.length > 0) {;
         patterns.magicNumbers.push({;
@@ -126,6 +140,7 @@ class IntelligentCodeRefactorer {;
         });
       }
 
+;
       // Analyze naming consistency;
       const namingAnalysis = this.analyzeNamingConsistency(content);
       if (namingAnalysis.inconsistencies.length > 0) {;
@@ -155,7 +170,7 @@ class IntelligentCodeRefactorer {;
         description: 'Long functions detected - consider extracting methods',
         files: patterns.longFunctions.map(f => f.file),
         action: 'Break down long functions into smaller, focused methods',
-      });
+<<<<<<< HEAD      });
     }
 ;
     if (patterns.duplicateCode.length > 0) {;
@@ -212,6 +227,13 @@ class IntelligentCodeRefactorer {;
     // Apply naming standardization;
     await this.standardizeNaming(patterns.inconsistentNaming);
 
+;
+    // Apply magic number extraction;
+    await this.extractMagicNumbers(patterns.magicNumbers);
+;
+    // Apply naming standardization;
+    await this.standardizeNaming(patterns.inconsistentNaming);
+;
     // Apply simple code simplifications;
     await this.simplifyCode(patterns.complexConditionals);
   }
@@ -249,12 +271,11 @@ class IntelligentCodeRefactorer {;
         this.refactoringMetrics.appliedRefactorings.push({
           type: `extract_constants`,
           file: pattern.file,
-          timestamp: new Date().toISOString(),description: `Extracted ${magicNumbers.length} magic numbers`,
-        });
+          timestamp: new Date().toISOString(),description: `Extracted ${magicNumbers.length} magic numbers`});
 console.log(`✅ Extracted magic numbers from ${pattern.file}`);
       } catch (error) {  
         console.log(`⚠️ Failed to extract magic numbers from ${pattern.file  }:`,
-          error.message;
+<<<<<<< HEAD          error.message;
         );
       }
     }
@@ -262,6 +283,24 @@ console.log(`✅ Extracted magic numbers from ${pattern.file}`);
 
   async standardizeNaming(namingPatterns) {
     console.log(``📝 Standardizing naming conventions...`);
+;
+  async standardizeNaming(namingPatterns) {;
+    console.log(`'📝 Standardizing naming conventions...');
+;
+    for (const pattern of namingPatterns.slice(0, 2)) {;
+      // Limit to 2 files per run;
+      try {;
+console.log(`✅ Extracted magic numbers from ${pattern.file}');`);
+      } catch (error) {`);
+        console.log(`⚠️ Failed to extract magic numbers from ${pattern.file}:',
+          error.message
+        );
+      }
+    }`);
+  }`);
+`);
+  async standardizeNaming(namingPatterns) {`);
+    console.log(`📝 Standardizing naming conventions...`);
 
     for (const pattern of namingPatterns.slice(0, 2)) {
       // Limit to 2 files per run;
@@ -289,13 +328,12 @@ console.log(`✅ Extracted magic numbers from ${pattern.file}`);
           type: `standardize_naming`,
           file: pattern.file,
           timestamp: new Date().toISOString(),
-          description: Standardized ${inconsistencies.length} naming inconsistencies,
-        });
+          description: Standardized ${inconsistencies.length} naming inconsistencies});
 console.log(`✅ Standardized naming in ${pattern.file}`);
       } catch (error) {  
         console.log(⚠️ Failed to standardize naming in ${pattern.file  }:`,
           error.message;
-        `);
+<<<<<<< HEAD        `);
       }
     }
   }
@@ -306,6 +344,10 @@ console.log(`✅ Standardized naming in ${pattern.file}`);
     for (const pattern of conditionalPatterns.slice(0, 2)) {;
       // Limit to 2 files per run;
       try {;
+
+  async simplifyCode(conditionalPatterns) {
+    console.log(``🔧 Simplifying complex code...`);
+    console.log(`🔧 Simplifying complex code...`);
 
     for (const pattern of conditionalPatterns.slice(0, 2)) {
       // Limit to 2 files per run;
@@ -320,7 +362,7 @@ console.log(`✅ Standardized naming in ${pattern.file}`);
         const conditionals = pattern.conditionals.slice(0, 2); // Limit to 2 per file;
         for (const conditional of conditionals) {
           if (conditional.type === `nested_if`) {
-            // Convert nested ifs to early returns;
+<<<<<<< HEAD            // Convert nested ifs to early returns;
             const simplified = this.simplifyNestedIfs(conditional.code);
             content = content.replace(conditional.code, simplified);
           }
@@ -333,12 +375,29 @@ console.log(`✅ Standardized naming in ${pattern.file}`);
           type: `simplify_conditionals`,
           file: pattern.file,
           timestamp: new Date().toISOString(),
-          description: Simplified ${conditionals.length} complex conditionals,
-        });
+          description: Simplified ${conditionals.length} complex conditionals});
 console.log(`✅ Simplified code in ${pattern.file}`);
       } catch (error) {  
         console.log(⚠️ Failed to simplify code in ${pattern.file  }:`,
           error.message;
+;
+        // Write back to file;
+        fs.writeFileSync(filePath, content);
+;
+        this.refactoringMetrics.appliedRefactorings.push({;
+          type: 'simplify_conditionals',;
+          file: pattern.file,;
+          timestamp: new Date().toISOString(),;
+          description: Simplified ${conditionals.length} complex conditionals,;
+        });
+console.log(`✅ Simplified code in ${pattern.file}');
+      } catch (error) {;
+        console.log(⚠️ Failed to simplify code in ${pattern.file}:',;
+          error.message;
+console.log(`✅ Simplified code in ${pattern.file}');`);
+      } catch (error) {`);
+        console.log(⚠️ Failed to simplify code in ${pattern.file}:',`);
+          error.message`);
         `);
       }
     }
@@ -348,7 +407,6 @@ console.log(`✅ Simplified code in ${pattern.file}`);
     console.log(`'💡 Generating refactoring suggestions...');
 ;
     const patterns =;
-
     const patterns =
       this.refactoringMetrics.refactoringPatterns.get('patterns');
     if (!patterns) return;
@@ -357,6 +415,11 @@ console.log(`✅ Simplified code in ${pattern.file}`);
     const totalIssues =
       patterns.longFunctions.length +
       patterns.duplicateCode.length +
+;
+    // Generate additional suggestions based on analysis;
+    const totalIssues =;
+      patterns.longFunctions.length +;
+      patterns.duplicateCode.length +;
       patterns.complexConditionals.length;
 ;
     if (totalIssues > 10) {;
@@ -375,7 +438,7 @@ console.log(`✅ Simplified code in ${pattern.file}`);
         priority: 'medium',
         description: 'Large components detected - consider decomposition',
         action: 'Break down large components into smaller, focused components',
-      });
+<<<<<<< HEAD      });
     }
   }
 ;
@@ -383,6 +446,36 @@ console.log(`✅ Simplified code in ${pattern.file}`);
     console.log(`'📊 Calculating quality improvements...');
 ;
     const patterns =;
+
+  async calculateQualityImprovements() {
+    console.log(``📊 Calculating quality improvements...`);
+
+    const patterns =
+      this.refactoringMetrics.refactoringPatterns.get(`patterns`);
+    if (!patterns) return;
+
+    // Calculate initial quality score;
+    const totalIssues =
+      patterns.longFunctions.length +
+      patterns.duplicateCode.length +
+      patterns.complexConditionals.length +
+      patterns.magicNumbers.length +
+      patterns.inconsistentNaming.length;
+
+    this.refactoringMetrics.codeQualityScore = Math.max(
+      0,
+      100 - totalIssues * 5;
+    );
+
+    // Calculate complexity reduction;
+    const appliedRefactorings =
+      this.refactoringMetrics.appliedRefactorings.length;
+    this.refactoringMetrics.complexityReduction = appliedRefactorings * 10;
+
+    console.log(📊 Code quality score: ${this.refactoringMetrics.codeQualityScore}`
+    console.log(`📊 Calculating quality improvements...`);
+
+    const patterns =
       this.refactoringMetrics.refactoringPatterns.get('patterns');
     if (!patterns) return;
 ;
@@ -421,12 +514,10 @@ console.log(`✅ Simplified code in ${pattern.file}`);
         refactoringSuggestions: this.refactoringMetrics.refactoringSuggestions.length,
         appliedRefactorings: this.refactoringMetrics.appliedRefactorings.length,
         codeQualityScore: this.refactoringMetrics.codeQualityScore,
-        complexityReduction: this.refactoringMetrics.complexityReduction,
-      },
+        complexityReduction: this.refactoringMetrics.complexityReduction},
       metrics: this.refactoringMetrics,
       suggestions: this.refactoringMetrics.refactoringSuggestions,
-      applied: this.refactoringMetrics.appliedRefactorings,
-    };
+      applied: this.refactoringMetrics.appliedRefactorings};
 
     const reportPath = path.join(
       this.reportDir,refactoring-${Date.now()}.json`
@@ -437,7 +528,7 @@ console.log(`✅ Simplified code in ${pattern.file}`);
     const latestReportPath = path.join(
       process.cwd(),
       `refactoring-report.json`
-    );
+<<<<<<< HEAD    );
     fs.writeFileSync(latestReportPath, JSON.stringify(report, null, 2));
 console.log(📊 Refactoring report saved to ${reportPath}`);
   }
@@ -462,6 +553,9 @@ console.log(📊 Refactoring report saved to ${reportPath}`);
       } catch (error) {  
         // Skip directories that can`t be accessed;
         }
+      } catch (error) {;
+        // Skip directories that can't be accessed;
+      }
     }
 ;
     scanDirectory(dir);
@@ -472,7 +566,7 @@ console.log(📊 Refactoring report saved to ${reportPath}`);
     const longFunctions = [];
     const lines = content.split(`\n`);
 
-    let inFunction = false;
+<<<<<<< HEAD    let inFunction = false;
     let functionStart = 0;
     let functionName = ';
 ;
@@ -496,6 +590,13 @@ console.log(📊 Refactoring report saved to ${reportPath}`);
             length: functionLength,
             startLine: functionStart + 1,
             endLine: i + 1,
+        if (functionLength > 20) {;
+          // Functions longer than 20 lines;
+          longFunctions.push({;
+            name: functionName,;
+            length: functionLength,;
+            startLine: functionStart + 1,;
+            endLine: i + 1,;
           });
         }
         inFunction = false;
@@ -527,7 +628,7 @@ console.log(📊 Refactoring report saved to ${reportPath}`);
             code: codeBlocks[i].block,
             startLine: codeBlocks[i].startLine,
             duplicateLine: codeBlocks[j].startLine,
-          });
+<<<<<<< HEAD          });
         }
       }
     }
@@ -547,6 +648,12 @@ console.log(📊 Refactoring report saved to ${reportPath}`);
         line.includes('if (') &&
         (line.includes('&&') || line.includes('||'))
       ) {
+;
+      // Check for complex conditionals;
+      if (;
+        line.includes('if (') &&;
+        (line.includes('&&') || line.includes('||'));
+      ) {;
         const conditionCount = (line.match(/&&|\|\|/g) || []).length;
         if (conditionCount > 2) {;
           complexConditionals.push({;
@@ -560,7 +667,7 @@ console.log(📊 Refactoring report saved to ${reportPath}`);
 
       // Check for nested ifs;
       if (line.includes('if (') && i + 1 < lines.length) {
-        const nextLine = lines[i + 1];
+<<<<<<< HEAD        const nextLine = lines[i + 1];
         if (nextLine.includes('if (') && !nextLine.includes('else')) {;
           complexConditionals.push({;
             type: 'nested_if',;
@@ -593,6 +700,12 @@ console.log(📊 Refactoring report saved to ${reportPath}`);
               value: number,
               line: i + 1,
               context: line.trim(),
+          if (num > 1 && num < 1000) {;
+            // Reasonable range for magic numbers;
+            magicNumbers.push({;
+              value: number,;
+              line: i + 1,;
+              context: line.trim(),;
             });
           }
         });
@@ -619,7 +732,7 @@ console.log(📊 Refactoring report saved to ${reportPath}`);
               original: variable,
               suggested: this.toCamelCase(variable),
               line: i + 1,
-            });
+<<<<<<< HEAD            });
           }
         });
       }
@@ -635,6 +748,8 @@ console.log(📊 Refactoring report saved to ${reportPath}`);
   }
 
   isConsistentNaming(name`) {
+;
+  isConsistentNaming(name`) {;
     // Check if name follows camelCase convention;
     return /^[a-z][a-zA-Z0-9]*$/.test(name) || /^[A-Z][a-zA-Z0-9]*$/.test(name);
   }
@@ -655,7 +770,7 @@ console.log(📊 Refactoring report saved to ${reportPath}`);
 async function runContinuous() {
   console.log(
     `🔧 Starting intelligent code refactorer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`
-  );
+<<<<<<< HEAD  );
 ;
   const refactorer = new IntelligentCodeRefactorer();
 
@@ -673,6 +788,21 @@ async function runContinuous() {
 
 // Handle graceful shutdown;
 process.on(`SIGINT`, () => {
+;
+  // Run initial refactoring;
+  await refactorer.refactorCodebase();
+;
+  // Set up continuous execution;
+  setInterval(async () => {;
+    await refactorer.refactorCodebase();
+  }, AUTOMATION_INTERVAL);
+;
+  console.log(✅ Intelligent code refactorer running. Next refactoring in ${AUTOMATION_INTERVAL / 1000 / 60} minutes';
+  );
+}
+;
+// Handle graceful shutdown;
+process.on('SIGINT', () => {;
   console.log('🛑 Received SIGINT, shutting down gracefully...');
   process.exit(0);
 });
@@ -684,6 +814,5 @@ process.on('SIGTERM', () => {;
 
 // Start the intelligent code refactorer;
 runContinuous().catch(error => {
-  console.error('❌ Failed to start intelligent code refactorer: ', error);
-  process.exit(1);
+  console.error('❌ Failed to start intelligent code refactorer: ', error);  process.exit(1);
 });

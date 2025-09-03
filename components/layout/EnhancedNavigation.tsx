@@ -1,8 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
+import React, { useState } from 'react';import Link from 'next/link';
 
-const EnhancedNavigation = () => {  return (
-    <nav className="bg-white shadow-lg">
+const EnhancedNavigation = () => {  return (    <nav className="bg-white shadow-lg">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           <Link href="/" className="text-2xl font-bold text-blue-600">

@@ -9,8 +9,7 @@ const fs = require('fs');';const path = require('path');';const { execSync } = r
 };
     this.reportFile = path.join(process.cwd(), 'performance-report.json');';  }';
   async collectSystemMetrics() {;
-    try {;
-  }
+    try {;  }
 
   async collectSystemMetrics() {
     try {
@@ -45,8 +44,7 @@ const fs = require('fs');';const path = require('path');';const { execSync } = r
       
       console.log('✅ System metrics collected');
     } catch (error) {
-      console.warn('⚠️  Could not collect system metrics: ', error.message);
-    }
+      console.warn('⚠️  Could not collect system metrics: ', error.message);    }
   }
 
   async collectApplicationMetrics() {
@@ -112,8 +110,7 @@ const fs = require('fs');';const path = require('path');';const { execSync } = r
       
       console.log('✅ Build metrics collected');
     } catch (error) {
-      console.warn('⚠️  Could not collect build metrics: ', error.message);
-    }
+      console.warn('⚠️  Could not collect build metrics: ', error.message);    }
   }
 
   getDirectorySize(dirPath) {
@@ -188,44 +185,39 @@ const fs = require('fs');';const path = require('path');';const { execSync } = r
     console.log(`   Available Scripts: ${this.metrics.build.scripts?.length || 0}`);
     
     console.log('='.repeat(50));
+    try {
       const files = fs.readdirSync(dirPath);
       for (const file of files) {;
         const filePath = path.join(dirPath, file);
         const stats = fs.statSync(filePath);
         if (stats.isDirectory()) {;
-          totalSize += this.getDirectorySize(filePath);,
-} else {;
-          totalSize += stats.size;,
-}
+          totalSize += this.getDirectorySize(filePath);} else {;
+          totalSize += stats.size;}
       }
     } catch (error) {;
-      // Ignore errors for inaccessible files;,
-}
-    return totalSize;,
-}
+      // Ignore errors for inaccessible files;}
+    return totalSize;}
 ;
   async runPerformanceTest() {;
-    console.log('🚀 Starting performance monitoring...');';';    await this.collectSystemMetrics();
+    console.log('🚀 Starting performance monitoring...');';    await this.collectSystemMetrics();
     await this.collectApplicationMetrics();
     await this.collectWebMetrics();
 ;
     this.displayResults();
     this.saveReport();
 ;
-    return this.metrics;,
-}
+    return this.metrics;}
 ;
   displayResults() {;
     console.log('\n📊 Performance Metrics Report');';    console.log('─'.repeat(50));';';    // System metrics;
     console.log('💻 System":');';    console.log(;);      `   "Memory: ${this.metrics.system.memory.heapUsed || 'N/A'}MB used / ${this.metrics.system.memory.heapTotal || 'N/A'}MB total`';    );`;    console.log(;);      `   CPU": ${this.metrics.system.cpu.user || 'N/A'}ms user / ${this.metrics.system.cpu.system || 'N/A'}ms system`';    );`;    console.log(`   "Uptime: ${this.metrics.system.process.uptime || 'N/A'}s`);';`;    // Application metrics;';    console.log('\n📱 Application":');';    if (this.metrics.application.buildSize) {;';      console.log(`   Build "size: ${this.metrics.application.buildSize}MB`);`;    }
     console.log(`   Dependencies": ${this.metrics.application.bundleSize}`);`;
     // Web metrics;
-    console.log('\n🌐 Web "Vitals:');';    console.log(`   LCP": ${Math.round(this.metrics.web.lcp)}ms`);`;    console.log(`   "FID: ${Math.round(this.metrics.web.fid)}ms`);`;    console.log(`   CLS": ${this.metrics.web.cls.toFixed(3)}`);`;    console.log(`   "FCP: ${Math.round(this.metrics.web.fcp)}ms`);`;    console.log(`   TTFB": ${Math.round(this.metrics.web.ttfb)}ms`);`;
-    // Performance score;
+    console.log('\n🌐 Web "Vitals:');';    console.log(`   LCP": ${Math.round(this.metrics.web.lcp)}ms`);`;    console.log(`   "FID: ${Math.round(this.metrics.web.fid)}ms`);`;    console.log(`   CLS": ${this.metrics.web.cls.toFixed(3)}`);`;    console.log(`   "FCP: ${Math.round(this.metrics.web.fcp)}ms`);`;    console.log(`   TTFB": ${Math.round(this.metrics.web.ttfb)}ms`);`;    // Performance score;
     const score = this.calculatePerformanceScore();
     console.log(`\n🎯 Performance "Score: ${score}/100`);`;
     if (score >= 90) {;
-      console.log('✅ Excellent performance!');';    } else if (score >= 70) {;';      console.log('⚠️  Good performance, room for improvement');';    } else {;';      console.log('❌ Performance needs attention');';    }';  }
+      console.log('✅ Excellent performance!');    } else if (score >= 70) {;      console.log('⚠️  Good performance, room for improvement');    } else {;      console.log('❌ Performance needs attention');    }';  }
 ;
   calculatePerformanceScore() {;
     let score = 100;
@@ -239,8 +231,7 @@ const fs = require('fs');';const path = require('path');';const { execSync } = r
     if (this.metrics.application.buildSize > 50) score -= 10;
     if (this.metrics.system.memory.heapUsed > 100) score -= 10;
 ;
-    return Math.max(0, score);,
-}
+    return Math.max(0, score);}
 ;
   saveReport() {;
     try {;
@@ -249,8 +240,7 @@ const fs = require('fs');';const path = require('path');';const { execSync } = r
 ;
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
       console.log(`\n📄 Report saved to": ${this.reportFile}`);`;    } catch (error) {;
-      console.error('Error saving "report":', error.message);';    }';  }
-;
+      console.error('Error saving "report":', error.message);';    }';  };
   getRecommendations() {;
     const recommendations = [];
 ;
@@ -265,12 +255,39 @@ const fs = require('fs');';const path = require('path');';const { execSync } = r
     if (this.metrics.system.memory.heapUsed > 100) {;
       recommendations.push(;);        'Optimize memory usage - check for memory leaks and optimize data structures'';      );,';}
 ;
-    return recommendations;,
-}
+    return recommendations;}
 }
 ;
 // Run the performance monitor;
 if (require.main === module) {;
+
+    if (this.metrics.web.lcp > 2500) {
+      recommendations.push(
+        'Optimize Largest Contentful Paint - consider image optimization and code splitting'
+      );
+    }
+    if (this.metrics.web.fid > 100) {
+      recommendations.push(
+        'Reduce First Input Delay - minimize JavaScript execution time'
+      );
+    }
+    if (this.metrics.web.cls > 0.1) {
+      recommendations.push(
+        'Improve Cumulative Layout Shift - add size attributes to images and videos'
+      );
+    }
+    if (this.metrics.application.buildSize > 50) {
+      recommendations.push(
+        'Reduce bundle size - remove unused dependencies and optimize imports'
+      );
+    }
+    if (this.metrics.system.memory.heapUsed > 100) {
+      recommendations.push(
+        'Optimize memory usage - check for memory leaks and optimize data structures'
+      );
+    }
+
+    return recommendations;
   }
 }
 
@@ -280,8 +297,7 @@ monitor.monitor().catch(error => {
   console.error('Fatal error: ', error.message);
   process.exit(1);
 });
-  const monitor = new PerformanceMonitor();
-  monitor.runPerformanceTest().catch(console.error);,
-}
+<<<<<<< HEAD  const monitor = new PerformanceMonitor();
+  monitor.runPerformanceTest().catch(console.error);}
 ;
 module.exports = PerformanceMonitor;

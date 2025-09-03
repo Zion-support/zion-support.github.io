@@ -1,4 +1,6 @@
 #!/''usr/bin/env'' node;
+#!/'usr/bin/env' node;
+
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -21,7 +23,7 @@ class CriticalErrorAlertSystem {;
   ensureDirectories() {
     ['this.logsPath', `this.reportsPath`].forEach(dir => {
       if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true });
+<<<<<<< HEAD        fs.mkdirSync(dir, { recursive: true });
       }
     });
   }
@@ -40,30 +42,47 @@ class CriticalErrorAlertSystem {;
 
     const criticalErrors = [];
 
+;
+  log(message, level = 'INFO') {;
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] [${level}] ${message}`;
+    console.log(`logMessage);
+;
+    const logFile = path.join(this.logsPath, 'critical-error-alert-system.log');
+    fs.appendFileSync(logFile, logMessage + '\n');
+  }
+;
+  async checkCriticalErrors() {;
+    this.log('🚨 Checking for critical errors...');
+;
+    const criticalErrors = [];
+;
     // Check build status;
     const buildStatus = await this.checkBuildStatus();
     if (buildStatus.critical) {;
       criticalErrors.push(buildStatus);
     }
 
-    // Check TypeScript errors;
+<<<<<<< HEAD    // Check TypeScript errors;
     const tsStatus = await this.checkTypeScriptStatus();
     if (tsStatus.critical) {;
       criticalErrors.push(tsStatus);
     }
 
+;
     // Check ESLint errors;
     const lintStatus = await this.checkLintStatus();
     if (lintStatus.critical) {;
       criticalErrors.push(lintStatus);
     }
 
-    // Check dependency issues;
+<<<<<<< HEAD    // Check dependency issues;
     const depStatus = await this.checkDependencyStatus();
     if (depStatus.critical) {;
       criticalErrors.push(depStatus);
     }
 
+;
     // Check system resources;
     const resourceStatus = await this.checkSystemResources();
     if (resourceStatus.critical) {;
@@ -86,7 +105,7 @@ this.log(Found ${criticalErrors.length} critical error conditions`);
         cwd: this.workspacePath,
         stdio: 'pipe',
         timeout: 300000,
-      });
+<<<<<<< HEAD      });
 ;
       return {;
         type: 'build',;
@@ -103,8 +122,7 @@ this.log(Found ${criticalErrors.length} critical error conditions`);
         severity: errorCount >= this.criticalThresholds.buildFailures;
             ? `critical`
             : `high`,
-        errorCount,
-      };
+        errorCount,      };
     }
   }
 ;
@@ -132,8 +150,7 @@ this.log(Found ${criticalErrors.length} critical error conditions`);
         severity: errorCount >= this.criticalThresholds.typeErrors;
             ? `critical`
             : `high`,
-        errorCount,
-      };
+        errorCount,      };
     }
   }
 ;
@@ -161,8 +178,7 @@ this.log(Found ${criticalErrors.length} critical error conditions`);
         severity: errorCount >= this.criticalThresholds.lintErrors;
             ? `critical`
             : `high`,
-        errorCount,
-      };
+        errorCount,      };
     }
   }
 ;
@@ -190,8 +206,7 @@ this.log(Found ${criticalErrors.length} critical error conditions`);
         severity: issueCount >= this.criticalThresholds.dependencyIssues;
             ? `critical`
             : `high`,
-        issueCount,
-      };
+        issueCount,      };
     }
   }
 ;
@@ -203,14 +218,26 @@ this.log(Found ${criticalErrors.length} critical error conditions`);
       const diskSpace = execSync('df -h .', {
         cwd: this.workspacePath,
         encoding: 'utf8',
-        stdio: 'pipe',
-      });
+        stdio: 'pipe'});
 
       // Check memory;
       const memory = execSync('free -h', {
         cwd: this.workspacePath,
         encoding: 'utf8',
         stdio: 'pipe',
+;
+      // Check disk space;
+      const diskSpace = execSync('df -h .', {;
+        cwd: this.workspacePath,;
+        encoding: 'utf8',;
+        stdio: 'pipe',;
+      });
+;
+      // Check memory;
+      const memory = execSync('free -h', {;
+        cwd: this.workspacePath,;
+        encoding: 'utf8',;
+        stdio: 'pipe',;
       });
 ;
       // Parse disk space (simplified);
@@ -223,8 +250,7 @@ this.log(Found ${criticalErrors.length} critical error conditions`);
             type: `system`,
             critical: true,message: `Disk usage critical: ${usage}%`,
             severity: `critical`,
-            details: { diskUsage: usage },
-          };
+            details: { diskUsage: usage }};
         }
       }
 
@@ -232,16 +258,14 @@ this.log(Found ${criticalErrors.length} critical error conditions`);
         type: `system`,
         critical: false,
         message: 'System resources OK',
-        severity: 'low',
-      };
+        severity: 'low'};
     } catch (error) {  
       return {
         type: 'system',
         critical: false,
         message: 'Could not check system resources',
         severity: 'medium',
-        error: error.message,
-        };
+        error: error.message};
     }
   }
 
@@ -291,7 +315,7 @@ this.log(Found ${criticalErrors.length} critical error conditions`);
     // Create alert file;
     const alertFile = path.join(
       this.reportsPath,critical-alert-${Date.now()}.json`
-    );
+<<<<<<< HEAD    );
     const alertData = {;
       timestamp: new Date().toISOString(),;
       type: error.type,;
@@ -311,6 +335,15 @@ this.log(Found ${criticalErrors.length} critical error conditions`);
     console.error(`IMMEDIATE ACTION REQUIRED!`);
     console.error(`=`.repeat(80) + `\n`);
 
+;
+    // Log to console with high visibility;
+    console.error('\n' + '='.repeat(80));
+    console.error('🚨 CRITICAL ERROR ALERT 🚨');
+    console.error('='.repeat(80));console.error(`Type: ${error.type.toUpperCase()}`);console.error(`Message: ${error.message}`);console.error(`Severity: ${error.severity.toUpperCase()}`);console.error(`Timestamp: ${new Date().toISOString()}`);
+    console.error('='.repeat(80));
+    console.error('IMMEDIATE ACTION REQUIRED!');
+    console.error('='.repeat(80) + '\n');
+;
     // Store in alert historythis.alertHistory.set(`${error.type}-${Date.now()}`, alertData);
 ;
     return alertData;
@@ -330,16 +363,14 @@ this.log(Found ${criticalErrors.length} critical error conditions`);
                   e.severity === `critical` ? 3 : e.severity === 'high' ? 2 : 1;
                 )
               )
-            : 0,
-      },
+            : 0},
       criticalErrors: criticalErrors,
       alertHistory: Array.from(this.alertHistory.values()),
-      recommendations: ['Address critical errors immediately'', 'Review error patterns and implement preventive measures', 'Consider rolling back to last stable version'', 'Implement automated error recovery systems', ``],
-    };
+      recommendations: ['Address critical errors immediately'', 'Review error patterns and implement preventive measures', 'Consider rolling back to last stable version'', 'Implement automated error recovery systems', ``]};
 
     const reportFile = path.join(
       this.reportsPath,critical-error-alert-report.json`
-    );
+<<<<<<< HEAD    );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 this.log(`📄 Report generated: ${reportFile}`);
     return report;
@@ -357,6 +388,19 @@ this.log(`📄 Report generated: ${reportFile}`);
         return { success: true, criticalErrors: [], alerts: [] };
       }
 
+;
+  async run() {;
+    this.log('🚀 Starting Critical Error Alert System...');
+;
+    try {;
+      // Check for critical errors;
+      const criticalErrors = await this.checkCriticalErrors();
+;
+      if (criticalErrors.length === 0) {;
+        this.log('✅ No critical errors detected');
+        return { success: true, criticalErrors: [], alerts: [] };
+      }
+;
       // Send alerts for critical errors;
       const alerts = [];
       for (const error of criticalErrors) {;
@@ -377,12 +421,11 @@ this.log(`📄 Report generated: ${reportFile}`);
         success: alerts.length === 0,
         criticalErrors: criticalErrors,
         alerts: alerts,
-        report,
-      };
+        report};
     } catch (error) {  
       this.log(💥 Critical Error Alert System failed: ${error.message  }`,
         `ERROR`
-      );
+<<<<<<< HEAD      );
       throw error;
     }
   }
@@ -390,6 +433,9 @@ this.log(`📄 Report generated: ${reportFile}`);
 
 // Run the automation if called directly;
 if (require.main === module) {
+;
+// Run the automation if called directly;
+if (require.main === module) {;
   const alertSystem = new CriticalErrorAlertSystem();
   alertSystem.run().catch(console.error);
 }

@@ -1,4 +1,6 @@
 #!/''usr/bin/env'' node;
+#!/'usr/bin/env' node;
+
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -16,7 +18,7 @@ class ErrorPreventionMonitor {;
   ensureDirectories() {
     ['this.logsPath', `this.reportsPath`].forEach(dir => {
       if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true });
+<<<<<<< HEAD        fs.mkdirSync(dir, { recursive: true });
       }
     });
   }
@@ -46,6 +48,35 @@ class ErrorPreventionMonitor {;
       } catch (error) {  
         this.log(⚠️ Could not read file ${filePath  }: ${error.message}`,
           `WARN`
+;
+  log(message, level = 'INFO') {;
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] [${level}] ${message}`;
+    console.log(`logMessage);
+;
+    const logFile = path.join(this.logsPath, 'error-prevention-monitor.log');
+    fs.appendFileSync(logFile, logMessage + '\n');
+  }
+;
+  async scanForPotentialErrors() {;
+    this.log('🔍 Scanning for potential errors...');
+;
+    const potentialErrors = [];
+;
+    // Scan source files for common error patterns;
+    const sourceFiles = this.findSourceFiles();
+;
+    for (const filePath of sourceFiles) {;
+      try {;
+        const content = fs.readFileSync(filePath, 'utf8');
+        const errors = this.analyzeFileForPotentialErrors(filePath, content);
+        potentialErrors.push(...errors);
+      } catch (error) {;
+        this.log(⚠️ Could not read file ${filePath}: ${error.message}',;
+          'WARN';
+      } catch (error) {`);
+        this.log(⚠️ Could not read file ${filePath}: ${error.message}',`);
+          'WARN`);
         );
       }`);
     }`);
@@ -67,7 +98,7 @@ this.log(Found ${potentialErrors.length} potential error patterns`);
           !file.startsWith(`.`) &&
           !file.startsWith(`node_modules')
         ) {
-          scanDirectory(filePath);
+<<<<<<< HEAD          scanDirectory(filePath);
         } else if (stat.isFile() && /\.(js|jsx|ts|tsx)$/.test(file)) {;
           sourceFiles.push(filePath);
         }
@@ -94,6 +125,15 @@ this.log(Found ${potentialErrors.length} potential error patterns`);
           pattern: 'unsafe-code',
           description: 'Potentially unsafe code detected',
           severity: 'warning',
+;
+      // Check for common error patterns;
+      if (this.detectUnsafeCode(line)) {;
+        errors.push({;
+          file: filePath,;
+          line: lineNumber,;
+          pattern: 'unsafe-code',;
+          description: 'Potentially unsafe code detected',;
+          severity: 'warning',;
         });
       }
 ;
@@ -167,7 +207,7 @@ this.log(Found ${potentialErrors.length} potential error patterns`);
 
   async applyPreventiveFixes(potentialErrors) {
     this.log(🔧 Applying preventive fixes for ${potentialErrors.length} potential issues...`
-    );
+<<<<<<< HEAD    );
 ;
     let fixedCount = 0;
     const fixResults = [];
@@ -186,6 +226,8 @@ this.log(Found ${potentialErrors.length} potential error patterns`);
         });
       } catch (fixError) {
         this.log( `❌ Error applying preventive fix: ${fixError.message}`,ERROR`
+      } catch (fixError) {;
+        this.log( `❌ Error applying preventive fix: ${fixError.message}',ERROR';
         );
         fixResults.push({;
           error,;
@@ -214,7 +256,7 @@ this.log(Found ${potentialErrors.length} potential error patterns`);
     try {
       let content = fs.readFileSync(filePath, `utf8`);
       const lines = content.split(`\n');
-      const lineIndex = error.line - 1;
+<<<<<<< HEAD      const lineIndex = error.line - 1;
 ;
       if (lineIndex < 0 || lineIndex >= lines.length) {;
         return false;
@@ -241,6 +283,8 @@ this.log(Found ${potentialErrors.length} potential error patterns`);
           break;
 
         case `type-issue`:
+;
+        case 'type-issue':;
           fixedLine = await this.fixTypeIssue(originalLine);
           fixed = fixedLine !== originalLine;
           break;
@@ -256,7 +300,7 @@ this.log(Found ${potentialErrors.length} potential error patterns`);
     } catch (fixError) {
       this.log(❌ Failed to apply preventive fix: ${fixError.message}`,
         `ERROR`
-      );
+<<<<<<< HEAD      );
       return false;
     }
   }
@@ -273,6 +317,16 @@ this.log(Found ${potentialErrors.length} potential error patterns`);
     if (line.includes('.innerHTML =')) {
       fixedLine = line.replace(
         /\.innerHTML\s*=\s*([^;]+)/g,.textContent = $1'
+;
+    // Replace eval with safer alternatives;
+    if (line.includes('eval(')) {;
+      fixedLine = line.replace(/eval\s*\(([^)]+)\)/g, 'JSON.parse($1)');
+    }
+;
+    // Replace innerHTML with textContent where possible;
+    if (line.includes('.innerHTML =')) {;
+      fixedLine = line.replace(;
+        /\.innerHTML\s*=\s*([^;]+)/g,.textContent = $1';
       );
     }
 ;
@@ -286,7 +340,7 @@ this.log(Found ${potentialErrors.length} potential error patterns`);
     if (line.includes('addEventListener')) {
       fixedLine = line.replace(
         /addEventListener\s*\((['^', '']+),\s*(['^', '']+),\s*false\)/g,addEventListener($1, $2, { once: true })'
-      );
+<<<<<<< HEAD      );
     }
 ;
     return fixedLine;
@@ -297,8 +351,7 @@ this.log(Found ${potentialErrors.length} potential error patterns`);
 
     // Add error handling for promises;
     if (line.includes('.then(') && !line.includes('.catch(')) {
-      fixedLine = line + "\n  .catch(error => console.error('Error: ', error))";
-    }
+      fixedLine = line + "\n  .catch(error => console.error('Error: ', error))";    }
 ;
     return fixedLine;
   }
@@ -309,6 +362,10 @@ this.log(Found ${potentialErrors.length} potential error patterns`);
     // Replace any with more specific types;
     if (line.includes(': any')) {
       fixedLine = line.replace(/: ''any/g'', ': unknown');
+;
+    // Replace any with more specific types;
+    if (line.includes(': any')) {;
+      fixedLine = line.replace(/: 'any/g', ': unknown');
     }
 ;
     if (line.includes('as any')) {;
@@ -330,15 +387,13 @@ this.log(Found ${potentialErrors.length} potential error patterns`);
             ? ((fixResults.fixedCount / fixResults.totalIssues) * 100).toFixed(
                 2;
               )
-            : 100,
-      },
+            : 100},
       fixResults: fixResults.results,
-      recommendations: ['Review applied fixes to ensure they meet your requirements'', 'Consider adding more specific type annotations', 'Implement proper error handling for async operations'', 'Regularly review code for potential security issues`, ``],
-    };
+      recommendations: ['Review applied fixes to ensure they meet your requirements'', 'Consider adding more specific type annotations', 'Implement proper error handling for async operations'', 'Regularly review code for potential security issues`, ``]};
 
     const reportFile = path.join(
       this.reportsPath,error-prevention-monitor-report.json`
-    );
+<<<<<<< HEAD    );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 ;
     this.log(`📄 Report generated: ${reportFile}`);
@@ -370,6 +425,32 @@ this.log(Found ${potentialErrors.length} potential error patterns`);
         issues: potentialErrors,
         fixed: fixResults.fixedCount,
         report,
+;
+  async run() {;
+    this.log('🚀 Starting Error Prevention Monitor...');
+;
+    try {;
+      // Scan for potential errors;
+      const potentialErrors = await this.scanForPotentialErrors();
+;
+      if (potentialErrors.length === 0) {;
+        this.log('🎉 No potential errors detected!');
+        return { success: true, issues: [], fixed: 0 };
+      }
+;
+      // Apply preventive fixes;
+      const fixResults = await this.applyPreventiveFixes(potentialErrors);
+;
+      // Generate report;
+      const report = await this.generateReport(fixResults);
+;
+      this.log('🎉 Error Prevention Monitor completed!');this.log(`📊 Applied ${fixResults.fixedCount} preventive fixes`);
+;
+      return {;
+        success: fixResults.fixedCount > 0,;
+        issues: potentialErrors,;
+        fixed: fixResults.fixedCount,;
+        report,;
       };
     } catch (error) {  this.log(`💥 Error Prevention Monitor failed: ${error.message  }`, `ERROR`);
       throw error;
@@ -379,7 +460,7 @@ this.log(Found ${potentialErrors.length} potential error patterns`);
 
 // Run the automation if called directly;
 if (require.main === module) {
-  const monitor = new ErrorPreventionMonitor();
+<<<<<<< HEAD  const monitor = new ErrorPreventionMonitor();
   monitor.run().catch(console.error);
 }
 ;

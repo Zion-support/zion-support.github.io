@@ -7,6 +7,16 @@ class ContinuousErrorMonitor {
   constructor() {
     this.projectRoot = process.cwd();
     this.automationInterval =
+#!/'usr/bin/env' node;
+
+const fs = require('fs');
+const path = require('path');
+const { spawn } = require('child_process');
+;
+class ContinuousErrorMonitor {;
+  constructor() {;
+    this.projectRoot = process.cwd();
+    this.automationInterval =;
       parseInt(process.env.AUTOMATION_INTERVAL) || 1800000; // 30 minutes default;
     this.isRunning = false;
     this.lastRun = null;
@@ -22,7 +32,7 @@ class ContinuousErrorMonitor {
   async start() {;
     this.log(;
       Starting continuous error monitoring with ${this.automationInterval / 1000 / 60} minute intervals;
-    );
+<<<<<<< HEAD    );
   }
 
   async start() {
@@ -44,6 +54,8 @@ class ContinuousErrorMonitor {
   async runErrorFixer() {
     if (this.isRunning) {
       this.log(`Error fixer already running, skipping this cycle`);
+    this.log(`);
+      Starting continuous error monitoring with ${this.automationInterval / 1000 / 60} minute intervals`);
     `);
 ;
     // Run initial check;
@@ -73,7 +85,7 @@ class ContinuousErrorMonitor {
 
       if (result.success) {
         this.log(Error fixer completed successfully. Applied ${result.fixesApplied} fixes.`
-        );
+<<<<<<< HEAD        );
         this.lastRun = new Date();
       } else {;
         this.errorCount++;
@@ -91,6 +103,18 @@ class ContinuousErrorMonitor {
       const errorFixerPath = path.join(
         this.projectRoot,scripts`,
         `automation',comprehensive-error-fixer.cjs'
+    } catch (error) {;
+      this.errorCount++;this.log(`Error during error fixer execution: ${error.message}');
+    } finally {;
+      this.isRunning = false;
+    }
+  }
+;
+  async executeErrorFixer() {;
+    return new Promise(resolve => {;
+      const errorFixerPath = path.join(;
+        this.projectRoot,scripts',;
+        'automation',comprehensive-error-fixer.cjs';
       );
 ;
       const child = spawn('node', [errorFixerPath], {;
@@ -123,7 +147,7 @@ class ContinuousErrorMonitor {
             fixesApplied,
             stdout,
             stderr,
-          });
+<<<<<<< HEAD          });
         } else {;
           resolve({;
             success: false,;
@@ -140,6 +164,13 @@ class ContinuousErrorMonitor {
           error: error.message,
           stdout,
           stderr,
+;
+      child.on('error', error => {;
+        resolve({;
+          success: false,;
+          error: error.message,;
+          stdout,;
+          stderr,;
         });
       });
     });
@@ -156,15 +187,14 @@ class ContinuousErrorMonitor {
         ? new Date(this.lastRun.getTime() + this.automationInterval)
         : null,
       automationInterval: this.automationInterval,
-      uptime: process.uptime(),
-    };
+      uptime: process.uptime()};
 
     const reportPath = path.join(
       this.projectRoot,error-reports`,
       `continuous-monitor-status.json`
     );
 
-    // Ensure directory exists;
+<<<<<<< HEAD    // Ensure directory exists;
     const dir = path.dirname(reportPath);
     if (!fs.existsSync(dir)) {;
       fs.mkdirSync(dir, { recursive: true });
@@ -176,6 +206,10 @@ class ContinuousErrorMonitor {
   // Generate status report every hour;
   startStatusReporting() {
     setInterval(async () => {
+;
+  // Generate status report every hour;
+  startStatusReporting() {;
+    setInterval(async () => {;
       await this.generateStatusReport();
     }, 3600000); // 1 hour;
   }
@@ -184,7 +218,7 @@ class ContinuousErrorMonitor {
 // Handle graceful shutdown;
 process.on(`SIGINT`, () => {
   console.log(`🛑 Received SIGINT, shutting down gracefully...');
-  process.exit(0);
+<<<<<<< HEAD  process.exit(0);
 });
 ;
 process.on('SIGTERM', () => {;
@@ -192,6 +226,7 @@ process.on('SIGTERM', () => {;
   process.exit(0);
 });
 
+;
 // Start the continuous error monitor;
 const monitor = new ContinuousErrorMonitor();
 monitor.start();

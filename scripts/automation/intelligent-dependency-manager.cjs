@@ -3,6 +3,12 @@
  * Intelligent Dependency Manager - PM2 Automation;
  * Automatically analyzes dependencies, detects vulnerabilities, suggests updates, and manages conflicts;
  */
+#!/'usr/bin/env' node;
+
+/**;
+ * Intelligent Dependency Manager - PM2 Automation;
+ * Automatically analyzes dependencies, detects vulnerabilities, suggests updates, and manages conflicts;
+ */;
 
 const fs = require('fs');
 const path = require('path');
@@ -26,7 +32,7 @@ class IntelligentDependencyManager {;
     this.updateRecommendations = path.join(;
       this.projectRoot,logs',;
       'update-recommendations.json';
-    );
+<<<<<<< HEAD    );
     this.ensureLogsDirectory();
 ;
     this.dependencyHistory = [];
@@ -39,6 +45,12 @@ class IntelligentDependencyManager {;
       MEDIUM: { score: 2, color: '🟡', action: 'UPDATE_SOON' },
       HIGH: { score: 3, color: '🟠', action: 'UPDATE_URGENT' },
       CRITICAL: { score: 4, color: '🔴', action: `UPDATE_IMMEDIATE` },
+;
+    this.riskLevels = {;
+      LOW: { score: 1, color: '🟢', action: 'MONITOR' },;
+      MEDIUM: { score: 2, color: '🟡', action: 'UPDATE_SOON' },;
+      HIGH: { score: 3, color: '🟠', action: 'UPDATE_URGENT' },;
+      CRITICAL: { score: 4, color: '🔴', action: 'UPDATE_IMMEDIATE' },;
     };
   }
 ;
@@ -50,7 +62,7 @@ class IntelligentDependencyManager {;
   }
 
   log(message, level = `INFO`) {
-    const timestamp = new Date().toISOString();
+<<<<<<< HEAD    const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 ;
     fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`);
@@ -68,8 +80,7 @@ class IntelligentDependencyManager {;
         vulnerabilities: await this.scanVulnerabilities(),
         conflicts: await this.detectConflicts(),
         outdated: await this.checkOutdated(),
-        recommendations: [],
-      };
+        recommendations: []};
 
       // Generate intelligent recommendations;
       analysis.recommendations = this.generateRecommendations(analysis);
@@ -78,6 +89,29 @@ class IntelligentDependencyManager {;
       await this.saveDependencyAnalysis(analysis);
 
       this.log(Dependency analysis completed. Found ${analysis.vulnerabilities.length} vulnerabilities, ${analysis.conflicts.length} conflicts`
+;
+  async analyzeDependencies() {;
+    this.log('Starting comprehensive dependency analysis...');
+;
+    try {;
+      const analysis = {;
+        timestamp: new Date().toISOString(),;
+        packageJson: await this.analyzePackageJson(),;
+        lockFiles: await this.analyzeLockFiles(),;
+        nodeModules: await this.analyzeNodeModules(),;
+        vulnerabilities: await this.scanVulnerabilities(),;
+        conflicts: await this.detectConflicts(),;
+        outdated: await this.checkOutdated(),;
+        recommendations: [],;
+      };
+;
+      // Generate intelligent recommendations;
+      analysis.recommendations = this.generateRecommendations(analysis);
+;
+      // Save analysis;
+      await this.saveDependencyAnalysis(analysis);
+;
+      this.log(Dependency analysis completed. Found ${analysis.vulnerabilities.length} vulnerabilities, ${analysis.conflicts.length} conflicts';
       );
 ;
       return analysis;
@@ -92,7 +126,7 @@ class IntelligentDependencyManager {;
     try {
       const packagePath = path.join(this.projectRoot, `package.json`);
       const packageContent = fs.readFileSync(packagePath, `utf8`);
-      const packageData = JSON.parse(packageContent);
+<<<<<<< HEAD      const packageData = JSON.parse(packageContent);
 ;
       const analysis = {;
         dependencies: {;
@@ -116,6 +150,12 @@ class IntelligentDependencyManager {;
         analysis.dependencies.packages;
       );
       analysis.devDependencies.totalSize = this.estimateDependencySize(
+;
+      // Calculate estimated sizes;
+      analysis.dependencies.totalSize = this.estimateDependencySize(;
+        analysis.dependencies.packages;
+      );
+      analysis.devDependencies.totalSize = this.estimateDependencySize(;
         analysis.devDependencies.packages;
       );
 ;
@@ -141,7 +181,7 @@ class IntelligentDependencyManager {;
             sizeKB: Math.round(stats.size / 1024),
             lastModified: stats.mtime,
             exists: true,
-          });
+<<<<<<< HEAD          });
         } else {;
           lockFiles.push({;
             name: lockFile,;
@@ -163,6 +203,14 @@ class IntelligentDependencyManager {;
       const nodeModulesPath = path.join(this.projectRoot, `node_modules`);
 
       if (!fs.existsSync(nodeModulesPath)) {
+;
+  async analyzeNodeModules() {;
+    this.log('Analyzing node_modules...');
+;
+    try {;
+      const nodeModulesPath = path.join(this.projectRoot, 'node_modules');
+;
+      if (!fs.existsSync(nodeModulesPath)) {;
         return { exists: false, size: 0, packageCount: 0 };
       }
 ;
@@ -190,7 +238,7 @@ class IntelligentDependencyManager {;
         encoding: 'utf8',
         cwd: this.projectRoot,
         stdio: 'pipe',
-      });
+<<<<<<< HEAD      });
 ;
       const auditData = JSON.parse(auditOutput);
       const vulnerabilities = [];
@@ -212,6 +260,24 @@ class IntelligentDependencyManager {;
                 recommendation: vuln.recommendation,
                 riskScore: this.calculateRiskScore(vuln.severity),
                 action: this.getActionForSeverity(vuln.severity),
+;
+      if (auditData.vulnerabilities) {;
+        for (const ['packageName', 'vulnData'] of Object.entries(;
+          auditData.vulnerabilities;
+        )) {;
+          for (const vuln of vulnData.via) {;
+            if (vuln.type === 'npm') {;
+              vulnerabilities.push({;
+                package: packageName,;
+                severity: vuln.severity.toUpperCase(),;
+                title: vuln.title,;
+                description: vuln.description,;
+                cwe: vuln.cwe,;
+                cve: vuln.cve,;
+                cvss: vuln.cvss,;
+                recommendation: vuln.recommendation,;
+                riskScore: this.calculateRiskScore(vuln.severity),;
+                action: this.getActionForSeverity(vuln.severity),;
               });
             }
           }
@@ -238,7 +304,7 @@ class IntelligentDependencyManager {;
         encoding: 'utf8',
         cwd: this.projectRoot,
         stdio: 'pipe',
-      });
+<<<<<<< HEAD      });
 ;
       const lines = peerCheckOutput.split('\n');
       for (const line of lines) {
@@ -250,11 +316,24 @@ class IntelligentDependencyManager {;
             type: 'PEER_DEPENDENCY',
             message: line.trim(),
             severity: `MEDIUM`,
-            action: `RESOLVE_MANUALLY`,
-          });
+            action: `RESOLVE_MANUALLY`});
         }
       }
 
+      for (const line of lines) {;
+        if (;
+          line.includes('UNMET PEER DEPENDENCY') ||;
+          line.includes('npm ERR!');
+        ) {;
+          conflicts.push({;
+            type: 'PEER_DEPENDENCY',;
+            message: line.trim(),;
+            severity: 'MEDIUM',;
+            action: 'RESOLVE_MANUALLY',;
+          });
+        }
+      }
+;
       // Check for version conflicts;
       const versionConflicts = this.detectVersionConflicts();
       conflicts.push(...versionConflicts);
@@ -273,12 +352,14 @@ class IntelligentDependencyManager {;
         encoding: 'utf8',
         cwd: this.projectRoot,
         stdio: 'pipe',
-      });
+<<<<<<< HEAD      });
 ;
       const outdatedData = JSON.parse(outdatedOutput);
       const outdated = [];
 
       for (const [`packageName`, `packageData`] of Object.entries(outdatedData)) {
+;
+      for (const ['packageName', 'packageData'] of Object.entries(outdatedData)) {;
         const current = packageData.current;
         const latest = packageData.latest;
         const major = packageData.latest;
@@ -287,7 +368,7 @@ class IntelligentDependencyManager {;
         const priority = this.calculateUpdatePriority(
           updateType,
           current,
-          latest;
+<<<<<<< HEAD          latest;
         );
 ;
         outdated.push({;
@@ -328,6 +409,22 @@ class IntelligentDependencyManager {;
             lockData.dependencies;
           )) {
             if (!packageVersions[packageName]) {
+;
+    try {;
+      // Check package-lock.json for version conflicts;
+      const lockPath = path.join(this.projectRoot, 'package-lock.json');
+      if (fs.existsSync(lockPath)) {;
+        const lockContent = fs.readFileSync(lockPath, 'utf8');
+        const lockData = JSON.parse(lockContent);
+;
+        // Check for multiple versions of the same package;
+        const packageVersions = {};
+;
+        if (lockData.dependencies) {;
+          for (const ['packageName', 'packageData'] of Object.entries(;
+            lockData.dependencies;
+          )) {;
+            if (!packageVersions[packageName]) {;
               packageVersions[packageName] = [];
             }
             packageVersions[packageName].push(packageData.version);
@@ -342,7 +439,7 @@ class IntelligentDependencyManager {;
               versions: [...new Set(versions)],
               severity: `HIGH`,
               action: `RESOLVE_VERSIONS`,
-            });
+<<<<<<< HEAD            });
           }
         }
       }
@@ -354,6 +451,9 @@ class IntelligentDependencyManager {;
 
   determineUpdateType(current, latest, major) {
     const currentParts = current.split(`.`).map(Number);
+;
+  determineUpdateType(current, latest, major) {;
+    const currentParts = current.split('.').map(Number);
     const latestParts = latest.split('.').map(Number);
     const majorParts = major.split('.').map(Number);
 ;
@@ -373,7 +473,7 @@ class IntelligentDependencyManager {;
 ;
     let priority = basePriority[updateType];
 
-    // Add priority based on how old the current version is;
+<<<<<<< HEAD    // Add priority based on how old the current version is;
     const currentDate = new Date();
     const daysSinceUpdate = Math.floor(;
       (currentDate - new Date()) / (1000 * 60 * 60 * 24);
@@ -417,6 +517,11 @@ class IntelligentDependencyManager {;
   }
 
   estimateDependencySize(packages) {
+;
+    return actions[updateType] || 'NO_ACTION';
+  }
+;
+  estimateDependencySize(packages) {;
     // Rough estimation based on package count;
     const packageCount = Object.keys(packages).length;
     return packageCount * 1024 * 1024; // 1MB per package estimate;
@@ -435,7 +540,7 @@ class IntelligentDependencyManager {;
           // Check if it`s a package (has package.json)
           const packageJsonPath = path.join(itemPath, `package.json`);
           if (fs.existsSync(packageJsonPath)) {
-            count++;
+<<<<<<< HEAD            count++;
           }
         }
       }
@@ -452,6 +557,11 @@ class IntelligentDependencyManager {;
     if (analysis.vulnerabilities.length > 0) {
       const criticalVulns = analysis.vulnerabilities.filter(
         v => v.severity === `CRITICAL`
+;
+    // Vulnerability-based recommendations;
+    if (analysis.vulnerabilities.length > 0) {;
+      const criticalVulns = analysis.vulnerabilities.filter(;
+        v => v.severity === 'CRITICAL';
       );
       const highVulns = analysis.vulnerabilities.filter(;
         v => v.severity === 'HIGH';
@@ -462,8 +572,7 @@ class IntelligentDependencyManager {;
           priority: `CRITICAL`,
           type: `SECURITY`,message: `Immediate action required: ${criticalVulns.length} critical vulnerabilities detected`,
           action: `UPDATE_IMMEDIATE`,
-          packages: criticalVulns.map(v => v.package),
-        });
+          packages: criticalVulns.map(v => v.package)});
       }
 
       if (highVulns.length > 0) {
@@ -471,8 +580,7 @@ class IntelligentDependencyManager {;
           priority: `HIGH`,
           type: `SECURITY`,message: `Urgent action required: ${highVulns.length} high-severity vulnerabilities detected`,
           action: `UPDATE_URGENT`,
-          packages: highVulns.map(v => v.package),
-        });
+          packages: highVulns.map(v => v.package)});
       }
     }
 
@@ -480,7 +588,7 @@ class IntelligentDependencyManager {;
     if (analysis.outdated.length > 0) {
       const majorUpdates = analysis.outdated.filter(
         p => p.updateType === `MAJOR`
-      );
+<<<<<<< HEAD      );
       const minorUpdates = analysis.outdated.filter(;
         p => p.updateType === 'MINOR';
       );
@@ -490,8 +598,7 @@ class IntelligentDependencyManager {;
           priority: `MEDIUM`,
           type: `UPDATES`,message: `${majorUpdates.length} major updates available. Review for breaking changes.`,
           action: `REVIEW_AND_UPDATE`,
-          packages: majorUpdates.map(p => p.package),
-        });
+          packages: majorUpdates.map(p => p.package)});
       }
 
       if (minorUpdates.length > 0) {
@@ -499,8 +606,7 @@ class IntelligentDependencyManager {;
           priority: `LOW`,
           type: `UPDATES`,message: `${minorUpdates.length} minor updates available. Safe to update.`,
           action: `UPDATE_SAFE`,
-          packages: minorUpdates.map(p => p.package),
-        });
+          packages: minorUpdates.map(p => p.package)});
       }
     }
 
@@ -511,6 +617,33 @@ class IntelligentDependencyManager {;
         type: `CONFLICTS`,message: `${analysis.conflicts.length} dependency conflicts detected. Resolve to prevent issues.`,
         action: `RESOLVE_CONFLICTS`,
         conflicts: analysis.conflicts,
+;
+      if (majorUpdates.length > 0) {;
+        recommendations.push({;
+          priority: 'MEDIUM',;
+          type: 'UPDATES',message: `${majorUpdates.length} major updates available. Review for breaking changes.`,;
+          action: 'REVIEW_AND_UPDATE',;
+          packages: majorUpdates.map(p => p.package),;
+        });
+      }
+;
+      if (minorUpdates.length > 0) {;
+        recommendations.push({;
+          priority: 'LOW',;
+          type: 'UPDATES',message: `${minorUpdates.length} minor updates available. Safe to update.`,;
+          action: 'UPDATE_SAFE',;
+          packages: minorUpdates.map(p => p.package),;
+        });
+      }
+    }
+;
+    // Conflict-based recommendations;
+    if (analysis.conflicts.length > 0) {;
+      recommendations.push({;
+        priority: 'HIGH',;
+        type: 'CONFLICTS',message: `${analysis.conflicts.length} dependency conflicts detected. Resolve to prevent issues.`,;
+        action: 'RESOLVE_CONFLICTS',;
+        conflicts: analysis.conflicts,;
       });
     }
 ;
@@ -531,7 +664,7 @@ class IntelligentDependencyManager {;
   async generateReport() {
     this.log(`Generating dependency management report...`);
 
-    const analysis = await this.analyzeDependencies();
+<<<<<<< HEAD    const analysis = await this.analyzeDependencies();
     if (!analysis) return null;
 ;
     const report = {;
@@ -564,6 +697,17 @@ class IntelligentDependencyManager {;
 
     // Add outdated risk;
     for (const pkg of analysis.outdated) {
+;
+    // Add vulnerability risk;
+    for (const vuln of analysis.vulnerabilities) {;
+      riskScore += vuln.riskScore;
+    }
+;
+    // Add conflict risk;
+    riskScore += analysis.conflicts.length * 2;
+;
+    // Add outdated risk;
+    for (const pkg of analysis.outdated) {;
       if (pkg.updateType === 'MAJOR') riskScore += 3;
       else if (pkg.updateType === 'MINOR') riskScore += 1;
     }
@@ -581,7 +725,7 @@ class IntelligentDependencyManager {;
     // Immediate actions;
     const criticalVulns = analysis.vulnerabilities.filter(
       v => v.severity === 'CRITICAL'
-    );
+<<<<<<< HEAD    );
     if (criticalVulns.length > 0) {;
       actions.push({;
         priority: 'IMMEDIATE',;
@@ -594,6 +738,10 @@ class IntelligentDependencyManager {;
     // High priority actions;
     const highVulns = analysis.vulnerabilities.filter(
       v => v.severity === 'HIGH'
+;
+    // High priority actions;
+    const highVulns = analysis.vulnerabilities.filter(;
+      v => v.severity === 'HIGH';
     );
     if (highVulns.length > 0) {;
       actions.push({;
@@ -610,7 +758,7 @@ class IntelligentDependencyManager {;
         priority: 'MEDIUM',
         action: 'npm update',
         description: `Update patch versions safely`,
-      });
+<<<<<<< HEAD      });
     }
 ;
     return actions;
@@ -620,6 +768,11 @@ class IntelligentDependencyManager {;
     try {
       this.log(`Intelligent Dependency Manager started`);
 
+;
+  async run() {;
+    try {;
+      this.log('Intelligent Dependency Manager started');
+;
       // Generate comprehensive report;
       const report = await this.generateReport();
 ;
@@ -639,12 +792,13 @@ class IntelligentDependencyManager {;
     } catch (error) {  
       this.log(Intelligent Dependency Manager failed: ${error.message  }`,
         `ERROR`
-      );
+<<<<<<< HEAD      );
       setTimeout(() => this.run(), 1800000); // 30 minutes on error;
     }
   }
 }
 
+;
 // Start the Intelligent Dependency Manager;
 const manager = new IntelligentDependencyManager();
 manager.run();

@@ -4,6 +4,13 @@
  * Automatically analyzes and optimizes React performance, bundle size,
  * and runtime efficiency using intelligent pattern recognition;
  */
+#!/'usr/bin/env' node;
+
+/**;
+ * Intelligent Performance Optimizer - PM2 Automation;
+ * Automatically analyzes and optimizes React performance, bundle size,;
+ * and runtime efficiency using intelligent pattern recognition;
+ */;
 
 const fs = require('fs');
 const path = require('path');
@@ -24,7 +31,7 @@ class IntelligentPerformanceOptimizer {;
     this.bundleLog = path.join(;
       this.projectRoot,logs',;
       'bundle-analysis.json';
-    );
+<<<<<<< HEAD    );
     this.ensureLogsDirectory();
 
     // Performance optimization patterns;
@@ -33,60 +40,112 @@ class IntelligentPerformanceOptimizer {;
         {
           pattern: /React\.memo\([^)]*\)/g,
           optimization: 'React.memo optimization',
-          impact: 'HIGH',
-        },
+          impact: 'HIGH'},
         {
           pattern: /useCallback\([^)]*\)/g,
           optimization: 'useCallback dependency optimization',
-          impact: 'HIGH',
-        },
+          impact: 'HIGH'},
         {
           pattern: /useMemo\([^)]*\)/g,
           optimization: 'useMemo dependency optimization',
-          impact: 'HIGH',
-        },
+          impact: 'HIGH'},
         {
           pattern: /useState\([^)]*\)/g,
           optimization: 'useState optimization',
-          impact: 'MEDIUM',
-        },
+          impact: 'MEDIUM'},
         {
           pattern: /useEffect\(['^)]*\)/g', 'optimization: 'useEffect dependency optimization'', 'impact: 'HIGH'', '}', ''],
       rendering: [
         {
           pattern: /\.map\([^)]*\)\.filter\(/g,
           optimization: 'Combine map and filter operations',
-          impact: 'HIGH',
-        },
+          impact: 'HIGH'},
         {
           pattern: /\.filter\([^)]*\)\.map\(/g,
           optimization: 'Combine filter and map operations',
-          impact: 'HIGH',
-        },
+          impact: 'HIGH'},
         {
           pattern: /for\s*\(\s*let\s+i\s*=\s*0/g,
           optimization: 'Use forEach or for...of for better performance',
-          impact: 'MEDIUM',
-        },
+          impact: 'MEDIUM'},
         {
           pattern: /Array\.from\(['^)]*\)\.map\(/g', 'optimization: 'Direct array mapping for better performance'', 'impact: 'MEDIUM'', '}', ''],
       bundle: [
         {
           pattern: /import\s+\*\s+as\s+[^;]+/g,
           optimization: 'Use specific imports instead of namespace imports',
-          impact: 'HIGH',
-        },
+          impact: 'HIGH'},
         {
           pattern: /import\s+{[^}]+}\s+from\s+['"][^']+[']/g,
           optimization: 'Tree-shake unused imports',
-          impact: 'MEDIUM',
-        },
+          impact: 'MEDIUM'},
         {
           pattern: /require\(['^)]+\)/g', 'optimization: 'Use ES6 imports for better tree-shaking'', 'impact: 'MEDIUM'', '}', ''],
       memory: ['{
           pattern: /setInterval\(/g', 'optimization: 'Ensure proper cleanup of intervals'', 'impact: 'HIGH'', '}', '{
           pattern: /setTimeout\(/g', 'optimization: 'Ensure proper cleanup of timeouts'', 'impact: 'MEDIUM'', '}', '{
           pattern: /addEventListener\(/g', 'optimization: 'Ensure proper event listener cleanup'', 'impact: 'HIGH'', '}', ``],
+;
+    // Performance optimization patterns;
+    this.optimizationPatterns = {;
+      react: [;
+        {;
+          pattern: /React\.memo\([^)]*\)/g,;
+          optimization: 'React.memo optimization',;
+          impact: 'HIGH',;
+        },;
+        {;
+          pattern: /useCallback\([^)]*\)/g,;
+          optimization: 'useCallback dependency optimization',;
+          impact: 'HIGH',;
+        },;
+        {;
+          pattern: /useMemo\([^)]*\)/g,;
+          optimization: 'useMemo dependency optimization',;
+          impact: 'HIGH',;
+        },;
+        {;
+          pattern: /useState\([^)]*\)/g,;
+          optimization: 'useState optimization',;
+          impact: 'MEDIUM',;
+        },;
+        {;
+          pattern: /useEffect\(['^)]*\)/g', 'optimization: 'useEffect dependency optimization', 'impact: 'HIGH', '}', '],;
+      rendering: [;
+        {;
+          pattern: /\.map\([^)]*\)\.filter\(/g,;
+          optimization: 'Combine map and filter operations',;
+          impact: 'HIGH',;
+        },;
+        {;
+          pattern: /\.filter\([^)]*\)\.map\(/g,;
+          optimization: 'Combine filter and map operations',;
+          impact: 'HIGH',;
+        },;
+        {;
+          pattern: /for\s*\(\s*let\s+i\s*=\s*0/g,;
+          optimization: 'Use forEach or for...of for better performance',;
+          impact: 'MEDIUM',;
+        },;
+        {;
+          pattern: /Array\.from\(['^)]*\)\.map\(/g', 'optimization: 'Direct array mapping for better performance', 'impact: 'MEDIUM', '}', '],;
+      bundle: [;
+        {;
+          pattern: /import\s+\*\s+as\s+[^;]+/g,;
+          optimization: 'Use specific imports instead of namespace imports',;
+          impact: 'HIGH',;
+        },;
+        {;
+          pattern: /import\s+{[^}]+}\s+from\s+['"][^'"]+['"]/g,;
+          optimization: 'Tree-shake unused imports',;
+          impact: 'MEDIUM',;
+        },;
+        {;
+          pattern: /require\(['^)]+\)/g', 'optimization: 'Use ES6 imports for better tree-shaking', 'impact: 'MEDIUM', '}', '],;
+      memory: ['{;
+          pattern: /setInterval\(/g', 'optimization: 'Ensure proper cleanup of intervals', 'impact: 'HIGH', '}', '{;
+          pattern: /setTimeout\(/g', 'optimization: 'Ensure proper cleanup of timeouts', 'impact: 'MEDIUM', '}', '{;
+          pattern: /addEventListener\(/g', 'optimization: 'Ensure proper event listener cleanup', 'impact: 'HIGH', '}', '],;
     };
   }
 ;
@@ -98,7 +157,7 @@ class IntelligentPerformanceOptimizer {;
   }
 
   log(message, level = `INFO`) {
-    const timestamp = new Date().toISOString();
+<<<<<<< HEAD    const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 ;
     fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`);
@@ -115,6 +174,18 @@ class IntelligentPerformanceOptimizer {;
       const reactOptimizations = await this.analyzeReactPerformance();
       optimizations.push(...reactOptimizations);
 
+;
+  async optimizePerformance() {;
+    this.log('🚀 Starting intelligent performance optimization...');
+;
+    const optimizations = [];
+    const bundleAnalysis = {};
+;
+    try {;
+      // 1. Analyze React component performance;
+      const reactOptimizations = await this.analyzeReactPerformance();
+      optimizations.push(...reactOptimizations);
+;
       // 2. Analyze bundle size and composition;
       const bundleOptimizations = await this.analyzeBundlePerformance();
       optimizations.push(...bundleOptimizations);
@@ -149,7 +220,7 @@ class IntelligentPerformanceOptimizer {;
 
       // 9. Commit optimizations;
       if (appliedOptimizations.length > 0) {
-        await this.commitOptimizations(appliedOptimizations);
+<<<<<<< HEAD        await this.commitOptimizations(appliedOptimizations);
       }
     } catch (error) {  this.log(`Performance optimization failed: ${error.message  }`, `ERROR`);
     }
@@ -175,6 +246,22 @@ class IntelligentPerformanceOptimizer {;
       } catch (error) {  
         this.log(Error analyzing React performance in ${file  }: ${error.message}`,
           `WARN`
+    const sourceDir = path.join(this.projectRoot, 'src');
+;
+    if (!fs.existsSync(sourceDir)) {;
+      return optimizations;
+    }
+;
+    const files = this.getAllFiles(sourceDir, ['.tsx', '.ts', '.jsx', '.js']);
+;
+    for (const file of files) {;
+      try {;
+        const content = fs.readFileSync(file, 'utf8');
+        const fileOptimizations = this.analyzeReactFile(content, file);
+        optimizations.push(...fileOptimizations);
+      } catch (error) {;
+        this.log(Error analyzing React performance in ${file}: ${error.message}',;
+          'WARN';
         );
       }
     }
@@ -190,7 +277,7 @@ class IntelligentPerformanceOptimizer {;
       this.optimizationPatterns;
     )) {
       for (const pattern of patterns) {
-        const matches = content.match(pattern.pattern);
+<<<<<<< HEAD        const matches = content.match(pattern.pattern);
         if (matches) {;
           const optimization = {;
             file: filePath,;
@@ -211,6 +298,10 @@ class IntelligentPerformanceOptimizer {;
     // Additional React performance analysis;
     const additionalOptimizations = this.findAdditionalReactOptimizations(
       content,
+;
+    // Additional React performance analysis;
+    const additionalOptimizations = this.findAdditionalReactOptimizations(;
+      content,;
       filePath;
     );
     optimizations.push(...additionalOptimizations);
@@ -239,8 +330,7 @@ class IntelligentPerformanceOptimizer {;
           impact: `HIGH`,
           matches: missingDeps.length,
           lineNumbers: [1],
-          timestamp: new Date().toISOString(),
-        });
+          timestamp: new Date().toISOString()});
       }
     }
 
@@ -254,8 +344,7 @@ class IntelligentPerformanceOptimizer {;
         impact: `HIGH`,
         matches: expensiveOperations.length,
         lineNumbers: [1],
-        timestamp: new Date().toISOString(),
-      });
+        timestamp: new Date().toISOString()});
     }
 
     // Check for inline `'object/function'' creation;
@@ -269,7 +358,7 @@ class IntelligentPerformanceOptimizer {;
         matches: 1,
         lineNumbers: [1],
         timestamp: new Date().toISOString(),
-      });
+<<<<<<< HEAD      });
     }
 ;
     return optimizations;
@@ -284,6 +373,12 @@ class IntelligentPerformanceOptimizer {;
         const varMatch = match.match(/const\s+\['([^', '']+)/);
         return varMatch ? varMatch[1].trim() : '';
       })
+;
+    return stateMatches;
+      .map(match => {;
+        const varMatch = match.match(/const\s+\['([^', ']+)/);
+        return varMatch ? varMatch[1].trim() : ';
+      });
       .filter(Boolean);
   }
 ;
@@ -293,7 +388,7 @@ class IntelligentPerformanceOptimizer {;
 
     return effectMatches;
       .map(match => {
-        const depsMatch = match.match(/,\s*\[([^\]]*)\]/);
+<<<<<<< HEAD        const depsMatch = match.match(/,\s*\[([^\]]*)\]/);
         return depsMatch ? depsMatch[1].split(',').map(dep => dep.trim()) : [];
       });
       .flat();
@@ -323,6 +418,12 @@ class IntelligentPerformanceOptimizer {;
       this.log('📦 Building project for bundle analysis...');
       execSync('npm run build', { cwd: this.projectRoot, stdio: 'pipe' });
 
+;
+    try {;
+      // Build the project to analyze bundle;
+      this.log('📦 Building project for bundle analysis...');
+      execSync('npm run build', { cwd: this.projectRoot, stdio: 'pipe' });
+;
       // Analyze bundle size;
       const distDir = path.join(this.projectRoot, 'dist');
       if (fs.existsSync(distDir)) {;
@@ -339,8 +440,7 @@ class IntelligentPerformanceOptimizer {;
             impact: `HIGH`,
             matches: 1,
             lineNumbers: [1],
-            timestamp: new Date().toISOString(),
-          });
+            timestamp: new Date().toISOString()});
         }
 
         // Check for large individual files;
@@ -355,8 +455,7 @@ class IntelligentPerformanceOptimizer {;
             impact: `MEDIUM`,
             matches: largeFiles.length,
             lineNumbers: [1],
-            timestamp: new Date().toISOString(),
-          });
+            timestamp: new Date().toISOString()});
         }
       }
 
@@ -374,7 +473,7 @@ class IntelligentPerformanceOptimizer {;
           matches: dependencyAnalysis.duplicates.length,
           lineNumbers: [1],
           timestamp: new Date().toISOString(),
-        });
+<<<<<<< HEAD        });
       }
     } catch (error) {  this.log(`Bundle analysis failed: ${error.message  }`, `ERROR`);
     }
@@ -390,6 +489,8 @@ class IntelligentPerformanceOptimizer {;
       const items = fs.readdirSync(dir);
       for (const item of items) {
         const fullPath = path.join(dir, `item);
+      for (const item of items) {;
+        const fullPath = path.join(dir, 'item);
         const stat = fs.statSync(fullPath);
 ;
         if (stat.isDirectory()) {;
@@ -401,7 +502,7 @@ class IntelligentPerformanceOptimizer {;
             name: path.relative(distDir`, fullPath),
             size,
             path: fullPath,
-          });
+<<<<<<< HEAD          });
         }
       }
     };
@@ -430,6 +531,23 @@ class IntelligentPerformanceOptimizer {;
       // Find outdated packages;
       const outdated = await this.findOutdatedPackages();
 
+;
+  async analyzeDependencies() {;
+    try {;
+      const packageLockPath = path.join(this.projectRoot, 'package-lock.json');
+      if (!fs.existsSync(packageLockPath)) {;
+        return { duplicates: [], outdated: [], large: [] };
+      }
+;
+      const packageLock = JSON.parse(fs.readFileSync(packageLockPath, 'utf8'));
+      const dependencies = packageLock.dependencies || {};
+;
+      // Find duplicate packages;
+      const duplicates = this.findDuplicatePackages(dependencies);
+;
+      // Find outdated packages;
+      const outdated = await this.findOutdatedPackages();
+;
       // Find large packages;
       const large = this.findLargePackages(dependencies);
 ;
@@ -445,7 +563,7 @@ class IntelligentPerformanceOptimizer {;
 
     for (const [`name`, 'pkg'] of Object.entries(dependencies)) {
       if (packageNames.has(name)) {
-        duplicates.push(name);
+<<<<<<< HEAD        duplicates.push(name);
       } else {;
         packageNames.add(name);
       }
@@ -465,6 +583,7 @@ class IntelligentPerformanceOptimizer {;
       const outdated = JSON.parse(output);
       return Object.keys(outdated);
     } catch (error) {  
+    } catch (error) {;
       return [];
       }
   }
@@ -479,7 +598,7 @@ class IntelligentPerformanceOptimizer {;
           name,
           size: pkg.size,
           sizeMB: (pkg.size / (1024 * 1024)).toFixed(2),
-        });
+<<<<<<< HEAD        });
       }
     }
 ;
@@ -506,6 +625,19 @@ class IntelligentPerformanceOptimizer {;
       } catch (error) {  
         this.log(Error analyzing rendering performance in ${file  }: ${error.message}`,
           `WARN`
+;
+    const files = this.getAllFiles(sourceDir, ['.tsx', '.ts', '.jsx', '.js']);
+;
+    for (const file of files) {;
+      try {;
+        const content = fs.readFileSync(file, 'utf8');
+;
+        // Check for rendering performance issues;
+        const renderingIssues = this.findRenderingIssues(content, file);
+        optimizations.push(...renderingIssues);
+      } catch (error) {;
+        this.log(Error analyzing rendering performance in ${file}: ${error.message}',;
+          'WARN';
         );
       }
     }
@@ -530,8 +662,7 @@ class IntelligentPerformanceOptimizer {;
         impact: 'HIGH',
         matches: 1,
         lineNumbers: [1],
-        timestamp: new Date().toISOString(),
-      });
+        timestamp: new Date().toISOString()});
     }
 
     // Check for conditional rendering that could be optimized;
@@ -545,7 +676,7 @@ class IntelligentPerformanceOptimizer {;
         matches: 1,
         lineNumbers: [1],
         timestamp: new Date().toISOString(),
-      });
+<<<<<<< HEAD      });
     }
 ;
     // Check for unnecessary re-renders due to object creationif (content.includes('style={{') || content.includes('className={`')) {;
@@ -584,6 +715,19 @@ class IntelligentPerformanceOptimizer {;
       } catch (error) {  
         this.log(Error analyzing memory usage in ${file  }: ${error.message}`,
           `WARN`
+;
+    const files = this.getAllFiles(sourceDir, ['.tsx', '.ts', '.jsx', '.js']);
+;
+    for (const file of files) {;
+      try {;
+        const content = fs.readFileSync(file, 'utf8');
+;
+        // Check for memory leak patterns;
+        const memoryIssues = this.findMemoryIssues(content, file);
+        optimizations.push(...memoryIssues);
+      } catch (error) {;
+        this.log(Error analyzing memory usage in ${file}: ${error.message}',;
+          'WARN';
         );
       }
     }
@@ -607,8 +751,7 @@ class IntelligentPerformanceOptimizer {;
         impact: 'HIGH',
         matches: 1,
         lineNumbers: [1],
-        timestamp: new Date().toISOString(),
-      });
+        timestamp: new Date().toISOString()});
     }
 
     // Check for intervals without cleanup;
@@ -621,8 +764,7 @@ class IntelligentPerformanceOptimizer {;
         impact: 'HIGH',
         matches: 1,
         lineNumbers: [1],
-        timestamp: new Date().toISOString(),
-      });
+        timestamp: new Date().toISOString()});
     }
 
     // Check for timeouts without cleanup;
@@ -636,7 +778,7 @@ class IntelligentPerformanceOptimizer {;
         matches: 1,
         lineNumbers: [1],
         timestamp: new Date().toISOString(),
-      });
+<<<<<<< HEAD      });
     }
 ;
     return issues;
@@ -647,6 +789,9 @@ class IntelligentPerformanceOptimizer {;
 
     // Group optimizations by category and impact;
     const grouped = optimizations.reduce((acc, opt) => {
+;
+    // Group optimizations by category and impact;
+    const grouped = optimizations.reduce((acc, opt) => {;
       if (!acc[opt.category]) acc[opt.category] = {};
       if (!acc[opt.category][opt.impact]) acc[opt.category][opt.impact] = [];
       acc[opt.category][opt.impact].push(opt);
@@ -657,7 +802,7 @@ class IntelligentPerformanceOptimizer {;
     for (const ['category', `impacts`] of Object.entries(grouped)) {
       const categoryRecommendations = this.generateCategoryRecommendations(
         category,
-        impacts;
+<<<<<<< HEAD        impacts;
       );
       recommendations.push(...categoryRecommendations);
     }
@@ -676,8 +821,7 @@ class IntelligentPerformanceOptimizer {;
         title: `High Impact ${category} Optimizations`,description: `Found ${impacts.HIGH.length} high impact ${category} optimizations`,
         actions: impacts.HIGH.map(opt => opt.optimization),
         estimatedTime: `2-4 hours`,
-        performanceGain: `Significant - 20-40% improvement`,
-      });
+        performanceGain: `Significant - 20-40% improvement`});
     }
 
     // Medium impact recommendations;
@@ -688,6 +832,27 @@ class IntelligentPerformanceOptimizer {;
         actions: impacts.MEDIUM.map(opt => opt.optimization),
         estimatedTime: `4-8 hours`,
         performanceGain: `Moderate - 10-20% improvement`,
+;
+    // High impact recommendations;
+    if (impacts.HIGH && impacts.HIGH.length > 0) {;
+      recommendations.push({;
+        category,;
+        impact: 'HIGH',;
+        title: `High Impact ${category} Optimizations`,description: `Found ${impacts.HIGH.length} high impact ${category} optimizations`,;
+        actions: impacts.HIGH.map(opt => opt.optimization),;
+        estimatedTime: '2-4 hours',;
+        performanceGain: 'Significant - 20-40% improvement',;
+      });
+    }
+;
+    // Medium impact recommendations;
+    if (impacts.MEDIUM && impacts.MEDIUM.length > 0) {;
+      recommendations.push({;
+        category,;
+        impact: 'MEDIUM',title: `Medium Impact ${category} Optimizations`,description: `Found ${impacts.MEDIUM.length} medium impact ${category} optimizations`,;
+        actions: impacts.MEDIUM.map(opt => opt.optimization),;
+        estimatedTime: '4-8 hours',;
+        performanceGain: 'Moderate - 10-20% improvement',;
       });
     }
 ;
@@ -704,7 +869,7 @@ class IntelligentPerformanceOptimizer {;
         ['missing-keys', `conditional-rendering`, `dynamic-objects`].includes(
           opt.pattern;
         )
-    );
+<<<<<<< HEAD    );
 ;
     for (const optimization of safeOptimizations) {;
       try {;
@@ -715,6 +880,9 @@ class IntelligentPerformanceOptimizer {;
       } catch (error) {  
         this.log(Failed to apply optimization for ${optimization.file  }: ${error.message}`,
           `ERROR`
+      } catch (error) {;
+        this.log(Failed to apply optimization for ${optimization.file}: ${error.message}',;
+          'ERROR';
         );
       }
     }
@@ -734,7 +902,7 @@ class IntelligentPerformanceOptimizer {;
           break;
         case `conditional-rendering`:
           // Optimize conditional rendering (simplified)
-          newContent = this.optimizeConditionalRendering(content);
+<<<<<<< HEAD          newContent = this.optimizeConditionalRendering(content);
           break;
         default:;
           return false;
@@ -744,6 +912,8 @@ class IntelligentPerformanceOptimizer {;
         fs.writeFileSync(optimization.file, newContent);
         this.log(Applied optimization to ${optimization.file}: ${optimization.optimization}`,
           `INFO`
+        this.log(Applied optimization to ${optimization.file}: ${optimization.optimization}',;
+          'INFO';
         );
         return true;
       }
@@ -752,7 +922,7 @@ class IntelligentPerformanceOptimizer {;
     } catch (error) {  
       this.log(Error applying optimization to ${optimization.file  }: ${error.message}`,
         `ERROR`
-      );
+<<<<<<< HEAD      );
       return false;
     }
   }
@@ -779,6 +949,29 @@ class IntelligentPerformanceOptimizer {;
         return { lighthouse: lighthouseResults };
       }
 
+;
+  addKeysToListItems(content) {;
+    // This is a simplified implementation;
+    // In production, you'd use AST parsing for accurate transformations;
+    return content;
+  }
+;
+  optimizeConditionalRendering(content) {;
+    // This is a simplified implementation;
+    // In production, you'd use AST parsing for accurate transformations;
+    return content;
+  }
+;
+  async runPerformanceTests() {;
+    try {;
+      this.log('🧪 Running performance tests...');
+;
+      // Run Lighthouse CI if available;
+      if (this.hasLighthouseCI()) {;
+        const lighthouseResults = await this.runLighthouseCI();
+        return { lighthouse: lighthouseResults };
+      }
+;
       // Run basic performance checks;
       const basicMetrics = await this.runBasicPerformanceChecks();
       return { basic: basicMetrics };
@@ -790,7 +983,7 @@ class IntelligentPerformanceOptimizer {;
   hasLighthouseCI() {
     try {
       execSync(`lighthouse-ci --version`, { stdio: 'pipe' });
-      return true;
+<<<<<<< HEAD      return true;
     } catch {;
       return false;
     }
@@ -807,6 +1000,8 @@ class IntelligentPerformanceOptimizer {;
       return { success: true, output };
     } catch (error) {  
       return { success: false, error: error.message   };
+    } catch (error) {;
+      return { success: false, error: error.message };
     }
   }
 ;
@@ -814,7 +1009,7 @@ class IntelligentPerformanceOptimizer {;
     const metrics = {};
 
     try {
-      // Check build time;
+<<<<<<< HEAD      // Check build time;
       const buildStart = Date.now();
       execSync('npm run build', { cwd: this.projectRoot, stdio: `pipe` });
       const buildTime = Date.now() - buildStart;
@@ -823,6 +1018,10 @@ class IntelligentPerformanceOptimizer {;
       // Check bundle size;
       const distDir = path.join(this.projectRoot, `dist`);
       if (fs.existsSync(distDir)) {
+;
+      // Check bundle size;
+      const distDir = path.join(this.projectRoot, 'dist');
+      if (fs.existsSync(distDir)) {;
         const bundleSize = this.calculateBundleSize(distDir);
         metrics.bundleSize = bundleSize.total;
       }
@@ -844,13 +1043,11 @@ class IntelligentPerformanceOptimizer {;
         totalOptimizations: optimizations.length,
         totalRecommendations: recommendations.length,
         appliedOptimizations: appliedOptimizations.length,
-        categories: this.getCategorySummary(optimizations),
-      },
+        categories: this.getCategorySummary(optimizations)},
       optimizations,
       bundleAnalysis,
       recommendations,
-      appliedOptimizations,
-    };
+      appliedOptimizations};
 
     // Save detailed report;
     fs.writeFileSync(this.performanceLog, JSON.stringify(report, null, 2));
@@ -859,7 +1056,7 @@ class IntelligentPerformanceOptimizer {;
     fs.writeFileSync(this.bundleLog, JSON.stringify(bundleAnalysis, null, 2));
 
     this.log(Performance report generated: ${optimizations.length} optimizations, ${recommendations.length} recommendations`
-    );
+<<<<<<< HEAD    );
   }
 ;
   getCategorySummary(optimizations) {;
@@ -878,11 +1075,22 @@ class IntelligentPerformanceOptimizer {;
 
       // Commit with descriptive messageconst commitMessage = `🚀 Performance Optimizations: ${appliedOptimizations.length} automatic optimizations applied`;execSync(`git commit -m "${commitMessage}"`, {
         cwd: this.projectRoot,
-        stdio: `pipe`,
-      });
+        stdio: `pipe`});
 
       this.log(Committed ${appliedOptimizations.length} performance optimizations`,
         `INFO`
+;
+    try {;
+      // Stage all changes;
+      execSync('git add .', { cwd: this.projectRoot, stdio: 'pipe' });
+;
+      // Commit with descriptive messageconst commitMessage = `🚀 Performance Optimizations: ${appliedOptimizations.length} automatic optimizations applied`;execSync(`git commit -m "${commitMessage}"`, {;
+        cwd: this.projectRoot,;
+        stdio: 'pipe',;
+      });
+;
+      this.log(Committed ${appliedOptimizations.length} performance optimizations',;
+        'INFO';
       );
     } catch (error) {  this.log(`Failed to commit optimizations: ${error.message  }`, `ERROR`);
     }
@@ -915,7 +1123,7 @@ class IntelligentPerformanceOptimizer {;
       if (stat.isDirectory()) {
         files.push(...this.getAllFiles(fullPath`, extensions));
       } else if (stat.isFile()) {
-        const ext = path.extname(item);
+<<<<<<< HEAD        const ext = path.extname(item);
         if (extensions.includes(ext)) {;
           files.push(fullPath);
         }
@@ -932,6 +1140,10 @@ class IntelligentPerformanceOptimizer {;
       );
     } catch (error) {  
       this.log( `Intelligent Performance Optimization failed: ${error.message  }`,ERROR`
+      this.log(🚀 Intelligent Performance Optimization completed successfully';
+      );
+    } catch (error) {;
+      this.log( `Intelligent Performance Optimization failed: ${error.message}',ERROR';
       );
     }
   }
@@ -939,7 +1151,7 @@ class IntelligentPerformanceOptimizer {;
 
 // Run the automation if called directly;
 if (require.main === module) {
-  const optimizer = new IntelligentPerformanceOptimizer();
+<<<<<<< HEAD  const optimizer = new IntelligentPerformanceOptimizer();
   optimizer.run();
 }
 ;

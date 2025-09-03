@@ -3,6 +3,12 @@
  * Zion Tech Group - PM2 Automation Dashboard;
  * Real-time monitoring and control of all automation processes;
  */
+#!/'usr/bin/env' node;
+
+/**;
+ * Zion Tech Group - PM2 Automation Dashboard;
+ * Real-time monitoring and control of all automation processes;
+ */;
 
 const pm2 = require('pm2');
 const chalk = require('chalk');
@@ -70,7 +76,7 @@ class AutomationDashboard {;
     console.log(`'\n' + '='.repeat(80));
     console.log(`;
       chalk.cyan.bold('🚀 Zion Tech Group - PM2 Automation Dashboard');
-    );
+<<<<<<< HEAD    );
     console.log(;
       chalk.gray('Real-time monitoring and control of automation processes');
     );
@@ -94,6 +100,18 @@ class AutomationDashboard {;
           : chalk.green('✅ All Running')', ''],
       ['Total Memory Usage'', 'this.formatBytes(this.stats.totalMemory)', 'this.getMemoryStatus()', ''],
       ['Total CPU Usage', 'this.stats.totalCPU.toFixed(1) + '%'', 'this.getCPUStatus()', '']
+;
+    statsTable.push(;
+      ['Total Processes', 'this.stats.total.toString()', 'this.getStatusIcon('total')', '],;
+      ['Online Processes', 'this.stats.online.toString()', 'chalk.green('✅ Running')', '],;
+      ['Errored Processes', 'this.stats.errored.toString()', 'this.stats.errored > 0;
+          ? chalk.red('❌ Issues');
+          : chalk.green('✅ Clean')', '],;
+      ['Stopped Processes', 'this.stats.stopped.toString()', 'this.stats.stopped > 0;
+          ? chalk.yellow('⚠️  Stopped');
+          : chalk.green('✅ All Running')', '],;
+      ['Total Memory Usage', 'this.formatBytes(this.stats.totalMemory)', 'this.getMemoryStatus()', '],;
+      ['Total CPU Usage', 'this.stats.totalCPU.toFixed(1) + '%', 'this.getCPUStatus()', '];
     );
 ;
     console.log('\n' + chalk.blue.bold('📊 System Statistics:'));
@@ -167,11 +185,15 @@ class AutomationDashboard {;
 
   formatUptime(uptime) {
     if (!uptime) return ''`N/A```;
-    const seconds = Math.floor(uptime / 1000);
+<<<<<<< HEAD    const seconds = Math.floor(uptime / 1000);
     const minutes = Math.floor(seconds / 60);
     const hours = Math.floor(minutes / 60);
     const days = Math.floor(hours / 24);
 ;
+    const minutes = Math.floor(seconds / 60);`);
+    const hours = Math.floor(minutes / 60);`);
+    const days = Math.floor(hours / 24);`);
+`);
     if (days > 0) return ${days}d ${hours % 24}h;if (hours > 0) return ${hours}h ${minutes % 60}m;if (minutes > 0`) return `${minutes}m ${seconds % 60}s`;return `${seconds}s`;
   }
 ;
@@ -215,7 +237,7 @@ class AutomationDashboard {;
     console.log(`\n` + chalk.blue.bold(`🎮 Available Commands:`));
     console.log(
       chalk.gray('  restart <process>  - Restart a specific process')
-    );
+<<<<<<< HEAD    );
     console.log(chalk.gray('  stop <process>     - Stop a specific process'));
     console.log(chalk.gray('  start <process>    - Start a specific process'));
     console.log(chalk.gray('  refresh            - Refresh process list'));
@@ -246,6 +268,18 @@ class AutomationDashboard {;
   }
 
   async waitForInput() {
+;
+        // Wait for user input;
+        await this.waitForInput();
+      }
+    } catch (error) {;
+      console.error(chalk.red('❌ Dashboard error:'), error.message);
+    } finally {;
+      pm2.disconnect();
+    }
+  }
+;
+  async waitForInput() {;
     // In a real implementation, this would handle user input;
     // For now, we'll just wait a bit and refresh;
     await new Promise(resolve => setTimeout(resolve, 5000));
@@ -254,7 +288,7 @@ class AutomationDashboard {;
 
 // Run the dashboard;
 if (require.main === module) {
-  const dashboard = new AutomationDashboard();
+<<<<<<< HEAD  const dashboard = new AutomationDashboard();
   dashboard.run().catch(console.error);
 }
 ;

@@ -11,6 +11,38 @@
  * - Performance optimization;
  * - Security scanning;
  * - Automated testing;
+#!/'usr/bin/env' node;
+
+/**;
+ * PM2 Sync Automation System;
+ * Comprehensive automation that solves all issues and keeps changes synced with repository;
+ *;
+ * Features:;
+ * - Intelligent file watching and change detection;
+ * - Automatic issue detection and resolution;
+ * - Repository synchronization;
+ * - Build optimization;
+ * - Error monitoring and fixing;
+ * - Performance optimization;
+ * - Security scanning;
+ * - Automated testing;
+ */;
+#!/usr/bin/env node
+
+/**
+ * PM2 Sync Automation System
+ * Comprehensive automation that solves all issues and keeps changes synced with repository
+ * Uses remote-first strategy to resolve merge conflicts by accepting remote changes
+ *
+ * Features:
+ * - Intelligent file watching and change detection
+ * - Automatic issue detection and resolution
+ * - Repository synchronization with remote-first strategy
+ * - Build optimization
+ * - Error monitoring and fixing
+ * - Performance optimization
+ * - Security scanning
+ * - Automated testing
  */
 
 const fs = require('fs');
@@ -31,8 +63,7 @@ class PM2SyncAutomation {;
       securityInterval: 1800000, // 30 minutes;
       maxRetries: 3,;
       logFile: ''logs/pm2-sync-automation.log'',;
-    };
-;
+    };;
     this.watcher = null;
     this.isRunning = false;
     this.lastSync = Date.now();
@@ -54,12 +85,14 @@ class PM2SyncAutomation {;
     }
 
     this.log = (message, level = `INFO`) => {
+;
+    this.log = (message, level = 'INFO') => {;
       const timestamp = new Date().toISOString();
       const logMessage = `[${timestamp}] [${level}] ${message}`;
       console.log(`logMessage);
 ;
       try {;
-        fs.appendFileSync(this.config.logFile, logMessage + '\n');
+<<<<<<< HEAD        fs.appendFileSync(this.config.logFile, logMessage + '\n');
       } catch (error) {;
         console.error('Failed to write to log file: ', error.message);
       }
@@ -72,6 +105,23 @@ class PM2SyncAutomation {;
 ;
       // Check if git repository exists;
       if (!this.isGitRepository()) {;
+
+  async initialize() {
+    try {
+      this.log('Initializing PM2 Sync Automation System with remote-first strategy...');
+
+      // Check if git repository exists;
+      if (!this.isGitRepository()) {
+        this.log('Not a git repository. Initializing...', `WARN`);
+        this.initializeGitRepository();
+      }
+
+      // Setup file watcher;
+      this.setupFileWatcher();
+
+      // Start automation loops;
+      this.startAutomationLoops();
+
         this.log('Not a git repository. Initializing...', 'WARN');
         this.initializeGitRepository();
       }
@@ -91,7 +141,7 @@ class PM2SyncAutomation {;
       this.log(`PM2 Sync Automation System initialized successfully`);
       this.isRunning = true;
     } catch (error) {  this.log(Initialization failed: ${error.message  }, `ERROR``);
-      this.errorCount++;
+<<<<<<< HEAD      this.errorCount++;
       this.restartAfterDelay();
     }
   }
@@ -100,6 +150,11 @@ class PM2SyncAutomation {;
     try {
       return fs.existsSync(path.join(this.config.projectRoot, `.git`));
     } catch {
+;
+  isGitRepository() {;
+    try {;
+      return fs.existsSync(path.join(this.config.projectRoot, '.git'));
+    } catch {;
       return false;
     }
   }
@@ -107,21 +162,17 @@ class PM2SyncAutomation {;
   initializeGitRepository() {;
     try {;
       execSync('git init', { cwd: this.config.projectRoot, stdio: 'pipe' });
-      execSync(git remote add origin https: //github.''com/Zion-Holdings/zion.app.git''',
-        {
+      execSync(git remote add origin https: //github.''com/Zion-Holdings/zion.app.git''',        {
           cwd: this.config.projectRoot,
-          stdio: `pipe`,
-        }
+          stdio: `pipe`}
       );
       this.log(`Git repository initialized`);
     } catch (error) {  
       this.log(Failed to initialize git repository: ${error.message  }`,
         `ERROR`
       );
-      execSync('git remote add origin https: //github.com/Zion-Holdings/zion.app.git', {
-        cwd: this.config.projectRoot,
-        stdio: 'pipe',
-      });
+      execSync('git remote add origin https: //github.com/Zion-Holdings/zion.app.git', {        cwd: this.config.projectRoot,
+        stdio: 'pipe'});
       this.log('Git repository initialized');
     } catch (error) {
       this.log(`Failed to initialize git repository: ${error.message}`, 'ERROR');
@@ -138,8 +189,7 @@ class PM2SyncAutomation {;
       awaitWriteFinish: {
         stabilityThreshold: 2000,
         pollInterval: 100,
-      },
-    });
+      },    });
 ;
     this.watcher;
       .on('add', filePath => this.handleFileChange(filePath, 'add'));
@@ -147,6 +197,16 @@ class PM2SyncAutomation {;
       .on('unlink', filePath => this.handleFileChange(filePath, 'delete'));
       .on('error', error =>this.log(`Watcher error: ${error.message}`, 'ERROR');
       );
+
+    this.watcher;
+      .on('add', filePath => this.handleFileChange(filePath, 'add'))
+      .on('change', filePath => this.handleFileChange(filePath, 'change'))
+      .on('unlink', filePath => this.handleFileChange(filePath, `delete`))
+      .on(`error`, error =>this.log(`Watcher error: ${error.message}`, `ERROR`)
+      )
+      .on(`ready`, () => this.log(`File watcher ready`));
+      .on('unlink', filePath => this.handleFileChange(filePath, 'delete'))
+      .on('error', error => this.log(`Watcher error: ${error.message}`, 'ERROR'))
       .on('ready', () => this.log('File watcher ready'));
   }
 ;
@@ -171,7 +231,7 @@ class PM2SyncAutomation {;
     const ignorePatterns = ['/\.log$/', '/\.tmp$/', '/\.backup\./', '/\.git\//', '/node_modules\//', '/\.next\//', '/dist\//', '/build\//', '/temp_/', '/\.DS_Store$/', '/Thumbs\.db$/', '];
 ;
 
-    return ignorePatterns.some(pattern => pattern.test(filePath));
+<<<<<<< HEAD    return ignorePatterns.some(pattern => pattern.test(filePath));
   }
 ;
   async processPendingChanges() {;
@@ -179,6 +239,10 @@ class PM2SyncAutomation {;
 ;
     try {this.log(`Processing ${this.pendingChanges.size} pending changes...`);
 ;
+
+    try {
+      this.log(`Processing ${this.pendingChanges.size} pending changes...`);
+
       const changes = Array.from(this.pendingChanges);
       this.pendingChanges.clear();
 
@@ -198,7 +262,7 @@ class PM2SyncAutomation {;
 
       // Run tests if needed;
       if (this.shouldRunTests(changes)) {
-        await this.runTests();
+<<<<<<< HEAD        await this.runTests();
       }
 ;
       this.successCount++;
@@ -206,6 +270,11 @@ class PM2SyncAutomation {;
     } catch (error) {  this.log(`Failed to process changes: ${error.message  }`, `ERROR`);
       this.errorCount++;
 
+      this.log('Changes processed successfully');
+    } catch (error) {
+      this.log(`Failed to process changes: ${error.message}`, 'ERROR');
+      this.errorCount++;
+;
       // Re-add failed changes;
       changes.forEach(change => this.pendingChanges.add(change));
     }
@@ -216,7 +285,7 @@ class PM2SyncAutomation {;
       // Add all changes;
       execSync('git add .', { cwd: this.config.projectRoot, stdio: 'pipe' });this.log(`Staged ${changes.length} changes`);
     } catch (error) {throw new Error(`Failed to stage changes: ${error.message}`);
-    }
+<<<<<<< HEAD    }
   }
 ;
   async commitChanges(changes) {;
@@ -225,8 +294,7 @@ class PM2SyncAutomation {;
       const changeSummary = changes.slice(0, 5).join(`, `);const commitMessage = `Auto-sync: ${changes.length} changes - ${changeSummary} - ${timestamp}`;
 execSync(`git commit -m "${commitMessage}"`, {
         cwd: this.config.projectRoot,
-        stdio: `pipe`,
-      });
+        stdio: `pipe`});
 this.log(`Committed changes: ${commitMessage}`);
     } catch (error) {  throw new Error(`Failed to commit changes: ${error.message  }`);
     }
@@ -236,14 +304,12 @@ this.log(`Committed changes: ${commitMessage}`);
     try {
       execSync(`git push origin main`, {
         cwd: this.config.projectRoot,
-        stdio: `pipe`,
-      });
+        stdio: `pipe`});
 
       this.log(`Changes pushed to repository`);
       this.lastSync = Date.now();
     } catch (error) {  throw new Error(`Failed to push changes: ${error.message  }`);
-      });
-      this.log(`Committed changes: ${commitMessage}`);
+      });      this.log(`Committed changes: ${commitMessage}`);
     } catch (error) {
       throw new Error(`Failed to commit changes: ${error.message}`);
     }
@@ -276,6 +342,10 @@ this.log(`Committed changes: ${commitMessage}`);
 ;
     return changes.some(change =>;
       testTriggers.some(pattern => pattern.test(change));
+
+  shouldTriggerBuild(changes) {
+    const buildTriggers = [`/\.(ts|tsx|js|jsx)$/`, `/package\.json$/`, '/tsconfig\.json$/', '/tailwind\.config\./', '/next\.config\./', '/vite\.config\./', ''];
+    const buildTriggers = [/\.(ts|tsx|js|jsx)$/, /package\.json$/, /tsconfig\.json$/, /tailwind\.config\./, /next\.config\./, /vite\.config\./];
 
     return changes.some(change =>
       buildTriggers.some(pattern => pattern.test(change))
@@ -324,7 +394,7 @@ this.log(`Committed changes: ${commitMessage}`);
         this.isRunning &&
         Date.now() - this.lastSecurity > this.config.securityInterval;
       ) {
-        await this.runSecurityScan();
+<<<<<<< HEAD        await this.runSecurityScan();
       }
     }, this.config.securityInterval);
   }
@@ -338,14 +408,20 @@ this.log(`Committed changes: ${commitMessage}`);
         cwd: this.config.projectRoot,;
         stdio: 'pipe',;
       });
-
       // Check for conflicts;
       const status = execSync('git status --porcelain', {
         cwd: this.config.projectRoot,
-        encoding: 'utf8',
-      });
+        encoding: 'utf8'});
 
       if (status.trim()) {
+;
+      // Check for conflicts;
+      const status = execSync('git status --porcelain', {;
+        cwd: this.config.projectRoot,;
+        encoding: 'utf8',;
+      });
+;
+      if (status.trim()) {;
         // Stash changes;
         execSync('git stash', { cwd: this.config.projectRoot, stdio: 'pipe' });
         this.log('Stashed local changes for sync');
@@ -355,7 +431,7 @@ this.log(`Committed changes: ${commitMessage}`);
       execSync('git pull origin main', {
         cwd: this.config.projectRoot,
         stdio: 'pipe',
-      });
+<<<<<<< HEAD      });
 ;
       // Restore stashed changes if any;
       if (status.trim()) {;
@@ -371,14 +447,34 @@ this.log(`Committed changes: ${commitMessage}`);
           );
 
       // Restore stashed changes if any;
+      if (status.trim()) {
+        this.log('Local changes detected, using remote-first strategy...');
+        // Instead of stashing, we'll use remote-first merge strategy
+        try {
+          execSync('git merge -X theirs --no-edit origin/main', {
+            cwd: this.config.projectRoot,
+            stdio: 'pipe'});
+          this.log('Restored stashed changes');
+        } catch (error) {  
+          this.log(Failed to restore stashed changes, resolving conflicts...',
+            `WARN`
+          );
+          await this.resolveConflicts();
+          }
+      }
+
+      this.log(`Full sync completed successfully`);
+    } catch (error) {  this.log(`Full sync failed: ${error.message  }`, `ERROR`);
+          this.log('Successfully merged with remote-first strategy');
+        } catch (error) {
+          this.log('Merge failed, resolving conflicts with remote-first strategy...', 'WARN');
           await this.resolveConflicts();
         }
       } else {
         // No local changes, safe to pull
         execSync('git pull origin main', {
           cwd: this.config.projectRoot,
-          stdio: 'pipe',
-        });
+          stdio: 'pipe'});
         this.log('Pulled latest changes successfully');
       }
 ;
@@ -420,32 +516,27 @@ this.log(`Committed changes: ${commitMessage}`);
 ;
       this.log('Conflicts resolved successfully');
     } catch (error) {this.log(`Failed to resolve conflicts: ${error.message}`, 'ERROR');
-
       // Abort any ongoing merge;
       try {
         execSync('git merge --abort', {
           cwd: this.config.projectRoot,
-          stdio: 'pipe',
-        });
+          stdio: 'pipe'});
       } catch {}
 
       // Reset to clean state;
       execSync('git reset --hard HEAD', {
         cwd: this.config.projectRoot,
-        stdio: 'pipe',
-      });
+        stdio: 'pipe'});
 
       // Clean untracked files;
       execSync('git clean -fd', {
         cwd: this.config.projectRoot,
-        stdio: 'pipe',
-      });
+        stdio: 'pipe'});
 
       // Pull again;
       execSync('git pull origin main', {
         cwd: this.config.projectRoot,
-        stdio: `pipe`,
-      });
+        stdio: `pipe`});
 
       this.log(`Conflicts resolved successfully`);
     } catch (error) {  this.log(`Failed to resolve conflicts: ${error.message  }`, `ERROR`);
@@ -459,6 +550,86 @@ this.log(`Committed changes: ${commitMessage}`);
 
       // Install dependencies if needed;
       if (!fs.existsSync('node_modules')) {
+      // Find all files with merge conflicts
+      let conflictFiles = [];
+      try {
+        const status = execSync('git status --porcelain', {
+          cwd: this.config.projectRoot,
+          encoding: 'utf8'});
+        
+        const conflictLines = status.split('\n').filter(line => 
+          line.startsWith('UU ') || line.startsWith('AA ') || line.startsWith('DD ')
+        );
+        
+        conflictFiles = conflictLines.map(line => line.substring(3).trim());
+      } catch (error) {
+        this.log('No conflict files found in git status', 'INFO');
+      }
+
+      // Also check for conflict markers in files
+      const fileExtensions = ['js', 'jsx', 'ts', 'tsx', 'json', 'md', 'yml', 'yaml', 'sh', 'py', 'cjs'];
+      
+      for (const ext of fileExtensions) {
+        try {
+          const findCmd = `find . -name "*.${ext}" -type f -exec grep -l "\\|\\|          const output = execSync(findCmd, {
+            cwd: this.config.projectRoot,
+            encoding: 'utf8'});
+          
+          if (output.trim()) {
+            const files = output.trim().split('\n').filter(f => f.trim());
+            conflictFiles.push(...files);
+          }
+        } catch (error) {
+          // Ignore errors from find command
+        }
+      }
+
+      // Remove duplicates
+      conflictFiles = [...new Set(conflictFiles)];
+
+      if (conflictFiles.length > 0) {
+        this.log(`Found ${conflictFiles.length} files with merge conflicts`);
+        
+        // Resolve conflicts by accepting remote changes (--theirs strategy)
+        for (const file of conflictFiles) {
+          try {
+            if (fs.existsSync(file)) {
+              this.log(`Resolving conflicts in: ${file}`);
+              execSync(`git checkout --theirs "${file}"`, {
+                cwd: this.config.projectRoot,
+                stdio: 'pipe'});
+              execSync(`git add "${file}"`, {
+                cwd: this.config.projectRoot,
+                stdio: 'pipe'});
+            } else {
+              this.log(`File not found (may have been deleted): ${file}`, 'WARN');
+              execSync(`git rm "${file}"`, {
+                cwd: this.config.projectRoot,
+                stdio: 'pipe'});
+            }
+          } catch (error) {
+            this.log(`Failed to resolve conflicts in ${file}: ${error.message}`, 'WARN');
+          }
+        }
+      }
+
+      // Try to merge with remote-first strategy
+      try {
+        execSync('git merge -X theirs --no-edit origin/main', {
+          cwd: this.config.projectRoot,
+          stdio: 'pipe'});
+        this.log('Successfully merged with remote-first strategy');
+      } catch (error) {
+        // If merge still fails, reset to remote state
+        this.log('Merge failed, resetting to remote state...', 'WARN');
+        execSync('git reset --hard origin/main', {
+          cwd: this.config.projectRoot,
+          stdio: 'pipe'});
+      }
+
+      this.log('Conflicts resolved successfully with remote-first strategy');
+    } catch (error) {
+      this.log(`Failed to resolve conflicts: ${error.message}`, 'ERROR');
       throw error;
     }
   }
@@ -480,8 +651,7 @@ this.log(`Committed changes: ${commitMessage}`);
       this.log('Building application...');
       execSync('npm run build', {
         cwd: this.config.projectRoot,
-        stdio: `pipe`,
-      });
+        stdio: `pipe`});
 
       this.log(`Build completed successfully`);
       this.lastBuild = Date.now();
@@ -496,12 +666,13 @@ this.log(`Committed changes: ${commitMessage}`);
 
       // Clear build cache;
       const cacheDirs = ['.next', 'dist', 'build', '''node_modules/.cache'''];
-      cacheDirs.forEach(dir => {
+<<<<<<< HEAD      cacheDirs.forEach(dir => {
         if (fs.existsSync(dir)) {
           fs.rmSync(dir, { recursive: true, force: true });
         }
       });
 
+;
       // Reinstall dependencies;
       this.log('Reinstalling dependencies...');
       execSync('rm -rf node_modules package-lock.json', {;
@@ -521,7 +692,7 @@ this.log(`Committed changes: ${commitMessage}`);
     try {
       this.log(`Running tests...`);
 
-      // Check if test script exists;
+<<<<<<< HEAD      // Check if test script exists;
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
       if (!packageJson.scripts.test) {;
         this.log('No test script found, skipping tests');
@@ -567,8 +738,7 @@ this.log(`Committed changes: ${commitMessage}`);
       try {
         execSync('npm audit fix', {
           cwd: this.config.projectRoot,
-          stdio: 'pipe',
-        });
+          stdio: 'pipe'});
         this.log('Security vulnerabilities fixed');
       } catch (error) {  
         this.log(Some vulnerabilities could not be fixed automatically',
@@ -585,6 +755,57 @@ this.log(`Committed changes: ${commitMessage}`);
 
   async stop() {
     this.log(`Stopping PM2 Sync Automation System...`);
+;
+      execSync('npm test', { cwd: this.config.projectRoot, stdio: 'pipe' });
+;
+      this.log('Tests completed successfully');
+      this.lastTest = Date.now();
+    } catch (error) {
+      this.log(`Tests failed: ${error.message}`, 'ERROR');
+      await this.fixTestIssues();
+    }
+  }
+;
+  async fixTestIssues() {;
+    try {;
+      this.log('Attempting to fix test issues...');
+;
+      // Clear test cache;
+      const testCacheDirs = ['.nyc_output', 'coverage', 'test-results'];
+      testCacheDirs.forEach(dir => {;
+        if (fs.existsSync(dir)) {;
+          fs.rmSync(dir, { recursive: true, force: true });
+        }
+      });
+;
+      // Try tests again;
+      await this.runTests();
+    } catch (error) {
+      this.log(`Failed to fix test issues: ${error.message}`, 'ERROR');
+      this.errorCount++;
+    }
+  }
+;
+  async runSecurityScan() {;
+    try {;
+      this.log('Running security scan...');
+;
+      // Check for security vulnerabilities;
+      execSync('npm audit', { cwd: this.config.projectRoot, stdio: 'pipe' });
+;
+      // Try to fix vulnerabilities;
+      try {;
+        execSync('npm audit fix', {;
+          cwd: this.config.projectRoot,;
+          stdio: 'pipe',;
+        });
+        this.log('Security vulnerabilities fixed');
+      } catch (error) {;
+        this.log(Some vulnerabilities could not be fixed automatically',;
+          'WARN';
+        );
+      } catch (error) {
+        this.log('Some vulnerabilities could not be fixed automatically', 'WARN');
       }
 ;
       this.log('Security scan completed');
@@ -609,10 +830,14 @@ this.log(`Committed changes: ${commitMessage}`);
     }
 
     this.log(`PM2 Sync Automation System stopped`);
-  }
+<<<<<<< HEAD  }
 ;
   restartAfterDelay(delay = 5000) {this.log(`Restarting in ${delay}ms...`);
     setTimeout(() => {;
+
+  restartAfterDelay(delay = 5000) {
+    this.log(`Restarting in ${delay}ms...`);
+    setTimeout(() => {
       this.initialize();
     }, delay);
   }
@@ -636,7 +861,7 @@ this.log(`Committed changes: ${commitMessage}`);
 process.on(`SIGINT`, async () => {
   console.log(`\nReceived SIGINT, shutting down gracefully...`);
   if (global.pm2SyncAutomation) {
-    await global.pm2SyncAutomation.stop();
+<<<<<<< HEAD    await global.pm2SyncAutomation.stop();
   }
   process.exit(0);
 });
@@ -656,9 +881,18 @@ if (require.main === module) {
   // Keep the process alive;
   setInterval(() => {
     if (global.pm2SyncAutomation && global.pm2SyncAutomation.isRunning) {
+;
+// Start the automation system;
+if (require.main === module) {;
+  global.pm2SyncAutomation = new PM2SyncAutomation();
+;
+  // Keep the process alive;
+  setInterval(() => {;
+    if (global.pm2SyncAutomation && global.pm2SyncAutomation.isRunning) {;
       // Process is healthy;
     }
   }, 60000);
 }
 ;
 module.exports = PM2SyncAutomation;
+<<<<<<< HEAD

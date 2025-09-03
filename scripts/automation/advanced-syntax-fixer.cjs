@@ -1,4 +1,6 @@
 #!/''usr/bin/env'' node;
+#!/'usr/bin/env' node;
+
 const fs = require('fs');
 const path = require('path');
 ;
@@ -6,7 +8,7 @@ console.log(`'[INFO] 🔧 Starting advanced syntax error fix automation...');
 ;
 function fixAdvancedSyntaxErrors(filePath) {;
   try {;
-    let content = fs.readFileSync(filePath, 'utf8');
+<<<<<<< HEAD    let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
     let fixes = 0;
 
@@ -14,6 +16,11 @@ function fixAdvancedSyntaxErrors(filePath) {;
     const scriptTagRegex = /<script type="application\/ld\+json \/\/ TODO: Sanitize content before using dangerouslySetInnerHTML=\{\{ __html: JSON\.stringify\(schema\) \}\}><\/script>/g;
     content = content.replace(scriptTagRegex, '<script type=''application/ld''+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}></script>');
 
+;
+    // Fix script tags with malformed comments and JSX structure;
+    const scriptTagRegex = /<script type="application\/ld\+json" \/\/ TODO: Sanitize content before using dangerouslySetInnerHTML=\{\{ __html: JSON\.stringify\(schema\) \}\}><\/script>/g;
+    content = content.replace(scriptTagRegex, '<script type="'application/ld'+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}></script>');
+;
     // Fix malformed JSX return statements;
     const malformedReturnRegex = /return \(<>\s*<script[^>]*><\/script>\s*<Header \/>\s*<main[^>]*>/g;
     content = content.replace(malformedReturnRegex, (match) => {;
@@ -30,8 +37,7 @@ function fixAdvancedSyntaxErrors(filePath) {;
 
     // Fix orphaned closing braces and semicolons;
     const orphanedPatterns = ['/^\s*}', '\[\']\);\s*$/gm,
-      /^\s*}, \[\]\);\s*$/gm,
-      /^\s*}, \[\]\), \[\]\);\s*$/gm;
+      /^\s*}, \[\]\);\s*$/gm,      /^\s*}, \[\]\), \[\]\);\s*$/gm;
     ];
     ;
     orphanedPatterns.forEach(pattern => {;
@@ -45,6 +51,14 @@ function fixAdvancedSyntaxErrors(filePath) {;
     // Fix missing closing parentheses in function declarations;
     const missingParenRegex = /^\s*}\s*$/gm;
     content = content.replace(missingParenRegex, (match, offset, string) => {
+;
+    // Fix malformed JSX closing tags;
+    const malformedJSXCloseRegex = /<\/>\s*\)\s*$/gm;
+    content = content.replace(malformedJSXCloseRegex, '</>');
+;
+    // Fix missing closing parentheses in function declarations;
+    const missingParenRegex = /^\s*}\s*$/gm;
+    content = content.replace(missingParenRegex, (match, offset, string) => {;
       // Check if this is actually a missing closing paren;
       const beforeMatch = string.substring(0, offset);
       const openParens = (beforeMatch.match(/\(/g) || []).length;
@@ -66,7 +80,7 @@ function fixAdvancedSyntaxErrors(filePath) {;
 
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, `utf8`);
-      fixes++;
+<<<<<<< HEAD      fixes++;
       console.log(`[INFO] ✅ Fixed advanced syntax errors in ${path.basename(filePath)});
     }
 ;
@@ -77,6 +91,10 @@ function fixAdvancedSyntaxErrors(filePath) {;
 }
 
 function getAllFiles(dir, extensions = [`.jsx`, `.tsx`, '.js']) {
+      console.log(`[INFO] ✅ Fixed advanced syntax errors in ${path.basename(filePath)});`);
+    }`);
+`);
+    return fixes;`);
   } catch (error) {console.log([ERROR] Failed to fix ${filePath}: ${error.message}``);
     return 0;
   }
@@ -93,7 +111,7 @@ function getAllFiles(dir, extensions = ['.jsx', '.tsx', '.js']) {;
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== `node_modules`) {
-        traverse(fullPath);
+<<<<<<< HEAD        traverse(fullPath);
       } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {;
         files.push(fullPath);
       }
@@ -106,6 +124,9 @@ function getAllFiles(dir, extensions = ['.jsx', '.tsx', '.js']) {;
 
 // Main execution;
 const srcDir = path.join(process.cwd(), `src`);
+;
+// Main execution;
+const srcDir = path.join(process.cwd(), 'src');
 const files = getAllFiles(srcDir);
 ;
 let totalFixes = 0;
@@ -135,5 +156,5 @@ if (!fs.existsSync(logsDir)) {
 fs.writeFileSync(
   path.join(logsDir, `advanced-syntax-fixes.json`),
   JSON.stringify(report, null, 2)
-);
+<<<<<<< HEAD);
 console.log(`📊 Report generated: 'logs/advanced-syntax-fixes.json'`);
