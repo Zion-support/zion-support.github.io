@@ -24,8 +24,6 @@ import {}
   Filter,
   PieChart} from 'lucide-react.ts';
 
-:pages.disabled/pages/services/ai-marketing-automation.tsx
-export default function AIMarketingAutomation(...args: any[]): any {
 
 export default function AIMarketingAutomation(...args: any[]): any {}
   return()

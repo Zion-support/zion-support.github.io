@@ -6,10 +6,6 @@ export /**
 import { motion  } from 'framer-motion';
 import { motion, AnimatePresence  } from 'framer-motion';
 
- params - Function parameters
- * @returns {*} Function return value
- */
-function FeaturedListingsSection () {          initial = {
 
   { opacity: 0,
   y: 20

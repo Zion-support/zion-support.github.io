@@ -32,31 +32,6 @@ import { ShoppingCart, Smartphone, Brain, Target, BarChart3, Zap, Shield, ArrowR
             title: "Omnichannel Experience",
             description: "Seamless integration across online and offline retail channels"
 
-    ];
-    const benefits = [
-        "Increase sales by 25-40%",
-        "Improve customer retention by 30%",
-        "Reduce inventory costs by 20-35%",
-        "Enhance customer experience",
-        "Better marketing ROI",
-        "Streamlined operations"
-    ];
-    const solutions = [
-        {
-            title: "E-commerce Platform",
-            description: "Modern online retail platform with AI-powered features"
-        },
-        {
-            title: "Customer Analytics",
-            description: "Comprehensive customer behavior analysis and insights"
-        },
-        {
-            title: "Inventory Management",
-            description: "Smart inventory optimization and demand forecasting"
-        },
-        {
-            title: "Marketing Automation",
-            description: "AI-driven marketing campaigns and personalization"
 
     ];
     const retailTypes = [

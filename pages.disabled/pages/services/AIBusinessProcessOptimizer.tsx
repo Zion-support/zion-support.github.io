@@ -12,8 +12,6 @@ import {}
   Target,
   Award} from 'lucide-react.ts';
 
-:pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx
-export default function AIBusinessProcessOptimizer(...args: any[]): any {
 
 export default function AIBusinessProcessOptimizer(...args: any[]): any {}
   return()

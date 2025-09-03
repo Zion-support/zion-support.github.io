@@ -32,31 +32,6 @@ import { DollarSign, TrendingUp, Shield, Brain, BarChart3, Zap, Lock, ArrowRight
             title: "Portfolio Optimization",
             description: "AI-driven investment strategies and portfolio management"
 
-    ];
-    const benefits = [
-        "Reduce fraud losses by 60-80%",
-        "Improve risk assessment accuracy by 40%",
-        "Lower operational costs by 30-50%",
-        "Enhance customer experience",
-        "Faster transaction processing",
-        "Better regulatory compliance"
-    ];
-    const solutions = [
-        {
-            title: "Digital Banking",
-            description: "Modern digital banking platforms with AI-powered features"
-        },
-        {
-            title: "Payment Processing",
-            description: "Secure and efficient payment processing solutions"
-        },
-        {
-            title: "Risk Management",
-            description: "Comprehensive risk assessment and mitigation tools"
-        },
-        {
-            title: "Compliance Automation",
-            description: "Automated regulatory compliance and reporting"
 
     ];
     const industries = [

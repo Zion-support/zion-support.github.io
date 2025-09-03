@@ -1,9 +1,5 @@
 import {  import { motion  } from 'framer-motion';
 
- params - Function parameters
- * @returns {*} Function return value
- */
-function AnalyticsManager () {
 
   BarChart3,
   Users,

@@ -251,7 +251,6 @@ const TalentDirectory = () => {}
 export default TalentDirectory;
 }}
 
-export { TalentDirectory };
 
 export { TalentDirectory };
 

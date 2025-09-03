@@ -3,14 +3,6 @@ export default function Page() {
 ,
       {
 
-        name: 'Error Rate',
-        value: Math.random() * 2,
-        unit: '%',
-        trend: Math.random() > 0.5 ? 'up' : 'down',
-        status: Math.random() > 0.8 ? 'good' : Math.random() > 0.5 ? 'warning' : 'critical',
-        icon: AlertTriangle
-      },
-      {
 
         name: 'Response Time',
         value: Math.random() * 500 + 100,

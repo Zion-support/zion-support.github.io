@@ -1,17 +1,6 @@
 import {  import { motion, useAnimation  } from 'framer-motion';
  from 'lucide-react';
 
-interface Stat {
-  id: string;
-  icon: React.ComponentType < any>;
-  value: string;
-  label: string;
-  description: string;
-  color: string;
-  gradient: string
-}
-;
-const stats: Stat[] = [{
 
     id: 'clients',
     icon: Users,

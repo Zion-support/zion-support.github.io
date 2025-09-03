@@ -1,7 +1,7 @@
 import React, { useState } from 'react';'''
 import { Link } from 'react-router-dom';'''
 import { motion } from 'framer-motion';'''
-import { Cloud, Server, Shield, Zap, Database, Globe, ArrowRight, Play, Code, BarChart3, MessageSquare, Phone, Mail, Lock, Cpu, HardDrive, Wifi, TrendingUp, DollarSign } from 'lucide-react';
+import { Cloud, Globe, ArrowRight, Play, MessageSquare, Phone, Mail } from "lucide-react";
 export default function CloudInfrastructure() {}
 '
 ''

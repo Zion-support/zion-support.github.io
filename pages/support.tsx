@@ -1,7 +1,7 @@
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
-import { Phone, Mail, MessageCircle, Book, FileText, Users, Clock, CheckCircle } from 'lucide-react';
+import { Clock } from "lucide-react";
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 

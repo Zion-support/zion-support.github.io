@@ -10,8 +10,6 @@ import {}
   BarChart3,
   CheckCircle} from 'lucide-react.ts';
 
-:pages.disabled/pages/services/ai-workflow-automation.tsx
-export default function AIWorkflowAutomation(...args: any[]): any {
 
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"

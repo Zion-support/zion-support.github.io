@@ -39,29 +39,6 @@ export default function GovernmentSolutions() {
             description: "Intelligent automation for government operations and workflows",
             features: ["Workflow Automation", "Document Processing", "Approval Systems", "Resource Management"]
 
-    ];
-    const benefits = [
-        "Improved citizen satisfaction and engagement",
-        "Enhanced operational efficiency and cost savings",
-        "Better compliance and risk management",
-        "Increased transparency and accountability",
-        "Faster service delivery and response times",
-        "Enhanced data security and privacy protection"
-    ];
-    const caseStudies = [
-        {
-            organization: "State Government Agency",
-            specialty: "Digital Services",
-            challenge: "Outdated citizen services and long processing times",
-            solution: "Implemented modern digital government platform with AI automation",
-            results: "70% reduction in processing times, 85% improvement in citizen satisfaction"
-        },
-        {
-            organization: "Federal Department",
-            specialty: "Security & Compliance",
-            challenge: "Cybersecurity vulnerabilities and compliance gaps",
-            solution: "Comprehensive security framework with FedRAMP compliance",
-            results: "100% compliance achievement, 90% reduction in security incidents"
 
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">

@@ -6,8 +6,6 @@ import {}
   Phone,
   Mail} from 'lucide-react.ts';
 
-:pages.disabled/pages/services/PriceIntelligenceService.tsx
-const PriceIntelligenceService: React.FC = (): JSX.Element => {
 
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">"

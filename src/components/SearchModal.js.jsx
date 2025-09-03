@@ -3,19 +3,6 @@ export default function Page() {
 ,
         {
 
-            id: '4',
-            type: 'page',
-            title: 'Cybersecurity Services',
-            description: 'Comprehensive cybersecurity solutions for enterprise protection',
-            url: '/services/cybersecurity',
-            category: 'Security',
-            tags['Security',Cybersecurity',Enterprise',Protection'];
-        }
-    ];
-    useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
-        if(isOpen && searchInputRef.current) {
 
             searchInputRef.current.focus()}
     }, [isOpen]);

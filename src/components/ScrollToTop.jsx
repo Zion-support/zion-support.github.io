@@ -1,12 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 
-export default function Page() {
-;
-            window.addEventListener('scroll', toggleVisibility);
-            return () => window.removeEventListener('scroll', toggleVisibility)}, []);
-        const scrollToTop = () => {
-            window.scrollTo({
 
                 top: 0,
                 behavior: 'smooth'})};

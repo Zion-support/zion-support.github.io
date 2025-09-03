@@ -2,9 +2,6 @@ import React, { useState } from 'react';
 export const TestimonialsSection: React.FC = () => {
 import { motion, AnimatePresence  } from 'framer-motion';
 
-export default function Page() {
-,
-  {
 
     id: 4,"
     name: "James Thompson","

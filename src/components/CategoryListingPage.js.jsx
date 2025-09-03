@@ -23,10 +23,6 @@ export default function Page() {
     useEffect(() => {
   // TODO: Add dependencies if needed
 
-  return () => {
-    // Cleanup function
-  };
-}, []);, []);
 
         localStorage.setItem('category_selected_sort', selectedSort)}, [selectedSort]);
     useEffect(() => {

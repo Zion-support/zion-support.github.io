@@ -23,8 +23,6 @@ import {}
   Users,
   GitBranch} from 'lucide-react.ts';
 
-:pages.disabled/pages/services/AIAutonomousEcosystemManager.tsx
-const AIAutonomousEcosystemManager: React.FC = (): JSX.Element => {
 
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
 const AIAutonomousEcosystemManager: React.FC = (): JSX.Element => {}

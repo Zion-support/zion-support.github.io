@@ -2,12 +2,6 @@ import { Heart  } from 'lucide-react';
  from 'react';
 export /**
 
- * FavoriteButton function
- * @param {*} params - Function parameters
- * @returns {*} Function return value
- */
-function FavoriteButton({ itemId, itemType, className = '' }: FavoriteButtonProps) {;
-interface FavoriteButtonProps extends React.PropsWithChildren<{}> {
 
   itemId: string;
   itemType: 'product' | 'talent' | 'equipment' | 'service';

@@ -15,29 +15,6 @@ import {
   CheckCircle
 } from 'lucide-react';
 
-export default function AboutPage() {
-  const values = [
-    {
-      icon: Lightbulb,
-      title: 'Innovation First',
-      description: 'We push the boundaries of what\'s possible, constantly exploring emerging technologies and creative solutions.'
-    },
-    {
-      icon: Shield,
-      title: 'Trust & Security',
-      description: 'Your data and business operations are protected with enterprise-grade security and compliance standards.'
-    },
-    {
-      icon: Users,
-      title: 'Client Success',
-      description: 'We measure our success by your success, building long-term partnerships based on mutual growth.'
-    },
-    {
-      icon: Zap,
-      title: 'Agile Excellence',
-      description: 'Rapid delivery and continuous improvement are core to our development and service delivery approach.'
-    }
-  ];
 
   const teamMembers = [
     {

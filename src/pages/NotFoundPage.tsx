@@ -15,9 +15,6 @@ import {
   Mail
 } from 'lucide-react';
 
-export default function NotFoundPage() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const navigate = useNavigate();
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();

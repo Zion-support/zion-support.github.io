@@ -9,20 +9,6 @@ import {}
   Headphones,
   Bot} from 'lucide-react.ts';
 
-export default function AICustomerSupport(...args: any[]): any {}
-  return()
-:pages.disabled/pages/services/ai-customer-support.tsx
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">"
-      <SEO""
-        title="AI Customer Support - Zion Tech Group""
-        description="Intelligent support automation that provides 24/7 customer assistance. Transform your customer support with AI-powered automation."
-      />
-"
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-      <SEO""
-        title="AI Customer Support - Zion Tech Group""
-        description="Intelligent support automation that provides 24/7 customer assistance. Transform your customer support with AI-powered automation.""
-      />
 
       {/* Hero Section */}""
       <section className="relative py-20 lg:py-32 overflow-hidden">""

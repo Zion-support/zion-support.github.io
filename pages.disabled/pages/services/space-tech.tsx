@@ -22,8 +22,6 @@ import {}
   Mail,
   MapPin} from 'lucide-react.ts';
 
-:pages.disabled/pages/services/space-tech.tsx
-export default function SpaceTechnology(...args: any[]): any {
 
   return()
     <div className="min-h-screen bg-slate-950 text-white">"

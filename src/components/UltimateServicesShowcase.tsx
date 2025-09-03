@@ -13,7 +13,6 @@ import { innovativeMicroSaasSolutions2025 } from '../../data / 2025 - innovative
 import { motion  } from 'framer-motion';
 import { ultimateInnovativeServices2025 } from '../../data / 2025 - ultimate - innovative - services -expansion';
 
- from 'lucide - react';
 
 // Import the new services
   ;

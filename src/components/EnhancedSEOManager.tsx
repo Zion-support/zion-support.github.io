@@ -3,14 +3,6 @@ import { Helmet } from 'react - helmet -async';
 export default EnhancedSEOManager;
 export default function
 
-/**
- * EnhancedSEOManager Component
- *
- * @description EnhancedSEOManager component for the application
- * @param {Object} props - Component props
- * @returns {JSX.Element} Rendered component
- */
-interface SEOData {
 
   title: string;
   description: string;

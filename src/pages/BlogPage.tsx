@@ -21,10 +21,6 @@ import {
   Building2
 } from 'lucide-react';
 
-export default function BlogPage() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('latest');
 
   const categories = [
     { id: 'all', name: 'All Posts', icon: BookOpen, count: 25 },

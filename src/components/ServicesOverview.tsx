@@ -1,7 +1,6 @@
 import {  import { motion  } from 'framer-motion';
  from 'lucide-react';
 
-export function ServicesOverview(...args[]):  {
 
       icon: Heart,;
       color: 'from-zion-pink to-zion-purple',;

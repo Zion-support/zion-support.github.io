@@ -1,14 +1,5 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 
-export default function Page() {
-interface Comment {
-  id: string;
-  author: string;
-  content: string;
-  timestamp: string;
-  likes: number;
-  replies: Comment[]
-}
 
 interface Message {
   id: string;

@@ -1,5 +1,5 @@
 import React from 'react';'''
-import { Brain, Zap, Shield, TrendingUp, ArrowRight } from 'lucide-react';
+import { Brain, ArrowRight } from "lucide-react";
 const QuantumNeuralNetworkPlatform = () => {}
   const features = []
     {}

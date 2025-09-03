@@ -12,8 +12,6 @@ import {}
   Calculator,
   Shield} from 'lucide-react.ts';
 
-:pages.disabled/pages/services/AIFinancialAnalyticsPlatform.tsx
-export default function AIFinancialAnalyticsPlatform(...args: any[]): any {
 
 export default function AIFinancialAnalyticsPlatform(...args: any[]): any {}
   return()

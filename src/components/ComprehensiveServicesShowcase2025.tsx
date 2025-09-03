@@ -6,16 +6,6 @@ export default function Page() {
     { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️' };
   ];
 
-    { id: 'all', name: 'All Levels', icon: '🌟' },;
-    { id: 'Advanced', name: 'Advanced', icon: '🚀' },;
-    { id: 'Cutting-edge', name: 'Cutting-edge', icon: '⚡' },;
-    { id: 'Revolutionary', name: 'Revolutionary', icon: '💫' };
-  ];
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    
-    return matchesCategory && matchesSearch && matchesPrice && matchesInnovation}) ;
 
     switch(sortBy) {;
       case 'price':;

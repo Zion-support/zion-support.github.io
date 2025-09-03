@@ -1,8 +1,5 @@
 import {  import { motion  } from 'framer-motion';
 
-export default function Page() {
--${Math.random().toString(36).substr(2, 9)}`}}
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
 
     this.setState({ errorInfo });
 

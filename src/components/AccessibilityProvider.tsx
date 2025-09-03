@@ -4,9 +4,6 @@ export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = 
 export const useAccessibility = () => {;
 import { motion, AnimatePresence  } from 'framer-motion';
 
-export default function Page() {
-> {
-  children: ReactNode}
 
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {
   const [highContrast, setHighContrast] = useState(false);

@@ -1,19 +1,4 @@
 
-:pages.disabled/pages/services/EmailSequencer.tsx
-export default function EmailSequencer() {
-		'Multi-step sequences with A/B testing',;'
-		'AI subject line and body suggestions',;'
-		'CRM/webhook integrations (HubSpot, Salesforce, Slack),;'
-		'Smart send windows and reply-detection',;'
-		'Per-recipient throttling and warmup controls',;'
-export default function EmailSequencer(function EmailSequencer() {): any {}
-		'Multi-step sequences with A/B testing',;
-		'AI subject line and body suggestions',;
-		'CRM/webhook integrations (HubSpot, Salesforce, Slack),;
-		'Smart send windows and reply-detection',;
-		'Per-recipient throttling and warmup controls',;
-		'Compliance: unsubscribe, custom domains, DKIM/SPF/DMARC tips';
-	];
 
 	'
 		{ name: 'Launch', price: '$49/mo', details: ['Up to 2,500 sends',1 domain',Basic templates'] },;'

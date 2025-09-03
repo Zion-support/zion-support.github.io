@@ -74,37 +74,6 @@ const AIWorkflowAutomation = () => {
                 "Employee self-service"
             ]
 
-    ];
-    const technologies = [
-        {
-            name: "Machine Learning",
-            description: "Advanced ML algorithms for process optimization and decision making",
-            icon: Brain
-        },
-        {
-            name: "Robotic Process Automation",
-            description: "RPA tools for repetitive task automation",
-            icon: GitFork
-        },
-        {
-            name: "Natural Language Processing",
-            description: "AI-powered text analysis and document processing",
-            icon: Database
-        },
-        {
-            name: "Workflow Engine",
-            description: "Scalable workflow orchestration platform",
-            icon: Zap
-        },
-        {
-            name: "Real-time Analytics",
-            description: "Instant performance monitoring and optimization",
-            icon: BarChart3
-        },
-        {
-            name: "API Integration",
-            description: "Seamless integration with existing systems",
-            icon: Globe
 
     ];
     const benefits = [

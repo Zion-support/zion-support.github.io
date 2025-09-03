@@ -27,39 +27,6 @@ import { BarChart3,
  } from 'lucide-react.ts';
 import { SEO  } from '../../components/SEO';
 
-const AIBusinessIntelligenceDashboard = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: "AI-Powered Insights",
-      description: "Advanced machine learning algorithms that automatically identify trends, anomalies, and opportunities in your data"
-    },
-    {
-      icon: BarChart3,
-      title: "Real-time Analytics",
-      description: "Live dashboards with real-time data updates from multiple sources including CRM, ERP, and external APIs"
-    },
-    {
-      icon: TrendingUp,
-      title: "Predictive Analytics",
-      description: "Forecast future trends and outcomes using historical data and AI models with 95%+ accuracy"
-    },
-    {
-      icon: Zap,
-      title: "Automated Reporting",
-      description: "Intelligent report generation that adapts to your business needs and automatically highlights key insights"
-    },
-    {
-      icon: Shield,
-      title: "Enterprise Security",
-      description: "Bank-grade security with role-based access control, data encryption, and compliance with GDPR, HIPAA, and SOC 2"
-    },
-    {
-      icon: Globe,
-      title: "Multi-platform Access",
-      description: "Access your dashboards from anywhere - web, mobile apps, and integrate with existing business tools"
-    }
-  ];
 
   const pricingPlans = [
     {

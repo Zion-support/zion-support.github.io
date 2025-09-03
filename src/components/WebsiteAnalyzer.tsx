@@ -3,10 +3,6 @@ export const WebsiteAnalyzer: React.FC = () : JSX.Element => {
 export default WebsiteAnalyzer;
 import { CheckCircle, import { LinkChecker, LinkInfo, PageInfo } from '../utils / linkChecker';
 
-export default function Page() {
- catch(error) {
-`
-          // console.error(`Error analyzing ${page}:`, error)}
 
         // Add delay to prevent overwhelming the server
         await new Promise(resolve => setTimeout (resolve, 100) ) }

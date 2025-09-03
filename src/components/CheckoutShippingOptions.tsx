@@ -1,9 +1,4 @@
 
-interface Address {
-  name: string;
-  address: string;
-  city: string;
-  country: string}
 
 interface ShippingRate {
   id: string;

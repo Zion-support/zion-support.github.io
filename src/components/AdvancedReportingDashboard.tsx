@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 export const AdvancedReportingDashboard: React.FC < AdvancedReportingDashboardProps> = ({
 import { motion, AnimatePresence  } from 'framer-motion';
 
-export default function Page() {
-> {
 
   showMetrics?: boolean;
   showFilters?: boolean;

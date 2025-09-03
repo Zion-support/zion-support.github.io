@@ -18,9 +18,6 @@ import {
   Globe
 } from 'lucide-react';
 
-export default function PricingPage() {
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
-  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
 
   const pricingPlans = [
     {

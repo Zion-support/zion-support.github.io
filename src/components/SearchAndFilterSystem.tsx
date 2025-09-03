@@ -1,7 +1,5 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 
-export default function Page() {
-> {
 
   data: SearchResult[];
   onResultsChange?: (results: SearchResult[]) => void;

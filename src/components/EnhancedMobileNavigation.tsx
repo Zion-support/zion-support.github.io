@@ -3,7 +3,6 @@ import { Link, useLocation  } from 'react-router-dom';
 export const EnhancedMobileNavigation: React.FC = () => {
 import { motion, AnimatePresence  } from 'framer-motion';
 
- from 'lucide-react';
 
 >} from 'lucide-react';
 

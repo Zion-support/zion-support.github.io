@@ -1,53 +1,5 @@
 import React from 'react';
 
-export function StatsSection() {
-  const stats = [{
-      number: '500+',
-      label: 'Projects Completed',
-      description: 'Successfully delivered solutions',
-      icon: '🚀',
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      number: '99.9%',
-      label: 'Uptime Guarantee',
-      description: 'Reliable service availability',
-      icon: '⚡',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      number: '24/7',
-      label: 'Support Available',
-      description: 'Round-the-clock technical assistance',
-      icon: '🔄',
-      color: 'from-yellow-500 to-orange-500'
-    },
-    {
-      number: '50+',
-      label: 'Expert Team',
-      description: 'Certified professionals',
-      icon: '💡',
-      color: 'from-indigo-500 to-purple-500'
-    },
-    {
-      number: '15+',
-      label: 'Years Experience',
-      description: 'Industry expertise and knowledge',
-      icon: '🏆',
-      color: 'from-red-500 to-pink-500'
-    }
-  ];
-  return ()
-    <section className="py-16 bg-white">"
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
-        <div className="text-center mb-12">"          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Zion Tech Group by the Numbers
-          </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Our track record speaks for itself - delivering exceptional results
-            and building lasting partnerships
-          </p>
-        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {stats.map((stat, index) => (

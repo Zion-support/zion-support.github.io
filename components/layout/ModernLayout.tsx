@@ -123,4 +123,3 @@ export default ModernLayout {children}
 "
 export default ModernLayout;"export default ModernLayout}
 
->>>>>>> a4e4b61825d9486fa9e1113a59af8c11dc69fb90"'

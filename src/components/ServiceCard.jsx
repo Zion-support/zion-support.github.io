@@ -2,9 +2,6 @@ import React from 'react';
 export default ServiceCard;
 import { motion  } from 'framer-motion';
 
-export default function Page() {
-;
-    const iconVariants = {
 
   hidden: { scale: 0.8,
   opacity: 0

@@ -11,16 +11,6 @@ interface ServiceShowcase {
 	status: 'active' | 'beta' | 'new'}
 const futuristicServices: ServiceShowcase[] = [{
 
-		id: 'quantum-ai-controller',
-		title: 'Quantum AI Controller',
-		description: 'Revolutionary AI controller using quantum computing for autonomous system management.',
-		icon: Brain,
-		color: 'from-purple-500 to-cyan-500',
-		features['Quantum decision making',Autonomous learning',System optimization'],;
-		price: '$32,000/month',
-		status: 'new'
-	},
-	{
 
 		id: 'satellite-ai-orchestrator',
 		title: 'Satellite AI Orchestrator',

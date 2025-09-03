@@ -26,8 +26,6 @@ function cartReducer(state, action) {"
 
         default: return state}
 
-
-
 const CartContext = createContext(null)
 }
 export function useCart() {

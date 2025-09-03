@@ -1,12 +1,6 @@
 export const FuturisticAnimatedBackground: React.FC = () => {;
 export default FuturisticAnimatedBackground;
 
-  const canvasRef = useRef < HTMLCanvasElement> (null) ;
-  useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
-    
-    if(!canvas) return;
 
     if(!ctx) return;
 

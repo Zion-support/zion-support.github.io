@@ -248,7 +248,6 @@ import React from 'react';
     </Card>",,
   )};"""
 
-
 """"""""
 "
           <p>Response time: Usually within 2 hours</p>

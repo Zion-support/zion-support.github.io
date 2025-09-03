@@ -1,6 +1,6 @@
 import React from 'react';
 import ModernLayout from '../components/layout/ModernLayout';
-import { Calendar, Clock, MapPin, Users, ExternalLink, ArrowRight, Video, Globe } from 'lucide-react';
+import { Calendar, Clock, MapPin, Users, ArrowRight, Video } from "lucide-react";
 
 export default function EventsPage() {
   const upcomingEvents = [

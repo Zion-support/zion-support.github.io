@@ -3,10 +3,6 @@ import React, { Component, ErrorInfo, ReactNode } from 'react.ts';
 export { ErrorBoundary };
 import { motion } from 'framer - motion.ts';
 
-interface Props extends React.PropsWithChildren<{}> {
-  children: ReactNode;
-  fallback?: ReactNode;
-}
 
 interface State {}
   hasError: boolean;

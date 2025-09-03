@@ -8,9 +8,6 @@ interface Service {
   color: string;
 }
 
-interface ServicesGridProps {
-  services: Service[];
-}
 
   return (<div className="grid grid - cols - 1 md: anygrid - cols - 2 gap-8">
       {services.map ( (service, index) => (<motion.div      {services.map((service, index) => (

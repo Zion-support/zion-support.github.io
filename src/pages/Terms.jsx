@@ -1,5 +1,4 @@
 import React from 'react';
-import { FileText, Scale, Shield, AlertTriangle, CheckCircle, Users } from 'lucide-react';
 
 export default function Terms() {
   const sections = [

@@ -1,8 +1,5 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 
-export default function Page() {
-      // Apply large text
-      if(updatedSettings.largeText) {
 
         document.documentElement.classList.add('large-text')} else {
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Brain, TrendingUp, Users, Globe, Cpu, Lightbulb, BarChart3, PieChart, Activity, Search } from 'lucide-react';
+import { Lightbulb, BarChart3 } from "lucide-react";
 const AIBusinessIntelligence = () => {
     const benefits = [
         "Data-driven decision making across all business areas",

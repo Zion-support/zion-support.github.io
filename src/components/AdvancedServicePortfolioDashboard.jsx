@@ -8,21 +8,6 @@ export default function Page() {
 ,
         {
 
-            id: 'nanotechnology',
-            title: 'Advanced Nanotechnology Platform',
-            category: 'biotech-ai',
-            price: '$450,000/month',
-            duration: '30-42 months',
-            status: 'Active',
-            performance: 89,
-            clientCount: 12,
-            revenue: 5400000,
-            growth: 34.2,
-            complexity: 'Advanced',
-            marketDemand: 'High',
-            technologyMaturity: 'Growing'
-        },
-        {
 
             id: 'brain-computer-interface',
             title: 'Advanced Brain-Computer Interface',

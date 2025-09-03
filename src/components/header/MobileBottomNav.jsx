@@ -53,17 +53,6 @@ export default function Page() {
             matches: (path) => path.startsWith("/dashboard"),
             authRequired: true
 
-    ];
-    // Filter items based on auth status
-    const visibleItems = navItems.filter(item => !item.authRequired || (item.authRequired && isAuthenticated));"
-    return (<nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-zion-blue-dark/95 backdrop-blur-md border-t border-zion-purple/20">"
-      <div className="flex justify-around items-center h-16">
-        {visibleItems.map(item => (<Link key={item.name} to={item.href} className = {
-"
-  cn("flex flex-col items-center justify-center w-full h-full px-1 py-1",
-  item.matches(location.pathname)"
-                ? "text-zion-cyan"
-                : "text-white/70 hover:text-white")
 
 }>
             <div className="relative">

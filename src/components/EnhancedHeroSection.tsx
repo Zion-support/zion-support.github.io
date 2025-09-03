@@ -1,7 +1,5 @@
 import { Link  } from 'react-router-dom';
 
-export default function Page() {
-const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): any {
 
   const [currentSlide, setCurrentSlide] = useState(0);  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 

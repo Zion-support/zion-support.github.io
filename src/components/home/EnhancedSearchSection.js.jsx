@@ -9,10 +9,6 @@ export default function Page() {
 }, []);
         if(searchQuery.length > 2) {
 
-            // Simulate AI-powered suggestions
-            const filtered = popularSearches.filter(item => item.toLowerCase().includes(searchQuery.toLowerCase()));
-            setSuggestions(filtered.slice(0, 5))}
-        else {
 
             setSuggestions([])}
     }, [searchQuery]);

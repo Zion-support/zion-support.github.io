@@ -6,8 +6,6 @@ import {}
   Mail,
   Phone} from 'lucide-react.ts';
 
-:pages.disabled/pages/services/GDPRDSARPortal.tsx
-export default function GDPRDSARPortal(...args: any[]): any {
 
 export default function GDPRDSARPortal(...args: any[]): any {}
   return()

@@ -464,7 +464,6 @@ target.style.backgroundImage = "url (${target.dataset.src}) "              targe
 }
   return <>{children}</>
 
-
   return <>{children}</>
 const observer = new IntersectionObserver ( (entries) => {entries.forEach (entry => {
     // comment

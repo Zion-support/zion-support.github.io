@@ -21,8 +21,6 @@ import {}
   Shield,
   BookOpen} from 'lucide-react.ts';
 
-:pages.disabled/pages/services/AIAutonomousLegalCounsel.tsx
-const AIAutonomousLegalCounsel: React.FC = (): JSX.Element => {
 
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
 const AIAutonomousLegalCounsel: React.FC = (): JSX.Element => {}

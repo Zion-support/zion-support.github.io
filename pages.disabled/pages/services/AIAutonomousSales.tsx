@@ -21,8 +21,6 @@ import {}
   Shield,
   DollarSign as DollarSignIcon} from 'lucide-react.ts';
 
-:pages.disabled/pages/services/AIAutonomousSales.tsx
-const AIAutonomousSales: React.FC = (): JSX.Element => {
 
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
 const AIAutonomousSales: React.FC = (): JSX.Element => {}

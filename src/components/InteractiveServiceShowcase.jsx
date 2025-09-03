@@ -2,12 +2,6 @@ import React, { useState } from 'react';
 export default InteractiveServiceShowcase;
 import { motion, AnimatePresence  } from 'framer-motion';
 
-export default function Page() {
-,
-        { id: 'security', name: 'Security', icon: '🛡️', count: 6 },
-        { id: 'automation', name: 'Automation', icon: '⚡', count: 3 }
-    ];
-    const services = [{
 
             id: 'ai-strategy',
             title: 'AI Strategy Consulting',

@@ -3,8 +3,6 @@ export default function Page() {
 ;
   performance: {
 
-    loadTime: number;
-    coreWebVitals: {
 
       fcp: number;
       lcp: number;

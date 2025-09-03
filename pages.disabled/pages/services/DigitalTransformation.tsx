@@ -23,68 +23,6 @@ export { function };
 :pages.disabled/pages/services/DigitalTransformation.tsx
 export default function DigitalTransformation(...args: unknown[]): unknown {
 
-  return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">"
-export default function DigitalTransformation(...args: unknown[]): unknown {}
-  return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-      {/* Hero Section */}""
-      <section className="relative pt-32 pb-20 overflow-hidden">""
-        <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-red-500/10"></div>""
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-:pages.disabled/pages/services/DigitalTransformation.tsx
-            transition={{ duration: 0.8 }}"
-          >""
-            <div className="inline-flex items-center px-4 py-2 bg-orange-500/10 border border-orange-500/20 rounded-full text-orange-400 text-sm font-medium mb-6">""
-              <Zap className="w-4 h-4 mr-2"  />              Digital Transformation Solutions
-            </div>"
-""
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">"
-              Digital""
-              <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">'
-            transition={{ duration: 0.8 }}
-          >""
-            <div className="inline-flex items-center px-4 py-2 bg-orange-500/10 border border-orange-500/20 rounded-full text-orange-400 text-sm font-medium mb-6">""
-              <Zap className="w-4 h-4 mr-2"  />              Digital Transformation Solutions;
-            </div>
-""
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Digital""
-              <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
-                {' '}
-                Transformation;
-              </span>
-:pages.disabled/pages/services/DigitalTransformation.tsx
-            </h1>"
-            </h1>
-""
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your business for the digital age with our comprehensive;
-              digital transformation solutions that drive innovation and growth.
-:pages.disabled/pages/services/DigitalTransformation.tsx
-            </p>"
-            </p>
-""
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
-              <button className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-200 flex items-center justify-center">""
-                <Play className="w-5 h-5 mr-2"  />
-:pages.disabled/pages/services/DigitalTransformation.tsx
-                Start Transformation"
-              </button>""
-              <button className="px-8 py-4 border border-orange-500/30 text-orange-400 font-semibold rounded-lg hover:bg-orange-500/10 transition-all duration-200 flex items-center justify-center">""
-                <Settings className="w-5 h-5 mr-2"  />                Schedule Consultation
-                Start Transformation;
-              </button>""
-              <button className="px-8 py-4 border border-orange-500/30 text-orange-400 font-semibold rounded-lg hover:bg-orange-500/10 transition-all duration-200 flex items-center justify-center">""
-                <Settings className="w-5 h-5 mr-2"  />                Schedule Consultation;
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-:pages.disabled/pages/services/DigitalTransformation.tsx
-"
 
       {/* Features Section */}""
       <section className="py-20">""

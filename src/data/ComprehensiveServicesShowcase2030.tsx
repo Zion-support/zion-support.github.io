@@ -1,8 +1,4 @@
 
-const ComprehensiveServicesShowcase2030: React.FC = () => {;
-  const [activeTab, setActiveTab] = useState<'microsaas' | 'it' | 'ai'>('microsaas');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
 
   const getFilteredServices = () => {;
     let services: any[] = [];

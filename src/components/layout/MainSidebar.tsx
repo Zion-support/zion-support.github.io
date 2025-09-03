@@ -15,10 +15,6 @@ export default function Page() {
     },;
     {
 
-      name: 'Core Services',
-      href: '#',
-      icon: Target,
-      children: [{
 
           name: 'Cloud & DevOps',
           href: '/services/cloud-devops',

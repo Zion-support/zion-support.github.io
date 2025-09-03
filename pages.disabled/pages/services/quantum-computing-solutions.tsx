@@ -12,8 +12,6 @@ import {}
   Cloud,
   Cpu} from 'lucide-react.ts';
 
-:pages.disabled/pages/services/quantum-computing-solutions.tsx
-export default function QuantumComputingSolutions(...args: any[]): any {
 
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"

@@ -6,7 +6,6 @@ export interface offlineshimsdType {
 }
   interface IntrinsicElements {
 
-    [elemName: string]: ;
 
 }}
 

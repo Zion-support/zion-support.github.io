@@ -9,35 +9,6 @@ export default function Page() {
     useEffect(() => {
   // TODO: Add dependencies if needed
 
-  return () => {
-    // Cleanup function
-  };
-}, []);, []);
-        // For demo purposes, we're using the loaded translations from i18next
-        const currentTranslations = { /* empty */ };
-        supportedLanguages.forEach(lang => {
-            const res = i18n.getResourceBundle (lang.code, selectedNamespace) ;
-            if(res) {
-                // Flatten nested objects for easier management
-                const flattenObject = (obj, prefix = '') => {
-                    return Object.keys(obj) .reduce((acc, key) => {
-                        const pre = prefix.length ? `${prefix}.` : '';
-                        if(typeof obj[key] === 'object' && obj[key] !== null) {
-                            Object.assign(acc, flattenObject (obj[key], `${pre}${key}`) ) }
-                        else {
-                            acc[`${pre}${key}`] = obj[key]}
-                        return acc}, {}) };
-                currentTranslations[lang.code] = flattenObject(res) }
-        }) ;
-        setTranslations(currentTranslations) ;
-        // Get all unique keys across all languages
-        const allKeys = new Set () ;
-        Object.values(currentTranslations) .forEach(langTranslations => {
-            Object.keys (langTranslations) .forEach(key => allKeys.add (key) ) }) ;
-        setFilteredKeys(Array.from (allKeys) ) }, [selectedNamespace, i18n]) ;
-    // Filter keys based on search query
-    useEffect(() => {
-  // TODO: Add dependencies if needed
 
   return () => {
     // Cleanup function

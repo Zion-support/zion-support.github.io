@@ -2,12 +2,6 @@ import { Link  } from 'react-router-dom';
 export default function Page() {
 ;
 
-  return (<div  className="min - h-screen bg-gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate - light text-white relative overflow-hidden">
-      {/* Animated Background */}
-      <div  className="absolute inset -0">
-        <div  className="absolute inset - 0 bg-[linear - gradient (rgba (34,221,210,0.03) _1px,transparent_1px) ,linear - gradient(90deg,rgba (34,221,210,0.03) _1px,transparent_1px) ] bg-[size:100px_100px] animate -pulse" />
-        <div  className="absolute inset - 0 bg-gradient - to - br from - zion - purple / 5 via - transparent to - zion -cyan / 5" />
-        <div  className="absolute top - 0 left - 0 w-full h-full bg-gradient - radial from - zion - cyan / 10 via - transparent to -transparent" />      </div>
 
       {/* Header Section */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">"

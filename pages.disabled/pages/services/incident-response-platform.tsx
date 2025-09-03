@@ -19,8 +19,6 @@ import {}
   Mail,
   MapPin} from 'lucide-react.ts';
 
-:pages.disabled/pages/services/incident-response-platform.tsx
-export default function IncidentResponsePlatform(...args: any[]): any {
 
   return()
     <div className="min-h-screen bg-slate-950 text-white">"

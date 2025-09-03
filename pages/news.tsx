@@ -1,6 +1,6 @@
 import React from 'react';
 import ModernLayout from '../components/layout/ModernLayout';
-import { Calendar, Clock, User, Tag, ArrowRight, ExternalLink } from 'lucide-react';
+import { Calendar, Clock, User, ArrowRight } from "lucide-react";
 
 export default function NewsPage() {
   const newsArticles = [

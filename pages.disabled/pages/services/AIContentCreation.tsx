@@ -20,8 +20,6 @@ import {}
   Lightbulb,
   BarChart3} from 'lucide-react.ts';
 
-:pages.disabled/pages/services/AIContentCreation.tsx
-export default function AIContentCreation(...args: any[]): any {
 
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"

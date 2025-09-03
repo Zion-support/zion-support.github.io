@@ -11,10 +11,6 @@ export function AIChatAssistant() {
     const [isMinimized, setIsMinimized] = useState(false);
     const [messages, setMessages] = useState([{
 
-            id: '1',
-            type: 'assistant',"
-            content: "Hello! I'm Zion AI, your personal technology consultant.How can I help you today?",
-            timestamp: new Date()
 
     ]);
     const [inputValue, setInputValue] = useState('');

@@ -6,7 +6,7 @@ import { GradientHeading } from "@/components/GradientHeading";""""
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";""""
 import { Button } from "@/components/ui/button";""""
 import { Link } from "react-router-dom";""""
-import { Search, UserPlus, Handshake, CheckCircle, MessageSquare, FileText, Users, Briefcase, Zap, Globe, Shield } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 export default function HowItWorks() {}
     const clientSteps = []
         {}

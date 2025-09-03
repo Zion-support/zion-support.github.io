@@ -19,13 +19,6 @@ import {
   ShoppingCart
 } from 'lucide-react';
 
-export default function HomePage() {
-  const heroFeatures = [
-    'AI-Powered Solutions',
-    'Enterprise Security',
-    'Cloud Infrastructure',
-    '24/7 Support'
-  ];
 
   const services = [
     {

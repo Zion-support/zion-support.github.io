@@ -1,7 +1,7 @@
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
-import { ArrowRight, CheckCircle, Star, Users, Calendar, BarChart3, MessageSquare, FileText } from 'lucide-react';
+import { CheckCircle, Users, BarChart3, FileText } from "lucide-react";
 import Link from 'next/link';
 
 const ProjectManagementSuite: NextPage = () => {

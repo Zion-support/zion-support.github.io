@@ -9,20 +9,6 @@ import {}
   Headphones,
   Bot} from 'lucide-react.ts';
 
-export default function AIContentGenerator(...args: any[]): any {}
-  return()
-:pages.disabled/pages/services/ai-content-generator.tsx
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-      <SEO""
-        title="AI Content Generator - Zion Tech Group""
-        description="Revolutionary AI-powered content creation that writes, optimizes, and scales your content strategy. Generate high-quality, SEO-optimized content in minutes."
-      />
-"
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEO""
-        title="AI Content Generator - Zion Tech Group""
-        description="Revolutionary AI-powered content creation that writes, optimizes, and scales your content strategy. Generate high-quality, SEO-optimized content in minutes.""
-      />
 
       {/* Hero Section */}""
       <section className="relative py-20 lg:py-32 overflow-hidden">""

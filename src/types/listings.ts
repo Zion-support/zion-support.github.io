@@ -14,14 +14,6 @@ seller: {
     rating: number;
     reviews: number;
 
-};
-  location: string;  createdAt: string;
-  updatedAt: string;
-  status: 'active' | 'inactive' | 'sold' | 'pending';
-  views: number;
-  likes: number;
-  shares: number}
-;export interface ProductListing extends Listing {
 
   brand?: string;
   model?: string;

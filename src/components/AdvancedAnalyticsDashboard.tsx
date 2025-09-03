@@ -1,7 +1,6 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
  from 'lucide-react';
 
-interface AnalyticsData {
 
   id: string;
   metric: string;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { SEO } from '../../components/SEO';
-import { Server, Network, Database, Shield, Zap, Monitor, Wifi, Cloud } from 'lucide-react';
+import { Zap } from "lucide-react";
 const ITInfrastructure: React.FC = () => {
   const infrastructureServices = [
     {

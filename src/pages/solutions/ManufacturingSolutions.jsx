@@ -32,31 +32,6 @@ import { Settings, Brain, Target, BarChart3, Zap, Shield, ArrowRight, CheckCircl
             title: "Process Optimization",
             description: "AI-powered process improvement and efficiency optimization"
 
-    ];
-    const benefits = [
-        "Reduce downtime by 40-60%",
-        "Improve product quality by 25-35%",
-        "Lower production costs by 20-30%",
-        "Increase production efficiency",
-        "Better resource utilization",
-        "Enhanced safety and compliance"
-    ];
-    const solutions = [
-        {
-            title: "Smart Manufacturing",
-            description: "IoT-enabled connected manufacturing with real-time monitoring"
-        },
-        {
-            title: "Predictive Analytics",
-            description: "AI-powered forecasting and predictive maintenance solutions"
-        },
-        {
-            title: "Quality Management",
-            description: "Automated quality control and defect prevention systems"
-        },
-        {
-            title: "Supply Chain Optimization",
-            description: "Intelligent inventory and supply chain management"
 
     ];
     const industries = [

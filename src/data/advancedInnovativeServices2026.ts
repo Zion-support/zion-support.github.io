@@ -19,11 +19,6 @@ export interface AdvancedInnovativeService2026 {
   innovationLevel: string;
 contactInfo: {
 
-    phone: string;
-    email: string;
-    website: string;
-    address: string};
-  technicalSpecs?: {
 
     technology: string[];
     integrations: string[];

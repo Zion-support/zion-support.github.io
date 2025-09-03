@@ -1,9 +1,4 @@
 
- * CategoriesSection function
- * @param {*} params - Function parameters
- * @returns {*} Function return value
- */
-function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
 
 const categories = [{
     title: "AI Services",

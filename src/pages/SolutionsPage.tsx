@@ -20,8 +20,6 @@ import {
   MessageSquare
 } from 'lucide-react';
 
-export default function SolutionsPage() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
   const industrySolutions = [
     {

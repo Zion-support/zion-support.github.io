@@ -311,7 +311,6 @@ const InnovationServicesMarketing = () => {    const allServices = [...cuttingEd
 export default InnovationServicesMarketing;
 }}}}}}}}
 
-export { InnovationServicesMarketing };
 
 export { InnovationServicesMarketing };
 

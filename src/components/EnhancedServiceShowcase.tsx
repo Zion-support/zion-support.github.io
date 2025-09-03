@@ -1,8 +1,5 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 
-export default function Page() {
-,
-  {
 
     id: 'quantum-computing-suite',
     title: 'Quantum Computing Suite',

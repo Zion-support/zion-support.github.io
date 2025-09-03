@@ -1,15 +1,5 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 
- params - Function parameters
- * @returns {*} Function return value
- */
-function InteractiveTestimonials () {export function InteractiveTestimonials() {
-"
-  const [selectedCategory, setSelectedCategory] = useState("All");
-  const [selectedTestimonial, setSelectedTestimonial] = useState(0);
-"
-  const filteredTestimonials = selectedCategory === "All" ;    ? testimonials ;
-    : testimonials.filter(t => t.category === selectedCategory) ;
 
     setSelectedTestimonial((prev) => ;
       prev === filteredTestimonials.length-1 ? 0 : prev + 1;) };

@@ -154,7 +154,6 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,"
                     "name": "Digital Transformation","
                     "description": "End-to-end digital transformation services"
 
-
                 ]
 })>
 }}

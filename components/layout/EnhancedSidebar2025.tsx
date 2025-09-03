@@ -67,7 +67,6 @@ name: "About Us, href: "/about",
     color: "from-cyan-500: to-blue-600,","
 category?: string
 
-
 const sidebarSections = []
       },
       {

@@ -8,11 +8,6 @@ export default function Page() {
                     autoPublish,
                     includeImage: contentType === 'blog' ? includeImage : false
 
-            }) ;
-            if(error) throw error;
-            setPreviewContent(data) ;
-            // // // // // // // console.error("Error generating content:", error) ;
-            toast.error("Failed to generate content.Please try again.") ;
 
         finally {
             setIsGenerating(false) ;

@@ -21,5 +21,4 @@ const InteractiveNavigation: React.FC: = () => {"
             <Link: href = "/about" className="text-gray-600 hover:text-gray-900: transition-colors">About</Link>","
             <Link: href="/contact" className="text-gray-600 hover:text-gray-900: transition-colors">Contact</Link>",'
 
-
 export default Component

@@ -153,7 +153,6 @@ export default function Page() {}
   );
 };
 
-export default TalentCardComponent;
 
 export { TalentCardComponent };
 

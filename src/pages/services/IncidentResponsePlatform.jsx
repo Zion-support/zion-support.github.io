@@ -24,27 +24,6 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
             description: "Comprehensive tracking of all incident activities, communications, and resolution steps for audit compliance",
             icon: <Clock className="w-6 h-6"/>
 
-    ];
-    const benefits = [
-        {
-            metric: "70%",
-            description: "Reduction in response time",
-            icon: <Clock className="w-5 h-5"/>
-        },
-        {
-            metric: "45%",
-            description: "Improvement in resolution quality",
-            icon: <TrendingUp className="w-5 h-5"/>
-        },
-        {
-            metric: "24/7",
-            description: "Automated monitoring",
-            icon: <Activity className="w-5 h-5"/>
-        },
-        {
-            metric: "90%",
-            description: "Compliance assurance",
-            icon: <Shield className="w-5 h-5"/>
 
     ];
     const pricingPlans = [

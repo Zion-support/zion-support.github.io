@@ -21,8 +21,6 @@ import {}
   Zap,
   Shield} from 'lucide-react.ts';
 
-:pages.disabled/pages/services/AISEO.tsx
-const AISEO: React.FC = (): JSX.Element => {
 
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
 const AISEO: React.FC = (): JSX.Element => {}

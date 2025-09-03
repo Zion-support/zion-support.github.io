@@ -95,7 +95,6 @@ import { Home, ArrowLeft, Search, Users, Brain, Shield, Zap const NotFoundPage =
 export default NotFoundPage;
 }
 
-export { NotFoundPage };
 
 export { NotFoundPage };
 

@@ -8,34 +8,6 @@ import SEO from "@/components/SEO";""""
 import { PenTool, FileText, Brain, Zap, Target, Users, ArrowRight, CheckCircle, Star, Globe, Shield, Type, Video, ShoppingBag, Mail } from "lucide-react";""""
 import { Link } from "react-router-dom";
 
-    const features = []
-        {}
-"""
-""""
-            title: "AI Writing Assistant",""""
-            description: "Generate high-quality content for blogs, social media, and marketing campaigns",""""
-            icon: <PenTool className="h-6 w-6 text-zion-cyan"/>
-        },
-        {}
-"""
-""""
-            title: "Multi-Format Support",""""
-            description: "Create content in various formats: text, images, videos, and audio",""""
-            icon: <FileText className="h-6 w-6 text-zion-purple"/>
-        },
-        {}
-"""
-""""
-            title: "Brand Voice Consistency","'"""
-            description: "Maintain your brand's unique voice across all content pieces",""""
-            icon: <Type className="h-6 w-6 text-zion-blue"/>
-        },
-        {}
-"""
-""""
-            title: "SEO Optimization",""""
-            description: "AI-powered SEO suggestions to improve content visibility and ranking",""""
-            icon: <Target className="h-6 w-6 text-zion-cyan"/>
 
     ];
 

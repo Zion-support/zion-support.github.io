@@ -1,5 +1,5 @@
 import React from 'react';
-import { Brain, Shield, Users, Cpu, Database, Lightbulb, Lock, Eye, AlertTriangle, Cloud } from 'lucide-react';
+import { Shield, Lightbulb } from "lucide-react";
 const AIPoweredSecurity = () => {
     const securitySolutions = [
         {

@@ -13,15 +13,6 @@ export interface MarketplaceItem {
   featured: boolean;
 seller: {
 
-    name: string;
-    rating: number;
-    verified: boolean};
-  location: string;
-  availability: 'available' | 'limited' | 'out-of-stock';
-  deliveryTime: string;
-  warranty: string}
-;
-export const marketplaceItems: MarketplaceItem[] = [{
 
     id: 'ai-server-cluster',
     title: 'AI-Powered Server Cluster',
