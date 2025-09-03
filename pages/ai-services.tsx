@@ -273,6 +273,7 @@ export default function AIServices() {
       pricing: '$18,000 - $60,000/month',
       delivery: '16-28 weeks',
       category: 'Synthetic Biology AI'
+    },
     {
       title: 'AI-Powered Fusion Energy Optimization',
       description: 'Intelligent fusion reactor control and plasma optimization',
@@ -381,10 +382,9 @@ export default function AIServices() {
       ],
       pricing: '$6,000 - $25,000/month',
       delivery: '8-14 weeks',
-      category: 'Legal AI'},
       category: 'Legal AI'
-},
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+    },
+
     {
       title: 'AI-Powered Energy Management System',
       description: 'Intelligent energy consumption optimization and renewable energy integration',
@@ -397,7 +397,7 @@ export default function AIServices() {
       category: 'Energy AI'},
       category: 'Energy AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Cybersecurity Threat Detection',
       description: 'Advanced threat detection and response system with behavioral analysis',
@@ -410,7 +410,7 @@ export default function AIServices() {
       category: 'Cybersecurity AI'},
       category: 'Cybersecurity AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Autonomous Vehicle Fleet Management',
       description: 'Intelligent fleet optimization and autonomous vehicle coordination system',
@@ -423,7 +423,7 @@ export default function AIServices() {
       category: 'Autonomous AI'},
       category: 'Autonomous AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Climate Change Modeling',
       description: 'Advanced climate modeling and environmental impact assessment platform',
@@ -436,7 +436,7 @@ export default function AIServices() {
       category: 'Climate AI'},
       category: 'Climate AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Quantum Machine Learning',
       description: 'Next-generation machine learning leveraging quantum computing for complex pattern recognition',
@@ -449,7 +449,7 @@ export default function AIServices() {
       category: 'Quantum ML AI'},
       category: 'Quantum ML AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Synthetic Media Generation',
       description: 'Advanced AI system for creating realistic synthetic media including deepfakes and virtual influencers',
@@ -462,7 +462,7 @@ export default function AIServices() {
       category: 'Synthetic Media AI'},
       category: 'Synthetic Media AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Brain-Computer Interface',
       description: 'Intelligent neural interface system for direct brain-computer communication and control',
@@ -475,7 +475,7 @@ export default function AIServices() {
       category: 'BCI AI'},
       category: 'BCI AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Autonomous Drone Swarm',
       description: 'Intelligent drone swarm coordination system for complex missions and operations',
@@ -488,7 +488,7 @@ export default function AIServices() {
       category: 'Drone Swarm AI'},
       category: 'Drone Swarm AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Personalized Medicine',
       description: 'Intelligent precision medicine platform with genomic analysis and treatment optimization',
@@ -501,7 +501,7 @@ export default function AIServices() {
       category: 'Precision Medicine AI'},
       category: 'Precision Medicine AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Space Debris Management',
       description: 'Intelligent space debris tracking and collision avoidance system',
@@ -514,7 +514,7 @@ export default function AIServices() {
       category: 'Space Management AI'},
       category: 'Space Management AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Fusion Energy Control',
       description: 'Intelligent fusion reactor control system for plasma optimization and energy production',
@@ -527,7 +527,7 @@ export default function AIServices() {
       category: 'Fusion Energy AI'},
       category: 'Fusion Energy AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Synthetic Biology Design',
       description: 'Intelligent biological system design and optimization platform',
@@ -540,7 +540,7 @@ export default function AIServices() {
       category: 'Synthetic Biology AI'},
       category: 'Synthetic Biology AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Neuromorphic Computing',
       description: 'Brain-inspired computing system with spiking neural networks and edge optimization',
@@ -553,7 +553,7 @@ export default function AIServices() {
       category: 'Neuromorphic AI'},
       category: 'Neuromorphic AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Autonomous Underwater Vehicles',
       description: 'Intelligent underwater vehicle coordination system for ocean exploration and research',
@@ -566,7 +566,7 @@ export default function AIServices() {
       category: 'Marine AI'},
       category: 'Marine AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Digital Twin of Earth',
       description: 'Comprehensive digital twin system for global environmental monitoring and prediction',
@@ -579,7 +579,7 @@ export default function AIServices() {
       category: 'Earth Digital Twin AI'},
       category: 'Earth Digital Twin AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Consciousness Simulation',
       description: 'Advanced AI system for consciousness research and artificial general intelligence development',
@@ -592,7 +592,7 @@ export default function AIServices() {
       category: 'Consciousness AI'},
       category: 'Consciousness AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Cybersecurity Threat Hunter',
       description: 'Advanced AI system for proactive threat detection and automated incident response',
@@ -605,7 +605,7 @@ export default function AIServices() {
       category: 'Cybersecurity AI'},
       category: 'Cybersecurity AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Financial Trading Algorithm',
       description: 'Intelligent algorithmic trading system with market prediction and risk management',
@@ -618,7 +618,7 @@ export default function AIServices() {
       category: 'FinTech AI'},
       category: 'FinTech AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Medical Diagnosis Assistant',
       description: 'Advanced medical AI for diagnostic support and treatment recommendations',
@@ -642,7 +642,7 @@ export default function AIServices() {
       category: 'Autonomous Vehicle AI'},
       category: 'Autonomous Vehicle AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Energy Grid Optimization',
       description: 'Intelligent energy distribution and consumption optimization system',
@@ -655,7 +655,7 @@ export default function AIServices() {
       category: 'Energy AI'},
       category: 'Energy AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Agricultural Intelligence',
       description: 'Smart farming system with crop monitoring and yield optimization',
@@ -668,7 +668,7 @@ export default function AIServices() {
       category: 'AgTech AI'},
       category: 'AgTech AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Smart City Management',
       description: 'Intelligent urban infrastructure management and optimization platform',
@@ -681,7 +681,7 @@ export default function AIServices() {
       category: 'Smart City AI'},
       category: 'Smart City AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Manufacturing Quality Control',
       description: 'Intelligent manufacturing process optimization and quality assurance',
@@ -694,7 +694,7 @@ export default function AIServices() {
       category: 'Manufacturing AI'},
       category: 'Manufacturing AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Personal Health Assistant',
       description: 'Intelligent personal health monitoring and wellness optimization',
@@ -707,7 +707,7 @@ export default function AIServices() {
       category: 'Personal Health AI'},
       category: 'Personal Health AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'Predictive Analytics Engine Pro',
       description: 'Advanced predictive modeling platform with real-time forecasting and business intelligence',
@@ -720,7 +720,7 @@ export default function AIServices() {
       category: 'Predictive AI'},
       category: 'Predictive AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'Voice AI Assistant Enterprise',
       description: 'Advanced conversational AI with natural language understanding and multi-modal interactions',
@@ -733,7 +733,7 @@ export default function AIServices() {
       category: 'Voice AI'},
       category: 'Voice AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Code Review Intelligence',
       description: 'Intelligent code analysis platform with automated reviews, security scanning, and optimization',
@@ -746,7 +746,7 @@ export default function AIServices() {
       category: 'Development AI'},
       category: 'Development AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'Smart Contract Analyzer AI',
       description: 'Blockchain smart contract analysis with security auditing and optimization recommendations',
@@ -759,7 +759,7 @@ export default function AIServices() {
       category: 'Blockchain AI'},
       category: 'Blockchain AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI Customer Behavior Predictor',
       description: 'Advanced customer analytics platform with behavioral prediction and personalization',
@@ -772,7 +772,7 @@ export default function AIServices() {
       category: 'Customer AI'},
       category: 'Customer AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered MLOps Platform',
       description: 'End-to-end machine learning operations with automated model deployment and monitoring',
@@ -785,7 +785,7 @@ export default function AIServices() {
       category: 'MLOps AI'},
       category: 'MLOps AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Predictive Maintenance System',
       description: 'Intelligent equipment maintenance prediction with IoT integration and cost optimization',
@@ -798,7 +798,7 @@ export default function AIServices() {
       category: 'Industrial AI'},
       category: 'Industrial AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Natural Language Processing Engine',
       description: 'Advanced NLP capabilities for text analysis, translation, and language understanding',
@@ -811,7 +811,7 @@ export default function AIServices() {
       category: 'NLP AI'},
       category: 'NLP AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Financial Risk Assessment Platform',
       description: 'Intelligent financial risk analysis with real-time monitoring and predictive modeling',
@@ -824,7 +824,7 @@ export default function AIServices() {
       category: 'FinTech AI'},
       category: 'FinTech AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Healthcare Diagnostics Assistant',
       description: 'Intelligent medical image analysis and diagnostic support with clinical decision assistance',
@@ -837,7 +837,7 @@ export default function AIServices() {
       category: 'HealthTech AI'},
       category: 'HealthTech AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Autonomous Quality Control System',
       description: 'Intelligent quality inspection and defect detection for manufacturing and production',
@@ -850,7 +850,7 @@ export default function AIServices() {
       category: 'Manufacturing AI'},
       category: 'Manufacturing AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Smart City Management Platform',
       description: 'Intelligent urban infrastructure management with IoT integration and optimization',
@@ -863,7 +863,7 @@ export default function AIServices() {
       category: 'Smart City AI'},
       category: 'Smart City AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Agricultural Intelligence System',
       description: 'Intelligent farming optimization with crop monitoring, yield prediction, and resource management',
@@ -876,7 +876,7 @@ export default function AIServices() {
       category: 'AgTech AI'},
       category: 'AgTech AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Autonomous Trading Algorithm',
       description: 'Intelligent algorithmic trading with market analysis and risk management',
@@ -889,7 +889,7 @@ export default function AIServices() {
       category: 'Trading AI'},
       category: 'Trading AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Cybersecurity Threat Intelligence',
       description: 'Advanced threat detection and response with behavioral analysis and automated defense',
@@ -902,7 +902,7 @@ export default function AIServices() {
       category: 'Cybersecurity AI'},
       category: 'Cybersecurity AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Personalization Engine',
       description: 'Intelligent personalization platform for content, products, and user experiences',
@@ -915,7 +915,7 @@ export default function AIServices() {
       category: 'Personalization AI'},
       category: 'Personalization AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Quantum Computing Simulator',
       description: 'Advanced quantum computing simulation and optimization platform for complex problem solving',
@@ -928,7 +928,7 @@ export default function AIServices() {
       category: 'Quantum AI'},
       category: 'Quantum AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Autonomous Vehicle Management',
       description: 'Intelligent fleet management and autonomous vehicle coordination system',
@@ -941,7 +941,7 @@ export default function AIServices() {
       category: 'Autonomous AI'},
       category: 'Autonomous AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Space Technology Platform',
       description: 'Advanced space mission planning and satellite management with AI optimization',
@@ -954,7 +954,7 @@ export default function AIServices() {
       category: 'Space AI'},
       category: 'Space AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Metaverse Development Platform',
       description: 'Comprehensive metaverse creation and management with AI-driven content generation',
@@ -967,7 +967,7 @@ export default function AIServices() {
       category: 'Metaverse AI'},
       category: 'Metaverse AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Blockchain Intelligence Platform',
       description: 'Advanced blockchain analysis and DeFi optimization with AI-driven insights',
@@ -980,7 +980,7 @@ export default function AIServices() {
       category: 'Blockchain AI'},
       category: 'Blockchain AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Digital Twin Platform',
       description: 'Comprehensive digital twin creation and management for physical assets and processes',
@@ -993,7 +993,7 @@ export default function AIServices() {
       category: 'Digital Twin AI'},
       category: 'Digital Twin AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Edge Computing Platform',
       description: 'Intelligent edge computing with AI processing and real-time decision making',
@@ -1006,7 +1006,7 @@ export default function AIServices() {
       category: 'Edge AI'},
       category: 'Edge AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Cybersecurity Intelligence Platform',
       description: 'Advanced threat detection and response with AI-driven security automation',
@@ -1019,7 +1019,7 @@ export default function AIServices() {
       category: 'Cybersecurity AI'},
       category: 'Cybersecurity AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Healthcare Diagnostics Platform',
       description: 'Advanced medical imaging analysis and diagnostic assistance with AI',
@@ -1032,7 +1032,7 @@ export default function AIServices() {
       category: 'Healthcare AI'},
       category: 'Healthcare AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Cybersecurity Threat Detection',
       description: 'Advanced threat detection and response system with real-time monitoring and automated incident response',
@@ -1045,7 +1045,7 @@ export default function AIServices() {
       category: 'Cybersecurity AI'},
       category: 'Cybersecurity AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Medical Diagnosis Assistant',
       description: 'Intelligent medical diagnosis support with image analysis and symptom correlation',
@@ -1069,7 +1069,7 @@ export default function AIServices() {
       category: 'Legal AI'},
       category: 'Legal AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Financial Risk Assessment',
       description: 'Intelligent financial risk analysis and credit scoring with predictive modeling',
@@ -1082,7 +1082,7 @@ export default function AIServices() {
       category: 'Financial AI'},
       category: 'Financial AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Environmental Monitoring',
       description: 'Intelligent environmental data analysis and climate prediction with IoT integration',
@@ -1095,7 +1095,7 @@ export default function AIServices() {
       category: 'Environmental AI'},
       category: 'Environmental AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Autonomous Vehicle Systems',
       description: 'Advanced autonomous vehicle technology with real-time decision making and safety systems',
@@ -1108,7 +1108,7 @@ export default function AIServices() {
       category: 'Autonomous Vehicle AI'},
       category: 'Autonomous Vehicle AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Satellite Data Analysis',
       description: 'Intelligent satellite imagery analysis for agriculture, urban planning, and disaster response',
@@ -1121,7 +1121,7 @@ export default function AIServices() {
       category: 'Satellite AI'},
       category: 'Satellite AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Energy Grid Optimization',
       description: 'Intelligent energy grid management with demand forecasting and renewable energy integration',
@@ -1134,7 +1134,7 @@ export default function AIServices() {
       category: 'Energy AI'},
       category: 'Energy AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Drug Discovery Platform',
       description: 'Intelligent drug discovery and development with molecular analysis and clinical trial optimization',
@@ -1147,7 +1147,7 @@ export default function AIServices() {
       category: 'Pharmaceutical AI'},
       category: 'Pharmaceutical AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Generative Design Platform',
       description: 'Intelligent design generation with AI-driven creativity and optimization for engineering and architecture',
@@ -1160,7 +1160,7 @@ export default function AIServices() {
       category: 'Generative AI'},
       category: 'Generative AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Autonomous Vehicle Systems',
       description: 'Advanced autonomous vehicle technology with computer vision, sensor fusion, and decision-making AI',
@@ -1173,7 +1173,7 @@ export default function AIServices() {
       category: 'Autonomous Systems AI'},
       category: 'Autonomous Systems AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Financial Trading Algorithm',
       description: 'Intelligent algorithmic trading with machine learning and real-time market analysis',
@@ -1186,7 +1186,7 @@ export default function AIServices() {
       category: 'Financial AI'},
       category: 'Financial AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Cybersecurity Threat Intelligence',
       description: 'Advanced threat detection and response with AI-driven security analytics and automated incident response',
@@ -1199,7 +1199,7 @@ export default function AIServices() {
       category: 'Cybersecurity AI'},
       category: 'Cybersecurity AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Smart City Management',
       description: 'Intelligent urban management with IoT integration, traffic optimization, and resource management',
@@ -1212,7 +1212,7 @@ export default function AIServices() {
       category: 'Smart City AI'},
       category: 'Smart City AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Personalized Medicine Platform',
       description: 'Precision medicine with AI-driven treatment recommendations and genomic analysis',
@@ -1236,7 +1236,7 @@ export default function AIServices() {
       category: 'Content Moderation AI'},
       category: 'Content Moderation AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Energy Trading Platform',
       description: 'Intelligent energy trading with predictive analytics and automated market participation',
@@ -1249,7 +1249,7 @@ export default function AIServices() {
       category: 'Energy AI'},
       category: 'Energy AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Legal Research Assistant',
       description: 'Intelligent legal research with case law analysis, document review, and legal precedent identification',
@@ -1262,7 +1262,7 @@ export default function AIServices() {
       category: 'Legal AI'},
       category: 'Legal AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Agricultural Intelligence',
       description: 'Smart agriculture with precision farming, crop monitoring, and yield optimization',
@@ -1275,7 +1275,7 @@ export default function AIServices() {
       category: 'Agricultural AI'},
       category: 'Agricultural AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Retail Personalization Engine',
       description: 'Intelligent retail personalization with customer behavior analysis and dynamic pricing',
@@ -1288,7 +1288,7 @@ export default function AIServices() {
       category: 'Retail AI'},
       category: 'Retail AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Manufacturing Quality Assurance',
       description: 'Intelligent manufacturing with predictive quality control and process optimization',
@@ -1301,7 +1301,7 @@ export default function AIServices() {
       category: 'Manufacturing AI'},
       category: 'Manufacturing AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Educational Assessment Platform',
       description: 'Intelligent educational assessment with adaptive testing and learning analytics',
@@ -1314,7 +1314,7 @@ export default function AIServices() {
       category: 'Educational AI'},
       category: 'Educational AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Insurance Underwriting',
       description: 'Intelligent insurance underwriting with risk assessment and automated policy generation',
@@ -1327,7 +1327,7 @@ export default function AIServices() {
       category: 'Insurance AI'},
       category: 'Insurance AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Logistics Optimization',
       description: 'Intelligent logistics with route optimization, demand forecasting, and supply chain management',
@@ -1340,7 +1340,7 @@ export default function AIServices() {
       category: 'Logistics AI'},
       category: 'Logistics AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Human Resources Analytics',
       description: 'Intelligent HR analytics with talent acquisition, performance management, and workforce optimization',
@@ -1353,7 +1353,7 @@ export default function AIServices() {
       category: 'HR AI'},
       category: 'HR AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Real Estate Valuation',
       description: 'Intelligent real estate valuation with market analysis and investment recommendations',
@@ -1366,7 +1366,7 @@ export default function AIServices() {
       category: 'Real Estate AI'},
       category: 'Real Estate AI'
 },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+
     {
       title: 'AI-Powered Environmental Monitoring',
       description: 'Intelligent environmental monitoring with pollution detection and climate change analysis',
@@ -1376,10 +1376,107 @@ export default function AIServices() {
       ],
       pricing: '$8,000 - $35,000/month',
       delivery: '8-16 weeks',
-      category: 'Environmental AI'}
-      category: 'Environmental AI'
-}
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+      category: 'Environmental AI'},
+    {
+      title: 'AI-Powered Large Language Model Integration',
+      description: 'Advanced LLM integration with custom fine-tuning, prompt engineering, and enterprise deployment',
+      icon: Brain,
+      features: [
+        'Custom LLM fine-tuning for domain-specific applications,Advanced prompt engineering and optimization,Enterprise-grade deployment and scaling,Multi-modal LLM integration (text, image, audio),Real-time inference and response optimization,Cost optimization and resource management,Integration with existing business systems,Compliance and security for enterprise use'
+      ],
+      pricing: '$10,000 - $100,000/month',
+      delivery: '8-16 weeks',
+      category: 'LLM AI'},
+    {
+      title: 'AI-Powered Multimodal Intelligence Platform',
+      description: 'Advanced multimodal AI combining vision, language, and audio processing for comprehensive understanding',
+      icon: Eye,
+      features: [
+        'Multimodal data fusion and analysis,Cross-modal learning and understanding,Real-time multimodal inference and processing,Advanced computer vision with natural language integration,Audio-visual content analysis and generation,Multimodal search and retrieval systems,Integration with IoT and sensor networks,Enterprise deployment and scaling'
+      ],
+      pricing: '$15,000 - $75,000/month',
+      delivery: '12-24 weeks',
+      category: 'Multimodal AI'},
+    {
+      title: 'AI-Powered Reinforcement Learning Platform',
+      description: 'Advanced reinforcement learning for autonomous decision-making and optimization in complex environments',
+      icon: Brain,
+      features: [
+        'Custom RL algorithm development and optimization,Multi-agent reinforcement learning systems,Real-time decision making and action optimization,Simulation environments for training and testing,Transfer learning and domain adaptation,Integration with robotics and autonomous systems,Performance monitoring and model improvement,Enterprise deployment and management'
+      ],
+      pricing: '$20,000 - $150,000/month',
+      delivery: '16-32 weeks',
+      category: 'Reinforcement Learning AI'},
+    {
+      title: 'AI-Powered Federated Learning Platform',
+      description: 'Privacy-preserving distributed machine learning with federated learning and edge computing',
+      icon: Network,
+      features: [
+        'Federated learning algorithm implementation and optimization,Privacy-preserving model training and aggregation,Edge computing integration and optimization,Distributed model deployment and management,Secure multi-party computation,Data privacy and compliance management,Real-time model updates and synchronization,Enterprise security and governance'
+      ],
+      pricing: '$25,000 - $200,000/month',
+      delivery: '20-40 weeks',
+      category: 'Federated Learning AI'},
+    {
+      title: 'AI-Powered Neuromorphic Computing Platform',
+      description: 'Brain-inspired computing with spiking neural networks and ultra-low power processing',
+      icon: Cpu,
+      features: [
+        'Spiking neural network implementation and optimization,Ultra-low power edge AI processing,Real-time pattern recognition and classification,Adaptive learning and plasticity algorithms,Hardware-software co-design for neuromorphic chips,Integration with IoT and sensor networks,Neuromorphic algorithm development and optimization,Performance benchmarking and optimization tools'
+      ],
+      pricing: '$30,000 - $300,000/month',
+      delivery: '24-48 weeks',
+      category: 'Neuromorphic AI'},
+    {
+      title: 'AI-Powered Quantum Machine Learning',
+      description: 'Next-generation machine learning leveraging quantum computing for complex optimization and pattern recognition',
+      icon: Cpu,
+      features: [
+        'Quantum machine learning algorithms and optimization,Hybrid classical-quantum computing integration,Complex pattern recognition and data analysis,Quantum advantage demonstration and benchmarking,Integration with quantum hardware and simulators,Algorithm development and optimization tools,Performance analytics and scalability assessment,Research collaboration and knowledge sharing'
+      ],
+      pricing: '$50,000 - $500,000/month',
+      delivery: '32-64 weeks',
+      category: 'Quantum ML AI'},
+    {
+      title: 'AI-Powered Synthetic Data Generation',
+      description: 'Advanced synthetic data generation for training AI models while preserving privacy and improving performance',
+      icon: Database,
+      features: [
+        'High-quality synthetic data generation and augmentation,Privacy-preserving data synthesis,Domain-specific synthetic data creation,Data quality assessment and validation,Integration with existing datasets and workflows,Compliance with data protection regulations,Real-time synthetic data generation,Model training optimization with synthetic data'
+      ],
+      pricing: '$8,000 - $50,000/month',
+      delivery: '8-16 weeks',
+      category: 'Synthetic Data AI'},
+    {
+      title: 'AI-Powered Explainable AI Platform',
+      description: 'Comprehensive explainable AI solutions for model interpretability and transparency',
+      icon: Eye,
+      features: [
+        'Model interpretability and explanation generation,Feature importance analysis and visualization,Decision tree and rule extraction,Adversarial example detection and analysis,Model bias detection and mitigation,Compliance with AI regulations and standards,Real-time explanation generation,Integration with existing AI models and systems'
+      ],
+      pricing: '$12,000 - $60,000/month',
+      delivery: '10-20 weeks',
+      category: 'Explainable AI'},
+    {
+      title: 'AI-Powered AutoML Platform',
+      description: 'Automated machine learning with end-to-end model development and deployment automation',
+      icon: Settings,
+      features: [
+        'Automated feature engineering and selection,Hyperparameter optimization and tuning,Model architecture search and optimization,Automated model selection and ensemble methods,End-to-end pipeline automation,Model deployment and monitoring automation,Performance optimization and cost reduction,Integration with cloud platforms and data sources'
+      ],
+      pricing: '$15,000 - $75,000/month',
+      delivery: '12-24 weeks',
+      category: 'AutoML AI'},
+    {
+      title: 'AI-Powered Edge AI Platform',
+      description: 'Intelligent edge computing with AI processing and real-time decision making at the edge',
+      icon: Cpu,
+      features: [
+        'Distributed AI model deployment and management,Real-time data processing and analysis,Edge-to-cloud synchronization and optimization,Low-latency inference and decision making,Resource optimization and load balancing,Integration with IoT devices and sensors,Edge AI model optimization and compression,Autonomous edge AI operation and management'
+      ],
+      pricing: '$10,000 - $50,000/month',
+      delivery: '10-20 weeks',
+      category: 'Edge AI'}
   ]
   const aiTechnologies = [
   {
@@ -1664,4 +1761,4 @@ export default function AIServices() {
   )}
   )
 }
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+

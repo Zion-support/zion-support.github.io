@@ -1245,7 +1245,107 @@ export default function ITServices() {
       ],
       pricing: '$40,000 - $400,000/month',
       delivery: '24-48 weeks',
-      category: 'Autonomous Systems Services'}
+      category: 'Autonomous Systems Services'},
+    {
+      title: 'AI-Powered Infrastructure Orchestration',
+      description: 'Intelligent infrastructure management with AI-driven automation, predictive scaling, and self-healing capabilities',
+      icon: Brain,
+      features: [
+        'AI-powered infrastructure monitoring and optimization,Predictive scaling and resource allocation,Automated incident detection and resolution,Self-healing infrastructure with automated recovery,Intelligent cost optimization and resource management,Performance prediction and capacity planning,Integration with multi-cloud environments,Continuous learning and improvement algorithms'
+      ],
+      pricing: '$15,000 - $100,000/month',
+      delivery: '12-24 weeks',
+      category: 'AI Infrastructure Services'},
+    {
+      title: 'Quantum-Safe Network Security',
+      description: 'Future-proof network security with post-quantum cryptography and quantum-resistant protocols',
+      icon: Lock,
+      features: [
+        'Post-quantum cryptographic protocol implementation,Quantum-resistant network security architecture,Hybrid classical-quantum security systems,Quantum key distribution (QKD) integration,Network security migration planning,Quantum-safe certificate management,Compliance with quantum security standards,Integration with existing security infrastructure'
+      ],
+      pricing: '$25,000 - $200,000/month',
+      delivery: '16-32 weeks',
+      category: 'Quantum Security Services'},
+    {
+      title: 'Edge AI Computing Platform',
+      description: 'Distributed edge AI infrastructure with real-time inference, model optimization, and autonomous decision making',
+      icon: Cpu,
+      features: [
+        'Edge AI model deployment and optimization,Real-time inference and decision making,Distributed AI training and model updates,Edge-to-cloud AI synchronization,Low-latency AI processing and response,Edge AI security and privacy protection,Autonomous edge AI operation and management,Integration with IoT and sensor networks'
+      ],
+      pricing: '$20,000 - $150,000/month',
+      delivery: '16-32 weeks',
+      category: 'Edge AI Services'},
+    {
+      title: 'Blockchain Infrastructure & Web3 Services',
+      description: 'Comprehensive blockchain infrastructure with DeFi integration, NFT platforms, and Web3 applications',
+      icon: Network,
+      features: [
+        'Blockchain network deployment and management,Smart contract development and auditing,DeFi protocol integration and optimization,NFT marketplace and platform development,Cross-chain interoperability solutions,Web3 application development,Blockchain security and compliance,Integration with traditional systems'
+      ],
+      pricing: '$30,000 - $300,000/month',
+      delivery: '20-40 weeks',
+      category: 'Blockchain Infrastructure Services'},
+    {
+      title: 'Neuromorphic Edge Computing',
+      description: 'Brain-inspired edge computing with spiking neural networks and ultra-low power processing',
+      icon: Brain,
+      features: [
+        'Neuromorphic chip integration and optimization,Spiking neural network deployment,Ultra-low power edge AI processing,Real-time pattern recognition and classification,Adaptive learning and plasticity algorithms,Edge-to-cloud neuromorphic synchronization,Integration with IoT and sensor networks,Performance optimization and benchmarking'
+      ],
+      pricing: '$40,000 - $400,000/month',
+      delivery: '24-48 weeks',
+      category: 'Neuromorphic Edge Services'},
+    {
+      title: 'AI-Powered Cybersecurity Operations',
+      description: 'Advanced AI-driven cybersecurity with autonomous threat detection, response, and prevention',
+      icon: Shield,
+      features: [
+        'AI-powered threat detection and analysis,Autonomous incident response and remediation,Behavioral analysis and anomaly detection,Zero-day threat identification and protection,AI-driven security orchestration,Threat intelligence and attribution,Automated security policy enforcement,Continuous security learning and adaptation'
+      ],
+      pricing: '$25,000 - $200,000/month',
+      delivery: '16-32 weeks',
+      category: 'AI Cybersecurity Services'},
+    {
+      title: 'Quantum-Enhanced Data Analytics',
+      description: 'Next-generation data analytics leveraging quantum computing for complex optimization and pattern recognition',
+      icon: Cpu,
+      features: [
+        'Quantum machine learning algorithms and optimization,Hybrid classical-quantum data processing,Complex pattern recognition and analysis,Quantum advantage demonstration and benchmarking,Integration with quantum hardware and simulators,Quantum algorithm development and optimization,Performance analytics and scalability assessment,Research collaboration and knowledge sharing'
+      ],
+      pricing: '$50,000 - $500,000/month',
+      delivery: '32-64 weeks',
+      category: 'Quantum Analytics Services'},
+    {
+      title: 'Autonomous Cloud Management',
+      description: 'Self-managing cloud infrastructure with AI-driven optimization, cost management, and performance tuning',
+      icon: Cloud,
+      features: [
+        'AI-powered cloud resource optimization,Automated cost management and FinOps,Self-healing cloud infrastructure,Intelligent workload placement and scaling,Automated security and compliance management,Predictive capacity planning and scaling,Multi-cloud orchestration and management,Continuous optimization and learning'
+      ],
+      pricing: '$20,000 - $150,000/month',
+      delivery: '16-32 weeks',
+      category: 'Autonomous Cloud Services'},
+    {
+      title: 'AI-Powered Network Intelligence',
+      description: 'Intelligent network management with AI-driven optimization, security, and performance enhancement',
+      icon: Network,
+      features: [
+        'AI-powered network optimization and routing,Intelligent traffic analysis and management,Automated network security and threat detection,Predictive network maintenance and optimization,Self-healing network infrastructure,Network performance prediction and optimization,Integration with SD-WAN and 5G networks,Continuous learning and adaptation'
+      ],
+      pricing: '$15,000 - $100,000/month',
+      delivery: '12-24 weeks',
+      category: 'AI Network Services'},
+    {
+      title: 'Federated Learning Infrastructure',
+      description: 'Privacy-preserving distributed machine learning with federated learning and secure multi-party computation',
+      icon: Network,
+      features: [
+        'Federated learning platform implementation,Privacy-preserving model training and aggregation,Secure multi-party computation,Distributed model deployment and management,Edge computing integration and optimization,Data privacy and compliance management,Real-time model updates and synchronization,Enterprise security and governance'
+      ],
+      pricing: '$30,000 - $250,000/month',
+      delivery: '20-40 weeks',
+      category: 'Federated Learning Services'}
   ]
 
   const technologies = [
