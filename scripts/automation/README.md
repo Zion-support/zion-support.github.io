@@ -1,305 +1,341 @@
-# PM2 Error Prevention & Code Quality Automation
+# 🧠 Enhanced Intelligent PM2 Automation Systems
 
-This directory contains automated scripts that continuously monitor and fix common code quality issues to prevent errors from accumulating in your project.
+This directory contains advanced, AI-powered automation systems that work together to provide intelligent development, deployment, and repository management capabilities.
+
+## 🚀 New Intelligent Systems
+
+### 1. **Intelligent Repository Manager** (`intelligent-repository-manager.cjs`)
+Advanced automation for repository management, PR analysis, and intelligent merging.
+
+**Features:**
+- 🔄 **Smart Auto-Merge**: Automatically analyzes and merges pull requests based on complexity and risk assessment
+- 🚨 **Conflict Resolution**: Intelligent conflict detection and automatic resolution strategies
+- 📊 **Branch Analysis**: Analyzes branch complexity, file changes, and merge readiness
+- 🎯 **Priority-Based Processing**: Processes branches based on priority and risk level
+- 🧹 **Automatic Cleanup**: Removes merged branches and maintains repository hygiene
+
+**Configuration:** `config/repo-manager.config.json`
+
+### 2. **Advanced Development Intelligence** (`advanced-development-intelligence.cjs`)
+AI-powered code analysis, pattern recognition, and development optimization.
+
+**Features:**
+- 🔍 **Pattern Recognition**: Detects code patterns, anti-patterns, and best practices
+- 📊 **Complexity Analysis**: Calculates cyclomatic complexity and identifies problematic code
+- 🚨 **Issue Prediction**: Predicts potential issues before they become problems
+- 💡 **Optimization Suggestions**: Provides actionable recommendations for code improvement
+- 📈 **Trend Analysis**: Tracks development trends and code quality metrics over time
+
+**Configuration:** `config/dev-intelligence.config.json`
+
+### 3. **Intelligent Deployment Orchestrator** (`intelligent-deployment-orchestrator.cjs`)
+Advanced deployment management with automatic rollbacks, health checks, and pipeline optimization.
+
+**Features:**
+- 🚀 **Multiple Deployment Strategies**: Rolling, Blue-Green, Canary, and Recreate deployments
+- 🏥 **Health Monitoring**: Continuous health checks with automatic rollback on failure
+- 🔄 **Auto-Rollback**: Intelligent rollback strategies when deployments fail
+- 📊 **Performance Metrics**: Tracks deployment success rates and performance
+- 🎯 **Environment Management**: Manages multiple environments with different configurations
+
+**Configuration:** `config/deployment-orchestrator.config.json`
+
+### 4. **Master Intelligent Automation Controller** (`master-intelligent-automation-controller.cjs`)
+Orchestrates all intelligent automation systems and provides unified control.
+
+**Features:**
+- 🎯 **System Orchestration**: Coordinates all automation systems
+- 📊 **Cross-System Optimization**: Identifies and executes optimization opportunities across systems
+- 🏥 **Health Monitoring**: Monitors the health of all automation systems
+- 📈 **Unified Reporting**: Generates comprehensive reports from all systems
+- 🔄 **Automation Queue Management**: Manages and prioritizes automation tasks
+
+**Configuration:** `config/master-controller.config.json`
 
 ## 🚀 Quick Start
 
-### 1. Start All Automation Services
-
+### 1. **Start the Complete System**
 ```bash
-# Start all automation services with PM2
-pm2 start ecosystem-error-prevention.config.cjs
+# Make the startup script executable
+chmod +x start-intelligent-pm2-automation.sh
 
-# View running services
-pm2 list
+# Start the intelligent automation system
+./start-intelligent-pm2-automation.sh
+```
+
+### 2. **Use Management Scripts**
+```bash
+# Start the system
+./scripts/intelligent-pm2-start.sh
+
+# Check status
+./scripts/intelligent-pm2-status.sh
 
 # View logs
-pm2 logs
+./scripts/intelligent-pm2-logs.sh
+
+# Monitor processes
+./scripts/intelligent-pm2-monitor.sh
+
+# Stop the system
+./scripts/intelligent-pm2-stop.sh
+
+# Restart the system
+./scripts/intelligent-pm2-restart.sh
 ```
 
-### 2. Individual Service Management
-
+### 3. **Manual System Control**
 ```bash
-# Start specific services
-pm2 start scripts/automation/pm2-error-prevention.cjs --name error-prevention
-pm2 start scripts/automation/code-quality-monitor.cjs --name code-quality-monitor
-pm2 start scripts/automation/auto-fix-scheduler.cjs --name auto-fix-scheduler
+# Start individual systems
+node scripts/automation/intelligent-repository-manager.cjs
+node scripts/automation/advanced-development-intelligence.cjs
+node scripts/automation/intelligent-deployment-orchestrator.cjs
+node scripts/automation/master-intelligent-automation-controller.cjs
 
-# Stop services
-pm2 stop error-prevention
-pm2 stop code-quality-monitor
-pm2 stop auto-fix-scheduler
-
-# Restart services
-pm2 restart error-prevention
-
-# Delete services
-pm2 delete error-prevention
+# Start PM2 ecosystem
+pm2 start ecosystem.enhanced.cjs
 ```
 
-## 📋 Available Automation Scripts
+## 📊 System Architecture
 
-### 1. PM2 Error Prevention (`pm2-error-prevention.cjs`)
+```
+┌─────────────────────────────────────────────────────────────┐
+│                Master Intelligent Controller                │
+│                     (Orchestrator)                         │
+└─────────────────────┬───────────────────────────────────────┘
+                      │
+    ┌─────────────────┼─────────────────┐
+    │                 │                 │
+┌───▼────┐    ┌──────▼──────┐    ┌─────▼─────┐
+│ Repo   │    │ Development │    │Deployment │
+│Manager │    │Intelligence │    │Orchestrator│
+└────────┘    └─────────────┘    └───────────┘
+    │                 │                 │
+    └─────────────────┼─────────────────┘
+                      │
+              ┌───────▼───────┐
+              │   PM2 Core    │
+              │   Ecosystem   │
+              └───────────────┘
+```
 
-- **Purpose**: Continuously monitors for TypeScript errors and automatically fixes them
-- **Frequency**: Checks every 5 minutes
-- **Auto-fix**: Triggers when error count exceeds 100
-- **Features**:
-  - Real-time error detection
-  - Automatic error fixing
-  - Import issue resolution
-  - Syntax error correction
+## 🔧 Configuration
 
-### 2. Code Quality Monitor (`code-quality-monitor.cjs`)
+Each system has its own configuration file in the `config/` directory:
 
-- **Purpose**: Monitors overall code quality and generates reports
-- **Frequency**: Checks every 10 minutes
-- **Thresholds**:
-  - Max errors: 50
-  - Max warnings: 100
-  - Max files with issues: 20
-- **Features**:
-  - TypeScript compilation monitoring
-  - ESLint quality checks
-  - Import quality analysis
-  - Syntax quality validation
-  - Quality score calculation
-  - Automatic fix triggering
+- **Repository Manager**: `config/repo-manager.config.json`
+- **Development Intelligence**: `config/dev-intelligence.config.json`
+- **Deployment Orchestrator**: `config/deployment-orchestrator.config.json`
+- **Master Controller**: `config/master-controller.config.json`
 
-### 3. Auto-Fix Scheduler (`auto-fix-scheduler.cjs`)
+### Key Configuration Options
 
-- **Purpose**: Runs scheduled maintenance and cleanup tasks
-- **Schedules**:
-  - **Daily**: 2 AM - Quick fixes (imports, syntax)
-  - **Weekly**: Sunday 2 AM - Comprehensive fixes
-  - **Monthly**: 1st of month 2 AM - Deep cleanup
-- **Features**:
-  - Scheduled maintenance
-  - Progressive fix levels
-  - Fix history tracking
-  - Project health reports
+#### Repository Manager
+```json
+{
+  "autoMergeEnabled": true,
+  "conflictResolutionEnabled": true,
+  "mergeStrategy": "squash",
+  "conflictThreshold": 3,
+  "mergeBatchSize": 5
+}
+```
 
-## 🔧 Manual Error Fixing
+#### Development Intelligence
+```json
+{
+  "codeAnalysisEnabled": true,
+  "patternRecognitionEnabled": true,
+  "issuePredictionEnabled": true,
+  "analysisInterval": 600000
+}
+```
 
-### Run Comprehensive Error Fixer
+#### Deployment Orchestrator
+```json
+{
+  "autoDeployEnabled": true,
+  "healthCheckEnabled": true,
+  "autoRollbackEnabled": true,
+  "healthThreshold": 0.95
+}
+```
 
+## 📈 Monitoring and Reports
+
+### Log Files
+All systems generate detailed logs in the `logs/` directory:
+- `master-controller.log` - Master controller logs
+- `intelligent-repository-manager.log` - Repository manager logs
+- `advanced-development-intelligence.log` - Development intelligence logs
+- `intelligent-deployment-orchestrator.log` - Deployment orchestrator logs
+
+### Reports
+Systems generate comprehensive reports:
+- `master-automation-report.json` - Master system report
+- `repository-manager-report.json` - Repository management report
+- `development-intelligence-report.json` - Code analysis report
+- `deployment-report.json` - Deployment performance report
+
+### Health Monitoring
 ```bash
-node scripts/automation/comprehensive-error-fixer.cjs
+# Check system health
+./scripts/intelligent-pm2-status.sh
+
+# Monitor in real-time
+./scripts/intelligent-pm2-monitor.sh
+
+# View health metrics
+pm2 monit
 ```
 
-### Run Specific Fixers
+## 🎯 Use Cases
 
-```bash
-# Fix any type annotations
-node scripts/automation/fix-any-types.cjs
+### 1. **Automated Repository Management**
+- Automatically merge simple, low-risk pull requests
+- Detect and resolve merge conflicts
+- Clean up merged branches
+- Maintain repository hygiene
 
-# Fix remaining errors
-node scripts/automation/fix-remaining-errors.cjs
+### 2. **Intelligent Code Analysis**
+- Identify code quality issues before they become problems
+- Detect anti-patterns and suggest improvements
+- Track code complexity trends
+- Provide optimization recommendations
 
-# Fix final patterns
-node scripts/automation/fix-final-errors.cjs
-```
+### 3. **Advanced Deployment Management**
+- Deploy with confidence using multiple strategies
+- Automatic rollback on failure
+- Health monitoring and alerting
+- Performance optimization
 
-## 📊 Monitoring & Logs
+### 4. **Cross-System Optimization**
+- Identify optimization opportunities across all systems
+- Coordinate improvements for maximum impact
+- Generate actionable insights and recommendations
 
-### View Real-time Logs
-
-```bash
-# View all automation logs
-pm2 logs
-
-# View specific service logs
-pm2 logs error-prevention
-pm2 logs code-quality-monitor
-pm2 logs auto-fix-scheduler
-
-# Follow logs in real-time
-pm2 logs --follow
-```
-
-### Generated Reports
-
-The automation scripts generate various reports in the `logs/` directory:
-
-- `quality-report.json` - Current code quality metrics
-- `project-health-report.json` - Monthly project health summary
-- `fix-history.json` - History of all automated fixes
-- `typescript-errors.log` - TypeScript error logs
-- `eslint-errors.log` - ESLint error logs
-
-### Quality Metrics
-
-- **Quality Score**: 0-100 based on error/warning counts
-- **Error Count**: Number of TypeScript compilation errors
-- **Warning Count**: Number of ESLint warnings/errors
-- **Files with Issues**: Number of files containing problems
-- **Total Files**: Total source files in the project
-
-## ⚙️ Configuration
-
-### Environment Variables
-
-```bash
-# Set check intervals (in milliseconds)
-export AUTOMATION_INTERVAL=900000  # 15 minutes
-
-# Enable/disable auto-fixing
-export PM2_ERROR_PREVENTION=true
-export PM2_CODE_QUALITY=true
-export PM2_AUTO_FIX=true
-```
-
-### Thresholds
-
-Modify thresholds in the respective scripts:
-
-```javascript
-// In code-quality-monitor.cjs
-this.thresholds = {
-  maxErrors: 50, // Trigger auto-fix when errors exceed this
-  maxWarnings: 100, // Trigger auto-fix when warnings exceed this
-  maxFilesWithIssues: 20, // Trigger auto-fix when files with issues exceed this
-};
-
-// In pm2-error-prevention.cjs
-this.config = {
-  checkInterval: 5 * 60 * 1000, // 5 minutes
-  maxErrors: 100, // Trigger auto-fix when errors exceed this
-  autoFix: true, // Enable automatic fixing
-  backupBeforeFix: true, // Create backups before fixing
-};
-```
-
-## 🚨 Troubleshooting
+## 🔍 Troubleshooting
 
 ### Common Issues
 
-1. **Service Not Starting**
-
-   ```bash
-   # Check PM2 status
-   pm2 list
-
-   # Check logs for errors
-   pm2 logs error-prevention
-
-   # Restart service
-   pm2 restart error-prevention
-   ```
-
-2. **Auto-fix Not Working**
-
-   ```bash
-   # Check if scripts exist
-   ls -la scripts/automation/
-
-   # Test script manually
-   node scripts/automation/comprehensive-error-fixer.cjs
-
-   # Check permissions
-   chmod +x scripts/automation/*.cjs
-   ```
-
-3. **High Memory Usage**
-
-   ```bash
-   # Check memory usage
-   pm2 monit
-
-   # Restart services to free memory
-   pm2 restart all
-
-   # Adjust memory limits in ecosystem config
-   ```
-
-### Reset Automation
-
+#### 1. **System Won't Start**
 ```bash
-# Stop all automation services
-pm2 stop all
+# Check prerequisites
+node --version
+npm --version
+pm2 --version
 
-# Delete all automation services
-pm2 delete all
-
-# Clear PM2 logs
-pm2 flush
-
-# Restart from scratch
-pm2 start ecosystem-error-prevention.config.cjs
+# Check logs
+tail -f logs/master-controller.log
 ```
 
-## 📈 Performance Impact
+#### 2. **PM2 Processes Not Running**
+```bash
+# Check PM2 status
+pm2 list
 
-### Resource Usage
+# Restart PM2
+pm2 restart all
 
-- **CPU**: Minimal impact (checks run every 5-10 minutes)
-- **Memory**: ~50-100MB per service
-- **Disk I/O**: Low (only when errors are detected)
+# Check PM2 logs
+pm2 logs
+```
 
-### Optimization Tips
+#### 3. **Configuration Issues**
+```bash
+# Validate configuration files
+node -e "console.log(JSON.parse(require('fs').readFileSync('scripts/automation/config/master-controller.config.json')))"
+```
 
-1. **Adjust check intervals** for less critical environments
-2. **Disable auto-fix** in production if manual review is preferred
-3. **Set appropriate thresholds** based on your project size
-4. **Monitor logs** to ensure automation is working efficiently
+### Debug Mode
+Enable debug logging by setting environment variables:
+```bash
+export DEBUG=true
+export LOG_LEVEL=debug
+./start-intelligent-pm2-automation.sh
+```
 
-## 🔒 Security Considerations
+## 🚀 Advanced Usage
 
-- Automation scripts run with the same permissions as the PM2 process
-- Scripts only modify source code files in the `src/` directory
-- All changes are logged for audit purposes
-- Consider running in a development environment only
-
-## 📚 Integration with Existing PM2 Setup
-
-These automation scripts integrate with your existing PM2 ecosystem:
-
+### Custom Automation Scripts
 ```javascript
-// Add to your existing ecosystem.config.cjs
-module.exports = {
-  apps: [
-    // ... your existing apps ...
+const MasterController = require('./master-intelligent-automation-controller.cjs');
 
-    // Error Prevention Automation
-    {
-      name: 'error-prevention',
-      script: 'scripts/automation/pm2-error-prevention.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-    },
+const controller = new MasterController();
 
-    // Code Quality Monitor
-    {
-      name: 'code-quality-monitor',
-      script: 'scripts/automation/code-quality-monitor.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-    },
-  ],
-};
+// Execute custom automation
+await controller.executeAutomation('repository_merge', {
+  priority: 'high',
+  options: { force: true }
+});
+
+// Get system insights
+const insights = await controller.gatherSystemInsights();
 ```
 
-## 🎯 Best Practices
+### Integration with CI/CD
+```yaml
+# GitHub Actions example
+- name: Start Intelligent Automation
+  run: |
+    chmod +x start-intelligent-pm2-automation.sh
+    ./start-intelligent-pm2-automation.sh
 
-1. **Start Small**: Begin with error prevention, then add quality monitoring
-2. **Review Logs**: Regularly check automation logs to ensure proper operation
-3. **Adjust Thresholds**: Fine-tune thresholds based on your project's needs
-4. **Backup Code**: Ensure your code is committed before enabling auto-fix
-5. **Monitor Performance**: Watch for any performance impact on your development workflow
+- name: Wait for Systems
+  run: |
+    sleep 30
+    ./scripts/intelligent-pm2-status.sh
+```
 
-## 📞 Support
+## 📚 API Reference
 
-If you encounter issues with the automation scripts:
+### Master Controller Methods
+- `start()` - Start all systems
+- `stop()` - Stop all systems
+- `executeAutomation(type, options)` - Execute automation
+- `getSystemStatus()` - Get system health status
+- `generateMasterReport()` - Generate comprehensive report
 
-1. Check the logs: `pm2 logs`
-2. Test scripts manually: `node scripts/automation/[script-name].cjs`
-3. Review the configuration in the ecosystem file
-4. Ensure all dependencies are installed: `npm install`
+### Repository Manager Methods
+- `intelligentMerge()` - Execute intelligent merge process
+- `resolveConflicts()` - Resolve merge conflicts
+- `analyzePullRequests()` - Analyze open PRs
+- `generateReport()` - Generate repository report
+
+### Development Intelligence Methods
+- `analyzeCodebase()` - Analyze entire codebase
+- `predictPotentialIssues()` - Predict future issues
+- `generateOptimizationSuggestions()` - Generate suggestions
+- `analyzeDevelopmentTrends()` - Analyze trends
+
+### Deployment Orchestrator Methods
+- `startDeployment(environment, strategy)` - Start deployment
+- `performHealthChecks()` - Execute health checks
+- `triggerRollback()` - Trigger automatic rollback
+- `generateDeploymentReport()` - Generate deployment report
+
+## 🤝 Contributing
+
+To add new automation systems:
+
+1. Create the system file in `scripts/automation/`
+2. Add configuration in `config/`
+3. Update the master controller to include the new system
+4. Add the system to the enhanced ecosystem configuration
+5. Update this README with documentation
+
+## 📄 License
+
+This project is part of the Zion Tech Group automation ecosystem.
+
+## 🆘 Support
+
+For issues and questions:
+1. Check the logs in the `logs/` directory
+2. Review the configuration files
+3. Check system status with management scripts
+4. Review this documentation
 
 ---
 
-**Note**: These automation scripts are designed to help maintain code quality but should not replace proper code review practices. Always review automated changes before committing them to your main branch.
+**🧠 The future of intelligent automation is here!**

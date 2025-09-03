@@ -1,9 +1,9 @@
+<<<<<<< HEAD
 import React from 'react';
 import { SEO } from '../components/SEO';
 
 const Terms: React.FC = () => {
-  return (
-    <>
+  return(<>
       <SEO title="Terms - Zion Tech Group" />
       <div className="min-h-screen bg-white py-20">
         <div className="max-w-4xl mx-auto px-4">
@@ -16,3 +16,26 @@ const Terms: React.FC = () => {
 };
 
 export default Terms;
+=======
+import React from "react"
+import Link from "next/link"
+import { ArrowRight, Phone, Mail } from "lucide-react"
+  );
+export default function Terms() {
+  return (
+    <div className="min-h-screen bg-white">
+      <div className="max-w-4xl mx-auto px-6 py-16">
+        <h1 className="text-4xl font-bold text-gray-900 mb-8">Terms</h1>
+        <p className="text-lg text-gray-600 mb-8">
+          This is a placeholder component for terms.
+        </p>
+        <div className="flex flex-col sm: flex-row gap-4">
+          <Link href="/contact" className="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors inline-flex items-center">
+            Contact Us <ArrowRight className="w-4 h-4 ml-2"  />
+          </Link>
+          <Link href="/" className="px-6 py-3 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors inline-flex items-center">
+            Go Home <Phone className="w-4 h-4 ml-2"  />
+          </Link>
+        </div>
+  ),
+>>>>>>> main

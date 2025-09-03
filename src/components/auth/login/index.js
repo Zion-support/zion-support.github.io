@@ -1,1 +1,1 @@
-" ";
+export { LoginForm as LoginContent } from './LoginForm.jsx';
