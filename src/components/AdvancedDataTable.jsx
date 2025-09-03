@@ -1,4 +1,4 @@
-import { useState, useMemo, useCallback } from 'reactimport { motion, AnimatePresence } from framer-motionimport { ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown } from lucide-reactimport { useVirtualScroll } from ../hooks/useVirtualScroll.jsxexport const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = , onRowClick, onSelectionChange, onExport }) => {const { trackEvent } = useAnalytics({        enableTracking: true,enableUserBehaviorTracking: true})// State managementconst [searchQuery, setSearchQuery] = useState();
+import { useState, useMemo, useCallback  } from 'reactimport { motion, AnimatePresence } from framer-motionimport { ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown } from lucide-reactimport { useVirtualScroll } from ../hooks/useVirtualScroll.jsxexport const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = , onRowClick, onSelectionChange, onExport }) => {const { trackEvent } = useAnalytics({        enableTracking: true,enableUserBehaviorTracking: true})// State managementconst [searchQuery, setSearchQuery] = useState();
     const [sortConfig, setSortConfig] = useState(null);
     const [filters, setFilters] = useState([]);
     const [selectedItems, setSelectedItems] = useState(new Set());
@@ -20,7 +20,7 @@ import { useState, useMemo, useCallback } from 'reactimport { motion, AnimatePre
                 switch (filter.operator) {}
 case contains: any;
                         return value.includes(filterValue)case equals: any;
-                        return value === filterValuecase starts_with': any;'
+                        return value === filterValuecase starts_with';: any;'
                         return value.startsWith(filterValue)case ends_with': any;'
                         return value.endsWith(filterValue)case regex': any;'
                         try {}

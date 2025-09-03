@@ -1,8 +1,8 @@
-import { render, screen } from '@testing-library/reactimport { BrowserRouter } from react-router-domimport App from ../App// Mock the pages to avoid complex dependenciesjest.mock(../pages/Index, () => {}return function MockIndex() {}return <div data-testid=index-page>Index Page</div>
+import { render, screen  } from '@testing-library/reactimport { BrowserRouter } from react-router-domimport App from ../App// Mock the pages to avoid complex dependenciesjest.mock(../pages/Index, () => {}return function MockIndex() {}return <div data-testid=index-page>Index Page</div>
   }
 })jest.mock(../pages/About, () => {}
   return function MockAbout() {}
-'''''
+'''
     return <div data-testid='about-page'>About Page</div>
   }
 })jest.mock(../pages/Contact', () => {}'

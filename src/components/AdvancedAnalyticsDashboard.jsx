@@ -11,10 +11,10 @@ import React, { useState } from 'react'import { motion } from framer-motionimpor
   ArrowUpRight,
   ArrowDownRight,;
   Shield,'Brain,'Rocket} from lucide-react'import { Card, CardContent, CardHeader, CardTitle } from ./ui/card;'
-import { Button  } from './ui/button;import { Badge  } from ./ui/badgeconst AdvancedAnalyticsDashboard = () => {}const [timeRange, setTimeRange] = useState(30d);const [selectedMetric, setSelectedMetric] = useState(overview);
+import { Button   } from './ui/button;import { Badge  } from ./ui/badgeconst AdvancedAnalyticsDashboard = () => {}const [timeRange, setTimeRange] = useState(30d);const [selectedMetric, setSelectedMetric] = useState(overview);
   // Mock data - in real app this would come from API;
   const metrics = []{}
-title: Total Revenue,'value: $2.4M','change: 12.5,'changeType: increase',''
+title: Total Revenue,';value: $2.4M','change: 12.5,'changeType: increase',''
       icon: <DollarSign className='w-6 h-6' />,''color: from-green-500 to-emerald-600'},'
     {}
 title: Active Clients',value: 1,247',

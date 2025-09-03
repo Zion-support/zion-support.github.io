@@ -1,4 +1,4 @@
-import { motion     } from 'framer-motionimport { CheckCircle, TrendingUp, Users, DollarSign     } from lucide-reactinterface CaseStudy {id: string title: string description: string industry: string results: { metric: string value: string icon: React.ReactNode}[];technologies: string[]'
+import { motion      } from 'framer-motionimport { CheckCircle, TrendingUp, Users, DollarSign     } from lucide-reactinterface CaseStudy {id: string title: string description: string industry: string results: { metric: string value: string icon: React.ReactNode}[];technologies: string[]';
   duration: string}
 const caseStudies: CaseStudy[] = [{ id: 1,
     title: 'AI-Powered Customer Service Automation',

@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'reactimport { motion, AnimatePresence } from framer-motionimport { Wallet, Smartphone, Coins, Image, TrendingUp, BarChart3, Plus, Send, Download, Loader2 } from lucide-reactexport const BlockchainWeb3Dashboard = ({ className = }) => {const { trackEvent } = useAnalytics({        enableTracking: true,'
+import { useState, useCallback  } from 'reactimport { motion, AnimatePresence } from framer-motionimport { Wallet, Smartphone, Coins, Image, TrendingUp, BarChart3, Plus, Send, Download, Loader2 } from lucide-reactexport const BlockchainWeb3Dashboard = ({ className = }) => {const { trackEvent } = useAnalytics({        enableTracking: true,';
         enableUserBehaviorTracking: true})const [activeTab, setActiveTab] = useState(overview);
     const [showMintNFT, setShowMintNFT] = useState(false);
     const [showSendTransaction, setShowSendTransaction] = useState(false);

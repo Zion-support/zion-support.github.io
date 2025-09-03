@@ -1,5 +1,5 @@
 import React, { useState } from 'react'import { motion } from framer-motion;
-import { Brain, CheckCircle, ArrowRight, Zap, Users, Lightbulb, BarChart3 } from 'lucide-reactimport { Card, CardContent, CardHeader, CardTitle } from ./ui/card;import { Button } from ./ui/button;import { Badge } from ./ui/badgeconst AdvancedServiceRecommendation = () => {}const [clientProfile, setClientProfile] = useState({}'
+import { Brain, CheckCircle, ArrowRight, Zap, Users, Lightbulb, BarChart3  } from 'lucide-reactimport { Card, CardContent, CardHeader, CardTitle } from ./ui/card;import { Button } from ./ui/button;import { Badge } from ./ui/badgeconst AdvancedServiceRecommendation = () => {}const [clientProfile, setClientProfile] = useState({}';
 industry: ,''compSize: ',''budget: ',''timeline: ',''technologyMaturity: ','
         primaryGoals[],
         challenges[]})

@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'reactimport { motion, AnimatePresence } from framer-motionimport { Send, CheckCircle, AlertCircle, Eye, EyeOff, Loader2, Phone, Mail, User, MessageSquare, Building } from lucide-reactexport const AdvancedForm = ({ fields, onSubmit, title = Contact Us, subtitle = Get in touch with our team, submitText = Send Message, className = , enableAnalytics = true, showProgressBar = true }) => {
+import { useState, useEffect, useCallback  } from 'reactimport { motion, AnimatePresence } from framer-motionimport { Send, CheckCircle, AlertCircle, Eye, EyeOff, Loader2, Phone, Mail, User, MessageSquare, Building } from lucide-reactexport const AdvancedForm = ({ fields, onSubmit, title = Contact Us, subtitle = Get in touch with our team, submitText = Send Message, className = , enableAnalytics = true, showProgressBar = true }) => {
     const { trackEvent, trackConversion } = useAnalytics({        enableTracking: enableAnalytics,
         enableUserBehaviorTracking: true})
     const [formData, setFormData] = useState({})
@@ -11,7 +11,7 @@ import { useState, useEffect, useCallback } from 'reactimport { motion, AnimateP
     useEffect(() => {}
         const initialValidation = {}
         fields.forEach(field => {}
-initialData[field.name] = field.type === checkbox' ? false : 'initialValidation[field.name] = {}'
+initialData[field.name] = field.type === checkbox'; ? false : 'initialValidation[field.name] = {}'
                 isValid: !field.required,;
                 message: '',
                 isTouched: false}})
