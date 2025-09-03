@@ -5,38 +5,38 @@ import { Code, Terminal, BookOpen, Users, Zap, Award, ArrowRight, Github, Extern
 
 export default function DeveloperPortal() {
   const developerResources = [
-    {
+  {
       title: 'API Documentation',
       description: 'Comprehensive API reference with examples and guides',
       icon: BookOpen,
-      features: ['REST API Reference', 'Authentication Guide', 'Rate Limits', 'Error Handling'],
+      features: ['REST API Reference,Authentication Guide,Rate Limits,Error Handling'],
       link: '/api'
     },
     {
       title: 'SDKs & Libraries',
       description: 'Official SDKs for popular programming languages',
       icon: Code,
-      features: ['Python SDK', 'JavaScript SDK', 'Java SDK', 'C# SDK'],
+      features: ['Python SDK,JavaScript SDK,Java SDK,C# SDK'],
       link: '/api'
     },
     {
       title: 'Code Examples',
       description: 'Ready-to-use code samples and tutorials',
       icon: Terminal,
-      features: ['Quick Start Guides', 'Integration Examples', 'Best Practices', 'Troubleshooting'],
+      features: ['Quick Start Guides,Integration Examples,Best Practices,Troubleshooting'],
       link: '/docs'
     },
     {
       title: 'Developer Community',
       description: 'Connect with other developers and get support',
       icon: Users,
-      features: ['Discord Community', 'GitHub Discussions', 'Stack Overflow', 'Developer Blog'],
+      features: ['Discord Community,GitHub Discussions,Stack Overflow,Developer Blog'],
       link: '#'
     }
   ];
 
   const tutorials = [
-    {
+  {
       title: 'Building Your First AI Application',
       description: 'Learn how to integrate AI services into your application',
       duration: '15 min',
@@ -71,34 +71,34 @@ export default function DeveloperPortal() {
   ];
 
   const tools = [
-    {
+  {
       name: 'API Explorer',
       description: 'Interactive API testing tool',
       icon: Zap,
-      features: ['Live API Testing', 'Request Builder', 'Response Viewer', 'Code Generation']
+      features: ['Live API Testing,Request Builder,Response Viewer,Code Generation']
     },
     {
       name: 'CLI Tool',
       description: 'Command-line interface for developers',
       icon: Terminal,
-      features: ['Project Management', 'Deployment', 'Monitoring', 'Configuration']
+      features: ['Project Management,Deployment,Monitoring,Configuration']
     },
     {
       name: 'VS Code Extension',
       description: 'IDE integration for seamless development',
       icon: Code,
-      features: ['Syntax Highlighting', 'Auto-completion', 'Debugging', 'Snippets']
+      features: ['Syntax Highlighting,Auto-completion,Debugging,Snippets']
     },
     {
       name: 'Postman Collection',
       description: 'Pre-configured API collection',
       icon: ExternalLink,
-      features: ['All Endpoints', 'Authentication', 'Examples', 'Environment Variables']
+      features: ['All Endpoints,Authentication,Examples,Environment Variables']
     }
   ];
 
   const communityStats = [
-    { number: '10,000+', label: 'Active Developers' },
+  { number: '10,000+', label: 'Active Developers' },
     { number: '500+', label: 'GitHub Stars' },
     { number: '50+', label: 'Open Source Projects' },
     { number: '99.9%', label: 'API Uptime' }

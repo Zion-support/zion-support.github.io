@@ -24,20 +24,17 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 ;
   // Default structured data for organization
   const defaultStructuredData = {
-    '@context': 'https://schema.org', '@type': 'Organization',
-    'name': 'Zion Tech Group', 'url': 'https://ziontechgroup.com',
-    'logo': 'https://ziontechgroup.com/logo.png', 'description': 'Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.',
-    'address': {
-      '@type': 'PostalAddress', 'addressCountry': 'US'
+    '@context': 'https://schema.org,@type': 'Organization,name': 'Zion Tech Group,url': 'https://ziontechgroup.com,logo': 'https://ziontechgroup.com/logo.png,description': 'Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.,address': {
+      '@type': 'PostalAddress,addressCountry': 'US'
     },
     'contactPoint': {
-      '@type': 'ContactPoint', 'telephone': '+1-XXX-XXX-XXXX',;
-      'contactType': 'customer service', 'availableLanguage': 'English';
+      '@type': 'ContactPoint,telephone': '+1-XXX-XXX-XXXX',;
+      'contactType': 'customer service,availableLanguage': 'English';
     },;
     'sameAs': [;
-      'https://linkedin.com/company/zion-tech-group', 'https: //twitter.com/ziontechgroup';
+      'https://linkedin.com/company/zion-tech-group,https: //twitter.com/ziontechgroup';
     ], 'foundingDate': '2020',;
-    'numberOfEmployees': '50+', 'industry': 'Technology Services';
+    'numberOfEmployees': '50+,industry': 'Technology Services';
   };
 ;
   const finalStructuredData = structuredData || defaultStructuredData;

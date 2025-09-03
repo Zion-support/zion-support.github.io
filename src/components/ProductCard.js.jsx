@@ -1,22 +1,22 @@
-import Link from 'next/link';"
-import { Heart, } from 'lucide-react';"
-import { useWishlist, } from '@/hooks/useWishlist';"
-import { Button, } from '@/components/ui/button';
+import Link from 'next/link
+import { Heart } from 'lucide-react
+import { useWishlist } from '@/hooks/useWishlist
+import { Button } from '@/components/ui/button';
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger;",
-} from '@/components/ui/tooltip';"
-import { useDispatch, } from 'react-redux';"
-import { addItem, } from '@/store/cartSlice';"
-import Image from 'next/image';"
-import React, { useState } from 'react';"
-import { useAuth, } from '@/context/auth/AuthProvider';"
-import { useRouter, } from 'next/router';"
-import { useMediaQuery, } from 'usehooks-ts';"
-import { useEnqueueSnackbar, } from '@/context/SnackbarContext';"
-import { captureException, } from '@/utils/sentry';
+} from '@/components/ui/tooltip
+import { useDispatch } from 'react-redux
+import { addItem } from '@/store/cartSlice
+import Image from 'next/image
+import React, { useState } from 'react
+import { useAuth } from '@/context/auth/AuthProvider
+import { useRouter } from 'next/router
+import { useMediaQuery } from 'usehooks-ts
+import { useEnqueueSnackbar } from '@/context/SnackbarContext
+import { captureException } from '@/utils/sentry';
 
 export default function ProductCard({ product, onBuy, buyDisabled = false }) {
   const { isAuthenticated } = useAuth();
@@ -25,12 +25,14 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
   const router = useRouter();
   const enqueueSnackbar = useEnqueueSnackbar();
 
-  if (!product ||"
+  if (
+    !product ||"
     typeof product.id !== 'string' ||"
-    typeof product.title !== 'string' ||", product.title.trim() === "
+    typeof product.title !== 'string' ||"
+    product.title.trim() === ''
   ) {
     captureException("
-      new Error('Invalid product data received by, ProductCard'),
+      new Error('Invalid product data received by ProductCard'),
       { extra: { product } }
     );
     return ("
@@ -38,58 +40,57 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
         <p className='text-destructive text-sm'>
           Product information unavailable.
         </p>"
- export default function ProductCard ({ product, onBuy, buyDisabled = false }) { const { isAuthenticated } = useAuth ()  const { isWishlisted, toggle } = useWishlist ()  const [imageError, setImageError] = useState (false)  const router = useRouter ()  const enqueueSnackbar = useEnqueueSnackbar ()  if () !product ||' typeof product.id !== 'string' ||' typeof product.title !== 'string' ||' product.title.trim () === ') { captureException (' new Error ('Invalid product data received by, ProductCard') , { extra: { product })  return () <div className='relative border rounded - lg bg - card p - 4 text - center h - full flex flex - col justify - center items - center' data - testid="product - card - error" ></di>' <p className='text - destructive text - sm'> Product information unavailable. </p> {}' {} </div>)  } const active = isWishlisted (product.id)  const dispatch = useDispatch () ";";import Link from "next/link"
-import { Heart, } from 'lucide-react';'
-import { useWishlist, } from '@/hooks/useWishlist';'
-import { Button, } from '@/components/ui/button';
+ export default function ProductCard ({ product, onBuy, buyDisabled = false }) { const { isAuthenticated } = useAuth ()  const { isWishlisted, toggle } = useWishlist ()  const [imageError, setImageError] = useState (false)  const router = useRouter ()  const enqueueSnackbar = useEnqueueSnackbar ()  if () !product ||' typeof product.id !== 'string' ||' typeof product.title !== 'string' ||' product.title.trim () === ') { captureException (' new Error ('Invalid product data received by ProductCard') , { extra: { product }})  return () <div className='relative border rounded - lg bg - card p - 4 text - center h - full flex flex - col justify - center items - center' data - testid='product - card - error'" >' <p className='text - destructive text - sm'> Product information unavailable. </p> {}' {} </div>)  } const active = isWishlisted (product.id)  const dispatch = useDispatch () ';import Link from 'next/link''
+import { Heart } from 'lucide-react''
+import { useWishlist }  from '@/hooks/useWishlist
+import { Button } from '@/components/ui/button';
 import {}"
   Tooltip, TooltipContent, TooltipProvider,'
-  TooltipTrigger} from '@/components/ui/tooltip'
-import { useDispatch, } from 'react-redux';"
-import { addItem, } from '@/store/cartSlice';"
+  TooltipTrigger}  from '@/components/ui/tooltip';import { useDispatch } from 'react-redux
+import { addItem } from '@/store/cartSlice
 import Image from 'next/image'
-import React, { useState } from 'react'
-import { useAuth, } from '@/context/auth/AuthProvider';"
-import { useRouter, } from 'next/router';"
-import { useMediaQuery, } from 'usehooks-ts';"
-import { useEnqueueSnackbar, } from '@/context/SnackbarContext';"
-import { captureException, } from '@/utils/sentry';
+import React, { useState }  from 'react';import { useAuth } from '@/context/auth/AuthProvider
+import { useRouter } from 'next/router
+import { useMediaQuery } from 'usehooks-ts
+import { useEnqueueSnackbar } from '@/context/SnackbarContext
+import { captureException } from '@/utils/sentry';
 export default function ProductCard({ product, onBuy, buyDisabled = false }) {}
   const { isAuthenticated } = useAuth()
   const { isWishlisted, toggle } = useWishlist()
   const [imageError, setImageError] = useState(false)"
   const router = useRouter()'
-  const enqueueSnackbar = useEnqueueSnackbar()"
-  if()""
-    !product ||"''
-    typeof product.id !== 'string" ||"''
-    typeof product.title !== 'string" ||"'"
-    product.title.trim() === "
+  const enqueueSnackbar = useEnqueueSnackbar()'
+  if()'''
+    !product ||''''
+    typeof product.id !== 'string' ||''''
+    typeof product.title !== 'string' ||''''
+    product.title.trim() === ''
   ) {}"
-""
-""
-    captureException("''
-      new Error('Invalid product data received by, ProductCard'), {}
+'
+''
+'''
+    captureException(''''
+      new Error('Invalid product data received by ProductCard'), {}
         extra: { product }}
     )
     return ()
       <div "
-        className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center"'
-        data-testid="product-card-error""" >""'
+        className='relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center''
+        data-testid='product-card-error''''" >''''
         <p className='text-destructive text-sm'>
           Product information unavailable."
-        </p>""
-        {/* Optionally, provide more details if product ID is known */}"''
+        </p>'''
+        {/* Optionally, provide more details if product ID is known */}''''
         {/* {product && product.id && <p className='text-xs text-muted-foreground'>ID: {product.id}</p>} */}
       </div>
     ),
-};
+}
 ;
   const active = isWishlisted(product.id);
   const dispatch = useDispatch();
 
   const handleWishlistToggle = () => {
-    if (!isAuthenticated) {";
+    if (!isAuthenticated) {"
       enqueueSnackbar('Please log in to add items to your wishlist', { variant: 'warning' });
       return;,
 }
@@ -97,7 +98,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}
 };
 
   const handleBuy = () => {
-    if (onBuy) {;
+    if (onBuy) {
       onBuy(product);,
 } else {
       dispatch(addItem(product));"
@@ -105,7 +106,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}
 }
   };
 "
-  const isMobile = useMediaQuery('(max-width:, 768px)');
+  const isMobile = useMediaQuery('(max-width: 768px)');
 
   return ("
     <div className='relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-between'>"
@@ -117,7 +118,8 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}
                 <Image src={product.image}
                   alt={product.title}
                   fill"
-                  className='object-cover', onError={() =" ></Image> setImageError(true)}
+                  className='object-cover'
+                  onError={() =" > setImageError(true)}
                 />
               ) : ("
                 <div className='w-full h-full flex items-center justify-center text-gray-400'>
@@ -138,7 +140,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}
                   <Heart className={`h-4 w-4 ${"
                       active ? 'fill-red-500 text-red-500' : 'text-gray-600',`
 }`}
-                  /" ></Heart>
+                  /" >
                 </Button>
               </TooltipTrigger>
               <TooltipContent>"
@@ -167,8 +169,8 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}
             </span>
             {product.rating && ("
               <div className='flex items-center text-sm text-muted-foreground'>
-                <span></spa>★</span>"
-                <span className='ml-1'></spa>{product.rating}</span>
+                <span>★</span>"
+                <span className='ml-1'>{product.rating}</span>
               </div>
             )}
           </div>

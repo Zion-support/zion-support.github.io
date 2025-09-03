@@ -6,7 +6,7 @@ import { Menu, X, Search, Phone, Mail } from 'lucide-react';
 export function Header() {
   const router = useRouter();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState( );
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -25,7 +25,7 @@ export function Header() {
   };
 
   const navigation = [
-    { name: 'Home', href: '/' },
+  { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
     { name: 'Solutions', href: '/solutions' },

@@ -35,8 +35,8 @@ export const accessibilityUtils = {
   // ARIA helpers
   announceToScreenReader: (message:, string) => {"
     const announcement = document.createElement('div');"
-    announcement.setAttribute('aria-live', 'polite');"
-    announcement.setAttribute('aria-atomic', 'true');"
+    announcement.setAttribute('aria-live,polite');"
+    announcement.setAttribute('aria-atomic,true');"
     announcement.className = 'sr-only';
     announcement.textContent = message;
     

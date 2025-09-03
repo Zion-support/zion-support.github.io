@@ -5,7 +5,7 @@ const SecurityHeaders: React.FC = () => {
     // Add security headers via meta tags
     const addSecurityHeaders = () => {
       const securityMetaTags = [
-        { name: 'referrer', content: 'strict-origin-when-cross-origin' },
+  { name: 'referrer', content: 'strict-origin-when-cross-origin' },
         { name: 'x-content-type-options', content: 'nosniff' },
         { name: 'x-frame-options', content: 'DENY' },
         { name: 'x-xss-protection', content: '1 mode=block' },
@@ -24,7 +24,7 @@ const SecurityHeaders: React.FC = () => {
     // Add Content Security Policy for inline styles
     const addCSPForInlineStyles = () => {
       const style = document.createElement('style');
-      style.setAttribute('nonce', 'csp-nonce-' + Math.random().toString(36).substr(2, 9));
+      style.setAttribute('nonce,csp-nonce-' + Math.random().toString(36).substr(2, 9));
       document.head.appendChild(style);
     };
 

@@ -83,18 +83,7 @@ export default function CloudServices() {
         </h2>
         <div className="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 text-sm">
           {[
-            'Terraform',
-            'Pulumi',
-            'ArgoCD',
-            'FluxCD',
-            'Prometheus',
-            'Grafana',
-            'Loki',
-            'OpenTelemetry',
-            'AWS',
-            'GCP',
-            'Azure',
-            'Cloudflare',
+            'Terraform,Pulumi,ArgoCD,FluxCD,Prometheus,Grafana,Loki,OpenTelemetry,AWS,GCP,Azure,Cloudflare',
           ].map(t => (
             <div
               key={t}

@@ -5,7 +5,7 @@ import { BookOpen, Users, Award, Clock, Star, Play, Download, ArrowRight, CheckC
 
 export default function Training() {
   const trainingPrograms = [
-    {
+  {
       title: 'AI & Machine Learning Fundamentals',
       description: 'Learn the basics of AI and machine learning with hands-on projects',
       duration: '40 hours',
@@ -15,12 +15,7 @@ export default function Training() {
       rating: 4.9,
       students: 1250,
       features: [
-        'Introduction to AI concepts',
-        'Machine learning algorithms',
-        'Data preprocessing',
-        'Model training and evaluation',
-        'Real-world projects',
-        'Certificate of completion'
+        'Introduction to AI concepts,Machine learning algorithms,Data preprocessing,Model training and evaluation,Real-world projects,Certificate of completion'
       ],
       instructor: 'Dr. Sarah Johnson',
       category: 'AI & ML'
@@ -35,12 +30,7 @@ export default function Training() {
       rating: 4.8,
       students: 890,
       features: [
-        'Cloud platform fundamentals',
-        'Containerization with Docker',
-        'Kubernetes orchestration',
-        'CI/CD pipelines',
-        'Infrastructure as Code',
-        'Monitoring and logging'
+        'Cloud platform fundamentals,Containerization with Docker,Kubernetes orchestration,CI/CD pipelines,Infrastructure as Code,Monitoring and logging'
       ],
       instructor: 'Michael Chen',
       category: 'Cloud & DevOps'
@@ -55,12 +45,7 @@ export default function Training() {
       rating: 4.9,
       students: 1100,
       features: [
-        'Threat landscape analysis',
-        'Security frameworks',
-        'Penetration testing',
-        'Incident response',
-        'Compliance and governance',
-        'Security tools and techniques'
+        'Threat landscape analysis,Security frameworks,Penetration testing,Incident response,Compliance and governance,Security tools and techniques'
       ],
       instructor: 'Alex Rodriguez',
       category: 'Security'
@@ -75,12 +60,7 @@ export default function Training() {
       rating: 4.7,
       students: 2100,
       features: [
-        'Frontend development (React)',
-        'Backend development (Node.js)',
-        'Database design',
-        'API development',
-        'Deployment strategies',
-        'Project portfolio'
+        'Frontend development (React),Backend development (Node.js),Database design,API development,Deployment strategies,Project portfolio'
       ],
       instructor: 'Emily Davis',
       category: 'Development'
@@ -88,58 +68,58 @@ export default function Training() {
   ];
 
   const certificationPaths = [
-    {
+  {
       title: 'Zion Tech AI Specialist',
       description: 'Certify your expertise in AI and machine learning',
       duration: '3 months',
-      requirements: ['AI Fundamentals', 'ML Advanced', 'Project Portfolio'],
-      benefits: ['Industry recognition', 'Career advancement', 'Exclusive resources']
+      requirements: ['AI Fundamentals,ML Advanced,Project Portfolio'],
+      benefits: ['Industry recognition,Career advancement,Exclusive resources']
     },
     {
       title: 'Zion Tech Cloud Architect',
       description: 'Become a certified cloud architecture expert',
       duration: '4 months',
-      requirements: ['Cloud Fundamentals', 'DevOps Practices', 'Architecture Design'],
-      benefits: ['High-demand skills', 'Salary increase', 'Consulting opportunities']
+      requirements: ['Cloud Fundamentals,DevOps Practices,Architecture Design'],
+      benefits: ['High-demand skills,Salary increase,Consulting opportunities']
     },
     {
       title: 'Zion Tech Security Professional',
       description: 'Master cybersecurity and become a security expert',
       duration: '3 months',
-      requirements: ['Security Fundamentals', 'Penetration Testing', 'Incident Response'],
-      benefits: ['Security clearance', 'Government contracts', 'Leadership roles']
+      requirements: ['Security Fundamentals,Penetration Testing,Incident Response'],
+      benefits: ['Security clearance,Government contracts,Leadership roles']
     }
   ];
 
   const learningFormats = [
-    {
+  {
       title: 'Self-Paced Online',
       description: 'Learn at your own pace with pre-recorded videos and materials',
       icon: Play,
-      features: ['24/7 access', 'Lifetime access', 'Mobile friendly', 'Progress tracking']
+      features: ['24/7 access,Lifetime access,Mobile friendly,Progress tracking']
     },
     {
       title: 'Live Online Classes',
       description: 'Interactive live sessions with expert instructors',
       icon: Users,
-      features: ['Real-time Q&A', 'Group projects', 'Peer networking', 'Instructor feedback']
+      features: ['Real-time Q&A,Group projects,Peer networking,Instructor feedback']
     },
     {
       title: 'In-Person Workshops',
       description: 'Hands-on training in our state-of-the-art facilities',
       icon: Globe,
-      features: ['Lab access', 'Equipment training', 'Networking events', 'Certification exams']
+      features: ['Lab access,Equipment training,Networking events,Certification exams']
     },
     {
       title: 'Corporate Training',
       description: 'Customized training programs for your organization',
       icon: Target,
-      features: ['Custom curriculum', 'Team training', 'On-site delivery', 'ROI tracking']
+      features: ['Custom curriculum,Team training,On-site delivery,ROI tracking']
     }
   ];
 
   const testimonials = [
-    {
+  {
       quote: "The AI training program completely transformed my career. I went from a traditional developer to an AI specialist in just 3 months.",
       author: "Jennifer Liu",
       title: "AI Engineer",

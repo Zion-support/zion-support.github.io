@@ -1,5 +1,5 @@
-import React from 'react';"
-import { Link, } from 'react-router-dom';
+import React from 'react
+import { Link } from 'react-router-dom';
 import { 
   Home, 
   Briefcase, 
@@ -17,7 +17,7 @@ import {
 
 export default function Sitemap() {
   const sitemapStructure = [
-    {"
+  {"
       title: 'Main Pages',
       icon: Home,
       pages: ["
@@ -106,7 +106,7 @@ export default function Sitemap() {
         { name: 'Developer Blog', path: '/developers/blog', description: 'Technical articles' },"
         { name: 'Community Forum', path: '/community', description: 'Developer community' }
       ],
-};
+}
   ];
 
   const externalLinks = ["
@@ -114,7 +114,7 @@ export default function Sitemap() {
     { name: 'Twitter', url: 'https://twitter.com/ziontechgroup', description: 'Follow us on Twitter' },"
     { name: 'GitHub', url: 'https://github.com/ziontechgroup', description: 'Open source projects' },"
     { name: 'YouTube', url: 'https://youtube.com/@ziontechgroup', description: 'Video content and tutorials' },"
-    { name: 'Discord', url: 'https://discord.gg/ziontechgroup', description: 'Join our community' };
+    { name: 'Discord', url: 'https://discord.gg/ziontechgroup', description: 'Join our community' }
   ];
 
   return ("
@@ -146,15 +146,15 @@ export default function Sitemap() {
                   <div className="w-12 h-12 rounded-lg bg-zion-purple/20 flex items-center justify-center mr-4">"
                     <section .icon className="h-6 w-6 text-zion-cyan" /" >
                   </div>"
-                  <h2 className="text-2xl font-bold text-white"></h>{section.title}</h2>
+                  <h2 className="text-2xl font-bold text-white">{section.title}</h2>
                 </div>
                 "
                 <div className="space-y-4">
                   {section.pages.map((page, pageIndex) => ("
                     <div key={pageIndex} className="group">
                       <Link to={page.path}"
-                        className="flex items-start space-x-3 p-3 rounded-lg hover:bg-zion-purple/10 transition-all duration-300" >"
-                        <ArrowRight className="h-4 w-4 text-zion-cyan mt-1 flex-shrink-0 group-hover:translate-x-1 transition-transform" /" ></ArrowRight>"
+                        className="flex items-start space-x-3 p-3 rounded-lg hover:bg-zion-purple/10 transition-all duration-300"" >"
+                        <ArrowRight className="h-4 w-4 text-zion-cyan mt-1 flex-shrink-0 group-hover:translate-x-1 transition-transform" /" >"
                         <div className="flex-1">"
                           <div className="text-white font-medium group-hover:text-zion-cyan transition-colors">
                             {page.name}
@@ -191,12 +191,12 @@ export default function Sitemap() {
                 href={link.url}"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-zion-blue-dark/50 border border-zion-purple/20 rounded-xl p-6 hover:border-zion-purple/40 transition-all duration-300 group" >"
+                className="bg-zion-blue-dark/50 border border-zion-purple/20 rounded-xl p-6 hover:border-zion-purple/40 transition-all duration-300 group"" >"
                 <div className="flex items-center justify-between mb-4">"
                   <div className="w-10 h-10 rounded-lg bg-zion-purple/20 flex items-center justify-center">"
-                    <ExternalLink className="h-5 w-5 text-zion-cyan" /" ></ExternalLink>
+                    <ExternalLink className="h-5 w-5 text-zion-cyan" /" >
                   </div>"
-                  <ExternalLink className="h-4 w-4 text-zion-slate-light group-hover:text-zion-cyan transition-colors" /" ></ExternalLink>
+                  <ExternalLink className="h-4 w-4 text-zion-slate-light group-hover:text-zion-cyan transition-colors" /" >
                 </div>"
                 <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-zion-cyan transition-colors">
                   {link.name}
@@ -223,13 +223,13 @@ export default function Sitemap() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link "
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-purple/80 hover:to-zion-cyan/80 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/25" >
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-purple/80 hover:to-zion-cyan/80 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/25"" >
                 Contact Support"
-                <ArrowRight className="ml-2 h-5 w-5" /" ></ArrowRight>
+                <ArrowRight className="ml-2 h-5 w-5" /" >
               </Link>
               <Link "
                 to="/search"
-                className="inline-flex items-center px-8 py-4 border-2 border-zion-purple/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-purple/10 hover:border-zion-purple/50 transition-all duration-300" >
+                className="inline-flex items-center px-8 py-4 border-2 border-zion-purple/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-purple/10 hover:border-zion-purple/50 transition-all duration-300"" >
                 Search Website
               </Link>
             </div>
@@ -239,6 +239,7 @@ export default function Sitemap() {
     </div>
   );,
 }"
- export default Sitemap const Sitemap = () => { const sitemapSections = [ { title: 'Main Pages', links: [ { name: 'Home', path: '/', description: 'Welcome to Zion Tech Group' }, { name: 'About', path: '/about', description: 'Learn about our company'}, { name: 'Contact', path: '/contact', description: 'Get in touch with us'}, { name: 'Partners', path: '/partners', description: 'Our business partners'}, { name: 'Careers', path: '/careers', description: 'Job opportunities' }]}, { title: 'Services', links: [ { name: 'All Services', path: '/services', description: 'Complete service catalog'}, { name: 'AI Solutions', path: '/services / ai', description: 'Artificial intelligence services'}, { name: 'Cybersecurity', path: '/services / cybersecurity', description: 'Security and compliance'}, { name: 'Cloud & DevOps', path: '/services / cloud - devops', description: 'Cloud infrastructure'}, { name: 'Digital Transformation', path: '/services / digital - transformation', description: 'Business transformation'}]}, { title: 'Marketplace', links: [ { name: 'Marketplace', path: '/marketplace', description: 'Browse our marketplace'}, { name: 'Products', path: '/marketplace / products', description: 'Available products'}, { name: 'Services', path: '/marketplace / services', description: 'Marketplace services'}, { name: 'Talent', path: '/marketplace / talent', description: 'Find talent'}]}, { title: 'Support & Resources', links: [ { name: 'Blog', path: '/blog', description: 'Latest insights and news'}, { name: 'FAQ', path: '/faq', description: 'Frequently asked questions'}, { name: 'Sitemap', path: '/sitemap', description: 'Complete site navigation'}, { name: 'Help Center', path: '/help', description: 'Self - service support'}, { name: 'System Status', path: '/status', description: 'Service status and uptime'}, { name: 'Security', path: '/security', description: 'Security and compliance information'}]}, { title: 'Legal & Compliance', links: [ { name: 'Privacy Policy', path: '/privacy', description: 'Data protection and privacy'}, { name: 'Terms of Service', path: '/terms', description: 'Terms and conditions'}, { name: 'Cookie Policy', path: '/cookies', description: 'Cookie usage information'}, { name: 'Accessibility', path: '/accessibility', description: 'Accessibility information'}]}, { title: 'User Account', links: [ { name: 'Login', path: '/login', description: 'User authentication' }, { name: 'Sign Up', path: '/signup', description: 'Create new account' }, { name: 'Dashboard', path: '/dashboard', description: 'User dashboard'}, { name: 'Forgot Password', path: '/forgot - password', description: 'Password recovery'}]}] return (<div className='min - h-screen bg - gradient - to - br from - slate - 900 via - blue - 900 to - slate - 900 text - white pt - 24'></di> <div className='container mx - auto px - 4 py - 16'></di> {} <div className='text - center mb - 16'></di> <h1 className='text - 4xl md: text - 6xl font - bold mb - 6'></h> Site{'} <span className='text - transparent bg - clip - text bg - gradient - to - r from - blue - 400 to - cyan - 400'></spa> {'} Map </span> </h1> <p className='text - xl text - gray - 300 max - w-3xl mx - auto'> Complete navigation guide to all pages and services on Zion Tech Group </p> </div> {} <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'></di> {sitemapSections.map ( (section, sectionIndex) => (<div key={sectionIndex} className="bg - white / 10 backdrop - blur - lg rounded - xl p - 6 border border - white / 20" ></di> <h2 className='text - xl font - bold text - white mb - 4 border - b border - zion - cyan / 30 pb - 2'></h> {section.title} </h2> <ul className='space - y-3'></u> {section.links.map ( (link, linkIndex) => (<li key={linkIndex}" ></l> <Link to={link.path} className="block text - zion - slate - light hover: text - zion - cyan transition - colors duration - 300 group" ></Lin> <div className='font - medium text - white group - hover:text - zion - cyan transition - colors'></di> {link.name} </div> <div className='text - sm text - gray - 400 group - hover:text - zion - cyan / 70 transition - colors'></di> {link.description} </div> </Link>, </li>) ) } </ul> </div>) ) } </div> {} <div className='mt - 16 text - center'></di> <h2 className='text - 2xl font - bold text - white mb - 8'></h> Quick Links </h2> <div className='flex flex - wrap justify - center gap - 4'></di> <Link to='/contact' className="px - 6 py - 3 bg - gradient - to - r from - zion - cyan to - zion - blue text - white rounded - lg font - medium hover: scale - 105 transition - transform" ></Lin> Get Started </Link> <Link to='/services' className="px - 6 py - 3 border - 2 border - zion - cyan text - zion - cyan rounded - lg font - medium hover:bg - zion - cyan hover:text - white transition - colors" ></Lin> View Services </Link> <Link to='/help' className="px - 6 py - 3 border - 2 border - zion - purple text - zion - purple rounded - lg font - medium hover:bg - zion - purple hover:text - white transition - colors" ></Lin> Get Help </Link> </div> </div> </div> </div>)  }";;""
+ export default Sitemap const Sitemap = () => { const sitemapSections = [
+  { title: 'Main Pages', links: [ { name: 'Home', path: '/', description: 'Welcome to Zion Tech Group' }, { name: 'About', path: '/about', description: 'Learn about our company'}, { name: 'Contact', path: '/contact', description: 'Get in touch with us'}, { name: 'Partners', path: '/partners', description: 'Our business partners'}, { name: 'Careers', path: '/careers', description: 'Job opportunities' }]}, { title: 'Services', links: [ { name: 'All Services', path: '/services', description: 'Complete service catalog'}, { name: 'AI Solutions', path: '/services / ai', description: 'Artificial intelligence services'}, { name: 'Cybersecurity', path: '/services / cybersecurity', description: 'Security and compliance'}, { name: 'Cloud & DevOps', path: '/services / cloud - devops', description: 'Cloud infrastructure'}, { name: 'Digital Transformation', path: '/services / digital - transformation', description: 'Business transformation'}]}, { title: 'Marketplace', links: [ { name: 'Marketplace', path: '/marketplace', description: 'Browse our marketplace'}, { name: 'Products', path: '/marketplace / products', description: 'Available products'}, { name: 'Services', path: '/marketplace / services', description: 'Marketplace services'}, { name: 'Talent', path: '/marketplace / talent', description: 'Find talent'}]}, { title: 'Support & Resources', links: [ { name: 'Blog', path: '/blog', description: 'Latest insights and news'}, { name: 'FAQ', path: '/faq', description: 'Frequently asked questions'}, { name: 'Sitemap', path: '/sitemap', description: 'Complete site navigation'}, { name: 'Help Center', path: '/help', description: 'Self - service support'}, { name: 'System Status', path: '/status', description: 'Service status and uptime'}, { name: 'Security', path: '/security', description: 'Security and compliance information'}]}, { title: 'Legal & Compliance', links: [ { name: 'Privacy Policy', path: '/privacy', description: 'Data protection and privacy'}, { name: 'Terms of Service', path: '/terms', description: 'Terms and conditions'}, { name: 'Cookie Policy', path: '/cookies', description: 'Cookie usage information'}, { name: 'Accessibility', path: '/accessibility', description: 'Accessibility information'}]}, { title: 'User Account', links: [ { name: 'Login', path: '/login', description: 'User authentication' }, { name: 'Sign Up', path: '/signup', description: 'Create new account' }, { name: 'Dashboard', path: '/dashboard', description: 'User dashboard'}, { name: 'Forgot Password', path: '/forgot - password', description: 'Password recovery'}]}] return (<div className='min - h-screen bg - gradient - to - br from - slate - 900 via - blue - 900 to - slate - 900 text - white pt - 24'> <div className='container mx - auto px - 4 py - 16'> {} <div className='text - center mb - 16'> <h1 className='text - 4xl md: text - 6xl font - bold mb - 6'> Site{'} <span className='text - transparent bg - clip - text bg - gradient - to - r from - blue - 400 to - cyan - 400'> {'} Map </span> </h1> <p className='text - xl text - gray - 300 max - w-3xl mx - auto'> Complete navigation guide to all pages and services on Zion Tech Group </p> </div> {} <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'> {sitemapSections.map ( (section, sectionIndex) => (<div key={sectionIndex} className='bg - white / 10 backdrop - blur - lg rounded - xl p - 6 border border - white / 20'" > <h2 className='text - xl font - bold text - white mb - 4 border - b border - zion - cyan / 30 pb - 2'> {section.title} </h2> <ul className='space - y-3'> {section.links.map ( (link, linkIndex) => (<li key={linkIndex}" > <Link to={link.path} className='block text - zion - slate - light hover: text - zion - cyan transition - colors duration - 300 group'" > <div className='font - medium text - white group - hover:text - zion - cyan transition - colors'> {link.name} </div> <div className='text - sm text - gray - 400 group - hover:text - zion - cyan / 70 transition - colors'> {link.description} </div> </Link> </li>) ) } </ul> </div>) ) } </div> {} <div className='mt - 16 text - center'> <h2 className='text - 2xl font - bold text - white mb - 8'> Quick Links </h2> <div className='flex flex - wrap justify - center gap - 4'> <Link to='/contact' className='px - 6 py - 3 bg - gradient - to - r from - zion - cyan to - zion - blue text - white rounded - lg font - medium hover: scale - 105 transition - transform'" > Get Started </Link> <Link to='/services' className='px - 6 py - 3 border - 2 border - zion - cyan text - zion - cyan rounded - lg font - medium hover:bg - zion - cyan hover:text - white transition - colors'" > View Services </Link> <Link to='/help' className='px - 6 py - 3 border - 2 border - zion - purple text - zion - purple rounded - lg font - medium hover:bg - zion - purple hover:text - white transition - colors'" > Get Help </Link> </div> </div> </div> </div>)  }';;''"
 
 "

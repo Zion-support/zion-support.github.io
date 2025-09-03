@@ -26,15 +26,7 @@ export default function SEOHead({
   const fullTitle = `${title} | Zion Tech Group - AI & Technology Solutions`;
   
   const defaultKeywords = [
-    'AI services',
-    'technology solutions',
-    'enterprise automation',
-    'cybersecurity',
-    'quantum computing',
-    'blockchain solutions',
-    'cloud services',
-    'digital transformation',
-    'Zion Tech Group';
+    'AI services,technology solutions,enterprise automation,cybersecurity,quantum computing,blockchain solutions,cloud services,digital transformation,Zion Tech Group'
   ];
   
   const safeKeywords = Array.isArray(keywords) ? keywords : [];
@@ -43,9 +35,9 @@ export default function SEOHead({
   
   return (
     <Head>
-      <title></titl>{fullTitle}</title>
+      <title>{fullTitle}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={uniqueKeywords.join(', ')} />
+      <meta name="keywords" content={uniqueKeywords.join(,)} />
       <meta name="author" content="Zion Tech Group" />
       <meta name="robots" content={`${noIndex ? 'noindex' : 'index'}, ${noFollow ? 'nofollow' : 'follow'}`} />
       
@@ -73,30 +65,20 @@ export default function SEOHead({
       <meta name="msapplication-TileColor" content="#0ea5e9" />
       
       {/* Structured Data */}
-      {structuredData && (<script type="application/ld+json" dangerouslySetInnerHTML={{
-          __html:, JSON.stringify(structuredData)
-        } />
+      {structuredData && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData)
+        }} />
       )}
       
       {/* Default organization structured data */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{
         __html: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "Zion Tech Group",
-          "url": "https://ziontechgroup.com",
-          "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png",
-          "description": "Leading provider of AI services, IT solutions, and innovative technology consulting for enterprise digital transformation.",
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+1-302-464-0950",
-            "contactType": "Customer Service",
-            "availableLanguage": "English"
+          "@context": "https://schema.org,@type": "Organization,name": "Zion Tech Group,url": "https://ziontechgroup.com,logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png,description": "Leading provider of AI services, IT solutions, and innovative technology consulting for enterprise digital transformation.,contactPoint": {
+            "@type": "ContactPoint,telephone": "+1-302-464-0950,contactType": "Customer Service,availableLanguage": "English"
           },
           "sameAs": [
-            "https://linkedin.com/company/ziontechgroup",
-            "https://twitter.com/ziontechgroup",
-            "https://github.com/ziontechgroup"
+            "https://linkedin.com/company/ziontechgroup,https://twitter.com/ziontechgroup,https://github.com/ziontechgroup"
           ]
         })
       }} />

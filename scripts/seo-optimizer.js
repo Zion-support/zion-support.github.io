@@ -5,10 +5,8 @@
  */;
 import fs from,
   fs';
-import path from "path";
-  'path';
-import { fileURLToPath } from "url";
-  'url';
+import path from "pathpath';
+import { fileURLToPath } from "urlurl';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 console.log(
@@ -21,23 +19,7 @@ function generateSitemap() {
   'https: //ziontechgroup.com';
   const pages = [
   '/,
-  '/about',
-  '/contact',
-  '/careers',
-  '/solutions',
-  '/research-development',
-  '/case-studies',
-  '/news',
-  '/events',
-  '/services',
-  '/services/ai',
-  '/services/cloud',
-  '/services/cybersecurity',
-  '/services/infrastructure',
-  '/services/transformation',
-  '/services/consulting',
-  '/privacy',
-  '/terms'  ];
+  '/about,/contact,/careers,/solutions,/research-development,/case-studies,/news,/events,/services,/services/ai,/services/cloud,/services/cybersecurity,/services/infrastructure,/services/transformation,/services/consulting,/privacy,/terms'  ];
   const sitemap = `<?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
 ${pages;
@@ -114,8 +96,7 @@ function generateManifest() {
     categories: [;
   'technology,
 ,
-  business',
-  'productivity'],
+  business,productivity'],
     lang: 'en-US,
     orientation:;
   'portrait-primary'}
@@ -128,8 +109,7 @@ function generateStructuredData() {
   console.log(
   '📊 Generating structured data...');
     const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
+    '@context': 'https://schema.org,@type': 'Organization',
     name: 'Zion Tech Group',
     url: 'https://ziontechgroup.com',
     logo: 'https://ziontechgroup.com/logo.png',
@@ -144,17 +124,12 @@ function generateStructuredData() {
       contactType: 'customer service',
       availableLanguage: 'English'},
     sameAs: [;
-      'https://linkedin.com/company/zion-tech-group',
-      'https://twitter.com/ziontechgroup'],
+      'https://linkedin.com/company/zion-tech-group,https://twitter.com/ziontechgroup'],
     foundingDate: '2020',
     numberOfEmployees: '50-100',
     industry: 'Information Technology',
     services: [;
-      'AI Development',
-      'Cybersecurity',
-      'Cloud Solutions',
-      'Digital Transformation',
-      'IT Consulting']}
+      'AI Development,Cybersecurity,Cloud Solutions,Digital Transformation,IT Consulting']}
   const structuredDataPath = path.join(__dirname,
   '../public/structured-data.json')  fs.writeFileSync(structuredDataPath, JSON.stringify(structuredData, null, 2));
   console.log(

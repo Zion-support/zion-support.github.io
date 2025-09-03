@@ -1,17 +1,16 @@
-import React from 'react';"
-import { render, screen } from '@testing-library/react';"
-import '@testing-library/jest-dom';"
-import GreenIT from './GreenIT';
-"
+import React from 'react
+import { render, screen } from '@testing-library/react
+import '@testing-library/jest-dom
+import GreenIT from './GreenIT
 describe('GreenIT', () => {"
   it('renders without crashing', () => {
-    render(<GreenIT /", ></GreenIT>);"
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
-});
+    render(<GreenIT /" >);"
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+})
 "
   it('displays expected content', () => {
-    render(<GreenIT /", ></GreenIT>);
-    // Add more specific tests here,
-});,
+    render(<GreenIT /" >)
+    // Add more specific tests here
 });
+})
 "

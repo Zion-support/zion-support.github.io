@@ -13,16 +13,15 @@
   Search,
   Filter} from 'lucide-react;
   ';Legacy Modernization;
-  ',';Digital Strategy;
-  ',';Change Management;
-  ',';Technology Consulting;
+  ,;Digital Strategy;
+  ,;Change Management;
+  ,;Technology Consulting;
   ';
     ]}';Process Automation;
-  ',';
-  'Customer Experience',';Legacy Modernization',';Digital Strategy',';Change Management',';Technology Consulting';
+  ',Customer Experience,;Legacy Modernization,;Digital Strategy,;Change Management,;Technology Consulting';
     ]}
 ];
-';Citizen Engagement',';Regulatory Compliance',';Infrastructure Management';
+';Citizen Engagement,;Regulatory Compliance,;Infrastructure Management';
     ],
     color: 'from-gray-500 to-slate-600}
 ];
@@ -77,8 +76,7 @@
   Next-generation quantum computing solutions',
       color: 'from-indigo-500 to-purple-600,
       solutions: [
-  ';
-        'Quantum Algorithms;
+  Quantum Algorithms;
   ',Quantum Machine Learning',Quantum Cryptography;
   ',Quantum Simulation',Hybrid Quantum-Classical;
   ',Quantum Optimization';
@@ -113,8 +111,7 @@
                   onClick={() => setSelectedIndustry(industry.id)}
                   className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center ${
                     selectedIndustry === industry.id,
-  ? 'bg-blue-500 text-white shadow-lg shadow-blue-500/30';
-  ': 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border border-slate-700/50`}`}
+  ? 'bg-blue-500 text-white shadow-lg shadow-blue-500/30: 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border border-slate-700/50`}`}
                 >'
                   <industry.icon className='w-5 h-5 mr-2' />
                   {industry.name}

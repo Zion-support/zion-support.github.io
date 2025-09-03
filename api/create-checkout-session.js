@@ -1,25 +1,21 @@
 import Stripe from,;
-  stripe';';
+  stripe;
 import { withErrorLogging } from;
-  './withErrorLogging.cjs';';
+  './withErrorLogging.cjs;
 const PROD_DOMAIN =;
-  'app.ziontechgroup.com';';
+  'app.ziontechgroup.com;
 function isProdDomain() {;
-  const url = process.env.URL || ';';
-  ';';
+  const url = process.env.URL || ;
+  ;
   try {;
     return new URL(url).hostname === PROD_DOMAIN} catch {;
     return false}
 }
 async function handler(req, res) {;
-  if (req.method !== 'POST;';
-  ') {';
+  if (req.method !== 'POST;) {';
     res.statusCode = 405;
-    res.setHeader('Allow;';
-  ', 'POST;';
-  ');';
-    res.end('Method Not Allowed;';
-  ');';
+    res.setHeader('Allow;, 'POST;);';
+    res.end('Method Not Allowed;);';
     return}
   const { productId, userId } = req.body || {}
   if (!productId || !userId) {;
@@ -27,7 +23,7 @@ async function handler(req, res) {;
     res.json({ error: 'Missing productId or userId })';
     return}
   try {;
-    const liveKey = process.env.STRIPE_SECRET_KEY || '';';
+    const liveKey = process.env.STRIPE_SECRET_KEY || ';
     const testKey = process.env.STRIPE_TEST_SECRET_KEY || liveKey;
     if(;
       !isProdDomain() &&;
@@ -42,7 +38,7 @@ async function handler(req, res) {;
     const session = await stripe.checkout.sessions.create({;
       line_items: [{ price: productId, quantity: 1 }],;
       mode:;
-  'payment',';
+  'payment,;
       success_url: `${req.headers.origin}/success?session_id={CHECKOUT_SESSION_ID}`,;
       cancel_url: `${req.headers.origin}/cancel`,;
       metadata: { userId, productId }});

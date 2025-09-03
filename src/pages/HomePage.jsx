@@ -1,5 +1,5 @@
-import React from 'react';"
-import { Link, } from 'react-router-dom';
+import React from 'react
+import { Link } from 'react-router-dom';
 import { 
   ArrowRight, 
   Play, 
@@ -19,58 +19,58 @@ import {
 
 export function HomePage() {
   const features = [
-    {
+  {
       icon: Brain,"
-      title: 'AI-Powered Solutions',"
-      description: 'Cutting-edge artificial intelligence and machine learning services',"
+      title: 'AI-Powered Solutions,
+      description: 'Cutting-edge artificial intelligence and machine learning services,
       color: 'from-purple-500 to-pink-500',
 },
     {
       icon: Cloud,"
-      title: 'Cloud Excellence',"
-      description: 'Scalable cloud infrastructure and migration services',"
+      title: 'Cloud Excellence,
+      description: 'Scalable cloud infrastructure and migration services,
       color: 'from-blue-500 to-cyan-500',
 },
     {
       icon: Shield,"
-      title: 'Cybersecurity',"
-      description: 'Advanced security and compliance solutions',"
+      title: 'Cybersecurity,
+      description: 'Advanced security and compliance solutions,
       color: 'from-green-500 to-emerald-500',
 },
     {
       icon: Rocket,"
-      title: 'Digital Transformation',"
-      description: 'End-to-end business transformation services',"
+      title: 'Digital Transformation,
+      description: 'End-to-end business transformation services,
       color: 'from-orange-500 to-red-500',
-};
+}
   ];
 
   const stats = ["
     { number: '500+', label: 'Happy Clients', icon: Users },"
     { number: '99.9%', label: 'Uptime', icon: Award },"
     { number: '24/7', label: 'Support', icon: Clock },"
-    { number: '50+', label: 'Countries', icon: Globe };
+    { number: '50+', label: 'Countries', icon: Globe }
   ];
 
   const testimonials = [
-    {"
-      name: 'Sarah Johnson',"
-      title: 'CTO at TechCorp',"
+  {"
+      name: 'Sarah Johnson,
+      title: 'CTO at TechCorp,
       content: 'Zion Tech Group transformed our infrastructure completely. Their expertise is unmatched.',
       rating: 5,
 },
     {"
-      name: 'Michael Chen',"
-      title: 'VP Engineering',"
+      name: 'Michael Chen,
+      title: 'VP Engineering,
       content: 'The AI solutions they implemented increased our efficiency by 300%. Incredible results!',
       rating: 5,
 },
     {"
-      name: 'Emily Rodriguez',"
-      title: 'Operations Director',"
+      name: 'Emily Rodriguez,
+      title: 'Operations Director,
       content: 'Professional, reliable, and innovative. They delivered beyond our expectations.',
       rating: 5,
-};
+}
   ];
 
   return ("
@@ -84,10 +84,10 @@ export function HomePage() {
           <div className="text-center max-w-4xl mx-auto">"
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               Innovating"
-              <span className="bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent">"
-                {"}Tomorrow
+              <span className="bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent">'
+                { }Tomorrow
               </span>
-            </h1>"
+            </h1>'
             <p className="text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed">
               Empowering businesses with cutting-edge technology solutions, AI-driven insights, 
               and transformative digital strategies for the future.
@@ -95,23 +95,23 @@ export function HomePage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link "
                 to="/services"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-purple/80 hover:to-zion-cyan/80 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/25 hover:-translate-y-1" >
-                Explore Services"
-                <ArrowRight className="ml-2 h-5 w-5" /" ></ArrowRight>
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-purple/80 hover:to-zion-cyan/80 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/25 hover:-translate-y-1  >
+                Explore Services'
+                <ArrowRight className="ml-2 h-5 w-5" /" >
               </Link>
               <Link "
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 border-2 border-zion-purple/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-purple/10 hover:border-zion-purple/50 transition-all duration-300" >
+                className='inline-flex items-center px-8 py-4 border-2 border-zion-purple/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-purple/10 hover:border-zion-purple/50 transition-all duration-300  >
                 Get Started
               </Link>
             </div>
           </div>
         </div>
 
-        {/* Floating Elements */}"
+        {/* Floating Elements */}'
         <div className="absolute top-20 left-10 w-2 h-2 bg-zion-cyan/30 rounded-full animate-pulse" /" >"
-        <div className="absolute top-40 right-20 w-1.5 h-1.5 bg-zion-purple/20 rounded-full animate-pulse" style={{ animationDelay: '1s' } /" >"
-        <div className="absolute bottom-20 left-1/4 w-1 h-1 bg-zion-cyan/25 rounded-full animate-pulse" style={{ animationDelay: '2s' } /" >
+        <div className="absolute top-40 right-20 w-1.5 h-1.5 bg-zion-purple/20 rounded-full animate-pulse" style={{ animationDelay: '1s' }} /" >"
+        <div className="absolute bottom-20 left-1/4 w-1 h-1 bg-zion-cyan/25 rounded-full animate-pulse" style={{ animationDelay: '2s' }} /" >
       </section>
 
       {/* Features Section */}"
@@ -130,7 +130,7 @@ export function HomePage() {
             {features.map((feature, index) => ("
               <div key={index} className="text-center group">
                 <div className={`w-16 h-16 mx-auto mb-6 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}" >"
-                  <feature .icon className="h-8 w-8 text-white" /" ></feature>
+                  <feature .icon className="h-8 w-8 text-white" /" >
                 </div>"
                 <h3 className="text-xl font-semibold text-white mb-3">
                   {feature.title}
@@ -151,7 +151,7 @@ export function HomePage() {
             {stats.map((stat, index) => ("
               <div key={index} className="text-center">"
                 <div className="w-12 h-12 mx-auto mb-4 rounded-lg bg-zion-purple/20 flex items-center justify-center">"
-                  <stat .icon className="h-6 w-6 text-zion-cyan" /" ></stat>
+                  <stat .icon className="h-6 w-6 text-zion-cyan" /" >
                 </div>"
                 <div className="text-3xl font-bold text-white mb-2">
                   {stat.number}
@@ -180,40 +180,40 @@ export function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
             <div className="bg-zion-blue-dark/50 border border-zion-purple/20 rounded-xl p-6 hover:border-zion-purple/40 transition-all duration-300 group">"
               <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">"
-                <Brain className="h-6 w-6 text-white" /" ></Brain>
+                <Brain className="h-6 w-6 text-white" /" >
               </div>"
-              <h3 className="text-xl font-semibold text-white mb-3"></h>AI & Machine Learning</h3>"
+              <h3 className="text-xl font-semibold text-white mb-3">AI & Machine Learning</h3>"
               <p className="text-zion-slate-light mb-4">
                 Intelligent solutions that learn, adapt, and optimize your business processes
               </p>"
               <Link to="/services/ai" className="inline-flex items-center text-zion-cyan hover:text-white transition-colors">"
-                Learn More <ArrowRight className="ml-1 h-4 w-4" /" ></ArrowRight>
+                Learn More <ArrowRight className="ml-1 h-4 w-4" /" >
               </Link>
             </div>
 "
             <div className="bg-zion-blue-dark/50 border border-zion-purple/20 rounded-xl p-6 hover:border-zion-purple/40 transition-all duration-300 group">"
               <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">"
-                <Cloud className="h-6 w-6 text-white" /" ></Cloud>
+                <Cloud className="h-6 w-6 text-white" /" >
               </div>"
-              <h3 className="text-xl font-semibold text-white mb-3"></h>Cloud Solutions</h3>"
+              <h3 className="text-xl font-semibold text-white mb-3">Cloud Solutions</h3>"
               <p className="text-zion-slate-light mb-4">
                 Scalable cloud infrastructure and migration services for modern businesses
               </p>"
               <Link to="/services/cloud" className="inline-flex items-center text-zion-cyan hover:text-white transition-colors">"
-                Learn More <ArrowRight className="ml-1 h-4 w-4" /" ></ArrowRight>
+                Learn More <ArrowRight className="ml-1 h-4 w-4" /" >
               </Link>
             </div>
 "
             <div className="bg-zion-blue-dark/50 border border-zion-purple/20 rounded-xl p-6 hover:border-zion-purple/40 transition-all duration-300 group">"
               <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">"
-                <Shield className="h-6 w-6 text-white" /" ></Shield>
+                <Shield className="h-6 w-6 text-white" /" >
               </div>"
-              <h3 className="text-xl font-semibold text-white mb-3"></h>Cybersecurity</h3>"
+              <h3 className="text-xl font-semibold text-white mb-3">Cybersecurity</h3>"
               <p className="text-zion-slate-light mb-4">
                 Advanced security solutions to protect your digital assets and ensure compliance
               </p>"
               <Link to="/services/cybersecurity" className="inline-flex items-center text-zion-cyan hover:text-white transition-colors">"
-                Learn More <ArrowRight className="ml-1 h-4 w-4" /" ></ArrowRight>
+                Learn More <ArrowRight className="ml-1 h-4 w-4" /" >
               </Link>
             </div>
           </div>
@@ -221,9 +221,9 @@ export function HomePage() {
           <div className="text-center mt-12">
             <Link "
               to="/services"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-purple/80 hover:to-zion-cyan/80 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/25" >
-              View All Services"
-              <ArrowRight className="ml-2 h-5 w-5" /" ></ArrowRight>
+              className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-purple/80 hover:to-zion-cyan/80 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/25  >
+              View All Services'
+              <ArrowRight className="ml-2 h-5 w-5" /" >
             </Link>
           </div>
         </div>
@@ -244,15 +244,16 @@ export function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => ("
               <div key={index} className="bg-zion-blue-dark/50 border border-zion-purple/20 rounded-xl p-6">"
-                <div className="flex items-center mb-4">, {[...Array(testimonial.rating)].map((_, i) => ("
-                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" /" ></Star>
+                <div className="flex items-center mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => ("
+                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" /" >
                   ))}
                 </div>"
-                <p className="text-zion-slate-light mb-4 italic">"{testimonial.content}"
+                <p className="text-zion-slate-light mb-4 italic'> {testimonial.content}'
                 </p>
                 <div>"
-                  <div className="font-semibold text-white"></di>{testimonial.name}</div>"
-                  <div className="text-zion-cyan text-sm"></di>{testimonial.title}</div>
+                  <div className="font-semibold text-white">{testimonial.name}</div>"
+                  <div className="text-zion-cyan text-sm">{testimonial.title}</div>
                 </div>
               </div>
             ))}
@@ -273,13 +274,13 @@ export function HomePage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link "
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-purple/80 hover:to-zion-cyan/80 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/25" >
-                Get Free Consultation"
-                <ArrowRight className="ml-2 h-5 w-5" /" ></ArrowRight>
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-purple/80 hover:to-zion-cyan/80 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/25  >
+                Get Free Consultation'
+                <ArrowRight className="ml-2 h-5 w-5" /" >
               </Link>
               <Link "
                 to="/case-studies"
-                className="inline-flex items-center px-8 py-4 border-2 border-zion-purple/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-purple/10 hover:border-zion-purple/50 transition-all duration-300" >
+                className='inline-flex items-center px-8 py-4 border-2 border-zion-purple/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-purple/10 hover:border-zion-purple/50 transition-all duration-300  >
                 View Case Studies
               </Link>
             </div>
@@ -288,4 +289,4 @@ export function HomePage() {
       </section>
     </div>
   );,
-}"`
+}'`

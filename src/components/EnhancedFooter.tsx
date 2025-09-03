@@ -1,5 +1,5 @@
-import Link from 'next/link';"
-import { motion, } from 'framer-motion';
+import Link from 'next/link
+import { motion } from 'framer-motion';
 import {
   Phone, Mail,
   MapPin, Linkedin,
@@ -18,5 +18,4 @@ import {
   Handshake, FileText,
   Video, GraduationCap,
   Atom, PenTool,;"
-  DollarSign} from 'lucide-react';
-"
+  DollarSign} from 'lucide-react

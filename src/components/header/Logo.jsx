@@ -1,5 +1,5 @@
-import React from 'react';"
-import { Link, } from 'react-router-dom';
+import React from 'react
+import { Link } from 'react-router-dom';
 
 export function Logo({ customLogo, customColor }) {"
   const logoColor = customColor || '#8B5CF6'; // Default Zion purple
@@ -8,9 +8,9 @@ export function Logo({ customLogo, customColor }) {"
     <Link to="/" className="flex items-center space-x-2 group">
       {customLogo ? (
         <img src={customLogo} "
-          alt="Zion Tech Group"
+          alt="Zion Tech Group" "
           className="h-8 w-auto"
-        /" ></img>
+        /" >
       ) : ("
         <div className="flex items-center space-x-2">
           {/* Logo Icon */}
@@ -19,14 +19,14 @@ export function Logo({ customLogo, customColor }) {"
             style={{ 
               background: customColor ? `linear-gradient(135deg, ${customColor}, ${customColor}80)` : undefined,
 }}" >"
-            <span className="text-white font-bold text-lg"></spa>Z</span>
+            <span className="text-white font-bold text-lg">Z</span>
           </div>
           
           {/* Logo Text */}"
           <div className="flex flex-col">
             <span "
               className="text-xl font-bold text-white leading-tight"
-              style={{ color: customColor || undefined }" >
+              style={{ color: customColor || undefined }}" >
               Zion
             </span>"
             <span className="text-xs text-zion-cyan leading-tight font-medium">
@@ -38,6 +38,8 @@ export function Logo({ customLogo, customColor }) {"
     </Link>
   );,
 }"`
- import { Link, } from 'react-router-dom' ;import { Zap, } from 'lucide-react"  ;export function Logo({ customLogo, customColor, className = " }) { if (customLogo) { return ( <Link to="/" className={`flex-shrink-0 group ${className}`}" ></Lin>"; <img " src={customLogo} "';" alt="Logo";" className="h-8 w-auto" / / / / / / /" ></img> </Link>" )'}'; const logoColor = customColor || "#3b82f6";"`"`
- import { Link, } from 'react-router-dom' ;import { Zap, } from 'lucide-react"  ;export function Logo({ customLogo, customColor, className = " }) { if (customLogo) { return ( <Link to='/' className={`flex-shrink-0 group ${className}`}" ></Lin>"; <img " src={customLogo} '';' alt="Logo";' className='h-8 w-auto' / / / / / / /" ></img> </Link>' )'}'; const logoColor = customColor || "#3b82f6";"`"
+ import { Link } from 'react-router-dom' import { Zap }  from 'lucide-react';export function Logo({ customLogo, customColor, className = '' }) { if (customLogo) { return ( <Link to="/" className={`flex-shrink-0 group ${className}`}" >'; <img '" src={customLogo} " alt="Logo" className="h-8 w-auto" / / / / / / /" > </Link>" )'}'; const logoColor = customColor || '#3b82f6'`"`
+ import { Link } from 'react-router-dom' import { Zap }  from 'lucide-react';export function Logo({ customLogo, customColor, className = '' }) { if (customLogo) { return ( <Link to='/' className={`flex-shrink-0 group ${className}`}" >'; <img '' src={customLogo} ' alt='Logo' className='h-8 w-auto' / / / / / / /" > </Link>' )'}'; const logoColor = customColor || '#3b82f6'`"
+
+"
 }}`

@@ -1,5 +1,5 @@
-import React from 'react';"
-import { Link, } from 'react-router-dom';
+import React from 'react
+import { Link } from 'react-router-dom';
 import { 
   Mail, 
   Phone, 
@@ -20,7 +20,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   const footerSections = [
-    {"
+  {"
       title: 'Services',
       links: ["
         { name: 'AI Services', href: '/services/ai' },"
@@ -74,7 +74,7 @@ export function Footer() {
         { name: 'Status', href: '/status' },"
         { name: 'API Documentation', href: '/api' }
       ],
-};
+}
   ];
 
   const socialLinks = ["
@@ -82,7 +82,7 @@ export function Footer() {
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },"
     { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },"
     { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },"
-    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube };
+    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube }
   ];
 
   return ("
@@ -94,10 +94,10 @@ export function Footer() {
           <div className="lg:col-span-2">"
             <div className="flex items-center space-x-2 mb-6">"
               <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-zion-purple to-zion-cyan flex items-center justify-center">"
-                <span className="text-white font-bold text-xl"></spa>Z</span>
+                <span className="text-white font-bold text-xl">Z</span>
               </div>
               <div>"
-                <h3 className="text-xl font-bold text-white"></h>Zion Tech Group</h3>"
+                <h3 className="text-xl font-bold text-white">Zion Tech Group</h3>"
                 <p className="text-zion-cyan text-sm">Innovating Tomorrow</p>
               </div>
             </div>
@@ -110,28 +110,30 @@ export function Footer() {
             {/* Contact Info */}"
             <div className="space-y-3">"
               <div className="flex items-center space-x-3 text-zion-slate-light">"
-                <Mail className="h-4 w-4 text-zion-cyan" /" ></Mail>
-                <span></spa>contact@ziontechgroup.com</span>
+                <Mail className="h-4 w-4 text-zion-cyan" /" >
+                <span>contact@ziontechgroup.com</span>
               </div>"
               <div className="flex items-center space-x-3 text-zion-slate-light">"
-                <Phone className="h-4 w-4 text-zion-cyan" /" ></Phone>
-                <span></spa>+1 (555) 123-4567</span>
+                <Phone className="h-4 w-4 text-zion-cyan" /" >
+                <span>+1 (555) 123-4567</span>
               </div>"
               <div className="flex items-center space-x-3 text-zion-slate-light">"
-                <MapPin className="h-4 w-4 text-zion-cyan" /" ></MapPin>
-                <span></spa>123 Innovation Drive, Tech City, TC 12345</span>
+                <MapPin className="h-4 w-4 text-zion-cyan" /" >
+                <span>123 Innovation Drive, Tech City, TC 12345</span>
               </div>
             </div>
           </div>
 
           {/* Footer Sections */}
-          {footerSections.map((section) => (<div key={section.title}" >"
-              <h4 className="text-white font-semibold mb-4"></h>{section.title}</h4>"
-              <ul className="space-y-2">, {section.links.map((link) => (
+          {footerSections.map((section) => (
+            <div key={section.title}" >"
+              <h4 className="text-white font-semibold mb-4">{section.title}</h4>"
+              <ul className="space-y-2">
+                {section.links.map((link) => (
                   <li key={link.name}" >
                     <Link to={link.href}"
-                      className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm flex items-center group" >"
-                      <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" /" ></ArrowRight>
+                      className='text-zion-slate-light hover:text-zion-cyan transition-colors text-sm flex items-center group  >'
+                      <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" /" >
                       {link.name}
                     </Link>
                   </li>
@@ -155,7 +157,7 @@ export function Footer() {
                 type="email"
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-purple/50 focus:border-transparent"
-              /" ></input>"
+              /" >"
               <button className="px-6 py-3 bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple/80 hover:to-zion-cyan/80 text-white font-medium rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/25">
                 Subscribe
               </button>
@@ -167,20 +169,20 @@ export function Footer() {
         <div className="mt-16 pt-8 border-t border-zion-purple/20">"
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">"
             <div className="flex items-center space-x-3 text-zion-slate-light">"
-              <Shield className="h-5 w-5 text-zion-cyan" /" ></Shield>"
-              <span className="text-sm"></spa>SOC 2 Compliant</span>
+              <Shield className="h-5 w-5 text-zion-cyan" /" >"
+              <span className="text-sm">SOC 2 Compliant</span>
             </div>"
             <div className="flex items-center space-x-3 text-zion-slate-light">"
-              <Zap className="h-5 w-5 text-zion-cyan" /" ></Zap>"
-              <span className="text-sm"></spa>99.9% Uptime</span>
+              <Zap className="h-5 w-5 text-zion-cyan" /" >"
+              <span className="text-sm">99.9% Uptime</span>
             </div>"
             <div className="flex items-center space-x-3 text-zion-slate-light">"
-              <Users className="h-5 w-5 text-zion-cyan" /" ></Users>"
-              <span className="text-sm"></spa>500+ Clients</span>
+              <Users className="h-5 w-5 text-zion-cyan" /" >"
+              <span className="text-sm">500+ Clients</span>
             </div>"
             <div className="flex items-center space-x-3 text-zion-slate-light">"
-              <Globe className="h-5 w-5 text-zion-cyan" /" ></Globe>"
-              <span className="text-sm"></spa>Global Presence</span>
+              <Globe className="h-5 w-5 text-zion-cyan" /" >"
+              <span className="text-sm">Global Presence</span>
             </div>
           </div>
         </div>
@@ -217,7 +219,7 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 rounded-lg transition-all duration-300"
                   aria-label={social.name}" >"
-                  <social .icon className="h-5 w-5" /" ></social>
+                  <social .icon className="h-5 w-5" /" >
                 </a>
               ))}
             </div>

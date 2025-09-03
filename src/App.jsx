@@ -1,8 +1,8 @@
-import React, { Suspense, lazy } from 'react';"
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';"
-import { AppHeader, } from './layout/AppHeader.jsx';"
-import { Footer, } from './components/Footer.jsx';"
-import { ChatAssistant, } from './components/ChatAssistant.tsx';
+import React, { Suspense, lazy } from 'react
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom
+import { AppHeader } from './layout/AppHeader.jsx
+import { Footer } from './components/Footer.jsx
+import { ChatAssistant } from './components/ChatAssistant.tsx';
 
 // Home and main pages"
 const Home = lazy(() => import('./pages/Home.tsx'));"
@@ -16,21 +16,21 @@ const Careers = lazy(() => import('./pages/Careers.tsx'));"
 const Sitemap = lazy(() => import('./pages/Sitemap.jsx'));
 // Services pages
 const ComprehensivePricing = lazy(() =>"
-  import('./pages/ComprehensivePricing2025.tsx');
+  import('./pages/ComprehensivePricing2025.tsx')
 );
 // Loading component
 const LoadingSpinner = () => ("
   <div className='flex items-center justify-center min-h-screen'>"
-    <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-zion-cyan'></di></div>
-  </div>;
+    <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-zion-cyan'></div>
+  </div>
 );
 // Simple Services page component
 const ServicesPage = () => ("
   <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-24'>"
     <div className='container mx-auto px-4 py-16'>"
       <div className='text-center mb-16'>"
-        <h1 className='text-4xl md:text-6xl font-bold mb-6'>"
-          Our{"}"
+        <h1 className='text-4xl md:text-6xl font-bold mb-6'>'
+          Our{ }'
           <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400'>
             Services
           </span>
@@ -50,28 +50,28 @@ const ServicesPage = () => ("
           </p>
         </div>"
         <div className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20'>"
-          <h3 className='text-xl font-bold text-white mb-4'></h>Cybersecurity</h3>"
+          <h3 className='text-xl font-bold text-white mb-4'>Cybersecurity</h3>"
           <p className='text-gray-300'>
             Advanced security solutions with zero-trust architecture and threat
             detection.
           </p>
         </div>"
         <div className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20'>"
-          <h3 className='text-xl font-bold text-white mb-4'></h>Cloud & DevOps</h3>"
+          <h3 className='text-xl font-bold text-white mb-4'>Cloud & DevOps</h3>"
           <p className='text-gray-300'>
             Scalable cloud infrastructure and automated deployment solutions.
           </p>
         </div>
       </div>
     </div>
-  </div>;
+  </div>
 );
 
 function App() {
   return (
     <Router>"
       <div className='min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light'>
-        <AppHeader /" ></AppHeader>"
+        <AppHeader /" >"
         <main className='flex-1'>
           <Suspense fallback={<LoadingSpinner /" >}>
             <Routes>"
@@ -91,7 +91,7 @@ function App() {
               <Route"
                 path='*'
                 element={"
-                  <div className='flex items-center justify-center min-h-screen'></Route>"
+                  <div className='flex items-center justify-center min-h-screen'>"
                     <div className='text-center'>"
                       <h1 className='text-4xl font-bold text-zion-cyan mb-4'>
                         404 - Page Not Found
@@ -101,7 +101,7 @@ function App() {
                       </p>
                       <a "
                         href='/'
-                        className="bg-zion-purple text-white px-6 py-3 rounded-lg hover:bg-zion-purple-dark transition-colors" >
+                        className='bg-zion-purple text-white px-6 py-3 rounded-lg hover:bg-zion-purple-dark transition-colors  >
                         Go Home
                       </a>
                     </div>
@@ -111,8 +111,8 @@ function App() {
             </Routes>
           </Suspense>
         </main>
-        <Footer /" ></Footer>
-        <ChatAssistant /" ></ChatAssistant>
+        <Footer /' >
+        <ChatAssistant /" >
       </div>
     </Router>
   ),

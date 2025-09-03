@@ -29,7 +29,7 @@ class ImprovedAutomationOrchestrator {
       console.log('🎯 Starting automation orchestration...');
       // Define automation scripts to run;
       const automationScripts = [
-        {
+  {
           name: 'Performance Monitor',
           script: 'scripts/performance-monitor-improved.js',
           description: 'Monitor system and application performance',

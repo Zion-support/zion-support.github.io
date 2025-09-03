@@ -28,7 +28,7 @@ import {
 
 export default function AIDevelopment() {
   const features = [
-    {
+  {
       icon: Brain,
       title: 'Machine Learning',
       description: 'Advanced ML algorithms and models for predictive analytics and automation'
@@ -61,61 +61,61 @@ export default function AIDevelopment() {
   ];
 
   const services = [
-    {
+  {
       title: 'Custom AI Solutions',
       description: 'Tailored AI applications built specifically for your business needs',
       icon: Cpu,
-      features: ['Machine Learning Models', 'Deep Learning Networks', 'Predictive Analytics', 'Custom Algorithms']
+      features: ['Machine Learning Models,Deep Learning Networks,Predictive Analytics,Custom Algorithms']
     },
     {
       title: 'AI Integration',
       description: 'Seamlessly integrate AI capabilities into your existing systems',
       icon: Network,
-      features: ['API Development', 'System Integration', 'Data Pipeline Setup', 'Performance Optimization']
+      features: ['API Development,System Integration,Data Pipeline Setup,Performance Optimization']
     },
     {
       title: 'AI Consulting',
       description: 'Strategic guidance on AI implementation and digital transformation',
       icon: Settings,
-      features: ['AI Strategy Planning', 'Technology Assessment', 'ROI Analysis', 'Implementation Roadmap']
+      features: ['AI Strategy Planning,Technology Assessment,ROI Analysis,Implementation Roadmap']
     },
     {
       title: 'AI Training & Support',
       description: 'Comprehensive training and ongoing support for your AI initiatives',
       icon: Users,
-      features: ['Team Training', 'Documentation', 'Technical Support', 'Model Maintenance']
+      features: ['Team Training,Documentation,Technical Support,Model Maintenance']
     }
   ];
 
   const applications = [
-    {
+  {
       title: 'Chatbots & Virtual Assistants',
       description: 'Intelligent conversational agents for customer service',
       icon: MessageSquare,
-      useCases: ['Customer Support', 'Lead Generation', 'FAQ Automation', 'Appointment Scheduling']
+      useCases: ['Customer Support,Lead Generation,FAQ Automation,Appointment Scheduling']
     },
     {
       title: 'Computer Vision',
       description: 'Image and video analysis for various business applications',
       icon: Image,
-      useCases: ['Quality Control', 'Object Detection', 'Facial Recognition', 'Document Processing']
+      useCases: ['Quality Control,Object Detection,Facial Recognition,Document Processing']
     },
     {
       title: 'Natural Language Processing',
       description: 'Text analysis and language understanding solutions',
       icon: FileText,
-      useCases: ['Sentiment Analysis', 'Text Classification', 'Language Translation', 'Content Generation']
+      useCases: ['Sentiment Analysis,Text Classification,Language Translation,Content Generation']
     },
     {
       title: 'Predictive Analytics',
       description: 'Forecast trends and make data-driven decisions',
       icon: TrendingUp,
-      useCases: ['Sales Forecasting', 'Risk Assessment', 'Demand Planning', 'Customer Behavior Analysis']
+      useCases: ['Sales Forecasting,Risk Assessment,Demand Planning,Customer Behavior Analysis']
     }
   ];
 
   const technologies = [
-    { name: 'TensorFlow', category: 'ML Framework' },
+  { name: 'TensorFlow', category: 'ML Framework' },
     { name: 'PyTorch', category: 'ML Framework' },
     { name: 'OpenAI GPT', category: 'Language Model' },
     { name: 'Hugging Face', category: 'NLP Library' },
@@ -128,7 +128,7 @@ export default function AIDevelopment() {
   ];
 
   const benefits = [
-    {
+  {
       icon: TrendingUp,
       title: 'Increased Efficiency',
       description: 'Automate repetitive tasks and improve operational efficiency by up to 60%'

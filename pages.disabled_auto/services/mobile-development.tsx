@@ -66,15 +66,7 @@ export default function MobileDevelopment() {
         <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Stack</h2>
         <div className="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 text-sm">
           {[
-            'React Native',
-            'Expo',
-            'TypeScript',
-            'Zustand',
-            'Reanimated',
-            'Supabase',
-            'Firebase',
-            'Stripe',
-            'OneSignal',
+            'React Native,Expo,TypeScript,Zustand,Reanimated,Supabase,Firebase,Stripe,OneSignal',
           ].map(t => (
             <div
               key={t}

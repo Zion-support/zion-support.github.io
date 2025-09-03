@@ -5,7 +5,7 @@ import { MapPin, Clock, Users, Award, Heart, Lightbulb, Target, ArrowRight, Mail
 
 export default function Careers() {
   const openPositions = [
-    {
+  {
       title: 'Senior AI Engineer',
       department: 'AI & Machine Learning',
       location: 'Remote / Middletown, DE',
@@ -14,11 +14,7 @@ export default function Careers() {
       icon: Brain,
       description: 'Lead the development of cutting-edge AI solutions and machine learning models.',
       requirements: [
-        'Master\'s degree in Computer Science or related field',
-        '5+ years experience in AI/ML development',
-        'Proficiency in Python, TensorFlow, PyTorch',
-        'Experience with cloud platforms (AWS, Azure, GCP)',
-        'Strong problem-solving and communication skills'
+        'Master\'s degree in Computer Science or related field,5+ years experience in AI/ML development,Proficiency in Python, TensorFlow, PyTorch,Experience with cloud platforms (AWS, Azure, GCP),Strong problem-solving and communication skills'
       ]
     },
     {
@@ -30,11 +26,7 @@ export default function Careers() {
       icon: Cloud,
       description: 'Design and implement scalable cloud infrastructure solutions for enterprise clients.',
       requirements: [
-        'Bachelor\'s degree in Computer Science or related field',
-        '7+ years experience in cloud architecture',
-        'Certifications in AWS, Azure, or GCP',
-        'Experience with containerization (Docker, Kubernetes)',
-        'Strong understanding of DevOps practices'
+        'Bachelor\'s degree in Computer Science or related field,7+ years experience in cloud architecture,Certifications in AWS, Azure, or GCP,Experience with containerization (Docker, Kubernetes),Strong understanding of DevOps practices'
       ]
     },
     {
@@ -46,11 +38,7 @@ export default function Careers() {
       icon: Shield,
       description: 'Protect our clients\' digital assets with advanced security solutions and threat analysis.',
       requirements: [
-        'Bachelor\'s degree in Cybersecurity or related field',
-        '4+ years experience in cybersecurity',
-        'Certifications (CISSP, CISM, CEH preferred)',
-        'Experience with security tools and frameworks',
-        'Knowledge of compliance standards (SOC 2, ISO 27001)'
+        'Bachelor\'s degree in Cybersecurity or related field,4+ years experience in cybersecurity,Certifications (CISSP, CISM, CEH preferred),Experience with security tools and frameworks,Knowledge of compliance standards (SOC 2, ISO 27001)'
       ]
     },
     {
@@ -62,17 +50,13 @@ export default function Careers() {
       icon: Code,
       description: 'Build innovative web applications and microservices using modern technologies.',
       requirements: [
-        'Bachelor\'s degree in Computer Science or related field',
-        '3+ years experience in full-stack development',
-        'Proficiency in React, Node.js, TypeScript',
-        'Experience with databases (PostgreSQL, MongoDB)',
-        'Knowledge of modern development practices'
+        'Bachelor\'s degree in Computer Science or related field,3+ years experience in full-stack development,Proficiency in React, Node.js, TypeScript,Experience with databases (PostgreSQL, MongoDB),Knowledge of modern development practices'
       ]
     }
   ];
 
   const benefits = [
-    {
+  {
       title: 'Competitive Compensation',
       description: 'Above-market salaries with performance bonuses',
       icon: Award
@@ -105,7 +89,7 @@ export default function Careers() {
   ];
 
   const companyValues = [
-    {
+  {
       title: 'Innovation First',
       description: 'We push the boundaries of technology to create solutions that matter.',
       icon: Lightbulb

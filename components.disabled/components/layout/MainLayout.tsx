@@ -30,9 +30,13 @@ const MainLayout: React.FC<MainLayoutProps> = ({
       />
       <PerformanceOptimizer
         preloadImages={[
+<<<<<<< HEAD:components/layout/MainLayout.tsx
           '/hero-bg.jpg',
           '/services-bg.jpg',
           '/team-bg.jpg'
+=======
+          '/hero-bg.jpg,/services-bg.jpg,/team-bg.jpg'
+>>>>>>> main:components.disabled/components/layout/MainLayout.tsx
         ]}
         preloadFonts={[
           'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap'

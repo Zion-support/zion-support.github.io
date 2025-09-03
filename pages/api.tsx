@@ -5,7 +5,7 @@ import { Code, Key, Globe, Database, Shield, Zap, ArrowRight, Copy, CheckCircle,
 
 export default function API() {
   const apiEndpoints = [
-    {
+  {
       method: 'GET',
       endpoint: '/api/v1/ai/models',
       description: 'List all available AI models',
@@ -50,38 +50,38 @@ export default function API() {
   ];
 
   const sdkLanguages = [
-    {
+  {
       name: 'Python',
       version: 'v2.1.0',
       description: 'Official Python SDK for Zion Tech Group APIs',
       icon: '🐍',
-      features: ['Async support', 'Type hints', 'Error handling', 'Documentation']
+      features: ['Async support,Type hints,Error handling,Documentation']
     },
     {
       name: 'JavaScript',
       version: 'v1.8.0',
       description: 'Node.js and browser-compatible JavaScript SDK',
       icon: '🟨',
-      features: ['Promise-based', 'Browser support', 'TypeScript', 'Examples']
+      features: ['Promise-based,Browser support,TypeScript,Examples']
     },
     {
       name: 'Java',
       version: 'v1.5.0',
       description: 'Java SDK for enterprise applications',
       icon: '☕',
-      features: ['Maven support', 'Async operations', 'Logging', 'Testing']
+      features: ['Maven support,Async operations,Logging,Testing']
     },
     {
       name: 'C#',
       version: 'v1.3.0',
       description: '.NET SDK for Windows applications',
       icon: '🔷',
-      features: ['NuGet package', 'Async/await', 'LINQ support', 'Documentation']
+      features: ['NuGet package,Async/await,LINQ support,Documentation']
     }
   ];
 
   const codeExamples = [
-    {
+  {
       title: 'AI Model Prediction',
       language: 'python',
       code: `import ziontech
@@ -124,31 +124,30 @@ console.log(deployment.url);`,
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
   -d '{
-    "target": "https://example.com",
-    "scan_type": "vulnerability"
+    "target": "https://example.com,scan_type": "vulnerability"
   }'`,
       description: 'Perform security scans using our API'
     }
   ];
 
   const rateLimits = [
-    {
+  {
       plan: 'Free',
       requests: '1,000/month',
       burst: '10/minute',
-      features: ['Basic API access', 'Community support']
+      features: ['Basic API access,Community support']
     },
     {
       plan: 'Professional',
       requests: '100,000/month',
       burst: '100/minute',
-      features: ['Full API access', 'Priority support', 'Webhooks']
+      features: ['Full API access,Priority support,Webhooks']
     },
     {
       plan: 'Enterprise',
       requests: 'Unlimited',
       burst: '1,000/minute',
-      features: ['Unlimited access', 'Dedicated support', 'Custom limits']
+      features: ['Unlimited access,Dedicated support,Custom limits']
     }
   ];
 

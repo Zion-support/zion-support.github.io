@@ -83,8 +83,8 @@ const AccessibilityManager: React.FC = () => {
   const announceToScreenReader = (message: string) => {;
     if (settings.screenReader) {;
       const announcement = document.createElement('div');
-      announcement.setAttribute('aria-live', 'polite');
-      announcement.setAttribute('aria-atomic', 'true');
+      announcement.setAttribute('aria-live,polite');
+      announcement.setAttribute('aria-atomic,true');
       announcement.className = 'sr-only';
       announcement.textContent = message;
       document.body.appendChild(announcement);
@@ -145,7 +145,7 @@ const AccessibilityManager: React.FC = () => {
             <div className='mb-4'>
               <label className='block text-sm font-medium mb-2'>Font Size</label>
               <div className='flex space-x-2'>
-                {(['small', 'normal', 'large', 'xlarge'] as const).map((size) => (;
+                {(['small,normal,large,xlarge'] as const).map((size) => (;
                   <button;
                     key={size}
                     onClick={() => handleFontSizeChange(size)}

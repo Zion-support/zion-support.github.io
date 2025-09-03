@@ -5,7 +5,7 @@ import {
 } from 'lucide-react';
 export default function Research() {
   const researchAreas = [
-    {
+  {
       title: "Artificial Intelligence", description: "Advancing AI research in machine learning, natural language processing, and computer vision",
       publications: 45, researchers: 12,
       color: "from-purple-500 to-pink-500"
@@ -25,19 +25,19 @@ export default function Research() {
     };
   ];
   const recentPublications = [
-    {
+  {
       id: 1, title: "Quantum-Enhanced Machine Learning for Financial Risk Assessment",
-      authors: ["Dr. Sarah Chen", "Prof. Michael Rodriguez"], journal: "Nature Quantum Information",
+      authors: ["Dr. Sarah Chen,Prof. Michael Rodriguez"], journal: "Nature Quantum Information",
       date: "2025-01-10", citations: 23,
       featured: true
     }, {
       id: 2,
-      title: "AI-Driven Cybersecurity: Autonomous Threat Detection Systems", authors: ["Lisa Park", "David Kumar"], journal: "IEEE Security & Privacy",
+      title: "AI-Driven Cybersecurity: Autonomous Threat Detection Systems", authors: ["Lisa Park,David Kumar"], journal: "IEEE Security & Privacy",
       date: "2025-01-05", citations: 18,
       featured: true
     }, {
       id: 3,
-      title: "Edge Computing Optimization for IoT Applications", authors: ["Maria Santos", "Alex Thompson"], journal: "ACM Computing Surveys",
+      title: "Edge Computing Optimization for IoT Applications", authors: ["Maria Santos,Alex Thompson"], journal: "ACM Computing Surveys",
       date: "2024-12-28", citations: 15,
       featured: false
     };
@@ -170,7 +170,7 @@ export default function Research() {
                   
                   <div className="mb-4">
                     <p className="text-sm text-gray-400 mb-1">Authors: </p>
-                    <p className="text-blue-400">{publication.authors.join(", ")}</p>
+                    <p className="text-blue-400">{publication.authors.join(,)}</p>
                   </div>
 
                   <div className="mb-4">

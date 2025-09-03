@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';"
+import React, { useState, useRef, useEffect } from 'react
 import { Search, X, TrendingUp, Clock, FileText, Users, Briefcase, Globe } from 'lucide-react';
 
 export function EnhancedSearchInput({ 
@@ -6,8 +6,8 @@ export function EnhancedSearchInput({
   onChange, 
   onSelectSuggestion, 
   suggestions = [], "
-  placeholder = "Search...","
-  className = ",
+  placeholder = "Search...,
+  className = "",
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const [filteredSuggestions, setFilteredSuggestions] = useState([]);
@@ -17,7 +17,8 @@ export function EnhancedSearchInput({
 
   useEffect(() => {
     if (value.trim()) {
-      const filtered = suggestions.filter(suggestion =>, suggestion.toLowerCase().includes(value.toLowerCase());
+      const filtered = suggestions.filter(suggestion =>
+        suggestion.toLowerCase().includes(value.toLowerCase())
       );
       setFilteredSuggestions(filtered.slice(0, 8));
       setIsOpen(true);,
@@ -30,8 +31,8 @@ export function EnhancedSearchInput({
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (inputRef.current &&, !inputRef.current.contains(event.target) &&
-          suggestionsRef.current && !suggestionsRef.current.contains(event.target)) {;
+      if (inputRef.current && !inputRef.current.contains(event.target) &&
+          suggestionsRef.current && !suggestionsRef.current.contains(event.target)) {
         setIsOpen(false);,
 }
     };
@@ -40,7 +41,7 @@ export function EnhancedSearchInput({
     return () => document.removeEventListener('mousedown', handleClickOutside);,
 }, []);
 
-  const handleKeyDown = (e) => {;
+  const handleKeyDown = (e) => {
     if (!isOpen) return;
 
     switch (e.key) {"
@@ -52,11 +53,11 @@ export function EnhancedSearchInput({
         break;"
       case 'ArrowUp':
         e.preventDefault();
-        setHighlightedIndex(prev => prev > 0 ? prev - 1 :, -1);
+        setHighlightedIndex(prev => prev > 0 ? prev - 1 : -1);
         break;"
       case 'Enter':
         e.preventDefault();
-        if (highlightedIndex >= 0 &&, filteredSuggestions[highlightedIndex]) {
+        if (highlightedIndex >= 0 && filteredSuggestions[highlightedIndex]) {
           handleSuggestionSelect(filteredSuggestions[highlightedIndex]);,
 }
         break;"
@@ -67,20 +68,20 @@ export function EnhancedSearchInput({
 }
   };
 
-  const handleSuggestionSelect = (suggestion) => {;
+  const handleSuggestionSelect = (suggestion) => {
     onSelectSuggestion?.(suggestion);
     setIsOpen(false);
     setHighlightedIndex(-1);,
 };
 
-  const handleClear = () => {";
-    onChange(");
+  const handleClear = () => {"
+    onChange('');
     setIsOpen(false);
     setHighlightedIndex(-1);
     inputRef.current?.focus();,
 };
 
-  const getSuggestionIcon = (suggestion) => {;
+  const getSuggestionIcon = (suggestion) => {
     const lowerSuggestion = suggestion.toLowerCase();"
     if (lowerSuggestion.includes('service') || lowerSuggestion.includes('solution')) {
       return Briefcase;",
@@ -88,26 +89,35 @@ export function EnhancedSearchInput({
       return Users;",
 } else if (lowerSuggestion.includes('document') || lowerSuggestion.includes('guide')) {
       return FileText;",
-} else if (lowerSuggestion.includes('trend') || lowerSuggestion.includes('popular")) {
+} else if (lowerSuggestion.includes('trend') || lowerSuggestion.includes('popular')) {
       return TrendingUp;,
 } else {
       return Globe;,
 }
   };
 
-  const recentSearches = ["AI Services","Cloud Migration","Cybersecurity","Digital Transformation",;
+  const recentSearches = ["
+    'AI Services,
+    'Cloud Migration,
+    'Cybersecurity,
+    'Digital Transformation',;
 ];
 
-  const popularSearches = ["Micro SAAS","IT Infrastructure","DevOps","Machine Learning',;
+  const popularSearches = ["
+    'Micro SAAS,
+    'IT Infrastructure,
+    'DevOps,
+    'Machine Learning',;
 ];
 
   return ("
     <div className="relative" ref={inputRef}" >"
       <div className="relative">"
-        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" /" ></Search>
+        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" /" >
         <input "
           type="text"
-          value={value}, onChange={(e) =" ></input> onChange(e.target.value)}
+          value={value}
+          onChange={(e) =" > onChange(e.target.value)}
           onKeyDown={handleKeyDown}
           onFocus={() => value.trim() && setIsOpen(true)}
           placeholder={placeholder}
@@ -115,8 +125,8 @@ export function EnhancedSearchInput({
         />
         {value && (
           <button onClick={handleClear}"
-            className="absolute right-3 top-1/2 transform -translate-y-1/2 p-1 text-zion-slate-light hover:text-white hover:bg-zion-purple/10 rounded transition-colors" >"
-            <X className="h-4 w-4" /" ></X>
+            className="absolute right-3 top-1/2 transform -translate-y-1/2 p-1 text-zion-slate-light hover:text-white hover:bg-zion-purple/10 rounded transition-colors"" >"
+            <X className="h-4 w-4" /" >
           </button>
         )}
       </div>
@@ -124,7 +134,7 @@ export function EnhancedSearchInput({
       {/* Suggestions Dropdown */}
       {isOpen && (
         <div ref={suggestionsRef}"
-          className="absolute top-full left-0 right-0 mt-2 bg-zion-blue-dark/95 backdrop-blur-xl border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50 max-h-96 overflow-y-auto" >
+          className="absolute top-full left-0 right-0 mt-2 bg-zion-blue-dark/95 backdrop-blur-xl border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50 max-h-96 overflow-y-auto"" >
           {/* Search Results */}
           {filteredSuggestions.length > 0 && ("
             <div className="py-2">"
@@ -133,15 +143,17 @@ export function EnhancedSearchInput({
               </div>
               {filteredSuggestions.map((suggestion, index) => {
                 const Icon = getSuggestionIcon(suggestion);
-                return (<button key={suggestion}, onClick={() =" > handleSuggestionSelect(suggestion)}`
+                return (
+                  <button key={suggestion}
+                    onClick={() =" > handleSuggestionSelect(suggestion)}`
                     className={`w-full flex items-center px-3 py-2 text-sm transition-colors ${
                       index === highlightedIndex"
                         ? 'text-white bg-zion-purple/20'
                         : 'text-zion-slate-light hover:text-white hover:bg-zion-purple/10',`
 }`}
                   >"
-                    <Icon className="h-4 w-4 mr-3 text-zion-cyan flex-shrink-0" /" ></Icon>"
-                    <span className="truncate"></spa>{suggestion}</span>
+                    <Icon className="h-4 w-4 mr-3 text-zion-cyan flex-shrink-0" /" >"
+                    <span className="truncate">{suggestion}</span>
                   </button>
                 );,
 })}
@@ -149,30 +161,36 @@ export function EnhancedSearchInput({
           )}
 
           {/* Recent Searches */}"
-          {value.trim() === " && ("
+          {value.trim() === '' && ("
             <div className="py-2">"
               <div className="px-3 py-2 text-xs font-semibold text-zion-cyan uppercase tracking-wider">
                 Recent Searches
-              </div>, {recentSearches.map((search) => (<button key={search}, onClick={() =" > handleSuggestionSelect(search)}"
+              </div>
+              {recentSearches.map((search) => (
+                <button key={search}
+                  onClick={() =" > handleSuggestionSelect(search)}"
                   className="w-full flex items-center px-3 py-2 text-sm text-zion-slate-light hover:text-white hover:bg-zion-purple/10 transition-colors"
                 >"
-                  <Clock className="h-4 w-4 mr-3 text-zion-slate-light" /" ></Clock>
-                  <span></spa>{search}</span>
+                  <Clock className="h-4 w-4 mr-3 text-zion-slate-light" /" >
+                  <span>{search}</span>
                 </button>
               ))}
             </div>
           )}
 
           {/* Popular Searches */}"
-          {value.trim() === " && ("
+          {value.trim() === '' && ("
             <div className="py-2">"
               <div className="px-3 py-2 text-xs font-semibold text-zion-cyan uppercase tracking-wider">
                 Popular Searches
-              </div>, {popularSearches.map((search) => (<button key={search}, onClick={() =" > handleSuggestionSelect(search)}"
+              </div>
+              {popularSearches.map((search) => (
+                <button key={search}
+                  onClick={() =" > handleSuggestionSelect(search)}"
                   className="w-full flex items-center px-3 py-2 text-sm text-zion-slate-light hover:text-white hover:bg-zion-purple/10 transition-colors"
                 >"
-                  <TrendingUp className="h-4 w-4 mr-3 text-zion-cyan" /" ></TrendingUp>
-                  <span></spa>{search}</span>
+                  <TrendingUp className="h-4 w-4 mr-3 text-zion-cyan" /" >
+                  <span>{search}</span>
                 </button>
               ))}
             </div>
@@ -181,7 +199,7 @@ export function EnhancedSearchInput({
           {/* No Results */}
           {value.trim() && filteredSuggestions.length === 0 && ("
             <div className="py-4 text-center">"
-              <div className="text-zion-slate-light text-sm mb-2"></di>No results found</div>"
+              <div className="text-zion-slate-light text-sm mb-2">No results found</div>"
               <div className="text-xs text-zion-slate-light">
                 Try different keywords or browse our categories
               </div>

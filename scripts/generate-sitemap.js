@@ -36,11 +36,11 @@ function getPages(dir, basePath = '') {
 
 // Generate sitemap.xml
 function generateSitemap() {
-  const pagesDir = path.join(__dirname, '..', 'pages');
+  const pagesDir = path.join(__dirname, '..,pages');
   const pages = getPages(pagesDir);
 
   const baseUrl = 'https://ziontechgroup.com';
-  const pages = ['/', '/about', '/services', '/contact', '/blog', '/careers'];
+  const pages = ['/,/about,/services,/contact,/blog,/careers'];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -57,7 +57,7 @@ function generateSitemap() {
     .join('\n')}
 </urlset>`;
 
-  const outputPath = path.join(__dirname, '..', 'public', 'sitemap.xml');
+  const outputPath = path.join(__dirname, '..,public,sitemap.xml');
   fs.writeFileSync(outputPath, sitemap);
 
   console.log(`Generated sitemap with ${pages.length} pages`);

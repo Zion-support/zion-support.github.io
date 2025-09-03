@@ -1,12 +1,12 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 const initialState = { items: [] };
-export const getApiUrl = () => {;
+export const getApiUrl = () => {
   const env = import.meta?.env || process.env;"
-  return env.VITE_API_URL || env.API_URL || 'http: //localhost:3000";,
+  return env.VITE_API_URL || env.API_URL || 'http: //localhost:3000';,
 };
-export const loadWishlistFromDB = createAsyncThunk("wishlist/loadFromDB', async (userId) => {;
+export const loadWishlistFromDB = createAsyncThunk( wishlist/loadFromDB', async (userId) => {
     const res = await fetch(`${getApiUrl()}/wishlist?userId=${userId}`);"
-    if (!res.ok) throw new Error('Failed to, load');
+    if (!res.ok) throw new Error('Failed to load');
     return await res.json();,
 }
 );
@@ -15,11 +15,11 @@ const wishlistSlice = createSlice({"
   reducers: {
     addToWishlist(state, action) {
       const exists = state.items.some(
-        item => item.id === action.payload.id && item.type === action.payload.type;
+        item => item.id === action.payload.id && item.type === action.payload.type
       );
       if (!exists) state.items.push(action.payload);,
 }, removeFromWishlist(state, action) {
-      state.items = state.items.filter(item => item.id !==, action.payload.id);,
+      state.items = state.items.filter(item => item.id !== action.payload.id);,
 }
   }, extraReducers: builder => {
     builder.addCase(loadWishlistFromDB.fulfilled, (state, action) => {

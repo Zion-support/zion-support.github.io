@@ -1,6 +1,6 @@
-import React, { createContext, useContext, useReducer, useEffect } from 'react';"
-import { safeStorage, } from '@/utils/safeStorage';"
-import { useAuth, } from '@/hooks/useAuth';"
+import React, { createContext, useContext, useReducer, useEffect } from 'react
+import { safeStorage } from '@/utils/safeStorage
+import { useAuth } from '@/hooks/useAuth
 import { getCartKey, mergeCartItems } from '@/utils/cartUtils';
 
 const initialState = { items: [] };
@@ -8,7 +8,7 @@ const initialState = { items: [] };
 function cartReducer(state, action) {
     switch (action.type) {"
         case 'ADD_ITEM': {
-            const existing = state.items.find(i => i.id ===, action.payload.id);
+            const existing = state.items.find(i => i.id === action.payload.id);
             let items;
             if (existing) {
                 items = state.items.map(i => i.id === action.payload.id
@@ -20,7 +20,7 @@ function cartReducer(state, action) {
             return { items };,
 }"
         case 'REMOVE_ITEM':
-            return { items: state.items.filter(i => i.id !==, action.payload) };"
+            return { items: state.items.filter(i => i.id !== action.payload) };"
         case 'UPDATE_QUANTITY': {
             const { id, quantity } = action.payload;
             return {
@@ -43,12 +43,12 @@ const CartContext = createContext(null);
 export function useCart() {
     const ctx = useContext(CartContext);
     if (!ctx) {"
-        throw new Error('useCart must be used within a, CartProvider');,
+        throw new Error('useCart must be used within a CartProvider');,
 }
     return ctx;,
 }
 
-export function CartProvider({ children, }) {
+export function CartProvider({ children }) {
     const { user } = useAuth();
     const [state, dispatch] = useReducer(cartReducer, initialState);
     const cartKey = getCartKey(user?.id);
@@ -91,11 +91,11 @@ export function CartProvider({ children, }) {
         addItem: (item) => dispatch({ type: 'ADD_ITEM', payload: item }),"
         removeItem: (id) => dispatch({ type: 'REMOVE_ITEM', payload: id }),"
         updateQuantity: (id, quantity) => dispatch({ type: 'UPDATE_QUANTITY', payload: { id, quantity } }),"
-        clearCart: () => dispatch({ type: 'CLEAR_CART', }),
+        clearCart: () => dispatch({ type: 'CLEAR_CART' }),
         getTotalItems: () => state.items.reduce((total, item) => total + item.quantity, 0),
-        getTotalPrice: () => state.items.reduce((total, item) => total + (item.price *, item.quantity), 0),;
+        getTotalPrice: () => state.items.reduce((total, item) => total + (item.price * item.quantity), 0),
 };
 
-    return <CartContext .Provider value={value}" ></CartContext>{children}</CartContext.Provider>;,
+    return <CartContext .Provider value={value}" >{children}</CartContext.Provider>;,
 }
 "
