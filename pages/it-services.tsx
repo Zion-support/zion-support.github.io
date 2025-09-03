@@ -723,6 +723,105 @@ export default function ITServices() {
       pricing: '$3,000 - $15,000/month',
       delivery: '3-6 weeks',
       category: 'Network Security'
+    },
+    {
+      title: 'AI-Powered IT Operations (AIOps)',
+      description: 'Intelligent IT operations with AI-driven automation and predictive analytics',
+      icon: Brain,
+      features: [
+        'AI-powered incident detection and resolution,Automated root cause analysis and remediation,Predictive capacity planning and scaling,Intelligent alert correlation and noise reduction,Automated performance optimization,Self-healing infrastructure capabilities'
+      ],
+      pricing: '$5,000 - $25,000/month',
+      delivery: '6-12 weeks',
+      category: 'AIOps Services'
+    },
+    {
+      title: 'Zero Trust Security Architecture',
+      description: 'Comprehensive zero trust security implementation with identity and access management',
+      icon: Shield,
+      features: [
+        'Zero trust network architecture design,Identity and access management (IAM) implementation,Multi-factor authentication and SSO,Micro-segmentation and network isolation,Continuous security monitoring and validation,Privileged access management (PAM)'
+      ],
+      pricing: '$8,000 - $40,000/month',
+      delivery: '8-16 weeks',
+      category: 'Security Services'
+    },
+    {
+      title: 'Quantum-Safe Cryptography Implementation',
+      description: 'Future-proof cryptographic solutions resistant to quantum computing threats',
+      icon: Lock,
+      features: [
+        'Post-quantum cryptography algorithm implementation,Quantum key distribution (QKD) systems,Hybrid classical-quantum security protocols,Cryptographic migration planning and execution,Quantum-safe certificate management,Compliance with quantum security standards'
+      ],
+      pricing: '$15,000 - $75,000/month',
+      delivery: '12-24 weeks',
+      category: 'Quantum Security'
+    },
+    {
+      title: 'Edge Computing Infrastructure',
+      description: 'Distributed edge computing solutions for low-latency applications and IoT',
+      icon: Cpu,
+      features: [
+        'Edge computing platform design and deployment,Distributed data processing and analytics,Edge AI and machine learning deployment,5G network integration and optimization,Edge security and device management,Multi-cloud edge orchestration'
+      ],
+      pricing: '$6,000 - $30,000/month',
+      delivery: '8-16 weeks',
+      category: 'Edge Computing'
+    },
+    {
+      title: 'Green IT & Sustainability Solutions',
+      description: 'Environmentally conscious IT infrastructure and carbon footprint reduction',
+      icon: TreePine,
+      features: [
+        'Energy-efficient data center design and optimization,Renewable energy integration and management,Carbon footprint tracking and reduction strategies,E-waste management and recycling programs,Green cloud computing and virtualization,Sustainability reporting and compliance'
+      ],
+      pricing: '$4,000 - $20,000/month',
+      delivery: '6-12 weeks',
+      category: 'Green IT'
+    },
+    {
+      title: 'Hyperconverged Infrastructure (HCI)',
+      description: 'Simplified infrastructure management with integrated compute, storage, and networking',
+      icon: Server,
+      features: [
+        'HCI platform design and implementation,Software-defined infrastructure management,Automated resource provisioning and scaling,Integrated backup and disaster recovery,Performance monitoring and optimization,Multi-site HCI deployment and management'
+      ],
+      pricing: '$5,000 - $25,000/month',
+      delivery: '6-12 weeks',
+      category: 'Infrastructure Services'
+    },
+    {
+      title: 'Multi-Cloud Management Platform',
+      description: 'Unified management and orchestration across multiple cloud providers',
+      icon: Cloud,
+      features: [
+        'Multi-cloud strategy and architecture design,Cloud cost optimization and FinOps,Unified monitoring and management dashboard,Cross-cloud data migration and synchronization,Disaster recovery and business continuity,Compliance and governance across clouds'
+      ],
+      pricing: '$7,000 - $35,000/month',
+      delivery: '8-16 weeks',
+      category: 'Cloud Services'
+    },
+    {
+      title: 'IT Service Management (ITSM) Platform',
+      description: 'Comprehensive IT service delivery and support management system',
+      icon: Settings,
+      features: [
+        'ITIL-compliant service management implementation,Incident and problem management automation,Change management and approval workflows,Service catalog and self-service portal,Asset and configuration management,Performance analytics and reporting'
+      ],
+      pricing: '$3,000 - $15,000/month',
+      delivery: '4-8 weeks',
+      category: 'Service Management'
+    },
+    {
+      title: 'Advanced Threat Intelligence Platform',
+      description: 'Proactive threat hunting and intelligence-driven security operations',
+      icon: Shield,
+      features: [
+        'Threat intelligence collection and analysis,Advanced persistent threat (APT) detection,Hunting and investigation capabilities,Threat actor profiling and attribution,Incident response automation and orchestration,Threat intelligence sharing and collaboration'
+      ],
+      pricing: '$10,000 - $50,000/month',
+      delivery: '10-20 weeks',
+      category: 'Threat Intelligence'
     }
   ];
 
