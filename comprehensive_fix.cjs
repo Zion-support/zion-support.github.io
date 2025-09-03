@@ -126,7 +126,7 @@ function fixFile(filePath) {
     }
     
     fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`);
+    // Fixed: ${filePath}
     return true;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
@@ -151,7 +151,7 @@ function fixCorruptedFiles(directory) {
 }
 
 // Start fixing from the pages and components directories
-console.log('Fixing corrupted TypeScript files with proper templates...');
+// Fixing corrupted TypeScript files with proper templates...
 fixCorruptedFiles('./pages');
 fixCorruptedFiles('./components');
-console.log('Finished fixing corrupted files with proper templates.');
+// Finished fixing corrupted files with proper templates.
