@@ -1476,7 +1476,57 @@ export default function AIServices() {
       ],
       pricing: '$10,000 - $50,000/month',
       delivery: '10-20 weeks',
-      category: 'Edge AI'}
+      category: 'Edge AI'},
+    {
+      title: 'AI-Powered Web3 Intelligence Platform',
+      description: 'Advanced Web3 analytics with DeFi optimization, NFT intelligence, and blockchain insights',
+      icon: Network,
+      features: [
+        'DeFi protocol analysis and yield optimization,NFT market intelligence and valuation,Cross-chain analytics and bridge monitoring,Smart contract security and risk assessment,Web3 user behavior and engagement analysis,Token economics and governance analysis,Integration with major blockchain networks,Real-time Web3 market intelligence'
+      ],
+      pricing: '$5,000 - $25,000/month',
+      delivery: '8-16 weeks',
+      category: 'Web3 AI'},
+    {
+      title: 'AI-Powered Metaverse Intelligence',
+      description: 'Intelligent metaverse analytics with virtual world optimization and avatar behavior analysis',
+      icon: Globe,
+      features: [
+        'Virtual world performance optimization,Avatar behavior analysis and personalization,Metaverse economy analytics and optimization,Cross-platform metaverse integration,Virtual event analytics and engagement tracking,3D content generation and optimization,Social interaction analysis in virtual spaces,Metaverse user journey and retention analysis'
+      ],
+      pricing: '$8,000 - $35,000/month',
+      delivery: '10-20 weeks',
+      category: 'Metaverse AI'},
+    {
+      title: 'AI-Powered Creator Economy Analytics',
+      description: 'Intelligent creator monetization platform with content optimization and audience insights',
+      icon: Users,
+      features: [
+        'Content performance prediction and optimization,Audience growth and engagement analytics,Monetization strategy optimization,Creator collaboration and networking insights,Platform algorithm optimization,Revenue forecasting and growth strategies,Creator wellness and burnout prevention,Multi-platform content distribution optimization'
+      ],
+      pricing: '$2,000 - $12,000/month',
+      delivery: '4-8 weeks',
+      category: 'Creator Economy AI'},
+    {
+      title: 'AI-Powered Remote Work Intelligence',
+      description: 'Intelligent remote work optimization with productivity analytics and team collaboration insights',
+      icon: Monitor,
+      features: [
+        'Productivity pattern analysis and optimization,Team collaboration effectiveness measurement,Work-life balance monitoring and recommendations,Remote work environment optimization,Employee engagement and satisfaction tracking,Performance analytics and goal tracking,Wellness monitoring and burnout prevention,Integration with remote work tools and platforms'
+      ],
+      pricing: '$1,500 - $8,000/month',
+      delivery: '3-6 weeks',
+      category: 'Remote Work AI'},
+    {
+      title: 'AI-Powered Sustainability Intelligence',
+      description: 'Intelligent sustainability management with ESG tracking and carbon reduction optimization',
+      icon: TreePine,
+      features: [
+        'ESG performance tracking and optimization,Carbon footprint calculation and reduction strategies,Sustainable supply chain optimization,Environmental impact assessment and monitoring,Compliance tracking for sustainability regulations,Stakeholder engagement and transparency analytics,Integration with sustainability frameworks,Performance benchmarking and industry comparisons'
+      ],
+      pricing: '$3,000 - $15,000/month',
+      delivery: '6-12 weeks',
+      category: 'Sustainability AI'}
   ]
   const aiTechnologies = [
   {
@@ -1540,7 +1590,7 @@ export default function AIServices() {
         <title>{title}</title>
         <meta name="description content={description} />
         <meta name=viewport" content="width=device-width, initial-scale=1 />
-        <link rel=canonical" href="https://ziontechgroup.com/ai-services />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-services" />
       </Head>
 
       <Navigation />

@@ -1345,7 +1345,47 @@ export default function ITServices() {
       ],
       pricing: '$30,000 - $250,000/month',
       delivery: '20-40 weeks',
-      category: 'Federated Learning Services'}
+      category: 'Federated Learning Services'},
+    {
+      title: 'Software Supply Chain Security (SSCS)',
+      description: 'End-to-end software supply chain hardening: SBOM, signing, provenance, and CI/CD attestation',
+      icon: Shield,
+      features: [
+        'SBOM generation (CycloneDX, SPDX),Provenance via SLSA attestations,Code signing and artifact signing (Sigstore),Dependency risk scoring and auto-remediation,Repo policy enforcement and branch protection,Container image scanning and signing,CI/CD pipeline hardening and secrets hygiene,Compliance reporting (SOC2, ISO, NIST)'
+      ],
+      pricing: '$6,000 - $28,000/month',
+      delivery: '4-10 weeks',
+      category: 'Security Services'},
+    {
+      title: 'Data Mesh Enablement',
+      description: 'Domain-oriented data ownership with self-serve platform, governance, and product SLAs',
+      icon: Database,
+      features: [
+        'Data product blueprints and contracts,Decentralized governance and catalog,Streaming-first architectures (Kafka),Federated computational governance,Platform self-service portals,Lineage, quality, and observability,Inter-domain interoperability standards,Cost allocation and showback models'
+      ],
+      pricing: '$12,000 - $70,000/month',
+      delivery: '8-20 weeks',
+      category: 'Data Platform Services'},
+    {
+      title: 'GenAI Platform Engineering',
+      description: 'Enterprise-grade LLM platform: retrieval, safety, evals, guardrails, and cost control',
+      icon: Brain,
+      features: [
+        'RAG with vector stores and hybrid search,Prompt orchestration and evaluation,Policy guardrails and red-teaming,Sensitive data filtering and PII masking,FinOps for token usage and caching,Observability (traces, tokens, latency),Human-in-the-loop review workflows,Multi-model routing and failover'
+      ],
+      pricing: '$18,000 - $120,000/month',
+      delivery: '6-16 weeks',
+      category: 'AI Platform Services'},
+    {
+      title: 'FinOps Automation & Cloud Unit Economics',
+      description: 'Automate cost optimization with unit economics, anomaly detection, and governance',
+      icon: TrendingUp,
+      features: [
+        'Business-metric cost allocation,Forecasting and anomaly detection,Idle/overprovisioned resource cleanup,Spot/RI/Savings Plan automation,Policy-as-code guardrails,Chargeback/showback dashboards,Multi-cloud normalization,Executive reporting packs'
+      ],
+      pricing: '$7,000 - $40,000/month',
+      delivery: '4-10 weeks',
+      category: 'Cloud Optimization Services'}
   ]
 
   const technologies = [
