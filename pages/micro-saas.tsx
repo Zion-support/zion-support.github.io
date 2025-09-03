@@ -1066,6 +1066,358 @@ export default function MicroSaaS() {
         'Improved user onboarding'
       ],
       category: 'Identity Management'
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Content Moderation Suite',
+      description: 'Automated content moderation for social media, forums, and user-generated content using advanced AI.',
+      features: [
+        'Real-time content analysis and filtering',
+        'Multi-language toxic content detection',
+        'Image and video content moderation',
+        'Custom moderation rules and policies',
+        'Human-in-the-loop escalation',
+        'Compliance reporting and analytics'
+      ],
+      pricing: '$399 – $2,999/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '99.5% accuracy in content moderation',
+        '24/7 automated content screening',
+        'Reduced moderation costs by 80%',
+        'Improved platform safety and compliance'
+      ],
+      category: 'Content Management'
+    },
+    {
+      icon: Zap,
+      name: 'Smart Energy Management System',
+      description: 'AI-driven energy optimization for buildings and facilities with predictive analytics.',
+      features: [
+        'Real-time energy consumption monitoring',
+        'Predictive energy demand forecasting',
+        'Automated load balancing and optimization',
+        'Renewable energy integration management',
+        'Cost optimization recommendations',
+        'Carbon footprint tracking and reporting'
+      ],
+      pricing: '$599 – $3,999/month',
+      timeline: '4–6 weeks',
+      benefits: [
+        '25% reduction in energy costs',
+        'Automated energy optimization',
+        'Improved sustainability metrics',
+        'Predictive maintenance capabilities'
+      ],
+      category: 'Energy Management'
+    },
+    {
+      icon: Shield,
+      name: 'AI Fraud Detection & Prevention',
+      description: 'Advanced fraud detection system using machine learning for financial transactions and user behavior.',
+      features: [
+        'Real-time transaction fraud detection',
+        'Behavioral pattern analysis',
+        'Machine learning model training',
+        'Risk scoring and assessment',
+        'Automated fraud prevention actions',
+        'Compliance and regulatory reporting'
+      ],
+      pricing: '$799 – $4,999/month',
+      timeline: '4–6 weeks',
+      benefits: [
+        '95% fraud detection accuracy',
+        'Real-time fraud prevention',
+        'Reduced false positives by 60%',
+        'Automated compliance reporting'
+      ],
+      category: 'Financial Security'
+    },
+    {
+      icon: Globe,
+      name: 'Smart City IoT Management Platform',
+      description: 'Comprehensive IoT device management and data analytics for smart city infrastructure.',
+      features: [
+        'IoT device monitoring and management',
+        'Real-time data collection and analysis',
+        'Predictive maintenance scheduling',
+        'Traffic and environmental monitoring',
+        'Citizen engagement and feedback systems',
+        'Integration with city management systems'
+      ],
+      pricing: '$1,999 – $9,999/month',
+      timeline: '6–8 weeks',
+      benefits: [
+        '30% improvement in city efficiency',
+        'Automated infrastructure monitoring',
+        'Enhanced citizen services',
+        'Data-driven city planning'
+      ],
+      category: 'Smart City Solutions'
+    },
+    {
+      icon: Users,
+      name: 'AI-Powered Mental Health Assistant',
+      description: 'Intelligent mental health support platform with mood tracking and wellness recommendations.',
+      features: [
+        'AI-powered mood analysis and tracking',
+        'Personalized wellness recommendations',
+        'Crisis detection and intervention alerts',
+        'Therapist matching and appointment scheduling',
+        'Privacy-focused data handling',
+        'Integration with wearable devices'
+      ],
+      pricing: '$299 – $1,999/month',
+      timeline: '4–6 weeks',
+      benefits: [
+        'Improved mental health outcomes',
+        '24/7 mental health support',
+        'Early intervention capabilities',
+        'Reduced healthcare costs'
+      ],
+      category: 'Healthcare Technology'
+    },
+    {
+      icon: BarChart3,
+      name: 'Predictive Maintenance AI',
+      description: 'AI-driven predictive maintenance for industrial equipment and machinery.',
+      features: [
+        'Equipment health monitoring and analysis',
+        'Predictive failure detection',
+        'Maintenance scheduling optimization',
+        'Spare parts inventory management',
+        'Cost-benefit analysis for repairs',
+        'Integration with existing maintenance systems'
+      ],
+      pricing: '$999 – $5,999/month',
+      timeline: '4–6 weeks',
+      benefits: [
+        '40% reduction in unplanned downtime',
+        'Optimized maintenance schedules',
+        'Reduced maintenance costs by 25%',
+        'Extended equipment lifespan'
+      ],
+      category: 'Industrial IoT'
+    },
+    {
+      icon: FileText,
+      name: 'AI Legal Document Analyzer',
+      description: 'Intelligent legal document analysis and contract review using natural language processing.',
+      features: [
+        'Automated contract analysis and review',
+        'Risk assessment and identification',
+        'Legal precedent research and citation',
+        'Document comparison and version control',
+        'Compliance checking and validation',
+        'Legal research and case law analysis'
+      ],
+      pricing: '$599 – $3,999/month',
+      timeline: '4–6 weeks',
+      benefits: [
+        '80% reduction in document review time',
+        'Improved legal accuracy and consistency',
+        'Automated risk identification',
+        'Enhanced legal research capabilities'
+      ],
+      category: 'Legal Technology'
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Personalization Engine',
+      description: 'Advanced personalization platform for e-commerce, content, and user experiences.',
+      features: [
+        'Real-time user behavior analysis',
+        'Dynamic content personalization',
+        'Product recommendation optimization',
+        'A/B testing and experimentation',
+        'Cross-platform personalization',
+        'Privacy-compliant data handling'
+      ],
+      pricing: '$499 – $2,999/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '35% increase in conversion rates',
+        'Improved user engagement',
+        'Automated personalization at scale',
+        'Enhanced customer satisfaction'
+      ],
+      category: 'Personalization'
+    },
+    {
+      icon: Shield,
+      name: 'Blockchain Supply Chain Tracker',
+      description: 'Transparent supply chain tracking using blockchain technology for authenticity and compliance.',
+      features: [
+        'End-to-end supply chain visibility',
+        'Product authenticity verification',
+        'Compliance tracking and reporting',
+        'Smart contract automation',
+        'Supplier performance monitoring',
+        'Consumer transparency portal'
+      ],
+      pricing: '$799 – $4,999/month',
+      timeline: '4–6 weeks',
+      benefits: [
+        'Complete supply chain transparency',
+        'Reduced counterfeit products',
+        'Automated compliance reporting',
+        'Enhanced consumer trust'
+      ],
+      category: 'Blockchain Solutions'
+    },
+    {
+      icon: Globe,
+      name: 'AI-Powered Language Learning Platform',
+      description: 'Personalized language learning with AI tutors and adaptive curriculum.',
+      features: [
+        'AI-powered personalized learning paths',
+        'Real-time pronunciation assessment',
+        'Conversational AI practice partners',
+        'Adaptive difficulty adjustment',
+        'Progress tracking and analytics',
+        'Multi-language support and localization'
+      ],
+      pricing: '$199 – $1,299/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '50% faster language acquisition',
+        'Personalized learning experience',
+        '24/7 AI tutoring availability',
+        'Improved learning outcomes'
+      ],
+      category: 'EdTech'
+    },
+    {
+      icon: Zap,
+      name: 'Smart Home Automation Hub',
+      description: 'AI-powered smart home management with voice control and predictive automation.',
+      features: [
+        'Voice-controlled home automation',
+        'Predictive automation based on habits',
+        'Energy usage optimization',
+        'Security monitoring and alerts',
+        'Integration with 1000+ smart devices',
+        'Privacy-focused local processing'
+      ],
+      pricing: '$149 – $899/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '30% reduction in energy consumption',
+        'Enhanced home security',
+        'Improved convenience and comfort',
+        'Automated home management'
+      ],
+      category: 'Smart Home'
+    },
+    {
+      icon: Users,
+      name: 'AI-Powered Dating & Matchmaking',
+      description: 'Advanced matchmaking platform using AI to analyze compatibility and preferences.',
+      features: [
+        'AI-powered compatibility analysis',
+        'Behavioral pattern recognition',
+        'Photo verification and authenticity',
+        'Conversation starters and icebreakers',
+        'Safety features and reporting',
+        'Success tracking and feedback'
+      ],
+      pricing: '$299 – $1,999/month',
+      timeline: '4–6 weeks',
+      benefits: [
+        'Higher quality matches',
+        'Improved user safety',
+        'Enhanced user engagement',
+        'Better relationship outcomes'
+      ],
+      category: 'Social Technology'
+    },
+    {
+      icon: BarChart3,
+      name: 'AI-Powered Investment Advisor',
+      description: 'Intelligent investment platform with robo-advisory and portfolio optimization.',
+      features: [
+        'AI-powered portfolio optimization',
+        'Risk assessment and management',
+        'Market trend analysis and prediction',
+        'Automated rebalancing',
+        'Tax-loss harvesting',
+        'ESG and sustainable investing options'
+      ],
+      pricing: '$199 – $1,499/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        'Optimized investment returns',
+        'Automated portfolio management',
+        'Reduced investment fees',
+        'Data-driven investment decisions'
+      ],
+      category: 'FinTech'
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Voice Cloning Platform',
+      description: 'High-quality voice synthesis and cloning for content creation and accessibility.',
+      features: [
+        'High-fidelity voice cloning',
+        'Multi-language voice synthesis',
+        'Emotion and tone control',
+        'Real-time voice conversion',
+        'Privacy and consent management',
+        'API integration for applications'
+      ],
+      pricing: '$399 – $2,499/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        'High-quality voice synthesis',
+        'Accessibility improvements',
+        'Content creation automation',
+        'Multilingual voice support'
+      ],
+      category: 'Voice Technology'
+    },
+    {
+      icon: Shield,
+      name: 'AI-Powered Compliance Monitor',
+      description: 'Automated compliance monitoring and reporting for regulatory requirements.',
+      features: [
+        'Real-time compliance monitoring',
+        'Regulatory change tracking',
+        'Automated compliance reporting',
+        'Risk assessment and alerts',
+        'Document compliance verification',
+        'Audit trail and documentation'
+      ],
+      pricing: '$599 – $3,999/month',
+      timeline: '4–6 weeks',
+      benefits: [
+        'Automated compliance management',
+        'Reduced compliance costs',
+        'Proactive risk identification',
+        'Streamlined audit processes'
+      ],
+      category: 'Compliance Management'
+    },
+    {
+      icon: Globe,
+      name: 'AI-Powered Weather Prediction',
+      description: 'Advanced weather forecasting and climate analysis using machine learning.',
+      features: [
+        'Hyperlocal weather predictions',
+        'Climate trend analysis',
+        'Agricultural weather insights',
+        'Severe weather alerts',
+        'Historical weather data analysis',
+        'API integration for applications'
+      ],
+      pricing: '$299 – $1,999/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        'Improved weather accuracy',
+        'Industry-specific insights',
+        'Early warning systems',
+        'Data-driven decision making'
+      ],
+      category: 'Environmental Technology'
     }
   ];
 
