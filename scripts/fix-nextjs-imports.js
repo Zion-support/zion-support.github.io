@@ -13,21 +13,21 @@ function replaceNextImports(content, filePath) {
   'next/link')) {
     content = content.replace(/import Link from [;
   '']next\/link[''];?/g,
-  'import { Link } from 'react-router-dom'');
+  'import { Link }  from 'react-router-dom);
     modified = true}
   // Replace next/image with regular img tags (or keep as is for now);
   if (content.includes(
   'next/image')) {
     content = content.replace(/import Image from [;
   '']next\/image[''];?/g,
-  '// import Image from 'next/image' // TODO: Replace with regular img or custom Image component);
+  '// import Image  from 'next/image';// TODO: Replace with regular img or custom Image component);
     modified = true}
   // Replace next/router with react-router-dom hooks;
   if (content.includes(
   'next/router')) {
     content = content.replace(/import.*from [;
   '']next\/router[''];?/g,
-  'import { useNavigate, useLocation, useParams } from 'react-router-dom'');
+  'import { useNavigate, useLocation, useParams }  from 'react-router-dom);
     modified = true}
   // Replace Next.js specific usage patterns;
   if (content.includes(
@@ -58,10 +58,7 @@ function processFile(filePath) {
 }
 // Function to walk directory recursively;
 function walkDir(dir, extensions = [;
-  '.jsx',
-  '.js',
-  '.tsx',
-  '.ts']) {
+  '.jsx,.js,.tsx,.ts']) {
   let filesFixed = 0;
   try {
     const items = fs.readdirSync(dir);

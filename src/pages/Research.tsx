@@ -1,13 +1,15 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
+import { motion, } from 'framer-motion';
+import { SEO, } from '../components/SEO';
 import { 
   Search, FileText, Users, Calendar, ArrowRight, ExternalLink, Download, Star, TrendingUp, Globe
 } from 'lucide-react';
-
 export default function Research() {
   const researchAreas = [
+<<<<<<< HEAD
     {
+=======
+  {
+>>>>>>> main
       title: "Artificial Intelligence", description: "Advancing AI research in machine learning, natural language processing, and computer vision",
       publications: 45, researchers: 12,
       color: "from-purple-500 to-pink-500"
@@ -24,28 +26,44 @@ export default function Research() {
       title: "Edge Computing",
       description: "Optimizing computing at the edge for IoT and real-time applications", publications: 18,
       researchers: 6, color: "from-blue-500 to-cyan-500"
+<<<<<<< HEAD
     }
+=======
+    };
+>>>>>>> main
   ];
-
   const recentPublications = [
+<<<<<<< HEAD
     {
       id: 1, title: "Quantum-Enhanced Machine Learning for Financial Risk Assessment",
       authors: ["Dr. Sarah Chen", "Prof. Michael Rodriguez"], journal: "Nature Quantum Information",
+=======
+  {
+      id: 1, title: "Quantum-Enhanced Machine Learning for Financial Risk Assessment",
+      authors: ["Dr. Sarah Chen,Prof. Michael Rodriguez"], journal: "Nature Quantum Information",
+>>>>>>> main
       date: "2025-01-10", citations: 23,
       featured: true
     }, {
       id: 2,
+<<<<<<< HEAD
       title: "AI-Driven Cybersecurity: Autonomous Threat Detection Systems", authors: ["Lisa Park", "David Kumar"], journal: "IEEE Security & Privacy",
+=======
+      title: "AI-Driven Cybersecurity: Autonomous Threat Detection Systems", authors: ["Lisa Park,David Kumar"], journal: "IEEE Security & Privacy",
+>>>>>>> main
       date: "2025-01-05", citations: 18,
       featured: true
     }, {
       id: 3,
+<<<<<<< HEAD
       title: "Edge Computing Optimization for IoT Applications", authors: ["Maria Santos", "Alex Thompson"], journal: "ACM Computing Surveys",
+=======
+      title: "Edge Computing Optimization for IoT Applications", authors: ["Maria Santos,Alex Thompson"], journal: "ACM Computing Surveys",
+>>>>>>> main
       date: "2024-12-28", citations: 15,
       featured: false
-    }
+    };
   ];
-
   return (
     <>
       <SEO 
@@ -59,11 +77,11 @@ export default function Research() {
         <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }
+              animate={{ opacity: 1, y: 0 }
+              transition={{ duration: 0.8 }
               className="text-center max-w-4xl mx-auto"
-            >
+            ></motion>
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 Research & Innovation
               </h1>
@@ -91,12 +109,12 @@ export default function Research() {
         <section className="py-16">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }
+              whileInView={{ opacity: 1, y: 0 }
+              transition={{ duration: 0.8 }
               className="text-center mb-12"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">Research Areas</h2>
+            ></motion>
+              <h2 className="text-4xl font-bold text-white mb-4"></h>Research Areas</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our research spans multiple cutting-edge technology domains
               </p>
@@ -106,15 +124,15 @@ export default function Research() {
               {researchAreas.map((area, index) => (
                 <motion.div
                   key={area.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={{ opacity: 0, y: 20 }
+                  whileInView={{ opacity: 1, y: 0 }
+                  transition={{ duration: 0.8, delay: index * 0.1 }
                   className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105"
-                >
+                ></motion>
                   <div className={`w-16 h-16 bg-gradient-to-br ${area.color} rounded-xl flex items-center justify-center mb-4`}>
                     <FileText className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">{area.title}</h3>
+                  <h3 className="text-xl font-bold text-white mb-2"></h>{area.title}</h3>
                   <p className="text-gray-300 text-sm mb-4">{area.description}</p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center text-blue-400 text-sm">
@@ -136,12 +154,12 @@ export default function Research() {
         <section className="py-16 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }
+              whileInView={{ opacity: 1, y: 0 }
+              transition={{ duration: 0.8 }
               className="text-center mb-12"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">Recent Publications</h2>
+            ></motion>
+              <h2 className="text-4xl font-bold text-white mb-4"></h>Recent Publications</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our latest research contributions to the scientific community
               </p>
@@ -151,11 +169,11 @@ export default function Research() {
               {recentPublications.map((publication, index) => (
                 <motion.div
                   key={publication.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={{ opacity: 0, y: 20 }
+                  whileInView={{ opacity: 1, y: 0 }
+                  transition={{ duration: 0.8, delay: index * 0.1 }
                   className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300"
-                >
+                ></motion>
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-2">
                       {publication.featured && (
@@ -170,11 +188,15 @@ export default function Research() {
                     </div>
                   </div>
 
-                  <h3 className="text-xl font-bold text-white mb-2">{publication.title}</h3>
+                  <h3 className="text-xl font-bold text-white mb-2"></h>{publication.title}</h3>
                   
                   <div className="mb-4">
                     <p className="text-sm text-gray-400 mb-1">Authors: </p>
+<<<<<<< HEAD
                     <p className="text-blue-400">{publication.authors.join(", ")}</p>
+=======
+                    <p className="text-blue-400">{publication.authors.join(,)}</p>
+>>>>>>> main
                   </div>
 
                   <div className="mb-4">
@@ -207,11 +229,11 @@ export default function Research() {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }
+              whileInView={{ opacity: 1, y: 0 }
+              transition={{ duration: 0.8 }
               className="text-center max-w-4xl mx-auto"
-            >
+            ></motion>
               <h2 className="text-4xl font-bold text-white mb-6">
                 Collaborate with Us
               </h2>

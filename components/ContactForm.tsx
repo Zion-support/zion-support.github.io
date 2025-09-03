@@ -1,4 +1,6 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
 
@@ -8,20 +10,71 @@ interface FormData {
   company: string;
   service: string;
   message: string;
+=======
+// Common interfaces for better type safety
+interface ApiResponse<T = unknown> {
+  data: T;
+  status: number;
+  message?: string;
+=======
+import React, { useState } from 'react'
+import { Mail, Phone, MapPin, Send, CheckCircle }  from 'lucide-react';interface FormData {
+  name: string
+  email: string
+  company: string
+  service: string
+  message: string
+>>>>>>> main
+>>>>>>> main
 }
+
+interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: 'admin' | 'user' | 'guest';
+}
+
+interface Service {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  category: string;
+}
+
+interface FormData {
+  [key: string]: string | number | boolean | File;
+}
+
+interface ComponentProps {
+  className?: string;
+  children?: React.ReactNode;
+  [key: string]: unknown;
+}
+
+
+import { motion } from 'framer-motion';
+import { CheckCircle, Cloud, Mail, MapPin, Phone, Send, User } from 'lucide-react';
+
+interface FormData {
+  name: string;
+  email: string;
+  compunknown: string;
+  service: string;
+  message: string}
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
-    company: '',
+    compunknown: '',
     service: '',
     message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [errors, setErrors] = useState<Partial<FormData>>({});
-
   const services = [
     'AI & Machine Learning',
     'Cloud & DevOps',
@@ -32,10 +85,8 @@ const ContactForm: React.FC = () => {
     'Digital Transformation',
     'Other',
   ];
-
   const validateForm = (): boolean => {
     const newErrors: Partial<FormData> = {};
-
     if (!formData.name.trim()) {
       newErrors.name = 'Name is required';
     }
@@ -53,35 +104,29 @@ const ContactForm: React.FC = () => {
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
     if (!validateForm()) {
       return;
     }
 
     setIsSubmitting(true);
-
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 2000));
-
     setIsSubmitting(false);
     setIsSubmitted(true);
-
     // Reset form after 3 seconds
     setTimeout(() => {
       setIsSubmitted(false);
       setFormData({
         name: '',
         email: '',
-        company: '',
+        compunknown: '',
         service: '',
         message: '',
       });
     }, 3000);
   };
-
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
@@ -89,13 +134,11 @@ const ContactForm: React.FC = () => {
   ) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
-
     // Clear error when user starts typing
     if (errors[name as keyof FormData]) {
       setErrors(prev => ({ ...prev, [name]: undefined }));
     }
   };
-
   if (isSubmitted) {
     return (
       <motion.div
@@ -112,8 +155,7 @@ const ContactForm: React.FC = () => {
           hours.'
         </p>
       </motion.div>
-    );
-  }
+    )}
 
   return (
     <div className="bg-white rounded-xl shadow-xl p-8">
@@ -197,10 +239,14 @@ const ContactForm: React.FC = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
+<<<<<<< HEAD
                 className={`w-full px-4 py-3 border rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent ${
+=======
+                className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+>>>>>>> main
                   errors.email ? 'border-red-500' : 'border-gray-300'
                 }`}
-                placeholder="john@company.com"
+                placeholder="john@compunknown.com"
               />
               {errors.email && (
                 <p className="text-red-500 text-sm mt-1">{errors.email}</p>
@@ -211,19 +257,19 @@ const ContactForm: React.FC = () => {
           <div className="grid grid-cols-1 md: grid-cols-2 gap-4">
             <div>
               <label
-                htmlFor="company"
+                htmlFor="compunknown"
                 className="block text-sm font-medium text-gray-700 mb-2"
               >
-                Company
+                Compunknown
               </label>
               <input
                 type="text"
-                id="company"
-                name="company"
-                value={formData.company}
+                id="compunknown"
+                name="compunknown"
+                value={formData.compunknown}
                 onChange={handleChange}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="Your Company"
+                placeholder="Your Compunknown"
               />
             </div>
 
@@ -264,7 +310,11 @@ const ContactForm: React.FC = () => {
               value={formData.message}
               onChange={handleChange}
               rows={5}
+<<<<<<< HEAD
               className={`w-full px-4 py-3 border rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent ${
+=======
+              className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+>>>>>>> main
                 errors.message ? 'border-red-500' : 'border-gray-300'
               }`}
               placeholder="Tell us about your project and how we can help..."
@@ -300,5 +350,4 @@ const ContactForm: React.FC = () => {
     </div>
   );
 };
-
 export default ContactForm;

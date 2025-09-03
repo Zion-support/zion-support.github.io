@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-
 interface ResponsiveState {
   screenWidth: number;
   screenHeight: number;
@@ -23,7 +22,6 @@ const useResponsive = (): ResponsiveState => {
     const updateDimensions = () => {
       const width = window.innerWidth;
       const height = window.innerHeight;
-
       setState({
         screenWidth: width,
         screenHeight: height,

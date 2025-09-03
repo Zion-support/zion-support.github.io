@@ -1,5 +1,4 @@
 import { Brain, Cloud, Shield, Code, Database, Network } from 'lucide-react';
-
 const Categories: React.FC = () => {
   const categories = [
     { name: 'AI Services', icon: Brain, count: 25 }, { name: 'Cloud Solutions', icon: Cloud, count: 15 },
@@ -12,19 +11,27 @@ const Categories: React.FC = () => {
         <div className='text-center mb-12'>
           <h1 className='text-4xl font-bold text-gray-900 mb-4'>Service Categories</h1>
           <p className='text-xl text-gray-600'>Explore our comprehensive range of technology services</p>
-        </div>
+        </div>"
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
           {categories.map((category, index) => (
             <div key={index} className='bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover: shadow-md transition-shadow'>
               <div className='flex items-center mb-4'>
                 <category.icon className='h-8 w-8 text-blue-600 mr-3' />
                 <h2 className='text-xl font-semibold text-gray-900'>{category.name}</h2>
-              </div>
+              </div>"
               <p className='text-gray-600 mb-4'>
                 {category.count} services available in this category
               </p>
+<<<<<<< HEAD
               <a
                 href={`/services?category=${category.name.toLowerCase().replace(' ', '-')}`}
+<<<<<<< HEAD
+=======
+=======
+              <a"
+                href={`/services?category=${category.name.toLowerCase().replace(' ,-')}`}"
+>>>>>>> main
+>>>>>>> main
                 className='text-blue-600 hover: text-blue-700 font-medium'>
                 View Services →
               </a>
@@ -34,5 +41,4 @@ const Categories: React.FC = () => {
       </div>
     </div>
   )}
-;
-export default Categories
+export default Categories"`

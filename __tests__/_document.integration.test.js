@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -11,16 +12,35 @@ describe('_document Integration Tests', () => {
 
   test('navigation works', () => {
     render(<_document />);
+=======
+import React   from 'react''
+import { render, screen }   from '@testing-library/react''
+import '@testing-library/jest-dom
+import _document   from '../pages/_document''
+  describe('_document Integration Tests', () => {'
+  test('page renders correctly', () => {'
+    render(<_document  />)
+    expect(screen.getByRole('main')).toBeInTheDocument();'
+  })
+
+  test('navigation works', () => {'
+    render(<_document  />)
+>>>>>>> main
     // Test navigation elements
   });
 
-  test('page content is accessible', () => {
-    render(<_document />);
+  test('page content is accessible', () => {'
+    render(<_document  />)
     // Test accessibility features
   });
 
-  test('page loads with correct data', () => {
-    render(<_document />);
+  test('page loads with correct data', () => {'
+    render(<_document  />)
     // Test data loading and display
+<<<<<<< HEAD
   });
 });
+=======
+  })
+})
+>>>>>>> main

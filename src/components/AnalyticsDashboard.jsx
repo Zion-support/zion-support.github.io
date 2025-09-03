@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { BarChart3, TrendingUp, Activity, Eye, Clock, Target, RefreshCw } from 'lucide-react';
-
+import React, { useState, useEffect } from 'react
+import { BarChart3, TrendingUp, Activity, Eye, Clock, Target, RefreshCw } from 'lucide-react
 export const AnalyticsDashboard = ({ className = '', showRealTime = true, refreshInterval = 5000 }) => {
+<<<<<<< HEAD
     const { isTracking, currentSession, performanceMetrics, events, getAnalyticsSummary, trackEvent, trackConversion } = useAnalytics({
         enableTracking: true, enablePerformanceTracking: true,
         enableUserBehaviorTracking: true, enableHeatmapTracking: false})
@@ -355,3 +355,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
     </div>
   )}''`;
 ''`''`
+=======
+"
+}
+>>>>>>> main

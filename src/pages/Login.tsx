@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -180,3 +181,10 @@ export default function Login() {
 </>
   );
 }
+=======
+import React, { useState } from 'react
+import { motion } from 'framer-motion
+import { Link } from 'react-router-dom
+import { SEO } from '../components/SEO
+import { Eye, EyeOff, Mail, Lock, ArrowRight } from 'lucide-react
+>>>>>>> main

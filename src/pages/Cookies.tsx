@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { Cookie, Settings, Shield, Eye, BarChart3 } from 'lucide-react';
 
@@ -197,3 +198,7 @@ const Cookies: React.FC = () => {
   )}
 ;
 export default Cookies
+=======
+import { motion } from 'framer-motion
+import { Cookie, Settings, Shield, Eye, BarChart3 } from 'lucide-react
+>>>>>>> main

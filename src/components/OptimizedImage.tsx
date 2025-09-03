@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Image optimization component
 import Image from 'next/image';
 import { useState } from 'react';
@@ -46,3 +47,6 @@ export const OptimizedImage = ({
 };
 
 export default OptimizedImage;
+=======
+import Image from 'next/image
+>>>>>>> main

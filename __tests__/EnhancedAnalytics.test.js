@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -11,16 +12,35 @@ describe('EnhancedAnalytics', () => {
 
   test('displays correct content', () => {
     render(<EnhancedAnalytics />);
+=======
+import React   from 'react''
+import { render, screen, fireEvent }   from '@testing-library/react''
+import '@testing-library/jest-dom
+import EnhancedAnalytics   from '../components/EnhancedAnalytics''
+  describe('EnhancedAnalytics', () => {'
+  test('renders without crashing', () => {'
+    render(<EnhancedAnalytics  />)
+    expect(screen.getByTestId('enhancedanalytics')).toBeInTheDocument();'
+  })
+
+  test('displays correct content', () => {'
+    render(<EnhancedAnalytics  />)
+>>>>>>> main
     // Add specific content tests based on component
   });
 
-  test('handles user interactions', () => {
-    render(<EnhancedAnalytics />);
+  test('handles user interactions', () => {'
+    render(<EnhancedAnalytics  />)
     // Add interaction tests based on component functionality
   });
 
-  test('applies correct styling', () => {
-    render(<EnhancedAnalytics />);
+  test('applies correct styling', () => {'
+    render(<EnhancedAnalytics  />)
     // Add styling tests if needed
+<<<<<<< HEAD
   });
 });
+=======
+  })
+})
+>>>>>>> main

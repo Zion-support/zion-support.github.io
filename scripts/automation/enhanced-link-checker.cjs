@@ -7,7 +7,7 @@ const https = require('https');
 const http = require('http');
 const { URL } = require('url');
 
-console.log(`'🔗 Starting Enhanced Link Checker Automation...');
+console.log(`🔗 Starting Enhanced Link Checker Automation...`);
 
 class EnhancedLinkChecker {
   constructor() {
@@ -28,11 +28,11 @@ class EnhancedLinkChecker {
   }
 
   async buildProject() {
-    console.log(`'🏗️ Building project for link extraction...');
+    console.log(`🏗️ Building project for link extraction...`);
     try {
       // Check if we're in a Vite project
       if (fs.existsSync('vite.config.ts') || fs.existsSync('vite.config.js')) {
-        console.log(`'📦 Vite project detected, running build...');
+        console.log(`📦 Vite project detected, running build...`);
         execSync('npm run build', {
           stdio: 'inherit',
           cwd: process.cwd(),
@@ -112,11 +112,11 @@ class EnhancedLinkChecker {
   }
 
   async extractAllLinks() {
-    console.log(`'🔍 Extracting links from build output...');
+    console.log(`🔍 Extracting links from build output...`);
 
     const distDir = path.join(process.cwd(), 'dist');
     if (!fs.existsSync(distDir)) {
-      console.log(`'❌ Build output directory not found');
+      console.log(`❌ Build output directory not found`);
       return [];
     }
 
@@ -274,7 +274,7 @@ console.log(`✅ Extracted ${uniqueLinks.length} unique links`);
   }
 
   async checkAllLinks(links) {
-    console.log(`'🔍 Checking all extracted links...');
+    console.log(`🔍 Checking all extracted links...`);
 
     const internalLinks = [];
     const externalLinks = [];
@@ -288,12 +288,12 @@ console.log(`✅ Extracted ${uniqueLinks.length} unique links`);
       }
     });
 
-    console.log(`📊 Found ${internalLinks.length} internal links and ${externalLinks.length} external links'
+    console.log(`📊 Found ${internalLinks.length} internal links and ${externalLinks.length} external links`);
     );
 
-    // Check internal links
-    if (internalLinks.length > 0) {
-      console.log(`'🔍 Checking internal links...');
+    // Check internal links`);
+    if (internalLinks.length > 0) {`);
+      console.log(`🔍 Checking internal links...`);
       await this.checkLinkBatch(internalLinks, 'internal');
     }
 
@@ -478,13 +478,13 @@ ${
   }
 
   async runLinkCheck() {
-    console.log(`'🔗 Starting Enhanced Link Checker Automation...');
+    console.log(`🔗 Starting Enhanced Link Checker Automation...`);
 
     try {
       const buildSuccess = await this.buildProject();
 
       if (!buildSuccess) {
-        console.log(`'⚠️ Build failed, but continuing with link checking...');
+        console.log(`⚠️ Build failed, but continuing with link checking...`);
       }
 
       const links = await this.extractAllLinks();
@@ -500,7 +500,7 @@ ${
       console.log('\n🔗 Link Check Summary:');console.log(Total Links: ${report.summary.total});console.log(Working: ${report.summary.working} ✅``);console.log(`Broken: ${report.summary.broken} ❌`);console.log(`Success Rate: ${report.summary.rate}%`);
 
       if (report.summary.broken > 0) {
-        console.log(`'\n🚨 Broken Links Found:');console.log(`Internal: ${report.internal.broken});console.log(External: ${report.external.broken}``);
+        console.log(`\n🚨 Broken Links Found:`);console.log(`Internal: ${report.internal.broken});console.log(External: ${report.external.broken}``);
       } else {
         console.log('\n✅ All links are working correctly!');
       }

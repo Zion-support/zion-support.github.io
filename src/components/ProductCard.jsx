@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -129,3 +130,11 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
     </div>
   );
 }
+=======
+import React, { useState } from 'react
+import Link from 'next/link
+import Image from 'next/image
+import { Heart } from 'lucide-react
+import { useWishlist } from '@/hooks/useWishlist
+"
+>>>>>>> main

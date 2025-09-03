@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
+
 import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
 import { Badge } from '../../components/ui/Badge';
@@ -25,7 +25,7 @@ import {
 
 export default function EmailAutomation() {
   const features = [
-    {
+  {
       icon: Send,
       title: 'Drip Campaigns',
       description:
@@ -64,17 +64,21 @@ export default function EmailAutomation() {
   ];
 
   const pricingPlans = [
-    {
+  {
       name: 'Starter',
       price: '$199',
       period: '/month',
       description: 'Perfect for small businesses starting with email marketing',
       features: [
+<<<<<<< HEAD
         'Up to 10, 000 emails/month',
         'Basic drip campaigns',
         'Email templates',
         'Basic analytics',
         'Email support',
+=======
+        'Up to 10, 000 emails/month,Basic drip campaigns,Email templates,Basic analytics,Email support',
+>>>>>>> main
       ],
       popular: false,
     },
@@ -84,12 +88,16 @@ export default function EmailAutomation() {
       period: '/month',
       description: 'Ideal for growing businesses with advanced needs',
       features: [
+<<<<<<< HEAD
         'Up to 50, 000 emails/month',
         'Advanced automation',
         'A/B testing',
         'Advanced analytics',
         'Custom templates',
         'Priority support',
+=======
+        'Up to 50, 000 emails/month,Advanced automation,A/B testing,Advanced analytics,Custom templates,Priority support',
+>>>>>>> main
       ],
       popular: true,
     },
@@ -99,6 +107,7 @@ export default function EmailAutomation() {
       period: '/month',
       description: 'For large organizations with high-volume needs',
       features: [
+<<<<<<< HEAD
         'Unlimited emails',
         'Custom integrations',
         'Advanced segmentation',
@@ -106,6 +115,9 @@ export default function EmailAutomation() {
         'Custom reporting',
         'Dedicated account manager',
         '24/7 phone support',
+=======
+        'Unlimited emails,Custom integrations,Advanced segmentation,Dedicated IP,Custom reporting,Dedicated account manager,24/7 phone support',
+>>>>>>> main
       ],
       popular: false,
     },
@@ -113,11 +125,14 @@ export default function EmailAutomation() {
 
   return (
     <>
+<<<<<<< HEAD
       <SEO
         title="Email Automation - Zion Tech Group"
         description="Intelligent email marketing automation with personalized campaigns and advanced analytics. Boost your email marketing ROI."
         keywords="email automation, email marketing, drip campaigns, personalization, A/B testing"
       />
+=======
+>>>>>>> main
       <Head>
         <title>Email Automation - Zion Tech Group</title>
       </Head>

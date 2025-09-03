@@ -1,5 +1,7 @@
-import { motion } from 'framer-motion';
+<<<<<<< HEAD
+import { motion } from 'framer-motion';"
 import { Accessibility as AccessibilityIcon, Eye, Ear, MousePointer, Keyboard, Smartphone } from 'lucide-react';
+<<<<<<< HEAD
 
 const Accessibility: React.FC = () => {
   const features = [
@@ -249,3 +251,9 @@ const Accessibility: React.FC = () => {
   )}
 ;
 export default Accessibility
+=======
+=======
+import { motion } from 'framer-motion
+import { Accessibility as AccessibilityIcon, Eye, Ear, MousePointer, Keyboard, Smartphone } from 'lucide-react
+>>>>>>> main
+>>>>>>> main

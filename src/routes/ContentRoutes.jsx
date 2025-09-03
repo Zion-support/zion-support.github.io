@@ -1,6 +1,4 @@
-import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-
 // Import all the page components
 import Home from '../pages/Home';
 import About from '../pages/About';
@@ -26,7 +24,6 @@ import VideoCall from '../pages/VideoCall';
 import SearchPage from '../pages/SearchPage';
 import Sitemap from '../pages/Sitemap';
 import SitemapPage from '../pages/SitemapPage';
-
 const ContentRoutes = () => {
   return (
     <Routes>
@@ -60,9 +57,8 @@ const ContentRoutes = () => {
       <Route path="/api-docs" element={<Navigate to="/developers/docs" replace />} />
       <Route path="/sitemap" element={<Sitemap />} />
       <Route path="/sitemap-page" element={<SitemapPage />} />
-    </Routes>
+    </Routes>;
   );
 };
-
 export { ContentRoutes };
 export default ContentRoutes;

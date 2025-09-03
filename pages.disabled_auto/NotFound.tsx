@@ -27,7 +27,7 @@ import {
   'lucide-react';
 const NotFound: React.FC = () => {
   const quickLinks = [
-    { name: 'Home', url: '/', icon: Home },
+  { name: 'Home', url: '/', icon: Home },
     { name: 'Services', url: '/services', icon: Briefcase },
     { name: 'About', url: '/about', icon: Users },
     { name: 'Contact', url: '/contact', icon: Phone },
@@ -157,5 +157,4 @@ const NotFound: React.FC = () => {
       </div>
     </div>
   )}
-;
 export default NotFound

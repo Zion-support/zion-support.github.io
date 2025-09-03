@@ -1,21 +1,35 @@
 import { useEffect } from 'react';
+import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 
-export function PerformanceMonitor() {
+interface PerformanceMetrics {
+  name: string;
+  value: number;
+  delta: number;
+  id: string;
+}
+
+const PerformanceMonitor = () => {
   useEffect(() => {
-    // Only run in production
-    if (process.env.NODE_ENV !== 'production') return;
-
-    // Web Vitals monitoring
-    const reportWebVitals = (metric: any) => {
+    const sendToAnalytics = (metric: PerformanceMetrics) => {
       // Send to analytics service
+<<<<<<< HEAD
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('event', metric.name, {
           event_category: 'Web Vitals', event_label: metric.id,
           value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value), non_interaction: true,
+=======
+      if (typeof window !== 'undefined' && 'gtag' in window) {
+        (window as any).gtag('event', metric.name, {
+          event_category: 'Web Vitals',
+          event_label: metric.id,
+          value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+          non_interaction: true,
+>>>>>>> main
         });
       }
     };
 
+<<<<<<< HEAD
     // Import web-vitals dynamically
     import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
       getCLS(reportWebVitals);
@@ -38,14 +52,16 @@ export function PerformanceMonitor() {
 
       observer.observe({ entryTypes: ['navigation'] });
     }
+=======
+    getCLS(sendToAnalytics);
+    getFID(sendToAnalytics);
+    getFCP(sendToAnalytics);
+    getLCP(sendToAnalytics);
+    getTTFB(sendToAnalytics);
+>>>>>>> main
   }, []);
 
   return null;
-}
+};
 
-// Declare gtag for TypeScript
-declare global {
-  interface Window {
-    gtag: (...args: any[]) => void;
-  }
-}
+export default PerformanceMonitor;

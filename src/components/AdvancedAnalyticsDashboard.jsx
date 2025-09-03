@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react'';'
 import { motion } from 'framer-motion';
 import {}
@@ -422,3 +423,6 @@ export { AdvancedAnalyticsDashboard }
 export { AdvancedAnalyticsDashboard }
 
 export { AdvancedAnalyticsDashboard }
+=======
+import React, { useState }  from 'react;'
+>>>>>>> main

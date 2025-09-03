@@ -186,9 +186,9 @@ test('navigation works', async ({ page }) => {
 
 test('contact form works', async ({ page }) => {
   await page.goto('/contact');
-  await page.fill('input[name="name"]', 'Test User');
-  await page.fill('input[name="email"]', 'test@example.com');
-  await page.fill('textarea[name="message"]', 'Test message');
+  await page.fill('input[name="name"],Test User');
+  await page.fill('input[name="email"],test@example.com');
+  await page.fill('textarea[name="message"],Test message');
   await page.click('button[type="submit"]');
   await expect(page.locator('.success-message')).toBeVisible()})`;
 
@@ -224,7 +224,7 @@ test('contact form works', async ({ page }) => {
 
   async testPagePerformance() {
     // Simulate performance testing
-    const pages = ['/', '/about', '/services', '/contact'];
+    const pages = ['/,/about,/services,/contact'];
     let passed = 0;
     let failed = 0;
 
@@ -298,6 +298,7 @@ test('contact form works', async ({ page }) => {
   async testWCAGCompliance() {
     // Simulate accessibility testing
     const checks = [
+<<<<<<< HEAD
       'Color contrast ratios',
       'Keyboard navigation',
       'Screen reader compatibility',
@@ -306,6 +307,9 @@ test('contact form works', async ({ page }) => {
       'Heading structure',
       'Form labels',
       'ARIA attributes',
+=======
+      'Color contrast ratios,Keyboard navigation,Screen reader compatibility,Focus indicators,Alt text for images,Heading structure,Form labels,ARIA attributes',
+>>>>>>> main
     ];
 
     let passed = 0;
@@ -350,6 +354,7 @@ test('contact form works', async ({ page }) => {
   async testSecurityVulnerabilities() {
     // Test for common security issues
     const securityChecks = [
+<<<<<<< HEAD
       'Dependency vulnerabilities',
       'XSS protection',
       'CSRF protection',
@@ -358,6 +363,9 @@ test('contact form works', async ({ page }) => {
       'Authentication security',
       'Authorization checks',
       'Data validation',
+=======
+      'Dependency vulnerabilities,XSS protection,CSRF protection,SQL injection prevention,Secure headers,Authentication security,Authorization checks,Data validation',
+>>>>>>> main
     ];
 
     let passed = 0;

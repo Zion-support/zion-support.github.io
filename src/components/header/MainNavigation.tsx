@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { ChevronDown, Zap, Brain, Shield, Users, HardDrive, TrendingUp, Building2, FileText, HelpCircle, BarChart3 } from 'lucide-react';
-
+import React, { useState } from 'react
+import { Link } from 'react-router-dom
+import { ChevronDown, Zap, Brain, Shield, Users, HardDrive, TrendingUp, Building2, FileText, HelpCircle, BarChart3 } from 'lucide-react
 export function MainNavigation({ className = '' }) {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+<<<<<<< HEAD
   const [isCompanyOpen, setIsCompanyOpen] = useState(false);
   return(
     <nav className={`flex items-center space-x-8 ${className}`}>
@@ -342,3 +342,8 @@ export function MainNavigation({ className = '' }) {
       </Link>
     </nav>
   )}
+=======
+  const [isCompOpen, setIsCompOpen] = useState(false);
+"
+}
+>>>>>>> main

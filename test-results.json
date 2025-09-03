@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "timestamp": "2025-09-02T22:07:34.211Z",
   "tests": [
     {
@@ -31,5 +32,37 @@
     "passed": 0,
     "failed": 4,
     "skipped": 0
+=======
+  "timestamp": "2025-09-02T21:37:20.404Z",
+  "unit": {
+    "passed": 0,
+    "failed": 1,
+    "total": 1
+  },
+  "integration": {
+    "passed": 2,
+    "failed": 0,
+    "total": 2
+  },
+  "e2e": {
+    "passed": 0,
+    "failed": 1,
+    "total": 1
+  },
+  "performance": {
+    "passed": 6,
+    "failed": 1,
+    "total": 7
+  },
+  "accessibility": {
+    "passed": 7,
+    "failed": 1,
+    "total": 8
+  },
+  "security": {
+    "passed": 7,
+    "failed": 1,
+    "total": 8
+>>>>>>> main
   }
 }

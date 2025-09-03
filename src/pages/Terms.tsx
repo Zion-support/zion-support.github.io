@@ -1,5 +1,7 @@
-import { motion } from 'framer-motion';
+<<<<<<< HEAD
+import { motion } from 'framer-motion';"
 import { FileText, Scale, AlertTriangle, CheckCircle, XCircle } from 'lucide-react';
+<<<<<<< HEAD
 
 const Terms: React.FC = () => {
   const sections = [
@@ -157,8 +159,23 @@ const Terms: React.FC = () => {
             </div>
           </div>
         </motion.div>
+=======
+=======
+import { SEO } from '../components/SEO';
+export default function Page() {
+const Terms: React.FC = () => {"
+  return (<>"
+      <SEO title='Terms - Zion Tech Group' /  >'
+      <div className='min-h-screen bg-white py-20'>"
+        <div className='max-w-4xl mx-auto px-4'>"
+          <h1 className='text-4xl font-bold text-gray-900 mb-8'>Terms</h1>"
+          <p className='text-lg text-gray-600'>Content coming soon...</p>
+        </div>
+>>>>>>> main
       </div>
-    </div>
+</>
   )}
 ;
-export default Terms
+"
+}
+>>>>>>> main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react'';'
 import { motion, AnimatePresence } from 'framer-motion';
 import {}
@@ -355,3 +356,7 @@ export function ComprehensiveServicesShowcase() {}
     </section>
   )}''`;
 ''`'"`'"
+=======
+import React, { useState }  from 'react;'
+"
+>>>>>>> main

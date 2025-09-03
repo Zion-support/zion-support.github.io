@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
@@ -154,3 +155,7 @@ export default function Header() {
       )}
     </header>
   )}
+=======
+import React, { useState, useEffect } from 'react
+"
+>>>>>>> main

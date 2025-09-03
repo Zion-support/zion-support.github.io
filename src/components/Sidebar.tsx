@@ -1,9 +1,9 @@
-import { Link } from 'react-router-dom';
 import {
   Brain, Cloud,
   Shield, Code,
   Database, Network,
   Users, Award,
+<<<<<<< HEAD
   ShoppingCart, HelpCircle,
   ChevronRight} from 'lucide-react';
 export const Sidebar: React.FC = () => {
@@ -135,3 +135,7 @@ export const Sidebar: React.FC = () => {
       </div>
     </aside>
   )}
+=======
+  ShoppingCart, HelpCircle,;
+  ChevronRight} from 'lucide-react
+>>>>>>> main

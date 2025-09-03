@@ -1,5 +1,6 @@
 import '@testing-library/jest-dom';
 
+<<<<<<< HEAD
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true, value: jest.fn().mockImplementation(query => ({
@@ -14,11 +15,55 @@ Object.defineProperty(window, 'matchMedia', {
 // @ts-expect-error jsdom global augmentation for tests
 global.IntersectionObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(), unobserve: jest.fn(), disconnect: jest.fn()
+=======
+// Mock Next.js router
+jest.mock('next/router', () => ({
+  useRouter() {
+    return {
+      route: '/',
+      pathname: '/',
+      query: {},
+      asPath: '/',
+      push: jest.fn(),
+      pop: jest.fn(),
+      reload: jest.fn(),
+      back: jest.fn(),
+      prefetch: jest.fn().mockResolvedValue(undefined),
+      beforePopState: jest.fn(),
+      events: {
+        on: jest.fn(),
+        off: jest.fn(),
+        emit: jest.fn(),
+      },
+      isFallback: false,
+    };
+  },
+>>>>>>> main
 }));
 
-// Mock ResizeObserver
-// @ts-expect-error jsdom global augmentation for tests
+// Mock Next.js navigation
+jest.mock('next/navigation', () => ({
+  useRouter() {
+    return {
+      push: jest.fn(),
+      replace: jest.fn(),
+      prefetch: jest.fn(),
+      back: jest.fn(),
+      forward: jest.fn(),
+      refresh: jest.fn(),
+    };
+  },
+  useSearchParams() {
+    return new URLSearchParams();
+  },
+  usePathname() {
+    return '/';
+  },
+}));
+
+// Global test setup
 global.ResizeObserver = jest.fn().mockImplementation(() => ({
+<<<<<<< HEAD
   observe: jest.fn(), unobserve: jest.fn(), disconnect: jest.fn()
 }));
 
@@ -31,3 +76,16 @@ global.scrollTo = jest.fn();
 global.console = {
   ...console, warn: jest.fn(), error: jest.fn(),
 }
+=======
+  observe: jest.fn(),
+  unobserve: jest.fn(),
+  disconnect: jest.fn(),
+}));
+
+// Mock IntersectionObserver
+global.IntersectionObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  unobserve: jest.fn(),
+  disconnect: jest.fn(),
+}));
+>>>>>>> main

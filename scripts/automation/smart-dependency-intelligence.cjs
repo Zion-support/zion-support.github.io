@@ -14,15 +14,15 @@ class SmartDependencyIntelligence {
   constructor() {
     this.projectRoot = process.cwd();
     this.logFile = path.join(
-      this.projectRoot,logs',
+      this.projectRoot, 'logs',
       'smart-dependency-intelligence.log'
     );
     this.intelligenceLog = path.join(
-      this.projectRoot,logs',
+      this.projectRoot, 'logs',
       'dependency-intelligence.json'
     );
     this.predictionsLog = path.join(
-      this.projectRoot,logs',
+      this.projectRoot, 'logs',
       'dependency-predictions.json'
     );
     this.ensureLogsDirectory();
@@ -716,7 +716,7 @@ this.log(`Applied ${appliedOptimizations.length} optimizations`);
 
     // Save report to file
     const reportPath = path.join(
-      this.projectRoot,logs', `dependency-intelligence-${Date.now()}.json`
+      this.projectRoot, 'logs', `dependency-intelligence-${Date.now()}.json`
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 this.log(`Intelligence report generated: ${reportPath}`);

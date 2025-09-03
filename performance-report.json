@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "timestamp": "2025-09-02T22:06:15.868Z",
   "system": {
     "memory": {
@@ -73,4 +74,44 @@
       "test:coverage"
     ]
   }
+=======
+  "timestamp": "2025-09-02T21:38:54.130Z",
+  "metrics": {
+    "system": {
+      "memory": {
+        "heapUsed": 4,
+        "heapTotal": 5,
+        "external": 1,
+        "rss": 46
+      },
+      "cpu": {
+        "user": 17855,
+        "system": 4463
+      },
+      "process": {
+        "uptime": 0,
+        "pid": 3705,
+        "version": "v22.16.0",
+        "platform": "linux"
+      }
+    },
+    "application": {
+      "buildSize": 79,
+      "bundleSize": 44,
+      "loadTime": 0
+    },
+    "web": {
+      "lcp": 2400.7218147776903,
+      "fid": 70.10925290418028,
+      "cls": 0.005507813417331243,
+      "fcp": 1489.9730471063158,
+      "ttfb": 340.97711122847545
+    }
+  },
+  "score": 90,
+  "recommendations": [
+    "Reduce bundle size - remove unused dependencies and optimize imports"
+
+  ]
+>>>>>>> main
 }

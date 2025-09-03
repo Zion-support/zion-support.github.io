@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect, useState, useCallback, useRef } from 'react'  interface PerformanceMetrics {
    fcp: number | null;
    lcp: number | null;
@@ -9,3 +10,8 @@ import { useEffect, useState, useCallback, useRef } from 'react'  interface Perf
    observe: (options: any) => void;
    disconnect: () => void} export const usePerformanceMonitor = () => { const [metrics, setMetrics] = useState<PerformanceMetrics>({ fcp: null, lcp: null, fid: null, cls: null, ttfb: null, domLoadTime: null, resourceLoadTime: null})  const [isMonitoring, setIsMonitoring] = useState(false) const observerRef = useRef<PerformanceObserver | null>(null)  const measureCoreWebVitals = useCallback(() => { if ('PerformanceObserver' in window) {';'
 ;
+=======
+import { useEffect, useState, useCallback, useRef }  from 'react';interface PerformanceMetrics {;
+"
+}
+>>>>>>> main

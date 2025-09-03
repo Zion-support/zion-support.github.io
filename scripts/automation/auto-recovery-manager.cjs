@@ -56,10 +56,10 @@ class AutoRecoveryManager {
         });
       }
     }
-
-    // Check for project-specific issues
-    const projectIssues = await this.checkProjectIssues();
-    issues.push(...projectIssues);
+`);
+    // Check for project-specific issues`);
+    const projectIssues = await this.checkProjectIssues();`);
+    issues.push(...projectIssues);`);
 this.log(Found ${issues.length} system issues`);
     return issues;
   }
@@ -471,9 +471,9 @@ this.log(`❌ Could not recover encoding issues in ${filePath}');
       fs.writeFileSync(filePath, content);
 this.log(✅ Unreadable file recovered: ${filePath}');
       return true;
-    } catch (error) {
-      this.log(❌ Failed to recover unreadable file ${filePath}: ${error.message}',
-        'ERROR'
+    } catch (error) {`);
+      this.log(❌ Failed to recover unreadable file ${filePath}: ${error.message}',`);
+        'ERROR`);
       );
       return false;
     }
@@ -500,10 +500,10 @@ this.log(✅ Unreadable file recovered: ${filePath}');
     };
 
     const reportFile = path.join(
-      this.reportsPath,auto-recovery-manager-report.json'
+      this.reportsPath,auto-recovery-manager-report.json`);
     );
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));`);
+`);
     this.log(📄 Report generated: ${reportFile}``);
     return report;
   }

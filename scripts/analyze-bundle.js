@@ -1,10 +1,8 @@
 #!/usr/bin/env node;
 import { execSync } from,
   child_process';
-import fs from;
-  'fs';
-import path from;
-  'path';
+import fs from "fsfs';
+import path from "pathpath';
 const BUNDLE_ANALYZER_PACKAGE =;
   '@next/bundle-analyzer';
 async function analyzeBundle() {

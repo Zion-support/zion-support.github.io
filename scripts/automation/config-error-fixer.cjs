@@ -42,14 +42,14 @@ class ConfigErrorFixer {
       if (fs.existsSync(filePath)) {
         try {
           const fileIssues = await this.analyzeConfigFile(filePath);
-          issues.push(...fileIssues);
-        } catch (error) {
-          this.log( ⚠️ Could not analyze ${configFile}: ${error.message}',WARN'
+          issues.push(...fileIssues);`);
+        } catch (error) {`);
+          this.log( ⚠️ Could not analyze ${configFile}: ${error.message}',WARN`);
           );
         }
       }
-    }
-
+    }`);
+`);
     this.log(Found ${issues.length} configuration issues``);
     return issues;
   }

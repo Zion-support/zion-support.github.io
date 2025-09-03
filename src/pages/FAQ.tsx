@@ -1,5 +1,7 @@
-import { motion } from 'framer-motion';
+<<<<<<< HEAD
+import { motion } from 'framer-motion';"
 import { ChevronDown, HelpCircle, MessageCircle, Phone, Mail } from 'lucide-react';
+<<<<<<< HEAD
 
 const FAQ: React.FC = () => {
   const [openItems, setOpenItems] = React.useState<number[]>([]);
@@ -124,3 +126,9 @@ const FAQ: React.FC = () => {
   )}
 ;
 export default FAQ
+=======
+=======
+import { motion } from 'framer-motion
+import { ChevronDown, HelpCircle, MessageCircle, Phone, Mail } from 'lucide-react
+>>>>>>> main
+>>>>>>> main

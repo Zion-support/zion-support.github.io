@@ -24,73 +24,73 @@ import {
   Award} from 'lucide-react';
 export default function AIContentGenerationPlatform(...args[]):  {
   const features = [
-    {
+  {
       icon: Brain,
       title: 'AI-Powered Writing',
       description: 'Advanced language models that generate high-quality, engaging content across multiple formats and industries.',
-      benefits['SEO-optimized content', 'Brand voice consistency', 'Multi-language support', 'Context-aware generation']},
+      benefits['SEO-optimized content,Brand voice consistency,Multi-language support,Context-aware generation']},
     {
       icon: Palette,
       title: 'Visual Content Creation',
       description: 'Generate stunning images, graphics, and visual assets using cutting-edge AI image generation technology.',
-      benefits['Custom brand styling', 'High-resolution output', 'Style transfer', 'Batch generation']
+      benefits['Custom brand styling,High-resolution output,Style transfer,Batch generation']
     },
     {
       icon: Video,
       title: 'Video Content Generation',
       description: 'Create professional videos, animations, and multimedia content with AI-powered video generation tools.',
-      benefits['Auto-script generation', 'Voice synthesis', 'Background music', 'Template library']
+      benefits['Auto-script generation,Voice synthesis,Background music,Template library']
     },
     {
       icon: Code,
       title: 'Technical Content',
       description: 'Generate technical documentation, code comments, and developer resources with specialized AI models.',
-      benefits['Code documentation', 'API guides', 'Tutorial generation', 'Technical writing']
+      benefits['Code documentation,API guides,Tutorial generation,Technical writing']
     },
     {
       icon: Shield,
       title: 'Content Moderation',
       description: 'Built-in AI content filtering and moderation to ensure all generated content meets quality and safety standards.',
-      benefits['Plagiarism detection', 'Content filtering', 'Quality scoring', 'Compliance checking']
+      benefits['Plagiarism detection,Content filtering,Quality scoring,Compliance checking']
     },
     {
-      benefits['Real-time editing', 'Approval workflows', 'Version history', 'Team analytics']
+      benefits['Real-time editing,Approval workflows,Version history,Team analytics']
     }
       icon: Users,
       title: 'Team Collaboration',
       description: 'Collaborative workspace for teams to create, edit, and manage content with version control and approval workflows.',
-      benefits: ['Real-time editing', 'Approval workflows', 'Version history', 'Team analytics']
+      benefits: ['Real-time editing,Approval workflows,Version history,Team analytics']
     }
   ];
   const useCases = [
-    {
+  {
       industry: 'Marketing & Advertising',
       title: 'Campaign Content Creation',
       description: 'Generate complete marketing campaigns including copy, visuals, and video content for multiple channels.',
-      metrics['50% faster campaign creation', '40% increase in engagement', '30% reduction in content costs']},
+      metrics['50% faster campaign creation,40% increase in engagement,30% reduction in content costs']},
     {
       industry: 'E-commerce',
       title: 'Product Descriptions & Marketing',
       description: 'Create compelling product descriptions, marketing copy, and visual assets for online stores.',
-      metrics['60% faster product onboarding', '35% improvement in conversion rates', '25% increase in SEO traffic']
+      metrics['60% faster product onboarding,35% improvement in conversion rates,25% increase in SEO traffic']
     },
     {
       industry: 'Publishing & Media',
       title: 'Content Production',
       description: 'Generate articles, blog posts, and multimedia content for digital publishing platforms.',
-      metrics['70% increase in content output', '45% reduction in editorial time', '40% improvement in reader engagement']
+      metrics['70% increase in content output,45% reduction in editorial time,40% improvement in reader engagement']
     },
     {
-      metrics['55% faster report creation', '50% improvement in brand consistency', '35% reduction in review cycles']
+      metrics['55% faster report creation,50% improvement in brand consistency,35% reduction in review cycles']
     }
       industry: 'Corporate Communications',
       title: 'Business Content',
       description: 'Create professional reports, presentations, and corporate communications with consistent branding.',
-      metrics: ['55% faster report creation', '50% improvement in brand consistency', '35% reduction in review cycles']
+      metrics: ['55% faster report creation,50% improvement in brand consistency,35% reduction in review cycles']
     }
   ];
   const benefits = [
-    {
+  {
       icon: Clock,
       title: 'Time Savings',
       description: 'Generate high-quality content in minutes instead of hours or days.',
@@ -112,24 +112,15 @@ export default function AIContentGenerationPlatform(...args[]):  {
       value: '10x'}
   ];
   const technologies = [
-    'GPT-4 & Claude Models',
-    'DALL-E 3 & Midjourney',
-    'Stable Diffusion',
-    'Natural Language Processing',
-    'Computer Vision',
-    'Speech Synthesis',';Machine Learning',';Cloud Computing',';Real-time Processing',';API Integration',';Content Management',';Analytics & Insights';
+    'GPT-4 & Claude Models,DALL-E 3 & Midjourney,Stable Diffusion,Natural Language Processing,Computer Vision,Speech Synthesis,;Machine Learning,;Cloud Computing,;Real-time Processing,;API Integration,;Content Management,;Analytics & Insights';
   ];
-  const pricing = [{
+  const pricing = [
+  {
       plan: 'Starter',
       price: '$99',
       period: '/month',
       description: 'Perfect for small businesses and individual creators',
-      features[';10,000 words per month',
-        '100 AI-generated images',
-        '5 video generations',
-        'Basic templates',
-        'Email support',
-        'Standard quality output';
+      features[';10,000 words per month,100 AI-generated images,5 video generations,Basic templates,Email support,Standard quality output';
       ],
       cta: 'Start Free Trial',
       popular: false},
@@ -138,14 +129,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
       price: '$299',
       period: '/month',
       description: 'Ideal for growing businesses and marketing teams',
-      features[';100,000 words per month',
-        '1,000 AI-generated images',
-        '50 video generations',
-        'Advanced templates',
-        'Priority support',
-        'High-quality output',
-        'Team collaboration',
-        'Brand voice training';
+      features[';100,000 words per month,1,000 AI-generated images,50 video generations,Advanced templates,Priority support,High-quality output,Team collaboration,Brand voice training';
       ],
       cta: 'Start Free Trial',
       popular: true},
@@ -154,13 +138,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
       price: '$999',
       period: '/month',
       description: 'For large organizations with high-volume content needs',
-      features[';Unlimited words',
-        'Unlimited images',
-        'Unlimited videos',
-        'Custom templates',
-        'Dedicated support',
-        'Highest quality output',
-        'Advanced analytics',';Custom integrations',';SLA guarantees';
+      features[';Unlimited words,Unlimited images,Unlimited videos,Custom templates,Dedicated support,Highest quality output,Advanced analytics,;Custom integrations,;SLA guarantees';
       ],
       cta: 'Contact Sales',
       popular: false}

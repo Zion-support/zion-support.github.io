@@ -1,5 +1,7 @@
-import { motion } from 'framer-motion';
+<<<<<<< HEAD
+import { motion } from 'framer-motion';"
 import { Shield, Lock, Eye, Database, UserCheck, FileText } from 'lucide-react';
+<<<<<<< HEAD
 
 const Privacy: React.FC = () => {
   const sections = [
@@ -149,3 +151,9 @@ const Privacy: React.FC = () => {
   )}
 ;
 export default Privacy
+=======
+=======
+import { motion } from 'framer-motion
+import { Shield, Lock, Eye, Database, UserCheck, FileText } from 'lucide-react
+>>>>>>> main
+>>>>>>> main

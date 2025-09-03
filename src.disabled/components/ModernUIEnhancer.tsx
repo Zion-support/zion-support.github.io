@@ -36,12 +36,12 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     document.head.appendChild(fontLink);
     // Apply modern typography;
     const root = document.documentElement;
-    root.style.setProperty('--font-family', ''Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif');
-    root.style.setProperty('--font-weight-light', '300');
-    root.style.setProperty('--font-weight-normal', '400');
-    root.style.setProperty('--font-weight-medium', '500');
-    root.style.setProperty('--font-weight-semibold', '600');
-    root.style.setProperty('--font-weight-bold', '700')}, [enabled]);
+    root.style.setProperty('--font-family,'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif');
+    root.style.setProperty('--font-weight-light,300');
+    root.style.setProperty('--font-weight-normal,400');
+    root.style.setProperty('--font-weight-medium,500');
+    root.style.setProperty('--font-weight-semibold,600');
+    root.style.setProperty('--font-weight-bold,700')}, [enabled]);
   const enhanceColorScheme = useCallback(() => {
     if (!enabled || !enableDarkMode) return;
     const root = document.documentElement;
@@ -54,24 +54,23 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
       warning: '#f59e0b',
       error: '#ef4444',
       info: '#3b82f6'}
-;
     // Apply color variables;
     Object.entries(colors).forEach(([key, value]) => {
       root.style.setProperty(`--color-${key}`, value)})
     // Dark mode colors;
     if (isDarkMode) {
-      root.style.setProperty('--bg-primary', '#0f172a');
-      root.style.setProperty('--bg-secondary', '#1e293b');
-      root.style.setProperty('--bg-tertiary', '#334155');
-      root.style.setProperty('--text-primary', '#f8fafc');
-      root.style.setProperty('--text-secondary', '#cbd5e1');
-      root.style.setProperty('--text-muted', '#94a3b8')} else {
-      root.style.setProperty('--bg-primary', '#ffffff');
-      root.style.setProperty('--bg-secondary', '#f8fafc');
-      root.style.setProperty('--bg-tertiary', '#e2e8f0');
-      root.style.setProperty('--text-primary', '#0f172a');
-      root.style.setProperty('--text-secondary', '#475569');
-      root.style.setProperty('--text-muted', '#64748b')}
+      root.style.setProperty('--bg-primary,#0f172a');
+      root.style.setProperty('--bg-secondary,#1e293b');
+      root.style.setProperty('--bg-tertiary,#334155');
+      root.style.setProperty('--text-primary,#f8fafc');
+      root.style.setProperty('--text-secondary,#cbd5e1');
+      root.style.setProperty('--text-muted,#94a3b8')} else {
+      root.style.setProperty('--bg-primary,#ffffff');
+      root.style.setProperty('--bg-secondary,#f8fafc');
+      root.style.setProperty('--bg-tertiary,#e2e8f0');
+      root.style.setProperty('--text-primary,#0f172a');
+      root.style.setProperty('--text-secondary,#475569');
+      root.style.setProperty('--text-muted,#64748b')}
   }, [enabled, enableDarkMode, isDarkMode]);
   const enhanceSpacing = useCallback(() => {
     if (!enabled) return;
@@ -98,17 +97,16 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
       48: '192px',
       56: '224px',
       64: '256px'}
-;
     Object.entries(spacing).forEach(([key, value]) => {
       root.style.setProperty(`--spacing-${key}`, value)})}, [enabled]);
   const enhanceGlassmorphism = useCallback(() => {
     if (!enabled || !enableGlassmorphism) return;
     const root = document.documentElement;
     // Glassmorphism styles;
-    root.style.setProperty('--glass-bg', 'rgba(255, 255, 255, 0.1)');
-    root.style.setProperty('--glass-border', 'rgba(255, 255, 255, 0.2)');
-    root.style.setProperty('--glass-backdrop', 'blur(10px)');
-    root.style.setProperty('--glass-shadow', '0 8px 32px 0 rgba(31, 38, 135, 0.37)')}, [enabled, enableGlassmorphism]);
+    root.style.setProperty('--glass-bg,rgba(255, 255, 255, 0.1)');
+    root.style.setProperty('--glass-border,rgba(255, 255, 255, 0.2)');
+    root.style.setProperty('--glass-backdrop,blur(10px)');
+    root.style.setProperty('--glass-shadow,0 8px 32px 0 rgba(31, 38, 135, 0.37)')}, [enabled, enableGlassmorphism]);
   const enhanceGradients = useCallback(() => {
     if (!enabled || !enableGradients) return;
     const root = document.documentElement;
@@ -120,21 +118,20 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
       success: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',
       warning: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
       error: 'linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%)'}
-;
     Object.entries(gradients).forEach(([key, value]) => {
       root.style.setProperty(`--gradient-${key}`, value)})}, [enabled, enableGradients]);
   const enhanceAnimations = useCallback(() => {
     if (!enabled || !enableAnimations) return;
     const root = document.documentElement;
     // Animation timing functions;
-    root.style.setProperty('--ease-in-out', 'cubic-bezier(0.4, 0, 0.2, 1)');
-    root.style.setProperty('--ease-out', 'cubic-bezier(0, 0, 0.2, 1)');
-    root.style.setProperty('--ease-in', 'cubic-bezier(0.4, 0, 1, 1)');
-    root.style.setProperty('--ease-bounce', 'cubic-bezier(0.68, -0.55, 0.265, 1.55)');
+    root.style.setProperty('--ease-in-out,cubic-bezier(0.4, 0, 0.2, 1)');
+    root.style.setProperty('--ease-out,cubic-bezier(0, 0, 0.2, 1)');
+    root.style.setProperty('--ease-in,cubic-bezier(0.4, 0, 1, 1)');
+    root.style.setProperty('--ease-bounce,cubic-bezier(0.68, -0.55, 0.265, 1.55)');
     // Animation durations;
-    root.style.setProperty('--duration-fast', '150ms');
-    root.style.setProperty('--duration-normal', '300ms');
-    root.style.setProperty('--duration-slow', '500ms')}, [enabled, enableAnimations]);
+    root.style.setProperty('--duration-fast,150ms');
+    root.style.setProperty('--duration-normal,300ms');
+    root.style.setProperty('--duration-slow,500ms')}, [enabled, enableAnimations]);
   const enhanceCustomCursor = useCallback(() => {
     if (!enabled || !enableCustomCursor) return;
     // Add custom cursor styles;
@@ -166,9 +163,9 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     if (!enabled || !enableLoadingStates) return;
     const root = document.documentElement;
     // Loading state styles;
-    root.style.setProperty('--loading-bg', 'rgba(0, 0, 0, 0.5)');
-    root.style.setProperty('--loading-spinner', 'var(--color-primary)');
-    root.style.setProperty('--loading-text', 'var(--text-primary)')}, [enabled, enableLoadingStates]);
+    root.style.setProperty('--loading-bg,rgba(0, 0, 0, 0.5)');
+    root.style.setProperty('--loading-spinner,var(--color-primary)');
+    root.style.setProperty('--loading-text,var(--text-primary)')}, [enabled, enableLoadingStates]);
   const enhanceScrollProgress = useCallback(() => {
     if (!enabled || !enableScrollProgress) return;
     // Add scroll progress indicator;
@@ -189,7 +186,6 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
       const docHeight = document.body.scrollHeight - window.innerHeight;
       const scrollPercent = (scrollTop / docHeight) * 100;
       progressBar.style.width = scrollPercent + '%'}
-;
     window.addEventListener('scroll', updateScrollProgress);
     return () => {
       window.removeEventListener('scroll', updateScrollProgress);

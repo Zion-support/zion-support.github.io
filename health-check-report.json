@@ -1,26 +1,44 @@
 {
-  "timestamp": "2025-09-02T16:01:24.318Z",
-  "overall": "unhealthy",
-  "checks": [
-    {
-      "name": "Package.json",
-      "status": "pass",
-      "result": "Package: zion-tech-group v0.1.0"
+  "timestamp": "2025-09-02T22:04:25.517Z",
+  "fileStructure": {
+    "directories": {
+      "src": true,
+      "public": true,
+      "pages": true
     },
-    {
-      "name": "Dependencies",
-      "status": "pass",
-      "result": "Dependencies: 43 prod, 11 dev"
+    "files": {
+      "package.json": true,
+      "next.config.js": true,
+      "tsconfig.json": true
     },
-    {
-      "name": "TypeScript",
-      "status": "fail",
-      "error": "TypeScript compilation failed"
+    "issues": []
+  },
+  "configuration": {
+    "packageJson": {
+      "valid": true,
+      "issues": []
     },
-    {
-      "name": "Code Formatting",
-      "status": "fail",
-      "error": "Code formatting issues found"
+    "nextConfig": {
+      "valid": true,
+      "issues": []
+    },
+    "tsConfig": {
+      "valid": true,
+      "issues": []
     }
+<<<<<<< HEAD
   ]
 }
+=======
+  },
+  "dependencies": {
+    "total": 45,
+    "missing": [],
+    "outdated": []
+  },
+  "summary": {
+    "overall": "healthy",
+    "issues": []
+  }
+}
+>>>>>>> main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react'';'
 import { motion, AnimatePresence } from 'framer-motion';
 import {}
@@ -94,3 +95,7 @@ export { FloatingActionButton }
 export { FloatingActionButton }
 
 export { FloatingActionButton }
+=======
+import React, { useState }  from 'react;'
+"
+>>>>>>> main

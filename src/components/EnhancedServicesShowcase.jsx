@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react'';'
 import { Link } from 'react-router-dom'';'
 import { motion } from 'framer-motion'';'
@@ -324,3 +325,9 @@ export { EnhancedServicesShowcase }
 export { EnhancedServicesShowcase }
 
 export { EnhancedServicesShowcase }
+=======
+import React, { useState }  from 'react;'
+import { Link }  from 'react-router-dom;'
+import { motion }  from 'framer-motion;'
+"
+>>>>>>> main

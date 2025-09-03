@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from 'next/link
 import { motion } from 'framer-motion';
 import {
   Phone, Mail,
@@ -17,6 +17,7 @@ import {
   Server, Building,
   Handshake, FileText,
   Video, GraduationCap,
+<<<<<<< HEAD
   Atom, PenTool,
   DollarSign} from 'lucide-react';
 export function EnhancedFooter() {
@@ -221,3 +222,7 @@ export function EnhancedFooter() {
       </motion.div>
     </footer>
   )}
+=======
+  Atom, PenTool,;"
+  DollarSign} from 'lucide-react
+>>>>>>> main
