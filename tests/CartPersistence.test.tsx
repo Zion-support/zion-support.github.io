@@ -5,15 +5,15 @@ import CartPage from '@/pages/Cart'
 import { CartProvider } from '@/context/CartContext'
 import { AuthContext } from '@/context/auth/AuthContext'
 import { safeStorage } from '@/utils/safeStorage'
-import { getCartKey }  from '@/utils/cartUtils';vi.mock(
+import { getCartKey }  from '@/utils/cartUtils'vi.mock(
   'next/router', () => ({
   useRouter: () => ({ push: vi.fn() })
 }))
 
 vi.mock(
   'next/router', () => ({
-  useRouter: () => ({ push: vi.fn() })}));
-const item = { id:,
+  useRouter: () => ({ push: vi.fn() })}))
+const item = { id:
   1', name: 'Test Item, price: 10, quantity: 1 }
 
 function renderCart(user: any) {
@@ -34,8 +34,8 @@ describe(
   it(
   'shows item added before login after logging in', () => {
     safeStorage.setItem(
-  'guestCart', JSON.stringify([item]));
-    const { rerender } = renderCart(null);
+  'guestCart', JSON.stringify([item]))
+    const { rerender } = renderCart(null)
     expect(screen.getByText(/Test Item/i)).toBeInTheDocument()
     rerender(
       <AuthContext.Provider value={{ user: { id:

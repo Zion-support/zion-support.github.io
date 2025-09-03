@@ -5,12 +5,12 @@ import Categories from './Categories
 describe('Categories', () => {"
   it('renders without crashing', () => {
     render(<Categories /" >);"
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
-});
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+})
 "
   it('displays expected content', () => {
-    render(<Categories /" >);
-    // Add more specific tests here,
-});,
+    render(<Categories /" >)
+    // Add more specific tests here
 });
+})
 "

@@ -40,16 +40,16 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
                   Contact Details'''
                 </CardTitle>''''
                 <CardDescription className='text-zion-slate-light'>
-                  Reach out to us through  of these channels"
-                </CardDescription>'''
-              </CardHeader>''''
-              <CardContent className='space-y-4'>''''
-                <div className='flex items-center gap-3'>''''
-                  <div className='w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center'>''''
-                    <Phone className='h-5 w-5 text-zion-purple' /" >"
-                  </div>''''
-                  <div>''''
-                    <p className='text-white font-medium'>Phone</p>''''
+                  Reach out to us through  of these channels'
+                </CardDescription> '
+              </CardHeader>' '
+              <CardContent className='space-y-4'> ''
+                <div className='flex items-center gap-3'> ''
+                  <div className='w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center'> ''
+                    <Phone className='h-5 w-5 text-zion-purple' /" >'
+                  </div> ''
+                  <div> ''
+                    <p className='text-white font-medium'>Phone</p> ''
                     <p className='text-zion-cyan'>+1 302 464 0950</p>
                   </div>;"
                 </div>''

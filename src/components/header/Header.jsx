@@ -17,13 +17,13 @@ import { Search as SearchIcon } from 'lucide-react';
 export function Header({ hideLogin = false, customLogo, customTheme }) {
   const { user } = useAuth();
   const { isWhitelabel, primaryColor } = useWhitelabel();
-  const navigate = useNavigate();"
-  const [query, setQuery] = useState('');
+  const navigate = useNavigate();'
+  const [query, setQuery] = useState( );
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const searchSuggestions = generateSearchSuggestions();
   
-  // If we have a white-label tenant and no specific customTheme is provided,"
+  // If we have a white-label tenant and no specific customTheme is provided,'
   // use the tenant's primary color
   const effectiveTheme =
     customTheme ||
@@ -55,8 +55,8 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
   const handleSubmit = e => {
     e.preventDefault();
     if (query.trim()) {`
-      navigate(`/search?q=${encodeURIComponent(query)}`);"
-      setQuery('');,
+      navigate(`/search?q=${encodeURIComponent(query)}`);'
+      setQuery( );,
 }
   };
   
@@ -66,7 +66,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
   
   return (`
     <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        isScrolled"
+        isScrolled'
           ? 'bg-zion-blue-dark/95 backdrop-blur-xl border-b border-zion-purple/30 shadow-2xl shadow-zion-purple/20'
           : 'bg-zion-blue-dark/90 backdrop-blur-md border-b border-zion-purple/20',`
 }`}
@@ -134,8 +134,8 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
           
           {/* Mobile menu button */}
           <button onClick={toggleMobileMenu}"
-            className="lg:hidden p-2 text-zion-purple hover:text-white hover:bg-zion-purple/20 rounded-lg transition-colors"" >
-            {isMobileMenuOpen ? <X size={24} /" > : <Menu size={24} /" >}
+            className='lg:hidden p-2 text-zion-purple hover:text-white hover:bg-zion-purple/20 rounded-lg transition-colors  >
+            {isMobileMenuOpen ? <X size={24} /' > : <Menu size={24} /" >}
           </button>
         </div>
       </div>

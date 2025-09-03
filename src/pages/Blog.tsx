@@ -61,8 +61,8 @@ export default function Blog() {
     <>
       <SEO 
         title="Blog - Zion Tech Group | Technology Insights & Industry News"
-        description="Stay updated with the latest insights on AI, quantum computing, cybersecurity, and emerging technologies from Zion Tech Group's expert team."'
-        keywords="technology blog, AI insights, quantum computing, cybersecurity, digital transformation, tech news"
+        description="Stay updated with the latest insights on AI, quantum computing, cybersecurity, and emerging technologies from Zion Tech Group's expert team. 
+        keywords='technology blog, AI insights, quantum computing, cybersecurity, digital transformation, tech news"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">

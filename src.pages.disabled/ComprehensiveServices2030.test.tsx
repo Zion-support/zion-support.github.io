@@ -1,6 +1,6 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
-import ComprehensiveServices2030  from './ComprehensiveServices2030';describe('ComprehensiveServices2030', () => {
+import ComprehensiveServices2030  from './ComprehensiveServices2030'describe('ComprehensiveServices2030', () => {
   it('renders without crashing', () => {
     render(<ComprehensiveServices2030 />)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()

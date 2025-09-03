@@ -1,6 +1,6 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
-import AIMatcher  from './AIMatcher';describe('AIMatcher', () => {
+import AIMatcher  from './AIMatcher'describe('AIMatcher', () => {
   it('renders without crashing', () => {
     render(<AIMatcher />)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()

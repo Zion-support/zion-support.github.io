@@ -1,6 +1,6 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
-import CategoryDetail  from './CategoryDetail';describe('CategoryDetail', () => {
+import CategoryDetail  from './CategoryDetail'describe('CategoryDetail', () => {
   it('renders without crashing', () => {
     render(<CategoryDetail />)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()
