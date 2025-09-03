@@ -1,9 +1,10 @@
 import React from 'react';
 import type { AppProps } from 'next/app';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 import PerformanceMonitor from '../components/PerformanceMonitor';
+import SearchBar from '../components/SearchBar';
 import '../styles/globals.css';
 
 function Header(): React.JSX.Element {
@@ -25,6 +26,9 @@ function Header(): React.JSX.Element {
           <Link href="/quantum-computing" className="header-nav-link">Quantum</Link>
           <Link href="/docs" className="header-nav-link">Docs</Link>
           <Link href="/pricing" className="header-nav-link">Pricing</Link>
+          <div className="hidden md:block">
+            <SearchBar />
+          </div>
           <Link href="/contact" className="header-nav-cta">Contact</Link>
         </div>
 
@@ -39,6 +43,9 @@ function Header(): React.JSX.Element {
       </nav>
       
       <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
+        <div className="md:hidden mb-4">
+          <SearchBar />
+        </div>
         <Link href="/" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Home</Link>
         <Link href="/services" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>All Services</Link>
         <Link href="/services-catalog" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Catalog</Link>
@@ -124,6 +131,18 @@ function Footer(): React.JSX.Element {
 }
 
 export default function App({ Component, pageProps }: AppProps) {
+  useEffect(() => {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+          console.log('SW registered: ', registration);
+        })
+        .catch((registrationError) => {
+          console.log('SW registration failed: ', registrationError);
+        });
+    }
+  }, []);
+
   return (
     <ErrorBoundary>
       <PerformanceMonitor />
