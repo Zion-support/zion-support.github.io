@@ -15,7 +15,7 @@ export default function Home() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  };
+  }
   return (
     <>
       <Head>
@@ -56,7 +56,7 @@ export default function Home() {
               },
               "sameAs": [contact.site]
             })
-          }}
+          }
         />
       </Head>
       
@@ -70,18 +70,7 @@ export default function Home() {
             <p className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               Innovative Micro SaaS, AI Services & IT Solutions
             </p>
-<<<<<<< HEAD
-            <p className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-              We deliver cutting-edge technology solutions with 120+ micro SaaS products, 
-              80+ advanced AI services, and 80+ comprehensive IT solutions. From cloud optimization 
-              to AI automation, we help businesses scale efficiently and securely.
-=======
-            <p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto">
-              We deliver cutting-edge technology solutions with 150+ micro SaaS products, 
-              100+ advanced AI services, and 100+ comprehensive IT solutions. From cloud optimization 
-              to AI automation, quantum computing to blockchain solutions, we help businesses scale 
-              efficiently and securely in the digital age.
->>>>>>> ce2f1c888fb90dd5d7d297f621bf29128aa0e6a6
+
             </p>
             
             <div className={`flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 transition-all duration-1000 delay-600 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
@@ -108,31 +97,7 @@ export default function Home() {
               </Link>
             </div>
 
-<<<<<<< HEAD
-            <div className={`grid md:grid-cols-3 gap-6 text-center transition-all duration-1000 delay-800 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 hover:border-blue-500/40 transition-all duration-300 hover:scale-105">
-                <h3 className="text-2xl font-bold text-blue-400 mb-2" aria-label="120 plus micro SaaS products">120+</h3>
-                <p className="text-slate-300">Micro SaaS Products</p>
-              </div>
-              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 hover:border-purple-500/40 transition-all duration-300 hover:scale-105">
-                <h3 className="text-2xl font-bold text-purple-400 mb-2" aria-label="80 plus AI services">80+</h3>
-                <p className="text-slate-300">AI Services</p>
-              </div>
-              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 hover:border-green-500/40 transition-all duration-300 hover:scale-105">
-                <h3 className="text-2xl font-bold text-green-400 mb-2" aria-label="80 plus IT solutions">80+</h3>
-=======
-            <div className="grid md:grid-cols-3 gap-6 text-center">
-              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-                <h3 className="text-2xl font-bold text-blue-400 mb-2">150+</h3>
-                <p className="text-slate-300">Micro SaaS Products</p>
-              </div>
-              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-                <h3 className="text-2xl font-bold text-purple-400 mb-2">100+</h3>
-                <p className="text-slate-300">AI Services</p>
-              </div>
-              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-                <h3 className="text-2xl font-bold text-green-400 mb-2">100+</h3>
->>>>>>> ce2f1c888fb90dd5d7d297f621bf29128aa0e6a6
+
                 <p className="text-slate-300">IT Solutions</p>
               </div>
             </div>

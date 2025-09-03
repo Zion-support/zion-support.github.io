@@ -69,6 +69,70 @@ module.exports = {
       log_file: './logs/performance-monitor.log',
       out_file: './logs/performance-monitor-out.log',
       error_file: './logs/performance-monitor-error.log'
+    },
+    {
+      name: 'automation-ci-cd',
+      script: 'node',
+      args: 'scripts/automation-orchestrator.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '0 */1 * * *', // Restart every hour
+      env: {
+        NODE_ENV: 'production'
+      },
+      log_file: './logs/ci-cd.log',
+      out_file: './logs/ci-cd-out.log',
+      error_file: './logs/ci-cd-error.log'
+    },
+    {
+      name: 'automation-continuous-improvement',
+      script: 'node',
+      args: 'scripts/enhanced-app-improvement-automation.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '0 */2 * * *', // Restart every 2 hours
+      env: {
+        NODE_ENV: 'production'
+      },
+      log_file: './logs/continuous-improvement.log',
+      out_file: './logs/continuous-improvement-out.log',
+      error_file: './logs/continuous-improvement-error.log'
+    },
+    {
+      name: 'automation-dependency-updates',
+      script: 'node',
+      args: 'scripts/dependency-updater.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '0 */6 * * *', // Restart every 6 hours
+      env: {
+        NODE_ENV: 'production'
+      },
+      log_file: './logs/dependency-updates.log',
+      out_file: './logs/dependency-updates-out.log',
+      error_file: './logs/dependency-updates-error.log'
+    },
+    {
+      name: 'automation-quality-checks',
+      script: 'node',
+      args: 'scripts/code-quality-monitor.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '0 */3 * * *', // Restart every 3 hours
+      env: {
+        NODE_ENV: 'production'
+      },
+      log_file: './logs/quality-checks.log',
+      out_file: './logs/quality-checks-out.log',
+      error_file: './logs/quality-checks-error.log'
     }
   ]
 };
