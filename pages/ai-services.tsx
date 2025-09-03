@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { ArrowRight, Award, BarChart3, Bot, Brain, Bug, CheckCircle, Clock, Code, Cpu, Cross, Deep, Eye, FileText, From, Globe, Grid, Image, Mail, MessageSquare, Mic, Minimize, Monitor, Network, Phone, Search, Server, Settings, Shield, Star, Target, TrendingUp, Users, Video, Zap, Heart, Satellite, Car, TreePine } from 'lucide-react';
+import { ArrowRight, Award, BarChart3, Bot, Brain, Bug, CheckCircle, Clock, Code, Cpu, Cross, Deep, Eye, FileText, From, Globe, Grid, Image, Mail, MessageSquare, Mic, Minimize, Monitor, Network, Phone, Search, Server, Settings, Shield, Star, Target, TrendingUp, Users, Video, Zap, Heart, Satellite, Car, TreePine, Cloud, MapPin } from 'lucide-react';
 import Navigation from '../src/components/Navigation';
 import Footer from '../src/components/Footer';
 export default function AIServices() {
@@ -863,265 +863,45 @@ export default function AIServices() {
       pricing: '$3,000 - $12,000/month',
       delivery: '4-6 weeks',
       category: 'Personalization AI'
-    },
-    {
-<<<<<<< HEAD
-      title: 'AI-Powered Quantum Computing Simulator',
-      description: 'Advanced quantum computing simulation and optimization platform for complex problem solving',
-      icon: Cpu,
-      features: [
-        'Quantum algorithm development and testing,Quantum circuit optimization and simulation,Quantum machine learning model training,Quantum cryptography and security protocols,Integration with classical computing systems,Real-time quantum state monitoring and analysis'
-      ],
-      pricing: '$15,000 - $50,000/month',
-      delivery: '12-20 weeks',
-      category: 'Quantum AI'
-    },
-    {
-      title: 'AI-Powered Autonomous Vehicle Management',
-      description: 'Intelligent fleet management and autonomous vehicle coordination system',
-      icon: Car,
-      features: [
-        'Autonomous vehicle fleet coordination and optimization,Real-time traffic analysis and route optimization,Predictive maintenance and safety monitoring,Passenger experience personalization,Integration with smart city infrastructure,Regulatory compliance and safety reporting'
-      ],
-      pricing: '$20,000 - $75,000/month',
-      delivery: '16-24 weeks',
-      category: 'Autonomous AI'
-    },
-    {
-      title: 'AI-Powered Space Technology Platform',
-      description: 'Advanced space mission planning and satellite management with AI optimization',
-      icon: Satellite,
-      features: [
-        'Satellite constellation optimization and management,Space mission planning and trajectory optimization,Earth observation data analysis and insights,Space debris tracking and collision avoidance,Planetary exploration mission design,Space weather prediction and monitoring'
-      ],
-      pricing: '$25,000 - $100,000/month',
-      delivery: '20-32 weeks',
-      category: 'Space AI'
-    },
-    {
-      title: 'AI-Powered Metaverse Development Platform',
-      description: 'Comprehensive metaverse creation and management with AI-driven content generation',
-      icon: Globe,
-      features: [
-        'AI-generated 3D environments and virtual worlds,Intelligent NPC behavior and interaction systems,Virtual economy management and optimization,Cross-platform metaverse integration,Real-time content generation and adaptation,User behavior analysis and personalization'
-      ],
-      pricing: '$10,000 - $40,000/month',
-      delivery: '12-20 weeks',
-      category: 'Metaverse AI'
-    },
-    {
-      title: 'AI-Powered Blockchain Intelligence Platform',
-      description: 'Advanced blockchain analysis and DeFi optimization with AI-driven insights',
-      icon: Network,
-      features: [
-        'Blockchain transaction analysis and pattern recognition,DeFi protocol optimization and yield farming strategies,Smart contract security auditing and optimization,Cryptocurrency market prediction and trading algorithms,NFT marketplace analysis and valuation,Cross-chain interoperability and bridge optimization'
-      ],
-      pricing: '$8,000 - $30,000/month',
-      delivery: '10-16 weeks',
-      category: 'Blockchain AI'
-    },
-    {
-      title: 'AI-Powered Digital Twin Platform',
-      description: 'Comprehensive digital twin creation and management for physical assets and processes',
-      icon: Monitor,
-      features: [
-        'Real-time asset monitoring and predictive maintenance,Process optimization and simulation modeling,Performance analytics and optimization recommendations,Integration with IoT sensors and data sources,3D visualization and augmented reality interfaces,Automated decision making and control systems'
-      ],
-      pricing: '$12,000 - $45,000/month',
-      delivery: '14-22 weeks',
-      category: 'Digital Twin AI'
-    },
-    {
-      title: 'AI-Powered Edge Computing Platform',
-      description: 'Intelligent edge computing with AI processing and real-time decision making',
-      icon: Cpu,
-      features: [
-        'Distributed AI model deployment and management,Real-time data processing and analysis,Edge-to-cloud synchronization and optimization,Low-latency inference and decision making,Resource optimization and load balancing,Integration with IoT devices and sensors'
-      ],
-      pricing: '$6,000 - $25,000/month',
-      delivery: '8-14 weeks',
-      category: 'Edge AI'
-    },
-    {
-      title: 'AI-Powered Cybersecurity Intelligence Platform',
-      description: 'Advanced threat detection and response with AI-driven security automation',
-      icon: Shield,
-      features: [
-        'Real-time threat detection and analysis,Automated incident response and remediation,Behavioral analysis and anomaly detection,Zero-day vulnerability identification,Security orchestration and automation,Compliance monitoring and reporting'
-      ],
-      pricing: '$15,000 - $60,000/month',
-      delivery: '12-20 weeks',
-      category: 'Cybersecurity AI'
-    },
-    {
-      title: 'AI-Powered Healthcare Diagnostics Platform',
-      description: 'Advanced medical imaging analysis and diagnostic assistance with AI',
-      icon: Heart,
-      features: [
-        'Medical image analysis and interpretation,Disease detection and early diagnosis,Treatment recommendation and optimization,Patient monitoring and risk assessment,Integration with EHR and medical devices,Regulatory compliance and clinical validation'
-      ],
-      pricing: '$20,000 - $80,000/month',
-      delivery: '16-24 weeks',
-      category: 'Healthcare AI'
-=======
-      title: 'AI-Powered Cybersecurity Threat Detection',
-      description: 'Advanced threat detection and response system with real-time monitoring and automated incident response',
-      icon: Shield,
-      features: [
-        'Real-time threat detection and analysis,Automated incident response and containment,Behavioral anomaly detection,Zero-day threat identification,Threat intelligence integration,Compliance monitoring and reporting'
-      ],
-      pricing: '$4,500 - $18,000/month',
-      delivery: '6-8 weeks',
-      category: 'Cybersecurity AI'
-    },
-    {
-      title: 'AI-Powered Medical Diagnosis Assistant',
-      description: 'Intelligent medical diagnosis support with image analysis and symptom correlation',
-      icon: Heart,
-      features: [
-        'Medical image analysis and interpretation,Symptom correlation and diagnosis suggestions,Patient data analysis and risk assessment,Drug interaction and allergy checking,Medical literature research and insights,Integration with EHR systems'
-      ],
-      pricing: '$8,000 - $35,000/month',
-      delivery: '10-16 weeks',
-      category: 'Medical AI'
-    },
-    {
-      title: 'AI-Powered Legal Document Analysis',
-      description: 'Intelligent legal document review and contract analysis with risk assessment',
-      icon: FileText,
-      features: [
-        'Automated contract review and analysis,Legal document summarization and key point extraction,Risk assessment and compliance checking,Legal research and precedent analysis,Document comparison and version control,Integration with legal case management systems'
-      ],
-      pricing: '$5,000 - $20,000/month',
-      delivery: '8-12 weeks',
-      category: 'Legal AI'
-    },
-    {
-      title: 'AI-Powered Financial Risk Assessment',
-      description: 'Intelligent financial risk analysis and credit scoring with predictive modeling',
-      icon: TrendingUp,
-      features: [
-        'Credit risk assessment and scoring,Market risk analysis and prediction,Fraud detection and prevention,Portfolio optimization and management,Regulatory compliance monitoring,Real-time financial alerts and recommendations'
-      ],
-      pricing: '$6,000 - $25,000/month',
-      delivery: '8-14 weeks',
-      category: 'Financial AI'
-    },
-    {
-      title: 'AI-Powered Environmental Monitoring',
-      description: 'Intelligent environmental data analysis and climate prediction with IoT integration',
-      icon: TreePine,
-      features: [
-        'Environmental data collection and analysis,Climate change prediction and modeling,Pollution monitoring and alert systems,Resource optimization and sustainability planning,Environmental compliance reporting,Integration with IoT sensors and satellite data'
-      ],
-      pricing: '$4,000 - $16,000/month',
-      delivery: '6-10 weeks',
-      category: 'Environmental AI'
-    },
-    {
-      title: 'AI-Powered Autonomous Vehicle Systems',
-      description: 'Advanced autonomous vehicle technology with real-time decision making and safety systems',
-      icon: Car,
-      features: [
-        'Real-time object detection and path planning,Traffic pattern analysis and optimization,Vehicle-to-vehicle communication,Autonomous parking and navigation,Safety system monitoring and alerts,Integration with smart city infrastructure'
-      ],
-      pricing: '$15,000 - $60,000/month',
-      delivery: '16-24 weeks',
-      category: 'Autonomous Vehicle AI'
-    },
-    {
-      title: 'AI-Powered Satellite Data Analysis',
-      description: 'Intelligent satellite imagery analysis for agriculture, urban planning, and disaster response',
-      icon: Satellite,
-      features: [
-        'Satellite imagery analysis and interpretation,Crop monitoring and yield prediction,Urban development tracking,Disaster damage assessment,Weather pattern analysis,Integration with GIS and mapping systems'
-      ],
-      pricing: '$7,000 - $28,000/month',
-      delivery: '10-16 weeks',
-      category: 'Satellite AI'
-    },
-    {
-      title: 'AI-Powered Energy Grid Optimization',
-      description: 'Intelligent energy grid management with demand forecasting and renewable energy integration',
-      icon: Zap,
-      features: [
-        'Energy demand forecasting and optimization,Smart grid management and control,Renewable energy integration and storage,Power outage prediction and prevention,Energy efficiency optimization,Integration with smart meters and IoT devices'
-      ],
-      pricing: '$8,000 - $32,000/month',
-      delivery: '12-20 weeks',
-      category: 'Energy AI'
-    },
-    {
-      title: 'AI-Powered Drug Discovery Platform',
-      description: 'Intelligent drug discovery and development with molecular analysis and clinical trial optimization',
-      icon: Heart,
-      features: [
-        'Molecular structure analysis and drug design,Clinical trial optimization and patient matching,Drug interaction and side effect prediction,Biomarker identification and analysis,Regulatory compliance and approval tracking,Integration with pharmaceutical databases'
-      ],
-      pricing: '$12,000 - $50,000/month',
-      delivery: '16-24 weeks',
-      category: 'Pharmaceutical AI'
->>>>>>> cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-68a5
     }
   ];
+
   const aiTechnologies = [
-  {
-      name: 'Machine Learning',
-      icon: Brain,
-      description: 'Custom ML models and algorithms',
-    },
-    {
-      name: 'Natural Language Processing',
-      icon: MessageSquare,
-      description: 'Text analysis and generation',
-    },
-    {
-      name: 'Computer Vision',
-      icon: Eye,
-      description: 'Image and video processing',
-    },
-    {
-      name: 'Deep Learning',
-      icon: Cpu,
-      description: 'Neural networks and deep architectures',
-    },
-    {
-      name: 'Reinforcement Learning',
-      icon: Target,
-      description: 'Autonomous decision making',
-    },
-    {
-      name: 'Generative AI',
-      icon: FileText,
-      description: 'Content creation and synthesis',
-    },
+    { name: 'Machine Learning', icon: Brain, description: 'TensorFlow, PyTorch, Scikit-learn' },
+    { name: 'Natural Language Processing', icon: MessageSquare, description: 'GPT, BERT, Transformers' },
+    { name: 'Computer Vision', icon: Eye, description: 'OpenCV, YOLO, ResNet' },
+    { name: 'Deep Learning', icon: Network, description: 'Neural Networks, CNN, RNN' },
+    { name: 'AI Frameworks', icon: Code, description: 'TensorFlow, PyTorch, Keras' },
+    { name: 'Cloud AI', icon: Cloud, description: 'AWS AI, Azure AI, Google AI' }
   ];
+
   const benefits = [
-  {
-      title: 'Increased Efficiency',
-      description: 'Automate repetitive tasks and processes',
+    {
+      title: 'Automation Efficiency',
+      description: 'Reduce manual work by up to 80%',
       icon: Zap,
-      stat: '80%',
+      stat: '80%'
     },
     {
       title: 'Cost Reduction',
-      description: 'Reduce operational costs through automation',
+      description: 'Lower operational costs',
       icon: TrendingUp,
-      stat: '60%',
+      stat: '60%'
     },
     {
-      title: 'Enhanced Accuracy',
-      description: 'Minimize human errors with AI precision',
+      title: 'Accuracy Improvement',
+      description: 'Higher precision and reliability',
       icon: Target,
-      stat: '95%',
+      stat: '95%'
     },
     {
-      title: '24/7 Availability',
-      description: 'Round-the-clock AI-powered services',
+      title: 'Time Savings',
+      description: 'Faster processing and decisions',
       icon: Clock,
-      stat: '99.9%',
-    },
+      stat: '10x'
+    }
   ];
+
   return (
     <>
       <Head>
@@ -1140,22 +920,20 @@ export default function AIServices() {
             <div className="flex items-center justify-center mb-6">
               <Brain className="h-12 w-12 text-blue-600 mr-4" />
               <Award className="h-6 w-6 text-blue-600 mr-2" />
-              <span className="text-base font-semibold leading-7 text-blue-600">
-                AI Services
-              </span>
+              <span className="text-base font-semibold leading-7 text-blue-600">AI Services</span>
             </div>
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
               Artificial Intelligence Solutions
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Transform your business with cutting-edge AI technologies. From quantum machine learning 
-              to consciousness simulation, we deliver next-generation intelligent solutions that drive 
-              innovation, efficiency, and competitive advantage across all industries.
+              Cutting-edge AI solutions that transform your business operations. From autonomous systems 
+              to intelligent automation, we help you harness the power of artificial intelligence for 
+              competitive advantage and operational excellence.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link
                 href="/contact"
-                className="rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover: bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                className="rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
               >
                 Get Started
                 <ArrowRight className="ml-2 h-4 w-4 inline" />
@@ -1179,7 +957,7 @@ export default function AIServices() {
               Why Choose Our AI Services?
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Proven results and measurable impact for your business
+              Proven AI expertise delivering measurable business results
             </p>
           </div>
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -1188,12 +966,8 @@ export default function AIServices() {
                 <div className="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 mx-auto mb-4">
                   <benefit.icon className="h-8 w-8 text-blue-600" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                  {benefit.stat}
-                </h3>
-                <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                  {benefit.title}
-                </h4>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">{benefit.stat}</h3>
+                <h4 className="text-lg font-semibold text-gray-900 mb-2">{benefit.title}</h4>
                 <p className="text-gray-600">{benefit.description}</p>
               </div>
             ))}
@@ -1201,30 +975,25 @@ export default function AIServices() {
         </div>
       </section>
 
-      {/* AI Technologies */}
-      <section className="py-24 sm: py-32 bg-gray-50">
+      {/* Technologies Section */}
+      <section className="py-24 sm:py-32 bg-gray-50">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               AI Technologies We Master
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Cutting-edge AI technologies powering the future of business
+              Cutting-edge AI technologies powering intelligent solutions
             </p>
           </div>
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {aiTechnologies.map((tech, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
-              >
+              <div key={index} className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex items-center mb-4">
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100">
                     <tech.icon className="h-6 w-6 text-blue-600" />
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-900 ml-4">
-                    {tech.name}
-                  </h3>
+                  <h3 className="text-lg font-semibold text-gray-900 ml-4">{tech.name}</h3>
                 </div>
                 <p className="text-gray-600">{tech.description}</p>
               </div>
@@ -1234,27 +1003,20 @@ export default function AIServices() {
       </section>
 
       {/* AI Services Grid */}
-      <section className="py-24 sm: py-32 bg-white">
+      <section className="py-24 sm:py-32 bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Our AI Service Portfolio
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Comprehensive AI solutions tailored to your business needs. All
-              services include implementation, training, and ongoing support.
-              Contact us at{' '}
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="text-blue-600 hover:text-blue-500"
-              >
+              Comprehensive AI solutions tailored to your business needs. All services include implementation, 
+              training, and ongoing support. Contact us at{' '}
+              <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:text-blue-500">
                 kleber@ziontechgroup.com
               </a>{' '}
               or call{' '}
-              <a
-                href="tel:+13024640950"
-                className="text-blue-600 hover:text-blue-500"
-              >
+              <a href="tel:+13024640950" className="text-blue-600 hover:text-blue-500">
                 +1 302 464 0950
               </a>{' '}
               for custom pricing.
@@ -1262,30 +1024,20 @@ export default function AIServices() {
           </div>
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
             {aiServices.map((service, index) => (
-              <div
-                key={index}
-                className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300"
-              >
+              <div key={index} className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300">
                 <div className="flex items-center gap-x-3 mb-6">
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 group-hover:bg-blue-700 transition-colors">
                     <service.icon className="h-7 w-7 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900">
-                      {service.title}
-                    </h3>
-                    <p className="text-sm text-blue-600 font-medium">
-                      {service.category}
-                    </p>
+                    <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
+                    <p className="text-sm text-blue-600 font-medium">{service.category}</p>
                   </div>
                 </div>
                 <p className="text-gray-600 mb-6">{service.description}</p>
                 <ul className="space-y-3 mb-6">
                   {service.features.map((feature, featureIndex) => (
-                    <li
-                      key={featureIndex}
-                      className="flex items-center gap-x-3"
-                    >
+                    <li key={featureIndex} className="flex items-center gap-x-3">
                       <CheckCircle className="h-4 w-4 text-blue-600 flex-shrink-0" />
                       <span className="text-sm text-gray-700">{feature}</span>
                     </li>
@@ -1297,13 +1049,11 @@ export default function AIServices() {
                       <Clock className="h-4 w-4" />
                       <span>{service.delivery}</span>
                     </div>
-                    <div className="font-semibold text-blue-600">
-                      {service.pricing}
-                    </div>
+                    <div className="font-semibold text-blue-600">{service.pricing}</div>
                   </div>
                   <Link
                     href="/contact"
-                    className="inline-flex items-center text-sm font-semibold text-blue-600 hover: text-blue-500 transition-colors group"
+                    className="inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-500 transition-colors group"
                   >
                     Get Started
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -1315,35 +1065,62 @@ export default function AIServices() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="bg-blue-600 py-16 sm: py-24">
+      {/* Contact Information Section */}
+      <section className="bg-gray-50 py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Ready to Transform Your Business with AI?
             </h2>
-            <p className="mt-6 text-lg leading-8 text-blue-100">
-              Let's discuss how our AI solutions can drive your business
-              forward. Get a free consultation and custom proposal.
+            <p className="mt-6 text-lg leading-8 text-gray-600">
+              Let's discuss how our AI services can optimize your operations. 
+              Get a free consultation and custom proposal.
             </p>
+            <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-3">
+              <div className="text-center">
+                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 mx-auto mb-4">
+                  <Phone className="h-6 w-6 text-blue-600" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Call Us</h3>
+                <a href="tel:+13024640950" className="text-blue-600 hover:text-blue-500">
+                  +1 302 464 0950
+                </a>
+              </div>
+              <div className="text-center">
+                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 mx-auto mb-4">
+                  <Mail className="h-6 w-6 text-blue-600" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Email Us</h3>
+                <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:text-blue-500">
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
+              <div className="text-center">
+                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 mx-auto mb-4">
+                  <MapPin className="h-6 w-6 text-blue-600" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Visit Us</h3>
+                <p className="text-gray-600">364 E Main St STE 1008<br />Middletown DE 19709</p>
+              </div>
+            </div>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link
                 href="/contact"
-                className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-sm hover: bg-gray-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                className="rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
               >
                 Schedule Consultation
               </Link>
               <a
                 href="tel:+13024640950"
-                className="text-sm font-semibold leading-6 text-white hover:text-blue-100"
+                className="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-600"
               >
-                Call +1 302 464 0950 <span aria-hidden="true">→</span>
+                Call Now <span aria-hidden="true">→</span>
               </a>
             </div>
           </div>
         </div>
       </section>
-      
+
       <Footer />
     </>
   );
