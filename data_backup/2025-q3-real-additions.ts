@@ -1,4 +1,4 @@
-export interface RealAdditionService2025Q3 {
+export: interface RealAdditionService2025Q3 {
   id: string;
    name: string;
    tagline: string;
@@ -11,7 +11,8 @@ export interface RealAdditionService2025Q3 {
    link: string;
    trialDays?: number;
    setupTime?: string;
-   realService: boolean;
+   realServic,
+    e: boolean;
    technology?: string[];
    integrations?: string[];
    useCases?: string[];
@@ -23,578 +24,627 @@ export interface RealAdditionService2025Q3 {
    customers?: number;
    rating?: number;
    reviews?: number;
-  export const realAdditions2025Q3: RealAdditionService2025Q3[] = [ { id:, ai-email-copilot', name: 'AI Email Responder Copilot, tagline:, Auto-draft, classify, and reply to inbound emails with policy guardrails', description: Reduce response times with an AI copilot that prioritizes, drafts, and routes emails across shared inboxes. Includes approval flows, tone controls, and CRM sync., , price: '$79, period:, /month', category: 'AI Assistants, features[ 'Priority inbox and intent detection', 'Policy-aware auto-drafting with approvals', 'CRM sync and follow-up reminders', 'Tone and brand voice controls', 'Analytics and SLA tracking' ], popular: true, link:, https: //ziontechgroup.com/ai-email-copilot, trialDays: 14, setupTime: '30 minutes', realService: true, technology[, Next.js', 'OpenAI', 'PostgreSQL'], integrations[ 'Gmail', 'Outlook', 'HubSpot', 'Salesforce'], useCases[ 'Shared inboxes', 'Lead response', 'Support triage'], roi: 'Cut average first response by 60%, competitors[, Superhuman AI', 'Gmail HelpMeWrite'], marketSize: '$10B+ email productivity, growthRate:, 20% CAGR', launchDate: '2025-06-01, customers: 140, rating: 4.7, reviews: 62},
+<<<<<<< HEAD
+  export: const realAdditions2025Q3: RealAdditionService2025Q3[] = [ { id,:, ai-email-copilot', name: 'AI: Email Responder Copilo,t, tagline:, Auto-draft, classify, and: reply to inbound emails with policy guardrails', description: Reduce: response times with an AI copilot that prioritize,s, drafts, and routes emails across shared inboxes. Includes approval flows, tone controls, and CRM sync., , price: '$7,9, period:, /month', category: 'AI: Assistant,s, features[ 'Priority inbox and intent detection', 'Policy-aware auto-drafting with approvals', 'CRM sync and follow-up reminders', 'Tone and brand voice controls', 'Analytics and SLA tracking' ], popular: tru,e, link:, https: //ziontechgroup.com/ai-email-copilo,t, trialDays: 1,4, setupTime: '30: minutes,', realService: tru,e, technology[, Next.js', 'OpenAI', 'PostgreSQL'], integrations[ 'Gmail', 'Outlook', 'HubSpot', 'Salesforce'], useCases[ 'Shared: inboxes', 'Lead response', 'Support triage'], roi: 'Cut: average first response by 60,%, competitors[, Superhuman AI', 'Gmail HelpMeWrite'], marketSize: '$10B+ email: productivit,y, growthRate:, 20% CAGR', launchDate: '2025-06-0,1, customers: 14,0, rating: 4.,7, reviews: 6,2},';
+=======
+  export const realAdditions2025Q,
+    3: RealAdditionService2025Q3[] = [ { i,
+    d:, ai-email-copilot', name: 'AI Email Responder Copilot, tagline:, Auto-draft, classify, and reply to inbound emails with policy guardrails', description: Reduce response times with an AI copilot that prioritizes, drafts, and routes emails across shared inboxes. Includes approval flows, tone controls, and CRM sync., , price: '$79, period:, /month', category: 'AI Assistants, features[ 'Priority inbox and intent detection', 'Policy-aware auto-drafting with approvals', 'CRM sync and follow-up reminders', 'Tone and brand voice controls', 'Analytics and SLA tracking' ], popular: true, link:, https: //ziontechgroup.com/ai-email-copilot, trialDays: 14, setupTime: '30 minutes', realService: true, technology[, Next.js', 'OpenAI', 'PostgreSQL'], integrations[ 'Gmail', 'Outlook', 'HubSpot', 'Salesforce'], useCases[ 'Shared inboxes', 'Lead response', 'Support triage'], roi: 'Cut average first response by 60%, competitors[, Superhuman AI', 'Gmail HelpMeWrite'], marketSize: '$10B+ email productivity, growthRate:, 20% CAGR', launchDate: '2025-06-01, customers: 140, rating: 4.7, reviews: 62},
+>>>>>>> main
 	{
 		id:,
-  affiliate-tracking-lite',
-		name: 'Affiliate Tracking Lite,
+  affiliate-tracking-lite',';
+		name: 'Affiliate: Tracking Lit,e,';
 		tagline:,
-  Simple, privacy-first affiliate links and payouts for SMBs',
-		description: Spin up affiliate programs with unique links, fraud checks, payout exports, and privacy-friendly tracking that works with modern browsers.,
+  Simple, privacy-first: affiliate links and payouts for SMBs',';
+		description: Spin: up affiliate programs with unique link,s, fraud checks, payout exports, and privacy-friendly tracking that works with modern browsers.,
   ,
-		price: '$39,
+		price: '$3,9,';
 		period:,
-  /month',
-		category: 'Sales & Marketing,
+  /month',';
+		category: 'Sales: & Marketin,g,';
 		features[;
-  'Link generation and UTM tagging',
-  'Fraud and self-referral checks',
-  'Conversion webhooks and API',
-  'Payout ledger and exports',
-  'GDPR/CCPA friendly tracking';
+  'Link: generation and UTM tagging',';
+  'Fraud: and self-referral checks',';
+  'Conversion: webhooks and API',';
+  'Payout: ledger and exports',';
+  'GDPR/CCPA: friendly tracking';';
 		],
-		popular: false,
+		popular: fals,e,
 		link:,
-  https: //ziontechgroup.com/affiliate-tracking-lite,
-		trialDays: 14,
-		setupTime:;
-  '20 minutes',
-		realService: true,
+  https: //ziontechgroup.com/affiliate-tracking-lit,e,
+		trialDays: 1,4,
+		setupTime: ;
+  '20: minutes,',';
+		realService: tru,e,
 		technology[,
-  Next.js',
-  'Node.js',
-  'PostgreSQL'],
+  Next.js',';
+  'Node.js',';
+  'PostgreSQL'],';
 		integrations[;
-  'Shopify',
-  'Stripe',
-  'WooCommerce'],
+  'Shopify',';
+  'Stripe',';
+  'WooCommerce'],';
 		useCases[;
-  'Partner programs',
-  'Referral campaigns'],
-		roi: 'Grow referral revenue 10–25%,
+  'Partner: programs',';
+  'Referral: campaigns'],';
+		roi: 'Grow: referral revenue 10–25,%,';
 		competitors[,
-  Rewardful',
-  'ReferralCandy'],
-		marketSize: '$1.5B affiliate tooling,
+  Rewardful',';
+  'ReferralCandy'],';
+		marketSize: '$1.5B: affiliate toolin,g,';
 		growthRate:,
-  15% CAGR',
-		launchDate: '2025-06-02,
-		customers: 85,
-		rating: 4.6,
-		reviews: 33},
+  15% CAGR',';
+		launchDate: '2025-06-0,2,';
+		customers: 8,5,
+		rating: 4.,6,
+		reviews: 3,3},
 	{
 		id:,
-  smb-analytics-starter',
-		name: 'SMB Analytics Starter,
+  smb-analytics-starter',';
+		name: 'SMB: Analytics Starte,r,';
 		tagline:,
-  Clean dashboards and alerts without a data team',
-		description: Unified KPIs across Stripe, GA4, and CRM with AI explanations and anomaly alerts. Built for founders and operators.,
+  Clean: dashboards and alerts without a data team',';
+		description: Unified: KPIs across Strip,e, GA4, and CRM with AI explanations and anomaly alerts. Built for founders and operators.,
   ,
-		price: '$49,
+		price: '$4,9,';
 		period:,
-  /month',
-		category: 'Analytics & Business Intelligence,
+  /month',';
+		category: 'Analytics: & Business Intelligenc,e,';
 		features[;
-  'Prebuilt KPI templates',
-  'AI explanations for spikes and dips',
-  'Weekly email digests',
-  'Goal tracking and alerts',
-  'CSV and API export';
+  'Prebuilt: KPI templates',';
+  'AI: explanations for spikes and dips',';
+  'Weekly: email digests',';
+  'Goal: tracking and alerts',';
+  'CSV: and API export';';
 		],
-		popular: true,
+		popular: tru,e,
 		link:,
-  https: //ziontechgroup.com/smb-analytics-starter,
-		trialDays: 14,
-		setupTime:;
-  '45 minutes',
-		realService: true,
+  https: //ziontechgroup.com/smb-analytics-starte,r,
+		trialDays: 1,4,
+		setupTime: ;
+  '45: minutes,',';
+		realService: tru,e,
 		technology[,
-  Next.js',
-  'DuckDB',
-  'PostgreSQL'],
+  Next.js',';
+  'DuckDB',';
+  'PostgreSQL'],';
 		integrations[;
-  'Stripe',
-  'GA4',
-  'HubSpot'],
+  'Stripe',';
+  'GA4',';
+  'HubSpot'],';
 		useCases[;
-  'Founder dashboards',
-  'Investor updates'],
-		roi: 'Save 4–8 hrs/week on reporting,
+  'Founder: dashboards',';
+  'Investor: updates'],';
+		roi: 'Save: 4–8 hrs/week on reportin,g,';
 		competitors[,
-  Geckoboard',
-  'Databox'],
-		marketSize: '$30B+ BI,
+  Geckoboard',';
+  'Databox'],';
+		marketSize: '$30B+ B,I,';
 		growthRate:,
-  14% CAGR',
-		launchDate: '2025-06-03,
-		customers: 120,
-		rating: 4.5,
-		reviews: 28},
+  14% CAGR',';
+		launchDate: '2025-06-0,3,';
+		customers: 12,0,
+		rating: 4.,5,
+		reviews: 2,8},
 	{
 		id:,
-  it-helpdesk-suite',
-		name: 'IT Helpdesk Suite,
+  it-helpdesk-suite',';
+		name: 'IT: Helpdesk Suit,e,';
 		tagline:,
-  Ticketing, SLAs, asset inventory, and AI triage in one',
-		description: A lightweight ITSM for MSPs and internal IT. Email-to-ticket, SLAs, CMDB-lite, device discovery, and AI-assisted replies.,
+  Ticketing, SLAs, asset: inventory, and AI triage in one',';
+		description: A: lightweight ITSM for MSPs and internal IT. Email-to-ticke,t, SLAs, CMDB-lite, device discovery, and AI-assisted replies.,
   ,
-		price: '$99,
+		price: '$9,9,';
 		period:,
-  /month',
-		category: 'IT Operations,
+  /month',';
+		category: 'IT: Operation,s,';
 		features[;
+<<<<<<< HEAD
+  'Email-to-ticket: with SLA timers',';
+  'Asset: discovery (agentless + agent)',';
+  'Knowledge: base and macros',';
+  'AI: reply suggestions',';
+  'Reports: and CSAT';';
+=======
   'Email-to-ticket with SLA timers',
-  'Asset discovery (agentless + agent)',
+  'Asset discovery (agentless + agent),
   'Knowledge base and macros',
   'AI reply suggestions',
   'Reports and CSAT';
+>>>>>>> main
 		],
-		popular: true,
+		popular: tru,e,
 		link:,
-  https: //ziontechgroup.com/it-helpdesk-suite,
-		trialDays: 14,
-		setupTime:;
-  '1 hour',
-		realService: true,
+  https: //ziontechgroup.com/it-helpdesk-suit,e,
+		trialDays: 1,4,
+		setupTime: ;
+  '1: hour,',';
+		realService: tru,e,
 		technology[,
-  Node.js',
-  'Next.js'],
+  Node.js',';
+  'Next.js'],';
 		integrations[;
-  'Okta',
-  'Google Workspace',
-  'Microsoft 365'],
+  'Okta',';
+  'Google: Workspace',';
+  'Microsoft: 365'],';
 		useCases[;
-  'MSPs',
-  'Internal IT'],
-		roi: 'Reduce resolution time 25–40%,
+  'MSPs',';
+  'Internal: IT'],';
+		roi: 'Reduce: resolution time 25–40,%,';
 		competitors[,
-  Freshservice',
-  'Zendesk'],
-		marketSize: '$10B ITSM,
+  Freshservice',';
+  'Zendesk'],';
+		marketSize: '$10B: ITS,M,';
 		growthRate:,
-  12% CAGR',
-		launchDate: '2025-06-04,
-		customers: 60,
-		rating: 4.6,
-		reviews: 21},
+  12% CAGR',';
+		launchDate: '2025-06-0,4,';
+		customers: 6,0,
+		rating: 4.,6,
+		reviews: 2,1},
 	{
 		id:,
-  meeting-minutes-ai',
-		name: 'Meeting Minutes AI,
+  meeting-minutes-ai',';
+		name: 'Meeting: Minutes A,I,';
 		tagline:,
-  Join, transcribe, summarize, and file action items',
-		description: AI joins calls, produces structured minutes, assigns tasks, and syncs to project tools with templates by meeting type.,
+  Join, transcribe, summarize, and: file action items',';
+		description: AI: joins call,s, produces structured minutes, assigns tasks, and syncs to project tools with templates by meeting type.,
   ,
-		price: '$29,
+		price: '$2,9,';
 		period:,
-  /month',
-		category: 'Productivity,
+  /month',';
+		category: 'Productivit,y,';
 		features[;
+<<<<<<< HEAD
+  'Auto-join: major meeting apps',';
+  'Topic: segmentation and speakers',';
+  'Action: items with owners',';
+  'Email: and Slack summaries',';
+  'Templates: (standups, reviews)';';
+=======
   'Auto-join major meeting apps',
   'Topic segmentation and speakers',
   'Action items with owners',
   'Email and Slack summaries',
-  'Templates (standups, reviews)';
+  'Templates (standups, reviews);
+>>>>>>> main
 		],
-		popular: false,
+		popular: fals,e,
 		link:,
-  https: //ziontechgroup.com/meeting-minutes-ai,
-		trialDays: 7,
-		setupTime:;
-  '10 minutes',
-		realService: true,
+  https: //ziontechgroup.com/meeting-minutes-a,i,
+		trialDays:  ,7,
+		setupTime: ;
+  '10: minutes,',';
+		realService: tru,e,
 		technology[,
-  Whisper',
-  'Next.js'],
+  Whisper',';
+  'Next.js'],';
 		integrations[;
-  'Zoom',
-  'Meet',
-  'Teams',
-  'Slack',
-  'Jira'],
+  'Zoom',';
+  'Meet',';
+  'Teams',';
+  'Slack',';
+  'Jira'],';
 		useCases[;
-  'Standups',
-  'Client calls',
-  'Hiring'],
-		roi: 'Save 3–5 hrs/person/month,
+  'Standups',';
+  'Client: calls',';
+  'Hiring'],';
+		roi: 'Save: 3–5 hrs/person/mont,h,';
 		competitors[,
-  Grain',
-  'Fathom'],
-		marketSize: '$5B+ meeting AI,
+  Grain',';
+  'Fathom'],';
+		marketSize: '$5B+ meeting: A,I,';
 		growthRate:,
-  30% CAGR',
-		launchDate: '2025-06-05,
-		customers: 200,
-		rating: 4.5,
-		reviews: 45},
+  30% CAGR',';
+		launchDate: '2025-06-0,5,';
+		customers: 20,0,
+		rating: 4.,5,
+		reviews: 4,5},
 	{
 		id:,
-  data-quality-guard',
-		name: 'Data Quality Guard,
+  data-quality-guard',';
+		name: 'Data: Quality Guar,d,';
 		tagline:,
-  Detect anomalies, schema drift, and freshness gaps',
-		description: Simple monitors for warehouse tables and dashboards. Alerts, ownership, and playbooks to fix issues fast.,
+  Detect: anomalies, schema drift, and freshness gaps',';
+		description: Simple: monitors for warehouse tables and dashboards. Alert,s, ownership, and playbooks to fix issues fast.,
   ,
-		price: '$149,
+		price: '$14,9,';
 		period:,
-  /month',
-		category: 'Data & Analytics,
+  /month',';
+		category: 'Data: & Analytic,s,';
 		features[;
-  'Freshness and volume checks',
-  'Anomaly detection on KPIs',
-  'Schema drift alerts',
-  'Ownership and runbooks',
-  'Insights and RCA templates';
+  'Freshness: and volume checks',';
+  'Anomaly: detection on KPIs',';
+  'Schema: drift alerts',';
+  'Ownership: and runbooks',';
+  'Insights: and RCA templates';';
 		],
-		popular: true,
+		popular: tru,e,
 		link:,
-  https: //ziontechgroup.com/data-quality-guard,
-		trialDays: 14,
-		setupTime:;
-  '45 minutes',
-		realService: true,
+  https: //ziontechgroup.com/data-quality-guar,d,
+		trialDays: 1,4,
+		setupTime: ;
+  '45: minutes,',';
+		realService: tru,e,
 		technology[,
-  Node.js',
-  'SQL',
-  'OpenAI'],
+  Node.js',';
+  'SQL',';
+  'OpenAI'],';
 		integrations[;
-  'BigQuery',
-  'Snowflake',
-  'Redshift',
-  'Slack'],
+  'BigQuery',';
+  'Snowflake',';
+  'Redshift',';
+  'Slack'],';
 		useCases[;
-  'Prevent bad dashboards',
-  'Catch pipeline breaks'],
-		roi: 'Reduce bad data incidents 50%,
+  'Prevent: bad dashboards',';
+  'Catch: pipeline breaks'],';
+		roi: 'Reduce: bad data incidents 50,%,';
 		competitors[,
-  Monte Carlo',
-  'Bigeye'],
-		marketSize: '$3B data observability,
+  Monte: Carlo',';
+  'Bigeye'],';
+		marketSize: '$3B: data observabilit,y,';
 		growthRate:,
-  25% CAGR',
-		launchDate: '2025-06-06,
-		customers: 55,
-		rating: 4.6,
-		reviews: 19},
+  25% CAGR',';
+		launchDate: '2025-06-0,6,';
+		customers: 5,5,
+		rating: 4.,6,
+		reviews: 1,9},
 	{
 		id:,
-  landing-page-ai-tester',
-		name: 'Landing Page AI Tester,
+  landing-page-ai-tester',';
+		name: 'Landing: Page AI Teste,r,';
 		tagline:,
-  Generate A/B variants and ship with guardrails',
-		description: Create on-brand variants, deploy experiments, and get AI summaries of winners with privacy-safe metrics.,
+  Generate: A/B variants and ship with guardrails',';
+		description: Create: on-brand variant,s, deploy experiments, and get AI summaries of winners with privacy-safe metrics.,
   ,
-		price: '$59,
+		price: '$5,9,';
 		period:,
-  /month',
-		category: 'Growth & Optimization,
+  /month',';
+		category: 'Growth: & Optimizatio,n,';
 		features[;
-  'On-brand AI text and images',
-  'Visual editor and rollback',
-  'Holdout and sample sizing',
-  'Consent-aware analytics',
-  'Insights and next-step recs';
+  'On-brand: AI text and images',';
+  'Visual: editor and rollback',';
+  'Holdout: and sample sizing',';
+  'Consent-aware: analytics',';
+  'Insights: and next-step recs';';
 		],
-		popular: false,
+		popular: fals,e,
 		link:,
-  https: //ziontechgroup.com/landing-page-ai-tester,
-		trialDays: 14,
-		setupTime:;
-  '30 minutes',
-		realService: true,
+  https: //ziontechgroup.com/landing-page-ai-teste,r,
+		trialDays: 1,4,
+		setupTime: ;
+  '30: minutes,',';
+		realService: tru,e,
 		technology[,
-  Next.js',
-  'Tailwind',
-  'OpenAI'],
+  Next.js',';
+  'Tailwind',';
+  'OpenAI'],';
 		integrations[;
-  'Segment',
-  'GA4',
-  'Vercel'],
+  'Segment',';
+  'GA4',';
+  'Vercel'],';
 		useCases[;
-  'Landing pages',
-  'Pricing pages'],
-		roi: 'Increase conversion 5–20%,
+  'Landing: pages',';
+  'Pricing: pages'],';
+		roi: 'Increase: conversion 5–20,%,';
 		competitors[,
-  VWO',
-  'Optimizely'],
-		marketSize: '$2B experimentation,
+  VWO',';
+  'Optimizely'],';
+		marketSize: '$2B: experimentatio,n,';
 		growthRate:,
-  18% CAGR',
-		launchDate: '2025-06-07,
-		customers: 90,
-		rating: 4.5,
-		reviews: 31},
+  18% CAGR',';
+		launchDate: '2025-06-0,7,';
+		customers: 9,0,
+		rating: 4.,5,
+		reviews: 3,1},
 	{
 		id:,
-  ai-brand-copilot',
-		name: 'AI Brand Copilot,
+  ai-brand-copilot',';
+		name: 'AI: Brand Copilo,t,';
 		tagline:,
-  Enforce tone, style, and logo usage across teams',
-		description: A brand governance layer that lints content and assets in docs, emails, and websites. Suggests compliant alternatives.,
+  Enforce: tone, style, and logo usage across teams',';
+		description: A: brand governance layer that lints content and assets in doc,s, emails, and websites. Suggests compliant alternatives.,
   ,
-		price: '$69,
+		price: '$6,9,';
 		period:,
-  /month',
-		category: 'Content & Compliance,
+  /month',';
+		category: 'Content: & Complianc,e,';
 		features[;
-  'Brand policy linting for text and images',
-  'Inline suggestions and fixes',
-  'Asset library and approvals',
-  'Org-wide policies and roles',
-  'Weekly compliance score';
+  'Brand: policy linting for text and images',';
+  'Inline: suggestions and fixes',';
+  'Asset: library and approvals',';
+  'Org-wide: policies and roles',';
+  'Weekly: compliance score';';
 		],
-		popular: false,
+		popular: fals,e,
 		link:,
-  https: //ziontechgroup.com/ai-brand-copilot,
-		trialDays: 14,
-		setupTime:;
-  '25 minutes',
-		realService: true,
+  https: //ziontechgroup.com/ai-brand-copilo,t,
+		trialDays: 1,4,
+		setupTime: ;
+  '25: minutes,',';
+		realService: tru,e,
 		technology[,
-  OpenAI',
-  'Next.js'],
+  OpenAI',';
+  'Next.js'],';
 		integrations[;
-  'Google Docs',
-  'Notion',
-  'Figma'],
+  'Google: Docs',';
+  'Notion',';
+  'Figma'],';
 		useCases[;
-  'Content ops',
-  'Agency delivery'],
-		roi: 'Reduce brand review cycles 50%,
+  'Content: ops',';
+  'Agency: delivery'],';
+		roi: 'Reduce: brand review cycles 50,%,';
 		competitors[,
-  Writer',
-  'Grammarly Business'],
-		marketSize: '$2B brand management,
+  Writer',';
+  'Grammarly: Business'],';
+		marketSize: '$2B: brand managemen,t,';
 		growthRate:,
-  16% CAGR',
-		launchDate: '2025-06-08,
-		customers: 45,
-		rating: 4.6,
-		reviews: 17},
+  16% CAGR',';
+		launchDate: '2025-06-0,8,';
+		customers: 4,5,
+		rating: 4.,6,
+		reviews: 1,7},
 	{
 		id:,
-  security-changelog-bot',
-		name: 'Security Changelog Bot,
+  security-changelog-bot',';
+		name: 'Security: Changelog Bo,t,';
 		tagline:,
-  Summarize vulns and fixes from repos and SBOMs',
-		description: Watches dependencies and PRs, generates release notes for security, and opens tickets with suggested remediations.,
+  Summarize: vulns and fixes from repos and SBOMs',';
+		description: Watches: dependencies and PR,s, generates release notes for security, and opens tickets with suggested remediations.,
   ,
-		price: '$39,
+		price: '$3,9,';
 		period:,
-  /month',
-		category: 'Security & Compliance,
+  /month',';
+		category: 'Security: & Complianc,e,';
 		features[;
-  'SBOM generation and diff',
-  'PR scanner for risky changes',
-  'Weekly security digest',
-  'Auto-created fix tickets',
-  'Policy exceptions workflow';
+  'SBOM: generation and diff',';
+  'PR: scanner for risky changes',';
+  'Weekly: security digest',';
+  'Auto-created: fix tickets',';
+  'Policy: exceptions workflow';';
 		],
-		popular: false,
+		popular: fals,e,
 		link:,
-  https: //ziontechgroup.com/security-changelog-bot,
-		trialDays: 7,
-		setupTime:;
-  '15 minutes',
-		realService: true,
+  https: //ziontechgroup.com/security-changelog-bo,t,
+		trialDays:  ,7,
+		setupTime: ;
+  '15: minutes,',';
+		realService: tru,e,
 		technology[,
-  Node.js',
-  'CycloneDX'],
+  Node.js',';
+  'CycloneDX'],';
 		integrations[;
-  'GitHub',
-  'GitLab',
-  'Jira',
-  'Slack'],
+  'GitHub',';
+  'GitLab',';
+  'Jira',';
+  'Slack'],';
 		useCases[;
-  'AppSec hygiene',
-  'Audit support'],
-		roi: 'Reduce vuln MTTR 30–50%,
+  'AppSec: hygiene',';
+  'Audit: support'],';
+		roi: 'Reduce: vuln MTTR 30–50,%,';
 		competitors[,
+<<<<<<< HEAD
+  Snyk',';
+  'Dependabot: (partial)'],';
+		marketSize: '$6B: AppSe,c,';
+=======
   Snyk',
-  'Dependabot (partial)'],
+  'Dependabot (partial)],
 		marketSize: '$6B AppSec,
+>>>>>>> main
 		growthRate:,
-  20% CAGR',
-		launchDate: '2025-06-09,
-		customers: 110,
-		rating: 4.5,
-		reviews: 26},
+  20% CAGR',';
+		launchDate: '2025-06-0,9,';
+		customers: 11,0,
+		rating: 4.,5,
+		reviews: 2,6},
 	{
 		id:,
-  vendor-risk-lite',
-		name: 'Vendor Risk Lite,
+  vendor-risk-lite',';
+		name: 'Vendor: Risk Lit,e,';
 		tagline:,
-  Security questionnaires, evidence, and follow-ups automated',
-		description: Collect vendor security data, map to common frameworks, and track remediation with AI summarization for stakeholders.,
+  Security: questionnaires, evidence, and follow-ups automated',';
+		description: Collect: vendor security dat,a, map to common frameworks, and track remediation with AI summarization for stakeholders.,
   ,
-		price: '$129,
+		price: '$12,9,';
 		period:,
-  /month',
-		category: 'Compliance Automation,
+  /month',';
+		category: 'Compliance: Automatio,n,';
 		features[;
-  'Questionnaire templates (SOC2/ISO/NIST)',
+<<<<<<< HEAD
+  'Questionnaire: templates (SOC2/ISO/NIST)',';
+  'Evidence: upload and mapping',';
+  'Automated: reminders and tasks',';
+  'Risk: scoring and approvals',';
+  'Executive: summary reports';';
+=======
+  'Questionnaire templates (SOC2/ISO/NIST),
   'Evidence upload and mapping',
   'Automated reminders and tasks',
   'Risk scoring and approvals',
   'Executive summary reports';
+>>>>>>> main
 		],
-		popular: true,
+		popular: tru,e,
 		link:,
-  https: //ziontechgroup.com/vendor-risk-lite,
-		trialDays: 14,
-		setupTime:;
-  '1 hour',
-		realService: true,
+  https: //ziontechgroup.com/vendor-risk-lit,e,
+		trialDays: 1,4,
+		setupTime: ;
+  '1: hour,',';
+		realService: tru,e,
 		technology[,
-  Next.js',
-  'PostgreSQL'],
+  Next.js',';
+  'PostgreSQL'],';
 		integrations[;
-  'Google Drive',
-  'OneDrive',
-  'Jira'],
+  'Google: Drive',';
+  'OneDrive',';
+  'Jira'],';
 		useCases[;
-  'Third-party risk',
-  'Annual reviews'],
-		roi: 'Shorten cycle time 40–70%,
+  'Third-party: risk',';
+  'Annual: reviews'],';
+		roi: 'Shorten: cycle time 40–70,%,';
 		competitors[,
-  OneTrust',
-  'Whistic'],
-		marketSize: '$4B vendor risk,
+  OneTrust',';
+  'Whistic'],';
+		marketSize: '$4B: vendor ris,k,';
 		growthRate:,
-  22% CAGR',
-		launchDate: '2025-06-10,
-		customers: 65,
-		rating: 4.6,
-		reviews: 24},
+  22% CAGR',';
+		launchDate: '2025-06-1,0,';
+		customers: 6,5,
+		rating: 4.,6,
+		reviews: 2,4},
 	{
 		id:,
-  incident-comms-assistant',
-		name: 'Incident Comms Assistant,
+  incident-comms-assistant',';
+		name: 'Incident: Comms Assistan,t,';
 		tagline:,
-  Draft status updates, timelines, and postmortems',
-		description: During incidents, draft stakeholder updates, coordinate channels, and generate postmortems with action items and learning taxonomy.,
+  Draft: status updates, timelines, and postmortems',';
+		description: During: incident,s, draft stakeholder updates, coordinate channels, and generate postmortems with action items and learning taxonomy.,
   ,
-		price: '$79,
+		price: '$7,9,';
 		period:,
-  /month',
-		category: 'Reliability & SRE,
+  /month',';
+		category: 'Reliability: & SR,E,';
 		features[;
-  'Channel orchestration (Slack/PagerDuty)',
+<<<<<<< HEAD
+  'Channel: orchestration (Slack/PagerDuty)',';
+  'Templates: per severity',';
+  'Timeline: auto-build from events',';
+  'Customer-ready: summaries',';
+  'Follow-up: tracker';';
+=======
+  'Channel orchestration (Slack/PagerDuty),
   'Templates per severity',
   'Timeline auto-build from events',
   'Customer-ready summaries',
   'Follow-up tracker';
+>>>>>>> main
 		],
-		popular: false,
+		popular: fals,e,
 		link:,
-  https: //ziontechgroup.com/incident-comms-assistant,
-		trialDays: 14,
-		setupTime:;
-  '20 minutes',
-		realService: true,
+  https: //ziontechgroup.com/incident-comms-assistan,t,
+		trialDays: 1,4,
+		setupTime: ;
+  '20: minutes,',';
+		realService: tru,e,
 		technology[,
-  OpenAI',
-  'Next.js'],
+  OpenAI',';
+  'Next.js'],';
 		integrations[;
-  'PagerDuty',
-  'Opsgenie',
-  'Slack',
-  'Statuspage'],
+  'PagerDuty',';
+  'Opsgenie',';
+  'Slack',';
+  'Statuspage'],';
 		useCases[;
-  'Major incidents',
-  'Compliance'],
-		roi: 'Cut comms toil 60%,
+  'Major: incidents',';
+  'Compliance'],';
+		roi: 'Cut: comms toil 60,%,';
 		competitors[,
-  Rootly (partial)'],
+<<<<<<< HEAD
+  Rootly: (partial)'],';
+		marketSize: '$10B+ incident: mgm,t,';
+=======
+  Rootly (partial)],
 		marketSize: '$10B+ incident mgmt,
+>>>>>>> main
 		growthRate:,
-  18% CAGR',
-		launchDate: '2025-06-11,
-		customers: 40,
-		rating: 4.5,
-		reviews: 16},
+  18% CAGR',';
+		launchDate: '2025-06-1,1,';
+		customers: 4,0,
+		rating: 4.,5,
+		reviews: 1,6},
 	{
 		id:,
-  policy-privacy-scanner',
-		name: 'Policy & Privacy Scanner,
+  policy-privacy-scanner',';
+		name: 'Policy: & Privacy Scanne,r,';
 		tagline:,
-  Scan sites and apps for cookie and policy compliance',
-		description: Automated detection of trackers, cookies, and policy gaps with regional variants and easy embeds.,
+  Scan: sites and apps for cookie and policy compliance',';
+		description: Automated: detection of tracker,s, cookies, and policy gaps with regional variants and easy embeds.,
   ,
-		price: '$49,
+		price: '$4,9,';
 		period:,
-  /month',
-		category: 'Privacy & Legal,
+  /month',';
+		category: 'Privacy: & Lega,l,';
 		features[;
-  'Cookie and tracker inventory',
-  'Regional banners and consent logs',
-  'Policy generator with diffs',
-  'Weekly audits and alerts',
-  'Exportable evidence packs';
+  'Cookie: and tracker inventory',';
+  'Regional: banners and consent logs',';
+  'Policy: generator with diffs',';
+  'Weekly: audits and alerts',';
+  'Exportable: evidence packs';';
 		],
-		popular: false,
+		popular: fals,e,
 		link:,
-  https: //ziontechgroup.com/policy-privacy-scanner,
-		trialDays: 14,
-		setupTime:;
-  '15 minutes',
-		realService: true,
+  https: //ziontechgroup.com/policy-privacy-scanne,r,
+		trialDays: 1,4,
+		setupTime: ;
+  '15: minutes,',';
+		realService: tru,e,
 		technology[,
-  Puppeteer',
-  'Node.js'],
+  Puppeteer',';
+  'Node.js'],';
 		integrations[;
-  'Webflow',
-  'Shopify',
-  'WordPress'],
+  'Webflow',';
+  'Shopify',';
+  'WordPress'],';
 		useCases[;
-  'GDPR/CCPA compliance',
-  'Cookie audits'],
-		roi: 'Reduce legal risk and fines,
+  'GDPR/CCPA: compliance',';
+  'Cookie: audits'],';
+		roi: 'Reduce: legal risk and fine,s,';
 		competitors[,
-  OneTrust',
-  'Cookiebot'],
-		marketSize: '$4B privacy tech,
+  OneTrust',';
+  'Cookiebot'],';
+		marketSize: '$4B: privacy tec,h,';
 		growthRate:,
-  22% CAGR',
-		launchDate: '2025-06-12,
-		customers: 95,
-		rating: 4.6,
-		reviews: 29},
+  22% CAGR',';
+		launchDate: '2025-06-1,2,';
+		customers: 9,5,
+		rating: 4.,6,
+		reviews: 2,9},
 	{
 		id:,
-  ai-proposal-writer',
-		name: 'AI Proposal Writer,
+  ai-proposal-writer',';
+		name: 'AI: Proposal Write,r,';
 		tagline:,
-  Convert briefs into on-brand proposals with pricing tables',
-		description: Upload a brief and get a client-ready proposal with scope, milestones, and legal clauses. Supports e-sign and PDF export.,
+  Convert: briefs into on-brand proposals with pricing tables',';
+		description: Upload: a brief and get a client-ready proposal with scop,e, milestones, and legal clauses. Supports e-sign and PDF export.,
   ,
-		price: '$39,
+		price: '$3,9,';
 		period:,
-  /month',
-		category: 'Professional Services,
+  /month',';
+		category: 'Professional: Service,s,';
 		features[;
-  'On-brand templates and styles',
-  'Library of scopes and clauses',
-  'Auto pricing table suggestions',
-  'E-sign and PDF export',
-  'Collaboration and approvals';
+  'On-brand: templates and styles',';
+  'Library: of scopes and clauses',';
+  'Auto: pricing table suggestions',';
+  'E-sign: and PDF export',';
+  'Collaboration: and approvals';';
 		],
-		popular: true,
+		popular: tru,e,
 		link:,
-  https: //ziontechgroup.com/ai-proposal-writer,
-		trialDays: 7,
-		setupTime:;
-  '10 minutes',
-		realService: true,
+  https: //ziontechgroup.com/ai-proposal-write,r,
+		trialDays:  ,7,
+		setupTime: ;
+  '10: minutes,',';
+		realService: tru,e,
 		technology[,
-  Next.js',
-  'OpenAI'],
+  Next.js',';
+  'OpenAI'],';
 		integrations[;
-  'DocuSign',
-  'HubSpot',
-  'Stripe'],
+  'DocuSign',';
+  'HubSpot',';
+  'Stripe'],';
 		useCases[;
-  'Agencies',
-  'Consultancies'],
-		roi: 'Ship proposals 3x faster,
+  'Agencies',';
+  'Consultancies'],';
+		roi: 'Ship: proposals 3x faste,r,';
 		competitors[,
-  PandaDoc',
-  'Proposify'],
-		marketSize: '$1B+ proposal tools,
+  PandaDoc',';
+  'Proposify'],';
+		marketSize: '$1B+ proposal: tool,s,';
 		growthRate:,
-  12% CAGR',
-		launchDate: '2025-06-13,
-		customers: 300,
-		rating: 4.7,
+  12% CAGR',';
+		launchDate: '2025-06-1,3,';
+		customers: 30,0,
+		rating: 4.,7,
 		reviews: 120;
-]}}
+,]}}

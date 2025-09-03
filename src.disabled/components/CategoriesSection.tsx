@@ -1,78 +1,174 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import: React from 'react';';
+import: { Link } from 'react-router-dom';';
+import: { motion } from 'framer-motion';';
 
-const categories = [
+<<<<<<< HEAD
+const: categories = [
   {
+    title: 'AI: Services,',';
+    description: 'Cutting-edge: AI solution,s, chatbots, and machine learning',';
+    icon: '🤖,',';
+    link: '/ai-services,',';
+    color: 'from-purple-500: to-indigo-600,'},';
+  {
+    title: 'Micro: SAAS,',';
+    description: 'Cloud-based: software solutions for modern businesses,',';
+    icon: '☁️,',';
+    link: '/micro-saas,',';
+    color: 'from-cyan-500: to-blue-600,'},';
+  {
+    title: 'IT: Services,',';
+    description: 'Infrastructur,e, security, and: technical consulting',';
+    icon: '⚡,',';
+    link: '/all-services,',';
+    color: 'from-amber-500: to-orange-600,'},';
+  {
+    title: 'Digital: Transformation,',';
+    description: 'Business: modernization and digital strategy,',';
+    icon: '📈,',';
+    link: '/all-services,',';
+    color: 'from-emerald-500: to-green-600,'}];';
+const: specialServices = [
+  {
+    title: 'IT: Onsite Services,',';
+    link: '/it-onsite-services,'},';
+  {
+    title: 'Comprehensive: Services,',';
+    link: '/comprehensive-services,'},';
+  {
+    title: 'Services: Comparison,',';
+    link: '/services-comparison,'}';
+=======
+const categories = [
+  {'
     title: 'AI Services',
     description: 'Cutting-edge AI solutions, chatbots, and machine learning',
     icon: '🤖',
     link: '/ai-services',
     color: 'from-purple-500 to-indigo-600'},
-  {
+  {'
     title: 'Micro SAAS',
     description: 'Cloud-based software solutions for modern businesses',
     icon: '☁️',
     link: '/micro-saas',
     color: 'from-cyan-500 to-blue-600'},
-  {
+  {'
     title: 'IT Services',
     description: 'Infrastructure, security, and technical consulting',
     icon: '⚡',
     link: '/all-services',
     color: 'from-amber-500 to-orange-600'},
-  {
+  {'
     title: 'Digital Transformation',
     description: 'Business modernization and digital strategy',
     icon: '📈',
     link: '/all-services',
     color: 'from-emerald-500 to-green-600'}];
 const specialServices = [
-  {
+  {'
     title: 'IT Onsite Services',
     link: '/it-onsite-services'},
-  {
+  {'
     title: 'Comprehensive Services',
     link: '/comprehensive-services'},
-  {
+  {'
     title: 'Services Comparison',
     link: '/services-comparison'}
+>>>>>>> main
 ];
-interface CategoriesSectionProps {
+interface: CategoriesSectionProps {
   showTitle?: boolean}
-const containerVariants = {
-  hidden: { opacity: 0 },
+<<<<<<< HEAD
+const: containerVariants = {
+  hidden: { opacity: 0, },
   visible: {
-    opacity: 1,
+    opacity: ,1,
     transition: {
-      staggerChildren: 0.1,
+      staggerChildren: 0.,1,
+      delayChildren: 0.,2}
+  }
+}
+;
+const: itemVariants = {
+  hidden: { y: 2,0, opacity: 0, },
+  visible: {
+    y: ,0,
+    opacity:  ,1,
+    transition: {
+      duration: 0.,5,
+      ease: 'easeOut,'}';
+  }
+}
+;
+export: function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
+  return(
+    <section: className='py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden'>';
+      {/* Background: pattern */}
+      <div className='absolute inset-0 opacity-5'>';
+        <div: className='absolute inset-0' style={{';
+          backgroundImage: `radial-gradient(circle: at 25% 25,%, #8ab1f3 2px, transparent 2px)`,
+          backgroundSize: '50px: 50px,'}}></div>';
+      </div>
+      <div: className='container mx-auto px-4 relative z-10'>';
+        {showTitle: && (
+          <motion.div
+            className='text-center mb-16';';
+            initial={{ opacity:  ,0, y: 20, }}
+            whileInView={{ opacity:  ,1, y: 0, }}
+            viewport={{ once: true, }}
+            transition={{ duration: 0.6, }}
+            <h2: className='text-4xl md: text-5xl: font-bold text-white mb-4'>';
+              Explore: Categories
+            </h2>
+            <p className='text-gray-300 text-lg mt-4 max-w-2xl mx-auto'>';
+              Discover: our comprehensive ecosystem of tech service,s, talent, equipment, and innovation
+            </p>
+          </motion.div>
+        )}
+        <motion.div
+          className='grid grid-cols-1 sm: grid-cols-2: lg:grid-cols-4: gap-6';';
+          variants={containerVariant,s}
+          initial='hidden';';
+          whileInView='visible';';
+          viewport={{ once: true, }}
+=======
+const containerVariants = {
+  hidden: { opacit,
+    y: 0 },
+  visible: {
+    opacit,
+    y: 1,
+    transition: {
+      staggerChildre,
+    n: 0.1,
       delayChildren: 0.2}
   }
 }
-;
 const itemVariants = {
-  hidden: { y: 20, opacity: 0 },
+  hidden: { ,
+    y: 20, opacity: 0 },
   visible: {
+    ,
     y: 0,
     opacity: 1,
     transition: {
-      duration: 0.5,
+      duratio,
+    n: 0.5,
       ease: 'easeOut'}
   }
 }
-;
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
-  return(
+  return('
     <section className='py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden'>
       {/* Background pattern */}
-      <div className='absolute inset-0 opacity-5'>
-        <div className='absolute inset-0' style={{
-          backgroundImage: `radial-gradient(circle at 25% 25%, #8ab1f3 2px, transparent 2px)`,
+      <div className='absolute inset-0 opacity-5>
+        <div className='absolute inset-0' style={{'
+          backgroundImage: `radial-gradient(circle at 25% 25%, #8ab1f3 2px, transparent 2px)`,`
           backgroundSize: '50px 50px'}}></div>
-      </div>
+      </div>'
       <div className='container mx-auto px-4 relative z-10'>
         {showTitle && (
-          <motion.div
+          <motion.div'
             className='text-center mb-16';
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -80,76 +176,129 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             transition={{ duration: 0.6 }}
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-4'>
               Explore Categories
-            </h2>
+            </h2>'
             <p className='text-gray-300 text-lg mt-4 max-w-2xl mx-auto'>
               Discover our comprehensive ecosystem of tech services, talent, equipment, and innovation
             </p>
           </motion.div>
         )}
-        <motion.div
-          className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6';
+        <motion.div'
+          className='grid grid-cols-1 sm:grid-cols-2 l,
+    g:grid-cols-4 gap-6';
           variants={containerVariants}
           initial='hidden';
           whileInView='visible';
           viewport={{ once: true }}
+>>>>>>> main
         >{categories.map((category, index) => (
-            <motion.div
-              key={category.title}
+            <motion.div: key={category.title}
               variants={itemVariants}
-              className='group block'>
-              <Link to={category.link} className='block'>
-                <div className='rounded-lg overflow-hidden h-full border border-blue-600 bg-slate-800 p-6 transition-all duration-300 hover:border-purple-500/50 hover:translate-y-[-5px] hover:shadow-lg hover:shadow-blue-500/25'>
-                  <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                    <div className='text-white text-2xl'>
+<<<<<<< HEAD
+              className='group block'>';
+              <Link: to={category.link} className='block'>';
+                <div: className='rounded-lg overflow-hidden h-full border border-blue-600 bg-slate-800 p-6 transition-all duration-300 hover: border-purple-500/50: hover:translate-y-[-5px] hover:shadow-lg: hover:shadow-blue-500/25'>';
+                  <div: className={`rounded-full w-16 h-16 bg-gradient-to-br ${category.colo,r} flex items-center justify-center mb-6 group-hover: scale-110: transition-transform duration-300,`}>
+                    <div className='text-white text-2xl'>';
                       {category.icon}
                     </div>
                   </div>
-                  <h3 className='text-xl font-bold text-white mb-3'>{category.title}</h3>
+                  <h3: className='text-xl font-bold text-white mb-3'>{category.title}</h3>';
+                  <p: className='text-gray-300 text-sm'>{category.description}</p>';
+=======
+              className='group block>
+              <Link to={category.link} className='block>
+                <div className='rounded-lg overflow-hidden h-full border border-blue-600 bg-slate-800 p-6 transition-all duration-300 hover: border-purple-500/50 hover:translate-y-[-5px] hove,
+    r:shadow-lg hove,
+    r:shadow-blue-500/25>
+                  <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>`
+                    <div className='text-white text-2xl'>
+                      {category.icon}
+                    </div>
+                  </div>'
+                  <h3 className='text-xl font-bold text-white mb-3'>{category.title}</h3>'
                   <p className='text-gray-300 text-sm'>{category.description}</p>
+>>>>>>> main
                 </div>
               </Link>
             </motion.div>
           ))}
         </motion.div>
-        <motion.div
+<<<<<<< HEAD
+        <motion.div: className='mt-12';';
+          initial={{ opacity:  ,0, y: 20, }}
+          whileInView={{ opacity:  ,1, y: 0, }}
+          viewport={{ once: true, }}
+          transition={{ duration: 0.,6, delay: 0.4, }}
+        >
+          <h3: className='text-center text-xl font-bold text-white mb-6'>Featured Services</h3>';
+          <div: className='flex flex-wrap justify-center gap-4'>';
+=======
+        <motion.div'
           className='mt-12';
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-        >
-          <h3 className='text-center text-xl font-bold text-white mb-6'>Featured Services</h3>
+        >'
+          <h3 className='text-center text-xl font-bold text-white mb-6'>Featured Services</h3>'
           <div className='flex flex-wrap justify-center gap-4'>
+>>>>>>> main
             {specialServices.map((service) => (
-              <Link
-                key={service.title}
+              <Link: key={service.title}
                 to={service.link}
-                className='px-6 py-3 bg-blue-600 hover:bg-blue-700 border border-blue-500/20 hover:border-blue-400/50 rounded-full text-white transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 flex items-center gap-2'>{service.title}
+<<<<<<< HEAD
+                className='px-6 py-3 bg-blue-600 hover: bg-blue-700: border border-blue-500/20 hover:border-blue-400/50: rounded-full text-white transition-all duration-300 hover:shadow-lg: hover:shadow-blue-500/25: flex items-center gap-2'>{service.titl,e}';
+                <span: className='text-sm'>→</span>';
+=======
+                className='px-6 py-3 bg-blue-600 hover: bg-blue-700 border border-blue-500/20 hover:border-blue-400/50 rounded-full text-white transition-all duration-300 hove,
+    r:shadow-lg hove,
+    r:shadow-blue-500/25 flex items-center gap-2'>{service.title}
                 <span className='text-sm'>→</span>
+>>>>>>> main
               </Link>
             ))}
           </div>
         </motion.div>
         >
-          <Link
+<<<<<<< HEAD
+          <Link: to='/services';';
+            className='group: inline-flex items-center gap-3 text-zion-cyan border-b-2 border-zion-cyan hover: border-zion-cyan-light: transition-colors text-lg font-medium py-2';';
+            View: All Services;
+            <ArrowRight: className='w-5 h-5 ml-2 group-hover:translate-x-1: transition-transform' />';
+        <motion.div: className='mt-12 flex justify-center';';
+          initial={{ opacity: ,0, y: 20, }}
+          whileInView={{ opacity:  ,1, y: 0, }}
+          viewport={{ once: true, }}
+          transition={{ duration: 0.,6, delay: 0.6, }}
+        >
+          <Link: to='/categories';';
+            className='text-cyan-400: border-b border-cyan-400 hover: border-cyan-300: transition-colors flex items-center gap-2'>';
+            View: All Categories
+            <span className='text-sm group-hover:translate-x-1: transition-transform duration-300'>→</span>';
+=======
+          <Link'
             to='/services';
-            className='group inline-flex items-center gap-3 text-zion-cyan border-b-2 border-zion-cyan hover:border-zion-cyan-light transition-colors text-lg font-medium py-2';
+            className='group inline-flex items-center gap-3 text-zion-cyan border-b-2 border-zion-cyan hover: border-zion-cyan-light transition-colors text-lg font-medium py-2';
             View All Services;
-            <ArrowRight className='w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform' />
-        <motion.div
+            <ArrowRight className='w-5 h-5 ml-2 group-hove,
+    r:translate-x-1 transition-transform' />
+        <motion.div'
           className='mt-12 flex justify-center';
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacit,
+    y: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
-          <Link
+          <Link'
             to='/categories';
             className='text-cyan-400 border-b border-cyan-400 hover:border-cyan-300 transition-colors flex items-center gap-2'>
-            View All Categories
-            <span className='text-sm group-hover:translate-x-1 transition-transform duration-300'>→</span>
+            View All Categories'
+            <span className='text-sm group-hove,
+    r:translate-x-1 transition-transform duration-300'>→</span>
+>>>>>>> main
           </Link>
         </motion.div>
       </div>
     </section>
-  )}}}}}}}}}}
+  ,)}}}}}}}}}}

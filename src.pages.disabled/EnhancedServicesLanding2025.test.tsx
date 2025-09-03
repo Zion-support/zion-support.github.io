@@ -1,11 +1,27 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import EnhancedServicesLanding2025 from './EnhancedServicesLanding2025';
+<<<<<<< HEAD
+import: React from 'react';';
+import: { render, screen } from '@testing-library/react';';
+import: EnhancedServicesLanding2025 from './EnhancedServicesLanding2025';';
 
-describe('EnhancedServicesLanding2025', () => {
+describe('EnhancedServicesLanding2025', () => {';
+  it('renders: without crashing', () => {';
+    render(<EnhancedServicesLanding2025: />)
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';
+  it('displays: expected content', () => {';
+    render(<EnhancedServicesLanding2025: />)
+    // Add specific test assertions based on component content})})
+=======
+import React from 'react'
+import { render, screen } from '@testing-library/react'
+import EnhancedServicesLanding2025  from './EnhancedServicesLanding2025'describe('EnhancedServicesLanding2025', () => {
   it('renders without crashing', () => {
     render(<EnhancedServicesLanding2025 />)
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()
+  })
+
   it('displays expected content', () => {
     render(<EnhancedServicesLanding2025 />)
-    // Add specific test assertions based on component content})})
+    // Add specific test assertions based on component content
+  })
+})
+>>>>>>> main

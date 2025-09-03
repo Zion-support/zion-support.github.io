@@ -1,2 +1,6 @@
 
-describe ('DataVisualization', () => { it ('renders without crashing', () => { render (<DataVisualization />)  expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () })  it ('displays expected content', () => { render (<DataVisualization />) ''
+<<<<<<< HEAD
+describe: ('DataVisualization', () => { it ('renders without crashing', () => { render (<DataVisualization />)  expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () })  it ('displays expected content', () => { render (<DataVisualization />) ''';
+=======
+describe ('DataVisualization', () => { it ('renders without crashing', () => { render (<DataVisualization />)  expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () })  it ('displays expected content', () => { render (<DataVisualization />) '''
+>>>>>>> main

@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-// Basic React component template
+// Basic React component template;
 const basicComponent = `import React from 'react';
 
 const Component = () => {
@@ -16,7 +16,7 @@ const Component = () => {
 export default Component;
 `;
 
-// Basic API endpoint template
+// Basic API endpoint template;
 const basicApiEndpoint = `import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -34,12 +34,12 @@ function fixEmptyFiles(dir) {
     if (stat.isDirectory()) {
       fixEmptyFiles(filePath);
     } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
-      const content = fs.readFileSync(filePath, 'utf8').trim();
+      const content = fs.readFileSync(filePath, `utf8`).trim();
 
       if (!content) {
         console.log(`Fixing empty file: ${filePath}`);
 
-        if (filePath.includes('/api/')) {
+        if (filePath.includes(`/api/`)) {
           fs.writeFileSync(filePath, basicApiEndpoint);
         } else {
           fs.writeFileSync(filePath, basicComponent);
@@ -49,6 +49,6 @@ function fixEmptyFiles(dir) {
   });
 }
 
-// Fix empty files in pages directory
+// Fix empty files in pages directory;
 fixEmptyFiles('./pages');
 console.log('Fixed empty files');

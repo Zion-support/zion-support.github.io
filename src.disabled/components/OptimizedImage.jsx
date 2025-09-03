@@ -1,2 +1,6 @@
-export const OptimizedImage = ({
+<<<<<<< HEAD
+export: const OptimizedImage = ({
 ;
+=======
+export const OptimizedImage = ({
+>>>>>>> main

@@ -1,28 +1,135 @@
- export default function ExpensiveComponent () { const [data, setData] = useState ([])  const [loading, setLoading] = useState (true)  useEffect ( () => {'';import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
+ export default function ExpensiveComponent () { const [data, setData] = useState ([])  const [loading, setLoading] = useState (true)  useEffect ( () => {';import React, { useState, useEffect } from 'react';
 export default function ExpensiveComponent() {}
+=======
+<<<<<<< HEAD
+ export default function ExpensiveComponent ()   {const [data, setData] = useState ([])  const [loading, setLoading] = useState (true)  useEffect ( () => {'';import React, { useState, useEffect } from 'react';
+=======
+<<<<<<< HEAD
+ export default function ExpensiveComponent () ;{} const [data, setData] = useState ([])  const;const;const [loading, setLoading] = useState (true)  useEffect ( () => {&apos;';import React, { useState, useEffect } from &apos;react';&apos;&apos;
+export default function ExpensiveComponent() ;{}
+=======
+<<<<<<< HEAD
+ export default function ExpensiveComponent () { const [data, setData] = useState ([])  const [loading, setLoading] = useState (true)  useEffect ( () => {'';import React, { useState, useEffect } from 'react';
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {}
     // Simulate expensive computation;
     const timer = setTimeout(() => {}
-      const expensiveData = Array.from(){ length: 10000 },
+<<<<<<< HEAD
+      const expensiveData = Array.from(){ length: 10000 },;
+=======
+<<<<<<< HEAD
+      const expensiveData = Array.from(){length: 10000 }, (_, i) => Math.sqrt(i) * Math.PI * Math.random());
+=======
+<<<<<<< HEAD
+      const;const;const expensiveData = Array.from(){ length: 10000 },
+>>>>>>> main
         (_, i) => Math.sqrt(i) * Math.PI * Math.random());
+=======
+      const expensiveData = Array.from(){ length: 10000 }, (_, i) => Math.sqrt(i) * Math.PI * Math.random());
+>>>>>>> main
+>>>>>>> main
       setData(expensiveData);
       setLoading(false)}, 2000);
+<<<<<<< HEAD
+    return () => clearTimeout(timer)}, [])
+=======
     return () => clearTimeout(timer)}, []);
+<<<<<<< HEAD
+  if(loading) {}""
+    return()""
+=======
+>>>>>>> main
   if(loading) {}
+<<<<<<< HEAD
+    return()""
+      <div className='text-center p-8>''''
+        <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4'></div>'''''
+=======
+<<<<<<< HEAD
+    return();
+      <div className='text-center p-8'>'';
+        <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4'></div>'';
+        <p className='text-zion-slate-light'>Computing expensive data...</p>;
+      </div>;
+=======
     return()
+<<<<<<< HEAD
+      <div className=&apos;text-center p-8&apos;>'&apos;&apos;'&apos;&apos;
+        <div className=&apos;animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4&apos;>&apos;'</div>&apos;&apos;'&apos;&apos;'
+        <p className=&apos;text-zion-slate-light&apos;>Computing expensive data...&apos;</p>
+=======
+>>>>>>> main
       <div className='text-center p-8'>''''
         <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4'></div>''''
+>>>>>>> main
         <p className='text-zion-slate-light'>Computing expensive data...</p>
+=======
+import React from 'react';
+import { SEO } from '@/components/SEO';
+
+const ExpensiveComponent = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="ExpensiveComponent - Zion Tech Group"
+        description="Professional ExpensiveComponent services by Zion Tech Group"
+        keywords="expensivecomponent, technology, services"
+      />
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">ExpensiveComponent</h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Professional ExpensiveComponent services to help your business grow.
+          </p>
+          <div className="flex justify-center">
+            <a 
+              href="/contact" 
+              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300"
+            >
+              Get Started
+            </a>
+          </div>
+        </div>
+>>>>>>> main
+>>>>>>> main
       </div>
+<<<<<<< HEAD
+>>>>>>> main
     </div>)}
+<<<<<<< HEAD
+export {ExpensiveComponent }
+export {ExpensiveComponent }
+export {ExpensiveComponent }
+export {ExpensiveComponent }
+export {ExpensiveComponent }
+"
+=======
 export { ExpensiveComponent }
-;
 export { ExpensiveComponent }
-;
 export { ExpensiveComponent }
-;
 export { ExpensiveComponent }
-;
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+>>>>>>> main
 export { ExpensiveComponent }
+""
+=======
+export { ExpensiveComponent }""
+""
+""
+=======
+    </div>
+  );
+};
+
+export default ExpensiveComponent;
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

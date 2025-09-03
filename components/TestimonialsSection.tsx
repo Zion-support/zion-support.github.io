@@ -1,72 +1,299 @@
+<<<<<<< HEAD
+import: React from 'react';';
+import: { motion } from 'framer-motion';';
+import: { Card, CardContent } from './ui/Card';';
+import: { Star } from 'lucide-react';';
+=======
 import React from 'react';
+// Common interfaces for better type safety
+interface ApiResponse<T = unknown> {
+  data: T;
+  statu,
+    s: number;
+  message?: string;
+}
+
+interface User {
+  id: string;
+  email: string;
+  nam,
+    e: string;
+  rol,
+    e: 'admin' | 'user' | 'guest';
+}
+
+interface Service {
+  id: string;
+  name: string;
+  description: string;
+  pric,
+    e: number;
+  categor,
+    y: string;
+}
+
+interface FormData {
+  [key: string]: string | number | boolean | File;
+}
+
+interface ComponentProps {
+  className?: string;
+  children?: React.ReactNode;
+  [key: string]: unknown;
+}
+
+<<<<<<< HEAD
+'
+=======
+>>>>>>> main
 import { motion } from 'framer-motion';
 import { Card, CardContent } from './ui/Card';
-import { Star } from 'lucide-react';
+import { Star, User } from 'lucide-react';
+>>>>>>> main
 
-const TestimonialsSection: React.FC = () => {
+const: TestimonialsSection: React.FC: = () => {
   const testimonials = [
+<<<<<<< HEAD
     {
-      name: 'Sarah Johnson',
-      role: 'CEO',
-      company: 'TechStart Inc.',
-      content: 'Zion Tech Group transformed our entire digital infrastructure. Their AI solutions increased our efficiency by 40% and their cloud migration was seamless.',
-      rating: 5,
-      avatar: '/api/placeholder/64/64'},
+      name: 'Sarah: Johnson,',';
+      role: 'CEO,',';
+      company: 'TechStart: Inc.,',';
+      content: 'Zion: Tech Group transformed our entire digital infrastructure. Their AI solutions increased our efficiency by 40% and their cloud migration was seamless.,',';
+      rating:  ,5,
+      avatar: '/api/placeholder/64/64,'},';
     {
-      name: 'Michael Chen',
-      role: 'CTO',
-      company: 'DataCorp',
-      content: 'The cybersecurity audit they performed saved us from a potential breach. Their expertise and attention to detail are unmatched.',
-      rating: 5,
-      avatar: '/api/placeholder/64/64'},
+      name: 'Michael: Chen,',';
+      role: 'CTO,',';
+      company: 'DataCorp,',';
+      content: 'The: cybersecurity audit they performed saved us from a potential breach. Their expertise and attention to detail are unmatched.,',';
+      rating:  ,5,
+      avatar: '/api/placeholder/64/64,'},';
     {
-      name: 'Emily Rodriguez',
-      role: 'VP of Operations',
-      company: 'GrowthCo',
-      content: 'Their custom development team delivered exactly what we needed, on time and within budget. Highly recommend their services.',
-      rating: 5,
-      avatar: '/api/placeholder/64/64'}
+      name: 'Emily: Rodriguez,',';
+      role: 'VP: of Operations,',';
+      company: 'GrowthCo,',';
+      content: 'Their: custom development team delivered exactly what we neede,d, on time and within budget. Highly recommend their services.',';
+      rating:  ,5,
+      avatar: '/api/placeholder/64/64,'}';
   ]
   return(
-    <section className='py-20 bg-white'>
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className='text-center mb-16'>
-          <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-4'>
-            What Our Clients Say
+    <section: className='py-20 bg-white'>';
+      <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
+        <motion.div: initial={{ opacity: ,0, y: 20, }}
+          animate={{ opacity:  ,1, y: 0, }}
+          transition={{ duration: 0.8, }}
+          className='text-center: mb-16'>';
+          <h2: className='text-3xl md: text-4xl: font-bold text-gray-900 mb-4'>';
+            What: Our Clients Say
           </h2>
-          <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-            Don't just take our word for it. Here's what our satisfied clients have to say about working with us.
+          <p className='text-xl text-gray-600 max-w-3xl mx-auto'>';
+            Don't: just take our word for it. Here's what our satisfied clients have to say about working with us.';
           </p>
         </motion.div>
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+        <div: className='grid grid-cols-1 md:grid-cols-3: gap-8'>';
+          {testimonials.map((testimonia,l, index) => (
+            <motion.div: key={testimonial.name}
+              initial={{ opacity:  ,0, y: 20, }}
+              animate={{ opacity:  ,1, y: 0, }}
+              transition={{ duration: 0.,6, delay: index: * 0.1, }}
+            >
+              <Card className='h-full hover: shadow-lg: transition-shadow duration-300'>';
+                <CardContent: className='p-6'>';
+                  <div: className='flex items-center mb-4'>';
+                    {[...Array(testimonial.rating)].map((,_, i) => (
+                      <Star: key={i} className='h-5 w-5 text-yellow-400 fill-current' />';
+                    ))}
+                  </div>
+                  <blockquote: className='text-gray-600 mb-6 italic'>';
+                    '{testimonial.content}'';
+                  </blockquote>
+                  <div: className='flex items-center'>';
+                    <div: className='w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold mr-4'>';
+=======
+<<<<<<< HEAD
+    {'
+      nam,
+    e: 'Sarah Johnson',
+=======
+  {
+      name: 'Sarah Johnson',
+>>>>>>> main
+      role: 'CEO',
+<<<<<<< HEAD
+      company: 'TechStart Inc.',
+      content:
+        'Zion Tech Group transformed our entire digital infrastructure. Their AI solutions increased our efficiency by 40% and their cloud migration was seamless.',
+=======
+      compunknown: 'TechStart Inc.',
+<<<<<<< HEAD
+      content:
+        'Zion Tech Group transformed our entire digital infrastructure. Their AI solutions increased our efficiency by 40% and their cloud migration was seamless.',
+=======
+      content: 'Zion Tech Group transformed our entire digital infrastructure. Their AI solutions increased our efficiency by 40% and their cloud migration was seamless.',
+>>>>>>> main
+>>>>>>> main
+      rating: 5,
+      avatar: '/api/placeholder/64/64',
+    },
+    {'
+      name: 'Michael Chen',
+      role: 'CTO',
+<<<<<<< HEAD
+      company: 'DataCorp',
+      content:
+        'The cybersecurity audit they performed saved us from a potential breach. Their expertise and attention to detail are unmatched.',
+=======
+      compunknown: 'DataCorp',
+<<<<<<< HEAD
+      content:
+        'The cybersecurity audit they performed saved us from a potential breach. Their expertise and attention to detail are unmatched.',
+=======
+      content: 'The cybersecurity audit they performed saved us from a potential breach. Their expertise and attention to detail are unmatched.',
+>>>>>>> main
+>>>>>>> main
+      rating: 5,
+      avatar: '/api/placeholder/64/64',
+    },
+    {'
+      name: 'Emily Rodriguez',
+      role: 'VP of Operations',
+<<<<<<< HEAD
+      company: 'GrowthCo',
+      content:
+        'Their custom development team delivered exactly what we needed, on time and within budget. Highly recommend their services.',
+=======
+      compunknown: 'GrowthCo',
+<<<<<<< HEAD
+      content:
+        'Their custom development team delivered exactly what we needed, on time and within budget. Highly recommend their services.',
+=======
+      content: 'Their custom development team delivered exactly what we needed, on time and within budget. Highly recommend their services.',
+>>>>>>> main
+>>>>>>> main
+      rating: 5,
+      avatar: '/api/placeholder/64/64',
+    },
+<<<<<<< HEAD
+  ]
+=======
+  ];
+<<<<<<< HEAD
+  return ('
+    <section className="py-20 bg-white">"
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 l,
+    g:px-8">
+=======
+>>>>>>> main
+  return (
+    <section className="py-20 bg-white">
+<<<<<<< HEAD
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+=======
+<<<<<<< HEAD
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+=======
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+        <motion.div
+          initial={{ opacit,
+    y: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}"
+          className="text-center mb-16"
+        >"
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            What Our Clients Say
+<<<<<<< HEAD
+          </h2>"
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
+            Don't just take our word for it. Here's what our satisfied clients
+            have to say about working with us.
+          </p>
+        </motion.div>'
+        <div className="grid grid-cols-1 m,
+    d:grid-cols-3 gap-8">
+=======
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+<<<<<<< HEAD
+            Don&apos;t just take our word for it. Here&apos;s what our satisfied
+            clients have to say about working with us.
+          </p>
+        </motion.div>
+        <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+=======
+<<<<<<< HEAD
+            Don&apos;t just take our word for it. Here&apos;s what our satisfied
+            clients have to say about working with us.
+          </p>
+        </motion.div>
+        <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+=======
+            Don't just take our word for it. Here's what our satisfied clients
+            have to say about working with us.
+          </p>
+        </motion.div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={testimonial.name}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-            >
-              <Card className='h-full hover:shadow-lg transition-shadow duration-300'>
-                <CardContent className='p-6'>
-                  <div className='flex items-center mb-4'>
+            >"
+              <Card className="h-full hover:shadow-lg transition-shadow duration-300">"
+                <CardContent className="p-6">"
+                  <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className='h-5 w-5 text-yellow-400 fill-current' />
+                      <Star
+                        key={i}"
+                        className="h-5 w-5 text-yellow-400 fill-current"
+                      />
                     ))}
-                  </div>
-                  <blockquote className='text-gray-600 mb-6 italic'>
-                    '{testimonial.content}'
-                  </blockquote>
-                  <div className='flex items-center'>
-                    <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold mr-4'>
+                  </div>"
+                  <blockquote className="text-gray-600 mb-6 italic">"
+                    '{testimonial.content}
+                  </blockquote>'
+                  <div className="flex items-center">"
+                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold mr-4">
+>>>>>>> main
                       {testimonial.name.charAt(0)}
                     </div>
+<<<<<<< HEAD
+                    <div>"
+                      <div className='font-semibold text-gray-900'>{testimonial.name}</div>'
+=======
                     <div>
+<<<<<<< HEAD
+                      <div: className='font-semibold text-gray-900'>{testimonial.name}</div>';
+                      <div: className='text-sm text-gray-500'>{testimonial.role}, {testimonial.company}</div>';
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+                      <div className="font-semibold text-gray-900">
+                        {testimonial.name}
+                      </div>
+                      <div className="text-sm text-gray-500">
+<<<<<<< HEAD
+                        {testimonial.role}, {testimonial.compunknown}
+                      </div>
+=======
+                        {testimonial.role}, {testimonial.company}
+                      </div>
+=======
                       <div className='font-semibold text-gray-900'>{testimonial.name}</div>
-                      <div className='text-sm text-gray-500'>{testimonial.role}, {testimonial.company}</div>
+>>>>>>> main
+                      <div className='text-sm text-gray-500'>{testimonial.role}, {testimonial.compunknown}</div>
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
                     </div>
                   </div>
                 </CardContent>
@@ -76,6 +303,17 @@ const TestimonialsSection: React.FC = () => {
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   )}
 ;
+export: default TestimonialsSection
+=======
+  );
+};
+<<<<<<< HEAD
 export default TestimonialsSection
+=======
+export default TestimonialsSection;
+'
+>>>>>>> main
+>>>>>>> main

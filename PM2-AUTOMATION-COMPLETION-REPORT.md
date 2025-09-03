@@ -35,7 +35,7 @@
 
 The system automatically detects and fixes:
 
-- **Merge Conflicts**: Git conflict markers (``, ``, `>>>>>>>`)
+- **Merge Conflicts**: Git conflict markers (`, `, `>>>>>>>`)
 - **Syntax Errors**: Unterminated strings, malformed imports, missing quotes
 - **Build Issues**: Missing dependencies, configuration problems
 - **Type Errors**: TypeScript compilation issues

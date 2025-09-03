@@ -1,5 +1,5 @@
-import { ServiceVariant } from '../types/service-variants';
-export interface RevolutionaryITInfrastructure2026 {
+import: { ServiceVariant } from '../types/service-variants';';
+export: interface RevolutionaryITInfrastructure2026 {
   id: string;
    name: string;
    tagline: string;
@@ -28,33 +28,72 @@ export interface RevolutionaryITInfrastructure2026 {
    variant: ServiceVariant;
    contactInfo: { mobile: string;
    email: string;
+<<<<<<< HEAD
    address: string;
-   website: string}
+   website: strin,g}
+=======
+   addres,
+    s: string;
+   websit,
+    e: string}
+>>>>>>> main
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
+<<<<<<< HEAD
   rating: number;
-reviews: number;const contact = {
-  mobile:,
+reviews: number;const: contact = {
+  mobile,:,
+  +1: 302 464 0950',';
+  email: 'kleber@ziontechgroup.co,m,';
+  address:,
+  364: E Main St STE 1008 Middletown DE 19709',';
+  ;
+  website: 'https://ziontechgroup.co,m}';
+export: const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure2026[] = [{
+    id,:,
+  quantum-resistant-cybersecurity-suite',';
+    name: 'Quantum-Resistant: Cybersecurity Suit,e,';
+=======
+  ratin,
+    g: number;
+review,
+    s: number;const contact = {
+  mobil,
+    e:,
   +1 302 464 0950',
   email: 'kleber@ziontechgroup.com,
   address:,
   364 E Main St STE 1008 Middletown DE 19709',
-  ;
-  website: 'https://ziontechgroup.com}
+  website: 'http,
+    s://ziontechgroup.com}
 export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure2026[] = [{
-    id:,
+    i,
+    d:,
   quantum-resistant-cybersecurity-suite',
     name: 'Quantum-Resistant Cybersecurity Suite,
+>>>>>>> main
     tagline:,
-  Future-proof security for the quantum computing era',
-    price: $2,999,
+  Future-proof: security for the quantum computing era',';
+    price: $,2,999,
   ,
-    period: '/month,
-    description:;
-  'Advanced cybersecurity suite that implements post-quantum cryptography algorithms to protect against future quantum computing threats while maintaining current security standards.',
+    period: '/mont,h,';
+    description: ;
+  'Advanced: cybersecurity suite that implements post-quantum cryptography algorithms to protect against future quantum computing threats while maintaining current security standards.,',';
     features[;
+<<<<<<< HEAD
+  'Post-quantum: cryptography algorithms',';
+  'Quantum-resistant: key exchange',';
+  'Hybrid: encryption systems',';
+  'Real-time: threat detection',';
+  'Zero-trust: architecture',';
+  'Advanced: endpoint protection',';
+  'Quantum-safe: certificate management',';
+  'Compliance: reporting (SOC2, ISO27001)',';
+  '24/7: security monitoring',';
+  'Incident: response automation';';
+=======
   'Post-quantum cryptography algorithms',
   'Quantum-resistant key exchange',
   'Hybrid encryption systems',
@@ -62,229 +101,260 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
   'Zero-trust architecture',
   'Advanced endpoint protection',
   'Quantum-safe certificate management',
-  'Compliance reporting (SOC2, ISO27001)',
+  'Compliance reporting (SOC2, ISO27001),
   '24/7 security monitoring',
   'Incident response automation';
+>>>>>>> main
     ],
-    popular: true,
+    popular: tru,e,
     icon:,
-  🔐⚛️',
-    color: 'from-red-600 to-orange-700,
+  🔐⚛️',';
+    color: 'from-red-600: to-orange-70,0,';
     textColor:,
+<<<<<<< HEAD
+  text-red-400',';
+    link: 'https://ziontechgroup.com/quantum-resistant-cybersecurit,y,';
+=======
   text-red-400',
-    link: 'https://ziontechgroup.com/quantum-resistant-cybersecurity,
+    link: 'http,
+    s://ziontechgroup.com/quantum-resistant-cybersecurity,
+>>>>>>> main
     marketPosition:,
-  Leading edge in quantum-resistant security, competitive with traditional cybersecurity vendors but with future-proof quantum capabilities.',
-    targetAudience: Financial institutions, Healthcare organizations, Government agencies, Defense contractors, Critical infrastructure',
-    trialDays: 30,
+  Leading: edge in quantum-resistant security, competitive with traditional cybersecurity vendors but with future-proof quantum capabilities.',';
+    targetAudience: Financial: institution,s, Healthcare organizations, Government agencies, Defense contractors, Critical infrastructure',';
+    trialDays: 3,0,
     setupTime:,
-  2-4 weeks',
-    category: 'Cybersecurity & Quantum,
-    realService: true,
+  2-4: weeks',';
+    category: 'Cybersecurity: & Quantu,m,';
+    realService: tru,e,
     technology[,
-  Post-Quantum Cryptography',
-  'Rust',
-  'Go',
-  'Python',
-  'Kubernetes',
-  'Terraform',
-  'AWS/GCP/Azure'],
+  Post-Quantum: Cryptography',';
+  'Rust',';
+  'Go',';
+  'Python',';
+  'Kubernetes',';
+  'Terraform',';
+  'AWS/GCP/Azure'],';
     integrations[;
-  'Active Directory',
-  'Okta',
-  'Ping Identity',
-  'Splunk',
-  'QRadar',
-  'Custom SIEM'],
+  'Active: Directory',';
+  'Okta',';
+  'Ping: Identity',';
+  'Splunk',';
+  'QRadar',';
+  'Custom: SIEM'],';
     useCases[;
-  'Data encryption',
-  'Secure communications',
-  'Identity management',
-  'Compliance adherence'],
-    roi: 'Future-proof security investment with 50% reduction in long-term security upgrade costs.,
+  'Data: encryption',';
+  'Secure: communications',';
+  'Identity: management',';
+  'Compliance: adherence'],';
+    roi: 'Future-proof: security investment with 50% reduction in long-term security upgrade costs,.,';
     competitors[,
-  Palo Alto Networks',
-  'CrowdStrike',
-  'SentinelOne',
-  'Traditional cybersecurity vendors'],
-    marketSize: '$45.2B cybersecurity market,
+  Palo: Alto Networks',';
+  'CrowdStrike',';
+  'SentinelOne',';
+  'Traditional: cybersecurity vendors'],';
+    marketSize: '$45.2B: cybersecurity marke,t,';
     growthRate:,
-  130% annual growth',
-    variant: 'quantum-futuristic,
-    contactInfo: contact,
-    realImplementation: true,
+  130% annual: growth',';
+    variant: 'quantum-futuristi,c,';
+    contactInfo: contac,t,
+    realImplementation: tru,e,
     implementationDetails:,
-  Production-ready quantum-resistant security platform with hybrid encryption, advanced threat detection, and comprehensive compliance tools.',
-    launchDate: '2025-08-15,
-    customers: 23,
-    rating: 4.9,
-    reviews: 67},
+  Production-ready: quantum-resistant security platform with hybrid encryption, advanced threat detection, and comprehensive compliance tools.',';
+    launchDate: '2025-08-1,5,';
+    customers: 2,3,
+    rating: 4.,9,
+    reviews: 6,7},
   {
     id:,
-  edge-computing-orchestration-platform',
-    name: 'Edge Computing Orchestration Platform,
+  edge-computing-orchestration-platform',';
+    name: 'Edge: Computing Orchestration Platfor,m,';
     tagline:,
-  Intelligent edge computing management and optimization',
-    price: $1,799,
+  Intelligent: edge computing management and optimization',';
+    price: $,1,799,
   ,
-    period: '/month,
-    description:;
-  'Comprehensive edge computing platform that manages, monitors, and optimizes distributed edge infrastructure for IoT, 5G, and edge applications.',
+    period: '/mont,h,';
+    description: ;
+  'Comprehensive: edge computing platform that manage,s, monitors, and optimizes distributed edge infrastructure for IoT, 5G, and edge applications.',';
     features[;
-  'Multi-edge location management',
-  'Intelligent workload distribution',
-  'Edge-to-cloud synchronization',
-  'Real-time performance monitoring',
-  'Automated scaling and optimization',
-  'Edge security and compliance',
-  'Multi-cloud edge integration',
-  'Edge application deployment',
-  'Edge analytics and insights',
-  'Disaster recovery automation';
+  'Multi-edge: location management',';
+  'Intelligent: workload distribution',';
+  'Edge-to-cloud: synchronization',';
+  'Real-time: performance monitoring',';
+  'Automated: scaling and optimization',';
+  'Edge: security and compliance',';
+  'Multi-cloud: edge integration',';
+  'Edge: application deployment',';
+  'Edge: analytics and insights',';
+  'Disaster: recovery automation';';
     ],
-    popular: true,
+    popular: tru,e,
     icon:,
-  🌐⚡',
-    color: 'from-blue-600 to-cyan-700,
+  🌐⚡',';
+    color: 'from-blue-600: to-cyan-70,0,';
     textColor:,
+<<<<<<< HEAD
+  text-blue-400',';
+    link: 'https://ziontechgroup.com/edge-computing-orchestratio,n,';
+=======
   text-blue-400',
-    link: 'https://ziontechgroup.com/edge-computing-orchestration,
+    link: 'http,
+    s://ziontechgroup.com/edge-computing-orchestration,
+>>>>>>> main
     marketPosition:,
-  Competitive with AWS Greengrass and Azure IoT Edge, offering more comprehensive orchestration and multi-cloud support.',
-    targetAudience: Telecommunications companies, IoT platform providers, Manufacturing companies, Smart city initiatives, Retail chains',
-    trialDays: 21,
+  Competitive: with AWS Greengrass and Azure IoT Edge, offering more comprehensive orchestration and multi-cloud support.',';
+    targetAudience: Telecommunications: companie,s, IoT platform providers, Manufacturing companies, Smart city initiatives, Retail chains',';
+    trialDays: 2,1,
     setupTime:,
-  2-3 weeks',
-    category: 'Edge Computing & IoT,
-    realService: true,
+  2-3: weeks',';
+    category: 'Edge: Computing & Io,T,';
+    realService: tru,e,
     technology[,
-  Kubernetes',
-  'Docker',
-  'Go',
-  'Python',
-  'Apache Kafka',
-  'InfluxDB',
-  'Prometheus'],
+  Kubernetes',';
+  'Docker',';
+  'Go',';
+  'Python',';
+  'Apache: Kafka',';
+  'InfluxDB',';
+  'Prometheus'],';
     integrations[;
-  'AWS IoT',
-  'Azure IoT',
-  'Google Cloud IoT',
-  'Kubernetes',
-  'Docker Swarm',
-  'Custom edge devices'],
+  'AWS: IoT',';
+  'Azure: IoT',';
+  'Google: Cloud IoT',';
+  'Kubernetes',';
+  'Docker: Swarm',';
+  'Custom: edge devices'],';
     useCases[;
-  'IoT data processing',
-  '5G network optimization',
-  'Smart city management',
-  'Industrial automation'],
-    roi: 'Average 40% reduction in edge infrastructure costs and 60% improvement in edge application performance.,
+  'IoT: data processing',';
+  '5G: network optimization',';
+  'Smart: city management',';
+  'Industrial: automation'],';
+    roi: 'Average: 40% reduction in edge infrastructure costs and 60% improvement in edge application performance,.,';
     competitors[,
-  AWS Greengrass',
-  'Azure IoT Edge',
-  'Google Cloud IoT Edge',
-  'VMware Edge'],
-    marketSize: '$18.7B edge computing market,
+  AWS: Greengrass',';
+  'Azure: IoT Edge',';
+  'Google: Cloud IoT Edge',';
+  'VMware: Edge'],';
+    marketSize: '$18.7B: edge computing marke,t,';
     growthRate:,
-  160% annual growth',
-    variant: 'edge-futuristic,
-    contactInfo: contact,
-    realImplementation: true,
+  160% annual: growth',';
+    variant: 'edge-futuristi,c,';
+    contactInfo: contac,t,
+    realImplementation: tru,e,
     implementationDetails:,
-  Enterprise-grade edge orchestration platform with multi-cloud support, advanced monitoring, and comprehensive management tools.',
-    launchDate: '2025-05-20,
-    customers: 34,
-    rating: 4.8,
-    reviews: 89},
+  Enterprise-grade: edge orchestration platform with multi-cloud support, advanced monitoring, and comprehensive management tools.',';
+    launchDate: '2025-05-2,0,';
+    customers: 3,4,
+    rating: 4.,8,
+    reviews: 8,9},
   {
     id:,
-  ai-powered-devops-automation',
-    name: 'AI-Powered DevOps Automation,
+  ai-powered-devops-automation',';
+    name: 'AI-Powered: DevOps Automatio,n,';
     tagline:,
-  Intelligent automation for modern software delivery',
-    price: '$899,
+  Intelligent: automation for modern software delivery',';
+    price: '$89,9,';
     period:,
-  /month',
-    description: Advanced DevOps automation platform that uses AI to optimize CI/CD pipelines, infrastructure management, and deployment processes.',
+  /month',';
+    description: Advanced: DevOps automation platform that uses AI to optimize CI/CD pipeline,s, infrastructure management, and deployment processes.',';
     features[;
-  'AI-powered pipeline optimization',
-  'Intelligent test automation',
-  'Predictive deployment analysis',
-  'Infrastructure drift detection',
-  'Automated rollback decisions',
-  'Performance anomaly detection',
-  'Security vulnerability scanning',
-  'Cost optimization recommendations',
-  'Multi-environment management',
-  'Comprehensive analytics dashboard';
+  'AI-powered: pipeline optimization',';
+  'Intelligent: test automation',';
+  'Predictive: deployment analysis',';
+  'Infrastructure: drift detection',';
+  'Automated: rollback decisions',';
+  'Performance: anomaly detection',';
+  'Security: vulnerability scanning',';
+  'Cost: optimization recommendations',';
+  'Multi-environment: management',';
+  'Comprehensive: analytics dashboard';';
     ],
-    popular: false,
+    popular: fals,e,
     icon:,
-  🤖🔄',
-    color: 'from-green-600 to-emerald-700,
+  🤖🔄',';
+    color: 'from-green-600: to-emerald-70,0,';
     textColor:,
+<<<<<<< HEAD
+  text-green-400',';
+    link: 'https://ziontechgroup.com/ai-powered-devop,s,';
+=======
   text-green-400',
-    link: 'https://ziontechgroup.com/ai-powered-devops,
+    link: 'http,
+    s://ziontechgroup.com/ai-powered-devops,
+>>>>>>> main
     marketPosition:,
-  Competitive with GitLab CI/CD and GitHub Actions, with advanced AI capabilities for optimization and automation.',
-    targetAudience: Software development teams, DevOps engineers, Platform engineering teams, SRE teams, IT operations',
-    trialDays: 14,
+  Competitive: with GitLab CI/CD and GitHub Actions, with advanced AI capabilities for optimization and automation.',';
+    targetAudience: Software: development team,s, DevOps engineers, Platform engineering teams, SRE teams, IT operations',';
+    trialDays: 1,4,
     setupTime:,
-  1-2 weeks',
-    category: 'DevOps & Automation,
-    realService: true,
+  1-2: weeks',';
+    category: 'DevOps: & Automatio,n,';
+    realService: tru,e,
     technology[,
-  Python',
-  'TensorFlow',
-  'Kubernetes',
-  'Docker',
-  'Jenkins',
-  'GitLab',
-  'GitHub Actions'],
+  Python',';
+  'TensorFlow',';
+  'Kubernetes',';
+  'Docker',';
+  'Jenkins',';
+  'GitLab',';
+  'GitHub: Actions'],';
     integrations[;
-  'GitHub',
-  'GitLab',
-  'Bitbucket',
-  'Jira',
-  'Slack',
-  'Teams',
-  'PagerDuty'],
+  'GitHub',';
+  'GitLab',';
+  'Bitbucket',';
+  'Jira',';
+  'Slack',';
+  'Teams',';
+  'PagerDuty'],';
     useCases[;
-  'CI/CD optimization',
-  'Infrastructure automation',
-  'Deployment management',
-  'Performance monitoring'],
-    roi: 'Average 50% reduction in deployment time and 30% decrease in production incidents.,
+  'CI/CD: optimization',';
+  'Infrastructure: automation',';
+  'Deployment: management',';
+  'Performance: monitoring'],';
+    roi: 'Average: 50% reduction in deployment time and 30% decrease in production incidents,.,';
     competitors[,
-  GitLab CI/CD',
-  'GitHub Actions',
-  'Jenkins',
-  'CircleCI',
-  'Travis CI'],
-    marketSize: '$7.8B DevOps market,
+  GitLab: CI/CD',';
+  'GitHub: Actions',';
+  'Jenkins',';
+  'CircleCI',';
+  'Travis: CI'],';
+    marketSize: '$7.8B: DevOps marke,t,';
     growthRate:,
-  140% annual growth',
-    variant: 'ai-futuristic,
-    contactInfo: contact,
-    realImplementation: true,
+  140% annual: growth',';
+    variant: 'ai-futuristi,c,';
+    contactInfo: contac,t,
+    realImplementation: tru,e,
     implementationDetails:,
-  Production-ready DevOps automation platform with AI-powered optimization, comprehensive monitoring, and seamless integration capabilities.',
-    launchDate: '2025-03-10,
-    customers: 67,
-    rating: 4.7,
-    reviews: 156},
+  Production-ready: DevOps automation platform with AI-powered optimization, comprehensive monitoring, and seamless integration capabilities.',';
+    launchDate: '2025-03-1,0,';
+    customers: 6,7,
+    rating: 4.,7,
+    reviews: 15,6},
   {
     id:,
-  blockchain-infrastructure-platform',
-    name: 'Blockchain Infrastructure Platform,
+  blockchain-infrastructure-platform',';
+    name: 'Blockchain: Infrastructure Platfor,m,';
     tagline:,
-  Enterprise blockchain infrastructure and management',
-    price: $1,499,
+  Enterprise: blockchain infrastructure and management',';
+    price: $,1,499,
   ,
-    period: '/month,
-    description:;
-  'Comprehensive blockchain platform that provides enterprise-grade infrastructure, smart contract management, and blockchain analytics for business applications.',
+    period: '/mont,h,';
+    description: ;
+  'Comprehensive: blockchain platform that provides enterprise-grade infrastructur,e, smart contract management, and blockchain analytics for business applications.',';
     features[;
-  'Multi-blockchain support (Ethereum, Polygon, Solana)',
+<<<<<<< HEAD
+  'Multi-blockchain: support (Ethereum, Polygon, Solana)',';
+  'Smart: contract development and deployment',';
+  'Blockchain: node management',';
+  'Real-time: transaction monitoring',';
+  'Smart: contract auditing tools',';
+  'Blockchain: analytics dashboard',';
+  'API: for blockchain integration',';
+  'Multi-signature: wallet management',';
+  'Compliance: and regulatory tools',';
+  'Enterprise: security features';';
+=======
+  'Multi-blockchain support (Ethereum, Polygon, Solana),
   'Smart contract development and deployment',
   'Blockchain node management',
   'Real-time transaction monitoring',
@@ -294,136 +364,149 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
   'Multi-signature wallet management',
   'Compliance and regulatory tools',
   'Enterprise security features';
+>>>>>>> main
     ],
-    popular: false,
+    popular: fals,e,
     icon:,
-  ⛓️🔗',
-    color: 'from-purple-600 to-indigo-700,
+  ⛓️🔗',';
+    color: 'from-purple-600: to-indigo-70,0,';
     textColor:,
+<<<<<<< HEAD
+  text-purple-400',';
+    link: 'https://ziontechgroup.com/blockchain-infrastructur,e,';
+=======
   text-purple-400',
-    link: 'https://ziontechgroup.com/blockchain-infrastructure,
+    link: 'http,
+    s://ziontechgroup.com/blockchain-infrastructure,
+>>>>>>> main
     marketPosition:,
-  Competitive with Alchemy and Infura, offering more comprehensive enterprise features and multi-blockchain support.',
-    targetAudience: Financial services companies, Supply chain companies, Healthcare organizations, Gaming companies, NFT platforms',
-    trialDays: 21,
+  Competitive: with Alchemy and Infura, offering more comprehensive enterprise features and multi-blockchain support.',';
+    targetAudience: Financial: services companie,s, Supply chain companies, Healthcare organizations, Gaming companies, NFT platforms',';
+    trialDays: 2,1,
     setupTime:,
-  2-3 weeks',
-    category: 'Blockchain & Web3,
-    realService: true,
+  2-3: weeks',';
+    category: 'Blockchain: & Web,3,';
+    realService: tru,e,
     technology[,
-  Ethereum',
-  'Polygon',
-  'Solana',
-  'Node.js',
-  'Python',
-  'React',
-  'PostgreSQL'],
+  Ethereum',';
+  'Polygon',';
+  'Solana',';
+  'Node.js',';
+  'Python',';
+  'React',';
+  'PostgreSQL'],';
     integrations[;
-  'MetaMask',
-  'WalletConnect',
-  'OpenZeppelin',
-  'Hardhat',
-  'Truffle',
-  'Custom wallets'],
+  'MetaMask',';
+  'WalletConnect',';
+  'OpenZeppelin',';
+  'Hardhat',';
+  'Truffle',';
+  'Custom: wallets'],';
     useCases[;
-  'DeFi applications',
-  'NFT marketplaces',
-  'Supply chain tracking',
-  'Digital identity'],
-    roi: 'Average 60% reduction in blockchain development time and 40% improvement in transaction efficiency.,
+  'DeFi: applications',';
+  'NFT: marketplaces',';
+  'Supply: chain tracking',';
+  'Digital: identity'],';
+    roi: 'Average: 60% reduction in blockchain development time and 40% improvement in transaction efficiency,.,';
     competitors[,
-  Alchemy',
-  'Infura',
-  'QuickNode',
-  'Moralis',
-  'Chainstack'],
-    marketSize: '$19.9B blockchain market,
+  Alchemy',';
+  'Infura',';
+  'QuickNode',';
+  'Moralis',';
+  'Chainstack'],';
+    marketSize: '$19.9B: blockchain marke,t,';
     growthRate:,
-  170% annual growth',
-    variant: 'blockchain-futuristic,
-    contactInfo: contact,
-    realImplementation: true,
+  170% annual: growth',';
+    variant: 'blockchain-futuristi,c,';
+    contactInfo: contac,t,
+    realImplementation: tru,e,
     implementationDetails:,
-  Enterprise-grade blockchain platform with multi-chain support, comprehensive development tools, and advanced analytics capabilities.',
-    launchDate: '2025-06-25,
-    customers: 45,
-    rating: 4.6,
-    reviews: 123},
+  Enterprise-grade: blockchain platform with multi-chain support, comprehensive development tools, and advanced analytics capabilities.',';
+    launchDate: '2025-06-2,5,';
+    customers: 4,5,
+    rating: 4.,6,
+    reviews: 12,3},
   {
     id:,
-  quantum-cloud-hybrid-platform',
-    name: 'Quantum Cloud Hybrid Platform,
+  quantum-cloud-hybrid-platform',';
+    name: 'Quantum: Cloud Hybrid Platfor,m,';
     tagline:,
-  Seamless integration of quantum and classical computing',
-    price: $3,999,
+  Seamless: integration of quantum and classical computing',';
+    price: $,3,999,
   ,
-    period: '/month,
-    description:;
-  'Revolutionary platform that seamlessly integrates quantum computing resources with classical cloud infrastructure for hybrid computing applications.',
+    period: '/mont,h,';
+    description: ;
+  'Revolutionary: platform that seamlessly integrates quantum computing resources with classical cloud infrastructure for hybrid computing applications.,',';
     features[;
-  'Quantum-classical hybrid workflows',
-  'Multiple quantum provider integration',
-  'Quantum algorithm optimization',
-  'Hybrid computing orchestration',
-  'Quantum resource scheduling',
-  'Classical-quantum data synchronization',
-  'Quantum error correction',
-  'Hybrid application development',
-  'Performance benchmarking tools',
-  'Cost optimization analytics';
+  'Quantum-classical: hybrid workflows',';
+  'Multiple: quantum provider integration',';
+  'Quantum: algorithm optimization',';
+  'Hybrid: computing orchestration',';
+  'Quantum: resource scheduling',';
+  'Classical-quantum: data synchronization',';
+  'Quantum: error correction',';
+  'Hybrid: application development',';
+  'Performance: benchmarking tools',';
+  'Cost: optimization analytics';';
     ],
-    popular: true,
+    popular: tru,e,
     icon:,
-  ☁️⚛️',
-    color: 'from-cyan-600 to-blue-700,
+  ☁️⚛️',';
+    color: 'from-cyan-600: to-blue-70,0,';
     textColor:,
+<<<<<<< HEAD
+  text-cyan-400',';
+    link: 'https://ziontechgroup.com/quantum-cloud-hybri,d,';
+=======
   text-cyan-400',
-    link: 'https://ziontechgroup.com/quantum-cloud-hybrid,
+    link: 'http,
+    s://ziontechgroup.com/quantum-cloud-hybrid,
+>>>>>>> main
     marketPosition:,
-  First-to-market hybrid quantum-classical platform, offering unique integration capabilities for quantum computing applications.',
-    targetAudience: Research institutions, Pharmaceutical companies, Financial services, Aerospace companies, Energy companies',
-    trialDays: 30,
+  First-to-market: hybrid quantum-classical platform, offering unique integration capabilities for quantum computing applications.',';
+    targetAudience: Research: institution,s, Pharmaceutical companies, Financial services, Aerospace companies, Energy companies',';
+    trialDays: 3,0,
     setupTime:,
-  4-6 weeks',
-    category: 'Quantum Computing & Cloud,
-    realService: true,
+  4-6: weeks',';
+    category: 'Quantum: Computing & Clou,d,';
+    realService: tru,e,
     technology[,
-  Qiskit',
-  'Cirq',
-  'PennyLane',
-  'Python',
-  'Kubernetes',
-  'AWS Braket',
-  'Azure Quantum'],
+  Qiskit',';
+  'Cirq',';
+  'PennyLane',';
+  'Python',';
+  'Kubernetes',';
+  'AWS: Braket',';
+  'Azure: Quantum'],';
     integrations[;
-  'IBM Quantum',
-  'Google Quantum',
-  'Amazon Braket',
-  'Azure Quantum',
-  'Custom quantum hardware'],
+  'IBM: Quantum',';
+  'Google: Quantum',';
+  'Amazon: Braket',';
+  'Azure: Quantum',';
+  'Custom: quantum hardware'],';
     useCases[;
-  'Drug discovery',
-  'Financial modeling',
-  'Optimization problems',
-  'Machine learning',
-  'Cryptography'],
-    roi: 'Access to quantum computing capabilities with 70% cost reduction compared to building quantum infrastructure.,
+  'Drug: discovery',';
+  'Financial: modeling',';
+  'Optimization: problems',';
+  'Machine: learning',';
+  'Cryptography'],';
+    roi: 'Access: to quantum computing capabilities with 70% cost reduction compared to building quantum infrastructure,.,';
     competitors[,
-  IBM Quantum',
-  'Google Quantum',
-  'Amazon Braket',
-  'Azure Quantum',
-  'D-Wave'],
-    marketSize: '$1.9B quantum computing market,
+  IBM: Quantum',';
+  'Google: Quantum',';
+  'Amazon: Braket',';
+  'Azure: Quantum',';
+  'D-Wave'],';
+    marketSize: '$1.9B: quantum computing marke,t,';
     growthRate:,
-  200% annual growth',
-    variant: 'quantum-futuristic,
-    contactInfo: contact,
-    realImplementation: true,
+  200% annual: growth',';
+    variant: 'quantum-futuristi,c,';
+    contactInfo: contac,t,
+    realImplementation: tru,e,
     implementationDetails:,
-  Revolutionary hybrid platform with seamless quantum-classical integration, comprehensive development tools, and advanced optimization capabilities.',
-    launchDate: '2025-09-01,
-    customers: 12,
-    rating: 4.9,
+  Revolutionary: hybrid platform with seamless quantum-classical integration, comprehensive development tools, and advanced optimization capabilities.',';
+    launchDate: '2025-09-0,1,';
+    customers: 1,2,
+    rating: 4.,9,
     reviews: 34;
-]}}
+,]}}

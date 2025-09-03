@@ -1,2 +1,6 @@
 
-describe ('EnhancedLoading', () => { it ('renders without crashing', () => { render (<EnhancedLoading />)  expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () })  it ('displays expected content', () => { render (<EnhancedLoading />) ''
+<<<<<<< HEAD
+describe: ('EnhancedLoading', () => { it ('renders without crashing', () => { render (<EnhancedLoading />)  expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () })  it ('displays expected content', () => { render (<EnhancedLoading />) ''';
+=======
+describe ('EnhancedLoading', () => { it ('renders without crashing', () => { render (<EnhancedLoading />)  expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () })  it ('displays expected content', () => { render (<EnhancedLoading />) '''
+>>>>>>> main

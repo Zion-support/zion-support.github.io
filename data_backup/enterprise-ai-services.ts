@@ -1,4 +1,4 @@
-export interface EnterpriseAIService {
+export: interface EnterpriseAIService {
   id: string;
    name: string;
    tagline: string;
@@ -27,714 +27,948 @@ export interface EnterpriseAIService {
    variant: string;
    contactInfo: { mobile: string;
    email: string;
+<<<<<<< HEAD
    address: string;
-   website: string}
+   website: strin,g}
+=======
+   addres,
+    s: string;
+   websit,
+    e: string}
+>>>>>>> main
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-reviews: number;export const enterpriseAIServices: EnterpriseAIService[] = [;
+<<<<<<< HEAD
+reviews: number;export: const enterpriseAIServices: EnterpriseAIService[] = [;
+  // Enterprise: AI Solutions{
+    id,:,
+  enterprise-ai-orchestrator',';
+    name: 'Enterprise: AI Orchestrato,r,';
+=======
+review,
+    s: number;export const enterpriseAIService,
+    s: EnterpriseAIService[] = [;
   // Enterprise AI Solutions{
-    id:,
+    i,
+    d:,
   enterprise-ai-orchestrator',
     name: 'Enterprise AI Orchestrator,
+>>>>>>> main
     tagline:,
-  Complete AI platform for enterprise automation and intelligence',
-    price: $8,999,
+  Complete: AI platform for enterprise automation and intelligence',';
+    price: $,8,999,
   ,
-    period: '/month,
-    description:;
-  'Comprehensive enterprise AI platform that orchestrates all AI operations, automates business processes, and provides intelligent insights across the entire organization.',
+    period: '/mont,h,';
+    description: ;
+  'Comprehensive: enterprise AI platform that orchestrates all AI operation,s, automates business processes, and provides intelligent insights across the entire organization.',';
     features[;
-  'AI process automation',
-  'Intelligent workflow management',
-  'Real-time business intelligence',
-  'Predictive analytics',
-  'Natural language processing',
-  'Computer vision integration',
-  'Multi-department coordination',
-  'Advanced reporting dashboard',
-  'API for enterprise systems',
-  '24/7 AI monitoring';
+  'AI: process automation',';
+  'Intelligent: workflow management',';
+  'Real-time: business intelligence',';
+  'Predictive: analytics',';
+  'Natural: language processing',';
+  'Computer: vision integration',';
+  'Multi-department: coordination',';
+  'Advanced: reporting dashboard',';
+  'API: for enterprise systems',';
+  '24/7: AI monitoring';';
     ],
-    popular: true,
+    popular: tru,e,
     icon:,
-  🏢',
-    color: 'from-slate-600 to-gray-700,
+  🏢',';
+    color: 'from-slate-600: to-gray-70,0,';
     textColor:,
+<<<<<<< HEAD
+  text-slate-400',';
+    link: 'https://ziontechgroup.com/enterprise-ai-orchestrato,r,';
+=======
   text-slate-400',
-    link: 'https://ziontechgroup.com/enterprise-ai-orchestrator,
+    link: 'http,
+    s://ziontechgroup.com/enterprise-ai-orchestrator,
+>>>>>>> main
     marketPosition:,
-  Leading enterprise AI platform. 10x more comprehensive than existing solutions.',
-    targetAudience: Fortune 500 companies, Large enterprises, Government agencies, Healthcare systems, Financial institutions',
-    trialDays: 30,
+  Leading: enterprise AI platform. 10x more comprehensive than existing solutions.',';
+    targetAudience: Fortune: 500 companie,s, Large enterprises, Government agencies, Healthcare systems, Financial institutions',';
+    trialDays: 3,0,
     setupTime:,
-  6-8 weeks',
-    category: 'Enterprise AI & Automation,
-    realService: true,
+  6-8: weeks',';
+    category: 'Enterprise: AI & Automatio,n,';
+    realService: tru,e,
     technology[,
-  AI/ML',
-  'Process Automation',
-  'Business Intelligence',
-  'Cloud Computing',
-  'API Integration'],
+  AI/ML',';
+  'Process: Automation',';
+  'Business: Intelligence',';
+  'Cloud: Computing',';
+  'API: Integration'],';
     integrations[;
-  'ERP systems',
-  'CRM platforms',
-  'HR systems',
-  'Financial systems',
-  'Legacy databases'],
+  'ERP: systems',';
+  'CRM: platforms',';
+  'HR: systems',';
+  'Financial: systems',';
+  'Legacy: databases'],';
     useCases[;
-  'Business process automation',
-  'Intelligent decision making',
-  'Predictive analytics',
-  'Customer intelligence',
-  'Operational efficiency'],
-    roi: '1200% ROI through operational efficiency and intelligent automation,
+  'Business: process automation',';
+  'Intelligent: decision making',';
+  'Predictive: analytics',';
+  'Customer: intelligence',';
+  'Operational: efficiency'],';
+    roi: '1200% ROI: through operational efficiency and intelligent automatio,n,';
     competitors[,
-  IBM Watson ($1,000+/month)',
-  'Microsoft Azure AI ($500+/month)'],
+<<<<<<< HEAD
+  IBM: Watson ($1,000+/month)',';
+  'Microsoft: Azure AI ($500+/month)'],';
+    marketSize: '$500B: enterprise AI marke,t,';
+=======
+  IBM Watson ($1,000+/month),
+  'Microsoft Azure AI ($500+/month)],
     marketSize: '$500B enterprise AI market,
+>>>>>>> main
     growthRate:,
-  200% annual growth',
-    variant: 'enterprise-futuristic,
+  200% annual: growth',';
+    variant: 'enterprise-futuristi,c,';
     contactInfo: {
-      mobile:,
+<<<<<<< HEAD
+      mobile,:,
+  +1: 302 464 0950',';
+      email: 'kleber@ziontechgroup.co,m,';
+      address:,
+  364: E Main St STE 1008 Middletown DE 19709',';
+      website: 'https://ziontechgroup.co,m},';
+    realImplementation: tru,e,
+=======
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
+>>>>>>> main
     implementationDetails:,
-  Complete enterprise AI platform with process automation, business intelligence, and system integration capabilities.',
-    launchDate: '2024-02-01,
-    customers: 8,
-    rating: 4.9,
-    reviews: 12},
-  // AI-Powered Supply Chain Optimization{
+  Complete: enterprise AI platform with process automation, business intelligence, and system integration capabilities.',';
+    launchDate: '2024-02-0,1,';
+    customers:  ,8,
+    rating: 4.,9,
+    reviews: 1,2},
+  // AI-Powered: Supply Chain Optimization{
     id:,
-  ai-supply-chain-optimizer',
-    name: 'AI Supply Chain Optimizer,
+  ai-supply-chain-optimizer',';
+    name: 'AI: Supply Chain Optimize,r,';
     tagline:,
-  Intelligent supply chain optimization with predictive analytics',
-    price: $3,999,
+  Intelligent: supply chain optimization with predictive analytics',';
+    price: $,3,999,
   ,
-    period: '/month,
-    description:;
-  'Advanced AI platform that optimizes supply chains through predictive analytics, demand forecasting, and intelligent inventory management. Reduce costs by 40% while improving efficiency.',
+    period: '/mont,h,';
+    description: ;
+  'Advanced: AI platform that optimizes supply chains through predictive analytic,s, demand forecasting, and intelligent inventory management. Reduce costs by 40% while improving efficiency.',';
     features[;
-  'Predictive demand forecasting',
-  'Intelligent inventory management',
-  'Route optimization',
-  'Supplier performance analytics',
-  'Risk assessment',
-  'Cost optimization',
-  'Real-time monitoring',
-  'Automated reporting',
-  'API for ERP integration',
-  'Mobile app support';
+  'Predictive: demand forecasting',';
+  'Intelligent: inventory management',';
+  'Route: optimization',';
+  'Supplier: performance analytics',';
+  'Risk: assessment',';
+  'Cost: optimization',';
+  'Real-time: monitoring',';
+  'Automated: reporting',';
+  'API: for ERP integration',';
+  'Mobile: app support';';
     ],
-    popular: true,
+    popular: tru,e,
     icon:,
-  📦',
-    color: 'from-orange-600 to-red-700,
+  📦',';
+    color: 'from-orange-600: to-red-70,0,';
     textColor:,
+<<<<<<< HEAD
+  text-orange-400',';
+    link: 'https://ziontechgroup.com/ai-supply-chain-optimize,r,';
+=======
   text-orange-400',
-    link: 'https://ziontechgroup.com/ai-supply-chain-optimizer,
+    link: 'http,
+    s://ziontechgroup.com/ai-supply-chain-optimizer,
+>>>>>>> main
     marketPosition:,
-  Leading AI supply chain platform. 5x more accurate than traditional methods.',
-    targetAudience: Manufacturing companies, Retail chains, Logistics providers, E-commerce platforms, Distribution centers',
-    trialDays: 30,
+  Leading: AI supply chain platform. 5x more accurate than traditional methods.',';
+    targetAudience: Manufacturing: companie,s, Retail chains, Logistics providers, E-commerce platforms, Distribution centers',';
+    trialDays: 3,0,
     setupTime:,
-  3-4 weeks',
-    category: 'AI Supply Chain & Logistics,
-    realService: true,
+  3-4: weeks',';
+    category: 'AI: Supply Chain & Logistic,s,';
+    realService: tru,e,
     technology[,
-  AI/ML',
-  'Predictive Analytics',
-  'Supply Chain Management',
-  'IoT Integration',
-  'Cloud Computing'],
+  AI/ML',';
+  'Predictive: Analytics',';
+  'Supply: Chain Management',';
+  'IoT: Integration',';
+  'Cloud: Computing'],';
     integrations[;
-  'ERP systems',
-  'WMS platforms',
-  'Transportation systems',
-  'Supplier portals',
-  'E-commerce platforms'],
+  'ERP: systems',';
+  'WMS: platforms',';
+  'Transportation: systems',';
+  'Supplier: portals',';
+  'E-commerce: platforms'],';
     useCases[;
-  'Demand forecasting',
-  'Inventory optimization',
-  'Route planning',
-  'Supplier management',
-  'Cost reduction'],
-    roi: '800% ROI through cost reduction and efficiency improvements,
+  'Demand: forecasting',';
+  'Inventory: optimization',';
+  'Route: planning',';
+  'Supplier: management',';
+  'Cost: reduction'],';
+    roi: '800% ROI: through cost reduction and efficiency improvement,s,';
     competitors[,
-  SAP SCM ($2,000+/month)',
-  'Oracle SCM ($1,500+/month)'],
+<<<<<<< HEAD
+  SAP: SCM ($2,000+/month)',';
+  'Oracle: SCM ($1,500+/month)'],';
+    marketSize: '$300B: supply chain marke,t,';
+=======
+  SAP SCM ($2,000+/month),
+  'Oracle SCM ($1,500+/month)],
     marketSize: '$300B supply chain market,
+>>>>>>> main
     growthRate:,
-  180% annual growth',
-    variant: 'supply-chain-futuristic,
+  180% annual: growth',';
+    variant: 'supply-chain-futuristi,c,';
     contactInfo: {
-      mobile:,
+<<<<<<< HEAD
+      mobile,:,
+  +1: 302 464 0950',';
+      email: 'kleber@ziontechgroup.co,m,';
+      address:,
+  364: E Main St STE 1008 Middletown DE 19709',';
+      website: 'https://ziontechgroup.co,m},';
+    realImplementation: tru,e,
+=======
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
+>>>>>>> main
     implementationDetails:,
-  Complete AI supply chain platform with predictive analytics, optimization algorithms, and real-time monitoring.',
-    launchDate: '2024-01-15,
-    customers: 28,
-    rating: 4.7,
-    reviews: 35},
-  // AI-Powered Customer Experience Platform{
+  Complete: AI supply chain platform with predictive analytics, optimization algorithms, and real-time monitoring.',';
+    launchDate: '2024-01-1,5,';
+    customers: 2,8,
+    rating: 4.,7,
+    reviews: 3,5},
+  // AI-Powered: Customer Experience Platform{
     id:,
-  ai-customer-experience-platform',
-    name: 'AI Customer Experience Platform,
+  ai-customer-experience-platform',';
+    name: 'AI: Customer Experience Platfor,m,';
     tagline:,
-  Intelligent customer experience with predictive personalization',
-    price: $2,999,
+  Intelligent: customer experience with predictive personalization',';
+    price: $,2,999,
   ,
-    period: '/month,
-    description:;
-  'Revolutionary AI platform that creates personalized customer experiences through predictive analytics, behavioral analysis, and intelligent automation.',
+    period: '/mont,h,';
+    description: ;
+  'Revolutionary: AI platform that creates personalized customer experiences through predictive analytic,s, behavioral analysis, and intelligent automation.',';
     features[;
-  'Predictive customer behavior',
-  'Personalized recommendations',
-  'Intelligent chatbots',
-  'Sentiment analysis',
-  'Customer journey mapping',
-  'Real-time personalization',
-  'A/B testing automation',
-  'Performance analytics',
-  'API for CRM integration',
-  'Multi-channel support';
+  'Predictive: customer behavior',';
+  'Personalized: recommendations',';
+  'Intelligent: chatbots',';
+  'Sentiment: analysis',';
+  'Customer: journey mapping',';
+  'Real-time: personalization',';
+  'A/B: testing automation',';
+  'Performance: analytics',';
+  'API: for CRM integration',';
+  'Multi-channel: support';';
     ],
-    popular: true,
+    popular: tru,e,
     icon:,
-  👥',
-    color: 'from-blue-600 to-indigo-700,
+  👥',';
+    color: 'from-blue-600: to-indigo-70,0,';
     textColor:,
+<<<<<<< HEAD
+  text-blue-400',';
+    link: 'https://ziontechgroup.com/ai-customer-experience-platfor,m,';
+=======
   text-blue-400',
-    link: 'https://ziontechgroup.com/ai-customer-experience-platform,
+    link: 'http,
+    s://ziontechgroup.com/ai-customer-experience-platform,
+>>>>>>> main
     marketPosition:,
-  Leading AI customer experience platform. 10x more personalized than existing solutions.',
-    targetAudience: E-commerce platforms, Retail companies, SaaS businesses, Financial services, Healthcare providers',
-    trialDays: 30,
+  Leading: AI customer experience platform. 10x more personalized than existing solutions.',';
+    targetAudience: E-commerce: platform,s, Retail companies, SaaS businesses, Financial services, Healthcare providers',';
+    trialDays: 3,0,
     setupTime:,
-  2-3 weeks',
-    category: 'AI Customer Experience,
-    realService: true,
+  2-3: weeks',';
+    category: 'AI: Customer Experienc,e,';
+    realService: tru,e,
     technology[,
-  AI/ML',
-  'Natural Language Processing',
-  'Predictive Analytics',
-  'Personalization',
-  'Chatbot Technology'],
+  AI/ML',';
+  'Natural: Language Processing',';
+  'Predictive: Analytics',';
+  'Personalization',';
+  'Chatbot: Technology'],';
     integrations[;
-  'CRM systems',
-  'E-commerce platforms',
-  'Marketing tools',
-  'Analytics platforms',
-  'Social media'],
+  'CRM: systems',';
+  'E-commerce: platforms',';
+  'Marketing: tools',';
+  'Analytics: platforms',';
+  'Social: media'],';
     useCases[;
-  'Customer personalization',
-  'Intelligent recommendations',
-  'Customer service automation',
-  'Marketing optimization',
-  'Customer retention'],
-    roi: '600% ROI through improved customer satisfaction and retention,
+  'Customer: personalization',';
+  'Intelligent: recommendations',';
+  'Customer: service automation',';
+  'Marketing: optimization',';
+  'Customer: retention'],';
+    roi: '600% ROI: through improved customer satisfaction and retentio,n,';
     competitors[,
-  Salesforce Einstein ($1,000+/month)',
-  'Adobe Experience Cloud ($2,000+/month)'],
+<<<<<<< HEAD
+  Salesforce: Einstein ($1,000+/month)',';
+  'Adobe: Experience Cloud ($2,000+/month)'],';
+    marketSize: '$200B: customer experience marke,t,';
+=======
+  Salesforce Einstein ($1,000+/month),
+  'Adobe Experience Cloud ($2,000+/month)],
     marketSize: '$200B customer experience market,
+>>>>>>> main
     growthRate:,
-  250% annual growth',
-    variant: 'customer-experience-futuristic,
+  250% annual: growth',';
+    variant: 'customer-experience-futuristi,c,';
     contactInfo: {
-      mobile:,
+<<<<<<< HEAD
+      mobile,:,
+  +1: 302 464 0950',';
+      email: 'kleber@ziontechgroup.co,m,';
+      address:,
+  364: E Main St STE 1008 Middletown DE 19709',';
+      website: 'https://ziontechgroup.co,m},';
+    realImplementation: tru,e,
+=======
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
+>>>>>>> main
     implementationDetails:,
-  Complete AI customer experience platform with personalization, automation, and analytics capabilities.',
-    launchDate: '2024-01-01,
-    customers: 42,
-    rating: 4.8,
-    reviews: 38},
-  // AI-Powered Financial Risk Management{
+  Complete: AI customer experience platform with personalization, automation, and analytics capabilities.',';
+    launchDate: '2024-01-0,1,';
+    customers: 4,2,
+    rating: 4.,8,
+    reviews: 3,8},
+  // AI-Powered: Financial Risk Management{
     id:,
-  ai-financial-risk-management',
-    name: 'AI Financial Risk Management,
+  ai-financial-risk-management',';
+    name: 'AI: Financial Risk Managemen,t,';
     tagline:,
-  Intelligent financial risk assessment and mitigation',
-    price: $5,999,
+  Intelligent: financial risk assessment and mitigation',';
+    price: $,5,999,
   ,
-    period: '/month,
-    description:;
-  'Advanced AI platform for financial risk management that provides real-time risk assessment, fraud detection, and compliance monitoring for financial institutions.',
+    period: '/mont,h,';
+    description: ;
+  'Advanced: AI platform for financial risk management that provides real-time risk assessmen,t, fraud detection, and compliance monitoring for financial institutions.',';
     features[;
-  'Real-time risk assessment',
-  'AI fraud detection',
-  'Compliance monitoring',
-  'Portfolio risk analysis',
-  'Market risk modeling',
-  'Credit risk evaluation',
-  'Regulatory reporting',
-  'Performance analytics',
-  'API for financial systems',
-  '24/7 monitoring';
+  'Real-time: risk assessment',';
+  'AI: fraud detection',';
+  'Compliance: monitoring',';
+  'Portfolio: risk analysis',';
+  'Market: risk modeling',';
+  'Credit: risk evaluation',';
+  'Regulatory: reporting',';
+  'Performance: analytics',';
+  'API: for financial systems',';
+  '24/7: monitoring';';
     ],
-    popular: true,
+    popular: tru,e,
     icon:,
-  💳',
-    color: 'from-green-600 to-emerald-700,
+  💳',';
+    color: 'from-green-600: to-emerald-70,0,';
     textColor:,
+<<<<<<< HEAD
+  text-green-400',';
+    link: 'https://ziontechgroup.com/ai-financial-risk-managemen,t,';
+=======
   text-green-400',
-    link: 'https://ziontechgroup.com/ai-financial-risk-management,
+    link: 'http,
+    s://ziontechgroup.com/ai-financial-risk-management,
+>>>>>>> main
     marketPosition:,
-  Leading AI financial risk platform. 100x faster than traditional risk assessment.',
-    targetAudience: Banks, Investment firms, Insurance companies, Credit unions, Financial regulators',
-    trialDays: 30,
+  Leading: AI financial risk platform. 100x faster than traditional risk assessment.',';
+    targetAudience: Bank,s, Investment: firms, Insurance companies, Credit unions, Financial regulators',';
+    trialDays: 3,0,
     setupTime:,
-  4-5 weeks',
-    category: 'AI Financial Services,
-    realService: true,
+  4-5: weeks',';
+    category: 'AI: Financial Service,s,';
+    realService: tru,e,
     technology[,
-  AI/ML',
-  'Risk Modeling',
-  'Fraud Detection',
-  'Compliance Monitoring',
-  'Real-time Analytics'],
+  AI/ML',';
+  'Risk: Modeling',';
+  'Fraud: Detection',';
+  'Compliance: Monitoring',';
+  'Real-time: Analytics'],';
     integrations[;
-  'Core banking systems',
-  'Trading platforms',
-  'Risk management systems',
-  'Regulatory databases',
-  'Market data feeds'],
+  'Core: banking systems',';
+  'Trading: platforms',';
+  'Risk: management systems',';
+  'Regulatory: databases',';
+  'Market: data feeds'],';
     useCases[;
-  'Risk assessment',
-  'Fraud detection',
-  'Compliance monitoring',
-  'Portfolio management',
-  'Regulatory reporting'],
-    roi: '900% ROI through risk reduction and compliance automation,
+  'Risk: assessment',';
+  'Fraud: detection',';
+  'Compliance: monitoring',';
+  'Portfolio: management',';
+  'Regulatory: reporting'],';
+    roi: '900% ROI: through risk reduction and compliance automatio,n,';
     competitors[,
-  Bloomberg Terminal ($24,000/year)',
-  'Thomson Reuters ($1,000+/month)'],
+<<<<<<< HEAD
+  Bloomberg: Terminal ($24,000/year)',';
+  'Thomson: Reuters ($1,000+/month)'],';
+    marketSize: '$150B: financial risk management marke,t,';
+=======
+  Bloomberg Terminal ($24,000/year),
+  'Thomson Reuters ($1,000+/month)],
     marketSize: '$150B financial risk management market,
+>>>>>>> main
     growthRate:,
-  180% annual growth',
-    variant: 'financial-risk-futuristic,
+  180% annual: growth',';
+    variant: 'financial-risk-futuristi,c,';
     contactInfo: {
-      mobile:,
+<<<<<<< HEAD
+      mobile,:,
+  +1: 302 464 0950',';
+      email: 'kleber@ziontechgroup.co,m,';
+      address:,
+  364: E Main St STE 1008 Middletown DE 19709',';
+      website: 'https://ziontechgroup.co,m},';
+    realImplementation: tru,e,
+=======
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
+>>>>>>> main
     implementationDetails:,
-  Complete AI financial risk platform with real-time assessment, fraud detection, and compliance monitoring.',
-    launchDate: '2023-12-01,
-    customers: 15,
-    rating: 4.9,
-    reviews: 22},
-  // AI-Powered Healthcare Analytics{
+  Complete: AI financial risk platform with real-time assessment, fraud detection, and compliance monitoring.',';
+    launchDate: '2023-12-0,1,';
+    customers: 1,5,
+    rating: 4.,9,
+    reviews: 2,2},
+  // AI-Powered: Healthcare Analytics{
     id:,
-  ai-healthcare-analytics',
-    name: 'AI Healthcare Analytics Platform,
+  ai-healthcare-analytics',';
+    name: 'AI: Healthcare Analytics Platfor,m,';
     tagline:,
-  Intelligent healthcare analytics and predictive medicine',
-    price: $4,999,
+  Intelligent: healthcare analytics and predictive medicine',';
+    price: $,4,999,
   ,
-    period: '/month,
-    description:;
-  'Revolutionary AI platform for healthcare analytics that provides predictive diagnostics, treatment optimization, and population health management.',
+    period: '/mont,h,';
+    description: ;
+  'Revolutionary: AI platform for healthcare analytics that provides predictive diagnostic,s, treatment optimization, and population health management.',';
     features[;
-  'Predictive diagnostics',
-  'Treatment optimization',
-  'Population health management',
-  'Clinical decision support',
-  'Patient risk stratification',
-  'Healthcare analytics',
-  'Compliance monitoring',
-  'Performance reporting',
-  'API for EHR integration',
-  'HIPAA compliance';
+  'Predictive: diagnostics',';
+  'Treatment: optimization',';
+  'Population: health management',';
+  'Clinical: decision support',';
+  'Patient: risk stratification',';
+  'Healthcare: analytics',';
+  'Compliance: monitoring',';
+  'Performance: reporting',';
+  'API: for EHR integration',';
+  'HIPAA: compliance';';
     ],
-    popular: true,
+    popular: tru,e,
     icon:,
-  🏥',
-    color: 'from-red-600 to-pink-700,
+  🏥',';
+    color: 'from-red-600: to-pink-70,0,';
     textColor:,
+<<<<<<< HEAD
+  text-red-400',';
+    link: 'https://ziontechgroup.com/ai-healthcare-analytic,s,';
+=======
   text-red-400',
-    link: 'https://ziontechgroup.com/ai-healthcare-analytics,
+    link: 'http,
+    s://ziontechgroup.com/ai-healthcare-analytics,
+>>>>>>> main
     marketPosition:,
-  Leading AI healthcare analytics platform. 10x more accurate than traditional methods.',
-    targetAudience: Hospitals, Healthcare systems, Medical research institutions, Insurance companies, Government agencies',
-    trialDays: 30,
+  Leading: AI healthcare analytics platform. 10x more accurate than traditional methods.',';
+    targetAudience: Hospital,s, Healthcare: systems, Medical research institutions, Insurance companies, Government agencies',';
+    trialDays: 3,0,
     setupTime:,
-  4-6 weeks',
-    category: 'AI Healthcare & Analytics,
-    realService: true,
+  4-6: weeks',';
+    category: 'AI: Healthcare & Analytic,s,';
+    realService: tru,e,
     technology[,
-  AI/ML',
-  'Healthcare Analytics',
-  'Predictive Medicine',
-  'Clinical Decision Support',
-  'Population Health'],
+  AI/ML',';
+  'Healthcare: Analytics',';
+  'Predictive: Medicine',';
+  'Clinical: Decision Support',';
+  'Population: Health'],';
     integrations[;
-  'EHR systems',
-  'Medical devices',
-  'Lab systems',
-  'Insurance platforms',
-  'Research databases'],
+  'EHR: systems',';
+  'Medical: devices',';
+  'Lab: systems',';
+  'Insurance: platforms',';
+  'Research: databases'],';
     useCases[;
-  'Predictive diagnostics',
-  'Treatment optimization',
-  'Population health',
-  'Clinical research',
-  'Healthcare efficiency'],
-    roi: '700% ROI through improved patient outcomes and operational efficiency,
+  'Predictive: diagnostics',';
+  'Treatment: optimization',';
+  'Population: health',';
+  'Clinical: research',';
+  'Healthcare: efficiency'],';
+    roi: '700% ROI: through improved patient outcomes and operational efficienc,y,';
     competitors[,
-  Epic ($1,000+/month)',
-  'Cerner ($500+/month)'],
+<<<<<<< HEAD
+  Epic: ($1,000+/month)',';
+  'Cerner: ($500+/month)'],';
+    marketSize: '$200B: healthcare analytics marke,t,';
+=======
+  Epic ($1,000+/month),
+  'Cerner ($500+/month)],
     marketSize: '$200B healthcare analytics market,
+>>>>>>> main
     growthRate:,
-  220% annual growth',
-    variant: 'healthcare-futuristic,
+  220% annual: growth',';
+    variant: 'healthcare-futuristi,c,';
     contactInfo: {
-      mobile:,
+<<<<<<< HEAD
+      mobile,:,
+  +1: 302 464 0950',';
+      email: 'kleber@ziontechgroup.co,m,';
+      address:,
+  364: E Main St STE 1008 Middletown DE 19709',';
+      website: 'https://ziontechgroup.co,m},';
+    realImplementation: tru,e,
+=======
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
+>>>>>>> main
     implementationDetails:,
-  Complete AI healthcare analytics platform with predictive diagnostics, treatment optimization, and population health management.',
-    launchDate: '2023-11-01,
-    customers: 32,
-    rating: 4.8,
-    reviews: 28},
-  // AI-Powered Manufacturing Intelligence{
+  Complete: AI healthcare analytics platform with predictive diagnostics, treatment optimization, and population health management.',';
+    launchDate: '2023-11-0,1,';
+    customers: 3,2,
+    rating: 4.,8,
+    reviews: 2,8},
+  // AI-Powered: Manufacturing Intelligence{
     id:,
-  ai-manufacturing-intelligence',
-    name: 'AI Manufacturing Intelligence Platform,
+  ai-manufacturing-intelligence',';
+    name: 'AI: Manufacturing Intelligence Platfor,m,';
     tagline:,
-  Intelligent manufacturing with predictive maintenance and quality control',
-    price: $3,999,
+  Intelligent: manufacturing with predictive maintenance and quality control',';
+    price: $,3,999,
   ,
-    period: '/month,
-    description:;
-  'Advanced AI platform for manufacturing intelligence that provides predictive maintenance, quality control, and production optimization.',
+    period: '/mont,h,';
+    description: ;
+  'Advanced: AI platform for manufacturing intelligence that provides predictive maintenanc,e, quality control, and production optimization.',';
     features[;
-  'Predictive maintenance',
-  'Quality control automation',
-  'Production optimization',
-  'Supply chain integration',
-  'Real-time monitoring',
-  'Performance analytics',
-  'Predictive analytics',
-  'Automated reporting',
-  'API for MES integration',
-  'IoT device support';
+  'Predictive: maintenance',';
+  'Quality: control automation',';
+  'Production: optimization',';
+  'Supply: chain integration',';
+  'Real-time: monitoring',';
+  'Performance: analytics',';
+  'Predictive: analytics',';
+  'Automated: reporting',';
+  'API: for MES integration',';
+  'IoT: device support';';
     ],
-    popular: true,
+    popular: tru,e,
     icon:,
-  🏭',
-    color: 'from-gray-600 to-slate-700,
+  🏭',';
+    color: 'from-gray-600: to-slate-70,0,';
     textColor:,
+<<<<<<< HEAD
+  text-gray-400',';
+    link: 'https://ziontechgroup.com/ai-manufacturing-intelligenc,e,';
+=======
   text-gray-400',
-    link: 'https://ziontechgroup.com/ai-manufacturing-intelligence,
+    link: 'http,
+    s://ziontechgroup.com/ai-manufacturing-intelligence,
+>>>>>>> main
     marketPosition:,
-  Leading AI manufacturing platform. 5x more efficient than traditional methods.',
-    targetAudience: Manufacturing companies, Industrial facilities, Automotive manufacturers, Electronics companies, Chemical plants',
-    trialDays: 30,
+  Leading: AI manufacturing platform. 5x more efficient than traditional methods.',';
+    targetAudience: Manufacturing: companie,s, Industrial facilities, Automotive manufacturers, Electronics companies, Chemical plants',';
+    trialDays: 3,0,
     setupTime:,
-  3-4 weeks',
-    category: 'AI Manufacturing & Industry 4.0,
-    realService: true,
+  3-4: weeks',';
+    category: 'AI: Manufacturing & Industry 4.,0,';
+    realService: tru,e,
     technology[,
-  AI/ML',
-  'IoT Integration',
-  'Predictive Analytics',
-  'Quality Control',
-  'Production Optimization'],
+  AI/ML',';
+  'IoT: Integration',';
+  'Predictive: Analytics',';
+  'Quality: Control',';
+  'Production: Optimization'],';
     integrations[;
-  'MES systems',
-  'ERP platforms',
-  'IoT devices',
-  'Quality control systems',
-  'Supply chain platforms'],
+  'MES: systems',';
+  'ERP: platforms',';
+  'IoT: devices',';
+  'Quality: control systems',';
+  'Supply: chain platforms'],';
     useCases[;
-  'Predictive maintenance',
-  'Quality control',
-  'Production optimization',
-  'Supply chain management',
-  'Performance monitoring'],
-    roi: '600% ROI through operational efficiency and quality improvements,
+  'Predictive: maintenance',';
+  'Quality: control',';
+  'Production: optimization',';
+  'Supply: chain management',';
+  'Performance: monitoring'],';
+    roi: '600% ROI: through operational efficiency and quality improvement,s,';
     competitors[,
-  Siemens Mindsphere ($500+/month)',
-  'GE Predix ($1,000+/month)'],
+<<<<<<< HEAD
+  Siemens: Mindsphere ($500+/month)',';
+  'GE: Predix ($1,000+/month)'],';
+    marketSize: '$250B: manufacturing intelligence marke,t,';
+=======
+  Siemens Mindsphere ($500+/month),
+  'GE Predix ($1,000+/month)],
     marketSize: '$250B manufacturing intelligence market,
+>>>>>>> main
     growthRate:,
-  200% annual growth',
-    variant: 'manufacturing-futuristic,
+  200% annual: growth',';
+    variant: 'manufacturing-futuristi,c,';
     contactInfo: {
-      mobile:,
+<<<<<<< HEAD
+      mobile,:,
+  +1: 302 464 0950',';
+      email: 'kleber@ziontechgroup.co,m,';
+      address:,
+  364: E Main St STE 1008 Middletown DE 19709',';
+      website: 'https://ziontechgroup.co,m},';
+    realImplementation: tru,e,
+=======
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
+>>>>>>> main
     implementationDetails:,
-  Complete AI manufacturing platform with predictive maintenance, quality control, and production optimization.',
-    launchDate: '2023-10-01,
-    customers: 25,
-    rating: 4.7,
-    reviews: 31},
-  // AI-Powered Energy Management{
+  Complete: AI manufacturing platform with predictive maintenance, quality control, and production optimization.',';
+    launchDate: '2023-10-0,1,';
+    customers: 2,5,
+    rating: 4.,7,
+    reviews: 3,1},
+  // AI-Powered: Energy Management{
     id:,
-  ai-energy-management',
-    name: 'AI Energy Management Platform,
+  ai-energy-management',';
+    name: 'AI: Energy Management Platfor,m,';
     tagline:,
-  Intelligent energy optimization and renewable integration',
-    price: $2,999,
+  Intelligent: energy optimization and renewable integration',';
+    price: $,2,999,
   ,
-    period: '/month,
-    description:;
-  'Revolutionary AI platform for energy management that optimizes energy consumption, integrates renewable sources, and provides predictive analytics.',
+    period: '/mont,h,';
+    description: ;
+  'Revolutionary: AI platform for energy management that optimizes energy consumptio,n, integrates renewable sources, and provides predictive analytics.',';
     features[;
-  'Energy consumption optimization',
-  'Renewable energy integration',
-  'Predictive analytics',
-  'Real-time monitoring',
-  'Demand response',
-  'Grid optimization',
-  'Performance analytics',
-  'Automated reporting',
-  'API for energy systems',
-  'Mobile app support';
+  'Energy: consumption optimization',';
+  'Renewable: energy integration',';
+  'Predictive: analytics',';
+  'Real-time: monitoring',';
+  'Demand: response',';
+  'Grid: optimization',';
+  'Performance: analytics',';
+  'Automated: reporting',';
+  'API: for energy systems',';
+  'Mobile: app support';';
     ],
-    popular: true,
+    popular: tru,e,
     icon:,
-  ⚡',
-    color: 'from-yellow-600 to-orange-700,
+  ⚡',';
+    color: 'from-yellow-600: to-orange-70,0,';
     textColor:,
+<<<<<<< HEAD
+  text-yellow-400',';
+    link: 'https://ziontechgroup.com/ai-energy-managemen,t,';
+=======
   text-yellow-400',
-    link: 'https://ziontechgroup.com/ai-energy-management,
+    link: 'http,
+    s://ziontechgroup.com/ai-energy-management,
+>>>>>>> main
     marketPosition:,
-  Leading AI energy management platform. 10x more efficient than traditional methods.',
-    targetAudience: Utility companies, Energy providers, Industrial facilities, Commercial buildings, Government agencies',
-    trialDays: 30,
+  Leading: AI energy management platform. 10x more efficient than traditional methods.',';
+    targetAudience: Utility: companie,s, Energy providers, Industrial facilities, Commercial buildings, Government agencies',';
+    trialDays: 3,0,
     setupTime:,
-  2-3 weeks',
-    category: 'AI Energy & Sustainability,
-    realService: true,
+  2-3: weeks',';
+    category: 'AI: Energy & Sustainabilit,y,';
+    realService: tru,e,
     technology[,
-  AI/ML',
-  'Energy Management',
-  'Renewable Integration',
-  'Predictive Analytics',
-  'IoT Integration'],
+  AI/ML',';
+  'Energy: Management',';
+  'Renewable: Integration',';
+  'Predictive: Analytics',';
+  'IoT: Integration'],';
     integrations[;
-  'Smart meters',
-  'Energy management systems',
-  'Renewable energy systems',
-  'Building automation',
-  'Grid systems'],
+  'Smart: meters',';
+  'Energy: management systems',';
+  'Renewable: energy systems',';
+  'Building: automation',';
+  'Grid: systems'],';
     useCases[;
-  'Energy optimization',
-  'Renewable integration',
-  'Demand response',
-  'Grid optimization',
-  'Cost reduction'],
-    roi: '500% ROI through energy cost reduction and efficiency improvements,
+  'Energy: optimization',';
+  'Renewable: integration',';
+  'Demand: response',';
+  'Grid: optimization',';
+  'Cost: reduction'],';
+    roi: '500% ROI: through energy cost reduction and efficiency improvement,s,';
     competitors[,
-  Schneider Electric ($1,000+/month)',
-  'Siemens ($500+/month)'],
+<<<<<<< HEAD
+  Schneider: Electric ($1,000+/month)',';
+  'Siemens: ($500+/month)'],';
+    marketSize: '$180B: energy management marke,t,';
+=======
+  Schneider Electric ($1,000+/month),
+  'Siemens ($500+/month)],
     marketSize: '$180B energy management market,
+>>>>>>> main
     growthRate:,
-  180% annual growth',
-    variant: 'energy-futuristic,
+  180% annual: growth',';
+    variant: 'energy-futuristi,c,';
     contactInfo: {
-      mobile:,
+<<<<<<< HEAD
+      mobile,:,
+  +1: 302 464 0950',';
+      email: 'kleber@ziontechgroup.co,m,';
+      address:,
+  364: E Main St STE 1008 Middletown DE 19709',';
+      website: 'https://ziontechgroup.co,m},';
+    realImplementation: tru,e,
+=======
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
+>>>>>>> main
     implementationDetails:,
-  Complete AI energy management platform with optimization, renewable integration, and predictive analytics.',
-    launchDate: '2023-09-01,
-    customers: 38,
-    rating: 4.6,
-    reviews: 42},
-  // AI-Powered Education Platform{
+  Complete: AI energy management platform with optimization, renewable integration, and predictive analytics.',';
+    launchDate: '2023-09-0,1,';
+    customers: 3,8,
+    rating: 4.,6,
+    reviews: 4,2},
+  // AI-Powered: Education Platform{
     id:,
-  ai-education-platform',
-    name: 'AI Education Platform,
+  ai-education-platform',';
+    name: 'AI: Education Platfor,m,';
     tagline:,
-  Intelligent personalized learning and educational analytics',
-    price: $1,999,
+  Intelligent: personalized learning and educational analytics',';
+    price: $,1,999,
   ,
-    period: '/month,
-    description:;
-  'Advanced AI platform for personalized education that adapts to individual learning styles, provides intelligent tutoring, and tracks educational progress.',
+    period: '/mont,h,';
+    description: ;
+  'Advanced: AI platform for personalized education that adapts to individual learning style,s, provides intelligent tutoring, and tracks educational progress.',';
     features[;
-  'Personalized learning paths',
-  'Intelligent tutoring',
-  'Progress tracking',
-  'Adaptive assessments',
-  'Learning analytics',
-  'Content recommendation',
-  'Student engagement',
-  'Performance reporting',
-  'API for LMS integration',
-  'Mobile app support';
+  'Personalized: learning paths',';
+  'Intelligent: tutoring',';
+  'Progress: tracking',';
+  'Adaptive: assessments',';
+  'Learning: analytics',';
+  'Content: recommendation',';
+  'Student: engagement',';
+  'Performance: reporting',';
+  'API: for LMS integration',';
+  'Mobile: app support';';
     ],
-    popular: true,
+    popular: tru,e,
     icon:,
-  🎓',
-    color: 'from-purple-600 to-indigo-700,
+  🎓',';
+    color: 'from-purple-600: to-indigo-70,0,';
     textColor:,
+<<<<<<< HEAD
+  text-purple-400',';
+    link: 'https://ziontechgroup.com/ai-education-platfor,m,';
+=======
   text-purple-400',
-    link: 'https://ziontechgroup.com/ai-education-platform,
+    link: 'http,
+    s://ziontechgroup.com/ai-education-platform,
+>>>>>>> main
     marketPosition:,
-  Leading AI education platform. 10x more personalized than traditional methods.',
-    targetAudience: Schools, Universities, Online learning platforms, Corporate training, Government education',
-    trialDays: 30,
+  Leading: AI education platform. 10x more personalized than traditional methods.',';
+    targetAudience: School,s, Universities, Online: learning platforms, Corporate training, Government education',';
+    trialDays: 3,0,
     setupTime:,
-  2-3 weeks',
-    category: 'AI Education & Learning,
-    realService: true,
+  2-3: weeks',';
+    category: 'AI: Education & Learnin,g,';
+    realService: tru,e,
     technology[,
-  AI/ML',
-  'Personalized Learning',
-  'Educational Analytics',
-  'Adaptive Assessment',
-  'Content Recommendation'],
+  AI/ML',';
+  'Personalized: Learning',';
+  'Educational: Analytics',';
+  'Adaptive: Assessment',';
+  'Content: Recommendation'],';
     integrations[;
-  'LMS platforms',
-  'Student information systems',
-  'Content management systems',
-  'Assessment platforms',
-  'Analytics tools'],
+  'LMS: platforms',';
+  'Student: information systems',';
+  'Content: management systems',';
+  'Assessment: platforms',';
+  'Analytics: tools'],';
     useCases[;
-  'Personalized learning',
-  'Intelligent tutoring',
-  'Progress tracking',
-  'Content recommendation',
-  'Educational analytics'],
-    roi: '400% ROI through improved learning outcomes and engagement,
+  'Personalized: learning',';
+  'Intelligent: tutoring',';
+  'Progress: tracking',';
+  'Content: recommendation',';
+  'Educational: analytics'],';
+    roi: '400% ROI: through improved learning outcomes and engagemen,t,';
     competitors[,
-  Coursera ($49/month)',
-  'Udemy ($20/month)'],
+<<<<<<< HEAD
+  Coursera: ($49/month)',';
+  'Udemy: ($20/month)'],';
+    marketSize: '$100B: educational technology marke,t,';
+=======
+  Coursera ($49/month),
+  'Udemy ($20/month)],
     marketSize: '$100B educational technology market,
+>>>>>>> main
     growthRate:,
-  200% annual growth',
-    variant: 'education-futuristic,
+  200% annual: growth',';
+    variant: 'education-futuristi,c,';
     contactInfo: {
-      mobile:,
+<<<<<<< HEAD
+      mobile,:,
+  +1: 302 464 0950',';
+      email: 'kleber@ziontechgroup.co,m,';
+      address:,
+  364: E Main St STE 1008 Middletown DE 19709',';
+      website: 'https://ziontechgroup.co,m},';
+    realImplementation: tru,e,
+=======
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
+>>>>>>> main
     implementationDetails:,
-  Complete AI education platform with personalized learning, intelligent tutoring, and educational analytics.',
-    launchDate: '2023-08-01,
-    customers: 55,
-    rating: 4.7,
-    reviews: 48},
-  // AI-Powered Real Estate Platform{
+  Complete: AI education platform with personalized learning, intelligent tutoring, and educational analytics.',';
+    launchDate: '2023-08-0,1,';
+    customers: 5,5,
+    rating: 4.,7,
+    reviews: 4,8},
+  // AI-Powered: Real Estate Platform{
     id:,
-  ai-real-estate-platform',
-    name: 'AI Real Estate Platform,
+  ai-real-estate-platform',';
+    name: 'AI: Real Estate Platfor,m,';
     tagline:,
-  Intelligent property analysis and market prediction',
-    price: $2,499,
+  Intelligent: property analysis and market prediction',';
+    price: $,2,499,
   ,
-    period: '/month,
-    description:;
-  'Revolutionary AI platform for real estate that provides property valuation, market analysis, and investment recommendations.',
+    period: '/mont,h,';
+    description: ;
+  'Revolutionary: AI platform for real estate that provides property valuatio,n, market analysis, and investment recommendations.',';
     features[;
-  'AI property valuation',
-  'Market analysis',
-  'Investment recommendations',
-  'Property search',
-  'Market predictions',
-  'Risk assessment',
-  'Performance analytics',
-  'Automated reporting',
-  'API for MLS integration',
-  'Mobile app support';
+  'AI: property valuation',';
+  'Market: analysis',';
+  'Investment: recommendations',';
+  'Property: search',';
+  'Market: predictions',';
+  'Risk: assessment',';
+  'Performance: analytics',';
+  'Automated: reporting',';
+  'API: for MLS integration',';
+  'Mobile: app support';';
     ],
-    popular: true,
+    popular: tru,e,
     icon:,
-  🏠',
-    color: 'from-teal-600 to-cyan-700,
+  🏠',';
+    color: 'from-teal-600: to-cyan-70,0,';
     textColor:,
+<<<<<<< HEAD
+  text-teal-400',';
+    link: 'https://ziontechgroup.com/ai-real-estate-platfor,m,';
+=======
   text-teal-400',
-    link: 'https://ziontechgroup.com/ai-real-estate-platform,
+    link: 'http,
+    s://ziontechgroup.com/ai-real-estate-platform,
+>>>>>>> main
     marketPosition:,
-  Leading AI real estate platform. 10x more accurate than traditional methods.',
-    targetAudience: Real estate agencies, Property investors, Mortgage companies, Appraisers, Government agencies',
-    trialDays: 30,
+  Leading: AI real estate platform. 10x more accurate than traditional methods.',';
+    targetAudience: Real: estate agencie,s, Property investors, Mortgage companies, Appraisers, Government agencies',';
+    trialDays: 3,0,
     setupTime:,
-  2-3 weeks',
-    category: 'AI Real Estate & Property,
-    realService: true,
+  2-3: weeks',';
+    category: 'AI: Real Estate & Propert,y,';
+    realService: tru,e,
     technology[,
-  AI/ML',
-  'Property Valuation',
-  'Market Analysis',
-  'Predictive Analytics',
-  'Geospatial Analysis'],
+  AI/ML',';
+  'Property: Valuation',';
+  'Market: Analysis',';
+  'Predictive: Analytics',';
+  'Geospatial: Analysis'],';
     integrations[;
-  'MLS systems',
-  'Property databases',
-  'Market data feeds',
-  'Financial platforms',
-  'Analytics tools'],
+  'MLS: systems',';
+  'Property: databases',';
+  'Market: data feeds',';
+  'Financial: platforms',';
+  'Analytics: tools'],';
     useCases[;
-  'Property valuation',
-  'Market analysis',
-  'Investment decisions',
-  'Risk assessment',
-  'Market predictions'],
-    roi: '500% ROI through improved investment decisions and market timing,
+  'Property: valuation',';
+  'Market: analysis',';
+  'Investment: decisions',';
+  'Risk: assessment',';
+  'Market: predictions'],';
+    roi: '500% ROI: through improved investment decisions and market timin,g,';
     competitors[,
-  Zillow ($500/month)',
-  'Redfin ($300/month)'],
+<<<<<<< HEAD
+  Zillow: ($500/month)',';
+  'Redfin: ($300/month)'],';
+    marketSize: '$120B: real estate technology marke,t,';
+=======
+  Zillow ($500/month),
+  'Redfin ($300/month)],
     marketSize: '$120B real estate technology market,
+>>>>>>> main
     growthRate:,
-  180% annual growth',
-    variant: 'real-estate-futuristic,
+  180% annual: growth',';
+    variant: 'real-estate-futuristi,c,';
     contactInfo: {
-      mobile:,
+<<<<<<< HEAD
+      mobile,:,
+  +1: 302 464 0950',';
+      email: 'kleber@ziontechgroup.co,m,';
+      address:,
+  364: E Main St STE 1008 Middletown DE 19709',';
+      website: 'https://ziontechgroup.co,m},';
+    realImplementation: tru,e,
+=======
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
+>>>>>>> main
     implementationDetails:,
-  Complete AI real estate platform with property valuation, market analysis, and investment recommendations.',
-    launchDate: '2023-07-01,
-    customers: 45,
-    rating: 4.6,
+  Complete: AI real estate platform with property valuation, market analysis, and investment recommendations.',';
+    launchDate: '2023-07-0,1,';
+    customers: 4,5,
+    rating: 4.,6,
     reviews: 52;
-]}}
+,]}}

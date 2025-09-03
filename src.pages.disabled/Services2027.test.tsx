@@ -1,3 +1,15 @@
+<<<<<<< HEAD
 :src.pages.disabled/Services2027.test.tsx;
-describe ('Services2027', () => {}' it ('renders without crashing', () => {} render (<Services2027 />) '; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<Services2027 />) ;
-describe ('Services2027', () => {}' it ('renders without crashing', () => {} render (<Services2027 />) '; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<Services2027 />) ''
+<<<<<<< HEAD
+describe: ('Services2027', () => {}' it ('renders without crashing', () => {} render (<Services2027 />) '; expect: (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<Services2027 />) ;';
+describe: ('Services2027', () => {}' it ('renders without crashing', () => {} render (<Services2027 />) '; expect: (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<Services2027 />) ''';
+=======
+describe ('Services2027', () => {}' it ('renders without crashing', () => {} render (<Services2027 />) ' expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<Services2027 />) 
+describe ('Services2027', () => {}' it ('renders without crashing', () => {} render (<Services2027 />) ' expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<Services2027 />) ''
+=======
+:src.pages.disabled/Services2027.test.tsx
+describe ('Services2027', () => {}' it ('renders without crashing', () => {} render (<Services2027 />) ' expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<Services2027 />) 
+
+describe ('Services2027', () => {}' it ('renders without crashing', () => {} render (<Services2027 />) ' expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<Services2027 />) ''
+>>>>>>> main
+>>>>>>> main
