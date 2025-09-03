@@ -56,8 +56,7 @@
             {cyberServices.map((service, index
               <div;
                 key={index}';
-                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105';
-';
+                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105;
                 <div className='flex items-center mb-6'>'
                   <div className='p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg'>'
                     <service.icon className='h-8 w-8 text-white' />
@@ -105,8 +104,7 @@
             {securityTechnologies.map(tech: unknown, index: unknown(
               <div;
                 key={index}';
-                className='text-center p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:border-cyan-500/50 transition-all duration-300';
-';
+                className='text-center p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:border-cyan-500/50 transition-all duration-300;
                 <div className='p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg w-16 h-16 mx-auto mb-4 flex items-center justify-center'>'
                   <tech.icon className='h-8 w-8 text-white' />
                 </div>'

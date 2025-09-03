@@ -1,16 +1,68 @@
+<<<<<<< HEAD
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import {render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import PricingGuide from './PricingGuide';
 
+describe('PricingGuide', () => {it('renders without crashing', () => {
+=======
+<<<<<<< HEAD
+import React from 'react;
+import { render, screen } from '@testing-library/react';
+import @testing-library/jest-dom';
+import PricingGuide from './PricingGuide;
+
 describe('PricingGuide', () => {
-  it('renders without crashing', () => {
+  it(renders without crashing', () => {
+>>>>>>> main
     render(<PricingGuide />);
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+    expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument();
   });
 
+<<<<<<< HEAD
+  it('displays expected content', () => {render(<PricingGuide />);
+=======
+=======
+<<<<<<< HEAD
+describe(&apos;PricingGuide&apos;, () => {}&apos; it(&apos;renders without crashing&apos;, () => {} render(&apos;<PricingGuide />) '; expect(screen.getByRole (&apos;main&apos;) || screen.getByText(/.*/) ) .toBeInTheDocument () }) &apos; it(&apos;displays expected content&apos;, () => {} render(&apos;&apos;<PricingGuide />) 
+=======
+<<<<<<< HEAD
+import React from 'react';""
+import { render, screen } from '@testing-library/react';""
+import '@testing-library/jest-dom';""
+import PricingGuide from './PricingGuide';
+""
+describe('PricingGuide', () => {""
+  it('renders without crashing', () => {
+    render(<PricingGuide /" >);"
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();, });
+""
+>>>>>>> main
   it('displays expected content', () => {
-    render(<PricingGuide />);
+    render(<PricingGuide /" >);"
+    // Add more specific tests here, });, });
+""
+=======
+<<<<<<< HEAD
+describe('PricingGuide', () => {}' it('renders without crashing', () => {} render(<PricingGuide />) '; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ' it('displays expected content', () => {} render(<PricingGuide />) '
+=======
+import React from 'react
+import { render, screen } from '@testing-library/react
+import '@testing-library/jest-dom
+import PricingGuide from './PricingGuide
+describe('PricingGuide', () => {"
+  it('renders without crashing', () => {
+    render(<PricingGuide /" >);"
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+})
+"
+  it('displays expected content', () => {
+    render(<PricingGuide /" >)
+>>>>>>> main
     // Add more specific tests here
-  });
 });
+})
+"
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

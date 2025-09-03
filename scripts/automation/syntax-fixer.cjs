@@ -86,13 +86,16 @@ class SyntaxFixer {
     let changes = 0;
     
     // Remove merge conflict markers and take the HEAD version
-    const mergeConflictPattern = /      changes++;
+    const mergeConflictPattern = /<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+/g;
+    fixed = fixed.replace(mergeConflictPattern, (match, headContent) => {
+      changes++;
       return headContent;
     });
     
     // Remove standalone conflict markers
-    fixed = fixed.replace(/^    fixed = fixed.replace(/^=======\\n/gm, () => { changes++; return ''; });
-    fixed = fixed.replace(/^    
+    fixed = fixed.replace(/^=======\n/gm, () => { changes++; return ''; });
+    fixed = fixed.replace(/^<<<<<<< HEAD\n/gm, () => { changes++; return ''; });
+    fixed = fixed.replace(/^>>>>>>> [^\n]+\n/gm, () => { changes++; return ''; });
     return { content: fixed, changes };
   }
 

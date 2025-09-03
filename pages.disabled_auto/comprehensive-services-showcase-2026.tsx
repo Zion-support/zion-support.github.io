@@ -16,8 +16,7 @@ export default function ComprehensiveServicesShowcase2026() {
   'Explore our expanded portfolio of AI, cloud, data, and emerging technology solutions designed to transform your business.';
 	const [selectedCategory, setSelectedCategory] = useState<string>(
   'all');
-	const [searchTerm, setSearchTerm] = useState(';
-  ');
+	const [searchTerm, setSearchTerm] = useState();
 	const filteredServices = comprehensiveExpandedServices.filter(service => {
 		const matchesCategory = selectedCategory === 'all;
   ' || service.category === selectedCategory;

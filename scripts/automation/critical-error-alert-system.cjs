@@ -66,10 +66,10 @@ class CriticalErrorAlertSystem {
     }
 
     // Check system resources
-    const resourceStatus = await this.checkSystemResources();
-    if (resourceStatus.critical) {
-      criticalErrors.push(resourceStatus);
-    }
+    const resourceStatus = await this.checkSystemResources();`);
+    if (resourceStatus.critical) {`);
+      criticalErrors.push(resourceStatus);`);
+    }`);
 this.log(Found ${criticalErrors.length} critical error conditions`);
     return criticalErrors;
   }

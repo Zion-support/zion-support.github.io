@@ -31,14 +31,15 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   fill = false,
   style,
   onLoad,
-  onError
+  onError,
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
 
   // Generate a simple blur placeholder if none provided
-  const defaultBlurDataURL = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=';
+  const defaultBlurDataURL =
+    'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=';
 
   const handleLoad = () => {
     setIsLoaded(true);
@@ -55,8 +56,8 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
     if (priority || !imgRef.current) return;
 
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
+      entries => {
+        entries.forEach(entry => {
           if (entry.isIntersecting) {
             // Image is in viewport, trigger load
             observer.unobserve(entry.target);
@@ -65,7 +66,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
       },
       {
         rootMargin: '50px 0px',
-        threshold: 0.1
+        threshold: 0.1,
       }
     );
 
@@ -95,7 +96,11 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
     <div
       ref={imgRef}
       className={`relative overflow-hidden ${className}`}
-      style={fill ? { position: 'relative', width: '100%', height: '100%' } : { width, height, ...style }}
+      style={
+        fill
+          ? { position: 'relative', width: '100%', height: '100%' }
+          : { width, height, ...style }
+      }
     >
       <img
         src={src}
@@ -111,11 +116,11 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
           objectFit: 'cover',
           width: fill ? '100%' : width,
           height: fill ? '100%' : height,
-          ...style
+          ...style,
         }}
         loading={priority ? 'eager' : 'lazy'}
       />
-      
+
       {/* Loading skeleton */}
       {!isLoaded && !hasError && (
         <div

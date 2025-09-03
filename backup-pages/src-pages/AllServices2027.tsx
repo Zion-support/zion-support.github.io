@@ -178,8 +178,7 @@
             {/* AI Services */}
             <motion.div;
               variants={itemVariants}';
-              className='bg-zion-slate-dark rounded-xl p-8 border border-zion-slate-light';
-';
+              className='bg-zion-slate-dark rounded-xl p-8 border border-zion-slate-light;
               <div className='flex items-center space-x-4 mb-6'>'
                 <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center'>'
                   <Brain className='w-6 h-6 text-white'  />
@@ -207,8 +206,7 @@
             {/* Cybersecurity */}
             <motion.div;
               variants={itemVariants}';
-              className='bg-zion-slate-dark rounded-xl p-8 border border-zion-slate-light';
-';
+              className='bg-zion-slate-dark rounded-xl p-8 border border-zion-slate-light;
               <div className='flex items-center space-x-4 mb-6'>'
                 <div className='w-12 h-12 bg-gradient-to-r from-red-500 to-orange-600 rounded-lg flex items-center justify-center'>'
                   <Shield className='w-6 h-6 text-white'  />
@@ -385,8 +383,7 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
             {service.features.slice(0, 2).map((feature: string, index: number)  => (
               <span;
                 key={index}';
-                className='inline-flex items-center space-x-1 bg-zion-slate-dark px-2 py-1 rounded text-xs text-cyan-300';
-';
+                className='inline-flex items-center space-x-1 bg-zion-slate-dark px-2 py-1 rounded text-xs text-cyan-300;
                 <CheckCircle className='w-3 h-3'  />                <span>{feature}</span>
               </span>) ) }
           </div>
