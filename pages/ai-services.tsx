@@ -962,7 +962,8 @@ export default function AIServices() {
       pricing: '$20,000 - $80,000/month',
       delivery: '16-24 weeks',
       category: 'Healthcare AI'
-=======
+    },
+    {
       title: 'AI-Powered Cybersecurity Threat Detection',
       description: 'Advanced threat detection and response system with real-time monitoring and automated incident response',
       icon: Shield,
