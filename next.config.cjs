@@ -1,13 +1,21 @@
+<<<<<<< HEAD
+=======
+/** Cleaned Next.js config to allow build to proceed safely */
+>>>>>>> origin/feat/add-real-services-2025
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: false,
   swcMinify: true,
+<<<<<<< HEAD
   compress: true,
   poweredByHeader: false,
-  eslint: { ignoreDuringBuilds: true },
+  eslint: { 
+    ignoreDuringBuilds: true,
+    dirs: ['pages', 'components', 'lib', 'hooks']
+  },
   typescript: { ignoreBuildErrors: true },
-  // Only treat *.route.tsx/ts as pages to avoid compiling corrupted files
-  pageExtensions: ['route.tsx', 'route.ts'],
+  // Ensure standard Next.js page extensions are recognized alongside any custom route files
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js', 'route.tsx', 'route.ts'],
   images: {
     domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
     formats: ['image/webp', 'image/avif'],
@@ -33,3 +41,18 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
+
+=======
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },
+  experimental: { optimizeCss: true, scrollRestoration: true },
+  images: {
+    domains: ["images.unsplash.com", "via.placeholder.com", "ziontechgroup.com"],
+    formats: ["image/avif", "image/webp"],
+  },
+  compiler: { removeConsole: process.env.NODE_ENV === 'production' },
+  webpack: (config) => config,
+};
+
+module.exports = nextConfig;
+>>>>>>> origin/feat/add-real-services-2025
