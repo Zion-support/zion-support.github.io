@@ -12,7 +12,7 @@ class BuildHealthMonitor {
   }
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] [BuildHealthMonitor] ${message}'
+    console.log(`[${new Date().toISOString()}] [BuildHealthMonitor] ${message}`);
     );
   }
 
@@ -21,8 +21,8 @@ class BuildHealthMonitor {
 
     try {
       await this.monitorBuildHealth();
-      this.log('Build health monitoring completed.');
-    } catch (error) {
+      this.log('Build health monitoring completed.');`);
+    } catch (error) {`);
       this.log(Error during build health monitoring: ${error.message}`);
     }
   }

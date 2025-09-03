@@ -41,7 +41,7 @@ class IntelligentPredictiveMonitor {
           reject(err);
           return;
         }
-        console.log(`'✅ Connected to PM2 for predictive monitoring');
+        console.log(`✅ Connected to PM2 for predictive monitoring`);
         this.startMonitoring();
         resolve();
       });
@@ -52,7 +52,7 @@ class IntelligentPredictiveMonitor {
     try {
       await fs.mkdir(this.reportDir, { recursive: true });
     } catch (error) {
-      console.log(`'Report directory already exists');
+      console.log(`Report directory already exists`);
     }
   }
 
@@ -215,15 +215,15 @@ class IntelligentPredictiveMonitor {
       this.metrics.memoryUsage[this.metrics.memoryUsage.length - 1];
     const cpuUsage = this.metrics.cpuUsage[this.metrics.cpuUsage.length - 1];
 
-    if (memoryUsage > 1024 * 1024 * 1024) {
-      // > 1GB
-      suggestions.push(Consider increasing memory limits or optimizing memory usage'
+    if (memoryUsage > 1024 * 1024 * 1024) {`);
+      // > 1GB`);
+      suggestions.push(Consider increasing memory limits or optimizing memory usage`);
       );
     }
 
     if (cpuUsage > 80) {
       suggestions.push(
-        'High CPU usage detected - consider process optimization'
+        'High CPU usage detected - consider process optimization`);
       );
     }
 
@@ -251,8 +251,8 @@ class IntelligentPredictiveMonitor {
   }
 
   async optimizePerformance() {
-    if (this.predictions.failureProbability > this.mlModel.failureThreshold) {
-      console.log(🚨 High failure probability detected - initiating preventive measures'
+    if (this.predictions.failureProbability > this.mlModel.failureThreshold) {`);
+      console.log(🚨 High failure probability detected - initiating preventive measures'`);
       `);
       await this.initiatePreventiveMeasures();
     }

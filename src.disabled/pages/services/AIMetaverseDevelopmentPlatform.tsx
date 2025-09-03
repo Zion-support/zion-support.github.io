@@ -2,49 +2,36 @@ import React from 'react';
 import { SEO } from '../../components/SEO';
 
 export default function AIMetaverseDevelopmentPlatform() {
-  const features = ['AI-powered 3D world generation and design',';Intelligent avatar creation and customization',';Real-time virtual environment optimization',';Advanced spatial computing and AR/VR integration',';AI-driven social interaction and engagement',';Metaverse economy and NFT marketplace tools';
+  const features = ['AI-powered 3D world generation and design,;Intelligent avatar creation and customization,;Real-time virtual environment optimization,;Advanced spatial computing and AR/VR integration,;AI-driven social interaction and engagement,;Metaverse economy and NFT marketplace tools';
   ];
   const tiers = [
-    {
+  {
       name: 'Developer',
       price: '$1,799/mo',
       description: 'Perfect for indie developers and small studios',
       details: [;
-        'Up to 3 virtual worlds',
-        'Basic AI avatar system',
-        'Standard support (8/5)',
-        'API access and documentation',
-        'Community forum access',
-        'Basic 3D asset library';
+        'Up to 3 virtual worlds,Basic AI avatar system,Standard support (8/5),API access and documentation,Community forum access,Basic 3D asset library';
       ]},
     {
       name: 'Business',
       price: '$4,499/mo',
       description: 'Ideal for growing metaverse companies',
       details: [
-        'Up to 15 virtual worlds',
-        'Advanced AI avatar system',
-        'Priority support (12/7)',
-        'Custom 3D world generation',
-        'Dedicated account manager',
-        'Metaverse analytics dashboard',
-        'Multi-user collaboration tools';
+        'Up to 15 virtual worlds,Advanced AI avatar system,Priority support (12/7),Custom 3D world generation,Dedicated account manager,Metaverse analytics dashboard,Multi-user collaboration tools';
       ]},
     {
       name: 'Enterprise',
       price: '$11,999/mo',
       description: 'Full-scale metaverse development platform',
       details: [
-        'Unlimited virtual worlds',
-        'Custom AI algorithms',
-        '24/7 dedicated support',';On-premise deployment options',';Custom integrations and APIs',';White-label solutions available',';Enterprise security features';
+        'Unlimited virtual worlds,Custom AI algorithms,24/7 dedicated support,;On-premise deployment options,;Custom integrations and APIs,;White-label solutions available,;Enterprise security features';
       ]}
   ];
-  const useCases = ['Virtual events and conferences',';Gaming and entertainment platforms',';Virtual real estate and architecture',';Remote work and collaboration spaces',';Education and training environments',';Social networking and communities';
+  const useCases = ['Virtual events and conferences,;Gaming and entertainment platforms,;Virtual real estate and architecture,;Remote work and collaboration spaces,;Education and training environments,;Social networking and communities';
   ];
-  const benefits = ['Reduce development time by 50-70% with AI automation',';Create immersive experiences that increase user engagement',';Scale virtual worlds efficiently with intelligent optimization',';Enable cross-platform compatibility and accessibility',';Build sustainable metaverse economies and ecosystems';
+  const benefits = ['Reduce development time by 50-70% with AI automation,;Create immersive experiences that increase user engagement,;Scale virtual worlds efficiently with intelligent optimization,;Enable cross-platform compatibility and accessibility,;Build sustainable metaverse economies and ecosystems';
   ];
-  const industries = ['Gaming and Entertainment',';Real Estate and Architecture',';Education and Training',';Healthcare and Telemedicine',';Retail and E-commerce',';Corporate and Enterprise';
+  const industries = ['Gaming and Entertainment,;Real Estate and Architecture,;Education and Training,;Healthcare and Telemedicine,;Retail and E-commerce,;Corporate and Enterprise';
   ];
   return(
     <>

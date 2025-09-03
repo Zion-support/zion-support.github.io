@@ -48,8 +48,7 @@ describe(
     // After registration, user should be redirected to dashboard;
     // Adding a timeout because the page load and session setting might take a moment.;
     cy.url().should(
-  'include',
-  '/dashboard', { timeout: 10000 })
+  'include,/dashboard', { timeout: 10000 })
     // Verify user session by calling /api/users/me;
     // This request will use the session cookie set by Supabase during setSession;
     cy.request(,
@@ -99,8 +98,7 @@ describe(
     cy.get(
   '[data-testid='login-submit-button']').click();
     cy.url().should(
-  'include',
-  '/login') // Should remain on login page;
+  'include,/login') // Should remain on login page;
     // Check for Sonner toast (common toast library);
     // Adjust selector if your toast implementation differs.;
     // This selector targets a toast that is marked as destructive (error);
@@ -131,8 +129,7 @@ describe(
     // User should be redirected (e.g., to dashboard);
     // Adding a timeout because the page load and session setting might take a moment.;
     cy.url().should(
-  'include',
-  '/dashboard', { timeout: 10000 })
+  'include,/dashboard', { timeout: 10000 })
     // Verify user session by calling /api/users/me;
     cy.request(
   '/api/users/me').then(response => {

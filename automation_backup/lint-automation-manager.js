@@ -17,11 +17,9 @@ class LintAutomationManager {
     this.isRunning = false;
     this.watcher = null;
     this.logFile = path.join(__dirname,
-  'logs',
-  'lint-automation.log');
+  'logs,lint-automation.log');
     // // // // // // // // console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
-;
     this.ensureLogDirectory()}
   ensureLogDirectory() {
     const logDir = path.dirname(this.logFile);
@@ -66,7 +64,7 @@ class LintAutomationManager {
   startFileWatcher() {
     this.log(
   '👀 Starting file watcher...');
-    const watcher = chokidar.watch([';pages/**/*.{js,jsx,ts,tsx}',';components/**/*.{js,jsx,ts,tsx}',';utils/**/*.{js,jsx,ts,tsx}',';hooks/**/*.{js,jsx,ts,tsx}';
+    const watcher = chokidar.watch([';pages/**/*.{js,jsx,ts,tsx},;components/**/*.{js,jsx,ts,tsx},;utils/**/*.{js,jsx,ts,tsx},;hooks/**/*.{js,jsx,ts,tsx}';
     ], {
       ignored: /(node_modules|\.git|\.next)/,
       persistent: true})
@@ -150,7 +148,6 @@ switch (command) {
     // // // // // // // // console.log(
   'Usage: node lint-automation-manager.js [start|stop|status]');
     process.exit(1);
-;
     console.log(
   'Usage: node lint-automation-manager.js [start|stop|status]);
     process.exit(1)}

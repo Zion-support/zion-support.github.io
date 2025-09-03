@@ -1,5 +1,4 @@
-export interface SpecializedITService {
-  id: string;
+export interface SpecializedITService {id: string;
    title: string;
    description: string;
    category: string;
@@ -17,6 +16,10 @@ export interface SpecializedITService {
    marketPrice: string;
    roi: string;
    innovationLevel: string;
-   contactInfo: { phone: string;
-   email: string;
+   contactInfo: {  phone: string;
+   email: string
+<<<<<<< HEAD
+   website: string} technicalSpecs?: {technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[] } competitors?: string[] marketSize?: string}  export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [;
+=======
    website: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[] } competitors?: string[] marketSize?: string}  export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [;
+>>>>>>> main

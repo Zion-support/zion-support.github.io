@@ -13,7 +13,6 @@ const Services: React.FC = () => {
       </div>
     </>
   )}
-;
 :src/pages/services.tsx;
 const featuredServices: Service[] = [
   {
@@ -105,19 +104,20 @@ const microSaaS: Service[] = [
 const Services: React.FC = (): JSX.Element => {
   const [activeCategory, setActiveCategory] = useState('all');
   const serviceCategories = [
-    { id: 'all', name: 'All Services', icon: Sparkles },
+  { id: 'all', name: 'All Services', icon: Sparkles },
     { id: 'ai', name: 'AI & Machine Learning', icon: Brain },
     { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud },
     { id: 'security', name: 'Cybersecurity', icon: Shield },
     { id: 'digital', name: 'Digital Transformation', icon: Zap },
     { id: 'micro-saas', name: 'Micro-SaaS', icon: Rocket }
   ];
-  const coreServices = [{
+  const coreServices = [
+  {
       category: 'ai',
       icon: Brain,
       title: 'AI Autonomous Business Manager',
       description: 'Fully autonomous AI system that manages your entire business operations with 40-60% cost reduction.',
-      features: ['24/7 Autonomous Operation', 'Real-time Decision Making', 'Predictive Analytics', 'Process Optimization'],
+      features: ['24/7 Autonomous Operation,Real-time Decision Making,Predictive Analytics,Process Optimization'],
       pricing: '$2,500 - $12,000/month',
       color: 'from-purple-500 to-pink-500',
       featured: true,
@@ -127,7 +127,7 @@ const Services: React.FC = (): JSX.Element => {
       icon: Brain,
       title: 'AI Business Intelligence Elite',
       description: 'Advanced AI-powered analytics platform with real-time insights, predictive analytics, and automated reporting.',
-      features: ['GPT-4 & Claude 3.5 Integration', 'Real-time BI', 'Predictive Analytics', 'Enterprise Security'],
+      features: ['GPT-4 & Claude 3.5 Integration,Real-time BI,Predictive Analytics,Enterprise Security'],
       pricing: '$2,500 - $12,000/month',
       color: 'from-purple-500 to-pink-500',
       featured: true,
@@ -137,7 +137,7 @@ const Services: React.FC = (): JSX.Element => {
       icon: Shield,
       title: 'AI Cybersecurity Elite',
       description: 'Military-grade AI-powered cybersecurity platform with real-time threat detection and automated response.',
-      features: ['AI Threat Detection', 'Zero-Day Protection', 'Automated Response', 'Compliance Ready'],
+      features: ['AI Threat Detection,Zero-Day Protection,Automated Response,Compliance Ready'],
       pricing: '$3,500 - $18,000/month',
       color: 'from-red-500 to-orange-500',
       featured: true,
@@ -147,7 +147,7 @@ const Services: React.FC = (): JSX.Element => {
       icon: Atom,
       title: 'Quantum Computing Elite',
       description: 'Access to cutting-edge quantum computing with AI-quantum hybrid systems for complex problem solving.',
-      features: ['1000+ Qubit Access', 'AI-Quantum Hybrid', 'Quantum-Safe Crypto', 'Global Network'],
+      features: ['1000+ Qubit Access,AI-Quantum Hybrid,Quantum-Safe Crypto,Global Network'],
       pricing: '$8,500 - $45,000/month',
       color: 'from-blue-500 to-cyan-500',
       featured: true,
@@ -157,7 +157,7 @@ const Services: React.FC = (): JSX.Element => {
       icon: Rocket,
       title: 'Micro-SaaS Platform Elite',
       description: 'Complete platform to launch and scale your micro-SaaS business with proven templates and automation.',
-      features: ['Rapid Launch', 'Built-in Payments', 'AI Automation', 'Multi-tenant Architecture'],
+      features: ['Rapid Launch,Built-in Payments,AI Automation,Multi-tenant Architecture'],
       pricing: '$2,500 - $12,000/month',
       color: 'from-green-500 to-emerald-500',
       featured: true,
@@ -167,7 +167,7 @@ const Services: React.FC = (): JSX.Element => {
       icon: Brain,
       title: 'AI Development & Strategy',
       description: 'Custom AI models, machine learning solutions, and strategic AI roadmapping for your business.',
-      features: ['Custom AI Models', 'ML Strategy', 'Data Analytics', 'AI Integration'],
+      features: ['Custom AI Models,ML Strategy,Data Analytics,AI Integration'],
       pricing: '$5,000 - $50,000',
       color: 'from-purple-500 to-pink-500'},
     {
@@ -175,7 +175,7 @@ const Services: React.FC = (): JSX.Element => {
       icon: Cloud,
       title: 'Cloud Migration & Architecture',
       description: 'Seamless cloud migration, scalable architecture, and cost optimization strategies.',
-      features: ['AWS/Azure/GCP', 'Cost Optimization', 'Scalability', 'Security'],
+      features: ['AWS/Azure/GCP,Cost Optimization,Scalability,Security'],
       pricing: '$10,000 - $100,000',
       color: 'from-blue-500 to-cyan-500'},
     {
@@ -183,7 +183,7 @@ const Services: React.FC = (): JSX.Element => {
       icon: Shield,
       title: 'Cybersecurity Solutions',
       description: 'Comprehensive security assessments, threat detection, and compliance frameworks.',
-      features: ['Security Audits', 'Threat Detection', 'Compliance', 'Incident Response'],
+      features: ['Security Audits,Threat Detection,Compliance,Incident Response'],
       pricing: '$3,000 - $25,000',
       color: 'from-red-500 to-orange-500'},
     {
@@ -191,7 +191,7 @@ const Services: React.FC = (): JSX.Element => {
       icon: Zap,
       title: 'Digital Transformation',
       description: 'Strategic consulting and implementation to modernize your technology stack.',
-      features: ['Process Optimization', 'Technology Stack', 'Change Management', 'ROI Analysis'],
+      features: ['Process Optimization,Technology Stack,Change Management,ROI Analysis'],
       pricing: '$15,000 - $75,000',
       color: 'from-yellow-500 to-orange-500'},
     {
@@ -199,7 +199,7 @@ const Services: React.FC = (): JSX.Element => {
       icon: Users,
       title: 'AI-Powered Analytics',
       description: 'Advanced business intelligence and predictive analytics solutions.',
-      features: ['Predictive Models', 'Real-time Insights', 'Custom Dashboards', 'Data Integration'],
+      features: ['Predictive Models,Real-time Insights,Custom Dashboards,Data Integration'],
       pricing: '$8,000 - $40,000',
       color: 'from-green-500 to-emerald-500'},
     {
@@ -207,18 +207,16 @@ const Services: React.FC = (): JSX.Element => {
       icon: Server,
       title: 'DevOps Automation',
       description: 'CI/CD pipelines, infrastructure as code, and automated deployment solutions.',
-      features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Monitoring', 'Automation'],
+      features: ['CI/CD Pipelines,Infrastructure as Code,Monitoring,Automation'],
       pricing: '$6,000 - $35,000',
       color: 'from-indigo-500 to-purple-500'}
   ];
-  const microSaasServices = [{
+  const microSaasServices = [
+  {
       title: 'AI Sales Email Optimizer',
       description: 'Auto-drafts and A/B tests emails based on CRM context to raise reply rates.',
       features: [;
-        'CRM integration (HubSpot, Salesforce)',
-        'Sequence testing and analytics',
-        'Compliance guardrails',
-        'AI-powered subject lines';
+        'CRM integration (HubSpot, Salesforce),Sequence testing and analytics,Compliance guardrails,AI-powered subject lines';
       ],
       pricing: '$299 - $799/month',
       cta: 'Get a demo',
@@ -229,10 +227,7 @@ const Services: React.FC = (): JSX.Element => {
       title: 'Support Ticket Triage Copilot',
       description: 'Classifies, deduplicates, and suggests resolutions integrates with Zendesk/Jira.',
       features: [;
-        'Auto-priority and routing',
-        'Knowledge base suggestions',
-        'First-response macros',
-        'Sentiment analysis';
+        'Auto-priority and routing,Knowledge base suggestions,First-response macros,Sentiment analysis';
       ],
       pricing: '$249 - $999/month',
       cta: 'See solution',
@@ -243,10 +238,7 @@ const Services: React.FC = (): JSX.Element => {
       title: 'Invoice OCR + Reconciliation',
       description: 'Extracts line-items and auto-matches to POs exports to QuickBooks/Xero.',
       features: [;
-        'Vendor anomaly detection',
-        'Tax and currency support',
-        'Audit trails',
-        'Multi-format support';
+        'Vendor anomaly detection,Tax and currency support,Audit trails,Multi-format support';
       ],
       pricing: '$199 - $799/month',
       cta: 'Learn more',
@@ -257,10 +249,7 @@ const Services: React.FC = (): JSX.Element => {
       title: 'SEO Content Planner',
       description: 'Keyword clustering, brief generation, and on-page optimization recommendations.',
       features: [;
-        'Competitor gap analysis',
-        'Automatic internal linking',
-        'Publish to CMS',
-        'Performance tracking';
+        'Competitor gap analysis,Automatic internal linking,Publish to CMS,Performance tracking';
       ],
       pricing: '$99 - $399/month',
       cta: 'Pricing',
@@ -271,10 +260,7 @@ const Services: React.FC = (): JSX.Element => {
       title: 'HR Screening Assistant',
       description: 'Summarizes resumes, auto-screens candidates, and schedules interviews.',
       features: [;
-        'ATS integration',
-        'Bias-mitigation controls',
-        'Compliance exports',
-        'Interview scheduling';
+        'ATS integration,Bias-mitigation controls,Compliance exports,Interview scheduling';
       ],
       pricing: '$149 - $599/month',
       cta: 'Talk to sales',
@@ -285,10 +271,7 @@ const Services: React.FC = (): JSX.Element => {
       title: 'AI Project Management',
       description: 'Intelligent project tracking, resource allocation, and risk prediction.',
       features: [;
-        'AI-powered scheduling',
-        'Risk prediction',
-        'Resource optimization',
-        'Progress tracking';
+        'AI-powered scheduling,Risk prediction,Resource optimization,Progress tracking';
       ],
       pricing: '$199 - $699/month',
       cta: 'Start free trial',
@@ -296,14 +279,12 @@ const Services: React.FC = (): JSX.Element => {
       icon: Rocket,
       color: 'from-teal-500 to-cyan-500'}
   ];
-  const innovativeAIServices = [{
+  const innovativeAIServices = [
+  {
       title: 'AI Autonomous Research Assistant',
       description: 'AI-powered autonomous research that discovers, analyzes, and synthesizes information across multiple sources.',
       features: [;
-        'Autonomous Research',
-        'Multi-Source Analysis',
-        'Intelligent Summarization',
-        'Real-time Updates';
+        'Autonomous Research,Multi-Source Analysis,Intelligent Summarization,Real-time Updates';
       ],
       pricing: '$299 - $1,999/month',
       cta: 'Learn More',
@@ -314,10 +295,7 @@ const Services: React.FC = (): JSX.Element => {
       title: 'AI Supply Chain Optimization',
       description: 'Transform your supply chain with AI that predicts demand, optimizes inventory, and reduces costs.',
       features: [;
-        'AI-Powered Forecasting',
-        'Real-time Visibility',
-        'Intelligent Routing',
-        'Risk Management';
+        'AI-Powered Forecasting,Real-time Visibility,Intelligent Routing,Risk Management';
       ],
       pricing: '$499 - $2,999/month',
       cta: 'Learn More',
@@ -328,10 +306,7 @@ const Services: React.FC = (): JSX.Element => {
       title: 'AI Content Marketing Suite',
       description: 'AI-powered content creation, optimization, and distribution for maximum engagement.',
       features: [;
-        'AI Content Generation',
-        'Audience Intelligence',
-        'SEO Optimization',
-        'Performance Analytics';
+        'AI Content Generation,Audience Intelligence,SEO Optimization,Performance Analytics';
       ],
       pricing: '$199 - $1,499/month',
       cta: 'Learn More',
@@ -342,10 +317,7 @@ const Services: React.FC = (): JSX.Element => {
       title: 'AI Workflow Orchestrator',
       description: 'Intelligent workflow automation that learns from your processes and optimizes them continuously.',
       features: [;
-        'Process Learning',
-        'Automated Optimization',
-        'Integration Hub',
-        'Performance Analytics';
+        'Process Learning,Automated Optimization,Integration Hub,Performance Analytics';
       ],
       pricing: '$399 - $1,999/month',
       cta: 'Learn More',
@@ -356,10 +328,7 @@ const Services: React.FC = (): JSX.Element => {
       title: 'AI Customer Experience Analytics',
       description: 'Deep insights into customer behavior with predictive analytics and personalized recommendations.',
       features: [;
-        'Behavioral Analysis',
-        'Predictive Insights',
-        'Personalization Engine',
-        'ROI Tracking';
+        'Behavioral Analysis,Predictive Insights,Personalization Engine,ROI Tracking';
       ],
       pricing: '$349 - $1,799/month',
       cta: 'Learn More',
@@ -370,10 +339,7 @@ const Services: React.FC = (): JSX.Element => {
       title: 'AI Financial Risk Management',
       description: 'Intelligent financial risk assessment with AI-driven predictive analytics.',
       features: [;
-        'Risk Assessment',
-        'Predictive Analytics',
-        'Compliance Monitoring',
-        'Real-time Alerts';
+        'Risk Assessment,Predictive Analytics,Compliance Monitoring,Real-time Alerts';
       ],
       pricing: '$599 - $2,999/month',
       cta: 'Learn More',

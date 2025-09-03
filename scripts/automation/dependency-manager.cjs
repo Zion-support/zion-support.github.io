@@ -13,7 +13,7 @@ class DependencyManager {
   constructor() {
     this.projectRoot = process.cwd();
     this.logFile = path.join(
-      this.projectRoot,logs',
+      this.projectRoot, 'logs',
       'dependency-manager.log'
     );
     this.reportsDir = path.join(this.projectRoot, 'logs', 'dependency-reports');

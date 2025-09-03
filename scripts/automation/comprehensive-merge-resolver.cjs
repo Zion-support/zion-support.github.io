@@ -40,10 +40,10 @@ class ComprehensiveMergeResolver {
     this.log('🚀 Starting Comprehensive Merge Conflict Resolver...');
 
     try {
-      // Step 1: Ensure we're on main branch
-      await this.ensureMainBranch();
-
-      // Step 2: Get all remote branches
+      // Step 1: Ensure we're on main branch`);
+      await this.ensureMainBranch();`);
+`);
+      // Step 2: Get all remote branches`);
       const branches = await this.getRemoteBranches();this.log(Found ${branches.length} remote branches to process`);
 
       // Step 3: Process each branch

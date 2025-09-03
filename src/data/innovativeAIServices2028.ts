@@ -1,5 +1,4 @@
-export interface InnovativeAIService2028 {
-  id: string;
+export interface InnovativeAIService2028 {id: string;
    title: string;
    description: string;
    category: string;
@@ -17,7 +16,11 @@ export interface InnovativeAIService2028 {
    marketPrice: string;
    roi: string;
    innovationLevel: string;
-   contactInfo: { phone: string;
+   contactInfo: {  phone: string;
    email: string;
-   website: string;
+   website: string
+<<<<<<< HEAD
+   address: string} technicalSpecs?: {technology: string[] integrations: string[] aiModels: string[] accuracy: string trainingData: string apiEndpoints: number uptime: string security: string[]  } competitors?: string[] marketSize?: string uniqueValueProposition: string aiScore: number ethicalAI: string[] } export const INNOVATIVE_AI_SERVICES_2028: InnovativeAIService2028[] = [;
+=======
    address: string} technicalSpecs?: { technology: string[] integrations: string[] aiModels: string[] accuracy: string trainingData: string apiEndpoints: number uptime: string security: string[]  } competitors?: string[] marketSize?: string uniqueValueProposition: string aiScore: number ethicalAI: string[] } export const INNOVATIVE_AI_SERVICES_2028: InnovativeAIService2028[] = [;
+>>>>>>> main

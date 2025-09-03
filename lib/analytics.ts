@@ -1,5 +1,12 @@
 // Analytics and performance monitoring utilities
-export const trackEvent = (eventName: string, properties?: Record<string, any>) => {
+export const trackEvent = (
+  eventName: string,
+<<<<<<< HEAD
+  properties?: Record<string, any>
+=======
+  properties?: Record<string, string | number | boolean>
+>>>>>>> main
+) => {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', eventName, properties);
   }
@@ -7,7 +14,7 @@ export const trackEvent = (eventName: string, properties?: Record<string, any>) 
 
 export const trackPageView = (url: string) => {
   if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('config', 'GA_MEASUREMENT_ID', {
+    window.gtag('config,GA_MEASUREMENT_ID', {
       page_path: url,
     });
   }
@@ -15,20 +22,33 @@ export const trackPageView = (url: string) => {
 
 export const measurePerformance = () => {
   if (typeof window !== 'undefined' && 'performance' in window) {
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    
+    const navigation = performance.getEntriesByType(
+      'navigation'
+    )[0] as PerformanceNavigationTiming;
+
     return {
       loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-      domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-      firstPaint: performance.getEntriesByName('first-paint')[0]?.startTime || 0,
-      firstContentfulPaint: performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 0,
+      domContentLoaded:
+        navigation.domContentLoadedEventEnd -
+        navigation.domContentLoadedEventStart,
+      firstPaint:
+        performance.getEntriesByName('first-paint')[0]?.startTime || 0,
+      firstContentfulPaint:
+        performance.getEntriesByName('first-contentful-paint')[0]?.startTime ||
+        0,
     };
   }
   return null;
 };
 
 // Web Vitals tracking
-export const trackWebVitals = (metric: any) => {
+interface WebVitalMetric {
+  name: string;
+  value: number;
+  id: string;
+}
+
+export const trackWebVitals = (metric: WebVitalMetric) => {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', metric.name, {
       value: Math.round(metric.value),
@@ -41,6 +61,10 @@ export const trackWebVitals = (metric: any) => {
 
 declare global {
   interface Window {
-    gtag: (...args: any[]) => void;
+    gtag: (
+      command: string,
+      targetId: string,
+      config?: Record<string, unknown>
+    ) => void;
   }
 }
