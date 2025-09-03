@@ -4,7 +4,8 @@ import React from;
 import { Link } from;
   'react-router-dom';
 export default function Sitemap() {
-  const routes = [
+<<<<<<< HEAD
+  const routes = ['
   '/',
   '/about',
   '/contact',
@@ -13,9 +14,16 @@ export default function Sitemap() {
   '/pricing',
   '/privacy',
   '/terms'];
+  return('
+    <div className='max-w-5xl mx-auto px-4 py-12 text-white>
+      <h1 className='text-4xl font-bold mb-4'>Sitemap</h1>'
+=======
+  const routes = [
+  '/,/about,/contact,/services,/blog,/pricing,/privacy,/terms'];
   return(
     <div className='max-w-5xl mx-auto px-4 py-12 text-white'>
       <h1 className='text-4xl font-bold mb-4'>Sitemap</h1>
+>>>>>>> main
       <ul className='list-disc pl-6 text-blue-400'>
         {routes.map((r) => (
           <li key={r}><Link to={r}>{r}</Link></li>
@@ -23,17 +31,31 @@ export default function Sitemap() {
       </ul>
     </div>
   )}
-
+'
 import { Link } from 'react - router - dom';
 import React from 'react'
 export default React.memo(function Sitemap () {
-
+<<<<<<< HEAD
+'
   const routes = ['/', '/about', '/contact', '/services', '/blog', '/pricing', '/privacy', '/terms']
+  return('
+    <div className='max - w-5xl mx - auto px - 4 py - 12 text - white>'
+      <h1 className='text - 4xl font - bold mb - 4'>Sitemap</h1>''
+=======
+
+  const routes = ['/,/about,/contact,/services,/blog,/pricing,/privacy,/terms']
   return(
     <div className='max - w-5xl mx - auto px - 4 py - 12 text - white'>'
       <h1 className='text - 4xl font - bold mb - 4'>Sitemap</h1>'
+>>>>>>> main
       <ul className='list - disc pl - 6 text - blue - 400'>
         {routes.map ( (r) => (
           <li key={r}><Link to={r}>{r}</Link></li>) ) }
+<<<<<<< HEAD
       </ul>
     </div>) }"
+=======
+      </ul>'
+    </div>) }";
+"
+>>>>>>> main

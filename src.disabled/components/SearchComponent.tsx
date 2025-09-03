@@ -5,11 +5,19 @@ import React, { useState, useRef, useEffect } from,
   id: string;
    title: string;
    description: string;
-   type: 'service' | 'page' | 'feature;
-   url: string;
+   typ,
+    e: 'service' | 'page' | 'feature;
+   ur,
+    l: string;
    icon?: React.ComponentType<any>
 } interface SearchComponentProps {
+<<<<<<< HEAD
   placeholder?: string
    onSearch?: (query: string) => void
    className?: string} const SearchComponent: React.FC<SearchComponentProps> = ({ placeholder = 'Search services, features, and more...', onSearch, className = '' }) => { const [query, setQuery] = useState('
+=======
+  placeholder?: string;
+   onSearch?: (query: string) => void'
+   className?: string} const SearchComponent: React.FC<SearchComponentProps> = ({ placeholder = 'Search services, features, and more...', onSearch, className = '' }) => { const [query, setQuery] = useState(''
+>>>>>>> main
   ') const [isOpen, setIsOpen] = useState(false) const [selectedIndex, setSelectedIndex] = useState(-1) const inputRef = useRef<HTMLInputElement>(null) const resultsRef = useRef<HTMLDivElement>(null)'

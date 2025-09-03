@@ -1,4 +1,13 @@
+<<<<<<< HEAD
 export interface IoTEdgeService { id: string;
+=======
+<<<<<<< HEAD
+export interface IoTEdgeService {;
+  id: string;
+=======
+export interface IoTEdgeService {id: string;
+>>>>>>> main
+>>>>>>> main
    title: string;
    description: string;
    category: string;
@@ -16,6 +25,25 @@ export interface IoTEdgeService { id: string;
    marketPrice: string;
    roi: string;
    innovationLevel: string;
+<<<<<<< HEAD
    contactInfo: { phone: string;
    email: string;
    website: string  } technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]    } competitors?: string[] marketSize?: string demoUrl?: string documentationUrl?: string } export const IOT_EDGE_SERVICES_2025: IoTEdgeService[] = [;
+=======
+   contactInfo: {  phone: string;
+<<<<<<< HEAD
+   emai,
+    l: string
+   websit,
+    e: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptim,
+    e: string securit,
+    y: string[]  } competitors?: string[] marketSize?: string demoUrl?: string documentationUrl?: string } export const IOT_EDGE_SERVICES_2025: IoTEdgeService[] = [;
+=======
+   email: string
+<<<<<<< HEAD
+   website: string} technicalSpecs?: {technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]  } competitors?: string[] marketSize?: string demoUrl?: string documentationUrl?: string } export const IOT_EDGE_SERVICES_2025: IoTEdgeService[] = [;
+=======
+   website: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]  } competitors?: string[] marketSize?: string demoUrl?: string documentationUrl?: string } export const IOT_EDGE_SERVICES_2025: IoTEdgeService[] = [;
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

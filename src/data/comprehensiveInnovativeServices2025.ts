@@ -1,4 +1,13 @@
+<<<<<<< HEAD
 export interface ComprehensiveInnovativeService { id: string;
+=======
+<<<<<<< HEAD
+export interface ComprehensiveInnovativeService {;
+  id: string;
+=======
+export interface ComprehensiveInnovativeService {id: string;
+>>>>>>> main
+>>>>>>> main
    title: string;
    description: string;
    category: string;
@@ -16,6 +25,25 @@ export interface ComprehensiveInnovativeService { id: string;
    marketPrice: string;
    roi: string;
    innovationLevel: string;
+<<<<<<< HEAD
    contactInfo: { phone: string;
    email: string;
    website: string  } technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]    } competitors?: string[] marketSize?: string } export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025: ComprehensiveInnovativeService[] = [;
+=======
+   contactInfo: {  phone: string;
+<<<<<<< HEAD
+   emai,
+    l: string
+   websit,
+    e: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptim,
+    e: string securit,
+    y: string[]  } competitors?: string[] marketSize?: string } export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025: ComprehensiveInnovativeService[] = [;
+=======
+   email: string
+<<<<<<< HEAD
+   website: string} technicalSpecs?: {technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]  } competitors?: string[] marketSize?: string } export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025: ComprehensiveInnovativeService[] = [;
+=======
+   website: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]  } competitors?: string[] marketSize?: string } export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025: ComprehensiveInnovativeService[] = [;
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

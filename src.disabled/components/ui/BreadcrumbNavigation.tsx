@@ -4,9 +4,15 @@ import React from;
   'lucide-react' import { motion } from;
   'framer-motion'  interface BreadcrumbItem {
    label: string;
-   path: string;
+   pat,
+    h: string;
    isCurrent?: boolean} interface BreadcrumbNavigationProps {
    items?: BreadcrumbItem[];
    className?: string;
+<<<<<<< HEAD
    showHome?: boolean} export const BreadcrumbNavigation: React.FC<BreadcrumbNavigationProps> = ({ items = [], className = '
   ', showHome = true }) => { const location = useLocation() '
+=======
+   showHome?: boolean} export const BreadcrumbNavigation: React.FC<BreadcrumbNavigationProps> = ({ items = [], className = ';
+  ', showHome = true }) => { const location = useLocation() ''
+>>>>>>> main

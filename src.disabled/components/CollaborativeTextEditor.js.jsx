@@ -1,2 +1,11 @@
 
+<<<<<<< HEAD
 ' export const CollaborativeTextEditor = ({ roomId, userId, userName, initialContent = ', enableAI = true, enableCollaboration = true, enableVersioning = true, className = ', onSave, onExport }) => { const { trackEvent } = useAnalytics ({ enableTracking: true, enableUserBehaviorTracking: true })  const [editorState, setEditorState] = useState ({ content: initialContent, selection: { start: 0, end: 0, text: ' }, version: 0, changes[], suggestions[], conflicts[] })  const [showSuggestions] = useState (true)  const [showCollaborators, setShowCollaborators] = useState (false)  const [isProcessing, setIsProcessing] = useState (false)  const [lastSaved, setLastSaved] = useState (null)  const editorRef = useRef (null)  const collaborationRef = useRef (null) '"
+=======
+<<<<<<< HEAD
+' export const CollaborativeTextEditor = ({ roomId, userId, userName, initialContent = ', enableAI = true, enableCollaboration = true, enableVersioning = true, className = ', onSave, onExport }) => { const { trackEvent } = useAnalytics ({ enableTracking: true, enableUserBehaviorTracking: true })  const [editorState, setEditorState] = useState ({ content: initialContent, selection: { star,
+    t: 0, end: 0, text: ' }, version: 0, changes[], suggestions[], conflicts[] })  const [showSuggestions] = useState (true)  const [showCollaborators, setShowCollaborators] = useState (false)  const [isProcessing, setIsProcessing] = useState (false)  const [lastSaved, setLastSaved] = useState (null)  const editorRef = useRef (null)  const collaborationRef = useRef (null) ';""
+=======
+' export const CollaborativeTextEditor = ({ roomId, userId, userName, initialContent = ', enableAI = true, enableCollaboration = true, enableVersioning = true, className = ', onSave, onExport }) => { const { trackEvent } = useAnalytics ({ enableTracking: true, enableUserBehaviorTracking: true })  const [editorState, setEditorState] = useState ({ content: initialContent, selection: { start: 0, end: 0, text: ' }, version: 0, changes[], suggestions[], conflicts[] })  const [showSuggestions] = useState (true)  const [showCollaborators, setShowCollaborators] = useState (false)  const [isProcessing, setIsProcessing] = useState (false)  const [lastSaved, setLastSaved] = useState (null)  const editorRef = useRef (null)  const collaborationRef = useRef (null) 
+>>>>>>> main
+>>>>>>> main

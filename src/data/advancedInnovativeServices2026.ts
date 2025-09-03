@@ -1,4 +1,13 @@
+<<<<<<< HEAD
 export interface AdvancedInnovativeService2026 { id: string;
+=======
+<<<<<<< HEAD
+export interface AdvancedInnovativeService2026 {;
+  id: string;
+=======
+export interface AdvancedInnovativeService2026 {id: string;
+>>>>>>> main
+>>>>>>> main
    title: string;
    description: string;
    category: string;
@@ -16,7 +25,25 @@ export interface AdvancedInnovativeService2026 { id: string;
    marketPrice: string;
    roi: string;
    innovationLevel: string;
-   contactInfo: { phone: string;
+   contactInfo: {  phone: string;
    email: string;
+<<<<<<< HEAD
    website: string;
    address: string  } technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]   } competitors?: string[] marketSize?: string industryTrends?: string[]} export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] = [;
+=======
+<<<<<<< HEAD
+   websit,
+    e: string
+   addres,
+    s: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptim,
+    e: string securit,
+    y: string[] } competitors?: string[] marketSize?: string industryTrends?: string[]} export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] = [;
+=======
+   website: string
+<<<<<<< HEAD
+   address: string} technicalSpecs?: {technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[] } competitors?: string[] marketSize?: string industryTrends?: string[]} export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] = [;
+=======
+   address: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[] } competitors?: string[] marketSize?: string industryTrends?: string[]} export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] = [;
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

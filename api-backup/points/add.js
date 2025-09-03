@@ -1,76 +1,109 @@
 import { createClient } from,
   @supabase/supabase-js'';
-import { withErrorLogging } from '@/utils/withErrorLogging;
-  ';
+import { withErrorLogging }  from '@/utils/withErrorLogging;;
 const supabaseUrl = process.env.SUPABASE_URL ||';
-    process.env.VITE_SUPABASE_URL ||';
-  ';
-    process.env.NEXT_PUBLIC_SUPABASE_URL ||'';
-  ';
+    process.env.VITE_SUPABASE_URL ||;
+    process.env.NEXT_PUBLIC_SUPABASE_URL ||';
     '';
 const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY ||;
   ';
     process.env.VITE_SUPABASE_ANON_KEY ||'';
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ||'';
-  ';
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ||';
     '';
 const supabase = createClient(supabaseUrl, serviceKey);
-async function handler(req, res) {
+<<<<<<< HEAD
+async function handler(req, res) {'
   ';
 '';
 '';
   ';
     if (req.method !== 'POST;
-  ') {
-        res.status(405).end()';
-        return'}'';
+  ') {'
+        res.status(405).end();
+        return'};
   ';
     const { userId, amount, orderId, reason = 'order;
-  ' } = req.body || {}';
+  ' } = req.body || {};
   ';
     if (!userId || typeof amount !== 'number;
-  ') {
+  ') {'
 ';
 ';
   ';
 '';
   ';
-        res.status(400).json({ error: 'Missing userId or amount })
+        res.status(400).json({ error: 'Missing userId or amount });
+        return'};
+  ';
+    const delta = Math.round(amount);
+  ';
+=======
+async function handler(req, res) {
+  ;
+    if (req.method !== 'POST;
+  ') {
+        res.status(405).end()';
         return'}';
-  ';
-    const delta = Math.round(amount)';
-  ';
+    const { userId, amount, orderId, reason = 'order;
+  ' } = req.body || {};
+    if (!userId || typeof amount !== 'number;
+  ') {
+;
+  ;
+        res.status(400).json({ error: 'Missing userId or amount })
+        return'};
+    const delta = Math.round(amount);
+>>>>>>> main
     const { error } = await supabase.from('points_ledger;
   ').insert({
         user_id: userId,
         delta,
         reason,
-        order_id: orderId || null})
+        order_id: orderId || null});
     if (error) {
-        res.status(500).json({ error: error.message })
-        return}';
+<<<<<<< HEAD
+        res.status(500).json({ error: error.message });
+        return};
     // Update profile points balance';
   ';
     const { data: profile } = await supabase'';
   ';
         .from('profiles;
-  ')'';
+  ')';
   ';
         .select('points;
-  ')'';
+  ')';
+  ';
+=======
+        res.status(500).json({ error: error.message })
+        return}';
+    // Update profile points balance;
+    const { data: profile } = await supabase';
+        .from('profiles;
+  ')';
+        .select('points;
+  ')';
+>>>>>>> main
+        .eq('id;
+  ', userId);
+        .single();
+    const current = profile?.points ?? 0';
+    await supabase';
+        .from('profiles;
+<<<<<<< HEAD
+  ')';
+        .update({ points: current + delta })';
   ';
         .eq('id;
   ', userId);
-        .single()';
-    const current = profile?.points ?? 0';
-    await supabase'';
-  ';
-        .from('profiles;
+    res.status(200).json({ success: true })};
+export default withErrorLogging(handler);
+''';
+=======
   ')'';
-        .update({ points: current + delta })'';
-  ';
+        .update({ points: current + delta })';
         .eq('id;
   ', userId);
     res.status(200).json({ success: true })}';
-export default withErrorLogging(handler)';
-''';
+export default withErrorLogging(handler)'';
+>>>>>>> main

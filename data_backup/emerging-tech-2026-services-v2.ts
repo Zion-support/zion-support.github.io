@@ -9,9 +9,12 @@ export interface EmergingTech2026ServiceV2 {
    category: string;
    realImplementation: boolean;
    contactInfo: { mobile: string;
-   email: string;
-   address: string}export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [{
-    id: '2026-emerging-tech-v2',
+   emai,
+    l: string;
+   addres,
+    s: string}export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [{
+    i,
+    d: '2026-emerging-tech-v2',
     name: '2026 Emerging Tech Platform V2',
     tagline: 'Enhanced emerging technologies',
     price: '$349/month',
@@ -26,8 +29,9 @@ export interface EmergingTech2026ServiceV2 {
     link: '/services/2026-emerging-tech-v2',
     category: 'Emerging Tech 2026 V2',
     realImplementation: true,
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    contactInfo: {'
+      mobil,
+    e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709';
 ]}}}

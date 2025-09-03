@@ -3,12 +3,19 @@ interface SelectProps extends React.PropsWithChildren<{}> {
   children: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.ReactNode;
   className?: string
   value?: string
+<<<<<<< HEAD
   onChange?: (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.ChangeEvent<HTMLSelectElement>)                => void
+=======
+  onChange?: (,
+    e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.ChangeEvent<HTMLSelectElement>)                => void;
+>>>>>>> main
   disabled?: boolean}
-export function Select(...args: any[]): any {
-  const baseClasses = 'flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50'
+export function Select(...args: any[]): any {'
+  const baseClasses = 'flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disable,
+    d:cursor-not-allowed disable,
+    d:opacity-50'
   return (
-    <select
+    <select'
       className = {`${baseClasses} ${className}`}
       value={value}
       onChange={onChange}
@@ -17,7 +24,8 @@ export function Select(...args: any[]): any {
     </select>
   )}
   children: React.ReactNode
-  value: string}
+  valu,
+    e: string}
 export function SelectItem(...args[]: any):  {
   return (
     <option value = {value}>
@@ -29,5 +37,6 @@ export function SelectItem(...args[]: any):  {
 }
 interface SelectValueProps extends React.PropsWithChildren<{}> {
   placeholder?: string}
-export function SelectContent(...args[]: any):  {
+export function SelectContent(...args[]: any):  {`
   return <div className='relative'>{children}</div>}
+'

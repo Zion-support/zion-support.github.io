@@ -4,14 +4,17 @@ import React from 'react';
 declare module 'react' {
   export type FC<P = any> = (props: anyP)  => ;
   export type ReactNode = ;
-  export interface ChangeEvent<T = any> { target: T }
+  export interface ChangeEvent<T = any> { targe,
+    t: T }
   export interface FormEvent<T = any> {}
   export interface KeyboardEvent<T = any> {}
   export interface RefObject<T> { current: T }
   export type RefCallback<T> = (value: anyT)  => void;
   export type Ref<T> = RefObject<T> | RefCallback<T> | null;
   export type LegacyRef<T> = Ref<T>
-  export function useRef<T = any>(initial: T): { current: T }
+  export function useRef<T = any>(initia,
+    l: T): { curren,
+    t: T }
   const react: ;
   export default react}
 declare module 'react/jsx-runtime' {
@@ -30,23 +33,28 @@ declare module 'react-router-dom' {
   export function useNavigate(): ;
   export const Link: ;
   export const Routes: ;
-  export const Navigate: ;
-  const rr: ;
+  export const Navigat,
+    e: ;
+  const r,
+    r: ;
   export default rr}
 declare module 'react-hook-form' {
   export function useForm<T = any>(...args: unknown[]): ;
-  const rhf: ;
+  const rh,
+    f: ;
   export default rhf}
 declare module '@hookform/resolvers/zod' {
   export function zodResolver(...args: unknown[]): }
 declare module '@tanstack/react-query' {
   export function useMutation<T = any>(...args: unknown[]): ;
-  const rq: ;
+  const r,
+    q: ;
   export default rq}
 declare module 'jspdf' {
   export class jsPDF {
     constructor(...args: unknown[]);
-    [key: string]: }
+    [ke,
+    y: string]: }
 }
 declare module 'path' {
   const path: ;

@@ -5,6 +5,7 @@ import { Route, Routes } from;
   'react';
 import LoadingSpinner from;
   '../components/LoadingSpinner'';// Lazy load error pages;
+<<<<<<< HEAD
 const NotFound = lazy(() => import('../pages/NotFound
   '))'const ErrorRoutes: React.FC = () => {
   return (
@@ -12,3 +13,11 @@ const NotFound = lazy(() => import('../pages/NotFound
         <Route path='/404' element={<NotFound />} />'        <Route path='*' element={<NotFound />} />'      </Routes>"    </Suspense>)}
 
 export default ErrorRoutes
+=======
+const NotFound = lazy(() => import('../pages/NotFound;
+  '))const ErrorRoutes: React.FC = () => {
+  return (
+    <Suspense fallback={<LoadingSpinner />}><Routes>'
+        <Route path='/404' element={<NotFound />} />        <Route path='*' element={<NotFound />} />      </Routes>"    </Suspense>)}
+export default ErrorRoutes"
+>>>>>>> main

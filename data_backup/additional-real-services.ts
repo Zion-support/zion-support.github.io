@@ -9,9 +9,12 @@ export interface AdditionalRealService {
    category: string;
    realImplementation: boolean;
    contactInfo: { mobile: string;
-   email: string;
-   address: string}export const additionalEnhancedServices: AdditionalRealService[] = [{
-    id: 'ai-automation-suite',
+   emai,
+    l: string;
+   addres,
+    s: string}export const additionalEnhancedServices: AdditionalRealService[] = [{
+    i,
+    d: 'ai-automation-suite',
     name: 'AI Automation Suite',
     tagline: 'Intelligent automation for modern businesses',
     price: '$79/month',
@@ -26,8 +29,9 @@ export interface AdditionalRealService {
     link: '/services/ai-automation-suite',
     category: 'AI & Automation',
     realImplementation: true,
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    contactInfo: {'
+      mobil,
+    e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'},
   {
@@ -53,7 +57,8 @@ export interface AdditionalRealService {
     color: 'from-blue-600 to-indigo-700,
     textColor:,
   text-blue-200',
-    link: 'https://ziontechgroup.com/services/ai-sales-outreach-agent,
+    link: 'http,
+    s://ziontechgroup.com/services/ai-sales-outreach-agent,
     marketPosition:,
   Higher personalization at lower cost than legacy sequencers.',
     targetAudience: [;
@@ -80,12 +85,13 @@ export interface AdditionalRealService {
     roi: 'Improves reply rates by 2–3x,
     competitors: [,
   Outreach',
-  'Salesloft (partial)'],
+  'Salesloft (partial)],
     marketSize: '$7B sales tech,
     growthRate:,
   12% CAGR',
     variant: 'saas-real,
-    contactInfo: { mobile:,
+    contactInfo: { mobil,
+    e:,
   +1 302 464 0950', email: 'kleber@ziontechgroup.com, address:;
   '364 E Main St STE 1008 Middletown DE 19709' },
     realImplementation: true,
@@ -118,7 +124,8 @@ export interface AdditionalRealService {
     color: 'from-slate-700 to-zinc-800,
     textColor:,
   text-slate-200',
-    link: 'https://ziontechgroup.com/services/soc2-continuous-compliance,
+    link: 'http,
+    s://ziontechgroup.com/services/soc2-continuous-compliance,
     marketPosition:,
   Fast time-to-audit without vendor lock-in.',
     targetAudience: [;
@@ -154,7 +161,8 @@ export interface AdditionalRealService {
     growthRate:,
   13% CAGR',
     variant: 'security-futuristic,
-    contactInfo: { mobile:,
+    contactInfo: { mobil,
+    e:,
   +1 302 464 0950', email: 'kleber@ziontechgroup.com, address:;
   '364 E Main St STE 1008 Middletown DE 19709' },
     realImplementation: true,
@@ -187,7 +195,8 @@ export interface AdditionalRealService {
     color: 'from-emerald-600 to-teal-700,
     textColor:,
   text-emerald-200',
-    link: 'https://ziontechgroup.com/services/finops-cost-optimizer,
+    link: 'http,
+    s://ziontechgroup.com/services/finops-cost-optimizer,
     marketPosition:,
   Focused SMB savings with low setup.',
     targetAudience: [;
@@ -214,12 +223,13 @@ export interface AdditionalRealService {
     roi: 'Saves 15–30% monthly spend,
     competitors: [,
   CloudZero',
-  'ProsperOps (partial)'],
+  'ProsperOps (partial)],
     marketSize: '$3B FinOps,
     growthRate:,
   18% CAGR',
     variant: 'saas-real,
-    contactInfo: { mobile:,
+    contactInfo: { mobil,
+    e:,
   +1 302 464 0950', email: 'kleber@ziontechgroup.com, address:;
   '364 E Main St STE 1008 Middletown DE 19709' },
     realImplementation: true,
@@ -252,7 +262,8 @@ export interface AdditionalRealService {
     color: 'from-cyan-600 to-blue-700,
     textColor:,
   text-cyan-200',
-    link: 'https://ziontechgroup.com/services/cloud-migration-factory,
+    link: 'http,
+    s://ziontechgroup.com/services/cloud-migration-factory,
     marketPosition:,
   Predictable migrations with lower risk.',
     targetAudience: [;
@@ -285,7 +296,8 @@ export interface AdditionalRealService {
     growthRate:,
   17% CAGR',
     variant: 'consulting-real,
-    contactInfo: { mobile:,
+    contactInfo: { mobil,
+    e:,
   +1 302 464 0950', email: 'kleber@ziontechgroup.com, address:;
   '364 E Main St STE 1008 Middletown DE 19709' },
     realImplementation: true,
@@ -318,7 +330,8 @@ export interface AdditionalRealService {
     color: 'from-fuchsia-600 to-rose-700,
     textColor:,
   text-fuchsia-200',
-    link: 'https://ziontechgroup.com/services/data-quality-monitor,
+    link: 'http,
+    s://ziontechgroup.com/services/data-quality-monitor,
     marketPosition:,
   Targeted data reliability for SMB analytics teams.',
     targetAudience: [;
@@ -344,13 +357,14 @@ export interface AdditionalRealService {
   Dashboard trust'],
     roi: 'Cuts data incidents by 40%,
     competitors: [,
-  Monte Carlo (partial)',
+  Monte Carlo (partial),
   'Databand'],
     marketSize: '$5B data ops,
     growthRate:,
   18% CAGR',
     variant: 'saas-real,
-    contactInfo: { mobile:,
+    contactInfo: { mobil,
+    e:,
   +1 302 464 0950', email: 'kleber@ziontechgroup.com, address:;
   '364 E Main St STE 1008 Middletown DE 19709' },
     realImplementation: true,
@@ -383,7 +397,8 @@ export interface AdditionalRealService {
     color: 'from-violet-600 to-purple-700,
     textColor:,
   text-violet-200',
-    link: 'https://ziontechgroup.com/services/confluence-rag-knowledge-base,
+    link: 'http,
+    s://ziontechgroup.com/services/confluence-rag-knowledge-base,
     marketPosition:,
   Secure, compliant RAG for internal knowledge.',
     targetAudience: [;
@@ -410,13 +425,14 @@ export interface AdditionalRealService {
   Onboarding'],
     roi: 'Reduces time-to-answer by 70%,
     competitors: [,
-  Guru (partial)',
+  Guru (partial),
   'Slite AI'],
     marketSize: '$2B knowledge tools,
     growthRate:,
   16% CAGR',
     variant: 'ai-futuristic,
-    contactInfo: { mobile:,
+    contactInfo: { mobil,
+    e:,
   +1 302 464 0950', email: 'kleber@ziontechgroup.com, address:;
   '364 E Main St STE 1008 Middletown DE 19709' },
     realImplementation: true,
@@ -449,7 +465,8 @@ export interface AdditionalRealService {
     color: 'from-amber-600 to-orange-700,
     textColor:,
   text-amber-200',
-    link: 'https://ziontechgroup.com/services/e2e-test-recorder,
+    link: 'http,
+    s://ziontechgroup.com/services/e2e-test-recorder,
     marketPosition:,
   Reduce flakiness without heavy scripting.',
     targetAudience: [;
@@ -474,13 +491,14 @@ export interface AdditionalRealService {
   Release hardening'],
     roi: 'Cuts flaky failures by 80%,
     competitors: [,
-  Walnut (partial)',
+  Walnut (partial),
   'Mabl'],
     marketSize: '$3B QA tools,
     growthRate:,
   15% CAGR',
     variant: 'saas-real,
-    contactInfo: { mobile:,
+    contactInfo: { mobil,
+    e:,
   +1 302 464 0950', email: 'kleber@ziontechgroup.com, address:;
   '364 E Main St STE 1008 Middletown DE 19709' },
     realImplementation: true,
@@ -513,7 +531,8 @@ export interface AdditionalRealService {
     color: 'from-pink-600 to-rose-700,
     textColor:,
   text-pink-200',
-    link: 'https://ziontechgroup.com/services/ai-meeting-notes,
+    link: 'http,
+    s://ziontechgroup.com/services/ai-meeting-notes,
     marketPosition:,
   Lightweight alternative with better integrations.',
     targetAudience: [;
@@ -541,12 +560,13 @@ export interface AdditionalRealService {
     roi: 'Saves 3–5 hours/person/month,
     competitors: [,
   Fathom',
-  'Sembly (partial)'],
+  'Sembly (partial)],
     marketSize: '$4B productivity AI,
     growthRate:,
   20% CAGR',
     variant: 'ai-futuristic,
-    contactInfo: { mobile:,
+    contactInfo: { mobil,
+    e:,
   +1 302 464 0950', email: 'kleber@ziontechgroup.com, address:;
   '364 E Main St STE 1008 Middletown DE 19709' },
     realImplementation: true,
@@ -579,7 +599,8 @@ export interface AdditionalRealService {
     color: 'from-indigo-700 to-blue-800,
     textColor:,
   text-indigo-200',
-    link: 'https://ziontechgroup.com/services/vendor-security-questionnaire-ai,
+    link: 'http,
+    s://ziontechgroup.com/services/vendor-security-questionnaire-ai,
     marketPosition:,
   Faster turnarounds with better quality.',
     targetAudience: [;
@@ -604,13 +625,14 @@ export interface AdditionalRealService {
   Due diligence'],
     roi: 'Cuts cycle time by 50%,
     competitors: [,
-  Loopio (partial)',
+  Loopio (partial),
   'Responsive'],
     marketSize: '$1.2B RFP tools,
     growthRate:,
   12% CAGR',
     variant: 'saas-real,
-    contactInfo: { mobile:,
+    contactInfo: { mobil,
+    e:,
   +1 302 464 0950', email: 'kleber@ziontechgroup.com, address:;
   '364 E Main St STE 1008 Middletown DE 19709' },
     realImplementation: true,
@@ -643,7 +665,8 @@ export interface AdditionalRealService {
     color: 'from-cyan-700 to-teal-800,
     textColor:,
   text-cyan-200',
-    link: 'https://ziontechgroup.com/services/accessibility-remediation-assistant,
+    link: 'http,
+    s://ziontechgroup.com/services/accessibility-remediation-assistant,
     marketPosition:,
   Developer-first a11y enforcement.',
     targetAudience: [;
@@ -668,12 +691,13 @@ export interface AdditionalRealService {
   Shift-left'],
     roi: 'Reduces a11y regressions by 70%,
     competitors: [,
-  Deque (partial)'],
+  Deque (partial)],
     marketSize: '$0.8B a11y tools,
     growthRate:,
   11% CAGR',
     variant: 'saas-real,
-    contactInfo: { mobile:,
+    contactInfo: { mobil,
+    e:,
   +1 302 464 0950', email: 'kleber@ziontechgroup.com, address:;
   '364 E Main St STE 1008 Middletown DE 19709' },
     realImplementation: true,
@@ -706,7 +730,8 @@ export interface AdditionalRealService {
     color: 'from-sky-700 to-blue-800,
     textColor:,
   text-sky-200',
-    link: 'https://ziontechgroup.com/services/managed-kubernetes-platformops,
+    link: 'http,
+    s://ziontechgroup.com/services/managed-kubernetes-platformops,
     marketPosition:,
   Productized SRE for SMB engineering teams.',
     targetAudience: [;
@@ -739,7 +764,8 @@ export interface AdditionalRealService {
     growthRate:,
   19% CAGR',
     variant: 'consulting-real,
-    contactInfo: { mobile:,
+    contactInfo: { mobil,
+    e:,
   +1 302 464 0950', email: 'kleber@ziontechgroup.com, address:;
   '364 E Main St STE 1008 Middletown DE 19709' },
     realImplementation: true,
@@ -772,7 +798,8 @@ export interface AdditionalRealService {
     color: 'from-slate-800 to-gray-900,
     textColor:,
   text-slate-200',
-    link: 'https://ziontechgroup.com/services/zero-trust-access-rollout,
+    link: 'http,
+    s://ziontechgroup.com/services/zero-trust-access-rollout,
     marketPosition:,
   Outcome-driven zero trust without vendor lock.',
     targetAudience: [;
@@ -805,7 +832,8 @@ export interface AdditionalRealService {
     growthRate:,
   10% CAGR',
     variant: 'consulting-real,
-    contactInfo: { mobile:,
+    contactInfo: { mobil,
+    e:,
   +1 302 464 0950', email: 'kleber@ziontechgroup.com, address:;
   '364 E Main St STE 1008 Middletown DE 19709' },
     realImplementation: true,
@@ -815,7 +843,8 @@ export interface AdditionalRealService {
     customers: 5,
     rating: 4.7,
     reviews: 3{
-    id:,
+    i,
+    d:,
   ai-email-responder',
     name: 'AI Email Responder,
     tagline:,
@@ -836,7 +865,8 @@ export interface AdditionalRealService {
     color: 'from-purple-600 to-indigo-700,
     textColor:,
   text-purple-300',
-    link: 'https://ziontechgroup.com/services/ai-email-responder,
+    link: 'http,
+    s://ziontechgroup.com/services/ai-email-responder,
     marketPosition:,
   Cheaper than legacy helpdesk add-ons with better guardrails and routing.',
     targetAudience: Support, success, operations',
@@ -888,7 +918,8 @@ export interface AdditionalRealService {
     color: 'from-emerald-600 to-teal-700,
     textColor:,
   text-emerald-300',
-    link: 'https://ziontechgroup.com/services/mobile-first-survey,
+    link: 'http,
+    s://ziontechgroup.com/services/mobile-first-survey,
     marketPosition:,
   Lightweight alternative to heavy survey suites with AI summaries out-of-the-box.',
     targetAudience: Product, growth, CX',
@@ -940,7 +971,8 @@ export interface AdditionalRealService {
     color: 'from-cyan-600 to-blue-700,
     textColor:,
   text-cyan-300',
-    link: 'https://ziontechgroup.com/services/event-management-dashboard,
+    link: 'http,
+    s://ziontechgroup.com/services/event-management-dashboard,
     marketPosition:,
   Faster setup and lower fees than legacy event suites.',
     targetAudience: Marketing, ops, agencies',
@@ -992,7 +1024,8 @@ export interface AdditionalRealService {
     color: 'from-amber-600 to-orange-700,
     textColor:,
   text-amber-300',
-    link: 'https://ziontechgroup.com/services/churn-risk-alerts,
+    link: 'http,
+    s://ziontechgroup.com/services/churn-risk-alerts,
     marketPosition:,
   Actionable CS alerts without heavy CDPs.',
     targetAudience: Customer success, product',
@@ -1044,7 +1077,8 @@ export interface AdditionalRealService {
     color: 'from-fuchsia-600 to-pink-700,
     textColor:,
   text-fuchsia-300',
-    link: 'https://ziontechgroup.com/services/subscription-revenue-analytics,
+    link: 'http,
+    s://ziontechgroup.com/services/subscription-revenue-analytics,
     marketPosition:,
   Faster deploy vs. BI stacks purpose-built for SaaS.',
     targetAudience: Founders, finance, ops',
@@ -1096,7 +1130,8 @@ export interface AdditionalRealService {
     color: 'from-indigo-600 to-blue-700,
     textColor:,
   text-indigo-300',
-    link: 'https://ziontechgroup.com/services/iso-27001-evidence-kit,
+    link: 'http,
+    s://ziontechgroup.com/services/iso-27001-evidence-kit,
     marketPosition:,
   Faster time-to-audit than generic GRC tools.',
     targetAudience: Security, compliance, IT',
@@ -1148,7 +1183,8 @@ export interface AdditionalRealService {
     color: 'from-cyan-600 to-blue-700,
     textColor:,
   text-cyan-300',
-    link: 'https://ziontechgroup.com/services/api-changelog-notifier,
+    link: 'http,
+    s://ziontechgroup.com/services/api-changelog-notifier,
     marketPosition:,
   Turns API changes into transparent communication.',
     targetAudience: 'API/platform teams,
@@ -1165,7 +1201,7 @@ export interface AdditionalRealService {
   'Changelog, Deprecation management'],
     roi: 'Reduces integrator breakage by 70%,
     competitors[,
-  ReadMe, Stoplight (partial)'],
+  ReadMe, Stoplight (partial)],
     marketSize: '$1.5B dev tools,
     growthRate:,
   18% CAGR',
@@ -1200,7 +1236,8 @@ export interface AdditionalRealService {
     color: 'from-sky-600 to-blue-700,
     textColor:,
   text-sky-300',
-    link: 'https://ziontechgroup.com/services/runbook-generator,
+    link: 'http,
+    s://ziontechgroup.com/services/runbook-generator,
     marketPosition:,
   Eliminates ad-hoc docs codifies reliability.',
     targetAudience: SRE, platform, ops',
@@ -1252,7 +1289,8 @@ export interface AdditionalRealService {
     color: 'from-rose-600 to-pink-700,
     textColor:,
   text-rose-300',
-    link: 'https://ziontechgroup.com/services/incident-timeline-composer,
+    link: 'http,
+    s://ziontechgroup.com/services/incident-timeline-composer,
     marketPosition:,
   Makes incident comms accurate and fast.',
     targetAudience: SRE, support, comms',
@@ -1269,7 +1307,7 @@ export interface AdditionalRealService {
   'Major incident comms, RCA inputs'],
     roi: 'Reduces coordination overhead by 50%,
     competitors[,
-  Blameless, Incident.io (partial)'],
+  Blameless, Incident.io (partial)],
     marketSize: '$7.2B DevOps,
     growthRate:,
   19% CAGR',
@@ -1304,7 +1342,8 @@ export interface AdditionalRealService {
     color: 'from-violet-600 to-purple-700,
     textColor:,
   text-violet-300',
-    link: 'https://ziontechgroup.com/services/ad-creative-generator,
+    link: 'http,
+    s://ziontechgroup.com/services/ad-creative-generator,
     marketPosition:,
   Faster creative cycles for small teams.',
     targetAudience: Growth, agencies, founders',
@@ -1316,7 +1355,7 @@ export interface AdditionalRealService {
     technology[,
   LLMs, Vision models'],
     integrations[;
-  'Meta, Google Ads (export)'],
+  'Meta, Google Ads (export)],
     useCases[;
   'Ad variants, Landing page assets'],
     roi: 'Improves CTR by 10–20% on average,
@@ -1382,7 +1421,8 @@ export interface AdditionalRealService {
     color: 'from-purple-600 to-indigo-700,
     textColor:,
   text-purple-300',
-    link: 'https://ziontechgroup.com/database-performance-monitor,
+    link: 'http,
+    s://ziontechgroup.com/database-performance-monitor,
     marketPosition:,
   Modern alternative with AI-first insights and simple pricing.',
     targetAudience: DBAs, platform, backend teams',
@@ -1431,7 +1471,7 @@ export interface AdditionalRealService {
   /month',
     description: Convert schemas into polished docs with SDK snippets, changelogs, and search. Publish instantly with versioning.',
     features[;
-  'Schema parsing (OAS/GraphQL/Proto)',
+  'Schema parsing (OAS/GraphQL/Proto),
   'SDK snippets and examples',
   'Changelogs and versions',
   'Full-text search and themes';
@@ -1442,7 +1482,8 @@ export interface AdditionalRealService {
     color: 'from-cyan-600 to-blue-700,
     textColor:,
   text-cyan-300',
-    link: 'https://ziontechgroup.com/api-documentation-generator,
+    link: 'http,
+    s://ziontechgroup.com/api-documentation-generator,
     marketPosition:,
   Faster setup and authoring vs. traditional doc platforms.',
     targetAudience: Developers, platform, API teams',
@@ -1502,7 +1543,8 @@ export interface AdditionalRealService {
     color: 'from-indigo-600 to-blue-700,
     textColor:,
   text-indigo-300',
-    link: 'https://ziontechgroup.com/email-deliverability-monitor,
+    link: 'http,
+    s://ziontechgroup.com/email-deliverability-monitor,
     marketPosition:,
   Simple, affordable monitoring for marketing and transactional systems.',
     targetAudience: Growth, marketing, platform',
@@ -1560,7 +1602,8 @@ export interface AdditionalRealService {
     color: 'from-rose-600 to-fuchsia-700,
     textColor:,
   text-rose-300',
-    link: 'https://ziontechgroup.com/gdpr-dsar-automation,
+    link: 'http,
+    s://ziontechgroup.com/gdpr-dsar-automation,
     marketPosition:,
   Compliant automation for legal and privacy teams.',
     targetAudience: Privacy, legal, security',
@@ -1618,7 +1661,8 @@ export interface AdditionalRealService {
     color: 'from-red-600 to-pink-700,
     textColor:,
   text-red-300',
-    link: 'https://ziontechgroup.com/api-security-scanner,
+    link: 'http,
+    s://ziontechgroup.com/api-security-scanner,
     marketPosition:,
   Developer-friendly API security with schema awareness.',
     targetAudience: Security, platform, backend',
@@ -1678,7 +1722,8 @@ export interface AdditionalRealService {
     color: 'from-indigo-600 to-blue-700,
     textColor:,
   text-indigo-400',
-    link: 'https://ziontechgroup.com/api-observability-starter,
+    link: 'http,
+    s://ziontechgroup.com/api-observability-starter,
     marketPosition:,
   Get 80% of value with 20% of setup for SMB teams.',
     targetAudience: SMB, startups, dev teams starting observability',
@@ -1740,7 +1785,8 @@ export interface AdditionalRealService {
     color: 'from-teal-600 to-emerald-700,
     textColor:,
   text-teal-300',
-    link: 'https://ziontechgroup.com/status-pages-slo,
+    link: 'http,
+    s://ziontechgroup.com/status-pages-slo,
     marketPosition:,
   Integrated SLOs with customer-facing status for trust and transparency.',
     targetAudience: DevOps, SRE, product',
@@ -1798,7 +1844,8 @@ export interface AdditionalRealService {
     color: 'from-blue-600 to-indigo-700,
     textColor:,
   text-blue-300',
-    link: 'https://ziontechgroup.com/uptime-slo-monitor,
+    link: 'http,
+    s://ziontechgroup.com/uptime-slo-monitor,
     marketPosition:,
   Straightforward reliability toolkit with cost-effective pricing.',
     targetAudience: SRE, platform, engineering',
@@ -1856,7 +1903,8 @@ export interface AdditionalRealService {
     color: 'from-sky-600 to-cyan-700,
     textColor:,
   text-sky-300',
-    link: 'https://ziontechgroup.com/webhook-relay-replay,
+    link: 'http,
+    s://ziontechgroup.com/webhook-relay-replay,
     marketPosition:,
   Developer-friendly webhook reliability without custom infra.',
     targetAudience: Developers, QA, platform',
@@ -1914,7 +1962,8 @@ export interface AdditionalRealService {
     color: 'from-fuchsia-600 to-pink-700,
     textColor:,
   text-fuchsia-300',
-    link: 'https://ziontechgroup.com/feature-flags-edge,
+    link: 'http,
+    s://ziontechgroup.com/feature-flags-edge,
     marketPosition:,
   Edge-native flags for performance-critical apps.',
     targetAudience: Frontend, platform, product',
@@ -1972,7 +2021,8 @@ export interface AdditionalRealService {
     color: 'from-emerald-600 to-green-700,
     textColor:,
   text-emerald-300',
-    link: 'https://ziontechgroup.com/sso-in-a-box,
+    link: 'http,
+    s://ziontechgroup.com/sso-in-a-box,
     marketPosition:,
   Minutes to enterprise SSO without reinventing auth.',
     targetAudience: B2B SaaS, platform, security',
@@ -2031,7 +2081,8 @@ export interface AdditionalRealService {
     color: 'from-cyan-600 to-blue-700,
     textColor:,
   text-cyan-300',
-    link: 'https://ziontechgroup.com/vector-search-starter,
+    link: 'http,
+    s://ziontechgroup.com/vector-search-starter,
     marketPosition:,
   Launch semantic search in hours, not weeks.',
     targetAudience: Search teams, AI product',
@@ -2090,7 +2141,8 @@ export interface AdditionalRealService {
     color: 'from-amber-600 to-orange-700,
     textColor:,
   text-amber-300',
-    link: 'https://ziontechgroup.com/data-quality-monitor,
+    link: 'http,
+    s://ziontechgroup.com/data-quality-monitor,
     marketPosition:,
   Simple quality guardrails for modern ELT.',
     targetAudience: Data engineering, analytics',
@@ -2147,7 +2199,8 @@ export interface AdditionalRealService {
     color: 'from-blue-700 to-indigo-700,
     textColor:,
   text-blue-300',
-    link: 'https://ziontechgroup.com/data-pipeline-observability,
+    link: 'http,
+    s://ziontechgroup.com/data-pipeline-observability,
     marketPosition:,
   Unify view across orchestration and warehouses.',
     targetAudience: Data engineering, analytics',
@@ -2205,7 +2258,8 @@ export interface AdditionalRealService {
     color: 'from-rose-600 to-red-700,
     textColor:,
   text-rose-300',
-    link: 'https://ziontechgroup.com/ai-guardrails,
+    link: 'http,
+    s://ziontechgroup.com/ai-guardrails,
     marketPosition:,
   Practical governance layer for production AI.',
     targetAudience: AI platform, risk, compliance',
@@ -2261,7 +2315,8 @@ export interface AdditionalRealService {
     color: 'from-cyan-600 to-blue-700,
     textColor:,
   text-cyan-300',
-    link: 'https://ziontechgroup.com/ai-sales-automation,
+    link: 'http,
+    s://ziontechgroup.com/ai-sales-automation,
     marketPosition:,
   Practical automation layered on CRM workflows.',
     targetAudience: Sales, revenue ops',
@@ -2309,7 +2364,7 @@ export interface AdditionalRealService {
   'Differential privacy & PII masking',
   'Tabular/time-series/text modes',
   'Utility and drift reports',
-  'REST API & SDKs (Python/JS)';
+  'REST API & SDKs (Python/JS);
     ],
     popular: true,
     icon:,
@@ -2317,7 +2372,8 @@ export interface AdditionalRealService {
     color: 'from-indigo-600 to-purple-700,
     textColor:,
   text-indigo-300',
-    link: 'https://ziontechgroup.com/services/synthetic-data-generator,
+    link: 'http,
+    s://ziontechgroup.com/services/synthetic-data-generator,
     marketPosition:,
   Faster than in-house approaches simpler than research toolkits while maintaining privacy guarantees.',
     targetAudience: Data science, product, QA, compliance',
@@ -2378,7 +2434,8 @@ export interface AdditionalRealService {
     color: 'from-cyan-600 to-blue-700,
     textColor:,
   text-cyan-300',
-    link: 'https://ziontechgroup.com/services/email-parsing-routing-api,
+    link: 'http,
+    s://ziontechgroup.com/services/email-parsing-routing-api,
     marketPosition:,
   Developer-first alternative to heavy ESB/ETL for email channels.',
     targetAudience: Developers, ops, support tooling',
@@ -2437,7 +2494,8 @@ export interface AdditionalRealService {
     color: 'from-emerald-600 to-teal-700,
     textColor:,
   text-emerald-300',
-    link: 'https://ziontechgroup.com/services/kubernetes-cost-analyzer,
+    link: 'http,
+    s://ziontechgroup.com/services/kubernetes-cost-analyzer,
     marketPosition:,
   Actionable K8s FinOps without cluster vendor lock-in.',
     targetAudience: Platform, FinOps, SRE',
@@ -2495,7 +2553,8 @@ export interface AdditionalRealService {
     color: 'from-sky-600 to-blue-700,
     textColor:,
   text-sky-300',
-    link: 'https://ziontechgroup.com/cloud-landing-zone,
+    link: 'http,
+    s://ziontechgroup.com/cloud-landing-zone,
     marketPosition:,
   Faster time-to-compliance vs. bespoke landing zones.',
     targetAudience: Platform, security, compliance',
@@ -2553,7 +2612,8 @@ export interface AdditionalRealService {
     color: 'from-rose-600 to-fuchsia-700,
     textColor:,
   text-rose-300',
-    link: 'https://ziontechgroup.com/services/security-headers-scanner,
+    link: 'http,
+    s://ziontechgroup.com/services/security-headers-scanner,
     marketPosition:,
   Shift-left security posture checks for frontends.',
     targetAudience: Frontend, security',
@@ -2609,7 +2669,8 @@ export interface AdditionalRealService {
     color: 'from-amber-600 to-orange-700,
     textColor:,
   text-amber-300',
-    link: 'https://ziontechgroup.com/services/frontend-bundle-analyzer-ci,
+    link: 'http,
+    s://ziontechgroup.com/services/frontend-bundle-analyzer-ci,
     marketPosition:,
   Developer-centric insights integrated into reviews.',
     targetAudience: 'Frontend teams,
@@ -2666,7 +2727,8 @@ export interface AdditionalRealService {
     color: 'from-blue-700 to-indigo-700,
     textColor:,
   text-blue-300',
-    link: 'https://ziontechgroup.com/services/s3-to-snowflake-ingestion,
+    link: 'http,
+    s://ziontechgroup.com/services/s3-to-snowflake-ingestion,
     marketPosition:,
   Operationally simple compared to DIY pipelines.',
     targetAudience: 'Data engineering,
@@ -2689,7 +2751,7 @@ export interface AdditionalRealService {
   'Compliance archiving'],
     roi: 'Reduce pipeline toil by 60%,
     competitors[,
-  Fivetran (files)',
+  Fivetran (files),
   'Airbyte'],
     marketSize: '$3B data ingest,
     growthRate:,
@@ -2725,7 +2787,8 @@ export interface AdditionalRealService {
     color: 'from-violet-600 to-purple-700,
     textColor:,
   text-violet-300',
-    link: 'https://ziontechgroup.com/services/visual-regression-monitor,
+    link: 'http,
+    s://ziontechgroup.com/services/visual-regression-monitor,
     marketPosition:,
   Simple setup vs. bespoke Playwright configs.',
     targetAudience: Frontend QA, design systems',
@@ -2782,7 +2845,8 @@ export interface AdditionalRealService {
     color: 'from-green-600 to-emerald-700,
     textColor:,
   text-green-300',
-    link: 'https://ziontechgroup.com/services/data-masking-proxy,
+    link: 'http,
+    s://ziontechgroup.com/services/data-masking-proxy,
     marketPosition:,
   Lighter alternative to legacy DLP stacks for data teams.',
     targetAudience: Data, platform, compliance',
@@ -2839,7 +2903,8 @@ export interface AdditionalRealService {
     color: 'from-cyan-600 to-blue-700,
     textColor:,
   text-cyan-300',
-    link: 'https://ziontechgroup.com/services/ai-meeting-notes-agent,
+    link: 'http,
+    s://ziontechgroup.com/services/ai-meeting-notes-agent,
     marketPosition:,
   Business-ready outputs with governance and auditability.',
     targetAudience: Sales, success, product',
@@ -2889,7 +2954,7 @@ export interface AdditionalRealService {
   /month',
     description: 'Define and validate compliance policies as code across cloud resources and IaC with CI quality gates and evidence reports.,
     features[;
-  'Policy packs (SOC2, ISO)',
+  'Policy packs (SOC2, ISO),
   'CI gates & PR comments',
   'Evidence reports',
   'Drift detection';
@@ -2900,7 +2965,8 @@ export interface AdditionalRealService {
     color: 'from-purple-600 to-indigo-700,
     textColor:,
   text-purple-300',
-    link: 'https://ziontechgroup.com/services/compliance-policy-as-code,
+    link: 'http,
+    s://ziontechgroup.com/services/compliance-policy-as-code,
     marketPosition:,
   Unifies cloud and IaC checks with audit-ready outputs.',
     targetAudience: Security, compliance, platform',
@@ -2952,7 +3018,7 @@ export interface AdditionalRealService {
   'Templates and asset hosting',
   'Async rendering and callbacks',
   'Watermarks and security options',
-  'Storage destinations (S3/GCS/Azure)',
+  'Storage destinations (S3/GCS/Azure),
   'Usage analytics and quotas';
     ],
     popular: true,
@@ -2961,7 +3027,8 @@ export interface AdditionalRealService {
     color: 'from-purple-600 to-pink-700,
     textColor:,
   text-purple-400',
-    link: 'https://ziontechgroup.com/services/pdf-render-api,
+    link: 'http,
+    s://ziontechgroup.com/services/pdf-render-api,
     marketPosition:,
   Simple, predictable pricing with dev-first DX.',
     targetAudience: SaaS, finance, legal, ops automation',
@@ -3012,12 +3079,12 @@ export interface AdditionalRealService {
   /month',
     description: Extract vendors, line items, totals, taxes and dates from invoices and receipts. Includes validation rules, human-in-the-loop review and export to accounting systems.',
     features[;
-  'Multi-language OCR (Tesseract/Cloud OCR)',
+  'Multi-language OCR (Tesseract/Cloud OCR),
   'Template-free field detection',
   'Confidence scores and validation rules',
   'Human-in-the-loop review UI',
   'CSV/JSON export and webhooks',
-  'Native integrations (Xero/QuickBooks)';
+  'Native integrations (Xero/QuickBooks);
     ],
     popular: true,
     icon:,
@@ -3025,7 +3092,8 @@ export interface AdditionalRealService {
     color: 'from-cyan-600 to-blue-700,
     textColor:,
   text-cyan-400',
-    link: 'https://ziontechgroup.com/services/invoice-ocr-extraction-api,
+    link: 'http,
+    s://ziontechgroup.com/services/invoice-ocr-extraction-api,
     marketPosition:,
   Accurate extraction without expensive enterprise contracts.',
     targetAudience: Accounting, fintech, back-office automation, marketplaces',
@@ -3089,7 +3157,8 @@ export interface AdditionalRealService {
     color: 'from-emerald-600 to-teal-700,
     textColor:,
   text-emerald-400',
-    link: 'https://ziontechgroup.com/services/log-archive-search,
+    link: 'http,
+    s://ziontechgroup.com/services/log-archive-search,
     marketPosition:,
   Cost-efficient alternative to full APM suites for logs.',
     targetAudience: SRE, platform, security teams',
@@ -3152,7 +3221,8 @@ export interface AdditionalRealService {
     color: 'from-purple-600 to-fuchsia-700,
     textColor:,
   text-fuchsia-400',
-    link: 'https://ziontechgroup.com/gdpr-privacyops,
+    link: 'http,
+    s://ziontechgroup.com/gdpr-privacyops,
     marketPosition:,
   Practical privacy orchestration that complements security tooling with verifiable evidence.',
     targetAudience: Legal, Security, Data Governance',
@@ -3207,7 +3277,7 @@ export interface AdditionalRealService {
     features[;
   'Language-aware static checks',
   'LLM reasoning with guardrails',
-  'Custom policy rules (OPA-style)',
+  'Custom policy rules (OPA-style),
   'PR comments and SARIF outputs',
   'Risk heatmaps and trends';
     ],
@@ -3217,7 +3287,8 @@ export interface AdditionalRealService {
     color: 'from-cyan-600 to-blue-700,
     textColor:,
   text-cyan-400',
-    link: 'https://ziontechgroup.com/ai-code-review-copilot,
+    link: 'http,
+    s://ziontechgroup.com/ai-code-review-copilot,
     marketPosition:,
   Faster feedback than manual reviews with governance for safety-critical repos.',
     targetAudience: Engineering teams, platform engineering, QA',
@@ -3279,7 +3350,8 @@ export interface AdditionalRealService {
     color: 'from-emerald-600 to-teal-700,
     textColor:,
   text-emerald-400',
-    link: 'https://ziontechgroup.com/m365-security-hardening,
+    link: 'http,
+    s://ziontechgroup.com/m365-security-hardening,
     marketPosition:,
   Brings cloud security posture management to M365 tenants with quick wins.',
     targetAudience: IT, Security, MSPs',
@@ -3340,7 +3412,8 @@ export interface AdditionalRealService {
     color: 'from-indigo-600 to-violet-700,
     textColor:,
   text-indigo-300',
-    link: 'https://ziontechgroup.com/ai-customer-qa-benchmark,
+    link: 'http,
+    s://ziontechgroup.com/ai-customer-qa-benchmark,
     marketPosition:,
   Production-focused QA for AI agents covering safety, accuracy, and CX.',
     targetAudience: CX, AI platform teams, compliance',
@@ -3402,7 +3475,8 @@ export interface AdditionalRealService {
     color: 'from-indigo-600 to-purple-700,
     textColor:,
   text-indigo-300',
-    link: 'https://ziontechgroup.com/services/quantum-ai-fusion-platform,
+    link: 'http,
+    s://ziontechgroup.com/services/quantum-ai-fusion-platform,
     marketPosition:,
   First-to-market quantum-AI fusion platform for enterprise optimization.',
     targetAudience: Research, finance, logistics, pharmaceuticals',
@@ -3463,7 +3537,8 @@ export interface AdditionalRealService {
     color: 'from-red-600 to-orange-700,
     textColor:,
   text-red-300',
-    link: 'https://ziontechgroup.com/services/ai-cybersecurity-sentinel,
+    link: 'http,
+    s://ziontechgroup.com/services/ai-cybersecurity-sentinel,
     marketPosition:,
   Next-generation AI-powered cybersecurity with zero false positives.',
     targetAudience: Enterprise security, SOC teams, compliance officers',
@@ -3524,7 +3599,8 @@ export interface AdditionalRealService {
     color: 'from-green-600 to-teal-700,
     textColor:,
   text-green-300',
-    link: 'https://ziontechgroup.com/services/autonomous-devops-orchestrator,
+    link: 'http,
+    s://ziontechgroup.com/services/autonomous-devops-orchestrator,
     marketPosition:;
   'First autonomous DevOps platform with AI-driven decision making.',
     targetAudience[;
@@ -3591,7 +3667,8 @@ export interface AdditionalRealService {
     color: 'from-blue-600 to-indigo-700,
     textColor:,
   text-blue-300',
-    link: 'https://ziontechgroup.com/services/blockchain-enterprise-platform,
+    link: 'http,
+    s://ziontechgroup.com/services/blockchain-enterprise-platform,
     marketPosition:;
   'Enterprise blockchain platform with built-in compliance and scalability.',
     targetAudience[;
@@ -3656,7 +3733,8 @@ export interface AdditionalRealService {
     color: 'from-purple-600 to-pink-700,
     textColor:,
   text-purple-300',
-    link: 'https://ziontechgroup.com/services/ai-content-intelligence-suite,
+    link: 'http,
+    s://ziontechgroup.com/services/ai-content-intelligence-suite,
     marketPosition:;
   'AI content platform with built-in SEO and brand consistency.',
     targetAudience[;
@@ -3722,7 +3800,8 @@ export interface AdditionalRealService {
     color: 'from-teal-600 to-green-700,
     textColor:,
   text-teal-300',
-    link: 'https://ziontechgroup.com/services/iot-enterprise-platform,
+    link: 'http,
+    s://ziontechgroup.com/services/iot-enterprise-platform,
     marketPosition:;
   'Enterprise IoT platform with built-in security and scalability.',
     targetAudience[;
@@ -3787,7 +3866,8 @@ export interface AdditionalRealService {
     color: 'from-emerald-600 to-teal-700,
     textColor:,
   text-emerald-300',
-    link: 'https://ziontechgroup.com/services/ai-customer-success-platform,
+    link: 'http,
+    s://ziontechgroup.com/services/ai-customer-success-platform,
     marketPosition:;
   'AI-driven customer success with predictive analytics and automation.',
           targetAudience[;
@@ -3852,7 +3932,8 @@ export interface AdditionalRealService {
     color: 'from-indigo-600 to-blue-700,
     textColor:,
   text-indigo-300',
-    link: 'https://ziontechgroup.com/services/quantum-cryptography-suite,
+    link: 'http,
+    s://ziontechgroup.com/services/quantum-cryptography-suite,
     marketPosition:;
   'First post-quantum cryptography platform for enterprise security.',
     targetAudience[;
@@ -3916,7 +3997,8 @@ export interface AdditionalRealService {
     color: 'from-orange-600 to-red-700,
     textColor:,
   text-orange-300',
-    link: 'https://ziontechgroup.com/services/ai-supply-chain-optimizer,
+    link: 'http,
+    s://ziontechgroup.com/services/ai-supply-chain-optimizer,
     marketPosition:;
   'AI-driven supply chain optimization with real-time insights.',
     targetAudience[;
@@ -3981,7 +4063,8 @@ export interface AdditionalRealService {
     color: 'from-green-600 to-emerald-700,
     textColor:,
   text-green-300',
-    link: 'https://ziontechgroup.com/services/autonomous-financial-advisor,
+    link: 'http,
+    s://ziontechgroup.com/services/autonomous-financial-advisor,
     marketPosition:;
   'AI financial advisor with institutional-grade investment strategies.',
     targetAudience[;
@@ -4045,7 +4128,8 @@ export interface AdditionalRealService {
     color: 'from-violet-600 to-purple-700,
     textColor:,
   text-violet-300',
-    link: 'https://ziontechgroup.com/services/ai-consciousness-evolution-platform,
+    link: 'http,
+    s://ziontechgroup.com/services/ai-consciousness-evolution-platform,
     marketPosition:;
   'First AI consciousness platform for research and development.',
           targetAudience[;
@@ -4109,7 +4193,8 @@ export interface AdditionalRealService {
     color: 'from-indigo-600 to-blue-700,
     textColor:,
   text-indigo-300',
-    link: 'https://ziontechgroup.com/services/quantum-space-technology-suite,
+    link: 'http,
+    s://ziontechgroup.com/services/quantum-space-technology-suite,
     marketPosition:;
   'First quantum computing platform specifically designed for space applications.',
     targetAudience[;
@@ -4173,7 +4258,8 @@ export interface AdditionalRealService {
     color: 'from-orange-600 to-red-700,
     textColor:,
   text-orange-300',
-    link: 'https://ziontechgroup.com/services/autonomous-manufacturing-ai,
+    link: 'http,
+    s://ziontechgroup.com/services/autonomous-manufacturing-ai,
     marketPosition:;
   'AI-driven autonomous manufacturing platform for Industry 4.0.',
     targetAudience[;
@@ -4238,7 +4324,8 @@ export interface AdditionalRealService {
     color: 'from-green-600 to-emerald-700,
     textColor:,
   text-green-300',
-    link: 'https://ziontechgroup.com/services/biotech-ai-research-platform,
+    link: 'http,
+    s://ziontechgroup.com/services/biotech-ai-research-platform,
     marketPosition:;
   'AI-driven biotech research platform for pharmaceutical companies.',
     targetAudience[;
@@ -4302,7 +4389,8 @@ export interface AdditionalRealService {
     color: 'from-purple-600 to-pink-700,
     textColor:,
   text-purple-300',
-    link: 'https://ziontechgroup.com/services/metaverse-enterprise-platform,
+    link: 'http,
+    s://ziontechgroup.com/services/metaverse-enterprise-platform,
     marketPosition:;
   'Enterprise metaverse platform for remote collaboration and virtual events.',
     targetAudience[;
@@ -4368,7 +4456,8 @@ export interface AdditionalRealService {
     color: 'from-emerald-600 to-green-700,
     textColor:,
   text-emerald-300',
-    link: 'https://ziontechgroup.com/services/quantum-financial-trading-platform,
+    link: 'http,
+    s://ziontechgroup.com/services/quantum-financial-trading-platform,
     marketPosition:;
   'Quantum computing platform specifically designed for financial markets.',
     targetAudience[;
@@ -4432,7 +4521,8 @@ export interface AdditionalRealService {
     color: 'from-blue-600 to-cyan-700,
     textColor:,
   text-blue-300',
-    link: 'https://ziontechgroup.com/services/ai-autonomous-vehicle-platform,
+    link: 'http,
+    s://ziontechgroup.com/services/ai-autonomous-vehicle-platform,
     marketPosition:;
   'AI platform for autonomous vehicle fleet management and optimization.',
     targetAudience[;
@@ -4497,7 +4587,8 @@ export interface AdditionalRealService {
     color: 'from-red-600 to-pink-700,
     textColor:,
   text-red-300',
-    link: 'https://ziontechgroup.com/services/quantum-cybersecurity-suite,
+    link: 'http,
+    s://ziontechgroup.com/services/quantum-cybersecurity-suite,
     marketPosition:;
   'Comprehensive quantum-resistant cybersecurity platform.',
     targetAudience[;
@@ -4561,7 +4652,8 @@ export interface AdditionalRealService {
     color: 'from-blue-600 to-indigo-700,
     textColor:,
   text-blue-300',
-    link: 'https://ziontechgroup.com/services/enterprise-data-governance-platform,
+    link: 'http,
+    s://ziontechgroup.com/services/enterprise-data-governance-platform,
     marketPosition:;
   'Comprehensive data governance platform for enterprise compliance.',
     targetAudience[;
@@ -4625,7 +4717,8 @@ export interface AdditionalRealService {
     color: 'from-purple-600 to-pink-700,
     textColor:,
   text-purple-300',
-    link: 'https://ziontechgroup.com/services/ai-powered-hr-analytics-suite,
+    link: 'http,
+    s://ziontechgroup.com/services/ai-powered-hr-analytics-suite,
     marketPosition:;
   'AI-driven HR analytics for modern workforce management.',
     targetAudience[;
@@ -4689,7 +4782,8 @@ export interface AdditionalRealService {
     color: 'from-cyan-600 to-blue-700,
     textColor:,
   text-cyan-300',
-    link: 'https://ziontechgroup.com/services/cloud-migration-automation-platform,
+    link: 'http,
+    s://ziontechgroup.com/services/cloud-migration-automation-platform,
     marketPosition:;
   'Automated cloud migration platform for enterprise transformation.',
     targetAudience[;
@@ -4754,7 +4848,8 @@ export interface AdditionalRealService {
     color: 'from-orange-600 to-red-700,
     textColor:,
   text-orange-300',
-    link: 'https://ziontechgroup.com/services/digital-transformation-consulting,
+    link: 'http,
+    s://ziontechgroup.com/services/digital-transformation-consulting,
     marketPosition:;
   'Strategic digital transformation consulting for enterprise success.',
     targetAudience[;
@@ -4818,7 +4913,8 @@ export interface AdditionalRealService {
     color: 'from-green-600 to-emerald-700,
     textColor:,
   text-green-300',
-    link: 'https://ziontechgroup.com/services/ai-ethics-compliance-framework,
+    link: 'http,
+    s://ziontechgroup.com/services/ai-ethics-compliance-framework,
     marketPosition:;
   'Comprehensive AI ethics and compliance framework.',
     targetAudience[;
@@ -4881,7 +4977,8 @@ export interface AdditionalRealService {
     color: 'from-teal-600 to-green-700,
     textColor:,
   text-teal-300',
-    link: 'https://ziontechgroup.com/services/edge-computing-optimization-platform,
+    link: 'http,
+    s://ziontechgroup.com/services/edge-computing-optimization-platform,
     marketPosition:;
   'Edge computing optimization platform for IoT and distributed systems.',
     targetAudience[;
@@ -4945,7 +5042,8 @@ export interface AdditionalRealService {
     color: 'from-red-600 to-orange-700,
     textColor:,
   text-red-300',
-    link: 'https://ziontechgroup.com/services/zero-trust-security-implementation,
+    link: 'http,
+    s://ziontechgroup.com/services/zero-trust-security-implementation,
     marketPosition:;
   'Comprehensive zero trust security implementation platform.',
     targetAudience[;
@@ -5009,7 +5107,8 @@ export interface AdditionalRealService {
     color: 'from-pink-600 to-purple-700,
     textColor:,
   text-pink-300',
-    link: 'https://ziontechgroup.com/services/ai-powered-customer-experience-platform,
+    link: 'http,
+    s://ziontechgroup.com/services/ai-powered-customer-experience-platform,
     marketPosition:;
   'AI-driven customer experience optimization platform.',
     targetAudience[;
@@ -5061,7 +5160,7 @@ export interface AdditionalRealService {
   /month',
     description: Autonomous AI agents that prospect, qualify, and book meetings across email, SMS, and LinkedIn with brand-safe guardrails.',
     features[;
-  'Multi-channel outreach (email/SMS/LinkedIn)',
+  'Multi-channel outreach (email/SMS/LinkedIn),
   'Lead enrichment and scoring',
   'Calendar booking and routing',
   'Compliance and opt-out handling';
@@ -5072,7 +5171,8 @@ export interface AdditionalRealService {
     color: 'from-indigo-600 to-blue-700,
     textColor:,
   text-indigo-300',
-    link: 'https://ziontechgroup.com/services/ai-sales-agent-suite,
+    link: 'http,
+    s://ziontechgroup.com/services/ai-sales-agent-suite,
     marketPosition:,
   Purpose-built AI SDR that integrates with existing CRMs and sequences.',
     targetAudience: Sales, growth, founders',
@@ -5104,7 +5204,8 @@ export interface AdditionalRealService {
   19% CAGR',
     variant: 'agentic-suite,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:;
@@ -5138,7 +5239,8 @@ export interface AdditionalRealService {
     color: 'from-emerald-600 to-teal-700,
     textColor:,
   text-emerald-300',
-    link: 'https://ziontechgroup.com/services/enterprise-rag-knowledge-hub,
+    link: 'http,
+    s://ziontechgroup.com/services/enterprise-rag-knowledge-hub,
     marketPosition:,
   Security-first RAG alternative to generic chat bots.',
     targetAudience: Support, engineering, legal, HR',
@@ -5170,7 +5272,8 @@ export interface AdditionalRealService {
   23% CAGR',
     variant: 'secure-rag,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:;
@@ -5204,7 +5307,8 @@ export interface AdditionalRealService {
     color: 'from-fuchsia-600 to-pink-700,
     textColor:,
   text-fuchsia-300',
-    link: 'https://ziontechgroup.com/services/mlops-observability-suite,
+    link: 'http,
+    s://ziontechgroup.com/services/mlops-observability-suite,
     marketPosition:,
   End-to-end LLM + traditional ML monitoring in one tool.',
     targetAudience: Data science, platform, compliance',
@@ -5236,7 +5340,8 @@ export interface AdditionalRealService {
   28% CAGR',
     variant: 'ml-observe,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:;
@@ -5270,7 +5375,8 @@ export interface AdditionalRealService {
     color: 'from-green-600 to-teal-700,
     textColor:,
   text-green-300',
-    link: 'https://ziontechgroup.com/services/cloud-finops-optimizer,
+    link: 'http,
+    s://ziontechgroup.com/services/cloud-finops-optimizer,
     marketPosition:,
   Engineer-friendly FinOps with prescriptive actions.',
     targetAudience: Finance, platform, SRE',
@@ -5301,7 +5407,8 @@ export interface AdditionalRealService {
   21% CAGR',
     variant: 'finops,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:;
@@ -5322,7 +5429,8 @@ export interface AdditionalRealService {
     price: '$299,
     period:,
   /month',
-    description: Operational guardrails for Kubernetes: policy checks, reliability SLOs, and auto-remediation with runbooks.',
+    description: Operational guardrails for Kubernete,
+    s: policy checks, reliability SLOs, and auto-remediation with runbooks.',
     features[;
   'Policy-as-code checks',
   'SLOs and error budgets',
@@ -5335,7 +5443,8 @@ export interface AdditionalRealService {
     color: 'from-slate-600 to-gray-700,
     textColor:,
   text-slate-300',
-    link: 'https://ziontechgroup.com/services/kubernetes-sre-assurance,
+    link: 'http,
+    s://ziontechgroup.com/services/kubernetes-sre-assurance,
     marketPosition:,
   Platform-ops friendly reliability guardrails for K8s.',
     targetAudience: SRE, platform, DevOps',
@@ -5364,7 +5473,8 @@ export interface AdditionalRealService {
   25% CAGR',
     variant: 'sre-guardrails,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:;
@@ -5390,7 +5500,7 @@ export interface AdditionalRealService {
   'PII/PHI/PCI discovery',
   'Secrets leakage detection',
   'Policy enforcement',
-  'Compliance reports (SOC2/GDPR/HIPAA)';
+  'Compliance reports (SOC2/GDPR/HIPAA);
     ],
     popular: true,
     icon:,
@@ -5398,7 +5508,8 @@ export interface AdditionalRealService {
     color: 'from-red-600 to-orange-700,
     textColor:,
   text-red-300',
-    link: 'https://ziontechgroup.com/services/privacy-compliance-scanner,
+    link: 'http,
+    s://ziontechgroup.com/services/privacy-compliance-scanner,
     marketPosition:,
   DevSecOps-native compliance scanning and reporting.',
     targetAudience: Security, compliance, engineering',
@@ -5428,7 +5539,8 @@ export interface AdditionalRealService {
   20% CAGR',
     variant: 'privacy-guardian,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:;
@@ -5462,7 +5574,8 @@ export interface AdditionalRealService {
     color: 'from-purple-600 to-pink-700,
     textColor:,
   text-purple-300',
-    link: 'https://ziontechgroup.com/services/agentic-rpa-studio,
+    link: 'http,
+    s://ziontechgroup.com/services/agentic-rpa-studio,
     marketPosition:,
   Modern RPA alternative with AI-based resilience.',
     targetAudience: Ops, finance, HR, IT',
@@ -5493,7 +5606,8 @@ export interface AdditionalRealService {
   26% CAGR',
     variant: 'agent-rpa,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:;
@@ -5527,7 +5641,8 @@ export interface AdditionalRealService {
     color: 'from-cyan-600 to-blue-700,
     textColor:,
   text-cyan-300',
-    link: 'https://ziontechgroup.com/services/synthetic-data-generator,
+    link: 'http,
+    s://ziontechgroup.com/services/synthetic-data-generator,
     marketPosition:,
   Developer-first synthetic data with controls for privacy and bias.',
     targetAudience: Data science, product analytics',
@@ -5557,7 +5672,8 @@ export interface AdditionalRealService {
   34% CAGR',
     variant: 'synthdata,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:;
@@ -5591,7 +5707,8 @@ export interface AdditionalRealService {
     color: 'from-yellow-600 to-orange-700,
     textColor:,
   text-yellow-300',
-    link: 'https://ziontechgroup.com/services/edge-iot-fleet-manager,
+    link: 'http,
+    s://ziontechgroup.com/services/edge-iot-fleet-manager,
     marketPosition:,
   Vendor-neutral IoT management for diverse fleets.',
     targetAudience: Operations, manufacturing, logistics',
@@ -5621,7 +5738,8 @@ export interface AdditionalRealService {
   18% CAGR',
     variant: 'edge-fleet,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:;
@@ -5655,7 +5773,8 @@ export interface AdditionalRealService {
     color: 'from-blue-600 to-cyan-700,
     textColor:,
   text-blue-300',
-    link: 'https://ziontechgroup.com/services/data-quality-governance,
+    link: 'http,
+    s://ziontechgroup.com/services/data-quality-governance,
     marketPosition:,
   Contract-driven data reliability for analytics and ML.',
     targetAudience: Data engineering, analytics, platform',
@@ -5686,7 +5805,8 @@ export interface AdditionalRealService {
   24% CAGR',
     variant: 'data-gov,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:;
@@ -5720,7 +5840,8 @@ export interface AdditionalRealService {
     color: 'from-orange-600 to-red-700,
     textColor:,
   text-orange-300',
-    link: 'https://ziontechgroup.com/services/full-stack-observability,
+    link: 'http,
+    s://ziontechgroup.com/services/full-stack-observability,
     marketPosition:,
   Business-impact aware observability with UX correlation.',
     targetAudience: SRE, product, engineering',
@@ -5750,7 +5871,8 @@ export interface AdditionalRealService {
   20% CAGR',
     variant: 'obs-unified,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:;
@@ -5784,7 +5906,8 @@ export interface AdditionalRealService {
     color: 'from-sky-600 to-indigo-700,
     textColor:,
   text-sky-300',
-    link: 'https://ziontechgroup.com/services/backup-disaster-recovery,
+    link: 'http,
+    s://ziontechgroup.com/services/backup-disaster-recovery,
     marketPosition:,
   SaaS-first, cloud-native backup and recovery.',
     targetAudience: IT, compliance, security',
@@ -5814,7 +5937,8 @@ export interface AdditionalRealService {
   18% CAGR',
     variant: 'dr-saas,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:;
@@ -5839,7 +5963,7 @@ export interface AdditionalRealService {
     features[;
   'Identity verification & workflow',
   'PII discovery & redaction helpers',
-  'Export packs (JSON/CSV/PDF)',
+  'Export packs (JSON/CSV/PDF),
   'Audit log & SLA tracking';
     ],
     popular: true,
@@ -5848,7 +5972,8 @@ export interface AdditionalRealService {
     color: 'from-indigo-600 to-blue-700,
     textColor:,
   text-indigo-300',
-    link: 'https://ziontechgroup.com/services/gdpr-dsar-portal,
+    link: 'http,
+    s://ziontechgroup.com/services/gdpr-dsar-portal,
     marketPosition:;
   'Faster compliance vs. custom spreadsheets and inbox workflows.',
     targetAudience[;
@@ -5879,13 +6004,14 @@ export interface AdditionalRealService {
     growthRate:,
   19% CAGR',
     variant: 'compliance-real,
-    contactInfo: { mobile:,
+    contactInfo: { mobil,
+    e:,
   +1 302 464 0950', email: 'kleber@ziontechgroup.com, address:;
   '364 E Main St STE 1008 Middletown DE 19709' },
     realImplementation: true,
     implementationDetails:,
   Secure intake portal, identity checks, data connectors.'},
-  {
+  {'
     id: 'soc2-evidence-collector,
     name:,
   SOC 2 Evidence Collector',
@@ -5894,7 +6020,8 @@ export interface AdditionalRealService {
   $149',
     period: '/month,
     description:;
-  'Automate evidence capture for SOC 2 controls: backups, MFA, access reviews, vulnerability scans, and change management.',
+  'Automate evidence capture for SOC 2 control,
+    s: backups, MFA, access reviews, vulnerability scans, and change management.',
     features[;
   'Control library & mappings',
   'Automated screenshots & API proofs',
@@ -5907,7 +6034,8 @@ export interface AdditionalRealService {
     color: 'from-emerald-600 to-teal-700,
     textColor:,
   text-emerald-300',
-    link: 'https://ziontechgroup.com/services/soc2-evidence-collector,
+    link: 'http,
+    s://ziontechgroup.com/services/soc2-evidence-collector,
     marketPosition:;
   'Purpose-built automation without heavy GRC overhead.',
     targetAudience[;
@@ -5938,13 +6066,14 @@ export interface AdditionalRealService {
     growthRate:,
   21% CAGR',
     variant: 'security-real,
-    contactInfo: { mobile:,
+    contactInfo: { mobil,
+    e:,
   +1 302 464 0950', email: 'kleber@ziontechgroup.com, address:;
   '364 E Main St STE 1008 Middletown DE 19709' },
     realImplementation: true,
     implementationDetails:,
   Evidence jobs, artifact store, export packs.'},
-  {
+  {'
     id: 'seo-change-monitor,
     name:,
   SEO Change Monitor',
@@ -5966,7 +6095,8 @@ export interface AdditionalRealService {
     color: 'from-yellow-500 to-orange-600,
     textColor:,
   text-yellow-300',
-    link: 'https://ziontechgroup.com/services/seo-change-monitor,
+    link: 'http,
+    s://ziontechgroup.com/services/seo-change-monitor,
     marketPosition:;
   'Developer-first SEO observability.',
     targetAudience[;
@@ -5994,13 +6124,14 @@ export interface AdditionalRealService {
     growthRate:,
   12% CAGR',
     variant: 'growth-real,
-    contactInfo: { mobile:,
+    contactInfo: { mobil,
+    e:,
   +1 302 464 0950', email: 'kleber@ziontechgroup.com, address:;
   '364 E Main St STE 1008 Middletown DE 19709' },
     realImplementation: true,
     implementationDetails:,
   Scheduled headless audits, CWV collectors.'},
-  {
+  {'
     id: 'cicd-flaky-test-detector,
     name:,
   CI/CD Flaky Test Detector',
@@ -6022,7 +6153,8 @@ export interface AdditionalRealService {
     color: 'from-sky-600 to-blue-700,
     textColor:,
   text-sky-300',
-    link: 'https://ziontechgroup.com/services/cicd-flaky-test-detector,
+    link: 'http,
+    s://ziontechgroup.com/services/cicd-flaky-test-detector,
     marketPosition:;
   'Reduce broken builds and wasted compute.',
     targetAudience[;
@@ -6050,13 +6182,14 @@ export interface AdditionalRealService {
     growthRate:,
   18% CAGR',
     variant: 'devex-real,
-    contactInfo: { mobile:,
+    contactInfo: { mobil,
+    e:,
   +1 302 464 0950', email: 'kleber@ziontechgroup.com, address:;
   '364 E Main St STE 1008 Middletown DE 19709' },
     realImplementation: true,
     implementationDetails:,
   Collectors, heuristics, annotations.'},
-  {
+  {'
     id: 'cloud-cost-anomaly-guard,
     name:,
   Cloud Cost Anomaly Guard',
@@ -6078,7 +6211,8 @@ export interface AdditionalRealService {
     color: 'from-rose-600 to-pink-700,
     textColor:,
   text-rose-300',
-    link: 'https://ziontechgroup.com/services/cloud-cost-anomaly-guard,
+    link: 'http,
+    s://ziontechgroup.com/services/cloud-cost-anomaly-guard,
     marketPosition:;
   'Fast time‑to‑value vs. full FinOps suites.',
     targetAudience[;
@@ -6106,13 +6240,14 @@ export interface AdditionalRealService {
     growthRate:,
   22% CAGR',
     variant: 'finops-real,
-    contactInfo: { mobile:,
+    contactInfo: { mobil,
+    e:,
   +1 302 464 0950', email: 'kleber@ziontechgroup.com, address:;
   '364 E Main St STE 1008 Middletown DE 19709' },
     realImplementation: true,
     implementationDetails:,
   Billing data loaders, anomaly engine.'},
-  {
+  {'
     id: 'llm-prompt-injection-scanner,
     name:,
   LLM Prompt Injection Scanner',
@@ -6134,7 +6269,8 @@ export interface AdditionalRealService {
     color: 'from-purple-600 to-fuchsia-700,
     textColor:,
   text-purple-300',
-    link: 'https://ziontechgroup.com/services/llm-prompt-injection-scanner,
+    link: 'http,
+    s://ziontechgroup.com/services/llm-prompt-injection-scanner,
     marketPosition:;
   'Developer‑centric safety testing.',
     targetAudience[;
@@ -6162,13 +6298,14 @@ export interface AdditionalRealService {
     growthRate:,
   40% CAGR',
     variant: 'ai-safety-real,
-    contactInfo: { mobile:,
+    contactInfo: { mobil,
+    e:,
   +1 302 464 0950', email: 'kleber@ziontechgroup.com, address:;
   '364 E Main St STE 1008 Middletown DE 19709' },
     realImplementation: true,
     implementationDetails:,
   Synthetic probes, scoring, reports.'},
-  {
+  {'
     id: 'data-pipeline-sla-tracker,
     name:,
   Data Pipeline SLA Tracker',
@@ -6190,7 +6327,8 @@ export interface AdditionalRealService {
     color: 'from-cyan-600 to-emerald-700,
     textColor:,
   text-cyan-300',
-    link: 'https://ziontechgroup.com/services/data-pipeline-sla-tracker,
+    link: 'http,
+    s://ziontechgroup.com/services/data-pipeline-sla-tracker,
     marketPosition:;
   'Lightweight observability for analytics teams.',
     targetAudience[;
@@ -6219,13 +6357,14 @@ export interface AdditionalRealService {
     growthRate:,
   28% CAGR',
     variant: 'data-real,
-    contactInfo: { mobile:,
+    contactInfo: { mobil,
+    e:,
   +1 302 464 0950', email: 'kleber@ziontechgroup.com, address:;
   '364 E Main St STE 1008 Middletown DE 19709' },
     realImplementation: true,
     implementationDetails:,
   Connectors, checks, alerting.'},
-  {
+  {'
     id: 'edge-image-optimizer,
     name:,
   Edge Image Optimizer',
@@ -6247,7 +6386,8 @@ export interface AdditionalRealService {
     color: 'from-blue-600 to-indigo-700,
     textColor:,
   text-blue-300',
-    link: 'https://ziontechgroup.com/services/edge-image-optimizer,
+    link: 'http,
+    s://ziontechgroup.com/services/edge-image-optimizer,
     marketPosition:;
   'Simpler pricing vs. bespoke CDNs.',
     targetAudience[;
@@ -6276,13 +6416,14 @@ export interface AdditionalRealService {
     growthRate:,
   17% CAGR',
     variant: 'perf-real,
-    contactInfo: { mobile:,
+    contactInfo: { mobil,
+    e:,
   +1 302 464 0950', email: 'kleber@ziontechgroup.com, address:;
   '364 E Main St STE 1008 Middletown DE 19709' },
     realImplementation: true,
     implementationDetails:,
   Edge functions, cache, signed URLs.'},
-  {
+  {'
     id: 'managed-kubernetes-sre,
     name:,
   Managed Kubernetes SRE',
@@ -6304,7 +6445,8 @@ export interface AdditionalRealService {
     color: 'from-slate-700 to-slate-900,
     textColor:,
   text-slate-200',
-    link: 'https://ziontechgroup.com/services/managed-kubernetes-sre,
+    link: 'http,
+    s://ziontechgroup.com/services/managed-kubernetes-sre,
     marketPosition:;
   'Fractional SRE better than staffing alone.',
     targetAudience[;
@@ -6333,13 +6475,14 @@ export interface AdditionalRealService {
     growthRate:,
   15% CAGR',
     variant: 'it-real,
-    contactInfo: { mobile:,
+    contactInfo: { mobil,
+    e:,
   +1 302 464 0950', email: 'kleber@ziontechgroup.com, address:;
   '364 E Main St STE 1008 Middletown DE 19709' },
     realImplementation: true,
     implementationDetails:,
   SRE playbooks, IaC modules, on‑call.'},
-  {
+  {'
     id: 'zero-trust-rollout-coaching,
     name:,
   Zero Trust Rollout Coaching',
@@ -6349,7 +6492,8 @@ export interface AdditionalRealService {
   ,
     period: '/engagement,
     description:;
-  'Hands‑on guidance to implement zero trust: SSO/MFA, device posture, micro‑segmentation, and access reviews.',
+  'Hands‑on guidance to implement zero trus,
+    t: SSO/MFA, device posture, micro‑segmentation, and access reviews.',
     features[;
   'Architecture & roadmap',
   'Quick wins & pilots',
@@ -6362,7 +6506,8 @@ export interface AdditionalRealService {
     color: 'from-red-600 to-rose-700,
     textColor:,
   text-red-200',
-    link: 'https://ziontechgroup.com/services/zero-trust-rollout-coaching,
+    link: 'http,
+    s://ziontechgroup.com/services/zero-trust-rollout-coaching,
     marketPosition:;
   'Actionable, tool‑agnostic coaching.',
     targetAudience[;
@@ -6390,13 +6535,14 @@ export interface AdditionalRealService {
     growthRate:,
   12% CAGR',
     variant: 'consulting-real,
-    contactInfo: { mobile:,
+    contactInfo: { mobil,
+    e:,
   +1 302 464 0950', email: 'kleber@ziontechgroup.com, address:;
   '364 E Main St STE 1008 Middletown DE 19709' },
     realImplementation: true,
     implementationDetails:,
   Workshops, templates, control packs.'},
-  {
+  {'
     id: 'vendor-risk-ai-assistant,
     name:,
   Vendor Risk AI Assistant',
@@ -6407,7 +6553,7 @@ export interface AdditionalRealService {
     description:;
   'AI copilot that ingests vendor docs (SOC 2, ISO 27001, SIG, CAIQ), answers security questionnaires, flags gaps, and produces an executive risk summary with mitigation plans.',
     features[;
-  'Questionnaire auto‑fill (SIG/CAIQ/NDA‑safe)',
+  'Questionnaire auto‑fill (SIG/CAIQ/NDA‑safe),
   'Policy and control gap analysis',
   'Risk register and remediation plans',
   'Export to PDF/CSV and Jira';
@@ -6418,7 +6564,8 @@ export interface AdditionalRealService {
     color: 'from-amber-600 to-orange-700,
     textColor:,
   text-amber-200',
-    link: 'https://ziontechgroup.com/services/vendor-risk-ai-assistant,
+    link: 'http,
+    s://ziontechgroup.com/services/vendor-risk-ai-assistant,
     marketPosition:;
   'Faster than manual reviews, integrates with your GRC.',
     targetAudience[;
@@ -6449,7 +6596,8 @@ export interface AdditionalRealService {
     growthRate:,
   14% CAGR',
     variant: 'ai-real,
-    contactInfo: { mobile:,
+    contactInfo: { mobil,
+    e:,
   +1 302 464 0950', email: 'kleber@ziontechgroup.com, address:;
   '364 E Main St STE 1008 Middletown DE 19709' },
     realImplementation: true,
@@ -6481,7 +6629,8 @@ export interface AdditionalRealService {
     color: 'from-cyan-600 to-blue-700,
     textColor:,
   text-cyan-200',
-    link: 'https://ziontechgroup.com/services/gdpr-dsar-portal,
+    link: 'http,
+    s://ziontechgroup.com/services/gdpr-dsar-portal,
     marketPosition:;
   'Affordable alternative to heavy privacy suites.',
     targetAudience[;
@@ -6512,7 +6661,8 @@ export interface AdditionalRealService {
     growthRate:,
   16% CAGR',
     variant: 'saas-real,
-    contactInfo: { mobile:,
+    contactInfo: { mobil,
+    e:,
   +1 302 464 0950', email: 'kleber@ziontechgroup.com, address:;
   '364 E Main St STE 1008 Middletown DE 19709' },
     realImplementation: true,
@@ -6544,7 +6694,8 @@ export interface AdditionalRealService {
     color: 'from-rose-600 to-red-700,
     textColor:,
   text-rose-200',
-    link: 'https://ziontechgroup.com/services/oncall-copilot,
+    link: 'http,
+    s://ziontechgroup.com/services/oncall-copilot,
     marketPosition:;
   'Brings AI to existing on‑call stacks.',
     targetAudience[;
@@ -6575,7 +6726,8 @@ export interface AdditionalRealService {
     growthRate:,
   19% CAGR',
     variant: 'ai-ops-real,
-    contactInfo: { mobile:,
+    contactInfo: { mobil,
+    e:,
   +1 302 464 0950', email: 'kleber@ziontechgroup.com, address:;
   '364 E Main St STE 1008 Middletown DE 19709' },
     realImplementation: true,
@@ -6598,7 +6750,7 @@ export interface AdditionalRealService {
     features[;
   'Datasets and prompt suites',
   'Automatic metric scoring and rubrics',
-  'Guardrail tests (toxicity/PII/Jailbreak)',
+  'Guardrail tests (toxicity/PII/Jailbreak),
   'CI integrations and dashboards';
     ],
     popular: false,
@@ -6607,7 +6759,8 @@ export interface AdditionalRealService {
     color: 'from-indigo-600 to-purple-700,
     textColor:,
   text-indigo-200',
-    link: 'https://ziontechgroup.com/services/ml-eval-harness,
+    link: 'http,
+    s://ziontechgroup.com/services/ml-eval-harness,
     marketPosition:;
   'Evaluation without heavy MLOps lift.',
     targetAudience[;
@@ -6636,7 +6789,8 @@ export interface AdditionalRealService {
     growthRate:,
   22% CAGR',
     variant: 'mlops-real,
-    contactInfo: { mobile:,
+    contactInfo: { mobil,
+    e:,
   +1 302 464 0950', email: 'kleber@ziontechgroup.com, address:;
   '364 E Main St STE 1008 Middletown DE 19709' },
     realImplementation: true,
@@ -6668,7 +6822,8 @@ export interface AdditionalRealService {
     color: 'from-emerald-600 to-teal-700,
     textColor:,
   text-emerald-200',
-    link: 'https://ziontechgroup.com/services/finops-cost-anomaly-guard,
+    link: 'http,
+    s://ziontechgroup.com/services/finops-cost-anomaly-guard,
     marketPosition:;
   'Actionable insights, not just dashboards.',
     targetAudience[;
@@ -6699,7 +6854,8 @@ export interface AdditionalRealService {
     growthRate:,
   20% CAGR',
     variant: 'saas-real,
-    contactInfo: { mobile:,
+    contactInfo: { mobil,
+    e:,
   +1 302 464 0950', email: 'kleber@ziontechgroup.com, address:;
   '364 E Main St STE 1008 Middletown DE 19709' },
     realImplementation: true,
@@ -6731,7 +6887,8 @@ export interface AdditionalRealService {
     color: 'from-blue-600 to-indigo-700,
     textColor:,
   text-blue-200',
-    link: 'https://ziontechgroup.com/services/ai-rag-site-search,
+    link: 'http,
+    s://ziontechgroup.com/services/ai-rag-site-search,
     marketPosition:;
   'Better relevance than keyword search, privacy‑first.',
     targetAudience[;
@@ -6762,7 +6919,8 @@ export interface AdditionalRealService {
     growthRate:,
   13% CAGR',
     variant: 'saas-real,
-    contactInfo: { mobile:,
+    contactInfo: { mobil,
+    e:,
   +1 302 464 0950', email: 'kleber@ziontechgroup.com, address:;
   '364 E Main St STE 1008 Middletown DE 19709' },
     realImplementation: true,
@@ -6794,7 +6952,8 @@ export interface AdditionalRealService {
     color: 'from-purple-600 to-fuchsia-700,
     textColor:,
   text-purple-200',
-    link: 'https://ziontechgroup.com/services/agentic-workflow-studio,
+    link: 'http,
+    s://ziontechgroup.com/services/agentic-workflow-studio,
     marketPosition:;
   'Faster time‑to‑value for safe agents.',
     targetAudience[;
@@ -6825,7 +6984,8 @@ export interface AdditionalRealService {
     growthRate:,
   21% CAGR',
     variant: 'agents-real,
-    contactInfo: { mobile:,
+    contactInfo: { mobil,
+    e:,
   +1 302 464 0950', email: 'kleber@ziontechgroup.com, address:;
   '364 E Main St STE 1008 Middletown DE 19709' },
     realImplementation: true,
@@ -6857,7 +7017,8 @@ export interface AdditionalRealService {
     color: 'from-slate-600 to-slate-800,
     textColor:,
   text-slate-200',
-    link: 'https://ziontechgroup.com/services/edge-rate-limiter-saas,
+    link: 'http,
+    s://ziontechgroup.com/services/edge-rate-limiter-saas,
     marketPosition:;
   'Simpler than building on CDN primitives.',
     targetAudience[;
@@ -6886,7 +7047,8 @@ export interface AdditionalRealService {
     growthRate:,
   11% CAGR',
     variant: 'edge-real,
-    contactInfo: { mobile:,
+    contactInfo: { mobil,
+    e:,
   +1 302 464 0950', email: 'kleber@ziontechgroup.com, address:;
   '364 E Main St STE 1008 Middletown DE 19709' },
     realImplementation: true,
@@ -6918,7 +7080,8 @@ export interface AdditionalRealService {
     color: 'from-pink-600 to-rose-700,
     textColor:,
   text-pink-200',
-    link: 'https://ziontechgroup.com/services/email-deliverability-optimizer,
+    link: 'http,
+    s://ziontechgroup.com/services/email-deliverability-optimizer,
     marketPosition:;
   'Focus on outcomes, not vanity metrics.',
     targetAudience[;
@@ -6948,7 +7111,8 @@ export interface AdditionalRealService {
     growthRate:,
   9% CAGR',
     variant: 'saas-real,
-    contactInfo: { mobile:,
+    contactInfo: { mobil,
+    e:,
   +1 302 464 0950', email: 'kleber@ziontechgroup.com, address:;
   '364 E Main St STE 1008 Middletown DE 19709' },
     realImplementation: true,
@@ -6980,7 +7144,8 @@ export interface AdditionalRealService {
     color: 'from-emerald-700 to-teal-800,
     textColor:,
   text-emerald-200',
-    link: 'https://ziontechgroup.com/services/data-contracts-hub,
+    link: 'http,
+    s://ziontechgroup.com/services/data-contracts-hub,
     marketPosition:;
   'Brings product thinking to data.',
     targetAudience[;
@@ -7010,7 +7175,8 @@ export interface AdditionalRealService {
     growthRate:,
   18% CAGR',
     variant: 'saas-real,
-    contactInfo: { mobile:,
+    contactInfo: { mobil,
+    e:,
   +1 302 464 0950', email: 'kleber@ziontechgroup.com, address:;
   '364 E Main St STE 1008 Middletown DE 19709' },
     realImplementation: true,
@@ -7043,7 +7209,8 @@ export interface AdditionalRealService {
     color: 'from-red-700 to-rose-800,
     textColor:,
   text-red-200',
-    link: 'https://ziontechgroup.com/services/security-chaos-gamedays,
+    link: 'http,
+    s://ziontechgroup.com/services/security-chaos-gamedays,
     marketPosition:;
   'Outcome‑focused, no vendor bias.',
     targetAudience[;
@@ -7071,7 +7238,8 @@ export interface AdditionalRealService {
     growthRate:,
   10% CAGR',
     variant: 'consulting-real,
-    contactInfo: { mobile:,
+    contactInfo: { mobil,
+    e:,
   +1 302 464 0950', email: 'kleber@ziontechgroup.com, address:;
   '364 E Main St STE 1008 Middletown DE 19709' },
     realImplementation: true,

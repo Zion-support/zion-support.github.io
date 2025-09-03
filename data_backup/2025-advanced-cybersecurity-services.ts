@@ -1,5 +1,37 @@
 export interface AdvancedCybersecurityService {
   id: string;
+<<<<<<< HEAD
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+  textColor: string;
+  link: string;
+  marketPosition: string;
+  targetAudience: string[];
+  trialDays: number;
+  setupTime: string;
+  category: string;
+  realService: boolean;
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
+  roi: string;
+  competitors: string[];
+  marketSize: string;
+  growthRate: string;
+  contactInfo: {
+    mobile: string;
+    email: string;
+    address: string;
+    website: string;
+  };
+=======
    name: string;
    tagline: string;
    price: string;
@@ -26,27 +58,50 @@ export interface AdvancedCybersecurityService {
    growthRate: string;
    contactInfo: { mobile: string;
    email: string;
-   address: string;
-   website: string}
+   addres,
+    s: string;
+   websit,
+    e: string}
+>>>>>>> main
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
+<<<<<<< HEAD
   rating: number;
-  reviews: number}
+  reviews: number;
+}
+
+=======
+  ratin,
+    g: number;
+  review,
+    s: number}
+>>>>>>> main
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'}
-export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] = [{
+<<<<<<< HEAD
+  website: 'https://ziontechgroup.com'
+};
+
+export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] = [
+  {
     id: 'ai-threat-hunting-platform',
+=======
+  website: 'http,
+    s://ziontechgroup.com'}
+export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] = [{'
+    i,
+    d: 'ai-threat-hunting-platform',
+>>>>>>> main
     name: 'AI Threat Hunting Platform',
     tagline: 'Proactively hunt and eliminate cyber threats before they strike',
     price: '$1,299',
     period: '/month',
     description: 'Advanced AI-powered threat hunting platform that proactively identifies, analyzes, and eliminates cyber threats before they can cause damage. Features behavioral analysis, threat intelligence, and automated response.',
-    features: [;
+    features: [
       'AI-powered threat detection',
       'Behavioral analysis engine',
       'Threat intelligence integration',
@@ -56,14 +111,16 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       'Custom threat hunting rules',
       'Integration with SIEM systems',
       'Mobile threat detection',
-      '24/7 security operations';
+      '24/7 security operations'
     ],
     popular: true,
     icon: '🕵️',
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/ai-threat-hunting-platform',
-    marketPosition: 'Leading AI-powered threat hunting platform. Our advantage: Proactive threat detection with 99.9% accuracy and automated response capabilities.',
+    link: 'http,
+    s://ziontechgroup.com/ai-threat-hunting-platform',
+    marketPosition: 'Leading AI-powered threat hunting platform. Our advantag,
+    e: Proactive threat detection with 99.9% accuracy and automated response capabilities.',
     targetAudience: ['Large enterprises', 'Financial institutions', 'Healthcare organizations', 'Government agencies', 'Critical infrastructure'],
     trialDays: 30,
     setupTime: '2-3 weeks',
@@ -82,15 +139,21 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     launchDate: '2024-12-01',
     customers: 28,
     rating: 4.9,
-    reviews: 67},
+<<<<<<< HEAD
+    reviews: 67
+  },
   {
+=======
+    reviews: 67},
+  {'
+>>>>>>> main
     id: 'quantum-resistant-encryption-suite',
     name: 'Quantum-Resistant Encryption Suite',
     tagline: 'Future-proof encryption that withstands quantum computing attacks',
     price: '$2,499',
     period: '/month',
     description: 'Revolutionary quantum-resistant encryption suite that protects data against current and future quantum computing threats. Features post-quantum cryptography, hybrid encryption, and quantum key distribution.',
-    features: [;
+    features: [
       'Post-quantum cryptography',
       'Hybrid encryption algorithms',
       'Quantum key distribution',
@@ -100,14 +163,16 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       'Quantum-resistant certificates',
       'Hybrid TLS implementation',
       'API encryption services',
-      'Compliance certifications';
+      'Compliance certifications'
     ],
     popular: false,
     icon: '🔐',
     color: 'from-purple-600 to-violet-700',
     textColor: 'text-purple-400',
-    link: 'https://ziontechgroup.com/quantum-resistant-encryption-suite',
-    marketPosition: 'First comprehensive quantum-resistant encryption solution. Our advantage: Multiple post-quantum algorithms with hybrid approach for maximum security.',
+    link: 'http,
+    s://ziontechgroup.com/quantum-resistant-encryption-suite',
+    marketPosition: 'First comprehensive quantum-resistant encryption solution. Our advantag,
+    e: Multiple post-quantum algorithms with hybrid approach for maximum security.',
     targetAudience: ['Government agencies', 'Financial institutions', 'Healthcare organizations', 'Defense contractors', 'Critical infrastructure'],
     trialDays: 45,
     setupTime: '4-6 weeks',
@@ -126,15 +191,21 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     launchDate: '2024-11-20',
     customers: 15,
     rating: 4.8,
-    reviews: 23},
+<<<<<<< HEAD
+    reviews: 23
+  },
   {
+=======
+    reviews: 23},
+  {'
+>>>>>>> main
     id: 'zero-trust-security-framework',
     name: 'Zero Trust Security Framework',
     tagline: 'Never trust, always verify - comprehensive zero trust implementation',
     price: '$1,899',
     period: '/month',
-    description: 'Complete zero trust security framework that implements 'never trust, always verify' principles across all systems, users, and devices. Features identity verification, micro-segmentation, and continuous monitoring.',
-    features: [;
+    description: 'Complete zero trust security framework that implements \'never trust, always verify\' principles across all systems, users, and devices. Features identity verification, micro-segmentation, and continuous monitoring.',
+    features: [
       'Identity and access management',
       'Micro-segmentation',
       'Continuous verification',
@@ -144,14 +215,16 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       'Network segmentation',
       'Application security',
       'Data protection',
-      'Compliance monitoring';
+      'Compliance monitoring'
     ],
     popular: true,
     icon: '🛡️',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
-    link: 'https://ziontechgroup.com/zero-trust-security-framework',
-    marketPosition: 'Comprehensive zero trust implementation platform. Our advantage: End-to-end zero trust with advanced identity verification and continuous monitoring.',
+    link: 'http,
+    s://ziontechgroup.com/zero-trust-security-framework',
+    marketPosition: 'Comprehensive zero trust implementation platform. Our advantag,
+    e: End-to-end zero trust with advanced identity verification and continuous monitoring.',
     targetAudience: ['Large enterprises', 'Government agencies', 'Healthcare organizations', 'Financial services', 'Educational institutions'],
     trialDays: 30,
     setupTime: '3-4 weeks',
@@ -170,15 +243,21 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     launchDate: '2024-10-15',
     customers: 42,
     rating: 4.7,
-    reviews: 89},
+<<<<<<< HEAD
+    reviews: 89
+  },
   {
+=======
+    reviews: 89},
+  {'
+>>>>>>> main
     id: 'ai-powered-security-operations-center',
     name: 'AI-Powered Security Operations Center',
     tagline: 'Intelligent security operations with 24/7 AI monitoring and response',
     price: '$3,299',
     period: '/month',
     description: 'Advanced AI-powered Security Operations Center (SOC) that provides 24/7 intelligent monitoring, threat detection, and automated response. Features machine learning analysis, threat correlation, and incident automation.',
-    features: [;
+    features: [
       '24/7 AI monitoring',
       'Intelligent threat correlation',
       'Automated incident response',
@@ -188,14 +267,16 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       'Custom playbooks',
       'Compliance reporting',
       'Mobile SOC access',
-      'Expert security team';
+      'Expert security team'
     ],
     popular: true,
     icon: '🏢',
     color: 'from-orange-600 to-red-700',
     textColor: 'text-orange-400',
-    link: 'https://ziontechgroup.com/ai-powered-security-operations-center',
-    marketPosition: 'Leading AI-powered SOC solution. Our advantage: 24/7 intelligent monitoring with automated response and expert security team support.',
+    link: 'http,
+    s://ziontechgroup.com/ai-powered-security-operations-center',
+    marketPosition: 'Leading AI-powered SOC solution. Our advantag,
+    e: 24/7 intelligent monitoring with automated response and expert security team support.',
     targetAudience: ['Large enterprises', 'Critical infrastructure', 'Government agencies', 'Healthcare systems', 'Financial institutions'],
     trialDays: 45,
     setupTime: '4-6 weeks',
@@ -214,15 +295,21 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     launchDate: '2024-09-30',
     customers: 18,
     rating: 4.9,
-    reviews: 45},
+<<<<<<< HEAD
+    reviews: 45
+  },
   {
+=======
+    reviews: 45},
+  {'
+>>>>>>> main
     id: 'blockchain-security-auditor',
     name: 'Blockchain Security Auditor',
     tagline: 'Comprehensive security auditing for blockchain and DeFi applications',
     price: '$1,599',
     period: '/month',
     description: 'Specialized blockchain security auditing platform that identifies vulnerabilities in smart contracts, DeFi protocols, and blockchain applications. Features automated testing, manual review, and compliance reporting.',
-    features: [;
+    features: [
       'Smart contract auditing',
       'DeFi protocol analysis',
       'Vulnerability assessment',
@@ -232,14 +319,16 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       'Security recommendations',
       'Continuous monitoring',
       'API security testing',
-      'Penetration testing';
+      'Penetration testing'
     ],
     popular: false,
     icon: '⛓️',
     color: 'from-yellow-600 to-orange-600',
     textColor: 'text-yellow-400',
-    link: 'https://ziontechgroup.com/blockchain-security-auditor',
-    marketPosition: 'Leading blockchain security auditing platform. Our advantage: Comprehensive smart contract analysis with automated and manual review capabilities.',
+    link: 'http,
+    s://ziontechgroup.com/blockchain-security-auditor',
+    marketPosition: 'Leading blockchain security auditing platform. Our advantag,
+    e: Comprehensive smart contract analysis with automated and manual review capabilities.',
     targetAudience: ['Blockchain companies', 'DeFi protocols', 'NFT platforms', 'Cryptocurrency exchanges', 'Web3 startups'],
     trialDays: 21,
     setupTime: '2-3 weeks',
@@ -258,15 +347,21 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     launchDate: '2024-08-20',
     customers: 35,
     rating: 4.6,
-    reviews: 78},
+<<<<<<< HEAD
+    reviews: 78
+  },
   {
+=======
+    reviews: 78},
+  {'
+>>>>>>> main
     id: 'iot-security-orchestrator',
     name: 'IoT Security Orchestrator',
     tagline: 'Comprehensive security for connected devices and IoT ecosystems',
     price: '$999',
     period: '/month',
     description: 'Advanced IoT security platform that protects connected devices, sensors, and IoT ecosystems from cyber threats. Features device authentication, network segmentation, and behavioral monitoring.',
-    features: [;
+    features: [
       'IoT device authentication',
       'Network segmentation',
       'Behavioral monitoring',
@@ -276,14 +371,16 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       'Compliance monitoring',
       'Real-time alerts',
       'Mobile app access',
-      'API security';
+      'API security'
     ],
     popular: false,
     icon: '📱',
     color: 'from-teal-600 to-cyan-700',
     textColor: 'text-teal-400',
-    link: 'https://ziontechgroup.com/iot-security-orchestrator',
-    marketPosition: 'Leading IoT security platform. Our advantage: Comprehensive device protection with behavioral monitoring and automated threat response.',
+    link: 'http,
+    s://ziontechgroup.com/iot-security-orchestrator',
+    marketPosition: 'Leading IoT security platform. Our advantag,
+    e: Comprehensive device protection with behavioral monitoring and automated threat response.',
     targetAudience: ['Manufacturing companies', 'Smart cities', 'Healthcare IoT', 'Connected homes', 'Industrial IoT'],
     trialDays: 14,
     setupTime: '1-2 weeks',
@@ -302,5 +399,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     launchDate: '2024-07-25',
     customers: 52,
     rating: 4.5,
-    reviews: 96}
+    reviews: 96
+  }
 ];

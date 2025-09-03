@@ -3,8 +3,12 @@ import React, { useState, useMemo } from;
   'framer-motion.ts' import { Link } from;
   'react-router-dom.ts' import { Search, Filter, Star, TrendingUp, Clock, Users, Target, Rocket, Brain, Shield, Cloud, Atom, Heart, Satellite, Zap, CheckCircle, ArrowRight, Phone, Mail, MapPin, Sparkles, Award, Globe, Code, Lock, BarChart3, Workflow, Eye, Server, Smartphone, Database, Network, PenTool, Building, Truck, DollarSign, BookOpen, MessageCircle, HelpCircle, FileText, Cpu, TrendingDown, Calendar, UserCheck, ShieldCheck, Zap as ZapIcon, ShoppingCart, Gauge, MessageCircle as MessageCircleIcon } from;
   'lucide-react' import { enhancedServicesCatalog2025, EnhancedService } from;
-  '../data/enhancedServicesCatalog2025'  export default function EnhancedServicesShowcase2025(...args: any[]): any { const [searchTerm, setSearchTerm] = useState(';
-  ') const [selectedCategory, setSelectedCategory] = useState('all;
+  '../data/enhancedServicesCatalog2025'  export default function EnhancedServicesShowcase2025() { const [searchTerm, setSearchTerm] = useState() const [selectedCategory, setSelectedCategory] = useState('all;
   ') const [sortBy, setSortBy] = useState('featured;
+<<<<<<< HEAD
   ') const [viewMode, setViewMode] = useState<any>('grid
   ') '
+=======
+  ') const [viewMode, setViewMode] = useState<any>('grid;
+  ') ''
+>>>>>>> main

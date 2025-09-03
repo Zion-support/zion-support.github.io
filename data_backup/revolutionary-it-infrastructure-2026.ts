@@ -28,23 +28,29 @@ export interface RevolutionaryITInfrastructure2026 {
    variant: ServiceVariant;
    contactInfo: { mobile: string;
    email: string;
-   address: string;
-   website: string}
+   addres,
+    s: string;
+   websit,
+    e: string}
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
-  rating: number;
-reviews: number;const contact = {
-  mobile:,
+  ratin,
+    g: number;
+review,
+    s: number;const contact = {
+  mobil,
+    e:,
   +1 302 464 0950',
   email: 'kleber@ziontechgroup.com,
   address:,
   364 E Main St STE 1008 Middletown DE 19709',
-  ;
-  website: 'https://ziontechgroup.com}
+  website: 'http,
+    s://ziontechgroup.com}
 export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure2026[] = [{
-    id:,
+    i,
+    d:,
   quantum-resistant-cybersecurity-suite',
     name: 'Quantum-Resistant Cybersecurity Suite,
     tagline:,
@@ -62,7 +68,7 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
   'Zero-trust architecture',
   'Advanced endpoint protection',
   'Quantum-safe certificate management',
-  'Compliance reporting (SOC2, ISO27001)',
+  'Compliance reporting (SOC2, ISO27001),
   '24/7 security monitoring',
   'Incident response automation';
     ],
@@ -72,7 +78,8 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
     color: 'from-red-600 to-orange-700,
     textColor:,
   text-red-400',
-    link: 'https://ziontechgroup.com/quantum-resistant-cybersecurity,
+    link: 'http,
+    s://ziontechgroup.com/quantum-resistant-cybersecurity,
     marketPosition:,
   Leading edge in quantum-resistant security, competitive with traditional cybersecurity vendors but with future-proof quantum capabilities.',
     targetAudience: Financial institutions, Healthcare organizations, Government agencies, Defense contractors, Critical infrastructure',
@@ -148,7 +155,8 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
     color: 'from-blue-600 to-cyan-700,
     textColor:,
   text-blue-400',
-    link: 'https://ziontechgroup.com/edge-computing-orchestration,
+    link: 'http,
+    s://ziontechgroup.com/edge-computing-orchestration,
     marketPosition:,
   Competitive with AWS Greengrass and Azure IoT Edge, offering more comprehensive orchestration and multi-cloud support.',
     targetAudience: Telecommunications companies, IoT platform providers, Manufacturing companies, Smart city initiatives, Retail chains',
@@ -223,7 +231,8 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
     color: 'from-green-600 to-emerald-700,
     textColor:,
   text-green-400',
-    link: 'https://ziontechgroup.com/ai-powered-devops,
+    link: 'http,
+    s://ziontechgroup.com/ai-powered-devops,
     marketPosition:,
   Competitive with GitLab CI/CD and GitHub Actions, with advanced AI capabilities for optimization and automation.',
     targetAudience: Software development teams, DevOps engineers, Platform engineering teams, SRE teams, IT operations',
@@ -284,7 +293,7 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
     description:;
   'Comprehensive blockchain platform that provides enterprise-grade infrastructure, smart contract management, and blockchain analytics for business applications.',
     features[;
-  'Multi-blockchain support (Ethereum, Polygon, Solana)',
+  'Multi-blockchain support (Ethereum, Polygon, Solana),
   'Smart contract development and deployment',
   'Blockchain node management',
   'Real-time transaction monitoring',
@@ -301,7 +310,8 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
     color: 'from-purple-600 to-indigo-700,
     textColor:,
   text-purple-400',
-    link: 'https://ziontechgroup.com/blockchain-infrastructure,
+    link: 'http,
+    s://ziontechgroup.com/blockchain-infrastructure,
     marketPosition:,
   Competitive with Alchemy and Infura, offering more comprehensive enterprise features and multi-blockchain support.',
     targetAudience: Financial services companies, Supply chain companies, Healthcare organizations, Gaming companies, NFT platforms',
@@ -378,7 +388,8 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
     color: 'from-cyan-600 to-blue-700,
     textColor:,
   text-cyan-400',
-    link: 'https://ziontechgroup.com/quantum-cloud-hybrid,
+    link: 'http,
+    s://ziontechgroup.com/quantum-cloud-hybrid,
     marketPosition:,
   First-to-market hybrid quantum-classical platform, offering unique integration capabilities for quantum computing applications.',
     targetAudience: Research institutions, Pharmaceutical companies, Financial services, Aerospace companies, Energy companies',

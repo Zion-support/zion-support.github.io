@@ -1,4 +1,13 @@
+<<<<<<< HEAD
 export interface AdvancedMicroSaasService2028 { id: string;
+=======
+<<<<<<< HEAD
+export interface AdvancedMicroSaasService2028 {;
+  id: string;
+=======
+export interface AdvancedMicroSaasService2028 {id: string;
+>>>>>>> main
+>>>>>>> main
    title: string;
    description: string;
    category: string;
@@ -21,7 +30,22 @@ export interface AdvancedMicroSaasService2028 { id: string;
    featured: boolean;
    location: string;
    availability: string;
+<<<<<<< HEAD
    author: { name: string;
    id: string;
    avatarUrl?: string;
    verified: boolean  } images: string[] createdAt: string technologyStack: string[] useCases: string[] integrations: string[] compliance: string[] support: string[] roi: string implementationTime: string securityFeatures: string[] scalability: string uptime: string } export const ADVANCED_MICRO_SAAS_SERVICES_2028: AdvancedMicroSaasService2028[] = [;
+=======
+   author: {  name: string;
+   i,
+    d: string;
+   avatarUrl?: string
+<<<<<<< HEAD
+   verifie,
+    d: boolean} images: string[] createdAt: string technologyStack: string[] useCases: string[] integrations: string[] compliance: string[] support: string[] roi: string implementationTime: string securityFeatures: string[] scalabilit,
+    y: string uptim,
+    e: string } export const ADVANCED_MICRO_SAAS_SERVICES_2028: AdvancedMicroSaasService2028[] = [;
+=======
+   verified: boolean} images: string[] createdAt: string technologyStack: string[] useCases: string[] integrations: string[] compliance: string[] support: string[] roi: string implementationTime: string securityFeatures: string[] scalability: string uptime: string } export const ADVANCED_MICRO_SAAS_SERVICES_2028: AdvancedMicroSaasService2028[] = [;
+>>>>>>> main
+>>>>>>> main

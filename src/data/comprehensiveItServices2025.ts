@@ -1,4 +1,13 @@
+<<<<<<< HEAD
 export interface ComprehensiveItService { id: string;
+=======
+<<<<<<< HEAD
+export interface ComprehensiveItService {;
+  id: string;
+=======
+export interface ComprehensiveItService {id: string;
+>>>>>>> main
+>>>>>>> main
    title: string;
    description: string;
    category: string;
@@ -16,6 +25,25 @@ export interface ComprehensiveItService { id: string;
    marketPrice: string;
    roi: string;
    innovationLevel: string;
+<<<<<<< HEAD
    contactInfo: { phone: string;
    email: string;
    website: string  } technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]    } competitors?: string[] marketSize?: string demoUrl?: string documentationUrl?: string } export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveItService[] = [;
+=======
+   contactInfo: {  phone: string;
+<<<<<<< HEAD
+   emai,
+    l: string
+   websit,
+    e: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptim,
+    e: string securit,
+    y: string[]  } competitors?: string[] marketSize?: string demoUrl?: string documentationUrl?: string } export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveItService[] = [;
+=======
+   email: string
+<<<<<<< HEAD
+   website: string} technicalSpecs?: {technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]  } competitors?: string[] marketSize?: string demoUrl?: string documentationUrl?: string } export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveItService[] = [;
+=======
+   website: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]  } competitors?: string[] marketSize?: string demoUrl?: string documentationUrl?: string } export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveItService[] = [;
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

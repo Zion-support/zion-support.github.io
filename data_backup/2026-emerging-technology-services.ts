@@ -26,23 +26,29 @@ export interface EmergingTechnologyService {
    growthRate: string;
    contactInfo: { mobile: string;
    email: string;
-   address: string;
-   website: string}
+   addres,
+    s: string;
+   websit,
+    e: string}
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
-  rating: number;
-reviews: number;const contact = {
-  mobile:,
+  ratin,
+    g: number;
+review,
+    s: number;const contact = {
+  mobil,
+    e:,
   +1 302 464 0950',
   email: 'kleber@ziontechgroup.com,
   address:,
   364 E Main St STE 1008 Middletown DE 19709',
-  ;
-  website: 'https://ziontechgroup.com}
+  website: 'http,
+    s://ziontechgroup.com}
 export const emergingTechnologyServices2026: EmergingTechnologyService[] = [{
-    id:,
+    i,
+    d:,
   ai-powered-autonomous-vehicles-platform',
     name: 'AI Autonomous Vehicles Platform,
     tagline:,
@@ -69,7 +75,8 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [{
     color: 'from-blue-600 to-cyan-700,
     textColor:,
   text-blue-400',
-    link: 'https://ziontechgroup.com/ai-autonomous-vehicles,
+    link: 'http,
+    s://ziontechgroup.com/ai-autonomous-vehicles,
     marketPosition:,
   Competes with NVIDIA DRIVE ($1000/month), Waymo ($2000/month). Our advantage: Affordable development platform with comprehensive simulation tools.,
     targetAudience[;
@@ -91,9 +98,9 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [{
   'Autonomous vehicle development, Safety testing, Performance validation, Research and education'],
     roi: 'Investment in autonomous vehicle development with 60% faster time-to-market,
     competitors[,
-  NVIDIA DRIVE ($1000/month)',
-  'Waymo ($2000/month)',
-  'Intel Mobileye ($1500/month)'],
+  NVIDIA DRIVE ($1000/month),
+  'Waymo ($2000/month),
+  'Intel Mobileye ($1500/month)],
     marketSize: '$45B autonomous vehicle market,
     growthRate:;
   '280% YoY',
@@ -133,7 +140,8 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [{
     color: 'from-purple-600 to-indigo-700,
     textColor:,
   text-purple-400',
-    link: 'https://ziontechgroup.com/quantum-machine-learning,
+    link: 'http,
+    s://ziontechgroup.com/quantum-machine-learning,
     marketPosition:,
   First-to-market quantum ML platform. Competes with IBM Quantum ML ($800/month), Google Quantum AI ($1000/month). Our advantage: Hybrid approach with classical ML integration.,
     targetAudience[;
@@ -155,9 +163,9 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [{
   'AI model training, Optimization problems, Drug discovery, Financial modeling'],
     roi: 'Investment in quantum AI capabilities with 10x faster optimization,
     competitors[,
-  IBM Quantum ML ($800/month)',
-  'Google Quantum AI ($1000/month)',
-  'Microsoft Azure Quantum ($600/month)'],
+  IBM Quantum ML ($800/month),
+  'Google Quantum AI ($1000/month),
+  'Microsoft Azure Quantum ($600/month)],
     marketSize: '$12B quantum ML market,
     growthRate:;
   '320% YoY',
@@ -180,7 +188,7 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [{
   /month',
     description: Comprehensive platform for developing, testing, and deploying decentralized finance applications on multiple blockchain networks with advanced security features.',
     features[;
-  'Multi-blockchain support (Ethereum, Polygon, Solana)',
+  'Multi-blockchain support (Ethereum, Polygon, Solana),
   'Smart contract development tools',
   'DeFi protocol templates',
   'Security auditing and testing',
@@ -197,7 +205,8 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [{
     color: 'from-green-600 to-emerald-700,
     textColor:,
   text-green-400',
-    link: 'https://ziontechgroup.com/blockchain-defi-platform,
+    link: 'http,
+    s://ziontechgroup.com/blockchain-defi-platform,
     marketPosition:,
   Competes with Alchemy ($49/month), Infura ($50/month). Our advantage: DeFi-focused platform with comprehensive financial tools.,
     targetAudience[;
@@ -219,9 +228,9 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [{
   'DeFi application development, Smart contract deployment, Yield farming, Cross-chain DeFi'],
     roi: 'Average 500% ROI with 80% faster DeFi development,
     competitors[,
-  Alchemy ($49/month)',
-  'Infura ($50/month)',
-  'QuickNode ($49/month)'],
+  Alchemy ($49/month),
+  'Infura ($50/month),
+  'QuickNode ($49/month)],
     marketSize: '$18B DeFi development market,
     growthRate:;
   '240% YoY',
@@ -244,7 +253,7 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [{
   /month',
     description: Comprehensive AI platform for medical imaging analysis, disease detection, and diagnostic assistance. FDA-compliant with support for multiple imaging modalities.',
     features[;
-  'Multi-modality image analysis (X-ray, MRI, CT, Ultrasound)',
+  'Multi-modality image analysis (X-ray, MRI, CT, Ultrasound),
   'AI-powered disease detection',
   'Radiology report generation',
   'Patient data integration',
@@ -261,7 +270,8 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [{
     color: 'from-red-600 to-pink-700,
     textColor:,
   text-red-400',
-    link: 'https://ziontechgroup.com/ai-healthcare-diagnostics,
+    link: 'http,
+    s://ziontechgroup.com/ai-healthcare-diagnostics,
     marketPosition:,
   Competes with Aidoc ($800/month), Zebra Medical ($1000/month). Our advantage: Affordable platform with comprehensive imaging support.,
     targetAudience[;
@@ -283,9 +293,9 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [{
   'Medical imaging analysis, Disease detection, Diagnostic assistance, Research and education'],
     roi: 'Average 400% ROI with 30% faster diagnosis and 25% cost reduction,
     competitors[,
-  Aidoc ($800/month)',
-  'Zebra Medical ($1000/month)',
-  'Enlitic ($600/month)'],
+  Aidoc ($800/month),
+  'Zebra Medical ($1000/month),
+  'Enlitic ($600/month)],
     marketSize: '$35B AI healthcare market,
     growthRate:;
   '260% YoY',
@@ -310,7 +320,7 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [{
     features[;
   'Real-time sensor data collection',
   'AI-powered traffic optimization',
-  'Environmental monitoring (air quality, noise, pollution)',
+  'Environmental monitoring (air quality, noise, pollution),
   'Smart lighting and energy management',
   'Public safety monitoring',
   'Waste management optimization',
@@ -325,7 +335,8 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [{
     color: 'from-gray-600 to-slate-700,
     textColor:,
   text-gray-400',
-    link: 'https://ziontechgroup.com/iot-smart-city-platform,
+    link: 'http,
+    s://ziontechgroup.com/iot-smart-city-platform,
     marketPosition:,
   Competes with Cisco Smart City ($1500/month), Siemens City Performance ($2000/month). Our advantage: Affordable platform with comprehensive city management tools.,
     targetAudience[;
@@ -347,9 +358,9 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [{
   'Traffic optimization, Environmental monitoring, Public safety, Infrastructure management'],
     roi: 'Average 300% ROI with 25% reduction in city operational costs,
     competitors[,
-  Cisco Smart City ($1500/month)',
-  'Siemens City Performance ($2000/month)',
-  'IBM Smart City ($1200/month)'],
+  Cisco Smart City ($1500/month),
+  'Siemens City Performance ($2000/month),
+  'IBM Smart City ($1200/month)],
     marketSize: '$28B smart city market,
     growthRate:;
   '210% YoY',
@@ -389,7 +400,8 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [{
     color: 'from-orange-600 to-red-700,
     textColor:,
   text-orange-400',
-    link: 'https://ziontechgroup.com/ai-cybersecurity-threat-intelligence,
+    link: 'http,
+    s://ziontechgroup.com/ai-cybersecurity-threat-intelligence,
     marketPosition:,
   Competes with CrowdStrike ($800/month), SentinelOne ($700/month). Our advantage: AI-first approach with automated response capabilities.,
     targetAudience[;
@@ -411,9 +423,9 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [{
   'Threat detection, Incident response, Security monitoring, Compliance reporting'],
     roi: 'Average 400% ROI with 90% faster threat response and 60% reduction in security incidents,
     competitors[,
-  CrowdStrike ($800/month)',
-  'SentinelOne ($700/month)',
-  'Carbon Black ($600/month)'],
+  CrowdStrike ($800/month),
+  'SentinelOne ($700/month),
+  'Carbon Black ($600/month)],
     marketSize: '$22B AI cybersecurity market,
     growthRate:;
   '230% YoY',
@@ -436,7 +448,7 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [{
   /month',
     description: 'Advanced quantum cryptography platform that uses quantum key distribution (QKD) to provide unbreakable encryption for secure communications and data protection.,
     features[;
-  'Quantum key distribution (QKD)',
+  'Quantum key distribution (QKD),
   'Post-quantum cryptography algorithms',
   'Quantum random number generation',
   'Secure key management',
@@ -453,7 +465,8 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [{
     color: 'from-indigo-600 to-purple-700,
     textColor:,
   text-indigo-400',
-    link: 'https://ziontechgroup.com/quantum-cryptography-platform,
+    link: 'http,
+    s://ziontechgroup.com/quantum-cryptography-platform,
     marketPosition:,
   First-to-market quantum cryptography platform. Competes with ID Quantique ($2000/month), Toshiba Quantum ($1500/month). Our advantage: Affordable platform with comprehensive quantum security.,
     targetAudience[;
@@ -475,9 +488,9 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [{
   'Secure communications, Data protection, Key management, Quantum network security'],
     roi: 'Investment in quantum-resistant security with regulatory compliance benefits,
     competitors[,
-  ID Quantique ($2000/month)',
-  'Toshiba Quantum ($1500/month)',
-  'Quantum Xchange ($1800/month)'],
+  ID Quantique ($2000/month),
+  'Toshiba Quantum ($1500/month),
+  'Quantum Xchange ($1800/month)],
     marketSize: '$5B quantum cryptography market,
     growthRate:;
   '280% YoY',
@@ -517,7 +530,8 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [{
     color: 'from-slate-600 to-gray-700,
     textColor:,
   text-slate-400',
-    link: 'https://ziontechgroup.com/ai-robotics-automation,
+    link: 'http,
+    s://ziontechgroup.com/ai-robotics-automation,
     marketPosition:,
   Competes with ABB Robotics ($1000/month), KUKA Robotics ($1200/month). Our advantage: AI-first approach with affordable pricing.,
     targetAudience[;
@@ -539,9 +553,9 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [{
   'Manufacturing automation, Warehouse automation, Logistics optimization, Quality control'],
     roi: 'Average 350% ROI with 40% increase in productivity and 30% reduction in operational costs,
     competitors[,
-  ABB Robotics ($1000/month)',
-  'KUKA Robotics ($1200/month)',
-  'FANUC Robotics ($800/month)'],
+  ABB Robotics ($1000/month),
+  'KUKA Robotics ($1200/month),
+  'FANUC Robotics ($800/month)],
     marketSize: '$32B AI robotics market,
     growthRate:;
   '240% YoY',

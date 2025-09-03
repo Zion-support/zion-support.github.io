@@ -50,7 +50,6 @@ class MimeTypeFallback {
   ':,
   audio / wav;
   ',.flac': 'audio / flac}
-;
   private fallbackUrls: Map < string, string> = new Map () ;
   private cdnFallbacks = [,
   'https: //cdn.jsdelivr.net,https://unpkg.com,
@@ -59,92 +58,115 @@ class MimeTypeFallback {
     this.setupFallbackUrls () }
   private setupFallbackUrls() {
     // Map problematic URLs to CDN fallbacks,
-  this.fallbackUrls.set(
+  this.fallbackUrls.set('
   '/js / index - C64WnLOI.js',https: //cdn.jsdelivr.net / gh / ziontechgroup / zion - website@main / dist / js / index - C64WnLOI.js;
   ') ';
-    this.fallbackUrls.set(
+    this.fallbackUrls.set('
   '/css / index - RK9lga5l.css,https://cdn.jsdelivr.net / gh / ziontechgroup / zion - website@main / dist / css / index - RK9lga5l.css,
   ) ';
-    this.fallbackUrls.set(
+    this.fallbackUrls.set('
   '/js / react - vendor - ClxMxoJB.js',https: //cdn.jsdelivr.net / gh / ziontechgroup / zion - website@main / dist / js / react - vendor - ClxMxoJB.js;
   ') ';
-    this.fallbackUrls.set(
+    this.fallbackUrls.set('
   '/js / router - vendor - 9KcRWrrL.js,https://cdn.jsdelivr.net / gh / ziontechgroup / zion - website@main / dist / js / router - vendor - 9KcRWrrL.js,
   ) ';
-    this.fallbackUrls.set(
+    this.fallbackUrls.set('
   '/js / ui - vendor - B31yGDq-.js',https: //cdn.jsdelivr.net / gh / ziontechgroup / zion - website@main / dist / js / ui - vendor - B31yGDq-.js;
   ') ';
-    this.fallbackUrls.set(
+    this.fallbackUrls.set('
   '/js / utils - vendor - CrFdsnXa.js,https://cdn.jsdelivr.net / gh / ziontechgroup / zion - website@main / dist / js / utils - vendor - CrFdsnXa.js,
   ) }
-  getMimeType (filename: string) : string {
+  getMimeType (filename: string) : string {'
 ';
     return this.mimeTypes[ext] ||;
   'application / octet - stream}
+<<<<<<< HEAD
   private getFileExtension (filename: string) : string {
   '
+=======
+  private getFileExtension (filename: string) : string {'
+  ';
+>>>>>>> main
     if (lastDot === -1) return ''
     return filename.substring (lastDot) .toLowerCase () }
-  async checkAndFixMimeType (url: string: any): Promise < any> {
-    try {
-      if (!response.ok) {console.warn (`Resource not found: ${url}`) ;
+  async checkAndFixMimeType (url: strin,
+    g: any): Promise < any> {
+    try {'
+      if (!response.ok) {console.warn (`Resource not foun,
+    d: ${url}`) ;
         return false}
 :pages.disabled/utils/mimeTypeFallback.tsx;
-      if (!contentType) {
+      if (!contentType) {`
 `console.warn (`No content - type header for: ${url}`) ;
         return false}
 :pages.disabled/utils/mimeTypeFallback.tsx;
-      if (contentType.includes (expectedType) ||;
+      if (contentType.includes (expectedType) ||;`
   ';
         contentType.includes ('application / octet - stream;
-  ') ) {
-        return true // MIME type is correct or generic}`;
+  ') ) {'
+        return true // MIME type is correct or generic}`;`
       console.warn (`MIME type mismatch for ${url}: expected ${expectedType}, got ${contentType}`) ;
 :pages.disabled/utils/mimeTypeFallback.tsx;
+<<<<<<< HEAD
       // Try to fix with fallback URL
       return await this.tryFallbackUrl (url) } catch (error) {
+=======
+      // Try to fix with fallback URL;
+      return await this.tryFallbackUrl (url) } catch (error) {`
+>>>>>>> main
 `console.error (`Error checking MIME type for ${url}:`, error)       return await this.tryFallbackUrl (url) }
   }
 :pages.disabled/utils/mimeTypeFallback.tsx
-  private async tryFallbackUrl (originalUrl: string: any): Promise < any> {
-    if (fallbackUrl) {
-`;
-      console.log (`Trying fallback URL: ${fallbackUrl}`) ;
+  private async tryFallbackUrl (originalUrl: strin,
+    g: any): Promise < any> {
+    if (fallbackUrl) {`
+`;`
+      console.log (`Trying fallback UR,
+    L: ${fallbackUrl}`) ;
       try {
         if (response.ok) {
-          if (contentType && contentType.includes (expectedType) ) {
+          if (contentType && contentType.includes (expectedType) ) {`
 `console.log (`Fallback URL has correct MIME type: ${fallbackUrl}`)             this.replaceResource (originalUrl, fallbackUrl) ;
             return true}
         }
-:pages.disabled/utils/mimeTypeFallback.tsx} catch (error) {
+:pages.disabled/utils/mimeTypeFallback.tsx} catch (error) {`
 `console.error (`Fallback URL failed: ${fallbackUrl}`, error) }    }
     return false}
 :pages.disabled/utils/mimeTypeFallback.tsx;
   private replaceResource (originalUrl: string, fallbackUrl: string) {
+<<<<<<< HEAD
     // Replace script tags;
     scripts.forEach (script => { (script as HTMLScriptElement) .src = fallbackUrl`;
       console.log (`Replaced script source: ${originalUrl} -> ${fallbackUrl}`) })
     // Replace stylesheet links
     links.forEach (link => { (link as HTMLLinkElement) .href = fallbackUrl`
+=======
+    // Replace script tags;`
+    scripts.forEach (script => { (script as HTMLScriptElement) .src = fallbackUrl`;`
+      console.log (`Replaced script sourc,
+    e: ${originalUrl} -> ${fallbackUrl}`) })
+    // Replace stylesheet links;`
+    links.forEach (link => { (link as HTMLLinkElement) .href = fallbackUrl``
+>>>>>>> main
       console.log (`Replaced stylesheet href: ${originalUrl} -> ${fallbackUrl}`) })}
-  async preloadCriticalResources () : Promise < any> {
+  async preloadCriticalResources () : Promise < any> {`
 ';
-    console.log(
+    console.log('
   '🔍 Preloading critical resources...') ;
     for (const resource of criticalResources) {
       try {
-        if (!isValid) {
-`;
+        if (!isValid) {'
+`;`
           console.warn (`Critical resource has MIME type issues: ${resource}`) }
-      } catch (error) {
+      } catch (error) {`
 `console.error (`Error preloading resource: ${resource}`, error) }    }
   }
 :pages.disabled/utils/mimeTypeFallback.tsx;
   createResourceElement (url: string,
-,
+,`
   type: 'script;
   ' | 'stylesheet;
-  ') : HTMLElement {
+  ') : HTMLElement {'
 ';
     if (type ===;
   'script') {script.src = url;
@@ -159,22 +181,31 @@ class MimeTypeFallback {
   'text / css';
       return link}
   }: pages.disabled/utils/mimeTypeFallback.tsx;
+<<<<<<< HEAD
   injectResource (url: anystring, type: 'script
   ' | 'stylesheet
+=======
+  injectResource (url: anystring, type: 'script;
+  ' | 'stylesheet'
+>>>>>>> main
   ': any): Promise < any> {
     return new Promise ( (resolve, reject) => {
-      element.onload = () => {
-`;
+      element.onload = () => {'
+`;`
         console.log (`✅ Resource loaded successfully: ${url}`) ;
         resolve () }
-;
-      element.onerror = () => {
-`;
-        console.error (`❌ Failed to load resource: ${url}`) `;
-        reject (new Error (`Failed to load resource: ${url}`) ) };
-  if (type ===;
+      element.onerror = () => {`
+`;`
+        console.error (`❌ Failed to load resource: ${url}`) `;`
+        reject (new Error (`Failed to load resource: ${url}`) ) }
+  if (type ===;`
   'script') {
         document.head.appendChild (element) } else {document.head.appendChild (element) }
     })}
+<<<<<<< HEAD
 }: pages.disabled/utils/mimeTypeFallback.tsx
 // Create singleton instance`
+=======
+}: pages.disabled/utils/mimeTypeFallback.tsx;
+// Create singleton instance``
+>>>>>>> main

@@ -2,11 +2,11 @@
 const fs = require('fs-extra');
 const path = require('path');
 const glob = require('glob');
-async function fixTypeScriptSyntaxErrors() {
+async function fixTypeScriptSyntaxErrors() {'
 // // // console.log('🔧 Fixing TypeScript syntax errors...');// Find all TypeScript files with syntax errors;
   const files = glob.sync('pages/**/*-chat.tsx');
   for (const file of files) {
-    try {
+    try {'
 // // // console.log(`Processing: ${file}`);const content = await fs.readFile(file, 'utf8');
       let modified = false;
       // Fix variable names that start with numbers;
@@ -23,7 +23,7 @@ async function fixTypeScriptSyntaxErrors() {
             lines[i] = line.replace(oldName, newName);
             modified = true;
 // // // console.log(`  Fixed variable name: ${oldName} -> ${newName}`)}
-// Fix function names that start with numbers;
+// Fix function names that start with numbers;`
         if (line.includes('function ') && /function\s+[0-9]/.test(line)) {
           const match = line.match(/function\s+([0-9][a-zA-Z0-9]*)/);
           if (match) {
@@ -33,17 +33,22 @@ async function fixTypeScriptSyntaxErrors() {
             lines[i] = line.replace(oldName, newName);
             modified = true;
 // // // console.log(`  Fixed function name: ${oldName} -> ${newName}`);
-      if (modified) {
+      if (modified) {`
         await fs.writeFile(file, lines.join('\n'));
+<<<<<<< HEAD
         // // // console.log(`✅ Fixed syntax errors in: ${file}`)} catch (error) {
       // // // console.error(`❌ Error processing ${file}:`, error.message)
+=======
+        // // // console.log(`✅ Fixed syntax errors in: ${file}`)} catch (error) {`
+      // // // console.error(`❌ Error processing ${file}:`, error.message);`
+>>>>>>> main
   // // // console.log('✅ TypeScript syntax error fixing completed')}
       }
-      if (modified) {
+      if (modified) {'
         await fs.writeFile(file, lines.join('\n'))
 // // // // // // // console.log(`✅ Fixed syntax errors in: ${file}`)}
-    } catch (error) {
+    } catch (error) {`
       // // // // // // // console.error(`❌ Error processing ${file}:`, error.message)}
-  }
+  }`
   // // // // // // // console.log('✅ TypeScript syntax error fixing completed')}
 }}}}}}}}}

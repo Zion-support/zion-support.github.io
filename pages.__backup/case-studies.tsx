@@ -13,9 +13,14 @@ import Footer from;
 const CaseStudies: NextPage = () => {
   const [selectedIndustry, setSelectedIndustry] = useState(,
   All');
-  const [selectedService, setSelectedService] = useState(
+  const [selectedService, setSelectedService] = useState('
   'All');
-  const caseStudies = [{
+<<<<<<< HEAD
+  const caseStudies = [{'
+=======
+  const caseStudies = [
+  {
+>>>>>>> main
       id: 'fintech-ai-fraud-detection,
       title:,
   FinTech Revolution: AI-Powered Fraud Detection System,
@@ -28,7 +33,8 @@ const CaseStudies: NextPage = () => {
       solution:,
   Implemented advanced AI fraud detection system with real-time analysis',
       results: {
-        fraudReduction:;
+        fraudReductio,
+    n:;
   '89%,
         falsePositives:,
   76%',
@@ -41,10 +47,16 @@ const CaseStudies: NextPage = () => {
       technologies: [
   'Machine Learning,
 ,
+<<<<<<< HEAD
   Real-time Analytics',
   'Behavioral Analysis',
   'Pattern Recognition'],
+      metrics: [{ labe,
+    l:'
+=======
+  Real-time Analytics,Behavioral Analysis,Pattern Recognition'],
       metrics: [{ label:
+>>>>>>> main
   'Fraud Detection Rate, value:,
   99.2%', improvement: '+89% },
         { label:,
@@ -56,8 +68,9 @@ const CaseStudies: NextPage = () => {
   Annual Savings', value: '$2.4M, improvement:,
   New' }
       ],
-      testimonial: {
-        quote: 'Zion Tech Group;
+      testimonial: {'
+        quot,
+    e: 'Zion Tech Group;
   's AI solution has transformed our fraud detection capabilities. Weve seen an 89% reduction in fraud while dramatically improving customer experience.',
         author:,
   Sarah Mitchell',
@@ -72,7 +85,8 @@ const CaseStudies: NextPage = () => {
     {
       id:,
   healthcare-ai-diagnostics',
-      title: 'Healthcare Innovation: AI-Powered Medical Diagnostics Platform,
+      title: 'Healthcare Innovatio,
+    n: AI-Powered Medical Diagnostics Platform,
       company:,
   MediCore Health System',
       industry: 'Healthcare,
@@ -82,7 +96,8 @@ const CaseStudies: NextPage = () => {
       solution:,
   Developed AI diagnostic platform with computer vision and predictive analytics',
       results: {
-        diagnosticAccuracy:;
+        diagnosticAccurac,
+    y:;
   '94%,
         processingTime:,
   78%',
@@ -95,10 +110,16 @@ const CaseStudies: NextPage = () => {
       technologies: [;
   'Computer Vision,
 ,
+<<<<<<< HEAD
   Deep Learning',
   'Medical Imaging',
   'Predictive Analytics'],
+      metrics: [{ labe,
+    l:;
+=======
+  Deep Learning,Medical Imaging,Predictive Analytics'],
       metrics: [{ label:;
+>>>>>>> main
   'Diagnostic Accuracy, value:,
   96.7%', improvement: '+94% },
         { label:,
@@ -110,8 +131,9 @@ const CaseStudies: NextPage = () => {
   Cost Reduction', value: '$1.8M, improvement:,
   Annual' }
       ],
-      testimonial: {
-        quote: 'The AI diagnostics platform has revolutionized our patient care. Were seeing faster, more accurate diagnoses that are saving lives.',
+      testimonial: {'
+        quot,
+    e: 'The AI diagnostics platform has revolutionized our patient care. Were seeing faster, more accurate diagnoses that are saving lives.',
         author:,
   Dr. Michael Chen;
   ',
@@ -129,7 +151,8 @@ const CaseStudies: NextPage = () => {
       id:,
   ecommerce-cloud-migration;
   ',
-      title: 'E-commerce Transformation: Cloud Migration & Optimization,
+      title: 'E-commerce Transformatio,
+    n: Cloud Migration & Optimization,
       company:,
   RetailMax Global;
   ',
@@ -141,8 +164,9 @@ const CaseStudies: NextPage = () => {
       solution:,
   Complete cloud migration with auto-scaling and performance optimization;
   ',
-      results: {
-        uptime: '99.9%,
+      results: {'
+        uptim,
+    e: '99.9%,
         loadTimes:,
   68%;
   ',
@@ -156,11 +180,12 @@ const CaseStudies: NextPage = () => {
   ',
       technologies: ['AWS, ,
   Kubernetes;
-  ', 'Auto-scaling;
-  ', 'Load Balancing;
-  ', 'CDN;
+  ,Auto-scaling;
+  ,Load Balancing;
+  ,CDN;
   '],
-      metrics: [{ label: 'Uptime, value:,
+      metrics: [{ labe,
+    l: 'Uptime, value:,
   99.97%;
   ', improvement: '+99.9% },
         { label:,
@@ -176,8 +201,9 @@ const CaseStudies: NextPage = () => {
   ', value: '-45%, improvement: '-45%;
   ' }
       ],
-      testimonial: {
-        quote: 'Our Black Friday traffic increased 300% with zero downtime. The cloud migration has been transformational for our business.',
+      testimonial: {'
+        quot,
+    e: 'Our Black Friday traffic increased 300% with zero downtime. The cloud migration has been transformational for our business.',
         author:,
   Jennifer Walsh;
   ',
@@ -195,7 +221,8 @@ const CaseStudies: NextPage = () => {
       id:,
   manufacturing-iot-automation;
   ',
-      title: 'Smart Manufacturing: IoT-Powered Production Optimization,
+      title: 'Smart Manufacturin,
+    g: IoT-Powered Production Optimization,
       company:,
   TechManufacture Inc;
   ',
@@ -207,8 +234,9 @@ const CaseStudies: NextPage = () => {
       solution:,
   Implemented IoT sensors and automation systems for smart manufacturing;
   ',
-      results: {
-        efficiency: '42%,
+      results: {'
+        efficienc,
+    y: '42%,
         downtime:,
   67%;
   ',
@@ -222,10 +250,11 @@ const CaseStudies: NextPage = () => {
   ',
       technologies: ['IoT Sensors, ,
   Edge Computing;
-  ', 'Predictive Maintenance;
-  ', 'Real-time Analytics;
+  ,Predictive Maintenance;
+  ,Real-time Analytics;
   '],
-      metrics: [{ label: 'Production Efficiency, value:,
+      metrics: [{ labe,
+    l: 'Production Efficiency, value:,
   +42%;
   ', improvement: '+42% },
         { label:,
@@ -241,8 +270,9 @@ const CaseStudies: NextPage = () => {
   ', value: '-28%, improvement: '-28%;
   ' }
       ],
-      testimonial: {
-        quote: 'The smart manufacturing solution has given us unprecedented visibility and control over our production processes.',
+      testimonial: {'
+        quot,
+    e: 'The smart manufacturing solution has given us unprecedented visibility and control over our production processes.',
         author:,
   David Rodriguez;
   ',
@@ -260,7 +290,8 @@ const CaseStudies: NextPage = () => {
       id:,
   startup-devops-platform;
   ',
-      title: 'Startup Success: Autonomous DevOps Platform Implementation,
+      title: 'Startup Succes,
+    s: Autonomous DevOps Platform Implementation,
       company:,
   InnovateTech Startup;
   ',
@@ -272,8 +303,9 @@ const CaseStudies: NextPage = () => {
       solution:,
   Implemented autonomous DevOps platform with CI/CD and self-healing infrastructure;
   ',
-      results: {
-        deploymentSpeed: '85%,
+      results: {'
+        deploymentSpee,
+    d: '85%,
         errorReduction:,
   92%;
   ',
@@ -287,11 +319,12 @@ const CaseStudies: NextPage = () => {
   ',
       technologies: ['CI/CD Pipeline, ,
   Docker;
-  ', 'Kubernetes;
-  ', 'Monitoring;
-  ', 'Infrastructure as Code;
+  ,Kubernetes;
+  ,Monitoring;
+  ,Infrastructure as Code;
   '],
-      metrics: [{ label: 'Deployment Speed, value:,
+      metrics: [{ labe,
+    l: 'Deployment Speed, value:,
   < 5 min;
   ', improvement: '+85% },
         { label:,
@@ -307,8 +340,9 @@ const CaseStudies: NextPage = () => {
   ', value: '-70%, improvement: '-70%;
   ' }
       ],
-      testimonial: {
-        quote: 'The DevOps platform has been a game-changer. We can now deploy features multiple times per day with complete confidence.',
+      testimonial: {'
+        quot,
+    e: 'The DevOps platform has been a game-changer. We can now deploy features multiple times per day with complete confidence.',
         author:,
   Alex Thompson;
   ',
@@ -323,52 +357,75 @@ const CaseStudies: NextPage = () => {
   ',
       teamSize: '5 experts}
   ];
-  const industries = ['All
+<<<<<<< HEAD
+  const industries = ['All'
   ', 'Financial Services;
   ', 'Healthcare;
   ', 'E-commerce;
   ', 'Manufacturing;
   ', 'Technology;
   '];
-  const services = ['All
+  const services = ['All'
   ', 'AI & Machine Learning;
   ', 'Cloud & Infrastructure;
   ', 'DevOps & Infrastructure;
   ', 'IoT & Automation;
   ', 'Cybersecurity;
+=======
+  const industries = ['All
+  ,Financial Services;
+  ,Healthcare;
+  ,E-commerce;
+  ,Manufacturing;
+  ,Technology;
   '];
-  const filteredCaseStudies = caseStudies.filter(study => {
+  const services = ['All
+  ,AI & Machine Learning;
+  ,Cloud & Infrastructure;
+  ,DevOps & Infrastructure;
+  ,IoT & Automation;
+  ,Cybersecurity;
+>>>>>>> main
+  '];
+  const filteredCaseStudies = caseStudies.filter(study => {'
     const matchesIndustry = selectedIndustry === 'All;
   ' || study.industry === selectedIndustry;
+<<<<<<< HEAD
     const matchesService = selectedService === 'All
   ' || study.service === selectedService    return matchesIndustry && matchesService})
   const featuredCaseStudies = caseStudies.filter(study => study.featured)
   return(
+=======
+    const matchesService = selectedService === 'All;
+  ' || study.service === selectedService    return matchesIndustry && matchesService});
+  const featuredCaseStudies = caseStudies.filter(study => study.featured);
+  return('
+>>>>>>> main
     <div className='min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50'>
       <Head>
         <title>
           Case Studies - Zion Tech Group | Success Stories & Client Results
         </title>
-        <meta
+        <meta'
           name='description';
           content='Explore our successful client implementations and transformative technology solutions. See how we've helped businesses across industries achieve remarkable results with AI, cloud computing, and digital transformation.'/>
-        <meta
+        <meta'
           name='keywords';
           content='case studies, client success stories, AI implementation, cloud migration, digital transformation results, technology solutions'/>
       </Head>
       <Navigation />
       <main className='container mx-auto px-4 py-16 pt-32'>
         {/* Hero Section */}
-        <div className='text-center mb-16'>
+        <div className='text-center mb-16>
           <h1 className='text-4xl md:text-6xl font-bold text-gray-900 mb-6'>
             Success Stories & Case Studies
-          </h1>
+          </h1>'
           <p className='text-xl text-gray-600 max-w-4xl mx-auto mb-8'>
             Discover how we&apos;ve helped businesses across industries achieve;
             remarkable results through innovative technology solutions. From;
             AI-powered systems to cloud transformations, see the real impact of
             our work.
-          </p>
+          </p>'
           <div className='flex flex-wrap justify-center gap-4 text-sm text-gray-500'>
             <span>📊 Proven Results</span>
             <span>🏆 Award-Winning Projects</span>
@@ -377,51 +434,51 @@ const CaseStudies: NextPage = () => {
           </div>
         </div>
         {/* Featured Case Studies */}
-        <section className='mb-16'>
+        <section className='mb-16>
           <h2 className='text-3xl font-bold text-gray-900 mb-8'>
             Featured Success Stories
-          </h2>
+          </h2>'
           <div className='grid lg:grid-cols-2 gap-12'>
             {featuredCaseStudies.map(study => (
               <div
                 key={study.id}
-                className='bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden'>
-                <div className='p-8'>
-                  <div className='flex items-center justify-between mb-6'>
-                    <div className='flex items-center space-x-3'>
+                className='bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden>
+                <div className='p-8>
+                  <div className='flex items-center justify-between mb-6>
+                    <div className='flex items-center space-x-3>
                       <div className='text-4xl'>{study.image}</div>
-                      <div>
+                      <div>'
                         <div className='text-sm text-blue-600 font-medium'>
                           {study.service}
-                        </div>
+                        </div>'
                         <div className='text-xs text-gray-500'>
                           {study.industry}
                         </div>
                       </div>
-                    </div>
+                    </div>'
                     <span className='bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-medium'>
                       Featured
                     </span>
-                  </div>
+                  </div>'
                   <h3 className='text-2xl font-bold text-gray-900 mb-3'>
                     {study.title}
-                  </h3>
+                  </h3>'
                   <p className='text-lg font-medium text-blue-600 mb-4'>
                     {study.company}
-                  </p>
+                  </p>'
                   <p className='text-gray-600 mb-6'>{study.description}</p>
                   {/* Key Metrics */}
                   <div className='grid grid-cols-2 gap-4 mb-6'>
                     {study.metrics.slice(0, 4).map((metric, idx) => (
                       <div
                         key={idx}
-                        className='text-center p-3 bg-gray-50 rounded-lg'>
+                        className='text-center p-3 bg-gray-50 rounded-lg>
                         <div className='text-2xl font-bold text-blue-600'>
                           {metric.value}
-                        </div>
+                        </div>'
                         <div className='text-sm text-gray-600'>
                           {metric.label}
-                        </div>
+                        </div>'
                         <div className='text-xs text-green-600 font-medium'>
                           {metric.improvement}
                         </div>
@@ -429,31 +486,31 @@ const CaseStudies: NextPage = () => {
                     ))}
                   </div>
                   {/* Testimonial */}
-                  <div className='bg-blue-50 rounded-lg p-4 mb-6'>
+                  <div className='bg-blue-50 rounded-lg p-4 mb-6>
                     <p className='text-gray-700 italic mb-3'>
                       &quot{study.testimonial.quote}&quot
-                    </p>
-                    <div className='flex items-center space-x-3'>
+                    </p>'
+                    <div className='flex items-center space-x-3>
                       <div className='w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-sm'>
                         {study.testimonial.avatar}
                       </div>
-                      <div>
+                      <div>'
                         <div className='font-medium text-gray-900'>
                           {study.testimonial.author}
-                        </div>
+                        </div>'
                         <div className='text-sm text-gray-500'>
                           {study.testimonial.role}
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div className='flex items-center justify-between'>
+                  </div>'
+                  <div className='flex items-center justify-between>
                     <div className='flex items-center space-x-4 text-sm text-gray-500'>
                       <span>⏱️ {study.duration}</span>
                       <span>👥 {study.teamSize}</span>
                     </div>
-                    <Link
-                      href={`/case-studies/${study.id}`}
+                    <Link'
+                      href={`/case-studies/${study.id}`}`
                       className='bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200'>
                       View Details
                     </Link>
@@ -464,80 +521,91 @@ const CaseStudies: NextPage = () => {
           </div>
         </section>
         {/* Filters */}
-        <section className='mb-12'>
-          <div className='bg-white rounded-2xl shadow-lg p-6'>
+        <section className='mb-12>
+          <div className='bg-white rounded-2xl shadow-lg p-6>
             <div className='grid md:grid-cols-2 gap-6'>
               {/* Industry Filter */}
-              <div>
+              <div>'
                 <label className='block text-sm font-medium text-gray-700 mb-2'>
                   Filter by Industry
                 </label>
                 <select;
                   value={selectedIndustry}
                   onChange={e => setSelectedIndustry(e.target.value)}
-                  className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
+                  className='w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focu,
+    s:ring-blue-500 focu,
+    s:border-transparent'
                 >{industries.map(industry => (
                     <option key={industry} value={industry}>
                       {industry}
                     </option>
-                  ))}
+                  ));
                 </select>
               </div>
               {/* Service Filter */}
-              <div>
+              <div>'
                 <label className='block text-sm font-medium text-gray-700 mb-2'>
                   Filter by Service
                 </label>
                 <select;
                   value={selectedService}
                   onChange={e => setSelectedService(e.target.value)}
-                  className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
+                  className='w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focu,
+    s:ring-blue-500 focu,
+    s:border-transparent'
                 >{services.map(service => (
                     <option key={service} value={service}>
                       {service}
                     </option>
-                  ))}
+                  ));
                 </select>
               </div>
             </div>
           </div>
         </section>
         {/* Results Count */}
+<<<<<<< HEAD
         <div className='mb-8'>
           <p className='text-gray-600'>
             Showing <span className='font-semibold'>{filteredCaseStudies.length}</span> case studies{selectedIndustry !==
+=======
+        <div className='mb-8>
+          <p className='text-gray-600>
+            Showing <span className='font-semibold'>{filteredCaseStudies.length}</span> case studies{selectedIndustry !==;
+>>>>>>> main
   'All' && ` in ${selectedIndustry}`}
-            {selectedService !==
+            {selectedService !==`
   'All' && ` for ${selectedService}`}          </p>
         </div>
-        {/* All Case Studies */}
-        <section className='mb-16'>
+        {/* All Case Studies */}`
+        <section className='mb-16>
           <h2 className='text-3xl font-bold text-gray-900 mb-8'>
             All Case Studies
-          </h2>
-          <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
+          </h2>'
+          <div className='grid md:grid-cols-2 l,
+    g:grid-cols-3 gap-8'>
             {filteredCaseStudies.map(study => (
               <div
                 key={study.id}
-                className='bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden'>
-                <div className='p-6'>
-                  <div className='flex items-center justify-between mb-4'>
-                    <div className='text-3xl'>{study.image}</div>
-                    <div className='text-right'>
+                className='bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden>
+                <div className='p-6>
+                  <div className='flex items-center justify-between mb-4>
+                    <div className='text-3xl'>{study.image}</div>'
+                    <div className='text-right>
                       <div className='text-xs text-gray-500'>
                         {study.industry}
-                      </div>
+                      </div>'
                       <div className='text-xs text-blue-600 font-medium'>
                         {study.service}
                       </div>
                     </div>
-                  </div>
+                  </div>'
                   <h3 className='text-lg font-bold text-gray-900 mb-2'>
                     {study.title}
-                  </h3>
+                  </h3>'
                   <p className='text-blue-600 font-medium mb-3'>
                     {study.company}
-                  </p>
+                  </p>'
                   <p className='text-gray-600 text-sm mb-4 line-clamp-3'>
                     {study.description}
                   </p>
@@ -546,22 +614,22 @@ const CaseStudies: NextPage = () => {
                     {study.metrics.slice(0, 2).map((metric, idx) => (
                       <div
                         key={idx}
-                        className='text-center p-2 bg-gray-50 rounded'>
+                        className='text-center p-2 bg-gray-50 rounded>
                         <div className='text-lg font-bold text-blue-600'>
                           {metric.value}
-                        </div>
+                        </div>'
                         <div className='text-xs text-gray-600'>
                           {metric.label}
                         </div>
                       </div>
                     ))}
-                  </div>
-                  <div className='flex items-center justify-between'>
+                  </div>'
+                  <div className='flex items-center justify-between>
                     <div className='text-xs text-gray-500'>
                       {study.duration} • {study.teamSize}
                     </div>
-                    <Link
-                      href={`/case-studies/${study.id}`}
+                    <Link'
+                      href={`/case-studies/${study.id}`}`
                       className='text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors duration-200'>
                       View Details →
                     </Link>
@@ -572,57 +640,60 @@ const CaseStudies: NextPage = () => {
           </div>
         </section>
         {/* Statistics Section */}
-        <section className='mb-16'>
-          <div className='bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white'>
-            <div className='text-center mb-12'>
-              <h2 className='text-3xl font-bold mb-4'>Our Track Record</h2>
+        <section className='mb-16>
+          <div className='bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white>
+            <div className='text-center mb-12>
+              <h2 className='text-3xl font-bold mb-4'>Our Track Record</h2>'
               <p className='text-xl opacity-90 max-w-2xl mx-auto'>
                 These numbers represent real results achieved for our clients
                 across various industries and project types.
               </p>
-            </div>
-            <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
-              <div className='text-center'>
-                <div className='text-4xl font-bold mb-2'>500+</div>
+            </div>'
+            <div className='grid md:grid-cols-2 l,
+    g:grid-cols-4 gap-8>
+              <div className='text-center>
+                <div className='text-4xl font-bold mb-2'>500+</div>'
                 <div className='text-lg opacity-90'>Projects Delivered</div>
-              </div>
-              <div className='text-center'>
-                <div className='text-4xl font-bold mb-2'>99.9%</div>
+              </div>'
+              <div className='text-center>
+                <div className='text-4xl font-bold mb-2'>99.9%</div>'
                 <div className='text-lg opacity-90'>Client Satisfaction</div>
-              </div>
-              <div className='text-center'>
-                <div className='text-4xl font-bold mb-2'>$50M+</div>
+              </div>'
+              <div className='text-center>
+                <div className='text-4xl font-bold mb-2'>$50M+</div>'
                 <div className='text-lg opacity-90'>
                   Client Savings Generated
                 </div>
-              </div>
-              <div className='text-center'>
-                <div className='text-4xl font-bold mb-2'>25+</div>
+              </div>'
+              <div className='text-center>
+                <div className='text-4xl font-bold mb-2'>25+</div>'
                 <div className='text-lg opacity-90'>Industries Served</div>
               </div>
             </div>
           </div>
         </section>
         {/* Call to Action */}
-        <section className='text-center'>
-          <div className='bg-white rounded-2xl shadow-lg p-12'>
+        <section className='text-center>
+          <div className='bg-white rounded-2xl shadow-lg p-12>
             <h2 className='text-3xl font-bold text-gray-900 mb-6'>
               Ready to Create Your Success Story?
-            </h2>
+            </h2>'
             <p className='text-xl text-gray-600 mb-8 max-w-2xl mx-auto'>
               Let&apos;s discuss how we can help you achieve similar results;
               with innovative technology solutions tailored to your specific
               business needs.
-            </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <Link
+            </p>'
+            <div className='flex flex-col sm: flex-row gap-4 justify-center'>
+              <Link'
                 href='/contact';
-                className='bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-300'>
+                className='bg-blue-600 hove,
+    r:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-300'>
                 Start Your Project
               </Link>
-              <Link
+              <Link'
                 href='/services';
-                className='bg-gray-100 hover:bg-gray-200 text-gray-700 px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-300'>
+                className='bg-gray-100 hove,
+    r:bg-gray-200 text-gray-700 px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-300'>
                 Explore Our Services
               </Link>
             </div>
@@ -632,6 +703,11 @@ const CaseStudies: NextPage = () => {
       <Footer />
     </div>
   )}
+<<<<<<< HEAD
 ;
 export default CaseStudies
 export default CaseStudies
+=======
+export default CaseStudies;
+export default CaseStudies'
+>>>>>>> main
