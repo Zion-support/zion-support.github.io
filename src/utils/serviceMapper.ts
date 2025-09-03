@@ -5,4 +5,4 @@ init: () => {
     console.log('serviceMapper initialized'),
   }
 }
-export default serviceMapper
+export default serviceMapper;

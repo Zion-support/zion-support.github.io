@@ -152,5 +152,5 @@ export default function Quantumtechnology() {
         </div>
       </section>
     </div>
-  ),
-}
+  )
+};

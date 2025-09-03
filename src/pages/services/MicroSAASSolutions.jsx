@@ -152,5 +152,5 @@ export default function Microsaassolutions() {
         </div>
       </section>
     </div>
-  ),
-}
+  )
+};

@@ -152,5 +152,5 @@ export default function Spacetech() {
         </div>
       </section>
     </div>
-  ),
-}
+  )
+};

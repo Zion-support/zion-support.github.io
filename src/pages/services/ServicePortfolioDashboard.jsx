@@ -152,5 +152,5 @@ export default function Serviceportfoliodashboard() {
         </div>
       </section>
     </div>
-  ),
-}
+  )
+};

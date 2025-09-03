@@ -152,5 +152,5 @@ export default function Quantumneuralnetworkplatform() {
         </div>
       </section>
     </div>
-  ),
-}
+  )
+};

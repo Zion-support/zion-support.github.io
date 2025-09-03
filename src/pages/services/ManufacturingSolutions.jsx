@@ -152,5 +152,5 @@ export default function Manufacturingsolutions() {
         </div>
       </section>
     </div>
-  ),
-}
+  )
+};

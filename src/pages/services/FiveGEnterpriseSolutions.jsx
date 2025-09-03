@@ -152,5 +152,5 @@ export default function Fivegenterprisesolutions() {
         </div>
       </section>
     </div>
-  ),
-}
+  )
+};

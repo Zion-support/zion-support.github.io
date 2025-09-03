@@ -152,5 +152,5 @@ export default function Fivegnetworkoptimization() {
         </div>
       </section>
     </div>
-  ),
-}
+  )
+};

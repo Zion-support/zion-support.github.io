@@ -152,5 +152,5 @@ export default function Incidentresponseplatform() {
         </div>
       </section>
     </div>
-  ),
-}
+  )
+};

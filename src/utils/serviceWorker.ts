@@ -5,4 +5,4 @@ init: () => {
     console.log('serviceWorker initialized'),
   }
 }
-export default serviceWorker
+export default serviceWorker;

@@ -20,5 +20,5 @@ export default function Financialsolutions() {
         </div>
       </div>
     </div>
-  ),
-}
+  )
+};

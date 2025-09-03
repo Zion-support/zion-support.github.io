@@ -5,4 +5,4 @@ init: () => {
     console.log('generateRandomBlogPost initialized'),
   }
 }
-export default generateRandomBlogPost
+export default generateRandomBlogPost;

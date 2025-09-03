@@ -152,5 +152,5 @@ export default function Aiworkflowautomation() {
         </div>
       </section>
     </div>
-  ),
-}
+  )
+};

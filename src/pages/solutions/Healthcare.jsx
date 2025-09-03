@@ -20,5 +20,5 @@ export default function Healthcare() {
         </div>
       </div>
     </div>
-  ),
-}
+  )
+};

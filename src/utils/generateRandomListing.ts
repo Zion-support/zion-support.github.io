@@ -5,4 +5,4 @@ init: () => {
     console.log('generateRandomListing initialized'),
   }
 }
-export default generateRandomListing
+export default generateRandomListing;

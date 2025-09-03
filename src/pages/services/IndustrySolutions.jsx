@@ -152,5 +152,5 @@ export default function Industrysolutions() {
         </div>
       </section>
     </div>
-  ),
-}
+  )
+};

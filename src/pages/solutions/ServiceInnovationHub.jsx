@@ -20,5 +20,5 @@ export default function Serviceinnovationhub() {
         </div>
       </div>
     </div>
-  ),
-}
+  )
+};

@@ -1,8 +1,8 @@
 // contentQualityAnalyzer utility,
 export const contentQualityAnalyzer = {
   // Placeholder utility functions,
-init: () => {
-    console.log('contentQualityAnalyzer initialized'),
+init: function() {
+    console.log('contentQualityAnalyzer initialized')
   }
 }
-export default contentQualityAnalyzer
+export default contentQualityAnalyzer;

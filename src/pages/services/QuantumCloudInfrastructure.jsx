@@ -152,5 +152,5 @@ export default function Quantumcloudinfrastructure() {
         </div>
       </section>
     </div>
-  ),
-}
+  )
+};

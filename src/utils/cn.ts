@@ -5,4 +5,4 @@ init: () => {
     console.log('cn initialized'),
   }
 }
-export default cn
+export default cn;

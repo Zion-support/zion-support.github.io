@@ -5,4 +5,4 @@ init: () => {
     console.log('securityConfig initialized'),
   }
 }
-export default securityConfig
+export default securityConfig;

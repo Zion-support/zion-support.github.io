@@ -1,8 +1,8 @@
-// passwordStrength utility,
+// passwordStrength utility
 export const passwordStrength = {
-  // Placeholder utility functions,
-init: () => {
-    ,
+  // Placeholder utility functions
+  init: () => {
+    console.log('passwordStrength initialized');
   }
-}
-export default passwordStrength
+};
+export default passwordStrength;

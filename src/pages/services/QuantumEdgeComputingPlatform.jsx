@@ -152,5 +152,5 @@ export default function Quantumedgecomputingplatform() {
         </div>
       </section>
     </div>
-  ),
-}
+  )
+};

@@ -1,5 +1,6 @@
-import React from 'react'
-export default function App.test() {
+import React from 'react';
+
+export default function AppTest() {
   return (
     <div className="min-h-screen bg-white">
       <div className="max-w-4xl mx-auto px-6 py-16">
@@ -7,8 +8,7 @@ export default function App.test() {
         <p className="text-lg text-gray-600 mb-8">
           This is a placeholder component for app.test.
         </p>
-        
       </div>
     </div>
-  )
+  );
 }

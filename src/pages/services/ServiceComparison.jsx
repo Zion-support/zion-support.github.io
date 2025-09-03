@@ -152,5 +152,5 @@ export default function Servicecomparison() {
         </div>
       </section>
     </div>
-  ),
-}
+  )
+};

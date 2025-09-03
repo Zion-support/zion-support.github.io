@@ -1,8 +1,8 @@
-// seoOptimizer utility,
+// seoOptimizer utility
 export const seoOptimizer = {
-  // Placeholder utility functions,
-init: () => {
-    ,
+  // Placeholder utility functions
+  init: () => {
+    console.log('seoOptimizer initialized');
   }
-}
-export default seoOptimizer
+};
+export default seoOptimizer;

@@ -20,5 +20,5 @@ export default function Retailsolutions() {
         </div>
       </div>
     </div>
-  ),
-}
+  )
+};

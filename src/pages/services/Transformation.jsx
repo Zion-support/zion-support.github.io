@@ -152,5 +152,5 @@ export default function Transformation() {
         </div>
       </section>
     </div>
-  ),
-}
+  )
+};

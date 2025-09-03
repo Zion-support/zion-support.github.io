@@ -152,5 +152,5 @@ export default function Mobileservices() {
         </div>
       </section>
     </div>
-  ),
-}
+  )
+};

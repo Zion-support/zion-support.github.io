@@ -1,8 +1,8 @@
 // generateRandomBlogPost utility,
 export const generateRandomBlogPost = {
   // Placeholder utility functions,
-init: () => {
-    console.log('generateRandomBlogPost initialized'),
+init: function() {
+    console.log('generateRandomBlogPost initialized')
   }
 }
-export default generateRandomBlogPost
+export default generateRandomBlogPost;

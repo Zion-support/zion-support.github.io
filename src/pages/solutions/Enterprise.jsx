@@ -20,5 +20,5 @@ export default function Enterprise() {
         </div>
       </div>
     </div>
-  ),
-}
+  )
+};

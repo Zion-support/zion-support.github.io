@@ -152,5 +152,5 @@ export default function Digitaltransformation() {
         </div>
       </section>
     </div>
-  ),
-}
+  )
+};

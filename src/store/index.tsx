@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+
 export default function Index() {
   return (
     <div className="min-h-screen bg-white">
@@ -7,8 +8,7 @@ export default function Index() {
         <p className="text-lg text-gray-600 mb-8">
           This is a placeholder component for index.
         </p>
-        
       </div>
     </div>
-  )
+  );
 }

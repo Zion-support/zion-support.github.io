@@ -152,5 +152,5 @@ export default function Fivegprivatenetworksolutions() {
         </div>
       </section>
     </div>
-  ),
-}
+  )
+};

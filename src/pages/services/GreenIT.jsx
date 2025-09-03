@@ -152,5 +152,5 @@ export default function Greenit() {
         </div>
       </section>
     </div>
-  ),
-}
+  )
+};

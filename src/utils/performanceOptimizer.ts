@@ -5,4 +5,4 @@ init: () => {
     console.log('performanceOptimizer initialized'),
   }
 }
-export default performanceOptimizer
+export default performanceOptimizer;

@@ -152,5 +152,5 @@ export default function Marketplace() {
         </div>
       </section>
     </div>
-  ),
-}
+  )
+};

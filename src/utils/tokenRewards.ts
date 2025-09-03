@@ -5,4 +5,4 @@ init: () => {
     console.log('tokenRewards initialized'),
   }
 }
-export default tokenRewards
+export default tokenRewards;

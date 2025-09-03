@@ -152,5 +152,5 @@ export default function Quantumservices() {
         </div>
       </section>
     </div>
-  ),
-}
+  )
+};

@@ -20,5 +20,5 @@ export default function Servicerecommendations() {
         </div>
       </div>
     </div>
-  ),
-}
+  )
+};

@@ -152,5 +152,5 @@ export default function Quantumfinancialtrading() {
         </div>
       </section>
     </div>
-  ),
-}
+  )
+};

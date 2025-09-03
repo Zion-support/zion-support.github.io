@@ -20,5 +20,5 @@ export default function DynamicPage() {
         </div>
       </div>
     </div>
-  ),
-}
+  )
+};

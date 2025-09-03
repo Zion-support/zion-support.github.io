@@ -5,4 +5,4 @@ init: () => {
     console.log('apiErrorHandler initialized'),
   }
 }
-export default apiErrorHandler
+export default apiErrorHandler;

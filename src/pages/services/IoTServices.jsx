@@ -152,5 +152,5 @@ export default function Iotservices() {
         </div>
       </section>
     </div>
-  ),
-}
+  )
+};

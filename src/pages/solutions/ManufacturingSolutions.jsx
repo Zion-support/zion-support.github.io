@@ -20,5 +20,5 @@ export default function Manufacturingsolutions() {
         </div>
       </div>
     </div>
-  ),
-}
+  )
+};

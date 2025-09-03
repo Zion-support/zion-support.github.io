@@ -152,5 +152,5 @@ export default function Iotedgecomputing() {
         </div>
       </section>
     </div>
-  ),
-}
+  )
+};

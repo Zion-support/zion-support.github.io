@@ -53,6 +53,6 @@ const AICustomerServiceAutomation = () => {
         </div>
       </div>
     </>
-  ),
-}
-export default AICustomerServiceAutomation
+  )
+};
+export default AICustomerServiceAutomation;
