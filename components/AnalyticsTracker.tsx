@@ -8,7 +8,6 @@ interface AnalyticsTrackerProps {;
 action: string,;
     label?: string>;
     value?: numbe,r}>}
-;
 const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({,";
 pageName: = "Home,",";
   customEvents: = []}) => {;
@@ -23,8 +22,6 @@ const trackPageView = () => {";
             "custom_parameter_1": "zion_tech_group", }
 ;,
 })}
-    }
-;
     // comment;
 const trackEngagement = () => {;
       let startTime = Date.now();,
@@ -37,7 +34,6 @@ const trackEngagement = () => {;
             // comment;
 window.gtag();,
 }             , })}
-;
       // Track when user leaves,;
 const handleBeforeUnload = () => {;
         isActive = false,;
@@ -47,7 +43,6 @@ if: (typeof window !== "undefined" && window.gtag) {",";
       // Track scroll depth,;
 const trackScrollDepth = () => {;
         const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
-;
       // comment;
 const handleBeforeUnload = () => {;
         isActive = false,;
@@ -76,7 +71,6 @@ if: (target.tagName === "BUTTON" || target.closest("button")) {",",;
               event_category: "button_click,",";
               event_label: buttonTex,t,;
               page_title: pageName: , })}
-;
       // comment;
 const trackFormInteractions = (e: Event) => {,;
         const target = e.target as HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement,";
@@ -98,7 +92,6 @@ const interval = setInterval(trackTimeOnPage, 30000);,
         document.removeEventListener("click", trackButtonClicks);";
         document.removeEventListener("focus", trackFormInteractions, true);";
         clearInterval(interval)}
-;
     // comment;
 const trackCustomEvents = () => {;
       customEvents.forEach(event => {";
@@ -106,7 +99,6 @@ const trackCustomEvents = () => {;
             event_category: event.categor,y,;
             event_label: event.labe,l,;
             value: event.value: , })}
-;
     // comment;
 trackPageView();,
 }
@@ -119,7 +111,6 @@ trackPageView();,
   return (;
 <Head>;
       {/* comment */}
-;
       <script,;>
 async,";
 src = "https: // comment;,
@@ -132,8 +123,7 @@ __html: ",;
             gtag();,
 }
           ";,
-}}
-;
+}
       {/* comment */}";
         dangerouslySetInnerHTML = "{{";
             // comment;
@@ -153,7 +143,6 @@ function trackContactSubmission(formType): any {";
                 event_category: "contact,",";
                 event_label: formTyp,e,;
                 value: 1: , })}
-;
             // comment;
 function trackDemoRequest(demoType): any {";
               gtag("event", "request_demo" {";
@@ -161,5 +150,4 @@ function trackDemoRequest(demoType): any {";
                 event_label: demoTyp,e,;
     </Head>;
   )}
-;
 ""export default AnalyticsTracker}}}}}}}}}}}})))))

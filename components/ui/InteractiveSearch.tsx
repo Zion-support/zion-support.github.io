@@ -3,9 +3,7 @@ interface InteractiveSearchProps {;
   placeholder?: string;
   onSearch?: (query: string) => void,;
   className?: string}
-;
 export default function InteractiveSearch(): any {;
-;
 export default function InteractiveSearch(): any {;
 
   const handleSubmit = (e: React.FormEvent) => {,;
@@ -13,7 +11,6 @@ export default function InteractiveSearch(): any {;
     const formData = new FormData(e.target as HTMLFormElement),";
     const query = formData.get("search") as string,;
     onSearch?.(query)}
-;
   return (";
     <form onSubmit = "{handleSubmit}" className="{className}">";
       <div className="relative">";
@@ -30,4 +27,4 @@ export default function InteractiveSearch(): any {;
       </div>;
     </form>;
   );,
-}}
+}

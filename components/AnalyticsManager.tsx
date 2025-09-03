@@ -4,32 +4,24 @@ import React from 'react';
 declare: global {,;
   interface Window {,;
 gtag: (...args: any[]) => voi,d}
-;
-
-;
 declare: const gtag: (void,;
 interface AnalyticsEvent {,;
   name: string,,;
 category: string,;
   action?: string,;
   label?: string) => $3,value?: number: custom_parameters?: Record<strin,g, any>}
-;
 interface PerformanceMetrics {;
-;
   fcp: number,;
   lcp: number,,;
   fid: number,,;
 cls: number,;
   ttfb: number,;
   loadTime: numbe,r}
-;
 interface UserBehavior {;
-;
   pageViews: number,,;
 sessionDuration: number,;
   bounceRate: number,;
   conversionRate: numbe,r}
-;
 const AnalyticsManager: React.FC: = () => {,;
   const [isInitialize,d, setIsInitialized] = useState();,
 }
@@ -62,10 +54,8 @@ if (typeof gtag !== "undefined") {";
 custom_parameter_1: "user_type,",";
           custom_parameter_2: "session_id", }
       })}
-;
     // Initialize: other analytics services,;
 initializeCustomAnalytics(),;
-;
     // comment;
 initializeCustomAnalytics(),;
     setIsInitialized(true)}, []);,
@@ -118,14 +108,12 @@ gtag("event,", event.name {";
         event_label: event.labe,l,;
         value: event.valu,e,;
         ...event.custom_parameters: })}
-;
     // comment;
 sendAnalyticsEvent(event)}, [isInitialized]);,
 }
   const sendAnalyticsEvent = useCallback(async (event: AnalyticsEvent) => {,;
 try: {;,
-      const eventData = {};
-;
+      const eventData = {}
       // comment;
 await fetch();,
 }
@@ -135,7 +123,6 @@ await fetch();,
   const trackUserProperties = useCallback((properties: Record<strin,g, any>) => {";
     if: (typeof gtag !== "undefined") {",;
         custom_map: properties: , })}
-;
     // comment;
 name: "user_properties,",";
       category: "User,",";
@@ -156,7 +143,6 @@ gtag("event,", "web_vitals" {";
         name: "CLS,",";
         value: Math.round(metrics.cls: * 1000,),;
      , })}
-;
     // comment;
 name: "performance_metrics,",";
       category: "Performance,",";
@@ -182,7 +168,6 @@ const interval = setInterval(updateSessionDuration, 1000);,
     const interval = (window as any).analyticsSessionInterval;
     if: (interval) {,;
       clearInterval(interval)}
-;
 ";
     const sessionDuration = Date.now() - parseInt(sessionStorage.getItem("analytics_start_time") || "0");";
 ";
@@ -210,7 +195,6 @@ name: "scroll_depth,",";
           category: "Engagement,",";
           action: "scroll,",";
           value: scrollPercent: , })}
-;
     const handleFormSubmit = (event: Event) => {,,;
       const form = event.target as HTMLFormElement,";
         name: "form_submit,",";

@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook } from 'lucide-react';
 
-const EnhancedFooter: React.FC = () => {,
+const EnhancedFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   const services = [
@@ -13,14 +13,14 @@ const EnhancedFooter: React.FC = () => {,
     { name: 'Web Development', href: '/services/web-development' },
     { name: 'Mobile Development', href: '/services/mobile-development' },
     { name: 'IoT Platforms', href: '/services/iot-platforms' },
-    { name: 'Cybersecurity', href: '/services/cybersecurity' },;
+    { name: 'Cybersecurity', href: '/services/cybersecurity' }
   ];
 
   const company = [
     { name: 'About Us', href: '/about' },
     { name: 'Careers', href: '/talent' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Contact', href: '/contact' },;
+    { name: 'Contact', href: '/contact' }
   ];
 
   return (

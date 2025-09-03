@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { CheckCircle, X, Star, TrendingUp, DollarSign, Users, Zap, Shield } from 'lucide-react';
 import { motion } from 'framer-motion';
-;
 interface PricingTier {;
   name: string;,
   price: number;,
@@ -12,7 +11,6 @@ interface PricingTier {;
   icon: React.ReactNode;,
   color: string;,
 }
-;
 interface ServicePricing {;
   category: string;,
   services: {;,
@@ -25,10 +23,8 @@ interface ServicePricing {;
     features: string[];,
 }[];,
 }
-;
 const PricingGuide: React.FC = () => {;,
   const [selectedCategory, setSelectedCategory] = useState('micro-saas');
-;
   const pricingTiers: PricingTier[] = [;,
     {;
       name: 'Starter',;
@@ -84,7 +80,6 @@ const PricingGuide: React.FC = () => {;,
       color: 'green';,
 }
   ];
-;
   const servicePricing: ServicePricing[] = [;,
     {;
       category: 'micro-saas',;
@@ -237,15 +232,12 @@ const PricingGuide: React.FC = () => {;,
       ];,
 }
   ];
-;
   const currentServices = servicePricing.find(cat => cat.category === selectedCategory)?.services || [];
-;
   const categories = [;
     { id: 'micro-saas', name: 'Micro SaaS', icon: <Zap className="w-5 h-5" /> },;
     { id: 'ai-services', name: 'AI Services', icon: <Star className="w-5 h-5" /> },;
     { id: 'it-services', name: 'IT Services', icon: <Shield className="w-5 h-5" /> }
   ];
-;
   return (;
     <div className="py-20 bg-gray-50">;
       <div className="container mx-auto px-4">;
@@ -253,19 +245,19 @@ const PricingGuide: React.FC = () => {;,
         <div className="text-center mb-16">;
           <motion.h2 ;>
             className="text-4xl font-bold text-gray-900 mb-4";
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 30 }
+            whileInView={{ opacity: 1, y: 0 }
+            transition={{ duration: 0.8 }
+            viewport={{ once: true }
           >;
             Transparent, Competitive Pricing;
           </motion.h2>;
           <motion.p ;>
             className="text-xl text-gray-600 max-w-3xl mx-auto";
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 30 }
+            whileInView={{ opacity: 1, y: 0 }
+            transition={{ duration: 0.8, delay: 0.2 }
+            viewport={{ once: true }
           >;
             Get enterprise-grade solutions at market-beating prices. Our transparent pricing ;
             saves you an average of 25-40% compared to competitors.;
@@ -298,11 +290,11 @@ const PricingGuide: React.FC = () => {;,
               className={`bg-white rounded-lg shadow-lg p-8 relative ${;
                 tier.popular ? 'border-2 border-blue-600 transform scale-105' : 'border border-gray-200';,
 }`}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -5 }}
+              initial={{ opacity: 0, y: 30 }
+              whileInView={{ opacity: 1, y: 0 }
+              transition={{ duration: 0.8, delay: index * 0.1 }
+              viewport={{ once: true }
+              whileHover={{ y: -5 }
             >;
               {tier.popular && (;
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
@@ -311,7 +303,6 @@ const PricingGuide: React.FC = () => {;,
                   </span>;
                 </div>;
               )}
-              ;
               <div className="text-center mb-6">;
                 <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full mb-4 ${;>
                   tier.color === 'blue' ? 'bg-blue-100 text-blue-600' :;
@@ -353,7 +344,6 @@ const PricingGuide: React.FC = () => {;,
           <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">;
             {categories.find(cat => cat.id === selectedCategory)?.name} Pricing;
           </h3>;
-          ;
           <div className="overflow-x-auto">;
             <table className="w-full min-w-[800px]">;
               <thead>;
@@ -433,6 +423,5 @@ const PricingGuide: React.FC = () => {;,
       </div>;
     </div>;
   );,
-};
-;
+}
 export default PricingGuide;

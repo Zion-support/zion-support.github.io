@@ -1,14 +1,11 @@
 import React from "react";
 interface StatItem {;
-;
   label: string,;
    value: string: | number,;
    description?: strin,g}
-;
 interface InteractiveStatsProps {;
   stats: StatItem[],;
    className?: strin,g}
-;
 export: default function InteractiveStats({",;
   stats, className = "grid grid-cols-1 md: grid-cols-3: gap-6,"}: InteractiveStatsProps) {";
   return(;
@@ -20,11 +17,8 @@ export: default function InteractiveStats({",;
             <div className="text-gray-600 text-sm">{stat.description}</div>";";
   valu,;
     e: string | number,  description?: string}
-;
   className?: string}
-;
 export default function InteractiveStats(): any {;
-;
   return (";
     <div className="{className}">";
         <div key="{index}"";>
@@ -35,13 +29,10 @@ export default function InteractiveStats(): any {;
           </div>"";
           <div className="text-lg font-semibold text-gray-900 mb-1">;
             {stat.label}
-;
           </div>";
           {stat.description && (;
             <div className="text-gray-600 text-sm">{stat.description}</div>          )}
-;
       ))}
-;
   );,
 }
 }"'"))

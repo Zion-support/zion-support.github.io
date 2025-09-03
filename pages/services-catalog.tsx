@@ -8,8 +8,7 @@ export default function ServicesCatalog(): any {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-    site: 'https://ziontechgroup.com'};
-
+    site: 'https://ziontechgroup.com'}
   const sections: Array<{
     id: string,
     title: string,
@@ -34,14 +33,14 @@ export default function ServicesCatalog(): any {
           blurb: 'Automated cloud cost anomaly detection, budget guardrails, and rightsizing recommendations across AWS/Azure/GCP.',
           price: '$299 – $1,499/month',
           eta: '1–2 weeks',
-          bullets: [,
-            'Anomaly detection on daily spend and resources'
-            'Idle/overprovisioned resource cleanup suggestions'
-            'Forecasting, budgets, and team alerts (Slack/Email)'
+          bullets: [
+            'Anomaly detection on daily spend and resources',
+            'Idle/overprovisioned resource cleanup suggestions',
+            'Forecasting, budgets, and team alerts (Slack/Email)',
             'Executive savings dashboards and benchmarks'
           ],
           link: '/micro-saas',
-          refs: [,
+          refs: [
             { label: 'AWS Cost Explorer', href: 'https://aws.amazon.com/aws-cost-management/aws-cost-explorer/', },
             { label: 'FinOps Foundation', href: 'https://www.finops.org/', }
           ]
@@ -51,14 +50,14 @@ export default function ServicesCatalog(): any {
           blurb: 'Composable storefront with payments, CMS, analytics and SEO built-in. Optimized for conversion and scale.',
           price: '$2,500 – $12,000/month',
           eta: '3–6 weeks',
-          bullets: [,
-            'Next.js storefront with edge caching'
-            'Stripe payments, tax & shipping add‑ons'
-            'CMS-driven content and merchandising'
+          bullets: [
+            'Next.js storefront with edge caching',
+            'Stripe payments, tax & shipping add‑ons',
+            'CMS-driven content and merchandising',
             'A/B testing and conversion analytics'
           ],
           link: '/micro-saas',
-          refs: [,
+          refs: [
             { label: 'Stripe', href: 'https://stripe.com', },
             { label: 'Vercel Edge', href: 'https://vercel.com/features/edge-functions', }
           ]
@@ -68,10 +67,10 @@ export default function ServicesCatalog(): any {
           blurb: 'Continuous control monitoring, evidence collection, and audit‑ready reporting for modern teams.',
           price: '$499 – $2,999/month',
           eta: '2–4 weeks',
-          bullets: [,
-            'Policy templates and automated control checks'
-            'Evidence capture from cloud and SaaS systems'
-            'Risk register with workflows and approvals'
+          bullets: [
+            'Policy templates and automated control checks',
+            'Evidence capture from cloud and SaaS systems',
+            'Risk register with workflows and approvals',
             'Audit‑ready reports and reminders'
           ],
           link: '/micro-saas'}
@@ -87,14 +86,14 @@ export default function ServicesCatalog(): any {
           blurb: 'End‑to‑end retrieval augmented generation with connectors, governance, analytics, and feedback loops.',
           price: '$4,000 – $18,000/month',
           eta: '4–8 weeks',
-          bullets: [,
-            'Connectors for docs, tickets, CRM, and data lakes'
-            'Embedding strategy and vector stores (FAISS/PGVector)'
-            'Citations, human feedback loops, analytics'
+          bullets: [
+            'Connectors for docs, tickets, CRM, and data lakes',
+            'Embedding strategy and vector stores (FAISS/PGVector)',
+            'Citations, human feedback loops, analytics',
             'PII scrubbers and policy guardrails'
           ],
           link: '/ai-services',
-          refs: [,
+          refs: [
             { label: 'pgvector', href: 'https://github.com/pgvector/pgvector', }
           ]
         },
@@ -103,10 +102,10 @@ export default function ServicesCatalog(): any {
           blurb: 'Managed pipelines for training, evaluation, deployment, and monitoring with cost/perf visibility.',
           price: '$3,500 – $16,000/month',
           eta: '4–8 weeks',
-          bullets: [,
-            'Feature stores, model registry, canary/AB deploys'
-            'Data drift and performance monitoring'
-            'Model cards, lineage, reproducibility'
+          bullets: [
+            'Feature stores, model registry, canary/AB deploys',
+            'Data drift and performance monitoring',
+            'Model cards, lineage, reproducibility',
             'Compliance‑ready audit trails'
           ],
           link: '/ai-services'},
@@ -115,10 +114,10 @@ export default function ServicesCatalog(): any {
           blurb: 'Context‑aware agent for tier‑1/2 support with safe actions and analytics.',
           price: '$1,200 – $8,000/month',
           eta: '2–5 weeks',
-          bullets: [,
-            'Semantic search across knowledge bases'
-            'Suggested replies, macros, and safe actions'
-            'Quality, deflection, CSAT analytics'
+          bullets: [
+            'Semantic search across knowledge bases',
+            'Suggested replies, macros, and safe actions',
+            'Quality, deflection, CSAT analytics',
             'Works with Zendesk, Intercom, Freshdesk'
           ],
           link: '/ai-services'}
@@ -134,10 +133,10 @@ export default function ServicesCatalog(): any {
           blurb: 'Secure multi‑account AWS/Azure/GCP landing zone, IaC, guardrails, and app migration.',
           price: '$8,000 – $45,000 fixed or $150 – $220/hr',
           eta: '3–10 weeks',
-          bullets: [,
-            'Networking, IAM, SSO, logging, backups'
-            'Foundational IaC (Terraform/Pulumi)'
-            'VPC design, cost and security guardrails'
+          bullets: [
+            'Networking, IAM, SSO, logging, backups',
+            'Foundational IaC (Terraform/Pulumi)',
+            'VPC design, cost and security guardrails',
             'Application assessment and phased migration'
           ],
           link: '/it-services'},
@@ -146,10 +145,10 @@ export default function ServicesCatalog(): any {
           blurb: 'Build and release pipelines, policy controls, and runtime security with clear SLAs.',
           price: '$5,000 – $28,000 fixed or $140 – $200/hr',
           eta: '3–8 weeks',
-          bullets: [,
-            'CI/CD with GitHub Actions/GitLab'
-            'SBOM, SCA, SAST/DAST integration'
-            'Kubernetes security baselines'
+          bullets: [
+            'CI/CD with GitHub Actions/GitLab',
+            'SBOM, SCA, SAST/DAST integration',
+            'Kubernetes security baselines',
             'Observability (logs, metrics, traces)'
           ],
           link: '/it-services'},
@@ -158,10 +157,10 @@ export default function ServicesCatalog(): any {
           blurb: 'Modern data stack with ingestion, warehousing, dashboards, and governance.',
           price: '$6,000 – $35,000 fixed',
           eta: '4–9 weeks',
-          bullets: [,
-            'Airbyte/Fivetran ingestion and dbt transformation'
-            'Snowflake/BigQuery/Redshift warehousing'
-            'BI with Looker/Metabase'
+          bullets: [
+            'Airbyte/Fivetran ingestion and dbt transformation',
+            'Snowflake/BigQuery/Redshift warehousing',
+            'BI with Looker/Metabase',
             'Data catalog and access governance'
           ],
           link: '/it-services'}
@@ -174,46 +173,45 @@ export default function ServicesCatalog(): any {
       <Head>
         <title>Services Catalog — Zion Tech Group</title>
         <meta name="description" content="Expanded catalog of Micro SaaS products, AI platforms, and IT services with transparent pricing and timelines." />
-        <link rel="canonical" href={`${contact.site}/services-catalog`} />`;
-      
-  <script
-    type="application/ld+json"
-    dangerouslySetInnerHTML={{
-      __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Zion Tech Group",
-        "url": "https://ziontechgroup.com",
-        "logo": "https://ziontechgroup.com/images/logo.png",
-        "description": "Leading technology solutions provider specializing in AI, cloud services, and digital transformation.",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "364 E Main St STE 1008",
-          "addressLocality": "Middletown",
-          "addressRegion": "DE",
-          "postalCode": "19709",
-          "addressCountry": "US"
-        },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+1-302-464-0950",
-          "contactType": "customer service",
-          "email": "kleber@ziontechgroup.com"
-        }
-      })
-    }}
-  />
-  </Head>
+        <link rel="canonical" href={`${contact.site}/services-catalog`} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Zion Tech Group",
+              "url": "https://ziontechgroup.com",
+              "logo": "https://ziontechgroup.com/images/logo.png",
+              "description": "Leading technology solutions provider specializing in AI, cloud services, and digital transformation.",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "364 E Main St STE 1008",
+                "addressLocality": "Middletown",
+                "addressRegion": "DE",
+                "postalCode": "19709",
+                "addressCountry": "US"
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+1-302-464-0950",
+                "contactType": "customer service",
+                "email": "kleber@ziontechgroup.com"
+              }
+            })
+          }}
+        />
+      </Head>
 
       <header className="py-20 text-center px-4">
-        <h1 className="text-4xl md: text-5xl font-extrabold tracking-tight">Services Catalog</h1>,
+        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">Services Catalog</h1>
         <p className="mt-4 text-slate-300 max-w-3xl mx-auto">
           Production‑ready Micro SaaS, AI, and Cloud solutions. Transparent pricing, clear timelines, and measurable outcomes.
         </p>
-        <div className="mt-6 flex flex-col sm: flex-row items-center justify-center gap-3">,
-          <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-5 py-2 rounded bg-blue-600 hover:bg-blue-700">Call {contact.phone}</a>`;
-          <a href={`mailto:${contact.email}`} className="px-5 py-2 rounded bg-purple-600 hover:bg-purple-700">Email {contact.email}</a>`;
-          <Link href="/contact" className="px-5 py-2 rounded bg-slate-800 hover: bg-slate-700 border border-white/10">Contact Form</Link>,
+        <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
+          <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-5 py-2 rounded bg-blue-600 hover:bg-blue-700">Call {contact.phone}</a>
+          <a href={`mailto:${contact.email}`} className="px-5 py-2 rounded bg-purple-600 hover:bg-purple-700">Email {contact.email}</a>
+          <Link href="/contact" className="px-5 py-2 rounded bg-slate-800 hover:bg-slate-700 border border-white/10">Contact Form</Link>
         </div>
         <div className="mt-2 text-slate-400 text-sm">{contact.address}</div>
       </header>

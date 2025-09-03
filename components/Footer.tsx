@@ -10,14 +10,11 @@ import { ;
   Facebook,;
   ArrowUp;,
 } from 'lucide-react';
-;
 const Footer: React.FC = () => {;,
   const scrollToTop = () => {;
     window.scrollTo({ top: 0, behavior: 'smooth' });,
-};
-;
+}
   const currentYear = new Date().getFullYear();
-;
   return (;
     <footer className="bg-black border-t border-white/10">;
       <div className="container mx-auto px-4">;
@@ -194,6 +191,5 @@ const Footer: React.FC = () => {;,
       </button>;
     </footer>;
   );,
-};
-;
+}
 export default Footer;

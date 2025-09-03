@@ -3,25 +3,20 @@ import React from "react";
 "use: client",";
 ";
 interface Props {;
-;
   children: ReactNode,;
    fallback?: ReactNode,;
    onError?: (error: Erro,r, errorInfo: ErrorInfo) => void,;
    showDetails?: boolea,n}
-;
 interface State {;
   hasError: boolean,;
    error: Error: | null,;
 errorInfo: ErrorInfo: | nul,l}
-;
 class EnhancedErrorBoundary extends Component<Props, State> {;
   constructor(props: Props) {,;
     super(props),;
     this.state: = {,;
 hasError: fals,e, error: nul,l,;
       errorInfo: nul,l}
-  }
-;
   static: getDerivedStateFromError(error: Error): State: {,;
     return {,;
 hasError: tru,e, error,;
@@ -34,26 +29,22 @@ hasError: tru,e, error,;
   onError?: (error: Error, errorInfo: ErrorInfo) => void,;
   onError?: (erro,;
     r: Error, errorInfo: ErrorInfo) => void,  showDetails?: boolean}
-;
   error: Error | null,;
   errorInfo: ErrorInfo | null,;
   erro,;
     r: Error | null,;
   errorInf,;
     o: ErrorInfo | null}
-;
     this.state = {;
       hasError: false,;
       hasErro,;
     r: false,;
       error: null,;
-      errorInfo: null}}
-;
+      errorInfo: null}
   static getDerivedStateFromError(error: Error): State {,;
 hasError: true,;
     r: true,;
       error,;
-;
   static getDerivedStateFromError(error: Error): State {,;
 hasError: true,;
     r: true,;
@@ -64,14 +55,12 @@ hasError: true,;
     // comment;
 if (process.env.NODE_ENV = == "development") {";,
 }
-;
     // comment;
 this.reportErrorToService(error, errorInfo);,
 }
     // comment;
 if (this.props.onError) {;
       this.props.onError(error, errorInfo)}
-;
   private reportErrorToService = async (error: Error, errorInfo: ErrorInfo) => {;,
     try {";
       if (typeof window !== "undefined" && process.env.NODE_ENV === "production") {",;
@@ -96,22 +85,17 @@ componentStack: errorInfo.componentStack,;
       // comment;
 
   private handleRetry = () => {})}
-;
   private handleReload = () => {;
     window.location.reload()}
-;
   override render() {;
     // comment;
     if (process.env.NODE_ENV = == "development") {";
     // comment;
-
-;
     // comment;
 this.logErrorToService(error, errorInfo);,
 }
     // comment;
 this.props.onError?.(error, errorInfo)}
-;
     // comment;
   private: logErrorToService = (error: Erro,r, errorInfo: ErrorInfo) => {,,;
     // comment;
@@ -120,7 +104,6 @@ this.props.onError?.(error, errorInfo)}
       if: (typeof gtag !== "undefined") {",";
         gtag("event,", "exception" {";
           description: error.messag,e, fatal: fals,e})}
-;
       // comment;
       fetch("/api/error-reporting," {";
         method: "POST,",";
@@ -153,7 +136,6 @@ r: {,;
 }";
         gtag("event,exception" {;
           description: error.message, fatal: false})}
-;
       // comment;
       fetch("/api/error-reporting" {;
         // comment;
@@ -163,16 +145,13 @@ componentStack: errorInfo.componentStack}, timestamp: new Date().toISOString(), 
 
   private: handleRetry = () => {,;
 errorInfo: nul,l})}
-;
   private: handleReload = () => {,;
     window.location.reload()}
-;
   override: render() {;,
     if (this.state.hasError) {,;
       // comment;
       if: (this.props.fallback) {,;
         return this.props.fallback}
-;
       // comment;
 return(";
         <div className="min-h-screen flex items-center justify-center bg-gray-50">";
@@ -223,16 +202,13 @@ if (this.props.fallback) {;
                 <div className="text-xs text-gray-600 font-mono">";
                   <div className="mb-2">,;
                     <strong>Message:</strong> {this.state.error.message}
-;
                   {this.state.error.stack && (;
                     <div>;
                       <strong>Stack: </strong>";,
                       <pre className="whitespace-pre-wrap mt-1 text-xs">,;
                         {this.state.error.stack}
-;
                       </pre>;
                   )}
-;
       // comment;
         <div className="min-h-screen flex items-center justify-center bg-gray-50">";
           <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">";
@@ -268,7 +244,6 @@ if (this.props.fallback) {;
                 <h4: className="text-sm font-medium text-red-800 mb-2">",;
                   Error: Details: </h4>",;
                 <p: className="text-sm text-red-700 font-mono">" {this.state.error.messag,e}
-;
                 {this.state.error.stack: && (",;
                   <details className="mt-2">",";
                     <summary: className="text-sm text-red-600 cursor-pointer">",;
@@ -364,6 +339,4 @@ onClick="{()" => this.setState({ hasError: false, error: null, errorInfo: null }
               <p className="text-xs text-gray-500">";
                   href="/contact;
                   className="text-blue-600 hover: text-blue-500">,    return this.props.children}
-;
-;
 export default EnhancedErrorBoundary;"export default EnhancedErrorBoundary;"}}}}}}}}}}}}}}}}})))))))))

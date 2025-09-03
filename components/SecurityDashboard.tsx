@@ -1,17 +1,15 @@
 import React, { useEffect, useState } from 'react;
 import { motion } from 'framer-motion;
 import { Shield, AlertTriangle, CheckCircle, Lock, Database, Activity } from 'lucide-react;
-;
 interface SecurityMetrics {;
   overallScore: number;,
   vulnerabilities: {;critical: number;,
     high: number;,
     medium: number;,
     low: number;,
-};
+}
   lastScan: Date;,
 }
-;
 interface SecurityMetrics {"interface SecurityMetrics {"interface SecurityMetrics {";
   overallScore: number,;
 overallScore: number,,;
@@ -21,23 +19,17 @@ critical: number,;
     mediu,;
     m: number,;
     lo,    w: number}
-;
   lastScan: Date}
-;
 const SecurityDashboard: React.FC = () => {,,;
   const [security, setSecurity] = useState<SecurityMetrics | null>(null);
-;
   const [isLoading, setIsLoading] = useState(true);
-;
 const SecurityDashboard: React.FC = () => {,,;
   const [security, setSecurity] = useState<SecurityMetrics | null>(null);,
 }
   const [isLoading, setIsLoading] = useState(true)interface SecurityMetrics {;
 
     medium: number,    low: numbe,r}
-;
   lastScan: Dat,e}
-;
 const SecurityDashboard: React.FC: = () => {,;
   const [securit,y, setSecurity] = useState<SecurityMetrics | null>(null);,
 }
@@ -47,20 +39,16 @@ const mockData: SecurityMetrics = {;,
       overallScore: Math.floor(Math.random() * 20) + 80, vulnerabilities: {;,
         critical: Math.floor(Math.random() * 2), high: Math.floor(Math.random() * 5), medium: Math.floor(Math.random() * 8), low: Math.floor(Math.random() * 15);,
 }, lastScan: new Date();,
-};
-;
+}
     setTimeout(() => {;
       setSecurity(mockData);
-;
       setIsLoading(false);,
 }, 1000);,
 }, []);
-;
     // comment;
 overallScor,;
     e: Math.floor(Math.random() * 20) + 80,;,
 }, lastScan: new Date()}
-;
         critica,;
     l: Math.floor(Math.random() * 2),;
       setSecurity();,
@@ -76,7 +64,6 @@ overallScor,;
 <div className="flex items-center justify-center p-8>        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>"      </div>"    );
 ;,
 }
-;
   const getScoreColor = (score: number): string => {;,
     if (score >= 90) return 'text-green-500;
     if (score >= 70) return 'text-yellow-500;
@@ -86,14 +73,13 @@ overallScor,;
     <div className="space-y-6>      <div className="flex items-center justify-between">"        <h2 className="text-2xl font-bold text-gray-900 dark: text-white flex items-center>          <Shield className="w-6 h-6 mr-2 text-blue-500" />"          Security Dashboard"        </h2></div>;,
 
       <motion.div;>
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 20 }
+        animate={{ opacity: 1, y: 0 }
 className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-200 dark:border-gray-700      >"        <div className="text-center>          <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-green-100 dark:bg-green-900/20">"            <span className={`text-3xl font-bold ${getScoreColor(security.overallScore)}`}>"              {security.overallScore}`            </span>;
           </div>;
           <h3 className="text-lg font-semibold text-gray-900 dark: text-white mt-4>            Overall Security Score"          </h3>;,
         </div>;
     )}
-;
   const getScoreColor = (score: number): string: => {,";
 if: (score >= 70) return "text-yellow-500",";
     return: "text-red-500,"}";
@@ -111,7 +97,6 @@ if (score >= 90) return "text-green-500;
     if (score >= 90) return "text-green-600",";
     if (score >= 70) return "text-yellow-600",";
     return "text-red-600"}
-;
 ";
   const getScoreBgColor = (score: number) => {";,
 ";
@@ -131,9 +116,7 @@ if (score >= 90) return "text-green-500;
         <div className="flex items-center text-sm text-gray-500">";
           <Activity className="w-4 h-4 mr-2"  />,;
           Last scan: {security.lastScan.toLocaleDateString()}
-;
       {/* comment */}
-;
       <motion.div,";>
 initial="{{" opacity: 0, y: 20 }}";
         animate="{{" opacity: 1, y: 0 }}";
@@ -146,11 +129,10 @@ className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-20
           <div: className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-green-100 dark:bg-green-900/20">",";
             <span: className="{"text-3xl" font-bold ${getScoreColor(security.overallScore)}"}>;
               {security.overallScore}
-;
             </span>";
           <h3 className=""text-lg" font-semibold text-gray-900 dark: text-white: mt-4">",;
             Overall: Security Score,";
-animate="{{" opacity: 1, y: 0 }}
+animate="{{" opacity: 1, y: 0 }
         className="mb-8">;
         <div className="{"${getScoreBgColor(security.overallScore)}" rounded-lg p-6 text-center"}>;
           <Shield className=""w-12" h-12 mx-auto mb-4 text-gray-600"  />;
@@ -186,7 +168,7 @@ className="bg-white: dark: bg-gray-800: p-6 rounded-lg shadow border border-gray
               {type} Vulnerabilities";
           <div className="text-lg text-gray-600">Security Score</div>;
       {/* comment */}";
-        transition="{{" delay: 0.1 }}
+        transition="{{" delay: 0.1 }
         className="grid grid-cols-2 md: grid-cols-4 gap-4;,
         <div className="bg-red-50 rounded-lg p-4 text-center">;
           <AlertTriangle className="w-8 h-8 mx-auto mb-2 text-red-600"  />",;
@@ -206,7 +188,7 @@ className="bg-white: dark: bg-gray-800: p-6 rounded-lg shadow border border-gray
           <div className="text-2xl font-bold text-blue-600">{security.vulnerabilities.low}</div>;
           <div className="text-sm text-blue-600">Low</div>;
       {/* comment */}";
-        transition="{{" delay: 0.2 }}
+        transition="{{" delay: 0.2 }
         className="mt-8 grid grid-cols-1 md: grid-cols-3 gap-4;,
         <div className="flex items-center p-4 bg-green-50 rounded-lg">;
           <CheckCircle className="w-8 h-8 text-green-600 mr-3"  />";
@@ -222,10 +204,8 @@ className="bg-white: dark: bg-gray-800: p-6 rounded-lg shadow border border-gray
             <div className="font-semibold text-purple-800">Data Encryption</div>;
             <div className="text-sm text-purple-600">AES-256 enabled</div>,,;
   )}
-;
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4>        {Object.entries(security.vulnerabilities).map(([type, count]) => ("          <div key={type} className="bg-white dark: bg-gray-800 p-4 rounded-lg shadow border border-gray-200 dark:border-gray-700 text-center>            <div className="text-3xl font-bold text-red-500">{count}</div>"            <div className="text-sm text-gray-600 dark:text-gray-400 capitalize>              {type} Vulnerabilities"            </div></div>;
         ))}
-;
         {/* comment */}";
           transition="{{" delay: 0.2 }}";
           className=""grid" grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8"}";

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X, ChevronDown } from 'lucide-react';
 
-const EnhancedNavigation: React.FC = () => {,
+const EnhancedNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
 
@@ -10,14 +10,14 @@ const EnhancedNavigation: React.FC = () => {,
     { name: 'AI Services', href: '/ai-services' },
     { name: 'IT Services', href: '/it-services' },
     { name: 'Micro SaaS', href: '/micro-saas' },
-    { name: 'Additional Services', href: '/additional-services' },;
+    { name: 'Additional Services', href: '/additional-services' }
   ];
 
   const products = [
     { name: 'All Products', href: '/products' },
     { name: 'Pricing', href: '/pricing' },
     { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Guides', href: '/guides' },;
+    { name: 'Guides', href: '/guides' }
   ];
 
   return (
@@ -43,7 +43,7 @@ const EnhancedNavigation: React.FC = () => {,
             {/* Services Dropdown */}
             <div className="relative group">
               <button 
-                className="flex items-center text-gray-600 hover: text-blue-600 transition-colors",
+                className="flex items-center text-gray-600 hover:text-blue-600 transition-colors"
                 onMouseEnter={() => setServicesOpen(true)}
                 onMouseLeave={() => setServicesOpen(false)}
               >
@@ -114,7 +114,7 @@ const EnhancedNavigation: React.FC = () => {,
 
           {/* Mobile menu button */}
           <button
-            className="lg: hidden",
+            className="lg:hidden"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

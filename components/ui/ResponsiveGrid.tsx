@@ -1,5 +1,4 @@
 import React from 'react';
-;
 interface ResponsiveGridProps {;
   children: React.ReactNode;,
   className?: string;
@@ -9,10 +8,9 @@ interface ResponsiveGridProps {;
     md?: number;
     lg?: number;
     xl?: number;,
-};
+}
   gap?: number;,
 }
-;
 const ResponsiveGrid: React.FC<ResponsiveGridProps> = ({ ;,
   children, ;
   className = '',;
@@ -21,7 +19,6 @@ const ResponsiveGrid: React.FC<ResponsiveGridProps> = ({ ;,
 }) => {;
   const getGridCols = () => {;
     const colClasses = [];
-    ;
     if (cols.default) {;
       colClasses.push(`grid-cols-${cols.default}`);,
 }
@@ -37,15 +34,12 @@ const ResponsiveGrid: React.FC<ResponsiveGridProps> = ({ ;,
     if (cols.xl) {;
       colClasses.push(`xl:grid-cols-${cols.xl}`);,
 }
-    ;
     return colClasses.join(' ');,
-};
-;
+}
   return (;
     <div className={`grid ${getGridCols()} gap-${gap} ${className}`}>;
       {children}
     </div>;
   );,
-};
-;
+}
 export default ResponsiveGrid;

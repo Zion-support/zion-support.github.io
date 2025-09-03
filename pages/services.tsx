@@ -3,8 +3,7 @@ type Service = {
   summary: string;
   pricing: string;
   link: string;
-};
-
+}
 const microSaaS: Service[] = [,
   {
     name: 'Cloud Cost Guard (FinOps Assistant)',
