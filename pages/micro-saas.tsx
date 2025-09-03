@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Layers, Cloud, FileText, Users, BarChart3, Mail, Clock, Shield, Zap, TrendingUp, Settings, Globe, Code, Brain } from 'lucide-react';
+import { Layers, Cloud, FileText, Users, BarChart3, Mail, Clock, Shield, Zap, TrendingUp, Settings, Globe, Code, Brain, Eye } from 'lucide-react';
 
 export default function MicroSaaS() {
   const contact = {
@@ -296,6 +296,204 @@ export default function MicroSaaS() {
         'Automated performance monitoring'
       ],
       category: 'Marketing Analytics'
+    },
+    {
+      icon: FileText,
+      name: 'AI Content Creation Studio',
+      description: 'AI-powered content generation platform for blogs, social media, and marketing materials with brand voice consistency.',
+      features: [
+        'Multi-format content generation (blogs, social, ads)',
+        'Brand voice training and consistency',
+        'SEO optimization and keyword integration',
+        'Content calendar automation',
+        'Plagiarism detection and originality scoring',
+        'Multi-language content generation'
+      ],
+      pricing: '$299 – $2,499/month',
+      timeline: '2–4 weeks',
+      benefits: [
+        '10x faster content production',
+        'Consistent brand messaging',
+        'SEO-optimized content',
+        'Reduced content creation costs'
+      ],
+      category: 'Content Marketing'
+    },
+    {
+      icon: Mail,
+      name: 'Smart Email Follow-up Automation',
+      description: 'Intelligent email sequence automation with behavioral triggers and personalization.',
+      features: [
+        'Behavioral trigger-based sequences',
+        'Dynamic content personalization',
+        'A/B testing and optimization',
+        'Lead scoring integration',
+        'Multi-channel follow-up coordination',
+        'Advanced analytics and reporting'
+      ],
+      pricing: '$149 – $1,199/month',
+      timeline: '1–2 weeks',
+      benefits: [
+        '35% increase in email engagement',
+        'Automated lead nurturing',
+        'Personalized customer journeys',
+        'Improved conversion rates'
+      ],
+      category: 'Email Marketing'
+    },
+    {
+      icon: Eye,
+      name: 'AI Video Editing & Repurposing',
+      description: 'Automated video editing platform that transforms long-form content into social media clips.',
+      features: [
+        'AI-powered video clipping and editing',
+        'Automatic subtitle generation',
+        'Social media format optimization',
+        'Brand overlay and watermarking',
+        'Voice-to-text transcription',
+        'Multi-platform publishing'
+      ],
+      pricing: '$199 – $1,599/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '80% reduction in video editing time',
+        'Consistent brand presentation',
+        'Multi-platform content distribution',
+        'Improved social media engagement'
+      ],
+      category: 'Video Marketing'
+    },
+    {
+      icon: Shield,
+      name: 'E-commerce Return Management Hub',
+      description: 'Automated return processing system with intelligent routing and fraud detection.',
+      features: [
+        'Automated return request processing',
+        'Intelligent fraud detection',
+        'Return label generation and tracking',
+        'Inventory management integration',
+        'Customer self-service portal',
+        'Analytics and reporting dashboard'
+      ],
+      pricing: '$249 – $1,799/month',
+      timeline: '2–4 weeks',
+      benefits: [
+        '60% reduction in return processing time',
+        'Automated fraud prevention',
+        'Improved customer satisfaction',
+        'Better inventory management'
+      ],
+      category: 'E-commerce'
+    },
+    {
+      icon: Users,
+      name: 'AI Talent Matching Platform',
+      description: 'Advanced AI-powered recruitment platform for connecting businesses with top tech talent.',
+      features: [
+        'AI-powered candidate screening',
+        'Skills and experience matching',
+        'Cultural fit assessment',
+        'Automated interview scheduling',
+        'Reference checking automation',
+        'Onboarding workflow integration'
+      ],
+      pricing: '$399 – $2,999/month',
+      timeline: '3–5 weeks',
+      benefits: [
+        '50% faster hiring process',
+        'Higher quality candidate matches',
+        'Reduced recruitment costs',
+        'Improved retention rates'
+      ],
+      category: 'HR & Recruitment'
+    },
+    {
+      icon: Globe,
+      name: 'Website Security & Compliance Monitor',
+      description: 'Comprehensive website security monitoring with automated vulnerability scanning and compliance tracking.',
+      features: [
+        'Automated vulnerability scanning',
+        'Malware detection and removal',
+        'SSL certificate monitoring',
+        'GDPR/CCPA compliance tracking',
+        'Security incident response',
+        'Compliance reporting dashboard'
+      ],
+      pricing: '$199 – $1,499/month',
+      timeline: '1–2 weeks',
+      benefits: [
+        '99.9% security uptime',
+        'Automated threat detection',
+        'Compliance assurance',
+        'Reduced security risks'
+      ],
+      category: 'Security'
+    },
+    {
+      icon: BarChart3,
+      name: 'Customer Health Score Analytics',
+      description: 'AI-driven customer health scoring and churn prediction with actionable insights.',
+      features: [
+        'Real-time customer health scoring',
+        'Churn prediction algorithms',
+        'Behavioral pattern analysis',
+        'Automated intervention triggers',
+        'Customer success workflows',
+        'Predictive analytics dashboard'
+      ],
+      pricing: '$299 – $1,999/month',
+      timeline: '2–4 weeks',
+      benefits: [
+        '25% reduction in customer churn',
+        'Proactive customer success',
+        'Data-driven retention strategies',
+        'Improved customer lifetime value'
+      ],
+      category: 'Customer Success'
+    },
+    {
+      icon: Code,
+      name: 'API Documentation Generator',
+      description: 'Automated API documentation generation with interactive testing and version management.',
+      features: [
+        'Automatic API documentation generation',
+        'Interactive API testing interface',
+        'Version management and migration guides',
+        'Code example generation',
+        'SDK and client library creation',
+        'Developer portal customization'
+      ],
+      pricing: '$149 – $1,299/month',
+      timeline: '1–2 weeks',
+      benefits: [
+        '90% reduction in documentation time',
+        'Improved developer experience',
+        'Faster API adoption',
+        'Reduced support tickets'
+      ],
+      category: 'Developer Tools'
+    },
+    {
+      icon: TrendingUp,
+      name: 'Inventory Optimization Engine',
+      description: 'AI-powered inventory management with demand forecasting and automated reordering.',
+      features: [
+        'Demand forecasting algorithms',
+        'Automated reorder point calculation',
+        'Multi-location inventory tracking',
+        'Supplier performance analytics',
+        'Seasonal trend analysis',
+        'Cost optimization recommendations'
+      ],
+      pricing: '$399 – $2,499/month',
+      timeline: '3–5 weeks',
+      benefits: [
+        '30% reduction in inventory costs',
+        'Improved stock availability',
+        'Automated procurement processes',
+        'Better cash flow management'
+      ],
+      category: 'Supply Chain'
     },
     {
       icon: FileText,
