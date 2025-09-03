@@ -205,7 +205,110 @@ const MicroSAAS: React.FC = () => {;
       href: "/services/smart-hr-management",;
       color: "from-indigo-400 to-purple-500",;
       benefits: ["Streamline recruitment by 60%", "Improve employee retention by 40%", "Reduce HR administrative time by 70%", "Enhance performance tracking"];,
-}
+},
+    {;
+      title: "AI-Powered Invoice & Payment Automation",;
+      description: "Revolutionary invoice processing platform that automates accounts payable, reduces processing time by 90%, and accelerates cash flow with intelligent payment matching.",;
+      price: "From $199/month",;
+      features: ["AI Invoice Processing", "Automated Payment Matching", "Smart Approval Workflows", "Real-time Cash Flow Analytics", "Multi-currency Support", "Integration with 100+ Accounting Systems"],;
+      href: "/services/ai-invoice-payment-automation",;
+      color: "from-emerald-400 to-green-500",;
+      benefits: ["Reduce invoice processing time by 90%", "Accelerate payments by 70%", "Eliminate manual data entry", "Improve cash flow visibility"];,
+      popular: true,;
+},;
+    {;
+      title: "Smart Inventory Management System",;
+      description: "AI-driven inventory optimization platform that reduces stockouts by 95% and inventory costs by 30% through predictive analytics and automated reordering.",;
+      price: "From $249/month",;
+      features: ["Predictive Demand Forecasting", "Automated Reorder Points", "Multi-location Management", "Real-time Analytics", "Supplier Integration", "Cost Optimization"],;
+      href: "/services/smart-inventory-management",;
+      color: "from-blue-400 to-cyan-500",;
+      benefits: ["Reduce stockouts by 95%", "Lower inventory costs by 30%", "Improve cash flow", "Optimize supplier relationships"];,
+      popular: true,;
+},;
+    {;
+      title: "AI Content Marketing Suite",;
+      description: "Comprehensive content creation and marketing automation platform that generates high-quality content and manages multi-channel campaigns with AI optimization.",;
+      price: "From $349/month",;
+      features: ["AI Content Generation", "SEO Optimization", "Social Media Automation", "Email Marketing", "Analytics Dashboard", "A/B Testing"],;
+      href: "/services/ai-content-marketing-suite",;
+      color: "from-purple-400 to-pink-500",;
+      benefits: ["Generate 10x more content", "Increase engagement by 150%", "Reduce content costs by 70%", "Improve SEO rankings"];,
+      popular: true,;
+},;
+    {;
+      title: "Smart Document Processing Platform",;
+      description: "AI-powered document management system that extracts, processes, and organizes documents with 98% accuracy using advanced OCR and NLP technology.",;
+      price: "From $199/month",;
+      features: ["OCR Text Extraction", "Document Classification", "Data Extraction", "Workflow Automation", "Search & Retrieval", "Compliance Tracking"],;
+      href: "/services/smart-document-processing",;
+      color: "from-orange-400 to-red-500",;
+      benefits: ["98% extraction accuracy", "Reduce processing time by 85%", "Eliminate manual data entry", "Improve compliance"];,
+},;
+    {;
+      title: "AI-Powered Email Marketing Automation",;
+      description: "Intelligent email marketing platform that personalizes campaigns and optimizes send times for maximum engagement and conversions using machine learning.",;
+      price: "From $149/month",;
+      features: ["AI Personalization", "Send Time Optimization", "A/B Testing", "Behavioral Triggers", "Analytics Dashboard", "List Management"],;
+      href: "/services/ai-email-marketing-automation",;
+      color: "from-teal-400 to-blue-500",;
+      benefits: ["Increase open rates by 60%", "Boost click-through rates by 45%", "Improve conversion rates by 35%", "Reduce unsubscribe rates"];,
+},;
+    {;
+      title: "Smart Social Media Management",;
+      description: "AI-driven social media platform that automates content creation, scheduling, and engagement across multiple channels with intelligent optimization.",;
+      price: "From $179/month",;
+      features: ["AI Content Creation", "Optimal Posting Times", "Engagement Automation", "Analytics & Insights", "Multi-platform Management", "Influencer Tracking"],;
+      href: "/services/smart-social-media-management",;
+      color: "from-pink-400 to-purple-500",;
+      benefits: ["Increase engagement by 120%", "Save 10+ hours per week", "Improve brand visibility", "Optimize posting strategies"];,
+},;
+    {;
+      title: "AI-Powered Sales Forecasting",;
+      description: "Advanced sales prediction platform that uses machine learning to forecast revenue with 92% accuracy and optimize sales strategies for maximum growth.",;
+      price: "From $399/month",;
+      features: ["Predictive Sales Analytics", "Lead Scoring", "Pipeline Management", "Revenue Forecasting", "Performance Tracking", "CRM Integration"],;
+      href: "/services/ai-sales-forecasting",;
+      color: "from-green-400 to-emerald-500",;
+      benefits: ["92% forecast accuracy", "Increase sales by 35%", "Optimize sales strategies", "Reduce forecasting errors"];,
+      popular: true,;
+},;
+    {;
+      title: "Smart Financial Analytics Platform",;
+      description: "Advanced financial intelligence platform that provides real-time insights, forecasting, and automated financial reporting with AI-powered analytics.",;
+      price: "From $299/month",;
+      features: ["Real-time Financial Dashboards", "Predictive Analytics", "Automated Reporting", "Cash Flow Forecasting", "Risk Assessment", "Compliance Monitoring"],;
+      href: "/services/smart-financial-analytics",;
+      color: "from-indigo-400 to-purple-500",;
+      benefits: ["Improve financial visibility", "Reduce reporting time by 80%", "Enhance decision-making", "Ensure compliance"];,
+},;
+    {;
+      title: "AI-Powered Lead Generation Suite",;
+      description: "Intelligent lead generation platform that identifies, qualifies, and nurtures prospects using AI to maximize conversion rates and sales opportunities.",;
+      price: "From $279/month",;
+      features: ["AI Lead Scoring", "Automated Prospecting", "Email Sequences", "CRM Integration", "Analytics Dashboard", "A/B Testing"],;
+      href: "/services/ai-lead-generation-suite",;
+      color: "from-yellow-400 to-orange-500",;
+      benefits: ["Increase qualified leads by 200%", "Improve conversion rates by 45%", "Reduce lead generation costs by 60%", "Automate prospect nurturing"];,
+},;
+    {;
+      title: "Smart Compliance Management System",;
+      description: "AI-powered compliance platform that automates regulatory monitoring, risk assessment, and compliance reporting for various industries and regulations.",;
+      price: "From $399/month",;
+      features: ["Regulatory Monitoring", "Risk Assessment", "Automated Reporting", "Policy Management", "Audit Trail", "Compliance Dashboards"],;
+      href: "/services/smart-compliance-management",;
+      color: "from-red-400 to-pink-500",;
+      benefits: ["Reduce compliance costs by 50%", "Improve audit readiness", "Minimize regulatory risks", "Automate compliance workflows"];,
+},;
+    {;
+      title: "AI-Powered Customer Feedback Analytics",;
+      description: "Advanced feedback analysis platform that processes customer feedback from multiple channels and provides actionable insights using natural language processing.",;
+      price: "From $199/month",;
+      features: ["Multi-channel Feedback Collection", "Sentiment Analysis", "Trend Identification", "Actionable Insights", "Real-time Alerts", "Integration APIs"],;
+      href: "/services/ai-customer-feedback-analytics",;
+      color: "from-cyan-400 to-blue-500",;
+      benefits: ["Process feedback 10x faster", "Identify trends automatically", "Improve customer satisfaction", "Reduce churn by 30%"];,
+},
   ];
 ;
   return (;
