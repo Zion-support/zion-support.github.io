@@ -1,17 +1,100 @@
-import React, { useEffect, useState, useCallback } from 'react'; import { motion, AnimatePresence } from 'framer-motion'; import { Activity, Zap, Clock, TrendingUp, AlertTriangle, CheckCircle } from 'lucide-react'; ; interface PerformanceMetrics {
+<<<<<<< HEAD
+import React, { useEffect, useState, useCallback } from 'react' import { motion, AnimatePresence } from 'framer-motion' import { Activity, Zap, Clock, TrendingUp, AlertTriangle, CheckCircle } from 'lucide-react'  interface PerformanceMetrics { fcp: number | null;
+=======
+<<<<<<< HEAD
+import React, { useEffect, useState, useCallback } from 'react' import { motion, AnimatePresence } from 'framer-motion' import { Activity, Zap, Clock, TrendingUp, AlertTriangle, CheckCircle } from 'lucide-react'  interface PerformanceMetrics {;
+=======
+<<<<<<< HEAD
+import React, {useEffect, useState, useCallback } from 'react' ;
+import {motion, AnimatePresence } from 'framer-motion' import {Activity, Zap, Clock, TrendingUp, AlertTriangle, CheckCircle } from 'lucide-react'  interface PerformanceMetrics {;
+=======
+<<<<<<< HEAD
+import React, { useEffect, useState, useCallback } from &apos;react&apos; import { motion, AnimatePresence } from &apos;framer-motion&apos; import { Activity, Zap, Clock, TrendingUp, AlertTriangle, CheckCircle } from &apos;lucide-react&apos;  interface PerformanceMetrics {
+=======
+import React, { useEffect, useState, useCallback } from 'react' import { motion, AnimatePresence } from 'framer-motion' import { Activity, Zap, Clock, TrendingUp, AlertTriangle, CheckCircle }  from 'lucide-react';interface PerformanceMetrics {;
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
    fcp: number | null;
+>>>>>>> main
    lcp: number | null;
    fid: number | null;
    cls: number | null;
    ttfb: number | null;
+<<<<<<< HEAD
+   domLoa,
+    d: number | null;
+   windowLoa,
+    d: number | null} interface PerformanceMonitorProps {
+=======
    domLoad: number | null;
-   windowLoad: number | null;
-}; interface PerformanceMonitorProps {
+<<<<<<< HEAD
+   windowLoad: number | null  } interface PerformanceMonitorProps {
+=======
+<<<<<<< HEAD
+   windowLoad: number | null} interface PerformanceMonitorProps {;
+=======
+<<<<<<< HEAD
+   windowLoad: number | null} interface PerformanceMonitorProps {showDetails?: boolean;
+=======
+   windowLoa,d: number | null} interface PerformanceMonitorProps {
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
    showDetails?: boolean;
+>>>>>>> main
    autoHide?: boolean;
+<<<<<<< HEAD
+   threshold?: { fcp: number;
+=======
+<<<<<<< HEAD
    threshold?: {;
+=======
+   threshold?: { 
+>>>>>>> main
    fcp: number;
+>>>>>>> main
    lcp: number;
+<<<<<<< HEAD
+   fi,
+    d: number;
+   cl,
+    s: number} } export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ showDetails = false, autoHide = true, threshold = { fcp: 1800, lcp: 2500, fid: 100, cls: 0.1 } }) => { const [metrics, setMetrics] = useState<PerformanceMetrics>({ fcp: null, lcp: null, fid: null, cls: null, ttfb: null, domLoad: null, windowLoad: null }) const [isVisible, setIsVisible] = useState(true) const [isExpanded, setIsExpanded] = useState(false)  const getPerformanceScore = useCallback((metric: keyof PerformanceMetrics): number => { if (!metrics[metric]) return 0  const value = metrics[metric]! const thresholdValue = threshold[metric as keyof typeof threshold]  if (metric === 'cls') {';
+'
+=======
+<<<<<<< HEAD
    fid: number;
+<<<<<<< HEAD
    cls: number;
-}; }; export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({; showDetails = false,; autoHide = true,; threshold = {; fcp: 1800,; lcp: 2500,; fid: 100,; cls: 0.1; }; }) => {; const [metrics, setMetrics] = useState<PerformanceMetrics>({; fcp: null,; lcp: null,; fid: null,; cls: null,; ttfb: null,; domLoad: null,; windowLoad: null; }); const [isVisible, setIsVisible] = useState(true); const [isExpanded, setIsExpanded] = useState(false); ; const getPerformanceScore = useCallback((metric: keyof PerformanceMetrics): number => {; if (!metrics[metric]) return 0; ; const value = metrics[metric]!; const thresholdValue = threshold[metric as keyof typeof threshold]; ; if (metric === 'cls') {';;
+} } export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ showDetails = false, autoHide = true, threshold = { fcp: 1800, lcp: 2500, fid: 100, cls: 0.1 } }) => { const [metrics, setMetrics] = useState<PerformanceMetrics>({ fcp: null, lcp: null, fid: null, cls: null, ttfb: null, domLoad: null, windowLoad: null }) const [isVisible, setIsVisible] = useState(true) const [isExpanded, setIsExpanded] = useState(false)  const getPerformanceScore = useCallback((metric: keyof PerformanceMetrics): number => { if (!metrics[metric]) return 0  const value = metrics[metric]! const thresholdValue = threshold[metric as keyof typeof threshold]  if (metric === 'cls') {';;
+=======
+<<<<<<< HEAD
+   cls: number  } } export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ showDetails = false, autoHide = true, threshold = { fcp: 1800, lcp: 2500, fid: 100, cls: 0.1 } }) => { const [metrics, setMetrics] = useState<PerformanceMetrics>({ fcp: null, lcp: null, fid: null, cls: null, ttfb: null, domLoad: null, windowLoad: null }) const [isVisible, setIsVisible] = useState(true) const [isExpanded, setIsExpanded] = useState(false)  const getPerformanceScore = useCallback((metric: keyof PerformanceMetrics): number => { if (!metrics[metric]) return 0  const value = metrics[metric]! const thresholdValue = threshold[metric as keyof typeof threshold]  if (metric === 'cls') {''
+=======
+   cls: number} } export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({showDetails = false, autoHide = true, threshold = { fcp: 1800, lcp: 2500, fid: 100, cls: 0.1 } }) => {const [metrics, setMetrics] = useState<PerformanceMetrics>({ fcp: null, lcp: null, fid: null, cls: null, ttfb: null, domLoad: null, windowLoad: null }) const [isVisible, setIsVisible] = useState(true) const [isExpanded, setIsExpanded] = useState(false)  const getPerformanceScore = useCallback((metric: keyof PerformanceMetrics): number => { if (!metrics[metric]) return 0  const value = metrics[metric]! const thresholdValue = threshold[metric as keyof typeof threshold]  if (metric === 'cls') {';'
+=======
+<<<<<<< HEAD
+   fid: number;""
+   cls: number} } export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ showDetails = false, autoHide = true, threshold = { fcp: 1800, lcp: 2500, fid: 100, cls: 0.1 } }) => { const [metrics, setMetrics] = useState<PerformanceMetrics>({ fcp: null, lcp: null, fid: null, cls: null, ttfb: null, domLoad: null, windowLoad: null }) const [isVisible, setIsVisible] = useState(true) const [isExpanded, setIsExpanded] = useState(false)  const getPerformanceScore = useCallback((metric: keyof PerformanceMetrics): number => { if (!metrics[metric]) return 0  const value = metrics[metric]! const thresholdValue = threshold[metric as keyof typeof threshold]  if (metric === 'cls') {';'
+""
+}}}
+=======
+<<<<<<< HEAD
+   fid: number;
+<<<<<<< HEAD
+   cl,s: number} }&apos; export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ showDetails = false, autoHide = true, threshold = { fcp: 1800, lcp: 2500, fid: 100, cls: 0.1 } }) => {} const [metrics, setMetrics] = useState<PerformanceMetrics>({ fcp: null, lcp: null, fid: null, cls: null, ttfb: null, domLoad: null, windowLoad: null }) const [isVisible, setIsVisible] = useState(true) const [isExpanded, setIsExpanded] = useState(false)  const getPerformanceScore = useCallback((metric: keyof PerformanceMetrics): number => { if (!metrics[metric]) return 0}  const value = metrics[metric]! const;const;const thresholdValue = threshold[metric as keyof typeof threshold]  if (metric === &apos;cls&apos;) {';
+&apos;}'
+=======
+   cls: number} } export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ showDetails = false, autoHide = true, threshold = { fcp: 1800, lcp: 2500, fid: 100, cls: 0.1 } }) => { const [metrics, setMetrics] = useState<PerformanceMetrics>({ fcp: null, lcp: null, fid: null, cls: null, ttfb: null, domLoad: null, windowLoad: null }) const [isVisible, setIsVisible] = useState(true) const [isExpanded, setIsExpanded] = useState(false)  const getPerformanceScore = useCallback((metric: keyof PerformanceMetrics): number => { if (!metrics[metric]) return 0  const value = metrics[metric]! const thresholdValue = threshold[metric as keyof typeof threshold]  if (metric === 'cls') {';'
+=======
+   fid: number;"
+   cls: number} } export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ showDetails = false, autoHide = true, threshold = { fcp: 1800, lcp: 2500, fid: 100, cls: 0.1 } }) => { const [metrics, setMetrics] = useState<PerformanceMetrics>({ fcp: null, lcp: null, fid: null, cls: null, ttfb: null, domLoad: null, windowLoad: null }) const [isVisible, setIsVisible] = useState(true) const [isExpanded, setIsExpanded] = useState(false)  const getPerformanceScore = useCallback((metric: keyof PerformanceMetrics): number => { if (!metrics[metric]) return 0  const value = metrics[metric]! const thresholdValue = threshold[metric as keyof typeof threshold]  if (metric === 'cls') {
+"
+}}}
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
