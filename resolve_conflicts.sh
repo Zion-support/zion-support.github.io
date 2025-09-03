@@ -57,4 +57,3 @@ while IFS= read -r file; do
 done <<< "$conflict_files"
 
 echo "Merge conflict resolution completed!"
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a

@@ -1,131 +1,67 @@
-import React from,
-  react';
-import type { NextPage } from
-  'next';
-import MainLayout from
-  '../components/layout/MainLayout';
-import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Database, Cloud } from
-  'lucide-react';
+import React from 'react';
+import type { NextPage } from 'next';
+import MainLayout from '../components/layout/MainLayout';
+import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Database, Cloud } from 'lucide-react';
 
 const Status: NextPage = () => {
   const services = [
     {
-      name:
-  'Web Application,
-      status:,
-  operational',
-      uptime: '99.9%,
-      responseTime:,
-  120ms',
-      lastIncident: 'No incidents in the past 30 days
+      name: 'Web Application', status: 'operational',
+      uptime: '99.9%', responseTime: '120ms',
+      lastIncident: 'No incidents in the past 30 days'
+    }, {
+      name: 'API Services',
+      status: 'operational', uptime: '99.8%',
+      responseTime: '85ms', lastIncident: 'No incidents in the past 30 days'
     },
     {
-      name:,
-  API Services',
-      status: 'operational,
-      uptime:,
-  99.8%',
-      responseTime: '85ms,
-      lastIncident:,
-  No incidents in the past 30 days'
+      name: 'Database', status: 'operational',
+      uptime: '99.9%', responseTime: '45ms',
+      lastIncident: 'No incidents in the past 30 days'
+    }, {
+      name: 'Cloud Infrastructure',
+      status: 'operational', uptime: '99.7%',
+      responseTime: '200ms', lastIncident: 'No incidents in the past 30 days'
     },
     {
-      name: 'Database,
-      status:,
-  operational',
-      uptime: '99.9%,
-      responseTime:,
-  45ms',
-      lastIncident: 'No incidents in the past 30 days
-    },
-    {
-      name:,
-  Cloud Infrastructure',
-      status: 'operational,
-      uptime:,
-  99.7%',
-      responseTime: '200ms,
-      lastIncident:,
-  No incidents in the past 30 days'
-    },
-    {
-      name: 'CDN,
-      status:,
-  operational',
-      uptime: '99.9%,
-      responseTime:,
-  50ms',
-      lastIncident: 'No incidents in the past 30 days
-    },
-    {
-      name:,
-  Monitoring',
-      status: 'operational,
-      uptime:,
-  100%',
-      responseTime: '30ms,
-      lastIncident:,
-  No incidents in the past 30 days'
+      name: 'CDN', status: 'operational',
+      uptime: '99.9%', responseTime: '50ms',
+      lastIncident: 'No incidents in the past 30 days'
+    }, {
+      name: 'Monitoring',
+      status: 'operational', uptime: '100%',
+      responseTime: '30ms', lastIncident: 'No incidents in the past 30 days'
     }
   ];
 
   const getStatusIcon = (status: string) => {
     switch (status) {
-      case
-  'operational':
-        return <CheckCircle className="w-5 h-5 text-green-500" />;
-      case
-  'degraded':
-        return <AlertCircle className="w-5 h-5 text-yellow-500" />;
-      case
-  'outage:
-        return <XCircle className="w-5 h-5 text-red-500" />;
-      default:
-        return <Clock className="w-5 h-5 text-gray-500" />;
+      case 'operational': return <CheckCircle className="w-5 h-5 text-green-500" />;
+      case 'degraded': return <AlertCircle className="w-5 h-5 text-yellow-500" />;
+      case 'outage': return <XCircle className="w-5 h-5 text-red-500" />;
+      default: return <Clock className="w-5 h-5 text-gray-500" />;
     }
   };
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case,
-  operational': return
-  'text-green-600 bg-green-100';
-      case
-  'degraded':
-        return
-  'text-yellow-600 bg-yellow-100';
-      case
-  'outage':
-        return
-  'text-red-600 bg-red-100';
-      default:
-        return
-  'text-gray-600 bg-gray-100;
+      case 'operational': return 'text-green-600 bg-green-100';
+      case 'degraded': return 'text-yellow-600 bg-yellow-100';
+      case 'outage': return 'text-red-600 bg-red-100';
+      default: return 'text-gray-600 bg-gray-100';
     }
   };
 
   const incidents = [
     {
-      id: 1,
-      title:,
-  Scheduled Maintenance - API Services',
-      status: 'resolved,
-      date:,
-  2025-01-20',
-      description: 'Scheduled maintenance window for API services completed successfully.,
-      impact:
-  'minor'
+      id: 1, title: 'Scheduled Maintenance - API Services',
+      status: 'resolved', date: '2025-01-20',
+      description: 'Scheduled maintenance window for API services completed successfully.', impact: 'minor'
     },
     {
-      id: 2,
-      title:,
-  Database Performance Issue',
-      status: 'resolved,
-      date:,
-  2025-01-15',
-      description: 'Temporary performance degradation in database queries has been resolved.,
-      impact:
-  'minor'
+      id: 2, title: 'Database Performance Issue',
+      status: 'resolved', date: '2025-01-15',
+      description: 'Temporary performance degradation in database queries has been resolved.', impact: 'minor'
     }
   ];
 
@@ -139,7 +75,7 @@ const Status: NextPage = () => {
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">System Status</h1>
+            <h1 className="text-4xl md: text-5xl font-bold mb-6">System Status</h1>
             <p className="text-xl text-gray-200 max-w-3xl mx-auto">
               Monitor the real-time status of our services and infrastructure. 
               All systems are currently operational.
@@ -156,13 +92,12 @@ const Status: NextPage = () => {
                 <h2 className="text-3xl font-bold text-gray-900">All Systems Operational</h2>
               </div>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                All services are running normally. We
-  're monitoring our systems 24/7 to ensure optimal performance.
+                All services are running normally. We&apos;re monitoring our systems 24/7 to ensure optimal performance.''
               </p>
             </div>
             
             {/* Status Overview Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="bg-gray-50 rounded-lg p-6 text-center">
                 <Activity className="w-12 h-12 text-blue-600 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">99.9%</h3>
@@ -219,7 +154,7 @@ const Status: NextPage = () => {
                     </thead>
                     <tbody className="bg-white divide-y divide-gray-200">
                       {services.map((service, index) => (
-                        <tr key={index} className="hover:bg-gray-50">
+                        <tr key={index} className="hover: bg-gray-50">
                           <td className="px-6 py-4 whitespace-nowrap">
                             <div className="flex items-center">
                               <Server className="w-5 h-5 text-gray-400 mr-3" />
@@ -277,10 +212,7 @@ const Status: NextPage = () => {
                         <div className="flex items-center text-sm text-gray-500">
                           <span className="mr-4">Date: {incident.date}</span>
                           <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                            incident.impact ===,
-  minor
-  ' ? 'bg-yellow-100 text-yellow-800
-  ': 'bg-red-100 text-red-800
+                            incident.impact === 'minor' ? 'bg-yellow-100 text-yellow-800' : 'bg-red-100 text-red-800'
                           }`}>
                             {incident.impact} impact
                           </span>
@@ -304,7 +236,7 @@ const Status: NextPage = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="bg-white rounded-lg p-6 text-center">
                 <Database className="w-12 h-12 text-blue-600 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">24/7 Monitoring</h3>

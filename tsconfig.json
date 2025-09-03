@@ -1,26 +1,29 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
-    "useDefineForClassFields": true,
+<<<<<<< HEAD
+    "target": "ES2020",
     "lib": [
-      "ES2022",
-      "DOM",
-      "DOM.Iterable"
+      "dom",
+      "dom.iterable",
+      "es6"
     ],
+=======
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "es6"],
+>>>>>>> main
     "allowJs": true,
     "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "module": "ESNext",
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
     "moduleResolution": "node",
-    "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
     "jsx": "preserve",
     "incremental": true,
+<<<<<<< HEAD
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
@@ -67,7 +70,7 @@
         "src/styles/*"
       ],
       "@data/*": [
-        "src/data/*"
+        "data/*"
       ],
       "@services/*": [
         "src/services/*"
@@ -86,36 +89,175 @@
     "types": [
       "node"
     ],
+=======
+>>>>>>> main
     "plugins": [
       {
         "name": "next"
       }
     ],
+<<<<<<< HEAD
     "strictNullChecks": true,
     "strictFunctionTypes": true,
     "strictBindCallApply": true,
     "strictPropertyInitialization": true,
-    "alwaysStrict": true
+    "alwaysStrict": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "exactOptionalPropertyTypes": false,
+    "tsBuildInfoFile": ".next/tsbuildinfo"
+=======
+    "baseUrl": ".",
+    "paths": {
+<<<<<<< HEAD
+      "@/*": ["./*"],
+      "@/components/*": ["./components/*"],
+      "@/pages/*": ["./pages/*"],
+      "@/lib/*": ["./lib/*"],
+      "@/utils/*": ["./utils/*"],
+      "@/types/*": ["./types/*"],
+      "@/styles/*": ["./styles/*"]
+    }
+=======
+      "@/*": [
+<<<<<<< HEAD
+        "./*"
+      ],
+      "@/components/*": [
+        "./components/*"
+      ],
+      "@/utils/*": [
+        "./utils/*"
+      ],
+      "@/hooks/*": [
+        "./hooks/*"
+      ],
+      "@/types/*": [
+        "./types/*"
+      ]
+    }
+=======
+        "./src/*"
+      ],
+      "@/components/*": [
+        "./src/components/*"
+      ],
+      "@/pages/*": [
+        "./src/pages/*"
+      ],
+      "@/utils/*": [
+        "./src/utils/*"
+      ],
+      "@/hooks/*": [
+        "./src/hooks/*"
+      ],
+      "@/types/*": [
+        "./src/types/*"
+      ]
+    },
+    "tsBuildInfoFile": ".next/cache/tsconfig.tsbuildinfo"
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
   },
   "include": [
     "next-env.d.ts",
+    "pages/**/*",
+<<<<<<< HEAD
+    "src/**/*",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
+=======
+    "components/**/*.ts",
+    "components/**/*.tsx",
+    "data/services.ts",
+    "styles/**/*",
+    "types/**/*",
+    "utils/**/*",
+<<<<<<< HEAD
+    "**/*.ts",
+    "**/*.tsx",
+=======
+>>>>>>> origin/main
+    ".next/types/**/*.ts"
+=======
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "types/**/*.d.ts"
+>>>>>>> main
+>>>>>>> main
   ],
   "exclude": [
+<<<<<<< HEAD
+    "node_modules"
+=======
     "node_modules",
+<<<<<<< HEAD
+    ".next",
+    "out",
+    "dist",
+    "build",
+    "pages.disabled",
+    "src.disabled",
+    "components.disabled",
+    "lib.disabled",
+    "hooks.disabled",
+    "automation",
+    "automation_backup",
+    "broken_files_backup",
+    "contracts",
+    "hardhat",
+    "api-backup",
+    "pages_backup",
+    "pages.__backup",
+    "lib_backup",
+    "backup-pages",
+    "api.disabled",
+    "src.disabled",
+    "components.disabled",
+    "lib.disabled",
+    "hooks.disabled"
+=======
+<<<<<<< HEAD
+    "api-backup/**/*",
+    "automation/backups/**/*",
+    "automation_backup/**/*",
+    "**/*.backup.*",
+    "**/*.disabled.*",
+    "**/*.old.*"
+=======
+    "node_modules",
+    ".next",
+    "out",
+    "dist",
     "api-backup",
     "pages.disabled",
     "backup-pages",
+    ".backup",
+    ".disabled",
     "automation/backups",
     "automation_backup",
     "broken_files_backup",
+    "contracts",
+<<<<<<< HEAD
+    "cypress",
+    "temp_working",
+    "supabase/functions",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "**/*.backup",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+    "**/*.disabled",
     "components",
     "contracts",
     "cypress",
-    "**/*.backup",
-    "**/*.disabled",
     "temp_working",
     "supabase/functions",
     "src/utils/generateRandomListing.ts",
@@ -133,6 +275,9 @@
     "src/pages/zion-hire-ai.tsx",
     "src/pages/webinars.tsx",
     "src/routes/*Routes.tsx",
+<<<<<<< HEAD
+    "src/pages/services/**"
+=======
     "src/pages/services/**",
     "src/pages/solutions/**",
     "src/pages/**",
@@ -140,5 +285,15 @@
     "src/services/**",
     "src/types/**",
     "src/utils/**"
+=======
+    "**/*.disabled"
+=======
+    "hardhat"
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
   ]
 }

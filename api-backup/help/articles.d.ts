@@ -1,1 +1,3 @@
-interface Req { method?: string; query?: { q?: string; }; 
+interface: Req {
+  method?: string;
+   query?: { q?: string}

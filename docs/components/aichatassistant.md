@@ -17,8 +17,8 @@ import { AIChatAssistant } from './components/AIChatAssistant.jsx';
 
 function App() {
   return (
-    <AIChatAssistant 
-      // Add your props here
+    <AIChatAssistant
+    // Add your props here
     />
   );
 }
@@ -41,4 +41,5 @@ function App() {
 This component uses Tailwind CSS classes for styling. Custom styles can be added via the `className` prop.
 
 ---
-*Generated automatically by Smart Documentation Generator*
+
+_Generated automatically by Smart Documentation Generator_
