@@ -19,9 +19,11 @@ export default function Services() {
           <h1 className="text-3xl md:text-5xl font-bold text-slate-900 text-center mb-10">Our Services</h1>
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {categories.map((c) => (
-              <Link key={c.name} href={c.href} className="bg-white rounded-xl p-6 shadow hover:shadow-lg border border-slate-200">
-                <h2 className="text-xl font-semibold mb-2">{c.name}</h2>
-                <p className="text-slate-600">{c.blurb}</p>
+              <Link key={c.name} href={c.href}>
+                <a className="block bg-white rounded-xl p-6 shadow hover:shadow-lg border border-slate-200">
+                  <h2 className="text-xl font-semibold mb-2">{c.name}</h2>
+                  <p className="text-slate-600">{c.blurb}</p>
+                </a>
               </Link>
             ))}
           </div>

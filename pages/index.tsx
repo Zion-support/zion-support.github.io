@@ -15,8 +15,12 @@ export default function Home() {
             We ship production-grade AI systems, IT platforms, and micro SaaS solutions. Trusted delivery, clear pricing, rapid results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/services" className="px-8 py-3 rounded-lg bg-cyan-500 hover:bg-cyan-600 font-semibold">Explore Services</Link>
-            <Link href="/contact" className="px-8 py-3 rounded-lg border border-white/20 hover:bg-white/10 font-semibold">Contact Us</Link>
+            <Link href="/services">
+              <a className="px-8 py-3 rounded-lg bg-cyan-500 hover:bg-cyan-600 font-semibold">Explore Services</a>
+            </Link>
+            <Link href="/contact">
+              <a className="px-8 py-3 rounded-lg border border-white/20 hover:bg-white/10 font-semibold">Contact Us</a>
+            </Link>
           </div>
           <p className="mt-8 text-slate-400">Phone: <a href="tel:+13024640950" className="underline">+1 302 464 0950</a> • Email: <a className="underline" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
         </div>

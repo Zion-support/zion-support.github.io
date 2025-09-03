@@ -39,7 +39,9 @@ export default function AIServices() {
             ))}
           </div>
           <div className="text-center mt-10">
-            <Link href="/contact" className="px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg font-semibold">Request a Proposal</Link>
+            <Link href="/contact">
+              <a className="px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg font-semibold">Request a Proposal</a>
+            </Link>
           </div>
         </div>
       </main>
