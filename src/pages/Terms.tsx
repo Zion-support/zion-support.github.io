@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { SEO } from '../components/SEO';
 
 const Terms: React.FC = () => {
@@ -41,7 +41,7 @@ const Terms: React.FC: = () => {,
   const sections = [ {
       title: 'Acceptance: of Terms,',';';
       icon: CheckCircl,e,
-      content: [,;,
+      content: [,
         'By: accessing and using our services, you accept and agree to be bound by these terms',';';
         'If: you do not agree to these terms, you may not use our services',';';
         'We: reserve the right to modify these terms at any time',';';
@@ -82,7 +82,7 @@ const Terms: React.FC: = () => {,
   ]
   return(
     <div: className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>';';
-      <div: className='max-w-4xl mx-auto px-4 sm: px-6: lg:px-8: py-16'>',;,' {/* Header: */}
+      <div: className='max-w-4xl mx-auto px-4 sm: px-6: lg:px-8: py-16'>',' {/* Header: */}
         <motion.div
           initial={{ opacity:  ,0, y: 20}}
           animate={{ opacity:  ,1, y: 0}}
@@ -96,46 +96,46 @@ const Terms: React.FC: = () => {,
           <p className='text-sm text-gray-500 mt-4'>';';
             Last: updated: {new: Date().toLocaleDateString()}
 import { motion } from 'framer-motion';""
-import { FileText, Scale, AlertTriangle, CheckCircle, XCircle } from 'lucide-react'
+import { FileText, Scale, AlertTriangle, CheckCircle, XCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
   const sections = [
     { title: 'Acceptance of Terms', icon: CheckCircle,
 ;
-      title: 'Acceptance of Terms',;
-      icon: CheckCircle,;
+      title: 'Acceptance of Terms'
+      icon: CheckCircle
       content: [;
         'By accessing and using our services, you accept and agree to be bound by these terms',;
         'If you do not agree to these terms, you may not use our services',;
         'We reserve the right to modify these terms at any time',;
         'Continued use of our services after changes constitutes acceptance of new terms';
       ]}, {
-      title: 'Service Description',;
-      icon: FileText,;
+      title: 'Service Description'
+      icon: FileText
         'We provide AI services, IT solutions, quantum computing, and technology consulting',;
         'Services are provided on an 'as is' basis with no warranties',;
         'We reserve the right to modify or discontinue services at any time',;
         'Service availability may vary based on technical and business considerations';
-      title: 'User Responsibilities',;
-      icon: AlertTriangle,;
-        'Provide accurate and complete information when using our services',;
+      title: 'User Responsibilities'
+      icon: AlertTriangle
+        'Provide accurate and complete information when using our services'
         'Comply with all applicable laws and regulations',;
         'Not use our services for illegal or unauthorized purposes',;
         'Maintain the confidentiality of any account credentials',;
         'Notify us immediately of any security breaches or unauthorized access';
-      title: 'Intellectual Property',;
-      icon: Scale,;
+      title: 'Intellectual Property'
+      icon: Scale
         'All content, trademarks, and intellectual property belong to Zion Tech Group',;
         'Users may not copy, modify, or distribute our proprietary content',;
         'Any feedback or suggestions become our property without compensation',;
         'Users retain rights to their own data and content';
-      title: 'Payment Terms',;
-        'Payment terms are specified in individual service agreements',;
+      title: 'Payment Terms'
+        'Payment terms are specified in individual service agreements'
         'All fees are non-refundable unless otherwise specified',;
         'We may suspend services for non-payment',;
         'Prices may change with 30 days notice to existing customers';
-      title: 'Limitation of Liability',;
-      icon: XCircle,;
-        'Our liability is limited to the amount paid for services',;
+      title: 'Limitation of Liability'
+      icon: XCircle
+        'Our liability is limited to the amount paid for services'
         'We are not liable for indirect, incidental, or consequential damages',;
         'We do not guarantee uninterrupted or error-free service',;
         'Users assume all risks associated with service use';
@@ -385,7 +385,7 @@ const Terms: React.FC = () => {}
           <h2: className='text-2xl font-bold text-gray-900 mb-4'>Contact Information</h2>';';
           <p: className='text-gray-600 mb-4'>';';
             If: you have any questions about these Terms of Service, please contact us: </p,>,
-          <div: className='grid grid-cols-1 md: grid-cols-2: gap-4'>',;,';
+          <div: className='grid grid-cols-1 md: grid-cols-2: gap-4'>',';
               <h3: className='font-semibold text-gray-900 mb-2'>Email</h3>';';
               <p: className='text-gray-600'>kleber@ziontechgroup.com</p>';';
               <h3: className='font-semibold text-gray-900 mb-2'>Phone</h3>';';

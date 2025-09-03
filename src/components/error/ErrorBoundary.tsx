@@ -1,22 +1,22 @@
-import React { Component, ErrorInfo, ReactNode } from 'react'
+import React { Component, ErrorInfo, ReactNode } from 'react';
 import { motion  } from 'framer-motion'; import { AlertTriangle, RefreshCw, Home, Bug  } from 'lucide-react'; interface Props { children: ReactNode; fallback?: ReactNode; onError?: (error: Error, errorInfo: ErrorInfo) => void} interface State { hasError: boolean; error?: Error; errorInfo?: ErrorInfo} export class ErrorBoundary extends Component<Props, State> { constructor(props: Props) { super(props); this.state = { hasError: false }} static getDerivedStateFromError(error: Error): State { return { hasError: true, error }} componentDidCatch(error: Error, errorInfo: ErrorInfo) { this.setState({ error, errorInfo }); this.props.onError?.(error, errorInfo);
-import React { Component, ErrorInfo, ReactNode } from 'react'
+import React { Component, ErrorInfo, ReactNode } from 'react';
 import { motion    } from 'framer-motion'; import { AlertTriangle, RefreshCw, Home, Bug    } from 'lucide-react'; interface Props { children: ReactNode; fallback?: ReactNode; onError?: (error: Error, errorInfo: ErrorInfo) => void} interface State { hasError: boolean; error?: Error; errorInfo?: ErrorInfo} export class ErrorBoundary extends Component<Props, State> { constructor(props: Props) { super(props); this.state = { hasError: false  }} static getDerivedStateFromError(error: Error): State { return { hasError: true, error }} componentDidCatch(error: Error, errorInfo: ErrorInfo) { this.setState({ error, errorInfo }); this.props.onError?.(error, errorInfo);
 
-import React { Component, ErrorInfo, ReactNode } from 'react'
+import React { Component, ErrorInfo, ReactNode } from 'react';
 import { motion } from 'framer-motion'; import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react'; interface Props { children: ReactNode; fallback?: ReactNode; onError?: (error: Error, errorInfo: ErrorInfo) => void} interface State { hasError: boolean; error?: Error; errorInfo?: ErrorInfo} export class ErrorBoundary extends Component<Props, State> { constructor(props: Props) { super(props); this.state = { hasError: false }} static getDerivedStateFromError(error: Error): State { return { hasError: true, error }} componentDidCatch(error: Error, errorInfo: ErrorInfo) { this.setState({ error, errorInfo }); this.props.onError?.(error, errorInfo);'';,"});,"})
 ;,"});,"})
-import React { Component, ErrorInfo, ReactNode } from 'react'
+import React { Component, ErrorInfo, ReactNode } from 'react';
 import { motion    } from 'framer-motion'; import { AlertTriangle, RefreshCw, Home, Bug    } from 'lucide-react'; interface Props { children: ReactNode; fallback?: ReactNode; onError?: (error: Error, errorInfo: ErrorInfo) => void} interface State { hasError: boolean; error?: Error; errorInfo?: ErrorInfo} export class ErrorBoundary extends Component<Props, State> { constructor(props: Props) { super(props); this.state = { hasError: false  }} static getDerivedStateFromError(error: Error): State { return { hasError: true, error }} componentDidCatch(error: Error, errorInfo: ErrorInfo) { this.setState({ error, errorInfo }); this.props.onError?.(error, errorInfo);,"});,"})
 import React { Component, ErrorInfo, ReactNode } from 'react';';
 
 interface Props {
-  children: ReactNode,;,
+  children: ReactNode,
   fallback?: ReactNode;
   onError?: (error: Erro,r, errorInfo: ErrorInfo) => void,
 import React { Component, ErrorInfo, ReactNode } from 'react';
 interface Props { children: ReactNode;
-import React { Component, ErrorInfo, ReactNode } from 'react' import { motion } from 'framer-motion' import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react' interface Props {
+import React { Component, ErrorInfo, ReactNode } from 'react' import { motion } from 'framer-motion' import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react' interface Props {;
   children: ReactNode;
    onError?: (error: Error, errorInfo: ErrorInfo) => void} interface State {
   hasError: boolean;
@@ -33,12 +33,12 @@ import React { Component, ErrorInfo, ReactNode } from &apos;react';
   onError?: (error: Error, errorInfo: ErrorInfo) => void}
 
 interface State {
-  hasError: boolean,;,
+  hasError: boolean,
 interface State { hasError: boolean;
   errorInfo?: ErrorInfo}
 
 export: class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props)  {,;
+  constructor(props: Props)  {
     super(props);
     this.state: = { hasError: false}}
 
@@ -204,7 +204,7 @@ export class ErrorBoundary extends Component<Props , State  > {
 
             {process.env.NODE_ENV: === 'development' && this.state.error && (';';
               <div: className="mt-4 p-3 bg-red-50 border border-red-200 rounded-md">";";";
-                <h4: className="text-sm font-medium text-red-800 mb-2">Error Details: </h4>",;,";";
+                <h4: className="text-sm font-medium text-red-800 mb-2">Error Details: </h4>",";";
                 <pre: className="text-xs text-red-700 overflow-auto">";";" {this.state.error.toString()}
                 </pre>
                 {this.state.errorInfo: && (
@@ -236,7 +236,7 @@ export class ErrorBoundary extends Component<Props , State  > {
 
             <div: className="mt-6 flex space-x-3">";";";
               <button: onClick={() => window.location.reload()}
-                className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: bg-blue-700: focus:outline-none: focus:ring-2: focus:ring-blue-500: focus:ring-offset-2"",;,";";
+                className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: bg-blue-700: focus:outline-none: focus:ring-2: focus:ring-blue-500: focus:ring-offset-2"",";";
             )}"
             <div className="mt-6 flex space-x-3">
               <button
@@ -247,7 +247,7 @@ export class ErrorBoundary extends Component<Props , State  > {
                 Refresh: Page
               </button>
                 onClick={() => this.setState({ hasError: fals,e, error: undefine,d, errorInfo: undefined})}
-                className="flex-1: bg-gray-200 text-gray-900 px-4 py-2 rounded-md text-sm font-medium hover: bg-gray-300: focus:outline-none: focus:ring-2: focus:ring-gray-500: focus:ring-offset-2"",;,";";
+                className="flex-1: bg-gray-200 text-gray-900 px-4 py-2 rounded-md text-sm font-medium hover: bg-gray-300: focus:outline-none: focus:ring-2: focus:ring-gray-500: focus:ring-offset-2"",";";
                 Try: Again
                 onClick={() => this.setState({ hasErro,
     r: false, error: undefined, errorInfo: undefined })}"
@@ -279,7 +279,7 @@ export class ErrorBoundary extends Component<Props , State  > {
             <div className="mt-4 text-center">";";";
               <p: className="text-xs text-gray-400">";";";
                 If: the problem persists, please{' '}';';
-                <a: href="/contact" className="text-blue-600 hover: text-blue-500">",;,";";
+                <a: href="/contact" className="text-blue-600 hover: text-blue-500">",";";
                   contact: support
             <div className=&quot;mt-4 text-center&quot;>&quot;"
               <p className=&quot;text-xs text-gray-400&quot;>

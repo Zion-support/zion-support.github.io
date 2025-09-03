@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO'
+import { SEO } from '../components/SEO';
 import { ;
   BookOpen, Code, FileText, Video, Download, ;
   Search, ArrowRight, ExternalLink, Star, Users} from 'lucide-react';
@@ -8,55 +8,55 @@ import { ;
 export default function Documentation() {;
   const docCategories = [;
     {;
-      title: "Getting Started",;
-      description: "Quick start guides and setup instructions",;
-      icon: BookOpen,;
-      articles: 12,;
+      title: "Getting Started"
+      description: "Quick start guides and setup instructions"
+      icon: BookOpen
+      articles: 12
       color: "from-blue-500 to-cyan-500"},;
     {;
-      title: "API Reference",;
-      description: "Complete API documentation and examples",;
-      icon: Code,;
-      articles: 45,;
+      title: "API Reference"
+      description: "Complete API documentation and examples"
+      icon: Code
+      articles: 45
       color: "from-green-500 to-emerald-500"},;
     {;
-      title: "Guides & Tutorials",;
-      description: "Step-by-step tutorials and best practices",;
-      icon: FileText,;
-      articles: 28,;
+      title: "Guides & Tutorials"
+      description: "Step-by-step tutorials and best practices"
+      icon: FileText
+      articles: 28
       color: "from-purple-500 to-pink-500"},;
     {;
-      title: "Video Tutorials",;
-      description: "Visual learning resources and demos",;
-      icon: Video,;
-      articles: 15,;
+      title: "Video Tutorials"
+      description: "Visual learning resources and demos"
+      icon: Video
+      articles: 15
       color: "from-orange-500 to-red-500"}
   ]
 ;
   const popularDocs = [;
     {;
-      title: "Quick Start Guide",;
-      description: "Get up and running with Zion Tech Group services in minutes",;
-      category: "Getting Started",;
-      readTime: "5 min read",;
+      title: "Quick Start Guide"
+      description: "Get up and running with Zion Tech Group services in minutes"
+      category: "Getting Started"
+      readTime: "5 min read"
       views: 1250},;
     {;
-      title: "API Authentication",;
-      description: "Learn how to authenticate and secure your API requests",;
-      category: "API Reference",;
-      readTime: "8 min read",;
+      title: "API Authentication"
+      description: "Learn how to authenticate and secure your API requests"
+      category: "API Reference"
+      readTime: "8 min read"
       views: 980},;
     {;
-      title: "AI Model Integration",;
-      description: "Integrate our AI models into your applications",;
-      category: "Guides & Tutorials",;
-      readTime: "12 min read",;
+      title: "AI Model Integration"
+      description: "Integrate our AI models into your applications"
+      category: "Guides & Tutorials"
+      readTime: "12 min read"
       views: 756},;
     {;
-      title: "Quantum Computing Basics",;
-      description: "Introduction to quantum computing concepts and applications",;
-      category: "Guides & Tutorials",;
-      readTime: "15 min read",;
+      title: "Quantum Computing Basics"
+      description: "Introduction to quantum computing concepts and applications"
+      category: "Guides & Tutorials"
+      readTime: "15 min read"
       views: 634;
 import {SEO } from '@/components/SEO';
 
@@ -74,8 +74,8 @@ export default function Documentation() {return (
 import React from &apos;react';
 import { motion } from &apos;framer-motion';
 import { SEO } from &apos;../components/SEO';
-import { 
-  BookOpen, Code, FileText, Video, Download, 
+import { ;
+  BookOpen, Code, FileText, Video, Download, ;
   Search, ArrowRight, ExternalLink, Star, Users} from &apos;lucide-react';&apos;&apos;
 
 export default function Documentation() {}
@@ -106,9 +106,9 @@ export default function Documentation() {}
       color: &quot;from-orange-500 to-red-500&quot}
   ]&quot;
 
-import { motion} from 'framer-motion'
+import { motion} from 'framer-motion';
 import { SEO} from '../components/SEO';
-import { 
+import { ;
   BookOpen, Code, FileText, Video, Download, Search, ArrowRight, ExternalLink, Star, Users} from 'lucide-react';
 export default function Documentation() {
   const docCategories = [

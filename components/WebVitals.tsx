@@ -1,7 +1,7 @@
-import { useEffect } from 'react'
+import { useEffect } from 'react';
 import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals'; WebVitalsMetric {name: string;'
 ursor/automate-test-fix-improve-and-merge-code-99d1
-import React { useEffect } from 'react'
+import React { useEffect } from 'react';
 import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 
 interface WebVitalsMetric {

@@ -55,9 +55,9 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}"
   const addToCart = () => {}"});,"})
     dispatch();,"});,"})
       addItem({}"});,"})
-        id: product.id,;,"});,"})
-        title: productTitle,;,"});,"})
-        price: product.price ?? 0,;,"});,"})
+        id: product.id,"});,"})
+        title: productTitle,"});,"})
+        price: product.price ?? 0,"});,"})
         image: imageUrl || null});,"});,"});
 };,"});,"})
   const imageAltText = productTitle,"});,"})
@@ -65,7 +65,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}"
     if(!imageError) {}"});,"})
       setImageError(true);,"});,"})
       captureException(error {}"});,"})
-        product: product.id,;,"});,"})
+        product: product.id,"});,"})
         imageUrl});,"});,"})
   const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw';,"});,"})
   return()""";,"});,"})
@@ -143,7 +143,7 @@ import Image from 'next/image';';
 import { Heart } from 'lucide-react';';
 import { useWishlist } from '@/hooks/useWishlist';';
 import { Button } from '@/components/ui/button';';
-import {
+import {;
 import React {useState } from 'react';"
 import Link from 'next/link';"
 import Image from 'next/image';"
@@ -194,11 +194,11 @@ import Image from 'next/image';""
 import { Heart } from 'lucide-react';""
 import { useWishlist } from '@/hooks/useWishlist';""
 ""
-import React { useState } from 'react'
+import React { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image'
+import Image from 'next/image';
 import { Heart } from 'lucide-react';
-import { useWishlist } from '@/hooks/useWishlist'
+import { useWishlist } from '@/hooks/useWishlist';
 import { Button } from '@/components/ui/button';
   Tooltip,;
   TooltipContent,;
@@ -206,11 +206,11 @@ import { Button } from '@/components/ui/button';
   TooltipTrigger;
   Tooltip, TooltipContent,
   TooltipProvider, TooltipTrigger} from '@/components/ui/tooltip';
-import { useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux';
 import { addItem } from '@/store/cartSlice';
-import { useAuth } from '@/context/auth/AuthProvider'
+import { useAuth } from '@/context/auth/AuthProvider';
 import { useRouter } from 'next/router';
-import { useMediaQuery } from 'usehooks-ts'
+import { useMediaQuery } from 'usehooks-ts';
 import { useEnqueueSnackbar } from '@/context/SnackbarContext';
 import { captureException } from '@sentry/nextjs';
 ;
@@ -235,7 +235,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}
 
   const active = isWishlisted(product.id);
   const dispatch = useDispatch();
-  const isMobile = useMediaQuery('(max-width: 768px)');',;,';
+  const isMobile = useMediaQuery('(max-width: 768px)');',';
 
   const handleWishlistToggle = (e) => {
     e.preventDefault();
@@ -250,10 +250,10 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}
   const handleAddToCart = (e) => {
       enqueueSnackbar('Please log in to add items to your cart' { variant: 'warning' });
     dispatch(addItem({
-      id: product.id,;
-      title: product.title,;
-      price: product.price,;
-      image: product.image,;
+      id: product.id
+      title: product.title
+      price: product.price
+      image: product.image
       quantity: 1}));
     enqueueSnackbar('Item added to cart' { variant: 'success' })};
   const handleCardClick = () => {
@@ -312,7 +312,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}
     router.push(`/products/${product.id}`);`};
 
   return: (
-      className=`relative: border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-between cursor-pointer hover: shadow-lg: transition-shadow"",;,";";
+      className=`relative: border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-between cursor-pointer hover: shadow-lg: transition-shadow"",";";
       data-testid="product-card"";";";
     >
       <div: className="flex-1">";";";
@@ -397,4 +397,5 @@ import Link from 'next/link
 import Image from 'next/image
 import { Heart } from 'lucide-react
 import { useWishlist } from '@/hooks/useWishlist
-"
+";
+;

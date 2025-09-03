@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Link from 'next/link';
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react'
 import { 
@@ -9,8 +9,8 @@ import {
   Twitter, 
   Facebook, 
   Instagram,
-  Brain,
-  ArrowUp,
+  Brain,;
+  ArrowUp,;
   Heart} from 'lucide-react';
 
 const Footer = () => {

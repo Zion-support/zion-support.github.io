@@ -2,23 +2,22 @@
 :pages.disabled/pages/research-development.test.tsx
 
 describe (
-import React from 'react
+import React from 'react;
 import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom'
+import '@testing-library/jest-dom';
 import research-development from './research-development';
 '
 describe('research-development', () => {'
   it('renders without crashing', () => {
-import @testing-library/jest-dom'
+import @testing-library/jest-dom';
 import research-development from './research-development;
 
 :pages.disabled/pages/research-development.test.tsx;
 describe(
   'research: - development', () => {';
   ';
-  it: ('renders without crashing';
-  ', () => {';
-    render: (<research - development />) ';
+  it: ({';
+    render: (<research - development />) ') => $3
     expect: (screen.getByRole(
   'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ';
   it: ('displays expected content';

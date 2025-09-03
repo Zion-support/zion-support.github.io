@@ -67,8 +67,8 @@ export const loadWishlistFromDB = createAsyncThunk( wishlist/loadFromDB', async 
     const res = await fetch(`${getApiUrl()}/wishlist?userId=${userId}`);"
     if (!res.ok) throw new Error('Failed to load');
 const wishlistSlice = createSlice({'
-  name: 'wishlist',;
-  initialState,;
+  name: 'wishlist'
+  initialState
   reducers: {
         item => item.id === action.payload.id && item.type === action.payload.type;
 const wishlistSlice = createSlice({name: 'wishlist', initialState,

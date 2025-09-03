@@ -10,8 +10,8 @@ import {}
   Mail,
   Zap,
   Brain,
-  Clock,
-  Database} from
+  Clock,;
+  Database} from;
   'lucide-react';
 
   return ("

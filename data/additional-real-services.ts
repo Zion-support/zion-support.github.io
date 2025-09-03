@@ -685,11 +685,11 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
       'CSV/Stripe imports',
       'Board-ready reports';
     ],;
-    popular: true,;
-    icon: '📈',;
-    color: 'from-fuchsia-600 to-pink-700',;
-    textColor: 'text-fuchsia-300',;
-    link: 'https://ziontechgroup.com/services/subscription-revenue-analytics',;
+    popular: true
+    icon: '📈'
+    color: 'from-fuchsia-600 to-pink-700'
+    textColor: 'text-fuchsia-300'
+    link: 'https://ziontechgroup.com/services/subscription-revenue-analytics'
     marketPosition: 'Faster deploy vs. BI stacks; purpose-built for SaaS.',
     targetAudience: 'Founders, finance, ops',
     trialDays: 14,

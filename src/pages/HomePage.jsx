@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import {Link } from 'react-router-dom';
 import {ArrowRight, 
   Play, 
@@ -12,8 +12,8 @@ import {ArrowRight,
   Rocket,
   CheckCircle,
   TrendingUp,
-  Globe,
-  Clock'
+  Globe,;
+  Clock';
   TrendingUp,;
   Globe,;
   Clock} from 'lucide-react';
@@ -75,8 +75,8 @@ import {
   Star, Users, 
   Award, Zap, 
   Shield, Cloud, 
-  Brain, Rocket,
-  CheckCircle, TrendingUp,
+  Brain, Rocket,;
+  CheckCircle, TrendingUp,;
   Globe, Clock;", ";
 } from 'lucide-react';
 

@@ -3,7 +3,7 @@ import { Check, X, Star, Clock, Phone, Mail } from 'lucide - react';''';,"});,"}
 ;,"});,"})
 import { Badge } from "./ui/badge";,"});,"})
 import { Button } from "./ui/button";,"});,"})
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Check, X, Star, Clock, Phone, Mail } from 'lucide-react';,"});,"})
 import {}"});,"})
   COMPREHENSIVE_SERVICES,';,"});,"})
@@ -307,11 +307,11 @@ export function ServicesComparisonTable() {}"});,"})
   );,"});,"});
 }'""";,"});,"})
 '"'""";,"});,"})
-import { Check, X, Star, Clock, Phone, Mail } from 'lucide - react''
+import { Check, X, Star, Clock, Phone, Mail } from 'lucide - react'';
 import { Badge } from './ui/badge';
-import { Button } from './ui/button'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';import { Check, X, Star, Clock, Phone, Mail } from 'lucide-react'
-import {}
+import { Button } from './ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';import { Check, X, Star, Clock, Phone, Mail } from 'lucide-react';
+import {};
   COMPREHENSIVE_SERVICES,';
   CONTACT_INFO} from '@/data/comprehensiveServices';
 export function ServicesComparisonTable() {}
@@ -319,11 +319,11 @@ export function ServicesComparisonTable() {}
 '';
 ''';
   const serviceCategories = ['AI Services',IT Services',Micro SAAS']
-import { Check, X, Star, Clock, Phone, Mail } from 'lucide - react'''
-""
+import { Check, X, Star, Clock, Phone, Mail } from 'lucide - react''';
+"";
 import { Badge } from './ui/badge';""
 import { Button } from './ui/button';""
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Check, X, Star, Clock, Phone, Mail } from 'lucide-react';
 import {}""
   COMPREHENSIVE_SERVICES, ''
@@ -332,11 +332,11 @@ export function ServicesComparisonTable() {}""
 import { Check, X, Star, Clock, Phone, Mail }  from 'lucide - react
 "
 import { Badge } from './ui/badge
-import { Button } from './ui/button
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card'
+import { Button } from './ui/button;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Check, X, Star, Clock, Phone, Mail } from 'lucide-react';
-import {}"
-  COMPREHENSIVE_SERVICES,'
+import {}";
+  COMPREHENSIVE_SERVICES,';
   CONTACT_INFO}  from '@/data/comprehensiveServices';export function ServicesComparisonTable() {}"
 '
 ''

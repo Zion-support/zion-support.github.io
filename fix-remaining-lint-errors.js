@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import fs from 'fs'
+import fs from 'fs';
 import { glob } from 'glob';
 
 // Function to fix remaining lint errors
@@ -22,12 +22,12 @@ function fixRemainingLintErrors(content) {
   if (
     fixed.includes('<Link') &&
     !fixed.includes(import Link from 'next/link'")
-  ) {
-    fixed = fixed.replace(
+  ) {;
+    fixed = fixed.replace(;
       /import\s+([^;]+);/,
       "import $1;\nimport Link from 'next/link';"
     );
-  if (fixed.includes('<Link') && !fixed.includes("import Link  from 'next/link)) {
+  if (fixed.includes('<Link') && !fixed.includes("import Link  from 'next/link)) {;
     fixed = fixed.replace(/import\s+([^;]+);/, "import $1;\nimport Link from 'next/link);
   }
 

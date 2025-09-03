@@ -4,7 +4,7 @@ import { ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, Ar
 import { useVirtualScroll } from "../hooks/useVirtualScroll.jsx";,"});,"})
 ;,"});,"})
 export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = '', onRowClick, onSelectionChange, onExport }) => {;,"});,"})
-    const { trackEvent } = useAnalytics({        enableTracking: true,;,"});,"})
+    const { trackEvent } = useAnalytics({        enableTracking: true,"});,"})
         enableUserBehaviorTracking: true,"});,"});
 });,"});,"})
     // State management'';,"});,"})
@@ -66,7 +66,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
         : processedData,"});,"})
     // Virtual scrolling,"});,"})
     const { virtualItems, containerProps, listProps } = useVirtualScroll(paginatedData, {}"});,"})
-        itemHeight: 60,;,"});,"})
+        itemHeight: 60,"});,"})
         containerHeight: height - 120, // Account for header and controls,"});,"})
         overscan: 5,"});,"});
 });,"});,"})
@@ -194,13 +194,13 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
         {/* Filters Panel */}"});,"})
         <AnimatePresence>;,"});,"})
           {showFilters && (<motion.div initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   height: 0,"});,"});
 }} animate = {}"});,"})
   { opacity: 1,';,"});,"})
   height: 'auto',"});,"});
 }} exit = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   height: 0 ""","});,"})
 """";,"});,"});
 }} className="mt-4 p-4 bg-white dark: bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500">"""","});,"})
@@ -255,10 +255,10 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
         <div {...containerProps} className="relative">;,"});,"})
           <div {...listProps}>;,"});,"})
             {virtualItems.map((item, index) => (<motion.div key={String(item.id || index)} initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: 20,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   y: 0 '`,"});,"})
 '`'`;,"});,`});
 }} className={`flex items-center px-4 py-3 border-b border-gray-100 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors ${onRowClick ? 'cursor-pointer' : ''} ${selectedItems.has(String(item.id || JSON.stringify(item))) ? 'bg-blue-50 dark:bg-blue-900/20' : ''}`} onClick = {}`});,"})
@@ -339,8 +339,8 @@ import { useVirtualScroll } from '../hooks/useVirtualScroll.jsx';""
 import { useState, useMemo, useCallback } from 'react
 import { motion, AnimatePresence } from 'framer-motion
 import { ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown } from 'lucide-react
-import { useVirtualScroll } from '../hooks/useVirtualScroll.jsx
-export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = '', onRowClick, onSelectionChange, onExport }) => {
+import { useVirtualScroll } from '../hooks/useVirtualScroll.jsx;
+export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = '', onRowClick, onSelectionChange, onExport }) => {;
     const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true",";
 })''
     // State management''

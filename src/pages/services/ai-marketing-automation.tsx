@@ -1,6 +1,6 @@
 import React from 'react';""
 import { SEO } from '../../components/SEO';""
-import React  from 'react
+import React  from 'react;
 import { SEO }  from ';../../components/SEO';
 import { motion } from 'framer-motion'
 import { 
@@ -18,8 +18,8 @@ import {
   MousePointer, Filter,
   PieChart, LineChart,
   Globe, Clock,
-  Send, UserPlus,
-  UserCheck, Activity,
+  Send, UserPlus,;
+  UserCheck, Activity,;
   DollarSign;", ";
 } from 'lucide-react';
 

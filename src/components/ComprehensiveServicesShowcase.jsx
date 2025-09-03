@@ -60,9 +60,9 @@ const ComprehensiveServicesShowcase = () => {    const [selectedCategory, setSel
             // Handle special category mappings,"});,"})
             const categoryMappings = {,"});,"})
 export { ComprehensiveServicesShowcase };,"});,"})
-import React { useState } from 'react'
+import React { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import React from 'react'
+import React from 'react';
 import {SEO } from '@/components/SEO';
 
 export default function ComprehensiveServicesShowcase() {return (
@@ -75,10 +75,10 @@ export default function ComprehensiveServicesShowcase() {return (
         </p>
       </div>
   )}
-import React { useState } from &apos
+import React { useState } from &apos;
 import { motion } from &apos;framer-motion';;react&apos;
 import { motion, AnimatePresence } from &apos;framer-motion';
-import {}
+import {};
   Brain,;
   Shield,;
   Rocket,;
@@ -118,17 +118,17 @@ const serviceCategories = []{}
     id: 'micro-saas','';
     name: 'Micro SAAS Solutions','';
     icon: <Rocket className='w-6 h-6' />,';
-    color: 'from-purple-600 to-pink-600',;
+    color: 'from-purple-600 to-pink-600'
     services: revolutionary2027AdvancedMicroSaasServices}, {}
     id: 'it-infrastructure','';
     name: 'IT Infrastructure & Cybersecurity','';
     icon: <Shield className='w-6 h-6' />,';
-    color: 'from-red-600 to-orange-600',;
+    color: 'from-red-600 to-orange-600'
     services: revolutionary2027ITInfrastructureCybersecurityServices}, {}
     id: 'ai-innovation','';
     name: 'AI Innovation Services','';
     icon: <Brain className='w-6 h-6' />,';
-    color: 'from-blue-600 to-cyan-600',;
+    color: 'from-blue-600 to-cyan-600'
     id: &apos;micro-saas&apos,'&apos;&apos;
     name: &apos;Micro SAAS Solutions&apos,'&apos;&apos;
     icon:&apos;&apos; <Rocket className=&apos;w-6 h-6&apos; />,';
@@ -152,9 +152,9 @@ export function ComprehensiveServicesShowcase() {}
   const containerVariants = {}
     hidden: { opacity: 0 },;
     visible: {}
-      opacity: 1,;
+      opacity: 1
       transition: {}
-        staggerChildren: 0.1,;
+        staggerChildren: 0.1
         delayChildren: 0.2}
 &apos;
 &apos;&apos;&apos;&apos;
@@ -180,9 +180,9 @@ export function ComprehensiveServicesShowcase() {}
         staggerChildren: 0.1, delayChildren: 0.2}
     }
   const itemVariants = {}
-  hidden: { y: 20,;
+  hidden: { y: 20
   opacity: 0},;
-      y: 0,;
+      y: 0
         duration: 0.5,'';
         ease: 'easeOut''}
   hidden: { ,y: 20,
@@ -195,8 +195,8 @@ export function ComprehensiveServicesShowcase() {}
         duration: 0.5, '''';
         ease: 'easeOut'''}
   const cardVariants = {}
-  hidden: { scale: 0.95,;
-      scale: 1,;
+  hidden: { scale: 0.95
+      scale: 1
         duration: 0.4,'';
   }';
   return ('';
@@ -205,7 +205,7 @@ export function ComprehensiveServicesShowcase() {}
         <motion.div '';
           className='text-center mb-16'';
           initial = {}
-  { opacity: 0,;
+  { opacity: 0
   y: 30}}
   hidden: { scal,e: 0.95,
   hidden: { scale: 0.95, opacity: 0},
@@ -227,7 +227,7 @@ export function ComprehensiveServicesShowcase() {}
           className='text-center mb-16''';
   { opacity: 0, y: 30}}
           animate = {}
-  { opacity: 1,;
+  { opacity: 1
   y: 0}}
           transition={{ duration: 0.6 }}''>'';
           <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
@@ -544,7 +544,7 @@ export function ComprehensiveServicesShowcase() {}
         {/* Call to Action */}&apos;&apos;'&apos;&apos;
           className=&apos;text-center mt-16&apos;&apos {/* Call to Action */}''''
           className='text-center mt-16''';
-  { duration: 0.6,;
+  { duration: 0.6
   delay: 0.4}}''>'';
           <div className='bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 p-8 rounded-2xl border border-zion-cyan/30'>'';
             <h3 className='text-2xl font-bold text-white mb-4'>;
@@ -606,12 +606,12 @@ export function ComprehensiveServicesShowcase() {}
             exit={{ opacity: 0 }}
             onClick={ () => setSelectedService (null) }
               className='bg-zion-slate-dark rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto'';
-  { scale: 0.9,;
+  { scale: 0.9
   opacity: 0}}
               className=&apos;bg-zion-slate-dark rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto&apos;&apos;
               className='bg-zion-slate-dark rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto''';
   { scale: 0.9, opacity: 0}}
-  { scale: 1,;
+  { scale: 1
   opacity: 1}}
               exit = {}
               onClick={(e) => e.stopPropagation()}''>'';

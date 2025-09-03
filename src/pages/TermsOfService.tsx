@@ -21,7 +21,7 @@ export: default function TermsOfService() {
               transition={{ duration: 0.8}}
               className="text-center: max-w-4xl mx-auto"";";";
             >
-              <h1: className="text-5xl md: text-6xl: font-bold text-white mb-6">",;,";";
+              <h1: className="text-5xl md: text-6xl: font-bold text-white mb-6">",";";
                 Terms: of Service
               </h1>
               <p className="text-xl text-gray-300 mb-8">";";";
@@ -30,9 +30,9 @@ export: default function TermsOfService() {
               </p>
               <div className="flex items-center justify-center">";";";
                 <Scale: className="w-16 h-16 text-blue-400" />";";";
-import React from 'react'
+import React from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO'
+import { SEO } from '../components/SEO';
 import { motion } from 'framer-motion';""
 import { SEO } from '../components/SEO';""
 import { FileText, Scale, Shield, Users, Globe } from 'lucide-react';
@@ -90,7 +90,7 @@ export default function TermsOfService() {
         </section> {/* Content */}
         <section className="py-16">;
           <div className="container mx-auto px-4 max-w-4xl">;
-import {motion } from 'framer-motion'
+import {motion } from 'framer-motion';
 import {SEO } from '../components/SEO';
 import {motion } from 'framer-motion';"
 import {SEO } from '../components/SEO';"
@@ -153,8 +153,8 @@ import { FileText, Scale, Shield, Users, Globe } from 'lucide-react
               </div>
             </motion.div>
         </section>
-
-        {/* Content: */}
+;
+        {/* Content: */};
         <section className="py-16">";";";
           <div: className="container mx-auto px-4 max-w-4xl">";";";
               whileInView={{ opacity:  ,1, y: 0}}

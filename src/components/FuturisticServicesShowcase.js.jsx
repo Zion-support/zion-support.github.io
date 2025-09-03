@@ -4,13 +4,13 @@ import { motion, AnimatePresence } from 'framer-motion';,"});,"})
 import { ADVANCED_MICRO_SERVICES } from "../data/advancedMicroServices.jsx";,"});,"})
 const ServiceCard = ({ service, index, isVisible }) => {    const [isHovered, setIsHovered] = useState(false);,"});,"})
     return (<motion.div initial = {}"});,"})
-  { opacity: 0, y: 50,;,"});,"})
+  { opacity: 0, y: 50,"});,"})
   scale: 0.9,"});,"});
 }} animate = {}"});,"})
-  isVisible ? { opacity: 1, y: 0,;,"});,"})
+  isVisible ? { opacity: 1, y: 0,"});,"})
   scale: 1,"});,"});
 } : {}} transition = {}"});,"})
-  { duration: 0.6,;,"});,"})
+  { duration: 0.6,"});,"})
   delay: index * 0.1 ""","});,"})
 """";,"});,"});
 }} className="relative group" onHoverStart={() => setIsHovered(true)} onHoverEnd={() => setIsHovered(false)}>""";,"});,"})
@@ -175,10 +175,10 @@ export const FuturisticServicesShowcase = () => {}"});,"})
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,"});,"})
         {/* Header Section */}"});,"})
         <motion.div initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: -50,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   y: 0 ""","});,"})
 """";,"});,"});
 }} transition={{ duration: 0.8 }} className="text-center mb-16">"""";,"});,"})
@@ -220,13 +220,13 @@ export const FuturisticServicesShowcase = () => {}"});,"})
         </div>;,"});,"})
         {/* Call to Action */}"});,"})
         <motion.div initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: 50,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   y: 0,"});,"});
 }} transition = {}"});,"})
-  { duration: 0.8,;,"});,"})
+  { duration: 0.8,"});,"})
   delay: 0.5 ""","});,"})
 """";,"});,"});
 }} className="text-center mt-20">"""";,"});,"})
@@ -250,10 +250,10 @@ export const FuturisticServicesShowcase = () => {}"});,"})
       </div>;,"});,"})
     </div>)};'"`;,"});,"})
 '"`'"`;,"});,"})
-import React, { useState, useEffect } from 'react'''
+import React, { useState, useEffect } from 'react''';
 import { motion, AnimatePresence } from 'framer-motion';""
-import React, { useState, useEffect }  from 'react
-import { motion, AnimatePresence } from 'framer-motion
+import React, { useState, useEffect }  from 'react;
+import { motion, AnimatePresence } from 'framer-motion;
 import { ADVANCED_MICRO_SERVICES } from '../data/advancedMicroServices.jsx';
 const ServiceCard = ({ service, index, isVisible }) => {    const [isHovered, setIsHovered] = useState(false)
     return (<motion .div initial = {}

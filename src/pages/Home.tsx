@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { SEO } from '../components/SEO';
 
 const Home: React.FC = () => {
@@ -37,7 +37,7 @@ import { SEO } from '../components/SEO';''const Home: React.FC = () => {'
             <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">"              Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services."            </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">"              <a "                href="/services" "                className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors""              >"                Our Services</a>"
                 href="/contact" "                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors""              >"                Get Started</a>"
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {SEO } from '@/components/SEO';
 
@@ -50,7 +50,7 @@ export default function Home() {return (
           Professional Home services to help your business grow.
         </p>
   )}
-import React from &apos
+import React from &apos;
 import Link from &apos;next/link';react';
 import { motion } from &apos;framer-motion';
 import { Link } from &apos;react-router-dom';
@@ -58,12 +58,12 @@ import { SEO } from &apos;../components/SEO';
 import EnhancedHero from &apos;../components/EnhancedHero';
 import { 
   Zap, Brain, Rocket, Shield, Globe, Users, ArrowRight, CheckCircle, Star, 
-  Cpu, Atom, Cloud, Lock, Target, TrendingUp, Lightbulb, Code, Server, 
-  Database, Network, Smartphone, Building, Heart, Award, MessageCircle, 
+  Cpu, Atom, Cloud, Lock, Target, TrendingUp, Lightbulb, Code, Server, ;
+  Database, Network, Smartphone, Building, Heart, Award, MessageCircle, ;
   Phone, Mail, MapPin} from &apos;lucide-react';&apos;&apos;
-import { motion} from 'framer-motion'
+import { motion} from 'framer-motion';
 import { Link} from 'react-router-dom';
-import { SEO} from '../components/SEO'
+import { SEO} from '../components/SEO';
 import EnhancedHero from '../components/EnhancedHero';
   Zap, Brain, Rocket, Shield, Globe, Users, ArrowRight, CheckCircle, Star, ;
   Cpu, Atom, Cloud, Lock, Target, TrendingUp, Lightbulb, Code, Server, ;

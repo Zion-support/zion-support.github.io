@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
   Smartphone, 
@@ -15,8 +15,8 @@ import {
   Filter,
   Target,
   Clock,
-  Download,
-  Share2,
+  Download,;
+  Share2,;
   Eye} from 'lucide-react';
 
 const MobileSurveyTool: React.FC = () => {

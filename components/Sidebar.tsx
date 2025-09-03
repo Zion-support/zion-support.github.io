@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router'
 import {
@@ -32,8 +32,8 @@ import {
   HelpCircle,
   Settings,
   ArrowRight,
-  Calendar,
-  DollarSign,
+  Calendar,;
+  DollarSign,;
   X} from 'lucide-react';
 
 interface SidebarProps {

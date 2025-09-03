@@ -87,10 +87,10 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
       </div>;,"});,"})
     </div>)}'""";,"});,"})
 '"'""";,"});,"})
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef } from 'react';
 import { focusManagement } from '@/utils/accessibility';""
-import React, { useState, useEffect, useRef }  from 'react'
-import { focusManagement } from '@/utils/accessibility
+import React, { useState, useEffect, useRef }  from 'react';
+import { focusManagement } from '@/utils/accessibility;
 import { toast } from '@/hooks/use-toast';
 export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) {}""
 ''

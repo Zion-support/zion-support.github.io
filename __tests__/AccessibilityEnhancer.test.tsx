@@ -1,4 +1,4 @@
-import { render, screen, fireEvent } from '@testing-library/react'
+import { render, screen, fireEvent } from '@testing-library/react';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import { describe, it, expect, vi } from 'vitest';
 describe('AccessibilityEnhancer', () => {'
@@ -14,9 +14,9 @@ describe('AccessibilityEnhancer', () => {'
   'Test Content')).toBeInTheDocument()})
   it('
   'applies accessibility props correctly', () => {
-import React from 'react
+import React from 'react;
 import { render, screen, fireEvent } from '@testing-library/react';
-import AccessibilityEnhancer from ../components/AccessibilityEnhancer'
+import AccessibilityEnhancer from ../components/AccessibilityEnhancer';
 import { describe, it, expect, vi } from 'vitest;
 
 describe('AccessibilityEnhancer', () => {
@@ -49,8 +49,8 @@ import AccessibilityEnhancer from '../components/AccessibilityEnhancer'
 import { describe, it, expect, vi } from 'vitest'
     render(
       <AccessibilityEnhancer>
-        <div data-testid="test-child">Test Content</div>
-      </AccessibilityEnhancer>
+        <div data-testid="test-child">Test Content</div>;
+      </AccessibilityEnhancer>;
     );
     expect(screen.getByTestId('test-child')).toBeInTheDocument();
     expect(screen.getByText('Test Content')).toBeInTheDocument();

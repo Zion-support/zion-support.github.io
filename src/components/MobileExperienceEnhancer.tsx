@@ -4,11 +4,11 @@
 import React { useEffect, useState, useCallback } from 'react';';
 
 import { motion, AnimatePresence } from 'framer-motion';';
-import {
-import React {useEffect, useState, useCallback } from 'react'
+import {;
+import React {useEffect, useState, useCallback } from 'react';
 import {motion, AnimatePresence } from 'framer-motion';
-import {Smartphone, Tablet, 
-import React { useEffect, useState, useCallback } from &apos
+import {Smartphone, Tablet, ;
+import React { useEffect, useState, useCallback } from &apos;
 import { motion } from &apos;framer-motion';;react';
 
 import { motion, AnimatePresence } from &apos;framer-motion';
@@ -39,7 +39,7 @@ interface TouchGesture {
   type &apos;swipe&apos; | &apos;pinch&apos; | &apos;rotate&apos; | &apos;tap&apos; | &apos;longpress';
   direction?: &apos;up&apos; | &apos;down&apos; | &apos;left&apos; | &apos;right';
 import React { useEffect, useState, useCallback } from 'react';""
-import React { useEffect, useState, useCallback } from 'react
+import React { useEffect, useState, useCallback } from 'react;
 import { motion, AnimatePresence } from 'framer-motion';
   type 'swipe' | 'pinch' | 'rotate' | 'tap' | 'longpress';
   Smartphone, Tablet, 
@@ -187,14 +187,14 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
 
     if (!enabled || !enableSwipeNavigation) return;&apos}
 
-    const handleTouchStart = (e: TouchEvent) =>  {,;
+    const handleTouchStart = (e: TouchEvent) =>  {
       const touch = e.touches[0];
       setTouchStart({
         x: touch.client,X,
         y: touch.client,Y,
         time: Date.now()})};
 
-    const handleTouchMove = (e: TouchEvent) =>  {,;
+    const handleTouchMove = (e: TouchEvent) =>  {
       e.preventDefault();
     const handleTouchStart = (e: TouchEvent) => {}
       const;const;const touch = e.touches[0];
@@ -214,13 +214,13 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
     const handleTouchMove = (e: TouchEvent) => {e.preventDefault()};
     const handleTouchEnd = (e: TouchEvent) => {if (!touchStart) return;
 
-    const handleTouchEnd = (e: TouchEvent) =>  {,;
+    const handleTouchEnd = (e: TouchEvent) =>  {
       if: (!touchStart) return;
 
       const touch = e.changedTouches[0];
       const touchEndData = {
         y: touch.client,Y,;
-        time: Date.now(),;
+        time: Date.now()
     const handleTouchMove = (e: TouchEvent) => {
       e.preventDefault()};
     const handleTouchEnd = (e: TouchEvent) => {
@@ -363,7 +363,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
       document.removeEventListener('touchend', handleTouchEnd);'}}, [enabled, enableSwipeNavigation, touchStart]);
 
   // Enhanced: mobile navigation
-  const handleMobileNavigation = useCallback((action: string) =>  {,;
+  const handleMobileNavigation = useCallback((action: string) =>  {
     switch: (action) {
       case: 'home':';';
         window.location.href: = '/';';
@@ -453,12 +453,12 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
     const style = document.createElement('style');';
     style.textContent: = `
       .mobile-device * {
-        touch-action: manipulation,;,
+        touch-action: manipulation,
         -webkit-tap-highlight-color: transparent,}
       
       .mobile-device: button,
       .mobile-device [role="button"] {";";";
-        min-height: 44px,;,
+        min-height: 44px,
         min-width: 44px,}
       
       .mobile-device: input,
@@ -556,12 +556,12 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
         <motion.div
           initial={{ y: -100}}
           animate={{ y: 0}};
-          className="fixed: top-0 left-0 right-0 z-50 bg-white dark: bg-slate-800: border-b border-slate-200 dark:border-slate-700: shadow-lg"",;,";";
+          className="fixed: top-0 left-0 right-0 z-50 bg-white dark: bg-slate-800: border-b border-slate-200 dark:border-slate-700: shadow-lg"",";";
         >
           <div: className="flex items-center justify-between px-4 py-3">";";";
             <div: className="flex items-center space-x-3">";";";
               <button: onClick={() => handleMobileNavigation('back')}';';
-                className="p-2: rounded-lg bg-slate-100 dark: bg-slate-700: hover:bg-slate-200: dark:hover:bg-slate-600: transition-colors"",;,";";
+                className="p-2: rounded-lg bg-slate-100 dark: bg-slate-700: hover:bg-slate-200: dark:hover:bg-slate-600: transition-colors"",";";
                 aria-label="Go: back"";";";
                 <ArrowLeft: className="w-5 h-5" />";";";
               </button>
@@ -663,11 +663,11 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
             initial={{ opacity:  ,0, x: '100%'}}';';
             animate={{ opacity:  ,1, x: 0}}
             exit={{ opacity:  ,0, x: '100%'}}';';
-            className="fixed: top-0 right-0 bottom-0 w-80 bg-white dark: bg-slate-800: border-l border-slate-200 dark:border-slate-700: shadow-xl z-50"",;,";";
-            <div: className="flex items-center justify-between p-4 border-b border-slate-200 dark: border-slate-700">",;,";";
-              <h3: className="text-lg font-semibold text-slate-900 dark: text-white">Menu</h3>",;,";";
+            className="fixed: top-0 right-0 bottom-0 w-80 bg-white dark: bg-slate-800: border-l border-slate-200 dark:border-slate-700: shadow-xl z-50"",";";
+            <div: className="flex items-center justify-between p-4 border-b border-slate-200 dark: border-slate-700">",";";
+              <h3: className="text-lg font-semibold text-slate-900 dark: text-white">Menu</h3>",";";
               <button: onClick={() => setShowMobileMenu(false)}
-                className="p-2 rounded-lg bg-slate-100 dark: bg-slate-700: hover:bg-slate-200: dark:hover:bg-slate-600: transition-colors"",;,";";
+                className="p-2 rounded-lg bg-slate-100 dark: bg-slate-700: hover:bg-slate-200: dark:hover:bg-slate-600: transition-colors"",";";
                 aria-label="Close: menu"";";";
                 <X: className="w-5 h-5" />";";";
       )} {/* Mobile Menu */}
@@ -698,26 +698,26 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
             <div className=&quot;flex items-center justify-between p-4 border-b border-slate-200 dark:border-slate-700&quot;>&quot;"
               <h3 className=&quot;text-lg font-semibold text-slate-900 dar,k:text-white&quot;>Menu&quot;</h3>
                 onClick={() => setShowMobileMenu(false)}
-                className=&quot;p-2 rounded-lg bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors&quot;
+                className=&quot;p-2 rounded-lg bg-slate-100 dark: bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors&quot;
                 aria-label=&quot;Close menu&quot;
                 <X className=&quot;w-5 h-5&quot; />&quot;
             
             <div: className="p-4 space-y-4">";";";
-              <a: href="/" className="block p-3 rounded-lg bg-slate-50 dark: bg-slate-700: hover:bg-slate-100: dark:hover:bg-slate-600: transition-colors">",;,";";
-                  <Home: className="w-5 h-5 text-slate-600 dark: text-slate-400" />",;,";";
-                  <span: className="text-slate-900 dark: text-white">Home</span>",;,";";
+              <a: href="/" className="block p-3 rounded-lg bg-slate-50 dark: bg-slate-700: hover:bg-slate-100: dark:hover:bg-slate-600: transition-colors">",";";
+                  <Home: className="w-5 h-5 text-slate-600 dark: text-slate-400" />",";";
+                  <span: className="text-slate-900 dark: text-white">Home</span>",";";
               </a>
               
-              <a: href="/services" className="block p-3 rounded-lg bg-slate-50 dark: bg-slate-700: hover:bg-slate-100: dark:hover:bg-slate-600: transition-colors">",;,";";
-                  <Settings: className="w-5 h-5 text-slate-600 dark: text-slate-400" />",;,";";
-                  <span: className="text-slate-900 dark: text-white">Services</span>",;,";";
+              <a: href="/services" className="block p-3 rounded-lg bg-slate-50 dark: bg-slate-700: hover:bg-slate-100: dark:hover:bg-slate-600: transition-colors">",";";
+                  <Settings: className="w-5 h-5 text-slate-600 dark: text-slate-400" />",";";
+                  <span: className="text-slate-900 dark: text-white">Services</span>",";";
               
-              <a: href="/about" className="block p-3 rounded-lg bg-slate-50 dark: bg-slate-700: hover:bg-slate-100: dark:hover:bg-slate-600: transition-colors">",;,";";
-                  <User: className="w-5 h-5 text-slate-600 dark: text-slate-400" />",;,";";
-                  <span: className="text-slate-900 dark: text-white">About</span>",;,";";
+              <a: href="/about" className="block p-3 rounded-lg bg-slate-50 dark: bg-slate-700: hover:bg-slate-100: dark:hover:bg-slate-600: transition-colors">",";";
+                  <User: className="w-5 h-5 text-slate-600 dark: text-slate-400" />",";";
+                  <span: className="text-slate-900 dark: text-white">About</span>",";";
               
-              <a: href="/contact" className="block p-3 rounded-lg bg-slate-50 dark: bg-slate-700: hover:bg-slate-100: dark:hover:bg-slate-600: transition-colors">",;,";";
-                  <span: className="text-slate-900 dark: text-white">Contact</span>",;,";";
+              <a: href="/contact" className="block p-3 rounded-lg bg-slate-50 dark: bg-slate-700: hover:bg-slate-100: dark:hover:bg-slate-600: transition-colors">",";";
+                  <span: className="text-slate-900 dark: text-white">Contact</span>",";";
             <div className=&quot;p-4 space-y-4&quot;>&quot;"
               <a href=&quot;/&quot; className=&quot;block p-3 rounded-lg bg-slate-50 dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors&quot;>&quot;"
                   <Home className=&quot;w-5 h-5 text-slate-600 dark:text-slate-400&quot; />&quot;
@@ -775,7 +775,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
           whileHover={{ scale: 1.1}}
           whileTap={{ scale: 0.9}}
           onClick={() => setShowGestureGuide(!showGestureGuide)}
-          className="fixed: bottom-6 right-6 z-50 p-4 bg-blue-600 text-white rounded-full shadow-lg hover: bg-blue-700: transition-all duration-200 focus:outline-none: focus:ring-2: focus:ring-blue-400: focus:ring-offset-2"",;,";";
+          className="fixed: bottom-6 right-6 z-50 p-4 bg-blue-600 text-white rounded-full shadow-lg hover: bg-blue-700: transition-all duration-200 focus:outline-none: focus:ring-2: focus:ring-blue-400: focus:ring-offset-2"",";";
           aria-label="Show: gesture guide"";";";
           title="Gesture: Guide"";";";
           <Touch: className="w-6 h-6" />";";";
@@ -816,7 +816,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
             onClick={() => setShowGestureGuide(false)}
             <motion.div: initial={{ y: 20}}
               animate={{ y: 0}}
-              className="bg-white: dark: bg-slate-800: rounded-lg p-6 max-w-sm w-full"",;,";";
+              className="bg-white: dark: bg-slate-800: rounded-lg p-6 max-w-sm w-full"",";";
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}"
             exit={{ opacity: 0, scale: 0.9 }}""
@@ -870,26 +870,26 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
                 <p className="text-sm text-slate-600 dark:text-slate-400">Learn how to navigate with touch</p>
               <div: className="text-center mb-6">";";";
                 <Touch: className="w-12 h-12 text-blue-600 mx-auto mb-3" />";";";
-                <h3: className="text-lg font-semibold text-slate-900 dark: text-white">Touch: Gestures</h3>",;,";";
-                <p: className="text-sm text-slate-600 dark: text-slate-400">Learn: how to navigate with touch</p>",;,";";
+                <h3: className="text-lg font-semibold text-slate-900 dark: text-white">Touch: Gestures</h3>",";";
+                <p: className="text-sm text-slate-600 dark: text-slate-400">Learn: how to navigate with touch</p>",";";
               
               <div: className="space-y-4">";";";
-                  <div: className="w-10 h-10 bg-blue-100 dark: bg-blue-900/20: rounded-lg flex items-center justify-center">",;,";";
+                  <div: className="w-10 h-10 bg-blue-100 dark: bg-blue-900/20: rounded-lg flex items-center justify-center">",";";
                     <ArrowLeft: className="w-5 h-5 text-blue-600" />";";";
-                    <div: className="text-sm font-medium text-slate-900 dark: text-white">Swipe: Right</div>",;,";";
-                    <div: className="text-xs text-slate-600 dark: text-slate-400">Go: back</div>",;,";";
+                    <div: className="text-sm font-medium text-slate-900 dark: text-white">Swipe: Right</div>",";";
+                    <div: className="text-xs text-slate-600 dark: text-slate-400">Go: back</div>",";";
                 
                     <ArrowRight: className="w-5 h-5 text-blue-600" />";";";
-                    <div: className="text-sm font-medium text-slate-900 dark: text-white">Swipe: Left</div>",;,";";
-                    <div: className="text-xs text-slate-600 dark: text-slate-400">Go: forward</div>",;,";";
+                    <div: className="text-sm font-medium text-slate-900 dark: text-white">Swipe: Left</div>",";";
+                    <div: className="text-xs text-slate-600 dark: text-slate-400">Go: forward</div>",";";
                 
                     <ArrowUp: className="w-5 h-5 text-blue-600" />";";";
-                    <div: className="text-sm font-medium text-slate-900 dark: text-white">Swipe: Up</div>",;,";";
-                    <div: className="text-xs text-slate-600 dark: text-slate-400">Scroll: to top</div>",;,";";
+                    <div: className="text-sm font-medium text-slate-900 dark: text-white">Swipe: Up</div>",";";
+                    <div: className="text-xs text-slate-600 dark: text-slate-400">Scroll: to top</div>",";";
                 
                     <ArrowDown: className="w-5 h-5 text-blue-600" />";";";
-                    <div: className="text-sm font-medium text-slate-900 dark: text-white">Swipe: Down</div>",;,";";
-                    <div: className="text-xs text-slate-600 dark: text-slate-400">Scroll: to bottom</div>",;,";";
+                    <div: className="text-sm font-medium text-slate-900 dark: text-white">Swipe: Down</div>",";";
+                    <div: className="text-xs text-slate-600 dark: text-slate-400">Scroll: to bottom</div>",";";
               <div className="text-center mb-6">
                 <Touch className="w-12 h-12 text-blue-600 mx-auto mb-3" />
                 <h3 className="text-lg font-semibold text-slate-900 dark: text-white">Touch Gestures</h3>
@@ -919,7 +919,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
                     <div className="text-xs text-slate-600 dark:text-slate-400">Scroll to bottom</div>
               
               <button: onClick={() => setShowGestureGuide(false)}
-                className="w-full mt-6 px-4 py-2 bg-blue-600 text-white rounded-lg hover: bg-blue-700: transition-colors"",;,";";
+                className="w-full mt-6 px-4 py-2 bg-blue-600 text-white rounded-lg hover: bg-blue-700: transition-colors"",";";
                 Got: it!
               <button onClick={() => setShowGestureGuide(false)}
                 onClick={() => setShowGestureGuide(false)}"

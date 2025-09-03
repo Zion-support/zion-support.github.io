@@ -354,7 +354,7 @@ ${report.nextSteps.map(item => `- ${item}`).join('\n')}
         const result = execSync(check.command, { 
           cwd: this.projectRoot, 
           encoding: 'utf8',
-          timeout: 300000;
+          timeout: 300000
 });
         results.push({ ...check, success: true, output: result });
         this.log(`✅ Completed: ${check.description}`);

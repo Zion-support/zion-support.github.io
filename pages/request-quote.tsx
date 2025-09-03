@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion'
 import { 
@@ -9,8 +9,8 @@ import {
   Zap, 
   Shield,
   ArrowRight,
-  Phone,
-  Mail,
+  Phone,;
+  Mail,;
   MapPin} from 'lucide-react';
 
 export default function RequestQuote() {

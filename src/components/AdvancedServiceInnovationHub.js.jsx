@@ -161,10 +161,10 @@ const AdvancedServiceInnovationHub = () => {}"});,"})
     return (<div className="max-w-7xl mx-auto p-6">;,"});,"})
       {/* Header */}"});,"})
       <motion.div initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: 20,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   y: 0 ""","});,"})
 """";,"});,"});
 }} className="mb-8">"""";,"});,"})
@@ -193,10 +193,10 @@ const AdvancedServiceInnovationHub = () => {}"});,"})
       {viewMode === 'trends' && (<>;,"});,"})
           {/* Filters */}"});,"})
           <motion.div initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: 20,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   y: 0 ""","});,"})
 """";,"});,"});
 }} transition={{ delay: 0.1 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">"""";,"});,"})
@@ -239,18 +239,18 @@ const AdvancedServiceInnovationHub = () => {}"});,"})
           </motion.div>;,"});,"})
           {/* Trends Grid */}"});,"})
           <motion.div initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: 20,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   y: 0 ""","});,"})
 """";,"});,"});
 }} transition={{ delay: 0.2 }} className="grid grid-cols-1 lg: grid-cols-2 gap-6 mb-8">,"});,"})
             {filteredTrends.map((trend, index) => (<motion.div key={trend.id} initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   x: index % 2 === 0 ? -20 : 20,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   x: 0,"});,"})
 """;,"});,"});
 }} transition={{ delay: 0.1 * index }}>"""";,"});,"})
@@ -330,18 +330,18 @@ const AdvancedServiceInnovationHub = () => {}"});,"})
 ;,"});,"})
       {/* Future Roadmap View */}';,"});,"})
       {viewMode === 'roadmap' && (<motion.div initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: 20,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   y: 0 ""","});,"})
 """";,"});,"});
 }} transition={{ delay: 0.1 }} className="space-y-6">;,"});,"})
           {futureRoadmap.map((roadmap, index) => (<motion.div key={roadmap.id} initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   x: -20,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   x: 0,"});,"})
 """;,"});,"});
 }} transition={{ delay: 0.1 * index }}>"""";,"});,"})
@@ -424,10 +424,10 @@ const AdvancedServiceInnovationHub = () => {}"});,"})
 ;,"});,"})
       {/* Strategic Insights View */}';,"});,"})
       {viewMode === 'insights' && (<motion.div initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: 20,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   y: 0 ""","});,"})
 """";,"});,"});
 }} transition={{ delay: 0.1 }} className="space-y-6">"""";,"});,"})
@@ -570,10 +570,10 @@ const AdvancedServiceInnovationHub = () => {}"});,"})
 ;,"});,"})
       {/* CTA Section */}"});,"})
       <motion.div initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: 20,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   y: 0 ""","});,"})
 """";,"});,"});
 }} transition={{ delay: 0.4 }} className="mt-12 text-center">"""";,"});,"})
@@ -615,15 +615,15 @@ export { AdvancedServiceInnovationHub };,"});,"})
 export { AdvancedServiceInnovationHub };,"});,"})
 ;,"});,"})
 export { AdvancedServiceInnovationHub };,"});,"})
-import React, { useState, useMemo } from 'react'''
-import { motion } from 'framer-motion'''
+import React, { useState, useMemo } from 'react''';
+import { motion } from 'framer-motion''';
 import { Lightbulb, Rocket, Brain, Zap, TrendingUp, Star, Users, Globe, CheckCircle, Cpu, Atom, Satellite, Dna, Shield, Leaf } from 'lucide-react';""
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card'';'''
 import { Button } from './ui/button'';'''
 import { Badge } from './ui/badge'';'''
 import React, { useState, useMemo } from 'react''
-import { motion }  from 'framer-motion
-import { Lightbulb, Rocket, Brain, Zap, TrendingUp, Star, Users, Globe, CheckCircle, Cpu, Atom, Satellite, Dna, Shield, Leaf } from 'lucide-react
+import { motion }  from 'framer-motion;
+import { Lightbulb, Rocket, Brain, Zap, TrendingUp, Star, Users, Globe, CheckCircle, Cpu, Atom, Satellite, Dna, Shield, Leaf } from 'lucide-react;
 import { Card, CardContent, CardHeader, CardTitle }  from './ui/card;''
 import { Button }  from './ui/button;''
 import { Badge }  from './ui/badge;''

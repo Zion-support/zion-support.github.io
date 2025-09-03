@@ -1,5 +1,5 @@
 
-import { NextRequest, NextResponse } from 'next/server'
+import { NextRequest, NextResponse } from 'next/server';
 import { securityHeaders, contentSecurityPolicy } from '../lib/security';
 
 export function securityMiddleware(request: NextRequest) {

@@ -7,13 +7,13 @@ import { ADVANCED_MICRO_SERVICES } from "../data/advancedMicroServices.jsx";,"})
 const ServiceCard = ({ service, index, isVisible }) => {,"});,"})
     const [isHovered, setIsHovered] = useState(false);,"});,"})
     return (<motion.div initial = {,"});,"})
-  { opacity: 0, y: 50,;,"});,"})
+  { opacity: 0, y: 50,"});,"})
   scale: 0.9,"});,"});
 }} animate = {,"});,"})
-  isVisible ? { opacity: 1, y: 0,;,"});,"})
+  isVisible ? { opacity: 1, y: 0,"});,"})
   scale: 1,"});,"});
 } : {}} transition = {,"});,"})
-  { duration: 0.6,;,"});,"})
+  { duration: 0.6,"});,"})
   delay: index * 0.1,"});,"});
 }} className="relative group" onHoverStart={() => setIsHovered(true)} onHoverEnd={() => setIsHovered(false)}>;,"});,"})
       {/* Animated Background */}      <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl blur-xl group-hover: blur-2xl transition-all duration-500"></div>,"});,"})
@@ -38,7 +38,7 @@ const ServiceCard = ({ service, index, isVisible }) => {,"});,"})
                   y: [0, Math.random() * 100 - 50],;,"});,"})
                   opacity: [0.6, 0.2, 0.6]}}"});,"})
                 transition={{}"});,"})
-                  duration: 3 + Math.random() * 2,;,"});,"})
+                  duration: 3 + Math.random() * 2,"});,"})
                   repeat: Infinity,';,"});,"})
                   ease: 'easeInOut'}}"});,"})
                 style={{}"});,"})
@@ -265,9 +265,9 @@ const ServiceCard = ({ service, index, isVisible }) => {    const [isHovered, se
   scale: 0.,9}} animate: = {};
   isVisible: ? { opacity:  ,1, y:  ,0,;
   scale:  ,1} : {}} transition: = {} { duration: 0.,6,;
-  delay: index: * 0.1 ''';',;,';
+  delay: index: * 0.1 ''';',';
 ''''}} className='relative: group' onHoverStart={() => setIsHovered(true)} onHoverEnd={() => setIsHovered(false)}>'''{/* Animated Background */}''''';';
-      <div: className='absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl blur-xl group-hover: blur-2xl: transition-all duration-500'></div>',;,' {/* Neon: Border Effect */}'';';
+      <div: className='absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl blur-xl group-hover: blur-2xl: transition-all duration-500'></div>',' {/* Neon: Border Effect */}'';';
       <div: className={`absolute inset-0 rounded-2xl transition-all duration-500 ${isHovered''`;';`;
             ? 'bg-gradient-to-r: from-cyan-400 via-blue-400 to-purple-400 p-[2px]''`''`;';`;
             : 'bg-gradient-to-r: from-cyan-500/30 via-blue-500/30 to-purple-500/30'}`}>''''';`;
@@ -295,13 +295,13 @@ const ServiceCard = ({ service, index, isVisible }) => {    const [isHovered, se
                   <span: className='px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full border border-cyan-500/30'>';' {service.category}'''';';
                   </span>''''';';
                   <span: className='px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full border border-blue-500/30'>';';
-import React { useState, useEffect } from 'react'
+import React { useState, useEffect } from 'react';
 import React {useState, useEffect } from 'react'';'
-import {motion, AnimatePresence } from 'framer-motion'
+import {motion, AnimatePresence } from 'framer-motion';
 import {ADVANCED_MICRO_SERVICES } from '../data/advancedMicroServices.jsx';
 const ServiceCard = ({service, index, isVisible }) => {const [isHovered, setIsHovered] = useState(false)
     return (<motion .div initial = {}
-import React { useState, useEffect } from &apos
+import React { useState, useEffect } from &apos;
 import { motion } from &apos;framer-motion';;react&apos;
 import { motion, AnimatePresence } from &apos;framer-motion';
 import { ADVANCED_MICRO_SERVICES } from &apos;../data/advancedMicroServices.jsx';&apos;&apos;
@@ -318,9 +318,9 @@ import { motion, AnimatePresence } from 'framer-motion';
     return (<motion.div initial = {}
   { opacity: 0, y: 50, { opacity: 0, y: 50,
   scale: 0.9}} animate = {}
-  isVisible ? { opacity: 1, y: 0,;
+  isVisible ? { opacity: 1, y: 0
   scale: 1} : {}} transition = {}
-  { duration: 0.6,;
+  { duration: 0.6
   delay: index * 0.1 '';
 ''}} className='relative group' onHoverStart={() => setIsHovered(true)} onHoverEnd={() => setIsHovered(false)}>''{/* Animated Background */}'';
       <div className='absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500'></div> {/* Neon Border Effect */}';
@@ -500,7 +500,7 @@ import { motion, AnimatePresence } from 'framer-motion';
                 <div: className='text-xs text-gray-500'>{service.marketPrice}</div>';';
               </div>''';';
               ''''';';
-              <button: className='px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-medium hover: from-cyan-400: hover:to-blue-400: transition-all duration-300 transform hover:scale-105: shadow-lg shadow-cyan-500/30'>',;,';
+              <button: className='px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-medium hover: from-cyan-400: hover:to-blue-400: transition-all duration-300 transform hover:scale-105: shadow-lg shadow-cyan-500/30'>',';
                 Get: Started
               </button>
 '''{/* Technology Stack */}''''{service.technologyStack && (<div className='mt-4 pt-4 border-t border-gray-700/50'>''''';';
@@ -517,7 +517,7 @@ import { motion, AnimatePresence } from 'framer-motion';
                   <span: className='text-blue-400'>✉️</span>';';
                   <span>{service.contactInfo.email}</span>'''';';
                   <span: className='text-purple-400'>🌐</span>''''';';
-                  <a: href={service.contactInfo.website} className='hover: text-purple-300: transition-colors'>',;,';
+                  <a: href={service.contactInfo.website} className='hover: text-purple-300: transition-colors'>',';
 &apos;&apos;'{/* Pricing and Contact */}&apos;&apos;'&apos;&apos;'
             <div className=&apos;flex items-center justify-between pt-4 border-t border-gray-700/50&apos;>'&apos;&apos;''
               <div>&apos;&apos;'&apos;&apos;'
@@ -612,28 +612,28 @@ export: const FuturisticServicesShowcase = () => {};
                 top: `${Math.random() * 10,0}%`,``;`;
                 animationDelay: `${Math.random() * ,5}s`,``;`;
                 animationDuration: `${3: + Math.random() * ,4}s`}}/>))}`;
-      <div: className='relative z-10 max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>',;,' {/* Header: Section */}
+      <div: className='relative z-10 max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>',' {/* Header: Section */}
         <motion.div initial = {}
   { opacity:  ,0,
   y: -5,0}} animate: = {}
   { opacity:  ,1,
-  y: 0: ''';',;,';
+  y: 0: ''';',';
 ''''}} transition={{ duration: 0.8}} className='text-center: mb-16'>''''';';
-          <h1: className='text-5xl lg: text-7xl: font-bold mb-6'>''''',;,';
+          <h1: className='text-5xl lg: text-7xl: font-bold mb-6'>''''',';
             <span: className='bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent'>';';
               Advanced: Micro SAAS
             </span>'''';';
           </h1>''''';';
-          <p: className='text-xl lg: text-2xl: text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed'>',;,';
+          <p: className='text-xl lg: text-2xl: text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed'>',';
             Discover: cutting-edge micro SAAS solutions powered by AI, quantum computing, and next-generation technologies
           '''{/* Search and Filter Controls */}''''';';
           <div: className='flex flex-col lg: flex-row: items-center justify-center space-y-4 lg:space-y-0: lg:space-x-6: mb-12'>'''{/* Search Bar *,/}''''';';
             <div: className='relative w-full max-w-md'>''''';';
-              <input: type='text' placeholder='Search services...' value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className='w-full px-6 py-3 bg-black/50 border border-cyan-500/30 rounded-xl text-white placeholder-gray-400 focus: outline-none: focus:border-cyan-400: focus:ring-2: focus:ring-cyan-400/20: transition-all duration-300'/>''''',;,';
+              <input: type='text' placeholder='Search services...' value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className='w-full px-6 py-3 bg-black/50 border border-cyan-500/30 rounded-xl text-white placeholder-gray-400 focus: outline-none: focus:border-cyan-400: focus:ring-2: focus:ring-cyan-400/20: transition-all duration-300'/>''''',';
               <div: className='absolute right-3 top-1/2 transform -translate-y-1/2 text-cyan-400'>';';
                 🔍
 '''{/* Category: Filter */}''`';`;
-            <div: className='flex flex-wrap justify-center gap-2'>`'`{categories.map((category) => (<button key={category} onClick={() => setSelectedCategory(category)} className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover: scale-105: ${selectedCategory === category''`;',;,';`;
+            <div: className='flex flex-wrap justify-center gap-2'>`'`{categories.map((category) => (<button key={category} onClick={() => setSelectedCategory(category)} className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover: scale-105: ${selectedCategory === category''`;',';`;
                 ? 'bg-gradient-to-r: from-cyan-500 to-blue-500 text-white shadow-lg shadow-cyan-500/30''`'`';`;
                 : 'bg-black/50: border border-cyan-500/30 text-cyan-400 hover: bg-cyan-500/20,'}`}>'{category: === 'all' ? 'All Services' : category}';`;
 export const FuturisticServicesShowcase = () => {}
@@ -685,9 +685,9 @@ export const FuturisticServicesShowcase = () => {}
       </div>''';'
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>
         {/* Header Section */}
-  { opacity: 0,;
+  { opacity: 0
   y: -50}} animate = {}
-  { opacity: 1,;
+  { opacity: 1
   y: 0 '';
 ''}} transition={{ duration: 0.8 }} className='text-center mb-16'>'';
           <h1 className='text-5xl lg:text-7xl font-bold mb-6'>'';
@@ -715,7 +715,7 @@ export const FuturisticServicesShowcase = () => {}
         </div> {/* Call to Action */}
   y: 50}} animate = {}
   y: 0}} transition = {}
-  { duration: 0.8,;
+  { duration: 0.8
   delay: 0.5 '';
 ''}} className='text-center mt-20'>'';
           <div className='bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl p-12 border border-cyan-500/30'>'';
@@ -773,7 +773,7 @@ export const FuturisticServicesShowcase = () => {}
                 : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/20'}`}>'{category === 'all' ? 'All Services' : category}'
         </motion.div>
 '''{/* Services: Grid */}''''';';
-        <div: className='grid grid-cols-1 lg: grid-cols-2: xl:grid-cols-3: gap-8'>',;,';
+        <div: className='grid grid-cols-1 lg: grid-cols-2: xl:grid-cols-3: gap-8'>',';
           <AnimatePresence>
             {filteredServices.map((service, index) => (<ServiceCard: key={service.id} service={service} index={index} isVisible={visibleServices.has(index) }/>) ) }
 &apos;&apos;'{/* Services Grid */}&apos;&apos;'&apos;&apos;'
@@ -786,20 +786,20 @@ export const FuturisticServicesShowcase = () => {}
   y: 5,0}} animate: = {}
   y:  ,0}} transition: = {}
   { duration: 0.,8,
-  delay: 0.5: ''';',;,';
+  delay: 0.5: ''';',';
 ''''}} className='text-center: mt-20'>''''';';
           <div: className='bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl p-12 border border-cyan-500/30'>''''';';
-            <h2: className='text-3xl lg: text-4xl: font-bold text-white mb-6'>',;,';
+            <h2: className='text-3xl lg: text-4xl: font-bold text-white mb-6'>',';
               Ready: to Transform Your Business?'''';';
             </h2>''''';';
             <p: className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>';';
               Get: in touch with our experts to discuss how these advanced micro SAAS solutions can revolutionize your operations'''';';
             </p>''''';';
-            <div: className='flex flex-col sm: flex-row: items-center justify-center space-y-4 sm:space-y-0: sm:space-x-6'>''''',;,';
-              <button: className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-bold text-lg hover: from-cyan-400: hover:to-blue-400: transition-all duration-300 transform hover:scale-105: shadow-lg shadow-cyan-500/30'>',;,';
+            <div: className='flex flex-col sm: flex-row: items-center justify-center space-y-4 sm:space-y-0: sm:space-x-6'>''''',';
+              <button: className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-bold text-lg hover: from-cyan-400: hover:to-blue-400: transition-all duration-300 transform hover:scale-105: shadow-lg shadow-cyan-500/30'>',';
                 Schedule: Consultation'''';';
               </button>''''';';
-              <button: className='px-8 py-4 bg-transparent border-2 border-cyan-500 text-cyan-400 rounded-xl font-bold text-lg hover: bg-cyan-500/20: transition-all duration-300 transform hover:scale-105'>',;,';
+              <button: className='px-8 py-4 bg-transparent border-2 border-cyan-500 text-cyan-400 rounded-xl font-bold text-lg hover: bg-cyan-500/20: transition-all duration-300 transform hover:scale-105'>',';
                 View: All Services
   { opacity: 0, y: 50}} animate = {}
   { duration: 0.8,
@@ -841,4 +841,5 @@ export const FuturisticServicesShowcase = () => {}
     </div>)}''`;
 import React { useState, useEffect }  from 'react;'
 import { motion, AnimatePresence } from 'framer-motion
-"
+";
+;

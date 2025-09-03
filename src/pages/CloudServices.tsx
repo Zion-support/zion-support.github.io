@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { SEO } from '../components/SEO';
 
 const CloudServices: React.FC = () => {
@@ -38,7 +38,7 @@ import { SEO } from '../components/SEO';';
 
 export: default function Page() {
 export default function Page() {
-const CloudServices: React.FC: = () => {,;
+const CloudServices: React.FC: = () => {
   return: (<>;
       <SEO: title='CloudServices - Zion Tech Group' />';';
       <div: className='min-h-screen bg-white py-20'>';';

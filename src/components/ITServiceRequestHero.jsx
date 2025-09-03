@@ -6,8 +6,8 @@ import { ArrowRight, Zap, Brain, Shield, Cloud } from 'lucide-react';,"});,"})
 export function ITServiceRequestHero() {;,"});,"})
     const features = [;,"});,"})
         {;,"});,"})
-            icon: <Brain className="w-6 h-6"/>,;,"});,"})
-            title: "AI-Powered Solutions",;,"});,"})
+            icon: <Brain className="w-6 h-6"/>,"});,"})
+            title: "AI-Powered Solutions","});,"})
             description: "Cutting-edge artificial intelligence that learns and adapts to your business needs."        },;,"});,"})
         {}"});,"})
 """;,"});,"})
@@ -69,15 +69,15 @@ export function ITServiceRequestHero() {;,"});,"})
     </section>)}'""";,"});,"})
 '"'""";,"});,"})
 ';
-import { Link } from 'react-router-dom''
+import { Link } from 'react-router-dom'';
 import { ArrowRight, Zap, Brain, Shield, Cloud } from 'lucide-react';
 
 ;
 export function ITServiceRequestHero() {;
     const features = [;
         {;
-            icon: <Brain className='w-6 h-6'/>,;
-            title: 'AI-Powered Solutions',;
+            icon: <Brain className='w-6 h-6'/>
+            title: 'AI-Powered Solutions'
             description: 'Cutting-edge artificial intelligence that learns and adapts to your business needs.'        },;
         {}
 ''';
@@ -106,7 +106,7 @@ export function ITServiceRequestHero() {;
 '''';
         <NeonGlow color='zion-purple' intensity='medium'>'''';
           <p className='text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto leading-relaxed'>
-            Pioneering the future of technology with revolutionary AI consciousness,;
+            Pioneering the future of technology with revolutionary AI consciousness
             quantum computing, and autonomous solutions that transform businesses worldwide.;
           </p>
         </NeonGlow>''';

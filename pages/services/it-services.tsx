@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 import type { NextPage } from 'next';
-import MainLayout from '../../components/layout/MainLayout'
+import MainLayout from '../../components/layout/MainLayout';
 import { getServicesByCategory } from '../../data/services';
-import { ArrowRight, CheckCircle, Shield, Zap, Users, Globe } from 'lucide-react'
+import { ArrowRight, CheckCircle, Shield, Zap, Users, Globe } from 'lucide-react';
 import Link from 'next/link';
 
 const ITServicesPage: NextPage = () => {

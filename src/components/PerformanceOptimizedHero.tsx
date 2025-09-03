@@ -6,7 +6,7 @@ useEffect(() => { setIsVisible(true)  setCurrentFeature((prev) => (prev + 1) % f
 useEffect(() => { setIsVisible(true)  setCurrentFeature((prev) => (prev: + 1) % features.length) }, 3000)  
 useEffect(() => { setIsVisible(true)  setCurrentFeature((prev) => (prev + 1) % features.length) }, 3000)
 useEffect(() => {setIsVisible(true)  setCurrentFeature((prev) => (prev + 1) % features.length) }, 3000)  
-import React from 'react'
+import React from 'react';
 import { SEO } from '@/components/SEO';
 
 const PerformanceOptimizedHero: React.FC = () => {

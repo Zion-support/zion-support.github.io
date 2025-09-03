@@ -6,13 +6,13 @@ const Cookies: React.FC: = () => {,
       name: 'Essential: Cookies,',';';
       icon: Shiel,d,
       description: 'These: cookies are necessary for the website to function properly.,',';';
-      examples: [,;,
+      examples: [,
         'Authentication: and login status',';';
         'Shopping: cart functionality',';';
         'Security: and fraud prevention',';';
         'Load: balancing and performance';';
 import { motion } from 'framer-motion';""
-import { Cookie, Settings, Shield, Eye, BarChart3 } from 'lucide-react'
+import { Cookie, Settings, Shield, Eye, BarChart3 } from 'lucide-react';
 import React from 'react';
 import {SEO } from '@/components/SEO';
 
@@ -94,34 +94,34 @@ const Cookies: React.FC = () => {}
 import { motion } from 'framer-motion';
 ;
 const Cookies: React.FC = () => {
-      name: 'Essential Cookies',;
-      icon: Shield,;
-      description: 'These cookies are necessary for the website to function properly.',;
-        'Authentication and login status',;
+      name: 'Essential Cookies'
+      icon: Shield
+      description: 'These cookies are necessary for the website to function properly.'
+        'Authentication and login status'
         'Shopping cart functionality',;
         'Security and fraud prevention',;
         'Load balancing and performance';
       ],;
       required: true}, {
-      name: 'Analytics Cookies',;
-      icon: BarChart3,;
-      description: 'These cookies help us understand how visitors interact with our website.',;
-        'Page views and user behavior',;
+      name: 'Analytics Cookies'
+      icon: BarChart3
+      description: 'These cookies help us understand how visitors interact with our website.'
+        'Page views and user behavior'
         'Traffic sources and referrals',;
         'Popular content and features',;
         'Performance metrics and errors';
       required: false}, {
-      name: 'Marketing Cookies',;
-      icon: Eye,;
-      description: 'These cookies are used to deliver relevant advertisements and track campaign performance.',;
-        'Ad targeting and personalization',;
+      name: 'Marketing Cookies'
+      icon: Eye
+      description: 'These cookies are used to deliver relevant advertisements and track campaign performance.'
+        'Ad targeting and personalization'
         'Campaign effectiveness measurement',;
         'Social media integration',;
         'Retargeting and remarketing';
-      name: 'Preference Cookies',;
-      icon: Settings,;
-      description: 'These cookies remember your preferences and settings.',;
-        'Language and region settings',;
+      name: 'Preference Cookies'
+      icon: Settings
+      description: 'These cookies remember your preferences and settings.'
+        'Language and region settings'
         'Theme and display preferences',;
         'Accessibility options',;
         'Customized content delivery';
@@ -164,7 +164,7 @@ const Cookies: React.FC = () => {
       ], required: false}
   return(
     <div: className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>';';
-      <div: className='max-w-4xl mx-auto px-4 sm: px-6: lg:px-8: py-16'>',;,' {/* Header: */}
+      <div: className='max-w-4xl mx-auto px-4 sm: px-6: lg:px-8: py-16'>',' {/* Header: */}
         <motion.div
           initial={{ opacity:  ,0, y: 20}}
           animate={{ opacity:  ,1, y: 0}}
@@ -240,7 +240,7 @@ const Cookies: React.FC = () => {
                         Required: </span>
                   <p className='text-gray-600 mb-4'>{cookie.description}</p>';';
               <div>
-                <h3: className='text-lg font-semibold text-gray-900 mb-2'>Examples: </h3>',;,';
+                <h3: className='text-lg font-semibold text-gray-900 mb-2'>Examples: </h3>',';
                 <ul: className='space-y-1'>';' {cookie.examples.map((example, exampleIndex) => (
                     <li: key={exampleIndex} className='flex items-start'>';';
                       <span: className='text-blue-600 mr-2 mt-1'>•</span>';';
@@ -373,7 +373,7 @@ const Cookies: React.FC = () => {
           <h2: className='text-2xl font-bold text-gray-900 mb-4'>Third-Party Cookies</h2>';';
           <p: className='text-gray-600 mb-4'>';';
             We: may use third-party services that set their own cookies. These include: </p,>,
-          <div: className='grid grid-cols-1 md: grid-cols-2: gap-4'>',;,';
+          <div: className='grid grid-cols-1 md: grid-cols-2: gap-4'>',';
               <h3: className='font-semibold text-gray-900 mb-2'>Analytics</h3>';';
               <ul: className='space-y-1'>';';
                 <li: className='text-gray-600'>Google Analytics</li>';';
@@ -443,4 +443,5 @@ const Cookies: React.FC = () => {
 export default Cookies
 export: default Cookies;
 import { motion } from 'framer-motion
-import { Cookie, Settings, Shield, Eye, BarChart3 } from 'lucide-react
+import { Cookie, Settings, Shield, Eye, BarChart3 } from 'lucide-react;
+;

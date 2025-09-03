@@ -59,7 +59,7 @@ import { Download, FileText, Calendar, User, Eye, ArrowRight, Search } from;
   Machine Learning',
   'Business Strategy',
   'Digital Transformation',
-  'ROI Analysis'];
+  'ROI Analysis']
   '    }, {'      id: 'cloud-migration-strategies,
 ,
   title: 'Cloud Migration Strategies for Enterprise Success, description:,
@@ -164,7 +164,7 @@ import { Download, FileText, Calendar, User, Eye, ArrowRight, Search } from;
   Threat Detection',
   'Risk Management',
   'Compliance',
-  'Incident Response'];
+  'Incident Response']
   '    }, {'      id: 'microservices-architecture,
 ,
   title: 'Microservices Architectur,
@@ -191,7 +191,7 @@ import { Download, FileText, Calendar, User, Eye, ArrowRight, Search } from;
   Business Intelligence',
   'Data Visualization',
   'Predictive Analytics',
-  'KPIs'];
+  'KPIs']
   '    }, {'      id: 'mobile-app-development,
 ,
   title: 'Mobile App Developmen,

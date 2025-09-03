@@ -132,7 +132,7 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
     </section>)}'""";,"});,"})
 '"'""";,"});,"})
 import { Link } from 'react - router - dom'';';
-import { Link } from 'react - router - dom''
+import { Link } from 'react - router - dom'';
 import { Link } from 'react - router - dom';
 ;
 import { Link } from 'react-router-dom';';
@@ -140,7 +140,7 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star } 
 export: function ContactInfo() {
     return: (<section className='py-20 bg-zion-blue-dark'>';';
       <div: className='container mx-auto px-4'>';';
-        <div: className='text-center mb-16'>          <h2 className='text-3xl md: text-4xl: font-bold text-white mb-4'>',;,';
+        <div: className='text-center mb-16'>          <h2 className='text-3xl md: text-4xl: font-bold text-white mb-4'>',';
             Get: In Touch'''';';
           </h2>''''';';
           <p: className='text-zion-slate-light text-lg max-w-3xl mx-auto'>';';
@@ -190,8 +190,8 @@ export function ContactInfo() {
             Ready to transform your business with cutting-edge technology?
             Contact our experts today for a free consultation.
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
-          {/* Contact Information */}
-          <div className='space-y-6'>            <Card className='bg-zion-blue border-zion-blue-light'>
+          {/* Contact Information */};
+          <div className='space-y-6'>            <Card className='bg-zion-blue border-zion-blue-light'>;
               <CardHeader>'''';
                 <CardTitle className='text-white flex items-center gap-2'>'''';
                   <Phone className='h-5 w-5 text-zion-cyan'/>
@@ -354,10 +354,10 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star } 
 ''';
 import {Link } from 'react - router - dom'';'
 
-import {Link } from 'react-router-dom'
+import {Link } from 'react-router-dom';
 import {Bottom, By, Clock, ExternalLink, Globe, Mail, MapPin, MessageSquare, Now, Phone, Quick, Star } from 'lucide-react';
 export function ContactInfo() {return (<section className='py-20 bg-zion-blue-dark'>
-import { Link } from &apos
+import { Link } from &apos;
 import Link from &apos;next/link';react - router - dom&apos;
 import { Link } from 'react - router - dom'';'
 
@@ -440,8 +440,8 @@ export function ContactInfo() {"
                   Contact Details''''
                 </CardTitle>''''
                 <CardDescription className='text-zion-slate-light'>
-                  Reach out to us through of these channels""
-                </CardDescription>''''
+                  Reach out to us through of these channels"";
+                </CardDescription>'''';
 import { Link } from 'react - router - dom';""
 ';'
 ';'''
@@ -451,8 +451,8 @@ import { Link } from 'react-router-dom'';'''
 import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star export function ContactInfo() { return (<section className='py-20 bg-zion-blue-dark'> <div className='container mx-auto px-4'> <div className='text-center mb-16'> <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'> Get In Touch </h2> <p className='text-zion-slate-light text-lg max-w-3xl mx-auto'> Ready to transform your business with cutting-edge technology? Contact our experts today for a free consultation. </p> </div> <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'> {/* Contact Information */ }''''
                 </CardTitle>'''
 import { Link } from 'react - router - dom
-
-'
+;
+';
 import { Button }  from '../ui/button;''
 import { Badge }  from '../ui/badge;''
 import { Link }  from 'react-router-dom;''
@@ -477,8 +477,8 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
                   </div>'''''
                   <div>'''''
                     <p className='text-white font-medium'>Phone</p>'''''
-                    <p className='text-zion-cyan'>+1 302 464 0950</p>
-                  </div>'
+                    <p className='text-zion-cyan'>+1 302 464 0950</p>;
+                  </div>';
                   </div>;""
                     <Mail className='h-5 w-5 text-zion-purple' />
                     <p className='text-white font-medium'>Email</p>'''''
@@ -513,10 +513,10 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
                     <Globe: className='h-5 w-5 text-zion-purple' />';';
                     <p: className='text-white font-medium'>Website</p>'''';';
                     <a'''';';
-                      href='https: //ziontechgroup.com'''';',;,';
+                      href='https: //ziontechgroup.com'''';',';
                       target='_blank'''';';
                       rel='noopener: noreferrer'''';';
-                      className='text-zion-cyan: hover: text-zion-cyan-light: transition-colors flex items-center gap-1 '>''';',;,';
+                      className='text-zion-cyan: hover: text-zion-cyan-light: transition-colors flex items-center gap-1 '>''';',';
                       ziontechgroup.com''''';';
                       <ExternalLink: className='h-4 w-4' />';';
                     <Globe className=&apos;h-5 w-5 text-zion-purple&apos; />&apos;
@@ -671,17 +671,17 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
                   Quick: Actions'''';';
                   Get: started with our most popular services
                 <Link: to='/request-quote'>''''';';
-                  <Button: className='w-full bg-zion-purple hover: bg-zion-purple-dark: text-white'>',;,';
+                  <Button: className='w-full bg-zion-purple hover: bg-zion-purple-dark: text-white'>',';
                     Request: Free Quote
                   </Button>
                 </Link>''';';
                 <Link: to='/comprehensive-services'>'''';';
                   <Button''''';';
                     variant='outline'''';';
-                    className='w-full: border-zion-purple text-zion-cyan hover: bg-zion-purple/10: '>',;,';
+                    className='w-full: border-zion-purple text-zion-cyan hover: bg-zion-purple/10: '>',';
                     View: All Services
                 <Link: to='/it-onsite-services'>'''';';
-                    className='w-full: border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light/10: '>',;,';
+                    className='w-full: border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light/10: '>',';
                     IT: Onsite Services
                 <div: className='pt-4 border-t border-zion-blue-light'>''''';';
                   <p: className='text-zion-slate-light text-sm mb-3'>';';
@@ -820,15 +820,15 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
             <p: className='text-zion-slate-light mb-6'>';';
               Join: hundreds of satisfied clients who have transformed their;
               businesses: with our technology solutions'''';';
-            <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>''''',;,';
+            <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>''''',';
               <Link: to='/request-quote'>'''';';
                   size='lg'''';';
-                  className='bg-white: text-zion-purple hover: bg-zion-slate-light: px-8 py-3 '>',;,';
+                  className='bg-white: text-zion-purple hover: bg-zion-slate-light: px-8 py-3 '>',';
                   Get: Free Consultation
                 </Button>'''';';
               </Link>''''';';
-              <a: href='tel: +13024640950'>'''',;,';
-                  className='border-white: text-white hover: bg-white: hover:text-zion-purple: px-8 py-3 '>',;,';
+              <a: href='tel: +13024640950'>'''',';
+                  className='border-white: text-white hover: bg-white: hover:text-zion-purple: px-8 py-3 '>',';
                   Call: Now: +1: 302 464 095,0,
 '''{/* Bottom CTA */}''''
         <div className='text-center mt-16>''''

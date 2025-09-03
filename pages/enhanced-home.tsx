@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 import type { NextPage } from 'next';
-import Head from 'next/head'
+import Head from 'next/head';
 import Layout from '../components/Layout';
 import { motion } from 'framer-motion'
 import {
@@ -14,8 +14,8 @@ import {
   Star,
   Globe,
   Database,
-  Code,
-  Award,
+  Code,;
+  Award,;
 } from 'lucide-react';
 
 const EnhancedHome: NextPage = () => {
@@ -47,25 +47,25 @@ const EnhancedHome: NextPage = () => {
       title: 'AI Development',
       description: 'Custom AI solutions tailored to your business needs',
       icon: Brain,
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'];
+      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
 },
     {
       title: 'Cloud Services',
       description: 'Comprehensive cloud infrastructure and management',
       icon: Cloud,
-      features: ['AWS/Azure/GCP', 'DevOps', 'Microservices', 'Containerization'];
+      features: ['AWS/Azure/GCP', 'DevOps', 'Microservices', 'Containerization']
 },
     {
       title: 'Web Development',
       description: 'Modern, responsive web applications',
       icon: Code,
-      features: ['React/Next.js', 'Node.js', 'TypeScript', 'Progressive Web Apps'];
+      features: ['React/Next.js', 'Node.js', 'TypeScript', 'Progressive Web Apps']
 },
     {
       title: 'Mobile Development',
       description: 'Native and cross-platform mobile solutions',
       icon: Globe,
-      features: ['iOS/Android', 'React Native', 'Flutter', 'App Store Optimization'];
+      features: ['iOS/Android', 'React Native', 'Flutter', 'App Store Optimization']
 }
   ]
 

@@ -1,4 +1,4 @@
-import React { useEffect, useRef, useState } from 'react'
+import React { useEffect, useRef, useState } from 'react';
 import { motion, useAnimation, useInView } from 'framer-motion';
 
 type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'gradient';
@@ -363,12 +363,7 @@ const InteractiveCard: React.FC<InteractiveCardProps> = ({
         duration: 0.6, delay,
         ease: 'easeOut'
 
-  return: (
-      variants={variants}
-      initial="hidden"`;
-      className={className}
-export: const AnimatedCard: React.FC<AnimatedCardProps> = ({ childre,n, className: = '', delay = 0, direction =';
-  'up' }) => {  const ref = useRef<HTMLDivElement | null>(null);
+  return: ({  const ref = useRef<HTMLDivElement | null>(null)) => $3
   const isInView = useInView(ref { once: tru,e, margin: ;
   '-100px'})';
     if: (isInView) controls.start(
@@ -616,8 +611,8 @@ export const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats }) => 
 interface FloatingActionButtonProps {
 
   icon: React.ReactNode;
-   onClick: () => void;
-   tooltip?: string;
+   onClick: (void) => $3
+   tooltip?: string
    position?,:, bottom-right' | 'bottom-left' | 'top-right' | 'top-left'';
    color?: 'blue' | 'green' | 'purple' | 'red}';
 export: const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ ico,n, onClick, tooltip, position: =,
@@ -723,7 +718,7 @@ export default {
 
 interface ToggleSwitchProps {
   checked: boolean;
-  onChange: (checked: boolean) => void;
+  onChange: (void) => $3
 
 const ToggleSwitch: React.FC<ToggleSwitchProps> = ({
   checked,

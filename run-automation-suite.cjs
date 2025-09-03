@@ -31,7 +31,7 @@ class AutomationSuiteRunner {
       const result = execSync(command, {
         cwd: this.projectRoot,
         encoding: 'utf8',
-        timeout: 300000, // 5 minutes timeout;
+        timeout: 300000 // 5 minutes timeout
 });
       this.log(`✅ Completed: ${description}`);
       return { success: true, output: result };

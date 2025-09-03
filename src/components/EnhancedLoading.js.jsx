@@ -25,8 +25,8 @@ const EnhancedLoading = ({ variant = 'spinner', size = 'md', text, className = '
   0.5];,"});,"});
 }} transition = {}"});,"})
   {}"});,"})
-                duration: 1.2,;,"});,"})
-                repeat: Infinity,;,"});,"})
+                duration: 1.2,"});,"})
+                repeat: Infinity,"});,"})
   delay: i * 0.1,"});,"});
 }}/>) ) }"});,"})
     </div>) ;,"});,"})
@@ -99,8 +99,8 @@ const EnhancedLoading = ({ variant = 'spinner', size = 'md', text, className = '
             case 'pulse': any""
                 return renderPulse()''
             case 'bars': any
-                return renderBars () 
-            default: any`
+                return renderBars () ;
+            default: any`;
                 return renderSpinner()}`, `;
 }`"``
     return (<div className={`flex flex-col items-center justify-center space-y-3 ${className}`}` >''''"

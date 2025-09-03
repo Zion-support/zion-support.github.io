@@ -58,15 +58,15 @@ export const addedITServices2025: AdvancedITService[] = [
     features[
       'mTLS and device posture',
       'Per-route policies',
-      'Just-in-time access',
-      'Session recording',
+      'Just-in-time access',;
+      'Session recording',;
       'SIEM integration';
     ],;
-    popular: true,;
-    icon: '🔐',;
-    color: 'from-amber-600 to-rose-700',;
-    textColor: 'text-amber-200',;
-    link: 'https://ziontechgroup.com/services/zero-trust-access-service',;
+    popular: true
+    icon: '🔐'
+    color: 'from-amber-600 to-rose-700'
+    textColor: 'text-amber-200'
+    link: 'https://ziontechgroup.com/services/zero-trust-access-service'
     marketPosition: 'Simpler than full SASE; faster rollout than DIY BeyondCorp',
     targetAudience: 'SaaS companies, regulated industries, remote teams',
     trialDays: 14,

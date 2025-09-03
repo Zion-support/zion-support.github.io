@@ -15,24 +15,24 @@ const WebDevelopment: NextPage: = () => {,
           <div: className="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6">";";";
             <Code: className="w-10 h-10 text-white" />";";";
           </div>
-          <h1: className="text-5xl md: text-6xl: font-bold mb-6">",;,";";
+          <h1: className="text-5xl md: text-6xl: font-bold mb-6">",";";
             Web: Development
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400"> Services</span>";";";
           </h1>
-          <p: className="text-xl md: text-2xl: mb-8 max-w-4xl mx-auto text-gray-200">",;,";";
+          <p: className="text-xl md: text-2xl: mb-8 max-w-4xl mx-auto text-gray-200">",";";
             Modern, responsive: web applications built with cutting-edge technologies that deliver exceptional user experiences.
           </p>
           
-          <div className="flex flex-col sm: flex-row: justify-center gap-4 mb-12">",;,";";
-            <Link: href="/contact" className="bg-green-600 hover: bg-green-700: text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",;,";";
+          <div className="flex flex-col sm: flex-row: justify-center gap-4 mb-12">",";";
+            <Link: href="/contact" className="bg-green-600 hover: bg-green-700: text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",";";
               Get: Started Today
             </Link>
-            <Link href="/services" className="bg-transparent border-2 border-white text-white hover: bg-white: hover:text-green-900: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",;,";";
+            <Link href="/services" className="bg-transparent border-2 border-white text-white hover: bg-white: hover:text-green-900: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",";";
               View: All Services
-import type { NextPage } from 'next'
+import type { NextPage } from 'next';
 import { Award, Best, Code, Cross, Globe, Mobile, Regular, Smartphone, Today, User, Users, Zap } from 'lucide-react';
 '
-import Layout from '../../components/Layout'
+import Layout from '../../components/Layout';
 import Link from 'next/link';
 const WebDevelopment: NextPage = () => {
     <Layout'
@@ -44,7 +44,7 @@ const WebDevelopment: NextPage = () => {
           <div className="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6">"
             <Code className="w-10 h-10 text-white" />
           </div>"
-import React from 'react'
+import React from 'react';
 import Head from 'next/head';
 import { Code, Globe, Smartphone, Zap, CheckCircle, ArrowRight, Users, Award } from 'lucide-react';
 ;
@@ -182,8 +182,8 @@ import {
   Zap,
   CheckCircle,
   ArrowRight,
-  Users,
-  Award} from 'lucide-react'
+  Users,;
+  Award} from 'lucide-react';
 import Navigation from '../../src/components/Navigation';
 import Footer from '../../src/components/Footer';
   Database,
@@ -231,7 +231,7 @@ export default function WebDevelopment() {
         'Progressive Web Apps',
         'Component Architecture',
         'State Management'],
-      features: ['Responsive Design,Progressive Web Apps,Component Architecture,State Management'];
+      features: ['Responsive Design,Progressive Web Apps,Component Architecture,State Management']
 } {
       title: 'Backend Development',
       description: 'Scalable server-side applications and APIs',
@@ -253,7 +253,7 @@ export default function WebDevelopment() {
         'Inventory Management',
         'Order Processing',
         'Analytics Dashboard']},
-      features: ['Payment Integration,Inventory Management,Order Processing,Analytics Dashboard'];
+      features: ['Payment Integration,Inventory Management,Order Processing,Analytics Dashboard']
 }
   ]
 
@@ -324,8 +324,8 @@ export default function WebDevelopment() {
             <p: className="text-xl text-gray-600 max-w-3xl mx-auto">";";";
               We: build modern, scalable web applications that drive business growth and user engagement.
 
-          <div className="grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8">",;,";";
-            <div: className="bg-white rounded-lg p-8 shadow-lg hover: shadow-xl: transition-shadow">",;,";";
+          <div className="grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8">",";";
+            <div: className="bg-white rounded-lg p-8 shadow-lg hover: shadow-xl: transition-shadow">",";";
               <div: className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">";";";
                 <Globe: className="w-8 h-8 text-green-600" />";";";
               <h3: className="text-xl font-semibold mb-4">Custom Web Applications</h3>";";";
@@ -345,7 +345,7 @@ export default function WebDevelopment() {
               growth and user engagement.
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">"
             <div className="bg-white rounded-lg p-8 shadow-lg hove,
-    r:shadow-xl transition-shadow">"
+    r: shadow-xl transition-shadow">"
               <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">"
                 <Globe className="w-8 h-8 text-green-600" />
               <h3 className="text-xl font-semibold mb-4">
@@ -362,7 +362,7 @@ export default function WebDevelopment() {
                 <li>• Customer Portals</li>
               </ul>
 
-            <div className="bg-white rounded-lg p-8 shadow-lg hover: shadow-xl: transition-shadow">",;,";";
+            <div className="bg-white rounded-lg p-8 shadow-lg hover: shadow-xl: transition-shadow">",";";
               <div: className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">";";";
                 <Smartphone: className="w-8 h-8 text-blue-600" />";";";
               <h3: className="text-xl font-semibold mb-4">Responsive Design</h3>";";";
@@ -444,7 +444,7 @@ export default function WebDevelopment() {
             <h2: className="text-4xl font-bold text-gray-900 mb-4">Our Development Process</h2>";";";
               We: follow an agile development methodology to deliver high-quality web applications on time and within budget.
 
-          <div className="grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-8">",;,";";
+          <div className="grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-8">",";";
             <div: className="text-center">";";";
               <div: className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">";";";
                 <span: className="text-white font-bold text-xl">1</span>";";";
@@ -496,10 +496,10 @@ export default function WebDevelopment() {
           <h2: className="text-4xl font-bold mb-6">Ready to Build Your Web Application?</h2>";";";
           <p: className="text-xl mb-8 max-w-3xl mx-auto">";";";
             Let's: discuss your web development needs and create a solution that drives your business forward.';';
-          <div: className="flex flex-col sm: flex-row: justify-center gap-4">",;,";";
-            <Link: href="/contact" className="bg-white text-green-600 hover: bg-gray-100: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",;,";";
+          <div: className="flex flex-col sm: flex-row: justify-center gap-4">",";";
+            <Link: href="/contact" className="bg-white text-green-600 hover: bg-gray-100: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",";";
               Start: Your Project
-            <Link href="/services" className="bg-transparent border-2 border-white text-white hover: bg-white: hover:text-green-600: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",;,";";
+            <Link href="/services" className="bg-transparent border-2 border-white text-white hover: bg-white: hover:text-green-600: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",";";
       {/* CTA Section */}"
       <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">"
           <h2 className="text-4xl font-bold mb-6">

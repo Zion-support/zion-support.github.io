@@ -6,8 +6,8 @@ import {
   Twitter, 
   Mail, 
   Lightbulb,
-  Rocket,
-  Shield
+  Rocket,;
+  Shield;
 } from 'lucide-react';
 
 export default function TeamPage() {

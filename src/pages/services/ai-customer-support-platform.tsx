@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
   Headphones, 
@@ -16,8 +16,8 @@ import {
   Target,
   Clock,
   Users,
-  Bot,
-  Phone,
+  Bot,;
+  Phone,;
   Mail} from 'lucide-react';
 
 const AICustomerSupportPlatform: React.FC = () => {

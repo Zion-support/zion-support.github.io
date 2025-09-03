@@ -5,7 +5,7 @@ interface SEOEnhancerProps {title?: string;
 import React, { useEffect } from &apos;react';
 import Head from &apos;next/head';
 import React, { useEffect } from 'react';""
-import React, { useEffect } from 'react'
+import React, { useEffect } from 'react';
 import Head from 'next/head';
 
 interface SEOEnhancerProps {

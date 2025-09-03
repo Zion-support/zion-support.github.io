@@ -51,7 +51,7 @@ class ErrorPreventionAutomation {;
       execSync(`npm run type-check`, { 
         cwd: this.projectRoot, 
         stdio: `pipe`,
-        timeout: 60000;
+        timeout: 60000
 ;
   async runTypeCheck() {;
     try {;
@@ -74,7 +74,7 @@ class ErrorPreventionAutomation {;
       execSync(`npm run lint`, { 
         cwd: this.projectRoot, 
         stdio: `pipe`,
-        timeout: 60000;
+        timeout: 60000
 <<<<<<< HEAD      });
       this.log(`ESLint passed`);
       return true;
@@ -89,7 +89,7 @@ class ErrorPreventionAutomation {;
       execSync(`npm run build`, { 
         cwd: this.projectRoot, 
         stdio: `pipe`,
-        timeout: 120000;
+        timeout: 120000
 ;
   async runBuild() {;
     try {;
@@ -283,7 +283,7 @@ class ErrorPreventionAutomation {;
       execSync(`npm test -- --passWithNoTests`, { 
         cwd: this.projectRoot, 
         stdio: `pipe`,
-        timeout: 120000;
+        timeout: 120000
 <<<<<<< HEAD      });
       this.log(`Tests passed`);
       return true;

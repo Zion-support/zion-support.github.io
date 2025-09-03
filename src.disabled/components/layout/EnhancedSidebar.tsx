@@ -1,8 +1,8 @@
 <<<<<<< HEAD
 :src.disabled/components/layout/EnhancedSidebar.tsx
-import React from
+import React from;
   'react';
-import { Link, useLocation } from
+import { Link, useLocation } from;
   'react-router-dom';
 
 interface SidebarProps {
@@ -12,7 +12,7 @@ import { Link, useLocation } from 'react-router-dom';
 interface SidebarProps {;
 ursor/automate-test-fix-improve-and-merge-code-99d1:src/components/layout/EnhancedSidebar.tsx
   isOpen: boolean;
-  onClose: () => void;
+  onClose: () => void
 };
 export function EnhancedSidebar({ isOpen, onClose }: SidebarProps) {;
   const location = useLocation();

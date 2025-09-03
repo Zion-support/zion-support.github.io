@@ -1,4 +1,4 @@
-import React, {useState } from 'react'
+import React, {useState } from 'react';
 import {Check, Star, Zap, Shield, Cloud, Brain, Rocket, Users, Building, Globe } from 'lucide-react';
 import {Link } from 'react-router-dom';
 
@@ -127,11 +127,11 @@ export default function ComprehensivePricing2025()   {const [billingCycle, setBi
             <p className="text-xl m,
     d:text-2xl text-zion-slate-light mb-8 leading-relaxed">
     {name: 'Digital Transformation',
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import React, { useState } from 'react';""
 import { Check, Star, Zap, Shield, Cloud, Brain, Rocket, Users, Building, Globe } from 'lucide-react';""
-import React, { useState } from 'react
-import { Check, Star, Zap, Shield, Cloud, Brain, Rocket, Users, Building, Globe } from 'lucide-react
+import React, { useState } from 'react;
+import { Check, Star, Zap, Shield, Cloud, Brain, Rocket, Users, Building, Globe } from 'lucide-react;
 import { Link } from 'react-router-dom';
 
 export default function ComprehensivePricing2025() {""

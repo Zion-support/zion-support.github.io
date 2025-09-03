@@ -9,8 +9,8 @@ import {
   Home,
   Info,
   Mail,
-  Menu,
-  Phone,
+  Menu,;
+  Phone,;
   X,;
 } from 'lucide-react';
 
@@ -22,25 +22,25 @@ const Header: React.FC = () => {
       name: 'AI Services',
       href: '/ai-services',
       icon: Brain,
-      description: 'Artificial Intelligence Solutions',;
+      description: 'Artificial Intelligence Solutions'
 },
     {
       name: 'IT Services',
       href: '/it-services',
       icon: Cloud,
-      description: 'Information Technology Services',;
+      description: 'Information Technology Services'
 },
     {
       name: 'Micro SaaS',
       href: '/micro-saas',
       icon: Code,
-      description: 'Custom Software Solutions',;
+      description: 'Custom Software Solutions'
 },
     {
       name: 'All Services',
       href: '/services',
       icon: null,
-      description: 'Complete Service Portfolio',;
+      description: 'Complete Service Portfolio'
 },
   ]
   const navigation = [

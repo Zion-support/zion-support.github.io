@@ -39,14 +39,14 @@ const EmptyState = ({title, subtitle, cta, href, hasSession }) => {}
 const EmptyState = memo(({ title, subtitle, cta, href, hasSession }) => {}
   return()"
 ';
-import Link from 'next/link'
+import Link from 'next/link';
 import { MessageSquare } from 'lucide-react';
-import { Button } from '@/components/ui/button'
+import { Button } from '@/components/ui/button';
 import Link from &apos;
 import Link from &apos;next/link';next/link&apos;
 import { MessageSquare } from &apos;lucide-react&apos;
 import { Button } from &apos;@/components/ui/button';
-import {}
+import {};
   Tooltip,;
   TooltipContent,;
   TooltipProvider,';
@@ -55,8 +55,8 @@ import {}
 import Link from 'next/link'';'
 import { MessageSquare} from 'lucide-react';'
 import { Button} from '@/components/ui/button'
-import {}
-  Tooltip, TooltipContent,
+import {};
+  Tooltip, TooltipContent,;
   TooltipProvider, ';'
   TooltipTrigger} from '@/components/ui/tooltip';
 const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}
@@ -122,7 +122,7 @@ export { EmptyState }
 export { EmptyState }
 ;
 export { EmptyState }
-import React from 'react'
+import React from 'react';
 import { SEO } from '@/components/SEO';
 
 const EmptyState: React.FC = () => {

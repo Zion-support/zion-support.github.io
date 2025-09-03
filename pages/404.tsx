@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
 import type { NextPage } from 'next';
-import Head from 'next/head'
+import Head from 'next/head';
 import dynamic from 'next/dynamic';
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
 import { Button } from '../components/ui/Button';
-import { Card } from '../components/ui/Card'
+import { Card } from '../components/ui/Card';
 import Link from 'next/link';
 import {
   Home,
@@ -16,8 +16,8 @@ import {
   Users,
   BookOpen,
   DollarSign,
-  Calendar,
-  Award,
+  Calendar,;
+  Award,;
   Shield} from 'lucide-react';
 const NotFound: React.FC = () => {
   const quickLinks = [

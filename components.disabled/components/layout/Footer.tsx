@@ -97,12 +97,12 @@ const Footer: React.FC = () => {
     {
       name: 'YouTube',
       href: 'https://youtube.com/ziontechgroup',
-      icon: Youtube,;
+      icon: Youtube
 },
     {
       name: 'Instagram',
       href: 'https://instagram.com/ziontechgroup',
-      icon: Instagram,;
+      icon: Instagram
 },
   ]
   const contactInfo = {

@@ -28,7 +28,7 @@ const serviceCategories = [];,"});,"})
     id: 'micro-saas','""";,"});,"})
     name: 'Micro SAAS Solutions',"""";,"});,"})
     icon: <Rocket className="w-6 h-6" />,';,"});,"})
-    color: 'from-purple-600 to-pink-600',;,"});,"})
+    color: 'from-purple-600 to-pink-600',"});,"})
     services: revolutionary2027AdvancedMicroSaasServices,"});,"});
 },;,"});,"})
   {}"});,"})
@@ -36,7 +36,7 @@ const serviceCategories = [];,"});,"})
     id: 'it-infrastructure','""";,"});,"})
     name: 'IT Infrastructure & Cybersecurity',"""";,"});,"})
     icon: <Shield className="w-6 h-6" />,';,"});,"})
-    color: 'from-red-600 to-orange-600',;,"});,"})
+    color: 'from-red-600 to-orange-600',"});,"})
     services: revolutionary2027ITInfrastructureCybersecurityServices,"});,"});
 },;,"});,"})
   {}"});,"})
@@ -44,7 +44,7 @@ const serviceCategories = [];,"});,"})
     id: 'ai-innovation','""";,"});,"})
     name: 'AI Innovation Services',"""";,"});,"})
     icon: <Brain className="w-6 h-6" />,';,"});,"})
-    color: 'from-blue-600 to-cyan-600',;,"});,"})
+    color: 'from-blue-600 to-cyan-600',"});,"})
     services: revolutionary2027AIInnovationServices,"});,"});
 }"});,"})
 ];,"});,"})
@@ -59,21 +59,21 @@ export function ComprehensiveServicesShowcase() {}"});,"})
   const containerVariants = {}"});,"})
     hidden: { opacity: 0 },;,"});,"})
     visible: {}"});,"})
-      opacity: 1,;,"});,"})
+      opacity: 1,"});,"})
       transition: {}"});,"})
-        staggerChildren: 0.1,;,"});,"})
+        staggerChildren: 0.1,"});,"})
         delayChildren: 0.2,"});,"});
 }"});,"});
 }"});,"});
 };,"});,"})
 ;,"});,"})
   const itemVariants = {}"});,"})
-  hidden: { y: 20,;,"});,"})
+  hidden: { y: 20,"});,"})
   opacity: 0,"});,"});
 },;,"});,"})
     visible: {}"});,"})
-      y: 0,;,"});,"})
-      opacity: 1,;,"});,"})
+      y: 0,"});,"})
+      opacity: 1,"});,"})
       transition: {}"});,"})
 """;,"});,"})
         duration: 0.5,"""";,"});,"})
@@ -83,12 +83,12 @@ export function ComprehensiveServicesShowcase() {}"});,"})
 };,"});,"})
 ;,"});,"})
   const cardVariants = {}"});,"})
-  hidden: { scale: 0.95,;,"});,"})
+  hidden: { scale: 0.95,"});,"})
   opacity: 0,"});,"});
 },;,"});,"})
     visible: {}"});,"})
-      scale: 1,;,"});,"})
-      opacity: 1,;,"});,"})
+      scale: 1,"});,"})
+      opacity: 1,"});,"})
       transition: {}"});,"})
 """;,"});,"})
         duration: 0.4,"""";,"});,"})
@@ -104,11 +104,11 @@ export function ComprehensiveServicesShowcase() {}"});,"})
         <motion.div """";,"});,"})
           className="text-center mb-16""";,"});,"})
           initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: 30,"});,"});
 }}"});,"})
           animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   y: 0,"});,"});
 }}"});,"})
           transition={{ duration: 0.6 }}""";,"});,"})
@@ -152,15 +152,15 @@ export function ComprehensiveServicesShowcase() {}"});,"})
         <motion.div """";,"});,"})
           className="flex flex-wrap justify-center gap-4 mb-12""";,"});,"})
           initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: 20,"});,"});
 }}"});,"})
           animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   y: 0,"});,"});
 }}"});,"})
           transition = {}"});,"})
-  { duration: 0.6,;,"});,"})
+  { duration: 0.6,"});,"})
   delay: 0.2,"});,"});
 }}"});,"})
         >;,"});,"})
@@ -287,15 +287,15 @@ export function ComprehensiveServicesShowcase() {}"});,"})
         <motion.div """";,"});,"})
           className="text-center mt-16""";,"});,"})
           initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: 30,"});,"});
 }}"});,"})
           animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   y: 0,"});,"});
 }}"});,"})
           transition = {}"});,"})
-  { duration: 0.6,;,"});,"})
+  { duration: 0.6,"});,"})
   delay: 0.4,"});,"});
 }}""";,"});,"})
         >"""";,"});,"})
@@ -337,15 +337,15 @@ export function ComprehensiveServicesShowcase() {}"});,"})
             <motion.div"""";,"});,"})
               className="bg-zion-slate-dark rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto""";,"});,"})
               initial = {}"});,"})
-  { scale: 0.9,;,"});,"})
+  { scale: 0.9,"});,"})
   opacity: 0,"});,"});
 }}"});,"})
               animate = {}"});,"})
-  { scale: 1,;,"});,"})
+  { scale: 1,"});,"})
   opacity: 1,"});,"});
 }}"});,"})
               exit = {}"});,"})
-  { scale: 0.9,;,"});,"})
+  { scale: 0.9,"});,"})
   opacity: 0,"});,"});
 }}"});,"})
               onClick={(e) => e.stopPropagation()}""";,"});,"})
@@ -438,8 +438,8 @@ import {}""
   Clock,''
   Target, ''''
   Award'''' } from 'lucide-react'''
-  Target,'''
-  Award'''' }  from 'lucide-react
+  Target,''';
+  Award'''' }  from 'lucide-react;
 import { Link } from 'react-router-dom';
 // Import the new service data
 

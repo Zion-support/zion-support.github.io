@@ -15,24 +15,24 @@ const AIDevelopment: NextPage: = () => {,
           <div: className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">";";";
             <Brain: className="w-10 h-10 text-white" />";";";
           </div>
-          <h1: className="text-5xl md: text-6xl: font-bold mb-6">",;,";";
+          <h1: className="text-5xl md: text-6xl: font-bold mb-6">",";";
             AI: Development
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Services</span>";";";
           </h1>
-          <p: className="text-xl md: text-2xl: mb-8 max-w-4xl mx-auto text-gray-200">",;,";";
+          <p: className="text-xl md: text-2xl: mb-8 max-w-4xl mx-auto text-gray-200">",";";
             Transform: your business with custom AI solutions and machine learning models tailored to your specific needs.
           </p>
           
-          <div className="flex flex-col sm: flex-row: justify-center gap-4 mb-12">",;,";";
-            <Link: href="/contact" className="bg-blue-600 hover: bg-blue-700: text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",;,";";
+          <div className="flex flex-col sm: flex-row: justify-center gap-4 mb-12">",";";
+            <Link: href="/contact" className="bg-blue-600 hover: bg-blue-700: text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",";";
               Get: Started Today
             </Link>
-            <Link href="/services" className="bg-transparent border-2 border-white text-white hover: bg-white: hover:text-blue-900: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",;,";";
+            <Link href="/services" className="bg-transparent border-2 border-white text-white hover: bg-white: hover:text-blue-900: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",";";
               View: All Services
-import type { NextPage } from 'next'
+import type { NextPage } from 'next';
 import { Award, Brain, Cloud, Globe, Image, Target, Today, Users, Zap } from 'lucide-react';
 '
-import Layout from '../../components/Layout'
+import Layout from '../../components/Layout';
 import Link from 'next/link';
 const AIDevelopment: NextPage = () => {
     <Layout'
@@ -44,7 +44,7 @@ const AIDevelopment: NextPage = () => {
           <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">"
             <Brain className="w-10 h-10 text-white" />
           </div>"
-import React from 'react'
+import React from 'react';
 import Head from 'next/head';
 import { Brain, Zap, Target, CheckCircle, ArrowRight, Users, Award, Globe } from 'lucide-react';
 ;
@@ -182,8 +182,8 @@ import {
   CheckCircle,
   ArrowRight,
   Users,
-  Award,
-  Globe} from 'lucide-react'
+  Award,;
+  Globe} from 'lucide-react';
 import Navigation from '../../src/components/Navigation';
 import Footer from '../../src/components/Footer';
   Bot,
@@ -234,7 +234,7 @@ export default function AIDevelopment() {
         'Deep Learning Networks',
         'Predictive Analytics',
         'Custom Algorithms'],
-      features: ['Machine Learning Models,Deep Learning Networks,Predictive Analytics,Custom Algorithms'];
+      features: ['Machine Learning Models,Deep Learning Networks,Predictive Analytics,Custom Algorithms']
 } {
       title: 'AI Integration',
         'Seamlessly integrate AI capabilities into your existing systems',
@@ -259,7 +259,7 @@ export default function AIDevelopment() {
         'Documentation',
         'Technical Support',
         'Model Maintenance']},
-      features: ['Team Training,Documentation,Technical Support,Model Maintenance'];
+      features: ['Team Training,Documentation,Technical Support,Model Maintenance']
 }
   ]
 
@@ -376,8 +376,8 @@ export default function AIDevelopment() {
             <p: className="text-xl text-gray-600 max-w-3xl mx-auto">";";";
               We: build intelligent solutions that learn, adapt, and evolve with your business needs.
 
-          <div className="grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8">",;,";";
-            <div: className="bg-white rounded-lg p-8 shadow-lg hover: shadow-xl: transition-shadow">",;,";";
+          <div className="grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8">",";";
+            <div: className="bg-white rounded-lg p-8 shadow-lg hover: shadow-xl: transition-shadow">",";";
               <div: className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">";";";
                 <Brain: className="w-8 h-8 text-blue-600" />";";";
               <h3: className="text-xl font-semibold mb-4">Machine Learning Models</h3>";";";
@@ -415,7 +415,7 @@ export default function AIDevelopment() {
                 <li>• Anomaly Detection</li>
               </ul>
 
-            <div className="bg-white rounded-lg p-8 shadow-lg hover: shadow-xl: transition-shadow">",;,";";
+            <div className="bg-white rounded-lg p-8 shadow-lg hover: shadow-xl: transition-shadow">",";";
               <div: className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">";";";
                 <Zap: className="w-8 h-8 text-purple-600" />";";";
               <h3: className="text-xl font-semibold mb-4">Natural Language Processing</h3>";";";
@@ -498,7 +498,7 @@ export default function AIDevelopment() {
             <h2: className="text-4xl font-bold text-gray-900 mb-4">Our AI Development Process</h2>";";";
               We: follow a proven methodology to deliver AI solutions that drive real business value.
 
-          <div className="grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-8">",;,";";
+          <div className="grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-8">",";";
             <div: className="text-center">";";";
               <div: className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">";";";
                 <span: className="text-white font-bold text-xl">1</span>";";";
@@ -550,10 +550,10 @@ export default function AIDevelopment() {
           <h2: className="text-4xl font-bold mb-6">Ready to Transform Your Business with AI?</h2>";";";
           <p: className="text-xl mb-8 max-w-3xl mx-auto">";";";
             Let's: discuss how AI can solve your specific business challenges and drive growth.';';
-          <div: className="flex flex-col sm: flex-row: justify-center gap-4">",;,";";
-            <Link: href="/contact" className="bg-white text-blue-600 hover: bg-gray-100: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",;,";";
+          <div: className="flex flex-col sm: flex-row: justify-center gap-4">",";";
+            <Link: href="/contact" className="bg-white text-blue-600 hover: bg-gray-100: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",";";
               Schedule: a Consultation
-            <Link href="/services" className="bg-transparent border-2 border-white text-white hover: bg-white: hover:text-blue-600: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",;,";";
+            <Link href="/services" className="bg-transparent border-2 border-white text-white hover: bg-white: hover:text-blue-600: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",";";
       {/* CTA Section */}"
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
           <h2 className="text-4xl font-bold mb-6">

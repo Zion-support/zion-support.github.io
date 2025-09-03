@@ -4,8 +4,8 @@ import AIChatbot from './AIChatbot'
 describe('AIChatbot', () => {
 
   it('renders without crashing', () => {
-
-    render(<AIChatbot />)
+;
+    render(<AIChatbot />);
     expect(screen.getByRole('main')).toBeInTheDocument();
 })
   it('displays correct content', () => {

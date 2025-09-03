@@ -5,12 +5,12 @@ import React, { useState } from 'react';,"});,"})
 import { Button } from "./ui/Button.jsx";,"});,"})
 const ContactForm = () => {;,"});,"})
     const [formData, setFormData] = useState({;,"});,"})
-        firstName: '',;,"});,"})
-        lastName: '',;,"});,"})
-        email: '',;,"});,"})
-        comp: '',;,"});,"})
-        phone: '',;,"});,"})
-        service: '',;,"});,"})
+        firstName: '',"});,"})
+        lastName: '',"});,"})
+        email: '',"});,"})
+        comp: '',"});,"})
+        phone: '',"});,"})
+        service: '',"});,"})
         message: '',"});,"});
 });,"});,"})
     const [isSubmitting, setIsSubmitting] = useState(false);,"});,"})
@@ -30,12 +30,12 @@ const ContactForm = () => {;,"});,"})
             await new Promise(resolve => setTimeout(resolve, 2000));,"});,"})
             // Reset form on success,"});,"})
             setFormData({;,"});,"})
-                firstName: '',;,"});,"})
-                lastName: '',;,"});,"})
-                email: '',;,"});,"})
-                comp: '',;,"});,"})
-                phone: '',;,"});,"})
-                service: '',;,"});,"})
+                firstName: '',"});,"})
+                lastName: '',"});,"})
+                email: '',"});,"})
+                comp: '',"});,"})
+                phone: '',"});,"})
+                service: '',"});,"})
                 message: '',"});,"});
 });,"});,"})
             setSubmitStatus('success');,"});,"})
@@ -262,7 +262,7 @@ export { ContactForm };,"});,"})
 
 "";
 }}}
-import React from 'react'
+import React from 'react';
 import { SEO } from '@/components/SEO';
 
 const ContactFormJs = () => {

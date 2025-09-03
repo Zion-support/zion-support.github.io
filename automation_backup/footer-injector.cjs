@@ -31,8 +31,8 @@ try {
   } else {
     console.log('ℹ️  Footer already injected');
   }
-} catch (error) { 
+} catch (error) {
   console.log('⚠️  Footer injection failed:', error.message);
   // Don't fail the build for this;
   process.exit(0);
- }
+}

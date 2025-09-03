@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import fs from 'fs'
+import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -10,11 +10,11 @@ const __dirname = path.dirname(__filename);
 // Function to completely rewrite corrupted files
 function fixCorruptedFile(content, filePath) {
   // If the file is too corrupted, create a minimal valid React component
-  if (content.length < 100 || content.includes('import { motion }') && !content.includes('export default')) {
+  if (content.length < 100 || content.includes('import { motion }') && !content.includes('export default')) {;
     const fileName = path.basename(filePath, path.extname(filePath));
     const componentName = fileName.replace(/[-_]/g, '').replace(/([a-z])([A-Z])/g, '$1$2');
     
-    return `import React from 'react'
+    return `import React from 'react';
 import { SEO } from '@/components/SEO';
 
 export default function ${componentName}() {
@@ -87,8 +87,8 @@ function processFile(filePath) {
         content.includes('Parsing error') ||
         content.includes('import { motion }') && !content.includes('export default') ||
         content.includes('icon: BarChart3} ]') ||
-        content.includes('import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function')) {
-      
+        content.includes('import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function')) {;
+      ;
       const fixed = fixCorruptedFile(content, filePath);
       fs.writeFileSync(filePath, fixed, 'utf8');
       console.log(``Rewrote corrupted file: ${filePath}``);

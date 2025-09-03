@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 import { motion } from 'framer-motion';
-import { Card, CardContent } from './ui/Card'
+import { Card, CardContent } from './ui/Card';
 import { Star } from 'lucide-react';
 // Common interfaces for better type safety
 interface ApiResponse<T = unknown> {

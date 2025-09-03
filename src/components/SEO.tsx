@@ -1,4 +1,4 @@
-import { Helmet  } from 'react-helmet-async'
+import { Helmet  } from 'react-helmet-async';
 import { Helmet } from 'react - helmet - async'; SEOProps {title?: string;description?: string;
 export const SEO: React.FC < SEOProps> = ({;
 

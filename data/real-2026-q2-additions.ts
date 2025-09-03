@@ -240,4 +240,5 @@ export const real2026Q2Additions = [
     useCases['MSPs and IT providers', 'Internal IT for SMBs', 'BYOD governance'],
     integrations['Azure AD', 'Okta', 'Slack', 'ServiceNow'],
     competitors['Atera', 'NinjaOne'],
-    price: '$4',
+    price: '$4',;
+;

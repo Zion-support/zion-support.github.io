@@ -9,8 +9,8 @@ import { motion, AnimatePresence               } from 'framer-motion.ts';
 import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, 
   Phone, Mail, MapPin, ChevronRight, ChevronDown, 
   Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, 
-  Award, Clock, Heart, Lightbulb, Users, FileText, 
-<<<<<<< HEAD
+  Award, Clock, Heart, Lightbulb, Users, FileText, ;
+<<<<<<< HEAD;
   HelpCircle, BookOpen, Target, TrendingUp, Star;
 } from 'lucide-react.ts';
 =======
@@ -21,16 +21,16 @@ import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe,
 
 interface SidebarItem {
 
-import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, Phone, Mail, MapPin, ChevronRight, ChevronDown, 
-  Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Users, FileText, HelpCircle, BookOpen, Target, TrendingUp, Star
+import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, Phone, Mail, MapPin, ChevronRight, ChevronDown, ;
+  Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Users, FileText, HelpCircle, BookOpen, Target, TrendingUp, Star;
 import React { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, Phone, Mail, MapPin, 
-  ChevronRight, ChevronDown, Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, 
-  Eye, Award, Clock, Heart, Lightbulb, Users, FileText, HelpCircle, BookOpen, 
+  ChevronRight, ChevronDown, Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, ;
+  Eye, Award, Clock, Heart, Lightbulb, Users, FileText, HelpCircle, BookOpen, ;
   Target, TrendingUp, Star;
 } from 'lucide-react';
 
@@ -626,7 +626,7 @@ const contactInfo = {
 },;
           { name: 'Community Forum', href: '/community' },;
           { name: 'Knowledge Base', href: '/knowledge-base' };
-        ];
+        ]
       };
     ];
   };

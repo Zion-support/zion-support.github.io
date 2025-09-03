@@ -47,7 +47,7 @@ class WorkingAutomationSuite {
       const result = execSync('npm audit --audit-level=moderate', {
         cwd: this.projectRoot,
         encoding: 'utf8',
-        timeout: 60000;
+        timeout: 60000
 });
       this.log('✅ Security audit completed');
       return { success: true, output: result };
@@ -64,7 +64,7 @@ class WorkingAutomationSuite {
       const buildResult = execSync('npm run build', {
         cwd: this.projectRoot,
         encoding: 'utf8',
-        timeout: 300000;
+        timeout: 300000
 });
       
       // Analyze bundle size
@@ -74,7 +74,7 @@ class WorkingAutomationSuite {
       return { 
         success: true, 
         buildOutput: buildResult,
-        bundleSize: bundleSize;
+        bundleSize: bundleSize
 };
     } catch (error) {
       this.log(`❌ Performance check failed: ${error.message}`);
@@ -107,7 +107,7 @@ class WorkingAutomationSuite {
           totalSize: totalSize,
           totalSizeMB: (totalSize / 1024 / 1024).toFixed(2),
           fileCount: files.length,
-          fileSizes: fileSizes;
+          fileSizes: fileSizes
 };
       }
     } catch (error) {
@@ -141,15 +141,15 @@ class WorkingAutomationSuite {
     const checks = [
       {
         name: 'File Structure Check',
-        check: () => this.checkFileStructure();
+        check: () => this.checkFileStructure()
 },
       {
         name: 'Dependency Check',
-        check: () => this.checkDependencies();
+        check: () => this.checkDependencies()
 },
       {
         name: 'Configuration Check',
-        check: () => this.checkConfiguration();
+        check: () => this.checkConfiguration()
 }
     ]
 
@@ -186,7 +186,7 @@ class WorkingAutomationSuite {
 
     return {
       missing: missing,
-      isValid: missing.length === 0;
+      isValid: missing.length === 0
 };
   }
 
@@ -203,7 +203,7 @@ class WorkingAutomationSuite {
     return {
       dependencies: dependencies,
       devDependencies: devDependencies,
-      totalDeps: dependencies.length + devDependencies.length;
+      totalDeps: dependencies.length + devDependencies.length
 };
   }
 
@@ -230,7 +230,7 @@ class WorkingAutomationSuite {
     return {
       existing: existing,
       missing: missing,
-      coverage: (existing.length / configFiles.length) * 100;
+      coverage: (existing.length / configFiles.length) * 100
 };
   }
 
@@ -241,7 +241,7 @@ class WorkingAutomationSuite {
       timestamp: new Date().toISOString(),
       securityAudit: null,
       performanceCheck: null,
-      qualityChecks: null;
+      qualityChecks: null
 };
 
     // Run security audit

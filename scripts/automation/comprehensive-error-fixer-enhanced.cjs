@@ -1387,7 +1387,7 @@ module.exports = nextConfig`;
         cwd: this.projectRoot, 
         encoding: 'utf8',
         stdio: 'pipe',
-        timeout: 300000;
+        timeout: 300000
       });
       this.log('Final build check passed', 'success');
     } catch (error) {  
@@ -1410,7 +1410,7 @@ module.exports = nextConfig`;
         cwd: this.projectRoot, ;
         encoding: 'utf8',;
         stdio: 'pipe',;
-        timeout: 300000;
+        timeout: 300000
       });
       this.log('Final build check passed', 'success');
     } catch (error) {;

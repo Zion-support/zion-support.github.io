@@ -44,7 +44,7 @@ class SecurityAuditEnhanced {
       const result = execSync('npm audit --json', { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
-        timeout: 60000;
+        timeout: 60000
 });
       
       const auditData = JSON.parse(result);

@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';,"});,"})
 import { Send, CheckCircle, AlertCircle, Eye, EyeOff, Loader2, Phone, Mail, User, MessageSquare, Building } from 'lucide-react';,"});,"})
 ;,"});,"})
 export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle = 'Get in touch with our team', submitText = 'Send Message', className = '', enableAnalytics = true, showProgressBar = true }) => {;,"});,"})
-    const { trackEvent, trackConversion } = useAnalytics({        enableTracking: enableAnalytics,;,"});,"})
+    const { trackEvent, trackConversion } = useAnalytics({        enableTracking: enableAnalytics,"});,"})
         enableUserBehaviorTracking: true,"});,"});
 }) ;,"});,"})
     const [formData, setFormData] = useState ({ /* empty */ }) ;,"});,"})
@@ -22,7 +22,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             initialData[field.name] = field.type === 'checkbox' ? false : '';,"});,"})
             initialValidation[field.name] = {}"});,"})
                 isValid: !field.required,';,"});,"})
-                message: '',;,"});,"})
+                message: '',"});,"})
                 isTouched: false,"});,"});
 }}) ;,"});,"})
         setFormData(initialData) ;,"});,"})
@@ -103,7 +103,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             ...prev,;,"});,"})
             [name]: {}"});,"})
                 isValid: !error,';,"});,"})
-                message: error || '',;,"});,"})
+                message: error || '',"});,"})
                 isTouched: true,"});,"});
 }) ) ;,"});,"})
         // Track form interaction,"});,"})
@@ -123,7 +123,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             [name]: {}"});,"})
                 ...prev[name],;,"});,"})
                 isValid: !error,';,"});,"})
-                message: error || '',;,"});,"})
+                message: error || '',"});,"})
                 isTouched: true,"});,"});
 }"});,"});
 }) ) }, [formData, validateField]) ;,"});,"})
@@ -203,10 +203,10 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         const fieldValidation = validation[field.name];,"});,"})
         const isPasswordField = field.name.toLowerCase().includes('password');,"});,"})
         return (<motion.div key={field.name} initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: 20,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   y: 0,"});,"})
 """;,"});,"})
 """";,"});,"});
@@ -278,7 +278,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         </div>;,"});,"})
         {/* Validation Message */}"});,"})
         {fieldValidation?.isTouched && fieldValidation.message && (<motion.p initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   height: 0,"});,"});
 }} animate = {}"});,"})
   { opacity: 1,';,"});,"})
@@ -291,10 +291,10 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
       </motion.div>) }, [formData, validation, showPassword, getFieldIcon, handleFieldChange, handleFieldBlur, togglePasswordVisibility]) ;,"});,"})
     if(isSubmitted) {}"});,"})
         return (<motion.div initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   scale: 0.9,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   scale: 1,"});,"})
 """;,"});,"})
 """";,"});,"});
@@ -309,10 +309,10 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
       </motion.div>) ;,"});,"});
 }"});,"})
     return (<motion.div initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: 20,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   y: 0,"});,"})
 `;,"});,"})
 ``;,"});,`});
@@ -355,13 +355,13 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         {/* Form Status */}"});,"})
         <AnimatePresence>;,"});,"})
           {Object.values(validation).some(v => !v.isValid && v.isTouched) && (<motion.div initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   height: 0,"});,"});
 }} animate = {}"});,"})
   { opacity: 1,';,"});,"})
   height: 'auto',"});,"});
 }} exit = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   height: 0,"});,"})
 """;,"});,"})
 """";,"});,"});
@@ -377,12 +377,12 @@ import { useState, useEffect, useCallback } from 'react';""
 import { motion, AnimatePresence } from 'framer-motion';""
 import { Send, CheckCircle, AlertCircle, Eye, EyeOff, Loader2, Phone, Mail, User, MessageSquare, Building } from 'lucide-react';
 export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle = 'Get in touch with our team', submitText = 'Send Message', className = '', enableAnalytics = true, showProgressBar = true }) => {'
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Send, CheckCircle, AlertCircle, Eye, EyeOff, Loader2, Phone, Mail, User, MessageSquare, Building } from 'lucide-react';
 ;
 export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle = 'Get in touch with our team', submitText = 'Send Message', className = ', enableAnalytics = true, showProgressBar = true }) => {;
-    const { trackEvent, trackConversion } = useAnalytics({        enableTracking: enableAnalytics,;
+    const { trackEvent, trackConversion } = useAnalytics({        enableTracking: enableAnalytics
         enableUserBehaviorTracking: true});
     const [formData, setFormData] = useState({});
     const [validation, setValidation] = useState({});
@@ -397,7 +397,7 @@ export const AdvancedForm = ({fields, onSubmit, title = 'Contact Us', subtitle =
 import { useState, useEffect, useCallback } from 'react';"
 import { motion, AnimatePresence } from 'framer-motion';"
 export const AdvancedForm = memo(({ fields, onSubmit, title = 'Contact Us', subtitle = 'Get in touch with our team', submitText = 'Send Message', className = '', enableAnalytics = true, showProgressBar = true }) => {
-import { useState, useEffect, useCallback } from &apos
+import { useState, useEffect, useCallback } from &apos;
 import { motion } from &apos;framer-motion';;react';
 import { motion, AnimatePresence } from &apos;framer-motion';
 import { Send, CheckCircle, AlertCircle, Eye, EyeOff, Loader2, Phone, Mail, User, MessageSquare, Building } from &apos;lucide-react';&apos;&apos;
@@ -415,8 +415,8 @@ import { Send, CheckCircle, AlertCircle, Eye, EyeOff, Loader2, Phone, Mail, User
 export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle = 'Get in touch with our team', submitText = 'Send Message', className = '', enableAnalytics = true, showProgressBar = true }) => {
     const { trackEvent, trackConversion } = useAnalytics({        enableTracking: enableAnalytics,
         enableUserBehaviorTracking: true})
-    const [formData, setFormData] = useState({})
-    const [validation, setValidation] = useState({})
+    const [formData, setFormData] = useState({});
+    const [validation, setValidation] = useState({});
     const;const;const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [showPassword, setShowPassword] = useState({})
@@ -431,7 +431,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             initialData[field.name] = field.type === 'checkbox' ? false : ';
             initialValidation[field.name] = {}
                 isValid: !field.required,';
-                message: ',;
+                message: '
                 isTouched: false}});
 &apos;
 &apos;&apos;
@@ -584,7 +584,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             ...prev,;
             [name]: {}
                 isValid: !error,';
-                message: error || ',;
+                message: error || '
             ...prev,
             [name]: {}
                 isValid: !error,';
@@ -621,7 +621,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             [name]: {}
                 ...prev[name],;
                 isValid: !error,';
-                message: error || ',;
+                message: error || '
                 message: error || &apos;&apos,
                 isTouched: true}
             ...prev, [name]: {}
@@ -747,9 +747,9 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         const fieldValidation = validation[field.name]';
         const isPasswordField = field.name.toLowerCase().includes('password');
         return (<motion.div key={field.name} initial = {}
-  { opacity: 0,;
+  { opacity: 0
   y: 20}} animate = {}
-  { opacity: 1,;
+  { opacity: 1
   y: 0 '';
 ''}} className='space-y-2'>'';
         <label className='block text-sm font-medium text-gray-700 dark:text-gray-300'>''{field.label}''{field.required && <span className='text-red-500 ml-1'>*</span>}
@@ -911,7 +911,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         </div>;
         {/* Validation Message */}
         {fieldValidation?.isTouched && fieldValidation.message && (<motion.p initial = {}
-  { opacity: 0,;
+  { opacity: 0
   height: 0}} animate = {}
   { opacity: 1,';
   height: 'auto' '';
@@ -924,9 +924,9 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
       </motion.div>)}, [formData, validation, showPassword, getFieldIcon, handleFieldChange, handleFieldBlur, togglePasswordVisibility]);
     if(isSubmitted) {}
         return (<motion.div initial = {}
-  { opacity: 0,;
+  { opacity: 0
   scale: 0.9}} animate = {}
-  { opacity: 1,;
+  { opacity: 1
   scale: 1 '';
 ''}} className='text-center p-8 bg-green-50 dark:bg-green-900/20 rounded-xl border border-green-200 dark:border-green-700'>'';
         <CheckCircle className='w-16 h-16 text-green-500 mx-auto mb-4'/>'';
@@ -938,9 +938,9 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         </p>;
       </motion.div>)}
     return (<motion.div initial = {}
-  { opacity: 0,;
+  { opacity: 0
   y: 20}} animate = {}
-  { opacity: 1,;
+  { opacity: 1
   y: 0 `;
 ``}} className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>''{/* Header */}'';
       <div className='bg-gradient-to-r from-blue-500 to-purple-500 p-6 text-white'>'';
@@ -1078,11 +1078,11 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         {/* Form Status */}
         <AnimatePresence>;
           {Object.values(validation).some(v => !v.isValid && v.isTouched) && (<motion.div initial = {}
-  { opacity: 0,;
+  { opacity: 0
   height: 0}} animate = {}
   { opacity: 1,';
   height: 'auto'}} exit = {}
-  { opacity: 0,;
+  { opacity: 0
   height: 0 '';
 ''}} className='p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700 rounded-lg'>'';
               <p className='text-sm text-red-600 dark:text-red-400'>;

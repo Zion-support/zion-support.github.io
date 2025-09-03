@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { Link  } from 'react-router-dom'; ; </div>; </motion.div>; </div>; </section>; </div>; ); }; ; export default CloudFinOpsOptimizer; ;
 export default function CloudFinOpsOptimizer() {
   return (
@@ -19,18 +19,18 @@ export default function CloudFinOpsOptimizer() {
       </div>
     </div>
   );
-} import { Link } from &apos
+} import { Link } from &apos;
 import { motion } from &apos;framer-motion';react-router-dom.ts&apos;&apos;'  </div> </motion.div> </div> </section> </div> ) }  export default CloudFinOpsOptimizer &apos;
 import React from &apos;react.ts&apos; import { Link } from &apos;react-router-dom.ts&apos;&apos;'  </div> </motion.div> </div> </section> </div> ) }  ;export default CloudFinOpsOptimizer ';
 
 &apos;'
  import { Link } from 'react-router-dom.ts'  </div> </motion.div> </div> </section> </div> ) }  export default CloudFinOpsOptimizer '';""
 import React from 'react.ts' import { Link } from 'react-router-dom.ts'  </div> </motion.div> </div> </section> </div> ) }  export default CloudFinOpsOptimizer ';'
- import { Link } from 'react-router-dom.ts'  </div> </motion.div> </div> </section> </div> ) }  export default CloudFinOpsOptimizer ''
-import React from 'react.ts' import { Link } from 'react-router-dom.ts'  </div> </motion.div> </div> </section> </div> ) }  export default CloudFinOpsOptimizer ''
+ import { Link } from 'react-router-dom.ts'  </div> </motion.div> </div> </section> </div> ) }  export default CloudFinOpsOptimizer '';
+import React from 'react.ts' import { Link } from 'react-router-dom.ts'  </div> </motion.div> </div> </section> </div> ) }  export default CloudFinOpsOptimizer '';
 ;""
 
  import { Link  } from 'react-router-dom.ts';</div> </motion.div> </div> </section> </div> ) }  export default CloudFinOpsOptimizer '
-import React  from 'react.ts'
+import React  from 'react.ts';
 import { Link  } from 'react-router-dom.ts';</div> </motion.div> </div> </section> </div> ) }  export default CloudFinOpsOptimizer 
 "

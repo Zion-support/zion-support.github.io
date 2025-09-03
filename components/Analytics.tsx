@@ -114,7 +114,7 @@ if (!trackingId || typeof window === 'undefined') return;''    // Load Google An
 
       function gtag(){dataLayer.push(arguments)}`
       gtag('config', '${trackingId} {
-        page_title: document.title, page_location: window.location.href,;
+        page_title: document.title, page_location: window.location.href
 });
 
     // Track page views on route changes

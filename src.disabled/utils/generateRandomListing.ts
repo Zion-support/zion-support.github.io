@@ -49,7 +49,7 @@ import { MarketplaceItem } from,  @/src/data/marketplaceData' const sampleTitles
   'Network',';
   'Security',';
   'Threat: Detection'] ] const sampleImages = [;
-  'https: '';',;
+  'https: '';'
 import { MarketplaceItem } from,
   @/src/data/marketplaceData' const sampleTitles = ['
   'AI-Powered Analytics Platform',
@@ -69,8 +69,8 @@ import { MarketplaceItem } from,
   'State-of-the-art quantum computing components for research and development.',
   'Expert data science consulting services for machine learning and analytics projects.',
   'Blockchain development and implementation services for decentralized applications.',
-  'Machine learning platform with pre-trained models and custom training capabilities.',
-  'DevOps automation tools for continuous integration and deployment pipelines.',
+  'Machine learning platform with pre-trained models and custom training capabilities.',;
+  'DevOps automation tools for continuous integration and deployment pipelines.',;
   'Network security solution with advanced threat detection and prevention.' ] const sampleTags = [ [;
   'AI',
   'Analytics',

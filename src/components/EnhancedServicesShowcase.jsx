@@ -25,16 +25,16 @@ const EnhancedServicesShowcase = () => {}"});,"})
     const containerVariants = {}"});,"})
         hidden: { opacity: 0 },;,"});,"})
         visible: {}"});,"})
-            opacity: 1,;,"});,"})
+            opacity: 1,"});,"})
             transition: {}"});,"})
-                staggerChildren: 0.1,;,"});,"})
+                staggerChildren: 0.1,"});,"})
                 delayChildren: 0.2,"});,"});
 };,"});,"})
     const itemVariants = {}"});,"})
-  hidden: { opacity: 0,;,"});,"})
+  hidden: { opacity: 0,"});,"})
   y: 20,"});,"});
 },;,"});,"})
-            y: 0,;,"});,"})
+            y: 0,"});,"})
             transition: { duration: 0.5 }"});,"})
 """;,"});,"});
 };"""";,"});,"})
@@ -43,9 +43,9 @@ const EnhancedServicesShowcase = () => {}"});,"})
       <section className="py-20 px-4 sm: px-6 lg:px-8">"""","});,"})
         <div className="max-w-7xl mx-auto text-center">"""";,"});,"})
           <motion.h1 className="text-4xl md:text-6xl font-bold mb-6" initial = {}"});,"})
-  { opacity: 0,;,"});,"});
+  { opacity: 0,"});,"});
 }} whileInView = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   y: 0,"});,"});
 }} transition={{ duration: 0.6 }}>""";,"});,"})
             Comprehensive"""";,"});,"})
@@ -55,7 +55,7 @@ const EnhancedServicesShowcase = () => {}"});,"})
           </motion.h1>"""";,"});,"})
           <motion.p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto" initial = {}"});,"});
 }} transition = {}"});,"})
-  { duration: 0.6,;,"});,"})
+  { duration: 0.6,"});,"})
   delay: 0.2,"});,"});
 }}>;,"});,"})
             Discover our extensive portfolio of innovative micro SAAS services, enterprise IT solutions,;,"});,"})
@@ -183,16 +183,16 @@ const EnhancedServicesShowcase = () => {}"});,"})
 export default EnhancedServicesShowcase,"});,"});
 }}}"});,"})
 export { EnhancedServicesShowcase };,"});,"})
-import React { useState } from 'react'
+import React { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
 import { enhancedServices2025 } from '../data/enhanced-services-2025';
 const EnhancedServicesShowcase = () => {}
 ';
   const [selectedCategory, setSelectedCategory] = useState('all')';
   const [searchTerm, setSearchTerm] = useState(')';
   const categories = [' { id: 'all', name: 'All Services', icon: '🌟' },'{ id: 'micro-saas', name: 'Micro SAAS', icon: '💻' },'{ id: 'it-services', name: 'IT Services', icon: '🖥️' },'{ id: 'ai-services', name: 'AI Services', icon: '🤖' },'{ id: 'emerging-tech', name: 'Emerging Tech', icon: '🚀' }
-import React from 'react'
+import React from 'react';
 import {SEO } from '@/components/SEO';
 
 export default function EnhancedServicesShowcase() {return (
@@ -235,13 +235,13 @@ import { motion } from 'framer-motion'';'
   const containerVariants = {}
     hidden: { opacity: 0 },;
     visible: {}
-      opacity: 1,;
+      opacity: 1
       transition: {}
-        staggerChildren: 0.1,;
+        staggerChildren: 0.1
         delayChildren: 0.2}}}
   const itemVariants = {}
     hidden: { opacity: 0, y: 20 },;
-      y: 0,;
+      y: 0
       transition: { duration: 0.5 }}}
   return();
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white'>''{/* Hero Section */}'';

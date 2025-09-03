@@ -1,14 +1,14 @@
-import React from 'react'
+import React from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO'
+import { SEO } from '../components/SEO';
 import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge'
-import { 
-import React from 'react'
+import { ;
+import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link'
+import Link from 'next/link';
 import { ModernHeader } from '../src/components/header/ModernHeader';
-import { SimpleFooter } from '../src/components/layout/SimpleFooter'
+import { SimpleFooter } from '../src/components/layout/SimpleFooter';
 import { Globe, ExternalLink, ArrowRight } from 'lucide-react';
 
 export default function Sitemap() {
@@ -135,13 +135,13 @@ const Sitemap: React.FC = () => {,"});,"})
 };,"});,"})
 ;,"});,"})
 export default SitemapPage,"});,"})
-import React from 'react'
+import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link'
+import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Card, CardHeader, CardContent, CardTitle } from '../components/ui/Card'
+import { Card, CardHeader, CardContent, CardTitle } from '../components/ui/Card';
 import Head from 'next/head';
-import Link from 'next/link'
+import Link from 'next/link';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer'
 import {
@@ -151,8 +151,8 @@ import {
   FileText,
   Users,
   Briefcase,
-  Phone,
-  Mail,
+  Phone,;
+  Mail,;
   MapPin} from 'lucide-react';
 
 export default function Sitemap() {
@@ -262,9 +262,9 @@ export default function Sitemap() {
       icon: MapPin,
       text: '364 E Main St STE 1008, Middletown DE 19709',
       href: '#'},
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
-import { Card, CardHeader, CardContent, CardTitle } from '../components/ui/Card'
+import { Card, CardHeader, CardContent, CardTitle } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
 import {
   Map, ArrowRight,
@@ -276,8 +276,8 @@ import {
   Globe, Search,
   Filter, Calendar,
   Star, TrendingUp,
-  Brain, Cloud,
-  Database, Code,
+  Brain, Cloud,;
+  Database, Code,;
   Building, Zap} from 'lucide-react';
 
 const SitemapPage = () => {

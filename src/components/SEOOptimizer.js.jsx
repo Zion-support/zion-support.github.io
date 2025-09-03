@@ -59,13 +59,13 @@ const SEOOptimizer = () => {}"});,"})
                 const issues = identifySEOIssues(page);,"});,"})
                 const recommendations = generateSEORecommendations(issues);,"});,"})
                 return {}"});,"})
-                    pageUrl: page.url,;,"});,"})
-                    title: page.title,;,"});,"})
-                    metaDescription: page.metaDescription,;,"});,"})
-                    headings: page.headings,;,"});,"})
-                    images: page.images,;,"});,"})
-                    links: page.links,;,"});,"})
-                    keywords: page.keywords,;,"});,"})
+                    pageUrl: page.url,"});,"})
+                    title: page.title,"});,"})
+                    metaDescription: page.metaDescription,"});,"})
+                    headings: page.headings,"});,"})
+                    images: page.images,"});,"})
+                    links: page.links,"});,"})
+                    keywords: page.keywords,"});,"})
                     score,;,"});,"})
                     issues,;,"});,"})
                     recommendations,"});,"});
@@ -469,8 +469,8 @@ export { SEOOptimizer };,"});,"})
 ;,"});,"})
 export { SEOOptimizer };,"});,"})
  const SEOOptimizer = () => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {'';import React, { useState, useEffect, useCallback } from 'react'''
- const SEOOptimizer = () => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {''
-import React, { useState, useEffect, useCallback }  from 'react
+ const SEOOptimizer = () => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {'';
+import React, { useState, useEffect, useCallback }  from 'react;
 import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download } from 'lucide-react';
 const SEOOptimizer = () => {}
     const [isOpen, setIsOpen] = useState (false) 

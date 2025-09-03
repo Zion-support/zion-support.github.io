@@ -213,7 +213,7 @@ export default function Page()   {import { Suspense, lazy } from 'react';
 
 export default DashboardRoutes;
 import LoadingSpinner from '../components/LoadingSpinner';
-import { Route, Routes    } from 'react-router-dom
+import { Route, Routes    } from 'react-router-dom;
 import { Lazy } from 'lucide-react';
 
 export default function Page() {"

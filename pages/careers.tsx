@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 import type { NextPage } from 'next';
-import Head from 'next/head'
+import Head from 'next/head';
 import Layout from '../components/Layout';
 import {
   Users,
@@ -12,7 +12,7 @@ import {
   ArrowRight,
   CheckCircle,
   MapPin,
-  Clock,
+  Clock,;
   DollarSign} from 'lucide-react';
 
 const Careers: NextPage = () => {
@@ -20,7 +20,7 @@ const Careers: NextPage = () => {
     {
       icon: Heart,
       title: 'Health & Wellness',
-      description: 'Comprehensive health insurance, dental, vision, and wellness programs.';
+      description: 'Comprehensive health insurance, dental, vision, and wellness programs.'
 },
     {
       icon: Home,

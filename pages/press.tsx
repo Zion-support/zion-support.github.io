@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link'
+import Link from 'next/link';
 import { Calendar, ExternalLink, FileText, Award, Users, TrendingUp, ArrowRight, Mail, Phone, Globe } from 'lucide-react';
 
 export default function Press() {

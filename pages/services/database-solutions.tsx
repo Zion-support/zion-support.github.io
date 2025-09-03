@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 import Link from 'next/link';
-import Navigation from '../../src/components/Navigation'
+import Navigation from '../../src/components/Navigation';
 import Footer from '../../src/components/Footer';
-import SEOHead from '../../src/components/SEO/SEOHead'
+import SEOHead from '../../src/components/SEO/SEOHead';
 import ErrorBoundary from '../../src/components/ErrorBoundary';
 import { 
   Database, 
@@ -17,8 +17,8 @@ import {
   Globe,
   Lock,
   TrendingUp,
-  Cpu,
-  HardDrive,
+  Cpu,;
+  HardDrive,;
   Network} from 'lucide-react';
 
 export default function DatabaseSolutions() {

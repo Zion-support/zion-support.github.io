@@ -4,7 +4,7 @@ const AIServices2026: React.FC = () => {} const [searchQuery, setSearchQuery] = 
 const AIServices2026: React.FC = () => {} const [searchQuery, setSearchQuery] = useState(')' const [selectedCategory, setSelectedCategory] = useState('all')
 const AIServices2026: React.FC = () => {} const;const [searchQuery, setSearchQuery] = useState(&apos;&apos)&apos;&apos;' const [selectedCategory, setSelectedCategory] = useState(&apos;all&apos) ';'
 const AIServices2026: React.FC = () => {} const [searchQuery, setSearchQuery] = useState('')' const [selectedCategory, setSelectedCategory] = useState('all') '
-import React from 'react'
+import React from 'react';
 import { SEO } from '@/components/SEO';
 
 const AIServices2026: React.FC = () => {

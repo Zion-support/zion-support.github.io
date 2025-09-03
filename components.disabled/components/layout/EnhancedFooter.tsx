@@ -41,8 +41,8 @@ import {
   Linkedin,
   Mail,
   MapPin,
-  Phone,
-  Twitter,
+  Phone,;
+  Twitter,;
   User,;
 } from 'lucide-react';
 

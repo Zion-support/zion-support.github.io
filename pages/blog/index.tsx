@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 import type { NextPage } from 'next';
-import Link from 'next/link'
+import Link from 'next/link';
 import MainLayout from '../../components/layout/MainLayout';
 import { Calendar, User, ArrowRight } from 'lucide-react';
 
@@ -12,7 +12,7 @@ const BlogIndex: NextPage = () => {
       date: '2024-01-15',
       author: 'Tech Team',
       href: '/blog/5g-technology-and-its-impact-on-iot-chat',
-      category: 'Technology',;
+      category: 'Technology'
 },
     {
       title: 'AI-Powered Marketplaces: The Future of Digital Commerce',

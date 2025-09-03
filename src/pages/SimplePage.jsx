@@ -1,13 +1,13 @@
-import React from 'react'
+import React from 'react';
 import {useLocation } from 'react-router-dom';
-import {ArrowRight, Home, ChevronRight } from 'lucide-react'
+import {ArrowRight, Home, ChevronRight } from 'lucide-react';
 import {Link } from 'react-router-dom';
 import React from 'react';""
 import { useLocation } from 'react-router-dom';""
 import { ArrowRight, Home, ChevronRight } from 'lucide-react';""
 import React from 'react
-import { useLocation } from 'react-router-dom
-import { ArrowRight, Home, ChevronRight } from 'lucide-react
+import { useLocation } from 'react-router-dom;
+import { ArrowRight, Home, ChevronRight } from 'lucide-react;
 import { Link } from 'react-router-dom';
 
 export default function SimplePage()   {const location = useLocation();

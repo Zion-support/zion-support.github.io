@@ -60,14 +60,14 @@ export { MockIndex, MockAbout, MockContact };,"});,"})
 export { MockIndex, MockAbout, MockContact };,"});,"})
 ;,"});,"})
 export { MockIndex, MockAbout, MockContact, MockIndex, MockAbout, MockContact };,"});,"})
-import { render, screen } from '@testing-library/react'
+import { render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';""
 import App from '../App';""
 // Mock the pages to avoid complex dependencies'';""
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom';
 import App from '../App';
 // Mock the pages to avoid complex dependencies';
-import {render, screen } from '@testing-library/react'
+import {render, screen } from '@testing-library/react';
 import {BrowserRouter } from 'react-router-dom';"
 import App from '../App';"
 // Mock the pages to avoid complex dependencies'';"
@@ -117,8 +117,8 @@ import { render, screen } from '@testing-library/react
 import { BrowserRouter } from 'react-router-dom
 import App from '../App
 // Mock the pages to avoid complex dependencies'
-jest.mock('../pages/Index', () => {}
-  return function MockIndex() {}
+jest.mock('../pages/Index', () => {};
+  return function MockIndex() {};
     return <div data-testid='index-page'>Index Page</div>;
   }
 });'

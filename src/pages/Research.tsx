@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO'
+import { SEO } from '../components/SEO';
 import { ;
   Search, FileText, Users, Calendar, ArrowRight, ;
   ExternalLink, Download, Star, TrendingUp, Globe} from 'lucide-react';
@@ -8,55 +8,55 @@ import { ;
 export default function Research() {;
   const researchAreas = [;
     {;
-      title: "Artificial Intelligence",;
+      title: "Artificial Intelligence"
       description: "Advancing AI research in machine learning, natural language processing, and computer vision",;
-      publications: 45,;
-      researchers: 12,;
+      publications: 45
+      researchers: 12
       color: "from-purple-500 to-pink-500"},;
     {;
-      title: "Quantum Computing",;
-      description: "Pioneering quantum algorithms and quantum machine learning applications",;
-      publications: 28,;
-      researchers: 8,;
+      title: "Quantum Computing"
+      description: "Pioneering quantum algorithms and quantum machine learning applications"
+      publications: 28
+      researchers: 8
       color: "from-orange-500 to-red-500"},;
     {;
-      title: "Cybersecurity",;
-      description: "Developing next-generation security solutions and threat detection systems",;
-      publications: 32,;
-      researchers: 10,;
+      title: "Cybersecurity"
+      description: "Developing next-generation security solutions and threat detection systems"
+      publications: 32
+      researchers: 10
       color: "from-green-500 to-emerald-500"},;
     {;
-      title: "Edge Computing",;
-      description: "Optimizing computing at the edge for IoT and real-time applications",;
-      publications: 18,;
-      researchers: 6,;
+      title: "Edge Computing"
+      description: "Optimizing computing at the edge for IoT and real-time applications"
+      publications: 18
+      researchers: 6
       color: "from-blue-500 to-cyan-500"}
   ]
 ;
   const recentPublications = [;
     {;
-      id: 1,;
-      title: "Quantum-Enhanced Machine Learning for Financial Risk Assessment",;
+      id: 1
+      title: "Quantum-Enhanced Machine Learning for Financial Risk Assessment"
       authors: ["Dr. Sarah Chen", "Prof. Michael Rodriguez"],;
-      journal: "Nature Quantum Information",;
-      date: "2025-01-10",;
-      citations: 23,;
+      journal: "Nature Quantum Information"
+      date: "2025-01-10"
+      citations: 23
       featured: true},;
     {;
-      id: 2,;
-      title: "AI-Driven Cybersecurity: Autonomous Threat Detection Systems",;
+      id: 2
+      title: "AI-Driven Cybersecurity: Autonomous Threat Detection Systems"
       authors: ["Lisa Park", "David Kumar"],;
-      journal: "IEEE Security & Privacy",;
-      date: "2025-01-05",;
-      citations: 18,;
+      journal: "IEEE Security & Privacy"
+      date: "2025-01-05"
+      citations: 18
       featured: true},;
     {;
-      id: 3,;
-      title: "Edge Computing Optimization for IoT Applications",;
+      id: 3
+      title: "Edge Computing Optimization for IoT Applications"
       authors: ["Maria Santos", "Alex Thompson"],;
-      journal: "ACM Computing Surveys",;
-      date: "2024-12-28",;
-      citations: 15,;
+      journal: "ACM Computing Surveys"
+      date: "2024-12-28"
+      citations: 15
       featured: false}
   ]
 ;
@@ -135,8 +135,8 @@ export default function Research() {return (
 import React from &apos;react';
 import { motion } from &apos;framer-motion';
 import { SEO } from &apos;../components/SEO';
-import { 
-  Search, FileText, Users, Calendar, ArrowRight, 
+import { ;
+  Search, FileText, Users, Calendar, ArrowRight, ;
   ExternalLink, Download, Star, TrendingUp, Globe} from &apos;lucide-react';&apos;&apos;
 
 export default function Research() {}
@@ -167,9 +167,9 @@ export default function Research() {}
       color: &quot;from-blue-500 to-cyan-500&quot}
   ]&quot;
 
-import { motion} from 'framer-motion'
+import { motion} from 'framer-motion';
 import { SEO} from '../components/SEO';
-import { 
+import { ;
   Search, FileText, Users, Calendar, ArrowRight, ExternalLink, Download, Star, TrendingUp, Globe} from 'lucide-react';
 export default function Research() {
   const researchAreas = [

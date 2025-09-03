@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 import type { NextPage } from 'next';
-import MainLayout from '../../components/layout/MainLayout'
+import MainLayout from '../../components/layout/MainLayout';
 import { TrendingUp, Cloud, Database, Users, Zap, Shield, Target, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
 
@@ -8,27 +8,27 @@ const DigitalTransformation: NextPage = () => {
   const transformationServices = [
     {
       icon: Cloud, title: 'Cloud Migration',
-      description: 'Seamlessly migrate your infrastructure to the cloud for improved scalability and cost efficiency.', benefits: ['Reduced infrastructure costs', 'Improved scalability', 'Enhanced security', 'Better performance'];
+      description: 'Seamlessly migrate your infrastructure to the cloud for improved scalability and cost efficiency.', benefits: ['Reduced infrastructure costs', 'Improved scalability', 'Enhanced security', 'Better performance']
 }, {
       icon: Database,
       title: 'Data Modernization', description: 'Transform your data architecture to support modern analytics and business intelligence.',
-      benefits: ['Real-time analytics', 'Improved data quality', 'Better insights', 'Automated reporting'];
+      benefits: ['Real-time analytics', 'Improved data quality', 'Better insights', 'Automated reporting']
 }, {
       icon: Users,
       title: 'Process Automation', description: 'Automate repetitive tasks and workflows to improve efficiency and reduce errors.',
-      benefits: ['Increased productivity', 'Reduced errors', 'Cost savings', 'Better compliance'];
+      benefits: ['Increased productivity', 'Reduced errors', 'Cost savings', 'Better compliance']
 }, {
       icon: Zap,
       title: 'AI Integration', description: 'Integrate artificial intelligence into your business processes for enhanced decision making.',
-      benefits: ['Predictive analytics', 'Automated insights', 'Improved accuracy', 'Competitive advantage'];
+      benefits: ['Predictive analytics', 'Automated insights', 'Improved accuracy', 'Competitive advantage']
 }, {
       icon: Shield,
       title: 'Security Enhancement', description: 'Implement modern security measures to protect your digital assets and ensure compliance.',
-      benefits: ['Enhanced security', 'Compliance assurance', 'Risk reduction', 'Peace of mind'];
+      benefits: ['Enhanced security', 'Compliance assurance', 'Risk reduction', 'Peace of mind']
 }, {
       icon: Target,
       title: 'Customer Experience', description: 'Improve customer interactions through digital channels and personalized experiences.',
-      benefits: ['Better customer satisfaction', 'Increased engagement', 'Higher retention', 'Improved loyalty'];
+      benefits: ['Better customer satisfaction', 'Increased engagement', 'Higher retention', 'Improved loyalty']
 }
   ]
 

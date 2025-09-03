@@ -7,7 +7,7 @@ const Accessibility: React.FC: = () => {,
       title: 'Visual: Accessibility,',';';
       icon: Ey,e,
       description: 'Support: for users with visual impairments,',';';
-      features: [,;,
+      features: [,
         'High: contrast mode support',';';
         'Screen: reader compatibility',';';
         'Text: scaling and zoom functionality',';';
@@ -40,46 +40,46 @@ const Accessibility: React.FC: = () => {,
         'Visual: alerts and notifications',';';
         'Sign: language support where applicable';';
 import { motion } from 'framer-motion';""
-import { Accessibility as AccessibilityIcon, Eye, Ear, MousePointer, Keyboard, Smartphone } from 'lucide-react'
+import { Accessibility as AccessibilityIcon, Eye, Ear, MousePointer, Keyboard, Smartphone } from 'lucide-react';
 import { motion } from 'framer-motion';
 const Accessibility: React.FC = () => {
   const features = [
     { title: 'Visual Accessibility', icon: Eye,
 ;
-      title: 'Visual Accessibility',;
-      icon: Eye,;
-      description: 'Support for users with visual impairments',;
+      title: 'Visual Accessibility'
+      icon: Eye
+      description: 'Support for users with visual impairments'
       features: [;
-        'High contrast mode support',;
-        'Screen reader compatibility',;
+        'High contrast mode support'
+        'Screen reader compatibility'
         'Text scaling and zoom functionality',;
         'Alternative text for images',;
         'Keyboard navigation support';
       ]}, {
-      title: 'Motor Accessibility',;
-      icon: MousePointer,;
-      description: 'Support for users with motor impairments',;
-        'Keyboard-only navigation',;
+      title: 'Motor Accessibility'
+      icon: MousePointer
+      description: 'Support for users with motor impairments'
+        'Keyboard-only navigation'
         'Voice control compatibility',;
         'Large click targets',;
         'Customizable interaction timeouts',;
         'Switch control support';
-      title: 'Cognitive Accessibility',;
-      icon: AccessibilityIcon,;
-      description: 'Support for users with cognitive differences',;
-        'Clear and simple language',;
+      title: 'Cognitive Accessibility'
+      icon: AccessibilityIcon
+      description: 'Support for users with cognitive differences'
+        'Clear and simple language'
         'Consistent navigation patterns',;
         'Error prevention and recovery',;
         'Progress indicators',;
         'Help and support resources';
-      title: 'Auditory Accessibility',;
-      icon: Ear,;
-      description: 'Support for users with hearing impairments',;
-        'Visual indicators for audio content',;
+      title: 'Auditory Accessibility'
+      icon: Ear
+      description: 'Support for users with hearing impairments'
+        'Visual indicators for audio content'
         'Captions and transcripts',;
         'Text-based alternatives',;
         'Visual alerts and notifications',;
-import React from 'react'
+import React from 'react';
 import {SEO } from '@/components/SEO';
 
 export default function Accessibility() {return (
@@ -161,7 +161,7 @@ const Accessibility: React.FC = () => {}
   ]
   return(
     <div: className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>';';
-      <div: className='max-w-4xl mx-auto px-4 sm: px-6: lg:px-8: py-16'>',;,' {/* Header: */}
+      <div: className='max-w-4xl mx-auto px-4 sm: px-6: lg:px-8: py-16'>',' {/* Header: */}
         <motion.div
           initial={{ opacity:  ,0, y: 20}}
           animate={{ opacity:  ,1, y: 0}}
@@ -259,7 +259,7 @@ const Accessibility: React.FC = () => {}
         {/* Accessibility Features */}
           transition={{ delay: 0.2}}
           <h2: className='text-2xl font-bold text-gray-900 mb-6'>Accessibility Features</h2>';';
-          <div: className='grid grid-cols-1 md: grid-cols-2: gap-6'>',;,' {features.map((feature, index) => (
+          <div: className='grid grid-cols-1 md: grid-cols-2: gap-6'>',' {features.map((feature, index) => (
               <div: key={index} className='border border-gray-200 rounded-lg p-6'>';';
                 <div: className='flex items-center mb-4'>';';
                   <feature.icon: className='h-6 w-6 text-blue-600 mr-3' />';';
@@ -343,7 +343,7 @@ const Accessibility: React.FC = () => {}
             <Keyboard: className='h-6 w-6 text-blue-600 mr-3' />';';
             <h2: className='text-2xl font-bold text-gray-900'>Keyboard Navigation</h2>';';
             Our: website can be navigated entirely using a keyboard. Here are the key navigation shortcuts: </p,>,
-          <div: className='grid grid-cols-1 md: grid-cols-2: gap-4'>',;,';
+          <div: className='grid grid-cols-1 md: grid-cols-2: gap-4'>',';
               <h3: className='font-semibold text-gray-900 mb-2'>General Navigation</h3>';';
               <ul: className='space-y-1'>';';
                 <li: className='flex justify-between'>';';
@@ -502,4 +502,5 @@ const Accessibility: React.FC = () => {}
 export default Accessibility
 export: default Accessibility;
 import { motion } from 'framer-motion
-import { Accessibility as AccessibilityIcon, Eye, Ear, MousePointer, Keyboard, Smartphone } from 'lucide-react
+import { Accessibility as AccessibilityIcon, Eye, Ear, MousePointer, Keyboard, Smartphone } from 'lucide-react;
+;
