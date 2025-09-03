@@ -1,378 +1,296 @@
-const axios = require('axios');
-const fs = require('fs').promises;
-const path = require('path');
-
+#!/usr/bin/env node
+const axios = require("axios")
+const fs = require("fs").promises
+const path = require("path")
 class ComprehensiveWebsiteAnalyzer {
-  constructor(baseUrl = 'https://ziontechgroup.com') {
-    this.baseUrl = baseUrl;
-    this.checkedUrls = new Set();
-    this.brokenLinks = [];
-    this.workingLinks = [];
-    this.missingPages = [];
-    this.errors = [];
-    this.warnings = [];
-    this.startTime = Date.now();
-  }
+  constructor(baseUrl = "https://ziontechgroup.com") {
+    this.baseUrl = baseUrl
+    this.checkedUrls = new Set()
+    this.brokenLinks = []
+    this.workingLinks = []
+    this.missingPages = []
+    this.errors = []
+    this.warnings = []
+    this.startTime = Date.now(),
+}
+
+  log(message, level = "info") {
+    const timestamp = new Date().toISOString()
+    const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`
+    console.log(logMessage),
+}
 
   async checkUrl(url, parentUrl = null) {
     if (this.checkedUrls.has(url)) {
-      return;
-    }
-
-    this.checkedUrls.add(url);
+      return,
+}
+    
+    this.checkedUrls.add(url)
+    this.log(`🔍 Checking: ${url}`)
     
     try {
-      console.log(`Checking: ${url}`);
       const response = await axios.get(url, {
         timeout: 10000,
-        validateStatus: (status) => status < 500,
-        headers: {
-          'User-Agent': 'Mozilla/5.0 (compatible; ZionTechGroup-Analyzer/1.0)'
-        }
-      });
-
-      if (response.status === 200) {
+        maxRedirects: 5,
+        validateStatus: (status) => status < 500 // Accept redirects and client errors,
+})
+      
+      if (response.status >= 200 && response.status < 400) {
         this.workingLinks.push({
           url,
           status: response.status,
           parentUrl,
-          headers: response.headers,
-          contentLength: response.headers['content-length'],
-          contentType: response.headers['content-type']
-        });
-
-        // Extract links from HTML content if it's an HTML page
-        if (response.headers['content-type']?.includes('text/html')) {
-          const links = this.extractLinks(response.data, url);
-          for (const link of links) {
-            if (link.startsWith('/') || link.startsWith(this.baseUrl)) {
-              const fullUrl = link.startsWith('/') ? `${this.baseUrl}${link}` : link;
-              await this.checkUrl(fullUrl, url);
-            }
-          }
-        }
-      } else {
+          responseTime: response.headers["x-response-time"] || "unknown",
+})
+        this.log(`✅ Working: ${url} (${response.status})`),
+} else {
         this.brokenLinks.push({
           url,
           status: response.status,
           parentUrl,
           error: `HTTP ${response.status}`,
-          headers: response.headers
-        });
-      }
+})
+        this.log(`❌ Broken: ${url} (${response.status})`, "error"),
+}
     } catch (error) {
       this.brokenLinks.push({
         url,
-        status: 'ERROR',
+        status: "error",
         parentUrl,
         error: error.message,
-        headers: {}
-      });
-    }
+})
+      this.log(`❌ Error: ${url} - ${error.message}`, "error"),
+}
   }
 
-  extractLinks(html, baseUrl) {
-    const links = [];
-    const linkRegex = /href=["']([^"']+)["']/g;
-    let match;
-
-    while ((match = linkRegex.exec(html)) !== null) {
-      const link = match[1];
-      if (link && !link.startsWith('#') && !link.startsWith('javascript:') && !link.startsWith('mailto:')) {
-        links.push(link);
-      }
-    }
-
-    return [...new Set(links)];
-  }
-
-  async analyzeWebsite() {
-    console.log('Starting comprehensive website analysis...');
+  async analyzePerformance(url) {
+    this.log(`⚡ Analyzing performance: ${url}`)
     
-    // Start with the main page
-    await this.checkUrl(this.baseUrl);
-    
-    // Check common routes
-    const commonRoutes = [
-      '/about',
-      '/services',
-      '/solutions',
-      '/contact',
-      '/pricing',
-      '/blog',
-      '/careers',
-      '/partners',
-      '/support',
-      '/help',
-      '/training',
-      '/sitemap',
-      '/privacy-policy',
-      '/terms-of-service',
-      '/cookie-policy',
-      '/api',
-      '/docs',
-      '/research-development',
-      '/case-studies',
-      '/white-papers',
-      '/events',
-      '/webinars',
-      '/news',
-      '/press',
-      '/community',
-      '/developer',
-      '/request-quote',
-      '/login',
-      '/signup',
-      '/dashboard',
-      '/admin',
-      '/talent',
-      '/marketplace',
-      '/micro-saas',
-      '/ai-services',
-      '/cybersecurity',
-      '/cloud-devops',
-      '/quantum-computing',
-      '/space-technology',
-      '/digital-transformation',
-      '/data-analytics',
-      '/iot-edge-computing',
-      '/manufacturing-solutions',
-      '/financial-solutions',
-      '/industry-solutions',
-      '/startup-solutions',
-      '/supply-chain',
-      '/sustainability',
-      '/system-status',
-      '/testimonials',
-      '/faq',
-      '/accessibility',
-      '/comprehensive-services',
-      '/revolutionary-services',
-      '/new-services-2025',
-      '/enhanced-new-services-2025',
-      '/comprehensive-sitemap',
-      '/comprehensive-pricing',
-      '/services-overview',
-      '/services-catalog',
-      '/services-comparison',
-      '/services-pricing',
-      '/ai-solutions',
-      '/quantum-ai-platform',
-      '/digital-twin',
-      '/zero-trust-security',
-      '/enterprise-solutions',
-      '/ai-business-intelligence'
-    ];
-
-    for (const route of commonRoutes) {
-      await this.checkUrl(`${this.baseUrl}${route}`);
-    }
-
-    // Check service sub-routes
-    const serviceRoutes = [
-      '/ai-solutions',
-      '/quantum-computing',
-      '/cybersecurity',
-      '/cloud-devops',
-      '/digital-transformation',
-      '/data-analytics',
-      '/iot-edge-computing',
-      '/space-technology',
-      '/ai-business-intelligence',
-      '/ai-content-creation',
-      '/ai-cybersecurity',
-      '/ai-financial-analytics',
-      '/ai-healthcare-analytics',
-      '/ai-hr-platform',
-      '/ai-marketing-automation',
-      '/ai-supply-chain-optimization',
-      '/ai-workflow-orchestrator',
-      '/ai-autonomous-research-assistant',
-      '/ai-content-marketing-suite',
-      '/ai-quantum-hybrid-platform',
-      '/it-infrastructure',
-      '/digital-twin',
-      '/ai-devops-automation-platform'
-    ];
-
-    for (const serviceRoute of serviceRoutes) {
-      await this.checkUrl(`${this.baseUrl}/services${serviceRoute}`);
-    }
-
-    // Check solution sub-routes
-    const solutionRoutes = [
-      '/enterprise',
-      '/ai-business-intelligence',
-      '/quantum-ai-platform',
-      '/digital-twin',
-      '/zero-trust-security'
-    ];
-
-    for (const solutionRoute of solutionRoutes) {
-      await this.checkUrl(`${this.baseUrl}/solutions${solutionRoute}`);
-    }
-
-    // Check about sub-routes
-    const aboutRoutes = [
-      '/story',
-      '/team'
-    ];
-
-    for (const aboutRoute of aboutRoutes) {
-      await this.checkUrl(`${this.baseUrl}/about${aboutRoute}`);
-    }
-
-    // Check resources sub-routes
-    const resourceRoutes = [
-      '/blog',
-      '/case-studies',
-      '/research-development',
-      '/docs',
-      '/api',
-      '/sitemap',
-      '/support',
-      '/training',
-      '/help'
-    ];
-
-    for (const resourceRoute of resourceRoutes) {
-      await this.checkUrl(`${this.baseUrl}/resources${resourceRoute}`);
-    }
-
-    console.log('Analysis completed!');
+    try {
+      const startTime = Date.now()
+      const response = await axios.get(url, { timeout: 30000 })
+      const endTime = Date.now()
+      const responseTime = endTime - startTime
+      
+      const performanceData = {
+        url,
+        responseTime,
+        status: response.status,
+        contentLength: response.headers["content-length"] || "unknown",
+        contentType: response.headers["content-type"] || "unknown",
+}
+      
+      if (responseTime > 3000) {
+        this.warnings.push({
+          type: "performance",
+          message: `Slow response time: ${responseTime}ms for ${url}`,
+          data: performanceData,
+}),
+}
+      
+      return performanceData,
+} catch (error) {
+      this.errors.push({
+        type: "performance",
+        message: `Performance analysis failed for ${url}: ${error.message}`,
+        url,
+})
+      return null,
+}
   }
 
-  generateReport() {
-    const endTime = Date.now();
-    const duration = endTime - this.startTime;
+  async checkSEO(url) {
+    this.log(`🔍 Checking SEO: ${url}`)
+    
+    try {
+      const response = await axios.get(url, { timeout: 10000 })
+      const html = response.data
+      
+      const seoIssues = []
+      
+      // Check for title tag
+      if (!html.includes("<title>") || html.includes("<title></title>")) {
+        seoIssues.push("Missing or empty title tag"),
+}
+      
+      // Check for meta description
+      if (!html.includes("name="description"")) {
+        seoIssues.push("Missing meta description"),
+}
+      
+      // Check for h1 tag
+      if (!html.includes("<h1>")) {
+        seoIssues.push("Missing h1 tag"),
+}
+      
+      // Check for alt attributes on images
+      const imgTags = html.match(/<img[^>]*>/g) || []
+      const imagesWithoutAlt = imgTags.filter(img => !img.includes("alt="))
+      if (imagesWithoutAlt.length > 0) {
+        seoIssues.push(`${imagesWithoutAlt.length} images without alt attributes`),
+}
+      
+      if (seoIssues.length > 0) {
+        this.warnings.push({
+          type: "seo",
+          message: `SEO issues found on ${url}`,
+          issues: seoIssues,
+          url,
+}),
+}
+      
+      return { url, seoIssues }
+    } catch (error) {
+      this.errors.push({
+        type: "seo",
+        message: `SEO check failed for ${url}: ${error.message}`,
+        url,
+})
+      return null,
+}
+  }
 
+  async generateReport() {
+    this.log("📊 Generating website analysis report...")
+    
+    const totalDuration = Date.now() - this.startTime
     const report = {
       timestamp: new Date().toISOString(),
       baseUrl: this.baseUrl,
       summary: {
-        totalLinksChecked: this.checkedUrls.size,
-        brokenLinks: this.brokenLinks.length,
+        totalUrlsChecked: this.checkedUrls.size,
         workingLinks: this.workingLinks.length,
-        successRate: `${((this.workingLinks.length / this.checkedUrls.size) * 100).toFixed(2)}%`,
-        duration: `${duration}ms`,
+        brokenLinks: this.brokenLinks.length,
         errors: this.errors.length,
-        warnings: this.warnings.length
-      },
-      brokenLinks: this.brokenLinks,
+        warnings: this.warnings.length,
+        analysisDuration: totalDuration,
+},
       workingLinks: this.workingLinks,
-      missingPages: this.missingPages,
+      brokenLinks: this.brokenLinks,
       errors: this.errors,
       warnings: this.warnings,
-      recommendations: this.generateRecommendations()
-    };
-
-    return report;
-  }
+      recommendations: this.generateRecommendations(),
+}
+    
+    const reportsDir = path.join(process.cwd(), "reports")
+    if (!(await fs.access(reportsDir).then(() => true).catch(() => false))) {
+      await fs.mkdir(reportsDir, { recursive: true }),
+}
+    
+    const reportFile = path.join(reportsDir, `website-analysis-report-${Date.now()}.json`)
+    await fs.writeFile(reportFile, JSON.stringify(report, null, 2))
+    this.log(`📄 Report saved to: ${reportFile}`)
+    return reportFile,
+}
 
   generateRecommendations() {
-    const recommendations = [];
-
+    const recommendations = []
+    
     if (this.brokenLinks.length > 0) {
       recommendations.push({
-        type: 'critical',
-        title: 'Fix Broken Links',
-        description: `Found ${this.brokenLinks.length} broken links that need immediate attention.`,
-        actions: this.brokenLinks.map(link => ({
-          url: link.url,
-          action: 'Create missing page or fix redirect',
-          priority: 'high'
-        }))
-      });
-    }
-
-    if (this.workingLinks.length < 50) {
+        type: "critical",
+        message: `Fix ${this.brokenLinks.length} broken links`,
+}),
+}
+    
+    if (this.warnings.length > 0) {
       recommendations.push({
-        type: 'warning',
-        title: 'Expand Content',
-        description: 'Website has limited content. Consider adding more pages and services.',
-        actions: [
-          { action: 'Add more service pages', priority: 'medium' },
-          { action: 'Create blog section', priority: 'medium' },
-          { action: 'Add case studies', priority: 'medium' }
-        ]
-      });
+        type: "warning",
+        message: `Address ${this.warnings.length} warnings`,
+}),
+}
+    
+    recommendations.push({
+      type: "improvement",
+      message: "Implement automated link checking",
+})
+    
+    recommendations.push({
+      type: "improvement",
+      message: "Add performance monitoring",
+})
+    
+    return recommendations,
+}
+
+  displaySummary() {
+    console.log("\n" + "=".repeat(70))
+    console.log("🌐 COMPREHENSIVE WEBSITE ANALYZER SUMMARY")
+    console.log("=".repeat(70))
+    console.log(`Base URL: ${this.baseUrl}`)
+    console.log(`Total URLs Checked: ${this.checkedUrls.size}`)
+    console.log(`✅ Working Links: ${this.workingLinks.length}`)
+    console.log(`❌ Broken Links: ${this.brokenLinks.length}`)
+    console.log(`⚠️ Warnings: ${this.warnings.length}`)
+    console.log(`💥 Errors: ${this.errors.length}`)
+    console.log(`⏱️ Analysis Duration: ${Math.round((Date.now() - this.startTime) / 1000)}s`)
+    console.log("=".repeat(70))
+    
+    if (this.brokenLinks.length > 0) {
+      console.log("\n❌ BROKEN LINKS:")
+      this.brokenLinks.slice(0, 10).forEach((link, index) => {
+        console.log(`${index + 1}. ${link.url} (${link.status})`),
+})
+      if (this.brokenLinks.length > 10) {
+        console.log(`... and ${this.brokenLinks.length - 10} more`),
+}
     }
-
-    // Check for missing essential pages
-    const essentialPages = [
-      '/privacy-policy',
-      '/terms-of-service',
-      '/cookie-policy',
-      '/sitemap',
-      '/contact',
-      '/about'
-    ];
-
-    const missingEssential = essentialPages.filter(page => 
-      !this.workingLinks.some(link => link.url.endsWith(page))
-    );
-
-    if (missingEssential.length > 0) {
-      recommendations.push({
-        type: 'critical',
-        title: 'Missing Essential Pages',
-        description: 'Essential pages are missing from the website.',
-        actions: missingEssential.map(page => ({
-          url: page,
-          action: 'Create missing page',
-          priority: 'high'
-        }))
-      });
+    
+    if (this.warnings.length > 0) {
+      console.log("\n⚠️ WARNINGS:")
+      this.warnings.slice(0, 5).forEach((warning, index) => {
+        console.log(`${index + 1}. ${warning.message}`),
+})
+      if (this.warnings.length > 5) {
+        console.log(`... and ${this.warnings.length - 5} more`),
+}
     }
-
-    return recommendations;
   }
 
-  async saveReport(filename = 'comprehensive-website-analysis.json') {
-    const report = this.generateReport();
-    await fs.writeFile(filename, JSON.stringify(report, null, 2));
-    console.log(`Report saved to ${filename}`);
-    return report;
+  async run() {
+    try {
+      this.log("🎯 Starting Comprehensive Website Analysis")
+      
+      // Check main pages
+      const mainPages = [
+        this.baseUrl,
+        `${this.baseUrl}/about`,
+        `${this.baseUrl}/services`,
+        `${this.baseUrl}/contact`,
+        `${this.baseUrl}/blog`]
+      
+      for (const page of mainPages) {
+        await this.checkUrl(page)
+        await this.analyzePerformance(page)
+        await this.checkSEO(page),
+}
+      
+      await this.generateReport()
+      this.displaySummary()
+      
+      this.log("🎉 Website analysis completed successfully")
+      return {
+        success: true, 
+        workingLinks: this.workingLinks.length,
+        brokenLinks: this.brokenLinks.length,
+        warnings: this.warnings.length,
+        errors: this.errors.length,
+}
+    } catch (error) {
+      this.log(`💥 Website analysis failed: ${error.message}`, "error")
+      await this.generateReport()
+      this.displaySummary()
+      return { success: false, error: error.message }
+    }
   }
 }
 
-// Run the analysis
-async function main() {
-  const analyzer = new ComprehensiveWebsiteAnalyzer('https://ziontechgroup.com');
-  
-  try {
-    await analyzer.analyzeWebsite();
-    const report = await analyzer.saveReport();
-    
-    console.log('\n=== ANALYSIS SUMMARY ===');
-    console.log(`Total URLs checked: ${report.summary.totalLinksChecked}`);
-    console.log(`Working links: ${report.summary.workingLinks}`);
-    console.log(`Broken links: ${report.summary.brokenLinks}`);
-    console.log(`Success rate: ${report.summary.successRate}`);
-    console.log(`Duration: ${report.summary.duration}`);
-    
-    if (report.brokenLinks.length > 0) {
-      console.log('\n=== BROKEN LINKS ===');
-      report.brokenLinks.forEach(link => {
-        console.log(`❌ ${link.url} - ${link.error}`);
-      });
-    }
-    
-    if (report.recommendations.length > 0) {
-      console.log('\n=== RECOMMENDATIONS ===');
-      report.recommendations.forEach(rec => {
-        console.log(`${rec.type.toUpperCase()}: ${rec.title}`);
-        console.log(`  ${rec.description}`);
-      });
-    }
-    
-  } catch (error) {
-    console.error('Analysis failed:', error);
-  }
-}
-
+// Run the analyzer
 if (require.main === module) {
-  main();
+  const analyzer = new ComprehensiveWebsiteAnalyzer()
+  analyzer.run().then(result => {
+    process.exit(result.success ? 0 : 1),
+}),
 }
 
-module.exports = ComprehensiveWebsiteAnalyzer;
+module.exports = ComprehensiveWebsiteAnalyzer
