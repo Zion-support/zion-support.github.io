@@ -1,12 +1,14 @@
-const CACHE_NAME = 'zion-tech-group-v1';
+// Comprehensive service worker for caching and offline support
+const CACHE_NAME = 'zion-tech-group-v2';
 const urlsToCache = [
   '/',
   '/services',
   '/contact',
   '/pricing',
   '/about',
-  '/static/css/',
-  '/static/js/',
+  '/ai-services',
+  '/it-services',
+  '/micro-saas',
   '/_next/static/',
   '/favicon.ico',
   '/manifest.json'
@@ -21,6 +23,8 @@ self.addEventListener('install', (event) => {
         return cache.addAll(urlsToCache);
       })
   );
+  // Force the waiting service worker to become the active service worker
+  self.skipWaiting();
 });
 
 // Fetch event - serve from cache when offline
@@ -75,4 +79,6 @@ self.addEventListener('activate', (event) => {
       );
     })
   );
+  // Ensure the service worker takes control of all clients immediately
+  self.clients.claim();
 });
