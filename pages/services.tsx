@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 type Service = {
   name: string;
   summary: string;
@@ -81,7 +83,7 @@ export default function Services() {
             <div style={{ fontWeight: 700, marginBottom: 6 }}>{s.name}</div>
             <div style={{ opacity: 0.8, fontSize: 14, marginBottom: 8 }}>{s.summary}</div>
             <div style={{ fontSize: 13, color: '#2563eb' }}>{s.pricing}</div>
-          </Link>
+          </a>
         ))}
       </div>
     </section>

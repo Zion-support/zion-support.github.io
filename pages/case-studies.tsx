@@ -36,7 +36,7 @@ const CaseStudiesPage: React.FC = () => {
         <div className="container mx-auto px-4 py-12">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Case Studies</h1>
           <p className="text-gray-600 mb-10 max-w-3xl text-lg">
-            Discover how we've helped businesses transform their operations, 
+            Discover how we&apos;ve helped businesses transform their operations, 
             improve efficiency, and achieve their technology goals.
           </p>
 

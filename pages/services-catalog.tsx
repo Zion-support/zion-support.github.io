@@ -190,8 +190,8 @@ export default function ServicesCatalog() {
           Production‑ready Micro SaaS, AI, and Cloud solutions. Transparent pricing, clear timelines, and measurable outcomes.
         </p>
         <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
-          <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-5 py-2 rounded bg-blue-600 hover:bg-blue-700">Call {contact.phone}</Link>
-          <a href={`mailto:${contact.email}`} className="px-5 py-2 rounded bg-purple-600 hover:bg-purple-700">Email {contact.email}</Link>
+          <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-5 py-2 rounded bg-blue-600 hover:bg-blue-700">Call {contact.phone}</a>
+          <a href={`mailto:${contact.email}`} className="px-5 py-2 rounded bg-purple-600 hover:bg-purple-700">Email {contact.email}</a>
           <Link href="/contact" className="px-5 py-2 rounded bg-slate-800 hover:bg-slate-700 border border-white/10">Contact Form</Link>
         </div>
         <div className="mt-2 text-slate-400 text-sm">{contact.address}</div>
@@ -225,7 +225,7 @@ export default function ServicesCatalog() {
                       <div className="mb-1">References:</div>
                       <ul className="list-disc list-inside space-y-1">
                         {item.refs.map(r => (
-                          <li key={r.href}><a className="underline hover:text-slate-200" href={r.href} target="_blank" rel="noopener noreferrer">{r.label}</Link></li>
+                          <li key={r.href}><a className="underline hover:text-slate-200" href={r.href} target="_blank" rel="noopener noreferrer">{r.label}</a></li>
                         ))}
                       </ul>
                     </div>
@@ -240,7 +240,7 @@ export default function ServicesCatalog() {
           <h2 className="text-xl font-semibold mb-2">Need something custom?</h2>
           <p className="text-slate-300">We scope custom builds with fixed‑bid or time‑and‑materials. Typical rates: $120 – $220/hr depending on skillset and urgency.</p>
           <div className="mt-3">
-            <a href={`${contact.site}/contact`} className="underline">Discuss your project</Link>
+            <a href={`${contact.site}/contact`} className="underline">Discuss your project</a>
           </div>
         </section>
       </main>

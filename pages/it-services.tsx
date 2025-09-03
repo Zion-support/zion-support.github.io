@@ -37,7 +37,7 @@ const ITServicesPage: React.FC = () => {
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">IT Services</h1>
           <p className="text-gray-600 mb-10 max-w-3xl text-lg">
             Comprehensive IT solutions to modernize your infrastructure, enhance security, 
-            and optimize performance. From cloud migration to cybersecurity, we've got you covered.
+            and optimize performance. From cloud migration to cybersecurity, we&apos;ve got you covered.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">

@@ -54,7 +54,7 @@ const BlogPage: React.FC = () => {
                   <span className="text-sm text-gray-500">{post.date}</span>
                   <a href="#" className="text-blue-600 hover:text-blue-700 font-medium">
                     Read More →
-                  </Link>
+                  </a>
                 </div>
               </article>
             ))}
