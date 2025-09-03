@@ -1,9 +1,9 @@
 import React, { useState, useCallback, memo } from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
 import Navigation from '../src/components/Navigation';
 import Footer from '../src/components/Footer';
 import Sidebar from '../components/Sidebar';
+import SEOHead from '../src/components/SEOHead';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, Brain, Cloud, Database, Network, Target, Phone, Mail, Menu } from 'lucide-react';
 
 const Home = memo(() => {
@@ -16,6 +16,24 @@ const Home = memo(() => {
   const handleSidebarClose = useCallback(() => {
     setSidebarOpen(false);
   }, []);
+
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Zion Tech Group",
+    "url": "https://ziontechgroup.com",
+    "description": "Leading provider of revolutionary AI services, IT solutions, and micro SaaS development",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://ziontechgroup.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    }
+  };
   const stats = [
   { number: '500+', label: 'Projects Completed' },
     { number: '50+', label: 'Happy Clients' },
@@ -69,6 +87,7 @@ const Home = memo(() => {
 
   return (
     <>
+<<<<<<< HEAD
       <Head>
         <title>Zion Tech Group - Leading Technology Solutions Provider</title>
         <meta name="description" content="Transform your business with cutting-edge AI services, IT solutions, and micro SaaS development. Expert technology consulting and implementation." />
@@ -110,6 +129,14 @@ const Home = memo(() => {
           }}
         />
       </Head>
+=======
+      <SEOHead
+        title="Zion Tech Group - Leading Technology Solutions Provider"
+        description="Transform your business with cutting-edge AI services, IT solutions, and micro SaaS development. Expert technology consulting and implementation."
+        keywords="AI services, IT solutions, micro SaaS, technology consulting, digital transformation, cloud services, cybersecurity"
+        structuredData={structuredData}
+      />
+>>>>>>> cursor/analyze-improve-and-deploy-application-a94a
       
       <Navigation />
       <Sidebar isOpen={sidebarOpen} onClose={handleSidebarClose} />
