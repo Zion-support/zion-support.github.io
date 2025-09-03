@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "timestamp": "2025-09-03T16:54:18.031Z",
   "bundleSize": {
     ".next": {
@@ -19,4 +20,20 @@
     ".json": 0
   },
   "recommendations": []
+=======
+  "timestamp": "2025-09-03T16:49:40.012Z",
+  "score": 60,
+  "checks": {
+    "buildSize": true,
+    "bundleAnalysis": false,
+    "lighthouseScore": false,
+    "loadTime": true,
+    "memoryUsage": true
+  },
+  "recommendations": [
+    "Consider optimizing build size",
+    "Review bundle composition",
+    "Implement code splitting"
+  ]
+>>>>>>> ce2f1c888fb90dd5d7d297f621bf29128aa0e6a6
 }
