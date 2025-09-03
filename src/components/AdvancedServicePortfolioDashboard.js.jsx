@@ -1,6 +1,8 @@
 <<<<<<< HEAD
- const AdvancedServicePortfolioDashboard = () => { const [selectedCategory, setSelectedCategory] = useState ('all')  const [selectedStatus, setSelectedStatus] = useState ('all')  const [selectedComplexity, setSelectedComplexity] = useState ('all')  const [searchTerm, setSearchTerm] = useState (')  const [viewMode, setViewMode] = useState ('overview') ';'";
-;
+ const AdvancedServicePortfolioDashboard = () => { const [selectedCategory, setSelectedCategory] = useState ('all')  const [selectedStatus, setSelectedStatus] = useState ('all')  const [selectedComplexity, setSelectedComplexity] = useState ('all')  const [searchTerm, setSearchTerm] = useState (')  const [viewMode, setViewMode] = useState ('overview') ';'"'"
 =======
- const AdvancedServicePortfolioDashboard = () => { const [selectedCategory, setSelectedCategory] = useState ("all")  const [selectedStatus, setSelectedStatus] = useState ("all")  const [selectedComplexity, setSelectedComplexity] = useState ("all")  const [searchTerm, setSearchTerm] = useState (")  const [viewMode, setViewMode] = useState ("overview") ';"";
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-2b9a
+ const AdvancedServicePortfolioDashboard = () => { const [selectedCategory, setSelectedCategory] = useState ('all')  const [selectedStatus, setSelectedStatus] = useState ('all')  const [selectedComplexity, setSelectedComplexity] = useState ('all')  const [searchTerm, setSearchTerm] = useState (')  const [viewMode, setViewMode] = useState ('overview') "
+>>>>>>> main
+
+""
+}
