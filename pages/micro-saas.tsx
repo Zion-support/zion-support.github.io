@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Layers, Cloud, FileText, Users, BarChart3, Mail, Clock, Shield, Zap, TrendingUp, Settings, Globe, Code, Brain } from 'lucide-react';
+import { Layers, Cloud, FileText, Users, BarChart3, Mail, Clock, Shield, Zap, TrendingUp, Settings, Globe, Code, Brain, Smartphone, Calendar, Video, Package, Target } from 'lucide-react';
 
 export default function MicroSaaS() {
   const contact = {
@@ -1066,6 +1066,204 @@ export default function MicroSaaS() {
         'Improved user onboarding'
       ],
       category: 'Identity Management'
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Email Responder',
+      description: 'Intelligent email automation that analyzes incoming messages, generates contextual responses, and flags critical communications for human review.',
+      features: [
+        'Natural language processing for email understanding',
+        'Context-aware response generation',
+        'Priority classification and flagging',
+        'Multi-language support and translation',
+        'Integration with CRM and helpdesk systems',
+        'Learning from user feedback and corrections'
+      ],
+      pricing: '$199 – $1,299/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '80% reduction in email response time',
+        '24/7 automated customer communication',
+        'Improved customer satisfaction scores',
+        'Reduced manual email management overhead'
+      ],
+      category: 'Communication Automation'
+    },
+    {
+      icon: Smartphone,
+      name: 'Mobile-First Survey Platform',
+      description: 'Advanced survey creation and analytics platform optimized for mobile devices with real-time data collection and AI-powered insights.',
+      features: [
+        'Drag-and-drop survey builder with mobile optimization',
+        'Real-time data collection and analytics',
+        'AI-powered response analysis and sentiment detection',
+        'Multi-channel distribution (SMS, email, social media)',
+        'Advanced segmentation and targeting',
+        'Custom branding and white-label options'
+      ],
+      pricing: '$149 – $999/month',
+      timeline: '1–2 weeks',
+      benefits: [
+        '60% higher mobile response rates',
+        'Real-time customer feedback collection',
+        'AI-driven insights and recommendations',
+        'Improved customer engagement and satisfaction'
+      ],
+      category: 'Customer Research'
+    },
+    {
+      icon: Calendar,
+      name: 'Event Management Automation',
+      description: 'Comprehensive event planning platform with automated workflows, ticketing, and attendee management for conferences, webinars, and corporate events.',
+      features: [
+        'Automated event registration and ticketing',
+        'Dynamic pricing and promotional campaigns',
+        'Attendee communication and engagement tools',
+        'Real-time analytics and reporting',
+        'Integration with payment processors and CRM',
+        'Mobile app for attendees and organizers'
+      ],
+      pricing: '$299 – $1,999/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '50% reduction in event planning time',
+        'Automated attendee management',
+        'Increased event attendance and engagement',
+        'Streamlined event operations'
+      ],
+      category: 'Event Management'
+    },
+    {
+      icon: Video,
+      name: 'AI Video Content Generator',
+      description: 'Automated video creation platform that transforms text, images, and data into engaging video content for marketing, training, and social media.',
+      features: [
+        'AI-powered script generation and voice synthesis',
+        'Automated video editing and scene transitions',
+        'Multi-format output (MP4, GIF, social media optimized)',
+        'Brand template library and customization',
+        'Bulk video generation and batch processing',
+        'Analytics and performance tracking'
+      ],
+      pricing: '$399 – $2,499/month',
+      timeline: '4–6 weeks',
+      benefits: [
+        '90% faster video content production',
+        'Consistent brand messaging across videos',
+        'Reduced video production costs',
+        'Scalable content creation for marketing campaigns'
+      ],
+      category: 'Content Creation'
+    },
+    {
+      icon: Package,
+      name: 'E-Commerce Return Automation',
+      description: 'Intelligent return management system that automates return requests, generates labels, tracks status, and provides analytics for e-commerce businesses.',
+      features: [
+        'Automated return request processing',
+        'Dynamic return label generation',
+        'Real-time return status tracking',
+        'Return analytics and fraud detection',
+        'Integration with major e-commerce platforms',
+        'Customer self-service return portal'
+      ],
+      pricing: '$199 – $1,299/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '70% reduction in return processing time',
+        'Automated fraud detection and prevention',
+        'Improved customer satisfaction with returns',
+        'Better inventory management and restocking'
+      ],
+      category: 'E-Commerce'
+    },
+    {
+      icon: Target,
+      name: 'AI-Powered Lead Scoring Engine',
+      description: 'Advanced lead qualification system that uses machine learning to score, prioritize, and route leads for maximum conversion rates.',
+      features: [
+        'Machine learning-based lead scoring algorithms',
+        'Behavioral tracking and engagement analysis',
+        'Automated lead routing and assignment',
+        'Predictive analytics for conversion probability',
+        'Integration with CRM and marketing automation',
+        'Custom scoring models and rule configuration'
+      ],
+      pricing: '$299 – $1,999/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '45% increase in lead conversion rates',
+        'Automated lead prioritization',
+        'Improved sales team efficiency',
+        'Data-driven lead qualification'
+      ],
+      category: 'Sales Automation'
+    },
+    {
+      icon: Shield,
+      name: 'Cybersecurity Compliance Manager',
+      description: 'Automated compliance monitoring and reporting system for GDPR, HIPAA, SOC 2, and other regulatory frameworks with real-time risk assessment.',
+      features: [
+        'Automated compliance gap analysis',
+        'Real-time risk assessment and monitoring',
+        'Regulatory framework mapping and tracking',
+        'Automated report generation and submission',
+        'Policy management and employee training',
+        'Incident response and breach notification'
+      ],
+      pricing: '$499 – $3,999/month',
+      timeline: '4–6 weeks',
+      benefits: [
+        '90% reduction in compliance audit time',
+        'Automated risk identification and mitigation',
+        'Reduced compliance violations and penalties',
+        'Streamlined regulatory reporting'
+      ],
+      category: 'Compliance'
+    },
+    {
+      icon: Zap,
+      name: 'Workflow Automation Engine',
+      description: 'No-code workflow automation platform that connects apps, automates business processes, and eliminates manual tasks across your organization.',
+      features: [
+        'Visual workflow builder with drag-and-drop interface',
+        'Pre-built connectors for 500+ applications',
+        'Conditional logic and decision trees',
+        'Real-time monitoring and error handling',
+        'Custom triggers and webhook support',
+        'Team collaboration and approval workflows'
+      ],
+      pricing: '$199 – $1,499/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '75% reduction in manual task processing',
+        'Automated business process optimization',
+        'Improved operational efficiency',
+        'Reduced human error and delays'
+      ],
+      category: 'Process Automation'
+    },
+    {
+      icon: Globe,
+      name: 'Multi-Channel Customer Engagement',
+      description: 'Unified customer communication platform that manages interactions across email, SMS, chat, social media, and voice channels with AI-powered routing.',
+      features: [
+        'Omnichannel communication management',
+        'AI-powered message routing and prioritization',
+        'Unified customer conversation history',
+        'Automated response suggestions and templates',
+        'Real-time analytics and performance tracking',
+        'Integration with existing business systems'
+      ],
+      pricing: '$299 – $1,999/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '60% improvement in customer response times',
+        'Unified customer experience across channels',
+        'Automated communication workflows',
+        'Better customer satisfaction and retention'
+      ],
+      category: 'Customer Engagement'
     }
   ];
 

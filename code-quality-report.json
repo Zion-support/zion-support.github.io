@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-03T16:40:29.486Z",
+  "timestamp": "2025-09-03T16:46:24.457Z",
   "files": {
     "components/ErrorBoundary.tsx": {
       "path": "components/ErrorBoundary.tsx",
@@ -21,7 +21,11 @@
     },
     "pages/_app.tsx": {
       "path": "pages/_app.tsx",
+<<<<<<< HEAD
+      "lines": 121,
+=======
       "lines": 126,
+>>>>>>> ce2f1c888fb90dd5d7d297f621bf29128aa0e6a6
       "issues": [],
       "complexity": 1
     },
@@ -150,7 +154,11 @@
   },
   "summary": {
     "totalFiles": 16,
+<<<<<<< HEAD
+    "totalLines": 5768,
+=======
     "totalLines": 5773,
+>>>>>>> ce2f1c888fb90dd5d7d297f621bf29128aa0e6a6
     "averageComplexity": "1.06",
     "issues": [
       {
