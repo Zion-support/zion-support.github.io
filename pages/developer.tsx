@@ -1,371 +1,217 @@
 import React from 'react';
+import type { NextPage } from 'next';
 import Head from 'next/head';
-import Link from 'next/link';
+import Layout from '../components/Layout';
 import {
   Code,
-  Terminal,
   BookOpen,
   Users,
-  Zap,
-  Award,
-  ArrowRight,
+  MessageSquare,
   Github,
   ExternalLink,
-  Clock,
-  Star,
-  Download,
+  ArrowRight,
+  CheckCircle,
+  Zap,
+  Globe,
+  Database
 } from 'lucide-react';
 
-export default function DeveloperPortal() {
-  const developerResources = [
-  {
-      title: 'API Documentation',
-      description: 'Comprehensive API reference with examples and guides',
+const Developer: NextPage = () => {
+  const resources = [
+    {
       icon: BookOpen,
-<<<<<<< HEAD
+      title: 'Documentation',
+      description: 'Comprehensive guides and API references',
       features: [
-        'REST API Reference',
-        'Authentication Guide',
-        'Rate Limits',
-        'Error Handling',
+        'API Documentation',
+        'SDK Guides',
+        'Code Examples',
+        'Best Practices'
       ],
-      link: '/api',
-=======
-      features: ['REST API Reference,Authentication Guide,Rate Limits,Error Handling'],
-      link: '/api'
->>>>>>> main
-    },
-    {
-      title: 'SDKs & Libraries',
-      description: 'Official SDKs for popular programming languages',
-      icon: Code,
-<<<<<<< HEAD
-      features: ['Python SDK', 'JavaScript SDK', 'Java SDK', 'C# SDK'],
-      link: '/api',
-=======
-      features: ['Python SDK,JavaScript SDK,Java SDK,C# SDK'],
-      link: '/api'
->>>>>>> main
-    },
-    {
-      title: 'Code Examples',
-      description: 'Ready-to-use code samples and tutorials',
-      icon: Terminal,
-<<<<<<< HEAD
-      features: [
-        'Quick Start Guides',
-        'Integration Examples',
-        'Best Practices',
-        'Troubleshooting',
-      ],
-      link: '/docs',
-=======
-      features: ['Quick Start Guides,Integration Examples,Best Practices,Troubleshooting'],
       link: '/docs'
->>>>>>> main
     },
     {
-      title: 'Developer Community',
-      description: 'Connect with other developers and get support',
+      icon: Code,
+      title: 'Code Samples',
+      description: 'Ready-to-use code examples and templates',
+      features: [
+        'React Components',
+        'Node.js Examples',
+        'Python Scripts',
+        'Mobile SDKs'
+      ],
+      link: '/examples'
+    },
+    {
       icon: Users,
-<<<<<<< HEAD
+      title: 'Community',
+      description: 'Connect with other developers and get support',
       features: [
         'Discord Community',
         'GitHub Discussions',
         'Stack Overflow',
-        'Developer Blog',
+        'Developer Blog'
       ],
-      link: '#',
-    },
-=======
-      features: ['Discord Community,GitHub Discussions,Stack Overflow,Developer Blog'],
-      link: '#'
+      link: '/community'
     }
->>>>>>> main
   ];
 
   const tutorials = [
-  {
+    {
       title: 'Building Your First AI Application',
       description: 'Learn how to integrate AI services into your application',
-      duration: '15 min',
+      duration: '15 min read',
       difficulty: 'Beginner',
-      category: 'AI Services',
-      rating: 4.9,
+      tags: ['AI', 'JavaScript', 'API']
     },
     {
       title: 'Cloud Deployment Best Practices',
-      description: 'Deploy and scale your applications in the cloud',
-      duration: '25 min',
+      description: 'Deploy your applications to the cloud with confidence',
+      duration: '25 min read',
       difficulty: 'Intermediate',
-      category: 'Cloud Services',
-      rating: 4.8,
+      tags: ['Cloud', 'DevOps', 'AWS']
     },
     {
-      title: 'Implementing Security in Your App',
-      description: 'Add enterprise-grade security to your applications',
-      duration: '30 min',
+      title: 'Building Scalable APIs',
+      description: 'Create robust and scalable API endpoints',
+      duration: '30 min read',
       difficulty: 'Advanced',
-      category: 'Security',
-      rating: 4.9,
-    },
-    {
-      title: 'Microservices Architecture',
-      description: 'Build scalable microservices with our platform',
-      duration: '45 min',
-      difficulty: 'Advanced',
-      category: 'Architecture',
-      rating: 4.7,
-    },
-  ];
-
-  const tools = [
-  {
-      name: 'API Explorer',
-      description: 'Interactive API testing tool',
-      icon: Zap,
-<<<<<<< HEAD
-      features: [
-        'Live API Testing',
-        'Request Builder',
-        'Response Viewer',
-        'Code Generation',
-      ],
-=======
-      features: ['Live API Testing,Request Builder,Response Viewer,Code Generation']
->>>>>>> main
-    },
-    {
-      name: 'CLI Tool',
-      description: 'Command-line interface for developers',
-      icon: Terminal,
-<<<<<<< HEAD
-      features: [
-        'Project Management',
-        'Deployment',
-        'Monitoring',
-        'Configuration',
-      ],
-=======
-      features: ['Project Management,Deployment,Monitoring,Configuration']
->>>>>>> main
-    },
-    {
-      name: 'VS Code Extension',
-      description: 'IDE integration for seamless development',
-      icon: Code,
-<<<<<<< HEAD
-      features: [
-        'Syntax Highlighting',
-        'Auto-completion',
-        'Debugging',
-        'Snippets',
-      ],
-=======
-      features: ['Syntax Highlighting,Auto-completion,Debugging,Snippets']
->>>>>>> main
-    },
-    {
-      name: 'Postman Collection',
-      description: 'Pre-configured API collection',
-      icon: ExternalLink,
-<<<<<<< HEAD
-      features: [
-        'All Endpoints',
-        'Authentication',
-        'Examples',
-        'Environment Variables',
-      ],
-    },
-  ];
-
-  const communityStats = [
-    { number: '10, 000+', label: 'Active Developers' },
-=======
-      features: ['All Endpoints,Authentication,Examples,Environment Variables']
+      tags: ['API', 'Node.js', 'Performance']
     }
   ];
 
-  const communityStats = [
-  { number: '10,000+', label: 'Active Developers' },
->>>>>>> main
-    { number: '500+', label: 'GitHub Stars' },
-    { number: '50+', label: 'Open Source Projects' },
-    { number: '99.9%', label: 'API Uptime' },
+  const tools = [
+    {
+      name: 'Zion CLI',
+      description: 'Command-line interface for managing your projects',
+      icon: Code,
+      link: '/cli'
+    },
+    {
+      name: 'API Explorer',
+      description: 'Interactive tool for testing our APIs',
+      icon: Globe,
+      link: '/api-explorer'
+    },
+    {
+      name: 'Code Generator',
+      description: 'Generate boilerplate code for common patterns',
+      icon: Zap,
+      link: '/generator'
+    },
+    {
+      name: 'Database Manager',
+      description: 'Manage your databases with our web interface',
+      icon: Database,
+      link: '/database'
+    }
   ];
 
   return (
     <>
       <Head>
-        <title>Developer Portal - Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Developer portal for Zion Tech Group. Access APIs, SDKs, documentation, and tools to build amazing applications."
-        />
+        <title>Developer Resources - Zion Tech Group</title>
+        <meta name="description" content="Developer resources, documentation, code samples, and tools to help you build amazing applications with Zion Tech Group services." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-
-      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      
+      <Layout
+        title="Developer Resources"
+        description="Everything you need to build amazing applications"
+      >
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20 sm:py-32">
-            <div className="text-center">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-                Developer Portal
-              </h1>
-              <p className="text-xl sm:text-2xl text-blue-100 max-w-4xl mx-auto mb-8">
-                Everything you need to build amazing applications with Zion Tech
-                Group services.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Link href="/api">
-                  <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-lg transition-colors">
-                    Get Started
-                    <ArrowRight className="w-5 h-5 ml-2 inline" />
-                  </button>
-                </Link>
-                <a
-                  href="https://github.com/ziontechgroup"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 text-lg font-semibold rounded-lg transition-colors">
-                    <Github className="w-5 h-5 mr-2 inline" />
-                    View on GitHub
-                  </button>
-                </a>
-              </div>
+        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Developer</span> Resources
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Everything you need to build amazing applications with our services. Documentation, code samples, tools, and community support.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </button>
+              <button className="inline-flex items-center px-8 py-3 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
+                View Documentation
+              </button>
             </div>
           </div>
         </section>
 
-        {/* Community Stats */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-              {communityStats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-3xl sm: text-4xl font-bold text-blue-600 mb-2">
-                    {stat.number}
-                  </div>
-                  <div className="text-sm sm:text-base text-gray-600">
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Developer Resources */}
-        <section className="py-20 sm: py-32">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Resources Grid */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-                Developer Resources
-              </h2>
-              <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-                Everything you need to start building with our platform
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Developer Resources</h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Comprehensive resources to help you succeed with our platform
               </p>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {developerResources.map((resource, index) => (
-                <div
-                  key={index}
-                  className="bg-white rounded-xl shadow-lg p-8 hover: shadow-xl transition-shadow"
-                >
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="grid md:grid-cols-3 gap-8">
+              {resources.map((resource, index) => (
+                <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                     <resource.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
-                    {resource.title}
-                  </h3>
-                  <p className="text-gray-600 mb-6 text-center">
-                    {resource.description}
-                  </p>
-                  <ul className="space-y-3 mb-6">
-                    {resource.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center">
-                        <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></div>
-                        <span className="text-gray-700">{feature}</span>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{resource.title}</h3>
+                  <p className="text-gray-600 mb-4">{resource.description}</p>
+                  <ul className="space-y-2 mb-6">
+                    {resource.features.map((feature, i) => (
+                      <li key={i} className="flex items-center text-sm text-gray-600">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                        {feature}
                       </li>
                     ))}
                   </ul>
-                  <Link href={resource.link}>
-                    <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover: from-blue-700 hover:to-purple-700 transition-all duration-300">
-                      Explore
-                      <ArrowRight className="w-4 h-4 ml-2 inline" />
-                    </button>
-                  </Link>
+                  <button className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300">
+                    Explore
+                    <ExternalLink className="ml-2 w-4 h-4" />
+                  </button>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Tutorials */}
-        <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+        {/* Tutorials Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-                Tutorials & Guides
-              </h2>
-              <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-                Step-by-step guides to help you build amazing applications
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Tutorials & Guides</h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Step-by-step tutorials to help you master our platform
               </p>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-3 gap-8">
               {tutorials.map((tutorial, index) => (
-                <div
-                  key={index}
-                  className="bg-gray-50 rounded-xl p-6 hover: shadow-lg transition-shadow"
-                >
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">
-                        {tutorial.title}
-                      </h3>
-                      <p className="text-gray-600 mb-4">
-                        {tutorial.description}
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center space-x-4 text-sm text-gray-500">
-                      <div className="flex items-center">
-                        <Clock className="w-4 h-4 mr-1" />
-                        {tutorial.duration}
-                      </div>
-                      <span
-                        className={`px-2 py-1 rounded-full text-xs font-semibold ${
-                          tutorial.difficulty === 'Beginner'
-                            ? 'bg-green-100 text-green-800'
-                            : tutorial.difficulty === 'Intermediate'
-                              ? 'bg-yellow-100 text-yellow-800'
-                              : 'bg-red-100 text-red-800'
-                        }`}
-                      >
+                <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                  <div className="p-6">
+                    <div className="flex items-center justify-between mb-3">
+                      <span className={`px-3 py-1 rounded-full text-sm font-medium ${
+                        tutorial.difficulty === 'Beginner' ? 'bg-green-100 text-green-800' :
+                        tutorial.difficulty === 'Intermediate' ? 'bg-yellow-100 text-yellow-800' :
+                        'bg-red-100 text-red-800'
+                      }`}>
                         {tutorial.difficulty}
                       </span>
-                      <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
-                        {tutorial.category}
-                      </span>
+                      <span className="text-sm text-gray-500">{tutorial.duration}</span>
                     </div>
-                    <div className="flex items-center">
-                      <Star className="w-4 h-4 text-yellow-400 fill-current mr-1" />
-                      <span className="text-sm font-semibold">
-                        {tutorial.rating}
-                      </span>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{tutorial.title}</h3>
+                    <p className="text-gray-600 mb-4">{tutorial.description}</p>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {tutorial.tags.map((tag, i) => (
+                        <span key={i} className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">
+                          {tag}
+                        </span>
+                      ))}
                     </div>
-                  </div>
-                  <Link href="#">
-                    <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
-                      Start Tutorial
-                      <ArrowRight className="w-4 h-4 ml-2 inline" />
+                    <button className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300">
+                      Read Tutorial
+                      <ArrowRight className="ml-2 w-4 h-4" />
                     </button>
-                  </Link>
+                  </div>
                 </div>
               ))}
             </div>
@@ -373,44 +219,25 @@ export default function DeveloperPortal() {
         </section>
 
         {/* Developer Tools */}
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-                Developer Tools
-              </h2>
-              <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-                Powerful tools to enhance your development experience
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Developer Tools</h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Powerful tools to accelerate your development workflow
               </p>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {tools.map((tool, index) => (
-                <div
-                  key={index}
-                  className="bg-white rounded-xl shadow-lg p-6 text-center hover: shadow-xl transition-shadow"
-                >
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <tool.icon className="w-8 h-8 text-white" />
+                <div key={index} className="bg-gray-50 rounded-lg p-6 text-center hover:bg-gray-100 transition-colors duration-300">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <tool.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
-                    {tool.name}
-                  </h3>
-                  <p className="text-gray-600 mb-4">{tool.description}</p>
-                  <ul className="space-y-2 mb-6 text-left">
-                    {tool.features.map((feature, featureIndex) => (
-                      <li
-                        key={featureIndex}
-                        className="flex items-center text-sm text-gray-700"
-                      >
-                        <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></div>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-4 rounded-lg font-semibold hover: from-blue-700 hover:to-purple-700 transition-all duration-300">
-                    <Download className="w-4 h-4 mr-2 inline" />
-                    Download
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{tool.name}</h3>
+                  <p className="text-gray-600 text-sm mb-4">{tool.description}</p>
+                  <button className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium">
+                    Try Now
+                    <ExternalLink className="ml-1 w-4 h-4" />
                   </button>
                 </div>
               ))}
@@ -418,66 +245,45 @@ export default function DeveloperPortal() {
           </div>
         </section>
 
-        {/* Community */}
-        <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-                Join Our Community
-              </h2>
-              <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-                Connect with developers, get help, and share your projects
+        {/* Community Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">Join Our Developer Community</h2>
+              <p className="text-xl text-gray-600 mb-8">
+                Connect with thousands of developers, share knowledge, and get help when you need it
               </p>
-            </div>
-
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
-              <div className="bg-gray-50 rounded-xl p-8 text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-white" />
+              <div className="grid md:grid-cols-3 gap-8 mb-12">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <MessageSquare className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Discord Community</h3>
+                  <p className="text-gray-600">Join our active Discord server with 10,000+ developers</p>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  Discord Community
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Join our Discord server for real-time discussions and support.
-                </p>
-                <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Github className="w-8 h-8 text-green-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">GitHub Discussions</h3>
+                  <p className="text-gray-600">Technical discussions and Q&A on our GitHub repository</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Users className="w-8 h-8 text-purple-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Developer Blog</h3>
+                  <p className="text-gray-600">Latest updates, tutorials, and best practices</p>
+                </div>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300">
                   Join Discord
+                  <MessageSquare className="ml-2 w-5 h-5" />
                 </button>
-              </div>
-
-              <div className="bg-gray-50 rounded-xl p-8 text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Github className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">GitHub</h3>
-                <p className="text-gray-600 mb-4">
-                  Contribute to open source projects and find code examples.
-                </p>
-                <a
-                  href="https://github.com/ziontechgroup"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
-                    View on GitHub
-                  </button>
-                </a>
-              </div>
-
-              <div className="bg-gray-50 rounded-xl p-8 text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Award className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  Developer Program
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Join our developer program for exclusive benefits and early
-                  access.
-                </p>
-                <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
-                  Apply Now
+                <button className="inline-flex items-center px-8 py-3 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-all duration-300">
+                  View on GitHub
+                  <Github className="ml-2 w-5 h-5" />
                 </button>
               </div>
             </div>
@@ -485,31 +291,21 @@ export default function DeveloperPortal() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-              Ready to Start Building?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Get your API key and start building amazing applications with our
-              platform.
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-4xl font-bold mb-6">Ready to Start Building?</h2>
+            <p className="text-xl mb-8 max-w-2xl mx-auto">
+              Get started with our developer resources and build your next amazing application
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link href="/contact">
-                <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
-                  Get API Key
-                  <ArrowRight className="w-5 h-5 ml-2 inline" />
-                </button>
-              </Link>
-              <Link href="/docs">
-                <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
-                  View Documentation
-                </button>
-              </Link>
-            </div>
+            <button className="inline-flex items-center px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300">
+              Get API Key
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </button>
           </div>
         </section>
-      </main>
+      </Layout>
     </>
   );
-}
+};
+
+export default Developer;
