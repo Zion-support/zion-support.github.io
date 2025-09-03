@@ -1,6 +1,6 @@
 import js from '@eslint/js';
-import typescript from '@typescript-eslint/eslint-plugin';
-import typescriptParser from '@typescript-eslint/parser';
+import tsPlugin from '@typescript-eslint/eslint-plugin';
+import tsParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import next from '@next/eslint-plugin-next';
@@ -10,23 +10,21 @@ export default [
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
-      parser: typescriptParser,
+      parser: tsParser,
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true,
-        },
+        ecmaFeatures: { jsx: true },
       },
     },
     plugins: {
-      '@typescript-eslint': typescript,
-      'react': react,
+      '@typescript-eslint': tsPlugin,
+      react,
       'react-hooks': reactHooks,
       '@next/next': next,
     },
     rules: {
-      ...typescript.configs.recommended.rules,
+      ...tsPlugin.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       ...next.configs.recommended.rules,
@@ -39,21 +37,24 @@ export default [
       '@typescript-eslint/no-unused-vars': 'warn',
       '@typescript-eslint/no-explicit-any': 'warn',
     },
-    settings: {
-      react: {
-        version: 'detect',
-      },
-    },
+    settings: { react: { version: 'detect' } },
   },
   {
     files: ['**/*.cjs'],
-    languageOptions: {
-      sourceType: 'commonjs',
-    },
+    languageOptions: { sourceType: 'commonjs' },
   },
   {
     ignores: [
-      '**/*',
+      'node_modules/**',
+      '.next/**',
+      'dist/**',
+      'build/**',
+      'out/**',
+      '*.config.js',
+      '*.config.cjs',
+      '*.config.mjs',
+      'temp_backup/**',
+      'temp_broken_components/**',
     ],
   },
 ];
