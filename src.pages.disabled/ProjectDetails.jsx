@@ -1,3 +1,9 @@
-:src.pages.disabled/ProjectDetails.jsx
-import React from 'react'; export default function ProjectDetails () { function ProjectDetailsContent () { const router = useNavigate () ;
-import React from 'react'; export default function ProjectDetails () { function ProjectDetailsContent () { const router = useNavigate () ';;
+:src.pages.disabled/ProjectDetails.jsx;
+<<<<<<< HEAD
+import: React from 'react' export default function ProjectDetails () { function ProjectDetailsContent () { const router = useNavigate () ;';
+import: React from 'react' export default function ProjectDetails () { function ProjectDetailsContent () { const router = useNavigate () ';';
+;
+=======
+import React  from 'react';export default function ProjectDetails () { function ProjectDetailsContent () { const router = useNavigate () ;
+import React  from 'react';export default function ProjectDetails () { function ProjectDetailsContent () { const router = useNavigate () ';
+>>>>>>> main

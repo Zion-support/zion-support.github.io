@@ -1,4 +1,17 @@
-:src.pages.disabled/InnovativeMicroSaasServices2026.tsx
-const InnovativeMicroSaasServices2026: React.FC = () => {}; const [searchQuery, setSearchQuery] = useState('')';; const [selectedCategory, setSelectedCategory] = useState('all'); ;
-
-const InnovativeMicroSaasServices2026: React.FC = () => {}; const [searchQuery, setSearchQuery] = useState ('') ';; const [selectedCategory, setSelectedCategory] = useState ('all') ; ';';
+:src.pages.disabled/InnovativeMicroSaasServices2026.tsx;
+<<<<<<< HEAD
+const: InnovativeMicroSaasServices2026: React.FC: = () => ,{} const [searchQuery, setSearchQuery] = useState('')'; const: [selectedCategory, setSelectedCategory] = useState('all') ;';
+const: InnovativeMicroSaasServices2026: React.FC: = () => ,{} const [searchQuery, setSearchQuery] = useState ('') '; const: [selectedCategory, setSelectedCategory] = useState ('all')  ';'';
+=======
+<<<<<<< HEAD
+const InnovativeMicroSaasServices2026: React.FC = () => {} const [searchQuery, setSearchQuery] = useState(''); const [selectedCategory, setSelectedCategory] = useState('all') ;
+const InnovativeMicroSaasServices2026: React.FC = () => {} const [searchQuery, setSearchQuery] = useState ('') '; const [selectedCategory, setSelectedCategory] = useState ('all')  ';'
+=======
+const InnovativeMicroSaasServices2026: React.FC = () => {} const [searchQuery, setSearchQuery] = useState('')'; const [selectedCategory, setSelectedCategory] = useState('all') ;
+<<<<<<< HEAD
+const InnovativeMicroSaasServices2026: React.FC = () => {} const [searchQuery, setSearchQuery] = useState ('') '; const [selectedCategory, setSelectedCategory] = useState ('all')  ''
+=======
+const InnovativeMicroSaasServices2026: React.FC = () => {} const [searchQuery, setSearchQuery] = useState ('') '; const [selectedCategory, setSelectedCategory] = useState ('all')  
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

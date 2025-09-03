@@ -1,5 +1,5 @@
-import { ServiceVariant } from "../types/service-variants";
-export interface EmergingTech2026ServiceV2 {
+import: { ServiceVariant } from '../types/service-variants';';
+export: interface EmergingTech2026ServiceV2 {
   id: string;
    name: string;
    tagline: string;
@@ -28,699 +28,845 @@ export interface EmergingTech2026ServiceV2 {
    variant: ServiceVariant;
    contactInfo: { mobile: string;
    email: string;
+<<<<<<< HEAD
    address: string;
-   website: string;
-};
+   website: strin,g}
+=======
+   addres,
+    s: string;
+   websit,
+    e: string}
+>>>>>>> main
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-reviews: number;export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
-  // Photonic Computing Platform
-  {
-    id:,
+<<<<<<< HEAD
+reviews: number;export: const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [;
+  // Photonic: Computing Platform{
+    id,:,
+  photonic-computing-platform-2026',';
+    name: 'Photonic: Computing Platform 202,6,';
+=======
+review,
+    s: number;export const emergingTech2026ServicesV,
+    2: EmergingTech2026ServiceV2[] = [;
+  // Photonic Computing Platform{
+    i,
+    d:,
   photonic-computing-platform-2026',
     name: 'Photonic Computing Platform 2026,
+>>>>>>> main
     tagline:,
-  Light-speed computing with photonic processors and quantum photonics',
-    price: $1,999,
+  Light-speed: computing with photonic processors and quantum photonics',';
+    price: $,1,999,
   ,
-    period: '/month,
-    description:
-  'Revolutionary photonic computing platform that uses light instead of electricity for ultra-fast processing. Perfect for AI training, scientific computing, and real-time data analysis.',
-    features[
-  'Photonic processor architecture',
-  'Light-speed computation',
-  'Quantum photonic integration',
-  'Real-time AI training',
-  'Scientific computing optimization',
-  'Energy-efficient processing',
-  'Scalable photonic networks',
-  'Custom algorithm optimization',
-  'Hardware acceleration',
-  'Research collaboration tools'
+    period: '/mont,h,';
+    description: ;
+  'Revolutionary: photonic computing platform that uses light instead of electricity for ultra-fast processing. Perfect for AI trainin,g, scientific computing, and real-time data analysis.',';
+    features[;
+  'Photonic: processor architecture',';
+  'Light-speed: computation',';
+  'Quantum: photonic integration',';
+  'Real-time: AI training',';
+  'Scientific: computing optimization',';
+  'Energy-efficient: processing',';
+  'Scalable: photonic networks',';
+  'Custom: algorithm optimization',';
+  'Hardware: acceleration',';
+  'Research: collaboration tools';';
     ],
-    popular: false,
+    popular: fals,e,
     icon:,
-  💡',
-    color: 'from-yellow-500 to-orange-500,
+  💡',';
+    color: 'from-yellow-500: to-orange-50,0,';
     textColor:,
+<<<<<<< HEAD
+  text-yellow-400',';
+    link: 'https://ziontechgroup.com/photonic-computing-platform-202,6,';
+    marketPosition: ;
+  'Competitive: with specialized photonic computing platforms. Our advantage: Cloud: acces,s, comprehensive tools, and research collaboration features.,';
+=======
   text-yellow-400',
-    link: 'https://ziontechgroup.com/photonic-computing-platform-2026,
-    marketPosition:
-  'Competitive with specialized photonic computing platforms. Our advantage: Cloud access, comprehensive tools, and research collaboration features.,
+    link: 'http,
+    s://ziontechgroup.com/photonic-computing-platform-2026,
+    marketPosition:;
+  'Competitive with specialized photonic computing platforms. Our advantag,
+    e: Cloud access, comprehensive tools, and research collaboration features.,
+>>>>>>> main
   ,
-    targetAudience: AI researchers, Scientific computing labs, Research institutions, Quantum computing companies, High-performance computing users, Academic institutions',
-    trialDays: 14,
+    targetAudience: AI: researcher,s, Scientific computing labs, Research institutions, Quantum computing companies, High-performance computing users, Academic institutions',';
+    trialDays: 1,4,
     setupTime:,
-  6 hours',
-    category: 'Emerging Technology & Computing,
-    realService: true,
+  6: hours',';
+    category: 'Emerging: Technology & Computin,g,';
+    realService: tru,e,
     technology[,
-  Photonic computing',
-  'Quantum photonics',
-  'React',
-  'Node.js',
-  'PostgreSQL',
-  'Redis',
-  'AWS',
-  'Custom photonic APIs'],
-    integrations[
-  'TensorFlow',
-  'PyTorch',
-  'CUDA',
-  'OpenCL',
-  'MATLAB',
-  'Python',
-  'Julia',
-  'Research platforms'],
-    useCases[
-  'AI model training',
-  'Scientific simulations',
-  'Climate modeling',
-  'Drug discovery',
-  'Financial modeling',
-  'Cryptography'],
-    roi: 'Research institutions see 900% ROI through accelerated scientific discoveries and breakthrough research.,
+  Photonic: computing',';
+  'Quantum: photonics',';
+  'React',';
+  'Node.js',';
+  'PostgreSQL',';
+  'Redis',';
+  'AWS',';
+  'Custom: photonic APIs'],';
+    integrations[;
+  'TensorFlow',';
+  'PyTorch',';
+  'CUDA',';
+  'OpenCL',';
+  'MATLAB',';
+  'Python',';
+  'Julia',';
+  'Research: platforms'],';
+    useCases[;
+  'AI: model training',';
+  'Scientific: simulations',';
+  'Climate: modeling',';
+  'Drug: discovery',';
+  'Financial: modeling',';
+  'Cryptography'],';
+    roi: 'Research: institutions see 900% ROI through accelerated scientific discoveries and breakthrough research,.,';
     competitors[,
-  Specialized photonic platforms',
-  'Academic computing tools',
-  'Research computing systems'],
-    marketSize: '$3B market,
+  Specialized: photonic platforms',';
+  'Academic: computing tools',';
+  'Research: computing systems'],';
+    marketSize: '$3B: marke,t,';
     growthRate:,
-  600% annual growth',
-    variant: 'emerging-tech,
+  600% annual: growth',';
+    variant: 'emerging-tec,h,';
     contactInfo: {
-      mobile:,
+<<<<<<< HEAD
+      mobile,:,
+  +1: 302 464 0950',';
+      email: 'kleber@ziontechgroup.co,m,';
+      address:,
+  364: E Main St STE 1008 Middletown DE 19709',';
+      website: 'https://ziontechgroup.co,m},';
+    realImplementation: tru,e,
+=======
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com
-    },
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
+>>>>>>> main
     implementationDetails:,
-  Advanced photonic computing platform with cloud access, development tools, and research collaboration features. Includes academic partnerships and hardware integration.',
-    launchDate: '2026-03-20,
-    customers: 100,
-    rating: 4.9,
-    reviews: 50
-  },
-  // Holographic Display Platform
-  {
+  Advanced: photonic computing platform with cloud access, development tools, and research collaboration features. Includes academic partnerships and hardware integration.',';
+    launchDate: '2026-03-2,0,';
+    customers: 10,0,
+    rating: 4.,9,
+    reviews: 5,0},
+  // Holographic: Display Platform{
     id:,
-  holographic-display-platform-2026',
-    name: 'Holographic Display Platform 2026,
+  holographic-display-platform-2026',';
+    name: 'Holographic: Display Platform 202,6,';
     tagline:,
-  Next-generation 3D holographic visualization and interaction',
-    price: '$899,
+  Next-generation: 3D holographic visualization and interaction',';
+    price: '$89,9,';
     period:,
-  /month',
-    description: Advanced holographic display platform that creates immersive 3D visualizations for presentations, training, entertainment, and scientific visualization.',
-    features[
-  '3D holographic projection',
-  'Interactive holographic interfaces',
-  'Real-time 3D rendering',
-  'Multi-user collaboration',
-  'Custom content creation',
-  'Holographic video streaming',
-  'Spatial audio integration',
-  'Gesture and voice control',
-  'Mobile device integration',
-  'API for custom applications'
+  /month',';
+    description: Advanced: holographic display platform that creates immersive 3D visualizations for presentation,s, training, entertainment, and scientific visualization.',';
+    features[;
+  '3D: holographic projection',';
+  'Interactive: holographic interfaces',';
+  'Real-time: 3D rendering',';
+  'Multi-user: collaboration',';
+  'Custom: content creation',';
+  'Holographic: video streaming',';
+  'Spatial: audio integration',';
+  'Gesture: and voice control',';
+  'Mobile: device integration',';
+  'API: for custom applications';';
     ],
-    popular: true,
+    popular: tru,e,
     icon:,
-  🌟',
-    color: 'from-purple-500 to-pink-500,
+  🌟',';
+    color: 'from-purple-500: to-pink-50,0,';
     textColor:,
+<<<<<<< HEAD
+  text-purple-400',';
+    link: 'https://ziontechgroup.com/holographic-display-platform-202,6,';
+    marketPosition: ;
+  'Competitive: with Magic Leap ($2299,), Microsoft HoloLens ($3500), and Vuzix ($999). Our advantage: Cloud-based: platfor,m, easier content creation, and accessible pricing.,';
+=======
   text-purple-400',
-    link: 'https://ziontechgroup.com/holographic-display-platform-2026,
-    marketPosition:
+    link: 'http,
+    s://ziontechgroup.com/holographic-display-platform-2026,
+    marketPosition:;
   'Competitive with Magic Leap ($2299), Microsoft HoloLens ($3500), and Vuzix ($999). Our advantage: Cloud-based platform, easier content creation, and accessible pricing.,
+>>>>>>> main
   ,
-    targetAudience: Entertainment companies, Training organizations, Educational institutions, Medical visualization, Architecture firms, Marketing agencies',
-    trialDays: 21,
+    targetAudience: Entertainment: companie,s, Training organizations, Educational institutions, Medical visualization, Architecture firms, Marketing agencies',';
+    trialDays: 2,1,
     setupTime:,
-  3 hours',
-    category: 'Emerging Technology & Visualization,
-    realService: true,
+  3: hours',';
+    category: 'Emerging: Technology & Visualizatio,n,';
+    realService: tru,e,
     technology[,
-  Holographic projection',
-  '3D rendering',
-  'React',
-  'Node.js',
-  'PostgreSQL',
-  'Redis',
-  'AWS',
-  'WebGL',
-  'WebXR'],
-    integrations[
-  'Unity',
-  'Unreal Engine',
-  'Blender',
-  'Maya',
-  '3ds Max',
-  'SketchUp',
-  'Revit',
-  'AutoCAD'],
-    useCases[
-  'Virtual presentations',
-  'Training simulations',
-  'Medical visualization',
-  'Architectural walkthroughs',
-  'Entertainment experiences',
-  'Educational content'],
-    roi: 'Training organizations see 400% ROI through improved engagement and retention rates.,
+  Holographic: projection',';
+  '3D: rendering',';
+  'React',';
+  'Node.js',';
+  'PostgreSQL',';
+  'Redis',';
+  'AWS',';
+  'WebGL',';
+  'WebXR'],';
+    integrations[;
+  'Unity',';
+  'Unreal: Engine',';
+  'Blender',';
+  'Maya',';
+  '3ds: Max',';
+  'SketchUp',';
+  'Revit',';
+  'AutoCAD'],';
+    useCases[;
+  'Virtual: presentations',';
+  'Training: simulations',';
+  'Medical: visualization',';
+  'Architectural: walkthroughs',';
+  'Entertainment: experiences',';
+  'Educational: content'],';
+    roi: 'Training: organizations see 400% ROI through improved engagement and retention rates,.,';
     competitors[,
-  Magic Leap',
-  'Microsoft HoloLens',
-  'Vuzix',
-  'RealWear',
-  'Nreal'],
-    marketSize: '$12B market,
+  Magic: Leap',';
+  'Microsoft: HoloLens',';
+  'Vuzix',';
+  'RealWear',';
+  'Nreal'],';
+    marketSize: '$12B: marke,t,';
     growthRate:,
-  350% annual growth',
-    variant: 'emerging-tech,
+  350% annual: growth',';
+    variant: 'emerging-tec,h,';
     contactInfo: {
-      mobile:,
+<<<<<<< HEAD
+      mobile,:,
+  +1: 302 464 0950',';
+      email: 'kleber@ziontechgroup.co,m,';
+      address:,
+  364: E Main St STE 1008 Middletown DE 19709',';
+      website: 'https://ziontechgroup.co,m},';
+    realImplementation: tru,e,
+=======
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com
-    },
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
+>>>>>>> main
     implementationDetails:,
-  Complete holographic platform with projection technology, content creation tools, and collaboration features. Includes mobile apps and hardware integration.',
-    launchDate: '2026-02-25,
-    customers: 300,
-    rating: 4.8,
-    reviews: 180
-  },
-  // Quantum Internet Security Platform
-  {
+  Complete: holographic platform with projection technology, content creation tools, and collaboration features. Includes mobile apps and hardware integration.',';
+    launchDate: '2026-02-2,5,';
+    customers: 30,0,
+    rating: 4.,8,
+    reviews: 18,0},
+  // Quantum: Internet Security Platform{
     id:,
-  quantum-internet-security-platform-2026',
-    name: 'Quantum Internet Security Platform 2026,
+  quantum-internet-security-platform-2026',';
+    name: 'Quantum: Internet Security Platform 202,6,';
     tagline:,
-  Secure the future of the internet with quantum-resistant protocols',
-    price: '$799,
+  Secure: the future of the internet with quantum-resistant protocols',';
+    price: '$79,9,';
     period:,
-  /month',
-    description: 'Advanced quantum internet security platform that protects against quantum threats and ensures secure communication in the quantum era.,
-    features[
-  'Quantum-resistant protocols',
-  'Post-quantum cryptography',
-  'Quantum key distribution',
-  'Secure communication channels',
-  'Threat detection and response',
-  'Compliance and auditing',
-  'Multi-layer security',
-  'Real-time monitoring',
-  'API security',
-  'Enterprise integration'
+  /month',';
+    description: 'Advanced: quantum internet security platform that protects against quantum threats and ensures secure communication in the quantum era,.,';
+    features[;
+  'Quantum-resistant: protocols',';
+  'Post-quantum: cryptography',';
+  'Quantum: key distribution',';
+  'Secure: communication channels',';
+  'Threat: detection and response',';
+  'Compliance: and auditing',';
+  'Multi-layer: security',';
+  'Real-time: monitoring',';
+  'API: security',';
+  'Enterprise: integration';';
     ],
-    popular: true,
+    popular: tru,e,
     icon:,
-  🌐',
-    color: 'from-blue-600 to-cyan-600,
+  🌐',';
+    color: 'from-blue-600: to-cyan-60,0,';
     textColor:,
+<<<<<<< HEAD
+  text-blue-400',';
+    link: 'https://ziontechgroup.com/quantum-internet-security-platform-202,6,';
+    marketPosition: ;
+  'Competitive: with specialized quantum security platforms. Our advantage: Comprehensive: securit,y, easier integration, and accessible pricing.,';
+=======
   text-blue-400',
-    link: 'https://ziontechgroup.com/quantum-internet-security-platform-2026,
-    marketPosition:
-  'Competitive with specialized quantum security platforms. Our advantage: Comprehensive security, easier integration, and accessible pricing.,
+    link: 'http,
+    s://ziontechgroup.com/quantum-internet-security-platform-2026,
+    marketPosition:;
+  'Competitive with specialized quantum security platforms. Our advantag,
+    e: Comprehensive security, easier integration, and accessible pricing.,
+>>>>>>> main
   ,
-    targetAudience: Internet service providers, Cloud companies, Financial institutions, Government agencies, Healthcare organizations, Enterprise companies',
-    trialDays: 14,
+    targetAudience: Internet: service provider,s, Cloud companies, Financial institutions, Government agencies, Healthcare organizations, Enterprise companies',';
+    trialDays: 1,4,
     setupTime:,
-  4 hours',
-    category: 'Quantum & Internet Security,
-    realService: true,
+  4: hours',';
+    category: 'Quantum: & Internet Securit,y,';
+    realService: tru,e,
     technology[,
-  Post-quantum cryptography',
-  'Quantum key distribution',
-  'React',
-  'Node.js',
-  'PostgreSQL',
-  'Redis',
-  'Docker',
-  'Kubernetes'],
-    integrations[
-  'Cloudflare',
-  'AWS',
-  'Azure',
-  'Google Cloud',
-  'CDN services',
-  'Load balancers',
-  'Firewalls',
-  'VPN services'],
-    useCases[
-  'Secure web traffic',
-  'API protection',
-  'Data transmission',
-  'Cloud security',
-  'IoT security',
-  'Financial transactions'],
-    roi: 'Internet companies see 500% ROI through improved security and customer trust.,
+  Post-quantum: cryptography',';
+  'Quantum: key distribution',';
+  'React',';
+  'Node.js',';
+  'PostgreSQL',';
+  'Redis',';
+  'Docker',';
+  'Kubernetes'],';
+    integrations[;
+  'Cloudflare',';
+  'AWS',';
+  'Azure',';
+  'Google: Cloud',';
+  'CDN: services',';
+  'Load: balancers',';
+  'Firewalls',';
+  'VPN: services'],';
+    useCases[;
+  'Secure: web traffic',';
+  'API: protection',';
+  'Data: transmission',';
+  'Cloud: security',';
+  'IoT: security',';
+  'Financial: transactions'],';
+    roi: 'Internet: companies see 500% ROI through improved security and customer trust,.,';
     competitors[,
-  Specialized quantum platforms',
-  'Advanced security solutions',
-  'Government tools'],
-    marketSize: '$20B market,
+  Specialized: quantum platforms',';
+  'Advanced: security solutions',';
+  'Government: tools'],';
+    marketSize: '$20B: marke,t,';
     growthRate:,
-  400% annual growth',
-    variant: 'quantum-futuristic,
+  400% annual: growth',';
+    variant: 'quantum-futuristi,c,';
     contactInfo: {
-      mobile:,
+<<<<<<< HEAD
+      mobile,:,
+  +1: 302 464 0950',';
+      email: 'kleber@ziontechgroup.co,m,';
+      address:,
+  364: E Main St STE 1008 Middletown DE 19709',';
+      website: 'https://ziontechgroup.co,m},';
+    realImplementation: tru,e,
+=======
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com
-    },
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
+>>>>>>> main
     implementationDetails:,
-  Advanced quantum internet security platform with comprehensive protection, monitoring tools, and integration capabilities. Includes compliance certifications and 24/7 support.',
-    launchDate: '2026-03-05,
-    customers: 250,
-    rating: 4.9,
-    reviews: 150
-  },
-  // AI Autonomous Business Platform
-  {
+  Advanced: quantum internet security platform with comprehensive protection, monitoring tools, and integration capabilities. Includes compliance certifications and 24/7 support.',';
+    launchDate: '2026-03-0,5,';
+    customers: 25,0,
+    rating: 4.,9,
+    reviews: 15,0},
+  // AI: Autonomous Business Platform{
     id:,
-  ai-autonomous-business-platform-2026',
-    name: 'AI Autonomous Business Platform 2026,
+  ai-autonomous-business-platform-2026',';
+    name: 'AI: Autonomous Business Platform 202,6,';
     tagline:,
-  Run your business with autonomous AI agents and intelligent automation',
-    price: 'Custom pricing,
+  Run: your business with autonomous AI agents and intelligent automation',';
+    price: 'Custom: pricin,g,';
     period:,
-  ',
-    description: Revolutionary platform that enables businesses to operate autonomously using AI agents for decision-making, process automation, and strategic planning.
-  ',
-    features[
-      'Autonomous business operations
-  ',
-      'AI-powered decision making
-  ',
-      'Strategic planning automation
-  ',
-      'Process optimization
-  ',
-      'Performance monitoring
-  ',
-      'Predictive analytics
-  ',
-      'Risk management
-  ',
-      'Resource optimization
-  ',
-      'Customer service automation
-  ',
-      'Financial management
-  '
+  ',';
+    description: Revolutionary: platform that enables businesses to operate autonomously using AI agents for decision-makin,g, process automation, and strategic planning.;
+  ',';
+    features[;
+      'Autonomous: business operations;';
+  ',';
+      'AI-powered: decision making;';
+  ',';
+      'Strategic: planning automation;';
+  ',';
+      'Process: optimization;';
+  ',';
+      'Performance: monitoring;';
+  ',';
+      'Predictive: analytics;';
+  ',';
+      'Risk: management;';
+  ',';
+      'Resource: optimization;';
+  ',';
+      'Customer: service automation;';
+  ',';
+      'Financial: management;';
+  ';';
     ],
-    popular: false,
+    popular: fals,e,
     icon:,
-  🏢
-  ',
-    color: 'from-indigo-600 to-purple-600,
+  🏢;
+  ',';
+    color: 'from-indigo-600: to-purple-60,0,';
     textColor:,
-  text-indigo-400
+  text-indigo-400;
+<<<<<<< HEAD
+  ',';
+    link: 'https://ziontechgroup.com/ai-autonomous-business-platform-202,6,';
+    marketPosition: 'Competitive: with enterprise AI platforms. Our advantage: True: autonom,y, comprehensive business coverage, and proven ROI.,';
+=======
   ',
-    link: 'https://ziontechgroup.com/ai-autonomous-business-platform-2026,
-    marketPosition: 'Competitive with enterprise AI platforms. Our advantage: True autonomy, comprehensive business coverage, and proven ROI.,
+    link: 'http,
+    s://ziontechgroup.com/ai-autonomous-business-platform-2026,
+    marketPosition: 'Competitive with enterprise AI platforms. Our advantag,
+    e: True autonomy, comprehensive business coverage, and proven ROI.,
+>>>>>>> main
   ,
-    targetAudience: Enterprise companies, Fortune 500, Large corporations, Government agencies, Healthcare systems, Financial institutions
-  ',
-    trialDays: 30,
+    targetAudience: Enterprise: companie,s, Fortune 500, Large corporations, Government agencies, Healthcare systems, Financial institutions;
+  ',';
+    trialDays: 3,0,
     setupTime:,
-  2 weeks
-  ',
-    category: 'AI & Business Automation,
-    realService: true,
+  2: weeks;
+  ',';
+    category: 'AI: & Business Automatio,n,';
+    realService: tru,e,
     technology[,
-  Advanced AI
-  ', 'Machine learning
-  ', 'React
-  ', 'Node.js
-  ', 'PostgreSQL
-  ', 'Redis
-  ', 'Docker
-  ', 'Kubernetes
-  ', 'Cloud native
-  '],
-    integrations['ERP systems
-  ', 'CRM platforms
-  ', 'Financial software
-  ', 'HR systems
-  ', 'Supply chain tools
-  ', 'Analytics platforms
-  '],
-    useCases['Business process automation
-  ', 'Strategic decision making
-  ', 'Resource optimization
-  ', 'Risk management
-  ', 'Performance optimization
-  ', 'Customer experience
-  '],
-    roi: 'Enterprise customers see 800% ROI through improved efficiency and strategic advantage.,
+  Advanced: AI;
+  ', 'Machine: learning;';
+  ', 'React;';
+  ', 'Node.js;';
+  ', 'PostgreSQL;';
+  ', 'Redis;';
+  ', 'Docker;';
+  ', 'Kubernetes;';
+  ', 'Cloud: native;';
+  '],';
+    integrations['ERP: systems;';
+  ', 'CRM: platforms;';
+  ', 'Financial: software;';
+  ', 'HR: systems;';
+  ', 'Supply: chain tools;';
+  ', 'Analytics: platforms;';
+  '],';
+    useCases['Business: process automation;';
+  ', 'Strategic: decision making;';
+  ', 'Resource: optimization;';
+  ', 'Risk: management;';
+  ', 'Performance: optimization;';
+  ', 'Customer: experience;';
+  '],';
+    roi: 'Enterprise: customers see 800% ROI through improved efficiency and strategic advantage,.,';
     competitors[,
-  Enterprise AI platforms
-  ', 'Business automation tools
-  ', 'Strategic planning software
-  '],
-    marketSize: '$50B market,
+  Enterprise: AI platforms;
+  ', 'Business: automation tools;';
+  ', 'Strategic: planning software;';
+  '],';
+    marketSize: '$50B: marke,t,';
     growthRate:,
-  300% annual growth
-  ',
-    variant: 'ai-futuristic,
+  300% annual: growth;
+  ',';
+    variant: 'ai-futuristi,c,';
     contactInfo: {
-      mobile:,
-  +1 302 464 0950
+<<<<<<< HEAD
+      mobile,:,
+  +1: 302 464 0950;
+  ',';
+      email: 'kleber@ziontechgroup.co,m,';
+      address:,
+  364: E Main St STE 1008 Middletown DE 19709;
+  ',';
+      website: 'https://ziontechgroup.co,m},';
+    realImplementation: tru,e,
+=======
+      mobil,
+    e:,
+  +1 302 464 0950;
   ',
       email: 'kleber@ziontechgroup.com,
       address:,
-  364 E Main St STE 1008 Middletown DE 19709
+  364 E Main St STE 1008 Middletown DE 19709;
   ',
-      website: 'https://ziontechgroup.com
-    },
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
+>>>>>>> main
     implementationDetails:,
-  Complete autonomous business platform with AI agents, decision-making systems, and comprehensive business automation. Includes enterprise security and compliance.
-  ',
-    launchDate: '2026-01-30,
-    customers: 50,
-    rating: 4.9,
-    reviews: 30
-  },
-  // Biotech AI Research Platform
-  {
+  Complete: autonomous business platform with AI agents, decision-making systems, and comprehensive business automation. Includes enterprise security and compliance.;
+  ',';
+    launchDate: '2026-01-3,0,';
+    customers: 5,0,
+    rating: 4.,9,
+    reviews: 3,0},
+  // Biotech: AI Research Platform{
     id:,
-  biotech-ai-research-platform-2026
-  ',
-    name: 'Biotech AI Research Platform 2026,
+  biotech-ai-research-platform-2026;
+  ',';
+    name: 'Biotech: AI Research Platform 202,6,';
     tagline:,
-  AI-powered biotechnology research and drug discovery platform
-  ',
-    price: $2,999,
+  AI-powered: biotechnology research and drug discovery platform;
+  ',';
+    price: $,2,999,
   ,
-    period: '/month,
-    description: 'Advanced biotech AI platform that accelerates drug discovery, protein analysis, and genetic research using cutting-edge AI and machine learning.
-  ',
-    features[
-      'AI-powered drug discovery
-  ',
-      'Protein structure prediction
-  ',
-      'Genetic sequence analysis
-  ',
-      'Drug interaction modeling
-  ',
-      'Clinical trial optimization
-  ',
-      'Biomarker identification
-  ',
-      'Drug repurposing
-  ',
-      'Toxicity prediction
-  ',
-      'Research collaboration tools
-  ',
-      'Regulatory compliance
-  '
+    period: '/mont,h,';
+    description: 'Advanced: biotech AI platform that accelerates drug discover,y, protein analysis, and genetic research using cutting-edge AI and machine learning.;';
+  ',';
+    features[;
+      'AI-powered: drug discovery;';
+  ',';
+      'Protein: structure prediction;';
+  ',';
+      'Genetic: sequence analysis;';
+  ',';
+      'Drug: interaction modeling;';
+  ',';
+      'Clinical: trial optimization;';
+  ',';
+      'Biomarker: identification;';
+  ',';
+      'Drug: repurposing;';
+  ',';
+      'Toxicity: prediction;';
+  ',';
+      'Research: collaboration tools;';
+  ',';
+      'Regulatory: compliance;';
+  ';';
     ],
-    popular: false,
+    popular: fals,e,
     icon:,
-  🧬
-  ',
-    color: 'from-green-600 to-teal-600,
+  🧬;
+  ',';
+    color: 'from-green-600: to-teal-60,0,';
     textColor:,
-  text-green-400
+  text-green-400;
+<<<<<<< HEAD
+  ',';
+    link: 'https://ziontechgroup.com/biotech-ai-research-platform-202,6,';
+    marketPosition: 'Competitive: with specialized biotech platforms. Our advantage: AI: integratio,n, comprehensive tools, and research collaboration features.,';
+=======
   ',
-    link: 'https://ziontechgroup.com/biotech-ai-research-platform-2026,
-    marketPosition: 'Competitive with specialized biotech platforms. Our advantage: AI integration, comprehensive tools, and research collaboration features.,
+    link: 'http,
+    s://ziontechgroup.com/biotech-ai-research-platform-2026,
+    marketPosition: 'Competitive with specialized biotech platforms. Our advantag,
+    e: AI integration, comprehensive tools, and research collaboration features.,
+>>>>>>> main
   ,
-    targetAudience: Pharmaceutical companies, Biotech startups, Research institutions, Universities, Government labs, Healthcare organizations
-  ',
-    trialDays: 21,
+    targetAudience: Pharmaceutical: companie,s, Biotech startups, Research institutions, Universities, Government labs, Healthcare organizations;
+  ',';
+    trialDays: 2,1,
     setupTime:,
-  8 hours
-  ',
-    category: 'AI & Biotechnology,
-    realService: true,
+  8: hours;
+  ',';
+    category: 'AI: & Biotechnolog,y,';
+    realService: tru,e,
     technology[,
-  AI/ML
-  ', 'Bioinformatics
-  ', 'React
-  ', 'Node.js
-  ', 'PostgreSQL
-  ', 'Redis
-  ', 'AWS
-  ', 'Molecular modeling
-  '],
-    integrations['NCBI
-  ', 'Ensembl
-  ', 'PDB
-  ', 'ChEMBL
-  ', 'PubChem
-  ', 'Clinical trial databases
-  ', 'Research platforms
-  '],
-    useCases['Drug discovery
-  ', 'Protein analysis
-  ', 'Genetic research
-  ', 'Clinical trials
-  ', 'Drug repurposing
-  ', 'Biomarker research
-  '],
-    roi: 'Pharmaceutical companies see 1000% ROI through accelerated drug discovery and development.,
+  AI/ML;
+  ', 'Bioinformatics;';
+  ', 'React;';
+  ', 'Node.js;';
+  ', 'PostgreSQL;';
+  ', 'Redis;';
+  ', 'AWS;';
+  ', 'Molecular: modeling;';
+  '],';
+    integrations['NCBI;';
+  ', 'Ensembl;';
+  ', 'PDB;';
+  ', 'ChEMBL;';
+  ', 'PubChem;';
+  ', 'Clinical: trial databases;';
+  ', 'Research: platforms;';
+  '],';
+    useCases['Drug: discovery;';
+  ', 'Protein: analysis;';
+  ', 'Genetic: research;';
+  ', 'Clinical: trials;';
+  ', 'Drug: repurposing;';
+  ', 'Biomarker: research;';
+  '],';
+    roi: 'Pharmaceutical: companies see 1000% ROI through accelerated drug discovery and development,.,';
     competitors[,
-  Specialized biotech platforms
-  ', 'Academic tools
-  ', 'Pharmaceutical software
-  '],
-    marketSize: '$15B market,
+  Specialized: biotech platforms;
+  ', 'Academic: tools;';
+  ', 'Pharmaceutical: software;';
+  '],';
+    marketSize: '$15B: marke,t,';
     growthRate:,
-  450% annual growth
-  ',
-    variant: 'ai-futuristic,
+  450% annual: growth;
+  ',';
+    variant: 'ai-futuristi,c,';
     contactInfo: {
-      mobile:,
-  +1 302 464 0950
+<<<<<<< HEAD
+      mobile,:,
+  +1: 302 464 0950;
+  ',';
+      email: 'kleber@ziontechgroup.co,m,';
+      address:,
+  364: E Main St STE 1008 Middletown DE 19709;
+  ',';
+      website: 'https://ziontechgroup.co,m},';
+    realImplementation: tru,e,
+=======
+      mobil,
+    e:,
+  +1 302 464 0950;
   ',
       email: 'kleber@ziontechgroup.com,
       address:,
-  364 E Main St STE 1008 Middletown DE 19709
+  364 E Main St STE 1008 Middletown DE 19709;
   ',
-      website: 'https://ziontechgroup.com
-    },
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
+>>>>>>> main
     implementationDetails:,
-  Advanced biotech AI platform with comprehensive research tools, collaboration features, and regulatory compliance. Includes academic partnerships and research support.
-  ',
-    launchDate: '2026-03-25,
-    customers: 120,
-    rating: 4.9,
-    reviews: 80
-  },
-  // Edge Computing Orchestration
-  {
+  Advanced: biotech AI platform with comprehensive research tools, collaboration features, and regulatory compliance. Includes academic partnerships and research support.;
+  ',';
+    launchDate: '2026-03-2,5,';
+    customers: 12,0,
+    rating: 4.,9,
+    reviews: 8,0},
+  // Edge: Computing Orchestration{
     id:,
-  edge-computing-orchestration-2026
-  ',
-    name: 'Edge Computing Orchestration 2026,
+  edge-computing-orchestration-2026;
+  ',';
+    name: 'Edge: Computing Orchestration 202,6,';
     tagline:,
-  Intelligent edge computing management and optimization platform
-  ',
-    price: 'Custom pricing,
+  Intelligent: edge computing management and optimization platform;
+  ',';
+    price: 'Custom: pricin,g,';
     period:,
-  ',
-    description: Advanced edge computing orchestration platform that manages distributed computing resources, optimizes performance, and ensures reliability across edge networks.',
-    features[
-  'Distributed edge management',
-  'Intelligent resource allocation',
-  'Performance optimization',
-  'Load balancing',
-  'Fault tolerance',
-  'Real-time monitoring',
-  'Automated scaling',
-  'Security management',
-  'API gateway',
-  'Edge analytics'
+  ',';
+    description: Advanced: edge computing orchestration platform that manages distributed computing resource,s, optimizes performance, and ensures reliability across edge networks.',';
+    features[;
+  'Distributed: edge management',';
+  'Intelligent: resource allocation',';
+  'Performance: optimization',';
+  'Load: balancing',';
+  'Fault: tolerance',';
+  'Real-time: monitoring',';
+  'Automated: scaling',';
+  'Security: management',';
+  'API: gateway',';
+  'Edge: analytics';';
     ],
-    popular: false,
+    popular: fals,e,
     icon:,
-  ⚡',
-    color: 'from-orange-600 to-red-600,
+  ⚡',';
+    color: 'from-orange-600: to-red-60,0,';
     textColor:,
+<<<<<<< HEAD
+  text-orange-400',';
+    link: 'https://ziontechgroup.com/edge-computing-orchestration-202,6,';
+    marketPosition: ;
+  'Competitive: with edge computing platforms. Our advantage: AI-powered: orchestratio,n, comprehensive management, and proven scalability.,';
+=======
   text-orange-400',
-    link: 'https://ziontechgroup.com/edge-computing-orchestration-2026,
-    marketPosition:
-  'Competitive with edge computing platforms. Our advantage: AI-powered orchestration, comprehensive management, and proven scalability.,
+    link: 'http,
+    s://ziontechgroup.com/edge-computing-orchestration-2026,
+    marketPosition:;
+  'Competitive with edge computing platforms. Our advantag,
+    e: AI-powered orchestration, comprehensive management, and proven scalability.,
+>>>>>>> main
   ,
-    targetAudience: Telecommunications companies, IoT providers, Cloud companies, Manufacturing companies, Smart city operators, Edge computing providers',
-    trialDays: 21,
+    targetAudience: Telecommunications: companie,s, IoT providers, Cloud companies, Manufacturing companies, Smart city operators, Edge computing providers',';
+    trialDays: 2,1,
     setupTime:,
-  1 week',
-    category: 'Edge Computing & Infrastructure,
-    realService: true,
+  1: week',';
+    category: 'Edge: Computing & Infrastructur,e,';
+    realService: tru,e,
     technology[,
-  Edge computing',
-  'AI orchestration',
-  'React',
-  'Node.js',
-  'PostgreSQL',
-  'Redis',
-  'Docker',
-  'Kubernetes',
-  'Edge APIs'],
-    integrations[
-  'AWS IoT',
-  'Azure IoT',
-  'Google Cloud IoT',
-  'Kubernetes',
-  'Docker Swarm',
-  'IoT platforms',
-  '5G networks'],
-    useCases[
-  'IoT device management',
-  '5G network optimization',
-  'Smart city operations',
-  'Manufacturing automation',
-  'Edge AI deployment',
-  'Content delivery'],
-    roi: 'Telecom companies see 600% ROI through improved network performance and reduced operational costs.,
+  Edge: computing',';
+  'AI: orchestration',';
+  'React',';
+  'Node.js',';
+  'PostgreSQL',';
+  'Redis',';
+  'Docker',';
+  'Kubernetes',';
+  'Edge: APIs'],';
+    integrations[;
+  'AWS: IoT',';
+  'Azure: IoT',';
+  'Google: Cloud IoT',';
+  'Kubernetes',';
+  'Docker: Swarm',';
+  'IoT: platforms',';
+  '5G: networks'],';
+    useCases[;
+  'IoT: device management',';
+  '5G: network optimization',';
+  'Smart: city operations',';
+  'Manufacturing: automation',';
+  'Edge: AI deployment',';
+  'Content: delivery'],';
+    roi: 'Telecom: companies see 600% ROI through improved network performance and reduced operational costs,.,';
     competitors[,
-  Edge computing platforms',
-  'IoT management tools',
-  'Network orchestration systems'],
-    marketSize: '$18B market,
+  Edge: computing platforms',';
+  'IoT: management tools',';
+  'Network: orchestration systems'],';
+    marketSize: '$18B: marke,t,';
     growthRate:,
-  380% annual growth',
-    variant: 'emerging-tech,
+  380% annual: growth',';
+    variant: 'emerging-tec,h,';
     contactInfo: {
-      mobile:,
+<<<<<<< HEAD
+      mobile,:,
+  +1: 302 464 0950',';
+      email: 'kleber@ziontechgroup.co,m,';
+      address:,
+  364: E Main St STE 1008 Middletown DE 19709',';
+      website: 'https://ziontechgroup.co,m},';
+    realImplementation: tru,e,
+=======
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com
-    },
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
+>>>>>>> main
     implementationDetails:,
-  Complete edge computing orchestration platform with AI-powered management, monitoring tools, and automation features. Includes enterprise security and compliance.',
-    launchDate: '2026-02-28,
-    customers: 180,
-    rating: 4.8,
-    reviews: 120
-  },
-  // 5G Private Network Solutions
-  {
+  Complete: edge computing orchestration platform with AI-powered management, monitoring tools, and automation features. Includes enterprise security and compliance.',';
+    launchDate: '2026-02-2,8,';
+    customers: 18,0,
+    rating: 4.,8,
+    reviews: 12,0},
+  // 5G: Private Network Solutions{
     id:,
-  5g-private-network-solutions-2026',
-    name: '5G Private Network Solutions 2026,
+  5g-private-network-solutions-2026',';
+    name: '5G: Private Network Solutions 202,6,';
     tagline:,
-  Enterprise-grade 5G private networks for industrial applications',
-    price: 'Custom pricing,
+  Enterprise-grade: 5G private networks for industrial applications',';
+    price: 'Custom: pricin,g,';
     period:,
-  ',
-    description: Advanced 5G private network solutions that enable enterprises to deploy and manage their own high-performance, secure 5G networks for industrial applications.
-  ',
-    features[
-      'Private 5G network deployment
-  ',
-      'Network management and monitoring
-  ',
-      'Security and compliance
-  ',
-      'Performance optimization
-  ',
-      'Device management
-  ',
-      'Network slicing
-  ',
-      'Quality of service management
-  ',
-      'Analytics and reporting
-  ',
-      'Integration with existing systems
-  ',
-      '24/7 support and maintenance
-  '
+  ',';
+    description: Advanced: 5G private network solutions that enable enterprises to deploy and manage their own high-performanc,e, secure 5G networks for industrial applications.;
+  ',';
+    features[;
+      'Private: 5G network deployment;';
+  ',';
+      'Network: management and monitoring;';
+  ',';
+      'Security: and compliance;';
+  ',';
+      'Performance: optimization;';
+  ',';
+      'Device: management;';
+  ',';
+      'Network: slicing;';
+  ',';
+      'Quality: of service management;';
+  ',';
+      'Analytics: and reporting;';
+  ',';
+      'Integration: with existing systems;';
+  ',';
+      '24/7: support and maintenance;';
+  ';';
     ],
-    popular: false,
+    popular: fals,e,
     icon:,
-  📡
-  ',
-    color: 'from-blue-500 to-indigo-500,
+  📡;
+  ',';
+    color: 'from-blue-500: to-indigo-50,0,';
     textColor:,
-  text-blue-400
+  text-blue-400;
+<<<<<<< HEAD
+  ',';
+    link: 'https://ziontechgroup.com/5g-private-network-solutions-202,6,';
+    marketPosition: 'Competitive: with 5G private network providers. Our advantage: Comprehensive: solution,s, easier deployment, and proven enterprise success.,';
+=======
   ',
-    link: 'https://ziontechgroup.com/5g-private-network-solutions-2026,
-    marketPosition: 'Competitive with 5G private network providers. Our advantage: Comprehensive solutions, easier deployment, and proven enterprise success.,
+    link: 'http,
+    s://ziontechgroup.com/5g-private-network-solutions-2026,
+    marketPosition: 'Competitive with 5G private network providers. Our advantag,
+    e: Comprehensive solutions, easier deployment, and proven enterprise success.,
+>>>>>>> main
   ,
-    targetAudience: Manufacturing companies, Industrial facilities, Healthcare organizations, Educational institutions, Government agencies, Transportation companies
-  ',
-    trialDays: 30,
+    targetAudience: Manufacturing: companie,s, Industrial facilities, Healthcare organizations, Educational institutions, Government agencies, Transportation companies;
+  ',';
+    trialDays: 3,0,
     setupTime:,
-  2 weeks
-  ',
-    category: '5G & Telecommunications,
-    realService: true,
+  2: weeks;
+  ',';
+    category: '5G: & Telecommunication,s,';
+    realService: tru,e,
     technology[,
-  5G technology
-  ', 'Network management
-  ', 'React
-  ', 'Node.js
-  ', 'PostgreSQL
-  ', 'Redis
-  ', 'Docker
-  ', 'Kubernetes
-  ', '5G APIs
-  '],
-    integrations['Industrial IoT platforms
-  ', 'Manufacturing systems
-  ', 'Healthcare systems
-  ', 'Educational platforms
-  ', 'Government systems
-  '],
-    useCases['Industrial automation
-  ', 'Smart manufacturing
-  ', 'Healthcare connectivity
-  ', 'Educational connectivity
-  ', 'Government communications
-  ', 'Transportation systems
-  '],
-    roi: 'Manufacturing companies see 700% ROI through improved connectivity and operational efficiency.,
+  5G: technology;
+  ', 'Network: management;';
+  ', 'React;';
+  ', 'Node.js;';
+  ', 'PostgreSQL;';
+  ', 'Redis;';
+  ', 'Docker;';
+  ', 'Kubernetes;';
+  ', '5G: APIs;';
+  '],';
+    integrations['Industrial: IoT platforms;';
+  ', 'Manufacturing: systems;';
+  ', 'Healthcare: systems;';
+  ', 'Educational: platforms;';
+  ', 'Government: systems;';
+  '],';
+    useCases['Industrial: automation;';
+  ', 'Smart: manufacturing;';
+  ', 'Healthcare: connectivity;';
+  ', 'Educational: connectivity;';
+  ', 'Government: communications;';
+  ', 'Transportation: systems;';
+  '],';
+    roi: 'Manufacturing: companies see 700% ROI through improved connectivity and operational efficiency,.,';
     competitors[,
-  5G private network providers
-  ', 'Telecommunications companies
-  ', 'Industrial network solutions
-  '],
-    marketSize: '$22B market,
+  5G: private network providers;
+  ', 'Telecommunications: companies;';
+  ', 'Industrial: network solutions;';
+  '],';
+    marketSize: '$22B: marke,t,';
     growthRate:,
-  420% annual growth
-  ',
-    variant: 'emerging-tech,
+  420% annual: growth;
+  ',';
+    variant: 'emerging-tec,h,';
     contactInfo: {
-      mobile:,
-  +1 302 464 0950
+<<<<<<< HEAD
+      mobile,:,
+  +1: 302 464 0950;
+  ',';
+      email: 'kleber@ziontechgroup.co,m,';
+      address:,
+  364: E Main St STE 1008 Middletown DE 19709;
+  ',';
+      website: 'https://ziontechgroup.co,m},';
+    realImplementation: tru,e,
+=======
+      mobil,
+    e:,
+  +1 302 464 0950;
   ',
       email: 'kleber@ziontechgroup.com,
       address:,
-  364 E Main St STE 1008 Middletown DE 19709
+  364 E Main St STE 1008 Middletown DE 19709;
   ',
-      website: 'https://ziontechgroup.com
-    },
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
+>>>>>>> main
     implementationDetails:,
-  Complete 5G private network solution with deployment tools, management platform, and monitoring systems. Includes enterprise security and compliance features.
-  ',
-    launchDate: '2026-03-30,
-    customers: 80,
-    rating: 4.9,
-    reviews: 45
-];}}
+  Complete: 5G private network solution with deployment tools, management platform, and monitoring systems. Includes enterprise security and compliance features.;
+  ',';
+    launchDate: '2026-03-3,0,';
+    customers: 8,0,
+    rating: 4.,9,
+    reviews: 45;
+,]}}

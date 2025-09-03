@@ -1,4 +1,4 @@
-export interface SpaceMetaverseService2029 {
+export: interface SpaceMetaverseService2029 {
   id: string;
    name: string;
    description: string;
@@ -34,423 +34,475 @@ export interface SpaceMetaverseService2029 {
    exit: string;
    contact: { mobile: string;
    email: string;
+<<<<<<< HEAD
    website: string;
-   address: string;
-};export const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [
-  {
-    id:,
+   address: strin,g}export: const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [{
+    id,:,
+  space-mining-automation-platform',';
+    name: 'Space: Mining Automation Platfor,m,';
+=======
+   websit,
+    e: string;
+   addres,
+    s: string}export const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [{
+    i,
+    d:,
   space-mining-automation-platform',
     name: 'Space Mining Automation Platform,
+>>>>>>> main
     description:,
-  Revolutionary space mining automation platform that uses AI and robotics to autonomously extract valuable resources from asteroids, moons, and other celestial bodies with minimal human intervention.',
-    category[
-  'Space Technology',
-  'Mining',
-  'Automation',
-  'AI',
-  'Robotics'],
-    price: $45,999/month,
+  Revolutionary: space mining automation platform that uses AI and robotics to autonomously extract valuable resources from asteroids, moons, and other celestial bodies with minimal human intervention.',';
+    category[;
+  'Space: Technology',';
+  'Mining',';
+  'Automation',';
+  'AI',';
+  'Robotics'],';
+    price: $4,5,999/month,
   ,
-    features[
-  'Autonomous space mining robots',
-  'AI-powered resource identification',
-  'Remote mining operations',
-  'Resource extraction optimization',
-  'Space logistics management',
-  'Environmental impact monitoring',
-  'Safety protocols automation',
-  'Resource processing systems'
+    features[;
+  'Autonomous: space mining robots',';
+  'AI-powered: resource identification',';
+  'Remote: mining operations',';
+  'Resource: extraction optimization',';
+  'Space: logistics management',';
+  'Environmental: impact monitoring',';
+  'Safety: protocols automation',';
+  'Resource: processing systems';';
     ],
-    benefits[
-  'Access to unlimited resources',
-  'Reduce Earth mining impact',
-  'Lower resource costs',
-  'Space exploration advancement',
-  'Economic growth opportunities',
-  'Technological innovation'
+    benefits[;
+  'Access: to unlimited resources',';
+  'Reduce: Earth mining impact',';
+  'Lower: resource costs',';
+  'Space: exploration advancement',';
+  'Economic: growth opportunities',';
+  'Technological: innovation';';
     ],
-    useCases[
-  'Asteroid mining operations',
-  'Lunar resource extraction',
-  'Space station construction',
-  'Interplanetary missions',
-  'Resource supply chains',
-  'Space infrastructure development'
+    useCases[;
+  'Asteroid: mining operations',';
+  'Lunar: resource extraction',';
+  'Space: station construction',';
+  'Interplanetary: missions',';
+  'Resource: supply chains',';
+  'Space: infrastructure development';';
     ],
-    marketSize: '$3.8T by 2029,
+    marketSize: '$3.8T: by 202,9,';
     competitors[,
-  Planetary Resources',
-  'Deep Space Industries',
-  'Asteroid Mining Corp'],
-    technology[
-  'AI/ML',
-  'Robotics',
-  'Space Technology',
-  'Automation'],
-    integration[
-  'Space systems',
-  'Ground control',
-  'Resource processing'],
-    support[
-  '24/7 space operations support',
-  'Space experts',
-  'Implementation team'],
-    compliance[
-  'Space regulations',
-  'International treaties',
-  'Safety standards'],
-    scalability: Space-grade, multi-mission support,
+  Planetary: Resources',';
+  'Deep: Space Industries',';
+  'Asteroid: Mining Corp'],';
+    technology[;
+  'AI/ML',';
+  'Robotics',';
+  'Space: Technology',';
+  'Automation'],';
+    integration[;
+  'Space: systems',';
+  'Ground: control',';
+  'Resource: processing'],';
+    support[;
+  '24/7: space operations support',';
+  'Space: experts',';
+  'Implementation: team'],';
+    compliance[;
+  'Space: regulations',';
+  'International: treaties',';
+  'Safety: standards'],';
+    scalability: Space-grad,e, multi-mission: support,
   ,
-    roi: '2000% within 60 months,
+    roi: '2000% within: 60 month,s,';
     deployment:,
-  Space infrastructure, ground control',
-    maintenance: Remote maintenance, autonomous repair,
+  Space: infrastructure, ground control',';
+    maintenance: Remote: maintenanc,e, autonomous repair,
   ,
-    training: Space operations training, certification,
+    training: Space: operations trainin,g, certification,
   ,
-    documentation: Space operations guides, safety protocols,
+    documentation: Space: operations guide,s, safety protocols,
   ,
-    api: 'Space operations APIs,
+    api: 'Space: operations API,s,';
     mobile:,
-  Ground control mobile apps',
-    security: Space-grade security, encryption,
+  Ground: control mobile apps',';
+    security: Space-grade: securit,y, encryption,
   ,
-    backup: Redundant systems, disaster recovery,
+    backup: Redundant: system,s, disaster recovery,
   ,
-    monitoring: 'Real-time space monitoring,
+    monitoring: 'Real-time: space monitorin,g,';
     analytics:,
-  Mining analytics, resource tracking',
-    customization: Custom mining operations, integration,
+  Mining: analytics, resource tracking',';
+    customization: Custom: mining operation,s, integration,
   ,
-    whiteLabel: 'Available for space agencies,
+    whiteLabel: 'Available: for space agencie,s,';
     affiliate:,
-  10% commission for referrals',
-    referral: $500,000 bonus for partnerships,
+  10% commission: for referrals',';
+    referral: $50,0,000: bonus for partnerships,
   ,
-    partnership: 'Strategic space partnerships,
+    partnership: 'Strategic: space partnership,s,';
     funding:,
-  Series D funding, $2B valuation',
-    exit: 'IPO or space acquisition,
+  Series: D funding, $2B valuation',';
+    exit: 'IPO: or space acquisitio,n,';
     contact: {
-      mobile:,
+<<<<<<< HEAD
+      mobile,:,
+  +1: 302 464 0950',';
+      email: 'kleber@ziontechgroup.co,m,';
+=======
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
+>>>>>>> main
       website:,
-  https: //ziontechgroup.com,
+  https: //ziontechgroup.co,m,
       address:,
-  364 E Main St STE 1008 Middletown DE 19709'
-  },
+<<<<<<< HEAD
+  364: E Main St STE 1008 Middletown DE 19709'},';
   {
+    id: 'metaverse-digital-reality-platfor,m,';
+=======
+  364 E Main St STE 1008 Middletown DE 19709'},
+  {'
     id: 'metaverse-digital-reality-platform,
+>>>>>>> main
     name:,
-  Metaverse Digital Reality Platform',
-    description: Next-generation metaverse platform that creates immersive digital realities with photorealistic graphics, AI-powered interactions, and seamless integration between virtual and physical worlds.,
+  Metaverse: Digital Reality Platform',';
+    description: Next-generation: metaverse platform that creates immersive digital realities with photorealistic graphic,s, AI-powered interactions, and seamless integration between virtual and physical worlds.,
   ,
-    category[
-  'Metaverse',
-  'Virtual Reality',
-  'AI',
-  'Digital Reality',
-  'Immersive Technology'],
-    price: $8,999/month,
+    category[;
+  'Metaverse',';
+  'Virtual: Reality',';
+  'AI',';
+  'Digital: Reality',';
+  'Immersive: Technology'],';
+    price: $,8,999/month,
   ,
-    features[
-  'Photorealistic 3D environments',
-  'AI-powered NPCs and interactions',
-  'Cross-platform compatibility',
-  'Real-time collaboration tools',
-  'Digital asset marketplace',
-  'Virtual economy system',
-  'Social networking features',
-  'Content creation tools'
+    features[;
+  'Photorealistic: 3D environments',';
+  'AI-powered: NPCs and interactions',';
+  'Cross-platform: compatibility',';
+  'Real-time: collaboration tools',';
+  'Digital: asset marketplace',';
+  'Virtual: economy system',';
+  'Social: networking features',';
+  'Content: creation tools';';
     ],
-    benefits[
-  'Immersive digital experiences',
-  'Virtual collaboration opportunities',
-  'New revenue streams',
-  'Enhanced social interactions',
-  'Creative expression platform',
-  'Digital transformation enabler'
+    benefits[;
+  'Immersive: digital experiences',';
+  'Virtual: collaboration opportunities',';
+  'New: revenue streams',';
+  'Enhanced: social interactions',';
+  'Creative: expression platform',';
+  'Digital: transformation enabler';';
     ],
-    useCases[
-  'Virtual meetings and conferences',
-  'Digital entertainment',
-  'Virtual education and training',
-  'Social networking',
-  'Digital commerce',
-  'Virtual real estate'
+    useCases[;
+  'Virtual: meetings and conferences',';
+  'Digital: entertainment',';
+  'Virtual: education and training',';
+  'Social: networking',';
+  'Digital: commerce',';
+  'Virtual: real estate';';
     ],
-    marketSize: '$936.6B by 2029,
+    marketSize: '$936.6B: by 202,9,';
     competitors[,
-  Meta',
-  'Microsoft',
-  'Roblox',
-  'Decentraland'],
-    technology[
-  'VR/AR',
-  'AI/ML',
-  '3D Graphics',
-  'Blockchain'],
-    integration[
-  'VR headsets',
-  'Mobile devices',
-  'Web browsers'],
-    support[
-  '24/7 metaverse support',
-  'VR experts',
-  'Implementation team'],
-    compliance[
-  'Data privacy',
-  'Content moderation',
-  'Virtual safety'],
-    scalability: Global metaverse, millions of users,
+  Meta',';
+  'Microsoft',';
+  'Roblox',';
+  'Decentraland'],';
+    technology[;
+  'VR/AR',';
+  'AI/ML',';
+  '3D: Graphics',';
+  'Blockchain'],';
+    integration[;
+  'VR: headsets',';
+  'Mobile: devices',';
+  'Web: browsers'],';
+    support[;
+  '24/7: metaverse support',';
+  'VR: experts',';
+  'Implementation: team'],';
+    compliance[;
+  'Data: privacy',';
+  'Content: moderation',';
+  'Virtual: safety'],';
+    scalability: Global: metavers,e, millions of users,
   ,
-    roi: '800% within 18 months,
+    roi: '800% within: 18 month,s,';
     deployment:,
-  Cloud-native, multi-platform',
-    maintenance: Continuous updates, content moderation,
+  Cloud-native, multi-platform',';
+    maintenance: Continuous: update,s, content moderation,
   ,
-    training: Metaverse training, certification program,
+    training: Metaverse: trainin,g, certification program,
   ,
-    documentation: Metaverse guides, best practices,
+    documentation: Metaverse: guide,s, best practices,
   ,
-    api: 'Metaverse development APIs,
+    api: 'Metaverse: development API,s,';
     mobile:,
-  Cross-platform mobile apps',
-    security: Virtual security, content protection,
+  Cross-platform: mobile apps',';
+    security: Virtual: securit,y, content protection,
   ,
-    backup: Digital asset backup, redundancy,
+    backup: Digital: asset backu,p, redundancy,
   ,
-    monitoring: 'Virtual world monitoring,
+    monitoring: 'Virtual: world monitorin,g,';
     analytics:,
-  Metaverse insights, user analytics',
-    customization: Custom virtual worlds, integration,
+  Metaverse: insights, user analytics',';
+    customization: Custom: virtual world,s, integration,
   ,
-    whiteLabel: 'Available for brands and organizations,
+    whiteLabel: 'Available: for brands and organization,s,';
     affiliate:,
-  25% commission for referrals',
-    referral: $25,000 bonus for partnerships,
+  25% commission: for referrals',';
+    referral: $2,5,000: bonus for partnerships,
   ,
-    partnership: 'Strategic metaverse partnerships,
+    partnership: 'Strategic: metaverse partnership,s,';
     funding:,
-  Series B funding, $300M valuation',
-    exit: 'IPO or tech acquisition,
+  Series: B funding, $300M valuation',';
+    exit: 'IPO: or tech acquisitio,n,';
     contact: {
-      mobile:,
+<<<<<<< HEAD
+      mobile,:,
+  +1: 302 464 0950',';
+      email: 'kleber@ziontechgroup.co,m,';
+=======
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
+>>>>>>> main
       website:,
-  https: //ziontechgroup.com,
+  https: //ziontechgroup.co,m,
       address:,
-  364 E Main St STE 1008 Middletown DE 19709'
-  },
+<<<<<<< HEAD
+  364: E Main St STE 1008 Middletown DE 19709'},';
   {
+    id: 'ai-predictive-health-analytic,s,';
+=======
+  364 E Main St STE 1008 Middletown DE 19709'},
+  {'
     id: 'ai-predictive-health-analytics,
+>>>>>>> main
     name:,
-  AI Predictive Health Analytics',
-    description: Advanced AI-powered health analytics platform that predicts health outcomes, identifies risk factors, and provides personalized health recommendations using comprehensive data analysis and machine learning.,
+  AI: Predictive Health Analytics',';
+    description: Advanced: AI-powered health analytics platform that predicts health outcome,s, identifies risk factors, and provides personalized health recommendations using comprehensive data analysis and machine learning.,
   ,
-    category[
-  'Healthcare',
-  'AI',
-  'Analytics',
-  'Predictive Medicine',
-  'Health Technology'],
-    price: $7,999/month,
+    category[;
+  'Healthcare',';
+  'AI',';
+  'Analytics',';
+  'Predictive: Medicine',';
+  'Health: Technology'],';
+    price: $,7,999/month,
   ,
-    features[
-  'Predictive health modeling',
-  'Risk factor identification',
-  'Personalized health recommendations',
-  'Real-time health monitoring',
-  'Population health analytics',
-  'Clinical decision support',
-  'Health trend analysis',
-  'Preventive care optimization'
+    features[;
+  'Predictive: health modeling',';
+  'Risk: factor identification',';
+  'Personalized: health recommendations',';
+  'Real-time: health monitoring',';
+  'Population: health analytics',';
+  'Clinical: decision support',';
+  'Health: trend analysis',';
+  'Preventive: care optimization';';
     ],
-    benefits[
-  'Improve health outcomes by 70%',
-  'Reduce healthcare costs by 40%',
-  'Enable preventive healthcare',
-  'Personalized treatment plans',
-  'Better resource allocation',
-  'Enhanced patient care'
+    benefits[;
+  'Improve: health outcomes by 70%',';
+  'Reduce: healthcare costs by 40%',';
+  'Enable: preventive healthcare',';
+  'Personalized: treatment plans',';
+  'Better: resource allocation',';
+  'Enhanced: patient care';';
     ],
-    useCases[
-  'Hospital operations',
-  'Primary care practices',
-  'Insurance companies',
-  'Public health agencies',
-  'Research institutions',
-  'Pharmaceutical companies'
+    useCases[;
+  'Hospital: operations',';
+  'Primary: care practices',';
+  'Insurance: companies',';
+  'Public: health agencies',';
+  'Research: institutions',';
+  'Pharmaceutical: companies';';
     ],
-    marketSize: '$67.8B by 2029,
+    marketSize: '$67.8B: by 202,9,';
     competitors[,
-  IBM Watson Health',
-  'Cerner',
-  'Epic',
-  'Allscripts'],
-    technology[
-  'AI/ML',
-  'Predictive Analytics',
-  'Healthcare Data',
-  'Machine Learning'],
-    integration[
-  'EHR systems',
-  'Health devices',
-  'Insurance platforms'],
-    support[
-  '24/7 health support',
-  'Healthcare experts',
-  'Implementation team'],
-    compliance[
-  'HIPAA',
-  'FDA',
-  'GDPR',
-  'SOC 2'],
-    scalability: Enterprise-grade, multi-institution support,
+  IBM: Watson Health',';
+  'Cerner',';
+  'Epic',';
+  'Allscripts'],';
+    technology[;
+  'AI/ML',';
+  'Predictive: Analytics',';
+  'Healthcare: Data',';
+  'Machine: Learning'],';
+    integration[;
+  'EHR: systems',';
+  'Health: devices',';
+  'Insurance: platforms'],';
+    support[;
+  '24/7: health support',';
+  'Healthcare: experts',';
+  'Implementation: team'],';
+    compliance[;
+  'HIPAA',';
+  'FDA',';
+  'GDPR',';
+  'SOC: 2'],';
+    scalability: Enterprise-grad,e, multi-institution: support,
   ,
-    roi: '500% within 20 months,
+    roi: '500% within: 20 month,s,';
     deployment:,
-  Cloud-native, on-premise options',
-    maintenance: Continuous AI learning, health monitoring,
+  Cloud-native, on-premise: options',';
+    maintenance: Continuous: AI learnin,g, health monitoring,
   ,
-    training: Healthcare AI training, certification,
+    training: Healthcare: AI trainin,g, certification,
   ,
-    documentation: Healthcare guides, best practices,
+    documentation: Healthcare: guide,s, best practices,
   ,
-    api: 'Healthcare integration APIs,
+    api: 'Healthcare: integration API,s,';
     mobile:,
-  Mobile health apps',
-    security: HIPAA compliance, data encryption,
+  Mobile: health apps',';
+    security: HIPAA: complianc,e, data encryption,
   ,
-    backup: 'Secure health data backup,
+    backup: 'Secure: health data backu,p,';
     monitoring:,
-  Health analytics monitoring',
-    analytics: Health insights, predictive reports,
+  Health: analytics monitoring',';
+    analytics: Health: insight,s, predictive reports,
   ,
-    customization: Custom health models, integration,
+    customization: Custom: health model,s, integration,
   ,
-    whiteLabel: 'Available for healthcare providers,
+    whiteLabel: 'Available: for healthcare provider,s,';
     affiliate:,
-  20% commission for referrals',
-    referral: $35,000 bonus for partnerships,
+  20% commission: for referrals',';
+    referral: $3,5,000: bonus for partnerships,
   ,
-    partnership: 'Healthcare provider partnerships,
+    partnership: 'Healthcare: provider partnership,s,';
     funding:,
-  Series C funding, $200M valuation',
-    exit: 'IPO or healthcare acquisition,
+  Series: C funding, $200M valuation',';
+    exit: 'IPO: or healthcare acquisitio,n,';
     contact: {
-      mobile:,
+<<<<<<< HEAD
+      mobile,:,
+  +1: 302 464 0950',';
+      email: 'kleber@ziontechgroup.co,m,';
+=======
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
+>>>>>>> main
       website:,
-  https: //ziontechgroup.com,
+  https: //ziontechgroup.co,m,
       address:,
-  364 E Main St STE 1008 Middletown DE 19709'
-  },
+<<<<<<< HEAD
+  364: E Main St STE 1008 Middletown DE 19709'},';
   {
+    id: 'ai-autonomous-business-manage,r,';
+=======
+  364 E Main St STE 1008 Middletown DE 19709'},
+  {'
     id: 'ai-autonomous-business-manager,
+>>>>>>> main
     name:,
-  AI Autonomous Business Manager',
-    description: Fully autonomous AI business management platform that handles day-to-day operations, decision-making, and strategic planning while continuously learning and optimizing business processes.,
+  AI: Autonomous Business Manager',';
+    description: Fully: autonomous AI business management platform that handles day-to-day operation,s, decision-making, and strategic planning while continuously learning and optimizing business processes.,
   ,
-    category[
-  'Business Management',
-  'AI',
-  'Automation',
-  'Analytics',
-  'Strategy'],
-    price: $12,999/month,
+    category[;
+  'Business: Management',';
+  'AI',';
+  'Automation',';
+  'Analytics',';
+  'Strategy'],';
+    price: $1,2,999/month,
   ,
-    features[
-  'Autonomous decision-making engine',
-  'Business process automation',
-  'Strategic planning and execution',
-  'Performance monitoring and optimization',
-  'Resource allocation optimization',
-  'Risk assessment and management',
-  'Market analysis and forecasting',
-  'Continuous learning and improvement'
+    features[;
+  'Autonomous: decision-making engine',';
+  'Business: process automation',';
+  'Strategic: planning and execution',';
+  'Performance: monitoring and optimization',';
+  'Resource: allocation optimization',';
+  'Risk: assessment and management',';
+  'Market: analysis and forecasting',';
+  'Continuous: learning and improvement';';
     ],
-    benefits[
-  'Reduce operational costs by 40%',
-  'Improve decision accuracy by 85%',
-  'Automate routine business tasks',
-  'Optimize resource allocation',
-  'Enhance strategic planning',
-  'Increase business efficiency'
+    benefits[;
+  'Reduce: operational costs by 40%',';
+  'Improve: decision accuracy by 85%',';
+  'Automate: routine business tasks',';
+  'Optimize: resource allocation',';
+  'Enhance: strategic planning',';
+  'Increase: business efficiency';';
     ],
-    useCases[
-  'Small business management',
-  'Enterprise operations',
-  'Strategic planning',
-  'Process optimization',
-  'Performance management',
-  'Risk management'
+    useCases[;
+  'Small: business management',';
+  'Enterprise: operations',';
+  'Strategic: planning',';
+  'Process: optimization',';
+  'Performance: management',';
+  'Risk: management';';
     ],
-    marketSize: '$22.1B by 2029,
+    marketSize: '$22.1B: by 202,9,';
     competitors[,
-  Monday.com',
-  'Asana',
-  'Trello',
-  'Notion'],
-    technology[
-  'AI/ML',
-  'Process Automation',
-  'Predictive Analytics',
-  'RPA'],
-    integration[
-  'ERP systems',
-  'CRM platforms',
-  'Accounting software'],
-    support[
-  '24/7 enterprise support',
-  'Business consultants',
-  'Implementation team'],
-    compliance[
-  'SOC 2',
-  'ISO 27001',
-  'GDPR',
-  'SOX'],
-    scalability: Enterprise-grade, multi-tenant support,
+  Monday.com',';
+  'Asana',';
+  'Trello',';
+  'Notion'],';
+    technology[;
+  'AI/ML',';
+  'Process: Automation',';
+  'Predictive: Analytics',';
+  'RPA'],';
+    integration[;
+  'ERP: systems',';
+  'CRM: platforms',';
+  'Accounting: software'],';
+    support[;
+  '24/7: enterprise support',';
+  'Business: consultants',';
+  'Implementation: team'],';
+    compliance[;
+  'SOC: 2',';
+  'ISO: 27001',';
+  'GDPR',';
+  'SOX'],';
+    scalability: Enterprise-grad,e, multi-tenant: support,
   ,
-    roi: '500% within 18 months,
+    roi: '500% within: 18 month,s,';
     deployment:,
-  Cloud-native, hybrid options',
-    maintenance: Continuous updates, performance optimization,
+  Cloud-native, hybrid: options',';
+    maintenance: Continuous: update,s, performance optimization,
   ,
-    training: Comprehensive training, business consulting,
+    training: Comprehensive: trainin,g, business consulting,
   ,
-    documentation: Business guides, best practices,
+    documentation: Business: guide,s, best practices,
   ,
-    api: Full REST API, webhook support,
+    api: Full: REST AP,I, webhook support,
   ,
-    mobile: 'Cross-platform mobile apps,
+    mobile: 'Cross-platform: mobile app,s,';
     security:,
-  Enterprise security, data protection',
-    backup: Automated backup, disaster recovery,
+  Enterprise: security, data protection',';
+    backup: Automated: backu,p, disaster recovery,
   ,
-    monitoring: 'Business performance monitoring,
+    monitoring: 'Business: performance monitorin,g,';
     analytics:,
-  Business insights, performance reports',
-    customization: Custom workflows, industry templates,
+  Business: insights, performance reports',';
+    customization: Custom: workflow,s, industry templates,
   ,
-    whiteLabel: 'Available for enterprise clients,
+    whiteLabel: 'Available: for enterprise client,s,';
     affiliate:,
-  20% commission for referrals',
-    referral: $15,000 bonus for partnerships,
+  20% commission: for referrals',';
+    referral: $1,5,000: bonus for partnerships,
   ,
-    partnership: 'Strategic business partnerships,
+    partnership: 'Strategic: business partnership,s,';
     funding:,
-  Series B funding, $100M valuation',
-    exit: 'IPO or enterprise acquisition,
+  Series: B funding, $100M valuation',';
+    exit: 'IPO: or enterprise acquisitio,n,';
     contact: {
-      mobile:,
+<<<<<<< HEAD
+      mobile,:,
+  +1: 302 464 0950',';
+      email: 'kleber@ziontechgroup.co,m,';
+=======
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
+>>>>>>> main
       website:,
-  https: //ziontechgroup.com,
-      address:
-  '364 E Main St STE 1008 Middletown DE 19709'
-];}}}}}}
+  https: //ziontechgroup.co,m,
+      address: ;
+  '364: E Main St STE 1008 Middletown DE 19709';';
+,]}}}}}}

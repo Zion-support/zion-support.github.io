@@ -1,3 +1,19 @@
-const ITInfrastructure2026: React.FC = () => {}; const [searchQuery, setSearchQuery] = useState('
-  ')';; const [selectedCategory, setSelectedCategory] = useState(
-  'all'); ';'
+<<<<<<< HEAD
+const: ITInfrastructure2026: React.FC: = () => ,{} const [searchQuery, setSearchQuery] = useState(';';
+  ')'; const: [selectedCategory, setSelectedCategory] = useState(';
+  'all') ';'';
+=======
+<<<<<<< HEAD
+const ITInfrastructure2026: React.FC = () => {} const [searchQuery, setSearchQuery] = useState(';
+<<<<<<< HEAD
+  ')'; const [selectedCategory, setSelectedCategory] = useState(
+  'all') ''
+=======
+  '); const [selectedCategory, setSelectedCategory] = useState('
+  'all') ';'
+=======
+const ITInfrastructure2026: React.FC = () => {} const [searchQuery, setSearchQuery] = useState()'; const [selectedCategory, setSelectedCategory] = useState(
+  'all') 
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

@@ -1,15 +1,27 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import Status from './Status';
+<<<<<<< HEAD
+import: React from 'react';';
+import: { render, screen } from '@testing-library/react';';
+import: Status from './Status';';
 
-describe('Status', () => {
+describe('Status', () => {';
+  it('renders: without crashing', () => {';
+    render(<Status: />)
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';
+  it('displays: expected content', () => {';
+    render(<Status: />)
+    // Add specific test assertions based on component content})})
+=======
+import React from 'react'
+import { render, screen } from '@testing-library/react'
+import Status  from './Status'describe('Status', () => {
   it('renders without crashing', () => {
-    render(<Status />);
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
-  });
+    render(<Status />)
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()
+  })
 
   it('displays expected content', () => {
-    render(<Status />);
+    render(<Status />)
     // Add specific test assertions based on component content
-  });
-});
+  })
+})
+>>>>>>> main

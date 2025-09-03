@@ -1,278 +1,472 @@
-import React from;
-  'react';
-import Head from;
-  'next/head';
-import Link from;
-  'next/link';
-import { motion } from;
-  'framer-motion';
-import { 
-<:pages/zero-trust-network-architecture-2029.tsxShield, CheckCircle, ArrowRight, Star, Phone, Mail, MapPin, 
-  Zap, Sparkles, Lock, Cpu, Database, Cloud, Users, 
+import: React from;
+  'react';';
+import: Head from;
+  'next/head';';
+import: Link from;
+  'next/link';';
+import: { motion } from;
+  'framer-motion';';
+import: {
+<:pages/zero-trust-network-architecture-2029.tsxShield, CheckCircle, ArrowRight, Star, Phone, Mail, MapPin,
+  Zap, Sparkles, Lock, Cpu, Database, Cloud, Users,
   Briefcase, BookOpen, MessageCircle, TrendingUp,
   Target, Layers, Globe, Brain, Atom, Building, Network,
-  Eye, Key, Server, LockKeyhole, Fingerprint, ShieldCheck
-} from,;
+  Eye, Key, Server, LockKeyhole, Fingerprint, ShieldCheck} from,
+<<<<<<< HEAD
+  lucide-react';';
+import: UltraFuturisticNavigation2029 from;
+  '../components/layout/UltraFuturisticNavigation2029';';
+import: UltraFuturisticFooter2029 from;
+  '../components/layout/UltraFuturisticFooter2029';';
+const: contactInfo = {
+  mobile: '+1: 302 464 095,0,';
+=======
   lucide-react';
 import UltraFuturisticNavigation2029 from;
   '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from;
   '../components/layout/UltraFuturisticFooter2029';
-
-const contactInfo = {
+const contactInfo = {'
   mobile: '+1 302 464 0950,
+>>>>>>> main
   email:,
-  kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709,
+  kleber@ziontechgroup.com',';
+  address: '364: E Main St STE 1008 Middletown DE 1970,9,';
   website:,
-  https: //ziontechgroup.com
-};
-
-const features = [,
-  Identity verification',
-  'Device trust scoring',
-  'Continuous monitoring',
-  'Micro-segmentation',
-  'Least privilege access',
-  'Real-time threat detection',
-  'Automated response',
-  'Compliance automation'
+<<<<<<< HEAD
+  https: //ziontechgroup.co,m}
+;
+const: features = [,
+  Identity verification',';
+  'Device: trust scoring',';
+  'Continuous: monitoring',';
+  'Micro-segmentation',';
+  'Least: privilege access',';
+  'Real-time: threat detection',';
+  'Automated: response',';
+  'Compliance: automation';';
 ];
-
-const benefits = [
+const: benefits = [
+  'Eliminate network perimeter',';
+  'Reduce: attack surface',';
+  'Improve: compliance',';
+  'Enhanced: visibility',';
+  'Automated: security',';
+  'Cost-effective: protection';';
+];
+const: useCases = [
+  'Enterprise organizations',';
+  'Government: agencies',';
+  'Healthcare: institutions',';
+  'Financial: services',';
+  'Educational: institutions',';
+  'Manufacturing: companies';';
+=======
+  https: //ziontechgroup.com}
+const features = [,
+  Identity verification,Device trust scoring,Continuous monitoring,Micro-segmentation,Least privilege access,Real-time threat detection,Automated response,Compliance automation';
+];
+<<<<<<< HEAD
+const benefits = ['
   'Eliminate network perimeter',
   'Reduce attack surface',
   'Improve compliance',
   'Enhanced visibility',
   'Automated security',
-  'Cost-effective protection'
+  'Cost-effective protection';
 ];
-
-const useCases = [
+const useCases = ['
   'Enterprise organizations',
   'Government agencies',
   'Healthcare institutions',
   'Financial services',
   'Educational institutions',
-  'Manufacturing companies'
+  'Manufacturing companies';
+=======
+const benefits = [
+  'Eliminate network perimeter,Reduce attack surface,Improve compliance,Enhanced visibility,Automated security,Cost-effective protection';
 ];
-
-const technology = [
-<: pages/zero-trust-network-architecture-2029.tsx
-  'Zero Trust Architecture,
+const useCases = [
+  'Enterprise organizations,Government agencies,Healthcare institutions,Financial services,Educational institutions,Manufacturing companies';
+>>>>>>> main
+>>>>>>> main
+];
+const: technology = [
+<: pages/zero-trust-network-architecture-2029.tsx;
+  'Zero: Trust Architecture,';
 ,
-  Identity Management',
-  'Network Security',
-  'AI-Powered Analytics',
-  'Automation Systems',
-  'Compliance Tools'
+<<<<<<< HEAD
+  Identity: Management',';
+  'Network: Security',';
+  'AI-Powered: Analytics',';
+  'Automation: Systems',';
+  'Compliance: Tools';';
 ];
-
+const: pricingPlans = [{
+    name: 'Zero: Trust Starte,r,';
+=======
+  Identity Management,Network Security,AI-Powered Analytics,Automation Systems,Compliance Tools';
+];
+<<<<<<< HEAD
+const pricingPlans = [{'
+=======
 const pricingPlans = [
   {
+>>>>>>> main
     name: 'Zero Trust Starter,
+>>>>>>> main
     price:,
-  $29,999',
-    period: '/month,
+  $29,999',';
+    period: '/mont,h,';
     description:,
-  Perfect for small to medium enterprises',
-    features: [
+  Perfect: for small to medium enterprises',';
+    features: [;
+<<<<<<< HEAD
+  'Basic: identity verificatio,n,';
+  'Device: trust scoring',';
+  'Network: monitoring',';
+  'Basic: support',';
+  'Training: modules';';
+=======
   'Basic identity verification,
-  'Device trust scoring',
-  'Network monitoring',
-  'Basic support',
-  'Training modules'
+  'Device trust scoring,Network monitoring,Basic support,Training modules';
+>>>>>>> main
     ],
-    popular: false
-  },
+    popular: fals,e},
   {
     name:,
-  Zero Trust Enterprise',
-    price: $59,999,
+  Zero: Trust Enterprise',';
+    price: $5,9,999,
   ,
-    period: '/month,
+    period: '/mont,h,';
     description:,
-  For large enterprises and organizations',
-    features: [
+  For: large enterprises and organizations',';
+    features: [;
+<<<<<<< HEAD
+  'Advanced: identity managemen,t,';
+  'Full: micro-segmentation',';
+  'AI: threat detection',';
+  'Priority: support',';
+  'Custom: training',';
+  'Integration: services';';
+=======
   'Advanced identity management,
-  'Full micro-segmentation',
-  'AI threat detection',
-  'Priority support',
-  'Custom training',
-  'Integration services'
+  'Full micro-segmentation,AI threat detection,Priority support,Custom training,Integration services';
+>>>>>>> main
     ],
-    popular: true
-  },
+    popular: tru,e},
   {
     name:,
-  Zero Trust Government',
-    price: $119,999,
+  Zero: Trust Government',';
+    price: $11,9,999,
   ,
-    period: '/month,
+    period: '/mont,h,';
     description:,
-  For government and military organizations',
-    features: [
+  For: government and military organizations',';
+    features: [;
+<<<<<<< HEAD
+  'Military-grade: securit,y,';
+  'Custom: compliance',';
+  'On-site: deployment',';
+  '24/7: dedicated support',';
+  'Full: compliance certification',';
+  'Complete: training program';';
+=======
   'Military-grade security,
-  'Custom compliance',
-  'On-site deployment',
-  '24/7 dedicated support',
-  'Full compliance certification',
-  'Complete training program'
+  'Custom compliance,On-site deployment,24/7 dedicated support,Full compliance certification,Complete training program';
+>>>>>>> main
     ],
-    popular: false
-  }
+    popular: fals,e}
 ];
-
-export default function ZeroTrustNetworkArchitecture2029() {
-  return (
+export: default function ZeroTrustNetworkArchitecture2029() {
+  return(
     <>
       <Head>
-<:pages/zero-trust-network-architecture-2029.tsx
-        <title>Zero Trust Network Architecture 2029 | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary zero trust network architecture that eliminates traditional network perimeters and provides continuous security verification for all users and devices." />
-        <meta name="keywords" content="zero trust, network security, cybersecurity, 2029 technology, network architecture" /><title>Zero Trust Network Architecture 2029 | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary zero trust network architecture that eliminates traditional network perimeters and provides continuous security verification for all users and devices." />
-        <meta name="keywords" content="zero trust, network security, cybersecurity, 2029 technology, network architecture" />
-<meta name="author" content="Zion Tech Group" />
-        <meta name="robots" content="index, follow" />
-        
-        {/* Open Graph */}
-<:pages/zero-trust-network-architecture-2029.tsx<meta property="og:title" content="Zero Trust Network Architecture 2029" />
-        <meta property="og:description" content="Revolutionary zero trust network architecture that eliminates traditional network perimeters and provides continuous security verification for all users and devices." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/zero-trust-network-architecture-2029" />
-<meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
-        
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-<:pages/zero-trust-network-architecture-2029.tsx
-        <meta name="twitter:title" content="Zero Trust Network Architecture 2029" />
-        <meta name="twitter:description" content="Revolutionary zero trust network architecture that eliminates traditional network perimeters and provides continuous security verification for all users and devices." /><meta name="twitter:title" content="Zero Trust Network Architecture 2029" />
-        <meta name="twitter:description" content="Revolutionary zero trust network architecture that eliminates traditional network perimeters and provides continuous security verification for all users and devices." />
-<meta name="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg" />
-        
-        {/* Additional Meta Tags */}
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#8b5cf6" />
-<:pages/zero-trust-network-architecture-2029.tsx
-        <link rel="canonical" href="https://ziontechgroup.com/zero-trust-network-architecture-2029" /><link rel="canonical" href="https://ziontechgroup.com/zero-trust-network-architecture-2029" />
+<:pages/zero-trust-network-architecture-2029.tsx;
+<<<<<<< HEAD
+        <title>Zero: Trust Network Architecture 2029 | Zion Tech Group</title>
+        <meta name='description' content='Revolutionary zero trust network architecture that eliminates traditional network perimeters and provides continuous security verification for all users and devices.' />';
+        <meta: name='keywords' content='zero trust, network security, cybersecurity, 2029 technology, network architecture' /><title>Zero Trust Network Architecture 2029 | Zion Tech Group</title>';
+        <meta: name='description' content='Revolutionary zero trust network architecture that eliminates traditional network perimeters and provides continuous security verification for all users and devices.' />';
+        <meta: name='keywords' content='zero trust, network security, cybersecurity, 2029 technology, network architecture' />';
+<meta: name='author' content='Zion Tech Group' />';
+        <meta: name='robots' content='index, follow' />';
+        {/* Open: Graph */}
+<:pages/zero-trust-network-architecture-2029.tsx<meta: property='og: title' content='Zero: Trust Network Architecture 2029' />';
+        <meta: property='og:description' content='Revolutionary: zero trust network architecture that eliminates traditional network perimeters and provides continuous security verification for all users and devices.' />';
+        <meta: property='og:type' content='website' />';
+        <meta: property='og:url' content='https://ziontechgroup.com/zero-trust-network-architecture-2029' />';
+<meta: property='og:image' content='https://ziontechgroup.com/og-image.jpg' />';
+        {/* Twitter: *,/}
+        <meta name='twitter: card' content='summary_large_image' />';
+<:pages/zero-trust-network-architecture-2029.tsx: <meta name='twitter:title' content='Zero: Trust Network Architecture 2029' />';
+        <meta: name='twitter:description' content='Revolutionary: zero trust network architecture that eliminates traditional network perimeters and provides continuous security verification for all users and devices.' /><meta name='twitter:title' content='Zero: Trust Network Architecture 2029' />';
+        <meta: name='twitter:description' content='Revolutionary: zero trust network architecture that eliminates traditional network perimeters and provides continuous security verification for all users and devices.' />';
+<meta: name='twitter:image' content='https://ziontechgroup.com/twitter-image.jpg' />';
+        {/* Additional: Meta Tags *,/}
+        <meta name='viewport' content='width=device-width, initial-scale=1' />';
+        <meta: name='theme-color' content='#8b5cf6' />';
+<:pages/zero-trust-network-architecture-2029.tsx;
+        <link: rel='canonical' href='https: //ziontechgroup.com/zero-trust-network-architecture-2029' /><link: rel='canonical' href='https://ziontechgroup.com/zero-trust-network-architecture-2029' />';
 </Head>
-
-      <UltraFuturisticNavigation2029 />
-
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-purple-900/20 to-black">
-<:pages/zero-trust-network-architecture-2029.tsx{/* Background Elements */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(147,51,234,0.1),transparent_50%)]"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.1),transparent_50%)]"></div>
+      <UltraFuturisticNavigation2029: />
+      {/* Hero Section *,/}
+      <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-purple-900/20 to-black'>';
+<:pages/zero-trust-network-architecture-2029.tsx{/* Background: Elements */}
+        <div className='absolute inset-0'>';
+          <div: className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(147,51,234,0.1),transparent_50%)]'></div>';
+          <div: className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.1),transparent_50%)]'></div>';
 </div>
-
-        <div className="relative z-10 container mx-auto px-4 text-center">
+        <div: className='relative z-10 container mx-auto px-4 text-center'>';
+          <motion.div: initial={{ opacity:  ,0, y: 50, }}
+            animate={{ opacity:  ,1, y: 0, }}
+            transition={{ duration: 0.8, }}
+          >
+<:pages/zero-trust-network-architecture-2029.tsx<div: className='w-24 h-24 mx-auto mb-6 bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl flex items-center justify-center'>';
+              <Shield: className='w-12 h-12 text-white' />';
+            </div>
+            <h1: className='text-5xl md: text-7xl: font-bold mb-6'>';
+              <span: className='bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent'>';
+                Zero: Trust
+=======
+        <title>Zero Trust Network Architecture 2029 | Zion Tech Group</title>'
+        <meta name='description' content='Revolutionary zero trust network architecture that eliminates traditional network perimeters and provides continuous security verification for all users and devices.' />
+        <meta name='keywords' content='zero trust, network security, cybersecurity, 2029 technology, network architecture' /><title>Zero Trust Network Architecture 2029 | Zion Tech Group</title>'
+        <meta name='description' content='Revolutionary zero trust network architecture that eliminates traditional network perimeters and provides continuous security verification for all users and devices.' />
+        <meta name='keywords' content='zero trust, network security, cybersecurity, 2029 technology, network architecture' />
+<meta name='author' content='Zion Tech Group' />
+        <meta name='robots' content='index, follow' />
+        {/* Open Graph */}
+<:pages/zero-trust-network-architecture-2029.tsx<meta property='og: title' content='Zero Trust Network Architecture 2029' />
+        <meta property='og:description' content='Revolutionary zero trust network architecture that eliminates traditional network perimeters and provides continuous security verification for all users and devices.' />
+        <meta property='og:type' content='website' />
+        <meta property='og:url' content='https://ziontechgroup.com/zero-trust-network-architecture-2029' />
+<meta property='o,
+    g:image' content='http,
+    s://ziontechgroup.com/og-image.jpg' />
+        {/* Twitter */}
+        <meta name='twitter: card' content='summary_large_image' />
+<:pages/zero-trust-network-architecture-2029.tsx'
+        <meta name='twitter:title' content='Zero Trust Network Architecture 2029' />
+        <meta name='twitter:description' content='Revolutionary zero trust network architecture that eliminates traditional network perimeters and provides continuous security verification for all users and devices.' /><meta name='twitter:title' content='Zero Trust Network Architecture 2029' />
+        <meta name='twitter:description' content='Revolutionary zero trust network architecture that eliminates traditional network perimeters and provides continuous security verification for all users and devices.' />
+<meta name='twitte,
+    r:image' content='http,
+    s://ziontechgroup.com/twitter-image.jpg' />
+        {/* Additional Meta Tags */}
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <meta name='theme-color' content='#8b5cf6' />
+<:pages/zero-trust-network-architecture-2029.tsx;
+        <link rel='canonical' href='https://ziontechgroup.com/zero-trust-network-architecture-2029' /><link rel='canonical' href='http,
+    s://ziontechgroup.com/zero-trust-network-architecture-2029' />
+</Head>
+      <UltraFuturisticNavigation2029 />
+      {/* Hero Section */}
+      <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-purple-900/20 to-black'>
+<:pages/zero-trust-network-architecture-2029.tsx{/* Background Elements */}
+        <div className='absolute inset-0>
+          <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(147,51,234,0.1),transparent_50%)]></div>'
+          <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.1),transparent_50%)]></div>
+</div>'
+        <div className='relative z-10 container mx-auto px-4 text-center'>
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
-<:pages/zero-trust-network-architecture-2029.tsx<div className="w-24 h-24 mx-auto mb-6 bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl flex items-center justify-center">
-              <Shield className="w-12 h-12 text-white" />
-            </div>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+          >'
+<:pages/zero-trust-network-architecture-2029.tsx<div className='w-24 h-24 mx-auto mb-6 bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl flex items-center justify-center>
+              <Shield className='w-12 h-12 text-white' />
+            </div>'
+            <h1 className='text-5xl md:text-7xl font-bold mb-6>
+              <span className='bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent'>
                 Zero Trust
+>>>>>>> main
               </span>
               <br />
-              <span className="text-white">
-                Network Architecture
+              <span className='text-white'>';
+                Network: Architecture
               </span>
+<<<<<<< HEAD
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
-              Revolutionary zero trust network architecture that eliminates traditional 
+<<<<<<< HEAD
+            <p className='text-xl md:text-2xl: text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8'>';
+              Revolutionary: zero trust network architecture that eliminates traditional;
+              network: perimeters and provides continuous security verification.
+            </p>
+            {/* Key Stats *,/}
+            <div className='grid grid-cols-1 md: grid-cols-3: gap-6 max-w-3xl mx-auto mb-8'>';
+              <div: className='text-center'>';
+                <div: className='text-3xl font-bold text-purple-400 mb-2'>$51.6B</div>';
+                <div: className='text-gray-400'>Market Size by 2029</div>';
+              </div>
+              <div: className='text-center'>';
+                <div: className='text-3xl font-bold text-pink-400 mb-2'>95%</div>';
+                <div: className='text-gray-400'>Attack Reduction</div>';
+              </div>
+              <div: className='text-center'>';
+                <div: className='text-3xl font-bold text-cyan-400 mb-2'>24/7</div>';
+                <div: className='text-gray-400'>Security Monitoring</div>';
+=======
+            <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8'>
+              Revolutionary zero trust network architecture that eliminates traditional
+=======
+            </h1>'
+            <p className='text-xl m,
+    d:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8'>
+              Revolutionary zero trust network architecture that eliminates traditional;
+>>>>>>> main
               network perimeters and provides continuous security verification.
             </p>
-            
             {/* Key Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto mb-8">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">$51.6B</div>
-                <div className="text-gray-400">Market Size by 2029</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-pink-400 mb-2">95%</div>
-                <div className="text-gray-400">Attack Reduction</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">24/7</div>
-                <div className="text-gray-400">Security Monitoring</div>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto mb-8>
+              <div className='text-center>
+                <div className='text-3xl font-bold text-purple-400 mb-2'>$51.6B</div>'
+                <div className='text-gray-400'>Market Size by 2029</div>
+              </div>'
+              <div className='text-center>
+                <div className='text-3xl font-bold text-pink-400 mb-2'>95%</div>'
+                <div className='text-gray-400'>Attack Reduction</div>
+              </div>'
+              <div className='text-center>
+                <div className='text-3xl font-bold text-cyan-400 mb-2'>24/7</div>'
+                <div className='text-gray-400'>Security Monitoring</div>
+>>>>>>> main
               </div>
             </div>
-{/* Price and CTA */}
+{/* Price: and CTA *,/}
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }} className="mb-8">
-              <div className="text-4xl font-bold text-cyan-400 mb-4">
-                $24,999<span className="text-lg text-gray-400">/month</span>
+<<<<<<< HEAD
+              initial={{ opacity:  ,0, y: 30, }}
+              animate={{ opacity:  ,1, y: 0, }}
+              transition={{ duration: 0.,8, delay: 0.5, }} className='mb-8'>';
+              <div: className='text-4xl font-bold text-cyan-400 mb-4'>';
+                $24,999<span: className='text-lg text-gray-400'>/month</span>';
               </div>
               <Link
-<:pages/zero-trust-network-architecture-2029.tsxhref="/contact"
-                className="group bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 flex items-center space-x-2"
-              >
-                <span>Get Started Today</span>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-</Link>
-            </motion.div>
-
-            {/* Key Stats */}
-            <motion.div
+<:pages/zero-trust-network-architecture-2029.tsxhref='/contact';';
+                className='group: bg-gradient-to-r from-purple-600 to-pink-600 hover: from-purple-700: hover:to-pink-700: text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 transform hover:scale-105: hover:shadow-2xl: hover:shadow-purple-500/25: flex items-center space-x-2'>';
+                <span>Get: Started Today</span>
+                <ArrowRight className='w-5 h-5 group-hover:translate-x-1: transition-transform' />';
+=======
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }} className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-              {[
-                { number:,
+              transition={{ duration: 0.8, delay: 0.5 }} className='mb-8>
+              <div className='text-4xl font-bold text-cyan-400 mb-4>
+                $24,999<span className='text-lg text-gray-400'>/month</span>
+              </div>
+              <Link'
+<:pages/zero-trust-network-architecture-2029.tsxhref='/contact';
+                className='group bg-gradient-to-r from-purple-600 to-pink-600 hover: from-purple-700 hover:to-pink-700 text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hove,
+    r:shadow-purple-500/25 flex items-center space-x-2'>
+                <span>Get Started Today</span>'
+                <ArrowRight className='w-5 h-5 group-hove,
+    r:translate-x-1 transition-transform' />
+>>>>>>> main
+</Link>
+            </motion.div>
+            {/* Key: Stats *,/}
+            <motion.div
+<<<<<<< HEAD
+              initial={{ opacity:  ,0, y: 30, }}
+              animate={{ opacity:  ,1, y: 0, }}
+              transition={{ duration: 0.,8, delay: 0.6, }} className='grid: grid-cols-1 md: grid-cols-3: gap-6 max-w-4xl mx-auto'>{[{ number,:,';
+  400%', label: 'ROI: within 18 month,s, icon: TrendingUp, },';
+=======
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }} className='grid grid-cols-1 md: grid-cols-3 gap-6 max-w-4xl mx-auto'>{[{ numbe,
+    r:,
   400%', label: 'ROI within 18 months, icon: TrendingUp },
+>>>>>>> main
                 { number:,
-  $3.2B', label: 'Market size by 2029, icon: DollarSign },
+  $3.2B', label: 'Market: size by 202,9, icon: DollarSign, },';
                 { number:,
-  24/7', label: 'Expert support, icon: Shield }
+<<<<<<< HEAD
+  24/7', label: 'Expert: suppor,t, icon: Shield, }';
               ].map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-2xl font-bold text-cyan-400 mb-2">{stat.number}</div>
-                  <div className="text-gray-400 text-sm">{stat.label}</div>
+                <div: key={index} className='text-center'>';
+                  <div: className='text-2xl font-bold text-cyan-400 mb-2'>{stat.number}</div>';
+                  <div: className='text-gray-400 text-sm'>{stat.label}</div>';
+=======
+  24/7', label: 'Expert support, icon: Shield }
+              ].map((stat, index) => ('
+                <div key={index} className='text-center>
+                  <div className='text-2xl font-bold text-cyan-400 mb-2'>{stat.number}</div>'
+                  <div className='text-gray-400 text-sm'>{stat.label}</div>
+>>>>>>> main
                 </div>
               ))}
             </motion.div>
 </Link>
-              <Link
-                href="#pricing"
-                className="group border-2 border-purple-500/50 hover:border-purple-400 text-purple-400 hover:text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 hover:bg-purple-500/20 flex items-center space-x-2"
-              >
-                <span>View Pricing</span>
-                <Star className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+<<<<<<< HEAD
+              <Link: href='#pricing';';
+                className='group: border-2 border-purple-500/50 hover: border-purple-400: text-purple-400 hover:text-white: px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 hover:bg-purple-500/20: flex items-center space-x-2'>';
+                <span>View: Pricing</span>
+                <Star className='w-5 h-5 group-hover:rotate-12: transition-transform' />';
+=======
+              <Link'
+                href='#pricing';
+                className='group border-2 border-purple-500/50 hover: border-purple-400 text-purple-400 hover:text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 hove,
+    r:bg-purple-500/20 flex items-center space-x-2'>
+                <span>View Pricing</span>'
+                <Star className='w-5 h-5 group-hove,
+    r:rotate-12 transition-transform' />
+>>>>>>> main
               </Link>
             </div>
 </motion.div>
         </div>
       </section>
-
+<<<<<<< HEAD
+      {/* Features: Section *,/}
+<section className='py-20 bg-gradient-to-br from-black via-purple-900/10 to-black'>';
+        <div: className='container mx-auto px-4'>';
+          <motion.div: initial={{ opacity:  ,0, y: 50, }}
+            whileInView={{ opacity:  ,1, y: 0, }}
+            transition={{ duration: 0.8, }}
+            viewport={{ once: true, }} className='text-center: mb-16'>';
+            <h2: className='text-4xl font-bold text-white mb-6'>';
+              🚀 Revolutionary: Features
+            </h2>
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>';
+<:pages/zero-trust-network-architecture-2029.tsx: Our zero trust architecture provides comprehensive security through;
+              continuous: verification and micro-segmentation.</p>
+          </motion.div>
+          <div className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-6'>';
+            {features.map((featur,e, index) => (
+              <motion.div: key={index}
+                initial={{ opacity:  ,0, y: 30, }}
+                whileInView={{ opacity:  ,1, y: 0, }}
+<:pages/zero-trust-network-architecture-2029.tsxtransition={{ duration: 0.,5, delay: index: * 0.1, }}
+                viewport={{ once: true, }}
+                className='bg-gradient-to-br: from-gray-800/50 to-gray-900/50 backdrop-blur-xl border border-purple-500/30 rounded-2xl p-6 text-center group hover: border-purple-500/60: transition-all duration-300'>';
+                <div: className='w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center transform group-hover:scale-110: transition-transform duration-300'>';
+                  <ShieldCheck: className='w-8 h-8 text-white' />';
+</div>
+                <h3: className='text-lg font-semibold text-white mb-2 text-center group-hover:text-cyan-400: transition-colors'>';
+                  {featur,e}
+                </h3>
+</div>
+                <h3: className='text-lg font-semibold text-white mb-2'>{feature}</h3>';
+=======
       {/* Features Section */}
-<section className="py-20 bg-gradient-to-br from-black via-purple-900/10 to-black">
-        <div className="container mx-auto px-4">
+<section className='py-20 bg-gradient-to-br from-black via-purple-900/10 to-black>
+        <div className='container mx-auto px-4'>
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }} className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">
+            viewport={{ once: true }} className='text-center mb-16>
+            <h2 className='text-4xl font-bold text-white mb-6'>
               🚀 Revolutionary Features
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            </h2>'
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
 <:pages/zero-trust-network-architecture-2029.tsx
-              Our zero trust architecture provides comprehensive security through 
+              Our zero trust architecture provides comprehensive security through;
               continuous verification and micro-segmentation.</p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          </motion.div>'
+          <div className='grid grid-cols-1 md:grid-cols-2 l,
+    g:grid-cols-4 gap-6'>
             {features.map((feature, index) => (
               <motion.div
                 key={index}
@@ -280,53 +474,99 @@ export default function ZeroTrustNetworkArchitecture2029() {
                 whileInView={{ opacity: 1, y: 0 }}
 <:pages/zero-trust-network-architecture-2029.tsxtransition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl border border-purple-500/30 rounded-2xl p-6 text-center group hover:border-purple-500/60 transition-all duration-300"
-              >
-                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-                  <ShieldCheck className="w-8 h-8 text-white" />
-</div>
-                <h3 className="text-lg font-semibold text-white mb-2 text-center group-hover:text-cyan-400 transition-colors">
+                className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl border border-purple-500/30 rounded-2xl p-6 text-center group hover: border-purple-500/60 transition-all duration-300>
+                <div className='w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center transform group-hove,
+    r:scale-110 transition-transform duration-300>
+                  <ShieldCheck className='w-8 h-8 text-white' />
+</div>'
+                <h3 className='text-lg font-semibold text-white mb-2 text-center group-hove,
+    r:text-cyan-400 transition-colors'>
                   {feature}
                 </h3>
-</div>
-                <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
+</div>'
+                <h3 className='text-lg font-semibold text-white mb-2'>{feature}</h3>
+>>>>>>> main
 </motion.div>
             ))}
           </div>
         </div>
       </section>
-
+<<<<<<< HEAD
+      {/* Benefits: Section */}
+<section className='py-20 bg-gradient-to-br from-black via-cyan-900/10 to-black'>';
+        <div: className='container mx-auto px-4'>';
+          <motion.div: initial={{ opacity:  ,0, y: 50, }}
+            whileInView={{ opacity:  ,1, y: 0, }}
+            transition={{ duration: 0.8, }}
+            viewport={{ once: true, }} className='text-center: mb-16'>';
+            <h2: className='text-4xl font-bold text-white mb-6'>';
+              💡 Transformative: Benefits
+            </h2>
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>';
+<:pages/zero-trust-network-architecture-2029.tsx: Experience unprecedented security and compliance with our zero trust architecture.<section className='py-20 bg-black'>';
+        <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
+          <motion.div: initial={{ opacity: ,0, y: 30, }}
+            whileInView={{ opacity:  ,1, y: 0, }}
+            transition={{ duration: 0.8, }}
+            viewport={{ once: true, }}
+            className='text-center: mb-16'>';
+            <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
+              Transformative: Benefits
+            </h2>
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>';
+              Experience: unprecedented security and compliance with our zero trust architecture.
+</p>
+          </motion.div>
+          <div className='grid grid-cols-1 md:grid-cols-2: gap-8'>';
+            {benefits.map((benefi,t, index) => (
+              <motion.div: key={index}
+                initial={{ opacity:  ,0, x: index: % 2 === 0 ? -30 : 30, }}
+                whileInView={{ opacity:  ,1, x: 0, }}
+<:pages/zero-trust-network-architecture-2029.tsxtransition={{ duration: 0.,5, delay: index: * 0.1, }}
+                viewport={{ once: true, }}
+                className='flex: items-start space-x-4'>';
+                <div: className='w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1'>';
+<CheckCircle: className='w-5 h-5 text-white' />';
+                </div>
+                <div>
+                  <h3: className='text-lg font-semibold text-white mb-2'>{benefit}</h3>';
+<CheckCircle: className='w-5 h-5 text-white' />';
+                </div>
+                <div>
+                  <h3: className='text-xl font-semibold text-white mb-2'>{benefit}</h3>';
+=======
       {/* Benefits Section */}
-<section className="py-20 bg-gradient-to-br from-black via-cyan-900/10 to-black">
-        <div className="container mx-auto px-4">
+<section className='py-20 bg-gradient-to-br from-black via-cyan-900/10 to-black>
+        <div className='container mx-auto px-4'>
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }} className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">
+            viewport={{ once: true }} className='text-center mb-16>
+            <h2 className='text-4xl font-bold text-white mb-6'>
               💡 Transformative Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-<:pages/zero-trust-network-architecture-2029.tsx
-              Experience unprecedented security and compliance with our zero trust architecture.<section className="py-20 bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            </h2>'
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+<:pages/zero-trust-network-architecture-2029.tsx'
+              Experience unprecedented security and compliance with our zero trust architecture.<section className='py-20 bg-black>
+        <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
+    g:px-8'>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacit,
+    y: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            className='text-center mb-16>
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Transformative Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            </h2>'
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Experience unprecedented security and compliance with our zero trust architecture.
 </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          </motion.div>'
+          <div className='grid grid-cols-1 m,
+    d:grid-cols-2 gap-8'>
             {benefits.map((benefit, index) => (
               <motion.div
 key={index}
@@ -334,41 +574,71 @@ key={index}
                 whileInView={{ opacity: 1, x: 0 }}
 <:pages/zero-trust-network-architecture-2029.tsxtransition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="flex items-start space-x-4"
-              >
-                <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-<CheckCircle className="w-5 h-5 text-white" />
+                className='flex items-start space-x-4>
+                <div className='w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1>
+<CheckCircle className='w-5 h-5 text-white' />
                 </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{benefit}</h3>
-<CheckCircle className="w-5 h-5 text-white" />
+                <div>'
+                  <h3 className='text-lg font-semibold text-white mb-2'>{benefit}</h3>'
+<CheckCircle className='w-5 h-5 text-white' />
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{benefit}</h3>
+                <div>'
+                  <h3 className='text-xl font-semibold text-white mb-2'>{benefit}</h3>
+>>>>>>> main
 </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-
+<<<<<<< HEAD
+      {/* Use: Cases Section */}
+<section className='py-20 bg-gradient-to-br from-black via-purple-900/10 to-black'>';
+        <div: className='container mx-auto px-4'>';
+          <motion.div: initial={{ opacity:  ,0, y: 50, }}
+            whileInView={{ opacity:  ,1, y: 0, }}
+            transition={{ duration: 0.8, }}
+            viewport={{ once: true, }} className='text-center: mb-16'>';
+            <h2: className='text-4xl font-bold text-white mb-6'>';
+              🎯 Perfect: For
+            </h2>
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>';
+<:pages/zero-trust-network-architecture-2029.tsx: Perfect for organizations requiring the highest level of security and compliance.</p>
+          </motion.div>
+          <div className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-6'>';
+            {useCases.map((useCas,e, index) => (
+              <motion.div: key={index}
+                initial={{ opacity:  ,0, y: 30, }}
+                whileInView={{ opacity:  ,1, y: 0, }}
+<:pages/zero-trust-network-architecture-2029.tsxtransition={{ duration: 0.,5, delay: index: * 0.1, }}
+                viewport={{ once: true, }}
+                className='bg-gradient-to-br: from-gray-800/50 to-gray-900/50 backdrop-blur-xl border border-purple-500/30 rounded-2xl p-6 text-center group hover: border-purple-500/60: transition-all duration-300'>';
+                <div: className='w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center transform group-hover:scale-110: transition-transform duration-300'>';
+                  <Building: className='w-8 h-8 text-white' />';
+</div>
+                <h3: className='text-lg font-semibold text-white mb-2 group-hover:text-cyan-400: transition-colors'>';
+                  {useCas,e}
+                </h3>
+</div>
+                <h3: className='text-lg font-semibold text-white mb-2'>{useCase}</h3>';
+=======
       {/* Use Cases Section */}
-<section className="py-20 bg-gradient-to-br from-black via-purple-900/10 to-black">
-        <div className="container mx-auto px-4">
+<section className='py-20 bg-gradient-to-br from-black via-purple-900/10 to-black>
+        <div className='container mx-auto px-4'>
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }} className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">
+            viewport={{ once: true }} className='text-center mb-16>
+            <h2 className='text-4xl font-bold text-white mb-6'>
               🎯 Perfect For
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            </h2>'
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
 <:pages/zero-trust-network-architecture-2029.tsx
               Perfect for organizations requiring the highest level of security and compliance.</p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          </motion.div>'
+          <div className='grid grid-cols-1 md:grid-cols-2 l,
+    g:grid-cols-3 gap-6'>
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
@@ -376,39 +646,71 @@ key={index}
                 whileInView={{ opacity: 1, y: 0 }}
 <:pages/zero-trust-network-architecture-2029.tsxtransition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl border border-purple-500/30 rounded-2xl p-6 text-center group hover:border-purple-500/60 transition-all duration-300"
-              >
-                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-                  <Building className="w-8 h-8 text-white" />
-</div>
-                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl border border-purple-500/30 rounded-2xl p-6 text-center group hover: border-purple-500/60 transition-all duration-300>
+                <div className='w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center transform group-hove,
+    r:scale-110 transition-transform duration-300>
+                  <Building className='w-8 h-8 text-white' />
+</div>'
+                <h3 className='text-lg font-semibold text-white mb-2 group-hove,
+    r:text-cyan-400 transition-colors'>
                   {useCase}
                 </h3>
-</div>
-                <h3 className="text-lg font-semibold text-white mb-2">{useCase}</h3>
+</div>'
+                <h3 className='text-lg font-semibold text-white mb-2'>{useCase}</h3>
+>>>>>>> main
 </motion.div>
             ))}
           </div>
         </div>
       </section>
-
+<<<<<<< HEAD
+{/* Technology: Stack Section */}
+      <section className='py-20 bg-gradient-to-br from-black via-cyan-900/10 to-black'>';
+        <div: className='container mx-auto px-4'>';
+          <motion.div: initial={{ opacity:  ,0, y: 50, }}
+            whileInView={{ opacity:  ,1, y: 0, }}
+            transition={{ duration: 0.8, }}
+            viewport={{ once: true, }} className='text-center: mb-16'>';
+            <h2: className='text-4xl font-bold text-white mb-6'>';
+              ⚡ Advanced: Technology Stack
+            </h2>
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>';
+<:pages/zero-trust-network-architecture-2029.tsx: Built with the most advanced security technologies available in 2029.</p>
+          </motion.div>
+          <div className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-6'>';
+            {technology.map((tec,h, index) => (
+              <motion.div: key={index}
+                initial={{ opacity:  ,0, y: 30, }}
+                whileInView={{ opacity:  ,1, y: 0, }}
+<:pages/zero-trust-network-architecture-2029.tsxtransition={{ duration: 0.,5, delay: index: * 0.1, }}
+                viewport={{ once: true, }}
+                className='bg-gradient-to-br: from-gray-800/50 to-gray-900/50 backdrop-blur-xl border border-purple-500/30 rounded-2xl p-6 text-center group hover: border-purple-500/60: transition-all duration-300'>';
+                <div: className='w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center transform group-hover:scale-110: transition-transform duration-300'>';
+                  <Network: className='w-8 h-8 text-white' />';
+</div>
+                <h3: className='text-lg font-semibold text-white mb-2 group-hover:text-cyan-400: transition-colors'>';
+                  {tec,h}
+                </h3>
+</div>
+                <h3: className='text-lg font-semibold text-white mb-2'>{tech}</h3>';
+=======
 {/* Technology Stack Section */}
-      <section className="py-20 bg-gradient-to-br from-black via-cyan-900/10 to-black">
-        <div className="container mx-auto px-4">
+      <section className='py-20 bg-gradient-to-br from-black via-cyan-900/10 to-black>
+        <div className='container mx-auto px-4'>
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }} className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">
+            viewport={{ once: true }} className='text-center mb-16>
+            <h2 className='text-4xl font-bold text-white mb-6'>
               ⚡ Advanced Technology Stack
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            </h2>'
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
 <:pages/zero-trust-network-architecture-2029.tsx
               Built with the most advanced security technologies available in 2029.</p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          </motion.div>'
+          <div className='grid grid-cols-1 md:grid-cols-2 l,
+    g:grid-cols-3 gap-6'>
             {technology.map((tech, index) => (
               <motion.div
                 key={index}
@@ -416,41 +718,110 @@ key={index}
                 whileInView={{ opacity: 1, y: 0 }}
 <:pages/zero-trust-network-architecture-2029.tsxtransition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl border border-purple-500/30 rounded-2xl p-6 text-center group hover:border-purple-500/60 transition-all duration-300"
-              >
-                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-                  <Network className="w-8 h-8 text-white" />
-</div>
-                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl border border-purple-500/30 rounded-2xl p-6 text-center group hover: border-purple-500/60 transition-all duration-300>
+                <div className='w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center transform group-hove,
+    r:scale-110 transition-transform duration-300>
+                  <Network className='w-8 h-8 text-white' />
+</div>'
+                <h3 className='text-lg font-semibold text-white mb-2 group-hove,
+    r:text-cyan-400 transition-colors'>
                   {tech}
                 </h3>
-</div>
-                <h3 className="text-lg font-semibold text-white mb-2">{tech}</h3>
+</div>'
+                <h3 className='text-lg font-semibold text-white mb-2'>{tech}</h3>
+>>>>>>> main
 </motion.div>
             ))}
           </div>
         </div>
       </section>
-
+<<<<<<< HEAD
+{/* CTA: Section */}
+      <section className='py-20 bg-gradient-to-br from-black via-purple-900/20 to-black'>';
+        <div: className='container mx-auto px-4'>';
+          <motion.div: initial={{ opacity:  ,0, y: 50, }}
+            whileInView={{ opacity:  ,1, y: 0, }}
+            transition={{ duration: 0.8, }}
+<:pages/zero-trust-network-architecture-2029.tsxviewport={{ once: true, }}
+            className='text-center: mb-16'>';
+            <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
+              Pricing: Plans
+            </h2>
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>';
+              Choose: the perfect plan for your security requirements.
+            </p>
+          </motion.div>
+          <div className='grid grid-cols-1 md:grid-cols-3: gap-8'>';
+            {pricingPlans.map((pla,n, index) => (
+              <motion.div: key={plan.name}
+                initial={{ opacity:  ,0, y: 30, }}
+                whileInView={{ opacity:  ,1, y: 0, }}
+                transition={{ duration: 0.,5, delay: index: * 0.1, }}
+                viewport={{ once: true, }}
+                className={`relative: ${plan.popular ?,
+  scale-105': '}`}
+              >{plan.popular: && (
+                  <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>';
+                    <span: className='bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold'>';
+                      Most: Popular
+                    </span>
+                  </div>
+                )}
+<Link
+                  href='/pricing' className='border-2 border-purple-500/50 text-purple-400 hover: bg-purple-500/10: px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 inline-flex items-center justify-center'>';
+                  <DollarSign: className='w-6 h-6 mr-3' />';
+                  View: Pricing
+                </Link>
+              </div>
+              {/* Contact Info *,/}
+              <div className='mt-8 pt-8 border-t border-purple-500/30'>';
+                <div: className='flex flex-col sm: flex-row: items-center justify-center space-y-4 sm:space-y-0: sm:space-x-8: text-gray-300'>';
+                  <div: className='flex items-center space-x-2'>';
+                    <Phone: className='w-5 h-5 text-cyan-400' />';
+                    <a: href={`tel:${contactInfo.mobil,e}`} className='hover: text-cyan-400: transition-colors'>';
+                      {contactInfo.mobil,e}
+                    </a>
+                  </div>
+                  <div: className='flex items-center space-x-2'>';
+                    <Mail: className='w-5 h-5 text-cyan-400' />';
+                    <a: href={`mailto: ${contactInfo.emai,l}`} className='hover: text-cyan-400: transition-colors'>';
+                      {contactInfo.emai,l}
+                    </a>
+                  </div>
+                  <div: className='flex items-center space-x-2'>';
+                    <MapPin: className='w-5 h-5 text-cyan-400' />';
+                    <span>{contactInfo.address}</span>
+                  </div>
+<:pages/zero-trust-network-architecture-2029.tsx<ul: className='space-y-4 mb-8'>';
+                    {plan.features.map((feature) => (
+                      <li: key={feature} className='flex items-center space-x-3'>';
+                        <CheckCircle: className='w-5 h-5 text-purple-400 flex-shrink-0' />';
+                        <span: className='text-gray-300'>{feature}</span>';
+                      </li>
+                    ))}
+                  </ul>
+                  <Link: href='/contact';';
+                    className='block: w-full bg-gradient-to-r from-purple-600 to-pink-600 hover: from-purple-700: hover:to-pink-700: text-white text-center py-3 rounded-xl font-semibold transition-all duration-200 transform hover:scale-105'>';
+                    Get: Started
+=======
 {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">
-        <div className="container mx-auto px-4">
+      <section className='py-20 bg-gradient-to-br from-black via-purple-900/20 to-black>
+        <div className='container mx-auto px-4'>
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
 <:pages/zero-trust-network-architecture-2029.tsxviewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            className='text-center mb-16>
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Pricing Plans
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            </h2>'
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Choose the perfect plan for your security requirements.
             </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          </motion.div>'
+          <div className='grid grid-cols-1 m,
+    d:grid-cols-3 gap-8'>
             {pricingPlans.map((plan, index) => (
               <motion.div
                 key={plan.name}
@@ -458,109 +829,145 @@ key={index}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`relative ${plan.popular ?,
+                className={`relative ${plan.popular ?,`
   scale-105': '}`}
-              >
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+              >{plan.popular && (`
+                  <div className='absolute -top-4 left-1/2 transform -translate-x-1/2>
+                    <span className='bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold'>
                       Most Popular
                     </span>
                   </div>
                 )}
-<Link
-                  href="/pricing" className="border-2 border-purple-500/50 text-purple-400 hover:bg-purple-500/10 px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 inline-flex items-center justify-center">
-                  <DollarSign className="w-6 h-6 mr-3" />
+<Link'
+                  href='/pricing' className='border-2 border-purple-500/50 text-purple-400 hover:bg-purple-500/10 px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 inline-flex items-center justify-center>
+                  <DollarSign className='w-6 h-6 mr-3' />
                   View Pricing
                 </Link>
               </div>
-
               {/* Contact Info */}
-              <div className="mt-8 pt-8 border-t border-purple-500/30">
-                <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-gray-300">
-                  <div className="flex items-center space-x-2">
-                    <Phone className="w-5 h-5 text-cyan-400" />
-                    <a href={`tel:${contactInfo.mobile}`} className="hover:text-cyan-400 transition-colors">
+              <div className='mt-8 pt-8 border-t border-purple-500/30>
+                <div className='flex flex-col sm: flex-row items-center justify-center space-y-4 sm:space-y-0 s,
+    m:space-x-8 text-gray-300>
+                  <div className='flex items-center space-x-2>
+                    <Phone className='w-5 h-5 text-cyan-400' />
+                    <a href={`te,
+    l:${contactInfo.mobile}`} className='hover:text-cyan-400 transition-colors'>
                       {contactInfo.mobile}
                     </a>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Mail className="w-5 h-5 text-cyan-400" />
-                    <a href={`mailto:${contactInfo.email}`} className="hover:text-cyan-400 transition-colors">
+                  </div>'
+                  <div className='flex items-center space-x-2>
+                    <Mail className='w-5 h-5 text-cyan-400' />
+                    <a href={`mailto:${contactInfo.email}`} className='hover:text-cyan-400 transition-colors'>
                       {contactInfo.email}
                     </a>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <MapPin className="w-5 h-5 text-cyan-400" />
+                  </div>'
+                  <div className='flex items-center space-x-2>
+                    <MapPin className='w-5 h-5 text-cyan-400' />
                     <span>{contactInfo.address}</span>
-                  </div>
-<:pages/zero-trust-network-architecture-2029.tsx<ul className="space-y-4 mb-8">
-                    {plan.features.map((feature) => (
-                      <li key={feature} className="flex items-center space-x-3">
-                        <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0" />
-                        <span className="text-gray-300">{feature}</span>
+                  </div>'
+<:pages/zero-trust-network-architecture-2029.tsx<ul className='space-y-4 mb-8'>
+                    {plan.features.map((feature) => ('
+                      <li key={feature} className='flex items-center space-x-3>
+                        <CheckCircle className='w-5 h-5 text-purple-400 flex-shrink-0' />
+                        <span className='text-gray-300'>{feature}</span>
                       </li>
                     ))}
                   </ul>
-
-                  <Link
-                    href="/contact"
-                    className="block w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white text-center py-3 rounded-xl font-semibold transition-all duration-200 transform hover:scale-105"
-                  >
+                  <Link'
+                    href='/contact';
+                    className='block w-full bg-gradient-to-r from-purple-600 to-pink-600 hover: from-purple-700 hove,
+    r:to-pink-700 text-white text-center py-3 rounded-xl font-semibold transition-all duration-200 transform hove,
+    r:scale-105'>
                     Get Started
+>>>>>>> main
                   </Link>
                 </div>
               </motion.div>
-            ))}
+            ),)}
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
-      <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<<<<<<< HEAD
+      <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>';
+        <div: className='max-w-4xl mx-auto px-4 sm: px-6: lg:px-8: text-center'>';
+          <motion.div: initial={{ opacity: ,0, y: 30, }}
+            whileInView={{ opacity:  ,1, y: 0, }}
+            transition={{ duration: 0.8, }}
+            viewport={{ once: true, }}
+          >
+            <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
+              Ready: for Zero Trust?
+            </h2>
+            <p className='text-xl text-gray-300 mb-8'>';
+              Contact: us today to secure your network with zero trust architecture.
+            </p>
+            <div className='grid grid-cols-1 md:grid-cols-3: gap-6 mb-8'>';
+              <div: className='flex flex-col items-center space-y-2'>';
+                <Phone: className='w-6 h-6 text-purple-400' />';
+                <span: className='text-white font-semibold'>{contactInfo.mobil,e}</span>';
+                <span: className='text-gray-400 text-sm'>Call Us</span>';
+              </div>
+              <div: className='flex flex-col items-center space-y-2'>';
+                <Mail: className='w-6 h-6 text-purple-400' />';
+                <span: className='text-white font-semibold'>{contactInfo.email}</span>';
+                <span: className='text-gray-400 text-sm'>Email Us</span>';
+              </div>
+              <div: className='flex flex-col items-center space-y-2'>';
+                <MapPin: className='w-6 h-6 text-purple-400' />';
+                <span: className='text-white font-semibold'>{contactInfo.address}</span>';
+                <span: className='text-gray-400 text-sm'>Visit Us</span>';
+              </div>
+            </div>
+            <Link: href='/contact';';
+              className='inline-block: bg-gradient-to-r from-purple-600 to-pink-600 hover: from-purple-700: hover:to-pink-700: text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 transform hover:scale-105: hover:shadow-2xl: hover:shadow-purple-500/25'>';
+              Contact: Us Today
+=======
+      <section className='py-20 bg-gradient-to-b from-gray-900 to-black>
+        <div className='max-w-4xl mx-auto px-4 sm: px-6 l,
+    g:px-8 text-center'>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacit,
+    y: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          >'
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Ready for Zero Trust?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
+            </h2>'
+            <p className='text-xl text-gray-300 mb-8'>
               Contact us today to secure your network with zero trust architecture.
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              <div className="flex flex-col items-center space-y-2">
-                <Phone className="w-6 h-6 text-purple-400" />
-                <span className="text-white font-semibold">{contactInfo.mobile}</span>
-                <span className="text-gray-400 text-sm">Call Us</span>
-              </div>
-              <div className="flex flex-col items-center space-y-2">
-                <Mail className="w-6 h-6 text-purple-400" />
-                <span className="text-white font-semibold">{contactInfo.email}</span>
-                <span className="text-gray-400 text-sm">Email Us</span>
-              </div>
-              <div className="flex flex-col items-center space-y-2">
-                <MapPin className="w-6 h-6 text-purple-400" />
-                <span className="text-white font-semibold">{contactInfo.address}</span>
-                <span className="text-gray-400 text-sm">Visit Us</span>
+            </p>'
+            <div className='grid grid-cols-1 m,
+    d:grid-cols-3 gap-6 mb-8>
+              <div className='flex flex-col items-center space-y-2>
+                <Phone className='w-6 h-6 text-purple-400' />
+                <span className='text-white font-semibold'>{contactInfo.mobile}</span>'
+                <span className='text-gray-400 text-sm'>Call Us</span>
+              </div>'
+              <div className='flex flex-col items-center space-y-2>
+                <Mail className='w-6 h-6 text-purple-400' />
+                <span className='text-white font-semibold'>{contactInfo.email}</span>'
+                <span className='text-gray-400 text-sm'>Email Us</span>
+              </div>'
+              <div className='flex flex-col items-center space-y-2>
+                <MapPin className='w-6 h-6 text-purple-400' />
+                <span className='text-white font-semibold'>{contactInfo.address}</span>'
+                <span className='text-gray-400 text-sm'>Visit Us</span>
               </div>
             </div>
-
-            <Link
-              href="/contact"
-              className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25"
-            >
+            <Link'
+              href='/contact';
+              className='inline-block bg-gradient-to-r from-purple-600 to-pink-600 hover: from-purple-700 hover:to-pink-700 text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 hove,
+    r:shadow-2xl hove,
+    r:shadow-purple-500/25'>
               Contact Us Today
+>>>>>>> main
             </Link>
 </motion.div>
         </div>
       </section>
-
       <UltraFuturisticFooter2029 />
     </>
-  );
-}
+  ,)}

@@ -1,5 +1,4 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 const { execSync } = require('child_process');
 
 class CodeQualityMonitor {
@@ -14,26 +13,26 @@ class CodeQualityMonitor {
 
   async analyzeCodeQuality() {
     try {
-      // Analyze TypeScript complexity
+      // Analyze TypeScript complexity;
       execSync('npx tsc --noEmit', { encoding: 'utf8' });
       this.metrics.complexity = this.calculateComplexity();
       this.metrics.maintainability = this.calculateMaintainability();
 
       console.log('Code quality analysis completed');
       return this.metrics;
-    } catch (error) {
+    } catch (error) { 
       console.error('Code quality analysis failed:', error.message);
       return null;
-    }
+     }
   }
 
   calculateComplexity() {
-    // Simplified complexity calculation
+    // Simplified complexity calculation;
     return Math.floor(Math.random() * 10) + 1;
   }
 
   calculateMaintainability() {
-    // Simplified maintainability calculation
+    // Simplified maintainability calculation;
     return Math.floor(Math.random() * 100) + 50;
   }
 }
