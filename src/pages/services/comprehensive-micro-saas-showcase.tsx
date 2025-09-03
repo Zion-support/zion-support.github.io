@@ -131,13 +131,13 @@ export default function ComprehensiveMicroSaasShowcase() {
                     href={service.website}
                     className="flex-1 bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition-colors text-center text-sm font-semibold"
                   >
-                    Learn More
+                    <span>Learn More</span>
                   </Link>
                   <Link
                     href="/contact"
                     className="flex-1 border border-indigo-600 text-indigo-400 py-2 px-4 rounded-lg hover:bg-indigo-600 hover:text-white transition-colors text-center text-sm font-semibold"
                   >
-                    Contact Us
+                    <span>Contact Us</span>
                   </Link>
                 </div>
               </div>
@@ -180,7 +180,8 @@ export default function ComprehensiveMicroSaasShowcase() {
                 href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors text-lg font-semibold"
               >
-                Contact Us Now <ArrowRight className="w-5 h-5 ml-2" />
+                <span>Contact Us Now</span>
+                <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </div>
           </div>

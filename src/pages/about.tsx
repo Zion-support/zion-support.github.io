@@ -45,7 +45,8 @@ export default function AboutPage() {
               href="/contact"
               className="inline-flex items-center px-8 py-4 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors text-lg font-semibold"
             >
-              Get in Touch <ArrowRight className="w-5 h-5 ml-2" />
+              <span>Get in Touch</span>
+              <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
           </div>
         </div>

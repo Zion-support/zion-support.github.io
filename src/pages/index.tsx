@@ -20,13 +20,14 @@ export default function HomePage() {
                 href="/services"
                 className="inline-flex items-center px-8 py-4 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors text-lg font-semibold"
               >
-                Explore Our Services <ArrowRight className="w-5 h-5 ml-2" />
+                <span>Explore Our Services</span>
+                <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
                 href="/contact"
                 className="inline-flex items-center px-8 py-4 border-2 border-indigo-600 text-indigo-400 rounded-lg hover:bg-indigo-600 hover:text-white transition-colors text-lg font-semibold"
               >
-                Get Started Today
+                <span>Get Started Today</span>
               </Link>
             </div>
           </div>
@@ -104,7 +105,8 @@ export default function HomePage() {
                 href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors text-lg font-semibold"
               >
-                Contact Us Now <ArrowRight className="w-5 h-5 ml-2" />
+                <span>Contact Us Now</span>
+                <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </div>
           </div>
