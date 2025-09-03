@@ -1,5 +1,11 @@
+<<<<<<< HEAD
+import React from 'react';
+import Link from 'next/link';
+=======
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
 import {
   Menu,
   X,
@@ -10,10 +16,11 @@ import {
   Code,
   ChevronDown,
 } from 'lucide-react';
-<<<<<<< HEAD
-
 =======
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
+import { Brain, ChevronDown, Cloud, Code, Home, Info, Mail, Menu, Phone, X } from 'lucide-react';
+>>>>>>> main
+
+>>>>>>> main
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -50,9 +57,53 @@ const Header: React.FC = () => {
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
   ];
+=======
+import React from 'react'
+import Link  from 'next/link';const Header: React.FC = () => {
+>>>>>>> main
   return (
+<<<<<<< HEAD
+    <header className="bg-white shadow-sm">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          <div className="flex-shrink-0">
+            <Link href="/" className="text-2xl font-bold text-blue-600">
+              Zion Tech Group
+            </Link>
+          </div>
+          <nav className="hidden md:block">
+            <div className="ml-10 flex items-baseline space-x-4">
+              <Link
+                href="/"
+                className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+              >
+                Home
+              </Link>
+              <Link
+                href="/services"
+                className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+              >
+                Services
+              </Link>
+              <Link
+                href="/about"
+                className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+              >
+                About
+              </Link>
+              <Link
+                href="/contact"
+                className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+              >
+                Contact
+              </Link>{' '}
+=======
     <header className="bg-white shadow-sm sticky top-0 z-50">
-<div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+<<<<<<< HEAD
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+=======
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+>>>>>>> main
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
@@ -77,7 +128,11 @@ const Header: React.FC = () => {
                       onMouseEnter={() => setIsServicesOpen(true)}
                       onMouseLeave={() => setIsServicesOpen(false)}
                     >
-<button className="text-gray-900 hover: text-blue-600 px-3 py-2 rounded-md text-sm font-medium flex items-center">
+<<<<<<< HEAD
+                      <button className="text-gray-900 hover: text-blue-600 px-3 py-2 rounded-md text-sm font-medium flex items-center">
+=======
+                      <button className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium flex items-center">
+>>>>>>> main
                         {item.name}
                         <ChevronDown className="ml-1 h-4 w-4" />
                       </button>
@@ -92,7 +147,11 @@ const Header: React.FC = () => {
                             <Link
                               key={service.name}
                               href={service.href}
-className="flex items-center px-4 py-3 hover: bg-gray-50 transition-colors"
+<<<<<<< HEAD
+                              className="flex items-center px-4 py-3 hover: bg-gray-50 transition-colors"
+=======
+                              className="flex items-center px-4 py-3 hover:bg-gray-50 transition-colors"
+>>>>>>> main
                             >
                               {service.icon && (
                                 <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-100 mr-3">
@@ -122,11 +181,16 @@ className="flex items-center px-4 py-3 hover: bg-gray-50 transition-colors"
                   )}
                 </div>
               ))}
+>>>>>>> main
             </div>
           </nav>
 
           {/* Contact Info & CTA */}
-<div className="hidden lg: flex items-center space-x-4">
+<<<<<<< HEAD
+          <div className="hidden lg: flex items-center space-x-4">
+=======
+          <div className="hidden lg:flex items-center space-x-4">
+>>>>>>> main
             <div className="flex items-center space-x-2 text-sm text-gray-600">
               <Phone className="h-4 w-4" />
               <a href="tel:+13024640950" className="hover:text-blue-600">
@@ -145,7 +209,11 @@ className="flex items-center px-4 py-3 hover: bg-gray-50 transition-colors"
           <div className="lg:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-className="text-gray-900 hover: text-blue-600 p-2"
+<<<<<<< HEAD
+              className="text-gray-900 hover: text-blue-600 p-2"
+=======
+              className="text-gray-900 hover:text-blue-600 p-2"
+>>>>>>> main
             >
               {isMenuOpen ? (
                 <X className="h-6 w-6" />
@@ -158,7 +226,7 @@ className="text-gray-900 hover: text-blue-600 p-2"
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-<div className="lg: hidden border-t border-gray-200 py-4">
+          <div className="lg:hidden border-t border-gray-200 py-4">
             <div className="space-y-2">
               {navigation.map(item => (
                 <div key={item.name}>
@@ -172,7 +240,11 @@ className="text-gray-900 hover: text-blue-600 p-2"
                           <Link
                             key={service.name}
                             href={service.href}
-className="flex items-center px-3 py-2 text-sm text-gray-600 hover: text-blue-600"
+<<<<<<< HEAD
+                            className="flex items-center px-3 py-2 text-sm text-gray-600 hover: text-blue-600"
+=======
+                            className="flex items-center px-3 py-2 text-sm text-gray-600 hover:text-blue-600"
+>>>>>>> main
                             onClick={() => setIsMenuOpen(false)}
                           >
                             {service.icon && (
@@ -198,7 +270,11 @@ className="flex items-center px-3 py-2 text-sm text-gray-600 hover: text-blue-60
             <div className="mt-4 pt-4 border-t border-gray-200">
               <div className="flex items-center space-x-2 text-sm text-gray-600 px-3 py-2">
                 <Phone className="h-4 w-4" />
-<a href="tel: +13024640950" className="hover:text-blue-600">
+<<<<<<< HEAD
+                <a href="tel: +13024640950" className="hover:text-blue-600">
+=======
+                <a href="tel:+13024640950" className="hover:text-blue-600">
+>>>>>>> main
                   +1 302 464 0950
                 </a>
               </div>
@@ -225,8 +301,5 @@ className="flex items-center px-3 py-2 text-sm text-gray-600 hover: text-blue-60
     </header>
   );
 };
-<<<<<<< HEAD
 
-=======
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 export default Header;

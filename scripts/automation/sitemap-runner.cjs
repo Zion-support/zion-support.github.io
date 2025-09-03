@@ -8,22 +8,22 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-console.log(`'🗺️ Starting continuous sitemap runner automation...');
+console.log(`🗺️ Starting continuous sitemap runner automation...`);
 
 // Get automation interval from environment variable (default: 6 hours)
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 21600000; // 6 hours
 
 async function runSitemapRunner() {
   try {
-    console.log(`🗺️ Running sitemap generation at ${new Date().toISOString()});
-    
-    // Build the project first
-    console.log(`'🏗️ Building project for sitemap generation...');
+    console.log(`🗺️ Running sitemap generation at ${new Date().toISOString()});`);
+    `);
+    // Build the project first`);
+    console.log(`🏗️ Building project for sitemap generation...`);
     try {
       execSync('npm run build', { stdio: 'inherit' });
       console.log('✅ Build completed'`);
     } catch (error) {
-      console.log(`'⚠️  Build failed but continuing...');
+      console.log(`⚠️  Build failed but continuing...`);
       return;
     }
     
@@ -67,7 +67,7 @@ Disallow: /api/;
     }
     
     // Validate sitemap
-    console.log(`'🔍 Validating sitemap...');
+    console.log(`🔍 Validating sitemap...`);
     try {
       if (fs.existsSync(path.join(distPath, 'sitemap.xml'))) {
         const sitemapContent = fs.readFileSync(path.join(distPath, 'sitemap.xml'), 'utf8');
@@ -80,7 +80,7 @@ Disallow: /api/;
     }
     
     // Check for broken links in sitemap
-    console.log(`'🔗 Checking sitemap links...');
+    console.log(`🔗 Checking sitemap links...`);
     try {
       if (fs.existsSync('''scripts/check-sitemap-links.js''')) {
         execSync('node ''scripts/check-sitemap-links.js''', { stdio: 'inherit' });

@@ -21,7 +21,7 @@ class PM2ErrorPrevention {
   }
 
   async start() {
-    console.log(`'🚀 Starting PM2 Error Prevention Automation...');
+    console.log(`🚀 Starting PM2 Error Prevention Automation...`);
 
     // Set up monitoring
     this.setupMonitoring();
@@ -54,7 +54,7 @@ class PM2ErrorPrevention {
       module.exports = ${JSON.stringify(ecosystemConfig, null, 2)};
     `);
 
-    console.log(`'✅ PM2 ecosystem configuration created');
+    console.log(`✅ PM2 ecosystem configuration created`);
   }
 
   startPreventionLoop() {
@@ -68,7 +68,7 @@ class PM2ErrorPrevention {
   }
 
   async runPreventionChecks() {
-    console.log(`'🔍 Running error prevention checks...');
+    console.log(`🔍 Running error prevention checks...`);
 
     // Check 1: TypeScript errors
     await this.checkTypeScriptErrors();
@@ -82,7 +82,7 @@ class PM2ErrorPrevention {
     // Check 4: Unused imports
     await this.checkUnusedImports();
 
-    console.log(`'✅ Prevention checks completed');
+    console.log(`✅ Prevention checks completed`);
   }
 
   async checkTypeScriptErrors() {
@@ -139,7 +139,7 @@ class PM2ErrorPrevention {
         await this.autoFixImportIssues();
       }
     } else {
-      console.log(`'✅ No import issues found');
+      console.log(`✅ No import issues found`);
     }
   }
 
@@ -168,11 +168,11 @@ class PM2ErrorPrevention {
 
     if (syntaxIssues > 0) {console.log(`⚠️  Found ${syntaxIssues} syntax issues);
 
-      if (this.config.autoFix) {
-        await this.autoFixSyntaxIssues();
-      }
-    } else {
-      console.log(`'✅ No syntax issues found');
+      if (this.config.autoFix) {`);
+        await this.autoFixSyntaxIssues();`);
+      }`);
+    } else {`);
+      console.log(`✅ No syntax issues found`);
     }
   }
 

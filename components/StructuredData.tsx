@@ -15,8 +15,12 @@ export const StructuredData: React.FC<StructuredDataProps> = ({ data }) => {
 
 export const OrganizationSchema = () => {
   const organizationData = {
+<<<<<<< HEAD
     '@context': 'https://schema.org',
     '@type': 'Organization',
+=======
+    '@context': 'https://schema.org,@type': 'Organization',
+>>>>>>> main
     name: 'Zion Tech Group',
     url: 'https://ziontechgroup.com',
     logo: 'https://ziontechgroup.com/logo.png',
@@ -32,8 +36,15 @@ export const OrganizationSchema = () => {
       url: 'https://ziontechgroup.com/contact',
     },
     sameAs: [
+<<<<<<< HEAD
       'https://linkedin.com/company/ziontechgroup',
-'https: //twitter.com/ziontechgroup',
+      'https: //twitter.com/ziontechgroup',
+<<<<<<< HEAD
+=======
+=======
+      'https://linkedin.com/company/ziontechgroup,https://twitter.com/ziontechgroup',
+>>>>>>> main
+>>>>>>> main
     ],
     foundingDate: '2020',
     numberOfEmployees: '50-100',
@@ -45,16 +56,24 @@ export const OrganizationSchema = () => {
 
 export const WebSiteSchema = () => {
   const websiteData = {
+<<<<<<< HEAD
     '@context': 'https://schema.org',
     '@type': 'WebSite',
+=======
+    '@context': 'https://schema.org,@type': 'WebSite',
+>>>>>>> main
     name: 'Zion Tech Group',
     url: 'https://ziontechgroup.com',
     description:
       'Leading provider of revolutionary technology solutions, AI services, and cutting-edge innovations.',
     potentialAction: {
       '@type': 'SearchAction',
+<<<<<<< HEAD
       target: 'https://ziontechgroup.com/search?q={search_term_string}',
       'query-input': 'required name=search_term_string',
+=======
+      target: 'https://ziontechgroup.com/search?q={search_term_string},query-input': 'required name=search_term_string',
+>>>>>>> main
     },
   };
 
@@ -63,8 +82,12 @@ export const WebSiteSchema = () => {
 
 export const ServiceSchema = () => {
   const serviceData = {
+<<<<<<< HEAD
     '@context': 'https://schema.org',
     '@type': 'Service',
+=======
+    '@context': 'https://schema.org,@type': 'Service',
+>>>>>>> main
     name: 'AI Services',
     description:
       'Cutting-edge artificial intelligence solutions and automation tools',

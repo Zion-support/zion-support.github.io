@@ -2,7 +2,8 @@ import React, { useState } from;
   'react' import { motion } from;
   'framer-motion' import {  Shield, TrendingUp, Brain, CheckCircle, Star, ArrowRight, Users, Target, Clock, DollarSign, Database, Zap, Globe, Activity, AlertTriangle, Eye, Lock, Download, Upload, RefreshCw, Settings, Play, Gauge, BarChart3, Cpu, Factory, Truck, HardHat, Thermometer, GaugeIcon, AlertCircle, CheckSquare, XCircle, ShieldCheck, Fingerprint, Search, Bell, FileText, CreditCard, Building, ShoppingCart, } from;
   'lucide-react'  const AIFraudDetectionPlatform: React.FC = () => { const [activeTab, setActiveTab] = useState(,
-  overview')  const features = [ { title: 'Real-time Fraud Detection, description:';AI-powered detection that identifies fraud patterns in milliseconds', icon: ShieldCheck, color:,
+  overview')  const features = [
+  { title: 'Real-time Fraud Detection, description:';AI-powered detection that identifies fraud patterns in milliseconds', icon: ShieldCheck, color:,
   from-red-500 to-pink-500', }, { title: 'Machine Learning Models, description:';Advanced ML algorithms that continuously learn and adapt to new threats', icon: Brain, color:,
   from-blue-500 to-cyan-500', }, { title: 'Behavioral Analysis, description:';User behavior profiling to detect anomalies and suspicious activities', icon: Activity, color:,
   from-green-500 to-emerald-500', }, { title: 'Multi-Channel Protection, description:;
@@ -11,43 +12,35 @@ import React, { useState } from;
   'Dynamic risk assessment with real-time scoring updates', icon: Gauge, color:,
   from-orange-500 to-red-500', }, { title: 'Compliance & Reporting, description:;
   'Built-in compliance tools and comprehensive audit trails', icon: FileText, color:,
-  from-teal-500 to-cyan-500', }, ]  const useCases = [ { title: 'Financial Services, description:';Detect credit card fraud, account takeover, and money laundering', icon: CreditCard, examples: [;
-  Credit card fraud',';Account takeover',';Money laundering',';Identity theft', ], }, { title: 'E-commerce, description:';Prevent fraudulent transactions and protect customer accounts', icon: ShoppingCart, examples: [;
-  Payment fraud',';Account abuse',';Return fraud',';Bot attacks', ], }, { title: 'Healthcare, description:;
+  from-teal-500 to-cyan-500', }, ]  const useCases = [
+  { title: 'Financial Services, description:';Detect credit card fraud, account takeover, and money laundering', icon: CreditCard, examples: [;
+  Credit card fraud,;Account takeover,;Money laundering,;Identity theft', ], }, { title: 'E-commerce, description:';Prevent fraudulent transactions and protect customer accounts', icon: ShoppingCart, examples: [;
+  Payment fraud,;Account abuse,;Return fraud,;Bot attacks', ], }, { title: 'Healthcare, description:;
   'Detect insurance fraud and protect patient data', icon: Building, examples: [;
-  Insurance fraud',';Medical identity theft',';Billing fraud',';Data breaches', ], }, { title: 'Insurance, description:;
+  Insurance fraud,;Medical identity theft,;Billing fraud,;Data breaches', ], }, { title: 'Insurance, description:;
   'Identify fraudulent claims and prevent abuse', icon: Shield, examples: [;
-  Claims fraud',';Policy abuse',';Identity fraud',';Document forgery', ], }, ]  const pricingPlans = [ { name: 'Starter, price: 299, period:,
-  month', features: [;Up to 10, 000 transactions/month',';Basic fraud detection',';Standard alerts',';Email support',';Basic analytics',';Mobile app access', ], popular: false, }, { name:;
+  Claims fraud,;Policy abuse,;Identity fraud,;Document forgery', ], }, ]  const pricingPlans = [
+  { name: 'Starter, price: 299, period:,
+  month', features: [;Up to 10, 000 transactions/month,;Basic fraud detection,;Standard alerts,;Email support,;Basic analytics,;Mobile app access', ], popular: false, }, { name:;
   'Professional', price: 799, period:,
-  month', features: [;Up to 100, 000 transactions/month',';Advanced fraud detection',';AI-powered insights',';Priority support',';Advanced analytics',';Custom dashboards',';API access',';Integration support', ], popular: true, }, { name:;
+  month', features: [;Up to 100, 000 transactions/month,;Advanced fraud detection,;AI-powered insights,;Priority support,;Advanced analytics,;Custom dashboards,;API access,;Integration support', ], popular: true, }, { name:;
   'Enterprise', price: 1999, period:,
-  month', features: [';Unlimited transactions,';Full fraud protection suite',';Custom AI models',';24/7 dedicated support',';Custom analytics',';White-label solution',';On-premise option',';Custom integrations', ], popular: false, }, ]  const competitors = [ { name:,
+  month', features: [';Unlimited transactions,';Full fraud protection suite,;Custom AI models,;24/7 dedicated support,;Custom analytics,;White-label solution,;On-premise option,;Custom integrations', ], popular: false, }, ]  const competitors = [
+  { name:,
   Sift', pricing: '$0.08/transaction, features: [;
-  'Basic fraud detection',
-  'Standard ML',
-  'Basic reporting'], rating: 4.2, pros: [,
-  Easy to use',
-  'Good documentation'], cons: [';Expensive per transaction,
-  Limited AI features',';Basic analytics', ], }, { name: 'Signifyd, pricing:,
-  $0.15/transaction', features: [';Guaranteed fraud protection,';Basic ML',';Standard dashboards', ], rating: 4.0, pros: [,
-  Fraud guarantee',
-  'Good support'], cons: [;
+  'Basic fraud detection,Standard ML,Basic reporting'], rating: 4.2, pros: [,
+  Easy to use,Good documentation'], cons: [';Expensive per transaction,
+  Limited AI features,;Basic analytics', ], }, { name: 'Signifyd, pricing:,
+  $0.15/transaction', features: [';Guaranteed fraud protection,';Basic ML,;Standard dashboards', ], rating: 4.0, pros: [,
+  Fraud guarantee,Good support'], cons: [;
   'High cost,
 ,
-  Limited customization',
-  'Basic ML models'], }, { name: 'Zion AI Fraud Detection, pricing:,
-  $299/month', features: [';Advanced AI detection,';Real-time protection',';Custom ML models', ], rating: 4.8, pros: [,
-  Advanced AI',
-  'Cost-effective',
-  'Customizable'], cons: [
+  Limited customization,Basic ML models'], }, { name: 'Zion AI Fraud Detection, pricing:,
+  $299/month', features: [';Advanced AI detection,';Real-time protection,;Custom ML models', ], rating: 4.8, pros: [,
+  Advanced AI,Cost-effective,Customizable'], cons: [
   'Newer platform,
   'Limited enterprise features'], }, ]  return ( <div className='min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900'>' {}'' <section className='relative overflow-hidden py-24'>'' <div className='absolute inset-0 bg-gradient-to-r from-red-600/20 to-pink-600/20' />'' <div className='relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'> <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}' transition={{ duration: 0.8 }}'' className='text-center'' >'' <div className='inline-flex items-center px-4 py-2 bg-red-500/20 border border-red-500/30 rounded-full text-red-400 text-sm font-medium mb-6'>'' <Shield className='w-4 h-4 mr-2' /> AI-Powered Fraud Detection </div>'' <h1 className='text-4xl md: text-6xl font-bold text-white mb-6'>' Stop Fraud Before'' <span className='block text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-pink-400'> It Happens </span> </h1>'' <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'> Protect your business with AI-powered fraud detection that identifies threats in real-time. Stop fraudsters before they can cause damage to your bottom line. </p>'' <div className='flex flex-wrap justify-center gap-4 mb-12'> <motion.button whileHover={{ scale: 1.05 }}' whileTap={{ scale: 0.95 }}'' className='px-8 py-4 bg-gradient-to-r from-red-500 to-pink-500 text-white rounded-lg font-semibold text-lg hover: from-red-600 hover:to-pink-600 transition-all duration-300' > Start Free Trial </motion.button> <motion.button whileHover={{ scale: 1.05 }}' whileTap={{ scale: 0.95 }}'' className='px-8 py-4 border-2 border-red-500 text-red-400 rounded-lg font-semibold text-lg hover: bg-red-500 hover:text-white transition-all duration-300' > Schedule Demo </motion.button> </div>' {}'' <div className='grid grid-cols-2 md: grid-cols-4 gap-6 max-w-4xl mx-auto'>'' <div className='text-center'>'' <div className='text-3xl font-bold text-red-400'>99.9%</div>'' <div className='text-gray-400'>Detection Rate</div>' </div>'' <div className='text-center'>'' <div className='text-3xl font-bold text-pink-400'>50ms</div>'' <div className='text-gray-400'>Response Time</div>' </div>'' <div className='text-center'>'' <div className='text-3xl font-bold text-green-400'>90%</div>'' <div className='text-gray-400'>Cost Reduction</div>' </div>'' <div className='text-center'>'' <div className='text-3xl font-bold text-cyan-400'>24/7</div>'' <div className='text-gray-400'>Protection</div> </div> </div> </motion.div> </div> </section>' {}'' <section className='py-8 px-4 sm: px-6 lg:px-8'>'' <div className='max-w-7xl mx-auto'>'' <div className='flex flex-wrap justify-center gap-2 mb-8'> {[,
-  overview',
-  'features',
-  'pricing',
-  'competitors',
-  'contact'].map( tab => ( <button key={tab} onClick={() => setActiveTab(tab)} className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${ activeTab === tab ?;
+  overview,features,pricing,competitors,contact'].map( tab => ( <button key={tab} onClick={() => setActiveTab(tab)} className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${ activeTab === tab ?;
   'bg-gradient-to-r from-red-500 to-pink-500 text-white shadow-lg shadow-red-500/25': 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white }`} > {tab.charAt(0).toUpperCase() + tab.slice(1)} </button> ) )} </div> </div> </section>' {}'' <section className='py-12 px-4 sm: px-6 lg:px-8'>'' <div className='max-w-7xl mx-auto'> {activeTab ===
   'overview' && ( <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}' transition={{ duration: 0.5 }}'' className='space-y-16' > {}' <div>'' <h2 className='text-3xl md: text-4xl font-bold text-white text-center mb-12'> Why Choose AI Fraud Detection?' </h2>'' <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>'' <div className='text-center'>'' <div className='w-16 h-16 bg-gradient-to-r from-red-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>'' <Zap className='w-8 h-8 text-white' />' </div>'' <h3 className='text-xl font-semibold text-white mb-2'> 99.9% Detection Rate' </h3>'' <p className='text-gray-300'> Catch fraudsters before they can cause damage </p>' </div>'' <div className='text-center'>'' <div className='w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>'' <Star className='w-8 h-8 text-white' />' </div>'' <h3 className='text-xl font-semibold text-white mb-2'> Real-time Protection' </h3>'' <p className='text-gray-300'> Instant detection and response to threats </p>' </div>'' <div className='text-center'>'' <div className='w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>'' <DollarSign className='w-8 h-8 text-white' />' </div>'' <h3 className='text-xl font-semibold text-white mb-2'> 90% Cost Reduction' </h3>'' <p className='text-gray-300'> Save money by preventing fraud losses </p> </div> </div> </div> {}' <div>'' <h2 className='text-3xl md: text-4xl font-bold text-white text-center mb-12'> Perfect For Every Industry' </h2>'' <div className='grid grid-cols-1 md: grid-cols-2 gap-8'> {useCases.map((useCase, index) => ( <motion.div key={index} initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }} animate={{ opacity: 1, x: 0 }}' transition={{ duration: 0.5, delay: index * 0.1 }}'' className='bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20'' >'' <div className='flex items-center mb-4'>'' <div className='w-12 h-12 bg-gradient-to-r from-red-500 to-pink-500 rounded-xl flex items-center justify-center mr-4'>'' <useCase.icon className='w-6 h-6 text-white' />' </div>'' <h3 className='text-xl font-semibold text-white'> {useCase.title} </h3>' </div>'' <p className='text-gray-300 mb-4'> {useCase.description}' </p>'' <div className='space-y-2'> {useCase.examples.map((example, idx) => ( <div' key={idx}'' className='flex items-center text-sm text-gray-400'' >'' <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' /> {example} </div> ))} </div> </motion.div> ))} </div> </div> </motion.div> )} {activeTab ===
   'features' && ( <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}' >'' <h2 className='text-3xl md: text-4xl font-bold text-white text-center mb-12'> Powerful Features for Fraud Detection' </h2>'' <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'> {features.map((feature, index) => ( <motion.div key={index} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}' transition={{ duration: 0.5, delay: index * 0.1 }}'' className='bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover: border-red-500/40 transition-all duration-300' > <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-4`}' >'' <feature.icon className='w-8 h-8 text-white' />' </div>'' <h3 className='text-xl font-semibold text-white mb-3'> {feature.title}' </h3>'' <p className='text-gray-300'>{feature.description}</p> </motion.div> ))} </div> </motion.div> )} {activeTab ===

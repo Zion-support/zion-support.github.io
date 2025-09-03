@@ -31,8 +31,7 @@ class DependencyMonitor {
       return audit} catch (error) {
       // npm audit might fail if there are vulnerabilities;
       try {
-        const output = error.stdout?.toString() || error.stderr?.toString() || ';
-  ';
+        const output = error.stdout?.toString() || error.stderr?.toString() || ;
         if (output.includes('npm ERR!;
   ')) {
           // Try to parse the error output for vulnerability info;

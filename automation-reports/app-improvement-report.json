@@ -1,27 +1,29 @@
 {
-  "timestamp": "2025-09-02T21:48:24.977Z",
-  "bundleOptimization": [
-    {
-      "command": "npm run build",
-      "description": "Build application for analysis",
-      "success": true,
-      "output": "\n> bolt.new.zion.app@0.1.0 build\n> next build\n\n   ▲ Next.js 15.5.2\n   - Environments: .env\n\n   Skipping validation of types\n   Skipping linting\n   Creating an optimized production build ...\n ✓ Compiled successfully in 3.7s\n   Collecting page data ...\n   Generating static pages (0/19) ...\n   Generating static pages (4/19) \r\n   Generating static pages (9/19) \r\n   Generating static pages (14/19) \r\n ✓ Generating static pages (19/19)\n   Finalizing page optimization ...\n   Collecting build traces ...\n\nRoute (pages)                                Size  First Load JS\n┌ ○ /                                     4.73 kB        92.7 kB\n├   /_app                                     0 B          88 kB\n├ ○ /404                                    180 B        88.2 kB\n├ ○ /about                                2.52 kB        93.5 kB\n├ ○ /ai-services                          8.35 kB        96.4 kB\n├ ○ /blog                                 2.91 kB        93.9 kB\n├ ○ /contact                              2.69 kB        90.7 kB\n├ ○ /help                                  3.5 kB        94.5 kB\n├ ○ /index.p                              1.45 kB        89.5 kB\n├ ○ /it-services                          7.96 kB          96 kB\n├ ○ /micro-saas                           8.75 kB        96.8 kB\n├ ○ /NotFound                             35.5 kB         124 kB\n├ ○ /pricing                              3.53 kB        94.5 kB\n├ ○ /privacy                              3.37 kB        94.4 kB\n├ ○ /services                             13.8 kB         102 kB\n├ ○ /services/ai-development              2.73 kB        93.7 kB\n├ ○ /services/cloud-services              2.61 kB        93.6 kB\n├ ○ /services/web-development             2.77 kB        93.8 kB\n└ ○ /terms                                3.75 kB        94.8 kB\n+ First Load JS shared by all             90.6 kB\n  ├ chunks/framework-a6e0b7e30f98059a.js  44.8 kB\n  ├ chunks/main-850da7952efed1f7.js       35.9 kB\n  └ other shared chunks (total)           9.93 kB\n\nƒ Middleware                                34 kB\n\n○  (Static)  prerendered as static content\n\n"
+  "timestamp": "2025-09-02T22:42:39.835Z",
+  "optimizations": {
+    "nextConfig": {
+      "success": true
     },
-    {
-      "command": "npx @next/bundle-analyzer",
-      "description": "Analyze bundle size",
-      "success": false,
-      "error": "Command failed: npx @next/bundle-analyzer\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error could not determine executable to run\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-02T21_48_35_642Z-debug-0.log\n"
+    "packageJson": {
+      "success": true
+    },
+    "gitHooks": {
+      "success": true
+    },
+    "dockerfile": {
+      "success": true
+    },
+    "dockerCompose": {
+      "success": true
+    },
+    "nginxConfig": {
+      "success": true
+    },
+    "healthCheck": {
+      "success": true
+    },
+    "ciWorkflow": {
+      "success": true
     }
-  ],
-"summary": {
-    "image_optimization": 3,
-    "seo_improvement": 4,
-    "performance_enhancement": 27,
-    "error_boundary": 1,
-    "accessibility_improvement": 0,
-    "bundle_optimization": 45,
-    "pwa_feature": 0,
-    "code_structure": 2
   }
 }

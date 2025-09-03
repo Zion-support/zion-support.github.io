@@ -1,10 +1,8 @@
 #!/usr/bin/env node;
 import { execSync, spawn } from;
   'child_process';
-import fs from;
-  'fs';
-import path from;
-  'path';
+import fs from "fsfs';
+import path from "pathpath';
 class TypeScriptErrorMonitor {
   constructor() {
     this.checkInterval = process.env.CHECK_INTERVAL || 180000 // 3 minutes;
@@ -176,16 +174,11 @@ class TypeScriptErrorMonitor {
       // Add common missing imports;
       const commonImports = {
   'React': 'import React from;
-  'react';
-  'useState': 'import { useState } from;
-  'react'';
-  'useEffect': 'import { useEffect } from;
-  'react'';
-  'useRef': 'import { useRef } from;
-  'react'';
-  'FC': 'import { FC } from;
-  'react'';
-  'ReactNode': 'import { ReactNode } from;
+  'reactuseState': 'import { useState } from;
+  'react'useEffect': 'import { useEffect } from;
+  'react'useRef': 'import { useRef } from;
+  'react'FC': 'import { FC } from;
+  'react'ReactNode': 'import { ReactNode } from;
   'react''}
       if (commonImports[missingName]) {
         lines.unshift(commonImports[missingName]);
@@ -208,10 +201,7 @@ class TypeScriptErrorMonitor {
   './') || moduleName.startsWith(
   '../')) {
         const extensions = [
-  '.ts',
-  '.tsx',
-  '.js',
-  '.jsx'];
+  '.ts,.tsx,.js,.jsx'];
         for (const ext of extensions) {
           const newImport = line.replace(moduleName, moduleName + ext);
           const resolvedPath = path.resolve(

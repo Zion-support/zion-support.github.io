@@ -16,7 +16,7 @@ class AICodeReviewer {
     this.logFile = path.join(this.projectRoot, 'logs', 'ai-code-reviewer.log');
     this.reviewsLog = path.join(this.projectRoot, 'logs', 'ai-reviews.json');
     this.learningData = path.join(
-      this.projectRoot,logs',
+      this.projectRoot, 'logs',
       'ai-learning-data.json'
     );
     this.ensureLogsDirectory();
@@ -463,7 +463,7 @@ class AICodeReviewer {
     };
 
     const reportPath = path.join(
-      this.projectRoot,logs', `ai-review-report-${Date.now()}.json`
+      this.projectRoot, 'logs', `ai-review-report-${Date.now()}.json`
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 this.log(`📊 AI Review Report generated: ${reportPath}`);

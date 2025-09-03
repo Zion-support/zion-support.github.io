@@ -3,9 +3,9 @@ import React, { useState, useEffect } from,
   'react-router-dom' import { motion } from;
   'framer-motion' import { Brain, Zap, Shield, Rocket, Cloud, Globe, Code, Database, Network, Lock, Cpu, BarChart3, Users, Target, ArrowRight, CheckCircle, Star, TrendingUp, Server, Search, Filter, Grid, List } from;
   'lucide-react'  export default function ServicesPage() { const [activeCategory, setActiveCategory] = useState(
-  'all') const [searchQuery, setSearchQuery] = useState(';
-  ') const [viewMode, setViewMode] = useState('grid;
-  ')  const serviceCategories = [ { id: 'all, name: 'All Services;
+  'all') const [searchQuery, setSearchQuery] = useState() const [viewMode, setViewMode] = useState('grid;
+  ')  const serviceCategories = [
+  { id: 'all, name: 'All Services;
   ', icon: Star }, { id:,
   ai;
   ', name: 'AI Solutions, icon: Brain }, { id:,
@@ -20,7 +20,8 @@ import React, { useState, useEffect } from,
   iot;
   ', name: 'IoT & Edge, icon: Network }, { id:,
   blockchain;
-  ', name: 'Blockchain, icon: Lock } ]  const services = [ { id:,
+  ', name: 'Blockchain, icon: Lock } ]  const services = [
+  { id:,
   ai-content-generation;
   ', title: 'AI Content Generator Pro, description:,
   Generate high-quality content, code, and creative assets with our advanced AI models.;
@@ -28,7 +29,7 @@ import React, { useState, useEffect } from,
   $;
   ', tags: ['AI Content, ,
   Text Generation;
-  ', 'Code Generation;
+  ,Code Generation;
   '], author: { name: 'Zion AI Labs, id:,
   zion-ai-labs;
   ', avatarUrl: 'https:'';

@@ -26,7 +26,7 @@ class ComprehensiveErrorAutomation {
   }
 
   async run() {
-    console.log(`'🚀 Starting Comprehensive Error Automation...');
+    console.log(`🚀 Starting Comprehensive Error Automation...`);
 
     try {
       this.ensureDirectories();

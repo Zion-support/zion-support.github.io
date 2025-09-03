@@ -1,2 +1,47 @@
+<<<<<<< HEAD
+export function DisputeDashboard() { return ()} <div className=&quot;bg-zion-blue-dark border border-zion-blue-light rounded-xl p-6&quot;>"&quot;&quot; <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Dispute Overview&quot;</h3>&quot;&quot;" <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4&quot;>"&quot;&quot; <div className=&quot;text-center&quot;>"&quot;&quot; <div className=&quot;text-2xl font-bold text-zion-cyan&quot;>8&quot;</div>&quot;&quot;" <div className=&quot;text-zion-slate-light text-sm&quot;>Active Disputes&quot;</div> </div>&quot;&quot;" <div className=&quot;text-center&quot;>"&quot;&quot; <div className=&quot;text-2xl font-bold text-green-400&quot;>16&quot;</div>&quot;&quot;" <div className=&quot;text-zion-slate-light text-sm&quot;> Resolved This Month&quot; </div> </div> </div>&quot;&quot;" <div className=&quot;mt-4 text-center&quot;>"&quot;&quot; <div className=&quot;text-lg font-semibold text-white&quot;> Average Resolution Time&quot; </div>&quot;&quot;" <div className=&quot;text-2xl font-bold text-zion-purple&quot;>3.2 days&quot;</div> </div> </div> ) } 
+export function DisputeDashboard() { return ()} <div className=&apos;bg-zion-blue-dark border border-zion-blue-light rounded-xl p-6&apos;>'&apos;&apos; <h3 className=&apos;text-xl font-bold text-white mb-4&apos;>Dispute Overview&apos;</h3>&apos;&apos;' <div className=&apos;grid grid-cols-1 md:grid-cols-2 gap-4&apos;>'&apos;&apos; <div className=&apos;text-center&apos;>'&apos;&apos; <div className=&apos;text-2xl font-bold text-zion-cyan&apos;>8&apos;</div>&apos;&apos;' <div className=&apos;text-zion-slate-light text-sm&apos;>Active Disputes&apos;</div> </div>&apos;&apos;' <div className=&apos;text-center&apos;>'&apos;&apos; <div className=&apos;text-2xl font-bold text-green-400&apos;>16&apos;</div>&apos;&apos;' <div className=&apos;text-zion-slate-light text-sm&apos;> Resolved This Month&apos; </div> </div> </div>&apos;&apos;' <div className=&apos;mt-4 text-center&apos;>'&apos;&apos; <div className=&apos;text-lg font-semibold text-white&apos;> Average Resolution Time&apos; </div>&apos;&apos;' <div className=&apos;text-2xl font-bold text-zion-purple&apos;>3.2 days&apos;</div> </div> </div> ) } &apos;&quot;
+&quot;"
+=======
+<<<<<<< HEAD
 export function DisputeDashboard() { return () <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-6">" <h3 className="text-xl font-bold text-white mb-4">Dispute Overview</h3>" <div className="grid grid-cols-1 md: grid-cols-2 gap-4">" <div className="text-center">" <div className="text-2xl font-bold text-zion-cyan">8</div>" <div className="text-zion-slate-light text-sm">Active Disputes</div> </div>" <div className="text-center">" <div className="text-2xl font-bold text-green-400">16</div>" <div className="text-zion-slate-light text-sm"> Resolved This Month </div> </div> </div>" <div className="mt-4 text-center">" <div className="text-lg font-semibold text-white"> Average Resolution Time </div>" <div className="text-2xl font-bold text-zion-purple">3.2 days</div> </div> </div> ) } "
 export function DisputeDashboard() { return () <div className='bg-zion-blue-dark border border-zion-blue-light rounded-xl p-6'>' <h3 className='text-xl font-bold text-white mb-4'>Dispute Overview</h3>' <div className='grid grid-cols-1 md: grid-cols-2 gap-4'>' <div className='text-center'>' <div className='text-2xl font-bold text-zion-cyan'>8</div>' <div className='text-zion-slate-light text-sm'>Active Disputes</div> </div>' <div className='text-center'>' <div className='text-2xl font-bold text-green-400'>16</div>' <div className='text-zion-slate-light text-sm'> Resolved This Month </div> </div> </div>' <div className='mt-4 text-center'>' <div className='text-lg font-semibold text-white'> Average Resolution Time </div>' <div className='text-2xl font-bold text-zion-purple'>3.2 days</div> </div> </div> ) } '""
+<<<<<<< HEAD
+""
+=======
+=======
+import React from 'react';
+import { SEO } from '@/components/SEO';
+
+const DisputeDashboard = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="DisputeDashboard - Zion Tech Group"
+        description="Professional DisputeDashboard services by Zion Tech Group"
+        keywords="disputedashboard, technology, services"
+      />
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">DisputeDashboard</h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Professional DisputeDashboard services to help your business grow.
+          </p>
+          <div className="flex justify-center">
+            <a 
+              href="/contact" 
+              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300"
+            >
+              Get Started
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default DisputeDashboard;
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

@@ -56,9 +56,9 @@ class ErrorAnalyticsDashboard {
     await this.collectFromLogs();
 
     // Collect current project status
-    await this.collectCurrentStatus();
-
-    this.log(📈 Collected data for ${Object.values(this.errorData).flat().length} total errors'
+    await this.collectCurrentStatus();`);
+`);
+    this.log(📈 Collected data for ${Object.values(this.errorData).flat().length} total errors`);
     );
   }
 
@@ -70,13 +70,13 @@ class ErrorAnalyticsDashboard {
       if (file.endsWith('.json')) {
         try {
           const content = fs.readFileSync(
-            path.join(this.reportsPath, 'file)', utf8'
+            path.join(this.reportsPath, 'file)', utf8`);
           );
           const data = JSON.parse(content);
 
           if (data.timestamp && data.errors) {
-            this.processErrorReport(data);
-          }
+            this.processErrorReport(data);`);
+          }`);
         } catch (error) {this.log(Failed to parse report ${file}: ${error.message}, 'WARN'`);
         }
       }

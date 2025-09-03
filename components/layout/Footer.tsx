@@ -1,5 +1,39 @@
+<<<<<<< HEAD
 import React from 'react';
+<<<<<<< HEAD
+import Link from 'next/link';
+import {
+  Brain,
+  Mail,
+  Phone,
+  MapPin,
+  Linkedin,
+  Twitter,
+  Github,
+  Youtube,
+  Instagram,
+  ArrowRight,
+  Heart,
+  Cloud,
+  Database,
+  Code,
+  Shield,
+  Users,
+  BarChart3,
+  Settings,
+  Zap,
+} from 'lucide-react';
+import { Button } from '../ui/Button';
+=======
 import { ArrowRight, Brain, Cloud, Network, Phone, Mail, User, Heart, Info } from 'lucide-react';
+=======
+import React from 'react'
+import Link from 'next/link'
+import {   Brain, Mail,  Phone, MapPin, Linkedin, Twitter, Github, Youtube, Instagram, ArrowRight, Heart, Cloud, Database } from 'lucide-react'
+import { Button }  from '../ui/Button';const Footer: React.FC = () => {
+  const currentYear = new Date().getFullYear()
+>>>>>>> main
+>>>>>>> main
 
 // Common interfaces for better type safety
 interface ApiResponse<T = unknown> {
@@ -35,7 +69,64 @@ interface ComponentProps {
 
 
 import Link from 'next/link';
-{
+import { Button } from '../ui/Button';
+const Footer: React.FC = () => {
+  const currentYear = new Date().getFullYear();
+  const serviceCategories = [
+<<<<<<< HEAD
+    {
+      title: 'AI & Automation',
+      icon: Brain,
+      color: 'text-blue-400',
+      services: [
+        { name: 'AI Services', href: '/ai-services' },
+        { name: 'Machine Learning', href: '/ai-services#ml' },
+        { name: 'Natural Language Processing', href: '/ai-services#nlp' },
+        { name: 'Computer Vision', href: '/ai-services#vision' },
+      ],
+    },
+    {
+      title: 'IT & Infrastructure',
+      icon: Cloud,
+      color: 'text-green-400',
+      services: [
+        { name: 'IT Services', href: '/it-services' },
+        { name: 'Cloud Migration', href: '/it-services#cloud' },
+        { name: 'Cybersecurity', href: '/it-services#security' },
+        { name: 'Network Management', href: '/it-services#network' },
+      ],
+    },
+    {
+      title: 'Software Solutions',
+      icon: Code,
+      color: 'text-orange-400',
+      services: [
+        { name: 'Micro SaaS', href: '/micro-saas' },
+        { name: 'Custom Applications', href: '/micro-saas#custom' },
+        { name: 'API Development', href: '/micro-saas#api' },
+        { name: 'Integration Services', href: '/micro-saas#integration' },
+      ],
+    },
+  ];
+  const quickLinks = [
+    { name: 'About Us', href: '/about' },
+    { name: 'Our Team', href: '/team' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'White Papers', href: '/whitepapers' },
+    { name: 'Webinars', href: '/webinars' },
+    { name: 'Pricing Guide', href: '/pricing-guide' },
+  ];
+  const legalLinks = [
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Terms of Service', href: '/terms' },
+    { name: 'Cookie Policy', href: '/cookies' },
+    { name: 'Sitemap', href: '/sitemap' },
+  ];
+  const socialLinks = [
+<<<<<<< HEAD
+    {
       name: 'LinkedIn',
       href: 'https://linkedin.com/company/ziontechgroup',
       icon: Linkedin,
@@ -45,6 +136,10 @@ import Link from 'next/link';
       href: 'https://twitter.com/ziontechgroup',
       icon: Twitter,
     },
+=======
+    { name: 'LinkedIn', href: 'https://linkedin.com/compunknown/ziontechgroup', icon: Linkedin },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
+>>>>>>> main
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github },
     {
       name: 'YouTube',
@@ -57,6 +152,35 @@ import Link from 'next/link';
       icon: Instagram,
     },
   ];
+=======
+  {
+      title: 'AI & Automation', icon: Brain, color: 'text-blue-400', services: [
+        { name: 'AI Services', href: '/services/ai-services' }, { name: 'IT Services', href: '/services/it-services' }, { name: 'Micro SaaS', href: '/services/micro-saas' }, { name: 'All Services', href: '/services' }
+      ]
+    }, {
+      title: 'Cloud & Infrastructure', icon: Cloud, color: 'text-green-400', services: [
+        { name: 'IT Services', href: '/services/it-services' }, { name: 'Micro SaaS', href: '/services/micro-saas' }, { name: 'Services Overview', href: '/services' }
+      ]
+    }, {
+      title: 'Data & Analytics', icon: Database, color: 'text-purple-400', services: [
+        { name: 'AI Services', href: '/services/ai-services' }, { name: 'Products', href: '/products' }, { name: 'Case Studies', href: '/case-studies' }
+      ]
+    }
+  ]
+
+  const quickLinks = [
+  { name: 'About Us', href: '/about' }, { name: 'Our Team', href: '/team' }, { name: 'Careers', href: '/careers' }, { name: 'Case Studies', href: '/case-studies' }, { name: 'Blog', href: '/blog' }, { name: 'White Papers', href: '/whitepapers' }, { name: 'Webinars', href: '/webinars' }, { name: 'Pricing', href: '/pricing' }
+  ]
+
+  const legalLinks = [
+  { name: 'Privacy Policy', href: '/privacy' }, { name: 'Terms of Service', href: '/terms' }, { name: 'Cookie Policy', href: '/cookies' }, { name: 'Sitemap', href: '/sitemap' }
+  ]
+
+  const socialLinks = [
+  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin }, { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }, { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }, { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube }, { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram }
+  ]
+
+>>>>>>> main
   const contactInfo = {
     email: 'kleber@ziontechgroup.com',
     phone: '+1 302 464 0950',
@@ -66,16 +190,23 @@ import Link from 'next/link';
     <footer className="bg-slate-900 border-t border-slate-700">
       {/* Main Footer Content */}
 <<<<<<< HEAD
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-=======
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">
+=======
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
+        <div className='grid grid-cols-1 lg:grid-cols-4 gap-12'>
+          {/* Compunknown Info */}
+          <div className='lg:col-span-1'>
+            <Link href='/' className='flex items-center space-x-2 mb-6'>
+              <div className='w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center'>
+                <Brain className='w-6 h-6 text-white' />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+>>>>>>> main
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center space-x-2 mb-6">
               <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
                 <Brain className="w-6 h-6 text-white" />
->>>>>>> main
               </div>
               <span className="text-2xl font-bold text-white">
                 Zion Tech Group
@@ -118,7 +249,11 @@ import Link from 'next/link';
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-className="p-2 rounded-lg bg-slate-800 hover: bg-slate-700 text-gray-400 hover:text-white transition-colors"
+<<<<<<< HEAD
+                  className="p-2 rounded-lg bg-slate-800 hover: bg-slate-700 text-gray-400 hover:text-white transition-colors"
+=======
+                  className="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-gray-400 hover:text-white transition-colors"
+>>>>>>> main
                   aria-label={social.name}
                 >
                   <social.icon className="w-5 h-5" />
@@ -128,7 +263,11 @@ className="p-2 rounded-lg bg-slate-800 hover: bg-slate-700 text-gray-400 hover:t
           </div>
 
           {/* Services */}
-<div className="lg: col-span-2">
+<<<<<<< HEAD
+          <div className="lg: col-span-2">
+=======
+          <div className="lg:col-span-2">
+>>>>>>> main
             <h3 className="text-xl font-bold text-white mb-6">Our Services</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {serviceCategories.map(category => (
@@ -146,7 +285,11 @@ className="p-2 rounded-lg bg-slate-800 hover: bg-slate-700 text-gray-400 hover:t
                       <li key={service.name}>
                         <Link
                           href={service.href}
-className="text-gray-300 hover: text-white transition-colors text-sm flex items-center group"
+<<<<<<< HEAD
+                          className="text-gray-300 hover: text-white transition-colors text-sm flex items-center group"
+=======
+                          className="text-gray-300 hover:text-white transition-colors text-sm flex items-center group"
+>>>>>>> main
                         >
                           <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                           {service.name}
@@ -160,14 +303,22 @@ className="text-gray-300 hover: text-white transition-colors text-sm flex items-
           </div>
 
           {/* Quick Links & Newsletter */}
-<div className="lg: col-span-1">
+<<<<<<< HEAD
+          <div className="lg: col-span-1">
+=======
+          <div className="lg:col-span-1">
+>>>>>>> main
             <h3 className="text-xl font-bold text-white mb-6">Quick Links</h3>
             <div className="grid grid-cols-2 gap-4 mb-8">
               {quickLinks.map(link => (
                 <Link
                   key={link.name}
                   href={link.href}
-className="text-gray-300 hover: text-white transition-colors text-sm"
+<<<<<<< HEAD
+                  className="text-gray-300 hover: text-white transition-colors text-sm"
+=======
+                  className="text-gray-300 hover:text-white transition-colors text-sm"
+>>>>>>> main
                 >
                   {link.name}
                 </Link>
@@ -184,7 +335,11 @@ className="text-gray-300 hover: text-white transition-colors text-sm"
                 <input
                   type="email"
                   placeholder="Enter your email"
-className="w-full px-3 py-2 rounded-lg bg-slate-700 border border-slate-600 text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500 text-sm"
+<<<<<<< HEAD
+                  className="w-full px-3 py-2 rounded-lg bg-slate-700 border border-slate-600 text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500 text-sm"
+=======
+                  className="w-full px-3 py-2 rounded-lg bg-slate-700 border border-slate-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
+>>>>>>> main
                 />
                 <Button
                   size="sm"
@@ -235,7 +390,11 @@ className="w-full px-3 py-2 rounded-lg bg-slate-700 border border-slate-600 text
                   <Link
                     key={link.name}
                     href={link.href}
-className="text-gray-400 hover: text-white transition-colors text-sm"
+<<<<<<< HEAD
+                    className="text-gray-400 hover: text-white transition-colors text-sm"
+=======
+                    className="text-gray-400 hover:text-white transition-colors text-sm"
+>>>>>>> main
                   >
                     {link.name}
                   </Link>
@@ -253,8 +412,5 @@ className="text-gray-400 hover: text-white transition-colors text-sm"
     </footer>
   );
 };
-<<<<<<< HEAD
 
-=======
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 export default Footer;

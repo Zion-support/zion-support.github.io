@@ -26,127 +26,91 @@ import Link from 'next/link';
 
 const CustomDevelopment: NextPage = () => {
   const developmentServices = [
-    {
+  {
       icon: Code,
 :pages.disabled_auto/solutions/custom-development.tsx;
       title:,
   Web Application Development',
       description: 'Custom web applications built with modern frameworks and technologies.,
       features: [;
-  'React, Vue.js, Angular',
-  'Node.js, Python, PHP',
-  'Responsive design',
-  'API integration']},
+  'React, Vue.js, Angular,Node.js, Python, PHP,Responsive design,API integration']},
     {
       icon: Smartphone,
       title:,
   Mobile App Development',
       description: 'Native and cross-platform mobile applications for iOS and Android.,
       features: [
-  'React Native, Flutter',
-  'Swift, Kotlin',
-  'App Store optimization',
-  'Push notifications']},
+  'React Native, Flutter,Swift, Kotlin,App Store optimization,Push notifications']},
     {
       icon: Globe,
       title:,
   E-commerce Solutions',
       description: 'Complete e-commerce platforms with payment integration and inventory management.,
       features: [
-  'Shopping cart functionality',
-  'Payment gateway integration',
-  'Inventory management',
-  'Order tracking']},
+  'Shopping cart functionality,Payment gateway integration,Inventory management,Order tracking']},
     {
       icon: Database,
       title:,
   Database Design & Management',
       description: 'Custom database solutions optimized for performance and scalability.,
       features: [
-  'MySQL, PostgreSQL, MongoDB',
-  'Data modeling',
-  'Performance optimization',
-  'Backup & recovery']},
+  'MySQL, PostgreSQL, MongoDB,Data modeling,Performance optimization,Backup & recovery']},
     {
       icon: Zap,
       title:,
   API Development',
       description: 'RESTful and GraphQL APIs for seamless integration between systems.,
       features: [
-  'RESTful APIs',
-  'GraphQL endpoints',
-  'Authentication & authorization',
-  'Rate limiting']},
+  'RESTful APIs,GraphQL endpoints,Authentication & authorization,Rate limiting']},
     {
       icon: Shield,
       title:,
   Security Implementation',
       description: 'Comprehensive security measures to protect your applications and data.,
       features: [,
-  SSL/TLS encryption',
-  'Authentication systems',
-  'Data validation',
-  'Security audits']}
+  SSL/TLS encryption,Authentication systems,Data validation,Security audits']}
       title: 'Web Application Development',
       description:;
         'Custom web applications built with modern frameworks and technologies.',
       features: [;
-        'React, Vue.js, Angular',
-        'Node.js, Python, PHP',
-        'Responsive design',
-        'API integration']},
+        'React, Vue.js, Angular,Node.js, Python, PHP,Responsive design,API integration']},
     {
       icon: Smartphone,
       title: 'Mobile App Development',
       description:;
         'Native and cross-platform mobile applications for iOS and Android.',
       features: [;
-        'React Native, Flutter',
-        'Swift, Kotlin',
-        'App Store optimization',
-        'Push notifications']},
+        'React Native, Flutter,Swift, Kotlin,App Store optimization,Push notifications']},
     {
       icon: Globe,
       title: 'E-commerce Solutions',
       description:;
         'Complete e-commerce platforms with payment integration and inventory management.',
       features: [;
-        'Shopping cart functionality',
-        'Payment gateway integration',
-        'Inventory management',
-        'Order tracking']},
+        'Shopping cart functionality,Payment gateway integration,Inventory management,Order tracking']},
     {
       icon: Database,
       title: 'Database Design & Management',
       description:;
         'Custom database solutions optimized for performance and scalability.',
       features: [;
-        'MySQL, PostgreSQL, MongoDB',
-        'Data modeling',
-        'Performance optimization',
-        'Backup & recovery']},
+        'MySQL, PostgreSQL, MongoDB,Data modeling,Performance optimization,Backup & recovery']},
     {
       icon: Zap,
       title: 'API Development',
       description:;
         'RESTful and GraphQL APIs for seamless integration between systems.',
       features: [;
-        'RESTful APIs',
-        'GraphQL endpoints',
-        'Authentication & authorization',
-        'Rate limiting']},
+        'RESTful APIs,GraphQL endpoints,Authentication & authorization,Rate limiting']},
     {
       icon: Shield,
       title: 'Security Implementation',
       description:;
         'Comprehensive security measures to protect your applications and data.',
       features: [;
-        'SSL/TLS encryption',
-        'Authentication systems',
-        'Data validation',
-        'Security audits']}];
+        'SSL/TLS encryption,Authentication systems,Data validation,Security audits']}];
   const developmentProcess = [
-    {
+  {
 :pages.disabled_auto/solutions/custom-development.tsx;
       step: '01,
       title:,
@@ -182,7 +146,7 @@ const CustomDevelopment: NextPage = () => {
   Ongoing support and maintenance to keep your solution running smoothly.'}
   ];
   const technologies = [
-    { name: 'React, category:,';
+  { name: 'React, category:,';
   Frontend' }, '{ name: 'Vue.js, category:, ';
   Frontend' },'{ name: 'Angular, category:,';
   Frontend' }, '{ name: 'Node.js, category:, ';
@@ -193,8 +157,7 @@ const CustomDevelopment: NextPage = () => {
   Database' },'{ name: 'MongoDB, category:,';
   Database' }, '{ name: 'AWS, category:, ';
   Cloud' },'{ name: 'Azure, category:,';
-  Cloud' }, '{ name: 'Docker, category: ';
-  'DevOps' }
+  Cloud' }, '{ name: 'Docker, category: DevOps' }
       step: '01',
       title: 'Discovery & Planning',
       description:;
@@ -224,7 +187,7 @@ const CustomDevelopment: NextPage = () => {
       description:;
         'Ongoing support and maintenance to keep your solution running smoothly.'}];
   const technologies = [
-    { name: 'React', category: 'Frontend' },
+  { name: 'React', category: 'Frontend' },
     { name: 'Vue.js', category: 'Frontend' },
     { name: 'Angular', category: 'Frontend' },
     { name: 'Node.js', category: 'Backend' },

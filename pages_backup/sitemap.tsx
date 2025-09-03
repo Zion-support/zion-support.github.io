@@ -9,14 +9,21 @@ import {
 } from '../components/ui/Card';
 // import { Badge } from '../components/ui/Badge';
 import {
-BookOpen,
+  Map,
+  ArrowRight,
+  ExternalLink,
+  Home,
+  Users,
+  Briefcase,
+  Phone,
+  BookOpen,
   Shield,
   Search,
 } from 'lucide-react';
 
 const SitemapPage: React.FC = () => {
   const siteStructure = [
-    {
+  {
       category: 'Main Pages',
       icon: Home,
       pages: [

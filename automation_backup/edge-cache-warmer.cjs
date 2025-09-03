@@ -69,7 +69,7 @@ async function warmCache() {
     results.push(...out);
   }
   while (index < unique.length) {
-    // eslint-disable-next-line no-await-in-loop
+     
     await runBatch();
   }
 
