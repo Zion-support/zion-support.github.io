@@ -1,25 +1,29 @@
 import React from 'react';
+import Image from 'next/image';
+import { Card } from './Card';
+import { Badge } from './Badge';
 
-interface EnhancedMarketplaceCardProps {
+type EnhancedMarketplaceCardProps = {
   title: string;
   description: string;
   price?: string;
-  image?: string;
-}
-
+  image?: string}
 export default function EnhancedMarketplaceCard({ title, description, price, image }: EnhancedMarketplaceCardProps) {
-  return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden">
-      {image && (
-        <img src={image} alt={title} className="w-full h-48 object-cover" />
-      )}
-      <div className="p-6">
-        <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
-        <p className="text-gray-600 mb-4">{description}</p>
-        {price && (
-          <div className="text-xl font-bold text-blue-600">{price}</div>
+  return (;
+    <Card className="flex flex-col h-full">;
+      <div className="relative w-full h-40 mb-3 overflow-hidden rounded-md bg-gray-100">;
+        {image ? (;
+          <Image src={image} alt={title} fill className="object-cover" />;
+        ) : (;
+          <div className="absolute inset-0 flex items-center justify-center text-gray-400 text-sm">No image</div>;
         )}
-      </div>
-    </div>
-  );
-}
+      </div>;
+      <h3 className="text-lg font-semibold text-gray-900">{title}</h3>;
+      <p className="text-sm text-gray-600 mt-1 flex-1">{description}</p>;
+      <div className="mt-3 flex items-center justify-between">;
+        <Badge variant="secondary">Featured</Badge>;
+        {price && <span className="text-sm font-semibold text-gray-900">{price}</span>}
+      </div>;
+    </Card>;
+  )}
+

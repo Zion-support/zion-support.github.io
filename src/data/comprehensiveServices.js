@@ -1,0 +1,24 @@
+export const comprehensiveServices = [;
+  {};
+  'Hardware procurement',; 'Software licensing',; 'Custom development',; 'Staff training'; ],; popular: true,; icon: '🏗️',; responseTime: '4 hours',; sla: '99.9% uptime'; },; {};
+  'Hardware security appliances',; 'Third-party security tools',; 'Legal compliance fees',; 'Insurance requirements'; ],; popular: false,; icon: '🛡️',; responseTime: '2 hours',; sla: '99.95% threat detection'; },; {};
+  'Cloud platform costs',; 'Third-party tools',; 'Data transfer fees',; 'Custom development'; ],; popular: false,; icon: '☁️',; responseTime: '8 hours',; sla: '99.9% availability'; },; {};
+  'Storage hardware',; 'Cloud storage costs',; 'Data transfer fees',; 'Legal compliance review'; ],; popular: false,; icon: '💾',; responseTime: '6 hours',; sla: '99.99% data integrity'; },; {};
+  'Network hardware',; 'ISP services',; 'Third-party licenses',; 'Custom network tools'; ],; popular: true,; icon: '🌐',; responseTime: '4 hours',; sla: '99.9% network uptime'; },; {};
+  'On-site visits',; 'Hardware repairs',; 'Software licensing',; 'Advanced training'; ],; popular: false,; icon: '🎧',; responseTime: '2 hours',; sla: '95% first-call resolution'} ]; ; export const serviceCategories = [;
+  {};
+  name: 'Infrastructure',; description: 'Core IT infrastructure services',; icon: '🏗️',; services: comprehensiveServices.filter(s => s.category === 'Infrastructure'); },; {};
+  name: 'Security',; description: 'Cybersecurity and compliance services',; icon: '🛡️',; services: comprehensiveServices.filter(s => s.category === 'Security'); },; {};
+  name: 'Cloud',; description: 'Cloud computing and migration services',; icon: '☁️',; services: comprehensiveServices.filter(s => s.category === 'Cloud'); },; {};
+  name: 'Data',; description: 'Data management and recovery services',; icon: '💾',; services: comprehensiveServices.filter(s => s.category === 'Data'); },; {};
+  name: 'Networking',; description: 'Network infrastructure services',; icon: '🌐',; services: comprehensiveServices.filter(s => s.category === 'Networking'); },; {};
+  name: 'Support',; description: 'Help desk and user support services',; icon: '🎧',; services: comprehensiveServices.filter(s => s.category === 'Support')} ]; ; export const pricingTiers = [;
+  {};
+  'Up to 10 users',; 'Basic monitoring',; 'Standard response time'; ]; },; {};
+  'Up to 50 users',; 'Business hours support',; '4-hour response time'; ]; },; {};
+  'Unlimited users',; 'Custom SLAs',; '1-hour response time'; ]; }; ]; ; export const getServiceById = (id) => {};
+  return comprehensiveServices.find(service => service.id === id); }; ; export const getServicesByCategory = (category) => {};
+  return comprehensiveServices.filter(service => service.category === category); }; ; export const getPopularServices = () => {};
+};
+  return comprehensiveServices.filter(service => service.popular); }; ; export const calculateServiceCost = (serviceId, months = 1, customizations = []) => {};
+  const service = getServiceById(serviceId); if(!service) return 0; ; let baseCost = service.basePrice * months; ;}

@@ -1,0 +1,24 @@
+import React from 'react';
+export function BlogSection () {};
+  return null;
+}
+import { Link  } from 'react-router-dom';
+,;
+        {};
+          {blogPosts.map((post) => (<article key={post.id} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">";
+              <h3 className="text-xl font-semibold text-white mb-3">";
+                <Link to={`/blog/${post.id}`} className="hover:text-zion-cyan">;
+                  {post.title}
+                </Link>;
+              </h3>";
+              <p className="text-zion-slate-light mb-4">{post.excerpt}</p>";
+              <div className="flex justify-between text-sm text-zion-slate-light">;
+                <span>{post.date}</span>;
+                <span>{post.readTime}</span>;
+              </div>;
+            </article>) ) }
+        </div>;
+      </div>;
+    </section>)}
+'"`;
+}

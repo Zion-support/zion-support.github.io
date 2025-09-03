@@ -1,0 +1,306 @@
+import { useNavigate  } from 'react-router-dom';
+import { useNavigate  } from 'react-router-dom';
+ from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { useDebounce } from '@/hooks / useDebounce';
+ from 'framer-motion';
+import { motion, AnimatePresence  } from 'framer-motion';
+
+  icon?: React.ComponentType < any>}
+];
+;
+export function EnhancedSearch({};
+  variant = 'default'}: EnhancedSearchProps) {};
+  return null;
+}
+}) ;
+  const [showFilters, setShowFilters] = useState(false);
+  const [recentSearches, setRecentSearches] = useState < string[]> ([]) ;
+
+// Mock suggestions;
+const mockSuggestions: SearchSuggestion[] = [';
+  { text: 'AI compliance assistant', type: 'recent' },;
+  { text: 'Quantum machine learning', type: 'trending' },;
+  { text: 'Digital transformation consulting', type: 'ai' },;
+  { text: 'Cloud DevOps automation', type: 'trending' }
+];
+;
+export function EnhancedSearch({};
+}: EnhancedSearchProps) {};
+  return null;
+}
+}) ;
+;
+  const searchRef = useRef < HTMLDivElement> (null) ;
+  const inputRef = useRef < HTMLInputElement> (null) ;
+  const navigate = useNavigate () ;
+
+  // Handle keyboard navigation;
+  useEffect(() => {};
+};,
+}, []);, []);
+    const handleKeyDown = (event: unknownKeyboardEvent) => {};
+} else if(event.key === 'ArrowDown') {};
+} else if(event.key === 'Enter' && selectedIndex >= 0) {};
+          handleResultClick(results[selectedIndex])}      }
+    };
+;
+    if(isOpen) {};
+      document.addEventListener('keydown', handleKeyDown)}
+    return () => document.removeEventListener('keydown', handleKeyDown)}, [isOpen, results, selectedIndex]);
+  // Search functionality;
+  useEffect(() => {};
+};,
+}, []);, []);
+    if(debouncedQuery.trim().length <div>Broken JSX</div>
+      .filter(item => {};
+        return matchesQuery && matchesFilters}) .sort((a, b) => b.relevance - a.relevance) .slice(0, 10) ;
+
+    setResults(searchResults) }, [debouncedQuery, filters]) ;
+
+  // Handle click outside;
+  useEffect(() => {};
+};,
+}, []);, []);
+    ;
+        setRecentSearches(JSON.parse (saved) ) } catch(error) {};
+        // console.error('Failed to parse recent searches:', error)}    }
+  }, []) ;
+
+  // Handle click outside;
+  useEffect(() => {};
+};,
+}, []);, []);
+    ;
+      if(searchRef.current && !searchRef.current.contains (event.target as Node) ) {};
+}
+    };
+;
+    document.addEventListener('mousedown', handleClickOutside);    return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
+
+  // Handle keyboard navigation;
+  useEffect(() => {};
+};,
+}, []);, []);
+        inputRef.current?.focus () }
+    }
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown)}, []);
+
+      // Add to recent searches;
+
+      setRecentSearches(updated);
+      localStorage.setItem('zion-recent-searches', JSON.stringify(updated));
+      // Navigate to search results or close search;
+      setIsOpen(false);
+      setQuery('')}
+  }, [recentSearches]);
+
+    handleSearch(result.title) ;
+    router(result.url) ;
+    const handleKeyDown = (event: KeyboardEvent) => {};
+            handleResultClick(results[selectedIndex])} else if(query.trim()) {};
+            handleSearch()}
+          break;
+        case 'Escape':;
+          setIsOpen(false) ;
+          setSelectedIndex(-1) ;
+          break}
+    }
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown)}, [isOpen, results, selectedIndex, query]);
+
+    if(!query.trim () ) return;
+    setIsLoading(true) ;
+
+    // Simulate API call delay;
+    await new Promise(resolve => setTimeout (resolve, 300) ) ;
+
+    // Filter search results based on query and filters;
+
+                          result.description.toLowerCase () .includes(query.toLowerCase () ) ||;
+                          result.tags.some(tag => tag.toLowerCase () .includes(query.toLowerCase () ) ) ;
+
+      const matchesFilters = (filters.type.length === 0 || filters.type.includes(result.type) ) &&; (filters.category.length === 0 || filters.category.includes(result.category) ) &&; (filters.tags.length === 0 || filters.tags.some(tag => result.tags.includes (tag) ) ) ;
+
+      return matchesQuery && matchesFilters}) ;
+
+    setIsOpen(false);
+    setQuery('')};
+;
+    onSearch?.(suggestion.text)};
+;
+    setFilters({ type[], category[], tags[] }) };
+;
+setFilters(prev: > ({};
+        : [...prev[filterType], value]}) ) };
+;
+    setFilters({ type: [], category: [], tags: [] }) };
+;
+    switch(type) {};
+      case 'case-study': return <Building className="h-4 w-4"  />}
+  }
+    setResults([]);
+';
+    setQuery('');    setResults([]);
+    setIsOpen(false);
+    setSelectedIndex(-1)}
+      case 'minimal':';
+        return 'bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700';
+      default:';
+        return 'bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-lg'}
+  }
+  return ();
+    <div ref = {searchRef} className={`relative ${className}`}>`;
+      <div className={`relative rounded-xl ${getVariantStyles()}`}>";
+        <div className="flex items-center px-4 py-3">";
+          <Search className="w-5 h-5 text-gray-400 mr-3"  />          <div>Broken JSX</div>
+          />;
+          {};
+          )}
+        </div>;";
+      default: return <Search className="h-4 w-4"  />};
+;
+    switch(variant) {};
+        return 'bg-white border border-gray-300 hover:border-gray-400 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-500/20'}  };
+;
+  return ()`;
+    <div ref = {searchRef} className={`relative ${className}`}>;
+      {/* Search Input */}`;
+      <div className={`relative flex items-center rounded-xl transition-all duration-300 ${getVariantClasses()}`}>";
+        <Search className="absolute left-4 h-5 w-5 text-gray-400"  />        <div>Broken JSX</div>
+          onChange={(e) => setQuery(e.target.value)}
+          onFocus={() => setIsOpen(true)}
+          placeholder={placeholder}";
+          className="w-full pl-12 pr-12 py-3 bg-transparent border-none outline-none text-gray-900 placeholder-gray-500";
+        />;
+        {};
+            onClick={() => setQuery('')}";
+            className="absolute right-4 p-1 text-gray-400 hover:text-gray-600 transition-colors">";
+            <X className="h-4 w-4"  />          </button>;
+        )}
+      </div>;
+
+      <AnimatePresence>;
+        {};
+            {/* Filters Toggle */}";
+            <div className="flex items-center justify-between p-4 border-b border-gray-200">;
+              <div>Broken JSX</div>
+                onClick={() => setShowFilters(!showFilters)}";
+                className="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors">";
+                <Filter className="h-4 w-4"  />                Filters;
+              </button>;
+              {};
+                </button>) }
+            </div>;
+
+            {/* Filters Panel */}
+            <AnimatePresence>;
+              {};
+                    {/* Type Filters */}
+                    <div>";
+                      <h4 className="text-sm font-medium text-gray-900 mb-2">Type</h4>";
+                      <div className="flex flex-wrap gap-2">;
+                        {};
+}`;
+                            className={};
+}`}
+                          >;
+                            {type.charAt(0) .toUpperCase () + type.slice(1) }
+                          </button>) ) }
+                      </div>;
+                    </div>;
+
+                    {/* Category Filters */}
+                    <div>";
+                      <h4 className="text-sm font-medium text-gray-900 mb-2">Category</h4>";
+                      <div className="flex flex-wrap gap-2">;
+                        {};
+}`;
+                            className={};
+}`}
+                          >;
+                            {category.name}
+                          </button>) ) }
+                      </div>;
+                    </div>;
+                  </div>;
+                </motion.div>) }
+            </AnimatePresence>;
+
+            {/* Search Results */}";
+            <div className="max-h-96 overflow-y-auto">;
+              {};
+                  {/* Recent Searches */}
+                  {};
+                              handleSearch()}}"                            className="w-full text-left p-2 text-sm text-gray-600 hover:bg-gray-50 rounded-lg transition-colors">;
+                            {search}
+                          </button>) ) }
+                      </div>;
+                    </div>;) }
+
+                  {/* Popular Searches */}
+                  <div>";
+                    <h4 className="text-sm font-medium text-gray-900 mb-2 flex items-center gap-2">";
+                      <TrendingUp className="h-4 w-4"  />                      Popular Searches;
+                    </h4>;";
+                    <div className="flex flex-wrap gap-2">;
+                      {};
+                            handleSearch()}}"                          className="px-3 py-1 text-sm bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200 transition-colors">;
+                          {search}
+                        </button>) ) }
+                    </div>;
+                  </div>;
+                </div>;
+              ) : isLoading ? (;";
+                <div className="p-8 text-center">";
+                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500 mx-auto"></div>";
+                  <p className="text-gray-600 mt-2">Searching...</p>;
+                </div>;
+              ) : results.length > 0 ? (";
+                <div className="p-4 space-y-2">;
+                  {};
+                      onClick={() => handleResultClick(result)}`;
+                      className={};
+}`}
+                    >";
+                      <div className="flex items-start gap-3">";
+                        <div className="flex-shrink-0 mt-1">;
+                          {getTypeIcon(result.type)}
+                        </div>";
+                        <div className="flex-1 min-w-0">";
+                          <h4 className="text-sm font-medium text-gray-900 group-hover:text-blue-600 transition-colors">;
+                            {result.title}
+                          </h4>";
+                          <p className="text-sm text-gray-600 mt-1 line-clamp-2">;
+                            {result.description}
+                          </p>";
+                          <div className="flex items-center gap-2 mt-2">";
+                            <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">;
+                              {result.category}
+                            </span>";
+                            <span className="text-xs text-gray-500">;
+                              {result.type}
+                            </span>;
+                          </div>;
+                        </div>;
+                      </div>;
+                    </button>;
+                  ))}
+                </div>;
+              ) : (";
+                <div className="p-8 text-center">";
+                  <Search className="h-12 w-12 text-gray-400 mx-auto mb-4"  />"                  <h3 className="text-lg font-medium text-gray-900 mb-2">;
+                    No results found;
+                  </h3>";
+                  <p className="text-gray-600">;
+                    Try adjusting your search terms or filters;
+                  </p>;
+                </div>) }
+            </div>;
+          </motion.div>;) }
+      </AnimatePresence>;
+    </div>;) }
+'"`;
+
+;,"});})";

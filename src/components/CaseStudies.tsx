@@ -1,0 +1,122 @@
+React from 'react';
+import {  motion   } from "framer-motion";
+import {  CheckCircle, TrendingUp, Users, DollarSign   } from "lucide-react";
+;
+interface CaseStudy {};
+}[];
+  technologies: string[];
+  duration: string;,
+}
+;
+const caseStudies: CaseStudy[] = [{};
+      { metric: 'Response Time', value: '85% faster', icon: <TrendingUp className="w-5 h-5" /> },;
+      { metric: 'Customer Satisfaction', value: '+32%', icon: <CheckCircle className="w-5 h-5" /> },;
+      { metric: 'Cost Reduction', value: '40%', icon: <DollarSign className="w-5 h-5" /> }
+    ],;
+    technologies: ['OpenAI GPT-4', 'LangChain', 'React', 'Node.js', 'PostgreSQL'],;
+    duration: '3 months';,
+},;
+  {};
+    results: [{ metric: 'Processing Speed', value: '10x faster', icon: <TrendingUp className="w-5 h-5" /> },;
+      { metric: 'Scalability', value: 'Unlimited', icon: <Users className="w-5 h-5" /> },;
+      { metric: 'Infrastructure Cost', value: '-60%', icon: <DollarSign className="w-5 h-5" /> }
+    ],;
+    technologies: ['AWS', 'Kubernetes', 'Apache Kafka', 'Apache Spark', 'Terraform'],;
+    duration: '6 months';,
+},;
+  {};
+    results: [{ metric: 'Security Incidents', value: '-95%', icon: <CheckCircle className="w-5 h-5" /> },;
+      { metric: 'Compliance Score', value: '99.9%', icon: <CheckCircle className="w-5 h-5" /> },;
+      { metric: 'Detection Time', value: 'Real-time', icon: <TrendingUp className="w-5 h-5" /> }
+    ],;
+    technologies: ['Okta', 'CrowdStrike', 'Splunk', 'AWS GuardDuty', 'Python'],;
+    duration: '4 months'}
+];
+
+export default function CaseStudies() {};
+  return null;
+}
+        {/* Header */}
+        <div className="mx-auto max-w-2xl lg:text-center mb-16">;
+          <div>Broken JSX</div>
+          >;
+            Success Stories;
+          </motion.h2>;
+          <div>Broken JSX</div>
+          >;
+            Real results from real clients;
+          </motion.p>;
+          <div>Broken JSX</div>
+          >;
+            See how our AI, cloud, and cybersecurity solutions have transformed businesses across industries.</motion.p>;
+        </div>;
+
+        {/* Case Studies Grid */}
+        <div className="grid gap-8 lg:grid-cols-1">;
+          {};
+                {/* Header */}
+                <div className="flex items-start justify-between mb-6">;
+                  <div>;
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">;
+                      {study.title}
+                    </h3>;
+                    <p className="text-gray-600 mb-4">;
+                      {study.description}
+                    </p>;
+                    <div className="flex items-center space-x-4 text-sm text-gray-500">;
+                      <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">;
+                        {study.industry}
+                      </span>;
+                      <span>Duration: {study.duration}</span>;
+                    </div>;
+                  </div>;
+                </div>;
+
+                {/* Results */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">;
+                  {};
+                    <div key={idx} className="text-center">;
+                      <div className="flex items-center justify-center w-12 h-12 bg-blue-100 rounded-lg mx-auto mb-3">;
+                        <div className="text-blue-600">;
+                          {result.icon}
+                        </div>;
+                      </div>;
+                      <div className="text-2xl font-bold text-gray-900 mb-1">;
+                        {result.value}
+                      </div>;
+                      <div className="text-sm text-gray-600">;
+                        {result.metric}
+                      </div>;
+                    </div>;
+                  ))}
+                </div>;
+
+                {/* Technologies */}
+                <div>;
+                  <h4 className="text-sm font-semibold text-gray-700 mb-3">Technologies Used</h4>;
+                  <div className="flex flex-wrap gap-2">;
+                    {};
+                        {tech}
+                      </span>;
+                    ))}
+                  </div>;
+                </div>;
+              </div>;
+            </motion.div>;
+          ))}
+        </div>;
+
+        {/* CTA */}
+        <div>Broken JSX</div>
+        >;
+          <p className="text-lg text-gray-600 mb-6">;
+            Ready to see similar results for your business?;
+          </p>;
+          <div>Broken JSX</div>
+            className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl">;
+            Start Your Project;
+          </a>;
+        </motion.div>;
+      </div>;
+    </section>;
+  )}

@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-09-03T13:55:55.863Z",
+  "summary": {
+    "testsRun": 1,
+    "testsPassed": 0,
+    "buildSuccess": false,
+    "lintingPassed": false,
+    "securityAuditPassed": false,
+    "performanceScore": 85
+  },
+  "issues": [],
+  "improvements": []
+}

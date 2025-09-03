@@ -1,0 +1,2 @@
+// CSP report module
+export {};
