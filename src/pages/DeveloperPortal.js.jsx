@@ -3,7 +3,7 @@ import React from 'react';
 ;
 ;
 ;
-import { Code, BookOpen, Zap, Shield, Users, MessageSquare, Github, ExternalLink, Terminal, Webhook, Key, Mail } from 'lucide-react';import { Link } from 'react-router-dom';
+import { Code, BookOpen, Shield, MessageSquare, Github, ExternalLink, Mail } from "lucide-react";
 export default function DeveloperPortal() {}
   const apiFeatures = []
     {}

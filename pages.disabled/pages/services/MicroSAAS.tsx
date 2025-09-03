@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :pages.disabled/pages/services/MicroSAAS.tsx
       icon: Globe,;""
 icon: Globe,;""
@@ -326,5 +325,3 @@ export default MicroSAAS}}}}'"'"
   )};
 
 export default MicroSAAS}}}}'""
-=======
->>>>>>> main

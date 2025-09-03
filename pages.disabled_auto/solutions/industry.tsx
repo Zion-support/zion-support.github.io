@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
-import { ArrowRight, CheckCircle, Star, Zap, Users, Shield, Building, Heart, Car, ShoppingCart, GraduationCap, Factory } from 'lucide-react';
+import { CheckCircle, Star, Zap, Users, Shield, Building, Heart, Car, ShoppingCart, GraduationCap, Factory } from "lucide-react";
 import Link from 'next/link';
 
 const IndustrySolutionsPage: NextPage = () => {

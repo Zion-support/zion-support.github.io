@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 
-export default function Page() {
-,
-  {
 
     id: 'quantum-computing-suite',
     title: 'Quantum Computing Suite',
@@ -336,9 +330,3 @@ export default function Page() {
       </div>;
     </section>;) };
 '"`
-=======
-
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

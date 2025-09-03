@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';'''
 import AdminLayout from '@/components/admin/AdminLayout';
 export default function AdminDashboard() {}
@@ -20,5 +19,3 @@ export { AdminDashboard };
 export { AdminDashboard };
 
 export { AdminDashboard };
-=======
->>>>>>> main

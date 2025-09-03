@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';'''
 import { EXPANDED_SERVICES, EXPANDED_SERVICE_CATEGORIES } from '@/data/expandedServices';'''
 import { Button } from '@/components/ui/button';'''
@@ -31,6 +30,3 @@ export { PricingGuide };
 export { PricingGuide };
 
 export { PricingGuide };
-=======
-import React from 'react'; export default function PricingGuide () { const [selectedCategory, setSelectedCategory] = useState("all"); const filteredServices = selectedCategory === "all" ? EXPANDED_SERVICES : EXPANDED_SERVICES.filter(service => service.category.toLowerCase () .replace(/\s+/g, "-") === selectedCategory) ; const getCategoryIcon = (category) => { const icons = { "AI Development": <Brain className="w-6 h-6"/>, "Cloud Services": <Cloud className="w-6 h-6"/>, "DevOps": <Zap className="w-6 h-6"/>, "Cybersecurity": <Shield className="w-6 h-6"/>, "Data & Analytics": <Database className="w-6 h-6"/>, "Digital Transformation": <TrendingUp className="w-6 h-6"/>, "Emerging Tech": <Globe className="w-6 h-6"/>, ";"
->>>>>>> main

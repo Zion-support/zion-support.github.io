@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ;
 export { function };
 :pages.disabled/pages/services/Blockchain.tsx
@@ -855,5 +854,3 @@ export default function Blockchain(...args[]):  {}
     </div>;
   )}'"`
 '"`'"`
-=======
->>>>>>> main

@@ -29,7 +29,6 @@ const SitemapPage: React.FC = () => {;
 ursor/automate-test-fix-improve-and-merge-code-99d1;
   ];
   ];
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
 
   return (;
     <div className="max-w-5xl mx-auto px-4 py-16>;

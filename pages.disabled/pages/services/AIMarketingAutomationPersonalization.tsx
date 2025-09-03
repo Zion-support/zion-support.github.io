@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 :pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
 export default function AIMarketingAutomationPersonalization(...args: any[]): any {
@@ -339,5 +338,3 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
   )}'"'"
     </div>;
   )}'""
-=======
->>>>>>> main

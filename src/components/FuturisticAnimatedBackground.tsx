@@ -1,15 +1,6 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 export const FuturisticAnimatedBackground: React.FC = () => {;
 export default FuturisticAnimatedBackground;
 
-  const canvasRef = useRef < HTMLCanvasElement> (null) ;
-  useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
-    
-    if(!canvas) return;
 
     if(!ctx) return;
 
@@ -198,18 +189,3 @@ export default FuturisticAnimatedBackground;
     />;) };
 
 export default FuturisticAnimatedBackground}}}}}}'"`
-=======
-import React from "react"
-import { SEO } from "@/components/SEO"
-export default function FuturisticAnimatedBackground() {return (
-    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
-      <SEO title="FuturisticAnimatedBackground - Zion Tech Group" description="Professional FuturisticAnimatedBackground services by Zion Tech Group"  />"
-      <div className="container mx-auto px-4 py-20">"
-        <h1 className="text-4xl font-bold text-white mb-8">FuturisticAnimatedBackground</h1>"
-        <p className="text-gray-300 text-lg">
-          Professional FuturisticAnimatedBackground services to help your business grow.
-        </p>
-      </div>
-  );"}"
->>>>>>> main
->>>>>>> main

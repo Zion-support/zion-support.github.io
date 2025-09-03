@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState, useCallback, useRef } from 'react';
 export /**
 import { motion, AnimatePresence  } from 'framer-motion';
@@ -14,85 +13,7 @@ function AdvancedAnalytics({
   Eye,
   MousePointer,
   Clock,
-  TrendingUp,
-=======
-import { BarChart3, TrendingUp, Users, Eye, MousePointer, Clock, TrendingUp, >>>>>>> main TrendingDown, Activity, Zap, Target, MapPin, Globe, Smartphone, Monitor, Tablet, Settings, X, Download, Share2, Filter, Calendar, RefreshCw'  } from 'lucide-react';
-
-[];
-  userAgents: { device: string; count: number }[];
-  locations: { country: string; count: number }[];
-  performance: {
-
-    loadTime: number;
-    firstPaint: number;
-    firstContentfulPaint: number;
-    largestContentfulPaint: number};
-  interactions: {
-
-    clicks: number;
-    scrolls: number;
-    formSubmissions: number;
-    errors: number}}
-
-interface AdvancedAnalyticsProps {
-  // Add your props here
-
-  enabled: boolean;
-  trackingId?: string;
-  enableHeatmap?: boolean;
-  enableSessionRecording?: boolean;
-  enableAITesting?: boolean;
-export function AdvancedAnalytics({
-
-  enabled,
-  trackingId,
-  enableHeatmap = false,
-  enableSessionRecording = false,
-  enableAITesting = false}: AdvancedAnalyticsProps) {
-
-  const [isOpen, setIsOpen] = useState(false);
-  const [analyticsData, setAnalyticsData] = useState<AnalyticsData>({
-
-    pageViews: 0,
-    uniqueVisitors: 0,
-    sessionDuration: 0,
-    bounceRate: 0,
-    conversionRate: 0,
-    topPages: [],
-    userAgents: [],
-    locations: [],
-    performance: {
-
-      loadTime: 0,
-      firstPaint: 0,
-      firstContentfulPaint: 0,
-      largestContentfulPaint: 0
-    },
-    interactions: {
-
-      clicks: 0,
-      scrolls: 0,
-      formSubmissions: 0,
-      errors: 0
-    }
-  }) ;
-
-<<<<<<< HEAD
-  const [isTracking, setIsTracking] = useState(false);
-  const [sessionStart, setSessionStart] = useState < number> (Date.now () ) ;
-  const [currentPage, setCurrentPage] = useState < string> (window.location.pathname) ;
-  const [userSession, setUserSession] = useState < string> ('') ;
-  const [heatmapData, setHeatmapData] = useState < Array<{ x: number; y: number; type: 'click' | 'scroll' | 'hover' }>> ([]) ;
-
-=======
-  const [isTracking, setIsTracking] = useState(false);
-  const [sessionStart, setSessionStart] = useState<number>(Date.now());
-  const [currentPage, setCurrentPage] = useState<string>(window.location.pathname);
-  const [userSession, setUserSession] = useState<string>('');
-  const [heatmapData, setHeatmapData] = useState<Array<{ x: number; y: number; type: 'click' | 'scroll' | 'hover' }>>([]);
-  
->>>>>>> main
-  const trackingRef = useRef<{
+  TrendingUp,  const trackingRef = useRef<{
 
     pageViews: number;    clicks: number;
     scrolls: number;
@@ -116,7 +37,6 @@ export function AdvancedAnalytics({
   
     setCurrentPage(path) ;
     trackingRef.current.pageViews++;
-<<<<<<< HEAD
 
     const pageViewData = {
       sessionId: userSession,
@@ -132,12 +52,6 @@ export function AdvancedAnalytics({
 
     // Send to analytics service
     this.sendAnalyticsData('pageview', pageViewData) ;
-
-=======
-
-    // Send to analytics service'    this.sendAnalyticsData('pageview', pageViewData);
-    
->>>>>>> main
     // Update local state
     setAnalyticsData(prev => ({
 
@@ -171,15 +85,8 @@ export function AdvancedAnalytics({
 
       ...prev,
       interactions: {
-<<<<<<< HEAD
         ...prev.interactions,
-        [type === 'form' ? 'formSubmissions' : type === 'error' ? 'errors' : `${type}s`]:
-=======
-
-        ...prev.interactions,`
-        [type === 'form' ? 'formSubmissions' : type === 'error' ? 'errors' : `${type}s`]: '`
->>>>>>> main
-          prev.interactions[type === 'form' ? 'formSubmissions' : type === 'error' ? 'errors' : `${type}s`] + 1
+        [type === 'form' ? 'formSubmissions' : type === 'error' ? 'errors' : `${type}s`]:          prev.interactions[type === 'form' ? 'formSubmissions' : type === 'error' ? 'errors' : `${type}s`] + 1
       }
     }) ) }, [enabled, userSession, currentPage]) ;
 
@@ -187,7 +94,6 @@ export function AdvancedAnalytics({
   
     // Use Performance API to get metrics'
     if('performance' in window) {
-<<<<<<< HEAD
       const navigation = performance.getEntriesByType('navigation') [0] as PerformanceNavigationTiming;
       const paint = performance.getEntriesByType('paint') ;
 
@@ -197,59 +103,13 @@ export function AdvancedAnalytics({
         firstPaint: paint.find(entry => entry.name === 'first - paint') ?.startTime || 0,
         firstContentfulPaint: paint.find(entry => entry.name === 'first - contentful - paint') ?.startTime || 0,
         largestContentfulPaint: 0, // Will be updated by observer
-        timestamp: new Date () .toISOString () };
-=======
->>>>>>> main
-
-      // Update local state
-      setAnalyticsData(prev => ({
-
-        ...prev,
-        performance: {
-
-          loadTime: performanceData.loadTime,
-          firstPaint: performanceData.firstPaint,
-          firstContentfulPaint: performanceData.firstContentfulPaint,
-          largestContentfulPaint: performanceData.largestContentfulPaint
-        }
-      }) ) ;
-
-      // Send to analytics service'
-      this.sendAnalyticsData('performance', performanceData)}
-  }, [enabled, userSession]) ;
-  // Setup event listeners
-  useEffect(() => {
-    if(!enabled) return;
-
-    setIsTracking(true) ;
-
-    // Track initial page view
-    trackPageView(window.location.pathname) ;
-
-    // Track performance metrics
-    trackPerformance () ;
-
-    // Setup click tracking
-<<<<<<< HEAD
-    const handleClick = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      const position = { x: e.clientX, y: e.clientY };
-
-      trackInteraction('click', { target, position }) ;
-
-=======
-
-      '      trackInteraction('click', { target, position });
-      
->>>>>>> main
-      // Add to heatmap data
+        timestamp: new Date () .toISOString () };      // Add to heatmap data
       if(enableHeatmap) {
 
         setHeatmapData(prev => [...prev, { x: position.x, y: position.y, type: 'click' }])}    };
 
     // Setup scroll tracking
     let scrollTimeout: NodeJS.Timeout;
-<<<<<<< HEAD
     const handleScroll = () => {
       clearTimeout(scrollTimeout) ;
       scrollTimeout = setTimeout(() => {
@@ -263,23 +123,7 @@ export function AdvancedAnalytics({
     // Setup form submission tracking
     const handleFormSubmit = (e: Event) => {
       const form = e.target as HTMLFormElement;
-      trackInteraction('form', {
-=======
-    
-      scrollTimeout = setTimeout(() => {
-
-        trackInteraction('scroll', {
-
-          scrollY: window.scrollY, 
-          scrollHeight: document.documentElement.scrollHeight 
-        }) }, 100) };
-
-    // Setup form submission tracking
-    
-      trackInteraction('form', {
-
->>>>>>> main
-        formId: form.id || form.className,
+      trackInteraction('form', {        formId: form.id || form.className,
         formAction: form.action,
         formMethod: form.method
       }) };
@@ -317,14 +161,8 @@ export function AdvancedAnalytics({
 
         // Page visible - track session resume
         setSessionStart(Date.now () ) ;
-<<<<<<< HEAD
       }
     };
-
-=======
-      }    };
-'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     document.addEventListener('visibilitychange', handleVisibilityChange);
 
     // Cleanup
@@ -355,14 +193,8 @@ export function AdvancedAnalytics({
               largestContentfulPaint: lastEntry.startTime
             }
           }) ) ;
-<<<<<<< HEAD
         }
       });
-
-=======
-        }      });
-'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
       return () => lcpObserver.disconnect () } catch(error) {
@@ -374,14 +206,8 @@ export function AdvancedAnalytics({
   
     try {
       
-<<<<<<< HEAD
       // Send to analytics endpoint'
       await fetch('/api/analytics', {
-
-=======
-      // Send to analytics endpoint'      await fetch('/api/analytics', {
-'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         method: 'POST',
         headers: {
 
@@ -486,7 +312,6 @@ export function AdvancedAnalytics({
                 </div>"
                 <div className="text-lg font-bold text-blue-700">{analyticsData.pageViews.toLocaleString()}</div>
               </div>
-<<<<<<< HEAD
 
               <div className="bg-green - 50 p - 3 rounded-lg">
                 <div className="flex items - center gap-2 mb-1">
@@ -509,30 +334,7 @@ export function AdvancedAnalytics({
                   <Target className="w-4 h-4 text-orange -500" />
                   <span className="text-xs text-orange -600">Conversion</span>
                 </div>
-                <div className="text-lg font - bold text-orange -700">{analyticsData.conversionRate.toFixed(1) }%</div>
-=======
-              "
-              <div className="bg-green-50 p-3 rounded-lg">"
-                <div className="flex items-center gap-2 mb-1">"
-                  <Users className="w-4 h-4 text-green-500"  />"                  <span className="text-xs text-green-600">Visitors</span>
-                </div>"
-                <div className="text-lg font-bold text-green-700">{analyticsData.uniqueVisitors.toLocaleString()}</div>
-              </div>
-              "
-              <div className="bg-purple-50 p-3 rounded-lg">"
-                <div className="flex items-center gap-2 mb-1">"
-                  <Clock className="w-4 h-4 text-purple-500"  />"                  <span className="text-xs text-purple-600">Session</span>
-                </div>"
-                <div className="text-lg font-bold text-purple-700">{Math.round(analyticsData.sessionDuration)}s</div>
-              </div>
-              "
-              <div className="bg-orange-50 p-3 rounded-lg">"
-                <div className="flex items-center gap-2 mb-1">"
-                  <Target className="w-4 h-4 text-orange-500"  />"                  <span className="text-xs text-orange-600">Conversion</span>
-                </div>"
-                <div className="text-lg font-bold text-orange-700">{analyticsData.conversionRate.toFixed(1)}%</div>
->>>>>>> main
-              </div>
+                <div className="text-lg font - bold text-orange -700">{analyticsData.conversionRate.toFixed(1) }%</div>              </div>
             </div>
 
             {/* Performance Metrics */}"

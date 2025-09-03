@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {}
   Shield,
   FileText,
@@ -7,8 +6,6 @@ import {}
   Mail,
   Phone} from 'lucide-react.ts';
 
-:pages.disabled/pages/services/GDPRDSARPortal.tsx
-export default function GDPRDSARPortal(...args: any[]): any {
 
 export default function GDPRDSARPortal(...args: any[]): any {}
   return()
@@ -181,6 +178,3 @@ export default function GDPRDSARPortal(...args: any[]): any {}
 '"'"
   )}
 '""
-=======
->>>>>>> 92e970263e01302a6ec9ed9848ce724c6698ab78;
->>>>>>> main

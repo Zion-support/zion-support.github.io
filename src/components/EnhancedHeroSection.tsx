@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { Link  } from 'react-router-dom';
 
-export default function Page() {
-const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): any {
 
   const [currentSlide, setCurrentSlide] = useState(0);  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
@@ -403,9 +398,3 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
 }) ;
 export default EnhancedHeroSection;
 '"`
-=======
-
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

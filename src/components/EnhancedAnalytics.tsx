@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 export default function Page() {
 ;
   performance: {
 
-    loadTime: number;
-    coreWebVitals: {
 
       fcp: number;
       lcp: number;
@@ -526,9 +521,3 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     </>) };
 export default EnhancedAnalytics;
 '"`
-=======
-
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

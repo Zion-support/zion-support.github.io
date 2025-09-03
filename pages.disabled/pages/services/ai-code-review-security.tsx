@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ;const AICodeReviewSecurity: React.FC = (): JSX.Element => {}
   return()
     <>
@@ -1081,5 +1080,3 @@
     </>
   )};'"`
 export default AICodeReviewSecurity;'"`'"`
-=======
->>>>>>> main

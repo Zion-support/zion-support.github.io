@@ -1,7 +1,7 @@
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
-import { Accessibility, Eye, Volume2, MousePointer, Keyboard, Monitor, CheckCircle } from 'lucide-react';
+import { Accessibility, CheckCircle } from "lucide-react";
 
 const AccessibilityPage: NextPage = () => {
   const accessibilityFeatures = [

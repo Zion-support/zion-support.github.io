@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
+import {  import { motion, AnimatePresence  } from 'framer-motion';
  from 'lucide-react';
 interface ServiceShowcase {
 	id: string;
@@ -92,11 +91,7 @@ export default function FuturisticServicesShowcase(...args[]):  {
 			case 'beta': return 'bg-yellow-500';
 			case 'active': return 'bg-blue-500';
 			default: return 'bg-gray-500'}
-	};
-=======
-	};'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-			default: return 'UNKNOWN'}
+	};			default: return 'UNKNOWN'}
 	};
 	return ()
 		<div className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">"

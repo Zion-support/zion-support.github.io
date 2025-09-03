@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect } from "react";
 ;
 ;
@@ -37,44 +36,7 @@ export const AuthProvider = ({ children }) => {}
             toast({ title: "Login Failed", description: data?.error || 'Missing email or password', variant: "destructive" });'
             return { error: data?.error || 'Missing email or password' }}'"""
         if (res.status === 401) { // Unauthorized (invalid credentials)'"'"""
-            toast({ title: "Login Failed", description: 'Incorrect email or password', variant: "destructive" });'
-=======
-<<<<<<< HEAD
-import React, { useEffect } from "react";"
-import { supabase, getFromProfiles } from '../../integrations/supabase/client';"
-import { useAuthOperations } from '../../hooks/useAuthOperations';"
-import { AuthContext } from './AuthContext';"
-import { cleanupAuthState } from '../../utils/authUtils';
-export default function Page() {
- from './useAuthEventHandlers';"
-import { mapProfileToUser } from './profileMapper';"
-import { loginUser, registerUser } from '@/services/authService';"
-import { safeStorage } from '@/utils/safeStorage';"
-import { toast } from '@/hooks/use-toast'; // Import toast'
-import { useDispatch } from 'react-redux';
-export default function Page() {
- = useAuthOperations(setUser, setIsLoading);
-    // Wrapper for login to match the AuthContextType interface
-    const login = async(email, password) => {
-
-        const { res, data } = await loginUser(email, password); // Calls /api/auth/login"
-        // Check for specific "Email not confirmed" error first"
-        if(res.status === 403 && data?.code === "EMAIL_NOT_CONFIRMED") {
-
-            toast({
-"
-                title: "Login Failed","
-                description: data.error || "Email not confirmed.Please check your inbox to verify your email.","
-                variant: "destructive"});"
-            return { error: data.error || "Email not confirmed.Please check your inbox to verify your email." }}
-        // Handle other errors from the API call
-        if(res.status === 400) { // Bad request(e.g. missing fields)'"
-            toast({ title: "Login Failed", description: data?.error || 'Missing email or password', variant: "destructive" });
-            return { error: data?.error || 'Missing email or password' }}
-        if(res.status === 401) { // Unauthorized(invalid credentials)'"
-            toast({ title: "Login Failed", description: 'Incorrect email or password', variant: "destructive" });
->>>>>>> main
-            return { error: 'Incorrect email or password' }}
+            toast({ title: "Login Failed", description: 'Incorrect email or password', variant: "destructive" });'            return { error: 'Incorrect email or password' }}
         // Catch-all for other non-200 statuses from loginUser
         if(res.status !== 200) {
 '"
@@ -221,6 +183,4 @@ export default function Page() {
       {children}
     </AuthContext.Provider>)};
 '"`
-=======
 import React, { useEffect } from "react"";"""""""""'"; "
->>>>>>> main

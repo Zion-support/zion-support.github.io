@@ -1,16 +1,7 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { Heart  } from 'lucide-react';
  from 'react';
 export /**
 
- * FavoriteButton function
- * @param {*} params - Function parameters
- * @returns {*} Function return value
- */
-function FavoriteButton({ itemId, itemType, className = '' }: FavoriteButtonProps) {;
-interface FavoriteButtonProps extends React.PropsWithChildren<{}> {
 
   itemId: string;
   itemType: 'product' | 'talent' | 'equipment' | 'service';
@@ -56,9 +47,3 @@ className: {`w-4 h-4 transition-all duration-300 ${;
       />;
     </button>;) }
 '`
-=======
-
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

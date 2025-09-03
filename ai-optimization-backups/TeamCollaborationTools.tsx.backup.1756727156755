@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
+import {  import { motion, AnimatePresence  } from 'framer-motion';
 
 export default function Page() {
 interface Comment {
@@ -18,13 +17,7 @@ interface Message {
   timestamp: string;
   type: 'text' | 'file' | 'image' | 'link';
   attachments?: string[];
-<<<<<<< HEAD
-  reactions: { type: string; count: number
-=======
-  reactions: { type: string; count: number 
-
->>>>>>> main
-}[];
+  reactions: { type: string; count: number}[];
   isRead: boolean}
 
 interface FileItem {
@@ -57,8 +50,6 @@ showProjects:  true,;
   showFileSharing = true,;
   maxItems = 20}) => {;
   const [activeTab, setActiveTab] = useState<'team' | 'projects' | 'communication' | 'files'>('team');
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]);
   const [projects, setProjects] = useState<Project[]>([]);
   const [messages, setMessages] = useState<Message[]>([]);
@@ -152,19 +143,11 @@ showProjects:  true,;
       <div className="flex items-center justify-center mb-8">"
         <div className="flex items-center gap-1 p-1 bg-zinc-900/30 rounded-lg">
           {['"
-<<<<<<< HEAD
             { id: 'team', label: 'Team Members', icon: <Users className="w-4 h-4"  /> },"
             { id: 'projects', label: 'Projects', icon: <Target className="w-4 h-4"  /> },"
             { id: 'communication', label: 'Communication', icon: <MessageCircle className="w-4 h-4"  /> },"
             { id: 'files', label: 'File Sharing', icon: <FileText className="w-4 h-4"  /> }
-          ].map((tab) => (
-=======
-            { id: 'team', label: 'Team Members', icon: <Users className="w-4 h-4"  /> },'"
-            { id: 'projects', label: 'Projects', icon: <Target className="w-4 h-4"  /> },'"
-            { id: 'communication', label: 'Communication', icon: <MessageCircle className="w-4 h-4"  /> },'"
-            { id: 'files', label: 'File Sharing', icon: <FileText className="w-4 h-4"  /> }          ].map((tab) => (
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-            <button
+          ].map((tab) => (            <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id as )}
               className={`flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-medium transition-all duration-300 ${activeTab === tab.id'

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useEffect, useCallback, useState } from 'react';
 export const BundleAnalyzer: React.FC < BundleAnalyzerProps> = ({
 
@@ -155,19 +152,5 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
         <div>Total Size: {(metrics.totalSize / 1024 / 1024).toFixed(2)} MB</div>
         <div>Chunks: {metrics.chunkCount}</div>
         <div>Largest: {(metrics.largestChunk.size / 1024 / 1024).toFixed(2)} MB</div>
-        <div>Gzip Savings: {(metrics.gzipSavings / 1024 / 1024).toFixed(2)} MB</div>
-=======
-import React from "react"
-import { SEO } from "@/components/SEO"
-export default function BundleAnalyzer() {return (
-    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
-      <SEO title="BundleAnalyzer - Zion Tech Group" description="Professional BundleAnalyzer services by Zion Tech Group"  />"
-      <div className="container mx-auto px-4 py-20">"
-        <h1 className="text-4xl font-bold text-white mb-8">BundleAnalyzer</h1>"
-        <p className="text-gray-300 text-lg">
-          Professional BundleAnalyzer services to help your business grow.
-        </p>
->>>>>>> main
-      </div>
+        <div>Gzip Savings: {(metrics.gzipSavings / 1024 / 1024).toFixed(2)} MB</div>      </div>
   );"}"
->>>>>>> main

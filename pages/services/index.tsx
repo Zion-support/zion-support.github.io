@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import { services, getServicesByCategory } from '../../data/services';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, DollarSign, Target, Rocket } from 'lucide-react';
+import { ArrowRight, CheckCircle, Zap, Shield, Globe } from "lucide-react";
 
 export default function ServicesIndex() {
   const microSaasServices = getServicesByCategory('micro-saas');

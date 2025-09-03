@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export class LinkChecker {}
 export default LinkChecker;
 :pages.disabled/utils/linkChecker.tsx
@@ -260,5 +259,3 @@ export interface PageInfo {}
 }
 
 '`
-=======
->>>>>>> main

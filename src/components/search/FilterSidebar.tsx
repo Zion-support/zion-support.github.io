@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 interface FilterOption {
   value: string;
@@ -68,4 +66,3 @@ export function FilterSidebar({
     </>
   )}
 '"`
->>>>>>> main

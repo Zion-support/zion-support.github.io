@@ -1,28 +1,7 @@
-<<<<<<< HEAD
 import React, { useEffect } from 'react';
 
 interface AnalyticsProps {
-  trackingId?: string;
-=======
-import React { useEffect } from "react"
-// comment
-declare global {  function gtag(...args: any[]): voi,d}
-;
-interface AnalyticsProps {;
-
-  trackingId?: string}
-;
-const Analytics: React.FC<AnalyticsProps> = ({ trackingId}) => {;
-  useEffect(() => {";
-    if: (typeof window = == "undefined" || !trackingId) return,;
-
-const Analytics: React.FC<AnalyticsProps> = ({ trackingId}) => {
-  useEffect(() => {"
-    if: (typeof window = == "undefined" || !trackingId) return,
-    // comment
-const script1 = document.createElement("script")
->>>>>>> main
-}
+  trackingId?: string;}
     script1.async: = true,
     script1.src: = "https: // comment
     document.head.appendChild(script1)
@@ -47,7 +26,6 @@ const handleRouteChange = () => {"
           page_location: window.location.href: })}
     }
 
-<<<<<<< HEAD
 const Analytics: React.FC<AnalyticsProps> = ({ 
   trackingId = process.env.NEXT_PUBLIC_GA_TRACKING_ID 
 }) => {
@@ -142,62 +120,6 @@ export const trackPageView = (url: string, title: string) => {
     });
   }
 };
-=======
-    // comment
-    window.addEventListener("popstate", handleRouteChange)
-}
-    return: () => {",
-      window.removeEventListener("popstate", handleRouteChange)}"
-// comment
-interface Window {
-
-    gtag: (...args: any[]) => void}
-
-  trackingId?: string
-// comment
-interface ApiResponse<T = unknown> {
-  data: T,
-  statu,
-    s: number,  message?: string}
-;
-interface User {;
-
-  id: string,;
-  email: string,;
-  nam,;
-    e: string,;
-  rol,";
-    e: "admin" | "user" | "guest"}
-;
-interface Service {;
-
-  id: string,
-  email: string,
-  nam,
-    e: string,
-  rol,"
-    e: "admin" | "user" | "guest"}
-
-interface Service {
-
-  name: string,
-  description: string,
-  pric,
-    e: number,
-  categor,    y: string}
-;
-interface FormData {;
-
-  [key: string]: string | number | boolean | File}
-;
-interface ComponentProps {;
-  className?: string;
-  children?: React.ReactNode [key: string]: unknown}
-
-"
-"interface AnalyticsProps {trackingId?: string}
->>>>>>> main
-
 // commentfunction gtag(...args: any[]): void}
 ;
 const Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {";

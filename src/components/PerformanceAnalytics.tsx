@@ -1,19 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {  import { motion  } from 'framer-motion';
 export default function Page() {
 ,
       {
 
-        name: 'Error Rate',
-        value: Math.random() * 2,
-        unit: '%',
-        trend: Math.random() > 0.5 ? 'up' : 'down',
-        status: Math.random() > 0.8 ? 'good' : Math.random() > 0.5 ? 'warning' : 'critical',
-        icon: AlertTriangle
-      },
-      {
 
         name: 'Response Time',
         value: Math.random() * 500 + 100,
@@ -314,8 +303,3 @@ export default function Page() {
 </div>};
 
 export default PerformanceAnalytics}}}}}}}}'"`
-=======
-import { Activity, TrendingUp, TrendingDown, Clock, Zap, AlertTriangle, CheckCircle, BarChart3, Cpu, HardDrive, Network, Monitor interface PerformanceMetric { name: string; value: number; unit: string; trend: 'up' | 'down' | 'stable'; status: 'good' | 'warning' | 'critical'; icon: React.ComponentType<any>; interface PerformanceData {
-  timestamp: number; metrics: PerformanceMetric[]; alerts: string[]; recommendations: string[]; const PerformanceAnalytics: React.FC = () => {; const [performanceData, setPerformanceData] = useState<PerformanceData | null>(null); const [isMonitoring, setIsMonitoring] = useState(false); const [selectedTimeframe, setSelectedTimeframe] = useState<'1h' | '24h' | '7d' | '30d'>('24h');
->>>>>>> main
->>>>>>> main

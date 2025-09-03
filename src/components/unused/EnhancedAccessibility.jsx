@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 
-export default function Page() {
-)}
-            catch(error) {
 
                 // console.warn('Failed to load accessibility settings:', error)}
         }
@@ -286,7 +282,6 @@ export default EnhancedAccessibility;
 }}}}}}}}}}}}
 
 export { EnhancedAccessibility };
-<<<<<<< HEAD
 
 export { EnhancedAccessibility };
 
@@ -295,9 +290,3 @@ export { EnhancedAccessibility };
 export { EnhancedAccessibility };
 
 export { EnhancedAccessibility };
-=======
-export default EnhancedAccessibility;
-}}}}}}}}}}}}'"`
-=======
->>>>>>> main
->>>>>>> main

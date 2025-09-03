@@ -1,29 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {  import { motion  } from 'framer-motion';
 
- params - Function parameters
- * @returns {*} Function return value
- */
-function InnovationResearchSection () {export function InnovationResearchSection() {
-  return ("
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
-      <div className="max-w-7xl mx-auto px-6">
-        <motion.div "
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >"
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Innovation & Research
-          </h2>"
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Pushing the boundaries of technology through cutting-edge research,
-            breakthrough innovations, and collaborative partnerships with leading institutions.</p>
-        </motion.div>
 
         {/* Innovation Metrics */}
         <motion.div
@@ -260,9 +236,3 @@ export default InnovationResearchSection;"
 export default IconComponent;
 export default IconComponent;
 '"`
-=======
-
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

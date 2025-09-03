@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :pages.disabled/pages/services/AISports.tsx
 import { Trophy, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Users, BarChart3 export default function AISports() {
     'Automated injury prevention and risk assessment',;'
@@ -232,5 +231,3 @@ import { Trophy, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
   )}}'"'"
     </div>;
   )}}'""
-=======
->>>>>>> main

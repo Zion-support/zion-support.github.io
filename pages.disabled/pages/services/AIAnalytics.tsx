@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIAnalytics.tsx
 export default function AIAnalytics(...args[]):  {
 
@@ -367,5 +366,3 @@ export default function AIAnalytics(...args[]):  {}
 '"'"
   )}
 '""
-=======
->>>>>>> main

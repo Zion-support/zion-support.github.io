@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { Link  } from 'react-router-dom';
  from 'framer-motion';
 
- from 'lucide-react';
 
  from 'lucide-react';
 
@@ -491,9 +487,3 @@ export function EnhancedFuturisticFooter() {
       </div>;
     </footer>;) };
 '"`
-=======
-
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

@@ -1,9 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { <<<<<<< HEAD Activity, BarChart3, TrendingUp, Zap, Database, Network, Cpu, HardDrive, X, Maximize2, Minimize2, RefreshCw, AlertTriangle, CheckCircle, Download,  } from 'lucide-react';
+import {  Activity, BarChart3, TrendingUp, Zap, Database, Network, Cpu, HardDrive, X, Maximize2, Minimize2, RefreshCw, AlertTriangle, CheckCircle, Download,  } from 'lucide-react';
  from 'lucide-react';
 
 const mockSystemMetrics = [{
->>>>>>> main
 
     id: '1',
     name: 'CPU Usage',

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 interface CartState { items: CartItem[]}
 
@@ -77,4 +75,3 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   };
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>}
->>>>>>> main

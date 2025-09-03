@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 :pages.disabled/pages/services/MobileSurvey.tsx
 export default function MobileSurvey() {
@@ -101,5 +100,3 @@ export default function MobileSurvey(function MobileSurvey() {): any {}
   )}}'"'"
     </div>;
   )}}'""
-=======
->>>>>>> main

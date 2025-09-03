@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
       // // // // // // // // console.log('PrimaryNav search submit:', query);
       router.push(`/search/${slugify(query)}`);
@@ -217,4 +215,3 @@
     </header>;
   )}
 '"`
->>>>>>> main

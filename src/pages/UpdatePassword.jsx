@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useForm } from 'react - hook -form';
 export default function Page() {
 ) ;
@@ -68,16 +67,6 @@ export default function Page() {
     };
     return (<>
 
-      <div className="flex min - h-screen bg-zion -blue">
-        <div className="flex - 1 flex flex - col justify - center px-4 py-12 sm:px-6 lg:px-20 xl:px-24">
-          <div className="mx - auto w-full max - w-sm lg:w-96">
-            <div className="text-center mb-10">
-              <h2 className="text-3xl font - bold tracking - tight text-white">
-                Update your password
-              </h2>
-              <p className="mt-2 text-sm text-zion - slate -light">
-                Enter your new password below.</p>
-            </div>
 
             <div className="bg-zion - blue - dark rounded-lg p -6">
               {error && (<div className="mb-6 p - 4 bg-red - 500 / 20 border border-red - 500 / 50 rounded-md text-white">
@@ -146,7 +135,6 @@ export default function Page() {
       
     </>)}
 
-<<<<<<< HEAD
 
 export { UpdatePassword };
 
@@ -157,8 +145,3 @@ export { UpdatePassword };
 export { UpdatePassword };
 
 export { UpdatePassword };
-=======
-    </>) }
-=======
->>>>>>> main
->>>>>>> main

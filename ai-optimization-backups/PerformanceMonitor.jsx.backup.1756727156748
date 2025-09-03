@@ -134,7 +134,6 @@ export default function Page() {
           {score}
         </div>
       </div>
-<<<<<<< HEAD
 
       <div className="text-xs text-zinc - 300 mb-2">
         {getScoreLabel(score) } • Core Web Vitals
@@ -143,20 +142,7 @@ export default function Page() {
       <div className="space - y-1 text-xs">
         {metrics.fcp && (<div className="flex justify -between">
             <span > FCP:</span>
-            <span className={metrics.fcp <= 1800 ? 'text-green - 400' : 'text-yellow-400'}>
-=======
-      "
-      <div className="text-xs text-zinc-300 mb-2">
-        {getScoreLabel(score)} • Core Web Vitals
-      </div>
-      "
-      <div className="space-y-1 text-xs">
-        {metrics.fcp && ("
-          <div className="flex justify-between">
-            <span>FCP:</span>
-            <span className={metrics.fcp <= 1800 ? 'text-green-400' : 'text-yellow-400'}>
->>>>>>> main
-              {metrics.fcp}ms
+            <span className={metrics.fcp <= 1800 ? 'text-green - 400' : 'text-yellow-400'}>              {metrics.fcp}ms
             </span>
           </div>
         )}

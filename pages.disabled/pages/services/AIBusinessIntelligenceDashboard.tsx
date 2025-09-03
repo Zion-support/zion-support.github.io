@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {}
   BarChart3,
   TrendingUp,
@@ -601,5 +600,3 @@ import {}
 
 export default AIBusinessIntelligenceDashboard;'"`
 '"`'"`
-=======
->>>>>>> main

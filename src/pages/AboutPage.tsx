@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -18,29 +15,6 @@ import {
   CheckCircle
 } from 'lucide-react';
 
-export default function AboutPage() {
-  const values = [
-    {
-      icon: Lightbulb,
-      title: 'Innovation First',
-      description: 'We push the boundaries of what\'s possible, constantly exploring emerging technologies and creative solutions.'
-    },
-    {
-      icon: Shield,
-      title: 'Trust & Security',
-      description: 'Your data and business operations are protected with enterprise-grade security and compliance standards.'
-    },
-    {
-      icon: Users,
-      title: 'Client Success',
-      description: 'We measure our success by your success, building long-term partnerships based on mutual growth.'
-    },
-    {
-      icon: Zap,
-      title: 'Agile Excellence',
-      description: 'Rapid delivery and continuous improvement are core to our development and service delivery approach.'
-    }
-  ];
 
   const teamMembers = [
     {
@@ -261,22 +235,3 @@ export default function AboutPage() {
     </div>
   );
 }
-=======
-import React from "react"
-import { SEO } from "@/components/SEO"
-;,"});,"})
-}
-export default function AboutPage() {return ("
-    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
-      <SEO title="AboutPage - Zion Tech Group" description="Professional AboutPage services by Zion Tech Group"  />"
-      <div className="container mx-auto px-4 py-20">"
-        <h1 className="text-4xl font-bold text-white mb-8">AboutPage</h1>"
-        <p className="text-gray-300 text-lg">
-          Professional AboutPage services to help your business grow.
-        </p>
-      </div>
-  )
-}
-}""
->>>>>>> main
->>>>>>> main

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
 import { Brain,
   TrendingUp,
@@ -522,5 +521,3 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
       </section>;
     </div>;"
   )}'"'"
-=======
->>>>>>> main

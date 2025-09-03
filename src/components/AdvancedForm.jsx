@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect, useCallback } from 'react';'
 import { motion, AnimatePresence } from 'framer-motion';'
 import { Send, CheckCircle, AlertCircle, Eye, EyeOff, Loader2, Phone, Mail, User, MessageSquare, Building } from 'lucide-react';
@@ -14,30 +13,8 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
     const [showPassword, setShowPassword] = useState ({ /* empty */ }) ;
     const [progress, setProgress] = useState (0) ;
     // Initialize form data and validation;
-    useEffect(() => {}
-=======
-<<<<<<< HEAD
-import { useState, useEffect, useCallback } from 'react';
-export default function Page() {
-) ;
-    const [formData, setFormData] = useState({ /* empty */ });
-    const [validation, setValidation] = useState({ /* empty */ });
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const [isSubmitted, setIsSubmitted] = useState(false);
-    const [showPassword, setShowPassword] = useState({ /* empty */ });
-    const [progress, setProgress] = useState(0);
-    // Initialize form data and validation
-    useEffect(() => {
-  // TODO: Add dependencies if needed
-
-  return () => {
-    // Cleanup function
-  };
-}, []);, []);
->>>>>>> main
-        const initialValidation = {};
+    useEffect(() => {}        const initialValidation = {};
         fields.forEach(field => {
-=======
 import React from "react"
 import { useState, useEffect, useCallback } from "react";,"});,"})","});,"})","});,"})"
 ;,"});,"})"
@@ -448,7 +425,6 @@ export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle 
     const;const;const [progress, setProgress] = useState(0)
 }
     // comment    useEffect(() => {}
->>>>>>> main
 
         const initialValidation = {}
 
@@ -467,7 +443,6 @@ isTouched: false}})
             initialData[field.name] = field.type === &apos;checkbox&apos; ? false : &apos
             initialValidation[field.name] = {}"
                 isValid: !field.required,
-<<<<<<< HEAD
                 message: '',
                 isTouched: false
             }}) ;
@@ -481,40 +456,6 @@ isTouched: false}})
     // Cleanup function
   };
 }, []);, []);
-=======
-                message: &apos,&apos,
-                isTouched: false}})"
-";""
-""
-""";""
-            initialData[field.name] = field.type === "checkbox" ? false : "
-            initialValidation[field.name] = {}"
-                isValid: !field.required, ";""
-                message: "", isTouched: false}})
-}
-        setFormData(initialData)
-}
-        setValidation(initialValidation)}, [fields])
-}
-    // comment
-    useEffect(() => {}"
-"
-""
-        const filledFields = Object.values(formData).filter(value => typeof value === "boolean" ? value : value.toString().trim() !== ").length
-&apos
-&apos;&apos;&apos;&apos
-        const filledFields = Object.values(formData).filter(value => typeof value === &apos;boolean&apos; ? value : value.toString().trim() !== &apos;&apos).length;&apos;&apos,
-";""
-""
-""";""
-        const filledFields = Object.values(formData).filter(value => typeof value === "boolean" ? value : value.toString().trim() !== "").length
-        const totalFields = fields.length
-        setProgress((filledFields / totalFields) * 100)}, [formData, fields.length])
-}
-    // comment
-    const validateField = useCallback((name, value) => {}
->>>>>>> main
-
         const;const;const field = fields.find(f => f.name === name)
 }
         if(!field)

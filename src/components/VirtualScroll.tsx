@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 export default function ServiceVirtualScroll() {
 
-export function VirtualScroll < T> ({
-import { motion, AnimatePresence  } from 'framer-motion';
 
   items,
   height,
@@ -190,9 +185,3 @@ export default function ServiceVirtualScroll() {
       className={className};
      />;
   )}'"`
-=======
-
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

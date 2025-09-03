@@ -1,6 +1,6 @@
 import React from 'react';'''
 import Link from 'next/link';'''
-import { Zap, Server, ArrowRight, Star, Users } from 'lucide-react';
+import { Server, ArrowRight, Star, Users } from "lucide-react";
 const QuantumEdgeComputingPlatform = () => {}
     const features = []
         "Quantum-accelerated edge processing",""""

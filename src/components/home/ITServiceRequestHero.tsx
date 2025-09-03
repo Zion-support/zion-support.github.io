@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ;export function ITServiceRequestHero(...args[]):  {
 
   const [location, setLocation] = useState("");
@@ -208,4 +206,3 @@ export function ITServiceRequestHero() {
     </section>;
   )}
 '"`
->>>>>>> main

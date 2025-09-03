@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 ;
@@ -35,50 +34,9 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {  const 
       : undefined);
   const headerStyle = effectiveTheme;
     ? {}
-        backgroundColor: effectiveTheme.backgroundColor,
-=======
-import React { useState, useEffect } from "react" const [query, setQuery] = useState(") const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false) const [isScrolled, setIsScrolled] = useState(false) const searchSuggestions = generateSearchSuggestions()";";";";";" const [query, setQuery] = useState(") const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false) const [isScrolled, setIsScrolled] = useState(false) const searchSuggestions = generateSearchSuggestions()";"
-export function Header({hideLogin = false, customLogo, customTheme }) {const { user } = useAuth()
-}
-  const {isWhitelabel, primaryColor } = useWhitelabel()
-}
-  const navigate = useNavigate()""react&apos;react-router-dom&apos;./Logo&apos;&apos;./UserMenu&apos;&apos;./LanguageSelector&apos;&apos;@/layout/MainNavigation&apos;&apos;./MobileMenu&apos;@/hooks/useAuth&apos;&apos;@/context/WhitelabelContext&apos;&apos;@/components/search/EnhancedSearchInput&apos;&apos;@/data/marketplaceData&apos;&apos;react-router-dom&apos;&apos;@/components/ui/button&apos;&apos;lucide-react&apos;&apos;lucide-react&apos;&apos, export function Header({ hideLogin = false, customLogo, customTheme }) {} const { user } = useAuth() const;const;const { isWhitelabel, primaryColor } = useWhitelabel()&apos; ;&apos;const navigate = useNavigate()";&apos;&apos; const [query, setQuery] = useState(&apos)&apos, const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false) const [isScrolled, setIsScrolled] = useState(false) const;const;const searchSuggestions = generateSearchSuggestions()";";&quot;"""""""""""""""""""""""""""""""""""""""""""" const [query, setQuery] = useState(") const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false) const [isScrolled, setIsScrolled] = useState(false) const searchSuggestions = generateSearchSuggestions()";""
-export function Header({ hideLogin = false, customLogo, customTheme }) {
-  const { user } = useAuth()
-}
-  const { isWhitelabel, primaryColor } = useWhitelabel();"
-  const navigate = useNavigate();""
-  const [query, setQuery] = useState()
-}
-  const navigate = useNavigate()
-}
-  const [query, setQuery] = useState()
-}
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-}
-  const [isScrolled, setIsScrolled] = useState(false)
-}
-  const searchSuggestions = generateSearchSuggestions()"
-  "
-  // comment
-const effectiveTheme = customTheme ||
-    (isWhitelabel,
-      ? {
-          primaryColor,"
-          backgroundColor: "#000000", // comment
-      ? {primaryColor,
-          backgroundColor: "#000000", // comment
-textColor: "#ffffff", // comment
-
-      : undefined)
-}
-  const headerStyle = effectiveTheme,
-    ? {backgroundColor: effectiveTheme.backgroundColor,
->>>>>>> main
-        color: effectiveTheme.textColor,
+        backgroundColor: effectiveTheme.backgroundColor,        color: effectiveTheme.textColor,
         borderColor: "${effectiveTheme.primaryColor}20"}
 
-<<<<<<< HEAD
   // Handle scroll effect
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -89,10 +47,6 @@ textColor: "#ffffff", // comment
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-=======
-    : {}
->>>>>>> main
-
   // comment
 useEffect(() => {const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)};""

@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 
-export default function Page() {
-> {
 
   showStats?: boolean;
   showFilters?: boolean;
@@ -637,9 +632,3 @@ showStats:  true,;
         </motion.div>;) };
     </div>;) };
 '"`
-=======
-
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

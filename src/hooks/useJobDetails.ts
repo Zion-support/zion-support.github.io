@@ -1,14 +1,6 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { useState, useEffect, useCallback } from 'react'; // Added useCallback
 import { supabase } from '@/integrations/supabase/client';
 
-export default function Page() {
- finally {
-      setIsLoading(false);
-    }
-  }, [jobId]); // jobId is a dependency of loadJobDetails
 
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -26,9 +18,3 @@ export default function Page() {
 }
 
 export default useJobDetails;
-=======
-"";,"});,"})"
-"
-&apos,"""
->>>>>>> main
->>>>>>> main

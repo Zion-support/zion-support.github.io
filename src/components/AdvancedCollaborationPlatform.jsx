@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react';
 export function AdvancedCollaborationPlatform () {
 
-import { Users, Video, Mic, MicOff, VideoOff, MessageSquare, FileText, Monitor, X, Maximize2, Minimize2, Plus, MoreVertical, PhoneOff, ScreenShare, Square, Hand, Clock, CheckCircle, UserPlus  } from 'lucide-react';
  : p))};
     const toggleVideo = () => {
         setIsVideoOff(!isVideoOff);

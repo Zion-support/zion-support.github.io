@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 
- params - Function parameters
- * @returns {*} Function return value
- */
-function SecurityEnhancer () {
 
   Shield,
   Lock,
@@ -521,9 +514,3 @@ export function SecurityEnhancer() {
     </>
   )}
 '"`
-=======
-
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

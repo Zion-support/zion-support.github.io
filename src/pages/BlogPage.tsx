@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -24,10 +21,6 @@ import {
   Building2
 } from 'lucide-react';
 
-export default function BlogPage() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('latest');
 
   const categories = [
     { id: 'all', name: 'All Posts', icon: BookOpen, count: 25 },
@@ -459,22 +452,3 @@ export default function BlogPage() {
     </div>
   );
 }
-=======
-import React from "react"
-import { SEO } from "@/components/SEO"
-;,"});,"})
-}
-export default function BlogPage() {return ("
-    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
-      <SEO title="BlogPage - Zion Tech Group" description="Professional BlogPage services by Zion Tech Group"  />"
-      <div className="container mx-auto px-4 py-20">"
-        <h1 className="text-4xl font-bold text-white mb-8">BlogPage</h1>"
-        <p className="text-gray-300 text-lg">
-          Professional BlogPage services to help your business grow.
-        </p>
-      </div>
-  )
-}
-}""
->>>>>>> main
->>>>>>> main

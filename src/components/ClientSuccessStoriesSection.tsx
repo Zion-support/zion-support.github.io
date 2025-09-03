@@ -1,19 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {  import { motion  } from 'framer-motion';
 
- params - Function parameters
- * @returns {*} Function return value
- */
-function ClientSuccessStoriesSection () {
-export function ClientSuccessStoriesSection() {
-  return ("
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
-      <div className="max-w-7xl mx-auto px-6">
-        <motion.div "
-          className="text-center mb-16"
-          initial = {
 
   { opacity: 0,
   y: 20
@@ -260,18 +246,3 @@ export default ClientSuccessStoriesSection;"
 export default ClientSuccessStoriesSection;
 export default ClientSuccessStoriesSection;
 '"
-=======
-import React from "react"
-import { SEO } from "@/components/SEO"
-export default function ClientSuccessStoriesSection() {return (
-    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
-      <SEO title="ClientSuccessStoriesSection - Zion Tech Group" description="Professional ClientSuccessStoriesSection services by Zion Tech Group"  />"
-      <div className="container mx-auto px-4 py-20">"
-        <h1 className="text-4xl font-bold text-white mb-8">ClientSuccessStoriesSection</h1>"
-        <p className="text-gray-300 text-lg">
-          Professional ClientSuccessStoriesSection services to help your business grow.
-        </p>
-      </div>
-  );"}"
->>>>>>> main
->>>>>>> main

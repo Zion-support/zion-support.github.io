@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { DollarSign  } from 'lucide-react';
 export default function Page() {
  else {
@@ -8,18 +5,6 @@ export default function Page() {
       router(`/request-quote?listing=${listing.id}`)}
   };
 
-  return ()
-    <div
-      data-testid= "equipment-link";'`
-      className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`};
-      onClick={handleViewListing};
-      tabIndex={0};"
-      ;
-      onKeyDown={(e) => {;
-        if(e.key === 'Enter' || e.key === ' ') {;
-          e.preventDefault () ;
-          handleViewListing () }
-      }}
 
       {/* Image */}
       <div'
@@ -139,9 +124,3 @@ export default ProductListingCard;
 export default ProductListingCard;
 export default ProductListingCard;
 '"`
-=======
-
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

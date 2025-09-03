@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";""""
 import { Badge } from "@/components/ui/badge";""""
 import { SEO } from "@/components/SEO";""""
-import { Shield, Eye, Target, Users, ArrowRight, CheckCircle, Star, AlertTriangle, Network, Database, Cloud, Smartphone, Server } from "lucide-react";""""
+import { Shield, ArrowRight, CheckCircle, Star, Network, Database, Cloud, Smartphone, Server } from "lucide-react";
 import { Link } from "react-router-dom";
 export default function CybersecurityServices() {}
     const securitySolutions = []

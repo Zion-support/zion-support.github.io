@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
+import {  import { motion, AnimatePresence  } from 'framer-motion';
 
 export default function Page() {
 > {
@@ -23,11 +22,7 @@ showStats:  true,;
     responseRate: 0,
     topCategories[]});
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
-  const [selectedRating, setSelectedRating] = useState<any>(0);
-=======
-  const [selectedRating, setSelectedRating] = useState<any>(0);'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedRating, setSelectedRating] = useState<any>(0);  const [searchQuery, setSearchQuery] = useState('');
   const [showFeedbackForm, setShowFeedbackForm] = useState(false);
   const [newFeedback, setNewFeedback] = useState({
 
@@ -182,13 +177,8 @@ showStats:  true,;
   ;
   verified: false;
     };
-<<<<<<< HEAD
 
-    setFeedback(prev  => [feedback, ...prev]);
-=======
-    setFeedback(prev  => [feedback, ...prev]);'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-    setNewFeedback({ rating: 0, comment: '', category: 'overall' });
+    setFeedback(prev  => [feedback, ...prev]);    setNewFeedback({ rating: 0, comment: '', category: 'overall' });
     setShowFeedbackForm(false)};
 
   // Handle helpful/unhelpful votes'
@@ -202,29 +192,20 @@ showStats:  true,;
 
   // Get sentiment color
   
-<<<<<<< HEAD
     switch(sentiment) {;
       case 'positive': return 'text-green-400 bg-green-400/20';
       case 'negative': return 'text-red-400 bg-red-400/20';
-      default: return 'text-yellow-400 bg-yellow-400/20'}
-=======
-    switch(sentiment) {;'
-      case 'positive': return 'text-green-400 bg-green-400/20';'
-      case 'negative': return 'text-red-400 bg-red-400/20';'      default: return 'text-yellow-400 bg-yellow-400/20'}
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-  };
+      default: return 'text-yellow-400 bg-yellow-400/20'}  };
 
   // Get category color
   
   ;
   ;
-=======
 '
   'service': 'text-blue-400 bg-blue-400/20','
       'product': 'text-green-400 bg-green-400/20','
       'support': 'text-purple-400 bg-purple-400/20',;  ;
   ;'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   'overall': 'text-zion-cyan bg-zion-cyan/20';
     };
     return colors[category as keyof typeof colors] || 'text-zinc-400 bg-zinc-400/20'};
@@ -437,26 +418,12 @@ showStats:  true,;
 "
               <div className="space-y-4">
                 {/* Rating */}
-<<<<<<< HEAD
                 <div>
                   <label className="block text-sm font - medium text-zinc - 300 mb-2">Rating</label>
                   <div  className="flex gap-2">
                     {[1, 2, 3, 4, 5].map((star) => (<button     key={star}
                         onClick = { () => setNewFeedback(prev => ({ ...prev,
   rating: star
-=======
-                <div>"
-                  <label className="block text-sm font-medium text-zinc-300 mb-2">Rating</label>"
-                  <div className="flex gap-2">
-                    {[1, 2, 3, 4, 5].map((star) => (
-                      <button
-                        key={star}
-                        onClick = {
-
-  () => setNewFeedback(prev => ({ ...prev,
-  rating: star 
->>>>>>> main
-
 }))}"
                         className="p-2 hover:scale-110 transition-transform"
 
@@ -472,16 +439,8 @@ showStats:  true,;
                   <label className="block text-sm font-medium text-zinc-300 mb-2">Category</label>
                   <select
                     value={newFeedback.category}
-<<<<<<< HEAD
                     onChange = { (e) => setNewFeedback(prev => ({ ...prev,
   category: e.target.value as Feedback['category']
-=======
-                    onChange = {
-
-  (e) => setNewFeedback(prev => ({ ...prev,
-  category: e.target.value as Feedback['category'] 
->>>>>>> main
-
 }))}"
                     className="w-full px-3 py-2 bg-zinc-800 border border-zinc-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
 "
@@ -497,16 +456,8 @@ showStats:  true,;
                   <label className="block text-sm font-medium text-zinc-300 mb-2">Your Feedback</label>
                   <textarea
                     value={newFeedback.comment}
-<<<<<<< HEAD
                     onChange = { (e) => setNewFeedback(prev => ({ ...prev,
   comment: e.target.value
-=======
-                    onChange = {
-
-  (e) => setNewFeedback(prev => ({ ...prev,
-  comment: e.target.value 
->>>>>>> main
-
 }))}"
                     placeholder="Share your experience with Zion Tech Group..."
                     rows={4}"
@@ -588,11 +539,8 @@ showStats:  true,;
             <div className="flex items-center gap-2 mb-3">;
               {[1, 2, 3, 4, 5].map((star) => (;
                 <Star
-<<<<<<< HEAD
                   key={star}`
-                  className={`w-5 h-5 ${=======
-                  key={star}`                  className={`w-5 h-5 ${'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+                  className={`w-5 h-5 ${                  key={star}`                  className={`w-5 h-5 ${'
                     star <= item.rating ? 'text-yellow-400 fill-current' : 'text-zinc-600'`
                   }`}
                 />

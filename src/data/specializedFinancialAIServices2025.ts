@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 // Specialized Financial AI Services 2025 - Zion Tech Group
 // Advanced AI-powered financial technology solutions
 ;
@@ -51,4 +49,3 @@ const zionContact = {
 ];
 
 export default specializedFinancialAIServices2025}}"
->>>>>>> main

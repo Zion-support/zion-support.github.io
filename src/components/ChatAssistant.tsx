@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
 export default function Page() {
 interface ChatAssistantProps {
   children?: React.ReactNode;
@@ -246,8 +243,3 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
 };
 
 export default ChatAssistant;
-=======
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

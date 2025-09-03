@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { api, ApiResponse } from '@/services / api';
 export default function Page() {
@@ -11,12 +8,6 @@ interface User {
   email: string;
   createdAt?: string;
 
-const ApiDemo: React.FC = (): JSX.Element => {;
-  const [users, setUsers] = useState<any>([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<any>(null);
-const [newUser, setNewUser] = useState({ name: '', email: ''});
-  const [healthStatus, setHealthStatus] = useState<any>('Checking...');
 
   // Check API health on component mount
   useEffect(() => {
@@ -178,9 +169,3 @@ const [newUser, setNewUser] = useState({ name: '', email: ''});
     </div>;) };
 
 export default ApiDemo}}}}}}}'"`
-=======
-
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

@@ -1,15 +1,6 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion  } from 'framer-motion';
 
-export default function Page() {
-,;
-  { id: 'digital-transformation', label: 'Digital Transformation', icon: Zap },;
-  { id: 'it-consulting', label: 'IT Consulting', icon: Gift },;
-  { id: 'industry-insights', label: 'Industry Insights', icon: Zap };
-];
 
   { value: 'weekly', label: 'Weekly', description: 'Stay updated with latest trends' },;
   { value: 'monthly', label: 'Monthly', description: 'Monthly digest of insights' },;
@@ -318,9 +309,3 @@ className: {`w-full py-4 px-6 rounded-lg font-semibold text-white transition-all
       </motion.form>;
     </div>;) };
 '"`
-=======
-
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 export const InteractiveHero = ({ title, subtitle, description, primaryAction, secondaryAction, stats = [import { motion  } from 'framer-motion';
 
@@ -58,5 +57,3 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
     };
     const floatingVariants = {
 '"
-=======
->>>>>>> main

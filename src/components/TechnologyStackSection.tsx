@@ -1,18 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {  import { motion  } from 'framer-motion';
 
- params - Function parameters
- * @returns {*} Function return value
- */
-function TechnologyStackSection () {export function TechnologyStackSection() {
-  return ("
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
-      <div className="max-w-7xl mx-auto px-6">
-        <motion.div "
-          className="text-center mb-16"
-          initial = {
 
   { opacity: 0,
   y: 20
@@ -228,9 +215,3 @@ export default TechnologyStackSection;"
 export default TechnologyStackSection;
 export default TechnologyStackSection;
 '"`
-=======
-
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

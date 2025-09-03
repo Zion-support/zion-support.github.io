@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';'''
 import { motion } from 'framer-motion';
 import { COMPREHENSIVE_SERVICES } from "../data/comprehensiveServices.jsx";
@@ -119,27 +118,6 @@ export function NewServices() {
           </div>
         </motion.div>
 
-        {/* Category Filter */}
-        <motion.div initial = {}
-  { opacity: 0,
-  y: 20;
-}} animate = {}
-  { opacity: 1,
-  y: 0;
-}} transition = {}
-  { duration: 0.8,
-  delay: 0.2;
-"""
-""""
-}} className="mb-12">""`
-          <div className="flex flex-wrap gap-4 justify-center">`'`
-            {categories.map((category) => (<button key={category} onClick={() => setSelectedCategory(category)} className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${selectedCategory === category''`
-                ? 'bg-zion-cyan text-zion-blue-dark shadow-lg shadow-zion-cyan/30''`'`
-                : 'bg-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-light/30 border border-zion-cyan/30'}`}>'
-                {category === 'all' ? 'All Services' : category}
-              </button>) ) }
-          </div>
-        </motion.div>
 
         {/* Featured Services Section */}
         <motion.div initial = {}
@@ -495,20 +473,3 @@ export default NewServices;'"`'"`
 export default NewServices;'"`'"`'"`
 '"`'"`'"`
 '"`'"`
-=======
-<<<<<<< HEAD
-import React from 'react'; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export function NewServices () { const [selectedCategory, setSelectedCategory] = useState("all"); const [searchTerm, setSearchTerm] = useState("); const [selectedService, setSelectedService] = useState(null);
-=======
-import React from "react"; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export function NewServices () { const [selectedCategory, setSelectedCategory] = useState("all"); const [searchTerm, setSearchTerm] = useState("); const [selectedService, setSelectedService] = useState(null);"
- export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export function NewServices () { const [selectedCategory, setSelectedCategory] = useState("all"); const [searchTerm, setSearchTerm] = useState("); const [selectedService, setSelectedService] = useState(null);,"});,"})"
- export default NewServices export default NewServices export default NewServices export default NewServices export default NewServices export default NewServices export default NewServices export default NewServices export function NewServices () { const [selectedCategory, setSelectedCategory] = useState("all") const [searchTerm, setSearchTerm] = useState(") const [selectedService, setSelectedService] = useState(null);"
- export: default NewServices export default NewServices export default NewServices export default NewServices export default NewServices export default NewServices export default NewServices export default NewServices export function NewServices () { const [selectedCategory, setSelectedCategory] = useState("all") const [searchTerm, setSearchTerm] = useState(") const [selectedService, setSelectedService] = useState(null);";";";"
- export default NewServices export default NewServices export default NewServices export default NewServices export default NewServices export default NewServices export default NewServices export default NewServices export function NewServices () {} const [selectedCategory, setSelectedCategory] = useState(&apos;all&apos)&apos, const [searchTerm, setSearchTerm] = useState(&quot)&quot;" const;const [selectedService, setSelectedService] = useState(null);"
- export default NewServices export default NewServices export default NewServices export default NewServices export default NewServices export default NewServices export default NewServices export default NewServices export function NewServices () { const [selectedCategory, setSelectedCategory] = useState("all") const [searchTerm, setSearchTerm] = useState(") const [selectedService, setSelectedService] = useState(null);""
-""
-}}"
- export default NewServices export default NewServices export default NewServices export default NewServices export default NewServices export default NewServices export default NewServices export default NewServices export function NewServices () { const [selectedCategory, setSelectedCategory] = useState("all") const [searchTerm, setSearchTerm] = useState(") const [selectedService, setSelectedService] = useState(null)"
-"
-}""
->>>>>>> main
->>>>>>> main

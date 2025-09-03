@@ -1,82 +1,7 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react';
 export const AccessibilityEnhancer: React.FC < AccessibilityEnhancerProps> = ({
 import { motion, AnimatePresence  } from 'framer-motion';
 
- from 'lucide-react';
-
-interface AccessibilityEnhancerProps {
-  enabled?: boolean;
-  showSettings?: boolean}
-
-export function AccessibilityEnhancer({ enabled = true, showSettings = true }: AccessibilityEnhancerProps) {
-  const [settings, setSettings] = useState<AccessibilitySettings>({
-    fontSize: 16,
-    highContrast: false,
-    largeText: false,
-    reducedMotion: false,
-    highSaturation: false,
-    lineHeight: 1.5,
-    letterSpacing: 0,
-    keyboardNavigation: true,
-    screenReader: false,
-    focusIndicator: true
-  });
-
-  const [isVisible, setIsVisible] = useState(false);
-  const [isExpanded, setIsExpanded] = useState(false);
-  const [isScanning, setIsScanning] = useState(false);
-  const [issues, setIssues] = useState<any[]>([]);
-
-  // Keyboard navigation support
-  useEffect(() => {
-  // TODO: Add dependencies if needed
-
-  return () => {
-    // Cleanup function
-  };
-}, []);, []);
-    const handleKeyDown = (event: KeyboardEvent) => {;
-      // Skip if not in keyboard navigation mode;
-      if(!settings.keyboardNavigation) return;
-
-      const target = event.target as HTMLElement;
-
-      // Tab navigation enhancement
-      if(event.key = == 'Tab') {
-        const focusableElements = document.querySelectorAll(;
-          'button, [href], input, select, textarea, [tabindex]:not ([tabindex="-1"]) ';) ;
-
-        const firstElement = focusableElements[0] as HTMLElement;
-        const lastElement = focusableElements[focusableElements.length-1] as HTMLElement;
-
-        if(event.shiftKey && target = == firstElement) {;
-          event.preventDefault () ;
-          lastElement.focus () ;
-        } else if(!event.shiftKey && target = == lastElement) {;
-          event.preventDefault () ;
-          firstElement.focus () ;
-        }
-      }
-
-      // Arrow key navigation for custom components
-      if(['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes (event.key) ) {
-        const currentElement = target.closest('[data - navigation - group]') ;
-        if(currentElement) {
-          event.preventDefault () ;
-          navigateWithArrows(currentElement, event.key) ;
-        }
-      }
-
-      // Enter / Space for interactive elements
-      if(['Enter', ' '].includes (event.key) ) {
-        if(target.getAttribute ('role') === 'button' || target.classList.contains('interactive') ) {
-          event.preventDefault () ;
-          target.click () ;
-        }
-      }
     };
 
     document.addEventListener('keydown', handleKeyDown) ;
@@ -239,30 +164,7 @@ interactiveElements.forEach(element:  > {;
     document.head.appendChild(style) ;
 
     return () => {
-<<<<<<< HEAD
-      document.head.removeChild(style) ;
-=======
-  useEffect(() => {
-  // TODO: Add dependencies if needed
-
-  return () => {
-    // Cleanup function
-  };
-}, []);, []);
-
-      if(event.key === 'Tab') {
-
-        if(event.shiftKey && target === firstElement) {
-          event.preventDefault();
-          lastElement.focus()} else if(!event.shiftKey && target === lastElement) {
-          event.preventDefault();
-          firstElement.focus()}
-      }
->>>>>>> main
-    };
-=======
       document.head.removeChild(style) ;    };
->>>>>>> main
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown)}, [settings.keyboardNavigation]);
@@ -894,7 +796,4 @@ interactiveElements.forEach(element:  > {;
           </motion.div>) }      </AnimatePresence>
     </>
   )}
-=======
 import React, { useState, useEffect } from 'react'; interface AccessibilityEnhancerProps { children: React.ReactNode;   } const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => { const [accessibilitySettings, setAccessibilitySettings] = useState({ highContrast: false, largeText: false, reducedMotion: false, focusVisible: true }); useEffect(() => {
->>>>>>> main
->>>>>>> main

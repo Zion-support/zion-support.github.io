@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 :pages.disabled/pages/services/Transformation.tsx
 const DigitalTransformation = () => {
@@ -306,5 +305,3 @@ const DigitalTransformation: any = () => {}
 export default DigitalTransformation}}}'"'"
 
 export default DigitalTransformation}}}'""
-=======
->>>>>>> main

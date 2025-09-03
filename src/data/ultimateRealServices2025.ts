@@ -1,58 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { ProductListing } from '@/types/listings';
 
-export default function Page() {
-,
-  "Quantum Computing": {
-    icon: "⚛️",
-    description: "Quantum computing platforms and quantum-resistant solutions",
-    count: 2
-  },
-  "IoT": {
-    icon: "📡",
-    description: "Internet of Things and edge computing solutions",
-    count: 1
-  },
-  "Compliance": {
-    icon: "📋",
-    description: "Regulatory compliance and data governance solutions",
-    count: 1
-  },
-  "DevOps": {
-    icon: "🔄",
-    description: "Development operations and microservices management",
-    count: 1
-  },
-  "Fintech": {
-    icon: "💳",
-    description: "Financial technology and payment processing solutions",
-    count: 1
-  },
-  "Healthcare AI": {
-    icon: "🏥",
-    description: "AI-powered healthcare and medical diagnostic solutions",
-    count: 1
-  },
-  "Smart Cities": {
-    icon: "🏙️",
-    description: "Smart city infrastructure and urban management solutions",
-    count: 1
-  },
-  "Augmented Reality": {
-    icon: "👁️",
-    description: "AR/VR solutions and immersive technology platforms",
-    count: 1;
-  },;
-  "Logistics AI": {;
-    icon: "🚚",;    description: "AI-powered logistics and supply chain automation",;
-    count: 1}};
-;
-export const ULTIMATE_SERVICE_SUBCATEGORIES_2025 = {
-"
-  "Chatbots": { icon: "💬",
-  count: 1
 
 },
   "Threat Intelligence": { icon: "🛡️", count: 1 },
@@ -106,18 +53,3 @@ export const ULTIMATE_CONTACT_INFO_2025 = {
 ;
 
 };
-=======
-import React from "react"
-import { SEO } from "@/components/SEO"
-export default function ultimateRealServices2025() {return (
-    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
-      <SEO title="ultimateRealServices2025 - Zion Tech Group" description="Professional ultimateRealServices2025 services by Zion Tech Group"  />"
-      <div className="container mx-auto px-4 py-20">"
-        <h1 className="text-4xl font-bold text-white mb-8">ultimateRealServices2025</h1>"
-        <p className="text-gray-300 text-lg">
-          Professional ultimateRealServices2025 services to help your business grow.
-        </p>
-      </div>
-  );"}"
->>>>>>> main
->>>>>>> main

@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
-import { Users, Award, Globe, Linkedin, Mail, Github, Twitter } from 'lucide-react';
+import { Users, Award, Globe, Linkedin, Mail } from "lucide-react";
 import Link from 'next/link';
 
 const TeamPage: NextPage = () => {

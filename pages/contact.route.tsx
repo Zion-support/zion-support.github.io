@@ -1,6 +1,6 @@
 import React from 'react';
 import ModernLayout from '../components/layout/ModernLayout';
-import { Mail, Phone, MapPin, Clock, MessageSquare, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
 
 export default function ContactPage() {
   return (

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {}
   Workflow,
   Brain,
@@ -419,5 +418,3 @@ const AIWorkflowOrchestrator: React.FC = props {}
 ;
 export { AIWorkflowOrchestrator };export default AIWorkflowOrchestrator;'"`
 '"`'"`
-=======
->>>>>>> main

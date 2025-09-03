@@ -1,9 +1,6 @@
 export function UserExperienceOptimizer({
-<<<<<<< HEAD
 import { Users, TrendingUp, MousePointer, Eye, Clock, Target, BarChart3, PieChart, Activity, Zap, Lightbulb, CheckCircle, AlertTriangle, Info, Settings, RefreshCw, Download, Share2, Maximize2, Minimize2, X, Search, Filter, Calendar, Smartphone, Monitor, Globe, Heart, Star, ThumbsUp  } from 'lucide-react';
 
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 interface UXMetric {
 
   id: string;

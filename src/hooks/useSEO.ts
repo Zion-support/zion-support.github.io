@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 interface SEOData {
   title: string;
@@ -320,4 +318,3 @@ declare global {
     dataLayer?[]}
 }
 '"`
->>>>>>> main

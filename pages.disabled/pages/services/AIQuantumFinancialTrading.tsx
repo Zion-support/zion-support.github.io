@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -955,5 +954,3 @@ export default AIQuantumFinancialTrading;
   )};
 '"`
 export default AIQuantumFinancialTrading;'"`'"`
-=======
->>>>>>> main

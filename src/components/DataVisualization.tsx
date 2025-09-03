@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 
-export default function Page() {
-interface DataVisualizationProps extends React.PropsWithChildren<{}> {
 
   title?: string;
   showMetrics?: boolean;
@@ -111,9 +106,3 @@ setChartData(prev:  > ({;
   // Generate line chart data
   const lineChartData = {
 '"
-=======
-
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

@@ -1,23 +1,6 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {  import { motion, AnimatePresence  } from 'framer-motion';
  from 'lucide-react';
 
-interface Testimonial {
-  id: string;
-  name: string;
-  position: string;
-  comp: string;
-  compLogo: string;
-  content: string;
-  rating: number;
-  industry: string;
-  results: string[];
-  avatar: string
-}
-;
-const testimonials: Testimonial[] = [{
 
     id: '1',
     name: 'Sarah Chen',
@@ -317,9 +300,3 @@ export default function EnhancedTestimonialsSection(...args[]):  {
       </div>;
     </section>;) }
 '"`
-=======
-
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

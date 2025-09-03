@@ -1,20 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {  import { EMERGING_TECH_SERVICES_2025 } from '../data/emergingTechServices2025';
 
-export default function Page() {
-const ComprehensiveServicesShowcase: React.FC = () => {;
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<string>('all');
-  const [searchTerm, setSearchTerm] = useState<string>('');  // Combine all services
-  const allServices: Service[] = [...EXPANDED_INNOVATIVE_SERVICES_2025,
-    ...EMERGING_TECH_SERVICES_2025
-  ];
-  // Get unique categories'
-  
-    return cats}, [allServices]) ;
-  // Get unique innovation levels
 
     return levels}, [allServices]);  // Filter services
   
@@ -338,9 +323,3 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
       </section>;
     </div>;) };
 export default ComprehensiveServicesShowcase}}}}'"`
-=======
-
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

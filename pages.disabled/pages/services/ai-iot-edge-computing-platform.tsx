@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ;const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {}
   return()
     <>
@@ -956,5 +955,3 @@
     </>
   )};'"`
 export default AIIoTEdgeComputingPlatform;'"`'"`
-=======
->>>>>>> main

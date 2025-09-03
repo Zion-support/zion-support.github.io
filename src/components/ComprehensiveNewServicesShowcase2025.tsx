@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useState } from 'react';
 export default ComprehensiveNewServicesShowcase2025;
 import { comprehensiveNewServices2025 } from '../data/comprehensiveNewServices2025';
@@ -24,19 +21,6 @@ export default function Page() {
           </motion.div>
         </div>
 
-        {/* Search and Filter Section */}"
-        <div className="mb-12">"
-          <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
-            {/* Search */}"
-            <div className="relative flex-1 max-w-md">"
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
-              <input"
-                type="text"
-                placeholder="Search services..."                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}"
-                className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-              />
-            </div>
 
             {/* Category Filter */}"
             <div className="flex gap-2 overflow-x-auto pb-2">
@@ -314,9 +298,3 @@ export default function Page() {
       </div>
     </div>) }
 export default ComprehensiveNewServicesShowcase2025;'"`
-=======
-
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
 <:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
 import React from 'react.ts';
@@ -581,5 +580,3 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
       </section>;
     </div>;'"`
   )}}}}}}'"`'"`
-=======
->>>>>>> main

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export default function CodeBlock({}
   children,
   code,
@@ -41,8 +40,3 @@ export { CodeBlock };
 export { CodeBlock };
 
 export { CodeBlock };
-=======
-import React from "react")
-}
-'export default ComponentName;"
->>>>>>> main

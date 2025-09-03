@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, { useEffect, useRef } from "react";
 import { SearchSuggestion, SearchHighlight } from '@/types/search';
 
@@ -89,4 +87,3 @@ export function AutocompleteSuggestions({
     </div>
   );
 }
->>>>>>> main

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {}
   Truck,
   TrendingUp,
@@ -692,5 +691,3 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
     </div>
   )}'"`
 '"`'"`
-=======
->>>>>>> main

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';'''
 import { useParams, useNavigate } from 'react-router-dom';'''
 import { Button } from '@/components/ui/button';'''
@@ -172,5 +171,3 @@ export { JobDetails };
 export { JobDetails };
 
 export { JobDetails };
-=======
->>>>>>> main

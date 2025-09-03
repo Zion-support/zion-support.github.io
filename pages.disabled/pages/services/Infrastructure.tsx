@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 :pages.disabled/pages/services/Infrastructure.tsx
 const InfrastructureServices = () => {
@@ -306,5 +305,3 @@ const InfrastructureServices: any = () => {}
 export default InfrastructureServices}}}'"'"
 
 export default InfrastructureServices}}}'""
-=======
->>>>>>> main

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :pages.disabled/pages/services/HealthcareTech.tsx
 export default function HealthcareTech(...args: []):  {
 
@@ -568,5 +567,3 @@ export default function HealthcareTech(...args: []):  {}
   )}}}}'"`'"`
     </div>;
   )}}}}'"`
-=======
->>>>>>> main

@@ -1,7 +1,7 @@
 import React from 'react';'''
 import { Link } from 'react-router-dom';'''
 import { motion } from 'framer-motion';'''
-import { Zap, Workflow, Brain, Clock, TrendingUp, Users, Database, Globe, Target, CheckCircle, BarChart3 } from 'lucide-react';
+import { Zap } from "lucide-react";
 const AIWorkflowAutomation = () => {}
     const features = []
         {}

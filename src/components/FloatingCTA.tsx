@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { Link  } from 'react-router-dom';
 export default function Page() {
  from 'lucide-react';
 
-const FloatingCTA: React.FC = () : JSX.Element => {;
-  const [isOpen, setIsOpen] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -87,9 +81,3 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
     </>
   )}
 '"
-=======
-
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useTranslation } from 'react -i18next';
 export default function Page() {
 );
@@ -10,35 +9,6 @@ export default function Page() {
     useEffect(() => {
   // TODO: Add dependencies if needed
 
-  return () => {
-    // Cleanup function
-  };
-}, []);, []);
-        // For demo purposes, we're using the loaded translations from i18next
-        const currentTranslations = { /* empty */ };
-        supportedLanguages.forEach(lang => {
-            const res = i18n.getResourceBundle (lang.code, selectedNamespace) ;
-            if(res) {
-                // Flatten nested objects for easier management
-                const flattenObject = (obj, prefix = '') => {
-                    return Object.keys(obj) .reduce((acc, key) => {
-                        const pre = prefix.length ? `${prefix}.` : '';
-                        if(typeof obj[key] === 'object' && obj[key] !== null) {
-                            Object.assign(acc, flattenObject (obj[key], `${pre}${key}`) ) }
-                        else {
-                            acc[`${pre}${key}`] = obj[key]}
-                        return acc}, {}) };
-                currentTranslations[lang.code] = flattenObject(res) }
-        }) ;
-        setTranslations(currentTranslations) ;
-        // Get all unique keys across all languages
-        const allKeys = new Set () ;
-        Object.values(currentTranslations) .forEach(langTranslations => {
-            Object.keys (langTranslations) .forEach(key => allKeys.add (key) ) }) ;
-        setFilteredKeys(Array.from (allKeys) ) }, [selectedNamespace, i18n]) ;
-    // Filter keys based on search query
-    useEffect(() => {
-  // TODO: Add dependencies if needed
 
   return () => {
     // Cleanup function
@@ -237,7 +207,6 @@ export default function Page() {
       
     </>)}
 
-<<<<<<< HEAD
 
 export { TranslationManager };
 
@@ -248,25 +217,3 @@ export { TranslationManager };
 export { TranslationManager };
 
 export { TranslationManager };
-=======
-    </>) }
-=======
-<<<<<<< HEAD
-import React from 'react'; export default function TranslationManager () { const { t, i18n } = useTranslation () ; const isMobile = useIsMobile () ; const { supportedLanguages } = useLanguage () ; const { translateContent, isTranslating } = useTranslationService () ; const [selectedNamespace, setSelectedNamespace] = useState("translation"); const [searchQuery, setSearchQuery] = useState("); const [translations, setTranslations] = useState({ }); const [filteredKeys, setFilteredKeys] = useState([]); const [editingKey, setEditingKey] = useState(null); const [editedTranslations, setEditedTranslations] = useState({ }); const [isSaving, setIsSaving] = useState(false);
-=======
-import React from "react"; export default function TranslationManager () { const { t, i18n } = useTranslation () ; const isMobile = useIsMobile () ; const { supportedLanguages } = useLanguage () ; const { translateContent, isTranslating } = useTranslationService () ; const [selectedNamespace, setSelectedNamespace] = useState("translation"); const [searchQuery, setSearchQuery] = useState("); const [translations, setTranslations] = useState({}); const [filteredKeys, setFilteredKeys] = useState([]); const [editingKey, setEditingKey] = useState(null); const [editedTranslations, setEditedTranslations] = useState({}); const [isSaving, setIsSaving] = useState(false);"
- export default function TranslationManager () { const { t, i18n } = useTranslation () ; const isMobile = useIsMobile () ; const { supportedLanguages } = useLanguage () ; const { translateContent, isTranslating } = useTranslationService () ; const [selectedNamespace, setSelectedNamespace] = useState("translation"); const [searchQuery, setSearchQuery] = useState("); const [translations, setTranslations] = useState({}); const [filteredKeys, setFilteredKeys] = useState([]); const [editingKey, setEditingKey] = useState(null); const [editedTranslations, setEditedTranslations] = useState({}); const [isSaving, setIsSaving] = useState(false);,"});,"})"
- export default function TranslationManager () { const { t, i18n } = useTranslation ()  const isMobile = useIsMobile ()  const { supportedLanguages } = useLanguage ()  const { translateContent, isTranslating } = useTranslationService ()  const [selectedNamespace, setSelectedNamespace] = useState("translation") const [searchQuery, setSearchQuery] = useState(") const [translations, setTranslations] = useState({}) const [filteredKeys, setFilteredKeys] = useState([]) const [editingKey, setEditingKey] = useState(null) const [editedTranslations, setEditedTranslations] = useState({}) const [isSaving, setIsSaving] = useState(false);"
- export: default function TranslationManager () { const { t, i18n } = useTranslation ()  const isMobile = useIsMobile ()  const { supportedLanguages } = useLanguage ()  const { translateContent, isTranslating } = useTranslationService ()  const [selectedNamespace, setSelectedNamespace] = useState("translation") const [searchQuery, setSearchQuery] = useState(") const [translations, setTranslations] = useState({}) const [filteredKeys, setFilteredKeys] = useState([]) const [editingKey, setEditingKey] = useState(null) const [editedTranslations, setEditedTranslations] = useState({}) const [isSaving, setIsSaving] = useState(false);";";";"
- export default function TranslationManager ()   {const { t, i18n } = useTranslation ()  const isMobile = useIsMobile ()  const {supportedLanguages } = useLanguage ()  const {translateContent, isTranslating } = useTranslationService ()  const [selectedNamespace, setSelectedNamespace] = useState("translation") const [searchQuery, setSearchQuery] = useState(") const [translations, setTranslations] = useState({}) const [filteredKeys, setFilteredKeys] = useState([]) const [editingKey, setEditingKey] = useState(null) const [editedTranslations, setEditedTranslations] = useState({}) const [isSaving, setIsSaving] = useState(false);""
- export default function TranslationManager () {} const { t, i18n } = useTranslation ()  const isMobile = useIsMobile ()  const { supportedLanguages } = useLanguage ()  const ;{ translateContent, isTranslating } = useTranslationService ()  const;const [selectedNamespace, setSelectedNamespace] = useState(&apos;translation&apos)&apos, const [searchQuery, setSearchQuery] = useState(&quot)&quot;" const [translations, setTranslations] = useState({}) const [filteredKeys, setFilteredKeys] = useState([]) const [editingKey, setEditingKey] = useState(null) const [editedTranslations, setEditedTranslations] = useState({}) const;const;const [isSaving, setIsSaving] = useState(false);"
- export default function TranslationManager () { const { t, i18n } = useTranslation ()  const isMobile = useIsMobile ()  const { supportedLanguages } = useLanguage ()  const { translateContent, isTranslating } = useTranslationService ()  const [selectedNamespace, setSelectedNamespace] = useState("translation") const [searchQuery, setSearchQuery] = useState(") const [translations, setTranslations] = useState({}) const [filteredKeys, setFilteredKeys] = useState([]) const [editingKey, setEditingKey] = useState(null) const [editedTranslations, setEditedTranslations] = useState({}) const [isSaving, setIsSaving] = useState(false);""
-""
-}}"
- export default function TranslationManager () { const { t, i18n } = useTranslation ()  const isMobile = useIsMobile ()  const { supportedLanguages } = useLanguage ()  const { translateContent, isTranslating } = useTranslationService ()  const [selectedNamespace, setSelectedNamespace] = useState("translation") const [searchQuery, setSearchQuery] = useState(") const [translations, setTranslations] = useState({}) const [filteredKeys, setFilteredKeys] = useState([]) const [editingKey, setEditingKey] = useState(null) const [editedTranslations, setEditedTranslations] = useState({}) const [isSaving, setIsSaving] = useState(false);""
- export default function TranslationManager () { const { t, i18n } = useTranslation ()  const isMobile = useIsMobile ()  const { supportedLanguages } = useLanguage ()  const { translateContent, isTranslating } = useTranslationService ()  const [selectedNamespace, setSelectedNamespace] = useState("translation") const [searchQuery, setSearchQuery] = useState(") const [translations, setTranslations] = useState({}) const [filteredKeys, setFilteredKeys] = useState([]) const [editingKey, setEditingKey] = useState(null) const [editedTranslations, setEditedTranslations] = useState({}) const [isSaving, setIsSaving] = useState(false)"
-"
-}};""
->>>>>>> main
->>>>>>> main
->>>>>>> main

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { Link  } from 'react-router-dom';
  from 'react';
 export default UltimateServicesShowcase;
@@ -16,7 +13,6 @@ import { innovativeMicroSaasSolutions2025 } from '../../data / 2025 - innovative
 import { motion  } from 'framer-motion';
 import { ultimateInnovativeServices2025 } from '../../data / 2025 - ultimate - innovative - services -expansion';
 
- from 'lucide - react';
 
 // Import the new services
   ;
@@ -423,9 +419,3 @@ export default UltimateServicesShowcase;
 export default UltimateServicesShowcase;
 export default UltimateServicesShowcase;
 '"`
-=======
-
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from "react";""""
 import CreatePostButton from "@/components/community/CreatePostButton";""""
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";""""
@@ -230,5 +229,3 @@ export { CommunityPage };
 export { CommunityPage };
 
 export { CommunityPage };
-=======
->>>>>>> main

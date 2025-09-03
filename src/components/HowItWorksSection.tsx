@@ -1,60 +1,7 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useState } from 'react';
 export /**
 import { motion, AnimatePresence  } from 'framer-motion';
 
-export default function Page() {
-,
-  {
-"
-    icon: <FileText className="w-8 h-8"  />,"
-    title: "Plan","
-    description: "Collaborate on project requirements, timeline, and deliverables","
-    color: "from-zion-blue to-zion-blue-dark","
-    bgColor: "from-zion-blue/20 to-zion-blue-dark/20",
-    details: ["
-      "Interactive project planning","
-      "Timeline optimization","
-      "Resource allocation","
-      "Risk assessment"
-    ],"
-    duration: "4-8 hours","
-    success: "90% on-time delivery"
-  },
-  {
-"
-    icon: <Rocket className="w-8 h-8"  />,"
-    title: "Execute","
-    description: "Watch your vision come to life with our expert execution","
-    color: "from-zion-cyan-light to-zion-cyan","
-    bgColor: "from-zion-cyan-light/20 to-zion-cyan/20",
-    details: ["
-      "Agile development process","
-      "Regular progress updates","
-      "Quality assurance","
-      "Performance monitoring"
-    ],"
-    duration: "1-4 weeks","
-    success: "99% quality score"
-  },
-  {
-"
-    icon: <CheckCircle className="w-8 h-8"  />,"
-    title: "Deliver","
-    description: "Receive your completed project with ongoing support and maintenance","
-    color: "from-zion-purple-light to-zion-purple","
-    bgColor: "from-zion-purple-light/20 to-zion-purple/20",
-    details: ["
-      "Comprehensive testing","
-      "Documentation delivery",;"
-      "Training and handover",;"
-      "Post-launch support";
-    ],;"
-    duration: "Ongoing",;"
-    success: "100% client retention"};
-];
 
 const stats = [;"
   { icon: <Clock className="w-6 h-6"  />, value: "3x Faster", label: "Project Delivery" },;"
@@ -356,9 +303,3 @@ const stats = [;"
 
 }
 '"`
-=======
-
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main
