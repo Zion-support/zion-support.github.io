@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 
@@ -22,7 +22,7 @@ if (missing.length > 0) {
     '[pre-build-health-check] Missing files:',
     missing.map(p => path.relative(process.cwd(), p)).join(', ')
   );
-  process.exit(0); // do not block build
+  process.exit(0); // do not block build;
 }
 
 console.log('[pre-build-health-check] OK');

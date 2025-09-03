@@ -1,330 +1,266 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { 
-  Play, 
-  Calendar, 
-  Clock, 
-  Users, 
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Shield,
-  Zap,
-  Brain,
-  Code,
-  Cloud
-} from 'lucide-react';
+import Link from 'next/link';
+import Navigation from '../src/components/Navigation';
+import Footer from '../src/components/Footer';
+import { Play, Calendar, Users, Zap, Brain, Cloud, Shield, ArrowRight, CheckCircle, Star } from 'lucide-react';
 
-export default function Demo() {
-  const [selectedDemo, setSelectedDemo] = useState('');
-  const [isBooking, setIsBooking] = useState(false);
-  const [isBooked, setIsBooked] = useState(false);
+const Demo = () => {
+  const [selectedDemo, setSelectedDemo] = useState('ai-services');
 
   const demos = [
     {
       id: 'ai-services',
-      title: 'AI & Machine Learning',
-      description: 'See our AI solutions in action - from natural language processing to predictive analytics',
-      duration: '30 minutes',
+      title: 'AI Services Demo',
+      description: 'See how our AI solutions can transform your business processes',
+      duration: '15 minutes',
       icon: Brain,
-      features: ['AI Chatbot Demo', 'Predictive Analytics', 'Natural Language Processing', 'Computer Vision'],
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      id: 'micro-saas',
-      title: 'Micro SAAS Platform',
-      description: 'Experience our micro SAAS solutions for business automation and efficiency',
-      duration: '25 minutes',
-      icon: Code,
-      features: ['Business Intelligence', 'Customer Experience Hub', 'Supply Chain Optimizer', 'HR Management'],
-      color: 'from-blue-500 to-cyan-500'
+      features: [
+        'Natural Language Processing',
+        'Computer Vision',
+        'Predictive Analytics',
+        'Chatbot Integration',
+        'Document Processing'
+      ]
     },
     {
       id: 'it-services',
-      title: 'IT Infrastructure',
-      description: 'Explore our comprehensive IT services and infrastructure management solutions',
-      duration: '35 minutes',
+      title: 'IT Services Demo',
+      description: 'Explore our comprehensive IT infrastructure and support solutions',
+      duration: '20 minutes',
       icon: Cloud,
-      features: ['Cloud Migration', 'Cybersecurity', 'DevOps Automation', 'Network Management'],
-      color: 'from-green-500 to-emerald-500'
+      features: [
+        'Cloud Migration',
+        'Network Security',
+        'System Monitoring',
+        'Backup Solutions',
+        'Performance Optimization'
+      ]
     },
     {
-      id: 'digital-transformation',
-      title: 'Digital Transformation',
-      description: 'Discover how we help businesses transform digitally with cutting-edge solutions',
-      duration: '40 minutes',
+      id: 'micro-saas',
+      title: 'Micro SaaS Demo',
+      description: 'Discover our scalable software-as-a-service development capabilities',
+      duration: '25 minutes',
       icon: Zap,
-      features: ['Process Automation', 'Data Analytics', 'Mobile Solutions', 'Integration Services'],
-      color: 'from-orange-500 to-red-500'
+      features: [
+        'Custom SaaS Development',
+        'API Integration',
+        'User Management',
+        'Payment Processing',
+        'Analytics Dashboard'
+      ]
     }
   ];
 
-  const benefits = [
+  const testimonials = [
     {
-      icon: Users,
-      title: 'Expert Guidance',
-      description: 'Get insights from our certified professionals'
+      name: 'Sarah Johnson',
+      company: 'TechCorp Inc.',
+      role: 'CTO',
+      content: 'The AI demo was incredible. We could see exactly how it would integrate with our existing systems.',
+      rating: 5
     },
     {
-      icon: Shield,
-      title: 'Secure Environment',
-      description: 'Safe, controlled demo environment'
+      name: 'Michael Chen',
+      company: 'StartupXYZ',
+      role: 'Founder',
+      content: 'The micro SaaS demo showed us the potential for our product. Highly recommended!',
+      rating: 5
     },
     {
-      icon: Clock,
-      title: 'Flexible Scheduling',
-      description: 'Book at your convenience'
-    },
-    {
-      icon: Star,
-      title: 'Personalized Experience',
-      description: 'Tailored to your specific needs'
+      name: 'Emily Rodriguez',
+      company: 'Enterprise Solutions',
+      role: 'IT Director',
+      content: 'The IT services demo covered everything we needed. Very comprehensive and professional.',
+      rating: 5
     }
   ];
-
-  const handleBookDemo = async (demoId: string) => {
-    setSelectedDemo(demoId);
-    setIsBooking(true);
-    
-    // Simulate booking process
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setIsBooking(false);
-    setIsBooked(true);
-  };
-
-  if (isBooked) {
-    return (
-      <>
-        <Head>
-          <title>Demo Booked Successfully - Zion Tech Group</title>
-          <meta name="description" content="Your demo has been booked successfully. We'll contact you soon to confirm the details." />
-        </Head>
-        
-        <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="max-w-2xl w-full bg-white rounded-2xl shadow-2xl p-8 text-center"
-          >
-            <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
-              className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6"
-            >
-              <CheckCircle className="w-10 h-10 text-green-600" />
-            </motion.div>
-            
-            <h1 className="text-3xl font-bold text-gray-900 mb-4">
-              Demo Booked Successfully!
-            </h1>
-            
-            <p className="text-lg text-gray-600 mb-8">
-              Thank you for booking a demo with Zion Tech Group. Our team will contact you within 24 hours to confirm the details and schedule your personalized demonstration.
-            </p>
-            
-            <div className="bg-blue-50 rounded-lg p-6 mb-8">
-              <h3 className="font-semibold text-blue-900 mb-2">What happens next?</h3>
-              <ul className="text-left text-blue-800 space-y-2">
-                <li>• We'll review your demo request</li>
-                <li>• Our team will prepare a personalized demo</li>
-                <li>• You'll receive a calendar invitation</li>
-                <li>• Join us for an interactive demonstration</li>
-              </ul>
-            </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-              >
-                Contact Us
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </a>
-              <a
-                href="/"
-                className="inline-flex items-center px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
-              >
-                Back to Home
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </>
-    );
-  }
 
   return (
     <>
       <Head>
-        <title>Book a Demo - Zion Tech Group</title>
-        <meta name="description" content="Experience our technology solutions firsthand. Book a personalized demo with our experts." />
+        <title>Live Demo - Zion Tech Group</title>
+        <meta name="description" content="See our AI services, IT solutions, and micro SaaS development in action. Book a personalized demo today." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="canonical" href="https://ziontechgroup.com/demo" />
       </Head>
-
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-white">
         {/* Hero Section */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+        <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-center"
-            >
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Experience Our Solutions
+            <div className="text-center">
+              <h1 className="text-5xl font-bold text-gray-900 mb-6">
+                See Our Solutions in <span className="text-blue-600">Action</span>
               </h1>
-              <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-                See our technology solutions in action. Book a personalized demo and discover how we can transform your business.
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+                Experience firsthand how our AI services, IT solutions, and micro SaaS development can transform your business.
               </p>
-            </motion.div>
-          </div>
-        </div>
-
-        {/* Benefits Section */}
-        <div className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Why Book a Demo?
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Get hands-on experience with our solutions and see how they can benefit your business
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  className="text-center"
-                >
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <benefit.icon className="w-8 h-8 text-blue-600" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-gray-600">
-                    {benefit.description}
-                  </p>
-                </motion.div>
-              ))}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center">
+                  <Play className="w-5 h-5 mr-2" />
+                  Watch Demo Video
+                </button>
+                <Link href="#schedule" className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors flex items-center justify-center">
+                  <Calendar className="w-5 h-5 mr-2" />
+                  Schedule Live Demo
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
 
-        {/* Demo Options */}
-        <div className="py-16">
+        {/* Demo Selection */}
+        <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Choose Your Demo
-              </h2>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Choose Your Demo</h2>
               <p className="text-lg text-gray-600">
                 Select the solution you'd like to see in action
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {demos.map((demo, index) => (
-                <motion.div
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+              {demos.map((demo) => (
+                <div
                   key={demo.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300"
+                  onClick={() => setSelectedDemo(demo.id)}
+                  className={`cursor-pointer rounded-lg p-6 border-2 transition-all ${
+                    selectedDemo === demo.id
+                      ? 'border-blue-500 bg-blue-50'
+                      : 'border-gray-200 hover:border-gray-300'
+                  }`}
                 >
-                  <div className="flex items-center mb-6">
-                    <div className={`w-16 h-16 bg-gradient-to-r ${demo.color} rounded-xl flex items-center justify-center mr-4`}>
-                      <demo.icon className="w-8 h-8 text-white" />
+                  <div className="flex items-center mb-4">
+                    <div className="p-3 bg-blue-100 rounded-lg mr-4">
+                      <demo.icon className="w-6 h-6 text-blue-600" />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold text-gray-900">
-                        {demo.title}
-                      </h3>
-                      <div className="flex items-center text-gray-500">
-                        <Clock className="w-4 h-4 mr-1" />
-                        <span className="text-sm">{demo.duration}</span>
-                      </div>
+                      <h3 className="text-xl font-semibold text-gray-900">{demo.title}</h3>
+                      <p className="text-sm text-gray-600">{demo.duration}</p>
                     </div>
                   </div>
+                  <p className="text-gray-600 mb-4">{demo.description}</p>
+                  <ul className="space-y-2">
+                    {demo.features.map((feature, index) => (
+                      <li key={index} className="flex items-center text-sm text-gray-600">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
 
-                  <p className="text-gray-600 mb-6">
-                    {demo.description}
-                  </p>
-
-                  <div className="mb-6">
-                    <h4 className="font-semibold text-gray-900 mb-3">What you'll see:</h4>
-                    <ul className="space-y-2">
-                      {demo.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-gray-600">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <button
-                    onClick={() => handleBookDemo(demo.id)}
-                    disabled={isBooking}
-                    className={`w-full py-3 px-6 bg-gradient-to-r ${demo.color} text-white font-semibold rounded-lg hover:opacity-90 transition-opacity duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center`}
-                  >
-                    {isBooking && selectedDemo === demo.id ? (
-                      <>
-                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                        Booking...
-                      </>
-                    ) : (
-                      <>
-                        <Play className="w-5 h-5 mr-2" />
-                        Book Demo
-                      </>
-                    )}
+            {/* Selected Demo Details */}
+            <div className="bg-gray-50 rounded-lg p-8">
+              <div className="text-center mb-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  {demos.find(d => d.id === selectedDemo)?.title} - Live Demo
+                </h3>
+                <p className="text-lg text-gray-600 mb-6">
+                  {demos.find(d => d.id === selectedDemo)?.description}
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center">
+                    <Play className="w-5 h-5 mr-2" />
+                    Start Demo
                   </button>
-                </motion.div>
+                  <Link href="/contact" className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors flex items-center justify-center">
+                    <Users className="w-5 h-5 mr-2" />
+                    Request Custom Demo
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
+              <p className="text-lg text-gray-600">
+                Hear from businesses that have experienced our demos
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="bg-white rounded-lg p-6 shadow-sm">
+                  <div className="flex items-center mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-gray-600 mb-4">"{testimonial.content}"</p>
+                  <div>
+                    <p className="font-semibold text-gray-900">{testimonial.name}</p>
+                    <p className="text-sm text-gray-600">{testimonial.role}, {testimonial.company}</p>
+                  </div>
+                </div>
               ))}
             </div>
           </div>
-        </div>
+        </section>
 
-        {/* CTA Section */}
-        <div className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-            >
-              <h2 className="text-3xl font-bold mb-4">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Don't wait to see the future of technology. Book your demo today and discover how our solutions can drive your success.
+        {/* Schedule Demo Section */}
+        <section id="schedule" className="py-20 bg-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Schedule Your Demo</h2>
+              <p className="text-lg text-gray-600">
+                Book a personalized demo with our experts
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
-                >
-                  Contact Us
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </a>
-                <a
-                  href="/request-quote"
-                  className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
-                >
-                  Get Quote
-                </a>
+            </div>
+
+            <div className="bg-gray-50 rounded-lg p-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Demo Information</h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-center">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                      <span className="text-gray-600">Personalized to your business needs</span>
+                    </li>
+                    <li className="flex items-center">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                      <span className="text-gray-600">Live Q&A with our experts</span>
+                    </li>
+                    <li className="flex items-center">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                      <span className="text-gray-600">Custom use case scenarios</span>
+                    </li>
+                    <li className="flex items-center">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                      <span className="text-gray-600">Follow-up consultation included</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Ready to Get Started?</h3>
+                  <p className="text-gray-600 mb-6">
+                    Contact us to schedule your personalized demo and see how our solutions can benefit your business.
+                  </p>
+                  <Link href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center">
+                    Schedule Demo
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
+                </div>
               </div>
-            </motion.div>
+            </div>
           </div>
-        </div>
-      </div>
+        </section>
+      </main>
+      
+      <Footer />
     </>
   );
-}
+};
+
+export default Demo;

@@ -1,0 +1,95 @@
+<<<<<<< HEAD
+export interface ComprehensivePricingGuide2034 { id: string; title: string; description: string; category: string; pricingTiers: PricingTier[]; features: string[]; benefits: string[]; targetAudience: string[]; contactInfo: { phone: string; email: string; website: string; address: string;  }; marketPositioning: string; competitiveAdvantages: string[]; testimonials: string[]; caseStudies: string[]; }; export interface PricingTier { name: string; price: number; currency: string; period: string; description: string; features: string[]; popular?: boolean; cta: string; link: string; savings?: string; roi: string; estimatedDelivery: string; supportLevel: string;  }; export const COMPREHENSIVE_PRICING_GUIDE_2034: ComprehensivePricingGuide2034[] = [;,"});,"})
+=======
+<<<<<<< HEAD
+export: interface ComprehensivePricingGuide2034 {
+  id: string,;,
+   title: string,;,
+   description: string,;,
+   category: string,;,
+   pricingTiers: PricingTier[],;,
+   features: string[],;,
+   benefits: string[],;,
+   targetAudience: string[],;,
+   contactInfo: { phone: string,;,
+   email: string,;,
+   website: string,;,
+   address: strin,g} marketPositioning: string: competitiveAdvantages: string[] testimonials: string[] caseStudies: string[], } export: interface PricingTier {
+  name: string,;,
+   price: number,;,
+   currency: string,;,
+   period: string,;,
+   description: string,;,
+   features: string[],;,
+=======
+<<<<<<< HEAD
+export interface ComprehensivePricingGuide2034 { id: string;
+=======
+<<<<<<< HEAD
+export interface ComprehensivePricingGuide2034 {;
+  id: string;
+=======
+export interface ComprehensivePricingGuide2034 {id: string;
+>>>>>>> main
+>>>>>>> main
+   title: string;
+   description: string;
+   category: string;
+   pricingTiers: PricingTier[];
+   features: string[];
+   benefits: string[];
+   targetAudience: string[];
+   contactInfo: {  phone: string;
+   email: string;
+<<<<<<< HEAD
+   websit,
+    e: string
+   addres,
+    s: string} marketPositioning: string competitiveAdvantages: string[] testimonial,
+    s: string[] caseStudie,
+    s: string[] } export interface PricingTier {
+=======
+<<<<<<< HEAD
+   website: string;
+<<<<<<< HEAD
+   address: string  } marketPositioning: string competitiveAdvantages: string[] testimonials: string[] caseStudies: string[] } export interface PricingTier { name: string;
+=======
+   address: string} marketPositioning: string competitiveAdvantages: string[] testimonials: string[] caseStudies: string[] } export interface PricingTier {;
+>>>>>>> main
+  name: string;
+=======
+   website: string
+   address: string} marketPositioning: string competitiveAdvantages: string[] testimonials: string[] caseStudies: string[] } export interface PricingTier {name: string;
+>>>>>>> main
+>>>>>>> main
+   price: number;
+   currency: string;
+   period: string;
+   description: string;
+   features: string[];
+>>>>>>> main
+   popular?: boolean;
+   cta: string,;,
+   link: string,;,
+   savings?: string;
+<<<<<<< HEAD
+   roi: string,;,
+   estimatedDelivery: string,;,
+   supportLevel: strin,g} export: const COMPREHENSIVE_PRICING_GUIDE_2034: ComprehensivePricingGuide2034[] = [,;
+=======
+   roi: string;
+<<<<<<< HEAD
+   estimatedDeliver,
+    y: string;
+   supportLeve,
+    l: string} export const COMPREHENSIVE_PRICING_GUIDE_2034: ComprehensivePricingGuide2034[] = [;
+=======
+   estimatedDelivery: string;
+<<<<<<< HEAD
+   supportLevel: string  } export const COMPREHENSIVE_PRICING_GUIDE_2034: ComprehensivePricingGuide2034[] = [;
+=======
+   supportLevel: string} export const COMPREHENSIVE_PRICING_GUIDE_2034: ComprehensivePricingGuide2034[] = [;
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
