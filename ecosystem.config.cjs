@@ -3,17 +3,13 @@ module.exports = {
     {
       name: 'ziontechgroup-web',
       script: 'npm',
-      args: 'start',
+      args: 'run dev',
       cwd: '/workspace',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production',
-        PORT: 3000
-      },
-      env_development: {
         NODE_ENV: 'development',
         PORT: 3000
       },
@@ -24,13 +20,12 @@ module.exports = {
     },
     {
       name: 'automation-health-check',
-      script: 'node',
-      args: 'automation/health-check.cjs',
+      script: 'automation/health-check.cjs',
       cwd: '/workspace',
       instances: 1,
       autorestart: true,
       watch: false,
-      cron_restart: '*/5 * * * *', // Restart every 5 minutes
+      cron_restart: '0 */1 * * *', // Restart every hour
       env: {
         NODE_ENV: 'production'
       },
@@ -40,13 +35,12 @@ module.exports = {
     },
     {
       name: 'automation-security-scanner',
-      script: 'node',
-      args: 'automation/security-scanner.cjs',
+      script: 'automation/security-scanner.cjs',
       cwd: '/workspace',
       instances: 1,
       autorestart: true,
       watch: false,
-      cron_restart: '0 */6 * * *', // Restart every 6 hours
+      cron_restart: '0 */12 * * *', // Restart every 12 hours
       env: {
         NODE_ENV: 'production'
       },
@@ -56,13 +50,12 @@ module.exports = {
     },
     {
       name: 'automation-performance-monitor',
-      script: 'node',
-      args: 'scripts/performance-monitor.cjs',
+      script: 'scripts/performance-monitor.cjs',
       cwd: '/workspace',
       instances: 1,
       autorestart: true,
       watch: false,
-      cron_restart: '0 */2 * * *', // Restart every 2 hours
+      cron_restart: '0 */4 * * *', // Restart every 4 hours
       env: {
         NODE_ENV: 'production'
       },

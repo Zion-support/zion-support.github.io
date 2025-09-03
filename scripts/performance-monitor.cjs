@@ -134,4 +134,7 @@ if (performanceMetrics.recommendations.length > 0) {
 fs.writeFileSync('performance-metrics.json', JSON.stringify(performanceMetrics, null, 2));
 console.log('\n📄 Performance report saved to performance-metrics.json');
 
-process.exit(0);
+// Exit after a delay to prevent rapid restarts
+setTimeout(() => {
+  process.exit(0);
+}, 1000);
