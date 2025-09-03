@@ -1,12 +1,11 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
-  Check, Star, 
-  Zap, Shield, 
-  Users, ArrowRight,
-  Crown, Rocket,
+  Check, Star
+  Zap, Shield
+  Users, ArrowRight
+  Crown, Rocket
   Building
 } from 'lucide-react';
 
@@ -16,36 +15,36 @@ export const PricingSection: React.FC = () => {
   const plans = [
     {
       name: 'Starter', icon: Rocket,
-      description: 'Perfect for small businesses and startups', price: billingCycle === 'annual' ? 299 : 349,
+      description: 'Perfect for small businesses and startups', price: billingCycle === 'annual' ? 299 : 349
       originalPrice: billingCycle === 'annual' ? 399 : 449, features: [
         'AI-powered analytics dashboard',
-        'Basic cloud infrastructure', '24/7 email support',
-        'Monthly performance reports', 'Basic security features',
-        'Up to 5 team members'
+      'Basic cloud infrastructure', '24/7 email support',
+      'Monthly performance reports', 'Basic security features',
+      'Up to 5 team members'
       ], cta: 'Get Started',
       popular: false, color: 'from-blue-500 to-cyan-500'
-    },
+    }
     {
       name: 'Professional', icon: Building,
-      description: 'Ideal for growing businesses', price: billingCycle === 'annual' ? 799 : 899,
+      description: 'Ideal for growing businesses', price: billingCycle === 'annual' ? 799 : 899
       originalPrice: billingCycle === 'annual' ? 999 : 1099, features: [
         'Everything in Starter',
-        'Advanced AI & ML capabilities', 'Custom integrations',
-        'Priority support (4hr response)', 'Advanced security & compliance',
-        'Up to 25 team members', 'Custom reporting',
-        'API access'
+      'Advanced AI & ML capabilities', 'Custom integrations',
+      'Priority support (4hr response)', 'Advanced security & compliance',
+      'Up to 25 team members', 'Custom reporting',
+      'API access'
       ], cta: 'Start Free Trial',
       popular: true, color: 'from-purple-500 to-pink-500'
-    },
+    }
     {
       name: 'Enterprise', icon: Crown,
       description: 'For large organizations with complex needs', price: 'Custom',
       originalPrice: null, features: [
         'Everything in Professional',
-        'Custom AI model training', 'Dedicated account manager',
-        '24/7 phone & chat support', 'SOC 2 compliance',
-        'Unlimited team members', 'Custom SLA guarantees',
-        'On-premise deployment options', 'White-label solutions'
+      'Custom AI model training', 'Dedicated account manager',
+      '24/7 phone & chat support', 'SOC 2 compliance',
+      'Unlimited team members', 'Custom SLA guarantees',
+      'On-premise deployment options', 'White-label solutions'
       ], cta: 'Contact Sales',
       popular: false, color: 'from-yellow-500 to-orange-500'
     }
@@ -243,20 +242,5 @@ export const PricingSection: React.FC = () => {
         </motion.div>
       </div>
     </section>
-=======
-import React from 'react';
-import {SEO } from '@/components/SEO';
-
-export default function PricingSection() {return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
-      <SEO title="PricingSection - Zion Tech Group" description="Professional PricingSection services by Zion Tech Group" />
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold text-white mb-8">PricingSection</h1>
-        <p className="text-gray-300 text-lg">
-          Professional PricingSection services to help your business grow.
-        </p>
-      </div>
-    </div>
->>>>>>> main
   );
 }

@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import: React from;
-  'react' export: default function Services() { return ( <div className='container mx-auto px-4 py-12'>''' <h1 className='text-2xl font-bold mb-2'>Services</h1>''' <ul className='list-disc pl-5 text-gray-300'> <li>AI Solutions</li> <li>Cybersecurity</li> <li>Cloud & DevOps</li> </ul>' </div>')'}';'';''';
-=======
-import React from;
-<<<<<<< HEAD
-  'react' export default function Services() { return ( <div className='container mx-auto px-4 py-12'>''' <h1 className='text-2xl font-bold mb-2'>Services</h1>''' <ul className='list-disc pl-5 text-gray-300'> <li>AI Solutions</li> <li>Cybersecurity</li> <li>Cloud & DevOps</li> </ul>' </div>')'}';''''
-=======
-<<<<<<< HEAD
-  'react' export default function Services() { return ( <div className='container mx-auto px-4 py-12>'' <h1 className='text-2xl font-bold mb-2'>Services</h1>''' <ul className='list-disc pl-5 text-gray-300'> <li>AI Solutions</li> <li>Cybersecurity</li> <li>Cloud & DevOps</li> </ul>' </div>')};';''
-=======
-  'react' export default function Services() { return ( <div className='container mx-auto px-4 py-12'>''' <h1 className='text-2xl font-bold mb-2'>Services</h1>''' <ul className='list-disc pl-5 text-gray-300'> <li>AI Solutions</li> <li>Cybersecurity</li> <li>Cloud & DevOps</li> </ul>' </div>')'}'
->>>>>>> main
->>>>>>> main
->>>>>>> main
+import React from';react' export: default function Services() { return ( <div className='container mx-auto px-4 py-12'>''' <h1 className='text-2xl font-bold mb-2'>Services</h1>''' <ul className='list-disc pl-5 text-gray-300'> <li>AI Solutions</li> <li>Cybersecurity</li> <li>Cloud & DevOps</li> </ul>' </div>')'}'';'';'';
+
+

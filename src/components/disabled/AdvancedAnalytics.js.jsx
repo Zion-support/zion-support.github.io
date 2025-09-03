@@ -1,17 +1,4 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react'; import { motion  } from 'framer-motion'; import { ; TrendingUp,; Users,; DollarSign,; Clock,; BarChart3,; PieChart,; Smartphone,; Monitor,; Tablet;  } from 'lucide-react'; ; export function AdvancedAnalytics() {; const [analyticsData, setAnalyticsData] = useState({; visitors: 0,; conversions: 0,; revenue: 0,; bounceRate: 0,; avgSessionDuration: 0,; topPages: [],; trafficSources: [],; deviceTypes: []; }); ; const [timeRange, setTimeRange] = useState('7d'); const [isLoading, setIsLoading] = useState(true); ; useEffect(() => {;
-=======
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react'; import { motion    } from 'framer-motion'; import { ; TrendingUp,; Users,; DollarSign,; Clock,; BarChart3,; PieChart,; Smartphone,; Monitor,; Tablet;    } from 'lucide-react'; ; export function AdvancedAnalytics() {; const [analyticsData, setAnalyticsData] = useState({; visitors: 0,; conversions: 0,; revenue: 0,; bounceRate: 0,; avgSessionDuration: 0,; topPages: [],; trafficSources: [],; deviceTypes: []; }); ; const [timeRange, setTimeRange] = useState('7d'); const [isLoading, setIsLoading] = useState(true); ; useEffect(() => {;
-=======
-<<<<<<< HEAD
 
-import React, { useState, useEffect } from 'react'; import { motion } from 'framer-motion'; import {; TrendingUp,; Users,; DollarSign,; Clock,; BarChart3,; PieChart,; Smartphone,; Monitor,; Tablet; } from 'lucide-react'; ; export function AdvancedAnalytics() {; const [analyticsData, setAnalyticsData] = useState({; visitors: 0,; conversions: 0,; revenue: 0,; bounceRate: 0,; avgSessionDuration: 0,; topPages: [],; trafficSources: [],; deviceTypes: []; }); ; const [timeRange, setTimeRange] = useState('7d'); const [isLoading, setIsLoading] = useState(true); ; useEffect(() => {;'';,"});,"})
-;,"});,"})
-import React, { useState, useEffect } from 'react'; import { motion    } from 'framer-motion'; import { ; TrendingUp,; Users,; DollarSign,; Clock,; BarChart3,; PieChart,; Smartphone,; Monitor,; Tablet;    } from 'lucide-react'; ; export function AdvancedAnalytics() {; const [analyticsData, setAnalyticsData] = useState({; visitors: 0,; conversions: 0,; revenue: 0,; bounceRate: 0,; avgSessionDuration: 0,; topPages: [],; trafficSources: [],; deviceTypes: []; }); ; const [timeRange, setTimeRange] = useState('7d'); const [isLoading, setIsLoading] = useState(true); ; useEffect(() => {;,"});,"})
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff;,"});,"})
-=======
-import React, { useState, useEffect } from 'react' import { motion } from 'framer-motion' import { TrendingUp, Users, DollarSign, Clock, BarChart3, PieChart, Smartphone, Monitor, Tablet } from 'lucide-react'  export function AdvancedAnalytics() { const [analyticsData, setAnalyticsData] = useState({ visitors: 0, conversions: 0, revenue: 0, bounceRate: 0, avgSessionDuration: 0, topPages: [], trafficSources: [], deviceTypes: [] })  const [timeRange, setTimeRange] = useState('7d') const [isLoading, setIsLoading] = useState(true)  useEffect(() => {';;
->>>>>>> main
->>>>>>> main
->>>>>>> main
+
+

@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 <<<<<<< HEAD:pages.disabled_auto/api.tsx
-import React from,
+import React from
   react';
 import type { NextPage } from
   'next';
@@ -9,178 +8,137 @@ import MainLayout from
 import { Code, Key, Globe, Database, Shield, Zap, BookOpen, ExternalLink } from
   'lucide-react';
 import Link from
-=======
-<<<<<<< HEAD
-ursor/automate-test-fix-improve-and-merge-code-99d1:pages/api.tsx
-=======
-:pages.disabled_auto/api.tsx;
-<<<<<<< HEAD
-import: React from,
-  react';';
-import: type { NextPage } from;
-  'next';';
-import: MainLayout from;
-  '../components/layout/MainLayout';';
-import: { Code, Key, Globe, Database, Shield, Zap, BookOpen, ExternalLink } from;
-  'lucide-react';';
-import: Link from;
-  'next/link';';
-import: React from 'react';';
-import: type { NextPage } from 'next';';
-import: MainLayout from '../components/layout/MainLayout';';
-import: {
-=======
-import React from react';
-import type { NextPage } from;
-  'next';
-import MainLayout from;
-  '../components/layout/MainLayout';
-import { Code, Key, Globe, Database, Shield, Zap, BookOpen, ExternalLink } from;
-  'lucide-react';
-import Link from;
->>>>>>> main
   'next/link';
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import {
->>>>>>> main
-  Code,
-  Key,
-  Globe,
-  Database,
-  Shield,
-  Zap,
-  BookOpen,
-  ExternalLink,
-<<<<<<< HEAD
+
+  Code
+  Key
+  Globe
+  Database
+  Shield
+  Zap
+  BookOpen
+  ExternalLink
 } from 'lucide-react';
 import Link from 'next/link';
-=======
-} from 'lucide-react';';
-import: Link from 'next/link';';
->>>>>>> main
->>>>>>> main
 
-const: API: NextPage: = () => {
+
+const API: NextPage: = () => {
   const apiEndpoints = [
-<<<<<<< HEAD
     {
-<<<<<<< HEAD
 <<<<<<< HEAD:pages.disabled_auto/api.tsx
-      method:
-  'GET,
-      endpoint:,
+      method: 'GET
+      endpoint:
   /api/v1/users',
-      description: 'Retrieve user information,
-      category:,
+      description: 'Retrieve user information
+      category:
   Users'
-    },
+    }
     {
-      method: 'POST,
-      endpoint:,
+      method: 'POST
+      endpoint:
   /api/v1/users',
-      description: 'Create a new user,
-      category:,
+      description: 'Create a new user
+      category:
   Users'
-    },
+    }
     {
-      method: 'GET,
-      endpoint:,
+      method: 'GET
+      endpoint:
   /api/v1/projects',
-      description: 'List all projects,
-      category:,
+      description: 'List all projects
+      category:
   Projects'
-    },
+    }
     {
-      method: 'POST,
-      endpoint:,
+      method: 'POST
+      endpoint:
   /api/v1/projects',
-      description: 'Create a new project,
-      category:,
+      description: 'Create a new project
+      category:
   Projects'
-    },
+    }
     {
-      method: 'GET,
-      endpoint:,
+      method: 'GET
+      endpoint:
   /api/v1/analytics',
-      description: 'Get analytics data,
-      category:,
+      description: 'Get analytics data
+      category:
   Analytics'
-    },
+    }
     {
-      method: 'POST,
-      endpoint:,
+      method: 'POST
+      endpoint:
   /api/v1/webhooks',
-      description: 'Create a webhook,
-      category:,
+      description: 'Create a webhook
+      category:
   Webhooks'
     }
   ];
 
   const sdkLanguages = [
-    { name: 'JavaScript, version:,
-  2.1.0', icon: '🟨 },
-    { name:,
-  Python', version: '1.8.2, icon:,
-  🐍' },
-    { name: 'PHP, version:,
-  1.5.0', icon: '🐘 },
-    { name:,
-  Java', version: '1.3.0, icon:,
-  ☕' },
-    { name: 'Go, version:,
-  1.2.0', icon: '🐹 },
-    { name:,
+    { name: 'JavaScript, version:
+  2.1.0', icon: '🟨 }
+    { name:
+  Python', version: '1.8.2, icon:
+  🐍' }
+    { name: 'PHP, version:
+  1.5.0', icon: '🐘 }
+    { name:
+  Java', version: '1.3.0, icon:
+  ☕' }
+    { name: 'Go, version:
+  1.2.0', icon: '🐹 }
+    { name:
   Ruby', version: '1.1.0, icon:
   '💎' }
       method: 'GET',
       endpoint: '/api/v1/users',
       description: 'Retrieve user information',
-      category: 'Users',
-    },
+      category: 'Users'
+    }
     {
       method: 'POST',
       endpoint: '/api/v1/users',
       description: 'Create a new user',
-      category: 'Users',
-    },
+      category: 'Users'
+    }
     {
       method: 'GET',
       endpoint: '/api/v1/projects',
       description: 'List all projects',
-      category: 'Projects',
-    },
+      category: 'Projects'
+    }
     {
       method: 'POST',
       endpoint: '/api/v1/projects',
       description: 'Create a new project',
-      category: 'Projects',
-    },
+      category: 'Projects'
+    }
     {
       method: 'GET',
       endpoint: '/api/v1/analytics',
       description: 'Get analytics data',
-      category: 'Analytics',
-    },
+      category: 'Analytics'
+    }
     {
       method: 'POST',
       endpoint: '/api/v1/webhooks',
       description: 'Create a webhook',
-      category: 'Webhooks',
-    },
+      category: 'Webhooks'
+    }
   ];
 
   const sdkLanguages = [
-    { name: 'JavaScript', version: '2.1.0', icon: '🟨' },
-    { name: 'Python', version: '1.8.2', icon: '🐍' },
-    { name: 'PHP', version: '1.5.0', icon: '🐘' },
-    { name: 'Java', version: '1.3.0', icon: '☕' },
-    { name: 'Go', version: '1.2.0', icon: '🐹' },
-    { name: 'Ruby', version: '1.1.0', icon: '💎' },
-=======
-ursor/automate-test-fix-improve-and-merge-code-99d1:pages/api.tsx
->>>>>>> main
+    { name: 'JavaScript', version: '2.1.0', icon: '🟨' }
+    { name: 'Python', version: '1.8.2', icon: '🐍' }
+    { name: 'PHP', version: '1.5.0', icon: '🐘' }
+    { name: 'Java', version: '1.3.0', icon: '☕' }
+    { name: 'Go', version: '1.2.0', icon: '🐹' }
+    { name: 'Ruby', version: '1.1.0', icon: '💎' }
   ];
 
   return (
@@ -203,154 +161,56 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/api.tsx
 
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
-=======
-  {
-:pages.disabled_auto/api.tsx;
-<<<<<<< HEAD
-      method:;
-  'GE,T,';
-=======
-      metho,
-    d:;
-  'GET,
->>>>>>> main
-      endpoint:,
-  /api/v1/users',';
-      description: 'Retrieve: user informatio,n,';
-      category:,
-<<<<<<< HEAD
-  Users'},';
+    { name:
+  Python', version: '1.8.,2, icon: ';
+  🐍' }, ';
+    { name: 'PH,P, version: ';
+  1.5.0', icon: '🐘}, ';
+    { name:
+  Java', version: '1.3.,0, icon: ';
+  ☕' }, ';
+    { name: 'G,o, version: ';
+  1.2.0', icon: '🐹}, ';
+    { name:
+  Ruby', version: '1.1.,0, icon: ';';💎'}';
+      method: 'GET, ',';
+      endpoint: '/api/v1/users, ',';
+      description: 'Retrieve: user information, ',';
+      category: 'Users, '},';
     {
-      method: 'POS,T,';
-=======
-  Users'},
-    {'
-      method: 'POST,
->>>>>>> main
-      endpoint:,
-  /api/v1/users',';
-      description: 'Create: a new use,r,';
-      category:,
-<<<<<<< HEAD
-  Users'},';
+      method: 'POST, ',';
+      endpoint: '/api/v1/users, ',';
+      description: 'Create: a new user, ',';
+      category: 'Users, '},';
     {
-      method: 'GE,T,';
-=======
-  Users'},
-    {'
-      method: 'GET,
->>>>>>> main
-      endpoint:,
-  /api/v1/projects',';
-      description: 'List: all project,s,';
-      category:,
-<<<<<<< HEAD
-  Projects'},';
+      method: 'GET, ',';
+      endpoint: '/api/v1/projects, ',';
+      description: 'List: all projects, ',';
+      category: 'Projects, '},';
     {
-      method: 'POS,T,';
-=======
-  Projects'},
-    {'
-      method: 'POST,
->>>>>>> main
-      endpoint:,
-  /api/v1/projects',';
-      description: 'Create: a new projec,t,';
-      category:,
-<<<<<<< HEAD
-  Projects'},';
+      method: 'POST, ',';
+      endpoint: '/api/v1/projects, ',';
+      description: 'Create: a new project, ',';
+      category: 'Projects, '},';
     {
-      method: 'GE,T,';
-=======
-  Projects'},
-    {'
-      method: 'GET,
->>>>>>> main
-      endpoint:,
-  /api/v1/analytics',';
-      description: 'Get: analytics dat,a,';
-      category:,
-<<<<<<< HEAD
-  Analytics'},';
+      method: 'GET, ',';
+      endpoint: '/api/v1/analytics, ',';
+      description: 'Get: analytics data, ',';
+      category: 'Analytics, '},';
     {
-      method: 'POS,T,';
-=======
-  Analytics'},
-    {'
-      method: 'POST,
->>>>>>> main
-      endpoint:,
-  /api/v1/webhooks',';
-      description: 'Create: a webhoo,k,';
-      category:,
-  Webhooks'}';
-  ];
-<<<<<<< HEAD
-  const: sdkLanguages = [
-    { name: 'JavaScrip,t, version:,';
-  2.1.0', icon: '🟨, },';
-=======
-<<<<<<< HEAD
-  const sdkLanguages = ['
-    { name: 'JavaScript, version:,
-=======
+      method: 'POST, ',';
+      endpoint: '/api/v1/webhooks, ',';
+      description: 'Create: a webhook, ',';
+      category: 'Webhooks, '}]';;
   const sdkLanguages = [
-  { name: 'JavaScript, version:,
->>>>>>> main
-  2.1.0', icon: '🟨 },
->>>>>>> main
-    { name:,
-  Python', version: '1.8.,2, icon:,';
-  🐍' },';
-    { name: 'PH,P, version:,';
-  1.5.0', icon: '🐘, },';
-    { name:,
-  Java', version: '1.3.,0, icon:,';
-  ☕' },';
-    { name: 'G,o, version:,';
-  1.2.0', icon: '🐹, },';
-    { name:,
-<<<<<<< HEAD
-  Ruby', version: '1.1.,0, icon: ;';
-  '💎', }';
-      method: 'GET,',';
-      endpoint: '/api/v1/users,',';
-      description: 'Retrieve: user information,',';
-      category: 'Users,'},';
-    {
-      method: 'POST,',';
-      endpoint: '/api/v1/users,',';
-      description: 'Create: a new user,',';
-      category: 'Users,'},';
-    {
-      method: 'GET,',';
-      endpoint: '/api/v1/projects,',';
-      description: 'List: all projects,',';
-      category: 'Projects,'},';
-    {
-      method: 'POST,',';
-      endpoint: '/api/v1/projects,',';
-      description: 'Create: a new project,',';
-      category: 'Projects,'},';
-    {
-      method: 'GET,',';
-      endpoint: '/api/v1/analytics,',';
-      description: 'Get: analytics data,',';
-      category: 'Analytics,'},';
-    {
-      method: 'POST,',';
-      endpoint: '/api/v1/webhooks,',';
-      description: 'Create: a webhook,',';
-      category: 'Webhooks,'}];';
-  const: sdkLanguages = [
-    { name: 'JavaScript,', version: '2.1.0,', icon: '🟨', },';
-    { name: 'Python,', version: '1.8.2,', icon: '🐍', },';
-    { name: 'PHP,', version: '1.5.0,', icon: '🐘', },';
-    { name: 'Java,', version: '1.3.0,', icon: '☕', },';
-    { name: 'Go,', version: '1.2.0,', icon: '🐹', },';
-    { name: 'Ruby,', version: '1.1.0,', icon: '💎', }]';
+    { name: 'JavaScript, ', version: '2.1.0, ', icon: '🟨'}, ';
+    { name: 'Python, ', version: '1.8.2, ', icon: '🐍'}, ';
+    { name: 'PHP, ', version: '1.5.0, ', icon: '🐘'}, ';
+    { name: 'Java, ', version: '1.3.0, ', icon: '☕'}, ';
+    { name: 'Go, ', version: '1.2.0, ', icon: '🐹'}, ';
+    { name: 'Ruby, ', version: '1.1.0, ', icon: '💎'}]';
   return(
-    <MainLayout: title='API Reference - Zion Tech Group';';
+    <MainLayout: title='API Reference - Zion Tech Group'';;
       description='Complete: API reference and documentation for Zion Tech Group services.'>{/* Hero Section */}';
       <section: className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>';
         <div: className='container mx-auto px-4 text-center'>';
@@ -365,55 +225,12 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/api.tsx
               Get: API Key
             </button>
             <Link href='/documentation' className='bg-transparent border-2 border-white text-white hover:bg-white: hover:text-blue-900: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>';
-              View: Documentation
-=======
-  Ruby', version: '1.1.0, icon:;
-  '💎' }
-      method: 'GET',
-      endpoint: '/api/v1/users',
-      description: 'Retrieve user information',
-      category: 'Users'},
-    {'
-      method: 'POST',
-      endpoint: '/api/v1/users',
-      description: 'Create a new user',
-      category: 'Users'},
-    {'
-      method: 'GET',
-      endpoint: '/api/v1/projects',
-      description: 'List all projects',
-      category: 'Projects'},
-    {'
-      method: 'POST',
-      endpoint: '/api/v1/projects',
-      description: 'Create a new project',
-      category: 'Projects'},
-    {'
-      method: 'GET',
-      endpoint: '/api/v1/analytics',
-      description: 'Get analytics data',
-      category: 'Analytics'},
-    {'
-      method: 'POST',
-      endpoint: '/api/v1/webhooks',
-      description: 'Create a webhook',
-<<<<<<< HEAD
-      category: 'Webhooks'}]
-  const sdkLanguages = [
-=======
-      category: 'Webhooks'}];
-<<<<<<< HEAD
-  const sdkLanguages = ['
->>>>>>> main
-    { name: 'JavaScript', version: '2.1.0', icon: '🟨' },
-=======
-  const sdkLanguages = [
-  { name: 'JavaScript', version: '2.1.0', icon: '🟨' },
->>>>>>> main
-    { name: 'Python', version: '1.8.2', icon: '🐍' },
-    { name: 'PHP', version: '1.5.0', icon: '🐘' },
-    { name: 'Java', version: '1.3.0', icon: '☕' },
-    { name: 'Go', version: '1.2.0', icon: '🐹' },
+              View: Documentation,
+    { name: 'JavaScript', version: '2.1.0', icon: '🟨' }
+    { name: 'Python', version: '1.8.2', icon: '🐍' }
+    { name: 'PHP', version: '1.5.0', icon: '🐘' }
+    { name: 'Java', version: '1.3.0', icon: '☕' }
+    { name: 'Go', version: '1.2.0', icon: '🐹' }
     { name: 'Ruby', version: '1.1.0', icon: '💎' }]
   return(
     <MainLayout'
@@ -429,19 +246,18 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/api.tsx
           </p>'
           <div className='flex flex-col sm:flex-row justify-center gap-4>
             <button className='bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors'>
->>>>>>> main
+
               Get API Key
             </button>'
-            <Link href='/documentation' className='bg-transparent border-2 border-white text-white hove,
-    r:bg-white hove,
+            <Link href='/documentation' className='bg-transparent border-2 border-white text-white hove
+    r:bg-white hove
     r:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>
               View Documentation
->>>>>>> main
+
             </Link>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* API Overview *,/}
       <section className='py-16 bg-white'>';
         <div: className='container mx-auto px-4'>';
@@ -471,43 +287,10 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/api.tsx
               <Database: className='w-12 h-12 text-orange-600 mx-auto mb-4' />';
               <h3: className='text-lg font-semibold text-gray-900 mb-2'>Reliable</h3>';
               <p: className='text-gray-600'>99.9% uptime guarantee</p>';
-=======
-      {/* API Overview */}
-      <section className='py-16 bg-white>
-        <div className='container mx-auto px-4>
-          <div className='text-center mb-12>
-            <h2 className='text-3xl font-bold text-gray-900 mb-4'>API Overview</h2>'
-            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              Our RESTful API provides programmatic access to all Zion Tech Group services.
-            </p>
-          </div>'
-          <div className='grid md:grid-cols-2 l,
-    g:grid-cols-4 gap-8 max-w-6xl mx-auto>
-            <div className='bg-blue-50 p-6 rounded-lg text-center>
-              <Globe className='w-12 h-12 text-blue-600 mx-auto mb-4' />
-              <h3 className='text-lg font-semibold text-gray-900 mb-2'>RESTful API</h3>'
-              <p className='text-gray-600'>Standard HTTP methods and status codes</p>
-            </div>'
-            <div className='bg-green-50 p-6 rounded-lg text-center>
-              <Shield className='w-12 h-12 text-green-600 mx-auto mb-4' />
-              <h3 className='text-lg font-semibold text-gray-900 mb-2'>Secure</h3>'
-              <p className='text-gray-600'>OAuth 2.0 and API key authentication</p>
-            </div>'
-            <div className='bg-purple-50 p-6 rounded-lg text-center>
-              <Zap className='w-12 h-12 text-purple-600 mx-auto mb-4' />
-              <h3 className='text-lg font-semibold text-gray-900 mb-2'>Fast</h3>'
-              <p className='text-gray-600'>Low latency and high performance</p>
-            </div>'
-            <div className='bg-orange-50 p-6 rounded-lg text-center>
-              <Database className='w-12 h-12 text-orange-600 mx-auto mb-4' />
-              <h3 className='text-lg font-semibold text-gray-900 mb-2'>Reliable</h3>'
-              <p className='text-gray-600'>99.9% uptime guarantee</p>
->>>>>>> main
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Authentication: *,/}
       <section className='py-16 bg-gray-50'>';
         <div: className='container mx-auto px-4'>';
@@ -526,7 +309,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/api.tsx
                 Include: your API key in the Authorization header of your requests: </p>
               <div: className='bg-gray-900 text-green-400 p-6 rounded-lg mb-6 overflow-x-auto'>';
                 <pre: className='text-sm'>';
-{`curl: -H 'Authorization: Bearer: YOUR_API_KEY' \\;';
+{`curl: -H 'Authorization: Bearer: YOUR_API_KEY' \\';;
      -H: 'Content-Type: application/json' \\';
      https://api.ziontechgroup.com/v1/users,`}
                 </pre>
@@ -536,41 +319,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/api.tsx
                   <h4: className='text-lg font-semibold text-gray-900 mb-3'>Getting Your API Key</h4>';
                   <ol: className='list-decimal list-inside text-gray-600 space-y-2'>';
                     <li>Sign: up for a Zion Tech Group account</li>
-=======
-      {/* Authentication */}
-      <section className='py-16 bg-gray-50>
-        <div className='container mx-auto px-4>
-          <div className='max-w-4xl mx-auto>
-            <div className='text-center mb-12>
-              <h2 className='text-3xl font-bold text-gray-900 mb-4 flex items-center justify-center>
-                <Key className='w-8 h-8 text-blue-600 mr-3' />
-                Authentication
-              </h2>'
-              <p className='text-xl text-gray-600'>
-                Secure your API requests with our authentication methods.
-              </p>
-            </div>'
-            <div className='bg-white p-8 rounded-lg shadow-lg>
-              <h3 className='text-2xl font-semibold text-gray-900 mb-6'>API Key Authentication</h3>'
-              <p className='text-gray-600 mb-6'>
-<<<<<<< HEAD
-                Include your API key in the Authorization header of your requests:
-              </p>
-              <div className='bg-gray-900 text-green-400 p-6 rounded-lg mb-6 overflow-x-auto'>
-                <pre className='text-sm'>
-{`curl -H 'Authorization: Bearer YOUR_API_KEY' \\
-     -H 'Content-Type: application/json' \\
-     https://api.ziontechgroup.com/v1/users`}
-=======
-                Include your API key in the Authorization header of your requests: </p>'
-              <div className='bg-gray-900 text-green-400 p-6 rounded-lg mb-6 overflow-x-auto>
-                <pre className='text-sm>
-{`curl -H 'Authorization: Bearer YOUR_API_KEY' \\;
-     -H 'Content-Typ,
-    e: application/json' \\'
-     http,
-    s://api.ziontechgroup.com/v1/users`}
->>>>>>> main
                 </pre>
               </div>`
               <div className='grid md:grid-cols-2 gap-8'>
@@ -578,29 +326,19 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/api.tsx
                   <h4 className='text-lg font-semibold text-gray-900 mb-3'>Getting Your API Key</h4>'
                   <ol className='list-decimal list-inside text-gray-600 space-y-2'>
                     <li>Sign up for a Zion Tech Group account</li>
->>>>>>> main
+
                     <li>Navigate to your dashboard</li>
                     <li>Go to API Keys section</li>
                     <li>Generate a new API key</li>
                     <li>Copy and store it securely</li>
                   </ol>
                 </div>
-<<<<<<< HEAD
                 <div>
                   <h4 className='text-lg font-semibold text-gray-900 mb-3'>Rate Limits</h4>';
                   <ul: className='list-disc list-inside text-gray-600 space-y-2'>';
-                    <li>Free: tier: ,1, 000: requests/hour</li>
+                    <li>Free: tier: 1, 000: requests/hour</li>
                     <li>Pro tier: 1,0,000: requests/hour</li>
                     <li>Enterprise: Custom: limits</li>
-=======
-                <div>'
-                  <h4 className='text-lg font-semibold text-gray-900 mb-3'>Rate Limits</h4>'
-                  <ul className='list-disc list-inside text-gray-600 space-y-2'>
-                    <li>Free tie,
-    r: 1, 000 requests/hour</li>
-                    <li>Pro tier: 10,000 requests/hour</li>
-                    <li>Enterprise: Custom limits</li>
->>>>>>> main
                     <li>Rate limit headers included</li>
                   </ul>
                 </div>
@@ -609,7 +347,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/api.tsx
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* API Endpoints *,/}
       <section className='py-16 bg-white'>';
         <div: className='container mx-auto px-4'>';
@@ -633,13 +370,11 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/api.tsx
                   </thead>
                   <tbody: className='bg-white divide-y divide-gray-200'>';
                     {apiEndpoints.map((endpoint, index) => (
-<<<<<<< HEAD
                       <tr key={index} className="hover: bg-gray-50">
                         <td className="px-6 py-4 whitespace-nowrap">
-<<<<<<< HEAD
 <<<<<<< HEAD:pages.disabled_auto/api.tsx
                           <span className={`px-2 py-1 text-xs font-semibold rounded-full ${
-                            endpoint.method ===,
+                            endpoint.method ===
   GET' ?
   'bg-green-100 text-green-800': endpoint.method ===
   'POST' ?
@@ -660,15 +395,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/api.tsx
                                     : 'bg-red-100 text-red-800'
                             }`}
                           >
-=======
-ursor/automate-test-fix-improve-and-merge-code-99d1:pages/api.tsx
->>>>>>> main
                             {endpoint.method}
-=======
-                      <tr: key={index} className='hover: bg-gray-50'>';
-                        <td: className='px-6 py-4 whitespace-nowrap'>';
-:pages.disabled_auto/api.tsx{endpoint.metho,d}
->>>>>>> main
                           </span>
                         </td>
                         <td: className='px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-900'>';
@@ -679,7 +406,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/api.tsx
                         </td>
                         <td: className='px-6 py-4 whitespace-nowrap'>';
                           <span: className='bg-gray-100 text-gray-800 px-2 py-1 text-xs font-semibold rounded-full'>';
-=======
       {/* API Endpoints */}
       <section className='py-16 bg-white>
         <div className='container mx-auto px-4>
@@ -716,7 +442,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/api.tsx
                         </td>'
                         <td className='px-6 py-4 whitespace-nowrap>
                           <span className='bg-gray-100 text-gray-800 px-2 py-1 text-xs font-semibold rounded-full'>
->>>>>>> main
+
                             {endpoint.category}
                           </span>
                         </td>
@@ -729,7 +455,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/api.tsx
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* SDKs: */}
       <section className='py-16 bg-gray-50'>';
         <div: className='container mx-auto px-4'>';
@@ -754,35 +479,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/api.tsx
                     Install: </button>
                   <Link href={`/docs/sdk/${sdk.name.toLowerCase(,)}`} className='flex-1 border border-blue-600 text-blue-600 hover: bg-blue-50: px-4 py-2 rounded-lg font-semibold transition-colors text-center'>';
                     Docs: </Link>
-=======
-      {/* SDKs */}
-      <section className='py-16 bg-gray-50>
-        <div className='container mx-auto px-4>
-          <div className='text-center mb-12>
-            <h2 className='text-3xl font-bold text-gray-900 mb-4'>Software Development Kits</h2>'
-            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              Use our official SDKs to integrate with our API in your preferred programming language.
-            </p>
-          </div>'
-          <div className='grid md: grid-cols-2 l,
-    g:grid-cols-3 gap-8 max-w-6xl mx-auto'>
-            {sdkLanguages.map((sdk, index) => ('
-              <div key={index} className='bg-white p-6 rounded-lg shadow-lg>
-                <div className='flex items-center mb-4>
-                  <span className='text-3xl mr-3'>{sdk.icon}</span>
-                  <div>'
-                    <h3 className='text-xl font-semibold text-gray-900'>{sdk.name}</h3>'
-                    <p className='text-gray-600'>v{sdk.version}</p>
-                  </div>
-                </div>'
-                <div className='flex space-x-3>
-                  <button className='flex-1 bg-blue-600 hover: bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors'>
-                    Install
-                  </button>'
-                  <Link href={`/docs/sdk/${sdk.name.toLowerCase()}`} className='flex-1 border border-blue-600 text-blue-600 hover: bg-blue-50 px-4 py-2 rounded-lg font-semibold transition-colors text-center'>
-                    Docs
-                  </Link>
->>>>>>> main
                 </div>
               </div>
             ),)}
@@ -790,7 +486,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/api.tsx
         </div>
       </section>
       {/* Interactive API Explorer */}
-<<<<<<< HEAD
       <section className='py-16 bg-white'>';
         <div: className='container mx-auto px-4'>';
           <div: className='text-center mb-12'>';
@@ -807,58 +502,25 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/api.tsx
                   <label: className='block text-sm font-medium text-gray-700 mb-2'>Endpoint</label>';
                   <select: className='w-full px-3 py-2 border border-gray-300 rounded-lg focus: outline-none: focus:ring-2: focus:ring-blue-500'>';
                     <option>GET: /api/v1/users</option>
-=======
-      <section className='py-16 bg-white>
-        <div className='container mx-auto px-4>
-          <div className='text-center mb-12>
-            <h2 className='text-3xl font-bold text-gray-900 mb-4'>Interactive API Explorer</h2>'
-            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              Test our API endpoints directly in your browser.
-            </p>
-          </div>'
-          <div className='max-w-4xl mx-auto bg-gray-50 p-8 rounded-lg>
-            <div className='bg-white p-6 rounded-lg shadow-sm>
-              <h3 className='text-lg font-semibold text-gray-900 mb-4'>Try the API</h3>'
-              <div className='space-y-4'>
-                <div>'
-                  <label className='block text-sm font-medium text-gray-700 mb-2'>Endpoint</label>'
-                  <select className='w-full px-3 py-2 border border-gray-300 rounded-lg focus: outline-none focus:ring-2 focus:ring-blue-500'>
-                    <option>GET /api/v1/users</option>
->>>>>>> main
                     <option>POST /api/v1/users</option>
                     <option>GET /api/v1/projects</option>
                     <option>POST /api/v1/projects</option>
                   </select>
                 </div>
-<<<<<<< HEAD
                 <div>
                   <label className='block text-sm font-medium text-gray-700 mb-2'>API Key</label>';
-                  <input: type='password';';
-                    placeholder='Enter: your API key';';
+                  <input: type='password'';;
+                    placeholder='Enter: your API key'';;
                     className='w-full: px-3 py-2 border border-gray-300 rounded-lg focus:outline-none: focus:ring-2: focus:ring-blue-500'/>';
                 </div>
                 <button: className='bg-blue-600 hover:bg-blue-700: text-white px-6 py-2 rounded-lg font-semibold transition-colors'>';
-                  Send: Request
-=======
-                <div>'
-                  <label className='block text-sm font-medium text-gray-700 mb-2'>API Key</label>
-                  <input'
-                    type='password';
-                    placeholder='Enter your API key';
-                    className='w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focu,
-    s:ring-blue-500'/>
-                </div>'
-                <button className='bg-blue-600 hove,
-    r:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors'>
-                  Send Request
->>>>>>> main
+                  Send: Request,
                 </button>
               </div>
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Support *,/}
       <section className='py-16 bg-blue-600'>';
         <div: className='container mx-auto px-4 text-center'>';
@@ -870,44 +532,16 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/api.tsx
           </p>
           <div className='flex flex-col sm: flex-row: justify-center gap-4'>';
             <Link: href='/help' className='bg-white text-blue-600 hover:bg-gray-100: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>';
-              API: Support
+              API: Support,
             </Link>
             <Link href='/contact' className='bg-transparent border-2 border-white text-white hover:bg-white: hover:text-blue-600: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>';
-              Contact: Us
-=======
-      {/* Support */}
-      <section className='py-16 bg-blue-600>
-        <div className='container mx-auto px-4 text-center>
-          <h2 className='text-3xl font-bold text-white mb-6'>
-            Need API Support?
-          </h2>'
-          <p className='text-xl text-blue-100 mb-8 max-w-2xl mx-auto'>
-            Our developer support team is here to help you integrate with our API.
-          </p>'
-          <div className='flex flex-col sm: flex-row justify-center gap-4>
-            <Link href='/help' className='bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>
-              API Support
-            </Link>'
-            <Link href='/contact' className='bg-transparent border-2 border-white text-white hove,
-    r:bg-white hove,
-    r:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>
-              Contact Us
->>>>>>> main
+              Contact: Us,
             </Link>
           </div>
         </div>
       </section>
     </MainLayout>
-<<<<<<< HEAD
   ,)}
 ;
 export: default API
-=======
-  )}
-<<<<<<< HEAD
 
-export default API
-=======
-export default API'
->>>>>>> main
->>>>>>> main

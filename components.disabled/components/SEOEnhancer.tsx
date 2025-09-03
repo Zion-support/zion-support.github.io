@@ -13,81 +13,62 @@ interface SEOEnhancerProps {
 }
 
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
-  title = 'Zion Tech Group - Leading Technology Solutions Provider',
-  description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence with measurable results.',
-  keywords = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services, cybersecurity, blockchain, quantum computing, enterprise solutions',
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  canonicalUrl = 'https://ziontechgroup.com',
-  structuredData,
-  noindex = false,
-  nofollow = false,
+  title = 'Zion Tech Group - Leading Technology Solutions Provider'
+  description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence with measurable results.'
+  keywords = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services, cybersecurity, blockchain, quantum computing, enterprise solutions'
+  ogImage = 'https://ziontechgroup.com/og-image.jpg'
+  canonicalUrl = 'https://ziontechgroup.com'
+  structuredData
+  noindex = false
+  nofollow = false
 }) => {
   const defaultStructuredData = {
-<<<<<<< HEAD
     '@context': 'https://schema.org',
-    '@type': 'Organization',
+      '@type': 'Organization'
     name: 'Zion Tech Group',
     url: 'https://ziontechgroup.com',
     logo: 'https://ziontechgroup.com/logo.png',
     description: description,
     address: {
-      '@type': 'PostalAddress',
+      '@type': 'PostalAddress'
       streetAddress: '364 E Main St STE 1008',
       addressLocality: 'Middletown',
       addressRegion: 'DE',
       postalCode: '19709',
-      addressCountry: 'US',
-    },
+      addressCountry: 'US'
+    }
     contactPoint: {
-      '@type': 'ContactPoint',
+      '@type': 'ContactPoint'
       telephone: '+1-302-464-0950',
       contactType: 'customer service',
-      email: 'kleber@ziontechgroup.com',
-    },
+      email: 'kleber@ziontechgroup.com'
+    }
     sameAs: [
       'https://www.linkedin.com/company/zion-tech-group',
-      'https://github.com/Zion-Technologies',
-    ],
+      'https://github.com/Zion-Technologies'
+    ]
     foundingDate: '2020',
     numberOfEmployees: '50-100',
     services: [
       'AI Development',
-      'Cloud Architecture',
+      'Cloud Architecture'
       'Cybersecurity',
-      'Blockchain Solutions',
+      'Blockchain Solutions'
       'Micro SaaS Development',
-      'Enterprise IT Services',
-      'Digital Transformation',
-    ],
+      'Enterprise IT Services'
+      'Digital Transformation'
+    ]
     areaServed: 'Worldwide',
     knowsAbout: [
       'Artificial Intelligence',
-      'Machine Learning',
+      'Machine Learning'
       'Cloud Computing',
-      'Cybersecurity',
+      'Cybersecurity'
       'Blockchain Technology',
-      'Quantum Computing',
+      'Quantum Computing'
       'DevOps',
-      'Data Analytics',
-    ],
-=======
-    '@context': 'https://schema.org,@type': 'Organization,name': 'Zion Tech Group,url': 'https://ziontechgroup.com,logo': 'https://ziontechgroup.com/logo.png,description': description,
-    'address': {
-      '@type': 'PostalAddress,streetAddress': '364 E Main St STE 1008,addressLocality': 'Middletown,addressRegion': 'DE,postalCode': '19709,addressCountry': 'US'
-    },
-    'contactPoint': {
-      '@type': 'ContactPoint,telephone': '+1-302-464-0950,contactType': 'customer service,email': 'kleber@ziontechgroup.com'
-    },
-    'sameAs': [
-      'https://www.linkedin.com/company/zion-tech-group,https://github.com/Zion-Technologies'
-    ],
-    'foundingDate': '2020,numberOfEmployees': '50-100,services': [
-      'AI Development,Cloud Architecture,Cybersecurity,Blockchain Solutions,Micro SaaS Development,Enterprise IT Services,Digital Transformation'
-    ],
-    'areaServed': 'Worldwide,knowsAbout': [
-      'Artificial Intelligence,Machine Learning,Cloud Computing,Cybersecurity,Blockchain Technology,Quantum Computing,DevOps,Data Analytics'
+      'Data Analytics'
     ]
->>>>>>> main
   };
 
   const finalStructuredData = structuredData || defaultStructuredData;
@@ -144,7 +125,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(finalStructuredData),
+          __html: JSON.stringify(finalStructuredData)
         }}
       />
 

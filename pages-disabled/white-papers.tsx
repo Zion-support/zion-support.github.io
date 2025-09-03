@@ -1,37 +1,22 @@
-<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
-=======
-import React from
-  'react';
-import { motion } from
-  'framer-motion';
-import { SEO } from
-  '../components/SEO';
-import { Button } from
-  '../components/ui/Button';
-import { Card } from
-  '../components/ui/Card';
-import { Badge } from
-  '../components/ui/Badge';
->>>>>>> origin/main
 import { 
-  FileText, Download,
-  Calendar, User,
-  Clock, ArrowRight,
-  Search, Filter,
-  Tag, Eye,
-  Share2, BookOpen,
-  TrendingUp, Brain,
-  Shield, Cloud,
-  Database, Network,
-  Zap, Globe,
-  Phone, Mail,
-  Award, Star,
+  FileText, Download
+  Calendar, User
+  Clock, ArrowRight
+  Search, Filter
+  Tag, Eye
+  Share2, BookOpen
+  TrendingUp, Brain
+  Shield, Cloud
+  Database, Network
+  Zap, Globe
+  Phone, Mail
+  Award, Star
   CheckCircle
 } from
   'lucide-react';
@@ -51,7 +36,7 @@ const WhitePapers: React.FC = () => {
       title: "Cybersecurity in the AI Era: Protecting Your Digital Assets", description: "Learn how AI is revolutionizing cybersecurity and the essential measures organizations need to protect against emerging threats.",
       author: "Michael Chen", date: "2025-01-12",
       readTime: "35 min read", category: "Security",
-      downloads: 980, rating: 4.8,
+      downloads: 980, rating: 4.8
       pages: 28, image: "/api/placeholder/400/300",
       tags: ["Cybersecurity", "AI Security", "Threat Protection", "Risk Management"], featured: false,
       downloadUrl: "/downloads/ai-cybersecurity-guide.pdf"
@@ -60,7 +45,7 @@ const WhitePapers: React.FC = () => {
       title: "Cloud Migration Strategies: Best Practices for 2025", description: "Comprehensive guide to planning and executing successful cloud migration projects with minimal business disruption.",
       author: "Emily Rodriguez", date: "2025-01-10",
       readTime: "40 min read", category: "Cloud Computing",
-      downloads: 1150, rating: 4.7,
+      downloads: 1150, rating: 4.7
       pages: 30, image: "/api/placeholder/400/300",
       tags: ["Cloud Migration", "Strategy", "Best Practices", "Digital Transformation"], featured: false,
       downloadUrl: "/downloads/cloud-migration-guide.pdf"
@@ -69,7 +54,7 @@ const WhitePapers: React.FC = () => {
       title: "Data Analytics and Machine Learning: Driving Business Intelligence", description: "Discover how advanced analytics and machine learning are transforming business intelligence and decision-making processes.",
       author: "David Kim", date: "2025-01-08",
       readTime: "38 min read", category: "Analytics",
-      downloads: 890, rating: 4.6,
+      downloads: 890, rating: 4.6
       pages: 26, image: "/api/placeholder/400/300",
       tags: ["Data Analytics", "Machine Learning", "Business Intelligence", "Decision Making"], featured: false,
       downloadUrl: "/downloads/data-analytics-guide.pdf"
@@ -86,7 +71,7 @@ const WhitePapers: React.FC = () => {
       title: "Digital Transformation: A Roadmap for Modern Organizations", description: "Complete roadmap for organizations looking to embrace digital transformation and leverage emerging technologies.",
       author: "James Wilson", date: "2025-01-03",
       readTime: "50 min read", category: "Digital Transformation",
-      downloads: 1350, rating: 4.9,
+      downloads: 1350, rating: 4.9
       pages: 36, image: "/api/placeholder/400/300",
       tags: ["Digital Transformation", "Strategy", "Technology", "Innovation"], featured: false,
       downloadUrl: "/downloads/digital-transformation-roadmap.pdf"
@@ -94,9 +79,9 @@ const WhitePapers: React.FC = () => {
   ];
 
   const categories = [
-    { name: "All Categories", count: 24, active: true }, { name: "AI Strategy", count: 6, active: false },
-    { name: "Security", count: 4, active: false }, { name: "Cloud Computing", count: 5, active: false },
-    { name: "Analytics", count: 3, active: false }, { name: "Customer Experience", count: 3, active: false },
+    { name: "All Categories", count: 24, active: true }, { name: "AI Strategy", count: 6, active: false }
+    { name: "Security", count: 4, active: false }, { name: "Cloud Computing", count: 5, active: false }
+    { name: "Analytics", count: 3, active: false }, { name: "Customer Experience", count: 3, active: false }
     { name: "Digital Transformation", count: 2, active: false }, { name: "Other", count: 1, active: false }
   ];
 
@@ -322,7 +307,7 @@ const WhitePapers: React.FC = () => {
                         key={category.name}
                         className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${
                           category.active 
-                            ?,
+                            ?
   bg-gradient-to-r from-blue-500 to-purple-600 text-white': 'text-gray-300 hover:bg-slate-700
                         }`}
                       >

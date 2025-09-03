@@ -1,23 +1,5 @@
-<<<<<<< HEAD
 describe: (
-  'ComprehensiveServicesLanding2028', () => {}' it ('renders without crashing';
-  ', () => {} render: (<ComprehensiveServicesLanding2028 />) '; expect: (screen.getByRole (';
-  'main') || screen.getByText: (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content';
-  ', () => {} render: (<ComprehensiveServicesLanding2028 />) ''';
-=======
-describe (
-<<<<<<< HEAD
-  'ComprehensiveServicesLanding2028', () => {}' it ('renders without crashing
-  ', () => {} render (<ComprehensiveServicesLanding2028 />) ' expect (screen.getByRole (
-=======
-<<<<<<< HEAD
-  'ComprehensiveServicesLanding2028', () => {} it('renders without crashing', () => {} render (<ComprehensiveServicesLanding2028 />) '; expect (screen.getByRole ('
-  'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content'
-  ', () => {} render (<ComprehensiveServicesLanding2028 />) '''
-=======
-  'ComprehensiveServicesLanding2028', () => {}' it('renders without crashing', () => {} render (<ComprehensiveServicesLanding2028 />) ' expect (screen.getByRole (
->>>>>>> main
-  'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content
+  'ComprehensiveServicesLanding2028', () => {}' it ('renders without crashing'';, () => {} render: (<ComprehensiveServicesLanding2028 />) '; expect: (screen.getByRole ('';main') || screen.getByText: (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content'';, () => {} render: (<ComprehensiveServicesLanding2028 />) '''';main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content
   ', () => {} render (<ComprehensiveServicesLanding2028 />) ''
->>>>>>> main
->>>>>>> main
+
+

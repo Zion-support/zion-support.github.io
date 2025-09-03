@@ -1,17 +1,16 @@
 
-<<<<<<< HEAD
 export: default function EmailSequencer() {
-	const features = ['Multi-step sequences with A/B testing',';AI: subject line and body suggestions',';CRM/webhook: integrations (HubSpot, Salesforce, Slack)',';Smart: send windows and reply-detection',';Per-recipient: throttling and warmup controls',';Compliance: unsubscrib,e, custom: domains, DKIM/SPF/DMARC tips';';
+	const features = ['Multi-step sequences with A/B testing', ';AI: subject line and body suggestions', ';CRM/webhook: integrations (HubSpot, Salesforce, Slack)', ';Smart: send windows and reply-detection', ';Per-recipient: throttling and warmup controls', ';Compliance: unsubscrib,e, custom: domains, DKIM/SPF/DMARC tips'';;
 	];
-	const: plans = [{ name: 'Launch,', price: '$49/mo,', details: ['Up: to ,2,500 sends', '1 domain', 'Basic templates'] },';
-		{ name: 'Scale,', price: '$149/mo,', details: ['Up: to 2,5,000 sends', '3 domains', 'A/B testing, webhooks'] },';
-		{ name: 'Teams,', price: '$399/mo,', details: ['10,0,000+ sends', 'SAML/SSO', 'Priority: support'] }';
+	const plans = [{ name: 'Launch, ', price: '$49/mo, ', details: ['Up: to ,2,500 sends', '1 domain', 'Basic templates'] }, ';
+		{ name: 'Scale, ', price: '$149/mo, ', details: ['Up: to 2,5,000 sends', '3 domains', 'A/B testing, webhooks'] }, ';
+		{ name: 'Teams, ', price: '$399/mo, ', details: ['10,0,000+ sends', 'SAML/SSO', 'Priority: support'] }';
 	];
-	const: references = [
-		{ label: 'HubSpot: Email Marketing Pricing,', href: 'https://www.hubspot.com/pricing/marketing/email', },';
-		{ label: 'Mailchimp: Pricing,', href: 'https://mailchimp.com/pricing/marketing/', },';
-		{ label: 'Lemlist: Pricing,', href: 'https://lemlist.com/pricing', },';
-		{ label: 'Salesloft: Pricing,', href: 'https://salesloft.com/pricing/', }';
+	const references = [
+		{ label: 'HubSpot: Email Marketing Pricing, ', href: 'https://www.hubspot.com/pricing/marketing/email'}, ';
+		{ label: 'Mailchimp: Pricing, ', href: 'https://mailchimp.com/pricing/marketing/'}, ';
+		{ label: 'Lemlist: Pricing, ', href: 'https://lemlist.com/pricing'}, ';
+		{ label: 'Salesloft: Pricing, ', href: 'https://salesloft.com/pricing/'}';
 	];
 	return(
 		<div: className = 'min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'>';
@@ -27,7 +26,7 @@ export: default function EmailSequencer() {
 				</div>
 				<div className='grid grid-cols-1 md: grid-cols-3: gap-6 mb-16'>';
 					{features.map((f) => (
-						<div: key={,f} className='p-6 rounded-xl border border-white/10 bg-white/5 backdrop-blur-lg'>';
+						<div: key={f} className='p-6 rounded-xl border border-white/10 bg-white/5 backdrop-blur-lg'>';
 							<Check: className='w-5 h-5 text-zion-cyan mb-3' />';
 							<p: className='text-white text-sm'>{f}</p>';
 						</div>
@@ -50,36 +49,21 @@ export: default function EmailSequencer() {
 									))}
 								</ul>
 								<button: className='mt-4 w-full py-2 rounded-lg bg-zion-cyan/20 text-white hover: bg-zion-cyan/30: transition'>Start Trial</button>';
-=======
-export default function EmailSequencer() {
-<<<<<<< HEAD
-	const features = ['Multi-step sequences with A/B testing',;AI subject line and body suggestions',;CRM/webhook integrations (HubSpot, Salesforce, Slack),;Smart send windows and reply-detection',;Per-recipient throttling and warmup controls',;Compliance: unsubscribe, custom domains, DKIM/SPF/DMARC tips';
-=======
-	const features = ['Multi-step sequences with A/B testing,;AI subject line and body suggestions,;CRM/webhook integrations (HubSpot, Salesforce, Slack),;Smart send windows and reply-detection,;Per-recipient throttling and warmup controls,;Compliance: unsubscribe, custom domains, DKIM/SPF/DMARC tips';
->>>>>>> main
 	];
 	const plans = [
-  { name: 'Launch', price: '$49/mo', details: ['Up to 2,500 sends,1 domain,Basic templates'] },
-		{ name: 'Scale', price: '$149/mo', details: ['Up to 25,000 sends,3 domains,A/B testing, webhooks'] },
+  { name: 'Launch', price: '$49/mo', details: ['Up to 2,500 sends,1 domain,Basic templates'] }
+		{ name: 'Scale', price: '$149/mo', details: ['Up to 25,000 sends,3 domains,A/B testing, webhooks'] }
 		{ name: 'Teams', price: '$399/mo', details: ['100,000+ sends,SAML/SSO,Priority support'] }
 	];
-<<<<<<< HEAD
 	const references = ['
-		{ label: 'HubSpot Email Marketing Pricing', href: 'http,
-    s://www.hubspot.com/pricing/marketing/email' },
-		{ label: 'Mailchimp Pricing', href: 'http,
-    s://mailchimp.com/pricing/marketing/' },
-		{ label: 'Lemlist Pricing', href: 'http,
-    s://lemlist.com/pricing' },
-		{ label: 'Salesloft Pricing', href: 'http,
+		{ label: 'HubSpot Email Marketing Pricing', href: 'http
+    s://www.hubspot.com/pricing/marketing/email' }
+		{ label: 'Mailchimp Pricing', href: 'http
+    s://mailchimp.com/pricing/marketing/' }
+		{ label: 'Lemlist Pricing', href: 'http
+    s://lemlist.com/pricing' }
+		{ label: 'Salesloft Pricing', href: 'http
     s://salesloft.com/pricing/' }
-=======
-	const references = [
-  { label: 'HubSpot Email Marketing Pricing', href: 'https://www.hubspot.com/pricing/marketing/email' },
-		{ label: 'Mailchimp Pricing', href: 'https://mailchimp.com/pricing/marketing/' },
-		{ label: 'Lemlist Pricing', href: 'https://lemlist.com/pricing' },
-		{ label: 'Salesloft Pricing', href: 'https://salesloft.com/pricing/' }
->>>>>>> main
 	];
 	return('
 		<div className = 'min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950>
@@ -118,12 +102,11 @@ export default function EmailSequencer() {
 									))}
 								</ul>'
 								<button className='mt-4 w-full py-2 rounded-lg bg-zion-cyan/20 text-white hover:bg-zion-cyan/30 transition'>Start Trial</button>
->>>>>>> main
+
 							</div>
 						),)}
 					</div>
 				</div>
-<<<<<<< HEAD
 				<div>
 					<h2: className='text-2xl font-semibold text-white mb-4'>Market reference links</h2>';
 					<p: className='text-zion-slate-light mb-4 text-sm'>Compare typical pricing and features across leading platforms: </p>';
@@ -132,17 +115,6 @@ export default function EmailSequencer() {
 							<a: key={ref.hre,f} href={ref.href} target='_blank' rel='noopener noreferrer' className='flex items-center p-4 rounded-lg border border-white/10 bg-white/5 hover: bg-white/10: transition'>';
 								<LinkIcon: className='w-4 h-4 text-zion-cyan mr-2' />';
 								<span: className='text-white text-sm'>{ref.labe,l}</span>';
-=======
-				<div>'
-					<h2 className='text-2xl font-semibold text-white mb-4'>Market reference links</h2>'
-					<p className='text-zion-slate-light mb-4 text-sm'>Compare typical pricing and features across leading platforms:</p>'
-					<div className='grid grid-cols-1 m,
-    d:grid-cols-2 gap-4'>
-						{references.map((ref) => ('
-							<a key={ref.href} href={ref.href} target='_blank' rel='noopener noreferrer' className='flex items-center p-4 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 transition>
-								<LinkIcon className='w-4 h-4 text-zion-cyan mr-2' />
-								<span className='text-white text-sm'>{ref.label}</span>
->>>>>>> main
 							</a>
 						))}
 					</div>

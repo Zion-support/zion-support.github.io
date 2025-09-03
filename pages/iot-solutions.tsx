@@ -3,12 +3,12 @@ import Head from 'next/head';
 import { Header } from '../src/components/Header';
 import Footer from '../src/components/Footer';
 import {
-  Wifi,
-  Cpu,
-  Database,
-  Shield,
-  ArrowRight,
-  CheckCircle,
+  Wifi
+  Cpu
+  Database
+  Shield
+  ArrowRight
+  CheckCircle
 } from 'lucide-react';
 
 export default function IoTSolutions() {
@@ -16,61 +16,51 @@ export default function IoTSolutions() {
   {
       icon: Wifi,
       title: 'Device Connectivity',
-      description:
-        'Seamless connection and communication between IoT devices and systems',
-    },
+      description: 'Seamless connection and communication between IoT devices and systems'
+    }
     {
       icon: Cpu,
       title: 'Edge Computing',
-      description:
-        'Process data locally for faster response times and reduced latency',
-    },
+      description: 'Process data locally for faster response times and reduced latency'
+    }
     {
       icon: Database,
       title: 'Data Analytics',
-      description: 'Collect, analyze, and derive insights from IoT sensor data',
-    },
+      description: 'Collect, analyze, and derive insights from IoT sensor data'
+    }
     {
       icon: Shield,
       title: 'Security & Privacy',
-      description:
-        'Enterprise-grade security for IoT devices and data transmission',
-    },
+      description: 'Enterprise-grade security for IoT devices and data transmission'
+    }
   ];
 
   const benefits = [
-<<<<<<< HEAD
     'Real-time monitoring and control',
-    'Predictive maintenance capabilities',
+      'Predictive maintenance capabilities'
     'Improved operational efficiency',
-    'Cost reduction through automation',
+      'Cost reduction through automation'
     'Enhanced customer experiences',
-    'Data-driven decision making',
-=======
-    'Real-time monitoring and control,Predictive maintenance capabilities,Improved operational efficiency,Cost reduction through automation,Enhanced customer experiences,Data-driven decision making'
->>>>>>> main
+      'Data-driven decision making'
   ];
 
   const industries = [
   {
       title: 'Manufacturing',
-      description:
-        'Smart factories with connected machines and predictive maintenance',
-    },
+      description: 'Smart factories with connected machines and predictive maintenance'
+    }
     {
       title: 'Healthcare',
-      description: 'Remote patient monitoring and medical device integration',
-    },
+      description: 'Remote patient monitoring and medical device integration'
+    }
     {
       title: 'Agriculture',
-      description:
-        'Precision farming with soil sensors and automated irrigation',
-    },
+      description: 'Precision farming with soil sensors and automated irrigation'
+    }
     {
       title: 'Smart Cities',
-      description:
-        'Connected infrastructure for traffic, utilities, and public services',
-    },
+      description: 'Connected infrastructure for traffic, utilities, and public services'
+    }
   ];
 
   return (

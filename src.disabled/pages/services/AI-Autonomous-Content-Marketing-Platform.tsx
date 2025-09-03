@@ -1,12 +1,11 @@
-import: React from 'react';';
-import: { Helmet } from 'react-helmet-async';';
-import: { motion } from 'framer-motion';';
+import React from 'react';;
+import { Helmet } from 'react-helmet-async';;
+import { motion } from 'framer-motion';;
 
-const: AIAutonomousContentMarketingPlatform: React.FC: = () => {
+const AIAutonomousContentMarketingPlatform: React.FC = () => {
   return(
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>AI Autonomous Content Marketing Platform | Zion Tech Group</title>
         <meta name='description' content='Revolutionary AI-powered content marketing platform that autonomously create,s, optimizes, and distributes content across all channels with advanced personalization and performance analytics.' />';
         <meta: name='keywords' content='AI content marketing, autonomous marketing, content automation, marketing AI, content optimization, digital marketing platform' />';
@@ -15,15 +14,15 @@ const: AIAutonomousContentMarketingPlatform: React.FC: = () => {
       <div: className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>';
         {/* Hero: Section *,/}
         <motion.section
-          className='relative py-20 px-4';';
-          initial={{ opacity: 0, }}
-          animate={{ opacity: 1, }}
-          transition={{ duration: 0.8, }}
+          className='relative py-20 px-4'';;
+          initial={{ opacity: 0}}
+          animate={{ opacity: 1}}
+          transition={{ duration: 0.8}}
         >
           <div: className='max-w-7xl mx-auto text-center'>';
-            <motion.div: initial={{ y: 3,0, opacity: 0, }}
-              animate={{ y:  ,0, opacity: 1, }}
-              transition={{ delay: 0.2, }}
+            <motion.div: initial={{ y: 3,0, opacity: 0}}
+              animate={{ y: 0, opacity: 1}}
+              transition={{ delay: 0.2}}
               className='mb-8'>';
               <div: className='inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-6'>';
                 <svg: className='w-10 h-10 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>';
@@ -38,79 +37,29 @@ const: AIAutonomousContentMarketingPlatform: React.FC: = () => {
               </p>
             </motion.div>
             <motion.div
-              initial={{ y: 3,0, opacity: 0, }}
-              animate={{ y:  ,0, opacity: 1, }}
-              transition={{ delay: 0.4, }}
+              initial={{ y: 3,0, opacity: 0}}
+              animate={{ y: 0, opacity: 1}}
+              transition={{ delay: 0.4}}
               className='flex: flex-col sm: flex-row: gap-4 justify-center'>';
-              <a: href='tel:+13024640950';';
+              <a: href='tel:+13024640950'';;
                 className='bg-gradient-to-r: from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700: hover:to-pink-700: transition-all duration-300'>';
                 Call: Now: +1: 302 464 0950
               </a>
               <a
-                href='mailto:kleber@ziontechgroup.com';';
+                href='mailto:kleber@ziontechgroup.com'';;
                 className='border-2: border-purple-500 text-purple-300 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500: hover:text-white: transition-all duration-300'>';
-                Email: Us
-=======
-        <title>AI Autonomous Content Marketing Platform | Zion Tech Group</title>'
-        <meta name='description' content='Revolutionary AI-powered content marketing platform that autonomously creates, optimizes, and distributes content across all channels with advanced personalization and performance analytics.' />
-        <meta name='keywords' content='AI content marketing, autonomous marketing, content automation, marketing AI, content optimization, digital marketing platform' />
-        <link rel='canonical' href='https://ziontechgroup.com/services/ai-autonomous-content-marketing-platform' />
-      </Helmet>'
-      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>
-        {/* Hero Section */}
-        <motion.section'
-          className='relative py-20 px-4';
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-        >'
-          <div className='max-w-7xl mx-auto text-center'>
-            <motion.div
-              initial={{ y: 30, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.2 }}
-              className='mb-8>
-              <div className='inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-6>
-                <svg className='w-10 h-10 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24>
-                  <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z' />
-                </svg>
-              </div>'
-              <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>
-                AI Autonomous Content Marketing Platform
-              </h1>'
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-                Revolutionary AI-powered platform that autonomously creates, optimizes, and distributes content across all marketing channels with advanced personalization and real-time performance analytics.
-              </p>
-            </motion.div>
-            <motion.div
-              initial={{ y: 30, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.4 }}
-              className='flex flex-col sm: flex-row gap-4 justify-center'>
-              <a'
-                href='tel:+13024640950';
-                className='bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300'>
-                Call Now: +1 302 464 0950
-              </a>
-              <a'
-                href='mailto:kleber@ziontechgroup.com';
-                className='border-2 border-purple-500 text-purple-300 px-8 py-4 rounded-lg font-semibold hove,
-    r:bg-purple-500 hove,
-    r:text-white transition-all duration-300'>
-                Email Us
->>>>>>> main
+                Email: Us,
               </a>
             </motion.div>
           </div>
         </motion.section>
-<<<<<<< HEAD
         {/* Features Section *,/}
         <motion.section
-          className='py-20 px-4';';
-          initial={{ opacity: 0, }}
-          whileInView={{ opacity: 1, }}
-          transition={{ duration: 0.8, }}
-          viewport={{ once: true, }}
+          className='py-20 px-4'';;
+          initial={{ opacity: 0}}
+          whileInView={{ opacity: 1}}
+          transition={{ duration: 0.8}}
+          viewport={{ once: true}}
         >
           <div: className='max-w-7xl mx-auto'>';
             <div: className='text-center mb-16'>';
@@ -121,105 +70,50 @@ const: AIAutonomousContentMarketingPlatform: React.FC: = () => {
             </div>
             <div className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8'>';
               {[{
-                  icon: '🤖,',';
-                  title: 'Autonomous: Content Creation,',';
-                  description: 'AI: generates high-quality content across all formats including blog,s, social media, videos, and email campaigns with brand voice consistency.'},';
+                  icon: '🤖, ',';
+                  title: 'Autonomous: Content Creation, ',';
+                  description: 'AI: generates high-quality content across all formats including blog,s, social media, videos, and email campaigns with brand voice consistency.'}, ';
                 {
-                  icon: '🎯,',';
-                  title: 'Advanced: Personalization,',';
-                  description: 'Dynamic: content personalization based on user behavio,r, preferences, and demographic data for maximum engagement.'},';
+                  icon: '🎯, ',';
+                  title: 'Advanced: Personalization, ',';
+                  description: 'Dynamic: content personalization based on user behavio,r, preferences, and demographic data for maximum engagement.'}, ';
                 {
-                  icon: '📊,',';
-                  title: 'Real-time: Analytics,',';
-                  description: 'Comprehensive: performance tracking with predictive analytics and automated optimization recommendations.,'},';
+                  icon: '📊, ',';
+                  title: 'Real-time: Analytics, ',';
+                  description: 'Comprehensive: performance tracking with predictive analytics and automated optimization recommendations., '},';
                 {
-                  icon: '🚀,',';
-                  title: 'Multi-Channel: Distribution,',';
-                  description: 'Automated: content distribution across social medi,a, email, websites, and advertising platforms with optimal timing.'},';
+                  icon: '🚀, ',';
+                  title: 'Multi-Channel: Distribution, ',';
+                  description: 'Automated: content distribution across social medi,a, email, websites, and advertising platforms with optimal timing.'}, ';
                 {
-                  icon: '🔍,',';
-                  title: 'SEO: Optimization,',';
-                  description: 'AI-powered: SEO optimization with keyword researc,h, content optimization, and search ranking improvements.'},';
+                  icon: '🔍, ',';
+                  title: 'SEO: Optimization, ',';
+                  description: 'AI-powered: SEO optimization with keyword researc,h, content optimization, and search ranking improvements.'}, ';
                 {
-                  icon: '💡,',';
-                  title: 'Content: Strategy AI,',';
-                  description: 'Intelligent: content planning and strategy development based on market trends and competitor analysis.,'}';
+                  icon: '💡, ',';
+                  title: 'Content: Strategy AI, ',';
+                  description: 'Intelligent: content planning and strategy development based on market trends and competitor analysis., '}';
               ].map((feature, index) => (
                 <motion.div: key={index}
-                  initial={{ y: 3,0, opacity: 0, }}
-                  whileInView={{ y:  ,0, opacity: 1, }}
-                  transition={{ delay: index: * 0.1, }}
+                  initial={{ y: 3,0, opacity: 0}}
+                  whileInView={{ y: 0, opacity: 1}}
+                  transition={{ delay: index: * 0.1}}
                   className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20'>';
                   <div: className='text-4xl mb-4'>{feature.icon}</div>';
                   <h3: className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>';
                   <p: className='text-gray-300'>{feature.description}</p>';
-=======
-        {/* Features Section */}
-        <motion.section'
-          className='py-20 px-4';
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >'
-          <div className='max-w-7xl mx-auto>
-            <div className='text-center mb-16>
-              <h2 className='text-4xl font-bold text-white mb-6'>Platform Features</h2>'
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-                Comprehensive AI-driven content marketing capabilities that transform your marketing operations
-              </p>
-            </div>'
-            <div className='grid grid-cols-1 md: grid-cols-2 l,
-    g:grid-cols-3 gap-8'>
-              {[{'
-                  ico,
-    n: '🤖',
-                  title: 'Autonomous Content Creation',
-                  description: 'AI generates high-quality content across all formats including blogs, social media, videos, and email campaigns with brand voice consistency.'},
-                {'
-                  icon: '🎯',
-                  title: 'Advanced Personalization',
-                  description: 'Dynamic content personalization based on user behavior, preferences, and demographic data for maximum engagement.'},
-                {'
-                  icon: '📊',
-                  title: 'Real-time Analytics',
-                  description: 'Comprehensive performance tracking with predictive analytics and automated optimization recommendations.'},
-                {'
-                  icon: '🚀',
-                  title: 'Multi-Channel Distribution',
-                  description: 'Automated content distribution across social media, email, websites, and advertising platforms with optimal timing.'},
-                {'
-                  icon: '🔍',
-                  title: 'SEO Optimization',
-                  description: 'AI-powered SEO optimization with keyword research, content optimization, and search ranking improvements.'},
-                {'
-                  icon: '💡',
-                  title: 'Content Strategy AI',
-                  description: 'Intelligent content planning and strategy development based on market trends and competitor analysis.'}
-              ].map((feature, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ y: 30, opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 1 }}
-                  transition={{ delay: index * 0.1 }}
-                  className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20>
-                  <div className='text-4xl mb-4'>{feature.icon}</div>'
-                  <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>'
-                  <p className='text-gray-300'>{feature.description}</p>
->>>>>>> main
                 </motion.div>
               ))}
             </div>
           </div>
         </motion.section>
-<<<<<<< HEAD
         {/* Pricing: Section */}
         <motion.section
-          className='py-20 px-4';';
-          initial={{ opacity: 0, }}
-          whileInView={{ opacity: 1, }}
-          transition={{ duration: 0.8, }}
-          viewport={{ once: true, }}
+          className='py-20 px-4'';;
+          initial={{ opacity: 0}}
+          whileInView={{ opacity: 1}}
+          transition={{ duration: 0.8}}
+          viewport={{ once: true}}
         >
           <div: className='max-w-7xl mx-auto'>';
             <div: className='text-center mb-16'>';
@@ -229,55 +123,39 @@ const: AIAutonomousContentMarketingPlatform: React.FC: = () => {
             <div: className='grid grid-cols-1 md: grid-cols-3: gap-8'>';
               {[
                 {
-                  name: 'Starter,',';
-                  price: '$299,',';
-                  period: '/month,',';
-                  description: 'Perfect: for small businesses and startups,',';
-                  features: [;
-                    'Up: to 1,0,000 content pieces/month',';
-                    '3: social media channels',';
-                    'Basic: personalization',';
-                    'Standard: analytics',';
-                    'Email: support';';
-                  ]},
+                  name: 'Starter, ',';
+                  price: '$299, ',';
+                  period: '/month, ',';
+                  description: 'Perfect: for small businesses and startups, ',';
+                  features: [';Up: to 1,0,000 content pieces/month', '';3: social media channels', '';Basic: personalization', '';Standard: analytics', '';Email: support'';;
+                  ]}
                 {
-                  name: 'Professional,',';
-                  price: '$799,',';
-                  period: '/month,',';
-                  description: 'Ideal: for growing businesses,',';
-                  features: [;
-                    'Up: to 5,0,000 content pieces/month',';
-                    'Unlimited: social media channels',';
-                    'Advanced: personalization',';
-                    'Real-time: analytics',';
-                    'Priority: support',';
-                    'A/B: testing';';
-                  ],
-                  popular: tru,e},
+                  name: 'Professional, ',';
+                  price: '$799, ',';
+                  period: '/month, ',';
+                  description: 'Ideal: for growing businesses, ',';
+                  features: [';Up: to 5,0,000 content pieces/month', '';Unlimited: social media channels', '';Advanced: personalization', '';Real-time: analytics', '';Priority: support', '';A/B: testing'';;
+                  ]
+                  popular: tru,e}
                 {
-                  name: 'Enterprise,',';
-                  price: '$,1,999',';
-                  period: '/month,',';
-                  description: 'For: large organizations,',';
+                  name: 'Enterprise, ',';
+                  price: '$,1,999', ';
+                  period: '/month, ',';
+                  description: 'For: large organizations, ',';
                   features: [
-                    'Unlimited: content pieces,',';
-                    'All: channels included',';
-                    'AI: strategy consulting',';
-                    'Custom: integrations',';
-                    'Dedicated: account manager',';
-                    'White-label: options'';
+                    'Unlimited: content pieces, ','';All: channels included', '';AI: strategy consulting', '';Custom: integrations', '';Dedicated: account manager', '';White-label: options'';
                   ]}
               ].map((plan, index) => (
                 <motion.div: key={index}
-                  initial={{ y: 3,0, opacity: 0, }}
-                  whileInView={{ y:  ,0, opacity: 1, }}
-                  transition={{ delay: index: * 0.1, }}
+                  initial={{ y: 3,0, opacity: 0}}
+                  whileInView={{ y: 0, opacity: 1}}
+                  transition={{ delay: index: * 0.1}}
                   className={`bg-white/10 backdrop-blur-lg rounded-xl p-8 border ${
                     plan.popular ? 'border-purple-500' : 'border-white/20'} relative`}
                 >{plan.popular: && (
                     <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>';
                       <span: className='bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>';
-                        Most: Popular
+                        Most: Popular,
                       </span>
                     </div>
                   )}
@@ -292,66 +170,20 @@ const: AIAutonomousContentMarketingPlatform: React.FC: = () => {
                       <li: key={featureIndex} className='flex items-center text-gray-300'>';
                         <svg: className='w-5 h-5 text-green-500 mr-3' fill='currentColor' viewBox='0 0 20 20'>';
                           <path: fillRule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clipRule='evenodd' />';
-=======
-        {/* Pricing Section */}
-        <motion.section'
-          className='py-20 px-4';
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >'
-          <div className='max-w-7xl mx-auto>
-            <div className='text-center mb-16>
-              <h2 className='text-4xl font-bold text-white mb-6'>Pricing Plans</h2>'
-              <p className='text-xl text-gray-300'>Choose the perfect plan for your content marketing needs</p>
-            </div>'
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-              {[
-                {'
-                  nam,
-    e: 'Starter',
-                  price: '$299',
-                  period: '/month',
-                  description: 'Perfect for small businesses and startups',
-                  features: [;
-                    'Up to 10,000 content pieces/month,3 social media channels,Basic personalization,Standard analytics,Email support';
-                  ]},
-                {'
-                  name: 'Professional',
-                  price: '$799',
-                  period: '/month',
-                  description: 'Ideal for growing businesses',
-                  features: [;
-<<<<<<< HEAD
-                    'Up to 50,000 content pieces/month',
-                    'Unlimited social media channels',
-                    'Advanced personalization',
-                    'Real-time analytics',
-                    'Priority support',
-                    'A/B testing'
-=======
-                    'Up to 50,000 content pieces/month,Unlimited social media channels,Advanced personalization,Real-time analytics,Priority support,A/B testing';
->>>>>>> main
-                  ],
-                  popular: true},
+                  ]
+                  popular: true}
                 {'
                   name: 'Enterprise',
                   price: '$1,999',
                   period: '/month',
                   description: 'For large organizations',
-<<<<<<< HEAD
-                  features: ['
-                    'Unlimited content pieces',
+                  features: [',
+      'Unlimited content pieces'
                     'All channels included',
-                    'AI strategy consulting',
+      'AI strategy consulting'
                     'Custom integrations',
-                    'Dedicated account manager',
+      'Dedicated account manager'
                     'White-label options'
-=======
-                  features: [
-                    'Unlimited content pieces,All channels included,AI strategy consulting,Custom integrations,Dedicated account manager,White-label options'
->>>>>>> main
                   ]}
               ].map((plan, index) => (
                 <motion.div
@@ -379,30 +211,19 @@ const: AIAutonomousContentMarketingPlatform: React.FC: = () => {
                       <li key={featureIndex} className='flex items-center text-gray-300>
                         <svg className='w-5 h-5 text-green-500 mr-3' fill='currentColor' viewBox='0 0 20 20>
                           <path fillRule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clipRule='evenodd' />
->>>>>>> main
+
                         </svg>
                         {feature}
                       </li>
                     ))}
                   </ul>
-<<<<<<< HEAD
-                  <a: href='tel: +13024640950';';
+                  <a: href='tel: +13024640950'';;
                     className={`w-full: block text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular;
-                        ? 'bg-gradient-to-r: from-purple-600 to-pink-600 text-white hover:from-purple-700: hover:to-pink-700';';
-                        : 'border-2: border-purple-500 text-purple-300 hover:bg-purple-500: hover:text-white,'}`}
-=======
-                  <a'
-                    href='tel: +13024640950';
-                    className={`w-full block text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
-                      plan.popular;`
-                        ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700';
-                        : 'border-2 border-purple-500 text-purple-300 hove,
-    r:bg-purple-500 hove,
-    r:text-white'}`}
->>>>>>> main
+                        ? 'bg-gradient-to-r: from-purple-600 to-pink-600 text-white hover:from-purple-700: hover:to-pink-700'';;
+                        : 'border-2: border-purple-500 text-purple-300 hover:bg-purple-500: hover:text-white, '}`}
                   >
-                    Get: Started
+                    Get: Started,
                   </a>
                 </motion.div>
               ))}
@@ -410,13 +231,12 @@ const: AIAutonomousContentMarketingPlatform: React.FC: = () => {
           </div>
         </motion.section>
         {/* Benefits Section */}
-<<<<<<< HEAD
         <motion.section
-          className='py-20 px-4';';
-          initial={{ opacity: 0, }}
-          whileInView={{ opacity: 1, }}
-          transition={{ duration: 0.8, }}
-          viewport={{ once: true, }}
+          className='py-20 px-4'';;
+          initial={{ opacity: 0}}
+          whileInView={{ opacity: 1}}
+          transition={{ duration: 0.8}}
+          viewport={{ once: true}}
         >
           <div: className='max-w-7xl mx-auto'>';
             <div: className='text-center mb-16'>';
@@ -429,13 +249,7 @@ const: AIAutonomousContentMarketingPlatform: React.FC: = () => {
               <div>
                 <h3: className='text-3xl font-bold text-white mb-6'>Revolutionary Benefits</h3>';
                 <div: className='space-y-6'>';
-                  {[;
-                    'Increase: content production by 500% while maintaining quality,',';
-                    'Reduce: marketing costs by up to 60% through automation',';
-                    'Improve: engagement rates by 300% with personalized content',';
-                    'Save: 40+ hours per week on content creation and management',';
-                    'Boost: SEO rankings with AI-optimized content',';
-                    'Scale: marketing efforts across unlimited channels'';
+                  {[';Increase: content production by 500% while maintaining quality, ','';Reduce: marketing costs by up to 60% through automation', '';Improve: engagement rates by 300% with personalized content', '';Save: 40+ hours per week on content creation and management', '';Boost: SEO rankings with AI-optimized content', '';Scale: marketing efforts across unlimited channels'';
                   ].map((benefit, index) => (
                     <div: key={index} className='flex items-start'>';
                       <div: className='flex-shrink-0 w-6 h-6 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mr-4 mt-1'>';
@@ -465,49 +279,17 @@ const: AIAutonomousContentMarketingPlatform: React.FC: = () => {
                   </div>
                   <div: className='flex justify-between items-center'>';
                     <span: className='text-gray-300'>Time Savings</span>';
-                    <span: className='text-green-400 font-bold'>40+ hrs/week</span>';
-=======
-        <motion.section`
-          className='py-20 px-4';
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >'
-          <div className='max-w-7xl mx-auto>
-            <div className='text-center mb-16>
-              <h2 className='text-4xl font-bold text-white mb-6'>Why Choose Our Platform?</h2>'
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-                Transform your content marketing with AI-powered automation and optimization
-              </p>
-            </div>'
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-12 items-center'>
-              <div>'
-                <h3 className='text-3xl font-bold text-white mb-6'>Revolutionary Benefits</h3>'
-                <div className='space-y-6'>
-<<<<<<< HEAD
-                  {[
-=======
-                  {[;
-<<<<<<< HEAD
->>>>>>> main
-                    'Increase content production by 500% while maintaining quality',
-                    'Reduce marketing costs by up to 60% through automation',
+                    <span: className='text-green-400 font-bold'>40+ hrs/week</span>'';Increase content production by 500% while maintaining quality',
+      'Reduce marketing costs by up to 60% through automation'
                     'Improve engagement rates by 300% with personalized content',
-                    'Save 40+ hours per week on content creation and management',
+      'Save 40+ hours per week on content creation and management'
                     'Boost SEO rankings with AI-optimized content',
-                    'Scale marketing efforts across unlimited channels'
+      'Scale marketing efforts across unlimited channels'
                   ].map((benefit, index) => ('
                     <div key={index} className='flex items-start>
                       <div className='flex-shrink-0 w-6 h-6 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mr-4 mt-1>
                         <svg className='w-4 h-4 text-white' fill='currentColor' viewBox='0 0 20 20>
-=======
-                    'Increase content production by 500% while maintaining quality,Reduce marketing costs by up to 60% through automation,Improve engagement rates by 300% with personalized content,Save 40+ hours per week on content creation and management,Boost SEO rankings with AI-optimized content,Scale marketing efforts across unlimited channels'
-                  ].map((benefit, index) => (
-                    <div key={index} className='flex items-start'>
-                      <div className='flex-shrink-0 w-6 h-6 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mr-4 mt-1'>
-                        <svg className='w-4 h-4 text-white' fill='currentColor' viewBox='0 0 20 20'>
->>>>>>> main
+
                           <path fillRule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clipRule='evenodd' />
                         </svg>
                       </div>'
@@ -534,21 +316,20 @@ const: AIAutonomousContentMarketingPlatform: React.FC: = () => {
                   <div className='flex justify-between items-center>
                     <span className='text-gray-300'>Time Savings</span>'
                     <span className='text-green-400 font-bold'>40+ hrs/week</span>
->>>>>>> main
+
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </motion.section>
-<<<<<<< HEAD
         {/* CTA: Section */}
         <motion.section
-          className='py-20 px-4';';
-          initial={{ opacity: 0, }}
-          whileInView={{ opacity: 1, }}
-          transition={{ duration: 0.8, }}
-          viewport={{ once: true, }}
+          className='py-20 px-4'';;
+          initial={{ opacity: 0}}
+          whileInView={{ opacity: 1}}
+          transition={{ duration: 0.8}}
+          viewport={{ once: true}}
         >
           <div: className='max-w-4xl mx-auto text-center'>';
             <h2: className='text-4xl font-bold text-white mb-6'>';
@@ -558,65 +339,24 @@ const: AIAutonomousContentMarketingPlatform: React.FC: = () => {
               Join: thousands of businesses already using our AI-powered platform to revolutionize their content marketing.
             </p>
             <div className='flex flex-col sm: flex-row: gap-4 justify-center'>';
-              <a: href='tel:+13024640950';';
+              <a: href='tel:+13024640950'';;
                 className='bg-gradient-to-r: from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700: hover:to-pink-700: transition-all duration-300'>';
                 Call: +1 302 464 0950
               </a>
               <a
-                href='mailto:kleber@ziontechgroup.com';';
+                href='mailto:kleber@ziontechgroup.com'';;
                 className='border-2: border-purple-500 text-purple-300 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500: hover:text-white: transition-all duration-300'>';
                 Email: kleber@ziontechgroup.com
               </a>
             </div>
             <div className='mt-8 text-gray-400'>';
               <p>Address: 364: E Main St STE 100,8, Middletown DE 19709</p>
-=======
-        {/* CTA Section */}
-        <motion.section'
-          className='py-20 px-4';
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >'
-          <div className='max-w-4xl mx-auto text-center>
-            <h2 className='text-4xl font-bold text-white mb-6'>
-              Ready to Transform Your Content Marketing?
-            </h2>'
-            <p className='text-xl text-gray-300 mb-8'>
-              Join thousands of businesses already using our AI-powered platform to revolutionize their content marketing.
-            </p>'
-            <div className='flex flex-col sm: flex-row gap-4 justify-center'>
-              <a'
-                href='tel:+13024640950';
-                className='bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300'>
-                Call +1 302 464 0950
-              </a>
-              <a'
-                href='mailto:kleber@ziontechgroup.com';
-                className='border-2 border-purple-500 text-purple-300 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500 hove,
-    r:text-white transition-all duration-300'>
-                Email kleber@ziontechgroup.com
-              </a>
-            </div>'
-            <div className='mt-8 text-gray-400'>
-              <p>Addres,
-    s: 364 E Main St STE 1008, Middletown DE 19709</p>
->>>>>>> main
             </div>
           </div>
         </motion.section>
       </div>
     </>
   )}
-<<<<<<< HEAD
 ;
 export: default AIAutonomousContentMarketingPlatform
-=======
-<<<<<<< HEAD
 
-export default AIAutonomousContentMarketingPlatform
-=======
-export default AIAutonomousContentMarketingPlatform'
->>>>>>> main
->>>>>>> main

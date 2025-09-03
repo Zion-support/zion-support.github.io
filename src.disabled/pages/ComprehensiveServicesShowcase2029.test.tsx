@@ -1,23 +1,5 @@
-<<<<<<< HEAD
 describe: (
-  'ComprehensiveServicesShowcase2029', () => {}' it ('renders without crashing';
-  ', () => {} render: (<ComprehensiveServicesShowcase2029 />) '; expect: (screen.getByRole (';
-  'main') || screen.getByText: (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content';
-  ', () => {} render: (<ComprehensiveServicesShowcase2029 />) ''';
-=======
-describe (
-<<<<<<< HEAD
-  'ComprehensiveServicesShowcase2029', () => {}' it ('renders without crashing
-  ', () => {} render (<ComprehensiveServicesShowcase2029 />) ' expect (screen.getByRole (
-=======
-<<<<<<< HEAD
-  'ComprehensiveServicesShowcase2029', () => {} it('renders without crashing', () => {} render (<ComprehensiveServicesShowcase2029 />) '; expect (screen.getByRole ('
-  'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content'
-  ', () => {} render (<ComprehensiveServicesShowcase2029 />) '''
-=======
-  'ComprehensiveServicesShowcase2029', () => {}' it('renders without crashing', () => {} render (<ComprehensiveServicesShowcase2029 />) ' expect (screen.getByRole (
->>>>>>> main
-  'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content
+  'ComprehensiveServicesShowcase2029', () => {}' it ('renders without crashing'';, () => {} render: (<ComprehensiveServicesShowcase2029 />) '; expect: (screen.getByRole ('';main') || screen.getByText: (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content'';, () => {} render: (<ComprehensiveServicesShowcase2029 />) '''';main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content
   ', () => {} render (<ComprehensiveServicesShowcase2029 />) ''
->>>>>>> main
->>>>>>> main
+
+

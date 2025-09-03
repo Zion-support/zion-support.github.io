@@ -1,11 +1,10 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';''';,"});,"})
+import React, { useState, useEffect } from 'react'';';,"});,"})
 import { motion } from 'framer-motion';,"});,"})
 import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const LinkHealthMonitor = () => {}"});,"})
     const [isOpen, setIsOpen] = useState(false);,"});,"})
-    const [isMonitoring, setIsMonitoring] = useState(false);';,"});,"})
-    const [linkStatuses, setLinkStatuses] = useState([]);'';,"});,"})
-    const [report, setReport] = useState(null);''';,"});,"})
+    const [isMonitoring, setIsMonitoring] = useState(false)';;,"});,"})
+    const [linkStatuses, setLinkStatuses] = useState([])';';,"});,"})
+    const [report, setReport] = useState(null)';'';,"});,"})
     const [selectedFilter, setSelectedFilter] = useState('all');,"});,"})
     // Sample data based on the analysis report;,"});,"})
     const sampleLinks = [];,"});,"})
@@ -13,57 +12,57 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
-            url: 'https://linkedin.com/company/ziontechgroup',''';,"});,"})
+            url: 'https://linkedin.com/company/ziontechgroup', ''';,"});,"})
             status: 'broken',;,"});,"})
-            statusCode: 404,';,"});,"})
+            statusCode: 404, ';,"});,"})
             responseTime: 1200,'';,"});,"})
-            lastChecked: new Date(),''';,"});,"})
-            parentPage: 'Homepage',''';,"});,"})
+            lastChecked: new Date(), ''';,"});,"})
+            parentPage: 'Homepage', ''';,"});,"})
             linkText: 'LinkedIn';,"});,"})
         },;,"});,"})
         {}"});,"})
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
-            url: 'https://twitter.com/ziontechgroup',''';,"});,"})
+            url: 'https://twitter.com/ziontechgroup', ''';,"});,"})
             status: 'external',;,"});,"})
-            statusCode: 200,';,"});,"})
+            statusCode: 200, ';,"});,"})
             responseTime: 800,'';,"});,"})
-            lastChecked: new Date(),''';,"});,"})
-            parentPage: 'Homepage',''';,"});,"})
+            lastChecked: new Date(), ''';,"});,"})
+            parentPage: 'Homepage', ''';,"});,"})
             linkText: 'Twitter';,"});,"})
         },;,"});,"})
         {}"});,"})
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
-            url: 'tel:+1 302 464 0950',''';,"});,"})
+            url: 'tel:+1 302 464 0950', ''';,"});,"})
             status: 'healthy',;,"});,"})
-            statusCode: 200,';,"});,"})
+            statusCode: 200, ';,"});,"})
             responseTime: 50,'';,"});,"})
-            lastChecked: new Date(),''';,"});,"})
-            parentPage: 'Contact',''';,"});,"})
+            lastChecked: new Date(), ''';,"});,"})
+            parentPage: 'Contact', ''';,"});,"})
             linkText: 'Phone Number';,"});,"})
         },;,"});,"})
         {}"});,"})
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
-            url: 'mailto:kleber@ziontechgroup.com',''';,"});,"})
+            url: 'mailto:kleber@ziontechgroup.com', ''';,"});,"})
             status: 'healthy',;,"});,"})
-            statusCode: 200,';,"});,"})
+            statusCode: 200, ';,"});,"})
             responseTime: 50,'';,"});,"})
-            lastChecked: new Date(),''';,"});,"})
-            parentPage: 'Contact',''';,"});,"})
+            lastChecked: new Date(), ''';,"});,"})
+            parentPage: 'Contact', ''';,"});,"})
             linkText: 'Email';,"});,"})
     ];,"});,"})
     useEffect ( () => {}"});,"})
         setLinkStatuses (sampleLinks) ;,"});,"})
         generateReport (sampleLinks) }, []) ;,"});,"})
     const generateReport = (links) => {}"});,"})
-        const totalLinks = links.length;';,"});,"})
-        const healthyLinks = links.filter(l => l.status === 'healthy').length;';,"});,"})
-        const brokenLinks = links.filter(l => l.status === 'broken').length;';,"});,"})
+        const totalLinks = links.length';;,"});,"})
+        const healthyLinks = links.filter(l => l.status === 'healthy').length';;,"});,"})
+        const brokenLinks = links.filter(l => l.status === 'broken').length';;,"});,"})
         const externalLinks = links.filter(l => l.status === 'external').length;,"});,"})
         const avgResponseTime = links.reduce((sum, l) => sum + (l.responseTime || 0), 0) / totalLinks;,"});,"})
         setReport({}"});,"})
@@ -82,9 +81,9 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
         switch (status) {}"});,"})
 ';,"});,"})
             case 'healthy': any;,"});,"})
-                return <CheckCircle className="w-4 h-4 text-green-400"/>;'""";,"});,"})
+                return <CheckCircle className="w-4 h-4 text-green-400"/>';""";,"});,"})
             case 'broken':"""";,"});,"})
-                return <AlertTriangle className="w-4 h-4 text-red-400"/>;'""";,"});,"})
+                return <AlertTriangle className="w-4 h-4 text-red-400"/>';""";,"});,"})
             case 'external':"""";,"});,"})
                 return <ExternalLink className="w-4 h-4 text-blue-400"/>;""";,"});,"})
             default:"""";,"});,"})
@@ -96,11 +95,11 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
 '';,"});,"})
 ''';,"});,"})
             case 'healthy':'''';,"});,"})
-                return 'text-green-400';''';,"});,"})
+                return 'text-green-400'';'';,"});,"})
             case 'broken':'''';,"});,"})
-                return 'text-red-400';''';,"});,"})
+                return 'text-red-400'';'';,"});,"})
             case 'external':'''';,"});,"})
-                return 'text-blue-400';''';,"});,"})
+                return 'text-blue-400'';'';,"});,"})
             default:'''';,"});,"})
                 return 'text-yellow-400'}"});,"})
     };,"});,"})
@@ -288,35 +287,9 @@ export { LinkHealthMonitor };,"});,"})
 export { LinkHealthMonitor };,"});,"})
 ;,"});,"})
 export { LinkHealthMonitor };,"});,"})
-=======
-<<<<<<< HEAD
- const: LinkHealthMonitor = () => { const [isOpen, setIsOpen] = useState (false)  const [isMonitoring, setIsMonitoring] = useState (false)  const [linkStatuses, setLinkStatuses] = useState ([])  const [report, setReport] = useState (null)  const [selectedFilter, setSelectedFilter] = useState ('all') ';";";";";
-=======
-<<<<<<< HEAD
- const LinkHealthMonitor = () => { const [isOpen, setIsOpen] = useState (false)  const [isMonitoring, setIsMonitoring] = useState (false)  const [linkStatuses, setLinkStatuses] = useState ([])  const [report, setReport] = useState (null)  const [selectedFilter, setSelectedFilter] = useState ('all') ';"'"
-=======
-<<<<<<< HEAD
- const LinkHealthMonitor = () => { const [isOpen, setIsOpen] = useState (false)  const [isMonitoring, setIsMonitoring] = useState (false)  const [linkStatuses, setLinkStatuses] = useState ([])  const [report, setReport] = useState (null)  const [selectedFilter, setSelectedFilter] = useState ('all') ';";"
-"
-=======
-<<<<<<< HEAD
- const LinkHealthMonitor = () => {} const [isOpen, setIsOpen] = useState (false)  const [isMonitoring, setIsMonitoring] = useState (false)  const [linkStatuses, setLinkStatuses] = useState ([])  const [report, setReport] = useState (null)  const;const;const [selectedFilter, setSelectedFilter] = useState (&apos;all&apos;) ';";
-&quot;"
-=======
-<<<<<<< HEAD
- const LinkHealthMonitor = () => { const [isOpen, setIsOpen] = useState (false)  const [isMonitoring, setIsMonitoring] = useState (false)  const [linkStatuses, setLinkStatuses] = useState ([])  const [report, setReport] = useState (null)  const [selectedFilter, setSelectedFilter] = useState ('all') ';";'"
-<<<<<<< HEAD
-""
-}
-=======
-=======
- const LinkHealthMonitor = () => { const [isOpen, setIsOpen] = useState (false)  const [isMonitoring, setIsMonitoring] = useState (false)  const [linkStatuses, setLinkStatuses] = useState ([])  const [report, setReport] = useState (null)  const [selectedFilter, setSelectedFilter] = useState ('all') ;'"
-"
-}
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
+
+
+
+
+
+

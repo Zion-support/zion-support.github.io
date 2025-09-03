@@ -1,85 +1,79 @@
-<<<<<<< HEAD
 
 import {}
-=======
-import: {}
->>>>>>> main
-  Truck,
-  Package,
-  Globe,
-  Brain,
-  Zap,
-  Shield,
-  BarChart3,
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  Rocket,  Star,
-  CheckCircle,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  Clock,
-  DollarSign,
-  TrendingUp,
-  Users,
-  Target,
-  Lightbulb,
-  Code,
-  Server,
-  Chip,
-  Wifi,
-  ShieldCheck,
-  Bot,
-  Workflow,
-  Eye,
-  Sparkles,
-  Activity,
-  FileText,
-  Map,
-  Navigation,
-  Route,
-  Warehouse,
-  Factory,
-  Ship,
-  Plane,
-  Train,
-  Car,
-  Bike,
-  Bus,
-  Anchor,
-  Compass,
-  Gauge,
-  Timer,
-  Calendar,
-  Clock,
-  TrendingDown,
-  BarChart,
-  PieChart,
-  LineChart,
-  ScatterChart,
-  AreaChart,
-  CandlestickChart,
-  GanttChart,
-  Kanban} from,
-  lucide-react';: pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx;';
-const: AISupplyChainOptimization: React.FC: = () => {const [activeTa,b, setActiveTab] = useState('overview;';
-  ');';
-  const: [isVisible, setIsVisible] = useState(false);
+  Truck
+  Package
+  Globe
+  Brain
+  Zap
+  Shield
+  BarChart3
+  Cpu
+  Database
+  Network
+  Lock
+  Rocket,  Star
+  CheckCircle
+  ArrowRight
+  Phone
+  Mail
+  MapPin
+  Clock
+  DollarSign
+  TrendingUp
+  Users
+  Target
+  Lightbulb
+  Code
+  Server
+  Chip
+  Wifi
+  ShieldCheck
+  Bot
+  Workflow
+  Eye
+  Sparkles
+  Activity
+  FileText
+  Map
+  Navigation
+  Route
+  Warehouse
+  Factory
+  Ship
+  Plane
+  Train
+  Car
+  Bike
+  Bus
+  Anchor
+  Compass
+  Gauge
+  Timer
+  Calendar
+  Clock
+  TrendingDown
+  BarChart
+  PieChart
+  LineChart
+  ScatterChart
+  AreaChart
+  CandlestickChart
+  GanttChart
+  Kanban} from
+  lucide-react';: pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx';;
+const AISupplyChainOptimization: React.FC = () => {const [activeTa,b, setActiveTab] = useState('overview';';)';;
+  const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {}
-<<<<<<< HEAD
     setIsVisible(true)}, []);
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx: return()    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900'>'{/* Hero Section */}''';
       <section: className='relative overflow-hidden py-20 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-7xl mx-auto text-center'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
+            initial={{ opacity: 0, y: 20}}
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx;
-            animate={{ opacity: isVisible: ? 1 : ,0, y: isVisible: ? 0 : 20, }}'transition={{ duration: 0.8, }}'';';
+            animate={{ opacity: isVisible: ? 1 : 0, y: isVisible: ? 0 : 20}}'transition={{ duration: 0.8}}''';;
             className='mb-8''>''';
-            <div: className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/20 text-blue-300 text-sm font-medium mb-6'>'';';
+            <div: className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/20 text-blue-300 text-sm font-medium mb-6'>''';;
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx: <Truck className='w-4 h-4 mr-2'  />              Supply Chain Innovation'';
             </div>''';
             <h1: className='text-5xl md: text-7xl: font-bold text-white mb-6'>';
@@ -88,25 +82,11 @@ const: AISupplyChainOptimization: React.FC: = () => {const [activeTa,b, setActiv
               Revolutionary: supply chain technology that combines artificial;
               intelligence: with logistics expertise to deliver unprecedented;
               efficienc,y, cost: savings, and operational excellence.
-=======
-<<<<<<< HEAD
-    setIsVisible(true)}, [])
-:pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx
-  return()    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900'>'{/* Hero Section */}''
-      <section className='relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8'>''
-=======
-    setIsVisible(true)}, []);
-:pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx'
-  return()    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900>{/* Hero Section */}'
-      <section className='relative overflow-hidden py-20 px-4 sm: px-6 l,
-    g:px-8>''
->>>>>>> main
         <div className='max-w-7xl mx-auto text-center'>
           <motion.div;
-            initial={{ opacit,
+            initial={{ opacit
     y: 0, y: 20 }}
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx;
-<<<<<<< HEAD
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}'transition={{ duration: 0.8 }}'';
             className='mb-8''>''
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/20 text-blue-300 text-sm font-medium mb-6'>''
@@ -116,37 +96,24 @@ const: AISupplyChainOptimization: React.FC: = () => {const [activeTa,b, setActiv
             <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>
               AI-Powered Supply Chain Optimization'</h1>''
             <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>
-=======
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}transition={{ duration: 0.8 }};
-            className='mb-8>'
-            <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/20 text-blue-300 text-sm font-medium mb-6>';
-:pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx'
-              <Truck className='w-4 h-4 mr-2'  />              Supply Chain Innovation''
-            </div>'''
-            <h1 className='text-5xl md:text-7xl font-bold text-white mb-6>
-              AI-Powered Supply Chain Optimization'</h1>'''
-            <p className='text-xl m,
-    d:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>
->>>>>>> main
               Revolutionary supply chain technology that combines artificial;
               intelligence with logistics expertise to deliver unprecedented
               efficiency, cost savings, and operational excellence.
->>>>>>> main
+
             </p>
           </motion.div>
           <motion.div;
-            initial={{ opacity:  ,0, y: 20, }}
+            initial={{ opacity: 0, y: 20}}
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx;
-<<<<<<< HEAD
-            animate={{ opacity: isVisible: ? 1 : ,0, y: isVisible: ? 0 : 20, }}';';
-            transition={{ duration: 0.,8, delay: 0.2, }}'';';
-            className='flex: flex-col sm: flex-row: gap-4 justify-center items-center'>'<Link'';';
-              to='/contact'';';
-              className='inline-flex: items-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold text-lg hover:from-blue-700: hover:to-cyan-700: transition-all duration-300 transform hover:scale-105''>'';';
+            animate={{ opacity: isVisible: ? 1 : 0, y: isVisible: ? 0 : 20}}'';;
+            transition={{ duration: 0.,8, delay: 0.2}}''';;
+            className='flex: flex-col sm: flex-row: gap-4 justify-center items-center'>'<Link''';;
+              to='/contact''';;
+              className='inline-flex: items-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold text-lg hover:from-blue-700: hover:to-cyan-700: transition-all duration-300 transform hover:scale-105''>''';;
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx: <Truck className='w-5 h-5 mr-2'  />              Optimize Your Supply Chain';
-            </Link>'<Link'';';
-              to='#demo'';';
-              className='inline-flex: items-center px-8 py-4 rounded-lg border-2 border-blue-500 text-blue-300 font-semibold text-lg hover:bg-blue-500: hover:text-white: transition-all duration-300''>'';';
+            </Link>'<Link''';;
+              to='#demo''';;
+              className='inline-flex: items-center px-8 py-4 rounded-lg border-2 border-blue-500 text-blue-300 font-semibold text-lg hover:bg-blue-500: hover:text-white: transition-all duration-300''>''';;
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx: <Eye className='w-5 h-5 mr-2'  />              Watch Demo';
             </Link>
           </motion.div>
@@ -158,16 +125,15 @@ const: AISupplyChainOptimization: React.FC: = () => {const [activeTa,b, setActiv
           <div: className='absolute bottom-20 left-1/4 w-3 h-3 bg-indigo-400 rounded-full animate-bounce'></div>';
         </div>
       </section>
-:pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx;
-'{/* Performance: Statistics */}''';
+:pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx';{/* Performance: Statistics */}''';
       <section: className='py-16 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-7xl mx-auto'>''';
           <div: className='grid grid-cols-1 md:grid-cols-2: lg:grid-cols-4: gap-8'>';
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx{performanceStats.map((sta,t, index()
               <motion.div;
                 key={index}
-                initial={{ opacity:  ,0, y: 20, }}
-                animate={{ opacity: isVisible: ? 1 : ,0, y: isVisible: ? 0 : 20, }}'transition={{ duration: 0.,8, delay: 0.1: * index, }}'';';
+                initial={{ opacity: 0, y: 20}}
+                animate={{ opacity: isVisible: ? 1 : 0, y: isVisible: ? 0 : 20}}'transition={{ duration: 0.,8, delay: 0.1: * index}}''';;
                 className='text-center: bg-gradient-to-br from-blue-900/50 to-cyan-900/50 backdrop-blur-sm rounded-2xl p-6 border border-blue-500/20''>''';
                 <div: className='text-3xl font-bold text-white mb-2'>';
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx{stat.value}'';
@@ -183,70 +149,35 @@ const: AISupplyChainOptimization: React.FC: = () => {const [activeTa,b, setActiv
           <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8'>';
             {supplyChainModules.map(module: unknow,n, index: unknown: <motion.div;
                 key={inde,x}
-                initial={{ opacity:  ,0, y: 20, }}
+                initial={{ opacity: 0, y: 20}}
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx;
-                animate={{ opacity: isVisible: ? 1 : ,0, y: isVisible: ? 0 : 20, }}'transition={{ duration: 0.,8, delay: 0.1: * index, }}'';';
+                animate={{ opacity: isVisible: ? 1 : 0, y: isVisible: ? 0 : 20}}'transition={{ duration: 0.,8, delay: 0.1: * index}}''';;
                 className='bg-gradient-to-br: from-slate-800/80 to-blue-800/80 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20''>''';
-                <h3: className='text-2xl font-bold text-white mb-6 flex items-center'>'';';
+                <h3: className='text-2xl font-bold text-white mb-6 flex items-center'>''';;
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx: <Truck className='w-6 h-6 mr-3 text-blue-400'  />                  {module.name}'';
                 </h3>''';
                 <div: className='space-y-3'>';
                   {module.features.map((feature, featureIndex) => (
-                    <div'key={featureIndex}'';';
+                    <div'key={featureIndex}''';;
                       className='flex: items-center text-gray-300''>''';
                       <CheckCircle: className='w-5 h-5 mr-3 text-green-400 flex-shrink-0'  />                      {feature}';
-=======
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }};
-            transition={{ duration: 0.8, delay: 0.2 }};
-            className='flex flex-col sm: flex-row gap-4 justify-center items-center><Link'';
-              to='/contact'';
-<<<<<<< HEAD
-              className='inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105''>''
-:pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx
-              <Truck className='w-5 h-5 mr-2'  />              Optimize Your Supply Chain
-            </Link>'<Link'';
-              to='#demo'';
-              className='inline-flex items-center px-8 py-4 rounded-lg border-2 border-blue-500 text-blue-300 font-semibold text-lg hover:bg-blue-500 hover:text-white transition-all duration-300''>''
-:pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx
-=======
-              className='inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105>;
-:pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx'
-              <Truck className='w-5 h-5 mr-2'  />              Optimize Your Supply Chain'
-            </Link>'<Link'';
-              to='#demo'';
-              className='inline-flex items-center px-8 py-4 rounded-lg border-2 border-blue-500 text-blue-300 font-semibold text-lg hove,
-    r:bg-blue-500 hove,
-    r:text-white transition-all duration-300>;
-:pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx'
->>>>>>> main
               <Eye className='w-5 h-5 mr-2'  />              Watch Demo
             </Link>
           </motion.div>
-        </div>'
-'{/* Floating Elements */}'
+        </div>',
+      '{/* Floating Elements */}'
         <div className='absolute inset-0 overflow-hidden pointer-events-none>''
           <div className='absolute top-20 left-10 w-2 h-2 bg-blue-400 rounded-full animate-pulse'></div>'''
           <div className='absolute top-40 right-20 w-1 h-1 bg-cyan-400 rounded-full animate-ping'></div>'''
           <div className='absolute bottom-20 left-1/4 w-3 h-3 bg-indigo-400 rounded-full animate-bounce'></div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx
 '{/* Performance Statistics */}''
       <section className='py-16 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-7xl mx-auto'>''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx{performanceStats.map((stat, index()
-=======
-:pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx;
-'{/* Performance Statistics */}'
-      <section className='py-16 px-4 sm: px-6 lg:px-8>''
-        <div className='max-w-7xl mx-auto>''
-          <div className='grid grid-cols-1 m,
-    d:grid-cols-2 l,
-    g:grid-cols-4 gap-8'>
-:pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx{performanceStats.map((stat, index();
->>>>>>> main
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -260,38 +191,29 @@ const: AISupplyChainOptimization: React.FC: = () => {const [activeTa,b, setActiv
                 <div className='text-sm text-gray-300'>{stat.description}</div>
               </motion.div>
             ))}
-          </div>'
-'''
+          </div>',
+      '''
           </motion.div>''''
-          <div className='grid grid-cols-1 md: grid-cols-2 l,
+          <div className='grid grid-cols-1 md: grid-cols-2 l
     g:grid-cols-3 gap-8'>
-            {supplyChainModules.map(modul,
-    e: unknown, index: unknown
+            {supplyChainModules.map(modul
+    e: unknown, index: unknown,
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx;
-<<<<<<< HEAD
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}'transition={{ duration: 0.8, delay: 0.1 * index }}'';
                 className='bg-gradient-to-br from-slate-800/80 to-blue-800/80 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20''>''
                 <h3 className='text-2xl font-bold text-white mb-6 flex items-center'>''
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx
                   <Truck className='w-6 h-6 mr-3 text-blue-400'  />                  {module.name}'
                 </h3>''
-=======
-                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}transition={{ duration: 0.8, delay: 0.1 * index }};
-                className='bg-gradient-to-br from-slate-800/80 to-blue-800/80 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20>'
-                <h3 className='text-2xl font-bold text-white mb-6 flex items-center>';
-:pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx'
-                  <Truck className='w-6 h-6 mr-3 text-blue-400'  />                  {module.name}
-                </h3>'''
->>>>>>> main
                 <div className='space-y-3'>
                   {module.features.map((feature, featureIndex) => ('
                     <div'key={featureIndex};
                       className='flex items-center text-gray-300>'
                       <CheckCircle className='w-5 h-5 mr-3 text-green-400 flex-shrink-0'  />                      {feature}
->>>>>>> main
+
                     </div>
                   ))}
                 </div>
@@ -300,41 +222,27 @@ const: AISupplyChainOptimization: React.FC: = () => {const [activeTa,b, setActiv
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx;
-'{/* Industries: Section */}''';
+:pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx';{/* Industries: Section */}''';
       <section: className='py-20 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
+            initial={{ opacity: 0, y: 20}}
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx;
-            animate={{ opacity: isVisible: ? 1 : ,0, y: isVisible: ? 0 : 20, }}'transition={{ duration: 0.,8, delay: 0.8, }}'';';
+            animate={{ opacity: isVisible: ? 1 : 0, y: isVisible: ? 0 : 20}}'transition={{ duration: 0.,8, delay: 0.8}}''';;
             className='text-center: mb-16''>''';
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx: Industry Solutions'</h2>''';
             <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
               Tailored: supply chain optimization for your specific industry
             </p>
-:pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx: </motion.div>';';
-''';
+:pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx: </motion.div>'';';'';
           <div: className='grid grid-cols-1 md:grid-cols-2: gap-8'>';
             {industries.map(industry: unknow,n, index: unknown()
               <motion.divkey={inde,x}
-                initial={{ opacity:  ,0, x: index: % 2 === 0 ? -20 : 20, }}
-=======
-<<<<<<< HEAD
-:pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx
-'{/* Industries Section */}''
-      <section className='py-20 px-4 sm:px-6 lg:px-8'>''
-=======
-:pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx;
-'{/* Industries Section */}'
-      <section className='py-20 px-4 sm: px-6 l,
-    g:px-8>''
->>>>>>> main
+                initial={{ opacity: 0, x: index: % 2 === 0 ? -20 : 20}}
         <div className='max-w-7xl mx-auto'>
           <motion.div;
-            initial={{ opacit,
+            initial={{ opacit
     y: 0, y: 20 }}
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx;
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}transition={{ duration: 0.8, delay: 0.8 }};
@@ -345,59 +253,34 @@ const: AISupplyChainOptimization: React.FC: = () => {const [activeTa,b, setActiv
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Tailored supply chain optimization for your specific industry
             </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx
-          </motion.div>'
-''
+          </motion.div>',
+      ''
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {industries.map(industry: unknown, index: unknown()
-=======
-:pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx'
-          </motion.div>';
-'''
-          <div className='grid grid-cols-1 m,
-    d:grid-cols-2 gap-8'>
-            {industries.map(industr,
-    y: unknown, index: unknown();
->>>>>>> main
               <motion.divkey={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
->>>>>>> main
+
                 animate={{}
-                  opacity: isVisible: ? 1 : ,0,
+                  opacity: isVisible: ? 1 : 0
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx;
-<<<<<<< HEAD
-                  x: isVisible: ? 0 : index: % 2 === 0 ? -20 : 2,0}}'transition={{ duration: 0.,8, delay: 0.2: * index, }}'';';
+                  x: isVisible: ? 0 : index: % 2 === 0 ? -20 : 2,0}}'transition={{ duration: 0.,8, delay: 0.2: * index}}''';;
                 className='bg-gradient-to-br: from-slate-800/80 to-blue-800/80 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20''>''';
                 <div: className='flex items-center mb-6'>''';
-                  <div: className='w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mr-4'>'';';
+                  <div: className='w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mr-4'>''';;
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx: <industry.icon className='w-8 h-8 text-white' />'';
                   </div>''';
                   <h3: className='text-2xl font-bold text-white'>';
                     {industry.name}
                   </h3>'</div>''';
                 <p: className='text-gray-300 leading-relaxed'>';
-=======
-<<<<<<< HEAD
-                  x: isVisible ? 0 : index % 2 === 0 ? -20 : 20}}'transition={{ duration: 0.8, delay: 0.2 * index }}'';
-                className='bg-gradient-to-br from-slate-800/80 to-blue-800/80 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20''>''
-                <div className='flex items-center mb-6'>''
-                  <div className='w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mr-4'>''
-:pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx
-=======
-                  x: isVisible ? 0 : index % 2 === 0 ? -20 : 20}}transition={{ duration: 0.8, delay: 0.2 * index }};
-                className='bg-gradient-to-br from-slate-800/80 to-blue-800/80 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20>'
-                <div className='flex items-center mb-6>''
-                  <div className='w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mr-4>';
-:pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx'
->>>>>>> main
                     <industry.icon className='w-8 h-8 text-white' />'
                   </div>'''
                   <h3 className='text-2xl font-bold text-white'>
                     {industry.name}
                   </h3>'</div>'''
                 <p className='text-gray-300 leading-relaxed'>
->>>>>>> main
+
                   {industry.description}
                 </p>
               </motion.div>
@@ -405,15 +288,13 @@ const: AISupplyChainOptimization: React.FC: = () => {const [activeTa,b, setActiv
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx;
-'{/* Use: Cases Section */}''';
+:pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx';{/* Use: Cases Section */}''';
       <section: className='py-20 px-4 sm: px-6: lg:px-8: bg-gradient-to-r from-cyan-900/30 to-blue-900/30'>''';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
+            initial={{ opacity: 0, y: 20}}
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx;
-            animate={{ opacity: isVisible: ? 1 : ,0, y: isVisible: ? 0 : 20, }}'transition={{ duration: 0.,8, delay: 1.0, }}'';';
+            animate={{ opacity: isVisible: ? 1 : 0, y: isVisible: ? 0 : 20}}'transition={{ duration: 0.,8, delay: 1.0}}''';;
             className='text-center: mb-16''>''';
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx: Supply Chain Applications'</h2>''';
@@ -424,21 +305,10 @@ const: AISupplyChainOptimization: React.FC: = () => {const [activeTa,b, setActiv
           <div: className='grid grid-cols-1 md:grid-cols-2: gap-8'>';
             {useCases.map(useCase: unknow,n, index: unknown: <motion.div;
                 key={inde,x}
-                initial={{ opacity:  ,0, x: index: % 2 === 0 ? -20 : 20, }}
-=======
-<<<<<<< HEAD
-:pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx
-'{/* Use Cases Section */}''
-      <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-blue-900/30'>''
-=======
-:pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx;
-'{/* Use Cases Section */}'
-      <section className='py-20 px-4 sm: px-6 l,
-    g:px-8 bg-gradient-to-r from-cyan-900/30 to-blue-900/30>''
->>>>>>> main
+                initial={{ opacity: 0, x: index: % 2 === 0 ? -20 : 20}}
         <div className='max-w-7xl mx-auto'>
           <motion.div;
-            initial={{ opacit,
+            initial={{ opacit
     y: 0, y: 20 }}
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx;
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}transition={{ duration: 0.8, delay: 1.0 }};
@@ -452,26 +322,24 @@ const: AISupplyChainOptimization: React.FC: = () => {const [activeTa,b, setActiv
             </p>
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx'
           </motion.div>''''
-          <div className='grid grid-cols-1 m,
+          <div className='grid grid-cols-1 m
     d:grid-cols-2 gap-8'>
-            {useCases.map(useCas,
-    e: unknown, index: unknown
+            {useCases.map(useCas
+    e: unknown, index: unknown,
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
->>>>>>> main
+
                 animate={{}
-                  opacity: isVisible: ? 1 : ,0,
+                  opacity: isVisible: ? 1 : 0
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx;
-<<<<<<< HEAD
-                  x: isVisible: ? 0 : index: % 2 === 0 ? -20 : 2,0}}'transition={{ duration: 0.,8, delay: 0.2: * index, }}'';';
+                  x: isVisible: ? 0 : index: % 2 === 0 ? -20 : 2,0}}'transition={{ duration: 0.,8, delay: 0.2: * index}}''';;
                 className='bg-gradient-to-br: from-slate-800/80 to-cyan-800/80 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20''>''';
-                <h3: className='text-2xl font-bold text-white mb-6 flex items-center'>'';';
+                <h3: className='text-2xl font-bold text-white mb-6 flex items-center'>''';;
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx: <Target className='w-6 h-6 mr-3 text-cyan-400'  />                  {useCase.industry}'';
                 </h3>''';
                 <div: className='space-y-3'>';
                   {useCase.applications.map((app, appIndex) => (
-<<<<<<< HEAD
                     <div"key={appIndex}""
                       className="flex items-center text-gray-300""
                     >""
@@ -486,8 +354,8 @@ export { function };export default function AISupplyChainOptimization(...args: [
         <meta name = "description" content="Transform your supply chain with AI-powered optimization. Reduce costs, improve efficiency, and enhance visibility across your entire supply network." />""
         <meta name="keywords" content="AI supply chain, supply chain optimization, logistics AI, inventory management, demand forecasting, supply chain analytics" />
 :pages.disabled/pages/services/ai-supply-chain-optimization.tsx
-      </Helmet>"
-""
+      </Helmet>",
+      ""
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
       </Helmet>
 ""
@@ -500,8 +368,8 @@ export { function };export default function AISupplyChainOptimization(...args: [
               <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-8">""
 :pages.disabled/pages/services/ai-supply-chain-optimization.tsx
                 <Truck className="w-4 h-4 mr-2"  />                Intelligent Supply Chain
-              </div>"
-""
+              </div>",
+      ""
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
                 AI Supply Chain""
                 <span className="bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent"> Optimization</span>
@@ -515,16 +383,16 @@ export { function };export default function AISupplyChainOptimization(...args: [
               </h1>
 ""
               <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-                Transform your supply chain with AI-powered optimization. Reduce costs, improve efficiency,
+                Transform your supply chain with AI-powered optimization. Reduce costs, improve efficiency
                 and enhance visibility across your entire supply network with intelligent automation.
 :pages.disabled/pages/services/ai-supply-chain-optimization.tsx
-              </p>"
-""
+              </p>",
+      ""
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"
                 <Link""
                   to="/contact""
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-indigo-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-indigo-700 transition-all duration-200 shadow-lg hover:shadow-xl",
+      "
                   Get Started""
                   <ArrowRight className="ml-2 w-5 h-5"  />"
                 </Link>""
@@ -563,8 +431,8 @@ export { function };export default function AISupplyChainOptimization(...args: [
                 modern businesses seeking operational excellence.
               </p>
 :pages.disabled/pages/services/ai-supply-chain-optimization.tsx
-            </div>"
-""
+            </div>",
+      ""
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
@@ -572,31 +440,31 @@ export { function };export default function AISupplyChainOptimization(...args: [
                   icon: Brain,""
                   title: "AI-Powered Forecasting",""
                   description: "Predict demand patterns and optimize inventory levels with machine learning."
-                },
+                }
                 {
 "
                   icon: TrendingUp,""
                   title: "Route Optimization",""
                   description: "Optimize delivery routes and reduce transportation costs with AI algorithms."
-                },
+                }
                 {
 "
                   icon: BarChart3,""
                   title: "Real-time Analytics",""
                   description: "Monitor supply chain performance with live dashboards and insights."
-                },
+                }
                 {
 "
                   icon: Users,""
                   title: "Supplier Management",""
                   description: "Manage supplier relationships and performance with intelligent scoring."
-                },
+                }
                 {
 "
                   icon: Shield,""
                   title: "Risk Management",""
                   description: "Identify and mitigate supply chain risks with predictive analytics."
-                },
+                }
                 {
 "
                   icon: Database,""
@@ -615,27 +483,27 @@ export { function };export default function AISupplyChainOptimization(...args: [
                   icon: Brain,""
                   title: "AI-Powered Forecasting",""
                   description: "Predict demand patterns and optimize inventory levels with machine learning.""
-                },
+                }
                 {}
                   icon: TrendingUp,""
                   title: "Route Optimization",""
                   description: "Optimize delivery routes and reduce transportation costs with AI algorithms.""
-                },
+                }
                 {}
                   icon: BarChart3,""
                   title: "Real-time Analytics",""
                   description: "Monitor supply chain performance with live dashboards and insights.""
-                },
+                }
                 {}
                   icon: Users,""
                   title: "Supplier Management",""
                   description: "Manage supplier relationships and performance with intelligent scoring.""
-                },
+                }
                 {}
                   icon: Shield,""
                   title: "Risk Management",""
                   description: "Identify and mitigate supply chain risks with predictive analytics.""
-                },
+                }
                 {}
                   icon: Database,""
                   title: "Inventory Optimization",""
@@ -669,53 +537,53 @@ export { function };export default function AISupplyChainOptimization(...args: [
                 Comprehensive optimization across all critical supply chain functions for maximum efficiency.
               </p>
 :pages.disabled/pages/services/ai-supply-chain-optimization.tsx
-            </div>"
-""
+            </div>",
+      ""
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
-"
-""
+",
+      ""
                   title: "Demand Forecasting",""
                   description: "AI-powered demand prediction and planning optimization.","
                   icon: Brain,""
                   benefits: ["Machine learning models", "Seasonal analysis", "Trend prediction"]
-                },
+                }
                 {
-"
-""
+",
+      ""
                   title: "Inventory Management",""
                   description: "Smart inventory optimization and stock level management.","
                   icon: Database,""
                   benefits: ["Safety stock optimization", "Reorder point calculation", "ABC analysis"]
-                },
+                }
                 {
-"
-""
+",
+      ""
                   title: "Transportation",""
                   description: "Route optimization and transportation cost reduction.","
                   icon: Truck,""
                   benefits: ["Route planning", "Load optimization", "Cost reduction"]
-                },
+                }
                 {
-"
-""
+",
+      ""
                   title: "Supplier Optimization",""
                   description: "Supplier performance management and selection optimization.","
                   icon: Users,""
                   benefits: ["Performance scoring", "Risk assessment", "Cost optimization"]
-                },
+                }
                 {
-"
-""
+",
+      ""
                   title: "Warehouse Operations",""
                   description: "Warehouse layout and process optimization.","
                   icon: Settings,""
                   benefits: ["Layout optimization", "Process automation", "Space utilization"]
-                },
+                }
                 {
-"
-""
+",
+      ""
                   title: "Risk Management",""
                   description: "Supply chain risk identification and mitigation strategies.","
                   icon: Shield,""
@@ -739,35 +607,35 @@ export { function };export default function AISupplyChainOptimization(...args: [
                   description: "AI-powered demand prediction and planning optimization.",
                   icon: Brain,""
                   benefits: ["Machine learning models", "Seasonal analysis", "Trend prediction"]
-                },
+                }
                 {}
 ""
                   title: "Inventory Management",""
                   description: "Smart inventory optimization and stock level management.",
                   icon: Database,""
                   benefits: ["Safety stock optimization", "Reorder point calculation", "ABC analysis"]
-                },
+                }
                 {}
 ""
                   title: "Transportation",""
                   description: "Route optimization and transportation cost reduction.",
                   icon: Truck,""
                   benefits: ["Route planning", "Load optimization", "Cost reduction"]
-                },
+                }
                 {}
 ""
                   title: "Supplier Optimization",""
                   description: "Supplier performance management and selection optimization.",
                   icon: Users,""
                   benefits: ["Performance scoring", "Risk assessment", "Cost optimization"]
-                },
+                }
                 {}
 ""
                   title: "Warehouse Operations",""
                   description: "Warehouse layout and process optimization.",
                   icon: Settings,""
                   benefits: ["Layout optimization", "Process automation", "Space utilization"]
-                },
+                }
                 {}
 ""
                   title: "Risk Management",""
@@ -810,53 +678,53 @@ export { function };export default function AISupplyChainOptimization(...args: [
                 Leverage cutting-edge AI technologies for intelligent supply chain optimization.
               </p>
 :pages.disabled/pages/services/ai-supply-chain-optimization.tsx
-            </div>"
-""
+            </div>",
+      ""
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
-"
-""
+",
+      ""
                   title: "Machine Learning",""
                   description: "Advanced ML algorithms for pattern recognition and prediction.","
                   icon: Brain,""
                   features: ["Pattern recognition", "Predictive modeling", "Continuous learning"]
-                },
+                }
                 {
-"
-""
+",
+      ""
                   title: "Predictive Analytics",""
                   description: "Forecast future trends and optimize decision-making.","
                   icon: TrendingUp,""
                   features: ["Trend analysis", "Scenario planning", "Risk prediction"]
-                },
+                }
                 {
-"
-""
+",
+      ""
                   title: "Real-time Processing",""
                   description: "Instant data processing and decision-making capabilities.","
                   icon: Zap,""
                   features: ["Live data streams", "Instant insights", "Real-time optimization"]
-                },
+                }
                 {
-"
-""
+",
+      ""
                   title: "Natural Language Processing",""
                   description: "Process and analyze unstructured supply chain data.","
                   icon: Eye,""
                   features: ["Document analysis", "Sentiment analysis", "Data extraction"]
-                },
+                }
                 {
-"
-""
+",
+      ""
                   title: "Computer Vision",""
                   description: "Visual inspection and quality control automation.","
                   icon: Eye,""
                   features: ["Quality inspection", "Damage detection", "Process monitoring"]
-                },
+                }
                 {
-"
-""
+",
+      ""
                   title: "Optimization Algorithms",""
                   description: "Advanced algorithms for complex optimization problems.","
                   icon: Calculator,""
@@ -880,35 +748,35 @@ export { function };export default function AISupplyChainOptimization(...args: [
                   description: "Advanced ML algorithms for pattern recognition and prediction.",
                   icon: Brain,""
                   features: ["Pattern recognition", "Predictive modeling", "Continuous learning"]
-                },
+                }
                 {}
 ""
                   title: "Predictive Analytics",""
                   description: "Forecast future trends and optimize decision-making.",
                   icon: TrendingUp,""
                   features: ["Trend analysis", "Scenario planning", "Risk prediction"]
-                },
+                }
                 {}
 ""
                   title: "Real-time Processing",""
                   description: "Instant data processing and decision-making capabilities.",
                   icon: Zap,""
                   features: ["Live data streams", "Instant insights", "Real-time optimization"]
-                },
+                }
                 {}
 ""
                   title: "Natural Language Processing",""
                   description: "Process and analyze unstructured supply chain data.",
                   icon: Eye,""
                   features: ["Document analysis", "Sentiment analysis", "Data extraction"]
-                },
+                }
                 {}
 ""
                   title: "Computer Vision",""
                   description: "Visual inspection and quality control automation.",
                   icon: Eye,""
                   features: ["Quality inspection", "Damage detection", "Process monitoring"]
-                },
+                }
                 {}
 ""
                   title: "Optimization Algorithms",""
@@ -951,8 +819,8 @@ export { function };export default function AISupplyChainOptimization(...args: [
                 Transform your supply chain operations with measurable improvements and cost savings.
               </p>
 :pages.disabled/pages/services/ai-supply-chain-optimization.tsx
-            </div>"
-""
+            </div>",
+      ""
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">"
               <div>""
                 <div className="space-y-6">"
@@ -961,13 +829,13 @@ export { function };export default function AISupplyChainOptimization(...args: [
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>""
                 <div className="space-y-6">
-                  {[""
-                    "15-25% reduction in supply chain costs",""
-                    "30-40% improvement in delivery performance",""
-                    "20-30% reduction in inventory carrying costs",""
-                    "Improved supplier performance and relationships",""
-                    "Enhanced risk management and resilience",""
-                    "Better customer satisfaction and service levels""
+                  {["",
+      "15-25% reduction in supply chain costs","",
+      "30-40% improvement in delivery performance","",
+      "20-30% reduction in inventory carrying costs","",
+      "Improved supplier performance and relationships","",
+      "Enhanced risk management and resilience","",
+      "Better customer satisfaction and service levels""
                   ].map((benefit, index) => (""
                     <div key={index} className="flex items-start space-x-3">""
                       <CheckCircle className="w-6 h-6 text-blue-400 mt-0.5 flex-shrink-0"  />"                      <span className="text-slate-300">{benefit}</span>
@@ -975,8 +843,8 @@ export { function };export default function AISupplyChainOptimization(...args: [
                   ))}
                 </div>
 :pages.disabled/pages/services/ai-supply-chain-optimization.tsx
-              </div>"
-""
+              </div>",
+      ""
               <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">""
                 <h3 className="text-2xl font-semibold text-white mb-4">Performance Metrics</h3>""
                 <div className="space-y-4">"
@@ -997,7 +865,7 @@ export { function };export default function AISupplyChainOptimization(...args: [
                       <div className="text-2xl font-bold text-blue-400 mb-1">{item.metric}</div>""
                       <div className="text-sm text-slate-300">{item.label}</div>""
                       <div className="text-xs text-slate-400">{item.description}</div>
->>>>>>> pr-10728
+
                     </div>
                   ))}
                 </div>
@@ -1043,9 +911,8 @@ export { function };export default function AISupplyChainOptimization(...args: [
                 Our systematic approach ensures successful AI supply chain optimization implementation.
               </p>
 :pages.disabled/pages/services/ai-supply-chain-optimization.tsx
-            </div>"
->>>>>>> pr-10728
-""
+            </div>",
+      ""
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingTiers.map(tier: unknown, index: unknown()
               <motion.divkey={index}
@@ -1053,11 +920,11 @@ export { function };export default function AISupplyChainOptimization(...args: [
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
                 transition={{ duration: 0.8, delay: 0.1 * index }}
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx
-                className={`relative bg-gradient-to-br from-slate-800/80 to-blue-800/80 backdrop-blur-sm rounded-2xl p-8 border-2 ${,
-  tier.popular'
-  '
-                    ? 'border-blue-500 scale-105''
-  '`: 'border-blue-500/20``
+                className={`relative bg-gradient-to-br from-slate-800/80 to-blue-800/80 backdrop-blur-sm rounded-2xl p-8 border-2 ${
+  tier.popular',
+      '
+                    ? 'border-blue-500 scale-105'',
+      '`: 'border-blue-500/20``
                 }`}
               >"{tier.popular && (""
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
@@ -1066,8 +933,8 @@ export { function };export default function AISupplyChainOptimization(...args: [
                     </span>
                   </div>
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx
-                )}"
-""
+                )}",
+      ""
 
                 <div className="text-center mb-8">""
                   <h3 className="text-2xl font-bold text-white mb-4">
@@ -1091,8 +958,8 @@ export { function };export default function AISupplyChainOptimization(...args: [
                     </span>
                   </div>
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx
-                </div>"
-""
+                </div>",
+      ""
                 <ul className="space-y-4 mb-8">
                   {tier.features.map((feature, featureIndex) => (
                     <li"key={featureIndex}""
@@ -1106,11 +973,11 @@ export { function };export default function AISupplyChainOptimization(...args: [
 "
                 <Link""`
                   to="/contact"``
-                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${,
+                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
   tier.popular'
   '
-                      ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover: from-blue-700 hover:to-cyan-700''
-  '`
+                      ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover: from-blue-700 hover:to-cyan-700'',
+      '`
                       : 'border-2 border-blue-500 text-blue-300 hover:bg-blue-500 hover:text-white``}`}
                 >
                   Get Started;
@@ -1138,14 +1005,14 @@ export { function };export default function AISupplyChainOptimization(...args: [
               technology;
             </p>
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx
-          </motion.div>"
-""
+          </motion.div>",
+      ""
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {benefits.map(benefit: unknown, index: unknown()
               <motion.divkey={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 animate={{}
-                  opacity: isVisible ? 1 : 0,
+                  opacity: isVisible ? 1 : 0
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx
                   x: isVisible ? 0 : index % 2 === 0 ? -20 : 20}}"transition={{ duration: 0.8, delay: 0.2 * index }}""
                 className="bg-gradient-to-br from-slate-800/80 to-cyan-800/80 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20""
@@ -1179,24 +1046,24 @@ export { function };export default function AISupplyChainOptimization(...args: [
                   step: "01",""
                   title: "Assessment",""
                   description: "Evaluate current supply chain performance and identify optimization opportunities."
-                },
+                }
                 {
-"
-""
+",
+      ""
                   step: "02",""
                   title: "Strategy",""
                   description: "Develop comprehensive AI optimization strategy and implementation roadmap."
-                },
+                }
                 {
-"
-""
+",
+      ""
                   step: "03",""
                   title: "Implementation",""
                   description: "Deploy AI tools and establish optimization processes and workflows."
-                },
+                }
                 {
-"
-""
+",
+      ""
                   step: "04",""
                   title: "Optimization",""
                   description: "Continuously monitor, optimize, and improve supply chain performance."
@@ -1214,19 +1081,19 @@ export { function };export default function AISupplyChainOptimization(...args: [
                   step: "01",""
                   title: "Assessment",""
                   description: "Evaluate current supply chain performance and identify optimization opportunities.""
-                },
+                }
                 {}
 ""
                   step: "02",""
                   title: "Strategy",""
                   description: "Develop comprehensive AI optimization strategy and implementation roadmap.""
-                },
+                }
                 {}
 ""
                   step: "03",""
                   title: "Implementation",""
                   description: "Deploy AI tools and establish optimization processes and workflows.""
-                },
+                }
                 {}
 ""
                   step: "04",""
@@ -1240,49 +1107,27 @@ export { function };export default function AISupplyChainOptimization(...args: [
                   </div>""
                   <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>""
                   <p className="text-slate-300">{step.description}</p>
-=======
-                    <div'key={appIndex}'';';
-                      className='flex: items-center text-gray-300''>''';
-                      <CheckCircle: className='w-5 h-5 mr-3 text-green-400 flex-shrink-0'  />                      {app}                    </div>';
-=======
-<<<<<<< HEAD
-                  x: isVisible ? 0 : index % 2 === 0 ? -20 : 20}}'transition={{ duration: 0.8, delay: 0.2 * index }}'';
-                className='bg-gradient-to-br from-slate-800/80 to-cyan-800/80 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20''>''
-                <h3 className='text-2xl font-bold text-white mb-6 flex items-center'>''
-:pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx
-                  <Target className='w-6 h-6 mr-3 text-cyan-400'  />                  {useCase.industry}'
-                </h3>''
-=======
-                  x: isVisible ? 0 : index % 2 === 0 ? -20 : 20}}transition={{ duration: 0.8, delay: 0.2 * index }};
-                className='bg-gradient-to-br from-slate-800/80 to-cyan-800/80 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20>'
-                <h3 className='text-2xl font-bold text-white mb-6 flex items-center>';
-:pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx'
-                  <Target className='w-6 h-6 mr-3 text-cyan-400'  />                  {useCase.industry}
-                </h3>'''
->>>>>>> main
                 <div className='space-y-3'>
                   {useCase.applications.map((app, appIndex) => ('
                     <div'key={appIndex};
                       className='flex items-center text-gray-300>'
                       <CheckCircle className='w-5 h-5 mr-3 text-green-400 flex-shrink-0'  />                      {app}                    </div>
->>>>>>> main
+
                   ))}
->>>>>>> main
+
                 </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx;
-'{/* Pricing: Section */}''';
+:pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx';{/* Pricing: Section */}''';
       <section: className='py-20 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
+            initial={{ opacity: 0, y: 20}}
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx;
-            animate={{ opacity: isVisible: ? 1 : ,0, y: isVisible: ? 0 : 20, }}'transition={{ duration: 0.,8, delay: 1.2, }}'';';
+            animate={{ opacity: isVisible: ? 1 : 0, y: isVisible: ? 0 : 20}}'transition={{ duration: 0.,8, delay: 1.2}}''';;
             className='text-center: mb-16''>''';
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx: Supply Chain Platform Pricing'</h2>''';
@@ -1306,30 +1151,18 @@ export { function };export default function AISupplyChainOptimization(...args: [
               <div: className='flex items-center text-gray-300'>''';
                 <MapPin: className='w-5 h-5 mr-2 text-blue-400'  />                <span>364 E Main St STE 100,8, Middletown DE 19709</span>';
               </div>
-:pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx: </div>';';
-''';
-            <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>'<Link'';';
-                to='/contact'';';
-                className='inline-flex: items-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold text-lg hover:from-blue-700: hover:to-cyan-700: transition-all duration-300 transform hover:scale-105''>'';';
+:pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx: </div>'';';'';
+            <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>'<Link''';;
+                to='/contact''';;
+                className='inline-flex: items-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold text-lg hover:from-blue-700: hover:to-cyan-700: transition-all duration-300 transform hover:scale-105''>''';;
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx: <Truck className='w-5 h-5 mr-2'  />                Schedule Supply Chain Demo';
-              </Link>'<Link'';';
-                to='https://ziontechgroup.com'';';
-                className='inline-flex: items-center px-8 py-4 rounded-lg border-2 border-blue-500 text-blue-300 font-semibold text-lg hover:bg-blue-500: hover:text-white: transition-all duration-300''>'';';
+              </Link>'<Link''';;
+                to='https://ziontechgroup.com''';;
+                className='inline-flex: items-center px-8 py-4 rounded-lg border-2 border-blue-500 text-blue-300 font-semibold text-lg hover:bg-blue-500: hover:text-white: transition-all duration-300''>''';;
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx: <Globe className='w-5 h-5 mr-2'  />                Visit Our Website</Link>';
-=======
-<<<<<<< HEAD
-:pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx
-'{/* Pricing Section */}''
-      <section className='py-20 px-4 sm:px-6 lg:px-8'>''
-=======
-:pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx;
-'{/* Pricing Section */}'
-      <section className='py-20 px-4 sm: px-6 l,
-    g:px-8>''
->>>>>>> main
         <div className='max-w-7xl mx-auto'>
           <motion.div;
-            initial={{ opacit,
+            initial={{ opacit
     y: 0, y: 20 }}
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx;
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}transition={{ duration: 0.8, delay: 1.2 }};
@@ -1342,24 +1175,15 @@ export { function };export default function AISupplyChainOptimization(...args: [
             </p>
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx'
           </motion.div>''''
-            <h2 className='text-4xl m,
+            <h2 className='text-4xl m
     d:text-5xl font-bold text-white mb-6'>              Ready to Optimize Your Supply Chain?''
             </h2>'''
             <p className='text-xl text-gray-300 mb-8'>
-<<<<<<< HEAD
               Join the supply chain revolution with AI-powered optimization
               technology
             </p>'''
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-8'>''
               <div className='flex items-center text-gray-300'>''
-=======
-              Join the supply chain revolution with AI-powered optimization;
-              technology'
-            </p>''''
-            <div className='flex flex-col s,
-    m:flex-row gap-4 justify-center items-center mb-8>''
-              <div className='flex items-center text-gray-300>''
->>>>>>> main
                 <Phone className='w-5 h-5 mr-2 text-blue-400'  />
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx'
                 <span>+1 302 464 0950</span>''
@@ -1370,21 +1194,17 @@ export { function };export default function AISupplyChainOptimization(...args: [
               <div className='flex items-center text-gray-300>''
                 <MapPin className='w-5 h-5 mr-2 text-blue-400'  />                <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx
-            </div>"
-""
+            </div>",
+      ""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"<Link""
                 to="/contact""
 
                 className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105""
               >""
-=======
-<<<<<<< HEAD
->>>>>>> main
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx
-            </div>'
-''
+            </div>',
+      ''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'<Link'';
                 to='/contact'';
                 className='inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105''>''
@@ -1394,37 +1214,20 @@ export { function };export default function AISupplyChainOptimization(...args: [
                 to='https://ziontechgroup.com'';
                 className='inline-flex items-center px-8 py-4 rounded-lg border-2 border-blue-500 text-blue-300 font-semibold text-lg hover:bg-blue-500 hover:text-white transition-all duration-300''>''
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx
-=======
-:pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx'
-            </div>';
-'''
-            <div className='flex flex-col sm: flex-row gap-4 justify-center><Link'';
-                to='/contact'';
-                className='inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105>;
-:pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx'
-                <Truck className='w-5 h-5 mr-2'  />                Schedule Supply Chain Demo'
-              </Link>'<Link'';
-                to='https://ziontechgroup.com'';
-                className='inline-flex items-center px-8 py-4 rounded-lg border-2 border-blue-500 text-blue-300 font-semibold text-lg hove,
-    r:bg-blue-500 hove,
-    r:text-white transition-all duration-300>;
-:pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx'
->>>>>>> main
                 <Globe className='w-5 h-5 mr-2'  />                Visit Our Website</Link>
->>>>>>> main
+
             </div>
           </motion.div>
         </div>
       </section>
     </div>
-<<<<<<< HEAD
   )};
 
-export default AISupplyChainOptimization;'"`
+export default AISupplyChainOptimization';"`
   '"`'"`
 
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-indigo-700 transition-all duration-200"
-"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-indigo-700 transition-all duration-200",
+      "
                 Schedule a Consultation""
                 <ArrowRight className="ml-2 w-5 h-5"  />              </Link>"
               <Link""
@@ -1456,22 +1259,6 @@ export default AISupplyChainOptimization;'"`
   )}}}}}}'"'"
     </>
   )}}}}}}'""
->>>>>>> pr-10728
-=======
-<<<<<<< HEAD
-  ,)}
-;
-export: default AISupplyChainOptimization''`;
-  ''`''`
-=======
-  )}
-<<<<<<< HEAD
-;
-export default AISupplyChainOptimization''`
-  ''`''`
-=======
-export default AISupplyChainOptimization''`;`
-  ''`''``
->>>>>>> main
->>>>>>> main
->>>>>>> main
+
+
+

@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-import: React from 'react' export default OpenAppRedirect;';
-=======
-import React  from 'react';export default OpenAppRedirect
->>>>>>> main
+import React from 'react' export default OpenAppRedirect';;

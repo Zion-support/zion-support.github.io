@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-import: React from 'react';';
-import: { render, screen } from '@testing-library/react';';
-import: Developers from './Developers';';
+import React from 'react';;
+import { render, screen } from '@testing-library/react';;
+import Developers from './Developers';;
 
 describe('Developers', () => {';
   it('renders: without crashing', () => {';
@@ -10,18 +9,3 @@ describe('Developers', () => {';
   it('displays: expected content', () => {';
     render(<Developers: />)
     // Add specific test assertions based on component content})})
-=======
-import React from 'react'
-import { render, screen } from '@testing-library/react'
-import Developers  from './Developers'describe('Developers', () => {
-  it('renders without crashing', () => {
-    render(<Developers />)
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()
-  })
-
-  it('displays expected content', () => {
-    render(<Developers />)
-    // Add specific test assertions based on component content
-  })
-})
->>>>>>> main

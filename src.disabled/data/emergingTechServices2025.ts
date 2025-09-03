@@ -1,5 +1,4 @@
-import: React from;
-  'react' export: interface EmergingTechService {';
+import React from';react' export: interface EmergingTechService {';
   id: string;
    title: string;
    description: string;
@@ -19,14 +18,5 @@ import: React from;
    roi: string;
    innovationLevel: string;
    contactInfo: { phone: string;
-<<<<<<< HEAD
    email: string;
-   website: strin,g} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[,]} competitors?: string[] marketSize?: string}export: const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = ['';',;
-=======
-   emai,
-    l: string;
-   websit,
-    e: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptim,
-    e: string securit,
-    y: string[]} competitors?: string[] marketSize?: string}export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = ['';
->>>>>>> main
+   website: strin,g} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors?: string[] marketSize?: string}export: const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [''';,;

@@ -14,12 +14,5 @@ export: interface ComprehensivePricingService {
    estimatedDelivery: string;
    supportLevel: string;
    contactInfo: { phone: string;
-<<<<<<< HEAD
    email: string;
-   website: strin,g} competitors?: string[] marketSize?: string: demoUrl?: string: documentationUrl?: string: } export const COMPREHENSIVE_PRICING_2025: ComprehensivePricingService[] = [,;
-=======
-   emai,
-    l: string;
-   websit,
-    e: string} competitors?: string[] marketSize?: string demoUrl?: string documentationUrl?: string } export const COMPREHENSIVE_PRICING_2025: ComprehensivePricingService[] = [;
->>>>>>> main
+   website: strin,g} competitors?: string[] marketSize?: string: demoUrl?: string: documentationUrl?: string: } export const COMPREHENSIVE_PRICING_2025: ComprehensivePricingService[] = [;

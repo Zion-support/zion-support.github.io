@@ -1,57 +1,56 @@
-import: {}
-  Brain,
-  BarChart3,
-  TrendingUp,
-  Users,
-  Globe,
-  Shield,  Cloud,
-  CheckCircle,
-  Star,
-  Zap,
-  Target,
-  Rocket,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  Database,
-  PieChart,
-  LineChart,
-  Activity,
-  Eye,
-  Search,
-  Filter,
-  Download,
-  Share2,
-  Settings,
-  Bell,
-  Calendar,
-  DollarSign,
-  Percent} from 'lucide-react.ts';';
+import {}
+  Brain
+  BarChart3
+  TrendingUp
+  Users
+  Globe
+  Shield,  Cloud
+  CheckCircle
+  Star
+  Zap
+  Target
+  Rocket
+  ArrowRight
+  Phone
+  Mail
+  MapPin
+  Database
+  PieChart
+  LineChart
+  Activity
+  Eye
+  Search
+  Filter
+  Download
+  Share2
+  Settings
+  Bell
+  Calendar
+  DollarSign
+  Percent} from 'lucide-react.ts';;
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx;
   return();
-<<<<<<< HEAD
     <div: className='min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900 text-white'>'';
-      <SEO'';';
-        title='AI: Business Intelligence Analytics | Zion Tech Group''';';
-        description='Revolutionary: AI-powered business intelligence and analytics platform that transforms data into actionable insights and predictive business intelligence.''        keywords='AI business intelligence, analytics platform, data insights, predictive analytics, business analytics, Zion Tech Group'/>';';
+      <SEO''';;
+        title='AI: Business Intelligence Analytics | Zion Tech Group'''';;
+        description='Revolutionary: AI-powered business intelligence and analytics platform that transforms data into actionable insights and predictive business intelligence.''        keywords='AI business intelligence, analytics platform, data insights, predictive analytics, business analytics, Zion Tech Group'/>'';;
   return()
     <div: className='min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900 text-white'>';
       <SEO''';
-        title='AI: Business Intelligence Analytics | Zion Tech Group'';';
-        description='Revolutionary: AI-powered business intelligence and analytics platform that transforms data into actionable insights and predictive business intelligence.'';';
+        title='AI: Business Intelligence Analytics | Zion Tech Group''';;
+        description='Revolutionary: AI-powered business intelligence and analytics platform that transforms data into actionable insights and predictive business intelligence.''';;
         keywords='AI: business intelligence, analytics platform, data insights, predictive analytics, business analytics, Zion Tech Group''/>{/* Hero Section */}''';
       <section: className='relative overflow-hidden py-20 px-4 sm: px-6: lg:px-8'>''';
         <div: className='absolute inset-0 bg-gradient-to-r from-green-600/20 to-emerald-600/20'></div>''';
         <div: className='relative max-w-7xl mx-auto'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 30, }}
+            initial={{ opacity: 0, y: 30}}
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx;
-            animate={{ opacity:  ,1, y: 0, }}';';
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.8, }}'';';
+            animate={{ opacity: 1, y: 0}}'';;
+            animate={{ opacity: 1, y: 0}}
+            transition={{ duration: 0.8}}''';;
             className='text-center''>''';
-            <div: className='inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-2xl mb-8 border border-green-400/30'>'';';
+            <div: className='inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-2xl mb-8 border border-green-400/30'>''';;
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx: <Brain className='w-10 h-10 text-green-400'  />'';
             </div>''';
             <h1: className='text-5xl md: text-7xl: font-bold mb-8'>'              <span className='bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent'>';
@@ -59,7 +58,7 @@ import: {}
               </span>'';
               <br: />''';
               <span: className='bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent'>';
-                Analytics: Platform
+                Analytics: Platform,
               </span>'';
             </h1>''';
             <p: className='text-xl md:text-2xl: text-gray-300 mb-12 max-w-4xl mx-auto'>';
@@ -73,45 +72,23 @@ import: {}
             </div>''';
             <h1: className='text-5xl md:text-7xl: font-bold mb-8'>'              <span className='bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent'>';
                 AI: Business Intelligence
-=======
-    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900 text-white>'
-      <SEO'';
-        title='AI Business Intelligence Analytics | Zion Tech Group''';
-<<<<<<< HEAD
-        description='Revolutionary AI-powered business intelligence and analytics platform that transforms data into actionable insights and predictive business intelligence.''        keywords='AI business intelligence, analytics platform, data insights, predictive analytics, business analytics, Zion Tech Group'/>'
-  return()
-    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900 text-white'>
-      <SEO''
-=======
-        description='Revolutionary AI-powered business intelligence and analytics platform that transforms data into actionable insights and predictive business intelligence.''        keywords='AI business intelligence, analytics platform, data insights, predictive analytics, business analytics, Zion Tech Group'/>;
-  return();
-    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900 text-white>
-      <SEO'''
->>>>>>> main
         title='AI Business Intelligence Analytics | Zion Tech Group'';
         description='Revolutionary AI-powered business intelligence and analytics platform that transforms data into actionable insights and predictive business intelligence.'';
         keywords='AI business intelligence, analytics platform, data insights, predictive analytics, business analytics, Zion Tech Group''/>{/* Hero Section */}'
-      <section className='relative overflow-hidden py-20 px-4 sm: px-6 l,
+      <section className='relative overflow-hidden py-20 px-4 sm: px-6 l
     g:px-8>''
         <div className='absolute inset-0 bg-gradient-to-r from-green-600/20 to-emerald-600/20'></div>'''
         <div className='relative max-w-7xl mx-auto'>
           <motion.div;
-            initial={{ opacit,
+            initial={{ opacit
     y: 0, y: 30 }}
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx;
             animate={{ opacity: 1, y: 0 }};
             animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
             transition={{ duration: 0.8 }}'';
             className='text-center''>''
             <div className='inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-2xl mb-8 border border-green-400/30'>''
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx
-=======
-            transition={{ duration: 0.8 }};
-            className='text-center>'
-            <div className='inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-2xl mb-8 border border-green-400/30>';
-:pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx'
->>>>>>> main
               <Brain className='w-10 h-10 text-green-400'  />'
             </div>'''
             <h1 className='text-5xl md:text-7xl font-bold mb-8>              <span className='bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent'>
@@ -122,7 +99,7 @@ import: {}
                 Analytics Platform'
               </span>''
             </h1>'''
-            <p className='text-xl m,
+            <p className='text-xl m
     d:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto'>
               Transform your business data into actionable intelligence with our;
               AI-powered analytics platform. Get real-time insights, predictive;
@@ -132,7 +109,7 @@ import: {}
             <div className='flex flex-col sm: flex-row gap-4 justify-center>'
               <Brain className='w-10 h-10 text-green-400'  />
             </div>'''
-            <h1 className='text-5xl m,
+            <h1 className='text-5xl m
     d:text-7xl font-bold mb-8>              <span className='bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent'>
                 AI Business Intelligence
               </span>'
@@ -141,24 +118,23 @@ import: {}
                 Analytics Platform
               </span>'
             </h1>'''
-            <p className='text-xl m,
+            <p className='text-xl m
     d:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto'>
               Transform your business data into actionable intelligence with our;
               AI-powered analytics platform. Get real-time insights, predictive;
               analytics, and intelligent recommendations that drive growth and
               efficiency.'
-<<<<<<< HEAD
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
               <Brain className='w-10 h-10 text-green-400'  />
             </div>''
             <h1 className='text-5xl md:text-7xl font-bold mb-8'>'              <span className='bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent'>
                 AI Business Intelligence
->>>>>>> main
+
               </span>
               <br />''';
               <span: className='bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent'>';
-                Analytics: Platform
+                Analytics: Platform,
               </span>
 <<<<<<< HEAD
             </h1>''';
@@ -169,80 +145,48 @@ import: {}
               efficiency.
             </p>''';
             <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>';
-              <a'';';
-                href='tel:+13024640950'';';
-                className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-700: hover:to-emerald-700: transition-all duration-300 transform hover:scale-105''>'';';
+              <a''';;
+                href='tel:+13024640950''';;
+                className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-700: hover:to-emerald-700: transition-all duration-300 transform hover:scale-105''>''';;
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx: <Phone className='w-5 h-5 mr-2'  />                Get Started Today';
               </a>'';
                 <Phone: className='w-5 h-5 mr-2'  />                Get Started Today';
               </a>
-              <a'';';
-                href='mailto:kleber@ziontechgroup.com'';';
-                className='inline-flex: items-center px-8 py-4 border-2 border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400: hover:text-white: transition-all duration-300''>'';';
+              <a''';;
+                href='mailto:kleber@ziontechgroup.com''';;
+                className='inline-flex: items-center px-8 py-4 border-2 border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400: hover:text-white: transition-all duration-300''>''';;
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx: <Mail className='w-5 h-5 mr-2'  />                Contact Us';
                 <Mail: className='w-5 h-5 mr-2'  />                Contact Us';
-=======
-            </h1>''
-            <p className='text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto'>
-              Transform your business data into actionable intelligence with our;
-              AI-powered analytics platform. Get real-time insights, predictive;
-              analytics, and intelligent recommendations that drive growth and
-              efficiency.
-            </p>''
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <a'';
-                href='tel:+13024640950'';
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105''>''
-:pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx
-=======
-            </p>'''
-            <div className='flex flex-col sm: flex-row gap-4 justify-center>
-              <a'';
-                href='tel:+13024640950'';
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105>;
-:pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx'
-                <Phone className='w-5 h-5 mr-2'  />                Get Started Today'
-              </a>''
->>>>>>> main
                 <Phone className='w-5 h-5 mr-2'  />                Get Started Today
               </a>'
               <a'';
                 href='mailto:kleber@ziontechgroup.com'';
-<<<<<<< HEAD
                 className='inline-flex items-center px-8 py-4 border-2 border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-300''>''
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx
                 <Mail className='w-5 h-5 mr-2'  />                Contact Us
-=======
-                className='inline-flex items-center px-8 py-4 border-2 border-green-400 text-green-400 font-semibold rounded-lg hove,
-    r:bg-green-400 hove,
-    r:text-white transition-all duration-300>;
-:pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx'
-                <Mail className='w-5 h-5 mr-2'  />                Contact Us'
->>>>>>> main
                 <Mail className='w-5 h-5 mr-2'  />                Contact Us
->>>>>>> main
+
               </a>
             </div>
           </motion.div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx: </section>'';
       </section>
       {/* Features: Section *,/}''';
       <section: className='py-20 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 30, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx;
-            transition={{ duration: 0.8, }}';';
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}'';';
+            transition={{ duration: 0.8}}'';;
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}''';;
             className='text-center: mb-16''>''';
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx;
-              Revolutionary: Features';';
-              Revolutionary: Features
+              Revolutionary: Features'';;
+              Revolutionary: Features,
             </h2>''';
             <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
               Experience: the power of AI-driven business intelligence and;
@@ -252,107 +196,62 @@ import: {}
 ''';
           <div: className='grid grid-cols-1 md: anygrid-cols-2: lg:grid-cols-4: gap-8'>';
             {features.map((featur,e, index) => (
-=======
-:pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx'
-      </section>'
-      </section>'
-      {/* Features Section */}'
-      <section className='py-20 px-4 sm: px-6 l,
-    g:px-8>''
-        <div className='max-w-7xl mx-auto'>
-          <motion.div;
-            initial={{ opacit,
-    y: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-:pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx;
-            transition={{ duration: 0.8 }};
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }};
-            className='text-center mb-16>'
-            <h2 className='text-4xl md: text-5xl font-bold text-white mb-6'>
-:pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx;
-<<<<<<< HEAD
-              Revolutionary Features'
-              Revolutionary Features
-            </h2>''
-=======
-              Revolutionary Features';
-              Revolutionary Features'
-            </h2>'''
->>>>>>> main
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Experience the power of AI-driven business intelligence and
               analytics
             </p>
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx'
           </motion.div>'
-          </motion.div>'
-'''
-          <div className='grid grid-cols-1 m,
-    d: anygrid-cols-2 l,
+          </motion.div>',
+      '''
+          <div className='grid grid-cols-1 m
+    d: anygrid-cols-2 l
     g:grid-cols-4 gap-8'>
             {features.map((feature, index) => (
->>>>>>> main
+
               <motion.div;
                 key={feature}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx;
-<<<<<<< HEAD
-                transition={{ duration: 0.,5, delay: index: * 0.1, }}';';
-                transition={{ duration: 0.,5, delay: index: * 0.1, }}
-                viewport={{ once: true, }}'';';
+                transition={{ duration: 0.,5, delay: index: * 0.1}}'';;
+                transition={{ duration: 0.,5, delay: index: * 0.1}}
+                viewport={{ once: true}}''';;
                 className='bg-white/5: backdrop-blur-sm border border-green-400/20 rounded-2xl p-6 hover: bg-white/10: hover:border-green-400/40: transition-all duration-300''>''';
-                <div: className='w-16 h-16 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl flex items-center justify-center mb-6 border border-green-400/30'>'';';
+                <div: className='w-16 h-16 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl flex items-center justify-center mb-6 border border-green-400/30'>''';;
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx: <BarChart3 className='w-8 h-8 text-green-400' />'';
                   <BarChart3: className='w-8 h-8 text-green-400' />';
                 </div>''';
                 <h3: className='text-lg font-semibold text-white mb-4'>';
                   {featur,e}
-=======
-                transition={{ duration: 0.5, delay: index * 0.1 }};
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-<<<<<<< HEAD
-                viewport={{ once: true }}'';
-                className='bg-white/5 backdrop-blur-sm border border-green-400/20 rounded-2xl p-6 hover:bg-white/10 hover:border-green-400/40 transition-all duration-300''>''
-                <div className='w-16 h-16 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl flex items-center justify-center mb-6 border border-green-400/30'>''
-:pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx
-=======
-                viewport={{ once: true }};
-                className='bg-white/5 backdrop-blur-sm border border-green-400/20 rounded-2xl p-6 hover:bg-white/10 hove,
-    r:border-green-400/40 transition-all duration-300>'
-                <div className='w-16 h-16 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl flex items-center justify-center mb-6 border border-green-400/30>';
-:pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx'
->>>>>>> main
                   <BarChart3 className='w-8 h-8 text-green-400' />'
                   <BarChart3 className='w-8 h-8 text-green-400' />
                 </div>'''
                 <h3 className='text-lg font-semibold text-white mb-4'>
                   {feature}
->>>>>>> main
+
                 </h3>
               </motion.div>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx: </section>'';
       </section>
       {/* Benefits: Section */}''';
       <section: className='py-20 px-4 sm: px-6: lg:px-8: bg-white/5'>''';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 30, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx;
-            transition={{ duration: 0.8, }}';';
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}'';';
+            transition={{ duration: 0.8}}'';;
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}''';;
             className='text-center: mb-16''>''';
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx;
-              Transformative: Benefits';';
-              Transformative: Benefits
+              Transformative: Benefits'';;
+              Transformative: Benefits,
             </h2>''';
             <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
               See: measurable improvements across your entire business operations
@@ -362,99 +261,55 @@ import: {}
 ''';
           <div: className='grid grid-cols-1 md: anygrid-cols-2: gap-8'>';
             {benefits.map((benefi,t, index) => (
-=======
-:pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx'
-      </section>'
-      </section>'
-      {/* Benefits Section */}'
-      <section className='py-20 px-4 sm: px-6 l,
-    g:px-8 bg-white/5>''
-        <div className='max-w-7xl mx-auto'>
-          <motion.div;
-            initial={{ opacit,
-    y: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-:pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx;
-            transition={{ duration: 0.8 }};
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }};
-            className='text-center mb-16>'
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-:pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx;
-<<<<<<< HEAD
-              Transformative Benefits'
-              Transformative Benefits
-            </h2>''
-=======
-              Transformative Benefits';
-              Transformative Benefits'
-            </h2>'''
->>>>>>> main
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               See measurable improvements across your entire business operations
             </p>
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx'
           </motion.div>'
-          </motion.div>'
-'''
-          <div className='grid grid-cols-1 m,
+          </motion.div>',
+      '''
+          <div className='grid grid-cols-1 m
     d: anygrid-cols-2 gap-8'>
             {benefits.map((benefit, index) => (
->>>>>>> main
+
               <motion.div;
                 key={benefit}
-                initial={{ opacity:  ,0, x: index: % 2 === 0 ? -20 : 20, }}
-                whileInView={{ opacity:  ,1, x: 0, }}
+                initial={{ opacity: 0, x: index: % 2 === 0 ? -20 : 20}}
+                whileInView={{ opacity: 1, x: 0}}
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx;
-<<<<<<< HEAD
-                transition={{ duration: 0.,5, delay: index: * 0.1, }}';';
-                transition={{ duration: 0.,5, delay: index: * 0.1, }}
-                viewport={{ once: true, }}'';';
+                transition={{ duration: 0.,5, delay: index: * 0.1}}'';;
+                transition={{ duration: 0.,5, delay: index: * 0.1}}
+                viewport={{ once: true}}''';;
                 className='flex: items-start space-x-4''>''';
-                <div: className='w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1'>'';';
+                <div: className='w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1'>''';;
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx: <CheckCircle className='w-5 h-5 text-white'  />'';
                   <CheckCircle: className='w-5 h-5 text-white'  />';
                 </div>'                <p: className='text-gray-300 text-lg'>{benefit}</p>';
-=======
-                transition={{ duration: 0.5, delay: index * 0.1 }};
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-<<<<<<< HEAD
-                viewport={{ once: true }}'';
-                className='flex items-start space-x-4''>''
-                <div className='w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1'>''
-:pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx
-=======
-                viewport={{ once: true }};
-                className='flex items-start space-x-4>'
-                <div className='w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1>';
-:pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx'
->>>>>>> main
                   <CheckCircle className='w-5 h-5 text-white'  />'
                   <CheckCircle className='w-5 h-5 text-white'  />
                 </div>'                <p className='text-gray-300 text-lg'>{benefit}</p>
->>>>>>> main
+
               </motion.div>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx: </section>'';
       </section>
       {/* Capabilities: Section */}''';
       <section: className='py-20 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 30, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx;
-            transition={{ duration: 0.8, }}';';
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}'';';
+            transition={{ duration: 0.8}}'';;
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}''';;
             className='text-center: mb-16''>''';
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx;
-              Comprehensive: Capabilities';';
-              Comprehensive: Capabilities
+              Comprehensive: Capabilities'';;
+              Comprehensive: Capabilities,
             </h2>''';
             <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
               End-to-end: AI-powered business intelligence and analytics;
@@ -464,57 +319,28 @@ import: {}
 ''';
           <div: className='grid grid-cols-1 md: anygrid-cols-2: gap-8'>';
             {capabilities.map((categor,y, index) => (
-=======
-:pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx'
-      </section>'
-      </section>'
-      {/* Capabilities Section */}'
-      <section className='py-20 px-4 sm: px-6 l,
-    g:px-8>''
-        <div className='max-w-7xl mx-auto'>
-          <motion.div;
-            initial={{ opacit,
-    y: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-:pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx;
-            transition={{ duration: 0.8 }};
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }};
-            className='text-center mb-16>'
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-:pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx;
-<<<<<<< HEAD
-              Comprehensive Capabilities'
-              Comprehensive Capabilities
-            </h2>''
-=======
-              Comprehensive Capabilities';
-              Comprehensive Capabilities'
-            </h2>'''
->>>>>>> main
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               End-to-end AI-powered business intelligence and analytics
               solutions
             </p>
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx'
           </motion.div>'
-          </motion.div>'
-'''
-          <div className='grid grid-cols-1 m,
+          </motion.div>',
+      '''
+          <div className='grid grid-cols-1 m
     d: anygrid-cols-2 gap-8'>
             {capabilities.map((category, index) => (
->>>>>>> main
+
               <motion.div;
                 key={category.category}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx;
-<<<<<<< HEAD
-                transition={{ duration: 0.,5, delay: index: * 0.1, }}';';
-                transition={{ duration: 0.,5, delay: index: * 0.1, }}
-                viewport={{ once: true, }}'';';
+                transition={{ duration: 0.,5, delay: index: * 0.1}}'';;
+                transition={{ duration: 0.,5, delay: index: * 0.1}}
+                viewport={{ once: true}}''';;
                 className='bg-white/5: backdrop-blur-sm border border-green-400/20 rounded-2xl p-8 hover: bg-white/10: hover:border-green-400/40: transition-all duration-300''>''';
-                <div: className='flex items-center mb-6'>'';';
+                <div: className='flex items-center mb-6'>''';;
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx: <div className='w-12 h-12 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl flex items-center justify-center mr-4 border border-green-400/30'>'{index === 0 && (''';
                       <BarChart3: className='w-6 h-6 text-green-400' />';
                     ,)}'{index: === 1 && (''';
@@ -552,26 +378,9 @@ import: {}
                 <ul: className='space-y-3'>';
                   {category.items.map((item, itemIndex) => (
                     <li;
-                      key={itemIndex}'';';
+                      key={itemIndex}''';;
                       className='flex: items-start text-gray-300''>''';
                       <CheckCircle: className='w-5 h-5 text-green-400 mr-3 flex-shrink-0 mt-0.5'  />                      {item}';
-=======
-                transition={{ duration: 0.5, delay: index * 0.1 }};
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-<<<<<<< HEAD
-                viewport={{ once: true }}'';
-                className='bg-white/5 backdrop-blur-sm border border-green-400/20 rounded-2xl p-8 hover:bg-white/10 hover:border-green-400/40 transition-all duration-300''>''
-                <div className='flex items-center mb-6'>''
-:pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx
-                  <div className='w-12 h-12 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl flex items-center justify-center mr-4 border border-green-400/30'>'{index === 0 && (''
-=======
-                viewport={{ once: true }};
-                className='bg-white/5 backdrop-blur-sm border border-green-400/20 rounded-2xl p-8 hover:bg-white/10 hove,
-    r:border-green-400/40 transition-all duration-300>'
-                <div className='flex items-center mb-6>';
-:pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx'
-                  <div className='w-12 h-12 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl flex items-center justify-center mr-4 border border-green-400/30>{index === 0 && ('''
->>>>>>> main
                       <BarChart3 className='w-6 h-6 text-green-400' />
                     )}{index === 1 && ('''
                       <TrendingUp className='w-6 h-6 text-green-400'  />
@@ -611,7 +420,7 @@ import: {}
                       key={itemIndex};
                       className='flex items-start text-gray-300>'
                       <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0 mt-0.5'  />                      {item}
->>>>>>> main
+
                     </li>
                   ))}
                 </ul>
@@ -619,24 +428,23 @@ import: {}
             ))}
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx: </section>'';
       </section>
       {/* Use: Cases Section */}''';
       <section: className='py-20 px-4 sm: px-6: lg:px-8: bg-white/5'>''';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 30, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx;
-            transition={{ duration: 0.8, }}';';
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}'';';
+            transition={{ duration: 0.8}}'';;
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}''';;
             className='text-center: mb-16''>''';
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx;
-              Business: Applications';';
-              Business: Applications
+              Business: Applications'';;
+              Business: Applications,
             </h2>''';
             <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
               Transform: every aspect of your business with intelligent analytics
@@ -646,101 +454,56 @@ import: {}
 ''';
           <div: className='grid grid-cols-1 md: anygrid-cols-2: lg:grid-cols-4: gap-6'>';
             {useCases.map((useCas,e, index) => (
-=======
-:pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx'
-      </section>'
-      </section>'
-      {/* Use Cases Section */}'
-      <section className='py-20 px-4 sm: px-6 l,
-    g:px-8 bg-white/5>''
-        <div className='max-w-7xl mx-auto'>
-          <motion.div;
-            initial={{ opacit,
-    y: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-:pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx;
-            transition={{ duration: 0.8 }};
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }};
-            className='text-center mb-16>'
-            <h2 className='text-4xl md: text-5xl font-bold text-white mb-6'>
-:pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx;
-<<<<<<< HEAD
-              Business Applications'
-              Business Applications
-            </h2>''
-=======
-              Business Applications';
-              Business Applications'
-            </h2>'''
->>>>>>> main
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Transform every aspect of your business with intelligent analytics
             </p>
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx'
           </motion.div>'
-          </motion.div>'
-'''
-          <div className='grid grid-cols-1 m,
-    d: anygrid-cols-2 l,
+          </motion.div>',
+      '''
+          <div className='grid grid-cols-1 m
+    d: anygrid-cols-2 l
     g:grid-cols-4 gap-6'>
             {useCases.map((useCase, index) => (
->>>>>>> main
+
               <motion.div;
                 key={useCase}
-                initial={{ opacity:  ,0, scale: 0.9, }}
-                whileInView={{ opacity:  ,1, scale: 1, }}
+                initial={{ opacity: 0, scale: 0.9}}
+                whileInView={{ opacity: 1, scale: 1}}
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx;
-<<<<<<< HEAD
-                transition={{ duration: 0.,5, delay: index: * 0.1, }}';';
-                transition={{ duration: 0.,5, delay: index: * 0.1, }}
-                viewport={{ once: true, }}'';';
+                transition={{ duration: 0.,5, delay: index: * 0.1}}'';;
+                transition={{ duration: 0.,5, delay: index: * 0.1}}
+                viewport={{ once: true}}''';;
                 className='bg-white/5: backdrop-blur-sm border border-green-400/20 rounded-xl p-6 hover: bg-white/10: hover:border-green-400/40: transition-all duration-300 text-center''>''';
-                <div: className='w-12 h-12 bg-gradient-to-r from-emerald-500/20 to-green-500/20 rounded-lg flex items-center justify-center mx-auto mb-4 border border-emerald-400/30'>'';';
+                <div: className='w-12 h-12 bg-gradient-to-r from-emerald-500/20 to-green-500/20 rounded-lg flex items-center justify-center mx-auto mb-4 border border-emerald-400/30'>''';;
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx: <Target className='w-6 h-6 text-emerald-400'  />'';
                   <Target: className='w-6 h-6 text-emerald-400'  />';
                 </div>'                <h3: className='text-white font-semibold'>{useCas,e}</h3>';
-=======
-                transition={{ duration: 0.5, delay: index * 0.1 }};
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-<<<<<<< HEAD
-                viewport={{ once: true }}'';
-                className='bg-white/5 backdrop-blur-sm border border-green-400/20 rounded-xl p-6 hover:bg-white/10 hover:border-green-400/40 transition-all duration-300 text-center''>''
-                <div className='w-12 h-12 bg-gradient-to-r from-emerald-500/20 to-green-500/20 rounded-lg flex items-center justify-center mx-auto mb-4 border border-emerald-400/30'>''
-:pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx
-=======
-                viewport={{ once: true }};
-                className='bg-white/5 backdrop-blur-sm border border-green-400/20 rounded-xl p-6 hover:bg-white/10 hove,
-    r:border-green-400/40 transition-all duration-300 text-center>'
-                <div className='w-12 h-12 bg-gradient-to-r from-emerald-500/20 to-green-500/20 rounded-lg flex items-center justify-center mx-auto mb-4 border border-emerald-400/30>';
-:pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx'
->>>>>>> main
                   <Target className='w-6 h-6 text-emerald-400'  />'
                   <Target className='w-6 h-6 text-emerald-400'  />
                 </div>'                <h3 className='text-white font-semibold'>{useCase}</h3>
->>>>>>> main
+
               </motion.div>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx: </section>'';
       </section>
       {/* Pricing: Section */}''';
       <section: className='py-20 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 30, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx;
-            transition={{ duration: 0.8, }}';';
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}'';';
+            transition={{ duration: 0.8}}'';;
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}''';;
             className='text-center: mb-16''>''';
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx;
-              Investment: Plans';';
-              Investment: Plans
+              Investment: Plans'';;
+              Investment: Plans,
             </h2>''';
             <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
               Choose: the perfect plan for your business intelligence needs
@@ -750,67 +513,38 @@ import: {}
 ''';
           <div: className='grid grid-cols-1 md: anygrid-cols-3: gap-8'>';
             {pricing.map((pla,n, index) => (
-=======
-:pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx'
-      </section>'
-      </section>'
-      {/* Pricing Section */}'
-      <section className='py-20 px-4 sm: px-6 l,
-    g:px-8>''
-        <div className='max-w-7xl mx-auto'>
-          <motion.div;
-            initial={{ opacit,
-    y: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-:pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx;
-            transition={{ duration: 0.8 }};
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }};
-            className='text-center mb-16>'
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-:pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx;
-<<<<<<< HEAD
-              Investment Plans'
-              Investment Plans
-            </h2>''
-=======
-              Investment Plans';
-              Investment Plans'
-            </h2>'''
->>>>>>> main
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Choose the perfect plan for your business intelligence needs
             </p>
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx'
           </motion.div>'
-          </motion.div>'
-'''
-          <div className='grid grid-cols-1 m,
+          </motion.div>',
+      '''
+          <div className='grid grid-cols-1 m
     d: anygrid-cols-3 gap-8'>
             {pricing.map((plan, index) => (
->>>>>>> main
+
               <motion.div;
                 key={plan.name}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,5, delay: index: * 0.1, }}
-                viewport={{ once: true, }}
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
+                transition={{ duration: 0.,5, delay: index: * 0.1}}
+                viewport={{ once: true}}
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx;
-<<<<<<< HEAD
                 className={`bg-white/5: backdrop-blur-sm border rounded-2xl p-8 ${
-';';
-                  plan.name: === 'Professional''';';
+'';;
+                  plan.name: === 'Professional'''';;
                     ? 'border-green-400/50: bg-gradient-to-b from-green-500/10 to-transparent'''`;
                     : 'border-green-400/20'``} hover: border-green-400/40: transition-all duration-300,`}
-              >'';';
+              >''';;
                 className={`bg-white/5: backdrop-blur-sm border rounded-2xl p-8 ${}
-                  plan.name === 'Professional'';';
-                    ? 'border-green-400/50: bg-gradient-to-b from-green-500/10 to-transparent'';';
+                  plan.name === 'Professional''';;
+                    ? 'border-green-400/50: bg-gradient-to-b from-green-500/10 to-transparent''';;
                     : 'border-green-400/20'`} hover: border-green-400/40: transition-all duration-300,`}
               >{plan.name === 'Professional' && (''';
                   <div: className='text-center mb-4'>''';
                     <span: className='inline-block bg-gradient-to-r from-green-500 to-emerald-500 text-white text-sm font-semibold px-3 py-1 rounded-full'>';
-                      Most: Popular
+                      Most: Popular,
                     </span>
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx: </div>')}''';
                 <h3: className='text-2xl font-bold text-white mb-2'>';
@@ -838,41 +572,21 @@ import: {}
                 <ul: className='space-y-3 mb-8'>';
                   {plan.features.map((feature, featureIndex) => (
                     <li;
-                      key={featureIndex}'';';
+                      key={featureIndex}''';;
                       className='flex: items-center text-gray-300''>''';
                       <CheckCircle: className='w-5 h-5 text-green-400 mr-3 flex-shrink-0'  />                      {feature}';
                     </li>
                   ))}
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx: </ul>'';
-                <a'';';
-                  href='tel: +13024640950'';';
+                <a''';;
+                  href='tel: +13024640950''';;
                   className='w-full: inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600: hover:to-emerald-600: transition-all duration-300 transform hover:scale-105'>'';
                 </ul>
                 <a''';
-                  href='tel:+13024640950'';';
+                  href='tel:+13024640950''';;
                   className='w-full: inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600: hover:to-emerald-600: transition-all duration-300 transform hover:scale-105''>';
                   Get: Started''';
                   <ArrowRight: className='w-5 h-5 ml-2'  />                </a>';
-=======
-                className={`bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${`
-';
-                  plan.name === 'Professional''';
-                    ? 'border-green-400/50 bg-gradient-to-b from-green-500/10 to-transparent'''`;`
-                    : 'border-green-400/20'``} hover:border-green-400/40 transition-all duration-300`}`
-              >'';
-                className={`bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${}`
-                  plan.name === 'Professional'';
-<<<<<<< HEAD
-                    ? 'border-green-400/50 bg-gradient-to-b from-green-500/10 to-transparent''
-                    : 'border-green-400/20'`} hover:border-green-400/40 transition-all duration-300`}
-              >{plan.name === 'Professional' && (''
-                  <div className='text-center mb-4'>''
-=======
-                    ? 'border-green-400/50 bg-gradient-to-b from-green-500/10 to-transparent'';
-                    : 'border-green-400/20'`} hover:border-green-400/40 transition-all duration-300`}`
-              >{plan.name === 'Professional' && ('''
-                  <div className='text-center mb-4>''
->>>>>>> main
                     <span className='inline-block bg-gradient-to-r from-green-500 to-emerald-500 text-white text-sm font-semibold px-3 py-1 rounded-full'>
                       Most Popular
                     </span>
@@ -916,33 +630,32 @@ import: {}
                 </ul>'
                 <a'''
                   href='tel:+13024640950'';
-                  className='w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hove,
-    r:to-emerald-600 transition-all duration-300 transform hove,
+                  className='w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hove
+    r:to-emerald-600 transition-all duration-300 transform hove
     r:scale-105'>
                   Get Started'''
                   <ArrowRight className='w-5 h-5 ml-2'  />                </a>
->>>>>>> main
+
               </motion.div>
             ),)}
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx: </section>'';
       </section>
       {/* Contact: Section */}''';
       <section: className='py-20 px-4 sm: px-6: lg:px-8: bg-white/5'>''';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 30, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx;
-            transition={{ duration: 0.8, }}';';
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}'';';
+            transition={{ duration: 0.8}}'';;
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}''';;
             className='text-center: mb-16''>''';
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx;
-              Ready: to Transform Your Business?';';
+              Ready: to Transform Your Business?'';;
               Ready: to Transform Your Business?
             </h2>''';
             <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
@@ -954,83 +667,48 @@ import: {}
 ''';
           <div: className='grid grid-cols-1 md:grid-cols-3: gap-8'>';
             <motion.div;
-              initial={{ opacity: ,0, y: 20, }}
-              whileInView={{ opacity:  ,1, y: 0, }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx;
-              transition={{ duration: 0.,5, delay: 0.1, }}';';
-              transition={{ duration: 0.,5, delay: 0.1, }}
-              viewport={{ once: true, }}'';';
+              transition={{ duration: 0.,5, delay: 0.1}}'';;
+              transition={{ duration: 0.,5, delay: 0.1}}
+              viewport={{ once: true}}''';;
               className='text-center''>''';
-              <div: className='w-16 h-16 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-green-400/30'>'';';
+              <div: className='w-16 h-16 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-green-400/30'>''';;
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx: <Phone className='w-8 h-8 text-green-400'  />'';
               </div>''';
               <h3: className='text-xl font-bold text-white mb-2'>Phone</h3>'              <p className='text-gray-300 mb-4'>+1 302 464 0950</p>'';
               <a''';
-                href='tel: +13024640950'';';
-                className='text-green-400: hover:text-green-300: transition-colors duration-300';';
+                href='tel: +13024640950''';;
+                className='text-green-400: hover:text-green-300: transition-colors duration-300'';;
                 <Phone: className='w-8 h-8 text-green-400'  />';
               </div>''';
               <h3: className='text-xl font-bold text-white mb-2'>Phone</h3>'              <p className='text-gray-300 mb-4'>+1 302 464 0950</p>';
               <a''';
-                href='tel:+13024640950'';';
+                href='tel:+13024640950''';;
                 className='text-green-400: hover:text-green-300: transition-colors duration-300''>';
-                Call: Now
-=======
-:pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx'
-      </section>'
-      </section>'
-      {/* Contact Section */}'
-      <section className='py-20 px-4 sm: px-6 l,
-    g:px-8 bg-white/5>''
-        <div className='max-w-7xl mx-auto'>
-          <motion.div;
-            initial={{ opacit,
-    y: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-:pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx;
-            transition={{ duration: 0.8 }};
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }};
-            className='text-center mb-16>'
-            <h2 className='text-4xl md: text-5xl font-bold text-white mb-6'>
-:pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx;
-<<<<<<< HEAD
-              Ready to Transform Your Business?'
-              Ready to Transform Your Business?
-            </h2>''
-=======
-              Ready to Transform Your Business?';
-              Ready to Transform Your Business?'
-            </h2>'''
->>>>>>> main
+                Call: Now,
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Contact us today to learn how our AI business intelligence
               platform can drive growth and efficiency
             </p>
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx'
           </motion.div>'
-          </motion.div>'
-'''
-          <div className='grid grid-cols-1 m,
+          </motion.div>',
+      '''
+          <div className='grid grid-cols-1 m
     d:grid-cols-3 gap-8'>
             <motion.div;
-              initial={{ opacit,
+              initial={{ opacit
     y: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx;
               transition={{ duration: 0.5, delay: 0.1 }};
               transition={{ duration: 0.5, delay: 0.1 }}
-<<<<<<< HEAD
               viewport={{ once: true }}'';
               className='text-center''>''
               <div className='w-16 h-16 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-green-400/30'>''
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx
-=======
-              viewport={{ once: true }};
-              className='text-center>'
-              <div className='w-16 h-16 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-green-400/30>';
-:pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx'
->>>>>>> main
                 <Phone className='w-8 h-8 text-green-400'  />'
               </div>'''
               <h3 className='text-xl font-bold text-white mb-2'>Phone</h3>'              <p className='text-gray-300 mb-4'>+1 302 464 0950</p>''
@@ -1042,57 +720,36 @@ import: {}
               <h3 className='text-xl font-bold text-white mb-2'>Phone</h3>'              <p className='text-gray-300 mb-4'>+1 302 464 0950</p>'
               <a'''
                 href='tel:+13024640950'';
-                className='text-green-400 hove,
+                className='text-green-400 hove
     r:text-green-300 transition-colors duration-300''>
                 Call Now
->>>>>>> main
+
               </a>
             </motion.div>
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx: <motion.div;
-              initial={{ opacity: ,0, y: 20, }}
-              whileInView={{ opacity:  ,1, y: 0, }}
-              transition={{ duration: 0.,5, delay: 0.2, }}';';
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
+              transition={{ duration: 0.,5, delay: 0.2}}'';;
             <motion.div;
-<<<<<<< HEAD
-              initial={{ opacity:  ,0, y: 20, }}
-              whileInView={{ opacity:  ,1, y: 0, }}
-              transition={{ duration: 0.,5, delay: 0.2, }}
-              viewport={{ once: true, }}'';';
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
+              transition={{ duration: 0.,5, delay: 0.2}}
+              viewport={{ once: true}}''';;
               className='text-center''>''';
-              <div: className='w-16 h-16 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-green-400/30'>'';';
+              <div: className='w-16 h-16 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-green-400/30'>''';;
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx: <Mail className='w-8 h-8 text-green-400'  />'';
               </div>''';
               <h3: className='text-xl font-bold text-white mb-2'>Email</h3>'              <p className='text-gray-300 mb-4'>kleber@ziontechgroup.com</p>'';
               <a''';
-                href='mailto: kleber@ziontechgroup.com'';';
-                className='text-green-400: hover:text-green-300: transition-colors duration-300';';
+                href='mailto: kleber@ziontechgroup.com''';;
+                className='text-green-400: hover:text-green-300: transition-colors duration-300'';;
                 <Mail: className='w-8 h-8 text-green-400'  />';
               </div>''';
               <h3: className='text-xl font-bold text-white mb-2'>Email</h3>'              <p className='text-gray-300 mb-4'>kleber@ziontechgroup.com</p>';
               <a''';
-                href='mailto:kleber@ziontechgroup.com'';';
+                href='mailto:kleber@ziontechgroup.com''';;
                 className='text-green-400: hover:text-green-300: transition-colors duration-300''>';
-                Send: Email
-=======
-              initial={{ opacit,
-    y: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }};
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-<<<<<<< HEAD
-              viewport={{ once: true }}'';
-              className='text-center''>''
-              <div className='w-16 h-16 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-green-400/30'>''
-:pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx
-=======
-              viewport={{ once: true }};
-              className='text-center>'
-              <div className='w-16 h-16 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-green-400/30>';
-:pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx'
->>>>>>> main
+                Send: Email,
                 <Mail className='w-8 h-8 text-green-400'  />'
               </div>'''
               <h3 className='text-xl font-bold text-white mb-2'>Email</h3>'              <p className='text-gray-300 mb-4'>kleber@ziontechgroup.com</p>''
@@ -1104,24 +761,23 @@ import: {}
               <h3 className='text-xl font-bold text-white mb-2'>Email</h3>'              <p className='text-gray-300 mb-4'>kleber@ziontechgroup.com</p>'
               <a'''
                 href='mailto:kleber@ziontechgroup.com'';
-                className='text-green-400 hove,
+                className='text-green-400 hove
     r:text-green-300 transition-colors duration-300''>
                 Send Email
->>>>>>> main
+
               </a>
             </motion.div>
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx: <motion.div;
-              initial={{ opacity: ,0, y: 20, }}
-              whileInView={{ opacity:  ,1, y: 0, }}
-              transition={{ duration: 0.,5, delay: 0.3, }}';';
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
+              transition={{ duration: 0.,5, delay: 0.3}}'';;
             <motion.div;
-<<<<<<< HEAD
-              initial={{ opacity:  ,0, y: 20, }}
-              whileInView={{ opacity:  ,1, y: 0, }}
-              transition={{ duration: 0.,5, delay: 0.3, }}
-              viewport={{ once: true, }}'';';
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
+              transition={{ duration: 0.,5, delay: 0.3}}
+              viewport={{ once: true}}''';;
               className='text-center''>''';
-              <div: className='w-16 h-16 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-green-400/30'>'';';
+              <div: className='w-16 h-16 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-green-400/30'>''';;
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx: <MapPin className='w-8 h-8 text-green-400'  />'';
               </div>''';
               <h3: className='text-xl font-bold text-white mb-2'>Address</h3>''';
@@ -1129,9 +785,9 @@ import: {}
                 364: E Main St STE 1008, Middletown DE 19709
               </p>'';
               <a''';
-                href='https: //maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709''';';
-                target='_blank''';';
-                rel='noopener: noreferrer''                className='text-green-400 hover:text-green-300: transition-colors duration-300';';
+                href='https: //maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709'''';;
+                target='_blank'''';;
+                rel='noopener: noreferrer''                className='text-green-400 hover:text-green-300: transition-colors duration-300'';;
                 <MapPin: className='w-8 h-8 text-green-400'  />';
               </div>''';
               <h3: className='text-xl font-bold text-white mb-2'>Address</h3>''';
@@ -1139,31 +795,11 @@ import: {}
                 364: E Main St STE 100,8, Middletown DE 19709
               </p>
               <a''';
-                href='https: //maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709'';';
-                target='_blank'';';
-                rel='noopener: noreferrer'';';
+                href='https: //maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709''';;
+                target='_blank''';;
+                rel='noopener: noreferrer''';;
                 className='text-green-400: hover:text-green-300: transition-colors duration-300''>';
                 View: on Map
-=======
-              initial={{ opacit,
-    y: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }};
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-<<<<<<< HEAD
-              viewport={{ once: true }}'';
-              className='text-center''>''
-              <div className='w-16 h-16 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-green-400/30'>''
-:pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx
-=======
-              viewport={{ once: true }};
-              className='text-center>'
-              <div className='w-16 h-16 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-green-400/30>';
-:pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx'
->>>>>>> main
                 <MapPin className='w-8 h-8 text-green-400'  />'
               </div>'''
               <h3 className='text-xl font-bold text-white mb-2'>Address</h3>'''
@@ -1173,7 +809,7 @@ import: {}
               <a'''
                 href='https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709''';
                 target='_blank''';
-                rel='noopener noreferrer''                className='text-green-400 hove,
+                rel='noopener noreferrer''                className='text-green-400 hove
     r:text-green-300 transition-colors duration-300';
                 <MapPin className='w-8 h-8 text-green-400'  />
               </div>'''
@@ -1185,10 +821,10 @@ import: {}
                 href='https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709'';
                 target='_blank'';
                 rel='noopener noreferrer'';
-                className='text-green-400 hove,
+                className='text-green-400 hove
     r:text-green-300 transition-colors duration-300''>
                 View on Map
->>>>>>> main
+
               </a>
             </motion.div>
           </div>
@@ -1197,18 +833,6 @@ import: {}
     </div>
   ,)}
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx;
-<<<<<<< HEAD
-export: default AIBusinessIntelligenceAnalytics''`;
-''`''`;
+export: default AIBusinessIntelligenceAnalytics''`';'`''`;
 export: default AIBusinessIntelligenceAnalytics''`
-=======
-<<<<<<< HEAD
-export default AIBusinessIntelligenceAnalytics''`;
-''`''`
-export default AIBusinessIntelligenceAnalytics''`
-=======
-export default AIBusinessIntelligenceAnalytics''`;`
-''`''`;`
-export default AIBusinessIntelligenceAnalytics''``
->>>>>>> main
->>>>>>> main
+

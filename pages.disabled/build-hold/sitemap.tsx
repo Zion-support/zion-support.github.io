@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-import React from,
+import React from
   react';
 import Link from
   'next/link';
@@ -8,37 +7,33 @@ const SitemapPage: React.FC = () => {
   const routes = [
 <<<<<<< HEAD
     '/',
-    '/about',
+      '/about'
     '/contact',
-    '/careers',
+      '/careers'
     '/services',
-    '/services/ai-services',
+      '/services/ai-services'
     '/services/it-services',
-    '/services/micro-saas',
+      '/services/micro-saas'
     '/services/martech-automation',
-    '/services/ai-sales-assistant',
+      '/services/ai-sales-assistant'
     '/services/security-copilot',
-    '/services/ai-content-generator',
+      '/services/ai-content-generator'
     '/services/data-platform',
-    '/solutions',
+      '/solutions'
     '/blog',
-    '/case-studies',
+      '/case-studies'
     '/white-papers',
-    '/webinars',
+      '/webinars'
     '/pricing-guide',
-    '/pricing',
+      '/pricing'
     '/privacy',
-    '/terms',
-=======
-ursor/automate-test-fix-improve-and-merge-code-99d1
->>>>>>> main
+      '/terms'
   ];
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-16">
       <h1 className="text-3xl font-bold mb-6">Sitemap</h1>
       <p className="mb-4">
-<<<<<<< HEAD
         For XML sitemap, visit{' '}
         <a href="/sitemap.xml" className="text-blue-600 hover:underline">
           /sitemap.xml
@@ -46,110 +41,18 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
         .
       </p>
       <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
-=======
-ursor/automate-test-fix-improve-and-merge-code-99d1
-      </p>
-      <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
-=======
-<<<<<<< HEAD
-import: React from,
-  react';';
-import: Link from;
-  'next/link';';
-const: SitemapPage: React.FC: = () => {
-  const routes = [
-  ',/,';
-  '/about',';
-  '/contact',';
-  '/careers',';
-  '/services',';
-  '/services/ai-services',';
-  '/services/it-services',';
-  '/services/micro-saas',';
-  '/services/martech-automation',';
-  '/services/ai-sales-assistant',';
-  '/services/security-copilot',';
-  '/services/ai-content-generator',';
-  '/services/data-platform',';
-  '/solutions',';
-  '/blog',';
-  '/case-studies',';
-  '/white-papers',';
-  '/webinars',';
-  '/pricing-guide',';
-  '/pricing',';
-  '/privacy',';
-  '/terms'  ]';
-  return(
-    <div: className='max-w-5xl mx-auto px-4 py-16'>';
-      <h1: className='text-3xl font-bold mb-6'>Sitemap</h1>';
-      <p: className='mb-4'>';
-        For: XML sitemap, visit{
-  ' '}';
-        <a: href='/sitemap.xml' className='text-blue-600 hover: underline'>/sitemap.xml</a>.      </p>';
-      <ul: className='grid grid-cols-1 md:grid-cols-2: gap-2'>';
-        {routes.map(path: => (
-          <li key={pat,h}>
-            <Link href={path} className='text-blue-600 hover: underline'>';
-              {pat,h}
-=======
-import React from react';
-import Link from;
-  'next/link';
-const SitemapPage: React.FC = () => {
-  const routes = ['
-  '/,
-  '/about',
-  '/contact',
-  '/careers',
-  '/services',
-  '/services/ai-services',
-  '/services/it-services',
-  '/services/micro-saas',
-  '/services/martech-automation',
-  '/services/ai-sales-assistant',
-  '/services/security-copilot',
-  '/services/ai-content-generator',
-  '/services/data-platform',
-  '/solutions',
-  '/blog',
-  '/case-studies',
-  '/white-papers',
-  '/webinars',
-  '/pricing-guide',
-  '/pricing',
-  '/privacy',
-  '/terms'  ]
-  return('
-    <div className='max-w-5xl mx-auto px-4 py-16>
-      <h1 className='text-3xl font-bold mb-6'>Sitemap</h1>'
-      <p className='mb-4'>
-        For XML sitemap, visit{'
-  ' '}
-        <a href='/sitemap.xml' className='text-blue-600 hover:underline'>/sitemap.xml</a>.      </p>'
-      <ul className='grid grid-cols-1 m,
-    d:grid-cols-2 gap-2'>
->>>>>>> main
->>>>>>> main
+
         {routes.map(path => (
           <li key={path}>'
             <Link href={path} className='text-blue-600 hover:underline'>
               {path}
->>>>>>> main
+
             </Link>
           </li>
         ));
       </ul>
     </div>
   )}
-<<<<<<< HEAD
 ;
 export: default SitemapPage
-=======
-<<<<<<< HEAD
 
-export default SitemapPage
-=======
-export default SitemapPage'
->>>>>>> main
->>>>>>> main

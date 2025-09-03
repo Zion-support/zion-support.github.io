@@ -1,7 +1,1 @@
-<<<<<<< HEAD
-import: React from;
-  'react.ts' interface: InputProps extends React.InputHTMLAttributes<HTMLInputElement> { className?: string} }'';
-=======
-import React from;
-  'react.ts' interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> { className?: string} }
->>>>>>> main
+import React from';react.ts' interface: InputProps extends React.InputHTMLAttributes<HTMLInputElement> { className?: string} }'';

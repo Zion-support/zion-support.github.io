@@ -1,47 +1,37 @@
 // Analytics and performance monitoring utilities
 export const trackEvent = (
   eventName: string,
-<<<<<<< HEAD
   properties?: Record<string, any>
-=======
-  properties?: Record<string, string | number | boolean>
->>>>>>> main
 ) => {
   if (typeof window !== 'undefined' && window.gtag) {'
     window.gtag('event', eventName, properties);
   }
 };
 
-<<<<<<< HEAD
 export const trackPageView = (url: string) => {'
   if (typeof window !== 'undefined' && window.gtag) {'
     window.gtag('config', 'GA_MEASUREMENT_ID', {
-=======
-export const trackPageView = (url: string) => {
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('config,GA_MEASUREMENT_ID', {
->>>>>>> main
-      page_path: url,
+      page_path: url
     });
   }
 };
 
 export const measurePerformance = () => {'
   if (typeof window !== 'undefined' && 'performance' in window) {
-    const navigation = performance.getEntriesByType('
+    const navigation = performance.getEntriesByType(',
       'navigation'
     )[0] as PerformanceNavigationTiming;
 
     return {
-      loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+      loadTime: navigation.loadEventEnd - navigation.loadEventStart
       domContentLoaded:
         navigation.domContentLoadedEventEnd -
-        navigation.domContentLoadedEventStart,
+        navigation.domContentLoadedEventStart
       firstPaint:'
-        performance.getEntriesByName('first-paint')[0]?.startTime || 0,
+        performance.getEntriesByName('first-paint')[0]?.startTime || 0
       firstContentfulPaint:'
         performance.getEntriesByName('first-contentful-paint')[0]?.startTime ||
-        0,
+        0
     };
   }
   return null;
@@ -50,35 +40,27 @@ export const measurePerformance = () => {'
 // Web Vitals tracking
 interface WebVitalMetric {
   name: string;
-  valu,
+  valu
     e: number;
-  i,
+  i
     d: string;
 }
 
 export const trackWebVitals = (metric: WebVitalMetric) => {'
   if (typeof window !== 'undefined' && window.gtag) {'
     window.gtag('event', metric.name, {
-      value: Math.round(metric.value),
+      value: Math.round(metric.value)
       event_category: 'Web Vitals',
-      event_label: metric.id,
-      non_interaction: true,
+      event_label: metric.id
+      non_interaction: true
     });
   }
 };
 
 declare global {
   interface Window {
-<<<<<<< HEAD
-    gtag: (comman,
+    gtag: (comman
     d: string, targetId: string, config?: Record<string, unknown>) => void;
-=======
-    gtag: (
-      command: string,
-      targetId: string,
-      config?: Record<string, unknown>
-    ) => void;
->>>>>>> main
   }
 }
 '

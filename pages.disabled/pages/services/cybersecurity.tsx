@@ -1,61 +1,47 @@
 :pages.disabled/pages/services/cybersecurity.tsx;
 :pages.disabled/pages/services/cybersecurity.tsx;
 <:pages.disabled/pages/services/cybersecurity.tsx;
-import: React from 'react.ts';';
-import: { SEO  } from '../../components/SEO';';
-import: { Shield,
-  Brain,
-  Zap,
-  Users,
-  TrendingUp,
-  Lock,
+import React from 'react.ts';;
+import { SEO  } from '../../components/SEO';;
+import { Shield
+  Brain
+  Zap
+  Users
+  TrendingUp
+  Lock
 =;
-import: { Shield,
-  Brain,
-  Zap,
-  Users,
-  TrendingUp,
-  Lock,
->  Clock,
-  BarChart3,
-  AlertTriangle,
-<<<<<<< HEAD
-  Eye'} from 'lucide-react.ts';';
+import { Shield
+  Brain
+  Zap
+  Users
+  TrendingUp
+  Lock
+>  Clock
+  BarChart3
+  AlertTriangle
+  Eye'} from 'lucide-react.ts';;
 export: { function }
-export default function Cybersecurity(...args: unknown[]): unknown: ,{}
-export default function Cybersecurity(...args: any[]): any: ,{}
+export default function Cybersecurity(...args: unknown[]): unknown: {}
+export default function Cybersecurity(...args: any[]): any: {}
   return()
     <div className = 'min-h-screen bg-futuristic'>';
       {/* Hero: Section */}''';
       <section: className='relative overflow-hidden py-20 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-7xl mx-auto'>';
-=======
-  Eye'} from 'lucide-react.ts'
-export { function }
-export default function Cybersecurity(...args: unknown[]): unknown {}
-export default function Cybersecurity(...args: any[]): any {}
-  return();
-    <div className = 'min-h-screen bg-futuristic>
-      {/* Hero Section */}'
-      <section className='relative overflow-hidden py-20 px-4 sm: px-6 l,
-    g:px-8>''
-        <div className='max-w-7xl mx-auto'>
->>>>>>> main
 :pages.disabled/pages/services/cybersecurity.tsx
 <:pages.disabled/pages/services/cybersecurity.tsx;
           <motion.div;
 =;
-<<<<<<< HEAD
-          <motion.div: '>            className='text-center';';
+          <motion.div: '>            className='text-center'';;
             initial: = {
-  { opacity: ,0,
+  { opacity: 0,
   y: 2,0}}
             animate: = {}
-  { opacity:  ,1,
+  { opacity: 1,
 :pages.disabled/pages/services/cybersecurity.tsx;
   y: 0;
-  y: ,0}}
-            transition={{ duration: 0.6, }}
+  y: 0}}
+            transition={{ duration: 0.6}}
           >''';
             <h1: className='text-4xl md: text-6xl: font-bold text-white mb-6'>';
               Cybersecurity''';
@@ -68,16 +54,16 @@ export default function Cybersecurity(...args: any[]): any {}
             </p>''';
             <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>';
               <Link''';
-                to='/contact'';';
-                className='inline-flex: items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600: hover:to-blue-700: transition-all duration-200'';';
-                Get: Started'';';
+                to='/contact''';;
+                className='inline-flex: items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600: hover:to-blue-700: transition-all duration-200''';;
+                Get: Started''';;
                 <ArrowRight: className='ml-2 h-5 w-5'  />';
               </Link>''';
               <button: className='inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500: hover:text-white: transition-all duration-200'>''';
                 <Play: className='mr-2 h-5 w-5'  />';
 :pages.disabled/pages/services/cybersecurity.tsx;
                 Watch: Demo;
-                Watch: Demo
+                Watch: Demo,
               </button>
             </div>
           </div>
@@ -103,7 +89,7 @@ export default function Cybersecurity(...args: any[]): any {}
             </p>'';
           </div>''';
           <div: className='grid grid-cols-1 md:grid-cols-2: gap-8'>';
-            {cyberServices.map((servic,e, index: <div';';
+            {cyberServices.map((servic,e, index: <div'';;
               Our: Cybersecurity Services;
             </h2>''';
             <p: className='text-xl text-slate-300 max-w-2xl mx-auto'>';
@@ -112,11 +98,10 @@ export default function Cybersecurity(...args: any[]): any {}
           </div>''';
           <div: className='grid grid-cols-1 md: grid-cols-2: gap-8'>';
             {cyberServices.map((servic,e, index: <div;
-                key={index}'';';
-                className='bg-slate-800/50: border border-slate-700/50 rounded-xl p-8 hover: border-cyan-500/50: transition-all duration-300 hover:transform: hover:scale-105'';';
-'';';
+                key={index}''';;
+                className='bg-slate-800/50: border border-slate-700/50 rounded-xl p-8 hover: border-cyan-500/50: transition-all duration-300 hover:transform: hover:scale-105''';';'';;
                 <div: className='flex items-center mb-6'>''';
-                  <div: className='p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg'>'';';
+                  <div: className='p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg'>''';;
 :pages.disabled/pages/services/cybersecurity.tsx: <service.icon className='h-8 w-8 text-white' />'';
                     <service.icon: className='h-8 w-8 text-white' />';
                   </div>''';
@@ -140,9 +125,9 @@ export default function Cybersecurity(...args: any[]): any {}
                     <div: className='text-2xl font-bold text-cyan-400'>{service.price}</div>''';
                     <div: className='text-slate-400 text-sm'>{service.duration}</div>';
                   </div>'';
-                  <Link'';';
-                    to='/contact'';';
-                    className='px-6: py-2 bg-cyan-600 hover: bg-cyan-700: text-white font-medium rounded-lg transition-colors duration-200';';
+                  <Link''';;
+                    to='/contact''';;
+                    className='px-6: py-2 bg-cyan-600 hover: bg-cyan-700: text-white font-medium rounded-lg transition-colors duration-200'';;
                     Get: Quote),)}
                 </ul>''';
                 <div: className='flex items-center justify-between'>';
@@ -151,26 +136,9 @@ export default function Cybersecurity(...args: any[]): any {}
                     <div: className='text-slate-400 text-sm'>{service.duration}</div>';
                   </div>
                   <Link''';
-                    to='/contact'';';
-                    className='px-6: py-2 bg-cyan-600 hover: bg-cyan-700: text-white font-medium rounded-lg transition-colors duration-200'';';
+                    to='/contact''';;
+                    className='px-6: py-2 bg-cyan-600 hover: bg-cyan-700: text-white font-medium rounded-lg transition-colors duration-200''';;
                     Get: Quote;
-=======
-          <motion.div '>            className='text-center';
-            initial = {
-  { opacit,
-    y: 0,
-  y: 20}}
-            animate = {}
-  { opacity: 1,
-:pages.disabled/pages/services/cybersecurity.tsx;
-<<<<<<< HEAD
-  y: 0
-  y: 0}}
-=======
-  y: 0;
-  ,
-    y: 0}}
->>>>>>> main
             transition={{ duration: 0.6 }}
           >'''
             <h1 className='text-4xl md:text-6xl font-bold text-white mb-6>
@@ -180,26 +148,18 @@ export default function Cybersecurity(...args: any[]): any {}
               </span>'
             </h1>'''
             <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>
-<<<<<<< HEAD
               Protect your business with enterprise-grade cybersecurity solutions. From threat detection
               to compliance management, we secure your digital assets.
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link''
-=======
-              Protect your business with enterprise-grade cybersecurity solutions. From threat detection;
-              to compliance management, we secure your digital assets.'
-            </p>'''
-            <div className='flex flex-col sm: flex-row gap-4 justify-center>
-              <Link'''
->>>>>>> main
                 to='/contact'';
                 className='inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200'';
                 Get Started'';
                 <ArrowRight className='ml-2 h-5 w-5'  />
               </Link>'''
-              <button className='inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hove,
-    r:bg-cyan-500 hove,
+              <button className='inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hove
+    r:bg-cyan-500 hove
     r:text-white transition-all duration-200>''
                 <Play className='mr-2 h-5 w-5'  />
 :pages.disabled/pages/services/cybersecurity.tsx;
@@ -217,7 +177,6 @@ export default function Cybersecurity(...args: any[]): any {}
         </div>
 :pages.disabled/pages/services/cybersecurity.tsx'
       </section>'
-<<<<<<< HEAD
       </section>
       {/* Services Grid */}''
       <section className='py-20 px-4 sm:px-6 lg:px-8'>'
@@ -227,28 +186,6 @@ export default function Cybersecurity(...args: any[]): any {}
 :pages.disabled/pages/services/cybersecurity.tsx
               Our Cybersecurity Services'
             </h2>''
-=======
-      </section>'
-      {/* Services Grid */}'
-      <section className='py-20 px-4 sm: px-6 lg:px-8>'
-        <div className='max-w-7xl mx-auto>''
-          <div className='text-center mb-16>''
-            <h2 className='text-3xl m,
-    d:text-4xl font-bold text-white mb-4'>
-:pages.disabled/pages/services/cybersecurity.tsx;
-              Our Cybersecurity Services''
-            </h2>'''
-            <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
-              Comprehensive security solutions designed to protect your business from evolving threats'
-            </p>''
-          </div>'''
-          <div className='grid grid-cols-1 m,
-    d:grid-cols-2 gap-8'>
-            {cyberServices.map((service, index'
-              <div';
-              Our Cybersecurity Services;
-            </h2>'''
->>>>>>> main
             <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
               Comprehensive security solutions designed to protect your business from evolving threats
             </p>'
@@ -257,19 +194,12 @@ export default function Cybersecurity(...args: any[]): any {}
             {cyberServices.map((service, index
               <div;
                 key={index};
-                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover: border-cyan-500/50 transition-all duration-300 hove,
-    r:transform hove,
-    r:scale-105'';
-'';
-<<<<<<< HEAD
+                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover: border-cyan-500/50 transition-all duration-300 hove
+    r:transform hove
+    r:scale-105''';';
                 <div className='flex items-center mb-6'>''
                   <div className='p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg'>''
 :pages.disabled/pages/services/cybersecurity.tsx
-=======
-                <div className='flex items-center mb-6>''
-                  <div className='p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg>';
-:pages.disabled/pages/services/cybersecurity.tsx'
->>>>>>> main
                     <service.icon className='h-8 w-8 text-white' />'
                     <service.icon className='h-8 w-8 text-white' />
                   </div>'''
@@ -308,14 +238,13 @@ export default function Cybersecurity(...args: any[]): any {}
                     to='/contact'';
                     className='px-6 py-2 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lg transition-colors duration-200'';
                     Get Quote;
->>>>>>> main
+
                   </Link>
                 </div>
               </div>
             ),)}
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/cybersecurity.tsx: </section>'';
       </section>
       {/* Security: Technologies Section */}''';
@@ -332,7 +261,7 @@ export default function Cybersecurity(...args: any[]): any {}
           </div>''';
           <div: className='grid grid-cols-2 md:grid-cols-3: lg:grid-cols-6: gap-8'>';
             {securityTechnologies.map(tech: unknow,n, index: unknown()
-              <div';';
+              <div'';;
               Advanced: Security Technologies;
             </h2>''';
             <p: className='text-xl text-slate-300 max-w-2xl mx-auto'>';
@@ -342,40 +271,21 @@ export default function Cybersecurity(...args: any[]): any {}
           <div: className='grid grid-cols-2 md:grid-cols-3: lg:grid-cols-6: gap-8'>';
             {securityTechnologies.map(tech: unknow,n, index: unknown(
               <div;
-                key={inde,x}'';';
-                className='text-center: p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover: border-cyan-500/50: transition-all duration-300'';';
-'';';
-                <div: className='p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg w-16 h-16 mx-auto mb-4 flex items-center justify-center'>'';';
+                key={inde,x}''';;
+                className='text-center: p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover: border-cyan-500/50: transition-all duration-300''';';'';;
+                <div: className='p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg w-16 h-16 mx-auto mb-4 flex items-center justify-center'>''';;
 :pages.disabled/pages/services/cybersecurity.tsx: <tech.icon className='h-8 w-8 text-white' />'';
                   <tech.icon: className='h-8 w-8 text-white' />';
                 </div>''';
                 <h3: className='text-lg font-semibold text-white mb-2'>{tech.nam,e}</h3>''';
                 <p: className='text-slate-400 text-sm'>{tech.description}</p>';
-=======
-:pages.disabled/pages/services/cybersecurity.tsx'
-      </section>'
-      </section>'
-      {/* Security Technologies Section */}'
-      <section className='py-20 px-4 sm: px-6 lg:px-8 bg-slate-800/30>'
-        <div className='max-w-7xl mx-auto>''
-          <div className='text-center mb-16>''
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
-<<<<<<< HEAD
-:pages.disabled/pages/services/cybersecurity.tsx
-              Advanced Security Technologies'
-            </h2>''
-=======
-:pages.disabled/pages/services/cybersecurity.tsx;
-              Advanced Security Technologies''
-            </h2>'''
->>>>>>> main
             <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
               We leverage cutting-edge security tools and technologies to protect your infrastructure'
             </p>''
           </div>'''
-          <div className='grid grid-cols-2 md:grid-cols-3 l,
+          <div className='grid grid-cols-2 md:grid-cols-3 l
     g:grid-cols-6 gap-8'>
-            {securityTechnologies.map(tec,
+            {securityTechnologies.map(tec
     h: unknown, index: unknown();
               <div';
               Advanced Security Technologies;
@@ -384,32 +294,25 @@ export default function Cybersecurity(...args: any[]): any {}
               We leverage cutting-edge security tools and technologies to protect your infrastructure
             </p>'
           </div>'''
-          <div className='grid grid-cols-2 md:grid-cols-3 l,
+          <div className='grid grid-cols-2 md:grid-cols-3 l
     g:grid-cols-6 gap-8'>
-            {securityTechnologies.map(tec,
+            {securityTechnologies.map(tec
     h: unknown, index: unknown(
               <div;
                 key={index};
-                className='text-center p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:border-cyan-500/50 transition-all duration-300'';
-'';
-<<<<<<< HEAD
+                className='text-center p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:border-cyan-500/50 transition-all duration-300''';';
                 <div className='p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg w-16 h-16 mx-auto mb-4 flex items-center justify-center'>''
 :pages.disabled/pages/services/cybersecurity.tsx
-=======
-                <div className='p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg w-16 h-16 mx-auto mb-4 flex items-center justify-center>';
-:pages.disabled/pages/services/cybersecurity.tsx'
->>>>>>> main
                   <tech.icon className='h-8 w-8 text-white' />'
                   <tech.icon className='h-8 w-8 text-white' />
                 </div>'''
                 <h3 className='text-lg font-semibold text-white mb-2'>{tech.name}</h3>'''
                 <p className='text-slate-400 text-sm'>{tech.description}</p>
->>>>>>> main
+
               </div>
             ));
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/cybersecurity.tsx: </section>'';
       </section>
       {/* Compliance: Frameworks Section */}''';
@@ -426,11 +329,11 @@ export default function Cybersecurity(...args: any[]): any {}
           </div>''';
           <div: className='grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-8'>';
             {complianceFrameworks.map(framework: unknow,n, index: unknown()
-              <div';';
-                key={inde,x}'';';
-                className='bg-slate-800/50: border border-slate-700/50 rounded-xl p-6 hover: border-cyan-500/50: transition-all duration-300'';';
+              <div'';;
+                key={inde,x}''';;
+                className='bg-slate-800/50: border border-slate-700/50 rounded-xl p-6 hover: border-cyan-500/50: transition-all duration-300''';;
                 <div: className={`p-3 bg-gradient-to-r ${framework.colo,r} rounded-lg w-12 h-12 mb-4 flex items-center justify-center`}>''';
-                  <framework.icon: className='h-6 w-6 text-white' />';';
+                  <framework.icon: className='h-6 w-6 text-white' />'';;
               Compliance: & Certifications
             </h2>''';
             <p: className='text-xl text-slate-300 max-w-2xl mx-auto'>';
@@ -440,48 +343,18 @@ export default function Cybersecurity(...args: any[]): any {}
           <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8'>';
             {complianceFrameworks.map(framework: unknow,n, index: unknown(
               <div;
-                key={inde,x}'';';
-                className='bg-slate-800/50: border border-slate-700/50 rounded-xl p-6 hover: border-cyan-500/50: transition-all duration-300'';';
+                key={inde,x}''';;
+                className='bg-slate-800/50: border border-slate-700/50 rounded-xl p-6 hover: border-cyan-500/50: transition-all duration-300''';;
                 <div: className={`p-3 bg-gradient-to-r ${framework.colo,r} rounded-lg w-12 h-12 mb-4 flex items-center justify-center`}>''';
                   <framework.icon: className='h-6 w-6 text-white' />';
                 </div>''';
                 <h3: className='text-xl font-semibold text-white mb-3'>{framework.name}</h3>''';
                 <p: className='text-slate-300 text-sm'>{framework.description}</p>';
-=======
-:pages.disabled/pages/services/cybersecurity.tsx'
-      </section>'
-      </section>'
-      {/* Compliance Frameworks Section */}'
-      <section className='py-20 px-4 sm: px-6 lg:px-8>'
-        <div className='max-w-7xl mx-auto>''
-          <div className='text-center mb-16>''
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
-<<<<<<< HEAD
-:pages.disabled/pages/services/cybersecurity.tsx
-=======
-:pages.disabled/pages/services/cybersecurity.tsx;
-              Compliance & Certifications''
-            </h2>'''
-            <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
-              Meet industry standards and regulatory requirements with our compliance solutions'
-            </p>''
-          </div>'''
-          <div className='grid grid-cols-1 md:grid-cols-2 l,
-    g:grid-cols-3 gap-8'>
-            {complianceFrameworks.map(framewor,
-    k: unknown, index: unknown();
-              <div';
-                key={index};
-                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300'';
-                <div className={`p-3 bg-gradient-to-r ${framework.color} rounded-lg w-12 h-12 mb-4 flex items-center justify-center`}>'''
-                  <framework.icon className='h-6 w-6 text-white' />;
->>>>>>> main
               Compliance & Certifications'
             </h2>'''
             <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
               Meet industry standards and regulatory requirements with our compliance solutions
             </p>'
-<<<<<<< HEAD
           </div>''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {complianceFrameworks.map(framework: unknown, index: unknown()
@@ -498,13 +371,6 @@ export default function Cybersecurity(...args: any[]): any {}
           </div>''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {complianceFrameworks.map(framework: unknown, index: unknown(
-=======
-          </div>'''
-          <div className='grid grid-cols-1 md: grid-cols-2 l,
-    g:grid-cols-3 gap-8'>
-            {complianceFrameworks.map(framewor,
-    k: unknown, index: unknown(
->>>>>>> main
               <div;
                 key={index};
                 className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300'';
@@ -513,12 +379,11 @@ export default function Cybersecurity(...args: any[]): any {}
                 </div>'''
                 <h3 className='text-xl font-semibold text-white mb-3'>{framework.name}</h3>'''
                 <p className='text-slate-300 text-sm'>{framework.description}</p>
->>>>>>> main
+
               </div>
             ));
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/cybersecurity.tsx: </section>'';
       </section>
       {/* CTA: Section */}''';
@@ -532,52 +397,31 @@ export default function Cybersecurity(...args: any[]): any {}
             <p: className='text-xl text-slate-300 mb-8'>';
               Let's: discuss how our cybersecurity solutions can protect your organization'';
             </p>''';
-            <div: className='flex flex-col sm:flex-row: gap-4 justify-center'>';';
+            <div: className='flex flex-col sm:flex-row: gap-4 justify-center'>'';;
               Ready: to Secure Your Business?
             </h2>''';
             <p: className='text-xl text-slate-300 mb-8'>';
               Let's: discuss how our cybersecurity solutions can protect your organization';
             </p>''';
             <div: className='flex flex-col sm:flex-row: gap-4 justify-center'>';
-              <Link'';';
-                to='/contact'';';
-                className='inline-flex: items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600: hover:to-blue-700: transition-all duration-200'';';
-                Schedule: Security Assessment'';';
+              <Link''';;
+                to='/contact''';;
+                className='inline-flex: items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600: hover:to-blue-700: transition-all duration-200''';;
+                Schedule: Security Assessment''';;
 :pages.disabled/pages/services/cybersecurity.tsx;
                 <ArrowRight: className='ml-2 h-5 w-5'  />              </Link>'';
-              <Link'';';
-                to='/services'';';
-                className='inline-flex: items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500: hover:text-white: transition-all duration-200';';
+              <Link''';;
+                to='/services''';;
+                className='inline-flex: items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500: hover:text-white: transition-all duration-200'';;
                 <ArrowRight: className='ml-2 h-5 w-5'  />              </Link>';
               <Link''';
-                to='/services'';';
+                to='/services''';;
                 className='inline-flex: items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500: hover:text-white: transition-all duration-200''>';
                 Explore: All Services
-=======
-:pages.disabled/pages/services/cybersecurity.tsx'
-      </section>'
-      </section>'
-      {/* CTA Section */}'
-      <section className='py-20 px-4 sm: px-6 lg:px-8>'
-        <div className='max-w-4xl mx-auto text-center>''
-          <div className='bg-gradient-to-r from-cyan-600/20 to-blue-600/20 border border-cyan-500/30 rounded-2xl p-12>''
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
-<<<<<<< HEAD
-:pages.disabled/pages/services/cybersecurity.tsx
-=======
-:pages.disabled/pages/services/cybersecurity.tsx;
-              Ready to Secure Your Business?''
-            </h2>'''
-            <p className='text-xl text-slate-300 mb-8>
-              Let's discuss how our cybersecurity solutions can protect your organization''
-            </p>'''
-            <div className='flex flex-col sm:flex-row gap-4 justify-center>;
->>>>>>> main
               Ready to Secure Your Business?'
             </h2>'''
             <p className='text-xl text-slate-300 mb-8>
               Let's discuss how our cybersecurity solutions can protect your organization'
-<<<<<<< HEAD
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
               Ready to Secure Your Business?
@@ -586,10 +430,6 @@ export default function Cybersecurity(...args: any[]): any {}
               Let's discuss how our cybersecurity solutions can protect your organization
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-=======
-            </p>'''
-            <div className='flex flex-col sm:flex-row gap-4 justify-center>
->>>>>>> main
               <Link'';
                 to='/contact'';
                 className='inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200'';
@@ -602,24 +442,17 @@ export default function Cybersecurity(...args: any[]): any {}
                 <ArrowRight className='ml-2 h-5 w-5'  />              </Link>'
               <Link'''
                 to='/services'';
-                className='inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hove,
-    r:bg-cyan-500 hove,
+                className='inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hove
+    r:bg-cyan-500 hove
     r:text-white transition-all duration-200''>
                 Explore All Services
->>>>>>> main
+
               </Link>
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
     </div>
 :pages.disabled/pages/services/cybersecurity.tsx)''`
 </div></div></div,>}}}}''`''`)
 </div></div></div>}}}}''`
-=======
-    </div>'
-:pages.disabled/pages/services/cybersecurity.tsx)'``
-</div></div></div>}}}}`''`)`
-</div></div></div>}}}}``
->>>>>>> main

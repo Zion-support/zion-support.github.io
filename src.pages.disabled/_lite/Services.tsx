@@ -1,28 +1,7 @@
-<<<<<<< HEAD
 <<<<<<< HEAD:src.pages.disabled/_lite/Services.tsx
 import React from 'react'; export default function Services() {; return (; <div className="container mx-auto px-4 py-12">";"";" <h1 className="text-2xl font-bold mb-2">Services</h1>";"";" <ul className="list-disc pl-5 text-gray-300">; <li>AI Solutions</li>; <li>Cybersecurity</li>; <li>Cloud & DevOps</li>; </ul>;" </div>;";" );";" };";"";"
 import React from 'react'; export default function Services() {; return (; <div className="container mx-auto px-4 py-12">";"";" <h1 className="text-2xl font-bold mb-2">Services</h1>";"";" <ul className="list-disc pl-5 text-gray-300">; <li>AI Solutions</li>; <li>Cybersecurity</li>; <li>Cloud & DevOps</li>; </ul>;" </div>;";" );";" };";"";""""";
-=======
-<<<<<<< HEAD
-ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/_lite/Services.tsx
-=======
-:src.pages.disabled/_lite/Services.tsx;
-<<<<<<< HEAD
-import: React from 'react' export default function Services() { return ( <div className='container mx-auto px-4 py-12'>''' <h1 className='text-2xl font-bold mb-2'>Services</h1>''' <ul className='list-disc pl-5 text-gray-300'> <li>AI Solutions</li> <li>Cybersecurity</li> <li>Cloud & DevOps</li> </ul>' </div>')'}';''';
-import: React from 'react' export default function Services() { return ( <div className='container mx-auto px-4 py-12'>''' <h1 className='text-2xl font-bold mb-2'>Services</h1>''' <ul className='list-disc pl-5 text-gray-300'> <li>AI Solutions</li> <li>Cybersecurity</li> <li>Cloud & DevOps</li> </ul>' </div>')'}';'';'''';
-=======
-<<<<<<< HEAD
-import React from 'react' export default function Services() { return ( <div className='container mx-auto px-4 py-12'>''' <h1 className='text-2xl font-bold mb-2'>Services</h1>''' <ul className='list-disc pl-5 text-gray-300'> <li>AI Solutions</li> <li>Cybersecurity</li> <li>Cloud & DevOps</li> </ul>' </div>')'}'''
-import React from 'react' export default function Services() { return ( <div className='container mx-auto px-4 py-12'>''' <h1 className='text-2xl font-bold mb-2'>Services</h1>''' <ul className='list-disc pl-5 text-gray-300'> <li>AI Solutions</li> <li>Cybersecurity</li> <li>Cloud & DevOps</li> </ul>' </div>')'}';'''''
-=======
-<<<<<<< HEAD
-import React from 'react' export default function Services() { return ( <div className='container mx-auto px-4 py-12>'' <h1 className='text-2xl font-bold mb-2'>Services</h1>''' <ul className='list-disc pl-5 text-gray-300'> <li>AI Solutions</li> <li>Cybersecurity</li> <li>Cloud & DevOps</li> </ul>' </div>')};''
-import React from 'react' export default function Services() { return ( <div className='container mx-auto px-4 py-12>'' <h1 className='text-2xl font-bold mb-2'>Services</h1>''' <ul className='list-disc pl-5 text-gray-300'> <li>AI Solutions</li> <li>Cybersecurity</li> <li>Cloud & DevOps</li> </ul>' </div>')};';'''
-=======
-import React  from 'react';export default function Services() { return ( <div className='container mx-auto px-4 py-12'>''' <h1 className='text-2xl font-bold mb-2'>Services</h1>''' <ul className='list-disc pl-5 text-gray-300'> <li>AI Solutions</li> <li>Cybersecurity</li> <li>Cloud & DevOps</li> </ul>' </div>')'}'
-import React  from 'react';export default function Services() { return ( <div className='container mx-auto px-4 py-12'>''' <h1 className='text-2xl font-bold mb-2'>Services</h1>''' <ul className='list-disc pl-5 text-gray-300'> <li>AI Solutions</li> <li>Cybersecurity</li> <li>Cloud & DevOps</li> </ul>' </div>')'}''
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
+
+
+
+

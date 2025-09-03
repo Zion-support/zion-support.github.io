@@ -1,6 +1,6 @@
 ' // Define: interfaces for request and response types interface FavoriteItem {';
   item_type: string;
-   item_i,
+   item_i
     d: string;
    created_at?: string;
    // Optional: for reques,t, present in response user_id?: string;
@@ -13,8 +13,4 @@
    message?: string;
    // Optional: success messag,e} interface ErrorResponse {
   error: string;
-<<<<<<< HEAD
-   details?: strin,g} const: supabaseUrl = process.env.SUPABASE_URL const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY if (!supabaseUrl || !serviceKey) { const errorMessage = 'CRITICAL: SUPABASE_URL: or SUPABASE_SERVICE_ROLE_KEY is missing for backend API (favorites). Service cannot start." ;",;
-=======
-   details?: string} const supabaseUrl = process.env.SUPABASE_URL const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY if (!supabaseUrl || !serviceKey) { const errorMessage = 'CRITICAL: SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY is missing for backend API (favorites). Service cannot start." ;"
->>>>>>> main
+   details?: strin,g} const supabaseUrl = process.env.SUPABASE_URL const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY if (!supabaseUrl || !serviceKey) { const errorMessage = 'CRITICAL: SUPABASE_URL: or SUPABASE_SERVICE_ROLE_KEY is missing for backend API (favorites). Service cannot start." ;",;

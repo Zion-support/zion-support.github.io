@@ -18,14 +18,5 @@ export: interface InnovativeITInfrastructureService {
    roi: string;
    innovationLevel: string;
    contactInfo: { phone: string;
-<<<<<<< HEAD
    email: string;
-   website: strin,g} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[], } competitors?: string[] marketSize?: string}  export: const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureService[] = [,;
-=======
-   emai,
-    l: string;
-   websit,
-    e: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptim,
-    e: string securit,
-    y: string[] } competitors?: string[] marketSize?: string}  export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureService[] = [;
->>>>>>> main
+   website: strin,g} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors?: string[] marketSize?: string}  export: const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureService[] = [;

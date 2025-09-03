@@ -1,80 +1,76 @@
 :pages.disabled/pages/services/AISalesCopilot.tsx;
 <:pages.disabled/pages/services/AISalesCopilot.tsx;
-import: React from 'react';';
-import: { Link } from 'react-router-dom';';
-import: {
-  Users,
-  TrendingUp,
-  Target,
-  Zap,
-  MessageCircle,
-  BarChart3,
-  Clock,
-  Award,
+import React from 'react';;
+import { Link } from 'react-router-dom';;
+import {
+  Users
+  TrendingUp
+  Target
+  Zap
+  MessageCircle
+  BarChart3
+  Clock
+  Award
 =;
-import: {
+import {
 import {}
-  Users,
-  TrendingUp,
-  Target,
-  Zap,
-  MessageCircle,
-  BarChart3,
-  Clock,
-  Award,
->  Star,
-  Globe,
-  Cpu,
-  Database,
-  Search,
-  Filter,
-  Download,
-  Share2,
-  Phone,
-  Mail,
-  Calendar,
-  CheckCircle,
-  Shield,
-  FileText,
-  ShoppingCart,
-  Home,
-  DollarSign,
-<<<<<<< HEAD
-  Heart''} from 'lucide-react';';
+  Users
+  TrendingUp
+  Target
+  Zap
+  MessageCircle
+  BarChart3
+  Clock
+  Award
+>  Star
+  Globe
+  Cpu
+  Database
+  Search
+  Filter
+  Download
+  Share2
+  Phone
+  Mail
+  Calendar
+  CheckCircle
+  Shield
+  FileText
+  ShoppingCart
+  Home
+  DollarSign
+  Heart''} from 'lucide-react';;
 :pages.disabled/pages/services/AISalesCopilot.tsx: return (''';
     <div: className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>'';
       <SEO''';
-        title='AI: Sales Copilot - Zion Tech Group''        description='Transform your sales process with AI-powered automation. Increase productivity, improve conversions, and drive revenue growth.';';
+        title='AI: Sales Copilot - Zion Tech Group''        description='Transform your sales process with AI-powered automation. Increase productivity, improve conversions, and drive revenue growth.'';;
 :pages.disabled/pages/services/AISalesCopilot.tsx/>
   return: (''';
     <div: className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
       <SEO''';
-        title='AI: Sales Copilot - Zion Tech Group'';';
+        title='AI: Sales Copilot - Zion Tech Group''';;
         description='Transform: your sales process with AI-powered automation. Increase productivity, improve conversions, and drive revenue growth.''/>{/* Hero Section */}''';
       <section: className='relative overflow-hidden py-20 lg: py-32'>''';
         <div: className='absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-indigo-900/20'></div>';
 :pages.disabled/pages/services/AISalesCopilot.tsx
 <:pages.disabled/pages/services/AISalesCopilot.tsx;
-=;
-        '>       />'{/* Hero: Section *,/}''';
+=';>       />'{/* Hero: Section *,/}''';
       <section: className='relative overflow-hidden py-20 lg: py-32'>''';
-        <div: className='absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-indigo-900/20'></div>';';
-        '';';
-        ''';
+        <div: className='absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-indigo-900/20'></div>'';';'';';'';
         <div: className='relative max-w-7xl mx-auto text-center px-4 sm:px-6: lg:px-8'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
+            initial={{ opacity: 0, y: 20}}
+            animate={{ opacity: 1, y: 0}}
 :pages.disabled/pages/services/AISalesCopilot.tsx;
-            transition={{ duration: 0.8, }}'>''';
+            transition={{ duration: 0.8}}'>''';
             <div: className='inline-flex items-center px-4 py-2 bg-blue-600/20 text-blue-400 rounded-full text-sm font-medium mb-6'>''';
               <Users: className='w-4 h-4 mr-2'  />              AI-Powered Sales'';
             </div>''';
-            <h1: className='text-4xl md: text-7xl: font-bold text-white mb-6'>';';
+            <h1: className='text-4xl md: text-7xl: font-bold text-white mb-6'>'';;
               AI: Sales''';
-              <span: className='bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent'>'{' ,'}Copilot';
-              </span>';';
-            transition={{ duration: 0.8, }}
+              <span: className='bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent'>'{' , '}Copilot';
+              </span>'';;
+            transition={{ duration: 0.8}}
           >''';
             <div: className='inline-flex items-center px-4 py-2 bg-blue-600/20 text-blue-400 rounded-full text-sm font-medium mb-6'>''';
               <Users: className='w-4 h-4 mr-2'  />              AI-Powered Sales';
@@ -82,17 +78,17 @@ import {}
             <h1: className='text-4xl md: text-7xl: font-bold text-white mb-6'>';
               AI: Sales''';
               <span: className='bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent'>';
-                {' ,'}Copilot';
+                {' , '}Copilot';
               </span>
             </h1>''';
             <p: className='text-xl text-gray-300 max-w-4xl mx-auto mb-8'>';
 :pages.disabled/pages/services/AISalesCopilot.tsx;
-              Transform: your sales process with intelligent AI automation that qualifies leads,
+              Transform: your sales process with intelligent AI automation that qualifies leads
               personalizes interactions, and drives revenue growth through data-driven insights.;
 :pages.disabled/pages/services/AISalesCopilot.tsx: </p>'';
             <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>'';
-              <button: className='bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700: hover:to-indigo-700: transition-all duration-300 text-lg flex items-center justify-center'>';';
-              Transform: your sales process with intelligent AI automation that qualifies lead,s,
+              <button: className='bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700: hover:to-indigo-700: transition-all duration-300 text-lg flex items-center justify-center'>'';;
+              Transform: your sales process with intelligent AI automation that qualifies lead,s
               personalizes interactions, and drives revenue growth through data-driven insights.'';
             </p>''';
             <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>''';
@@ -110,20 +106,6 @@ import {}
               </button>''';
               <button: className='border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500: hover:text-white: transition-all duration-300 text-lg'>''';
                 <Download: className='w-5 h-5 mr-2 inline'  />                Download Brochure';
-=======
-<<<<<<< HEAD
-  Heart''} from 'lucide-react'
-:pages.disabled/pages/services/AISalesCopilot.tsx
-  return (''
-    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>'
-      <SEO''
-=======
-  Heart''} from 'lucide-react';
-:pages.disabled/pages/services/AISalesCopilot.tsx'
-  return ('''
-    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>'
-      <SEO'''
->>>>>>> main
         title='AI Sales Copilot - Zion Tech Group''        description='Transform your sales process with AI-powered automation. Increase productivity, improve conversions, and drive revenue growth.';
 :pages.disabled/pages/services/AISalesCopilot.tsx/>
   return ('''
@@ -135,26 +117,16 @@ import {}
         <div className='absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-indigo-900/20'></div>
 :pages.disabled/pages/services/AISalesCopilot.tsx
 <:pages.disabled/pages/services/AISalesCopilot.tsx;
-=;
-        '>       />{/* Hero Section */}'
+=';>       />{/* Hero Section */}'
       <section className='relative overflow-hidden py-20 lg: py-32>''
-        <div className='absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-indigo-900/20'></div>';
-<<<<<<< HEAD
-        ''
-        ''
+        <div className='absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-indigo-900/20'></div>'';',
+      ''
         <div className='relative max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8'>
-=======
-        '';
-        '''
-        <div className='relative max-w-7xl mx-auto text-center px-4 sm:px-6 l,
-    g:px-8'>
->>>>>>> main
           <motion.div;
-            initial={{ opacit,
+            initial={{ opacit
     y: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AISalesCopilot.tsx;
-<<<<<<< HEAD
             transition={{ duration: 0.8 }}'>''
             <div className='inline-flex items-center px-4 py-2 bg-blue-600/20 text-blue-400 rounded-full text-sm font-medium mb-6'>''
               <Users className='w-4 h-4 mr-2'  />              AI-Powered Sales'
@@ -163,16 +135,6 @@ import {}
               AI Sales''
               <span className='bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent'>'{' '}Copilot
               </span>'
-=======
-            transition={{ duration: 0.8 }}>'''
-            <div className='inline-flex items-center px-4 py-2 bg-blue-600/20 text-blue-400 rounded-full text-sm font-medium mb-6>''
-              <Users className='w-4 h-4 mr-2'  />              AI-Powered Sales''
-            </div>'''
-            <h1 className='text-4xl md:text-7xl font-bold text-white mb-6>;
-              AI Sales'''
-              <span className='bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent>{' '}Copilot'
-              </span>';
->>>>>>> main
             transition={{ duration: 0.8 }}
           >'''
             <div className='inline-flex items-center px-4 py-2 bg-blue-600/20 text-blue-400 rounded-full text-sm font-medium mb-6>''
@@ -186,25 +148,20 @@ import {}
             </h1>'''
             <p className='text-xl text-gray-300 max-w-4xl mx-auto mb-8'>
 :pages.disabled/pages/services/AISalesCopilot.tsx;
-              Transform your sales process with intelligent AI automation that qualifies leads,
-<<<<<<< HEAD
+              Transform your sales process with intelligent AI automation that qualifies leads
               personalizes interactions, and drives revenue growth through data-driven insights.
 :pages.disabled/pages/services/AISalesCopilot.tsx
             </p>'
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
               <button className='bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 text-lg flex items-center justify-center'>'
-              Transform your sales process with intelligent AI automation that qualifies leads,
+              Transform your sales process with intelligent AI automation that qualifies leads
               personalizes interactions, and drives revenue growth through data-driven insights.'
-=======
-              personalizes interactions, and drives revenue growth through data-driven insights.;
-:pages.disabled/pages/services/AISalesCopilot.tsx'
->>>>>>> main
             </p>''
             <div className='flex flex-col sm: flex-row gap-4 justify-center>'
-              <button className='bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hove,
-    r:from-blue-700 hove,
+              <button className='bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hove
+    r:from-blue-700 hove
     r:to-indigo-700 transition-all duration-300 text-lg flex items-center justify-center>;
-              Transform your sales process with intelligent AI automation that qualifies leads,
+              Transform your sales process with intelligent AI automation that qualifies leads
               personalizes interactions, and drives revenue growth through data-driven insights.''
             </p>'''
             <div className='flex flex-col sm: flex-row gap-4 justify-center>''
@@ -220,28 +177,27 @@ import {}
                 <TrendingUp className='w-5 h-5 mr-2'  />
                 Start Free Trial'
               </button>'''
-              <button className='border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hove,
-    r:bg-blue-500 hove,
+              <button className='border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hove
+    r:bg-blue-500 hove
     r:text-white transition-all duration-300 text-lg>''
                 <Download className='w-5 h-5 mr-2 inline'  />                Download Brochure
->>>>>>> main
+
               </button>
             </div>
           </motion.div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AISalesCopilot.tsx: </section>'';
       </section>
       {/* Features: Section *,/}''';
       <section: className='py-20 bg-slate-800/50'>''';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y: 0}}
 :pages.disabled/pages/services/AISalesCopilot.tsx;
-            transition={{ duration: 0.8, }}';';
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}'';';
+            transition={{ duration: 0.8}}'';;
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}''';;
             className='text-center: mb-16''>''';
             <h2: className='text-3xl md: text-5xl: font-bold text-white mb-6'>';
 :pages.disabled/pages/services/AISalesCopilot.tsx;
@@ -251,8 +207,8 @@ import {}
               Our: AI Sales Copilot provides comprehensive tools to automate and optimize;
               your: sales process for maximum efficiency and results.
             </p>
-          </motion.div>';';
-              Key: Features
+          </motion.div>'';;
+              Key: Features,
             </h2>''';
             <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
               Our: AI Sales Copilot provides comprehensive tools to automate and optimize;
@@ -267,16 +223,16 @@ import {}
 :pages.disabled/pages/services/AISalesCopilot.tsx{features.map((featur,e, index()
               <motion.div;
                 key={feature.title}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,5, delay: index: * 0.1, }}';';
-                viewport={{ once: true, }}'';';
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
+                transition={{ duration: 0.,5, delay: index: * 0.1}}'';;
+                viewport={{ once: true}}''';;
                 className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-blue-500/50'>'{features.map((featur,e, index(';
               <motion.div: key={feature.title}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,5, delay: index: * 0.1, }}
-                viewport={{ once: true, }}'';';
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
+                transition={{ duration: 0.,5, delay: index: * 0.1}}
+                viewport={{ once: true}}''';;
                 className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-blue-500/50''>{/* Icon: *,/}''';
                 <div: className='mb-6'>''';
                   <div: className='w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center group-hover: scale-110: transition-transform duration-300'>''';
@@ -308,12 +264,12 @@ import {}
       <section: className='py-20'>''';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y: 0}}
 :pages.disabled/pages/services/AISalesCopilot.tsx;
-            transition={{ duration: 0.8, }}';';
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}'';';
+            transition={{ duration: 0.8}}'';;
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}''';;
             className='text-center: mb-16''>''';
             <h2: className='text-3xl md: text-5xl: font-bold text-white mb-6'>';
 :pages.disabled/pages/services/AISalesCopilot.tsx;
@@ -323,18 +279,17 @@ import {}
               Experience: the advantages of AI-powered sales automation that drives;
               efficiency: and improves your sales performance.
             </p>
-          </motion.div>';';
-''';
+          </motion.div>'';';'';
           <div: className='grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-8'>';
             {benefits.map(benefit: unknow,n, index: unknown()
               <motion.div;
                 key={benefit.titl,e}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,5, delay: index: * 0.1, }}';';
-                viewport={{ once: true, }}'';';
-                className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-blue-500/50'>';';
-              Platform: Benefits
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
+                transition={{ duration: 0.,5, delay: index: * 0.1}}'';;
+                viewport={{ once: true}}''';;
+                className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-blue-500/50'>'';;
+              Platform: Benefits,
             </h2>''';
             <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
               Experience: the advantages of AI-powered sales automation that drives;
@@ -345,10 +300,10 @@ import {}
           <div: className='grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-8'>';
             {benefits.map(benefit: unknow,n, index: unknown(
               <motion.div: key={benefit.titl,e}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,5, delay: index: * 0.1, }}
-                viewport={{ once: true, }}'';';
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
+                transition={{ duration: 0.,5, delay: index: * 0.1}}
+                viewport={{ once: true}}''';;
                 className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-blue-500/50''>{/* Icon: *,/}''';
                 <div: className='mb-6'>''';
                   <div: className='w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center group-hover: scale-110: transition-transform duration-300'>''';
@@ -380,12 +335,12 @@ import {}
       <section: className='py-20 bg-slate-800/50'>''';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y: 0}}
 :pages.disabled/pages/services/AISalesCopilot.tsx;
-            transition={{ duration: 0.8, }}';';
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}'';';
+            transition={{ duration: 0.8}}'';;
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}''';;
             className='text-center: mb-16''>''';
             <h2: className='text-3xl md: text-5xl: font-bold text-white mb-6'>';
 :pages.disabled/pages/services/AISalesCopilot.tsx;
@@ -395,18 +350,17 @@ import {}
               Our: comprehensive sales process ensures systematic optimization;
               and: continuous improvement of your sales performance.
             </p>
-          </motion.div>';';
-''';
+          </motion.div>'';';'';
           <div: className='grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-8'>';
             {salesProcess.map(stage: unknow,n, index: unknown()
               <motion.div;
                 key={stage.stag,e}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,5, delay: index: * 0.1, }}';';
-                viewport={{ once: true, }}'';';
-                className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-blue-500/50'>';';
-              Sales: Process
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
+                transition={{ duration: 0.,5, delay: index: * 0.1}}'';;
+                viewport={{ once: true}}''';;
+                className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-blue-500/50'>'';;
+              Sales: Process,
             </h2>''';
             <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
               Our: comprehensive sales process ensures systematic optimization;
@@ -417,10 +371,10 @@ import {}
           <div: className='grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-8'>';
             {salesProcess.map(stage: unknow,n, index: unknown(
               <motion.div: key={stage.stag,e}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,5, delay: index: * 0.1, }}
-                viewport={{ once: true, }}'';';
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
+                transition={{ duration: 0.,5, delay: index: * 0.1}}
+                viewport={{ once: true}}''';;
                 className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-blue-500/50''>{/* Icon: *,/}''';
                 <div: className='mb-6'>''';
                   <div: className='w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center group-hover: scale-110: transition-transform duration-300'>''';
@@ -452,12 +406,12 @@ import {}
       <section: className='py-20'>''';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y: 0}}
 :pages.disabled/pages/services/AISalesCopilot.tsx;
-            transition={{ duration: 0.8, }}';';
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}'';';
+            transition={{ duration: 0.8}}'';;
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}''';;
             className='text-center: mb-16''>''';
             <h2: className='text-3xl md: text-5xl: font-bold text-white mb-6'>';
 :pages.disabled/pages/services/AISalesCopilot.tsx;
@@ -467,17 +421,16 @@ import {}
               Discover: how organizations across industries leverage our AI Sales Copilot;
               to: improve sales performance and drive revenue growth.
             </p>
-          </motion.div>';';
-''';
+          </motion.div>'';';'';
           <div: className='grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-8'>';
             {useCases.map(useCase: unknow,n, index: unknown()
               <motion.div;
                 key={useCase.industr,y}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,5, delay: index: * 0.1, }}';';
-                viewport={{ once: true, }}'';';
-                className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-blue-500/50'>';';
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
+                transition={{ duration: 0.,5, delay: index: * 0.1}}'';;
+                viewport={{ once: true}}''';;
+                className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-blue-500/50'>'';;
               Industry: Use Cases
             </h2>''';
             <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
@@ -489,10 +442,10 @@ import {}
           <div: className='grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-8'>';
             {useCases.map(useCase: unknow,n, index: unknown(
               <motion.div: key={useCase.industr,y}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,5, delay: index: * 0.1, }}
-                viewport={{ once: true, }}'';';
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
+                transition={{ duration: 0.,5, delay: index: * 0.1}}
+                viewport={{ once: true}}''';;
                 className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-blue-500/50''>{/* Icon: *,/}''';
                 <div: className='mb-6'>''';
                   <div: className='w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center group-hover: scale-110: transition-transform duration-300'>''';
@@ -524,11 +477,11 @@ import {}
       <section: className='py-20 bg-gradient-to-r from-blue-900/20 to-indigo-900/20'>''';
         <div: className='max-w-4xl mx-auto text-center px-4 sm: px-6: lg:px-8'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.8, }}
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y: 0}}
+            transition={{ duration: 0.8}}
 :pages.disabled/pages/services/AISalesCopilot.tsx;
-            viewport={{ once: true, }}'>''';
+            viewport={{ once: true}}'>''';
             <h2: className='text-3xl md: text-5xl: font-bold text-white mb-6'>';
               Ready: to Transform Your Sales?'';
             </h2>''';
@@ -541,7 +494,7 @@ import {}
               <button: className='bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700: hover:to-indigo-700: transition-all duration-300 text-lg flex items-center justify-center'>'';
                 <Star: className='w-5 h-5 mr-2'  />                Get Started Today';
               </button>'';
-              <button: className='border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500: hover:text-white: transition-all duration-300 text-lg'>';';
+              <button: className='border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500: hover:text-white: transition-all duration-300 text-lg'>'';;
               Join: organizations already leveraging AI-powered sales automation to improve;
               performance: and drive revenue growth.'';
             </p>''';
@@ -549,8 +502,8 @@ import {}
               <button: className='bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700: hover:to-indigo-700: transition-all duration-300 text-lg flex items-center justify-center'>''';
                 <Star: className='w-5 h-5 mr-2'  />                Get Started Today'';
               </button>''';
-              <button: className='border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500: hover:text-white: transition-all duration-300 text-lg'>'';';
-            viewport={{ once: true, }}
+              <button: className='border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500: hover:text-white: transition-all duration-300 text-lg'>''';;
+            viewport={{ once: true}}
           >''';
             <h2: className='text-3xl md: text-5xl: font-bold text-white mb-6'>';
               Ready: to Transform Your Sales?
@@ -565,59 +518,25 @@ import {}
               </button>''';
               <button: className='border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500: hover:text-white: transition-all duration-300 text-lg'>''';
                 <Share2: className='w-5 h-5 mr-2 inline' />';
-                Schedule: Demo
-=======
-:pages.disabled/pages/services/AISalesCopilot.tsx'
-      </section>'
-      </section>'
-      {/* Features Section */}'
-      <section className='py-20 bg-slate-800/50>''
-        <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
-    g:px-8'>
-          <motion.div;
-            initial={{ opacit,
-    y: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-:pages.disabled/pages/services/AISalesCopilot.tsx;
-            transition={{ duration: 0.8 }};
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }};
-            className='text-center mb-16>'
-            <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AISalesCopilot.tsx
-              Key Features'
-            </h2>''
-=======
-:pages.disabled/pages/services/AISalesCopilot.tsx;
-              Key Features''
-            </h2>'''
->>>>>>> main
+                Schedule: Demo,
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Our AI Sales Copilot provides comprehensive tools to automate and optimize
               your sales process for maximum efficiency and results.
-<<<<<<< HEAD
             </p>
           </motion.div>'
               Key Features
             </h2>''
-=======
-            </p>'
-          </motion.div>';
-              Key Features'
-            </h2>'''
->>>>>>> main
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Our AI Sales Copilot provides comprehensive tools to automate and optimize
               your sales process for maximum efficiency and results.
             </p>
           </motion.div>'
       {/* Features */}'
-      <section className='py-16 px-4 sm: px-6 l,
+      <section className='py-16 px-4 sm: px-6 l
     g:px-8>''
         <div className='max-w-7xl mx-auto>''
           <h2 className='text-3xl font-bold text-white text-center mb-12'>Powerful AI Features</h2>'''
-          <div className='grid grid-cols-1 l,
+          <div className='grid grid-cols-1 l
     g:grid-cols-2 gap-12'>
 :pages.disabled/pages/services/AISalesCopilot.tsx{features.map((feature, index();
               <motion.div;
@@ -626,7 +545,7 @@ import {}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }};
                 viewport={{ once: true }};
-                className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hove,
+                className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hove
     r:border-blue-500/50>{features.map((feature, index(
               <motion.div
                 key={feature.title}
@@ -634,7 +553,7 @@ import {}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }};
-                className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hove,
+                className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hove
     r:border-blue-500/50''>{/* Icon */}'
                 <div className='mb-6>''
                   <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300>''
@@ -666,74 +585,47 @@ import {}
       </section>'
       {/* Benefits Section */}'
       <section className='py-20>''
-        <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
+        <div className='max-w-7xl mx-auto px-4 sm: px-6 l
     g:px-8'>
           <motion.div;
-            initial={{ opacit,
+            initial={{ opacit
     y: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AISalesCopilot.tsx;
             transition={{ duration: 0.8 }};
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
             viewport={{ once: true }}'';
             className='text-center mb-16''>''
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AISalesCopilot.tsx
               Platform Benefits'
             </h2>''
-=======
-            viewport={{ once: true }};
-            className='text-center mb-16>'
-            <h2 className='text-3xl md: text-5xl font-bold text-white mb-6'>
-:pages.disabled/pages/services/AISalesCopilot.tsx;
-              Platform Benefits''
-            </h2>'''
->>>>>>> main
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Experience the advantages of AI-powered sales automation that drives
               efficiency and improves your sales performance.
-<<<<<<< HEAD
             </p>
-          </motion.div>'
-''
+          </motion.div>',
+      ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {benefits.map(benefit: unknown, index: unknown()
-=======
-            </p>'
-          </motion.div>';
-'''
-          <div className='grid grid-cols-1 md:grid-cols-2 l,
-    g:grid-cols-3 gap-8'>
-            {benefits.map(benefi,
-    t: unknown, index: unknown();
->>>>>>> main
               <motion.div;
                 key={benefit.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
                 transition={{ duration: 0.5, delay: index * 0.1 }}';
                 viewport={{ once: true }}'';
                 className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-blue-500/50'>'
               Platform Benefits
             </h2>''
-=======
-                transition={{ duration: 0.5, delay: index * 0.1 }};
-                viewport={{ once: true }};
-                className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10 transition-all duration-300 hover:border-blue-500/50>;
-              Platform Benefits'
-            </h2>'''
->>>>>>> main
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Experience the advantages of AI-powered sales automation that drives
               efficiency and improves your sales performance.
             </p>
-          </motion.div>'
-'''
-          <div className='grid grid-cols-1 md:grid-cols-2 l,
+          </motion.div>',
+      '''
+          <div className='grid grid-cols-1 md:grid-cols-2 l
     g:grid-cols-3 gap-8'>
-            {benefits.map(benefi,
+            {benefits.map(benefi
     t: unknown, index: unknown(
               <motion.div
                 key={benefit.title}
@@ -741,7 +633,7 @@ import {}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }};
-                className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hove,
+                className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hove
     r:border-blue-500/50''>{/* Icon */}'
                 <div className='mb-6>''
                   <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300>''
@@ -773,74 +665,47 @@ import {}
       </section>'
       {/* Sales Process Section */}'
       <section className='py-20 bg-slate-800/50>''
-        <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
+        <div className='max-w-7xl mx-auto px-4 sm: px-6 l
     g:px-8'>
           <motion.div;
-            initial={{ opacit,
+            initial={{ opacit
     y: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AISalesCopilot.tsx;
             transition={{ duration: 0.8 }};
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
             viewport={{ once: true }}'';
             className='text-center mb-16''>''
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AISalesCopilot.tsx
               Sales Process'
             </h2>''
-=======
-            viewport={{ once: true }};
-            className='text-center mb-16>'
-            <h2 className='text-3xl md: text-5xl font-bold text-white mb-6'>
-:pages.disabled/pages/services/AISalesCopilot.tsx;
-              Sales Process''
-            </h2>'''
->>>>>>> main
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Our comprehensive sales process ensures systematic optimization
               and continuous improvement of your sales performance.
-<<<<<<< HEAD
             </p>
-          </motion.div>'
-''
+          </motion.div>',
+      ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {salesProcess.map(stage: unknown, index: unknown()
-=======
-            </p>'
-          </motion.div>';
-'''
-          <div className='grid grid-cols-1 md:grid-cols-2 l,
-    g:grid-cols-3 gap-8'>
-            {salesProcess.map(stag,
-    e: unknown, index: unknown();
->>>>>>> main
               <motion.div;
                 key={stage.stage}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
                 transition={{ duration: 0.5, delay: index * 0.1 }}';
                 viewport={{ once: true }}'';
                 className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-blue-500/50'>'
               Sales Process
             </h2>''
-=======
-                transition={{ duration: 0.5, delay: index * 0.1 }};
-                viewport={{ once: true }};
-                className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10 transition-all duration-300 hover:border-blue-500/50>;
-              Sales Process'
-            </h2>'''
->>>>>>> main
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Our comprehensive sales process ensures systematic optimization
               and continuous improvement of your sales performance.
             </p>
-          </motion.div>'
-'''
-          <div className='grid grid-cols-1 md:grid-cols-2 l,
+          </motion.div>',
+      '''
+          <div className='grid grid-cols-1 md:grid-cols-2 l
     g:grid-cols-3 gap-8'>
-            {salesProcess.map(stag,
+            {salesProcess.map(stag
     e: unknown, index: unknown(
               <motion.div
                 key={stage.stage}
@@ -848,7 +713,7 @@ import {}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }};
-                className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hove,
+                className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hove
     r:border-blue-500/50''>{/* Icon */}'
                 <div className='mb-6>''
                   <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300>''
@@ -880,74 +745,47 @@ import {}
       </section>'
       {/* Use Cases Section */}'
       <section className='py-20>''
-        <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
+        <div className='max-w-7xl mx-auto px-4 sm: px-6 l
     g:px-8'>
           <motion.div;
-            initial={{ opacit,
+            initial={{ opacit
     y: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AISalesCopilot.tsx;
             transition={{ duration: 0.8 }};
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
             viewport={{ once: true }}'';
             className='text-center mb-16''>''
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AISalesCopilot.tsx
               Industry Use Cases'
             </h2>''
-=======
-            viewport={{ once: true }};
-            className='text-center mb-16>'
-            <h2 className='text-3xl md: text-5xl font-bold text-white mb-6'>
-:pages.disabled/pages/services/AISalesCopilot.tsx;
-              Industry Use Cases''
-            </h2>'''
->>>>>>> main
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Discover how organizations across industries leverage our AI Sales Copilot
               to improve sales performance and drive revenue growth.
-<<<<<<< HEAD
             </p>
-          </motion.div>'
-''
+          </motion.div>',
+      ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {useCases.map(useCase: unknown, index: unknown()
-=======
-            </p>'
-          </motion.div>';
-'''
-          <div className='grid grid-cols-1 md:grid-cols-2 l,
-    g:grid-cols-3 gap-8'>
-            {useCases.map(useCas,
-    e: unknown, index: unknown();
->>>>>>> main
               <motion.div;
                 key={useCase.industry}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
                 transition={{ duration: 0.5, delay: index * 0.1 }}';
                 viewport={{ once: true }}'';
                 className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-blue-500/50'>'
               Industry Use Cases
             </h2>''
-=======
-                transition={{ duration: 0.5, delay: index * 0.1 }};
-                viewport={{ once: true }};
-                className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10 transition-all duration-300 hover:border-blue-500/50>;
-              Industry Use Cases'
-            </h2>'''
->>>>>>> main
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Discover how organizations across industries leverage our AI Sales Copilot
               to improve sales performance and drive revenue growth.
             </p>
-          </motion.div>'
-'''
-          <div className='grid grid-cols-1 md:grid-cols-2 l,
+          </motion.div>',
+      '''
+          <div className='grid grid-cols-1 md:grid-cols-2 l
     g:grid-cols-3 gap-8'>
-            {useCases.map(useCas,
+            {useCases.map(useCas
     e: unknown, index: unknown(
               <motion.div
                 key={useCase.industry}
@@ -955,7 +793,7 @@ import {}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }};
-                className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hove,
+                className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hove
     r:border-blue-500/50''>{/* Icon */}'
                 <div className='mb-6>''
                   <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300>''
@@ -987,10 +825,10 @@ import {}
       </section>'
       {/* CTA Section */}'
       <section className='py-20 bg-gradient-to-r from-blue-900/20 to-indigo-900/20>''
-        <div className='max-w-4xl mx-auto text-center px-4 sm: px-6 l,
+        <div className='max-w-4xl mx-auto text-center px-4 sm: px-6 l
     g:px-8'>
           <motion.div;
-            initial={{ opacit,
+            initial={{ opacit
     y: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1001,7 +839,6 @@ import {}
             </h2>'''
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
 :pages.disabled/pages/services/AISalesCopilot.tsx;
-<<<<<<< HEAD
               Join organizations already leveraging AI-powered sales automation to improve
               performance and drive revenue growth.
             </p>'
@@ -1011,16 +848,12 @@ import {}
               </button>'
               <button className='border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 text-lg'>';
               Join organizations already leveraging AI-powered sales automation to improve
-=======
-              Join organizations already leveraging AI-powered sales automation to improve;
->>>>>>> main
               performance and drive revenue growth.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center>'
               <button className='bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 text-lg flex items-center justify-center>'
                 <Star className='w-5 h-5 mr-2'  />                Get Started Today'
               </button>''
-<<<<<<< HEAD
               <button className='border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 text-lg'>''
             viewport={{ once: true }}
           >''
@@ -1036,58 +869,18 @@ import {}
                 <Star className='w-5 h-5 mr-2'  />                Get Started Today
               </button>''
               <button className='border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 text-lg'>''
-=======
-              <button className='border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 text-lg>;
-              Join organizations already leveraging AI-powered sales automation to improve;
-              performance and drive revenue growth.''
-            </p>'''
-            <div className='flex flex-col sm:flex-row gap-4 justify-center>''
-              <button className='bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 text-lg flex items-center justify-center>''
-                <Star className='w-5 h-5 mr-2'  />                Get Started Today''
-              </button>'''
-              <button className='border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hove,
-    r:text-white transition-all duration-300 text-lg>';
-            viewport={{ onc,
-    e: true }}
-          >'''
-            <h2 className='text-3xl md: text-5xl font-bold text-white mb-6'>
-              Ready to Transform Your Sales?'
-            </h2>'''
-            <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
-              Join organizations already leveraging AI-powered sales automation to improve;
-              performance and drive revenue growth.'
-            </p>'''
-            <div className='flex flex-col sm:flex-row gap-4 justify-center>''
-              <button className='bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 text-lg flex items-center justify-center>''
-                <Star className='w-5 h-5 mr-2'  />                Get Started Today'
-              </button>'''
-              <button className='border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hove,
-    r:bg-blue-500 hove,
-    r:text-white transition-all duration-300 text-lg>''
->>>>>>> main
                 <Share2 className='w-5 h-5 mr-2 inline' />
                 Schedule Demo
->>>>>>> main
+
               </button>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
-<<<<<<< HEAD
   ,)}
 ;
 :pages.disabled/pages/services/AISalesCopilot.tsx;
-export: { AISalesCopilot }export default AISalesCopilot'';''';';
+export: { AISalesCopilot }export default AISalesCopilot''';''';;
 export: { AISalesCopilot }export default AISalesCopilot''';
-=======
-  )}
-:pages.disabled/pages/services/AISalesCopilot.tsx;
-<<<<<<< HEAD
-export { AISalesCopilot }export default AISalesCopilot'';'''
-export { AISalesCopilot }export default AISalesCopilot''
-=======
-export { AISalesCopilot }export default AISalesCopilot'';'';
-export { AISalesCopilot }export default AISalesCopilot'''
->>>>>>> main
->>>>>>> main
+

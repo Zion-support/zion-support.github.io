@@ -6,78 +6,63 @@ import SEO from '../../src/components/SEO';
 import { Card } from '../../src/components/ui/Card';
 import { Button } from '../../src/components/ui/Button';
 import { Badge } from '../../src/components/ui/Badge';
-=======
-<<<<<<< HEAD:solutions.disabled/workflow-automation.tsx
-// import SEO from '../../components/SEO';
-=======
-<<<<<<< HEAD
-import SEOHead from '../../components/SEOHead';
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> main
->>>>>>> main:pages/solutions/workflow-automation.tsx
 import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
->>>>>>> main
+
 import { Badge } from '../../components/ui/Badge';
-<<<<<<< HEAD
-=======
-import { Button } from '../../components/ui/Button';
-import { Card } from '../../components/ui/Card';
->>>>>>> main:solutions.disabled/workflow-automation.tsx
+
 import {
-  Workflow,
-  ArrowRight,
-  CheckCircle,
-  Zap,
-  Settings,
-  BarChart3,
-  Shield,
-  Globe,
-  Clock,
+  Workflow
+  ArrowRight
+  CheckCircle
+  Zap
+  Settings
+  BarChart3
+  Shield
+  Globe
+  Clock
 } from 'lucide-react';
 
->>>>>>> main
+
 export default function WorkflowAutomation() {
   const features = [
   {
       icon: Zap,
       title: 'Process Automation',
-      description:'
-        'Automate repetitive business processes with custom workflows and triggers.',
-    },
+      description:',
+      'Automate repetitive business processes with custom workflows and triggers.'
+    }
     {
       icon: Settings,
       title: 'Integration APIs',
-      description:'
-        'Connect with hundreds of third-party applications and services.',
-    },
+      description:',
+      'Connect with hundreds of third-party applications and services.'
+    }
     {
       icon: Workflow,
       title: 'Custom Workflows',
-      description:'
-        'Build custom workflows with drag-and-drop workflow designer.',
-    },
+      description:',
+      'Build custom workflows with drag-and-drop workflow designer.'
+    }
     {
       icon: BarChart3,
       title: 'Monitoring & Analytics',
-      description:'
-        'Track workflow performance and identify optimization opportunities.',
-    },
+      description:',
+      'Track workflow performance and identify optimization opportunities.'
+    }
     {
       icon: Shield,
       title: 'Security & Compliance',
-      description:'
-        'Enterprise-grade security with compliance monitoring and audit trails.',
-    },
+      description:',
+      'Enterprise-grade security with compliance monitoring and audit trails.'
+    }
     {
       icon: Clock,
       title: 'Real-time Processing',
-      description:'
-        'Execute workflows in real-time with high-performance infrastructure.',
-    },
+      description:',
+      'Execute workflows in real-time with high-performance infrastructure.'
+    }
   ];
 
   return (
@@ -86,23 +71,12 @@ export default function WorkflowAutomation() {
       <SEO'
         title="Workflow Automation Platform - Zion Tech Group""
         description="Streamline business processes with custom workflow automation and integration capabilities. Boost efficiency.""
-=======
-<<<<<<< HEAD
-      <SEOHead
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      <SEO
->>>>>>> main
         title="Workflow Automation Platform - Zion Tech Group"
         description="Streamline business processes with custom workflow automation and integration capabilities. Boost efficiency."
->>>>>>> main:solutions.disabled/workflow-automation.tsx
+
         keywords="workflow automation, process automation, business automation, integration, workflow management"
       />
-=======
->>>>>>> main
->>>>>>> main
+
       <Head>
         <title>Workflow Automation Platform - Zion Tech Group</title>
       </Head>
@@ -110,30 +84,18 @@ export default function WorkflowAutomation() {
 <<<<<<< HEAD:pages/solutions/workflow-automation.tsx
       {/* Hero Section */}"
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">"
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 l,
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 l
     g:px-8">"
           <div className="text-center">"
             <Badge className="mb-4 bg-blue-500 text-white">"
               <Workflow className="w-4 h-4 mr-2" />
               Workflow Automation
             </Badge>"
-            <h1 className="text-4xl m,
+            <h1 className="text-4xl m
     d:text-6xl font-bold mb-6">
               Workflow Automation"
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">"
-=======
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-          <div className="text-center">
-            <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium"
-              <Workflow className="w-4 h-4 mr-2" />
-              Workflow Automation
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Workflow Automation
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
->>>>>>> main:solutions.disabled/workflow-automation.tsx
+
                 {' '}
                 Platform
               </span>
@@ -151,8 +113,8 @@ export default function WorkflowAutomation() {
               <Button"
                 size="lg""
                 variant="outline""
-                className="border-white text-white hove,
-    r:bg-white hove,
+                className="border-white text-white hove
+    r:bg-white hove
     r:text-gray-900"
               >
                 Schedule Demo
@@ -164,10 +126,10 @@ export default function WorkflowAutomation() {
 
       {/* Features Section */}"
       <section className="py-20 bg-gray-50">"
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 l,
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 l
     g:px-8">"
           <div className="text-center mb-16">"
-            <h2 className="text-3xl m,
+            <h2 className="text-3xl m
     d:text-4xl font-bold text-gray-900 mb-4">
               Powerful Workflow Automation Features
             </h2>"
@@ -177,7 +139,7 @@ export default function WorkflowAutomation() {
             </p>
           </div>
 "
-          <div className="grid grid-cols-1 md: grid-cols-2 l,
+          <div className="grid grid-cols-1 md: grid-cols-2 l
     g:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <Card
@@ -221,8 +183,8 @@ export default function WorkflowAutomation() {
               <Button"
                 size="lg""
                 variant="outline""
-                className="border-white text-white hove,
-    r:bg-white hove,
+                className="border-white text-white hove
+    r:bg-white hove
     r:text-blue-600"
               >
                 Contact Sales

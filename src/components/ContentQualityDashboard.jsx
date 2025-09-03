@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react';,"});,"})
 import { BarChart3, FileText, AlertTriangle, Zap, RefreshCw, Download, Search, X } from 'lucide-react';,"});,"})
 ,"});,"})
@@ -52,15 +51,15 @@ const ContentQualityDashboard = ({ className = '' }) => {;,"});,"})
                     title: 'Contact Us - Get in Touch',;,"});,"})
                     content: 'Contact Zion Tech Group for all your technology needs.Our team is ready to help you transform your business with cutting-edge solutions.',;,"});,"})
                     metaDescription: 'Contact Zion Tech Group for all your technology needs.Our team is ready to help you transform your business.',;,"});,"})
-import React, { useState, useEffect, useCallback } from 'react';';,"});,"})
+import React, { useState, useEffect, useCallback } from 'react';;,"});,"})
 import { BarChart3, FileText, AlertTriangle, Zap, RefreshCw, Download, Search, X } from 'lucide-react';,"});,"})
 ';,"});,"})
 const ContentQualityDashboard = ({ className = '' }) => {}"});,"})
     const [isOpen, setIsOpen] = useState(false);,"});,"})
-    const [isLoading, setIsLoading] = useState(false);';,"});,"})
-    const [report, setReport] = useState(null);'';,"});,"})
-    const [selectedPage, setSelectedPage] = useState(null);''';,"});,"})
-    const [searchTerm, setSearchTerm] = useState('');''';,"});,"})
+    const [isLoading, setIsLoading] = useState(false)';;,"});,"})
+    const [report, setReport] = useState(null)';';,"});,"})
+    const [selectedPage, setSelectedPage] = useState(null)';'';,"});,"})
+    const [searchTerm, setSearchTerm] = useState('')';'';,"});,"})
     const [filterStatus, setFilterStatus] = useState('all');,"});,"})
     const contentAnalyzer = ContentQualityAnalyzer.getInstance();,"});,"})
     const analyzeAllPages = useCallback(async () => {}"});,"})
@@ -73,62 +72,62 @@ const ContentQualityDashboard = ({ className = '' }) => {}"});,"})
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
-                    url: '/',''';,"});,"})
-                    title: 'Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services',''';,"});,"})
-                    content: 'Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology.',''';,"});,"})
-                    metaDescription: 'Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services.',''';,"});,"})
-                    images['/images/hero-ai-solutions.jpg',/images/hero-it-services.jpg'],;''';,"});,"})
+                    url: '/', ''';,"});,"})
+                    title: 'Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services', ''';,"});,"})
+                    content: 'Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology.', ''';,"});,"})
+                    metaDescription: 'Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services.', ''';,"});,"})
+                    images['/images/hero-ai-solutions.jpg',/images/hero-it-services.jpg'], ';'';,"});,"})
                     links['/services',/ai-solutions',/about',/contact'];,"});,"})
                 },;,"});,"})
                 {}"});,"})
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
-                    url: '/services',''';,"});,"})
-                    title: 'Our Services - Comprehensive Technology Solutions',''';,"});,"})
-                    content: 'We offer a wide range of technology services including AI solutions, cloud infrastructure, cybersecurity, and digital transformation. Our expert team delivers innovative solutions tailored to your business needs.',''';,"});,"})
-                    metaDescription: 'Comprehensive technology services including AI solutions, cloud infrastructure, cybersecurity, and digital transformation.',''';,"});,"})
-                    images['/images/services-overview.jpg'],;''';,"});,"})
+                    url: '/services', ''';,"});,"})
+                    title: 'Our Services - Comprehensive Technology Solutions', ''';,"});,"})
+                    content: 'We offer a wide range of technology services including AI solutions, cloud infrastructure, cybersecurity, and digital transformation. Our expert team delivers innovative solutions tailored to your business needs.', ''';,"});,"})
+                    metaDescription: 'Comprehensive technology services including AI solutions, cloud infrastructure, cybersecurity, and digital transformation.', ''';,"});,"})
+                    images['/images/services-overview.jpg'], ';'';,"});,"})
                     links['/ai-solutions',/cloud-devops',/cybersecurity',/about'];,"});,"})
                 },;,"});,"})
                 {}"});,"})
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
-                    url: '/ai-solutions',''';,"});,"})
-                    title: 'AI Solutions - Artificial Intelligence Services',''';,"});,"})
-                    content: 'Cutting-edge artificial intelligence solutions for modern businesses. Machine learning, predictive analytics, and AI automation to drive innovation and efficiency.',''';,"});,"})
-                    metaDescription: 'Cutting-edge artificial intelligence solutions including machine learning, predictive analytics, and AI automation.',''';,"});,"})
-                    images['/images/ai-solutions.jpg'],;''';,"});,"})
+                    url: '/ai-solutions', ''';,"});,"})
+                    title: 'AI Solutions - Artificial Intelligence Services', ''';,"});,"})
+                    content: 'Cutting-edge artificial intelligence solutions for modern businesses. Machine learning, predictive analytics, and AI automation to drive innovation and efficiency.', ''';,"});,"})
+                    metaDescription: 'Cutting-edge artificial intelligence solutions including machine learning, predictive analytics, and AI automation.', ''';,"});,"})
+                    images['/images/ai-solutions.jpg'], ';'';,"});,"})
                     links['/services',/about',/contact'];,"});,"})
                 },;,"});,"})
                 {}"});,"})
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
-                    url: '/about',''';,"});,"})
-                    title: 'About Us - Zion Tech Group',''';,"});,"})
-                    content: 'Learn about Zion Tech Group, our mission, values, and commitment to delivering innovative technology solutions. Discover our team of experts and our journey in the tech industry.',''';,"});,"})
-                    metaDescription: 'Learn about Zion Tech Group, our mission, values, and commitment to delivering innovative technology solutions.',''';,"});,"})
-                    images['/images/about-team.jpg'],;''';,"});,"})
+                    url: '/about', ''';,"});,"})
+                    title: 'About Us - Zion Tech Group', ''';,"});,"})
+                    content: 'Learn about Zion Tech Group, our mission, values, and commitment to delivering innovative technology solutions. Discover our team of experts and our journey in the tech industry.', ''';,"});,"})
+                    metaDescription: 'Learn about Zion Tech Group, our mission, values, and commitment to delivering innovative technology solutions.', ''';,"});,"})
+                    images['/images/about-team.jpg'], ';'';,"});,"})
                     links['/services',/team',/contact',/mission'];,"});,"})
                 },;,"});,"})
                 {}"});,"})
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
-                    url: '/contact',''';,"});,"})
-                    title: 'Contact Us - Get in Touch',''';,"});,"})
-                    content: 'Contact Zion Tech Group for all your technology needs. Our team is ready to help you transform your business with cutting-edge solutions.',''';,"});,"})
-                    metaDescription: 'Contact Zion Tech Group for all your technology needs. Our team is ready to help you transform your business.',''';,"});,"})
+                    url: '/contact', ''';,"});,"})
+                    title: 'Contact Us - Get in Touch', ''';,"});,"})
+                    content: 'Contact Zion Tech Group for all your technology needs. Our team is ready to help you transform your business with cutting-edge solutions.', ''';,"});,"})
+                    metaDescription: 'Contact Zion Tech Group for all your technology needs. Our team is ready to help you transform your business.', ''';,"});,"})
             // // // // // // // // console.error('Error analyzing pages:', error);,"});,"})
         }"});,"})
         finally {}"});,"})
             setIsLoading(false);,"});,"})
 ';,"});,"})
-            setIsLoading(false);'';,"});,"})
+            setIsLoading(false)';';,"});,"})
 ''';,"});,"})
-                    images['/images/contact-office.jpg'],''';,"});,"})
+                    images['/images/contact-office.jpg'], ''';,"});,"})
                     links['/services',/about',/team'];,"});,"})
                 }"});,"})
             ];,"});,"})
@@ -160,9 +159,9 @@ const ContentQualityDashboard = ({ className = '' }) => {}"});,"})
                 switch (filterStatus) {}"});,"})
 ';,"});,"})
                     case 'excellent': any;,"});,"})
-                        return page.overallScore >= 80;';,"});,"})
+                        return page.overallScore >= 80';;,"});,"})
                     case 'good': any;,"});,"})
-                        return page.overallScore >= 60 && page.overallScore < 80;';,"});,"})
+                        return page.overallScore >= 60 && page.overallScore < 80';;,"});,"})
                     case 'poor': any;,"});,"})
                         return page.overallScore < 40;,"});,"})
                     default: any;,"});,"})
@@ -175,7 +174,7 @@ const ContentQualityDashboard = ({ className = '' }) => {}"});,"})
         if (score >= 60)';,"});,"})
             return 'text-yellow-600 bg-yellow-50 border-yellow-200';,"});,"})
         if (score >= 40)';,"});,"})
-            return 'text-orange-600 bg-orange-50 border-orange-200';';,"});,"})
+            return 'text-orange-600 bg-orange-50 border-orange-200'';;,"});,"})
         return 'text-red-600 bg-red-50 border-red-200'};,"});,"})
     const getStatusText = (score) => {}"});,"})
         if (score >= 80)';,"});,"})
@@ -183,26 +182,26 @@ const ContentQualityDashboard = ({ className = '' }) => {}"});,"})
         if (score >= 60)';,"});,"})
             return 'Good';,"});,"})
         if (score >= 40)';,"});,"})
-            return 'Fair';';,"});,"})
+            return 'Fair'';;,"});,"})
         return 'Poor'};,"});,"})
     const exportReport = () => {}"});,"})
         if (!report);,"});,"})
-            return;';,"});,"})
+            return';;,"});,"})
         const csvContent = ['';,"});,"})
             ['Page URL',Title',Word Count',SEO Score',Overall Score',Issues',Recommendations'],;,"});,"})
             ...report.pageMetrics.map(page => [page.pageUrl,;,"});,"})
                 page.title,;,"});,"})
                 page.wordCount.toString(),;,"});,"})
                 page.seoScore.toString(),;,"});,"})
-                page.overallScore.toString(),';,"});,"})
-                page.issues.join('; '),';,"});,"})
-                page.recommendations.join('; ')'""";,"});,"})
+                page.overallScore.toString(), ';,"});,"})
+                page.issues.join('';), ';,"});,"})
+                page.recommendations.join('';)'""";,"});,"})
             ])'"'""";,"});,"})
-        ].map(row => row.map(cell => `"${cell}"`).join(',)).join('\n');';,"});,"})
+        ].map(row => row.map(cell => `"${cell}"`).join(',)).join('\n')';;,"});,"})
         const blob = new Blob([csvContent], { type: 'text/csv' });,"});,"})
-        const url = window.URL.createObjectURL(blob);';,"});,"})
+        const url = window.URL.createObjectURL(blob)';;,"});,"})
         const a = document.createElement('a');,"});,"})
-        a.href = url;';,"});,"})
+        a.href = url';;,"});,"})
         a.download = 'content-quality-report.csv';,"});,"})
         a.click();,"});,"})
         window.URL.revokeObjectURL(url)};`;,"});,"})
@@ -421,46 +420,12 @@ export { ContentQualityDashboard };,"});,"})
 export { ContentQualityDashboard };,"});,"})
 ;,"});,"})
 export { ContentQualityDashboard, ContentQualityDashboard };,"});,"})
-=======
-<<<<<<< HEAD
- const: ContentQualityDashboard = ({ className = ' }) => { const [isOpen, setIsOpen] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const [searchTerm, setSearchTerm] = useState (')  const [filterStatus, setFilterStatus] = useState ('all')  const contentAnalyzer = ContentQualityAnalyzer.getInstance ()  const analyzeAllPages = useCallback (async () => { setIsLoading (true)  try {''";";";";
-=======
-<<<<<<< HEAD
- const ContentQualityDashboard = ({ className = ' }) => { const [isOpen, setIsOpen] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const [searchTerm, setSearchTerm] = useState (')  const [filterStatus, setFilterStatus] = useState ('all')  const contentAnalyzer = ContentQualityAnalyzer.getInstance ()  const analyzeAllPages = useCallback (async () => { setIsLoading (true)  try {''""
-=======
-<<<<<<< HEAD
- const ContentQualityDashboard = ({ className = ' }) => { const [isOpen, setIsOpen] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const [searchTerm, setSearchTerm] = useState (')  const [filterStatus, setFilterStatus] = useState ('all')  const contentAnalyzer = ContentQualityAnalyzer.getInstance ()  const analyzeAllPages = useCallback (async () => { setIsLoading (true)  try {''";""
-=======
-<<<<<<< HEAD
- const ContentQualityDashboard = ({ className = ' }) => { const [isOpen, setIsOpen] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const [searchTerm, setSearchTerm] = useState (')  const [filterStatus, setFilterStatus] = useState ('all')  const contentAnalyzer = ContentQualityAnalyzer.getInstance ()  const analyzeAllPages = useCallback (async () => { setIsLoading (true)  try {'";
-=======
-<<<<<<< HEAD
- const ContentQualityDashboard = ({className=' }) => { const [isOpen, setIsOpen] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const [searchTerm, setSearchTerm] = useState (')  const [filterStatus, setFilterStatus] = useState ('all')  const contentAnalyzer = ContentQualityAnalyzer.getInstance ()  const analyzeAllPages = useCallback (async () => { setIsLoading (true)  try {''";"
-=======
-<<<<<<< HEAD
- const ContentQualityDashboard = memo(({ className = ' }) => { const [isOpen, setIsOpen] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const [searchTerm, setSearchTerm] = useState (')  const [filterStatus, setFilterStatus] = useState ('all')  const contentAnalyzer = ContentQualityAnalyzer.getInstance ()  const analyzeAllPages = useCallback (async () => { setIsLoading (true)  try {''";"
-=======
-<<<<<<< HEAD
- const ContentQualityDashboard = ({ className = &apos; }) => {&apos;} const [isOpen, setIsOpen] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const;const [searchTerm, setSearchTerm] = useState (&apos;)&apos;'  const [filterStatus, setFilterStatus] = useState (&apos;all&apos;)&apos;'  const contentAnalyzer = ContentQualityAnalyzer.getInstance ()  const;const;const analyzeAllPages = useCallback (async () => { setIsLoading (true)  try {&apos;&apos;";
-&quot;}}"
-=======
-<<<<<<< HEAD
- const ContentQualityDashboard = ({ className = ' }) => { const [isOpen, setIsOpen] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const [searchTerm, setSearchTerm] = useState (')  const [filterStatus, setFilterStatus] = useState ('all')  const contentAnalyzer = ContentQualityAnalyzer.getInstance ()  const analyzeAllPages = useCallback (async () => { setIsLoading (true)  try {''";"
-<<<<<<< HEAD
-""
-}}}
-=======
-=======
- const ContentQualityDashboard = ({ className = ' }) => { const [isOpen, setIsOpen] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const [searchTerm, setSearchTerm] = useState (')  const [filterStatus, setFilterStatus] = useState ('all')  const contentAnalyzer = ContentQualityAnalyzer.getInstance ()  const analyzeAllPages = useCallback (async () => { setIsLoading (true)  try {''
-"
-}}}
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
+
+
+
+
+
+
+
+
+

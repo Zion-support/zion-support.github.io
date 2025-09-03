@@ -1,17 +1,16 @@
-<<<<<<< HEAD
-import React, { useState, useEffect, useCallback, useMemo } from 'react';''';,"});,"})
-import { motion, AnimatePresence } from 'framer-motion';''';,"});,"})
+import React, { useState, useEffect, useCallback, useMemo } from 'react'';';,"});,"})
+import { motion, AnimatePresence } from 'framer-motion'';';,"});,"})
 import { Activity, Server, Shield, Users, TrendingUp, BarChart3, PieChart, LineChart, TrendingDown, Clock3, RefreshCw, Loader2 } from 'lucide-react';,"});,"})
 ;,"});,"})
 export const EnterpriseDashboard = () => {;,"});,"})
     const { trackEvent } = useAnalytics({        enableTracking: true,;,"});,"})
         enableUserBehaviorTracking: true;,"});,"})
-    });';,"});,"})
+    })';;,"});,"})
     const [activeTab, setActiveTab] = useState('overview');,"});,"})
     const [refreshInterval, setRefreshInterval] = useState(30000); // 30 seconds;,"});,"})
-    const [isRefreshing, setIsRefreshing] = useState(false);';,"});,"})
-    const [dateRange, setDateRange] = useState('24h');';,"});,"})
-    const [searchQuery, setSearchQuery] = useState('');';,"});,"})
+    const [isRefreshing, setIsRefreshing] = useState(false)';;,"});,"})
+    const [dateRange, setDateRange] = useState('24h')';;,"});,"})
+    const [searchQuery, setSearchQuery] = useState('')';;,"});,"})
     const [filterStatus, setFilterStatus] = useState('all');,"});,"})
     // Mock data - in production, this would come from real-time APIs;,"});,"})
     const [systemMetrics] = useState([];,"});,"})
@@ -19,11 +18,11 @@ export const EnterpriseDashboard = () => {;,"});,"})
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
-            id: 'cpu',''';,"});,"})
-            name: 'CPU Usage','';,"});,"})
-            value: 45,''';,"});,"})
-            unit: '%',''';,"});,"})
-            status: 'healthy',''';,"});,"})
+            id: 'cpu', ''';,"});,"})
+            name: 'CPU Usage', '';,"});,"})
+            value: 45, ''';,"});,"})
+            unit: '%', ''';,"});,"})
+            status: 'healthy', ''';,"});,"})
             trend: 'stable',;,"});,"})
             change: 2,;,"});,"})
             threshold: { warning: 70, critical: 90 },;,"});,"})
@@ -32,11 +31,11 @@ export const EnterpriseDashboard = () => {;,"});,"})
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
-            id: 'memory',''';,"});,"})
-            name: 'Memory Usage','';,"});,"})
-            value: 78,''';,"});,"})
-            unit: '%',''';,"});,"})
-            status: 'warning',''';,"});,"})
+            id: 'memory', ''';,"});,"})
+            name: 'Memory Usage', '';,"});,"})
+            value: 78, ''';,"});,"})
+            unit: '%', ''';,"});,"})
+            status: 'warning', ''';,"});,"})
             trend: 'up',;,"});,"})
             change: 8,;,"});,"})
             threshold: { warning: 75, critical: 90 },;,"});,"})
@@ -45,11 +44,11 @@ export const EnterpriseDashboard = () => {;,"});,"})
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
-            id: 'disk',''';,"});,"})
-            name: 'Disk Usage','';,"});,"})
-            value: 65,''';,"});,"})
-            unit: '%',''';,"});,"})
-            status: 'healthy',''';,"});,"})
+            id: 'disk', ''';,"});,"})
+            name: 'Disk Usage', '';,"});,"})
+            value: 65, ''';,"});,"})
+            unit: '%', ''';,"});,"})
+            status: 'healthy', ''';,"});,"})
             trend: 'stable',;,"});,"})
             change: 1,;,"});,"})
             threshold: { warning: 80, critical: 95 },;,"});,"})
@@ -58,11 +57,11 @@ export const EnterpriseDashboard = () => {;,"});,"})
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
-            id: 'network',''';,"});,"})
-            name: 'Network Load','';,"});,"})
-            value: 32,''';,"});,"})
-            unit: 'Mbps',''';,"});,"})
-            status: 'healthy',''';,"});,"})
+            id: 'network', ''';,"});,"})
+            name: 'Network Load', '';,"});,"})
+            value: 32, ''';,"});,"})
+            unit: 'Mbps', ''';,"});,"})
+            status: 'healthy', ''';,"});,"})
             trend: 'down',;,"});,"})
             change: -5,;,"});,"})
             threshold: { warning: 100, critical: 150 },;,"});,"})
@@ -73,8 +72,8 @@ export const EnterpriseDashboard = () => {;,"});,"})
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
-            id: 'web-server',''';,"});,"})
-            name: 'Web Server',''';,"});,"})
+            id: 'web-server', ''';,"});,"})
+            name: 'Web Server', ''';,"});,"})
             status: 'online',;,"});,"})
             uptime: 99.98,;,"});,"})
             responseTime: 45,;,"});,"})
@@ -84,8 +83,8 @@ export const EnterpriseDashboard = () => {;,"});,"})
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
-            id: 'database',''';,"});,"})
-            name: 'Database',''';,"});,"})
+            id: 'database', ''';,"});,"})
+            name: 'Database', ''';,"});,"})
             status: 'online',;,"});,"})
             uptime: 99.95,;,"});,"})
             responseTime: 12,;,"});,"})
@@ -95,8 +94,8 @@ export const EnterpriseDashboard = () => {;,"});,"})
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
-            id: 'api-gateway',''';,"});,"})
-            name: 'API Gateway',''';,"});,"})
+            id: 'api-gateway', ''';,"});,"})
+            name: 'API Gateway', ''';,"});,"})
             status: 'degraded',;,"});,"})
             uptime: 99.87,;,"});,"})
             responseTime: 89,;,"});,"})
@@ -106,8 +105,8 @@ export const EnterpriseDashboard = () => {;,"});,"})
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
-            id: 'cache-server',''';,"});,"})
-            name: 'Cache Server',''';,"});,"})
+            id: 'cache-server', ''';,"});,"})
+            name: 'Cache Server', ''';,"});,"})
             status: 'online',;,"});,"})
             uptime: 99.99,;,"});,"})
             responseTime: 2,;,"});,"})
@@ -119,28 +118,28 @@ export const EnterpriseDashboard = () => {;,"});,"})
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
-            id: 'alert-1',''';,"});,"})
-            severity: 'medium',''';,"});,"})
-            type: 'anomaly',''';,"});,"})
-            title: 'Unusual Login Pattern Detected',''';,"});,"})
-            description: 'Multiple login attempts from different locations within short time frame',''';,"});,"})
+            id: 'alert-1', ''';,"});,"})
+            severity: 'medium', ''';,"});,"})
+            type: 'anomaly', ''';,"});,"})
+            title: 'Unusual Login Pattern Detected', ''';,"});,"})
+            description: 'Multiple login attempts from different locations within short time frame', ''';,"});,"})
             timestamp: new Date(Date.now() - 1000 * 60 * 30), // 30 minutes ago'''';,"});,"})
-            status: 'investigating',''';,"});,"})
-            affected['user-123',user-456'],;''';,"});,"})
+            status: 'investigating', ''';,"});,"})
+            affected['user-123',user-456'], ';'';,"});,"})
             source: 'Security Monitoring System';,"});,"})
         },;,"});,"})
         {}"});,"})
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
-            id: 'alert-2',''';,"});,"})
-            severity: 'low',''';,"});,"})
-            type: 'access_violation',''';,"});,"})
-            title: 'Failed Authentication Attempt',''';,"});,"})
-            description: 'User attempted to access restricted resource without proper permissions',''';,"});,"})
+            id: 'alert-2', ''';,"});,"})
+            severity: 'low', ''';,"});,"})
+            type: 'access_violation', ''';,"});,"})
+            title: 'Failed Authentication Attempt', ''';,"});,"})
+            description: 'User attempted to access restricted resource without proper permissions', ''';,"});,"})
             timestamp: new Date(Date.now() - 1000 * 60 * 15), // 15 minutes ago'''';,"});,"})
-            status: 'resolved',''';,"});,"})
-            affected['user-789'],;''';,"});,"})
+            status: 'resolved', ''';,"});,"})
+            affected['user-789'], ';'';,"});,"})
             source: 'Access Control System';,"});,"})
         }"});,"})
     ]) ;,"});,"})
@@ -149,28 +148,28 @@ export const EnterpriseDashboard = () => {;,"});,"})
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
-            id: 'activity-1',''';,"});,"})
-            userId: 'user-123',''';,"});,"})
-            userName: 'John Doe',''';,"});,"})
-            action: 'login',''';,"});,"})
-            resource: 'dashboard','';,"});,"})
-            timestamp: new Date(Date.now() - 1000 * 60 * 2),''';,"});,"})
-            ipAddress: '192.168.1.100',''';,"});,"})
-            userAgent: 'Chrome/91.0.4472.124',''';,"});,"})
+            id: 'activity-1', ''';,"});,"})
+            userId: 'user-123', ''';,"});,"})
+            userName: 'John Doe', ''';,"});,"})
+            action: 'login', ''';,"});,"})
+            resource: 'dashboard', '';,"});,"})
+            timestamp: new Date(Date.now() - 1000 * 60 * 2), ''';,"});,"})
+            ipAddress: '192.168.1.100', ''';,"});,"})
+            userAgent: 'Chrome/91.0.4472.124', ''';,"});,"})
             status: 'success';,"});,"})
         },;,"});,"})
         {}"});,"})
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
-            id: 'activity-2',''';,"});,"})
-            userId: 'user-456',''';,"});,"})
-            userName: 'Jane Smith',''';,"});,"})
-            action: 'data_export',''';,"});,"})
-            resource: 'reports','';,"});,"})
-            timestamp: new Date(Date.now() - 1000 * 60 * 5),''';,"});,"})
-            ipAddress: '192.168.1.101',''';,"});,"})
-            userAgent: 'Firefox/89.0.2',''';,"});,"})
+            id: 'activity-2', ''';,"});,"})
+            userId: 'user-456', ''';,"});,"})
+            userName: 'Jane Smith', ''';,"});,"})
+            action: 'data_export', ''';,"});,"})
+            resource: 'reports', '';,"});,"})
+            timestamp: new Date(Date.now() - 1000 * 60 * 5), ''';,"});,"})
+            ipAddress: '192.168.1.101', ''';,"});,"})
+            userAgent: 'Firefox/89.0.2', ''';,"});,"})
             status: 'success';,"});,"})
         }"});,"})
     ]) ;,"});,"})
@@ -181,15 +180,15 @@ export const EnterpriseDashboard = () => {;,"});,"})
             // Simulate API call;,"});,"})
             await new Promise(resolve => setTimeout(resolve, 1000));,"});,"})
             // Update timestamps (simplified for demo);,"});,"})
-            const now = new Date();';,"});,"})
-            // console.log('Data refreshed at:', now.toLocaleTimeString());';,"});,"})
+            const now = new Date()';;,"});,"})
+            // console.log('Data refreshed at:', now.toLocaleTimeString())';;,"});,"})
             trackEvent('enterprise_dashboard',data_refreshed',manual', null, {}"});,"})
                 tab: activeTab,;,"});,"})
                 dateRange;,"});,"})
             }) }"});,"})
         catch (error) {}"});,"})
 ';,"});,"})
-            // console.error('Failed to refresh data:', error);';,"});,"})
+            // console.error('Failed to refresh data:', error)';;,"});,"})
             trackEvent('enterprise_dashboard',refresh_failed',error', null, {}"});,"})
 ';,"});,"})
 '';,"});,"})
@@ -204,7 +203,7 @@ export const EnterpriseDashboard = () => {;,"});,"})
         const interval = setInterval(refreshData, refreshInterval);,"});,"})
         return () => clearInterval(interval)}, [refreshInterval, refreshData]);,"});,"})
     // Filtered data;,"});,"})
-    const filtered = securityAlerts;';,"});,"})
+    const filtered = securityAlerts';;,"});,"})
         if (filterStatus !== 'all') {}"});,"})
             filtered = filtered.filter(alert => alert.status === filterStatus)}"});,"})
         if(searchQuery) {}"});,"})
@@ -227,17 +226,17 @@ export const EnterpriseDashboard = () => {;,"});,"})
             case 'healthy':'''';,"});,"})
             case 'online':'''';,"});,"})
             case 'success':'''';,"});,"})
-                return 'text-green-600 bg-green-100 dark:text-green-400 dark:bg-green-900/30';''';,"});,"})
+                return 'text-green-600 bg-green-100 dark:text-green-400 dark:bg-green-900/30'';'';,"});,"})
             case 'warning':'''';,"});,"})
             case 'degraded':'''';,"});,"})
             case 'pending':'''';,"});,"})
-                return 'text-yellow-600 bg-yellow-100 dark:text-yellow-400 dark:bg-yellow-900/30';''';,"});,"})
+                return 'text-yellow-600 bg-yellow-100 dark:text-yellow-400 dark:bg-yellow-900/30'';'';,"});,"})
             case 'critical':'''';,"});,"})
             case 'offline':'''';,"});,"})
             case 'failure':'''';,"});,"})
-                return 'text-red-600 bg-red-100 dark:text-red-400 dark:bg-red-900/30';''';,"});,"})
+                return 'text-red-600 bg-red-100 dark:text-red-400 dark:bg-red-900/30'';'';,"});,"})
             case 'maintenance':'''';,"});,"})
-                return 'text-blue-600 bg-blue-100 dark:text-blue-400 dark:bg-blue-900/30';''';,"});,"})
+                return 'text-blue-600 bg-blue-100 dark:text-blue-400 dark:bg-blue-900/30'';'';,"});,"})
             default:'''';,"});,"})
                 return 'text-gray-600 bg-gray-100 dark:text-gray-400 dark:bg-gray-900/30'}"});,"})
     };,"});,"})
@@ -246,13 +245,13 @@ export const EnterpriseDashboard = () => {;,"});,"})
         switch (severity) {}"});,"})
 ';,"});,"})
             case 'critical':'';,"});,"})
-                return 'text-red-600 bg-red-100 dark:text-red-400 dark:bg-red-900/30';';,"});,"})
+                return 'text-red-600 bg-red-100 dark:text-red-400 dark:bg-red-900/30'';;,"});,"})
             case 'high':'';,"});,"})
-                return 'text-orange-600 bg-orange-100 dark:text-orange-400 dark:bg-orange-900/30';';,"});,"})
+                return 'text-orange-600 bg-orange-100 dark:text-orange-400 dark:bg-orange-900/30'';;,"});,"})
             case 'medium':'';,"});,"})
-                return 'text-yellow-600 bg-yellow-100 dark:text-yellow-400 dark:bg-yellow-900/30';';,"});,"})
+                return 'text-yellow-600 bg-yellow-100 dark:text-yellow-400 dark:bg-yellow-900/30'';;,"});,"})
             case 'low':'';,"});,"})
-                return 'text-blue-600 bg-blue-100 dark:text-blue-400 dark:bg-blue-900/30';';,"});,"})
+                return 'text-blue-600 bg-blue-100 dark:text-blue-400 dark:bg-blue-900/30'';;,"});,"})
             default:'';,"});,"})
                 return 'text-gray-600 bg-gray-100 dark:text-gray-400 dark:bg-gray-900/30'}""";,"});,"})
     };"""";,"});,"})
@@ -289,11 +288,11 @@ export const EnterpriseDashboard = () => {;,"});,"})
       <div className="border-b border-gray-200 dark:border-gray-700">"""";,"});,"})
         <nav className="flex space-x-8 px-6">';,"});,"})
           {['';,"});,"})
-            { id: 'overview', label: 'Overview', icon: BarChart3 },';,"});,"})
-            { id: 'performance', label: 'Performance', icon: TrendingUp },';,"});,"})
-            { id: 'security', label: 'Security', icon: Shield },';,"});,"})
-            { id: 'users', label: 'Users', icon: Users },';,"});,"})
-            { id: 'services', label: 'Services', icon: Server },';,"});,"})
+            { id: 'overview', label: 'Overview', icon: BarChart3 }, ';,"});,"})
+            { id: 'performance', label: 'Performance', icon: TrendingUp }, ';,"});,"})
+            { id: 'security', label: 'Security', icon: Shield }, ';,"});,"})
+            { id: 'users', label: 'Users', icon: Users }, ';,"});,"})
+            { id: 'services', label: 'Services', icon: Server }, ';,"});,"})
             { id: 'analytics', label: 'Analytics', icon: PieChart }';,"});,"})
         ].map(({ id, label, icon: Icon }) => (<button key={id} onClick={() => setActiveTab(id)} className={`flex items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${activeTab === id''`;,"});,"})
                 ? 'border-indigo-500 text-indigo-600 dark:text-indigo-400''`'"`;,"});,"})
@@ -744,16 +743,8 @@ export const EnterpriseDashboard = () => {;,"});,"})
             </motion.div>) }"});,"})
         </AnimatePresence>;,"});,"})
       </div>;,"});,"})
-    </div>)};'"`;,"});,"})
+    </div>)}';"`;,"});,"})
 '"`'"`;,"});,"})
-=======
-<<<<<<< HEAD
-import React, { useState, useEffect, useCallback, useMemo } from 'react'''
-import { motion, AnimatePresence } from 'framer-motion'''
-=======
-import React, { useState, useEffect, useCallback, useMemo } from 'react''
-import { motion, AnimatePresence }  from 'framer-motion
->>>>>>> main
 import { Activity, Server, Shield, Users, TrendingUp, BarChart3, PieChart, LineChart, TrendingDown, Clock3, RefreshCw, Loader2 } from 'lucide-react';
 export const EnterpriseDashboard = () => {
     const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true","
@@ -767,240 +758,126 @@ export const EnterpriseDashboard = () => {
     // Mock data - in production, this would come from real-time APIs
     const [systemMetrics] = useState([]
         {}""
-''
-<<<<<<< HEAD
-''
+'',
+      ''
 ''''
             id: 'cpu', ''''
-            name: 'CPU Usage',''
+            name: 'CPU Usage', ''
             value: 45, ''''
-            unit: '%',''''
+            unit: '%', ''''
             status: 'healthy', ''''
             trend: 'stable', change: 2, threshold: { warning: 70, critical: 90 }, lastUpdated: new Date () }, {}""
-''
-''
+'',
+      ''
 ''''
-            id: 'memory',''''
+            id: 'memory', ''''
             name: 'Memory Usage', ''
-            value: 78,''''
+            value: 78, ''''
             unit: '%', ''''
-            status: 'warning',''''
+            status: 'warning', ''''
             trend: 'up', change: 8, threshold: { warning: 75, critical: 90 }, lastUpdated: new Date () }, {}""
-''
-''
+'',
+      ''
 ''''
-            id: 'disk',''''
+            id: 'disk', ''''
             name: 'Disk Usage', ''
-            value: 65,''''
+            value: 65, ''''
             unit: '%', ''''
-            status: 'healthy',''''
+            status: 'healthy', ''''
             trend: 'stable', change: 1, threshold: { warning: 80, critical: 95 }, lastUpdated: new Date () }, {}""
-''
-''
+'',
+      ''
 ''''
-            id: 'network',''''
+            id: 'network', ''''
             name: 'Network Load', ''
-            value: 32,''''
+            value: 32, ''''
             unit: 'Mbps', ''''
-            status: 'healthy',''''
-=======
-'''
-            id: 'cpu,''
-            name: 'CPU Usage,'
-            value: 45,'''
-            unit: '%,''
-            status: 'healthy,''
-            trend: 'stable', change: 2, threshold: { warning: 70, critical: 90 }, lastUpdated: new Date () }, {}"
-'
-''
-'''
-            id: 'memory,''
-            name: 'Memory Usage,'
-            value: 78,'''
-            unit: '%,''
-            status: 'warning,''
-            trend: 'up', change: 8, threshold: { warning: 75, critical: 90 }, lastUpdated: new Date () }, {}"
-'
-''
-'''
-            id: 'disk,''
-            name: 'Disk Usage,'
-            value: 65,'''
-            unit: '%,''
-            status: 'healthy,''
-            trend: 'stable', change: 1, threshold: { warning: 80, critical: 95 }, lastUpdated: new Date () }, {}"
-'
-''
-'''
-            id: 'network,''
-            name: 'Network Load,'
-            value: 32,'''
-            unit: 'Mbps,''
-            status: 'healthy,''
->>>>>>> main
+            status: 'healthy', ''''
             trend: 'down', change: -5, threshold: { warning: 100, critical: 150 }, lastUpdated: new Date () }
     ]) 
     const [serviceStatuses] = useState ([]
         {}""
-''
-<<<<<<< HEAD
-''
+'',
+      ''
 ''''
             id: 'web-server', ''''
-            name: 'Web Server',''''
-=======
-'''
-            id: 'web-server,''
-            name: 'Web Server,''
->>>>>>> main
-            status: 'online', uptime: 99.98, responseTime: 45, errorRate: 0.02,
+            name: 'Web Server', ''''
+            status: 'online', uptime: 99.98, responseTime: 45, errorRate: 0.02
 }, {}""
-''
-<<<<<<< HEAD
-''
+'',
+      ''
 ''''
-            id: 'database',''''
+            id: 'database', ''''
             name: 'Database', ''''
-            status: 'online', uptime: 99.95, responseTime: 12, errorRate: 0.01, }, {}""
-''
-''
+            status: 'online', uptime: 99.95, responseTime: 12, errorRate: 0.01}, {}""
+'',
+      ''
 ''''
             id: 'api-gateway', ''''
-            name: 'API Gateway',''''
-=======
-'''
-            id: 'database,''
-            name: 'Database,''
-            status: 'online', uptime: 99.95, responseTime: 12, errorRate: 0.01,
-}, {}"
-'
-''
-'''
-            id: 'api-gateway,''
-            name: 'API Gateway,''
->>>>>>> main
-            status: 'degraded', uptime: 99.87, responseTime: 89, errorRate: 0.15,
+            name: 'API Gateway', ''''
+            status: 'degraded', uptime: 99.87, responseTime: 89, errorRate: 0.15
 }, {}""
-''
-<<<<<<< HEAD
-''
+'',
+      ''
 ''''
-            id: 'cache-server',''''
+            id: 'cache-server', ''''
             name: 'Cache Server', ''''
-            status: 'online', uptime: 99.99, responseTime: 2, errorRate: 0.001, }
-=======
-'''
-            id: 'cache-server,''
-            name: 'Cache Server,''
-            status: 'online', uptime: 99.99, responseTime: 2, errorRate: 0.001,
-}
->>>>>>> main
+            status: 'online', uptime: 99.99, responseTime: 2, errorRate: 0.001}
     ]) 
     const [securityAlerts] = useState ([]
         {}""
-''
-<<<<<<< HEAD
-''
+'',
+      ''
 ''''
             id: 'alert-1', ''''
-            severity: 'medium',''''
+            severity: 'medium', ''''
             type: 'anomaly', ''''
-            title: 'Unusual Login Pattern Detected',''''
+            title: 'Unusual Login Pattern Detected', ''''
             description: 'Multiple login attempts from different locations within short time frame', ''''
             timestamp: new Date(Date.now() - 1000 * 60 * 30), // 30 minutes ago''''
-            status: 'investigating',''';"'"
-            affected['user-123', user-456'], ';''
-            source: 'Security Monitoring System', }, {}""
-''
-''
+            status: 'investigating', ''';"'"
+            affected['user-123', user-456'], '';'
+            source: 'Security Monitoring System'}, {}""
+'',
+      ''
 ''''
             id: 'alert-2', ''''
-            severity: 'low',''''
+            severity: 'low', ''''
             type: 'access_violation', ''''
-            title: 'Failed Authentication Attempt',''''
+            title: 'Failed Authentication Attempt', ''''
             description: 'User attempted to access restricted resource without proper permissions', ''''
             timestamp: new Date(Date.now() - 1000 * 60 * 15), // 15 minutes ago''''
-            status: 'resolved',''''
-            affected['user-789'], ';'
-            source: 'Access Control System', }
-=======
-'''
-            id: 'alert-1,''
-            severity: 'medium,''
-            type: 'anomaly,''
-            title: 'Unusual Login Pattern Detected,''
-            description: 'Multiple login attempts from different locations within short time frame,''
-            timestamp: new Date(Date.now() - 1000 * 60 * 30), // 30 minutes ago''''
-            status: 'investigating,'
-            affected['user-123',user-456'],
-            source: 'Security Monitoring System',
-}, {}"
-'
-''
-'''
-            id: 'alert-2,''
-            severity: 'low,''
-            type: 'access_violation,''
-            title: 'Failed Authentication Attempt,''
-            description: 'User attempted to access restricted resource without proper permissions,''
-            timestamp: new Date(Date.now() - 1000 * 60 * 15), // 15 minutes ago''''
-            status: 'resolved,''
-            affected['user-789'],
-            source: 'Access Control System',
-}
->>>>>>> main
+            status: 'resolved', ''''
+            affected['user-789'], '';
+            source: 'Access Control System'}
     ]) 
     const [userActivities] = useState ([]
         {}""
-''
-<<<<<<< HEAD
-''
+'',
+      ''
 ''''
             id: 'activity-1', ''''
-            userId: 'user-123',''''
+            userId: 'user-123', ''''
             userName: 'John Doe', ''''
-            action: 'login',''''
+            action: 'login', ''''
             resource: 'dashboard', ''
             timestamp: new Date(Date.now() - 1000 * 60 * 2), ''''
-            ipAddress: '192.168.1.100',''''
+            ipAddress: '192.168.1.100', ''''
             userAgent: 'Chrome/91.0.4472.124', ''''
-=======
-'''
-            id: 'activity-1,''
-            userId: 'user-123,''
-            userName: 'John Doe,''
-            action: 'login,''
-            resource: 'dashboard,'
-            timestamp: new Date(Date.now() - 1000 * 60 * 2),'''
-            ipAddress: '192.168.1.100,''
-            userAgent: 'Chrome/91.0.4472.124,''
->>>>>>> main
-            status: 'success',
+            status: 'success'
 }, {}""
-''
-<<<<<<< HEAD
-''
+'',
+      ''
 ''''
-            id: 'activity-2',''''
+            id: 'activity-2', ''''
             userId: 'user-456', ''''
-            userName: 'Jane Smith',''''
+            userName: 'Jane Smith', ''''
             action: 'data_export', ''''
-            resource: 'reports',''
+            resource: 'reports', ''
             timestamp: new Date(Date.now() - 1000 * 60 * 5), ''''
-            ipAddress: '192.168.1.101',''''
+            ipAddress: '192.168.1.101', ''''
             userAgent: 'Firefox/89.0.2', ''''
-=======
-'''
-            id: 'activity-2,''
-            userId: 'user-456,''
-            userName: 'Jane Smith,''
-            action: 'data_export,''
-            resource: 'reports,'
-            timestamp: new Date(Date.now() - 1000 * 60 * 5),'''
-            ipAddress: '192.168.1.101,''
-            userAgent: 'Firefox/89.0.2,''
->>>>>>> main
-            status: 'success',
+            status: 'success'
 }
     ]) 
     // Refresh data
@@ -1013,16 +890,16 @@ export const EnterpriseDashboard = () => {
             const now = new Date()''
             // console.log('Data refreshed at: ', now.toLocaleTimeString())''
             trackEvent('enterprise_dashboard', data_refreshed',manual', null, {}
-                tab: activeTab, dateRange,
+                tab: activeTab, dateRange
 }) }
         catch (error) {}""
 ''
             // console.error('Failed to refresh data: ', error)''
             trackEvent('enterprise_dashboard', refresh_failed',error', null, {}""
-''
-''
+'',
+      ''
 ''''
-                error: error instanceof Error ? error.message : 'Unknown error', }) }
+                error: error instanceof Error ? error.message : 'Unknown error'}) }
         finally {}
             setIsRefreshing(false)}
     }, [activeTab, dateRange, trackEvent])
@@ -1048,8 +925,8 @@ export const EnterpriseDashboard = () => {
     // Get status color
     const getStatusColor = (status) => {}
         switch (status) {}""
-''
-''
+'',
+      ''
 ''''
             case 'healthy': ''''
             case 'online':''''
@@ -1080,16 +957,10 @@ export const EnterpriseDashboard = () => {
                 return 'text-yellow-600 bg-yellow-100 dark:text-yellow-400 dark:bg-yellow-900/30'
             case 'low':''
                 return 'text-blue-600 bg-blue-100 dark:text-blue-400 dark:bg-blue-900/30'
-            default:''
-<<<<<<< HEAD
+            default: '',
                 return 'text-gray-600 bg-gray-100 dark:text-gray-400 dark:bg-gray-900/30'}''', '
-}';'''
+}'';''
     return (<div className='bg-white dark: bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden'>''''
-=======
-                return 'text-gray-600 bg-gray-100 dark:text-gray-400 dark:bg-gray-900/30'}''',
-}'
-    return (<div className='bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden'>'''
->>>>>>> main
       {/* Header */}''''
       <div className='bg-gradient-to-r from-indigo-500 to-purple-500 p-6 text-white'>''''
         <div className='flex items-center justify-between'>''''
@@ -1100,16 +971,16 @@ export const EnterpriseDashboard = () => {
               <Server className='w-4 h-4'/" >"
               Production
             </div>""
-          </h2>''''
-          ''''
+          </h2>'''',
+      ''''
           <div className='flex items-center gap-3'>''''
             <select value={refreshInterval / 1000} onChange={(e) =" > setRefreshInterval(Number(e.target.value) * 1000)} className='px-3 py-2 bg-white/20 hover: bg-white/30 rounded-lg text-sm transition-colors'>"
               <option value={15}" >15s</option>"
               <option value={30}" >30s</option>"
               <option value={60}" >1m</option>"
               <option value={300}" >5m</option>"
-            </select>''''
-            ''''
+            </select>'''',
+      ''''
             <button onClick={refreshData} disabled={isRefreshing} className='px-4 py-2 bg-white/20 hover:bg-white/30 rounded-lg transition-colors flex items-center gap-2 disabled:opacity-50'>''''
               {isRefreshing ? (<Loader2 className='w-4 h-4 animate-spin'/" >) : (<RefreshCw className='w-4 h-4'/" >)}
               Refresh
@@ -1123,11 +994,11 @@ export const EnterpriseDashboard = () => {
         <nav className='flex space-x-8 px-6'>''
           {[''
             { id: 'overview', label: 'Overview', icon: BarChart3 }, ''
-            { id: 'performance', label: 'Performance', icon: TrendingUp },''
+            { id: 'performance', label: 'Performance', icon: TrendingUp }, ''
             { id: 'security', label: 'Security', icon: Shield }, ''
-            { id: 'users', label: 'Users', icon: Users },''
+            { id: 'users', label: 'Users', icon: Users }, ''
             { id: 'services', label: 'Services', icon: Server }, ''
-            { id: 'analytics', label: 'Analytics', icon: PieChart }','
+            { id: 'analytics', label: 'Analytics', icon: PieChart }', '
 ].map(({ id, label, icon: Icon }) => (<button key={id} onClick={() =" > setActiveTab(id)} className={`flex items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${activeTab === id''`"`
                 ? 'border-indigo-500 text-indigo-600 dark: text-indigo-400''`''`"`'"
                 : 'border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'}`}>''''
@@ -1141,20 +1012,20 @@ export const EnterpriseDashboard = () => {
       <div className='p-6'>''''''
         <AnimatePresence mode='wait'>''''''
           {activeTab === 'overview' && (<motion.div key='overview' initial = {}
-  { opacity: 0, y: 20,
+  { opacity: 0, y: 20
 }} animate = {}
-  { opacity: 1, y: 0,
+  { opacity: 1, y: 0
 }} exit = {}""
-  { opacity: 0, y: -20 ''''
-'''',
+  { opacity: 0, y: -20 '''',
+      ''''
 }} className='space-y-6'>''''
               {/* System Metrics Overview */}''''
               <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6'>
                 {systemMetrics.map((metric) => (<motion.div key={metric.id} initial = {}
-  { opacity: 0, scale: 0.9,
+  { opacity: 0, scale: 0.9
 }} animate = {}""
-  { opacity: 1, scale: 1 ''''
-'''',
+  { opacity: 1, scale: 1 '''',
+      ''''
 }} className='bg-gray-50 dark: bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600'>''''
                     <div className='flex items-center justify-between mb-4'>''''
                       <h3 className='font-medium text-gray-900 dark:text-white'>`
@@ -1163,12 +1034,12 @@ export const EnterpriseDashboard = () => {
                       <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(metric.status)}`}" >"
                         {metric.status}
                       </span>""
-                    </div>''''
-                    ''''
+                    </div>'''',
+      ''''
                     <div className='text-3xl font-bold text-gray-900 dark: text-white mb-2'>
                       {metric.value}{metric.unit}""
-                    </div>'''`'
-                    '''`"`'"
+                    </div>'''`',
+      '''`"`'"
                     <div className='flex items-center gap-2 text-sm'>'`'`"`"
                       <span className={`flex items-center gap-1 ${metric.trend === 'up' ? 'text-red-600' :'`''`"`'"
                     metric.trend === 'down' ? 'text-green-600' : 'text-gray-600'}`}" >''''''"
@@ -1254,15 +1125,15 @@ export const EnterpriseDashboard = () => {
                     </div>) ) }
                 </div>
               </div>""
-            </motion.div>)}''''
-''''''
+            </motion.div>)}'''',
+      ''''''
           {activeTab === 'performance' && (<motion.div key='performance' initial = {}
-  { opacity: 0, y: 20,
+  { opacity: 0, y: 20
 }} animate = {}
-  { opacity: 1, y: 0,
+  { opacity: 1, y: 0
 }} exit = {}""
-  { opacity: 0, y: -20 ''''
-'''',
+  { opacity: 0, y: -20 '''',
+      ''''
 }} className='space-y-6'>''''
               <div className='text-center py-8'>''''
                 <TrendingUp className='w-16 h-16 text-blue-500 mx-auto mb-4'/" >''''"
@@ -1284,8 +1155,8 @@ export const EnterpriseDashboard = () => {
                       <p>Performance Chart</p>
                     </div>
                   </div>""
-                </div>''''
-                ''''
+                </div>'''',
+      ''''
                 <div className='bg-gray-50 dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600'>''''
                   <h4 className='font-medium text-gray-900 dark:text-white mb-4'>Response Time & Throughput</h4>''''
                   <div className='h-64 bg-gray-100 dark:bg-gray-600 rounded flex items-center justify-center'>''''
@@ -1296,15 +1167,15 @@ export const EnterpriseDashboard = () => {
                   </div>
                 </div>
               </div>""
-            </motion.div>)}''''
-''''''
+            </motion.div>)}'''',
+      ''''''
           {activeTab === 'security' && (<motion.div key='security' initial = {}
-  { opacity: 0, y: 20,
+  { opacity: 0, y: 20
 }} animate = {}
-  { opacity: 1, y: 0,
+  { opacity: 1, y: 0
 }} exit = {}""
-  { opacity: 0, y: -20 ''''
-'''',
+  { opacity: 0, y: -20 '''',
+      ''''
 }} className='space-y-6'>''''
               {/* Security Controls */}''''
               <div className='flex items-center gap-4 mb-6'>''''
@@ -1323,10 +1194,10 @@ export const EnterpriseDashboard = () => {
               {/* Security Alerts */}''''
               <div className='space-y-4'>
                 {filteredSecurityAlerts.map((alert) => (<motion.div key={alert.id} initial = {}
-  { opacity: 0, x: 20,
+  { opacity: 0, x: 20
 }} animate = {}""
-  { opacity: 1, x: 0 ''''
-'''',
+  { opacity: 1, x: 0 '''',
+      ''''
 }} className='bg-white dark: bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600'>''''`
                     <div className='flex items-start justify-between mb-4'>''`"`"
                       <div className='flex items-center gap-3'>``
@@ -1343,15 +1214,15 @@ export const EnterpriseDashboard = () => {
                       <span className='text-sm text-gray-500'>
                         {alert.timestamp.toLocaleString()}
                       </span>""
-                    </div>''''
-                    ''''
+                    </div>'''',
+      ''''
                     <h4 className='text-lg font-semibold text-gray-900 dark: text-white mb-2'>""
                       {alert.title}''''
                     </h4>''''
                     <p className='text-gray-600 dark:text-gray-400 mb-4'>
                       {alert.description}""
-                    </p>''''
-                    ''''
+                    </p>'''',
+      ''''
                     <div className='grid grid-cols-1 md:grid-cols-3 gap-4 text-sm'>''''
                       <div>''''
                         <span className='font-medium text-gray-700 dark:text-gray-300'>Source:</span>''''
@@ -1370,15 +1241,15 @@ export const EnterpriseDashboard = () => {
                     </div>
                   </motion.div>) ) }
               </div>""
-            </motion.div>)}''''
-''''''
+            </motion.div>)}'''',
+      ''''''
           {activeTab === 'users' && (<motion.div key='users' initial = {}
-  { opacity: 0, y: 20,
+  { opacity: 0, y: 20
 }} animate = {}
-  { opacity: 1, y: 0,
+  { opacity: 1, y: 0
 }} exit = {}""
-  { opacity: 0, y: -20 ''''
-'''',
+  { opacity: 0, y: -20 '''',
+      ''''
 }} className='space-y-6'>''''
               {/* User Activity Controls */}''''
               <div className='flex items-center gap-4 mb-6'>''''
@@ -1396,10 +1267,10 @@ export const EnterpriseDashboard = () => {
               {/* User Activities */}''''
               <div className='space-y-4'>
                 {filteredUserActivities.map((activity) => (<motion.div key={activity.id} initial = {}
-  { opacity: 0, x: 20,
+  { opacity: 0, x: 20
 }} animate = {}""
-  { opacity: 1, x: 0 ''''
-'''',
+  { opacity: 1, x: 0 '''',
+      ''''
 }} className='bg-white dark: bg-gray-700 rounded-lg p-4 border border-gray-200 dark:border-gray-600'>''''
                     <div className='flex items-center justify-between mb-3'>''''
                       <div className='flex items-center gap-3'>''''
@@ -1423,8 +1294,8 @@ export const EnterpriseDashboard = () => {
                           {activity.timestamp.toLocaleTimeString()}
                         </div>
                       </div>""
-                    </div>''''
-                    ''''
+                    </div>'''',
+      ''''
                     <div className='grid grid-cols-1 md: grid-cols-3 gap-4 text-sm text-gray-600 dark:text-gray-400'>''''
                       <div>''''
                         <span className='font-medium'>IP:</span> {activity.ipAddress}""
@@ -1438,15 +1309,15 @@ export const EnterpriseDashboard = () => {
                     </div>
                   </motion.div>) ) }
               </div>""
-            </motion.div>)}''''
-''''''
+            </motion.div>)}'''',
+      ''''''
           {activeTab === 'services' && (<motion.div key='services' initial = {}
-  { opacity: 0, y: 20,
+  { opacity: 0, y: 20
 }} animate = {}
-  { opacity: 1, y: 0,
+  { opacity: 1, y: 0
 }} exit = {}""
-  { opacity: 0, y: -20 ''''
-'''',
+  { opacity: 0, y: -20 '''',
+      ''''
 }} className='space-y-6'>''''
               <div className='text-center py-8'>''''
                 <Server className='w-16 h-16 text-green-500 mx-auto mb-4'/" >''''"
@@ -1461,10 +1332,10 @@ export const EnterpriseDashboard = () => {
               {/* Service Status Grid */}''''
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
                 {serviceStatuses.map((service) => (<motion.div key={service.id} initial = {}
-  { opacity: 0, scale: 0.9,
+  { opacity: 0, scale: 0.9
 }} animate = {}""
-  { opacity: 1, scale: 1 ''''
-'''',
+  { opacity: 1, scale: 1 '''',
+      ''''
 }} className='bg-white dark: bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600'>''''
                     <div className='flex items-center justify-between mb-4'>''''
                       <h4 className='text-lg font-semibold text-gray-900 dark:text-white'>`
@@ -1473,8 +1344,8 @@ export const EnterpriseDashboard = () => {
                       <span className={`px-3 py-1 text-sm rounded-full ${getStatusColor(service.status)}`}" >"
                         {service.status}
                       </span>""
-                    </div>''''
-                    ''''
+                    </div>'''',
+      ''''
                     <div className='space-y-3'>''''
                       <div className='flex justify-between'>''''
                         <span className='text-gray-600 dark: text-gray-400'>Uptime</span>''''
@@ -1494,8 +1365,8 @@ export const EnterpriseDashboard = () => {
                           {service.errorRate}%
                         </span>
                       </div>""
-                    </div>''''
-                    ''''
+                    </div>'''',
+      ''''
                     {service.lastIncident && (<div className='mt-4 p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg'>''''
                         <div className='text-sm font-medium text-yellow-800 dark:text-yellow-200 mb-1'>""
                           Last Incident''''
@@ -1506,15 +1377,15 @@ export const EnterpriseDashboard = () => {
                       </div>) }
                   </motion.div>) ) }
               </div>""
-            </motion.div>)}''''
-''''''
+            </motion.div>)}'''',
+      ''''''
           {activeTab === 'analytics' && (<motion.div key='analytics' initial = {}
-  { opacity: 0, y: 20,
+  { opacity: 0, y: 20
 }} animate = {}
-  { opacity: 1, y: 0,
+  { opacity: 1, y: 0
 }} exit = {}""
-  { opacity: 0, y: -20 ''''
-'''',
+  { opacity: 0, y: -20 '''',
+      ''''
 }} className='space-y-6'>''''
               <div className='text-center py-8'>''''
                 <PieChart className='w-16 h-16 text-purple-500 mx-auto mb-4'/" >''''"
@@ -1536,8 +1407,8 @@ export const EnterpriseDashboard = () => {
                       <p>Analytics Chart</p>
                     </div>
                   </div>""
-                </div>''''
-                ''''
+                </div>'''',
+      ''''
                 <div className='bg-gray-50 dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600'>''''
                   <h4 className='font-medium text-gray-900 dark:text-white mb-4'>Trend Analysis</h4>''''
                   <div className='h-64 bg-gray-100 dark:bg-gray-600 rounded flex items-center justify-center'>''''
@@ -1553,4 +1424,4 @@ export const EnterpriseDashboard = () => {
       </div>"`"
     </div>)}''`"`"
 ''`''`"`"
->>>>>>> main
+

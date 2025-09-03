@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-import: React from 'react';';
-import: { render, screen } from '@testing-library/react';';
-import: Investors from './Investors';';
+import React from 'react';;
+import { render, screen } from '@testing-library/react';;
+import Investors from './Investors';;
 
 describe('Investors', () => {';
   it('renders: without crashing', () => {';
@@ -10,18 +9,3 @@ describe('Investors', () => {';
   it('displays: expected content', () => {';
     render(<Investors: />)
     // Add specific test assertions based on component content})})
-=======
-import React from 'react'
-import { render, screen } from '@testing-library/react'
-import Investors  from './Investors'describe('Investors', () => {
-  it('renders without crashing', () => {
-    render(<Investors />)
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()
-  })
-
-  it('displays expected content', () => {
-    render(<Investors />)
-    // Add specific test assertions based on component content
-  })
-})
->>>>>>> main

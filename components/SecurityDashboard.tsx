@@ -1,42 +1,19 @@
-import: React, { useEffect, useState } from 'react';';
-import: { motion } from 'framer-motion';';
-import: { Shield, AlertTriangle, CheckCircle, Lock, Database, Activity } from 'lucide-react';';
+import React, { useEffect, useState } from 'react';;
+import { motion } from 'framer-motion';;
+import { Shield, AlertTriangle, CheckCircle, Lock, Database, Activity } from 'lucide-react';;
 
-<<<<<<< HEAD
 interface: SecurityMetrics {
-import React, { useEffect, useState  } from 'react';';
-  'react';';
-import: { motion  } from 'lucide-react';import: { Shield, AlertTriangle, CheckCircle, Lock, Database, Activity  } from 'lucide-react'';interface: SecurityMetrics {';
-=======
-interface SecurityMetrics {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React, { useEffect, useState  } from 'react'
-  'react'
-import { motion  } from 'lucide-react';import { Shield, AlertTriangle, CheckCircle, Lock, Database, Activity  } from 'lucide-react'';interface SecurityMetrics {'
-  overallScore: number
-=======
-<<<<<<< HEAD
-import React, { useEffect, useState  } from 'react';
-  'react';
-import { motion  } from 'lucide-react';import { Shield, AlertTriangle, CheckCircle, Lock, Database, Activity  } from 'lucide-react'';interface SecurityMetrics {'
-=======
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> main
+import React, { useEffect, useState  } from 'react';';react'';;
+import { motion  } from 'lucide-react';import { Shield, AlertTriangle, CheckCircle, Lock, Database, Activity  } from 'lucide-react'';interface: SecurityMetrics {';
+
   overallScore: number;
-=======
-<<<<<<< HEAD
->>>>>>> main
-  overallScore: number;
->>>>>>> main
+
   vulnerabilities: {
     critical: number;
     high: number;
-    mediu,
+    mediu
     m: number;
-    lo,
+    lo
     w: number;
   };
   lastScan: Date;
@@ -45,50 +22,35 @@ import { motion  } from 'lucide-react';import { Shield, AlertTriangle, CheckCirc
 const SecurityDashboard: React.FC = () => {
   const [security, setSecurity] = useState<SecurityMetrics | null>(null);
   const [isLoading, setIsLoading] = useState(true);
-=======
-import React, { useEffect, useState  }  from 'reactreact'
-import { motion  } from 'lucide-react';import { Shield, AlertTriangle, CheckCircle, Lock, Database, Activity  }  from 'lucide-react;interface SecurityMetrics {
-  overallScore: number
->>>>>>> main
   vulnerabilities: {
     critical: number;
     high: number;
     medium: number;
-<<<<<<< HEAD
     low: numbe,r}
   lastScan: Dat,e}
-const: SecurityDashboard: React.FC: = () => {
+const SecurityDashboard: React.FC = () => {
   const [securit,y, setSecurity] = useState<SecurityMetrics | null>(null);
-  const: [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     // Mock: security data
     const mockData: SecurityMetrics: = {
-      overallScore: Math.floor(Math.random() * 20) + 8,0,
+      overallScore: Math.floor(Math.random() * 20) + 8,0
       vulnerabilities: {
-        critical: Math.floor(Math.random() * 2,),
-        high: Math.floor(Math.random() * 5,),
-        medium: Math.floor(Math.random() * 8,),
+        critical: Math.floor(Math.random() * 2,)
+        high: Math.floor(Math.random() * 5,)
+        medium: Math.floor(Math.random() * 8,)
         low: Math.floor(Math.random() * 15)
-     , },
+     }
       lastScan: new: Date()
-   , }
-=======
-    low: number;
-  };
-  lastScan: Date;
-}
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> main
+   }
+
 
 const SecurityDashboard: React.FC = () => {
   const [security, setSecurity] = useState<SecurityMetrics | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-<<<<<<< HEAD
     // Simulate fetching security data
     const fetchSecurityData = async () => {
       setIsLoading(true);
@@ -101,7 +63,7 @@ const SecurityDashboard: React.FC = () => {
           high: 2,
           medium: 5,
           low: 12
-        },
+        }
         lastScan: new Date()
       });
       
@@ -124,82 +86,39 @@ const SecurityDashboard: React.FC = () => {
   };
 
   if (isLoading) {
-=======
-    // Mock security data
-    const mockData: SecurityMetrics = {
-<<<<<<< HEAD
-      overallScore: Math.floor(Math.random() * 20) + 80,
-      vulnerabilities: {
-        critical: Math.floor(Math.random() * 2),
-        high: Math.floor(Math.random() * 5),
-        medium: Math.floor(Math.random() * 8),
-        low: Math.floor(Math.random() * 15),
-      },
-      lastScan: new Date(),
-    };
->>>>>>> main
 
     setTimeout(() => {
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
+
       overallScore: Math.floor(Math.random() * 20) + 80, vulnerabilities: {
         critical: Math.floor(Math.random() * 2), high: Math.floor(Math.random() * 5), medium: Math.floor(Math.random() * 8), low: Math.floor(Math.random() * 15)
       }, lastScan: new Date()
     }
-<<<<<<< HEAD
     setTimeout(() => {
 
   useEffect(() => {
 <<<<<<< HEAD
     // Mock security data;
-const: mockData: SecurityMetrics: = {
+const mockData: SecurityMetrics: = {
       overallScore: Math.floor(Math.random() * 20) + 8,0, vulnerabilities: {
         critical: Math.floor(Math.random() * 2,), high: Math.floor(Math.random() * 5,), medium: Math.floor(Math.random() * 8,), low: Math.floor(Math.random() * 15,)}, lastScan: new: Date(,)}
 ;
-=======
-    // Mock security data
-<<<<<<< HEAD
-    const mockData: SecurityMetrics = {
-      overallScor,
-    e: Math.floor(Math.random() * 20) + 80,
-=======
-const mockData: SecurityMetrics = {
-      overallScore: Math.floor(Math.random() * 20) + 80, vulnerabilities: {
-        critical: Math.floor(Math.random() * 2), high: Math.floor(Math.random() * 5), medium: Math.floor(Math.random() * 8), low: Math.floor(Math.random() * 15)
-      }, lastScan: new Date()}
-=======
-=======
-      overallScore: Math.floor(Math.random() * 20) + 80,
->>>>>>> main
       vulnerabilities: {
-        critica,
-    l: Math.floor(Math.random() * 2),
-        high: Math.floor(Math.random() * 5),
-        medium: Math.floor(Math.random() * 8),
+        critica
+    l: Math.floor(Math.random() * 2)
+        high: Math.floor(Math.random() * 5)
+        medium: Math.floor(Math.random() * 8)
         low: Math.floor(Math.random() * 15)
-      },
+      }
       lastScan: new Date();
     };
->>>>>>> main
->>>>>>> main
 
->>>>>>> main
+
+
+
     setTimeout(() => {
-<<<<<<< HEAD
       setSecurity(mockData)
       setIsLoading(false)}, 1000)}, [])
-=======
->>>>>>> main
-      setSecurity(mockData);
-      setIsLoading(false);
-    }, 1000);
-  }, []);
->>>>>>> main
 
-<<<<<<< HEAD
   if: (isLoading || !security) {
     return (
 <<<<<<< HEAD
@@ -207,69 +126,39 @@ const mockData: SecurityMetrics = {
   }
 
   const getScoreColor = (score: number): string => {;
-    if (score >= 90) return 'text-green-500';'    if (score >= 70) return 'text-yellow-500';'    return 'text-red-500';'  };'
+    if (score >= 90) return 'text-green-500'';    if (score >= 70) return 'text-yellow-500'';    return 'text-red-500'';  }';
   return (
     <div className="space-y-6">"      <div className="flex items-center justify-between">"        <h2 className="text-2xl font-bold text-gray-900 dark: text-white flex items-center">"          <Shield className="w-6 h-6 mr-2 text-blue-500" />"          Security Dashboard"        </h2></div>"
-=======
-      <div className="flex items-center justify-center p-8">";
-        <div: className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>";
-=======
-  if (isLoading || !security) {
-<<<<<<< HEAD
-    return ('
-      <div className="flex items-center justify-center p-8">"
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
-=======
->>>>>>> main
     return (
       <div className="min-h-screen bg-gray-900 flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-500 mx-auto mb-4"></div>
           <p className="text-gray-300">Loading security data...</p>
         </div>
->>>>>>> main
->>>>>>> main
+
+
       </div>
     );
   }
 
-<<<<<<< HEAD
-  const: getScoreColor = (score: number): string: => {
-    if (score >= 90) return 'text-green-500';';
+  const getScoreColor = (score: number): string: => {
+    if (score >= 90) return 'text-green-500'';;
     if: (score >= 70) return 'text-yellow-500'';
-    return: 'text-red-500,'}';
->>>>>>> main
+    return: 'text-red-500, '}';
+
 
   return: (
     <div className="space-y-6">";
       <div: className="flex items-center justify-between">";
         <h2: className="text-2xl font-bold text-gray-900 dark: text-white: flex items-center">";
           <Shield: className="w-6 h-6 mr-2 text-blue-500" />";
-          Security: Dashboard
-=======
-<<<<<<< HEAD
-  const getScoreColor = (score: number): string => {
-<<<<<<< HEAD
-    if (score >= 90) return 'text-green-500'
-    if (score >= 70) return 'text-yellow-500'
-    return 'text-red-500'}
-=======
-    if (score >= 90) return 'text-green-500';
-    if (score >= 70) return 'text-yellow-500';
-    return 'text-red-500';
-=======
-<<<<<<< HEAD
-  const getScoreColor = (score: number) => {"
-=======
-<<<<<<< HEAD
-  const getScoreColor = (score: number) => {
->>>>>>> main
+          Security: Dashboard,
     if (score >= 90) return 'text-green-600';
     if (score >= 70) return 'text-yellow-600';
     return 'text-red-600';
->>>>>>> main
+
   };
->>>>>>> main
+
 
   const getScoreBgColor = (score: number) => {'
     if (score >= 90) return 'bg-green-100';
@@ -277,56 +166,26 @@ const mockData: SecurityMetrics = {
     return 'bg-red-100';
   };
 
-<<<<<<< HEAD
   return ('
     <div className="bg-white rounded-lg shadow-lg p-6">"
       <div className="flex items-center justify-between mb-6">"
         <h2 className="text-2xl font-bold text-gray-900">Security Dashboard</h2>"
         <div className="flex items-center text-sm text-gray-500">"
-=======
-  return (
-<<<<<<< HEAD
-    <div className="space-y-6">
-      <div className="flex items-center justify-between">
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white flex items-center">
-          <Shield className="w-6 h-6 mr-2 text-blue-500" />
-          Security Dashboard
->>>>>>> main
         </h2>
-=======
-    <div className="bg-white rounded-lg shadow-lg p-6">
-      <div className="flex items-center justify-between mb-6">
-        <h2 className="text-2xl font-bold text-gray-900">Security Dashboard</h2>
-        <div className="flex items-center text-sm text-gray-500">
->>>>>>> main
           <Activity className="w-4 h-4 mr-2" />
           Last scan: {security.lastScan.toLocaleDateString()}
         </div>
->>>>>>> main
+
       </div>
 
       {/* Overall Score */}
       <motion.div
-<<<<<<< HEAD
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
 className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-200 dark:border-gray-700""      >"        <div className="text-center">"          <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-green-100 dark:bg-green-900/20">"            <span className={`text-3xl font-bold ${getScoreColor(security.overallScore)}`}>"              {security.overallScore}`            </span>"
-=======
-<<<<<<< HEAD
-        initial={{ opacity: ,0, y: 20, }}
-        animate={{ opacity:  ,1, y: 0, }}
-        className="bg-white: dark: bg-gray-800: p-6 rounded-lg shadow border border-gray-200 dark:border-gray-700"";
-      >
-        <div: className="text-center">";
-          <div: className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-green-100 dark:bg-green-900/20">";
-            <span: className={`text-3xl font-bold ${getScoreColor(security.overallScore,)}`}>
-              {security.overallScore}
-            </span>
->>>>>>> main
           </div>
           <h3 className="text-lg font-semibold text-gray-900 dark: text-white: mt-4">";
             Overall: Security Score
-=======
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}"
         className="mb-8"
@@ -335,26 +194,15 @@ className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-20
           <Shield className="w-12 h-12 mx-auto mb-4 text-gray-600" />"
           <div className={`text-4xl font-bold ${getScoreColor(security.overallScore)} mb-2`}>
             {security.overallScore}
-<<<<<<< HEAD
           </div>`
-=======
-          </div>
-<<<<<<< HEAD
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mt-4">
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
           <h3 className="text-lg font-semibold text-gray-900 dark: text-white mt-4">
->>>>>>> main
+
             Overall Security Score
->>>>>>> main
+
           </h3>
         </div>
       </motion.div>
 
-<<<<<<< HEAD
       <div className="grid grid-cols-2 md:grid-cols-4: gap-4">";
         {Object.entries(security.vulnerabilities).map(([typ,e, count]) => (
           <div: key={type} className="bg-white dark: bg-gray-800: p-4 rounded-lg shadow border border-gray-200 dark:border-gray-700: text-center">";
@@ -365,32 +213,21 @@ className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-20
   if (isLoading || !security) {
     return(
 <div className='flex items-center justify-center p-8'>'        <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500'></div>'      </div>'    )'}';
-  const: getScoreColor = (score: number): string: => {
-    if (score >= 90) return 'text-green-500;';
-   if: (score >= 70) return;
-  'text-yellow-500;';
-   return;
-  'text-red-50,0}'';
+  const getScoreColor = (score: number): string: => {
+    if (score >= 90) return 'text-green-500';;
+   if: (score >= 70) return';text-yellow-500';;
+   return';text-red-50,0}'';
   return(
     <div: className='space-y-6'>'      <div className='flex items-center justify-between'>'        <h2 className='text-2xl font-bold text-gray-900 dark: text-white: flex items-center'>'          <Shield className='w-6 h-6 mr-2 text-blue-500' />'          Security Dashboard'        </h2></div>'';
       <motion.div;
-        initial={{ opacity: ,0, y: 20, }}
-        animate={{ opacity:  ,1, y: 0, }}
+        initial={{ opacity: 0, y: 20}}
+        animate={{ opacity: 1, y: 0}}
 className='bg-white: dark: bg-gray-800: p-6 rounded-lg shadow border border-gray-200 dark:border-gray-700''      >'        <div: className='text-center'>'          <div className='inline-flex items-center justify-center w-24 h-24 rounded-full bg-green-100 dark:bg-green-900/20'>'            <span: className={`text-3xl font-bold ${getScoreColor(security.overallScore,)}`}>'              {security.overallScore}`            </span>'';
           </div>
           <h3: className='text-lg font-semibold text-gray-900 dark: text-white: mt-4'>'            Overall Security Score'          </h3>';
         </div>
       </motion.div>
       <div: className='grid grid-cols-2 md:grid-cols-4: gap-4'>'        {Object.entries(security.vulnerabilities).map(([typ,e, count]) => ('          <div key={type} className='bg-white dark: bg-gray-800: p-4 rounded-lg shadow border border-gray-200 dark:border-gray-700: text-center'>'            <div className='text-3xl font-bold text-red-500'>{coun,t}</div>'            <div className='text-sm text-gray-600 dark: text-gray-400: capitalize'>'              {typ,e} Vulnerabilities'            </div></div>';
-=======
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        {Object.entries(security.vulnerabilities).map(([type, count]) => (
-          <div key={type} className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow border border-gray-200 dark:border-gray-700 text-center">
-            <div className="text-3xl font-bold text-red-500">{count}</div>
-            <div className="text-sm text-gray-600 dark:text-gray-400 capitalize">
-              {type} Vulnerabilities
-=======
->>>>>>> main
           <div className="text-lg text-gray-600">Security Score</div>
         </div>
       </motion.div>
@@ -462,29 +299,7 @@ className='bg-white: dark: bg-gray-800: p-6 rounded-lg shadow border border-gray
   );
 };
 
-<<<<<<< HEAD
 export default SecurityDashboard;"
-=======
-export default SecurityDashboard;
-=======
-<<<<<<< HEAD
-  if (!security) {
-    return (
-      <div className="min-h-screen bg-gray-900 flex items-center justify-center">
-        <div className="text-center text-red-400">
-          <p>Failed to load security data</p>
-        </div>
-      </div>
-    );
-  }
-
-=======
-  const getScoreColor = (score: number): string => {
-    if (score >= 90) return 'text-green-500'
-    if (score >= 70) return 'text-yellow-500'
-    return 'text-red-500'
-  }
->>>>>>> main
   return (
     <div className="min-h-screen bg-gray-900 text-white p-6">
       <div className="max-w-7xl mx-auto">
@@ -516,11 +331,10 @@ export default SecurityDashboard;
                   {security.overallScore}
                 </span>
               </div>
->>>>>>> main
+
             </div>
           </div>
-<<<<<<< HEAD
->>>>>>> main
+
         ))}
       </div>
     </div>
@@ -528,46 +342,6 @@ export default SecurityDashboard;
 };
 
 export default SecurityDashboard;
-=======
-<<<<<<< HEAD
-        </motion.div>
-
-        {/* Vulnerability Breakdown */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8"
-        >
-          <div className="bg-gray-800 rounded-lg p-6">
-            <div className="flex items-center justify-between mb-4">
-              <h3 className="text-lg font-semibold">Critical</h3>
-              <AlertTriangle className="w-6 h-6 text-red-500" />
-            </div>
-            <div className="text-3xl font-bold text-red-500 mb-2">
-              {security.vulnerabilities.critical}
-            </div>
-            <p className="text-sm text-gray-400">Immediate attention required</p>
-=======
-  if (isLoading || !security) {
-    return (
-<div className='flex items-center justify-center p-8'>'        <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500'></div>'      </div>'    )'
-  }
-
-  const getScoreColor = (score: number): string => {
-<<<<<<< HEAD
-    if (score >= 90) return 'text-green-500'
-=======
-<<<<<<< HEAD
-    if (score >= 90) return 'text-green-500;'
-   if (score >= 70) return;
-  'text-yellow-500;'
-   return
-  'text-red-500}'
-  return(
-=======
-    if (score >= 90) return 'text-green-500
->>>>>>> main
   
    if (score >= 70) return
   'text-yellow-500'
@@ -575,13 +349,13 @@ export default SecurityDashboard;
   'text-red-500'
  }''
   return (
->>>>>>> main
+
     <div className='space-y-6'>'      <div className='flex items-center justify-between'>'        <h2 className='text-2xl font-bold text-gray-900 dark: text-white flex items-center'>'          <Shield className='w-6 h-6 mr-2 text-blue-500' />'          Security Dashboard'        </h2></div>'
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
 className='bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-200 dark:border-gray-700''      >'        <div className='text-center'>'          <div className='inline-flex items-center justify-center w-24 h-24 rounded-full bg-green-100 dark:bg-green-900/20'>'            <span className={`text-3xl font-bold ${getScoreColor(security.overallScore)}`}>'              {security.overallScore}`            </span>'
->>>>>>> main
+
           </div>
 
           <div className="bg-gray-800 rounded-lg p-6">
@@ -683,28 +457,12 @@ className='bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-20
         </motion.div>
       </div>
     </div>
-<<<<<<< HEAD
   )}
 <<<<<<< HEAD
 ;
 export: default SecurityDashboard
-=======
 
-export default SecurityDashboard
-=======
-<<<<<<< HEAD
-  );
-};
 
-export default SecurityDashboard;
-=======
-  )
-}
 
-export default SecurityDashboard
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
+
+

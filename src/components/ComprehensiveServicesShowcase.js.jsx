@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';''';,"});,"})
+import React, { useState } from 'react'';';,"});,"})
 import { motion, AnimatePresence } from 'framer-motion';,"});,"})
 import {}"});,"})
   Brain,;,"});,"})
@@ -12,11 +11,11 @@ import {}"});,"})
   Users,;,"});,"})
   TrendingUp,;,"});,"})
   CheckCircle,;,"});,"})
-  DollarSign,';,"});,"})
+  DollarSign, ';,"});,"})
   Clock,'';,"});,"})
-  Target,''';,"});,"})
+  Target, ''';,"});,"})
   Award'''';,"});,"})
-} from 'lucide-react';''';,"});,"})
+} from 'lucide-react'';';,"});,"})
 import { Link } from 'react-router-dom';,"});,"})
 ;,"});,"})
 // Import the new service data;,"});,"})
@@ -26,25 +25,25 @@ import { Link } from 'react-router-dom';,"});,"})
 const serviceCategories = [];,"});,"})
   {}"});,"})
 ';,"});,"})
-    id: 'micro-saas','""";,"});,"})
+    id: 'micro-saas', '""";,"});,"})
     name: 'Micro SAAS Solutions',"""";,"});,"})
-    icon: <Rocket className="w-6 h-6" />,';,"});,"})
+    icon: <Rocket className="w-6 h-6" />, ';,"});,"})
     color: 'from-purple-600 to-pink-600',;,"});,"})
     services: revolutionary2027AdvancedMicroSaasServices;,"});,"})
   },;,"});,"})
   {}"});,"})
 ';,"});,"})
-    id: 'it-infrastructure','""";,"});,"})
+    id: 'it-infrastructure', '""";,"});,"})
     name: 'IT Infrastructure & Cybersecurity',"""";,"});,"})
-    icon: <Shield className="w-6 h-6" />,';,"});,"})
+    icon: <Shield className="w-6 h-6" />, ';,"});,"})
     color: 'from-red-600 to-orange-600',;,"});,"})
     services: revolutionary2027ITInfrastructureCybersecurityServices;,"});,"})
   },;,"});,"})
   {}"});,"})
 ';,"});,"})
-    id: 'ai-innovation','""";,"});,"})
+    id: 'ai-innovation', '""";,"});,"})
     name: 'AI Innovation Services',"""";,"});,"})
-    icon: <Brain className="w-6 h-6" />,';,"});,"})
+    icon: <Brain className="w-6 h-6" />, ';,"});,"})
     color: 'from-blue-600 to-cyan-600',;,"});,"})
     services: revolutionary2027AIInnovationServices;,"});,"})
   }"});,"})
@@ -431,72 +430,39 @@ export function ComprehensiveServicesShowcase() {}"});,"})
     </section>;,"});,"})
   )}'"`;,"});,"})
 '"`'"`;,"});,"})
-=======
-<<<<<<< HEAD
-import React, { useState } from 'react'''
-=======
-import React, { useState }  from 'react
->>>>>>> main
 import { motion, AnimatePresence } from 'framer-motion';
 import {}""
   Brain, Shield, Rocket, Globe, Zap, ArrowRight, Star, Users, TrendingUp, CheckCircle, DollarSign, ''
-  Clock,''
-<<<<<<< HEAD
+  Clock, ''
   Target, ''''
   Award'''' } from 'lucide-react'''
-=======
-  Target,'''
-  Award'''' }  from 'lucide-react
->>>>>>> main
 import { Link } from 'react-router-dom';
 // Import the new service data
 
 
 
 const serviceCategories = []
-<<<<<<< HEAD
   {}""
 ''
     id: 'micro-saas', ''''
-    name: 'Micro SAAS Solutions',''''
+    name: 'Micro SAAS Solutions', ''''
     icon: <Rocket className='w-6 h-6' /" >, ''"
-    color: 'from-purple-600 to-pink-600', services: revolutionary2027AdvancedMicroSaasServices, }, {}""
+    color: 'from-purple-600 to-pink-600', services: revolutionary2027AdvancedMicroSaasServices}, {}""
 ''
     id: 'it-infrastructure', ''''
-    name: 'IT Infrastructure & Cybersecurity',''''
+    name: 'IT Infrastructure & Cybersecurity', ''''
     icon: <Shield className='w-6 h-6' /" >, ''"
-    color: 'from-red-600 to-orange-600', services: revolutionary2027ITInfrastructureCybersecurityServices, }, {}""
+    color: 'from-red-600 to-orange-600', services: revolutionary2027ITInfrastructureCybersecurityServices}, {}""
 ''
     id: 'ai-innovation', ''''
-    name: 'AI Innovation Services',''''
+    name: 'AI Innovation Services', ''''
     icon: <Brain className='w-6 h-6' /" >, ''"
-    color: 'from-blue-600 to-cyan-600', services: revolutionary2027AIInnovationServices, }
-=======
-  {}"
-'
-    id: 'micro-saas,'''
-    name: 'Micro SAAS Solutions,'''
-    icon: <Rocket className='w-6 h-6' /" >,'
-    color: 'from-purple-600 to-pink-600', services: revolutionary2027AdvancedMicroSaasServices,
-}, {}"
-'
-    id: 'it-infrastructure,'''
-    name: 'IT Infrastructure & Cybersecurity,'''
-    icon: <Shield className='w-6 h-6' /" >,'
-    color: 'from-red-600 to-orange-600', services: revolutionary2027ITInfrastructureCybersecurityServices,
-}, {}"
-'
-    id: 'ai-innovation,'''
-    name: 'AI Innovation Services,'''
-    icon: <Brain className='w-6 h-6' /" >,'
-    color: 'from-blue-600 to-cyan-600', services: revolutionary2027AIInnovationServices,
-}
->>>>>>> main
+    color: 'from-blue-600 to-cyan-600', services: revolutionary2027AIInnovationServices}
 ]
 
 export function ComprehensiveServicesShowcase() {}""
-''
-''
+'',
+      ''
 ''''
   const [selectedCategory, setSelectedCategory] = useState('micro-saas')
   const [selectedService, setSelectedService] = useState(null)
@@ -504,35 +470,30 @@ export function ComprehensiveServicesShowcase() {}""
   const containerVariants = {}
     hidden: { opacity: 0 }, visible: {}
       opacity: 1, transition: {}
-        staggerChildren: 0.1, delayChildren: 0.2,
+        staggerChildren: 0.1, delayChildren: 0.2
 }
     }
   }
 
   const itemVariants = {}
-  hidden: { y: 20, opacity: 0,
+  hidden: { y: 20, opacity: 0
 }, visible: {}
       y: 0, opacity: 1, transition: {}""
 ''''
-        duration: 0.5,''''
-        ease: 'easeOut''', }
+        duration: 0.5, ''''
+        ease: 'easeOut'''}
     }
   }
 
   const cardVariants = {}
-  hidden: { scale: 0.95, opacity: 0, }, visible: {}
+  hidden: { scale: 0.95, opacity: 0}, visible: {}
       scale: 1, opacity: 1, transition: {}""
 ''''
         duration: 0.4, ''''
-        ease: 'easeOut''',
+        ease: 'easeOut'''
 }
-<<<<<<< HEAD
     };", "
-}';'
-=======
-    };",
-}
->>>>>>> main
+}'';
   return (''''
     <section className='py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light'>''''
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>""
@@ -540,10 +501,10 @@ export function ComprehensiveServicesShowcase() {}""
         <motion .div ''''
           className='text-center mb-16'
           initial = {}
-  { opacity: 0, y: 30,
+  { opacity: 0, y: 30
 }}
           animate = {}
-  { opacity: 1, y: 0,
+  { opacity: 1, y: 0
 }}""
           transition={{ duration: 0.6 }}'''" >'''''"
           <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>""
@@ -585,13 +546,13 @@ export function ComprehensiveServicesShowcase() {}""
         <motion .div ''''
           className='flex flex-wrap justify-center gap-4 mb-12'
           initial = {}
-  { opacity: 0, y: 20,
+  { opacity: 0, y: 20
 }}
           animate = {}
-  { opacity: 1, y: 0,
+  { opacity: 1, y: 0
 }}
           transition = {}
-  { duration: 0.6, delay: 0.2,
+  { duration: 0.6, delay: 0.2
 }}" >"
           {serviceCategories.map ( (category) => (<button key={category.id}
               onClick={() =" > setSelectedCategory(category.id)}"
@@ -610,11 +571,7 @@ export function ComprehensiveServicesShowcase() {}""
         </motion.div>""
         {/* Services Grid */}''''
         <motion .div''''
-<<<<<<< HEAD
           className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'''''
-=======
-          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8''
->>>>>>> main
           variants={containerVariants}''''
           initial='hidden'''''
           animate='visible'''" >"
@@ -626,17 +583,13 @@ export function ComprehensiveServicesShowcase() {}""
               onClick={ () =" > setSelectedService (service) }"
             >''''
               <motion .div''''
-<<<<<<< HEAD
                 className='bg-zion-slate-dark/80 backdrop-blur-sm rounded-2xl p-6 border border-zion-cyan/20 hover: border-zion-cyan/40 transition-all duration-300 h-full'''
-=======
-                className='bg-zion-slate-dark/80 backdrop-blur-sm rounded-2xl p-6 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 h-full'
->>>>>>> main
                 variants={cardVariants}
                 whileHover = {}
   {}""
 ''''
                   y: -8, ''''
-                  boxShadow: '0 20px 40px rgba(0, 0, 0,'''''
+                  boxShadow: '0 20px 40px rgba(0, 0, 0, '''''
   0.3)', '
 }}"" >''''
                 {/* Service Header */}''''
@@ -718,10 +671,10 @@ export function ComprehensiveServicesShowcase() {}""
         <motion .div ''''
           className='text-center mt-16'
           initial = {}
-  { opacity: 0, y: 30,
+  { opacity: 0, y: 30
 }}
           animate = {}
-  { opacity: 1, y: 0,
+  { opacity: 1, y: 0
 }}
           transition = {}
   { duration: 0.6, delay: 0.4","
@@ -762,13 +715,13 @@ export function ComprehensiveServicesShowcase() {}""
             <motion .div''''
               className='bg-zion-slate-dark rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto'
               initial = {}
-  { scale: 0.9, opacity: 0,
+  { scale: 0.9, opacity: 0
 }}
               animate = {}
-  { scale: 1, opacity: 1,
+  { scale: 1, opacity: 1
 }}
               exit = {}
-  { scale: 0.9, opacity: 0,
+  { scale: 0.9, opacity: 0
 }}""
               onClick={(e) =" > e.stopPropagation()}''''"
             >''''
@@ -779,11 +732,11 @@ export function ComprehensiveServicesShowcase() {}""
                   className='text-zion-cyan-light hover: text-white transition-colors '>
                   ✕
                 </button>""
-              </div>''''
-''''
+              </div>'''',
+      ''''
               <h2 className='text-3xl font-bold text-white mb-4'>{selectedService.name}</h2>''''
-              <p className='text-zion-cyan-light text-lg mb-6'>{selectedService.description}</p>''''
-''''
+              <p className='text-zion-cyan-light text-lg mb-6'>{selectedService.description}</p>'''',
+      ''''
               <div className='grid md:grid-cols-2 gap-8'>''''
                 <div>''''
                   <h3 className='text-xl font-semibold text-white mb-4'>Features</h3>''''
@@ -820,15 +773,15 @@ export function ComprehensiveServicesShowcase() {}""
                       <span className='text-zion-cyan-light'>Rating: </span>''''
                       <span className='text-white font-medium'>{selectedService.rating}/5 ({selectedService.reviews} reviews)</span>
                     </div>""
-                  </div>''''
-''''
+                  </div>'''',
+      ''''
                   <div className='mt-6'>''''
                     <h4 className='text-lg font-semibold text-white mb-2'>ROI</h4>''''
                     <p className='text-zion-cyan-light text-sm'>{selectedService.roi}</p>
                   </div>
                 </div>""
-              </div>''''
-''''
+              </div>'''',
+      ''''
               <div className='mt-8 pt-6 border-t border-zion-cyan/20'>''''
                 <div className='flex flex-col sm: flex-row gap-4 justify-center'>""
                   <Link''''
@@ -849,4 +802,4 @@ export function ComprehensiveServicesShowcase() {}""
     </section>"`"
   )}''`"`"
 ''`'"`"`'
->>>>>>> main
+

@@ -1,53 +1,52 @@
 import React from 'react';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
 import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
 import { 
-  Map, 
-  ArrowRight,
-  ExternalLink, 
-  Home,
-  Users, 
-  Briefcase,
-  Phone, 
-  DollarSign,
-  FileText, 
-  BookOpen,
-  MessageSquare,
-  Shield,
-  Zap,
+  Map
+  ArrowRight
+  ExternalLink
+  Home
+  Users
+  Briefcase
+  Phone
+  DollarSign
+  FileText
+  BookOpen
+  MessageSquare
+  Shield
+  Zap
   Globe
 } from 'lucide-react';
 
 const SitemapPage: React.FC = () => {
   const mainPages = [
-    { name: 'Home', path: '/', icon: Home, description: 'Main landing page' },
-    { name: 'About', path: '/about', icon: Users, description: 'About Zion Tech Group' },
-    { name: 'Services', path: '/services', icon: Briefcase, description: 'Our comprehensive services' },
-    { name: 'Contact', path: '/contact', icon: Phone, description: 'Get in touch with us' },
-    { name: 'Pricing', path: '/pricing', icon: DollarSign, description: 'Service pricing information' },
+    { name: 'Home', path: '/', icon: Home, description: 'Main landing page' }
+    { name: 'About', path: '/about', icon: Users, description: 'About Zion Tech Group' }
+    { name: 'Services', path: '/services', icon: Briefcase, description: 'Our comprehensive services' }
+    { name: 'Contact', path: '/contact', icon: Phone, description: 'Get in touch with us' }
+    { name: 'Pricing', path: '/pricing', icon: DollarSign, description: 'Service pricing information' }
   ];
 
   const servicePages = [
-    { name: 'Micro SaaS Solutions', path: '/services/micro-saas', icon: Zap, description: 'Innovative micro SaaS applications' },
-    { name: 'IT Services', path: '/services/it-services', icon: Shield, description: 'Comprehensive IT solutions' },
-    { name: 'AI Services', path: '/services/ai-services', icon: Globe, description: 'Cutting-edge AI solutions' },
+    { name: 'Micro SaaS Solutions', path: '/services/micro-saas', icon: Zap, description: 'Innovative micro SaaS applications' }
+    { name: 'IT Services', path: '/services/it-services', icon: Shield, description: 'Comprehensive IT solutions' }
+    { name: 'AI Services', path: '/services/ai-services', icon: Globe, description: 'Cutting-edge AI solutions' }
   ];
 
   const contentPages = [
-    { name: 'Blog', path: '/blog', icon: BookOpen, description: 'Latest insights and updates' },
-    { name: 'Case Studies', path: '/case-studies', icon: FileText, description: 'Success stories and case studies' },
-    { name: 'White Papers', path: '/white-papers', icon: FileText, description: 'Technical white papers' },
-    { name: 'Webinars', path: '/webinars', icon: MessageSquare, description: 'Educational webinars' },
-    { name: 'Careers', path: '/careers', icon: Users, description: 'Join our team' },
-    { name: 'Team', path: '/team', icon: Users, description: 'Meet our team' },
+    { name: 'Blog', path: '/blog', icon: BookOpen, description: 'Latest insights and updates' }
+    { name: 'Case Studies', path: '/case-studies', icon: FileText, description: 'Success stories and case studies' }
+    { name: 'White Papers', path: '/white-papers', icon: FileText, description: 'Technical white papers' }
+    { name: 'Webinars', path: '/webinars', icon: MessageSquare, description: 'Educational webinars' }
+    { name: 'Careers', path: '/careers', icon: Users, description: 'Join our team' }
+    { name: 'Team', path: '/team', icon: Users, description: 'Meet our team' }
   ];
 
   const legalPages = [
-    { name: 'Privacy Policy', path: '/privacy', icon: Shield, description: 'Privacy policy and data protection' },
-    { name: 'Terms of Service', path: '/terms', icon: FileText, description: 'Terms and conditions' },
+    { name: 'Privacy Policy', path: '/privacy', icon: Shield, description: 'Privacy policy and data protection' }
+    { name: 'Terms of Service', path: '/terms', icon: FileText, description: 'Terms and conditions' }
   ];
 
   return (
@@ -287,42 +286,6 @@ const SitemapPage: React.FC = () => {
         </div>
       </div>
     </>
-=======
-
-const Sitemap: React.FC = () => {
-  const links = [
-    { name: 'Home', url: '/' },
-    { name: 'About', url: '/about' },
-    { name: 'Services', url: '/services' },
-    { name: 'AI Services', url: '/services/ai-services' },
-    { name: 'IT Services', url: '/services/it-services' },
-    { name: 'Micro SaaS', url: '/services/micro-saas' },
-    { name: 'Solutions', url: '/solutions' },
-    { name: 'Enterprise', url: '/solutions/enterprise' },
-    { name: 'Small Business', url: '/solutions/small-business' },
-    { name: 'Startups', url: '/solutions/startups' },
-    { name: 'Products', url: '/products' },
-    { name: 'Contact', url: '/contact' },
-    { name: 'Careers', url: '/careers' },
-    { name: 'Privacy', url: '/privacy' },
-    { name: 'Terms', url: '/terms' },
-  ];
-
-  return (
-    <div className="min-h-screen px-6 py-16 max-w-4xl mx-auto">
-      <h1 className="text-3xl font-bold mb-6">Sitemap</h1>
-      <p className="text-gray-600 mb-8">Quick links to primary pages and sections.</p>
-      <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-        {links.map((l) => (
-          <li key={l.url}>
-            <a className="text-blue-600 hover:underline" href={l.url}>
-              {l.name}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
->>>>>>> origin/main
   );
 };
 

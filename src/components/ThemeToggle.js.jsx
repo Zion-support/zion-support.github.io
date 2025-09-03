@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 
  const ThemeToggle = () => { const [isDark, setIsDark] = useState (true) ; useEffect ( () => {'';,"});,"})
 ;,"});,"})
-import React, { useState, useEffect } from 'react';''';,"});,"})
+import React, { useState, useEffect } from 'react'';';,"});,"})
 import { SunIcon, MoonIcon } from '@heroicons/react/24/outline';,"});,"})
 const ThemeToggle = () => {;,"});,"})
     const [isDark, setIsDark] = useState(true);,"});,"})
@@ -38,47 +37,7 @@ export { ThemeToggle };,"});,"})
 export { ThemeToggle };,"});,"})
 ;,"});,"})
 export { ThemeToggle };,"});,"})
->>>>>>> pr-10728;,"});,"})
-=======
-import React from 'react';
-import { SEO } from '@/components/SEO';
 
-<<<<<<< HEAD
-""
-}}
-=======
-<<<<<<< HEAD
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-2b9a
-=======
-const ThemeToggleJs = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="ThemeToggleJs - Zion Tech Group"
-        description="Professional ThemeToggleJs services by Zion Tech Group"
-        keywords="themetogglejs, technology, services"
-      />
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">ThemeToggleJs</h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Professional ThemeToggleJs services to help your business grow.
-          </p>
-          <div className="flex justify-center">
-            <a 
-              href="/contact" 
-              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300"
-            >
-              Get Started
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
 
-export default ThemeToggleJs;
->>>>>>> main
->>>>>>> main
->>>>>>> main
+
+

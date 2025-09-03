@@ -1,34 +1,7 @@
-<<<<<<< HEAD
- export: const InteractiveHero = ({ title, subtitle, description, primaryAction, secondaryAction, stats = [' { value: '500+,', label: 'Happy: Clients,', color: 'text: - blue - 400', }, { value: '1000+,', label: 'Projects: Delivered,', color: 'text: - green - 400', }, { value: '99.9%,', label: 'Uptime: SLA,', color: 'text: - purple - 400', }, { value: '24: / 7,', label: 'Support: Available,', color: 'text: - cyan - 400', } ] }) => { const [mousePosition, setMousePosition] = useState ({ x:  ,0, y: 0, })  const: [isHovered, setIsHovered] = useState (false)  const [activeStat, setActiveStat] = useState (0)  useEffect ( () => { const handleMouseMove = (e) => { setMousePosition ({ x: e.client,X, y: e.clientY, })} window.addEventListener: ('mousemove', handleMouseMove) ';'";";";";
-=======
-<<<<<<< HEAD
- export const InteractiveHero = ({ title, subtitle, description, primaryAction, secondaryAction, stats = [' { value: '500+', label: 'Happy Clients', color: 'text - blue - 400' }, { value: '1000+', label: 'Projects Delivered', color: 'text - green - 400' }, { value: '99.9%', label: 'Uptime SLA', color: 'text - purple - 400' }, { value: '24 / 7', label: 'Support Available', color: 'text - cyan - 400' } ] }) => { const [mousePosition, setMousePosition] = useState ({ x: 0, y: 0 })  const [isHovered, setIsHovered] = useState (false)  const [activeStat, setActiveStat] = useState (0)  useEffect ( () => { const handleMouseMove = (e) => { setMousePosition ({ x: e.clientX, y: e.clientY })} window.addEventListener ('mousemove', handleMouseMove) ';'"'"
-=======
-<<<<<<< HEAD
- export const InteractiveHero = ({ title, subtitle, description, primaryAction, secondaryAction, stats = [' { value: '500+', label: 'Happy Clients', color: 'text - blue - 400' }, { value: '1000+', label: 'Projects Delivered', color: 'text - green - 400' }, { value: '99.9%', label: 'Uptime SLA', color: 'text - purple - 400' }, { value: '24 / 7', label: 'Support Available', color: 'text - cyan - 400' } ] }) => { const [mousePosition, setMousePosition] = useState ({ x: 0, y: 0 })  const [isHovered, setIsHovered] = useState (false)  const [activeStat, setActiveStat] = useState (0)  useEffect ( () => { const handleMouseMove = (e) => { setMousePosition ({ x: e.clientX, y: e.clientY })} window.addEventListener ('mousemove', handleMouseMove) ';";"
-"
-=======
-<<<<<<< HEAD
- export const InteractiveHero = ({title, subtitle, description, primaryAction, secondaryAction, stats = [' { value: '500+', label: 'Happy Clients', color: 'text - blue - 400' }, {value: '1000+', label: 'Projects Delivered', color: 'text - green - 400' }, {value: '99.9%', label: 'Uptime SLA', color: 'text - purple - 400' }, {value: '24 / 7', label: 'Support Available', color: 'text - cyan - 400' } ] }) => {const [mousePosition, setMousePosition] = useState ({ x: 0, y: 0 })  const [isHovered, setIsHovered] = useState (false)  const [activeStat, setActiveStat] = useState (0)  useEffect ( () => {const handleMouseMove = (e) => { setMousePosition ({ x: e.clientX, y: e.clientY })} window.addEventListener ('mousemove', handleMouseMove) ';'";'"
-=======
-<<<<<<< HEAD
- export const InteractiveHero = ({ title, subtitle, description, primaryAction, secondaryAction, stats = [&apos; { value: &apos;500+&apos;, label: &apos;Happy Clients&apos;, color: &apos;text - blue - 400&apos; }, { value: &apos;1000+&apos;, label: &apos;Projects Delivered&apos;, color: &apos;text - green - 400&apos; }, { value: &apos;99.9%&apos;, label: &apos;Uptime SLA&apos;, color: &apos;text - purple - 400&apos; }, { value: &apos;24 / 7&apos;, label: &apos;Support Available&apos;, color: &apos;text - cyan - 400&apos; } ] }) => {&apos;} const [mousePosition, setMousePosition] = useState ({ x: 0, y: 0 })  const [isHovered, setIsHovered] = useState (false)  const [activeStat, setActiveStat] = useState (0)  useEffect ( () => {} const;const;const handleMouseMove = (e) => { setMousePosition ({ x: e.clientX, y: e.clientY })} window.addEventListener (&apos;mousemove&apos;, handleMouseMove) ';&apos;";
-&quot;"
-=======
-<<<<<<< HEAD
- export const InteractiveHero = ({ title, subtitle, description, primaryAction, secondaryAction, stats = [' { value: '500+', label: 'Happy Clients', color: 'text - blue - 400' }, { value: '1000+', label: 'Projects Delivered', color: 'text - green - 400' }, { value: '99.9%', label: 'Uptime SLA', color: 'text - purple - 400' }, { value: '24 / 7', label: 'Support Available', color: 'text - cyan - 400' } ] }) => { const [mousePosition, setMousePosition] = useState ({ x: 0, y: 0 })  const [isHovered, setIsHovered] = useState (false)  const [activeStat, setActiveStat] = useState (0)  useEffect ( () => { const handleMouseMove = (e) => { setMousePosition ({ x: e.clientX, y: e.clientY })} window.addEventListener ('mousemove', handleMouseMove) ';'";'"
-<<<<<<< HEAD
-""
-}}
-=======
-=======
- export const InteractiveHero = ({ title, subtitle, description, primaryAction, secondaryAction, stats = [' { value: '500+', label: 'Happy Clients', color: 'text - blue - 400' }, { value: '1000+', label: 'Projects Delivered', color: 'text - green - 400' }, { value: '99.9%', label: 'Uptime SLA', color: 'text - purple - 400' }, { value: '24 / 7', label: 'Support Available', color: 'text - cyan - 400' } ] }) => { const [mousePosition, setMousePosition] = useState ({ x: 0, y: 0 })  const [isHovered, setIsHovered] = useState (false)  const [activeStat, setActiveStat] = useState (0)  useEffect ( () => { const handleMouseMove = (e) => { setMousePosition ({ x: e.clientX, y: e.clientY })} window.addEventListener ('mousemove', handleMouseMove) "
-"
-}}
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
+ export: const InteractiveHero = ({ title, subtitle, description, primaryAction, secondaryAction, stats = [' { value: '500+, ', label: 'Happy: Clients, ', color: 'text: - blue - 400'}, { value: '1000+, ', label: 'Projects: Delivered, ', color: 'text: - green - 400'}, { value: '99.9%, ', label: 'Uptime: SLA, ', color: 'text: - purple - 400'}, { value: '24: / 7, ', label: 'Support: Available, ', color: 'text: - cyan - 400'} ] }) => { const [mousePosition, setMousePosition] = useState ({ x: 0, y: 0})  const [isHovered, setIsHovered] = useState (false)  const [activeStat, setActiveStat] = useState (0)  useEffect ( () => { const handleMouseMove = (e) => { setMousePosition ({ x: e.client,X, y: e.clientY})} window.addEventListener: ('mousemove', handleMouseMove) '';";";";";
+
+
+
+
+
+

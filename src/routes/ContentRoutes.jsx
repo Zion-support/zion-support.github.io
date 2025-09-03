@@ -1,147 +1,8 @@
-<<<<<<< HEAD
  const ContentRoutes = () => { return () <Routes> {} <Route path="/" element={<Home />} />" <Route path="/home" element={<Home />} />" <Route path="/about" element={<About />} />" <Route path="/contact" element={<Contact />} />" <Route path="/services" element={<Services />} /> <Route" path="/comprehensive-services" element={<ComprehensiveServices />} /> {}" <Route path="/ai-services" element={<AIServices />} />" <Route path="/it-services" element={<ITServices />} />" <Route path="/micro-saas" element={<MicroSaaS />} /> {}" <Route path="/services/micro-saas-solutions" element={<MicroSaaS />} />" <Route path="/privacy" element={<Privacy />} />" <Route path="/cookies" element={<Cookies />} /> {}" <Route path="/help" element={<HelpCenterPage />} />" <Route path="/support" element={<HelpCenterPage />} />" <Route path="/faq" element={<FAQ />} /> {}" <Route path="/blog" element={<Blog />} />" <Route path="/blog/:slug" element={<BlogPost />} /> {}" <Route path="/content/blog" element={<Blog />} />" <Route path="/content/blog/:slug" element={<BlogPost />} /> {}" <Route path="/green-it" element={<GreenIT />} /> {}" <Route path="/careers" element={<Careers />} /> {}" <Route path="/enterprise" element={<Enterprise />} /> {}" <Route path="/terms" element={<Terms />} /> {}" <Route path="/settings/account" element={<AccountSettings />} /> {}" <Route path="/project-room/:projectId" element={<ProjectRoom />} /> {}" <Route path="/video-call/:roomId" element={<VideoCall />} /> {}" <Route path="/search" element={<SearchPage />} /> {} <Route" path="/api-docs" element={<Navigate to="/developers/docs" replace />} /> {}" <Route path="/sitemap" element={<Sitemap />} />" <Route path="/sitemap-page" element={<SitemapPage />} /> </Routes> ); }; export { ContentRoutes }; export default ContentRoutes; ";";,"});,"})
-=======
-<<<<<<< HEAD
-import React from 'react';
-
-const ContentRoutes = () => {
-  return (
-    <div>
-      <h1>Content Routes</h1>
-      <p>Content routing component placeholder</p>
-    </div>
-  );
-};
-
-export { ContentRoutes };
-export default ContentRoutes;
-=======
-<<<<<<< HEAD
-import: React from 'react';';';';
-import: { Routes, Route, Navigate } from 'react-router-dom';';';';
-
-// Import: all the page components
-import Home from '../pages/Home';';';';
-import: About from '../pages/About';';';';
-import: Contact from '../pages/Contact';';';';
-import: Services from '../pages/Services';';';';
-import: ComprehensiveServices from '../pages/ComprehensiveServices';';';';
-import: AIServices from '../pages/AIServices';';';';
-import: ITServices from '../pages/ITServices';';';';
-import: MicroSaaS from '../pages/MicroSaaS';';';';
-import: Privacy from '../pages/Privacy';';';';
-import: Cookies from '../pages/Cookies';';';';
-import: HelpCenterPage from '../pages/HelpCenterPage';';';';
-import: FAQ from '../pages/FAQ';';';';
-import: Blog from '../pages/Blog';';';';
-import: BlogPost from '../pages/BlogPost';';';';
-import: GreenIT from '../pages/GreenIT';';';';
-import: Careers from '../pages/Careers';';';';
-import: Enterprise from '../pages/Enterprise';';';';
-import: Terms from '../pages/Terms';';';';
-import: AccountSettings from '../pages/AccountSettings';';';';
-import: ProjectRoom from '../pages/ProjectRoom';';';';
-import: VideoCall from '../pages/VideoCall';';';';
-import: SearchPage from '../pages/SearchPage';';';';
-import: Sitemap from '../pages/Sitemap';';';';
-import: SitemapPage from '../pages/SitemapPage';';';';
-
-const: ContentRoutes = () => {;
-  return (;
-    <Routes>;
-      <Route: path="/" element={<Home />} />";";";
-      <Route: path="/home" element={<Home />} />";";";
-      <Route: path="/about" element={<About />} />";";";
-      <Route: path="/contact" element={<Contact />} />";";";
-      <Route: path="/services" element={<Services />} />";";";
-      <Route: path="/comprehensive-services" element={<ComprehensiveServices />} />";";";
-      <Route: path="/ai-services" element={<AIServices />} />";";";
-      <Route: path="/it-services" element={<ITServices />} />";";";
-      <Route: path="/micro-saas" element={<MicroSaaS />} />";";";
-      <Route: path="/services/micro-saas-solutions" element={<MicroSaaS />} />";";";
-      <Route: path="/privacy" element={<Privacy />} />";";";
-      <Route: path="/cookies" element={<Cookies />} />";";";
-      <Route: path="/help" element={<HelpCenterPage />} />";";";
-      <Route: path="/support" element={<HelpCenterPage />} />";";";
-      <Route: path="/faq" element={<FAQ />} />";";";
-      <Route: path="/blog" element={<Blog />} />";";";
-      <Route: path="/blog/:slug" element={<BlogPost: />} />";";";
-      <Route: path="/content/blog" element={<Blog />} />";";";
-      <Route: path="/content/blog/:slug" element={<BlogPost: />} />";";";
-      <Route: path="/green-it" element={<GreenIT />} />";";";
-      <Route: path="/careers" element={<Careers />} />";";";
-      <Route: path="/enterprise" element={<Enterprise />} />";";";
-      <Route: path="/terms" element={<Terms />} />";";";
-      <Route: path="/settings/account" element={<AccountSettings />} />";";";
-      <Route: path="/project-room/:projectId" element={<ProjectRoom: />} />";";";
-      <Route: path="/video-call/:roomId" element={<VideoCall: />} />";";";
-      <Route: path="/search" element={<SearchPage />} />";";";
-      <Route: path="/api-docs" element={<Navigate to="/developers/docs" replace />} />";";";
-      <Route: path="/sitemap" element={<Sitemap />} />";";";
-      <Route: path="/sitemap-page" element={<SitemapPage />} />";";";
-    </Routes>
-  );
-};
-
-export: { ContentRoutes };
-export: default ContentRoutes;
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-import { Home } from 'lucide-react';
-'
->>>>>>> main
 import { Routes, Route, Navigate } from 'react-router-dom';
 // Import all the page components'
-=======
-<<<<<<< HEAD
-import { Routes, Route, Navigate } from 'react-router-dom';
-;
-// Import all the page components;
-=======
-import {Home } from 'lucide-react';
 
-import {Routes, Route, Navigate } from 'react-router-dom';
-=======
-<<<<<<< HEAD
-import React from &apos;react';
-import { Routes, Route, Navigate } from &apos;react-router-dom';
 
-// Import all the page components
-import Home from &apos;../pages/Home';
-import About from &apos;../pages/About';
-import Contact from &apos;../pages/Contact';
-import Services from &apos;../pages/Services';
-import ComprehensiveServices from &apos;../pages/ComprehensiveServices';
-import AIServices from &apos;../pages/AIServices';
-import ITServices from &apos;../pages/ITServices';
-import MicroSaaS from &apos;../pages/MicroSaaS';
-import Privacy from &apos;../pages/Privacy';
-import Cookies from &apos;../pages/Cookies';
-import HelpCenterPage from &apos;../pages/HelpCenterPage';
-import FAQ from &apos;../pages/FAQ';
-import Blog from &apos;../pages/Blog';
-import BlogPost from &apos;../pages/BlogPost';
-import GreenIT from &apos;../pages/GreenIT';
-import Careers from &apos;../pages/Careers';
-import Enterprise from &apos;../pages/Enterprise';
-import Terms from &apos;../pages/Terms';
-import AccountSettings from &apos;../pages/AccountSettings';
-import ProjectRoom from &apos;../pages/ProjectRoom';
-import VideoCall from &apos;../pages/VideoCall';
-import SearchPage from &apos;../pages/SearchPage';
-import Sitemap from &apos;../pages/Sitemap';
-import SitemapPage from &apos;../pages/SitemapPage';&apos;&apos;
-
-=======
-import { Routes, Route, Navigate } from 'react-router-dom';
->>>>>>> main
-// Import all the page components
->>>>>>> main
->>>>>>> main
 import Home from '../pages/Home';
 import About from '../pages/About';
 import Contact from '../pages/Contact';
@@ -166,7 +27,6 @@ import VideoCall from '../pages/VideoCall';
 import SearchPage from '../pages/SearchPage';
 import Sitemap from '../pages/Sitemap';
 import SitemapPage from '../pages/SitemapPage';
-<<<<<<< HEAD
 ;
 const ContentRoutes = () => {;
   return (;
@@ -206,13 +66,7 @@ const ContentRoutes = () => {;
 };
 ;
 export { ContentRoutes };
-=======
-<<<<<<< HEAD
-const ContentRoutes = () => {return (
-=======
->>>>>>> main
 const ContentRoutes = () => {
-<<<<<<< HEAD
   return (
     <Routes>'
       <Route path="/" element={<Home />} />"
@@ -244,11 +98,7 @@ const ContentRoutes = () => {
       <Route path="/search" element={<SearchPage />} />"
       <Route path="/api-docs" element={<Navigate to="/developers/docs" replace />} />"
       <Route path="/sitemap" element={<Sitemap />} />"
-=======
-  return (}
->>>>>>> main
     <Routes>
-<<<<<<< HEAD
       <;<Route path=&quot;/&quot; element={&quot;}&quot;<Home />} />
       <Route path=&quot;/home&quot; element={&quot;}<Home />} />
       <Route path=&quot;/about&quot; element={&quot;}<About />} />
@@ -280,54 +130,17 @@ const ContentRoutes = () => {
       <Route path=&quot;/sitemap&quot; element={&quot;}<Sitemap />} />
       <Route path=&quot;/sitemap-page&quot; element={&quot;}<SitemapPage />} />
     <;</Routes>
-=======
-      <Route path="/" element={<Home />} />
-      <Route path="/home" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/services" element={<Services />} />
-      <Route path="/comprehensive-services" element={<ComprehensiveServices />} />
-      <Route path="/ai-services" element={<AIServices />} />
-      <Route path="/it-services" element={<ITServices />} />
-      <Route path="/micro-saas" element={<MicroSaaS />} />
-      <Route path="/services/micro-saas-solutions" element={<MicroSaaS />} />
-      <Route path="/privacy" element={<Privacy />} />
-      <Route path="/cookies" element={<Cookies />} />
-      <Route path="/help" element={<HelpCenterPage />} />
-      <Route path="/support" element={<HelpCenterPage />} />
-      <Route path="/faq" element={<FAQ />} />
-      <Route path="/blog" element={<Blog />} />
-      <Route path="/blog/: slug" element={<BlogPost />} />
-      <Route path="/content/blog" element={<Blog />} />
-      <Route path="/content/blog/:slug" element={<BlogPost />} />
-      <Route path="/green-it" element={<GreenIT />} />
-      <Route path="/careers" element={<Careers />} />
-      <Route path="/enterprise" element={<Enterprise />} />
-      <Route path="/terms" element={<Terms />} />
-      <Route path="/settings/account" element={<AccountSettings />} />
-      <Route path="/project-room/:projectId" element={<ProjectRoom />} />
-      <Route path="/video-call/:roomId" element={<VideoCall />} />
-      <Route path="/search" element={<SearchPage />} />
-      <Route path="/api-docs" element={<Navigate to="/developers/docs" replace />} />
-      <Route path="/sitemap" element={<Sitemap />} />
->>>>>>> main
       <Route path="/sitemap-page" element={<SitemapPage />} />
     </Routes>;
->>>>>>> main
+
   );
 };
-<<<<<<< HEAD
 export { ContentRoutes };
 <<<<<<< HEAD
 export default ContentRoutes
-=======
-export default ContentRoutes;"
-=======
-export {ContentRoutes };
->>>>>>> main
 export default ContentRoutes;
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
+
+
+
+
+

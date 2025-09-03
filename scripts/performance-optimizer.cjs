@@ -1,61 +1,14 @@
-<<<<<<< HEAD
-
-const fs = require('fs');
-const path = require('path');
-=======
 #!/usr/bin/env node
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
->>>>>>> main
 
 class PerformanceOptimizer {
   constructor() {
     this.projectRoot = process.cwd();
-<<<<<<< HEAD
-  }
-
-  async optimizeImages() {
-    console.log('🖼️ Optimizing images...');
-    // Add image optimization logic here
-  }
-
-  async optimizeCSS() {
-    console.log('🎨 Optimizing CSS...');
-    // Add CSS optimization logic here
-  }
-
-  async optimizeJavaScript() {
-    console.log('⚡ Optimizing JavaScript...');
-    // Add JS optimization logic here
-  }
-
-  async run() {
-    await this.optimizeImages();
-    await this.optimizeCSS();
-    await this.optimizeJavaScript();
-    console.log('✅ Performance optimization completed!');
-  }
-}
-
-const optimizer = new PerformanceOptimizer();
-optimizer.run().catch(console.error);
-=======
-    this.reportsDir = path.join(this.projectRoot, 'automation-reports');
-    this.metrics = {
-      bundleSize: 0,
-      buildTime: 0,
-      fileCount: 0,
-      dependencies: 0,
-      performance: {}
-    };
-    this.optimizations = [];
-  }
-
-  log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${level}] ${message}`);
+    this.reportsDir = path.join(this.projectRoot, 'performance-reports');
+    this.ensureDirectories();
   }
 
   ensureDirectories() {
@@ -64,42 +17,34 @@ optimizer.run().catch(console.error);
     }
   }
 
-  async measureBuildTime() {
-    this.log('⏱️ Measuring build time...', 'INFO');
-    const startTime = Date.now();
-    
-    try {
-      execSync('npm run build', { 
-        cwd: this.projectRoot, 
-        encoding: 'utf8',
-        stdio: 'pipe'
-      });
-      this.metrics.buildTime = Date.now() - startTime;
-      this.log(`✅ Build completed in ${this.metrics.buildTime}ms`, 'SUCCESS');
-    } catch (error) {
-      this.log(`❌ Build failed: ${error.message}`, 'ERROR');
-      this.metrics.buildTime = -1;
-    }
+  log(message) {
+    const timestamp = new Date().toISOString();
+    console.log(`[${timestamp}] ${message}`);
   }
 
-  analyzeBundleSize() {
-    this.log('📦 Analyzing bundle size...', 'INFO');
-    
-    const buildDir = path.join(this.projectRoot, '.next');
-    if (!fs.existsSync(buildDir)) {
-      this.log('⚠️ Build directory not found, running build first...', 'WARN');
-      return;
-    }
-
+  async analyzeBundleSize() {
+    this.log('📦 Analyzing bundle size...');
     try {
-      const stats = this.getDirectorySize(buildDir);
-      this.metrics.bundleSize = stats.size;
-      this.metrics.fileCount = stats.count;
-      
-      this.log(`📊 Bundle size: ${(this.metrics.bundleSize / 1024 / 1024).toFixed(2)}MB`, 'INFO');
-      this.log(`📁 Files: ${this.metrics.fileCount}`, 'INFO');
+      // Build the project first
+      execSync('npm run build', {
+        cwd: this.projectRoot,
+        encoding: 'utf8',
+        timeout: 300000
+      });
+
+      // Check if .next directory exists and analyze it
+      const nextDir = path.join(this.projectRoot, '.next');
+      if (fs.existsSync(nextDir)) {
+        const stats = this.getDirectorySize(nextDir);
+        this.log(`📊 Bundle size: ${this.formatBytes(stats.size)}`);
+        return { size: stats.size, files: stats.files };
+      } else {
+        this.log('⚠️ Build directory not found');
+        return { size: 0, files: 0 };
+      }
     } catch (error) {
-      this.log(`❌ Error analyzing bundle: ${error.message}`, 'ERROR');
+      this.log(`❌ Bundle analysis failed: ${error.message}`);
+      return { error: error.message };
     }
   }
 
@@ -108,260 +53,223 @@ optimizer.run().catch(console.error);
     let fileCount = 0;
 
     const scanDirectory = (dir) => {
-      const items = fs.readdirSync(dir);
-      
-      for (const item of items) {
-        const fullPath = path.join(dir, item);
-        const stat = fs.statSync(fullPath);
+      const files = fs.readdirSync(dir);
+      files.forEach(file => {
+        const filePath = path.join(dir, file);
+        const stats = fs.statSync(filePath);
         
-        if (stat.isDirectory()) {
-          scanDirectory(fullPath);
+        if (stats.isDirectory()) {
+          scanDirectory(filePath);
         } else {
-          totalSize += stat.size;
+          totalSize += stats.size;
           fileCount++;
         }
-      }
+      });
     };
 
     scanDirectory(dirPath);
-    return { size: totalSize, count: fileCount };
+    return { size: totalSize, files: fileCount };
   }
 
-  analyzeDependencies() {
-    this.log('📋 Analyzing dependencies...', 'INFO');
-    
+  formatBytes(bytes) {
+    if (bytes === 0) return '0 Bytes';
+    const k = 1024;
+    const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+  }
+
+  async optimizeImages() {
+    this.log('🖼️ Optimizing images...');
     try {
-      const packageJsonPath = path.join(this.projectRoot, 'package.json');
-      const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
-      
-      const deps = Object.keys(packageJson.dependencies || {}).length;
-      const devDeps = Object.keys(packageJson.devDependencies || {}).length;
-      
-      this.metrics.dependencies = deps + devDeps;
-      
-      this.log(`📦 Dependencies: ${deps}`, 'INFO');
-      this.log(`🔧 Dev Dependencies: ${devDeps}`, 'INFO');
-      this.log(`📊 Total: ${this.metrics.dependencies}`, 'INFO');
+      const publicDir = path.join(this.projectRoot, 'public');
+      if (fs.existsSync(publicDir)) {
+        const imageFiles = this.findImageFiles(publicDir);
+        this.log(`📸 Found ${imageFiles.length} image files`);
+        
+        // Here you could add actual image optimization logic
+        // For now, we'll just report what we found
+        return { optimized: imageFiles.length, files: imageFiles };
+      } else {
+        this.log('⚠️ Public directory not found');
+        return { optimized: 0, files: [] };
+      }
     } catch (error) {
-      this.log(`❌ Error analyzing dependencies: ${error.message}`, 'ERROR');
+      this.log(`❌ Image optimization failed: ${error.message}`);
+      return { error: error.message };
     }
   }
 
-  checkImageOptimization() {
-    this.log('🖼️ Checking image optimization...', 'INFO');
-    
-    const publicDir = path.join(this.projectRoot, 'public');
-    if (!fs.existsSync(publicDir)) {
-      this.log('⚠️ Public directory not found', 'WARN');
-      return;
-    }
-
-    const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg'];
-    const images = this.findFiles(publicDir, imageExtensions);
-    
-    this.log(`🖼️ Found ${images.length} images`, 'INFO');
-    
-    if (images.length > 0) {
-      this.optimizations.push({
-        type: 'image',
-        description: 'Consider using Next.js Image component for automatic optimization',
-        impact: 'high',
-        files: images.slice(0, 5) // Show first 5 files
-      });
-    }
-  }
-
-  findFiles(dir, extensions) {
-    const files = [];
+  findImageFiles(dir) {
+    const imageFiles = [];
+    const extensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg'];
     
     const scanDirectory = (dir) => {
-      try {
-        const items = fs.readdirSync(dir);
+      const files = fs.readdirSync(dir);
+      files.forEach(file => {
+        const filePath = path.join(dir, file);
+        const stats = fs.statSync(filePath);
         
-        for (const item of items) {
-          const fullPath = path.join(dir, item);
-          const stat = fs.statSync(fullPath);
-          
-          if (stat.isDirectory()) {
-            scanDirectory(fullPath);
-          } else if (extensions.some(ext => item.toLowerCase().endsWith(ext))) {
-            files.push(path.relative(this.projectRoot, fullPath));
+        if (stats.isDirectory()) {
+          scanDirectory(filePath);
+        } else {
+          const ext = path.extname(file).toLowerCase();
+          if (extensions.includes(ext)) {
+            imageFiles.push(filePath);
           }
         }
-      } catch (error) {
-        // Skip directories we can't read
-      }
+      });
     };
 
     scanDirectory(dir);
-    return files;
+    return imageFiles;
   }
 
-  checkCodeSplitting() {
-    this.log('🔀 Checking code splitting...', 'INFO');
-    
-    const pagesDir = path.join(this.projectRoot, 'pages');
-    const srcDir = path.join(this.projectRoot, 'src');
-    
-    let pageCount = 0;
-    let componentCount = 0;
-    
-    if (fs.existsSync(pagesDir)) {
-      pageCount = this.countFiles(pagesDir, ['.js', '.jsx', '.ts', '.tsx']);
-    }
-    
-    if (fs.existsSync(srcDir)) {
-      componentCount = this.countFiles(srcDir, ['.js', '.jsx', '.ts', '.tsx']);
-    }
-    
-    this.log(`📄 Pages: ${pageCount}`, 'INFO');
-    this.log(`🧩 Components: ${componentCount}`, 'INFO');
-    
-    if (pageCount > 20) {
-      this.optimizations.push({
-        type: 'code-splitting',
-        description: 'Consider implementing dynamic imports for large pages',
-        impact: 'medium',
-        current: pageCount
+  async checkCodeSplitting() {
+    this.log('🔀 Checking code splitting...');
+    try {
+      // Check for dynamic imports in the codebase
+      const result = execSync('grep -r "import(" src/ pages/ components/ --include="*.ts" --include="*.tsx" --include="*.js" --include="*.jsx" || true', {
+        cwd: this.projectRoot,
+        encoding: 'utf8',
+        timeout: 30000
       });
+      
+      const dynamicImports = result.trim() ? result.split('\n').length - 1 : 0;
+      this.log(`🔀 Found ${dynamicImports} dynamic imports`);
+      
+      return { dynamicImports, status: dynamicImports > 0 ? 'good' : 'needs_improvement' };
+    } catch (error) {
+      this.log(`❌ Code splitting check failed: ${error.message}`);
+      return { error: error.message };
     }
   }
 
-  countFiles(dir, extensions) {
-    let count = 0;
-    
-    const scanDirectory = (dir) => {
-      try {
-        const items = fs.readdirSync(dir);
-        
-        for (const item of items) {
-          const fullPath = path.join(dir, item);
-          const stat = fs.statSync(fullPath);
-          
-          if (stat.isDirectory()) {
-            scanDirectory(fullPath);
-          } else if (extensions.some(ext => item.toLowerCase().endsWith(ext))) {
-            count++;
-          }
-        }
-      } catch (error) {
-        // Skip directories we can't read
-      }
-    };
-
-    scanDirectory(dir);
-    return count;
-  }
-
-  generateOptimizations() {
-    this.log('💡 Generating optimization recommendations...', 'INFO');
-    
-    // Bundle size optimizations
-    if (this.metrics.bundleSize > 5 * 1024 * 1024) { // 5MB
-      this.optimizations.push({
-        type: 'bundle-size',
-        description: 'Bundle size is large, consider code splitting and tree shaking',
-        impact: 'high',
-        current: `${(this.metrics.bundleSize / 1024 / 1024).toFixed(2)}MB`
+  async measureBuildTime() {
+    this.log('⏱️ Measuring build time...');
+    try {
+      const startTime = Date.now();
+      execSync('npm run build', {
+        cwd: this.projectRoot,
+        encoding: 'utf8',
+        timeout: 300000
       });
-    }
-    
-    // Build time optimizations
-    if (this.metrics.buildTime > 60000) { // 1 minute
-      this.optimizations.push({
-        type: 'build-time',
-        description: 'Build time is slow, consider optimizing build process',
-        impact: 'medium',
-        current: `${(this.metrics.buildTime / 1000).toFixed(2)}s`
-      });
-    }
-    
-    // Dependency optimizations
-    if (this.metrics.dependencies > 100) {
-      this.optimizations.push({
-        type: 'dependencies',
-        description: 'High number of dependencies, consider removing unused packages',
-        impact: 'medium',
-        current: this.metrics.dependencies
-      });
+      const buildTime = Date.now() - startTime;
+      
+      this.log(`⏱️ Build time: ${buildTime}ms`);
+      
+      return {
+        buildTime,
+        status: buildTime < 60000 ? 'excellent' :
+                buildTime < 120000 ? 'good' :
+                buildTime < 300000 ? 'fair' : 'needs_optimization'
+      };
+    } catch (error) {
+      this.log(`❌ Build time measurement failed: ${error.message}`);
+      return { error: error.message };
     }
   }
 
-  generateReport() {
-    this.ensureDirectories();
+  async generateOptimizationReport() {
+    this.log('📊 Generating optimization report...');
     
     const report = {
       timestamp: new Date().toISOString(),
-      metrics: this.metrics,
-      optimizations: this.optimizations,
-      recommendations: this.generateRecommendations()
+      analysis: {
+        bundleSize: await this.analyzeBundleSize(),
+        images: await this.optimizeImages(),
+        codeSplitting: await this.checkCodeSplitting(),
+        buildTime: await this.measureBuildTime()
+      }
     };
 
-    const reportPath = path.join(this.reportsDir, 'performance-optimizer-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    // Generate recommendations
+    report.recommendations = this.generateRecommendations(report.analysis);
+
+    const reportFile = path.join(this.reportsDir, `optimization-report-${Date.now()}.json`);
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     
-    this.log(`📄 Report saved to: ${reportPath}`, 'SUCCESS');
+    this.log(`📄 Optimization report generated: ${reportFile}`);
+    
     return report;
   }
 
-  generateRecommendations() {
+  generateRecommendations(analysis) {
     const recommendations = [];
-    
-    if (this.optimizations.length === 0) {
-      recommendations.push('Performance looks good! No major optimizations needed.');
-    } else {
-      this.optimizations.forEach(opt => {
-        recommendations.push(`${opt.type}: ${opt.description}`);
+
+    if (analysis.bundleSize && analysis.bundleSize.size > 5 * 1024 * 1024) { // 5MB
+      recommendations.push({
+        type: 'bundle_size',
+        priority: 'high',
+        message: 'Bundle size is large. Consider code splitting and tree shaking.',
+        impact: 'Reduces initial load time'
       });
     }
-    
-    recommendations.push('Consider running Lighthouse audit for detailed performance metrics');
-    recommendations.push('Monitor Core Web Vitals in production');
-    
+
+    if (analysis.codeSplitting && analysis.codeSplitting.dynamicImports === 0) {
+      recommendations.push({
+        type: 'code_splitting',
+        priority: 'medium',
+        message: 'No dynamic imports found. Consider implementing code splitting.',
+        impact: 'Improves initial page load performance'
+      });
+    }
+
+    if (analysis.buildTime && analysis.buildTime.buildTime > 120000) { // 2 minutes
+      recommendations.push({
+        type: 'build_time',
+        priority: 'medium',
+        message: 'Build time is slow. Consider optimizing build process.',
+        impact: 'Faster development and deployment'
+      });
+    }
+
+    if (analysis.images && analysis.images.optimized > 0) {
+      recommendations.push({
+        type: 'image_optimization',
+        priority: 'low',
+        message: `${analysis.images.optimized} images found. Consider optimizing for web.`,
+        impact: 'Reduces page load time'
+      });
+    }
+
     return recommendations;
   }
 
-  printSummary() {
-    this.log('\n📊 Performance Analysis Summary:', 'INFO');
-    this.log('='.repeat(50), 'INFO');
-    this.log(`📦 Bundle Size: ${(this.metrics.bundleSize / 1024 / 1024).toFixed(2)}MB`, 'INFO');
-    this.log(`⏱️ Build Time: ${(this.metrics.buildTime / 1000).toFixed(2)}s`, 'INFO');
-    this.log(`📁 Files: ${this.metrics.fileCount}`, 'INFO');
-    this.log(`📦 Dependencies: ${this.metrics.dependencies}`, 'INFO');
-    this.log(`💡 Optimizations: ${this.optimizations.length}`, 'INFO');
-    
-    if (this.optimizations.length > 0) {
-      this.log('\n🔍 Optimization Recommendations:', 'INFO');
-      this.optimizations.forEach((opt, index) => {
-        this.log(`  ${index + 1}. [${opt.impact.toUpperCase()}] ${opt.description}`, 'INFO');
-      });
-    }
-  }
-
   async run() {
-    this.log('🎯 Starting Performance Optimization Analysis', 'INFO');
-    this.log('='.repeat(60), 'INFO');
-
-    await this.measureBuildTime();
-    this.analyzeBundleSize();
-    this.analyzeDependencies();
-    this.checkImageOptimization();
-    this.checkCodeSplitting();
-    this.generateOptimizations();
-
-    const report = this.generateReport();
-    this.printSummary();
-
-    this.log('🎉 Performance analysis completed!', 'SUCCESS');
-    return report;
+    this.log('⚡ Starting Performance Optimizer...');
+    
+    try {
+      const report = await this.generateOptimizationReport();
+      
+      this.log('🎉 Performance optimization analysis completed!');
+      this.log(`📊 Bundle size: ${this.formatBytes(report.analysis.bundleSize.size || 0)}`);
+      this.log(`🔀 Dynamic imports: ${report.analysis.codeSplitting.dynamicImports || 0}`);
+      this.log(`⏱️ Build time: ${report.analysis.buildTime.buildTime || 0}ms`);
+      this.log(`💡 Recommendations: ${report.recommendations.length}`);
+      
+      return report;
+    } catch (error) {
+      this.log(`💥 Performance optimization failed: ${error.message}`);
+      throw error;
+    }
   }
 }
 
-// Run the optimizer
+// Run the optimizer if this file is executed directly
 if (require.main === module) {
   const optimizer = new PerformanceOptimizer();
-  optimizer.run().catch(console.error);
+  optimizer.run()
+    .then((report) => {
+      console.log('\n🎉 Performance Optimizer completed successfully!');
+      console.log(`📊 Bundle size: ${optimizer.formatBytes(report.analysis.bundleSize.size || 0)}`);
+      console.log(`💡 Recommendations: ${report.recommendations.length}`);
+      process.exit(0);
+    })
+    .catch((error) => {
+      console.error('\n💥 Performance Optimizer failed:', error.message);
+      process.exit(1);
+    });
 }
 
 module.exports = PerformanceOptimizer;
->>>>>>> main

@@ -1,26 +1,7 @@
-<<<<<<< HEAD
 <<<<<<< HEAD:src.pages.disabled/ExpandedServicesShowcase2027.test.tsx
-describe ('ExpandedServicesShowcase2027', () => {}; '; it ('renders without crashing', () => {}; render (<ExpandedServicesShowcase2027 />) ;'; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; '; it ('displays expected content', () => {}; render (<ExpandedServicesShowcase2027 />) ;
+describe ('ExpandedServicesShowcase2027', () => {}';; it ('renders without crashing', () => {}; render (<ExpandedServicesShowcase2027 />) ';; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ';; it ('displays expected content', () => {}; render (<ExpandedServicesShowcase2027 />) ;
 
-describe ('ExpandedServicesShowcase2027', () => {}; '; it ('renders without crashing', () => {}; render (<ExpandedServicesShowcase2027 />) ;'; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; '; it ('displays expected content', () => {}; render (<ExpandedServicesShowcase2027 />) ;''';
-=======
-<<<<<<< HEAD
-ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/ExpandedServicesShowcase2027.test.tsx
-=======
-<<<<<<< HEAD
-:src.pages.disabled/ExpandedServicesShowcase2027.test.tsx;
-<<<<<<< HEAD
-describe: ('ExpandedServicesShowcase2027', () => {}' it ('renders without crashing', () => {} render (<ExpandedServicesShowcase2027 />) '; expect: (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<ExpandedServicesShowcase2027 />) ;';
-describe: ('ExpandedServicesShowcase2027', () => {}' it ('renders without crashing', () => {} render (<ExpandedServicesShowcase2027 />) '; expect: (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<ExpandedServicesShowcase2027 />) ''';
-=======
-describe ('ExpandedServicesShowcase2027', () => {}' it ('renders without crashing', () => {} render (<ExpandedServicesShowcase2027 />) ' expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<ExpandedServicesShowcase2027 />) 
-describe ('ExpandedServicesShowcase2027', () => {}' it ('renders without crashing', () => {} render (<ExpandedServicesShowcase2027 />) ' expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<ExpandedServicesShowcase2027 />) ''
-=======
-:src.pages.disabled/ExpandedServicesShowcase2027.test.tsx
-describe ('ExpandedServicesShowcase2027', () => {}' it ('renders without crashing', () => {} render (<ExpandedServicesShowcase2027 />) ' expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<ExpandedServicesShowcase2027 />) 
+describe ('ExpandedServicesShowcase2027', () => {}';; it ('renders without crashing', () => {}; render (<ExpandedServicesShowcase2027 />) ';; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ';; it ('displays expected content', () => {}; render (<ExpandedServicesShowcase2027 />) ';'';
 
-describe ('ExpandedServicesShowcase2027', () => {}' it ('renders without crashing', () => {} render (<ExpandedServicesShowcase2027 />) ' expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<ExpandedServicesShowcase2027 />) ''
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
+
+

@@ -1,21 +1,9 @@
-<<<<<<< HEAD
 
-import: dynamic from 'next/dynamic';';
+import dynamic from 'next/dynamic';;
 
-const: SecurityDashboard = dynamic(() => import('./SecurityDashboard'), {';
-  loading: () => <p>Loading...</p,>,
+const SecurityDashboard = dynamic(() => import('./SecurityDashboard'), {';
+  loading: () => <p>Loading...</p,>
 })
 
 export: default SecurityDashboard
-=======
-import dynamic from 'next/dynamic';
-const SecurityDashboard = dynamic(() => import('./SecurityDashboard'), {
-  loading: () => <p>Loading...</p>,
-});
-<<<<<<< HEAD
-export default SecurityDashboard
-=======
-export default SecurityDashboard;
-'
->>>>>>> main
->>>>>>> main
+

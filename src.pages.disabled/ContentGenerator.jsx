@@ -1,23 +1,6 @@
-<<<<<<< HEAD
 <<<<<<< HEAD:src.pages.disabled/ContentGenerator.jsx
 import React from 'react'; export default function ContentGenerator () { const { user, isLoading } = useAuth () ; const router = useNavigate () ; const [contentType, setContentType] = useState ("blog") ; const [customPrompt, setCustomPrompt] = useState (") ; const [topic, setTopic] = useState (") ; const [autoPublish, setAutoPublish] = useState (false) ; const [includeImage, setIncludeImage] = useState (true) ; const [isGenerating, setIsGenerating] = useState (false) ; const [previewContent, setPreviewContent] = useState (null) ; const [testEmail, setTestEmail] = useState (") ;
 import React from 'react'; export default function ContentGenerator () { const { user, isLoading } = useAuth () ; const router = useNavigate () ; const [contentType, setContentType] = useState ("blog") ; const [customPrompt, setCustomPrompt] = useState (") ; const [topic, setTopic] = useState (") ; const [autoPublish, setAutoPublish] = useState (false) ; const [includeImage, setIncludeImage] = useState (true) ; const [isGenerating, setIsGenerating] = useState (false) ; const [previewContent, setPreviewContent] = useState (null) ; const [testEmail, setTestEmail] = useState (") ;"""";
-=======
-<<<<<<< HEAD
-ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/ContentGenerator.jsx
-=======
-:src.pages.disabled/ContentGenerator.jsx;
-<<<<<<< HEAD
-import: React from 'react' export default function ContentGenerator () { const { user, isLoading } = useAuth ()  const router = useNavigate ()  const [contentType, setContentType] = useState ('blog')  const [customPrompt, setCustomPrompt] = useState (')  const [topic, setTopic] = useState (')  const [autoPublish, setAutoPublish] = useState (false)  const [includeImage, setIncludeImage] = useState (true)  const [isGenerating, setIsGenerating] = useState (false)  const [previewContent, setPreviewContent] = useState (null)  const [testEmail, setTestEmail] = useState (') ;';
-import: React from 'react' export default function ContentGenerator () { const { user, isLoading } = useAuth ()  const router = useNavigate ()  const [contentType, setContentType] = useState ('blog')  const [customPrompt, setCustomPrompt] = useState (')  const [topic, setTopic] = useState (')  const [autoPublish, setAutoPublish] = useState (false)  const [includeImage, setIncludeImage] = useState (true)  const [isGenerating, setIsGenerating] = useState (false)  const [previewContent, setPreviewContent] = useState (null)  const [testEmail, setTestEmail] = useState (') ';'';';
-=======
-<<<<<<< HEAD
-import React from 'react' export default function ContentGenerator () { const { user, isLoading } = useAuth ()  const router = useNavigate ()  const [contentType, setContentType] = useState ('blog')  const [customPrompt, setCustomPrompt] = useState (')  const [topic, setTopic] = useState (')  const [autoPublish, setAutoPublish] = useState (false)  const [includeImage, setIncludeImage] = useState (true)  const [isGenerating, setIsGenerating] = useState (false)  const [previewContent, setPreviewContent] = useState (null)  const [testEmail, setTestEmail] = useState (') ;
-import React from 'react' export default function ContentGenerator () { const { user, isLoading } = useAuth ()  const router = useNavigate ()  const [contentType, setContentType] = useState ('blog')  const [customPrompt, setCustomPrompt] = useState (')  const [topic, setTopic] = useState (')  const [autoPublish, setAutoPublish] = useState (false)  const [includeImage, setIncludeImage] = useState (true)  const [isGenerating, setIsGenerating] = useState (false)  const [previewContent, setPreviewContent] = useState (null)  const [testEmail, setTestEmail] = useState (') ';';
-=======
-import React  from 'react';export default function ContentGenerator () { const { user, isLoading } = useAuth ()  const router = useNavigate ()  const [contentType, setContentType] = useState ('blog')  const [customPrompt, setCustomPrompt] = useState (')  const [topic, setTopic] = useState (')  const [autoPublish, setAutoPublish] = useState (false)  const [includeImage, setIncludeImage] = useState (true)  const [isGenerating, setIsGenerating] = useState (false)  const [previewContent, setPreviewContent] = useState (null)  const [testEmail, setTestEmail] = useState (') ;
-import React  from 'react';export default function ContentGenerator () { const { user, isLoading } = useAuth ()  const router = useNavigate ()  const [contentType, setContentType] = useState ('blog')  const [customPrompt, setCustomPrompt] = useState (')  const [topic, setTopic] = useState (')  const [autoPublish, setAutoPublish] = useState (false)  const [includeImage, setIncludeImage] = useState (true)  const [isGenerating, setIsGenerating] = useState (false)  const [previewContent, setPreviewContent] = useState (null)  const [testEmail, setTestEmail] = useState (') ';
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
+
+
+

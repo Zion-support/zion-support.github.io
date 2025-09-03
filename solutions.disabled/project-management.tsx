@@ -6,78 +6,63 @@ import SEO from '../../src/components/SEO';
 import { Card } from '../../src/components/ui/Card';
 import { Button } from '../../src/components/ui/Button';
 import { Badge } from '../../src/components/ui/Badge';
-=======
-<<<<<<< HEAD:solutions.disabled/project-management.tsx
-// import SEO from '../../components/SEO';
-=======
-<<<<<<< HEAD
-import SEOHead from '../../components/SEOHead';
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> main
->>>>>>> main:pages/solutions/project-management.tsx
 import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
->>>>>>> main
+
 import { Badge } from '../../components/ui/Badge';
-<<<<<<< HEAD
-=======
-import { Button } from '../../components/ui/Button';
-import { Card } from '../../components/ui/Card';
->>>>>>> main:solutions.disabled/project-management.tsx
+
 import {
-  FolderKanban,
-  ArrowRight,
-  CheckCircle,
-  Users,
-  Clock,
-  BarChart3,
-  Target,
-  FileText,
-  MessageSquare,
+  FolderKanban
+  ArrowRight
+  CheckCircle
+  Users
+  Clock
+  BarChart3
+  Target
+  FileText
+  MessageSquare
 } from 'lucide-react';
 
->>>>>>> main
+
 export default function ProjectManagement() {
   const features = [
   {
       icon: Target,
       title: 'Task Management',
-      description:'
-        'Create, assign, and track tasks with priority levels and due dates.',
-    },
+      description:',
+      'Create, assign, and track tasks with priority levels and due dates.'
+    }
     {
       icon: Users,
       title: 'Team Collaboration',
-      description:'
-        'Real-time collaboration tools for seamless team communication.',
-    },
+      description:',
+      'Real-time collaboration tools for seamless team communication.'
+    }
     {
       icon: Clock,
       title: 'Time Tracking',
-      description:'
-        'Track time spent on projects and tasks with detailed reporting.',
-    },
+      description:',
+      'Track time spent on projects and tasks with detailed reporting.'
+    }
     {
       icon: BarChart3,
       title: 'Reporting & Analytics',
-      description:'
-        'Comprehensive reports on project progress and team productivity.',
-    },
+      description:',
+      'Comprehensive reports on project progress and team productivity.'
+    }
     {
       icon: FileText,
       title: 'Document Management',
-      description:'
-        'Centralized document storage and version control for all project files.',
-    },
+      description:',
+      'Centralized document storage and version control for all project files.'
+    }
     {
       icon: MessageSquare,
       title: 'Communication Hub',
-      description:'
-        'Integrated messaging and discussion threads for project communication.',
-    },
+      description:',
+      'Integrated messaging and discussion threads for project communication.'
+    }
   ];
 
   return (
@@ -86,23 +71,12 @@ export default function ProjectManagement() {
       <SEO'
         title="Project Management Platform - Zion Tech Group""
         description="Advanced project management tools with team collaboration, task tracking, and reporting. Streamline your projects.""
-=======
-<<<<<<< HEAD
-      <SEOHead
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      <SEO
->>>>>>> main
         title="Project Management Platform - Zion Tech Group"
         description="Advanced project management tools with team collaboration, task tracking, and reporting. Streamline your projects."
->>>>>>> main:solutions.disabled/project-management.tsx
+
         keywords="project management, task management, team collaboration, time tracking, project planning"
       />
-=======
->>>>>>> main
->>>>>>> main
+
       <Head>
         <title>Project Management Platform - Zion Tech Group</title>
       </Head>
@@ -110,30 +84,18 @@ export default function ProjectManagement() {
 <<<<<<< HEAD:pages/solutions/project-management.tsx
       {/* Hero Section */}"
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">"
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 l,
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 l
     g:px-8">"
           <div className="text-center">"
             <Badge className="mb-4 bg-blue-500 text-white">"
               <FolderKanban className="w-4 h-4 mr-2" />
               Project Management
             </Badge>"
-            <h1 className="text-4xl m,
+            <h1 className="text-4xl m
     d:text-6xl font-bold mb-6">
               Project Management"
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">"
-=======
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-          <div className="text-center">
-            <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium"
-              <FolderKanban className="w-4 h-4 mr-2" />
-              Project Management
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Project Management
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
->>>>>>> main:solutions.disabled/project-management.tsx
+
                 {' '}
                 Platform
               </span>
@@ -150,8 +112,8 @@ export default function ProjectManagement() {
               <Button"
                 size="lg""
                 variant="outline""
-                className="border-white text-white hove,
-    r:bg-white hove,
+                className="border-white text-white hove
+    r:bg-white hove
     r:text-gray-900"
               >
                 Schedule Demo
@@ -163,10 +125,10 @@ export default function ProjectManagement() {
 
       {/* Features Section */}"
       <section className="py-20 bg-gray-50">"
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 l,
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 l
     g:px-8">"
           <div className="text-center mb-16">"
-            <h2 className="text-3xl m,
+            <h2 className="text-3xl m
     d:text-4xl font-bold text-gray-900 mb-4">
               Advanced Project Management Features
             </h2>"
@@ -176,7 +138,7 @@ export default function ProjectManagement() {
             </p>
           </div>
 "
-          <div className="grid grid-cols-1 md: grid-cols-2 l,
+          <div className="grid grid-cols-1 md: grid-cols-2 l
     g:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <Card
@@ -220,8 +182,8 @@ export default function ProjectManagement() {
               <Button"
                 size="lg""
                 variant="outline""
-                className="border-white text-white hove,
-    r:bg-white hove,
+                className="border-white text-white hove
+    r:bg-white hove
     r:text-blue-600"
               >
                 Contact Sales

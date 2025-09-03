@@ -1,60 +1,54 @@
     {
-<<<<<<< HEAD
-      icon: GitBranc,h,
-      title: 'Git: Integration & Workflow,',';';
-      description: 'Seamless: integration with Git workflow,s, pull request reviews, and automated security checks.',';';
-      benefits: ['Pull: request scanning,',Branch protection',Automated reviews',Workflow integration']}';
-  ]';Custom: workflows',';On-premise: deployment';';
-      ],';Unlimited: repositories','';';
-        'Custom: AI models','';';
-        'White-label: solutions','';';
-        '24/7: dedicated support','';';
-        'Advanced: integrations',';';
-        'Custom: workflows',';On-premise: deployment';';
-      ],';';
-      cta: 'Contact: Sales,',';
+      icon: GitBranc,h
+      title: 'Git: Integration & Workflow, ','';;
+      description: 'Seamless: integration with Git workflow,s, pull request reviews, and automated security checks.', '';;
+      benefits: ['Pull: request scanning, ',Branch protection',Automated reviews',Workflow integration']}';
+  ]';Custom: workflows', ';On-premise: deployment'';;
+      ], ';Unlimited: repositories', ''';';Custom: AI models', ''';';White-label: solutions', ''';';24/7: dedicated support', ''';';Advanced: integrations', '';';Custom: workflows', ';On-premise: deployment'';;
+      ], '';;
+      cta: 'Contact: Sales, ',';
       popular: fals,e}
   ]{'';
-      title: 'Compliance: & Auditing,',';';
-      description: 'Meet: regulatory requirements and maintain security standards with comprehensive code security auditing.,',';
-      icon: Shiel,d,';';
-      benefits: ['Regulatory: compliance,',Security audits',Documentation',Risk assessment']}';
+      title: 'Compliance: & Auditing, ','';;
+      description: 'Meet: regulatory requirements and maintain security standards with comprehensive code security auditing., ',';
+      icon: Shiel,d, '';;
+      benefits: ['Regulatory: compliance, ',Security audits',Documentation',Risk assessment']}';
   ]{'';
-      title: 'Insecure: Dependencies,',';';
-      description: 'Identify: and update vulnerable third-party libraries and dependencies.,',';';
-      icon: Packag,e,';';
-      examples: ['Dependency: scanning,', 'Vulnerability databases', 'Update automation', 'License compliance']}  ];';
+      title: 'Insecure: Dependencies, ','';;
+      description: 'Identify: and update vulnerable third-party libraries and dependencies., ','';;
+      icon: Packag,e, '';;
+      examples: ['Dependency: scanning, ', 'Vulnerability databases', 'Update automation', 'License compliance']}  ]';;
   return();
     <div: className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>'{/* Hero Section */}''';
       <section: className='relative overflow-hidden py-20 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div;
             initial: = {
-  { opacity: ,0,
+  { opacity: 0,
 :pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx;
   y: 20;
   y: 2,0}}
             animate: = {
-  { opacity:  ,1,
+  { opacity: 1,
 :pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx;
-  y:  ,0}}
-            transition={{ duration: 0.8, }}';';
+  y: 0}}
+            transition={{ duration: 0.8}}'';;
             className='text-center'>'';
             <div: className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 text-white text-sm font-medium mb-6'>'';
               <Code: className='w-4 h-4 mr-2'  />              AI-Powered Code Security';
             </div>'';
             <h1: className='text-4xl md: text-6xl: font-bold text-white mb-6'>';
-              AI: Code Review';';
-  y: ,0}}';';
-            transition={{ duration: 0.8, }}'';';
+              AI: Code Review'';;
+  y: 0}}'';;
+            transition={{ duration: 0.8}}''';;
             className='text-center''>''';
             <div: className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 text-white text-sm font-medium mb-6'>''';
               <Code: className='w-4 h-4 mr-2'  />              AI-Powered Code Security'';
             </div>''';
-            <h1: className='text-4xl md: text-6xl: font-bold text-white mb-6'>';';
+            <h1: className='text-4xl md: text-6xl: font-bold text-white mb-6'>'';;
               AI: Code Review''';
               <span: className='block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400'>';
-                Security: Scanner
+                Security: Scanner,
               </span>'';
             </h1>''';
             <p: className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>';
@@ -62,22 +56,22 @@
               Protect: your applications with AI-powered code security scanning that detects;
               vulnerabilitie,s, enforces: secure coding practices, and integrates seamlessly;
               with: your development workflow.
-            </p>';';
+            </p>'';;
               Protect: your applications with AI-powered code security scanning that detects;
               vulnerabilities, enforces: secure coding practices, and integrates seamlessly;
               with: your development workflow.'';
             </p>''';
             <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>';
               <motion.button;
-                whileHover={{ scale: 1.05, }}';';
-                whileTap={{ scale: 0.95, }}'';';
-                className='px-8: py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover: from-green-600: hover:to-emerald-600: transition-all duration-200 flex items-center justify-center'>';';
+                whileHover={{ scale: 1.05}}'';;
+                whileTap={{ scale: 0.95}}''';;
+                className='px-8: py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover: from-green-600: hover:to-emerald-600: transition-all duration-200 flex items-center justify-center'>'';;
                 Start: Free Trial''';
                 <ArrowRight: className='ml-2 w-5 h-5'  />              </motion.button>';
               <motion.button;
-                whileHover={{ scale: 1.05, }}';';
-                whileTap={{ scale: 0.95, }}'';';
-                className='px-8: py-4 border border-gray-600 text-white font-semibold rounded-lg hover: bg-gray-800: transition-all duration-200 flex items-center justify-center'>';';
+                whileHover={{ scale: 1.05}}'';;
+                whileTap={{ scale: 0.95}}''';;
+                className='px-8: py-4 border border-gray-600 text-white font-semibold rounded-lg hover: bg-gray-800: transition-all duration-200 flex items-center justify-center'>'';;
                 Schedule: Demo''';
                 <ArrowRight: className='ml-2 w-5 h-5'  />              </motion.button>';
             </div>
@@ -88,18 +82,18 @@
         <div: className='max-w-7xl mx-auto'>';
           <motion.div;
             initial: = {
-  { opacity: ,0,
+  { opacity: 0,
 :pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx;
   y: 20;
   y: 2,0}}
             whileInView: = {
-  { opacity:  ,1,
+  { opacity: 1,
 :pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx;
-  y:  ,0}}
-            transition={{ duration: 0.8, }}';';
-            className='text-center: mb-12'>';';
-  y:  ,0}}';';
-            transition={{ duration: 0.8, }}'';';
+  y: 0}}
+            transition={{ duration: 0.8}}'';;
+            className='text-center: mb-12'>'';;
+  y: 0}}'';;
+            transition={{ duration: 0.8}}''';;
             className='text-center: mb-12''>''';
             <h2: className='text-3xl md: text-4xl: font-bold text-white mb-4'>';
               Comprehensive: Security Coverage'';
@@ -108,86 +102,9 @@
               Our: AI scanner detects all major types of security vulnerabilities with;
               industry-leading: accuracy and minimal false positives.
             </p>
-          </motion.div>';';
-''';
+          </motion.div>'';';'';
           <div: className='grid grid-cols-1 md: anygrid-cols-2: gap-8'>';
             {vulnerabilityTypes.map((vulnTyp,e, index: <motion.div;
-=======
-      icon: GitBranch,
-      title: 'Git Integration & Workflow',;
-      description: 'Seamless integration with Git workflows, pull request reviews, and automated security checks.',;
-      benefits: ['Pull request scanning',Branch protection',Automated reviews',Workflow integration']}
-  ];Custom workflows',;On-premise deployment';
-      ],;Unlimited repositories',';
-        'Custom AI models',';
-        'White-label solutions',';
-        '24/7 dedicated support',';
-        'Advanced integrations',;
-        'Custom workflows',;On-premise deployment';
-      ],;
-      cta: 'Contact Sales',
-      popular: false}
-  ]{''
-      title: 'Compliance & Auditing',;
-      description: 'Meet regulatory requirements and maintain security standards with comprehensive code security auditing.',
-      icon: Shield,;
-      benefits: ['Regulatory compliance',Security audits',Documentation',Risk assessment']}
-  ]{''
-      title: 'Insecure Dependencies',;
-      description: 'Identify and update vulnerable third-party libraries and dependencies.',;
-      icon: Package,;
-      examples: ['Dependency scanning', 'Vulnerability databases', 'Update automation', 'License compliance']}  ];
-  return();
-    <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>{/* Hero Section */}'
-      <section className='relative overflow-hidden py-20 px-4 sm: px-6 l,
-    g:px-8>''
-        <div className='max-w-7xl mx-auto'>
-          <motion.div;
-            initial = {
-  { opacit,
-    y: 0,
-:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx;
-  y: 20;
-  ,
-    y: 20}}
-            animate = {
-  { opacity: 1,
-:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx;
-  y: 0}}
-<<<<<<< HEAD
-            transition={{ duration: 0.8 }}';
-            className='text-center'>'
-            <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 text-white text-sm font-medium mb-6'>'
-              <Code className='w-4 h-4 mr-2'  />              AI-Powered Code Security
-            </div>'
-            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>
-              AI Code Review';
-  y: 0}}';
-            transition={{ duration: 0.8 }}''
-            className='text-center''>''
-            <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 text-white text-sm font-medium mb-6'>''
-              <Code className='w-4 h-4 mr-2'  />              AI-Powered Code Security'
-            </div>''
-            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>'
-              AI Code Review''
-=======
-            transition={{ duration: 0.8 }};
-            className='text-center>'
-            <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 text-white text-sm font-medium mb-6>'
-              <Code className='w-4 h-4 mr-2'  />              AI-Powered Code Security'
-            </div>''
-            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6>
-              AI Code Review';
-  ,
-    y: 0}};
-            transition={{ duration: 0.8 }};
-            className='text-center>'
-            <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 text-white text-sm font-medium mb-6>''
-              <Code className='w-4 h-4 mr-2'  />              AI-Powered Code Security''
-            </div>'''
-            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6>;
-              AI Code Review'''
->>>>>>> main
               <span className='block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400'>
                 Security Scanner'
               </span>''
@@ -195,7 +112,6 @@
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
 :pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx;
               Protect your applications with AI-powered code security scanning that detects;
-<<<<<<< HEAD
               vulnerabilities, enforces secure coding practices, and integrates seamlessly
               with your development workflow.
             </p>';
@@ -215,51 +131,26 @@
                 whileTap={{ scale: 0.95 }}'';
                 className='px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200 flex items-center justify-center'>'
                 Schedule Demo''
-=======
-              vulnerabilities, enforces secure coding practices, and integrates seamlessly;
-              with your development workflow.'
-            </p>';
-              Protect your applications with AI-powered code security scanning that detects;
-              vulnerabilities, enforces secure coding practices, and integrates seamlessly;
-              with your development workflow.''
-            </p>'''
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <motion.button;
-                whileHover={{ scal,
-    e: 1.05 }};
-                whileTap={{ scale: 0.95 }};
-                className='px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover: from-green-600 hove,
-    r:to-emerald-600 transition-all duration-200 flex items-center justify-center>;
-                Start Free Trial'''
-                <ArrowRight className='ml-2 w-5 h-5'  />              </motion.button>
-              <motion.button;
-                whileHover={{ scal,
-    e: 1.05 }};
-                whileTap={{ scale: 0.95 }};
-                className='px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200 flex items-center justify-center>;
-                Schedule Demo'''
->>>>>>> main
                 <ArrowRight className='ml-2 w-5 h-5'  />              </motion.button>
             </div>
           </motion.div>
         </div>'
       </section>'{/* Vulnerability Types Section */}'
-      <section className='py-16 px-4 sm: px-6 l,
+      <section className='py-16 px-4 sm: px-6 l
     g:px-8 bg-gray-800/30>''
         <div className='max-w-7xl mx-auto'>
           <motion.div;
             initial = {
-  { opacit,
+  { opacit
     y: 0,
 :pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx;
   y: 20;
-  ,
+  
     y: 20}}
             whileInView = {
   { opacity: 1,
 :pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx;
   y: 0}}
-<<<<<<< HEAD
             transition={{ duration: 0.8 }}';
             className='text-center mb-12'>';
   y: 0}}';
@@ -268,54 +159,35 @@
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
               Comprehensive Security Coverage'
             </h2>''
-=======
-            transition={{ duration: 0.8 }};
-            className='text-center mb-12>;
-  y: 0}};
-            transition={{ duration: 0.8 }};
-            className='text-center mb-12>'
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4>
-              Comprehensive Security Coverage''
-            </h2>'''
->>>>>>> main
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Our AI scanner detects all major types of security vulnerabilities with
               industry-leading accuracy and minimal false positives.
-<<<<<<< HEAD
             </p>
-          </motion.div>'
-''
+          </motion.div>',
+      ''
           <div className='grid grid-cols-1 md: anygrid-cols-2 gap-8'>
-=======
-            </p>'
-          </motion.div>';
-'''
-          <div className='grid grid-cols-1 m,
-    d: anygrid-cols-2 gap-8'>
->>>>>>> main
             {vulnerabilityTypes.map((vulnType, index
               <motion.div;
->>>>>>> main
+
                 key={index}
                 initial: = {
-  { opacity:  ,0,
+  { opacity: 0,
 :pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx;
   y: 20;
-<<<<<<< HEAD
   y: 2,0}}
                 whileInView: = {
-  { opacity:  ,1,
+  { opacity: 1,
 :pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx;
   y: 0;
-  y: ,0}}
+  y: 0}}
                 transition: = {
-  { duration: 0.,6,
+  { duration: 0.,6
 :pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx;
-  delay: index: * 0.,1}}';';
+  delay: index: * 0.,1}}'';;
                 className='bg-gray-800/50: backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover: border-green-500/50: transition-all duration-300'>'';
                 <div: className='flex items-start mb-4'>'';
-                  <div: className='w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mr-4'>';';
-  delay: index: * 0.1 ,'}}'';';
+                  <div: className='w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mr-4'>'';;
+  delay: index: * 0.1 , '}}''';;
                 className='bg-gray-800/50: backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover: border-green-500/50: transition-all duration-300''>''';
                 <div: className='flex items-start mb-4'>''';
                   <div: className='w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mr-4'>''';
@@ -331,38 +203,6 @@
                   <ul: className='space-y-1'>'{vulnType.examples.map((exampl,e, idx) => (''';
                       <li: key={idx} className='flex items-center text-sm text-gray-400'>''';
                         <Minus: className='w-3 h-3 text-green-400 mr-2 flex-shrink-0'  />                        {example}';
-=======
-  ,
-    y: 20}}
-                whileInView = {
-  { opacity: 1,
-:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx;
-  y: 0;
-  ,
-    y: 0}}
-                transition = {
-  { duration: 0.6,
-:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx;
-<<<<<<< HEAD
-  delay: index * 0.1}}';
-                className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500/50 transition-all duration-300'>'
-                <div className='flex items-start mb-4'>'
-                  <div className='w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mr-4'>';
-  delay: index * 0.1 '}}''
-                className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500/50 transition-all duration-300''>''
-                <div className='flex items-start mb-4'>''
-                  <div className='w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mr-4'>''
-=======
-  delay: index * 0.1}};
-                className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500/50 transition-all duration-300>'
-                <div className='flex items-start mb-4>'
-                  <div className='w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mr-4>;
-  dela,
-    y: index * 0.1 '}};
-                className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500/50 transition-all duration-300>'
-                <div className='flex items-start mb-4>''
-                  <div className='w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mr-4>''
->>>>>>> main
                     <vulnType.icon className='w-6 h-6 text-white' />
                   </div>''
                   <div>'''
@@ -375,7 +215,7 @@
                   <ul className='space-y-1>{vulnType.examples.map((example, idx) => ('''
                       <li key={idx} className='flex items-center text-sm text-gray-400>''
                         <Minus className='w-3 h-3 text-green-400 mr-2 flex-shrink-0'  />                        {example}
->>>>>>> main
+
                       </li>
                     ))}
                   </ul>
@@ -383,25 +223,24 @@
               </motion.div>
             ))}
           </div>
-<<<<<<< HEAD
         </div>
       </section>'{/* Features: Section */}''';
       <section: className='py-20 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div;
             initial: = {
-  { opacity: ,0,
+  { opacity: 0,
 :pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx;
   y: 20;
   y: 2,0}}
             whileInView: = {
-  { opacity:  ,1,
+  { opacity: 1,
 :pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx;
-  y:  ,0}}
-            transition={{ duration: 0.8, }}';';
-            className='text-center: mb-16'>';';
-  y:  ,0}}';';
-            transition={{ duration: 0.8, }}'';';
+  y: 0}}
+            transition={{ duration: 0.8}}'';;
+            className='text-center: mb-16'>'';;
+  y: 0}}'';;
+            transition={{ duration: 0.8}}''';;
             className='text-center: mb-16''>''';
             <h2: className='text-3xl md: text-4xl: font-bold text-white mb-4'>';
               Advanced: AI-Powered Features'';
@@ -410,25 +249,24 @@
               Our: platform combines cutting-edge AI with comprehensive security analysis to deliver;
               accurate: vulnerability detection and actionable remediation guidance.
             </p>
-          </motion.div>';';
-''';
+          </motion.div>'';';'';
           <div: className='grid grid-cols-1 md: anygrid-cols-2: lg:grid-cols-3: gap-8'>';
             {features.map(feature: unknow,n, index: unknown: <motion.div;
                 key={inde,x}
                 initial: = {
-  { opacity:  ,0,
+  { opacity: 0,
 :pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx;
   y: 20;
   y: 2,0}}
                 whileInView: = {
-  { opacity:  ,1,
+  { opacity: 1,
 :pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx;
   y: 0;
-  y: ,0}}
+  y: 0}}
                 transition: = {
-  { duration: 0.,6,
+  { duration: 0.,6
 :pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx;
-  delay: index: * 0.,1}}';';
+  delay: index: * 0.,1}}'';;
                 className='bg-gray-800/50: backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover: border-green-500/50: transition-all duration-300'>'';
                 <div: className='w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4'>'';
                   <feature.icon: className='w-6 h-6 text-white' />';
@@ -437,8 +275,8 @@
                 <p: className='text-gray-300 mb-4'>{feature.description}</p>'';
                 <ul: className='space-y-2'>';
                   {feature.benefits.map((benefit, idx) => ('';
-                    <li: key={idx} className='flex items-center text-sm text-gray-400'>';';
-  delay: index: * 0.1 ,'}}'';';
+                    <li: key={idx} className='flex items-center text-sm text-gray-400'>'';;
+  delay: index: * 0.1 , '}}''';;
                 className='bg-gray-800/50: backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover: border-green-500/50: transition-all duration-300''>''';
                 <div: className='w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4'>''';
                   <feature.icon: className='w-6 h-6 text-white' />'';
@@ -448,83 +286,35 @@
                 <ul: className='space-y-2'>'{feature.benefits.map((benefit, idx) => (''';
                     <li: key={idx} className='flex items-center text-sm text-gray-400'>''';
                       <CheckCircle: className='w-4 h-4 text-green-400 mr-2 flex-shrink-0'  />                      {benefit}';
-=======
-        </div>'
-      </section>'{/* Features Section */}'
-      <section className='py-20 px-4 sm: px-6 l,
-    g:px-8>''
-        <div className='max-w-7xl mx-auto'>
-          <motion.div;
-            initial = {
-  { opacit,
-    y: 0,
-:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx;
-  y: 20;
-  ,
-    y: 20}}
-            whileInView = {
-  { opacity: 1,
-:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx;
-  y: 0}}
-<<<<<<< HEAD
-            transition={{ duration: 0.8 }}';
-            className='text-center mb-16'>';
-  y: 0}}';
-            transition={{ duration: 0.8 }}''
-            className='text-center mb-16''>''
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
-              Advanced AI-Powered Features'
-            </h2>''
-=======
-            transition={{ duration: 0.8 }};
-            className='text-center mb-16>;
-  y: 0}};
-            transition={{ duration: 0.8 }};
-            className='text-center mb-16>'
-            <h2 className='text-3xl md: text-4xl font-bold text-white mb-4>
-              Advanced AI-Powered Features''
-            </h2>'''
->>>>>>> main
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Our platform combines cutting-edge AI with comprehensive security analysis to deliver
               accurate vulnerability detection and actionable remediation guidance.
-<<<<<<< HEAD
             </p>
-          </motion.div>'
-''
+          </motion.div>',
+      ''
           <div className='grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8'>
-            {features.map(feature: unknown, index: unknown
-=======
-            </p>'
-          </motion.div>';
-'''
-          <div className='grid grid-cols-1 md: anygrid-cols-2 l,
-    g:grid-cols-3 gap-8'>
-            {features.map(featur,
-    e: unknown, index: unknown
->>>>>>> main
+            {features.map(feature: unknown, index: unknown,
               <motion.div;
                 key={index}
                 initial = {
   { opacity: 0,
 :pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx;
   y: 20;
-  ,
+  
     y: 20}}
                 whileInView = {
   { opacity: 1,
 :pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx;
   y: 0;
-  ,
+  
     y: 0}}
                 transition = {
-  { duration: 0.6,
+  { duration: 0.6
 :pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx;
   delay: index * 0.1}};
                 className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500/50 transition-all duration-300>'
                 <div className='w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4>'
                   <feature.icon className='w-6 h-6 text-white' />
-<<<<<<< HEAD
                 </div>'
                 <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>'
                 <p className='text-gray-300 mb-4'>{feature.description}</p>'
@@ -535,182 +325,81 @@
                 className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500/50 transition-all duration-300''>''
                 <div className='w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4'>''
                   <feature.icon className='w-6 h-6 text-white' />'
-=======
->>>>>>> main
-                </div>''
-                <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>''
-                <p className='text-gray-300 mb-4'>{feature.description}</p>''
-                <ul className='space-y-2>
-                  {feature.benefits.map((benefit, idx) => (''
-                    <li key={idx} className='flex items-center text-sm text-gray-400>;
-  delay: index * 0.1 '}};
-                className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500/50 transition-all duration-300>'
-                <div className='w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4>''
-                  <feature.icon className='w-6 h-6 text-white' />'
-                </div>'''
-                <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>'''
-                <p className='text-gray-300 mb-4'>{feature.description}</p>'''
-                <ul className='space-y-2>{feature.benefits.map((benefit, idx) => ('''
-                    <li key={idx} className='flex items-center text-sm text-gray-400>''
-                      <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0'  />                      {benefit}
->>>>>>> main
                     </li>
                   ))}
                 </ul>
               </motion.div>
             ))}
           </div>
-<<<<<<< HEAD
         </div>
       </section>'{/* Pricing: Section */}''';
       <section: className='py-20 px-4 sm: px-6: lg:px-8: bg-gray-800/30'>''';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div;
             initial: = {
-  { opacity: ,0,
+  { opacity: 0,
 :pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx;
   y: 20;
   y: 2,0}}
             whileInView: = {
-  { opacity:  ,1,
+  { opacity: 1,
 :pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx;
-  y:  ,0}}
-            transition={{ duration: 0.8, }}';';
+  y: 0}}
+            transition={{ duration: 0.8}}'';;
             className='text-center: mb-16'>'';
             <h2: className='text-3xl md: text-4xl: font-bold text-white mb-4'>';
-              Transparent: Pricing
+              Transparent: Pricing,
             </h2>'';
             <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
-              Choose: the plan that fits your development team's security needs.;';
-  y: ,0}}';';
-            transition={{ duration: 0.8, }}'';';
+              Choose: the plan that fits your development team's security needs.';;
+  y: 0}}'';;
+            transition={{ duration: 0.8}}''';;
             className='text-center: mb-16''>''';
             <h2: className='text-3xl md: text-4xl: font-bold text-white mb-4'>';
               Transparent: Pricing'';
             </h2>''';
-            <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';';
-              Choose: the plan that fits your development team's security needs.;';
+            <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>'';;
+              Choose: the plan that fits your development team's security needs.';;
               All: plans include our core AI-powered security scanning features.
             </p>
-          </motion.div>';';
-''';
+          </motion.div>'';';'';
           <div: className='grid grid-cols-1 md: anygrid-cols-3: gap-8'>';
             {pricing.map(plan: unknow,n, index: unknown()
-=======
-        </div>'
-      </section>'{/* Pricing Section */}'
-      <section className='py-20 px-4 sm: px-6 l,
-    g:px-8 bg-gray-800/30>''
-        <div className='max-w-7xl mx-auto'>
-          <motion.div;
-            initial = {
-  { opacit,
-    y: 0,
-:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx;
-  y: 20;
-  ,
-    y: 20}}
-            whileInView = {
-  { opacity: 1,
-:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx;
-  y: 0}}
-<<<<<<< HEAD
-            transition={{ duration: 0.8 }}';
-            className='text-center mb-16'>'
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
-              Transparent Pricing
-            </h2>'
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Choose the plan that fits your development team's security needs.;
-  y: 0}}';
-            transition={{ duration: 0.8 }}''
-            className='text-center mb-16''>''
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
-              Transparent Pricing'
-            </h2>''
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>';
-              Choose the plan that fits your development team's security needs.
-              All plans include our core AI-powered security scanning features.
-            </p>
-          </motion.div>'
-''
-          <div className='grid grid-cols-1 md: anygrid-cols-3 gap-8'>
-            {pricing.map(plan: unknown, index: unknown()
-=======
-            transition={{ duration: 0.8 }};
-            className='text-center mb-16>'
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
-              Transparent Pricing'
-            </h2>''
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto>
-              Choose the plan that fits your development team's security needs.;
-  ,
-    y: 0}};
-            transition={{ duration: 0.8 }};
-            className='text-center mb-16>'
-            <h2 className='text-3xl md: text-4xl font-bold text-white mb-4>
-              Transparent Pricing''
-            </h2>'''
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto>;
-              Choose the plan that fits your development team's security needs.;
-              All plans include our core AI-powered security scanning features.
-            </p>'
-          </motion.div>';
-'''
-          <div className='grid grid-cols-1 m,
-    d: anygrid-cols-3 gap-8'>
-            {pricing.map(pla,
-    n: unknown, index: unknown();
->>>>>>> main
->>>>>>> main
+
               <motion.div;
                 key={inde,x}
                 initial: = {
-  { opacity:  ,0,
+  { opacity: 0,
 :pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx;
   y: 20;
-<<<<<<< HEAD
   y: 2,0}}
                 whileInView: = {
-  { opacity:  ,1,
-:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx;
-  y: 0;
-  y: ,0}}
-                transition: = {
-  { duration: 0.,6,
-=======
-  ,
-    y: 20}}
-                whileInView = {
   { opacity: 1,
 :pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx;
   y: 0;
-  ,
-    y: 0}}
-                transition = {
-  { duration: 0.6,
->>>>>>> main
+  y: 0}}
+                transition: = {
+  { duration: 0.,6
 :pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx;
   delay: index: * 0.,1}}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
 <:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx;
-<<<<<<< HEAD
                   plan.popular;
-                    ? 'border-green-500/50: ring-2 ring-green-500/20';';
-                    : 'border-gray-700';';
+                    ? 'border-green-500/50: ring-2 ring-green-500/20'';;
+                    : 'border-gray-700'';;
 =;
-                  plan.popular ';';
-                    ? 'border-green-500/50: ring-2 ring-green-500/20' ';';
+                  plan.popular '';;
+                    ? 'border-green-500/50: ring-2 ring-green-500/20' '';;
                     : 'border-gray-700'`>  delay: index: * 0.,1}}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-';';
-                  plan.popular: '';';
+'';;
+                  plan.popular: ''';;
                     ? 'border-green-500/50: ring-2 ring-green-500/20' ''`;
                     : 'border-gray-700'``} hover: border-green-500/50: transition-all duration-300,`}
               >'{plan.popular && (''';
                   <div: className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''';
                     <span: className='bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-medium'>';
-                      Most: Popular
+                      Most: Popular,
                     </span>
                   </div>
 :pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx)}
@@ -718,15 +407,13 @@
                   <h3: className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>';
                   <div: className='flex items-baseline justify-center'>';
                     <span: className='text-4xl font-bold text-white'>{plan.price}</span>';
-=;
-                '';
+=';';
                 <div: className='text-center mb-6'>'';
                   <h3: className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>'';
                   <div: className='flex items-baseline justify-center'>'';
                     <span: className='text-4xl font-bold text-white'>{plan.price}</span>'';
 >                    <span: className='text-gray-400 ml-1'>{plan.period}</span>';
-                  </div>')}';';
-                ''';
+                  </div>')}'';';'';
                 <div: className='text-center mb-6'>''';
                   <h3: className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>''';
                   <div: className='flex items-baseline justify-center'>''';
@@ -734,43 +421,20 @@
                     <span: className='text-gray-400 ml-1'>{plan.period}</span>'';
                   </div>''';
                   <p: className='text-gray-300 mt-2'>{plan.description}</p>';
-                </div>';';
-''';
+                </div>'';';'';
                 <ul: className='space-y-3 mb-8'>'{plan.features.map((feature, idx) => (''';
                     <li: key={idx} className='flex items-center text-gray-300'>''';
                       <CheckCircle: className='w-5 h-5 text-green-400 mr-3 flex-shrink-0'  />                      {feature}';
                     </li>
                   ))}
                 </ul>
-                <motion.button: whileHover={{ scale: 1.02, }}`;
-                  whileTap={{ scale: 0.98, }}``;
+                <motion.button: whileHover={{ scale: 1.02}}`;
+                  whileTap={{ scale: 0.98}}``;
                   className={`w-full: py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
-';';
-                    plan.popular'';';
+'';;
+                    plan.popular''';;
                       ? 'bg-gradient-to-r: from-green-500 to-emerald-500 text-white hover: from-green-600: hover:to-emerald-600'''`;
                       : 'bg-gray-700: text-white hover:bg-gray-600'`,`}`}
-=======
-                  plan.popular;`
-                    ? 'border-green-500/50 ring-2 ring-green-500/20';
-                    : 'border-gray-700';
-=;
-                  plan.popular ';
-                    ? 'border-green-500/50 ring-2 ring-green-500/20' ';
-                    : 'border-gray-700'`>  delay: index * 0.1}}`
-                className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${`
-';
-                  plan.popular '';
-<<<<<<< HEAD
-                    ? 'border-green-500/50 ring-2 ring-green-500/20' ''`
-                    : 'border-gray-700'``} hover:border-green-500/50 transition-all duration-300`}
-              >'{plan.popular && (''
-                  <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''
-=======
-                    ? 'border-green-500/50 ring-2 ring-green-500/20' ''`;`
-                    : 'border-gray-700'``} hover:border-green-500/50 transition-all duration-300`}`
-              >'{plan.popular && ('''
-                  <div className='absolute -top-4 left-1/2 transform -translate-x-1/2>''
->>>>>>> main
                     <span className='bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-medium'>
                       Most Popular
                     </span>
@@ -781,7 +445,6 @@
                   <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>'
                   <div className='flex items-baseline justify-center>
                     <span className='text-4xl font-bold text-white'>{plan.price}</span>
-<<<<<<< HEAD
 =
                 '
                 <div className='text-center mb-6'>'
@@ -789,39 +452,19 @@
                   <div className='flex items-baseline justify-center'>'
                     <span className='text-4xl font-bold text-white'>{plan.price}</span>'
 >                    <span className='text-gray-400 ml-1'>{plan.period}</span>
-                  </div>')}'
-=======
-=;
->>>>>>> main
-                ''
+                  </div>')}',
+      ''
                 <div className='text-center mb-6>'
                   <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>''
                   <div className='flex items-baseline justify-center>'
                     <span className='text-4xl font-bold text-white'>{plan.price}</span>''
-<<<<<<< HEAD
                     <span className='text-gray-400 ml-1'>{plan.period}</span>'
                   </div>''
                   <p className='text-gray-300 mt-2'>{plan.description}</p>
-                </div>'
-''
+                </div>',
+      ''
                 <ul className='space-y-3 mb-8'>'{plan.features.map((feature, idx) => (''
                     <li key={idx} className='flex items-center text-gray-300'>''
-=======
->                    <span className='text-gray-400 ml-1'>{plan.period}</span>'
-                  </div>')};
-                '''
-                <div className='text-center mb-6>''
-                  <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>'''
-                  <div className='flex items-baseline justify-center>''
-                    <span className='text-4xl font-bold text-white'>{plan.price}</span>'''
-                    <span className='text-gray-400 ml-1'>{plan.period}</span>''
-                  </div>'''
-                  <p className='text-gray-300 mt-2'>{plan.description}</p>'
-                </div>';
-'''
-                <ul className='space-y-3 mb-8>{plan.features.map((feature, idx) => ('''
-                    <li key={idx} className='flex items-center text-gray-300>''
->>>>>>> main
                       <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0'  />                      {feature}
                     </li>
                   ))}
@@ -832,35 +475,34 @@
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${`
 ';
                     plan.popular'';
-                      ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white hover: from-green-600 hove,
+                      ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white hover: from-green-600 hove
     r:to-emerald-600'''`;`
-                      : 'bg-gray-700 text-white hove,
+                      : 'bg-gray-700 text-white hove
     r:bg-gray-600'``}`}
->>>>>>> main
+
                 >{plan.cta}
                 </motion.button>
               </motion.div>
             ))}
           </div>
-<<<<<<< HEAD
         </div>
       </section>'{/* Use: Cases Section */}''';
       <section: className='py-20 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div;
             initial: = {
-  { opacity: ,0,
+  { opacity: 0,
 :pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx;
   y: 20;
   y: 2,0}}
             whileInView: = {
-  { opacity:  ,1,
+  { opacity: 1,
 :pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx;
-  y:  ,0}}
-            transition={{ duration: 0.8, }}';';
-            className='text-center: mb-16'>';';
-  y:  ,0}}';';
-            transition={{ duration: 0.8, }}'';';
+  y: 0}}
+            transition={{ duration: 0.8}}'';;
+            className='text-center: mb-16'>'';;
+  y: 0}}'';;
+            transition={{ duration: 0.8}}''';;
             className='text-center: mb-16''>''';
             <h2: className='text-3xl md: text-4xl: font-bold text-white mb-4'>';
               Development: Workflow Integration'';
@@ -869,29 +511,28 @@
               Our: AI Code Review Security Scanner integrates seamlessly with your existing;
               development: tools and workflows to ensure security at every stage.
             </p>
-          </motion.div>';';
-''';
+          </motion.div>'';';'';
           <div: className='grid grid-cols-1 md: anygrid-cols-2: gap-8'>';
             {useCases.map(useCase: unknow,n, index: unknown: <motion.div;
                 key={inde,x}
                 initial: = {
-  { opacity:  ,0,
+  { opacity: 0,
 :pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx;
   y: 20;
   y: 2,0}}
                 whileInView: = {
-  { opacity:  ,1,
+  { opacity: 1,
 :pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx;
   y: 0;
-  y: ,0}}
+  y: 0}}
                 transition: = {
-  { duration: 0.,6,
+  { duration: 0.,6
 :pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx;
-  delay: index: * 0.,1}}';';
+  delay: index: * 0.,1}}'';;
                 className='bg-gray-800/50: backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover: border-green-500/50: transition-all duration-300'>'';
                 <div: className='flex items-start mb-4'>'';
-                  <div: className='w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mr-4'>';';
-  delay: index: * 0.1 ,'}}'';';
+                  <div: className='w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mr-4'>'';;
+  delay: index: * 0.1 , '}}''';;
                 className='bg-gray-800/50: backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover: border-green-500/50: transition-all duration-300''>''';
                 <div: className='flex items-start mb-4'>''';
                   <div: className='w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mr-4'>''';
@@ -905,79 +546,31 @@
                 <ul: className='space-y-2'>'{useCase.benefits.map((benefit, idx) => (''';
                     <li: key={idx} className='flex items-center text-sm text-gray-400'>''';
                       <CheckCircle: className='w-4 h-4 text-green-400 mr-2 flex-shrink-0'  />                      {benefit}';
-=======
-        </div>`
-      </section>'{/* Use Cases Section */}'
-      <section className='py-20 px-4 sm: px-6 l,
-    g:px-8>''
-        <div className='max-w-7xl mx-auto'>
-          <motion.div;
-            initial = {
-  { opacit,
-    y: 0,
-:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx;
-  y: 20;
-  ,
-    y: 20}}
-            whileInView = {
-  { opacity: 1,
-:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx;
-  y: 0}}
-<<<<<<< HEAD
-            transition={{ duration: 0.8 }}';
-            className='text-center mb-16'>';
-  y: 0}}';
-            transition={{ duration: 0.8 }}''
-            className='text-center mb-16''>''
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
-              Development Workflow Integration'
-            </h2>''
-=======
-            transition={{ duration: 0.8 }};
-            className='text-center mb-16>;
-  y: 0}};
-            transition={{ duration: 0.8 }};
-            className='text-center mb-16>'
-            <h2 className='text-3xl md: text-4xl font-bold text-white mb-4>
-              Development Workflow Integration''
-            </h2>'''
->>>>>>> main
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Our AI Code Review Security Scanner integrates seamlessly with your existing
               development tools and workflows to ensure security at every stage.
-<<<<<<< HEAD
             </p>
-          </motion.div>'
-''
+          </motion.div>',
+      ''
           <div className='grid grid-cols-1 md: anygrid-cols-2 gap-8'>
-            {useCases.map(useCase: unknown, index: unknown
-=======
-            </p>'
-          </motion.div>';
-'''
-          <div className='grid grid-cols-1 m,
-    d: anygrid-cols-2 gap-8'>
-            {useCases.map(useCas,
-    e: unknown, index: unknown
->>>>>>> main
+            {useCases.map(useCase: unknown, index: unknown,
               <motion.div;
                 key={index}
                 initial = {
   { opacity: 0,
 :pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx;
   y: 20;
-  ,
+  
     y: 20}}
                 whileInView = {
   { opacity: 1,
 :pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx;
   y: 0;
-  ,
+  
     y: 0}}
                 transition = {
-  { duration: 0.6,
+  { duration: 0.6
 :pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx;
-<<<<<<< HEAD
   delay: index * 0.1}}';
                 className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500/50 transition-all duration-300'>'
                 <div className='flex items-start mb-4'>'
@@ -986,17 +579,6 @@
                 className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500/50 transition-all duration-300''>''
                 <div className='flex items-start mb-4'>''
                   <div className='w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mr-4'>''
-=======
-  delay: index * 0.1}};
-                className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500/50 transition-all duration-300>'
-                <div className='flex items-start mb-4>'
-                  <div className='w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mr-4>;
-  dela,
-    y: index * 0.1 '}};
-                className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500/50 transition-all duration-300>'
-                <div className='flex items-start mb-4>''
-                  <div className='w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mr-4>''
->>>>>>> main
                     <useCase.icon className='w-6 h-6 text-white' />
                   </div>''
                   <div>'''
@@ -1007,30 +589,29 @@
                 <ul className='space-y-2>{useCase.benefits.map((benefit, idx) => ('''
                     <li key={idx} className='flex items-center text-sm text-gray-400>''
                       <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0'  />                      {benefit}
->>>>>>> main
+
                     </li>
                   ))}
                 </ul>
               </motion.div>
             ))}
           </div>
-<<<<<<< HEAD
         </div>
       </section>'{/* CTA: Section */}''';
       <section: className='py-20 px-4 sm: px-6: lg:px-8: bg-gradient-to-r from-green-900/20 to-emerald-900/20'>''';
         <div: className='max-w-4xl mx-auto text-center'>';
           <motion.div;
             initial: = {
-  { opacity: ,0,
+  { opacity: 0,
 :pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx;
   y: 20;
   y: 2,0}}
             whileInView: = {
-  { opacity:  ,1,
+  { opacity: 1,
 :pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx;
   y: 0;
-  y: ,0}}
-            transition={{ duration: 0.8, }}'>''';
+  y: 0}}
+            transition={{ duration: 0.8}}'>''';
             <h2: className='text-3xl md: text-4xl: font-bold text-white mb-6'>';
               Ready: to Secure Your Code?'';
             </h2>''';
@@ -1038,109 +619,31 @@
 :pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx;
               Join: leading development teams that trust our AI-powered platform to;
               detect: vulnerabilities and maintain secure coding practices.
-            </p>';';
+            </p>'';;
               Join: leading development teams that trust our AI-powered platform to;
               detect: vulnerabilities and maintain secure coding practices.'';
             </p>''';
             <div: className='flex flex-col sm:flex-row: gap-4 justify-center'>';
               <motion.button;
-                whileHover={{ scale: 1.05, }}';';
-                whileTap={{ scale: 0.95, }}'';';
-                className='px-8: py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover: from-green-600: hover:to-emerald-600: transition-all duration-200 flex items-center justify-center'>';';
+                whileHover={{ scale: 1.05}}'';;
+                whileTap={{ scale: 0.95}}''';;
+                className='px-8: py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover: from-green-600: hover:to-emerald-600: transition-all duration-200 flex items-center justify-center'>'';;
                 Start: Free Trial''';
                 <ArrowRight: className='ml-2 w-5 h-5'  />              </motion.button>';
               <motion.button;
-                whileHover={{ scale: 1.05, }}';';
-                whileTap={{ scale: 0.95, }}'';';
-                className='px-8: py-4 border border-gray-600 text-white font-semibold rounded-lg hover: bg-gray-800: transition-all duration-200 flex items-center justify-center'>';';
+                whileHover={{ scale: 1.05}}'';;
+                whileTap={{ scale: 0.95}}''';;
+                className='px-8: py-4 border border-gray-600 text-white font-semibold rounded-lg hover: bg-gray-800: transition-all duration-200 flex items-center justify-center'>'';;
                 Contact: Sales''';
                 <ArrowRight: className='ml-2 w-5 h-5'  />              </motion.button>';
-=======
-        </div>'
-      </section>'{/* CTA Section */}'
-      <section className='py-20 px-4 sm: px-6 l,
-    g:px-8 bg-gradient-to-r from-green-900/20 to-emerald-900/20>''
-        <div className='max-w-4xl mx-auto text-center'>
-          <motion.div;
-            initial = {
-  { opacit,
-    y: 0,
-:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx;
-  y: 20;
-  ,
-    y: 20}}
-            whileInView = {
-  { opacity: 1,
-:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx;
-  y: 0;
-  ,
-    y: 0}}
-            transition={{ duration: 0.8 }}>'''
-            <h2 className='text-3xl md: text-4xl font-bold text-white mb-6>
-              Ready to Secure Your Code?''
-            </h2>'''
-            <p className='text-xl text-gray-300 mb-8'>
-:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx;
-<<<<<<< HEAD
-              Join leading development teams that trust our AI-powered platform to
-              detect vulnerabilities and maintain secure coding practices.
-            </p>';
-              Join leading development teams that trust our AI-powered platform to
-              detect vulnerabilities and maintain secure coding practices.'
-            </p>''
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <motion.button;
-                whileHover={{ scale: 1.05 }}';
-                whileTap={{ scale: 0.95 }}'';
-                className='px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-200 flex items-center justify-center'>'
-                Start Free Trial''
                 <ArrowRight className='ml-2 w-5 h-5'  />              </motion.button>
-              <motion.button;
-                whileHover={{ scale: 1.05 }}';
-                whileTap={{ scale: 0.95 }}'';
-                className='px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200 flex items-center justify-center'>'
-                Contact Sales''
-=======
-              Join leading development teams that trust our AI-powered platform to;
-              detect vulnerabilities and maintain secure coding practices.'
-            </p>';
-              Join leading development teams that trust our AI-powered platform to;
-              detect vulnerabilities and maintain secure coding practices.''
-            </p>'''
-            <div className='flex flex-col s,
-    m:flex-row gap-4 justify-center'>
-              <motion.button;
-                whileHover={{ scal,
-    e: 1.05 }};
-                whileTap={{ scale: 0.95 }};
-                className='px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover: from-green-600 hove,
-    r:to-emerald-600 transition-all duration-200 flex items-center justify-center>;
-                Start Free Trial'''
-                <ArrowRight className='ml-2 w-5 h-5'  />              </motion.button>
-              <motion.button;
-                whileHover={{ scal,
-    e: 1.05 }};
-                whileTap={{ scale: 0.95 }};
-                className='px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200 flex items-center justify-center>;
-                Contact Sales'''
->>>>>>> main
-                <ArrowRight className='ml-2 w-5 h-5'  />              </motion.button>
->>>>>>> main
+
             </div>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
     </div>
 <<<<<<< HEAD
   ,)}''`;
-export: default AICodeReviewSecurityScanner''`;'"`
-=======
-  )}''`;
-export default AICodeReviewSecurityScanner''`'"`
-=======
-    </div>'
-  )}`;`
-export default AICodeReviewSecurityScanner''`;"``
->>>>>>> main
->>>>>>> main
+export: default AICodeReviewSecurityScanner''`';"`
+

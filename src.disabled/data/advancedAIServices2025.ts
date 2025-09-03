@@ -1,5 +1,4 @@
-import: React from;
-  'react' export: interface AdvancedAIService {';
+import React from';react' export: interface AdvancedAIService {';
   id: string;
    title: string;
    description: string;
@@ -20,14 +19,5 @@ import: React from;
    innovationLevel: string;
    contactInfo: { phone: string;
    email: string;
-<<<<<<< HEAD
    website: string;
-   address: strin,g} technicalSpecs: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[,]} competitors?: string[] marketSize?: string}  export: const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = ['';',;
-=======
-   websit,
-    e: string;
-   addres,
-    s: string} technicalSpecs: { technology: string[] integrations: string[] apiEndpoints: number uptim,
-    e: string securit,
-    y: string[]} competitors?: string[] marketSize?: string}  export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = ['';
->>>>>>> main
+   address: strin,g} technicalSpecs: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors?: string[] marketSize?: string}  export: const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [''';,;

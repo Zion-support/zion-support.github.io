@@ -1,18 +1,18 @@
 import React from 'react';
 import Link from 'next/link';
 import {
-  Facebook,
-  Twitter,
-  Linkedin,
-  Instagram,
-  Mail,
-  Phone,
-  MapPin,
-  ArrowUp,
-  Globe,
-  Shield,
-  FileText,
-  HelpCircle,
+  Facebook
+  Twitter
+  Linkedin
+  Instagram
+  Mail
+  Phone
+  MapPin
+  ArrowUp
+  Globe
+  Shield
+  FileText
+  HelpCircle
 } from 'lucide-react';
 
 export default function EnhancedFooter() {
@@ -24,69 +24,62 @@ export default function EnhancedFooter() {
 
   const footerLinks = {
     services: [
-      { name: 'AI Services', href: '/services/ai-services' },
-      { name: 'IT Services', href: '/services/it-services' },
-      { name: 'Micro SaaS', href: '/services/micro-saas' },
-      { name: 'Web Development', href: '/services/web-development' },
-      { name: 'Cloud Services', href: '/services/cloud-services' },
-      { name: 'AI Development', href: '/services/ai-development' },
-    ],
+      { name: 'AI Services', href: '/services/ai-services' }
+      { name: 'IT Services', href: '/services/it-services' }
+      { name: 'Micro SaaS', href: '/services/micro-saas' }
+      { name: 'Web Development', href: '/services/web-development' }
+      { name: 'Cloud Services', href: '/services/cloud-services' }
+      { name: 'AI Development', href: '/services/ai-development' }
+    ]
     solutions: [
-      { name: 'AI Content Creation', href: '/solutions/ai-content-creation' },
-      { name: 'Customer Support', href: '/solutions/customer-support' },
-      { name: 'Email Automation', href: '/solutions/email-automation' },
-      { name: 'Event Management', href: '/solutions/event-management' },
-      { name: 'Project Management', href: '/solutions/project-management' },
-      { name: 'Workflow Automation', href: '/solutions/workflow-automation' },
-    ],
+      { name: 'AI Content Creation', href: '/solutions/ai-content-creation' }
+      { name: 'Customer Support', href: '/solutions/customer-support' }
+      { name: 'Email Automation', href: '/solutions/email-automation' }
+      { name: 'Event Management', href: '/solutions/event-management' }
+      { name: 'Project Management', href: '/solutions/project-management' }
+      { name: 'Workflow Automation', href: '/solutions/workflow-automation' }
+    ]
     company: [
-      { name: 'About Us', href: '/about' },
-      { name: 'Careers', href: '/careers' },
-      { name: 'Partners', href: '/partners' },
-      { name: 'Contact', href: '/contact' },
-      { name: 'Blog', href: '/blog' },
-    ],
+      { name: 'About Us', href: '/about' }
+      { name: 'Careers', href: '/careers' }
+      { name: 'Partners', href: '/partners' }
+      { name: 'Contact', href: '/contact' }
+      { name: 'Blog', href: '/blog' }
+    ]
     resources: [
-      { name: 'Help Center', href: '/help' },
-      { name: 'Pricing Guide', href: '/pricing-guide' },
-      { name: 'Search', href: '/search' },
-      { name: 'Sitemap', href: '/sitemap' },
-    ],
+      { name: 'Help Center', href: '/help' }
+      { name: 'Pricing Guide', href: '/pricing-guide' }
+      { name: 'Search', href: '/search' }
+      { name: 'Sitemap', href: '/sitemap' }
+    ]
     legal: [
-      { name: 'Privacy Policy', href: '/privacy' },
-      { name: 'Terms of Service', href: '/terms' },
-      { name: 'Cookie Policy', href: '/cookies' },
-    ],
+      { name: 'Privacy Policy', href: '/privacy' }
+      { name: 'Terms of Service', href: '/terms' }
+      { name: 'Cookie Policy', href: '/cookies' }
+    ]
   };
 
   const socialLinks = [
-<<<<<<< HEAD
     {
       name: 'Facebook',
       icon: Facebook,
-      href: 'https://facebook.com/ziontechgroup',
-    },
+      href: 'https://facebook.com/ziontechgroup'
+    }
     {
       name: 'Twitter',
       icon: Twitter,
-      href: 'https://twitter.com/ziontechgroup',
-    },
+      href: 'https://twitter.com/ziontechgroup'
+    }
     {
       name: 'LinkedIn',
       icon: Linkedin,
-      href: 'https://linkedin.com/company/ziontechgroup',
-    },
+      href: 'https://linkedin.com/company/ziontechgroup'
+    }
     {
       name: 'Instagram',
       icon: Instagram,
-      href: 'https://instagram.com/ziontechgroup',
-    },
-=======
-  { name: 'Facebook', icon: Facebook, href: 'https://facebook.com/ziontechgroup' },
-    { name: 'Twitter', icon: Twitter, href: 'https://twitter.com/ziontechgroup' },
-    { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup' },
-    { name: 'Instagram', icon: Instagram, href: 'https://instagram.com/ziontechgroup' }
->>>>>>> main
+      href: 'https://instagram.com/ziontechgroup'
+    }
   ];
 
   return (
@@ -107,7 +100,7 @@ export default function EnhancedFooter() {
               </div>
             </div>
             <p className="text-gray-400 mb-6 max-w-md">
-              Leading technology solutions provider specializing in AI,
+              Leading technology solutions provider specializing in AI
               cybersecurity, cloud infrastructure, and digital transformation
               services. We help businesses innovate, scale, and succeed in the
               digital age.

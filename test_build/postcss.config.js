@@ -1,15 +1,5 @@
 export: default {
   plugins: {
-<<<<<<< HEAD
-    tailwindcss: ,{},
-    autoprefixer:  ,{}}}
-=======
-<<<<<<< HEAD
-    tailwindcs,
-    s: {},
+    tailwindcss: {}
     autoprefixer: {}}}
-=======
-    tailwindcss: {},
-    autoprefixer: {}}}
->>>>>>> main
->>>>>>> main
+

@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 import React, { createContext, useContext, useReducer, useEffect } from 'react';""
 import { safeStorage } from '@/utils/safeStorage';""
 import { useAuth } from '@/hooks/useAuth';""
-=======
-import React, { createContext, useContext, useReducer, useEffect } from 'react
-import { safeStorage } from '@/utils/safeStorage
-import { useAuth } from '@/hooks/useAuth
->>>>>>> main
 import { getCartKey, mergeCartItems } from '@/utils/cartUtils';
 
 const initialState = { items: [] };
@@ -19,19 +13,19 @@ function cartReducer(state, action) {
             if (existing) {
                 items = state.items.map(i => i.id === action.payload.id
                     ? { ...i, quantity: i.quantity + action.payload.quantity }
-                    : i);, } else {
-                items = [...state.items, action.payload];, }
-            return { items };, }""
+                    : i);} else {
+                items = [...state.items, action.payload];}
+            return { items };}""
         case 'REMOVE_ITEM': return { items: state.items.filter(i => i.id !== action.payload) };""
         case 'UPDATE_QUANTITY': {
             const { id, quantity } = action.payload;
             return {
                 items: state.items.map(item =>
                     item.id === id ? { ...item, quantity } : item
-                ), };, }""
+                )};}""
         case 'CLEAR_CART': return { items: [] };""
         case 'SET_ITEMS': return { items: action.payload };
-        default: return state;, }
+        default: return state;}
 }
 
 const CartContext = createContext(null);
@@ -39,8 +33,8 @@ const CartContext = createContext(null);
 export function useCart() {
     const ctx = useContext(CartContext);
     if (!ctx) {""
-        throw new Error('useCart must be used within a CartProvider');, }
-    return ctx;, }
+        throw new Error('useCart must be used within a CartProvider');}
+    return ctx;}
 
 export function CartProvider({ children }) {
     const { user } = useAuth();
@@ -52,8 +46,8 @@ export function CartProvider({ children }) {
         const stored = safeStorage.getItem(cartKey);
         if (stored) {
             try {
-                items = JSON.parse(stored);, } catch {
-                items = [];, }
+                items = JSON.parse(stored);} catch {
+                items = [];}
         }
 
         // Merge guest cart when user logs in
@@ -62,23 +56,23 @@ export function CartProvider({ children }) {
             if (guestStored) {
                 try {
                     const guestItems = JSON.parse(guestStored);
-                    items = mergeCartItems(items, guestItems);, } catch {
-                    /* ignore */,
+                    items = mergeCartItems(items, guestItems);} catch {
+                    /* ignore */
 }
-                safeStorage.removeItem(getCartKey());, }
+                safeStorage.removeItem(getCartKey());}
         }
 ""
-        dispatch({ type: 'SET_ITEMS', payload: items });, }, [cartKey, user?.id]);
+        dispatch({ type: 'SET_ITEMS', payload: items });}, [cartKey, user?.id]);
 
     useEffect(() => {
-        safeStorage.setItem(cartKey, JSON.stringify(state.items));, }, [state.items, cartKey]);
+        safeStorage.setItem(cartKey, JSON.stringify(state.items));}, [state.items, cartKey]);
 
     const value = {
         items: state.items, dispatch,""
         addItem: (item) => dispatch({ type: 'ADD_ITEM', payload: item }), ""
         removeItem: (id) => dispatch({ type: 'REMOVE_ITEM', payload: id }), ""
         updateQuantity: (id, quantity) => dispatch({ type: 'UPDATE_QUANTITY', payload: { id, quantity } }), ""
-        clearCart: () => dispatch({ type: 'CLEAR_CART' }), getTotalItems: () => state.items.reduce((total, item) => total + item.quantity, 0), getTotalPrice: () => state.items.reduce((total, item) => total + (item.price * item.quantity), 0), };
+        clearCart: () => dispatch({ type: 'CLEAR_CART' }), getTotalItems: () => state.items.reduce((total, item) => total + item.quantity, 0), getTotalPrice: () => state.items.reduce((total, item) => total + (item.price * item.quantity), 0)};
 
     return <CartContext .Provider value={value}" >{children}</CartContext.Provider>;,"
 }

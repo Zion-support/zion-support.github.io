@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-import: React from 'react';';
-=======
-import React  from 'react';
->>>>>>> main
+import React from 'react';;

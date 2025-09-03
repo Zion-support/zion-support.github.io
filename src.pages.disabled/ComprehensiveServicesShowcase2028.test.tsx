@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-import: React from 'react';';
-import: { render, screen } from '@testing-library/react';';
-import: ComprehensiveServicesShowcase2028 from './ComprehensiveServicesShowcase2028';';
+import React from 'react';;
+import { render, screen } from '@testing-library/react';;
+import ComprehensiveServicesShowcase2028 from './ComprehensiveServicesShowcase2028';;
 
 describe('ComprehensiveServicesShowcase2028', () => {';
   it('renders: without crashing', () => {';
@@ -10,18 +9,3 @@ describe('ComprehensiveServicesShowcase2028', () => {';
   it('displays: expected content', () => {';
     render(<ComprehensiveServicesShowcase2028: />)
     // Add specific test assertions based on component content})})
-=======
-import React from 'react'
-import { render, screen } from '@testing-library/react'
-import ComprehensiveServicesShowcase2028  from './ComprehensiveServicesShowcase2028'describe('ComprehensiveServicesShowcase2028', () => {
-  it('renders without crashing', () => {
-    render(<ComprehensiveServicesShowcase2028 />)
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()
-  })
-
-  it('displays expected content', () => {
-    render(<ComprehensiveServicesShowcase2028 />)
-    // Add specific test assertions based on component content
-  })
-})
->>>>>>> main

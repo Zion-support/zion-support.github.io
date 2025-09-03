@@ -6,20 +6,20 @@ import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
 import { Badge } from '../../components/ui/Badge';
 import { 
-  Brain, 
-  Mail, 
-  Headphones, 
-  Calendar, 
-  FolderKanban, 
-  Workflow,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Zap,
-  Shield,
-  Users,
-  Target,
-  Lightbulb,
+  Brain
+  Mail
+  Headphones
+  Calendar
+  FolderKanban
+  Workflow
+  ArrowRight
+  CheckCircle
+  Star
+  Zap
+  Shield
+  Users
+  Target
+  Lightbulb
   TrendingUp
 } from 'lucide-react';
 
@@ -30,47 +30,47 @@ export default function Solutions() {
       title: 'AI Content Creation',
       description: 'Automated content generation using advanced AI models for blogs, social media, and marketing materials.',
       href: '/solutions/ai-content-creation',
-      features: ['Blog Post Generation', 'Social Media Content', 'SEO Optimization', 'Multi-language Support'],
+      features: ['Blog Post Generation', 'Social Media Content', 'SEO Optimization', 'Multi-language Support']
       pricing: 'Starting at $299/month'
-    },
+    }
     {
       icon: Mail,
       title: 'Email Automation',
       description: 'Intelligent email marketing automation with personalized campaigns and advanced analytics.',
       href: '/solutions/email-automation',
-      features: ['Drip Campaigns', 'Personalization', 'A/B Testing', 'Analytics Dashboard'],
+      features: ['Drip Campaigns', 'Personalization', 'A/B Testing', 'Analytics Dashboard']
       pricing: 'Starting at $199/month'
-    },
+    }
     {
       icon: Headphones,
       title: 'Customer Support Platform',
       description: 'AI-powered customer support system with chatbots, ticket management, and knowledge base.',
       href: '/solutions/customer-support',
-      features: ['AI Chatbots', 'Ticket Management', 'Knowledge Base', 'Multi-channel Support'],
+      features: ['AI Chatbots', 'Ticket Management', 'Knowledge Base', 'Multi-channel Support']
       pricing: 'Starting at $399/month'
-    },
+    }
     {
       icon: Calendar,
       title: 'Event Management',
       description: 'Comprehensive event management platform with registration, ticketing, and attendee management.',
       href: '/solutions/event-management',
-      features: ['Event Registration', 'Ticketing System', 'Attendee Management', 'Analytics'],
+      features: ['Event Registration', 'Ticketing System', 'Attendee Management', 'Analytics']
       pricing: 'Starting at $149/month'
-    },
+    }
     {
       icon: FolderKanban,
       title: 'Project Management',
       description: 'Advanced project management tools with team collaboration, task tracking, and reporting.',
       href: '/solutions/project-management',
-      features: ['Task Management', 'Team Collaboration', 'Time Tracking', 'Reporting'],
+      features: ['Task Management', 'Team Collaboration', 'Time Tracking', 'Reporting']
       pricing: 'Starting at $99/month'
-    },
+    }
     {
       icon: Workflow,
       title: 'Workflow Automation',
       description: 'Streamline business processes with custom workflow automation and integration capabilities.',
       href: '/solutions/workflow-automation',
-      features: ['Process Automation', 'Integration APIs', 'Custom Workflows', 'Monitoring'],
+      features: ['Process Automation', 'Integration APIs', 'Custom Workflows', 'Monitoring']
       pricing: 'Starting at $249/month'
     }
   ];
@@ -80,17 +80,17 @@ export default function Solutions() {
       icon: Zap,
       title: 'Lightning Fast Setup',
       description: 'Get your solution up and running in minutes, not months.'
-    },
+    }
     {
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with 99.9% uptime guarantee.'
-    },
+    }
     {
       icon: Users,
       title: '24/7 Support',
       description: 'Round-the-clock support from our expert team.'
-    },
+    }
     {
       icon: TrendingUp,
       title: 'Scalable Solutions',
@@ -111,7 +111,6 @@ export default function Solutions() {
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-<<<<<<< HEAD
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md: text-6xl font-bold mb-6">
             Technology
@@ -202,30 +201,6 @@ export default function Solutions() {
               <Link href="/services/ai-services" className="bg-green-600 hover: bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors inline-block">
                 Explore AI Services
               </Link>
-=======
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <Badge className="mb-4 bg-blue-500 text-white">
-              <Lightbulb className="w-4 h-4 mr-2" />
-              Innovative Solutions
-            </Badge>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Technology Solutions for
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Modern Business</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our comprehensive suite of AI-powered tools, automation platforms, 
-              and custom software solutions designed to drive growth and efficiency.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-                Explore Solutions
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-gray-900">
-                Schedule Demo
-              </Button>
->>>>>>> main
             </div>
           </div>
         </div>
@@ -304,7 +279,6 @@ export default function Solutions() {
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{benefit.title}</h3>
                 <p className="text-gray-600">{benefit.description}</p>
               </div>
-<<<<<<< HEAD
               <p className="text-gray-600 mb-4">
                 Secure, compliant solutions for banking, insurance, and fintech companies.
               </p>
@@ -497,15 +471,11 @@ export default function Solutions() {
                 We deploy your solution and provide ongoing support and optimization.
               </p>
             </div>
-=======
-            ))}
->>>>>>> main
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-20 bg-gray-900 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Find Your Solution?</h2>
@@ -515,23 +485,6 @@ export default function Solutions() {
           <div className="flex flex-col sm: flex-row justify-center gap-4">
             <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
               Get Started Today
-=======
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Let our experts help you choose the perfect solution for your business needs. 
-            Get started with a free consultation today.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact">
-              <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
-                Get Free Consultation
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
->>>>>>> main
             </Link>
             <Link href="/pricing">
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">

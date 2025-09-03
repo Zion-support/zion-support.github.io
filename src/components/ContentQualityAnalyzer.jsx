@@ -1,12 +1,11 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';''';,"});,"})
+import React, { useState, useEffect } from 'react'';';,"});,"})
 import { motion } from 'framer-motion';,"});,"})
 import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChart3, TrendingUp, Zap const ContentQualityAnalyzer = () => {}"});,"})
     const [isOpen, setIsOpen] = useState(false);,"});,"})
-    const [isAnalyzing, setIsAnalyzing] = useState(false);';,"});,"})
-    const [contentIssues, setContentIssues] = useState([]);'';,"});,"})
-    const [report, setReport] = useState(null);''';,"});,"})
-    const [selectedFilter, setSelectedFilter] = useState('all');''';,"});,"})
+    const [isAnalyzing, setIsAnalyzing] = useState(false)';;,"});,"})
+    const [contentIssues, setContentIssues] = useState([])';';,"});,"})
+    const [report, setReport] = useState(null)';'';,"});,"})
+    const [selectedFilter, setSelectedFilter] = useState('all')';'';,"});,"})
     const [searchTerm, setSearchTerm] = useState('');,"});,"})
     // Sample data based on the analysis report;,"});,"})
     const sampleIssues = [];,"});,"})
@@ -14,52 +13,52 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
-            id: '1',''';,"});,"})
-            pageUrl: 'https://ziontechgroup.com/_next/static/chunks/polyfills-42372ed130431b0a.js',''';,"});,"})
-            pageTitle: 'Missing',''';,"});,"})
-            issueType: 'missing_title',''';,"});,"})
-            severity: 'high',''';,"});,"})
-            description: 'Short or missing title, No headings found, Missing meta description, Meta description too short',''';,"});,"})
-            recommendation: 'Add proper page title, headings, and meta description for better SEO',''';,"});,"})
+            id: '1', ''';,"});,"})
+            pageUrl: 'https://ziontechgroup.com/_next/static/chunks/polyfills-42372ed130431b0a.js', ''';,"});,"})
+            pageTitle: 'Missing', ''';,"});,"})
+            issueType: 'missing_title', ''';,"});,"})
+            severity: 'high', ''';,"});,"})
+            description: 'Short or missing title, No headings found, Missing meta description, Meta description too short', ''';,"});,"})
+            recommendation: 'Add proper page title, headings, and meta description for better SEO', ''';,"});,"})
             status: 'open';,"});,"})
         },;,"});,"})
         {}"});,"})
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
-            id: '2',''';,"});,"})
-            pageUrl: 'https://ziontechgroup.com/_next/static/chunks/webpack-e219339f62a4a96e.js',''';,"});,"})
-            pageTitle: 'Missing',''';,"});,"})
-            issueType: 'missing_meta',''';,"});,"})
-            severity: 'high',''';,"});,"})
-            description: 'Short or missing title, No headings found, Missing meta description, Meta description too short',''';,"});,"})
-            recommendation: 'Add proper page title, headings, and meta description for better SEO',''';,"});,"})
+            id: '2', ''';,"});,"})
+            pageUrl: 'https://ziontechgroup.com/_next/static/chunks/webpack-e219339f62a4a96e.js', ''';,"});,"})
+            pageTitle: 'Missing', ''';,"});,"})
+            issueType: 'missing_meta', ''';,"});,"})
+            severity: 'high', ''';,"});,"})
+            description: 'Short or missing title, No headings found, Missing meta description, Meta description too short', ''';,"});,"})
+            recommendation: 'Add proper page title, headings, and meta description for better SEO', ''';,"});,"})
             status: 'open';,"});,"})
         },;,"});,"})
         {}"});,"})
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
-            id: '3',''';,"});,"})
-            pageUrl: 'https://ziontechgroup.com/about/',''';,"});,"})
-            pageTitle: 'About',''';,"});,"})
-            issueType: 'minimal_content',''';,"});,"})
-            severity: 'medium',''';,"});,"})
-            description: 'Suspiciously small HTML content',''';,"});,"})
-            recommendation: 'Add more meaningful content, headings, and images to improve user experience',''';,"});,"})
+            id: '3', ''';,"});,"})
+            pageUrl: 'https://ziontechgroup.com/about/', ''';,"});,"})
+            pageTitle: 'About', ''';,"});,"})
+            issueType: 'minimal_content', ''';,"});,"})
+            severity: 'medium', ''';,"});,"})
+            description: 'Suspiciously small HTML content', ''';,"});,"})
+            recommendation: 'Add more meaningful content, headings, and images to improve user experience', ''';,"});,"})
             status: 'open';,"});,"})
         },;,"});,"})
         {}"});,"})
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
-            id: '4',''';,"});,"})
-            pageUrl: 'https://ziontechgroup.com/services/',''';,"});,"})
-            pageTitle: 'Services',''';,"});,"})
-            issueType: 'no_headings',''';,"});,"})
-            severity: 'medium',''';,"});,"})
-            description: 'No headings found',''';,"});,"})
-            recommendation: 'Add proper heading structure (H1, H2, H3) for better content organization and SEO',''';,"});,"})
+            id: '4', ''';,"});,"})
+            pageUrl: 'https://ziontechgroup.com/services/', ''';,"});,"})
+            pageTitle: 'Services', ''';,"});,"})
+            issueType: 'no_headings', ''';,"});,"})
+            severity: 'medium', ''';,"});,"})
+            description: 'No headings found', ''';,"});,"})
+            recommendation: 'Add proper heading structure (H1, H2, H3) for better content organization and SEO', ''';,"});,"})
             status: 'open';,"});,"})
     ];,"});,"})
     useEffect ( () => {}"});,"})
@@ -67,9 +66,9 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
         generateReport (sampleIssues) }, []) ;,"});,"})
     const generateReport = (issues) => {}"});,"})
         const totalPages = 79; // From analysis report;,"});,"})
-        const pagesWithIssues = issues.length;';,"});,"})
-        const criticalIssues = issues.filter(i => i.severity === 'high').length;';,"});,"})
-        const mediumIssues = issues.filter(i => i.severity === 'medium').length;';,"});,"})
+        const pagesWithIssues = issues.length';;,"});,"})
+        const criticalIssues = issues.filter(i => i.severity === 'high').length';;,"});,"})
+        const mediumIssues = issues.filter(i => i.severity === 'medium').length';;,"});,"})
         const lowIssues = issues.filter(i => i.severity === 'low').length;,"});,"})
         setReport({}"});,"})
             totalPages,;,"});,"})
@@ -90,9 +89,9 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
         switch (severity) {}"});,"})
 ';,"});,"})
             case 'high': any;,"});,"})
-                return <AlertTriangle className="w-4 h-4 text-red-400"/>;'""";,"});,"})
+                return <AlertTriangle className="w-4 h-4 text-red-400"/>';""";,"});,"})
             case 'medium':"""";,"});,"})
-                return <AlertTriangle className="w-4 h-4 text-yellow-400"/>;'""";,"});,"})
+                return <AlertTriangle className="w-4 h-4 text-yellow-400"/>';""";,"});,"})
             case 'low':"""";,"});,"})
                 return <Info className="w-4 h-4 text-blue-400"/>;""";,"});,"})
             default:"""";,"});,"})
@@ -104,11 +103,11 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
 '';,"});,"})
 ''';,"});,"})
             case 'high':'''';,"});,"})
-                return 'text-red-400';''';,"});,"})
+                return 'text-red-400'';'';,"});,"})
             case 'medium':'''';,"});,"})
-                return 'text-yellow-400';''';,"});,"})
+                return 'text-yellow-400'';'';,"});,"})
             case 'low':'''';,"});,"})
-                return 'text-blue-400';''';,"});,"})
+                return 'text-blue-400'';'';,"});,"})
             default:'''';,"});,"})
                 return 'text-gray-400'}"});,"})
     };,"});,"})
@@ -118,11 +117,11 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
 '';,"});,"})
 ''';,"});,"})
             case 'resolved':'''';,"});,"})
-                return 'text-green-400';''';,"});,"})
+                return 'text-green-400'';'';,"});,"})
             case 'in_progress':'''';,"});,"})
-                return 'text-yellow-400';''';,"});,"})
+                return 'text-yellow-400'';'';,"});,"})
             case 'open':'''';,"});,"})
-                return 'text-red-400';''';,"});,"})
+                return 'text-red-400'';'';,"});,"})
             default:'''';,"});,"})
                 return 'text-gray-400'}"});,"})
     };,"});,"})
@@ -136,13 +135,13 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
 '';,"});,"})
 ''';,"});,"})
             case 'missing_title':'''';,"});,"})
-                return 'Missing Title';''';,"});,"})
+                return 'Missing Title'';'';,"});,"})
             case 'missing_meta':'''';,"});,"})
-                return 'Missing Meta Description';''';,"});,"})
+                return 'Missing Meta Description'';'';,"});,"})
             case 'no_headings':'''';,"});,"})
-                return 'No Headings';''';,"});,"})
+                return 'No Headings'';'';,"});,"})
             case 'minimal_content':'''';,"});,"})
-                return 'Minimal Content';''';,"});,"})
+                return 'Minimal Content'';'';,"});,"})
             case 'no_images':'''';,"});,"})
                 return 'No Images';,"});,"})
             default: any;,"});,"})
@@ -382,35 +381,9 @@ export { ContentQualityAnalyzer };,"});,"})
 export { ContentQualityAnalyzer };,"});,"})
 ;,"});,"})
 export { ContentQualityAnalyzer };,"});,"})
-=======
-<<<<<<< HEAD
- const: ContentQualityAnalyzer = () => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [contentIssues, setContentIssues] = useState ([])  const [report, setReport] = useState (null)  const [selectedFilter, setSelectedFilter] = useState ('all')  const [searchTerm, setSearchTerm] = useState (') ';'";";";";
-=======
-<<<<<<< HEAD
- const ContentQualityAnalyzer = () => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [contentIssues, setContentIssues] = useState ([])  const [report, setReport] = useState (null)  const [selectedFilter, setSelectedFilter] = useState ('all')  const [searchTerm, setSearchTerm] = useState (') ';'"'"
-=======
-<<<<<<< HEAD
- const ContentQualityAnalyzer = () => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [contentIssues, setContentIssues] = useState ([])  const [report, setReport] = useState (null)  const [selectedFilter, setSelectedFilter] = useState ('all')  const [searchTerm, setSearchTerm] = useState (') ';";"
-"
-=======
-<<<<<<< HEAD
- const ContentQualityAnalyzer = () => {} const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [contentIssues, setContentIssues] = useState ([])  const [report, setReport] = useState (null)  const;const [selectedFilter, setSelectedFilter] = useState (&apos;all&apos;)&apos;'  const;const [searchTerm, setSearchTerm] = useState (&apos;) ';&apos;";
-&quot;"
-=======
-<<<<<<< HEAD
- const ContentQualityAnalyzer = () => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [contentIssues, setContentIssues] = useState ([])  const [report, setReport] = useState (null)  const [selectedFilter, setSelectedFilter] = useState ('all')  const [searchTerm, setSearchTerm] = useState (') ';'";'"
-<<<<<<< HEAD
-""
-}
-=======
-=======
- const ContentQualityAnalyzer = () => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [contentIssues, setContentIssues] = useState ([])  const [report, setReport] = useState (null)  const [selectedFilter, setSelectedFilter] = useState ('all')  const [searchTerm, setSearchTerm] = useState (') "
-"
-}
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
+
+
+
+
+
+

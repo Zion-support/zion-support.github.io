@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-import { Link } from 'react - router - dom';''';,"});,"})
+import { Link } from 'react - router - dom'';';,"});,"})
 ,"});,"})
 ;,"});,"})
 ;,"});,"})
@@ -257,20 +256,6 @@ export function ContactInfo() {;,"});,"})
   );,"});,"})
 }'""";,"});,"})
 '"'""";,"});,"})
-=======
-<<<<<<< HEAD
-import { Link } from 'react - router - dom'''
-
-
-""
-import { Link } from 'react-router-dom';""
-=======
-import { Link }  from 'react - router - dom
-
-
-"
-import { Link } from 'react-router-dom
->>>>>>> main
 import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star } from 'lucide-react';
 export function ContactInfo() {""
     return (<section className='py-20 bg-zion-blue-dark'>""
@@ -282,8 +267,8 @@ export function ContactInfo() {""
             Ready to transform your business with cutting-edge technology?
             Contact our experts today for a free consultation.
           </p>""
-        </div>''''
-''''
+        </div>'''',
+      ''''
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>''''
           {/* Contact Information */}''''
           <div className='space-y-6'>''''
@@ -306,8 +291,8 @@ export function ContactInfo() {""
                     <p className='text-white font-medium'>Phone</p>''''
                     <p className='text-zion-cyan'>+1 302 464 0950</p>
                   </div>""
-                </div>''''
-''''
+                </div>'''',
+      ''''
                 <div className='flex items-center gap-3'>''''
                   <div className='w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center'>''''
                     <Mail className='h-5 w-5 text-zion-purple' /" >"
@@ -316,8 +301,8 @@ export function ContactInfo() {""
                     <p className='text-white font-medium'>Email</p>''''
                     <p className='text-zion-cyan'>kleber@ziontechgroup.com</p>
                   </div>""
-                </div>''''
-''''
+                </div>'''',
+      ''''
                 <div className='flex items-center gap-3'>''''
                   <div className='w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center'>''''
                     <MapPin className='h-5 w-5 text-zion-purple' /" >"
@@ -330,8 +315,8 @@ export function ContactInfo() {""
                       Middletown DE 19709
                     </p>
                   </div>""
-                </div>''''
-''''
+                </div>'''',
+      ''''
                 <div className='flex items-center gap-3'>''''
                   <div className='w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center'>''''
                     <Globe className='h-5 w-5 text-zion-purple' /" >"
@@ -349,8 +334,8 @@ export function ContactInfo() {""
                   </div>
                 </div>
               </CardContent>""
-            </Card>''''
-''''
+            </Card>'''',
+      ''''
             <Card className='bg-zion-blue border-zion-blue-light'>''''
               <CardHeader>''''
                 <CardTitle className='text-white flex items-center gap-2'>''''
@@ -413,24 +398,24 @@ export function ContactInfo() {""
                   <Button className='w-full bg-zion-purple hover:bg-zion-purple-dark text-white'>
                     Request Free Quote
                   </Button>""
-                </Link>''''
-''''
+                </Link>'''',
+      ''''
                 <Link to='/comprehensive-services'>''''
                   <Button''''
                     variant='outline'''''
                     className='w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10 '>
                     View All Services
                   </Button>""
-                </Link>''''
-''''
+                </Link>'''',
+      ''''
                 <Link to='/it-onsite-services'>''''
                   <Button''''
                     variant='outline'''''
                     className='w-full border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light/10 '>
                     IT Onsite Services
                   </Button>""
-                </Link>''''
-''''
+                </Link>'''',
+      ''''
                 <div className='pt-4 border-t border-zion-blue-light'>''''
                   <p className='text-zion-slate-light text-sm mb-3'>""
                     Need immediate assistance?''''
@@ -443,8 +428,8 @@ export function ContactInfo() {""
                   </div>
                 </div>
               </CardContent>""
-            </Card>''''
-''''
+            </Card>'''',
+      ''''
             <Card className='bg-zion-blue border-zion-blue-light'>''''
               <CardHeader>''''
                 <CardTitle className='text-white flex items-center gap-2'>''''
@@ -514,19 +499,8 @@ export function ContactInfo() {""
         </div>
       </div>
     </section>
-<<<<<<< HEAD
   );
 }'"""
-}'''';
-'''''';
-=======
-  )", "
-}'""",'"
-}''''
-<<<<<<< HEAD
-'''''';""
-=======
-'''''
->>>>>>> main
->>>>>>> main
->>>>>>> main
+}''''';''''';
+
+

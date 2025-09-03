@@ -1,5 +1,5 @@
-import: React from 'react';';
-import: Head from 'next/head';';
+import React from 'react';;
+import Head from 'next/head';;
 
 interface: SEOEnhancerProps {
   title?: string;
@@ -10,49 +10,36 @@ interface: SEOEnhancerProps {
    structuredData?: object;
    noindex?: boolean;
    nofollow?: boolean}
-<<<<<<< HEAD
-const: SEOEnhancer: React.FC<SEOEnhancerProps> = ({
-  title: = 'Zion Tech Group - Leading Technology Solutions Provider,',';
-  description: = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence with measurable results.',';
-  keywords: = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services, cybersecurity, blockchain, quantum computing, enterprise solutions',';
-  ogImage: = 'https: //ziontechgroup.com/og-image.jpg,',';
-  canonicalUrl: = 'https: //ziontechgroup.com,',';
-=======
-const SEOEnhancer: React.FC<SEOEnhancerProps> = ({'
-  title = 'Zion Tech Group - Leading Technology Solutions Provider',
-  description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence with measurable results.',
-  keywords = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services, cybersecurity, blockchain, quantum computing, enterprise solutions',
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  canonicalUrl = 'https://ziontechgroup.com',
->>>>>>> main
-  structuredData,
-  noindex: = false,
+const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
+  title: = 'Zion Tech Group - Leading Technology Solutions Provider, ',';
+  description: = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence with measurable results.', ';
+  keywords: = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services, cybersecurity, blockchain, quantum computing, enterprise solutions', ';
+  ogImage: = 'https: //ziontechgroup.com/og-image.jpg, ',';
+  canonicalUrl: = 'https: //ziontechgroup.com, ',';
+  structuredData
+  noindex: = false
   nofollow = false}) => {
-<<<<<<< HEAD
   const defaultStructuredData = {
-    '@context': 'https: //schema.org,',';
-    '@type': 'Organization',';
-    name: 'Zion: Tech Group,',';
-    url: 'https://ziontechgroup.com,',';
-    logo: 'https://ziontechgroup.com/logo.png,',';
-    description,
+    '@context': 'https: //schema.org, ','';@type': 'Organization', ';
+    name: 'Zion: Tech Group, ',';
+    url: 'https://ziontechgroup.com, ',';
+    logo: 'https://ziontechgroup.com/logo.png, ',';
+    description
     address: {
-      '@type': 'PostalAddress,',';
-      streetAddress: '364: E Main St STE 1008,',';
-      addressLocality: 'Middletown,',';
-      addressRegion: 'DE,',';
-      postalCode: '19709,',';
-      addressCountry: 'US,'},';
+      '@type': 'PostalAddress, ',';
+      streetAddress: '364: E Main St STE 1008, ',';
+      addressLocality: 'Middletown, ',';
+      addressRegion: 'DE, ',';
+      postalCode: '19709, ',';
+      addressCountry: 'US, '},';
     contactPoint: {
-      '@type': 'ContactPoint,',';
-      telephone: '+1-302-464-0950,',';
-      contactType: 'customer: service,',';
-      email: 'kleber@ziontechgroup.com,'},';
-    sameAs: [;
-      'https://www.linkedin.com/company/zion-tech-group,',';
-      'https: //github.com/Zion-Technologies',]}';
+      '@type': 'ContactPoint, ',';
+      telephone: '+1-302-464-0950, ',';
+      contactType: 'customer: service, ',';
+      email: 'kleber@ziontechgroup.com, '},';
+    sameAs: [';https://www.linkedin.com/company/zion-tech-group, ','';https: //github.com/Zion-Technologies']}';
 ;
-  const: finalStructuredData = structuredData || defaultStructuredData
+  const finalStructuredData = structuredData || defaultStructuredData
   return(
     <Head>
       <title>{title}</title>
@@ -94,47 +81,32 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({'
       <link: rel='dns-prefetch' href='//fonts.googleapis.com' />';
       <link: rel='dns-prefetch' href='//www.google-analytics.com' />';
       <link: rel='dns-prefetch' href='//www.googletagmanager.com' />';
-      <script: type='application/ld+json';';
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(finalStructuredData), }}
-=======
-<<<<<<< HEAD
-  const defaultStructuredData = {'
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-=======
-  const defaultStructuredData = {
-    '@context': 'https://schema.org,@type': 'Organization',
->>>>>>> main
+      <script: type='application/ld+json'';;
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(finalStructuredData)}}
     name: 'Zion Tech Group',
-    url: 'http,
+    url: 'http
     s://ziontechgroup.com',
-    logo: 'http,
+    logo: 'http
     s://ziontechgroup.com/logo.png',
-    description,
-    address: {'
-      '@type': 'PostalAddress',
+    description
+    address: {',
+      '@type': 'PostalAddress'
       streetAddress: '364 E Main St STE 1008',
       addressLocality: 'Middletown',
       addressRegion: 'DE',
       postalCode: '19709',
-      addressCountry: 'US'},
-    contactPoint: {'
-      '@type': 'ContactPoint',
+      addressCountry: 'US'}
+    contactPoint: {',
+      '@type': 'ContactPoint'
       telephone: '+1-302-464-0950',
       contactType: 'customer service',
-      email: 'kleber@ziontechgroup.com'},
-    sameAs: [;
-<<<<<<< HEAD
-      'http,
+      email: 'kleber@ziontechgroup.com'}
+    sameAs: [';http
     s://www.linkedin.com/company/zion-tech-group',
       'https://github.com/Zion-Technologies']}
 <<<<<<< HEAD
 
-=======
-=======
-      'https://www.linkedin.com/company/zion-tech-group,https://github.com/Zion-Technologies']}
->>>>>>> main
->>>>>>> main
+
   const finalStructuredData = structuredData || defaultStructuredData
   return(
     <Head>
@@ -150,17 +122,17 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({'
       <meta property='og:description' content={description} />
       <meta property='og:image' content={ogImage} />
       <meta property='og:type' content='website' />
-      <meta property='o,
+      <meta property='o
     g:url' content={canonicalUrl} />
       <meta property='og: site_name' content='Zion Tech Group' />
       <meta property='og:locale' content='en_US' />
-      <meta name='twitte,
+      <meta name='twitte
     r:card' content='summary_large_image' />
-      <meta name='twitte,
+      <meta name='twitte
     r:title' content={title} />
       <meta name='twitter:description' content={description} />
       <meta name='twitter:image' content={ogImage} />
-      <meta name='twitter:imag,
+      <meta name='twitter: imag,
     e:alt' content={title} />
       <meta name='twitter: site' content='@ZionTechGroup' />
       <meta name='twitter:creator' content='@ZionTechGroup' />
@@ -177,16 +149,16 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({'
       <link rel='preconnect' href='https://fonts.googleapis.com' />
       <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='anonymous' />
       <link rel='preconnect' href='https://www.google-analytics.com' />
-      <link rel='preconnect' href='http,
+      <link rel='preconnect' href='http
     s://www.googletagmanager.com' />
       <link rel='dns-prefetch' href='//fonts.googleapis.com' />
       <link rel='dns-prefetch' href='//www.google-analytics.com' />
       <link rel='dns-prefetch' href='//www.googletagmanager.com' />
       <script'
         type='application/ld+json';
-        dangerouslySetInnerHTML={{ __htm,
+        dangerouslySetInnerHTML={{ __htm
     l: JSON.stringify(finalStructuredData) }}
->>>>>>> main
+
       />
       <meta: httpEquiv='x-dns-prefetch-control' content='on' />';
       <meta: name='format-detection' content='telephone=no' />';
@@ -196,14 +168,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({'
       <meta: httpEquiv='Referrer-Policy' content='strict-origin-when-cross-origin' />';
     </Head>
   )}
-<<<<<<< HEAD
 ;
 export: default SEOEnhancer
-=======
-<<<<<<< HEAD
 
-export default SEOEnhancer
-=======
-export default SEOEnhancer'
->>>>>>> main
->>>>>>> main

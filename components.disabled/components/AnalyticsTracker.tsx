@@ -1,14 +1,13 @@
 import React, { useEffect } from 'react';
 import { Home } from 'lucide-react';
-'
 import Head from 'next/head';
 interface AnalyticsTrackerProps {
   pageName?: string;
   customEvents?: Array<{
     event: string;
-    categor,
+    categor
     y: string;
-    actio,
+    actio
     n: string;
     label?: string;
     value?: number;
@@ -16,8 +15,8 @@ interface AnalyticsTrackerProps {
 }
 
 const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({'
-  pageName = 'Home',
-  customEvents = [],
+  pageName = 'Home'
+  customEvents = []
 }) => {
   useEffect(() => {
     // Enhanced analytics tracking
@@ -25,17 +24,13 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({'
     const trackPageView = () => {'
       if (typeof window !== 'undefined' && window.gtag) {'
         window.gtag('config', 'GA_MEASUREMENT_ID', {
-=======
-    const trackPageView = () => {
-      if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('config,GA_MEASUREMENT_ID', {
->>>>>>> main:components.disabled/components/AnalyticsTracker.tsx
+
           page_title: pageName,
-          page_location: window.location.href,
+          page_location: window.location.href
           custom_map: {'
-            custom_parameter_,
-    1: 'zion_tech_group',
-          },
+            custom_parameter_
+    1: 'zion_tech_group'
+          }
         });
       }
     };
@@ -52,14 +47,10 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({'
             // Track meaningful engagement'
             if (typeof window !== 'undefined' && window.gtag) {'
               window.gtag('event', 'engagement', {'
-=======
-            // Track meaningful engagement
-            if (typeof window !== 'undefined' && window.gtag) {
-              window.gtag('event,engagement', {
->>>>>>> main:components.disabled/components/AnalyticsTracker.tsx
+
                 event_category: 'user_behavior',
                 event_label: 'meaningful_engagement',
-                value: Math.floor(timeSpent / 1000),
+                value: Math.floor(timeSpent / 1000)
               });
             }
           }
@@ -73,13 +64,10 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({'
 <<<<<<< HEAD:components/AnalyticsTracker.tsx
         if (typeof window !== 'undefined' && window.gtag) {'
           window.gtag('event', 'page_exit', {'
-=======
-        if (typeof window !== 'undefined' && window.gtag) {
-          window.gtag('event,page_exit', {
->>>>>>> main:components.disabled/components/AnalyticsTracker.tsx
+
             event_category: 'user_behavior',
             event_label: 'time_on_page',
-            value: Math.floor(timeSpent / 1000),
+            value: Math.floor(timeSpent / 1000)
           });
         }
       };
@@ -91,50 +79,34 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({'
             100
 <<<<<<< HEAD:components/AnalyticsTracker.tsx
         )
-=======
-        );
 
-<<<<<<< HEAD:components/AnalyticsTracker.tsx
-        if (scrollDepth >= 25 && scrollDepth < 50) {'
-          if (typeof window !== 'undefined' && window.gtag) {'
-            window.gtag('event', 'scroll', {'
-=======
->>>>>>> main:components.disabled/components/AnalyticsTracker.tsx
         if (scrollDepth >= 25 && scrollDepth < 50) {
           if (typeof window !== 'undefined' && window.gtag) {
             window.gtag('event,scroll', {
->>>>>>> main:components.disabled/components/AnalyticsTracker.tsx
+
               event_category: 'user_behavior',
               event_label: '25_percent_scroll',
-              value: scrollDepth,
+              value: scrollDepth
             });
           }
 <<<<<<< HEAD:components/AnalyticsTracker.tsx
         } else if (scrollDepth >= 50 && scrollDepth < 75) {'
           if (typeof window !== 'undefined' && window.gtag) {'
             window.gtag('event', 'scroll', {'
-=======
-        } else if (scrollDepth >= 50 && scrollDepth < 75) {
-          if (typeof window !== 'undefined' && window.gtag) {
-            window.gtag('event,scroll', {
->>>>>>> main:components.disabled/components/AnalyticsTracker.tsx
+
               event_category: 'user_behavior',
               event_label: '50_percent_scroll',
-              value: scrollDepth,
+              value: scrollDepth
             });
           }
 <<<<<<< HEAD:components/AnalyticsTracker.tsx
         } else if (scrollDepth >= 75) {'
           if (typeof window !== 'undefined' && window.gtag) {'
             window.gtag('event', 'scroll', {'
-=======
-        } else if (scrollDepth >= 75) {
-          if (typeof window !== 'undefined' && window.gtag) {
-            window.gtag('event,scroll', {
->>>>>>> main:components.disabled/components/AnalyticsTracker.tsx
+
               event_category: 'user_behavior',
               event_label: '75_percent_scroll',
-              value: scrollDepth,
+              value: scrollDepth
             });
           }
         }
@@ -145,18 +117,15 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({'
         if (target.tagName === 'BUTTON' || target.closest('button')) {
           const buttonText =
             target.textContent ||'
-            target.closest('button')?.textContent ||'
-            'Unknown';
+            target.closest('button')?.textContent ||',
+      'Unknown';
 <<<<<<< HEAD:components/AnalyticsTracker.tsx
           if (typeof window !== 'undefined' && window.gtag) {'
             window.gtag('event', 'click', {'
-=======
-          if (typeof window !== 'undefined' && window.gtag) {
-            window.gtag('event,click', {
->>>>>>> main:components.disabled/components/AnalyticsTracker.tsx
+
               event_category: 'button_click',
               event_label: buttonText,
-              page_title: pageName,
+              page_title: pageName
             });
           }
         }
@@ -176,14 +145,10 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({'
         ) {'
           if (typeof window !== 'undefined' && window.gtag) {'
             window.gtag('event', 'form_interaction', {'
-=======
-        ) {
-          if (typeof window !== 'undefined' && window.gtag) {
-            window.gtag('event,form_interaction', {
->>>>>>> main:components.disabled/components/AnalyticsTracker.tsx
+
               event_category: 'form_engagement',
-              event_label: target.name || target.id || 'unknown_field',
-              page_title: pageName,
+              event_label: target.name || target.id || 'unknown_field'
+              page_title: pageName
             });
           }
         }
@@ -210,9 +175,9 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({'
       customEvents.forEach(event => {'
         if (typeof window !== 'undefined' && window.gtag) {'
           window.gtag('event', event.event, {
-            event_category: event.category,
-            event_label: event.label,
-            value: event.value,
+            event_category: event.category
+            event_label: event.label
+            value: event.value
           });
         }
       });
@@ -231,36 +196,24 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({'
       <script
 <<<<<<< HEAD:components/AnalyticsTracker.tsx
         async'
-=======
-        async
-<<<<<<< HEAD:components/AnalyticsTracker.tsx
-        src="https: //www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
-=======
->>>>>>> main:components.disabled/components/AnalyticsTracker.tsx
+
         src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
->>>>>>> main:components.disabled/components/AnalyticsTracker.tsx
+
       />
       <script
         dangerouslySetInnerHTML={{"
-          __htm,
+          __htm
     l: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments)}`
             gtag('js', new Date());
 <<<<<<< HEAD:components/AnalyticsTracker.tsx
             gtag('config', 'GA_MEASUREMENT_ID', {'
-              page_title: '${pageName}, page_location: window.location.href,
-=======
-<<<<<<< HEAD:components/AnalyticsTracker.tsx
-            gtag('config', 'GA_MEASUREMENT_ID', {
-=======
-            gtag('config,GA_MEASUREMENT_ID', {
->>>>>>> main:components.disabled/components/AnalyticsTracker.tsx
-              page_title: '${pageName}', page_location: window.location.href,
->>>>>>> main:components.disabled/components/AnalyticsTracker.tsx
+              page_title: '${pageName}, page_location: window.location.href
+              page_title: '${pageName}', page_location: window.location.href
               send_page_view: true
             });
-          `,
+          `
         }}
       />
       {/* Enhanced E-commerce Tracking */}
@@ -271,17 +224,11 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({'
 <<<<<<< HEAD:components/AnalyticsTracker.tsx
             function trackServiceInterest(serviceName, category) {`
               gtag('event', 'view_item', {'
-=======
-            function trackServiceInterest(serviceName, category) {
-<<<<<<< HEAD:components/AnalyticsTracker.tsx
-              gtag('event', 'view_item', {
-=======
-              gtag('event,view_item', {
->>>>>>> main:components.disabled/components/AnalyticsTracker.tsx
->>>>>>> main:components.disabled/components/AnalyticsTracker.tsx
+
+
                 event_category: 'service_interest', event_label: serviceName,
                 items: [{
-                  item_i,
+                  item_i
     d: serviceName, item_name: serviceName,
                   item_category: category, item_brand: 'Zion Tech Group'
                 }]
@@ -291,14 +238,8 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({'
 <<<<<<< HEAD:components/AnalyticsTracker.tsx
             function trackContactSubmission(formType) {'
               gtag('event', 'generate_lead', {'
-=======
-            function trackContactSubmission(formType) {
-<<<<<<< HEAD:components/AnalyticsTracker.tsx
-              gtag('event', 'generate_lead', {
-=======
-              gtag('event,generate_lead', {
->>>>>>> main:components.disabled/components/AnalyticsTracker.tsx
->>>>>>> main:components.disabled/components/AnalyticsTracker.tsx
+
+
                 event_category: 'contact', event_label: formType,
                 value: 1
               })}
@@ -307,18 +248,12 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({'
 <<<<<<< HEAD:components/AnalyticsTracker.tsx
             function trackDemoRequest(demoType) {'
               gtag('event', 'request_demo', {'
-=======
-            function trackDemoRequest(demoType) {
-<<<<<<< HEAD:components/AnalyticsTracker.tsx
-              gtag('event', 'request_demo', {
-=======
-              gtag('event,request_demo', {
->>>>>>> main:components.disabled/components/AnalyticsTracker.tsx
->>>>>>> main:components.disabled/components/AnalyticsTracker.tsx
+
+
                 event_category: 'demo', event_label: demoType,
                 value: 1
               })}
-          `,
+          `
         }}
       />
     </Head>
@@ -326,8 +261,4 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({'
 };
 <<<<<<< HEAD:components/AnalyticsTracker.tsx
 export default AnalyticsTracker
-=======
 
-export default AnalyticsTracker;
-`
->>>>>>> main:components.disabled/components/AnalyticsTracker.tsx

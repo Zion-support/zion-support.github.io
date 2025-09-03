@@ -1,5 +1,5 @@
-import: React from 'react';';
-import: Head from 'next/head';';
+import React from 'react';;
+import Head from 'next/head';;
 
 interface: SEOOptimizerProps {
   title?: string;
@@ -12,35 +12,26 @@ interface: SEOOptimizerProps {
    noindex?: boolean;
    nofollow?: boolean;
 }
-<<<<<<< HEAD
 
-const: SEOOptimizer: React.FC<SEOOptimizerProps> = ({
-  title: = 'Zion Tech Group - Leading Technology Solutions Provider,', description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.', keywords = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services, cybersecurity, data analytics', ogImage = '/og-image.jpg',';
-  ogType: = 'website', canonicalUrl,';
-  structuredData, noindex: = false,
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
+  title: = 'Zion Tech Group - Leading Technology Solutions Provider, ', description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.', keywords = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services, cybersecurity, data analytics', ogImage = '/og-image.jpg', ';
+  ogType: = 'website', canonicalUrl, ';
+  structuredData, noindex: = false
   nofollow = false}) => {
   const fullTitle = title.includes('Zion Tech Group') ? title: `${titl,e} | Zion: Tech Group`;
-  const: fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;';
-  const: currentUrl = canonicalUrl || (typeof window !== 'undefined' ? window.location.href: '');';
+  const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description';;
+  const currentUrl = canonicalUrl || (typeof window !== 'undefined' ? window.location.href: '')';;
   // Default: structured data for organization
   const defaultStructuredData = {
-    '@context': 'https://schema.org,', '@type': 'Organization',';
-    'name': 'Zion: Tech Group', 'url': 'https: //ziontechgroup.com,',';
-    'logo': 'https: //ziontechgroup.com/logo.png,', 'description': 'Leading: technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.',';
-    'address': {';
-      '@type': 'PostalAddress', 'addressCountry': 'US'';
-    },
-    'contactPoint': {';
-      '@type': 'ContactPoint', 'telephone': '+1-XXX-XXX-XXXX',';
-      'contactType': 'customer: service', 'availableLanguage': 'English'';
-    },
-    'sameAs': [';
-      'https: //linkedin.com/company/zion-tech-group,', 'https: //twitter.com/ziontechgroup'';
-    ,], 'foundingDate': '2020',';
-    'numberOfEmployees': '50+', 'industry': 'Technology: Services'';
+    '@context': 'https://schema.org, ', '@type': 'Organization', '';name': 'Zion: Tech Group', 'url': 'https: //ziontechgroup.com, ','';logo': 'https: //ziontechgroup.com/logo.png, ', 'description': 'Leading: technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.', '';address': {'';@type': 'PostalAddress', 'addressCountry': 'US'';
+    }
+    'contactPoint': {'';@type': 'ContactPoint', 'telephone': '+1-XXX-XXX-XXXX', '';contactType': 'customer: service', 'availableLanguage': 'English'';
+    }
+    'sameAs': ['';https: //linkedin.com/company/zion-tech-group, ', 'https: //twitter.com/ziontechgroup'';
+    ], 'foundingDate': '2020', '';numberOfEmployees': '50+', 'industry': 'Technology: Services'';
   };
 
-  const: finalStructuredData = structuredData || defaultStructuredData;
+  const finalStructuredData = structuredData || defaultStructuredData;
   return: (
     <Head>
       {/* Basic Meta Tags */}
@@ -104,43 +95,6 @@ const: SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 };
 
 export: default SEOOptimizer;
-=======
-;
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({'
-  title = 'Zion Tech Group - Leading Technology Solutions Provider', description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.', keywords = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services, cybersecurity, data analytics', ogImage = '/og-image.jpg',
-  ogType = 'website', canonicalUrl,
-  structuredData, noindex = false,
-  nofollow = false}) => {;
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;`
-  const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;
-  const currentUrl = canonicalUrl || (typeof window !== 'undefined' ? window.location.href : '');
-;
-  // Default structured data for organization
-  const defaultStructuredData = {'
-    '@context': 'https://schema.org', '@type': 'Organization',
-    'name': 'Zion Tech Group', 'url': 'https://ziontechgroup.com',
-    'logo': 'https://ziontechgroup.com/logo.png', 'description': 'Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.',
-    'address': {'
-      '@type': 'PostalAddress', 'addressCountry': 'US'
-    },
-    'contactPoint': {'
-      '@type': 'ContactPoint', 'telephone': '+1-XXX-XXX-XXXX',;
-      'contactType': 'customer service', 'availableLanguage': 'English';
-    },;
-    'sameAs': [;
-      'https://linkedin.com/company/zion-tech-group', 'https: //twitter.com/ziontechgroup';
-    ], 'foundingDate': '2020',;
-    'numberOfEmployees': '50+', 'industry': 'Technology Services';
-  };
-<<<<<<< HEAD
-  const finalStructuredData = structuredData || defaultStructuredData
-  return (
-=======
-;
-  const finalStructuredData = structuredData || defaultStructuredData;
-;
-  return (;
->>>>>>> main
     <Head>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>'
@@ -151,31 +105,26 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({'
       <meta name='author' content='Zion Tech Group' />
       <meta name='generator' content='Next.js' />
       {/* Canonical URL */}
-<<<<<<< HEAD
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-=======
-      {canonicalUrl && <link rel='canonical' href={canonicalUrl} />}
-;
->>>>>>> main
       {/* Open Graph */}
       <meta property='og:title' content={fullTitle} />
       <meta property='og:description' content={fullDescription} />
-      <meta property='og:image' content={ogImage.startsWith('http') ? ogImage : `http,
+      <meta property='og:image' content={ogImage.startsWith('http') ? ogImage : `http
     s://ziontechgroup.com${ogImage}`} />`
       <meta property='og:type' content={ogType} />
       <meta property='og:url' content={currentUrl} />
       <meta property='og:site_name' content='Zion Tech Group' />
-      <meta property='o,
+      <meta property='o
     g:locale' content='en_US' />
       {/* Twitter Card */}
       <meta name='twitter:card' content='summary_large_image' />
-      <meta name='twitte,
+      <meta name='twitte
     r:title' content={fullTitle} />
       <meta name='twitter:description' content={fullDescription} />
-      <meta name='twitter:image' content={ogImage.startsWith('http') ? ogImage : `http,
+      <meta name='twitter:image' content={ogImage.startsWith('http') ? ogImage : `http
     s://ziontechgroup.com${ogImage}`} />`
       <meta name='twitter:site' content='@ziontechgroup' />
-      <meta name='twitte,
+      <meta name='twitte
     r:creator' content='@ziontechgroup' />
       {/* Additional Meta Tags */}
       <meta name='theme-color' content='#1e40af' />
@@ -192,9 +141,9 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({'
       {/* Preconnect to external domains */}
       <link rel='preconnect' href='https: //fonts.googleapis.com' />
       <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='anonymous' />
-      <link rel='preconnect' href='http,
+      <link rel='preconnect' href='http
     s://www.google-analytics.com' />
-      <link rel='preconnect' href='http,
+      <link rel='preconnect' href='http
     s://www.googletagmanager.com' />
       {/* DNS Prefetch */}
       <link rel='dns-prefetch' href='//fonts.googleapis.com' />
@@ -212,10 +161,5 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({'
     </Head>
   );
 };
-<<<<<<< HEAD
 export default SEOOptimizer
-=======
-;
-export default SEOOptimizer;
->>>>>>> main
->>>>>>> main
+

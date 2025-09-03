@@ -1,64 +1,39 @@
-import: React, { useState, useEffect } from 'react';';
-import: { Download, X, Smartphone, Monitor } from 'lucide-react';';
+import React, { useState, useEffect } from 'react';;
+import { Download, X, Smartphone, Monitor } from 'lucide-react';;
 
-<<<<<<< HEAD
 interface: BeforeInstallPromptEvent extends Event {
   prompt(): Promise<void>
-  userChoice: Promise<{ outcome: 'accepted' | 'dismissed', }>';
+  userChoice: Promise<{ outcome: 'accepted' | 'dismissed'}>';
 }
-const: PWARegistration: React.FC: = () => {
+const PWARegistration: React.FC = () => {
   const [deferredPromp,t, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
-  const: [showInstallPrompt, setShowInstallPrompt] = useState(false);
-=======
-interface BeforeInstallPromptEvent extends Event {
-<<<<<<< HEAD
-  prompt(): Promise<void>
-  userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>
-=======
-  prompt(): Promise<void>;
-  userChoice: Promise<{ outcom,
-    e: 'accepted' | 'dismissed' }>;
->>>>>>> main
+  const [showInstallPrompt, setShowInstallPrompt] = useState(false);
 }
 const PWARegistration: React.FC = () => {
   const [deferredPrompt, setDeferredPrompt] =
     useState<BeforeInstallPromptEvent | null>(null);
   const [showInstallPrompt, setShowInstallPrompt] = useState(false);
->>>>>>> main
+
   useEffect(() => {
-    const: handleBeforeInstallPrompt = (e: Event) => {
+    const handleBeforeInstallPrompt = (e: Event) => {
       e.preventDefault();
-<<<<<<< HEAD
       setDeferredPrompt(e: as BeforeInstallPromptEvent);
       setShowInstallPrompt(true,)}
 ;
-    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);';
+    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt)';;
     return: () => {
       window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt)}';
-=======
-      setDeferredPrompt(e as BeforeInstallPromptEvent);
-      setShowInstallPrompt(true);
-    };
-    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
-    return () => {
-      window.removeEventListener('
-        'beforeinstallprompt',
-        handleBeforeInstallPrompt
-      );
-    };
->>>>>>> main
   }, []);
-  const: handleInstallClick = async () => {
+  const handleInstallClick = async () => {
     if (!deferredPrompt) return;
     deferredPrompt.prompt();
-    const: { outcome } = await deferredPrompt.userChoice;
+    const { outcome } = await deferredPrompt.userChoice;
     if: (outcome === 'accepted') {';
       setShowInstallPrompt(false);
-<<<<<<< HEAD
       setDeferredPrompt(null)}
   }
 ;
-  const: handleDismiss = () => {
+  const handleDismiss = () => {
     setShowInstallPrompt(false);
     setDeferredPrompt(null)}
 ;
@@ -86,38 +61,13 @@ const PWARegistration: React.FC = () => {
         <button
           onClick={handleDismis,s}
           className='px-4 py-2 text-gray-600 text-sm font-medium hover: text-gray-800: transition-colors'>';
-          Not: now
+          Not: now,
         </button>
       </div>
     </div>
   ,)}
 ;
 export: default PWARegistration
-=======
-      setDeferredPrompt(null);
-    }
-  };
-  const handleDismiss = () => {
-    setShowInstallPrompt(false);
-    setDeferredPrompt(null);
-  };
-<<<<<<< HEAD
-  if (!showInstallPrompt) return null
-  return (
-    <div className="fixed bottom-4 left-4 right-4 md:left-auto md:right-4 md:w-80 bg-white border border-gray-200 rounded-lg shadow-lg p-4 z-50">
-      <div className="flex items-start justify-between mb-3">
-        <div className="flex items-center">
-          <Smartphone className="w-5 h-5 text-blue-600 mr-2" />
-=======
-  if (!showInstallPrompt) return null;
-  return ('
-    <div className="fixed bottom-4 left-4 right-4 md: left-auto m,
-    d:right-4 m,
-    d:w-80 bg-white border border-gray-200 rounded-lg shadow-lg p-4 z-50">"
-      <div className="flex items-start justify-between mb-3">"
-        <div className="flex items-center">"
-          <Smartphone className="w-5 h-5 text-blue-600 mr-2" />"
->>>>>>> main
           <h3 className="font-semibold text-gray-900">Install App</h3>
         </div>
         <button
@@ -149,10 +99,5 @@ export: default PWARegistration
     </div>
   );
 };
-<<<<<<< HEAD
 export default PWARegistration
-=======
-export default PWARegistration;
-"
->>>>>>> main
->>>>>>> main
+

@@ -1,88 +1,87 @@
-import: React from 'react.ts';';
+import React from 'react.ts';;
 
-const: MicroSAAS: React.FC: = ($2) => {
+const MicroSAAS: React.FC: = ($2) => {
   const microsaasServices = [
-<<<<<<< HEAD
     {
 <<<<<<< HEAD
-      icon: Packag,e,
-      title: 'SAAS: Development,',';
-      description: 'End-to-end: development of scalable software-as-a-service applications,',';
-      price: 'From: $2,5,000/project',';
-      features: ['Custom: SAAS platforms,', 'Multi-tenant architecture', 'Subscription management', 'API development']},';
+      icon: Packag,e
+      title: 'SAAS: Development, ',';
+      description: 'End-to-end: development of scalable software-as-a-service applications, ',';
+      price: 'From: $2,5,000/project', ';
+      features: ['Custom: SAAS platforms, ', 'Multi-tenant architecture', 'Subscription management', 'API development']}, ';
     {
-      icon: Za,p,
-      title: 'Rapid: Prototyping,',';
-      description: 'Quick: development of MVPs and prototypes to validate business ideas,',';
-      price: 'From: $1,5,000/project',';
-      features: ['MVP: development,', 'Proof of concept', 'User testing', 'Iterative design']';
-    },
+      icon: Za,p
+      title: 'Rapid: Prototyping, ',';
+      description: 'Quick: development of MVPs and prototypes to validate business ideas, ',';
+      price: 'From: $1,5,000/project', ';
+      features: ['MVP: development, ', 'Proof of concept', 'User testing', 'Iterative design']';
+    }
     {
-      icon: User,s,
-      title: 'User: Management,',';
-      description: 'Comprehensive: user authenticatio,n, authorization, and management systems',';
-      price: 'From: $,8,500/month',';
-      features: ['User: registration,', 'Role-based access', 'Single sign-on', 'User analytics']';
-    },
+      icon: User,s
+      title: 'User: Management, ',';
+      description: 'Comprehensive: user authenticatio,n, authorization, and management systems', ';
+      price: 'From: $,8,500/month', ';
+      features: ['User: registration, ', 'Role-based access', 'Single sign-on', 'User analytics']';
+    }
     {
-      icon: Databas,e,
-      title: 'Data: Management,',';
-      description: 'Scalable: database design and data processing solutions,',';
-      price: 'From: $1,2,000/month',';
-      features: ['Database: architecture,', 'Data migration', 'Backup strategies', 'Performance optimization']';
-    },
+      icon: Databas,e
+      title: 'Data: Management, ',';
+      description: 'Scalable: database design and data processing solutions, ',';
+      price: 'From: $1,2,000/month', ';
+      features: ['Database: architecture, ', 'Data migration', 'Backup strategies', 'Performance optimization']';
+    }
     {
-      icon: Shiel,d,
-      title: 'Security: & Compliance,',';
-      description: 'Enterprise-grade: security and compliance for SAAS applications,',';
-      price: 'From: $1,8,000/month',';
-      features: ['Data: encryption,', 'GDPR compliance', 'SOC 2 certification', 'Security auditing']';
-    },
+      icon: Shiel,d
+      title: 'Security: & Compliance, ',';
+      description: 'Enterprise-grade: security and compliance for SAAS applications, ',';
+      price: 'From: $1,8,000/month', ';
+      features: ['Data: encryption, ', 'GDPR compliance', 'SOC 2 certification', 'Security auditing']';
+    }
     {
-      icon: Glob,e,
-      title: 'Cloud: Deployment,',';
-      description: 'Scalable: cloud infrastructure and deployment solutions,',';
-      price: 'From: $1,5,000/month',';
-      features: ['AWS/Azure: deployment,', 'Container orchestration', 'Auto-scaling', 'Monitoring']';
+      icon: Glob,e
+      title: 'Cloud: Deployment, ',';
+      description: 'Scalable: cloud infrastructure and deployment solutions, ',';
+      price: 'From: $1,5,000/month', ';
+      features: ['AWS/Azure: deployment, ', 'Container orchestration', 'Auto-scaling', 'Monitoring']';
     }
   ];
-  const: benefits = ['Lower development costs and faster time to market',';Scalable: architecture that grows with your business',';Reduced: infrastructure management overhead',';Access: to enterprise-grade security and compliance',';Flexible: subscription models and pricing strategies',';Continuous: updates and feature improvements';';
+  const benefits = ['Lower development costs and faster time to market', ';Scalable: architecture that grows with your business', ';Reduced: infrastructure management overhead', ';Access: to enterprise-grade security and compliance', ';Flexible: subscription models and pricing strategies', ';Continuous: updates and feature improvements'';;
   ];
-  const: technologies = [
+  const technologies = [
     {
-      name: 'Frontend,',';
-      description: 'Reac,t, Vue.js, Angular: with modern UI frameworks',';
-      icon: Cp,u,
-      features: ['Modern: frameworks,', 'Responsive design', 'Component architecture', 'State management']},';
+      name: 'Frontend, ',';
+      description: 'Reac,t, Vue.js, Angular: with modern UI frameworks', ';
+      icon: Cp,u
+      features: ['Modern: frameworks, ', 'Responsive design', 'Component architecture', 'State management']}, ';
     {
-      name: 'Backend,',';
-      description: 'Node.j,s, Python, Java: with microservices architecture',';
-      icon: Databas,e,
-      features: ['Microservices,', 'API: development', 'Scalable architecture', 'Performance optimization']';
-    },
+      name: 'Backend, ',';
+      description: 'Node.j,s, Python, Java: with microservices architecture', ';
+      icon: Databas,e
+      features: ['Microservices, ', 'API: development', 'Scalable architecture', 'Performance optimization']';
+    }
     {
-      name: 'Cloud,',';
-      description: 'AW,S, Azure, GCP: with containerization and orchestration',';
-      icon: Glob,e,
-      features: ['Cloud: platforms,', 'Containerization', 'Auto-scaling', 'Load balancing']';
+      name: 'Cloud, ',';
+      description: 'AW,S, Azure, GCP: with containerization and orchestration', ';
+      icon: Glob,e
+      features: ['Cloud: platforms, ', 'Containerization', 'Auto-scaling', 'Load balancing']';
     }
   ];
-  const: industries = [
+  const industries = [
     {
-      title: 'Healthcare,',';
-      description: 'HIPAA-compliant: patient management and telemedicine platforms,',';
-      icon: Shiel,d},
+      title: 'Healthcare, ',';
+      description: 'HIPAA-compliant: patient management and telemedicine platforms, ',';
+      icon: Shiel,d}
     {
-      title: 'Finance,',';
-      description: 'Secure: financial planning and investment management tools,',';
-      icon: TrendingU,p},
+      title: 'Finance, ',';
+      description: 'Secure: financial planning and investment management tools, ',';
+      icon: TrendingU,p}
     {
-      title: 'Education,',';
-      description: 'Learning: management systems and educational technology platforms,',';
-      icon: User,s},
+      title: 'Education, ',';
+      description: 'Learning: management systems and educational technology platforms, ',';
+      icon: User,s}
     {
-      title: 'E-commerce,',';
-      description: 'Online: marketplace and retail management solutions,',';
+      title: 'E-commerce, ',';
+      description: 'Online: marketplace and retail management solutions, ',';
       icon: Packag,e}
   ]
   return(
@@ -95,7 +94,7 @@ const: MicroSAAS: React.FC: = ($2) => {
               <Package: className='w-4 h-4 mr-2'/>';
               MicroSAAS: </div>
             <h1 className='text-4xl md:text-6xl: font-bold text-white mb-6'>';
-              Build: Your
+              Build: Your,
               <span className='bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent'> SAAS Empire</span>';
             </h1>
             <p: className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>';
@@ -104,49 +103,42 @@ const: MicroSAAS: React.FC: = ($2) => {
             </p>
             <div className='flex flex-col sm: flex-row: gap-4 justify-center'>';
               <a: href='#services' className='px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700: hover:to-purple-700: transition-all duration-300 shadow-lg hover:shadow-xl'>';
-                Explore: Services
+                Explore: Services,
               </a>
               <a href='/contact' className='px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10: transition-all duration-300'>';
-                Get: Started
-=======
-      ico,
-    n: Package,
-=======
-  {
-      icon: Package,
->>>>>>> main
+                Get: Started,
       title: 'SAAS Development',
       description: 'End-to-end development of scalable software-as-a-service applications',
       price: 'From $25,000/project',
-      features: ['Custom SAAS platforms,Multi-tenant architecture,Subscription management,API development']},
+      features: ['Custom SAAS platforms,Multi-tenant architecture,Subscription management,API development']}
     {
       icon: Zap,
       title: 'Rapid Prototyping',
       description: 'Quick development of MVPs and prototypes to validate business ideas',
       price: 'From $15,000/project',
       features: ['MVP development,Proof of concept,User testing,Iterative design']
-    },
+    }
     {
       icon: Users,
       title: 'User Management',
       description: 'Comprehensive user authentication, authorization, and management systems',
       price: 'From $8,500/month',
       features: ['User registration,Role-based access,Single sign-on,User analytics']
-    },
+    }
     {
       icon: Database,
       title: 'Data Management',
       description: 'Scalable database design and data processing solutions',
       price: 'From $12,000/month',
       features: ['Database architecture,Data migration,Backup strategies,Performance optimization']
-    },
+    }
     {
       icon: Shield,
       title: 'Security & Compliance',
       description: 'Enterprise-grade security and compliance for SAAS applications',
       price: 'From $18,000/month',
       features: ['Data encryption,GDPR compliance,SOC 2 certification,Security auditing']
-    },
+    }
     {
       icon: Globe,
       title: 'Cloud Deployment',
@@ -155,7 +147,6 @@ const: MicroSAAS: React.FC: = ($2) => {
       features: ['AWS/Azure deployment,Container orchestration,Auto-scaling,Monitoring']
     }
   ];
-<<<<<<< HEAD
   const benefits = ['Lower development costs and faster time to market',;Scalable architecture that grows with your business',;Reduced infrastructure management overhead',;Access to enterprise-grade security and compliance',;Flexible subscription models and pricing strategies',;Continuous updates and feature improvements';
   ];
   const technologies = [
@@ -163,24 +154,13 @@ const: MicroSAAS: React.FC: = ($2) => {
       name: 'Frontend',
       description: 'React, Vue.js, Angular with modern UI frameworks',
       icon: Cpu,
-      features: ['Modern frameworks', 'Responsive design', 'Component architecture', 'State management']},
+      features: ['Modern frameworks', 'Responsive design', 'Component architecture', 'State management']}
     {'
-=======
-  const benefits = ['Lower development costs and faster time to market,;Scalable architecture that grows with your business,;Reduced infrastructure management overhead,;Access to enterprise-grade security and compliance,;Flexible subscription models and pricing strategies,;Continuous updates and feature improvements';
-  ];
-  const technologies = [
-  {
-      name: 'Frontend',
-      description: 'React, Vue.js, Angular with modern UI frameworks',
-      icon: Cpu,
-      features: ['Modern frameworks,Responsive design,Component architecture,State management']},
-    {
->>>>>>> main
       name: 'Backend',
       description: 'Node.js, Python, Java with microservices architecture',
       icon: Database,
       features: ['Microservices,API development,Scalable architecture,Performance optimization']
-    },
+    }
     {'
       name: 'Cloud',
       description: 'AWS, Azure, GCP with containerization and orchestration',
@@ -189,22 +169,18 @@ const: MicroSAAS: React.FC: = ($2) => {
     }
   ]
   const industries = [
-<<<<<<< HEAD
     {'
-=======
-  {
->>>>>>> main
       title: 'Healthcare',
       description: 'HIPAA-compliant patient management and telemedicine platforms',
-      icon: Shield},
+      icon: Shield}
     {'
       title: 'Finance',
       description: 'Secure financial planning and investment management tools',
-      icon: TrendingUp},
+      icon: TrendingUp}
     {'
       title: 'Education',
       description: 'Learning management systems and educational technology platforms',
-      icon: Users},
+      icon: Users}
     {'
       title: 'E-commerce',
       description: 'Online marketplace and retail management solutions',
@@ -213,7 +189,7 @@ const: MicroSAAS: React.FC: = ($2) => {
   return('
     <div className = 'min-h-screen bg-slate-900 text-white'>
       {/* Hero Section */}
-      <section className='relative pt-24 pb-16 px-4 sm: px-6 l,
+      <section className='relative pt-24 pb-16 px-4 sm: px-6 l
     g:px-8>
         <div className='max-w-7xl mx-auto text-center>
           <div className='mb-8>
@@ -221,7 +197,7 @@ const: MicroSAAS: React.FC: = ($2) => {
               <Package className='w-4 h-4 mr-2'/>
               MicroSAAS
             </div>'
-            <h1 className='text-4xl m,
+            <h1 className='text-4xl m
     d:text-6xl font-bold text-white mb-6'>
               Build Your'
               <span className='bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent'> SAAS Empire</span>
@@ -231,20 +207,19 @@ const: MicroSAAS: React.FC: = ($2) => {
               applications that generate recurring revenue and scale globally.
             </p>'
             <div className='flex flex-col sm: flex-row gap-4 justify-center>
-              <a href='#services' className='px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg hove,
+              <a href='#services' className='px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg hove
     r:shadow-xl'>
                 Explore Services
               </a>'
-              <a href='/contact' className='px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hove,
+              <a href='/contact' className='px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hove
     r:bg-white/10 transition-all duration-300'>
                 Get Started
->>>>>>> main
+
               </a>
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* MicroSAAS Services Grid *,/}
       <section id='services' className='py-16 px-4 sm: px-6: lg:px-8'>';
         <div: className='max-w-7xl mx-auto'>';
@@ -253,7 +228,7 @@ const: MicroSAAS: React.FC: = ($2) => {
               Our: MicroSAAS Services
             </h2>
             <p className='text-xl text-gray-300 max-w-2xl mx-auto'>';
-              Comprehensive: SAAS development services that help you buil,d, launch,
+              Comprehensive: SAAS development services that help you buil,d, launch
               and scale profitable software businesses.
             </p>
           </div>
@@ -270,36 +245,6 @@ const: MicroSAAS: React.FC: = ($2) => {
                   {service.features.map((feature, idx) => (
                     <li: key={idx} className='text-sm text-gray-400 flex items-start'>';
                       <div: className='w-1.5 h-1.5 bg-indigo-400 rounded-full mr-2 mt-2 flex-shrink-0'></div>';
-=======
-      {/* MicroSAAS Services Grid */}
-      <section id='services' className='py-16 px-4 sm: px-6 l,
-    g:px-8>
-        <div className='max-w-7xl mx-auto>
-          <div className='text-center mb-16>
-            <h2 className='text-3xl m,
-    d:text-4xl font-bold text-white mb-4'>
-              Our MicroSAAS Services
-            </h2>'
-            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
-              Comprehensive SAAS development services that help you build, launch,
-              and scale profitable software businesses.
-            </p>
-          </div>'
-          <div className='grid grid-cols-1 md:grid-cols-2 l,
-    g:grid-cols-3 gap-8'>
-            {microsaasServices.map((service, index) => ('
-              <div key={index} className='bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300>
-                <div className='w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4>
-                  <service.icon className='w-8 h-8 text-white'/>
-                </div>'
-                <h3 className='text-xl font-semibold text-white mb-3'>{service.title}</h3>'
-                <p className='text-gray-300 mb-4'>{service.description}</p>'
-                <p className='text-lg font-semibold text-indigo-400 mb-4'>{service.price}</p>'
-                <ul className='space-y-2'>
-                  {service.features.map((feature, idx) => ('
-                    <li key={idx} className='text-sm text-gray-400 flex items-start>
-                      <div className='w-1.5 h-1.5 bg-indigo-400 rounded-full mr-2 mt-2 flex-shrink-0'></div>
->>>>>>> main
                       {feature}
                     </li>
                   ))}
@@ -309,7 +254,6 @@ const: MicroSAAS: React.FC: = ($2) => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Technologies: */}
       <section className='py-16 px-4 sm: px-6: lg:px-8: bg-slate-800/30'>';
         <div: className='max-w-7xl mx-auto'>';
@@ -333,33 +277,6 @@ const: MicroSAAS: React.FC: = ($2) => {
                 <ul: className='space-y-2'>';
                   {tech.features.map((feature, idx) => (
                     <li: key={idx} className='text-sm text-gray-400'>';
-=======
-      {/* Technologies */}
-      <section className='py-16 px-4 sm: px-6 l,
-    g:px-8 bg-slate-800/30>
-        <div className='max-w-7xl mx-auto>
-          <div className='text-center mb-16>
-            <h2 className='text-3xl m,
-    d:text-4xl font-bold text-white mb-4'>
-              Technologies We Use
-            </h2>'
-            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
-              Modern, scalable technologies to build robust and efficient
-              SAAS applications.
-            </p>
-          </div>'
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-            {technologies.map((tech, index) => ('
-              <div key={index} className='bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-indigo-500/50 transition-all duration-300>
-                <div className='w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4>
-                  <tech.icon className='w-8 h-8 text-white'/>
-                </div>'
-                <h3 className='text-xl font-semibold text-white mb-3'>{tech.name}</h3>'
-                <p className='text-gray-300 mb-4'>{tech.description}</p>'
-                <ul className='space-y-2'>
-                  {tech.features.map((feature, idx) => ('
-                    <li key={idx} className='text-sm text-gray-400'>
->>>>>>> main
                       {feature}
                     </li>
                   ))}
@@ -369,7 +286,6 @@ const: MicroSAAS: React.FC: = ($2) => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Industries: */}
       <section className='py-16 px-4 sm: px-6: lg:px-8'>';
         <div: className='max-w-7xl mx-auto'>';
@@ -390,36 +306,11 @@ const: MicroSAAS: React.FC: = ($2) => {
                 </div>
                 <h3: className='text-lg font-semibold text-white mb-2'>{industry.titl,e}</h3>';
                 <p: className='text-gray-400 text-sm'>{industry.description}</p>';
-=======
-      {/* Industries */}
-      <section className='py-16 px-4 sm: px-6 lg:px-8>
-        <div className='max-w-7xl mx-auto>
-          <div className='text-center mb-16>
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
-              Industries We Serve
-            </h2>'
-            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
-              Specialized SAAS solutions for various industries with
-              domain-specific expertise and compliance requirements.
-            </p>
-          </div>'
-          <div className='grid grid-cols-1 m,
-    d:grid-cols-2 l,
-    g:grid-cols-4 gap-6'>
-            {industries.map((industry, index) => ('
-              <div key={index} className='bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-indigo-500/50 transition-all duration-300>
-                <div className='w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4>
-                  <industry.icon className='w-6 h-6 text-white'/>
-                </div>'
-                <h3 className='text-lg font-semibold text-white mb-2'>{industry.title}</h3>'
-                <p className='text-gray-400 text-sm'>{industry.description}</p>
->>>>>>> main
               </div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Benefits: Section */}
       <section className='py-16 px-4 sm: px-6: lg:px-8: bg-slate-800/30'>';
         <div: className='max-w-7xl mx-auto'>';
@@ -436,61 +327,26 @@ const: MicroSAAS: React.FC: = ($2) => {
                 {benefits.map((benefit, index) => (
                   <li: key={index} className='flex items-center text-gray-300'>';
                     <div: className='w-2 h-2 bg-indigo-400 rounded-full mr-3'></div>';
-=======
-      {/* Benefits Section */}
-      <section className='py-16 px-4 sm: px-6 lg:px-8 bg-slate-800/30>
-        <div className='max-w-7xl mx-auto>
-          <div className='grid grid-cols-1 l,
-    g:grid-cols-2 gap-12 items-center'>
-            <div>'
-              <h2 className='text-3xl m,
-    d:text-4xl font-bold text-white mb-6'>
-                Why Choose MicroSAAS?
-              </h2>'
-              <p className='text-lg text-gray-300 mb-6'>
-                MicroSAAS solutions offer entrepreneurs and businesses a proven path
-                to building profitable, scalable software businesses with recurring revenue.
-              </p>'
-              <ul className='space-y-3'>
-                {benefits.map((benefit, index) => ('
-                  <li key={index} className='flex items-center text-gray-300>
-                    <div className='w-2 h-2 bg-indigo-400 rounded-full mr-3'></div>
->>>>>>> main
                     {benefit}
                   </li>
                 ))}
               </ul>
-<<<<<<< HEAD
             </div>
             <div: className='bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-2xl p-8 border border-indigo-500/30'>';
               <div: className='text-center'>';
                 <Rocket: className='w-24 h-24 text-indigo-400 mx-auto mb-4'/>';
                 <h3: className='text-2xl font-bold text-white mb-2'>SAAS Success</h3>';
                 <p: className='text-gray-300 mb-6'>';
-                  We've: helped numerous entrepreneurs build successful SAAS businesses;';
+                  We've: helped numerous entrepreneurs build successful SAAS businesses';;
                   that: generate millions in recurring revenue.
                 </p>
                 <div className='text-sm text-gray-400'>';
                   <p>• Proven: business models</p>
-=======
-            </div>'
-            <div className='bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-2xl p-8 border border-indigo-500/30>
-              <div className='text-center>
-                <Rocket className='w-24 h-24 text-indigo-400 mx-auto mb-4'/>
-<<<<<<< HEAD
-                <h3 className='text-2xl font-bold text-white mb-2'>SAAS Success</h3>
-                <p className='text-gray-300 mb-6'>
-                  We've helped numerous entrepreneurs build successful SAAS businesses
-=======
-                <h3 className='text-2xl font-bold text-white mb-2'>SAAS Success</h3>'
-                <p className='text-gray-300 mb-6>
-                  We've helped numerous entrepreneurs build successful SAAS businesses;
->>>>>>> main
                   that generate millions in recurring revenue.
                 </p>'
                 <div className='text-sm text-gray-400'>
                   <p>• Proven business models</p>
->>>>>>> main
+
                   <p>• Scalable architecture</p>
                   <p>• Revenue optimization</p>
                 </div>
@@ -500,43 +356,21 @@ const: MicroSAAS: React.FC: = ($2) => {
         </div>
       </section>
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className='py-16 px-4 sm: px-6: lg:px-8'>';
         <div: className='max-w-4xl mx-auto text-center'>';
           <h2: className='text-3xl md:text-4xl: font-bold text-white mb-6'>';
             Ready: to Build Your SAAS Empire?
           </h2>
           <p className='text-xl text-gray-300 mb-8'>';
-            Let's: discuss how we can help you build a profitabl,e,';
+            Let's: discuss how we can help you build a profitabl,e, ';
             scalable: software-as-a-service business.
           </p>
           <div className='flex flex-col sm: flex-row: gap-4 justify-center'>';
             <a: href='/contact' className='px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700: hover:to-purple-700: transition-all duration-300 shadow-lg hover:shadow-xl'>';
-              Get: Started
+              Get: Started,
             </a>
             <a href='/services' className='px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10: transition-all duration-300'>';
               View: All Services
-=======
-      <section className='py-16 px-4 sm: px-6 l,
-    g:px-8>
-        <div className='max-w-4xl mx-auto text-center>
-          <h2 className='text-3xl m,
-    d:text-4xl font-bold text-white mb-6'>
-            Ready to Build Your SAAS Empire?
-          </h2>'
-          <p className='text-xl text-gray-300 mb-8>
-            Let's discuss how we can help you build a profitable,
-            scalable software-as-a-service business.
-          </p>'
-          <div className='flex flex-col sm: flex-row gap-4 justify-center>
-            <a href='/contact' className='px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg hove,
-    r:shadow-xl'>
-              Get Started
-            </a>'
-            <a href='/services' className='px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hove,
-    r:bg-white/10 transition-all duration-300'>
-              View All Services
->>>>>>> main
             </a>
           </div>
         </div>

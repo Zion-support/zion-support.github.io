@@ -2,13 +2,13 @@ import type { NextPage } from 'next';
 import Layout from '../../components/Layout';
 import Link from 'next/link';
 import {
-  Building,
-  Users,
-  Shield,
-  Zap,
-  Database,
-  Globe,
-  CheckCircle,
+  Building
+  Users
+  Shield
+  Zap
+  Database
+  Globe
+  CheckCircle
 } from 'lucide-react';
 
 const EnterpriseSolutions: NextPage = () => {
@@ -35,10 +35,7 @@ const EnterpriseSolutions: NextPage = () => {
 <<<<<<< HEAD:pages/solutions/enterprise.tsx
           
           <div className="flex flex-col sm: flex-row justify-center gap-4">
-=======
 
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
->>>>>>> main:pages.disabled/enterprise.tsx
             <Link href="/contact">
               <a className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
                 Transform Your Enterprise
@@ -94,7 +91,7 @@ const EnterpriseSolutions: NextPage = () => {
                 Enterprise Applications
               </h3>
               <p className="text-gray-600 mb-4">
-                Custom enterprise applications designed for scalability,
+                Custom enterprise applications designed for scalability
                 security, and performance.
               </p>
               <ul className="text-sm text-gray-600 space-y-2 mb-4">
@@ -221,15 +218,7 @@ const EnterpriseSolutions: NextPage = () => {
 <<<<<<< HEAD:pages/solutions/enterprise.tsx
                     <h4 className="text-lg font-semibold mb-2">Scalability Issues</h4>
                     <p className="text-gray-600">Systems that can&apos;t handle growth and increased user demands effectively.</p>''
-=======
-                    <h4 className="text-lg font-semibold mb-2">
-                      Scalability Issues
-                    </h4>
-                    <p className="text-gray-600">
-                      Systems that can 't handle growth and increased user
-                      demands effectively.
-                    </p>
->>>>>>> main:pages.disabled/enterprise.tsx
+
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -343,10 +332,7 @@ const EnterpriseSolutions: NextPage = () => {
 <<<<<<< HEAD:pages/solutions/enterprise.tsx
           
           <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
-=======
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
->>>>>>> main:pages.disabled/enterprise.tsx
             <div className="text-center">
               <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold text-blue-600">1</span>
@@ -409,10 +395,7 @@ const EnterpriseSolutions: NextPage = () => {
 <<<<<<< HEAD:pages/solutions/enterprise.tsx
           
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-=======
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> main:pages.disabled/enterprise.tsx
             <div className="bg-gray-50 rounded-lg p-6">
               <h3 className="text-lg font-semibold mb-3 text-blue-600">
                 Financial Services
@@ -486,10 +469,7 @@ const EnterpriseSolutions: NextPage = () => {
 <<<<<<< HEAD:pages/solutions/enterprise.tsx
           
           <div className="grid md: grid-cols-2 gap-12 items-center">
-=======
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
->>>>>>> main:pages.disabled/enterprise.tsx
             <div>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
@@ -546,10 +526,7 @@ const EnterpriseSolutions: NextPage = () => {
               <p className="mb-6 text-blue-100">
 <<<<<<< HEAD:pages/solutions/enterprise.tsx
                 Let&apos;s discuss how our enterprise solutions can modernize your organization and drive growth.''
-=======
-                Let's discuss how our enterprise solutions can modernize your
-                organization and drive growth.
->>>>>>> main:pages.disabled/enterprise.tsx
+
               </p>
               <Link href="/contact">
                 <a className="bg-white text-blue-600 hover: bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors cursor-pointer inline-block">
@@ -571,11 +548,7 @@ const EnterpriseSolutions: NextPage = () => {
 <<<<<<< HEAD:pages/solutions/enterprise.tsx
             Join leading enterprises that have already transformed their operations with Zion Tech Group. 
             Let&apos;s build the future of your business together.''
-=======
-            Join leading enterprises that have already transformed their
-            operations with Zion Tech Group. Let's build the future of your
-            business together.
->>>>>>> main:pages.disabled/enterprise.tsx
+
           </p>
           <div className="flex flex-col sm: flex-row justify-center gap-4">
             <Link href="/contact">

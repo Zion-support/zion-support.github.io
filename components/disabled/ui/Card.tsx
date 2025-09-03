@@ -2,13 +2,13 @@ import React from 'react';
 import { cn } from '../../lib/utils';
 
 const Card = React.forwardRef<
-  HTMLDivElement,
+  HTMLDivElement
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
     className={cn(
-      'rounded-lg border bg-card text-card-foreground shadow-sm',
+      'rounded-lg border bg-card text-card-foreground shadow-sm'
       className
     )}
     {...props}
@@ -18,7 +18,7 @@ const Card = React.forwardRef<
 Card.displayName = 'Card';
 
 const CardHeader = React.forwardRef<
-  HTMLDivElement,
+  HTMLDivElement
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
   <div
@@ -31,13 +31,13 @@ const CardHeader = React.forwardRef<
 CardHeader.displayName = 'CardHeader';
 
 const CardTitle = React.forwardRef<
-  HTMLParagraphElement,
+  HTMLParagraphElement
   React.HTMLAttributes<HTMLHeadingElement>
 >(({ className, ...props }, ref) => (
   <h3
     ref={ref}
     className={cn(
-      'text-2xl font-semibold leading-none tracking-tight',
+      'text-2xl font-semibold leading-none tracking-tight'
       className
     )}
     {...props}
@@ -47,7 +47,7 @@ const CardTitle = React.forwardRef<
 CardTitle.displayName = 'CardTitle';
 
 const CardDescription = React.forwardRef<
-  HTMLParagraphElement,
+  HTMLParagraphElement
   React.HTMLAttributes<HTMLParagraphElement>
 >(({ className, ...props }, ref) => (
   <p
@@ -60,7 +60,7 @@ const CardDescription = React.forwardRef<
 CardDescription.displayName = 'CardDescription';
 
 const CardContent = React.forwardRef<
-  HTMLDivElement,
+  HTMLDivElement
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
   <div ref={ref} className={cn('p-6 pt-0', className)} {...props} />
@@ -69,7 +69,7 @@ const CardContent = React.forwardRef<
 CardContent.displayName = 'CardContent';
 
 const CardFooter = React.forwardRef<
-  HTMLDivElement,
+  HTMLDivElement
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
   <div
@@ -83,13 +83,11 @@ CardFooter.displayName = 'CardFooter';
 
 <<<<<<< HEAD:components.disabled/components/ui/Card.tsx
 export {
-  Card,
-  CardHeader,
-  CardFooter,
-  CardTitle,
-  CardDescription,
-  CardContent,
+  Card
+  CardHeader
+  CardFooter
+  CardTitle
+  CardDescription
+  CardContent
 };
-=======
-export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
->>>>>>> main:components/disabled/ui/Card.tsx
+

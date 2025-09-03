@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 
- export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true}) => { const [brokenLinks, setBrokenLinks] = useState ([]) ; const [fixedLinks, setFixedLinks] = useState ([]) ; const [isScanning, setIsScanning] = useState (false) ; const [scanProgress, setScanProgress] = useState (0) ; const [lastScanTime, setLastScanTime] = useState (null) ;'';,"});,"})
+ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true}) => { const [brokenLinks, setBrokenLinks] = useState ([]) ; const [fixedLinks, setFixedLinks] = useState ([]) ; const [isScanning, setIsScanning] = useState (false) ; const [scanProgress, setScanProgress] = useState (0) ; const [lastScanTime, setLastScanTime] = useState (null) ';';,"});,"})
 ;,"});,"})
 import React, { useState, useEffect } from 'react';,"});,"})
 ;,"});,"})
@@ -59,15 +58,15 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
       // Find and update the link;,"});,"})
       const links = document.querySelectorAll(`a[href="${originalUrl}"]`);,"});,"})
       links.forEach(link => {}"});,"})
-        link.href = newUrl;'`;,"});,"})
-        link.setAttribute('data-fixed',true');'`'`;,"});,"})
+        link.href = newUrl';`;,"});,"})
+        link.setAttribute('data-fixed',true')';`'`;,"});,"})
         link.setAttribute('title', `Fixed: Redirected from ${originalUrl}`);,"});,"})
       });,"});,"})
       // Add to fixed links list;,"});,"})
       const fix = {}"});,"})
         originalUrl,;,"});,"})
-        newUrl,';,"});,"})
-        type: 'redirect',';,"});,"})
+        newUrl, ';,"});,"})
+        type: 'redirect', ';,"});,"})
         reason: 'Automatically fixed broken internal link'};,"});,"})
       setFixedLinks(prev => [...prev, fix]);,"});,"})
     }"});,"})
@@ -81,11 +80,11 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
   };,"});,"})
   // Generate redirect rules for server configuration;,"});,"})
   const generateRedirectRules = () => {}"});,"})
-    const rules = LinkValidator.generateRedirectRules();';,"});,"})
+    const rules = LinkValidator.generateRedirectRules()';;,"});,"})
     const blob = new Blob([rules], { type: 'text/plain' });,"});,"})
-    const url = URL.createObjectURL(blob);';,"});,"})
+    const url = URL.createObjectURL(blob)';;,"});,"})
     const a = document.createElement('a');,"});,"})
-    a.href = url;';,"});,"})
+    a.href = url';;,"});,"})
     a.download = 'redirect-rules.txt';,"});,"})
     a.click();,"});,"})
     URL.revokeObjectURL(url);,"});,"})
@@ -101,10 +100,10 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
-      type: 'application/json'});'';,"});,"})
-    const url = URL.createObjectURL(blob);''';,"});,"})
-    const a = document.createElement('a');'';,"});,"})
-    a.href = url;''';,"});,"})
+      type: 'application/json'})';';,"});,"})
+    const url = URL.createObjectURL(blob)';'';,"});,"})
+    const a = document.createElement('a')';';,"});,"})
+    a.href = url';'';,"});,"})
     a.download = 'broken-links-report.json';,"});,"})
     a.click();,"});,"})
     URL.revokeObjectURL(url);,"});,"})
@@ -286,21 +285,9 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
     </div>;,"});,"})
   );,"});,"})
 };,"});,"})
-export default LinkMonitor;'"`;,"});,"})
+export default LinkMonitor';"`;,"});,"})
 '"`'"`;,"});,"})
->>>>>>> pr-10728;,"});,"})
-=======
- export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true}) => { const [brokenLinks, setBrokenLinks] = useState ([])  const [fixedLinks, setFixedLinks] = useState ([])  const [isScanning, setIsScanning] = useState (false)  const [scanProgress, setScanProgress] = useState (0)  const [lastScanTime, setLastScanTime] = useState (null) ''
 
-<<<<<<< HEAD
-""
-}
-=======
-<<<<<<< HEAD
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-2b9a
-=======
-"
-};
->>>>>>> main
->>>>>>> main
->>>>>>> main
+
+
+

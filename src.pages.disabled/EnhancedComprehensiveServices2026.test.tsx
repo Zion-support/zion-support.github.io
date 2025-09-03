@@ -1,26 +1,7 @@
-<<<<<<< HEAD
 <<<<<<< HEAD:src.pages.disabled/EnhancedComprehensiveServices2026.test.tsx
-describe ('EnhancedComprehensiveServices2026', () => {}; '; it ('renders without crashing', () => {}; render (<EnhancedComprehensiveServices2026 />) ;'; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; '; it ('displays expected content', () => {}; render (<EnhancedComprehensiveServices2026 />) ;
+describe ('EnhancedComprehensiveServices2026', () => {}';; it ('renders without crashing', () => {}; render (<EnhancedComprehensiveServices2026 />) ';; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ';; it ('displays expected content', () => {}; render (<EnhancedComprehensiveServices2026 />) ;
 
-describe ('EnhancedComprehensiveServices2026', () => {}; '; it ('renders without crashing', () => {}; render (<EnhancedComprehensiveServices2026 />) ;'; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; '; it ('displays expected content', () => {}; render (<EnhancedComprehensiveServices2026 />) ;''';
-=======
-<<<<<<< HEAD
-ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/EnhancedComprehensiveServices2026.test.tsx
-=======
-<<<<<<< HEAD
-:src.pages.disabled/EnhancedComprehensiveServices2026.test.tsx;
-<<<<<<< HEAD
-describe: ('EnhancedComprehensiveServices2026', () => {}' it ('renders without crashing', () => {} render (<EnhancedComprehensiveServices2026 />) '; expect: (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<EnhancedComprehensiveServices2026 />) ;';
-describe: ('EnhancedComprehensiveServices2026', () => {}' it ('renders without crashing', () => {} render (<EnhancedComprehensiveServices2026 />) '; expect: (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<EnhancedComprehensiveServices2026 />) ''';
-=======
-describe ('EnhancedComprehensiveServices2026', () => {}' it ('renders without crashing', () => {} render (<EnhancedComprehensiveServices2026 />) ' expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<EnhancedComprehensiveServices2026 />) 
-describe ('EnhancedComprehensiveServices2026', () => {}' it ('renders without crashing', () => {} render (<EnhancedComprehensiveServices2026 />) ' expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<EnhancedComprehensiveServices2026 />) ''
-=======
-:src.pages.disabled/EnhancedComprehensiveServices2026.test.tsx
-describe ('EnhancedComprehensiveServices2026', () => {}' it ('renders without crashing', () => {} render (<EnhancedComprehensiveServices2026 />) ' expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<EnhancedComprehensiveServices2026 />) 
+describe ('EnhancedComprehensiveServices2026', () => {}';; it ('renders without crashing', () => {}; render (<EnhancedComprehensiveServices2026 />) ';; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ';; it ('displays expected content', () => {}; render (<EnhancedComprehensiveServices2026 />) ';'';
 
-describe ('EnhancedComprehensiveServices2026', () => {}' it ('renders without crashing', () => {} render (<EnhancedComprehensiveServices2026 />) ' expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<EnhancedComprehensiveServices2026 />) ''
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
+
+

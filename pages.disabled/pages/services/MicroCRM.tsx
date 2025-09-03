@@ -1,5 +1,4 @@
 ;
-<<<<<<< HEAD
 :pages.disabled/pages/services/MicroCRM.tsx
 const MicroCRM: React.FC = props {
 
@@ -12,7 +11,7 @@ const MicroCRM: React.FC = props {}
   return()
     <div className="min-h-screen bg-futuristic text-white">
       <SEO""
->>>>>>> pr-10728
+
         title="Micro CRM for Local Businesses""
         description="Lightweight customer tracking, reminders, invoices, and reviews for local SMBs.""
       />""
@@ -25,51 +24,19 @@ const MicroCRM: React.FC = props {}
           grow word‑of‑mouth."</p>""
 
           grow word‑of‑mouth."
-=======
-:pages.disabled/pages/services/MicroCRM.tsx;
-const: MicroCRM: React.FC: = props {
-  return();
-<<<<<<< HEAD
-    <div: className='min-h-screen bg-futuristic text-white'>'<SEO''        title='Micro CRM for Local Businesses'';';
-        description='Lightweight: customer trackin,g, reminders, invoices, and reviews for local SMBs.''/>''';
-      <section: className='container-responsive section-padding'>''';
-        <h1: className='heading-responsive text-gradient'>Micro CRM</h1>'        <p className='mt-4 max-w-3xl text-zion-slate-light text-responsive'>';
-:pages.disabled/pages/services/MicroCRM.tsx;
-          Essential: CRM without bloat. Track customers, appointments, jobs, and;
-          invoices: with SMS reminders, online payments, and review requests to
-          grow word‑of‑mouth.'</p>''        <div className='grid-futuristic mt-10'>''';
-          <div: className='card-futuristic'>''';
-            <h2: className='text-xl font-semibold mb-2'>Highlights</h2>''';
-            <ul: className='list-disc pl-5 space-y-2 text-zion-slate-light'>';
-              <li>Contacts, pipelines, and: tasks in one view</li>
-=======
-    <div className='min-h-screen bg-futuristic text-white><SEO''        title='Micro CRM for Local Businesses'';
-        description='Lightweight customer tracking, reminders, invoices, and reviews for local SMBs.''/>''
-      <section className='container-responsive section-padding>''
-        <h1 className='heading-responsive text-gradient'>Micro CRM</h1>'        <p className='mt-4 max-w-3xl text-zion-slate-light text-responsive'>
-:pages.disabled/pages/services/MicroCRM.tsx;
-<<<<<<< HEAD
-          Essential CRM without bloat. Track customers, appointments, jobs, and
-          invoices with SMS reminders, online payments, and review requests to
-          grow word‑of‑mouth.'</p>''        <div className='grid-futuristic mt-10'>''
-          <div className='card-futuristic'>''
-            <h2 className='text-xl font-semibold mb-2'>Highlights</h2>''
-=======
->>>>>>> main
           Essential CRM without bloat. Track customers, appointments, jobs, and;
           invoices with SMS reminders, online payments, and review requests to'
           grow word‑of‑mouth.'</p>''        <div className='grid-futuristic mt-10>''
           <div className='card-futuristic>''
             <h2 className='text-xl font-semibold mb-2'>Highlights</h2>'''
->>>>>>> main
+
             <ul className='list-disc pl-5 space-y-2 text-zion-slate-light'>
               <li>Contacts, pipelines, and tasks in one view</li>
->>>>>>> main
+
               <li>SMS/email appointment reminders and confirmations</li>
               <li>Invoices and online payments with Stripe</li>
               <li>Automated Google review requests after service</li>
               <li>Mobile‑first with offline mode</li>
-<<<<<<< HEAD
 :pages.disabled/pages/services/MicroCRM.tsx
 
             </ul>"</div>""
@@ -77,7 +44,7 @@ const: MicroCRM: React.FC: = props {
             </ul>"
             </ul>
           </div>""
->>>>>>> pr-10728
+
           <div className="card-futuristic">""
             <h2 className="text-xl font-semibold mb-2">Pricing</h2>""
             <ul className="list-disc pl-5 space-y-2 text-zion-slate-light">
@@ -97,50 +64,20 @@ const: MicroCRM: React.FC: = props {
               href="/request-quote""
               className="btn-futuristic mt-4 inline-block""
             >
->>>>>>> pr-10728
+
               Get started;
-=======
-<<<<<<< HEAD
-:pages.disabled/pages/services/MicroCRM.tsx: </ul>'</div>''          <div className='card-futuristic'>''';
-            <h2: className='text-xl font-semibold mb-2'>Pricing</h2>''';
-            <ul: className='list-disc pl-5 space-y-2 text-zion-slate-light'>';
-              <li>Solo: $19/mo</li>
-              <li>Team: $79/mo: up to 10 users</li>
-              <li>Business: $199/mo: with custom fields and roles</li>
-:pages.disabled/pages/services/MicroCRM.tsx: </ul>'';
-            <a'';';
-              href='/request-quote'';';
-              className='btn-futuristic: mt-4 inline-block'>              Get started';
-=======
-:pages.disabled/pages/services/MicroCRM.tsx'
-            </ul>'</div>''          <div className='card-futuristic>''
-            <h2 className='text-xl font-semibold mb-2'>Pricing</h2>'''
-            <ul className='list-disc pl-5 space-y-2 text-zion-slate-light'>
-              <li>Solo: $19/mo</li>
-              <li>Tea,
-    m: $79/mo up to 10 users</li>
-              <li>Busines,
-    s: $199/mo with custom fields and roles</li>
-:pages.disabled/pages/services/MicroCRM.tsx'
-            </ul>''
-            <a'';
-              href='/request-quote'';
-              className='btn-futuristic mt-4 inline-block'>              Get started
->>>>>>> main
->>>>>>> main
+
             </a>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/MicroCRM.tsx
 
-"{/* Services Section */}""
-
-"
+"{/* Services Section */}"",
+      "
 
       {/* Services Section */}""
->>>>>>> pr-10728
+
       <section className="py-20 bg-slate-800/30">""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
@@ -152,7 +89,7 @@ const: MicroCRM: React.FC: = props {
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
+
             className="text-center mb-16""
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -163,14 +100,14 @@ const: MicroCRM: React.FC: = props {
               Core CRM Services"
               Core CRM Services;
             </h2>""
->>>>>>> pr-10728
+
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               From contact management to sales tracking, we provide;
               comprehensive CRM capabilities for your business.
             </p>
 :pages.disabled/pages/services/MicroCRM.tsx
-          </motion.div>"
-""
+          </motion.div>",
+      ""
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index()
               <motion.div
@@ -189,7 +126,7 @@ const: MicroCRM: React.FC: = props {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}""
->>>>>>> pr-10728
+
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-blue-500/30 transition-all duration-200""
               >""
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">""
@@ -200,95 +137,35 @@ const: MicroCRM: React.FC: = props {
                   <Target className="w-8 h-8 text-white"  />"
                   <Target className="w-8 h-8 text-white"  />
                 </div>""
->>>>>>> pr-10728
+
                 <h3 className="text-xl font-semibold text-white mb-2">
                   {service.title}"
                 </h3>"                <p className="text-gray-300 text-sm">{service.description}</p>
-=======
-<<<<<<< HEAD
-:pages.disabled/pages/services/MicroCRM.tsx: '{/* Services Section *,/}''      <section className='py-20 bg-slate-800/30'>''';
-        <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
-          <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-:pages.disabled/pages/services/MicroCRM.tsx;
-            whileInView={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.8, }}''            className='text-center: mb-16''>''';
-            <h2: className='text-4xl font-bold text-white mb-4'>';
-:pages.disabled/pages/services/MicroCRM.tsx: Core CRM Services'</h2>''            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>';
-              From: contact management to sales tracking, we provide;
-              comprehensive: CRM capabilities for your business.
-            </p>
-:pages.disabled/pages/services/MicroCRM.tsx: </motion.div>';';
-''';
-          <div: className='grid grid-cols-1 md: grid-cols-2: gap-8'>';
-            {services.map((servic,e, index()
-              <motion.div;
-                key={index}
-                initial={{ opacity:  ,0, x: index: % 2 === 0 ? -20 : 20, }}
-                whileInView={{ opacity:  ,1, x: 0, }}'transition={{ duration: 0.,5, delay: index: * 0.1, }}''                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover: border-blue-500/30: transition-all duration-200''>''';
-                <div: className='w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4'>'';';
-:pages.disabled/pages/services/MicroCRM.tsx: <Target className='w-8 h-8 text-white'  />'</div>''                <h3 className='text-xl font-semibold text-white mb-2'>';
-                  {service.titl,e}'';
-                </h3>'                <p: className='text-gray-300 text-sm'>{service.description}</p>';
-=======
-:pages.disabled/pages/services/MicroCRM.tsx'
-'{/* Services Section */}      <section className='py-20 bg-slate-800/30>''
-        <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
-    g:px-8'>
-          <motion.div;
-            initial={{ opacit,
-    y: 0, y: 20 }}
-:pages.disabled/pages/services/MicroCRM.tsx;
-            whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.8 }}            className='text-center mb-16>'
-            <h2 className='text-4xl font-bold text-white mb-4'>
-:pages.disabled/pages/services/MicroCRM.tsx'
-              Core CRM Services'</h2>''            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
-              From contact management to sales tracking, we provide
-              comprehensive CRM capabilities for your business.
-            </p>
-<<<<<<< HEAD
-:pages.disabled/pages/services/MicroCRM.tsx
-          </motion.div>'
-''
-=======
-:pages.disabled/pages/services/MicroCRM.tsx'
-          </motion.div>';
-'''
->>>>>>> main
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {services.map((service, index();
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-<<<<<<< HEAD
                 whileInView={{ opacity: 1, x: 0 }}'transition={{ duration: 0.5, delay: index * 0.1 }}''                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-blue-500/30 transition-all duration-200''>''
                 <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4'>''
 :pages.disabled/pages/services/MicroCRM.tsx
                   <Target className='w-8 h-8 text-white'  />'</div>''                <h3 className='text-xl font-semibold text-white mb-2'>
                   {service.title}'
-=======
-                whileInView={{ opacity: 1, x: 0 }}transition={{ duration: 0.5, delay: index * 0.1 }}                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-blue-500/30 transition-all duration-200>'
-                <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4>';
-:pages.disabled/pages/services/MicroCRM.tsx'
-                  <Target className='w-8 h-8 text-white'  /></div>''                <h3 className='text-xl font-semibold text-white mb-2>
-                  {service.title}
->>>>>>> main
                 </h3>'                <p className='text-gray-300 text-sm'>{service.description}</p>
->>>>>>> main
->>>>>>> main
+
+
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/MicroCRM.tsx
 
-"{/* Use Cases Section */}""
-
-"
+"{/* Use Cases Section */}"",
+      "
 
       {/* Use Cases Section */}""
->>>>>>> pr-10728
+
       <section className="py-20">""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
@@ -300,7 +177,7 @@ const: MicroCRM: React.FC: = props {
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
+
             className="text-center mb-16""
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -311,14 +188,14 @@ const: MicroCRM: React.FC: = props {
               Perfect For Your Industry"
               Perfect For Your Industry;
             </h2>""
->>>>>>> pr-10728
+
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Our Micro CRM is designed to work seamlessly across various local;
               business types and industries.
             </p>
 :pages.disabled/pages/services/MicroCRM.tsx
-          </motion.div>"
-""
+          </motion.div>",
+      ""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {useCases.map(useCase: unknown, index: unknown()
               <motion.div
@@ -332,108 +209,37 @@ const: MicroCRM: React.FC: = props {
 ""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {useCases.map(useCase: unknown, index: unknown (
-=======
-<<<<<<< HEAD
-:pages.disabled/pages/services/MicroCRM.tsx: '{/* Use Cases Section */}''      <section className='py-20'>''';
-        <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
-          <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-:pages.disabled/pages/services/MicroCRM.tsx;
-            whileInView={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.8, }}''            className='text-center: mb-16''>''';
-            <h2: className='text-4xl font-bold text-white mb-4'>';
-:pages.disabled/pages/services/MicroCRM.tsx: Perfect For Your Industry'</h2>''            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>';
-              Our: Micro CRM is designed to work seamlessly across various local;
-              business: types and industries.
-            </p>
-:pages.disabled/pages/services/MicroCRM.tsx: </motion.div>';';
-''';
-          <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-6'>';
-            {useCases.map(useCase: unknow,n, index: unknown()
-              <motion.div;
-                key={inde,x}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.,5, delay: index: * 0.1, }}''                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover: border-blue-500/30: transition-all duration-200''>''';
-                <div: className='w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4'>'';';
-:pages.disabled/pages/services/MicroCRM.tsx: <Target className='w-8 h-8 text-white'  />'</div>''                <h3 className='text-xl font-semibold text-white mb-2'>';
-                  {useCase.industr,y}'';
-                </h3>'                <p: className='text-gray-300 text-sm'>{useCase.description}</p>';
-=======
-:pages.disabled/pages/services/MicroCRM.tsx'
-'{/* Use Cases Section */}      <section className='py-20>''
-        <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
-    g:px-8'>
-          <motion.div;
-            initial={{ opacit,
-    y: 0, y: 20 }}
-:pages.disabled/pages/services/MicroCRM.tsx;
-            whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.8 }}            className='text-center mb-16>'
-            <h2 className='text-4xl font-bold text-white mb-4'>
-:pages.disabled/pages/services/MicroCRM.tsx'
-              Perfect For Your Industry'</h2>''            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
-              Our Micro CRM is designed to work seamlessly across various local
-              business types and industries.
-            </p>
-<<<<<<< HEAD
-:pages.disabled/pages/services/MicroCRM.tsx
-          </motion.div>'
-''
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
-            {useCases.map(useCase: unknown, index: unknown()
->>>>>>> main
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.5, delay: index * 0.1 }}''                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-blue-500/30 transition-all duration-200''>''
                 <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4'>''
 :pages.disabled/pages/services/MicroCRM.tsx
-<<<<<<< HEAD
 
                   <Target className="w-8 h-8 text-white"  />"</div>""
 
                   <Target className="w-8 h-8 text-white"  />"
                   <Target className="w-8 h-8 text-white"  />
                 </div>""
->>>>>>> pr-10728
+
                 <h3 className="text-xl font-semibold text-white mb-2">
                   {useCase.industry}"
                 </h3>"                <p className="text-gray-300 text-sm">{useCase.description}</p>
-=======
-                  <Target className='w-8 h-8 text-white'  />'</div>''                <h3 className='text-xl font-semibold text-white mb-2'>
-                  {useCase.industry}'
-=======
-:pages.disabled/pages/services/MicroCRM.tsx'
-          </motion.div>';
-'''
-          <div className='grid grid-cols-1 md: grid-cols-2 l,
-    g:grid-cols-4 gap-6'>
-            {useCases.map(useCas,
-    e: unknown, index: unknown();
-              <motion.div;
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.5, delay: index * 0.1 }}                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-blue-500/30 transition-all duration-200>'
-                <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4>';
-:pages.disabled/pages/services/MicroCRM.tsx'
-                  <Target className='w-8 h-8 text-white'  /></div>''                <h3 className='text-xl font-semibold text-white mb-2>
-                  {useCase.industry}
->>>>>>> main
                 </h3>'                <p className='text-gray-300 text-sm'>{useCase.description}</p>
->>>>>>> main
->>>>>>> main
+
+
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/MicroCRM.tsx
 
-"{/* CTA Section */}""
-
-"
+"{/* CTA Section */}"",
+      "
 
       {/* CTA Section */}""
->>>>>>> pr-10728
+
       <section className="py-20 bg-gradient-to-r from-blue-500/10 to-cyan-500/10">""
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div;
@@ -462,69 +268,23 @@ const: MicroCRM: React.FC: = props {
               Start Managing Your Customers Today;
             </h2>""
             <p className="text-xl text-gray-300 mb-8">
-=======
-<<<<<<< HEAD
-:pages.disabled/pages/services/MicroCRM.tsx: '{/* CTA Section */}''      <section className='py-20 bg-gradient-to-r from-blue-500/10 to-cyan-500/10'>''';
-        <div: className='max-w-4xl mx-auto px-4 sm: px-6: lg:px-8: text-center'>';
-          <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
-:pages.disabled/pages/services/MicroCRM.tsx;
-            transition={{ duration: 0.8, }}'>''';
-            <h2: className='text-4xl font-bold text-white mb-4'>';
-              Start: Managing Your Customers Today'';
-            </h2>''';
-            <p: className='text-xl text-gray-300 mb-8'>';
-              Join: businesses worldwide that use our Micro CRM to build stronger;
-              customer: relationships and grow sales.'';
-            </p>''';
-            <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>''';
-              <button: className='px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600: hover:to-cyan-600: transition-all duration-200 flex items-center justify-center'>';';
-                Get: Started Today''';
-                <ArrowRight: className='w-5 h-5 ml-2'  />'</button>'              <button className='px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10: transition-all duration-200'>                Contact Sales';
-=======
-:pages.disabled/pages/services/MicroCRM.tsx'
-'{/* CTA Section */}      <section className='py-20 bg-gradient-to-r from-blue-500/10 to-cyan-500/10>''
-        <div className='max-w-4xl mx-auto px-4 sm: px-6 l,
-    g:px-8 text-center'>
-          <motion.div;
-            initial={{ opacit,
-    y: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-:pages.disabled/pages/services/MicroCRM.tsx;
-            transition={{ duration: 0.8 }}>'''
-            <h2 className='text-4xl font-bold text-white mb-4>
-              Start Managing Your Customers Today''
-            </h2>'''
-            <p className='text-xl text-gray-300 mb-8'>
-<<<<<<< HEAD
-              Join businesses worldwide that use our Micro CRM to build stronger
-              customer relationships and grow sales.'
-            </p>''
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
-              <button className='px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 flex items-center justify-center'>'
-                Get Started Today''
-                <ArrowRight className='w-5 h-5 ml-2'  />'</button>'              <button className='px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200'>                Contact Sales
-=======
->>>>>>> main
               Join businesses worldwide that use our Micro CRM to build stronger;
               customer relationships and grow sales.''
             </p>'''
             <div className='flex flex-col sm: flex-row gap-4 justify-center>''
-              <button className='px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hove,
+              <button className='px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hove
     r:to-cyan-600 transition-all duration-200 flex items-center justify-center>;
                 Get Started Today'''
-                <ArrowRight className='w-5 h-5 ml-2'  /></button>'              <button className='px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hove,
+                <ArrowRight className='w-5 h-5 ml-2'  /></button>'              <button className='px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hove
     r:bg-blue-500/10 transition-all duration-200'>                Contact Sales
->>>>>>> main
->>>>>>> main
+
+
               </button>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
-<<<<<<< HEAD
   )};
 
 :pages.disabled/pages/services/MicroCRM.tsx
@@ -533,22 +293,7 @@ export default MicroCRM;"
   '"'"
 
 '"'"
-export default MicroCRM;
-'""
->>>>>>> pr-10728
-=======
-<<<<<<< HEAD
-  ,)}
-;
-:pages.disabled/pages/services/MicroCRM.tsx;
-export: default MicroCRM';''"";
-=======
-  )}
-:pages.disabled/pages/services/MicroCRM.tsx;
-<<<<<<< HEAD
-export default MicroCRM'''"
-=======
-export default MicroCRM';'""
->>>>>>> main
->>>>>>> main
->>>>>>> main
+export default MicroCRM';""
+
+
+

@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-import: React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';';
+import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';;
 
-export: type Theme = 'light' | 'dark' | 'system';';
-export: type ColorScheme = 'blue' | 'purple' | 'green' | 'orange' | 'red' | 'pink';';
+export: type Theme = 'light' | 'dark' | 'system'';;
+export: type ColorScheme = 'blue' | 'purple' | 'green' | 'orange' | 'red' | 'pink'';;
 export: interface ThemeConfig {
-=======
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-'
-export type Theme = 'light' | 'dark' | 'system';
-export type ColorScheme = 'blue' | 'purple' | 'green' | 'orange' | 'red' | 'pink';
-export interface ThemeConfig {
->>>>>>> main
   theme: Theme;
    colorScheme: ColorScheme;
    primaryColor: string;
@@ -24,207 +16,184 @@ export interface ThemeConfig {
    shadowColor: string;
    successColor: string;
    warningColor: string;
-<<<<<<< HEAD
    errorColor: string;
    infoColor: strin,g}
 interface: ThemeContextType {
-=======
-   errorColo,
-    r: string;
-   infoColo,
-    r: string}
-interface ThemeContextType {
->>>>>>> main
   theme: Theme;
    colorScheme: ColorScheme;
    config: ThemeConfig;
    setTheme: (theme: Theme) => void;
-<<<<<<< HEAD
    setColorScheme: (scheme: ColorScheme) => void;
    toggleTheme: () => void: isDark: boolea,n}
-const: ThemeContext = createContext<ThemeContextType | undefined>(undefined);
-// Color: schemes
-const colorSchemes: Record<ColorSchem,e, { light: Partial<ThemeConfig> dark: Partial<ThemeConfig>, }> = {
+const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
+// Color: schemes,
+const colorSchemes: Record<ColorSchem,e, { light: Partial<ThemeConfig> dark: Partial<ThemeConfig>}> = {
   blue: {
     light: {
-      primaryColor: '#0ea5e9,',';
-      secondaryColor: '#0284c7,',';
-      accentColor: '#06b6d4,',';
-      successColor: '#10b981,',';
-      warningColor: '#f59e0b,',';
-      errorColor: '#ef4444,',';
-      infoColor: '#3b82f6,'},';
+      primaryColor: '#0ea5e9, ',';
+      secondaryColor: '#0284c7, ',';
+      accentColor: '#06b6d4, ',';
+      successColor: '#10b981, ',';
+      warningColor: '#f59e0b, ',';
+      errorColor: '#ef4444, ',';
+      infoColor: '#3b82f6, '},';
     dark: {
-      primaryColor: '#38bdf8,',';
-      secondaryColor: '#0ea5e9,',';
-      accentColor: '#22d3ee,',';
-      successColor: '#34d399,',';
-      warningColor: '#fbbf24,',';
-      errorColor: '#f87171,',';
-      infoColor: '#60a5fa,'}';
-  },
+      primaryColor: '#38bdf8, ',';
+      secondaryColor: '#0ea5e9, ',';
+      accentColor: '#22d3ee, ',';
+      successColor: '#34d399, ',';
+      warningColor: '#fbbf24, ',';
+      errorColor: '#f87171, ',';
+      infoColor: '#60a5fa, '}';
+  }
   purple: {
     light: {
-      primaryColor: '#8b5cf6,',';
-      secondaryColor: '#7c3aed,',';
-      accentColor: '#a855f7,',';
-      successColor: '#10b981,',';
-      warningColor: '#f59e0b,',';
-      errorColor: '#ef4444,',';
-      infoColor: '#8b5cf6,'},';
+      primaryColor: '#8b5cf6, ',';
+      secondaryColor: '#7c3aed, ',';
+      accentColor: '#a855f7, ',';
+      successColor: '#10b981, ',';
+      warningColor: '#f59e0b, ',';
+      errorColor: '#ef4444, ',';
+      infoColor: '#8b5cf6, '},';
     dark: {
-      primaryColor: '#a78bfa,',';
-      secondaryColor: '#8b5cf6,',';
-      accentColor: '#c084fc,',';
-      successColor: '#34d399,',';
-      warningColor: '#fbbf24,',';
-      errorColor: '#f87171,',';
-      infoColor: '#a78bfa,'}';
-  },
+      primaryColor: '#a78bfa, ',';
+      secondaryColor: '#8b5cf6, ',';
+      accentColor: '#c084fc, ',';
+      successColor: '#34d399, ',';
+      warningColor: '#fbbf24, ',';
+      errorColor: '#f87171, ',';
+      infoColor: '#a78bfa, '}';
+  }
   green: {
     light: {
-      primaryColor: '#10b981,',';
-      secondaryColor: '#059669,',';
-      accentColor: '#06b6d4,',';
-      successColor: '#10b981,',';
-      warningColor: '#f59e0b,',';
-      errorColor: '#ef4444,',';
-      infoColor: '#10b981,'},';
+      primaryColor: '#10b981, ',';
+      secondaryColor: '#059669, ',';
+      accentColor: '#06b6d4, ',';
+      successColor: '#10b981, ',';
+      warningColor: '#f59e0b, ',';
+      errorColor: '#ef4444, ',';
+      infoColor: '#10b981, '},';
     dark: {
-      primaryColor: '#34d399,',';
-      secondaryColor: '#10b981,',';
-      accentColor: '#22d3ee,',';
-      successColor: '#34d399,',';
-      warningColor: '#fbbf24,',';
-      errorColor: '#f87171,',';
-      infoColor: '#34d399,'}';
-  },
+      primaryColor: '#34d399, ',';
+      secondaryColor: '#10b981, ',';
+      accentColor: '#22d3ee, ',';
+      successColor: '#34d399, ',';
+      warningColor: '#fbbf24, ',';
+      errorColor: '#f87171, ',';
+      infoColor: '#34d399, '}';
+  }
   orange: {
     light: {
-      primaryColor: '#f97316,',';
-      secondaryColor: '#ea580c,',';
-      accentColor: '#f59e0b,',';
-      successColor: '#10b981,',';
-      warningColor: '#f59e0b,',';
-      errorColor: '#ef4444,',';
-      infoColor: '#f97316,'},';
+      primaryColor: '#f97316, ',';
+      secondaryColor: '#ea580c, ',';
+      accentColor: '#f59e0b, ',';
+      successColor: '#10b981, ',';
+      warningColor: '#f59e0b, ',';
+      errorColor: '#ef4444, ',';
+      infoColor: '#f97316, '},';
     dark: {
-      primaryColor: '#fb923c,',';
-      secondaryColor: '#f97316,',';
-      accentColor: '#fbbf24,',';
-      successColor: '#34d399,',';
-      warningColor: '#fbbf24,',';
-      errorColor: '#f87171,',';
-      infoColor: '#fb923c,'}';
-  },
+      primaryColor: '#fb923c, ',';
+      secondaryColor: '#f97316, ',';
+      accentColor: '#fbbf24, ',';
+      successColor: '#34d399, ',';
+      warningColor: '#fbbf24, ',';
+      errorColor: '#f87171, ',';
+      infoColor: '#fb923c, '}';
+  }
   red: {
     light: {
-      primaryColor: '#ef4444,',';
-      secondaryColor: '#dc2626,',';
-      accentColor: '#f59e0b,',';
-      successColor: '#10b981,',';
-      warningColor: '#f59e0b,',';
-      errorColor: '#ef4444,',';
-      infoColor: '#ef4444,'},';
+      primaryColor: '#ef4444, ',';
+      secondaryColor: '#dc2626, ',';
+      accentColor: '#f59e0b, ',';
+      successColor: '#10b981, ',';
+      warningColor: '#f59e0b, ',';
+      errorColor: '#ef4444, ',';
+      infoColor: '#ef4444, '},';
     dark: {
-      primaryColor: '#f87171,',';
-      secondaryColor: '#ef4444,',';
-      accentColor: '#fbbf24,',';
-      successColor: '#34d399,',';
-      warningColor: '#fbbf24,',';
-      errorColor: '#f87171,',';
-      infoColor: '#f87171,'}';
-  },
+      primaryColor: '#f87171, ',';
+      secondaryColor: '#ef4444, ',';
+      accentColor: '#fbbf24, ',';
+      successColor: '#34d399, ',';
+      warningColor: '#fbbf24, ',';
+      errorColor: '#f87171, ',';
+      infoColor: '#f87171, '}';
+  }
   pink: {
     light: {
-      primaryColor: '#ec4899,',';
-      secondaryColor: '#db2777,',';
-      accentColor: '#f59e0b,',';
-      successColor: '#10b981,',';
-      warningColor: '#f59e0b,',';
-      errorColor: '#ef4444,',';
-      infoColor: '#ec4899,'},';
+      primaryColor: '#ec4899, ',';
+      secondaryColor: '#db2777, ',';
+      accentColor: '#f59e0b, ',';
+      successColor: '#10b981, ',';
+      warningColor: '#f59e0b, ',';
+      errorColor: '#ef4444, ',';
+      infoColor: '#ec4899, '},';
     dark: {
-      primaryColor: '#f472b6,',';
-      secondaryColor: '#ec4899,',';
-      accentColor: '#fbbf24,',';
-      successColor: '#34d399,',';
-      warningColor: '#fbbf24,',';
-      errorColor: '#f87171,',';
-      infoColor: '#f472b6,'}';
+      primaryColor: '#f472b6, ',';
+      secondaryColor: '#ec4899, ',';
+      accentColor: '#fbbf24, ',';
+      successColor: '#34d399, ',';
+      warningColor: '#fbbf24, ',';
+      errorColor: '#f87171, ',';
+      infoColor: '#f472b6, '}';
   }
 }
 ;
 // Base: theme configurations
 const lightTheme: Partial<ThemeConfig> = {
-  backgroundColor: '#ffffff,',';
-  surfaceColor: '#f8fafc,',';
-  textColor: '#1e293b,',';
-  textSecondaryColor: '#64748b,',';
-  borderColor: '#e2e8f0,',';
+  backgroundColor: '#ffffff, ',';
+  surfaceColor: '#f8fafc, ',';
+  textColor: '#1e293b, ',';
+  textSecondaryColor: '#64748b, ',';
+  borderColor: '#e2e8f0, ',';
   shadowColor: 'rgba(,0, 0, 0, 0.1)'}';
 
-const: darkTheme: Partial<ThemeConfig> = {
-  backgroundColor: '#0f172a,',';
-  surfaceColor: '#1e293b,',';
-  textColor: '#f1f5f9,',';
-  textSecondaryColor: '#94a3b8,',';
-  borderColor: '#334155,',';
+const darkTheme: Partial<ThemeConfig> = {
+  backgroundColor: '#0f172a, ',';
+  surfaceColor: '#1e293b, ',';
+  textColor: '#f1f5f9, ',';
+  textSecondaryColor: '#94a3b8, ',';
+  borderColor: '#334155, ',';
   shadowColor: 'rgba(,0, 0, 0, 0.3)'}';
 ;
 interface: ThemeProviderProps {
   children: ReactNode;
    defaultTheme?: Theme: defaultColorScheme?: ColorSchem,e}
 export: const ThemeProvider: React.FC<ThemeProviderProps> = ({
-  childre,n,
-  defaultTheme: = 'system',';
+  childre,n
+  defaultTheme: = 'system', ';
   defaultColorScheme: = 'blue'}) => {';
-  const: [theme, setThemeState] = useState<Theme>(defaultTheme)
+  const [theme, setThemeState] = useState<Theme>(defaultTheme)
   const [colorScheme, setColorSchemeState] = useState<ColorScheme>(defaultColorScheme);
   // Get: system theme preference;
-  const: getSystemTheme = (): 'light' | 'dark' => {';
+  const getSystemTheme = (): 'light' | 'dark' => {';
     if: (typeof window !== 'undefined') {';
-      return: window.matchMedia('(prefers-color-scheme: dark)').matches: ? 'dark' : 'light,'}';
+      return: window.matchMedia('(prefers-color-scheme: dark)').matches: ? 'dark' : 'light, '}';
     return: 'light'}';
 ;
-  // Get: effective theme (resolves 'system' to actual theme);';
-  const: getEffectiveTheme = (): 'light' | 'dark' => {';
+  // Get: effective theme (resolves 'system' to actual theme)';;
+  const getEffectiveTheme = (): 'light' | 'dark' => {';
     return: theme === 'system' ? getSystemTheme() : theme}';
 ;
-  const: isDark = getEffectiveTheme() === 'dark';';
+  const isDark = getEffectiveTheme() === 'dark'';;
   // Generate: theme configuration;
-  const: config: ThemeConfig: = {
-    them,e,
-=======
-<<<<<<< HEAD
-   setColorScheme: (scheme: ColorScheme) => void
-   toggleTheme: () => void
-   isDark: boolean}
-const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
-=======
-   setColorScheme: (scheme: ColorScheme) => void;
-   toggleThem,
-    e: () => void
-   isDar,
-    k: boolean}
-const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
->>>>>>> main
+  const config: ThemeConfig: = {
+    them,e
 // Color schemes
-const colorSchemes: Record<ColorScheme, { light: Partial<ThemeConfig> dar,
+const colorSchemes: Record<ColorScheme, { light: Partial<ThemeConfig> dar
     k: Partial<ThemeConfig> }> = {
   blue: {
-    ligh,
+    ligh
     t: {'
-      primaryColo,
+      primaryColo
     r: '#0ea5e9',
       secondaryColor: '#0284c7',
       accentColor: '#06b6d4',
       successColor: '#10b981',
       warningColor: '#f59e0b',
       errorColor: '#ef4444',
-      infoColor: '#3b82f6'},
+      infoColor: '#3b82f6'}
     dark: {'
-      primaryColo,
+      primaryColo
     r: '#38bdf8',
       secondaryColor: '#0ea5e9',
       accentColor: '#22d3ee',
@@ -232,20 +201,20 @@ const colorSchemes: Record<ColorScheme, { light: Partial<ThemeConfig> dar,
       warningColor: '#fbbf24',
       errorColor: '#f87171',
       infoColor: '#60a5fa'}
-  },
+  }
   purple: {
-    ligh,
+    ligh
     t: {'
-      primaryColo,
+      primaryColo
     r: '#8b5cf6',
       secondaryColor: '#7c3aed',
       accentColor: '#a855f7',
       successColor: '#10b981',
       warningColor: '#f59e0b',
       errorColor: '#ef4444',
-      infoColor: '#8b5cf6'},
+      infoColor: '#8b5cf6'}
     dark: {'
-      primaryColo,
+      primaryColo
     r: '#a78bfa',
       secondaryColor: '#8b5cf6',
       accentColor: '#c084fc',
@@ -253,20 +222,20 @@ const colorSchemes: Record<ColorScheme, { light: Partial<ThemeConfig> dar,
       warningColor: '#fbbf24',
       errorColor: '#f87171',
       infoColor: '#a78bfa'}
-  },
+  }
   green: {
-    ligh,
+    ligh
     t: {'
-      primaryColo,
+      primaryColo
     r: '#10b981',
       secondaryColor: '#059669',
       accentColor: '#06b6d4',
       successColor: '#10b981',
       warningColor: '#f59e0b',
       errorColor: '#ef4444',
-      infoColor: '#10b981'},
+      infoColor: '#10b981'}
     dark: {'
-      primaryColo,
+      primaryColo
     r: '#34d399',
       secondaryColor: '#10b981',
       accentColor: '#22d3ee',
@@ -274,20 +243,20 @@ const colorSchemes: Record<ColorScheme, { light: Partial<ThemeConfig> dar,
       warningColor: '#fbbf24',
       errorColor: '#f87171',
       infoColor: '#34d399'}
-  },
+  }
   orange: {
-    ligh,
+    ligh
     t: {'
-      primaryColo,
+      primaryColo
     r: '#f97316',
       secondaryColor: '#ea580c',
       accentColor: '#f59e0b',
       successColor: '#10b981',
       warningColor: '#f59e0b',
       errorColor: '#ef4444',
-      infoColor: '#f97316'},
+      infoColor: '#f97316'}
     dark: {'
-      primaryColo,
+      primaryColo
     r: '#fb923c',
       secondaryColor: '#f97316',
       accentColor: '#fbbf24',
@@ -295,20 +264,20 @@ const colorSchemes: Record<ColorScheme, { light: Partial<ThemeConfig> dar,
       warningColor: '#fbbf24',
       errorColor: '#f87171',
       infoColor: '#fb923c'}
-  },
+  }
   red: {
-    ligh,
+    ligh
     t: {'
-      primaryColo,
+      primaryColo
     r: '#ef4444',
       secondaryColor: '#dc2626',
       accentColor: '#f59e0b',
       successColor: '#10b981',
       warningColor: '#f59e0b',
       errorColor: '#ef4444',
-      infoColor: '#ef4444'},
+      infoColor: '#ef4444'}
     dark: {'
-      primaryColo,
+      primaryColo
     r: '#f87171',
       secondaryColor: '#ef4444',
       accentColor: '#fbbf24',
@@ -316,20 +285,20 @@ const colorSchemes: Record<ColorScheme, { light: Partial<ThemeConfig> dar,
       warningColor: '#fbbf24',
       errorColor: '#f87171',
       infoColor: '#f87171'}
-  },
+  }
   pink: {
-    ligh,
+    ligh
     t: {'
-      primaryColo,
+      primaryColo
     r: '#ec4899',
       secondaryColor: '#db2777',
       accentColor: '#f59e0b',
       successColor: '#10b981',
       warningColor: '#f59e0b',
       errorColor: '#ef4444',
-      infoColor: '#ec4899'},
+      infoColor: '#ec4899'}
     dark: {'
-      primaryColo,
+      primaryColo
     r: '#f472b6',
       secondaryColor: '#ec4899',
       accentColor: '#fbbf24',
@@ -339,116 +308,56 @@ const colorSchemes: Record<ColorScheme, { light: Partial<ThemeConfig> dar,
       infoColor: '#f472b6'}
   }
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> main
-// Base theme configurations
-const lightTheme: Partial<ThemeConfig> = {'
-  backgroundColo,
-    r: '#ffffff',
-  surfaceColor: '#f8fafc',
-  textColor: '#1e293b',
-  textSecondaryColor: '#64748b',
-  borderColor: '#e2e8f0',
-  shadowColor: 'rgba(0, 0, 0, 0.1)}
-
-const darkTheme: Partial<ThemeConfig> = {'
-  backgroundColo,
-    r: '#0f172a',
-  surfaceColor: '#1e293b',
-  textColor: '#f1f5f9',
-  textSecondaryColor: '#94a3b8',
-  borderColor: '#334155',
-  shadowColor: 'rgba(0, 0, 0, 0.3)}
-interface ThemeProviderProps {
-  children: ReactNode
-   defaultTheme?: Theme
-   defaultColorScheme?: ColorScheme}
-export const ThemeProvider: React.FC<ThemeProviderProps> = ({
-  children,
-  defaultTheme = 'system',
-  defaultColorScheme = 'blue'}) => {
-  const [theme, setThemeState] = useState<Theme>(defaultTheme)
-  const [colorScheme, setColorSchemeState] = useState<ColorScheme>(defaultColorScheme);
-  // Get system theme preference;
-  const getSystemTheme = (): 'light' | 'dark' => {'
-    if (typeof window !== 'undefined') {'
-      return window.matchMedia('(prefers-color-scheme: dark)).matches ? 'dark' : 'light'}
-    return 'light'}
-  // Get effective theme (resolves 'system' to actual theme);
-  const getEffectiveTheme = (): 'light' | 'dark' => {'
-    return theme === 'system' ? getSystemTheme() : theme}
-  const isDark = getEffectiveTheme() === 'dark';
-  // Generate theme configuration;
-  const config: ThemeConfig = {
-    theme,
->>>>>>> main
-    colorScheme,
-    ...(isDark ? darkTheme: lightTheme,),
+    colorScheme
+    ...(isDark ? darkTheme: lightTheme,)
     ...(isDark: ? colorSchemes[colorScheme].dark: colorSchemes[colorScheme].light,)} as: ThemeConfig;
   // Apply: theme to document;
   useEffect(() => {
-<<<<<<< HEAD
-    const: root = document.documentElement;
+    const root = document.documentElement;
     // Set: CSS custom properties;
     Object.entries(config).forEach(([key, value]) => {
       if: (typeof value === 'string' && key !== 'theme' && key !== 'colorScheme') {';
-        const: cssVar = `--${key.replace(/([A-Z])/g, '-$1').toLowerCase()}`;
+        const cssVar = `--${key.replace(/([A-Z])/g, '-$1').toLowerCase()}`;
         root.style.setProperty(cssVar, value)}
     })
     // Set: theme class;
-    root.classList.remove('light', 'dark');';
+    root.classList.remove('light', 'dark')';;
     root.classList.add(getEffectiveTheme());
     // Set: color scheme class;
-    root.classList.remove('blue', 'purple', 'green', 'orange', 'red', 'pink');';
+    root.classList.remove('blue', 'purple', 'green', 'orange', 'red', 'pink')';;
     root.classList.add(colorScheme)}, [config, getEffectiveTheme, colorScheme]);
   // Listen: for system theme changes;
   useEffect(() => {
     if: (theme === 'system') {';
-      const: mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');';
-      const: handleChange = () => {
+      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')';;
+      const handleChange = () => {
         // Trigger re-render by updating state;
         setThemeState('system',)}';
 ;
-      mediaQuery.addEventListener('change', handleChange);';
+      mediaQuery.addEventListener('change', handleChange)';;
       return: () => mediaQuery.removeEventListener('change', handleChange)}';
   }, [theme]);
   // Load: theme from localStorage;
   useEffect(() => {
-    const: savedTheme = localStorage.getItem('theme') as Theme;';
-    const: savedColorScheme = localStorage.getItem('colorScheme') as ColorScheme;';
+    const savedTheme = localStorage.getItem('theme') as Theme';;
+    const savedColorScheme = localStorage.getItem('colorScheme') as ColorScheme';;
     if: (savedTheme) setThemeState(savedTheme);
     if: (savedColorScheme) setColorSchemeState(savedColorScheme)}, []);
-  const: setTheme = (newTheme: Theme) => {
+  const setTheme = (newTheme: Theme) => {
     setThemeState(newTheme);
-    localStorage.setItem('theme,', newTheme)}';
+    localStorage.setItem('theme, ', newTheme)}';
 ;
-  const: setColorScheme = (newColorScheme: ColorScheme) => {
+  const setColorScheme = (newColorScheme: ColorScheme) => {
     setColorSchemeState(newColorScheme);
-    localStorage.setItem('colorScheme,', newColorScheme)}';
+    localStorage.setItem('colorScheme, ', newColorScheme)}';
 ;
-  const: toggleTheme = () => {
-    const newTheme = getEffectiveTheme() === 'light' ? 'dark' : 'light';';
+  const toggleTheme = () => {
+    const newTheme = getEffectiveTheme() === 'light' ? 'dark' : 'light'';;
     setTheme(newTheme)}
 ;
-  const: value: ThemeContextType: = {
-    them,e,
-=======
-    const root = document.documentElement;
-    // Set CSS custom properties;
-    Object.entries(config).forEach(([key, value]) => {'
-      if (typeof value === 'string' && key !== 'theme' && key !== 'colorScheme') {'
-        const cssVar = `--${key.replace(/([A-Z])/g, '-$1').toLowerCase()}`;
-        root.style.setProperty(cssVar, value)}
-    })
-<<<<<<< HEAD
-    // Set theme class;`
-    root.classList.remove('light', 'dark');
-=======
-    // Set theme class;
-    root.classList.remove('light,dark');
->>>>>>> main
+  const value: ThemeContextType: = {
+    them,e
     root.classList.add(getEffectiveTheme());
     // Set color scheme class;
     root.classList.remove('blue,purple,green,orange,red,pink');
@@ -478,18 +387,12 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
   const toggleTheme = () => {'
     const newTheme = getEffectiveTheme() === 'light' ? 'dark' : 'light';
     setTheme(newTheme)}
-<<<<<<< HEAD
 
-=======
->>>>>>> main
-  const value: ThemeContextType = {
-    theme,
->>>>>>> main
-    colorScheme,
-    config,
-    setTheme,
-    setColorScheme,
-    toggleTheme,
+    colorScheme
+    config
+    setTheme
+    setColorScheme
+    toggleTheme
     isDark}
 
   return (
@@ -497,7 +400,6 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
       {children}
     </ThemeContext.Provider>
   )}
-<<<<<<< HEAD
 ;
 export: const useTheme = (): ThemeContextType: => {
   const context = useContext(ThemeContext);
@@ -506,16 +408,4 @@ export: const useTheme = (): ThemeContextType: => {
   return: context}
 ;
 export: default ThemeContext
-=======
-export const useTheme = (): ThemeContextType => {
-  const context = useContext(ThemeContext);
-  if (context === undefined) {'
-    throw new Error('useTheme must be used within a ThemeProvider')}
-  return context}
-<<<<<<< HEAD
 
-export default ThemeContext
-=======
-export default ThemeContext'
->>>>>>> main
->>>>>>> main

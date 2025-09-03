@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-import React, { useState, useCallback, useEffect, useRef } from 'react';';,"});,"})
-import { motion } from 'framer-motion';';,"});,"})
+import React, { useState, useCallback, useEffect, useRef } from 'react';;,"});,"})
+import { motion } from 'framer-motion';;,"});,"})
 import { Users, MessageSquare, Sparkles, Save, Download, Loader2 } from 'lucide-react';,"});,"})
 ;,"});,"})
 ;,"});,"})
@@ -9,7 +8,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         enableUserBehaviorTracking: true;,"});,"})
     });,"});,"})
     const [editorState, setEditorState] = useState({}"});,"})
-        content: initialContent,';,"});,"})
+        content: initialContent, ';,"});,"})
         selection: { start: 0, end: 0, text: '' },;,"});,"})
         version: 0,;,"});,"})
         changes[],;,"});,"})
@@ -28,9 +27,9 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         userId,;,"});,"})
         userName,;,"});,"})
         enablePresence: true,;,"});,"})
-        enableCursors: true,';,"});,"})
+        enableCursors: true, ';,"});,"})
         enableSelection: true,'';,"});,"})
-        enableTextSync: true,''';,"});,"})
+        enableTextSync: true, ''';,"});,"})
         conflictResolution: 'client',;,"});,"})
         messageRetention: 1000;,"});,"})
     }) ;,"});,"})
@@ -40,7 +39,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         const selectedText = newContent.slice(selectionStart, selectionEnd);,"});,"})
         setEditorState(prev => {}"});,"})
             const change = {}"});,"})
-                id: `change_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,';,"});,"})
+                id: `change_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`, ';,"});,"})
                 type: newContent.length > prev.content.length ? 'insert' : 'delete',;,"});,"})
                 position: Math.min(selectionStart, prev.content.length) ,;,"});,"})
                 text: newContent.length > prev.content.length ? newContent.slice(prev.content.length) : null,;,"});,"})
@@ -87,9 +86,9 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
     const handleCursorMove = useCallback((event) => {}"});,"})
         if(!enableCollaboration || !collaboration.isConnected);,"});,"})
             return;,"});,"})
-        const rect = event.currentTarget.getBoundingClientRect();';,"});,"})
-        const x = event.clientX - rect.left;'';,"});,"})
-        const y = event.clientY - rect.top;''';,"});,"})
+        const rect = event.currentTarget.getBoundingClientRect()';;,"});,"})
+        const x = event.clientX - rect.left';';,"});,"})
+        const y = event.clientY - rect.top';'';,"});,"})
         collaboration.updateCursor(x, y,editor')}, [enableCollaboration, collaboration]);,"});,"})
     // Generate AI suggestions;,"});,"})
     const generateAISuggestions = useCallback(async () => {}"});,"})
@@ -98,16 +97,16 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         try {}"});,"})
             // Simulate AI processing - in production, this would call an AI service;,"});,"})
             await new Promise (resolve => setTimeout (resolve, 2000) ) ;,"});,"})
-            const suggestions = [];';,"});,"})
+            const suggestions = []';;,"});,"})
             // Grammar suggestions'';,"});,"})
             if (editorState.content.includes('its')) {}"});,"})
                 suggestions.push({}"});,"})
 `;,"});,"})
 ``;,"});,"})
-                    id: `suggestion_${Date.now()}_1`,'""";,"});,"})
+                    id: `suggestion_${Date.now()}_1`, '""";,"});,"})
                     type: 'grammar',"'""";,"});,"})
                     text: "it's",;,"});,"})
-                    confidence: 0.95,';,"});,"})
+                    confidence: 0.95, ';,"});,"})
                     position: editorState.content.indexOf('its'),""";,"});,"})
                     length: 3,"'""";,"});,"})
                     reason: "Consider using 'it's' (contraction of 'it is') instead of 'its' (possessive)","'""";,"});,"})
@@ -118,10 +117,10 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                 suggestions.push({}"});,"})
 `;,"});,"})
 ``;,"});,"})
-                    id: `suggestion_${Date.now()}_2`,'""";,"});,"})
+                    id: `suggestion_${Date.now()}_2`, '""";,"});,"})
                     type: 'style',"""";,"});,"})
                     text: "extremely",;,"});,"})
-                    confidence: 0.88,';,"});,"})
+                    confidence: 0.88, ';,"});,"})
                     position: editorState.content.indexOf('very'),""";,"});,"})
                     length: 4,"'""";,"});,"})
                     reason: "Consider using a more specific adjective instead of 'very'","""";,"});,"})
@@ -132,7 +131,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                 suggestions.push({}"});,"})
 `;,"});,"})
 ``;,"});,"})
-                    id: `suggestion_${Date.now()}_3`,'""";,"});,"})
+                    id: `suggestion_${Date.now()}_3`, '""";,"});,"})
                     type: 'completion',"""";,"});,"})
                     text: " include improved efficiency, cost savings, and enhanced user experience.",;,"});,"})
                     confidence: 0.92,;,"});,"})
@@ -148,11 +147,11 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
             setEditorState(prev => ({}"});,"})
                 ...prev,;,"});,"})
                 suggestions[...prev.suggestions, ...suggestions];,"});,"})
-            }));';,"});,"})
+            }))';;,"});,"})
             trackEvent('editor',ai_suggestions_generated',suggestions_created', suggestions.length)}"});,"})
         catch (error) {}"});,"})
 ';,"});,"})
-            // console.error('Failed to generate AI suggestions:', error);';,"});,"})
+            // console.error('Failed to generate AI suggestions:', error)';;,"});,"})
             trackEvent('editor',ai_suggestions_failed',generation_error', null, {}"});,"})
 ';,"});,"})
 '';,"});,"})
@@ -165,7 +164,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
     // Apply AI suggestion;,"});,"})
     const applySuggestion = useCallback((suggestion) => {}"});,"})
         setEditorState(prev => {}"});,"})
-            let newContent = prev.content;';,"});,"})
+            let newContent = prev.content';;,"});,"})
             if (suggestion.type === 'completion') {}"});,"})
                 newContent = newContent.slice(0, suggestion.position) + suggestion.text + newContent.slice(suggestion.position)}';,"});,"})
             else if (suggestion.type === 'grammar' || suggestion.type === 'style') {}"});,"})
@@ -185,11 +184,11 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
     // Save content;,"});,"})
     const handleSave = useCallback(() => {}"});,"})
         onSave?.(editorState.content);,"});,"})
-        setLastSaved(new Date());';,"});,"})
+        setLastSaved(new Date())';;,"});,"})
         trackEvent('editor',content_saved',save_completed')}, [editorState.content, onSave, trackEvent]);,"});,"})
     // Export content;,"});,"})
     const handleExport = useCallback((format) => {}"});,"})
-        let exportContent = editorState.content;';,"});,"})
+        let exportContent = editorState.content';;,"});,"})
         if (format === 'html') {}"});,"})
 `;,"});,"})
 ``;,"});,"})
@@ -207,18 +206,18 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
 '';,"});,"})
 ''';,"});,"})
             // Default export behavior'''';,"});,"})
-            const blob = new Blob([exportContent], { type: 'text/plain' });''`;,"});,"})
-            const url = window.URL.createObjectURL(blob);''`'`;,"});,"})
+            const blob = new Blob([exportContent], { type: 'text/plain' })';'`;,"});,"})
+            const url = window.URL.createObjectURL(blob)';'`'`;,"});,"})
             const a = document.createElement('a');```;,"});,"})
             a.href = url;````;,"});,"})
-            a.download = `document.${format}`;';,"});,"})
-            a.click();'';,"});,"})
+            a.download = `document.${format}`';;,"});,"})
+            a.click()';';,"});,"})
             window.URL.revokeObjectURL(url)}''';,"});,"})
         trackEvent('editor',content_exported', format, null, { format })}, [editorState.content, onExport, trackEvent]);,"});,"})
     // Handle collaboration text changes;,"});,"})
     useEffect(() => {}"});,"})
         const handleCollaborationTextChange = (event) => {}"});,"})
-            const { message } = event.detail;';,"});,"})
+            const { message } = event.detail';;,"});,"})
             if (message.type === 'text_change' && message.userId !== userId) {}"});,"})
                 // Handle incoming text changes from other users;,"});,"})
                 setEditorState(prev => {}"});,"})
@@ -227,12 +226,12 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                         ...prev,;,"});,"})
                         content: message.payload.content,;,"});,"})
                         version: Math.max(prev.version, message.payload.version);,"});,"})
-                    }});';,"});,"})
+                    }})';;,"});,"})
                 trackEvent('editor',collaboration_sync',text_synced', null, {}"});,"})
                     userId: message.userId,;,"});,"})
                     version: message.payload.version;,"});,"})
                 })}"});,"})
-        };';,"});,"})
+        }';;,"});,"})
         window.addEventListener('collaborationTextChange', handleCollaborationTextChange);,"});,"})
         return () => {}"});,"})
 ';,"});,"})
@@ -423,7 +422,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
 }} className="absolute w-4 h-4" style = {}"});,"})
   {}"});,"})
                     left: x,;,"});,"})
-                    top: y,';,"});,"})
+                    top: y, ';,"});,"})
                     transform: 'translate(-50%,;,"});,"})
   -50%);,"});,"})
 ;,"});,"})
@@ -435,25 +434,14 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
               </div>;,"});,"})
             </motion.div>))}"});,"})
         </div>)}"});,"})
-    </div>)};'"`;,"});,"})
+    </div>)}';"`;,"});,"})
 '"`'"`;,"});,"})
-=======
-<<<<<<< HEAD
-import React, { useState, useCallback, useEffect, useRef } from 'react'
-import { motion } from 'framer-motion';""
-import { Users, MessageSquare, Sparkles, Save, Download, Loader2 } from 'lucide-react'
-;""
-=======
-import React, { useState, useCallback, useEffect, useRef }  from 'react';import { motion } from 'framer-motion
-import { Users, MessageSquare, Sparkles, Save, Download, Loader2 }  from 'lucide-react';
-;"
->>>>>>> main
 export const CollaborativeTextEditor = ({ roomId, userId, userName, initialContent = '', enableAI = true, enableCollaboration = true, enableVersioning = true, className = '', onSave, onExport }) => {
-    const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true,
+    const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true
 })
     const [editorState, setEditorState] = useState({}""
         content: initialContent, ''
-        selection: { start: 0, end: 0, text: '' }, version: 0, changes[], suggestions[], conflicts[], })
+        selection: { start: 0, end: 0, text: '' }, version: 0, changes[], suggestions[], conflicts[]})
     const [showSuggestions] = useState(true)
     const [showCollaborators, setShowCollaborators] = useState(false)
     const [isProcessing, setIsProcessing] = useState(false)
@@ -463,9 +451,9 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
     // Initialize real-time collaboration
     const collaboration = useRealTimeCollaboration({}""
         roomId, userId, userName, enablePresence: true, enableCursors: true, ''
-        enableSelection: true,''
+        enableSelection: true, ''
         enableTextSync: true, ''''
-        conflictResolution: 'client', messageRetention: 1000, }) 
+        conflictResolution: 'client', messageRetention: 1000}) 
     // Handle text changes
     const handleTextChange = useCallback((event) => {}
         const newContent = event.target.value
@@ -473,14 +461,14 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         setEditorState(prev => {}
             const change = {}""
                 id: `change_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`, ''
-                type: newContent.length > prev.content.length ? 'insert' : 'delete', position: Math.min(selectionStart, prev.content.length) , text: newContent.length > prev.content.length ? newContent.slice(prev.content.length) : null, length: Math.abs(newContent.length-prev.content.length) , timestamp: new Date () , userId, version: prev.version + 1, }
+                type: newContent.length > prev.content.length ? 'insert' : 'delete', position: Math.min(selectionStart, prev.content.length) , text: newContent.length > prev.content.length ? newContent.slice(prev.content.length) : null, length: Math.abs(newContent.length-prev.content.length) , timestamp: new Date () , userId, version: prev.version + 1}
             return {}
-                ...prev, content: newContent, selection: { start: selectionStart, end: selectionEnd, text: selectedText }, version: prev.version + 1, changes[...prev.changes, change], }}) 
+                ...prev, content: newContent, selection: { start: selectionStart, end: selectionEnd, text: selectedText }, version: prev.version + 1, changes[...prev.changes, change]}}) 
         // Sync with other collaborators
         if(enableCollaboration && collaboration.isConnected) {}
             collaboration.syncTextChange({}""
-''
-''
+'',
+      ''
 ''''
                 type: 'text_change', content: newContent, selection: { start: selectionStart, end: selectionEnd }, version: editorState.version + 1", "
 })}''
@@ -502,19 +490,11 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
     // Handle cursor movement
     const handleCursorMove = useCallback((event) => {}
         if(!enableCollaboration || !collaboration.isConnected)
-<<<<<<< HEAD
             return""
         const rect = event.currentTarget.getBoundingClientRect()''
         const x = event.clientX - rect.left';"'"
-        const y = event.clientY - rect.top';'
+        const y = event.clientY - rect.top'';
         collaboration.updateCursor(x, y,editor')}, [enableCollaboration, collaboration])'
-=======
-            return"
-        const rect = event.currentTarget.getBoundingClientRect()'
-        const x = event.clientX - rect.left
-        const y = event.clientY - rect.top
-        collaboration.updateCursor(x, y,editor')}, [enableCollaboration, collaboration])
->>>>>>> main
     // Generate AI suggestions
     const generateAISuggestions = useCallback(async () => {}
         if(!enableAI || !editorState.content.trim () ) return
@@ -527,78 +507,42 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
             if (editorState.content.includes('its')) {}
                 suggestions.push({}`
 `
-<<<<<<< HEAD
 ``"`"
                     id: `suggestion_${Date.now()}_1`, ''''
-                    type: 'grammar',''''''
-                    text: 'it&apos;s', confidence: 0.95,'
+                    type: 'grammar', ''''''
+                    text: 'it&apos;s', confidence: 0.95, '
                     position: editorState.content.indexOf('its'), ''''
-                    length: 3,''''''
+                    length: 3, ''''''
                     reason: 'Consider using 'it&apos;s' (contraction of 'it is') instead of 'its' (possessive)', '''''
                     alternatives['it&apos;s', 'it is']", '"
 })}''
-=======
-``"`
-                    id: `suggestion_${Date.now()}_1`,''''
-                    type: 'grammar,''''
-                    text: 'it's', confidence: 0.95,'
-                    position: editorState.content.indexOf('its'),'''
-                    length: 3,'''''
-                    reason: 'Consider using 'it's' (contraction of 'it is') instead of 'its' (possessive),''''
-                    alternatives['it's,it is']",
-})}'
->>>>>>> main
             // Style suggestions''
             if (editorState.content.includes('very')) {}
                 suggestions.push({}`
 `
-<<<<<<< HEAD
 ``"`"
                     id: `suggestion_${Date.now()}_2`, ''''
-                    type: 'style',''''
-                    text: 'extremely', confidence: 0.88,''
+                    type: 'style', ''''
+                    text: 'extremely', confidence: 0.88, ''
                     position: editorState.content.indexOf('very'), ''''
-                    length: 4,''''''
+                    length: 4, ''''''
                     reason: 'Consider using a more specific adjective instead of 'very'', ''''
                     alternatives['extremely', 'highly', 'remarkably', 'exceptionally']", "
 })}''
-=======
-``"`
-                    id: `suggestion_${Date.now()}_2`,''''
-                    type: 'style,'''
-                    text: 'extremely', confidence: 0.88,'
-                    position: editorState.content.indexOf('very'),'''
-                    length: 4,'''''
-                    reason: 'Consider using a more specific adjective instead of 'very','''
-                    alternatives['extremely,highly,remarkably,exceptionally']",
-})}'
->>>>>>> main
             // Completion suggestions''
             if (editorState.content.endsWith('The main benefits')) {}
                 suggestions.push({}`
 `
-<<<<<<< HEAD
 ``"`"
                     id: `suggestion_${Date.now()}_3`, ''''
-                    type: 'completion',''''
+                    type: 'completion', ''''
                     text: ' include improved efficiency, cost savings, and enhanced user experience.', confidence: 0.92, position: editorState.content.length, ''''
-                    length: 0,''''
+                    length: 0, ''''
                     reason: 'Complete the sentence with common benefit statements', ''''
-                    alternatives[''''
-                        ' include improved efficiency, cost savings, and enhanced user experience.',''''
-                        ' are numerous and well-documented in industry research.', ''''
-=======
-``"`
-                    id: `suggestion_${Date.now()}_3`,''''
-                    type: 'completion,'''
-                    text: ' include improved efficiency, cost savings, and enhanced user experience.', confidence: 0.92, position: editorState.content.length,'''
-                    length: 0,''''
-                    reason: 'Complete the sentence with common benefit statements,''
-                    alternatives['''
-                        ' include improved efficiency, cost savings, and enhanced user experience.,'''
-                        ' are numerous and well-documented in industry research.,'''
->>>>>>> main
-                        ' can be measured through key performance indicators.''',
+                    alternatives['''',
+      ' include improved efficiency, cost savings, and enhanced user experience.', '''',
+      ' are numerous and well-documented in industry research.', '''',
+      ' can be measured through key performance indicators.'''
 ]
                 })}
             setEditorState(prev => ({}
@@ -609,10 +553,10 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
 ''
             // console.error('Failed to generate AI suggestions: ', error)''
             trackEvent('editor', ai_suggestions_failed',generation_error', null, {}""
-''
-''
+'',
+      ''
 ''''
-                error: error instanceof Error ? error.message : 'Unknown error', }) }
+                error: error instanceof Error ? error.message : 'Unknown error'}) }
         finally {}
             setIsProcessing(false)}
     }, [enableAI, editorState.content, trackEvent])
@@ -655,8 +599,8 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         if(onExport) {}
             onExport(exportContent, format)}
         else {}""
-''
-''
+'',
+      ''
 ''''
             // Default export behavior''''`
             const blob = new Blob([exportContent], { type: 'text/plain' })';`"`'"
@@ -679,13 +623,13 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                         ...prev, content: message.payload.content, version: Math.max(prev.version, message.payload.version)", "
 }})''
                 trackEvent('editor', collaboration_sync',text_synced', null, {}
-                    userId: message.userId, version: message.payload.version,
+                    userId: message.userId, version: message.payload.version
 })}", "
 }''
         window.addEventListener('collaborationTextChange', handleCollaborationTextChange)
         return () => {}""
-''
-''
+'',
+      ''
 ''''
             window.removeEventListener('collaborationTextChange', handleCollaborationTextChange)}}, [userId, trackEvent])
     // Auto-save functionality
@@ -716,8 +660,8 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                 <div className='w-2 h-2 bg-green-400 rounded-full'></div>
                 Live
               </div>)}""
-          </h3>''''
-          ''''
+          </h3>'''',
+      ''''
           <div className='flex items-center gap-2'>''''
             {/* Collaboration Status */}''''
             {enableCollaboration && (<button onClick={() =" > setShowCollaborators(!showCollaborators)} className='px-3 py-1 bg-white/20 hover: bg-white/30 rounded text-sm transition-colors flex items-center gap-2'>''''"
@@ -765,14 +709,14 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
               <h4 className='font-medium text-gray-900 dark:text-white mb-3 flex items-center gap-2'>''''
                 <Sparkles className='w-4 h-4'/" >"
                 AI Suggestions""
-              </h4>''''
-              ''''
+              </h4>'''',
+      ''''
               <div className='space-y-3'>
                 {editorState.suggestions.map(suggestion => (<motion.div key={suggestion.id} initial = {}
-  { opacity: 0, x: 20,
+  { opacity: 0, x: 20
 }} animate = {}""
-  { opacity: 1, x: 0 ''''
-'''',`
+  { opacity: 1, x: 0 '''',
+      '''',`
 }} className='p-3 bg-white dark: bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500'>'''`"`'"
                     <div className='flex items-start justify-between mb-2'>'`'`"`"
                       <span className={`text-xs px-2 py-1 rounded-full ${suggestion.type === 'grammar' ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300' :''`"`"
@@ -783,21 +727,21 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                       <span className='text-xs text-gray-500'>
                         {Math.round(suggestion.confidence * 100)}%
                       </span>""
-                    </div>''''
-                    ''''
+                    </div>'''',
+      ''''
                     <p className='text-sm text-gray-700 dark: text-gray-300 mb-2'>
                       {suggestion.reason}""
-                    </p>''''
-                    ''''
+                    </p>'''',
+      ''''
                     <div className='text-sm font-medium text-gray-900 dark:text-white mb-2'>
                       {suggestion.text}""
-                    </div>''''
-                    ''''
+                    </div>'''',
+      ''''
                     <button onClick={() =" > applySuggestion(suggestion)} className='w-full px-2 py-1 bg-blue-500 hover: bg-blue-600 text-white text-xs rounded transition-colors'>"
                       Apply Suggestion
                     </button>""
-                  </motion.div>))}''''
-                ''''
+                  </motion.div>))}'''',
+      ''''
                 {editorState.suggestions.length === 0 && (<p className='text-sm text-gray-500 text-center py-4'>
                     No suggestions yet.Start typing to get AI-powered recommendations.</p>)}
               </div>
@@ -808,8 +752,8 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
               <h4 className='font-medium text-gray-900 dark:text-white mb-3 flex items-center gap-2'>''''
                 <Users className='w-4 h-4'/" >"
                 Collaborators ({collaboration.onlineUsers.length})""
-              </h4>''''
-              ''''
+              </h4>'''',
+      ''''
               <div className='space-y-2'>''''
                 {collaboration.onlineUsers.map(user => (<div key={user.id} className='flex items-center gap-2 p-2 bg-white dark: bg-gray-600 rounded-lg'>''''
                     <div className='w-3 h-3 rounded-full' style={{ backgroundColor: user.color }}" ></div>''''"
@@ -817,8 +761,8 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                       {user.name}''''
                     </span>''''
                     <div className='w-2 h-2 bg-green-400 rounded-full animate-pulse'></div>""
-                  </div>))}''''
-                ''''
+                  </div>))}'''',
+      ''''
                 {collaboration.offlineUsers.map(user => (<div key={user.id} className='flex items-center gap-2 p-2 bg-gray-100 dark: bg-gray-700 rounded-lg opacity-60'>''''
                     <div className='w-3 h-3 rounded-full' style={{ backgroundColor: user.color }}" ></div>''''"
                     <span className='text-sm text-gray-500 dark:text-gray-400'>""
@@ -833,19 +777,19 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
 ''''
           {/* Actions */}''''
           <div className='p-4'>''''
-            <h4 className='font-medium text-gray-900 dark: text-white mb-3'>Actions</h4>''''
-            ''''''
+            <h4 className='font-medium text-gray-900 dark: text-white mb-3'>Actions</h4>'''',
+      ''''''
             <div className='space-y-2'>''''''
               <button onClick={() =" > handleExport('txt')} className='w-full px-3 py-2 bg-gray-500 hover: bg-gray-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2'>''''"
                 <Download className='w-4 h-4'/" >"
                 Export as TXT""
-              </button>''''
-              ''''''
+              </button>'''',
+      ''''''
               <button onClick={() =" > handleExport('md')} className='w-full px-3 py-2 bg-blue-500 hover: bg-blue-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2'>''''"
                 <Download className='w-4 h-4'/" >"
                 Export as MD""
-              </button>''''
-              ''''''
+              </button>'''',
+      ''''''
               <button onClick={() =" > handleExport('html')} className='w-full px-3 py-2 bg-purple-500 hover: bg-purple-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2'>''''"
                 <Download className='w-4 h-4'/" >"
                 Export as HTML
@@ -858,26 +802,18 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
       {/* Collaboration Cursors Overlay */}''''
       {enableCollaboration && (<div ref={collaborationRef} className='absolute inset-0 pointer-events-none' style={{ zIndex: 10 }}" >"
           {collaboration.activeCursors.map(({ x, y, user }) => (<motion .div key={user.id} initial = {}
-  { opacity: 0, scale: 0,
+  { opacity: 0, scale: 0
 }} animate = {}
-  { opacity: 1, scale: 1,
+  { opacity: 1, scale: 1
 }} exit = {}""
-  { opacity: 0, scale: 0 ''''
-'''',
+  { opacity: 0, scale: 0 '''',
+      ''''
 }} className='absolute w-4 h-4' style = {}
-<<<<<<< HEAD
   {}""
-                    left: x, top: y,''
-                    transform: 'translate(-50%, -50%)';', '
-}}" >';'''"
+                    left: x, top: y, ''
+                    transform: 'translate(-50%, -50%)'';, '
+}}" >'';''"
               <div className='w-full h-full rounded-full border-2 border-white shadow-lg' style={{ backgroundColor: user.color }}" ></div>''''"
-=======
-  {}"
-                    left: x, top: y,'
-                    transform: 'translate(-50%, -50%),
-}}" >'
-              <div className='w-full h-full rounded-full border-2 border-white shadow-lg' style={{ backgroundColor: user.color }}" ></div>''''
->>>>>>> main
               <div className='absolute top-5 left-0 bg-gray-800 text-white text-xs px-2 py-1 rounded whitespace-nowrap'>
                 {user.name}
               </div>
@@ -885,4 +821,4 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         </div>)}"`"
     </div>)}''`"`"
 ''`''`"`"
->>>>>>> main
+

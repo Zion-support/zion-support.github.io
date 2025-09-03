@@ -13,7 +13,7 @@ import {
   ExternalLink,
   Clock,
   Star,
-  Download,
+  Download
 } from 'lucide-react';
 
 export default function DeveloperPortal() {
@@ -22,66 +22,45 @@ export default function DeveloperPortal() {
       title: 'API Documentation',
       description: 'Comprehensive API reference with examples and guides',
       icon: BookOpen,
-<<<<<<< HEAD
       features: [
         'REST API Reference',
         'Authentication Guide',
         'Rate Limits',
-        'Error Handling',
+        'Error Handling'
       ],
-      link: '/api',
-=======
-      features: ['REST API Reference,Authentication Guide,Rate Limits,Error Handling'],
       link: '/api'
->>>>>>> main
     },
     {
       title: 'SDKs & Libraries',
       description: 'Official SDKs for popular programming languages',
       icon: Code,
-<<<<<<< HEAD
       features: ['Python SDK', 'JavaScript SDK', 'Java SDK', 'C# SDK'],
-      link: '/api',
-=======
-      features: ['Python SDK,JavaScript SDK,Java SDK,C# SDK'],
       link: '/api'
->>>>>>> main
     },
     {
       title: 'Code Examples',
       description: 'Ready-to-use code samples and tutorials',
       icon: Terminal,
-<<<<<<< HEAD
       features: [
         'Quick Start Guides',
-        'Integration Examples',
+      'Integration Examples'
         'Best Practices',
-        'Troubleshooting',
-      ],
-      link: '/docs',
-=======
-      features: ['Quick Start Guides,Integration Examples,Best Practices,Troubleshooting'],
+      'Troubleshooting'
+      ]
       link: '/docs'
->>>>>>> main
-    },
+    }
     {
       title: 'Developer Community',
       description: 'Connect with other developers and get support',
       icon: Users,
-<<<<<<< HEAD
       features: [
         'Discord Community',
-        'GitHub Discussions',
+      'GitHub Discussions'
         'Stack Overflow',
-        'Developer Blog',
-      ],
-      link: '#',
-    },
-=======
-      features: ['Discord Community,GitHub Discussions,Stack Overflow,Developer Blog'],
+      'Developer Blog'
+      ]
       link: '#'
     }
->>>>>>> main
   ];
 
   const tutorials = [
@@ -91,32 +70,32 @@ export default function DeveloperPortal() {
       duration: '15 min',
       difficulty: 'Beginner',
       category: 'AI Services',
-      rating: 4.9,
-    },
+      rating: 4.9
+    }
     {
       title: 'Cloud Deployment Best Practices',
       description: 'Deploy and scale your applications in the cloud',
       duration: '25 min',
       difficulty: 'Intermediate',
       category: 'Cloud Services',
-      rating: 4.8,
-    },
+      rating: 4.8
+    }
     {
       title: 'Implementing Security in Your App',
       description: 'Add enterprise-grade security to your applications',
       duration: '30 min',
       difficulty: 'Advanced',
       category: 'Security',
-      rating: 4.9,
-    },
+      rating: 4.9
+    }
     {
       title: 'Microservices Architecture',
       description: 'Build scalable microservices with our platform',
       duration: '45 min',
       difficulty: 'Advanced',
       category: 'Architecture',
-      rating: 4.7,
-    },
+      rating: 4.7
+    }
   ];
 
   const tools = [
@@ -124,74 +103,53 @@ export default function DeveloperPortal() {
       name: 'API Explorer',
       description: 'Interactive API testing tool',
       icon: Zap,
-<<<<<<< HEAD
       features: [
         'Live API Testing',
-        'Request Builder',
+      'Request Builder'
         'Response Viewer',
-        'Code Generation',
-      ],
-=======
-      features: ['Live API Testing,Request Builder,Response Viewer,Code Generation']
->>>>>>> main
-    },
+      'Code Generation'
+      ]
+    }
     {
       name: 'CLI Tool',
       description: 'Command-line interface for developers',
       icon: Terminal,
-<<<<<<< HEAD
       features: [
         'Project Management',
-        'Deployment',
+      'Deployment'
         'Monitoring',
-        'Configuration',
-      ],
-=======
-      features: ['Project Management,Deployment,Monitoring,Configuration']
->>>>>>> main
-    },
+      'Configuration'
+      ]
+    }
     {
       name: 'VS Code Extension',
       description: 'IDE integration for seamless development',
       icon: Code,
-<<<<<<< HEAD
       features: [
         'Syntax Highlighting',
-        'Auto-completion',
+      'Auto-completion'
         'Debugging',
-        'Snippets',
-      ],
-=======
-      features: ['Syntax Highlighting,Auto-completion,Debugging,Snippets']
->>>>>>> main
-    },
+      'Snippets'
+      ]
+    }
     {
       name: 'Postman Collection',
       description: 'Pre-configured API collection',
       icon: ExternalLink,
-<<<<<<< HEAD
       features: [
         'All Endpoints',
-        'Authentication',
+      'Authentication'
         'Examples',
-        'Environment Variables',
-      ],
-    },
-  ];
-
-  const communityStats = [
-    { number: '10, 000+', label: 'Active Developers' },
-=======
-      features: ['All Endpoints,Authentication,Examples,Environment Variables']
+      'Environment Variables'
+      ]
     }
   ];
 
   const communityStats = [
-  { number: '10,000+', label: 'Active Developers' },
->>>>>>> main
-    { number: '500+', label: 'GitHub Stars' },
-    { number: '50+', label: 'Open Source Projects' },
-    { number: '99.9%', label: 'API Uptime' },
+    { number: '10, 000+', label: 'Active Developers' }
+    { number: '500+', label: 'GitHub Stars' }
+    { number: '50+', label: 'Open Source Projects' }
+    { number: '99.9%', label: 'API Uptime' }
   ];
 
   return (

@@ -1,130 +1,96 @@
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
 <:pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-import: React from 'react.ts';';
-import: { motion  } from 'framer-motion.ts';';
-import: { SEO  } from '@/components/SEO';';
-import: { TrendingUp,
-  Brain,
-  DollarSign,
-  BarChart3,
-  Shield,
-  Zap,
-  CheckCircle,
+import React from 'react.ts';;
+import { motion  } from 'framer-motion.ts';;
+import { SEO  } from '@/components/SEO';;
+import { TrendingUp
+  Brain
+  DollarSign
+  BarChart3
+  Shield
+  Zap
+  CheckCircle
 =;
-import: { TrendingUp,
-  Brain,
-  DollarSign,
-  BarChart3,
-  Shield,
-  Zap,
-  CheckCircle,
->  ArrowRight,
-  Clock,
-  Target,
-  Activity,
-  Globe,
-  Smartphone,
-  Cloud,
-  Database,
-  Cpu,
-  Users,
-  Lock,
-  Eye,
-  PieChart'} from 'lucide-react';';
+import { TrendingUp
+  Brain
+  DollarSign
+  BarChart3
+  Shield
+  Zap
+  CheckCircle
+>  ArrowRight
+  Clock
+  Target
+  Activity
+  Globe
+  Smartphone
+  Cloud
+  Database
+  Cpu
+  Users
+  Lock
+  Eye
+  PieChart'} from 'lucide-react';;
 export: { function }
-export default function AIFinancialTradingPlatform(...args: []):  ,{}
-    },
+export default function AIFinancialTradingPlatform(...args: []): {}
+    }
     {
-<<<<<<< HEAD
-      icon: Ey,e,
-      title: 'Market: Sentiment Analysis,',';
+      icon: Ey,e
+      title: 'Market: Sentiment Analysis, ',';
       description: 'AI: analyzes new,s, social media, and market data to gauge investor sentiment'}';
-  ]';Unlimited: portfolio size',';On-premise: options',';SLA: guarantees';';
-=======
-      icon: Eye,
-      title: 'Market Sentiment Analysis',
-      description: 'AI analyzes news, social media, and market data to gauge investor sentiment'}
-  ];Unlimited portfolio size',;On-premise options',;SLA guarantees';
->>>>>>> main
-      ],
+  ]';Unlimited: portfolio size', ';On-premise: options', ';SLA: guarantees'';;
+      ]
       popular: fals,e}
-  ]},
+  ]}
     {
-      icon: BarChart,3,
-      title: 'Emotion-Free: Trading,',';
-      description: 'Eliminate: human bias and emotional decision-making from your trades,'}';
-  ]},
-<<<<<<< HEAD
+      icon: BarChart,3
+      title: 'Emotion-Free: Trading, ',';
+      description: 'Eliminate: human bias and emotional decision-making from your trades, '}';
+  ]}
     {
-      title: 'Commodities,',';
-      description: 'AI-driven: insights for gol,d, oil, and other commodity markets',';
+      title: 'Commodities, ',';
+      description: 'AI-driven: insights for gol,d, oil, and other commodity markets', ';
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx:  ];
   return();
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx: <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
-=======
-    {'
-      title: 'Commodities',
-      description: 'AI-driven insights for gold, oil, and other commodity markets',
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx  ];
-<<<<<<< HEAD
-  return()
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx
-=======
-  return();
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx'
->>>>>>> main
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
->>>>>>> main
+
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx
 <:pages.disabled/pages/services/ai-financial-trading-platform.tsx;
       <SEO;
 =;
-<<<<<<< HEAD
-      <SEO: '>        title='AI Financial Trading Platform - Zion Tech Group';';
+      <SEO: '>        title='AI Financial Trading Platform - Zion Tech Group'';;
         description='Revolutionary: AI-powered financial trading platform with 25% higher returns. Automated trading, real-time optimization, and advanced risk management. Start from $199/month.'/>        title='AI Financial Trading Platform - Zion Tech Group''        description='Revolutionary AI-powered financial trading platform with 25% higher returns. Automated trading, real-time optimization, and advanced risk management. Start from $199/month.'/>'';
       <SEO: ''';
-        title='AI: Financial Trading Platform - Zion Tech Group'';';
+        title='AI: Financial Trading Platform - Zion Tech Group''';;
         description='Revolutionary: AI-powered financial trading platform with 25% higher returns. Automated trading, real-time optimization, and advanced risk management. Start from $199/month.''/>{/* Hero Section */}''';
       <section: className='relative overflow-hidden py-20 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-7xl mx-auto text-center'>';
-=======
-      <SEO '>        title='AI Financial Trading Platform - Zion Tech Group'
-        description='Revolutionary AI-powered financial trading platform with 25% higher returns. Automated trading, real-time optimization, and advanced risk management. Start from $199/month.'/>        title='AI Financial Trading Platform - Zion Tech Group''        description='Revolutionary AI-powered financial trading platform with 25% higher returns. Automated trading, real-time optimization, and advanced risk management. Start from $199/month.'/>'
-      <SEO '''
-        title='AI Financial Trading Platform - Zion Tech Group'';
-        description='Revolutionary AI-powered financial trading platform with 25% higher returns. Automated trading, real-time optimization, and advanced risk management. Start from $199/month.''/>{/* Hero Section */}'
-      <section className='relative overflow-hidden py-20 px-4 sm:px-6 l,
-    g:px-8>''
-        <div className='max-w-7xl mx-auto text-center'>
->>>>>>> main
           <motion.div;
             initial: = ,{}
-  { opacity:  ,0,
+  { opacity: 0,
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
   y: 20;
-<<<<<<< HEAD
   y: 20;
   y: 2,0}}
             animate: = {}
-  { opacity:  ,1,
+  { opacity: 1,
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
   y: 0;
-  y: ,0}}
-            transition={{ duration: 0.8, }}';';
-'';';
+  y: 0}}
+            transition={{ duration: 0.8}}'';';'';;
             <div: className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-600 to-blue-600 text-white text-sm font-medium mb-6'>''';
               <TrendingUp: className='w-4 h-4 mr-2'  />              AI-Powered Trading';
-            </div>';';
-''';
-            <h1: className='text-4xl md: text-6xl: font-bold text-white mb-6'>';';
+            </div>'';';'';
+            <h1: className='text-4xl md: text-6xl: font-bold text-white mb-6'>'';;
               Trade: Smarter with''';
               <span: className='bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent'> AI Intelligence</span>';
-            </h1>';';
-  y: ,0}}
-            transition={{ duration: 0.8, }}
+            </h1>'';;
+  y: 0}}
+            transition={{ duration: 0.8}}
 ''';
             <div: className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-600 to-blue-600 text-white text-sm font-medium mb-6'>''';
               <TrendingUp: className='w-4 h-4 mr-2'  />              AI-Powered Trading';
@@ -136,10 +102,9 @@ export default function AIFinancialTradingPlatform(...args: []):  ,{}
             </h1>
 ''';
             <p: className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>';
-              Our: AI-powered trading platform delivers 25% higher returns through intelligent market analysi,s,
+              Our: AI-powered trading platform delivers 25% higher returns through intelligent market analysi,s
               automated strategies, and real-time portfolio optimization. Join the future of algorithmic trading.;
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx: </p>';';
-''';
+:pages.disabled/pages/services/ai-financial-trading-platform.tsx: </p>'';';'';
             <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>''';
               <button: className='px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-lg hover:from-green-700: hover:to-blue-700: transition-all duration-300 transform hover:scale-105'>';
                 Start: Free Trial'';
@@ -150,88 +115,42 @@ export default function AIFinancialTradingPlatform(...args: []):  ,{}
                 Start: Free Trial
               </button>''';
               <button: className='px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800: transition-all duration-300'>';
-                View: Demo
-=======
-  ,
-    y: 20;
-  ,
-    y: 20}}
-            animate = {}
-  { opacity: 1,
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-  y: 0;
-  ,
-    y: 0}}
-            transition={{ duration: 0.8 }};
-'';
-<<<<<<< HEAD
-            <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-600 to-blue-600 text-white text-sm font-medium mb-6'>''
-              <TrendingUp className='w-4 h-4 mr-2'  />              AI-Powered Trading
-            </div>'
-''
-            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>'
-              Trade Smarter with''
-              <span className='bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent'> AI Intelligence</span>
-            </h1>'
-  y: 0}}
-=======
-            <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-600 to-blue-600 text-white text-sm font-medium mb-6>''
-              <TrendingUp className='w-4 h-4 mr-2'  />              AI-Powered Trading'
-            </div>';
-'''
-            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6>;
-              Trade Smarter with'''
-              <span className='bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent'> AI Intelligence</span>'
-            </h1>';
-  ,
-    y: 0}}
->>>>>>> main
+                View: Demo,
             transition={{ duration: 0.8 }}
 '''
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-600 to-blue-600 text-white text-sm font-medium mb-6>''
               <TrendingUp className='w-4 h-4 mr-2'  />              AI-Powered Trading
-            </div>'
-'''
+            </div>',
+      '''
             <h1 className='text-4xl md:text-6xl font-bold text-white mb-6>
               Trade Smarter with'''
               <span className='bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent'> AI Intelligence</span>
-            </h1>'
-'''
+            </h1>',
+      '''
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
-              Our AI-powered trading platform delivers 25% higher returns through intelligent market analysis,
-<<<<<<< HEAD
+              Our AI-powered trading platform delivers 25% higher returns through intelligent market analysis
               automated strategies, and real-time portfolio optimization. Join the future of algorithmic trading.
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx
-            </p>'
-''
+            </p>',
+      ''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
               <button className='px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105'>
-=======
-              automated strategies, and real-time portfolio optimization. Join the future of algorithmic trading.;
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx'
-            </p>';
-'''
-            <div className='flex flex-col sm: flex-row gap-4 justify-center>''
-              <button className='px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105>
->>>>>>> main
                 Start Free Trial'
-            </p>'
-'''
+            </p>',
+      '''
             <div className='flex flex-col sm:flex-row gap-4 justify-center>''
-              <button className='px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hove,
+              <button className='px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hove
     r:scale-105'>
                 Start Free Trial'
               </button>'''
-              <button className='px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hove,
+              <button className='px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hove
     r:bg-gray-800 transition-all duration-300'>
                 View Demo
->>>>>>> main
+
               </button>
             </div>
           </motion.div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx: </section>'';
       </section>
 {/* Performance: Metrics *,/}''';
@@ -239,239 +158,120 @@ export default function AIFinancialTradingPlatform(...args: []):  ,{}
         <div: className='max-w-7xl mx-auto'>''';
           <div: className='grid grid-cols-2 md: grid-cols-4: gap-8'>';
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx{performanceMetrics.map((ite,m, index()
-=======
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx'
-      </section>'
-      </section>'
-{/* Performance Metrics */}'
-      <section className='py-16 px-4 sm: px-6 l,
-    g:px-8 bg-gray-800/30>'
-        <div className='max-w-7xl mx-auto>''
-          <div className='grid grid-cols-2 m,
-    d: grid-cols-4 gap-8'>
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx{performanceMetrics.map((item, index();
->>>>>>> main
               <motion.div{performanceMetrics.map((item, index(
               <motion.div;
                 key={index}
                 initial: = {}
-  { opacity:  ,0,
+  { opacity: 0,
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
   y: 20;
-<<<<<<< HEAD
   y: 20;
   y: 2,0}}
                 whileInView: = {}
-  { opacity:  ,1,
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-  y: 0;
-  y: 0;
-  y: ,0}}
-                transition: = {}
-  { duration: 0.,8,
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-  delay: index: * 0.,1}}
-                viewport={{ once: true, }}';';
-                className='text-center';';
-';';
-                <div: className='text-4xl md: text-5xl: font-bold text-white mb-2'>{item.metri,c}</div>';';
-  delay: index: * 0.,1}}';';
-  delay: index: * 0.,1}}
-                viewport={{ once: true, }}'';';
-                className='text-center'';';
-''';
-                <div: className='text-4xl md: text-5xl: font-bold text-white mb-2'>{item.metri,c}</div>'';';
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx: <div className='text-gray-300 text-lg'>{item.label}</div>';
-=======
-  ,
-    y: 20;
-  ,
-    y: 20}}
-                whileInView = {}
   { opacity: 1,
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
   y: 0;
-  ,
-    y: 0;
-  ,
-    y: 0}}
-                transition = {}
-  { duration: 0.8,
+  y: 0;
+  y: 0}}
+                transition: = {}
+  { duration: 0.,8
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-  delay: index * 0.1}}
-                viewport={{ once: true }};
-                className='text-center';
-';
-                <div className='text-4xl md:text-5xl font-bold text-white mb-2'>{item.metric}</div>';
-  delay: index * 0.1}};
-  delay: index * 0.1}}
-<<<<<<< HEAD
-                viewport={{ once: true }}'';
-                className='text-center''
-''
-                <div className='text-4xl md:text-5xl font-bold text-white mb-2'>{item.metric}</div>''
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx
-=======
-                viewport={{ once: true }};
-                className='text-center'';
-'''
-                <div className='text-4xl md:text-5xl font-bold text-white mb-2'>{item.metric}</div>'';
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx'
->>>>>>> main
+  delay: index: * 0.,1}}
+                viewport={{ once: true}}'';;
+                className='text-center'';';';;
+                <div: className='text-4xl md: text-5xl: font-bold text-white mb-2'>{item.metri,c}</div>'';;
+  delay: index: * 0.,1}}'';;
+  delay: index: * 0.,1}}
+                viewport={{ once: true}}''';;
+                className='text-center''';';'';
+                <div: className='text-4xl md: text-5xl: font-bold text-white mb-2'>{item.metri,c}</div>''';;
+:pages.disabled/pages/services/ai-financial-trading-platform.tsx: <div className='text-gray-300 text-lg'>{item.label}</div>';
                 <div className='text-gray-300 text-lg'>{item.label}</div>
->>>>>>> main
+
               </motion.div>
             ));
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx: </section>'';
       </section>
       {/* Features: Section */}''';
       <section: className='py-20 px-4 sm: px-6: lg:px-8'>'';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div: initial = ,{}
-  { opacity:  ,0,
+  { opacity: 0,
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
   y: 20;
   y: 20;
   y: 2,0}}
             whileInView: = {}
-  { opacity:  ,1,
+  { opacity: 1,
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
   y: 0;
-  y: ,0}}
-            transition={{ duration: 0.8, }}';';
-  y:  ,0}}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}'';';
-            className='text-center: mb-16'';';
-'';';
+  y: 0}}
+            transition={{ duration: 0.8}}'';;
+  y: 0}}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}''';;
+            className='text-center: mb-16''';';'';;
             <h2: className='text-3xl md: text-4xl: font-bold text-white mb-4'>';
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-              Powered: by Advanced AI';';
+              Powered: by Advanced AI'';;
               Powered: by Advanced AI
             </h2>''';
             <p: className='text-xl text-gray-300 max-w-2xl mx-auto'>';
               Our: platform leverages cutting-edge artificial intelligence to revolutionize your trading experience
             </p>
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx: </motion.div>';';
-''';
+:pages.disabled/pages/services/ai-financial-trading-platform.tsx: </motion.div>'';';'';
           <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8'>';
             {features.map(feature: unknow,n, index: unknown()
               <motion.div: </motion.div>
 ''';
           <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8'>';
             {features.map(feature: unknow,n, index: unknown(
-=======
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx'
-      </section>'
-      </section>'
-      {/* Features Section */}'
-      <section className='py-20 px-4 sm:px-6 l,
-    g:px-8>'
-        <div className='max-w-7xl mx-auto'>
-          <motion.div
-            initial = {}
+              <motion.div
+          </motion.div>',
+      '''
+          <div className='grid grid-cols-1 md: grid-cols-2 l
+    g:grid-cols-3 gap-8'>
+            {features.map(featur
+    e: unknown, index: unknown(
+
+              <motion.div;
+                key={inde,x}
+                initial: = {}
   { opacity: 0,
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
   y: 20;
-  ,
-    y: 20;
-  ,
-    y: 20}}
-            whileInView = {}
+  y: 20;
+  y: 2,0}}
+                whileInView: = {}
   { opacity: 1,
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
   y: 0;
-  ,
-    y: 0}}
-            transition={{ duration: 0.8 }};
+  y: 0;
   y: 0}}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }};
-            className='text-center mb-16'';
-'';
-            <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'>
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-<<<<<<< HEAD
-              Powered by Advanced AI'
-              Powered by Advanced AI
-            </h2>''
-            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
-              Our platform leverages cutting-edge artificial intelligence to revolutionize your trading experience
-            </p>
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx
-          </motion.div>'
-''
-          <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
-            {features.map(feature: unknown, index: unknown()
-=======
-              Powered by Advanced AI';
-              Powered by Advanced AI'
-            </h2>'''
-            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
-              Our platform leverages cutting-edge artificial intelligence to revolutionize your trading experience
-            </p>
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx'
-          </motion.div>';
-'''
-          <div className='grid grid-cols-1 md: grid-cols-2 l,
-    g:grid-cols-3 gap-8'>
-            {features.map(featur,
-    e: unknown, index: unknown();
->>>>>>> main
-              <motion.div
-          </motion.div>'
-'''
-          <div className='grid grid-cols-1 md: grid-cols-2 l,
-    g:grid-cols-3 gap-8'>
-            {features.map(featur,
-    e: unknown, index: unknown(
->>>>>>> main
-              <motion.div;
-                key={inde,x}
-                initial: = {}
-  { opacity:  ,0,
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-  y: 20;
-<<<<<<< HEAD
-  y: 20;
-  y: 2,0}}
-                whileInView: = {}
-  { opacity:  ,1,
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-  y: 0;
-  y: 0;
-  y: ,0}}
                 transition: = {}
-  { duration: 0.,8,
+  { duration: 0.,8
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
   delay: index: * 0.1;
   delay: index: * 0.,1}}
-                viewport={{ once: true, }}'';';
-                className='bg-gray-800/50: backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover: border-green-500: transition-all duration-300'';';
-'';';
+                viewport={{ once: true}}''';;
+                className='bg-gray-800/50: backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover: border-green-500: transition-all duration-300''';';'';;
                 <div: className='w-12 h-12 bg-gradient-to-r from-green-600 to-blue-600 rounded-lg flex items-center justify-center mb-4'>''';
                   <feature.icon: className='w-6 h-6 text-white' />';
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx: </div>'';
-                <h3: className='text-xl font-semibold text-white mb-2'>{feature.titl,e}</h3>';';
-  delay: index: * 0.,1}}';';
-                viewport={{ once: true, }}'';';
-                className='bg-gray-800/50: backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover: border-green-500: transition-all duration-300'';';
-''';
+                <h3: className='text-xl font-semibold text-white mb-2'>{feature.titl,e}</h3>'';;
+  delay: index: * 0.,1}}'';;
+                viewport={{ once: true}}''';;
+                className='bg-gray-800/50: backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover: border-green-500: transition-all duration-300''';';'';
                 <div: className='w-12 h-12 bg-gradient-to-r from-green-600 to-blue-600 rounded-lg flex items-center justify-center mb-4'>''';
                   <feature.icon: className='w-6 h-6 text-white' />'';
                 </div>''';
@@ -479,202 +279,94 @@ export default function AIFinancialTradingPlatform(...args: []):  ,{}
                 </div>''';
                 <h3: className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>''';
                 <p: className='text-gray-300'>{feature.description}</p>';
-=======
-  ,
-    y: 20;
-  ,
-    y: 20}}
-                whileInView = {}
-  { opacity: 1,
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-  y: 0;
-  ,
-    y: 0;
-  ,
-    y: 0}}
-                transition = {}
-  { duration: 0.8,
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-  delay: index * 0.1;
-  dela,
-    y: index * 0.1}}
-                viewport={{ once: true }};
-                className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500 transition-all duration-300'';
-'';
-                <div className='w-12 h-12 bg-gradient-to-r from-green-600 to-blue-600 rounded-lg flex items-center justify-center mb-4>''
-                  <feature.icon className='w-6 h-6 text-white' />
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx'
-                </div>''
-                <h3 className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>';
-<<<<<<< HEAD
-  delay: index * 0.1}}';
-                viewport={{ once: true }}'';
-                className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500 transition-all duration-300''
-''
-                <div className='w-12 h-12 bg-gradient-to-r from-green-600 to-blue-600 rounded-lg flex items-center justify-center mb-4'>''
-=======
-  delay: index * 0.1}};
-                viewport={{ once: true }};
-                className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500 transition-all duration-300'';
-'''
-                <div className='w-12 h-12 bg-gradient-to-r from-green-600 to-blue-600 rounded-lg flex items-center justify-center mb-4>''
->>>>>>> main
                   <feature.icon className='w-6 h-6 text-white' />'
                 </div>'''
                 <h3 className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>'''
                 </div>'''
                 <h3 className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>'''
                 <p className='text-gray-300'>{feature.description}</p>
->>>>>>> main
+
               </motion.div>
             ));
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx: </section>'';
       </section>
       {/* Benefits: Section */}''';
       <section: className='py-20 px-4 sm: px-6: lg:px-8: bg-gray-800/30'>'';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div: initial = ,{}
-  { opacity:  ,0,
+  { opacity: 0,
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
   y: 20;
   y: 20;
   y: 2,0}}
             whileInView: = {}
-  { opacity:  ,1,
+  { opacity: 1,
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
   y: 0;
-  y: ,0}}
-            transition={{ duration: 0.8, }}';';
-  y:  ,0}}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}'';';
-            className='text-center: mb-16'';';
-'';';
+  y: 0}}
+            transition={{ duration: 0.8}}'';;
+  y: 0}}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}''';;
+            className='text-center: mb-16''';';'';;
             <h2: className='text-3xl md: text-4xl: font-bold text-white mb-4'>';
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-              Why: Choose AI Trading?';';
+              Why: Choose AI Trading?'';;
               Why: Choose AI Trading?
             </h2>''';
             <p: className='text-xl text-gray-300 max-w-2xl mx-auto'>';
               Experience: the advantages of AI-powered trading over traditional methods
             </p>
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx: </motion.div>';';
-''';
+:pages.disabled/pages/services/ai-financial-trading-platform.tsx: </motion.div>'';';'';
           <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-8'>';
             {benefits.map(benefit: unknow,n, index: unknown()
               <motion.div: </motion.div>
 ''';
           <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-8'>';
             {benefits.map(benefit: unknow,n, index: unknown(
-=======
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx'
-      </section>'
-      </section>'
-      {/* Benefits Section */}'
-      <section className='py-20 px-4 sm:px-6 l,
-    g:px-8 bg-gray-800/30>'
-        <div className='max-w-7xl mx-auto'>
-          <motion.div
-            initial = {}
+              <motion.div
+          </motion.div>',
+      '''
+          <div className='grid grid-cols-1 md: grid-cols-2 l
+    g:grid-cols-4 gap-8'>
+            {benefits.map(benefi
+    t: unknown, index: unknown(
+
+              <motion.div;
+                key={inde,x}
+                initial: = {}
   { opacity: 0,
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
   y: 20;
-  ,
-    y: 20;
-  ,
-    y: 20}}
-            whileInView = {}
+  y: 20;
+  y: 2,0}}
+                whileInView: = {}
   { opacity: 1,
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
   y: 0;
-  ,
-    y: 0}}
-            transition={{ duration: 0.8 }};
+  y: 0;
   y: 0}}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }};
-            className='text-center mb-16'';
-'';
-            <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'>
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-<<<<<<< HEAD
-              Why Choose AI Trading?'
-              Why Choose AI Trading?
-            </h2>''
-            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
-              Experience the advantages of AI-powered trading over traditional methods
-            </p>
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx
-          </motion.div>'
-''
-          <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'>
-            {benefits.map(benefit: unknown, index: unknown()
-=======
-              Why Choose AI Trading?';
-              Why Choose AI Trading?'
-            </h2>'''
-            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
-              Experience the advantages of AI-powered trading over traditional methods
-            </p>
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx'
-          </motion.div>';
-'''
-          <div className='grid grid-cols-1 md: grid-cols-2 l,
-    g:grid-cols-4 gap-8'>
-            {benefits.map(benefi,
-    t: unknown, index: unknown();
->>>>>>> main
-              <motion.div
-          </motion.div>'
-'''
-          <div className='grid grid-cols-1 md: grid-cols-2 l,
-    g:grid-cols-4 gap-8'>
-            {benefits.map(benefi,
-    t: unknown, index: unknown(
->>>>>>> main
-              <motion.div;
-                key={inde,x}
-                initial: = {}
-  { opacity:  ,0,
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-  y: 20;
-<<<<<<< HEAD
-  y: 20;
-  y: 2,0}}
-                whileInView: = {}
-  { opacity:  ,1,
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-  y: 0;
-  y: 0;
-  y: ,0}}
                 transition: = {}
-  { duration: 0.,8,
+  { duration: 0.,8
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
   delay: index: * 0.1;
   delay: index: * 0.,1}}
-                viewport={{ once: true, }}'';';
-                className='text-center'';';
-'';';
+                viewport={{ once: true}}''';;
+                className='text-center''';';'';;
                 <div: className='w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4'>''';
                   <benefit.icon: className='w-8 h-8 text-white' />';
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx: </div>'';
-                <h3: className='text-2xl font-bold text-white mb-2'>{benefit.title}</h3>';';
-  delay: index: * 0.,1}}';';
-                viewport={{ once: true, }}'';';
-                className='text-center'';';
-''';
+                <h3: className='text-2xl font-bold text-white mb-2'>{benefit.title}</h3>'';;
+  delay: index: * 0.,1}}'';;
+                viewport={{ once: true}}''';;
+                className='text-center''';';'';
                 <div: className='w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4'>''';
                   <benefit.icon: className='w-8 h-8 text-white' />'';
                 </div>''';
@@ -682,202 +374,94 @@ export default function AIFinancialTradingPlatform(...args: []):  ,{}
                 </div>''';
                 <h3: className='text-2xl font-bold text-white mb-2'>{benefit.title}</h3>''';
                 <p: className='text-gray-300'>{benefit.description}</p>';
-=======
-  ,
-    y: 20;
-  ,
-    y: 20}}
-                whileInView = {}
-  { opacity: 1,
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-  y: 0;
-  ,
-    y: 0;
-  ,
-    y: 0}}
-                transition = {}
-  { duration: 0.8,
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-  delay: index * 0.1;
-  dela,
-    y: index * 0.1}}
-                viewport={{ once: true }};
-                className='text-center'';
-'';
-                <div className='w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4>''
-                  <benefit.icon className='w-8 h-8 text-white' />
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx'
-                </div>''
-                <h3 className='text-2xl font-bold text-white mb-2'>{benefit.title}</h3>';
-<<<<<<< HEAD
-  delay: index * 0.1}}';
-                viewport={{ once: true }}'';
-                className='text-center''
-''
-                <div className='w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4'>''
-=======
-  delay: index * 0.1}};
-                viewport={{ once: true }};
-                className='text-center'';
-'''
-                <div className='w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4>''
->>>>>>> main
                   <benefit.icon className='w-8 h-8 text-white' />'
                 </div>'''
                 <h3 className='text-2xl font-bold text-white mb-2'>{benefit.title}</h3>'''
                 </div>'''
                 <h3 className='text-2xl font-bold text-white mb-2'>{benefit.title}</h3>'''
                 <p className='text-gray-300'>{benefit.description}</p>
->>>>>>> main
+
               </motion.div>
             ));
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx: </section>'';
       </section>
       {/* Trading: Markets Section */}''';
       <section: className='py-20 px-4 sm: px-6: lg:px-8'>'';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div: initial = ,{}
-  { opacity:  ,0,
+  { opacity: 0,
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
   y: 20;
   y: 20;
   y: 2,0}}
             whileInView: = {}
-  { opacity:  ,1,
+  { opacity: 1,
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
   y: 0;
-  y: ,0}}
-            transition={{ duration: 0.8, }}';';
-  y:  ,0}}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}'';';
-            className='text-center: mb-16'';';
-'';';
+  y: 0}}
+            transition={{ duration: 0.8}}'';;
+  y: 0}}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}''';;
+            className='text-center: mb-16''';';'';;
             <h2: className='text-3xl md: text-4xl: font-bold text-white mb-4'>';
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-              Trade: Across All Markets';';
+              Trade: Across All Markets'';;
               Trade: Across All Markets
             </h2>''';
             <p: className='text-xl text-gray-300 max-w-2xl mx-auto'>';
               Our: AI platform excels in analyzing and trading across multiple asset classes
             </p>
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx: </motion.div>';';
-''';
+:pages.disabled/pages/services/ai-financial-trading-platform.tsx: </motion.div>'';';'';
           <div: className='grid grid-cols-1 md: grid-cols-2: gap-8'>';
             {tradingMarkets.map(market: unknow,n, index: unknown()
               <motion.div: </motion.div>
 ''';
           <div: className='grid grid-cols-1 md: grid-cols-2: gap-8'>';
             {tradingMarkets.map(market: unknow,n, index: unknown(
-=======
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx'
-      </section>'
-      </section>'
-      {/* Trading Markets Section */}'
-      <section className='py-20 px-4 sm:px-6 l,
-    g:px-8>'
-        <div className='max-w-7xl mx-auto'>
-          <motion.div
-            initial = {}
-  { opacity: 0,
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-  y: 20;
-  ,
-    y: 20;
-  ,
-    y: 20}}
-            whileInView = {}
-  { opacity: 1,
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-  y: 0;
-  ,
-    y: 0}}
-            transition={{ duration: 0.8 }};
-  y: 0}}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }};
-            className='text-center mb-16'';
-'';
-            <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'>
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-<<<<<<< HEAD
-              Trade Across All Markets'
-              Trade Across All Markets
-            </h2>''
-            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
-              Our AI platform excels in analyzing and trading across multiple asset classes
-            </p>
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx
-          </motion.div>'
-''
-          <div className='grid grid-cols-1 md: grid-cols-2 gap-8'>
-            {tradingMarkets.map(market: unknown, index: unknown()
-=======
-              Trade Across All Markets';
-              Trade Across All Markets'
-            </h2>'''
-            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
-              Our AI platform excels in analyzing and trading across multiple asset classes
-            </p>
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx'
-          </motion.div>';
-'''
-          <div className='grid grid-cols-1 m,
-    d: grid-cols-2 gap-8'>
-            {tradingMarkets.map(marke,
-    t: unknown, index: unknown();
->>>>>>> main
               <motion.div
-          </motion.div>'
-'''
-          <div className='grid grid-cols-1 m,
+          </motion.div>',
+      '''
+          <div className='grid grid-cols-1 m
     d: grid-cols-2 gap-8'>
-            {tradingMarkets.map(marke,
+            {tradingMarkets.map(marke
     t: unknown, index: unknown(
->>>>>>> main
+
               <motion.div;
                 key={inde,x}
                 initial: = {}
-  { opacity:  ,0,
+  { opacity: 0,
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-<<<<<<< HEAD
   x: index: % 2 === 0 ? -20 : 20;
   x: index: % 2 === 0 ? -20 : 20;
   x: index: % 2 === 0 ? -20 : 2,0}}
                 whileInView: = {}
-  { opacity:  ,1,
+  { opacity: 1,
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
   x: 0;
   x: 0;
-  x: ,0}}
+  x: 0}}
                 transition: = {}
-  { duration: 0.,8,
+  { duration: 0.,8
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
   delay: index: * 0.1;
   delay: index: * 0.,1}}
-                viewport={{ once: true, }}'';';
-                className='bg-gray-800/50: backdrop-blur-sm rounded-xl p-8 border border-gray-700'';';
-'';';
+                viewport={{ once: true}}''';;
+                className='bg-gray-800/50: backdrop-blur-sm rounded-xl p-8 border border-gray-700''';';'';;
                 <div: className='w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-lg flex items-center justify-center mb-6'>''';
                   <market.icon: className='w-8 h-8 text-white' />';
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx: </div>'';
-                <h3: className='text-2xl font-semibold text-white mb-4'>{market.title}</h3>';';
-  delay: index: * 0.,1}}';';
-                viewport={{ once: true, }}'';';
-                className='bg-gray-800/50: backdrop-blur-sm rounded-xl p-8 border border-gray-700'';';
-''';
+                <h3: className='text-2xl font-semibold text-white mb-4'>{market.title}</h3>'';;
+  delay: index: * 0.,1}}'';;
+                viewport={{ once: true}}''';;
+                className='bg-gray-800/50: backdrop-blur-sm rounded-xl p-8 border border-gray-700''';';'';
                 <div: className='w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-lg flex items-center justify-center mb-6'>''';
                   <market.icon: className='w-8 h-8 text-white' />'';
                 </div>''';
@@ -885,212 +469,104 @@ export default function AIFinancialTradingPlatform(...args: []):  ,{}
                 </div>''';
                 <h3: className='text-2xl font-semibold text-white mb-4'>{market.title}</h3>''';
                 <p: className='text-gray-300 text-lg'>{market.description}</p>';
-=======
-  x: index % 2 === 0 ? -20 : 20;
-  ,
-    x: index % 2 === 0 ? -20 : 20;
-  ,
-    x: index % 2 === 0 ? -20 : 20}}
-                whileInView = {}
-  { opacity: 1,
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-  x: 0;
-  ,
-    x: 0;
-  ,
-    x: 0}}
-                transition = {}
-  { duration: 0.8,
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-  delay: index * 0.1;
-  dela,
-    y: index * 0.1}}
-                viewport={{ once: true }};
-                className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700'';
-'';
-                <div className='w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-lg flex items-center justify-center mb-6>''
-                  <market.icon className='w-8 h-8 text-white' />
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx'
-                </div>''
-                <h3 className='text-2xl font-semibold text-white mb-4'>{market.title}</h3>';
-<<<<<<< HEAD
-  delay: index * 0.1}}';
-                viewport={{ once: true }}'';
-                className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700''
-''
-                <div className='w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-lg flex items-center justify-center mb-6'>''
-=======
-  delay: index * 0.1}};
-                viewport={{ once: true }};
-                className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700'';
-'''
-                <div className='w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-lg flex items-center justify-center mb-6>''
->>>>>>> main
                   <market.icon className='w-8 h-8 text-white' />'
                 </div>'''
                 <h3 className='text-2xl font-semibold text-white mb-4'>{market.title}</h3>'''
                 </div>'''
                 <h3 className='text-2xl font-semibold text-white mb-4'>{market.title}</h3>'''
                 <p className='text-gray-300 text-lg'>{market.description}</p>
->>>>>>> main
+
               </motion.div>
             ));
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx: </section>'';
       </section>
       {/* Pricing: Section */}''';
       <section: className='py-20 px-4 sm: px-6: lg:px-8: bg-gray-800/30'>'';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div: initial = ,{}
-  { opacity:  ,0,
+  { opacity: 0,
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
   y: 20;
   y: 20;
   y: 2,0}}
             whileInView: = {}
-  { opacity:  ,1,
+  { opacity: 1,
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
   y: 0;
-  y: ,0}}
-            transition={{ duration: 0.8, }}';';
-  y:  ,0}}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}'';';
-            className='text-center: mb-16'';';
-'';';
+  y: 0}}
+            transition={{ duration: 0.8}}'';;
+  y: 0}}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}''';;
+            className='text-center: mb-16''';';'';;
             <h2: className='text-3xl md: text-4xl: font-bold text-white mb-4'>';
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-              Choose: Your Trading Plan';';
+              Choose: Your Trading Plan'';;
               Choose: Your Trading Plan
             </h2>''';
             <p: className='text-xl text-gray-300 max-w-2xl mx-auto'>';
               Flexible: pricing options designed for traders of all levels
             </p>
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx: </motion.div>';';
-''';
+:pages.disabled/pages/services/ai-financial-trading-platform.tsx: </motion.div>'';';'';
           <div: className='grid grid-cols-1 md: grid-cols-3: gap-8'>';
             {pricingPlans.map(plan: unknow,n, index: unknown()
               <motion.div: </motion.div>
 ''';
           <div: className='grid grid-cols-1 md: grid-cols-3: gap-8'>';
             {pricingPlans.map(plan: unknow,n, index: unknown(
-=======
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx'
-      </section>'
-      </section>'
-      {/* Pricing Section */}'
-      <section className='py-20 px-4 sm:px-6 l,
-    g:px-8 bg-gray-800/30>'
-        <div className='max-w-7xl mx-auto'>
-          <motion.div
-            initial = {}
+              <motion.div
+          </motion.div>',
+      '''
+          <div className='grid grid-cols-1 m
+    d: grid-cols-3 gap-8'>
+            {pricingPlans.map(pla
+    n: unknown, index: unknown(
+
+              <motion.div;
+                key={inde,x}
+                initial: = {}
   { opacity: 0,
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
   y: 20;
-  ,
-    y: 20;
-  ,
-    y: 20}}
-            whileInView = {}
+  y: 20;
+  y: 2,0}}
+                whileInView: = {}
   { opacity: 1,
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
   y: 0;
-  ,
-    y: 0}}
-            transition={{ duration: 0.8 }};
+  y: 0;
   y: 0}}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }};
-            className='text-center mb-16'';
-'';
-            <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'>
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-<<<<<<< HEAD
-              Choose Your Trading Plan'
-              Choose Your Trading Plan
-            </h2>''
-            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
-              Flexible pricing options designed for traders of all levels
-            </p>
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx
-          </motion.div>'
-''
-          <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>
-            {pricingPlans.map(plan: unknown, index: unknown()
-=======
-              Choose Your Trading Plan';
-              Choose Your Trading Plan'
-            </h2>'''
-            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
-              Flexible pricing options designed for traders of all levels
-            </p>
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx'
-          </motion.div>';
-'''
-          <div className='grid grid-cols-1 m,
-    d: grid-cols-3 gap-8'>
-            {pricingPlans.map(pla,
-    n: unknown, index: unknown();
->>>>>>> main
-              <motion.div
-          </motion.div>'
-'''
-          <div className='grid grid-cols-1 m,
-    d: grid-cols-3 gap-8'>
-            {pricingPlans.map(pla,
-    n: unknown, index: unknown(
->>>>>>> main
-              <motion.div;
-                key={inde,x}
-                initial: = {}
-  { opacity:  ,0,
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-  y: 20;
-<<<<<<< HEAD
-  y: 20;
-  y: 2,0}}
-                whileInView: = {}
-  { opacity:  ,1,
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-  y: 0;
-  y: 0;
-  y: ,0}}
                 transition: = {}
-  { duration: 0.,8,
+  { duration: 0.,8
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
   delay: index: * 0.1;
   delay: index: * 0.,1}}
-                viewport={{ once: true, }}
+                viewport={{ once: true}}
                 className={`relative: bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-';';
-                  plan.popular'';';
+'';;
+                  plan.popular''';;
                     ? 'border-green-500: ring-2 ring-green-500/20'''`;
-                    : 'border-gray-700'``}`}';';
+                    : 'border-gray-700'``}`}'';;
   delay: index: * 0.,1}}
-                viewport={{ once: true, }}
+                viewport={{ once: true}}
                 className={`relative: bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${}
-                  plan.popular';';
-                    ? 'border-green-500: ring-2 ring-green-500/20'';';
+                  plan.popular'';;
+                    ? 'border-green-500: ring-2 ring-green-500/20''';;
                     : 'border-gray-700'`}`}
-                {plan.popular: && (';';
+                {plan.popular: && ('';;
                   <div: className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''';
                     <span: className='bg-gradient-to-r from-green-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold'>';
-                      Most: Popular
+                      Most: Popular,
                     </span>
                   </div>
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx)}')}';
-''';
+:pages.disabled/pages/services/ai-financial-trading-platform.tsx)}')}'';'';
                 <div: className='text-center mb-8'>''';
                   <h3: className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>''';
                   <p: className='text-gray-300 mb-4'>{plan.description}</p>''';
@@ -1098,63 +574,8 @@ export default function AIFinancialTradingPlatform(...args: []):  ,{}
                     <span: className='text-4xl font-bold text-white'>{plan.price}</span>''';
                     <span: className='text-gray-300 ml-1'>{plan.period}</span>';
                   </div>
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx: </div>';';
-''';
+:pages.disabled/pages/services/ai-financial-trading-platform.tsx: </div>'';';'';
                 <ul: className='space-y-4 mb-8'>'';
-=======
-  ,
-    y: 20;
-  ,
-    y: 20}}
-                whileInView = {}
-  { opacity: 1,
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-  y: 0;
-  ,
-    y: 0;
-  ,
-    y: 0}}
-                transition = {}
-  { duration: 0.8,
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-  delay: index * 0.1;
-  dela,
-    y: index * 0.1}}
-                viewport={{ once: true }}
-                className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${`
-';
-                  plan.popular'';
-                    ? 'border-green-500 ring-2 ring-green-500/20'''`;`
-                    : 'border-gray-700'``}`};
-  delay: index * 0.1}}
-                viewport={{ once: true }}
-                className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${}`
-                  plan.popular';
-                    ? 'border-green-500 ring-2 ring-green-500/20'';
-                    : 'border-gray-700'`}`}`
-                {plan.popular && (';
-                  <div className='absolute -top-4 left-1/2 transform -translate-x-1/2>''
-                    <span className='bg-gradient-to-r from-green-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold'>
-                      Most Popular
-                    </span>
-                  </div>'
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx)})}
-'''
-                <div className='text-center mb-8>''
-                  <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>'''
-                  <p className='text-gray-300 mb-4'>{plan.description}</p>'''
-                  <div className='flex items-baseline justify-center>''
-                    <span className='text-4xl font-bold text-white'>{plan.price}</span>'''
-                    <span className='text-gray-300 ml-1'>{plan.period}</span>
-                  </div>
-<<<<<<< HEAD
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx
-                </div>'
-''
-                <ul className='space-y-4 mb-8'>'
->>>>>>> main
                 </div>
 ''';
                 <ul: className='space-y-4 mb-8'>';
@@ -1163,100 +584,73 @@ export default function AIFinancialTradingPlatform(...args: []):  ,{}
                       <CheckCircle: className='w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0'  />'                      <span className='text-gray-300'>{feature}</span>';
                     </li>
                   ))}
-<<<<<<< HEAD
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx: </ul>`;
 ``
                 <button: className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-';';
-                  plan.popular'';';
+'';;
+                  plan.popular''';;
                     ? 'bg-gradient-to-r: from-green-600 to-blue-600 text-white hover: from-green-700: hover:to-blue-700'''`;
                     : 'bg-gray-700: text-white hover:bg-gray-600'``;
                 </ul>
 `
                 <button: className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 $,{}
                   plan.popular'';
-                    ? 'bg-gradient-to-r: from-green-600 to-blue-600 text-white hover: from-green-700: hover:to-blue-700'';';
+                    ? 'bg-gradient-to-r: from-green-600 to-blue-600 text-white hover: from-green-700: hover:to-blue-700''';;
                     : 'bg-gray-700: text-white hover:bg-gray-600',`}`}>
-                  Start: Trading
-=======
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx
-                </ul>`
-``
-                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-=======
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx'
-                </div>';
-'''
-                <ul className='space-y-4 mb-8>
-                </div>'
-'''
-                <ul className='space-y-4 mb-8>
-                  {plan.features.map((feature, featureIndex) => ('''
-                    <li key={featureIndex} className='flex items-start>''
-                      <CheckCircle className='w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0'  />                      <span className='text-gray-300'>{feature}</span>
-                    </li>
-                  ))}
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx'
-                </ul>`;`
-```
-                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${`
->>>>>>> main
+                  Start: Trading,
 ';
                   plan.popular'';
-                    ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white hover: from-green-700 hove,
+                    ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white hover: from-green-700 hove
     r:to-blue-700'''`;`
-                    : 'bg-gray-700 text-white hove,
+                    : 'bg-gray-700 text-white hove
     r:bg-gray-600'``;
                 </ul>`
 ``
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}`
                   plan.popular''
-                    ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white hover: from-green-700 hove,
+                    ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white hover: from-green-700 hove
     r:to-blue-700'';
-                    : 'bg-gray-700 text-white hove,
+                    : 'bg-gray-700 text-white hove
     r:bg-gray-600'`}`}>
                   Start Trading
->>>>>>> main
+
                 </button>
               </motion.div>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx: </section>'';
       </section>
       {/* CTA: Section */}''';
       <section: className='py-20 px-4 sm: px-6: lg:px-8'>'';
         <div: className='max-w-4xl mx-auto text-center'>';
           <motion.div: initial = ,{}
-  { opacity:  ,0,
+  { opacity: 0,
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
   y: 20;
   y: 20;
   y: 2,0}}
             whileInView: = {}
-  { opacity:  ,1,
+  { opacity: 1,
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
   y: 0;
-  y: ,0}}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}';';
-'';';
+  y: 0}}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}'';';'';;
             <h2: className='text-3xl md: text-4xl: font-bold text-white mb-6'>';
               Ready: to Start AI Trading?'';
             </h2>''';
             <p: className='text-xl text-gray-300 mb-8'>';
               Join: thousands of traders already experiencing the benefits of AI-powered trading
-            </p>';';
-''';
+            </p>'';';'';
             <div: className='flex flex-col sm:flex-row: gap-4 justify-center'>''';
               <button: className='px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-lg hover:from-green-700: hover:to-blue-700: transition-all duration-300 transform hover:scale-105'>';
-                Start: Free Trial';';
-  y: ,0}}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}
+                Start: Free Trial'';;
+  y: 0}}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}
 ''';
             <h2: className='text-3xl md: text-4xl: font-bold text-white mb-6'>';
               Ready: to Start AI Trading?
@@ -1270,64 +664,13 @@ export default function AIFinancialTradingPlatform(...args: []):  ,{}
                 Start: Free Trial
               </button>''';
               <button: className='px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800: transition-all duration-300'>';
-                Schedule: Demo
+                Schedule: Demo,
               </button>
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx: </div>'';
             </div>
 ''';
             <p: className='text-gray-400 mt-6'>';
               No: credit card required • 14-day free trial • Cancel anytime
-=======
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx`
-      </section>'
-      </section>'
-      {/* CTA Section */}'
-      <section className='py-20 px-4 sm:px-6 l,
-    g:px-8>'
-        <div className='max-w-4xl mx-auto text-center'>
-          <motion.div
-            initial = {}
-  { opacity: 0,
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-  y: 20;
-  ,
-    y: 20;
-  ,
-    y: 20}}
-            whileInView = {}
-  { opacity: 1,
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-  y: 0;
-  ,
-    y: 0}}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }};
-'';
-            <h2 className='text-3xl md: text-4xl font-bold text-white mb-6>
-              Ready to Start AI Trading?''
-            </h2>'''
-            <p className='text-xl text-gray-300 mb-8'>
-<<<<<<< HEAD
-              Join thousands of traders already experiencing the benefits of AI-powered trading
-            </p>'
-''
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
-              <button className='px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105'>
-                Start Free Trial'
-  y: 0}}
-=======
-              Join thousands of traders already experiencing the benefits of AI-powered trading'
-            </p>';
-'''
-            <div className='flex flex-col sm:flex-row gap-4 justify-center>''
-              <button className='px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hove,
-    r:scale-105>
-                Start Free Trial';
-  ,
-    y: 0}}
->>>>>>> main
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
 '''
@@ -1336,35 +679,28 @@ export default function AIFinancialTradingPlatform(...args: []):  ,{}
             </h2>'''
             <p className='text-xl text-gray-300 mb-8'>
               Join thousands of traders already experiencing the benefits of AI-powered trading
-            </p>'
-'''
+            </p>',
+      '''
             <div className='flex flex-col sm:flex-row gap-4 justify-center>''
-              <button className='px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hove,
+              <button className='px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hove
     r:scale-105'>
                 Start Free Trial'
               </button>'''
-              <button className='px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hove,
+              <button className='px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hove
     r:bg-gray-800 transition-all duration-300'>
                 Schedule Demo
               </button>
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx'
             </div>'
-            </div>'
-'''
+            </div>',
+      '''
             <p className='text-gray-400 mt-6'>
               No credit card required • 14-day free trial • Cancel anytime
->>>>>>> main
+
             </p>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx: </div>''`,)}}}}}}''`''`
     </div>
   )}}}}}}''`
-=======
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx'
-    </div>''`)}}}}}}`''`
-    </div>`
-  )}}}}}}``
->>>>>>> main

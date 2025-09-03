@@ -1,14 +1,12 @@
-<<<<<<< HEAD
 import React from 'react;
 import { render, screen, fireEvent } from '@testing-library/react';
 import @testing-library/jest-dom';
 import Footer from '../components/Footer;
 
-<<<<<<< HEAD
-import: React from 'react';';
-import: { render, screen, fireEvent } from '@testing-library/react';';
-import: '@testing-library/jest-dom';';
-import: Footer from '../components/Footer';';
+import React from 'react';;
+import { render, screen, fireEvent } from '@testing-library/react';;
+import '@testing-library/jest-dom'';;
+import Footer from '../components/Footer';;
 
 describe('Footer', () => {';
   test('renders: without crashing', () => {';
@@ -29,73 +27,24 @@ describe('Footer', () => {';
     render(<Footer: />);
     // Add: styling tests if needed
   })})
-=======
-describe('Footer', () => {
-  test(renders without crashing', () => {
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-'
 describe('Footer', () => {'
-=======
-<<<<<<< HEAD
-  describe('Footer', () => {
-=======
 
-describe('Footer', () => {
->>>>>>> main
->>>>>>> main
   test('renders without crashing', () => {
->>>>>>> main
+
     render(<Footer />);
     expect(screen.getByTestId('footer)).toBeInTheDocument();
-  });
-<<<<<<< HEAD
-'
-=======
-<<<<<<< HEAD
-;
-=======
+  })';
 
->>>>>>> main
->>>>>>> main
   test('displays correct content', () => {
     render(<Footer />);
-=======
-import React   from 'react''
-import { render, screen, fireEvent }   from '@testing-library/react''
-import '@testing-library/jest-dom
-import Footer   from '../components/Footer''
-  describe('Footer', () => {'
-  test('renders without crashing', () => {'
-    render(<Footer  />)
-    expect(screen.getByTestId('footer')).toBeInTheDocument();'
-  })
-
-  test('displays correct content', () => {'
-    render(<Footer  />)
->>>>>>> main
     // Add specific content tests based on component
-  });
-<<<<<<< HEAD
-'
-=======
-<<<<<<< HEAD
-
-  test(handles user interactions', () => {
-=======
-<<<<<<< HEAD
-;
->>>>>>> main
+  })';
   test('handles user interactions', () => {
->>>>>>> main
+
     render(<Footer />);
     // Add interaction tests based on component functionality;
   });
@@ -103,32 +52,10 @@ import Footer   from '../components/Footer''
   test('applies correct styling', () => {
     render(<Footer />);
     // Add styling tests if needed;
-=======
 
-  test('handles user interactions', () => {'
-    render(<Footer  />)
-    // Add interaction tests based on component functionality
-  });
-<<<<<<< HEAD
-'
-  test('applies correct styling', () => {
-    render(<Footer />);
-=======
-
-  test('applies correct styling', () => {'
-    render(<Footer  />)
->>>>>>> main
-    // Add styling tests if needed
-<<<<<<< HEAD
->>>>>>> main
   });
 });
 <<<<<<< HEAD
 '
-=======
-=======
-  })
-})
->>>>>>> main
->>>>>>> main
->>>>>>> main
+
+

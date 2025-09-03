@@ -15,15 +15,15 @@ interface SEOOptimizerProps {
 ;
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 <<<<<<< HEAD:components/SEOOptimizer.tsx
-  title = 'Zion Tech Group - Leading Technology Solutions Provider',
-  description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.',
-  keywords = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services, cybersecurity, data analytics',
-  ogImage = '/og-image.jpg',
-  ogType = 'website',
-  canonicalUrl,
-  structuredData,
-  noindex = false,
-  nofollow = false,
+  title = 'Zion Tech Group - Leading Technology Solutions Provider'
+  description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.'
+  keywords = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services, cybersecurity, data analytics'
+  ogImage = '/og-image.jpg'
+  ogType = 'website'
+  canonicalUrl
+  structuredData
+  noindex = false
+  nofollow = false
 }) => {
   const fullTitle = title.includes('Zion Tech Group')
     ? title
@@ -37,52 +37,28 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   // Default structured data for organization
   const defaultStructuredData = {
     '@context': 'https://schema.org',
-    '@type': 'Organization',
+      '@type': 'Organization'
     name: 'Zion Tech Group',
     url: 'https://ziontechgroup.com',
     logo: 'https://ziontechgroup.com/logo.png',
-    description:
-      'Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.',
+    description: 'Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.',
     address: {
-      '@type': 'PostalAddress',
-      addressCountry: 'US',
-    },
+      '@type': 'PostalAddress'
+      addressCountry: 'US'
+    }
     contactPoint: {
-      '@type': 'ContactPoint',
+      '@type': 'ContactPoint'
       telephone: '+1-XXX-XXX-XXXX',
       contactType: 'customer service',
-      availableLanguage: 'English',
-    },
+      availableLanguage: 'English'
+    }
     sameAs: [
       'https://linkedin.com/company/zion-tech-group',
-      'https: //twitter.com/ziontechgroup',
-    ],
+      'https: //twitter.com/ziontechgroup'
+    ]
     foundingDate: '2020',
     numberOfEmployees: '50+',
-    industry: 'Technology Services',
-=======
-  title = 'Zion Tech Group - Leading Technology Solutions Provider', description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.', keywords = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services, cybersecurity, data analytics', ogImage = '/og-image.jpg',
-  ogType = 'website', canonicalUrl,
-  structuredData, noindex = false,
-  nofollow = false}) => {;
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;
-  const currentUrl = canonicalUrl || (typeof window !== 'undefined' ? window.location.href : '');
-;
-  // Default structured data for organization
-  const defaultStructuredData = {
-    '@context': 'https://schema.org,@type': 'Organization,name': 'Zion Tech Group,url': 'https://ziontechgroup.com,logo': 'https://ziontechgroup.com/logo.png,description': 'Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.,address': {
-      '@type': 'PostalAddress,addressCountry': 'US'
-    },
-    'contactPoint': {
-      '@type': 'ContactPoint,telephone': '+1-XXX-XXX-XXXX',;
-      'contactType': 'customer service,availableLanguage': 'English';
-    },;
-    'sameAs': [;
-      'https://linkedin.com/company/zion-tech-group,https: //twitter.com/ziontechgroup';
-    ], 'foundingDate': '2020',;
-    'numberOfEmployees': '50+,industry': 'Technology Services';
->>>>>>> main:components.disabled/components/SEOOptimizer.tsx
+    industry: 'Technology Services'
   };
 ;
   const finalStructuredData = structuredData || defaultStructuredData;
@@ -177,12 +153,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 <<<<<<< HEAD:components/SEOOptimizer.tsx
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(finalStructuredData, null, 2),
-=======
-        type='application/ld+json';
-        dangerouslySetInnerHTML={{;
-          __html: JSON.stringify(finalStructuredData, null, 2);
->>>>>>> main:components.disabled/components/SEOOptimizer.tsx
+          __html: JSON.stringify(finalStructuredData, null, 2)
         }}
       />;
       {/* Performance Hints */}
@@ -200,7 +171,4 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 <<<<<<< HEAD:components/SEOOptimizer.tsx
 
 export default SEOOptimizer;
-=======
-;
-export default SEOOptimizer;
->>>>>>> main:components.disabled/components/SEOOptimizer.tsx
+

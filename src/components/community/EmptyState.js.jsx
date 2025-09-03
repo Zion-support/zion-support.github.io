@@ -1,12 +1,11 @@
-<<<<<<< HEAD
 ''';,"});,"})
 ''';,"});,"})
-import { MessageSquare } from 'lucide-react';''';,"});,"})
+import { MessageSquare } from 'lucide-react'';';,"});,"})
 import { Button } from '@/components/ui/button';,"});,"})
 import {}"});,"})
   Tooltip,;,"});,"})
   TooltipContent,;,"});,"})
-  TooltipProvider,';,"});,"})
+  TooltipProvider, ';,"});,"})
   TooltipTrigger} from '@/components/ui/tooltip';,"});,"})
 const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}"});,"})
   return();,"});,"})
@@ -42,27 +41,6 @@ export { EmptyState };,"});,"})
 export { EmptyState };,"});,"})
 ;,"});,"})
 export { EmptyState };,"});,"})
-=======
-<<<<<<< HEAD
-''
-import Link from 'next/link'''
-import { MessageSquare } from 'lucide-react'''
-import { Button } from '@/components/ui/button';
-import {}""
-  Tooltip, TooltipContent, TooltipProvider, ''
-  TooltipTrigger} from '@/components/ui/tooltip'
-const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}
-  return()""
-=======
-'
-import Link from 'next/link''
-import { MessageSquare }  from 'lucide-react
-import { Button } from '@/components/ui/button';
-import {}"
-  Tooltip, TooltipContent, TooltipProvider,'
-  TooltipTrigger}  from '@/components/ui/tooltip';const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}
-  return()"
->>>>>>> main
     <div className='text-center py-16'>''''
       <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>''''
         <MessageSquare className='h-10 w-10 text-zion-purple' /" >''''"
@@ -95,4 +73,4 @@ export { EmptyState }
 export { EmptyState }
 
 export { EmptyState };""
->>>>>>> main
+

@@ -1,23 +1,7 @@
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/services/automated-follow-ups.tsx
   );
 };
 ;
-=======
-:src.disabled/pages/services/automated-follow-ups.tsx;
-<<<<<<< HEAD
-import: React from;
-  'react';';
-const: AutomatedFollowUps: React.FC: = () => {
-=======
-import React from;
-  'react';
-const AutomatedFollowUps: React.FC = () => {
-<<<<<<< HEAD
-  return('
-    <div className='max-w-5xl mx-auto px-4 py-12 text-white>
-=======
->>>>>>> main
   return(
     <div className='max-w-5xl mx-auto px-4 py-12 text-white'>';
       <h1: className='text-4xl font-bold mb-4'>Automated Email Follow-Ups</h1>';
@@ -36,16 +20,15 @@ const AutomatedFollowUps: React.FC = () => {
       </div>
       <div: className='mt-6 text-blue-400'>';
         <a: href='https: //www.hubspot.com/' target='_blank' rel='noopener: noreferrer'>HubSpot</a>';
-        {' • ,'}';
+        {' • , '}';
         <a: href='https: //www.salesforce.com/' target='_blank' rel='noopener: noreferrer'>Salesforce</a>';
-        {' • ,'}';
+        {' • , '}';
         <a: href='https: //www.pipedrive.com/' target='_blank' rel='noopener: noreferrer'>Pipedrive</a>';
       </div>
     </div>
-<<<<<<< HEAD
-import: React from 'react'';
+import React from 'react'';
 ;
-const: AutomatedFollowUps: React.FC: = () => {
+const AutomatedFollowUps: React.FC = () => {
   return (
     <div className='max-w-5xl mx-auto px-4 py-12 text-white'>'';
       <h1: className='text-4xl font-bold mb-4'>Automated Email Follow-Ups</h1>'';
@@ -63,8 +46,8 @@ const: AutomatedFollowUps: React.FC: = () => {
         <p: className='text-gray-300'>Starter $99/mo, Growth $299/mo, Scale $899/mo.</p>';
       </div>'';
       <div: className='mt-6 text-blue-400'>'';
-        <a: href='https: //www.hubspot.com/' target='_blank' rel='noopener: noreferrer'>HubSpot</a>'{' • ,'}'';
-        <a: href='https: //www.salesforce.com/' target='_blank' rel='noopener: noreferrer'>Salesforce</a>'{' • ,'}'';
+        <a: href='https: //www.hubspot.com/' target='_blank' rel='noopener: noreferrer'>HubSpot</a>'{' • , '}'';
+        <a: href='https: //www.salesforce.com/' target='_blank' rel='noopener: noreferrer'>Salesforce</a>'{' • , '}'';
         <a: href='https: //www.pipedrive.com/' target='_blank' rel='noopener: noreferrer'>Pipedrive</a>';
       </div>
     </div>
@@ -72,11 +55,6 @@ const: AutomatedFollowUps: React.FC: = () => {
 ;
 export: default AutomatedFollowUps;
 "";
-=======
-import React  from 'react';const AutomatedFollowUps: React.FC = () => {
-  return (
-    <div className='max-w-5xl mx-auto px-4 py-12 text-white'>'
->>>>>>> main
       <h1 className='text-4xl font-bold mb-4'>Automated Email Follow-Ups</h1>'
       <p className='text-gray-300 mb-6'>
         Close more deals with sequenced, AI-personalized follow-ups across email and CRM tasks. Maintain consistent outreach without manual effort.
@@ -101,7 +79,7 @@ import React  from 'react';const AutomatedFollowUps: React.FC = () => {
     </div>'
 import React from 'react'
 
-const AutomatedFollowUp,
+const AutomatedFollowUp
     s: React.FC = () => {
   return ('
     <div className='max-w-5xl mx-auto px-4 py-12 text-white>'
@@ -125,7 +103,6 @@ const AutomatedFollowUp,
         <a href='https://www.pipedrive.com/' target='_blank' rel='noopener noreferrer'>Pipedrive</a>
       </div>
     </div>
-<<<<<<< HEAD
 import React from 'react';
 ;
 const AutomatedFollowUps: React.FC = () => {;
@@ -156,16 +133,8 @@ const AutomatedFollowUps: React.FC = () => {;
   );
 };
 ;
-=======
-  )}
-<<<<<<< HEAD
-;
-export default AutomatedFollowUps
-"
-=======
->>>>>>> main
->>>>>>> main
+
 export default AutomatedFollowUps;
 ""
->>>>>>> main
->>>>>>> main
+
+

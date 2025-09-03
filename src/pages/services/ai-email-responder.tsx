@@ -1,20 +1,20 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  Mail, 
-  Brain, 
-  Zap, 
-  Shield, 
-  BarChart3, 
-  Clock, 
-  Users, 
-  CheckCircle,
-  ArrowRight,
-  Star,
-  TrendingUp,
-  MessageSquare,
-  Filter,
-  Target,
+  Mail
+  Brain
+  Zap
+  Shield
+  BarChart3
+  Clock
+  Users
+  CheckCircle
+  ArrowRight
+  Star
+  TrendingUp
+  MessageSquare
+  Filter
+  Target
   Smartphone
 } from 'lucide-react';
 
@@ -24,27 +24,27 @@ const AIEmailResponder: React.FC = () => {
       icon: Brain,
       title: "Intelligent Response Generation",
       description: "AI-powered email responses that understand context and tone, providing personalized and professional replies automatically."
-    },
+    }
     {
       icon: Filter,
       title: "Smart Email Prioritization",
       description: "Automatically categorize and prioritize emails based on importance, sender, and content analysis."
-    },
+    }
     {
       icon: MessageSquare,
       title: "Multi-Language Support",
       description: "Respond in multiple languages with perfect grammar and cultural context awareness."
-    },
+    }
     {
       icon: Shield,
       title: "Security & Privacy",
       description: "Enterprise-grade security with end-to-end encryption and GDPR compliance."
-    },
+    }
     {
       icon: BarChart3,
       title: "Analytics & Insights",
       description: "Detailed analytics on email patterns, response times, and communication effectiveness."
-    },
+    }
     {
       icon: Target,
       title: "Custom Templates",
@@ -54,11 +54,11 @@ const AIEmailResponder: React.FC = () => {
 
   const benefits = [
     "Reduce email response time by 80%",
-    "Improve customer satisfaction scores",
+      "Improve customer satisfaction scores"
     "Handle 24/7 email communication",
-    "Eliminate repetitive email tasks",
+      "Eliminate repetitive email tasks"
     "Scale customer support operations",
-    "Maintain consistent brand voice"
+      "Maintain consistent brand voice"
   ];
 
   const pricing = [
@@ -69,12 +69,12 @@ const AIEmailResponder: React.FC = () => {
       description: "Perfect for small teams",
       features: [
         "Up to 1,000 emails/month",
-        "Basic AI responses",
+      "Basic AI responses"
         "Email prioritization",
-        "Standard templates",
+      "Standard templates"
         "Email support"
       ]
-    },
+    }
     {
       name: "Professional",
       price: "$35",
@@ -82,14 +82,14 @@ const AIEmailResponder: React.FC = () => {
       description: "Ideal for growing businesses",
       features: [
         "Up to 10,000 emails/month",
-        "Advanced AI responses",
+      "Advanced AI responses"
         "Custom templates",
-        "Analytics dashboard",
+      "Analytics dashboard"
         "Priority support",
-        "Multi-language support"
-      ],
+      "Multi-language support"
+      ]
       popular: true
-    },
+    }
     {
       name: "Enterprise",
       price: "$75",
@@ -97,11 +97,11 @@ const AIEmailResponder: React.FC = () => {
       description: "For large organizations",
       features: [
         "Unlimited emails",
-        "Custom AI training",
+      "Custom AI training"
         "Advanced analytics",
-        "API integration",
+      "API integration"
         "Dedicated support",
-        "Custom branding",
+      "Custom branding"
         "SSO integration"
       ]
     }
@@ -128,7 +128,7 @@ const AIEmailResponder: React.FC = () => {
                 AI-Powered Email Responder
               </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-                Transform your email communication with intelligent automation. Our AI-powered email responder understands context, 
+                Transform your email communication with intelligent automation. Our AI-powered email responder understands context
                 prioritizes messages, and provides instant, professional responses 24/7.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -329,7 +329,6 @@ const AIEmailResponder: React.FC = () => {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
       <div className="mt-6 text-blue-400">
         <a href="https: //www.zendesk.com" target="_blank" rel="noopener noreferrer">Zendesk</a>
         {" • "}
@@ -338,9 +337,6 @@ const AIEmailResponder: React.FC = () => {
         <a href="https://www.microsoft.com/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook" target="_blank" rel="noopener noreferrer">Outlook</a>
       </div>
     </div>
-=======
-    </>
->>>>>>> main
   );
 };
 

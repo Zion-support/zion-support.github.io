@@ -1,5 +1,5 @@
 import React  from 'react';interface StatItem {
-  label: string
+  label: string,
    value: string | number
    description?: string
 }
@@ -15,17 +15,8 @@ interface InteractiveStatsProps {
   className?: string;
 }
 export default function InteractiveStats({
-  stats,
-  className = 'grid grid-cols-1 md: grid-cols-3 gap-6',
-=======
-interface InteractiveStatsProps {
-  stats: StatItem[]
-   className?: string
-}
-
-export default function InteractiveStats({
-  stats, className = 'grid grid-cols-1 md: grid-cols-3 gap-6'
->>>>>>> main:components/disabled/ui/InteractiveStats.tsx
+  stats
+  className = 'grid grid-cols-1 md: grid-cols-3 gap-6'
 }: InteractiveStatsProps) {
   return (
     <div className={className}>
@@ -48,7 +39,5 @@ export default function InteractiveStats({
     </div>
 <<<<<<< HEAD:components/ui/InteractiveStats.tsx
   );
-=======
-  )
->>>>>>> main:components/disabled/ui/InteractiveStats.tsx
+
 }

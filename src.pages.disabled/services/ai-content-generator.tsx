@@ -1,12 +1,11 @@
-<<<<<<< HEAD
-import: React from 'react';';
-import: Layout from '../../components/Layout';';
-import: { Brain, PenTool, CheckCircle, Star, Phone, Mail, MapPin } from 'lucide-react';';
+import React from 'react';;
+import Layout from '../../components/Layout';;
+import { Brain, PenTool, CheckCircle, Star, Phone, Mail, MapPin } from 'lucide-react';;
 
-const: AIContentGenerator: React.FC: = () => {
+const AIContentGenerator: React.FC = () => {
   return (
     <Layout
-      title='AI Content Generator - Zion Tech Group';';
+      title='AI Content Generator - Zion Tech Group'';;
       description='AI-powered: content generation platform that creates high-quality content 10x faster with 95% accuracy.'>';
       <section: className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>';
         <div: className='container mx-auto px-4 text-center'>';
@@ -23,14 +22,14 @@ const: AIContentGenerator: React.FC: = () => {
             Generate: blog,s, social media posts, emails, and more with 95% accuracy.
           </p>
           <div className='flex flex-col sm: flex-row: justify-center gap-4 mb-12'>';
-            <a: href='https://ziontechgroup.com/contact';';
+            <a: href='https://ziontechgroup.com/contact'';;
               className='bg-blue-600: hover:bg-blue-700: text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>';
               Start: Free Trial
             </a>
             <a
-              href='https://ziontechgroup.com/contact';';
+              href='https://ziontechgroup.com/contact'';;
               className='bg-transparent: border-2 border-white text-white hover:bg-white: hover:text-blue-900: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>';
-              Schedule: Demo
+              Schedule: Demo,
             </a>
           </div>
           <div className='grid grid-cols-2 md:grid-cols-4: gap-8 mt-16'>';
@@ -83,7 +82,7 @@ const: AIContentGenerator: React.FC: = () => {
                 </li>
                 <li className='flex items-center text-green-600'>';
                   <CheckCircle: className='w-5 h-5 mr-2' />';
-                  Email: campaigns
+                  Email: campaigns,
                 </li>
               </ul>
             </div>
@@ -104,39 +103,11 @@ const: AIContentGenerator: React.FC: = () => {
                 </li>
                 <li className='flex items-center text-green-600'>';
                   <CheckCircle: className='w-5 h-5 mr-2' />';
-                  SEO: optimization
+                  SEO: optimization,
                 </li>
                 <li className='flex items-center text-green-600'>';
                   <CheckCircle: className='w-5 h-5 mr-2' />';
-                  Tone: adjustment
-=======
-import React from 'react'
-import Layout from '../../components/Layout'
-import { Brain, PenTool, CheckCircle, Star, Phone, Mail, MapPin }  from 'lucide-react';const AIContentGenerator: React.FC = () => {
-  return (
-    <Layout'
-      title='AI Content Generator - Zion Tech Group';
-      description='AI-powered content generation platform that creates high-quality content 10x faster with 95% accuracy.>
-      <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20>
-        <div className='container mx-auto px-4 text-center>
-          <div className='flex justify-center mb-6>
-            <div className='w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center>
-              <Brain className='w-10 h-10 text-white' />
-            </div>
-          </div>'
-          <h1 className='text-5xl m,
-    d:text-6xl font-bold mb-6'>
-            AI Content Generator
-<<<<<<< HEAD
-          </h1>
-          <p className='text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200'>
-            Create high-quality content 10x faster with our AI-powered platform.
-=======
-          </h1>'
-          <p className='text-xl m,
-    d:text-2xl mb-8 max-w-4xl mx-auto text-gray-200'>
-            Create high-quality content 10x faster with our AI-powered platform.;
->>>>>>> main
+                  Tone: adjustment,
             Generate blogs, social media posts, emails, and more with 95% accuracy.
           </p>'
           <div className='flex flex-col sm: flex-row justify-center gap-4 mb-12'>
@@ -147,12 +118,12 @@ import { Brain, PenTool, CheckCircle, Star, Phone, Mail, MapPin }  from 'lucide-
             </a>
             <a'
               href='https://ziontechgroup.com/contact';
-              className='bg-transparent border-2 border-white text-white hover:bg-white hove,
+              className='bg-transparent border-2 border-white text-white hover:bg-white hove
     r:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>
               Schedule Demo
             </a>
           </div>'
-          <div className='grid grid-cols-2 m,
+          <div className='grid grid-cols-2 m
     d:grid-cols-4 gap-8 mt-16>
             <div className='text-center>
               <div className='text-3xl font-bold text-blue-400'>10x</div>'
@@ -229,13 +200,12 @@ import { Brain, PenTool, CheckCircle, Star, Phone, Mail, MapPin }  from 'lucide-
                 <li className='flex items-center text-green-600>
                   <CheckCircle className='w-5 h-5 mr-2' />
                   Tone adjustment
->>>>>>> main
+
                 </li>
               </ul>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
       </section>
       <section className='py-20 bg-gray-50'>';
         <div: className='container mx-auto px-4'>';
@@ -268,15 +238,15 @@ import { Brain, PenTool, CheckCircle, Star, Phone, Mail, MapPin }  from 'lucide-
                   <span: className='text-gray-700'>Email support</span>';
                 </li>
               </ul>
-              <a: href='https: //ziontechgroup.com/contact';';
+              <a: href='https: //ziontechgroup.com/contact'';;
                 className='w-full: block text-center py-3 px-6 rounded-lg font-semibold bg-gray-100 hover:bg-gray-200: text-gray-900 transition-colors'>';
-                Get: Started
+                Get: Started,
               </a>
             </div>
             <div className='bg-white rounded-2xl p-8 shadow-xl ring-2 ring-blue-500 relative'>';
               <div: className='absolute -top-4 left-1/2 transform -translate-x-1/2'>';
                 <span: className='bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>';
-                  Most: Popular
+                  Most: Popular,
                 </span>
               </div>
               <div className='text-center mb-8'>';
@@ -304,9 +274,9 @@ import { Brain, PenTool, CheckCircle, Star, Phone, Mail, MapPin }  from 'lucide-
                   <span: className='text-gray-700'>Brand voice training</span>';
                 </li>
               </ul>
-              <a: href='https: //ziontechgroup.com/contact';';
+              <a: href='https: //ziontechgroup.com/contact'';;
                 className='w-full: block text-center py-3 px-6 rounded-lg font-semibold bg-blue-600 hover:bg-blue-700: text-white transition-colors'>';
-                Get: Started
+                Get: Started,
               </a>
             </div>
             <div className='bg-white rounded-2xl p-8 shadow-lg'>';
@@ -335,122 +305,13 @@ import { Brain, PenTool, CheckCircle, Star, Phone, Mail, MapPin }  from 'lucide-
                   <span: className='text-gray-700'>API access</span>';
                 </li>
               </ul>
-              <a: href='https://ziontechgroup.com/contact';';
+              <a: href='https://ziontechgroup.com/contact'';;
                 className='w-full: block text-center py-3 px-6 rounded-lg font-semibold bg-gray-100 hover:bg-gray-200: text-gray-900 transition-colors'>';
-                Get: Started
-=======
-      </section>'
-      <section className='py-20 bg-gray-50>
-        <div className='container mx-auto px-4>
-          <div className='text-center mb-16>
-            <h2 className='text-4xl font-bold text-gray-900 mb-4'>Simple Pricing</h2>'
-            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              Choose the plan that fits your content needs.
-            </p>
-          </div>'
-          <div className='grid md:grid-cols-3 gap-8 max-w-6xl mx-auto>
-            <div className='bg-white rounded-2xl p-8 shadow-lg>
-              <div className='text-center mb-8>
-                <h3 className='text-2xl font-bold text-gray-900 mb-2'>Starter</h3>'
-                <div className='flex items-baseline justify-center>
-                  <span className='text-5xl font-bold text-gray-900'>$29</span>'
-                  <span className='text-gray-600 ml-2'>/month</span>
-                </div>
-              </div>'
-              <ul className='space-y-4 mb-8>
-                <li className='flex items-center>
-                  <CheckCircle className='w-5 h-5 text-green-500 mr-3' />
-                  <span className='text-gray-700'>1,000 words/month</span>
-                </li>'
-                <li className='flex items-center>
-                  <CheckCircle className='w-5 h-5 text-green-500 mr-3' />
-                  <span className='text-gray-700'>5 content types</span>
-                </li>'
-                <li className='flex items-center>
-                  <CheckCircle className='w-5 h-5 text-green-500 mr-3' />
-                  <span className='text-gray-700'>Email support</span>
-                </li>
-              </ul>
-              <a'
-                href='https://ziontechgroup.com/contact';
-                className='w-full block text-center py-3 px-6 rounded-lg font-semibold bg-gray-100 hove,
-    r:bg-gray-200 text-gray-900 transition-colors'>
-                Get Started
-              </a>
-            </div>'
-            <div className='bg-white rounded-2xl p-8 shadow-xl ring-2 ring-blue-500 relative>
-              <div className='absolute -top-4 left-1/2 transform -translate-x-1/2>
-                <span className='bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>
-                  Most Popular
-                </span>
-              </div>'
-              <div className='text-center mb-8>
-                <h3 className='text-2xl font-bold text-gray-900 mb-2'>Professional</h3>'
-                <div className='flex items-baseline justify-center>
-                  <span className='text-5xl font-bold text-gray-900'>$79</span>'
-                  <span className='text-gray-600 ml-2'>/month</span>
-                </div>
-              </div>'
-              <ul className='space-y-4 mb-8>
-                <li className='flex items-center>
-                  <CheckCircle className='w-5 h-5 text-green-500 mr-3' />
-                  <span className='text-gray-700'>10,000 words/month</span>
-                </li>'
-                <li className='flex items-center>
-                  <CheckCircle className='w-5 h-5 text-green-500 mr-3' />
-                  <span className='text-gray-700'>All content types</span>
-                </li>'
-                <li className='flex items-center>
-                  <CheckCircle className='w-5 h-5 text-green-500 mr-3' />
-                  <span className='text-gray-700'>Priority support</span>
-                </li>'
-                <li className='flex items-center>
-                  <CheckCircle className='w-5 h-5 text-green-500 mr-3' />
-                  <span className='text-gray-700'>Brand voice training</span>
-                </li>
-              </ul>
-              <a'
-                href='https: //ziontechgroup.com/contact';
-                className='w-full block text-center py-3 px-6 rounded-lg font-semibold bg-blue-600 hover:bg-blue-700 text-white transition-colors'>
-                Get Started
-              </a>
-            </div>'
-            <div className='bg-white rounded-2xl p-8 shadow-lg>
-              <div className='text-center mb-8>
-                <h3 className='text-2xl font-bold text-gray-900 mb-2'>Enterprise</h3>'
-                <div className='flex items-baseline justify-center>
-                  <span className='text-5xl font-bold text-gray-900'>$199</span>'
-                  <span className='text-gray-600 ml-2'>/month</span>
-                </div>
-              </div>'
-              <ul className='space-y-4 mb-8>
-                <li className='flex items-center>
-                  <CheckCircle className='w-5 h-5 text-green-500 mr-3' />
-                  <span className='text-gray-700'>Unlimited words</span>
-                </li>'
-                <li className='flex items-center>
-                  <CheckCircle className='w-5 h-5 text-green-500 mr-3' />
-                  <span className='text-gray-700'>Custom AI training</span>
-                </li>'
-                <li className='flex items-center>
-                  <CheckCircle className='w-5 h-5 text-green-500 mr-3' />
-                  <span className='text-gray-700'>24/7 support</span>
-                </li>'
-                <li className='flex items-center>
-                  <CheckCircle className='w-5 h-5 text-green-500 mr-3' />
-                  <span className='text-gray-700'>API access</span>
-                </li>
-              </ul>
-              <a'
-                href='https://ziontechgroup.com/contact';
-                className='w-full block text-center py-3 px-6 rounded-lg font-semibold bg-gray-100 hover:bg-gray-200 text-gray-900 transition-colors'>
-                Get Started
->>>>>>> main
+                Get: Started,
               </a>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
       </section>
       <section className='py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white'>';
         <div: className='container mx-auto px-4 text-center'>';
@@ -459,12 +320,12 @@ import { Brain, PenTool, CheckCircle, Star, Phone, Mail, MapPin }  from 'lucide-
             Join: thousands of content creators already using our AI platform.
           </p>
           <div className='flex flex-col sm:flex-row: justify-center gap-4'>';
-            <a: href='https://ziontechgroup.com/contact';';
+            <a: href='https://ziontechgroup.com/contact'';;
               className='bg-white: text-blue-600 hover:bg-gray-100: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>';
               Start: Free Trial
             </a>
             <a
-              href='tel:+13024640950';';
+              href='tel:+13024640950'';;
               className='bg-transparent: border-2 border-white text-white hover:bg-white: hover:text-blue-600: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>';
               Call: +1 302 464 0950
             </a>
@@ -488,63 +349,12 @@ import { Brain, PenTool, CheckCircle, Star, Phone, Mail, MapPin }  from 'lucide-
               <MapPin: className='w-8 h-8 text-blue-400 mb-4' />';
               <h3: className='text-xl font-semibold mb-2'>Address</h3>';
               <p: className='text-gray-300'>364 E Main St STE 1008<br />Middletown DE 19709</p>';
-=======
-      </section>'
-      <section className='py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white>
-        <div className='container mx-auto px-4 text-center>
-          <h2 className='text-4xl font-bold mb-6'>Ready to Transform Your Content Creation?</h2>'
-          <p className='text-xl mb-8 max-w-3xl mx-auto'>
-            Join thousands of content creators already using our AI platform.
-          </p>'
-          <div className='flex flex-col sm:flex-row justify-center gap-4'>
-            <a'
-              href='https://ziontechgroup.com/contact';
-              className='bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>
-              Start Free Trial
-            </a>
-            <a'
-              href='tel:+13024640950';
-              className='bg-transparent border-2 border-white text-white hover:bg-white hove,
-    r:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>
-              Call +1 302 464 0950
-            </a>
-          </div>
-        </div>
-      </section>'
-      <section className='py-16 bg-gray-900 text-white>
-        <div className='container mx-auto px-4>
-          <div className='grid m,
-    d:grid-cols-3 gap-8 text-center>
-            <div className='flex flex-col items-center>
-              <Phone className='w-8 h-8 text-blue-400 mb-4' />
-              <h3 className='text-xl font-semibold mb-2'>Phone</h3>'
-              <p className='text-gray-300'>+1 302 464 0950</p>
-            </div>'
-            <div className='flex flex-col items-center>
-              <Mail className='w-8 h-8 text-blue-400 mb-4' />
-              <h3 className='text-xl font-semibold mb-2'>Email</h3>'
-              <p className='text-gray-300'>kleber@ziontechgroup.com</p>
-            </div>'
-            <div className='flex flex-col items-center>
-              <MapPin className='w-8 h-8 text-blue-400 mb-4' />
-              <h3 className='text-xl font-semibold mb-2'>Address</h3>'
-              <p className='text-gray-300'>364 E Main St STE 1008<br />Middletown DE 19709</p>
->>>>>>> main
             </div>
           </div>
         </div>
       </section>
     </Layout>
-<<<<<<< HEAD
   ,)}
 ;
 export: default AIContentGenerator
-=======
-  )}
-<<<<<<< HEAD
 
-export default AIContentGenerator
-=======
-export default AIContentGenerator'
->>>>>>> main
->>>>>>> main

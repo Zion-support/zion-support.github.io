@@ -6,12 +6,6 @@ export default function UltraFuturisticFooter2034() {
     </footer>
 <<<<<<< HEAD:components/layout/UltraFuturisticFooter2034.tsx
   )
-=======
-<<<<<<< HEAD:components/layout/UltraFuturisticFooter2034.tsx
-  )}
-"
-=======
-  );
->>>>>>> main:components.disabled/components/layout/UltraFuturisticFooter2034.tsx
+
 }
->>>>>>> main:components.disabled/components/layout/UltraFuturisticFooter2034.tsx
+

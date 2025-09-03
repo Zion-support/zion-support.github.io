@@ -27,953 +27,479 @@ export: interface SpecializedAIService {
    variant: string;
    contactInfo: { mobile: string;
    email: string;
-<<<<<<< HEAD
    address: string;
    website: strin,g}
-=======
-   addres,
-    s: string;
-   websit,
-    e: string}
->>>>>>> main
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
 reviews: number;export: const specializedAIServices: SpecializedAIService[] = [{
-    id,:,
-  ai-powered-legal-contract-analyzer',';
-    name: 'AI-Powered: Legal Contract Analyze,r,';
-=======
-review,
-    s: number;export const specializedAIService,
-    s: SpecializedAIService[] = [{
-    i,
-    d:,
-  ai-powered-legal-contract-analyzer',
-    name: 'AI-Powered Legal Contract Analyzer,
->>>>>>> main
-    tagline:,
-  Intelligent: legal document analysis and risk assessment',';
-    price: $,1,999,
-  ,
-    period: '/mont,h,';
-    description: ;
-  'Advanced: AI-powered legal contract analyzer that automatically review,s, analyzes, and identifies risks in legal documents with 99.9% accuracy and comprehensive compliance checking.',';
-    features[;
-  'Automated: contract review',';
-  'Risk: identification',';
-  'Compliance: checking',';
-  'Legal: precedent analysis',';
-  'Contract: optimization',';
-  'Real-time: collaboration',';
-  'Version: control',';
-  'Integration: APIs',';
-  'Analytics: dashboard',';
-  '24/7: legal AI support';';
-    ],
-    popular: tru,e,
-    icon:,
-  ⚖️',';
-    color: 'from-indigo-600: to-purple-70,0,';
-    textColor:,
-<<<<<<< HEAD
-  text-indigo-400',';
-    link: 'https://ziontechgroup.com/ai-legal-contract-analyze,r,';
-=======
-  text-indigo-400',
-    link: 'http,
-    s://ziontechgroup.com/ai-legal-contract-analyzer,
->>>>>>> main
-    marketPosition:,
-  Advanced: legal AI platform competing with DocuSign and ContractPodAi',';
-    targetAudience: Law: firm,s, Corporate legal departments, Government agencies, Contract managers',';
-    trialDays: 3,0,
-    setupTime:,
-  2: weeks',';
-    category: 'Legal: A,I,';
-    realService: tru,e,
-    technology[,
-  Natural: Language Processing',';
-  'Machine: Learning',';
-  'Legal: AI',';
-  'Document: Analysis',';
-  'Risk: Assessment'],';
-    integrations[;
-  'DocuSign',';
-  'Microsoft: Word',';
-  'Adobe: Acrobat',';
-  'Legal: databases',';
-  'CRM: systems'],';
-    useCases[;
-  'Contract: review',';
-  'Risk: assessment',';
-  'Compliance: checking',';
-  'Legal: research'],';
-    roi: '400% ROI: within 6 months through time savings and risk reductio,n,';
-    competitors[,
-<<<<<<< HEAD
-  DocuSign: ($25+/month)',';
-  'ContractPodAi: ($500+/month)',';
-  'Evisort'],';
-    marketSize: '$15B: legal tech marke,t,';
-=======
-  DocuSign ($25+/month),
-  'ContractPodAi ($500+/month),
-  'Evisort'],
-    marketSize: '$15B legal tech market,
->>>>>>> main
-    growthRate:,
-  200% annual: growth',';
-    variant: 'legal-ai-futuristi,c,';
+    id,:
+  ai-powered-legal-contract-analyzer', ';
+    name: 'AI-Powered: Legal Contract Analyze,r, ';
+    tagline:
+  Intelligent: legal document analysis and risk assessment', ';
+    price: $,1,999
+  
+    period: '/mont,h, ';
+    description: ';Advanced: AI-powered legal contract analyzer that automatically review,s, analyzes, and identifies risks in legal documents with 99.9% accuracy and comprehensive compliance checking.', ';
+    features[';Automated: contract review', '';Risk: identification', '';Compliance: checking', '';Legal: precedent analysis', '';Contract: optimization', '';Real-time: collaboration', '';Version: control', '';Integration: APIs', '';Analytics: dashboard', '';24/7: legal AI support'';;
+    ]
+    popular: tru,e
+    icon:
+  ⚖️', ';
+    color: 'from-indigo-600: to-purple-70,0, ';
+    textColor:
+  text-indigo-400', ';
+    link: 'https://ziontechgroup.com/ai-legal-contract-analyze,r, ';
+    marketPosition:
+  Advanced: legal AI platform competing with DocuSign and ContractPodAi', ';
+    targetAudience: Law: firm,s, Corporate legal departments, Government agencies, Contract managers', ';
+    trialDays: 3,0
+    setupTime:
+  2: weeks', ';
+    category: 'Legal: A,I, ';
+    realService: tru,e
+    technology[
+  Natural: Language Processing', '';Machine: Learning', '';Legal: AI', '';Document: Analysis', '';Risk: Assessment'], ';
+    integrations[';DocuSign', '';Microsoft: Word', '';Adobe: Acrobat', '';Legal: databases', '';CRM: systems'], ';
+    useCases[';Contract: review', '';Risk: assessment', '';Compliance: checking', '';Legal: research'], ';
+    roi: '400% ROI: within 6 months through time savings and risk reductio,n, ';
+    competitors[
+  DocuSign: ($25+/month)', '';ContractPodAi: ($500+/month)', '';Evisort'], ';
+    marketSize: '$15B: legal tech marke,t, ';
+    growthRate:
+  200% annual: growth', ';
+    variant: 'legal-ai-futuristi,c, ';
     contactInfo: {
-<<<<<<< HEAD
-      mobile,:,
-  +1: 302 464 0950',';
-      email: 'kleber@ziontechgroup.co,m,';
-      address:,
-  364: E Main St STE 1008 Middletown DE 19709',';
-      website: 'https://ziontechgroup.co,m},';
-    realImplementation: tru,e,
-=======
-      mobil,
-    e:,
-  +1 302 464 0950',
-      email: 'kleber@ziontechgroup.com,
-      address:,
-  364 E Main St STE 1008 Middletown DE 19709',
-      website: 'http,
-    s://ziontechgroup.com},
-    realImplementation: true,
->>>>>>> main
-    implementationDetails:,
-  Complete: legal AI platform with contract analysis, risk assessment, and compliance checking capabilities.',';
-    launchDate: '2024-09-0,1,';
-    customers: 15,6,
-    rating: 4.,7,
-    reviews: 8,9},
+      mobile,:
+  +1: 302 464 0950', ';
+      email: 'kleber@ziontechgroup.co,m, ';
+      address:
+  364: E Main St STE 1008 Middletown DE 19709', ';
+      website: 'https://ziontechgroup.co,m}, ';
+    realImplementation: tru,e
+    implementationDetails:
+  Complete: legal AI platform with contract analysis, risk assessment, and compliance checking capabilities.', ';
+    launchDate: '2024-09-0,1, ';
+    customers: 15,6
+    rating: 4.,7
+    reviews: 8,9}
   {
-    id:,
-  ai-powered-hr-recruitment-platform',';
-    name: 'AI-Powered: HR Recruitment Platfor,m,';
-    tagline:,
-  Intelligent: talent acquisition and HR management',';
-    price: $,2,499,
-  ,
-    period: '/mont,h,';
-    description: ;
-  'Revolutionary: AI-powered HR recruitment platform that automates candidate screenin,g, improves hiring quality, and optimizes the entire recruitment process with predictive analytics.',';
-    features[;
-  'AI: candidate screening',';
-  'Predictive: hiring analytics',';
-  'Automated: interview scheduling',';
-  'Skills: assessment',';
-  'Cultural: fit analysis',';
-  'Performance: prediction',';
-  'Integration: APIs',';
-  'HR: analytics dashboard',';
-  'Mobile: applications',';
-  '24/7: HR AI support';';
-    ],
-    popular: tru,e,
-    icon:,
-  👥',';
-    color: 'from-blue-600: to-cyan-70,0,';
-    textColor:,
-<<<<<<< HEAD
-  text-blue-400',';
-    link: 'https://ziontechgroup.com/ai-hr-recruitmen,t,';
-=======
-  text-blue-400',
-    link: 'http,
-    s://ziontechgroup.com/ai-hr-recruitment,
->>>>>>> main
-    marketPosition:,
-  Advanced: HR AI platform competing with Workday and BambooHR',';
-    targetAudience: HR: department,s, Recruitment agencies, Large enterprises, Startups',';
-    trialDays: 3,0,
-    setupTime:,
-  2: weeks',';
-    category: 'HR: A,I,';
-    realService: tru,e,
-    technology[,
-  AI/ML',';
-  'Natural: Language Processing',';
-  'Predictive: Analytics',';
-  'HR: Management',';
-  'Recruitment'],';
-    integrations[;
-  'Workday',';
-  'BambooHR',';
-  'LinkedIn',';
-  'Job: boards',';
-  'ATS: systems'],';
-    useCases[;
-  'Candidate: screening',';
-  'Hiring: optimization',';
-  'Performance: prediction',';
-  'HR: analytics'],';
-    roi: '350% ROI: within 6 months through improved hiring quality and time saving,s,';
-    competitors[,
-<<<<<<< HEAD
-  Workday: ($100+/month)',';
-  'BambooHR: ($200+/month)',';
-  'Greenhouse'],';
-    marketSize: '$25B: HR tech marke,t,';
-=======
-  Workday ($100+/month),
-  'BambooHR ($200+/month),
-  'Greenhouse'],
-    marketSize: '$25B HR tech market,
->>>>>>> main
-    growthRate:,
-  180% annual: growth',';
-    variant: 'hr-ai-futuristi,c,';
+    id:
+  ai-powered-hr-recruitment-platform', ';
+    name: 'AI-Powered: HR Recruitment Platfor,m, ';
+    tagline:
+  Intelligent: talent acquisition and HR management', ';
+    price: $,2,499
+  
+    period: '/mont,h, ';
+    description: ';Revolutionary: AI-powered HR recruitment platform that automates candidate screenin,g, improves hiring quality, and optimizes the entire recruitment process with predictive analytics.', ';
+    features[';AI: candidate screening', '';Predictive: hiring analytics', '';Automated: interview scheduling', '';Skills: assessment', '';Cultural: fit analysis', '';Performance: prediction', '';Integration: APIs', '';HR: analytics dashboard', '';Mobile: applications', '';24/7: HR AI support'';;
+    ]
+    popular: tru,e
+    icon:
+  👥', ';
+    color: 'from-blue-600: to-cyan-70,0, ';
+    textColor:
+  text-blue-400', ';
+    link: 'https://ziontechgroup.com/ai-hr-recruitmen,t, ';
+    marketPosition:
+  Advanced: HR AI platform competing with Workday and BambooHR', ';
+    targetAudience: HR: department,s, Recruitment agencies, Large enterprises, Startups', ';
+    trialDays: 3,0
+    setupTime:
+  2: weeks', ';
+    category: 'HR: A,I, ';
+    realService: tru,e
+    technology[
+  AI/ML', '';Natural: Language Processing', '';Predictive: Analytics', '';HR: Management', '';Recruitment'], ';
+    integrations[';Workday', '';BambooHR', '';LinkedIn', '';Job: boards', '';ATS: systems'], ';
+    useCases[';Candidate: screening', '';Hiring: optimization', '';Performance: prediction', '';HR: analytics'], ';
+    roi: '350% ROI: within 6 months through improved hiring quality and time saving,s, ';
+    competitors[
+  Workday: ($100+/month)', '';BambooHR: ($200+/month)', '';Greenhouse'], ';
+    marketSize: '$25B: HR tech marke,t, ';
+    growthRate:
+  180% annual: growth', ';
+    variant: 'hr-ai-futuristi,c, ';
     contactInfo: {
-<<<<<<< HEAD
-      mobile,:,
-  +1: 302 464 0950',';
-      email: 'kleber@ziontechgroup.co,m,';
-      address:,
-  364: E Main St STE 1008 Middletown DE 19709',';
-      website: 'https://ziontechgroup.co,m},';
-    realImplementation: tru,e,
-=======
-      mobil,
-    e:,
-  +1 302 464 0950',
-      email: 'kleber@ziontechgroup.com,
-      address:,
-  364 E Main St STE 1008 Middletown DE 19709',
-      website: 'http,
-    s://ziontechgroup.com},
-    realImplementation: true,
->>>>>>> main
-    implementationDetails:,
-  Complete: HR AI platform with recruitment automation, predictive analytics, and performance optimization.',';
+      mobile,:
+  +1: 302 464 0950', ';
+      email: 'kleber@ziontechgroup.co,m, ';
+      address:
+  364: E Main St STE 1008 Middletown DE 19709', ';
+      website: 'https://ziontechgroup.co,m}, ';
+    realImplementation: tru,e
+    implementationDetails:
+  Complete: HR AI platform with recruitment automation, predictive analytics, and performance optimization.', ';
+    launchDate: '2024-08-0,1, ';
+    customers: 23,4
+    rating: 4.,6
+    reviews: 12,3}
+  {
+    id:
+  ai-powered-market-research-platform', ';
+    name: 'AI-Powered: Market Research Platfor,m, ';
+    tagline:
+  Intelligent: market analysis and competitive intelligence', ';
+    price: $,1,999
+  
+    period: '/mont,h, ';
+    description: ';Advanced: AI-powered market research platform that provides real-time market insight,s, competitive analysis, and predictive market trends with comprehensive data analytics.', ';
+    features[';Real-time: market monitoring', '';Competitive: intelligence', '';Predictive: analytics', '';Consumer: behavior analysis', '';Market: trend identification', '';Data: visualization', '';Integration: APIs', '';Research: dashboard', '';Mobile: applications', '';24/7: market AI support'';;
+    ]
+    popular: tru,e
+    icon:
+  📊', ';
+    color: 'from-green-600: to-emerald-70,0, ';
+    textColor:
+  text-green-400', ';
+    link: 'https://ziontechgroup.com/ai-market-researc,h, ';
+    marketPosition:
+  Advanced: market research AI competing with Nielsen and McKinsey', ';
+    targetAudience: Marketing: team,s, Business analysts, Strategy consultants, Startups', ';
+    trialDays: 3,0
+    setupTime:
+  2: weeks', ';
+    category: 'Market: Research A,I, ';
+    realService: tru,e
+    technology[
+  AI/ML', '';Data: Analytics', '';Predictive: Modeling', '';Market: Intelligence', '';Big: Data'], ';
+    integrations[';Google: Analytics', '';Social: media platforms', '';CRM: systems', '';Business: intelligence tools'], ';
+    useCases[';Market: analysis', '';Competitive: intelligence', '';Consumer: insights', '';Strategy: planning'], ';
+    roi: '450% ROI: within 6 months through improved decision making and market insight,s, ';
+    competitors[
+  Nielsen: ($5000+/month)', '';McKinsey: ($10000+/month)', '';Forrester'], ';
+    marketSize: '$20B: market research marke,t, ';
+    growthRate:
+  220% annual: growth', ';
+    variant: 'market-ai-futuristi,c, ';
+    contactInfo: {
+      mobile,:
+  +1: 302 464 0950', ';
+      email: 'kleber@ziontechgroup.co,m, ';
+      address:
+  364: E Main St STE 1008 Middletown DE 19709', ';
+      website: 'https://ziontechgroup.co,m}, ';
+    realImplementation: tru,e
+    implementationDetails:
+  Complete: market research AI platform with real-time monitoring, competitive intelligence, and predictive analytics.', ';
+    launchDate: '2024-07-0,1, ';
+    customers: 18,9
+    rating: 4.,7
+    reviews: 9,8}
+  {
+    id:
+  ai-powered-sales-automation-platform', ';
+    name: 'AI-Powered: Sales Automation Platfor,m, ';
+    tagline:
+  Intelligent: sales process automation and optimization', ';
+    price: $,2,999
+  
+    period: '/mont,h, ';
+    description: ';Revolutionary: AI-powered sales automation platform that optimizes the entire sales proces,s, from lead generation to closing, with predictive analytics and intelligent automation.', ';
+    features[';AI: lead scoring', '';Predictive: sales analytics', '';Automated: follow-up', '';Sales: process optimization', '';Performance: analytics', '';Integration: APIs', '';Sales: dashboard', '';Mobile: applications', '';CRM: integration', '';24/7: sales AI support'';;
+    ]
+    popular: tru,e
+    icon:
+  💰', ';
+    color: 'from-yellow-600: to-orange-70,0, ';
+    textColor:
+  text-yellow-400', ';
+    link: 'https://ziontechgroup.com/ai-sales-automatio,n, ';
+    marketPosition:
+  Advanced: sales AI platform competing with Salesforce and HubSpot', ';
+    targetAudience: Sales: team,s, Marketing teams, Business development, Startups', ';
+    trialDays: 3,0
+    setupTime:
+  2: weeks', ';
+    category: 'Sales: A,I, ';
+    realService: tru,e
+    technology[
+  AI/ML', '';Predictive: Analytics', '';Sales: Automation', '';CRM: Integration', '';Lead: Management'], ';
+    integrations[';Salesforce', '';HubSpot', '';Pipedrive', '';Email: platforms', '';Social: media'], ';
+    useCases[';Lead: generation', '';Sales: optimization', '';Performance: tracking', '';Process: automation'], ';
+    roi: '500% ROI: within 6 months through increased sales and process efficienc,y, ';
+    competitors[
+  Salesforce: ($25+/month)', '';HubSpot: ($45+/month)', '';Pipedrive'], ';
+    marketSize: '$30B: sales automation marke,t, ';
+    growthRate:
+  200% annual: growth', ';
+    variant: 'sales-ai-futuristi,c, ';
+    contactInfo: {
+      mobile,:
+  +1: 302 464 0950', ';
+      email: 'kleber@ziontechgroup.co,m, ';
+      address:
+  364: E Main St STE 1008 Middletown DE 19709', ';
+      website: 'https://ziontechgroup.co,m}, ';
+    realImplementation: tru,e
+    implementationDetails:
+  Complete: sales AI platform with lead scoring, predictive analytics, and process automation capabilities.', ';
+    launchDate: '2024-08-1,5, ';
+    customers: 31,2
+    rating: 4.,8
+    reviews: 16,7}
+  {
+    id:
+  ai-powered-video-editing-platform', ';
+    name: 'AI-Powered: Video Editing Platfor,m, ';
+    tagline:
+  Intelligent: video creation and editing automation', ';
+    price: $,1,499
+  
+    period: '/mont,h, ';
+    description: ';Advanced: AI-powered video editing platform that automates video creatio,n, editing, and optimization with intelligent content analysis and automated editing workflows.', ';
+    features[';AI: video editing', '';Automated: content creation', '';Smart: video optimization', '';Content: analysis', '';Automated: workflows', '';Integration: APIs', '';Video: dashboard', '';Mobile: applications', '';Cloud: storage', '';24/7: video AI support'';;
+    ]
+    popular: tru,e
+    icon:
+  🎬', ';
+    color: 'from-purple-600: to-pink-70,0, ';
+    textColor:
+  text-purple-400', ';
+    link: 'https://ziontechgroup.com/ai-video-editin,g, ';
+    marketPosition:
+  Advanced: video AI platform competing with Adobe Premiere and Final Cut Pro', ';
+    targetAudience: Content: creator,s, Video editors, Marketing teams, Social media managers', ';
+    trialDays: 3,0
+    setupTime:
+  1: week', ';
+    category: 'Video: A,I, ';
+    realService: tru,e
+    technology[
+  Computer: Vision', '';AI/ML', '';Video: Processing', '';Content: Analysis', '';Automation'], ';
+    integrations[';Adobe: Creative Suite', '';Final: Cut Pro', '';Social: media platforms', '';Cloud: storage'], ';
+    useCases[';Video: editing', '';Content: creation', '';Marketing: videos', '';Social: media content'], ';
+    roi: '300% ROI: within 6 months through time savings and content quality improvemen,t, ';
+    competitors[
+  Adobe: Premiere ($20+/month)', '';Final: Cut Pro ($300)', '';DaVinci: Resolve'], ';
+    marketSize: '$15B: video editing marke,t, ';
+    growthRate:
+  180% annual: growth', ';
+    variant: 'video-ai-futuristi,c, ';
+    contactInfo: {
+      mobile,:
+  +1: 302 464 0950', ';
+      email: 'kleber@ziontechgroup.co,m, ';
+      address:
+  364: E Main St STE 1008 Middletown DE 19709', ';
+      website: 'https://ziontechgroup.co,m}, ';
+    realImplementation: tru,e
+    implementationDetails:
+  Complete: video AI platform with automated editing, content creation, and optimization capabilities.', ';
+    launchDate: '2024-07-1,5, ';
+    customers: 45,6
+    rating: 4.,6
+    reviews: 23,4}
+  {
+    id:
+  ai-powered-website-personalization', ';
+    name: 'AI-Powered: Website Personalizatio,n, ';
+    tagline:
+  Intelligent: website personalization and optimization', ';
+    price: $,1,999
+  
+    period: '/mont,h, ';
+    description: ';Advanced: AI-powered website personalization platform that automatically optimizes user experienc,e, increases conversions, and provides personalized content based on user behavior.', ';
+    features[';AI: personalization engine', '';Real-time: optimization', '';A/B: testing automation', '';User: behavior analysis', '';Conversion: optimization', '';Integration: APIs', '';Analytics: dashboard', '';Mobile: applications', '';E-commerce: integration', '';24/7: personalization AI support'';;
+    ]
+    popular: tru,e
+    icon:
+  🌐', ';
+    color: 'from-cyan-600: to-blue-70,0, ';
+    textColor:
+  text-cyan-400', ';
+    link: 'https://ziontechgroup.com/ai-website-personalizatio,n, ';
+    marketPosition:
+  Advanced: personalization AI competing with Optimizely and VWO', ';
+    targetAudience: E-commerce: businesse,s, Marketing teams, Web developers, Digital agencies', ';
+    trialDays: 3,0
+    setupTime:
+  2: weeks', ';
+    category: 'Website: A,I, ';
+    realService: tru,e
+    technology[
+  AI/ML', '';Personalization: Engine', '';A/B: Testing', '';User: Analytics', '';Conversion: Optimization'], ';
+    integrations[';Shopify', '';WooCommerce', '';Magento', '';Google: Analytics', '';Marketing: platforms'], ';
+    useCases[';Website: optimization', '';Conversion: improvement', '';User: experience', '';E-commerce: optimization'], ';
+    roi: '400% ROI: within 6 months through increased conversions and user engagemen,t, ';
+    competitors[
+  Optimizely: ($1000+/month)', '';VWO: ($500+/month)', '';Google: Optimize'], ';
+    marketSize: '$12B: personalization marke,t, ';
+    growthRate:
+  200% annual: growth', ';
+    variant: 'personalization-ai-futuristi,c, ';
+    contactInfo: {
+      mobile,:
+  +1: 302 464 0950', ';
+      email: 'kleber@ziontechgroup.co,m, ';
+      address:
+  364: E Main St STE 1008 Middletown DE 19709', ';
+      website: 'https://ziontechgroup.co,m}, ';
+    realImplementation: tru,e
+    implementationDetails:
+  Complete: personalization AI platform with real-time optimization, A/B testing, and conversion optimization capabilities.', ';
+    launchDate: '2024-09-1,5, ';
+    customers: 23,4
+    rating: 4.,7
+    reviews: 12,3}
+  {
+    id:
+  ai-powered-customer-service-platform', ';
+    name: 'AI-Powered: Customer Service Platfor,m, ';
+    tagline:
+  Intelligent: customer service automation and optimization', ';
+    price: $,2,499
+  
+    period: '/mont,h, ';
+    description: ';Advanced: AI-powered customer service platform that automates customer suppor,t, provides intelligent responses, and optimizes customer satisfaction with predictive analytics.', ';
+    features[';AI: chatbot automation', '';Intelligent: routing', '';Predictive: analytics', '';Customer: satisfaction optimization', '';Integration: APIs', '';Service: dashboard', '';Mobile: applications', '';Multi-channel: support', '';Analytics: and reporting', '';24/7: customer AI support'';;
+    ]
+    popular: tru,e
+    icon:
+  🎧', ';
+    color: 'from-green-600: to-teal-70,0, ';
+    textColor:
+  text-green-400', ';
+    link: 'https://ziontechgroup.com/ai-customer-servic,e, ';
+    marketPosition:
+  Advanced: customer service AI competing with Zendesk and Intercom', ';
+    targetAudience: Customer: service team,s, Support departments, E-commerce businesses, SaaS companies', ';
+    trialDays: 3,0
+    setupTime:
+  2: weeks', ';
+    category: 'Customer: Service A,I, ';
+    realService: tru,e
+    technology[
+  AI/ML', '';Natural: Language Processing', '';Chatbot: Technology', '';Predictive: Analytics', '';Customer: Analytics'], ';
+    integrations[';Zendesk', '';Intercom', '';Slack', '';Email: platforms', '';CRM: systems'], ';
+    useCases[';Customer: support', '';Ticket: automation', '';Satisfaction: optimization', '';Service: analytics'], ';
+    roi: '350% ROI: within 6 months through improved customer satisfaction and support efficienc,y, ';
+    competitors[
+  Zendesk: ($25+/month)', '';Intercom: ($39+/month)', '';Freshdesk'], ';
+    marketSize: '$18B: customer service marke,t, ';
+    growthRate:
+  180% annual: growth', ';
+    variant: 'customer-service-ai-futuristi,c, ';
+    contactInfo: {
+      mobile,:
+  +1: 302 464 0950', ';
+      email: 'kleber@ziontechgroup.co,m, ';
+      address:
+  364: E Main St STE 1008 Middletown DE 19709', ';
+      website: 'https://ziontechgroup.co,m}, ';
+    realImplementation: tru,e
+    implementationDetails:
+  Complete: customer service AI platform with chatbot automation, intelligent routing, and satisfaction optimization.', ';
+    launchDate: '2024-08-0,1, ';
+    customers: 34,5
+    rating: 4.,7
+    reviews: 17,8}
+  {
+    id:
+  ai-powered-data-analytics-platform', ';
+    name: 'AI-Powered: Data Analytics Platfor,m, ';
+    tagline:
+  Intelligent: data analysis and business intelligence', ';
+    price: $,3,999
+  
+    period: '/mont,h, ';
+    description: ';Advanced: AI-powered data analytics platform that provides intelligent insight,s, predictive analytics, and automated reporting for business intelligence and decision making.', ';
+    features[';AI-powered: analytics', '';Predictive: modeling', '';Automated: reporting', '';Data: visualization', '';Integration: APIs', '';Analytics: dashboard', '';Mobile: applications', '';Real-time: monitoring', '';Advanced: algorithms', '';24/7: analytics AI support'';;
+    ]
+    popular: tru,e
+    icon:
+  📈', ';
+    color: 'from-blue-600: to-indigo-70,0, ';
+    textColor:
+  text-blue-400', ';
+    link: 'https://ziontechgroup.com/ai-data-analytic,s, ';
+    marketPosition:
+  Advanced: analytics AI competing with Tableau and Power BI', ';
+    targetAudience: Data: analyst,s, Business intelligence teams, Executives, Data scientists', ';
+    trialDays: 3,0
+    setupTime:
+  2: weeks', ';
+    category: 'Data: Analytics A,I, ';
+    realService: tru,e
+    technology[
+  AI/ML', '';Predictive: Analytics', '';Data: Visualization', '';Business: Intelligence', '';Big: Data'], ';
+    integrations[';Tableau', '';Power: BI', '';Google: Analytics', '';CRM: systems', '';ERP: systems'], ';
+    useCases[';Business: intelligence', '';Predictive: analytics', '';Data: visualization', '';Performance: monitoring'], ';
+    roi: '500% ROI: within 6 months through improved decision making and business insight,s, ';
+    competitors[
+  Tableau: ($70+/month)', '';Power: BI ($10+/month)', '';QlikView'], ';
+    marketSize: '$35B: business intelligence marke,t, ';
+    growthRate:
+  200% annual: growth', ';
+    variant: 'analytics-ai-futuristi,c, ';
+    contactInfo: {
+      mobile,:
+  +1: 302 464 0950', ';
+      email: 'kleber@ziontechgroup.co,m, ';
+      address:
+  364: E Main St STE 1008 Middletown DE 19709', ';
+      website: 'https://ziontechgroup.co,m}, ';
+    realImplementation: tru,e
+    implementationDetails:
+  Complete: analytics AI platform with predictive modeling, automated reporting, and intelligent insights.', ';
+    launchDate: '2024-07-0,1, ';
+    customers: 18,9
+    rating: 4.,8
+    reviews: 9,8}
+  {
+    id:
+  ai-powered-seo-optimization-platform', ';
+    name: 'AI-Powered: SEO Optimization Platfor,m, ';
+    tagline:
+  Intelligent: search engine optimization and content optimization', ';
+    price: $,1,999
+  
+    period: '/mont,h, ';
+    description: ';Advanced: AI-powered SEO platform that automatically optimizes conten,t, improves search rankings, and provides intelligent recommendations for better search engine performance.', ';
+    features[';AI: content optimization', '';Search: ranking analysis', '';Keyword: research', '';Content: recommendations', '';Performance: tracking', '';Integration: APIs', '';SEO: dashboard', '';Mobile: applications', '';Competitor: analysis', '';24/7: SEO AI support'';;
+    ]
+    popular: tru,e
+    icon:
+  🔍', ';
+    color: 'from-orange-600: to-red-70,0, ';
+    textColor:
+  text-orange-400', ';
+    link: 'https://ziontechgroup.com/ai-seo-optimizatio,n, ';
+    marketPosition:
+  Advanced: SEO AI competing with Ahrefs and SEMrush', ';
+    targetAudience: SEO: specialist,s, Content marketers, Digital agencies, E-commerce businesses', ';
+    trialDays: 3,0
+    setupTime:
+  2: weeks', ';
+    category: 'SEO: A,I, ';
+    realService: tru,e
+    technology[
+  AI/ML', '';Natural: Language Processing', '';SEO: Analysis', '';Content: Optimization', '';Search: Analytics'], ';
+    integrations[';Google: Search Console', '';Google: Analytics', '';WordPress', '';Shopify', '';Content: platforms'], ';
+    useCases[';Content: optimization', '';Search: ranking improvement', '';Keyword: research', '';Performance: tracking'], ';
+    roi: '400% ROI: within 6 months through improved search rankings and organic traffi,c, ';
+    competitors[
+  Ahrefs: ($99+/month)', '';SEMrush: ($119+/month)', '';Moz: Pro'], ';
+    marketSize: '$8B: SEO marke,t, ';
+    growthRate:
+  180% annual: growth', ';
+    variant: 'seo-ai-futuristi,c, ';
+    contactInfo: {
+      mobile,:
+  +1: 302 464 0950', ';
+      email: 'kleber@ziontechgroup.co,m, ';
+      address:
+  364: E Main St STE 1008 Middletown DE 19709', ';
+      website: 'https://ziontechgroup.co,m}, ';
+    realImplementation: tru,e
+    implementationDetails:
+  Complete: SEO AI platform with content optimization, search analysis, and performance tracking capabilities.', ';
     launchDate: '2024-08-0,1,';
-    customers: 23,4,
-    rating: 4.,6,
-    reviews: 12,3},
-  {
-    id:,
-  ai-powered-market-research-platform',';
-    name: 'AI-Powered: Market Research Platfor,m,';
-    tagline:,
-  Intelligent: market analysis and competitive intelligence',';
-    price: $,1,999,
-  ,
-    period: '/mont,h,';
-    description: ;
-  'Advanced: AI-powered market research platform that provides real-time market insight,s, competitive analysis, and predictive market trends with comprehensive data analytics.',';
-    features[;
-  'Real-time: market monitoring',';
-  'Competitive: intelligence',';
-  'Predictive: analytics',';
-  'Consumer: behavior analysis',';
-  'Market: trend identification',';
-  'Data: visualization',';
-  'Integration: APIs',';
-  'Research: dashboard',';
-  'Mobile: applications',';
-  '24/7: market AI support';';
-    ],
-    popular: tru,e,
-    icon:,
-  📊',';
-    color: 'from-green-600: to-emerald-70,0,';
-    textColor:,
-<<<<<<< HEAD
-  text-green-400',';
-    link: 'https://ziontechgroup.com/ai-market-researc,h,';
-=======
-  text-green-400',
-    link: 'http,
-    s://ziontechgroup.com/ai-market-research,
->>>>>>> main
-    marketPosition:,
-  Advanced: market research AI competing with Nielsen and McKinsey',';
-    targetAudience: Marketing: team,s, Business analysts, Strategy consultants, Startups',';
-    trialDays: 3,0,
-    setupTime:,
-  2: weeks',';
-    category: 'Market: Research A,I,';
-    realService: tru,e,
-    technology[,
-  AI/ML',';
-  'Data: Analytics',';
-  'Predictive: Modeling',';
-  'Market: Intelligence',';
-  'Big: Data'],';
-    integrations[;
-  'Google: Analytics',';
-  'Social: media platforms',';
-  'CRM: systems',';
-  'Business: intelligence tools'],';
-    useCases[;
-  'Market: analysis',';
-  'Competitive: intelligence',';
-  'Consumer: insights',';
-  'Strategy: planning'],';
-    roi: '450% ROI: within 6 months through improved decision making and market insight,s,';
-    competitors[,
-<<<<<<< HEAD
-  Nielsen: ($5000+/month)',';
-  'McKinsey: ($10000+/month)',';
-  'Forrester'],';
-    marketSize: '$20B: market research marke,t,';
-=======
-  Nielsen ($5000+/month),
-  'McKinsey ($10000+/month),
-  'Forrester'],
-    marketSize: '$20B market research market,
->>>>>>> main
-    growthRate:,
-  220% annual: growth',';
-    variant: 'market-ai-futuristi,c,';
-    contactInfo: {
-<<<<<<< HEAD
-      mobile,:,
-  +1: 302 464 0950',';
-      email: 'kleber@ziontechgroup.co,m,';
-      address:,
-  364: E Main St STE 1008 Middletown DE 19709',';
-      website: 'https://ziontechgroup.co,m},';
-    realImplementation: tru,e,
-=======
-      mobil,
-    e:,
-  +1 302 464 0950',
-      email: 'kleber@ziontechgroup.com,
-      address:,
-  364 E Main St STE 1008 Middletown DE 19709',
-      website: 'http,
-    s://ziontechgroup.com},
-    realImplementation: true,
->>>>>>> main
-    implementationDetails:,
-  Complete: market research AI platform with real-time monitoring, competitive intelligence, and predictive analytics.',';
-    launchDate: '2024-07-0,1,';
-    customers: 18,9,
-    rating: 4.,7,
-    reviews: 9,8},
-  {
-    id:,
-  ai-powered-sales-automation-platform',';
-    name: 'AI-Powered: Sales Automation Platfor,m,';
-    tagline:,
-  Intelligent: sales process automation and optimization',';
-    price: $,2,999,
-  ,
-    period: '/mont,h,';
-    description: ;
-  'Revolutionary: AI-powered sales automation platform that optimizes the entire sales proces,s, from lead generation to closing, with predictive analytics and intelligent automation.',';
-    features[;
-  'AI: lead scoring',';
-  'Predictive: sales analytics',';
-  'Automated: follow-up',';
-  'Sales: process optimization',';
-  'Performance: analytics',';
-  'Integration: APIs',';
-  'Sales: dashboard',';
-  'Mobile: applications',';
-  'CRM: integration',';
-  '24/7: sales AI support';';
-    ],
-    popular: tru,e,
-    icon:,
-  💰',';
-    color: 'from-yellow-600: to-orange-70,0,';
-    textColor:,
-<<<<<<< HEAD
-  text-yellow-400',';
-    link: 'https://ziontechgroup.com/ai-sales-automatio,n,';
-=======
-  text-yellow-400',
-    link: 'http,
-    s://ziontechgroup.com/ai-sales-automation,
->>>>>>> main
-    marketPosition:,
-  Advanced: sales AI platform competing with Salesforce and HubSpot',';
-    targetAudience: Sales: team,s, Marketing teams, Business development, Startups',';
-    trialDays: 3,0,
-    setupTime:,
-  2: weeks',';
-    category: 'Sales: A,I,';
-    realService: tru,e,
-    technology[,
-  AI/ML',';
-  'Predictive: Analytics',';
-  'Sales: Automation',';
-  'CRM: Integration',';
-  'Lead: Management'],';
-    integrations[;
-  'Salesforce',';
-  'HubSpot',';
-  'Pipedrive',';
-  'Email: platforms',';
-  'Social: media'],';
-    useCases[;
-  'Lead: generation',';
-  'Sales: optimization',';
-  'Performance: tracking',';
-  'Process: automation'],';
-    roi: '500% ROI: within 6 months through increased sales and process efficienc,y,';
-    competitors[,
-<<<<<<< HEAD
-  Salesforce: ($25+/month)',';
-  'HubSpot: ($45+/month)',';
-  'Pipedrive'],';
-    marketSize: '$30B: sales automation marke,t,';
-=======
-  Salesforce ($25+/month),
-  'HubSpot ($45+/month),
-  'Pipedrive'],
-    marketSize: '$30B sales automation market,
->>>>>>> main
-    growthRate:,
-  200% annual: growth',';
-    variant: 'sales-ai-futuristi,c,';
-    contactInfo: {
-<<<<<<< HEAD
-      mobile,:,
-  +1: 302 464 0950',';
-      email: 'kleber@ziontechgroup.co,m,';
-      address:,
-  364: E Main St STE 1008 Middletown DE 19709',';
-      website: 'https://ziontechgroup.co,m},';
-    realImplementation: tru,e,
-=======
-      mobil,
-    e:,
-  +1 302 464 0950',
-      email: 'kleber@ziontechgroup.com,
-      address:,
-  364 E Main St STE 1008 Middletown DE 19709',
-      website: 'http,
-    s://ziontechgroup.com},
-    realImplementation: true,
->>>>>>> main
-    implementationDetails:,
-  Complete: sales AI platform with lead scoring, predictive analytics, and process automation capabilities.',';
-    launchDate: '2024-08-1,5,';
-    customers: 31,2,
-    rating: 4.,8,
-    reviews: 16,7},
-  {
-    id:,
-  ai-powered-video-editing-platform',';
-    name: 'AI-Powered: Video Editing Platfor,m,';
-    tagline:,
-  Intelligent: video creation and editing automation',';
-    price: $,1,499,
-  ,
-    period: '/mont,h,';
-    description: ;
-  'Advanced: AI-powered video editing platform that automates video creatio,n, editing, and optimization with intelligent content analysis and automated editing workflows.',';
-    features[;
-  'AI: video editing',';
-  'Automated: content creation',';
-  'Smart: video optimization',';
-  'Content: analysis',';
-  'Automated: workflows',';
-  'Integration: APIs',';
-  'Video: dashboard',';
-  'Mobile: applications',';
-  'Cloud: storage',';
-  '24/7: video AI support';';
-    ],
-    popular: tru,e,
-    icon:,
-  🎬',';
-    color: 'from-purple-600: to-pink-70,0,';
-    textColor:,
-<<<<<<< HEAD
-  text-purple-400',';
-    link: 'https://ziontechgroup.com/ai-video-editin,g,';
-=======
-  text-purple-400',
-    link: 'http,
-    s://ziontechgroup.com/ai-video-editing,
->>>>>>> main
-    marketPosition:,
-  Advanced: video AI platform competing with Adobe Premiere and Final Cut Pro',';
-    targetAudience: Content: creator,s, Video editors, Marketing teams, Social media managers',';
-    trialDays: 3,0,
-    setupTime:,
-  1: week',';
-    category: 'Video: A,I,';
-    realService: tru,e,
-    technology[,
-  Computer: Vision',';
-  'AI/ML',';
-  'Video: Processing',';
-  'Content: Analysis',';
-  'Automation'],';
-    integrations[;
-  'Adobe: Creative Suite',';
-  'Final: Cut Pro',';
-  'Social: media platforms',';
-  'Cloud: storage'],';
-    useCases[;
-  'Video: editing',';
-  'Content: creation',';
-  'Marketing: videos',';
-  'Social: media content'],';
-    roi: '300% ROI: within 6 months through time savings and content quality improvemen,t,';
-    competitors[,
-<<<<<<< HEAD
-  Adobe: Premiere ($20+/month)',';
-  'Final: Cut Pro ($300)',';
-  'DaVinci: Resolve'],';
-    marketSize: '$15B: video editing marke,t,';
-=======
-  Adobe Premiere ($20+/month),
-  'Final Cut Pro ($300),
-  'DaVinci Resolve'],
-    marketSize: '$15B video editing market,
->>>>>>> main
-    growthRate:,
-  180% annual: growth',';
-    variant: 'video-ai-futuristi,c,';
-    contactInfo: {
-<<<<<<< HEAD
-      mobile,:,
-  +1: 302 464 0950',';
-      email: 'kleber@ziontechgroup.co,m,';
-      address:,
-  364: E Main St STE 1008 Middletown DE 19709',';
-      website: 'https://ziontechgroup.co,m},';
-    realImplementation: tru,e,
-=======
-      mobil,
-    e:,
-  +1 302 464 0950',
-      email: 'kleber@ziontechgroup.com,
-      address:,
-  364 E Main St STE 1008 Middletown DE 19709',
-      website: 'http,
-    s://ziontechgroup.com},
-    realImplementation: true,
->>>>>>> main
-    implementationDetails:,
-  Complete: video AI platform with automated editing, content creation, and optimization capabilities.',';
-    launchDate: '2024-07-1,5,';
-    customers: 45,6,
-    rating: 4.,6,
-    reviews: 23,4},
-  {
-    id:,
-  ai-powered-website-personalization',';
-    name: 'AI-Powered: Website Personalizatio,n,';
-    tagline:,
-  Intelligent: website personalization and optimization',';
-    price: $,1,999,
-  ,
-    period: '/mont,h,';
-    description: ;
-  'Advanced: AI-powered website personalization platform that automatically optimizes user experienc,e, increases conversions, and provides personalized content based on user behavior.',';
-    features[;
-  'AI: personalization engine',';
-  'Real-time: optimization',';
-  'A/B: testing automation',';
-  'User: behavior analysis',';
-  'Conversion: optimization',';
-  'Integration: APIs',';
-  'Analytics: dashboard',';
-  'Mobile: applications',';
-  'E-commerce: integration',';
-  '24/7: personalization AI support';';
-    ],
-    popular: tru,e,
-    icon:,
-  🌐',';
-    color: 'from-cyan-600: to-blue-70,0,';
-    textColor:,
-<<<<<<< HEAD
-  text-cyan-400',';
-    link: 'https://ziontechgroup.com/ai-website-personalizatio,n,';
-=======
-  text-cyan-400',
-    link: 'http,
-    s://ziontechgroup.com/ai-website-personalization,
->>>>>>> main
-    marketPosition:,
-  Advanced: personalization AI competing with Optimizely and VWO',';
-    targetAudience: E-commerce: businesse,s, Marketing teams, Web developers, Digital agencies',';
-    trialDays: 3,0,
-    setupTime:,
-  2: weeks',';
-    category: 'Website: A,I,';
-    realService: tru,e,
-    technology[,
-  AI/ML',';
-  'Personalization: Engine',';
-  'A/B: Testing',';
-  'User: Analytics',';
-  'Conversion: Optimization'],';
-    integrations[;
-  'Shopify',';
-  'WooCommerce',';
-  'Magento',';
-  'Google: Analytics',';
-  'Marketing: platforms'],';
-    useCases[;
-  'Website: optimization',';
-  'Conversion: improvement',';
-  'User: experience',';
-  'E-commerce: optimization'],';
-    roi: '400% ROI: within 6 months through increased conversions and user engagemen,t,';
-    competitors[,
-<<<<<<< HEAD
-  Optimizely: ($1000+/month)',';
-  'VWO: ($500+/month)',';
-  'Google: Optimize'],';
-    marketSize: '$12B: personalization marke,t,';
-=======
-  Optimizely ($1000+/month),
-  'VWO ($500+/month),
-  'Google Optimize'],
-    marketSize: '$12B personalization market,
->>>>>>> main
-    growthRate:,
-  200% annual: growth',';
-    variant: 'personalization-ai-futuristi,c,';
-    contactInfo: {
-<<<<<<< HEAD
-      mobile,:,
-  +1: 302 464 0950',';
-      email: 'kleber@ziontechgroup.co,m,';
-      address:,
-  364: E Main St STE 1008 Middletown DE 19709',';
-      website: 'https://ziontechgroup.co,m},';
-    realImplementation: tru,e,
-=======
-      mobil,
-    e:,
-  +1 302 464 0950',
-      email: 'kleber@ziontechgroup.com,
-      address:,
-  364 E Main St STE 1008 Middletown DE 19709',
-      website: 'http,
-    s://ziontechgroup.com},
-    realImplementation: true,
->>>>>>> main
-    implementationDetails:,
-  Complete: personalization AI platform with real-time optimization, A/B testing, and conversion optimization capabilities.',';
-    launchDate: '2024-09-1,5,';
-    customers: 23,4,
-    rating: 4.,7,
-    reviews: 12,3},
-  {
-    id:,
-  ai-powered-customer-service-platform',';
-    name: 'AI-Powered: Customer Service Platfor,m,';
-    tagline:,
-  Intelligent: customer service automation and optimization',';
-    price: $,2,499,
-  ,
-    period: '/mont,h,';
-    description: ;
-  'Advanced: AI-powered customer service platform that automates customer suppor,t, provides intelligent responses, and optimizes customer satisfaction with predictive analytics.',';
-    features[;
-  'AI: chatbot automation',';
-  'Intelligent: routing',';
-  'Predictive: analytics',';
-  'Customer: satisfaction optimization',';
-  'Integration: APIs',';
-  'Service: dashboard',';
-  'Mobile: applications',';
-  'Multi-channel: support',';
-  'Analytics: and reporting',';
-  '24/7: customer AI support';';
-    ],
-    popular: tru,e,
-    icon:,
-  🎧',';
-    color: 'from-green-600: to-teal-70,0,';
-    textColor:,
-<<<<<<< HEAD
-  text-green-400',';
-    link: 'https://ziontechgroup.com/ai-customer-servic,e,';
-=======
-  text-green-400',
-    link: 'http,
-    s://ziontechgroup.com/ai-customer-service,
->>>>>>> main
-    marketPosition:,
-  Advanced: customer service AI competing with Zendesk and Intercom',';
-    targetAudience: Customer: service team,s, Support departments, E-commerce businesses, SaaS companies',';
-    trialDays: 3,0,
-    setupTime:,
-  2: weeks',';
-    category: 'Customer: Service A,I,';
-    realService: tru,e,
-    technology[,
-  AI/ML',';
-  'Natural: Language Processing',';
-  'Chatbot: Technology',';
-  'Predictive: Analytics',';
-  'Customer: Analytics'],';
-    integrations[;
-  'Zendesk',';
-  'Intercom',';
-  'Slack',';
-  'Email: platforms',';
-  'CRM: systems'],';
-    useCases[;
-  'Customer: support',';
-  'Ticket: automation',';
-  'Satisfaction: optimization',';
-  'Service: analytics'],';
-    roi: '350% ROI: within 6 months through improved customer satisfaction and support efficienc,y,';
-    competitors[,
-<<<<<<< HEAD
-  Zendesk: ($25+/month)',';
-  'Intercom: ($39+/month)',';
-  'Freshdesk'],';
-    marketSize: '$18B: customer service marke,t,';
-=======
-  Zendesk ($25+/month),
-  'Intercom ($39+/month),
-  'Freshdesk'],
-    marketSize: '$18B customer service market,
->>>>>>> main
-    growthRate:,
-  180% annual: growth',';
-    variant: 'customer-service-ai-futuristi,c,';
-    contactInfo: {
-<<<<<<< HEAD
-      mobile,:,
-  +1: 302 464 0950',';
-      email: 'kleber@ziontechgroup.co,m,';
-      address:,
-  364: E Main St STE 1008 Middletown DE 19709',';
-      website: 'https://ziontechgroup.co,m},';
-    realImplementation: tru,e,
-=======
-      mobil,
-    e:,
-  +1 302 464 0950',
-      email: 'kleber@ziontechgroup.com,
-      address:,
-  364 E Main St STE 1008 Middletown DE 19709',
-      website: 'http,
-    s://ziontechgroup.com},
-    realImplementation: true,
->>>>>>> main
-    implementationDetails:,
-  Complete: customer service AI platform with chatbot automation, intelligent routing, and satisfaction optimization.',';
-    launchDate: '2024-08-0,1,';
-    customers: 34,5,
-    rating: 4.,7,
-    reviews: 17,8},
-  {
-    id:,
-  ai-powered-data-analytics-platform',';
-    name: 'AI-Powered: Data Analytics Platfor,m,';
-    tagline:,
-  Intelligent: data analysis and business intelligence',';
-    price: $,3,999,
-  ,
-    period: '/mont,h,';
-    description: ;
-  'Advanced: AI-powered data analytics platform that provides intelligent insight,s, predictive analytics, and automated reporting for business intelligence and decision making.',';
-    features[;
-  'AI-powered: analytics',';
-  'Predictive: modeling',';
-  'Automated: reporting',';
-  'Data: visualization',';
-  'Integration: APIs',';
-  'Analytics: dashboard',';
-  'Mobile: applications',';
-  'Real-time: monitoring',';
-  'Advanced: algorithms',';
-  '24/7: analytics AI support';';
-    ],
-    popular: tru,e,
-    icon:,
-  📈',';
-    color: 'from-blue-600: to-indigo-70,0,';
-    textColor:,
-<<<<<<< HEAD
-  text-blue-400',';
-    link: 'https://ziontechgroup.com/ai-data-analytic,s,';
-=======
-  text-blue-400',
-    link: 'http,
-    s://ziontechgroup.com/ai-data-analytics,
->>>>>>> main
-    marketPosition:,
-  Advanced: analytics AI competing with Tableau and Power BI',';
-    targetAudience: Data: analyst,s, Business intelligence teams, Executives, Data scientists',';
-    trialDays: 3,0,
-    setupTime:,
-  2: weeks',';
-    category: 'Data: Analytics A,I,';
-    realService: tru,e,
-    technology[,
-  AI/ML',';
-  'Predictive: Analytics',';
-  'Data: Visualization',';
-  'Business: Intelligence',';
-  'Big: Data'],';
-    integrations[;
-  'Tableau',';
-  'Power: BI',';
-  'Google: Analytics',';
-  'CRM: systems',';
-  'ERP: systems'],';
-    useCases[;
-  'Business: intelligence',';
-  'Predictive: analytics',';
-  'Data: visualization',';
-  'Performance: monitoring'],';
-    roi: '500% ROI: within 6 months through improved decision making and business insight,s,';
-    competitors[,
-<<<<<<< HEAD
-  Tableau: ($70+/month)',';
-  'Power: BI ($10+/month)',';
-  'QlikView'],';
-    marketSize: '$35B: business intelligence marke,t,';
-=======
-  Tableau ($70+/month),
-  'Power BI ($10+/month),
-  'QlikView'],
-    marketSize: '$35B business intelligence market,
->>>>>>> main
-    growthRate:,
-  200% annual: growth',';
-    variant: 'analytics-ai-futuristi,c,';
-    contactInfo: {
-<<<<<<< HEAD
-      mobile,:,
-  +1: 302 464 0950',';
-      email: 'kleber@ziontechgroup.co,m,';
-      address:,
-  364: E Main St STE 1008 Middletown DE 19709',';
-      website: 'https://ziontechgroup.co,m},';
-    realImplementation: tru,e,
-=======
-      mobil,
-    e:,
-  +1 302 464 0950',
-      email: 'kleber@ziontechgroup.com,
-      address:,
-  364 E Main St STE 1008 Middletown DE 19709',
-      website: 'http,
-    s://ziontechgroup.com},
-    realImplementation: true,
->>>>>>> main
-    implementationDetails:,
-  Complete: analytics AI platform with predictive modeling, automated reporting, and intelligent insights.',';
-    launchDate: '2024-07-0,1,';
-    customers: 18,9,
-    rating: 4.,8,
-    reviews: 9,8},
-  {
-    id:,
-  ai-powered-seo-optimization-platform',';
-    name: 'AI-Powered: SEO Optimization Platfor,m,';
-    tagline:,
-  Intelligent: search engine optimization and content optimization',';
-    price: $,1,999,
-  ,
-    period: '/mont,h,';
-    description: ;
-  'Advanced: AI-powered SEO platform that automatically optimizes conten,t, improves search rankings, and provides intelligent recommendations for better search engine performance.',';
-    features[;
-  'AI: content optimization',';
-  'Search: ranking analysis',';
-  'Keyword: research',';
-  'Content: recommendations',';
-  'Performance: tracking',';
-  'Integration: APIs',';
-  'SEO: dashboard',';
-  'Mobile: applications',';
-  'Competitor: analysis',';
-  '24/7: SEO AI support';';
-    ],
-    popular: tru,e,
-    icon:,
-  🔍',';
-    color: 'from-orange-600: to-red-70,0,';
-    textColor:,
-<<<<<<< HEAD
-  text-orange-400',';
-    link: 'https://ziontechgroup.com/ai-seo-optimizatio,n,';
-=======
-  text-orange-400',
-    link: 'http,
-    s://ziontechgroup.com/ai-seo-optimization,
->>>>>>> main
-    marketPosition:,
-  Advanced: SEO AI competing with Ahrefs and SEMrush',';
-    targetAudience: SEO: specialist,s, Content marketers, Digital agencies, E-commerce businesses',';
-    trialDays: 3,0,
-    setupTime:,
-  2: weeks',';
-    category: 'SEO: A,I,';
-    realService: tru,e,
-    technology[,
-  AI/ML',';
-  'Natural: Language Processing',';
-  'SEO: Analysis',';
-  'Content: Optimization',';
-  'Search: Analytics'],';
-    integrations[;
-  'Google: Search Console',';
-  'Google: Analytics',';
-  'WordPress',';
-  'Shopify',';
-  'Content: platforms'],';
-    useCases[;
-  'Content: optimization',';
-  'Search: ranking improvement',';
-  'Keyword: research',';
-  'Performance: tracking'],';
-    roi: '400% ROI: within 6 months through improved search rankings and organic traffi,c,';
-    competitors[,
-<<<<<<< HEAD
-  Ahrefs: ($99+/month)',';
-  'SEMrush: ($119+/month)',';
-  'Moz: Pro'],';
-    marketSize: '$8B: SEO marke,t,';
-=======
-  Ahrefs ($99+/month),
-  'SEMrush ($119+/month),
-  'Moz Pro'],
-    marketSize: '$8B SEO market,
->>>>>>> main
-    growthRate:,
-  180% annual: growth',';
-    variant: 'seo-ai-futuristi,c,';
-    contactInfo: {
-<<<<<<< HEAD
-      mobile,:,
-  +1: 302 464 0950',';
-      email: 'kleber@ziontechgroup.co,m,';
-      address:,
-  364: E Main St STE 1008 Middletown DE 19709',';
-      website: 'https://ziontechgroup.co,m},';
-    realImplementation: tru,e,
-=======
-      mobil,
-    e:,
-  +1 302 464 0950',
-      email: 'kleber@ziontechgroup.com,
-      address:,
-  364 E Main St STE 1008 Middletown DE 19709',
-      website: 'http,
-    s://ziontechgroup.com},
-    realImplementation: true,
->>>>>>> main
-    implementationDetails:,
-  Complete: SEO AI platform with content optimization, search analysis, and performance tracking capabilities.',';
-    launchDate: '2024-08-0,1,';
-    customers: 26,7,
-    rating: 4.,6,
+    customers: 26,7
+    rating: 4.,6
     reviews: 134;
-,]}}
+]}}

@@ -2,97 +2,82 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import {
-  BookOpen,
-  Users,
-  Award,
-  Clock,
-  Star,
-  Play,
-  Download,
-  ArrowRight,
-  CheckCircle,
-  Globe,
-  Target,
-  Lightbulb,
+  BookOpen
+  Users
+  Award
+  Clock
+  Star
+  Play
+  Download
+  ArrowRight
+  CheckCircle
+  Globe
+  Target
+  Lightbulb
 } from 'lucide-react';
 
 export default function Training() {
   const trainingPrograms = [
   {
       title: 'AI & Machine Learning Fundamentals',
-      description:
-        'Learn the basics of AI and machine learning with hands-on projects',
+      description: 'Learn the basics of AI and machine learning with hands-on projects',
       duration: '40 hours',
       level: 'Beginner',
       format: 'Online',
       price: '$299',
-      rating: 4.9,
+      rating: 4.9
       students: 1250,
       features: [
-<<<<<<< HEAD
         'Introduction to AI concepts',
-        'Machine learning algorithms',
+      'Machine learning algorithms'
         'Data preprocessing',
-        'Model training and evaluation',
+      'Model training and evaluation'
         'Real-world projects',
-        'Certificate of completion',
-=======
-        'Introduction to AI concepts,Machine learning algorithms,Data preprocessing,Model training and evaluation,Real-world projects,Certificate of completion'
->>>>>>> main
-      ],
+      'Certificate of completion'
+      ]
       instructor: 'Dr. Sarah Johnson',
-      category: 'AI & ML',
-    },
+      category: 'AI & ML'
+    }
     {
       title: 'Cloud Architecture & DevOps',
-      description:
-        'Master cloud computing and DevOps practices for scalable applications',
+      description: 'Master cloud computing and DevOps practices for scalable applications',
       duration: '60 hours',
       level: 'Intermediate',
       format: 'Hybrid',
       price: '$499',
-      rating: 4.8,
+      rating: 4.8
       students: 890,
       features: [
-<<<<<<< HEAD
         'Cloud platform fundamentals',
-        'Containerization with Docker',
+      'Containerization with Docker'
         'Kubernetes orchestration',
-        'CI/CD pipelines',
+      'CI/CD pipelines'
         'Infrastructure as Code',
-        'Monitoring and logging',
-=======
-        'Cloud platform fundamentals,Containerization with Docker,Kubernetes orchestration,CI/CD pipelines,Infrastructure as Code,Monitoring and logging'
->>>>>>> main
-      ],
+      'Monitoring and logging'
+      ]
       instructor: 'Michael Chen',
-      category: 'Cloud & DevOps',
-    },
+      category: 'Cloud & DevOps'
+    }
     {
       title: 'Cybersecurity Essentials',
-      description:
-        'Comprehensive cybersecurity training for modern threats and defenses',
+      description: 'Comprehensive cybersecurity training for modern threats and defenses',
       duration: '50 hours',
       level: 'Intermediate',
       format: 'Online',
       price: '$399',
-      rating: 4.9,
+      rating: 4.9
       students: 1100,
       features: [
-<<<<<<< HEAD
         'Threat landscape analysis',
-        'Security frameworks',
+      'Security frameworks'
         'Penetration testing',
-        'Incident response',
+      'Incident response'
         'Compliance and governance',
-        'Security tools and techniques',
-=======
-        'Threat landscape analysis,Security frameworks,Penetration testing,Incident response,Compliance and governance,Security tools and techniques'
->>>>>>> main
-      ],
+      'Security tools and techniques'
+      ]
       instructor: 'Alex Rodriguez',
-      category: 'Security',
-    },
+      category: 'Security'
+    }
     {
       title: 'Full-Stack Development',
       description: 'Build complete web applications with modern technologies',
@@ -100,23 +85,19 @@ export default function Training() {
       level: 'Beginner',
       format: 'Hybrid',
       price: '$599',
-      rating: 4.7,
+      rating: 4.7
       students: 2100,
       features: [
-<<<<<<< HEAD
         'Frontend development (React)',
-        'Backend development (Node.js)',
+      'Backend development (Node.js)'
         'Database design',
-        'API development',
+      'API development'
         'Deployment strategies',
-        'Project portfolio',
-=======
-        'Frontend development (React),Backend development (Node.js),Database design,API development,Deployment strategies,Project portfolio'
->>>>>>> main
-      ],
+      'Project portfolio'
+      ]
       instructor: 'Emily Davis',
-      category: 'Development',
-    },
+      category: 'Development'
+    }
   ];
 
   const certificationPaths = [
@@ -124,160 +105,114 @@ export default function Training() {
       title: 'Zion Tech AI Specialist',
       description: 'Certify your expertise in AI and machine learning',
       duration: '3 months',
-<<<<<<< HEAD
-      requirements: ['AI Fundamentals', 'ML Advanced', 'Project Portfolio'],
+      requirements: ['AI Fundamentals', 'ML Advanced', 'Project Portfolio']
       benefits: [
         'Industry recognition',
-        'Career advancement',
-        'Exclusive resources',
-      ],
-=======
-      requirements: ['AI Fundamentals,ML Advanced,Project Portfolio'],
-      benefits: ['Industry recognition,Career advancement,Exclusive resources']
->>>>>>> main
-    },
+      'Career advancement'
+        'Exclusive resources'
+      ]
+    }
     {
       title: 'Zion Tech Cloud Architect',
       description: 'Become a certified cloud architecture expert',
       duration: '4 months',
-<<<<<<< HEAD
       requirements: [
         'Cloud Fundamentals',
-        'DevOps Practices',
-        'Architecture Design',
-      ],
+      'DevOps Practices'
+        'Architecture Design'
+      ]
       benefits: [
         'High-demand skills',
-        'Salary increase',
-        'Consulting opportunities',
-      ],
-=======
-      requirements: ['Cloud Fundamentals,DevOps Practices,Architecture Design'],
-      benefits: ['High-demand skills,Salary increase,Consulting opportunities']
->>>>>>> main
-    },
+      'Salary increase'
+        'Consulting opportunities'
+      ]
+    }
     {
       title: 'Zion Tech Security Professional',
       description: 'Master cybersecurity and become a security expert',
       duration: '3 months',
-<<<<<<< HEAD
       requirements: [
         'Security Fundamentals',
-        'Penetration Testing',
-        'Incident Response',
-      ],
+      'Penetration Testing'
+        'Incident Response'
+      ]
       benefits: [
         'Security clearance',
-        'Government contracts',
-        'Leadership roles',
-      ],
-    },
-=======
-      requirements: ['Security Fundamentals,Penetration Testing,Incident Response'],
-      benefits: ['Security clearance,Government contracts,Leadership roles']
+      'Government contracts'
+        'Leadership roles'
+      ]
     }
->>>>>>> main
   ];
 
   const learningFormats = [
   {
       title: 'Self-Paced Online',
-      description:
-        'Learn at your own pace with pre-recorded videos and materials',
+      description: 'Learn at your own pace with pre-recorded videos and materials',
       icon: Play,
-<<<<<<< HEAD
       features: [
         '24/7 access',
-        'Lifetime access',
+      'Lifetime access'
         'Mobile friendly',
-        'Progress tracking',
-      ],
-=======
-      features: ['24/7 access,Lifetime access,Mobile friendly,Progress tracking']
->>>>>>> main
-    },
+      'Progress tracking'
+      ]
+    }
     {
       title: 'Live Online Classes',
       description: 'Interactive live sessions with expert instructors',
       icon: Users,
-<<<<<<< HEAD
       features: [
         'Real-time Q&A',
-        'Group projects',
+      'Group projects'
         'Peer networking',
-        'Instructor feedback',
-      ],
-=======
-      features: ['Real-time Q&A,Group projects,Peer networking,Instructor feedback']
->>>>>>> main
-    },
+      'Instructor feedback'
+      ]
+    }
     {
       title: 'In-Person Workshops',
       description: 'Hands-on training in our state-of-the-art facilities',
       icon: Globe,
-<<<<<<< HEAD
       features: [
         'Lab access',
-        'Equipment training',
+      'Equipment training'
         'Networking events',
-        'Certification exams',
-      ],
-=======
-      features: ['Lab access,Equipment training,Networking events,Certification exams']
->>>>>>> main
-    },
+      'Certification exams'
+      ]
+    }
     {
       title: 'Corporate Training',
       description: 'Customized training programs for your organization',
       icon: Target,
-<<<<<<< HEAD
       features: [
         'Custom curriculum',
-        'Team training',
+      'Team training'
         'On-site delivery',
-        'ROI tracking',
-      ],
-    },
-  ];
-
-  const testimonials = [
-    {
-      quote:
-        'The AI training program completely transformed my career. I went from a traditional developer to an AI specialist in just 3 months.',
-      author: 'Jennifer Liu',
-      title: 'AI Engineer',
-      company: 'Tech Corp',
-      rating: 5,
-=======
-      features: ['Custom curriculum,Team training,On-site delivery,ROI tracking']
+      'ROI tracking'
+      ]
     }
   ];
 
   const testimonials = [
-  {
-      quote: "The AI training program completely transformed my career. I went from a traditional developer to an AI specialist in just 3 months.",
-      author: "Jennifer Liu",
-      title: "AI Engineer",
-      company: "Tech Corp",
-      rating: 5
->>>>>>> main
-    },
     {
-      quote:
-        'The cloud architecture course gave me the skills I needed to lead our digital transformation initiative. Highly recommended!',
+      quote: 'The AI training program completely transformed my career. I went from a traditional developer to an AI specialist in just 3 months.',
+      author: 'Jennifer Liu',
+      title: 'AI Engineer',
+      company: 'Tech Corp',
+      rating: 5
+    }
+    {
+      quote: 'The cloud architecture course gave me the skills I needed to lead our digital transformation initiative. Highly recommended!',
       author: 'David Park',
       title: 'Cloud Architect',
       company: 'Enterprise Solutions',
-      rating: 5,
-    },
+      rating: 5
+    }
     {
-      quote:
-        'The cybersecurity training was comprehensive and practical. I now feel confident handling security challenges in my role.',
+      quote: 'The cybersecurity training was comprehensive and practical. I now feel confident handling security challenges in my role.',
       author: 'Maria Garcia',
       title: 'Security Analyst',
       company: 'Financial Services',
-      rating: 5,
-    },
+      rating: 5
+    }
   ];
 
   return (

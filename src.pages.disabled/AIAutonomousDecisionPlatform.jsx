@@ -1,18 +1,5 @@
-<<<<<<< HEAD
 <<<<<<< HEAD:src.pages.disabled/AIAutonomousDecisionPlatform.jsx
 import React from 'react'; export default AIAutonomousDecisionPlatform; const AIAutonomousDecisionPlatform = () => { return (<> <Helmet> <title > AI Autonomous Decision Platform | Zion Tech Group</title> <meta name="description" content="Comprehensive AI autonomous decision platform that orchestrates intelligent decision - making across your entire organization with advanced analytics and machine learning." / / /> <meta name="keywords" content="AI decision platform, autonomous decision making, decision orchestration, AI analytics, business intelligence, decision automation" / / /> <link rel="canonical" href="https:
 import React from 'react'; export default AIAutonomousDecisionPlatform; const AIAutonomousDecisionPlatform = () => { return (<> <Helmet> <title > AI Autonomous Decision Platform | Zion Tech Group</title> <meta name="description" content="Comprehensive AI autonomous decision platform that orchestrates intelligent decision - making across your entire organization with advanced analytics and machine learning." / / / /> <meta name="keywords" content="AI decision platform, autonomous decision making, decision orchestration, AI analytics, business intelligence, decision automation" / / / /> <link rel="canonical" href="https:"""";
-=======
-<<<<<<< HEAD
-ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/AIAutonomousDecisionPlatform.jsx
-=======
-:src.pages.disabled/AIAutonomousDecisionPlatform.jsx;
-<<<<<<< HEAD
-import: React from 'react' export default AIAutonomousDecisionPlatform const AIAutonomousDecisionPlatform = () => { return (<> <Helmet> <title > AI Autonomous Decision Platform | Zion Tech Group</title> <meta name='description' content='Comprehensive AI autonomous decision platform that orchestrates intelligent decision - making across your entire organization with advanced analytics and machine learning.' / / /> <meta name='keywords' content='AI decision platform, autonomous decision making, decision orchestration, AI analytics, business intelligence, decision automation' / / /> <link rel='canonical' href='https: ;';
-import: React from 'react' export default AIAutonomousDecisionPlatform const AIAutonomousDecisionPlatform = () => { return (<> <Helmet> <title > AI Autonomous Decision Platform | Zion Tech Group</title> <meta name='description' content='Comprehensive AI autonomous decision platform that orchestrates intelligent decision - making across your entire organization with advanced analytics and machine learning.' / / / /> <meta name='keywords' content='AI decision platfor,m, autonomous decision making, decision orchestration, AI analytics, business intelligence, decision automation' / / / /> <link rel='canonical' href='https: '''';',;
-=======
-import React  from 'react';export default AIAutonomousDecisionPlatform const AIAutonomousDecisionPlatform = () => { return (<> <Helmet> <title > AI Autonomous Decision Platform | Zion Tech Group</title> <meta name='description' content='Comprehensive AI autonomous decision platform that orchestrates intelligent decision - making across your entire organization with advanced analytics and machine learning.' / / /> <meta name='keywords' content='AI decision platform, autonomous decision making, decision orchestration, AI analytics, business intelligence, decision automation' / / /> <link rel='canonical' href='https:;
-import React  from 'react';export default AIAutonomousDecisionPlatform const AIAutonomousDecisionPlatform = () => { return (<> <Helmet> <title > AI Autonomous Decision Platform | Zion Tech Group</title> <meta name='description' content='Comprehensive AI autonomous decision platform that orchestrates intelligent decision - making across your entire organization with advanced analytics and machine learning.' / / / /> <meta name='keywords' content='AI decision platform, autonomous decision making, decision orchestration, AI analytics, business intelligence, decision automation' / / / /> <link rel='canonical' href='https:'''';
->>>>>>> main
->>>>>>> main
->>>>>>> main
+
+

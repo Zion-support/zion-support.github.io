@@ -1,83 +1,58 @@
-<<<<<<< HEAD
 import React from 'react';""
 import { SEO } from '../../components/SEO';""
-=======
-import React  from 'react
-import { SEO }  from ';../../components/SEO';
->>>>>>> main
 import { motion } from 'framer-motion';
 import { 
-  Target, Zap, 
-  Users, Shield, 
-  CheckCircle, ArrowRight, 
-  TrendingUp, BarChart3, 
-  MessageCircle, Phone, 
-  Mail, MapPin, 
-  Star, Award, 
-  Lightbulb, Sparkles, 
-  Brain, Megaphone,
-  Mail as MailIcon, Calendar,
-  Share2, Eye,
-  MousePointer, Filter,
-  PieChart, LineChart,
-  Globe, Clock,
-  Send, UserPlus,
-  UserCheck, Activity,
+  Target, Zap
+  Users, Shield
+  CheckCircle, ArrowRight
+  TrendingUp, BarChart3
+  MessageCircle, Phone
+  Mail, MapPin
+  Star, Award
+  Lightbulb, Sparkles
+  Brain, Megaphone
+  Mail as MailIcon, Calendar
+  Share2, Eye
+  MousePointer, Filter
+  PieChart, LineChart
+  Globe, Clock
+  Send, UserPlus
+  UserCheck, Activity
   DollarSign;", "
 } from 'lucide-react';
 
 const AIMarketingAutomation: React.FC = () => {
   const features = [
-<<<<<<< HEAD
     {
       icon: Target, ""
       title: 'AI Audience Targeting',""
       description: 'Intelligent audience segmentation and targeting based on behavior and preferences', ""
-=======
-  {
-      icon: Target,"
-      title: 'AI Audience Targeting,
-      description: 'Intelligent audience segmentation and targeting based on behavior and preferences,
->>>>>>> main
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-blue-500 to-cyan-500'
 }, {
       icon: MailIcon,""
       title: 'Email Automation', ""
       description: 'Automated email campaigns with personalized content and optimal send times',""
-      color: 'from-green-500 to-emerald-500', },
+      color: 'from-green-500 to-emerald-500'}
     {
-<<<<<<< HEAD
       icon: Share2, ""
       title: 'Social Media Automation',""
       description: 'Automated social media posting, engagement, and content optimization', ""
-=======
-      icon: MailIcon,"
-      title: 'Email Automation,
-      description: 'Automated email campaigns with personalized content and optimal send times,
-      color: 'from-green-500 to-emerald-500',
-},
-    {
-      icon: Share2,"
-      title: 'Social Media Automation,
-      description: 'Automated social media posting, engagement, and content optimization,
->>>>>>> main
-      color: 'from-purple-500 to-pink-500',
+      color: 'from-purple-500 to-pink-500'
 }, {
       icon: MousePointer,""
       title: 'Lead Scoring', ""
       description: 'AI-powered lead scoring and qualification for better conversion rates',""
-      color: 'from-yellow-500 to-orange-500', },
+      color: 'from-yellow-500 to-orange-500'}
     {
-<<<<<<< HEAD
       icon: BarChart3, ""
       title: 'Campaign Analytics',""
       description: 'Real-time campaign performance tracking with AI-driven insights', ""
-      color: 'from-red-500 to-pink-500',
+      color: 'from-red-500 to-pink-500'
 }, {
       icon: Brain,""
       title: 'Predictive Analytics', ""
       description: 'Predict customer behavior and optimize campaigns for maximum ROI',""
-      color: 'from-indigo-500 to-blue-500', }
+      color: 'from-indigo-500 to-blue-500'}
   ];
 
   const marketingChannels = [
@@ -87,28 +62,28 @@ const AIMarketingAutomation: React.FC = () => {
       icon: MailIcon, ""
       benefits: ['Drip campaigns', 'Personalization', 'A/B testing', 'Analytics'], ""
       pricing: '$49/month',""
-      color: 'from-blue-500 to-cyan-500', },
+      color: 'from-blue-500 to-cyan-500'}
     {""
       title: 'Social Media', ""
       description: 'Automated social media management and content optimization',
       icon: Share2, ""
       benefits: ['Auto-posting', 'Engagement tracking', 'Content optimization', 'Influencer outreach'], ""
       pricing: '$39/month',""
-      color: 'from-green-500 to-emerald-500', },
+      color: 'from-green-500 to-emerald-500'}
     {""
       title: 'SMS Marketing', ""
       description: 'Automated SMS campaigns with high open rates and engagement',
       icon: MessageCircle, ""
       benefits: ['Bulk SMS', 'Personalization', 'Delivery tracking', 'Compliance'], ""
       pricing: '$29/month',""
-      color: 'from-purple-500 to-pink-500', },
+      color: 'from-purple-500 to-pink-500'}
     {""
       title: 'Retargeting', ""
       description: 'AI-powered retargeting campaigns across multiple platforms',
       icon: Target, ""
       benefits: ['Cross-platform', 'Dynamic ads', 'Audience insights', 'Conversion tracking'], ""
       pricing: '$59/month',""
-      color: 'from-yellow-500 to-orange-500', }
+      color: 'from-yellow-500 to-orange-500'}
   ];
 
   const benefits = [""
@@ -134,85 +109,6 @@ const AIMarketingAutomation: React.FC = () => {
     'Salesforce', ""
     'Shopify',""
     'WooCommerce', ""
-=======
-      icon: MousePointer,"
-      title: 'Lead Scoring,
-      description: 'AI-powered lead scoring and qualification for better conversion rates,
-      color: 'from-yellow-500 to-orange-500',
-},
-    {
-      icon: BarChart3,"
-      title: 'Campaign Analytics,
-      description: 'Real-time campaign performance tracking with AI-driven insights,
-      color: 'from-red-500 to-pink-500',
-},
-    {
-      icon: Brain,"
-      title: 'Predictive Analytics,
-      description: 'Predict customer behavior and optimize campaigns for maximum ROI,
-      color: 'from-indigo-500 to-blue-500',
-}
-  ];
-
-  const marketingChannels = [
-  {"
-      title: 'Email Marketing,
-      description: 'Automated email campaigns with personalization and A/B testing',
-      icon: MailIcon,"
-      benefits: ['Drip campaigns,Personalization,A/B testing,Analytics'],"
-      pricing: '$49/month,
-      color: 'from-blue-500 to-cyan-500',
-},
-    {"
-      title: 'Social Media,
-      description: 'Automated social media management and content optimization',
-      icon: Share2,"
-      benefits: ['Auto-posting,Engagement tracking,Content optimization,Influencer outreach'],"
-      pricing: '$39/month,
-      color: 'from-green-500 to-emerald-500',
-},
-    {"
-      title: 'SMS Marketing,
-      description: 'Automated SMS campaigns with high open rates and engagement',
-      icon: MessageCircle,"
-      benefits: ['Bulk SMS,Personalization,Delivery tracking,Compliance'],"
-      pricing: '$29/month,
-      color: 'from-purple-500 to-pink-500',
-},
-    {"
-      title: 'Retargeting,
-      description: 'AI-powered retargeting campaigns across multiple platforms',
-      icon: Target,"
-      benefits: ['Cross-platform,Dynamic ads,Audience insights,Conversion tracking'],"
-      pricing: '$59/month,
-      color: 'from-yellow-500 to-orange-500',
-}
-  ];
-
-  const benefits = ["
-    'Increase conversions by 200%,
-    'Reduce marketing costs by 50%,
-    '24/7 automated campaigns,
-    'Personalized experiences,
-    'Real-time optimization,
-    'Multi-channel integration,
-    'Advanced analytics,
-    'ROI tracking',;
-];
-
-  const integrations = ["
-    'Facebook Ads,
-    'Google Ads,
-    'Instagram,
-    'LinkedIn,
-    'Twitter,
-    'TikTok,
-    'Mailchimp,
-    'HubSpot,
-    'Salesforce,
-    'Shopify,
-    'WooCommerce,
->>>>>>> main
     'Zapier',;
 ];
 
@@ -558,6 +454,6 @@ const AIMarketingAutomation: React.FC = () => {
         </div>
       </section>
     </div>
-  );, };
+  );};
 
 export default AIMarketingAutomation;"`"

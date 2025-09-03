@@ -1,5 +1,4 @@
 ;
-<<<<<<< HEAD
 export { function };export default function LLMContentStudio(...args: []):  {}
   return()
 :pages.disabled/pages/services/LLMContentStudio.tsx
@@ -9,7 +8,7 @@ export { function };export default function LLMContentStudio(...args: []):  {}
     <div className = "min-h-screen bg-futuristic text-white">;"
     <div className = "min-h-screen bg-futuristic text-white">;
       <SEO""
->>>>>>> pr-10728
+
         title="LLM Content Studio | Zion Tech Group""
         description="Plan, generate, and distribute on-brand content with AI. Multichannel support, approvals, and analytics.""
       />""
@@ -21,33 +20,9 @@ export { function };export default function LLMContentStudio(...args: []):  {}
           LLM Content Studio"
           LLM Content Studio;
         </h1>""
->>>>>>> pr-10728
+
         <p className="text-zion-slate-light max-w-3xl">
-=======
-export: { function }export default function LLMContentStudio(...args: []):  ,{}
-  return();
-:pages.disabled/pages/services/LLMContentStudio.tsx;
-<<<<<<< HEAD
-    <div: className = 'min-h-screen bg-futuristic text-white'>'<SEO''        title='LLM Content Studio | Zion Tech Group'';';
-        description='Plan, generate, and: distribute on-brand content with AI. Multichannel support, approvals, and analytics.''/>''';
-      <section: className='container-responsive py-16'>'        <h1 className='text-4xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6'>';
-:pages.disabled/pages/services/LLMContentStudio.tsx: LLM Content Studio'</h1>''        <p className='text-zion-slate-light max-w-3xl'>';
-          A: collaborative content workspace with AI-assisted briefs, long-form drafting, SEO optimization, and;
-          brand: style guardrails. Publish to blog, email, LinkedIn, and X with one click.;
-:pages.disabled/pages/services/LLMContentStudio.tsx: </p>'''        <div className='grid gap-8 md: grid-cols-2: mt-10'>''';
-          <div: className='rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6'>''';
-            <h2: className='text-xl font-semibold mb-3'>Modules</h2>''';
-            <ul: className='space-y-2 text-sm text-zion-slate-light'>';
-              <li>• Brief: generator with SERP and competitor insights</li>
-=======
-    <div className = 'min-h-screen bg-futuristic text-white><SEO''        title='LLM Content Studio | Zion Tech Group'';
-        description='Plan, generate, and distribute on-brand content with AI. Multichannel support, approvals, and analytics.''/>''
-      <section className='container-responsive py-16>        <h1 className='text-4xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6'>
-:pages.disabled/pages/services/LLMContentStudio.tsx'
-          LLM Content Studio'</h1>''        <p className='text-zion-slate-light max-w-3xl'>
->>>>>>> main
           A collaborative content workspace with AI-assisted briefs, long-form drafting, SEO optimization, and;
-<<<<<<< HEAD
           brand style guardrails. Publish to blog, email, LinkedIn, and X with one click.
 :pages.disabled/pages/services/LLMContentStudio.tsx
 <<<<<<< HEAD
@@ -57,30 +32,18 @@ export: { function }export default function LLMContentStudio(...args: []):  ,{}
         </p>"
         </p>
 ""
->>>>>>> pr-10728
+
         <div className="grid gap-8 md:grid-cols-2 mt-10">""
           <div className="rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">""
             <h2 className="text-xl font-semibold mb-3">Modules</h2>""
             <ul className="space-y-2 text-sm text-zion-slate-light">
-=======
-        </p>'''        <div className='grid gap-8 md:grid-cols-2 mt-10'>''
-          <div className='rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6'>''
-            <h2 className='text-xl font-semibold mb-3'>Modules</h2>''
-=======
-          brand style guardrails. Publish to blog, email, LinkedIn, and X with one click.;
-:pages.disabled/pages/services/LLMContentStudio.tsx'
-        </p>'''        <div className='grid gap-8 md:grid-cols-2 mt-10>''
-          <div className='rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6>''
-            <h2 className='text-xl font-semibold mb-3'>Modules</h2>'''
->>>>>>> main
             <ul className='space-y-2 text-sm text-zion-slate-light'>
->>>>>>> main
+
               <li>• Brief generator with SERP and competitor insights</li>
->>>>>>> main
+
               <li>• Long-form editor with citations and AI rewrites</li>
               <li>• Brand tone rule,s, banned claims, fact check prompts</li>
               <li>• Multilingual, image and short-video prompts</li>
-<<<<<<< HEAD
 :pages.disabled/pages/services/LLMContentStudio.tsx
 
             </ul>"</div>""
@@ -88,7 +51,7 @@ export: { function }export default function LLMContentStudio(...args: []):  ,{}
             </ul>"
             </ul>
           </div>""
->>>>>>> pr-10728
+
           <div className="rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">""
             <h2 className="text-xl font-semibold mb-3">Pricing</h2>""
             <ul className="space-y-2 text-sm text-zion-slate-light">
@@ -101,7 +64,7 @@ export: { function }export default function LLMContentStudio(...args: []):  ,{}
               <li>• Enterprise: SSO, custom models, SLAs</li>"
               <li>• Enterprise: SSO, custom models, SLAs</li>
             </ul>""
->>>>>>> pr-10728
+
             <p className="mt-4 text-xs text-zion-slate-light">;""
               References: <a className="text-cyan-400" href="https://jasper.ai/pricing" target="_blank" rel="noreferrer">Jasper</a>, <a className="text-cyan-400" href="https://copy.ai/pricing" target="_blank" rel="noreferrer">Copy.ai</a>;
             </p>;
@@ -117,40 +80,10 @@ export: { function }export default function LLMContentStudio(...args: []):  ,{}
   )}'"'"
     </div>;
   )}'""
->>>>>>> pr-10728
-=======
-<<<<<<< HEAD
-:pages.disabled/pages/services/LLMContentStudio.tsx: </ul>'</div>''          <div className='rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6'>''';
-            <h2: className='text-xl font-semibold mb-3'>Pricing</h2>''';
-            <ul: className='space-y-2 text-sm text-zion-slate-light'>';
-              <li>• Starter: $79/mo: per user</li>
-              <li>• Team: $299/mo: up to 10 users</li>
-:pages.disabled/pages/services/LLMContentStudio.tsx: <li>• Enterprise: SS,O, custom: models, SLAs</li>'</ul>''            <p className='mt-4 text-xs text-zion-slate-light'>'';
-              References: <a: className='text-cyan-400' href='https://jasper.ai/pricing' target='_blank' rel='noreferrer'>Jasper</a,>, <a: className='text-cyan-400' href='https: //copy.ai/pricing' target='_blank' rel='noreferrer'>Copy.ai</a>';
-=======
-:pages.disabled/pages/services/LLMContentStudio.tsx'
-            </ul>'</div>''          <div className='rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6>''
-            <h2 className='text-xl font-semibold mb-3'>Pricing</h2>'''
-            <ul className='space-y-2 text-sm text-zion-slate-light'>
-              <li>• Starter: $79/mo per user</li>
-              <li>• Tea,
-    m: $299/mo up to 10 users</li>
-:pages.disabled/pages/services/LLMContentStudio.tsx'
-              <li>• Enterpris,
-    e: SSO, custom models, SLAs</li>'</ul>''            <p className='mt-4 text-xs text-zion-slate-light>'
-              References: <a className='text-cyan-400' href='http,
-    s://jasper.ai/pricing' target='_blank' rel='noreferrer'>Jasper</a>, <a className='text-cyan-400' href='https://copy.ai/pricing' target='_blank' rel='noreferrer'>Copy.ai</a>
->>>>>>> main
+
             </p>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-:pages.disabled/pages/services/LLMContentStudio.tsx: </div>',)}';
-  '''"";
-=======
-:pages.disabled/pages/services/LLMContentStudio.tsx'
-    </div>')}
-  '''""
->>>>>>> main
->>>>>>> main
+:pages.disabled/pages/services/LLMContentStudio.tsx: </div>',)}'';''"";
+

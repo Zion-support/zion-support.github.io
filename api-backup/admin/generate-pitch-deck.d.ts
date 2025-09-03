@@ -1,14 +1,5 @@
-<<<<<<< HEAD
-import: type { NextApiRequest, NextApiResponse } from;
-  'next';';
+import type { NextApiRequest, NextApiResponse } from';next'';;
 export: default function handler(
-  req: NextApiReques,t,
+  req: NextApiReques,t
   res: NextApiResponse): Promise<any>
 ,;
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-): Promise<any>;
->>>>>>> main

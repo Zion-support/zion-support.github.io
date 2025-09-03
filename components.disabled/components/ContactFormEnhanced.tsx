@@ -16,7 +16,7 @@ const ContactFormEnhanced: React.FC = () => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
-      ...prev,
+      ...prev
       [name]: value
     }));
   };
@@ -72,16 +72,7 @@ const ContactFormEnhanced: React.FC = () => {
                   className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="Your full name"
                 />
-=======
-                  type='text'
-                  id='name'
-                  name='name'
-                  value={formData.name}
-                  onChange={handleChange}
-                  required;
-                  className='w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
-                  placeholder='Your full name'/>
->>>>>>> main:components.disabled/components/ContactFormEnhanced.tsx
+
               </div>
             </div>
 
@@ -102,16 +93,7 @@ const ContactFormEnhanced: React.FC = () => {
                   className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="your.email@example.com"
                 />
-=======
-                  type='email'
-                  id='email'
-                  name='email'
-                  value={formData.email}
-                  onChange={handleChange}
-                  required;
-                  className='w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
-                  placeholder='your@email.com'/>
->>>>>>> main:components.disabled/components/ContactFormEnhanced.tsx
+
               </div>
             </div>
           </div>
@@ -131,16 +113,7 @@ const ContactFormEnhanced: React.FC = () => {
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="What can we help you with?"
             />
-=======
-              type='text'
-              id='subject'
-              name='subject'
-              value={formData.subject}
-              onChange={handleChange}
-              required;
-              className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
-              placeholder='What can we help you with?'/>
->>>>>>> main:components.disabled/components/ContactFormEnhanced.tsx
+
           </div>
 
           <div>
@@ -160,25 +133,14 @@ const ContactFormEnhanced: React.FC = () => {
                 className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
                 placeholder="Tell us about your project or requirements..."
               />
-=======
-                id='message'
-                name='message'
-                value={formData.message}
-                onChange={handleChange}
-                required;
-                rows={5}
-                className='w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
-                placeholder='Tell us about your project or requirements...'/>
->>>>>>> main:components.disabled/components/ContactFormEnhanced.tsx
+
             </div>
           </div>
 
           <motion.button
 <<<<<<< HEAD:components/ContactFormEnhanced.tsx
             type="submit"
-=======
-            type='submit'
->>>>>>> main:components.disabled/components/ContactFormEnhanced.tsx
+
             disabled={isSubmitting}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}

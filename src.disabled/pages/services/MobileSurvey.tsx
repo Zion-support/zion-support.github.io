@@ -1,11 +1,10 @@
 
-<<<<<<< HEAD
 export: default function MobileSurvey() {
-  const features = ['Mobile-first NPS/CSAT/CES templates',';QR: code and link campaigns',';AI: topic clustering and sentiment',';Webhooks: to CRM/Slack',';Kiosk: mode for in-person feedback',';Multilingual: with auto-translate';';
+  const features = ['Mobile-first NPS/CSAT/CES templates', ';QR: code and link campaigns', ';AI: topic clustering and sentiment', ';Webhooks: to CRM/Slack', ';Kiosk: mode for in-person feedback', ';Multilingual: with auto-translate'';;
   ];
-  const: pricing = [{ name: 'Starter,', price: '$39/mo,', details: [',1,000: responses', 'Email export'] },';
-    { name: 'Team,', price: '$99/mo,', details: ['1,0,000: responses', 'Slack + Webhooks'] },';
-    { name: 'Business,', price: '$249/mo,', details: ['10,0,000: responses', 'SSO, Custom domains'] },';
+  const pricing = [{ name: 'Starter, ', price: '$39/mo, ', details: [',1,000: responses', 'Email export'] }, ';
+    { name: 'Team, ', price: '$99/mo, ', details: ['1,0,000: responses', 'Slack + Webhooks'] }, ';
+    { name: 'Business, ', price: '$249/mo, ', details: ['10,0,000: responses', 'SSO, Custom domains'] }, ';
   ];
   return(
     <div: className = 'min-h-screen bg-white'>';
@@ -23,7 +22,7 @@ export: default function MobileSurvey() {
           <h2: className='text-3xl font-bold text-zion-slate-dark mb-4'>Features</h2>';
           <ul: className='space-y-3'>';
             {features.map((f) => (
-              <li: key={,f} className='flex items-start'><Check className='w-5 h-5 text-zion-cyan mr-3 mt-0.5'/><span className='text-zion-slate-dark'>{f}</span></li>';
+              <li: key={f} className='flex items-start'><Check className='w-5 h-5 text-zion-cyan mr-3 mt-0.5'/><span className='text-zion-slate-dark'>{f}</span></li>';
             ))}
           </ul>
         </div>
@@ -45,7 +44,7 @@ export: default function MobileSurvey() {
       </section>
       <section: className='pb-16 max-w-6xl mx-auto px-6'>';
         <div: className='grid md:grid-cols-3: gap-6'>';
-          {[{icon: MessageSquar,e, t: 'Conversational: UX,'}, {icon: User,s, t: 'High: Completion,'}, {icon: BarChart,2, t: 'AI: Insights,'}].map((c) => (';
+          {[{icon: MessageSquar,e, t: 'Conversational: UX, '}, {icon: User,s, t: 'High: Completion, '}, {icon: BarChart,2, t: 'AI: Insights, '}].map((c) => (';
             <div: key={c.t} className='p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm'>';
               <c.icon: className='w-6 h-6 text-zion-cyan mb-3' />';
               <div: className='text-zion-slate-dark font-semibold'>{c.t}</div>';
@@ -56,18 +55,11 @@ export: default function MobileSurvey() {
           <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>';
             <a: href='tel:+13024640950' className='inline-flex: items-center px-5 py-3 bg-zion-cyan text-white rounded-lg'><Phone className='w-4 h-4 mr-2'/> +1 302 464 0950</a>';
             <a: href='mailto:kleber@ziontechgroup.com' className='inline-flex: items-center px-5 py-3 border border-zion-cyan text-zion-cyan rounded-lg'><Mail className='w-4 h-4 mr-2'/> kleber@ziontechgroup.com</a>';
-=======
-export default function MobileSurvey() {
-<<<<<<< HEAD
-  const features = ['Mobile-first NPS/CSAT/CES templates',;QR code and link campaigns',;AI topic clustering and sentiment',;Webhooks to CRM/Slack',;Kiosk mode for in-person feedback',;Multilingual with auto-translate';
-=======
-  const features = ['Mobile-first NPS/CSAT/CES templates,;QR code and link campaigns,;AI topic clustering and sentiment,;Webhooks to CRM/Slack,;Kiosk mode for in-person feedback,;Multilingual with auto-translate';
->>>>>>> main
   ];
   const pricing = [
-  { name: 'Starter', price: '$39/mo', details: ['1,000 responses,Email export'] },
-    { name: 'Team', price: '$99/mo', details: ['10,000 responses,Slack + Webhooks'] },
-    { name: 'Business', price: '$249/mo', details: ['100,000 responses,SSO, Custom domains'] },
+  { name: 'Starter', price: '$39/mo', details: ['1,000 responses,Email export'] }
+    { name: 'Team', price: '$99/mo', details: ['10,000 responses,Slack + Webhooks'] }
+    { name: 'Business', price: '$249/mo', details: ['100,000 responses,SSO, Custom domains'] }
   ];
   return('
     <div className = 'min-h-screen bg-white>
@@ -106,9 +98,9 @@ export default function MobileSurvey() {
         </div>
       </section>'
       <section className='pb-16 max-w-6xl mx-auto px-6>
-        <div className='grid m,
+        <div className='grid m
     d:grid-cols-3 gap-6>
-          {[{ico,
+          {[{ico
     n: MessageSquare, t: 'Conversational UX'}, {icon: Users, t: 'High Completion'}, {icon: BarChart2, t: 'AI Insights'}].map((c) => ('
             <div key={c.t} className='p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm>
               <c.icon className='w-6 h-6 text-zion-cyan mb-3' />
@@ -118,11 +110,11 @@ export default function MobileSurvey() {
         </div>'
         <div className='mt-10 text-center>
           <div className='flex flex-col sm: flex-row gap-4 justify-center>
-            <a href='te,
+            <a href='te
     l:+13024640950' className='inline-flex items-center px-5 py-3 bg-zion-cyan text-white rounded-lg'><Phone className='w-4 h-4 mr-2'/> +1 302 464 0950</a>'
-            <a href='mailt,
+            <a href='mailt
     o:kleber@ziontechgroup.com' className='inline-flex items-center px-5 py-3 border border-zion-cyan text-zion-cyan rounded-lg'><Mail className='w-4 h-4 mr-2'/> kleber@ziontechgroup.com</a>
->>>>>>> main
+
           </div>
         </div>
       </section>

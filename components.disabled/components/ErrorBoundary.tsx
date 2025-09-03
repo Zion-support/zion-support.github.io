@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-'use client';
-'';
-'';
-=======
-'use client'
-''
->>>>>>> main
+'use client'';'';';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 interface Props {
   children: ReactNode;
@@ -21,7 +14,7 @@ interface State {
 
 export class ErrorBoundary extends Component<Props, State> {
   public state: State = {
-    hasError: false,
+    hasError: false
   };
 
   constructor(props: Props) {
@@ -35,8 +28,8 @@ export class ErrorBoundary extends Component<Props, State> {
     // Log error to monitoring service
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event,exception', {
-        description: error.message,
-        fatal: false,
+        description: error.message
+        fatal: false
       });
     }
   }

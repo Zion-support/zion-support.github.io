@@ -41,10 +41,7 @@ export default function ComprehensiveServicesShowcase2026() {
 <<<<<<< HEAD:pages/comprehensive-services-showcase-2026.tsx
 								to="/contact"
 								className="rounded-md bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-3 text-sm font-semibold text-white shadow-lg hover: from-blue-700 hover:to-purple-700 transition-all duration-200 hover:shadow-xl"
-=======
-								href="/contact"
-								className="rounded-md bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-3 text-sm font-semibold text-white shadow-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 hover:shadow-xl"
->>>>>>> main:pages-disabled/comprehensive-services-showcase-2026.tsx
+
 							>
 								Get Started
 								<ArrowRight className="ml-2 h-4 w-4 inline" />
