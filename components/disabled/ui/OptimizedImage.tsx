@@ -1,58 +1,48 @@
 import React from "react"
-interface OptimizedImageProps {"
-interface OptimizedImageProps {
+import Image from "next/image"
+import { cn } from "@/lib/utils"
 
-  src: string,,
-alt: string
+interface OptimizedImageProps {
+  src: string
+  alt: string
   width?: number
   height?: number
-  className?: string,
-  priority?: boolean,
-  quality?: number,",
-  placeholder?: "blur" | "empty",
-  blurDataURL?: string,
-  sizes?: string}
+  className?: string
+  priority?: boolean
+  quality?: number
+  placeholder?: "blur" | "empty"
+  blurDataURL?: string
+  sizes?: string
+}
 
-const OptimizedImage: React.FC<OptimizedImageProps> = ({,
-:components/ui/OptimizedImage.tsx,
-src,
+const OptimizedImage: React.FC<OptimizedImageProps> = ({
+  src,
   alt,
   width = 800,
   height = 600,
   className,
   priority = false,
-  quality = 85,"
+  quality = 85,
   placeholder = "empty",
-  blurDataURL,"
+  blurDataURL,
   sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
 }) => {
   return (
-:components/disabled/ui/OptimizedImage.tsx,
-src, alt,
-  width = 800, height = 600,
-  className, priority = false,"
-  quality = 85, placeholder = "empty","
-  blurDataURL, sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"}) => {
-  return("
     <div className={cn("relative overflow-hidden", className)}>
-      <Image src="{src}""
-        alt="{alt}""
-        width="{width}""
-        height="{height}""
-        priority="{priority}""
-        quality="{quality}""
-        placeholder="{placeholder}""
-        blurDataURL="{blurDataURL}""
-        sizes="{sizes}"
-:components/ui/OptimizedImage.tsx,"
-className="object-cover transition-transform duration-300 hover: scale-105"  />,
-    </div>,,
-  )}
+      <Image 
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+        priority={priority}
+        quality={quality}
+        placeholder={placeholder}
+        blurDataURL={blurDataURL}
+        sizes={sizes}
+        className="object-cover transition-transform duration-300 hover:scale-105" 
+      />
+    </div>
+  )
+}
 
 export default OptimizedImage
-:components/disabled/ui/OptimizedImage.tsx,"
-className = "object-cover transition-transform duration-300 hover: scale-105" />
-    </div>,
-  )}
-
-export default OptimizedImage"'

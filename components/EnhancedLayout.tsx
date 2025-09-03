@@ -1,179 +1,152 @@
-import Head from "next/head"
-import React, { ReactNode } from "react"
-interface EnhancedLayoutProps {;
+import Head from "next/head";
+import React, { ReactNode } from "react";
 
+interface EnhancedLayoutProps {
   children: ReactNode;
   title?: string;
   description?: string;
-  keywords?: string,;
-  ogImage?: string,;
-  canonical?: string,,;
-  noindex?: boolean,;
-  showPerformanceMetrics?: boolean,;
-  showSEOAnalysis?: boolean}
-;
-export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({,;
-  children,";
-  title = "Zion Tech Group - Leading Technology Solutions Provider",";
-  description = "Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.",";
-  keywords = "AI development, cloud architecture, digital transformation, technology solutions, machine learning, software development",";
-  ogImage = "https://ziontechgroup.com/og-image.jpg",;
-  canonical,;
-  noindex = false,;
-  showPerformanceMetrics = false,;
-  showSEOAnalysis = false}) => {";
-  const fullTitle = title.includes("Zion Tech Group") ? title : `${title} | Zion Tech Group`;
-  const canonicalUrl = canonical || "https: //ziontechgroup.com",;
+  keywords?: string;
+  ogImage?: string;
+  canonical?: string;
+  noindex?: boolean;
+  showPerformanceMetrics?: boolean;
+  showSEOAnalysis?: boolean;
+}
 
-export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,"
-  title = "Zion Tech Group - Leading Technology Solutions Provider","
-  description = "Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.","
-  keywords = "AI development, cloud architecture, digital transformation, technology solutions, machine learning, software development","
-  ogImage = "https:// comment
+export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({
+  children,
+  title = "Zion Tech Group - Leading Technology Solutions Provider",
+  description = "Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.",
+  keywords = "AI development, cloud architecture, digital transformation, technology solutions, machine learning, software development",
+  ogImage = "https://ziontechgroup.com/og-image.jpg",
   canonical,
   noindex = false,
   showPerformanceMetrics = false,
-  showSEOAnalysis = false}) => {"
-  const fullTitle = title.includes("Zion Tech Group") ? title : "${title} | Zion Tech Group"
-  const canonicalUrl = canonical || "https: // comment
+  showSEOAnalysis = false
+}) => {
+  const fullTitle = title.includes("Zion Tech Group") ? title : `${title} | Zion Tech Group`;
+  const canonicalUrl = canonical || "https://ziontechgroup.com";
 
   return (
     <>
-<Head>
-        {/* comment */}
-
+      <Head>
+        {/* Basic Meta Tags */}
         <title>{fullTitle}</title>
-        <meta name="description" content="{description}"  />
-        <meta name="keywords" content="{keywords}"  />"
-        <meta name="viewport" content="width=device-width, initial-scale=1"  />""
-        <meta name="robots" content="{noindex" ? "noindex,nofollow" : "index,follow"}       />
+        <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content={noindex ? "noindex,nofollow" : "index,follow"} />
         
-        {/* comment */}"
-        {canonicalUrl && <link rel="canonical" href="{canonicalUrl}"  />}
-
-        {/* comment */}"
-        <meta property="og:title" content="{fullTitle}"  />"
-        <meta property="og:description" content="{description}"  />"
-        <meta property="og:image" content="{ogImage}"  />"
-        <meta property="og:url" content="{canonicalUrl}"  />"
-        <meta property="og: type" content="website"  />"
-        <meta property="og:site_name" content="Zion Tech Group"  />"
-        <meta property="og:locale" content="en_US"  />
-        ,
-        {/* comment */}"
-        <meta name="twitter: card" content="summary_large_image"  />",
-        <meta name="twitter:title" content="{fullTitle}"  />"
-        <meta name="twitter:description" content="{description}"  />"
-        <meta name="twitter:image" content="{ogImage}"  />"
-        <meta name="twitter: site" content="@ziontechgroup"  />"
-        <meta name="twitter:creator" content="@ziontechgroup"  />
-        ,
-        {/* comment */}"
-        <meta name="author" content="Zion Tech Group"  />"
-        <meta name="publisher" content="Zion Tech Group"  />"
-        <meta name="copyright" content="Zion Tech Group"  />"
-        <meta name="language" content="en"  />"
-        <meta name="revisit-after" content="7 days"  />"
-        <meta name="rating" content="general"  />
+        {/* Canonical URL */}
+        <link rel="canonical" href={canonicalUrl} />
         
-        {/* comment */}"
-        <meta name="geo.region" content="US-DE"  />"
-        <meta name="geo.placename" content="Middletown"  />"
-        <meta name="geo.position" content="39.4496;-75.7163"  />"
-        <meta name = "ICBM" content="39.4496, -75.7163"  />
+        {/* Open Graph Tags */}
+        <meta property="og:title" content={fullTitle} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Zion Tech Group" />
         
-        {/* comment */}"
-        <meta name="contact" content="kleber@ziontechgroup.com"  />"
-        <meta name="phone" content="+1-302-464-0950"  />"
-        <meta name="address" content="364 E Main St STE 1008, Middletown, DE 19709"  />
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={fullTitle} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={ogImage} />
         
-        {/* comment */}"
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge"  />"
-        <meta name="format-detection" content="telephone=no"  />"
-        <meta name="theme-color" content="#0ea5e9"  />"
-        <meta name="msapplication-TileColor" content="#0ea5e9"  />"
-        <meta name="apple-mobile-web-app-capable" content="yes"  />"
-        <meta name="apple-mobile-web-app-status-bar-style" content="default"  />"
-        <meta name="apple-mobile-web-app-title" content="Zion Tech Group"  />
+        {/* Additional SEO Tags */}
+        <meta name="author" content="Zion Tech Group" />
+        <meta name="theme-color" content="#2563eb" />
+        <meta name="msapplication-TileColor" content="#2563eb" />
         
-        {/* comment */}"
-        <link rel="preconnect" href="https: // comment
-        <link rel="preconnect" href="https:// comment
-        ,
-        {/* comment */}"
-        <link rel="dns-prefetch" href="// comment
+        {/* Favicon */}
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
         
-        {/* comment */}"
-        <link rel="preload" "
-          href="/fonts/inter-var.woff2" "
-          as="font" "
-          type="font/woff2" "
-          crossOrigin="anonymous"  />
-        
-        {/* comment */}"
-        <link rel="icon" href="/favicon.ico"  />"
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"  />"
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"  />"
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"  />"
-        <link rel="manifest" href="/site.webmanifest"  />
-        
-        {/* comment */}"
-        <script type="application/ld+json""
-          dangerouslySetInnerHTML="{{"
-            __html: JSON.stringify({",
-              "@context": "https:// comment
-              "@type": "Organization","
-              "name": "Zion Tech Group","
-              "url": "https:// comment
-              "logo": "https:// comment
-              "description": description,"
-              "address": {"
-                "@type": "PostalAddress","
-                "streetAddress": "364 E Main St STE 1008","
-                "addressLocality": "Middletown","
-                "addressRegion": "DE","
-                "postalCode": "19709","
+        {/* Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Zion Tech Group",
+              "url": "https://ziontechgroup.com",
+              "logo": "https://ziontechgroup.com/logo.png",
+              "description": description,
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "San Francisco",
+                "addressRegion": "CA",
                 "addressCountry": "US"
-},"
-              "contactPoint": {"
-                "@type": "ContactPoint","
-                "telephone": "+1-302-464-0950","
-                "contactType": "customer service","
-                "email": "kleber@ziontechgroup.com"
-},"
-              "sameAs": ["
-                "https:// comment
-                "https: // comment
-              ],"
-              "service": [
-                {"
-                  "@type": "Service","
-                  "name": "AI Development","
-                  "description": "Custom AI solutions and machine learning models"
-},
-                {"
-                  "@type": "Service","
-                  "name": "Cloud Architecture","
-                  "description": "Scalable cloud solutions and infrastructure design"
-}>
-                {"
-                  "@type": "Service","
-                  "name": "Digital Transformation","
-                  "description": "End-to-end digital transformation services"
-
-
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+1-555-123-4567",
+                "contactType": "customer service",
+                "email": "contact@ziontechgroup.com"
+              },
+              "sameAs": [
+                "https://linkedin.com/company/zion-tech-group",
+                "https://twitter.com/ziontechgroup",
+                "https://github.com/zion-tech-group"
               ]
-})>
-}}
-
-       />
+            })
+          }}
+        />
+        
+        {/* Performance Monitoring */}
+        {showPerformanceMetrics && (
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                // Performance monitoring script
+                window.addEventListener('load', function() {
+                  if ('performance' in window) {
+                    const perfData = performance.getEntriesByType('navigation')[0];
+                    if (perfData) {
+                      console.log('Page Load Time:', perfData.loadEventEnd - perfData.fetchStart);
+                    }
+                  }
+                });
+              `
+            }}
+          />
+        )}
+        
+        {/* SEO Analysis */}
+        {showSEOAnalysis && (
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                // SEO analysis script
+                document.addEventListener('DOMContentLoaded', function() {
+                  const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+                  const images = document.querySelectorAll('img');
+                  const links = document.querySelectorAll('a');
+                  
+                  console.log('SEO Analysis:', {
+                    headings: headings.length,
+                    images: images.length,
+                    links: links.length,
+                    hasH1: document.querySelector('h1') !== null
+                  });
+                });
+              `
+            }}
+          />
+        )}
       </Head>
-      {/* comment */}"
-      <div className = "min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+      
+      {/* Main Content */}
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
         {children}
-
       </div>
     </>
-  )}
-"';
-export default EnhancedLayout
+  );
+};
+
+export default EnhancedLayout;

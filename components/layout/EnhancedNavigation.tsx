@@ -1,13 +1,11 @@
-import React, { useState } from 'react;
-import Link from 'next/link;
-import { Menu, X, ChevronDown } from 'lucide-react;
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { Menu, X, ChevronDown } from 'lucide-react';
 
-const EnhancedNavigation: React.FC = () => {const [isOpen, setIsOpen] = useState(false);
-
+const EnhancedNavigation: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [solutionsOpen, setSolutionsOpen] = useState(false);
-
-const EnhancedNavigation = () => {
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
       <div className="container mx-auto px-4">

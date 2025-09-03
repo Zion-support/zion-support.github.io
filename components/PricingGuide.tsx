@@ -251,25 +251,13 @@ const PricingGuide: React.FC = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <motion.h2 
-            className="text-4xl font-bold text-gray-900 mb-4"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
             Transparent, Competitive Pricing
-          </motion.h2>
-          <motion.p 
-            className="text-xl text-gray-600 max-w-3xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Get enterprise-grade solutions at market-beating prices. Our transparent pricing 
             saves you an average of 25-40% compared to competitors.
-          </motion.p>
+          </p>
         </div>
 
         {/* Category Tabs */}
@@ -293,16 +281,11 @@ const PricingGuide: React.FC = () => {
         {/* Pricing Tiers */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {pricingTiers.map((tier, index) => (
-            <motion.div
+            <div
               key={tier.name}
               className={`bg-white rounded-lg shadow-lg p-8 relative ${
                 tier.popular ? 'border-2 border-blue-600 transform scale-105' : 'border border-gray-200'
               }`}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -5 }}
             >
               {tier.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -344,7 +327,7 @@ const PricingGuide: React.FC = () => {
               }`}>
                 Get Started
               </button>
-            </motion.div>
+            </div>
           ))}
         </div>
 

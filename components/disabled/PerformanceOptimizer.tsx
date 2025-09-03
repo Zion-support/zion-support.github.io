@@ -1,61 +1,55 @@
-import Head from "next/head"
-import React, { useEffect } from "react"
-interface PerformanceOptimizerProps {;
+import Head from "next/head";
+import React, { useEffect } from "react";
 
-  preloadImages?: string[]
-  preloadFonts?: string[]
-  preloadScripts?: string[]
+interface PerformanceOptimizerProps {
+  preloadImages?: string[];
+  preloadFonts?: string[];
+  preloadScripts?: string[];
+}
 
-
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   preloadImages = [],
   preloadFonts = [],
   preloadScripts = []
 }) => {
   useEffect(() => {
-    // comment
-preloadImages.forEach(src = > {"
-      const link = document.createElement("link")
-}
-      link.rel = "preload"
-      link.as = "image"
-      link.href = src
-      document.head.appendChild(link)
-}
-    })
-}
-    // comment
-preloadFonts.forEach(href = > {"
-      const link = document.createElement("link")
-}
-      link.rel = "preload"
-      link.as = "style"
-      link.href = href
-      document.head.appendChild(link)
-}
-    })
-}
-    // comment
-preloadScripts.forEach(src = > {"
-      const link = document.createElement("link")
-}
-      link.rel = "preload"
-      link.as = "script"
-      link.href = src
-      document.head.appendChild(link)
-}
-    })
-}
-  }, [preloadImages, preloadFonts, preloadScripts])
-}
-  return (
-<Head>
-      <meta name = "viewport" content="width="device-width," initial-scale=1"  />"
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge"  />"
-      <link rel="dns-prefetch" href="// comment
-      <link rel="preconnect" href="https: // comment
-      <link rel="preconnect" href="https:// comment
-    </Head>,,
-  )}
+    // Preload images
+    preloadImages.forEach(src => {
+      const link = document.createElement("link");
+      link.rel = "preload";
+      link.as = "image";
+      link.href = src;
+      document.head.appendChild(link);
+    });
 
-""export default PerformanceOptimizer
+    // Preload fonts
+    preloadFonts.forEach(href => {
+      const link = document.createElement("link");
+      link.rel = "preload";
+      link.as = "style";
+      link.href = href;
+      document.head.appendChild(link);
+    });
+
+    // Preload scripts
+    preloadScripts.forEach(src => {
+      const link = document.createElement("link");
+      link.rel = "preload";
+      link.as = "script";
+      link.href = src;
+      document.head.appendChild(link);
+    });
+  }, [preloadImages, preloadFonts, preloadScripts]);
+
+  return (
+    <Head>
+      {/* Additional performance hints */}
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+      <link rel="dns-prefetch" href="//www.google-analytics.com" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+    </Head>
+  );
+};
+
+export default PerformanceOptimizer;
