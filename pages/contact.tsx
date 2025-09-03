@@ -334,18 +334,16 @@ const Contact: NextPage = () => {
               Join hundreds of satisfied clients who have transformed their businesses with our technology solutions.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link 
-                href="/about" 
-                className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-all duration-300 inline-flex items-center justify-center text-lg hover:scale-105 hover:shadow-lg"
-              >
-                Learn More About Us
-                <ArrowRight className="ml-2 w-5 h-5" />
+              <Link href="/about">
+                <a className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-all duration-300 inline-flex items-center justify-center text-lg hover:scale-105 hover:shadow-lg">
+                  Learn More About Us
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </a>
               </Link>
-              <Link 
-                href="/services" 
-                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-all duration-300 inline-flex items-center justify-center text-lg hover:scale-105"
-              >
-                View Our Services
+              <Link href="/services">
+                <a className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-all duration-300 inline-flex items-center justify-center text-lg hover:scale-105">
+                  View Our Services
+                </a>
               </Link>
             </div>
           </motion.div>

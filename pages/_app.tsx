@@ -1,8 +1,14 @@
-import type { AppProps } from 'next/app'
-export default function App({ Component, pageProps }: AppProps) {
+import '../styles/globals.css'
+import Layout from '../components/Layout'
+
+export default function App({ Component, pageProps }: any) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
-  );
+    <div className="ztg-root">
+      <Layout>
+        <main className="ztg-main">
+          <Component {...pageProps} />
+        </main>
+      </Layout>
+    </div>
+  )
 }

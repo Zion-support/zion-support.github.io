@@ -37,25 +37,22 @@ const Custom404: NextPage = () => {
             {quickLinks.map((link, index) => {
               const IconComponent = link.icon
               return (
-                <Link
-                  key={link.name}
-                  href={link.url}
-                  className="bg-white/10 backdrop-blur-sm rounded-lg p-4 hover:bg-white/20 transition-all duration-300 group"
-                >
-                  <IconComponent className="w-8 h-8 text-blue-400 mx-auto mb-2 group-hover:text-white transition-colors" />
-                  <span className="text-white font-medium">{link.name}</span>
+                <Link key={link.name} href={link.url}>
+                  <a className="bg-white/10 backdrop-blur-sm rounded-lg p-4 hover:bg-white/20 transition-all duration-300 group">
+                    <IconComponent className="w-8 h-8 text-blue-400 mx-auto mb-2 group-hover:text-white transition-colors" />
+                    <span className="text-white font-medium">{link.name}</span>
+                  </a>
                 </Link>
               )
             })}
           </div>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link
-              href="/"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"
-            >
-              <Home className="w-5 h-5 mr-2" />
-              Go Home
+            <Link href="/">
+              <a className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center justify-center">
+                <Home className="w-5 h-5 mr-2" />
+                Go Home
+              </a>
             </Link>
             <button
               onClick={() => window.history.back()}

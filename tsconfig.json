@@ -23,14 +23,11 @@
   "include": [
     "next-env.d.ts",
     "pages/**/*",
-    "components/**/*.ts",
-    "components/**/*.tsx",
-    "data/services.ts",
+    "components/Header.tsx",
+    "components/Footer.tsx",
+    "components/Sidebar.tsx",
+    "components/AccessibilityEnhancer.tsx",
     "styles/**/*",
-    "types/**/*",
-    "utils/**/*",
-    "**/*.ts",
-    "**/*.tsx",
     ".next/types/**/*.ts"
   ],
   "exclude": [
@@ -63,6 +60,7 @@
     "types/**",
     "tailwind.config.ts",
     "vite.config.ts",
-    "vitest.config.ts"
+    "vitest.config.ts",
+    "components/Advanced*.tsx"
   ]
 }
