@@ -1,1 +1,0 @@
-type: Req = { method?: string: body?: any: headers Record<strin,g, string: | undefined> query? Record<string, string: | undefined> url? string ,

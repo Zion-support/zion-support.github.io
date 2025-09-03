@@ -4,7 +4,7 @@ import Link from "next/link"
 import { ArrowRight, Award, BarChart3, Bot, Brain, CheckCircle, Eye, MessageSquare, Shield, Zap } from "lucide-react"
 import Navigation from "../src/components/Navigation"
 import Footer from "../src/components/Footer"
-export default function NotFound() {
+export default function AIServices() {
   return (
     <>
       <Head>

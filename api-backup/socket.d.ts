@@ -1,1 +1,0 @@
-" export declare const config: { api: { bodyParser boolean } } interface ResWithSocket { socket: { server: HTTPServer & { io? IOServer ,",

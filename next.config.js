@@ -7,21 +7,21 @@ const nextConfig = {
   },
   typescript: {
     ignoreBuildErrors: true,
-    ignoreDuringBuilds: true,
   },
   experimental: {
-    optimizeCss: true,
     scrollRestoration: true,
-    optimizePackageImports: ["lucide-react", "@radix-ui/react-icons"],
+    optimizePackageImports: ["lucide-react", "@radix-ui/react-icons", "framer-motion"],
   },
   images: {
-    domains: ["images.unsplash.com", "via.placeholder.com"],
+    domains: ["images.unsplash.com", "via.placeholder.com", "ziontechgroup.com"],
     formats: ["image/webp", "image/avif"],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    minimumCacheTTL: 60,
   },
   compress: true,
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
-    optimizePackageImports: ["lucide-react", "@radix-ui/react-icons"],
   },
   webpack: (config, { dev, isServer }) => {
     if (!dev && !isServer) {
@@ -30,6 +30,24 @@ const nextConfig = {
         "@": new URL("./src", import.meta.url).pathname,
       }
     }
+    
+    // Optimize bundle size
+    config.optimization.splitChunks = {
+      chunks: 'all',
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all',
+        },
+        framerMotion: {
+          test: /[\\/]node_modules[\\/]framer-motion[\\/]/,
+          name: 'framer-motion',
+          chunks: 'all',
+        },
+      },
+    }
+    
     return config
   },
   async headers() {
@@ -49,7 +67,33 @@ const nextConfig = {
             key: "Referrer-Policy",
             value: "origin-when-cross-origin",
           },
+          {
+            key: "X-DNS-Prefetch-Control",
+            value: "on",
+          },
+          {
+            key: "Strict-Transport-Security",
+            value: "max-age=31536000; includeSubDomains",
+          },
         ],
+      },
+      {
+        source: "/static/(.*)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+    ]
+  },
+  async redirects() {
+    return [
+      {
+        source: '/home',
+        destination: '/',
+        permanent: true,
       },
     ]
   },
