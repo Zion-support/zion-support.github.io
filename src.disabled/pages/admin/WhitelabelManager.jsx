@@ -1,1 +1,0 @@
-import React, { useState } from; "react"";"; "";"; "";"; "";"; "";"; "";"; " export default function WhitelabelManager() {} const { user } = useAuth()"; const [activeTab, setActiveTab] = useState(", "tenants")";"
