@@ -15,7 +15,7 @@ const PerformanceMonitor: React.FC = () => {
       
       try {
         observer.observe({ entryTypes: ['largest-contentful-paint'] });
-      } catch (e) {
+      } catch {
         // Fallback for browsers that don't support LCP
       }
 
@@ -30,7 +30,7 @@ const PerformanceMonitor: React.FC = () => {
 
       try {
         fidObserver.observe({ entryTypes: ['first-input'] });
-      } catch (e) {
+      } catch {
         // Fallback for browsers that don't support FID
       }
 
@@ -47,7 +47,7 @@ const PerformanceMonitor: React.FC = () => {
 
       try {
         clsObserver.observe({ entryTypes: ['layout-shift'] });
-      } catch (e) {
+      } catch {
         // Fallback for browsers that don't support CLS
       }
 
