@@ -1,3 +1,4 @@
+import React from 'react';
 import type { AppProps } from 'next/app';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -5,7 +6,7 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import '../styles/globals.css';
 
-function Header(): any {
+function Header(): React.JSX.Element {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -44,7 +45,7 @@ function Header(): any {
   );
 }
 
-function Footer(): any {
+function Footer(): React.JSX.Element {
   return (
     <footer className="footer">
       <div className="footer-content">
@@ -63,57 +64,31 @@ function Footer(): any {
         </div>
 
         {/* Services */}
-<<<<<<< HEAD
-        <div style={{ display: 'grid', gap: 12 }}>
-          <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Services</h3>
-          <div style={{ display: 'grid', gap: 8 }}>
-            <Link href="/services" style={{ opacity: 0.8, textDecoration: 'none' }}>All Services</Link>
-            <Link href="/micro-saas" style={{ opacity: 0.8, textDecoration: 'none' }}>Micro SaaS Products</Link>
-            <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none' }}>AI Services</Link>
-            <Link href="/it-services" style={{ opacity: 0.8, textDecoration: 'none' }}>IT Services</Link>
-            <Link href="/services-catalog" style={{ opacity: 0.8, textDecoration: 'none' }}>Services Catalog</Link>
-            <Link href="/pricing" style={{ opacity: 0.8, textDecoration: 'none' }}>Pricing</Link>
-            <div style={{ opacity: 0.8, fontSize: '0.9rem', marginTop: 8 }}>
-              <div>• 120+ Micro SaaS Products</div>
-              <div>• 80+ AI Services</div>
-              <div>• 80+ IT Solutions</div>
-            </div>
-=======
         <div className="footer-section">
           <h3>Services</h3>
           <Link href="/services">All Services</Link>
+          <Link href="/micro-saas">Micro SaaS Products</Link>
+          <Link href="/ai-services">AI Services</Link>
+          <Link href="/it-services">IT Services</Link>
           <Link href="/services-catalog">Services Catalog</Link>
           <Link href="/pricing">Pricing</Link>
           <div className="text-sm mt-2 space-y-1">
-            <div>• 39+ Micro SaaS Products</div>
-            <div>• 28+ AI Services</div>
-            <div>• 35+ IT Solutions</div>
->>>>>>> cursor/analyze-improve-and-deploy-application-96c5
+            <div>• 120+ Micro SaaS Products</div>
+            <div>• 80+ AI Services</div>
+            <div>• 80+ IT Solutions</div>
           </div>
         </div>
 
         {/* Quick Links */}
-<<<<<<< HEAD
-        <div style={{ display: 'grid', gap: 12 }}>
-          <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Quick Links</h3>
-          <div style={{ display: 'grid', gap: 8 }}>
-            <Link href="/" style={{ opacity: 0.8, textDecoration: 'none' }}>Home</Link>
-            <Link href="/about" style={{ opacity: 0.8, textDecoration: 'none' }}>About Us</Link>
-            <Link href="/contact" style={{ opacity: 0.8, textDecoration: 'none' }}>Contact Us</Link>
-            <Link href="/faq" style={{ opacity: 0.8, textDecoration: 'none' }}>FAQ</Link>
-            <Link href="/privacy" style={{ opacity: 0.8, textDecoration: 'none' }}>Privacy Policy</Link>
-            <Link href="/terms" style={{ opacity: 0.8, textDecoration: 'none' }}>Terms of Service</Link>
-            <a href="https://ziontechgroup.com" style={{ opacity: 0.8, textDecoration: 'none' }}>Main Website</a>
-          </div>
-=======
         <div className="footer-section">
           <h3>Quick Links</h3>
           <Link href="/">Home</Link>
+          <Link href="/about">About Us</Link>
           <Link href="/contact">Contact Us</Link>
+          <Link href="/faq">FAQ</Link>
           <Link href="/privacy">Privacy Policy</Link>
           <Link href="/terms">Terms of Service</Link>
           <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer">Main Website</a>
->>>>>>> cursor/analyze-improve-and-deploy-application-96c5
         </div>
 
         {/* Contact CTA */}
@@ -132,7 +107,7 @@ function Footer(): any {
       <div className="footer-bottom">
         <small>
           © {new Date().getFullYear()} Zion Tech Group. All rights reserved. | 
-          <a href="/privacy">Privacy Policy</a>
+          <Link href="/privacy">Privacy Policy</Link>
         </small>
       </div>
     </footer>
