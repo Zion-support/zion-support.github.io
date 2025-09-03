@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
@@ -23,6 +23,7 @@ const PerformanceMonitor: React.FC = () => {
           if (entry.entryType === 'largest-contentful-paint') {
             // Log LCP in development only
             if (process.env.NODE_ENV === 'development') {
+              // eslint-disable-next-line no-console
               console.log('LCP:', entry.startTime);
             }
             sendToAnalytics('LCP', entry.startTime);
@@ -32,7 +33,7 @@ const PerformanceMonitor: React.FC = () => {
       
       try {
         observer.observe({ entryTypes: ['largest-contentful-paint'] });
-      } catch (e) {
+      } catch {
         // Fallback for browsers that don't support LCP
       }
 
@@ -42,6 +43,7 @@ const PerformanceMonitor: React.FC = () => {
           if (entry.entryType === 'first-input') {
             // Log FID in development only
             if (process.env.NODE_ENV === 'development') {
+              // eslint-disable-next-line no-console
               console.log('FID:', entry.processingStart - entry.startTime);
             }
             sendToAnalytics('FID', entry.processingStart - entry.startTime);
@@ -51,7 +53,7 @@ const PerformanceMonitor: React.FC = () => {
 
       try {
         fidObserver.observe({ entryTypes: ['first-input'] });
-      } catch (e) {
+      } catch {
         // Fallback for browsers that don't support FID
       }
 
@@ -65,6 +67,7 @@ const PerformanceMonitor: React.FC = () => {
         }
         // Log CLS in development only
         if (process.env.NODE_ENV === 'development') {
+          // eslint-disable-next-line no-console
           console.log('CLS:', clsValue);
         }
         sendToAnalytics('CLS', clsValue);
@@ -72,7 +75,7 @@ const PerformanceMonitor: React.FC = () => {
 
       try {
         clsObserver.observe({ entryTypes: ['layout-shift'] });
-      } catch (e) {
+      } catch {
         // Fallback for browsers that don't support CLS
       }
 

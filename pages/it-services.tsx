@@ -1025,7 +1025,6 @@ export default function ITServices() {
     },
     {
       icon: Cpu,
-<<<<<<< HEAD
       name: 'Quantum Computing Infrastructure',
       description: 'Quantum computing infrastructure setup, algorithm development, and quantum-classical hybrid systems.',
       features: [
@@ -1069,7 +1068,9 @@ export default function ITServices() {
         'Real-time decision making capabilities'
       ],
       category: 'Edge Computing'
-=======
+    },
+    {
+      icon: Cpu,
       name: 'Quantum Computing Integration',
       description: 'Cutting-edge quantum computing solutions for complex optimization problems, cryptography, and scientific research applications.',
       features: [
@@ -1113,12 +1114,10 @@ export default function ITServices() {
         'Enhanced user experience and performance'
       ],
       category: 'Infrastructure'
->>>>>>> cursor/analyze-improve-and-deploy-application-d144
     },
     {
       icon: Shield,
       name: 'Zero Trust Security Architecture',
-<<<<<<< HEAD
       description: 'Comprehensive zero trust security implementation with identity verification and micro-segmentation.',
       features: [
         'Zero trust network architecture design',
@@ -1136,31 +1135,11 @@ export default function ITServices() {
         'Reduced attack surface',
         'Improved compliance and governance',
         'Automated threat response'
-=======
-      description: 'Comprehensive zero trust security implementation with continuous verification, micro-segmentation, and identity-based access control.',
-      features: [
-        'Identity and access management (IAM) implementation',
-        'Network micro-segmentation and isolation',
-        'Continuous security monitoring and analytics',
-        'Privileged access management (PAM)',
-        'Security orchestration and automated response',
-        'Compliance and audit trail management'
-      ],
-      pricing: '$300 – $500/hour',
-      projectPricing: '$40,000 – $200,000/project',
-      timeline: '6–16 weeks',
-      benefits: [
-        'Enhanced security posture and threat protection',
-        'Reduced attack surface and lateral movement',
-        'Automated security response and remediation',
-        'Compliance with modern security standards'
->>>>>>> cursor/analyze-improve-and-deploy-application-d144
       ],
       category: 'Security'
     },
     {
       icon: Database,
-<<<<<<< HEAD
       name: 'Blockchain & Distributed Ledger Solutions',
       description: 'Blockchain infrastructure, smart contract development, and decentralized application deployment.',
       features: [
@@ -1225,7 +1204,11 @@ export default function ITServices() {
         'Massive IoT device support',
         'Enhanced mobile broadband',
         'Next-generation application capabilities'
-=======
+      ],
+      category: '5G & Connectivity'
+    },
+    {
+      icon: Database,
       name: 'Data Mesh Architecture Implementation',
       description: 'Modern data architecture that decentralizes data ownership and enables self-serve data infrastructure for large organizations.',
       features: [
@@ -1267,13 +1250,11 @@ export default function ITServices() {
         'Massive IoT device support and management',
         'Enhanced mobile and edge computing capabilities',
         'Future-ready network infrastructure'
->>>>>>> cursor/analyze-improve-and-deploy-application-d144
       ],
       category: 'Network Infrastructure'
     },
     {
       icon: Brain,
-<<<<<<< HEAD
       name: 'AI/ML Infrastructure & MLOps',
       description: 'Complete AI/ML infrastructure setup with MLOps pipelines, model deployment, and monitoring.',
       features: [
@@ -1292,7 +1273,11 @@ export default function ITServices() {
         'Automated ML operations',
         'Scalable AI infrastructure',
         'Enhanced model performance and reliability'
-=======
+      ],
+      category: 'AI Infrastructure'
+    },
+    {
+      icon: Brain,
       name: 'AI Infrastructure & MLOps',
       description: 'Complete AI infrastructure setup with machine learning operations, model deployment, and continuous learning pipelines.',
       features: [
@@ -1311,13 +1296,11 @@ export default function ITServices() {
         'Automated model lifecycle management',
         'Improved model performance and reliability',
         'Scalable AI infrastructure for growth'
->>>>>>> cursor/analyze-improve-and-deploy-application-d144
       ],
       category: 'AI Infrastructure'
     },
     {
       icon: Server,
-<<<<<<< HEAD
       name: 'Serverless & Microservices Architecture',
       description: 'Serverless architecture implementation with microservices design and API management.',
       features: [
@@ -1430,7 +1413,9 @@ export default function ITServices() {
         'Advanced data processing and analysis'
       ],
       category: 'High-Performance Computing'
-=======
+    },
+    {
+      icon: Server,
       name: 'Serverless Architecture Migration',
       description: 'Complete migration to serverless computing with AWS Lambda, Azure Functions, and Google Cloud Functions for cost optimization.',
       features: [
@@ -1497,7 +1482,6 @@ export default function ITServices() {
         'Increased confidence in system stability'
       ],
       category: 'Reliability Engineering'
->>>>>>> cursor/analyze-improve-and-deploy-application-d144
     }
   ];
 

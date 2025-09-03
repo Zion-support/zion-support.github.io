@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Brain, Zap, Shield, Eye, Mic, TrendingUp, Database, FileText, Mail, Code, Cog, Search, Users } from 'lucide-react';
+import { Brain, Zap, Shield, Eye, Mic, TrendingUp, Database, FileText, Code, Cog, Search, Users } from 'lucide-react';
 
 export default function AIServices() {
   const contact = {
@@ -827,7 +827,6 @@ export default function AIServices() {
     },
     {
       icon: Brain,
-<<<<<<< HEAD
       name: 'AI-Powered Drug Discovery Platform',
       description: 'Advanced AI platform for pharmaceutical research, drug discovery, and molecular analysis using deep learning.',
       features: [
@@ -846,7 +845,10 @@ export default function AIServices() {
         'Reduced research and development costs',
         'Improved success rates in clinical trials',
         'Enhanced drug safety profiles'
-=======
+      ]
+    },
+    {
+      icon: Brain,
       name: 'Generative AI Content Studio',
       description: 'Advanced AI-powered content creation platform that generates high-quality text, images, videos, and audio content for marketing, education, and entertainment.',
       features: [
@@ -865,12 +867,10 @@ export default function AIServices() {
         'Consistent brand messaging across all channels',
         'Reduced content creation costs by 70%',
         'Improved content engagement and conversion rates'
->>>>>>> cursor/analyze-improve-and-deploy-application-d144
       ]
     },
     {
       icon: Eye,
-<<<<<<< HEAD
       name: 'AI-Powered Medical Imaging Analysis',
       description: 'Advanced computer vision for medical imaging diagnosis, radiology, and pathology analysis.',
       features: [
@@ -889,7 +889,10 @@ export default function AIServices() {
         'Faster diagnostic turnaround times',
         'Reduced human error in analysis',
         'Improved patient outcomes'
-=======
+      ]
+    },
+    {
+      icon: Eye,
       name: 'AI-Powered Quality Assurance',
       description: 'Intelligent quality control system that uses computer vision and machine learning to detect defects, ensure compliance, and optimize manufacturing processes.',
       features: [
@@ -908,12 +911,10 @@ export default function AIServices() {
         '50% reduction in quality control costs',
         'Real-time quality monitoring and alerts',
         'Improved product consistency and customer satisfaction'
->>>>>>> cursor/analyze-improve-and-deploy-application-d144
       ]
     },
     {
       icon: TrendingUp,
-<<<<<<< HEAD
       name: 'AI-Powered Financial Trading Algorithm',
       description: 'Sophisticated AI trading algorithms for automated investment strategies and risk management.',
       features: [
@@ -976,7 +977,10 @@ export default function AIServices() {
         'Improved accuracy in legal analysis',
         'Automated compliance monitoring',
         'Reduced legal costs and risks'
-=======
+      ]
+    },
+    {
+      icon: Shield,
       name: 'AI Financial Risk Management',
       description: 'Advanced AI system for financial risk assessment, fraud detection, and regulatory compliance with real-time monitoring and predictive analytics.',
       features: [
@@ -995,12 +999,10 @@ export default function AIServices() {
         'Real-time risk monitoring and mitigation',
         'Automated compliance and regulatory reporting',
         'Improved financial decision making'
->>>>>>> cursor/analyze-improve-and-deploy-application-d144
       ]
     },
     {
       icon: Mic,
-<<<<<<< HEAD
       name: 'AI-Powered Real-Time Translation',
       description: 'Advanced real-time translation system with voice recognition and natural language processing.',
       features: [
@@ -1019,7 +1021,10 @@ export default function AIServices() {
         'Real-time communication support',
         'Multi-language business expansion',
         'Enhanced global collaboration'
-=======
+      ]
+    },
+    {
+      icon: Mic,
       name: 'AI Voice Analytics & Sentiment Analysis',
       description: 'Advanced voice processing system that analyzes speech patterns, emotions, and sentiment for customer service, market research, and healthcare applications.',
       features: [
@@ -1038,12 +1043,10 @@ export default function AIServices() {
         'Improved customer service quality',
         'Real-time conversation insights',
         'Enhanced security with voice biometrics'
->>>>>>> cursor/analyze-improve-and-deploy-application-d144
       ]
     },
     {
       icon: Database,
-<<<<<<< HEAD
       name: 'AI-Powered Supply Chain Optimization',
       description: 'Intelligent supply chain management with demand forecasting, inventory optimization, and logistics planning.',
       features: [
@@ -1106,7 +1109,10 @@ export default function AIServices() {
         'Reduced transportation costs',
         'Improved fleet efficiency',
         'Advanced autonomous capabilities'
-=======
+      ]
+    },
+    {
+      icon: Database,
       name: 'AI Data Intelligence Platform',
       description: 'Comprehensive AI platform that automatically discovers, cleans, and enriches data while providing intelligent insights and recommendations.',
       features: [
@@ -1213,7 +1219,6 @@ export default function AIServices() {
         'Increased user engagement and conversion',
         'Personalized user experiences',
         'Better content discovery and recommendations'
->>>>>>> cursor/analyze-improve-and-deploy-application-d144
       ]
     }
   ];
