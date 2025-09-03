@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 export interface LinkInfo {
   url: string;
   status: 'working' | 'broken' | 'missing' | 'external';
@@ -154,4 +152,3 @@ export class LinkChecker {
 
 export default LinkChecker;
 '"`
->>>>>>> main

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useState } from 'react';
 export /**
 import { motion, AnimatePresence  } from 'framer-motion';
@@ -356,9 +353,3 @@ const stats = [;"
 
 }
 '"`
-=======
-
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 interface BudgetStatusDisplayProps extends React.PropsWithChildren<{}> {
 
@@ -123,4 +121,3 @@ export const BudgetStatusDisplay = ({ projectBriefBudget, estimatedCost }: Budge
     </Card>;
   )};
 '"`
->>>>>>> main

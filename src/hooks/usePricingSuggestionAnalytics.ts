@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { useState, useEffect } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 
@@ -80,4 +78,3 @@ export function usePricingSuggestionAnalytics(days = 30) {
 
   return analytics;
 }
->>>>>>> main

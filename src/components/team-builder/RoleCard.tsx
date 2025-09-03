@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 interface RoleCardProps extends React.PropsWithChildren<{}> {
 
@@ -10,4 +8,3 @@ export
     </Card>;
   )};
 '"`
->>>>>>> main

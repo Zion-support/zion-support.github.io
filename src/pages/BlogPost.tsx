@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react';
 import { SEO } from '@/components / SEO';
 export default function Page() {
@@ -307,11 +304,6 @@ export default function Page() {
         </div>
       </section>
     </div>) ;
-=======
-import React from "react"
-import { SEO } from "@/components/SEO"
-;,"});,"})
->>>>>>> main
 }
 export default function BlogPost() {return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
@@ -325,4 +317,3 @@ export default function BlogPost() {return ("
   )
 }
 }""
->>>>>>> main

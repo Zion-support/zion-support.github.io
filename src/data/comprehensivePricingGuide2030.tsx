@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 // Comprehensive Pricing Guide 2030 - Zion Tech Group
 // Complete pricing information for all innovative services
 
@@ -390,4 +388,3 @@ export const PAYMENT_OPTIONS_2030 = {
 ;
 };
 '"
->>>>>>> main

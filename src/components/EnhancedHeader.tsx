@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {  import { innovativeServices2025 } from '../data/innovativeServices2025';
 import { motion, AnimatePresence  } from 'framer-motion';
 
@@ -261,74 +258,6 @@ function EnhancedHeader () {export function EnhancedHeader() {
                     <div className="absolute right-3 top-1/2 transform -translate-y-1/2">"
                       <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-cyan-400"></div>
                     </div>
-=======
-<<<<<<< HEAD
-import React from 'react';
-
-export const EnhancedHeader: React.FC = () => {
-  return(<header className="bg-white shadow-lg">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-6">
-          <div className="flex items-center">
-            <a href="/" className="text-2xl font-bold text-blue-900">
-              Zion Tech Group
-            </a>
-          </div>
-          <nav className="hidden md:flex space-x-8">
-            <a href="/" className="text-gray-700 hover:text-blue-600">Home</a>
-            <a href="/about" className="text-gray-700 hover:text-blue-600">About</a>
-            <a href="/services" className="text-gray-700 hover:text-blue-600">Services</a>
-            <a href="/solutions" className="text-gray-700 hover:text-blue-600">Solutions</a>
-            <a href="/contact" className="text-gray-700 hover:text-blue-600">Contact</a>
-          </nav>
-        </div>
-      </div>
-    </header>
-  );
-};
-=======
-import React from "react"
-export const EnhancedHeader: React.FC = () => {
-<<<<<<< HEAD
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
-
-  const navLinks = [
-<<<<<<< HEAD
-    { label: 'Home', href: '/' },
-    { 
-      label: 'Services', 
-      href: '/services',
-      submenu: [
-        { label: 'AI Services', href: '/services/ai-services' },
-        { label: 'Micro SaaS', href: '/services/micro-saas' },
-        { label: 'IT Services', href: '/services/it-services' },
-        { label: 'All Services', href: '/services' }
-      ]
-    },
-    { label: 'Solutions', href: '/solutions' },
-    { label: 'About', href: '/about' },
-    { label: 'Case Studies', href: '/case-studies' },
-    { label: 'Careers', href: '/careers' },
-    { label: 'Contact', href: '/contact' }
-=======
-    { label:,
-  Home', href: '/ },
-    { label:,
-  Services', href: '/services },
-    { label:,
-  Solutions', href: '/solutions },
-    { label:,
-  Enterprise', href: '/enterprise },
-    { label:,
-  Request Quote', href: '/request-quote },
-    { label:,
-  Case Studies', href: '/case-studies },
-    { label:,
-  Careers', href: '/careers },
-    { label:,
-  Contact', href: '/contact }
->>>>>>> origin/main
   ];
   return (
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-200">
@@ -349,7 +278,6 @@ export const EnhancedHeader: React.FC = () => {
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
->>>>>>> main
                   )}
                 </a>
                 {link.submenu && servicesOpen && (
@@ -372,7 +300,6 @@ export const EnhancedHeader: React.FC = () => {
               </div>
             ))}
             <a href="/contact" className="hidden lg:inline-flex bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors">Get Started</a>
-=======
   return(<header className="bg-white shadow-lg">
 "
   return (<header className="bg-white shadow-lg">"
@@ -390,7 +317,6 @@ export const EnhancedHeader: React.FC = () => {
             <a href="/services" className="text-gray-700 hover:text-blue-600">Services</a>"
             <a href="/solutions" className="text-gray-700 hover:text-blue-600">Solutions</a>"
             <a href="/contact" className="text-gray-700 hover:text-blue-600">Contact</a>
->>>>>>> main
           </nav>
     </header>"
             <a href="/micro-saas" className="text-gray-700 hover:text-blue-600">Micro SAAS</a>"
@@ -798,7 +724,6 @@ aria-label = "Toggle navigation>
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" d="M4 6h16M4 12h16M4 18h16"  />
             </svg>
           </button>
-<<<<<<< HEAD
         </div>
       </div>
 
@@ -828,13 +753,6 @@ aria-label = "Toggle navigation>
             <a href="/contact" className="block w-full py-2 text-blue-700 font-medium">Get Started</a>
           </div>
         </div>
-=======
-      {mobileOpen && ("
-        <div className="md: hidden border-t border-gray-200 bg-white">"
-          <div className="px-4 py-3 space-y-2">",
-              <a key="{link.href}" href="{link.href}" className="block w-full py-2 text-gray-700 hover: text-blue-600">"
-            <a href="/services/ai" className="block w-full py-2 text-blue-700 font-medium">Explore AI</a>,
->>>>>>> main
       )}</header>
   )}
 
@@ -844,5 +762,3 @@ aria-label = "Toggle navigation>
 "
 
 export default Component
->>>>>>> main
->>>>>>> main

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { Link  } from 'react-router-dom';
 export default function Page() {
 </motion.div>}
@@ -26,22 +23,7 @@ export default function Page() {
     const interval = setInterval(() => {;
       setCurrentFeature((prev) => (prev + 1) % features.length) ;
     }, 3000) ;
-<<<<<<< HEAD
-=======
-  useEffect(() => {
-  // TODO: Add dependencies if needed
 
-  return () => {
-    // Cleanup function
-  };
-}, []);, []);
-    setIsVisible(true) ;
-
-      setCurrentFeature((prev) => (prev + 1) % features.length) }, 3000) ;
->>>>>>> main
-
-=======
->>>>>>> main
     return () => clearInterval(interval)}, [features.length]);
 
     // // // // // // // // console.log('Hero CTA clicked');
@@ -74,26 +56,7 @@ export default function Page() {
 },;
     visible: { opacity: 1, scale: 1 }};
 
-=======
-<<<<<<< HEAD
 useEffect(() => { setIsVisible(true) ; setCurrentFeature((prev) => (prev + 1) % features.length) }, 3000) ; ;
-=======
-useEffect(() => { setIsVisible(true) ; setCurrentFeature((prev) => (prev + 1) % features.length) }, 3000) ;
-useEffect(() => { setIsVisible(true) ; setCurrentFeature((prev) => (prev + 1) % features.length) }, 3000) ; ;,"});,"})"
-;,"});,"})
-}
-useEffect(() => { setIsVisible(true)  setCurrentFeature((prev) => (prev + 1) % features.length) }, 3000)
-}
-useEffect(() => { setIsVisible(true)  setCurrentFeature((prev) => (prev: + 1) % features.length) }, 3000)
-}
-useEffect(() => { setIsVisible(true)  setCurrentFeature((prev) => (prev + 1) % features.length) }, 3000)
-}
-useEffect(() => {setIsVisible(true)  setCurrentFeature((prev) => (prev + 1) % features.length) }, 3000)
-}
-import React from "react"
-import { SEO } from "@/components/SEO"
-const PerformanceOptimizedHero: React.FC = () => {
->>>>>>> main
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <SEO title="PerformanceOptimizedHero - Zion Tech Group""
@@ -116,5 +79,3 @@ const PerformanceOptimizedHero: React.FC = () => {
   )}
 
 export default PerformanceOptimizedHero;""
->>>>>>> main
->>>>>>> main

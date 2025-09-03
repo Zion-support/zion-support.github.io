@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 interface Stat {
   number: string;
@@ -145,4 +143,3 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
   )};
 
 export default StatsSection}}}}}'"`
->>>>>>> main

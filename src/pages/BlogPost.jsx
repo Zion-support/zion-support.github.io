@@ -176,7 +176,7 @@ export default function BlogPost() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD:src/pages/BlogPost.js.jsx
+:src/pages/BlogPost.js.jsx
     </>)}
 
 
@@ -189,7 +189,5 @@ export { BlogPost };
 export { BlogPost };
 
 export { BlogPost };
-=======
     </>);
 }
->>>>>>> main:src/pages/BlogPost.jsx

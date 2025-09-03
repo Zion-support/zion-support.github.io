@@ -39,7 +39,6 @@ export function useCart() {
     return ctx}
 
 export function CartProvider({ children }) {
-<<<<<<< HEAD
 
   const { user } = useAuth();
   const [state, dispatch] = useReducer(cartReducer, initialState);
@@ -143,9 +142,6 @@ export function CartProvider({ children }) {
     dispatch};
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
-=======
-    const { user } = useAuth()
->>>>>>> main
 }
     const [state, dispatch] = useReducer(cartReducer, initialState)
 }

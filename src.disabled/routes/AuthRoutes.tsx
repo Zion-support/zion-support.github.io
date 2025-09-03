@@ -88,4 +88,3 @@ const Login = lazy(() => import("../pages/Login"));"const Signup = lazy(() => im
 export: default AuthRoutes";
 export default AuthRoutes;
 export default AuthRoutes"";
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

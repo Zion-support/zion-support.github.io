@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 interface TeamRecommendationDisplayProps extends React.PropsWithChildren<{}> {
 
@@ -77,4 +75,3 @@ const InfoCard = ({ title, value, icon }: { title: string; value: string; icon: 
   </Card>;
 );
 '"`
->>>>>>> main

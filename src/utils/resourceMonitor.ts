@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 interface ResourceError {
   url: string;
   type: 'script' | 'stylesheet' | 'image' | 'font' | 'other';
@@ -252,4 +250,3 @@ class ResourceMonitor {
 
 export default resourceMonitor;
 '`
->>>>>>> main
