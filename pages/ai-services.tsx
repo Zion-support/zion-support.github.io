@@ -4,12 +4,12 @@ import Link from "next/link"
 import { ArrowRight, Award, BarChart3, Bot, Brain, CheckCircle, Eye, MessageSquare, Shield, Zap } from "lucide-react"
 import Navigation from "../src/components/Navigation"
 import Footer from "../src/components/Footer"
-export default function AIServices() {
+export default function NotFound() {
   return (
     <>
       <Head>
         <title>AI Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive AI services including machine learning, natural language processing, computer vision, and autonomous systems."  />
+        <meta name="description" content="Comprehensive AI services including machine learning, natural language processing, computer vision, and autonomous systems." />
       </Head>
       <Navigation  />
       

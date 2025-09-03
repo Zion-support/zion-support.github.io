@@ -4,7 +4,6 @@ import dynamic from "next/dynamic"
 import Link from "next/link"
 import { Users, Award, Target, CheckCircle, ArrowRight, Globe, Heart, Zap } from "lucide-react"
 const Layout = dynamic(() => import("../components/Layout"), { ssr: false })
-}
 const About: NextPage = () => {
   return (
     <Layout title="About Us - Zion Tech Group"

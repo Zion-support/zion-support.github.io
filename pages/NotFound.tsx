@@ -7,7 +7,7 @@ export default function NotFound() {
     <>
       <Head>
         <title>Page Not Found - Zion Tech Group</title>
-        <meta name="description" content="The page you"re looking for doesn"t exist."  />
+        <meta name="description" content="The page you're looking for doesn't exist." />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 flex items-center justify-center px-4">
         <div className="max-w-md w-full text-center">
