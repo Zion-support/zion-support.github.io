@@ -33,7 +33,8 @@ import {
   Car,
   Brain,
   Satellite,
-  TreePine
+  TreePine,
+  Lightbulb
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 
@@ -723,6 +724,193 @@ export default function ITServices() {
       pricing: '$3,000 - $15,000/month',
       delivery: '3-6 weeks',
       category: 'Network Security'
+    },
+    {
+      title: 'AI-Powered IT Operations Management',
+      description: 'Intelligent IT operations with AI-driven automation and predictive maintenance',
+      icon: Brain,
+      features: [
+        'AI-powered incident detection and resolution,Automated root cause analysis,Predictive maintenance and capacity planning,Intelligent alert correlation and noise reduction,Self-healing infrastructure capabilities,Performance optimization recommendations'
+      ],
+      pricing: '$4,000 - $20,000/month',
+      delivery: '4-8 weeks',
+      category: 'AIOps Services'
+    },
+    {
+      title: 'Edge Computing Infrastructure',
+      description: 'Distributed edge computing solutions for low-latency applications and IoT',
+      icon: Cpu,
+      features: [
+        'Edge computing platform deployment and management,Real-time data processing at the edge,Edge AI and machine learning deployment,Multi-location edge infrastructure coordination,Edge security and device management,Integration with cloud and on-premises systems'
+      ],
+      pricing: '$5,000 - $30,000/month',
+      delivery: '6-12 weeks',
+      category: 'Edge Computing Services'
+    },
+    {
+      title: 'Quantum-Safe Security Implementation',
+      description: 'Post-quantum cryptography and quantum-resistant security solutions',
+      icon: Lock,
+      features: [
+        'Quantum-resistant encryption algorithm implementation,Post-quantum digital signature systems,Quantum key distribution (QKD) setup,Hybrid classical-quantum security protocols,Security migration planning and execution,Compliance with NIST post-quantum standards'
+      ],
+      pricing: '$15,000 - $75,000/month',
+      delivery: '12-24 weeks',
+      category: 'Quantum Security Services'
+    },
+    {
+      title: 'Sustainable IT Infrastructure',
+      description: 'Green IT solutions with energy efficiency and carbon footprint reduction',
+      icon: TreePine,
+      features: [
+        'Energy-efficient server and data center design,Carbon footprint monitoring and reduction,Renewable energy integration for IT infrastructure,Sustainable software development practices,E-waste management and recycling programs,Green cloud computing optimization'
+      ],
+      pricing: '$8,000 - $40,000/month',
+      delivery: '6-12 weeks',
+      category: 'Green IT Services'
+    },
+    {
+      title: 'Hyperconverged Infrastructure (HCI)',
+      description: 'Integrated compute, storage, and networking in a single platform',
+      icon: Server,
+      features: [
+        'HCI platform design and implementation,Software-defined storage and networking,Automated resource provisioning and scaling,High availability and disaster recovery,Performance optimization and monitoring,Integration with existing infrastructure'
+      ],
+      pricing: '$10,000 - $50,000/month',
+      delivery: '8-16 weeks',
+      category: 'HCI Services'
+    },
+    {
+      title: 'Microservices Architecture Implementation',
+      description: 'Modern microservices architecture with container orchestration and service mesh',
+      icon: Network,
+      features: [
+        'Microservices architecture design and implementation,Container orchestration with Kubernetes,Service mesh implementation and management,API gateway and service discovery,Distributed tracing and monitoring,DevOps automation and CI/CD pipelines'
+      ],
+      pricing: '$12,000 - $60,000/month',
+      delivery: '10-20 weeks',
+      category: 'Microservices Services'
+    },
+    {
+      title: 'Data Lake & Analytics Platform',
+      description: 'Comprehensive data lake with real-time analytics and machine learning capabilities',
+      icon: Database,
+      features: [
+        'Data lake architecture design and implementation,Real-time data ingestion and processing,Advanced analytics and machine learning integration,Data governance and security implementation,Self-service analytics and visualization,Integration with business intelligence tools'
+      ],
+      pricing: '$8,000 - $40,000/month',
+      delivery: '8-16 weeks',
+      category: 'Data Platform Services'
+    },
+    {
+      title: 'Serverless Computing Platform',
+      description: 'Serverless architecture implementation with auto-scaling and cost optimization',
+      icon: Cloud,
+      features: [
+        'Serverless architecture design and implementation,Function-as-a-Service (FaaS) platform setup,Event-driven architecture and workflow automation,Cost optimization and performance tuning,Monitoring and debugging tools,Integration with existing systems and APIs'
+      ],
+      pricing: '$5,000 - $25,000/month',
+      delivery: '6-12 weeks',
+      category: 'Serverless Services'
+    },
+    {
+      title: 'IT Service Management (ITSM) Platform',
+      description: 'Comprehensive IT service management with automation and self-service capabilities',
+      icon: Settings,
+      features: [
+        'ITSM platform implementation and customization,Service catalog and request management,Incident and problem management automation,Change management and approval workflows,Asset management and configuration management,Service level agreement (SLA) monitoring'
+      ],
+      pricing: '$3,000 - $15,000/month',
+      delivery: '4-8 weeks',
+      category: 'ITSM Services'
+    },
+    {
+      title: 'Hybrid Cloud Management Platform',
+      description: 'Unified management of multi-cloud and hybrid cloud environments',
+      icon: Cloud,
+      features: [
+        'Multi-cloud management and orchestration,Hybrid cloud connectivity and security,Cost optimization and resource management,Disaster recovery across cloud environments,Compliance and governance automation,Performance monitoring and optimization'
+      ],
+      pricing: '$6,000 - $30,000/month',
+      delivery: '6-12 weeks',
+      category: 'Hybrid Cloud Services'
+    },
+    {
+      title: 'IT Asset Management & Optimization',
+      description: 'Comprehensive IT asset lifecycle management with cost optimization',
+      icon: BarChart3,
+      features: [
+        'IT asset discovery and inventory management,Software license optimization and compliance,Hardware lifecycle management and refresh planning,Cost analysis and budget optimization,Asset tracking and monitoring,Integration with procurement and finance systems'
+      ],
+      pricing: '$2,000 - $10,000/month',
+      delivery: '3-6 weeks',
+      category: 'Asset Management Services'
+    },
+    {
+      title: 'Digital Workplace Solutions',
+      description: 'Modern digital workplace with collaboration tools and productivity optimization',
+      icon: Users,
+      features: [
+        'Digital workplace platform implementation,Collaboration tools and communication systems,Productivity monitoring and optimization,Remote work enablement and management,Employee experience and engagement tools,Integration with HR and business systems'
+      ],
+      pricing: '$4,000 - $20,000/month',
+      delivery: '4-8 weeks',
+      category: 'Digital Workplace Services'
+    },
+    {
+      title: 'IT Governance & Risk Management',
+      description: 'Comprehensive IT governance framework with risk assessment and compliance',
+      icon: Shield,
+      features: [
+        'IT governance framework design and implementation,Risk assessment and management processes,Compliance monitoring and reporting,Policy development and enforcement,Audit preparation and support,IT strategy alignment and measurement'
+      ],
+      pricing: '$5,000 - $25,000/month',
+      delivery: '6-12 weeks',
+      category: 'IT Governance Services'
+    },
+    {
+      title: 'Advanced Threat Intelligence Platform',
+      description: 'Intelligent threat detection and response with machine learning and automation',
+      icon: Shield,
+      features: [
+        'Threat intelligence collection and analysis,Automated threat detection and response,Behavioral analysis and anomaly detection,Threat hunting and investigation tools,Incident response automation,Integration with security tools and SIEM'
+      ],
+      pricing: '$7,000 - $35,000/month',
+      delivery: '6-12 weeks',
+      category: 'Threat Intelligence Services'
+    },
+    {
+      title: 'IT Cost Optimization & FinOps',
+      description: 'Financial operations for IT with cost optimization and budget management',
+      icon: TrendingUp,
+      features: [
+        'IT cost analysis and optimization,Cloud cost management and FinOps practices,Budget planning and forecasting,Resource utilization optimization,Vendor management and contract optimization,ROI analysis and reporting'
+      ],
+      pricing: '$3,000 - $15,000/month',
+      delivery: '4-8 weeks',
+      category: 'IT FinOps Services'
+    },
+    {
+      title: 'IT Training & Change Management',
+      description: 'Comprehensive IT training and change management for digital transformation',
+      icon: Users,
+      features: [
+        'IT skills assessment and training programs,Change management and adoption strategies,User experience optimization,Training delivery and certification,Knowledge management and documentation,Performance measurement and improvement'
+      ],
+      pricing: '$2,500 - $12,000/month',
+      delivery: '3-6 weeks',
+      category: 'IT Training Services'
+    },
+    {
+      title: 'IT Innovation Lab & R&D',
+      description: 'Innovation laboratory for emerging technologies and proof-of-concept development',
+      icon: Lightbulb,
+      features: [
+        'Emerging technology evaluation and testing,Proof-of-concept development and validation,Innovation strategy and roadmap development,Technology scouting and assessment,Research and development project management,Innovation metrics and ROI measurement'
+      ],
+      pricing: '$10,000 - $50,000/month',
+      delivery: '8-16 weeks',
+      category: 'IT Innovation Services'
     }
   ];
 

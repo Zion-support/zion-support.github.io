@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { ArrowRight, Award, BarChart3, Bot, Brain, Bug, CheckCircle, Clock, Code, Cpu, Cross, Deep, Eye, FileText, From, Globe, Grid, Image, Mail, MessageSquare, Mic, Minimize, Monitor, Network, Phone, Search, Server, Settings, Shield, Star, Target, TrendingUp, Users, Video, Zap, Heart, Satellite, Car, TreePine } from 'lucide-react';
+import { ArrowRight, Award, BarChart3, Bot, Brain, Bug, CheckCircle, Clock, Code, Cpu, Cross, Deep, Eye, FileText, From, Globe, Grid, Image, Lightbulb, Mail, MessageSquare, Mic, Minimize, Monitor, Network, Phone, Search, Server, Settings, Shield, Star, Target, TrendingUp, Users, Video, Zap, Heart, Satellite, Car, TreePine } from 'lucide-react';
 import Navigation from '../src/components/Navigation';
 import Footer from '../src/components/Footer';
 export default function AIServices() {
@@ -698,6 +698,215 @@ export default function AIServices() {
       pricing: '$8,000 - $35,000/month',
       delivery: '8-12 weeks',
       category: 'Predictive AI'
+    },
+    {
+      title: 'AI-Powered Customer Experience Optimization',
+      description: 'Intelligent customer journey mapping and experience enhancement platform',
+      icon: Users,
+      features: [
+        'Customer journey mapping and touchpoint analysis,Real-time sentiment analysis and emotion detection,Personalized experience recommendations,Churn prediction and retention strategies,Customer lifetime value optimization,Integration with CRM and marketing automation tools'
+      ],
+      pricing: '$3,000 - $12,000/month',
+      delivery: '4-8 weeks',
+      category: 'Customer Experience AI'
+    },
+    {
+      title: 'AI-Powered Content Moderation System',
+      description: 'Intelligent content moderation with real-time detection and automated response',
+      icon: Eye,
+      features: [
+        'Real-time content analysis and classification,Automated moderation and policy enforcement,Context-aware content understanding,Multi-language and cultural sensitivity detection,User behavior analysis and risk assessment,Integration with social media and community platforms'
+      ],
+      pricing: '$2,500 - $10,000/month',
+      delivery: '3-6 weeks',
+      category: 'Content Moderation AI'
+    },
+    {
+      title: 'AI-Powered Personalization Engine',
+      description: 'Advanced personalization platform for websites, apps, and digital experiences',
+      icon: Star,
+      features: [
+        'Real-time personalization and recommendation engines,Behavioral analysis and user segmentation,Dynamic content optimization and A/B testing,Cross-platform personalization consistency,Privacy-compliant data processing,Integration with marketing and analytics tools'
+      ],
+      pricing: '$4,000 - $15,000/month',
+      delivery: '5-10 weeks',
+      category: 'Personalization AI'
+    },
+    {
+      title: 'AI-Powered Voice Assistant Platform',
+      description: 'Intelligent voice assistant development platform with natural language processing',
+      icon: Mic,
+      features: [
+        'Natural language understanding and processing,Multi-language voice recognition and synthesis,Context-aware conversation management,Integration with smart devices and IoT,Custom voice assistant development,Analytics and performance optimization'
+      ],
+      pricing: '$5,000 - $20,000/month',
+      delivery: '6-12 weeks',
+      category: 'Voice Assistant AI'
+    },
+    {
+      title: 'AI-Powered Email Marketing Optimization',
+      description: 'Intelligent email marketing platform with AI-driven optimization and personalization',
+      icon: Mail,
+      features: [
+        'AI-powered subject line and content optimization,Optimal send time prediction and automation,Recipient behavior analysis and segmentation,Email deliverability optimization,Performance analytics and ROI tracking,Integration with CRM and marketing tools'
+      ],
+      pricing: '$1,500 - $6,000/month',
+      delivery: '2-4 weeks',
+      category: 'Email Marketing AI'
+    },
+    {
+      title: 'AI-Powered Social Media Intelligence',
+      description: 'Comprehensive social media monitoring and intelligence platform',
+      icon: Globe,
+      features: [
+        'Real-time social media monitoring and analysis,Brand mention tracking and sentiment analysis,Influencer identification and relationship management,Content performance optimization,Competitor analysis and benchmarking,Social media crisis detection and response'
+      ],
+      pricing: '$2,000 - $8,000/month',
+      delivery: '3-6 weeks',
+      category: 'Social Media AI'
+    },
+    {
+      title: 'AI-Powered Lead Generation System',
+      description: 'Intelligent lead generation and qualification platform with automated nurturing',
+      icon: Target,
+      features: [
+        'Automated lead identification and scoring,Multi-channel lead capture and tracking,Intelligent lead nurturing and follow-up,Lead quality assessment and prioritization,Integration with CRM and sales tools,Performance analytics and optimization'
+      ],
+      pricing: '$3,500 - $14,000/month',
+      delivery: '4-8 weeks',
+      category: 'Lead Generation AI'
+    },
+    {
+      title: 'AI-Powered Price Optimization Engine',
+      description: 'Intelligent pricing strategy optimization with dynamic pricing capabilities',
+      icon: TrendingUp,
+      features: [
+        'Dynamic pricing optimization and adjustment,Competitor price monitoring and analysis,Demand forecasting and price elasticity modeling,Revenue optimization and margin analysis,Seasonal and promotional pricing strategies,Integration with e-commerce and ERP systems'
+      ],
+      pricing: '$4,500 - $18,000/month',
+      delivery: '5-10 weeks',
+      category: 'Pricing AI'
+    },
+    {
+      title: 'AI-Powered Inventory Management System',
+      description: 'Intelligent inventory optimization with demand forecasting and automated reordering',
+      icon: BarChart3,
+      features: [
+        'Demand forecasting and inventory optimization,Automated reorder point calculations,Supplier performance analysis and optimization,Multi-location inventory tracking and management,Cost optimization and waste reduction,Integration with ERP and supply chain systems'
+      ],
+      pricing: '$3,000 - $12,000/month',
+      delivery: '4-8 weeks',
+      category: 'Inventory AI'
+    },
+    {
+      title: 'AI-Powered Employee Performance Analytics',
+      description: 'Intelligent employee performance monitoring and optimization platform',
+      icon: Users,
+      features: [
+        'Employee performance tracking and analysis,Productivity optimization and recommendations,Skill gap identification and training recommendations,Employee engagement and satisfaction monitoring,Predictive analytics for retention and turnover,Integration with HR and performance management systems'
+      ],
+      pricing: '$2,500 - $10,000/month',
+      delivery: '3-6 weeks',
+      category: 'HR Analytics AI'
+    },
+    {
+      title: 'AI-Powered Fraud Prevention System',
+      description: 'Advanced fraud detection and prevention with real-time monitoring and response',
+      icon: Shield,
+      features: [
+        'Real-time fraud detection and prevention,Behavioral analysis and anomaly detection,Multi-channel fraud monitoring,Automated risk scoring and decision making,Fraud pattern recognition and learning,Integration with payment and financial systems'
+      ],
+      pricing: '$5,000 - $25,000/month',
+      delivery: '6-12 weeks',
+      category: 'Fraud Prevention AI'
+    },
+    {
+      title: 'AI-Powered Customer Support Automation',
+      description: 'Intelligent customer support automation with chatbot and ticket management',
+      icon: MessageSquare,
+      features: [
+        'AI-powered chatbot development and deployment,Automated ticket routing and prioritization,Knowledge base creation and management,Multi-channel support integration,Customer satisfaction tracking and optimization,Integration with CRM and helpdesk systems'
+      ],
+      pricing: '$2,000 - $8,000/month',
+      delivery: '3-6 weeks',
+      category: 'Support Automation AI'
+    },
+    {
+      title: 'AI-Powered Business Process Automation',
+      description: 'Intelligent business process automation with workflow optimization',
+      icon: Settings,
+      features: [
+        'Workflow automation and optimization,Process mining and analysis,Automated decision making and routing,Integration with business systems and APIs,Performance monitoring and optimization,Compliance and audit trail management'
+      ],
+      pricing: '$4,000 - $16,000/month',
+      delivery: '5-10 weeks',
+      category: 'Process Automation AI'
+    },
+    {
+      title: 'AI-Powered Market Research Platform',
+      description: 'Intelligent market research and competitive intelligence platform',
+      icon: BarChart3,
+      features: [
+        'Automated market research and data collection,Competitive analysis and benchmarking,Consumer behavior analysis and insights,Market trend identification and forecasting,Survey design and analysis automation,Integration with research and analytics tools'
+      ],
+      pricing: '$3,500 - $14,000/month',
+      delivery: '4-8 weeks',
+      category: 'Market Research AI'
+    },
+    {
+      title: 'AI-Powered Document Intelligence',
+      description: 'Intelligent document processing and analysis with automated data extraction',
+      icon: FileText,
+      features: [
+        'Automated document processing and data extraction,Document classification and routing,OCR and text recognition with high accuracy,Contract analysis and risk assessment,Compliance monitoring and reporting,Integration with document management systems'
+      ],
+      pricing: '$2,500 - $10,000/month',
+      delivery: '3-6 weeks',
+      category: 'Document Intelligence AI'
+    },
+    {
+      title: 'AI-Powered Sales Forecasting Platform',
+      description: 'Intelligent sales forecasting and pipeline management with predictive analytics',
+      icon: TrendingUp,
+      features: [
+        'Sales forecasting and pipeline analysis,Lead scoring and qualification automation,Revenue prediction and optimization,Sales performance analytics and insights,Integration with CRM and sales tools,Predictive analytics for sales planning'
+      ],
+      pricing: '$3,000 - $12,000/month',
+      delivery: '4-8 weeks',
+      category: 'Sales Forecasting AI'
+    },
+    {
+      title: 'AI-Powered Quality Assurance System',
+      description: 'Intelligent quality assurance and testing automation platform',
+      icon: CheckCircle,
+      features: [
+        'Automated testing and quality assurance,Defect detection and analysis,Performance testing and optimization,Quality metrics and reporting,Integration with development and testing tools,Continuous quality monitoring and improvement'
+      ],
+      pricing: '$4,000 - $16,000/month',
+      delivery: '5-10 weeks',
+      category: 'Quality Assurance AI'
+    },
+    {
+      title: 'AI-Powered Compliance Monitoring',
+      description: 'Intelligent compliance monitoring and regulatory reporting platform',
+      icon: Shield,
+      features: [
+        'Automated compliance monitoring and reporting,Regulatory change detection and analysis,Policy compliance checking and enforcement,Risk assessment and mitigation,Audit trail and documentation management,Integration with compliance and risk management systems'
+      ],
+      pricing: '$5,000 - $20,000/month',
+      delivery: '6-12 weeks',
+      category: 'Compliance AI'
+    },
+    {
+      title: 'AI-Powered Innovation Management',
+      description: 'Intelligent innovation management and idea evaluation platform',
+      icon: Lightbulb,
+      features: [
+        'Idea collection and evaluation automation,Innovation pipeline management and tracking,Market opportunity analysis and assessment,Intellectual property analysis and protection,Innovation metrics and performance tracking,Integration with R&D and innovation management systems'
+      ],
+      pricing: '$3,500 - $14,000/month',
+      delivery: '4-8 weeks',
+      category: 'Innovation AI'
     },
     {
       title: 'Voice AI Assistant Enterprise',

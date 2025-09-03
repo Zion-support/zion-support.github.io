@@ -301,6 +301,105 @@ export default function MicroSaaS() {
       category: 'Real Estate SaaS'
     },
     {
+      title: 'AI-Powered Website Analytics for Small Business',
+      description: 'Intelligent website analytics platform designed specifically for small businesses with actionable insights',
+      icon: BarChart3,
+      features: [
+        'Traffic analysis with visitor behavior insights,Engagement metrics and conversion tracking,Marketing performance analysis and ROI measurement,SEO performance monitoring and recommendations,Competitor analysis and benchmarking,Automated reporting and alerts'
+      ],
+      pricing: '$30 - $70/month',
+      delivery: '1-2 weeks',
+      category: 'Analytics SaaS'
+    },
+    {
+      title: 'Employee Scheduling & Workforce Management',
+      description: 'Smart employee scheduling platform with AI-powered optimization and shift management',
+      icon: Calendar,
+      features: [
+        'Automated shift assignment and optimization,Employee availability tracking and preferences,Shift swapping and coverage management,Time tracking and attendance monitoring,Compliance with labor laws and regulations,Integration with payroll and HR systems'
+      ],
+      pricing: '$25 - $60/month',
+      delivery: '2-3 weeks',
+      category: 'HR SaaS'
+    },
+    {
+      title: 'Learning Management System (LMS)',
+      description: 'Comprehensive learning management platform with AI-powered personalization and progress tracking',
+      icon: Users,
+      features: [
+        'Course creation and content management,AI-powered personalized learning paths,Progress tracking and performance analytics,Interactive assessments and certifications,Multi-format content support (video, audio, documents),Integration with HR and performance management systems'
+      ],
+      pricing: '$50 - $150/month',
+      delivery: '3-4 weeks',
+      category: 'Education SaaS'
+    },
+    {
+      title: 'AI-Powered Customer Relationship Management (CRM)',
+      description: 'Intelligent CRM system with AI-driven insights, automation, and predictive analytics',
+      icon: Users,
+      features: [
+        'AI-powered lead scoring and qualification,Automated customer segmentation and targeting,Predictive sales analytics and forecasting,Smart task automation and follow-up reminders,Integration with marketing and sales tools,Advanced reporting and business intelligence'
+      ],
+      pricing: '$199 - $799/month',
+      delivery: '3-5 weeks',
+      category: 'CRM SaaS'
+    },
+    {
+      title: 'Remote Work Enablement Platform',
+      description: 'Comprehensive remote work solution with productivity tracking, collaboration tools, and team management',
+      icon: Monitor,
+      features: [
+        'Virtual meeting efficiency and optimization,Remote onboarding and training automation,Project management and collaboration tools,Productivity tracking and performance analytics,Secure file sharing and document collaboration,Team communication and engagement tools'
+      ],
+      pricing: '$99 - $399/month',
+      delivery: '2-4 weeks',
+      category: 'Remote Work SaaS'
+    },
+    {
+      title: 'AI-Powered Data Analytics Platform',
+      description: 'Advanced data analytics solution with AI-driven insights, visualization, and predictive modeling',
+      icon: BarChart3,
+      features: [
+        'Real-time data processing and analysis,AI-powered predictive analytics and forecasting,Customizable dashboards and visualizations,Automated report generation and distribution,Data integration from multiple sources,Advanced statistical modeling and machine learning'
+      ],
+      pricing: '$299 - $1,200/month',
+      delivery: '4-6 weeks',
+      category: 'Data Analytics SaaS'
+    },
+    {
+      title: 'AI-Powered Cybersecurity Monitoring',
+      description: 'Intelligent cybersecurity platform with real-time threat detection and automated response',
+      icon: Shield,
+      features: [
+        'Real-time network monitoring and threat detection,AI-powered anomaly detection and behavioral analysis,Automated incident response and mitigation,Compliance monitoring and reporting,User behavior analytics and risk assessment,Integration with existing security tools and SIEM systems'
+      ],
+      pricing: '$399 - $1,500/month',
+      delivery: '3-5 weeks',
+      category: 'Cybersecurity SaaS'
+    },
+    {
+      title: 'AI-Powered Supply Chain Optimization',
+      description: 'Intelligent supply chain management with demand forecasting, inventory optimization, and logistics automation',
+      icon: Network,
+      features: [
+        'AI-driven demand forecasting and planning,Inventory optimization and automated reordering,Supplier performance monitoring and risk assessment,Logistics optimization and route planning,Cost optimization and budget management,Integration with ERP and logistics systems'
+      ],
+      pricing: '$499 - $2,000/month',
+      delivery: '5-8 weeks',
+      category: 'Supply Chain SaaS'
+    },
+    {
+      title: 'AI-Powered Financial Planning & Analysis',
+      description: 'Intelligent financial planning platform with automated budgeting, forecasting, and investment analysis',
+      icon: TrendingUp,
+      features: [
+        'Automated budget creation and monitoring,AI-powered financial forecasting and scenario planning,Investment analysis and portfolio optimization,Expense categorization and spending insights,Financial goal tracking and recommendations,Integration with accounting and banking systems'
+      ],
+      pricing: '$199 - $899/month',
+      delivery: '3-4 weeks',
+      category: 'Financial SaaS'
+    },
+    {
       title: 'Smart Healthcare Appointment Scheduler',
       description: 'AI-powered healthcare scheduling with patient preference learning and resource optimization',
       icon: Heart,
