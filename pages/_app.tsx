@@ -27,21 +27,6 @@ function Header(): any {
           textDecoration: 'none'
         }}>Zion Tech Group</Link>
         
-<<<<<<< HEAD
-        <div className="header-nav-links">
-          <Link href="/" className="header-nav-link">Home</Link>
-          <Link href="/services" className="header-nav-link">All Services</Link>
-          <Link href="/services-catalog" className="header-nav-link">Catalog</Link>
-          <Link href="/cloud-devops" className="header-nav-link">Cloud DevOps</Link>
-          <Link href="/cybersecurity" className="header-nav-link">Cybersecurity</Link>
-          <Link href="/quantum-computing" className="header-nav-link">Quantum</Link>
-          <Link href="/docs" className="header-nav-link">Docs</Link>
-          <Link href="/pricing" className="header-nav-link">Pricing</Link>
-          <div className="hidden md:block">
-            <SearchBar />
-          </div>
-          <Link href="/contact" className="header-nav-cta">Contact</Link>
-=======
         {/* Desktop Navigation */}
         <div style={{ 
           display: 'flex', gap: 4, flexWrap: 'wrap', alignItems: 'center'
@@ -78,12 +63,14 @@ function Header(): any {
             padding: '8px 12px', borderRadius: 6, opacity: 0.9,
             transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
           }}>About</Link>
+          <div className="hidden md:block">
+            <SearchBar />
+          </div>
           <Link href="/contact" style={{ 
             fontWeight: 600, background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', 
             color: 'white', padding: '8px 16px', borderRadius: 8,
             transition: 'all 0.2s ease', textDecoration: 'none'
           }}>Contact</Link>
->>>>>>> ce2f1c888fb90dd5d7d297f621bf29128aa0e6a6
         </div>
 
         {/* Mobile Navigation */}
@@ -109,22 +96,6 @@ function Header(): any {
         </div>
       </nav>
       
-<<<<<<< HEAD
-      <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
-        <div className="md:hidden mb-4">
-          <SearchBar />
-        </div>
-        <Link href="/" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Home</Link>
-        <Link href="/services" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>All Services</Link>
-        <Link href="/services-catalog" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Catalog</Link>
-        <Link href="/cloud-devops" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Cloud DevOps</Link>
-        <Link href="/cybersecurity" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Cybersecurity</Link>
-        <Link href="/quantum-computing" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Quantum</Link>
-        <Link href="/docs" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Docs</Link>
-        <Link href="/pricing" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
-        <Link href="/contact" className="header-nav-cta" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
-      </div>
-=======
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div style={{
@@ -133,6 +104,9 @@ function Header(): any {
           borderBottom: '1px solid rgba(255,255,255,0.1)',
           padding: '20px', display: 'flex', flexDirection: 'column', gap: '12px'
         }}>
+          <div className="md:hidden mb-4">
+            <SearchBar />
+          </div>
           <Link href="/" style={{ 
             padding: '8px 12px', borderRadius: 6, opacity: 0.9,
             transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
@@ -165,9 +139,13 @@ function Header(): any {
             padding: '8px 12px', borderRadius: 6, opacity: 0.9,
             transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
           }} onClick={() => setMobileMenuOpen(false)}>About</Link>
+          <Link href="/contact" style={{ 
+            fontWeight: 600, background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', 
+            color: 'white', padding: '8px 16px', borderRadius: 8,
+            transition: 'all 0.2s ease', textDecoration: 'none'
+          }} onClick={() => setMobileMenuOpen(false)}>Contact</Link>
         </div>
       )}
->>>>>>> ce2f1c888fb90dd5d7d297f621bf29128aa0e6a6
     </header>
   );
 }
@@ -206,21 +184,6 @@ function Footer(): any {
         </div>
 
         {/* Services */}
-<<<<<<< HEAD
-        <div className="footer-section">
-          <h3>Services</h3>
-          <Link href="/services">All Services</Link>
-          <Link href="/micro-saas">Micro SaaS Products</Link>
-          <Link href="/ai-services">AI Services</Link>
-          <Link href="/it-services">IT Services</Link>
-          <Link href="/services-catalog">Services Catalog</Link>
-          <Link href="/docs">Documentation</Link>
-          <Link href="/pricing">Pricing</Link>
-          <div className="text-sm mt-2 space-y-1">
-            <div>• 130+ Micro SaaS Products</div>
-            <div>• 90+ AI Services</div>
-            <div>• 90+ IT Solutions</div>
-=======
         <div style={{ display: 'grid', gap: 12 }}>
           <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Our Services</h3>
           <div style={{ display: 'grid', gap: 8 }}>
@@ -235,7 +198,6 @@ function Footer(): any {
               <div>• 100+ AI Services</div>
               <div>• 100+ IT Solutions</div>
             </div>
->>>>>>> ce2f1c888fb90dd5d7d297f621bf29128aa0e6a6
           </div>
         </div>
 

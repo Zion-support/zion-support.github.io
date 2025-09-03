@@ -70,18 +70,11 @@ export default function Home() {
             <p className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               Innovative Micro SaaS, AI Services & IT Solutions
             </p>
-<<<<<<< HEAD
             <p className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-              We deliver cutting-edge technology solutions with 120+ micro SaaS products, 
-              80+ advanced AI services, and 80+ comprehensive IT solutions. From cloud optimization 
-              to AI automation, we help businesses scale efficiently and securely.
-=======
-            <p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto">
               We deliver cutting-edge technology solutions with 150+ micro SaaS products, 
               100+ advanced AI services, and 100+ comprehensive IT solutions. From cloud optimization 
               to AI automation, quantum computing to blockchain solutions, we help businesses scale 
               efficiently and securely in the digital age.
->>>>>>> ce2f1c888fb90dd5d7d297f621bf29128aa0e6a6
             </p>
             
             <div className={`flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 transition-all duration-1000 delay-600 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
