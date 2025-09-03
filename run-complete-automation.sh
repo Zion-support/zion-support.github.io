@@ -58,7 +58,7 @@ echo "🛠️  Phase 2: Code Quality & Fixes"
 echo "================================="
 
 # Fix syntax errors
-run_optional "Syntax Error Fixing" "node scripts/fix-syntax-errors.cjs"
+run_optional "Syntax Error Fixing" "node fix-syntax-errors-comprehensive.cjs"
 
 # Type checking
 run_optional "TypeScript Type Check" "npx tsc --noEmit"
@@ -71,13 +71,14 @@ echo "🔒 Phase 3: Security & Performance"
 echo "================================="
 
 # Security scan
-run_with_log "Security Scanner" "node automation/security-scanner.cjs"
+run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scanner.cjs"
 
 # Security audit
 run_optional "Security Audit" "node scripts/security-audit.cjs"
 
 # Performance monitoring
 run_optional "Performance Monitor" "node scripts/performance-monitor.cjs"
+run_optional "Performance Optimizer" "node automation/performance-optimizer.cjs"
 
 echo ""
 echo "📊 Phase 4: Quality Analysis"
@@ -105,6 +106,9 @@ echo "===================================="
 
 # Run the automation orchestrator
 run_optional "Automation Orchestrator" "node scripts/automation-orchestrator.cjs"
+
+# Run monitoring dashboard
+run_optional "Monitoring Dashboard" "node automation/monitoring-dashboard.cjs"
 
 echo ""
 echo "📋 Phase 7: PM2 Process Management"
@@ -134,8 +138,8 @@ echo "==============="
 
 # Count log files
 TOTAL_LOGS=$(find "$LOG_DIR" -name "*-${TIMESTAMP}.log" | wc -l)
-SUCCESS_LOGS=$(find "$LOG_DIR" -name "*-${TIMESTAMP}.log" -exec grep -l "completed successfully" {} \; | wc -l)
-FAILED_LOGS=$(find "$LOG_DIR" -name "*-${TIMESTAMP}.log" -exec grep -l "failed" {} \; | wc -l)
+SUCCESS_LOGS=$(find "$LOG_DIR" -name "*-${TIMESTAMP}.log" -exec grep -l "completed successfully" {} \; 2>/dev/null | wc -l)
+FAILED_LOGS=$(find "$LOG_DIR" -name "*-${TIMESTAMP}.log" -exec grep -l "failed" {} \; 2>/dev/null | wc -l)
 
 echo "📈 Automation Results:"
 echo "   - Total processes: $TOTAL_LOGS"
