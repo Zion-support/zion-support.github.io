@@ -11,8 +11,8 @@
     "export": "next export",
     "start": "next start",
     "postbuild": "echo \"Build completed\"",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
+    "lint": "eslint components pages --no-ignore",
+    "lint:fix": "eslint components pages --fix --no-ignore",
     "type-check": "tsc --noEmit",
     "clean": "rm -rf .next out dist",
     "prepare": "echo 'Husky prepare script disabled'",
@@ -160,7 +160,10 @@
     "automation:performance": "node automation/performance-optimizer.cjs",
     "automation:seo": "node automation/seo-optimizer.cjs",
     "automation:health": "node automation/health-check.cjs",
-    "automation:security": "node automation/security-scanner.cjs"
+    "automation:security": "node automation/security-scanner.cjs",
+    "build:analyze": "ANALYZE=true npm run build",
+    "build:prod": "NODE_ENV=production npm run build",
+    "start:prod": "NODE_ENV=production npm start"
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
@@ -204,7 +207,6 @@
     "@tailwindcss/forms": "^0.5.10",
     "@tailwindcss/typography": "^0.5.16",
     "@tanstack/react-query": "^5.85.5",
-    "@types/react": "17.0.88",
     "@types/react-datepicker": "^6.2.0",
     "@types/react-dom": "17.0.26",
     "autoprefixer": "^10.4.21",
@@ -236,6 +238,7 @@
     "react-dom": "^18.3.1",
     "react-error-boundary": "^6.0.0",
     "react-helmet-async": "^2.0.5",
+    "sharp": "^0.34.3",
     "tailwind-merge": "^3.3.1",
     "tailwindcss": "^3.4.17",
     "tailwindcss-animate": "^1.0.7",
@@ -278,7 +281,7 @@
     "terser": "^5.43.1",
     "ts-jest": "^29.4.1",
     "ts-node": "^10.9.2",
-    "typescript": "^5.9.2",
+    "typescript": "5.9.2",
     "vite": "^5.4.19"
   },
   "engines": {
