@@ -31,7 +31,7 @@ class AICodeOptimizer {
 
   async initialize() {
     await this.ensureDirectories();
-    console.log(`'🤖 AI Code Optimizer initialized');
+    console.log(`🤖 AI Code Optimizer initialized`);
   }
 
   async ensureDirectories() {
@@ -40,7 +40,7 @@ class AICodeOptimizer {
   }
 
   async runOptimization() {
-    console.log(`'🚀 Starting AI Code Optimization...');
+    console.log(`🚀 Starting AI Code Optimization...`);
 
     try {
       await this.analyzeCodebase();
@@ -197,11 +197,11 @@ class AICodeOptimizer {
       });
     }
 
-    return analysis;
-  }
-
-  async identifyOptimizationOpportunities() {
-    console.log(`'🎯 Identifying optimization opportunities...');
+    return analysis;`);
+  }`);
+`);
+  async identifyOptimizationOpportunities() {`);
+    console.log(`🎯 Identifying optimization opportunities...`);
 
     const totalOptimizations =
       this.optimizations.performance.length +
@@ -242,10 +242,10 @@ console.log(`📊 Found ${totalOptimizations} optimization opportunities:
     for (const optimization of this.optimizations.memory) {
       if (optimization.priority === 'high') {
         await this.applyOptimization(optimization);
-        appliedCount++;
-      }
-    }
-
+        appliedCount++;`);
+      }`);
+    }`);
+`);
     this.analysisResults.optimizationsApplied = appliedCount;console.log(✅ Applied ${appliedCount} optimizations`);
   }
 
@@ -298,10 +298,10 @@ console.log(`📊 Found ${totalOptimizations} optimization opportunities:
 
       // Write optimized content
       await fs.writeFile(filePath, optimizedContent);
-      console.log(`✅ Applied ${optimization.type} optimization to ${filePath}'
+      console.log(`✅ Applied ${optimization.type} optimization to ${filePath}`);
       );
-    } catch (error) {
-      console.log( ⚠️  Failed to apply optimization to ${optimization.file}: ${error.message}
+    } catch (error) {`);
+      console.log( ⚠️  Failed to apply optimization to ${optimization.file}: ${error.message}`);
       `);
     }
   }
@@ -330,7 +330,7 @@ console.log(`📊 Found ${totalOptimizations} optimization opportunities:
     if (optimization.issue.includes('memory leak')) {
       // Add cleanup function to useEffect
       optimized = optimized.replace(
-        /useEffect\(\(\) => \{([^}]+)\}/g,useEffect(() => {$1\n  return () => {\n    // Cleanup function\n  };\n}, []);'
+        /useEffect\(\(\) => \{([^}]+)\}/g,useEffect(() => {$1\n  return () => {\n    // Cleanup function\n  };\n}, []);`);
       );
     }
 
@@ -341,16 +341,16 @@ console.log(`📊 Found ${totalOptimizations} optimization opportunities:
     let optimized = content;
 
     if (optimization.issue.includes('XSS vulnerability')) {
-      // Add sanitization comment
-      optimized = optimized.replace(
-        /''dangerouslySetInnerHTML/g'',// TODO: Sanitize content before using dangerouslySetInnerHTML'
+      // Add sanitization comment`);
+      optimized = optimized.replace(`);
+        /''dangerouslySetInnerHTML/g'',// TODO: Sanitize content before using dangerouslySetInnerHTML`);
       );
     }
 
     if (optimization.issue.includes('eval()')) {
       // Comment out eval usage
       optimized = optimized.replace(
-        /eval\(/g,// SECURITY: Replace eval() with safer alternative - eval('
+        /eval\(/g,// SECURITY: Replace eval() with safer alternative - eval(`);
       );
     }
 
@@ -363,8 +363,8 @@ console.log(`📊 Found ${totalOptimizations} optimization opportunities:
     }
 
     return content;
-  }
-
+  }`);
+`);
   applyAccessibilityOptimization(content, optimization`) {
     let optimized = content;
 
@@ -377,7 +377,7 @@ console.log(`📊 Found ${totalOptimizations} optimization opportunities:
   }
 
   async measureImprovements() {
-    console.log(`'📈 Measuring improvements...');
+    console.log(`📈 Measuring improvements...`);
 
     // Run performance tests
     try {
@@ -438,11 +438,11 @@ console.log(`📊 Found ${totalOptimizations} optimization opportunities:
       optimizations: this.optimizations,
       recommendations: this.generateRecommendations(),
     };
-
-    const reportPath = path.join(
-      this.reportDir,ai-optimization-report-${Date.now()}.json'
-    );
-    await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
+`);
+    const reportPath = path.join(`);
+      this.reportDir,ai-optimization-report-${Date.now()}.json`);
+    );`);
+    await fs.writeFile(reportPath, JSON.stringify(report, null, 2));`);
 console.log(📊 AI optimization report saved to ${reportPath}'`);
   }
 

@@ -4,7 +4,7 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-console.log(`'🔍 Starting enhanced error detector...');
+console.log(`🔍 Starting enhanced error detector...`);
 
 async function detectAllErrors() {
   const errors = {
@@ -18,7 +18,7 @@ async function detectAllErrors() {
 
   try {
     // 1. Detect TypeScript errors
-    console.log(`'🔍 Detecting TypeScript errors...');
+    console.log(`🔍 Detecting TypeScript errors...`);
     try {
       const tsResult = execSync('npx tsc --noEmit', {
         encoding: 'utf8',

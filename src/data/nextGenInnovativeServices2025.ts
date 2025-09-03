@@ -1,5 +1,4 @@
- export interface NextGenInnovativeService {
-  id: string;
+ export interface NextGenInnovativeService {id: string;
    title: string;
    description: string;
    category: string;
@@ -17,6 +16,22 @@
    marketPrice: string;
    roi: string;
    innovationLevel: string;
+<<<<<<< HEAD
+   contactInfo: { phone: string;
+   email: string;
+   websit,e: string} technicalSpecs: { technology: string[] integrations: string[] apiEndpoints: number uptime: string securit,y: string[]} competitors?: string[] marketSize?: string demoUrl?: string documentationUrl?: string}  export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [&apos;';&apos;'
+=======
    contactInfo: {  phone: string;
    email: string
-   website: string} technicalSpecs: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]} competitors?: string[] marketSize?: string demoUrl?: string documentationUrl?: string}  export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = ['';"
+<<<<<<< HEAD
+   website: string} technicalSpecs: {technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]} competitors?: string[] marketSize?: string demoUrl?: string documentationUrl?: string}  export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = ['';"
+=======
+<<<<<<< HEAD
+   website: string} technicalSpecs: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]} competitors?: string[] marketSize?: string demoUrl?: string documentationUrl?: string}  export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = ['';""
+""
+=======
+   website: string} technicalSpecs: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]} competitors?: string[] marketSize?: string demoUrl?: string documentationUrl?: string}  export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = ['
+"
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

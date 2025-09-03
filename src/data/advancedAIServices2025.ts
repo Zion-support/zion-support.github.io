@@ -1,5 +1,4 @@
- export interface AdvancedAIService {
-  id: string;
+ export interface AdvancedAIService {id: string;
    title: string;
    description: string;
    category: string;
@@ -19,5 +18,20 @@
    innovationLevel: string;
    contactInfo: {  phone: string;
    email: string;
+<<<<<<< HEAD
+   website: string;
+   addres,s: string} technicalSpecs: { technology: string[] integrations: string[] apiEndpoints: number uptime: string securit,y: string[]} competitors?: string[] marketSize?: string}  export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [&apos;';&apos;'
+=======
    website: string
-   address: string} technicalSpecs: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]} competitors?: string[] marketSize?: string}  export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = ['';"
+<<<<<<< HEAD
+   address: string} technicalSpecs: {technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]} competitors?: string[] marketSize?: string}  export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = ['';"
+=======
+<<<<<<< HEAD
+   address: string} technicalSpecs: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]} competitors?: string[] marketSize?: string}  export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = ['';""
+""
+=======
+   address: string} technicalSpecs: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]} competitors?: string[] marketSize?: string}  export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = ['
+"
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

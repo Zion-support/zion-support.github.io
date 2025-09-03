@@ -21,7 +21,8 @@ import { innovativeITServices2024 } from;
 const allServices = [
   ...ultimateInnovativeServices2026,
   ...enterpriseITInfrastructureServices2026];
-const serviceCategories = [{
+const serviceCategories = [
+  {
     id: 'ai-services,
     title:,
   🧠 AI & Machine Learning',
@@ -102,8 +103,7 @@ const serviceCategories = [{
     gradient:,
   from-orange-500/20 to-pink-500/20'}];
 export default function Services2024Page() {
-  const [searchTerm, setSearchTerm] = useState(';
-  ');
+  const [searchTerm, setSearchTerm] = useState();
   const [selectedCategory, setSelectedCategory] = useState('all;
   ');
   const [priceRange, setPriceRange] = useState('all;
@@ -121,19 +121,17 @@ export default function Services2024Page() {
   ' ||;
                         (priceRange === 'low;
   ' && parseInt(service.price.replace('$
-  ', '')) < 200) ||;
+  ,')) < 200) ||;
                         (priceRange ===;
   'medium' && parseInt(service.price.replace(
-  '$', ';
-  ')) >= 200 && parseInt(service.price.replace('$
-  ', '')) < 500) ||;
+  '$', )) >= 200 && parseInt(service.price.replace('$
+  ,')) < 500) ||;
                         (priceRange ===;
   'high' && parseInt(service.price.replace(
-  '$', ';
-  ')) >= 500);
+  '$', )) >= 500);
     return matchesSearch && matchesCategory && matchesPrice})
 const categories = [
-    { id: 'all, name: 'All Services;
+  { id: 'all, name: 'All Services;
   ', icon: Sparkles, count: allServices.length },
     { id:,
   ai;
@@ -440,9 +438,8 @@ const categories = [
                         </Link>
                         <div className='text-xs text-gray-400 bg-gray-800/50 px-2 py-1 rounded'>
                           {service.variant.replace('-futuristic
-  ', '').replace(
-  '-',
-  ' ')}                        </div>
+  ,').replace(
+  '-, ')}                        </div>
                       </div>
                     </div>
                   </motion.div>

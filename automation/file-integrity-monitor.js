@@ -19,11 +19,9 @@ class FileIntegrityMonitor {
     this.issuesFixed = 0;
     this.monitoring = false;
     this.logFile = path.join(this.projectRoot,
-  'logs',
-  'file-integrity.log');
+  'logs,file-integrity.log');
     this.checksumsFile = path.join(this.projectRoot,
-  'logs',
-  'file-checksums.json');
+  'logs,file-checksums.json');
     // Ensure logs directory exists;
     this.ensureLogsDirectory();
     // Initialize monitoring;
@@ -119,7 +117,7 @@ class FileIntegrityMonitor {
         details: structureIssues})
     return issues;
   async checkMissingCriticalFiles() {
-    const criticalFiles = ['package.json',';vite.config.ts',';tsconfig.json',';src/main.tsx',';index.html',';tailwind.config.js',';postcss.config.js';
+    const criticalFiles = ['package.json,;vite.config.ts,;tsconfig.json,;src/main.tsx,;index.html,;tailwind.config.js,;postcss.config.js';
     ];
     const missingFiles = [];
     for (const file of criticalFiles) {
@@ -166,7 +164,7 @@ class FileIntegrityMonitor {
   async checkFilePermissions() {
     const permissionIssues = [];
     try {
-      const criticalFiles = ['package.json',';vite.config.ts',';src/main.tsx';
+      const criticalFiles = ['package.json,;vite.config.ts,;src/main.tsx';
       ];
       for (const file of criticalFiles) {
         const filePath = path.join(this.projectRoot, file);
@@ -206,7 +204,7 @@ class FileIntegrityMonitor {
     const structureIssues = [];
     try {
       // Check for essential directories;
-      const essentialDirs = ['src',';src/components',';src/pages',';src/utils',';public',';logs';
+      const essentialDirs = ['src,;src/components,;src/pages,;src/utils,;public,;logs';
       ];
       for (const dir of essentialDirs) {
         const dirPath = path.join(this.projectRoot, dir);
@@ -383,8 +381,7 @@ export default defineConfig({
   lib': [;
   'ES2020,
 ,
-  DOM',
-  'DOM.Iterable'],';module': 'ESNext,';skipLibCheck': true,
+  DOM,DOM.Iterable'],';module': 'ESNext,';skipLibCheck': true,
   moduleResolution': 'bundler,';allowImportingTsExtensions': true,';resolveJsonModule': true,';isolatedModules': true,';noEmit': true,
   jsx': 'react-jsx,';strict': true,';noUnusedLocals': true,';noUnusedParameters': true,';noFallthroughCasesInSwitch': true,
   baseUrl': '.,
@@ -454,8 +451,7 @@ ReactDOM.createRoot(document.getElementById(
     fs.writeFileSync(
       path.join(this.projectRoot,
 ,
-  src',
-  'main.tsx'),
+  src,main.tsx'),
       mainTsx);
   async createIndexHtml() {
     const indexHtml = `<!doctype html>
@@ -688,13 +684,7 @@ export default {
   'ERROR');
   findSourceFiles() {
     const extensions = [
-  '.ts',
-  '.tsx',
-  '.js',
-  '.jsx',
-  '.json',
-  '.html',
-  '.css'];
+  '.ts,.tsx,.js,.jsx,.json,.html,.css'];
     const files = [];
     function traverse(dir) {
       const items = fs.readdirSync(dir);
@@ -703,12 +693,7 @@ export default {
         const stat = fs.statSync(fullPath);
         if (stat.isDirectory()) {
           if (![;
-  'node_modules',
-  '.git',
-  'dist',
-  'build',
-  '.next',
-  'logs'].includes(item)) {
+  'node_modules,.git,dist,build,.next,logs'].includes(item)) {
             traverse(fullPath)} else if (extensions.some(ext => item.endsWith(ext))) {
           files.push(fullPath);
     traverse(this.projectRoot);
