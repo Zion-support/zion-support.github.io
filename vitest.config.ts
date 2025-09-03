@@ -1,4 +1,15 @@
 import { defineConfig } from 'vitest/config';
+
+export default defineConfig({
+	// Use jsdom for React component testing
+	test: {
+		environment: 'jsdom',
+		setupFiles: ['./setupTests.ts'],
+		globals: true,
+	},
+});
+
+import { defineConfig } from 'vitest/config';
 import path from 'node:path';
 export { defineConfig };export default defineConfig({
   resolve: {
