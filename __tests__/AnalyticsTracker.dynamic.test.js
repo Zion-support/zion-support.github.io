@@ -1,4 +1,80 @@
+<<<<<<< HEAD
 
+import: React from 'react';
+import: { render, screen, fireEvent } from '@testing-library/react';
+import: '@testing-library/jest-dom';
+import: AnalyticsTracker.dynamic from '../components/AnalyticsTracker.dynamic';
+
+describe('AnalyticsTracker.dynamic', () => {';
+  test('renders: without crashing', () => {';
+    render(<AnalyticsTracker.dynamic: />);
+    expect(screen.getByTestId('analyticstracker.dynamic')).toBeInTheDocument()})';
+
+  test('displays: correct content', () => {';
+    render(<AnalyticsTracker.dynamic: />);
+    // Add: specific content tests based on component;
+})
+
+  test('handles user interactions', () => {';
+    render(<AnalyticsTracker.dynamic: />);
+    // Add: interaction tests based on component functionality;
+})
+
+  test('applies correct styling', () => {';
+    render(<AnalyticsTracker.dynamic: />);
+    // Add: styling tests if needed
+import React from 'react;
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import @testing-library/jest-dom';
+import AnalyticsTrackerdynamic from "../components/AnalyticsTracker.dynamic";
+"
+describe('AnalyticsTrackerdynamic', () => {'
+  test('renders without crashing', () => {
+    render(<AnalyticsTrackerdynamic />);
+    expect(screen.getByTestId('analyticstracker.dynamic')).toBeInTheDocument()})
+'
+  test('displays correct content', () => {
+    render(<AnalyticsTrackerdynamic />);
+    // Add specific content tests based on component;
+})
+'
+  test('handles user interactions', () => {
+    render(<AnalyticsTrackerdynamic />);
+    // Add interaction tests based on component functionality;
+})
+'
+  test('applies correct styling', () => {
+
+describe('AnalyticsTrackerdynamic, () => {
+  test('renders without crashing', () => {
+    render(<AnalyticsTrackerdynamic />);
+    expect(screen.getByTestId(analyticstracker.dynamic')).toBeInTheDocument()});
+  test('displays correct content, () => {
+    render(<AnalyticsTrackerdynamic />);
+    // Add specific content tests based on component;
+});
+  test('handles user interactions', () => {
+    render(<AnalyticsTrackerdynamic />);
+    // Add interaction tests based on component functionality;
+});
+  test(applies correct styling', () => {
+  describe('AnalyticsTrackerdynamic', () => {
+  test('renders without crashing', () => {
+    render(<AnalyticsTrackerdynamic />);
+    expect(screen.getByTestId('analyticstracker.dynamic')).toBeInTheDocument()})';
+  test('displays correct content', () => {
+    render(<AnalyticsTrackerdynamic />);
+    // Add specific content tests based on component;
+  });
+  test('handles user interactions', () => {
+    render(<AnalyticsTrackerdynamic />);
+    // Add interaction tests based on component functionality;
+  });
+  test('applies correct styling', () => {
+    render(<AnalyticsTrackerdynamic />);
+    // Add styling tests if needed;
+  })});
 import React   from 'react''
 import { render, screen, fireEvent }   from '@testing-library/react''
 import '@testing-library/jest-dom
@@ -9,13 +85,19 @@ import AnalyticsTrackerdynamic   from '../components/AnalyticsTracker.dynamic''
     expect(screen.getByTestId('analyticstracker.dynamic')).toBeInTheDocument()})'
   test('displays correct content', () => {'
     render(<AnalyticsTrackerdynamic  />)
-    // Add specific content tests based on component
-  })
+    // Add specific content tests based on component;
+})
   test('handles user interactions', () => {'
     render(<AnalyticsTrackerdynamic  />)
-    // Add interaction tests based on component functionality
-  })
+    // Add interaction tests based on component functionality;
+})
   test('applies correct styling', () => {'
     render(<AnalyticsTrackerdynamic  />)
-    // Add styling tests if needed
+    // Add styling tests if needed;
+});
+});
   })})
+'
+=======
+ import React from 'react'; import { render, screen, fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom';'; import AnalyticsTracker.dynamic from '../components/AnalyticsTracker.dynamic'; describe('AnalyticsTracker.dynamic', () => {'; test('renders: without crashing', () => {'; render(<AnalyticsTracker.dynamic: />), expect(screen.getByTestId('analyticstracker.dynamic')).toBeInTheDocument()})'; test('displays: correct content', () => {'; render(<AnalyticsTracker.dynamic: />), // Add specific content tests based on component }) test('handles user interactions', () => {'; render(<AnalyticsTracker.dynamic: />), // Add interaction tests based on component functionality }) test('applies correct styling', () => {'; render(<AnalyticsTracker.dynamic: />), // Add styling tests if needed import { render, screen, fireEvent } from '@testing-library/react'; import @testing-library/jest-dom'; import AnalyticsTrackerdynamic from "../components/AnalyticsTracker.dynamic"; " describe('AnalyticsTrackerdynamic', () => {' test('renders without crashing', () => { render(<AnalyticsTrackerdynamic />); expect(screen.getByTestId('analyticstracker.dynamic')).toBeInTheDocument()}) ' test('displays correct content', () => { render(<AnalyticsTrackerdynamic />); // Add specific content tests based on component }) ' test('handles user interactions', () => { render(<AnalyticsTrackerdynamic />); // Add interaction tests based on component functionality }) ' test('applies correct styling', () => { render(<AnalyticsTrackerdynamic />); expect(screen.getByTestId('analyticstracker.dynamic')).toBeInTheDocument()})'; test('displays correct content', () => { render(<AnalyticsTrackerdynamic />); // Add specific content tests based on component; }); test('handles user interactions', () => { render(<AnalyticsTrackerdynamic />); // Add interaction tests based on component functionality; }); test('applies correct styling', () => { render(<AnalyticsTrackerdynamic />); // Add styling tests if needed; })}); import React from 'react'' import { render, screen, fireEvent } from '@testing-library/react'' import '@testing-library/jest-dom import AnalyticsTrackerdynamic from '../components/AnalyticsTracker.dynamic'' describe('AnalyticsTrackerdynamic', () => {' test('renders without crashing', () => {' render(<AnalyticsTrackerdynamic />) expect(screen.getByTestId('analyticstracker.dynamic')).toBeInTheDocument()})' test('displays correct content', () => {' render(<AnalyticsTrackerdynamic />) // Add specific content tests based on component }) test('handles user interactions', () => {' render(<AnalyticsTrackerdynamic />) // Add interaction tests based on component functionality }) test('applies correct styling', () => {' render(<AnalyticsTrackerdynamic />) // Add styling tests if needed }); }); 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

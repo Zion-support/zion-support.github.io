@@ -1,32 +1,31 @@
-/** @type {import(
-  'next').NextConfig} */
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   eslint: {
     ignoreDuringBuilds: true,
-  },
+  },:next.config.js
+  typescript: {
+    // Allow production builds to successfully complete even if
+    // there are type errors.
+<<<<<<< HEAD
   experimental: {
-    esmExternals: false,
-    newNextLinkBehavior: true,
-  },
+    // Removed deprecated options;
+},
   typescript: {
-    ignoreBuildErrors: true,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
+    ignoreBuildErrors: true},
   images: {
+=======
+    ignoreBuildErrors: true,
+  },  images: {
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     domains: ['ziontechgroup.com'],
-    unoptimized: true,
-  },
+    unoptimized: true},
   compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
-  },
+    removeConsole: process.env.NODE_ENV === 'production'},
   webpack: (config, { dev, isServer }) => {
     // Completely exclude problematic directories from the build
+:next.config.js
+    // Keep default TS/JS handling; we already ignore build errors via config
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
       exclude: [
@@ -41,29 +40,64 @@ const nextConfig = {
         /broken_files_backup/,
         /contracts/,
         /hardhat/,
-        /^components\//,  // Exclude root components directory
-      ],
-    });
+        /^components\//, // Exclude root components directory
+      ]});
+    
 
     // Add fallback for problematic modules
     config.resolve.fallback = {
       ...config.resolve.fallback,
       fs: false,
       net: false,
-      tls: false,
-    };
+      tls: false};
 
     return config;
   },
   // Try to exclude problematic directories at the Next.js level
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-  pageExtensions: ['tsxtsjsx', 'js'],
   onDemandEntries: {
     // period (in ms) where the server will keep pages in the buffer
     maxInactiveAge: 25 * 1000,
     // number of pages that should be kept simultaneously without being disposed
-    pagesBufferLength: 2,
-  },
+    pagesBufferLength: 2}};
+
+export default nextConfig;
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ['@radix-ui/react-icons', 'lucide-react'];
+},
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production';
+},
+  images: {
+    domains: ['localhost'],
+    formats: ['image/webp', 'image/avif'];
+},
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY';
+},
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff';
+},
+          {
+            key: 'Referrer-Policy',
+            value: 'origin-when-cross-origin';
+}
+        ]
+}
+    ]
+}
 };
 
 module.exports = nextConfig;

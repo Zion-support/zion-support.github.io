@@ -1,2 +1,2 @@
 import React from,
-  react' export interface AxiosErrorData { message?: string';
+  react' export interface AxiosErrorData { message?: string';';

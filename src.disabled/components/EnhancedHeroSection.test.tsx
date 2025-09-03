@@ -1,2 +1,1 @@
-
-describe ('EnhancedHeroSection', () => { it ('renders without crashing', () => { render (<EnhancedHeroSection />)  expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () })  it ('displays expected content', () => { render (<EnhancedHeroSection />) ''
+describe("EnhancedHeroSection () => { it(renders without crashing, () => { render(<EnhancedHeroSection />) ; expect(screen.getByRole (main) || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; it(displays expected content", () => { render(<EnhancedHeroSection />) ; 
