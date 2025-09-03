@@ -9,10 +9,10 @@ interface LayoutProps {
   description?: string;
 }
 
-const Layout: React.FC<LayoutProps> = ({ 
-  children, 
+const Layout: React.FC<LayoutProps> = ({
+  children,
   title = 'Zion Tech Group - Leading Technology Solutions Provider',
-  description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.'
+  description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.',
 }) => {
   return (
     <>
@@ -20,7 +20,10 @@ const Layout: React.FC<LayoutProps> = ({
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="keywords" content="technology solutions, AI development, cloud services, web development, mobile development, blockchain, IoT, cybersecurity" />
+        <meta
+          name="keywords"
+          content="technology solutions, AI development, cloud services, web development, mobile development, blockchain, IoT, cybersecurity"
+        />
         <meta name="author" content="Zion Tech Group" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
@@ -31,9 +34,7 @@ const Layout: React.FC<LayoutProps> = ({
       </Head>
       <div className="min-h-screen flex flex-col">
         <EnhancedNavigation />
-        <main className="flex-grow">
-          {children}
-        </main>
+        <main className="flex-grow">{children}</main>
         <EnhancedFooter />
       </div>
     </>

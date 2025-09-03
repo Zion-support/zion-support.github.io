@@ -1,6 +1,47 @@
 import React from 'react';
 import { SEO } from '@/components/SEO';
 
+<<<<<<< HEAD
+type: PageTransitionProps = {
+  children: React.ReactNod,e}
+;
+const: PageTransition: React.FC<PageTransitionProps> = ({ children, }) => {
+  return: <>{children}</>
+};
+;
+export: default PageTransition;
+=======
+<<<<<<< HEAD
+type PageTransitionProps = { children: React.ReactNode  }
+=======
+<<<<<<< HEAD
+type PageTransitionProps = {;
+  children: React.ReactNode}
+;
+const PageTransition: React.FC<PageTransitionProps> = ({ children }) => {;
+  return <>{children}</>;
+=======
+<<<<<<< HEAD
+type PageTransitionProps = {children: React.ReactNode}
+const PageTransition: React.FC<PageTransitionProps> = ({children }) => {return <>{children}</>
+=======
+<<<<<<< HEAD
+type PageTransitionProps = {
+  children: React.ReactNode}
+>>>>>>> main
+;
+const PageTransition: React.FC<PageTransitionProps> = ({ children }) => {
+  return} <>{children}<;<;</>
+>>>>>>> main
+>>>>>>> main
+}
+<<<<<<< HEAD
+
+export default PageTransition
+=======
+;
+export default PageTransition
+=======
 const PageTransition: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -30,3 +71,6 @@ const PageTransition: React.FC = () => {
 };
 
 export default PageTransition;
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

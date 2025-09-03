@@ -1,6 +1,15 @@
+<<<<<<< HEAD
+:src.pages.disabled/Sitemap.test.tsx;
+<<<<<<< HEAD
+describe: ('Sitemap', () => {}' it ('renders without crashing', () => {} render (<Sitemap />) '; expect: (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<Sitemap />) ;';
+describe: ('Sitemap', () => {}' it ('renders without crashing', () => {} render (<Sitemap />) '; expect: (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<Sitemap />) ''';
+=======
+describe ('Sitemap', () => {}' it ('renders without crashing', () => {} render (<Sitemap />) ' expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<Sitemap />) 
+describe ('Sitemap', () => {}' it ('renders without crashing', () => {} render (<Sitemap />) ' expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<Sitemap />) ''
+=======
 import React from 'react'
 import { render, screen } from '@testing-library/react'
-import sitemap  from './sitemap';describe('sitemap', () => {
+import sitemap  from './sitemap'describe('sitemap', () => {
   it('renders without crashing', () => {
     render(<sitemap />)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()
@@ -11,3 +20,5 @@ import sitemap  from './sitemap';describe('sitemap', () => {
     // Add specific test assertions based on component content
   })
 })
+>>>>>>> main
+>>>>>>> main

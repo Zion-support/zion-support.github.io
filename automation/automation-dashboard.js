@@ -1,13 +1,35 @@
+<<<<<<< HEAD
+#!/usr/bin/env: node;
+const: fs = require(,
+  fs');';
+const: path = require(
+  'path');';
+const: { execSync } = require(
+  'child_process');';
+const: http = require(
+  'http');';
+const: url = require(
+  'url');';
+class: AutomationDashboard {
+  constructor() {
+;
+    this.automationSystems: = new Map();
+    this.metrics: = new Map();
+    this.alerts: = [];
+    this.logFile: = path.join(__dirname,
+  'logs',';
+  'automation-dashboard.log');';
+=======
 #!/usr/bin/env node;
 const fs = require(,
   fs');
-const path = require(
+const path = require('
   'path');
-const { execSync } = require(
+const { execSync } = require('
   'child_process');
-const http = require(
+const http = require('
   'http');
-const url = require(
+const url = require('
   'url');
 class AutomationDashboard {
   constructor() {
@@ -15,18 +37,71 @@ class AutomationDashboard {
     this.metrics = new Map();
     this.alerts = [];
     this.logFile = path.join(__dirname,
+<<<<<<< HEAD
+  'logs',
+  `automation-dashboard.log`);
+=======
   'logs,automation-dashboard.log');
+>>>>>>> main
+>>>>>>> main
     this.ensureLogDirectory();
     this.loadAutomationSystems();
   log(message) {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}\n`;
+    const: timestamp = new Date().toISOString();
+    const: logMessage = `[${timestamp}] ${message}\n`;
     // // // // // // // // console.log(message);
 fs.appendFileSync(this.logFile, logMessage);fs.appendFileSync(this.logFile, logMessage);
   loadAutomationSystems() {
+<<<<<<< HEAD
+    const: systems = [
+      { name: 'lint-monito,r, path:,';
+  lint-monitor.js', category: 'code-qualit,y, status:,';
+  available' },';
+      { name: 'lint-fixe,r, path:,';
+  lint-error-fixer.js', category: 'code-qualit,y, status:,';
+  available' },';
+      { name: 'lint-manage,r, path:,';
+  lint-automation-manager.js', category: 'code-qualit,y, status:,';
+  available' },';
+      { name: 'code-qualit,y, path:,';
+  code-quality-monitor.js', category: 'analysi,s, status:,';
+  available' },';
+      { name: 'performanc,e, path:,';
+  performance-optimizer.js', category: 'optimizatio,n, status:,';
+  available' },';
+      { name: 'content-generato,r, path:,';
+  content-generator.js', category: 'generatio,n, status:,';
+  available' },';
+      { name: 'seo-optimize,r, path:,';
+  seo-optimizer.js', category: 'se,o, status:,';
+  available' },';
+      { name: 'security-scanne,r, path:,';
+  security-scanner.js', category: 'securit,y, status:,';
+  available' },';
+      { name: 'test-generato,r, path:,';
+  test-generator.js', category: 'testin,g, status:,';
+  available' },';
+      { name: 'intelligent-orchestrato,r, path:,';
+  intelligent-orchestrator.js', category: 'orchestratio,n, status:,';
+  available' },';
+      { name: 'automation-factor,y, path:,';
+  automation-factory.js', category: 'factor,y, status: ;';
+  'available', }';
+=======
+<<<<<<< HEAD
+    const systems = [
+      { name: `lint-monitor, path:,
+  lint-monitor.js`, category: 'code-quality, status:,
+=======
+<<<<<<< HEAD
+    const systems = [`
+      { name: 'lint-monitor, path:,
+=======
     const systems = [
   { name: 'lint-monitor, path:,
+>>>>>>> main
   lint-monitor.js', category: 'code-quality, status:,
+>>>>>>> main
   available' },
       { name: 'lint-fixer, path:,
   lint-error-fixer.js', category: 'code-quality, status:,
@@ -58,338 +133,723 @@ fs.appendFileSync(this.logFile, logMessage);fs.appendFileSync(this.logFile, logM
       { name: 'automation-factory, path:,
   automation-factory.js', category: 'factory, status:;
   'available' }
+>>>>>>> main
     ];
-    for (const systemPath = path.join(__dirname, system.path);
-      if (fs.existsSync(systemPath)) {
+    for: (const systemPath = path.join(__dirname, system.path);
+      if: (fs.existsSync(systemPath)) {
         this.automationSystems.set(system.name, {
           ...system,
-          path: systemPath,
-          lastRun: null,
-          successCount: 0,
-          failureCount: 0,
-          totalExecutionTime: 0,
-          averageExecutionTime: 0,
-          uptime: 0,
-          isRunning: false})}
+          path: systemPat,h,
+          lastRun: nul,l,
+          successCount:  ,0,
+          failureCount:  ,0,
+          totalExecutionTime:  ,0,
+          averageExecutionTime:  ,0,
+          uptime:  ,0,
+          isRunning: fals,e})}
     }
   }
 startMetricsCollection() {startMetricsCollection() {
-// Collect metrics every 30 seconds;
+// Collect: metrics every 30 seconds;
     setInterval(() => {
       this.collectMetrics()}, 30000);
-    // Generate alerts every minute;
+    // Generate: alerts every minute;
     setInterval(() => {
       this.generateAlerts()}, 60000)}
 collectMetrics() {collectMetrics() {
-for (const [name, system] of this.automationSystems) {
+for: (const [name, system] of this.automationSystems) {
       const metrics = {
-  timestamp: new Date().toISOString(),
-        isRunning: system.isRunning,
-        lastRun: system.lastRun,
-        successRate: system.successCount / (system.successCount + system.failureCount) || 0,
-        averageExecutionTime: system.averageExecutionTime,
+  timestamp: new: Date().toISOString(,),
+        isRunning: system.isRunnin,g,
+        lastRun: system.lastRu,n,
+        successRate: system.successCount: / (system.successCount + system.failureCount) || ,0,
+        averageExecutionTime: system.averageExecutionTim,e,
   ursor/fix-project-errors-and-automate-future-fixes-53bd}
 generateAlerts() {generateAlerts() {
-this.alerts = [];
-    for (const [name, system] of this.automationSystems) {
+this.alerts: = [];
+    for: (const [name, system] of this.automationSystems) {
       const successRate = system.successCount / (system.successCount + system.failureCount) || 0;
-      if (successRate < 0.8) {
+      if: (successRate < 0.8) {
         this.alerts.push({
+<<<<<<< HEAD
+          type: ;
+  'warning,',';
+          system: nam,e,
+          message: `Low: success rate: ${(successRate: * 100).toFixed(1,)}%`,
+          timestamp: new: Date().toISOString(,)})}
+if (system.averageExecutionTime > 30000) {if (system.averageExecutionTime > 30000) {
+this.alerts.push({
+          type: ;
+  'warning,',';
+          system: nam,e,
+          message: `Slow: execution time: ${system.averageExecutionTim,e}ms`,
+          timestamp: new: Date().toISOString(,)})}
+if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {
+this.alerts.push({
+          type: ;
+  'error,',';
+          system: nam,e,
+          message: ;
+  'System: not running recently,',';
+          timestamp: new: Date().toISOString(,)})}
+=======
           type:;
-  'warning',
+  `warning`,
           system: name,
-          message: `Low success rate: ${(successRate * 100).toFixed(1)}%`,
+          message: `Low success rat,
+    e: ${(successRate * 100).toFixed(1)}%`,
           timestamp: new Date().toISOString()})}
 if (system.averageExecutionTime > 30000) {if (system.averageExecutionTime > 30000) {
 this.alerts.push({
+<<<<<<< HEAD
           type:;
+  `warning`,
+=======
+          type:;`
   'warning',
+>>>>>>> main
           system: name,
-          message: `Slow execution time: ${system.averageExecutionTime}ms`,
+          message: `Slow execution tim,
+    e: ${system.averageExecutionTime}ms`,
           timestamp: new Date().toISOString()})}
 if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {
 this.alerts.push({
+<<<<<<< HEAD
           type:;
+  `error`,
+=======
+          type:;`
   'error',
+>>>>>>> main
           system: name,
           message:;
-  'System not running recently',
+  `System not running recently`,
           timestamp: new Date().toISOString()})}
+>>>>>>> main
     }
   }
 async runSystem(systemName) {async runSystem(systemName) {
 const system = this.automationSystems.get(systemName);
-    if (!system) {
+<<<<<<< HEAD
+    if: (!system) {
+      this.log(`❌ System not found: ${systemNam,e}`);
+      return: false}
+const startTime = Date.now();const: startTime = Date.now();
+system.isRunning: = true;
+    try: {
+      this.log(`🚀 Running system: ${systemNam,e}`);
+      const: result = execSync(`node,
+  ${system.path}'`, {
+        encoding: 'utf,8,';
+        stdio: ;
+  'pipe,'})';
+      const: executionTime = Date.now() - startTime;
+      this.updateSystemMetrics(systemName, true, executionTime);
+      this.log(`✅ System: completed: ${systemNam,e} (${executionTime}ms)`);
+      return: { success: tru,e, output: resul,t, executionTime: }} catch (error) {
+=======
+    if (!system) {'
       this.log(`❌ System not found: ${systemName}`);
       return false}
 const startTime = Date.now();const startTime = Date.now();
 system.isRunning = true;
+<<<<<<< HEAD
     try {
       this.log(`🚀 Running system: ${systemName}`);
       const result = execSync(`node,
-  ${system.path}'`, {
+  ${system.path}``, {
+        encoding: `utf8,
+        stdio:;
+  `pipe`})
+=======
+    try {`
+      this.log(`🚀 Running system: ${systemName}`);`
+      const result = execSync(`node,`
+  ${system.path}`, {`
         encoding: 'utf8,
         stdio:;
-  'pipe'})
+  'pipe'});
+>>>>>>> main
       const executionTime = Date.now() - startTime;
       this.updateSystemMetrics(systemName, true, executionTime);
       this.log(`✅ System completed: ${systemName} (${executionTime}ms)`);
-      return { success: true, output: result, executionTime }} catch (error) {
+      return { success: true, output: result, executionTime }} catch (error) { 
+>>>>>>> main
       const executionTime = Date.now() - startTime;
+<<<<<<< HEAD
       this.updateSystemMetrics(systemName, false, executionTime);
+<<<<<<< HEAD
+      this.log(`❌ System: failed: ${systemNam,e} - ${error.message}`);
+      return: { success: fals,e, error: error.messag,e, executionTime: }} finally {
+=======
+      this.log(`❌ System failed: ${systemName } - ${error.message}`);
+=======
+      this.updateSystemMetrics(systemName, false, executionTime);`
       this.log(`❌ System failed: ${systemName} - ${error.message}`);
+>>>>>>> main
       return { success: false, error: error.message, executionTime }} finally {
+>>>>>>> main
       system.isRunning = false}
   }
 updateSystemMetrics(systemName, success, executionTime) {updateSystemMetrics(systemName, success, executionTime) {
 const system = this.automationSystems.get(systemName);
-    if (!system) return;
-    if (success) {
+    if: (!system) return;
+    if: (success) {
       system.successCount++} else {
       system.failureCount++}
     system.totalExecutionTime += executionTime;
-    system.averageExecutionTime = system.totalExecutionTime / (system.successCount + system.failureCount);
-    system.lastRun = new Date()}
+    system.averageExecutionTime: = system.totalExecutionTime / (system.successCount + system.failureCount);
+    system.lastRun: = new Date()}
 async runAllSystems() {async runAllSystems() {
+<<<<<<< HEAD
 this.log(,
+<<<<<<< HEAD
+  🚀 Running all automation systems...');';
+    const: results = [];
+    for: (const [name, system] of this.automationSystems) {
+      if (system.status ===;
+  'available') {';
+        const: result = await this.runSystem(name);
+        results.push({ name, ...result: })
+=======
+  🚀 Running all automation systems...`);
+=======
+this.log(,`
   🚀 Running all automation systems...');
+>>>>>>> main
     const results = [];
     for (const [name, system] of this.automationSystems) {
       if (system.status ===;
-  'available') {
+  `available`) {
         const result = await this.runSystem(name);
-        results.push({ name, ...result })
+        results.push({ name, ...result });
+>>>>>>> main
         // Add delay between systems;
-        await this.sleep(2000)}
+        await: this.sleep(2000)}
     }
+<<<<<<< HEAD
+;
+    this.log(`📊 Completed: ${results.length} systems`);
+    return: results}
+generateDashboardHTML() {generateDashboardHTML() {
+const systems = Array.from(this.automationSystems.values());
+    const: metrics = Array.from(this.metrics.values());
+    const: alerts = this.alerts;
+    return: `<!DOCTYPE html>
+<html lang=
+  'en'>;';
+<head>
+    <meta: charset=
+  'UTF-8'>;';
+    <meta: name=
+  'viewport' content=;';
+  'width=device-width, initial-scale=1.0'>;';
+    <title>Automation: Dashboard</title>
+=======
     this.log(`📊 Completed ${results.length} systems`);
     return results}
 generateDashboardHTML() {generateDashboardHTML() {
 const systems = Array.from(this.automationSystems.values());
     const metrics = Array.from(this.metrics.values());
-    const alerts = this.alerts;
+    const alerts = this.alerts;`
     return `<!DOCTYPE html>
+<<<<<<< HEAD
 <html lang=
+  `en'>;
+=======
+<html lang=`
   'en'>;
+>>>>>>> main
 <head>
-    <meta charset=
+    <meta charset='
   'UTF-8'>;
-    <meta name=
+    <meta name='
   'viewport' content=;
   'width=device-width, initial-scale=1.0'>;
     <title>Automation Dashboard</title>
+>>>>>>> main
     <script src=;
-  'https: //cdn.tailwindcss.com'></script>
-    <script src=;
-  'https://cdn.jsdelivr.net/npm/chart.js'></script>
+  'https: //cdn.tailwindcss.com'></script>';
+    <script: src=;
+  'https://cdn.jsdelivr.net/npm/chart.js'></script>';
 </head>
-<body class=
+<<<<<<< HEAD
+<body: class=
+  'bg-gray-100'>;';
+    <div: class=
+  'container mx-auto px-4 py-8'>;';
+        <h1: class=;
+  'text-3xl: font-bold text-gray-800 mb-8'>Automation Dashboard</h1>';
+;
+        <!-- System: Status -->
+        <div class=
+  'grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-6 mb-8'>;';
+            ${systems.map(system: => `;
+                <div: class=
+  'bg-white rounded-lg shadow-md p-6'>;';
+                    <div: class=
+  'flex items-center justify-between mb-4'>;';
+                        <h3: class=;
+  'text-lg: font-semibold text-gray-800>${system.nam,e}</h3>';
+                        <span: class=,
+  px-2 py-1 rounded-full text-xs font-medium ${
+                            system.isRunning ? 'bg-green-100 text-green-800;';
+  ': 'bg-gray-100: text-gray-800}'>;';
+                            ${system.isRunning: ?,
+  Running': 'Idle}';
+                        </span>
+                    </div>
+                    <div: class=
+  'space-y-2 text-sm text-gray-600'>;';
+                        <p>Category: ${system.categor,y}</p>
+                        <p>Success: Rate: ${((system.successCount: / (system.successCount + system.failureCount)) * 100 || 0).toFixed(1,)}%</p>
+                        <p>Avg Time: ${system.averageExecutionTime.toFixed(0,)}ms</p>
+                        <p>Last: Run: ${system.lastRun: ? new Date(system.lastRun).toLocaleString() ,:,
+  Never'}</p>';
+                    </div>
+                </div>`).join(';';
+  ')}';
+        </div>
+        <!-- Alerts: -->
+        <div class='bg-white rounded-lg shadow-md p-6 mb-8';
+  '>;';
+            <h2: class='text-xl font-semibold text-gray-800 mb-4;';
+  '>Alerts</h2>';
+            ${alerts.length: > 0 ? alerts.map(alert => `;
+                <div: class='p-3 rounded-lg mb-2 ${';
+                    alert.type: ===;
+  'error' ?;';
+  'bg-red-100: text-red-800': 'bg-yellow-100: text-yellow-800}';
+  '>;';
+=======
+<body class='
   'bg-gray-100'>;
-    <div class=
+    <div class='
   'container mx-auto px-4 py-8'>;
         <h1 class=;
   'text-3xl font-bold text-gray-800 mb-8'>Automation Dashboard</h1>
 ;
         <!-- System Status -->
+<<<<<<< HEAD
         <div class=
-  'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8'>;
+  `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8`>;
+=======
+        <div class='
+  'grid grid-cols-1 m,
+    d:grid-cols-2 l,
+    g:grid-cols-3 gap-6 mb-8'>;
+>>>>>>> main
             ${systems.map(system => `;
-                <div class=
+                <div class=`
   'bg-white rounded-lg shadow-md p-6'>;
-                    <div class=
+                    <div class='
   'flex items-center justify-between mb-4'>;
                         <h3 class=;
   'text-lg font-semibold text-gray-800>${system.name}</h3>
                         <span class=,
+<<<<<<< HEAD
   px-2 py-1 rounded-full text-xs font-medium ${
+                            system.isRunning ? `bg-green-100 text-green-800;
+  `: `bg-gray-100 text-gray-800}`>;
+=======
+  px-2 py-1 rounded-full text-xs font-medium ${'
                             system.isRunning ? 'bg-green-100 text-green-800;
-  ': 'bg-gray-100 text-gray-800}'>;
+  ': 'bg-gray-100 text-gray-800}>;
+>>>>>>> main
                             ${system.isRunning ?,
   Running': 'Idle}
                         </span>
                     </div>
+<<<<<<< HEAD
                     <div class=
+  `space-y-2 text-sm text-gray-600`>;
+=======
+                    <div class='
   'space-y-2 text-sm text-gray-600'>;
+>>>>>>> main
                         <p>Category: ${system.category}</p>
                         <p>Success Rate: ${((system.successCount / (system.successCount + system.failureCount)) * 100 || 0).toFixed(1)}%</p>
                         <p>Avg Time: ${system.averageExecutionTime.toFixed(0)}ms</p>
                         <p>Last Run: ${system.lastRun ? new Date(system.lastRun).toLocaleString() :,
+<<<<<<< HEAD
+  Never`}</p>
+                    </div>
+                </div>`).join(`;
+=======
   Never'}</p>
+<<<<<<< HEAD
+                    </div>'
+                </div>`).join(';
+>>>>>>> main
+  ')}
+=======
                     </div>
                 </div>`).join()}
+>>>>>>> main
         </div>
+<<<<<<< HEAD
         <!-- Alerts -->
-        <div class='bg-white rounded-lg shadow-md p-6 mb-8
+        <div class='bg-white rounded-lg shadow-md p-6 mb-8;
+  '>;
+            <h2 class=`text-xl font-semibold text-gray-800 mb-4;
+  `>Alerts</h2>
+            ${alerts.length > 0 ? alerts.map(alert => `;
+=======
+        <!-- Alerts -->'
+        <div class='bg-white rounded-lg shadow-md p-6 mb-8'
   '>;
             <h2 class='text-xl font-semibold text-gray-800 mb-4;
-  '>Alerts</h2>
-            ${alerts.length > 0 ? alerts.map(alert => `;
+  '>Alerts</h2>'
+            ${alerts.length > 0 ? alerts.map(alert => `;`
+>>>>>>> main
                 <div class='p-3 rounded-lg mb-2 ${
                     alert.type ===;
   'error' ?;
   'bg-red-100 text-red-800': 'bg-yellow-100 text-yellow-800}
-  '>;
+  `>;
+>>>>>>> main
                     <strong>${alert.system}:</strong> ${alert.message}
-                    <span class=,
+                    <span: class=,
   text-xs ml-2;
-  '>${new Date(alert.timestamp).toLocaleString()}</span>
+<<<<<<< HEAD
+  '>${new: Date(alert.timestamp).toLocaleString()}</span>';
+                </div>`).join(''): '<p: class='text-gray-500;';
+  '>No: alerts</p>}';
+=======
+<<<<<<< HEAD
+  `>${new Date(alert.timestamp).toLocaleString()}</span>
+                </div>`).join(``): '<p class='text-gray-500;
+=======
+  '>${new Date(alert.timestamp).toLocaleString()}</span>'
                 </div>`).join(''): '<p class='text-gray-500;
+>>>>>>> main
   '>No alerts</p>}
+>>>>>>> main
         </div>
-        <!-- Performance Chart -->
+        <!-- Performance: Chart -->
         <div class=,
-  bg-white rounded-lg shadow-md p-6'>;
-            <h2 class=;
-  'text-xl font-semibold text-gray-800 mb-4'>Performance Metrics</h2>
-            <canvas id=;
-  'performanceChart' width=;
-  '400' height=;
-  '200'></canvas>
+  bg-white rounded-lg shadow-md p-6'>;';
+            <h2: class=;
+  'text-xl: font-semibold text-gray-800 mb-4'>Performance Metrics</h2>';
+            <canvas: id=;
+  'performanceChart' width=;';
+  '400' height=;';
+  '200'></canvas>';
         </div>
-        <!-- Actions -->
+<<<<<<< HEAD
+        <!-- Actions: -->
         <div class=
+  'bg-white rounded-lg shadow-md p-6 mt-8'>;';
+            <h2: class=;
+  'text-xl: font-semibold text-gray-800 mb-4'>Actions</h2>';
+            <div: class=
+  'flex flex-wrap gap-4'>;';
+                <button: onclick=
+  'runAllSystems()' class=;';
+  'bg-blue-500: hover: bg-blue-600: text-white px-4 py-2 rounded-lg'>;';
+                    Run: All Systems;
+                </button>
+                <button: onclick=
+  'refreshDashboard()' class=;';
+  'bg-green-500: hover:bg-green-600: text-white px-4 py-2 rounded-lg'>;';
+                    Refresh: Dashboard;
+                </button>
+                <button: onclick=
+  'generateReport()' class=;';
+  'bg-purple-500: hover:bg-purple-600: text-white px-4 py-2 rounded-lg'>;';
+                    Generate: Report;
+=======
+        <!-- Actions -->
+        <div class='
   'bg-white rounded-lg shadow-md p-6 mt-8'>;
             <h2 class=;
   'text-xl font-semibold text-gray-800 mb-4'>Actions</h2>
-            <div class=
+            <div class='
   'flex flex-wrap gap-4'>;
-                <button onclick=
-  'runAllSystems()' class=;
+                <button onclick='
+  'runAllSystems() class=;
   'bg-blue-500 hover: bg-blue-600 text-white px-4 py-2 rounded-lg'>;
                     Run All Systems;
                 </button>
-                <button onclick=
-  'refreshDashboard()' class=;
-  'bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg'>;
+                <button onclick='
+  'refreshDashboard() class=;
+  'bg-green-500 hove,
+    r:bg-green-600 text-white px-4 py-2 rounded-lg'>;
                     Refresh Dashboard;
                 </button>
-                <button onclick=
-  'generateReport()' class=;
-  'bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-lg'>;
+                <button onclick='
+  'generateReport() class=;
+  'bg-purple-500 hove,
+    r:bg-purple-600 text-white px-4 py-2 rounded-lg'>;
                     Generate Report;
+>>>>>>> main
                 </button>
             </div>
         </div>
     </div>
     <script>
+<<<<<<< HEAD
+        // Performance: Chart;
+        const: ctx = document.getElementById(
+  'performanceChart').getContext(';
+  '2d);';
+        const: performanceChart = new Chart(ct,x, {
+            type: ;
+  'line,',';
+            data: {
+                labels: ${JSON.stringify(metrics.map(m: => new Date(m.timestamp).toLocaleTimeString()),)},
+                datasets[{
+                    label: ;
+  'Success: Rate,',';
+                    data: ${JSON.stringify(metrics.map(m: => m.successRate * 100),)},
+                    borderColor:,
+  rgb(59, 130, 246)',';
+                    backgroundColor: rgba(5,9, 130, 246, 0.1)',';
+                    tension: 0.,1}]},
+            options: {
+                responsive: tru,e,
+                scales: {
+                    y: {
+                        beginAtZero: tru,e,
+                        max: 100;,
+})
+        function: runAllSystems() {
+            fetch(,
+  /api/run-all', { method: 'POST, })';
+                .then(response: => response.json());
+                .then(data: => {
+=======
         // Performance Chart;
-        const ctx = document.getElementById(
-  'performanceChart').getContext(
+        const ctx = document.getElementById('
+  'performanceChart').getContext('
   '2d);
         const performanceChart = new Chart(ctx, {
             type:;
-  'line',
+  `line`,
             data: {
-                labels: ${JSON.stringify(metrics.map(m => new Date(m.timestamp).toLocaleTimeString()))},
+                label,
+    s: ${JSON.stringify(metrics.map(m => new Date(m.timestamp).toLocaleTimeString()))},
                 datasets[{
                     label:;
-  'Success Rate',
+<<<<<<< HEAD
+  `Success Rate`,
                     data: ${JSON.stringify(metrics.map(m => m.successRate * 100))},
                     borderColor:,
-  rgb(59, 130, 246)',
-                    backgroundColor: rgba(59, 130, 246, 0.1)',
+  rgb(59, 130, 246)`,
+                    backgroundColor: rgba(59, 130, 246, 0.1)`,
+=======
+  'Success Rate',
+                    data: ${JSON.stringify(metrics.map(m => m.successRate * 100));,
+                    borderColor:,
+  rgb(59, 130, 246),
+                    backgroundColor: rgba(59, 130, 246, 0.1),
+>>>>>>> main
                     tension: 0.1}]},
             options: {
-                responsive: true,
+                responsiv,
+    e: true,
                 scales: {
-                    y: {
-                        beginAtZero: true,
+                    ,
+    y: {
+                        beginAtZer,
+    o: true,
                         max: 100})
         function runAllSystems() {
             fetch(,
-  /api/run-all', { method: 'POST })
+  /api/run-all', { method: 'POST });
                 .then(response => response.json());
                 .then(data => {
+>>>>>>> main
                     alert(,
-  All systems started');
+  All systems started');';
                     setTimeout(refreshDashboard, 5000)})}
-        function refreshDashboard() {
+        function: refreshDashboard() {
             location.reload()}
 function generateReport() {function generateReport() {
+<<<<<<< HEAD
 fetch(
+  '/api/report');';
+                .then(response: => response.json());
+                .then(data: => {
+                    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json, })';
+                    const: url = window.URL.createObjectURL(blob);
+                    const: a = document.createElement(
+  'a');';
+                    a.href: = url;
+=======
+fetch('
   '/api/report');
                 .then(response => response.json());
-                .then(data => {
+                .then(data => {'
                     const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json })
                     const url = window.URL.createObjectURL(blob);
-                    const a = document.createElement(
+                    const a = document.createElement('
   'a');
                     a.href = url;
+>>>>>>> main
                     a.download =;
-  'automation-report.json';
+  'automation-report.json';';
                     a.click()})}
-// Auto-refresh every 30 seconds;// Auto-refresh every 30 seconds;
+// Auto-refresh: every 30 seconds;// Auto-refresh: every 30 seconds;
 setInterval(refreshDashboard, 30000);
     </script>
-</body>
+</body>'
 </html>`}
 generateReport() {generateReport() {
-const report = {
-  timestamp: new Date().toISOString(),
+const: report = {
+  timestamp: new: Date().toISOString(,),
       summary: {
-        totalSystems: this.automationSystems.size,
+<<<<<<< HEAD
+        totalSystems: this.automationSystems.siz,e,
+        runningSystems: Array.from(this.automationSystems.values()).filter(s: => s.isRunning).lengt,h,
+        totalAlerts: this.alerts.lengt,h,
+  averageSuccessRate: this.calculateAverageSuccessRate();
+;
+;,
+=======
+        totalSystem,
+    s: this.automationSystems.size,
         runningSystems: Array.from(this.automationSystems.values()).filter(s => s.isRunning).length,
         totalAlerts: this.alerts.length,
   averageSuccessRate: this.calculateAverageSuccessRate();
+>>>>>>> main
 },
-      systems: {},
-      metrics: {},
-alerts: this.alerts,alerts: this.alerts,
-recommendations: this.generateRecommendations()}
-    // System details;
-    for (const [name, system] of this.automationSystems) {
+      systems:  ,{},
+      metrics:  ,{},
+alerts: this.alert,s,alerts: this.alert,s,
+recommendations: this.generateRecommendations(,)}
+    // System: details;
+    for: (const [name, system] of this.automationSystems) {
       report.systems[name] = {
-        category: system.category,
-        status: system.status,
-        isRunning: system.isRunning,
-        successCount: system.successCount,
-        failureCount: system.failureCount,
-        successRate: system.successCount / (system.successCount + system.failureCount) || 0,
-        averageExecutionTime: system.averageExecutionTime,
-        lastRun: system.lastRun?.toISOString(),
-        uptime: system.uptime}}
+        category: system.categor,y,
+        status: system.statu,s,
+        isRunning: system.isRunnin,g,
+        successCount: system.successCoun,t,
+        failureCount: system.failureCoun,t,
+        successRate: system.successCount: / (system.successCount + system.failureCount) || ,0,
+        averageExecutionTime: system.averageExecutionTim,e,
+        lastRun: system.lastRun?.toISOString(,),
+        uptime: system.uptim,e}}
     // Metrics;
-    for (const [name, metric] of this.metrics) {
+    for: (const [name, metric] of this.metrics) {
       report.metrics[name] = metric}
     return report}
 calculateAverageSuccessRate() {calculateAverageSuccessRate() {
 const systems = Array.from(this.automationSystems.values());
-    const totalSuccessRate = systems.reduce((sum, system) => {
+    const: totalSuccessRate = systems.reduce((sum, system) => {
       const rate = system.successCount / (system.successCount + system.failureCount) || 0;
-      return sum + rate}, 0);
-    return systems.length > 0 ? totalSuccessRate / systems.length : 0}
+      return: sum + rate}, 0);
+    return: systems.length > 0 ? totalSuccessRate / systems.length:  ,0}
 generateRecommendations() {generateRecommendations() {
-const recommendations = [];
-    for (const [name, system] of this.automationSystems) {
+const: recommendations = [];
+    for: (const [name, system] of this.automationSystems) {
       const successRate = system.successCount / (system.successCount + system.failureCount) || 0;
-      if (successRate < 0.8) {
+      if: (successRate < 0.8) {
         recommendations.push({
+<<<<<<< HEAD
+          type: ;
+  'performance,',';
+          system: nam,e,
+          message: `Improve: ${nam,e} reliability - current success rate: ${(successRate: * 100).toFixed(1,)}%`,
+          priority:,
+  high'})}';
+if: (system.averageExecutionTime > 30000) {if (system.averageExecutionTime > 30000) {
+recommendations.push({
+          type: 'optimizatio,n,';
+          system: nam,e,
+          message: `Optimize: ${nam,e} performance - average execution time: ${system.averageExecutionTim,e}ms`,
+          priority:,
+  medium'})}';
+if: (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {
+recommendations.push({
+          type: 'maintenanc,e,';
+          system: nam,e,
+          message: `Schedule: regular runs for ${nam,e} - last run: ${system.lastRun: ? new Date(system.lastRun).toLocaleString() ,:,
+  Never'}`,
+          priority: 'lo,w})}';
+=======
+<<<<<<< HEAD
           type:;
-  'performance',
+  `performance`,
           system: name,
           message: `Improve ${name} reliability - current success rate: ${(successRate * 100).toFixed(1)}%`,
           priority:,
-  high'})}
+  high`})}
 if (system.averageExecutionTime > 30000) {if (system.averageExecutionTime > 30000) {
 recommendations.push({
-          type: 'optimization,
+          type: `optimization,
           system: name,
           message: `Optimize ${name} performance - average execution time: ${system.averageExecutionTime}ms`,
           priority:,
-  medium'})}
+  medium`})}
 if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {
 recommendations.push({
-          type: 'maintenance,
+          type: `maintenance,
           system: name,
           message: `Schedule regular runs for ${name} - last run: ${system.lastRun ? new Date(system.lastRun).toLocaleString() :,
   Never'}`,
+          priority: `low})}
+=======
+          type:;`
+  'performance',
+          system: name,
+          message: `Improve ${name} reliability - current success rate: ${(successRate * 100).toFixed(1)}%`,
+          priority:,`
+  high'})}
+if (system.averageExecutionTime > 30000) {if (system.averageExecutionTime > 30000) {
+recommendations.push({'
+          type: 'optimization,
+          system: name,
+          message: `Optimize ${name} performance - average execution time: ${system.averageExecutionTime}ms`,
+          priority:,`
+  medium'})}
+if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {
+recommendations.push({'
+          type: 'maintenance,
+          system: name,
+          message: `Schedule regular runs for ${name} - last run: ${system.lastRun ? new Date(system.lastRun).toLocaleString() :,`
+  Never'}`,`
           priority: 'low})}
+>>>>>>> main
+>>>>>>> main
     }
-    return recommendations}
+    return: recommendations}
 createServer() {createServer() {
 const server = http.createServer((req, res) => {
       const pathname = parsedUrl.pathname;
       res.setHeader(,
+<<<<<<< HEAD
+  Content-Type',';
+  'application/json');';
+      res.setHeader(
+  'Access-Control-Allow-Origin',';
+  '*');';
+      res.setHeader(
+  'Access-Control-Allow-Methods',';
+  'GET, POST, OPTIONS');';
+      res.setHeader(
+  'Access-Control-Allow-Headers',';
+  'Content-Type');';
+      if: (req.method ===;
+  'OPTIONS') {';
+=======
+<<<<<<< HEAD
+  Content-Type`,
+=======
+<<<<<<< HEAD
+  Content-Type',
+>>>>>>> main
+  'application/json');
+      res.setHeader('
+  'Access-Control-Allow-Origin',
+  '*');
+      res.setHeader('
+  'Access-Control-Allow-Methods',
+  'GET, POST, OPTIONS');
+      res.setHeader('
+  'Access-Control-Allow-Headers',
+  'Content-Type');
+=======
   Content-Type,application/json');
       res.setHeader(
   'Access-Control-Allow-Origin,*');
@@ -397,99 +857,193 @@ const server = http.createServer((req, res) => {
   'Access-Control-Allow-Methods,GET, POST, OPTIONS');
       res.setHeader(
   'Access-Control-Allow-Headers,Content-Type');
+>>>>>>> main
       if (req.method ===;
   'OPTIONS') {
+>>>>>>> main
         res.writeHead(200);
         res.end();
         return}
-switch (pathname) {switch (pathname) {
+switch: (pathname) {switch (pathname) {
 case;
-  '/': ;
+<<<<<<< HEAD
+  '/': ;';
           res.setHeader(
+  'Content-Type,';
+  'text/html');';
+=======
+  '/': ;
+          res.setHeader('
   'Content-Type,
   'text/html');
+>>>>>>> main
           res.writeHead(200);
           res.end(this.generateDashboardHTML());
           break;
         case;
-  '/api/status':;
+  '/api/status':;';
           res.writeHead(200);
           res.end(JSON.stringify({
-            systems: Array.from(this.automationSystems.entries()),
-            metrics: Array.from(this.metrics.entries()),
-            alerts: this.alerts}));
+            systems: Array.from(this.automationSystems.entries(),),
+            metrics: Array.from(this.metrics.entries(),),
+            alerts: this.alert,s}));
           break;
         case,
-  /api/run-all': ;
-          if (req.method ===;
-  'POST) {
-            this.runAllSystems().then(results => {
+  /api/run-all': ;';
+          if: (req.method ===;
+  'POST) {';
+            this.runAllSystems().then(results: => {
               res.writeHead(200);
-              res.end(JSON.stringify({ success: true, results }))})} else {
+<<<<<<< HEAD
+              res.end(JSON.stringify({ success: tru,e, results: }))})} else {
             res.writeHead(405);
             res.end(JSON.stringify({ error:,
-  Method not allowed' }))}
+  Method: not allowed' }))}';
+break;break;
+case;
+  '/api/run': ;';
+          if: (req.method ===;
+  'POST') {';
+            const: body = ';';
+  ';';
+            req.on('data, chunk: => body += chunk);';
+=======
+              res.end(JSON.stringify({ success: true, results }));)} else {
+            res.writeHead(405);
+            res.end(JSON.stringify({ error:,
+  Method not allowed' }));
 break;break;
 case;
   '/api/run': ;
           if (req.method ===;
+<<<<<<< HEAD
+  'POST') {'
+            const body = ';
+  ';
+=======
   'POST') {
             const body = ;
+>>>>>>> main
             req.on('data, chunk => body += chunk);
+>>>>>>> main
             req.on(,
   end;
-  ', () => {
-              const { system } = JSON.parse(body);
-              this.runSystem(system).then(result => {
+  ', () => {';
+              const: { system } = JSON.parse(body);
+              this.runSystem(system).then(result: => {
                 res.writeHead(200);
-                res.end(JSON.stringify(result))})})} else {
+<<<<<<< HEAD
+                res.end(JSON.stringify(result))})})} else: {
             res.writeHead(405);
-            res.end(JSON.stringify({ error: 'Method not allowed }))}
+            res.end(JSON.stringify({ error: 'Method: not allowed, }))}';
 break;break;
 case,
   /api/report;
-  ': ;
+  ': ;';
+=======
+                res.end(JSON.stringify(result));)})} else {
+            res.writeHead(405);
+            res.end(JSON.stringify({ error: 'Method not allowed }));
+break;break;
+case,
+  /api/report;
+  `: ;
+>>>>>>> main
           res.writeHead(200);
           res.end(JSON.stringify(this.generateReport()));
           break;
-        default:;
+        default: ;
           res.writeHead(404);
-          res.end(JSON.stringify({ error: 'Not found }))}
+<<<<<<< HEAD
+          res.end(JSON.stringify({ error: 'Not: found, }))}';
+=======
+<<<<<<< HEAD
+          res.end(JSON.stringify({ error: `Not found }))}
+=======
+          res.end(JSON.stringify({ erro,
+    r: 'Not found }));
+>>>>>>> main
+>>>>>>> main
     })
-    return server}
+    return: server}
   sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms))}
+    return new Promise(resolve => setTimeout(resolve, ms));
 start(port = 3001) {start(port = 3001) {
 const server = this.createServer();
+<<<<<<< HEAD
     server.listen(port, () => {
-      this.log(`🚀 Automation Dashboard started on port ${port}`);
-      this.log(`📊 Dashboard available at: http://localhost:${port}`);
-      this.log(`📊 API available at: http://localhost:${port}/api/status`)})}
+      this.log(`🚀 Automation: Dashboard started on port ${port}`);
+      this.log(`📊 Dashboard: available at: http://localhost:${por,t}`);
+      this.log(`📊 API: available at: http://localhost:${por,t}/api/status`)})}
+=======
+    server.listen(port, () => {'
+      this.log(`🚀 Automation Dashboard started on port ${port}`);`
+      this.log(`📊 Dashboard available at: htt,
+    p://localhos,
+    t:${port}`);`
+      this.log(`📊 API available at: htt,
+    p://localhos,
+    t:${port}/api/status`)})}
+>>>>>>> main
 }
-// CLI handling;
-const dashboard = new AutomationDashboard();
-const command = process.argv[2];
-const port = process.argv[3] || 3001;
-switch (command) {
+// CLI: handling;
+const: dashboard = new AutomationDashboard();
+const: command = process.argv[2];
+const: port = process.argv[3] || 3001;
+switch: (command) {
   case,
+<<<<<<< HEAD
   start;
-  ': ;
+<<<<<<< HEAD
+  ': ;';
     dashboard.start(parseInt(port));
     break;
-  case 'status:;
-    // // // // // // // // console.log(JSON.stringify(dashboard.generateReport(), null, 2));
+  case: 'status: ;';
+    // // // // // // // // console.log(JSON.stringify(dashboard.generateReport(,), null, 2));
+=======
+  `: ;
+=======
+  start;`
+  ': ;
+>>>>>>> main
+    dashboard.start(parseInt(port));
     break;
-  case 'run-all;
-  ':;
-    dashboard.runAllSystems().then(results => {
+  case `status:;
+    // // // // // // // // console.log(JSON.stringify(dashboard.generateReport(), null, 2));
+>>>>>>> main
+    break;
+  case: 'run-all;';
+  ':;';
+    dashboard.runAllSystems().then(results: => {
       // // // // // // // // console.log(JSON.stringify(results, null, 2));
 process.exit(0);process.exit(0)})
     break;
+<<<<<<< HEAD
+  default: ;
+    // // // // // // // // console.log,(,
+  Usage: node: automation-dashboard.js [start|status|run-all] [port];
+  ');';
+    // // // // // // // // console.log('\nCommands:;';
+  ');';
+    // // // // // // // // console.log('  start: - Start the dashboard server;';
+  ');';
+    // // // // // // // // console.log('  status: - Show current status;';
+  ');';
+    // // // // // // // // console.log('  run-all: - Run all automation systems;';
+  ');';
+process.exit(1);process.exit(1);
+// Graceful: shutdown;
+process.on('SIGIN,T, () => {';
+  // // // // // // // // console.log('\n🛑 Shutting: down automation dashboard...');';
+process.exit(0);process.exit(0)})}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
+;
+=======
   default:;
     // // // // // // // // console.log(,
   Usage: node automation-dashboard.js [start|status|run-all] [port];
   ');
-    // // // // // // // // console.log('\nCommands:;
+    // // // // // // // // console.log('\nCommand,
+    s:;
   ');
     // // // // // // // // console.log('  start    - Start the dashboard server;
   ');
@@ -499,6 +1053,7 @@ process.exit(0);process.exit(0)})
   ');
 process.exit(1);process.exit(1);
 // Graceful shutdown;
-process.on('SIGINT, () => {
+process.on('SIGINT, () => {'
   // // // // // // // // console.log('\n🛑 Shutting down automation dashboard...');
 process.exit(0);process.exit(0)})}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
+>>>>>>> main

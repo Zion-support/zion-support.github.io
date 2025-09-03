@@ -1,11 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
-import {
-  Users,
-  Eye,
-  MousePointer,
-  Clock
-} from 'lucide-react';
+import { Users, Eye, MousePointer, Clock } from 'lucide-react';
 
 interface AnalyticsData {
   pageViews: number;
@@ -27,7 +22,7 @@ const EnhancedAnalytics: React.FC = () => {
     topPages: [],
     trafficSources: [],
     deviceTypes: [],
-    realTimeUsers: 0
+    realTimeUsers: 0,
   });
   const [isLoading, setIsLoading] = useState(true);
   const [selectedTimeRange, setSelectedTimeRange] = useState('7d');
@@ -37,7 +32,7 @@ const EnhancedAnalytics: React.FC = () => {
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000));
-      
+
       setAnalyticsData({
         pageViews: 12543,
         uniqueVisitors: 8932,
@@ -47,20 +42,20 @@ const EnhancedAnalytics: React.FC = () => {
           { page: '/', views: 3421 },
           { page: '/services', views: 2156 },
           { page: '/about', views: 1892 },
-          { page: '/contact', views: 1234 }
+          { page: '/contact', views: 1234 },
         ],
         trafficSources: [
           { source: 'Organic Search', percentage: 45 },
           { source: 'Direct', percentage: 30 },
           { source: 'Social Media', percentage: 15 },
-          { source: 'Referral', percentage: 10 }
+          { source: 'Referral', percentage: 10 },
         ],
         deviceTypes: [
           { device: 'Desktop', percentage: 55 },
           { device: 'Mobile', percentage: 35 },
-          { device: 'Tablet', percentage: 10 }
+          { device: 'Tablet', percentage: 10 },
         ],
-        realTimeUsers: 23
+        realTimeUsers: 23,
       });
     } catch (error) {
       console.error('Failed to fetch analytics data:', error);
@@ -93,11 +88,13 @@ const EnhancedAnalytics: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           className="mb-8"
         >
-          <h1 className="text-4xl font-bold mb-4">Enhanced Analytics Dashboard</h1>
+          <h1 className="text-4xl font-bold mb-4">
+            Enhanced Analytics Dashboard
+          </h1>
           <div className="flex items-center space-x-4">
             <select
               value={selectedTimeRange}
-              onChange={(e) => setSelectedTimeRange(e.target.value)}
+              onChange={e => setSelectedTimeRange(e.target.value)}
               className="bg-gray-800 border border-gray-600 rounded px-3 py-2"
             >
               <option value="24h">Last 24 Hours</option>
@@ -120,8 +117,12 @@ const EnhancedAnalytics: React.FC = () => {
             <div className="flex items-center justify-between">
               <div>
                 <h3 className="text-gray-400 text-sm mb-2">Page Views</h3>
-                <p className="text-3xl font-bold">{analyticsData.pageViews.toLocaleString()}</p>
-                <span className="text-green-400 text-sm">+12.5% from last period</span>
+                <p className="text-3xl font-bold">
+                  {analyticsData.pageViews.toLocaleString()}
+                </p>
+                <span className="text-green-400 text-sm">
+                  +12.5% from last period
+                </span>
               </div>
               <Eye className="w-8 h-8 text-blue-400" />
             </div>
@@ -131,8 +132,12 @@ const EnhancedAnalytics: React.FC = () => {
             <div className="flex items-center justify-between">
               <div>
                 <h3 className="text-gray-400 text-sm mb-2">Unique Visitors</h3>
-                <p className="text-3xl font-bold">{analyticsData.uniqueVisitors.toLocaleString()}</p>
-                <span className="text-green-400 text-sm">+8.3% from last period</span>
+                <p className="text-3xl font-bold">
+                  {analyticsData.uniqueVisitors.toLocaleString()}
+                </p>
+                <span className="text-green-400 text-sm">
+                  +8.3% from last period
+                </span>
               </div>
               <Users className="w-8 h-8 text-green-400" />
             </div>
@@ -142,8 +147,12 @@ const EnhancedAnalytics: React.FC = () => {
             <div className="flex items-center justify-between">
               <div>
                 <h3 className="text-gray-400 text-sm mb-2">Bounce Rate</h3>
-                <p className="text-3xl font-bold">{analyticsData.bounceRate}%</p>
-                <span className="text-red-400 text-sm">+2.1% from last period</span>
+                <p className="text-3xl font-bold">
+                  {analyticsData.bounceRate}%
+                </p>
+                <span className="text-red-400 text-sm">
+                  +2.1% from last period
+                </span>
               </div>
               <MousePointer className="w-8 h-8 text-red-400" />
             </div>
@@ -152,9 +161,15 @@ const EnhancedAnalytics: React.FC = () => {
           <div className="bg-gray-800 rounded-lg p-6">
             <div className="flex items-center justify-between">
               <div>
-                <h3 className="text-gray-400 text-sm mb-2">Avg Session Duration</h3>
-                <p className="text-3xl font-bold">{analyticsData.avgSessionDuration}m</p>
-                <span className="text-green-400 text-sm">+5.7% from last period</span>
+                <h3 className="text-gray-400 text-sm mb-2">
+                  Avg Session Duration
+                </h3>
+                <p className="text-3xl font-bold">
+                  {analyticsData.avgSessionDuration}m
+                </p>
+                <span className="text-green-400 text-sm">
+                  +5.7% from last period
+                </span>
               </div>
               <Clock className="w-8 h-8 text-yellow-400" />
             </div>
@@ -171,8 +186,12 @@ const EnhancedAnalytics: React.FC = () => {
           <div className="flex items-center justify-between">
             <div>
               <h3 className="text-xl font-bold mb-2">Real-time Users</h3>
-              <p className="text-4xl font-bold">{analyticsData.realTimeUsers}</p>
-              <span className="text-blue-100 text-sm">Currently active on your site</span>
+              <p className="text-4xl font-bold">
+                {analyticsData.realTimeUsers}
+              </p>
+              <span className="text-blue-100 text-sm">
+                Currently active on your site
+              </span>
             </div>
             <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
               <Users className="w-8 h-8 text-white" />
@@ -192,7 +211,10 @@ const EnhancedAnalytics: React.FC = () => {
             <h3 className="text-xl font-bold mb-4">Top Pages</h3>
             <div className="space-y-3">
               {analyticsData.topPages.map((page, index) => (
-                <div key={page.page} className="flex justify-between items-center">
+                <div
+                  key={page.page}
+                  className="flex justify-between items-center"
+                >
                   <div className="flex items-center space-x-3">
                     <span className="text-gray-400 text-sm">#{index + 1}</span>
                     <span className="font-medium">{page.page}</span>
@@ -214,8 +236,11 @@ const EnhancedAnalytics: React.FC = () => {
           >
             <h3 className="text-xl font-bold mb-4">Traffic Sources</h3>
             <div className="space-y-3">
-              {analyticsData.trafficSources.map((source) => (
-                <div key={source.source} className="flex justify-between items-center">
+              {analyticsData.trafficSources.map(source => (
+                <div
+                  key={source.source}
+                  className="flex justify-between items-center"
+                >
                   <span>{source.source}</span>
                   <div className="flex items-center space-x-2">
                     <div className="w-20 bg-gray-700 rounded-full h-2">

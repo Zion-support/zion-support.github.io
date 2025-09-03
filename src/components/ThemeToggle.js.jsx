@@ -1,6 +1,13 @@
 import React from 'react';
 import { SEO } from '@/components/SEO';
 
+<<<<<<< HEAD
+""
+}}
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-2b9a
+=======
 const ThemeToggleJs = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -30,3 +37,5 @@ const ThemeToggleJs = () => {
 };
 
 export default ThemeToggleJs;
+>>>>>>> main
+>>>>>>> main

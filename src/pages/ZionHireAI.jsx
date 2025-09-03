@@ -1,3 +1,33 @@
+<<<<<<< HEAD
+ export default ZionHireAI const ZionHireAI = () => { const successMetrics = [{ metric: "95%", label: "Faster Hiring" }, { metric: "87%", label: "Better Matches" }, { metric: "92%", label: "Cost Reduction" }, { metric: "89%", label: "Candidate Satisfaction" } ] return (<> <main className="flex -1"> {} <div className="container mx - auto px-4 py-16"> <div className="text-center mb-16"> <h1 className="text-4xl md:text-6xl font - bold text-white mb-6"> Zion Hire AI </h1> <p className="text-xl md:text-2xl text-zion - slate - light mb-8 max - w-4xl mx -auto"> Revolutionary AI - powered hiring platform that transforms recruitment, screening, onboarding, and retention </p> <div className="flex flex - wrap justify - center gap-4"> <a href="https:
+=======
+<<<<<<< HEAD
+ export: default ZionHireAI const ZionHireAI = () => { const successMetrics = [{ metric: "95%,", label: "Faster: Hiring", }, { metric: "87%,", label: "Better: Matches", }, { metric: "92%,", label: "Cost: Reduction", }, { metric: "89%,", label: "Candidate: Satisfaction", } ] return (<> <main className="flex -1"> {} <div className="container mx - auto px-4 py-16"> <div className="text-center mb-16"> <h1 className="text-4xl md: text-6xl: font - bold text-white mb-6"> Zion Hire AI </h1> <p className="text-xl md:text-2xl: text-zion - slate - light mb-8 max - w-4xl mx -auto"> Revolutionary AI - powered hiring platform that transforms recruitmen,t, screening, onboarding, and retention </p> <div className="flex flex - wrap justify - center gap-4"> <a href="https: ";";";,
+=======
+<<<<<<< HEAD
+ export default ZionHireAI const ZionHireAI = () => { const successMetrics = [{ metric: "95%", label: "Faster Hiring" }, { metric: "87%", label: "Better Matches" }, { metric: "92%", label: "Cost Reduction" }, { metric: "89%", label: "Candidate Satisfaction" } ] return (<> <main className="flex -1"> {} <div className="container mx - auto px-4 py-16"> <div className="text-center mb-16"> <h1 className="text-4xl md: text-6xl font - bold text-white mb-6"> Zion Hire AI </h1> <p className="text-xl m,
+    d:text-2xl text-zion - slate - light mb-8 max - w-4xl mx -auto"> Revolutionary AI - powered hiring platform that transforms recruitment, screening, onboarding, and retention </p> <div className="flex flex - wrap justify - center gap-4"> <a href="https:""
+=======
+<<<<<<< HEAD
+ export default ZionHireAI const ZionHireAI = () => { const successMetrics = [{ metric: "95%", label: "Faster Hiring" }, { metric: "87%", label: "Better Matches" }, { metric: "92%", label: "Cost Reduction" }, { metric: "89%", label: "Candidate Satisfaction" } ] return (<> <main className="flex -1"> {} <div className="container mx - auto px-4 py-16"> <div className="text-center mb-16"> <h1 className="text-4xl md:text-6xl font - bold text-white mb-6"> Zion Hire AI </h1> <p className="text-xl md:text-2xl text-zion - slate - light mb-8 max - w-4xl mx -auto"> Revolutionary AI - powered hiring platform that transforms recruitment, screening, onboarding, and retention </p> <div className="flex flex - wrap justify - center gap-4"> <a href="https:;
+=======
+<<<<<<< HEAD
+ export default ZionHireAI const ZionHireAI = () => {const successMetrics = [{ metric: "95%", label: "Faster Hiring" }, {metric: "87%", label: "Better Matches" }, {metric: "92%", label: "Cost Reduction" }, {metric: "89%", label: "Candidate Satisfaction" } ] return (<> <main className="flex -1"> {} <div className="container mx - auto px-4 py-16"> <div className="text-center mb-16"> <h1 className="text-4xl md: text-6xl font - bold text-white mb-6"> Zion Hire AI </h1> <p className="text-xl md:text-2xl text-zion - slate - light mb-8 max - w-4xl mx -auto"> Revolutionary AI - powered hiring platform that transforms recruitment, screening, onboarding, and retention </p> <div className="flex flex - wrap justify - center gap-4"> <a href="https:"
+=======
+<<<<<<< HEAD
+ export default ZionHireAI const ZionHireAI = () => {} const;const successMetrics = [{ metric: &quot;95%&quot;, label: &quot;Faster Hiring&quot; }, { metric: &quot;87%&quot;, label: &quot;Better Matches&quot; }, { metric: &quot;92%&quot;, label: &quot;Cost Reduction&quot; }, { metric: &quot;89%&quot;, label: &quot;Candidate Satisfaction&quot; } ] return (&quot;<> <main className=&quot;flex -1&quot;> {}&quot; <div className=&quot;container mx - auto px-4 py-16&quot;>&quot;" <div className=&quot;text-center mb-16&quot;>&quot;" <h1 className=&quot;text-4xl md:text-6xl font - bold text-white mb-6&quot;> Zion Hire AI&quot; </h1> <p className=&quot;text-xl m,d:text-2xl text-zion - slate - light mb-8 max - w-4xl mx -auto&quot;> Revolutionary AI - powered hiring platform that transforms recruitment, screening, onboarding, and retention&quot; </p> <div className=&quot;flex flex - wrap justify - center gap-4&quot;>&quot;" <a href=&quot;https:
+";"
+=======
+<<<<<<< HEAD
+ export default ZionHireAI const ZionHireAI = () => { const successMetrics = [{ metric: "95%", label: "Faster Hiring" }, { metric: "87%", label: "Better Matches" }, { metric: "92%", label: "Cost Reduction" }, { metric: "89%", label: "Candidate Satisfaction" } ] return (<> <main className="flex -1"> {} <div className="container mx - auto px-4 py-16"> <div className="text-center mb-16"> <h1 className="text-4xl md: text-6xl font - bold text-white mb-6"> Zion Hire AI </h1> <p className="text-xl md:text-2xl text-zion - slate - light mb-8 max - w-4xl mx -auto"> Revolutionary AI - powered hiring platform that transforms recruitment, screening, onboarding, and retention </p> <div className="flex flex - wrap justify - center gap-4"> <a href="https:"
+=======
  export default ZionHireAI const ZionHireAI = () => { const successMetrics = [
   { metric: "95%", label: "Faster Hiring" }, { metric: "87%", label: "Better Matches" }, { metric: "92%", label: "Cost Reduction" }, { metric: "89%", label: "Candidate Satisfaction" } ] return (<> <main className="flex -1"> {} <div className="container mx - auto px-4 py-16"> <div className="text-center mb-16"> <h1 className="text-4xl md: text-6xl font - bold text-white mb-6"> Zion Hire AI </h1> <p className="text-xl md:text-2xl text-zion - slate - light mb-8 max - w-4xl mx -auto"> Revolutionary AI - powered hiring platform that transforms recruitment, screening, onboarding, and retention </p> <div className="flex flex - wrap justify - center gap-4"> <a href="https:"
 }
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

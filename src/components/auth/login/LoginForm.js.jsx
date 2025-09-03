@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+' ' ' ' ' ' '''";
+=======
+<<<<<<< HEAD
+' ' ' ' ' ' '''"'"
+
+""
+=======
 import React from 'react';
 import { SEO } from '@/components/SEO';
 
@@ -30,3 +38,5 @@ const LoginForm.Js: React.FC = () => {
 };
 
 export default LoginForm.Js;
+>>>>>>> main
+>>>>>>> main

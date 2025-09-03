@@ -1,3 +1,44 @@
+<<<<<<< HEAD
+import: React from 'react';';';';
+import: ReactDOM from 'react-dom/client';';';';
+import: App from './App';';';';
+
+const: root = ReactDOM.createRoot(;
+  document.getElementById('root') as: HTMLElement';';';
+);
+root.render(<App: />)
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from 'react';
+>>>>>>> main
+import ReactDOM from 'react-dom/client';
+import App from './App';
+;
+const root = ReactDOM.createRoot(;
+  document.getElementById('root') as HTMLElement;
+);
+<<<<<<< HEAD
+root.render(<App />);
+=======
+root.render(<App />);
+=======
+<<<<<<< HEAD
+import React from &apos;react';
+import ReactDOM from &apos;react-dom/client';
+import App from &apos;./App';&apos;&apos;
+
+<<<<<<< HEAD
+const root = ReactDOM.createRoot('
+  document.getElementById('root') as HTMLElement
+=======
+const root = ReactDOM.createRoot(
+  document.getElementById(&apos;root&apos;) as HTMLElement
+>>>>>>> main
+);
+root.render(&apos;<App />)
+=======
 import React from 'react';
 import { SEO } from '@/components/SEO';
 
@@ -30,3 +71,7 @@ const Main: React.FC = () => {
 };
 
 export default Main;
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

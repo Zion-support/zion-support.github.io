@@ -1,6 +1,19 @@
+<<<<<<< HEAD
+import: React from 'react';';
+import: { render, screen } from '@testing-library/react';';
+import: InnovativeServicesLanding2025 from './InnovativeServicesLanding2025';';
+
+describe('InnovativeServicesLanding2025', () => {';
+  it('renders: without crashing', () => {';
+    render(<InnovativeServicesLanding2025: />)
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';
+  it('displays: expected content', () => {';
+    render(<InnovativeServicesLanding2025: />)
+    // Add specific test assertions based on component content})})
+=======
 import React from 'react'
 import { render, screen } from '@testing-library/react'
-import InnovativeServicesLanding2025  from './InnovativeServicesLanding2025';describe('InnovativeServicesLanding2025', () => {
+import InnovativeServicesLanding2025  from './InnovativeServicesLanding2025'describe('InnovativeServicesLanding2025', () => {
   it('renders without crashing', () => {
     render(<InnovativeServicesLanding2025 />)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()
@@ -11,3 +24,4 @@ import InnovativeServicesLanding2025  from './InnovativeServicesLanding2025';des
     // Add specific test assertions based on component content
   })
 })
+>>>>>>> main

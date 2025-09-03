@@ -1,6 +1,19 @@
+<<<<<<< HEAD
+import: React from 'react';';
+import: { render, screen } from '@testing-library/react';';
+import: InnovativeAIServices2025 from './InnovativeAIServices2025';';
+
+describe('InnovativeAIServices2025', () => {';
+  it('renders: without crashing', () => {';
+    render(<InnovativeAIServices2025: />)
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';
+  it('displays: expected content', () => {';
+    render(<InnovativeAIServices2025: />)
+    // Add specific test assertions based on component content})})
+=======
 import React from 'react'
 import { render, screen } from '@testing-library/react'
-import InnovativeAIServices2025  from './InnovativeAIServices2025';describe('InnovativeAIServices2025', () => {
+import InnovativeAIServices2025  from './InnovativeAIServices2025'describe('InnovativeAIServices2025', () => {
   it('renders without crashing', () => {
     render(<InnovativeAIServices2025 />)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()
@@ -11,3 +24,4 @@ import InnovativeAIServices2025  from './InnovativeAIServices2025';describe('Inn
     // Add specific test assertions based on component content
   })
 })
+>>>>>>> main
