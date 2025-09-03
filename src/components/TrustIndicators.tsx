@@ -1,7 +1,7 @@
-import React from 'react';""
-import React from 'react;
+import React from 'react';""',';';
+    ';';';
+import React from 'react;';';';';
 import { Shield, Award, Users, Clock, CheckCircle, Star } from 'lucide-react';
-
 const TrustIndicators: React.FC = () => {
   const indicators = [
     {
@@ -58,7 +58,6 @@ const TrustIndicators: React.FC = () => {
       description: "98% Customer Rating,
       color: "text-yellow-500"}
   ]
-
   return (""
     <section className="py-16 bg-gradient-to-r from-slate-900/50 to-slate-800/50">""
       <div className="container mx-auto px-4">""
@@ -87,9 +86,12 @@ const TrustIndicators: React.FC = () => {
                 {indicator.description}
               </p>
             </div>
-          ))}
+          ))
+      )}
+    </div>
+  );
+}
         </div>
-
         {/* Additional Trust Elements */}""
         <div className="mt-16 text-center">""
           <div className="flex flex-wrap justify-center items-center gap-8 text-slate-400">""
@@ -111,8 +113,7 @@ const TrustIndicators: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  );};
-
-export default TrustIndicators;"`""
+      </div>';
+    </section>';';
+  );};';';';
+export default TrustIndicators;"`""';';';';

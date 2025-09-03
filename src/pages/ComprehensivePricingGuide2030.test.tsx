@@ -1,13 +1,14 @@
-describe('ComprehensivePricingGuide2030', () => {}; '; it('renders without crashing', () => {}; render(<ComprehensivePricingGuide2030 />) ;'; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<ComprehensivePricingGuide2030 />) ;
-    render(<ComprehensivePricingGuide2030 />);
-    expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument();
-  });
-'
+describe('ComprehensivePricingGuide2030', () => {}; '; it('renders without crashing', () => {}; render(<ComprehensivePricingGuide2030 />) ;'; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<ComprehensivePricingGuide2030 />) ;';';';
+    render(<ComprehensivePricingGuide2030 />);',';';
+    ';';';
+    expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument();';';';
+  });',',';';
+    '';';';';
   it('displays expected content', () => {
     render(<ComprehensivePricingGuide2030 /" >);
     // Add more specific tests here
-  });
-  });
-"
-});
-'"
+  });';
+  });';';
+"';';';
+});',',';';
+    '"';';';';

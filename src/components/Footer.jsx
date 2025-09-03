@@ -1,95 +1,141 @@
-import React { useState } from 'react';
-import { Link  } from 'react-router-dom'; import { motion  } from 'framer-motion';
-import { Mail, Phone, MapPin, ArrowUp, Heart, CheckCircle, Send, Globe  } from 'lucide-react'; export function FooterNewsletter() { const [email, setEmail] = useState(''); const [isSubscribed, setIsSubscribed] = useState(false); const [isLoading, setIsLoading] = useState(false); const handleSubscribe = async(e) => { e.preventDefault(); if(!email) return; setIsLoading(true);
-import React { useState } from 'react';
-import { Link    } from 'react-router-dom'; import { motion    } from 'framer-motion';
-import { Mail, Phone, MapPin, ArrowUp, Heart, CheckCircle, Send, Globe    } from 'lucide-react'; export function FooterNewsletter() { const [email, setEmail] = useState(''); const [isSubscribed, setIsSubscribed] = useState(false); const [isLoading, setIsLoading] = useState(false); const handleSubscribe = async(e) => { e.preventDefault(); if(!email) return; setIsLoading(true);
-
-import React { useState } from 'react';
-import { Link } from 'react - router - dom'; import { motion } from 'framer - motion';
-import { Mail, Phone, MapPin, ArrowUp, Heart, CheckCircle, Send, Globe } from 'lucide - react'; export function FooterNewsletter () { const [email, setEmail] = useState ('') ; const [isSubscribed, setIsSubscribed] = useState (false) ; const [isLoading, setIsLoading] = useState (false) ; const handleSubscribe = async (e) => { e.preventDefault () ; if (!email) return; setIsLoading (true) ;'';,"});,"})
-;,"});,"})
-import React { useState } from 'react';
-import { Link    } from 'react-router-dom'; import { motion    } from 'framer-motion';
-import { Mail, Phone, MapPin, ArrowUp, Heart, CheckCircle, Send, Globe    } from 'lucide-react'; export function FooterNewsletter() { const [email, setEmail] = useState(''); const [isSubscribed, setIsSubscribed] = useState(false); const [isLoading, setIsLoading] = useState(false); const handleSubscribe = async(e) => { e.preventDefault(); if(!email) return; setIsLoading(true);,"});,"})
-import React { useState } from 'react' import { Link } from 'react - router - dom' import { motion } from 'framer - motion' import { Mail, Phone, MapPin, ArrowUp, Heart, CheckCircle, Send, Globe } from 'lucide - react' export function FooterNewsletter () { const [email, setEmail] = useState ('')  const [isSubscribed, setIsSubscribed] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const handleSubscribe = async (e) => { e.preventDefault ()  if (!email) return setIsLoading (true) ';
-import React { useState } from 'react' import { Link } from 'react - router - dom' import { motion } from 'framer - motion' import { Mail, Phone, MapPin, ArrowUp, Heart, CheckCircle, Send, Globe } from 'lucide - react' export function FooterNewsletter () { const [email, setEmail] = useState ('')  const [isSubscribed, setIsSubscribed] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const handleSubscribe = async (e) => { e.preventDefault ()  if (!email) return setIsLoading (true) ';';
-import React { useState } from 'react' import { Link } from 'react - router - dom' import { motion } from 'framer - motion' import { Mail, Phone, MapPin, ArrowUp, Heart, CheckCircle, Send, Globe } from 'lucide - react' export function FooterNewsletter () { const [email, setEmail] = useState ('')  const [isSubscribed, setIsSubscribed] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const handleSubscribe = async (e) => { e.preventDefault ()  if (!email) return setIsLoading (true) '';
-import React { useState } from 'react' import { Link } from 'react - router - dom' import { motion } from 'framer - motion' import { Mail, Phone, MapPin, ArrowUp, Heart, CheckCircle, Send, Globe } from 'lucide - react' export function FooterNewsletter () { const [email, setEmail] = useState (')  const [isSubscribed, setIsSubscribed] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const handleSubscribe = async (e) => { e.preventDefault ()  if (!email) return setIsLoading (true) ';
-import React from 'react';
-import {Link } from 'react-router-dom'
-import {Mail, 
-  Phone, 
-  MapPin, 
-  Twitter, 
-  Linkedin, 
-  Facebook, 
-  Instagram, 
+import React { useState } from 'react',;',';';
+    ';';';';
+import { Link  } from 'react-router-dom'; import { motion  } from 'framer-motion',;',';';
+    ';';';';
+import { Mail, Phone, MapPin, ArrowUp, Heart, CheckCircle, Send, Globe  } from 'lucide-react'; export function FooterNewsletter() { const [email, setEmail] = useState(''); const [isSubscribed, setIsSubscribed] = useState(false); const [isLoading, setIsLoading] = useState(false); const handleSubscribe = async(e) => { e.preventDefault(); if(!email) return; setIsLoading(true);',';';
+    ';';';
+import React { useState } from 'react',;',';';
+    ';';';';
+import { Link    } from 'react-router-dom'; import { motion    } from 'framer-motion',;',';';
+    ';';';';
+import { Mail, Phone, MapPin, ArrowUp, Heart, CheckCircle, Send, Globe    } from 'lucide-react'; export function FooterNewsletter() { const [email, setEmail] = useState(''); const [isSubscribed, setIsSubscribed] = useState(false); const [isLoading, setIsLoading] = useState(false); const handleSubscribe = async(e) => { e.preventDefault(); if(!email) return; setIsLoading(true);',';';
+    ';';';
+import React { useState } from 'react',;',';';
+    ';';';';
+import { Link } from 'react - router - dom'; import { motion } from 'framer - motion',;',';';
+    ';';';';
+import { Mail, Phone, MapPin, ArrowUp, Heart, CheckCircle, Send, Globe } from 'lucide - react'; export function FooterNewsletter () { const [email, setEmail] = useState ('') ; const [isSubscribed, setIsSubscribed] = useState (false) ; const [isLoading, setIsLoading] = useState (false) ; const handleSubscribe = async (e) => { e.preventDefault () ; if (!email) return; setIsLoading (true) ;'';,"});,"})';';';
+,"});,"})',';';
+    ';';';
+import React { useState } from 'react',;',';';
+    ';';';';
+import { Link    } from 'react-router-dom'; import { motion    } from 'framer-motion',;',';';
+    ';';';';
+import { Mail, Phone, MapPin, ArrowUp, Heart, CheckCircle, Send, Globe    } from 'lucide-react'; export function FooterNewsletter() { const [email, setEmail] = useState(''); const [isSubscribed, setIsSubscribed] = useState(false); const [isLoading, setIsLoading] = useState(false); const handleSubscribe = async(e) => { e.preventDefault(); if(!email) return; setIsLoading(true);,"});,"})',';';
+    ';';';
+import React { useState } from 'react' import { Link } from 'react - router - dom' import { motion } from 'framer - motion' import { Mail, Phone, MapPin, ArrowUp, Heart, CheckCircle, Send, Globe } from 'lucide - react' export function FooterNewsletter () { const [email, setEmail] = useState ('')  const [isSubscribed, setIsSubscribed] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const handleSubscribe = async (e) => { e.preventDefault ()  if (!email) return setIsLoading (true) ',;',';';
+    ';';';';
+import React { useState } from 'react' import { Link } from 'react - router - dom' import { motion } from 'framer - motion' import { Mail, Phone, MapPin, ArrowUp, Heart, CheckCircle, Send, Globe } from 'lucide - react' export function FooterNewsletter () { const [email, setEmail] = useState ('')  const [isSubscribed, setIsSubscribed] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const handleSubscribe = async (e) => { e.preventDefault ()  if (!email) return setIsLoading (true) ',;',';';
+    ';';';';';
+import React { useState } from 'react' import { Link } from 'react - router - dom' import { motion } from 'framer - motion' import { Mail, Phone, MapPin, ArrowUp, Heart, CheckCircle, Send, Globe } from 'lucide - react' export function FooterNewsletter () { const [email, setEmail] = useState ('')  const [isSubscribed, setIsSubscribed] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const handleSubscribe = async (e) => { e.preventDefault ()  if (!email) return setIsLoading (true) '',;',';';
+    ';';';';
+import React { useState } from 'react' import { Link } from 'react - router - dom' import { motion } from 'framer - motion' import { Mail, Phone, MapPin, ArrowUp, Heart, CheckCircle, Send, Globe } from 'lucide - react' export function FooterNewsletter () { const [email, setEmail] = useState (')  const [isSubscribed, setIsSubscribed] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const handleSubscribe = async (e) => { e.preventDefault ()  if (!email) return setIsLoading (true) ',;',';';
+    ';';';';
+import React from 'react',;';';
+    ';';';';
+import { Link  } from 'react-router-dom';
+import {Mail,
+  Phone,
+  MapPin,
+  Twitter,
+  Linkedin,
+  Facebook,
+  Instagram,
   Youtube,
-  ArrowRight,
-  Shield,
-  Zap,
-  Users,;
-  Globe';
-  Zap,;
-  Users,;
-  Globe;
-import React { useState } from &apos;react&apos; import { Link } from &apos;react - router - dom&apos; import { motion } from &apos;framer - motion&apos; import { Mail, Phone, MapPin, ArrowUp, Heart, CheckCircle, Send, Globe } from &apos;lucide - react&apos;&apos;' export function FooterNewsletter () {} const [email, setEmail] = useState (&apos;&apos)&apos;&apos;  const [isSubscribed, setIsSubscribed] = useState (false)  const;const;const [isLoading, setIsLoading] = useState (false)  ;const handleSubscribe = async (e) => { e.preventDefault ()  if (!email) return setIsLoading (true) ';
-&apos}'
-import React from 'react';""
-import React { useState } from 'react' import { Link } from 'react - router - dom' import { motion } from 'framer - motion' import { Mail, Phone, MapPin, ArrowUp, Heart, CheckCircle, Send, Globe } from 'lucide - react' export function FooterNewsletter () { const [email, setEmail] = useState ('')  const [isSubscribed, setIsSubscribed] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const handleSubscribe = async (e) => { e.preventDefault ()  if (!email) return setIsLoading (true) ';'
-import React from 'react
-import { Link } from 'react-router-dom'
-import { 
-  Mail, Phone, 
-  MapPin, Twitter, 
-  Linkedin, Facebook, 
-  Instagram, Youtube,
-  ArrowRight, Shield,;
-  Zap, Users,;
-  Globe;", ";
-} from 'lucide-react';
-
-export function Footer() {const currentYear = new Date().getFullYear();
-
-  const footerSections = [
-    {'
-      title: 'Services',
-      links: ['
-        { nam,
-    e: 'AI Services', href: '/services/ai' } { name: 'Cloud Solutions', href: '/services/cloud' } { name: 'Cybersecurity', href: '/services/cybersecurity' } { name: 'IT Infrastructure', href: '/services/infrastructure' } { name: 'Digital Transformation', href: '/services/transformation' } { name: 'Consulting', href: '/services/consulting' }
-      ]
-} {'
-      title: 'Solutions',
-    e: 'Industry Solutions', href: '/solutions/industry' } { name: 'Manufacturing', href: '/solutions/manufacturing' } { name: 'Financial Services', href: '/solutions/financial' } { name: 'Healthcare', href: '/solutions/healthcare' } { name: 'Retail', href: '/solutions/retail' } { name: 'Education', href: '/solutions/education' }
-      title: 'Company',
-    e: 'About Us', href: '/about' } { name: 'Team', href: '/about/team' } { name: 'Careers', href: '/careers' } { name: 'Partners', href: '/partners' } { name: 'News', href: '/news' } { name: 'Events', href: '/events' }
-      title: 'Resources',
-    e: 'Case Studies', href: '/case-studies' } { name: 'Research & Development', href: '/research-development' } { name: 'Blog', href: '/blog' } { name: 'White Papers', href: '/white-papers' } { name: 'Webinars', href: '/webinars' } { name: 'Documentation', href: '/docs' }
-      title: 'Support',
-    e: 'Help Center', href: '/support' } { name: 'Training', href: '/training' } { name: 'Contact', href: '/contact' } { name: 'Request Quote', href: '/request-quote' } { name: 'Status', href: '/status' } { name: 'API Documentation', href: '/api' }
-  const footerSections = [{
-      links: [
-        { name: 'AI Services', href: '/services/ai' } {name: 'Cloud Solutions', href: '/services/cloud' } {name: 'Cybersecurity', href: '/services/cybersecurity' } {name: 'IT Infrastructure', href: '/services/infrastructure' } {name: 'Digital Transformation', href: '/services/transformation' } {name: 'Consulting', href: '/services/consulting' }
-    } {title: 'Solutions',
-      links: [{ name: 'Industry Solutions', href: '/solutions/industry' } {name: 'Manufacturing', href: '/solutions/manufacturing' } {name: 'Financial Services', href: '/solutions/financial' } {name: 'Healthcare', href: '/solutions/healthcare' } {name: 'Retail', href: '/solutions/retail' } {name: 'Education', href: '/solutions/education' }
-    } {title: 'Company',
-      links: [{ name: 'About Us', href: '/about' } {name: 'Team', href: '/about/team' } {name: 'Careers', href: '/careers' } {name: 'Partners', href: '/partners' } {name: 'News', href: '/news' } {name: 'Events', href: '/events' }
-    } {title: 'Resources',
-      links: [{ name: 'Case Studies', href: '/case-studies' } {name: 'Research & Development', href: '/research-development' } {name: 'Blog', href: '/blog' } {name: 'White Papers', href: '/white-papers' } {name: 'Webinars', href: '/webinars' } {name: 'Documentation', href: '/docs' }
-    } {title: 'Support',
-      links: [{ name: 'Help Center', href: '/support' } {name: 'Training', href: '/training' } {name: 'Contact', href: '/contact' } {name: 'Request Quote', href: '/request-quote' } {name: 'Status', href: '/status' } {name: 'API Documentation', href: '/api' }
-    }
-  ]
-
-  const socialLinks = ['
-    { name: 'Twitter', href: 'http,
-    s://twitter.com/ziontechgroup', icon: Twitter } { name: 'LinkedIn', href: 'http,
-    s://linkedin.com/company/ziontechgroup', icon: Linkedin } { name: 'Facebook', href: 'http,
-    s://facebook.com/ziontechgroup', icon: Facebook } { name: 'Instagram', href: 'http,
-    s://instagram.com/ziontechgroup', icon: Instagram } { name: 'YouTube', href: 'http,
-    s://youtube.com/@ziontechgroup', icon: Youtube }
-
+  ArrowRight,;';
+  Shield,;';';
+  Zap,;';';';
+  Users,;',';';
+    ';';';
+  Globe';';
+  Zap,;';';
+  Users,;';';';
+  Globe;',';';
+    ';';';
+import React { useState } from &apos;react&apos; import { Link } from &apos;react - router - dom&apos; import { motion } from &apos;framer - motion&apos; import { Mail, Phone, MapPin, ArrowUp, Heart, CheckCircle, Send, Globe } from &apos;lucide - react&apos;&apos;' export function FooterNewsletter () {} const [email, setEmail] = useState (&apos;&apos)&apos;&apos;  const [isSubscribed, setIsSubscribed] = useState (false)  const;const;const [isLoading, setIsLoading] = useState (false)  ;const handleSubscribe = async (e) => { e.preventDefault ()  if (!email) return setIsLoading (true) ',',';';
+    ';';';';
+&apos}'',';';
+    ';';';
+import React from 'react';""',';';
+    ';';';
+import React { useState } from 'react' import { Link } from 'react - router - dom' import { motion } from 'framer - motion' import { Mail, Phone, MapPin, ArrowUp, Heart, CheckCircle, Send, Globe } from 'lucide - react' export function FooterNewsletter () { const [email, setEmail] = useState ('')  const [isSubscribed, setIsSubscribed] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const handleSubscribe = async (e) => { e.preventDefault ()  if (!email) return setIsLoading (true) ',;',';';
+    '';';';';
+import React from 'react',;';';
+    ';';';
+import { Link  } from 'react-router-dom';
+import {
+  Mail, Phone,
+  MapPin, Twitter,;
+  Linkedin, Facebook,;
+  Instagram, Youtube,;';
+  ArrowRight, Shield,;';';
+  Zap, Users,;';';';
+  Globe;", ";',';';
+    ';';';
+} from 'lucide-react';';';
+export function Footer() {const currentYear = new Date().getFullYear();';';';
+  const footerSections = [',';';
+    ';';';
+    {'';';';';
+      title: 'Services',',';';
+    ';';';
+      links: ['';';';
+        { nam,',';';
+    ';';';
+    e: 'AI Services', href: '/services/ai' } { name: 'Cloud Solutions', href: '/services/cloud' } { name: 'Cybersecurity', href: '/services/cybersecurity' } { name: 'IT Infrastructure', href: '/services/infrastructure' } { name: 'Digital Transformation', href: '/services/transformation' } { name: 'Consulting', href: '/services/consulting' }';';';
+      ]',';';
+    ';';';
+} {'';';';';
+      title: 'Solutions',',';';
+    ';';';
+    e: 'Industry Solutions', href: '/solutions/industry' } { name: 'Manufacturing', href: '/solutions/manufacturing' } { name: 'Financial Services', href: '/solutions/financial' } { name: 'Healthcare', href: '/solutions/healthcare' } { name: 'Retail', href: '/solutions/retail' } { name: 'Education', href: '/solutions/education' }',';';
+    ';';';
+      title: 'Company',',';';
+    ';';';
+    e: 'About Us', href: '/about' } { name: 'Team', href: '/about/team' } { name: 'Careers', href: '/careers' } { name: 'Partners', href: '/partners' } { name: 'News', href: '/news' } { name: 'Events', href: '/events' }',';';
+    ';';';
+      title: 'Resources',',';';
+    ';';';
+    e: 'Case Studies', href: '/case-studies' } { name: 'Research & Development', href: '/research-development' } { name: 'Blog', href: '/blog' } { name: 'White Papers', href: '/white-papers' } { name: 'Webinars', href: '/webinars' } { name: 'Documentation', href: '/docs' }',';';
+    ';';';
+      title: 'Support',',';';
+    ';';';
+    e: 'Help Center', href: '/support' } { name: 'Training', href: '/training' } { name: 'Contact', href: '/contact' } { name: 'Request Quote', href: '/request-quote' } { name: 'Status', href: '/status' } { name: 'API Documentation', href: '/api' }';';
+  const footerSections = [{';';';
+      links: [',';';
+    ';';';
+        { name: 'AI Services', href: '/services/ai' } {name: 'Cloud Solutions', href: '/services/cloud' } {name: 'Cybersecurity', href: '/services/cybersecurity' } {name: 'IT Infrastructure', href: '/services/infrastructure' } {name: 'Digital Transformation', href: '/services/transformation' } {name: 'Consulting', href: '/services/consulting' }',';';
+    ';';';
+    } {title: 'Solutions',',';';
+    ';';';
+      links: [{ name: 'Industry Solutions', href: '/solutions/industry' } {name: 'Manufacturing', href: '/solutions/manufacturing' } {name: 'Financial Services', href: '/solutions/financial' } {name: 'Healthcare', href: '/solutions/healthcare' } {name: 'Retail', href: '/solutions/retail' } {name: 'Education', href: '/solutions/education' }',';';
+    ';';';
+    } {title: 'Company',',';';
+    ';';';
+      links: [{ name: 'About Us', href: '/about' } {name: 'Team', href: '/about/team' } {name: 'Careers', href: '/careers' } {name: 'Partners', href: '/partners' } {name: 'News', href: '/news' } {name: 'Events', href: '/events' }',';';
+    ';';';
+    } {title: 'Resources',',';';
+    ';';';
+      links: [{ name: 'Case Studies', href: '/case-studies' } {name: 'Research & Development', href: '/research-development' } {name: 'Blog', href: '/blog' } {name: 'White Papers', href: '/white-papers' } {name: 'Webinars', href: '/webinars' } {name: 'Documentation', href: '/docs' }',';';
+    ';';';
+    } {title: 'Support',',';';
+    ';';';
+      links: [{ name: 'Help Center', href: '/support' } {name: 'Training', href: '/training' } {name: 'Contact', href: '/contact' } {name: 'Request Quote', href: '/request-quote' } {name: 'Status', href: '/status' } {name: 'API Documentation', href: '/api' }';';
+    }';';';
+  ]',';';
+    ';';';
+  const socialLinks = ['';';';';
+    { name: 'Twitter', href: 'http,',';';
+    ';';';
+    s://twitter.com/ziontechgroup', icon: Twitter } { name: 'LinkedIn', href: 'http,',';';
+    ';';';
+    s://linkedin.com/company/ziontechgroup', icon: Linkedin } { name: 'Facebook', href: 'http,',';';
+    ';';';
+    s://facebook.com/ziontechgroup', icon: Facebook } { name: 'Instagram', href: 'http,',';';
+    ';';';
+    s://instagram.com/ziontechgroup', icon: Instagram } { name: 'YouTube', href: 'http,',';';
+    ';';';
+    s://youtube.com/@ziontechgroup', icon: Youtube }';';';';
   return ('
     <footer className="bg-zion-blue-dark border-t border-zion-purple/20">
       {/* Main Footer Content */}"
@@ -102,64 +148,108 @@ export function Footer() {const currentYear = new Date().getFullYear();
               <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-zion-purple to-zion-cyan flex items-center justify-center">"
                 <span className="text-white font-bold text-xl">Z</span>
               </div>
-              <div>"
-                <h3 className="text-xl font-bold text-white">Zion Tech Group</h3>"
-                <p className="text-zion-cyan text-sm">Innovating Tomorrow</p>
-            "
-  const socialLinks = [{name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter } {name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin } {name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook } {name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram } {name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube }
-    {""
-      title: 'Services', links: [""
-        { name: 'AI Services', href: '/services/ai' }, ""
-        { name: 'Cloud Solutions', href: '/services/cloud' }, ""
-        { name: 'Cybersecurity', href: '/services/cybersecurity' }, ""
-        { name: 'IT Infrastructure', href: '/services/infrastructure' }, ""
-        { name: 'Digital Transformation', href: '/services/transformation' }, ""
-  {"
-      links: ["
-        { name: 'AI Services', href: '/services/ai' },"
-        { name: 'Cloud Solutions', href: '/services/cloud' },"
-        { name: 'Cybersecurity', href: '/services/cybersecurity' },"
-        { name: 'IT Infrastructure', href: '/services/infrastructure' },"
-        { name: 'Digital Transformation', href: '/services/transformation' },"
-        { name: 'Consulting', href: '/services/consulting' }
-      ]} {""
-      title: 'Solutions', links: [""
-        { name: 'Industry Solutions', href: '/solutions/industry' }, ""
-        { name: 'Manufacturing', href: '/solutions/manufacturing' }, ""
-        { name: 'Financial Services', href: '/solutions/financial' }, ""
-        { name: 'Healthcare', href: '/solutions/healthcare' }, ""
-        { name: 'Retail', href: '/solutions/retail' }, ""
-        { name: 'Education', href: '/solutions/education' }
-      title: 'Company', links: [""
-        { name: 'About Us', href: '/about' }, ""
-        { name: 'Team', href: '/about/team' }, ""
-        { name: 'Careers', href: '/careers' }, ""
-        { name: 'Partners', href: '/partners' }, ""
-        { name: 'News', href: '/news' }, ""
-        { name: 'Events', href: '/events' }
-      title: 'Resources', links: [""
-        { name: 'Case Studies', href: '/case-studies' }, ""
-        { name: 'Research & Development', href: '/research-development' }, ""
-        { name: 'Blog', href: '/blog' }, ""
-        { name: 'White Papers', href: '/white-papers' }, ""
-        { name: 'Webinars', href: '/webinars' }, ""
-        { name: 'Documentation', href: '/docs' }
-      title: 'Support', links: [""
-        { name: 'Help Center', href: '/support' }, ""
-        { name: 'Training', href: '/training' }, ""
-        { name: 'Contact', href: '/contact' }, ""
-        { name: 'Request Quote', href: '/request-quote' }, ""
-        { name: 'Status', href: '/status' }, ""
-        { name: 'API Documentation', href: '/api' }
-      ]}
-
-  const socialLinks = [""
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }, ""
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },""
-    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook }, ""
-    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },""
+              <div>"';
+                <h3 className="text-xl font-bold text-white">Zion Tech Group</h3>"';';
+                <p className="text-zion-cyan text-sm">Innovating Tomorrow</p>';';';
+            "',';';
+    ';';';
+  const socialLinks = [{name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter } {name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin } {name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook } {name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram } {name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube }';';';
+    {""',';';
+    ';';';
+      title: 'Services', links: [""',';';
+    ';';';
+        { name: 'AI Services', href: '/services/ai' }, ""',';';
+    ';';';
+        { name: 'Cloud Solutions', href: '/services/cloud' }, ""',';';
+    ';';';
+        { name: 'Cybersecurity', href: '/services/cybersecurity' }, ""',';';
+    ';';';
+        { name: 'IT Infrastructure', href: '/services/infrastructure' }, ""',';';
+    ';';';
+        { name: 'Digital Transformation', href: '/services/transformation' }, ""';';
+  {"';';';
+      links: ["',';';
+    ';';';
+        { name: 'AI Services', href: '/services/ai' },"',';';
+    ';';';
+        { name: 'Cloud Solutions', href: '/services/cloud' },"',';';
+    ';';';
+        { name: 'Cybersecurity', href: '/services/cybersecurity' },"',';';
+    ';';';
+        { name: 'IT Infrastructure', href: '/services/infrastructure' },"',';';
+    ';';';
+        { name: 'Digital Transformation', href: '/services/transformation' },"',';';
+    ';';';
+        { name: 'Consulting', href: '/services/consulting' }';';';
+      ]} {""',';';
+    ';';';
+      title: 'Solutions', links: [""',';';
+    ';';';
+        { name: 'Industry Solutions', href: '/solutions/industry' }, ""',';';
+    ';';';
+        { name: 'Manufacturing', href: '/solutions/manufacturing' }, ""',';';
+    ';';';
+        { name: 'Financial Services', href: '/solutions/financial' }, ""',';';
+    ';';';
+        { name: 'Healthcare', href: '/solutions/healthcare' }, ""',';';
+    ';';';
+        { name: 'Retail', href: '/solutions/retail' }, ""',';';
+    ';';';
+        { name: 'Education', href: '/solutions/education' }',';';
+    ';';';
+      title: 'Company', links: [""',';';
+    ';';';
+        { name: 'About Us', href: '/about' }, ""',';';
+    ';';';
+        { name: 'Team', href: '/about/team' }, ""',';';
+    ';';';
+        { name: 'Careers', href: '/careers' }, ""',';';
+    ';';';
+        { name: 'Partners', href: '/partners' }, ""',';';
+    ';';';
+        { name: 'News', href: '/news' }, ""',';';
+    ';';';
+        { name: 'Events', href: '/events' }',';';
+    ';';';
+      title: 'Resources', links: [""',';';
+    ';';';
+        { name: 'Case Studies', href: '/case-studies' }, ""',';';
+    ';';';
+        { name: 'Research & Development', href: '/research-development' }, ""',';';
+    ';';';
+        { name: 'Blog', href: '/blog' }, ""',';';
+    ';';';
+        { name: 'White Papers', href: '/white-papers' }, ""',';';
+    ';';';
+        { name: 'Webinars', href: '/webinars' }, ""',';';
+    ';';';
+        { name: 'Documentation', href: '/docs' }',';';
+    ';';';
+      title: 'Support', links: [""',';';
+    ';';';
+        { name: 'Help Center', href: '/support' }, ""',';';
+    ';';';
+        { name: 'Training', href: '/training' }, ""',';';
+    ';';';
+        { name: 'Contact', href: '/contact' }, ""',';';
+    ';';';
+        { name: 'Request Quote', href: '/request-quote' }, ""',';';
+    ';';';
+        { name: 'Status', href: '/status' }, ""',';';
+    ';';';
+        { name: 'API Documentation', href: '/api' }';';
+      ]}';';';
+  const socialLinks = [""',';';
+    ';';';
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }, ""',';';
+    ';';';
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },""',';';
+    ';';';
+    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook }, ""',';';
+    ';';';
+    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },""',';';
+    ';';';
     { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube }
-
   return (""
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
@@ -178,10 +268,9 @@ export function Footer() {const currentYear = new Date().getFullYear();
                 <h3 className="text-xl font-bold text-white">Zion Tech Group</h3>""
             ""
             <p className="text-zion-slate-light mb-6 leading-relaxed">
-              Empowering businesses with cutting-edge technology solutions, AI-driven insights, 
+              Empowering businesses with cutting-edge technology solutions, AI-driven insights,
               and transformative digital strategies for the future.
             </p>
-            
             {/* Contact Info */}"
             <div className="space-y-3">"
               <div className="flex items-center space-x-3 text-zion-slate-light">"
@@ -199,9 +288,8 @@ export function Footer() {const currentYear = new Date().getFullYear();
                 <Phone className="h-4 w-4 text-zion-cyan" /" >"
                 <MapPin className="h-4 w-4 text-zion-cyan" /" >"
                 <span>123 Innovation Drive, Tech City, TC 12345</span>
-
           {/* Footer Sections */}
-          {footerSections.map((section) => (
+          { footerSections.map((section) => (
             <div key={section.title}>"
               <h4 className="text-white font-semibold mb-4">{section.title}</h4>"
               <ul className="space-y-2">
@@ -213,7 +301,7 @@ export function Footer() {const currentYear = new Date().getFullYear();
                     >"
                       <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hove,
     r:opacity-100 transition-opacity" />
-          {/* Footer Sections */} {footerSections.map((section) => (
+          {/* Footer Sections */} { footerSections.map((section) => (
             <div key={section.title}>
               <h4 className="text-white font-semibold mb-4">{section.title}</h4>
                     <Link to={link.href} className="text-zion-slate-light hover: text-zion-cyan transition-colors text-sm flex items-center group" >
@@ -231,9 +319,12 @@ export function Footer() {const currentYear = new Date().getFullYear();
                       {link.name}
                     </Link>
                   </li>
-                ))}
+                ))
+      )}
+    </div>
+  );
+}
               </ul>
-
         {/* Newsletter Signup */}"
         <div className="mt-16 pt-8 border-t border-zion-purple/20">"
           <div className="max-w-2xl mx-auto text-center">"
@@ -265,7 +356,6 @@ export function Footer() {const currentYear = new Date().getFullYear();
               <button className="px-6 py-3 bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple/80 hover:to-zion-cyan/80 text-white font-medium rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/25">
                 Subscribe
               </button>
-
         {/* Trust Indicators */}"
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">"
               <Shield className="h-5 w-5 text-zion-cyan" />"
@@ -287,7 +377,6 @@ export function Footer() {const currentYear = new Date().getFullYear();
               <Users className="h-5 w-5 text-zion-cyan" /" >"
               <Globe className="h-5 w-5 text-zion-cyan" /" >"
               <span className="text-sm">Global Presence</span>
-
       {/* Bottom Footer */}"
       <div className="border-t border-zion-purple/20">"
         <div className="container mx-auto px-4 py-6">"
@@ -306,7 +395,6 @@ export function Footer() {const currentYear = new Date().getFullYear();
             {/* Copyright */}""
             <div className="text-zion-slate-light text-sm">
               © {currentYear} Zion Tech Group. All rights reserved.
-
             {/* Legal Links */}"
             <div className="flex items-center space-x-6 text-sm">"
               <Link to="/privacy-policy" className="text-zion-slate-light hover: text-zion-cyan transition-colors">
@@ -325,10 +413,9 @@ export function Footer() {const currentYear = new Date().getFullYear();
               <Link to="/terms-of-service" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
               <Link to="/cookie-policy" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
                 Cookie Policy
-
             {/* Social Links */}"
             <div className="flex items-center space-x-4">
-              {socialLinks.map((social) => (
+              { socialLinks.map((social) => (
                 <a
                   key={social.name}
                   href={social.href}"
@@ -350,5 +437,9 @@ export function Footer() {const currentYear = new Date().getFullYear();
                 </a>
     </footer>
   )}"
-  )}
-"
+  )
+      )}
+    </div>';
+  );';';
+}';';';
+"';';';';

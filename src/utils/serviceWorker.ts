@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react';';';
 import {SEO } from '@/components/SEO';
 
 ;,"});,"})
 export default function serviceWorker() {return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+    <div className="min-h-screen bg-white">
       <SEO title="serviceWorker - Zion Tech Group" description="Professional serviceWorker services by Zion Tech Group" />
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold text-white mb-8">serviceWorker</h1>
@@ -13,5 +13,5 @@ export default function serviceWorker() {return (
       </div>
     </div>
   );
-}
-"
+}';
+"';';

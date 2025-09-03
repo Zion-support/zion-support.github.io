@@ -3,7 +3,7 @@ export const useAppDispatch = () => useDispatch();
 export const useAppSelector = useSelector;"
 const Hooks: React.FC = () => {
   return (
-    <div className=min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="min-h-screen bg-white">
       <SEO 
         title="Hooks - Zion Tech Group
         description=Professional Hooks services by Zion Tech Group"
@@ -25,5 +25,5 @@ const Hooks: React.FC = () => {
           </div>
   )};
 
-export default Hooks;
-"
+export default Hooks;';
+"';';

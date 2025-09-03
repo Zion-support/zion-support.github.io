@@ -1,22 +1,23 @@
-import React from 'react';
+import React from 'react',;',';';
+    ';';';';
 import { Helmet } from 'react-helmet-async';
-import { 
-  Mail, 
-  Brain, 
-  Zap, 
-  Shield, 
-  BarChart3, 
-  Clock, 
-  Users, 
+import {
+  Mail,
+  Brain,
+  Zap,
+  Shield,
+  BarChart3,
+  Clock,
+  Users,
   CheckCircle,
   ArrowRight,
-  Star,
-  TrendingUp,
-  MessageSquare,
-  Filter,;
-  Target,;
+  Star,;
+  TrendingUp,;';
+  MessageSquare,;';';
+  Filter,;';';';
+  Target,;',';';
+    ';';';
   Smartphone} from 'lucide-react';
-
 const AIEmailResponder: React.FC = () => {
   const features = [
     {
@@ -47,7 +48,6 @@ const AIEmailResponder: React.FC = () => {
       title: "Custom Templates",
       description: "Create and manage custom response templates for different scenarios and industries."}
   ]
-
   const benefits = [
     "Reduce email response time by 80%",
     "Improve customer satisfaction scores",
@@ -56,7 +56,6 @@ const AIEmailResponder: React.FC = () => {
     "Scale customer support operations",
     "Maintain consistent brand voice"
   ]
-
   const pricing = [
     {
       name: "Starter",
@@ -101,7 +100,6 @@ const AIEmailResponder: React.FC = () => {
       ]
 }
   ]
-
   return (
     <>
       <Helmet>
@@ -109,7 +107,6 @@ const AIEmailResponder: React.FC = () => {
         <meta name="description" content="Automate email responses with AI-powered intelligence. Reduce response time by 80% and improve customer satisfaction with our smart email responder." />
         <meta name="keywords" content="AI email responder, email automation, customer support, AI assistant, email management" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -123,26 +120,25 @@ const AIEmailResponder: React.FC = () => {
                 AI-Powered Email Responder
               </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-                Transform your email communication with intelligent automation. Our AI-powered email responder understands context, 
+                Transform your email communication with intelligent automation. Our AI-powered email responder understands context,
                 prioritizes messages, and provides instant, professional responses 24/7.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="https://ziontechgroup.com/contact" 
+                <a
+                  href="https://ziontechgroup.com/contact"
                   className="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
                 >
                   Start Free Trial
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </a>
-                <a 
-                  href="https://ziontechgroup.com/demo" 
+                <a
+                  href="https://ziontechgroup.com/demo"
                   className="inline-flex items-center px-8 py-4 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-colors"
                 >
                   Watch Demo
                 </a>
               </div>
             </div>
-
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
               <div className="text-center">
@@ -164,7 +160,6 @@ const AIEmailResponder: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
@@ -176,7 +171,6 @@ const AIEmailResponder: React.FC = () => {
                 Our AI email responder combines cutting-edge technology with intuitive design to revolutionize your email management.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow">
@@ -188,11 +182,14 @@ const AIEmailResponder: React.FC = () => {
                   </div>
                   <p className="text-gray-600">{feature.description}</p>
                 </div>
-              ))}
+              ))
+      )}
+    </div>
+  );
+}
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
           <div className="max-w-7xl mx-auto">
@@ -204,7 +201,6 @@ const AIEmailResponder: React.FC = () => {
                 Experience the benefits of intelligent email automation that scales with your business needs.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="space-y-6">
                 {benefits.map((benefit, index) => (
@@ -212,7 +208,11 @@ const AIEmailResponder: React.FC = () => {
                     <CheckCircle className="w-6 h-6 text-green-500 mr-4 flex-shrink-0" />
                     <span className="text-gray-700 text-lg">{benefit}</span>
                   </div>
-                ))}
+                ))
+      )}
+    </div>
+  );
+}
               </div>
               <div className="bg-white p-8 rounded-xl shadow-lg">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">Real Results</h3>
@@ -238,7 +238,6 @@ const AIEmailResponder: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
@@ -248,11 +247,11 @@ const AIEmailResponder: React.FC = () => {
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Choose the plan that fits your business needs. All plans include our core AI features.
-              </p>
-            </div>
-
-            <div className={`grid grid-cols-1 md:grid-cols-3 gap-8`>
-              {pricing.map((plan, index) => (
+              </p>';
+            </div>';';
+            <div className={`grid grid-cols-1 md:grid-cols-3 gap-8`>';';';
+              {pricing.map((plan, index) => (',';';
+    ';';';
                 <div key={index} className={`relative p-8 rounded-xl border-2 ${plan.popular ? 'border-blue-500 bg-blue-50' : 'border-gray-200 bg-white'} hover:shadow-lg transition-shadow`}>
                   {plan.popular && (
                     <div className=`absolute -top-4 left-1/2 transform -translate-x-1/2`}>
@@ -260,7 +259,11 @@ const AIEmailResponder: React.FC = () => {
                         Most Popular
                       </span>
                     </div>
-                  )}
+                  )
+      )}
+    </div>
+  );
+}
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
                     <div className="flex items-baseline justify-center">
@@ -275,22 +278,31 @@ const AIEmailResponder: React.FC = () => {
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
                         <span className="text-gray-700">{feature}</span>
                       </li>
-                    ))}
-                  </ul>
-                  <a href={`https: //ziontechgroup.com/contact` 
-                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
-                      plan.popular 
-                        ? 'bg-blue-600 text-white hover:bg-blue-700' 
+                    ))
+      )}
+    </div>
+  );
+}
+                  </ul>';
+                  <a href={`https: //ziontechgroup.com/contact`';';
+                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${';';';
+                      plan.popular',';';
+    ';';';
+                        ? 'bg-blue-600 text-white hover:bg-blue-700'',';';
+    ';';';
                         : 'bg-gray-900 text-white hover:bg-gray-800'}`}
                   >
                     Get Started
                   </a>
                 </div>
-              ))}
+              ))
+      )}
+    </div>
+  );
+}
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className=`py-20 px-4 sm:px-6 lg:px-8 bg-blue-600`}>
           <div className="max-w-4xl mx-auto text-center">
@@ -301,15 +313,15 @@ const AIEmailResponder: React.FC = () => {
               Join thousands of businesses already using our AI email responder to improve efficiency and customer satisfaction.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="https://ziontechgroup.com/contact" 
+              <a
+                href="https://ziontechgroup.com/contact"
                 className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
               >
                 Start Free Trial
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
-              <a 
-                href="tel:+13024640950" 
+              <a
+                href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
               >
                 Call +1 302 464 0950
@@ -329,8 +341,7 @@ const AIEmailResponder: React.FC = () => {
         {" • "}
         <a href="https: //www.microsoft.com/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook" target="_blank" rel="noopener noreferrer">Outlook</a>
       </div>
-    </div>
-    </>
-  )};
-
-export default AIEmailResponder;"
+    </div>';
+    </>';';
+  )};';';';
+export default AIEmailResponder;"';';';';

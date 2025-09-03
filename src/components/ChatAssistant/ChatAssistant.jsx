@@ -1,4 +1,4 @@
-            {contextHeader}"});,"})
+{contextHeader}"});,"})
           </div>)}});
   })
 "";
@@ -14,7 +14,9 @@
             </div>) : (currentMessages.map((msg) => (<ChatMessage key="{msg.id}" role={msg.role} message={msg.message}/>)))}});,"})
           <div ref={messagesEndRef}/>;,"});
   })
-        </div>;
+        </div>
+  );
+}
   });,"})
 ";,"});,"})
         {/* Input */}"";
@@ -24,5 +26,5 @@
   });
   })
           <ChatInput onSend={handleSendMessage}/>);
-
 export default ComponentName;"
+}

@@ -1,27 +1,32 @@
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import React from 'react';
+import { motion } from 'framer-motion',;',';';
+    ';';';';
+import { SEO } from '../components/SEO',;';';
+    ';';';';
+import React from 'react',;',';';
+    ';';';';
 import {SEO } from '@/components/SEO';
-
-;,"});,"})
+,"});,"})
 export default function Pricing() {return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+    <div className="min-h-screen bg-white">
       <SEO title="Pricing - Zion Tech Group" description="Professional Pricing services by Zion Tech Group" />
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold text-white mb-8">Pricing</h1>
         <p className="text-gray-300 text-lg">
-          Professional Pricing services to help your business grow.
-        </p>
-      </div>
-    </div>
-import React from &apos;react';
-import { motion } from &apos;framer-motion';
-import { SEO } from &apos;../components/SEO';
-import { 
-  Check, Star, ArrowRight, Users, Zap, Shield, ;
-  Brain, Atom, Rocket, Globe, Award,;
+          Professional Pricing services to help your business grow.';
+        </p>';';
+      </div>';';';
+    </div>',';';
+    ';';';
+import React from &apos;react',';';';
+    ',';';
+    ';';';
+import { motion } from &apos;framer-motion';';';';';
+import { SEO } from &apos;../components/SEO';';
+import {;';';
+  Check, Star, ArrowRight, Users, Zap, Shield, ;';';';
+  Brain, Atom, Rocket, Globe, Award,;',';';
+    ';';';
 } from &apos;lucide-react';&apos;&apos;
-
 export default function Pricing() {}
   const pricingPlans = [
     ;{
@@ -65,18 +70,19 @@ export default function Pricing() {}
         &quot;Custom analytics and dashboards&quot,
         &quot;Full API access&quot,
         &quot;Custom development services&quot,
-        &quot;Dedicated account manager&quot],
-      popular: false,
-      color: &quot;from-orange-500 to-red-500&quot}
-  ]&quot;
-
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { ;
-  Check, Star, ArrowRight, Users, Zap, Shield, ;
-  Brain, Atom, Rocket, Globe, Award
+        &quot;Dedicated account manager&quot],';
+      popular: false,';';
+      color: &quot;from-orange-500 to-red-500&quot}';';';
+  ]&quot;',';';
+    ';';';
+import { motion } from 'framer-motion',;',';';
+    ';';';';
+import { SEO } from '../components/SEO';';
+import { ;';';
+  Check, Star, ArrowRight, Users, Zap, Shield, ;';';';
+  Brain, Atom, Rocket, Globe, Award',';';
+    ';';';
   } from 'lucide-react';
-;
 export default function Pricing() {;
   const pricingPlans = [
   {;
@@ -154,16 +160,15 @@ export default function Pricing() {;
       description: "Custom software solutions and micro SaaS applications"}
   ]
 ;
-  return (
-    
-    <>;
-      <SEO ;
-        title="Pricing - Zion Tech Group | Transparent Technology Solutions Pricing";
+  return (';
+    <>;';';
+      <SEO ;';';';
+        title="Pricing - Zion Tech Group | Transparent Technology Solutions Pricing";',';';
+    ';';';
         description="Explore Zion Tech Group's transparent pricing for AI services, quantum computing, cybersecurity, and micro SaaS solutions. Choose the plan that fits your needs.";
         keywords="pricing, AI services pricing, quantum computing cost, cybersecurity pricing, micro SaaS pricing, Zion Tech Group";
       />;
-      ;
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">;
           <div className="container mx-auto px-4">;
@@ -182,11 +187,14 @@ export default function Pricing() {;
               </p>;
               <div className="flex items-center justify-center">;
                 <Star className="w-16 h-16 text-blue-400" />;
-              </div>;
+              </div>
+  );
+}
             </motion.div>;
-          </div>;
+          </div>
+  );
+}
         </section>;
-
         {/* Pricing Plans */}
         <section className="py-16">;
           <div className="container mx-auto px-4">;
@@ -201,11 +209,12 @@ export default function Pricing() {;
                 Flexible pricing options designed to scale with your business;
               </p>;
             </motion.div>;
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
               {pricingPlans.map((plan, index) => (;
                 <motion.div;
 export default function Pricing() {
+  return (
+  return (
   const pricingPlans = [
     { name: "Starter", price: "$99",
     {
@@ -265,10 +274,9 @@ export default function Pricing() {
       startingPrice: &quot;$149/month&quot,
       description: &quot;Custom software solutions and micro SaaS applications&quot}
   ]
-
   return (&quot;
     <>
-      <SEO 
+      <SEO
         title=&quot;Pricing - Zion Tech Group | Transparent Technology Solutions Pricing&quot;
         description=&quot;Explore Zion Tech Group&apos;s transparent pricing for AI services, quantum computing, cybersecurity, and micro SaaS solutions. Choose the plan that fits your needs.&quot;
         keywords=&quot;pricing, AI services pricing, quantum computing cost, cybersecurity pricing, micro SaaS pricing, Zion Tech Group&quot;
@@ -288,14 +296,14 @@ export default function Pricing() {
   ]
   return (
     <>
-      <SEO 
-        title="Pricing - Zion Tech Group | Transparent Technology Solutions Pricing"
-        description="Explore Zion Tech Group&apos;s transparent pricing for AI services, quantum computing, cybersecurity, and micro SaaS solutions. Choose the plan that fits your needs."
-        keywords="pricing, AI services pricing, quantum computing cost, cybersecurity pricing, micro SaaS pricing, Zion Tech Group"
-        description="Explore Zion Tech Group's transparent pricing for AI services, quantum computing, cybersecurity, and micro SaaS solutions. Choose the plan that fits your needs. 
+      <SEO';
+        title="Pricing - Zion Tech Group | Transparent Technology Solutions Pricing"';';
+        description="Explore Zion Tech Group&apos;s transparent pricing for AI services, quantum computing, cybersecurity, and micro SaaS solutions. Choose the plan that fits your needs."';';';
+        keywords="pricing, AI services pricing, quantum computing cost, cybersecurity pricing, micro SaaS pricing, Zion Tech Group"',';';
+    ';';';
+        description="Explore Zion Tech Group's transparent pricing for AI services, quantum computing, cybersecurity, and micro SaaS solutions. Choose the plan that fits your needs.';';';';
         keywords='pricing, AI services pricing, quantum computing cost, cybersecurity pricing, micro SaaS pricing, Zion Tech Group"
       />
-      
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900&quot;>
         {/* Hero Section */}&quot;
         <section className=&quot;py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20&quot;>&quot;"
@@ -315,7 +323,7 @@ export default function Pricing() {
                 Transparent Pricing&quot;
               </h1>
               <p className=&quot;text-xl text-gray-300 mb-8&quot;>
-                Choose the perfect plan for your business needs. All plans include 
+                Choose the perfect plan for your business needs. All plans include
                 our core features with no hidden fees or surprises.&quot;
               </p>
               <div className=&quot;flex items-center justify-center&quot;>&quot;"
@@ -324,7 +332,6 @@ export default function Pricing() {
             </motion.div>
           </div>
         </section>
-
         {/* Pricing Plans */}
         <section className=&quot;py-16&quot;>&quot;"
           <div className=&quot;container mx-auto px-4&quot;>&quot;"
@@ -345,17 +352,18 @@ export default function Pricing() {
                 Flexible pricing options designed to scale with your business&quot;
               </p>
             </motion.div>
-
             <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8&quot;>
               {pricingPlans.map((plan, index) => (&quot}
                 <motion.div
                   key={plan.name}
                   initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className={`relative bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-8 border ${;
-                    plan.popular ;
-                      ? 'border-blue-400/50 ring-2 ring-blue-400/20' ;
+                  whileInView={{ opacity: 1, y: 0 }}';
+                  transition={{ duration: 0.8, delay: index * 0.1 }}';';
+                  className={`relative bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-8 border ${;';';';
+                    plan.popular ;',';';
+    ';';';
+                      ? 'border-blue-400/50 ring-2 ring-blue-400/20',',';';
+    ';';';';
                       : 'border-slate-600/50';
                   } hover:border-cyan-400/50 transition-all duration-300 hover:scale-105`}
                 >;
@@ -364,10 +372,12 @@ export default function Pricing() {
                       <span className={`px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-semibold rounded-full`>;
                         Most Popular;
                       </span>;
-                    </div>;
+                    </div>
+  );
+}
                   className={`relative bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-8 border ${
-                    plan.popular 
-                      ? &apos;border-blue-400/50 ring-2 ring-blue-400/20&apos; 
+                    plan.popular
+                      ? &apos;border-blue-400/50 ring-2 ring-blue-400/20&apos;
                       : &apos;border-slate-600/50&apos} hover:border-cyan-400/50 transition-all duration-300 hove,r:scale-105`}
                 >
                   {plan.popular && (&apos}
@@ -376,20 +386,29 @@ export default function Pricing() {
                         Most Popular&quot;
                       </span>
                     </div>
-                  )}
+                  )
+      )}
+    </div>
+  );
+}
 ;
                   <div className=`}text-center mb-8`>;
                     <div className={`w-16 h-16 bg-gradient-to-br ${plan.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>;
                       <Star className=`w-8 h-8 text-white" />;
-                    </div>;
+                    </div>
+  );
+}
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>;
                     <p className="text-gray-300 text-sm mb-4">{plan.description}</p>;
                     <div className="mb-4">;
                       <span className="text-4xl font-bold text-white">{plan.price}</span>;
                       <span className="text-gray-400 ml-2">{plan.period}</span>;
-                    </div>;
-                  </div>;
-
+                    </div>
+  );
+}
+                  </div>
+  );
+}
                   <ul className="space-y-3 mb-8">;
                     {plan.features.map((feature, featureIndex) => (;
                       <li key={featureIndex} className="flex items-center text-gray-300">;
@@ -407,37 +426,50 @@ export default function Pricing() {
                       <span className=&quot;text-gray-400 ml-2&quot;>{plan.period}&quot;</span>
                     </div>
                   </div>
-
                   <ul className=&quot;space-y-3 mb-8&quot;>
                     {plan.features.map((feature, featureIndex) => (&quot}
                       <li key={featureIndex} className=&quot;flex items-center text-gray-300&quot;>&quot;`
                         <Check className=&quot;w-5 h-5 text-green-400 mr-3 flex-shrink-0&quot; />&quot;
                         <span className=&quot;text-sm&quot;>{feature}&quot;</span>
                       </li>
-                    ))}
-                  </ul>;
-
-                  <button className={`w-full px-6 py-3 font-semibold rounded-lg transition-all duration-200 ${;
-                    plan.popular;
-                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover: from-blue-700 hover:to-purple-700';
+                    ))
+      )}
+    </div>
+  );
+}';
+                  </ul>;';';
+                  <button className={`w-full px-6 py-3 font-semibold rounded-lg transition-all duration-200 ${;';';';
+                    plan.popular;',';';
+    ';';';
+                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover: from-blue-700 hover:to-purple-700',',';';
+    ';';';';
                       : 'border border-slate-600 text-gray-300 hover:bg-slate-700'}`}>;
                     Get Started;
                   </button>;
                 </motion.div>;
-                  <button className={`w-full px-6 py-3 font-semibold rounded-lg transition-all duration-200 ${
-                    plan.popular
-                      ? &apos;bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700&apos;
-                      : &apos;border border-slate-600 text-gray-300 hove,r: bg-slate-700&apos;
-                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover: from-blue-700 hover:to-purple-700'
+                  <button className={`w-full px-6 py-3 font-semibold rounded-lg transition-all duration-200 ${';
+                    plan.popular';';
+                      ? &apos;bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700&apos;';';';
+                      : &apos;border border-slate-600 text-gray-300 hove,r: bg-slate-700&apos;',';';
+    ';';';
+                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover: from-blue-700 hover:to-purple-700'',';';
+    ';';';
                       : 'border border-slate-600 text-gray-300 hover:bg-slate-700'}`}>
                     Get Started&apos;
                   </button>
                 </motion.div>
-              ))}
-            </div>;
-          </div>;
+              ))
+      )}
+    </div>
+  );
+}
+            </div>
+  );
+}
+          </div>
+  );
+}
         </section>;
-
         {/* Service Categories */}
         <section className=`py-16 bg-gradient-to-r from-slate-800/50 to-slate-700/50">;
           <div className="container mx-auto px-4">;
@@ -452,7 +484,6 @@ export default function Pricing() {
                 Explore our specialized service offerings and their starting prices;
               </p>;
             </motion.div>;
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
               {serviceCategories.map((service, index) => (;
                 <motion.div;
@@ -475,7 +506,6 @@ export default function Pricing() {
                 Explore our specialized service offerings and their starting prices&quot;
               </p>
             </motion.div>
-
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 l,g:grid-cols-4 gap-8&quot;>
               {serviceCategories.map((service, index) => (&quot}
                 <motion.div
@@ -487,10 +517,14 @@ export default function Pricing() {
                 >;
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">;
                     <service.icon className="w-8 h-8 text-white" />;
-                  </div>;
+                  </div>
+  );
+}
                   <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>;
                   <p className="text-gray-300 text-sm mb-4">{service.description}</p>;
-                  <div className="text-2xl font-bold text-blue-400 mb-4">{service.startingPrice}</div>;
+                  <div className="text-2xl font-bold text-blue-400 mb-4">{service.startingPrice}</div>
+  );
+}
                   <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">;
                     Learn More;
                   </button>;
@@ -507,11 +541,18 @@ export default function Pricing() {
                     Learn More&quot;
                   </button>
                 </motion.div>
-              ))}
-            </div>;
-          </div>;
+              ))
+      )}
+    </div>
+  );
+}
+            </div>
+  );
+}
+          </div>
+  );
+}
         </section>;
-
         {/* CTA Section */}
         <section className="py-20">;
           <div className="container mx-auto px-4">;
@@ -543,11 +584,17 @@ export default function Pricing() {
                   <ArrowRight className="w-5 h-5 mr-2" />;
                   View All Services;
                 </a>;
-              </div>;
+              </div>
+  );
+}
             </motion.div>;
-          </div>;
+          </div>
+  );
+}
         </section>;
-      </div>;
+      </div>
+  );
+}
     </>;
         <section className=&quot;py-20&quot;>&quot;"
           <div className=&quot;container mx-auto px-4&quot;>&quot;"
@@ -566,7 +613,7 @@ export default function Pricing() {
                 Ready to Get Started?&quot;
               </h2>
               <p className=&quot;text-xl text-gray-300 mb-8&quot;>
-                Contact our team to discuss your specific needs and get a customized quote. 
+                Contact our team to discuss your specific needs and get a customized quote.
                 We offer flexible pricing and can tailor our services to your requirements.&quot;
               </p>
               <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>&quot;"
@@ -591,5 +638,8 @@ export default function Pricing() {
       </div>
 </>
   )
-  )}
-"
+      )}
+    </div>';
+  );';';
+}';';';
+"';';';';

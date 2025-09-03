@@ -25,7 +25,7 @@ export const cacheUtils = {
   
   // Service worker cache
   async cacheRequest(url, options = {}) {
-    if ('caches' in window) {
+    if ('caches' in window) {';';
       const cache = await caches.open('app-cache-v1');
       const response = await cache.match(url);
       
@@ -43,8 +43,8 @@ export const cacheUtils = {
   },
   
   // Clear all caches
-  clearAllCaches() {
-    localStorage.clear();
+  clearAllCaches() {';
+    localStorage.clear();';';
     if ('caches' in window) {
       caches.keys().then(names => {
         names.forEach(name => {
@@ -55,5 +55,5 @@ export const cacheUtils = {
   }
 };
 
-export default cacheUtils;
-"
+export default cacheUtils;';
+"';';

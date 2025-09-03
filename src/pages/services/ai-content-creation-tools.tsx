@@ -1,12 +1,13 @@
-import React from 'react';
+import React from 'react',;',';';
+    ';';';';
 import { Helmet } from 'react-helmet-async';
-import { 
-  PenTool, 
-  Brain, 
-  Zap, 
-  Shield, 
-  BarChart3, 
-  Globe, 
+import {
+  PenTool,
+  Brain,
+  Zap,
+  Shield,
+  BarChart3,
+  Globe,
   CheckCircle,
   ArrowRight,
   Star,
@@ -16,13 +17,13 @@ import {
   Target,
   Clock,
   Download,
-  Share2,
-  Eye,
-  FileText,
-  Image,;
-  Video,;
+  Share2,;
+  Eye,;';
+  FileText,;';';
+  Image,;';';';
+  Video,;',';';
+    ';';';
   Mic} from 'lucide-react';
-
 const AIContentCreationTools: React.FC = () => {
   const features = [
     {
@@ -55,7 +56,6 @@ const AIContentCreationTools: React.FC = () => {
       title: "Brand Consistency",
       description: "Maintain consistent brand voice and style across all content with AI-powered brand guidelines enforcement."}
   ]
-
   const contentTypes = [
     {
       title: "Blog Posts & Articles",
@@ -74,7 +74,6 @@ const AIContentCreationTools: React.FC = () => {
       description: "Write compelling video scripts for YouTube, TikTok, Instagram, and other video platforms.",
       icon: Video}
   ]
-
   const benefits = [
     "Reduce content creation time by 75%",
     "Increase content output by 300%",
@@ -83,7 +82,6 @@ const AIContentCreationTools: React.FC = () => {
     "Scale content production without hiring more writers",
     "Generate content in multiple languages automatically"
   ]
-
   const pricing = [
     {
       name: "Creator",
@@ -128,7 +126,6 @@ const AIContentCreationTools: React.FC = () => {
       ]
 }
   ]
-
   return (
     <>
       <Helmet>
@@ -136,7 +133,6 @@ const AIContentCreationTools: React.FC = () => {
         <meta name="description" content="Accelerate content production with AI-powered writing, image generation, and video creation tools. Reduce creation time by 75% and scale your content strategy." />
         <meta name="keywords" content="AI content creation, content writing, AI writing assistant, content marketing, AI tools" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-100">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -150,26 +146,25 @@ const AIContentCreationTools: React.FC = () => {
                 AI Content Creation Tools
               </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-                Accelerate your content production with AI-powered writing, image generation, and video creation tools. 
+                Accelerate your content production with AI-powered writing, image generation, and video creation tools.
                 Reduce creation time by 75% and scale your content strategy across all channels.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="https://ziontechgroup.com/contact" 
+                <a
+                  href="https://ziontechgroup.com/contact"
                   className="inline-flex items-center px-8 py-4 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors"
                 >
                   Start Free Trial
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </a>
-                <a 
-                  href="https://ziontechgroup.com/demo" 
+                <a
+                  href="https://ziontechgroup.com/demo"
                   className="inline-flex items-center px-8 py-4 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-colors"
                 >
                   Watch Demo
                 </a>
               </div>
             </div>
-
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
               <div className="text-center">
@@ -191,7 +186,6 @@ const AIContentCreationTools: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
@@ -203,7 +197,6 @@ const AIContentCreationTools: React.FC = () => {
                 Our AI-powered tools cover every aspect of content creation, from writing to visuals and video production.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow">
@@ -215,11 +208,14 @@ const AIContentCreationTools: React.FC = () => {
                   </div>
                   <p className="text-gray-600">{feature.description}</p>
                 </div>
-              ))}
+              ))
+      )}
+    </div>
+  );
+}
             </div>
           </div>
         </section>
-
         {/* Content Types Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
           <div className="max-w-7xl mx-auto">
@@ -231,7 +227,6 @@ const AIContentCreationTools: React.FC = () => {
                 From blog posts to social media content, our AI tools help you create engaging content for every platform.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {contentTypes.map((contentType, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
@@ -243,11 +238,14 @@ const AIContentCreationTools: React.FC = () => {
                   </div>
                   <p className="text-gray-600 text-lg">{contentType.description}</p>
                 </div>
-              ))}
+              ))
+      )}
+    </div>
+  );
+}
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
@@ -259,7 +257,6 @@ const AIContentCreationTools: React.FC = () => {
                 Experience the benefits of AI-powered content creation that scales with your business needs.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="space-y-6">
                 {benefits.map((benefit, index) => (
@@ -267,7 +264,11 @@ const AIContentCreationTools: React.FC = () => {
                     <CheckCircle className="w-6 h-6 text-green-500 mr-4 flex-shrink-0" />
                     <span className="text-gray-700 text-lg">{benefit}</span>
                   </div>
-                ))}
+                ))
+      )}
+    </div>
+  );
+}
               </div>
               <div className="bg-gray-50 p-8 rounded-xl">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">Real Results</h3>
@@ -293,7 +294,6 @@ const AIContentCreationTools: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
           <div className="max-w-7xl mx-auto">
@@ -303,11 +303,11 @@ const AIContentCreationTools: React.FC = () => {
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Choose the plan that fits your content creation needs. All plans include AI-powered tools.
-              </p>
-            </div>
-
-            <div className={`grid grid-cols-1 md:grid-cols-3 gap-8`>
-              {pricing.map((plan, index) => (
+              </p>';
+            </div>';';
+            <div className={`grid grid-cols-1 md:grid-cols-3 gap-8`>';';';
+              {pricing.map((plan, index) => (',';';
+    ';';';
                 <div key={index} className={`relative p-8 rounded-xl border-2 ${plan.popular ? 'border-purple-500 bg-purple-50' : 'border-gray-200 bg-white'} hover:shadow-lg transition-shadow`}>
                   {plan.popular && (
                     <div className=`absolute -top-4 left-1/2 transform -translate-x-1/2`}>
@@ -315,7 +315,11 @@ const AIContentCreationTools: React.FC = () => {
                         Most Popular
                       </span>
                     </div>
-                  )}
+                  )
+      )}
+    </div>
+  );
+}
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
                     <div className="flex items-baseline justify-center">
@@ -330,22 +334,31 @@ const AIContentCreationTools: React.FC = () => {
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
                         <span className="text-gray-700">{feature}</span>
                       </li>
-                    ))}
-                  </ul>
-                  <a href={`https: //ziontechgroup.com/contact` 
-                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
-                      plan.popular 
-                        ? 'bg-purple-600 text-white hover:bg-purple-700' 
+                    ))
+      )}
+    </div>
+  );
+}
+                  </ul>';
+                  <a href={`https: //ziontechgroup.com/contact`';';
+                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${';';';
+                      plan.popular',';';
+    ';';';
+                        ? 'bg-purple-600 text-white hover:bg-purple-700'',';';
+    ';';';
                         : 'bg-gray-900 text-white hover:bg-gray-800'}`}
                   >
                     Get Started
                   </a>
                 </div>
-              ))}
+              ))
+      )}
+    </div>
+  );
+}
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className=`py-20 px-4 sm: px-6 lg:px-8 bg-purple-600`}>
           <div className="max-w-4xl mx-auto text-center">
@@ -356,15 +369,15 @@ const AIContentCreationTools: React.FC = () => {
               Join thousands of content creators and marketers using our AI tools to produce better content faster.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="https://ziontechgroup.com/contact" 
+              <a
+                href="https://ziontechgroup.com/contact"
                 className="inline-flex items-center px-8 py-4 bg-white text-purple-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
               >
                 Start Free Trial
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
-              <a 
-                href="tel:+13024640950" 
+              <a
+                href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-600 transition-colors"
               >
                 Call +1 302 464 0950
@@ -376,8 +389,7 @@ const AIContentCreationTools: React.FC = () => {
             </div>
           </div>
         </section>
-      </div>
-    </>
-  )};
-
-export default AIContentCreationTools;"
+      </div>';
+    </>';';
+  )};';';';
+export default AIContentCreationTools;"';';';';

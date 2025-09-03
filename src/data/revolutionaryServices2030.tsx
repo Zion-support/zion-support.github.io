@@ -182,3 +182,4 @@ export interface RevolutionaryService2030 {id: string;
    ethicalAI: string[]  }
    ethicalAI: string[]}
 "
+}

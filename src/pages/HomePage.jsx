@@ -1,142 +1,196 @@
-import React from 'react';
+import React from 'react',;',';';
+    ';';';';
 import {Link } from 'react-router-dom';
-import {ArrowRight, 
-  Play, 
-  Star, 
-  Users, 
-  Award, 
-  Zap, 
-  Shield, 
-  Cloud, 
-  Brain, 
-  Rocket,
-  CheckCircle,
-  TrendingUp,
-  Globe,;
-  Clock';
-  TrendingUp,;
-  Globe,;
-  Clock} from 'lucide-react';
-
-export function HomePage() {const features = [{
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Cutting-edge artificial intelligence and machine learning services',
-      color: 'from-purple-500 to-pink-500'},
-    {icon: Cloud,
-      title: 'Cloud Excellence',
-      description: 'Scalable cloud infrastructure and migration services',
-      color: 'from-blue-500 to-cyan-500'},
-    {icon: Shield,
-      title: 'Cybersecurity',
-      description: 'Advanced security and compliance solutions',
-      color: 'from-green-500 to-emerald-500'},
-    {icon: Rocket,
-      title: 'Digital Transformation',
-      description: 'End-to-end business transformation services',
-      color: 'from-orange-500 to-red-500'}
-  ]
-
-  const stats = ['
-    { number: '500+', label: 'Happy Clients', icon: Users },
-    { number: '99.9%', label: 'Uptime', icon: Award },
-    { number: '24/7', label: 'Support', icon: Clock },
-    { number: '50+', label: 'Countries', icon: Globe }
-  ]
-
-  const testimonials = [
-    {'
-      name: 'Sarah Johnson',
-  const stats = [{number: '500+', label: 'Happy Clients', icon: Users },
-    {number: '99.9%', label: 'Uptime', icon: Award },
-    {number: '24/7', label: 'Support', icon: Clock },
-    {number: '50+', label: 'Countries', icon: Globe }
-  ]
-
-  const testimonials = [{name: 'Sarah Johnson',
-      title: 'CTO at TechCorp',
-      content: 'Zion Tech Group transformed our infrastructure completely. Their expertise is unmatched.',
-      rating: 5},
-    {'
-      name: 'Michael Chen',
-    {name: 'Michael Chen',
-      title: 'VP Engineering',
-      content: 'The AI solutions they implemented increased our efficiency by 300%. Incredible results!',
-      rating: 5},
-    {'
-      name: 'Emily Rodriguez',
-    {name: 'Emily Rodriguez',
-      title: 'Operations Director',
-import React from 'react';""
-import React from 'react
-import { Link } from 'react-router-dom'
-import { 
-  ArrowRight, Play, 
-  Star, Users, 
-  Award, Zap, 
-  Shield, Cloud, 
-  Brain, Rocket,;
-  CheckCircle, TrendingUp,;
-  Globe, Clock;", ";
+import {ArrowRight,
+  Play,
+  Star,
+  Users,
+  Award,
+  Zap,
+  Shield,
+  Cloud,
+  Brain,
+  Rocket,;';
+  CheckCircle,;';';
+  TrendingUp,;';';';
+  Globe,;',';';
+    ';';';
+  Clock';';';
+  TrendingUp,;';';';
+  Globe,;',';';
+    ';';';
+  Clock} from 'lucide-react';';';
+export function HomePage() {const features = [{';';';
+      icon: Brain,',';';
+    ';';';
+      title: 'AI-Powered Solutions',',';';
+    ';';';
+      description: 'Cutting-edge artificial intelligence and machine learning services',',';';
+    ';';';
+      color: 'from-purple-500 to-pink-500'},';';';
+    {icon: Cloud,',';';
+    ';';';
+      title: 'Cloud Excellence',',';';
+    ';';';
+      description: 'Scalable cloud infrastructure and migration services',',';';
+    ';';';
+      color: 'from-blue-500 to-cyan-500'},';';';
+    {icon: Shield,',';';
+    ';';';
+      title: 'Cybersecurity',',';';
+    ';';';
+      description: 'Advanced security and compliance solutions',',';';
+    ';';';
+      color: 'from-green-500 to-emerald-500'},';';';
+    {icon: Rocket,',';';
+    ';';';
+      title: 'Digital Transformation',',';';
+    ';';';
+      description: 'End-to-end business transformation services',',';';
+    ';';';
+      color: 'from-orange-500 to-red-500'}';';';
+  ]',';';
+    ';';';
+  const stats = ['';';';';
+    { number: '500+', label: 'Happy Clients', icon: Users },',';';
+    ';';';
+    { number: '99.9%', label: 'Uptime', icon: Award },',';';
+    ';';';
+    { number: '24/7', label: 'Support', icon: Clock },',';';
+    ';';';
+    { number: '50+', label: 'Countries', icon: Globe }';';
+  ]';';';
+  const testimonials = [',';';
+    ';';';
+    {'';';';';
+      name: 'Sarah Johnson',',';';
+    ';';';
+  const stats = [{number: '500+', label: 'Happy Clients', icon: Users },',';';
+    ';';';
+    {number: '99.9%', label: 'Uptime', icon: Award },',';';
+    ';';';
+    {number: '24/7', label: 'Support', icon: Clock },',';';
+    ';';';
+    {number: '50+', label: 'Countries', icon: Globe }';';';
+  ]',';';
+    ';';';
+  const testimonials = [{name: 'Sarah Johnson',',';';
+    ';';';
+      title: 'CTO at TechCorp',',';';
+    ';';';
+      content: 'Zion Tech Group transformed our infrastructure completely. Their expertise is unmatched.',';';';
+      rating: 5},',';';
+    ';';';
+    {'';';';';
+      name: 'Michael Chen',',';';
+    ';';';
+    {name: 'Michael Chen',',';';
+    ';';';
+      title: 'VP Engineering',',';';
+    ';';';
+      content: 'The AI solutions they implemented increased our efficiency by 300%. Incredible results!',';';';
+      rating: 5},',';';
+    ';';';
+    {'';';';';
+      name: 'Emily Rodriguez',',';';
+    ';';';
+    {name: 'Emily Rodriguez',',';';
+    ';';';
+      title: 'Operations Director',',';';
+    ';';';
+import React from 'react';""',';';
+    ';';';
+import React from 'react';';';';
+import { Link  } from 'react-router-dom';
+import {
+  ArrowRight, Play,
+  Star, Users,;
+  Award, Zap,;
+  Shield, Cloud,;';
+  Brain, Rocket,;';';
+  CheckCircle, TrendingUp,;';';';
+  Globe, Clock;", ";',';';
+    ';';';
 } from 'lucide-react';
-
-export function HomePage() {
-  const features = [
-    {
-      icon: Brain, ""
-      title: 'AI-Powered Solutions',""
-      description: 'Cutting-edge artificial intelligence and machine learning services', ""
-  {
-      icon: Brain,"
-      title: 'AI-Powered Solutions,
-      description: 'Cutting-edge artificial intelligence and machine learning services,
-      color: 'from-purple-500 to-pink-500'}, {
-      icon: Cloud,""
-      title: 'Cloud Excellence', ""
-      description: 'Scalable cloud infrastructure and migration services',""
-      color: 'from-blue-500 to-cyan-500'},
-    {
-      icon: Shield, ""
-      title: 'Cybersecurity',""
-      description: 'Advanced security and compliance solutions', ""
-      color: 'from-green-500 to-emerald-500'}, {
-      icon: Rocket,""
-      title: 'Digital Transformation', ""
-      description: 'End-to-end business transformation services',""
-      color: 'from-orange-500 to-red-500'}
-      icon: Cloud,"
-      title: 'Cloud Excellence,
-      description: 'Scalable cloud infrastructure and migration services,
-      color: 'from-blue-500 to-cyan-500'},
-    {
-      icon: Shield,"
-      title: 'Cybersecurity,
-      description: 'Advanced security and compliance solutions,
-      color: 'from-green-500 to-emerald-500'},
-    {
-      icon: Rocket,"
-      title: 'Digital Transformation,
-      description: 'End-to-end business transformation services,
-      color: 'from-orange-500 to-red-500'}
-  ]
-
+export function HomePage() {';
+  const features = [';';
+    {';';';
+      icon: Brain, ""',';';
+    ';';';
+      title: 'AI-Powered Solutions',""',';';
+    ';';';
+      description: 'Cutting-edge artificial intelligence and machine learning services', ""';';
+  {';';';
+      icon: Brain,"',';';
+    ';';';
+      title: 'AI-Powered Solutions,';';';';
+      description: 'Cutting-edge artificial intelligence and machine learning services,',';';
+    ';';';
+      color: 'from-purple-500 to-pink-500'}, {';';';
+      icon: Cloud,""',';';
+    ';';';
+      title: 'Cloud Excellence', ""',';';
+    ';';';
+      description: 'Scalable cloud infrastructure and migration services',""',';';
+    ';';';
+      color: 'from-blue-500 to-cyan-500'},';';
+    {';';';
+      icon: Shield, ""',';';
+    ';';';
+      title: 'Cybersecurity',""',';';
+    ';';';
+      description: 'Advanced security and compliance solutions', ""',';';
+    ';';';
+      color: 'from-green-500 to-emerald-500'}, {';';';
+      icon: Rocket,""',';';
+    ';';';
+      title: 'Digital Transformation', ""',';';
+    ';';';
+      description: 'End-to-end business transformation services',""',';';
+    ';';';
+      color: 'from-orange-500 to-red-500'}';';';
+      icon: Cloud,"',';';
+    ';';';
+      title: 'Cloud Excellence,';';';';
+      description: 'Scalable cloud infrastructure and migration services,',';';
+    ';';';
+      color: 'from-blue-500 to-cyan-500'},';';
+    {';';';
+      icon: Shield,"',';';
+    ';';';
+      title: 'Cybersecurity,';';';';
+      description: 'Advanced security and compliance solutions,',';';
+    ';';';
+      color: 'from-green-500 to-emerald-500'},';';
+    {';';';
+      icon: Rocket,"',';';
+    ';';';
+      title: 'Digital Transformation,';';';';
+      description: 'End-to-end business transformation services,',';';
+    ';';';
+      color: 'from-orange-500 to-red-500'}';';';
+  ]',';';
+    ';';';
   return ('
-    <div className="min-h-screen bg-zion-blue-dark">
-      {/* Hero Section */}"
-      <section className="relative overflow-hidden">
-        {/* Background Pattern */}"
+    <div className="min-h-screen bg-zion-blue-dark">';
+      {/* Hero Section */}"';';
+      <section className="relative overflow-hidden">';';';
+        {/* Background Pattern */}"',';';
+    ';';';
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30" />
         "
         <div className="container mx-auto px-4 py-20 relative z-10">"
-          <div className="text-center max-w-4xl mx-auto">"
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Innovating"
-              <span className="bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent">"
-                {' '}Tomorrow
-              </span>
+          <div className="text-center max-w-4xl mx-auto">"';
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">';';
+              Innovating"';';';
+              <span className="bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent">"',';';
+    ';';';
+                {' '}Tomorrow';';';
+              </span>',';';
+    ';';';
             </h1>'
             <p className="text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed">
-              Empowering businesses with cutting-edge technology solutions, AI-driven insights, 
+              Empowering businesses with cutting-edge technology solutions, AI-driven insights,
               and transformative digital strategies for the future.
             </p>"
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
@@ -150,95 +204,118 @@ export function HomePage() {
               <Link"
                 to="/contact""
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-purple/30 text-zion-cyan font-semibold rounded-lg hove,
-    r:bg-zion-purple/10 hove,
-    r:border-zion-purple/50 transition-all duration-300"
-              >
-  const stats = [""
-    { number: '500+', label: 'Happy Clients', icon: Users }, ""
-    { number: '99.9%', label: 'Uptime', icon: Award },""
-    { number: '24/7', label: 'Support', icon: Clock }, ""
-    { number: '50+', label: 'Countries', icon: Globe }
-  ]
-
-  const testimonials = [
-    {""
-      name: 'Sarah Johnson', ""
-      title: 'CTO at TechCorp',""
-      content: 'Zion Tech Group transformed our infrastructure completely. Their expertise is unmatched.', rating: 5}, {""
-      name: 'Michael Chen',""
-      title: 'VP Engineering', ""
-      content: 'The AI solutions they implemented increased our efficiency by 300%. Incredible results!',
-      rating: 5},
-    {""
-      name: 'Emily Rodriguez', ""
-      title: 'Operations Director',""
-      content: 'Professional, reliable, and innovative. They delivered beyond our expectations.', rating: 5,
-  {"
-      name: 'Sarah Johnson,
-      title: 'CTO at TechCorp,
-      content: 'Zion Tech Group transformed our infrastructure completely. Their expertise is unmatched.',
-      rating: 5},
-    {"
-      name: 'Michael Chen,
-      title: 'VP Engineering,
-      content: 'The AI solutions they implemented increased our efficiency by 300%. Incredible results!',
-      rating: 5},
-    {"
-      name: 'Emily Rodriguez,
-      title: 'Operations Director,
+    r:bg-zion-purple/10 hove,';
+    r:border-zion-purple/50 transition-all duration-300"';';
+              >';';';
+  const stats = [""',';';
+    ';';';
+    { number: '500+', label: 'Happy Clients', icon: Users }, ""',';';
+    ';';';
+    { number: '99.9%', label: 'Uptime', icon: Award },""',';';
+    ';';';
+    { number: '24/7', label: 'Support', icon: Clock }, ""',';';
+    ';';';
+    { number: '50+', label: 'Countries', icon: Globe }';
+  ]';';
+  const testimonials = [';';';
+    {""',';';
+    ';';';
+      name: 'Sarah Johnson', ""',';';
+    ';';';
+      title: 'CTO at TechCorp',""',';';
+    ';';';
+      content: 'Zion Tech Group transformed our infrastructure completely. Their expertise is unmatched.', rating: 5}, {""',';';
+    ';';';
+      name: 'Michael Chen',""',';';
+    ';';';
+      title: 'VP Engineering', ""',';';
+    ';';';
+      content: 'The AI solutions they implemented increased our efficiency by 300%. Incredible results!',';';
+      rating: 5},';';';
+    {""',';';
+    ';';';
+      name: 'Emily Rodriguez', ""',';';
+    ';';';
+      title: 'Operations Director',""',';';
+    ';';';
+      content: 'Professional, reliable, and innovative. They delivered beyond our expectations.', rating: 5,';';';
+  {"',';';
+    ';';';
+      name: 'Sarah Johnson,';';';';
+      title: 'CTO at TechCorp,',';';
+    ';';';
+      content: 'Zion Tech Group transformed our infrastructure completely. Their expertise is unmatched.',';';
+      rating: 5},';';';
+    {"',';';
+    ';';';
+      name: 'Michael Chen,';';';';
+      title: 'VP Engineering,',';';
+    ';';';
+      content: 'The AI solutions they implemented increased our efficiency by 300%. Incredible results!',';';
+      rating: 5},';';';
+    {"',';';
+    ';';';
+      name: 'Emily Rodriguez,';';';';
+      title: 'Operations Director,',';';
+    ';';';
       content: 'Professional, reliable, and innovative. They delivered beyond our expectations.',
       rating: 5}
   ]
-
   return (""
-    <div className="min-h-screen bg-zion-blue-dark">
-      {/* Hero Section */}""
-      <section className="relative overflow-hidden">
-        {/* Background Pattern */}
+    <div className="min-h-screen bg-zion-blue-dark">';
+      {/* Hero Section */}""';';
+      <section className="relative overflow-hidden">';';';
+        {/* Background Pattern */}',';';
+    ';';';
         <div className="absolute inset-0 bg-[url('data: image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30" />
-        
         <div className="container mx-auto px-4 py-20 relative z-10">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">
-              Innovating
-              <span className="bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent">
+          <div className="text-center max-w-4xl mx-auto">';
+            <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">';';
+              Innovating';';';
+              <span className="bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent">',';';
+    ';';';
                 {' '}Tomorrow
               </span>
             </h1>
             <p className="text-xl md: text-2xl text-zion-slate-light mb-8 leading-relaxed">
-              Empowering businesses with cutting-edge technology solutions, AI-driven insights, 
+              Empowering businesses with cutting-edge technology solutions, AI-driven insights,
               and transformative digital strategies for the future.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link to="/services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-purple/80 hover:to-zion-cyan/80 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/25 hover:-translate-y-1" >
                 Explore Services
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link to="/contact" className="inline-flex items-center px-8 py-4 border-2 border-zion-purple/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-purple/10 hover:border-zion-purple/50 transition-all duration-300" >
-        {/* Background Pattern */}""
+                <ArrowRight className="ml-2 h-5 w-5" />';
+              </Link>';';
+              <Link to="/contact" className="inline-flex items-center px-8 py-4 border-2 border-zion-purple/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-purple/10 hover:border-zion-purple/50 transition-all duration-300" >';';';
+        {/* Background Pattern */}""',';';
+    ';';';
         <div className="absolute inset-0 bg-[url('data: image/svg+xml;base64, PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30" /" >"
         ""
         <div className="container mx-auto px-4 py-20 relative z-10">""
-          <div className="text-center max-w-4xl mx-auto">""
-            <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">
-              Innovating""
-              <span className="bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent">""
-                {' '}Tomorrow
-              </span>
-            </h1>""
-        {/* Background Pattern */}"
+          <div className="text-center max-w-4xl mx-auto">""';
+            <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">';';
+              Innovating""';';';
+              <span className="bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent">""',';';
+    ';';';
+                {' '}Tomorrow';
+              </span>';';
+            </h1>""';';';
+        {/* Background Pattern */}"',';';
+    ';';';
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30" /" >
         "
-        <div className="container mx-auto px-4 py-20 relative z-10">"
-          <div className="text-center max-w-4xl mx-auto">"
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Innovating"
-              <span className="bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent">'
-                { }Tomorrow
-              </span>
+        <div className="container mx-auto px-4 py-20 relative z-10">"';
+          <div className="text-center max-w-4xl mx-auto">"';';
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">';';';
+              Innovating"',';';
+    ';';';
+              <span className="bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent">'';';
+                { }Tomorrow';';';
+              </span>',';';
+    ';';';
             </h1>'
             <p className="text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed">
-              Empowering businesses with cutting-edge technology solutions, AI-driven insights, 
+              Empowering businesses with cutting-edge technology solutions, AI-driven insights,
               and transformative digital strategies for the future.
             </p>""
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
@@ -258,29 +335,30 @@ export function HomePage() {
                 Get Started
               </Link>
             </div>
-          </div>
-        </div>
-
-        {/* Floating Elements */}"
-        <div className="absolute top-20 left-10 w-2 h-2 bg-zion-cyan/30 rounded-full animate-pulse" />"
-        <div className="absolute top-40 right-20 w-1.5 h-1.5 bg-zion-purple/20 rounded-full animate-pulse" style={{ animationDelay: "1s' }} />
+          </div>';
+        </div>';';
+        {/* Floating Elements */}"';';';
+        <div className="absolute top-20 left-10 w-2 h-2 bg-zion-cyan/30 rounded-full animate-pulse" />"',';';
+    ';';';
+        <div className="absolute top-40 right-20 w-1.5 h-1.5 bg-zion-purple/20 rounded-full animate-pulse" style={{ animationDelay: "1s' }} />';';';';
         <div className="absolute bottom-20 left-1/4 w-1 h-1 bg-zion-cyan/25 rounded-full animate-pulse" style={{ animationDelay: '2s' }} />
       </section>
-
       {/* Features Section */}
       <section className="py-20">"
         <div className="container mx-auto px-4">"
           <div className="text-center mb-16">"
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Why Choose Zion Tech Group?
-            </h2>"
-        {/* Floating Elements */}""
-        {/* Floating Elements */}'
-        <div className="absolute top-20 left-10 w-2 h-2 bg-zion-cyan/30 rounded-full animate-pulse" /" >"
-        <div className="absolute top-40 right-20 w-1.5 h-1.5 bg-zion-purple/20 rounded-full animate-pulse" style={{ animationDelay: '1s' }} /" >"
+            <h2 className="text-4xl font-bold text-white mb-4">';
+              Why Choose Zion Tech Group?';';
+            </h2>"';';';
+        {/* Floating Elements */}""',';';
+    ';';';
+        {/* Floating Elements */}'';';';
+        <div className="absolute top-20 left-10 w-2 h-2 bg-zion-cyan/30 rounded-full animate-pulse" /" >"',';';
+    ';';';
+        <div className="absolute top-40 right-20 w-1.5 h-1.5 bg-zion-purple/20 rounded-full animate-pulse" style={{ animationDelay: '1s' }} /" >"',';';
+    ';';';
         <div className="absolute bottom-20 left-1/4 w-1 h-1 bg-zion-cyan/25 rounded-full animate-pulse" style={{ animationDelay: '2s' }} /" >"
       </section>
-
       {/* Features Section */}""
       <section className="py-20">""
         <div className="container mx-auto px-4">""
@@ -303,7 +381,6 @@ export function HomePage() {
                 <h3 className="text-xl font-semibold text-white mb-3">
                   {feature.title}
                 </h3>"
-
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className={`text-center group`>
@@ -324,11 +401,14 @@ export function HomePage() {
                   {feature.description}
                 </p>
               </div>
-            ))}
+            ))
+      )}
+    </div>
+  );
+}
           </div>
         </div>
       </section>
-
       {/* Stats Section */}"
       <section className="py-20 bg-zion-blue-dark/50">"
         <div className="container mx-auto px-4">"
@@ -366,11 +446,14 @@ export function HomePage() {
                   {stat.label}
                 </div>
               </div>
-            ))}
+            ))
+      )}
+    </div>
+  );
+}
           </div>
         </div>
       </section>
-
       {/* Services Preview */}"
       <section className="py-20">"
         <div className="container mx-auto px-4">"
@@ -395,7 +478,6 @@ export function HomePage() {
     r:border-zion-purple/40 transition-all duration-300 group">"
               <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center mb-4 group-hove,
     r:scale-110 transition-transform">"
-
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-zion-blue-dark/50 border border-zion-purple/20 rounded-xl p-6 hover:border-zion-purple/40 transition-all duration-300 group">
               <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
@@ -503,26 +585,30 @@ export function HomePage() {
           </div>
         </div>
       </section>
-
       {/* Testimonials */}"
       <section className="py-20 bg-zion-blue-dark/50">"
         <div className="container mx-auto px-4">"
           <div className="text-center mb-16">"
-            <h2 className="text-4xl font-bold text-white mb-4">
-              What Our Clients Say
-            </h2>"
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">"
-              Don't just take our word for it - hear from the businesses we've transformed
-            </p>
-          </div>
-'
+            <h2 className="text-4xl font-bold text-white mb-4">';
+              What Our Clients Say';';
+            </h2>"';';';
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">"',';';
+    ';';';
+              Don't just take our word for it - hear from the businesses we've transformed';';
+            </p>';';';
+          </div>',',';';
+    '
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => ("
               <div key={index} className="bg-zion-blue-dark/50 border border-zion-purple/20 rounded-xl p-6">"
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => ("
                     <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-                  ))}
+                  ))
+      )}
+    </div>
+  );
+}
                 </div>"
                 <p className="text-zion-slate-light mb-4 italic">"
       {/* Testimonials */}""
@@ -536,7 +622,6 @@ export function HomePage() {
               Don&apos;t just take our word for it - hear from the businesses we&apos;ve transformed
             </p>
           </div>
-
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-zion-blue-dark/50 border border-zion-purple/20 rounded-xl p-6">
@@ -547,11 +632,15 @@ export function HomePage() {
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (""
                     <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" /" >"
-                  ))}
-                </div>""
-                <p className="text-zion-slate-light mb-4 italic">""
-                  "{testimonial.content}"
-                </div>"
+                  ))
+      )}
+    </div>
+  );
+}
+                </div>""';
+                <p className="text-zion-slate-light mb-4 italic">""';';
+                  "{testimonial.content}"';';';
+                </div>"';';';';
                 <p className="text-zion-slate-light mb-4 italic'> {testimonial.content}'
                 </p>
                 <div>"
@@ -561,20 +650,24 @@ export function HomePage() {
                   <div className="text-zion-cyan text-sm">{testimonial.title}</div>
                 </div>
               </div>
-            ))}
+            ))
+      )}
+    </div>
+  );
+}
           </div>
         </div>
       </section>
-
       {/* CTA Section */}"
       <section className="py-20">"
         <div className="container mx-auto px-4">"
           <div className="bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 border border-zion-purple/30 rounded-2xl p-12 text-center">"
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Ready to Transform Your Business?
-            </h2>"
-            <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">"
-              Let's discuss how our technology solutions can drive innovation and growth for your organization
+            <h2 className="text-4xl font-bold text-white mb-4">';
+              Ready to Transform Your Business?';';
+            </h2>"';';';
+            <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">"',';';
+    ';';';
+              Let's discuss how our technology solutions can drive innovation and growth for your organization';';';';
             </p>'
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link"
@@ -594,20 +687,22 @@ export function HomePage() {
       <section className="py-20">""
         <div className="container mx-auto px-4">""
           <div className="bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 border border-zion-purple/30 rounded-2xl p-12 text-center">""
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
+            <h2 className="text-4xl font-bold text-white mb-4">';
+              Ready to Transform Your Business?';';
+            </h2>';';';
+            <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">',';';
+    ';';';
               Let's discuss how our technology solutions can drive innovation and growth for your organization
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-purple/80 hover:to-zion-cyan/80 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/25" >
                 Get Free Consultation
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link to="/case-studies" className="inline-flex items-center px-8 py-4 border-2 border-zion-purple/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-purple/10 hover:border-zion-purple/50 transition-all duration-300" >
-            </h2>""
-            <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">""
+              </Link>';
+              <Link to="/case-studies" className="inline-flex items-center px-8 py-4 border-2 border-zion-purple/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-purple/10 hover:border-zion-purple/50 transition-all duration-300" >';';
+            </h2>""';';';
+            <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">""',';';
+    ';';';
               Let&apos;s discuss how our technology solutions can drive innovation and growth for your organization'
             </p>""
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
@@ -631,7 +726,7 @@ export function HomePage() {
         </div>
       </section>
     </div>
-  )}"
-  );}"`";
-}"`
-"
+  )}"';
+  );}"`";';';
+}"`';';';
+"';';';';

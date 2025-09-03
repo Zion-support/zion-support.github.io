@@ -1,23 +1,25 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom'
-import { 
-  Car, Brain, 
-  Shield, Zap, 
-  Globe, BarChart3, 
-  Users, CheckCircle, 
+import React from 'react',;',';';
+    ';';';';
+import { motion } from 'framer-motion',;';';
+    ';';';';
+import { Link  } from 'react-router-dom';
+import {
+  Car, Brain,
+  Shield, Zap,
+  Globe, BarChart3,
+  Users, CheckCircle,
   ArrowRight, MapPin,
   Clock, DollarSign,
   Star, Rocket,
   Target, Cpu,
   Network, Eye,
-  Activity, TrendingUp,
-  Lock, Smartphone,
-  Cloud, Server,
-  Database, Workflow,;
-  MessageCircle, Phone,;
+  Activity, TrendingUp,;
+  Lock, Smartphone,;';
+  Cloud, Server,;';';
+  Database, Workflow,;';';';
+  MessageCircle, Phone,;',';';
+    ';';';
   Mail} from 'lucide-react';
-
 const AIAutonomousVehiclePlatform = () => {
   const features = [
     {
@@ -39,7 +41,6 @@ const AIAutonomousVehiclePlatform = () => {
       description: "Seamless cloud connectivity for updates, data sharing, and fleet management", icon: Cloud,
       color: "text-indigo-400"}
   ]
-
   const useCases = [
     {
       title: "Autonomous Taxis", description: "Self-driving taxi services for urban transportation",
@@ -58,7 +59,6 @@ const AIAutonomousVehiclePlatform = () => {
       benefits: ["Hazardous environment operation", "24/7 productivity", "Precision operations"]
 }
   ]
-
   const pricing = [
     {
       name: "Starter", price: "$2,999", period: "/month",
@@ -90,7 +90,6 @@ const AIAutonomousVehiclePlatform = () => {
       ], cta: "Contact Sales",
       popular: false}
   ]
-
   const benefits = [
     {
       icon: Shield, title: "Enhanced Safety",
@@ -103,9 +102,8 @@ const AIAutonomousVehiclePlatform = () => {
       icon: TrendingUp,
       title: "Scalability", description: "Easy fleet expansion and management through cloud-based systems"}
   ]
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 to-purple-900/20"></div>
@@ -119,19 +117,16 @@ const AIAutonomousVehiclePlatform = () => {
               <Rocket className="w-4 h-4 mr-2" />
               Revolutionary AI Autonomous Vehicle Platform
             </div>
-            
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               The Future of
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400">
                 Autonomous Transportation
               </span>
             </h1>
-            
             <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
-              Transform your fleet with our cutting-edge AI autonomous vehicle platform. 
+              Transform your fleet with our cutting-edge AI autonomous vehicle platform.
               Experience unprecedented safety, efficiency, and scalability in autonomous transportation.
             </p>
-
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-16">
               <Link
                 to="/contact"
@@ -148,7 +143,6 @@ const AIAutonomousVehiclePlatform = () => {
                 <Phone className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
               </Link>
             </div>
-
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               {[
@@ -172,12 +166,15 @@ const AIAutonomousVehiclePlatform = () => {
                     {stat.label}
                   </div>
                 </motion.div>
-              ))}
+              ))
+      )}
+    </div>
+  );
+}
             </div>
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
@@ -192,11 +189,10 @@ const AIAutonomousVehiclePlatform = () => {
               Advanced AI-Powered Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our platform combines cutting-edge AI, advanced sensors, and robust cybersecurity 
+              Our platform combines cutting-edge AI, advanced sensors, and robust cybersecurity
               to deliver the most reliable autonomous vehicle solution available.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
@@ -213,11 +209,14 @@ const AIAutonomousVehiclePlatform = () => {
                 <h3 className=`text-xl font-semibold text-white mb-3`}>{feature.title}</h3>
                 <p className="text-gray-300 text-sm leading-relaxed">{feature.description}</p>
               </motion.div>
-            ))}
+            ))
+      )}
+    </div>
+  );
+}
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}
       <section className="py-20 px-6 bg-slate-800/20">
         <div className="max-w-7xl mx-auto">
@@ -232,11 +231,10 @@ const AIAutonomousVehiclePlatform = () => {
               Versatile Applications
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From urban transportation to industrial applications, our platform adapts 
+              From urban transportation to industrial applications, our platform adapts
               to diverse use cases and industry requirements.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
               <motion.div
@@ -262,14 +260,21 @@ const AIAutonomousVehiclePlatform = () => {
                       <CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0" />
                       <span>{benefit}</span>
                     </li>
-                  ))}
+                  ))
+      )}
+    </div>
+  );
+}
                 </ul>
               </motion.div>
-            ))}
+            ))
+      )}
+    </div>
+  );
+}
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
@@ -284,22 +289,23 @@ const AIAutonomousVehiclePlatform = () => {
               Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the perfect plan for your autonomous vehicle fleet. 
+              Choose the perfect plan for your autonomous vehicle fleet.
               All plans include our core AI features with no hidden fees.
             </p>
           </motion.div>
-
           <div className={`grid grid-cols-1 md:grid-cols-3 gap-8`>
             {pricing.map((tier, index) => (
               <motion.div
                 key={tier.name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className={`relative bg-slate-800/30 backdrop-blur-sm border rounded-xl p-6 ${
-                  tier.popular 
-                    ? 'border-blue-500/50 shadow-lg shadow-blue-500/20' 
+                transition={{ duration: 0.6, delay: index * 0.1 }}';
+                viewport={{ once: true }}';';
+                className={`relative bg-slate-800/30 backdrop-blur-sm border rounded-xl p-6 ${';';';
+                  tier.popular',';';
+    ';';';
+                    ? 'border-blue-500/50 shadow-lg shadow-blue-500/20'',';';
+    ';';';
                     : 'border-slate-700/50';
 }`}
               >
@@ -310,8 +316,11 @@ const AIAutonomousVehiclePlatform = () => {
                       Most Popular
                     </div>
                   </div>
-                )}
-
+                )
+      )}
+    </div>
+  );
+}
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
                   <div className="mb-4">
@@ -320,30 +329,37 @@ const AIAutonomousVehiclePlatform = () => {
                   </div>
                   <p className="text-gray-300 text-sm">{tier.description}</p>
                 </div>
-
                 <ul className="space-y-3 mb-8">
                   {tier.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start space-x-3">
                       <CheckCircle className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
                       <span className="text-gray-300 text-sm">{feature}</span>
                     </li>
-                  ))}
-                </ul>
-
-                <Link to={tier.name === "Enterprise" ? "/contact" : "/signup`}
-                  className={`w-full px-6 py-3 rounded-lg font-semibold text-center transition-all duration-300 ${
-                    tier.popular
-                      ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover: from-blue-600 hover:to-purple-700'
+                  ))
+      )}
+    </div>
+  );
+}
+                </ul>';
+                <Link to={tier.name === "Enterprise" ? "/contact" : "/signup`}';';
+                  className={`w-full px-6 py-3 rounded-lg font-semibold text-center transition-all duration-300 ${';';';
+                    tier.popular',';';
+    ';';';
+                      ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover: from-blue-600 hover:to-purple-700'',';';
+    ';';';
                       : 'border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white'}`}
                 >
                   {tier.cta}
                 </Link>
               </motion.div>
-            ))}
+            ))
+      )}
+    </div>
+  );
+}
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className=`py-20 px-6 bg-slate-800/20">
         <div className="max-w-7xl mx-auto">
@@ -358,11 +374,10 @@ const AIAutonomousVehiclePlatform = () => {
               Why Choose Our Platform?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the advantages of the most advanced autonomous vehicle platform 
+              Experience the advantages of the most advanced autonomous vehicle platform
               in the market.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div
@@ -379,11 +394,14 @@ const AIAutonomousVehiclePlatform = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
                 <p className="text-gray-300 text-sm leading-relaxed">{benefit.description}</p>
               </motion.div>
-            ))}
+            ))
+      )}
+    </div>
+  );
+}
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
@@ -397,10 +415,9 @@ const AIAutonomousVehiclePlatform = () => {
               Ready to Transform Your Fleet?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join the autonomous transportation revolution. Contact us today to learn 
+              Join the autonomous transportation revolution. Contact us today to learn
               how our AI platform can revolutionize your operations.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
                 to="/contact"
@@ -420,7 +437,6 @@ const AIAutonomousVehiclePlatform = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Contact Info */}
       <section className="py-16 px-6 border-t border-slate-700/50">
         <div className="max-w-4xl mx-auto text-center">
@@ -436,7 +452,6 @@ const AIAutonomousVehiclePlatform = () => {
                 </a>
               </div>
             </div>
-            
             <div className="flex flex-col items-center space-y-3">
               <div className="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full flex items-center justify-center">
                 <Mail className="w-6 h-6 text-blue-400" />
@@ -448,7 +463,6 @@ const AIAutonomousVehiclePlatform = () => {
                 </a>
               </div>
             </div>
-            
             <div className="flex flex-col items-center space-y-3">
               <div className="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full flex items-center justify-center">
                 <MapPin className="w-6 h-6 text-blue-400" />
@@ -463,8 +477,7 @@ const AIAutonomousVehiclePlatform = () => {
             </div>
           </div>
         </div>
-      </section>
-    </div>
-  )};
-
-export default AIAutonomousVehiclePlatform;"
+      </section>';
+    </div>';';
+  )};';';';
+export default AIAutonomousVehiclePlatform;"';';';';

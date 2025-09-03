@@ -1,16 +1,17 @@
-import React from 'react'; export default function ExpensiveComponent() { const [data, setData] = useState([]); const [loading, setLoading] = useState(true); useEffect(() => {;
-}
-
-;,"});
-  })
+import React from 'react'; export default function ExpensiveComponent() { const [data, setData] = useState([]); const [loading, setLoading] = useState(true); useEffect(() => {;';
+}';';
+;,"});';';';
+  })',';';
+    ';';';
  export default function ExpensiveComponent () { const [data, setData] = useState ([]) ; const [loading, setLoading] = useState (true) ; useEffect ( () => {'';
   });,"})
 ;,"});
   })
- export default function ExpensiveComponent() { const [data, setData] = useState([]); const [loading, setLoading] = useState(true); useEffect(() => {;
-  });,"});
-}"});
-  })
+ export default function ExpensiveComponent() { const [data, setData] = useState([]); const [loading, setLoading] = useState(true); useEffect(() => {;';
+  });,"});';';
+}"});';';';
+  })',';';
+    ';';';
 import React, { useState, useEffect } from 'react';
   });,"})
 export default function ExpensiveComponent() {}"});
@@ -50,7 +51,9 @@ export default function ExpensiveComponent() {}"});
   })
         <p className=text-zion-slate-light">Computing expensive data...</p>;,"});
   })
-      </div>;
+      </div>
+  );
+}
   });,"})
     </div>)}"});
   })
@@ -70,15 +73,19 @@ export { ExpensiveComponent };,"});
   });,"})
 export { ExpensiveComponent };,"});
   })
-;
-  });,"})
-export { ExpensiveComponent };,"});
-  })
- export default function ExpensiveComponent () { const [data, setData] = useState ([])  const [loading, setLoading] = useState (true)  useEffect ( () => {';import React, { useState, useEffect } from 'react';
-export default function ExpensiveComponent() {}
- export default function ExpensiveComponent ()   {const [data, setData] = useState ([])  const [loading, setLoading] = useState (true)  useEffect ( () => {'';import React, { useState, useEffect } from 'react';
- export default function ExpensiveComponent () ;{} const [data, setData] = useState ([])  const;const;const [loading, setLoading] = useState (true)  useEffect ( () => {&apos;import React, { useState, useEffect } from &apos;react';&apos;&apos;
-export default function ExpensiveComponent() ;{}
+;';
+  });,"})';';
+export { ExpensiveComponent };,"});';';';
+  })',';';
+    ';';';
+ export default function ExpensiveComponent () { const [data, setData] = useState ([])  const [loading, setLoading] = useState (true)  useEffect ( () => {';import React, { useState, useEffect } from 'react',;';';
+    ';';';
+export default function ExpensiveComponent() {}';';';';
+ export default function ExpensiveComponent ()   {const [data, setData] = useState ([])  const [loading, setLoading] = useState (true)  useEffect ( () => {'';import React, { useState, useEffect } from 'react',;',';';
+    ';';';';
+ export default function ExpensiveComponent () ;{} const [data, setData] = useState ([])  const;const;const [loading, setLoading] = useState (true)  useEffect ( () => {&apos;import React, { useState, useEffect } from &apos;react';&apos;&apos;';';';
+export default function ExpensiveComponent() ;{}',';';
+    ';';';
  export default function ExpensiveComponent () { const [data, setData] = useState ([])  const [loading, setLoading] = useState (true)  useEffect ( () => {'';import React, { useState, useEffect } from 'react';
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -89,21 +96,26 @@ export default function ExpensiveComponent() ;{}
         (_, i) => Math.sqrt(i) * Math.PI * Math.random());
       const expensiveData = Array.from(){ length: 10000 }, (_, i) => Math.sqrt(i) * Math.PI * Math.random());
       setData(expensiveData);
-      setLoading(false)}, 2000);
-    return () => clearTimeout(timer)}, [])
-  if(loading) {}
-    return()
-      <div className="text-center p-8>"'''
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"> <//div>'''''
-      <div className="text-center p-8">''''
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"> <//div>''''        <p className="text-zion-slate-light">Computing expensive data...</p>
-import React from 'react';
+      setLoading(false)}, 2000);';
+    return () => clearTimeout(timer)}, [])';';
+  if(loading) {}';';';
+    return()',';';
+    ';';';
+      <div className="text-center p-8>"'''',';';
+    ';';';
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"> <//div>'''''',';';
+    ';';';
+      <div className="text-center p-8">''''',';';
+    ';';';
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"> <//div>''''        <p className="text-zion-slate-light">Computing expensive data...</p>',';';
+    ';';';
+import React from 'react',;',';';
+    ';';';';
 import { SEO } from '@/components/SEO';
-
 const ExpensiveComponent = () => {
   return (
-    <div className="min-h-screen" bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>
-      <SEO 
+    <div className="min-h-screen bg-white">
+      <SEO
         title=ExpensiveComponent - Zion Tech Group
         description="Professional" ExpensiveComponent services by Zion Tech Group
         keywords=expensivecomponent, technology, services
@@ -115,8 +127,8 @@ const ExpensiveComponent = () => {
             Professional ExpensiveComponent services to help your business grow.
           </p>
           <div className="flex" justify-center>
-            <a 
-              href=/contact 
+            <a
+              href=/contact
               className="px-8" py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300
             >
               Get Started
@@ -124,24 +136,19 @@ const ExpensiveComponent = () => {
           </div>
         </div>
       </div>
-    </div>)}
+    </div>)
+      )}
+    </div>
+  );
+}
 ;
 export { ExpensiveComponent };
-;
-export { ExpensiveComponent };
-;
-export { ExpensiveComponent };
-;
-export { ExpensiveComponent };
-;
 export { ExpensiveComponent };
 export { ExpensiveComponent }
-
 export { ExpensiveComponent }"
 "
 "    </div>
-  );
-};
-
-export default ExpensiveComponent;
-"
+  );';
+};';';
+export default ExpensiveComponent;';';';
+"';';';';

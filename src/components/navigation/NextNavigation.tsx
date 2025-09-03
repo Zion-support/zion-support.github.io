@@ -1,107 +1,135 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import React, { useState, useEffect } from 'react',;',';';
+    ';';';';
+import Link from 'next/link',;';';
+    ';';';';
+import { useRouter } from 'next/router',;',';';
+    ';';';';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Menu, 
-  X, 
-  ChevronDown, 
-  Globe, 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Zap, 
-  Users, 
-  Phone, 
-  Mail, 
-  MapPin,
-  Code,
-  Database,;
-  Network,;
+import {
+  Menu,
+  X,
+  ChevronDown,
+  Globe,
+  Brain,
+  Cloud,
+  Shield,
+  Zap,
+  Users,
+  Phone,
+  Mail,;
+  MapPin,;';
+  Code,;';';
+  Database,;';';';
+  Network,;',';';
+    ';';';
   Settings} from 'lucide-react';
-
 const NextNavigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const router = useRouter();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const navigationItems = [
-    { name: 'Home', href: '/' },
-    { 
-      name: 'Services', 
-      href: '/services', 
-      dropdown: [
-        { 
-          name: 'AI Services', 
-          href: '/ai-services', 
-          icon: Brain, 
-          description: 'Cutting-edge AI solutions' },
-        { 
-          name: 'IT Services', 
-          href: '/it-services', 
-          icon: Cloud, 
-          description: 'Enterprise IT infrastructure' },
-        { 
-          name: 'Micro SaaS', 
-          href: '/micro-saas', 
-          icon: Code, 
-          description: 'Custom software solutions' },
-        { 
-          name: 'Cybersecurity', 
-          href: '/services#cybersecurity', 
-          icon: Shield, 
-          description: 'Advanced security solutions' },
-        { 
-          name: 'Cloud & DevOps', 
-          href: '/services#cloud', 
-          icon: Database, 
-          description: 'Scalable cloud infrastructure' },
-        { 
-          name: 'Digital Transformation', 
-          href: '/services#ai', 
-          icon: Zap, 
-          description: 'Business transformation' }
-      ] ;
-},
-    { name: 'About', href: '/about' },
+  useEffect(() => {';
+    const handleScroll = () => {';';
+      setIsScrolled(window.scrollY > 20);';';';
+    };',';';
+    ';';';
+    window.addEventListener('scroll', handleScroll);',';';
+    ';';';
+    return () => window.removeEventListener('scroll', handleScroll);';';
+  }, []);';';';
+  const navigationItems = [',';';
+    ';';';
+    { name: 'Home', href: '/' },';';';
+    {',';';
+    ';';';
+      name: 'Services',',';';
+    ';';';
+      href: '/services',';';
+      dropdown: [';';';
+        {',';';
+    ';';';
+          name: 'AI Services',',';';
+    ';';';
+          href: '/ai-services',';';';
+          icon: Brain,',';';
+    ';';';
+          description: 'Cutting-edge AI solutions' },';';';
+        {',';';
+    ';';';
+          name: 'IT Services',',';';
+    ';';';
+          href: '/it-services',';';';
+          icon: Cloud,',';';
+    ';';';
+          description: 'Enterprise IT infrastructure' },';';';
+        {',';';
+    ';';';
+          name: 'Micro SaaS',',';';
+    ';';';
+          href: '/micro-saas',';';';
+          icon: Code,',';';
+    ';';';
+          description: 'Custom software solutions' },';';';
+        {',';';
+    ';';';
+          name: 'Cybersecurity',',';';
+    ';';';
+          href: '/services#cybersecurity',';';';
+          icon: Shield,',';';
+    ';';';
+          description: 'Advanced security solutions' },';';';
+        {',';';
+    ';';';
+          name: 'Cloud & DevOps',',';';
+    ';';';
+          href: '/services#cloud',';';';
+          icon: Database,',';';
+    ';';';
+          description: 'Scalable cloud infrastructure' },';';';
+        {',';';
+    ';';';
+          name: 'Digital Transformation',',';';
+    ';';';
+          href: '/services#ai',';';';
+          icon: Zap,',';';
+    ';';';
+          description: 'Business transformation' }';';
+      ] ;';';';
+},',';';
+    ';';';
+    { name: 'About', href: '/about' },',';';
+    ';';';
     { name: 'Contact', href: '/contact' }
-  ]
-
-  const contactInfo = [
-    { 
-      icon: Phone, 
-      text: '+1 302 464 0950', 
-      href: 'tel:+13024640950' },
-    { 
-      icon: Mail, 
-      text: 'kleber@ziontechgroup.com', 
-      href: 'mailto:kleber@ziontechgroup.com' },
-    { 
-      icon: MapPin, 
-      text: '364 E Main St STE 1008, Middletown DE 19709', 
+  ]';
+  const contactInfo = [';';
+    {';';';
+      icon: Phone,',';';
+    ';';';
+      text: '+1 302 464 0950',',';';
+    ';';';
+      href: 'tel:+13024640950' },';';
+    {';';';
+      icon: Mail,',';';
+    ';';';
+      text: 'kleber@ziontechgroup.com',',';';
+    ';';';
+      href: 'mailto:kleber@ziontechgroup.com' },';';
+    {';';';
+      icon: MapPin,',';';
+    ';';';
+      text: '364 E Main St STE 1008, Middletown DE 19709',',';';
+    ';';';
       href: '#' }
   ]
-
   const toggleDropdown = (name: string) => {
     setActiveDropdown(activeDropdown === name ? null : name)};
-
   const closeMobileMenu = () => {
     setIsOpen(false);
-    setActiveDropdown(null);
-  };
-
-  return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    setActiveDropdown(null);';
+  };';';
+  return (';';';
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${',';';
+    ';';';
       isScrolled ? 'bg-gray-900/95 backdrop-blur-md border-b border-cyan-400/20' : 'bg-transparent';
 }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -115,19 +143,23 @@ const NextNavigation = () => {
               Zion Tech Group
             </span>
           </Link>
-
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            {navigationItems.map((item) => (
+            { navigationItems.map((item) => (
               <div key={item.name} className="relative">
                 {item.dropdown ? (
                   <div className="relative">
                     <button
-                      onClick={() => toggleDropdown(item.name)}
-                      className={`flex items-center space-x-1 text-gray-300 hover:text-cyan-300 transition-colors duration-200 py-2`
-                    >
-                      <span>{item.name}</span>
-                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                      onClick={() => toggleDropdown(item.name)
+      )}
+    </div>
+  );
+}
+                      className={`flex items-center space-x-1 text-gray-300 hover:text-cyan-300 transition-colors duration-200 py-2`';
+                    >';';
+                      <span>{item.name}</span>';';';
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${',';';
+    ';';';
                         activeDropdown === item.name ? 'rotate-180' : '';
 }`} />
                     </button>
@@ -145,7 +177,11 @@ const NextNavigation = () => {
                               <Link
                                 key={dropdownItem.name}
                                 href={dropdownItem.href}
-                                onClick={() => setActiveDropdown(null)}
+                                onClick={() => setActiveDropdown(null)
+      )}
+    </div>
+  );
+}
                                 className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group"
                               >
                                 <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-lg flex items-center justify-center group-hover:from-cyan-400/30 group-hover:to-blue-400/30 transition-all duration-200">
@@ -160,24 +196,40 @@ const NextNavigation = () => {
                                   </p>
                                 </div>
                               </Link>
-                            ))}
+                            ))
+      )}
+    </div>
+  );
+}
                           </div>
                         </motion.div>
-                      )}
+                      )
+      )}
+    </div>
+  );
+}
                     </AnimatePresence>
-                  </div>
-                ) : (
-                  <Link href={item.href}
-                    className={`text-gray-300 hover: text-cyan-300 transition-colors duration-200 py-2 ${
+                  </div>';
+                ) : (';';
+                  <Link href={item.href}';';';
+                    className={`text-gray-300 hover: text-cyan-300 transition-colors duration-200 py-2 ${',';';
+    ';';';
                       router.pathname === item.href ? 'text-cyan-400' : ''}`}
                   >
                     {item.name}
                   </Link>
-                )}
+                )
+      )}
+    </div>
+  );
+}
               </div>
-            ))}
+            ))
+      )}
+    </div>
+  );
+}
           </div>
-
           {/* CTA Button */}
           <div className=`hidden lg:block`}>
             <Link
@@ -187,10 +239,13 @@ const NextNavigation = () => {
               Get Started
             </Link>
           </div>
-
           {/* Mobile Menu Button */}
           <button
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={() => setIsOpen(!isOpen)
+      )}
+    </div>
+  );
+}
             className="lg:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-300 hover:bg-gray-800/50 transition-colors duration-200"
             aria-label="Toggle mobile menu"
           >
@@ -198,12 +253,12 @@ const NextNavigation = () => {
           </button>
         </div>
       </div>
-
       {/* Mobile Menu */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
+      <AnimatePresence>';
+        {isOpen && (';';
+          <motion.div';';';
+            initial={{ opacity: 0, height: 0 }}',';';
+    ';';';
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
@@ -225,29 +280,38 @@ const NextNavigation = () => {
                       <contact.icon className="w-4 h-4 text-cyan-400" />
                       <span>{contact.text}</span>
                     </a>
-                  ))}
+                  ))
+      )}
+    </div>
+  );
+}
                 </div>
               </div>
-
               {/* Navigation Items */}
               <div className="space-y-2">
-                {navigationItems.map((item) => (
+                { navigationItems.map((item) => (
                   <div key={item.name}>
                     {item.dropdown ? (
                       <div>
                         <button
-                          onClick={() => toggleDropdown(item.name)}
-                          className={`flex items-center justify-between w-full text-left px-3 py-2 text-gray-300 hover:text-cyan-300 hover:bg-gray-800/50 rounded-lg transition-colors duration-200`
-                        >
-                          <span>{item.name}</span>
-                          <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                          onClick={() => toggleDropdown(item.name)
+      )}
+    </div>
+  );
+}
+                          className={`flex items-center justify-between w-full text-left px-3 py-2 text-gray-300 hover:text-cyan-300 hover:bg-gray-800/50 rounded-lg transition-colors duration-200`';
+                        >';';
+                          <span>{item.name}</span>';';';
+                          <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${',';';
+    ';';';
                             activeDropdown === item.name ? 'rotate-180' : '';
 }`} />
                         </button>
-                        <AnimatePresence>
-                          {activeDropdown === item.name && (
-                            <motion.div
-                              initial={{ opacity: 0, height: 0 }}
+                        <AnimatePresence>';
+                          {activeDropdown === item.name && (';';
+                            <motion.div';';';
+                              initial={{ opacity: 0, height: 0 }}',';';
+    ';';';
                               animate={{ opacity: 1, height: 'auto' }}
                               exit={{ opacity: 0, height: 0 }}
                               transition={{ duration: 0.2 }}
@@ -263,26 +327,43 @@ const NextNavigation = () => {
                                   <dropdownItem.icon className={`w-4 h-4 text-cyan-400` />
                                   <span>{dropdownItem.name}</span>
                                 </Link>
-                              ))}
+                              ))
+      )}
+    </div>
+  );
+}
                             </motion.div>
-                          )}
+                          )
+      )}
+    </div>
+  );
+}
                         </AnimatePresence>
                       </div>
                     ) : (
-                      <Link href={item.href}
-                        onClick={closeMobileMenu}
-                        className={`block px-3 py-2 rounded-lg transition-colors duration-200 ${
-                          router.pathname === item.href 
-                            ? 'text-cyan-400 bg-cyan-400/10' 
+                      <Link href={item.href}';
+                        onClick={closeMobileMenu}';';
+                        className={`block px-3 py-2 rounded-lg transition-colors duration-200 ${';';';
+                          router.pathname === item.href',';';
+    ';';';
+                            ? 'text-cyan-400 bg-cyan-400/10'',';';
+    ';';';
                             : 'text-gray-300 hover: text-cyan-300 hover:bg-gray-800/50'}`}
                       >
                         {item.name}
                       </Link>
-                    )}
+                    )
+      )}
+    </div>
+  );
+}
                   </div>
-                ))}
+                ))
+      )}
+    </div>
+  );
+}
               </div>
-
               {/* Mobile CTA */}
               <div className=`pt-4 border-t border-gray-700`}>
                 <Link
@@ -295,10 +376,13 @@ const NextNavigation = () => {
               </div>
             </div>
           </motion.div>
-        )}
-      </AnimatePresence>
-    </nav>
+        )
+      )}
+    </div>
   );
-};
-
-export default NextNavigation;"
+}
+      </AnimatePresence>
+    </nav>';
+  );';';
+};';';';
+export default NextNavigation;"';';';';

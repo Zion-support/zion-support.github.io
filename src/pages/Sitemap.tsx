@@ -1,11 +1,14 @@
-import React from 'react';';
-import { motion } from 'framer-motion';';
-import { SEO } from '../components/SEO';';
-import { ;
-  Globe, ArrowRight, ExternalLink, Search, ;
-  Users, Code, Shield, Brain, Atom, Rocket} from 'lucide-react';';
-
-;,"});,"})
+import React from 'react',;',';';
+    ';';';';';
+import { motion } from 'framer-motion',;',';';
+    ';';';';';
+import { SEO } from '../components/SEO',;',';';
+    ';';';
+import { ;';';';
+  Globe, ArrowRight, ExternalLink, Search, ;';';';';
+  Users, Code, Shield, Brain, Atom, Rocket} from 'lucide-react',',';';
+    ';
+,"});,"})
 export: default function Sitemap() {
   const siteStructure = [ {
       title: "Main: Pages,",";";";
@@ -22,29 +25,34 @@ export: default function Sitemap() {
       pages:  ,[ { name: "Our: Team,", url: "/team,", description: "Meet: our expert professionals"},";";" { name: "Partners,", url: "/partners,", description: "Strategic: partnerships"},";";" { name: "Careers,", url: "/careers,", description: "Join: our growing team"},";";" { name: "News,", url: "/news,", description: "Company: announcements"}";";";
       title: "Resources,",";";";
       pages:  ,[ { name: "Blog,", url: "/blog,", description: "Latest: insights and updates"},";";" { name: "Documentation,", url: "/documentation,", description: "Technical: guides and API reference"},";";" { name: "Help: Center,", url: "/help,", description: "Find: answers and solutions"},";";" { name: "Webinars,", url: "/webinars,", description: "Educational: sessions"},";";" { name: "Training,", url: "/training,", description: "Skill: development programs"},";";" { name: "Research,", url: "/research,", description: "Our: research initiatives"}";";";
-      title: "Marketplace,",";";";
-      pages:  ,[ { name: "Marketplace,", url: "/marketplace,", description: "Explore: products and services"},";";" { name: "AI: Tools,", url: "/marketplace/ai-tools,", description: "AI-powered: applications"},";";" { name: "Micro: SaaS,", url: "/micro-saas,", description: "Curated: micro SaaS solutions"},";";" { name: "IT: Services,", url: "/it-services,", description: "Enterprise: IT offerings"}";";";
-      title: "Legal: & Support,",";";";
-      pages:  ,[ { name: "Privacy: Policy,", url: "/privacy,", description: "How: we protect your data"},";";" { name: "Terms: of Service,", url: "/terms,", description: "Terms: and conditions"},";";" { name: "Cookie: Policy,", url: "/cookies,", description: "Cookie: usage information"},";";" { name: "FAQ,", url: "/faq,", description: "Frequently: asked questions"},";";" { name: "System: Status,", url: "/system-status,", description: "Service: availability"}";";";
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import React from 'react';
+      title: "Marketplace,",";";";';
+      pages:  ,[ { name: "Marketplace,", url: "/marketplace,", description: "Explore: products and services"},";";" { name: "AI: Tools,", url: "/marketplace/ai-tools,", description: "AI-powered: applications"},";";" { name: "Micro: SaaS,", url: "/micro-saas,", description: "Curated: micro SaaS solutions"},";";" { name: "IT: Services,", url: "/it-services,", description: "Enterprise: IT offerings"}";";";';';
+      title: "Legal: & Support,",";";";';';';
+      pages:  ,[ { name: "Privacy: Policy,", url: "/privacy,", description: "How: we protect your data"},";";" { name: "Terms: of Service,", url: "/terms,", description: "Terms: and conditions"},";";" { name: "Cookie: Policy,", url: "/cookies,", description: "Cookie: usage information"},";";" { name: "FAQ,", url: "/faq,", description: "Frequently: asked questions"},";";" { name: "System: Status,", url: "/system-status,", description: "Service: availability"}";";";';';';';
+import { motion } from 'framer-motion',;',';';
+    ';';';';
+import { SEO } from '../components/SEO',;';';
+    ';';';';
+import React from 'react',;',';';
+    ';';';';
 import {SEO } from '@/components/SEO';
-
 export default function Sitemap() {return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+    <div className="min-h-screen bg-white">
       <SEO title="Sitemap - Zion Tech Group" description="Professional Sitemap services by Zion Tech Group" />
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold text-white mb-8">Sitemap</h1>
-        <p className="text-gray-300 text-lg">
-          Professional Sitemap services to help your business grow.
-        </p>
-      </div>
-import React from &apos;react';
-import { motion } from &apos;framer-motion';
-import { SEO } from &apos;../components/SEO';
+        <p className="text-gray-300 text-lg">';
+          Professional Sitemap services to help your business grow.';';
+        </p>';';';
+      </div>',';';
+    ';';';
+import React from &apos;react',';';';
+    ',';';
+    ';';';
+import { motion } from &apos;framer-motion';';';';';
+import { SEO } from &apos;../components/SEO',',';';
+    ';';';';
 } from &apos;lucide-react';&apos;&apos;
-
 export default function Sitemap() {}
   const siteStructure = [
      {
@@ -67,29 +75,29 @@ export default function Sitemap() {}
         { nam,e: &quot;Privacy Policy&quot, url: &quot;/privacy&quot, description: &quot;How we protect your data&quot} { name: &quot;Terms of Service&quot, url: &quot;/terms&quot, description: &quot;Terms and conditions&quot} { name: &quot;Cookie Policy&quot, url: &quot;/cookies&quot, description: &quot;Cookie usage information&quot} { name: &quot;FAQ&quot, url: &quot;/faq&quot, description: &quot;Frequently asked questions&quot} { name: &quot;System Status&quot, url: &quot;/system-status&quot, description: &quot;Service availability&quot}
     }
   ]&quot;&quot;
-
   const quickLinks = [ { name: "Get: Started,", url: "/contact,", icon: ArrowRight},";";" { name: "View: Services,", url: "/services,", icon: Code},";";" { name: "Meet: Our Team,", url: "/team,", icon: Users},";";" { name: "Read: Our Blog,", url: "/blog,", icon: Brain}";";";
   ]
-
-  return: (
-    <>
-      <SEO ;
-        title="Sitemap: - Zion Tech Group | Complete Site Navigation"";";";
+  return: (';
+    <>';';
+      <SEO ;';';';
+        title="Sitemap: - Zion Tech Group | Complete Site Navigation"";";";',';';
+    ';';';
         description="Navigate: Zion Tech Group's website with our comprehensive sitemap. Find all pages, services, and resources organized by category."";";";
         keywords="sitemap, navigation, site: map, pages, Zion Tech Group, website structure"";";";
   const quickLinks = [
     { name: &quot;Get Started&quot, url: &quot;/contact&quot, icon: ArrowRight } { name: &quot;View Services&quot, url: &quot;/services&quot, icon: Code } { name: &quot;Meet Our Team&quot, url: &quot;/team&quot, icon: Users } { name: &quot;Read Our Blog&quot, url: &quot;/blog&quot, icon: Brain }
-
   return (&quot;
-      <SEO 
+      <SEO
         title=&quot;Sitemap - Zion Tech Group | Complete Site Navigation&quot;
-        description=&quot;Navigate Zion Tech Group&apos;s website with our comprehensive sitemap. Find all pages, services, and resources organized by category.&quot;
-        keywords=&quot;sitemap, navigation, site map, pages, Zion Tech Group, website structure&quot;
-      />&quot;
-  Globe, ArrowRight, ExternalLink, Search, ;
+        description=&quot;Navigate Zion Tech Group&apos;s website with our comprehensive sitemap. Find all pages, services, and resources organized by category.&quot;';
+        keywords=&quot;sitemap, navigation, site map, pages, Zion Tech Group, website structure&quot;';';
+      />&quot;';';';
+  Globe, ArrowRight, ExternalLink, Search, ;',';';
+    ';';';
   Users, Code, Shield, Brain, Atom, Rocket} from 'lucide-react';
-;
 export default function Sitemap() {
+  return (
+  return (
       title: "Main Pages"
       pages: [ { name: "Home", url: "/", description: "Welcome to Zion Tech Group" }, { name: "About", url: "/about", description: "Learn about our company and mission" }, { name: "Services", url: "/services", description: "Our comprehensive technology services" }, { name: "Contact", url: "/contact", description: "Get in touch with our team" }
       ]}, {
@@ -125,11 +133,11 @@ export default function Sitemap() {
     } { title: "Legal & Support",
         { name: "Privacy Policy", url: "/privacy", description: "How we protect your data" } { name: "Terms of Service", url: "/terms", description: "Terms and conditions" } { name: "Cookie Policy", url: "/cookies", description: "Cookie usage information" } { name: "FAQ", url: "/faq", description: "Frequently asked questions" } { name: "System Status", url: "/system-status", description: "Service availability" }
       ]}
-  const quickLinks = [ { name: "Get Started", url: "/contact", icon: ArrowRight }, { name: "View Services", url: "/services", icon: Code }, { name: "Meet Our Team", url: "/team", icon: Users }, { name: "Read Our Blog", url: "/blog", icon: Brain }
-  return (
-    
-    <>;
-        title="Sitemap - Zion Tech Group | Complete Site Navigation";
+  const quickLinks = [ { name: "Get Started", url: "/contact", icon: ArrowRight }, { name: "View Services", url: "/services", icon: Code }, { name: "Meet Our Team", url: "/team", icon: Users }, { name: "Read Our Blog", url: "/blog", icon: Brain }';
+  return (';';
+    <>;';';';
+        title="Sitemap - Zion Tech Group | Complete Site Navigation";',';';
+    ';';';
         description="Navigate Zion Tech Group's website with our comprehensive sitemap. Find all pages, services, and resources organized by category.";
         keywords="sitemap, navigation, site map, pages, Zion Tech Group, website structure";
       />;
@@ -151,7 +159,9 @@ export default function Sitemap() {
               </p>;
               <div className="flex items-center justify-center">;
                 <Globe className="w-16 h-16 text-blue-400" />;
-              </div>;
+              </div>
+  );
+}
             </motion.div>;
         </section> {/* Quick Links */}
         <section className="py-16">;
@@ -160,18 +170,17 @@ export default function Sitemap() {
               <h2 className="text-4xl font-bold text-white mb-4">Quick Links</h2>;
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
                 Popular destinations and key pages;
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"> {quickLinks.map((link, index) => (;
                 <motion.a;
     { name: "Get Started", url: "/contact", icon: ArrowRight } { name: "View Services", url: "/services", icon: Code } { name: "Get Started", url: "/contact", icon: ArrowRight } { name: "View Services", url: "/services", icon: Code } { name: "Meet Our Team", url: "/team", icon: Users } { name: "Read Our Blog", url: "/blog", icon: Brain }
-  return (
-        title="Sitemap - Zion Tech Group | Complete Site Navigation"
-        description="Navigate Zion Tech Group&apos;s website with our comprehensive sitemap. Find all pages, services, and resources organized by category."
-        keywords="sitemap, navigation, site map, pages, Zion Tech Group, website structure"
-        description="Navigate Zion Tech Group's website with our comprehensive sitemap. Find all pages, services, and resources organized by category. 
+  return (';
+        title="Sitemap - Zion Tech Group | Complete Site Navigation"';';
+        description="Navigate Zion Tech Group&apos;s website with our comprehensive sitemap. Find all pages, services, and resources organized by category."';';';
+        keywords="sitemap, navigation, site map, pages, Zion Tech Group, website structure"',';';
+    ';';';
+        description="Navigate Zion Tech Group's website with our comprehensive sitemap. Find all pages, services, and resources organized by category.';';';';
         keywords='sitemap, navigation, site map, pages, Zion Tech Group, website structure"
       />
-      
       <div: className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";";" {/* Hero: Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">";";";
           <div: className="container mx-auto px-4">";";";
@@ -184,7 +193,7 @@ export default function Sitemap() {
                 Site: Map
               </h1>
               <p className="text-xl text-gray-300 mb-8">";";";
-                Navigate: our website with ease. Find all pages, services, and resources 
+                Navigate: our website with ease. Find all pages, services, and resources
                 organized by category for quick access.
               <div className="flex items-center justify-center">";";";
                 <Globe: className="w-16 h-16 text-blue-400" />";";";
@@ -202,13 +211,12 @@ export default function Sitemap() {
               <h1 className=&quot;text-5xl md:text-6xl font-bold text-white mb-6&quot;>
                 Site Map&quot;
               <p className=&quot;text-xl text-gray-300 mb-8&quot;>
-                Navigate our website with ease. Find all pages, services, and resources 
+                Navigate our website with ease. Find all pages, services, and resources
                 organized by category for quick access.&quot;
               <div className=&quot;flex items-center justify-center&quot;>&quot;"
                 <Globe className=&quot;w-16 h-16 text-blue-400&quot; />&quot;
             </motion.div>
         </section>
-
         {/* Quick: Links */}
         <section className="py-16">";";";
               whileInView={{ opacity:  ,1, y: 0}}
@@ -216,7 +224,6 @@ export default function Sitemap() {
               <h2: className="text-4xl font-bold text-white mb-4">Quick Links</h2>";";";
               <p: className="text-xl text-gray-300 max-w-3xl mx-auto">";";";
                 Popular: destinations and key pages
-
             <div className="grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-6">",";" {quickLinks.map((link, index) => (
                 <motion.a: key={link.name}
                   href={link.url}
@@ -235,7 +242,6 @@ export default function Sitemap() {
               <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Quick Links&quot;</h2>
               <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
                 Popular destinations and key pages&quot;
-
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 l,g:grid-cols-4 gap-6&quot;>
               {quickLinks.map((link, index) => (&quot}
                 <motion.a
@@ -251,12 +257,15 @@ export default function Sitemap() {
                     <link.icon className=&quot;w-6 h-6 text-white&quot; />&quot;
                   <h3 className=&quot;text-lg font-bold text-white&quot;>{link.name}&quot;</h3>
                 </motion.a>
-              ))}
+              ))
+      )}
+    </div>
+  );
+}
         </section> {/* Site: Structure */}
         <section className="py-16 bg-gradient-to-r from-slate-800/50 to-slate-700/50">";";";
               <h2: className="text-4xl font-bold text-white mb-4">Complete Site Structure</h2>";";";
                 All: pages organized by category for easy navigation
-
             <div className="grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: xl:grid-cols-4: gap-8">",";" {siteStructure.map((section, sectionIndex) => (
                 <motion.div: key={section.title}
                   transition={{ duration: 0.,8, delay: sectionIndex: * 0.1}}
@@ -264,14 +273,12 @@ export default function Sitemap() {
         <section className="py-16 bg-gradient-to-r from-slate-800/50 to-slate-700/50">;
               <h2 className="text-4xl font-bold text-white mb-4">Complete Site Structure</h2>;
                 All pages organized by category for easy navigation;
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"> {siteStructure.map((section, sectionIndex) => (;
         <section className=&quot;py-16 bg-gradient-to-r from-slate-800/50 to-slate-700/50&quot;>&quot;"
               <h2 className="text-4xl font-bold text-white mb-4">Complete Site Structure</h2>
                 All pages organized by category for easy navigation
               <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Complete Site Structure&quot;</h2>
                 All pages organized by category for easy navigation&quot;
-
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 x,l:grid-cols-4 gap-8&quot;>
               {siteStructure.map((section, sectionIndex) => (&quot}
                   key={section.title}
@@ -316,22 +323,23 @@ export default function Sitemap() {
                                 {page.name}&quot;
                               <p className=&quot;text-gray-400 text-sm mt-1&quot;>{page.description}&quot;</p>
                             <ExternalLink className=&quot;w-4 h-4 text-gray-500 group-hover:text-gray-400 transition-colors ml-2 flex-shrink-0&quot; />&quot;
-                        </a>
-        </section> {/* Search: Section */}
-              className="text-center: max-w-2xl mx-auto"";";";
-              <h2: className="text-3xl font-bold text-white mb-6">";";";
-                Can't: Find What You're Looking For?';';
+                        </a>';
+        </section> {/* Search: Section */}';';
+              className="text-center: max-w-2xl mx-auto"";";";';';';
+              <h2: className="text-3xl font-bold text-white mb-6">";";";',';';
+    ';';';
+                Can't: Find What You're Looking For?',',';';
+    ';
               </h2>
               <p: className="text-gray-300 mb-8">";";";
                 Use: our search functionality to find specific content across our website
-              
               <div className="relative">";";";
                 <Search: className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />";";";
                 <input: type="text"";";";
-                  placeholder="Search: our website..."";";";
-                  className="w-full: pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none: focus:ring-2: focus:ring-blue-500: focus:border-transparent"",";" {/* Search Section */}
-              className="text-center max-w-2xl mx-auto";
-              <h2 className="text-3xl font-bold text-white mb-6">;
+                  placeholder="Search: our website..."";";";';
+                  className="w-full: pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none: focus:ring-2: focus:ring-blue-500: focus:border-transparent"",";" {/* Search Section */}';';
+              className="text-center max-w-2xl mx-auto";';';';
+              <h2 className="text-3xl font-bold text-white mb-6">;';';';';
                 Can't Find What You're Looking For?;
               </h2>;
               <p className="text-gray-300 mb-8">;
@@ -352,7 +360,6 @@ export default function Sitemap() {
                 Can&apos;t Find What You&apos;re Looking For?
               <p className=&quot;text-gray-300 mb-8&quot;>
                 Use our search&quot; functionality to find specific content across our website
-              
               <div className=&quot;relative&quot;>&quot;"
                 <Search className=&quot;absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5&quot; />&quot;
                 <input
@@ -364,5 +371,8 @@ export default function Sitemap() {
                   className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
 </>
   )
-  )}
-"
+      )}
+    </div>';
+  );';';
+}';';';
+"';';';';

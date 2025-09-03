@@ -1,8 +1,13 @@
-import React { useState, useEffect, useRef } from 'react';''';,"});,"})
-import { Link, useLocation } from 'react-router-dom';''';,"});,"})
-import { motion, AnimatePresence } from 'framer-motion';,"});,"})
-import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, onToggle }) => {}"});,"})
-    const [activeDropdown, setActiveDropdown] = useState(null);,"});,"})
+import React { useState, useEffect, useRef } from 'react',;',';';
+    ''';,"});,"})',';';
+    ';';';
+import { Link, useLocation } from 'react-router-dom',;',';';
+    ''';,"});,"})',';';
+    ';';';
+import { motion, AnimatePresence } from 'framer-motion';,"});,"})';';
+import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, onToggle }) => {}"});,"})';';';
+    const [activeDropdown, setActiveDropdown] = useState(null);,"});,"})',';';
+    ';';';
     const [searchQuery, setSearchQuery] = useState('');,"});,"})
     const location = useLocation();,"});,"})
     const menuRef = useRef(null);,"});,"})
@@ -11,72 +16,111 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
         onToggle () }, [location.pathname]) ;,"});,"})
     // Close menu when clicking outside,"});,"})
         const handleClickOutside = (event) => {}"});,"})
-            if (menuRef.current && !menuRef.current.contains(event.target)) {}"});,"})
-                onToggle()}"});,"});
-};,"});,"})
-        if (isOpen) {}"});,"})
-';,"});,"})
-'';,"});,"})
-''';,"});,"})
-            document.addEventListener('mousedown', handleClickOutside);''';,"});,"})
-            document.body.style.overflow = 'hidden'}"});,"})
-        return () => {}"});,"})
-            document.removeEventListener('mousedown', handleClickOutside);''';,"});,"})
-            document.body.style.overflow = 'unset'}}, [isOpen, onToggle]);,"});,"})
-    const navigationItems = [];,"});,"})
-        {}"});,"})
-            label: 'Services',''';,"});,"})
-            href: '/services','';,"});,"})
-            children[;''';,"});,"})
-                { label: 'AI & Machine Learning', href: '/services/ai' },''';,"});,"})
-                { label: 'Quantum Computing', href: '/services/quantum' },''';,"});,"})
-                { label: 'Cybersecurity', href: '/services/cybersecurity' },''';,"});,"})
-                { label: 'Cloud Services', href: '/services/cloud' },''';,"});,"})
-                { label: 'Digital Transformation', href: '/services/transformation' },''';,"});,"})
-                { label: 'Consulting', href: '/services/consulting' }"});,"})
-            ],"});,"});
-},;,"});,"})
-            label: 'Solutions',''';,"});,"})
-            href: '/solutions','';,"});,"})
-                { label: 'Enterprise Solutions', href: '/solutions/enterprise' },''';,"});,"})
-                { label: 'Startup Solutions', href: '/solutions/startup' },''';,"});,"})
-                { label: 'Government Solutions', href: '/solutions/government' },''';,"});,"})
-                { label: 'Healthcare Solutions', href: '/solutions/healthcare' }"});,"})
-            label: 'Industries',''';,"});,"})
-            href: '/industries','';,"});,"})
-                { label: 'Technology', href: '/industries/technology' },''';,"});,"})
-                { label: 'Healthcare', href: '/industries/healthcare' },''';,"});,"})
-                { label: 'Finance', href: '/industries/finance' },''';,"});,"})
-                { label: 'Manufacturing', href: '/industries/manufacturing' },''';,"});,"})
-                { label: 'Education', href: '/industries/education' }"});,"})
-            label: 'Comp',''';,"});,"})
-            href: '/about','';,"});,"})
-                { label: 'About Us', href: '/about' },''';,"});,"})
-                { label: 'Careers', href: '/careers' },''';,"});,"})
-                { label: 'News', href: '/news' },''';,"});,"})
-                { label: 'Press', href: '/press' },''';,"});,"})
+            if (menuRef.current && !menuRef.current.contains(event.target)) {}"});,"})';
+                onToggle()}"});,"});';';
+};,"});,"})';';';
+        if (isOpen) {}"});,"})',',';';
+    ';,"});,"})';';';';
+'';,"});,"})',',';';
+    ''';,"});,"})',';';
+    ';';';
+            document.addEventListener('mousedown', handleClickOutside);''';,"});,"})',';';
+    ';';';
+            document.body.style.overflow = 'hidden'}"});,"})';';';
+        return () => {}"});,"})',';';
+    ';';';
+            document.removeEventListener('mousedown', handleClickOutside);''';,"});,"})',';';
+    ';';';
+            document.body.style.overflow = 'unset'}}, [isOpen, onToggle]);,"});,"})';';
+    const navigationItems = [];,"});,"})';';';
+        {}"});,"})',';';
+    ';';';
+            label: 'Services',''';,"});,"})',';';
+    ';';';
+            href: '/services','';,"});,"})',';';
+    ';';';
+            children[;''';,"});,"})',';';
+    ';';';
+                { label: 'AI & Machine Learning', href: '/services/ai' },''';,"});,"})',';';
+    ';';';
+                { label: 'Quantum Computing', href: '/services/quantum' },''';,"});,"})',';';
+    ';';';
+                { label: 'Cybersecurity', href: '/services/cybersecurity' },''';,"});,"})',';';
+    ';';';
+                { label: 'Cloud Services', href: '/services/cloud' },''';,"});,"})',';';
+    ';';';
+                { label: 'Digital Transformation', href: '/services/transformation' },''';,"});,"})',';';
+    ';';';
+                { label: 'Consulting', href: '/services/consulting' }"});,"})';';
+            ],"});,"});';';';
+},;,"});,"})',';';
+    ';';';
+            label: 'Solutions',''';,"});,"})',';';
+    ';';';
+            href: '/solutions','';,"});,"})',';';
+    ';';';
+                { label: 'Enterprise Solutions', href: '/solutions/enterprise' },''';,"});,"})',';';
+    ';';';
+                { label: 'Startup Solutions', href: '/solutions/startup' },''';,"});,"})',';';
+    ';';';
+                { label: 'Government Solutions', href: '/solutions/government' },''';,"});,"})',';';
+    ';';';
+                { label: 'Healthcare Solutions', href: '/solutions/healthcare' }"});,"})',';';
+    ';';';
+            label: 'Industries',''';,"});,"})',';';
+    ';';';
+            href: '/industries','';,"});,"})',';';
+    ';';';
+                { label: 'Technology', href: '/industries/technology' },''';,"});,"})',';';
+    ';';';
+                { label: 'Healthcare', href: '/industries/healthcare' },''';,"});,"})',';';
+    ';';';
+                { label: 'Finance', href: '/industries/finance' },''';,"});,"})',';';
+    ';';';
+                { label: 'Manufacturing', href: '/industries/manufacturing' },''';,"});,"})',';';
+    ';';';
+                { label: 'Education', href: '/industries/education' }"});,"})',';';
+    ';';';
+            label: 'Comp',''';,"});,"})',';';
+    ';';';
+            href: '/about','';,"});,"})',';';
+    ';';';
+                { label: 'About Us', href: '/about' },''';,"});,"})',';';
+    ';';';
+                { label: 'Careers', href: '/careers' },''';,"});,"})',';';
+    ';';';
+                { label: 'News', href: '/news' },''';,"});,"})',';';
+    ';';';
+                { label: 'Press', href: '/press' },''';,"});,"})',';';
+    ';';';
                 { label: 'Contact', href: '/contact' }"});,"})
-    const toggleDropdown = (label) => {}"});,"})
-        setActiveDropdown(activeDropdown === label ? null : label)};,"});,"})
-    const handleSearch = (e) => {}"});,"})
-        e.preventDefault();,"});,"})
-        // Implement search functionality'';,"});,"})
-        // // // // // // // // console.log('Search query:', searchQuery);,"});,"})
-        // console.log('Search query:', searchQuery)};,"});,"})
-    const menuVariants = {}"});,"})
-  closed: {}"});,"})
-            x: '100%',"});,"})
-            opacity: 0,"});,"})
-            transition: {}"});,"})
-                duration: 0.3,';,"});,"})
+    const toggleDropdown = (label) => {}"});,"})';
+        setActiveDropdown(activeDropdown === label ? null : label)};,"});,"})';';
+    const handleSearch = (e) => {}"});,"})';';';
+        e.preventDefault();,"});,"})',';';
+    ';';';
+        // Implement search functionality'';,"});,"})',';';
+    ';';';
+        // // // // // // // // console.log('Search query:', searchQuery);,"});,"})',';';
+    ';';';
+        // console.log('Search query:', searchQuery)};,"});,"})';';
+    const menuVariants = {}"});,"})';';';
+  closed: {}"});,"})',';';
+    ';';';
+            x: '100%',"});,"})';';
+            opacity: 0,"});,"})';';';
+            transition: {}"});,"})',';';
+    ';';';
+                duration: 0.3,';,"});,"})';';';';
   ease: 'easeInOut',"});,"});
 }"});,"})
         open: {}"});,"})
-            x: 0,"});,"})
-            opacity: 1,"});,"})
-    const dropdownVariants = {}"});,"})
-            height: 0,"});,"})
-                duration: 0.2,';,"});,"})
+            x: 0,"});,"})';
+            opacity: 1,"});,"})';';
+    const dropdownVariants = {}"});,"})';';';
+            height: 0,"});,"})',';';
+    ';';';
+                duration: 0.2,';,"});,"})';';';';
             height: 'auto',"});,"})
     return (<AnimatePresence>;,"});,"})
       {isOpen && (<>;,"});,"})
@@ -112,11 +156,12 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
                 <Bell size={20}/>;,"});,"})
             {/* Navigation Menu */}"""";,"});,"})
             <div className="flex-1 overflow-y-auto py-4">"""";,"});,"})
-              <nav className="space-y-2">"""";,"});,"})
-                {navigationItems.map((item) => (<div key={item.label} className="px-4">""";,"});,"})
-                    {item.children ? (<div>"""";,"});,"})
-                        <button onClick={() => toggleDropdown(item.label)} className="w-full flex items-center justify-between py-3 px-4 text-white hover: bg-white/10 rounded-lg transition-colors">,"});,"})
-                          <span>{item.label}</span>';,"});,`})
+              <nav className="space-y-2">"""";,"});,"})';
+                {navigationItems.map((item) => (<div key={item.label} className="px-4">""";,"});,"})';';
+                    {item.children ? (<div>"""";,"});,"})';';';
+                        <button onClick={() => toggleDropdown(item.label)} className="w-full flex items-center justify-between py-3 px-4 text-white hover: bg-white/10 rounded-lg transition-colors">,"});,"})',';';
+    ';';';
+                          <span>{item.label}</span>';,"});,`})';';';';
                           <ChevronDown size={20} className={`text-zion-slate-light transition-transform ${activeDropdown === item.label ? 'rotate-180' : ''}`}/>;,`});,"})
                         </button>""";,"});,"})
                         <AnimatePresence>"""";,"});,"})
@@ -156,20 +201,29 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
           </motion.div>;,"});,"})
         </>)}"});,"})
     </AnimatePresence>)};,"});,"})
-export default MobileNavigation,"});,"});
-}}}}}}}}}</motion.div>}"});,"})
-;,"});,"})
-export { MobileNavigation };,"});,"})
- const MobileNavigation = ({ isOpen, onToggle }) => { const [activeDropdown, setActiveDropdown] = useState (null)  const [searchQuery, setSearchQuery] = useState (')  const location = useLocation ()  const menuRef = useRef (null) ';'";";";";
- const MobileNavigation = ({ isOpen, onToggle }) => { const [activeDropdown, setActiveDropdown] = useState (null)  const [searchQuery, setSearchQuery] = useState (')  const location = useLocation ()  const menuRef = useRef (null) ';'"'"
- const MobileNavigation = ({ isOpen, onToggle }) => { const [activeDropdown, setActiveDropdown] = useState (null)  const [searchQuery, setSearchQuery] = useState (')  const location = useLocation ()  const menuRef = useRef (null) ';";""
- const MobileNavigation = ({isOpen, onToggle }) => { const [activeDropdown, setActiveDropdown] = useState (null)  const [searchQuery, setSearchQuery] = useState (')  const location = useLocation ()  const menuRef = useRef (null) ';'";'"
- const MobileNavigation = memo(({ isOpen, onToggle }) => { const [activeDropdown, setActiveDropdown] = useState (null)  const [searchQuery, setSearchQuery] = useState (')  const location = useLocation ()  const menuRef = useRef (null) ';'";'"
- const MobileNavigation = ({ isOpen, onToggle }) => {} const [activeDropdown, setActiveDropdown] = useState (null)  const;const [searchQuery, setSearchQuery] = useState (&apos)&apos;'  const location = useLocation ()  const;const;const menuRef = useRef (null) ';&apos;";
-&quot;"
- const MobileNavigation = ({ isOpen, onToggle }) => { const [activeDropdown, setActiveDropdown] = useState (null)  const [searchQuery, setSearchQuery] = useState (')  const location = useLocation ()  const menuRef = useRef (null) ';'";'"
-"";
-}
- const MobileNavigation = ({ isOpen, onToggle }) => { const [activeDropdown, setActiveDropdown] = useState (null)  const [searchQuery, setSearchQuery] = useState (')  const location = useLocation ()  const menuRef = useRef (null) "
-"
-"
+export default MobileNavigation,"});,"});';
+}}}}}}}}}</motion.div>}"});,"})';';
+;,"});,"})';';';
+export { MobileNavigation };,"});,"})',';';
+    ';';';
+ const MobileNavigation = ({ isOpen, onToggle }) => { const [activeDropdown, setActiveDropdown] = useState (null)  const [searchQuery, setSearchQuery] = useState (')  const location = useLocation ()  const menuRef = useRef (null) ',',';';
+    '";";";";';';';';
+ const MobileNavigation = ({ isOpen, onToggle }) => { const [activeDropdown, setActiveDropdown] = useState (null)  const [searchQuery, setSearchQuery] = useState (')  const location = useLocation ()  const menuRef = useRef (null) ',',';';
+    '"'"';';';';
+ const MobileNavigation = ({ isOpen, onToggle }) => { const [activeDropdown, setActiveDropdown] = useState (null)  const [searchQuery, setSearchQuery] = useState (')  const location = useLocation ()  const menuRef = useRef (null) ';";""',';';
+    ';';';
+ const MobileNavigation = ({isOpen, onToggle }) => { const [activeDropdown, setActiveDropdown] = useState (null)  const [searchQuery, setSearchQuery] = useState (')  const location = useLocation ()  const menuRef = useRef (null) ',',';';
+    '";'"';';';';
+ const MobileNavigation = memo(({ isOpen, onToggle }) => { const [activeDropdown, setActiveDropdown] = useState (null)  const [searchQuery, setSearchQuery] = useState (')  const location = useLocation ()  const menuRef = useRef (null) ',',';';
+    '";'"';';';';
+ const MobileNavigation = ({ isOpen, onToggle }) => {} const [activeDropdown, setActiveDropdown] = useState (null)  const;const [searchQuery, setSearchQuery] = useState (&apos)&apos;'  const location = useLocation ()  const;const;const menuRef = useRef (null) ';&apos;";';';';
+&quot;"',';';
+    ';';';
+ const MobileNavigation = ({ isOpen, onToggle }) => { const [activeDropdown, setActiveDropdown] = useState (null)  const [searchQuery, setSearchQuery] = useState (')  const location = useLocation ()  const menuRef = useRef (null) ',',';';
+    '";'"';';
+"";';';';
+}',';';
+    ';';';
+ const MobileNavigation = ({ isOpen, onToggle }) => { const [activeDropdown, setActiveDropdown] = useState (null)  const [searchQuery, setSearchQuery] = useState (')  const location = useLocation ()  const menuRef = useRef (null) "';';
+"';';';
+"';';';';

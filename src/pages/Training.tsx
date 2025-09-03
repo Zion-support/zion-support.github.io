@@ -1,10 +1,12 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { ;
-  GraduationCap, Video, BookOpen, Users, Clock, ;
+import React from 'react',;',';';
+    ';';';';
+import { motion } from 'framer-motion',;';';
+    ';';';';
+import { SEO } from '../components/SEO';';';
+import { ;';';';
+  GraduationCap, Video, BookOpen, Users, Clock, ;',';';
+    ';';';
   Star, Award, Play, Download, ArrowRight} from 'lucide-react';
-;
 export default function Training() {;
   const courses = [
   {;
@@ -70,30 +72,33 @@ export default function Training() {;
       color: "from-purple-500 to-pink-500"},;
     {;
       title: "Corporate Training"
-      description: "Customized training solutions for enterprise teams"
-      icon: GraduationCap
-      count: 15
-      color: "from-orange-500 to-red-500";
+      description: "Customized training solutions for enterprise teams"';
+      icon: GraduationCap';';
+      count: 15';';';
+      color: "from-orange-500 to-red-500";',';';
+    ';';';
 import {SEO } from '@/components/SEO';
-
-;,"});,"})
+,"});,"})
 export default function Training() {return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+    <div className="min-h-screen bg-white">
       <SEO title="Training - Zion Tech Group" description="Professional Training services by Zion Tech Group" />
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold text-white mb-8">Training</h1>
         <p className="text-gray-300 text-lg">
-          Professional Training services to help your business grow.
-        </p>
-      </div>
-    </div>
-import React from &apos;react';
-import { motion } from &apos;framer-motion';
-import { SEO } from &apos;../components/SEO';
-import { ;
-  GraduationCap, Video, BookOpen, Users, Clock, ;
+          Professional Training services to help your business grow.';
+        </p>';';
+      </div>';';';
+    </div>',';';
+    ';';';
+import React from &apos;react',';';';
+    ',';';
+    ';';';
+import { motion } from &apos;framer-motion';';';';';
+import { SEO } from &apos;../components/SEO';';';
+import { ;';';';
+  GraduationCap, Video, BookOpen, Users, Clock, ;',';';
+    ';';';
   Star, Award, Play, Download, ArrowRight} from &apos;lucide-react';&apos;&apos;
-
 export default function Training() {}
   const courses = [
     ;{
@@ -101,15 +106,20 @@ export default function Training() {}
       title: &quot;AI Fundamentals&quot,
       description: &quot;Learn the basics of artificial intelligence and machine learning&quot,
       duration: &quot;8 hours&quot,
-      level: &quot;Beginner&quot,
-      rating: 4.8,
-      students: 1250,
-      price: &quot;$199&quot,
-import { motion} from 'framer-motion';
-import { SEO} from '../components/SEO';
-import { ;
+      level: &quot;Beginner&quot,';
+      rating: 4.8,';';
+      students: 1250,';';';
+      price: &quot;$199&quot,',';';
+    ';';';
+import { motion} from 'framer-motion',;',';';
+    ';';';';
+import { SEO} from '../components/SEO',;';';
+    ';';';
+import { ;';';';';
   GraduationCap, Video, BookOpen, Users, Clock, Star, Award, Play, Download, ArrowRight} from 'lucide-react';
 export default function Training() {
+  return (
+  return (
   const courses = [
     { id: 1, title: "AI Fundamentals",
     {
@@ -156,7 +166,6 @@ export default function Training() {
       price: &quot;$149&quot,
       featured: false}
   ]&quot;
-
       title: "Cybersecurity Essentials", description: "Essential cybersecurity practices for modern applications",
       duration: "6 hours", level: "Beginner",
       rating: 4.6, students: 678,
@@ -204,15 +213,13 @@ export default function Training() {
   ]
 ;
   return (
-    
     <>;
       <SEO ;
         title="Training - Zion Tech Group | Technology Education & Certification";
         description="Enhance your skills with our comprehensive training programs in AI, quantum computing, cybersecurity, and emerging technologies. Expert-led courses and certifications.";
         keywords="training, courses, certification, AI training, quantum computing, cybersecurity, education, Zion Tech Group";
       />;
-      ;
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">;
           <div className="container mx-auto px-4">;
@@ -232,11 +239,14 @@ export default function Training() {
               </p>;
               <div className="flex items-center justify-center">;
                 <GraduationCap className="w-16 h-16 text-blue-400" />;
-              </div>;
+              </div>
+  );
+}
             </motion.div>;
-          </div>;
+          </div>
+  );
+}
         </section>;
-
         {/* Training Types */}
         <section className="py-16">;
           <div className="container mx-auto px-4">;
@@ -251,20 +261,17 @@ export default function Training() {
                 Choose from various training formats to suit your learning style and schedule;
               </p>;
             </motion.div>;
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
               {trainingTypes.map((type, index) => (;
                 <motion.div;
-
   return (&quot;
   return (
     <>
-      <SEO 
+      <SEO
         title=&quot;Training - Zion Tech Group | Technology Education & Certification&quot;
         description=&quot;Enhance your skills with our comprehensive training programs in AI, quantum computing, cybersecurity, and emerging technologies. Expert-led courses and certifications.&quot;
         keywords=&quot;training, courses, certification, AI training, quantum computing, cybersecurity, education, Zion Tech Group&quot;
       />&quot;
-      
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900&quot;>
         {/* Hero Section */}&quot;
         <section className=&quot;py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20&quot;>&quot;"
@@ -286,7 +293,7 @@ export default function Training() {
                 Technology Training
               </h1>
               <p className=&quot;text-xl text-gray-300 mb-8&quot;>
-                Master cutting-edge technologies with our comprehensive training programs. 
+                Master cutting-edge technologies with our comprehensive training programs.
                 Learn from industry experts and earn recognized certifications.&quot;
               </p>
               <div className=&quot;flex items-center justify-center&quot;>&quot;"
@@ -295,7 +302,6 @@ export default function Training() {
             </motion.div>
           </div>
         </section>
-
         {/* Training Types */}
         <section className=&quot;py-16&quot;>&quot;"
           <div className=&quot;container mx-auto px-4&quot;>&quot;"
@@ -319,7 +325,6 @@ export default function Training() {
                 Choose from various training formats to suit your learning style and schedule
               </p>
             </motion.div>
-
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 l,g:grid-cols-4 gap-8&quot;>
               {trainingTypes.map((type, index) => (&quot}
                 <motion.div
@@ -331,10 +336,14 @@ export default function Training() {
                 >;
                   <div className={`w-16 h-16 bg-gradient-to-br ${type.color} rounded-xl flex items-center justify-center mb-4`}>;
                     <type.icon className=`w-8 h-8 text-white`} />;
-                  </div>;
+                  </div>
+  );
+}
                   <h3 className="text-xl font-bold text-white mb-2">{type.title}</h3>;
                   <p className="text-gray-300 text-sm mb-3">{type.description}</p>;
-                  <div className="text-2xl font-bold text-blue-400">{type.count}+</div>;
+                  <div className="text-2xl font-bold text-blue-400">{type.count}+</div>
+  );
+}
                 </motion.div>;
                   className=&quot;bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hove,r:scale-105&quot;
                 >&quot;
@@ -353,11 +362,18 @@ export default function Training() {
                   <p className="text-gray-300 text-sm mb-3">{type.description}</p>
                   <div className="text-2xl font-bold text-blue-400"></di>{type.count}+</div>
                 </motion.div>
-              ))}
-            </div>;
-          </div>;
+              ))
+      )}
+    </div>
+  );
+}
+            </div>
+  );
+}
+          </div>
+  );
+}
         </section>;
-
         {/* Featured Courses */}
         <section className="py-16 bg-gradient-to-r from-slate-800/50 to-slate-700/50">;
           <div className="container mx-auto px-4">;
@@ -373,7 +389,6 @@ export default function Training() {
                 Our most popular and highly-rated training programs;
               </p>;
             </motion.div>;
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
               {courses.map((course, index) => (;
                 <motion.div;
@@ -398,7 +413,6 @@ export default function Training() {
                 Our most popular and highly-rated training programs
               </p>
             </motion.div>
-
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;>
               {courses.map((course, index) => (&quot}
                 <motion.div
@@ -407,47 +421,64 @@ export default function Training() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover: border-blue-400/50 transition-all duration-300";
-                >;
-                  <div className="flex items-start justify-between mb-4">;
-                    <div className={`flex items-center gap-2`>;
-                      <span className={`px-3 py-1 rounded-full text-xs font-medium ${;
-                        course.level === 'Beginner' ? 'bg-green-600/20 text-green-300 border border-green-400/30' :;
-                        course.level === 'Intermediate' ? 'bg-yellow-600/20 text-yellow-300 border border-yellow-400/30' :;
-                        'bg-red-600/20 text-red-300 border border-red-400/30'}`}>;
+                >;';
+                  <div className="flex items-start justify-between mb-4">;';';
+                    <div className={`flex items-center gap-2`>;';';';
+                      <span className={`px-3 py-1 rounded-full text-xs font-medium ${;',';';
+    ';';';
+                        course.level === 'Beginner' ? 'bg-green-600/20 text-green-300 border border-green-400/30' :;',';';
+    ';';';
+                        course.level === 'Intermediate' ? 'bg-yellow-600/20 text-yellow-300 border border-yellow-400/30' :;',',';';
+    'bg-red-600/20 text-red-300 border border-red-400/30'}`}>;
                         {course.level}
                       </span>;
                       {course.featured && (;
                         <span className=`px-3 py-1 bg-yellow-600/20 border border-yellow-400/30 rounded-full text-yellow-300 text-xs`}>;
                           Featured;
                         </span>;
-                      )}
-                    </div>;
+                      )
+      )}
+    </div>
+  );
+}
+                    </div>
+  );
+}
                     <div className="flex items-center text-yellow-400">;
                       <Star className="w-4 h-4 fill-current" />;
                       <span className="ml-1 text-sm">{course.rating}</span>;
-                    </div>;
-                  </div>;
-
+                    </div>
+  );
+}
+                  </div>
+  );
+}
                   <h3 className="text-xl font-bold text-white mb-2">{course.title}</h3>;
                   <p className="text-gray-300 text-sm mb-4">{course.description}</p>;
-
                   <div className="flex items-center justify-between mb-4">;
                     <div className="flex items-center text-gray-400 text-sm">;
                       <Clock className="w-4 h-4 mr-1" />;
                       {course.duration}
-                    </div>;
+                    </div>
+  );
+}
                     <div className="flex items-center text-gray-400 text-sm">;
                       <Users className="w-4 h-4 mr-1" />;
                       {course.students} students;
-                    </div>;
-                  </div>;
-
+                    </div>
+  );
+}
+                  </div>
+  );
+}
                   <div className="flex items-center justify-between">;
                     <span className="text-2xl font-bold text-white">{course.price}</span>;
                     <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200">;
                       Enroll Now;
                     </button>;
-                  </div>;
+                  </div>
+  );
+}
                 </motion.div>;
                   className=&quot;bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300&quot;
                 >&quot;
@@ -470,14 +501,17 @@ export default function Training() {
                         <span className=&quot;px-3 py-1 bg-yellow-600/20 border border-yellow-400/30 rounded-full text-yellow-300 text-xs&quot;>
                           Featured&quot;
                         </span>
-                      )}
+                      )
+      )}
+    </div>
+  );
+}
                     </div>
                     <div className=&quot;flex items-center text-yellow-400&quot;>&quot;`
                       <Star className=&quot;w-4 h-4 fill-current&quot; />&quot;
                       <span className=&quot;ml-1 text-sm&quot;>{course.rating}&quot;</span>
                     </div>
                   </div>
-
                   <h3 className=&quot;text-xl font-bold text-white mb-2&quot;>{course.title}&quot;</h3>
                   <p className=&quot;text-gray-300 text-sm mb-4&quot;>{course.description}&quot;</p>
                     <div className=`}flex items-center text-yellow-400">
@@ -485,10 +519,8 @@ export default function Training() {
                       <span className="ml-1 text-sm"></spa>{course.rating}</span>
                     </div>
                   </div>
-
                   <h3 className="text-xl font-bold text-white mb-2"></h>{course.title}</h3>
                   <p className="text-gray-300 text-sm mb-4">{course.description}</p>
-
                   <div className=&quot;flex items-center justify-between mb-4&quot;>&quot;"
                     <div className=&quot;flex items-center text-gray-400 text-sm&quot;>&quot;"
                       <Clock className=&quot;w-4 h-4 mr-1&quot; />
@@ -499,7 +531,6 @@ export default function Training() {
                       {course.students} students&quot;
                     </div>
                   </div>
-
                   <div className=&quot;flex items-center justify-between&quot;>&quot;"
                     <span className=&quot;text-2xl font-bold text-white&quot;>{course.price}&quot;</span>
                     <button className=&quot;px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hove,r:to-purple-700 transition-all duration-200&quot;>
@@ -512,11 +543,18 @@ export default function Training() {
                     </button>
                   </div>
                 </motion.div>
-              ))}
-            </div>;
-          </div>;
+              ))
+      )}
+    </div>
+  );
+}
+            </div>
+  );
+}
+          </div>
+  );
+}
         </section>;
-
         {/* CTA Section */}
         <section className="py-20">;
           <div className="container mx-auto px-4">;
@@ -549,11 +587,17 @@ export default function Training() {
                   <ArrowRight className="w-5 h-5 mr-2" />;
                   Learn More;
                 </a>;
-              </div>;
+              </div>
+  );
+}
             </motion.div>;
-          </div>;
+          </div>
+  );
+}
         </section>;
-      </div>;
+      </div>
+  );
+}
     </>;
         <section className=&quot;py-20&quot;>&quot;"
           <div className=&quot;container mx-auto px-4&quot;>&quot;"
@@ -574,7 +618,7 @@ export default function Training() {
                 Ready to Advance Your Career?
               </h2>
               <p className=&quot;text-xl text-gray-300 mb-8&quot;>
-                Join thousands of professionals who have enhanced their skills 
+                Join thousands of professionals who have enhanced their skills
                 with our industry-leading training programs.&quot;
               </p>
               <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>&quot;"
@@ -599,5 +643,8 @@ export default function Training() {
       </div>
 </>
   )
-  )}
-"
+      )}
+    </div>';
+  );';';
+}';';';
+"';';';';

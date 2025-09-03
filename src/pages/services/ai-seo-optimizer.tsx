@@ -1,8 +1,7 @@
 import React from 'react';
-
 const AISeoOptimizer: React.FC = () => {
   return (
-    <div className="max-w-5xl mx-auto px-4 py-12 text-white">
+    <div className="min-h-screen bg-white">
       <h1 className="text-4xl font-bold mb-4">AI SEO Content Optimizer</h1>
       <p className="text-gray-300 mb-6">
         Improve rankings with AI-driven content briefs, on-page optimization, internal linking, and technical audits.
@@ -23,9 +22,7 @@ const AISeoOptimizer: React.FC = () => {
         {" • "}
         <a href="https: //developers.google.com/search/docs/fundamentals/seo-starter-guide" target="_blank" rel="noopener noreferrer">Google SEO guide</a>
       </div>
-    </div>
-  )};
-
-export default AISeoOptimizer;
-
-"
+    </div>';
+  )};';';
+export default AISeoOptimizer;';';';
+"';';';';

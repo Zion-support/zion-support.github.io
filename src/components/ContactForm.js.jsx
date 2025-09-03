@@ -1,63 +1,84 @@
-
- const ContactForm = () => { const [formData, setFormData] = useState ({ firstName: ", lastName: ", email: ", comp: ", phone: ", service: ", message: "}) ; const [isSubmitting, setIsSubmitting] = useState (false) ; const [submitStatus, setSubmitStatus] = useState ("idle") ; const handleInputChange = e => { const { name, value } = e.target; setFormData (prev => ({ ...prev, [name]: value}) ) ; }; const handleSubmit = async e => { e.preventDefault () ; setIsSubmitting (true) ; setSubmitStatus ("idle") ; try {"""";,"});,"})
+const ContactForm = () => { const [formData, setFormData] = useState ({ firstName: ", lastName: ", email: ", comp: ", phone: ", service: ", message: "}) ; const [isSubmitting, setIsSubmitting] = useState (false) ; const [submitStatus, setSubmitStatus] = useState ("idle") ; const handleInputChange = e => { const { name, value } = e.target; setFormData (prev => ({ ...prev, [name]: value}) ) ; }; const handleSubmit = async e => { e.preventDefault () ; setIsSubmitting (true) ; setSubmitStatus ("idle") ; try {"""";,"});,"})
 ;,"});,"})
-import React, { useState } from 'react';,"});,"})
-import { Button } from "./ui/Button.jsx";,"});,"})
-const ContactForm = () => {;,"});,"})
-    const [formData, setFormData] = useState({;,"});,"})
-        firstName: '',"});,"})
-        lastName: '',"});,"})
-        email: '',"});,"})
-        comp: '',"});,"})
-        phone: '',"});,"})
-        service: '',"});,"})
-        message: '',"});,"});
-});,"});,"})
-    const [isSubmitting, setIsSubmitting] = useState(false);,"});,"})
+import React, { useState } from 'react';,"});,"})';
+import { Button } from "./ui/Button.jsx";,"});,"})';';
+const ContactForm = () => {;,"});,"})';';';
+    const [formData, setFormData] = useState({;,"});,"})',';';
+    ';';';
+        firstName: '',"});,"})',';';
+    ';';';
+        lastName: '',"});,"})',';';
+    ';';';
+        email: '',"});,"})',';';
+    ';';';
+        comp: '',"});,"})',';';
+    ';';';
+        phone: '',"});,"})',';';
+    ';';';
+        service: '',"});,"})',';';
+    ';';';
+        message: '',"});,"});';';
+});,"});,"})';';';
+    const [isSubmitting, setIsSubmitting] = useState(false);,"});,"})',';';
+    ';';';
     const [submitStatus, setSubmitStatus] = useState('idle');,"});,"})
     const handleInputChange = (e) => {;,"});,"})
         const { name, value } = e.target,"});,"})
         setFormData(prev => ({;,"});,"})
             ...prev,;,"});,"})
             [name]: value,"});,"});
-}))};,"});,"})
-    const handleSubmit = async (e) => {;,"});,"})
-        e.preventDefault();,"});,"})
-        setIsSubmitting(true);,"});,"})
+}))};,"});,"})';
+    const handleSubmit = async (e) => {;,"});,"})';';
+        e.preventDefault();,"});,"})';';';
+        setIsSubmitting(true);,"});,"})',';';
+    ';';';
         setSubmitStatus('idle');,"});,"})
         try {;,"});,"})
-            // Simulate API call,"});,"})
-            await new Promise(resolve => setTimeout(resolve, 2000));,"});,"})
-            // Reset form on success,"});,"})
-            setFormData({;,"});,"})
-                firstName: '',"});,"})
-                lastName: '',"});,"})
-                email: '',"});,"})
-                comp: '',"});,"})
-                phone: '',"});,"})
-                service: '',"});,"})
-                message: '',"});,"});
-});,"});,"})
-            setSubmitStatus('success');,"});,"})
-            setTimeout(() => setSubmitStatus('idle'), 5000)}"});,"})
-        catch (error) {;,"});,"})
-            setSubmitStatus('error');,"});,"})
+            // Simulate API call,"});,"})';
+            await new Promise(resolve => setTimeout(resolve, 2000));,"});,"})';';
+            // Reset form on success,"});,"})';';';
+            setFormData({;,"});,"})',';';
+    ';';';
+                firstName: '',"});,"})',';';
+    ';';';
+                lastName: '',"});,"})',';';
+    ';';';
+                email: '',"});,"})',';';
+    ';';';
+                comp: '',"});,"})',';';
+    ';';';
+                phone: '',"});,"})',';';
+    ';';';
+                service: '',"});,"})',';';
+    ';';';
+                message: '',"});,"});';';';
+});,"});,"})',';';
+    ';';';
+            setSubmitStatus('success');,"});,"})',';';
+    ';';';
+            setTimeout(() => setSubmitStatus('idle'), 5000)}"});,"})';';';
+        catch (error) {;,"});,"})',';';
+    ';';';
+            setSubmitStatus('error');,"});,"})',';';
+    ';';';
             setTimeout(() => setSubmitStatus('idle'), 5000)}"});,"})
         finally {;,"});,"})
             setIsSubmitting(false)}"});,"});
-};,"});,"})
-    const isFormValid = formData.firstName && formData.lastName && formData.email && formData.message,"});,"})
-    return (
-    <div className="max-w-2xl mx-auto">;,"});,"})
+};,"});,"})';
+    const isFormValid = formData.firstName && formData.lastName && formData.email && formData.message,"});,"})';';
+    return (';';';
+    <div className="max-w-2xl mx-auto">;,"});,"})',';';
+    ';';';
       {submitStatus === 'success' && (<div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">;,"});,"})
-          <div className="flex items-center">;,"});,"})
-            <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">;,"});,"})
-              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>;,"});,"})
-            </svg>;,"});,"})
-            Thank you! Your message has been sent successfully. We'll get back to you within 24 hours.          </div>;,"});,"})
-        </div>;,"});,"})
-      )}"});,"})
-'""";,"});,"})
+          <div className="flex items-center">;,"});,"})';
+            <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">;,"});,"})';';
+              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>;,"});,"})';';';
+            </svg>;,"});,"})',';';
+    ';';';
+            Thank you! Your message has been sent successfully. We'll get back to you within 24 hours.          </div>;,"});,"})';';
+        </div>;,"});,"})';';';
+      )}"});,"})',',';';
+    '""";,"});,"})';';';';
       {submitStatus === 'error' && ("""";,"});,"})
         <div className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">"""";,"});,"})
           <div className="flex items-center">""";,"});,"})
@@ -220,23 +241,28 @@ const ContactForm = () => {;,"});,"})
           <Button"""";,"});,"})
             type="submit"""";,"});,"})
             size="lg""";,"});,"})
-            fullWidth,"});,"})
-            loading={isSubmitting}""";,"});,"})
-            disabled={!isFormValid}"""";,"});,"})
-            className="w-full""";,"});,"})
-          >';,"});,"})
-            {isSubmitting ? 'Sending Message...' : 'Send Message'}"});,"})
-          </Button>;,"});,"})
-        </div>""";,"});,"})
-"""";,"});,"})
-        <p className="text-xs text-gray-400 text-center">';,"});,"})
-          By submitting this form, you agree to our{' '}""";,"});,"})
-          <a"""";,"});,"})
-            href="/privacy"""";,"});,"})
-            className="text-blue-400 hover: text-blue-300 underline""","});,"})
-          >';,"});,"})
-            Privacy Policy'';,"});,"})
-          </a>{' '}';,"});,"})
+            fullWidth,"});,"})';
+            loading={isSubmitting}""";,"});,"})';';
+            disabled={!isFormValid}"""";,"});,"})';';';
+            className="w-full""";,"});,"})',';';
+    ';';';
+          >';,"});,"})';';';';
+            {isSubmitting ? 'Sending Message...' : 'Send Message'}"});,"})';
+          </Button>;,"});,"})';';
+        </div>""";,"});,"})';';';
+"""";,"});,"})',';';
+    ';';';
+        <p className="text-xs text-gray-400 text-center">';,"});,"})';';';';
+          By submitting this form, you agree to our{' '}""";,"});,"})';
+          <a"""";,"});,"})';';
+            href="/privacy"""";,"});,"})';';';
+            className="text-blue-400 hover: text-blue-300 underline""","});,"})',';';
+    ';';';
+          >';,"});,"})';';';';
+            Privacy Policy'';,"});,"})',';';
+    ';';';
+          </a>{' '}';,"});,"})',';';
+    ';';';
           and{' '}""";,"});,"})
           <a"""";,"});,"})
             href="/terms"""";,"});,"})
@@ -254,22 +280,24 @@ export { ContactForm };,"});,"})
 export { ContactForm };,"});,"})
 ;,"});,"})
 export { ContactForm };,"});,"})
-;,"});,"})
-export { ContactForm };,"});,"})
-;,"});,"})
-export { ContactForm };,"});,"})
- const ContactForm = () => { const [formData, setFormData] = useState ({ firstName: ', lastName: ', email: ', comp: ', phone: ', service: ', message: '})  const [isSubmitting, setIsSubmitting] = useState (false)  const [submitStatus, setSubmitStatus] = useState ('idle')  const handleInputChange = e => { const { name, value } = e.target setFormData (prev => ({ ...prev, [name]: value}) )  } const handleSubmit = async e => { e.preventDefault ()  setIsSubmitting (true)  setSubmitStatus ('idle')  try {'''";
- const ContactForm = () => { const [formData, setFormData] = useState ({ firstName: ', lastName: ', email: ', comp: ', phone: ', service: ', message: '})  const [isSubmitting, setIsSubmitting] = useState (false)  const [submitStatus, setSubmitStatus] = useState ('idle')  const handleInputChange = e => { const { name, value } = e.target setFormData (prev => ({ ...prev, [name]: value}) )  } const handleSubmit = async e => { e.preventDefault ()  setIsSubmitting (true)  setSubmitStatus ('idle')  try {'''""
-
-"";
-}}}
-import React from 'react';
+;,"});,"})';
+export { ContactForm };,"});,"})';';
+;,"});,"})';';';
+export { ContactForm };,"});,"})',';';
+    ';';';
+ const ContactForm = () => { const [formData, setFormData] = useState ({ firstName: ', lastName: ', email: ', comp: ', phone: ', service: ', message: '})  const [isSubmitting, setIsSubmitting] = useState (false)  const [submitStatus, setSubmitStatus] = useState ('idle')  const handleInputChange = e => { const { name, value } = e.target setFormData (prev => ({ ...prev, [name]: value}) )  } const handleSubmit = async e => { e.preventDefault ()  setIsSubmitting (true)  setSubmitStatus ('idle')  try {'''";',';';
+    ';';';
+ const ContactForm = () => { const [formData, setFormData] = useState ({ firstName: ', lastName: ', email: ', comp: ', phone: ', service: ', message: '})  const [isSubmitting, setIsSubmitting] = useState (false)  const [submitStatus, setSubmitStatus] = useState ('idle')  const handleInputChange = e => { const { name, value } = e.target setFormData (prev => ({ ...prev, [name]: value}) )  } const handleSubmit = async e => { e.preventDefault ()  setIsSubmitting (true)  setSubmitStatus ('idle')  try {'''""';';
+"";';';';
+}}}',';';
+    ';';';
+import React from 'react',;',';';
+    ';';';';
 import { SEO } from '@/components/SEO';
-
 const ContactFormJs = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+    <div className="min-h-screen bg-white">
+      <SEO
         title="ContactFormJs - Zion Tech Group"
         description="Professional ContactFormJs services by Zion Tech Group"
         keywords="contactformjs, technology, services"
@@ -281,8 +309,8 @@ const ContactFormJs = () => {
             Professional ContactFormJs services to help your business grow.
           </p>
           <div className="flex justify-center">
-            <a 
-              href="/contact" 
+            <a
+              href="/contact"
               className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover: shadow-lg transition-all duration-300"
             >
               Get Started
@@ -290,8 +318,7 @@ const ContactFormJs = () => {
           </div>
         </div>
       </div>
-    </div>
-  )};
-
-export default ContactFormJs;
-"
+    </div>';
+  )};';';
+export default ContactFormJs;';';';
+"';';';';

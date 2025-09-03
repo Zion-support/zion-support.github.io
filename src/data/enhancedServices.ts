@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react';';';
 import {SEO } from '@/components/SEO';
 
 export default function enhancedServices() {return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+    <div className="min-h-screen bg-white">
       <SEO title="enhancedServices - Zion Tech Group" description="Professional enhancedServices services by Zion Tech Group" />
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold text-white mb-8">enhancedServices</h1>
@@ -11,5 +11,5 @@ export default function enhancedServices() {return (
         </p>
       </div>
     </div>
-  );
-}"
+  );';
+}"';';

@@ -1,10 +1,12 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { ;
-  Handshake, Globe, Award, Users, Building, ;
+import React from 'react',;',';';
+    ';';';';
+import { motion } from 'framer-motion',;';';
+    ';';';';
+import { SEO } from '../components/SEO';';';
+import { ;';';';
+  Handshake, Globe, Award, Users, Building, ;',';';
+    ';';';
   Star, CheckCircle, ArrowRight, ExternalLink} from 'lucide-react';
-;
 export default function Partners() {;
   const partners = [
   {;
@@ -100,15 +102,13 @@ export default function Partners() {;
   ]
 ;
   return (
-    
     <>;
       <SEO ;
         title="Partners - Zion Tech Group | Strategic Technology Partnerships";
         description="Discover our strategic partnerships with leading technology companies, cloud providers, and research institutions that enable us to deliver world-class solutions.";
         keywords="partners, partnerships, technology partners, cloud partners, strategic alliances, Zion Tech Group";
       />;
-      ;
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">;
           <div className="container mx-auto px-4">;
@@ -127,11 +127,14 @@ export default function Partners() {;
               </p>;
               <div className="flex items-center justify-center">;
                 <Handshake className="w-16 h-16 text-blue-400" />;
-              </div>;
+              </div>
+  );
+}
             </motion.div>;
-          </div>;
+          </div>
+  );
+}
         </section>;
-
 ,"});,"})
         {/* Partnership Types */}
         <section className="py-16">;
@@ -146,30 +149,32 @@ export default function Partners() {;
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
                 We work with diverse partners across technology, research, and distribution to deliver comprehensive solutions;
               </p>;
-            </motion.div>;
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-              {partnershipTypes.map((type, index) => (;
-                <motion.div;
+            </motion.div>;';
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;';';
+              {partnershipTypes.map((type, index) => (;';';';
+                <motion.div;',';';
+    ';';';
 import {SEO } from '@/components/SEO';
-
 export default function Partners() {return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+    <div className="min-h-screen bg-white">
       <SEO title="Partners - Zion Tech Group" description="Professional Partners services by Zion Tech Group" />
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold text-white mb-8">Partners</h1>
         <p className="text-gray-300 text-lg">
-          Professional Partners services to help your business grow.
-        </p>
-      </div>
-    </div>
-import React from &apos;react';
-import { motion } from &apos;framer-motion';
-import { SEO } from &apos;../components/SEO';
-import { ;
-  Handshake, Globe, Award, Users, Building, ;
+          Professional Partners services to help your business grow.';
+        </p>';';
+      </div>';';';
+    </div>',';';
+    ';';';
+import React from &apos;react',';';';
+    ',';';
+    ';';';
+import { motion } from &apos;framer-motion';';';';';
+import { SEO } from &apos;../components/SEO';';';
+import { ;';';';
+  Handshake, Globe, Award, Users, Building, ;',';';
+    ';';';
   Star, CheckCircle, ArrowRight, ExternalLink} from &apos;lucide-react';&apos;&apos;
-
 export default function Partners() {}
   const partners = [
     ;{
@@ -223,16 +228,20 @@ export default function Partners() {}
       category: &quot;Technology Partner&quot,
       description: &quot;Advanced processor technologies and AI optimization&quot,
       logo: &quot;/api/placeholder/200/100&quot,
-      website: &quot;http,s: //intel.com&quot,
-      benefits: [&quot;Processor Tech&quot, &quot;AI Optimization&quot, &quot;Performance&quot]
-}
-  ]&quot;
-
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { ;
+      website: &quot;http,s: //intel.com&quot,';
+      benefits: [&quot;Processor Tech&quot, &quot;AI Optimization&quot, &quot;Performance&quot]';';
+}';';';
+  ]&quot;',';';
+    ';';';
+import { motion } from 'framer-motion',;',';';
+    ';';';';
+import { SEO } from '../components/SEO',;';';
+    ';';';
+import { ;';';';';
   Handshake, Globe, Award, Users, Building, Star, CheckCircle, ArrowRight, ExternalLink} from 'lucide-react';
 export default function Partners() {
+  return (
+  return (
   const partners = [
     { id: 1, name: "Microsoft",
       category: "Technology Partner", description: "Strategic partnership in cloud computing and AI solutions",
@@ -312,7 +321,6 @@ export default function Partners() {
       count: 25,
       color: &quot;from-orange-500 to-red-500&quot}
   ]&quot;
-
   const benefits = [
     &quot;Access to cutting-edge technology and platforms&quot,
     &quot;Joint research and development opportunities&quot,
@@ -320,7 +328,6 @@ export default function Partners() {
     &quot;Technical support and training programs&quot,
     &quot;Co-marketing and go-to-market strategies&quot,
     &quot;Priority access to new features and updates&quot]
-
   return (&quot;
   {
       title: "Technology Partners", description: "Leading technology companies providing cutting-edge solutions",
@@ -342,12 +349,11 @@ export default function Partners() {
   ]
   return (
     <>
-      <SEO 
+      <SEO
         title=&quot;Partners - Zion Tech Group | Strategic Technology Partnerships&quot;
         description=&quot;Discover our strategic partnerships with leading technology companies, cloud providers, and research institutions that enable us to deliver world-class solutions.&quot;
         keywords=&quot;partners, partnerships, technology partners, cloud partners, strategic alliances, Zion Tech Group&quot;
       />&quot;
-      
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900&quot;>
         {/* Hero Section */}&quot;
         <section className=&quot;py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20&quot;>&quot;"
@@ -367,7 +373,7 @@ export default function Partners() {
                 Our Partners&quot;
               </h1>
               <p className=&quot;text-xl text-gray-300 mb-8&quot;>
-                Strategic partnerships with industry leaders enable us to deliver 
+                Strategic partnerships with industry leaders enable us to deliver
                 comprehensive technology solutions and drive innovation across all sectors.&quot;
               </p>
               <div className=&quot;flex items-center justify-center&quot;>&quot;"
@@ -376,7 +382,6 @@ export default function Partners() {
             </motion.div>
           </div>
         </section>
-
         {/* Partnership Types */}
         <section className=&quot;py-16&quot;>&quot;"
           <div className=&quot;container mx-auto px-4&quot;>&quot;"
@@ -397,7 +402,6 @@ export default function Partners() {
                 We work with diverse partners across technology, research, and distribution to deliver comprehensive solutions&quot;
               </p>
             </motion.div>
-
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 l,g:grid-cols-4 gap-8&quot;>
               {partnershipTypes.map((type, index) => (&quot}
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
@@ -411,10 +415,14 @@ export default function Partners() {
                 >;
                   <div className={`w-16 h-16 bg-gradient-to-br ${type.color} rounded-xl flex items-center justify-center mb-4`}>;
                     <type.icon className=`w-8 h-8 text-white`} />;
-                  </div>;
+                  </div>
+  );
+}
                   <h3 className="text-xl font-bold text-white mb-2">{type.title}</h3>;
                   <p className="text-gray-300 text-sm mb-3">{type.description}</p>;
-                  <div className={`text-2xl font-bold text-blue-400`>{type.count}+</div>;
+                  <div className={`text-2xl font-bold text-blue-400`>{type.count}+</div>
+  );
+}
                 </motion.div>;
                   className=&quot;bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hove,r:scale-105&quot;
                 >&quot;
@@ -425,11 +433,18 @@ export default function Partners() {
                   <p className=&quot;text-gray-300 text-sm mb-3&quot;>{type.description}&quot;</p>
                   <div className=&quot;text-2xl font-bold text-blue-400&quot;>{type.count}+&quot;</div>
                 </motion.div>
-              ))}
-            </div>;
-          </div>;
+              ))
+      )}
+    </div>
+  );
+}
+            </div>
+  );
+}
+          </div>
+  );
+}
         </section>;
-
         {/* Partners Grid */}
         <section className=`py-16`}>;
           <div className="container mx-auto px-4">;
@@ -444,7 +459,6 @@ export default function Partners() {
                 Leading technology companies and organizations that share our vision of innovation;
               </p>;
             </motion.div>;
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {partners.map((partner, index) => (;
                 <motion.div;
@@ -467,7 +481,6 @@ export default function Partners() {
                 Leading technology companies and organizations that share our vision of innovation&quot;
               </p>
             </motion.div>
-
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 l,g:grid-cols-3 gap-8&quot;>
               {partners.map((partner, index) => (&quot}
                 <motion.div
@@ -478,41 +491,43 @@ export default function Partners() {
                   className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105";
                 >;
                   <div className="h-24 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mb-4">;
-                    <div className="text-4xl opacity-20 font-bold text-white">{partner.name.charAt(0)}</div>;
-                  </div>;
-                  ;
-                  <div className="mb-3">;
+                    <div className="text-4xl opacity-20 font-bold text-white">{partner.name.charAt(0)}</div>
+  );
+}
+                  </div>
+  );
+}
+<div className="mb-3">;
                     <span className="px-3 py-1 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-xs">;
                       {partner.category}
                     </span>;
-                  </div>;
-                  ;
-                  <h3 className="text-xl font-bold text-white mb-2">{partner.name}</h3>;
+                  </div>
+  );
+}
+<h3 className="text-xl font-bold text-white mb-2">{partner.name}</h3>;
                   <p className="text-gray-300 text-sm mb-4">{partner.description}</p>;
-                  ;
-                  <div className="mb-4">;
+<div className="mb-4">;
                     <h4 className="text-sm font-semibold text-white mb-2">Key Benefits</h4>;
                     <div className="space-y-1">;
                       {partner.benefits.map((benefit, benefitIndex) => (;
                         <div key={benefitIndex} className="flex items-center text-xs text-gray-400">;
                           <CheckCircle className="w-3 h-3 text-green-400 mr-2" />;
                           {benefit}
-                        </div>;
+                        </div>
+  );
+}
                   className=&quot;bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300 hove,r:scale-105&quot;
                 >&quot;
                   <div className=&quot;h-24 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mb-4&quot;>&quot;"
                     <div className=&quot;text-4xl opacity-20 font-bold text-white&quot;>{partner.name.charAt(0)}&quot;</div>
                   </div>
-                  
                   <div className=&quot;mb-3&quot;>&quot;"
                     <span className=&quot;px-3 py-1 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-xs&quot;>
                       {partner.category}&quot;
                     </span>
                   </div>
-                  
                   <h3 className=&quot;text-xl font-bold text-white mb-2&quot;>{partner.name}&quot;</h3>
                   <p className=&quot;text-gray-300 text-sm mb-4&quot;>{partner.description}&quot;</p>
-                  
                   <div className=&quot;mb-4&quot;>&quot;"
                     <h4 className=&quot;text-sm font-semibold text-white mb-2&quot;>Key Benefits&quot;</h4>
                     <div className=&quot;space-y-1&quot;>
@@ -521,10 +536,17 @@ export default function Partners() {
                           <CheckCircle className=&quot;w-3 h-3 text-green-400 mr-2&quot; />
                           {benefit}&quot;
                         </div>
-                      ))}
-                    </div>;
-                  </div>;
-
+                      ))
+      )}
+    </div>
+  );
+}
+                    </div>
+  );
+}
+                  </div>
+  );
+}
                   <a;
                     href={partner.website}
                     target="_blank";
@@ -549,11 +571,18 @@ export default function Partners() {
                     <ExternalLink className="w-4 h-4 ml-1" />
                   </a>
                 </motion.div>
-              ))}
-            </div>;
-          </div>;
+              ))
+      )}
+    </div>
+  );
+}
+            </div>
+  );
+}
+          </div>
+  );
+}
         </section>;
-
         {/* Partnership Benefits */}
         <section className="py-16 bg-gradient-to-r from-slate-800/50 to-slate-700/50">;
           <div className="container mx-auto px-4">;
@@ -568,7 +597,6 @@ export default function Partners() {
                 Our strategic partnerships provide mutual value and enable us to deliver superior solutions;
               </p>;
             </motion.div>;
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
               {benefits.map((benefit, index) => (;
                 <motion.div;
@@ -591,7 +619,6 @@ export default function Partners() {
                 Our strategic partnerships provide mutual value and enable us to deliver superior solutions&quot;
               </p>
             </motion.div>
-
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 l,g:grid-cols-3 gap-6&quot;>
               {benefits.map((benefit, index) => (&quot}
                 <motion.div
@@ -604,7 +631,9 @@ export default function Partners() {
                   <div className="flex items-start">;
                     <Star className="w-6 h-6 text-yellow-400 mr-3 mt-1 flex-shrink-0" />;
                     <p className="text-gray-300">{benefit}</p>;
-                  </div>;
+                  </div>
+  );
+}
                 </motion.div>;
                   className=&quot;bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50&quot;
                 >&quot;
@@ -613,11 +642,18 @@ export default function Partners() {
                     <p className=&quot;text-gray-300&quot;>{benefit}&quot;</p>
                   </div>
                 </motion.div>
-              ))}
-            </div>;
-          </div>;
+              ))
+      )}
+    </div>
+  );
+}
+            </div>
+  );
+}
+          </div>
+  );
+}
         </section>;
-
         {/* Become a Partner */}
         <section className="py-20">;
           <div className="container mx-auto px-4">;
@@ -628,10 +664,11 @@ export default function Partners() {
               className="text-center max-w-4xl mx-auto";
             >;
               <h2 className="text-4xl font-bold text-white mb-6">;
-                Become a Partner;
-              </h2>;
-              <p className="text-xl text-gray-300 mb-8">;
-                Join our network of strategic partners and help shape the future of technology. ;
+                Become a Partner;';
+              </h2>;';';
+              <p className="text-xl text-gray-300 mb-8">;';';';
+                Join our network of strategic partners and help shape the future of technology. ;',';';
+    ';';';
                 We're always looking for innovative companies to collaborate with.;
               </p>;
               <div className="flex flex-col sm:flex-row gap-4 justify-center">;
@@ -649,11 +686,17 @@ export default function Partners() {
                   <ArrowRight className="w-5 h-5 mr-2" />;
                   Learn More;
                 </a>;
-              </div>;
+              </div>
+  );
+}
             </motion.div>;
-          </div>;
+          </div>
+  );
+}
         </section>;
-      </div>;
+      </div>
+  );
+}
     </>;
         <section className=&quot;py-20&quot;>&quot;"
           <div className=&quot;container mx-auto px-4&quot;>&quot;"
@@ -672,12 +715,14 @@ export default function Partners() {
                 Become a Partner&quot;
               </h2>
               <p className=&quot;text-xl text-gray-300 mb-8&quot;>
-                Join our network of strategic partners and help shape the future of technology. 
-                We&apos;re always looking for innovative companies to collaborate with.&apos;
-              </p>
-              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>&quot;"
-                We&apos;re always looking for innovative companies to collaborate with.'
-                We&apos;re always looking for innovative companies to collaborate with.'
+                Join our network of strategic partners and help shape the future of technology.';
+                We&apos;re always looking for innovative companies to collaborate with.&apos;';';
+              </p>';';';
+              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>&quot;"',';';
+    ';';';
+                We&apos;re always looking for innovative companies to collaborate with.'';';';';
+                We&apos;re always looking for innovative companies to collaborate with.'',';';
+    ';';';
                 We're always looking for innovative companies to collaborate with.'
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
@@ -702,5 +747,8 @@ export default function Partners() {
       </div>
 </>
   )
-  )}
-"
+      )}
+    </div>';
+  );';';
+}';';';
+"';';';';

@@ -1,8 +1,7 @@
 import React from 'react';
-
 const RequestQuote: React.FC = () => {
   return (
-    <div className="mx-auto max-w-3xl px-4 py-12">
+    <div className="min-h-screen bg-white">
       <h1 className="text-3xl font-bold text-gray-900">Request a Quote</h1>
       <p className="mt-4 text-gray-700">
         Tell us about your project. We will reach out with a tailored proposal.
@@ -26,9 +25,7 @@ const RequestQuote: React.FC = () => {
         </div>
         <button type="submit" className="rounded-md bg-blue-600 px-5 py-2.5 text-white hover: bg-blue-700">Submit</button>
       </form>
-    </div>
-  )};
-
-export default RequestQuote;
-
-"
+    </div>';
+  )};';';
+export default RequestQuote;';';';
+"';';';';

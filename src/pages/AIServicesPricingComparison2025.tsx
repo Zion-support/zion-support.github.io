@@ -1,39 +1,53 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Helmet } from 'react-helmet-async'
-import { 
-  CheckCircle, 
-  XCircle, 
-  Star, 
-  TrendingUp, 
-  Shield, 
-  Zap, 
-  Users, 
-  Globe,
-  ArrowRight,
-  ChevronDown,;
-  Search,;
-  Filter} from 'lucide-react';
-
-const AIServicesPricingComparison2025: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-
-  const categories = [
-    { id: 'all', name: 'All Services', icon: '🚀' },
-    { id: 'Legal Technology', name: 'Legal Technology', icon: '⚖️' },
-    { id: 'Human Resources', name: 'Human Resources', icon: '👥' },
-    { id: 'Digital Marketing', name: 'Digital Marketing', icon: '📱' },
-    { id: 'Sales Technology', name: 'Sales Technology', icon: '💼' },
-    { id: 'Financial Technology', name: 'Financial Technology', icon: '💰' },
-    { id: 'Cybersecurity', name: 'Cybersecurity', icon: '🛡️' },
-    { id: 'Data Analytics', name: 'Data Analytics', icon: '📈' },
-    { id: 'DevOps', name: 'DevOps', icon: '⚙️' },
-    { id: 'Cloud Computing', name: 'Cloud Computing', icon: '☁️' },
-    { id: 'Blockchain', name: 'Blockchain', icon: '🔗' },
+import React, { useState } from 'react',;',';';
+    ';';';';
+import { motion } from 'framer-motion',;';';
+    ';';';';
+import { Helmet  } from 'react-helmet-async';
+import {
+  CheckCircle,
+  XCircle,
+  Star,
+  TrendingUp,
+  Shield,
+  Zap,
+  Users,;
+  Globe,;';
+  ArrowRight,;';';
+  ChevronDown,;';';';
+  Search,;',';';
+    ';';';
+  Filter} from 'lucide-react';';';';
+const AIServicesPricingComparison2025: React.FC = () => {',';';
+    ';';';
+  const [activeCategory, setActiveCategory] = useState('all');',';';
+    ';';';
+  const [searchTerm, setSearchTerm] = useState('');';';';
+  const categories = [',';';
+    ';';';
+    { id: 'all', name: 'All Services', icon: '🚀' },',';';
+    ';';';
+    { id: 'Legal Technology', name: 'Legal Technology', icon: '⚖️' },',';';
+    ';';';
+    { id: 'Human Resources', name: 'Human Resources', icon: '👥' },',';';
+    ';';';
+    { id: 'Digital Marketing', name: 'Digital Marketing', icon: '📱' },',';';
+    ';';';
+    { id: 'Sales Technology', name: 'Sales Technology', icon: '💼' },',';';
+    ';';';
+    { id: 'Financial Technology', name: 'Financial Technology', icon: '💰' },',';';
+    ';';';
+    { id: 'Cybersecurity', name: 'Cybersecurity', icon: '🛡️' },',';';
+    ';';';
+    { id: 'Data Analytics', name: 'Data Analytics', icon: '📈' },',';';
+    ';';';
+    { id: 'DevOps', name: 'DevOps', icon: '⚙️' },',';';
+    ';';';
+    { id: 'Cloud Computing', name: 'Cloud Computing', icon: '☁️' },',';';
+    ';';';
+    { id: 'Blockchain', name: 'Blockchain', icon: '🔗' },',';';
+    ';';';
     { id: 'Quantum Computing', name: 'Quantum Computing', icon: '⚛️' }
   ]
-
   const pricingComparison = [
     {
       id: "ai-autonomous-legal-counsel",
@@ -363,16 +377,15 @@ const AIServicesPricingComparison2025: React.FC = () => {
 }
       ],
       roi: "1000% within 15 months",
-      setupTime: "10-12 weeks",
-      website: "https://ziontechgroup.com/ai-quantum-platform"}
-  ]
-
-  const filteredServices = pricingComparison.filter(service => {
+      setupTime: "10-12 weeks",';
+      website: "https://ziontechgroup.com/ai-quantum-platform"}';';
+  ]';';';
+  const filteredServices = pricingComparison.filter(service => {',';';
+    ';';';
     const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
     const matchesSearch = service.service.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch});
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -381,7 +394,6 @@ const AIServicesPricingComparison2025: React.FC = () => {
         staggerChildren: 0.1}
     }
   };
-
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
@@ -392,22 +404,21 @@ const AIServicesPricingComparison2025: React.FC = () => {
         ease: "easeOut"}
     }
   };
-
-  return (
-    <>
-      <Helmet>
-        <title>AI Services Pricing Comparison 2025 | Zion Tech Group</title>
+  return (';
+    <>';';
+      <Helmet>';';';
+        <title>AI Services Pricing Comparison 2025 | Zion Tech Group</title>',';';
+    ';';';
         <meta name="description" content="Compare Zion Tech Group's AI autonomous services pricing with competitors. See how our advanced AI solutions offer better value and ROI than traditional alternatives." />
         <meta name="keywords" content="AI services pricing, pricing comparison, ROI comparison, cost analysis, AI automation pricing" />
         <link rel="canonical" href="https://ziontechgroup.com/ai-services-pricing-comparison-2025" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
-            <motion.h1 
+            <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -418,18 +429,18 @@ const AIServicesPricingComparison2025: React.FC = () => {
                 Comparison 2025
               </span>
             </motion.h1>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
-            >
-              See how Zion Tech Group's AI autonomous platforms deliver superior value, 
+              animate={{ opacity: 1, y: 0 }}';
+              transition={{ duration: 0.8, delay: 0.2 }}';';
+              className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"';';';
+            >',';';
+    ';';';
+              See how Zion Tech Group's AI autonomous platforms deliver superior value,
               better ROI, and advanced features compared to traditional solutions.
             </motion.p>
           </div>
         </section>
-
         {/* Contact Information Banner */}
         <section className="bg-gradient-to-r from-green-600 to-blue-600 py-8 px-4">
           <div className="max-w-7xl mx-auto text-center text-white">
@@ -447,7 +458,6 @@ const AIServicesPricingComparison2025: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Pricing Comparison Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -460,32 +470,43 @@ const AIServicesPricingComparison2025: React.FC = () => {
                     type="text"
                     placeholder="Search services..."
                     value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
+                    onChange={(e) => setSearchTerm(e.target.value)
+      )}
+    </div>
+  );
+}
                     className="w-full pl-10 pr-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500"
                   />
                 </div>
                 <select
                   value={activeCategory}
-                  onChange={(e) => setActiveCategory(e.target.value)}
+                  onChange={(e) => setActiveCategory(e.target.value)
+      )}
+    </div>
+  );
+}
                   className="px-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-green-500"
                 >
-                  {categories.map((category) => (
+                  { categories.map((category) => (
                     <option key={category.id} value={category.id}>
                       {category.icon} {category.name}
                     </option>
-                  ))}
+                  ))
+      )}
+    </div>
+  );
+}
                 </select>
               </div>
             </div>
-
             {/* Pricing Comparison Grid */}
-            <motion.div 
+            <motion.div
               variants={containerVariants}
               initial="hidden"
               animate="visible"
               className="space-y-8"
             >
-              {filteredServices.map((service) => (
+              { filteredServices.map((service) => (
                 <motion.div
                   key={service.id}
                   variants={itemVariants}
@@ -495,21 +516,23 @@ const AIServicesPricingComparison2025: React.FC = () => {
                     <h3 className="text-3xl font-bold text-white mb-2">{service.service}</h3>
                     <p className="text-gray-400">{service.category}</p>
                   </div>
-
                   <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     {/* Zion Tech Group */}
                     <div className="bg-gradient-to-br from-green-500/20 to-blue-500/20 border border-green-500/50 rounded-lg p-6">
                       <div className="text-center mb-6">
                         <h4 className="text-2xl font-bold text-white mb-2">Zion Tech Group</h4>
                         <div className={`text-4xl font-bold text-green-400 mb-2`>
-                          ${service.zionPrice.toLocaleString()}
+                          ${service.zionPrice.toLocaleString()
+      )}
+    </div>
+  );
+}
                         </div>
                         <div className=`text-sm text-gray-300 mb-4`}>One-time setup</div>
                         <div className="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm font-semibold">
                           {service.roi}
                         </div>
                       </div>
-
                       <div className="space-y-3 mb-6">
                         <h5 className="font-semibold text-white mb-3">Features:</h5>
                         {service.zionFeatures.map((feature, index) => (
@@ -517,9 +540,12 @@ const AIServicesPricingComparison2025: React.FC = () => {
                             <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                             <span className="text-gray-300 text-sm">{feature}</span>
                           </div>
-                        ))}
+                        ))
+      )}
+    </div>
+  );
+}
                       </div>
-
                       <div className="text-center">
                         <a
                           href={service.website}
@@ -531,21 +557,23 @@ const AIServicesPricingComparison2025: React.FC = () => {
                         </a>
                       </div>
                     </div>
-
                     {/* Competitors */}
                     {service.competitors.map((competitor, index) => (
                       <div key={index} className="bg-white/5 border border-gray-600 rounded-lg p-6">
                         <div className="text-center mb-6">
                           <h4 className="text-xl font-bold text-white mb-2">{competitor.name}</h4>
                           <div className={`text-3xl font-bold text-red-400 mb-2`>
-                            ${competitor.price.toLocaleString()}
+                            ${competitor.price.toLocaleString()
+      )}
+    </div>
+  );
+}
                           </div>
                           <div className=`text-sm text-gray-300 mb-4`}>Annual subscription</div>
                           <div className="bg-red-500/20 text-red-400 px-3 py-1 rounded-full text-sm font-semibold">
                             Higher Cost
                           </div>
                         </div>
-
                         <div className="space-y-3 mb-6">
                           <h5 className="font-semibold text-white mb-3">Limited Features:</h5>
                           {competitor.features.map((feature, index) => (
@@ -553,9 +581,12 @@ const AIServicesPricingComparison2025: React.FC = () => {
                               <CheckCircle className="w-4 h-4 text-gray-500 flex-shrink-0" />
                               <span className="text-gray-400 text-sm">{feature}</span>
                             </div>
-                          ))}
+                          ))
+      )}
+    </div>
+  );
+}
                         </div>
-
                         <div className="space-y-3 mb-6">
                           <h5 className="font-semibold text-red-400 mb-3">Missing:</h5>
                           {competitor.missing.map((feature, index) => (
@@ -563,12 +594,19 @@ const AIServicesPricingComparison2025: React.FC = () => {
                               <XCircle className="w-4 h-4 text-red-400 flex-shrink-0" />
                               <span className="text-gray-400 text-sm">{feature}</span>
                             </div>
-                          ))}
+                          ))
+      )}
+    </div>
+  );
+}
                         </div>
                       </div>
-                    ))}
+                    ))
+      )}
+    </div>
+  );
+}
                   </div>
-
                   <div className="mt-8 text-center">
                     <div className="bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-500/50 rounded-lg p-6">
                       <h4 className="text-xl font-bold text-white mb-3">Why Choose Zion Tech Group?</h4>
@@ -589,11 +627,14 @@ const AIServicesPricingComparison2025: React.FC = () => {
                     </div>
                   </div>
                 </motion.div>
-              ))}
+              ))
+      )}
+    </div>
+  );
+}
             </motion.div>
           </div>
         </section>
-
         {/* Call to Action */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -607,7 +648,7 @@ const AIServicesPricingComparison2025: React.FC = () => {
                 Ready to Save Money & Get Better Results?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Our AI autonomous platforms deliver superior value, better ROI, and advanced features 
+                Our AI autonomous platforms deliver superior value, better ROI, and advanced features
                 compared to traditional solutions. Get started today and transform your business.
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
@@ -627,8 +668,7 @@ const AIServicesPricingComparison2025: React.FC = () => {
             </motion.div>
           </div>
         </section>
-      </div>
-    </>
-  )};
-
-export default AIServicesPricingComparison2025;"
+      </div>';
+    </>';';
+  )};';';';
+export default AIServicesPricingComparison2025;"';';';';

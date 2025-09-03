@@ -1,41 +1,49 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion'
-import { 
-  Menu, 
-  X, 
-  ChevronDown, 
-  Brain, 
-  Cloud, 
-  Zap, 
-  Users, 
-  Settings,;
-  Network,;
-  Cpu} from 'lucide-react';
-
-const navigation = [
-  { name: 'Home', href: '/' },
-  {
-    name: 'Services',
-    href: '/services',
-    dropdown: [
-      { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Cutting-edge AI solutions' },
-      { name: 'IT Services', href: '/it-services', icon: Cloud, description: 'Comprehensive IT solutions' },
-      { name: 'Micro SaaS', href: '/micro-saas', icon: Zap, description: 'Scalable SaaS applications' },
-      { name: 'All Services', href: '/services', icon: Users, description: 'Complete service portfolio' }
-    ]
-},
-  { name: 'About', href: '/about' },
+import React, { useState } from 'react',;',';';
+    ';';';';
+import Link from 'next/link',;';';
+    ';';';';
+import { motion, AnimatePresence  } from 'framer-motion';
+import {
+  Menu,
+  X,
+  ChevronDown,
+  Brain,
+  Cloud,;
+  Zap,;';
+  Users,;';';
+  Settings,;';';';
+  Network,;',';';
+    ';';';
+  Cpu} from 'lucide-react';';';';
+const navigation = [',';';
+    ';';';
+  { name: 'Home', href: '/' },';';';
+  {',';';
+    ';';';
+    name: 'Services',',';';
+    ';';';
+    href: '/services',';';';
+    dropdown: [',';';
+    ';';';
+      { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Cutting-edge AI solutions' },',';';
+    ';';';
+      { name: 'IT Services', href: '/it-services', icon: Cloud, description: 'Comprehensive IT solutions' },',';';
+    ';';';
+      { name: 'Micro SaaS', href: '/micro-saas', icon: Zap, description: 'Scalable SaaS applications' },',';';
+    ';';';
+      { name: 'All Services', href: '/services', icon: Users, description: 'Complete service portfolio' }';';
+    ]';';';
+},',';';
+    ';';';
+  { name: 'About', href: '/about' },',';';
+    ';';';
   { name: 'Contact', href: '/contact' }
 ];
-
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
   const toggleDropdown = (name: string) => {
     setActiveDropdown(activeDropdown === name ? null : name)};
-
   return (
     <nav className="bg-gray-900/95 backdrop-blur-md border-b border-gray-800 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -49,22 +57,24 @@ const Navigation: React.FC = () => {
               <span className="text-white font-bold text-xl">Zion Tech Group</span>
             </Link>
           </div>
-
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              {navigation.map((item) => (
+              { navigation.map((item) => (
                 <div key={item.name} className="relative">
                   {item.dropdown ? (
                     <div className="relative">
                       <button
-                        onClick={() => toggleDropdown(item.name)}
+                        onClick={() => toggleDropdown(item.name)
+      )}
+    </div>
+  );
+}
                         className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium flex items-center space-x-1 transition-colors duration-200"
                       >
                         <span>{item.name}</span>
                         <ChevronDown className="w-4 h-4" />
                       </button>
-                      
                       <AnimatePresence>
                         {activeDropdown === item.name && (
                           <motion.div
@@ -81,7 +91,11 @@ const Navigation: React.FC = () => {
                                     key={dropdownItem.name}
                                     href={dropdownItem.href}
                                     className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group"
-                                    onClick={() => setActiveDropdown(null)}
+                                    onClick={() => setActiveDropdown(null)
+      )}
+    </div>
+  );
+}
                                   >
                                     <div className="flex-shrink-0">
                                       <dropdownItem.icon className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
@@ -95,11 +109,19 @@ const Navigation: React.FC = () => {
                                       </p>
                                     </div>
                                   </Link>
-                                ))}
+                                ))
+      )}
+    </div>
+  );
+}
                               </div>
                             </div>
                           </motion.div>
-                        )}
+                        )
+      )}
+    </div>
+  );
+}
                       </AnimatePresence>
                     </div>
                   ) : (
@@ -109,12 +131,19 @@ const Navigation: React.FC = () => {
                     >
                       {item.name}
                     </Link>
-                  )}
+                  )
+      )}
+    </div>
+  );
+}
                 </div>
-              ))}
+              ))
+      )}
+    </div>
+  );
+}
             </div>
           </div>
-
           {/* CTA Button */}
           <div className="hidden md:block">
             <Link
@@ -124,11 +153,14 @@ const Navigation: React.FC = () => {
               Get Started
             </Link>
           </div>
-
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={() => setIsOpen(!isOpen)
+      )}
+    </div>
+  );
+}
               className="text-gray-300 hover:text-white p-2 rounded-md transition-colors duration-200"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -136,33 +168,38 @@ const Navigation: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Mobile Navigation */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
+      <AnimatePresence>';
+        {isOpen && (';';
+          <motion.div';';';
+            initial={{ opacity: 0, height: 0 }}',';';
+    ';';';
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
             className="md:hidden bg-gray-900/95 backdrop-blur-md border-t border-gray-800"
           >
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              {navigation.map((item) => (
+              { navigation.map((item) => (
                 <div key={item.name}>
                   {item.dropdown ? (
                     <div>
                       <button
-                        onClick={() => toggleDropdown(item.name)}
+                        onClick={() => toggleDropdown(item.name)
+      )}
+    </div>
+  );
+}
                         className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium w-full text-left flex items-center justify-between"
                       >
                         <span>{item.name}</span>
                         <ChevronDown className="w-4 h-4" />
                       </button>
-                      <AnimatePresence>
-                        {activeDropdown === item.name && (
-                          <motion.div
-                            initial={{ opacity: 0, height: 0 }}
+                      <AnimatePresence>';
+                        {activeDropdown === item.name && (';';
+                          <motion.div';';';
+                            initial={{ opacity: 0, height: 0 }}',';';
+    ';';';
                             animate={{ opacity: 1, height: 'auto' }}
                             exit={{ opacity: 0, height: 0 }}
                             transition={{ duration: 0.2 }}
@@ -180,37 +217,64 @@ const Navigation: React.FC = () => {
                                 <dropdownItem.icon className="w-4 h-4" />
                                 <span>{dropdownItem.name}</span>
                               </Link>
-                            ))}
+                            ))
+      )}
+    </div>
+  );
+}
                           </motion.div>
-                        )}
+                        )
+      )}
+    </div>
+  );
+}
                       </AnimatePresence>
                     </div>
                   ) : (
                     <Link
                       href={item.href}
                       className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                      onClick={() => setIsOpen(false)}
+                      onClick={() => setIsOpen(false)
+      )}
+    </div>
+  );
+}
                     >
                       {item.name}
                     </Link>
-                  )}
+                  )
+      )}
+    </div>
+  );
+}
                 </div>
-              ))}
+              ))
+      )}
+    </div>
+  );
+}
               <div className="pt-4">
                 <Link
                   href="/contact"
                   className="block w-full text-center px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-medium hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300"
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => setIsOpen(false)
+      )}
+    </div>
+  );
+}
                 >
                   Get Started
                 </Link>
               </div>
             </div>
           </motion.div>
-        )}
-      </AnimatePresence>
-    </nav>
+        )
+      )}
+    </div>
   );
-};
-
-export default Navigation;"
+}
+      </AnimatePresence>
+    </nav>';
+  );';';
+};';';';
+export default Navigation;"';';';';

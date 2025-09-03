@@ -1,12 +1,14 @@
-
- const SEOMeta = ({ title, description, keywords = "AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group", image = "/images / zion - tech - group - og.jpg", url = window.location.href, type = "website", structuredData }) => { const siteName = "Zion Tech Group`; const fullTitle = `${title} | ${siteName}`;`"`";,"});,"})
+const SEOMeta = ({ title, description, keywords = "AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group", image = "/images / zion - tech - group - og.jpg", url = window.location.href, type = "website", structuredData }) => { const siteName = "Zion Tech Group`; const fullTitle = `${title} | ${siteName}`;`"`";,"});,"})
 ;,"});,"})
-';,"});,"})
-import { Helmet } from 'react-helmet-async';,"});,"})
-const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group', image = '/images/zion-tech-group-og.jpg', url = window.location.href, type = 'website', structuredData }) => {}"});,"})
-';,"});,"})
-'';,"});,"})
-''';,"});,"})
+';,"});,"})',';';
+    ';';';
+import { Helmet } from 'react-helmet-async';,"});,"})',';';
+    ';';';
+const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group', image = '/images/zion-tech-group-og.jpg', url = window.location.href, type = 'website', structuredData }) => {}"});,"})',',';';
+    ';,"});,"})';';';';
+'';,"});,"})',',';';
+    ''';,"});,"})',';';
+    ';';';
     const siteName = 'Zion Tech Group';,"});,`})
     const fullTitle = `${title} | ${siteName}`;,`});,"})
     // Default structured data for organization,"});,"})
@@ -155,22 +157,24 @@ export { SEOMeta };,"});,"})
 export { SEOMeta };,"});,"})
 ;,"});,"})
 export { SEOMeta };,"});,"})
-;,"});,"})
-export { SEOMeta };,"});,"})
-;,"});,"})
-export { SEOMeta };,"});,`})
- const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group', image = '/images / zion - tech - group - og.jpg', url = window.location.href, type = 'website', structuredData }) => { const siteName = 'Zion Tech Group' const fullTitle = `${title} | ${siteName}`';``;
- const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group', image = '/images / zion - tech - group - og.jpg', url = window.location.href, type = 'website', structuredData }) => { const siteName = 'Zion Tech Group' const fullTitle = `${title} | ${siteName}`';`"'"
-
-"";
-}`
-import React from 'react';
+;,"});,"})';
+export { SEOMeta };,"});,"})';';
+;,"});,"})';';';
+export { SEOMeta };,"});,`})',';';
+    ';';';
+ const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group', image = '/images / zion - tech - group - og.jpg', url = window.location.href, type = 'website', structuredData }) => { const siteName = 'Zion Tech Group' const fullTitle = `${title} | ${siteName}`';``;',';';
+    ';';';
+ const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group', image = '/images / zion - tech - group - og.jpg', url = window.location.href, type = 'website', structuredData }) => { const siteName = 'Zion Tech Group' const fullTitle = `${title} | ${siteName}`';`"'"';';
+"";';';';
+}`',';';
+    ';';';
+import React from 'react',;',';';
+    ';';';';
 import { SEO } from '@/components/SEO';
-
 const SEOMetaJs = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+    <div className="min-h-screen bg-white">
+      <SEO
         title="SEOMetaJs - Zion Tech Group"
         description="Professional SEOMetaJs services by Zion Tech Group"
         keywords="seometajs, technology, services"
@@ -182,8 +186,8 @@ const SEOMetaJs = () => {
             Professional SEOMetaJs services to help your business grow.
           </p>
           <div className="flex justify-center">
-            <a 
-              href="/contact" 
+            <a
+              href="/contact"
               className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover: shadow-lg transition-all duration-300"
             >
               Get Started
@@ -191,8 +195,7 @@ const SEOMetaJs = () => {
           </div>
         </div>
       </div>
-    </div>
-  )};
-
-export default SEOMetaJs;
-"
+    </div>';
+  )};';';
+export default SEOMetaJs;';';';
+"';';';';

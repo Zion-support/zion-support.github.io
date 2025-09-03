@@ -1,32 +1,38 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
+import React, { useState } from 'react',;',';';
+    ';';';';
+import Link from 'next/link',;';';
+    ';';';';
 import { Menu, X, Phone, Mail, MapPin, ChevronDown } from 'lucide-react';
-
 export function ModernHeader() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
-
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
-
   const closeMobileMenu = () => {
-    setIsMobileMenuOpen(false);
-    setIsServicesOpen(false);
-  };
-
-  const services = [
-    { name: 'AI Services', href: '/ai-services', description: 'AI-powered solutions and automation' },
-    { name: 'IT Services', href: '/it-services', description: 'Infrastructure and cloud solutions' },
-    { name: 'Micro SaaS', href: '/micro-saas', description: 'Custom software solutions' },
-    { name: 'Cybersecurity', href: '/cybersecurity', description: 'Security and compliance' },
-    { name: 'Cloud Platforms', href: '/cloud-platforms', description: 'Scalable cloud infrastructure' },
-    { name: 'Data Analytics', href: '/data-analytics', description: 'Business intelligence and insights' },
-    { name: 'Blockchain Solutions', href: '/blockchain-solutions', description: 'Blockchain and Web3 solutions' },
-    { name: 'IoT Solutions', href: '/iot-solutions', description: 'Internet of Things solutions' },
+    setIsMobileMenuOpen(false);';
+    setIsServicesOpen(false);';';
+  };';';';
+  const services = [',';';
+    ';';';
+    { name: 'AI Services', href: '/ai-services', description: 'AI-powered solutions and automation' },',';';
+    ';';';
+    { name: 'IT Services', href: '/it-services', description: 'Infrastructure and cloud solutions' },',';';
+    ';';';
+    { name: 'Micro SaaS', href: '/micro-saas', description: 'Custom software solutions' },',';';
+    ';';';
+    { name: 'Cybersecurity', href: '/cybersecurity', description: 'Security and compliance' },',';';
+    ';';';
+    { name: 'Cloud Platforms', href: '/cloud-platforms', description: 'Scalable cloud infrastructure' },',';';
+    ';';';
+    { name: 'Data Analytics', href: '/data-analytics', description: 'Business intelligence and insights' },',';';
+    ';';';
+    { name: 'Blockchain Solutions', href: '/blockchain-solutions', description: 'Blockchain and Web3 solutions' },',';';
+    ';';';
+    { name: 'IoT Solutions', href: '/iot-solutions', description: 'Internet of Things solutions' },',';';
+    ';';';
     { name: 'Emerging Tech', href: '/emerging-tech', description: 'Cutting-edge technology solutions' }
   ]
-
   return (
     <>
       {/* Top Bar */}
@@ -59,7 +65,6 @@ export function ModernHeader() {
           </div>
         </div>
       </div>
-
       {/* Main Header */}
       <header className="bg-white shadow-lg sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -73,32 +78,45 @@ export function ModernHeader() {
                 <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
               </Link>
             </div>
-
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8">
               <Link href="/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                 Home
               </Link>
-              
               {/* Services Dropdown */}
               <div className="relative">
                 <button
                   className="flex items-center text-gray-700 hover:text-blue-600 transition-colors font-medium"
-                  onMouseEnter={() => setIsServicesOpen(true)}
-                  onMouseLeave={() => setIsServicesOpen(false)}
+                  onMouseEnter={() => setIsServicesOpen(true)
+      )}
+    </div>
+  );
+}
+                  onMouseLeave={() => setIsServicesOpen(false)
+      )}
+    </div>
+  );
+}
                 >
                   Services
                   <ChevronDown className="ml-1 h-4 w-4" />
                 </button>
-                
                 {isServicesOpen && (
                   <div
                     className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
-                    onMouseEnter={() => setIsServicesOpen(true)}
-                    onMouseLeave={() => setIsServicesOpen(false)}
+                    onMouseEnter={() => setIsServicesOpen(true)
+      )}
+    </div>
+  );
+}
+                    onMouseLeave={() => setIsServicesOpen(false)
+      )}
+    </div>
+  );
+}
                   >
                     <div className="grid grid-cols-2 gap-4 px-6">
-                      {services.map((service) => (
+                      { services.map((service) => (
                         <Link
                           key={service.name}
                           href={service.href}
@@ -107,7 +125,11 @@ export function ModernHeader() {
                           <div className="font-medium text-gray-900">{service.name}</div>
                           <div className="text-sm text-gray-600">{service.description}</div>
                         </Link>
-                      ))}
+                      ))
+      )}
+    </div>
+  );
+}
                     </div>
                     <div className="mt-4 pt-4 border-t border-gray-200 px-6">
                       <Link
@@ -118,9 +140,12 @@ export function ModernHeader() {
                       </Link>
                     </div>
                   </div>
-                )}
+                )
+      )}
+    </div>
+  );
+}
               </div>
-
               <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                 About
               </Link>
@@ -140,7 +165,6 @@ export function ModernHeader() {
                 Contact
               </Link>
             </nav>
-
             {/* CTA Button */}
             <div className="hidden lg:flex items-center space-x-4">
               <Link
@@ -150,7 +174,6 @@ export function ModernHeader() {
                 Get Started
               </Link>
             </div>
-
             {/* Mobile menu button */}
             <div className="lg:hidden">
               <button
@@ -162,7 +185,6 @@ export function ModernHeader() {
             </div>
           </div>
         </div>
-
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="lg:hidden bg-white border-t border-gray-200">
@@ -174,10 +196,9 @@ export function ModernHeader() {
               >
                 Home
               </Link>
-              
               <div className="space-y-2">
                 <div className="text-gray-700 font-medium">Services</div>
-                {services.map((service) => (
+                { services.map((service) => (
                   <Link
                     key={service.name}
                     href={service.href}
@@ -186,7 +207,11 @@ export function ModernHeader() {
                   >
                     {service.name}
                   </Link>
-                ))}
+                ))
+      )}
+    </div>
+  );
+}
                 <Link
                   href="/services"
                   className="block pl-4 text-blue-600 hover:text-blue-700 transition-colors font-medium"
@@ -195,7 +220,6 @@ export function ModernHeader() {
                   View All Services
                 </Link>
               </div>
-
               <Link
                 href="/about"
                 className="block text-gray-700 hover:text-blue-600 transition-colors font-medium"
@@ -238,7 +262,6 @@ export function ModernHeader() {
               >
                 Contact
               </Link>
-              
               <div className="pt-4 border-t border-gray-200">
                 <Link
                   href="/contact"
@@ -250,8 +273,12 @@ export function ModernHeader() {
               </div>
             </div>
           </div>
-        )}
-      </header>
-    </>
+        )
+      )}
+    </div>
   );
-}"
+}
+      </header>';
+    </>';';
+  );';';';
+}"';';';';

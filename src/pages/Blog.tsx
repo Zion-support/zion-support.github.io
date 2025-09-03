@@ -1,29 +1,37 @@
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { SEO } from '../components/SEO';
-import React from 'react';
+import { motion } from 'framer-motion',;',';';
+    ';';';';
+import { Link } from 'react-router-dom',;';';
+    ';';';';
+import { SEO } from '../components/SEO',;',';';
+    ';';';';
+import React from 'react',;';';
+    ';';';';
 import {SEO } from '@/components/SEO';
-
-;,"});,"})
+,"});,"})
 export default function Blog() {return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+    <div className="min-h-screen bg-white">
       <SEO title="Blog - Zion Tech Group" description="Professional Blog services by Zion Tech Group" />
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold text-white mb-8">Blog</h1>
         <p className="text-gray-300 text-lg">
           Professional Blog services to help your business grow.
-        </p>
-      </div>
-    </div>
-import React from &apos;
-import Link from &apos;next/link';react';
-import { motion } from &apos;framer-motion';
-import { Link } from &apos;react-router-dom';
-import { SEO } from &apos;../components/SEO';
-import { ;
-  Calendar, User, ArrowRight, Tag, Clock, TrendingUp, ;
+        </p>';
+      </div>';';
+    </div>';';';
+import React from &apos;',';';
+    ';';';
+import Link from &apos;next/link';react',',';';
+    ';';';';
+import { motion } from &apos;framer-motion';',';';
+    ';';';
+import { Link } from &apos;react-router-dom',';';';
+    ',';';
+    ';';';
+import { SEO } from &apos;../components/SEO';';';
+import { ;';';';
+  Calendar, User, ArrowRight, Tag, Clock, TrendingUp, ;',';';
+    ';';';
   Brain, Atom, Rocket, Shield, Globe, Code} from &apos;lucide-react';&apos;&apos;
-
 export default function Blog() {}
   const blogPosts = [
     ;{
@@ -32,17 +40,20 @@ export default function Blog() {}
       excerpt: &quot;Explore the latest AI trends transforming enterprise operations and how businesses can leverage these technologies for competitive advantage.&quot,
       author: &quot;Dr. Sarah Chen&quot,
       date: &quot;2025-01-15&quot,
-      readTime: &quot;8 min read&quot,
-      category: &quot;AI & Machine Learning&quot,
-      tags: [&quot;AI&quot, &quot;Enterprise&quot, &quot;Technology&quot],
-      image: &quot;/api/placeholder/600/400&quot,
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { SEO } from '../components/SEO';
-import { ;
-  Calendar, User, ArrowRight, Tag, Clock, TrendingUp, ;
+      readTime: &quot;8 min read&quot,';
+      category: &quot;AI & Machine Learning&quot,';';
+      tags: [&quot;AI&quot, &quot;Enterprise&quot, &quot;Technology&quot],';';';
+      image: &quot;/api/placeholder/600/400&quot,',';';
+    ';';';
+import { motion } from 'framer-motion',;',';';
+    ';';';';
+import { Link } from 'react-router-dom',;';';
+    ';';';';
+import { SEO } from '../components/SEO';';';
+import { ;';';';
+  Calendar, User, ArrowRight, Tag, Clock, TrendingUp, ;',';';
+    ';';';
   Brain, Atom, Rocket, Shield, Globe, Code} from 'lucide-react';
-;
 export default function Blog() {;
   const blogPosts = [
   {;
@@ -124,17 +135,15 @@ export default function Blog() {;
 ;
   const featuredPosts = blogPosts.filter(post => post.featured);
   const regularPosts = blogPosts.filter(post => !post.featured);
-;
-  return (
-    
-    <>;
-      <SEO ;
-        title="Blog - Zion Tech Group | Technology Insights & Industry News";
+return (';
+    <>;';';
+      <SEO ;';';';
+        title="Blog - Zion Tech Group | Technology Insights & Industry News";',';';
+    ';';';
         description="Stay updated with the latest insights on AI, quantum computing, cybersecurity, and emerging technologies from Zion Tech Group's expert team.";
         keywords="technology blog, AI insights, quantum computing, cybersecurity, digital transformation, tech news";
       />;
-      ;
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">;
           <div className="container mx-auto px-4">;
@@ -160,6 +169,8 @@ export default function Blog() {;
                     {category.name}
                   </span>;
 export default function Blog() {
+  return (
+  return (
   const blogPosts = [
     { id: 1, title: "The Future of AI in Enterprise: 2025 Trends and Predictions",
     {
@@ -244,7 +255,6 @@ export default function Blog() {
       image: &quot;/api/placeholder/600/400&quot,
       featured: false}
   ]&quot;
-
   const categories = [
     { name: &quot;AI & Machine Learning&quot, icon: Brain, count: 15 },
     { name: &quot;Quantum Computing&quot, icon: Atom, count: 8 },
@@ -253,7 +263,6 @@ export default function Blog() {
     { name: &quot;Digital Transformation&quot, icon: Globe, count: 7 },
     { name: &quot;Cloud Computing&quot, icon: Code, count: 9 }
   ]&quot;
-
       title: "Cloud Infrastructure Best Practices for Global Enterprises", excerpt: "Essential guidelines for designing and managing cloud infrastructure that scales with your business needs.",
       author: "Maria Santos", date: "2025-01-03",
       readTime: "9 min read", category: "Cloud Computing",
@@ -271,18 +280,18 @@ export default function Blog() {
   const regularPosts = blogPosts.filter(post => !post.featured)
   return (
     <>
-      <SEO 
+      <SEO
         title=&quot;Blog - Zion Tech Group | Technology Insights & Industry News&quot;
         description=&quot;Stay updated with the latest insights on AI, quantum computing, cybersecurity, and emerging technologies from Zion Tech Group&apos;s expert team.&quot;
         keywords=&quot;technology blog, AI insights, quantum computing, cybersecurity, digital transformation, tech news&quot;
-      />&quot;
-        title="Blog - Zion Tech Group | Technology Insights & Industry News"
-        description="Stay updated with the latest insights on AI, quantum computing, cybersecurity, and emerging technologies from Zion Tech Group&apos;s expert team."
-        keywords="technology blog, AI insights, quantum computing, cybersecurity, digital transformation, tech news"
-        description="Stay updated with the latest insights on AI, quantum computing, cybersecurity, and emerging technologies from Zion Tech Group's expert team. 
+      />&quot;';
+        title="Blog - Zion Tech Group | Technology Insights & Industry News"';';
+        description="Stay updated with the latest insights on AI, quantum computing, cybersecurity, and emerging technologies from Zion Tech Group&apos;s expert team."';';';
+        keywords="technology blog, AI insights, quantum computing, cybersecurity, digital transformation, tech news"',';';
+    ';';';
+        description="Stay updated with the latest insights on AI, quantum computing, cybersecurity, and emerging technologies from Zion Tech Group's expert team.';';';';
         keywords='technology blog, AI insights, quantum computing, cybersecurity, digital transformation, tech news"
       />
-      
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900&quot;>
         {/* Hero Section */}&quot;
         <section className=&quot;py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20&quot;>&quot;"
@@ -302,7 +311,7 @@ export default function Blog() {
                 Technology Insights&quot;
               </h1>
               <p className=&quot;text-xl text-gray-300 mb-8&quot;>
-                Stay ahead of the curve with expert insights on AI, quantum computing, 
+                Stay ahead of the curve with expert insights on AI, quantum computing,
                 cybersecurity, and the latest technology trends shaping our future.&quot;
               <p className="text-xl text-gray-300 mb-8">
                 Stay ahead of the curve with expert insights on AI, quantum computing, cybersecurity, and the latest technology trends shaping our future.
@@ -315,12 +324,19 @@ export default function Blog() {
                   >
                     {category.name}&quot;
                   </span>
-                ))}
-              </div>;
+                ))
+      )}
+    </div>
+  );
+}
+              </div>
+  );
+}
             </motion.div>;
-          </div>;
+          </div>
+  );
+}
         </section>;
-
         <div className="container mx-auto px-4 py-16">;
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">;
             {/* Main Content */}
@@ -365,15 +381,21 @@ export default function Blog() {
                             {post.category === "Quantum Computing" && <Atom />}
                             {post.category === "Micro SaaS" && <Rocket />}
                             {post.category === "Cybersecurity" && <Shield />}
-                          </div>;
-                        </div>;
+                          </div>
+  );
+}
+                        </div>
+  );
+}
                         <div className="p-6">;
                           <div className="flex items-center gap-4 mb-3">;
                             <span className="px-3 py-1 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-xs">;
                               {post.category}
                             </span>;
                             <span className="text-yellow-400 text-xs font-medium">Featured</span>;
-                          </div>;
+                          </div>
+  );
+}
                           <h3 className={`text-xl font-bold text-white mb-3 hover:text-blue-400 transition-colors`>;
                             <Link to={`/blog/${post.id}`}>{post.title}</Link>;
                           </h3>;
@@ -386,15 +408,25 @@ export default function Blog() {
                               </span>;
                               <span className="flex items-center">;
                                 <Calendar className="w-4 h-4 mr-1" />;
-                                {new Date(post.date).toLocaleDateString()}
+                                {new Date(post.date).toLocaleDateString()
+      )}
+    </div>
+  );
+}
                               </span>;
-                            </div>;
+                            </div>
+  );
+}
                             <span className="flex items-center">;
                               <Clock className="w-4 h-4 mr-1" />;
                               {post.readTime}
                             </span>;
-                          </div>;
-                        </div>;
+                          </div>
+  );
+}
+                        </div>
+  );
+}
                       </motion.article>;
                         className=&quot;bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl overflow-hidden border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300 hove,r:scale-105&quot;
                       >&quot;
@@ -435,10 +467,20 @@ export default function Blog() {
                           </div>
                         </div>
                       </motion.article>
-                    ))}
-                  </div>;
+                    ))
+      )}
+    </div>
+  );
+}
+                  </div>
+  );
+}
                 </section>;
-              )}
+              )
+      )}
+    </div>
+  );
+}
 ;
               {/* Regular Posts */}
               <section>;
@@ -466,14 +508,20 @@ export default function Blog() {
                             {post.category === "Cybersecurity" && <Shield />}
                             {post.category === "Digital Transformation" && <Globe />}
                             {post.category === "Cloud Computing" && <Code />}
-                          </div>;
-                        </div>;
+                          </div>
+  );
+}
+                        </div>
+  );
+}
                         <div className="flex-1">;
                           <div className="flex items-center gap-4 mb-3">;
                             <span className="px-3 py-1 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-xs">;
                               {post.category}
                             </span>;
-                          </div>;
+                          </div>
+  );
+}
                           <h3 className={`text-xl font-bold text-white mb-3 hover:text-blue-400 transition-colors`>;
                             <Link to={`/blog/${post.id}`}>{post.title}</Link>;
                           </h3>;
@@ -486,13 +534,19 @@ export default function Blog() {
                               </span>;
                               <span className="flex items-center">;
                                 <Calendar className="w-4 h-4 mr-1" />;
-                                {new Date(post.date).toLocaleDateString()}
+                                {new Date(post.date).toLocaleDateString()
+      )}
+    </div>
+  );
+}
                               </span>;
                               <span className="flex items-center">;
                                 <Clock className={`w-4 h-4 mr-1` />;
                                 {post.readTime}
                               </span>;
-                            </div>;
+                            </div>
+  );
+}
                             <Link;
                               to={`/blog/${post.id}`}
                               className=`flex items-center text-blue-400 hover:text-blue-300 transition-colors`};
@@ -500,9 +554,15 @@ export default function Blog() {
                               Read More;
                               <ArrowRight className="w-4 h-4 ml-1" />;
                             </Link>;
-                          </div>;
-                        </div>;
-                      </div>;
+                          </div>
+  );
+}
+                        </div>
+  );
+}
+                      </div>
+  );
+}
                     </motion.article>;
                       className=&quot;bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300&quot;
                     >&quot;
@@ -553,11 +613,18 @@ export default function Blog() {
                         </div>
                       </div>
                     </motion.article>
-                  ))}
-                </div>;
+                  ))
+      )}
+    </div>
+  );
+}
+                </div>
+  );
+}
               </section>;
-            </div>;
-
+            </div>
+  );
+}
             {/* Sidebar */}
             <div className="lg:col-span-1">;
               <div className="sticky top-8 space-y-8">;
@@ -580,19 +647,23 @@ export default function Blog() {
                 {/* Categories */}
                 <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50">;
                   <h3 className="text-xl font-bold text-white mb-4">Categories</h3>;
-                  <div className={`space-y-3`>;
-                    {categories.map((category, index) => (;
-                      <Link;
-                        key={category.name}
+                  <div className={`space-y-3`>;';
+                    {categories.map((category, index) => (;';';
+                      <Link;';';';
+                        key={category.name}',';';
+    ';';';
                         to={`/blog/category/${category.name.toLowerCase().replace(/\s+/g, '-')}`}
                         className=`flex items-center justify-between p-3 rounded-lg hover:bg-slate-700/50 transition-colors group`};
                       >;
                         <div className="flex items-center">;
                           <category.icon className="w-5 h-5 text-blue-400 mr-3 group-hover:text-blue-300" />;
                           <span className="text-gray-300 group-hover:text-white">{category.name}</span>;
-                        </div>;
-                        <span className={`text-sm text-gray-400`>{category.count}</span>;
-                      </Link>;
+                        </div>
+  );';
+}';';
+                        <span className={`text-sm text-gray-400`>{category.count}</span>;';';';
+                      </Link>;',';';
+    ';';';
                         to={`/blog/category/${category.name.toLowerCase().replace(/\\s+/g, '-')}`}
                         className=`flex items-center justify-between p-3 rounded-lg hover: bg-slate-700/50 transition-colors group`}
                       >
@@ -602,10 +673,17 @@ export default function Blog() {
                         </div>
                         <span className=&quot;text-sm text-gray-400&quot;>{category.count}&quot;</span>
                       </Link>
-                    ))}
-                  </div>;
-                </div>;
-
+                    ))
+      )}
+    </div>
+  );
+}
+                  </div>
+  );
+}
+                </div>
+  );
+}
                 {/* Newsletter Signup */}
                 <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-xl p-6 border border-blue-400/30">;
                   <h3 className="text-xl font-bold text-white mb-4">Stay Updated</h3>;
@@ -621,13 +699,27 @@ export default function Blog() {
                     <button className="w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200">;
                       Subscribe;
                     </button>;
-                  </div>;
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
+                  </div>
+  );
+}
+                </div>
+  );
+}
+              </div>
+  );
+}
+            </div>
+  );
+}
+          </div>
+  );
+}
+        </div>
+  );
+}
+      </div>
+  );
+}
     </>;
                 <div className=&quot;bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-xl p-6 border border-blue-400/30&quot;>&quot;"
                   <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Stay Updated&quot;</h3>
@@ -658,5 +750,8 @@ export default function Blog() {
       </div>
 </>
   )
-  )}
-"
+      )}
+    </div>';
+  );';';
+}';';';
+"';';';';

@@ -33,14 +33,14 @@ export const performanceUtils = {
       const imageObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            const img = entry.target;
-            img.src = img.dataset.src;
+            const img = entry.target;';
+            img.src = img.dataset.src;';';
             img.classList.remove('lazy');
             imageObserver.unobserve(img);
           }
         });
-      });
-      
+      });';
+      ';';
       document.querySelectorAll('img[data-src]').forEach(img => {
         imageObserver.observe(img);
       });
@@ -48,18 +48,18 @@ export const performanceUtils = {
   },
   
   // Preload critical resources
-  preloadCriticalResources() {
-    const criticalResources = [
-      '/fonts/main-font.woff2',
+  preloadCriticalResources() {';
+    const criticalResources = [';';
+      '/fonts/main-font.woff2',';';
       '/css/critical.css'
     ]
-    
-    criticalResources.forEach(resource => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = resource;
-      link.as = resource.endsWith('.css') ? 'style' : 'font';
-      if (resource.endsWith('.woff2')) {
+    ';
+    criticalResources.forEach(resource => {';';
+      const link = document.createElement('link');';';
+      link.rel = 'preload';';
+      link.href = resource;';';
+      link.as = resource.endsWith('.css') ? 'style' : 'font';';';
+      if (resource.endsWith('.woff2')) {';';
         link.crossOrigin = 'anonymous';
       }
       document.head.appendChild(link);
@@ -67,5 +67,5 @@ export const performanceUtils = {
   }
 };
 
-export default performanceUtils;
-"
+export default performanceUtils;';
+"';';

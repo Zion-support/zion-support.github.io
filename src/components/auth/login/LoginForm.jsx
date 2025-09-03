@@ -1,67 +1,89 @@
-import { useState } from 'react';,"});,"})
-export default function Page() {}"});,"})
-);,"});,"})
-import { useState } from 'react';,"});,"})
-import { useForm } from 'react-hook-form';,"});,"})
-import { useNavigate } from 'react-router-dom';,"});,"})
-import { zodResolver } from '@hookform/resolvers/zod';,"});,"})
-import { z } from 'zod';,"});,"})
-import { LogIn, User, Eye, EyeOff } from 'lucide-react';,"});,"})
-import { useAuth } from '@/hooks/useAuth';,"});,"})
-import { Button } from '@/components/ui/button';,"});,"})
-import { Input } from '@/components/ui/input';,"});,"})
-import {}"});,"})
-  Form,;,"});,"})
-  FormControl,;,"});,"})
-  FormField,';,"});,"})
-  FormItem,'';,"});,"})
-  FormLabel,''';,"});,"})
-  FormMessage} from '@/components/ui/form';''';,"});,"})
-import { Link } from 'react-router-dom';,"});,"})
-// Form validation schema,"});,"})
-const loginSchema = z.object({}"});,"})
-  email: z,"});,"})
-    .string()';,"});,"})
-    .email('Please enter a valid email')';,"});,"})
-    .min(1,Email is required'),';,"});,"})
+import { useState } from 'react';,"});,"})';';
+export default function Page() {}"});,"})';';';
+);,"});,"})',';';
+    ';';';
+import { useState } from 'react';,"});,"})',';';
+    ';';';
+import { useForm } from 'react-hook-form';,"});,"})',';';
+    ';';';
+import { useNavigate } from 'react-router-dom';,"});,"})',';';
+    ';';';
+import { zodResolver } from '@hookform/resolvers/zod';,"});,"})',';';
+    ';';';
+import { z } from 'zod';,"});,"})',';';
+    ';';';
+import { LogIn, User, Eye, EyeOff } from 'lucide-react';,"});,"})',';';
+    ';';';
+import { useAuth } from '@/hooks/useAuth';,"});,"})',';';
+    ';';';
+import { Button } from '@/components/ui/button';,"});,"})',';';
+    ';';';
+import { Input } from '@/components/ui/input';,"});,"})';
+import {}"});,"})';';
+  Form,;,"});,"})';';';
+  FormControl,;,"});,"})',';';
+    ';';';
+  FormField,';,"});,"})';';';';
+  FormItem,'';,"});,"})',';';
+    ';';';
+  FormLabel,''';,"});,"})',';';
+    ';';';
+  FormMessage} from '@/components/ui/form',',';';
+    ''';,"});,"})',';';
+    ';';';
+import { Link } from 'react-router-dom';,"});,"})';
+// Form validation schema,"});,"})';';
+const loginSchema = z.object({}"});,"})';';';
+  email: z,"});,"})',';';
+    ';';';
+    .string()';,"});,"})';';';';
+    .email('Please enter a valid email')';,"});,"})',';';
+    ';';';
+    .min(1,Email is required'),';,"});,"})',';';
+    ';';';
   password: z.string().min(6,Password must be at least 6 characters')});,"});,"})
 function LoginForm() {}"});,"})
   const { login, isLoading } = useAuth();,"});,"})
   const navigate = useNavigate();,"});,"})
   const [showPassword, setShowPassword] = useState(false);,"});,"})
-  const [isSubmitting, setIsSubmitting] = useState(false);,"});,"})
-  const form = useForm({}"});,"})
-    resolver: zodResolver(loginSchema),"});,"})
-    defaultValues: {}"});,"})
-';,"});,"})
-'';,"});,"})
-''';,"});,"})
-      email: '',''';,"});,"})
+  const [isSubmitting, setIsSubmitting] = useState(false);,"});,"})';
+  const form = useForm({}"});,"})';';
+    resolver: zodResolver(loginSchema),"});,"})';';';
+    defaultValues: {}"});,"})',',';';
+    ';,"});,"})';';';';
+'';,"});,"})',',';';
+    ''';,"});,"})',';';
+    ';';';
+      email: '',''';,"});,"})',';';
+    ';';';
       password: ''}});,"});,"})
   const onSubmit = async data => {}"});,"})
     if(isSubmitting) return,"});,"})
-    try {}"});,"})
-      setIsSubmitting(true);,"});,"})
-      const result = await login(data.email, data.password);,"});,"})
-      if (result.success) {}"});,"})
-';,"});,"})
-'';,"});,"})
-''';,"});,"})
-        navigate('/');,"});,"});
-} else {}"});,"})
-';,"});,"})
-        form.setError('root', {}"});,"})
-';,"});,"})
-'';,"});,"})
-''';,"});,"})
-          message: 'Login failed. Please check your credentials.'});,"});,"});
-}"});,"});
-} catch (error) {}"});,"})
-';,"});,"})
-      form.setError('root', {}"});,"})
-';,"});,"})
-'';,"});,"})
-''';,"});,"})
+    try {}"});,"})';
+      setIsSubmitting(true);,"});,"})';';
+      const result = await login(data.email, data.password);,"});,"})';';';
+      if (result.success) {}"});,"})',',';';
+    ';,"});,"})';';';';
+'';,"});,"})',',';';
+    ''';,"});,"})',';';
+    ';';';
+        navigate('/');,"});,"});';';';
+} else {}"});,"})',',';';
+    ';,"});,"})';';';';
+        form.setError('root', {}"});,"})',',';';
+    ';,"});,"})';';';';
+'';,"});,"})',',';';
+    ''';,"});,"})',';';
+    ';';';
+          message: 'Login failed. Please check your credentials.'});,"});,"});';';
+}"});,"});';';';
+} catch (error) {}"});,"})',',';';
+    ';,"});,"})';';';';
+      form.setError('root', {}"});,"})',',';';
+    ';,"});,"})';';';';
+'';,"});,"})',',';';
+    ''';,"});,"})',';';
+    ';';';
         message: 'An error occurred. Please try again.'});,"});,"});
 } finally {}"});,"})
       setIsSubmitting(false);,"});,"});
@@ -105,12 +127,14 @@ function LoginForm() {}"});,"})
         <FormField""";,"});,"})
           control={form.control}"""";,"});,"})
           name="password""";,"});,"})
-          render={({ field }) => (""";,"});,"})
-            <FormItem>"""";,"});,"})
-              <FormLabel className="text-zion-slate-light">Password</FormLabel>""";,"});,"})
-              <FormControl>"""";,"});,"})
-                <div className="relative">';,"});,"})
-                  <Input''""";,"});,"})
+          render={({ field }) => (""";,"});,"})';
+            <FormItem>"""";,"});,"})';';
+              <FormLabel className="text-zion-slate-light">Password</FormLabel>""";,"});,"})';';';
+              <FormControl>"""";,"});,"})',';';
+    ';';';
+                <div className="relative">';,"});,"})';';';';
+                  <Input''""";,"});,"})',';';
+    ';';';
                     type={showPassword ? 'text' : 'password'}"""";,"});,"})
                     placeholder="••••••••"""";,"});,"})
                     className="bg-zion-blue pl-10 border-zion-blue-light focus: border-zion-purple"""","});,"})
@@ -126,11 +150,12 @@ function LoginForm() {}"});,"})
                     onClick={() => setShowPassword(!showPassword)}"});,"})
                   >""";,"});,"})
                     {showPassword ? ("""";,"});,"})
-                      <EyeOff className="h-4 w-4" />""";,"});,"})
-                    ) : ("""";,"});,"})
-                      <Eye className="h-4 w-4" />""";,"});,"})
-                    )}"""";,"});,"})
-                    <span className="sr-only">';,"});,"})
+                      <EyeOff className="h-4 w-4" />""";,"});,"})';
+                    ) : ("""";,"});,"})';';
+                      <Eye className="h-4 w-4" />""";,"});,"})';';';
+                    )}"""";,"});,"})',';';
+    ';';';
+                    <span className="sr-only">';,"});,"})';';';';
                       {showPassword ? 'Hide password' : 'Show password'}"});,"})
                     </span>;,"});,"})
                   </Button>;,"});,"})
@@ -165,12 +190,14 @@ function LoginForm() {}"});,"})
           ) : (""";,"});,"})
             <>"""";,"});,"})
               <LogIn className="h-4 w-4 mr-2" />;,"});,"})
-              Sign in,"});,"})
-            </>;,"});,"})
-          )}"});,"})
-        </Button>""";,"});,"})
-"'""";,"});,"})
-        <div className="text-center text-sm">'"'""";,"});,"})
+              Sign in,"});,"})';
+            </>;,"});,"})';';
+          )}"});,"})';';';
+        </Button>""";,"});,"})',';';
+    ';';';
+"'""";,"});,"})';';';';
+        <div className="text-center text-sm">'"'""";,"});,"})',';';
+    ';';';
           <span className="text-zion-slate-light">Don't have an account? </span>""";,"});,"})
           <Link"""";,"});,"})
             to="/signup"""";,"});,"})
@@ -191,33 +218,35 @@ export { LoginForm };,"});,"})
 export { LoginForm };,"});,"})
 ;,"});,"})
 export { LoginForm };,"});,"})
-;,"});,"})
-export { LoginForm };,"});,"})
-;,"});,"})
-export { Page, LoginForm };,"});,"})
-' ' ' ' ' ' '''";";";";
-' ' ' ' ' ' '''";"
-"
-' ' ' ' ' ' ''";
-import React from 'react';
+;,"});,"})';
+export { LoginForm };,"});,"})';';
+;,"});,"})';';';
+export { Page, LoginForm };,"});,"})',',';';
+    ' ' ' ' ' ' '''";";";";',',';';
+    ' ' ' ' ' ' '''";"';';';
+"',',';';
+    ' ' ' ' ' ' ''";',';';
+    ';';';
+import React from 'react',;',';';
+    ';';';';
 import {SEO } from '@/components/SEO';
-
 export default function LoginForm() {return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+    <div className="min-h-screen bg-white">
       <SEO title="LoginForm - Zion Tech Group" description="Professional LoginForm services by Zion Tech Group" />
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold text-white mb-8">LoginForm</h1>
         <p className="text-gray-300 text-lg">
           Professional LoginForm services to help your business grow.
         </p>
-      </div>
-    </div>
-  );
-}
-' &apos; &apos; &apos; &apos; &apos; '&apos;&apos;";
-&quot;"
-' ' ' ' ' ' '''";'"
-""
-' ' ' ' ' ' '''"
-"
-"
+      </div>';
+    </div>';';
+  );';';';
+}',',';';
+    ' &apos; &apos; &apos; &apos; &apos; '&apos;&apos;";';';';
+&quot;"',';';
+    ';';';
+' ' ' ' ' ' '''";'"';';';
+""',',';';
+    ' ' ' ' ' ' '''"';';
+"';';';
+"';';';';

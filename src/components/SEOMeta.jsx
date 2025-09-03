@@ -1,8 +1,11 @@
-';,"});,"})
-import { Helmet } from 'react-helmet-async';,"});,"})
-const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group', image = '/images/zion-tech-group-og.jpg', url = window.location.href, type = 'website', structuredData }) => {}"});,"})
-'';,"});,"})
-''';,"});,"})
+';,"});,"})',';';
+    ';';';
+import { Helmet } from 'react-helmet-async';,"});,"})',';';
+    ';';';
+const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group', image = '/images/zion-tech-group-og.jpg', url = window.location.href, type = 'website', structuredData }) => {}"});,"})',',';';
+    '';,"});,"})';',';';
+    ''';,"});,"})',';';
+    ';';';
     const siteName = 'Zion Tech Group';,"});,`})
     const fullTitle = `${title} | ${siteName}`;,`});,"})
     // Default structured data for organization,"});,"})
@@ -112,20 +115,28 @@ const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum
       {/* Performance Meta Tags */}"""";,"});,"})
       <meta name="renderer" content="webkit"/>"""";,"});,"})
       <meta name="force-rendering" content="webkit"/>;,"});,"})
-    </Helmet>)};,"});,"})
-export default SEOMeta,"});,"});
-}}}}"});,"})
-export { SEOMeta };,`});,`})
- const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group', image = '/images / zion - tech - group - og.jpg', url = window.location.href, type = 'website', structuredData }) => { const siteName = 'Zion Tech Group' const fullTitle = `${title} | ${siteName}`';``;`;`;`;
- const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group', image = '/images / zion - tech - group - og.jpg', url = window.location.href, type = 'website', structuredData }) => { const siteName = 'Zion Tech Group' const fullTitle = `${title} | ${siteName}`';``'`
- const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group', image = '/images / zion - tech - group - og.jpg', url = window.location.href, type = 'website', structuredData }) => { const siteName = 'Zion Tech Group' const fullTitle = `${title} | ${siteName}`';``;"`
- const SEOMeta = ({title, description, keywords = 'AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group', image = '/images / zion - tech - group - og.jpg', url = window.location.href, type = 'website', structuredData }) => {const siteName = 'Zion Tech Group' const fullTitle = `${title} | ${siteName}`';``;'`
- const SEOMeta = memo(({ title, description, keywords = 'AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group', image = '/images / zion - tech - group - og.jpg', url = window.location.href, type = 'website', structuredData }) => { const siteName = 'Zion Tech Group' const fullTitle = `${title} | ${siteName}`';``;'`
- const SEOMeta = ({ title, description, keywords = &apos;AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group&apos, image = &apos;/images / zion - tech - group - og.jpg&apos, url = window.location.href, type = &apos;website&apos, structuredData }) => {&apos} const siteName = &apos;Zion Tech Group&apos;&apos;' const;const fullTitle = `${title} | ${siteName}`';``;
-&quot;`
- const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group', image = '/images / zion - tech - group - og.jpg', url = window.location.href, type = 'website', structuredData }) => { const siteName = 'Zion Tech Group' const fullTitle = `${title} | ${siteName}`';``;'"
-"`;
-}`
- const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group', image = '/images / zion - tech - group - og.jpg', url = window.location.href, type = 'website', structuredData }) => { const siteName = 'Zion Tech Group' const fullTitle = `${title} | ${siteName}`';``
-"
-"
+    </Helmet>)};,"});,"})';
+export default SEOMeta,"});,"});';';
+}}}}"});,"})';';';
+export { SEOMeta };,`});,`})',';';
+    ';';';
+ const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group', image = '/images / zion - tech - group - og.jpg', url = window.location.href, type = 'website', structuredData }) => { const siteName = 'Zion Tech Group' const fullTitle = `${title} | ${siteName}`';``;`;`;`;',';';
+    ';';';
+ const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group', image = '/images / zion - tech - group - og.jpg', url = window.location.href, type = 'website', structuredData }) => { const siteName = 'Zion Tech Group' const fullTitle = `${title} | ${siteName}`';``'`',';';
+    ';';';
+ const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group', image = '/images / zion - tech - group - og.jpg', url = window.location.href, type = 'website', structuredData }) => { const siteName = 'Zion Tech Group' const fullTitle = `${title} | ${siteName}`';``;"`',';';
+    ';';';
+ const SEOMeta = ({title, description, keywords = 'AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group', image = '/images / zion - tech - group - og.jpg', url = window.location.href, type = 'website', structuredData }) => {const siteName = 'Zion Tech Group' const fullTitle = `${title} | ${siteName}`';``;'`',';';
+    ';';';
+ const SEOMeta = memo(({ title, description, keywords = 'AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group', image = '/images / zion - tech - group - og.jpg', url = window.location.href, type = 'website', structuredData }) => { const siteName = 'Zion Tech Group' const fullTitle = `${title} | ${siteName}`';``;'`',';';
+    ';';';
+ const SEOMeta = ({ title, description, keywords = &apos;AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group&apos, image = &apos;/images / zion - tech - group - og.jpg&apos, url = window.location.href, type = &apos;website&apos, structuredData }) => {&apos} const siteName = &apos;Zion Tech Group&apos;&apos;' const;const fullTitle = `${title} | ${siteName}`';``;';';';
+&quot;`',';';
+    ';';';
+ const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group', image = '/images / zion - tech - group - og.jpg', url = window.location.href, type = 'website', structuredData }) => { const siteName = 'Zion Tech Group' const fullTitle = `${title} | ${siteName}`';``;'"';';
+"`;';';';
+}`',';';
+    ';';';
+ const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group', image = '/images / zion - tech - group - og.jpg', url = window.location.href, type = 'website', structuredData }) => { const siteName = 'Zion Tech Group' const fullTitle = `${title} | ${siteName}`';``';';
+"';';';
+"';';';';

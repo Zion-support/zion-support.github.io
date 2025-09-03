@@ -1,27 +1,32 @@
-import React from 'react';
+import React from 'react',;',';';
+    ';';';';
 import {SEO } from '@/components/SEO';
-
-;,"});,"})
+,"});,"})
 export default function Team() {return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+    <div className="min-h-screen bg-white">
       <SEO title="Team - Zion Tech Group" description="Professional Team services by Zion Tech Group" />
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold text-white mb-8">Team</h1>
         <p className="text-gray-300 text-lg">
-          Professional Team services to help your business grow.
-        </p>
-      </div>
-    </div>
-import React from &apos;react';
-import { motion } from &apos;framer-motion';
-import { SEO } from &apos;../components/SEO';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { ;
-  Linkedin, Twitter, Github, Mail, Award, Users, ;
-  Brain, Atom, Shield, Rocket, Globe, Code, ;
+          Professional Team services to help your business grow.';
+        </p>';';
+      </div>';';';
+    </div>',';';
+    ';';';
+import React from &apos;react',';';';
+    ',';';
+    ';';';
+import { motion } from &apos;framer-motion';';';';';
+import { SEO } from &apos;../components/SEO',',';';
+    ';';';';
+import { motion } from 'framer-motion',;';';
+    ';';';';
+import { SEO } from '../components/SEO';';
+import { ;';';
+  Linkedin, Twitter, Github, Mail, Award, Users, ;';';';
+  Brain, Atom, Shield, Rocket, Globe, Code, ;',';';
+    ';';';
   Star, CheckCircle, TrendingUp, Target} from 'lucide-react';
-;
 export default function Team() {;
   const teamMembers = [
   {;
@@ -70,15 +75,13 @@ export default function Team() {;
   ]
 ;
   return (
-    
     <>;
       <SEO ;
         title="Our Team - Zion Tech Group | World-Class Technology Experts";
         description="Meet the exceptional team of AI researchers, quantum computing experts, cybersecurity specialists, and technology leaders driving innovation at Zion Tech Group.";
         keywords="team, experts, AI researchers, quantum computing, cybersecurity, technology leaders, Zion Tech Group";
       />;
-      ;
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">;
           <div className="container mx-auto px-4">;
@@ -97,12 +100,12 @@ export default function Team() {;
               </p>;
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">;
                 {stats.map((stat, index) => (;
-                  <motion.div;
-import { 
-  Linkedin, Twitter, Github, Mail, Award, Users, ;
-  Brain, Atom, Shield, Rocket, Globe, Code, ;
+                  <motion.div;';
+import {;';';
+  Linkedin, Twitter, Github, Mail, Award, Users, ;';';';
+  Brain, Atom, Shield, Rocket, Globe, Code, ;',';';
+    ';';';
   Star, CheckCircle, TrendingUp, Target} from &apos;lucide-react';&apos;&apos;
-
 export default function Team() {}
   const teamMembers = [
     ;{
@@ -142,16 +145,17 @@ export default function Team() {}
       achievements: [&quot;NSA Experience&quot, &quot;Security Expert&quot, &quot;CISSP Certified&quot]
 }
   ]&quot;
-
   const stats = [
     { number: &quot;50+&quot, label: &quot;Team Members&quot, icon: Users },
-    { number: &quot;15+&quot, label: &quot;Countries&quot, icon: Globe },
-    { number: &quot;200+&quot, label: &quot;Years Combined Experience&quot, icon: Award },
-    { number: &quot;95%&quot, label: &quot;Employee Satisfaction&quot, icon: Star }
-  ]
-
+    { number: &quot;15+&quot, label: &quot;Countries&quot, icon: Globe },';
+    { number: &quot;200+&quot, label: &quot;Years Combined Experience&quot, icon: Award },';';
+    { number: &quot;95%&quot, label: &quot;Employee Satisfaction&quot, icon: Star }';';';
+  ]',';';
+    ';';';
   return (&quot} from 'lucide-react';
 export default function Team() {
+  return (
+  return (
   const teamMembers = [
     { id: 1, name: "Dr. Sarah Chen",
       role: "Chief Executive Officer", department: "Executive",
@@ -194,12 +198,11 @@ export default function Team() {
   ]
   return (
     <>
-      <SEO 
+      <SEO
         title=&quot;Our Team - Zion Tech Group | World-Class Technology Experts&quot;
         description=&quot;Meet the exceptional team of AI researchers, quantum computing experts, cybersecurity specialists, and technology leaders driving innovation at Zion Tech Group.&quot;
         keywords=&quot;team, experts, AI researchers, quantum computing, cybersecurity, technology leaders, Zion Tech Group&quot;
       />&quot;
-      
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900&quot;>
         {/* Hero Section */}&quot;
         <section className=&quot;py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20&quot;>&quot;"
@@ -219,7 +222,7 @@ export default function Team() {
                 Meet Our Team&quot;
               </h1>
               <p className=&quot;text-xl text-gray-300 mb-8&quot;>
-                World-class experts in AI, quantum computing, cybersecurity, and emerging technologies, 
+                World-class experts in AI, quantum computing, cybersecurity, and emerging technologies,
                 united by a passion for innovation and excellence.&quot;
               </p>
               <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-6&quot;>
@@ -238,9 +241,15 @@ export default function Team() {
                   >;
                     <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-xl p-4 border border-cyan-400/20">;
                       <stat.icon className="w-8 h-8 text-cyan-400 mx-auto mb-2" />;
-                      <div className="text-2xl font-bold text-white mb-1">{stat.number}</div>;
-                      <div className="text-gray-300 text-sm">{stat.label}</div>;
-                    </div>;
+                      <div className="text-2xl font-bold text-white mb-1">{stat.number}</div>
+  );
+}
+                      <div className="text-gray-300 text-sm">{stat.label}</div>
+  );
+}
+                    </div>
+  );
+}
                   </motion.div>;
                     className=&quot;text-center&quot;
                   >&quot;
@@ -250,12 +259,19 @@ export default function Team() {
                       <div className=&quot;text-gray-300 text-sm&quot;>{stat.label}&quot;</div>
                     </div>
                   </motion.div>
-                ))}
-              </div>;
+                ))
+      )}
+    </div>
+  );
+}
+              </div>
+  );
+}
             </motion.div>;
-          </div>;
+          </div>
+  );
+}
         </section>;
-
         {/* Team Members Section */}
         <section className="py-16">;
           <div className="container mx-auto px-4">;
@@ -270,7 +286,6 @@ export default function Team() {
                 Meet the visionary leaders driving innovation and excellence at Zion Tech Group;
               </p>;
             </motion.div>;
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
               {teamMembers.map((member, index) => (;
                 <motion.div;
@@ -293,7 +308,6 @@ export default function Team() {
                 Meet the visionary leaders driving innovation and excellence at Zion Tech Group&quot;
               </p>
             </motion.div>
-
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 l,g:grid-cols-4 gap-8&quot;>
               {teamMembers.map((member, index) => (&quot}
                 <motion.div
@@ -309,19 +323,24 @@ export default function Team() {
                       {member.department === "Technology" && <Atom />}
                       {member.department === "Cybersecurity" && <Shield />}
                       {member.department === "Executive" && <Users />}
-                    </div>;
-                  </div>;
+                    </div>
+  );
+}
+                  </div>
+  );
+}
                   <div className="p-6">;
                     <div className="mb-3">;
                       <span className="px-3 py-1 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-xs">;
                         {member.department}
                       </span>;
-                    </div>;
+                    </div>
+  );
+}
                     <h3 className="text-xl font-bold text-white mb-1">{member.name}</h3>;
                     <p className="text-blue-400 font-medium mb-3">{member.role}</p>;
                     <p className="text-gray-300 text-sm mb-4 line-clamp-3">{member.bio}</p>;
-                    ;
-                    <div className="mb-4">;
+<div className="mb-4">;
                       <h4 className="text-sm font-semibold text-white mb-2">Expertise</h4>;
                       <div className="flex flex-wrap gap-2">;
                         {member.expertise.map((skill, skillIndex) => (;
@@ -350,7 +369,6 @@ export default function Team() {
                     <h3 className=&quot;text-xl font-bold text-white mb-1&quot;>{member.name}&quot;</h3>
                     <p className=&quot;text-blue-400 font-medium mb-3&quot;>{member.role}&quot;</p>
                     <p className=&quot;text-gray-300 text-sm mb-4 line-clamp-3&quot;>{member.bio}&quot;</p>
-                    
                     <div className=&quot;mb-4&quot;>&quot;"
                       <h4 className=&quot;text-sm font-semibold text-white mb-2&quot;>Expertise&quot;</h4>
                       <div className=&quot;flex flex-wrap gap-2&quot;>
@@ -361,10 +379,17 @@ export default function Team() {
                           >
                             {skill}&quot;
                           </span>
-                        ))}
-                      </div>;
-                    </div>;
-
+                        ))
+      )}
+    </div>
+  );
+}
+                      </div>
+  );
+}
+                    </div>
+  );
+}
                     <div className="mb-4">;
                       <h4 className="text-sm font-semibold text-white mb-2">Key Achievements</h4>;
                       <div className="space-y-1">;
@@ -372,7 +397,9 @@ export default function Team() {
                           <div key={achIndex} className="flex items-center text-xs text-gray-400">;
                             <CheckCircle className="w-3 h-3 text-green-400 mr-2" />;
                             {achievement}
-                          </div>;
+                          </div>
+  );
+}
                     <div className=&quot;mb-4&quot;>&quot;"
                       <h4 className=&quot;text-sm font-semibold text-white mb-2&quot;>Key Achievements&quot;</h4>
                       <div className=&quot;space-y-1&quot;>
@@ -381,26 +408,40 @@ export default function Team() {
                             <CheckCircle className=&quot;w-3 h-3 text-green-400 mr-2&quot; />
                             {achievement}&quot;
                           </div>
-                        ))}
-                      </div>;
-                    </div>;
-
-                    <div className={`flex items-center justify-center space-x-4 pt-4 border-t border-slate-600/50`>;
-                      <a;
+                        ))
+      )}
+    </div>
+  );
+}
+                      </div>
+  );
+}
+                    </div>
+  );';
+}';';
+                    <div className={`flex items-center justify-center space-x-4 pt-4 border-t border-slate-600/50`>;';';';
+                      <a;',';';
+    ';';';
                         href={`mailto:${member.name.toLowerCase().replace(/\s+/g, '.')}@ziontechgroup.com`}
                         className=`text-gray-400 hover:text-green-400 transition-colors`};
                       >;
                         <Mail className="w-5 h-5" />;
                       </a>;
-                    </div>;
-                  </div>;
+                    </div>
+  );
+}
+                  </div>
+  );
+}
                 </motion.div>;
                     <div className=&quot;flex items-center justify-center space-x-4 pt-4 border-t border-slate-600/50&quot;>&quot;`
-                      <a href={`mailto:${member.name.toLowerCase().replace(/\s+/g, &apos;.&apos)}@ziontechgroup.com`}
-                        className=&quot;text-gray-400 hover:text-green-400 transition-colors&quot;
-                      >&quot;&apos;
-                        <Mail className=&quot;w-5 h-5&quot; />&quot;
-                        href={`mailto: ${member.name.toLowerCase().replace(/\s+/g, '.')}@ziontechgroup.com`}
+                      <a href={`mailto:${member.name.toLowerCase().replace(/\s+/g, &apos;.&apos)}@ziontechgroup.com`}';
+                        className=&quot;text-gray-400 hover:text-green-400 transition-colors&quot;';';
+                      >&quot;&apos;';';';
+                        <Mail className=&quot;w-5 h-5&quot; />&quot;',';';
+    ';';';
+                        href={`mailto: ${member.name.toLowerCase().replace(/\s+/g, '.')}@ziontechgroup.com`}',';';
+    ';';';
                         href={`mailto: ${member.name.toLowerCase().replace(/\\s+/g, '.')}@ziontechgroup.com`}
                         className=`text-gray-400 hover: text-green-400 transition-colors"
                       >
@@ -409,11 +450,18 @@ export default function Team() {
                     </div>
                   </div>
                 </motion.div>
-              ))}
-            </div>;
-          </div>;
+              ))
+      )}
+    </div>
+  );
+}
+            </div>
+  );
+}
+          </div>
+  );
+}
         </section>;
-
         {/* Join Our Team Section */}
         <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">;
           <div className="container mx-auto px-4">;
@@ -423,10 +471,11 @@ export default function Team() {
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto";
             >;
-              <h2 className="text-4xl font-bold text-white mb-6">;
-                Join Our Team;
-              </h2>;
-              <p className="text-xl text-gray-300 mb-8">;
+              <h2 className="text-4xl font-bold text-white mb-6">;';
+                Join Our Team;';';
+              </h2>;';';';
+              <p className="text-xl text-gray-300 mb-8">;',';';
+    ';';';
                 We're always looking for exceptional talent to join our mission of advancing technology ;
                 and solving complex challenges. Explore opportunities to work with the best minds in tech.;
               </p>;
@@ -445,11 +494,17 @@ export default function Team() {
                   <Mail className="w-5 h-5 mr-2" />;
                   Get in Touch;
                 </a>;
-              </div>;
+              </div>
+  );
+}
             </motion.div>;
-          </div>;
+          </div>
+  );
+}
         </section>;
-      </div>;
+      </div>
+  );
+}
     </>;
         <section className=&quot;py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50&quot;>&quot;"
           <div className=&quot;container mx-auto px-4&quot;>&quot;"
@@ -468,13 +523,15 @@ export default function Team() {
                 Join Our Team&quot;
               </h2>
               <p className=&quot;text-xl text-gray-300 mb-8&quot;>
-                We&apos;re always looking for exceptional talent to join our mission of advancing technology 
-                and solving complex challenges. Explore opportunities to work with the best minds in tech.&apos;
-              </p>
-              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>&quot;"
-              <p className="text-xl text-gray-300 mb-8">
-                We&apos;re always looking for exceptional talent to join our mission of advancing technology '
-                We&apos;re always looking for exceptional talent to join our mission of advancing technology '
+                We&apos;re always looking for exceptional talent to join our mission of advancing technology
+                and solving complex challenges. Explore opportunities to work with the best minds in tech.&apos;';
+              </p>';';
+              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>&quot;"';';';
+              <p className="text-xl text-gray-300 mb-8">',';';
+    ';';';
+                We&apos;re always looking for exceptional talent to join our mission of advancing technology '';';';';
+                We&apos;re always looking for exceptional talent to join our mission of advancing technology '',';';
+    ';';';
                 We're always looking for exceptional talent to join our mission of advancing technology '
                 and solving complex challenges. Explore opportunities to work with the best minds in tech.
               </p>
@@ -500,5 +557,8 @@ export default function Team() {
       </div>
 </>
   )
-  )}
-"
+      )}
+    </div>';
+  );';';
+}';';';
+"';';';';

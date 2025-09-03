@@ -1,11 +1,15 @@
-import React from 'react';
-import { Link  } from 'react-router-dom'; ; </div>; </motion.div>; </div>; </section>; </div>
+import React from 'react',;',';';
+    ';';';';
+import { Link  } from 'react-router-dom';
+</div>; </motion.div>; </div>; </section>; </div>
   );
-};; ; export default CloudFinOpsOptimizer; ;
+};
+export default CloudFinOpsOptimizer;
 export default function CloudFinOpsOptimizer() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950>
-      <SEO 
+  return (
+    <div className="min-h-screen bg-white">
+      <SEO
         title="CloudFinOpsOptimizer" - Zion Technologies"
         description="Professional CloudFinOpsOptimizer services by Zion Technologies
       />
@@ -18,22 +22,30 @@ export default function CloudFinOpsOptimizer() {
             Professional CloudFinOpsOptimizer services delivered with cutting-edge technology and expertise.
           </p>
         </div>
-      </div>
-    </div>
-  );
-} import { Link } from &apos;
-import { motion } from &apos;framer-motion';react-router-dom.ts&apos;&apos;'  </div> </motion.div> </div> </section> </div> ) }  export default CloudFinOpsOptimizer &apos;
-import React from &apos;react.ts&apos; import { Link } from &apos;react-router-dom.ts&apos;&apos;'  </div> </motion.div> </div> </section> </div> ) }  ;export default CloudFinOpsOptimizer ';
-
-&apos;'
- import { Link } from 'react-router-dom.ts'  </div> </motion.div> </div> </section> </div> ) }  export default CloudFinOpsOptimizer '';""
-import React from 'react.ts' import { Link } from 'react-router-dom.ts'  </div> </motion.div> </div> </section> </div> ) }  export default CloudFinOpsOptimizer ';'
- import { Link } from 'react-router-dom.ts'  </div> </motion.div> </div> </section> </div> ) }  export default CloudFinOpsOptimizer '';
-import React from 'react.ts' import { Link } from 'react-router-dom.ts'  </div> </motion.div> </div> </section> </div> ) }  export default CloudFinOpsOptimizer '';
-;""
-
- import { Link  } from 'react-router-dom.ts';</div> </motion.div> </div> </section> </div> ) }  export default CloudFinOpsOptimizer '
-import React  from 'react.ts';
-import { Link  } from 'react-router-dom.ts';</div> </motion.div> </div> </section> </div> ) }  export default CloudFinOpsOptimizer 
-"
-"
+      </div>';
+    </div>';';
+  );';';';
+} import { Link } from &apos;',';';
+    ';';';
+import { motion } from &apos;framer-motion';react-router-dom.ts&apos;&apos;'  </div> </motion.div> </div> </section> </div> ) }  export default CloudFinOpsOptimizer &apos;',';';
+    ';';';
+import React from &apos;react.ts&apos; import { Link } from &apos;react-router-dom.ts&apos;&apos;'  </div> </motion.div> </div> </section> </div> ) }  ;export default CloudFinOpsOptimizer ',',';';
+    ';';';';
+&apos;'',';';
+    ';';';
+ import { Link } from 'react-router-dom.ts'  </div> </motion.div> </div> </section> </div> ) }  export default CloudFinOpsOptimizer '';""',';';
+    ';';';
+import React from 'react.ts' import { Link } from 'react-router-dom.ts'  </div> </motion.div> </div> </section> </div> ) }  export default CloudFinOpsOptimizer ',;',';';
+    '';';';';
+ import { Link } from 'react-router-dom.ts'  </div> </motion.div> </div> </section> </div> ) }  export default CloudFinOpsOptimizer '',;',';';
+    ';';';';
+import React from 'react.ts' import { Link } from 'react-router-dom.ts'  </div> </motion.div> </div> </section> </div> ) }  export default CloudFinOpsOptimizer '',;';';
+    ';';';
+""';';';';
+ import { Link  } from 'react-router-dom.ts';</div> </motion.div> </div> </section> </div> ) }  export default CloudFinOpsOptimizer '',';';
+    ';';';
+import React  from 'react.ts',;',';';
+    ';';';';
+import { Link  } from 'react-router-dom.ts';</div> </motion.div> </div> </section> </div> ) }  export default CloudFinOpsOptimizer';';
+"';';';
+"';';';';

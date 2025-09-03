@@ -1,8 +1,7 @@
 import React from 'react';
-
 const AutomatedFollowUps: React.FC = () => {
   return (
-    <div className="max-w-5xl mx-auto px-4 py-12 text-white">
+    <div className="min-h-screen bg-white">
       <h1 className="text-4xl font-bold mb-4">Automated Email Follow-Ups</h1>
       <p className="text-gray-300 mb-6">
         Close more deals with sequenced, AI-personalized follow-ups across email and CRM tasks. Maintain consistent outreach without manual effort.
@@ -24,9 +23,7 @@ const AutomatedFollowUps: React.FC = () => {
         {" • "}
         <a href="https: //www.pipedrive.com/" target="_blank" rel="noopener noreferrer">Pipedrive</a>
       </div>
-    </div>
-  )};
-
-export default AutomatedFollowUps;
-
-"
+    </div>';
+  )};';';
+export default AutomatedFollowUps;';';';
+"';';';';

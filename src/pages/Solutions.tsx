@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react',;',';';
+    ';';';';
 import { SEO } from '../components/SEO';
-
 const Solutions: React.FC = () => {
   return(<>
       <SEO title="Solutions - Zion Tech Group />
@@ -8,18 +8,22 @@ const Solutions: React.FC = () => {
         <div className="max-w-4xl mx-auto px-4>
           <h1 className="text-4xl" font-bold text-gray-900 mb-8">Solutions</h1>
           <p className="text-lg text-gray-600">Content coming soon...</p>
-        </div>
-    </>
-  )};
-
-export default Solutions;
-import { SEO } from '../components/SEO';''const Solutions: React.FC = () => {'
+        </div>';
+    </>';';
+  )};';';';
+export default Solutions;',';';
+    ';';';
+import { SEO } from '../components/SEO',',';';
+    ''const Solutions: React.FC = () => {'
   return (
     <>
-      <SEO title="Solutions - Zion Tech Group" />"      <div className="min-h-screen bg-white py-20">"        <div className="max-w-4xl mx-auto px-4">"          <h1 className="text-4xl font-bold text-gray-900 mb-8">Solutions</h1>"          <p className="text-lg text-gray-600">Content coming soon...</p>"        </div>"      </div>
-</>)};
-,"});,"})
-;,"});,"})
+      <SEO title="Solutions - Zion Tech Group" />"      <div className="min-h-screen bg-white py-20">"        <div className="max-w-4xl mx-auto px-4">"          <h1 className="text-4xl font-bold text-gray-900 mb-8">Solutions</h1>"          <p className="text-lg text-gray-600">Content coming soon...</p>"        </div>"      </div>;
+  );
+}';
+</>)};';';
+,"});,"})';';';
+,"});,"})',';';
+    ';';';
 import { SEO } from '../components/SEO';,"});,"})
 export default function Page() {,"});,"})
 const Solutions: React.FC = () => {,"});,"})
@@ -30,139 +34,182 @@ const Solutions: React.FC = () => {,"});,"})
           <h1 className="text-4xl font-bold text-gray-900 mb-8">Solutions</h1>;,"});,"})
           <p className="text-lg text-gray-600">Content coming soon...</p>;,"});,"})
         </div>;,"});,"})
-    </>;,"});,"})
-  );,"});,"});
-};,"});,"})
-export default Solutions,"});,"})
-import { Link } from 'react-router-dom';,"});,"})
-export default function Solutions() {,"});,"})
-  const industrySolutions = [,"});,"})
-    {,"});,"})
-      title: 'Healthcare Solutions',"});,"})
-      description: 'AI-powered diagnostics, patient care optimization, and healthcare analytics solutions.',;,"});,"})
-      icon: '🏥',"});,"})
-      color: 'from-pink-500 to-red-500',"});,"})
-      features: [,"});,"})
-        'AI-Powered Medical Diagnostics',;,"});,"})
-        'Patient Care Optimization',;,"});,"})
-        'Healthcare Analytics & Insights',;,"});,"})
-        'HIPAA Compliant Solutions',;,"});,"})
-        'Telemedicine Integration',;,"});,"})
-        'Medical Data Management';,"});,"})
-      ],;,"});,"})
-      href: '/solutions/healthcare',"});,"});
-},;,"});,"})
-      title: 'Financial Services',"});,"})
-      description: 'Advanced fintech solutions including AI trading, risk management, and compliance.',;,"});,"})
-      icon: '💳',"});,"})
-      color: 'from-green-500 to-blue-500',"});,"})
-        'AI Trading Algorithms',;,"});,"})
-        'Risk Management Systems',;,"});,"})
-        'Regulatory Compliance',;,"});,"})
-        'Fraud Detection',;,"});,"})
-        'Financial Analytics',;,"});,"})
-        'Blockchain Integration';,"});,"})
-      href: '/solutions/financial',"});,"})
-      title: 'Manufacturing',"});,"})
-      description: 'Industry 4.0 solutions for smart factories and predictive maintenance.',"});,"})
-      icon: '🏭',"});,"})
-      color: 'from-blue-500 to-purple-500',"});,"})
-        'Smart Factory Solutions',;,"});,"})
-        'Predictive Maintenance',;,"});,"})
-        'IoT Integration',;,"});,"})
-        'Quality Control Systems',;,"});,"})
-        'Supply Chain Optimization',;,"});,"})
-        'Production Analytics';,"});,"})
-      href: '/solutions/manufacturing',"});,"})
-      title: 'Retail & E-commerce',"});,"})
-      description: 'Digital transformation solutions for modern retail and online commerce.',"});,"})
-      icon: '🛍️',"});,"})
-      color: 'from-orange-500 to-red-500',"});,"})
-        'E-commerce Platforms',;,"});,"})
-        'Customer Analytics',;,"});,"})
-        'Inventory Management',;,"});,"})
-        'Omnichannel Solutions',;,"});,"})
-        'Personalization Engines',;,"});,"})
-        'Retail Analytics';,"});,"})
-      href: '/solutions/retail',"});,"})
-      title: 'Education Technology',"});,"})
-      description: 'Innovative learning platforms and educational analytics solutions.',"});,"})
-      icon: '🎓',"});,"})
-      color: 'from-purple-500 to-pink-500',"});,"})
-        'Learning Management Systems',;,"});,"})
-        'Educational Analytics',;,"});,"})
-        'Virtual Learning Platforms',;,"});,"})
-        'Student Performance Tracking',;,"});,"})
-        'Content Management',;,"});,"})
-        'Assessment Tools';,"});,"})
-      href: '/solutions/education',"});,"})
-      title: 'Government & Public Sector',"});,"})
-      description: 'Secure, compliant solutions for government agencies and public institutions.',;,"});,"})
-      icon: '🏛️',"});,"})
-      color: 'from-indigo-500 to-blue-500',"});,"})
-        'Secure Infrastructure',;,"});,"})
-        'Compliance Solutions',;,"});,"})
-        'Digital Services',;,"});,"})
-        'Data Analytics',;,"});,"})
-        'Process Automation',;,"});,"})
-        'Citizen Engagement';,"});,"})
-      href: '/solutions/government',"});,"});
-}"});,"})
-  ],"});,"})
-  const enterpriseSolutions = [,"});,"})
-      title: 'Digital Transformation',"});,"})
-      description: 'End-to-end digital transformation strategies for enterprise organizations.',"});,"})
-      icon: '🚀',"});,"})
-        'Technology Assessment',;,"});,"})
-        'Change Management',;,"});,"})
-        'Legacy Modernization',;,"});,"})
-        'Digital Strategy',;,"});,"})
-        'Implementation Roadmap';,"});,"})
-      title: 'Cloud Migration',"});,"})
-      description: 'Comprehensive cloud migration and infrastructure optimization.',"});,"})
-      icon: '☁️',"});,"})
-        'Migration Strategy',;,"});,"})
-        'Infrastructure Design',;,"});,"})
-        'Data Migration',;,"});,"})
-        'Security Implementation',;,"});,"})
-        'Performance Optimization',;,"});,"})
-        'Ongoing Management';,"});,"})
-      title: 'AI & Analytics',"});,"})
-      description: 'Enterprise-grade AI solutions and advanced analytics platforms.',"});,"})
-      icon: '🤖',"});,"})
-        'AI Strategy Development',;,"});,"})
-        'Data Platform Design',;,"});,"})
-        'Machine Learning Models',;,"});,"})
-        'Business Intelligence',;,"});,"})
-        'Predictive Analytics',;,"});,"})
-        'AI Governance';,"});,"})
-      title: 'Cybersecurity',"});,"})
-      description: 'Comprehensive security solutions for enterprise environments.',"});,"})
-      icon: '🔒',"});,"})
-        'Security Assessment',;,"});,"})
-        'Threat Detection',;,"});,"})
-        'Identity Management',;,"});,"})
-        'Compliance & Governance',;,"});,"})
-        'Incident Response',;,"});,"})
-        'Security Training';,"});,"})
-  const startupSolutions = [,"});,"})
-      title: 'MVP Development',"});,"})
-      description: 'Rapid development of minimum viable products to validate ideas.',"});,"})
-      icon: '⚡',"});,"})
-        'Rapid Prototyping',;,"});,"})
-        'User Experience Design',;,"});,"})
-        'Scalable Architecture',;,"});,"})
-        'Cloud Infrastructure',;,"});,"})
-        'Analytics Integration',;,"});,"})
-        'Iterative Development';,"});,"})
-      title: 'Growth Technology',"});,"})
-      description: 'Technology solutions designed to scale with your startup growth.',"});,"})
-      icon: '📈',"});,"})
-        'Scalable Infrastructure',;,"});,"})
-        'User Analytics',;,"});,"})
-        'Automation Tools',;,"});,"})
-        'Integration Services',;,"});,"})
-        'Growth Monitoring';,"});,"})
+    </>;,"});,"})';
+  );,"});,"});';';
+};,"});,"})';';';
+export default Solutions,"});,"})',';';
+    ';';';
+import { Link } from 'react-router-dom';,"});,"})';
+export default function Solutions() {,"});,"})';';
+  const industrySolutions = [,"});,"})';';';
+    {,"});,"})',';';
+    ';';';
+      title: 'Healthcare Solutions',"});,"})',';';
+    ';';';
+      description: 'AI-powered diagnostics, patient care optimization, and healthcare analytics solutions.',';';';
+"});,"})',';';
+    ';';';
+      icon: '🏥',"});,"})',';';
+    ';';';
+      color: 'from-pink-500 to-red-500',"});,"})';';';
+      features: [,"});,"})',',';';
+    'AI-Powered Medical Diagnostics',;,"});,"})';',';';
+    'Patient Care Optimization',;,"});,"})',',';';
+    'Healthcare Analytics & Insights',;,"});,"})';',';';
+    'HIPAA Compliant Solutions',;,"});,"})',',';';
+    'Telemedicine Integration',;,"});,"})';',';';
+    'Medical Data Management';,"});,"})';';';
+      ],;,"});,"})',';';
+    ';';';
+      href: '/solutions/healthcare',"});,"});';';';
+},;,"});,"})',';';
+    ';';';
+      title: 'Financial Services',"});,"})',';';
+    ';';';
+      description: 'Advanced fintech solutions including AI trading, risk management, and compliance.',';';';
+"});,"})',';';
+    ';';';
+      icon: '💳',"});,"})',';';
+    ';';';
+      color: 'from-green-500 to-blue-500',"});,"})',',';';
+    'AI Trading Algorithms',;,"});,"})';',';';
+    'Risk Management Systems',;,"});,"})',',';';
+    'Regulatory Compliance',;,"});,"})';',';';
+    'Fraud Detection',;,"});,"})',',';';
+    'Financial Analytics',;,"});,"})';',';';
+    'Blockchain Integration';,"});,"})';';';';
+      href: '/solutions/financial',"});,"})',';';
+    ';';';
+      title: 'Manufacturing',"});,"})',';';
+    ';';';
+      description: 'Industry 4.0 solutions for smart factories and predictive maintenance.',"});,"})',';';
+    ';';';
+      icon: '🏭',"});,"})',';';
+    ';';';
+      color: 'from-blue-500 to-purple-500',"});,"})',',';';
+    'Smart Factory Solutions',;,"});,"})';',';';
+    'Predictive Maintenance',;,"});,"})',',';';
+    'IoT Integration',;,"});,"})';',';';
+    'Quality Control Systems',;,"});,"})',',';';
+    'Supply Chain Optimization',;,"});,"})';',';';
+    'Production Analytics';,"});,"})';';';';
+      href: '/solutions/manufacturing',"});,"})',';';
+    ';';';
+      title: 'Retail & E-commerce',"});,"})',';';
+    ';';';
+      description: 'Digital transformation solutions for modern retail and online commerce.',"});,"})',';';
+    ';';';
+      icon: '🛍️',"});,"})',';';
+    ';';';
+      color: 'from-orange-500 to-red-500',"});,"})',',';';
+    'E-commerce Platforms',;,"});,"})';',';';
+    'Customer Analytics',;,"});,"})',',';';
+    'Inventory Management',;,"});,"})';',';';
+    'Omnichannel Solutions',;,"});,"})',',';';
+    'Personalization Engines',;,"});,"})';',';';
+    'Retail Analytics';,"});,"})';';';';
+      href: '/solutions/retail',"});,"})',';';
+    ';';';
+      title: 'Education Technology',"});,"})',';';
+    ';';';
+      description: 'Innovative learning platforms and educational analytics solutions.',"});,"})',';';
+    ';';';
+      icon: '🎓',"});,"})',';';
+    ';';';
+      color: 'from-purple-500 to-pink-500',"});,"})',',';';
+    'Learning Management Systems',;,"});,"})';',';';
+    'Educational Analytics',;,"});,"})',',';';
+    'Virtual Learning Platforms',;,"});,"})';',';';
+    'Student Performance Tracking',;,"});,"})',',';';
+    'Content Management',;,"});,"})';',';';
+    'Assessment Tools';,"});,"})';';';';
+      href: '/solutions/education',"});,"})',';';
+    ';';';
+      title: 'Government & Public Sector',"});,"})',';';
+    ';';';
+      description: 'Secure, compliant solutions for government agencies and public institutions.',';';';
+"});,"})',';';
+    ';';';
+      icon: '🏛️',"});,"})',';';
+    ';';';
+      color: 'from-indigo-500 to-blue-500',"});,"})',',';';
+    'Secure Infrastructure',;,"});,"})';',';';
+    'Compliance Solutions',;,"});,"})',',';';
+    'Digital Services',;,"});,"})';',';';
+    'Data Analytics',;,"});,"})',',';';
+    'Process Automation',;,"});,"})';',';';
+    'Citizen Engagement';,"});,"})';';';';
+      href: '/solutions/government',"});,"});';
+}"});,"})';';
+  ],"});,"})';';';
+  const enterpriseSolutions = [,"});,"})',';';
+    ';';';
+      title: 'Digital Transformation',"});,"})',';';
+    ';';';
+      description: 'End-to-end digital transformation strategies for enterprise organizations.',"});,"})',';';
+    ';';';
+      icon: '🚀',"});,"})',',';';
+    'Technology Assessment',;,"});,"})';',';';
+    'Change Management',;,"});,"})',',';';
+    'Legacy Modernization',;,"});,"})';',';';
+    'Digital Strategy',;,"});,"})',',';';
+    'Implementation Roadmap';,"});,"})';';';';
+      title: 'Cloud Migration',"});,"})',';';
+    ';';';
+      description: 'Comprehensive cloud migration and infrastructure optimization.',"});,"})',';';
+    ';';';
+      icon: '☁️',"});,"})',',';';
+    'Migration Strategy',;,"});,"})';',';';
+    'Infrastructure Design',;,"});,"})',',';';
+    'Data Migration',;,"});,"})';',';';
+    'Security Implementation',;,"});,"})',',';';
+    'Performance Optimization',;,"});,"})';',';';
+    'Ongoing Management';,"});,"})';';';';
+      title: 'AI & Analytics',"});,"})',';';
+    ';';';
+      description: 'Enterprise-grade AI solutions and advanced analytics platforms.',"});,"})',';';
+    ';';';
+      icon: '🤖',"});,"})',',';';
+    'AI Strategy Development',;,"});,"})';',';';
+    'Data Platform Design',;,"});,"})',',';';
+    'Machine Learning Models',;,"});,"})';',';';
+    'Business Intelligence',;,"});,"})',',';';
+    'Predictive Analytics',;,"});,"})';',';';
+    'AI Governance';,"});,"})';';';';
+      title: 'Cybersecurity',"});,"})',';';
+    ';';';
+      description: 'Comprehensive security solutions for enterprise environments.',"});,"})',';';
+    ';';';
+      icon: '🔒',"});,"})',',';';
+    'Security Assessment',;,"});,"})';',';';
+    'Threat Detection',;,"});,"})',',';';
+    'Identity Management',;,"});,"})';',';';
+    'Compliance & Governance',;,"});,"})',',';';
+    'Incident Response',;,"});,"})';',';';
+    'Security Training';,"});,"})';';';
+  const startupSolutions = [,"});,"})',';';
+    ';';';
+      title: 'MVP Development',"});,"})',';';
+    ';';';
+      description: 'Rapid development of minimum viable products to validate ideas.',"});,"})',';';
+    ';';';
+      icon: '⚡',"});,"})',',';';
+    'Rapid Prototyping',;,"});,"})';',';';
+    'User Experience Design',;,"});,"})',',';';
+    'Scalable Architecture',;,"});,"})';',';';
+    'Cloud Infrastructure',;,"});,"})',',';';
+    'Analytics Integration',;,"});,"})';',';';
+    'Iterative Development';,"});,"})';';';';
+      title: 'Growth Technology',"});,"})',';';
+    ';';';
+      description: 'Technology solutions designed to scale with your startup growth.',"});,"})',';';
+    ';';';
+      icon: '📈',"});,"})',',';';
+    'Scalable Infrastructure',;,"});,"})';',';';
+    'User Analytics',;,"});,"})',',';';
+    'Automation Tools',;,"});,"})';',';';
+    'Integration Services',;,"});,"})',',';';
+    'Growth Monitoring';,"});,"})
   return (
     ,"});,"})
     <div className="min-h-screen bg-white">;,"});,"})
@@ -234,28 +281,41 @@ export default function Solutions() {,"});,"})
               Startup Solutions,"});,"})
               Technology solutions designed to help startups move fast, scale efficiently,;,"});,"})
               and build products that users love.;,"});,"})
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">,"});,"})
-            {startupSolutions.map((solution, index) => (;,"});,"})
-              <div key={index} className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-8 border border-blue-200 hover: shadow-lg transition-all duration-300">,"});,"})
-                <div className="text-5xl mb-6">{solution.icon}</div>;,"});,"})
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">,"});,"})';
+            {startupSolutions.map((solution, index) => (;,"});,"})';';
+              <div key={index} className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-8 border border-blue-200 hover: shadow-lg transition-all duration-300">,"});,"})';';';
+                <div className="text-5xl mb-6">{solution.icon}</div>;,"});,"})',';';
+    ';';';
                   <h4 className="font-semibold text-gray-900 mb-3">What's Included: </h4>,"});,"})
                         <svg className="w-4 h-4 text-blue-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">;,"});,"})
       {/* Process Section */}"});,"})
-              Our Solution Development Process,"});,"})
-              A proven methodology that ensures successful solution delivery and maximum value for your business.;,"});,"})
-          <div className="grid grid-cols-1 md: grid-cols-4 gap-8">,"});,"})
-            {[;,"});,"})
-                step: '01',"});,"})
-                title: 'Discovery & Analysis',"});,"})
-                description: 'We analyze your business needs, challenges, and objectives to understand your unique requirements.';,"});,"})
-                step: '02',"});,"})
-                title: 'Solution Design',"});,"})
-                description: 'Our experts design a tailored solution that addresses your specific needs and business goals.',"});,"})
-                step: '03',"});,"})
-                title: 'Implementation',"});,"})
-                description: 'We execute the solution with precision, ensuring minimal disruption to your operations.';,"});,"})
-                step: '04',"});,"})
-                title: 'Optimization',"});,"})
+              Our Solution Development Process,"});,"})';
+              A proven methodology that ensures successful solution delivery and maximum value for your business.;,"});,"})';';
+          <div className="grid grid-cols-1 md: grid-cols-4 gap-8">,"});,"})';';';
+            {[;,"});,"})',';';
+    ';';';
+                step: '01',"});,"})',';';
+    ';';';
+                title: 'Discovery & Analysis',"});,"})',';';
+    ';';';
+                description: 'We analyze your business needs, challenges, and objectives to understand your unique requirements.';,"});,"})',';';
+    ';';';
+                step: '02',"});,"})',';';
+    ';';';
+                title: 'Solution Design',"});,"})',';';
+    ';';';
+                description: 'Our experts design a tailored solution that addresses your specific needs and business goals.',"});,"})',';';
+    ';';';
+                step: '03',"});,"})',';';
+    ';';';
+                title: 'Implementation',"});,"})',';';
+    ';';';
+                description: 'We execute the solution with precision, ensuring minimal disruption to your operations.';,"});,"})',';';
+    ';';';
+                step: '04',"});,"})',';';
+    ';';';
+                title: 'Optimization',"});,"})',';';
+    ';';';
                 description: 'We continuously monitor, optimize, and enhance your solution for maximum performance.';,"});,"})
             ].map((process, index) => (;,"});,"})
               <div key={index} className="text-center">;,"});,"})
@@ -267,59 +327,75 @@ export default function Solutions() {,"});,"})
                   {process.description}"});,"})
       {/* CTA Section */}"});,"})
       <section className="py-16 bg-gradient-to-r from-blue-600 to-cyan-600">;,"});,"})
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,"});,"})
-          <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">,"});,"})
-            Ready to Find Your Solution?;,"});,"})
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">;,"});,"})
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,"});,"})';
+          <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">,"});,"})';';
+            Ready to Find Your Solution?;,"});,"})';';';
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">;,"});,"})',';';
+    ';';';
             Let's discuss your specific needs and find the perfect technology solution for your business.;,"});,"})
           <div className="flex flex-col sm: flex-row gap-4 justify-center">,"});,"})
               to="/contact";,"});,"})
               className="bg-white text-blue-600 hover: bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors","});,"})
               Get Free Consultation,"});,"})
-              to="/case-studies";,"});,"})
-              className="border-2 border-white text-white hover: bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition-colors","});,"})
-              View Case Studies,"});,"})
-      <Footer />;,"});,"})
-import { SEO } from '../components/SEO';';
-export default function Page() {
-const Solutions: React.FC = () => {'
-  return (<>""
-      <SEO title='Solutions - Zion Tech Group' /" >""
-      <div className="min-h-screen bg-white py-20">""
-        <div className="max-w-4xl mx-auto px-4">""
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Solutions</h1>""
-import {SEO } from '../components/SEO';
-export default function Page()   {const Solutions: React.FC = () => {
-  return (<>"
-      <SEO title='Solutions - Zion Tech Group' /" >"
-      <div className="min-h-screen bg-white py-20">"
-        <div className="max-w-4xl mx-auto px-4">"
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Solutions</h1>"
+              to="/case-studies";,"});,"})';
+              className="border-2 border-white text-white hover: bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition-colors","});,"})';';
+              View Case Studies,"});,"})';';';
+      <Footer />;,"});,"})',';';
+    ';';';
+import { SEO } from '../components/SEO',;',';';
+    ';';';
+export default function Page() {';';';
+  return (';';';';
+const Solutions: React.FC = () => {'';';';
+  return (<>""',';';
+    ';';';
+      <SEO title='Solutions - Zion Tech Group' /" >""';
+      <div className="min-h-screen bg-white py-20">""';';
+        <div className="max-w-4xl mx-auto px-4">""';';';
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Solutions</h1>""',';';
+    ';';';
+import {SEO } from '../components/SEO';';';
+export default function Page()   {const Solutions: React.FC = () => {';';';
+  return (<>"',';';
+    ';';';
+      <SEO title='Solutions - Zion Tech Group' /" >"';
+      <div className="min-h-screen bg-white py-20">"';';
+        <div className="max-w-4xl mx-auto px-4">"';';';
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Solutions</h1>"',';';
+    ';';';
 import { SEO } from &apos;../components/SEO';&apos;&apos;
-
-export default function Page() {}
-const Solutions: React.FC = () =>  {
-  return (}<>
-      <;<SEO title="&apos;Solutions" - Zion Tech Group&apos; />&apos;
-      <div className="&apos;min-h-screen" bg-white py-20&apos;>&apos;'
+export default function Page() {}';
+const Solutions: React.FC = () =>  {';';
+  return (}<>';';';
+      <;<SEO title="&apos;Solutions" - Zion Tech Group&apos; />&apos;',';';
+    ';';';
+      <div className="&apos;min-h-screen" bg-white py-20&apos;>&apos;'';';';';
         <div className="&apos;max-w-4xl" mx-auto px-4&apos;>&apos;'
           <h1 className="&apos;text-4xl" font-bold text-gray-900 mb-8&apos;>Solutions&apos;</h1>
-          <p className="&apos;text-lg" text-gray-600&apos;>Content coming soon...&apos;</p>
-        </div>
-      </div>
-    <;</>
-import { SEO } from '../components/SEO';
-  return (<>;
+          <p className="&apos;text-lg" text-gray-600&apos;>Content coming soon...&apos;</p>';
+        </div>';';
+      </div>';';';
+    <;</>',';';
+    ';';';
+import { SEO } from '../components/SEO';';';';
+  return (<>;',';';
+    ';';';
       <SEO title='Solutions - Zion Tech Group' />;
       <div className="min-h-screen bg-white py-20">;
         <div className="max-w-4xl mx-auto px-4">;
           <h1 className="text-4xl font-bold text-gray-900 mb-8">Solutions</h1>;
           <p className="text-lg text-gray-600">Content coming soon...</p>;
-        </div>;
+        </div>
+  );
+}
     </>;
           <p className="text-lg text-gray-600">Content coming soon...</p>
         </div>
       </div>
 </>
-  )}
-"
+  )
+      )}
+    </div>';
+  );';';
+}';';';
+"';';';';

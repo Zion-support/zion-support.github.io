@@ -2,68 +2,64 @@
 
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-// Get all files with lint errors
-const lintOutput = execSync('npm run lint 2>&1', { encoding: 'utf8' });
-const errorLines = lintOutput.split('\n').filter(line => line.includes('Error: Parsing error'));
-
-// Extract file paths from error lines
-const errorFiles = new Set();
-errorLines.forEach(line => {
-  const match = line.match(/^\.\/(.+?):\d+:\d+\s+Error:/);
-  if (match) {
-    errorFiles.add(match[1]);
+// Common patterns to fix
+const fixes = [
+  // Fix malformed imports
+  {
+    pattern: /import\s*{\s*([^}]+)\s*export\s*default\s*function/g,
+    replacement: 'import { $1 } from \'lucide-react\';\n\nexport default function'
+  },
+  
+  // Fix missing closing brackets in arrays
+  {
+    pattern: /(\[.*?);\s*\]\s*},/g,
+    replacement: '$1\n  ]\n},'
+  },
+  
+  // Fix malformed JSX attributes
+  {
+    pattern: /className="([^"]*);\s*"/g,
+    replacement: 'className="$1"'
+  },
+  
+  // Fix missing semicolons in object properties
+  {
+    pattern: /(\w+):\s*'([^']*)',\s*;/g,
+    replacement: '$1: \'$2\','
+  },
+  
+  // Fix malformed return statements
+  {
+    pattern: /return\s*\(\s*<div";"/g,
+    replacement: 'return (\n    <div className="min-h-screen bg-white">'
+  },
+  
+  // Fix duplicated content (remove everything after the first complete component)
+  {
+    pattern: /(export default function[^}]+}\s*\)\s*;?\s*$).*/gms,
+    replacement: '$1'
   }
-});
+];
 
-console.log(`Found ${errorFiles.size} files with lint errors`);
-
-// Function to fix common syntax errors
 function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-
-    // Fix 1: Add missing semicolons after import statements
-    if (content.includes("import {") && !content.includes("import {") + ";" && !content.includes("from '")) {
-      content = content.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]\s*([^;])/g, 'import { $1 } from \'$2\'; $3');
-      modified = true;
-    }
-
-    // Fix 2: Fix malformed import statements
-    content = content.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]\s*([^;])/g, 'import { $1 } from \'$2\'; $3');
+    let originalContent = content;
     
-    // Fix 3: Fix missing semicolons after variable declarations
-    content = content.replace(/(const|let|var)\s+(\w+)\s*=\s*([^;]+)(?!;)/g, '$1 $2 = $3;');
+    // Apply fixes
+    fixes.forEach(fix => {
+      content = content.replace(fix.pattern, fix.replacement);
+    });
     
-    // Fix 4: Fix malformed JSX/TSX syntax
-    content = content.replace(/export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*{\s*([^}]+)\s*}/g, 'export default function $1() {\n  $2\n}');
+    // Additional cleanup
+    content = content
+      .replace(/;\s*;\s*/g, ';\n')
+      .replace(/,\s*,\s*/g, ',\n')
+      .replace(/\s+$/gm, '') // Remove trailing whitespace
+      .trim();
     
-    // Fix 5: Fix unterminated strings
-    content = content.replace(/['"]([^'"]*)\s*$/gm, '\'$1\';');
-    
-    // Fix 6: Remove malformed characters and fix basic syntax
-    content = content.replace(/<=/g, '');
-    content = content.replace(/=>/g, '=>');
-    content = content.replace(/''/g, '\'');
-    content = content.replace(/""/g, '"');
-    
-    // Fix 7: Fix malformed function declarations
-    content = content.replace(/export\s*{\s*function\s*}\s*export\s+default/g, 'export default');
-    
-    // Fix 8: Fix malformed return statements
-    content = content.replace(/return\s*\(\s*""/g, 'return (\n    <div>');
-    content = content.replace(/return\s*\(\s*''/g, 'return (\n    <div>');
-    
-    // Fix 9: Fix malformed JSX attributes
-    content = content.replace(/className\s*=\s*['"]([^'"]*)\s*['"]/g, 'className="$1"');
-    
-    // Fix 10: Fix malformed array/object syntax
-    content = content.replace(/\[\s*'([^']*)'\s*\]/g, '[\'$1\']');
-    content = content.replace(/{\s*'([^']*)'\s*}/g, '{\'$1\'}');
-
-    if (modified) {
+    if (content !== originalContent) {
       fs.writeFileSync(filePath, content);
       console.log(`Fixed: ${filePath}`);
       return true;
@@ -76,21 +72,39 @@ function fixFile(filePath) {
   }
 }
 
-// Fix each file
+function findTsxFiles(dir) {
+  const files = [];
+  
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        traverse(fullPath);
+      } else if (item.endsWith('.tsx') || item.endsWith('.jsx')) {
+        files.push(fullPath);
+      }
+    }
+  }
+  
+  traverse(dir);
+  return files;
+}
+
+// Main execution
+const srcDir = path.join(__dirname, 'src');
+const files = findTsxFiles(srcDir);
+
+console.log(`Found ${files.length} files to check...`);
+
 let fixedCount = 0;
-errorFiles.forEach(filePath => {
-  if (fixFile(filePath)) {
+files.forEach(file => {
+  if (fixFile(file)) {
     fixedCount++;
   }
 });
 
-console.log(`Fixed ${fixedCount} files`);
-
-// Run lint again to check remaining errors
-console.log('\nRunning lint again to check remaining errors...');
-try {
-  execSync('npm run lint', { stdio: 'inherit' });
-  console.log('All lint errors fixed!');
-} catch (error) {
-  console.log('Some lint errors remain. Manual review may be needed.');
-}
+console.log(`Fixed ${fixedCount} files.`);

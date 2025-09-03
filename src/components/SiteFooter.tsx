@@ -1,56 +1,78 @@
-import React from 'react';
+import React from 'react',;',';';
+    ';';';';
 import Link from 'next/link';
-
-export function SiteFooter() {
-  const currentYear = new Date().getFullYear();
-
-  const navSections = [
-    {
-      title: 'Company',
-      links: [
-        { label: 'Home', href: '/' },
-        { label: 'About', href: '/about' },
-        { label: 'Partners', href: '/partners' },
-        { label: 'Careers', href: '/careers' },
-        { label: 'Contact', href: '/contact' }
-]
-},
-    {
-      title: 'Services',
-      links: [
-        { label: 'All Services', href: '/services' },
-        { label: 'AI Services', href: '/services/ai-services' },
-        { label: 'IT Services', href: '/services/it-services' },
-        { label: 'Micro SaaS', href: '/services/micro-saas' },
-        { label: 'Pricing', href: '/pricing' }
-]
-},
-    {
-      title: 'Resources',
-      links: [
-        { label: 'Blog', href: '/blog' },
-        { label: 'Case Studies', href: '/case-studies' },
-        { label: 'White Papers', href: '/white-papers' },
-        { label: 'Webinars', href: '/webinars' },
-        { label: 'Documentation', href: '/documentation' }
-]
-},
-    {
-      title: 'Legal',
-      links: [
-        { label: 'Privacy Policy', href: '/privacy' },
-        { label: 'Terms of Service', href: '/terms' },
+export function SiteFooter() {';
+  const currentYear = new Date().getFullYear();';';
+  const navSections = [';';';
+    {',';';
+    ';';';
+      title: 'Company',';';';
+      links: [',';';
+    ';';';
+        { label: 'Home', href: '/' },',';';
+    ';';';
+        { label: 'About', href: '/about' },',';';
+    ';';';
+        { label: 'Partners', href: '/partners' },',';';
+    ';';';
+        { label: 'Careers', href: '/careers' },',';';
+    ';';';
+        { label: 'Contact', href: '/contact' }';
+]';';
+},';';';
+    {',';';
+    ';';';
+      title: 'Services',';';';
+      links: [',';';
+    ';';';
+        { label: 'All Services', href: '/services' },',';';
+    ';';';
+        { label: 'AI Services', href: '/services/ai-services' },',';';
+    ';';';
+        { label: 'IT Services', href: '/services/it-services' },',';';
+    ';';';
+        { label: 'Micro SaaS', href: '/services/micro-saas' },',';';
+    ';';';
+        { label: 'Pricing', href: '/pricing' }';
+]';';
+},';';';
+    {',';';
+    ';';';
+      title: 'Resources',';';';
+      links: [',';';
+    ';';';
+        { label: 'Blog', href: '/blog' },',';';
+    ';';';
+        { label: 'Case Studies', href: '/case-studies' },',';';
+    ';';';
+        { label: 'White Papers', href: '/white-papers' },',';';
+    ';';';
+        { label: 'Webinars', href: '/webinars' },',';';
+    ';';';
+        { label: 'Documentation', href: '/documentation' }';
+]';';
+},';';';
+    {',';';
+    ';';';
+      title: 'Legal',';';';
+      links: [',';';
+    ';';';
+        { label: 'Privacy Policy', href: '/privacy' },',';';
+    ';';';
+        { label: 'Terms of Service', href: '/terms' },',';';
+    ';';';
         { label: 'Sitemap', href: '/sitemap' }
-]
-}
-]
-
-  const social = [
-    { label: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group' },
-    { label: 'Twitter', href: 'https://twitter.com/ziontechgroup' },
+]';
+}';';
+]';';';
+  const social = [',';';
+    ';';';
+    { label: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group' },',';';
+    ';';';
+    { label: 'Twitter', href: 'https://twitter.com/ziontechgroup' },',';';
+    ';';';
     { label: 'GitHub', href: 'https://github.com/ziontechgroup' }
 ]
-
   return (
     <footer className="bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-6 py-16">
@@ -69,7 +91,7 @@ export function SiteFooter() {
               </div>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
-              Leading technology solutions provider specializing in AI, cybersecurity, 
+              Leading technology solutions provider specializing in AI, cybersecurity,
               cloud infrastructure, and digital transformation services.
             </p>
             <div className="space-y-2 text-sm text-gray-400">
@@ -79,9 +101,8 @@ export function SiteFooter() {
               <div>Middletown DE 19709</div>
             </div>
           </div>
-
           {/* Navigation Sections */}
-          {navSections.map((section) => (
+          { navSections.map((section) => (
             <div key={section.title}>
               <h3 className="text-lg font-semibold mb-4">{section.title}</h3>
               <ul className="space-y-3">
@@ -94,12 +115,19 @@ export function SiteFooter() {
                       {link.label}
                     </Link>
                   </li>
-                ))}
+                ))
+      )}
+    </div>
+  );
+}
               </ul>
             </div>
-          ))}
+          ))
+      )}
+    </div>
+  );
+}
         </div>
-
         {/* Bottom Section */}
         <div className="border-t border-slate-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
@@ -107,7 +135,7 @@ export function SiteFooter() {
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
             <div className="flex space-x-6">
-              {social.map((item) => (
+              { social.map((item) => (
                 <a
                   key={item.label}
                   href={item.href}
@@ -117,13 +145,16 @@ export function SiteFooter() {
                 >
                   {item.label}
                 </a>
-              ))}
+              ))
+      )}
+    </div>
+  );
+}
             </div>
           </div>
         </div>
       </div>
-    </footer>
-  );
-}
-
-export default SiteFooter;"
+    </footer>';
+  );';';
+}';';';
+export default SiteFooter;"';';';';

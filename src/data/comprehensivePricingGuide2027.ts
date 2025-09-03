@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react';';';
 import {SEO } from '@/components/SEO';
 
 export default function comprehensivePricingGuide2027() {return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+    <div className="min-h-screen bg-white">
       <SEO title="comprehensivePricingGuide2027 - Zion Tech Group" description="Professional comprehensivePricingGuide2027 services by Zion Tech Group" />
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold text-white mb-8">comprehensivePricingGuide2027</h1>
@@ -11,5 +11,5 @@ export default function comprehensivePricingGuide2027() {return (
         </p>
       </div>
     </div>
-  );
-}"
+  );';
+}"';';

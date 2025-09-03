@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react',;',';';
+    ';';';';
 import { SEO } from '../components/SEO';
-
 const ConsultingServices: React.FC = () => {
   return(<>
       <SEO title="ConsultingServices - Zion Tech Group" />
@@ -8,17 +8,21 @@ const ConsultingServices: React.FC = () => {
         <div className="max-w-4xl mx-auto px-4">
           <h1 className="text-4xl font-bold text-gray-900 mb-8">ConsultingServices</h1>
           <p className="text-lg text-gray-600">Content coming soon...</p>
-        </div>
-    </>
-  )};
-
-export default ConsultingServices;
-import { SEO } from '../components/SEO';''const ConsultingServices: React.FC = () => {'
+        </div>';
+    </>';';
+  )};';';';
+export default ConsultingServices;',';';
+    ';';';
+import { SEO } from '../components/SEO',',';';
+    ''const ConsultingServices: React.FC = () => {'
   return (
     <>
-      <SEO title="ConsultingServices - Zion Tech Group" />"      <div className="min-h-screen bg-white py-20">"        <div className="max-w-4xl mx-auto px-4">"          <h1 className="text-4xl font-bold text-gray-900 mb-8">ConsultingServices</h1>"          <p className="text-lg text-gray-600">Content coming soon...</p>"        </div>"      </div>
-</>)};
-,"});,"})
+      <SEO title="ConsultingServices - Zion Tech Group" />"      <div className="min-h-screen bg-white py-20">"        <div className="max-w-4xl mx-auto px-4">"          <h1 className="text-4xl font-bold text-gray-900 mb-8">ConsultingServices</h1>"          <p className="text-lg text-gray-600">Content coming soon...</p>"        </div>"      </div>;
+  );';
+}';';
+</>)};';';';
+,"});,"})',';';
+    ';';';
 import { SEO } from '../components/SEO';,"});,"})
 ;,"});,"})
 export default function Page() {,"});,"})
@@ -30,66 +34,88 @@ const ConsultingServices: React.FC = () => {,"});,"})
           <h1 className="text-4xl font-bold text-gray-900 mb-8">ConsultingServices</h1>;,"});,"})
           <p className="text-lg text-gray-600">Content coming soon...</p>;,"});,"})
         </div>;,"});,"})
-    </>;,"});,"})
-  );,"});,"});
-};,"});,"})
-export default ConsultingServices,"});,"})
-import { SEO } from '../components/SEO';';
-
+    </>;,"});,"})';
+  );,"});,"});';';
+};,"});,"})';';';
+export default ConsultingServices,"});,"})',';';
+    ';';';
+import { SEO } from '../components/SEO',;',';';
+    ';
 export: default function Page() {
 export default function Page() {
-const ConsultingServices: React.FC: = () => {
-  return: (<>;
-      <SEO: title='ConsultingServices - Zion Tech Group' />';';
-      <div: className="min-h-screen bg-white py-20">';';
-        <div: className="max-w-4xl mx-auto px-4">';';
-          <h1: className="text-4xl font-bold text-gray-900 mb-8">ConsultingServices</h1>';';
-          <p: className="text-lg text-gray-600">Content coming soon...</p>';';
-;
-export: default ConsultingServices;
-  return (<>;
+  return (
+  return (';
+  return (';';
+const ConsultingServices: React.FC: = () => {';';';
+  return: (<>;';';';';
+      <SEO: title='ConsultingServices - Zion Tech Group' />',',';';
+    ';';';';';
+      <div: className="min-h-screen bg-white py-20">',';';
+    ',';';';
+    ';';';';
+        <div: className="max-w-4xl mx-auto px-4">',';';
+    ';';';';';
+          <h1: className="text-4xl font-bold text-gray-900 mb-8">ConsultingServices</h1>',',';';
+    ';';';';';
+          <p: className="text-lg text-gray-600">Content coming soon...</p>',';';
+    ';';';
+export: default ConsultingServices;';';';
+  return (<>;';';';';
       <SEO title='ConsultingServices - Zion Tech Group' />;
       <div className="min-h-screen bg-white py-20">;
         <div className="max-w-4xl mx-auto px-4">;
           <h1 className="text-4xl font-bold text-gray-900 mb-8">ConsultingServices</h1>;
           <p className="text-lg text-gray-600">Content coming soon...</p>;
-        </div>;
-    </>;
-import {SEO } from '../components/SEO';
-export default function Page()   {const ConsultingServices: React.FC = () => {
+        </div>';
+  );';';
+}';';';
+    </>;',';';
+    ';';';
+import {SEO } from '../components/SEO';';';';
+export default function Page()   {const ConsultingServices: React.FC = () => {',';';
+    ';';';
 import { SEO } from &apos;../components/SEO';&apos;&apos;
-
-export default function Page() {}
-const ConsultingServices: React.FC = () =>  {
-  return (}<>
-      <;<SEO title=&apos;ConsultingServices - Zion Tech Group&apos; />&apos;
-      <div className=&apos;min-h-screen bg-white py-20&apos;>&apos;'
-        <div className=&apos;max-w-4xl mx-auto px-4&apos;>&apos;'
-          <h1 className=&apos;text-4xl font-bold text-gray-900 mb-8&apos;>ConsultingServices&apos;</h1>
-          <p className=&apos;text-lg text-gray-600&apos;>Content coming soon...&apos;</p>
-    <;</>
-const ConsultingServices: React.FC = () => {'
-  return (<>""
+export default function Page() {}';
+const ConsultingServices: React.FC = () =>  {';';
+  return (}<>';';';
+      <;<SEO title=&apos;ConsultingServices - Zion Tech Group&apos; />&apos;',';';
+    ';';';
+      <div className=&apos;min-h-screen bg-white py-20&apos;>&apos;'';';';';
+        <div className=&apos;max-w-4xl mx-auto px-4&apos;>&apos;'';
+          <h1 className=&apos;text-4xl font-bold text-gray-900 mb-8&apos;>ConsultingServices&apos;</h1>';';
+          <p className=&apos;text-lg text-gray-600&apos;>Content coming soon...&apos;</p>';';';
+    <;</>',';';
+    ';';';
+const ConsultingServices: React.FC = () => {'';';';
+  return (<>""',';';
+    ';';';
       <SEO title='ConsultingServices - Zion Tech Group' /" >""
-      <div className="min-h-screen bg-white py-20">""
-        <div className="max-w-4xl mx-auto px-4">""
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">ConsultingServices</h1>""
-const ConsultingServices: React.FC = () => {""
-      <SEO title='ConsultingServices - Zion Tech Group' /"" >""
-  return (<>
+      <div className="min-h-screen bg-white py-20">""';
+        <div className="max-w-4xl mx-auto px-4">""';';
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">ConsultingServices</h1>""';';';
+const ConsultingServices: React.FC = () => {""',';';
+    ';';';
+      <SEO title='ConsultingServices - Zion Tech Group' /"" >""';';';
+  return (<>',';';
+    ';';';
       <SEO title='ConsultingServices - Zion Tech Group' />
       <div className="min-h-screen bg-white py-20">
-        <div className="max-w-4xl mx-auto px-4">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">ConsultingServices</h1>
-const ConsultingServices: React.FC = () => {"
-  return (<>"
+        <div className="max-w-4xl mx-auto px-4">';
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">ConsultingServices</h1>';';
+const ConsultingServices: React.FC = () => {"';';';
+  return (<>"',';';
+    ';';';
       <SEO title='ConsultingServices - Zion Tech Group' /  >'
       <div className="min-h-screen bg-white py-20">"
         <div className="max-w-4xl mx-auto px-4">"
           <h1 className="text-4xl font-bold text-gray-900 mb-8">ConsultingServices</h1>"
           <p className="text-lg text-gray-600">Content coming soon...</p>
-  )}
-"";
+  )
+      )}
+    </div>
+  );
 }
-"
-"
+"";';
+}';';
+"';';';
+"';';';';

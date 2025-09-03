@@ -1,11 +1,17 @@
-import { Route, Routes  } from 'react-router-dom';
-import { Suspense, lazy } from 'react';
-import { ProtectedRoute } from '../components/ProtectedRoute';
-import LoadingSpinner from '../components/LoadingSpinner';
-
-// Lazy load dashboard pages
-import { Route, Routes } from 'react-router-dom';
-import LoadingSpinner from '../components/LoadingSpinner';''// Lazy load dashboard pages'
+import { Route, Routes  } from 'react-router-dom',;',';';
+    ';';';';
+import { Suspense, lazy } from 'react',;';';
+    ';';';';
+import { ProtectedRoute } from '../components/ProtectedRoute',;',';';
+    ';';';';
+import LoadingSpinner from '../components/LoadingSpinner',;';';
+    ';';';
+// Lazy load dashboard pages';';';';
+import { Route, Routes } from 'react-router-dom',;',';';
+    ';';';';
+import LoadingSpinner from '../components/LoadingSpinner',';';
+    ''// Lazy load dashboard pages'',;';';
+    ';';';
 const Dashboard = lazy(() => import('../pages/Dashboard'));'const ClientDashboard = lazy(() => import('../pages/ClientDashboard'));'const TalentDashboard = lazy(() => import('../pages/TalentDashboard'));'const CreatorDashboard = lazy(() => import('../pages/CreatorDashboard'));'const Analytics = lazy(() => import('../pages/Analytics'));'const ProjectMilestones = lazy(() => import('../pages/ProjectMilestones'));'const ProjectDetails = lazy(() => import('../pages/ProjectDetails'));'const ProjectRoom = lazy(() => import('../pages/ProjectRoom'));''const DashboardRoutes: React.FC = () => {'
   return (
     <Suspense fallback={<LoadingSpinner />}><Routes>
@@ -18,38 +24,53 @@ const Dashboard = lazy(() => import('../pages/Dashboard'));'const ClientDashboar
         <Route path="/analytics element={          <ProtectedRoute>"            <Analytics />
         <Route path="/project-milestones element={          <ProtectedRoute>"            <ProjectMilestones />
         <Route path="/project-details element={          <ProtectedRoute>"            <ProjectDetails />
-        <Route path="/project-room element={          <ProtectedRoute>"            <ProjectRoom /></ProtectedRoute>
-      </Routes>
-    </Suspense>
-  )};
+        <Route path="/project-room element={          <ProtectedRoute>"            <ProjectRoom /></ProtectedRoute>';
+      </Routes>';';
+    </Suspense>';';';
+  )};',';';
+    ';';';
 import { Route, Routes    } from 'react-router-dom';,"});
   })
 export default function Page() {
-  });,"})
-  import { Suspense, lazy } from 'react';,"});
-  })
+  return (
+  return (';
+  return (';';
+  return (';';';
+  });,"})',';';
+    ';';';
+  import { Suspense, lazy } from 'react';,"});';';';
+  })',';';
+    ';';';
   import { ProtectedRoute } from '../components/ProtectedRoute';
   });,"})
 ,"});
   })
-;
-  });,"})
-// Lazy load dashboard pages;,"});
-  })
-const Dashboard = lazy(() => import('../pages/Dashboard'));
-  });,"})
-const ClientDashboard = lazy(() => import('../pages/ClientDashboard'));,"});
-  })
-const TalentDashboard = lazy(() => import('../pages/TalentDashboard'));
-  });,"})
-const CreatorDashboard = lazy(() => import('../pages/CreatorDashboard'));,"});
-  })
-const Analytics = lazy(() => import('../pages/Analytics'));
-  });,"})
-const ProjectMilestones = lazy(() => import('../pages/ProjectMilestones'));,"});
-  })
-const ProjectDetails = lazy(() => import('../pages/ProjectDetails'));
-  });,"})
+;';
+  });,"})';';
+// Lazy load dashboard pages;,"});';';';
+  })',';';
+    ';';';
+const Dashboard = lazy(() => import('../pages/Dashboard'));';';';
+  });,"})',';';
+    ';';';
+const ClientDashboard = lazy(() => import('../pages/ClientDashboard'));,"});';';';
+  })',';';
+    ';';';
+const TalentDashboard = lazy(() => import('../pages/TalentDashboard'));';';';
+  });,"})',';';
+    ';';';
+const CreatorDashboard = lazy(() => import('../pages/CreatorDashboard'));,"});';';';
+  })',';';
+    ';';';
+const Analytics = lazy(() => import('../pages/Analytics'));';';';
+  });,"})',';';
+    ';';';
+const ProjectMilestones = lazy(() => import('../pages/ProjectMilestones'));,"});';';';
+  })',';';
+    ';';';
+const ProjectDetails = lazy(() => import('../pages/ProjectDetails'));';';';
+  });,"})',';';
+    ';';';
 const ProjectRoom = lazy(() => import('../pages/ProjectRoom'));,"});
   })
 const DashboardRoutes: React.FC = () => {
@@ -102,108 +123,142 @@ const DashboardRoutes: React.FC = () => {
   })
   );
   });,"});
-};,"});
-  })
-export default DashboardRoutes;
-  });,"})
-import { Route, Routes    } from 'react-router-dom';
-import { Lazy } from 'lucide-react';
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
-
-export default function Page() {'
-export default function Page() {;
-export default function Page() {;
-  import { Suspense, lazy } from 'react';
-export default function Page() {;
-export default function Page() {;
-  import { ProtectedRoute } from '../components/ProtectedRoute';
-export default function Page() {;
-export default function Page() {;
-import LoadingSpinner from '../components/LoadingSpinner';
-// Lazy load dashboard pages;
-const Dashboard = lazy(() => import('../pages/Dashboard'));
-const ClientDashboard = lazy(() => import('../pages/ClientDashboard'));
-const TalentDashboard = lazy(() => import('../pages/TalentDashboard'));
-const CreatorDashboard = lazy(() => import('../pages/CreatorDashboard'));
-const Analytics = lazy(() => import('../pages/Analytics'));
-const ProjectMilestones = lazy(() => import('../pages/ProjectMilestones'));
-const ProjectDetails = lazy(() => import('../pages/ProjectDetails'));
-const ProjectRoom = lazy(() => import('../pages/ProjectRoom'));
-
-const DashboardRoutes: React.FC = () => {
-  return(<Suspense fallback={<LoadingSpinner />}>
-      <Routes>
-        <Route path="/dashboard element={const ProjectRoom = lazy(() => import('../pages/ProjectRoom'))
-const DashboardRoutes: React.FC = () => {'
-  return (<Suspense fallback={<LoadingSpinner / >}>
-      <Routes>
+};,"});';
+  })';';
+export default DashboardRoutes;';';';
+  });,"})',';';
+    ';';';
+import { Route, Routes    } from 'react-router-dom',;',';';
+    ';';';';
+import { Lazy } from 'lucide-react',;';';
+    ';';';
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259';';';';
+export default function Page() {'';';
+export default function Page() {;';';';
+export default function Page() {;',';';
+    ';';';
+  import { Suspense, lazy } from 'react';';';
+export default function Page() {;';';';
+export default function Page() {;',';';
+    ';';';
+  import { ProtectedRoute } from '../components/ProtectedRoute';';';
+export default function Page() {;';';';
+export default function Page() {;',';';
+    ';';';
+import LoadingSpinner from '../components/LoadingSpinner';';';';
+// Lazy load dashboard pages;',';';
+    ';';';
+const Dashboard = lazy(() => import('../pages/Dashboard'));',';';
+    ';';';
+const ClientDashboard = lazy(() => import('../pages/ClientDashboard'));',';';
+    ';';';
+const TalentDashboard = lazy(() => import('../pages/TalentDashboard'));',';';
+    ';';';
+const CreatorDashboard = lazy(() => import('../pages/CreatorDashboard'));',';';
+    ';';';
+const Analytics = lazy(() => import('../pages/Analytics'));',';';
+    ';';';
+const ProjectMilestones = lazy(() => import('../pages/ProjectMilestones'));',';';
+    ';';';
+const ProjectDetails = lazy(() => import('../pages/ProjectDetails'));',';';
+    ';';';
+const ProjectRoom = lazy(() => import('../pages/ProjectRoom'));';
+const DashboardRoutes: React.FC = () => {';';
+  return(<Suspense fallback={<LoadingSpinner />}>';';';
+      <Routes>',';';
+    ';';';
+        <Route path="/dashboard element={const ProjectRoom = lazy(() => import('../pages/ProjectRoom'))',';';
+    ';';';
+const DashboardRoutes: React.FC = () => {'';';
+  return (<Suspense fallback={<LoadingSpinner / >}>';';';
+      <Routes>',';';
+    ';';';
         <Route path='/dashboard' element={'
           <ProtectedRoute >"
             <Dashboard /" >
           </ProtectedRoute>,;
-} />"
-          </ProtectedRoute>
-  } />"
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
+} />"';
+          </ProtectedRoute>';';
+  } />"';';';
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259',';';
+    ';';';
         <Route path='/client-dashboard' element={'
-          <ProtectedRoute >
-            <ClientDashboard / >
-          </ProtectedRoute>
-  } />"
+          <ProtectedRoute >';
+            <ClientDashboard / >';';
+          </ProtectedRoute>';';';
+  } />"',';';
+    ';';';
         <Route path='/talent-dashboard' element={'
-          <ProtectedRoute >"
-            <TalentDashboard / >
-          </ProtectedRoute>
-  } />
+          <ProtectedRoute >"';
+            <TalentDashboard / >';';
+          </ProtectedRoute>';';';
+  } />',';';
+    ';';';
         <Route path='/creator-dashboard' element={'
-          <ProtectedRoute" >
-            <CreatorDashboard / >
-          </ProtectedRoute>,"
-} />
+          <ProtectedRoute" >';
+            <CreatorDashboard / >';';
+          </ProtectedRoute>,"';';';
+} />',';';
+    ';';';
         <Route path='/analytics' element={'
-          <ProtectedRoute >
-            <Analytics /" >
-          </ProtectedRoute>
-  } />"
+          <ProtectedRoute >';
+            <Analytics /" >';';
+          </ProtectedRoute>';';';
+  } />"',';';
+    ';';';
         <Route path='/project-milestones' element={'
-          <ProtectedRoute >
-            <ProjectMilestones / >
-          </ProtectedRoute>
-  } />"
+          <ProtectedRoute >';
+            <ProjectMilestones / >';';
+          </ProtectedRoute>';';';
+  } />"',';';
+    ';';';
         <Route path='/project-details' element={'
-          <ProtectedRoute >"
-            <ProjectDetails / >
-          </ProtectedRoute>
-  } />
-        <Route path='/project-room' element={'
-          <ProtectedRoute" >
-const ProjectRoom = lazy(() => import('../pages/ProjectRoom'));
-const DashboardRoutes: React.FC = () => {;  return (<Suspense fallback={<LoadingSpinner />}>;
-      <Routes>;
-        <Route path='/dashboard' element={
-          <ProtectedRoute>;
-            <Dashboard />;
-          </ProtectedRoute>} />;
-        <Route path='/client-dashboard' element={
-            <ClientDashboard />;
-        <Route path='/talent-dashboard' element={
-            <TalentDashboard />;
-        <Route path='/creator-dashboard' element={
-            <CreatorDashboard />;
-        <Route path='/analytics' element={
-            <Analytics />;
-        <Route path='/project-milestones' element={
-            <ProjectMilestones />;
-        <Route path='/project-details' element={
-            <ProjectDetails />;
-        <Route path='/project-room' element={
-            <ProjectRoom />;
-      </Routes>;
-    </Suspense>;
-import {Route, Routes    } from 'react-router-dom';
-import {Lazy } from 'lucide-react';
-
-export default function Page()   {import { Suspense, lazy } from 'react';
+          <ProtectedRoute >"';
+            <ProjectDetails / >';';
+          </ProtectedRoute>';';';
+  } />',';';
+    ';';';
+        <Route path='/project-room' element={'';';';
+          <ProtectedRoute" >',';';
+    ';';';
+const ProjectRoom = lazy(() => import('../pages/ProjectRoom'));';';
+const DashboardRoutes: React.FC = () => {;  return (<Suspense fallback={<LoadingSpinner />}>;';';';
+      <Routes>;',';';
+    ';';';
+        <Route path='/dashboard' element={';
+          <ProtectedRoute>;';';
+            <Dashboard />;';';';
+          </ProtectedRoute>} />;',';';
+    ';';';
+        <Route path='/client-dashboard' element={';';';
+            <ClientDashboard />;',';';
+    ';';';
+        <Route path='/talent-dashboard' element={';';';
+            <TalentDashboard />;',';';
+    ';';';
+        <Route path='/creator-dashboard' element={';';';
+            <CreatorDashboard />;',';';
+    ';';';
+        <Route path='/analytics' element={';';';
+            <Analytics />;',';';
+    ';';';
+        <Route path='/project-milestones' element={';';';
+            <ProjectMilestones />;',';';
+    ';';';
+        <Route path='/project-details' element={';';';
+            <ProjectDetails />;',';';
+    ';';';
+        <Route path='/project-room' element={';
+            <ProjectRoom />;';';
+      </Routes>;';';';
+    </Suspense>;',';';
+    ';';';
+import {Route, Routes    } from 'react-router-dom',;',';';
+    ';';';';
+import {Lazy } from 'lucide-react',;';';
+    ';';';';
+export default function Page()   {import { Suspense, lazy } from 'react',;',';';
+    ';';';';
   import {ProtectedRoute } from '../components/ProtectedRoute';
           <ProtectedRoute>
             <Dashboard />
@@ -245,58 +300,78 @@ export default function Page()   {import { Suspense, lazy } from 'react';
           </ProtectedRoute>
         } />
       </Routes>
-    </Suspense>
-  );
-};
-
-export default DashboardRoutes;
-import LoadingSpinner from '../components/LoadingSpinner';
-import { Route, Routes    } from 'react-router-dom;
-import { Lazy } from 'lucide-react';
-
-export default function Page() {"
-  import { Suspense, lazy } from 'react';"
-  import { ProtectedRoute } from '../components/ProtectedRoute';
-import LoadingSpinner from '../components/LoadingSpinner';
-// Lazy load dashboard pages;
-const Dashboard = lazy(() => import('../pages/Dashboard'));"
-const ClientDashboard = lazy(() => import('../pages/ClientDashboard'));"
-const TalentDashboard = lazy(() => import('../pages/TalentDashboard'));
-const CreatorDashboard = lazy(() => import('../pages/CreatorDashboard'));
-const Analytics = lazy(() => import('../pages/Analytics'));"
-const ProjectMilestones = lazy(() => import('../pages/ProjectMilestones'));"
-const ProjectDetails = lazy(() => import('../pages/ProjectDetails'));
-const ProjectRoom = lazy(() => import('../pages/ProjectRoom'))
-const DashboardRoutes: React.FC = () => {return (<Suspense fallback={<LoadingSpinner / >}>
-      <Routes>
-        <Route path='/dashboard' element={<ProtectedRoute" >
-            <Dashboard / >
-          </ProtectedRoute>
-  } />
-        <Route path='/client-dashboard' element={<ProtectedRoute" >
-            <ClientDashboard / >
-          </ProtectedRoute>
-  } />
-        <Route path='/talent-dashboard' element={<ProtectedRoute >
-            <TalentDashboard / >
-          </ProtectedRoute>
-  } />"
-        <Route path='/creator-dashboard' element={<ProtectedRoute >
-            <CreatorDashboard / >
-          </ProtectedRoute>
-  } />"
-        <Route path='/analytics' element={<ProtectedRoute >
-            <Analytics / >
-          </ProtectedRoute>
-  } />
-        <Route path='/project-milestones' element={<ProtectedRoute >
-            <ProjectMilestones /" >
-          </ProtectedRoute>
-  } />
-        <Route path='/project-details' element={<ProtectedRoute >
-            <ProjectDetails /" >
-          </ProtectedRoute>
-  } />
+    </Suspense>';
+  );';';
+};';';';
+export default DashboardRoutes;',';';
+    ';';';
+import LoadingSpinner from '../components/LoadingSpinner',;',';';
+    ';';';';
+import { Route, Routes    } from 'react-router-dom;',';';
+    ';';';
+import { Lazy } from 'lucide-react';';';';
+export default function Page() {"',';';
+    ';';';
+  import { Suspense, lazy } from 'react';"',';';
+    ';';';
+  import { ProtectedRoute } from '../components/ProtectedRoute',;',';';
+    ';';';';
+import LoadingSpinner from '../components/LoadingSpinner',;';';
+    ';';';
+// Lazy load dashboard pages;';';';';
+const Dashboard = lazy(() => import('../pages/Dashboard'));"',';';
+    ';';';
+const ClientDashboard = lazy(() => import('../pages/ClientDashboard'));"',';';
+    ';';';
+const TalentDashboard = lazy(() => import('../pages/TalentDashboard'));',';';
+    ';';';
+const CreatorDashboard = lazy(() => import('../pages/CreatorDashboard'));',';';
+    ';';';
+const Analytics = lazy(() => import('../pages/Analytics'));"',';';
+    ';';';
+const ProjectMilestones = lazy(() => import('../pages/ProjectMilestones'));"',';';
+    ';';';
+const ProjectDetails = lazy(() => import('../pages/ProjectDetails'));',';';
+    ';';';
+const ProjectRoom = lazy(() => import('../pages/ProjectRoom'))';';
+const DashboardRoutes: React.FC = () => {return (<Suspense fallback={<LoadingSpinner / >}>';';';
+      <Routes>',';';
+    ';';';
+        <Route path='/dashboard' element={<ProtectedRoute" >';
+            <Dashboard / >';';
+          </ProtectedRoute>';';';
+  } />',';';
+    ';';';
+        <Route path='/client-dashboard' element={<ProtectedRoute" >';
+            <ClientDashboard / >';';
+          </ProtectedRoute>';';';
+  } />',';';
+    ';';';
+        <Route path='/talent-dashboard' element={<ProtectedRoute >';
+            <TalentDashboard / >';';
+          </ProtectedRoute>';';';
+  } />"',';';
+    ';';';
+        <Route path='/creator-dashboard' element={<ProtectedRoute >';
+            <CreatorDashboard / >';';
+          </ProtectedRoute>';';';
+  } />"',';';
+    ';';';
+        <Route path='/analytics' element={<ProtectedRoute >';
+            <Analytics / >';';
+          </ProtectedRoute>';';';
+  } />',';';
+    ';';';
+        <Route path='/project-milestones' element={<ProtectedRoute >';
+            <ProjectMilestones /" >';';
+          </ProtectedRoute>';';';
+  } />',';';
+    ';';';
+        <Route path='/project-details' element={<ProtectedRoute >';
+            <ProjectDetails /" >';';
+          </ProtectedRoute>';';';
+  } />',';';
+    ';';';
         <Route path='/project-room' element={<ProtectedRoute >
             <ProjectRoom / >
           </ProtectedRoute>
@@ -306,11 +381,15 @@ const DashboardRoutes: React.FC = () => {return (<Suspense fallback={<LoadingSpi
   } />
       </Routes>
     <;</Suspense>
-  )}
+  )
+      )}
+    </div>
+  );
+}
 ;"
 ;
 }
-"
-;"
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
-"
+"';
+;"';';
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259';';';
+"';';';';

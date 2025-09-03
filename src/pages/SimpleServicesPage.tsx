@@ -1,109 +1,179 @@
-import React { useState } from 'react';''; import { Link  } from 'react-router-dom';
-import {}; Brain,; Cloud,; Shield,; Server,; Zap,; Globe,; Cpu,; Database,; Network,; Smartphone,; Code,; Chip,; Wifi,; Bot,; Eye,; Sparkles,; Atom,; Leaf,; Gamepad2,; Coins,; Satellite,; Activity,; BarChart3,; Users2,; Settings,; Palette,; Rocket,; Award, TrendingUp,; GraduationCap,; MessageCircle,; HelpCircle,; Phone,; Mail,; MapPin,; Globe as GlobeIcon,; Lock,; DollarSign,; Users} from 'lucide-react'; import { ADVANCED_INNOVATIVE_SERVICES_2025 } from "@/data/advancedInnovativeServices2025";"""; import { EMERGING_TECH_SERVICES_2025 } from '@/data/emergingTechServices2025'; ; export default function SimpleServicesPage(function SimpleServicesPage(function SimpleServicesPage() {): any {): any {}; const [searchQuery, setSearchQuery] = useState(''); const [selectedCategory, setSelectedCategory] = useState('all'); ; const categories: any = [] { id: 'all', name: 'All Services', icon: Zap, color: 'from-blue-500 to-cyan-500' }, { id: 'ai', name: 'AI & Analytics', icon: Brain, color: 'from-purple-500 to-pink-500' }, { id: 'quantum', name: 'Quantum Computing', icon: Rocket, color: 'from-blue-500 to-cyan-500' }, { id: 'blockchain', name: 'Blockchain', icon: Lock, color: 'from-purple-500 to-blue-500' }, { id: 'iot', name: 'IoT & Edge', icon: Cpu, color: 'from-green-500 to-cyan-500' }, { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-purple-500 to-red-500' }, { id: 'healthcare', name: 'Healthcare', icon: Users, color: 'from-pink-500 to-purple-500' }, { id: 'finance', name: 'Finance', icon: DollarSign, color: 'from-green-500 to-blue-500' }, { id: 'manufacturing', name: 'Manufacturing', icon: Server, color: 'from-blue-500 to-purple-500' }, { id: 'sustainability', name: 'Sustainability', icon: Globe, color: 'from-orange-500 to-green-500' }; ]; ;
-
-import React { useState } from 'react';''; import { Link    } from 'react-router-dom';
-import {}; Brain,; Cloud,; Shield,; Server,; Zap,; Globe,; Cpu,; Database,; Network,; Smartphone,; Code,; Chip,; Wifi,; Bot,; Eye,; Sparkles,; Atom,; Leaf,; Gamepad2,; Coins,; Satellite,; Activity,; BarChart3,; Users2,; Settings,; Palette,; Rocket,; Award, TrendingUp,; GraduationCap,; MessageCircle,; HelpCircle,; Phone,; Mail,; MapPin,; Globe as GlobeIcon,; Lock,; DollarSign,; Users} from 'lucide-react'; import { ADVANCED_INNOVATIVE_SERVICES_2025 } from '@/data/advancedInnovativeServices2025';"""; import { EMERGING_TECH_SERVICES_2025 } from '@/data/emergingTechServices2025'; ; export default function SimpleServicesPage(function SimpleServicesPage(function SimpleServicesPage() {): any{): any{}; const [searchQuery, setSearchQuery] = useState(''); const [selectedCategory, setSelectedCategory] = useState('all'); ; const categories: any= [] { id: 'all', name: 'All Services', icon: Zap, color: 'from-blue-500 to-cyan-500' }, { id: 'ai', name: 'AI & Analytics', icon: Brain, color: 'from-purple-500 to-pink-500' }, { id: 'quantum', name: 'Quantum Computing', icon: Rocket, color: 'from-blue-500 to-cyan-500' }, { id: 'blockchain', name: 'Blockchain', icon: Lock, color: 'from-purple-500 to-blue-500' }, { id: 'iot', name: 'IoT & Edge', icon: Cpu, color: 'from-green-500 to-cyan-500' }, { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-purple-500 to-red-500' }, { id: 'healthcare', name: 'Healthcare', icon: Users, color: 'from-pink-500 to-purple-500' }, { id: 'finance', name: 'Finance', icon: DollarSign, color: 'from-green-500 to-blue-500' }, { id: 'manufacturing', name: 'Manufacturing', icon: Server, color: 'from-blue-500 to-purple-500' }, { id: 'sustainability', name: 'Sustainability', icon: Globe, color: 'from-orange-500 to-green-500' }; ]; ;,"});,"})
-;,"});,"})
-,"});,"})
-import { Link } from 'react-router-dom';,"});,"})
-export default function SimpleServicesPage() {,"});,"})
-  const services = [,"});,"})
-    {,"});,"})
-      id: 'ai-machine-learning',"});,"})
-      title: 'AI & Machine Learning',"});,"})
-      description: 'Cutting-edge artificial intelligence and machine learning solutions that transform business operations and drive innovation.',"});,"})
-      icon: '🤖',"});,"})
-      color: 'from-purple-500 to-pink-500',"});,"})
-      features: [,"});,"})
-        'AI Business Intelligence & Analytics',;,"});,"})
-        'Machine Learning Model Development',;,"});,"})
-        'Predictive Analytics & Forecasting',;,"});,"})
-        'Natural Language Processing',;,"});,"})
-        'Computer Vision Solutions',;,"});,"})
-        'AI-Powered Automation';,"});,"})
-      ],;,"});,"})
-      href: '/services/ai-machine-learning',"});,"});
-},;,"});,"})
-      id: 'cloud-devops',"});,"})
-      title: 'Cloud & DevOps',"});,"})
-      description: 'Scalable cloud infrastructure and streamlined development operations to accelerate your digital transformation.',"});,"})
-      icon: '☁️',"});,"})
-      color: 'from-blue-500 to-cyan-500',"});,"})
-        'Cloud Migration & Strategy',;,"});,"})
-        'DevOps Implementation',;,"});,"})
-        'Container Orchestration',;,"});,"})
-        'Infrastructure as Code',;,"});,"})
-        'Continuous Integration/Deployment',;,"});,"})
-        'Cloud Security & Compliance';,"});,"})
-      href: '/services/cloud-devops',"});,"})
-      id: 'cybersecurity',"});,"})
-      title: 'Cybersecurity',"});,"})
-      description: 'Advanced security solutions to protect your digital assets, infrastructure, and maintain compliance.',;,"});,"})
-      icon: '🔒',"});,"})
-      color: 'from-red-500 to-pink-500',"});,"})
-        'Security Assessment & Auditing',;,"});,"})
-        'Threat Detection & Response',;,"});,"})
-        'Identity & Access Management',;,"});,"})
-        'Data Protection & Encryption',;,"});,"})
-        'Compliance & Governance',;,"});,"})
-        'Security Training & Awareness';,"});,"})
-      href: '/services/cybersecurity',"});,"})
-      id: 'digital-transformation',"});,"})
-      title: 'Digital Transformation',"});,"})
-      description: 'End-to-end digital transformation strategies to modernize your business and stay competitive.',"});,"})
-      icon: '🚀',"});,"})
-      color: 'from-green-500 to-emerald-500',"});,"})
-        'Digital Strategy Development',;,"});,"})
-        'Process Automation',;,"});,"})
-        'Legacy System Modernization',;,"});,"})
-        'Change Management',;,"});,"})
-        'Digital Culture Transformation',;,"});,"})
-        'Technology Roadmapping';,"});,"})
-      href: '/services/digital-transformation',"});,"})
-      id: 'financial-solutions',"});,"})
-      title: 'Financial Solutions',"});,"})
-      description: 'AI-powered financial technology and trading solutions for modern financial institutions.',"});,"})
-      icon: '💰',"});,"})
-      color: 'from-yellow-500 to-orange-500',"});,"})
-        'AI Trading Algorithms',;,"});,"})
-        'Risk Management Systems',;,"});,"})
-        'Financial Analytics Platforms',;,"});,"})
-        'Regulatory Compliance',;,"});,"})
-        'Blockchain Solutions',;,"});,"})
-        'FinTech Innovation';,"});,"})
-      href: '/services/financial-solutions',"});,"})
-      id: 'manufacturing-solutions',"});,"})
-      title: 'Manufacturing Solutions',"});,"})
-      description: 'Smart manufacturing and Industry 4.0 technology solutions for modern production facilities.',"});,"})
-      icon: '🏭',"});,"})
-      color: 'from-indigo-500 to-purple-500',"});,"})
-        'IoT Integration',;,"});,"})
-        'Predictive Maintenance',;,"});,"})
-        'Quality Control Systems',;,"});,"})
-        'Supply Chain Optimization',;,"});,"})
-        'Smart Factory Solutions',;,"});,"})
-        'Industry 4.0 Implementation';,"});,"})
-      href: '/services/manufacturing-solutions',"});,"});
-}"});,"})
-  ],"});,"})
-  const industries = [,"});,"})
-      name: 'Healthcare',"});,"})
-      description: 'AI-powered diagnostics, patient care optimization, and healthcare analytics',;,"});,"})
-      icon: '🏥',"});,"})
-      name: 'Finance',"});,"})
-      description: 'Risk management, trading algorithms, and regulatory compliance solutions',;,"});,"})
-      icon: '💳',"});,"})
-      name: 'Manufacturing',"});,"})
-      description: 'Smart factories, predictive maintenance, and supply chain optimization',;,"});,"})
-      icon: '⚙️',"});,"})
-      name: 'Retail',"});,"})
-      description: 'E-commerce platforms, customer analytics, and inventory management',;,"});,"})
-      icon: '🛍️',"});,"})
-      name: 'Technology',"});,"})
-      description: 'Software development, cloud infrastructure, and digital transformation',;,"});,"})
-      icon: '💻',"});,"})
-      name: 'Education',"});,"})
-      description: 'Learning management systems, educational analytics, and virtual learning',;,"});,"})
+import React { useState } from 'react',;',';';
+    ''; import { Link  } from 'react-router-dom',;',';';
+    ';';';';
+import {}; Brain,; Cloud,; Shield,; Server,; Zap,; Globe,; Cpu,; Database,; Network,; Smartphone,; Code,; Chip,; Wifi,; Bot,; Eye,; Sparkles,; Atom,; Leaf,; Gamepad2,; Coins,; Satellite,; Activity,; BarChart3,; Users2,; Settings,; Palette,; Rocket,; Award, TrendingUp,; GraduationCap,; MessageCircle,; HelpCircle,; Phone,; Mail,; MapPin,; Globe as GlobeIcon,; Lock,; DollarSign,; Users} from 'lucide-react'; import { ADVANCED_INNOVATIVE_SERVICES_2025 } from "@/data/advancedInnovativeServices2025";"""; import { EMERGING_TECH_SERVICES_2025 } from '@/data/emergingTechServices2025',;',';';
+    ';';';';
+export default function SimpleServicesPage(function SimpleServicesPage(function SimpleServicesPage() {): any {): any {}; const [searchQuery, setSearchQuery] = useState(''); const [selectedCategory, setSelectedCategory] = useState('all');',';';
+    ';';';
+const categories: any = [] { id: 'all', name: 'All Services', icon: Zap, color: 'from-blue-500 to-cyan-500' }, { id: 'ai', name: 'AI & Analytics', icon: Brain, color: 'from-purple-500 to-pink-500' }, { id: 'quantum', name: 'Quantum Computing', icon: Rocket, color: 'from-blue-500 to-cyan-500' }, { id: 'blockchain', name: 'Blockchain', icon: Lock, color: 'from-purple-500 to-blue-500' }, { id: 'iot', name: 'IoT & Edge', icon: Cpu, color: 'from-green-500 to-cyan-500' }, { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-purple-500 to-red-500' }, { id: 'healthcare', name: 'Healthcare', icon: Users, color: 'from-pink-500 to-purple-500' }, { id: 'finance', name: 'Finance', icon: DollarSign, color: 'from-green-500 to-blue-500' }, { id: 'manufacturing', name: 'Manufacturing', icon: Server, color: 'from-blue-500 to-purple-500' }, { id: 'sustainability', name: 'Sustainability', icon: Globe, color: 'from-orange-500 to-green-500' }; ];',';';
+    ';';';
+import React { useState } from 'react',;',';';
+    ''; import { Link    } from 'react-router-dom',;',';';
+    ';';';';
+import {}; Brain,; Cloud,; Shield,; Server,; Zap,; Globe,; Cpu,; Database,; Network,; Smartphone,; Code,; Chip,; Wifi,; Bot,; Eye,; Sparkles,; Atom,; Leaf,; Gamepad2,; Coins,; Satellite,; Activity,; BarChart3,; Users2,; Settings,; Palette,; Rocket,; Award, TrendingUp,; GraduationCap,; MessageCircle,; HelpCircle,; Phone,; Mail,; MapPin,; Globe as GlobeIcon,; Lock,; DollarSign,; Users} from 'lucide-react'; import { ADVANCED_INNOVATIVE_SERVICES_2025 } from '@/data/advancedInnovativeServices2025';"""; import { EMERGING_TECH_SERVICES_2025 } from '@/data/emergingTechServices2025',;',';';
+    ';';';';
+export default function SimpleServicesPage(function SimpleServicesPage(function SimpleServicesPage() {): any{): any{}; const [searchQuery, setSearchQuery] = useState(''); const [selectedCategory, setSelectedCategory] = useState('all');',';';
+    ';';';
+const categories: any= [] { id: 'all', name: 'All Services', icon: Zap, color: 'from-blue-500 to-cyan-500' }, { id: 'ai', name: 'AI & Analytics', icon: Brain, color: 'from-purple-500 to-pink-500' }, { id: 'quantum', name: 'Quantum Computing', icon: Rocket, color: 'from-blue-500 to-cyan-500' }, { id: 'blockchain', name: 'Blockchain', icon: Lock, color: 'from-purple-500 to-blue-500' }, { id: 'iot', name: 'IoT & Edge', icon: Cpu, color: 'from-green-500 to-cyan-500' }, { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-purple-500 to-red-500' }, { id: 'healthcare', name: 'Healthcare', icon: Users, color: 'from-pink-500 to-purple-500' }, { id: 'finance', name: 'Finance', icon: DollarSign, color: 'from-green-500 to-blue-500' }, { id: 'manufacturing', name: 'Manufacturing', icon: Server, color: 'from-blue-500 to-purple-500' }, { id: 'sustainability', name: 'Sustainability', icon: Globe, color: 'from-orange-500 to-green-500' }; ];';
+,"});,"})';';
+;,"});,"})';';';
+,"});,"})',';';
+    ';';';
+import { Link } from 'react-router-dom';,"});,"})';
+export default function SimpleServicesPage() {,"});,"})';';
+  const services = [,"});,"})';';';
+    {,"});,"})',';';
+    ';';';
+      id: 'ai-machine-learning',"});,"})',';';
+    ';';';
+      title: 'AI & Machine Learning',"});,"})',';';
+    ';';';
+      description: 'Cutting-edge artificial intelligence and machine learning solutions that transform business operations and drive innovation.',"});,"})',';';
+    ';';';
+      icon: '🤖',"});,"})',';';
+    ';';';
+      color: 'from-purple-500 to-pink-500',"});,"})';';';
+      features: [,"});,"})',',';';
+    'AI Business Intelligence & Analytics',;,"});,"})';',';';
+    'Machine Learning Model Development',;,"});,"})',',';';
+    'Predictive Analytics & Forecasting',;,"});,"})';',';';
+    'Natural Language Processing',;,"});,"})',',';';
+    'Computer Vision Solutions',;,"});,"})';',';';
+    'AI-Powered Automation';,"});,"})';';';
+      ],;,"});,"})',';';
+    ';';';
+      href: '/services/ai-machine-learning',"});,"});';';';
+},;,"});,"})',';';
+    ';';';
+      id: 'cloud-devops',"});,"})',';';
+    ';';';
+      title: 'Cloud & DevOps',"});,"})',';';
+    ';';';
+      description: 'Scalable cloud infrastructure and streamlined development operations to accelerate your digital transformation.',"});,"})',';';
+    ';';';
+      icon: '☁️',"});,"})',';';
+    ';';';
+      color: 'from-blue-500 to-cyan-500',"});,"})',',';';
+    'Cloud Migration & Strategy',;,"});,"})';',';';
+    'DevOps Implementation',;,"});,"})',',';';
+    'Container Orchestration',;,"});,"})';',';';
+    'Infrastructure as Code',;,"});,"})',',';';
+    'Continuous Integration/Deployment',;,"});,"})';',';';
+    'Cloud Security & Compliance';,"});,"})';';';';
+      href: '/services/cloud-devops',"});,"})',';';
+    ';';';
+      id: 'cybersecurity',"});,"})',';';
+    ';';';
+      title: 'Cybersecurity',"});,"})',';';
+    ';';';
+      description: 'Advanced security solutions to protect your digital assets, infrastructure, and maintain compliance.',';';';
+"});,"})',';';
+    ';';';
+      icon: '🔒',"});,"})',';';
+    ';';';
+      color: 'from-red-500 to-pink-500',"});,"})',',';';
+    'Security Assessment & Auditing',;,"});,"})';',';';
+    'Threat Detection & Response',;,"});,"})',',';';
+    'Identity & Access Management',;,"});,"})';',';';
+    'Data Protection & Encryption',;,"});,"})',',';';
+    'Compliance & Governance',;,"});,"})';',';';
+    'Security Training & Awareness';,"});,"})';';';';
+      href: '/services/cybersecurity',"});,"})',';';
+    ';';';
+      id: 'digital-transformation',"});,"})',';';
+    ';';';
+      title: 'Digital Transformation',"});,"})',';';
+    ';';';
+      description: 'End-to-end digital transformation strategies to modernize your business and stay competitive.',"});,"})',';';
+    ';';';
+      icon: '🚀',"});,"})',';';
+    ';';';
+      color: 'from-green-500 to-emerald-500',"});,"})',',';';
+    'Digital Strategy Development',;,"});,"})';',';';
+    'Process Automation',;,"});,"})',',';';
+    'Legacy System Modernization',;,"});,"})';',';';
+    'Change Management',;,"});,"})',',';';
+    'Digital Culture Transformation',;,"});,"})';',';';
+    'Technology Roadmapping';,"});,"})';';';';
+      href: '/services/digital-transformation',"});,"})',';';
+    ';';';
+      id: 'financial-solutions',"});,"})',';';
+    ';';';
+      title: 'Financial Solutions',"});,"})',';';
+    ';';';
+      description: 'AI-powered financial technology and trading solutions for modern financial institutions.',"});,"})',';';
+    ';';';
+      icon: '💰',"});,"})',';';
+    ';';';
+      color: 'from-yellow-500 to-orange-500',"});,"})',',';';
+    'AI Trading Algorithms',;,"});,"})';',';';
+    'Risk Management Systems',;,"});,"})',',';';
+    'Financial Analytics Platforms',;,"});,"})';',';';
+    'Regulatory Compliance',;,"});,"})',',';';
+    'Blockchain Solutions',;,"});,"})';',';';
+    'FinTech Innovation';,"});,"})';';';';
+      href: '/services/financial-solutions',"});,"})',';';
+    ';';';
+      id: 'manufacturing-solutions',"});,"})',';';
+    ';';';
+      title: 'Manufacturing Solutions',"});,"})',';';
+    ';';';
+      description: 'Smart manufacturing and Industry 4.0 technology solutions for modern production facilities.',"});,"})',';';
+    ';';';
+      icon: '🏭',"});,"})',';';
+    ';';';
+      color: 'from-indigo-500 to-purple-500',"});,"})',',';';
+    'IoT Integration',;,"});,"})';',';';
+    'Predictive Maintenance',;,"});,"})',',';';
+    'Quality Control Systems',;,"});,"})';',';';
+    'Supply Chain Optimization',;,"});,"})',',';';
+    'Smart Factory Solutions',;,"});,"})';',';';
+    'Industry 4.0 Implementation';,"});,"})';';';';
+      href: '/services/manufacturing-solutions',"});,"});';
+}"});,"})';';
+  ],"});,"})';';';
+  const industries = [,"});,"})',';';
+    ';';';
+      name: 'Healthcare',"});,"})',';';
+    ';';';
+      description: 'AI-powered diagnostics, patient care optimization, and healthcare analytics',';';';
+"});,"})',';';
+    ';';';
+      icon: '🏥',"});,"})',';';
+    ';';';
+      name: 'Finance',"});,"})',';';
+    ';';';
+      description: 'Risk management, trading algorithms, and regulatory compliance solutions',';';';
+"});,"})',';';
+    ';';';
+      icon: '💳',"});,"})',';';
+    ';';';
+      name: 'Manufacturing',"});,"})',';';
+    ';';';
+      description: 'Smart factories, predictive maintenance, and supply chain optimization',';';';
+"});,"})',';';
+    ';';';
+      icon: '⚙️',"});,"})',';';
+    ';';';
+      name: 'Retail',"});,"})',';';
+    ';';';
+      description: 'E-commerce platforms, customer analytics, and inventory management',';';';
+"});,"})',';';
+    ';';';
+      icon: '🛍️',"});,"})',';';
+    ';';';
+      name: 'Technology',"});,"})',';';
+    ';';';
+      description: 'Software development, cloud infrastructure, and digital transformation',';';';
+"});,"})',';';
+    ';';';
+      icon: '💻',"});,"})',';';
+    ';';';
+      name: 'Education',"});,"})',';';
+    ';';';
+      description: 'Learning management systems, educational analytics, and virtual learning',';';';
+"});,"})',';';
+    ';';';
       icon: '🎓',"});,"})
   return (
     ,"});,"})
@@ -183,21 +253,33 @@ export default function SimpleServicesPage() {,"});,"})
                 <p className="text-gray-600 leading-relaxed">;,"});,"})
                   {industry.description}"});,"})
       {/* Process Section */}"});,"})
-              Our Process,"});,"})
-              A proven methodology that ensures successful project delivery and maximum value for your business.;,"});,"})
-          <div className="grid grid-cols-1 md: grid-cols-4 gap-8">,"});,"})
-            {[;,"});,"})
-                step: '01',"});,"})
-                title: 'Discovery',"});,"})
-                description: 'We analyze your business needs and objectives to understand your unique challenges.',"});,"})
-                step: '02',"});,"})
-                title: 'Strategy',"});,"})
-                description: 'We develop a comprehensive technology strategy tailored to your business goals.',"});,"})
-                step: '03',"});,"})
-                title: 'Implementation',"});,"})
-                description: 'Our expert team executes the solution with precision and attention to detail.',"});,"})
-                step: '04',"});,"})
-                title: 'Optimization',"});,"})
+              Our Process,"});,"})';
+              A proven methodology that ensures successful project delivery and maximum value for your business.;,"});,"})';';
+          <div className="grid grid-cols-1 md: grid-cols-4 gap-8">,"});,"})';';';
+            {[;,"});,"})',';';
+    ';';';
+                step: '01',"});,"})',';';
+    ';';';
+                title: 'Discovery',"});,"})',';';
+    ';';';
+                description: 'We analyze your business needs and objectives to understand your unique challenges.',"});,"})',';';
+    ';';';
+                step: '02',"});,"})',';';
+    ';';';
+                title: 'Strategy',"});,"})',';';
+    ';';';
+                description: 'We develop a comprehensive technology strategy tailored to your business goals.',"});,"})',';';
+    ';';';
+                step: '03',"});,"})',';';
+    ';';';
+                title: 'Implementation',"});,"})',';';
+    ';';';
+                description: 'Our expert team executes the solution with precision and attention to detail.',"});,"})',';';
+    ';';';
+                step: '04',"});,"})',';';
+    ';';';
+                title: 'Optimization',"});,"})',';';
+    ';';';
                 description: 'We continuously monitor and optimize your solution for maximum performance.',"});,"})
             ].map((process, index) => (;,"});,"})
               <div key={index} className="text-center">;,"});,"})
@@ -207,29 +289,52 @@ export default function SimpleServicesPage() {,"});,"})
                   {process.description}"});,"})
       {/* CTA Section */}"});,"})
       <section className="py-16 bg-gradient-to-r from-blue-600 to-cyan-600">;,"});,"})
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,"});,"})
-          <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">,"});,"})
-            Ready to Get Started?;,"});,"})
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">;,"});,"})
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,"});,"})';
+          <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">,"});,"})';';
+            Ready to Get Started?;,"});,"})';';';
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">;,"});,"})',';';
+    ';';';
             Let's discuss how our services can transform your business and drive growth.;,"});,"})
               className="bg-white text-blue-600 hover: bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors","});,"})
               Schedule Consultation,"});,"})
                 to="/pricing";,"});,"})
-                className="border-2 border-white text-white hover: bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition-colors","});,"})
-                View Pricing,"});,"})
-      <Footer />;,"});,"})
-  );,"});,"})
-import React { useState } from 'react'' import { Link    } from 'react-router-dom' import {} Brain, Cloud, Shield, Server, Zap, Globe, Cpu, Database, Network, Smartphone, Code, Chip, Wifi, Bot, Eye, Sparkles, Atom, Leaf, Gamepad2, Coins, Satellite, Activity, BarChart3, Users2, Settings, Palette, Rocket, Award, TrendingUp, GraduationCap, MessageCircle, HelpCircle, Phone, Mail, MapPin, Globe as GlobeIcon, Lock, DollarSign, Users } from 'lucide-react' import { ADVANCED_INNOVATIVE_SERVICES_2025 } from '@/data/advancedInnovativeServices2025'';" import { EMERGING_TECH_SERVICES_2025 } from '@/data/emergingTechServices2025'  export default function SimpleServicesPage(function SimpleServicesPage(function SimpleServicesPage() {): any {): any {} const [searchQuery, setSearchQuery] = useState('') const [selectedCategory, setSelectedCategory] = useState('all')  const categories: any = [] { id: 'all', name: 'All Services', icon: Zap, color: 'from-blue-500 to-cyan-500' } { id: 'ai', name: 'AI & Analytics', icon: Brain, color: 'from-purple-500 to-pink-500' } { id: 'quantum', name: 'Quantum Computing', icon: Rocket, color: 'from-blue-500 to-cyan-500' } { id: 'blockchain', name: 'Blockchain', icon: Lock, color: 'from-purple-500 to-blue-500' } { id: 'iot', name: 'IoT & Edge', icon: Cpu, color: 'from-green-500 to-cyan-500' } { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-purple-500 to-red-500' } { id: 'healthcare', name: 'Healthcare', icon: Users, color: 'from-pink-500 to-purple-500' } { id: 'finance', name: 'Finance', icon: DollarSign, color: 'from-green-500 to-blue-500' } { id: 'manufacturing', name: 'Manufacturing', icon: Server, color: 'from-blue-500 to-purple-500' } { id: 'sustainability', name: 'Sustainability', icon: Globe, color: 'from-orange-500 to-green-500' } ] ;
-import React { useState } from 'react'' import { Link    } from 'react-router-dom' import {} Brain, Cloud, Shield, Server, Zap, Globe, Cpu, Database, Network, Smartphone, Code, Chip, Wifi, Bot, Eye, Sparkles, Atom, Leaf, Gamepad2, Coins, Satellite, Activity, BarChart3, Users2, Settings, Palette, Rocket, Award, TrendingUp, GraduationCap, MessageCircle, HelpCircle, Phone, Mail, MapPin, Globe as GlobeIcon, Lock, DollarSign, Users } from 'lucide-react' import { ADVANCED_INNOVATIVE_SERVICES_2025 } from '@/data/advancedInnovativeServices2025'';" import { EMERGING_TECH_SERVICES_2025 } from '@/data/emergingTechServices2025'  export default function SimpleServicesPage(function SimpleServicesPage(function SimpleServicesPage() {): any: {): any: {} const [searchQuery, setSearchQuery] = useState('') const [selectedCategory, setSelectedCategory] = useState('all')  const categories: any: = [] { id: 'all,', name: 'All: Services,', icon: Za,p, color: 'from-blue-500: to-cyan-500'} { id: 'ai,', name: 'AI: & Analytics,', icon: Brai,n, color: 'from-purple-500: to-pink-500'} { id: 'quantum,', name: 'Quantum: Computing,', icon: Rocke,t, color: 'from-blue-500: to-cyan-500'} { id: 'blockchain,', name: 'Blockchain,', icon: Loc,k, color: 'from-purple-500: to-blue-500'} { id: 'iot,', name: 'IoT: & Edge,', icon: Cp,u, color: 'from-green-500: to-cyan-500'} { id: 'cybersecurity,', name: 'Cybersecurity,', icon: Shiel,d, color: 'from-purple-500: to-red-500'} { id: 'healthcare,', name: 'Healthcare,', icon: User,s, color: 'from-pink-500: to-purple-500'} { id: 'finance,', name: 'Finance,', icon: DollarSig,n, color: 'from-green-500: to-blue-500'} { id: 'manufacturing,', name: 'Manufacturing,', icon: Serve,r, color: 'from-blue-500: to-purple-500'} { id: 'sustainability,', name: 'Sustainability,', icon: Glob,e, color: 'from-orange-500: to-green-500'} ] ;';
-import React { useState } from 'react'' import { Link    } from 'react-router-dom' import {} Brain, Cloud, Shield, Server, Zap, Globe, Cpu, Database, Network, Smartphone, Code, Chip, Wifi, Bot, Eye, Sparkles, Atom, Leaf, Gamepad2, Coins, Satellite, Activity, BarChart3, Users2, Settings, Palette, Rocket, Award, TrendingUp, GraduationCap, MessageCircle, HelpCircle, Phone, Mail, MapPin, Globe as GlobeIcon, Lock, DollarSign, Users } from 'lucide-react' import { ADVANCED_INNOVATIVE_SERVICES_2025 } from '@/data/advancedInnovativeServices2025'';" import { EMERGING_TECH_SERVICES_2025 } from '@/data/emergingTechServices2025'  export default function SimpleServicesPage(function SimpleServicesPage(function SimpleServicesPage() {): any {): any {} const [searchQuery, setSearchQuery] = useState('') const [selectedCategory, setSelectedCategory] = useState('all')  const categories: any = [] { i;
-    d: 'all', name: 'All Services', icon: Zap, color: 'from-blue-500 to-cyan-500' } { id: 'ai', name: 'AI & Analytics', icon: Brain, color: 'from-purple-500 to-pink-500' } { id: 'quantum', name: 'Quantum Computing', icon: Rocket, color: 'from-blue-500 to-cyan-500' } { id: 'blockchain', name: 'Blockchain', icon: Lock, color: 'from-purple-500 to-blue-500' } { id: 'iot', name: 'IoT & Edge', icon: Cpu, color: 'from-green-500 to-cyan-500' } { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-purple-500 to-red-500' } { id: 'healthcare', name: 'Healthcare', icon: Users, color: 'from-pink-500 to-purple-500' } { id: 'finance', name: 'Finance', icon: DollarSign, color: 'from-green-500 to-blue-500' } { id: 'manufacturing', name: 'Manufacturing', icon: Server, color: 'from-blue-500 to-purple-500' } { id: 'sustainability', name: 'Sustainability', icon: Globe, color: 'from-orange-500 to-green-500' } ] ;""
-import React { useState } from 'react' import { Link    } from 'react-router-dom' import {} Brain, Cloud, Shield, Server, Zap, Globe, Cpu, Database, Network, Smartphone, Code, Chip, Wifi, Bot, Eye, Sparkles, Atom, Leaf, Gamepad2, Coins, Satellite, Activity, BarChart3, Users2, Settings, Palette, Rocket, Award, TrendingUp, GraduationCap, MessageCircle, HelpCircle, Phone, Mail, MapPin, Globe as GlobeIcon, Lock, DollarSign, Users } from 'lucide-react' import { ADVANCED_INNOVATIVE_SERVICES_2025 } from '@/data/advancedInnovativeServices2025';" import { EMERGING_TECH_SERVICES_2025 } from '@/data/emergingTechServices2025'  export default function SimpleServicesPage(function SimpleServicesPage(function SimpleServicesPage() {): any {): any {} const [searchQuery, setSearchQuery] = useState(') const [selectedCategory, setSelectedCategory] = useState('all')  const categories: any = [] { id: 'all', name: 'All Services', icon: Zap, color: 'from-blue-500 to-cyan-500' } { id: 'ai', name: 'AI & Analytics', icon: Brain, color: 'from-purple-500 to-pink-500' } { id: 'quantum', name: 'Quantum Computing', icon: Rocket, color: 'from-blue-500 to-cyan-500' } { id: 'blockchain', name: 'Blockchain', icon: Lock, color: 'from-purple-500 to-blue-500' } { id: 'iot', name: 'IoT & Edge', icon: Cpu, color: 'from-green-500 to-cyan-500' } { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-purple-500 to-red-500' } { id: 'healthcare', name: 'Healthcare', icon: Users, color: 'from-pink-500 to-purple-500' } { id: 'finance', name: 'Finance', icon: DollarSign, color: 'from-green-500 to-blue-500' } { id: 'manufacturing', name: 'Manufacturing', icon: Server, color: 'from-blue-500 to-purple-500' } { id: 'sustainability', name: 'Sustainability', icon: Globe, color: 'from-orange-500 to-green-500' } ] ;
-import React {useState } from 'react'' ;
-import {Link    } from 'react-router-dom' import {} Brain, Cloud, Shield, Server, Zap, Globe, Cpu, Database, Network, Smartphone, Code, Chip, Wifi, Bot, Eye, Sparkles, Atom, Leaf, Gamepad2, Coins, Satellite, Activity, BarChart3, Users2, Settings, Palette, Rocket, Award, TrendingUp, GraduationCap, MessageCircle, HelpCircle, Phone, Mail, MapPin, Globe as GlobeIcon, Lock, DollarSign, Users } from 'lucide-react' import {ADVANCED_INNOVATIVE_SERVICES_2025 } from '@/data/advancedInnovativeServices2025'';" import {EMERGING_TECH_SERVICES_2025 } from '@/data/emergingTechServices2025'  export default function SimpleServicesPage(function SimpleServicesPage(function SimpleServicesPage()   {): any {): any {} const [searchQuery, setSearchQuery] = useState('') const [selectedCategory, setSelectedCategory] = useState('all')  const categories: any = [] {id: 'all', name: 'All Services', icon: Zap, color: 'from-blue-500 to-cyan-500' } {id: 'ai', name: 'AI & Analytics', icon: Brain, color: 'from-purple-500 to-pink-500' } {id: 'quantum', name: 'Quantum Computing', icon: Rocket, color: 'from-blue-500 to-cyan-500' } {id: 'blockchain', name: 'Blockchain', icon: Lock, color: 'from-purple-500 to-blue-500' } {id: 'iot', name: 'IoT & Edge', icon: Cpu, color: 'from-green-500 to-cyan-500' } {id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-purple-500 to-red-500' } {id: 'healthcare', name: 'Healthcare', icon: Users, color: 'from-pink-500 to-purple-500' } {id: 'finance', name: 'Finance', icon: DollarSign, color: 'from-green-500 to-blue-500' } {id: 'manufacturing', name: 'Manufacturing', icon: Server, color: 'from-blue-500 to-purple-500' } {id: 'sustainability', name: 'Sustainability', icon: Globe, color: 'from-orange-500 to-green-500' } ] ;"
-import React { useState } from &apos;react&apos;&apos; import { Link    } from &apos;react-router-dom&apos; import {} Brain, Cloud, Shield, Server, Zap, Globe, Cpu, Database, Network, Smartphone, Code, Chip, Wifi, Bot, Eye, Sparkles, Atom, Leaf, Gamepad2, Coins, Satellite, Activity, BarChart3, Users2, Settings, Palette, Rocket, Award, TrendingUp, GraduationCap, MessageCircle, HelpCircle, Phone, Mail, MapPin, Globe as GlobeIcon, Lock, DollarSign, Users } from &apos;lucide-react&apos; import { ADVANCED_INNOVATIVE_SERVICES_2025 } from &apos;@/data/advancedInnovativeServices2025&apos;&quot; import { EMERGING_TECH_SERVICES_2025 } from &apos;@/data/emergingTechServices2025&apos;&apos;'  export default function SimpleServicesPage(function SimpleServicesPage(function SimpleServicesPage() {): any {): any  {} const [searchQuery, setSearchQuery] = useState(&apos;&apos)&apos;&apos; const;const [selectedCategory, setSelectedCategory] = useState(&apos;all&apos)  ;&apos;const categories: any = [] { i,d: &apos;all&apos, name: &apos;All Services&apos, icon: Zap, color: &apos;from-blue-500 to-cyan-500&apos} { id: &apos;ai&apos, name: &apos;AI & Analytics&apos, icon: Brain, color: &apos;from-purple-500 to-pink-500&apos} { id: &apos;quantum&apos, name: &apos;Quantum Computing&apos, icon: Rocket, color: &apos;from-blue-500 to-cyan-500&apos} { id: &apos;blockchain&apos, name: &apos;Blockchain&apos, icon: Lock, color: &apos;from-purple-500 to-blue-500&apos} { id: &apos;iot&apos, name: &apos;IoT & Edge&apos, icon: Cpu, color: &apos;from-green-500 to-cyan-500&apos} { id: &apos;cybersecurity&apos, name: &apos;Cybersecurity&apos, icon: Shield, color: &apos;from-purple-500 to-red-500&apos} { id: &apos;healthcare&apos, name: &apos;Healthcare&apos, icon: Users, color: &apos;from-pink-500 to-purple-500&apos} { id: &apos;finance&apos, name: &apos;Finance&apos, icon: DollarSign, color: &apos;from-green-500 to-blue-500&apos} { id: &apos;manufacturing&apos, name: &apos;Manufacturing&apos, icon: Server, color: &apos;from-blue-500 to-purple-500&apos} { id: &apos;sustainability&apos, name: &apos;Sustainability&apos, icon: Globe, color: &apos;from-orange-500 to-green-500&apos} ] ;&apos;'
-import React { useState } from 'react'' import { Link    } from 'react-router-dom' import {} Brain, Cloud, Shield, Server, Zap, Globe, Cpu, Database, Network, Smartphone, Code, Chip, Wifi, Bot, Eye, Sparkles, Atom, Leaf, Gamepad2, Coins, Satellite, Activity, BarChart3, Users2, Settings, Palette, Rocket, Award, TrendingUp, GraduationCap, MessageCircle, HelpCircle, Phone, Mail, MapPin, Globe as GlobeIcon, Lock, DollarSign, Users } from 'lucide-react' import { ADVANCED_INNOVATIVE_SERVICES_2025 } from '@/data/advancedInnovativeServices2025'';" import { EMERGING_TECH_SERVICES_2025 } from '@/data/emergingTechServices2025'  export default function SimpleServicesPage(function SimpleServicesPage(function SimpleServicesPage() {): any {): any {} const [searchQuery, setSearchQuery] = useState('') const [selectedCategory, setSelectedCategory] = useState('all')  const categories: any = [] { id: 'all', name: 'All Services', icon: Zap, color: 'from-blue-500 to-cyan-500' } { id: 'ai', name: 'AI & Analytics', icon: Brain, color: 'from-purple-500 to-pink-500' } { id: 'quantum', name: 'Quantum Computing', icon: Rocket, color: 'from-blue-500 to-cyan-500' } { id: 'blockchain', name: 'Blockchain', icon: Lock, color: 'from-purple-500 to-blue-500' } { id: 'iot', name: 'IoT & Edge', icon: Cpu, color: 'from-green-500 to-cyan-500' } { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-purple-500 to-red-500' } { id: 'healthcare', name: 'Healthcare', icon: Users, color: 'from-pink-500 to-purple-500' } { id: 'finance', name: 'Finance', icon: DollarSign, color: 'from-green-500 to-blue-500' } { id: 'manufacturing', name: 'Manufacturing', icon: Server, color: 'from-blue-500 to-purple-500' } { id: 'sustainability', name: 'Sustainability', icon: Globe, color: 'from-orange-500 to-green-500' } ] ;"
-"";
-}
-import React { useState } from 'react'' import { Link    } from 'react-router-dom' import {} Brain, Cloud, Shield, Server, Zap, Globe, Cpu, Database, Network, Smartphone, Code, Chip, Wifi, Bot, Eye, Sparkles, Atom, Leaf, Gamepad2, Coins, Satellite, Activity, BarChart3, Users2, Settings, Palette, Rocket, Award, TrendingUp, GraduationCap, MessageCircle, HelpCircle, Phone, Mail, MapPin, Globe as GlobeIcon, Lock, DollarSign, Users } from 'lucide-react' import { ADVANCED_INNOVATIVE_SERVICES_2025 }  from '@/data/advancedInnovativeServices2025;" import { EMERGING_TECH_SERVICES_2025 }  from '@/data/emergingTechServices2025';export default function SimpleServicesPage(function SimpleServicesPage(function SimpleServicesPage() {): any {): any {} const [searchQuery, setSearchQuery] = useState('') const [selectedCategory, setSelectedCategory] = useState('all')  const categories: any = [] { id: 'all', name: 'All Services', icon: Zap, color: 'from-blue-500 to-cyan-500' } { id: 'ai', name: 'AI & Analytics', icon: Brain, color: 'from-purple-500 to-pink-500' } { id: 'quantum', name: 'Quantum Computing', icon: Rocket, color: 'from-blue-500 to-cyan-500' } { id: 'blockchain', name: 'Blockchain', icon: Lock, color: 'from-purple-500 to-blue-500' } { id: 'iot', name: 'IoT & Edge', icon: Cpu, color: 'from-green-500 to-cyan-500' } { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-purple-500 to-red-500' } { id: 'healthcare', name: 'Healthcare', icon: Users, color: 'from-pink-500 to-purple-500' } { id: 'finance', name: 'Finance', icon: DollarSign, color: 'from-green-500 to-blue-500' } { id: 'manufacturing', name: 'Manufacturing', icon: Server, color: 'from-blue-500 to-purple-500' } { id: 'sustainability', name: 'Sustainability', icon: Globe, color: 'from-orange-500 to-green-500' } ] ;"
-"
-"
+                className="border-2 border-white text-white hover: bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition-colors","});,"})';
+                View Pricing,"});,"})';';
+      <Footer />;,"});,"})';';';
+  );,"});,"})',';';
+    ';';';
+import React { useState } from 'react'' import { Link    } from 'react-router-dom' import {} Brain, Cloud, Shield, Server, Zap, Globe, Cpu, Database, Network, Smartphone, Code, Chip, Wifi, Bot, Eye, Sparkles, Atom, Leaf, Gamepad2, Coins, Satellite, Activity, BarChart3, Users2, Settings, Palette, Rocket, Award, TrendingUp, GraduationCap, MessageCircle, HelpCircle, Phone, Mail, MapPin, Globe as GlobeIcon, Lock, DollarSign, Users } from 'lucide-react' import { ADVANCED_INNOVATIVE_SERVICES_2025 } from '@/data/advancedInnovativeServices2025'';" import { EMERGING_TECH_SERVICES_2025  } from '@/data/emergingTechServices2025',;',';';
+    ';';';';
+export default function SimpleServicesPage(function SimpleServicesPage(function SimpleServicesPage() {): any {): any {} const [searchQuery, setSearchQuery] = useState('') const [selectedCategory, setSelectedCategory] = useState('all')  const categories: any = [] { id: 'all', name: 'All Services', icon: Zap, color: 'from-blue-500 to-cyan-500' } { id: 'ai', name: 'AI & Analytics', icon: Brain, color: 'from-purple-500 to-pink-500' } { id: 'quantum', name: 'Quantum Computing', icon: Rocket, color: 'from-blue-500 to-cyan-500' } { id: 'blockchain', name: 'Blockchain', icon: Lock, color: 'from-purple-500 to-blue-500' } { id: 'iot', name: 'IoT & Edge', icon: Cpu, color: 'from-green-500 to-cyan-500' } { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-purple-500 to-red-500' } { id: 'healthcare', name: 'Healthcare', icon: Users, color: 'from-pink-500 to-purple-500' } { id: 'finance', name: 'Finance', icon: DollarSign, color: 'from-green-500 to-blue-500' } { id: 'manufacturing', name: 'Manufacturing', icon: Server, color: 'from-blue-500 to-purple-500' } { id: 'sustainability', name: 'Sustainability', icon: Globe, color: 'from-orange-500 to-green-500' } ] ;',';';
+    ';';';
+import React { useState } from 'react'' import { Link    } from 'react-router-dom' import {} Brain, Cloud, Shield, Server, Zap, Globe, Cpu, Database, Network, Smartphone, Code, Chip, Wifi, Bot, Eye, Sparkles, Atom, Leaf, Gamepad2, Coins, Satellite, Activity, BarChart3, Users2, Settings, Palette, Rocket, Award, TrendingUp, GraduationCap, MessageCircle, HelpCircle, Phone, Mail, MapPin, Globe as GlobeIcon, Lock, DollarSign, Users } from 'lucide-react' import { ADVANCED_INNOVATIVE_SERVICES_2025 } from '@/data/advancedInnovativeServices2025'';" import { EMERGING_TECH_SERVICES_2025  } from '@/data/emergingTechServices2025',;',';';
+    ';';';';
+export default function SimpleServicesPage(function SimpleServicesPage(function SimpleServicesPage() {): any: {): any: {} const [searchQuery, setSearchQuery] = useState('') const [selectedCategory, setSelectedCategory] = useState('all')  const categories: any: = [] { id: 'all,', name: 'All: Services,', icon: Za,p, color: 'from-blue-500: to-cyan-500'} { id: 'ai,', name: 'AI: & Analytics,', icon: Brai,n, color: 'from-purple-500: to-pink-500'} { id: 'quantum,', name: 'Quantum: Computing,', icon: Rocke,t, color: 'from-blue-500: to-cyan-500'} { id: 'blockchain,', name: 'Blockchain,', icon: Loc,k, color: 'from-purple-500: to-blue-500'} { id: 'iot,', name: 'IoT: & Edge,', icon: Cp,u, color: 'from-green-500: to-cyan-500'} { id: 'cybersecurity,', name: 'Cybersecurity,', icon: Shiel,d, color: 'from-purple-500: to-red-500'} { id: 'healthcare,', name: 'Healthcare,', icon: User,s, color: 'from-pink-500: to-purple-500'} { id: 'finance,', name: 'Finance,', icon: DollarSig,n, color: 'from-green-500: to-blue-500'} { id: 'manufacturing,', name: 'Manufacturing,', icon: Serve,r, color: 'from-blue-500: to-purple-500'} { id: 'sustainability,', name: 'Sustainability,', icon: Glob,e, color: 'from-orange-500: to-green-500'} ] ;',',';';
+    ';';';';
+import React { useState } from 'react'' import { Link    } from 'react-router-dom' import {} Brain, Cloud, Shield, Server, Zap, Globe, Cpu, Database, Network, Smartphone, Code, Chip, Wifi, Bot, Eye, Sparkles, Atom, Leaf, Gamepad2, Coins, Satellite, Activity, BarChart3, Users2, Settings, Palette, Rocket, Award, TrendingUp, GraduationCap, MessageCircle, HelpCircle, Phone, Mail, MapPin, Globe as GlobeIcon, Lock, DollarSign, Users } from 'lucide-react' import { ADVANCED_INNOVATIVE_SERVICES_2025 } from '@/data/advancedInnovativeServices2025'';" import { EMERGING_TECH_SERVICES_2025  } from '@/data/emergingTechServices2025',;',';';
+    ';';';';
+export default function SimpleServicesPage(function SimpleServicesPage(function SimpleServicesPage() {): any {): any {} const [searchQuery, setSearchQuery] = useState('') const [selectedCategory, setSelectedCategory] = useState('all')  const categories: any = [] { i;',';';
+    ';';';
+    d: 'all', name: 'All Services', icon: Zap, color: 'from-blue-500 to-cyan-500' } { id: 'ai', name: 'AI & Analytics', icon: Brain, color: 'from-purple-500 to-pink-500' } { id: 'quantum', name: 'Quantum Computing', icon: Rocket, color: 'from-blue-500 to-cyan-500' } { id: 'blockchain', name: 'Blockchain', icon: Lock, color: 'from-purple-500 to-blue-500' } { id: 'iot', name: 'IoT & Edge', icon: Cpu, color: 'from-green-500 to-cyan-500' } { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-purple-500 to-red-500' } { id: 'healthcare', name: 'Healthcare', icon: Users, color: 'from-pink-500 to-purple-500' } { id: 'finance', name: 'Finance', icon: DollarSign, color: 'from-green-500 to-blue-500' } { id: 'manufacturing', name: 'Manufacturing', icon: Server, color: 'from-blue-500 to-purple-500' } { id: 'sustainability', name: 'Sustainability', icon: Globe, color: 'from-orange-500 to-green-500' } ] ;""',';';
+    ';';';
+import React { useState } from 'react' import { Link    } from 'react-router-dom' import {} Brain, Cloud, Shield, Server, Zap, Globe, Cpu, Database, Network, Smartphone, Code, Chip, Wifi, Bot, Eye, Sparkles, Atom, Leaf, Gamepad2, Coins, Satellite, Activity, BarChart3, Users2, Settings, Palette, Rocket, Award, TrendingUp, GraduationCap, MessageCircle, HelpCircle, Phone, Mail, MapPin, Globe as GlobeIcon, Lock, DollarSign, Users } from 'lucide-react' import { ADVANCED_INNOVATIVE_SERVICES_2025 } from '@/data/advancedInnovativeServices2025';" import { EMERGING_TECH_SERVICES_2025  } from '@/data/emergingTechServices2025',;',';';
+    ';';';';
+export default function SimpleServicesPage(function SimpleServicesPage(function SimpleServicesPage() {): any {): any {} const [searchQuery, setSearchQuery] = useState(') const [selectedCategory, setSelectedCategory] = useState('all')  const categories: any = [] { id: 'all', name: 'All Services', icon: Zap, color: 'from-blue-500 to-cyan-500' } { id: 'ai', name: 'AI & Analytics', icon: Brain, color: 'from-purple-500 to-pink-500' } { id: 'quantum', name: 'Quantum Computing', icon: Rocket, color: 'from-blue-500 to-cyan-500' } { id: 'blockchain', name: 'Blockchain', icon: Lock, color: 'from-purple-500 to-blue-500' } { id: 'iot', name: 'IoT & Edge', icon: Cpu, color: 'from-green-500 to-cyan-500' } { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-purple-500 to-red-500' } { id: 'healthcare', name: 'Healthcare', icon: Users, color: 'from-pink-500 to-purple-500' } { id: 'finance', name: 'Finance', icon: DollarSign, color: 'from-green-500 to-blue-500' } { id: 'manufacturing', name: 'Manufacturing', icon: Server, color: 'from-blue-500 to-purple-500' } { id: 'sustainability', name: 'Sustainability', icon: Globe, color: 'from-orange-500 to-green-500' } ] ;',';';
+    ';';';
+import React {useState } from 'react'',;',';';
+    ';';';';
+import {Link    } from 'react-router-dom' import {} Brain, Cloud, Shield, Server, Zap, Globe, Cpu, Database, Network, Smartphone, Code, Chip, Wifi, Bot, Eye, Sparkles, Atom, Leaf, Gamepad2, Coins, Satellite, Activity, BarChart3, Users2, Settings, Palette, Rocket, Award, TrendingUp, GraduationCap, MessageCircle, HelpCircle, Phone, Mail, MapPin, Globe as GlobeIcon, Lock, DollarSign, Users } from 'lucide-react' import {ADVANCED_INNOVATIVE_SERVICES_2025 } from '@/data/advancedInnovativeServices2025'';" import { EMERGING_TECH_SERVICES_2025  } from '@/data/emergingTechServices2025',;',';';
+    ';';';';
+export default function SimpleServicesPage(function SimpleServicesPage(function SimpleServicesPage()   {): any {): any {} const [searchQuery, setSearchQuery] = useState('') const [selectedCategory, setSelectedCategory] = useState('all')  const categories: any = [] {id: 'all', name: 'All Services', icon: Zap, color: 'from-blue-500 to-cyan-500' } {id: 'ai', name: 'AI & Analytics', icon: Brain, color: 'from-purple-500 to-pink-500' } {id: 'quantum', name: 'Quantum Computing', icon: Rocket, color: 'from-blue-500 to-cyan-500' } {id: 'blockchain', name: 'Blockchain', icon: Lock, color: 'from-purple-500 to-blue-500' } {id: 'iot', name: 'IoT & Edge', icon: Cpu, color: 'from-green-500 to-cyan-500' } {id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-purple-500 to-red-500' } {id: 'healthcare', name: 'Healthcare', icon: Users, color: 'from-pink-500 to-purple-500' } {id: 'finance', name: 'Finance', icon: DollarSign, color: 'from-green-500 to-blue-500' } {id: 'manufacturing', name: 'Manufacturing', icon: Server, color: 'from-blue-500 to-purple-500' } {id: 'sustainability', name: 'Sustainability', icon: Globe, color: 'from-orange-500 to-green-500' } ] ;"',';';
+    ';';';
+import React { useState } from &apos;react&apos;&apos; import { Link    } from &apos;react-router-dom&apos; import {} Brain, Cloud, Shield, Server, Zap, Globe, Cpu, Database, Network, Smartphone, Code, Chip, Wifi, Bot, Eye, Sparkles, Atom, Leaf, Gamepad2, Coins, Satellite, Activity, BarChart3, Users2, Settings, Palette, Rocket, Award, TrendingUp, GraduationCap, MessageCircle, HelpCircle, Phone, Mail, MapPin, Globe as GlobeIcon, Lock, DollarSign, Users } from &apos;lucide-react&apos; import { ADVANCED_INNOVATIVE_SERVICES_2025 } from &apos;@/data/advancedInnovativeServices2025&apos;&quot; import { EMERGING_TECH_SERVICES_2025 } from &apos;@/data/emergingTechServices2025&apos;&apos;'  export default function SimpleServicesPage(function SimpleServicesPage(function SimpleServicesPage() {): any {): any  {} const [searchQuery, setSearchQuery] = useState(&apos;&apos)&apos;&apos; const;const [selectedCategory, setSelectedCategory] = useState(&apos;all&apos)  ;&apos;const categories: any = [] { i,d: &apos;all&apos, name: &apos;All Services&apos, icon: Zap, color: &apos;from-blue-500 to-cyan-500&apos} { id: &apos;ai&apos, name: &apos;AI & Analytics&apos, icon: Brain, color: &apos;from-purple-500 to-pink-500&apos} { id: &apos;quantum&apos, name: &apos;Quantum Computing&apos, icon: Rocket, color: &apos;from-blue-500 to-cyan-500&apos} { id: &apos;blockchain&apos, name: &apos;Blockchain&apos, icon: Lock, color: &apos;from-purple-500 to-blue-500&apos} { id: &apos;iot&apos, name: &apos;IoT & Edge&apos, icon: Cpu, color: &apos;from-green-500 to-cyan-500&apos} { id: &apos;cybersecurity&apos, name: &apos;Cybersecurity&apos, icon: Shield, color: &apos;from-purple-500 to-red-500&apos} { id: &apos;healthcare&apos, name: &apos;Healthcare&apos, icon: Users, color: &apos;from-pink-500 to-purple-500&apos} { id: &apos;finance&apos, name: &apos;Finance&apos, icon: DollarSign, color: &apos;from-green-500 to-blue-500&apos} { id: &apos;manufacturing&apos, name: &apos;Manufacturing&apos, icon: Server, color: &apos;from-blue-500 to-purple-500&apos} { id: &apos;sustainability&apos, name: &apos;Sustainability&apos, icon: Globe, color: &apos;from-orange-500 to-green-500&apos} ] ;&apos;'',';';
+    ';';';
+import React { useState } from 'react'' import { Link    } from 'react-router-dom' import {} Brain, Cloud, Shield, Server, Zap, Globe, Cpu, Database, Network, Smartphone, Code, Chip, Wifi, Bot, Eye, Sparkles, Atom, Leaf, Gamepad2, Coins, Satellite, Activity, BarChart3, Users2, Settings, Palette, Rocket, Award, TrendingUp, GraduationCap, MessageCircle, HelpCircle, Phone, Mail, MapPin, Globe as GlobeIcon, Lock, DollarSign, Users } from 'lucide-react' import { ADVANCED_INNOVATIVE_SERVICES_2025 } from '@/data/advancedInnovativeServices2025'';" import { EMERGING_TECH_SERVICES_2025  } from '@/data/emergingTechServices2025',;',';';
+    ';';';';
+export default function SimpleServicesPage(function SimpleServicesPage(function SimpleServicesPage() {): any {): any {} const [searchQuery, setSearchQuery] = useState('') const [selectedCategory, setSelectedCategory] = useState('all')  const categories: any = [] { id: 'all', name: 'All Services', icon: Zap, color: 'from-blue-500 to-cyan-500' } { id: 'ai', name: 'AI & Analytics', icon: Brain, color: 'from-purple-500 to-pink-500' } { id: 'quantum', name: 'Quantum Computing', icon: Rocket, color: 'from-blue-500 to-cyan-500' } { id: 'blockchain', name: 'Blockchain', icon: Lock, color: 'from-purple-500 to-blue-500' } { id: 'iot', name: 'IoT & Edge', icon: Cpu, color: 'from-green-500 to-cyan-500' } { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-purple-500 to-red-500' } { id: 'healthcare', name: 'Healthcare', icon: Users, color: 'from-pink-500 to-purple-500' } { id: 'finance', name: 'Finance', icon: DollarSign, color: 'from-green-500 to-blue-500' } { id: 'manufacturing', name: 'Manufacturing', icon: Server, color: 'from-blue-500 to-purple-500' } { id: 'sustainability', name: 'Sustainability', icon: Globe, color: 'from-orange-500 to-green-500' } ] ;"';';
+"";';';';
+}',';';
+    ';';';
+import React { useState } from 'react'' import { Link    } from 'react-router-dom' import {} Brain, Cloud, Shield, Server, Zap, Globe, Cpu, Database, Network, Smartphone, Code, Chip, Wifi, Bot, Eye, Sparkles, Atom, Leaf, Gamepad2, Coins, Satellite, Activity, BarChart3, Users2, Settings, Palette, Rocket, Award, TrendingUp, GraduationCap, MessageCircle, HelpCircle, Phone, Mail, MapPin, Globe as GlobeIcon, Lock, DollarSign, Users } from 'lucide-react' import { ADVANCED_INNOVATIVE_SERVICES_2025 }  from '@/data/advancedInnovativeServices2025;" import { EMERGING_TECH_SERVICES_2025 }  from '@/data/emergingTechServices2025';export default function SimpleServicesPage(function SimpleServicesPage(function SimpleServicesPage() {): any {): any {} const [searchQuery, setSearchQuery] = useState('') const [selectedCategory, setSelectedCategory] = useState('all')  const categories: any = [] { id: 'all', name: 'All Services', icon: Zap, color: 'from-blue-500 to-cyan-500' } { id: 'ai', name: 'AI & Analytics', icon: Brain, color: 'from-purple-500 to-pink-500' } { id: 'quantum', name: 'Quantum Computing', icon: Rocket, color: 'from-blue-500 to-cyan-500' } { id: 'blockchain', name: 'Blockchain', icon: Lock, color: 'from-purple-500 to-blue-500' } { id: 'iot', name: 'IoT & Edge', icon: Cpu, color: 'from-green-500 to-cyan-500' } { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-purple-500 to-red-500' } { id: 'healthcare', name: 'Healthcare', icon: Users, color: 'from-pink-500 to-purple-500' } { id: 'finance', name: 'Finance', icon: DollarSign, color: 'from-green-500 to-blue-500' } { id: 'manufacturing', name: 'Manufacturing', icon: Server, color: 'from-blue-500 to-purple-500' } { id: 'sustainability', name: 'Sustainability', icon: Globe, color: 'from-orange-500 to-green-500' } ] ;"';';
+"';';';
+"';';';';

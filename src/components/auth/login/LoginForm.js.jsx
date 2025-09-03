@@ -1,5 +1,4 @@
-
- " " " " " " " """";,"});,"})
+" " " " " " " """";,"});,"})
 ;,"});,"})
 import { useState } from "react";"""";,"});,"})
 import { useForm } from "react-hook-form";"""";,"});,"})
@@ -100,7 +99,6 @@ export { LoginForm };,"});,"})
 export default LoginForm,"});,"})
 ;,"});,"})
 export default LoginForm,"});,"})
-export default LoginForm,"});,"})
 ;,"});,"})
 export { LoginForm };,"});,"})
 ;,"});,"})
@@ -111,17 +109,17 @@ export { LoginForm };,"});,"})
 export { LoginForm };,"});,"})
 ;,"});,"})
 export { LoginForm };,"});,"})
-' ' ' ' ' ' '''";
-' ' ' ' ' ' '''"'"
-
-""
-import React from 'react';
+' ' ' ' ' ' '''";',',';';
+    ' ' ' ' ' ' '''"'"';';';
+""',';';
+    ';';';
+import React from 'react',;',';';
+    ';';';';
 import { SEO } from '@/components/SEO';
-
 const LoginForm.Js: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+    <div className="min-h-screen bg-white">
+      <SEO
         title="LoginForm.Js - Zion Tech Group"
         description="Professional LoginForm.Js services by Zion Tech Group"
         keywords="loginform.js, technology, services"
@@ -133,8 +131,8 @@ const LoginForm.Js: React.FC = () => {
             Professional LoginForm.Js services to help your business grow.
           </p>
           <div className="flex justify-center">
-            <a 
-              href="/contact" 
+            <a
+              href="/contact"
               className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover: shadow-lg transition-all duration-300"
             >
               Get Started
@@ -142,8 +140,7 @@ const LoginForm.Js: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
-  )};
-
-export default LoginForm.Js;
-"
+    </div>';
+  )};';';
+export default LoginForm.Js;';';';
+"';';';';

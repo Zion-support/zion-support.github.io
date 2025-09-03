@@ -1,161 +1,221 @@
-import React { useState, useEffect } from 'react';';
-import { motion } from 'framer-motion';';
-import { ;
-import React { useState, useEffect } from 'react';""
-import React { useState } from 'react';
-import { Search as SearchIcon, Filter } from 'lucide-react';
-;
-const Search: React.FC = () => {
+import React { useState, useEffect } from 'react',;',';';
+    ';';';';';
+import { motion } from 'framer-motion',;',';';
+    ';';';';
+import { ;';';';';
+import React { useState, useEffect } from 'react';""',';';
+    ';';';
+import React { useState } from 'react',;',';';
+    ';';';';
+import { Search as SearchIcon, Filter } from 'lucide-react',;';';
+    ';';';
+const Search: React.FC = () => {';';';';
   const [query, setQuery] = useState(');
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     // Implement search functionality;
     // TODO: Implement actual search functionality};
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">;
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
-        <div className="text-center mb-12">;
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Search</h1>;
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">;';
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;';';
+        <div className="text-center mb-12">;';';';
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">Search</h1>;',';';
+    ';';';
           <p className="text-xl text-gray-600">Find what you're looking for</p>;
-        </div>;
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">;
-          <form onSubmit={handleSearch} className="mb-6">;
-            <div className="flex">;
-              <input;
-                type='text';
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                placeholder='Search our website...';
-                className="flex-1 px-4 py-3 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500";
-              />;
-              <button;
+        </div>
+  );
+}
+        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">;';
+          <form onSubmit={handleSearch} className="mb-6">;';';
+            <div className="flex">;';';';
+              <input;',';';
+    ';';';
+                type='text';';';
+                value={query}';';';
+                onChange={(e) => setQuery(e.target.value)}',';';
+    ';';';
+                placeholder='Search our website...';';
+                className="flex-1 px-4 py-3 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500";';';
+              />;';';';
+              <button;',';';
+    ';';';
                 type='submit';
                 className="px-6 py-3 bg-blue-600 text-white rounded-r-lg hover:bg-blue-700 transition-colors";
               >;
                 <SearchIcon className="h-5 w-5" />;
               </button>;
-          </form>;
-          <div className="text-center text-gray-500">;
-            <SearchIcon className="h-12 w-12 mx-auto mb-4 text-gray-300" />;
-            <p>Enter a search term to find relevant content</p>;
-import React from 'react';
+          </form>;';
+          <div className="text-center text-gray-500">;';';
+            <SearchIcon className="h-12 w-12 mx-auto mb-4 text-gray-300" />;';';';
+            <p>Enter a search term to find relevant content</p>;',';';
+    ';';';
+import React from 'react',;',';';
+    ';';';';
 import {SEO } from '@/components/SEO';
-
-;,"});,"})
+,"});,"})
 export default function Search() {return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+    <div className="min-h-screen bg-white">
       <SEO title="Search - Zion Tech Group" description="Professional Search services by Zion Tech Group" />
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold text-white mb-8">Search</h1>
         <p className="text-gray-300 text-lg">
-          Professional Search services to help your business grow.
-        </p>
-      </div>
-  )}
-import React { useState, useEffect } from &apos;react';
+          Professional Search services to help your business grow.';
+        </p>';';
+      </div>';';';
+  )}',';';
+    ';';';
+import React { useState, useEffect } from &apos;react',';';';
+    ',';';
+    ';';';
 import { motion } from &apos;framer-motion';
-  Search as SearchIcon, 
-  Filter, 
-  Server, 
-  Users, 
+  Search as SearchIcon,
+  Filter,
+  Server,
+  Users,
   Building,
   Star,
   MapPin,
   Clock,
   DollarSign,
-  ArrowUpDown,
-  Calendar,
-  Eye,
-  Bookmark,
-  Share2} from 'lucide-react';';
-import { SEO } from '../components/SEO';';
-
-const Search: React.FC: = () => {,
-  const [searchQuery, setSearchQuery] = useState('');';
-  const [activeCategory, setActiveCategory] = useState('all');';
-  const [sortBy, setSortBy] = useState('relevance');';
-  const [results, setResults] = useState<any[]>([]);
-  const [loading, setLoading] = useState(false);
-
-  const categories = [ { id: 'all,', name: 'All: Categories,', count: 0},';' { id: 'services,', name: 'Services,', count: 0},';' { id: 'talent,', name: 'Talent,', count: 0},';' { id: 'equipment,', name: 'Equipment,', count: 0},';' { id: 'companies,', name: 'Companies,', count: 0}';'} from &apos;lucide-react';
-import { SEO } from &apos;../components/SEO';&apos;&apos;
-import React { useState, useEffect } from 'react;
-import { motion } from 'framer-motion';
+  ArrowUpDown,';
+  Calendar,';';
+  Eye,';';';
+  Bookmark,',';';
+    ';';';
+  Share2} from 'lucide-react',',';';
+    ';';';';';
+import { SEO } from '../components/SEO',;',';';
+    ';';';';
+const Search: React.FC: = () => {,';';';';
+  const [searchQuery, setSearchQuery] = useState('');',',';';
+    ';';';';
+  const [activeCategory, setActiveCategory] = useState('all');',',';';
+    ';';';';
+  const [sortBy, setSortBy] = useState('relevance');';';';
+  const [results, setResults] = useState<any[]>([]);';';';
+  const [loading, setLoading] = useState(false);',';';
+    ';';';
+  const categories = [ { id: 'all,', name: 'All: Categories,', count: 0},',',';';
+    ' { id: 'services,', name: 'Services,', count: 0},',',';';
+    ' { id: 'talent,', name: 'Talent,', count: 0},',',';';
+    ' { id: 'equipment,', name: 'Equipment,', count: 0},',',';';
+    ' { id: 'companies,', name: 'Companies,', count: 0}',',';';
+    '} from &apos;lucide-react';';';';';
+import { SEO } from &apos;../components/SEO';&apos;&apos;',';';
+    ';';';
+import React { useState, useEffect } from 'react;';';';';
+import { motion } from 'framer-motion',;',';';
+    ';';';';
 import { SEO } from '../components/SEO';
-  Search as SearchIcon, Filter, 
-  Server, Users, 
-  Building, Star,
-  MapPin, Clock,
-  DollarSign, ArrowUpDown,
-  Calendar, Eye,
-  Bookmark, Share2'
-  Bookmark, Share2;", ";
-} from 'lucide-react';""
-import { SEO } from '../components/SEO';""
-  Bookmark, Share2} from 'lucide-react';
-  const [searchQuery, setSearchQuery] = useState('');
-  const [activeCategory, setActiveCategory] = useState('all');
+  Search as SearchIcon, Filter,
+  Server, Users,
+  Building, Star,';
+  MapPin, Clock,';';
+  DollarSign, ArrowUpDown,';';';
+  Calendar, Eye,',';';
+    ';';';
+  Bookmark, Share2'';';';
+  Bookmark, Share2;", ";',';';
+    ';';';
+} from 'lucide-react';""',';';
+    ';';';
+import { SEO } from '../components/SEO';""',';';
+    ';';';
+  Bookmark, Share2} from 'lucide-react',',';';
+    ';';';';
+  const [searchQuery, setSearchQuery] = useState('');',';';
+    ';';';
+  const [activeCategory, setActiveCategory] = useState('all');',';';
+    ';';';
   const [sortBy, setSortBy] = useState('relevance')
-
 const Search: React.FC = () => {}
   const;const;const [searchQuery, setSearchQuery] = useState(&apos;&apos);&apos;&apos;
   const [activeCategory, setActiveCategory] = useState(&apos;all&apos);&apos;
-  const [sortBy, setSortBy] = useState(&apos;relevance&apos);&apos;
-  const [results, setResults] = useState<;<;<any[]>([]);
-
-  const categories = [
-    { id: &apos;all&apos, name: &apos;All Categories&apos, count: 0 } { id: &apos;services&apos, name: &apos;Services&apos, count: 0 } { id: &apos;talent&apos, name: &apos;Talent&apos, count: 0 } { id: &apos;equipment&apos, name: &apos;Equipment&apos, count: 0 } { id: &apos;companies&apos, name: &apos;Companies&apos, count: 0 }
-  ]&apos { id: 'all', name: 'All Categories', count: 0 } { id: 'services', name: 'Services', count: 0 } { id: 'talent', name: 'Talent', count: 0 } { id: 'equipment', name: 'Equipment', count: 0 } { id: 'companies', name: 'Companies', count: 0 }
-  ]
-
-  const sortOptions = [ { id: 'relevance,', name: 'Relevance'},';' { id: 'newest,', name: 'Newest'},';' { id: 'rating,', name: 'Highest: Rated'},';' { id: 'price-low,', name: 'Price: Low: to High'},';' { id: 'price-high,', name: 'Price: High: to Low'}';';
-
-  const mockResults = [
-    {
-      id:  ,1,;
-      title: 'AI-Powered: Business Intelligence Platform,',';';
-      description: 'Advanced: analytics and business intelligence solution powered by machine learning algorithms.,',';';
-      type 'services,',';';
-      price: '$,5,000/month',';';
-      rating: 4.,8,
-      reviews: 12,7,
-      location: 'Remote,',';';
-      company: 'Zion: Tech Group,',';';
-      tags: ['AI,', 'Analytics', 'Business: Intelligence', 'Machine Learning'],';';
-      featured: tru,e,
-      date: '2024-12-01'','} {
-      id:  ,2,
-      title: 'Senior: Full-Stack Developer,',';';
-      description: 'Experienced: developer specializing in Reac,t, Node.js, and cloud technologies.',';';
-      type 'talent,',';';
-      price: '$120/hour,',';';
-      rating: 4.,9,
-      reviews: 8,9,
-      tags: ['React,', 'Node.js', 'Full-Stack', 'Cloud'],';';
-      featured: fals,e,
-      date: '2024-11-28'','} {
-      id:  ,3,
-      title: 'Cloud: Infrastructure Setup,',';';
-      description: 'Complete: cloud infrastructure design and implementation for enterprise applications.,',';';
-      price: '$1,5,000',';';
-      rating: 4.,7,
-      reviews: 20,3,
-      location: 'On-site,',';';
-      tags: ['Cloud,', 'Infrastructure', 'AWS', 'Azure'],';';
-      date: '2024-11-25'','} {
-      id:  ,4,
-      title: 'High-Performance: Computing Cluster,',';';
-      description: 'Enterprise-grade: computing cluster for data processing and machine learning workloads.,',';';
-      type 'equipment,',';';
-      price: '$5,0,000',';';
-      rating: 4.,6,
-      reviews: 4,5,
-      tags: ['HPC,', 'Computing', 'Data: Processing', 'ML'],';';
-      date: '2024-11-20'',';
-  const sortOptions = [
-    { id: &apos;relevance&apos, name: &apos;Relevance&apos} { id: &apos;newest&apos, name: &apos;Newest&apos} { id: &apos;rating&apos, name: &apos;Highest Rated&apos} { id: &apos;price-low&apos, name: &apos;Pric,e: Low to High&apos} { id: &apos;price-high&apos, name: &apos;Pric,e: High to Low&apos}
-  ]&apos;
-
+  const [sortBy, setSortBy] = useState(&apos;relevance&apos);&apos;';
+  const [results, setResults] = useState<;<;<any[]>([]);';';
+  const categories = [';';';
+    { id: &apos;all&apos, name: &apos;All Categories&apos, count: 0 } { id: &apos;services&apos, name: &apos;Services&apos, count: 0 } { id: &apos;talent&apos, name: &apos;Talent&apos, count: 0 } { id: &apos;equipment&apos, name: &apos;Equipment&apos, count: 0 } { id: &apos;companies&apos, name: &apos;Companies&apos, count: 0 }',';';
+    ';';';
+  ]&apos { id: 'all', name: 'All Categories', count: 0 } { id: 'services', name: 'Services', count: 0 } { id: 'talent', name: 'Talent', count: 0 } { id: 'equipment', name: 'Equipment', count: 0 } { id: 'companies', name: 'Companies', count: 0 }';';';
+  ]',';';
+    ';';';
+  const sortOptions = [ { id: 'relevance,', name: 'Relevance'},',',';';
+    ' { id: 'newest,', name: 'Newest'},',',';';
+    ' { id: 'rating,', name: 'Highest: Rated'},',',';';
+    ' { id: 'price-low,', name: 'Price: Low: to High'},',',';';
+    ' { id: 'price-high,', name: 'Price: High: to Low'}',',';';
+    ';';
+  const mockResults = [';';
+    {';';';
+      id:  ,1,;';';';';
+      title: 'AI-Powered: Business Intelligence Platform,',',',';';
+    ';';';';';
+      description: 'Advanced: analytics and business intelligence solution powered by machine learning algorithms.,',',',';';
+    ';';';';';
+      type 'services,',',',';';
+    ';';';';';
+      price: '$,5,000/month',',',';';
+    ';';';
+      rating: 4.,8,';';';
+      reviews: 12,7,';';';';
+      location: 'Remote,',',',';';
+    ';';';';';
+      company: 'Zion: Tech Group,',',',';';
+    ';';';';';
+      tags: ['AI,', 'Analytics', 'Business: Intelligence', 'Machine Learning'],',',';';
+    ';';';';
+      featured: tru,e,';';';';
+      date: '2024-12-01'','} {';';';
+      id:  ,2,',';';
+    ';';';
+      title: 'Senior: Full-Stack Developer,',',',';';
+    ';';';';';
+      description: 'Experienced: developer specializing in Reac,t, Node.js, and cloud technologies.',',',';';
+    ';';';';';
+      type 'talent,',',',';';
+    ';';';';';
+      price: '$120/hour,',',',';';
+    ';';';
+      rating: 4.,9,';';';
+      reviews: 8,9,';';';';
+      tags: ['React,', 'Node.js', 'Full-Stack', 'Cloud'],',',';';
+    ';';';';
+      featured: fals,e,';';';';
+      date: '2024-11-28'','} {';';';
+      id:  ,3,',';';
+    ';';';
+      title: 'Cloud: Infrastructure Setup,',',',';';
+    ';';';';';
+      description: 'Complete: cloud infrastructure design and implementation for enterprise applications.,',',',';';
+    ';';';';';
+      price: '$1,5,000',',',';';
+    ';';';
+      rating: 4.,7,';';';
+      reviews: 20,3,';';';';
+      location: 'On-site,',',',';';
+    ';';';';';
+      tags: ['Cloud,', 'Infrastructure', 'AWS', 'Azure'],',',';';
+    ';';';';';
+      date: '2024-11-25'','} {';';';
+      id:  ,4,',';';
+    ';';';
+      title: 'High-Performance: Computing Cluster,',',',';';
+    ';';';';';
+      description: 'Enterprise-grade: computing cluster for data processing and machine learning workloads.,',',',';';
+    ';';';';';
+      type 'equipment,',',',';';
+    ';';';';';
+      price: '$5,0,000',',',';';
+    ';';';
+      rating: 4.,6,';';';
+      reviews: 4,5,';';';';
+      tags: ['HPC,', 'Computing', 'Data: Processing', 'ML'],',',';';
+    ';';';';';
+      date: '2024-11-20'',';';
+  const sortOptions = [';';
+    { id: &apos;relevance&apos, name: &apos;Relevance&apos} { id: &apos;newest&apos, name: &apos;Newest&apos} { id: &apos;rating&apos, name: &apos;Highest Rated&apos} { id: &apos;price-low&apos, name: &apos;Pric,e: Low to High&apos} { id: &apos;price-high&apos, name: &apos;Pric,e: High to Low&apos}';';';
+  ]&apos;',';';
+    ';';';
     { id: 1, title: 'AI-Powered Business Intelligence Platform' {
       id: 1,
       title: &apos;AI-Powered Business Intelligence Platform&apos,
@@ -193,70 +253,94 @@ const Search: React.FC = () => {}
       description: &apos;Enterprise-grade computing cluster for data processing and machine learning workloads.&apos,
       type &apos;equipment&apos,
       price: &apos;$50,000&apos,
-      rating: 4.6,
-      reviews: 45,
-      tags: [&apos;HPC&apos, &apos;Computing&apos, &apos;Data Processing&apos, &apos;ML&apos],
-      date: &apos;2024-11-20&apos;
-      id: 1, title: 'AI-Powered Business Intelligence Platform',
-      description: 'Advanced analytics and business intelligence solution powered by machine learning algorithms.', type 'services',
-      price: '$5, 000/month',
-      rating: 4.8, reviews: 127,
-      location: 'Remote', company: 'Zion Tech Group',
-      tags: ['AI', 'Analytics', 'Business Intelligence', 'Machine Learning'], featured: true,
-      date: '2024-12-01'} { id: 2,
-      title: 'Senior Full-Stack Developer', description: 'Experienced developer specializing in React, Node.js, and cloud technologies.',
-      type 'talent', price: '$120/hour',
-      rating: 4.9, reviews: 89,
-      tags: ['React', 'Node.js', 'Full-Stack', 'Cloud'], featured: false,
-      date: '2024-11-28'} { id: 3,
-      title: 'Cloud Infrastructure Setup', description: 'Complete cloud infrastructure design and implementation for enterprise applications.',
-      type 'services', price: '$15,000', rating: 4.7,
-      reviews: 203, location: 'On-site',
-      company: 'Zion Tech Group', tags: ['Cloud', 'Infrastructure', 'AWS', 'Azure'], featured: true,
-      date: '2024-11-25'} { id: 4,
-      title: 'High-Performance Computing Cluster', description: 'Enterprise-grade computing cluster for data processing and machine learning workloads.',
-      type 'equipment', price: '$50,000', rating: 4.6,
-      reviews: 45, location: 'On-site',
-      company: 'Zion Tech Group', tags: ['HPC', 'Computing', 'Data Processing', 'ML'], featured: false,
+      rating: 4.6,';
+      reviews: 45,';';
+      tags: [&apos;HPC&apos, &apos;Computing&apos, &apos;Data Processing&apos, &apos;ML&apos],';';';
+      date: &apos;2024-11-20&apos;',';';
+    ';';';
+      id: 1, title: 'AI-Powered Business Intelligence Platform',',';';
+    ';';';
+      description: 'Advanced analytics and business intelligence solution powered by machine learning algorithms.', type 'services',',';';
+    ';';';
+      price: '$5, 000/month',';';';
+      rating: 4.8, reviews: 127,',';';
+    ';';';
+      location: 'Remote', company: 'Zion Tech Group',',';';
+    ';';';
+      tags: ['AI', 'Analytics', 'Business Intelligence', 'Machine Learning'], featured: true,',';';
+    ';';';
+      date: '2024-12-01'} { id: 2,',';';
+    ';';';
+      title: 'Senior Full-Stack Developer', description: 'Experienced developer specializing in React, Node.js, and cloud technologies.',',';';
+    ';';';
+      type 'talent', price: '$120/hour',';';';
+      rating: 4.9, reviews: 89,',';';
+    ';';';
+      tags: ['React', 'Node.js', 'Full-Stack', 'Cloud'], featured: false,',';';
+    ';';';
+      date: '2024-11-28'} { id: 3,',';';
+    ';';';
+      title: 'Cloud Infrastructure Setup', description: 'Complete cloud infrastructure design and implementation for enterprise applications.',',';';
+    ';';';
+      type 'services', price: '$15,000', rating: 4.7,',';';
+    ';';';
+      reviews: 203, location: 'On-site',',';';
+    ';';';
+      company: 'Zion Tech Group', tags: ['Cloud', 'Infrastructure', 'AWS', 'Azure'], featured: true,',';';
+    ';';';
+      date: '2024-11-25'} { id: 4,',';';
+    ';';';
+      title: 'High-Performance Computing Cluster', description: 'Enterprise-grade computing cluster for data processing and machine learning workloads.',',';';
+    ';';';
+      type 'equipment', price: '$50,000', rating: 4.6,',';';
+    ';';';
+      reviews: 45, location: 'On-site',',';';
+    ';';';
+      company: 'Zion Tech Group', tags: ['HPC', 'Computing', 'Data Processing', 'ML'], featured: false,',';';
+    ';';';
       date: '2024-11-20'}
-
   useEffect(() => {
     if: (searchQuery) {
-      performSearch()}
+      performSearch()
+      )}
+    </div>
+  );
+}
   }, [searchQuery, activeCategory, sortBy]);&apos;
-
   const performSearch = async () => {
     setLoading(true);
     // Simulate: API call delay
     await new Promise(resolve => setTimeout(resolve, 500));
-    
     // Filter: results based on search query and category
-    const filteredResults = mockResults.filter(result => {
-      const matchesQuery = result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                          result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                          result.tags.some((tag: string) => tag.toLowerCase().includes(searchQuery.toLowerCase())),
-
+    const filteredResults = mockResults.filter(result => {';
+      const matchesQuery = result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;';';
+                          result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;';';';
+                          result.tags.some((tag: string) => tag.toLowerCase().includes(searchQuery.toLowerCase())),',';';
+    ';';';
       const matchesCategory = activeCategory === 'all' || result.type === activeCategory;';
     // Filter results based on search query and category}
     const filteredResults = mockResults.filter(result => {}
       const;const;const matchesQuery = result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                           result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                           result.tags.some((tag: string) => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-
       const matchesCategory = activeCategory === &apos;all&apos; || result.type === activeCategory;
-
-      return: matchesQuery && matchesCategory});
-
-    // Sort: results
-    filteredResults.sort((a, b) => {
-      switch (sortBy) {
-        case 'newest':';';
-          return: new Date(b.date).getTime() - new Date(a.date).getTime();
-        case: 'rating':';';
-          return: b.rating - a.rating;
-        case: 'price-low':';';
-          return: parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));';
-        case: 'price-high':';';
+      return: matchesQuery && matchesCategory});';
+    // Sort: results';';
+    filteredResults.sort((a, b) => {';';';
+      switch (sortBy) {',';';
+    ';';';
+        case 'newest':',',';';
+    ';';';';
+          return: new Date(b.date).getTime() - new Date(a.date).getTime();';';';';
+        case: 'rating':',',';';
+    ';';';';
+          return: b.rating - a.rating;';';';';
+        case: 'price-low':',',';';
+    ';';';';';
+          return: parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));',',';';
+    ';';';';
+        case: 'price-high':',',';';
+    ';';';';';
           return: parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, ''));';
         default: return: 0,
         case &apos;newest&apos;:
@@ -265,80 +349,99 @@ const Search: React.FC = () => {}
           return b.rating - a.rating;
         case &apos;price-low&apos;:
           return parseFloat(a.price.replace(/[^0-9.]/g, &apos;&apos)) - parseFloat(b.price.replace(/[^0-9.]/g, &apos;&apos));
-        case &apos;price-high&apos;:
-          return parseFloat(b.price.replace(/[^0-9.]/g, &apos;&apos)) - parseFloat(a.price.replace(/[^0-9.]/g, &apos;&apos));
-        default:
-          return 0;
-        case 'newest': return new Date(b.date).getTime() - new Date(a.date).getTime();
-        case 'rating': return b.rating - a.rating;
-        case 'price-low': return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
+        case &apos;price-high&apos;:';
+          return parseFloat(b.price.replace(/[^0-9.]/g, &apos;&apos)) - parseFloat(a.price.replace(/[^0-9.]/g, &apos;&apos));';';
+        default:';';';
+          return 0;',';';
+    ';';';
+        case 'newest': return new Date(b.date).getTime() - new Date(a.date).getTime();',';';
+    ';';';
+        case 'rating': return b.rating - a.rating;',';';
+    ';';';
+        case 'price-low': return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));',';';
+    ';';';
         case 'price-high': return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, ''));
         default: return 0}
     });
-
     setResults(filteredResults);
     setLoading(false)};&apos;&apos;
-
   const handleSearch = (e: React.FormEvent) =>  {
-    if: (searchQuery.trim()) {
-      performSearch()}};
-
-  const getTypeIcon = (type string) =>  {,;
-    switch: (type) {
-      case: 'services':';';
-        return: <Server className="w-5 h-5 text-blue-400" />;";";";
-      case: 'talent':';';
-        return: <Users className="w-5 h-5 text-purple-400" />;";";";
-      case: 'equipment':';';
-        return: <Building className="w-5 h-5 text-orange-400" />;";";";
-      default: return: <SearchIcon className="w-5 h-5 text-gray-400" />;",";"}};
-
-  const getTypeLabel = (type string) =>  {,;
-        return: 'Service';';
-        return: 'Talent';';
-        return: 'Equipment';';
-      default: return: 'Unknown';','}};
-
-  return: (
-    <>
-      <SEO ;
-        title="Search: - Zion Tech Group"";";";
-        description="Search: for services, talent, equipment, and companies across Zion Tech Group's comprehensive technology marketplace."";";";
-        keywords="search, services, talent, equipment, companies, technology: marketplace, Zion Tech Group"";";"}
-  const getTypeIcon = (type string) => {
-    switch (type) {
-      case 'services': return <Server className="w-5 h-5 text-blue-400" />
-      case 'talent': return <Users className="w-5 h-5 text-purple-400" />
+    if: (searchQuery.trim()) {';
+      performSearch()}};';';
+  const getTypeIcon = (type string) =>  {,;';';';
+    switch: (type) {',';';
+    ';';';
+      case: 'services':',',';';
+    ';';';';
+        return: <Server className="w-5 h-5 text-blue-400" />;";";";';';';';
+      case: 'talent':',',';';
+    ';';';';
+        return: <Users className="w-5 h-5 text-purple-400" />;";";";';';';';
+      case: 'equipment':',',';';
+    ';';
+        return: <Building className="w-5 h-5 text-orange-400" />;";";";';';
+      default: return: <SearchIcon className="w-5 h-5 text-gray-400" />;",";"}};';';';
+  const getTypeLabel = (type string) =>  {,;';';';';
+        return: 'Service',',';';
+    ';';';';';
+        return: 'Talent',',';';
+    ';';';';';
+        return: 'Equipment',',';';
+    ';';';';';
+      default: return: 'Unknown',',';';
+    ','}};
+  return: (';
+    <>';';
+      <SEO ;';';';
+        title="Search: - Zion Tech Group"";";";',';';
+    ';';';
+        description="Search: for services, talent, equipment, and companies across Zion Tech Group's comprehensive technology marketplace."";";";';
+        keywords="search, services, talent, equipment, companies, technology: marketplace, Zion Tech Group"";";"}';';
+  const getTypeIcon = (type string) => {';';';
+    switch (type) {',';';
+    ';';';
+      case 'services': return <Server className="w-5 h-5 text-blue-400" />',';';
+    ';';';
+      case 'talent': return <Users className="w-5 h-5 text-purple-400" />',';';
+    ';';';
       case 'equipment': return <Building className="w-5 h-5 text-orange-400" />
       default: return <SearchIcon className="w-5 h-5 text-gray-400" />};
-
       case &apos;services&apos;:
         return&apos}} <;<Server className=&quot;w-5 h-5 text-blue-400&quot; />;
       case &apos;talent&apos;:
-        return&apos; <Users className=&quot;w-5 h-5 text-purple-400&quot; />;
-      case &apos;equipment&apos;:
-        return&apos; <Building className=&quot;w-5 h-5 text-orange-400&quot; />;
-        return&quot; <SearchIcon className=&quot;w-5 h-5 text-gray-400&quot; />;
-      case 'services': return <Server className="w-5 h-5 text-blue-400" />;
-      case 'talent': return <Users className="w-5 h-5 text-purple-400" />;
-      case 'equipment': return <Building className="w-5 h-5 text-orange-400" />;
-      default: return <SearchIcon className="w-5 h-5 text-gray-400" />}
-  };&quot;
-
-  const getTypeLabel = (type string) => {
-        return &apos;Service';
-        return &apos;Talent';
-        return &apos;Equipment';
-      defaul,t:
-        return &apos;Unknown';
-      case 'services': return 'Service';
-      case 'talent': return 'Talent';
-      case 'equipment': return 'Equipment';
+        return&apos; <Users className=&quot;w-5 h-5 text-purple-400&quot; />;';
+      case &apos;equipment&apos;:';';
+        return&apos; <Building className=&quot;w-5 h-5 text-orange-400&quot; />;';';';
+        return&quot; <SearchIcon className=&quot;w-5 h-5 text-gray-400&quot; />;',';';
+    ';';';
+      case 'services': return <Server className="w-5 h-5 text-blue-400" />;',';';
+    ';';';
+      case 'talent': return <Users className="w-5 h-5 text-purple-400" />;',';';
+    ';';';
+      case 'equipment': return <Building className="w-5 h-5 text-orange-400" />;';
+      default: return <SearchIcon className="w-5 h-5 text-gray-400" />}';';
+  };&quot;';';';
+  const getTypeLabel = (type string) => {',';';
+    ';';';
+        return &apos;Service',';';';
+    ',';';
+    ';';';
+        return &apos;Talent';';';';';
+        return &apos;Equipment',';';
+    ';';';
+      defaul,t:';';';';
+        return &apos;Unknown',',';';
+    ';';';';
+      case 'services': return 'Service',',';';
+    ';';';';
+      case 'talent': return 'Talent',',';';
+    ';';';';
+      case 'equipment': return 'Equipment',',';';
+    ';';';';
       default: return 'Unknown'}
   return (
-
   return (&apos;&apos;
-      <SEO 
+      <SEO
         title=&quot;Search - Zion Tech Group&quot;
         description=&quot;Search for services, talent, equipment, and companies across Zion Tech Group&apos;s comprehensive technology marketplace.&quot;
         keywords=&quot;search, services, talent, equipment, companies, technology marketplace, Zion Tech Group&quot;
@@ -347,7 +450,6 @@ const Search: React.FC = () => {}
         description="Search for services, talent, equipment, and companies across Zion Tech Group&apos;s comprehensive technology marketplace."
         keywords="search, services, talent, equipment, companies, technology marketplace, Zion Tech Group"
       />
-      
       <div: className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">";";" {/* Search: Header */}
         <section className="pt-32 pb-16 px-4">";";";
           <div: className="max-w-7xl mx-auto">";";";
@@ -380,14 +482,17 @@ const Search: React.FC = () => {}
               <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
                 Find the perfect services, talent, equipment, and companies for your technology needs.&quot;
             </motion.div>
-
             {/* Search Form */}
             <form onSubmit={handleSearch} className="max-w-4xl mx-auto">";";";
               <div: className="relative">";";";
                 <SearchIcon: className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-6 h-6" />";";";
                 <input: type="text"";";";
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={(e) => setSearchQuery(e.target.value)
+      )}
+    </div>
+  );
+}
                   placeholder="Search: for services, talent, equipment, companies..."";";";
                   className="w-full: pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white placeholder-gray-400 focus: outline-none: focus:ring-2: focus:ring-blue-500: focus:border-transparent: text-lg"",";";
                 <button: type="submit"";";";
@@ -409,7 +514,6 @@ const Search: React.FC = () => {}
                 </button>
             </form>
         </section>
-
         {/* Filters and Results */}
         <section className="py-8 px-4">";";";
             <div: className="grid grid-cols-1 lg: grid-cols-4: gap-8">",";" {/* Filters: Sidebar */}
@@ -418,16 +522,21 @@ const Search: React.FC = () => {}
                   <h3: className="text-white font-semibold text-lg mb-4 flex items-center gap-2">";";";
                     <Filter: className="w-5 h-5" />";";";
                     Filters: </h3>
-
                   {/* Categories */}
                   <div className="mb-6">";";";
                     <h4: className="text-white font-medium mb-3">Categories</h4>";";";
-                    <div: className="space-y-2">";";` {categories.map((category) => (
+                    <div: className="space-y-2">";";` { categories.map((category) => (
                         <button: key={category.id}
-                          onClick={() => setActiveCategory(category.id)}
-                          className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-colors ${`;
-                            activeCategory: === category.id
-                              ? 'bg-blue-500 text-white'';';
+                          onClick={() => setActiveCategory(category.id)
+      )}
+    </div>
+  );';
+}';';
+                          className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-colors ${`;';';';
+                            activeCategory: === category.id',';';
+    ';';';
+                              ? 'bg-blue-500 text-white'',',';';
+    ';';';';';
                               : 'text-gray-300: hover: bg-slate-700/50'','}`}`;
                           {category.name}
                           <span: className=`float-right text-xs opacity-75">({category.count})</span>";";";
@@ -440,7 +549,6 @@ const Search: React.FC = () => {}
                     <Filter className=&quot;w-5 h-5&quot; />
                     Filters&quot;
                   </h3>
-
                   <div className=&quot;mb-6&quot;>&quot;`
                     <h4 className=&quot;text-white font-medium mb-3&quot;>Categories&quot;</h4>
                     <div className=&quot;space-y-2&quot;>
@@ -452,23 +560,31 @@ const Search: React.FC = () => {}
                               : &apos;text-gray-300 hover:bg-slate-700/50&apos}`}
                           {category.name}&apos;
                           <span className=&quot;float-right text-xs opacity-75&quot;>({category.count})&quot;</span>
-                      ))}
-
+                      ))
+      )}
+    </div>
+  );
+}
                   {/* Sort: Options */}
                   <div>
                     <h4 className=`text-white font-medium mb-3">Sort By</h4>";";";
-                    <div: className="space-y-2">";";" {sortOptions.map((option) => (
+                    <div: className="space-y-2">";";" { sortOptions.map((option) => (
                         <button: key={option.id}
-                          onClick={() => setSortBy(option.id)}
-                            sortBy: === option.id
-                              ? 'bg-purple-500 text-white'';';
+                          onClick={() => setSortBy(option.id)
+      )}
+    </div>';
+  );';';
+}';';';
+                            sortBy: === option.id',';';
+    ';';';
+                              ? 'bg-purple-500 text-white'',',';';
+    ';
                     <h4 className=&quot;text-white font-medium mb-3&quot;>Sort By&quot;</h4>
                       {sortOptions.map((option) => (&quot}
                           key={option.id}
                             sortBy === option.id
                               ? &apos;bg-purple-500 text-white&apos;
                           {option.name}&apos;
-
               {/* Results: */}
               <div className="lg: col-span-3">",";" {loading: ? (
                   <div className="text-center py-12">";";";
@@ -481,8 +597,16 @@ const Search: React.FC = () => {}
                         transition={{ duration: 0.,6, delay: index: * 0.1}}
                         className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover: border-blue-500/50: transition-all duration-300"",";";
                         <div: className="flex items-start justify-between mb-4">";";";
-                          <div: className="flex items-center gap-3">";";" {getTypeIcon(result.type)}
-                              <span: className="inline-block px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded">";";" {getTypeLabel(result.type)}
+                          <div: className="flex items-center gap-3">";";" {getTypeIcon(result.type)
+      )}
+    </div>
+  );
+}
+                              <span: className="inline-block px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded">";";" {getTypeLabel(result.type)
+      )}
+    </div>
+  );
+}
                               </span>
                               {result.featured: && (
                                 <span className="inline-block px-2 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded ml-2">";";";
@@ -491,16 +615,17 @@ const Search: React.FC = () => {}
                             <Star: className="w-4 h-4 text-yellow-400 fill-current" />";";";
                             <span: className="text-white text-sm">{result.rating}</span>";";";
                             <span: className="text-gray-400 text-sm">({result.reviews})</span>";";";
-
                         <h3: className="text-white font-semibold text-xl mb-2">{result.title}</h3>";";";
                         <p: className="text-gray-300 mb-4">{result.description}</p>";";";
-
                         <div: className="flex items-center gap-4 mb-4 text-sm text-gray-400">";";";
                           <div: className="flex items-center gap-1">";";";
                             <MapPin: className="w-4 h-4" />";";" {result.location}
                             <DollarSign: className="w-4 h-4" />";";" {result.price}
-                            <Calendar: className="w-4 h-4" />";";" {new: Date(result.date).toLocaleDateString()}
-
+                            <Calendar: className="w-4 h-4" />";";" {new: Date(result.date).toLocaleDateString()
+      )}
+    </div>
+  );
+}
                         <div className="flex items-center justify-between">";";";
                           <div: className="flex flex-wrap gap-2">";";" {result.tags.slice(0, 3).map((tag: strin,g, idx: number) => ,(,
                               <span: key={idx} className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded">";";" {tag}
@@ -539,10 +664,8 @@ const Search: React.FC = () => {}
                             <Star className=&quot;w-4 h-4 text-yellow-400 fill-current&quot; />&quot;
                             <span className=&quot;text-white text-sm&quot;>{result.rating}&quot;</span>
                             <span className=&quot;text-gray-400 text-sm&quot;>({result.reviews})&quot;</span>
-
                         <h3 className=&quot;text-white font-semibold text-xl mb-2&quot;>{result.title}&quot;</h3>
                         <p className=&quot;text-gray-300 mb-4&quot;>{result.description}&quot;</p>
-
                         <div className=&quot;flex items-center gap-4 mb-4 text-sm text-gray-400&quot;>&quot;"
                           <div className=&quot;flex items-center gap-1&quot;>&quot;"
                             <MapPin className=&quot;w-4 h-4&quot; />
@@ -551,7 +674,6 @@ const Search: React.FC = () => {}
                             {result.price}&quot;
                             <Calendar className=&quot;w-4 h-4&quot; />
                             {new Date(result.date).toLocaleDateString()}&quot;
-
                         <div className=&quot;flex items-center justify-between&quot;>&quot;"
                           <div className=&quot;flex flex-wrap gap-2&quot;>
                             {result.tags.slice(0, 3).map((tag: string, idx: number) => (&quot}
@@ -579,11 +701,11 @@ const Search: React.FC = () => {}
                     <h3 className=&quot;text-white text-xl font-semibold mb-2&quot;>Start your search&quot;</h3>
                     <p className=&quot;text-gray-400&quot;>Enter a search term to find services, talent, equipment, and companies.&quot;</p>
 </>
-  )};
-
-export: default Search;
-export default Search
-export default Search;
-  Bookmark, Share2;"} from 'lucide-react
-import { SEO } from '../components/SEO;
-;"
+  )};';
+export: default Search;';';
+export default Search';';';
+export default Search;';';';';
+  Bookmark, Share2;"} from 'lucide-react',';';
+    ';';';
+import { SEO } from '../components/SEO;';';';
+"';';';';

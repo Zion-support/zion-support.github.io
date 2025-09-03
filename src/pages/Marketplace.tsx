@@ -1,27 +1,32 @@
-import React from 'react';
+import React from 'react',;',';';
+    ';';';';
 import {SEO } from '@/components/SEO';
-
-;,"});,"})
+,"});,"})
 export default function Marketplace() {return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+    <div className="min-h-screen bg-white">
       <SEO title="Marketplace - Zion Tech Group" description="Professional Marketplace services by Zion Tech Group" />
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold text-white mb-8">Marketplace</h1>
         <p className="text-gray-300 text-lg">
-          Professional Marketplace services to help your business grow.
-        </p>
-      </div>
-    </div>
-import React from &apos;react';
-import { motion } from &apos;framer-motion';
-import { SEO } from &apos;../components/SEO';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { ;
-  ShoppingCart, Star, Users, Code, Database, ;
-  Shield, Rocket, Brain, ArrowRight, Filter,;
+          Professional Marketplace services to help your business grow.';
+        </p>';';
+      </div>';';';
+    </div>',';';
+    ';';';
+import React from &apos;react',';';';
+    ',';';
+    ';';';
+import { motion } from &apos;framer-motion';';';';';
+import { SEO } from &apos;../components/SEO',',';';
+    ';';';';
+import { motion } from 'framer-motion',;';';
+    ';';';';
+import { SEO } from '../components/SEO';';
+import { ;';';
+  ShoppingCart, Star, Users, Code, Database, ;';';';
+  Shield, Rocket, Brain, ArrowRight, Filter,;',';';
+    ';';';
   Search, Grid, List, Heart, ExternalLink} from 'lucide-react';
-;
 export default function Marketplace() {;
   const products = [
   {;
@@ -82,16 +87,15 @@ export default function Marketplace() {;
     { name: "Micro SaaS", icon: Rocket, count: 28, color: "from-indigo-500 to-blue-500" }
   ]
 ;
-  return (
-    
-    <>;
-      <SEO ;
-        title="Marketplace - Zion Tech Group | Technology Solutions & Tools";
+  return (';
+    <>;';';
+      <SEO ;';';';
+        title="Marketplace - Zion Tech Group | Technology Solutions & Tools";',';';
+    ';';';
         description="Discover and purchase cutting-edge technology solutions, AI tools, and micro SaaS applications from Zion Tech Group's marketplace.";
         keywords="marketplace, technology solutions, AI tools, micro SaaS, software, Zion Tech Group";
       />;
-      ;
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">;
           <div className="container mx-auto px-4">;
@@ -110,11 +114,14 @@ export default function Marketplace() {;
               </p>;
               <div className="flex items-center justify-center">;
                 <ShoppingCart className="w-16 h-16 text-blue-400" />;
-              </div>;
+              </div>
+  );
+}
             </motion.div>;
-          </div>;
+          </div>
+  );
+}
         </section>;
-
         {/* Categories */}
         <section className="py-16">;
           <div className="container mx-auto px-4">;
@@ -129,14 +136,13 @@ export default function Marketplace() {;
                 Explore our curated collection of technology solutions organized by category;
               </p>;
             </motion.div>;
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">;
-              {categories.map((category, index) => (;
-                <motion.div;
-import { ;
-  ShoppingCart, Star, Users, Code, Database, Shield, Rocket, Brain, ArrowRight, Filter,;
+              {categories.map((category, index) => (;';
+                <motion.div;';';
+import { ;';';';
+  ShoppingCart, Star, Users, Code, Database, Shield, Rocket, Brain, ArrowRight, Filter,;',';';
+    ';';';
   Search, Grid, List, Heart, ExternalLink} from &apos;lucide-react';&apos;&apos;
-
 export default function Marketplace() {}
   const products = [
     ;{
@@ -188,7 +194,6 @@ export default function Marketplace() {}
       tags: [&quot;Security&quot, &quot;Enterprise&quot, &quot;Protection&quot]
 }
   ]&quot;
-
   const categories = [
     { name: &quot;AI Tools&quot, icon: Brain, count: 25, color: &quot;from-purple-500 to-pink-500&quot},
     { name: &quot;Analytics&quot, icon: Database, count: 18, color: &quot;from-blue-500 to-cyan-500&quot},
@@ -196,15 +201,17 @@ export default function Marketplace() {}
     { name: &quot;Security&quot, icon: Shield, count: 15, color: &quot;from-red-500 to-orange-500&quot},
     { name: &quot;Micro SaaS&quot, icon: Rocket, count: 28, color: &quot;from-indigo-500 to-blue-500&quot}
   ]
-
   return (&quot;
     <>
-      <SEO 
-        title=&quot;Marketplace - Zion Tech Group | Technology Solutions & Tools&quot;
-        description=&quot;Discover and purchase cutting-edge technology solutions, AI tools, and micro SaaS applications from Zion Tech Group&apos;s marketplace.&quot;
-        keywords=&quot;marketplace, technology solutions, AI tools, micro SaaS, software, Zion Tech Group&quot;
+      <SEO';
+        title=&quot;Marketplace - Zion Tech Group | Technology Solutions & Tools&quot;';';
+        description=&quot;Discover and purchase cutting-edge technology solutions, AI tools, and micro SaaS applications from Zion Tech Group&apos;s marketplace.&quot;';';';
+        keywords=&quot;marketplace, technology solutions, AI tools, micro SaaS, software, Zion Tech Group&quot;',';';
+    ';';';
       />&quot} from 'lucide-react';
 export default function Marketplace() {
+  return (
+  return (
   const products = [
     { id: 1, name: "AI Content Generator Pro",
     {
@@ -253,14 +260,14 @@ export default function Marketplace() {
   ]
   return (
     <>
-      <SEO 
-        title="Marketplace - Zion Tech Group | Technology Solutions & Tools"
-        description="Discover and purchase cutting-edge technology solutions, AI tools, and micro SaaS applications from Zion Tech Group&apos;s marketplace."
-        keywords="marketplace, technology solutions, AI tools, micro SaaS, software, Zion Tech Group"
-        description="Discover and purchase cutting-edge technology solutions, AI tools, and micro SaaS applications from Zion Tech Group's marketplace. 
+      <SEO';
+        title="Marketplace - Zion Tech Group | Technology Solutions & Tools"';';
+        description="Discover and purchase cutting-edge technology solutions, AI tools, and micro SaaS applications from Zion Tech Group&apos;s marketplace."';';';
+        keywords="marketplace, technology solutions, AI tools, micro SaaS, software, Zion Tech Group"',';';
+    ';';';
+        description="Discover and purchase cutting-edge technology solutions, AI tools, and micro SaaS applications from Zion Tech Group's marketplace.';';';';
         keywords='marketplace, technology solutions, AI tools, micro SaaS, software, Zion Tech Group"
       />
-      
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900&quot;>
         {/* Hero Section */}&quot;
         <section className=&quot;py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20&quot;>&quot;"
@@ -280,7 +287,7 @@ export default function Marketplace() {
                 Technology Marketplace&quot;
               </h1>
               <p className=&quot;text-xl text-gray-300 mb-8&quot;>
-                Discover and purchase cutting-edge technology solutions, AI tools, 
+                Discover and purchase cutting-edge technology solutions, AI tools,
                 and innovative software from our curated marketplace&quot;
               <p className="text-xl text-gray-300 mb-8">
                 Discover and purchase cutting-edge technology solutions, AI tools, and innovative software from our curated marketplace
@@ -291,7 +298,6 @@ export default function Marketplace() {
             </motion.div>
           </div>
         </section>
-
         {/* Categories */}
         <section className=&quot;py-16&quot;>&quot;"
           <div className=&quot;container mx-auto px-4&quot;>&quot;"
@@ -312,7 +318,6 @@ export default function Marketplace() {
                 Explore our curated collection of technology solutions organized by category&quot;
               </p>
             </motion.div>
-
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 l,g:grid-cols-5 gap-6&quot;>
               {categories.map((category, index) => (&quot}
                 <motion.div
@@ -324,7 +329,9 @@ export default function Marketplace() {
                 >;
                   <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center mb-4`}>;
                     <category.icon className=`w-8 h-8 text-white`} />;
-                  </div>;
+                  </div>
+  );
+}
                   <h3 className="text-lg font-bold text-white mb-2">{category.name}</h3>;
                   <p className={`text-gray-400 text-sm`>{category.count} products</p>;
                 </motion.div>;
@@ -336,11 +343,18 @@ export default function Marketplace() {
                   <h3 className=&quot;text-lg font-bold text-white mb-2&quot;>{category.name}&quot;</h3>
                   <p className=&quot;text-gray-400 text-sm&quot;>{category.count} products&quot;</p>
                 </motion.div>
-              ))}
-            </div>;
-          </div>;
+              ))
+      )}
+    </div>
+  );
+}
+            </div>
+  );
+}
+          </div>
+  );
+}
         </section>;
-
         {/* Featured Products */}
         <section className=`py-16 bg-gradient-to-r from-slate-800/50 to-slate-700/50`}>;
           <div className="container mx-auto px-4">;
@@ -355,7 +369,6 @@ export default function Marketplace() {
                 Handpicked solutions that deliver exceptional value and performance;
               </p>;
             </motion.div>;
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
               {products.map((product, index) => (;
                 <motion.div;
@@ -378,7 +391,6 @@ export default function Marketplace() {
                 Handpicked solutions that deliver exceptional value and performance&quot;
               </p>
             </motion.div>
-
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 l,g:grid-cols-4 gap-8&quot;>
               {products.map((product, index) => (&quot}
                 <motion.div
@@ -394,10 +406,13 @@ export default function Marketplace() {
                       {product.category === "Analytics" && <Database />}
                       {product.category === "Development" && <Code />}
                       {product.category === "Security" && <Shield />}
-                    </div>;
-                  </div>;
-                  ;
-                  <div className="p-6">;
+                    </div>
+  );
+}
+                  </div>
+  );
+}
+<div className="p-6">;
                     <div className="flex items-center justify-between mb-3">;
                       <span className="px-3 py-1 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-xs">;
                         {product.category}
@@ -406,37 +421,51 @@ export default function Marketplace() {
                         <span className="px-3 py-1 bg-yellow-600/20 border border-yellow-400/30 rounded-full text-yellow-300 text-xs">;
                           Featured;
                         </span>;
-                      )}
-                    </div>;
-                    ;
-                    <h3 className="text-xl font-bold text-white mb-2">{product.name}</h3>;
+                      )
+      )}
+    </div>
+  );
+}
+                    </div>
+  );
+}
+<h3 className="text-xl font-bold text-white mb-2">{product.name}</h3>;
                     <p className="text-gray-300 text-sm mb-4 line-clamp-2">{product.description}</p>;
-                    ;
-                    <div className="flex items-center mb-4">;
+<div className="flex items-center mb-4">;
                       <div className={`flex items-center`>;
                         {[...Array(5)].map((_, i) => (;
-                          <Star;
-                            key={i}
-                            className={`w-4 h-4 ${;
-                              i < Math.floor(product.rating);
-                                ? 'text-yellow-400 fill-current';
+                          <Star;';
+                            key={i}';';
+                            className={`w-4 h-4 ${;';';';
+                              i < Math.floor(product.rating);',';';
+    ';';';
+                                ? 'text-yellow-400 fill-current',',';';
+    ';';';';
                                 : 'text-gray-600';
                             }`}
                           />;
-                        ))}
-                      </div>;
+                        ))
+      )}
+    </div>
+  );
+}
+                      </div>
+  );
+}
                       <span className=`text-gray-400 text-sm ml-2`}>;
                         {product.rating} ({product.reviews} reviews);
                       </span>;
-                    </div>;
-
+                    </div>
+  );
+}
                     <div className="flex items-center justify-between mb-4">;
                       <span className="text-2xl font-bold text-white">{product.price}</span>;
                       <button className="text-gray-400 hover:text-red-400 transition-colors">;
                         <Heart className="w-5 h-5" />;
                       </button>;
-                    </div>;
-
+                    </div>
+  );
+}
                     <div className="flex gap-2 mb-4">;
                       {product.tags.map((tag, tagIndex) => (;
                         <span;
@@ -455,7 +484,6 @@ export default function Marketplace() {
                       {product.category === &quot;Security&quot; &&"}&quot; <Shield />}
                     </div>
                   </div>
-                  
                   <div className=&quot;p-6&quot;>&quot;"
                     <div className=&quot;flex items-center justify-between mb-3&quot;>&quot;"
                       <span className=&quot;px-3 py-1 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-xs&quot;>
@@ -465,12 +493,14 @@ export default function Marketplace() {
                         <span className=&quot;px-3 py-1 bg-yellow-600/20 border border-yellow-400/30 rounded-full text-yellow-300 text-xs&quot;>
                           Featured&quot;
                         </span>
-                      )}
+                      )
+      )}
+    </div>
+  );
+}
                     </div>
-                    
                     <h3 className=&quot;text-xl font-bold text-white mb-2&quot;>{product.name}&quot;</h3>
                     <p className=&quot;text-gray-300 text-sm mb-4 line-clamp-2&quot;>{product.description}&quot;</p>
-                    
                     <div className=&quot;flex items-center mb-4&quot;>&quot;`
                       <div className=&quot;flex items-center&quot;>
                         {[...Array(5)].map((_, i) => (&quot}
@@ -486,7 +516,6 @@ export default function Marketplace() {
                         {product.rating} ({product.reviews} reviews)&quot;
                       </span>
                     </div>
-
                     <div className=&quot;flex items-center justify-between mb-4&quot;>&quot;`
                       <span className=&quot;text-2xl font-bold text-white&quot;>{product.price}&quot;</span>
                       <button className=&quot;text-gray-400 hover:text-red-400 transition-colors&quot;>&quot;"
@@ -497,7 +526,6 @@ export default function Marketplace() {
                         <Heart className="w-5 h-5" />
                       </button>
                     </div>
-
                     <div className=&quot;flex gap-2 mb-4&quot;>
                       {product.tags.map((tag, tagIndex) => (&quot}
                         <span
@@ -506,9 +534,14 @@ export default function Marketplace() {
                         >
                           {tag}&quot;
                         </span>
-                      ))}
-                    </div>;
-
+                      ))
+      )}
+    </div>
+  );
+}
+                    </div>
+  );
+}
                     <div className="flex gap-2">;
                       <button className="flex-1 px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200">;
                         <ShoppingCart className="w-4 h-4 inline mr-2" />;
@@ -517,8 +550,12 @@ export default function Marketplace() {
                       <button className="px-4 py-2 border border-slate-600 text-gray-300 rounded-lg hover:bg-slate-700 transition-colors">;
                         <ExternalLink className="w-4 h-4" />;
                       </button>;
-                    </div>;
-                  </div>;
+                    </div>
+  );
+}
+                  </div>
+  );
+}
                 </motion.div>;
                     <div className=&quot;flex gap-2&quot;>&quot;"
                       <button className=&quot;flex-1 px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200&quot;>&quot;"
@@ -535,21 +572,29 @@ export default function Marketplace() {
                     </div>
                   </div>
                 </motion.div>
-              ))}
-            </div>;
-          </div>;
+              ))
+      )}
+    </div>
+  );
+}
+            </div>
+  );
+}
+          </div>
+  );
+}
         </section>;
-
         {/* CTA Section */}
         <section className="py-20">;
           <div className="container mx-auto px-4">;
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto";
-            >;
-              <h2 className="text-4xl font-bold text-white mb-6">;
+              transition={{ duration: 0.8 }}';
+              className="text-center max-w-4xl mx-auto";';';
+            >;';';';
+              <h2 className="text-4xl font-bold text-white mb-6">;',';';
+    ';';';
                 Can't Find What You're Looking For?;
               </h2>;
               <p className="text-xl text-gray-300 mb-8">;
@@ -571,11 +616,17 @@ export default function Marketplace() {
                   <ArrowRight className="w-5 h-5 mr-2" />;
                   View All Services;
                 </a>;
-              </div>;
+              </div>
+  );
+}
             </motion.div>;
-          </div>;
+          </div>
+  );
+}
         </section>;
-      </div>;
+      </div>
+  );
+}
     </>;
         <section className=&quot;py-20&quot;>&quot;"
           <div className=&quot;container mx-auto px-4&quot;>&quot;"
@@ -594,7 +645,7 @@ export default function Marketplace() {
                 Can&apos;t Find What You&apos;re Looking For?
               </h2>
               <p className=&quot;text-xl text-gray-300 mb-8&quot;>
-                We offer custom development services to create tailored solutions 
+                We offer custom development services to create tailored solutions
                 that meet your specific business requirements.&quot;
               </p>
               <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>&quot;"
@@ -620,5 +671,8 @@ export default function Marketplace() {
       </div>
 </>
   )
-  )}
-"
+      )}
+    </div>';
+  );';';
+}';';';
+"';';';';

@@ -1,10 +1,12 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { ;
-  Search, FileText, Users, Calendar, ArrowRight, ;
+import React from 'react',;',';';
+    ';';';';
+import { motion } from 'framer-motion',;';';
+    ';';';';
+import { SEO } from '../components/SEO';';';
+import { ;';';';
+  Search, FileText, Users, Calendar, ArrowRight, ;',';';
+    ';';';
   ExternalLink, Download, Star, TrendingUp, Globe} from 'lucide-react';
-;
 export default function Research() {;
   const researchAreas = [
   {;
@@ -61,15 +63,13 @@ export default function Research() {;
   ]
 ;
   return (
-    
     <>;
       <SEO ;
         title="Research - Zion Tech Group | Innovation & Scientific Discovery";
         description="Explore our cutting-edge research in AI, quantum computing, cybersecurity, and emerging technologies. Discover our latest publications and scientific contributions.";
         keywords="research, AI research, quantum computing, cybersecurity, scientific publications, innovation, Zion Tech Group";
       />;
-      ;
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">;
           <div className="container mx-auto px-4">;
@@ -86,8 +86,7 @@ export default function Research() {;
                 Advancing the frontiers of technology through cutting-edge research ;
                 in AI, quantum computing, cybersecurity, and emerging technologies;
               </p>;
-              ;
-              {/* Search Bar */}
+{/* Search Bar */}
               <div className="max-w-2xl mx-auto">;
                 <div className="relative">;
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
@@ -96,12 +95,17 @@ export default function Research() {;
                     placeholder="Search research publications...";
                     className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";
                   />;
-                </div>;
-              </div>;
+                </div>
+  );
+}
+              </div>
+  );
+}
             </motion.div>;
-          </div>;
+          </div>
+  );
+}
         </section>;
-
 ,"});,"})
         {/* Research Areas */}
         <section className="py-16">;
@@ -116,30 +120,32 @@ export default function Research() {;
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
                 Our research spans multiple cutting-edge technology domains;
               </p>;
-            </motion.div>;
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-              {researchAreas.map((area, index) => (;
-                <motion.div;
+            </motion.div>;';
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;';';
+              {researchAreas.map((area, index) => (;';';';
+                <motion.div;',';';
+    ';';';
 import {SEO } from '@/components/SEO';
-
 export default function Research() {return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+    <div className="min-h-screen bg-white">
       <SEO title="Research - Zion Tech Group" description="Professional Research services by Zion Tech Group" />
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold text-white mb-8">Research</h1>
         <p className="text-gray-300 text-lg">
-          Professional Research services to help your business grow.
-        </p>
-      </div>
-    </div>
-import React from &apos;react';
-import { motion } from &apos;framer-motion';
-import { SEO } from &apos;../components/SEO';
-import { ;
-  Search, FileText, Users, Calendar, ArrowRight, ;
+          Professional Research services to help your business grow.';
+        </p>';';
+      </div>';';';
+    </div>',';';
+    ';';';
+import React from &apos;react',';';';
+    ',';';
+    ';';';
+import { motion } from &apos;framer-motion';';';';';
+import { SEO } from &apos;../components/SEO';';';
+import { ;';';';
+  Search, FileText, Users, Calendar, ArrowRight, ;',';';
+    ';';';
   ExternalLink, Download, Star, TrendingUp, Globe} from &apos;lucide-react';&apos;&apos;
-
 export default function Research() {}
   const researchAreas = [
     ;{
@@ -163,16 +169,20 @@ export default function Research() {}
     {
       title: &quot;Edge Computing&quot,
       description: &quot;Optimizing computing at the edge for IoT and real-time applications&quot,
-      publications: 18,
-      researchers: 6,
-      color: &quot;from-blue-500 to-cyan-500&quot}
-  ]&quot;
-
-import { motion} from 'framer-motion';
-import { SEO} from '../components/SEO';
-import { ;
+      publications: 18,';
+      researchers: 6,';';
+      color: &quot;from-blue-500 to-cyan-500&quot}';';';
+  ]&quot;',';';
+    ';';';
+import { motion} from 'framer-motion',;',';';
+    ';';';';
+import { SEO} from '../components/SEO',;';';
+    ';';';
+import { ;';';';';
   Search, FileText, Users, Calendar, ArrowRight, ExternalLink, Download, Star, TrendingUp, Globe} from 'lucide-react';
 export default function Research() {
+  return (
+  return (
   const researchAreas = [
     { title: "Artificial Intelligence", description: "Advancing AI research in machine learning, natural language processing, and computer vision",
     {
@@ -226,16 +236,14 @@ export default function Research() {
       date: "2024-12-28", citations: 15,
       featured: false};
   ]
-
   return (&quot;
   return (
     <>
-      <SEO 
+      <SEO
         title=&quot;Research - Zion Tech Group | Innovation & Scientific Discovery&quot;
         description=&quot;Explore our cutting-edge research in AI, quantum computing, cybersecurity, and emerging technologies. Discover our latest publications and scientific contributions.&quot;
         keywords=&quot;research, AI research, quantum computing, cybersecurity, scientific publications, innovation, Zion Tech Group&quot;
       />&quot;
-      
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900&quot;>
         {/* Hero Section */}&quot;
         <section className=&quot;py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20&quot;>&quot;"
@@ -258,10 +266,9 @@ export default function Research() {
                 Research & Innovation
               </h1>
               <p className=&quot;text-xl text-gray-300 mb-8&quot;>
-                Advancing the frontiers of technology through cutting-edge research 
+                Advancing the frontiers of technology through cutting-edge research
                 in AI, quantum computing, cybersecurity, and emerging technologies&quot;
               </p>
-              
               {/* Search Bar */}
               <div className=&quot;max-w-2xl mx-auto&quot;>&quot;"
                 <div className=&quot;relative&quot;>&quot;"
@@ -280,7 +287,6 @@ export default function Research() {
             </motion.div>
           </div>
         </section>
-
         {/* Research Areas */}
         <section className=&quot;py-16&quot;>&quot;"
           <div className=&quot;container mx-auto px-4&quot;>&quot;"
@@ -304,7 +310,6 @@ export default function Research() {
                 Our research spans multiple cutting-edge technology domains
               </p>
             </motion.div>
-
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;>
               {researchAreas.map((area, index) => (&quot}
                 <motion.div
@@ -316,19 +321,27 @@ export default function Research() {
                 >;
                   <div className={`w-16 h-16 bg-gradient-to-br ${area.color} rounded-xl flex items-center justify-center mb-4`}>;
                     <FileText className=`w-8 h-8 text-white`} />;
-                  </div>;
+                  </div>
+  );
+}
                   <h3 className="text-xl font-bold text-white mb-2">{area.title}</h3>;
                   <p className="text-gray-300 text-sm mb-4">{area.description}</p>;
                   <div className="flex items-center justify-between">;
                     <div className="flex items-center text-blue-400 text-sm">;
                       <FileText className="w-4 h-4 mr-1" />;
                       {area.publications} publications;
-                    </div>;
+                    </div>
+  );
+}
                     <div className="flex items-center text-green-400 text-sm">;
                       <Users className="w-4 h-4 mr-1" />;
                       {area.researchers} researchers;
-                    </div>;
-                  </div>;
+                    </div>
+  );
+}
+                  </div>
+  );
+}
                 </motion.div>;
                   className=&quot;bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hove,r:scale-105&quot;
                 >&quot;
@@ -359,11 +372,18 @@ export default function Research() {
                     </div>
                   </div>
                 </motion.div>
-              ))}
-            </div>;
-          </div>;
+              ))
+      )}
+    </div>
+  );
+}
+            </div>
+  );
+}
+          </div>
+  );
+}
         </section>;
-
         {/* Recent Publications */}
         <section className="py-16 bg-gradient-to-r from-slate-800/50 to-slate-700/50">;
           <div className="container mx-auto px-4">;
@@ -379,7 +399,6 @@ export default function Research() {
                 Our latest research contributions to the scientific community;
               </p>;
             </motion.div>;
-
             <div className="space-y-6">;
               {recentPublications.map((publication, index) => (;
                 <motion.div;
@@ -404,7 +423,6 @@ export default function Research() {
                 Our latest research contributions to the scientific community
               </p>
             </motion.div>
-
             <div className=&quot;space-y-6&quot;>
               {recentPublications.map((publication, index) => (&quot}
                 <motion.div
@@ -420,31 +438,47 @@ export default function Research() {
                         <span className="px-3 py-1 bg-yellow-600/20 border border-yellow-400/30 rounded-full text-yellow-300 text-xs">;
                           Featured;
                         </span>;
-                      )}
-                    </div>;
+                      )
+      )}
+    </div>
+  );
+}
+                    </div>
+  );
+}
                     <div className="flex items-center text-gray-400 text-sm">;
                       <TrendingUp className="w-4 h-4 mr-1" />;
                       {publication.citations} citations;
-                    </div>;
-                  </div>;
-
+                    </div>
+  );
+}
+                  </div>
+  );
+}
                   <h3 className="text-xl font-bold text-white mb-2">{publication.title}</h3>;
-                  ;
-                  <div className="mb-4">;
+<div className="mb-4">;
                     <p className="text-sm text-gray-400 mb-1">Authors:</p>;
                     <p className="text-blue-400">{publication.authors.join(", ")}</p>;
-                  </div>;
-
+                  </div>
+  );
+}
                   <div className="mb-4">;
                     <p className="text-sm text-gray-400 mb-1">Journal:</p>;
                     <p className="text-gray-300">{publication.journal}</p>;
-                  </div>;
-
+                  </div>
+  );
+}
                   <div className="flex items-center justify-between">;
                     <div className="flex items-center text-gray-400 text-sm">;
                       <Calendar className="w-4 h-4 mr-1" />;
-                      {new Date(publication.date).toLocaleDateString()}
-                    </div>;
+                      {new Date(publication.date).toLocaleDateString()
+      )}
+    </div>
+  );
+}
+                    </div>
+  );
+}
                     <div className="flex gap-2">;
                       <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors">;
                         <ExternalLink className="w-4 h-4 inline mr-1" />;
@@ -453,8 +487,12 @@ export default function Research() {
                       <button className="px-4 py-2 border border-slate-600 text-gray-300 rounded-lg hover:bg-slate-700 transition-colors">;
                         <Download className="w-4 h-4" />;
                       </button>;
-                    </div>;
-                  </div>;
+                    </div>
+  );
+}
+                  </div>
+  );
+}
                 </motion.div>;
                   className=&quot;bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300&quot;
                 >&quot;
@@ -474,37 +512,35 @@ export default function Research() {
                         <span className="px-3 py-1 bg-yellow-600/20 border border-yellow-400/30 rounded-full text-yellow-300 text-xs">
                           Featured
                         </span>
-                      )}
+                      )
+      )}
+    </div>
+  );
+}
                     </div>
                     <div className=&quot;flex items-center text-gray-400 text-sm&quot;>&quot;"
                       <TrendingUp className=&quot;w-4 h-4 mr-1&quot; />
                       {publication.citations} citations&quot;
                     </div>
                   </div>
-
                   <h3 className=&quot;text-xl font-bold text-white mb-2&quot;>{publication.title}&quot;</h3>
-                  
                   <div className=&quot;mb-4&quot;>&quot;"
                     <p className=&quot;text-sm text-gray-400 mb-1&quot;>Authors: &quot;</p>
                     <p className=&quot;text-blue-400&quot;>{publication.authors.join(&quot, &quot)}&quot;</p>
                   </div>
-
                   <div className=&quot;mb-4&quot;>&quot;"
                     <p className=&quot;text-sm text-gray-400 mb-1&quot;>Journal:&quot;</p>
                     <p className=&quot;text-gray-300&quot;>{publication.journal}&quot;</p>
                   <h3 className="text-xl font-bold text-white mb-2"></h>{publication.title}</h3>
-                  
                   <div className="mb-4">
                     <p className="text-sm text-gray-400 mb-1">Authors: </p>
                     <p className="text-blue-400">{publication.authors.join(", ")}</p>
                     <p className="text-blue-400">{publication.authors.join()}</p>
                   </div>
-
                   <div className="mb-4">
                     <p className="text-sm text-gray-400 mb-1">Journal: </p>
                     <p className="text-gray-300">{publication.journal}</p>
                   </div>
-
                   <div className=&quot;flex items-center justify-between&quot;>&quot;"
                     <div className=&quot;flex items-center text-gray-400 text-sm&quot;>&quot;"
                       <Calendar className=&quot;w-4 h-4 mr-1&quot; />
@@ -525,11 +561,18 @@ export default function Research() {
                     </div>
                   </div>
                 </motion.div>
-              ))}
-            </div>;
-          </div>;
+              ))
+      )}
+    </div>
+  );
+}
+            </div>
+  );
+}
+          </div>
+  );
+}
         </section>;
-
         {/* CTA Section */}
         <section className="py-20">;
           <div className="container mx-auto px-4">;
@@ -563,11 +606,17 @@ export default function Research() {
                   <ArrowRight className="w-5 h-5 mr-2" />;
                   Learn More;
                 </a>;
-              </div>;
+              </div>
+  );
+}
             </motion.div>;
-          </div>;
+          </div>
+  );
+}
         </section>;
-      </div>;
+      </div>
+  );
+}
     </>;
         <section className=&quot;py-20&quot;>&quot;"
           <div className=&quot;container mx-auto px-4&quot;>&quot;"
@@ -588,8 +637,8 @@ export default function Research() {
                 Collaborate with Us
               </h2>
               <p className=&quot;text-xl text-gray-300 mb-8&quot;>
-                Interested in collaborating on research projects or learning more 
-                about our research initiatives? We welcome partnerships with 
+                Interested in collaborating on research projects or learning more
+                about our research initiatives? We welcome partnerships with
                 academic institutions and industry leaders.&quot;
               </p>
               <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>&quot;"
@@ -614,5 +663,8 @@ export default function Research() {
       </div>
 </>
   )
-  )}
-"
+      )}
+    </div>';
+  );';';
+}';';';
+"';';';';

@@ -1,8 +1,7 @@
 import React from 'react';
-
 const Enterprise: React.FC = () => {
   return (
-    <div className="mx-auto max-w-7xl px-4 py-12">
+    <div className="min-h-screen bg-white">
       <h1 className="text-3xl font-bold text-gray-900">Enterprise Solutions</h1>
       <p className="mt-4 text-gray-700">
         Explore our enterprise-grade AI, cloud, and cybersecurity solutions tailored for large organizations.
@@ -16,9 +15,7 @@ const Enterprise: React.FC = () => {
       <a href="/contact" className="mt-8 inline-block rounded-md bg-blue-600 px-5 py-2.5 text-white hover: bg-blue-700">
         Talk to an expert
       </a>
-    </div>
-  )};
-
-export default Enterprise;
-
-"
+    </div>';
+  )};';';
+export default Enterprise;';';';
+"';';';';
