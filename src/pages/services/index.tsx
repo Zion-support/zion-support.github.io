@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3, Star, Award, Users, Globe, MapPin } from "lucide-react";
-import { REAL_MICRO_SAAS_SERVICES_2025 } from "../../data/realMicroSaasServices2025";
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3, Star, Award, Users, Globe, MapPin, TrendingUp, DollarSign, Clock, Headphones, Cpu, Lock } from "lucide-react";
 
 export default function Index() {;
   const features = [;
