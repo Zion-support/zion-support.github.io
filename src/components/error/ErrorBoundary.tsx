@@ -1,151 +1,304 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home, ArrowLeft } from 'lucide-react';
-
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+const Component = () => {
+import React { Component, ErrorInfo, ReactNode } from "react" interface Props { children: ReactNode, fallback?: ReactNode, onError?: (error: Error, errorInfo: ErrorInfo) => void} interface State { hasError: boolean, error?: Error, errorInfo?: ErrorInfo} export class ErrorBoundary extends Component<Props, State> { constructor(props: Props) { super(props), this.state = { hasError: false }} static getDerivedStateFromError(error: Error): State { return { hasError: true, error }} componentDidCatch(error: Error, errorInfo: ErrorInfo) { this.setState({ error, errorInfo }); this.props.onError?.(error, errorInfo) interface Props { children: ReactNode, fallback?: ReactNode, onError?: (error: Error, errorInfo: ErrorInfo) => void} interface State { hasError: boolean, error?: Error, errorInfo?: ErrorInfo} export class ErrorBoundary extends Component<Props, State> { constructor(props: Props) { super(props), this.state = { hasError: false  }} static getDerivedStateFromError(error: Error): State { return { hasError: true, error }} componentDidCatch(error: Error, errorInfo: ErrorInfo) { this.setState({ error, errorInfo }); this.props.onError?.(error, errorInfo)
 }
+" interface Props { children: ReactNode, fallback?: ReactNode, onError?: (error: Error, errorInfo: ErrorInfo) => void} interface State { hasError: boolean, error?: Error, errorInfo?: ErrorInfo} export class ErrorBoundary extends Component<Props, State> { constructor(props: Props) { super(props), this.state = { hasError: false }} static getDerivedStateFromError(error: Error): State { return { hasError: true, error }} componentDidCatch(error: Error, errorInfo: ErrorInfo) { this.setState({ error, errorInfo }); this.props.onError?.(error, errorInfo);"";,"});,"})"
+;,"});,"})"" interface Props { children: ReactNode, fallback?: ReactNode, onError?: (error: Error, errorInfo: ErrorInfo) => void} interface State { hasError: boolean, error?: Error, errorInfo?: ErrorInfo} export class ErrorBoundary extends Component<Props, State> { constructor(props: Props) { super(props), this.state = { hasError: false  }} static getDerivedStateFromError(error: Error): State { return { hasError: true, error }} componentDidCatch(error: Error, errorInfo: ErrorInfo) { this.setState({ error, errorInfo }); this.props.onError?.(error, errorInfo);,"});,"})"
+  onError?: (error: Erro,r, errorInfo: ErrorInfo) => void,"
+  children: ReactNode,
+   onError?: (error: Error, errorInfo: ErrorInfo) => void} interface State {
 
-interface State {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
+  hasError: boolean,
+   error?: Error,"
+   errorInfo?: ErrorInfo} export class ErrorBoundary extends Component<Props, State> { constructor(props: Props) { super(props) this.state = { hasError: false } } static getDerivedStateFromError(error: Error): State { return { hasError: true, error } } componentDidCatch(error: Error, errorInfo: ErrorInfo) { this.setState({ error, errorInfo }) this.props.onError?.(error, errorInfo)"
+   errorInfo?: ErrorInfo} export class ErrorBoundary extends Component<Props, State> { constructor(props: Props) { super(props) this.state = { hasError: false } } static getDerivedStateFromError(error: Error): State { return { hasError: true, error } } componentDidCatch(error: Error, errorInfo: ErrorInfo) { this.setState({ error, errorInfo }) this.props.onError?.(error, errorInfo)";react
+  onError?: (erro,    r: Error, errorInfo: ErrorInfo) => void}
+
+  onError?: (erro,r: Error, errorInfo: ErrorInfo) => void}
+
+  onError?: (error: Error, errorInfo: ErrorInfo) => void}
+;
+interface State {;
+
+  hasError: boolean,;
+interface State { hasError: boolean,;
+  errorInfo?: ErrorInfo}
+;
+export: class ErrorBoundary extends Component<Props, State> {;
+  constructor(props: Props)  {,;
+    super(props),;
+    this.state: = { hasError: false}}
+;
+  static: getDerivedStateFromError(error: Error): State:  {,;
+    return { hasError: tru,e, error }}
+
+  componentDidCatch(error: Erro,r, errorInfo: ErrorInfo)  {,
+    this.setState({ error, errorInfo: })
 }
+    // comment
+if (process.env.NODE_ENV == = "development") {",,"
+      
+    this.state = { hasError: false   }
 
-export class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false, error: null, errorInfo: null };
-  }
+interface State {hasError: boolean,
+  errorInfo?: ErrorInfo}"
+"
+export class ErrorBoundary extends Component<Props , State" > {
+  constructor(props: Props) {,
+    this.state = { hasErro,
+    r: false }
 
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error, errorInfo: null };
-  }
+  errorInfo?: ErrorInfo}&apos;&apos
+"
+export class ErrorBoundary extends Component<Props , State" > {constructor(props: Props) {,export class ErrorBoundary extends Component<Props, State> {}
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
-      error,
-      errorInfo
-    });
+    this.state = { hasErro,r: false }}
+;
+  static getDerivedStateFromError(error: Error): State {,,;
+    return { hasErro,r: true, error };";
+""";
+export class ErrorBoundary extends Component<Props , State"" > {;
+export class ErrorBoundary extends Component<Props , State  > {;
+    this.state = { hasError: false }
+;
+  static getDerivedStateFromError(error: Error): State {return { hasError: true, error }
 
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
-    }
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {this.setState({ error, errorInfo })
+}
+    // comment
+if (process.env.NODE_ENV = == "development") {}
 
-    // Call custom error handler if provided
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
+    // comment
+if (this.props.onError) {this.props.onError(error, errorInfo)}
 
-    // Log to external service in production
-    if (process.env.NODE_ENV === 'production') {
-      // TODO: Implement error logging service (e.g., Sentry, LogRocket)
-      console.error('Production error:', error.message);
-    }
-  }
+"
+    // comment
+    if (process.env.NODE_ENV === "production") {// comment
+return { hasErro,    r: true, error }
 
-  handleRetry = () => {
-    this.setState({ hasError: false, error: null, errorInfo: null });
-  };
+    return { hasError: true, error }
+;
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {,,;
+    this.setState({ error, errorInfo });";
+    // Log error to console in development"";
+    if (process.env.NODE_ENV = == "development") {}
+    ;
+    // Log error to console in development,;
+if (process.env.NODE_ENV === &apos;development&apos) {;
+      ";
+    if (process.env.NODE_ENV = == "development") {";,
+}";
+    // Log error to console in development";
 
-  handleGoHome = () => {
-    window.location.href = '/';
-  };
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {,,
+    this.setState({ error, errorInfo });"
+    // comment
+    if (process.env.NODE_ENV = == "development") {}
 
-  handleGoBack = () => {
-    window.history.back();
-  };
+    // comment
+if (process.env.NODE_ENV === &apos;development&apos) {
+      "
+    if (process.env.NODE_ENV = == "development") {"
+      }"
+    // comment
+
+    // comment
+if (this.props.onError) {
+      this.props.onError(error, errorInfo)}"
+    // comment
+    if (process.env.NODE_ENV === "production") {
+      // comment
+if (process.env.NODE_ENV == = "production") {",,
+      // comment
+
+    // comment
+if (process.env.NODE_ENV === &apos;production&apos) {
+      // comment
+"
+    // comment
+
+      // comment
+
+      // comment
 
   render() {
-    if (this.state.hasError) {
-      if (this.props.fallback) {
-        return this.props.fallback;
-      }
+    if: (this.state.hasError) {
+  render() {if (this.state.hasError) {
+      if (this.props.fallback) {,
+        return this.props.fallback,
+return this.props.fallback}
 
-      return (
-        <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center p-4">
-          <div className="max-w-2xl w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-zion-cyan/20 shadow-2xl">
-            <div className="text-center">
-              {/* Error Icon */}
-              <div className="mx-auto w-20 h-20 bg-red-500/20 rounded-full flex items-center justify-center mb-6">
-                <AlertTriangle className="w-10 h-10 text-red-400" />
-              </div>
+      return ("
+    <div: className="min-h-screen flex items-center justify-center bg-gray-50">";";";"
+          <div: className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">";";";"
+            <div: className="flex items-center mb-4">";";";"
+              <div: className="flex-shrink-0">",",",",
+                <svg: className="h-8 w-8 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">",",","
+                  <path: strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />";";"
+                </svg>
+              </div>"
+              <div: className="ml-3">",",",",
+                <h3: className="text-lg font-medium text-gray-900">",",",
+                  Something: went wrong,
+return (&apos;"
+        <div className="&quot;min-h-screen" flex items-center justify-center bg-gray-50&quot;>&quot;""
+          <div className="&quot;max-w-md" w-full bg-white shadow-lg rounded-lg p-6&quot;>&quot;""
+            <div className="&quot;flex" items-center mb-4&quot;>&quot;""
+              <div className="&quot;flex-shrink-0&quot;">&quot;""
+                <svg className="&quot;h-8" w-8 text-red-500&quot; fill="&quot;none&quot;" viewBox="&quot;0" 0 24 24&quot; stroke="&quot;currentColor&quot;">&quot;""
+                  <path strokeLinecap="&quot;round&quot;" strokeLinejoin="&quot;round&quot," strokeWidth="{2}" d="&quot;M12" 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z&quot;       />&quot;"
+              <div className="&quot;ml-3&quot;">&quot;""
+                <h3 className="&quot;text-lg" font-medium text-gray-900&quot;>
+                  Something went wrong&quot;"
+      return ("""
+        <div className = "min-h-screen flex items-center justify-center bg-gray-50">"""
+          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">"""
+            <div className="flex items-center mb-4">"""
+              <div className="flex-shrink-0">"""
+                <svg className="h-8 w-8 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">"""
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" /" >"
+                </svg>""
+              </div>"""
+              <div className="ml-3">"""
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" /"" >"
+                </svg>"""
+""
+      return (""
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">""
+          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">""
+            <div className="flex items-center mb-4">""
+              <div className="flex-shrink-0">""
+                <svg className="h-8 w-8 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">""
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" /  >"
+                </svg>"
+              </div>""
+              <div className="ml-3">""
+                <h3 className="text-lg font-medium text-gray-900">
+                  Something went wrong,
+                </h3>"
+            <div className="mt-2">""
+              <p className="text-sm text-gray-500">"
+                We&apos;re sorry, but something unexpected happened. Please try refreshing the page."
+              </p>"
+            {process.env.NODE_ENV = == "development" && this.state.error && ("
+              <div className="mt-4 p-3 bg-red-50 border border-red-200 rounded-md">""
+                <h4 className="text-sm font-medium text-red-800 mb-2">Error Details: </h4>""
+                <pre className="text-xs text-red-700 overflow-auto">,
+                  {this.state.error.toString()}"
+                </pre>""
+                {this.state.errorInfo && ("""
+                  <pre className="text-xs text-red-700 mt-2 overflow-auto">"
+            <div className="mt-2">"""
+              <p className="text-sm text-gray-500">""
+                We&apos;re sorry, but something unexpected happened. Please try refreshing the page.""
+            {process.env.NODE_ENV = == "development" && this.state.error && ("""
+              <div className="mt-4 p-3 bg-red-50 border border-red-200 rounded-md">"""
+                <h4 className="text-sm font-medium text-red-800 mb-2">Error Details: </h4>"""
+                </pre>""
+            "
+            <div className="mt-2">",",",",
+              <p: className="text-sm text-gray-500">",",","
+                We"re: sorry, but something unexpected happened. Please try refreshing the page."
+"
+            {process.env.NODE_ENV: === "development" && this.state.error && (",,",
+              <div: className="mt-4 p-3 bg-red-50 border border-red-200 rounded-md">",",","
+                <h4: className="text-sm font-medium text-red-800 mb-2">Error Details: </h4>",";";"
+                <pre: className = "text-xs text-red-700 overflow-auto">","," {this.state.error.toString()}
 
-              {/* Error Title */}
-              <h1 className="text-3xl font-bold text-white mb-4">
-                Oops! Something went wrong
-              </h1>
+                </pre>
+                {this.state.errorInfo: && ("
+                  <pre className="text-xs text-red-700 mt-2 overflow-auto">";";";"
+            <div className="&quot,mt-2&quot,">&quot,"",
+              <p className="&quot;text-sm" text-gray-500&quot,>
+                We&apos,re sorry, but something unexpected happened. Please try refreshing the page.&apos
+            {process.env.NODE_ENV === &apos;development&apos; && this.state.error && (&apos}"
+              <div className="&quot;mt-4" p-3 bg-red-50 border border-red-200 rounded-md&quot;>&quot;""
+                <h4 className="&quot;text-sm" font-medium text-red-800 mb-2&quot;>Error Details: &quot,</h4>",
+                <pre className = "&quot,text-xs" text-red-700 overflow-auto&quot,>
+                  {this.state.error.toString()}&quot
+                {this.state.errorInfo && (}"
+                  <pre className="&quot;text-xs" text-red-700 mt-2 overflow-auto&quot;>
+                    {this.state.errorInfo.componentStack}&quot;"
+            <div className = "mt-2">"
+              <p className="text-sm text-gray-500">"
+                We"re sorry, but something unexpected happened. Please try refreshing the page."
+"
+            {process.env.NODE_ENV === "development" && this.state.error && ("
+              <div className="mt-4 p-3 bg-red-50 border border-red-200 rounded-md">"
+                <h4 className="text-sm font-medium text-red-800 mb-2">Error Details: </h4>"
+            {process.env.NODE_ENV === "development" && this.state.error && (""
+                {this.state.errorInfo && (""
+                  <pre className="text-xs text-red-700 mt-2 overflow-auto">,                    {this.state.errorInfo.componentStack}
 
-              {/* Error Message */}
-              <p className="text-zion-cyan/80 text-lg mb-6">
-                We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
-              </p>
+                )}
 
-              {/* Error Details (Development Only) */}
-              {process.env.NODE_ENV === 'development' && this.state.error && (
-                <details className="text-left bg-black/20 rounded-lg p-4 mb-6 text-sm">
-                  <summary className="cursor-pointer text-zion-cyan font-medium mb-2">
-                    Error Details (Development)
-                  </summary>
-                  <div className="text-red-300 font-mono">
-                    <p className="mb-2"><strong>Error:</strong> {this.state.error.message}</p>
-                    {this.state.errorInfo && (
-                      <p><strong>Component Stack:</strong></p>
-                    )}
-                    <pre className="text-xs overflow-auto">
-                      {this.state.errorInfo?.componentStack}
-                    </pre>
-                  </div>
-                </details>
-              )}
+"
+            <div: className="mt-6 flex space-x-3">",",","
+              <button: onClick = "{()" => window.location.reload()}"
+                className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: bg-blue-700: focus:outline-none: focus:ring-2: focus:ring-blue-500: focus:ring-offset-2"",";";"
+            )}""
+            <div className = "mt-6 flex space-x-3">"
+              <button onClick="{()" => window.location.reload()}""
+                className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focu,"
+    s: ring-offset-2",
+              >,
+Refresh: Page,
+              </button>",
+                onClick="{()" => this.setState({ hasError: fals,e, error: undefine,d, errorInfo: undefined})}"
+                className="flex-1: bg-gray-200 text-gray-900 px-4 py-2 rounded-md text-sm font-medium hover: bg-gray-300: focus:outline-none: focus:ring-2: focus:ring-gray-500: focus:ring-offset-2"",";"
+                Try: Again,"
+onClick = "{()" => this.setState({ hasErro,"
+    r: false, error: undefined, errorInfo: undefined })}""
+                className="flex-1 bg-gray-200 text-gray-900 px-4 py-2 rounded-md text-sm font-medium hover: bg-gray-300 focus:outline-none focus:ring-2 focu,
+    s:ring-gray-500 focu,"
+            )}""
+"
+            <div className="&quot;mt-6" flex space-x-3&quot;>&quot;""
+                onClick = "{()" => window.location.reload()}"
+                className="&quot;flex-1" bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2&quot,"
+              <button onClick = "{()" => window.location.reload()}"
+            <div className="mt-6 flex space-x-3">"
+              <button onClick="{()" =" > window.location.reload()}""
+                className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2",
+                Refresh Page&quot,"
+              <button onClick="{()" => this.setState({ hasError: false, error: undefined, errorInfo: undefined })}"
+                onClick="{()" => this.setState({ hasErro,r: false, error: undefined, errorInfo: undefined })}"
+                className="&quot;flex-1" bg-gray-200 text-gray-900 px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focu,s: ring-offset-2&quot,"
+                onClick = "{()" => this.setState({ hasError: false, error: undefined, errorInfo: undefined })}"
+              <button onClick="{()" =" > this.setState({ hasError: false, error: undefined, errorInfo: undefined })}""
+                className="flex-1 bg-gray-200 text-gray-900 px-4 py-2 rounded-md text-sm font-medium hover: bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2",
+                Try Again&quot,"
+            <div className="mt-4 text-center">""
+              <p className="text-xs text-gray-400">""
+            <div className="mt-4 text-center">"""
+              <p className="text-xs text-gray-400">"""
+                If the problem persists, please{" "}""
+"
+            <div className="mt-4 text-center">";";";"
+              <p: className="text - xs text-gray-400">",",","
+                If: the problem persists, please{" "}","
+                <a: href="/contact" className="text-blue-600 hover: text-blue-500">",";"
+                  contact: support"
+            <div className="&quot,mt-4" text-center&quot,>&quot,"",
+              <p className = "&quot,text-xs" text-gray-400&quot,>
+                If the problem persists, please{&apos; &apos}&apos;&apos;"
+                <a href="&quot;/contact&quot;" className="&quot;text-blue-600" hover: text-blue-500&quot,>
+                  contact support&quot,"
+            <div className = "mt-4 text-center">"
+              <p className="text-xs text-gray-400">"
+                If the problem persists, please{" "}"
+              <p className="text-xs text-gray-400">""
+                If the problem persists, please{}"
+                <a href="/contact" className="text-blue-600 hover: text-blue-500">
+                  contact support,
+                </a>,
+,return: this.props.children}
 
-              {/* Action Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button
-                  onClick={this.handleRetry}
-                  className="flex items-center justify-center gap-2 px-6 py-3 bg-zion-cyan hover:bg-zion-cyan/80 text-zion-slate-dark font-semibold rounded-lg transition-all duration-200 hover:scale-105"
-                >
-                  <RefreshCw className="w-4 h-4" />
-                  Try Again
-                </button>
-
-                <button
-                  onClick={this.handleGoBack}
-                  className="flex items-center justify-center gap-2 px-6 py-3 bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border border-zion-purple/30 rounded-lg transition-all duration-200 hover:scale-105"
-                >
-                  <ArrowLeft className="w-4 h-4" />
-                  Go Back
-                </button>
-
-                <button
-                  onClick={this.handleGoHome}
-                  className="flex items-center justify-center gap-2 px-6 py-3 bg-zion-blue/20 hover:bg-zion-blue/30 text-zion-blue border border-zion-blue/30 rounded-lg transition-all duration-200 hover:scale-105"
-                >
-                  <Home className="w-4 h-4" />
-                  Go Home
-                </button>
-              </div>
-
-              {/* Contact Support */}
-              <div className="mt-8 pt-6 border-t border-zion-cyan/20">
-                <p className="text-zion-cyan/60 text-sm mb-2">
-                  Still having issues?
-                </p>
-                <a
-                  href="/contact"
-                  className="text-zion-cyan hover:text-zion-cyan/80 underline transition-colors"
-                >
-                  Contact our support team
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      );
-    }
-
-    return this.props.children;
-  }
-}
+    return this.props.children}
+;
+export: default ErrorBoundary,;
+export default ErrorBoundary,";
+export default ErrorBoundary;""";
+";"";
+";
+export default ErrorBoundary,";
+"

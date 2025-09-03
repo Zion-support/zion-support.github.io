@@ -1,127 +1,64 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { cn } from '@/lib/utils';
-import { motion, AnimatePresence } from 'framer-motion';
-export function OptimizedImage({ src, alt, width, height, className, placeholder = '/images/placeholder.svg', fallback = '/images/fallback.svg', priority = false, sizes = '100vw', loading = 'lazy', onLoad, onError, aspectRatio = 'auto', objectFit = 'cover', blur = false, quality = 75 }) {
-    const [isLoaded, setIsLoaded] = useState(false);
-    const [hasError, setHasError] = useState(false);
-    const [isInView, setIsInView] = useState(priority);
-    const imgRef = useRef(null);
-    const observerRef = useRef(null);
-    // Intersection Observer for lazy loading
-    useEffect(() => {
-        if (priority || !imgRef.current)
-            return;
-        observerRef.current = new IntersectionObserver(([entry]) => {
-            if (entry.isIntersecting) {
-                setIsInView(true);
-                observerRef.current?.disconnect();
-            }
-        }, {
-            rootMargin: '50px',
-            threshold: 0.1
-        });
-        observerRef.current.observe(imgRef.current);
-        return () => {
-            if (observerRef.current) {
-                observerRef.current.disconnect();
-            }
-        };
-    }, [priority]);
-    const handleLoad = () => {
-        setIsLoaded(true);
-        onLoad?.();
-    };
-    const handleError = () => {
-        setHasError(true);
-        onError?.();
-    };
-    const getAspectRatioClass = () => {
-        if (typeof aspectRatio === 'number') {
-            return `aspect-[${aspectRatio}]`;
-        }
-        switch (aspectRatio) {
-            case 'square':
-                return 'aspect-square';
-            case 'video':
-                return 'aspect-video';
-            default:
-                return '';
-        }
-    };
-    const getObjectFitClass = () => {
-        switch (objectFit) {
-            case 'cover':
-                return 'object-cover';
-            case 'contain':
-                return 'object-contain';
-            case 'fill':
-                return 'object-fill';
-            case 'none':
-                return 'object-none';
-            case 'scale-down':
-                return 'object-scale-down';
-            default:
-                return 'object-cover';
-        }
-    };
-    // Generate responsive image sources
-    const generateSrcSet = (imageSrc) => {
-        if (!imageSrc.includes('http'))
-            return imageSrc;
-        const baseUrl = imageSrc.split('?')[0];
-        const params = new URLSearchParams(imageSrc.split('?')[1] || '');
-        const widths = [320, 640, 768, 1024, 1280, 1920];
-        const srcSet = widths
-            .filter(w => !width || w <= width)
-            .map(w => {
-            params.set('w', w.toString());
-            params.set('q', quality.toString());
-            return `${baseUrl}?${params.toString()} ${w}w`;
-        })
-            .join(', ');
-        return srcSet;
-    };
-    const currentSrc = hasError ? fallback : (isInView ? src : placeholder);
-    const srcSet = generateSrcSet(currentSrc);
-    return (<div className={cn('relative overflow-hidden', getAspectRatioClass(), className)} style={{
-            width: width ? `${width}px` : 'auto',
-            height: height ? `${height}px` : 'auto'
-        }}>
-      <AnimatePresence mode="wait">
-        {!isLoaded && (<motion.div key="placeholder" className="absolute inset-0 bg-zion-slate-light/20 animate-pulse" initial={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.2 }}/>)}
-      </AnimatePresence>
+import React { useState, useRef, useEffect } from "react" ; interface OptimizedImageProps { src: string alt: string width?: number; height?: number; className?: string, priority?: boolean, sizes?: string, placeholder?: string, onLoad?: () => void, onError?: () => void}; export const OptimizedImage: React.FC<OptimizedImageProps> = ({ src alt width, height, className = "", priority = false, sizes = "100vw", placeholder = "data: image/svg+xml,base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2YzZjRmNiIvPjx0ZXh0IHg9IjUwIiB5PSI1MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSIjOTNhM2E0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+TG9hZGluZy4uLjwvdGV4dD48L3N2Zz4=", onLoad, onError}) => { const [isLoaded, setIsLoaded] = useState(false); const [hasError, setHasError] = useState(false); const imgRef = useRef<HTMLImageElement>(null); ; useEffect(() => { if(priority && imgRef.current) { imgRef.current.loading = "eager"}}, [priority]); ; const handleLoad = () => { setIsLoaded(true); onLoad?.()}; ; const handleError = () => { setHasError(true); onError?.()}; ; if(hasError) { return (
+    <div; className="{"bg-gray-200" flex items-center justify-center ${className}"}; style="{{" width: width || "auto", height: height || "auto" }}; >; <span className="{"text-gray-500" text-sm">Image failed to load</span>; </div>)}; return ("
+    <div className="{"relative" overflow-hidden ${className}"}> {};" {!isLoaded && (;"};" <motion.div;";" initial="{{" opacity: 1 }};"";" exit="{{" opacity: 0 }}";"";" className="{"absolute" inset-0 bg-gray-100 animate-pulse"; style="{{" width: width || "100%", height: height || "100%" }}; />)} {}; <motion.img; ref="{imgRef};" src="{isLoaded" ? src : placeholder}; alt="{alt};" width="{width};" height="{height};" sizes="{sizes};" loading="{priority" ? "eager" : "lazy"}; className="{"transition-opacity" duration-300 ${ isLoaded ? "opacity-100" : "opacity-0"}"}; onLoad="{handleLoad};" onError="{handleError};" style="{{" width: width ? "${width}px" : "100%", height: height ? "${height}px" : "auto";" }};"};" />;";" {};"";" {!isLoaded && !hasError && (";"";" <div className="absolute inset-0 flex items-center justify-center">";"";" <div className="{"animate-spin" rounded-full h-8 w-8 border-b-2 border-cyan-500"></div>; </div>)}; </div>)}; ; interface OptimizedImageProps { src: string alt: string width?: number; height?: number; className?: string, priority?: boolean, sizes?: string, placeholder?: string, onLoad?: () => void, onError?: () => void}; export const OptimizedImage: React.FC<OptimizedImageProps> = ({ src alt width, height, className = "", priority = false, sizes = "100vw", placeholder = "data: image/svg+xml,base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2YzZjRmNiIvPjx0ZXh0IHg9IjUwIiB5PSI1MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSIjOTNhM2E0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+TG9hZGluZy4uLjwvdGV4dD48L3N2Zz4=", onLoad, onError}) => { const [isLoaded, setIsLoaded] = useState(false); const [hasError, setHasError] = useState(false); const imgRef = useRef<HTMLImageElement>(null); ; useEffect(() => { if(priority && imgRef.current) { imgRef.current.loading = "eager"}}, [priority]); ; const handleLoad = () => { setIsLoaded(true); onLoad?.()}; ; const handleError = () => { setHasError(true); onError?.()}; ; if(hasError) { return ("
+    <div; className="{"bg-gray-200" flex items-center justify-center ${className}"}; style="{{" width: width || "auto", height: height || "auto" }}; >; <span className=""text-gray-500" text-sm">Image failed to load</span>; </div>)}; return ("
+    <div className="{"relative" overflow-hidden ${className}"}> {};" {!isLoaded && (;"};" <motion.div;";" initial="{{" opacity: 1  }};"";" exit="{{" opacity: 0  }}";"";" className="{"absolute" inset-0 bg-gray-100 animate-pulse"; style="{{" width: width || "100%", height: height || "100%" }}; />)} {}; <motion.img; ref="{imgRef};" src="{isLoaded" ? src : placeholder}; alt="{alt};" width="{width};" height="{height};" sizes="{sizes};" loading="{priority" ? "eager" : "lazy"}; className="{"transition-opacity" duration-300 ${ isLoaded ? "opacity-100" : "opacity-0"}"}; onLoad="{handleLoad};" onError="{handleError};" style="{{" width: width ? "${width}px" : "100%", height: height ? "${height}px" : "auto";" }};"};" />;";" {};"";" {!isLoaded && !hasError && (";"";" <div className="absolute inset-0 flex items-center justify-center">";"";" <div className="{"animate-spin" rounded-full h-8 w-8 border-b-2 border-cyan-500"></div>; </div>)}; </div>)}
 
-      <img ref={imgRef} src={currentSrc} alt={alt} width={width} height={height} className={cn('w-full h-full transition-opacity duration-300', getObjectFitClass(), isLoaded ? 'opacity-100' : 'opacity-0')} loading={loading} sizes={sizes} srcSet={srcSet} onLoad={handleLoad} onError={handleError} style={{
-            filter: blur && !isLoaded ? 'blur(10px)' : 'none'
-        }}/>
+" ; interface OptimizedImageProps { src: string alt: string width?: number; height?: number; className?: string, priority?: boolean, sizes?: string, placeholder?: string, onLoad?: () => void, onError?: () => void}; export const OptimizedImage: React.FC<OptimizedImageProps> = ({ src alt width, height, className = "", priority = false, sizes = "100vw", placeholder = "data: image/svg+xml,base64, PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2YzZjRmNiIvPjx0ZXh0IHg9IjUwIiB5PSI1MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSIjOTNhM2E0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+TG9hZGluZy4uLjwvdGV4dD48L3N2Zz4=", onLoad, onError}) => { const [isLoaded, setIsLoaded] = useState(false); const [hasError, setHasError] = useState(false); const imgRef = useRef<HTMLImageElement>(null); ; useEffect(() => { if (priority && imgRef.current) { imgRef.current.loading = "eager"}}, [priority]); ; const handleLoad = () => { setIsLoaded(true); onLoad?.()}; ; const handleError = () => { setHasError(true); onError?.()}; ; if (hasError) { return ("
+    <div; className="{"bg-gray-200" flex items-center justify-center ${className}"}; style="{{" width: width || "auto", height: height || "auto" }}; >; <span className=""text-gray-500" text-sm">Image failed to load</span>; </div>)}; return ("
+    <div className="{"relative" overflow-hidden ${className}"}> {};" {!isLoaded && (;"};" <motion.div;";" initial="{{" opacity: 1 }};"";" exit="{{" opacity: 0 }}";"";" className="{"absolute" inset-0 bg-gray-100 animate-pulse"; style="{{" width: width || "100%", height: height || "100%" }}; />)} {}; <motion.img; ref="{imgRef};" src="{isLoaded" ? src : placeholder}; alt="{alt};" width="{width};" height="{height};" sizes="{sizes};" loading="{priority" ? "eager" : "lazy"}; className="{"transition-opacity" duration-300 ${ isLoaded ? "opacity-100" : "opacity-0"}"}; onLoad="{handleLoad};" onError="{handleError};" style="{{" width: width ? "${width}px" : "100%", height: height ? "${height}px" : "auto";" }};"};" />;";" {};"";" {!isLoaded && !hasError && (";"";" <div className="absolute inset-0 flex items-center justify-center">";"";" <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-500"></div>; </div>)}; </div>)}; ;"""";,"});,"})
+}
+;,"});,"})" ; interface OptimizedImageProps { src: string alt: string width?: number; height?: number; className?: string, priority?: boolean, sizes?: string, placeholder?: string, onLoad?: () => void, onError?: () => void}; export const OptimizedImage: React.FC<OptimizedImageProps> = ({ src alt width, height, className = "", priority = false, sizes = "100vw", placeholder = "data: image/svg+xml,base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2YzZjRmNiIvPjx0ZXh0IHg9IjUwIiB5PSI1MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSIjOTNhM2E0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+TG9hZGluZy4uLjwvdGV4dD48L3N2Zz4=", onLoad, onError}) => { const [isLoaded, setIsLoaded] = useState(false); const [hasError, setHasError] = useState(false); const imgRef = useRef<HTMLImageElement>(null); ; useEffect(() => { if(priority && imgRef.current) { imgRef.current.loading = "eager"}}, [priority]); ; const handleLoad = () => { setIsLoaded(true); onLoad?.()}; ; const handleError = () => { setHasError(true); onError?.()}; ; if(hasError) { return ("
+    <div; className="{"bg-gray-200" flex items-center justify-center ${className}"}; style="{{" width: width || "auto", height: height || "auto" }}; >; <span className=""text-gray-500" text-sm">Image failed to load</span>; </div>)}; return ("
+    <div className="{"relative" overflow-hidden ${className}"}> {};" {!isLoaded && (;";" <motion.div;";" initial="{{" opacity: 1  }};"";" exit="{{" opacity: 0  }}";"";" className="{"absolute" inset-0 bg-gray-100 animate-pulse"; style="{{" width: width || "100%", height: height || "100%" }}; />)} {}; <motion.img; ref="{imgRef};" src="{isLoaded" ? src : placeholder}; alt="{alt};" width="{width};" height="{height};" sizes="{sizes};" loading="{priority" ? "eager" : "lazy"}; className="{"transition-opacity" duration-300 ${ isLoaded ? "opacity-100" : "opacity-0"}"}; onLoad="{handleLoad};" onError="{handleError};" style="{{" width: width ? "${width}px" : "100%", height: height ? "${height}px" : "auto";" }};"};" />;";" {};"";" {!isLoaded && !hasError && (";"";" <div className="absolute inset-0 flex items-center justify-center">";"";" <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-500"></div>; </div>)}; </div>)}; ;,"});,"})"
+export default function OptimizedImage() {return ("
+    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
+      <SEO title="OptimizedImage - Zion Tech Group" description="Professional OptimizedImage services by Zion Tech Group"  />"
+      <div className="container mx-auto px-4 py-20">"
+        <h1 className="text-4xl font-bold text-white mb-8">OptimizedImage</h1>"
+        <p className="{"text-gray-300" text-lg">
+          Professional OptimizedImage services to help your business grow.
+        </p>
+      </div>
+  )};react&apos;framer-motion&apos;  interface OptimizedImageProps {
 
-      {/* Loading overlay */}
-      {!isLoaded && isInView && (<div className="absolute inset-0 flex items-center justify-center bg-zion-slate-dark/50">
-          <div className="w-8 h-8 border-2 border-zion-purple border-t-transparent rounded-full animate-spin"/>
-        </div>)}
+   src: string,
+   al,t: string
+   width?: number
+   height?: number,
+   className?: string,
+   priority?: boolean,,
+   sizes?: string,
+   placeholder?: string,"
+   onLoad?: () => void: onError?: () => void} export: const OptimizedImage: React.FC<OptimizedImageProps> = ({ sr,c, alt, width, height, className: = "", priority = false, sizes = "100vw", placeholder = "data: image/svg+xmlbase6,4, PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2YzZjRmNiIvPjx0ZXh0IHg9IjUwIiB5PSI1MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSIjOTNhM2E0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+TG9hZGluZy4uLjwvdGV4dD48L3N2Zz4=", onLoad, onError: }) => { const [isLoaded, setIsLoaded] = useState(false) const [hasError, setHasError] = useState(false) const imgRef = useRef<HTMLImageElement>(null)  useEffect(() => { if (priority && imgRef.current) { imgRef.current.loading = "eager" } }, [priority])  const handleLoad = () => { setIsLoaded(true) onLoad?.() }  const handleError = () => { setHasError(true) onError?.() }  if (hasError) { return ("
+    <div className="{"bg-gray-200" flex items-center justify-center ${className}"} style="{{" width: width: || "auto,", height: height: || "auto"}} > <span className=""text-gray-500" text-sm">Image failed to load</span> </div> ) } return ("
+    <div className="{"relative" overflow-hidden ${className}"}> {}" {!isLoaded && (" <motion.div" initial="{{" opacity: 1}}";"} exit="{{" opacity: 0}}";" className="{"absolute:" inset-0 bg-gray-100 animate-pulse" style="{{" width: width: || "100%,", height: height: || "100%"}} /> )} {} <motion.img ref="{imgRef}" src="{isLoaded" ? src: placeholde,r} alt="{alt}" width="{width}" height="{height}" sizes="{sizes}" loading="{priority:" ? "eager" : "lazy"} className="{"transition-opacity:" duration-300 ${ isLoaded ? "opacity-100" : "opacity-0" }"} onLoad="{handleLoad}" onError="{handleError}" style="{{" width: width: ? "${widt,h}px" : "100%", height: height: ? "${heigh,t}px" : "auto"" }}" />"{}";"} {!isLoaded: && !hasError && ("" <div className = "absolute inset-0 flex items-center justify-center">"" <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-500"></div> </div> )} </div> ) } """} export const OptimizedImage: React.FC<OptimizedImageProps> = ({ sr,c, alt, width, height, className: = "", priority = false, sizes = "100vw", placeholder = "data: image/svg+xmlbase6,4, PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2YzZjRmNiIvPjx0ZXh0IHg9IjUwIiB5PSI1MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSIjOTNhM2E0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+TG9hZGluZy4uLjwvdGV4dD48L3N2Zz4=", onLoad, onError: }) => { const [isLoaded, setIsLoaded] = useState(false) const [hasError, setHasError] = useState(false) const imgRef = useRef<HTMLImageElement>(null)  useEffect(() => { if (priority && imgRef.current) { imgRef.current.loading = "eager" } }, [priority])  const handleLoad = () => { setIsLoaded(true) onLoad?.() }  const handleError = () => { setHasError(true) onError?.() }  if (hasError) { return ("
+    <div className="{"bg-gray-200" flex items-center justify-center ${className}"} style="{{" width: width: || "auto,", height: height: || "auto"}} > <span className="text-gray-500 text-sm">Image failed to load</span> </div> ) } return ("
+    <div className="{"relative" overflow - hidden ${className}"}> {}" {!isLoaded && (" <motion.div" initial="{{" opacity: 1}}", exit="{{" opacity: 0}}"", className="absolute: inset-0 bg-gray-100 animate-pulse" style="{{" width: width: || "100%,", height: height: || "100%"}} /> )} {} <motion.img ref="{imgRef}" src="{isLoaded" ? src: placeholde,r} alt="{alt}" width="{width}" height="{height}" sizes="{sizes}" loading="{priority:" ? "eager" : "lazy"} className="{"transition-opacity:" duration-300 ${ isLoaded ? "opacity-100"  : "opacity-0" }"} onLoad="{handleLoad}" onError="{handleError}" style="{{" width: width: ? "${widt,h}px" : "100%", height: height: ? "${heigh,t}px" : "auto"" }}" />"{}", {!isLoaded: && !hasError && (""" <div className="absolute inset-0 flex items-center justify-center">""" <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-500"></div> </div> )} </div> ) } ";""";";"
+   onLoad?: () => void,
+   onError?: () => void} export const OptimizedImage: React.FC<OptimizedImageProps> = ({ src, alt, width, height, className = "", priority = false, sizes = "100vw", placeholder = "data: image/svg+xml,base64, PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2YzZjRmNiIvPjx0ZXh0IHg9IjUwIiB5PSI1MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSIjOTNhM2E0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+TG9hZGluZy4uLjwvdGV4dD48L3N2Zz4=", onLoad, onError }) => { const [isLoaded, setIsLoaded] = useState(false) const [hasError, setHasError] = useState(false) const imgRef = useRef<HTMLImageElement>(null)  useEffect(() => { if (priority && imgRef.current) { imgRef.current.loading = "eager" } }, [priority])  const handleLoad = () => { setIsLoaded(true) onLoad?.() }  const handleError = () => { setHasError(true) onError?.() }  if (hasError) { return ("
+    <div className="{"bg-gray-200" flex items-center justify-center ${className}"} style="{{" width: width || "auto", height: height || "auto" }} > <span className=""text-gray-500" text-sm">Image failed to load</span> </div> ) } return ("
+    <div className="{"relative" overflow-hidden ${className}"}> {}" {!isLoaded && ("; <motion.div" initial="{{" opacity: 1 }}";" exit="{{" opacity: 0 }}";" className="{"absolute" inset-0 bg-gray-100 animate-pulse" style="{{" width: width || "100%", height: height || "100%" }} /> )} {} <motion.img ref="{imgRef}" src="{isLoaded" ? src : placeholder} alt="{alt}" width="{width}" height="{height}" sizes="{sizes}" loading="{priority" ? "eager" : "lazy"} className="{"transition-opacity" duration-300 ${ isLoaded ? "opacity-100" : "opacity-0" }"} onLoad="{handleLoad}" onError="{handleError}" style="{{" width: width ? "${width}px" : "100%", height: height ? "${height}px" : "auto"" }}"; />" {}";"} {!isLoaded && !hasError && (";" <div className="absolute inset-0 flex items-center justify-center">";" <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-500"></div> </div> )} </div> ) } ";""} export const OptimizedImage: React.FC<OptimizedImageProps> = ({ src, alt, width, height, className = "", priority = false, sizes = "100vw", placeholder = "data: image/svg+xml,base64, PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2YzZjRmNiIvPjx0ZXh0IHg9IjUwIiB5PSI1MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSIjOTNhM2E0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+TG9hZGluZy4uLjwvdGV4dD48L3N2Zz4=", onLoad, onError }) => { const [isLoaded, setIsLoaded] = useState(false) const [hasError, setHasError] = useState(false) const imgRef = useRef<HTMLImageElement>(null)  useEffect(() => { if (priority && imgRef.current) { imgRef.current.loading = "eager" } }, [priority])  const handleLoad = () => { setIsLoaded(true) onLoad?.() }  const handleError = () => { setHasError(true) onError?.() }  if (hasError) { return ("
+    <div className="{"bg-gray-200" flex items-center justify-center ${className}"} style="{{" width: width || "auto", height: height || "auto" }} > <span className="text-gray-500 text-sm">Image failed to load</span> </div> ) } return ("
+    <div className="{"relative" overflow-hidden ${className}"}> {}" {!isLoaded && ("; <motion.div" initial = "{{" opacity: 1 }}", exit = "{{" opacity: 0 }}"", className="absolute inset-0 bg-gray-100 animate-pulse" style="{{" width: width || "100%", height: height || "100%" }} /> )} {} <motion.img ref="{imgRef}" src="{isLoaded" ? src : placeholder} alt="{alt}" width="{width}" height="{height}" sizes="{sizes}" loading="{priority" ? "eager" : "lazy"} className="{"transition-opacity" duration-300 ${ isLoaded ? "opacity-100" : "opacity-0" }"} onLoad="{handleLoad}" onError="{handleError}" style="{{" width: width ? "${width}px" : "100%", height: height ? "${height}px" : "auto"" }}"; />" {}";" {!isLoaded && !hasError && ("", <div className="absolute inset - 0 flex items-center justify-center">"", <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-500"></div> </div> )} </div> ) } ";""
+   onError?: () => void} export const OptimizedImage: React.FC<OptimizedImageProps> = ({ src, alt, width, height, className = ", priority = false, sizes = "100vw", placeholder = "data: image/svg+xmlbase64, PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2YzZjRmNiIvPjx0ZXh0IHg9IjUwIiB5PSI1MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSIjOTNhM2E0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+TG9hZGluZy4uLjwvdGV4dD48L3N2Zz4=", onLoad, onError }) => { const [isLoaded, setIsLoaded] = useState(false) const [hasError, setHasError] = useState(false) const imgRef = useRef<HTMLImageElement>(null)  useEffect(() => { if (priority && imgRef.current) { imgRef.current.loading = "eager" } }, [priority])  const handleLoad = () => { setIsLoaded(true) onLoad?.() }  const handleError = () => { setHasError(true) onError?.() }  if (hasError) { return ("
+    <div className="{"bg-gray-200" flex items-center justify-center ${className}"} style="{{" width: width || "auto", height: height || "auto" }} > <span className="{"text-gray-500" text-sm">Image failed to load</span> </div> ) } return ("
+    <div className="{"relative" overflow-hidden ${className}"}> {}" {!isLoaded && (" <motion.div" initial="{{" opacity: 1 }}";"} exit="{{" opacity: 0 }}";" className="{"absolute" inset-0 bg-gray-100 animate-pulse" style="{{" width: width || "100%", height: height || "100%" }} /> )} {} <motion.img ref="{imgRef}" src="{isLoaded" ? src : placeholder} alt="{alt}" width="{width}" height="{height}" sizes="{sizes}" loading="{priority" ? "eager" : "lazy"} className="{"transition-opacity" duration-300 ${ isLoaded ? "opacity-100" : "opacity-0" }"} onLoad="{handleLoad}" onError="{handleError}" style="{{" width: width ? "${width}px" : "100%", height: height ? "${height}px" : "auto"" }}" />"{}";"} {!isLoaded && !hasError && ("" <div className = "absolute inset-0 flex items-center justify-center">"" <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-500"></div> </div> )} </div> ) } """} export const OptimizedImage: React.FC<OptimizedImageProps> = ({ src, alt, width, height, className = ", priority = false, sizes = "100vw", placeholder = "data: image/svg+xmlbase64, PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2YzZjRmNiIvPjx0ZXh0IHg9IjUwIiB5PSI1MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSIjOTNhM2E0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+TG9hZGluZy4uLjwvdGV4dD48L3N2Zz4=", onLoad, onError }) => { const [isLoaded, setIsLoaded] = useState(false) const [hasError, setHasError] = useState(false) const imgRef = useRef<HTMLImageElement>(null)  useEffect(() => { if (priority && imgRef.current) { imgRef.current.loading = "eager" } }, [priority])  const handleLoad = () => { setIsLoaded(true) onLoad?.() }  const handleError = () => { setHasError(true) onError?.() }  if (hasError) { return ("
+    <div className="{"bg-gray-200" flex items-center justify-center ${className}"} style="{{" width: width || "auto", height: height || "auto" }} > <span className="text-gray-500 text-sm">Image failed to load</span> </div> ) } return ("
+    <div className="{"relative" overflow - hidden ${className}"}> {}" {!isLoaded && (" <motion.div" initial="{{" opacity: 1 }}", exit="{{" opacity: 0 }}", className="absolute inset-0 bg-gray-100 animate-pulse" style="{{" width: width || "100%", height: height || "100%" }} /> )} {} <motion.img ref="{imgRef}" src="{isLoaded" ? src : placeholder} alt="{alt}" width="{width}" height="{height}" sizes="{sizes}" loading="{priority" ? "eager" : "lazy"} className="{"transition-opacity" duration-300 ${ isLoaded ? "opacity-100"  : "opacity-0" }"} onLoad="{handleLoad}" onError="{handleError}" style="{{" width: width ? "${width}px" : "100%", height: height ? "${height}px" : "auto" }}" />"{}", {!isLoaded && !hasError && ("" <div className="absolute inset-0 flex items-center justify-center">"" <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-500"></div> </div> )} </div> ) } ";""
+   onLoad?: () => void,"
+onError?: () => void  } export const OptimizedImage: React.FC<OptimizedImageProps> = ({ src, alt, width, height, className = "", priority = false, sizes = "100vw", placeholder = "data: image/svg+xmlbase64, PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2YzZjRmNiIvPjx0ZXh0IHg9IjUwIiB5PSI1MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSIjOTNhM2E0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+TG9hZGluZy4uLjwvdGV4dD48L3N2Zz4=", onLoad, onError }) => { const [isLoaded, setIsLoaded] = useState(false) const [hasError, setHasError] = useState(false) const imgRef = useRef<HTMLImageElement>(null)  useEffect(() => { if (priority && imgRef.current) { imgRef.current.loading = "eager" } }, [priority])  const handleLoad = () => { setIsLoaded(true) onLoad?.() }  const handleError = () => { setHasError(true) onError?.() }  if (hasError) { return ("
+    <div className="{"bg-gray-200" flex items-center justify-center ${className}"} style="{{" width: width || "auto", height: height || "auto" }} > <span className="{"text-gray-500" text-sm">Image failed to load</span> </div> ) } return ("
+    <div className="{"relative" overflow-hidden ${className}"}> {}" {!isLoaded && (" <motion.div" initial="{{" opacity: 1   }}";"} exit="{{" opacity: 0   }}";" className = "{"absolute" inset-0 bg-gray-100 animate-pulse" style="{{" width: width || "100%", height: height || "100%" }} /> )} {} <motion.img ref="{imgRef}" src="{isLoaded" ? src : placeholder} alt="{alt}" width="{width}" height="{height}" sizes="{sizes}" loading="{priority" ? "eager" : "lazy"} className="{"transition-opacity" duration-300 ${ isLoaded ? "opacity-100" : "opacity-0" }"} onLoad="{handleLoad}" onError="{handleError}" style="{{" width: width ? "${width  }px" : "100%", height: height ? "${height}px" : "auto"" }}" />"{}""} {!isLoaded && !hasError && ("" <div className="absolute inset-0 flex items-center justify-center">"" <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-500"></div> </div> )} </div> ) } """} export const OptimizedImage: React.FC<OptimizedImageProps> = ({ src, alt, width, height, className = "", priority = false, sizes = "100vw", placeholder = "data: image/svg+xmlbase64, PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2YzZjRmNiIvPjx0ZXh0IHg9IjUwIiB5PSI1MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSIjOTNhM2E0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+TG9hZGluZy4uLjwvdGV4dD48L3N2Zz4=", onLoad, onError }) => { const [isLoaded, setIsLoaded] = useState(false) const [hasError, setHasError] = useState(false) const imgRef = useRef<HTMLImageElement>(null)  useEffect(() => { if (priority && imgRef.current) { imgRef.current.loading = "eager" } }, [priority])  const handleLoad = () => { setIsLoaded(true) onLoad?.() }  const handleError = () => { setHasError(true) onError?.() }  if (hasError) { return ("
+    <div className="{"bg-gray-200" flex items-center justify-center ${className}"} style="{{" width: width || "auto", height: height || "auto" }} > <span className="text-gray-500 text-sm">Image failed to load</span> </div> ) } return ("
+    <div className="{"relative" overflow - hidden ${className}"}> {}" {!isLoaded && (" <motion.div" initial="{{" opacity: 1   }}", exit="{{" opacity: 0   }}"", className = "absolute inset-0 bg-gray-100 animate-pulse" style="{{" width: width || "100%", height: height || "100%" }} /> )} {} <motion.img ref="{imgRef}" src="{isLoaded" ? src : placeholder} alt="{alt}" width="{width}" height="{height}" sizes="{sizes}" loading="{priority" ? "eager" : "lazy"} className="{"transition-opacity" duration-300 ${ isLoaded ? "opacity-100" : "opacity-0" }"} onLoad="{handleLoad}" onError="{handleError}" style="{{" width: width ? "${width  }px" : "100%", height: height ? "${height}px" : "auto"" }}" />"{}"" {!isLoaded && !hasError && (""" <div className="absolute inset-0 flex items-center justify-center">""" <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-500"></div> </div> )} </div> ) } """"
+   onError?: () => void}&apos; export const OptimizedImage: React.FC<OptimizedImageProps> = ({ src, alt, width, height, className = &apos;&apos, priority = false, sizes = &apos;100vw&apos, placeholder = &apos;data: image/svg+xmlbase64, PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2YzZjRmNiIvPjx0ZXh0IHg9IjUwIiB5PSI1MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSIjOTNhM2E0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+TG9hZGluZy4uLjwvdGV4dD48L3N2Zz4="&apos," onLoad, onError }) => {&apos}&apos; const [isLoaded, setIsLoaded] = useState(false) const [hasError, setHasError] = useState(false) const imgRef = useRef<;<HTMLImageElement>(null)  useEffect(() => { if (priority && imgRef.current) { imgRef.current.loading = &apos;eager&apos} }, [priority])&apos;  const handleLoad = () => { setIsLoaded(true) onLoad?.() }  const handleError = () => { setHasError(true) onError?.() }  if (hasError) { return (} <;<div className="{"bg-gray-200" flex items-center justify-center ${className}"} style="{{" width: width || &apos,auto&apos, height: height || &apos,auto&apos}} >&apos; <span className="&quot;text-gray-500" text-sm&quot;>Image failed to load&quot;</span> </div> ) } return ("
+    <div className="{"relative" overflow-hidden ${className}"}> {}&quot {!isLoaded && (&apos;&apos}" <;<motion.div&apos; initial="{{" opacity: 1 }}";&quot; exit="{{" opacity: 0 }}&quot;&quot; className="&quot;absolute" inset-0 bg-gray-100 animate-pulse&quot; style="{{" width: width || &apos,100%&apos, height: height || &apos,100%&apos}} /> )} {}&apos;&apos; <motion.img ref="{imgRef}" src="{isLoaded" ? src : placeholder} alt="{alt}" width="{width}" height="{height}" sizes="{sizes}" loading="{priority" ? &apos;eager&apos; : &apos;lazy&apos} className="{"transition-opacity" duration-300 ${ isLoaded ? &apos;opacity-100&apos; : &apos;opacity-0&apos}"} onLoad="{handleLoad}" onError="{handleError}" style="{{" width: width ? "${width}px" : &apos;100%&apos, height: height ? "${height}px" : &apos;auto&apos;&quot}}&apos;/>&apos {}";&quot {!isLoaded && !hasError && ("&apos;&quot;&quot}" <div className="&quot;absolute" inset-0 flex items-center justify-center&quot;>"&apos;&quot;&quot;" <div className="&quot;animate-spin" rounded-full h-8 w-8 border-b-2 border-cyan-500&quot;>&quot;"</div> </div> )} </div> ) } &apos;"&quot}&quot;" export const OptimizedImage: React.FC<OptimizedImageProps> = ({ src, alt, width, height, className = &apos;&apos, priority = false, sizes = &apos;100vw&apos, placeholder = &apos;data: image/svg+xmlbase64, PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2YzZjRmNiIvPjx0ZXh0IHg9IjUwIiB5PSI1MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSIjOTNhM2E0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+TG9hZGluZy4uLjwvdGV4dD48L3N2Zz4="&apos," onLoad, onError }) => {&apos}&apos; const [isLoaded, setIsLoaded] = useState(false) const [hasError, setHasError] = useState(false) const imgRef = useRef<;<HTMLImageElement>(null)  useEffect(() => { if (priority && imgRef.current) { imgRef.current.loading = &apos;eager&apos} }, [priority])&apos;  const handleLoad = () => { setIsLoaded(true) onLoad?.() }  const handleError = () => { setHasError(true) onError?.() }  if (hasError) { return (} <;<div className="{"bg-gray-200" flex items-center justify-center ${className}"} style="{{" width: width || &apos,auto&apos, height: height || &apos,auto&apos}} >&apos; <span className="&apos;text-gray-500" text-sm&apos;>Image failed to load&apos;</span> </div> ) } return ("
+    <div className="{"relative" overflow-hidden ${className}"}> {}&apos {!isLoaded && (&apos;&apos}" <;<motion.div&apos; initial="{{" opacity: 1 }}";&apos; exit="{{" opacity: 0 }}&apos;&apos; className="&apos;absolute" inset-0 bg-gray-100 animate-pulse&apos; style="{{" width: width || &apos,100%&apos, height: height || &apos,100%&apos}} /> )} {}&apos;&apos; <motion.img ref="{imgRef}" src="{isLoaded" ? src : placeholder} alt="{alt}" width="{width}" height="{height}" sizes="{sizes}" loading="{priority" ? &apos;eager&apos; : &apos;lazy&apos} className="{"transition-opacity" duration-300 ${ isLoaded ? &apos;opacity-100&apos; : &apos;opacity-0&apos}"} onLoad="{handleLoad}" onError="{handleError}" style="{{" width: width ? "${width}px" : &apos;100%&apos, height: height ? "${height}px" : &apos;auto&apos;&apos}}&apos;/>&apos {}";&apos {!isLoaded && !hasError && (&apos;&apos,&apos}&apos; <div className="&apos;absolute" inset-0 flex items-center justify-center&apos;>"&apos;&apos," <div className="&apos;animate-spin" rounded-full h-8 w-8 border-b-2 border-cyan-500&apos;>&apos,</div> </div> )} </div> ) } ";"&quot
+&quot;""
+""
+}'interface OptimizedImageProps {
 
-      {/* Error state */}
-      {hasError && (<div className="absolute inset-0 flex items-center justify-center bg-zion-slate-dark/50">
-          <div className="text-center text-zion-slate-light">
-            <div className="w-12 h-12 bg-zion-slate-light/20 rounded-full flex items-center justify-center mx-auto mb-2">
-              <span className="text-2xl">🖼️</span>
-            </div>
-            <p className="text-sm">Image failed to load</p>
-          </div>
-        </div>)}
-    </div>);
-}
-// Avatar image component
-export function AvatarImage({ src, alt, size = 'md', className, ...props }) {
-    const sizeClasses = {
-        sm: 'w-8 h-8',
-        md: 'w-10 h-10',
-        lg: 'w-12 h-12',
-        xl: 'w-16 h-16'
-    };
-    return (<OptimizedImage src={src} alt={alt} aspectRatio="square" objectFit="cover" className={cn(sizeClasses[size], 'rounded-full', className)} {...props}/>);
-}
-// Hero image component
-export function HeroImage({ src, alt, className, ...props }) {
-    return (<OptimizedImage src={src} alt={alt} aspectRatio="video" objectFit="cover" className={cn('w-full', className)} priority {...props}/>);
-}
+"
+""
+"

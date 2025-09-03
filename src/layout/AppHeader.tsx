@@ -1,110 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6447ea7d6f37373918d49062850ab24e95262bc9
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Menu, 
-  X, 
-  Search, 
-  User, 
-  Bell, 
-  ChevronDown,
-  Brain,
-  Shield,
-  Cloud,
-  Zap,
-  Globe,
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  Code,
-  Rocket,
-  Users,
-  BarChart3,
-  FileImage,
-  TrendingUp,
-  MessageCircle,
-  Video,
-  FileText,
-  Heart,
-  PanelLeft,
-  ShoppingCart,
-  Settings,
-  LogOut,
-  HelpCircle,
-  BookOpen
-} from 'lucide-react';
-import { useAuth } from '@/hooks/useAuth';
-<<<<<<< HEAD
-=======
-import React, { useState } from 'react';
+<<<<<<< HEADimport React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Search, User, Bell, ChevronDown } from 'lucide-react';
->>>>>>> add-innovative-services-2025
-=======
->>>>>>> 6447ea7d6f37373918d49062850ab24e95262bc9
-=======
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Bell, ChevronDown } from 'lucide-react';
->>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6447ea7d6f37373918d49062850ab24e95262bc9
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [scrolled, setScrolled] = useState(false);
-  const [searchFocused, setSearchFocused] = useState(false);
-  const location = useLocation();
-  const { user, logout } = useAuth();
+<<<<<<< HEAD  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
 
-  // Close dropdowns when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (activeDropdown && !(event.target as Element).closest('.dropdown-container')) {
-        setActiveDropdown(null);
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, [activeDropdown]);
-
-  // Handle scroll effect
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-<<<<<<< HEAD
-  // Close mobile menu when route changes
-  useEffect(() => {
-    setMobileMenuOpen(false);
-    setActiveDropdown(null);
-  }, [location.pathname]);
-=======
-  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
->>>>>>> add-innovative-services-2025
-=======
-  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
->>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
-
-=======
->>>>>>> 6447ea7d6f37373918d49062850ab24e95262bc9
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
@@ -113,114 +15,10 @@ export function AppHeader() {
     }
   };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  const navigation = [
-    { name: 'Home', href: '/', current: location.pathname === '/' },
-    { name: 'About', href: '/about', current: location.pathname === '/about' },
-    { name: 'Services', href: '/services', current: location.pathname.startsWith('/services') },
-    { name: 'Contact', href: '/contact', current: location.pathname === '/contact' },
-  ];
-
-  const services = [
-    { 
-      name: 'AI Solutions', 
-      href: '/services/ai', 
-      description: 'Machine Learning & NLP',
-      icon: Brain,
-      color: 'from-zion-cyan to-zion-blue'
-    },
-    { 
-      name: 'Cybersecurity', 
-      href: '/services/cybersecurity', 
-      description: 'Security & Compliance',
-      icon: Shield,
-      color: 'from-zion-purple to-zion-cyan'
-    },
-    { 
-      name: 'Cloud & DevOps', 
-      href: '/services/cloud-devops', 
-      description: 'Infrastructure & Automation',
-      icon: Cloud,
-      color: 'from-zion-blue to-zion-purple'
-    },
-    { 
-      name: 'Digital Transformation', 
-      href: '/services/digital-transformation', 
-      description: 'Business Innovation',
-      icon: Zap,
-      color: 'from-zion-cyan to-zion-neon'
-    },
-    { 
-      name: 'IoT Services', 
-      href: '/services/iot', 
-      description: 'Connected Solutions',
-      icon: Network,
-      color: 'from-zion-purple to-zion-blue'
-    },
-    { 
-      name: 'Blockchain', 
-      href: '/services/blockchain', 
-      description: 'Web3 & DeFi',
-      icon: Lock,
-      color: 'from-zion-blue to-zion-cyan'
-    }
-  ];
-
-  const solutions = [
-    { 
-      name: 'Healthcare', 
-      href: '/solutions/healthcare', 
-      description: 'Digital Health Solutions',
-      icon: Heart,
-      color: 'from-red-500 to-pink-500'
-    },
-    { 
-      name: 'Finance', 
-      href: '/solutions/finance', 
-      description: 'Fintech & Banking',
-      icon: BarChart3,
-      color: 'from-green-500 to-emerald-500'
-    },
-    { 
-      name: 'Manufacturing', 
-      href: '/solutions/manufacturing', 
-      description: 'Industry 4.0',
-      icon: Cpu,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    { 
-      name: 'Retail', 
-      href: '/solutions/retail', 
-      description: 'E-commerce & Analytics',
-      icon: ShoppingCart,
-      color: 'from-purple-500 to-pink-500'
-    }
-  ];
-
-  const resources = [
-    { name: 'Blog', href: '/blog', icon: FileText },
-    { name: 'Case Studies', href: '/case-studies', icon: FileImage },
-    { name: 'Webinars', href: '/webinars', icon: Video },
-    { name: 'Documentation', href: '/docs', icon: BookOpen },
-    { name: 'Help Center', href: '/help-center', icon: HelpCircle }
-  ];
-
-  const company = [
-    { name: 'About Us', href: '/about', icon: Users },
-    { name: 'Careers', href: '/careers', icon: Briefcase },
-    { name: 'Partners', href: '/partners', icon: Handshake },
-    { name: 'Contact', href: '/contact', icon: MessageCircle }
-  ];
-
->>>>>>> 6447ea7d6f37373918d49062850ab24e95262bc9
-  const toggleDropdown = (dropdown: string) => {
+<<<<<<< HEAD  const toggleDropdown = (dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
 
-<<<<<<< HEAD
   const navigationItems = [
     {
       name: 'Services',
@@ -302,13 +100,6 @@ export function AppHeader() {
     { name: 'Book Demo', href: '/demo', icon: Video, color: 'from-zion-purple to-zion-pink' },
     { name: 'Support', href: '/support', icon: MessageCircle, color: 'from-zion-green to-zion-cyan' }
   ];
-=======
-  const closeMobileMenu = () => {
-    setMobileMenuOpen(false);
-    setActiveDropdown(null);
-  };
->>>>>>> 6447ea7d6f37373918d49062850ab24e95262bc9
-
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -620,18 +411,13 @@ export function AppHeader() {
                   )}
                 </AnimatePresence>
               </div>
-<<<<<<< HEAD
             ))}
           </nav>
 
           {/* Right side actions */}
           <div className="flex items-center space-x-4">
             {/* Search */}
-            <form onSubmit={handleSearch} className="hidden md:flex relative">
-=======
-=======
->>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
-  const navigation = [
+            <form onSubmit={handleSearch} className="hidden md:flex relative">  const navigation = [
     { name: 'Home', href: '/', current: true },
     { name: 'About', href: '/about', current: false },
     { name: 'Contact', href: '/contact', current: false },
@@ -725,92 +511,12 @@ export function AppHeader() {
           {/* Search Bar - Hidden on mobile */}
           <div className="hidden md:flex ml-6 flex-1 max-w-md">
             <form onSubmit={handleSearch} className="relative w-full">
-<<<<<<< HEAD
->>>>>>> add-innovative-services-2025
-=======
->>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
-              <input
-                type="text"
-                placeholder="Search services, talent, equipment..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                placeholder="Search services..."
-                className="input-futuristic w-64 pr-10"
-              />
-              <button
-                type="submit"
-                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zinc-400 hover:text-zion-cyan transition-colors duration-200"
-              >
-                <Search className="w-4 h-4" />
-=======
-=======
->>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
-                className="w-full bg-slate-800/20 border border-slate-700/20 rounded-lg px-4 py-2 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               />
               <button
                 type="submit"
                 className="absolute right-2 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-cyan-400 transition-colors"
               >
                 <Search className="h-4 h-4" />
-<<<<<<< HEAD
->>>>>>> add-innovative-services-2025
-=======
->>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
-              </button>
-            </form>
-          </div>
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-            {/* Quick Actions */}
-            <div className="hidden lg:flex items-center space-x-2">
-              {quickActions.map((action) => (
-                <Link
-                  key={action.name}
-                  to={action.href}
-                  className="btn-futuristic text-sm px-4 py-2"
-                >
-                  {action.name}
-                </Link>
-              ))}
-            </div>
-
-            {/* User Menu */}
-            {user ? (
-              <div className="relative group">
-                <button className="flex items-center space-x-2 p-2 rounded-lg hover:bg-zinc-800/50 transition-all duration-200">
-                  <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">
-                    <User className="w-4 h-4 text-white" />
-                  </div>
-                  <span className="text-sm font-medium text-zinc-300">{user.name}</span>
-                  <ChevronDown className="w-4 h-4 text-zinc-400" />
-                </button>
-                
-                <div className="absolute top-full right-0 mt-2 w-48 bg-zinc-900/95 backdrop-blur-xl border border-zinc-800 rounded-xl shadow-2xl overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                  <div className="p-2">
-                    <Link to="/dashboard" className="flex items-center space-x-3 p-3 rounded-lg hover:bg-zinc-800/50 transition-all duration-200">
-                      <BarChart3 className="w-4 h-4 text-zinc-400" />
-                      <span className="text-sm text-zinc-300">Dashboard</span>
-                    </Link>
-                    <Link to="/profile" className="flex items-center space-x-3 p-3 rounded-lg hover:bg-zinc-800/50 transition-all duration-200">
-                      <User className="w-4 h-4 text-zinc-400" />
-                      <span className="text-sm text-zinc-300">Profile</span>
-                    </Link>
-                    <button
-                      onClick={logout}
-                      className="flex items-center space-x-3 p-3 rounded-lg hover:bg-zinc-800/50 transition-all duration-200 w-full text-left"
-                    >
-                      <LogOut className="w-4 h-4 text-zinc-400" />
-                      <span className="text-sm text-zinc-300">Logout</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-=======
->>>>>>> 6447ea7d6f37373918d49062850ab24e95262bc9
-            ) : (
               <div className="hidden md:flex items-center space-x-3">
                 <Link
                   to="/login"
@@ -826,9 +532,6 @@ export function AppHeader() {
                 </Link>
               </div>
             )}
-=======
-=======
->>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
           {/* Right side actions */}
           <div className="ml-6 flex items-center space-x-4">
             {/* Notifications */}
@@ -840,49 +543,22 @@ export function AppHeader() {
             <button className="p-2 text-slate-400 hover:text-cyan-400 transition-colors">
               <User className="h-5 w-5" />
             </button>
-<<<<<<< HEAD
->>>>>>> add-innovative-services-2025
-=======
->>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
-
-            {/* Mobile menu button */}
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-              className="lg:hidden p-2 rounded-lg hover:bg-zinc-800/50 transition-all duration-200"
-=======
-              className="lg:hidden p-2 rounded-lg hover:bg-zion-cyan/10 transition-colors"
-              aria-label="Toggle mobile menu"
->>>>>>> 6447ea7d6f37373918d49062850ab24e95262bc9
-            >
               {mobileMenuOpen ? (
                 <X className="w-6 h-6 text-white" />
               ) : (
-<<<<<<< HEAD
-                <Menu className="w-6 h-6 text-zinc-400" />
-=======
-=======
->>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
-              className="md:hidden p-2 text-slate-400 hover:text-cyan-400 transition-colors"
+                <Menu className="w-6 h-6 text-zinc-400" />              className="md:hidden p-2 text-slate-400 hover:text-cyan-400 transition-colors"
             >
               {mobileMenuOpen ? (
                 <X className="h-5 w-5" />
               ) : (
                 <Menu className="h-5 w-5" />
->>>>>>> add-innovative-services-2025
-=======
                 <Menu className="w-6 h-6 text-white" />
->>>>>>> 6447ea7d6f37373918d49062850ab24e95262bc9
               )}
             </button>
           </div>
         </div>
-<<<<<<< HEAD
       </div>
 
-<<<<<<< HEAD
       {/* Mobile Navigation */}
       <AnimatePresence>
         {mobileMenuOpen && (
@@ -893,12 +569,7 @@ export function AppHeader() {
             transition={{ duration: 0.3 }}
             className="lg:hidden bg-zion-slate-dark border-t border-zion-cyan/20"
           >
-<<<<<<< HEAD
-            <div className="container mx-auto px-6 py-6">
-=======
-            <div className="px-4 py-6 space-y-4">
->>>>>>> 6447ea7d6f37373918d49062850ab24e95262bc9
-              {/* Mobile Search */}
+            <div className="container mx-auto px-6 py-6">              {/* Mobile Search */}
               <form onSubmit={handleSearch} className="relative">
                 <input
                   type="text"
@@ -926,7 +597,6 @@ export function AppHeader() {
                     {item.name}
                   </Link>
                 ))}
-<<<<<<< HEAD
               </nav>
 
               {/* Mobile Quick Actions */}
@@ -938,12 +608,7 @@ export function AppHeader() {
                       to={action.href}
                       className="btn-futuristic text-center"
                     >
-                      {action.name}
-=======
-
-=======
->>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
-        {/* Mobile Navigation */}
+                      {action.name}        {/* Mobile Navigation */}
         {mobileMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/95 border-t border-slate-700/20">
@@ -970,13 +635,10 @@ export function AppHeader() {
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {service.name}
->>>>>>> add-innovative-services-2025
                     </Link>
                   ))}
                 </div>
               </div>
-<<<<<<< HEAD
-=======
               </div>
 
               {/* Mobile Services */}
@@ -1089,32 +751,9 @@ export function AppHeader() {
                   </div>
                 </div>
               )}
->>>>>>> 6447ea7d6f37373918d49062850ab24e95262bc9
             </div>
           </motion.div>
         )}
       </AnimatePresence>
-    </header>
-=======
-              
-              {/* Mobile Search */}
-              <form onSubmit={handleSearch} className="px-3 py-2">
-                <input
-                  type="text"
-                  placeholder="Search..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full bg-slate-700/50 border border-slate-600/50 rounded-lg px-3 py-2 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                />
-              </form>
-            </div>
-          </div>
-        )}
-      </header>
-    </>
-<<<<<<< HEAD
->>>>>>> add-innovative-services-2025
-=======
->>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
-  );
+    </header>  );
 }

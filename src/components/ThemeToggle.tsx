@@ -1,83 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import { Sun, Moon, Monitor } from 'lucide-react';
-
-type Theme = 'dark' | 'light' | 'system';
-
-export function ThemeToggle() {
-  const [theme, setTheme] = useState<Theme>('system');
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-    const savedTheme = localStorage.getItem('zion-theme') as Theme;
-    if (savedTheme) {
-      setTheme(savedTheme);
-    }
-  }, []);
-
-  useEffect(() => {
-    if (!mounted) return;
-
-    const root = window.document.documentElement;
-    root.classList.remove('light', 'dark');
-
-    if (theme === 'system') {
-      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      root.classList.add(systemTheme);
-    } else {
-      root.classList.add(theme);
-    }
-
-    localStorage.setItem('zion-theme', theme);
-  }, [theme, mounted]);
-
-  const handleThemeChange = (newTheme: Theme) => {
-    setTheme(newTheme);
-  };
-
-  if (!mounted) {
-    return (
-      <div className="w-10 h-10 rounded-lg bg-zinc-800/50 border border-zinc-700/50 animate-pulse" />
-    );
-  }
-
-  return (
-    <div className="relative inline-flex items-center rounded-lg bg-zinc-800/50 border border-zinc-700/50 p-1">
-      <button
-        onClick={() => handleThemeChange('light')}
-        className={`p-2 rounded-md transition-all duration-200 ${
-          theme === 'light'
-            ? 'bg-zion-cyan text-white shadow-lg shadow-zion-cyan/25'
-            : 'text-zinc-400 hover:text-white hover:bg-zinc-700/50'
-        }`}
-        title="Light mode"
-      >
-        <Sun className="w-4 h-4" />
-      </button>
-      
-      <button
-        onClick={() => handleThemeChange('system')}
-        className={`p-2 rounded-md transition-all duration-200 ${
-          theme === 'system'
-            ? 'bg-zion-cyan text-white shadow-lg shadow-zion-cyan/25'
-            : 'text-zinc-400 hover:text-white hover:bg-zinc-700/50'
-        }`}
-        title="System preference"
-      >
-        <Monitor className="w-4 h-4" />
-      </button>
-      
-      <button
-        onClick={() => handleThemeChange('dark')}
-        className={`p-2 rounded-md transition-all duration-200 ${
-          theme === 'dark'
-            ? 'bg-zion-cyan text-white shadow-lg shadow-zion-cyan/25'
-            : 'text-zinc-400 hover:text-white hover:bg-zinc-700/50'
-        }`}
-        title="Dark mode"
-      >
-        <Moon className="w-4 h-4" />
-      </button>
-    </div>
-  );
-}
+import React from "react"; const ThemeToggle: React.FC = () => { const { theme, setTheme } = useTheme(); const themes = []; return (
+    <div className="relative"> <div className="{"flex" items-center space-x-1 bg-zion-slate-light/30 rounded-lg p-1"> {themes.map((themeOption) => { const Icon = themeOption.icon; const isActive = theme === themeOption.name; return(<motion.button key="{themeOption.name}" onClick="{()" => setTheme(themeOption.name as "light" | "dark" | "system")} className="{"relative" px-3 py-2 rounded-md transition-all duration-200 flex items-center space-x-2 ${isActive ? "text-white" : "text-gray-400 hover:text-white" }"} whileHover="{{" scale: 1.05 }} whileTap="{{" scale: 0.95 }} > {isActive && ( <motion.div layoutId=""theme-bg"}" className="absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-md" initial="{false}" transition="{{" type "spring", stiffness: 500, damping: 30 }} /> )} <Icon className="w-4 h-4 relative z-10"  /> <span className="text-sm font-medium relative z-10 hidden sm:block"> {themeOption.label} </span> </motion.button> )})} </div> </div> )}; export default ThemeToggle; const ThemeToggle: React.FC = () => { const { theme, setTheme } = useTheme(); const themes = []; return ("
+    <div className="relative"> <div className="{"flex" items-center space-x-1 bg-zion-slate-light/30 rounded-lg p-1"> {themes.map((themeOption) => { const Icon = themeOption.icon; const isActive = theme === themeOption.name; return (<motion.button key="{themeOption.name}" onClick="{()" => setTheme(themeOption.name as "light" | "dark" | "system")} className="{"relative" px-3 py-2 rounded-md transition-all duration-200 flex items-center space-x-2 ${isActive ? "text-white" : "text-gray-400 hover:text-white" }"} whileHover="{{" scale: 1.05  }} whileTap="{{" scale: 0.95  }} > {isActive && ( <motion.div layoutId=""theme-bg"}" className="absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-md" initial="{false}" transition="{{" type "spring", stiffness: 500, damping: 30 }} /> )} <Icon className="w-4 h-4 relative z-10"  /> <span className="text-sm font-medium relative z-10 hidden sm:block"> {themeOption.label} </span> </motion.button> )})} </div> </div> )}; export default ThemeToggle
+"
+;,"});,"})" const ThemeToggle: React.FC = () => { const { theme, setTheme } = useTheme () ; const themes = []; return ("
+    <div role="button" className="relative"> <div role="button" className="{"flex" items - center space - x-1 bg - zion - slate - light / 30 rounded - lg p - 1"> {themes.map ( (themeOption) => { const Icon = themeOption.icon; const isActive = theme === themeOption.name; return (<motion.button key="{themeOption.name}" onClick="{" () => setTheme (themeOption.name as "light" | "dark" | "system") } className="{"relative" px - 3 py - 2 rounded - md transition - all duration - 200 flex items - center space - x-2 ${ isActive ? "text - white" : "text - gray - 400 hover:text - white" }"} whileHover="{{" scale: 1.05 }} whileTap="{{" scale: 0.95 }} > {isActive && (<motion.div layoutId=""theme" - bg"} className="absolute inset - 0 bg - gradient - to - r from - zion - cyan to - zion - purple rounded - md" initial="{false}" transition="{{" type "spring", stiffness: 500, damping: 30 }} />) } <Icon className="w - 4 h - 4 relative z - 10"  /> <span className="text - sm font - medium relative z - 10 hidden sm: block"> {themeOption.label} </span> </motion.button>) }) } </div> </div>) }; export default ThemeToggle;"""";,"});,"})" const ThemeToggle: React.FC = () => { const { theme, setTheme } = useTheme(); const themes = []; return ("
+    <div className="relative"> <div className="{"flex" items-center space-x-1 bg-zion-slate-light/30 rounded-lg p-1"> {themes.map((themeOption) => { const Icon = themeOption.icon; const isActive = theme === themeOption.name; return (<motion.button key="{themeOption.name}" onClick="{()" => setTheme(themeOption.name as "light" | "dark" | "system")} className="{"relative" px-3 py-2 rounded-md transition-all duration-200 flex items-center space-x-2 ${isActive ? "text-white" : "text-gray-400 hover:text-white" }"} whileHover="{{" scale: 1.05  }} whileTap="{{" scale: 0.95  }} > {isActive && ( <motion.div layoutId=""theme-bg"}" className="absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-md" initial="{false}" transition="{{" type "spring", stiffness: 500, damping: 30 }} /> )} <Icon className="w-4 h-4 relative z-10"  /> <span className="text-sm font-medium relative z-10 hidden sm:block"> {themeOption.label} </span> </motion.button> )})} </div> </div> )}; export default ThemeToggle,"});,"})"
+    <div role="button" className="relative"> <div role="button" className="flex items - center space - x-1 bg - zion - slate - light / 30 rounded - lg p - 1"> {themes.map ( (themeOption) => { const Icon = themeOption.icon const isActive = theme === themeOption.name return (<motion.button key="{themeOption.name}" onClick="{" () => setTheme (themeOption.name as "light" | "dark" | "system") } className="{"relative" px - 3 py - 2 rounded - md transition - all duration - 200 flex items - center space - x-2 ${ isActive ? "text - white" : "text - gray - 400 hover:text - white" }"} whileHover="{{" scale: 1.05 }} whileTap="{{" scale: 0.95 }} > {isActive && (<motion.div layoutId="theme - bg" className="absolute inset - 0 bg - gradient - to - r from - zion - cyan to - zion - purple rounded - md" initial="{false}" transition="{{" type "spring", stiffness: 500, damping: 30 }} />) } <Icon className="w - 4 h - 4 relative z - 10"  /> <span className="text - sm font - medium relative z - 10 hidden sm: block"> {themeOption.label} </span> </motion.button>)  }) } </div> </div>)  } export default ThemeToggle";"";"
+    <div role="button" className="relative"> <div role="button" className="flex items - center space - x-1 bg - zion - slate - light / 30 rounded - lg p - 1"> {themes.map ( (themeOption) => { const Icon = themeOption.icon const isActive = theme === themeOption.name return (<motion.button key="{themeOption.name}" onClick="{" () => setTheme (themeOption.name as "light" | "dark" | "system") } className="{"relative" px - 3 py - 2 rounded - md transition - all duration - 200 flex items - center space - x-2 ${ isActive ? "text - white" : "text - gray - 400 hover:text - white" }"} whileHover="{{" scale: 1.05   }} whileTap="{{" scale: 0.95   }} > {isActive && (<motion.div layoutId="theme - bg" className="absolute inset - 0 bg - gradient - to - r from - zion - cyan to - zion - purple rounded - md" initial="{false}" transition="{{" type "spring", stiffness: 500, damping: 30 }} />) } <Icon className="w - 4 h - 4 relative z - 10"  /> <span className="text - sm font - medium relative z - 10 hidden sm: block"> {themeOption.label} </span> </motion.button>)  })} </div> </div>)  } export default ThemeToggle"""""
+    <div role="button" className="relative"> <div role="button" className="flex items - center space - x-1 bg - zion - slate - light / 30 rounded - lg p - 1"> {themes.map ( (themeOption) => { const Icon = themeOption.icon const isActive = theme === themeOption.name return (<motion.button key="{themeOption.name}" onClick="{" () => setTheme (themeOption.name as "light" | "dark" | "system") } className="{"relative" px - 3 py - 2 rounded - md transition - all duration - 200 flex items - center space - x-2 ${ isActive ? "text - white" : "text - gray - 400 hover:text - white" }"} whileHover="{{" scale: 1.05 }} whileTap="{{" scale: 0.95 }} > {isActive && (<motion.div layoutId="theme - bg" className="absolute inset - 0 bg - gradient - to - r from - zion - cyan to - zion - purple rounded - md" initial="{false}" transition="{{" type "spring", stiffness: 500, damping: 30 }} />) } <Icon className="w - 4 h - 4 relative z - 10"  /> <span className="text - sm font - medium relative z - 10 hidden sm: block"> {themeOption.label} </span> </motion.button>)  })} </div> </div>)  } export default ThemeToggle";"""""
+    <div role="button" className="relative"> <div role="button" className="flex items - center space - x-1 bg - zion - slate - light / 30 rounded - lg p - 1"> {themes.map ( (themeOption) => { const Icon = themeOption.icon const isActive = theme === themeOption.name return (<motion.button key="{themeOption.name}" onClick="{" () => setTheme (themeOption.name as "light" | "dark" | "system") } className="{"relative" px - 3 py - 2 rounded - md transition - all duration - 200 flex items - center space - x-2 ${ isActive ? "text - white" : "text - gray - 400 hover:text - white" }"} whileHover="{{" scale: 1.05 }} whileTap="{{" scale: 0.95 }} > {isActive && (<motion.div layoutId="theme - bg" className="absolute inset - 0 bg - gradient - to - r from - zion - cyan to - zion - purple rounded - md" initial="{false}" transition="{{" type "spring", stiffness: 500, damping: 30 }} />) } <Icon className="w - 4 h - 4 relative z - 10"  /> <span className="text - sm font - medium relative z - 10 hidden sm: block"> {themeOption.label} </span> </motion.button>)  })} </div> </div>)  } export default ThemeToggle";""
+    <div role="button" className="relative"> <div role="button" className="flex items - center space - x-1 bg - zion - slate - light / 30 rounded - lg p - 1"> {themes.map ( (themeOption) => { const Icon = themeOption.icon const isActive = theme === themeOption.name return (<motion.button key="{themeOption.name}" onClick="{()" => setTheme (themeOption.name as "light" | "dark" | "system") } className="{"relative" px - 3 py - 2 rounded - md transition - all duration - 200 flex items - center space - x-2 ${ isActive ? "text - white" : "text - gray - 400 hover: text - white" }"} whileHover="{{" scale: 1.05 }} whileTap="{{" scale: 0.95 }} > {isActive && (<motion.div layoutId="theme - bg" className="absolute inset - 0 bg - gradient - to - r from - zion - cyan to - zion - purple rounded - md" initial="{false}" transition="{{" type "spring", stiffness: 500, damping: 30 }} />) } <Icon className="w - 4 h - 4 relative z - 10"  /> <span className="text - sm font - medium relative z - 10 hidden sm: block"> {themeOption.label} </span> </motion.button>)  })} </div> </div>)  } export default ThemeToggle";"""""framer - motion&apos;lucide - react&apos;./ThemeProvider&apos;&apos, const ThemeToggle: React.FC = () => {} const { theme, setTheme } = useTheme ()  const;const themes = [] return (&apos;<div role="&apos;button&apos;" className="&apos;relative&apos;">&apos, <div role="&apos;button&apos;" className="&apos;flex" items - center space - x-1 bg - zion - slate - light / 30 rounded - lg p - 1&apos;> {themes.map ( (themeOption) => {&apos}} const Icon = themeOption.icon const isActive = theme === themeOption.name return (<;<motion.button key="{themeOption.name}" onClick="{" () => setTheme (themeOption.name as &apos;light&apos; | &apos;dark&apos; | &apos;system&apos) } className="{"relative" px - 3 py - 2 rounded - md transition - all duration - 200 flex items - center space - x-2 ${ isActive ? &apos;text - white&apos; : &apos;text - gray - 400 hover:text - white&apos}"} whileHover="{{" scale: 1.05 }} whileTap="{{" scale: 0.95 }} > {isActive && (&apos}<motion.div layoutId="&apos;theme" - bg&apos; className="&apos;absolute" inset - 0 bg - gradient - to - r from - zion - cyan to - zion - purple rounded - md&apos; initial="{false}" transition="{{" type &apos;spring&apos, stiffness: 500, damping: 30 }} />) }&apos; <Icon className="&apos;w" - 4 h - 4 relative z - 10&apos;       />&apos; <span className="&apos;text" - sm font - medium relative z - 10 hidden sm: block&apos,> {themeOption.label}&apos; </span> </motion.button>)  })} </div> <;</div>)  } ;export default ThemeToggle";"&quot
+&quot;""
+    <div role="button" className="relative"> <div role="button" className="flex items - center space - x-1 bg - zion - slate - light / 30 rounded - lg p - 1"> {themes.map ( (themeOption) => { const Icon = themeOption.icon const isActive = theme === themeOption.name return (<motion .button key="{themeOption.name}" onClick="{" () =" > setTheme (themeOption.name as "light" | "dark" | "system") } className="{"relative" px - 3 py - 2 rounded - md transition - all duration - 200 flex items - center space - x-2 ${ isActive ? "text - white" : "text - gray - 400 hover:text - white" }"} whileHover="{{" scale: 1.05 }} whileTap="{{" scale: 0.95 }} > {isActive && (<motion .div layoutId="theme - bg" className="absolute inset - 0 bg - gradient - to - r from - zion - cyan to - zion - purple rounded - md" initial="{false}" transition="{{" type "spring", stiffness: 500, damping: 30 }} /" >) } <Icon className="w - 4 h - 4 relative z - 10" /" > <span className="text - sm font - medium relative z - 10 hidden sm: block"> {themeOption.label} </span> </motion.button>)  })} </div> </div>)  } export default ThemeToggle";"""""
+    <div role="button" className="relative"> <div role="button" className="flex items - center space - x-1 bg - zion - slate - light / 30 rounded - lg p - 1"> {themes.map ( (themeOption) => { const Icon = themeOption.icon const isActive = theme === themeOption.name return (<motion .button key="{themeOption.name}" onClick="{" () =" > setTheme (themeOption.name as "light" | "dark" | "system") } className="{"relative" px - 3 py - 2 rounded - md transition - all duration - 200 flex items - center space - x-2 ${ isActive ? "text - white" : "text - gray - 400 hover:text - white" }"} whileHover="{{" scale: 1.05 }} whileTap="{{" scale: 0.95 }} > {isActive && (<motion .div layoutId="theme - bg" className="absolute inset - 0 bg - gradient - to - r from - zion - cyan to - zion - purple rounded - md" initial="{false}" transition="{{" type "spring", stiffness: 500, damping: 30 }} /" >) } <Icon className="w - 4 h - 4 relative z - 10" /" > <span className="text - sm font - medium relative z - 10 hidden sm: block"> {themeOption.label} </span> </motion.button>)  }) } </div> </div>)  } export default ThemeToggle";"""
+""""
+    <div role="button" className="relative"> <div role="button" className="flex items - center space - x-1 bg - zion - slate - light / 30 rounded - lg p - 1"> {themes.map ( (themeOption) => { const Icon = themeOption.icon const isActive = theme === themeOption.name return (<motion.button key="{themeOption.name}" onClick="{" () => setTheme (themeOption.name as "light" | "dark" | "system") } className="{"relative" px - 3 py - 2 rounded - md transition - all duration - 200 flex items - center space - x-2 ${ isActive ? "text - white" : "text - gray - 400 hover:text - white" }"} whileHover="{{" scale: 1.05 }} whileTap="{{" scale: 0.95 }} > {isActive && (<motion.div layoutId="theme - bg" className="absolute inset - 0 bg - gradient - to - r from - zion - cyan to - zion - purple rounded - md" initial="{false}" transition="{{" type "spring", stiffness: 500, damping: 30 }} />) } <Icon className="w - 4 h - 4 relative z - 10"  /> <span className="text - sm font - medium relative z - 10 hidden sm: block"> {themeOption.label} </span> </motion.button>)  })} </div> </div>)  } export default ThemeToggle";"""const ThemeToggle: React.FC = () => { const { theme, setTheme } = useTheme ()  const themes = [] return ("
+    <div role="button" className="relative"> <div role="button" className="flex items - center space - x-1 bg - zion - slate - light / 30 rounded - lg p - 1"> {themes.map ( (themeOption) => { const Icon = themeOption.icon const isActive = theme === themeOption.name return (<motion .button key="{themeOption.name}" onClick="{" () =" > setTheme (themeOption.name as "light" | "dark" | "system") } className="{"relative" px - 3 py - 2 rounded - md transition - all duration - 200 flex items - center space - x-2 ${ isActive ? "text - white" : "text - gray - 400 hover:text - white" }"} whileHover="{{" scale: 1.05 }} whileTap="{{" scale: 0.95 }} > {isActive && (<motion .div layoutId="theme - bg" className="absolute inset - 0 bg - gradient - to - r from - zion - cyan to - zion - purple rounded - md" initial="{false}" transition="{{" type "spring", stiffness: 500, damping: 30 }} /" >) } <Icon className="w - 4 h - 4 relative z - 10" /" > <span className="text - sm font - medium relative z - 10 hidden sm: block"> {themeOption.label} </span> </motion.button>)  })} </div> </div>)  } export default ThemeToggle";"""""
+  { name: "light", icon: Sun, label: "Light" } { name: "dark", icon: Moon, label: "Dark" } { name: "system", icon: Monitor, label: "System" } ] return ("
+    <div role="button" className="relative"> <div role="button" className="flex items - center space - x-1 bg - zion - slate - light / 30 rounded - lg p - 1"> {themes.map ( (themeOption) => { const Icon = themeOption.icon const isActive = theme === themeOption.name return (<motion .button key="{themeOption.name}" onClick="{" () =" > setTheme (themeOption.name as "light" | "dark" | "system") } className="{"relative" px - 3 py - 2 rounded - md transition - all duration - 200 flex items - center space - x-2 ${ isActive ? "text - white" : "text - gray - 400 hover:text - white" }"} whileHover="{{" scale: 1.05 }} whileTap="{{" scale: 0.95 }} > {isActive && (<motion .div layoutId="theme - bg" className="absolute inset - 0 bg - gradient - to - r from - zion - cyan to - zion - purple rounded - md" initial="{false}" transition="{{" type "spring", stiffness: 500, damping: 30 }} /" >) } <Icon className="w - 4 h - 4 relative z - 10" /" > <span className="text - sm font - medium relative z - 10 hidden sm: block"> {themeOption.label} </span> </motion.button>)  }) } </div> </div>)  } export default ThemeToggle";""
+"
+"`""

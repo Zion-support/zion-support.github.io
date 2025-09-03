@@ -1,13 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Link } from "react-router-dom";
 import { Link as LinkIcon, DollarSign as Coins, Shield, Zap, Database, Globe, TrendingUp, CheckCircle, ArrowRight, Lock, Network, Wallet, BarChart3 } from "lucide-react";
-<<<<<<< HEAD
-=======
-import { TrustedBySection } from "../TrustedBySection";
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
-const blockchainServices = [
-=======
+<<<<<<< HEADconst blockchainServices = [
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
@@ -32,7 +26,6 @@ import {
 
 const BlockchainServicesPage = () => {
   const blockchainServices = [
->>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
     {
       id: 'smart-contracts',
       title: 'Smart Contracts',
@@ -313,9 +306,19 @@ const BlockchainServicesPage = () => {
             </Link>
           </div>
         </motion.div>
+import React from "react"
+import { SEO } from "@/components/SEO"
+;,"});,"})
+}
+export default function BlockchainServicesPage() {return ("
+    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
+      <SEO title="BlockchainServicesPage - Zion Tech Group" description="Professional BlockchainServicesPage services by Zion Tech Group"  />"
+      <div className="container mx-auto px-4 py-20">"
+        <h1 className="text-4xl font-bold text-white mb-8">BlockchainServicesPage</h1>"
+        <p className="text-gray-300 text-lg">
+          Professional BlockchainServicesPage services to help your business grow.
+        </p>
       </div>
-    </div>
-  );
-};
-
-export default BlockchainServicesPage;
+  )
+}
+}""

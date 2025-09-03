@@ -106,7 +106,6 @@ export default defineConfig({
 			'react-router-dom',
 			'framer-motion',
 			'lucide-react',
-<<<<<<< HEAD
 			'@radix-ui/react-accordion',
 			'@radix-ui/react-alert-dialog',
 			'@radix-ui/react-aspect-ratio',
@@ -127,13 +126,7 @@ export default defineConfig({
 			'@radix-ui/react-switch',
 			'@radix-ui/react-tabs',
 			'@radix-ui/react-toast',
-			'@radix-ui/react-tooltip'
-=======
-			'clsx',
-			'tailwind-merge',
-			'class-variance-authority'
->>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
-		],
+			'@radix-ui/react-tooltip'		],
 		exclude: ['@radix-ui/react-icons'],
 		// Enhanced dependency optimization
 		esbuildOptions: {
@@ -180,3 +173,11 @@ export default defineConfig({
 		}
 	}
 });
+import { defineConfig  } from "vite";
+import react from "@vitejs/plugin-react";
+export default defineConfig({;
+  plugins: [react()],;
+  server: {;
+    port: 3000,;,
+},;,
+})

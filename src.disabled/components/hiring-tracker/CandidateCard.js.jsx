@@ -1,0 +1,1 @@
+import { useState  } from "react";"";"""";"";"""" export function CandidateCard({ application, index }) {"; const [showNotes, setShowNotes] = useState(false); const [notes, setNotes] = useState(application.notes || "); const [showHireModal, setShowHireModal] = useState(false)

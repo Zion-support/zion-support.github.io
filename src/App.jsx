@@ -1,137 +1,239 @@
-import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { AppHeader } from './layout/AppHeader';
-import { Footer } from './components/Footer.jsx';
-import { ChatAssistant } from './components/ChatAssistant';
+import React, { Suspense, lazy } from "react"const Home = lazy(() => import("./pages/Home.tsx"))
+}
+const About = lazy(() => import("./pages/About.tsx"))
+}
+const Contact = lazy(() => import("./pages/Contact.tsx"))
+}
+const BlogPage = lazy(() => import("./pages/BlogPage.tsx"))
+}
+const PartnersPage = lazy(() => import("./pages/Partners.tsx"))
+}
+const Login = lazy(() => import("./pages/Login.tsx"))
+}
+const FAQ = lazy(() => import("./pages/FAQ.tsx"))
+}
+const Careers = lazy(() => import("./pages/Careers.tsx"))
+}
+// comment
+const Home = lazy(() => import("./pages/Home.tsx"));""
+const About = lazy(() => import("./pages/About.tsx"));""
+const Contact = lazy(() => import("./pages/Contact.tsx"));""
+const BlogPage = lazy(() => import("./pages/BlogPage.tsx"));""
+const PartnersPage = lazy(() => import("./pages/Partners.tsx"));""
+const Login = lazy(() => import("./pages/Login.tsx"));""
+const FAQ = lazy(() => import("./pages/FAQ.tsx"));""
+const Careers = lazy(() => import("./pages/Careers.tsx"));"
+// comment
+const Home = lazy(() => import("./pages/Home.tsx"));""
+const About = lazy(() => import("./pages/About.tsx"));""
+const Contact = lazy(() => import("./pages/Contact.tsx"))
+}
+const BlogPage = lazy(() => import("./pages/BlogPage.tsx"));"
+const PartnersPage = lazy(() => import("./pages/Partners.tsx"));""
+const Login = lazy(() => import("./pages/Login.tsx"));""
+const FAQ = lazy(() => import("./pages/FAQ.tsx"))
+}
+const Careers = lazy(() => import("./pages/Careers.tsx"))
+}
+const Sitemap = lazy(() => import("./pages/Sitemap.jsx"))
+}
+// comment
+const ComprehensivePricing = lazy(() =>"
+  import("./pages/ComprehensivePricing2025.tsx"))
+}
+// comment
+const LoadingSpinner = () => ("
+  <div className="flex items-center justify-center min-h-screen>"
+const ComprehensivePricing = lazy(() =>""
+  import("./pages/ComprehensivePricing2025.tsx")
+}
+)
+}
+// comment
+const LoadingSpinner = () => (""
+  <div className="flex items-center justify-center min-h-screen">"
+    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-zion-cyan"> <// comment
+  </div>
+)// comment
+const ServicesPage = () => ("
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-24>"
+    <div className="container mx-auto px-4 py-16>"
+      <div className="text-center mb-16>"
+        <h1 className="text-4xl md: text-6xl font-bold mb-6>",
+          Our{" "}
 
-// Lazy load pages with better chunking
-const Home = lazy(() => import('./pages/Home.tsx'));
-const About = lazy(() => import('./pages/About.tsx'));
-const Contact = lazy(() => import('./pages/Contact.tsx'));
-const Blog = lazy(() => import('./pages/Blog.tsx'));
-const PartnersPage = lazy(() => import('./pages/Partners.tsx'));
-const Login = lazy(() => import('./pages/Login.jsx'));
-const FAQ = lazy(() => import('./pages/FAQ.tsx'));
-const Careers = lazy(() => import('./pages/Careers.tsx'));
-const Privacy = lazy(() => import('./pages/Privacy.tsx'));
-const Terms = lazy(() => import('./pages/Terms.tsx'));
-const Sitemap = lazy(() => import('./pages/Sitemap.tsx'));
-const GreenIT = lazy(() => import('./pages/GreenIT.tsx'));
-
-// Enhanced loading component with better UX
-const LoadingSpinner = () => (
-  <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-    <div className="text-center">
-      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-zion-cyan mx-auto mb-4"></div>
-      <p className="text-zion-slate-light text-lg">Loading Zion Tech Group...</p>
-      <div className="mt-4 space-y-2">
-        <div className="h-2 bg-zion-slate rounded-full w-48 mx-auto">
-          <div className="h-2 bg-zion-cyan rounded-full animate-pulse" style={{ width: '60%' }}></div>
+          Our,
+const ServicesPage = () => ("
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-24">"
+    <div className="container mx-auto px-4 py-16">      <div className="text-center mb-16">""
+        <h1 className="text-4xl md: text-6xl font-bold mb-6">"",
+          Our{}"
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+            Services,
+          </span>"
+        </h1>"
+        <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          Comprehensive technology solutions to drive your business forward,
+        </p>"
+      </div>"
+      <div className="grid grid-cols-1 md: grid-cols-2 l>
+    g: grid-cols-3 gap-8>"
+        <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20>"
+          <h3 className="text-xl font-bold text-white mb-4">
+            AI & Machine Learning"
+          </h3>"
+          <h3 className="text-xl font-bold text-white mb-4">
+            AI & Machine Learning"
+          </h3>"          <p className="text-gray-300">,
+            Cutting-edge artificial intelligence solutions for business,
+automation and insights.
+          </p>"
+        </div>"
+        <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20>"
+          <h3 className="text-xl font-bold text-white mb-4">Cybersecurity</h3>"
+        </div>"
+        <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">"""
+          <h3 className="text-xl font-bold text-white mb-4">Cybersecurity</h3>"
+          <p className="text-gray-300">
+            Advanced security solutions with zero-trust architecture and threat,
+detection.
+          </p>"
+        </div>"
+        <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20>"
+          <h3 className="text-xl font-bold text-white mb-4">Cloud & DevOps</h3>"
+          <p className="text-gray-300">
+            Scalable cloud infrastructure and automated deployment solutions.
+          </p>
         </div>
-        <div className="h-2 bg-zion-slate rounded-full w-32 mx-auto">
-          <div className="h-2 bg-zion-purple rounded-full animate-pulse" style={{ width: '40%' }}></div>
-        </div>
-      </div>
-    </div>
-  </div>
-);
+)
+}
+function App() {return (
+    <Router>"
+      <div className="&apos;min-h-screen" bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light&apos;>&apos,        <AppHeader  />"
+        <main className="&apos;flex-1&apos;">&apos,""
+          <Suspense fallback = "{}<LoadingSpinner"  />}>"
+    <Router>"      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">"
+        <AppHeader /" >"
+        <main className="flex-1">"
+          <Suspense fallback="{<LoadingSpinner" / >}>
+            <Routes>            <Routes>"
+              <Route path="/" element="{<Home"  />} />"
+              <Route path="/about" element="{<About"  />} />"
+              <Route path="/contact" element="{<Contact"  />} />"
+              <Route path="/blog" element="{<BlogPage"  />} />"
+              <Route path="/partners" element="{<PartnersPage"  />} />"
+              <Route path="/login" element="{<Login"  />} />"
+              <Route path="/faq" element="{<FAQ"  />} />"
+              <Route path="/careers" element="{<Careers"  />} />"
+              <Route path="/sitemap" element="{<Sitemap"  />} />"
+              <Route path="/pricing" element="{<ComprehensivePricing"  />} />
+              {/* comment */}"
+              <Route path="/services" element="{<ServicesPage"  />} />
+              {/* comment */}"
+              <Route""
+                path="*""
+                element={"
+                  <div className="flex items-center justify-center min-h-screen>"
+                    <div className="text-center>"
+                      <h1 className="text-4xl font-bold text-zion-cyan mb-4">
+                        404 - Page Not Found"
+                      </h1>"
+                      <p className="text-zion-slate-light mb-6>"
+                        The page you"re looking for doesn"t exist.
+                      </p>"
+                      <a""
+                        href="/""
+                        className="bg-zion-purple text-white px-6 py-3 rounded-lg hover: bg-zion-purple-dark transition-colors"
+                      >"
+              <Route path="*" element="{<div" className="flex items-center justify-center min-h-screen">",,
+              <Route path="&apos,/&apos," element="{&apos}&apos;<Home"  />} />"
+              <Route path="&apos;/about&apos;" element = "{&apos}<About"  />} />"
+              <Route path="&apos;/contact&apos;" element = "{&apos}<Contact"  />} />"
+              <Route path="&apos;/blog&apos;" element = "{&apos}<BlogPage"  />} />"
+              <Route path="&apos;/partners&apos;" element = "{&apos}<PartnersPage"  />} />"
+              <Route path="&apos;/login&apos;" element = "{&apos}<Login"  />} />"
+              <Route path="&apos;/faq&apos;" element = "{&apos}<FAQ"  />} />"
+              <Route path="&apos;/careers&apos;" element = "{&apos}<Careers"  />} />"
+              <Route path="&apos;/sitemap&apos;" element = "{&apos}<Sitemap"  />} />"
+              <Route path="&apos;/pricing&apos;" element = "{&apos}<ComprehensivePricing"  />} />{/* comment */}"
+              <Route path="&apos;/services&apos;" element = "{&apos}<ServicesPage"  />} />{/* comment */}
 
-// Error boundary component
-const ErrorFallback = ({ error, resetErrorBoundary }) => (
-  <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-    <div className="text-center max-w-md mx-auto p-8">
-      <div className="text-6xl mb-4">⚠️</div>
-      <h1 className="text-2xl font-bold text-zion-cyan mb-4">Something went wrong</h1>
-      <p className="text-zion-slate-light mb-6">
-        We encountered an unexpected error. Please try refreshing the page.
-      </p>
-      <div className="space-y-3">
-        <button
-          onClick={resetErrorBoundary}
-          className="bg-zion-purple text-white px-6 py-3 rounded-lg hover:bg-zion-purple-dark transition-colors w-full"
-        >
-          Try Again
-        </button>
-        <button
-          onClick={() => window.location.href = '/'}
-          className="bg-zion-slate text-white px-6 py-3 rounded-lg hover:bg-zion-slate-dark transition-colors w-full"
-        >
-          Go Home
-        </button>
-      </div>
-      {process.env.NODE_ENV === 'development' && (
-        <details className="mt-6 text-left">
-          <summary className="cursor-pointer text-zion-slate-light">Error Details</summary>
-          <pre className="mt-2 text-xs text-red-400 bg-zion-slate-dark p-3 rounded overflow-auto">
-            {error.message}
-          </pre>
-        </details>
-      )}
-    </div>
-  </div>
-);
+              <Route path=&apos;*"&apos;&apos;"
+                element="{}&apos;&apos;""
+                  <div className="&apos;flex" items-center justify-center min-h-screen&apos;>&apos,"
+                    <div className="&apos;text-center&apos;">&apos,"
+                      <h1 className="&apos;text-4xl" font-bold text-zion-cyan mb-4&apos;>
+                        404 - Page Not Found&apos
+                      </h1>"
+                      <p className="&apos;text-zion-slate-light" mb-6&apos;>
+                        The page you&apos;re looking for doesn&apos;t exist.&apos
+                      </p>"
+                      <a href=&apos;/"&apos;&apos;"
+                        className="&apos;bg-zion-purple" text-white px-6 py-3 rounded-lg hover: bg-zion-purple-dark transition-colors&apos,&apos,&quot,>,
+                        Go Home&quot;&apos,"
+                path = "*"""","
+                element="{}""
+                  <div className="flex items-center justify-center min-h-screen">"
+                    <div className="text-center">"
+                      <h1 className="text-4xl font-bold text-zion-cyan mb-4">
+                        404 - Page Not Found,
+                      </h1>"
+                      <p className="text-zion-slate-light mb-6">
+                        The page you&apos;re looking for doesn&apos;t exist.
+                      </p>"
+                      <a href = "/" className="bg-zion-purple text-white px-6 py-3 rounded-lg hover: bg-zion-purple-dark transition-colors" >",
+              <Route path="/" element="{<Home" / >} />""
+              <Route path="/about" element="{<About" /" >} />"
+              <Route path="/contact" element="{<Contact" / >} />"
+              <Route path="/blog" element="{<BlogPage" / >} />"
+              <Route path="/partners" element="{<PartnersPage" / >} />""
+              <Route path="/login" element="{<Login" /" >} />"
+              <Route path="/faq" element="{<FAQ" / >} />"
+              <Route path="/careers" element="{<Careers" / >} />"
+              <Route path="/sitemap" element="{<Sitemap" / >} />""
+              <Route path="/pricing" element="{<ComprehensivePricing" /" >} />
+              {/* comment */}"
+              <Route path="/services" element="{<ServicesPage" / >} />              {/* comment */}"
+              <Route"
+                path="*"
+                element={""
+                  <div className="flex items-center justify-center min-h-screen">"
+                    <div className="text-center">"
+                      <h1 className="text-4xl font-bold text-zion-cyan mb-4">
+                        404 - Page Not Found"
+                      </h1>""
+                      <p className="text-zion-slate-light mb-6">"
+                        The page you&apos;re looking for doesn&apos;t exist.
+                      </p>"
+                      <a href = "/"
+                        className="bg-zion-purple text-white px-6 py-3 rounded-lg hover: bg-zion-purple-dark transition-colors" >                        Go Home,
+                      </a>
+                    </div>,
+                  </div>}
 
-// 404 page component
-const NotFound = () => (
-  <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-    <div className="text-center">
-      <h1 className="text-6xl font-bold text-zion-cyan mb-4">404</h1>
-      <h2 className="text-2xl font-semibold text-zion-slate-light mb-4">Page Not Found</h2>
-      <p className="text-zion-slate-light mb-6 max-w-md mx-auto">
-        The page you're looking for doesn't exist or has been moved.
-      </p>
-      <div className="space-y-3">
-        <a 
-          href="/" 
-          className="inline-block bg-zion-purple text-white px-6 py-3 rounded-lg hover:bg-zion-purple-dark transition-colors"
-        >
-          Go Home
-        </a>
-        <button 
-          onClick={() => window.history.back()}
-          className="block mx-auto mt-3 bg-zion-slate text-white px-6 py-3 rounded-lg hover:bg-zion-slate-dark transition-colors"
-        >
-          Go Back
-        </button>
-      </div>
-    </div>
-  </div>
-);
-
-function App() {
-  return (
-    <Router>
-      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-        <AppHeader />
-        
-        <main className="flex-1">
-          <Suspense fallback={<LoadingSpinner />}>
-            <Routes>
-              {/* Main pages */}
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/faq" element={<FAQ />} />
-              <Route path="/careers" element={<Careers />} />
-              <Route path="/privacy" element={<Privacy />} />
-              <Route path="/terms" element={<Terms />} />
-              <Route path="/sitemap" element={<Sitemap />} />
-              <Route path="/green-it" element={<GreenIT />} />
-              <Route path="/partners" element={<PartnersPage />} />
-              <Route path="/login" element={<Login />} />
-
-              {/* Catch-all route for 404 */}
-              <Route path="*" element={<NotFound />} />
+             />
             </Routes>
           </Suspense>
-        </main>
-
-        <Footer />
-        <ChatAssistant />
-      </div>
-    </Router>
-  );
-}
-
+        </main>"
+        <Footer / >""
+        <ChatAssistant /" >      </div>
+    </Router>  )}
+;
 export default App;
+export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App }
+;
+export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App }
+;
+export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App }
+;
+export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App }
+;
+export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App }
+;
+export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App }
+
+export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App }
+;
+export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App }";
+"";
+"

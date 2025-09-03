@@ -1,70 +1,159 @@
-import { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-export const OptimizedImage = ({ src, alt, className = '', placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzkjY2E4Y2EiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5Mb2FkaW5nLi4uPC90ZXh0Pjwvc3ZnPg==', fallback = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZmVlMmUyIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iI2RjMjYyNiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkltYWdlIGVycm9yPC90ZXh0Pjwvc3ZnPg==', priority = false, sizes = '100vw', onLoad, onError }) => {
-    const [isLoaded, setIsLoaded] = useState(false);
-    const [isInView, setIsInView] = useState(false);
-    const [hasError, setHasError] = useState(false);
-    const [currentSrc, setCurrentSrc] = useState(priority ? src : placeholder);
-    const imageRef = useRef(null);
-    // Intersection Observer for lazy loading
-    useEffect(() => {
-        if (priority) {
-            setIsInView(true);
-            return;
-        }
-        const observer = new IntersectionObserver(([entry]) => {
-            if (entry.isIntersecting) {
-                setIsInView(true);
-                observer.disconnect();
-            }
-        }, {
-            rootMargin: '50px',
-            threshold: 0.1
-        });
-        if (imageRef.current) {
-            observer.observe(imageRef.current);
-        }
-        return () => observer.disconnect();
-    }, [priority]);
-    // Load image when in view
-    useEffect(() => {
-        if (isInView && !priority) {
-            setCurrentSrc(src);
-        }
-    }, [isInView, src, priority]);
-    const handleLoad = () => {
-        setIsLoaded(true);
-        setHasError(false);
-        onLoad?.();
-    };
-    const handleError = () => {
-        setHasError(true);
-        setCurrentSrc(fallback);
-        onError?.();
-    };
-    return (<div className={`relative overflow-hidden ${className}`}>
-      <AnimatePresence>
-        {/* Loading Placeholder */}
-        {!isLoaded && !hasError && (<motion.div initial={{ opacity: 1 }} exit={{ opacity: 0 }} className="absolute inset-0 bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-            <div className="text-center">
-              <div className="w-8 h-8 border-2 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-2"></div>
-              <p className="text-xs text-gray-500">Loading...</p>
-            </div>
-          </motion.div>)}
+import React from "react"
+;,"});,"})"""
+export default function OptimizedImage() {return ("
+    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
+      <SEO title="OptimizedImage - Zion Tech Group" description="Professional OptimizedImage services by Zion Tech Group"  />"
+      <div className="container mx-auto px-4 py-20">"
+        <h1 className="text-4xl font-bold text-white mb-8">OptimizedImage</h1>"
+        <p className="{"text-gray-300" text-lg">
+          Professional OptimizedImage services to help your business grow.
+        </p>
+      </div>
+  )
+}
+}"
+interface OptimizedImageProps { src: string,
+,
+interface OptimizedImageProps {,,
+  src: string,,
+alt: string,",react
+interface OptimizedImageProps {
+  src: string,;
+  al,t: string,;
+  width?: number,;
+  height?: number,,;
+  className?: string,;
+  priority?: boolean,;
+  quality?: number  }
+export default function OptimizedImage() {
+  quality?: number}
+;
+export default function OptimizedImage({;
+  src,;
+  alt,;
+  width = 800,;
+  height = 600,,;
+  className = ",;
+  priority = false,;
+  quality = 75}: OptimizedImageProps) {;
+  const [isLoading, setIsLoading] = useState(true);
+  const [hasError, setHasError] = useState(false);
 
-        {/* Error State */}
-        {hasError && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="absolute inset-0 bg-red-100 dark:bg-red-900/20 flex items-center justify-center">
-            <div className="text-center text-red-600 dark:text-red-400">
-              <div className="text-2xl mb-2">⚠️</div>
-              <p className="text-sm">Image failed to load</p>
-            </div>
-          </motion.div>)}
-      </AnimatePresence>
+export default function OptimizedImage({
+  src,
+  alt,
+  width = 800,
+  height = 600,,
+  className = ",
+  priority = false,
+  quality = 75}: OptimizedImageProps) {
+  const [isLoading, setIsLoading] = useState(true)
+}
+  const [hasError, setHasError] = useState(false)
+}
+  return ("
+    <div className="{"relative" overflow-hidden ${className}"}>
+      {isLoading && (;"
+        <div className=""absolute" inset-0 bg-gray-200 animate-pulse"}       />
+      )}
 
-      {/* Main Image */}
-      <motion.img ref={imageRef} src={currentSrc} alt={alt} sizes={sizes} className={`w-full h-full object-cover transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`} onLoad={handleLoad} onError={handleError} loading={priority ? 'eager' : 'lazy'} decoding="async"/>
+      <Image export default function OptimizedImage({
+  quality?: number}&apos;&apos
+export default function OptimizedImage(;{
+  src,
+  alt,
+  width = 800,
+  height = 600,"
+  className = "",
+  priority = false,
+  quality = 75}: OptimizedImageProps) {
+  className = &apos;&apos,
+  priority = false,
+  quality = 75}: OptimizedImageProps) {&apos}&apos>""
+// comment
+export const OptimizedImage = ({ 
+  src,
+  alt,
+  width,
+  height,
+  priority = false,
+  className = "",>
+  ...props}) => {
+  const [isLoading, setIsLoading] = useState(true)
+}
+  const [hasError, setHasError] = useState(false)
+}
+  return ("
+    <div className = "{"relative" overflow-hidden ${className}"}>
+      {isLoading && ("
+        <div className=""absolute" inset-0 bg-gray-200 animate-pulse"  />
+      )}
 
-      {/* Progressive Loading Effect */}
-      {isLoaded && !hasError && (<motion.div initial={{ opacity: 0, scale: 1.1 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.3 }} className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent pointer-events-none"/>)}
-    </div>);
-};
+      {isLoading && (}"
+        <div className="&quot;absolute" inset-0 bg-gray-200 animate-pulse&quot;       />
+      )}&quot;"
+      <Image src = "{src}""
+        alt="{alt}""
+        width="{width}""
+        height="{height}""
+        priority="{priority}""
+        quality="{quality}""
+        className="{"transition-opacity" duration-300 ${isLoading ? "opacity-0" : "opacity-100"}"}"
+        onLoad="{()" => setIsLoading(false)}"
+        onError="{()" => {
+          setHasError(true)"
+        onError="{()" => {
+          setHasError(true)
+}
+          setIsLoading(false)}}"
+        placeholder=""blur";""
+        blurDataURL="data:image/jpegbase64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=" />
+      {hasError && (;"
+        <div className="absolute inset-0 flex items-center justify-center bg-gray-100">;"
+          <span className="text-gray-500">Failed to load image</span>
+        </div>
+      )}
+
+    </div>
+  )}"
+        placeholder = "blur""
+        blurDataURL="data: image/jpeg,base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=" />
+      {hasError && ("
+        <div className="absolute inset-0 flex items-center justify-center bg-gray-100">"
+          <span className="{"text-gray-500"">Failed to load image</span>
+        </div>
+      )}
+
+    </div>
+  )}"
+        quality="{quality}""
+        className="{"transition-opacity" duration-300 ${isLoading ? &apos;opacity-0&apos; : &apos;opacity-100&apos}"}"
+        quality = "{85}""
+        placeholder=""blur"}""
+        blurDataURL="data: image/jpeg,base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="{"""
+        onLoad="{()" => setIsLoading(false)}"
+        onError="{()" => {
+          setIsLoading(false)
+}
+          setHasError(true)
+}
+          setIsLoading(false)}}"
+        placeholder="&quot;blur&quot;""
+        blurDataURL="&quot;data:image/jpegbase64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=&quot;" />
+      {hasError && (&quot}"
+        <div className="&quot;absolute" inset-0 flex items-center justify-center bg-gray-100&quot;>&quot;""
+          <span className="&quot;text-gray-500&quot;">Failed to load image&quot;</span>
+}}"
+        className = "{"transition-opacity" duration-300 ${isLoading ? "opacity-0" : "opacity-100"}"}
+
+        {...props} />
+      {hasError && ("
+        <div className=""absolute" inset-0 flex items-center justify-center bg-gray-100"}>"
+          <span className="text-gray-400">Failed to load image</span>
+        </div>
+      )}
+
+    </div>
+  )}
+export default OptimizedImage;";
+;"

@@ -1,77 +1,4 @@
-<<<<<<< HEAD
-=======
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { SEO } from "../components/SEOHead"';
-import { INNOVATIVE_SERVICES_2027 } from '@/data/innovativeServices2027';
-import { 
-  Check, 
-  Star, 
-  Brain, 
-  Shield, 
-  Zap, 
-  Code, 
-  Signal, 
-  Users, 
-  Truck,
-  Phone,
-  Mail,
-  MapPin,
-  ArrowRight,
-  TrendingUp,
-  Clock,
-  Target,
-  Award
-} from 'lucide-react';
-
-const ComprehensivePricing2027: React.FC = () => {
-  const [selectedPlan, setSelectedPlan] = useState<string>('monthly');
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
-
-  const categories = ['All', 'AI Services', 'Cybersecurity', 'Emerging Technology', 'IT Services', 'Telecommunications'];
-
-  const filteredServices = INNOVATIVE_SERVICES_2027.filter(service => 
-    selectedCategory === 'All' || service.category === selectedCategory
-  );
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5
-      }
-    }
-  };
-
-  return (
-    <>
-      <SEOHead 
-        title="Comprehensive Pricing 2027 - Zion Tech Group"
-        description="Explore our comprehensive pricing for cutting-edge AI, cybersecurity, quantum computing, and emerging technology solutions. Find the perfect plan for your business needs."
-        canonical="/comprehensive-pricing-2027"
-        url="https://ziontechgroup.com/comprehensive-pricing-2027"
-      />
-      
-      {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10"></div>
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
->>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
-          <motion.div
+<<<<<<< HEAD          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -102,3 +29,19 @@ const ComprehensivePricing2027: React.FC = () => {
 };
 
 export default ComprehensivePricing2027;
+import React from "react"
+import { SEO } from "@/components/SEO"
+;,"});,"})
+}
+export default function ComprehensivePricing2027() {return ("
+    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
+      <SEO title="ComprehensivePricing2027 - Zion Tech Group" description="Professional ComprehensivePricing2027 services by Zion Tech Group"  />"
+      <div className="container mx-auto px-4 py-20">"
+        <h1 className="text-4xl font-bold text-white mb-8">ComprehensivePricing2027</h1>"
+        <p className="text-gray-300 text-lg">
+          Professional ComprehensivePricing2027 services to help your business grow.
+        </p>
+      </div>
+  )
+}
+}""

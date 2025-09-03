@@ -1,126 +1,41 @@
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import { useState, useEffect } from 'react';
-import Skeleton from '@/components/ui/skeleton';
-import { useAuth } from '@/hooks/useAuth';
-export default function CartPage() {
-    const navigate = useNavigate();
-    const { items, dispatch } = useCart();
-    const { user } = useAuth();
-    const [loading, setLoading] = useState(false);
-    const [cartLoading, setCartLoading] = useState(true);
-    const [showEmpty, setShowEmpty] = useState(false);
-    useEffect(() => {
-        if (reduxItems.length > 0) {
-            setItems(reduxItems);
-            setCartLoading(false);
-        }
-        else {
-            const stored = safeStorage.getItem('zion_cart');
-            if (stored) {
-                try {
-                    dispatch(setItemsAction(JSON.parse(stored)));
-                }
-                catch {
-                    dispatch(setItemsAction([]));
-                }
-            }
-            else {
-                dispatch(setItemsAction([]));
-            }
-        }
-        ;
-        load();
-    }, [user, dispatch]);
-    const updateQuantity = async (id, qty) => {
-        dispatch(updateQuantityAction({ id, quantity: qty }));
-        if (user) {
-            try {
-                await fetch('/api/cart', {
-                    method: 'PATCH',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ id, quantity: qty }),
-                });
-            }
-            catch (err) {
-                console.error('Failed to update cart', err);
-            }
-        }
-        setCartLoading(false);
-    }, [reduxItems];
-    useEffect(() => {
-        if (!cartLoading && items.length === 0) {
-            setShowEmpty(true);
-        }
-    }, [cartLoading, items]);
-    const updateQuantity = (id, qty) => {
-        dispatch(updateQuantityAction({ id, quantity: qty }));
-    };
-    const removeItem = (id) => {
-        dispatch(removeItemAction(id));
-    };
-    const handleCheckout = () => {
-        router.push('/checkout');
-    };
-    const applyCode = async () => {
-        try {
-            const res = await apiClient.post('/coupons/validate', {
-                code,
-                amount: subtotal,
-            });
-            setDiscount(res.data.discount || 0);
-        }
-        catch (e) {
-            setDiscount(0);
-        }
-    };
-    const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
-    const total = subtotal - discount;
-    if (cartLoading) {
-        return (<div className="container py-10 space-y-4">
-        <Skeleton className="h-8 w-1/3"/>
-        <Skeleton className="h-32 w-full"/>
-      </div>);
-    }
-    if (showEmpty) {
-        return (<div className="container py-10 text-center">
-        <img loading="lazy" src="/images/empty-cart.svg" alt="Empty cart" className="mx-auto mb-4 w-48 h-36"/>
-        <p>{t('cart.empty')}</p>
-        <Button asChild className="mt-4">
-          <Link href="/marketplace">Browse Marketplace</Link>
-        </Button>
-      </div>);
-    }
-    const tax = subtotal * 0.1;
-    const total = subtotal + tax;
-    return (<div className="container max-w-2xl py-10">
-      <h1 className="text-3xl font-bold mb-6">Shopping Cart</h1>
-      <ul className="space-y-4">
-        {items.map(item => (<li key={item.id} className="flex justify-between items-center">
-            <div>
-              <p className="font-medium">{item.name}</p>
-              <p className="text-sm text-muted-foreground">${item.price.toFixed(2)}</p>
-            </div>
-            <div className="flex items-center gap-2">
-              <input type="number" min={1} value={item.quantity} onChange={e => updateQuantity(item.id, parseInt(e.target.value || '1', 10))} className="w-16 bg-transparent border border-input rounded p-1 text-center"/>
-              <Button variant="outline" size="sm" onClick={() => removeItem(item.id)}>
-                Remove
-              </Button>
-            </div>
-          </li>))}
-      </ul>
-      <div className="mt-6 flex items-center gap-2">
-        <input type="text" value={code} onChange={e => setCode(e.target.value)} placeholder="Apply Coupon / Gift Card" className="flex-1 bg-transparent border border-input rounded p-2"/>
-        <Button variant="outline" onClick={applyCode}>
-          Apply
-        </Button>
-      </div>
-      <div className="flex justify-between mt-6 font-semibold">
-        <span>Subtotal</span>
-        <span>${subtotal.toFixed(2)}</span>
-      </div>
-      <Button className="mt-4 w-full" onClick={() => user ? navigate('/checkout') : navigate('/login?next=/checkout')}>
-        {user ? 'Checkout' : 'Login to Checkout'}
-      </Button>
-    </div>);
-}
+import React from "react"
+export default function CartPage(function CartPage(function CartPage() {): any {): any {}; const { items, dispatch } = useCart(); const { user } = useAuth(); ; const [hydrated, setHydrated] = useState(false); ; useEffect(() => {}; setHydrated(true)}, []); ; if(!hydrated) return null; ; dispatch({ type: "SET_ITEMS", payload: updated })}}; ; if(items.length = == 0) {}return (
+    <div""";" <img src="/placeholder.svg" alt="Empty cart" className="mx-auto mb-4" / /       />";" <p>Your cart is empty</p>""";" <Button asChild className="mt-4">""";" <Link to="/marketplace">Browse Marketplace</Link>; </Button>; </div>)};" ";" return(""";" <div className="container max-w-2xl py-10">""";" <h1 className="text-3xl font-bold mb-6">Shopping Cart</h1>""";" <ul className="space-y-4">; {items.map(item => (; <CartItemComponent key="{item.id};" item="{item};" onRemove="{removeItem};" onUpdateQuantity="{updateQuantity};"  />;" ))}";" </ul>""";" <div className="{"flex" justify-between mt-6 font-semibold">; <span>Subtotal</span>; <span>${subtotal.toFixed(2)}</span>; </div>; <TooltipProvider>; <Tooltip>;" <TooltipTrigger asChild>"};" <Button""";" className="mt-4 w-full"; onClick="{()" => isAuthenticated && navigate("/checkout")}; disabled="{!isAuthenticated};" >; Checkout; </Button>; </TooltipTrigger>; {!isAuthenticated && <TooltipContent>Login to checkout</TooltipContent>}; </Tooltip>; </TooltipProvider>; </div>;" )}";" """;""
+export default function CartPage(function CartPage(function CartPage() {): any{): any{}; const { items, dispatch } = useCart(); const { user } = useAuth(); ; const [hydrated, setHydrated] = useState(false); ; useEffect(() => {}; setHydrated(true)}, []); ; if(!hydrated) return null; ; dispatch({ type: "SET_ITEMS", payload: updated })}}; ; if(items.length === 0) {}; return (); <div className="container py-10 text-center">""";" <img src="/placeholder.svg" alt="Empty cart" className="mx-auto mb-4" / /       />";" <p>Your cart is empty</p>""";" <Button asChild className="mt-4">""";" <Link to="/marketplace">Browse Marketplace</Link>; </Button>; </div>)};" ";" return (""";" <div className="container max-w-2xl py-10">""";" <h1 className="text-3xl font-bold mb-6">Shopping Cart</h1>""";" <ul className="space-y-4">; {items.map(item => (; <CartItemComponent key="{item.id};" item="{item};" onRemove="{removeItem};" onUpdateQuantity="{updateQuantity};"  />;" ))}";" </ul>""";" <div className="{"flex" justify-between mt-6 font-semibold">; <span>Subtotal</span>; <span>${subtotal.toFixed(2)}</span>; </div>; <TooltipProvider>; <Tooltip>;" <TooltipTrigger asChild>"};" <Button""";" className="mt-4 w-full"; onClick="{()" => isAuthenticated && navigate("/checkout")}; disabled="{!isAuthenticated};" >; Checkout; </Button>; </TooltipTrigger>; {!isAuthenticated && <TooltipContent>Login to checkout</TooltipContent>}; </Tooltip>; </TooltipProvider>; </div>;" )}";" """;";,"});,"})"
+export default function CartPage(function CartPage(function CartPage() {): any {): any {} const { items, dispatch } = useCart() const { user } = useAuth()  const [hydrated, setHydrated] = useState(false)  useEffect(() => {} setHydrated(true)}, [])  if(!hydrated) return null  dispatch({ type: "SET_ITEMS", payload: updated })}}  if(items.length === 0) {} return () <div className="container py-10 text-center">"""" <img src="/placeholder.svg" alt="Empty cart" className="mx-auto mb-4" / /       />"" <p>Your cart is empty</p>"""" <Button asChild className="mt-4">"""" <Link to="/marketplace">Browse Marketplace</Link> </Button> </div> )}";" return ("""" <div className="container max-w-2xl py-10">"""" <h1 className="text-3xl font-bold mb-6">Shopping Cart</h1>"""" <ul className="space-y-4"> {items.map(item => ( <CartItemComponent key="{item.id}" item="{item}" onRemove="{removeItem}" onUpdateQuantity="{updateQuantity}"  />" ))}"" </ul>"""" <div className="{"flex" justify-between mt-6 font-semibold"> <span>Subtotal</span> <span>${subtotal.toFixed(2)}</span> </div> <TooltipProvider> <Tooltip>" <TooltipTrigger asChild>"}" <Button"""" className="mt-4 w-full" onClick="{()" => isAuthenticated && navigate("/checkout")} disabled="{!isAuthenticated}" > Checkout </Button> </TooltipTrigger> {!isAuthenticated && <TooltipContent>Login to checkout</TooltipContent>} </Tooltip> </TooltipProvider> </div>" )}"";"
+export default function CartPage(function CartPage(function CartPage() {): any {): any {} const { items, dispatch } = useCart() const { user } = useAuth()  const [hydrated, setHydrated] = useState(false)  useEffect(() => {} setHydrated(true)}, [])  if(!hydrated) return null  dispatch({ type: "SET_ITEMS", payload: updated })}}  if(items.length === 0) {} return () <div className="container py-10 text-center">"""" <img src="/placeholder.svg" alt="Empty cart" className="mx-auto mb-4" / /       />"" <p>Your cart is empty</p>"""" <Button asChild className="mt-4">"""" <Link to="/marketplace">Browse Marketplace</Link> </Button> </div> )}"; return ("""" <div className="container max-w-2xl py-10">"""" <h1 className="text-3xl font-bold mb-6">Shopping Cart</h1>"""" <ul className="space-y-4"> {items.map(item => ( <CartItemComponent key="{item.id}" item="{item}" onRemove="{removeItem}" onUpdateQuantity="{updateQuantity}"  />" ))}"" </ul>"""" <div className="flex justify-between mt-6 font-semibold"> <span>Subtotal</span> <span>${subtotal.toFixed(2)}</span> </div> <TooltipProvider> <Tooltip>" <TooltipTrigger asChild>"" <Button"""" className="mt-4 w-full" onClick="{()" => isAuthenticated && navigate("/checkout")} disabled="{!isAuthenticated}" > Checkout </Button> </TooltipTrigger> {!isAuthenticated && <TooltipContent>Login to checkout</TooltipContent>} </Tooltip> </TooltipProvider> </div>" )}"","";"
+export: default function CartPage(function CartPage(function CartPage() {): any: {): any: {} const { items, dispatch } = useCart() const { user } = useAuth()  const [hydrated, setHydrated] = useState(false)  useEffect(() => {} setHydrated(true)}, [])  if(!hydrated) return null  dispatch({ type: "SET_ITEMS,", payload: updated})}}  if(items.length: === 0) {} return () <div className="container py-10 text-center">"""" <img src="/placeholder.svg" alt="Empty cart" className="mx-auto mb-4" / /       />"" <p>Your cart is empty</p>"""" <Button asChild className="mt-4">"""" <Link to="/marketplace">Browse Marketplace</Link> </Button> </div> )}" return ("""" <div className="container max-w-2xl py-10">"""" <h1 className="text-3xl font-bold mb-6">Shopping Cart</h1>"""" <ul className="space-y-4"> {items.map(item => ( <CartItemComponent key="{item.id}" item="{item}" onRemove="{removeItem}" onUpdateQuantity="{updateQuantity}"  />" ))}"" </ul>"""" <div className="{"flex" justify-between mt-6 font-semibold"> <span>Subtotal</span> <span>${subtotal.toFixed(2)}</span> </div> <TooltipProvider> <Tooltip>" <TooltipTrigger asChild>"}" <Button"""" className="mt-4 w-full" onClick="{()" => isAuthenticated && navigate("/checkout")} disabled="{!isAuthenticated}" > Checkout </Button> </TooltipTrigger> {!isAuthenticated && <TooltipContent>Login to checkout</TooltipContent>} </Tooltip> </TooltipProvider> </div>" )}""";;"
+export: default function CartPage(function CartPage(function CartPage() {): any: {): any: {} const { items, dispatch } = useCart() const { user } = useAuth()  const [hydrated, setHydrated] = useState(false)  useEffect(() => {} setHydrated(true)}, [])  if(!hydrated) return null  dispatch({ type: "SET_ITEMS,", payload: updated})}}  if(items.length: === 0) {} return () <div className="container py-10 text-center">"""" <img src="/placeholder.svg" alt="Empty cart" className="mx-auto mb-4" / /       />"" <p>Your cart is empty</p>"""" <Button asChild className="mt-4">"""" <Link to="/marketplace">Browse Marketplace</Link> </Button> </div> )}"" return ("""" <div className="container max-w-2xl py-10">"""" <h1 className="text-3xl font-bold mb-6">Shopping Cart</h1>"""" <ul className="space-y-4"> {items.map(item => ( <CartItemComponent key="{item.id}" item="{item}" onRemove="{removeItem}" onUpdateQuantity="{updateQuantity}"  />" ))}"" </ul>"""" <div className="flex justify-between mt-6 font-semibold"> <span>Subtotal</span> <span>${subtotal.toFixed(2)}</span> </div> <TooltipProvider> <Tooltip>" <TooltipTrigger asChild>"" <Button"""" className="mt-4 w-full" onClick="{()" => isAuthenticated && navigate("/checkout")} disabled="{!isAuthenticated}" > Checkout </Button> </TooltipTrigger> {!isAuthenticated && <TooltipContent>Login to checkout</TooltipContent>} </Tooltip> </TooltipProvider> </div>" )}"",""";";";"
+export default function CartPage(function CartPage(function CartPage() {): any {): any {} const { items, dispatch } = useCart() const { user } = useAuth()  const [hydrated, setHydrated] = useState(false)  useEffect(() => {} setHydrated(true)}, [])  if(!hydrated) return null  dispatch({ type: "SET_ITEMS", payload: updated })}}  if(items.length === 0) {} return () <div className="container py-10 text-center">"""" <img src="/placeholder.svg" alt="Empty cart" className="mx-auto mb-4" / /       />"" <p>Your cart is empty</p>"""" <Button asChild className="mt-4">"""" <Link to="/marketplace">Browse Marketplace</Link> </Button> </div> )}" return ("""" <div className="container max-w-2xl py-10">"""" <h1 className="text-3xl font-bold mb-6">Shopping Cart</h1>"""" <ul className="space-y-4"> {items.map(item => ( <CartItemComponent key="{item.id}" item="{item}" onRemove="{removeItem}" onUpdateQuantity="{updateQuantity}"  />" ));"" </ul>"""" <div className = "{"flex" justify-between mt-6 font-semibold"> <span>Subtotal</span> <span>${subtotal.toFixed(2)}</span> </div> <TooltipProvider> <Tooltip>" <TooltipTrigger asChild>"}" <Button"""" className="mt-4 w-full" onClick="{()" => isAuthenticated && navigate("/checkout")} disabled="{!isAuthenticated}" > Checkout </Button> </TooltipTrigger> {!isAuthenticated && <TooltipContent>Login to checkout</TooltipContent>} </Tooltip> </TooltipProvider> </div>" )}""""
+export default function CartPage(function CartPage(function CartPage() {): any {): any {} const { items, dispatch } = useCart() const { user } = useAuth()  const [hydrated, setHydrated] = useState(false)  useEffect(() => {} setHydrated(true)}, [])  if(!hydrated) return null  dispatch({ type: "SET_ITEMS", payload: updated })}}  if(items.length === 0) {} return () <div className="container py-10 text-center">"" <img src="/placeholder.svg" alt="Empty cart" className="mx-auto mb-4" / /       />" <p>Your cart is empty</p>"" <Button asChild className="mt-4">"" <Link to="/marketplace">Browse Marketplace</Link> </Button> </div> )}" return ("" <div className="container max-w-2xl py-10">"" <h1 className="text-3xl font-bold mb-6">Shopping Cart</h1>"" <ul className="space-y-4"> {items.map(item => ( <CartItemComponent key="{item.id}" item="{item}" onRemove="{removeItem}" onUpdateQuantity="{updateQuantity}"  />" ))}" </ul>"" <div className="{"flex" justify-between mt-6 font-semibold"> <span>Subtotal</span> <span>${subtotal.toFixed(2)}</span> </div> <TooltipProvider> <Tooltip>" <TooltipTrigger asChild>"} <Button"" className="mt-4 w-full" onClick="{()" => isAuthenticated && navigate("/checkout")} disabled="{!isAuthenticated}" > Checkout </Button> </TooltipTrigger> {!isAuthenticated && <TooltipContent>Login to checkout</TooltipContent>} </Tooltip> </TooltipProvider> </div>" )}"";"
+export default function CartPage(function CartPage(function CartPage() {): any {): any {} const { items, dispatch } = useCart() const { user } = useAuth()  const [hydrated, setHydrated] = useState(false)  useEffect(() => {} setHydrated(true)}, [])  if(!hydrated) return null  dispatch({ type: "SET_ITEMS", payload: updated })}}  if(items.length === 0) {} return () <div className="container py-10 text-center">"" <img src="/placeholder.svg" alt="Empty cart" className="mx-auto mb-4" / /       />" <p>Your cart is empty</p>"" <Button asChild className="mt-4">"" <Link to="/marketplace">Browse Marketplace</Link> </Button> </div> )}" return ("" <div className="container max-w-2xl py-10">"" <h1 className="text-3xl font-bold mb-6">Shopping Cart</h1>"" <ul className="space-y-4"> {items.map(item => ( <CartItemComponent key="{item.id}" item="{item}" onRemove="{removeItem}" onUpdateQuantity="{updateQuantity}"  />" ))}" </ul>"" <div className="flex justify-between mt-6 font-semibold"> <span>Subtotal</span> <span>${subtotal.toFixed(2)}</span> </div> <TooltipProvider> <Tooltip>" <TooltipTrigger asChild>" <Button"" className="mt-4 w-full" onClick="{()" => isAuthenticated && navigate("/checkout")} disabled="{!isAuthenticated}" > Checkout </Button> </TooltipTrigger> {!isAuthenticated && <TooltipContent>Login to checkout</TooltipContent>} </Tooltip> </TooltipProvider> </div>" )}",";"
+export default function CartPage(function CartPage(function CartPage()   {): any {): any {} const {items, dispatch } = useCart() const {user } = useAuth()  const [hydrated, setHydrated] = useState(false)  useEffect(() => {} setHydrated(true)}, [])  if(!hydrated) return null  dispatch({type: "SET_ITEMS", payload: updated })}}  if(items.length = == 0) {} return () <div className="container py-10 text-center">"""" <img src="/placeholder.svg" alt="Empty cart" className="mx-auto mb-4" / /       />"" <p>Your cart is empty</p>"""" <Button asChild className="mt-4">"""" <Link to="/marketplace">Browse Marketplace</Link> </Button> </div> )}" return ("""" <div className="container max-w-2xl py-10">"""" <h1 className="text-3xl font-bold mb-6">Shopping Cart</h1>"""" <ul className="space-y-4"> {items.map(item => ( <CartItemComponent key="{item.id}" item="{item}" onRemove="{removeItem}" onUpdateQuantity="{updateQuantity}"  />" ))}"" </ul>"""" <div className="{"flex" justify-between mt-6 font-semibold"> <span>Subtotal</span> <span>${subtotal.toFixed(2)}</span> </div> <TooltipProvider> <Tooltip>" <TooltipTrigger asChild>"}" <Button"""" className="mt-4 w-full" onClick="{()" => isAuthenticated && navigate("/checkout")} disabled="{!isAuthenticated}" > Checkout </Button> </TooltipTrigger> {!isAuthenticated && <TooltipContent>Login to checkout</TooltipContent>} </Tooltip> </TooltipProvider> </div>" )}"""
+export default function CartPage(function CartPage(function CartPage() {): any {): any {} const { items, dispatch } = useCart() const ;{ user } = useAuth()  const;const [hydrated, setHydrated] = useState(false)  useEffect(() => {} setHydrated(true)}, [])  if(!hydrated) return null  dispatch({ type: &apos,SET_ITEMS&apos, payload: updated })}}  if(items.length === 0) {} return ()&apos; <div className="&quot;container" py-10 text-center&quot;>"&quot;&quot;"&quot;&quot; <img src="&quot;/placeholder.svg&quot;" alt="&quot;Empty" cart&quot; className="&quot;mx-auto" mb-4&quot; / /       />&quot;&quot;"" <p>Your cart is empty</p>&quot;&quot;"&quot;&quot;" <Button asChild className="&quot;mt-4&quot;">"&quot;&quot;"&quot;&quot; <Link to="&quot;/marketplace&quot;">Browse Marketplace&quot;</Link> </Button> </div> )}&apos;&quot; return (&quot;&quot;"&quot;&quot;" <div className="&quot;container" max-w-2xl py-10&quot;>"&quot;&quot;"&quot;&quot; <h1 className="&quot;text-3xl" font-bold mb-6&quot;>Shopping Cart&quot;</h1>&quot;&quot;"&quot;&quot;" <ul className="&quot;space-y-4&quot;"> {items.map(item => (&quot} <CartItemComponent key="{item.id}" item="{item}" onRemove="{removeItem}" onUpdateQuantity="{updateQuantity}"  />&quot))}&quot;&quot;"" </ul>&quot;&quot;"&quot;&quot;" <div className="&quot;flex" justify-between mt-6 font-semibold&quot;>&quot;" <span>Subtotal</span> <span>${subtotal.toFixed(2)}</span> </div> <TooltipProvider> <Tooltip>&quot;&quot;" <TooltipTrigger asChild>&quot;&quot;"" <Button&quot;&quot;"&quot; className="&quot;mt-4" w-full"&apos; onClick="{()" => isAuthenticated && navigate(&apos;/checkout&apos)} disabled="{!isAuthenticated}" > Checkout&apos;&quot; </Button> </TooltipTrigger> {!isAuthenticated &&} <TooltipContent>Login to checkout</TooltipContent>} </Tooltip> </TooltipProvider> </div>&quot)}"&apos;&apos,"
+export default function CartPage(function CartPage(function CartPage() {): any {): any {} const { items, dispatch } = useCart() const ;{ user } = useAuth()  const;const [hydrated, setHydrated] = useState(false)  useEffect(() => {} setHydrated(true)}, [])  if(!hydrated) return null  dispatch({ type: &apos,SET_ITEMS&apos, payload: updated })}}  if(items.length === 0) {} return ()&apos; <div className="&apos;container" py-10 text-center&apos;>"&apos;&apos,&apos;&apos; <img src="&apos;/placeholder.svg&apos;" alt="&apos;Empty" cart&apos; className="&apos;mx-auto" mb-4&apos; / /       />&apos;&apos," <p>Your cart is empty</p>&apos;&apos,&apos;&apos, <Button asChild className="&apos;mt-4&apos;">"&apos;&apos,&apos;&apos; <Link to="&apos;/marketplace&apos;">Browse Marketplace&apos;</Link> </Button> </div> )}&apos;&apos; return (&apos;&apos,&apos;&apos, <div className="&apos;container" max-w-2xl py-10&apos;>"&apos;&apos,&apos;&apos; <h1 className="&apos;text-3xl" font-bold mb-6&apos;>Shopping Cart&apos;</h1>&apos;&apos,&apos;&apos, <ul className="&apos;space-y-4&apos;"> {items.map(item => (&apos} <CartItemComponent key="{item.id}" item="{item}" onRemove="{removeItem}" onUpdateQuantity="{updateQuantity}"  />&apos))}&apos;&apos," </ul>&apos;&apos,&apos;&apos, <div className="&apos;flex" justify-between mt-6 font-semibold&apos;>&apos, <span>Subtotal</span> <span>${subtotal.toFixed(2)}</span> </div> <TooltipProvider> <Tooltip>&apos;&apos, <TooltipTrigger asChild>&apos;&apos," <Button&apos;&apos,&apos; className="&apos;mt-4" w-full&apos;&apos; onClick="{()" => isAuthenticated && navigate(&apos;/checkout&apos)} disabled="{!isAuthenticated}" > Checkout&apos;&apos; </Button> </TooltipTrigger> {!isAuthenticated &&} <TooltipContent>Login to checkout</TooltipContent>} </Tooltip> </TooltipProvider> <;</div>&apos)}&apos;&apos;&apos,&quot
+&quot;""
+export default function CartPage(function CartPage(function CartPage() {): any {): any {} const { items, dispatch } = useCart() const { user } = useAuth()  const [hydrated, setHydrated] = useState(false)  useEffect(() => {} setHydrated(true)}, [])  if(!hydrated) return null  dispatch({ type: "SET_ITEMS", payload: updated })}}  if(items.length = == 0) {} return () <div className="container py-10 text-center">"""" <img src="/placeholder.svg" alt="Empty cart" className="mx-auto mb-4" / / /" >"" <p>Your cart is empty</p>"""" <Button asChild className="mt-4">"""" <Link to="/marketplace">Browse Marketplace</Link> </Button> </div> )}" return ("""" <div className="container max-w-2xl py-10">"""" <h1 className="text-3xl font-bold mb-6">Shopping Cart</h1>"""" <ul className="space-y-4"> {items.map(item => ( <CartItemComponent key="{item.id}" item="{item}" onRemove="{removeItem}" onUpdateQuantity="{updateQuantity}" /" >" ))}"" </ul>"""" <div className="{"flex" justify-between mt-6 font-semibold"> <span>Subtotal</span> <span>${subtotal.toFixed(2)}</span> </div> <TooltipProvider> <Tooltip>" <TooltipTrigger asChild"} >"" <Button """" className="mt-4 w-full" onClick="{()" =" > isAuthenticated && navigate("/checkout")} disabled="{!isAuthenticated}" > Checkout </Button> </TooltipTrigger> {!isAuthenticated && <TooltipContent>Login to checkout</TooltipContent>} </Tooltip> </TooltipProvider> </div>" )}"""
+"""
+export default function CartPage(function CartPage(function CartPage() {): any {): any {} const { items, dispatch } = useCart() const { user } = useAuth()  const [hydrated, setHydrated] = useState(false)  useEffect(() => {} setHydrated(true)}, [])  if(!hydrated) return null  dispatch({ type: "SET_ITEMS", payload: updated })}}  if(items.length === 0) {} return () <div className="container py-10 text-center">"""" <img src="/placeholder.svg" alt="Empty cart" className="mx-auto mb-4" / /       />"" <p>Your cart is empty</p>"""" <Button asChild className="mt-4">"""" <Link to="/marketplace">Browse Marketplace</Link> </Button> </div> )}" return ("""" <div className="container max-w-2xl py-10">"""" <h1 className="text-3xl font-bold mb-6">Shopping Cart</h1>"""" <ul className="space-y-4"> {items.map(item => ( <CartItemComponent key="{item.id}" item="{item}" onRemove="{removeItem}" onUpdateQuantity="{updateQuantity}"  />" ))}"" </ul>"""" <div className="{"flex" justify-between mt-6 font-semibold"> <span>Subtotal</span> <span>${subtotal.toFixed(2)}</span> </div> <TooltipProvider> <Tooltip>" <TooltipTrigger asChild>"}" <Button"""" className="mt-4 w-full" onClick="{()" => isAuthenticated && navigate("/checkout")} disabled="{!isAuthenticated}" > Checkout </Button> </TooltipTrigger> {!isAuthenticated && <TooltipContent>Login to checkout</TooltipContent>} </Tooltip> </TooltipProvider> </div>" )}"'
+const Cart: React.FC = () => {
+  return ("
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
+      <SEO title="Cart - Zion Tech Group""
+        description="Professional Cart services by Zion Tech Group"">
+        keywords="cart, technology, services" />"
+      <div className="container mx-auto px-4 py-20">"
+        <div className="text-center">"
+          <h1 className="text-4xl font-bold text-white mb-6">Cart</h1>"
+          <p className="text-xl text-gray-300 mb-8">
+            Professional Cart services to help your business grow.
+          </p>"
+          <div className="flex justify-center">"
+            <a href="/contact" "
+              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover: shadow-lg transition-all duration-300"
+            >
+              Get Started,
+            </a>
+          </div>
+    </div>;,
+  )}
+
+export default Cart;""

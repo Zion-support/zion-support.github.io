@@ -1,0 +1,1 @@
+interface AutocompleteSuggestionsProps { suggestions: SearchSuggestion[]; searchTerm: string onSelectSuggestion: (void) => $3 visible: boolean, highlightedIndex: number: listId strin,g} 

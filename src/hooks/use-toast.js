@@ -1,17 +1,34 @@
-import { toast as hotToast } from 'react-hot-toast';
+import React, { useState, useCallback } from "react"
 
-export const toast = hotToast;
+// comment
+export const toast = ({ title, description, variant = "default" }) => {  // comment
+  console.log(""Toast [${variant}]: ${title} -, ${description}"")
+}
+  // comment
+return Date.now()}
 
 export const useToast = () => {
-  const toast = (message, options) => {
-    hotToast(message, options);
-  };
+  const [toasts, setToasts] = useState([])
+}
+""
+  const toast = useCallback(({ title, description, variant = "default' }) => {    const id = Date.now()
+}
+    const newToast = {}
 
-  toast.success = (message) => hotToast.success(message);
-  toast.error = (message) => hotToast.error(message);
-  toast.loading = (message) => hotToast.loading(message);
-
-  return { toast };
-};
-
-export default useToast;
+    setToasts(prev => [...prev, newToast])
+}
+    // comment
+setTimeout(() => {
+      setToasts(prev => prev.filter(t => t.id !== id))
+}
+  }, 5000)
+}
+    return id}, [])
+}
+  const dismiss = useCallback((id) => {
+    setToasts(prev => prev.filter(t => t.id !== id))
+}
+  }, [])
+}
+  return {
+    toast, dismiss,    toasts}};"`""

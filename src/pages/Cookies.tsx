@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -32,12 +30,6 @@ import {
   ChevronDown,
   ChevronUp
 } from 'lucide-react';
-=======
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { CakeIcon, Cog6ToothIcon, ShieldCheckIcon } from '@heroicons/react/24/outline';
->>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
-
 
 const Cookies: React.FC = () => {
   return (
@@ -56,7 +48,6 @@ const Cookies: React.FC = () => {
             </p>
           </div>
           
-<<<<<<< HEAD
           <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
             Cookie{' '}
             <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
@@ -74,31 +65,7 @@ const Cookies: React.FC = () => {
             </button>
             <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">
               Learn More
-            </button>
-=======
-import React from 'react';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { CakeIcon, Cog6ToothIcon, ShieldCheckIcon } from '@heroicons/react/24/outline';
-const Cookies = () => {
-    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Cookie
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                {" "}Policy
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Understanding how we use cookies to enhance your browsing experience
-            </p>
-          </div>
-          
-=======
->>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
-          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 space-y-8">
+            </button>          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 space-y-8">
             <div>
               <h2 className="text-2xl font-bold mb-4">What Are Cookies?</h2>
               <p className="text-gray-300 mb-4">
@@ -181,13 +148,7 @@ const Cookies = () => {
                   <strong>Email:</strong> privacy@ziontechgroup.com<br />
                   <strong>Phone:</strong> +1 (302) 464-0950<br />
                   <strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709
-=======
-<<<<<<< HEAD
-const Cookies: React.FC = () => {}
-=======
-const Cookies: React.FC = () => {
->>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
-  return (
+const Cookies: React.FC = () => {}  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
@@ -195,12 +156,7 @@ const Cookies: React.FC = () => {
           <div className="text-center">
             <div className="flex justify-center mb-6">
               <div className="p-3 bg-orange-600/20 rounded-full">
-<<<<<<< HEAD
-                <CakeIcon className="h-12 w-12 text-orange-400"/>
-=======
-                <CakeIcon className="h-12 w-12 text-orange-400" />
->>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
-              </div>
+                <CakeIcon className="h-12 w-12 text-orange-400"/>              </div>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
               Cookie Policy
@@ -212,23 +168,6 @@ const Cookies: React.FC = () => {
             <p className="text-sm text-gray-400">
               Last updated: {new Date().toLocaleDateString()}
             </p>
-<<<<<<< HEAD
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
-=======
->>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
-          </div>
-        </div>
-      </section>
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-      {/* What Are Cookies Section */}
-      <section className="py-20 bg-zion-slate-dark">
-        <div className="container mx-auto px-4">
-=======
-=======
->>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
-      {/* Cookie Information */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
@@ -258,7 +197,6 @@ const Cookies: React.FC = () => {
                 <p className="text-gray-300 text-sm">
                   Personalize content and improve functionality
                 </p>
-=======
 import {SEO} from "@/components/SEO";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -270,42 +208,25 @@ export default function Cookies() {}
       <Header />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-<<<<<<< HEAD
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
-=======
->>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl font-bold text-white mb-8">Cookie Policy</h1>
-            
-            <div className="bg-zion-blue-dark rounded-lg p-8 border border-zion-blue-light">
-              <p className="text-zion-slate-light mb-6">
-                Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
-              </p>
+  ]
+  return ("
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">;"
+      <div className = "max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16"> {/* comment */}
 
-              <div className="space-y-8">
-                <section>
-                  <h2 className="text-2xl font-semibold text-white mb-4">What Are Cookies?</h2>
-                  <p className="text-zion-slate-light leading-relaxed">
-                    Cookies are small text files that are placed on your device when you visit our website. 
-                    They help us provide you with a better experience by remembering your preferences, 
-                    analyzing how you use our site, and personalizing content.
-                  </p>
-                </section>
+        <motion.div;"
+          initial = "{{" opacity: 0, y: 20 }}"
+          animate="{{" opacity: 1, y: 0 }}">
+          className="text-center mb-12">;"
+          <div className="flex items-center justify-center mb-4">;"
+            <Cookie className="h-8 w-8 text-blue-600 mr-3"  />;"
+            <h1 className="text-4xl font-bold text-gray-900">Cookie Policy</h1>
+          </div>;"
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Learn about how we use cookies to enhance your experience on our website.
+          </p>;"
+          <p className="text-sm text-gray-500 mt-4">
+            Last updated: {new Date().toLocaleDateString()}
 
-                <section>
-                  <h2 className="text-2xl font-semibold text-white mb-4">How We Use Cookies</h2>
-                  <p className="text-zion-slate-light mb-4">
-                    We use cookies for several purposes:
-                  </p>
-                  <ul className="list-disc list-inside text-zion-slate-light space-y-2 ml-4">
-                    <li><strong>Essential Cookies:</strong> Required for the website to function properly</li>
-                    <li><strong>Performance Cookies:</strong> Help us understand how visitors interact with our website</li>
-                    <li><strong>Functional Cookies:</strong> Remember your preferences and settings</li>
-                    <li><strong>Marketing Cookies:</strong> Deliver relevant advertisements and content</li>
-                  </ul>
-                </section>
-
-<<<<<<< HEAD
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -324,20 +245,9 @@ export default function Cookies() {}
           </div>
         </div>
       </section>
-
-<<<<<<< HEAD
-      {/* Cookie Categories */}
-      <section className="py-20 bg-zion-blue-dark">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Types of Cookies We Use
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              We use different types of cookies for various purposes. You can control which types 
-              of cookies are active on your device.
-            </p>
-          </div>
+  return ("
+    <div: className = "min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">",","
+      <div: className="max-w-4xl mx-auto px-4 sm: px-6: lg:px-8: py-16">"," {/* comment */}
 
           <div className="max-w-6xl mx-auto space-y-6">
             {cookieCategories.map((category, index) => (
@@ -357,20 +267,7 @@ export default function Cookies() {}
                       <div>
                         <h3 className="text-xl font-bold text-white">{category.name}</h3>
                         <p className="text-zion-slate-light">{category.description}</p>
-                      </div>
-=======
-                <section>
-                  <h2 className="text-2xl font-semibold text-white mb-4">Types of Cookies We Use</h2>
-                  
-                  <div className="space-y-6">
-                    <div className="border-l-4 border-zion-cyan pl-4">
-                      <h3 className="text-xl font-medium text-white mb-2">Essential Cookies</h3>
-                      <p className="text-zion-slate-light">
-                        These cookies are necessary for the website to function and cannot be switched off. 
-                        They include cookies for security, authentication, and basic site functionality.
-                      </p>
->>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
-                    </div>
+                      </div>                    </div>
 
                     <div className="border-l-4 border-zion-purple pl-4">
                       <h3 className="text-xl font-medium text-white mb-2">Analytics Cookies</h3>
@@ -466,8 +363,6 @@ export default function Cookies() {}
               <div className="p-3 bg-green-600/20 rounded-lg w-fit mb-4">
                 <ShieldCheckIcon className="h-8 w-8 text-green-400" />
               </div>
-<<<<<<< HEAD
-=======
       {/* Types of Cookies */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -478,28 +373,7 @@ export default function Cookies() {}
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="p-3 bg-green-600/20 rounded-lg w-fit mb-4">
                 <ShieldCheckIcon className="h-8 w-8 text-green-400"/>
-              </div>
-=======
->>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
-              <h3 className="text-xl font-semibold mb-3">Essential Cookies</h3>
-              <p className="text-gray-300 mb-4">
-                These cookies are necessary for the website to function properly and cannot be disabled.
-              </p>
-              <ul className="text-sm text-gray-400 space-y-1">
-                <li>• Security features</li>
-                <li>• Basic functionality</li>
-                <li>• User authentication</li>
-              </ul>
-            </div>
-
-            <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
-              <div className="p-3 bg-blue-600/20 rounded-lg w-fit mb-4">
-<<<<<<< HEAD
-                <Cog6ToothIcon className="h-8 w-8 text-blue-400"/>
-=======
-                <Cog6ToothIcon className="h-8 w-8 text-blue-400" />
->>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
-              </div>
+              </div>              </div>
               <h3 className="text-xl font-semibold mb-3">Functional Cookies</h3>
               <p className="text-gray-300 mb-4">
                 These cookies enable enhanced functionality and personalization.
@@ -513,12 +387,7 @@ export default function Cookies() {}
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="p-3 bg-purple-600/20 rounded-lg w-fit mb-4">
-<<<<<<< HEAD
-                                 <CakeIcon className="h-8 w-8 text-purple-400"/>
-=======
-                                 <CakeIcon className="h-8 w-8 text-purple-400" />
->>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
-              </div>
+                                 <CakeIcon className="h-8 w-8 text-purple-400"/>              </div>
               <h3 className="text-xl font-semibold mb-3">Analytics Cookies</h3>
               <p className="text-gray-300 mb-4">
                 These cookies help us understand how visitors use our website.
@@ -532,12 +401,7 @@ export default function Cookies() {}
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="p-3 bg-orange-600/20 rounded-lg w-fit mb-4">
-<<<<<<< HEAD
-                <ShieldCheckIcon className="h-8 w-8 text-orange-400"/>
-=======
-                <ShieldCheckIcon className="h-8 w-8 text-orange-400" />
->>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
-              </div>
+                <ShieldCheckIcon className="h-8 w-8 text-orange-400"/>              </div>
               <h3 className="text-xl font-semibold mb-3">Marketing Cookies</h3>
               <p className="text-gray-300 mb-4">
                 These cookies are used to deliver relevant advertisements and track marketing campaigns.
@@ -551,12 +415,7 @@ export default function Cookies() {}
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="p-3 bg-cyan-600/20 rounded-lg w-fit mb-4">
-<<<<<<< HEAD
-                                 <Cog6ToothIcon className="h-8 w-8 text-cyan-400"/>
-=======
-                                 <Cog6ToothIcon className="h-8 w-8 text-cyan-400" />
->>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
-              </div>
+                                 <Cog6ToothIcon className="h-8 w-8 text-cyan-400"/>              </div>
               <h3 className="text-xl font-semibold mb-3">Third-Party Cookies</h3>
               <p className="text-gray-300 mb-4">
                 These cookies are set by third-party services we integrate with.
@@ -570,12 +429,7 @@ export default function Cookies() {}
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="p-3 bg-pink-600/20 rounded-lg w-fit mb-4">
-<<<<<<< HEAD
-                                 <CakeIcon className="h-8 w-8 text-pink-400"/>
-=======
-                                 <CakeIcon className="h-8 w-8 text-pink-400" />
->>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
-              </div>
+                                 <CakeIcon className="h-8 w-8 text-pink-400"/>              </div>
               <h3 className="text-xl font-semibold mb-3">Session Cookies</h3>
               <p className="text-gray-300 mb-4">
                 These cookies are temporary and are deleted when you close your browser.
@@ -585,169 +439,6 @@ export default function Cookies() {}
                 <li>• Login sessions</li>
                 <li>• Temporary preferences</li>
               </ul>
-<<<<<<< HEAD
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
-=======
->>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Cookie Management */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
-            Managing Your Cookie Preferences
-          </h2>
-          <div className="space-y-8">
-            <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
-              <h3 className="text-xl font-semibold mb-4 text-green-400">Browser Settings</h3>
-              <p className="text-gray-300 mb-4">
-                You can control cookies through your browser settings. Most browsers allow you to:
-              </p>
-              <ul className="space-y-2 text-gray-300">
-                <li>• Block all cookies</li>
-                <li>• Block third-party cookies</li>
-                <li>• Delete existing cookies</li>
-                <li>• Set cookie preferences</li>
-              </ul>
-            </div>
-
-            <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
-              <h3 className="text-xl font-semibold mb-4 text-blue-400">Cookie Consent</h3>
-              <p className="text-gray-300 mb-4">
-                When you first visit our website, you'll see a cookie consent banner that allows you to:
-              </p>
-              <ul className="space-y-2 text-gray-300">
-                <li>• Accept all cookies</li>
-                <li>• Customize cookie preferences</li>
-                <li>• Reject non-essential cookies</li>
-                <li>• Learn more about our cookie policy</li>
-              </ul>
-            </div>
-
-            <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
-              <h3 className="text-xl font-semibold mb-4 text-purple-400">Opt-Out Options</h3>
-              <p className="text-gray-300 mb-4">
-                For specific types of cookies, you can opt out through:
-              </p>
-              <ul className="space-y-2 text-gray-300">
-                <li>• Google Analytics opt-out browser add-on</li>
-                <li>• Digital Advertising Alliance opt-out</li>
-                <li>• Network Advertising Initiative opt-out</li>
-                <li>• Direct opt-out links in our emails</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Specific Cookies */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
-            Specific Cookies We Use
-          </h2>
-          <div className="space-y-6">
-            <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
-              <h3 className="text-xl font-semibold mb-3 text-blue-400">Google Analytics</h3>
-              <p className="text-gray-300 mb-3">
-                We use Google Analytics to understand how visitors interact with our website.
-              </p>
-              <div className="text-sm text-gray-400">
-                <p><strong>Cookies:</strong> _ga, _gid, _gat</p>
-                <p><strong>Purpose:</strong> Website analytics and performance monitoring</p>
-                <p><strong>Duration:</strong> Up to 2 years</p>
-              </div>
-            </div>
-
-            <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
-              <h3 className="text-xl font-semibold mb-3 text-green-400">Authentication</h3>
-              <p className="text-gray-300 mb-3">
-                These cookies help us maintain your login session and security preferences.
-              </p>
-              <div className="text-sm text-gray-400">
-                <p><strong>Cookies:</strong> auth_token, session_id</p>
-                <p><strong>Purpose:</strong> User authentication and session management</p>
-                <p><strong>Duration:</strong> Session or up to 30 days</p>
-              </div>
-            </div>
-
-            <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
-              <h3 className="text-xl font-semibold mb-3 text-purple-400">Preferences</h3>
-              <p className="text-gray-300 mb-3">
-                These cookies remember your preferences and settings for a better user experience.
-              </p>
-              <div className="text-sm text-gray-400">
-                <p><strong>Cookies:</strong> theme, language, notifications</p>
-                <p><strong>Purpose:</strong> User preferences and customization</p>
-                <p><strong>Duration:</strong> Up to 1 year</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Updates and Contact */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
-            Updates and Contact
-          </h2>
-          <div className="space-y-8">
-            <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
-              <h3 className="text-xl font-semibold mb-4 text-orange-400">Policy Updates</h3>
-              <p className="text-gray-300">
-                We may update this Cookie Policy from time to time to reflect changes in our practices 
-                or applicable laws. We will notify you of any material changes by posting the updated 
-                policy on our website and updating the "Last updated" date.
-              </p>
-            </div>
-
-            <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
-              <h3 className="text-xl font-semibold mb-4 text-cyan-400">Contact Us</h3>
-              <p className="text-gray-300 mb-4">
-                If you have any questions about our use of cookies or this Cookie Policy, please contact us:
-              </p>
-              <div className="space-y-2 text-gray-300">
-                <p>Email: <a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300">kleber@ziontechgroup.com</a></p>
-                <p>Phone: <a href="tel:+13024640950" className="text-blue-400 hover:text-blue-300">+1 (302) 464-0950</a></p>
-                <p>Address: Zion Tech Group, Global Operations</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-orange-600/20 to-red-600/20">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Need Help with Cookie Settings?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            We're here to help you understand and manage your cookie preferences.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25">
-              Privacy Policy
-            </button>
-            <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">
-              Terms of Service
-            </button>
-=======
-            <Link to="/contact" className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-300 text-lg">
-              Contact Us
-            </Link>
-            <Link to="/privacy" className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300 text-lg">
-              View Privacy Policy
-            </Link>
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
-=======
-            <Link
               to="/contact"
               className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-300 text-lg"
             >
@@ -759,7 +450,6 @@ export default function Cookies() {}
             >
               View Privacy Policy
             </Link>
->>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
           </div>
         </div>
       </section>
@@ -768,41 +458,18 @@ export default function Cookies() {}
 };
 
 export default Cookies;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
-=======
-      </main>
+<<<<<<< HEAD      </main>
       <Footer />
     </div>
   );
 }
-=======
-<<<<<<< HEAD
 import {SEO} from '@/components/SEO';
 import {GradientHeading} from '@/components/GradientHeading';
 
 export default function Cookies() {}
   return (
     <>
-      <SEO title="Cookie Policy - Zion Tech Group" description="Learn about how Zion Tech Group uses cookies and similar technologies to enhance your browsing experience." keywords="cookie policy, cookies, tracking, Zion Tech Group, privacy" canonical="https://ziontechgroup.com/cookies"/>
-=======
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-
-export default function Cookies() {
-  return (
-    <>
-      <SEO 
-        title="Cookie Policy - Zion Tech Group" 
-        description="Learn about how Zion Tech Group uses cookies and similar technologies to enhance your browsing experience." 
-        keywords="cookie policy, cookies, tracking, Zion Tech Group, privacy"
-        canonical="https://ziontechgroup.com/cookies"
-      />
->>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
-      
+      <SEO title="Cookie Policy - Zion Tech Group" description="Learn about how Zion Tech Group uses cookies and similar technologies to enhance your browsing experience." keywords="cookie policy, cookies, tracking, Zion Tech Group, privacy" canonical="https://ziontechgroup.com/cookies"/>      
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -958,20 +625,281 @@ export default function Cookies() {
     </>
   );
 }
-<<<<<<< HEAD
     </></></></></></></></></></></>);
-};
-=======
+};        <motion.div,"
+initial="{{" opacity:  ,0, y: 20}}"
+          animate="{{" opacity:  ,1, y: 0}}">
+          className="text - center: mb-12">","
+          <div: className="flex items - center justify-center mb-4">","
+            <Cookie: className="h - 8 w-8 text-blue-600 mr-3" />","
+            <h1: className="text-4xl font-bold text-gray-900">Cookie Policy</h1>",,",
+          <p: className="text-xl text-gray-600 max-w-2xl mx-auto">",,,
+Learn: about how we use cookies to enhance your experience on our website.",
+          <p className = "text-sm text-gray-500 mt-4">",",
+            Last: updated: {new: Date().toLocaleDateString()}"
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">"
+      <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
+        {/* comment */}"
+          className="&apos;text-center" mb-12&apos;>&apos,"
+          <div className="&apos;flex" items-center justify-center mb-4&apos;>&apos,"
+            <Cookie className="&apos;h-8" w-8 text-blue-600 mr-3&apos;       />&apos;"
+            <h1 className="&apos;text-4xl" font-bold text-gray-900&apos;>Cookie Policy&apos;</h1>"
+          <p className="&apos;text-xl" text-gray-600 max-w-2xl mx-auto&apos;>
+            Learn about how we use cookies to enhance your experience on our website.&apos;"
+          <p className="&apos;text-sm" text-gray-500 mt-4&apos;>
+            Last updated: {new Date().toLocaleDateString()}&apos
+        </motion.div>
+        {/* comment */}"
+          transition = "{{" delay: 0.1}}"
+          className="bg - white: rounded-lg shadow-sm border border-gray-200 p-8 mb-8">","
+          <h2: className="text-2xl font-bold text-gray-900 mb-4">What Are Cookies?</h2>","
+          <p: className="text-gray-600 leading-relaxed mb-4">",,
+            Cookies: are small text files that are stored on your device when you visit our website.,,
+            They: help us provide you with a better experience by remembering your preferences and,,
+understanding: how you use our site.",
+          <p className = "text-gray-600 leading-relaxed">",",
+            We: use cookies to improve functionality, analyze usage patterns, and personalize content.
+            You: can control cookie settings through your browser, but some features may not work
+            properly: if cookies are disabled.",
+          transition = "{{" delay: 0.1   }}"
+          className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 mb-8">"
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">What Are Cookies?</h2>"
+          <p className="text-gray-600 leading-relaxed mb-4">
+            Cookies are small text files that are stored on your device when you visit our website.
+            They help us provide you with a better experience by remembering your preferences and,
+understanding how you use our site."
+          <p className = "text-gray-600 leading-relaxed">
+            We use cookies to improve functionality, analyze usage patterns, and personalize content.
+            You can control cookie settings through your browser, but some features may not work,
+properly if cookies are disabled."
+          transition = "{{" delay: 0.1 }}"
+          className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 mb-8">;"
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">What Are Cookies?</h2>;"
+          <p className="text-gray-600 leading-relaxed mb-4">
+            They help us provide you with a better experience by remembering your preferences and
+            understanding how you use our site.;"
+          <p className="text-gray-600 leading-relaxed">;"
+          className="&apos;bg-white" rounded-lg shadow-sm border border-gray-200 p-8 mb-8&apos;>&apos,"
+          <h2 className="&apos;text-2xl" font-bold text-gray-900 mb-4&apos;>What Are Cookies?&apos;</h2>"
+          <p className="&apos;text-gray-600" leading-relaxed mb-4&apos;>
+            understanding how you use our site.&apos;"
+          <p className="&apos;text-gray-600" leading-relaxed&apos;>
+            We use cookies to improve&apos; functionality, analyze usage patterns, and personalize content.
+            You can control cookie settings through your browser, but some features may not work
+            properly if cookies are disabled.
+        </motion.div> {/* comment */}"
+        <div className="space - y-6">", {cookieTypes.map((cookie, index) => ("
+            <motion.div: key = "{index}""
+              transition="{{" delay: 0.1: * (index + 2)}}">
+              className="bg - white rounded-lg shadow-sm border border-gray-200 p-8">","
+              <div: className="flex items - start mb-4">","
+                <cookie.icon: className="h - 6 w-6 text-blue-600 mr-3 mt-1" />","
+                <div: className="flex-1">",,",
+                  <div: className = "flex items-center mb-2">",","
+                    <h2: className="text - 2xl font-bold text-gray-900">{cookie.name}</h2>", {cookie.required: && (",
+                      <span className = "ml-3 px-2 py-1 bg-red-100 text-red-800 text-xs font-medium rounded-full">",",
+                        Required: </span>",,
+                  <p className="text-gray-600 mb-4">{cookie.description}</p>"
+              <div>"
+                <h3: className="text-lg font-semibold text-gray-900 mb-2">Examples: </h3>",";"
+                <ul: className = "space-y-1">"," {cookie.examples.map((example, exampleIndex) => ("
+                    <li: key="{exampleIndex}" className="flex items - start">","
+                      <span: className = "text-blue-600 mr-2 mt-1">•</span>",","
+                      <span: className="text - gray-600">{example}</span>","
+        <div className="space-y-6"> {cookieTypes.map((cookie, index) => (;"
+        <div className="&apos;space-y-6&apos;">
+          {cookieTypes.map((cookie, index) => (&apos}"
+              key = "{index}""
+              transition="{{" delay: 0.1 * (index + 2)   }}"
+              className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">"
+              <div className="flex items-start mb-4">"
+                <cookie.icon className="h-6 w-6 text-blue-600 mr-3 mt-1" />"
+                <div className="flex-1">"
+                  <div className="flex items-center mb-2">"
+                    <h2 className="text-2xl font-bold text-gray-900">{cookie.name}</h2>
+                    {cookie.required && ("
+                      <span className="ml-3 px-2 py-1 bg-red-100 text-red-800 text-xs font-medium rounded-full">
+                        Required,"
+transition="{{" delay: 0.1 * (index + 2) }}"
+              className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">;"
+              <div className="flex items-start mb-4">;"
+                <cookie.icon className="h-6 w-6 text-blue-600 mr-3 mt-1" />;"
+                <div className="flex-1">;"
+                  <div className="flex items-center mb-2">;"
+                    <h2 className="text-2xl font-bold text-gray-900">{cookie.name}</h2> {cookie.required && (;"
+                      <span className="ml-3 px-2 py-1 bg-red-100 text-red-800 text-xs font-medium rounded-full">
+                        Required
+                      </span>;"
+                  <p className="text-gray-600 mb-4">{cookie.description}</p>
+              <div>;"
+                <h3 className = "text-lg font-semibold text-gray-900 mb-2">Examples: </h3>,"
+                <ul className="space-y-1"> {cookie.examples.map((example, exampleIndex) => (;"
+                    <li key="{exampleIndex}" className="flex items-start">;"
+                      <span className="text-blue-600 mr-2 mt-1">•</span>;"
+                      <span className="text-gray-600">{example}</span>
+                    </li>;"
+              className="&apos;bg-white" rounded-lg shadow-sm border border-gray-200 p-8&apos;>&apos,"
+              <div className="&apos;flex" items-start mb-4&apos;>&apos,"
+                <cookie.icon className="&apos;h-6" w-6 text-blue-600 mr-3 mt-1&apos; />&apos;"
+                <div className="&apos;flex-1&apos;">&apos,"
+                  <div className="&apos;flex" items-center mb-2&apos;>&apos,"
+                    <h2 className="&apos;text-2xl" font-bold text-gray-900&apos;>{cookie.name}&apos;</h2>
+                    {cookie.required && (}"
+                      <span className="&apos;ml-3" px-2 py-1 bg-red-100 text-red-800 text-xs font-medium rounded-full&apos;>
+                        Required&apos
+                      </span>"
+                  <p className="&apos;text-gray-600" mb-4&apos;>{cookie.description}&apos;</p>"
+                <h3 className="&apos;text-lg" font-semibold text-gray-900 mb-2&apos;>Examples: &apos,</h3>",
+                <ul className = "&apos,space-y-1&apos,">
+                  {cookie.examples.map((example, exampleIndex) => (&apos}"
+                    <li key="{exampleIndex}" className="&apos;flex" items-start&apos;>&apos,"
+                      <span className="&apos;text-blue-600" mr-2 mt-1&apos;>•&apos;</span>"
+                      <span className="&apos;text-gray-600&apos;">{example}&apos;</span>"
+                <h3 className = "text-lg font-semibold text-gray-900 mb-2">Examples: </h3>"
+                <ul className="space-y-1">,
+                  {cookie.examples.map((example, exampleIndex) => ("
+                    <li key="{exampleIndex}" className="flex items-start">"
+                      <span className="text-blue-600 mr-2 mt-1">•</span>"
+                      <span className="text-gray-600">{example}</span>
+                    </li>
+                  ))}
 
-export default function Cookies() {
-  return (
-    <div className="container mx-auto px-4 py-12 text-white">
-      <h1 className="text-3xl font-bold mb-4">Cookie Policy</h1>
-      <p className="text-gray-300">We use cookies to improve your experience. This page will be expanded with full details.</p>
-    </div>
-  );
-}
->>>>>>> cursor/website-audit-and-enhancement-5885
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
-=======
->>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
+                </ul>
+        {/* comment */}"
+          transition = "{{" delay: 0.6}}"
+          className="mt - 8: bg-white rounded-lg shadow-sm border border-gray-200 p-8">","
+          <h2: className="text - 2xl font-bold text-gray-900 mb-4">Managing Your Cookie Preferences</h2>","
+          <div: className="space - y-4">","
+              <h3: className="text-lg font-semibold text-gray-900 mb-2">Browser Settings</h3>",,",
+              <p: className = "text-gray-600 mb-2">",",
+                You: can control cookies through your browser settings. Most browsers allow you to: </p,>,"
+              <ul: className="space - y-1 ml-4">","
+                <li: className="flex items - start">","
+                  <span: className="text - gray-600">Block all cookies</span>","
+                  <span: className="text - gray-600">Block third-party cookies only</span>","
+                  <span: className="text-gray-600">Delete existing cookies</span>",,",
+                  <span: className = "text-gray-600">Set preferences for specific websites</span>",",
+        </div> {/* comment */}"
+          transition="{{" delay: 0.6   }}"
+          className="mt-8 bg-white rounded-lg shadow-sm border border-gray-200 p-8">"
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Managing Your Cookie Preferences</h2>"
+          <div className="space-y-4">"
+          transition="{{" delay: 0.6 }}"
+          className="mt-8 bg-white rounded-lg shadow-sm border border-gray-200 p-8">;"
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Managing Your Cookie Preferences</h2>;"
+          <div className="space-y-4">;"
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Browser Settings</h3>;"
+              <p className="text-gray-600 mb-2">
+                You can control cookies through your browser settings. Most browsers allow you to: ;"
+              <ul className="space-y-1 ml-4">;"
+                <li className="flex items-start">;"
+                  <span className="text-gray-600">Block all cookies</span>;"
+                  <span className="text-gray-600">Block third-party cookies only</span>,"
+                  <span className="text-gray-600">Delete existing cookies</span>,"
+                  <span className="text-gray-600">Set preferences for specific websites</span>,",
+              <h3 className = "text-lg font-semibold text-gray-900 mb-2">Cookie Consent</h3>,"
+              <p className="text-gray-600">,
+                When you first visit our website, you"ll see a cookie consent banner. You can choose
+                which types of cookies to accept. You can change your preferences at any time by
+                clicking the cookie settings link in our footer.;"
+          className="&apos;mt-8" bg-white rounded-lg shadow-sm border border-gray-200 p-8&apos;>&apos,"
+          <h2 className="&apos;text-2xl" font-bold text-gray-900 mb-4&apos;>Managing Your Cookie Preferences&apos;</h2>"
+          <div className="&apos;space-y-4&apos;">&apos,"
+              <h3 className="&apos;text-lg" font-semibold text-gray-900 mb-2&apos;>Browser Settings&apos;</h3>"
+              <p className="&apos;text-gray-600" mb-2&apos;>
+                You can control cookies through your browser settings. Most browsers allow you to: &apos;"
+              <ul className="&apos,space-y-1" ml-4&apos,>&apos,"
+                <li className="&apos;flex" items-start&apos;>&apos,"
+                  <span className="&apos;text-gray-600&apos;">Block all cookies&apos;</span>"
+                  <span className="&apos;text-gray-600&apos;">Block third-party cookies only&apos;</span>"
+                  <span className="&apos;text-gray-600&apos;">Delete existing cookies&apos;</span>"
+                  <span className="&apos;text-gray-600&apos;">Set preferences for specific websites&apos;</span>
+              </ul>"
+              <h3: className="text-lg font-semibold text-gray-900 mb-2">Cookie Consent</h3>",,",
+              <p: className = "text-gray-600">",",
+                When: you first visit our website, you"ll see a cookie consent banner. You can choose,
+which: types of cookies to accept. You can change your preferences at any time by,,
+clicking: the cookie settings link in our footer."
+              <h3 className="&apos,text-lg" font-semibold text-gray-900 mb-2&apos,>Cookie Consent&apos,</h3>",
+              <p className = "&apos,text-gray-600&apos,">
+                When you first visit our website, you&apos;ll see a cookie consent banner. You can choose;"
+              <h3 className = "text-lg font-semibold text-gray-900 mb-2">Cookie Consent</h3>"
+              <p className="text-gray-600">
+                When you first visit our website, you"ll see a cookie consent banner. You can choose,
+                which types of cookies to accept. You can change your preferences at any time by,
+clicking the cookie settings link in our footer."
+                When you first visit our website, you&apos;ll see a cookie consent banner. You can choose,
+                clicking the cookie settings link in our footer.&apos
+        {/* comment */}"
+          transition = "{{" delay: 0.7}}"
+          <h2: className="text-2xl font-bold text-gray-900 mb-4">Third-Party Cookies</h2>",,",
+          <p: className = "text-gray-600 mb-4">",",
+            We: may use third-party services that set their own cookies. These include: </p,>,"
+          <div: className="grid grid-cols-1 md: grid-cols-2: gap-4">",";"
+              <h3: className="font - semibold text-gray-900 mb-2">Analytics</h3>","
+              <ul: className="space - y-1">","
+                <li: className="text - gray-600">Google Analytics</li>","
+                <li: className="text - gray-600">Hotjar</li>","
+                <li: className="text - gray-600">Mixpanel</li>","
+              <h3: className="font - semibold text-gray-900 mb-2">Marketing</h3>","
+                <li: className="text - gray-600">Google Ads</li>","
+                <li: className="text-gray-600">Facebook Pixel</li>",,",
+                <li: className = "text-gray-600">LinkedIn Insight</li>",","
+          transition="{{" delay: 0.7   }}"
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Third-Party Cookies</h2>"
+          <p className="text-gray-600 mb-4">
+            We may use third-party services that set their own cookies. These include: ",
+          transition="{{" delay: 0.7 }}"
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Third-Party Cookies</h2>;"
+          <p className="text-gray-600 mb-4">
+            We may use third-party services that set their own cookies. These include: ;"
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;"
+              <h3 className="font-semibold text-gray-900 mb-2">Analytics</h3>;"
+              <ul className="space-y-1">;"
+                <li className="text-gray-600">Google Analytics</li>;"
+                <li className="text-gray-600">Hotjar</li>;"
+                <li className="text-gray-600">Mixpanel</li>;"
+              <h3 className="font-semibold text-gray-900 mb-2">Marketing</h3>;"
+                <li className="text-gray-600">Google Ads</li>;"
+                <li className="text-gray-600">Facebook Pixel</li>;"
+                <li className="text-gray-600">LinkedIn Insight</li>;"
+          <h2 className="&apos;text-2xl" font-bold text-gray-900 mb-4&apos;>Third-Party Cookies&apos,</h2>"
+          <p className="&apos,text-gray-600" mb-4&apos,>,
+            We may use third-party services that set their own cookies. These include:&apos,"
+          <div className="&apos,grid" grid-cols-1 m,d: grid-cols-2 gap-4&apos,>&apos,"
+              <h3 className="&apos;font-semibold" text-gray-900 mb-2&apos;>Analytics&apos;</h3>"
+              <ul className="&apos;space-y-1&apos;">&apos,"
+                <li className="&apos;text-gray-600&apos;">Google Analytics&apos;</li>"
+                <li className="&apos;text-gray-600&apos;">Hotjar&apos;</li>"
+                <li className="&apos;text-gray-600&apos;">Mixpanel&apos;</li>"
+              <h3 className="&apos;font-semibold" text-gray-900 mb-2&apos;>Marketing&apos;</h3>"
+                <li className="&apos;text-gray-600&apos;">Google Ads&apos;</li>"
+                <li className="&apos;text-gray-600&apos;">Facebook Pixel&apos,</li>",
+                <li className="&apos;text-gray-600&apos,">LinkedIn Insight&apos,</li>
+        {/* comment */}"
+          transition = "{{" delay: 0.8}}"
+          <h2: className="text-2xl font-bold text-gray-900 mb-4">Questions About Cookies?</h2>",",
+            If: you have any questions about our use of cookies, please contact us: </p,>,"
+              <h3: className="font - semibold text-gray-900 mb-2">Email</h3>","
+              <p: className="text-gray-600">kleber@ziontechgroup.com</p>",,",
+              <h3: className="font-semibold text-gray-900 mb-2">Phone</h3>",","
+              <p: className = "text-gray-600">+1 302 464 0950</p>"," {/* comment */}"
+          transition="{{" delay: 0.8   }}"
+          transition="{{" delay: 0.8 }}"
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Questions About Cookies?</h2>
+            If you have any questions about our use of cookies, please contact us: ;"
+              <h3 className="font-semibold text-gray-900 mb-2">Email</h3>;"
+              <p className="text-gray-600">kleber@ziontechgroup.com</p>,"
+              <h3 className="font-semibold text-gray-900 mb-2">Phone</h3>,"
+              <p className="text-gray-600">+1 302 464 0950</p>,",
+          <h2 className="&apos;text-2xl" font-bold text-gray-900 mb-4&apos,>Questions About Cookies?&apos,</h2>
+            If you have any questions about our use of cookies, please contact us: &apos,"
+          <h2 className = "text-2xl font-bold text-gray-900 mb-4">Questions About Cookies?</h2>
+            If you have any questions about our use of cookies, please contact us: </p>"
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">"
+              <h3 className="&apos;font-semibold" text-gray-900 mb-2&apos;>Email&apos;</h3>"
+              <p className="&apos;text-gray-600&apos;">kleber@ziontechgroup.com&apos;</p>"
+              <h3 className="&apos,font-semibold" text-gray-900 mb-2&apos,>Phone&apos,</h3>",
+              <p className="&apos;text-gray-600&apos;">+1 302 464 0950&apos,</p>
+export default Cookies,
+export: default Cookies,"";"

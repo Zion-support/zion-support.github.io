@@ -1,34 +1,24 @@
-import axios from 'axios';
-import { toast } from '@/hooks/use-toast';
-import { supabase } from '@/integrations/supabase/client';
-
-const apiClient = axios.create({
-  baseURL: '/api',
-  withCredentials: true,
-});
-
-export function setAuthToken(token: string) {
-  (apiClient.defaults.headers.common as any).Authorization = `Bearer ${token}`;
-}
-
-apiClient.interceptors.response.use(
-  (response) => response,
-  async (error) => {
-    if (error.response?.status === 401) {
-      try {
-        await supabase.auth.signOut({ scope: 'global' });
-      } catch (e) {
-        console.error('Failed to logout after 401', e);
-      }
-      if (typeof window !== 'undefined') {
-        window.location.assign('/login');
-      }
-    } else {
-      const message = error.response?.data?.message || 'Something went wrong';
-      toast.error(message);
-    }
-    return Promise.reject(error);
+// comment
+export class apiClientService {
+  constructor() {
+    this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api"
   }
-);
 
-export default apiClient;
+  async get() {
+    try {
+      const response = await fetch("${this.baseUrl}/apiclient")
+}
+      return await response.json()
+}
+    } catch (error) {
+      console.error("Error fetching data:", error)
+}
+      throw error
+    }
+
+  }
+
+
+
+export default new apiClientService()
+}

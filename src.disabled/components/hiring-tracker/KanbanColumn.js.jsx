@@ -1,0 +1,1 @@
+import { Droppable  } from "@hello-pangea/dnd";";""" export function KanbanColumn({ id, title, description, applications, count }) {;"

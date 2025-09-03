@@ -1,18 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { SEO } from '../../components/SEO';
 import { Server, Network, Database, Shield, Zap, Monitor, Wifi, Cloud } from 'lucide-react';
-=======
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
->>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
-
 const ITInfrastructure: React.FC = () => {
   const infrastructureServices = [
     {
@@ -63,8 +52,6 @@ const ITInfrastructure: React.FC = () => {
         keywords="IT infrastructure, server management, network design, data centers, infrastructure security"
         canonical="https://ziontechgroup.com/services/infrastructure"
       />
-<<<<<<< HEAD
-=======
       title: "Network Infrastructure",
       description: "Design, implement, and maintain robust network solutions",
       features: ["Network Design", "Wireless Solutions", "VPN Implementation", "Network Security"],
@@ -104,7 +91,6 @@ const ITInfrastructure: React.FC = () => {
         <meta property="og:url" content="https://ziontechgroup.com/services/it-infrastructure"/>
         <link rel="canonical" href="https://ziontechgroup.com/services/it-infrastructure"/>
       </Helmet>
->>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
         {/* Hero Section */}

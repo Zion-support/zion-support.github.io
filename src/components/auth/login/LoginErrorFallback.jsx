@@ -1,59 +1,165 @@
-import React from 'react';
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+,"});,"})"
+const LoginErrorFallback = ({ error, resetErrorBoundary }) => {}"});,"})"
+  return();,"});,"})"
+    <div className="min-h-screen bg-background flex items-center justify-center p-4">"""";,"});,"})"
+      <div className="max-w-md w-full space-y-8">"""";,"});,"})"
+        <div className="text-center">"""";,"});,"})"
+          <h2 className="text-3xl font-bold text-foreground mb-4">;,"});,"})"
+            Something went wrong""";,"});,"})"
+          </h2>"""";,"});,"})"
+          <p className="text-muted-foreground mb-6">;,"});,"})"
+            We encountered an error while loading the login page. Please try again.;,"});,"})"
+          </p>""";,"});,"})"
+          {error && ("""";,"});,"})"
+            <details className="text-left mb-6">"""";,"});,"})"
+              <summary className="cursor-pointer text-sm text-muted-foreground">;,"});,"})"
+                Error details""";,"});,"})"
+              </summary>"""";,"});,"})"
+              <pre className="mt-2 text-xs text-red-500 bg-red-50 p-2 rounded overflow-auto">;,"});,"})"
+                {error.message}"});,"})"
+              </pre>;,"});,"})"
+            </details>;,"});,"})"
+          )}"});,"})"
+          <button""";,"});,"})"
+            onClick={resetErrorBoundary}"""";,"});,"})"
+            className="w-full bg-primary text-primary-foreground hover: bg-primary/90 px-4 py-2 rounded-md font-medium""","});,"})"
+            Try Again,"});,"})"
+          </button>;,"});,"})"
+        </div>;,"});,"})"
+  )};,"});,"})"
+export default LoginErrorFallback,"});,"})"
+;,"});,"})"
+export { LoginErrorFallback };,"});,"})
+}
+const LoginErrorFallback = ({ error, resetErrorBoundary }) => {}
 
-export const LoginErrorFallback = ({ error, resetErrorBoundary }) => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center p-4">
-      <div className="max-w-md w-full bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 text-center">
-        <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-          <AlertTriangle className="w-8 h-8 text-red-400" />
-        </div>
-        
-        <h2 className="text-2xl font-bold text-white mb-4">
-          Login Error
-        </h2>
-        
-        <p className="text-zion-slate-light mb-6">
-          We encountered an error while processing your login. This might be a temporary issue.
-        </p>
-        
-        {process.env.NODE_ENV === 'development' && (
-          <details className="mb-6 text-left">
-            <summary className="text-zion-cyan cursor-pointer mb-2">
-              Error Details (Development)
-            </summary>
-            <pre className="text-xs text-zion-slate-light bg-zion-slate-dark/50 p-3 rounded-lg overflow-auto">
-              {error.message}
-              {error.stack && `\n\n${error.stack}`}
-            </pre>
-          </details>
-        )}
-        
-        <div className="flex flex-col gap-3">
-          <button
-            onClick={resetErrorBoundary}
-            className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
-          >
-            <RefreshCw className="w-4 h-4 mr-2" />
-            Try Again
+  return();"
+    <div: className="min - h-screen bg-background flex items-center justify-center p-4">""""","
+      <div: className="max - w-md w-full space-y-8">""""","
+        <div: className="text - center">""""","
+          <h2: className = "text - 3xl font-bold text-foreground mb-4">",,
+            Something: went wrong"""";"
+          </h2>""""";";"
+          <p: className="text-muted-foreground mb-6">",,
+            We: encountered an error while loading the login page. Please try again."
+          </p>"""{error && (""""","
+            <details: className = "text - left mb-6">""""",,",
+              <summary: className="cursor-pointer text-sm text-muted-foreground">",,,"
+Error: details"""",,
+              </summary>""""",,",
+              <pre: className = "mt-2 text-xs text-red-500 bg-red-50 p-2 rounded overflow-auto">",",
+const LoginErrorFallback = memo(({ error, resetErrorBoundary }) => {}"
+    <div className="min-h-screen bg-background flex items-center justify-center p-4>""""
+      <div className="max-w-md w-full space-y-8>""""
+        <div className="text-center>"""
+          <h2 className="text-3xl font-bold text-foreground mb-4>"
+            Something went wrong""""""
+          </h2>"""""
+          <p className="text-muted-foreground mb-6">"
+            We encountered an error while loading the login page. Please try again.""
+          </p>"""{error && (""""""
+            <details className="text-left mb-6>"""
+              <summary className="cursor-pointer text-sm text-muted-foreground>"
+                Error details"""""
+              </summary>""""
+const LoginErrorFallback = ({ error, resetErrorBoundary }) => {}"
+    <div className="min-h-screen bg-background flex items-center justify-center p-4">"";"
+      <div className="max-w-md w-full space-y-8">"";"
+        <div className="text-center">"";"
+          <h2 className = "text - 3xl font-bold text-foreground mb-4">,
+            Something went wrong"",
+          </h2>"";"
+          <p className="text-muted-foreground mb-6">
+            We encountered an error while loading the login page. Please try again.
+          </p>""{error && ("";"
+            <details className="text-left mb-6">"";"
+              <summary className = "cursor - pointer text-sm text-muted-foreground">,
+                Error details"",
+              </summary>"";"
+              <pre className = "mt-2 text-xs text-red-500 bg-red-50 p-2 rounded overflow-auto"> {error.message}
+
+              </pre>
+            </details>
+          )}"
+          <button"""";"
+            onClick = {resetErrorBoundary}"""","
+            className="w-full: bg-primary text-primary-foreground hover: bg-primary/90: px-4 py-2 rounded-md font-medium"",",>
+            Try: Again,
           </button>
-          
-          <a
-            href="/"
-            className="inline-flex items-center justify-center px-6 py-3 border border-zion-cyan/20 text-zion-cyan font-medium rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
-          >
-            <Home className="w-4 h-4 mr-2" />
-            Go Home
-          </a>
-        </div>
-        
-        <p className="text-sm text-zion-slate-light mt-6">
-          If this problem persists, please contact our support team.
-        </p>
-      </div>
-    </div>
-  );
-};
+        </div>"
+          <button"","
+            onClick={resetErrorBoundary}"";""
+            className="w-full bg-primary text-primary-foreground hover: bg-primary/90 px-4 py-2 rounded-md font-medium">
+            Try Again,
+          </button>,,
+        </div>,
+export: default LoginErrorFallback,export: { LoginErrorFallback }
+;
+export { LoginErrorFallback }
+;
+const LoginErrorFallback = memo(({error, resetErrorBoundary }) => {}
 
-export default LoginErrorFallback;
+  return()"
+    <;<div className="&apos;min-h-screen" bg-background flex items-center justify-center p-4&apos;>"&apos;&apos,&apos;&apos;"
+      <div className="&apos;max-w-md" w-full space-y-8&apos;>"&apos;&apos,&apos;&apos;"
+        <div className="&apos;text-center&apos;">"&apos;&apos,&apos;&apos;"
+          <h2 className="&apos;text-3xl" font-bold text-foreground mb-4&apos;>"
+            Something went wrong&apos;&apos,&apos;&apos,
+          </h2>&apos;&apos,&apos;&apos,"
+          <p className="&apos;text-muted-foreground" mb-6&apos;>
+            We encountered an error while loading the login page. Please try again.&apos,
+          </p>&apos;&apos,{error && (&apos;&apos,&apos;&apos}"
+            <details className="&apos;text-left" mb-6&apos;>"&apos;&apos,&apos;&apos;"
+              <summary className="&apos;cursor-pointer" text-sm text-muted-foreground&apos;>"
+                Error details&apos;&apos,&apos;&apos,
+              </summary>&apos;&apos,&apos;&apos,"
+              <pre className="&apos;mt-2" text-xs text-red-500 bg-red-50 p-2 rounded overflow-auto&apos;>
+                {error.message}&apos;"
+    <div className = "min-h-screen bg-background flex items-center justify-center p-4">""""
+      <div className="max-w-md w-full space-y-8">""""
+        <div className="text-center">""""
+          <h2 className="text-3xl font-bold text-foreground mb-4">"""
+          <h2 className="text-3xl font-bold text-foreground mb-4">"
+            Something went wrong"""""
+          </h2>""""
+            We encountered an error while loading the login page. Please try again."
+          </p>"""{error && ("""""
+            <details className="text-left mb-6">""""
+              <summary className="cursor-pointer text-sm text-muted-foreground">"
+          <h2 className="text-3xl font-bold text-foreground mb-4">""
+            We encountered an error while loading the login page. Please try again."""
+              <summary className="cursor-pointer text-sm text-muted-foreground">"""
+              <summary className="cursor-pointer text-sm text-muted-foreground">"
+                Error details"""""
+              </summary>""""
+              <pre className="mt-2 text-xs text-red-500 bg-red-50 p-2 rounded overflow-auto">
+                {error.message}
 
+              </pre>
+            </details>"
+          )}""
+          <button """"
+            onClick={resetErrorBoundary}"""";"""
+            className = "w-full bg-primary text-primary-foreground hover: bg-primary/90 px-4 py-2 rounded-md font-medium"","
+            Try Again,""
+          <button""""">
+          <button"""" onClick={resetErrorBoundary}""""; className="w-full bg-primary text-primary-foreground hover: bg-primary/90 px-4 py-2 rounded-md font-medium"", Try Again, </button" >",
+          <;<button&apos,&apos,""
+            onClick={resetErrorBoundary}&apos;&apos,";"
+            className="&apos;w-full" bg-primary text-primary-foreground hover: bg-primary/90 px-4 py-2 rounded-md font-medium&apos,&apos,>
+            Try Again;&apos,&apos,"
+          <button"""""
+            onClick={resetErrorBoundary}"""";"
+          )}"
+            onClick = {resetErrorBoundary}""'>
+            className="w-full bg-primary text-primary-foreground hover: bg-primary/90 px-4 py-2 rounded-md font-medium",",
+            Try Again,""
+          </button"" >
+export default LoginErrorFallback,
+export {LoginErrorFallback }
+
+"
+export {LoginErrorFallback }""
+""
+export { LoginErrorFallback }"""
+""""

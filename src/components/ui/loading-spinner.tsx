@@ -1,43 +1,189 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { cn } from '@/lib/utils';
-export function LoadingSpinner({ size = 'md', variant = 'default', className = '', text }) {
-    const sizeClasses = {
-        sm: 'w-4 h-4',
-        md: 'w-6 h-6',
-        lg: 'w-8 h-8',
-        xl: 'w-12 h-12'
-    };
-    const variantClasses = {
-        default: 'text-zion-cyan',
-        primary: 'text-zion-blue',
-        secondary: 'text-zion-purple',
-        white: 'text-white'
-    };
-    return (<div className={cn("flex flex-col items-center gap-3", className)}>
-      <motion.div className={cn('animate-spin rounded-full border-2 border-current border-t-transparent', sizeClasses[size], variantClasses[variant])} role="status" aria-label="Loading">
+import React from "react"
+interface LoadingSpinnerProps {"
+  size?: "sm" | "md" | "lg  className?: string}
+;
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ ",;
+  size = "md", ;
+  className = "" ;,
+}) => {;
+  const sizeClasses = {;
+    sm: "w-4 h-4",;
+    md: "w-8 h-8",;
+    lg: "w-12 h-12"}
+  return (;
+    <div className = "{`flex" items-center justify-center ${className}`}>";
+      <div className="{`${sizeClasses[size]}" border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin`}";
+        role="status";
+        ;
+      >";
+        <span className="sr-only">Loading...</span>;
+      </div>;
+  )};";
+,"});,"})";
+;,"});,"})";
+interface LoadingSpinnerProps {,"});,"})";
+  size?: "sm" | "md" | "lg";,"});,"})";
+  className?: string,"});,"});";,
+}"});,"})";
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({,"});,"})";
+  size = "md",,"});,"})";
+  className = "";,"});,"});";,
+}) => {,"});,"})";
+  const sizeClasses = { sm: "w-4 h-4","});,"})";
+    md: "w-8 h-8","});,"})";
+    lg: "w-12 h-12","});,"});";,
+};,"});,`});
+  return (";
+    <div className="{`flex" items-center justify-center ${className}`}>;,`});,"})";
+      <div,"});,`})";
+        className="{`${sizeClasses[size]}" border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin`}`});,"})";
+        role="status";,"});,"})";
+      >;,"});,"})";
+        <span className="sr-only">Loading...</span>;,"});,"})";
+      </div>;,"});,"})";
+  );,"});,`});
+";
+size = "md", className = "" "}) => {"  const sizeClasses = {;
+    sm: "w-4 h-4", md: "w-8 h-8","    lg: "w-12 h-12""  },";
+  return (";
+    <div className="{`flex" items-center justify-center ${className}`}>`      <div className="{`${sizeClasses[size]}" border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin`}`        role=`status""        aria-label="Loading""      >"        <span className="sr-only">Loading...</span>"      </div>"    </div>)};`";
+  size?: "sm" | "md" | "lg";
+export: const LoadingSpinner: React.FC<LoadingSpinnerProps> = ( {,";
+size: = "md",";";
+  className: = ""}) => {";";
+  const sizeClasses = { sm: "w-4: h-4,",";
+    md: "w - 8: h-8,",",;
+    lg: "w-12: h-12,"}";
+";
+  return: (<div className="{`flex" items-center justify-center ${className}`}>`;";
+      <div: className="{`${sizeClasses[size]}" border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin`};`;
+        role = "status"",";
+        <span: className = "sr-only">Loading...</span>",",";
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({"",;
+  size = "md", className = ""}) => {"";
+  const sizeClasses = { sm: "w-4 h-4", md: "w-8 h-8",";
+    lg: "w-12 h-12"}";
+";
+  return (";
+    <div className="{`flex" items-center justify-center ${className}`}` >``";
+      <div className="{`${sizeClasses[size]}" border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin`}""";
+        role="status" >""";
+        <span className="sr-only">Loading...</span>;
+    </div>;
+  )}```;
+  size = "md",,;
+  className = "}) => {";
+  const sizeClasses = { sm: "w-4 h-4",";
+md: "w-8 h-8",;
+,;
+  return (";
+    <div className="{`flex" items-center justify-center ${className}`}>;
+      <div>;
+        role="status>;
+      >;";
+        <span className="sr-only">Loading...</span>;
+      </div>;
+  )}";
+interface LoadingSpinnerProps {size?: "sm" | "md" | "lg";";
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({size = "md", className=""}) => {const sizeClasses = { sm: "w-4 h-4", md: "w-8 h-8",;
+
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ ",
+  size = "md",
+  className = "" 
+}) => {
+  const sizeClasses = {}
+
+  return (
+    <div className = "{"flex" items-center justify-center ${className}"}>"
+      <div className="{"${sizeClasses[size]}" border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin"}"
+        role="status"
+      >"
         <span className="sr-only">Loading...</span>
-      </motion.div>
-      
-      {text && (<motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-zion-slate-light font-medium text-sm">
-          {text}
-        </motion.p>)}
-    </div>);
-}
-// Page loading component
-export function PageLoader() {
-    return (<div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-blue-800 to-slate-900">
-      <div className="text-center text-white">
-        <LoadingSpinner size="xl" variant="white" className="mx-auto mb-4"/>
-        <h1 className="text-2xl font-bold">Loading Zion Tech Group...</h1>
-        <p className="mt-2 text-blue-200">Please wait while we prepare your experience.</p>
       </div>
-    </div>);
+  )};"
+,"});,"})"
+;,"});,"})"
+interface LoadingSpinnerProps {,"});,"})"
+  size?: "sm" | "md" | "lg";,"});,"})"
+  className?: string,"});,"});"
+}"});,"})"
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({,"});,"})"
+  size = "md",,"});,"})"
+  className = "";,"});,"});"
+}) => {,"});,"})"
+  const sizeClasses = {});,"})"
+    md: "w-8 h-8","});,"})"
+    lg: "w-12 h-12","});,"});"
+};,"});,"})
 }
-// Inline loading component
-export function InlineLoader({ size = 'sm', variant = 'default' }) {
-    return (<div className="inline-flex items-center">
-      <LoadingSpinner size={size} variant={variant} className="mr-2"/>
-      <span className="text-sm text-gray-600">Loading...</span>
-    </div>);
+  return ("
+    <div className="{"flex" items-center justify-center ${className}"}>;,"});,"})"
+      <div,"});,"})"
+        className="{"${sizeClasses[size]}" border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin"}"});,"})"
+        role="status";,"});,"})"
+      >;,"});,"})"
+        <span className="sr-only">Loading...</span>;,"});,"})"
+      </div>;,"});,"})"
+  );,"});,"})
 }
+"
+size = "md", className = "" "}) => {"  const sizeClasses = {},"
+  return ("
+    <div className="{"flex" items-center justify-center ${className}"}>"      <div className="{"${sizeClasses[size]}" border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin"}"        role="status""        aria-label="Loading""      >"        <span className="sr-only">Loading...</span>"      </div>"    </div>)};""
+  size?: "sm" | "md" | "lg"
+export: const LoadingSpinner: React.FC<LoadingSpinnerProps> = ( {,"
+size: = "md",";"
+  className: = ""}) => {";"
+  const sizeClasses = {}"
+"
+  return: (<div className="{"flex" items-center justify-center ${className}"}>";"
+      <div: className="{"${sizeClasses[size]}" border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin"};"
+        role = "status"","
+        <span: className = "sr-only">Loading...</span>",","
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({"",
+  size = "md", className = ""}) => {""
+  const sizeClasses = {}"
+"
+  return ("
+    <div className="{"flex" items-center justify-center ${className}"}" >"""
+      <div className="{"${sizeClasses[size]}" border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin"}"""
+        role="status" >"""
+        <span className="sr-only">Loading...</span>
+    </div>
+  )}"""
+  size = "md",,
+  className = "}) => {"
+  const sizeClasses = {}"}>
+      <div>
+        role="status>
+      >;"
+        <span className="sr-only">Loading...</span>
+      </div>
+  )}"
+interface LoadingSpinnerProps {size?: "sm" | "md" | "lg";"
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({size = "md", className=""}) => {const sizeClasses = {}"}" >""
+      <div className="{"${sizeClasses[size]}" border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin"}" role="status" >"
+  size?: &apos;sm&apos; | &apos;md&apos; | &apos;lg
+   className?: string}&apos;&apos
+  size = &apos;md&apos,
+  className = &apos;&apos}) => {&apos}&apos
+  const sizeClasses = {}
+
+"
+  return (&apos;<div className = "{"flex" items-center justify-center ${className}"}>"
+        role="&apos;status&apos;"
+      >&apos;"
+        <span className="&apos;sr-only&apos;">Loading...&apos;</span>"
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({""",
+  size = "md", className = ""}) => {"""
+  const sizeClasses = {}) => {"
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({"",
+  size = "md", className = ""}) => {""
+  const sizeClasses = {}"}"" >"""""
+        role="status'" >"""
+    </div>""""
+  )}""""
+""""
+"
+
+export default Component

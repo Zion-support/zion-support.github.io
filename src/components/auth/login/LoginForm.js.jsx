@@ -1,97 +1,144 @@
-import { useState } from "react";
-import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { LogIn, User, Eye, EyeOff } from "lucide-react";
-import { useAuth } from "@/hooks/useAuth";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage, } from "@/components/ui/form";
-import { Link } from "react-router-dom";
-import { LoadingOverlay } from "@/components/LoadingOverlay";
-// Form validation schema
-const loginSchema = z.object({
-    email: z.string().email("Please enter a valid email").min(1, "Email is required"),
-    password: z.string().min(6, "Password must be at least 6 characters"),
-});
-export function LoginForm() {
-    const { login, isLoading } = useAuth();
-    const navigate = useNavigate();
-    const [showPassword, setShowPassword] = useState(false);
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const form = useForm({
-        resolver: zodResolver(loginSchema),
-        defaultValues: {
-            email: "",
-            password: "",
-        },
-    });
-    const onSubmit = async (data) => {
-        if (isSubmitting)
-            return;
-        try {
-            setIsSubmitting(true);
-            const { error } = await login(data.email, data.password);
-            if (error) {
-                form.setError("root", { message: error });
-            }
-            else {
-                navigate("/");
-            }
-        }
-        finally {
-            setIsSubmitting(false);
-        }
-    };
-    return (<Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" autoComplete="off" // Disable browser autofill
-    >
-        {form.formState.errors.root && (<p className="text-red-400 text-sm" role="alert">
-            {form.formState.errors.root.message}
-          </p>)}
-        <FormField control={form.control} name="email" render={({ field }) => (<FormItem>
-              <FormLabel className="text-zion-slate-light">Email address</FormLabel>
-              <FormControl>
-                <div className="relative">
-                  <Input placeholder="you@example.com" className="bg-zion-blue pl-10 placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple" {...field} autoComplete="off" // Disable browser autofill
-        />
-                  <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"/>
-                </div>
-              </FormControl>
-              <FormMessage className="text-red-400"/>
-            </FormItem>)}/>
 
-        <FormField control={form.control} name="password" render={({ field }) => (<FormItem>
-              <FormLabel className="text-zion-slate-light">Password</FormLabel>
-              <FormControl>
-                <div className="relative">
-                  <Input type={showPassword ? "text" : "password"} placeholder="••••••••" className="bg-zion-blue pl-10 border-zion-blue-light focus:border-zion-purple" {...field} autoComplete="off" // Disable browser autofill
-        />
-                  <LogIn className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"/>
-                  <Button type="button" variant="ghost" size="sm" className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan" onClick={() => setShowPassword(!showPassword)}>
-                    {showPassword ? (<EyeOff className="h-4 w-4"/>) : (<Eye className="h-4 w-4"/>)}
-                    <span className="sr-only">
-                      {showPassword ? "Hide password" : "Show password"}
-                    </span>
-                  </Button>
-                </div>
-              </FormControl>
-              <FormMessage className="text-red-400"/>
-            </FormItem>)}/>
-
-        <div className="flex items-center justify-between">
-          <div className="text-sm">
-            <Link to="/forgot-password" className="font-medium text-zion-cyan hover:text-zion-cyan-light">
-              Forgot your password?
-            </Link>
+ " " " " " " " """";,"});,"})"
+;,"});,"})"
+import { useState } from "react";"""";,"});,"})"
+import { useForm } from "react-hook-form";"""";,"});,"})"
+import { useNavigate } from "react-router-dom";"""";,"});,"})"
+import { zodResolver } from "@hookform/resolvers/zod";"""";,"});,"})"
+import { z } from "zod";"""";,"});,"})"
+import { LogIn, User, Eye, EyeOff } from "lucide-react";"""";,"});,"})"
+import { useAuth } from "@/hooks/useAuth";"""";,"});,"})"
+import { Button } from "@/components/ui/button";"""";,"});,"})"
+import { Input } from "@/components/ui/input";"""";,"});,"})"
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";"""";,"});,"})"
+import { Link } from "react-router-dom";"""";,"});,"})"
+import { LoadingOverlay } from "@/components/LoadingOverlay";,"});,"})"
+// comment
+const loginSchema = z.object({}"});,"})"
+""";,"});,"})"
+"""";,"});,"})"
+    email: z.string().email("Please enter a valid email").min(1, "Email is required"),"""";,"});,"})"
+    password: z.string().min(6, "Password must be at least 6 characters")});,"});,"})"
+function LoginForm() {}"});,"})"
+    const { login, isLoading } = useAuth();,"});,"})"
+    const navigate = useNavigate();,"});,"})"
+    const [showPassword, setShowPassword] = useState(false);,"});,"})"
+    const [isSubmitting, setIsSubmitting] = useState(false);,"});,"})"
+    const form = useForm({}"});,"})"
+        resolver: zodResolver(loginSchema),"});,"})"
+        defaultValues: {}"});,"})"
+""";,"});,"})"
+"""";,"});,"})"
+            email: "","""";,"});,"})"
+            password: ""}});,"});,"})"
+    const onSubmit = async (data) => {}"});,"})"
+        if (isSubmitting);,"});,"})"
+            return,"});,"})"
+        try {}"});,"})"
+            setIsSubmitting(true);,"});,"})"
+            const { error } = await login(data.email, data.password);,"});,"})"
+            if(error) {}"});,"})"
+""";,"});,"})"
+"""";,"});,"})"
+                form.setError("root", { message: error })}"});,"})"
+            else {}"});,"})"
+""";,"});,"})"
+"""";,"});,"})"
+                router("/")}"});,"});"
+}"});,"})"
+        finally {}"});,"})"
+            setIsSubmitting(false)}"});,"});"
+};""";,"});,"})"
+    return (<Form {...form}>"""";,"});,"})"
+      <form onSubmit="{form.handleSubmit(onSubmit)}" className="space-y-6" autoComplete="off" // comment
+    >"""";,"});,"})"
+        {form.formState.errors.root && (<p className="text-red-400 text-sm" role="alert">;,"});,"})"
+            {form.formState.errors.root.message}""";,"});,"})"
+          </p>)}"""";,"});,"})"
+        <FormField control="{form.control}" name="email" render="{({" field }) => (<FormItem>"""";,"});,"})"
+              <FormLabel className="text-zion-slate-light">Email address</FormLabel>""";,"});,"})"
+              <FormControl>"""";,"});,"})"
+                <div className="relative">"""";,"});,"})"
+                  <Input placeholder="you@example.com" className="bg-zion-blue pl-10 placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple" {...field} autoComplete="off" // comment
+              />"""";,"});,"})"
+                  <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"  />;,"});,"})"
+                </div>""";,"});,"})"
+              </FormControl>"""";,"});,"})"
+              <FormMessage className="text-red-400"  />""";,"});,"})"
+            </FormItem>)}/>"""";,"});,"})"
+        <FormField control="{form.control}" name="password" render="{({" field }) => (<FormItem>"""";,"});,"})"
+              <FormLabel className="text-zion-slate-light">Password</FormLabel>""";,"});,"})"
+              <FormControl>"""";,"});,"})"
+                <div className="relative">"""";,"});,"})"
+                  <Input type="{showPassword" ? "text" : "password"} placeholder="••••••••" className="bg-zion-blue pl-10 border-zion-blue-light focus:border-zion-purple" {...field} autoComplete="off" // comment
+              />"""";,"});,"})"
+                  <LogIn className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"  />"""";,"});,"})"
+                  <Button type="button" variant="ghost" size="sm" className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan" onClick="{()" => setShowPassword(!showPassword)}>"""";,"});,"})"
+                    {showPassword ? (<EyeOff className="h-4 w-4"  />) : (<Eye className="h-4 w-4"  />)}"""";,"});,"})"
+                    <span className="sr-only">"""";,"});,"})"
+                      {showPassword ? "Hide password" : "Show password"}"});,"})"
+                    </span>;,"});,"})"
+                  </Button>;,"});,"})"
+                </div>""";,"});,"})"
+              </FormControl>"""";,"});,"})"
+              <FormMessage className="text-red-400"  />""";,"});,"})"
+            </FormItem>)}/>"""";,"});,"})"
+        <div className="flex items-center justify-between">"""";,"});,"})"
+          <div className="text-sm">"""";,"});,"})"
+            <Link to="/forgot-password" className="font-medium text-zion-cyan hover: text-zion-cyan-light">,"});,"})"
+              Forgot your password?;,"});,"})"
+            </Link>;,"});,"})"
+          </div>""";,"});,"})"
+        </div>"""";,"});,"})"
+        <Button type="submit" className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white" disabled="{isLoading" || isSubmitting}>"""";,"});,"})"
+          {isLoading || isSubmitting ? "Logging in..." : "Login"}"});,"})"
+        </Button>;,"});,"})"
+      </form>;,"});,"})"
+      <LoadingOverlay visible="{isLoading" || isSubmitting}       />;,"});,"})"
+    </Form>)};,"});,"})"
+export { LoginForm };,"});,"})"
+  } catch (error) {
+    console.error(error);
+  }
+export default LoginForm,"});,"})"
+;,"});,"})"
+export default LoginForm,"});,"})"
+;,"});,"})"
+export { LoginForm };,"});,"})"
+;,"});,"})"
+export { LoginForm };,"});,"})"
+;,"});,"})"
+export { LoginForm };,"});,"})"
+;,"});,"})"
+export { LoginForm };,"});,"})"
+;,"});,"})"
+export { LoginForm };,"});,"})"
+" " " " " " """;"
+" " " " " " """'"
+"
+""
+import React from "react"
+import { SEO } from "@/components/SEO"
+const LoginForm.Js: React.FC = () => {
+  return ("
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
+      <SEO title="LoginForm.Js - Zion Tech Group""
+        description="Professional LoginForm.Js services by Zion Tech Group"",
+        keywords="loginform.js, technology, services"  />"
+      <div className="container mx-auto px-4 py-20">"
+        <div className="text-center">"
+          <h1 className="text-4xl font-bold text-white mb-6">LoginForm.Js</h1>"
+          <p className="text-xl text-gray-300 mb-8">
+            Professional LoginForm.Js services to help your business grow.
+          </p>"
+          <div className="flex justify-center">"
+            <a href="/contact" "
+              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover: shadow-lg transition-all duration-300"
+            >
+              Get Started,
+            </a>
           </div>
-        </div>
+    </div>;,
+  )}
 
-        <Button type="submit" className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white" disabled={isLoading || isSubmitting}>
-          {isLoading || isSubmitting ? "Logging in..." : "Login"}
-        </Button>
-      </form>
-      <LoadingOverlay visible={isLoading || isSubmitting}/>
-    </Form>);
-}
+export default LoginForm.Js;""

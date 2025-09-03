@@ -1,11 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { SEOHead } from '../components/seo/SEOHead';
-=======
-import { SEO } from '@/components/SEO';
->>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { SEOHead } from '../components/seo/SEOHead';import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { 
@@ -80,7 +75,6 @@ export default function CybersecurityServicesPage() {
   ];
 
   return (
-<<<<<<< HEAD
     <>
       <SEOHead 
         title="Cybersecurity Services - Zion Tech Group"
@@ -96,15 +90,7 @@ export default function CybersecurityServicesPage() {
             "@type": "Organization",
             "name": "Zion Tech Group"
           }
-        }}
-=======
-    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-20">
-      <SEO 
-        title="Cybersecurity Services - Zion Tech Group" 
-        description="Enterprise-grade cybersecurity solutions including zero trust architecture, threat detection, and compliance services." 
-        keywords="cybersecurity, zero trust, threat detection, security compliance, SOC2, enterprise security"
->>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
-      />
+        }}      />
       
       <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-black">
         {/* Hero Section */}
@@ -255,4 +241,19 @@ export default function CybersecurityServicesPage() {
       </div>
     </>
   );
+import React from "react"
+import { SEO } from "@/components/SEO"
+;,"});,"})
 }
+export default function CybersecurityServicesPage() {return ("
+    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
+      <SEO title="CybersecurityServicesPage - Zion Tech Group" description="Professional CybersecurityServicesPage services by Zion Tech Group"  />"
+      <div className="container mx-auto px-4 py-20">"
+        <h1 className="text-4xl font-bold text-white mb-8">CybersecurityServicesPage</h1>"
+        <p className="text-gray-300 text-lg">
+          Professional CybersecurityServicesPage services to help your business grow.
+        </p>
+      </div>
+  )
+}
+}""

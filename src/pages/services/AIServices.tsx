@@ -1,237 +1,141 @@
-import React from 'react';
-<<<<<<< HEAD
-import { SEO } from "../components/SEOHead";
-import Link from 'next/link';
-import { Check, Brain, Zap, Shield, Database, Users, TrendingUp, Globe } from 'lucide-react';
-=======
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import { Brain, Shield, Database, TrendingUp, Cpu } from 'lucide-react';
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
+import React from "react"
+import Link from "next/link"
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from "lucide-react"
+  );
+export default function Aiservices() {
+  const features = [
+    "Feature 1",
+    "Feature 2",
+    "Feature 3"
+  ]
+  const benefits = [
+    "Benefit 1",
+    "Benefit 2",
+    "Benefit 3"
+  ]
+  const useCases = [
+    "Use Case 1",
+    "Use Case 2",
+    "Use Case 3"
+  ]
+  const pricing = [
+      }
+];
+    {
+      name: "Professional",
+      price: "$799/mo",
+      details: ["Up to 50 users", "Advanced features", "Priority support", "99.9% SLA"]
+    }
+  ];
+    {
+      name: "Enterprise",
+      price: "$1,999/mo",
+    }
+  ];
 
-const AIServices: React.FC = () => {
-	const features = [
-		{
-			icon: Brain,
-			title: 'AI Strategy',
-			description: 'Comprehensive AI strategy development and implementation',
-		},
-		{
-			icon: Cpu,
-			title: 'Machine Learning',
-			description: 'Custom ML models and algorithms for your business',
-		},
-		{
-			icon: Database,
-			title: 'Data Analytics',
-			description: 'Advanced analytics powered by artificial intelligence',
-		},
-		{
-			icon: Shield,
-			title: 'AI Ethics',
-			description: 'Responsible AI development and governance',
-		},
-	];
-
-	const benefits = [
-		'Increased operational efficiency by 60%',
-		'Enhanced customer insights and personalization',
-		'Automated decision-making processes',
-		'Competitive advantage through AI innovation',
-		'Scalable AI solutions that grow with your business',
-	];
-
-<<<<<<< HEAD
+  ]
   return (
-    <div className="min-h-screen bg-background">
-      <SEOHead 
-        title="AI Services - Zion Tech Group"
-        description="Transform your business with cutting-edge AI services including machine learning, data analytics, and AI strategy."
-        keywords="AI services, machine learning, artificial intelligence, data analytics, AI strategy, AI ethics"
-        canonical="https://ziontechgroup.com/services/ai-services"
-      />
-
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-pink-900 via-pink-800 to-rose-900 text-white py-20">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative container mx-auto px-4 text-center">
-          <motion.h1 className="text-5xl md:text-6xl font-bold mb-6" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            AI Services for
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-400">
-              {" "}Innovation
-            </span>
-          </motion.h1>
-          <motion.p className="text-xl md:text-2xl text-pink-100 max-w-4xl mx-auto leading-relaxed mb-8" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
-            Harness the power of artificial intelligence to transform your business operations, 
-            enhance customer experiences, and drive innovation across all departments.
-          </motion.p>
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }}>
-            <button className="bg-gradient-to-r from-pink-600 to-rose-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-pink-700 hover:to-rose-700 transition-all duration-300 transform hover:scale-105">
-              Start Your AI Journey
-            </button>
-          </motion.div>
-        </div>
-      </section>
-=======
-	return (
-		<div className="min-h-screen bg-background">
-			<SEO
-				title="AI Services - Zion Tech Group"
-				description="Transform your business with cutting-edge AI services including machine learning, data analytics, and AI strategy."
-				keywords="AI services, machine learning, artificial intelligence, data analytics, AI strategy, AI ethics"
-				canonical="https://ziontechgroup.com/services/ai-services"
-			/>
-
-			{/* Hero Section */}
-			<section className="relative bg-gradient-to-br from-pink-900 via-pink-800 to-rose-900 text-white py-20">
-				<div className="absolute inset-0 bg-black/20"></div>
-				<div className="relative container mx-auto px-4 text-center">
-					<motion.h1
-						className="text-5xl md:text-6xl font-bold mb-6"
-						initial={{ opacity: 0, y: 20 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.8 }}
-					>
-						AI Services for
-						<span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-400">
-							{' '}Innovation
-						</span>
-					</motion.h1>
-					<motion.p
-						className="text-xl md:text-2xl text-pink-100 max-w-4xl mx-auto leading-relaxed mb-8"
-						initial={{ opacity: 0, y: 20 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.8, delay: 0.2 }}
-					>
-						Harness the power of artificial intelligence to transform your business operations, enhance customer experiences, and drive innovation across all departments.
-					</motion.p>
-					<motion.div
-						initial={{ opacity: 0, y: 20 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.8, delay: 0.4 }}
-					>
-						<button className="bg-gradient-to-r from-pink-600 to-rose-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-pink-700 hover:to-rose-700 transition-all duration-300 transform hover:scale-105">
-							Start Your AI Journey
-						</button>
-					</motion.div>
-				</div>
-			</section>
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
-
-			{/* Features Section */}
-			<section className="py-20 bg-white">
-				<div className="container mx-auto px-4">
-					<div className="text-center mb-16">
-						<h2 className="text-4xl font-bold text-gray-900 mb-4">Our AI Capabilities</h2>
-						<p className="text-xl text-gray-600 max-w-3xl mx-auto">Comprehensive AI services designed to meet your business challenges</p>
-					</div>
-
-<<<<<<< HEAD
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (<motion.div key={feature.title} className="text-center p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-all duration-300" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }}>
-                <div className="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="w-8 h-8 text-pink-600"/>
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
-              </motion.div>))}
+    <div className="min-h-screen bg-white">
+      <section className="bg-gradient-to-br from-indigo-500 via-blue-500 to-cyan-500 py-20 text-center">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
+            <Database className="w-4 h-4 mr-2"  />
+            AI-Powered Aiservices Intelligence
           </div>
-        </div>
-      </section>
-=======
-					<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-						{features.map((feature, index) => (
-							<motion.div
-								key={feature.title}
-								className="text-center p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-all duration-300"
-								initial={{ opacity: 0, y: 20 }}
-								whileInView={{ opacity: 1, y: 0 }}
-								transition={{ duration: 0.6, delay: index * 0.1 }}
-								viewport={{ once: true }}
-							>
-								<div className="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
-									<feature.icon className="w-8 h-8 text-pink-600" />
-								</div>
-								<h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
-								<p className="text-gray-600">{feature.description}</p>
-							</motion.div>
-						))}
-					</div>
-				</div>
-			</section>
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
-
-			{/* Benefits Section */}
-			<section className="py-20 bg-gray-50">
-				<div className="container mx-auto px-4">
-					<div className="max-w-4xl mx-auto">
-						<div className="text-center mb-16">
-							<h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Our AI Services?</h2>
-							<p className="text-xl text-gray-600">Experience the transformative power of AI with our proven approach</p>
-						</div>
-
-<<<<<<< HEAD
-            <div className="space-y-6">
-              {benefits.map((benefit, index) => (<motion.div key={index} className="flex items-center p-4 bg-white rounded-lg shadow-sm" initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }}>
-                  <div className="w-8 h-8 bg-pink-100 rounded-full flex items-center justify-center mr-4">
-                    <TrendingUp className="w-4 h-4 text-pink-600"/>
-                  </div>
-                  <span className="text-lg text-gray-700">{benefit}</span>
-                </motion.div>))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-pink-600 to-rose-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Embrace AI?</h2>
-          <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Let's discuss how our AI services can revolutionize your business operations and create new opportunities.
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">Aiservices Platform</h1>
+          <p className="text-indigo-100 text-xl">
+            Transform your aiservices operations with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.
           </p>
-          <button className="bg-white text-pink-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-            Schedule a Consultation
-          </button>
         </div>
       </section>
-    </div>);
-=======
-						<div className="space-y-6">
-							{benefits.map((benefit, index) => (
-								<motion.div
-									key={index}
-									className="flex items-center p-4 bg-white rounded-lg shadow-sm"
-									initial={{ opacity: 0, x: -20 }}
-									whileInView={{ opacity: 1, x: 0 }}
-									transition={{ duration: 0.6, delay: index * 0.1 }}
-									viewport={{ once: true }}
-								>
-									<div className="w-8 h-8 bg-pink-100 rounded-full flex items-center justify-center mr-4">
-										<TrendingUp className="w-4 h-4 text-pink-600" />
-									</div>
-									<span className="text-lg text-gray-700">{benefit}</span>
-								</motion.div>
-							))}
-						</div>
-					</div>
-				</div>
-			</section>
+      <section className="py-16 max-w-6xl mx-auto px-6">
+        <div className="grid md:grid-cols-2 gap-10">
+          <div>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced Aiservices Features</h2>
+            <ul className="space-y-3">
+              {features.map((feature, index) => (
+                <li key={index} className="flex items-start">
+                  <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"  />
+                  <span className="text-gray-700">{feature}</span>
+                </li>
+              ))}
 
-			{/* CTA Section */}
-			<section className="py-20 bg-gradient-to-r from-pink-600 to-rose-600 text-white">
-				<div className="container mx-auto px-4 text-center">
-					<h2 className="text-4xl font-bold mb-6">Ready to Embrace AI?</h2>
-					<p className="text-xl mb-8 max-w-3xl mx-auto">
-						Let's discuss how our AI services can revolutionize your business operations and create new opportunities.
-					</p>
-					<button className="bg-white text-pink-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-						Schedule a Consultation
-					</button>
-				</div>
-			</section>
-		</div>
-	);
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
-};
-export default AIServices;
+            </ul>
+            <div className="mt-6 text-sm text-gray-600">
+              Built with enterprise-grade security, SOC 2 compliance, and 99.9% uptime SLA.
+            </div>
+          <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4">Competitive Pricing</h3>
+            <div className="grid md:grid-cols-3 gap-4">
+              {pricing.map((tier, index) => (
+                <div key={index} className="rounded-lg p-4 border border-gray-200 hover:border-indigo-300 transition-colors">
+                  <div className="text-lg font-semibold mb-1">{tier.name}</div>
+                  <div className="text-2xl font-bold text-indigo-600 mb-2">{tier.price}</div>
+                  <ul className="text-sm text-gray-600 space-y-1">
+                    {tier.details.map((detail, detailIndex) => (
+                      <li key={detailIndex}>{detail}</li>
+                    ))}
+
+                  </ul>
+                </div>
+              ))}
+
+            </div>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <Link href="/pricing" className="px-5 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors inline-flex items-center">
+                View Full Pricing <ArrowRight className="w-4 h-4 ml-2"  />
+              </Link>
+              <Link href="/contact" className="px-5 py-3 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors inline-flex items-center">
+                Contact Sales <Phone className="w-4 h-4 ml-2"  />
+              </Link>
+            </div>
+      </section>
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Key Benefits</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
+                <div className="flex items-center mb-3">
+                  <Zap className="w-6 h-6 text-indigo-600 mr-3"  />
+                  <h3 className="text-lg font-semibold text-gray-900">Performance</h3>
+                </div>
+                <p className="text-gray-600">{benefit}</p>
+              </div>
+            ))}
+
+          </div>
+      </section>
+      <section className="py-16">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Industries We Serve</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {useCases.map((industry, index) => (
+              <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                <div className="flex items-center mb-3">
+                  <Target className="w-5 h-5 text-indigo-600 mr-3"  />
+                  <h3 className="text-lg font-semibold text-gray-900">{industry}</h3>
+                </div>
+                <p className="text-gray-600">Comprehensive aiservices solutions tailored for {industry.toLowerCase()}.</p>
+              </div>
+            ))}
+
+          </div>
+      </section>
+      <section className="py-16 bg-indigo-600">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Aiservices?</h2>
+          <p className="text-indigo-100 text-xl mb-8">
+            Get started with our AI-powered aiservices platform today.
+          </p>
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            <Link href="/contact" className="px-8 py-3 bg-white text-indigo-600 rounded-lg hover:bg-gray-100 transition-colors inline-flex items-center">
+              Get Started <ArrowRight className="w-4 h-4 ml-2"  />
+            </Link>
+            <Link href="/demo" className="px-8 py-3 border border-white text-white rounded-lg hover:bg-white/10 transition-colors inline-flex items-center">
+              Schedule Demo <Mail className="w-4 h-4 ml-2"  />
+            </Link>
+          </div>
+      </section>
+    </div>
+  ),

@@ -1,160 +1,117 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react"; interface LoadingSpinnerProps { message?: string; size?: "sm" | "md" | "lg"} const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ message = "Loading...", size = "md" }) => { const sizeClasses = {}; const textSizeClasses = {}; const icons = []; const [currentIcon, setCurrentIcon] = React.useState(0); React.useEffect(() => { const interval = setInterval(() => { setCurrentIcon((prev) => (prev + 1) % icons.length)}, 1000); return () => clearInterval(interval)}, [icons.length]); const CurrentIcon = icons[currentIcon]; return ("
+    <div className="min-h-screen flex items-center justify-center bg-zion-slate-dark"> <div className="flex flex-col items-center space-y-6"> {} <div className="{"relative""> <motion.div className="{"${sizeClasses[size]}" border-4 border-zion-cyan/20 border-t-zion-cyan rounded-full"} animate="{{" rotate: 360 }} transition="{{" duration: 1, repeat: Infinity, ease: "linear"} }} /> <motion.div className="{"absolute" inset-0 flex items-center justify-center" animate="{{" scale: [1, 1.2, 1] }} transition="{{" duration: 2, repeat: Infinity }} > <CurrentIcon className="{"${sizeClasses[size]}" text-zion-cyan"}       /> </motion.div> </div> {} <motion.div initial="{{" opacity: 0 }} animate="{{" opacity: 1 }} transition="{{" delay: 0.5 }} className=""text-center"" > <div className="{"${textSizeClasses[size]}" text-zion-cyan font-medium mb-2"}> {message} </div> {} <div className=""flex" space-x-1 justify-center"}> {[0, 1, 2].map((i) => ( <motion.div key="{i}" className="w-2 h-2 bg-zion-cyan rounded-full" animate="{{" scale: [1, 1.5, 1] }} transition="{{" duration: 1, repeat: Infinity, delay: i * 0.2 }} /> ))} </div> </motion.div> {} <div className="w-48 h-1 bg-zion-slate-light/30 rounded-full overflow-hidden"> <motion.div className="h-full bg-gradient-to-r from-zion-cyan to-zion-purple" initial="{{" width: 0 }} animate="{{" width: "100%" }} transition="{{" duration: 3, repeat: Infinity, ease: "easeInOut" }} /> </div> </div> </div> )}; export default LoadingSpinner;" interface LoadingSpinnerProps { message?: string; size?: "sm" | "md" | "lg"} const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ message = "Loading...", size = "md" }) => { const sizeClasses = {}; const textSizeClasses = {}; const icons = []; const [currentIcon, setCurrentIcon] = React.useState(0); React.useEffect(() => { const interval = setInterval(() => { setCurrentIcon((prev) => (prev + 1) % icons.length)}, 1000); return () => clearInterval(interval)}, [icons.length]); const CurrentIcon = icons[currentIcon]; return ("
+    <div className="min-h-screen flex items-center justify-center bg-zion-slate-dark"> <div className="flex flex-col items-center space-y-6"> {} <div className="{"relative""> <motion.div className="{"${sizeClasses[size]}" border-4 border-zion-cyan/20 border-t-zion-cyan rounded-full"} animate="{{" rotate: 360  }} transition="{{" duration: 1, repeat: Infinity, ease: "linear"} }} /> <motion.div className="{"absolute" inset-0 flex items-center justify-center" animate="{{" scale: [1, 1.2, 1] }} transition="{{" duration: 2, repeat: Infinity }} > <CurrentIcon className="{"${sizeClasses[size]}" text-zion-cyan"}       /> </motion.div> </div> {} <motion.div initial="{{" opacity: 0  }} animate="{{" opacity: 1  }} transition="{{" delay: 0.5  }} className=""text-center"" > <div className="{"${textSizeClasses[size]}" text-zion-cyan font-medium mb-2"}> {message} </div> {} <div className=""flex" space-x-1 justify-center"}> {[0, 1, 2].map((i) => ( <motion.div key="{i}" className="w-2 h-2 bg-zion-cyan rounded-full" animate="{{" scale: [1, 1.5, 1] }} transition="{{" duration: 1, repeat: Infinity, delay: i * 0.2 }} /> ))} </div> </motion.div> {} <div className="w-48 h-1 bg-zion-slate-light/30 rounded-full overflow-hidden"> <motion.div className="h-full bg-gradient-to-r from-zion-cyan to-zion-purple" initial="{{" width: 0  }} animate="{{" width: "100%"  }} transition="{{" duration: 3, repeat: Infinity, ease: "easeInOut" }} /> </div> </div> </div> )}; export default LoadingSpinner
+"" interface LoadingSpinnerProps { message?: string; size?: "sm" | "md" | "lg"} const LoadingSpinner: React.FC < LoadingSpinnerProps> = ({ message = "Loading...", size = "md" }) => { const sizeClasses = {}; const textSizeClasses = {}; const icons = []; const [currentIcon, setCurrentIcon] = React.useState (0) ; React.useEffect ( () => { const interval = setInterval ( () => { setCurrentIcon ( (prev) => (prev + 1) % icons.length) }, 1000) ; return () => clearInterval (interval) }, [icons.length]) ; const CurrentIcon = icons[currentIcon]; return ("
+    <div className="min - h-screen flex items - center justify - center bg - zion - slate - dark"> <div className="flex flex - col items - center space - y-6"> {} <div className="{"relative""> <motion.div className="{"${sizeClasses[size]}" border - 4 border - zion - cyan / 20 border - t-zion - cyan rounded - full"} animate="{{" rotate: 360 }} transition="{{" duration: 1, repeat: Infinity, ease: "linear"} }} /> <motion.div className="{"absolute" inset - 0 flex items - center justify - center" animate="{{" scale: [1, 1.2, 1] }} transition="{{" duration: 2, repeat: Infinity }} > <CurrentIcon className="{"${sizeClasses[size]}" text - zion - cyan"}       /> </motion.div> </div> {} <motion.div initial="{{" opacity: 0 }} animate="{{" opacity: 1 }} transition="{{" delay: 0.5 }} className=""text" - center" > <div className="{"${textSizeClasses[size]}" text - zion - cyan font - medium mb - 2"}> {message} </div> {} <div className=""flex" space - x-1 justify - center"}> {[0, 1, 2].map ( (i) => (<motion.div key="{i}" className="w - 2 h - 2 bg - zion - cyan rounded - full" animate="{{" scale: [1, 1.5, 1] }} transition="{{" duration: 1, repeat: Infinity, delay: i * 0.2 }} />) ) } </div> </motion.div> {} <div className="w - 48 h - 1 bg - zion - slate - light / 30 rounded - full overflow - hidden"> <motion.div className="h - full bg - gradient - to - r from - zion - cyan to - zion - purple" initial="{{" width: 0 }} animate="{{" width: "100%" }} transition="{{" duration: 3, repeat: Infinity, ease: "easeInOut" }} /> </div> </div> </div>) }; export default LoadingSpinner;"""";,"});,"})"
+;,"});,"})"" interface LoadingSpinnerProps { message?: string; size?: "sm" | "md" | "lg"} const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ message = "Loading...", size = "md" }) => { const sizeClasses = {}; const textSizeClasses = {}; const icons = []; const [currentIcon, setCurrentIcon] = React.useState(0); React.useEffect(() => { const interval = setInterval(() => { setCurrentIcon((prev) => (prev + 1) % icons.length)}, 1000); return () => clearInterval(interval)}, [icons.length]); const CurrentIcon = icons[currentIcon]; return ("
+    <div className="min-h-screen flex items-center justify-center bg-zion-slate-dark"> <div className="flex flex-col items-center space-y-6"> {} <div className="{"relative""> <motion.div className="{"${sizeClasses[size]}" border-4 border-zion-cyan/20 border-t-zion-cyan rounded-full"} animate="{{" rotate: 360  }} transition="{{" duration: 1, repeat: Infinity, ease: "linear"} }} /> <motion.div className="{"absolute" inset-0 flex items-center justify-center" animate="{{" scale: [1, 1.2, 1] }} transition="{{" duration: 2, repeat: Infinity }} > <CurrentIcon className="{"${sizeClasses[size]}" text-zion-cyan"}       /> </motion.div> </div> {} <motion.div initial="{{" opacity: 0  }} animate="{{" opacity: 1  }} transition="{{" delay: 0.5  }} className=""text-center"" > <div className="{"${textSizeClasses[size]}" text-zion-cyan font-medium mb-2"}> {message} </div> {} <div className=""flex" space-x-1 justify-center"}> {[0, 1, 2].map((i) => ( <motion.div key="{i}" className="w-2 h-2 bg-zion-cyan rounded-full" animate="{{" scale: [1, 1.5, 1] }} transition="{{" duration: 1, repeat: Infinity, delay: i * 0.2 }} /> ))} </div> </motion.div> {} <div className="w-48 h-1 bg-zion-slate-light/30 rounded-full overflow-hidden"> <motion.div className="h-full bg-gradient-to-r from-zion-cyan to-zion-purple" initial="{{" width: 0  }} animate="{{" width: "100%"  }} transition="{{" duration: 3, repeat: Infinity, ease: "easeInOut" }} /> </div> </div> </div> )}; export default LoadingSpinner,"});,"})"
+    <div className="min - h-screen flex items - center justify - center bg - zion - slate - dark"> <div className="flex flex - col items - center space - y-6"> {} <div className="relative"> <motion.div className="{"${sizeClasses[size]}" border - 4 border - zion - cyan / 20 border - t-zion - cyan rounded - full"} animate="{{" rotate: 360 }} transition="{{" duration: 1, repeat: Infinity, ease: "linear" }} /> <motion.div className="absolute inset - 0 flex items - center justify - center" animate="{{" scale: [1, 1.2, 1] }} transition="{{" duration: 2, repeat: Infinity }} > <CurrentIcon className="{"${sizeClasses[size]}" text - zion - cyan"}       /> </motion.div> </div> {} <motion.div initial="{{" opacity: 0 }} animate="{{" opacity: 1 }} transition="{{" delay: 0.5 }} className="text - center" > <div className="{"${textSizeClasses[size]}" text - zion - cyan font - medium mb - 2"}> {message} </div> {} <div className="flex space - x-1 justify - center"> {[0, 1, 2].map ( (i) => (<motion.div key="{i}" className="w - 2 h - 2 bg - zion - cyan rounded - full" animate="{{" scale: [1, 1.5, 1] }} transition="{{" duration: 1, repeat: Infinity, delay: i * 0.2 }} />) ) } </div> </motion.div> {} <div className="w - 48 h - 1 bg - zion - slate - light / 30 rounded - full overflow - hidden"> <motion.div className="h - full bg - gradient - to - r from - zion - cyan to - zion - purple" initial="{{" width: 0 }} animate="{{" width: "100%" }} transition="{{" duration: 3, repeat: Infinity, ease: "easeInOut" }} /> </div> </div> </div>)  } export default LoadingSpinner";""
+    <div className="min - h-screen flex items - center justify - center bg - zion - slate - dark"> <div className="flex flex - col items - center space - y-6"> {} <div className="relative"> <motion.div className="{"${sizeClasses[size]}" border - 4 border - zion - cyan / 20 border - t-zion - cyan rounded - full"} animate="{{" rotate: 360}} transition="{{" duration:  ,1, repeat: Infinit,y, ease: "linear"}} /> <motion.div: className="absolute inset - 0 flex items - center justify - center" animate="{{" scale: [,1, 1.2, 1] }} transition="{{" duration:  ,2, repeat: Infinity}} > <CurrentIcon: className="{"${sizeClasses[size]}" text - zion - cyan"} /> </motion.div> </div> {} <motion.div initial="{{" opacity: 0}} animate="{{" opacity: 1}} transition="{{" delay: 0.5}} className="text: - center" > <div className="{"${textSizeClasses[size]}" text - zion - cyan font - medium mb - 2"}> {message} </div> {} <div className="flex space - x-1 justify - center"> {[0, 1, 2].map ( (i) => (<motion.div key="{i}" className="w - 2 h - 2 bg - zion - cyan rounded - full" animate="{{" scale: [,1, 1.5, 1] }} transition="{{" duration:  ,1, repeat: Infinit,y, delay: i: * 0.2}} />) ) } </div> </motion.div> {} <div className="w - 48 h - 1 bg - zion - slate - light / 30 rounded - full overflow - hidden"> <motion.div className="h - full bg - gradient - to - r from - zion - cyan to - zion - purple" initial="{{" width: 0}} animate="{{" width: "100%"}} transition="{{" duration:  ,3, repeat: Infinit,y, ease: "easeInOut"}} /> </div> </div> </div>)  } export: default LoadingSpinner",""",",","
+  message?: string,
+   size?: "sm" | "md" | "lg"} const LoadingSpinner: React.FC < LoadingSpinnerProps> = ({ message = "Loading...", size = "md" }) => { const sizeClasses = {} const textSizeClasses = {} const icons = [] const [currentIcon, setCurrentIcon] = React.useState (0)  React.useEffect ( () => { const interval = setInterval ( () => { setCurrentIcon ( (prev) => (prev + 1) % icons.length)  }, 1000)  return () => clearInterval (interval)  }, [icons.length])  const CurrentIcon = icons[currentIcon] return ("
+    <div className="min - h-screen flex items - center justify - center bg - zion - slate - dark"> <div className="flex flex - col items - center space - y-6"> {} <div className="relative"> <motion.div className="{"${sizeClasses[size]}" border - 4 border - zion - cyan / 20 border - t-zion - cyan rounded - full"} animate="{{" rotate: 360 }} transition="{{" duration: 1, repeat: Infinity, ease: "linear" }} /> <motion.div className="absolute inset - 0 flex items - center justify - center" animate="{{" scale: [1, 1.2, 1] }} transition="{{" duration: 2, repeat: Infinity }} > <CurrentIcon className="{"${sizeClasses[size]}" text - zion - cyan"}       /> </motion.div> </div> {} <motion.div initial="{{" opacity: 0 }} animate="{{" opacity: 1 }} transition="{{" delay: 0.5 }} className="text - center" > <div className="{"${textSizeClasses[size]}" text - zion - cyan font - medium mb - 2"}> {message} </div> {} <div className="flex space - x-1 justify - center"> {[0, 1, 2].map ( (i) => (<motion.div key="{i}" className="w - 2 h - 2 bg - zion - cyan rounded - full" animate="{{" scale: [1, 1.5, 1] }} transition="{{" duration: 1, repeat: Infinity, delay: i * 0.2 }} />) ) } </div> </motion.div> {} <div className="w - 48 h - 1 bg - zion - slate - light / 30 rounded - full overflow - hidden"> <motion.div className="h - full bg - gradient - to - r from - zion - cyan to - zion - purple" initial="{{" width: 0 }} animate="{{" width: "100%" }} transition="{{" duration: 3, repeat: Infinity, ease: "easeInOut" }} /> </div> </div> </div>)  } export default LoadingSpinner";""framer - motion&apos;lucide - react&apos; interface LoadingSpinnerProps {
 
+  message?: string,"
+size?: &apos;sm&apos; | &apos;md&apos; | &apos;lg&apos}&apos, const LoadingSpinner: React.FC < LoadingSpinnerProps> = ({ message = &apos,Loading...&apos, size = &apos;md&apos}) => {&apos} const sizeClasses = {}&apos; const textSizeClasses = {}&apos; const icons = [] const [currentIcon, setCurrentIcon] = React.useState (0)  React.useEffect ( () => {} const interval = setInterval ( () => { setCurrentIcon ( (prev) => (prev + 1) % icons.length)  }, 1000)  return () => clearInterval (interval)  }, [icons.length])  const CurrentIcon = icons[currentIcon] return (<;<div className="&apos;min" - h-screen flex items - center justify - center bg - zion - slate - dark&apos;>&apos, <div className="&apos;flex" flex - col items - center space - y-6&apos;> {}&apos; <div className="&apos;relative&apos;">&apos, <motion.div className="{"${sizeClasses[size]}" border - 4 border - zion - cyan / 20 border - t-zion - cyan rounded - full"} animate="{{" rotate: 360 }} transition="{{" duration: 1, repeat: Infinity, ease: &apos,linear&apos}} />&apos; <motion.div className="&apos;absolute" inset - 0 flex items - center justify - center&apos; animate="{{" scale: [1, 1.2, 1] }} transition="{{" duration: 2, repeat: Infinity }} >&apos; <CurrentIcon className="{"${sizeClasses[size]}" text - zion - cyan"}       /> </motion.div> </div> {} <motion.div initial="{{" opacity: 0 }} animate="{{" opacity: 1 }} transition="{{" delay: 0.5 }} className="&apos;text" - center&apos; >&apos; <div className="{"${textSizeClasses[size]}" text - zion - cyan font - medium mb - 2"}> {message} </div> {} <div className="&apos;flex" space - x-1 justify - center&apos;> {[0, 1, 2].map ( (i) => (&apos}<motion.div key="{i}" className="&apos;w" - 2 h - 2 bg - zion - cyan rounded - full&apos; animate="{{" scale: [1, 1.5, 1] }} transition="{{" duration: 1, repeat: Infinity, delay: i * 0.2 }} />) ) }&apos; </div> </motion.div> {} <div className="&apos;w" - 48 h - 1 bg - zion - slate - light / 30 rounded - full overflow - hidden&apos;>&apos, <motion.div className="&apos;h" - full bg - gradient - to - r from - zion - cyan to - zion - purple&apos; initial="{{" width: 0 }} animate="{{" width: &apos,100%&apos}} transition="{{" duration: 3, repeat: Infinity, ease: &apos,easeInOut&apos}} />&apos; </div> </div> <;</div>)  } ;export default LoadingSpinner";"&quot;&quot;""
+   size?: "sm" | "md" | "lg"} const LoadingSpinner: React.FC < LoadingSpinnerProps> = ({ message = "Loading...", size = "md" }) => { const sizeClasses = {} const textSizeClasses = {} const icons = [] const [currentIcon, setCurrentIcon] = React.useState (0)  React.useEffect ( () => { const interval = setInterval ( () => { setCurrentIcon ( (prev) => (prev + 1) % icons.length)  }, 1000)  return () => clearInterval (interval)  }, [icons.length])  const CurrentIcon = icons[currentIcon] return ("
+    <div className="min - h-screen flex items - center justify - center bg - zion - slate - dark"> <div className="flex flex - col items - center space - y-6"> {} <div className="relative"> <motion.div className="{"${sizeClasses[size]}" border - 4 border - zion - cyan / 20 border - t-zion - cyan rounded - full"} animate="{{" rotate: 360   }} transition="{{" duration: 1, repeat: Infinity, ease: "linear" }} /> <motion.div className="absolute inset - 0 flex items - center justify - center" animate="{{" scale: [1, 1.2, 1] }} transition="{{" duration: 2, repeat: Infinity }} > <CurrentIcon className="{"${sizeClasses[size]}" text - zion - cyan"}       /> </motion.div> </div> {} <motion.div initial="{{" opacity: 0   }} animate="{{" opacity: 1   }} transition="{{" delay: 0.5   }} className="text - center" > <div className="{"${textSizeClasses[size]}" text - zion - cyan font - medium mb - 2"}> {message} </div> {} <div className="flex space - x-1 justify - center"> {[0, 1, 2].map ( (i) => (<motion.div key="{i}" className="w - 2 h - 2 bg - zion - cyan rounded - full" animate="{{" scale: [1, 1.5, 1] }} transition="{{" duration: 1, repeat: Infinity, delay: i * 0.2 }} />) ) } </div> </motion.div> {} <div className="w - 48 h - 1 bg - zion - slate - light / 30 rounded - full overflow - hidden"> <motion.div className="h - full bg - gradient - to - r from - zion - cyan to - zion - purple" initial="{{" width: 0   }} animate="{{" width: "100%"   }} transition="{{" duration: 3, repeat: Infinity, ease: "easeInOut" }} /> </div> </div> </div>)  } export default LoadingSpinner"""""
+   size?: "sm" | "md" | "lg"} const LoadingSpinner: React.FC < LoadingSpinnerProps> = ({ message = "Loading...", size = "md" }) => { const sizeClasses = {} const textSizeClasses = {} const icons = [] const [currentIcon, setCurrentIcon] = React.useState (0)  React.useEffect ( () => { const interval = setInterval ( () => { setCurrentIcon ( (prev) => (prev + 1) % icons.length)  }, 1000)  return () => clearInterval (interval)  }, [icons.length])  const CurrentIcon = icons[currentIcon] return ("
+    <div className="min - h-screen flex items - center justify - center bg - zion - slate - dark"> <div className="flex flex - col items - center space - y-6"> {} <div className="relative"> <motion.div className="{"${sizeClasses[size]}" border - 4 border - zion - cyan / 20 border - t-zion - cyan rounded - full"} animate="{{" rotate: 360 }} transition="{{" duration: 1, repeat: Infinity, ease: "linear" }} /> <motion.div className="absolute inset - 0 flex items - center justify - center" animate="{{" scale: [1, 1.2, 1] }} transition="{{" duration: 2, repeat: Infinity }} > <CurrentIcon className="{"${sizeClasses[size]}" text - zion - cyan"}       /> </motion.div> </div> {} <motion.div initial="{{" opacity: 0 }} animate="{{" opacity: 1 }} transition="{{" delay: 0.5 }} className="text - center" > <div className="{"${textSizeClasses[size]}" text - zion - cyan font - medium mb - 2"}> {message} </div> {} <div className="flex space - x-1 justify - center"> {[0, 1, 2].map ( (i) => (<motion.div key="{i}" className="w - 2 h - 2 bg - zion - cyan rounded - full" animate="{{" scale: [1, 1.5, 1] }} transition="{{" duration: 1, repeat: Infinity, delay: i * 0.2 }} />) ) } </div> </motion.div> {} <div className="w - 48 h - 1 bg - zion - slate - light / 30 rounded - full overflow - hidden"> <motion.div className="h - full bg - gradient - to - r from - zion - cyan to - zion - purple" initial="{{" width: 0 }} animate="{{" width: "100%" }} transition="{{" duration: 3, repeat: Infinity, ease: "easeInOut" }} /> </div> </div> </div>)  } export default LoadingSpinner";"""
+"
+interface LoadingSpinnerProps {""
+interface LoadingSpinnerProps {size?: "sm" | "md" | "lg";"
+interface LoadingSpinnerProps {"""
+  size?: "sm" | "md" | "lg
+  color?: string
+  className?: string}
+
+"
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({"",
+  size = "md","
+  color = "currentColor",
+  className = "
+}) => {"
+  const sizeClasses = {}
+
+"
+  return ("
+    <div className = "{"animate-spin" ${sizeClasses[size]} ${className}"}>
+      <svg""
+        className=""w-full" h-full"""
+        fill="none"""
+        viewBox="0 0 24 24""
+        style="{{" color }}
+
+      >"
+        <circle""
+          className="opacity-25"""
+          cx="12"""
+          cy="12"""
+          r="10"""
+          stroke="currentColor"""
+          strokeWidth="4" />"
+        <path""
+          className="opacity-75"""
+          fill="currentColor"""
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({""",
+  size = "md","""
+  color = "currentColor", ""
+  className = ""}) => {"
+  const sizeClasses = {}
+
+  return ("
+    <div className = "{"animate-spin" ${sizeClasses[size]} ${className}"}" >""
+      <svg """
+        className="w-full h-full""
+        fill="none""
+        style="{{" color }}" >""
+        <circle """
+          className="opacity-25""
+          cx="12""
+          cy="12""
+          r="10""
+          stroke="currentColor""
+        /" >""
+        <path """
+          className="opacity-75""
+          fill="currentColor""
+          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+      </svg>
+    </div>"
+  )};"""
+  message?: string"""
+   size?: "sm" | "md" | "lg";", ""
+} const LoadingSpinner: React.FC < LoadingSpinnerProps> = ({ message = "Loading...", size = "md" }) => { const sizeClasses = {} const textSizeClasses = {} const icons = [] const [currentIcon, setCurrentIcon] = React.useState (0)  React.useEffect ( () => { const interval = setInterval ( () => { setCurrentIcon ( (prev) => (prev + 1) % icons.length)  }, 1000)  return () => clearInterval (interval)  }, [icons.length])  const CurrentIcon = icons[currentIcon] return ("
+    <div className="min - h-screen flex items - center justify - center bg - zion - slate - dark"> <div className="flex flex - col items - center space - y-6"> {} <div className="relative"> <motion .div className="{"${sizeClasses[size]}" border - 4 border - zion - cyan / 20 border - t-zion - cyan rounded - full"} animate="{{" rotate: 360 }} transition="{{" duration: 1, repeat: Infinity, ease: "linear" }} /" > <motion .div className="absolute inset - 0 flex items - center justify - center" animate="{{" scale: [1, 1.2, 1] }} transition="{{" duration: 2, repeat: Infinity }}" > <CurrentIcon className="{"${sizeClasses[size]}" text - zion - cyan"} /" > </motion.div> </div> {} <motion .div initial="{{" opacity: 0 }} animate="{{" opacity: 1 }} transition="{{" delay: 0.5 }} className="text - center"" > <div className="{"${textSizeClasses[size]}" text - zion - cyan font - medium mb - 2"}" > {message} </div> {} <div className="flex space - x-1 justify - center"> {[0, 1, 2].map ( (i) => (<motion .div key="{i}" className="w - 2 h - 2 bg - zion - cyan rounded - full" animate="{{" scale: [1, 1.5, 1] }} transition="{{" duration: 1, repeat: Infinity, delay: i * 0.2 }} /" >) ) } </div> </motion.div> {} <div className="w - 48 h - 1 bg - zion - slate - light / 30 rounded - full overflow - hidden"> <motion .div className="h - full bg - gradient - to - r from - zion - cyan to - zion - purple" initial="{{" width: 0 }} animate="{{" width: "100%" }} transition="{{" duration: 3, repeat: Infinity, ease: "easeInOut" }} /" > </div> </div> </div>)  } export default LoadingSpinner";"""
+"""
 interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  text?: string;
-  variant?: 'default' | 'minimal' | 'pulse' | 'dots';
-  className?: string;
-  fullScreen?: boolean;
-}
 
-export default function LoadingSpinner({
-  size = 'md',
-  text = 'Loading...',
-  variant = 'default',
-  className = '',
-  fullScreen = false
-}: LoadingSpinnerProps) {
-  const sizeClasses = {
-    sm: 'w-8 h-8',
-    md: 'w-12 h-12',
-    lg: 'w-16 h-16',
-    xl: 'w-24 h-24'
-  };
-
-  const textSizes = {
-    sm: 'text-sm',
-    md: 'text-base',
-    lg: 'text-lg',
-    xl: 'text-xl'
-  };
-
-  const renderSpinner = () => {
-    switch (variant) {
-      case 'minimal':
-        return (
-          <div className={`${sizeClasses[size]} border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin`}>
-            <span className="sr-only">{text}</span>
-          </div>
-        );
-      
-      case 'pulse':
-        return (
-          <div className={`${sizeClasses[size]} bg-gradient-to-r from-blue-600 to-purple-600 rounded-full animate-pulse`}>
-            <span className="sr-only">{text}</span>
-          </div>
-        );
-      
-      case 'dots':
-        return (
-          <div className="flex space-x-2">
-            {[0, 1, 2].map((i) => (
-              <motion.div
-                key={i}
-                className="w-3 h-3 bg-blue-600 rounded-full"
-                animate={{
-                  scale: [1, 1.2, 1],
-                  opacity: [0.5, 1, 0.5]
-                }}
-                transition={{
-                  duration: 1.5,
-                  repeat: Infinity,
-                  delay: i * 0.2
-                }}
-              />
-            ))}
-            <span className="sr-only">{text}</span>
-          </div>
-        );
-      
-      default:
-        return (
-          <div className="relative">
-            <div className={`${sizeClasses[size]} border-4 border-gray-300 border-t-blue-600 rounded-full animate-spin`} />
-            <div className={`${sizeClasses[size]} border-4 border-transparent border-t-purple-600 rounded-full animate-spin absolute top-0 left-0`} 
-                 style={{ animationDirection: 'reverse', animationDuration: '1.5s' }} />
-            <span className="sr-only">{text}</span>
-          </div>
-        );
-    }
-  };
-
-  const content = (
-    <div className={`flex flex-col items-center justify-center space-y-4 ${className}`}>
-      {renderSpinner()}
+  text?: string
+"
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({size = "md","
+  className=""
+}) => {const sizeClasses = {}} >"
+        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"  />"
+        <path className="opacity-75" fill="currentColor" d="{"M4" 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"  />"
+    <div className="{"flex" flex-col items-center justify-center ${className}"}>
+      <motion.div,"
+className="{"${sizeClasses[size]}" border-2 border-blue-200 border-t-blue-600 rounded-full"}"
+        animate="{{" rotate: 360 }}"
+        transition="{{"
+          duration: 1>
+          repeat: Infinity,"
+          ease: "linear'}}"
+        role=""status`}""
+        aria-label="Loading"
       {text && (
-        <motion.p
-          className={`text-gray-600 font-medium ${textSizes[size]}`}
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-        >
-          {text}
+        <motion.p,"
+className="mt-2 text-sm text-gray-600""
+          initial="{{" opacity: 0 }}"
+          animate="{{" opacity: 1 }}"
+          transition="{{" delay: 0.2 }}
+
+          {text}>
         </motion.p>
-      )}
-    </div>
-  );
-
-  if (fullScreen) {
-    return (
-      <div className="fixed inset-0 bg-white dark:bg-gray-900 flex items-center justify-center z-50">
-        <div className="text-center">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            className="mb-8"
-          >
-            <div className="w-32 h-32 border-4 border-gray-300 border-t-blue-600 rounded-full animate-spin mx-auto" />
-            <div className="w-32 h-32 border-4 border-transparent border-t-purple-600 rounded-full animate-spin absolute top-0 left-0 mx-auto" 
-                 style={{ animationDirection: 'reverse', animationDuration: '1.5s' }} />
-          </motion.div>
-          
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="text-2xl font-bold text-gray-800 dark:text-white mb-4"
-          >
-            Zion Tech Group
-          </motion.h2>
-          
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
-            className="text-gray-600 dark:text-gray-300 text-lg"
-          >
-            {text}
-          </motion.p>
-          
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.7 }}
-            className="mt-8 flex justify-center space-x-2"
-          >
-            {[0, 1, 2].map((i) => (
-              <motion.div
-                key={i}
-                className="w-2 h-2 bg-blue-600 rounded-full"
-                animate={{
-                  scale: [1, 1.5, 1],
-                  opacity: [0.5, 1, 0.5]
-                }}
-                transition={{
-                  duration: 1.5,
-                  repeat: Infinity,
-                  delay: i * 0.2
-                }}
-              />
-            ))}
-          </motion.div>
-        </div>
-      </div>
-    );
-  }
-
-  return content;
-}
+      )}"
+  )};"
+export default LoadingSpinner;""

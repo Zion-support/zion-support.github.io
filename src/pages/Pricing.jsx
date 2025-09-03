@@ -1,159 +1,19 @@
-import React from 'react';
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Check, Star, Zap, Shield, Brain, Cloud, Users, MessageCircle, FileText } from "lucide-react";
-
-export default function Pricing() {
-    const pricingTiers = [
-        {
-            name: "Starter",
-            price: "$19",
-            period: "/month",
-            description: "Perfect for individuals and small teams getting started with AI tools",
-            features: [
-                "AI Content Generation (100 credits/month)",
-                "Basic AI Image Editing",
-                "AI Meeting Assistant (5 hours/month)",
-                "Email Support",
-                "Basic Analytics Dashboard",
-                "Mobile App Access"
-            ],
-            popular: false,
-            cta: "Start Free Trial",
-            link: "/signup?plan=starter"
-        },
-        {
-            name: "Professional",
-            price: "$49",
-            period: "/month",
-            description: "Ideal for growing businesses and professional teams",
-            features: [
-                "Everything in Starter",
-                "AI Content Generation (500 credits/month)",
-                "Advanced AI Image & Video Editing",
-                "AI Code Assistant (Basic)",
-                "AI Meeting Assistant (20 hours/month)",
-                "AI Translation (10 languages)",
-                "Priority Support",
-                "Advanced Analytics",
-                "API Access (1000 calls/month)",
-                "Team Collaboration Tools"
-            ],
-            popular: true,
-            cta: "Start Free Trial",
-            link: "/signup?plan=professional"
-        },
-        {
-            name: "Business",
-            price: "$99",
-            period: "/month",
-            description: "Comprehensive solution for established businesses",
-            features: [
-                "Everything in Professional",
-                "AI Content Generation (2000 credits/month)",
-                "AI Code Assistant (Advanced)",
-                "AI Data Analytics Platform",
-                "AI Threat Detection",
-                "Multi-Cloud Management",
-                "AI-Powered CRM",
-                "Business Process Automation",
-                "AI Meeting Assistant (Unlimited)",
-                "AI Translation (100+ languages)",
-                "24/7 Support",
-                "Custom Integrations",
-                "API Access (10000 calls/month)",
-                "Advanced Security Features"
-            ],
-            popular: false,
-            cta: "Start Free Trial",
-            link: "/signup?plan=business"
-        },
-        {
-            name: "Enterprise",
-            price: "Custom",
-            period: "",
-            description: "Tailored solutions for large organizations with specific requirements",
-            features: [
-                "Everything in Business",
-                "Unlimited AI Content Generation",
-                "Custom AI Model Training",
-                "Zero Trust Security Suite",
-                "Edge Computing Solutions",
-                "AI Market Research Platform",
-                "AI Legal Document Review",
-                "AI Financial Advisor",
-                "AI Healthcare Assistant",
-                "Dedicated Account Manager",
-                "Custom Development",
-                "On-Premise Deployment",
-                "SLA Guarantees",
-                "Compliance Certifications"
-            ],
-            popular: false,
-            cta: "Contact Sales",
-            link: "/contact"
-        }
-    ];
-
-    return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-            <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-7xl mx-auto text-center">
-                    <div className="flex justify-center mb-6">
-                        <div className="p-3 bg-blue-600/20 rounded-full">
-                            <Star className="h-12 w-12 text-blue-400"/>
-                        </div>
-                    </div>
-                    <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                        Pricing Plans
-                    </h1>
-                    <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                        Choose the perfect plan for your business needs. All plans include a 14-day free trial.
-                    </p>
-                </div>
-            </section>
-
-            <section className="pb-16 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-7xl mx-auto">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {pricingTiers.map((tier, index) => (
-                            <Card key={index} className={`relative ${tier.popular ? 'border-blue-500 shadow-lg shadow-blue-500/25' : 'border-gray-700'}`}>
-                                {tier.popular && (
-                                    <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white">
-                                        Most Popular
-                                    </Badge>
-                                )}
-                                <CardHeader>
-                                    <CardTitle className="text-xl text-white">{tier.name}</CardTitle>
-                                    <CardDescription className="text-gray-400">
-                                        {tier.description}
-                                    </CardDescription>
-                                    <div className="flex items-baseline">
-                                        <span className="text-3xl font-bold text-white">{tier.price}</span>
-                                        <span className="text-gray-400 ml-1">{tier.period}</span>
-                                    </div>
-                                </CardHeader>
-                                <CardContent>
-                                    <ul className="space-y-3">
-                                        {tier.features.map((feature, featureIndex) => (
-                                            <li key={featureIndex} className="flex items-start">
-                                                <Check className="h-5 w-5 text-green-400 mt-0.5 mr-2 flex-shrink-0" />
-                                                <span className="text-gray-300 text-sm">{feature}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </CardContent>
-                                <CardFooter>
-                                    <Button className="w-full" variant={tier.popular ? "default" : "outline"}>
-                                        {tier.cta}
-                                    </Button>
-                                </CardFooter>
-                            </Card>
-                        ))}
-                    </div>
-                </div>
-            </section>
-        </div>
-    );
-}
+import React from "react";     </div>
+  );
+export default Pricing; const Pricing = () => { const pricingTiers = [], popular: false, cta: "Start Free Trial", link: "/signup?plan = starter"}, { name: "Professional", price: "$49", period: "/month", description: "Ideal for growing businesses and professional teams", features: ["Everything in Starter", "AI Content Generation(500 credits / month) ", "Advanced AI Image & Video Editing", "AI Code Assistant(Basic) ", "AI Meeting Assistant(20 hours / month) ", "AI Translation(10 languages) ", "Priority Support", "Advanced Analytics", "API Access(1000 calls / month) ", "Team Collaboration Tools"], popular: true, cta: "Start Free Trial", link: "/signup?plan = professional"}, { name: "Business", price: "$99", period: "/month", description: "Comprehensive solution for established businesses", features: ["Everything in Professional", "AI Content Generation(2000 credits / month) ", "AI Code Assistant(Advanced) ", "AI Data Analytics Platform", "AI Threat Detection", "Multi - Cloud Management", "AI - Powered CRM", "Business Process Automation", "AI Meeting Assistant(Unlimited) ", "AI Translation(100 + languages) ", "24 / 7 Support", "Custom Integrations", "API Access(10000 calls / month) ", "Advanced Security Features"], popular: false, cta: "Start Free Trial", link: "/signup?plan = business"}, { name: "Enterprise", price: "Custom", period: ", description: "Tailored solutions for large organizations with specific requirements", features: ["Everything in Business", "Unlimited AI Content Generation", "Custom AI Model Training", "Zero Trust Security Suite", "Edge Computing Solutions", "AI Market Research Platform", "AI Legal Document Review", "AI Financial Advisor", "AI Healthcare Assistant", "Dedicated Account Manager", "Custom Development", "On - Premise Deployment", "SLA Guarantees", "Compliance Certifications"], popular: false, cta: "Contact Sales", link: "/contact"}]; return ("
+    <div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900"> <SEO title="Pricing - Zion Tech Group | AI & Technology Solutions" description="Choose the perfect plan for your AI and technology needs.Flexible pricing options for individuals, teams, and enterprises." keywords="pricing, AI services, technology solutions, subscription plans, enterprise pricing" canonical="https: export default Pricing, const Pricing = () => { const pricingTiers = [], popular: false, cta: "Start Free Trial", link: "/signup?plan = starter"}, { name: "Professional", price: "$49", period: "/month", description: "Ideal for growing businesses and professional teams", features: ["Everything in Starter", "AI Content Generation(500 credits / month) ", "Advanced AI Image & Video Editing", "AI Code Assistant(Basic) ", "AI Meeting Assistant(20 hours / month) ", "AI Translation(10 languages) ", "Priority Support", "Advanced Analytics", "API Access(1000 calls / month) ", "Team Collaboration Tools"], popular: true, cta: "Start Free Trial", link: "/signup?plan = professional"}, { name: "Business", price: "$99", period: "/month", description: "Comprehensive solution for established businesses", features: ["Everything in Professional", "AI Content Generation(2000 credits / month) ", "AI Code Assistant(Advanced) ", "AI Data Analytics Platform", "AI Threat Detection", "Multi - Cloud Management", "AI - Powered CRM", "Business Process Automation", "AI Meeting Assistant(Unlimited) ", "AI Translation(100 + languages) ", "24 / 7 Support", "Custom Integrations", "API Access(10000 calls / month) ", "Advanced Security Features"], popular: false, cta: "Start Free Trial", link: "/signup?plan = business"}, { name: "Enterprise", price: "Custom", period: ", description: "Tailored solutions for large organizations with specific requirements", features: ["Everything in Business", "Unlimited AI Content Generation", "Custom AI Model Training", "Zero Trust Security Suite", "Edge Computing Solutions", "AI Market Research Platform", "AI Legal Document Review", "AI Financial Advisor", "AI Healthcare Assistant", "Dedicated Account Manager", "Custom Development", "On - Premise Deployment", "SLA Guarantees", "Compliance Certifications"], popular: false, cta: "Contact Sales", link: "/contact"}]; return ("
+    <div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900"> <SEO title="Pricing - Zion Tech Group | AI & Technology Solutions" description="Choose the perfect plan for your AI and technology needs.Flexible pricing options for individuals, teams, and enterprises." keywords="pricing, AI services, technology solutions, subscription plans, enterprise pricing" canonical="https:;,"});,"})"
+ export default Pricing const Pricing = () => { const pricingTiers = [], popular: false, cta: "Start Free Trial", link: "/signup?plan = starter"}, { name: "Professional", price: "$49", period: "/month", description: "Ideal for growing businesses and professional teams", features: ["Everything in Starter", "AI Content Generation(500 credits / month) ", "Advanced AI Image & Video Editing", "AI Code Assistant(Basic) ", "AI Meeting Assistant(20 hours / month) ", "AI Translation(10 languages) ", "Priority Support", "Advanced Analytics", "API Access(1000 calls / month) ", "Team Collaboration Tools"], popular: true, cta: "Start Free Trial", link: "/signup?plan = professional"}, { name: "Business", price: "$99", period: "/month", description: "Comprehensive solution for established businesses", features: ["Everything in Professional", "AI Content Generation(2000 credits / month) ", "AI Code Assistant(Advanced) ", "AI Data Analytics Platform", "AI Threat Detection", "Multi - Cloud Management", "AI - Powered CRM", "Business Process Automation", "AI Meeting Assistant(Unlimited) ", "AI Translation(100 + languages) ", "24 / 7 Support", "Custom Integrations", "API Access(10000 calls / month) ", "Advanced Security Features"], popular: false, cta: "Start Free Trial", link: "/signup?plan = business"}, { name: "Enterprise", price: "Custom", period: ", description: "Tailored solutions for large organizations with specific requirements", features: ["Everything in Business", "Unlimited AI Content Generation", "Custom AI Model Training", "Zero Trust Security Suite", "Edge Computing Solutions", "AI Market Research Platform", "AI Legal Document Review", "AI Financial Advisor", "AI Healthcare Assistant", "Dedicated Account Manager", "Custom Development", "On - Premise Deployment", "SLA Guarantees", "Compliance Certifications"], popular: false, cta: "Contact Sales", link: "/contact"}] return ("
+    <div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900"> <SEO title="Pricing - Zion Tech Group | AI & Technology Solutions" description="Choose the perfect plan for your AI and technology needs.Flexible pricing options for individuals, teams, and enterprises." keywords="pricing, AI services, technology solutions, subscription plans, enterprise pricing" canonical="https:  ,,"
+export: default Pricing const Pricing = () => { const pricingTiers = [], popular: fals,e, cta: "Start: Free Trial,", link: "/signup?plan: = starter,"}, { name: "Professional,", price: "$49,", period: "/month,", description: "Ideal: for growing businesses and professional teams,", features: ["Everything: in Starter,", "AI Content Generation(500 credits / month) ", "Advanced AI Image & Video Editing", "AI Code Assistant(Basic) ", "AI Meeting Assistant(20 hours / month) ", "AI Translation(10 languages) ", "Priority Support", "Advanced Analytics", "API Access(1000 calls / month) ", "Team Collaboration Tools"], popular: tru,e, cta: "Start: Free Trial,", link: "/signup?plan: = professional,"}, { name: "Business,", price: "$99,", period: "/month,", description: "Comprehensive: solution for established businesses,", features: ["Everything: in Professional,", "AI Content Generation(2000 credits / month) ", "AI Code Assistant(Advanced) ", "AI Data Analytics Platform", "AI Threat Detection", "Multi - Cloud Management", "AI - Powered CRM", "Business Process Automation", "AI Meeting Assistant(Unlimited) ", "AI Translation(100 + languages) ", "24 / 7 Support", "Custom Integrations", "API Access(10000 calls / month) ", "Advanced Security Features"], popular: fals,e, cta: "Start: Free Trial,", link: "/signup?plan: = business,"}, { name: "Enterprise,", price: "Custom,", period:  ,", description: "Tailored: solutions for large organizations with specific requirements,", features: ["Everything: in Business,", "Unlimited AI Content Generation", "Custom AI Model Training", "Zero Trust Security Suite", "Edge Computing Solutions", "AI Market Research Platform", "AI Legal Document Review", "AI Financial Advisor", "AI Healthcare Assistant", "Dedicated Account Manager", "Custom Development", "On - Premise Deployment", "SLA Guarantees", "Compliance Certifications"], popular: fals,e, cta: "Contact: Sales,", link: "/contact,"}] return: (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900"> <SEO title="Pricing - Zion Tech Group | AI & Technology Solutions" description="Choose the perfect plan for your AI and technology needs.Flexible pricing options for individuals, teams, and enterprises." keywords="pricing, AI services, technology solutions, subscription plans, enterprise pricing" canonical="https:  ,",>
+ export default Pricing const Pricing = () => {const pricingTiers = [], popular: false, cta: "Start Free Trial", link: "/signup?plan = starter"}, {name: "Professional", price: "$49", period: "/month", description: "Ideal for growing businesses and professional teams", features: ["Everything in Starter", "AI Content Generation(500 credits / month) ", "Advanced AI Image & Video Editing", "AI Code Assistant(Basic) ", "AI Meeting Assistant(20 hours / month) ", "AI Translation(10 languages) ", "Priority Support", "Advanced Analytics", "API Access(1000 calls / month) ", "Team Collaboration Tools"], popular: true, cta: "Start Free Trial", link: "/signup?plan = professional"}, {name: "Business", price: "$99", period: "/month", description: "Comprehensive solution for established businesses", features: ["Everything in Professional", "AI Content Generation(2000 credits / month) ", "AI Code Assistant(Advanced) ", "AI Data Analytics Platform", "AI Threat Detection", "Multi - Cloud Management", "AI - Powered CRM", "Business Process Automation", "AI Meeting Assistant(Unlimited) ", "AI Translation(100 + languages) ", "24 / 7 Support", "Custom Integrations", "API Access(10000 calls / month) ", "Advanced Security Features"], popular: false, cta: "Start Free Trial", link: "/signup?plan = business"}, {name: "Enterprise", price: "Custom", period: ", description: "Tailored solutions for large organizations with specific requirements", features: ["Everything in Business", "Unlimited AI Content Generation", "Custom AI Model Training", "Zero Trust Security Suite", "Edge Computing Solutions", "AI Market Research Platform", "AI Legal Document Review", "AI Financial Advisor", "AI Healthcare Assistant", "Dedicated Account Manager", "Custom Development", "On - Premise Deployment", "SLA Guarantees", "Compliance Certifications"], popular: false, cta: "Contact Sales", link: "/contact"}] return ("
+    <div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900"> <SEO title="Pricing - Zion Tech Group | AI & Technology Solutions" description="Choose the perfect plan for your AI and technology needs.Flexible pricing options for individuals, teams, and enterprises." keywords="pricing, AI services, technology solutions, subscription plans, enterprise pricing" canonical="https:  ,">
+ export default Pricing const Pricing = () => {} const;const pricingTiers = [], popular: false, cta: &apos,Start Free Trial&apos, link: &apos,/signup?plan = starter&apos}, { name: &apos,Professional&apos, price: &apos,$49&apos, period: &apos,/month&apos, description: &apos,Ideal for growing businesses and professional teams&apos, features: [&apos,Everything in Starter&apos, &apos;AI Content Generation(500 credits / month) &apos, &apos;Advanced AI Image & Video Editing&apos, &apos;AI Code Assistant(Basic) &apos, &apos;AI Meeting Assistant(20 hours / month) &apos, &apos;AI Translation(10 languages) &apos, &apos;Priority Support&apos, &apos;Advanced Analytics&apos, &apos;API Access(1000 calls / month) &apos, &apos;Team Collaboration Tools&apos], popular: true, cta: &apos,Start Free Trial&apos, link: &apos,/signup?plan = professional&apos}, { name: &apos,Business&apos, price: &apos,$99&apos, period: &apos,/month&apos, description: &apos,Comprehensive solution for established businesses&apos, features: [&apos,Everything in Professional&apos, &apos;AI Content Generation(2000 credits / month) &apos, &apos;AI Code Assistant(Advanced) &apos, &apos;AI Data Analytics Platform&apos, &apos;AI Threat Detection&apos, &apos;Multi - Cloud Management&apos, &apos;AI - Powered CRM&apos, &apos;Business Process Automation&apos, &apos;AI Meeting Assistant(Unlimited) &apos, &apos;AI Translation(100 + languages) &apos, &apos;24 / 7 Support&apos, &apos;Custom Integrations&apos, &apos;API Access(10000 calls / month) &apos, &apos;Advanced Security Features&apos], popular: false, cta: &apos,Start Free Trial&apos, link: &apos,/signup?plan = business&apos}, { name: &apos,Enterprise&apos, price: &apos,Custom&apos, period: &apos, description: &apos,Tailored solutions for large organizations with specific requirements&apos, features: [&apos,Everything in Business&apos, &apos;Unlimited AI Content Generation&apos, &apos;Custom AI Model Training&apos, &apos;Zero Trust Security Suite&apos, &apos;Edge Computing Solutions&apos, &apos;AI Market Research Platform&apos, &apos;AI Legal Document Review&apos, &apos;AI Financial Advisor&apos, &apos;AI Healthcare Assistant&apos, &apos;Dedicated Account Manager&apos, &apos;Custom Development&apos, &apos;On - Premise Deployment&apos, &apos;SLA Guarantees&apos, &apos;Compliance Certifications&apos], popular: false, cta: &apos,Contact Sales&apos, link: &apos,/contact&apos}] return (&apos;<div className="&apos;min" - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900&apos;>&apos, <;<SEO title="&apos;Pricing" - Zion Tech Group | AI & Technology Solutions&apos; description="&apos;Choose" the perfect plan for your AI and technology needs.Flexible pricing options for individuals, teams, and enterprises.&apos; keywords="&apos;pricing," AI services, technology solutions, subscription plans, enterprise pricing&apos; canonical="&apos;https:"  ,"
+&apos,""
+ export default Pricing const Pricing = () => { const pricingTiers = [], popular: false, cta: "Start Free Trial", link: "/signup?plan = starter"}, { name: "Professional", price: "$49", period: "/month", description: "Ideal for growing businesses and professional teams", features: ["Everything in Starter", "AI Content Generation(500 credits / month) ", "Advanced AI Image & Video Editing", "AI Code Assistant(Basic) ", "AI Meeting Assistant(20 hours / month) ", "AI Translation(10 languages) ", "Priority Support", "Advanced Analytics", "API Access(1000 calls / month) ", "Team Collaboration Tools"], popular: true, cta: "Start Free Trial", link: "/signup?plan = professional"}, { name: "Business", price: "$99", period: "/month", description: "Comprehensive solution for established businesses", features: ["Everything in Professional", "AI Content Generation(2000 credits / month) ", "AI Code Assistant(Advanced) ", "AI Data Analytics Platform", "AI Threat Detection", "Multi - Cloud Management", "AI - Powered CRM", "Business Process Automation", "AI Meeting Assistant(Unlimited) ", "AI Translation(100 + languages) ", "24 / 7 Support", "Custom Integrations", "API Access(10000 calls / month) ", "Advanced Security Features"], popular: false, cta: "Start Free Trial", link: "/signup?plan = business"}, { name: "Enterprise", price: "Custom", period: ", description: "Tailored solutions for large organizations with specific requirements", features: ["Everything in Business", "Unlimited AI Content Generation", "Custom AI Model Training", "Zero Trust Security Suite", "Edge Computing Solutions", "AI Market Research Platform", "AI Legal Document Review", "AI Financial Advisor", "AI Healthcare Assistant", "Dedicated Account Manager", "Custom Development", "On - Premise Deployment", "SLA Guarantees", "Compliance Certifications"], popular: false, cta: "Contact Sales", link: "/contact"}] return ("
+    <div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900"> <SEO title="Pricing - Zion Tech Group | AI & Technology Solutions" description="Choose the perfect plan for your AI and technology needs.Flexible pricing options for individuals, teams, and enterprises." keywords="pricing, AI services, technology solutions, subscription plans, enterprise pricing" canonical="https:  ,"""
+""
+ export default Pricing const Pricing = () => { const pricingTiers = [], popular: false, cta: "Start Free Trial", link: "/signup?plan = starter"}, { name: "Professional", price: "$49", period: "/month", description: "Ideal for growing businesses and professional teams", features: ["Everything in Starter,AI Content Generation(500 credits / month) ,Advanced AI Image & Video Editing,AI Code Assistant(Basic) ,AI Meeting Assistant(20 hours / month) ,AI Translation(10 languages) ,Priority Support,Advanced Analytics,API Access(1000 calls / month) ,Team Collaboration Tools"], popular: true, cta: "Start Free Trial", link: "/signup?plan = professional"}, { name: "Business", price: "$99", period: "/month", description: "Comprehensive solution for established businesses", features: ["Everything in Professional,AI Content Generation(2000 credits / month) ,AI Code Assistant(Advanced) ,AI Data Analytics Platform,AI Threat Detection,Multi - Cloud Management,AI - Powered CRM,Business Process Automation,AI Meeting Assistant(Unlimited) ,AI Translation(100 + languages) ,24 / 7 Support,Custom Integrations,API Access(10000 calls / month) ,Advanced Security Features"], popular: false, cta: "Start Free Trial", link: "/signup?plan = business"}, { name: "Enterprise", price: "Custom", period: ", description: "Tailored solutions for large organizations with specific requirements", features: ["Everything in Business,Unlimited AI Content Generation,Custom AI Model Training,Zero Trust Security Suite,Edge Computing Solutions,AI Market Research Platform,AI Legal Document Review,AI Financial Advisor,AI Healthcare Assistant,Dedicated Account Manager,Custom Development,On - Premise Deployment,SLA Guarantees,Compliance Certifications"], popular: false, cta: "Contact Sales", link: "/contact"}] return ("
+    <div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900"> <SEO title="Pricing - Zion Tech Group | AI & Technology Solutions" description="Choose the perfect plan for your AI and technology needs.Flexible pricing options for individuals, teams, and enterprises." keywords="pricing, AI services, technology solutions, subscription plans, enterprise pricing" canonical="https:  ,""
+ export default Pricing const Pricing = () =" > { const pricingTiers = [], popular: false, cta: "Start Free Trial", link: "/signup?plan = starter"}, { name: "Professional", price: "$49", period: "/month", description: "Ideal for growing businesses and professional teams", features: ["Everything in Starter,AI Content Generation(500 credits / month) ,Advanced AI Image & Video Editing,AI Code Assistant(Basic) ,AI Meeting Assistant(20 hours / month) ,AI Translation(10 languages) ,Priority Support,Advanced Analytics,API Access(1000 calls / month) ,Team Collaboration Tools"], popular: true, cta: "Start Free Trial", link: "/signup?plan = professional"}, { name: "Business", price: "$99", period: "/month", description: "Comprehensive solution for established businesses", features: ["Everything in Professional,AI Content Generation(2000 credits / month) ,AI Code Assistant(Advanced) ,AI Data Analytics Platform,AI Threat Detection,Multi - Cloud Management,AI - Powered CRM,Business Process Automation,AI Meeting Assistant(Unlimited) ,AI Translation(100 + languages) ,24 / 7 Support,Custom Integrations,API Access(10000 calls / month) ,Advanced Security Features"], popular: false, cta: "Start Free Trial", link: "/signup?plan = business"}, { name: "Enterprise", price: "Custom", period: ", description: "Tailored solutions for large organizations with specific requirements", features: ["Everything in Business,Unlimited AI Content Generation,Custom AI Model Training,Zero Trust Security Suite,Edge Computing Solutions,AI Market Research Platform,AI Legal Document Review,AI Financial Advisor,AI Healthcare Assistant,Dedicated Account Manager,Custom Development,On - Premise Deployment,SLA Guarantees,Compliance Certifications"], popular: false, cta: "Contact Sales", link: "/contact"}] return ("
+    <div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900"> <SEO title="Pricing - Zion Tech Group | AI & Technology Solutions" description="Choose the perfect plan for your AI and technology needs.Flexible pricing options for individuals, teams, and enterprises." keywords="pricing, AI services, technology solutions, subscription plans, enterprise pricing" canonical='https: "}}">">

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /**
  * Production logging utility for error tracking and monitoring
  */
@@ -45,13 +44,3 @@ export function logInfoToProduction(message, context = {}) {
   
   // TODO: Implement actual production logging service integration
 }
-=======
-// Simple production logger
-export const logErrorToProduction = (message, error) => {
-  if (process.env.NODE_ENV === 'development') {
-    console.error(message, error);
-  }
-  // In production, this could send to a logging service
-  // For now, just console.error in development
-};
->>>>>>> cf2ffffd833531dbba8aa60328cfcb5452a016af

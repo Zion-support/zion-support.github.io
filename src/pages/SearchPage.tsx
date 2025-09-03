@@ -1,40 +1,50 @@
-import { useEffect, useState } from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
-import { generateSearchSuggestions } from "@/data/marketplaceData";
-import { useAISearch } from "@/hooks/useAISearch";
-export default function SearchPage() {
-    const [params] = useSearchParams();
-    const navigate = useNavigate();
-    const initial = params.get("q") || "";
-    const [query, setQuery] = useState(initial);
-    const { results, loading, search } = useAISearch();
-    const suggestions = generateSearchSuggestions();
-    useEffect(() => {
-        if (initial) {
-            search(initial);
-        }
-    }, [initial]);
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        navigate(`/search?q=${encodeURIComponent(query)}`);
-        search(query);
-    };
-    return (<main className="container mx-auto px-4 py-8">
-        <form onSubmit={handleSubmit} className="mb-6">
-          <EnhancedSearchInput value={query} onChange={setQuery} searchSuggestions={suggestions} placeholder="Search talent, jobs, and projects..."/>
-        </form>
-
-        {loading && <p className="text-zion-slate-light">Searching...</p>}
-        {!loading && results.length === 0 && (<p className="text-zion-slate-light">No results found.</p>)}
-        {!loading && results.length > 0 && (<div className="space-y-4">
-            {results.map((r) => (<div key={`${r.type}-${r.id}`} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4">
-                <p className="text-xs uppercase text-zion-slate-light mb-1">
-                  {r.type}
-                </p>
-                <h3 className="text-lg font-bold text-white">{r.title}</h3>
-                <p className="text-zion-slate-light">{r.description}</p>
-              </div>))}
-          </div>)}
-      </main>);
+import React from "react"
+import Head from "next/head"
+import Link from "next/link"
+const SearchPage = () => {
+  return (
+    <>
+      <Head>
+        <title>Search Page - Zion Tech Group</title>
+        <meta name="description" content="Professional Search Page services"  />
+      </Head>
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-8">
+              Search Page
+            </h1>
+            <p className="text-xl text-gray-600 mb-12">
+              Professional Search Page services and solutions
+            </p>
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h2 className="text-2xl font-semibold mb-4">Our Services</h2>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Professional Solutions</li>
+                  <li>• Expert Implementation</li>
+                  <li>• 24/7 Support</li>
+                  <li>• Custom Development</li>
+                </ul>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Industry Expertise</li>
+                  <li>• Proven Results</li>
+                  <li>• Scalable Solutions</li>
+                  <li>• Competitive Pricing</li>
+                </ul>
+              </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                View Pricing
+              </Link>
+              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
+                Contact Us
+              </Link>
+            </div>
+    </>
+  );
 }
+export default SearchPage

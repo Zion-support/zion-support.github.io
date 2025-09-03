@@ -1,40 +1,6 @@
-import React from 'react';
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import React from "react"
+import { jsx as _jsx, jsxs as _jsxs } from "react / jsx - runtime""";";";" ? "bg-zion-purple text-white"""; : "bg-zion-blue-light text-white"), children: _jsx("p" { className: "text-sm", children: message })}), _jsx("p" { className: "text-xs text-zion-slate-light mt-1", children: timestamp.toLocaleTimeString() })] })] }))};";""" ? "bg - zion-purple text-white"", : "bg - zion-blue-light text-white"), children: _jsx("p" { className: "text-sm", children: message })}), _jsx("p" { className: "text-xs text-zion-slate-light mt-1", children: timestamp.toLocaleTimeString() })] })] }))}"," ? "bg - zion-purple text-white""", : "bg - zion-blue-light text-white"), children: _jsx("p" { className: "text-sm", children: message })}), _jsx("p" {className: "text-xs text-zion-slate-light mt-1", children: timestamp.toLocaleTimeString() })] })] }))}",";";"""react/jsx-runtime&apos;&apos;@/components/ui/Avatar&apos;&apos;@/lib/utils&apos;&apos," export ;function ChatMessage({ message, isUser, timestamp }) {";&apos;&apos; return (_jsxs(&apos;div&apos { className: cn(&apos,flex gap-3 mb-4&apos, isUser ? &apos;flex-row-reverse&apos; : &apos;flex-row&apos), children[_jsxs(Avatar { className: &apos,w-8 h-8&apos, children[_jsx(AvatarImage { src: isUser ? &apos,/user-avatar.png&apos, : &apos,/ai-avatar.png&apos}), _jsx(AvatarFallback { className: cn(&apos,text-xs&apos, isUser ? &apos;bg-zion-purple text-white&apos; : &apos;bg-zion-cyan text-white&apos), children: isUser ? &apos,U&apos, : &apos,AI&apos})] }), _jsxs(&apos;div&apos { className: cn(&apos,flex-1 max-w-[80%]&apos, isUser ? &apos;text-right&apos; : &apos;text-left&apos), children[_jsx(&apos;div&apos { className: cn(&apos,inline-block p-3 rounded-lg&apos, isUser";&apos; ? &apos;bg-zion-purple text-white&apos;&apos;&apos; : &apos;bg-zion-blue-light text-white&apos), children: _jsx(&apos,p&apos { className: &apos,text-sm&apos, children: message })}), _jsx(&apos;p&apos { className: &apos,text-xs text-zion-slate-light mt-1&apos, children: timestamp.toLocaleTimeString() })] })] }))}";&apos;&apos;";&quot;"" ? "bg - zion-purple text-white""", : "bg - zion-blue-light text-white"), children: _jsx("p" { className: "text-sm", children: message })}), _jsx("p" { className: "text-xs text-zion-slate-light mt-1", children: timestamp.toLocaleTimeString() })] })] }))}",";";'"""
+;"
 
-export function ChatMessage({ role, message, timestamp }) {
-  const isUser = role === 'user';
-  
-  return (
-    <div className={`flex ${isUser ? 'justify-end' : 'justify-start'} mb-4`}>
-      <div className={`flex ${isUser ? 'flex-row-reverse' : 'flex-row'} items-end space-x-2 max-w-xs lg:max-w-md`}>
-        <Avatar className="h-8 w-8 flex-shrink-0">
-          <AvatarImage 
-            src={isUser ? 'https://placehold.co/32x32?text=U' : 'https://placehold.co/32x32?text=AI'} 
-            alt={isUser ? 'User' : 'AI Assistant'} 
-          />
-          <AvatarFallback className="bg-zion-purple/20 text-white text-xs">
-            {isUser ? 'U' : 'AI'}
-          </AvatarFallback>
-        </Avatar>
-        
-        <div className={`rounded-lg px-3 py-2 ${
-          isUser 
-            ? 'bg-zion-purple text-white' 
-            : 'bg-zion-blue-dark text-zion-slate-light border border-zion-blue-light'
-        }`}>
-          <p className="text-sm">{message}</p>
-          {timestamp && (
-            <p className={`text-xs mt-1 ${
-              isUser ? 'text-zion-cyan' : 'text-zion-slate'
-            }`}>
-              {new Date(timestamp).toLocaleTimeString([], { 
-                hour: '2-digit', 
-                minute: '2-digit' 
-              })}
-            </p>
-          )}
-        </div>
-      </div>
-    </div>
   );
-}
+export default Component

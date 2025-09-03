@@ -1,141 +1,50 @@
-import React from 'react';
-import { useEffect } from 'react';
-import { useAuth } from "@/hooks/useAuth";
-import { Button } from "@/components/ui/button";
-import { useNavigate } from "react-router-dom";
-<<<<<<< HEAD
-
-export default function Profile() {
-    const { user, isLoading, logout } = useAuth();
-    const navigate = useNavigate();
-    
-    useEffect(() => {
-        if (!isLoading && !user) {
-            alert("Please log in to view your profile");
-            navigate("/login?redirect=/profile");
-        }
-    }, [user, isLoading, navigate]);
-    
-    if (isLoading) {
-        return (
-            <div className="min-h-screen bg-zion-blue flex items-center justify-center">
-                <div className="animate-pulse text-white">Loading profile...</div>
-            </div>
-        );
-    }
-    
-    if (!user) {
-        return (
-            <div className="min-h-screen bg-zion-blue flex items-center justify-center">
-                <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 max-w-md">
-                    <h1 className="text-xl font-bold text-white mb-4">Please log in</h1>
-                    <p className="text-zion-slate mb-4">You need to be logged in to view your profile.</p>
-                    <Button 
-                        onClick={() => navigate("/login?redirect=/profile")} 
-                        className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-                    >
-                        Go to Login
-                    </Button>
-                </div>
-            </div>
-        );
-    }
-    
-    return (
-        <div className="min-h-screen bg-zion-blue">
-            <div className="container mx-auto px-4 py-8">
-                <h1 className="text-2xl font-bold text-white mb-8">My Profile</h1>
-                <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
-                    <div className="flex flex-col md:flex-row gap-6">
-                        <div className="md:w-1/3">
-                            <div className="w-32 h-32 rounded-full bg-zion-purple flex items-center justify-center text-3xl font-bold text-white mb-4 mx-auto md:mx-0">
-                                {user.displayName ? user.displayName.split(' ').map(name => name[0]).join('') : user.email?.charAt(0)}
-                            </div>
-                        </div>
-                        <div className="md:w-2/3">
-                            <h2 className="text-xl font-bold text-white">{user.displayName || "User"}</h2>
-                            <p className="text-zion-slate-light mb-4">{user.email}</p>
-                            <Button 
-                                onClick={() => {
-                                    logout();
-                                    navigate("/");
-                                }} 
-                                variant="outline" 
-                                className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
-                            >
-                                Logout
-                            </Button>
-                        </div>
-                    </div>
-                </div>
-=======
-import { toast } from "sonner";
-export default function Profile() {
-    const { user, isLoading, logout } = useAuth();
-    const navigate = useNavigate();
-    useEffect(() => {
-        if (!isLoading && !user) {
-            toast.error("Please log in to view your profile");
-            navigate("/login?redirect=/profile");
-        }
-    }, [user, isLoading, navigate]);
-    if (isLoading) {
-        return (<>
-        
-        <div className="min-h-screen bg-zion-blue flex items-center justify-center">
-          <div className="animate-pulse text-white">Loading profile...</div>
-        </div>
-        
-      </>);
-    }
-    if (!user) {
-        return (<>
-        
-        <div className="min-h-screen bg-zion-blue flex items-center justify-center">
-          <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 max-w-md">
-            <h1 className="text-xl font-bold text-white mb-4">Please log in</h1>
-            <p className="text-zion-slate mb-4">You need to be logged in to view your profile.</p>
-            <Button onClick={() => navigate("/login?redirect=/profile")} className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
-              Go to Login
-            </Button>
-          </div>
-        </div>
-        
-      </>);
-    }
-    return (<>
-      
-      <div className="min-h-screen bg-zion-blue">
-        <div className="container mx-auto px-4 py-8">
-          <h1 className="text-2xl font-bold text-white mb-8">My Profile</h1>
-          <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
-            <div className="flex flex-col md:flex-row gap-6">
-              <div className="md:w-1/3">
-                <div className="w-32 h-32 rounded-full bg-zion-purple flex items-center justify-center text-3xl font-bold text-white mb-4 mx-auto md:mx-0">
-                  {user.displayName ? user.displayName.split(' ').map(name => name[0]).join('') : user.email?.charAt(0)}
-                </div>
+import React from "react"
+import Head from "next/head"
+import Link from "next/link"
+const Profile = () => {
+  return (
+    <>
+      <Head>
+        <title>Profile - Zion Tech Group</title>
+        <meta name="description" content="Professional Profile services"  />
+      </Head>
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-8">
+              Profile
+            </h1>
+            <p className="text-xl text-gray-600 mb-12">
+              Professional Profile services and solutions
+            </p>
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h2 className="text-2xl font-semibold mb-4">Our Services</h2>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Professional Solutions</li>
+                  <li>• Expert Implementation</li>
+                  <li>• 24/7 Support</li>
+                  <li>• Custom Development</li>
+                </ul>
               </div>
-              <div className="md:w-2/3">
-                <h2 className="text-xl font-bold text-white">{user.displayName || "User"}</h2>
-                <p className="text-zion-slate-light mb-4">{user.email}</p>
-                <Button onClick={() => {
-            logout();
-            navigate("/");
-        }} variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white">
-                  Logout
-                </Button>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Industry Expertise</li>
+                  <li>• Proven Results</li>
+                  <li>• Scalable Solutions</li>
+                  <li>• Competitive Pricing</li>
+                </ul>
               </div>
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                View Pricing
+              </Link>
+              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
+                Contact Us
+              </Link>
             </div>
-        </div>
-<<<<<<< HEAD
-    );
+    </>
+  );
 }
-=======
-      </div>
-      
-    </>);
-}
-;
-export default Profile;
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
+export default Profile
