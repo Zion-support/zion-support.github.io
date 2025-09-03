@@ -180,7 +180,6 @@ const Navigation = () => {
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
             className="lg:hidden bg-gray-900/95 backdrop-blur-md border-t border-cyan-400/20"
-          >
             <div className="px-4 py-6 space-y-4">
               {/* Contact Information */}
               <div className="pb-4 border-b border-gray-700">
