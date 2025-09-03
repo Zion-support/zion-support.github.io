@@ -40,7 +40,7 @@ export default function IoTSolutions() {
     'Enhanced customer experiences',
     'Data-driven decision making',
     'Real-time monitoring and control,Predictive maintenance capabilities,Improved operational efficiency,Cost reduction through automation,Enhanced customer experiences,Data-driven decision making'
-  ];
+  ]
 
   const industries = [
   {

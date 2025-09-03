@@ -60,9 +60,9 @@ export const Grid = {}
   render: () => {}
         localStorage.setItem('marketplaceView',grid');
         return <Marketplace />;
-
+;
 }
-
+;
 };: pages.disabled/stories/Marketplace.stories.jsx
 export const List = {
 
@@ -70,7 +70,7 @@ export const List = {
 'localStorage.setItem(
   'marketplaceView,list
   ');
-
+;
 };
 :pages.disabled/stories/Marketplace.stories.jsx
 export const List = {
@@ -81,28 +81,26 @@ export const List = {}
   render: () => {}
         localStorage.setItem('marketplaceView',list');
         return <Marketplace />;
-
+;
 }
-:pages.disabled/stories/Marketplace.stories.jsx
-};'"
-
+:pages.disabled/stories/Marketplace.stories.jsx;
+};'";
 }}
-  '"'"
-
-}}'"'"
+  '"'";
+}}'"'";
 };
 }}'""
   render: () => {,
   localStorage.setItem('
   'marketplaceView',grid'
-  ')        return <Marketplace />
+  ')        return <Marketplace />;
 }
 }: pages.disabled/stories/Marketplace.stories.jsx
 export const List = {
   render: () => {'
 'localStorage.setItem('
   'marketplaceView,list'
-  ')        return <Marketplace />
+  ')        return <Marketplace />;
 }
 :pages.disabled/stories/Marketplace.stories.jsx}}}
   '''""

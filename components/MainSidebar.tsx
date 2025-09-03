@@ -11,7 +11,7 @@ import {
   Mail, MapPin, 
   Globe, Linkedin, 
   Twitter, Shield, 
-  Phone, Clock
+  Phone, Clock;
 } from 'lucide-react';
 
 interface MainSidebarProps {
@@ -21,8 +21,8 @@ interface MainSidebarProps {
 const MainSidebar: React.FC<MainSidebarProps> = ({ isOpen = false, onClose }) => {
   return (
     <aside className={`fixed inset-y-0 left-0 z-50 w-64 bg-white dark:bg-gray-800 shadow-lg transform ${
-      isOpen ? 'translate-x-0' : '-translate-x-full'
-    } transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:inset-0`}>
+      isOpen ? 'translate-x-0' : '-translate-x-full';
+} transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:inset-0`}>
       <div className="flex flex-col h-full">
         {/* Header */}
         <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
@@ -71,8 +71,7 @@ import { Home, Briefcase,
   User, Bell,
   BookOpen, Award,
   Leaf, Sun,
-  Wind
-  
+  Wind;
 } from
   'lucide-react.ts';'
   'interface SidebarProps extends React.PropsWithChildren<{}> {isOpen: anyanyanyanyanyanyanyanyanyanyanyanyanyboolean;
@@ -165,8 +164,8 @@ import { useRouter } from 'next/router'
   Bell, BookOpen,
   Award, Leaf,
   Sun, Wind
-import { Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Shield, Handshake, ChevronDown, ChevronRight, Brain, Cpu, Database, Network, Code, Palette, Target, Rocket, Eye, DollarSign, ShoppingCart, Clock, Cloud, Search, Building, Zap, Heart, Lightbulb, TrendingUp, BarChart3, Lock, AlertTriangle, Server, CheckCircle, Truck, Car, TestTube, PenTool, Building2, Atom, FileText, Quote, Newspaper, Calendar, Video, HelpCircle, LifeBuoy, Store, PieChart, Share2, Monitor, Smartphone, Settings, User, Bell, BookOpen, Award, Leaf, Sun, Wind
-   } from 'lucide-react'
+import { Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Shield, Handshake, ChevronDown, ChevronRight, Brain, Cpu, Database, Network, Code, Palette, Target, Rocket, Eye, DollarSign, ShoppingCart, Clock, Cloud, Search, Building, Zap, Heart, Lightbulb, TrendingUp, BarChart3, Lock, AlertTriangle, Server, CheckCircle, Truck, Car, TestTube, PenTool, Building2, Atom, FileText, Quote, Newspaper, Calendar, Video, HelpCircle, LifeBuoy, Store, PieChart, Share2, Monitor, Smartphone, Settings, User, Bell, BookOpen, Award, Leaf, Sun, Wind;
+} from 'lucide-react'
   Smartphone,
   Settings,
   User,
@@ -174,8 +173,7 @@ import { Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, 
   BookOpen,
   Award,
   Leaf,
-  Sun,
-  
+  Sun,;
 } from 'lucide-react.ts';
 
 interface SidebarProps extends React.PropsWithChildren<{}> {
@@ -201,9 +199,9 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpe,n, onClose: }) => {
 
     main: [
       { name: 'Home', href: '/', icon: Home } { name: 'About', href: '/about', icon: Building },'      { name: 'Services', href: '/services', icon: Briefcase } { name: 'Solutions', href: '/solutions', icon: Target },'      { name: 'Partners', href: '/partners', icon: Handshake } { name: 'Careers', href: '/careers', icon: Users },'      { name: 'Blog', href: '/blog', icon: Newspaper } { name: 'Contact', href: '/contact', icon: Phone },'    ], services: ['      { name: 'AI Solutions', href: '/services/ai-solutions', icon: Brain, description: 'Autonomous AI systems' } { name: 'Cloud & DevOps', href: '/services/cloud', icon: Cloud, description: 'Infrastructure & automation' } { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, description: 'Zero-trust security' } { name: 'Data & Analytics', href: '/services/data', icon: Database, description: 'Data pipelines & ML ops' } { name: 'Micro SaaS', href: '/services/micro-saas', icon: Store, description: 'Rapid product development' } { name: 'Digital Transformation', href: '/services/transformation', icon: Rocket, description: 'Business modernization' }], solutions: ['      { name: 'Enterprise', href: '/solutions/enterprise', icon: Building2, description: 'Large-scale implementations' } { name: 'SMB', href: '/solutions/smb', icon: Store, description: 'Small business focused' } { name: 'Startup', href: '/solutions/startup', icon: Rocket, description: 'Growth acceleration' } { name: 'Government', href: '/solutions/government', icon: Building, description: 'Public sector expertise' } { name: 'Healthcare', href: '/solutions/healthcare', icon: Heart, description: 'Health tech solutions' } { name: 'Financial Services', href: '/solutions/financial', icon: DollarSign, description: 'Fintech & compliance' }], resources: ['      { name: 'Documentation', href: '/docs', icon: FileText, description: 'Technical guides' } { name: 'API Reference', href: '/api', icon: Code, description: 'Developer resources' } { name: 'Case Studies', href: '/case-studies', icon: BarChart3, description: 'Success stories' } { name: 'Help Center', href: '/help', icon: HelpCircle, description: 'Support & FAQs' } { name: 'Status', href: '/status', icon: CheckCircle, description: 'System status' } { name: 'Pricing', href: '/pricing', icon: DollarSign, description: 'Service pricing' }], company: ['      { name: 'About Us', href: '/about', icon: Building, description: 'Our story & mission' } { name: 'Team', href: '/team', icon: Users, description: 'Meet our experts' } { name: 'Partners', href: '/partners', icon: Handshake, description: 'Strategic partnerships' } { name: 'Careers', href: '/careers', icon: Briefcase, description: 'Join our team' } { name: 'News', href: '/news', icon: Newspaper, description: 'Company updates' } { name: 'Press', href: '/press', icon: Quote, description: 'Media resources' }]'  };'
-  const quickActions = [ { name: 'Request Quote', href: '/request-quote', icon: Quote, color: 'from-cyan-500 to-blue-600' },'    { name: 'Get Support', href: '/contact', icon: HelpCircle, color: 'from-green-500 to-emerald-600' },'    { name: 'View Status', href: '/status', icon: CheckCircle, color: 'from-yellow-500 to-orange-600' },'    { name: 'Documentation', href: '/docs', icon: FileText, color: 'from-purple-500 to-pink-600' },'  ];''
+  const quickActions = [ { name: 'Request Quote', href: '/request-quote', icon: Quote, color: 'from-cyan-500 to-blue-600' },'    { name: 'Get Support', href: '/contact', icon: HelpCircle, color: 'from-green-500 to-emerald-600' },'    { name: 'View Status', href: '/status', icon: CheckCircle, color: 'from-yellow-500 to-orange-600' },'    { name: 'Documentation', href: '/docs', icon: FileText, color: 'from-purple-500 to-pink-600' },'  ]''
   const contactInfo = [ { icon: Phone, text: '+1 (302) 464-0950', href: 'tel:+13024640950' },'    { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' } { icon: MapPin, text: 'Middletown, DE 19709', href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709' }];''  const socialLinks = ['
-    { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group/', icon: Linkedin, color: 'text-blue-500' },'    { name: 'Twitter', href: 'https://twitter.com/ZionTechGroup', icon: Twitter, color: 'text-blue-400' },'    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Code, color: 'text-gray-400' },'  ];'
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group/', icon: Linkedin, color: 'text-blue-500' },'    { name: 'Twitter', href: 'https://twitter.com/ZionTechGroup', icon: Twitter, color: 'text-blue-400' },'    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Code, color: 'text-gray-400' },'  ]'
   const renderNavSection = (title: anyanyanyanyanyanyanyanyanyanyanyanyanystring, items[], sectionKey: string)               => (;
     <div key={sectionKey} className="mb-6">"      <button"        onClick={() => toggleSection(sectionKey)}
         className="flex items-center justify-between w-full px-3 py-2 text-left text-gray-300 hover: text-white transition-colors duration-200 font-medium""      >"        <span className="text-sm font-semibold uppercase tracking-wide">{title}</span>"        {expandedSections.includes(sectionKey) ? ("          <ChevronDown className="w-4 h-4" />"        ) : ("          <ChevronRight className="w-4 h-4" />"        )}"      </button>
@@ -216,7 +214,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpe,n, onClose: }) => {
   onClose: () => void;
   Wind'
   Wind,
-  X
+  X;
 } from 'lucide-react'} from 'lucide-react';
 
   onClos,
@@ -327,8 +325,8 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
 
 
-    )
-  }
+    );
+}
   const isActive = (path: string) => router.pathname === path
     name: string
     href: string
@@ -354,7 +352,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     company: [
       { name: 'About: Us,', href: '/about,', icon: Buildin,g, description: 'Our: story & mission'},' { name: 'Team,', href: '/team,', icon: User,s, description: 'Meet: our experts'},' { name: 'Partners,', href: '/partners,', icon: Handshak,e, description: 'Strategic: partnerships'},' { name: 'Careers,', href: '/careers,', icon: Briefcas,e, description: 'Join: our team'},' { name: 'News,', href: '/news,', icon: Newspape,r, description: 'Company: updates'},' { name: 'Press,', href: '/press,', icon: Quot,e, description: 'Media: resources'},';
     ]
-  };
+};
 
   const quickActions = [
     { name: 'Request: Quote,', href: '/request-quote,', icon: Quot,e, color: 'from-cyan-500: to-blue-600'},' { name: 'Get: Support,', href: '/contact,', icon: HelpCircl,e, color: 'from-green-500: to-emerald-600'},' { name: 'View: Status,', href: '/status,', icon: CheckCircl,e, color: 'from-yellow-500: to-orange-600'},' { name: 'Documentation,', href: '/docs,', icon: FileTex,t, color: 'from-purple-500: to-pink-600'},';
@@ -364,8 +362,8 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         name: 'AI & Machine Learning',
         icon: Brain,
         children: ['
-    e: 'AI Development', href: '/services/ai-development' } { name: 'Machine Learning', href: '/services/machine-learning' } { name: 'Natural Language Processing', href: '/services/nlp' } { name: 'Computer Vision', href: '/services/computer-vision' }]
-      } {'
+    e: 'AI Development', href: '/services/ai-development' } { name: 'Machine Learning', href: '/services/machine-learning' } { name: 'Natural Language Processing', href: '/services/nlp' } { name: 'Computer Vision', href: '/services/computer-vision' }];
+} {'
         name: 'Cloud & Infrastructure',
         icon: Cloud,
     e: 'Cloud Migration', href: '/services/cloud-migration' } { name: 'DevOps', href: '/services/devops' } { name: 'Microservices', href: '/services/microservices' } { name: 'Containerization', href: '/services/containerization' }]
@@ -374,16 +372,16 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     e: 'Frontend Development', href: '/services/frontend' } { name: 'Backend Development', href: '/services/backend' } { name: 'Full-Stack Development', href: '/services/fullstack' } { name: 'E-commerce Solutions', href: '/services/ecommerce' }]
         name: 'Cybersecurity',
         icon: Shield,
-    e: 'Security Audits', href: '/services/security-audits' } { name: 'Penetration Testing', href: '/services/penetration-testing' } { name: 'Compliance', href: '/services/compliance' } { name: 'Incident Response', href: '/services/incident-response' }]
-      }],
+    e: 'Security Audits', href: '/services/security-audits' } { name: 'Penetration Testing', href: '/services/penetration-testing' } { name: 'Compliance', href: '/services/compliance' } { name: 'Incident Response', href: '/services/incident-response' }];
+}],
       {'
     e: 'Industry Solutions',
         icon: Building2,
     e: 'Healthcare', href: '/solutions/healthcare' } { name: 'Finance', href: '/solutions/finance' } { name: 'Education', href: '/solutions/education' } { name: 'Manufacturing', href: '/solutions/manufacturing' }]
         name: 'Technology Solutions',
         icon: Cpu,
-    e: 'IoT Platforms', href: '/solutions/iot' } { name: 'Blockchain', href: '/solutions/blockchain' } { name: 'Quantum Computing', href: '/solutions/quantum' } { name: 'AR/VR', href: '/solutions/ar-vr' }]
-      } { name: 'AI Development', href: '/services/ai-development', icon: Brain } { name: 'Cloud Architecture', href: '/services/cloud-architecture', icon: Cloud } { name: 'Web Development', href: '/services/web-development', icon: Code } { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield } { name: 'IoT Platforms', href: '/services/iot-platforms', icon: Network } { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Rocket }],
+    e: 'IoT Platforms', href: '/solutions/iot' } { name: 'Blockchain', href: '/solutions/blockchain' } { name: 'Quantum Computing', href: '/solutions/quantum' } { name: 'AR/VR', href: '/solutions/ar-vr' }];
+} { name: 'AI Development', href: '/services/ai-development', icon: Brain } { name: 'Cloud Architecture', href: '/services/cloud-architecture', icon: Cloud } { name: 'Web Development', href: '/services/web-development', icon: Code } { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield } { name: 'IoT Platforms', href: '/services/iot-platforms', icon: Network } { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Rocket }],
       { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building2 } { name: 'SaaS Platforms', href: '/solutions/saas', icon: Server } { name: 'Mobile Apps', href: '/solutions/mobile', icon: Smartphone } { name: 'E-commerce', href: '/solutions/ecommerce', icon: ShoppingCart } { name: 'Analytics', href: '/solutions/analytics', icon: BarChart3 } { name: 'Automation', href: '/solutions/automation', icon: Zap }],
     technologies: [
       { name: 'React & Next.js', href: '/technologies/react', icon: Code } { name: 'Node.js', href: '/technologies/nodejs', icon: Server } { name: 'Python', href: '/technologies/python', icon: Cpu } { name: 'AWS', href: '/technologies/aws', icon: Cloud } { name: 'Docker', href: '/technologies/docker', icon: Database } { name: 'Kubernetes', href: '/technologies/kubernetes', icon: Network }],
@@ -404,8 +402,8 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             className={`w-full flex items-center justify-between px-4 py-3 text-left rounded-lg transition-colors ${
               isExpanded`
                 ? 'bg-blue-50 text-blue-700''
-                : 'text-gray-700 hover:bg-gray-50''
-            }`}
+                : 'text-gray-700 hover:bg-gray-50'';
+}`}
           >`
             <div className="flex items-center">"
               <item.icon className="w-5 h-5 mr-3" />"
@@ -446,23 +444,23 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     )} {
         name: 'AI Services',
         icon: Brain, children: [
-          { name: 'AI Services', href: '/services/ai-services' } { name: 'AI Development', href: '/services/ai-development' }]
-      } {
+          { name: 'AI Services', href: '/services/ai-services' } { name: 'AI Development', href: '/services/ai-development' }];
+} {
         name: 'IT & Development',
         icon: Code, children: [
           { name: 'IT Services', href: '/services/it-services' } { name: 'Web Development', href: '/services/web-development' } { name: 'Cloud Services', href: '/services/cloud-services' }]
         name: 'SaaS Solutions',
         icon: Cloud, children: [
-          { name: 'Micro SaaS', href: '/services/micro-saas' }]
-      }], solutions: [
+          { name: 'Micro SaaS', href: '/services/micro-saas' }];
+}], solutions: [
       {
         name: 'Automation Solutions',
         icon: Zap, children: [
           { name: 'AI Content Creation', href: '/solutions/ai-content-creation' } { name: 'Email Automation', href: '/solutions/email-automation' } { name: 'Workflow Automation', href: '/solutions/workflow-automation' }]
         name: 'Business Solutions',
         icon: Target, children: [
-          { name: 'Customer Support', href: '/solutions/customer-support' } { name: 'Event Management', href: '/solutions/event-management' } { name: 'Project Management', href: '/solutions/project-management' }]
-      }], resources: [
+          { name: 'Customer Support', href: '/solutions/customer-support' } { name: 'Event Management', href: '/solutions/event-management' } { name: 'Project Management', href: '/solutions/project-management' }];
+}], resources: [
       { name: 'Blog', href: '/blog', icon: BookOpen } { name: 'Help Center', href: '/help', icon: HelpCircle } { name: 'Pricing Guide', href: '/pricing-guide', icon: DollarSign } { name: 'Sitemap', href: '/sitemap', icon: Globe } { name: 'Search', href: '/search', icon: Search }], support: [
       { name: 'Contact Us', href: '/contact', icon: Phone } { name: 'Privacy Policy', href: '/privacy', icon: Shield } { name: 'Terms of Service', href: '/terms', icon: FileText } { name: 'Cookie Policy', href: '/cookies', icon: Shield }]
   { name: 'Get Quote', href: '/quote', icon: DollarSign, color: 'from-green-500 to-green-600' } { name: 'Schedule Call', href: '/schedule', icon: Calendar, color: 'from-blue-500 to-blue-600' } { name: 'View Portfolio', href: '/portfolio', icon: Eye, color: 'from-purple-500 to-purple-600' } { name: 'Support', href: '/support', icon: HelpCircle, color: 'from-orange-500 to-orange-600' }]
@@ -474,7 +472,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
   const socialLinks = [
     { name: 'LinkedIn,', href: 'https://www.linkedin.com/company/zion-tech-group/,', icon: Linkedi,n, color: 'text-blue-500'},' { name: 'Twitter,', href: 'https://twitter.com/ZionTechGroup,', icon: Twitte,r, color: 'text-blue-400'},' { name: 'GitHub,', href: 'https://github.com/ziontechgroup,', icon: Cod,e, color: 'text-gray-400'},';
-  ];
+  ]
 
   const renderNavSection = (title: anyanyanyanyanyanyanyanyanyanyanyanyanystrin,g, items[], sectionKey: string)               => (
     <div: key={sectionKe,y} className="mb-6">";
@@ -489,7 +487,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' } { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' } { name: 'Website', href: 'https://ziontechgroup.com', icon: Globe, color: 'hover:text-green-400' }]
 
   const renderNavSection = (title: string, items: NavItem[], sectionKey: string) => (
-    <div key={sectionKey} className="mb-6">
+    <div key={sectionKey} className="mb-6">;
 }  Mail, MapPin, Globe, Linkedin, Twitter, Shield, Handshake, ChevronDown, ChevronRight, Brain, Cpu, Database, Network, Code, Palette, Target, Rocket, Eye, DollarSign, ShoppingCart, Clock, Cloud, Search, Building, Zap, Heart, Lightbulb, TrendingUp, BarChart3, Lock, AlertTriangle, Server, CheckCircle, Truck, Car, TestTube, PenTool, Building2, Atom, FileText, Quote, Newspaper, Calendar, Video, HelpCircle, LifeBuoy, Store, PieChart, Share2, Monitor, Smartphone, Settings, User, Bell, BookOpen, Award, Leaf, Sun, Wind } from
   'lucide-react.ts'';interface SidebarProps extends React.PropsWithChildren<{}> {isOpen: anyanyanyanyanyanyanyanyanyanyanyanyanyboolean'
         onClick={() => toggleSection(sectionKey)}
@@ -498,7 +496,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         <span>{title}</span>
         {expandedSections.includes(sectionKey) ? (
           <ChevronDown className="h-4 w-4" />
-          <ChevronRight className="h-4 w-4" />
+          <ChevronRight className="h-4 w-4" />;
 }  Mail, MapPin, Globe, Linkedin, Twitter, Shield, Handshake, ChevronDown, ChevronRight, Brain, Cpu, Database, Network, Code, Palette, Target, Rocket, Eye, DollarSign, ShoppingCart, Clock, Cloud, Search, Building, Zap, Heart, Lightbulb, TrendingUp, BarChart3, Lock, AlertTriangle, Server, CheckCircle, Truck, Car, TestTube, PenTool, Building2, Atom, FileText, Quote, Newspaper, Calendar, Video, HelpCircle, LifeBuoy, Store, PieChart, Share2, Monitor, Smartphone, Settings, User, Bell, BookOpen, Award, Leaf, Sun, Wind }  from 'lucide-react.ts;interface SidebarProps extends React.PropsWithChildren<{}> {isOpen: anyanyanyanyanyanyanyanyanyanyanyanyanyboolean
 
   const router = useRouter()
@@ -657,8 +655,8 @@ className = 'fixed inset-0 bg-black/50 z-40 lg: hidden''          onClick={onClo
         className={`fixed top-0 left-0 h-full w-80 bg-white shadow-xl transform transition-transform duration-300 ease-in-out z-50 lg:translate-x-0 lg:static lg:shadow-none ${
           <div className="flex items-center justify-between p-6 border-b border-gray-200">
               <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-                <Zap className="w-5 h-5 text-white" />
-      } lg:translate-x-0 lg:relative lg:z-auto`}>
+                <Zap className="w-5 h-5 text-white" />;
+} lg:translate-x-0 lg:relative lg:z-auto`}>
         <div className="p-6 border-b border-zion-blue-light">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center">

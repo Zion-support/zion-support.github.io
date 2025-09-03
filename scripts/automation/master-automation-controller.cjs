@@ -420,8 +420,8 @@ class MasterAutomationController {;
       }
 ;
       return errorLogs;
-    } catch (error) {  
-    } catch (error) {;
+    } catch (error) {  ;
+} catch (error) {;
       return [];
       }
   }
@@ -460,8 +460,8 @@ class MasterAutomationController {;
       const result = execSync('npm outdated --json', { encoding: 'utf8' });
       const outdated = JSON.parse(result);
       return Object.keys(outdated);
-    } catch (error) {  
-    } catch (error) {;
+    } catch (error) {  ;
+} catch (error) {;
       return [];
       }
   }
@@ -597,8 +597,8 @@ if (require.main === module) {;
   const args = process.argv.slice(2);
   if (args.length > 0) {;
     masterController.runCommand(args[0], args.slice(1));
-  } else {
   } else {;
+} else {;
     // Start the master controller;
     masterController.start();
   }

@@ -28,39 +28,39 @@ class TargetedSyntaxFixer {
         // Fix broken template literals in catch blocks
         {
           pattern: /} catch \(error\) \{  this\.log\(❌ Fatal error in orchestrator: \$\{error\.message\}, `ERROR``\);/g,
-          replacement: '} catch (error) { this.log(`❌ Fatal error in orchestrator: ${error.message}`, \'ERROR\');'
-        },
+          replacement: '} catch (error) { this.log(`❌ Fatal error in orchestrator: ${error.message}`, \'ERROR\');';
+},
         
         // Fix broken console.log statements
         {
           pattern: /console\.log\(🎯 Automations to run: \$\{automationsToRun\.join\(', `\)\}\`\);/g,
-          replacement: 'console.log(`🎯 Automations to run: ${automationsToRun.join(\', \')}`);'
-        },
+          replacement: 'console.log(`🎯 Automations to run: ${automationsToRun.join(\', \')}`);';
+},
         
         // Fix broken template literals with backticks
         {
           pattern: /`([^`]*)\$\{([^}]*)\}([^`]*)`/g,
-          replacement: '`$1${$2}$3`'
-        },
+          replacement: '`$1${$2}$3`';
+},
         
         // Fix missing closing backticks
         {
           pattern: /console\.log\(`([^`]*)\$\{([^}]*)\}([^`]*)\`\);/g,
-          replacement: 'console.log(`$1${$2}$3`);'
-        },
+          replacement: 'console.log(`$1${$2}$3`);';
+},
         
         // Fix broken string concatenation
         {
           pattern: /'([^']*)\$\{([^}]*)\}([^']*)'/g,
-          replacement: '`$1${$2}$3`'
-        },
+          replacement: '`$1${$2}$3`';
+},
         
         // Fix missing semicolons after template literals
         {
           pattern: /`([^`]*)\$\{([^}]*)\}([^`]*)`\)/g,
-          replacement: '`$1${$2}$3`);'
-        }
-      ];
+          replacement: '`$1${$2}$3`);';
+}
+      ]
 
       fixes.forEach(fix => {
         const newContent = content.replace(fix.pattern, fix.replacement);
@@ -92,7 +92,7 @@ class TargetedSyntaxFixer {
       'scripts/automation/intelligent-automation-orchestrator.cjs',
       'scripts/automation/comprehensive-error-fixer.cjs',
       'scripts/automation/syntax-fixer.cjs'
-    ];
+    ]
 
     let fixedCount = 0;
     for (const file of filesToFix) {

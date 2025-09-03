@@ -21,10 +21,10 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {'
   variant?: 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link';
   children: React.ReactNode}
 export function Button({ children, ...rest }: Props) {
-  return <button {...rest}>{children}</button>
+  return <button {...rest}>{children}</button>;
 }
 
-export default Button
+export default Button;
 };
 
   return <button {...rest}>{children}</button>;
@@ -54,8 +54,8 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       variant = 'default',
       size = 'default',
       asChild = false,
-      ...props
-    },
+      ...props;
+},
     ref
   ) => {
         className={cn(
@@ -81,8 +81,8 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     r:text-accent-foreground': variant === 'ghost',
             'text-primary underline-offset-4 hover:underline': variant === 'link',
             'hover:bg-accent hover:text-accent-foreground': variant === 'ghost',
-            'text-primary underline-offset-4 hover:underline': variant === 'link'
-          } {'
+            'text-primary underline-offset-4 hover:underline': variant === 'link';
+} {'
             'h-10 px-4 py-2': size === 'default',
             'h-9 rounded-md px-3': size === 'sm',
             'h-11 rounded-md px-8': size === 'lg',

@@ -8,7 +8,7 @@ const RevolutionaryServicesLanding2025: React.FC = () => {,"});,"})
     revolutionaryMicroSaasServices2025[0], // AI Business Intelligence;,"});,"})
     revolutionaryITServices2025[0], // AI Cybersecurity;,"});,"})
     revolutionaryAIServices2025[0] // AI Enterprise Automation;,"});,"})
-  ];,"});,"})
+  ],"});,"})
   const stats = [,"});,"})
     { label: 'Total Services', value: '16', icon: <Users className="w-6 h-6" /> },;,"});,"})
     { label: 'Micro SAAS', value: '10', icon: <Zap className="w-6 h-6" /> },;,"});,"})
@@ -18,8 +18,8 @@ const RevolutionaryServicesLanding2025: React.FC = () => {,"});,"})
     {,"});,"})
       icon: <Rocket className="w-8 h-8" />,;,"});,"})
       title: 'Cutting-Edge Innovation',;,"});,"})
-      description: 'Stay ahead with the latest AI and technology advancements';,"});,"})
-    },;,"});,"})
+      description: 'Stay ahead with the latest AI and technology advancements';,"});,"});
+},;,"});,"})
       icon: <Target className="w-8 h-8" />,;,"});,"})
       title: 'Proven ROI',;,"});,"})
       description: 'Average 300%+ return on investment within 6 months';,"});,"})
@@ -28,8 +28,8 @@ const RevolutionaryServicesLanding2025: React.FC = () => {,"});,"})
       description: 'Get up and running in as little as 1-2 weeks';,"});,"})
       icon: <DollarSign className="w-8 h-8" />,;,"});,"})
       title: 'Competitive Pricing',;,"});,"})
-      description: 'Affordable solutions that fit any business budget';,"});,"})
-    }"});,"})
+      description: 'Affordable solutions that fit any business budget';,"});,"});
+}"});,"})
   return (;,"});,"})
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">;,"});,"})
       {/* Hero Section */}"});,"})
@@ -246,7 +246,7 @@ const RevolutionaryServicesLanding2025: React.FC = () => {,"});,"})
                 <a href="/terms" className="hover:text-white transition-colors">Terms of Service</a>;,"});,"})
                 <a href="/sitemap" className="hover:text-white transition-colors">Sitemap</a>;,"});,"})
       </footer>;,"});,"})
-  );,"});,"})
+  );,"});,"});
 };,"});,"})
 export default RevolutionaryServicesLanding2025;,"});,"})
 import { Link } from 'react-router-dom';';
@@ -323,7 +323,7 @@ const RevolutionaryServicesLanding2025: React.FC = () => {
     revolutionaryITServices2025[0], // AI Cybersecurity;
     revolutionaryAIServices2025[0] // AI Enterprise Automation
     revolutionaryAIServices2025[0] // AI Enterprise Automation;
-  ];
+  ]
   const stats = [ { label: 'Total Services', value: '16', icon: <Users className='w-6 h-6' /> }, { label: 'Micro SAAS', value: '10', icon: <Zap className='w-6 h-6' /> }, { label: 'IT Services', value: '3', icon: <Shield className='w-6 h-6' /> }, { label: 'AI Services', value: '3', icon: <Brain className='w-6 h-6' /> }
       icon: <Rocket className='w-8 h-8' />,;
       title: 'Cutting-Edge Innovation',;

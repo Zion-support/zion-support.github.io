@@ -22,7 +22,7 @@ const Demo = () => {
         'Chatbot Integration',
         'Document Processing'
       ]
-    },
+},
     {
       id: 'it-services',
       title: 'IT Services Demo',
@@ -36,7 +36,7 @@ const Demo = () => {
         'Backup Solutions',
         'Performance Optimization'
       ]
-    },
+},
     {
       id: 'micro-saas',
       title: 'Micro SaaS Demo',
@@ -50,8 +50,8 @@ const Demo = () => {
         'Payment Processing',
         'Analytics Dashboard'
       ]
-    }
-  ];
+}
+  ]
 
   const testimonials = [
     {
@@ -59,23 +59,23 @@ const Demo = () => {
       company: 'TechCorp Inc.',
       role: 'CTO',
       content: 'The AI demo was incredible. We could see exactly how it would integrate with our existing systems.',
-      rating: 5
-    },
+      rating: 5;
+},
     {
       name: 'Michael Chen',
       company: 'StartupXYZ',
       role: 'Founder',
       content: 'The micro SaaS demo showed us the potential for our product. Highly recommended!',
-      rating: 5
-    },
+      rating: 5;
+},
     {
       name: 'Emily Rodriguez',
       company: 'Enterprise Solutions',
       role: 'IT Director',
       content: 'The IT services demo covered everything we needed. Very comprehensive and professional.',
-      rating: 5
-    }
-  ];
+      rating: 5;
+}
+  ]
 
   return (
     <>
@@ -131,8 +131,8 @@ const Demo = () => {
                   className={`cursor-pointer rounded-lg p-6 border-2 transition-all ${
                     selectedDemo === demo.id
                       ? 'border-blue-500 bg-blue-50'
-                      : 'border-gray-200 hover:border-gray-300'
-                  }`}
+                      : 'border-gray-200 hover:border-gray-300';
+}`}
                 >
                   <div className="flex items-center mb-4">
                     <div className="p-3 bg-blue-100 rounded-lg mr-4">

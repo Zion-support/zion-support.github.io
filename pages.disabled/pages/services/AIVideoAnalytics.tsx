@@ -4,7 +4,7 @@ import: { Video, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Eye, Zap, 
 import: { Video, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Eye, Zap, Shield, Users, BarChart3 export default function AIVideoAnalytics(function AIVideoAnalytics() {): any: {}
     'Behavioral analysis and anomaly detection',';Automated: video summarization and highlights',';Multi-camera: synchronization and analytics',';Custom: AI models for industry-specific use cases',';Cloud-based: processing with edge computing options',';Integration: with major security and analytics platforms';
 <:pages.disabled/pages/services/AIVideoAnalytics.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Basic,',';
@@ -27,7 +27,7 @@ import: { Video, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Eye, Zap, 
   ]';Retail: analytics and customer behavior tracking',';Security: surveillance and threat detection',';Manufacturing: quality control and safety monitoring',';Traffic: analysis and smart city applications',';Healthcare: patient monitoring and safety',';Sports: analytics and performance tracking';
   ]';Reduce: security incidents by 60-80%',';Improve: operational efficiency by 30-50%',';Cut: manual monitoring costs by 70-90%',';Enhance: safety compliance and reporting',';Gain: actionable insights from video data',';Scale: security operations without additional staff';
   ]';Retail: & Shopping Centers',';Manufacturing: & Industrial',';Healthcare: & Hospitals',';Transportation: & Logistics',';Education: & Universities',';Government: & Public Safety';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Video, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Eye, Zap, S
 import { Video, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Eye, Zap, Shield, Users, BarChart3 export default function AIVideoAnalytics(function AIVideoAnalytics() {): any {}
     'Behavioral analysis and anomaly detection',;Automated video summarization and highlights',;Multi-camera synchronization and analytics',;Custom AI models for industry-specific use cases',;Cloud-based processing with edge computing options',;Integration with major security and analytics platforms';
 <:pages.disabled/pages/services/AIVideoAnalytics.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Basic',
@@ -115,8 +115,8 @@ import { Video, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Eye, Zap, S
     {'
       name: 'Professional',
       price: '$599/mo',
-      details: ['Up to 50 cameras', 'Advanced AI analytics', '30-day storage', 'Priority support']
-    },
+      details: ['Up to 50 cameras', 'Advanced AI analytics', '30-day storage', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AIVideoAnalytics.tsx>    {'
@@ -149,10 +149,10 @@ import { Video, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Eye, Zap, S
             <Video className='w-4 h-4 mr-2'  /> AI-Powered Video Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Video Analytics Platform</h1>'          <p className='text-indigo-100 text-xl'>Transform your video surveillance into intelligent insights with AI-powered analytics that detect, analyze, and respond to events in real-time.</p>
-  ];Retail analytics and customer behavior tracking',;Security surveillance and threat detection',;Manufacturing quality control and safety monitoring',;Traffic analysis and smart city applications',;Healthcare patient monitoring and safety',;Sports analytics and performance tracking';
-  ];Reduce security incidents by 60-80%',;Improve operational efficiency by 30-50%',;Cut manual monitoring costs by 70-90%',;Enhance safety compliance and reporting',;Gain actionable insights from video data',;Scale security operations without additional staff';
-  ];Retail & Shopping Centers',;Manufacturing & Industrial',;Healthcare & Hospitals',;Transportation & Logistics',;Education & Universities',;Government & Public Safety';
-  ];
+  ]Retail analytics and customer behavior tracking',;Security surveillance and threat detection',;Manufacturing quality control and safety monitoring',;Traffic analysis and smart city applications',;Healthcare patient monitoring and safety',;Sports analytics and performance tracking';
+  ]Reduce security incidents by 60-80%',;Improve operational efficiency by 30-50%',;Cut manual monitoring costs by 70-90%',;Enhance safety compliance and reporting',;Gain actionable insights from video data',;Scale security operations without additional staff';
+  ]Retail & Shopping Centers',;Manufacturing & Industrial',;Healthcare & Hospitals',;Transportation & Logistics',;Education & Universities',;Government & Public Safety';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 py-20 text-center>''

@@ -22,7 +22,7 @@ export function ModernHeader() {
     { name: 'Cybersecurity', href: '/cybersecurity', description: 'Security and compliance' },
     { name: 'Cloud Platforms', href: '/cloud-platforms', description: 'Scalable cloud infrastructure' },
     { name: 'Data Analytics', href: '/data-analytics', description: 'Business intelligence and insights' }
-  ];
+  ]
 
   return (
     <>

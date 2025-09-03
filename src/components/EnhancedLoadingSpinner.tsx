@@ -4,13 +4,13 @@ import { motion  } from 'framer-motion'
 interface EnhancedLoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg'
   text?: string
-  className?: string
+  className?: string;
 }
 
 export default function EnhancedLoadingSpinner({ 
   size = 'md', 
   text = 'Loading...',
-  className = ''
+  className = '';
 }: EnhancedLoadingSpinnerProps) {
   const sizeClasses = {
     sm: 'w-8 h-8',
@@ -57,8 +57,8 @@ export default function EnhancedLoadingSpinner({
             className="w-2 h-2 bg-blue-600 rounded-full"
             animate={{ 
               scale: [1, 1.5, 1],
-              opacity: [0.5, 1, 0.5]
-            }}
+              opacity: [0.5, 1, 0.5];
+}}
             transition={{ 
               duration: 1.5, 
               repeat: Infinity, 
@@ -89,13 +89,13 @@ import { motion     } from 'framer-motion';,"});,"})
 interface EnhancedLoadingSpinnerProps {,"});,"})
   size?: 'sm' | 'md' | 'lg';,"});,"})
   text?: string;,"});,"})
-  className?: string;,"});,"})
+  className?: string;,"});,"});
 }"});,"})
 ;,"});,"})
 export default function EnhancedLoadingSpinner({,"});,"})
   size = 'md',;,"});,"})
   text = 'Loading...',;,"});,"})
-  className = '';,"});,"})
+  className = '';,"});,"});
 }: EnhancedLoadingSpinnerProps) {,"});,"})
   const sizeClasses = { sm: 'w-8 h-8',;,"});,"})
     md: 'w-12 h-12',;,"});,"})
@@ -133,8 +133,8 @@ export default function EnhancedLoadingSpinner({,"});,"})
             key={i}"});,"})
             className="w-2 h-2 bg-blue-600 rounded-full";,"});,"})
             animate={{ scale: [1, 1.5, 1],;,"});,"})
-              opacity: [0.5, 1, 0.5];,"});,"})
-            }}"});,"})
+              opacity: [0.5, 1, 0.5];,"});,"});
+}}"});,"})
             transition={{ duration: 1.5,;,"});,"})
               repeat: Infinity,;,"});,"})
               delay: i * 0.2,;,"});,"})
@@ -317,5 +317,5 @@ export default function EnhancedLoadingSpinner({"
             animate={{ scale: [1, 1.5, 1], opacity: [0.5, 1, 0.5]}}""
             transition={{ duration: 1.5, repeat: Infinity, delay: i * 0.2, ease: 'easeInOut'}}
 
-;""
+;"";
 }`

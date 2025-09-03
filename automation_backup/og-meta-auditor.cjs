@@ -33,8 +33,8 @@ function analyzeFile(filePath) {
     hasOgTitle,
     hasOgDescription: hasOgDesc,
     hasOgImage,
-    missing,
-  };
+    missing,;
+};
 }
 
 function runAudit() {
@@ -51,8 +51,8 @@ function runAudit() {
     missingAny: report.filter(r => r.missing.length > 0).length,
     report,
     recommendation:
-      'Add missing OG tags in pages lacking them to improve social sharing and SEO.',
-  };
+      'Add missing OG tags in pages lacking them to improve social sharing and SEO.',;
+};
 
   const reportsDir = path.join(__dirname, '..', 'public', 'reports');
   if (!fs.existsSync(reportsDir)) fs.mkdirSync(reportsDir, { recursive: true });

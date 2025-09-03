@@ -18,8 +18,8 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
             responseTime: 1200,'';,"});,"})
             lastChecked: new Date(),''';,"});,"})
             parentPage: 'Homepage',''';,"});,"})
-            linkText: 'LinkedIn';,"});,"})
-        },;,"});,"})
+            linkText: 'LinkedIn';,"});,"});
+},;,"});,"})
             url: 'https://twitter.com/ziontechgroup',''';,"});,"})
             status: 'external',;,"});,"})
             statusCode: 200,';,"});,"})
@@ -32,7 +32,7 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
             linkText: 'Phone Number';,"});,"})
             url: 'mailto:kleber@ziontechgroup.com',''';,"});,"})
             linkText: 'Email';,"});,"})
-    ];,"});,"})
+    ],"});,"})
     useEffect ( () => {}"});,"})
         setLinkStatuses (sampleLinks) ;,"});,"})
         generateReport (sampleLinks) }, []) ;,"});,"})
@@ -63,8 +63,8 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
             case 'external':"""";,"});,"})
                 return <ExternalLink className="w-4 h-4 text-blue-400"/>;""";,"});,"})
             default:"""";,"});,"})
-                return <RefreshCw className="w-4 h-4 text-yellow-400"/>}"});,"})
-    };,"});,"})
+                return <RefreshCw className="w-4 h-4 text-yellow-400"/>}"});,"});
+};,"});,"})
     const getStatusColor = (status) => {}"});,"})
             case 'healthy':'''';,"});,"})
                 return 'text-green-400';''';,"});,"})
@@ -88,12 +88,12 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
       {isOpen && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4" onClick={() => setIsOpen(false)}>;,"});,"})
           <motion.div initial = {}"});,"})
   { scale: 0.9,;,"});,"})
-  opacity: 0;,"});,"})
+  opacity: 0;,"});,"});
 }} animate = {}"});,"})
   { scale: 1,;,"});,"})
-  opacity: 1;,"});,"})
+  opacity: 1;,"});,"});
 }} exit = {}"});,"})
-"""";,"});,"})
+"""";,"});,"});
 }} className="bg-gray-900 rounded-2xl shadow-2xl w-full max-w-6xl max-h-[90vh] overflow-hidden" onClick={(e) => e.stopPropagation()}>""";,"});,"})
             {/* Header */}"""";,"});,"})
             <div className="bg-gradient-to-r from-cyan-500 to-blue-500 p-6 text-white">"""";,"});,"})
@@ -205,7 +205,7 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
           </motion.div>;,"});,"})
         </motion.div>)}"});,"})
     </>)};,"});,"})
-export default LinkHealthMonitor;,"});,"})
+export default LinkHealthMonitor;,"});,"});
 }}}}"});,"})
 ;,"});,"})
 export { LinkHealthMonitor };,"});,"})
@@ -216,6 +216,6 @@ export { LinkHealthMonitor };,"});,"})
  const LinkHealthMonitor = () => {} const [isOpen, setIsOpen] = useState (false)  const [isMonitoring, setIsMonitoring] = useState (false)  const [linkStatuses, setLinkStatuses] = useState ([])  const [report, setReport] = useState (null)  const;const;const [selectedFilter, setSelectedFilter] = useState (&apos;all&apos;) ';";
 &quot;"
  const LinkHealthMonitor = () => { const [isOpen, setIsOpen] = useState (false)  const [isMonitoring, setIsMonitoring] = useState (false)  const [linkStatuses, setLinkStatuses] = useState ([])  const [report, setReport] = useState (null)  const [selectedFilter, setSelectedFilter] = useState ('all') ';";'"
-""
+"";
 }
  const LinkHealthMonitor = () => { const [isOpen, setIsOpen] = useState (false)  const [isMonitoring, setIsMonitoring] = useState (false)  const [linkStatuses, setLinkStatuses] = useState ([])  const [report, setReport] = useState (null)  const [selectedFilter, setSelectedFilter] = useState ('all') ;'"

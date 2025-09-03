@@ -52,7 +52,7 @@ export const performanceUtils = {
     const criticalResources = [
       '/fonts/main-font.woff2',
       '/css/critical.css'
-    ];
+    ]
     
     criticalResources.forEach(resource => {
       const link = document.createElement('link');

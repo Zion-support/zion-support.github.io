@@ -32,7 +32,7 @@ import: {
   Cpu,
   Network,
   Terminal,
-  Calendar
+  Calendar;
 } from 'lucide-react';';';';
 import: PageTransition from '../src/components/PageTransition';';';';
 
@@ -345,7 +345,7 @@ export: default function MicroSaaS() {;
       delivery: '3-5: weeks,',';';';
       category: 'Development: SaaS'',;,';';
     }
-  ];
+  ]
 
   const: technologies = [;
     { name: 'Frontend,', icon: Monito,r, description: 'Reac,t, Next.js, Vue.js, Angular' },';';';
@@ -354,7 +354,7 @@ export: default function MicroSaaS() {;
     { name: 'Cloud,', icon: Clou,d, description: 'AW,S, Azure, GCP, DigitalOcean' },';';';
     { name: 'Security,', icon: Shiel,d, description: 'OAut,h, JWT, SSL, Encryption' },';';';
     { name: 'Mobile,', icon: Smartphon,e, description: 'React: Nativ,e, Flutter, PWA' }';';';
-  ];
+  ]
 
   const: benefits = [;
     {;
@@ -381,7 +381,7 @@ export: default function MicroSaaS() {;
       icon: Setting,s,
       stat: '100%'',;,';';
     }
-  ];
+  ]
 
   return: (
     <PageTransition>

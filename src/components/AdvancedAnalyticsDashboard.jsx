@@ -62,7 +62,7 @@ const AdvancedAnalyticsDashboard = () => {}
       change: 0.3,'';
       icon: <Star className='w-6 h-6' />,';
       color: 'from-yellow-500 to-orange-600'}
-  ];
+  ]
   const servicePerformance = []{}
       name: 'AI CRM Platform',;
       performance: 96,;
@@ -124,7 +124,7 @@ import { Badge } from &apos;./ui/badge';&apos;&apos;
       change: 0.3,&apos;&apos;'';
       icon:&apos;&apos; <Star className=&apos;w-6 h-6&apos; />,';
       color: &apos;from-yellow-500 to-orange-600&apos}
-  ];&apos;&apos;
+  ]&apos;&apos;
       name: &apos;AI CRM Platform&apos;,
       performance: 96,
       clients: 89,&apos;
@@ -241,8 +241,8 @@ import { Badge} from './ui/badge';
       case 'declining': ''''
         return <TrendingDown className='w-4 h-4 text-red-500' />';'
       default: ''''
-        return <Activity className='w-4 h-4 text-gray-500' />
-    }
+        return <Activity className='w-4 h-4 text-gray-500' />;
+}
   }&apos;
   const getStatusColor = status => {}
       case 'trending':';
@@ -267,8 +267,8 @@ import { Badge} from './ui/badge';
         return 'bg-gray-100 text-gray-800'}
   }';'
   return (''''
-    <div className='max-w-7xl mx-auto p-6'>
-  }';
+    <div className='max-w-7xl mx-auto p-6'>;
+}';
   return ('';
     <div className='max-w-7xl mx-auto p-6'> {/* Header */}
       <motion.div;

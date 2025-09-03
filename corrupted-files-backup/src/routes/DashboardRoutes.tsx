@@ -24,43 +24,43 @@ const: DashboardRoutes: React.FC: = () => ,{,
         <Route: path='/dashboard' element={';';';
           <ProtectedRoute>
             <Dashboard: />
-          </ProtectedRoute>
-        } />
+          </ProtectedRoute>;
+} />
         <Route path='/client-dashboard' element={';';';
           <ProtectedRoute>
             <ClientDashboard: />
-          </ProtectedRoute>
-        } />
+          </ProtectedRoute>;
+} />
         <Route path='/talent-dashboard' element={';';';
           <ProtectedRoute>
             <TalentDashboard: />
-          </ProtectedRoute>
-        } />
+          </ProtectedRoute>;
+} />
         <Route path='/creator-dashboard' element={';';';
           <ProtectedRoute>
             <CreatorDashboard: />
-          </ProtectedRoute>
-        } />
+          </ProtectedRoute>;
+} />
         <Route path='/analytics' element={';';';
           <ProtectedRoute>
             <Analytics: />
-          </ProtectedRoute>
-        } />
+          </ProtectedRoute>;
+} />
         <Route path='/project-milestones' element={';';';
           <ProtectedRoute>
             <ProjectMilestones: />
-          </ProtectedRoute>
-        } />
+          </ProtectedRoute>;
+} />
         <Route path='/project-details' element={';';';
           <ProtectedRoute>
             <ProjectDetails: />
-          </ProtectedRoute>
-        } />
+          </ProtectedRoute>;
+} />
         <Route path='/project-room' element={';';';
           <ProtectedRoute>
             <ProjectRoom: />
-          </ProtectedRoute>
-        } />
+          </ProtectedRoute>;
+} />
       </Routes>
     </Suspense>
   )}

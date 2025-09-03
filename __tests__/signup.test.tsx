@@ -19,6 +19,6 @@ bod,
 '
 body: Record<string, unknown> | { message: string } | { error: string }; // More specific than any } // Mock useAuth vi.mock('@/hooks/useAuth', () => ({ useAuth: () => ({ loginWithGoogle: vi.fn(), loginWithFacebook: vi.fn(), loginWithTwitter: vi.fn(), // Ensure the mock for signup matches the expected signature from AuthContextType signup: vi.fn().mockResolvedValue({ error: null, data: { user: { id: 'test-user-id' }, session: { access_token: process.env.TEST_TOKEN || 'test-token' }}}),
 number
-Record<string, unknown> | { message: string } | { error: string }; // More specific than any } // Mock useAuth vi.mock('@/hooks/useAuth', () => ({ useAuth: () => ({ loginWithGoogle: vi.fn(), loginWithFacebook: vi.fn(), loginWithTwitter: vi.fn(), // Ensure the mock for signup matches the expected signature from AuthContextType signup: vi.fn().mockResolvedValue({ error: null, data: { user: { id: 'test-user-id' }, session: { access_token: 'jwt' }}}),'
+Record<string, unknown> | { message: string } | { error: string }; // More specific than any } // Mock useAuth vi.mock('@/hooks/useAuth', () => ({ useAuth: () => ({ loginWithGoogle: vi.fn(), loginWithFacebook: vi.fn(), loginWithTwitter: vi.fn(), // Ensure the mock for signup matches the expected signature from AuthContextType signup: vi.fn().mockResolvedValue({ error: null, data: { user: { id: 'test-user-id' }, session: { access_token: 'jwt' }}}),';
 }
 }

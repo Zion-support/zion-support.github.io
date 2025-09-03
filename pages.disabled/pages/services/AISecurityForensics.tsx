@@ -4,7 +4,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityForensics(function AISecurityForensics() {): any: {}
     'Automated incident investigation and reconstruction',';Predictive: analytics for forensic needs',';Smart: forensics framework management',';AI-driven: forensics automation and orchestration',';Real-time: forensics performance tracking',';Custom: AI models for forensics applications';
 <:pages.disabled/pages/services/AISecurityForensics.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Developer,',';
@@ -27,7 +27,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
   ]';Security: forensics optimization',';Digital: evidence analysis and processing',';Incident: investigation and reconstruction',';Forensics: framework management and automation',';Forensics: automation and orchestration',';Forensics: scaling and management';
   ]';Improve: security forensics performance by 50-80%',';Reduce: investigation time by 40-70%',';Cut: security forensics costs by 35-65%',';Enhance: security forensics reliability and scalability',';Optimize: resource utilization',';Scale: security forensics operations efficiently';
   ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-slate-500 via-gray-500 to-zinc-500 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityForensics(function AISecurityForensics() {): any {}
     'Automated incident investigation and reconstruction',;Predictive analytics for forensic needs',;Smart forensics framework management',;AI-driven forensics automation and orchestration',;Real-time forensics performance tracking',;Custom AI models for forensics applications';
 <:pages.disabled/pages/services/AISecurityForensics.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Developer',
@@ -115,8 +115,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     {'
       name: 'Business',
       price: '$1,999/mo',
-      details: ['Up to 50 investigations/month', 'Advanced AI features', 'Enhanced forensics', 'Priority support']
-    },
+      details: ['Up to 50 investigations/month', 'Advanced AI features', 'Enhanced forensics', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AISecurityForensics.tsx>    {'
@@ -149,10 +149,10 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <Database className='w-4 h-4 mr-2'  /> AI-Powered Security Forensics Platform
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Security Forensics Platform</h1>'          <p className='text-slate-100 text-xl'>Transform your security forensics with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
-  ];Security forensics optimization',;Digital evidence analysis and processing',;Incident investigation and reconstruction',;Forensics framework management and automation',;Forensics automation and orchestration',;Forensics scaling and management';
-  ];Improve security forensics performance by 50-80%',;Reduce investigation time by 40-70%',;Cut security forensics costs by 35-65%',;Enhance security forensics reliability and scalability',;Optimize resource utilization',;Scale security forensics operations efficiently';
-  ];Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
-  ];
+  ]Security forensics optimization',;Digital evidence analysis and processing',;Incident investigation and reconstruction',;Forensics framework management and automation',;Forensics automation and orchestration',;Forensics scaling and management';
+  ]Improve security forensics performance by 50-80%',;Reduce investigation time by 40-70%',;Cut security forensics costs by 35-65%',;Enhance security forensics reliability and scalability',;Optimize resource utilization',;Scale security forensics operations efficiently';
+  ]Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-slate-500 via-gray-500 to-zinc-500 py-20 text-center>''

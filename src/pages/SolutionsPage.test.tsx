@@ -41,6 +41,6 @@ describe('SolutionsPage', () => {"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
 "
     render(<SolutionsPage /" >)
-    // Add more specific tests here
+    // Add more specific tests here;
 });
 })

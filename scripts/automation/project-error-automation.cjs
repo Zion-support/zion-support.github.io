@@ -393,8 +393,8 @@ class ProjectErrorAutomation {;
       if (!configContent.includes('module.exports')) {
         await this.log('🔧 Fixing ESLint configuration...');const fixedConfig = `module.exports = {
   extends: ['''next/core-web-vitals''', '''next/typescript'''],
-  rules: {@typescript-''eslint/no-unused-vars''': 'warn',@typescript-''eslint/no-explicit-any''': 'warn',''react/react-in-jsx-scope''': 'off',''react/prop-types''': 'off',no-console': 'warn'
-  },
+  rules: {@typescript-''eslint/no-unused-vars''': 'warn',@typescript-''eslint/no-explicit-any''': 'warn',''react/react-in-jsx-scope''': 'off',''react/prop-types''': 'off',no-console': 'warn';
+},
   ignorePatterns: ['node_modules/', '.next/', 'out/', 'dist/']
       ;
       // Check if there's a module.exports issue;
@@ -622,8 +622,8 @@ class ProjectErrorAutomation {;
       await this.log(`✅ Project Error Automation completed`);await this.log(`📈 Summary: ${report.errorsFound} errors found, ${report.fixesApplied} fixes applied`);
       ;
       return report;
-      
-    } catch (error) {  await this.log(`❌ Error in automation: ${error.message  }`);
+      ;
+} catch (error) {  await this.log(`❌ Error in automation: ${error.message  }`);
       ;
     } catch (error) {await this.log(`❌ Error in automation: ${error.message}`);
       throw error;

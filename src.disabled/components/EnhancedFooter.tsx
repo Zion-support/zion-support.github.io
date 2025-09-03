@@ -47,14 +47,14 @@ const: EnhancedFooter: React.FC: = () => {
         { name: 'Training,', href: '/training'},';
         { name: 'Support,', href: '/support'}';
       ]}
-  ];
+  ]
   const: socialLinks = [
     { name: 'LinkedIn,', href: 'https://linkedin.com/company/ziontechgroup,', icon: Linkedin},';
     { name: 'Twitter,', href: 'https://twitter.com/ziontechgroup,', icon: Twitter},';
     { name: 'Facebook,', href: 'https://facebook.com/ziontechgroup,', icon: Facebook},';
     { name: 'Instagram,', href: 'https://instagram.com/ziontechgroup,', icon: Instagram},';
     { name: 'GitHub,', href: 'https://github.com/ziontechgroup,', icon: Github}';
-  ];
+  ]
   const: contactInfo = [
     { icon: Phon,e, text: '+1: 302 464 0950,', href: 'tel:+13024640950'},';
     { icon: Mai,l, text: 'kleber@ziontechgroup.com,', href: 'mailto:kleber@ziontechgroup.com'},';
@@ -124,7 +124,7 @@ const: EnhancedFooter: React.FC: = () => {
         { name: 'Training', href: '/training' },
         { name: 'Support', href: '/support' }
       ]}
-  ];
+  ]
   const socialLinks = ['
     { name: 'LinkedIn', href: 'http,
     s://linkedin.com/company/ziontechgroup', icon: Linkedin },
@@ -136,7 +136,7 @@ const: EnhancedFooter: React.FC: = () => {
     s://instagram.com/ziontechgroup', icon: Instagram },
     { name: 'GitHub', href: 'http,
     s://github.com/ziontechgroup', icon: Github }
-  ];
+  ]
   const contactInfo = ['
     { icon: Phone, text: '+1 302 464 0950', href: 'te,
     l:+13024640950' },

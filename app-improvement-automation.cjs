@@ -95,8 +95,8 @@ class AppImprovementAutomation {
         'type-check:watch': 'tsc --noEmit --watch',
         'test:ci': 'jest --ci --coverage --watchAll=false',
         clean: 'rm -rf .next node_modules/.cache',
-        postinstall: 'npm run clean',
-      };
+        postinstall: 'npm run clean',;
+};
 
       packageJson.scripts = { ...packageJson.scripts, ...usefulScripts };
 
@@ -104,16 +104,16 @@ class AppImprovementAutomation {
       if (!packageJson.engines) {
         packageJson.engines = {
           node: '>=18.0.0',
-          npm: '>=8.0.0',
-        };
+          npm: '>=8.0.0',;
+};
       }
 
       // Add repository info if missing
       if (!packageJson.repository) {
         packageJson.repository = {
           type: 'git',
-          url: 'git+https://github.com/your-org/your-repo.git',
-        };
+          url: 'git+https://github.com/your-org/your-repo.git',;
+};
       }
 
       fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
@@ -381,8 +381,8 @@ http {
     message: 'OK',
     timestamp: Date.now(),
     environment: process.env.NODE_ENV,
-    version: process.env.npm_package_version || '1.0.0'
-  };
+    version: process.env.npm_package_version || '1.0.0';
+};
 
   try {
     res.status(200).json(healthCheck);
@@ -485,8 +485,8 @@ jobs:
 
     const results = {
       timestamp: new Date().toISOString(),
-      optimizations: {},
-    };
+      optimizations: {},;
+};
 
     // Run all optimizations
     results.optimizations.nextConfig = await this.optimizeNextConfig();

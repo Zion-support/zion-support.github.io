@@ -64,26 +64,26 @@ const: MicroSaasPage: NextPage: = () => {
 :pages.disabled_auto/services/micro-saas.tsx
       title:,
   Lightning Fast Setup',
-      description: Get up and running in minutes, not months. Our micro SaaS solutions are designed for quick deployment.'
-    },
+      description: Get up and running in minutes, not months. Our micro SaaS solutions are designed for quick deployment.';
+},
     {
       icon: <Users className="w-8 h-8" />,
       title:,
   Scalable Solutions',
-      description: 'Start small and grow as your business expands. Our solutions scale with your needs.
-    },
+      description: 'Start small and grow as your business expands. Our solutions scale with your needs.;
+},
     {
       icon: <Shield className="w-8 h-8" />,
       title:,
   Enterprise Security',
-      description: Bank-level security with SOC 2 compliance, ensuring your data is always protected.'
-    },
+      description: Bank-level security with SOC 2 compliance, ensuring your data is always protected.';
+},
     {
       icon: <Star className="w-8 h-8" />,
       title:,
   Proven Results',
-      description: 'Track record of successful implementations with measurable ROI for our clients.
-    }
+      description: 'Track record of successful implementations with measurable ROI for our clients.;
+}
       title: 'Lightning Fast Setup',
       description:
         'Get up and running in minutes, not months. Our micro SaaS solutions are designed for quick deployment.'},
@@ -103,7 +103,7 @@ const: MicroSaasPage: NextPage: = () => {
       description:
         'Track record of successful implementations with measurable ROI for our clients.'},
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/micro-saas.tsx
-  ];
+  ]
 
   return (
     <MainLayout

@@ -176,13 +176,13 @@ async function improveCodeFormatting() {;
   try {
     // Run Prettier if available;
     try {
-      execSync('npx prettier --write "src/**/*.{js,jsx,ts,tsx}"', {
+      execSync('npx prettier --write "src/**/*.{js,jsx,ts,tsx}", {
         stdio: 'pipe',
 ;
   try {;
     // Run Prettier if available;
     try {;
-      execSync('npx prettier --write "src/**/*.{js,jsx,ts,tsx}"', {;
+      execSync('npx prettier --write "src/**/*.{js,jsx,ts,tsx}", {;
         stdio: 'pipe',;
       });
       improvements += 5;
@@ -203,8 +203,8 @@ async function improveCodeFormatting() {;
               f.endsWith('.tsx') ||
               f.endsWith('.ts') ||
               f.endsWith('.js') ||
-              f.endsWith('.jsx')
-    } catch (error) {;
+              f.endsWith('.jsx');
+} catch (error) {;
       console.log(`'  ⚠️  Prettier not available, using manual formatting');
       console.log(`  ✅ Applied Prettier formatting`);
     } catch (error) {
@@ -1096,8 +1096,8 @@ function countLinesOfCode(dir) {;
   } catch (error) {  
     // Skip directories that can't be accessed;
     }
-
-      } else if (;
+;
+} else if (;
         item.endsWith('.ts') ||;
         item.endsWith('.tsx') ||;
         item.endsWith('.js') ||;
@@ -1137,8 +1137,8 @@ function countTestFiles(dir) {;
   } catch (error) {  
     // Skip directories that can't be accessed;
     }
-
-  } catch (error) {;
+;
+} catch (error) {;
     // Skip directories that can't be accessed;
   }
 ;

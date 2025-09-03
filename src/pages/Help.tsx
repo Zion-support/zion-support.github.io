@@ -22,9 +22,9 @@ import { motion } from 'framer-motion';""
 import { SEO } from '../components/SEO';
 import { 
   Search, MessageCircle, Phone, Mail, Clock, BookOpen, Video, FileText, Users, ChevronDown,
-  ChevronUp, HelpCircle, CheckCircle, ArrowRight'
+  ChevronUp, HelpCircle, CheckCircle, ArrowRight';
 } from 'lucide-react';
-  ChevronUp, HelpCircle, CheckCircle, ArrowRight;", "
+  ChevronUp, HelpCircle, CheckCircle, ArrowRight;", ";
 } from 'lucide-react';""
 import React, { useState } from 'react
 import { motion } from 'framer-motion
@@ -64,7 +64,7 @@ export default function Help() {;
       answer: "Our pricing varies based on project scope, complexity, and requirements. We offer flexible pricing models including project-based, retainer, and subscription options. Contact us for a customized quote.",;
       category: "Pricing";
     }
-  ];
+  ]
 ;
   const helpCategories = [;
     {;
@@ -95,7 +95,7 @@ export default function Help() {;
       articles: 30,;
       color: "from-green-500 to-emerald-500";
     }
-  ];
+  ]
 ;
   const contactMethods = [;
     {;
@@ -119,7 +119,7 @@ export default function Help() {;
       availability: "24/7 Available",;
       responseTime: "Within 4 hours";
     }
-  ];
+  ]
 ;
   const toggleFAQ = (id: number) => {;
     setExpandedFAQ(expandedFAQ === id ? null : id);
@@ -187,7 +187,7 @@ export default function Help() {;
                 <motion.div;
 import { 
   Search, MessageCircle, Phone, Mail, Clock, BookOpen, Video, FileText, Users, ChevronDown,
-  ChevronUp, HelpCircle, CheckCircle, ArrowRight
+  ChevronUp, HelpCircle, CheckCircle, ArrowRight;
 } from &apos;lucide-react';&apos;&apos;
 
 export default function Help() ;{}
@@ -222,18 +222,18 @@ export default function Help() ;{}
       category: &quot;Pricing&quot;
       id: 1, question: "How do I get started with Zion Tech Group services?",
       answer: "Getting started is easy! Contact our team through our contact form or call us directly. We&apos;ll schedule a consultation to understand your needs and recommend the best solutions for your business.", '
-      category: "Getting Started"
-    },
+      category: "Getting Started";
+},
     { id: 2, question: "What AI services do you offer?",
-      answer: "We offer comprehensive AI services including machine learning, natural language processing, computer vision, predictive analytics, and custom AI solutions tailored to your business needs.", category: "AI Services"
-    },
+      answer: "We offer comprehensive AI services including machine learning, natural language processing, computer vision, predictive analytics, and custom AI solutions tailored to your business needs.", category: "AI Services";
+},
     { id: 3, question: "Do you provide quantum computing solutions?",
-      answer: "Yes! We offer quantum computing services including quantum algorithm development, quantum machine learning, and access to quantum computing platforms for research and development.", category: "Quantum Computing"
-    },
+      answer: "Yes! We offer quantum computing services including quantum algorithm development, quantum machine learning, and access to quantum computing platforms for research and development.", category: "Quantum Computing";
+},
     { id: 4, question: "What is your pricing structure?",
-      answer: "Our pricing varies based on project scope, complexity, and requirements. We offer flexible pricing models including project-based, retainer, and subscription options. Contact us for a customized quote.", category: "Pricing"
-    }
-  ];&quot;
+      answer: "Our pricing varies based on project scope, complexity, and requirements. We offer flexible pricing models including project-based, retainer, and subscription options. Contact us for a customized quote.", category: "Pricing";
+}
+  ]&quot;
 
   const helpCategories = [
     { title: "Getting Started", description: "New to Zion Tech Group? Start here",
@@ -266,19 +266,19 @@ export default function Help() ;{}
       color: &quot;from-green-500 to-emerald-500&quot;
       title: "Getting Started", description: "New to Zion Tech Group? Start here",
       icon: BookOpen, articles: 12,
-      color: "from-blue-500 to-cyan-500"
-    }, { title: "AI Services",
+      color: "from-blue-500 to-cyan-500";
+}, { title: "AI Services",
       description: "Learn about our AI and machine learning solutions", icon: MessageCircle,
-      articles: 25, color: "from-purple-500 to-pink-500"
-    },
+      articles: 25, color: "from-purple-500 to-pink-500";
+},
     { title: "Quantum Computing", description: "Explore quantum computing capabilities",
       icon: Star, articles: 18,
-      color: "from-orange-500 to-red-500"
-    }, { title: "Technical Support",
+      color: "from-orange-500 to-red-500";
+}, { title: "Technical Support",
       description: "Get help with technical issues", icon: HelpCircle,
-      articles: 30, color: "from-green-500 to-emerald-500"
-    }
-  ];&quot;
+      articles: 30, color: "from-green-500 to-emerald-500";
+}
+  ]&quot;
 
   const contactMethods = [
     { title: "Live Chat", description: "Get instant help from our support team",
@@ -304,18 +304,18 @@ export default function Help() ;{}
       responseTime: &quot;Within 4 hours&quot;
       title: "Live Chat", description: "Get instant help from our support team",
       icon: MessageCircle, availability: "24/7 Available",
-      responseTime: "Immediate"
-    }, { title: "Phone Support",
+      responseTime: "Immediate";
+}, { title: "Phone Support",
       description: "Speak directly with our technical experts", icon: Phone,
-      availability: "Mon-Fri 9AM-6PM EST", responseTime: "Immediate"
-    },
+      availability: "Mon-Fri 9AM-6PM EST", responseTime: "Immediate";
+},
     { title: "Email Support", description: "Send us your questions and we'll respond quickly", '
     {
       title: "Email Support", description: "Send us your questions and we&apos;ll respond quickly", '
       icon: Mail,
-      availability: "24/7 Available", responseTime: "Within 4 hours"
-    }
-  ];&quot;
+      availability: "24/7 Available", responseTime: "Within 4 hours";
+}
+  ]&quot;
 
   const toggleFAQ = (id: number) => {
     setExpandedFAQ(expandedFAQ === id ? null : id);
@@ -650,7 +650,7 @@ export default function Help() ;{}
         </section>
       </div>
 </>
-  )
+  );
 }
   );
 }

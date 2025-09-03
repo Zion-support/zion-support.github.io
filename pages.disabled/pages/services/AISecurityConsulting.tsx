@@ -4,7 +4,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityConsulting(function AISecurityConsulting() {): any: {}
     'Automated security analysis and recommendations',';Predictive: analytics for consulting needs',';Smart: consulting framework management',';AI-driven: consulting automation and orchestration',';Real-time: consulting performance tracking',';Custom: AI models for consulting applications';
 <:pages.disabled/pages/services/AISecurityConsulting.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Developer,',';
@@ -27,7 +27,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
   ]';Security: consulting optimization',';Consulting: strategy management and execution',';Security: analysis and recommendations',';Consulting: framework management and automation',';Consulting: automation and orchestration',';Consulting: scaling and management';
   ]';Improve: security consulting performance by 50-80%',';Reduce: consulting delivery time by 40-70%',';Cut: security consulting costs by 35-65%',';Enhance: security consulting reliability and scalability',';Optimize: resource utilization',';Scale: security consulting operations efficiently';
   ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-cyan-500 via-blue-500 to-indigo-500 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityConsulting(function AISecurityConsulting() {): any {}
     'Automated security analysis and recommendations',;Predictive analytics for consulting needs',;Smart consulting framework management',;AI-driven consulting automation and orchestration',;Real-time consulting performance tracking',;Custom AI models for consulting applications';
 <:pages.disabled/pages/services/AISecurityConsulting.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Developer',
@@ -115,8 +115,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     {'
       name: 'Business',
       price: '$1,999/mo',
-      details: ['Up to 50 hours/month', 'Advanced AI features', 'Enhanced consulting', 'Priority support']
-    },
+      details: ['Up to 50 hours/month', 'Advanced AI features', 'Enhanced consulting', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AISecurityConsulting.tsx>    {'
@@ -149,10 +149,10 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <Database className='w-4 h-4 mr-2'  /> AI-Powered Security Consulting Platform
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Security Consulting Platform</h1>'          <p className='text-cyan-100 text-xl'>Transform your security consulting with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
-  ];Security consulting optimization',;Consulting strategy management and execution',;Security analysis and recommendations',;Consulting framework management and automation',;Consulting automation and orchestration',;Consulting scaling and management';
-  ];Improve security consulting performance by 50-80%',;Reduce consulting delivery time by 40-70%',;Cut security consulting costs by 35-65%',;Enhance security consulting reliability and scalability',;Optimize resource utilization',;Scale security consulting operations efficiently';
-  ];Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
-  ];
+  ]Security consulting optimization',;Consulting strategy management and execution',;Security analysis and recommendations',;Consulting framework management and automation',;Consulting automation and orchestration',;Consulting scaling and management';
+  ]Improve security consulting performance by 50-80%',;Reduce consulting delivery time by 40-70%',;Cut security consulting costs by 35-65%',;Enhance security consulting reliability and scalability',;Optimize resource utilization',;Scale security consulting operations efficiently';
+  ]Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-cyan-500 via-blue-500 to-indigo-500 py-20 text-center>''

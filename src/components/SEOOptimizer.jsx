@@ -1,14 +1,14 @@
 
-;,"});,"})
-            }) }"});,"})
+;,"});,"});
+}) }"});,"})
         catch (error) {}"});,"})
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
             // console.error('Error analyzing SEO:', error)}"});,"})
         finally {}"});,"})
-            setIsAnalyzing(false)}"});,"})
-    }, []);,"});,"})
+            setIsAnalyzing(false)}"});,"});
+}, []);,"});,"})
     useEffect(() => {}"});,"})
         // Auto-analyze SEO when component mounts;,"});,"})
         analyzeSEO()}, [analyzeSEO]);,"});,"})
@@ -43,8 +43,8 @@
         if (page.url === '/' || page.url.includes('-')) {}"});,"})
         else if(page.url.length > 0) {}"});,"})
             score += 8;,"});,"})
-        return Math.round((score / maxScore) * 100) ;,"});,"})
-    };,"});,"})
+        return Math.round((score / maxScore) * 100) ;,"});,"});
+};,"});,"})
     const issues = [];,"});,"})
         if (!page.title || page.title.length < 30) {}"});,"})
             issues.push('Title is too short (should be 30-60 characters))}"});,"})
@@ -265,7 +265,7 @@
               Export;,"});,"})
         </div>)}"});,"})
     </div>)};,"});,"})
-export default SEOOptimizer;,"});,"})
+export default SEOOptimizer;,"});,"});
 }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}"});,"})
 export { SEOOptimizer };,"});,"})
  const SEOOptimizer = () => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {';import React { useState, useEffect, useCallback } from 'react';
@@ -275,7 +275,7 @@ import {Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download } from 'luci
 import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download } from &apos;lucide-react';&apos;&apos;
  const SEOOptimizer = () => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {'';import React { useState, useEffect, useCallback } from 'react'';'
 import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download } from 'lucide-react';
-""
+"";
 }}}
 const SEOOptimizer = () => {}
     const;const;const [isOpen, setIsOpen] = useState (false) ;
@@ -318,8 +318,8 @@ const SEOOptimizer = () => {}
                     headings[&apos;AI-Powered Business Solutions&apos;,Comprehensive IT Services&apos;,Micro-SaaS Solutions&apos;],';
                     images[&apos;/images/hero-ai-solutions.jpg&apos;,/images/hero-it-services.jpg&apos;],';
                     links[&apos;/services&apos;,/ai-solutions&apos;,/about&apos;,/contact&apos;],';
-                    keywords[&apos;AI solutions&apos;,quantum computing&apos;,cybersecurity&apos;,digital transformation&apos;]
-                } {}
+                    keywords[&apos;AI solutions&apos;,quantum computing&apos;,cybersecurity&apos;,digital transformation&apos;];
+} {}
                     url: &apos;/services&apos;,'&apos;
                     title: &apos;Our Services - Comprehensive Technology Solutions&apos;,'&apos;
                     metaDescription: &apos;Comprehensive technology services including AI solutions, cloud infrastructure, cybersecurity, and digital transformation.&apos;,'&apos;
@@ -356,9 +356,9 @@ const SEOOptimizer = () => {}
                     headings['Machine Learning', Predictive Analytics',AI Automation', Business Intelligence'], ';'
                     images['/images/ai-solutions.jpg'], ';
                     links['/services', /about',/contact'], ';
-                    keywords['artificial intelligence', machine learning',predictive analytics', AI automation']'
-                }
-            ];&apos;&apos;
+                    keywords['artificial intelligence', machine learning',predictive analytics', AI automation']';
+}
+            ]&apos;&apos;
             const pageAnalyses = samplePages.map(page => {}
                 const;const;const score = calculateSEOScore(page);
                 const issues = identifySEOIssues(page);

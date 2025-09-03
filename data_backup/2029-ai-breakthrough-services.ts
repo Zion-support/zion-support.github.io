@@ -406,5 +406,5 @@ aiCapabilities: string[];export const aiBreakthroughServices202,
       'Emotional response',
       'Empathy simulation',
       'Sentiment analysis';
-    ];
+    ]
 ]}}

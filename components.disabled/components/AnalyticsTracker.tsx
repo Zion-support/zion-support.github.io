@@ -12,7 +12,7 @@ interface AnalyticsTrackerProps {
     n: string;
     label?: string;
     value?: number;
-  }>
+  }>;
 }
 
 const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({'
@@ -98,11 +98,11 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({'
               event_label: '25_percent_scroll',
               value: scrollDepth});
           }
-:components/AnalyticsTracker.tsx
-        } else if (scrollDepth >= 50 && scrollDepth < 75) {'
+:components/AnalyticsTracker.tsx;
+} else if (scrollDepth >= 50 && scrollDepth < 75) {'
           if (typeof window !== 'undefined' && window.gtag) {'
-            window.gtag('event', 'scroll', {'
-        } else if (scrollDepth >= 50 && scrollDepth < 75) {
+            window.gtag('event', 'scroll', {';
+} else if (scrollDepth >= 50 && scrollDepth < 75) {
           if (typeof window !== 'undefined' && window.gtag) {
             window.gtag('event,scroll', {
 :components.disabled/components/AnalyticsTracker.tsx
@@ -110,11 +110,11 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({'
               event_label: '50_percent_scroll',
               value: scrollDepth});
           }
-:components/AnalyticsTracker.tsx
-        } else if (scrollDepth >= 75) {'
+:components/AnalyticsTracker.tsx;
+} else if (scrollDepth >= 75) {'
           if (typeof window !== 'undefined' && window.gtag) {'
-            window.gtag('event', 'scroll', {'
-        } else if (scrollDepth >= 75) {
+            window.gtag('event', 'scroll', {';
+} else if (scrollDepth >= 75) {
           if (typeof window !== 'undefined' && window.gtag) {
             window.gtag('event,scroll', {
 :components.disabled/components/AnalyticsTracker.tsx
@@ -234,8 +234,8 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({'
 :components.disabled/components/AnalyticsTracker.tsx
               page_title: '${pageName}', page_location: window.location.href,
 :components.disabled/components/AnalyticsTracker.tsx
-              send_page_view: true
-            });
+              send_page_view: true;
+});
           `}}
       />
       {/* Enhanced E-commerce Tracking */}
@@ -256,9 +256,9 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({'
                 items: [{
                   item_i,
     d: serviceName, item_name: serviceName,
-                  item_category: category, item_brand: 'Zion Tech Group'
-                }]
-              })}
+                  item_category: category, item_brand: 'Zion Tech Group';
+}];
+})}
 
             // Track contact form submissions
 :components/AnalyticsTracker.tsx
@@ -271,8 +271,8 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({'
 :components.disabled/components/AnalyticsTracker.tsx
 :components.disabled/components/AnalyticsTracker.tsx
                 event_category: 'contact', event_label: formType,
-                value: 1
-              })}
+                value: 1;
+})}
 
             // Track demo requests
 :components/AnalyticsTracker.tsx
@@ -285,8 +285,8 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({'
 :components.disabled/components/AnalyticsTracker.tsx
 :components.disabled/components/AnalyticsTracker.tsx
                 event_category: 'demo', event_label: demoType,
-                value: 1
-              })}
+                value: 1;
+})}
           `}}
       />
     </Head>

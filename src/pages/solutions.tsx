@@ -18,15 +18,15 @@ export default function Solutions() {
       solutions: [
           name: 'AI-Powered Diagnostics',
           description: 'Advanced medical imaging analysis and diagnostic support systems.',
-          benefits: ['Improved Accuracy', 'Faster Results', 'Cost Reduction', 'Better Patient Outcomes']
-        } {
+          benefits: ['Improved Accuracy', 'Faster Results', 'Cost Reduction', 'Better Patient Outcomes'];
+} {
           name: 'Patient Management Platform',
           description: 'Comprehensive patient care coordination and management system.',
           benefits: ['Streamlined Workflows', 'Better Communication', 'Reduced Errors', 'Enhanced Care Quality']
           name: 'Predictive Analytics',
           description: 'Forecast patient outcomes and optimize resource allocation.',
-          benefits: ['Proactive Care', 'Resource Optimization', 'Risk Assessment', 'Population Health Management']
-        }
+          benefits: ['Proactive Care', 'Resource Optimization', 'Risk Assessment', 'Population Health Management'];
+}
       ]
       industry: 'Financial Services',
       icon: '💰',
@@ -93,7 +93,7 @@ export default function Solutions() {
           name: 'Cybersecurity',
           description: 'Comprehensive security solutions for government systems and data.',
           benefits: ['Enhanced Security', 'Threat Prevention', 'Compliance', 'Risk Mitigation']
-  ];
+  ]
 
   const getColorClasses = (color: string) => {
     const colorMap: { [key: string]: string } = {
@@ -102,8 +102,8 @@ export default function Solutions() {
       orange: 'bg-orange-100 text-orange-800 border-orange-200',
       purple: 'bg-purple-100 text-purple-800 border-purple-200',
       indigo: 'bg-indigo-100 text-indigo-800 border-indigo-200',
-      red: 'bg-red-100 text-red-800 border-red-200'
-    };
+      red: 'bg-red-100 text-red-800 border-red-200';
+};
     return colorMap[color] || 'bg-gray-100 text-gray-800 border-gray-200'};
 
 export default React.memo(function Solutions() {

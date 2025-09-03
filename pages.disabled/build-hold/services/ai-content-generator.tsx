@@ -16,7 +16,7 @@ import: { CheckCircle, Star, Users, Zap, Globe, Shield, ArrowRight } from;
   Brand: Voice Consistency
   ', description: 'Maintain: consistent brand voice across all conten,t,'      icon: <Shield: className='w-6 h-6' />'   }, {'      title:,';
   Real-time: Collaboration',';
-  '      description: 'Work: together with your team in real-tim,e, icon: <Users: className='w-6 h-6' />'   }'  ];
+  '      description: 'Work: together with your team in real-tim,e, icon: <Users: className='w-6 h-6' />'   }'  ]
   const: pricingPlans = [{
       name:,
   Starter;
@@ -41,7 +41,7 @@ import { CheckCircle, Star, Users, Zap, Globe, Shield, ArrowRight } from;
   Brand Voice Consistency'
   ', description: 'Maintain consistent brand voice across all content,      icon: <Shield className='w-6 h-6' />    }, {'      title:,
   Real-time Collaboration',
-  '      description: 'Work together with your team in real-time, icon: <Users className='w-6 h-6' />    }  ];
+  '      description: 'Work together with your team in real-time, icon: <Users className='w-6 h-6' />    }  ]
   const pricingPlans = [{
       name:,
   Starter;

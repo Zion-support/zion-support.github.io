@@ -229,8 +229,8 @@ class TypeScriptErrorMonitor {;
 ;
       return false;
     } catch (fixError) {
-      this.log( `❌ Failed to fix error in ${error.file}:${error.line}: ${fixError.message}`,ERROR`
-    } catch (fixError) {;
+      this.log( `❌ Failed to fix error in ${error.file}:${error.line}: ${fixError.message}`,ERROR`;
+} catch (fixError) {;
       this.log( `❌ Failed to fix error in ${error.file}:${error.line}: ${fixError.message}',ERROR';
       );
       return false;

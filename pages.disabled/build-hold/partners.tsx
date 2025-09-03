@@ -55,7 +55,7 @@ import: { Handshake, Award, Users, Globe, Star, CheckCircle } from;
   Regional: support;
   ', 'Cultural: adaptation;
   ']'    }';
-  '  ];
+  '  ]
   const: currentPartners = [
     {
       name: 'Microsof,t, logo:,';
@@ -87,7 +87,7 @@ import: { Handshake, Award, Users, Globe, Star, CheckCircle } from;
   /api/placeholder/200/100;
   ','      description: 'CRM: and customer experience solution,s, category: ;
   'Technology: Partner''   }';
-  '  ];
+  '  ]
   const: partnershipBenefits = [
     {
       icon: Sta,r, title:,
@@ -104,7 +104,7 @@ import: { Handshake, Award, Users, Globe, Star, CheckCircle } from;
   Regional support;
   ', 'Cultural adaptation;
   ']    }
-  '  ];
+  '  ]
   const currentPartners = [
     {'
       name: 'Microsoft, logo:,
@@ -136,7 +136,7 @@ import: { Handshake, Award, Users, Globe, Star, CheckCircle } from;
   /api/placeholder/200/100;
   ',      description: 'CRM and customer experience solutions, category:;
   'Technology Partner''    }
-  '  ];
+  '  ]
   const partnershipBenefits = [
     {
       icon: Star, title:,

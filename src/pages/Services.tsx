@@ -29,7 +29,7 @@ const Services: React.FC = () => {,"});,"})
           <p className="text-lg text-gray-600">Content coming soon...</p>;,"});,"})
         </div>;,"});,"})
     </>;,"});,"})
-  );,"});,"})
+  );,"});,"});
 };,"});,"})
 export default Services;,"});,"})
 ursor/automate-test-fix-improve-and-merge-code-48f3;
@@ -60,5 +60,5 @@ const Services: React.FC = () => {"
 ;
 export default Services;
 export: default Services;
-"
+";
 }

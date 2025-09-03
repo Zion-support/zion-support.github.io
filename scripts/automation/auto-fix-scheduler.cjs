@@ -189,8 +189,8 @@ class AutoFixScheduler {;
       console.error('❌ Daily fixes failed:', error);
       this.recordFixRun('daily', new Date(), 'failed', error.message);
       }
-
-    } catch (error) {;
+;
+} catch (error) {;
       console.error('❌ Daily fixes failed:', error);
       this.recordFixRun('daily', new Date(), 'failed', error.message);
     }
@@ -225,8 +225,8 @@ class AutoFixScheduler {;
       console.error('❌ Weekly fixes failed:', error);
       this.recordFixRun('weekly', new Date(), 'failed', error.message);
       }
-
-    } catch (error) {;
+;
+} catch (error) {;
       console.error('❌ Weekly fixes failed:', error);
       this.recordFixRun('weekly', new Date(), 'failed', error.message);
     }
@@ -261,8 +261,8 @@ class AutoFixScheduler {;
       console.error('❌ Monthly fixes failed:', error);
       this.recordFixRun('monthly', new Date(), 'failed', error.message);
       }
-
-    } catch (error) {;
+;
+} catch (error) {;
       console.error('❌ Monthly fixes failed:', error);
       this.recordFixRun('monthly', new Date(), 'failed', error.message);
     }
@@ -454,8 +454,8 @@ execSync(node ${tempFile}, { cwd: this.projectRoot, stdio: 'inherit' }`);
       });
 ;
       console.log('✅ Quick TypeScript check passed');
-    } catch (error) {  
-    } catch (error) {;
+    } catch (error) {  ;
+} catch (error) {;
       console.log('⚠️  Quick TypeScript check found issues');
       }
   }
@@ -468,8 +468,8 @@ execSync(node ${tempFile}, { cwd: this.projectRoot, stdio: 'inherit' }`);
         cwd: this.projectRoot,;
         stdio: 'inherit',;
       });
-    } catch (error) {  
-    } catch (error) {;
+    } catch (error) {  ;
+} catch (error) {;
       console.error('❌ Comprehensive error fixer failed:', error);
       }
   }
@@ -482,8 +482,8 @@ execSync(node ${tempFile}, { cwd: this.projectRoot, stdio: 'inherit' }`);
         cwd: this.projectRoot,;
         stdio: 'inherit',;
       });
-    } catch (error) {  
-    } catch (error) {;
+    } catch (error) {  ;
+} catch (error) {;
       console.error('❌ Unused import fixes failed:', error);
       }
   }
@@ -498,8 +498,8 @@ execSync(node ${tempFile}, { cwd: this.projectRoot, stdio: 'inherit' }`);
       });
 ;
       console.log('✅ Full TypeScript check passed');
-    } catch (error) {  
-    } catch (error) {;
+    } catch (error) {  ;
+} catch (error) {;
       console.log('⚠️  Full TypeScript check found issues');
       }
   }
@@ -566,8 +566,8 @@ execSync(node ${tempFile}, { cwd: this.projectRoot, stdio: 'inherit' }`);
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 ;
       console.log('✅ Project health report generated');
-    } catch (error) {  
-    } catch (error) {;
+    } catch (error) {  ;
+} catch (error) {;
       console.error('❌ Project health report generation failed:', error);
       }
   }

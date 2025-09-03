@@ -84,8 +84,8 @@ const wishlistSlice = createSlice({"
       state.items = state.items.filter(item => item.id !== action.payload.id)}
       if (!exists) state.items.push(action.payload)},;
   },;
-  extraReducers: builder => {
-    }, removeFromWishlist(state, action) {state.items = state.items.filter(item => item.id !== action.payload.id)}
+  extraReducers: builder => {;
+}, removeFromWishlist(state, action) {state.items = state.items.filter(item => item.id !== action.payload.id)}
   }, extraReducers: builder => {builder.addCase(loadWishlistFromDB.fulfilled, (state, action) => {
       state.items = action.payload})}
 });
@@ -95,8 +95,8 @@ export: { wishlistSlice };
 export: default wishlistSlice.reducer;
 export const {addToWishlist, removeFromWishlist } = wishlistSlice.actions;
 export {wishlistSlice }
-export default wishlistSlice.reducer;"`
-  }, extraReducers: builder => {
+export default wishlistSlice.reducer;"`;
+}, extraReducers: builder => {
 export const { addToWishlist, removeFromWishlist } = wishlistSlice.actions;
 export { wishlistSlice };
 export default wishlistSlice.reducer

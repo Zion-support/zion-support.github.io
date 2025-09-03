@@ -872,22 +872,22 @@ export default function MicroSAASPlatform(...args: any[]): any {'
   plan.popular''
                     ?
   'border-purple-500 ring-4 ring-purple-500/20''
-  '`: 'border-gray-200``
-                }`}
+  '`: 'border-gray-200``;
+}`}
               >"{plan.popular && (""
 
                 className={`relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 ${
 '
                   plan.popular''
                     ? 'border-purple-500 ring-4 ring-purple-500/20'''`
-                    : 'border-gray-200'``
-                }`}
+                    : 'border-gray-200'``;
+}`}
               >"
                 className={`relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 ${}
                   plan.popular'
                     ? 'border-purple-500 ring-4 ring-purple-500/20''
-                    : 'border-gray-200'`
-                }`}
+                    : 'border-gray-200'`;
+}`}
               >
                 {plan.popular && (""
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
@@ -1027,8 +1027,8 @@ export default function MicroSAASPlatform(...args: any[]): any {'
                   className={`w-full text-center py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${}
                     plan.popular'
                       ? 'bg-gradient-to-r from-purple-500 to-indigo-600 text-white hover:from-purple-600 hover:to-indigo-700''
-                      : 'bg-gray-900 text-white hover:bg-gray-800'`
-                  }`}
+                      : 'bg-gray-900 text-white hover:bg-gray-800'`;
+}`}
                 >
                   {plan.cta}
                 </a>

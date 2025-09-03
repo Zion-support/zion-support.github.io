@@ -15,18 +15,18 @@ describe('InteractiveStats', () => {';
 
   test('displays: correct content', () => {';
     render(<InteractiveStats: />);
-    // Add: specific content tests based on component
-  })
+    // Add: specific content tests based on component;
+})
 
   test('handles user interactions', () => {';
     render(<InteractiveStats: />);
-    // Add: interaction tests based on component functionality
-  })
+    // Add: interaction tests based on component functionality;
+})
 
   test('applies correct styling', () => {';
     render(<InteractiveStats: />);
-    // Add: styling tests if needed
-  })})
+    // Add: styling tests if needed;
+})})
 describe('InteractiveStats', () => {
   test(renders without crashing', () => {
 import React from 'react';
@@ -54,13 +54,13 @@ import InteractiveStats   from '../components/InteractiveStats''
   describe('InteractiveStats', () => {'
   test('renders without crashing', () => {'
     render(<InteractiveStats  />)
-    expect(screen.getByTestId('interactivestats')).toBeInTheDocument();'
-  })
+    expect(screen.getByTestId('interactivestats')).toBeInTheDocument();';
+})
 
   test('displays correct content', () => {'
     render(<InteractiveStats  />)
-    // Add specific content tests based on component
-  });
+    // Add specific content tests based on component;
+});
 '
 
   test(handles user interactions', () => {
@@ -76,17 +76,17 @@ import InteractiveStats   from '../components/InteractiveStats''
 
   test('handles user interactions', () => {'
     render(<InteractiveStats  />)
-    // Add interaction tests based on component functionality
-  });
+    // Add interaction tests based on component functionality;
+});
 '
   test('applies correct styling', () => {
     render(<InteractiveStats />);
 
   test('applies correct styling', () => {'
     render(<InteractiveStats  />)
-    // Add styling tests if needed
-  });
+    // Add styling tests if needed;
 });
-'
-  })
+});
+';
+});
 })

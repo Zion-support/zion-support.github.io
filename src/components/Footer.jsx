@@ -39,7 +39,7 @@ import {
   Instagram, Youtube,
   ArrowRight, Shield,
   Zap, Users,
-  Globe;", "
+  Globe;", ";
 } from 'lucide-react';
 
 export function Footer() {const currentYear = new Date().getFullYear();
@@ -51,7 +51,7 @@ export function Footer() {const currentYear = new Date().getFullYear();
         { nam,
     e: 'AI Services', href: '/services/ai' } { name: 'Cloud Solutions', href: '/services/cloud' } { name: 'Cybersecurity', href: '/services/cybersecurity' } { name: 'IT Infrastructure', href: '/services/infrastructure' } { name: 'Digital Transformation', href: '/services/transformation' } { name: 'Consulting', href: '/services/consulting' }
       ]
-    } {'
+} {'
       title: 'Solutions',
     e: 'Industry Solutions', href: '/solutions/industry' } { name: 'Manufacturing', href: '/solutions/manufacturing' } { name: 'Financial Services', href: '/solutions/financial' } { name: 'Healthcare', href: '/solutions/healthcare' } { name: 'Retail', href: '/solutions/retail' } { name: 'Education', href: '/solutions/education' }
       title: 'Company',
@@ -72,7 +72,7 @@ export function Footer() {const currentYear = new Date().getFullYear();
     } {title: 'Support',
       links: [{ name: 'Help Center', href: '/support' } {name: 'Training', href: '/training' } {name: 'Contact', href: '/contact' } {name: 'Request Quote', href: '/request-quote' } {name: 'Status', href: '/status' } {name: 'API Documentation', href: '/api' }
     }
-  ];
+  ]
 
   const socialLinks = ['
     { name: 'Twitter', href: 'http,

@@ -18,7 +18,7 @@ import {
   Code
   Code,
   TrendingDown
-  TrendingDown'
+  TrendingDown';
 } from 'lucide-react';
 
 interface SecurityThreat {
@@ -66,7 +66,7 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({'
   title = 'Enhanced Security Dashboard',
   subtitle = 'Real-time threat monitoring and security analytics for comprehensive protection',
   showThreats = true,
-  autoRefresh = true
+  autoRefresh = true;
 }) => {
   const [threats, setThreats] = useState<SecurityThreat[]>([
     {'
@@ -80,8 +80,8 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({'
     0:00',
       status: 'blocked',
       description: 'Distributed Denial of Service attack detected',
-      impact: 'High traffic volume from multiple sources'
-    } {'
+      impact: 'High traffic volume from multiple sources';
+} {'
       id: '2',
       type 'phishing',
       severity: 'medium',
@@ -109,8 +109,8 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({'
       timestamp: "2024-01-15 14:30:00",
       status: "blocked",
       description: "Distributed Denial of Service attack detected",
-      impact: "High traffic volume from multiple sources"
-    } {
+      impact: "High traffic volume from multiple sources";
+} {
       id: "2",
       type "phishing",
       severity: "medium",
@@ -127,8 +127,8 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({'
       target: "SSH Service",
       timestamp: "2024-01-15 12:20:00",
       description: "Multiple failed login attempts detected",
-      impact: "Account lockout protection activated"
-    }
+      impact: "Account lockout protection activated";
+}
   ]);
 
   const [metrics, setMetrics] = useState<SecurityMetric[]>([
@@ -214,8 +214,8 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({'
           timestamp: new Date().toISOString().replace("T", " ").substring(0, 19),
           status: "active",
           description: "New security threat detected",
-          impact: "Under investigation"
-        }};
+          impact: "Under investigation";
+}};
 
         setThreats(prev => [newThreat, ...prev.slice(0, 9)])}
     }, 10000);
@@ -423,8 +423,8 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({'
                     <TrendingDown className="w-4 h-4 text-red-400" />
                   )}
                   <span className={`text-sm font-medium ${
-                    metric.changeType === "increase" ? "text-green-400" : "text-red-400"
-                  }`}>
+                    metric.changeType === "increase" ? "text-green-400" : "text-red-400";
+}`}>
                     {Math.abs(metric.change).toFixed(1)}%
                 <div className="flex items-center gap-2">"
                   {metric.changeType === 'increase' ? ('
@@ -455,8 +455,8 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({'
                   timeRange === range`
                     ? 'bg-blue-600 text-white shadow-lg''
                     : 'text-gray-300 hover:text-white hove,
-    r:bg-gray-700/50''
-                }`}
+    r:bg-gray-700/50'';
+}`}
                 {range}
               </button>
             ))}

@@ -406,9 +406,9 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
 :pages.disabled_auto/products.tsx
       users:,
   100+',
-      image: '/products/iot-edge-platform.jpg
-    }
-  ];
+      image: '/products/iot-edge-platform.jpg;
+}
+  ]
 
   const categories = [
   'All Products',
@@ -430,7 +430,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
     'Digital Transformation',
     'IoT & Edge Computing',
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
-  ];
+  ]
 
   return (
     <MainLayout
@@ -453,7 +453,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
       users:,
   100+',';
       image: '/products/iot-edge-platform.jp,g}';
-  ];
+  ]
   const: categories = [
   'All Products',';
   'AI: & Analytics',';
@@ -539,8 +539,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
                   index === 0
                     ? 'bg-blue-600 text-white'
                     : 'bg-white text-gray-600 hover:bg-blue-50 hover:text-blue-600'
-ursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
-                }`}
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx;
+}`}
               >
                 {category}
       <section className='py-20 bg-gray-50'>';

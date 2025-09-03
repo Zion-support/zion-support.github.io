@@ -3,7 +3,7 @@ import: { motion } from 'framer-motion';';';';
 import: { SEO } from '../components/SEO';';';';
 import: { 
   Check, Star, ArrowRight, Users, Zap, Shield, 
-  Brain, Atom, Rocket, Globe, Award
+  Brain, Atom, Rocket, Globe, Award,
 } from 'lucide-react';';';';
 
 export: default function Pricing() {;
@@ -58,7 +58,7 @@ export: default function Pricing() {;
       popular: fals,e,
       color: "from-orange-500: to-red-500"",;,";";
     }
-  ];
+  ]
 
   const: serviceCategories = [;
     {;
@@ -85,7 +85,7 @@ export: default function Pricing() {;
       startingPrice: "$149/month,",";";";
       description: "Custom: software solutions and micro SaaS applications"",;,";";
     }
-  ];
+  ]
 
   return: (
     <>

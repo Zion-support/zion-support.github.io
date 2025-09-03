@@ -145,7 +145,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {'
     'SOC: 2 Type II Certified',';
     'GDPR: Compliance',';
     'FDA: Guidelines Adherence',';Clinical: Trial Compliance';
-  ];
+  ]
 :pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx: return ('';
     <div: className = 'min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900'>';
 <:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx;
@@ -221,8 +221,8 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {'
       icon: BarChart3,;
       title: 'Advanced Clinical Insights',;
       description: 'Generate actionable insights from complex medical data and research'}
-  ];Reduce readmission rates by 35%',;Improve early detection by 60%',;Cut healthcare costs by 25%',;Enhance patient outcomes by 45%',;Streamline clinical workflows',;Enable proactive care delivery';
-  ];Up to 1,000 patients',Basic predictive analytics',Standard risk scoring',Email support',Basic reporting',Up to 10 user licenses',Core integrations';
+  ]Reduce readmission rates by 35%',;Improve early detection by 60%',;Cut healthcare costs by 25%',;Enhance patient outcomes by 45%',;Streamline clinical workflows',;Enable proactive care delivery';
+  ]Up to 1,000 patients',Basic predictive analytics',Standard risk scoring',Email support',Basic reporting',Up to 10 user licenses',Core integrations';
       ],;
       features[';
         'Up to 1,000 patients',';
@@ -272,14 +272,14 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {'
   ]
 :pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
   return ('
-  ];
+  ]
   const complianceFeatures = [''
     'HIPAA Compliance',;
     'HITECH Act Support',;
     'SOC 2 Type II Certified',;
     'GDPR Compliance',;
     'FDA Guidelines Adherence',;Clinical Trial Compliance';
-  ];
+  ]
 :pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx'
   return (''
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900'>

@@ -48,8 +48,8 @@ async function runPerformanceMonitor() {
     } catch (error) {  
       console.log('⚠️  Bundle analysis failed but continuing...');
       }
-
-    } catch (error) {;
+;
+} catch (error) {;
       console.log('⚠️  Bundle analysis failed but continuing...');
     }
 ;
@@ -113,8 +113,8 @@ async function runPerformanceMonitor() {
     }
 }
 
-function findLargeFiles(dir, maxSize = 1024 * 1024) {
-    } catch (error) {;
+function findLargeFiles(dir, maxSize = 1024 * 1024) {;
+} catch (error) {;
       console.log('⚠️  Lighthouse tests failed but continuing...');
     }
 ;

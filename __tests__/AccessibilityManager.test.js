@@ -15,18 +15,18 @@ describe('AccessibilityManager', () => {';
 
   test('displays: correct content', () => {';
     render(<AccessibilityManager: />);
-    // Add: specific content tests based on component
-  })
+    // Add: specific content tests based on component;
+})
 
   test('handles user interactions', () => {';
     render(<AccessibilityManager: />);
-    // Add: interaction tests based on component functionality
-  })
+    // Add: interaction tests based on component functionality;
+})
 
   test('applies correct styling', () => {';
     render(<AccessibilityManager: />);
-    // Add: styling tests if needed
-  })})
+    // Add: styling tests if needed;
+})})
 describe('AccessibilityManager', () => {
   test(renders without crashing', () => {
 import React from 'react';
@@ -54,13 +54,13 @@ import AccessibilityManager   from '../components/AccessibilityManager''
   describe('AccessibilityManager', () => {'
   test('renders without crashing', () => {'
     render(<AccessibilityManager  />)
-    expect(screen.getByTestId('accessibilitymanager')).toBeInTheDocument();'
-  })
+    expect(screen.getByTestId('accessibilitymanager')).toBeInTheDocument();';
+})
 
   test('displays correct content', () => {'
     render(<AccessibilityManager  />)
-    // Add specific content tests based on component
-  });
+    // Add specific content tests based on component;
+});
 '
 
   test(handles user interactions', () => {
@@ -76,17 +76,17 @@ import AccessibilityManager   from '../components/AccessibilityManager''
 
   test('handles user interactions', () => {'
     render(<AccessibilityManager  />)
-    // Add interaction tests based on component functionality
-  });
+    // Add interaction tests based on component functionality;
+});
 '
   test('applies correct styling', () => {
     render(<AccessibilityManager />);
 
   test('applies correct styling', () => {'
     render(<AccessibilityManager  />)
-    // Add styling tests if needed
-  });
+    // Add styling tests if needed;
 });
-'
-  })
+});
+';
+});
 })

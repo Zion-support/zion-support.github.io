@@ -77,8 +77,8 @@ function computeFitness() {
         ? Number(medianHoursBetween.toFixed(2))
         : null,
     score,
-    topContributors,
-  };
+    topContributors,;
+};
 }
 
 function writeReport() {

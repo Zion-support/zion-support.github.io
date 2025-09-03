@@ -27,8 +27,8 @@ class SecurityAuditor {
       const result = execSync(command, {
         cwd: this.projectRoot,
         encoding: 'utf8',
-        timeout: 300000,
-      });
+        timeout: 300000,;
+});
       this.log(`✅ Completed: ${description}`);
       return { success: true, output: result };
     } catch (error) {
@@ -49,8 +49,8 @@ class SecurityAuditor {
       return { 
         success: true, 
         output: error.stdout || error.message,
-        vulnerabilitiesFound: true 
-      };
+        vulnerabilitiesFound: true ;
+};
     }
   }
 
@@ -70,24 +70,24 @@ class SecurityAuditor {
           findings.push({
             file: envFile,
             issue: 'Plain text password detected',
-            severity: 'high'
-          });
+            severity: 'high';
+});
         }
         
         if (content.includes('SECRET=') && !content.includes('SECRET=***')) {
           findings.push({
             file: envFile,
             issue: 'Plain text secret detected',
-            severity: 'high'
-          });
+            severity: 'high';
+});
         }
         
         if (content.includes('API_KEY=') && !content.includes('API_KEY=***')) {
           findings.push({
             file: envFile,
             issue: 'Plain text API key detected',
-            severity: 'medium'
-          });
+            severity: 'medium';
+});
         }
       }
     }
@@ -95,8 +95,8 @@ class SecurityAuditor {
     return {
       success: true,
       findings: findings,
-      filesChecked: envFiles.length
-    };
+      filesChecked: envFiles.length;
+};
   }
 
   async checkCodeSecurity() {
@@ -117,20 +117,20 @@ class SecurityAuditor {
           { pattern: /document\.write/, message: 'document.write() usage detected', severity: 'medium' },
           { pattern: /localStorage\.setItem.*password/i, message: 'Password in localStorage detected', severity: 'high' },
           { pattern: /console\.log.*password/i, message: 'Password in console.log detected', severity: 'medium' }
-        ];
+        ]
 
         dangerousPatterns.forEach(({ pattern, message, severity }) => {
           if (pattern.test(content)) {
             securityIssues.push({
               file: filePath,
               issue: message,
-              severity: severity
-            });
+              severity: severity;
+});
           }
         });
       } catch (error) {
-        // Skip files that can't be read
-      }
+        // Skip files that can't be read;
+}
     };
 
     // Check source files
@@ -146,8 +146,8 @@ class SecurityAuditor {
     return {
       success: true,
       issues: securityIssues,
-      filesScanned: securityIssues.length
-    };
+      filesScanned: securityIssues.length;
+};
   }
 
   scanDirectory(dir, extensions, callback) {
@@ -177,15 +177,15 @@ class SecurityAuditor {
       if (!content.includes('https') && !content.includes('secure')) {
         findings.push({
           issue: 'No HTTPS configuration found in next.config.js',
-          severity: 'medium'
-        });
+          severity: 'medium';
+});
       }
     }
 
     return {
       success: true,
-      findings: findings
-    };
+      findings: findings;
+};
   }
 
   async generateReport(results) {
@@ -197,11 +197,11 @@ class SecurityAuditor {
         failed: Object.values(results).filter(r => !r.success).length,
         totalIssues: Object.values(results).reduce((sum, r) => {
           return sum + (r.findings ? r.findings.length : 0) + (r.issues ? r.issues.length : 0);
-        }, 0)
-      },
+        }, 0);
+},
       results: results,
-      recommendations: this.generateRecommendations(results)
-    };
+      recommendations: this.generateRecommendations(results);
+};
 
     const reportFile = path.join(this.reportsDir, 'security-audit-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
@@ -217,24 +217,24 @@ class SecurityAuditor {
       recommendations.push({
         type: 'dependencies',
         message: 'Vulnerabilities found in dependencies. Run npm audit fix to resolve.',
-        action: 'npm audit fix'
-      });
+        action: 'npm audit fix';
+});
     }
 
     if (results.environment && results.environment.findings.length > 0) {
       recommendations.push({
         type: 'environment',
         message: 'Security issues found in environment files. Review and secure sensitive data.',
-        issues: results.environment.findings.length
-      });
+        issues: results.environment.findings.length;
+});
     }
 
     if (results.codeSecurity && results.codeSecurity.issues.length > 0) {
       recommendations.push({
         type: 'code',
         message: 'Security issues found in code. Review and fix dangerous patterns.',
-        issues: results.codeSecurity.issues.length
-      });
+        issues: results.codeSecurity.issues.length;
+});
     }
 
     return recommendations;
@@ -247,8 +247,8 @@ class SecurityAuditor {
       dependencies: await this.auditDependencies(),
       environment: await this.checkEnvironmentVariables(),
       codeSecurity: await this.checkCodeSecurity(),
-      httpsConfig: await this.checkHTTPSConfiguration()
-    };
+      httpsConfig: await this.checkHTTPSConfiguration();
+};
 
     const report = await this.generateReport(results);
 

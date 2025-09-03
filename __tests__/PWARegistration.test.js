@@ -15,18 +15,18 @@ describe('PWARegistration', () => {';
 
   test('displays: correct content', () => {';
     render(<PWARegistration: />);
-    // Add: specific content tests based on component
-  })
+    // Add: specific content tests based on component;
+})
 
   test('handles user interactions', () => {';
     render(<PWARegistration: />);
-    // Add: interaction tests based on component functionality
-  })
+    // Add: interaction tests based on component functionality;
+})
 
   test('applies correct styling', () => {';
     render(<PWARegistration: />);
-    // Add: styling tests if needed
-  })})
+    // Add: styling tests if needed;
+})})
 describe('PWARegistration', () => {
   test(renders without crashing', () => {
 import React from 'react';
@@ -54,13 +54,13 @@ import PWARegistration   from '../components/PWARegistration''
   describe('PWARegistration', () => {'
   test('renders without crashing', () => {'
     render(<PWARegistration  />)
-    expect(screen.getByTestId('pwaregistration')).toBeInTheDocument();'
-  })
+    expect(screen.getByTestId('pwaregistration')).toBeInTheDocument();';
+})
 
   test('displays correct content', () => {'
     render(<PWARegistration  />)
-    // Add specific content tests based on component
-  });
+    // Add specific content tests based on component;
+});
 '
 
   test(handles user interactions', () => {
@@ -76,17 +76,17 @@ import PWARegistration   from '../components/PWARegistration''
 
   test('handles user interactions', () => {'
     render(<PWARegistration  />)
-    // Add interaction tests based on component functionality
-  });
+    // Add interaction tests based on component functionality;
+});
 '
   test('applies correct styling', () => {
     render(<PWARegistration />);
 
   test('applies correct styling', () => {'
     render(<PWARegistration  />)
-    // Add styling tests if needed
-  });
+    // Add styling tests if needed;
 });
-'
-  })
+});
+';
+});
 })

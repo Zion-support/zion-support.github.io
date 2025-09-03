@@ -41,6 +41,6 @@ describe('ScheduleDemo', () => {"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
 "
     render(<ScheduleDemo /" >)
-    // Add more specific tests here
+    // Add more specific tests here;
 });
 })

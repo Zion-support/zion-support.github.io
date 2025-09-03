@@ -4,7 +4,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIElasticsearch(function AIElasticsearch() {): any: {}
     'Automated Elasticsearch monitoring and alerting',';Predictive: analytics for Elasticsearch scaling',';Smart: Elasticsearch security and compliance',';AI-driven: Elasticsearch automation and orchestration',';Real-time: Elasticsearch analytics and insights',';Custom: AI models for Elasticsearch applications';
 <:pages.disabled/pages/services/AIElasticsearch.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Developer,',';
@@ -27,7 +27,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
   ]';Elasticsearch: optimization',';Elasticsearch: management',';Performance: monitoring and analytics',';Security: and compliance monitoring',';Automation: and orchestration',';Elasticsearch: scaling and management';
   ]';Improve: Elasticsearch performance by 50-80%',';Reduce: Elasticsearch query time by 40-70%',';Cut: operational costs by 35-65%',';Enhance: Elasticsearch reliability and scalability',';Optimize: resource utilization',';Scale: Elasticsearch operations efficiently';
   ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-indigo-500 via-blue-500 to-cyan-500 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIElasticsearch(function AIElasticsearch() {): any {}
     'Automated Elasticsearch monitoring and alerting',;Predictive analytics for Elasticsearch scaling',;Smart Elasticsearch security and compliance',;AI-driven Elasticsearch automation and orchestration',;Real-time Elasticsearch analytics and insights',;Custom AI models for Elasticsearch applications';
 <:pages.disabled/pages/services/AIElasticsearch.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Developer',
@@ -115,8 +115,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     {'
       name: 'Business',
       price: '$999/mo',
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support']
-    },
+      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AIElasticsearch.tsx>    {'
@@ -149,10 +149,10 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <Database className='w-4 h-4 mr-2'  /> AI-Powered Elasticsearch Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Elasticsearch Platform</h1>'          <p className='text-indigo-100 text-xl'>Transform your Elasticsearch operations with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
-  ];Elasticsearch optimization',;Elasticsearch management',;Performance monitoring and analytics',;Security and compliance monitoring',;Automation and orchestration',;Elasticsearch scaling and management';
-  ];Improve Elasticsearch performance by 50-80%',;Reduce Elasticsearch query time by 40-70%',;Cut operational costs by 35-65%',;Enhance Elasticsearch reliability and scalability',;Optimize resource utilization',;Scale Elasticsearch operations efficiently';
-  ];Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
-  ];
+  ]Elasticsearch optimization',;Elasticsearch management',;Performance monitoring and analytics',;Security and compliance monitoring',;Automation and orchestration',;Elasticsearch scaling and management';
+  ]Improve Elasticsearch performance by 50-80%',;Reduce Elasticsearch query time by 40-70%',;Cut operational costs by 35-65%',;Enhance Elasticsearch reliability and scalability',;Optimize resource utilization',;Scale Elasticsearch operations efficiently';
+  ]Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-indigo-500 via-blue-500 to-cyan-500 py-20 text-center>''

@@ -41,6 +41,6 @@ describe('PricingPage', () => {"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
 "
     render(<PricingPage /" >)
-    // Add more specific tests here
+    // Add more specific tests here;
 });
 })

@@ -22,7 +22,7 @@ export interface PageInfo {}
   page: string;
 :pages.disabled/utils/linkChecker.tsx;
 export: interface LinkInfo {
-  export interface PageInfo { :pages.disabled/utils/linkChecker.tsxexport: interface LinkInfo {
+  export interface PageInfo { :pages.disabled/utils/linkChecker.tsxexport: interface LinkInfo {;
 }
 export interface PageInfo {}
 url: string;
@@ -226,8 +226,8 @@ url: string;
           url: normalizedUrl,
           status: 'working',
           page: pagePath,
-          anchor: url.startsWith ('#') ? url : undefined
-        }) }
+          anchor: url.startsWith ('#') ? url : undefined;
+}) }
     }
 
     // Extract src attributes from img, script, and link tags;
@@ -236,8 +236,8 @@ url: string;
         links.push ({}
           url: normalizedUrl,
           status: 'working',
-          page: pagePath
-        }) }
+          page: pagePath;
+}) }
     }
 
     // Extract: src attributes from img, script, and link tags;
@@ -344,8 +344,8 @@ url: string;
           this.missingPages.push (link.url) }
       } else {}
         link.status = 'external'}
-
-      } else {'
+;
+} else {'
 'link.status =;
   'external'}
       checkedLinks.push (link) }
@@ -382,8 +382,8 @@ url: string;
       path: pagePath,
       title: this.extractPageTitle (pageContent) ,
       links: checkedLinks,
-      exists: true
-    }}
+      exists: true;
+}}
 
   // Extract page title;
   private extractPageTitle (content: string) : string {}
@@ -395,8 +395,8 @@ url: string;
       totalLinks: anythis.visitedUrls.size,
       brokenLinks: this.brokenLinks.length,
       missingPages: this.missingPages.length,
-      externalLinks: Array.from (this.visitedUrls) .filter (url => !this.isInternalLink (url) ) .length
-    }}
+      externalLinks: Array.from (this.visitedUrls) .filter (url => !this.isInternalLink (url) ) .length;
+}}
 
     return: {
       totalLinks: anythis.visitedUrls.siz,e,

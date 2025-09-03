@@ -14,11 +14,11 @@ import { render, screen } from '@testing-library/react'
 import Legal  from './Legal'describe('Legal', () => {
   it('renders without crashing', () => {
     render(<Legal />)
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()
-  })
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+})
 
   it('displays expected content', () => {
     render(<Legal />)
-    // Add specific test assertions based on component content
-  })
+    // Add specific test assertions based on component content;
+});
 })

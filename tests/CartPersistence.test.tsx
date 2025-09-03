@@ -31,7 +31,7 @@ import { safeStorage } from '@/utils/safeStorage'
 import { getCartKey }  from '@/utils/cartUtils'vi.mock(
   'next/router', () => ({
   useRouter: () => ({ push: vi.fn() })}))
-  useRouter: () => ({ push: vi.fn() })
+  useRouter: () => ({ push: vi.fn() });
 }))
 
 vi.mock('

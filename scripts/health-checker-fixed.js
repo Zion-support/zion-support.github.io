@@ -32,8 +32,8 @@ class HealthChecker {
       timestamp,
       level,
       message,
-      data
-    };
+      data;
+};
     
     console.log(`[${timestamp}] ${level.toUpperCase()}: ${message}`);
     if (data) {
@@ -55,14 +55,14 @@ class HealthChecker {
         if (res.statusCode === 200) {
           this.log('info', 'Application health check passed', {
             statusCode: res.statusCode,
-            responseTime: `${responseTime}ms`
-          });
+            responseTime: `${responseTime}ms`;
+});
           resolve({ healthy: true, responseTime, statusCode: res.statusCode });
         } else {
           this.log('warn', 'Application health check failed', {
             statusCode: res.statusCode,
-            responseTime: `${responseTime}ms`
-          });
+            responseTime: `${responseTime}ms`;
+});
           resolve({ healthy: false, responseTime, statusCode: res.statusCode });
         }
       });
@@ -71,8 +71,8 @@ class HealthChecker {
         const responseTime = Date.now() - startTime;
         this.log('error', 'Application health check error', {
           error: err.message,
-          responseTime: `${responseTime}ms`
-        });
+          responseTime: `${responseTime}ms`;
+});
         resolve({ healthy: false, responseTime, error: err.message });
       });
       
@@ -81,8 +81,8 @@ class HealthChecker {
         const responseTime = Date.now() - startTime;
         this.log('error', 'Application health check timeout', {
           responseTime: `${responseTime}ms`,
-          timeout: this.maxResponseTime
-        });
+          timeout: this.maxResponseTime;
+});
         resolve({ healthy: false, responseTime, error: 'timeout' });
       });
     });

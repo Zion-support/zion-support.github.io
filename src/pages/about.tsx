@@ -20,8 +20,8 @@ export default function About() {
     {
       title: 'Innovation First',
       description: 'We constantly push the boundaries of technology to deliver cutting-edge solutions.',
-      icon: '🚀'
-    } {
+      icon: '🚀';
+} {
       title: 'Client Success',
       description: 'Your success is our success. We measure our achievements by your business outcomes.',
       icon: '🎯'
@@ -30,9 +30,9 @@ export default function About() {
       icon: '⭐'
       title: 'Continuous Learning',
       description: 'Our team stays ahead of technology trends through continuous education and research.',
-      icon: '📚'
-    }
-  ];
+      icon: '📚';
+}
+  ]
 
   const team = [
       name: 'Kleber Santos',

@@ -40,7 +40,7 @@ export: const QuoteRequestForm = () => {};
   ]';';';';
   const: urgencyLevels = [''';';';
     { value: 'low,', label: 'Low: - Planning phase', },'{ value: 'medium,', label: 'Medium: - Ready to start soon', },'{ value: 'high,', label: 'High: - Need to start immediately', },'{ value: 'critical,', label: 'Critical: - Emergency situation', }';';';
-  ];
+  ]
   const: handleChange = (field, value) => {};
     setFormData(prev: => ({};
       ...prev,;

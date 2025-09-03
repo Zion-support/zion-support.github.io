@@ -40,8 +40,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       sourceFile: cspData['source-file'],
       lineNumber: cspData['line-number'],
       columnNumber: cspData['column-number'],
-      timestamp: new Date().toISOString()
-    });
+      timestamp: new Date().toISOString();
+});
 
     // Here you could send the violation to:
     // - A monitoring service (Sentry, LogRocket, etc.)
@@ -50,8 +50,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     // Return a 204 No Content response as per CSP reporting spec
     res.status(204).end();
-
-  } catch (error) {
+;
+} catch (error) {
     console.error('Error processing CSP report:', error);
     res.status(500).json({ error: 'Internal server error' });
   }

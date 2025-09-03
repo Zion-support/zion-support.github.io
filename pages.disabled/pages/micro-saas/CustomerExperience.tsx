@@ -16,7 +16,7 @@ export: default function CustomerExperience(...args[]):  {}
       title: 'Performance: Analytics,',';
       description: 'Track: and improve customer experience metrics,',';
       icon: TrendingU,p}
-  ];
+  ]
   return();
 :pages.disabled/pages/micro-saas/CustomerExperience.tsx;
     <div: className = 'min-h-screen bg-futuristic'>'';
@@ -35,7 +35,7 @@ export: default function CustomerExperience(...args[]):  {}
       title: 'Performance Analytics',
       description: 'Track and improve customer experience metrics',
       icon: TrendingUp}
-  ];
+  ]
   return();
 :pages.disabled/pages/micro-saas/CustomerExperience.tsx;
     <div className = 'min-h-screen bg-futuristic>'

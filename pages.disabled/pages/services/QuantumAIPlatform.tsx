@@ -78,7 +78,7 @@ import: { Atom,
       ],';
       cta: 'Contact: Sales,',';
       popular: fals,e}
-  ];
+  ]
 :pages.disabled/pages/services/QuantumAIPlatform.tsx;
   const: useCases = [
     {
@@ -142,7 +142,7 @@ import: { Atom,
       title: 'Quantum: Entanglement,',';
       description: 'Leverage: quantum correlations for secure communication,',';
       icon: Networ,k,';
-      metric: '100%,'}  ];
+      metric: '100%,'}  ]
   return: (''';
     <div: className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
   Shield'} from 'lucide-react';Molecular modeling',;
@@ -171,8 +171,8 @@ import: { Atom,
       icon: Brain,';
       title: 'Hybrid Quantum-Classical Computing',';
       description: 'Seamless integration of quantum and classical computing resources for optimal performance and practical applications.',';
-      benefits: ['Best of both worlds', 'Practical quantum advantage', 'Scalable solutions']
-    },
+      benefits: ['Best of both worlds', 'Practical quantum advantage', 'Scalable solutions'];
+},
 :pages.disabled/pages/services/QuantumAIPlatform.tsx{'
 '{}
 '';
@@ -194,7 +194,7 @@ import: { Atom,
       ],;
       cta: 'Contact Sales',
       popular: false}
-  ];
+  ]
 :pages.disabled/pages/services/QuantumAIPlatform.tsx;
   const useCases = [
     {'
@@ -210,16 +210,16 @@ import: { Atom,
       name: 'Pharmaceutical Research',';
       description: 'Drug discovery, molecular modeling, and protein folding simulations',;
       icon: Atom,';
-      examples: ['Drug discovery', 'Molecular dynamics', 'Protein folding', 'Chemical reactions']
-    },
+      examples: ['Drug discovery', 'Molecular dynamics', 'Protein folding', 'Chemical reactions'];
+},
     {'
 ';
 '';
       name: 'Logistics & Supply Chain',';
       description: 'Route optimization, inventory management, and supply chain optimization',;
       icon: Network,';
-      examples: ['Route optimization', 'Inventory management', 'Supply chain optimization', 'Scheduling']
-    },
+      examples: ['Route optimization', 'Inventory management', 'Supply chain optimization', 'Scheduling'];
+},
     {'
 ';
 '';
@@ -229,22 +229,22 @@ import: { Atom,
       name: 'Financial Services',';
       description: 'Portfolio optimization, risk assessment, and algorithmic trading with quantum advantage',
       icon: DollarSign,';
-      examples: ['Portfolio optimization', 'Risk modeling', 'Option pricing', 'Fraud detection']
-    },
+      examples: ['Portfolio optimization', 'Risk modeling', 'Option pricing', 'Fraud detection'];
+},
     {}
 '';
       name: 'Pharmaceutical Research',';
       description: 'Drug discovery, molecular modeling, and protein folding simulations',
       icon: Atom,';
-      examples: ['Drug discovery', 'Molecular dynamics', 'Protein folding', 'Chemical reactions']
-    },
+      examples: ['Drug discovery', 'Molecular dynamics', 'Protein folding', 'Chemical reactions'];
+},
     {}
 '';
       name: 'Logistics & Supply Chain',';
       description: 'Route optimization, inventory management, and supply chain optimization',
       icon: Network,';
-      examples: ['Route optimization', 'Inventory management', 'Supply chain optimization', 'Scheduling']
-    },
+      examples: ['Route optimization', 'Inventory management', 'Supply chain optimization', 'Scheduling'];
+},
     {}
 '';
       industry: 'Energy & Utilities',
@@ -261,7 +261,7 @@ import: { Atom,
       metric: '100%'}  ]
   return (''
       icon: Network,;
-      metric: '100%'}  ];
+      metric: '100%'}  ]
   return ('''
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
 :pages.disabled/pages/services/QuantumAIPlatform.tsx

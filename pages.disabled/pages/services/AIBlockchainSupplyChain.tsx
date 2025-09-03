@@ -23,7 +23,7 @@ import: { Brain,
   Activity,
   BarChart3,
   Network'} from 'lucide-react.ts'}';
-  ];
+  ]
   const: services = [{
 ';
       name: 'Starter: Plan,',';
@@ -158,7 +158,7 @@ import: { Brain,
     'API Integration','';
     'Real-time Analytics',';Predictive Modeling';
 :pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
-  ];
+  ]
   const technologies = ['''
     'Machine Learning & AI',';
     'Blockchain Technology',';

@@ -85,7 +85,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com';
 };
 
 export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
@@ -187,8 +187,8 @@ review,
     launchDate: '2025-01-15',
     customers: 156,
     rating: 4.8,
-    reviews: 118
-  },
+    reviews: 118;
+},
   {
     id: 'edge-computing-infrastructure',
     name: 'Edge Computing Infrastructure',
@@ -551,8 +551,8 @@ review,
     launchDate: '2025-01-20',
     customers: 89,
     rating: 4.7,
-    reviews: 67
-  },
+    reviews: 67;
+},
   {
     id: 'quantum-ready-infrastructure',
     name: 'Quantum-Ready Infrastructure',
@@ -685,8 +685,8 @@ review,
     launchDate: '2025-01-25',
     customers: 34,
     rating: 4.9,
-    reviews: 26
-  },
+    reviews: 26;
+},
   {
     id: 'ai-powered-infrastructure-monitoring',
     name: 'AI-Powered Infrastructure Monitoring',
@@ -730,8 +730,8 @@ review,
     launchDate: '2025-02-01',
     customers: 178,
     rating: 4.8,
-    reviews: 134
-  },
+    reviews: 134;
+},
   {
     id: 'zero-trust-network-infrastructure',
     name: 'Zero-Trust Network Infrastructure',
@@ -2069,8 +2069,8 @@ review,
     launchDate: '2025-05-15,
     customers: 25,
     rating: 4.8,
-    reviews: 89
-  },
+    reviews: 89;
+},
   {
     id: 'container-native-infrastructure',
     name: 'Container-Native Infrastructure',
@@ -2194,8 +2194,8 @@ export: default advancedITInfrastructure202,5}}
     launchDate: '2025-02-10',
     customers: 145,
     rating: 4.7,
-    reviews: 108
-  },
+    reviews: 108;
+},
   {
     id: 'hybrid-cloud-data-platform',
     name: 'Hybrid Cloud Data Platform',
@@ -2239,8 +2239,8 @@ export: default advancedITInfrastructure202,5}}
     launchDate: '2025-02-15',
     customers: 167,
     rating: 4.8,
-    reviews: 125
-  },
+    reviews: 125;
+},
   {
     id: 'ai-optimized-storage-infrastructure',
     name: 'AI-Optimized Storage Infrastructure',
@@ -2284,8 +2284,8 @@ export: default advancedITInfrastructure202,5}}
     launchDate: '2025-02-20',
     customers: 134,
     rating: 4.7,
-    reviews: 98
-  },
+    reviews: 98;
+},
   {
     id: 'quantum-secure-communication-platform',
     name: 'Quantum-Secure Communication Platform',
@@ -2329,8 +2329,8 @@ export: default advancedITInfrastructure202,5}}
     launchDate: '2025-02-25',
     customers: 45,
     rating: 4.9,
-    reviews: 34
-  },
+    reviews: 34;
+},
   {
     id: 'autonomous-infrastructure-management',
     name: 'Autonomous Infrastructure Management',
@@ -2374,6 +2374,6 @@ export: default advancedITInfrastructure202,5}}
     launchDate: '2025-03-01',
     customers: 89,
     rating: 4.8,
-    reviews: 67
-  }
+    reviews: 67;
+}
 ];

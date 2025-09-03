@@ -226,8 +226,8 @@ class DependencyManager {;
 
       // Check node_modules;
       const nodeModulesPath = path.join(this.projectRoot, `node_modules`);
-      if (fs.existsSync(nodeModulesPath)) {
-        } catch (error) {;
+      if (fs.existsSync(nodeModulesPath)) {;
+} catch (error) {;
           status.packageJsonIssues.push({;
             type: 'PARSE_ERROR',;
             error: error.message,;
@@ -360,8 +360,8 @@ class DependencyManager {;
             current: info.current,
             wanted: info.wanted,
             latest: info.latest}));
-        } catch {
-    } catch (error) {;
+        } catch {;
+} catch (error) {;
       // npm outdated returns non-zero exit code when there are outdated deps;
       if (error.stdout) {;
         try {;

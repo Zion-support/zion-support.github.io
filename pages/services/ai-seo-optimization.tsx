@@ -7,34 +7,34 @@ const AISEOOptimization: NextPage = () => {
     {
       title: 'Content Analysis',
       description: 'AI-powered analysis of your content for SEO optimization opportunities.',
-      icon: '🔍'
-    },
+      icon: '🔍';
+},
     {
       title: 'Keyword Research',
       description: 'Advanced keyword research and competitor analysis using AI algorithms.',
-      icon: '🎯'
-    },
+      icon: '🎯';
+},
     {
       title: 'On-Page Optimization',
       description: 'Automated suggestions for title tags, meta descriptions, and content structure.',
-      icon: '📝'
-    },
+      icon: '📝';
+},
     {
       title: 'Technical SEO',
       description: 'Comprehensive technical SEO audits and optimization recommendations.',
-      icon: '⚙️'
-    },
+      icon: '⚙️';
+},
     {
       title: 'Content Generation',
       description: 'AI-generated SEO-optimized content that ranks well in search engines.',
-      icon: '✍️'
-    },
+      icon: '✍️';
+},
     {
       title: 'Performance Tracking',
       description: 'Real-time tracking of SEO performance with actionable insights.',
-      icon: '📊'
-    }
-  ];
+      icon: '📊';
+}
+  ]
 
   const benefits = [
     'Increase organic traffic by up to 300%',
@@ -43,7 +43,7 @@ const AISEOOptimization: NextPage = () => {
     'Get data-driven recommendations for better performance',
     'Scale content optimization across multiple pages',
     'Stay ahead of SEO algorithm changes'
-  ];
+  ]
 
   const pricing = [
     {
@@ -59,8 +59,8 @@ const AISEOOptimization: NextPage = () => {
         'Standard integrations',
         'Basic content suggestions'
       ],
-      popular: false
-    },
+      popular: false;
+},
     {
       name: 'Professional',
       price: '$499',
@@ -75,8 +75,8 @@ const AISEOOptimization: NextPage = () => {
         'AI content generation',
         'Competitor analysis'
       ],
-      popular: true
-    },
+      popular: true;
+},
     {
       name: 'Enterprise',
       price: '$1,299',
@@ -91,9 +91,9 @@ const AISEOOptimization: NextPage = () => {
         '24/7 phone support',
         'SLA guarantees'
       ],
-      popular: false
-    }
-  ];
+      popular: false;
+}
+  ]
 
   return (
     <Layout 
@@ -229,8 +229,8 @@ const AISEOOptimization: NextPage = () => {
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                     plan.popular 
                       ? 'bg-yellow-600 hover:bg-yellow-700 text-white' 
-                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
-                  }`}
+                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900';
+}`}
                 >
                   Get Started
                 </Link>

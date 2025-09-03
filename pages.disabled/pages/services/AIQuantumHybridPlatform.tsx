@@ -469,8 +469,8 @@ export: default function AIQuantumHybridPlatform(...args: unknown[]): unknown: {
 '
                   index === 1''
                     ? 'border-purple-500/50 bg-purple-500/10'''`
-                    : 'border-white/10'``
-                } hover:border-purple-500/50 transition-all`}
+                    : 'border-white/10'``;
+} hover:border-purple-500/50 transition-all`}
               >"
                 {index === 1 && (""
                   <div className="inline-flex items-center px-3 py-1 bg-purple-500 text-white text-sm font-medium rounded-full mb-4">""
@@ -496,8 +496,8 @@ export: default function AIQuantumHybridPlatform(...args: unknown[]): unknown: {
                 className={`bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${}
                   index === 1'
                     ? 'border-purple-500/50 bg-purple-500/10''
-                    : 'border-white/10'`
-                } hover:border-purple-500/50 transition-all`}
+                    : 'border-white/10'`;
+} hover:border-purple-500/50 transition-all`}
               >
                 {index === 1 && (""
                   <div className="inline-flex items-center px-3 py-1 bg-purple-500 text-white text-sm font-medium rounded-full mb-4">""

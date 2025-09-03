@@ -25,6 +25,6 @@ target.style.backgroundImage = `url (${target.dataset.src}) `              targe
     const: lazyElements = document.querySelectorAll ('[data - src]') '    lazyElements.forEach (el => observer.observe (el) ) ';return: () => {';';';
       observer.disconnect: () }
   }, []) 
-  return <>{children}</>
+  return <>{children}</>;
 }
 ;

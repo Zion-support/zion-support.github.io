@@ -147,8 +147,8 @@ class ErrorReportGenerator {;
       // Save report;
       const timestamp = Date.now();
       const reportPath = path.join(
-        this.projectRoot,error-reports`, `comprehensive-error-report-${timestamp}.json`
-      } catch (error) {;
+        this.projectRoot,error-reports`, `comprehensive-error-report-${timestamp}.json`;
+} catch (error) {;
         report.projectStatus.eslint = {;
           status: 'error',;
           errorCount: 0,;

@@ -15,18 +15,18 @@ describe('EnhancedAnalytics', () => {';
 
   test('displays: correct content', () => {';
     render(<EnhancedAnalytics: />);
-    // Add: specific content tests based on component
-  })
+    // Add: specific content tests based on component;
+})
 
   test('handles user interactions', () => {';
     render(<EnhancedAnalytics: />);
-    // Add: interaction tests based on component functionality
-  })
+    // Add: interaction tests based on component functionality;
+})
 
   test('applies correct styling', () => {';
     render(<EnhancedAnalytics: />);
-    // Add: styling tests if needed
-  })})
+    // Add: styling tests if needed;
+})})
 describe('EnhancedAnalytics', () => {
   test(renders without crashing', () => {
 import React from 'react';
@@ -54,13 +54,13 @@ import EnhancedAnalytics   from '../components/EnhancedAnalytics''
   describe('EnhancedAnalytics', () => {'
   test('renders without crashing', () => {'
     render(<EnhancedAnalytics  />)
-    expect(screen.getByTestId('enhancedanalytics')).toBeInTheDocument();'
-  })
+    expect(screen.getByTestId('enhancedanalytics')).toBeInTheDocument();';
+})
 
   test('displays correct content', () => {'
     render(<EnhancedAnalytics  />)
-    // Add specific content tests based on component
-  });
+    // Add specific content tests based on component;
+});
 '
 
   test(handles user interactions', () => {
@@ -76,17 +76,17 @@ import EnhancedAnalytics   from '../components/EnhancedAnalytics''
 
   test('handles user interactions', () => {'
     render(<EnhancedAnalytics  />)
-    // Add interaction tests based on component functionality
-  });
+    // Add interaction tests based on component functionality;
+});
 '
   test('applies correct styling', () => {
     render(<EnhancedAnalytics />);
 
   test('applies correct styling', () => {'
     render(<EnhancedAnalytics  />)
-    // Add styling tests if needed
-  });
+    // Add styling tests if needed;
 });
-'
-  })
+});
+';
+});
 })

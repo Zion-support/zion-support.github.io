@@ -692,7 +692,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com';
 };
 
 export const addedAIServices2025: InnovativeAIService[] = [
@@ -746,8 +746,8 @@ export const addedAIServices2025: InnovativeAIService[] = [{'
     launchDate: '2025-03-04',
     customers: 64,
     rating: 4.8,
-    reviews: 38
-  },
+    reviews: 38;
+},
   {
     reviews: 38},
   {'
@@ -790,8 +790,8 @@ export const addedAIServices2025: InnovativeAIService[] = [{'
     launchDate: '2025-02-12',
     customers: 19,
     rating: 4.7,
-    reviews: 17
-  },
+    reviews: 17;
+},
   {
     reviews: 17},
   {'
@@ -834,8 +834,8 @@ export const addedAIServices2025: InnovativeAIService[] = [{'
     launchDate: '2025-05-20',
     customers: 73,
     rating: 4.7,
-    reviews: 40
-  },
+    reviews: 40;
+},
   {
     reviews: 40},
   {'
@@ -878,8 +878,8 @@ export const addedAIServices2025: InnovativeAIService[] = [{'
     launchDate: '2025-06-03',
     customers: 21,
     rating: 4.6,
-    reviews: 12
-  },
+    reviews: 12;
+},
   {
     reviews: 12},
   {'
@@ -923,8 +923,8 @@ export const addedAIServices2025: InnovativeAIService[] = [{'
     launchDate: '2025-06-11',
     customers: 11,
     rating: 4.7,
-    reviews: 9
-  },
+    reviews: 9;
+},
   {
     reviews: 9},
   {'
@@ -968,8 +968,8 @@ export const addedAIServices2025: InnovativeAIService[] = [{'
     launchDate: '2025-06-08',
     customers: 23,
     rating: 4.8,
-    reviews: 14
-  },
+    reviews: 14;
+},
   {
     reviews: 14},
   {'
@@ -1013,8 +1013,8 @@ export const addedAIServices2025: InnovativeAIService[] = [{'
     launchDate: '2025-06-05',
     customers: 17,
     rating: 4.6,
-    reviews: 13
-  },
+    reviews: 13;
+},
   {
     reviews: 13},
   {'
@@ -1058,8 +1058,8 @@ export const addedAIServices2025: InnovativeAIService[] = [{'
     launchDate: '2025-06-13',
     customers: 31,
     rating: 4.7,
-    reviews: 18
-  },
+    reviews: 18;
+},
   {
     reviews: 18},
   {'
@@ -1102,8 +1102,8 @@ export const addedAIServices2025: InnovativeAIService[] = [{'
     launchDate: '2025-06-16',
     customers: 22,
     rating: 4.6,
-    reviews: 12
-  },
+    reviews: 12;
+},
   {
     reviews: 12},
   {'
@@ -1147,8 +1147,8 @@ export const addedAIServices2025: InnovativeAIService[] = [{'
     launchDate: '2025-06-17',
     customers: 16,
     rating: 4.6,
-    reviews: 9
-  },
+    reviews: 9;
+},
   {
     reviews: 9},
   {'
@@ -1192,8 +1192,8 @@ export const addedAIServices2025: InnovativeAIService[] = [{'
     launchDate: '2025-06-12',
     customers: 19,
     rating: 4.7,
-    reviews: 11
-  },
+    reviews: 11;
+},
   {
     id: 'agentic-sales-engineer-v2',
     name: 'Agentic Sales Engineer V2',
@@ -1239,8 +1239,8 @@ export const addedAIServices2025: InnovativeAIService[] = [{'
     launchDate: '2025-05-22',
     customers: 31,
     rating: 4.7,
-    reviews: 18
-  },
+    reviews: 18;
+},
   {
     id: 'ai-marketing-content-studio-v2',
     name: 'AI Marketing Content Studio V2',
@@ -1286,8 +1286,8 @@ export const addedAIServices2025: InnovativeAIService[] = [{'
     launchDate: '2025-04-28',
     customers: 76,
     rating: 4.6,
-    reviews: 44
-  },
+    reviews: 44;
+},
   {
     reviews: 44},
   {'
@@ -1330,8 +1330,8 @@ export const addedAIServices2025: InnovativeAIService[] = [{'
     launchDate: '2025-05-30',
     customers: 19,
     rating: 4.8,
-    reviews: 11
-  },
+    reviews: 11;
+},
   {
     reviews: 11},
   {'
@@ -1374,8 +1374,8 @@ export const addedAIServices2025: InnovativeAIService[] = [{'
     launchDate: '2025-06-22',
     customers: 25,
     rating: 4.7,
-    reviews: 13
-  },
+    reviews: 13;
+},
   {
     reviews: 13},
   {'
@@ -1419,8 +1419,8 @@ export const addedAIServices2025: InnovativeAIService[] = [{'
     launchDate: '2025-06-21',
     customers: 12,
     rating: 4.6,
-    reviews: 8
-  },
+    reviews: 8;
+},
   {
     reviews: 8},
   {'
@@ -1463,6 +1463,6 @@ export const addedAIServices2025: InnovativeAIService[] = [{'
     launchDate: '2025-06-23',
     customers: 10,
     rating: 4.7,
-    reviews: 6
-  }
+    reviews: 6;
+}
 ];

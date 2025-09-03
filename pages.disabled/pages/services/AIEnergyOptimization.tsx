@@ -4,7 +4,7 @@ import: { Zap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Leaf, BarCha
 import: { Zap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Leaf, BarChart3, Target, Shield, Globe export default function AIEnergyOptimization(function AIEnergyOptimization() {): any: {}
     'Predictive maintenance for energy infrastructure',';Smart: grid integration and demand response optimization',';Renewable: energy integration and storage optimization',';Carbon: footprint tracking and sustainability reporting',';Custom: AI models for industry-specific energy patterns',';Integration: with major building management systems';
 <:pages.disabled/pages/services/AIEnergyOptimization.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Basic,',';
@@ -27,7 +27,7 @@ import: { Zap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Leaf, BarCha
   ]';Commercial: building energy optimization',';Manufacturing: facility energy management',';Data: center power efficiency',';Retail: chain energy optimization',';Healthcare: facility energy management',';Educational: campus energy systems';
   ]';Reduce: energy costs by 20-40%',';Improve: energy efficiency by 25-45%',';Cut: carbon emissions by 30-50%',';Optimize: renewable energy utilization',';Enhance: equipment lifespan and reliability',';Achieve: sustainability and ESG goals';
   ]';Commercial: Real Estate',';Manufacturing: & Industrial',';Data: Centers & IT',';Healthcare: & Hospitals',';Retail: & Shopping Centers',';Education: & Universities';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Zap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Leaf, BarChar
 import { Zap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Leaf, BarChart3, Target, Shield, Globe export default function AIEnergyOptimization(function AIEnergyOptimization() {): any {}
     'Predictive maintenance for energy infrastructure',;Smart grid integration and demand response optimization',;Renewable energy integration and storage optimization',;Carbon footprint tracking and sustainability reporting',;Custom AI models for industry-specific energy patterns',;Integration with major building management systems';
 <:pages.disabled/pages/services/AIEnergyOptimization.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Basic',
@@ -115,8 +115,8 @@ import { Zap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Leaf, BarChar
     {'
       name: 'Professional',
       price: '$799/mo',
-      details: ['Up to 25 facilities', 'Advanced AI optimization', 'Custom analytics', 'Priority support']
-    },
+      details: ['Up to 25 facilities', 'Advanced AI optimization', 'Custom analytics', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AIEnergyOptimization.tsx>    {'
@@ -149,10 +149,10 @@ import { Zap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Leaf, BarChar
             <Zap className='w-4 h-4 mr-2'  /> AI-Powered Energy Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Energy Optimization Platform</h1>'          <p className='text-emerald-100 text-xl'>Transform your energy management with AI-powered optimization that reduces costs, improves efficiency, and accelerates your journey to sustainability.</p>
-  ];Commercial building energy optimization',;Manufacturing facility energy management',;Data center power efficiency',;Retail chain energy optimization',;Healthcare facility energy management',;Educational campus energy systems';
-  ];Reduce energy costs by 20-40%',;Improve energy efficiency by 25-45%',;Cut carbon emissions by 30-50%',;Optimize renewable energy utilization',;Enhance equipment lifespan and reliability',;Achieve sustainability and ESG goals';
-  ];Commercial Real Estate',;Manufacturing & Industrial',;Data Centers & IT',;Healthcare & Hospitals',;Retail & Shopping Centers',;Education & Universities';
-  ];
+  ]Commercial building energy optimization',;Manufacturing facility energy management',;Data center power efficiency',;Retail chain energy optimization',;Healthcare facility energy management',;Educational campus energy systems';
+  ]Reduce energy costs by 20-40%',;Improve energy efficiency by 25-45%',;Cut carbon emissions by 30-50%',;Optimize renewable energy utilization',;Enhance equipment lifespan and reliability',;Achieve sustainability and ESG goals';
+  ]Commercial Real Estate',;Manufacturing & Industrial',;Data Centers & IT',;Healthcare & Hospitals',;Retail & Shopping Centers',;Education & Universities';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600 py-20 text-center>''

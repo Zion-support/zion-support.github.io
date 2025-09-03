@@ -22,8 +22,8 @@ const EnhancedAnalytics: React.FC = () => {
     topPages: [],
     trafficSources: [],
     deviceTypes: [],
-    realTimeUsers: 0,
-  });
+    realTimeUsers: 0,;
+});
   const [isLoading, setIsLoading] = useState(true);
   const [selectedTimeRange, setSelectedTimeRange] = useState('7d');
 
@@ -55,8 +55,8 @@ const EnhancedAnalytics: React.FC = () => {
           { device: 'Mobile', percentage: 35 },
           { device: 'Tablet', percentage: 10 },
         ],
-        realTimeUsers: 23,
-      });
+        realTimeUsers: 23,;
+});
     } catch (error) {
       console.error('Failed to fetch analytics data:', error);
     } finally {

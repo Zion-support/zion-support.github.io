@@ -13,8 +13,8 @@ export const performanceMonitor = {
         if (typeof gtag !== 'undefined') {
           gtag('event', 'page_load_time', {
             value: Math.round(loadTime),
-            event_category: 'Performance'
-          });
+            event_category: 'Performance';
+});
         }
       });
     }
@@ -39,8 +39,8 @@ export const performanceMonitor = {
       setInterval(() => {
         const memory = performance.memory;
         console.log(`Memory usage: ${Math.round(memory.usedJSHeapSize / 1024 / 1024)}MB`);
-      }, 30000); // Every 30 seconds
-    }
+      }, 30000); // Every 30 seconds;
+}
   }
 };
 

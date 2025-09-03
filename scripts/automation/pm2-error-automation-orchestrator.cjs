@@ -48,8 +48,8 @@ class PM2ErrorAutomationOrchestrator {;
       performanceCheckInterval: '0 */4 * * *', // Every 4 hours;
       maxConcurrentJobs: 3,
       enableNotifications: true,
-      logLevel: `info`
-    };
+      logLevel: `info`;
+};
   }
 
   log(message, level = `info`) {
@@ -147,8 +147,8 @@ class PM2ErrorAutomationOrchestrator {;
       execSync('pm2 set pm2-logrotate:retain 30', { stdio: 'pipe' });
       execSync('pm2 set pm2-logrotate:compress true', { stdio: 'pipe' });
       this.log('PM2 logrotate configured', 'info');
-    } catch (error) {  
-    } catch (error) {;
+    } catch (error) {  ;
+} catch (error) {;
       this.log('PM2 logrotate already configured or failed to configure', 'warn');
       }
   }

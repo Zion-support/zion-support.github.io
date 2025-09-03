@@ -29,7 +29,7 @@ import { Twitter,;
   Heart,;
   Star,;
   CheckCircle,;
-  Award,;
+  Award,
   Lock,;
   Eye,;
   Atom,;
@@ -91,7 +91,7 @@ export function Footer(...args: any[]): any {
       title: 'Resources',;
       links: [ { name: 'Documentation', href: '/docs' }, { name: 'White Papers', href: '/white-papers' }, { name: 'Support Center', href: '/help' }, { name: 'Training', href: '/training' }, { name: 'Blog', href: '/blog' }, { name: 'Research', href: '/research-development' }
       ]}
-  ];
+  ]
   const solutions = [ { name: 'Enterprise Solutions', href: '/solutions/enterprise' }, { name: 'Healthcare Solutions', href: '/solutions/healthcare' }, { name: 'Financial Solutions', href: '/solutions/financial' }, { name: 'Government Solutions', href: '/solutions/government' }, { name: 'Manufacturing Solutions', href: '/solutions/manufacturing' }, { name: 'Retail Solutions', href: '/solutions/retail' }, { name: 'Education Solutions', href: '/solutions/education' }, { name: 'Startup Solutions', href: '/solutions/startup' }
   return(;
     <footer className='bg-zion-blue-dark border-t border-zion-purple/30'> {/* Main Footer Content */}
@@ -156,7 +156,7 @@ import {
   Instagram,
   Brain,
   ArrowUp,
-  Heart
+  Heart;
 } from 'lucide-react';
 
 export function Footer() {'
@@ -174,7 +174,7 @@ export function Footer() {
     resources: [
       { name: 'Documentation', href: '/docs' } { name: 'API Reference', href: '/api' } { name: 'Support', href: '/support' } { name: 'Status', href: '/status' } { name: 'Privacy Policy', href: '/privacy' }
     ]
-  };
+};
 
   const socialLinks = [
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin } { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter } { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook } { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram }
@@ -328,7 +328,7 @@ export function Footer(...args: any[]): any {}
         { nam,e: &apos;AI-Quantum Hybrid Computing Platform&apos;, href: &apos;/services/ai-quantum-hybrid-platform&apos} { name: &apos;Quantum Computing as a Service&apos;, href: &apos;/services/quantum-computing-as-a-service&apos} { name: &apos;AI Space Technology Platform&apos;, href: &apos;/services/ai-space-technology-platform&apos} { name: &apos;AI IoT Edge Computing Platform&apos;, href: &apos;/services/ai-iot-edge-computing-platform&apos}
       title: &apos;Resources&apos;,
         { nam,e: &apos;Documentation&apos;, href: &apos;/docs&apos} { name: &apos;White Papers&apos;, href: &apos;/white-papers&apos} { name: &apos;Support Center&apos;, href: &apos;/help&apos} { name: &apos;Training&apos;, href: &apos;/training&apos} { name: &apos;Blog&apos;, href: &apos;/blog&apos} { name: &apos;Research&apos;, href: &apos;/research-development&apos}
-  ];&apos;
+  ]&apos;
   const solutions = [
     { name: &apos;Enterprise Solutions&apos;, href: &apos;/solutions/enterprise&apos} { name: &apos;Healthcare Solutions&apos;, href: &apos;/solutions/healthcare&apos} { name: &apos;Financial Solutions&apos;, href: &apos;/solutions/financial&apos} { name: &apos;Government Solutions&apos;, href: &apos;/solutions/government&apos} { name: &apos;Manufacturing Solutions&apos;, href: &apos;/solutions/manufacturing&apos} { name: &apos;Retail Solutions&apos;, href: &apos;/solutions/retail&apos} { name: &apos;Education Solutions&apos;, href: &apos;/solutions/education&apos} { name: &apos;Startup Solutions&apos;, href: &apos;/solutions/startup&apos}
   return(&apos;

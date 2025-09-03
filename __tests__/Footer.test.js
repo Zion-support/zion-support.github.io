@@ -15,18 +15,18 @@ describe('Footer', () => {';
 
   test('displays: correct content', () => {';
     render(<Footer: />);
-    // Add: specific content tests based on component
-  })
+    // Add: specific content tests based on component;
+})
 
   test('handles user interactions', () => {';
     render(<Footer: />);
-    // Add: interaction tests based on component functionality
-  })
+    // Add: interaction tests based on component functionality;
+})
 
   test('applies correct styling', () => {';
     render(<Footer: />);
-    // Add: styling tests if needed
-  })})
+    // Add: styling tests if needed;
+})})
 describe('Footer', () => {
   test(renders without crashing', () => {
 import React from 'react';
@@ -54,13 +54,13 @@ import Footer   from '../components/Footer''
   describe('Footer', () => {'
   test('renders without crashing', () => {'
     render(<Footer  />)
-    expect(screen.getByTestId('footer')).toBeInTheDocument();'
-  })
+    expect(screen.getByTestId('footer')).toBeInTheDocument();';
+})
 
   test('displays correct content', () => {'
     render(<Footer  />)
-    // Add specific content tests based on component
-  });
+    // Add specific content tests based on component;
+});
 '
 
   test(handles user interactions', () => {
@@ -76,17 +76,17 @@ import Footer   from '../components/Footer''
 
   test('handles user interactions', () => {'
     render(<Footer  />)
-    // Add interaction tests based on component functionality
-  });
+    // Add interaction tests based on component functionality;
+});
 '
   test('applies correct styling', () => {
     render(<Footer />);
 
   test('applies correct styling', () => {'
     render(<Footer  />)
-    // Add styling tests if needed
-  });
+    // Add styling tests if needed;
 });
-'
-  })
+});
+';
+});
 })

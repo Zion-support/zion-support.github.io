@@ -211,8 +211,8 @@ this.log(`✅ Resolved ${this.conflictsResolved} conflicts`);
       } else {this.log(`⚠️ Could not auto-resolve conflict in ${conflict.file}`);
       }
     } catch (error) {  
-      this.log(❌ Error resolving conflict in ${conflict.file  }: ${error.message}`
-    } catch (error) {;
+      this.log(❌ Error resolving conflict in ${conflict.file  }: ${error.message}`;
+} catch (error) {;
       this.log(❌ Error resolving conflict in ${conflict.file}: ${error.message}';
       );
     }
@@ -332,8 +332,8 @@ this.log(`✅ Resolved ${this.conflictsResolved} conflicts`);
 
     // Fallback: remove conflict markers and keep HEAD;
     return content;
-      .replace(/\n?/g, ``)
-    } catch (error) {;
+      .replace(/\n?/g, ``);
+} catch (error) {;
       this.log(`⚠️ Could not parse JSON in conflict: ${error.message}`);
     }
 ;

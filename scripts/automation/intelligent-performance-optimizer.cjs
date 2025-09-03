@@ -498,7 +498,7 @@ class IntelligentPerformanceOptimizer {;
   findExpensiveOperations(content) {;
     const expensivePatterns = ['/Math\.random\(\)/g', '/JSON\.parse\(/g', '/JSON\.stringify\(/g', '/\.sort\(/g', '/\.filter\([^)']*\)\.'length/g',;
       /\.reduce\(/g,;
-    ];
+    ]
 ;
     const found = [];
     for (const pattern of expensivePatterns) {;
@@ -736,8 +736,8 @@ class IntelligentPerformanceOptimizer {;
 ;
       const outdated = JSON.parse(output);
       return Object.keys(outdated);
-    } catch (error) {  
-    } catch (error) {;
+    } catch (error) {  ;
+} catch (error) {;
       return [];
       }
   }
@@ -1127,8 +1127,8 @@ class IntelligentPerformanceOptimizer {;
         }
       } catch (error) {  
         this.log(Failed to apply optimization for ${optimization.file  }: ${error.message}`,
-          `ERROR`
-      } catch (error) {;
+          `ERROR`;
+} catch (error) {;
         this.log(Failed to apply optimization for ${optimization.file}: ${error.message}',;
           'ERROR';
         );
@@ -1182,8 +1182,8 @@ class IntelligentPerformanceOptimizer {;
       return false;
     } catch (error) {  
       this.log(Error applying optimization to ${optimization.file  }: ${error.message}`,
-        `ERROR`
-    } catch (error) {;
+        `ERROR`;
+} catch (error) {;
       this.log(Error applying optimization to ${optimization.file}: ${error.message}',;
         'ERROR';
       );

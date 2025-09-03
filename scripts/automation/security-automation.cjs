@@ -203,8 +203,8 @@ this.log(`Found ${outdatedCount} outdated packages`);
       // Save outdated packages report;
       const outdatedReportFile = path.join(
         this.projectRoot,security-reports`,
-        `outdated-packages.json'
-    } catch (error) {;
+        `outdated-packages.json';
+} catch (error) {;
       this.log(`NPM audit failed: ${error.message}`, 'ERROR');
       return {;
         success: false,;
@@ -262,8 +262,8 @@ this.log(`Found ${outdatedCount} outdated packages');
     this.log(`Running comprehensive security scan...`);
 
     const results = [];
-
-    } catch (error) {;
+;
+} catch (error) {;
       // npm outdated returns exit code 1 when there are outdated packages, which is not an error;
       if (error.message.includes('exit code 1')) {;
         this.log(NPM outdated check completed (some packages are outdated)',;
@@ -440,8 +440,8 @@ this.log(`Security automation completed. Status: ${report.status}`);this.log(`Se
 }
 
 // Run the automation if this script is executed directly;
-if (require.main === module) {
-    } else {;
+if (require.main === module) {;
+} else {;
       this.log('No security vulnerabilities found. System is secure.', 'INFO');
     }
   }

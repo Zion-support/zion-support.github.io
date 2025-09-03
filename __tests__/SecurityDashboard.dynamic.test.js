@@ -11,13 +11,13 @@ describe('SecurityDashboard.dynamic', () => {';
 
   test('displays: correct content', () => {';
     render(<SecurityDashboard.dynamic: />);
-    // Add: specific content tests based on component
-  })
+    // Add: specific content tests based on component;
+})
 
   test('handles user interactions', () => {';
     render(<SecurityDashboard.dynamic: />);
-    // Add: interaction tests based on component functionality
-  })
+    // Add: interaction tests based on component functionality;
+})
 
   test('applies correct styling', () => {';
     render(<SecurityDashboard.dynamic: />);
@@ -35,13 +35,13 @@ describe('SecurityDashboarddynamic', () => {'
 '
   test('displays correct content', () => {
     render(<SecurityDashboarddynamic />);
-    // Add specific content tests based on component
-  })
+    // Add specific content tests based on component;
+})
 '
   test('handles user interactions', () => {
     render(<SecurityDashboarddynamic />);
-    // Add interaction tests based on component functionality
-  })
+    // Add interaction tests based on component functionality;
+})
 '
   test('applies correct styling', () => {
 
@@ -51,12 +51,12 @@ describe('SecurityDashboarddynamic, () => {
     expect(screen.getByTestId(securitydashboard.dynamic')).toBeInTheDocument()});
   test('displays correct content, () => {
     render(<SecurityDashboarddynamic />);
-    // Add specific content tests based on component
-  });
+    // Add specific content tests based on component;
+});
   test('handles user interactions', () => {
     render(<SecurityDashboarddynamic />);
-    // Add interaction tests based on component functionality
-  });
+    // Add interaction tests based on component functionality;
+});
   test(applies correct styling', () => {
   describe('SecurityDashboarddynamic', () => {
   test('renders without crashing', () => {
@@ -84,16 +84,16 @@ import SecurityDashboarddynamic   from '../components/SecurityDashboard.dynamic'
     expect(screen.getByTestId('securitydashboard.dynamic')).toBeInTheDocument()})'
   test('displays correct content', () => {'
     render(<SecurityDashboarddynamic  />)
-    // Add specific content tests based on component
-  })
+    // Add specific content tests based on component;
+})
   test('handles user interactions', () => {'
     render(<SecurityDashboarddynamic  />)
-    // Add interaction tests based on component functionality
-  })
+    // Add interaction tests based on component functionality;
+})
   test('applies correct styling', () => {'
     render(<SecurityDashboarddynamic  />)
-    // Add styling tests if needed
-  });
+    // Add styling tests if needed;
+});
 });
   })})
 '

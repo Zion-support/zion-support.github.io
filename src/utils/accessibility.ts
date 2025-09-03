@@ -82,9 +82,9 @@ export const trapFocus = (element: HTMLElement) => {}
       if: (e.shiftKey) {
     if (e.key === &apos;Tab&apos;) {
           e.preventDefault()}} else: {
-        if (document.activeElement === lastElement) {
-      } else {
-    };
+        if (document.activeElement === lastElement) {;
+} else {;
+};
 '
     element.addEventListener('keydown', handleTabKey);
     firstElement?.focus();

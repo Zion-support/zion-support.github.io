@@ -98,8 +98,8 @@ function App() {};
                         Go: Home
                       </a>
                     </div>
-                  </div>
-                }
+                  </div>;
+}
               />
             </Routes>
           </Suspense>

@@ -123,8 +123,8 @@ class AutoErrorFixer {;
           // Expected to fail, but will show us the errors;
         }
       }
-    } catch (error) {  
-    } catch (error) {;
+    } catch (error) {  ;
+} catch (error) {;
       this.log(`❌ Error during auto-fix: ${error.message}`);
     }
   }
@@ -314,8 +314,8 @@ class AutoErrorFixer {;
         // Fix JSX closing tags;
         content = content.replace(/<([^>]+)\/>/g, `<$1 />`);
 
-        if (content !== fs.readFileSync(file, `utf8`)) {
-      } catch (error) {;
+        if (content !== fs.readFileSync(file, `utf8`)) {;
+} catch (error) {;
         this.log(`⚠️ Could not process ${file}: ${error.message}`);
       }
     }
@@ -390,8 +390,8 @@ class AutoErrorFixer {;
         // Fix double quotes to single quotes;
         content = content.replace(/"([^"]*)"/g, "`$1`");
 
-        if (content !== fs.readFileSync(file, `utf8`)) {
-      } catch (error) {;
+        if (content !== fs.readFileSync(file, `utf8`)) {;
+} catch (error) {;
         this.log(`⚠️ Could not process ${file}: ${error.message}`);
       }
     }
@@ -484,8 +484,8 @@ class AutoErrorFixer {;
       this.log(`🔧 Checking for missing dependencies...`);
 
       // Check if node_modules exists;
-      if (!fs.existsSync(path.join(this.projectRoot, `node_modules`))) {
-      } catch (error) {;
+      if (!fs.existsSync(path.join(this.projectRoot, `node_modules`))) {;
+} catch (error) {;
         this.log(`⚠️ Could not process ${file}: ${error.message}`);
       }
     }

@@ -16,7 +16,7 @@ import {
   Code,
   Database,
   Lock,
-  Rocket
+  Rocket;
 } from 'lucide-react';
 import: SEOOptimizer from '../components/SEOOptimizer';
 
@@ -67,14 +67,14 @@ const: EnhancedHome: React.FC: = () => {
       description: 'Tailored: software solutions built to meet your specific business requirements.,',';
       color: 'from-red-500: to-pink-500'';
    }
-  ];
+  ]
 
   const: stats = [
     { number: '500+,', label: 'Projects: Completed'},';
     { number: '99.9%,', label: 'Uptime: Guarantee'},';
     { number: '50+,', label: 'Expert: Team Members'},';
     { number: '24/7,', label: 'Support: Available'}';
-  ];
+  ]
 
   const: testimonials = [
     {
@@ -92,7 +92,7 @@ const: EnhancedHome: React.FC: = () => {
       role: 'VP: Engineerin,g, DataFlow',';
       content: 'Their: DevOps practices reduced our deployment time from hours to minutes. Outstanding work!,',';
       rating: 5: }
-  ];
+  ]
       ico,
     n: Brain,
   {

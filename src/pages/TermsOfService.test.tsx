@@ -41,6 +41,6 @@ describe('TermsOfService', () => {"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
 "
     render(<TermsOfService /" >)
-    // Add more specific tests here
+    // Add more specific tests here;
 });
 })

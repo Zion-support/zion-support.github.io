@@ -30,7 +30,7 @@ import {
   Mail, Award,
   Star, CheckCircle,
   Download, Bookmark,
-  ExternalLink
+  ExternalLink;
 } from
   'lucide-react';
 
@@ -44,8 +44,8 @@ const Webinars: React.FC = () => {
       duration: "60 minutes", category: "AI Strategy",
       attendees: 1250, rating: 4.9,
       image: "/api/placeholder/600/400", tags: ["AI Strategy", "Business Innovation", "Future Trends", "Leadership"], featured: true,
-      status: "upcoming", registrationUrl: "/webinars/ai-revolution-2025"
-    },
+      status: "upcoming", registrationUrl: "/webinars/ai-revolution-2025";
+},
     {
       id: 2, title: "Cybersecurity in the AI Era: Protecting Your Digital Assets",
       description: "Learn about the latest cybersecurity threats and how AI is being used both to attack and defend digital infrastructure.", speaker: "Michael Chen",
@@ -54,8 +54,8 @@ const Webinars: React.FC = () => {
       duration: "45 minutes", category: "Security",
       attendees: 980, rating: 4.8,
       image: "/api/placeholder/600/400", tags: ["Cybersecurity", "AI Security", "Threat Protection", "Risk Management"], featured: false,
-      status: "upcoming", registrationUrl: "/webinars/cybersecurity-ai-era"
-    },
+      status: "upcoming", registrationUrl: "/webinars/cybersecurity-ai-era";
+},
     {
       id: 3, title: "Cloud Migration Best Practices: A Complete Guide",
       description: "Comprehensive guide to planning and executing successful cloud migration projects with minimal business disruption.", speaker: "Emily Rodriguez",
@@ -64,8 +64,8 @@ const Webinars: React.FC = () => {
       duration: "50 minutes", category: "Cloud Computing",
       attendees: 1150, rating: 4.7,
       image: "/api/placeholder/600/400", tags: ["Cloud Migration", "Strategy", "Best Practices", "Digital Transformation"], featured: false,
-      status: "upcoming", registrationUrl: "/webinars/cloud-migration-guide"
-    },
+      status: "upcoming", registrationUrl: "/webinars/cloud-migration-guide";
+},
     {
       id: 4, title: "Data Analytics and Machine Learning: Driving Business Intelligence",
       description: "Discover how advanced analytics and machine learning are transforming business intelligence and decision-making processes.", speaker: "David Kim",
@@ -74,8 +74,8 @@ const Webinars: React.FC = () => {
       duration: "55 minutes", category: "Analytics",
       attendees: 890, rating: 4.6,
       image: "/api/placeholder/600/400", tags: ["Data Analytics", "Machine Learning", "Business Intelligence", "Decision Making"], featured: false,
-      status: "recorded", recordingUrl: "/webinars/data-analytics-ml-recording"
-    },
+      status: "recorded", recordingUrl: "/webinars/data-analytics-ml-recording";
+},
     {
       id: 5, title: "AI-Powered Customer Experience: The New Competitive Advantage",
       description: "Explore how AI is revolutionizing customer service and experience, with real-world examples and implementation strategies.",
@@ -85,8 +85,8 @@ const Webinars: React.FC = () => {
       category: "Customer Experience", attendees: 1100,
       rating: 4.8, image: "/api/placeholder/600/400",
       tags: ["Customer Experience", "AI", "Automation", "Competitive Advantage"], featured: false,
-      status: "recorded", recordingUrl: "/webinars/ai-customer-experience-recording"
-    },
+      status: "recorded", recordingUrl: "/webinars/ai-customer-experience-recording";
+},
     {
       id: 6, title: "Digital Transformation: A Roadmap for Modern Organizations",
       description: "Complete roadmap for organizations looking to embrace digital transformation and leverage emerging technologies.", speaker: "James Wilson",
@@ -95,16 +95,16 @@ const Webinars: React.FC = () => {
       duration: "65 minutes", category: "Digital Transformation",
       attendees: 1350, rating: 4.9,
       image: "/api/placeholder/600/400", tags: ["Digital Transformation", "Strategy", "Technology", "Innovation"], featured: false,
-      status: "recorded", recordingUrl: "/webinars/digital-transformation-roadmap-recording"
-    }
-  ];
+      status: "recorded", recordingUrl: "/webinars/digital-transformation-roadmap-recording";
+}
+  ]
 
   const categories = [
     { name: "All Categories", count: 24, active: true }, { name: "AI Strategy", count: 6, active: false },
     { name: "Security", count: 4, active: false }, { name: "Cloud Computing", count: 5, active: false },
     { name: "Analytics", count: 3, active: false }, { name: "Customer Experience", count: 3, active: false },
     { name: "Digital Transformation", count: 2, active: false }, { name: "Other", count: 1, active: false }
-  ];
+  ]
 
   const featuredWebinar = webinars.find(webinar => webinar.featured);
 
@@ -373,8 +373,8 @@ const Webinars: React.FC = () => {
                         className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${
                           category.active 
                             ?,
-  bg-gradient-to-r from-blue-500 to-purple-600 text-white': 'text-gray-300 hover:bg-slate-700
-                        }`}
+  bg-gradient-to-r from-blue-500 to-purple-600 text-white': 'text-gray-300 hover:bg-slate-700;
+}`}
                       >
                         <span>{category.name}</span>
                         <Badge variant="secondary" className="text-xs">

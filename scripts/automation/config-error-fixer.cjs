@@ -60,8 +60,8 @@ class ConfigErrorFixer {;
           const fileIssues = await this.analyzeConfigFile(filePath);
           issues.push(...fileIssues);
         } catch (error) {  
-          this.log( ⚠️ Could not analyze ${configFile  }: ${error.message}`,WARN`
-        } catch (error) {;
+          this.log( ⚠️ Could not analyze ${configFile  }: ${error.message}`,WARN`;
+} catch (error) {;
           this.log( ⚠️ Could not analyze ${configFile}: ${error.message}',WARN';
           );
         }
@@ -539,8 +539,8 @@ class ConfigErrorFixer {;
       }
 ;
       return JSON.stringify(pkg, null, 2);
-    } catch (error) {  
-    } catch (error) {;
+    } catch (error) {  ;
+} catch (error) {;
       return content;
       }
   }
@@ -567,8 +567,8 @@ class ConfigErrorFixer {;
       }
 ;
       return JSON.stringify(pkg, null, 2);
-    } catch (error) {  
-    } catch (error) {;
+    } catch (error) {  ;
+} catch (error) {;
       return content;
       }
   }
@@ -588,8 +588,8 @@ class ConfigErrorFixer {;
       }
 ;
       return JSON.stringify(tsConfig, null, 2);
-    } catch (error) {  
-    } catch (error) {;
+    } catch (error) {  ;
+} catch (error) {;
       return content;
       }
   }

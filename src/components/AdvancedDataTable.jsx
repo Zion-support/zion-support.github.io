@@ -5,8 +5,8 @@ import { useVirtualScroll } from "../hooks/useVirtualScroll.jsx";,"});,"})
 ;,"});,"})
 export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = '', onRowClick, onSelectionChange, onExport }) => {,"});,"})
     const { trackEvent } = useAnalytics({        enableTracking: true,;,"});,"})
-        enableUserBehaviorTracking: true;,"});,"})
-    });,"});,"})
+        enableUserBehaviorTracking: true;,"});,"});
+});,"});,"})
     // State management'';,"});,"})
     const [searchQuery, setSearchQuery] = useState('');,"});,"})
     const [sortConfig, setSortConfig] = useState(null);,"});,"})
@@ -45,8 +45,8 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                         catch {}"});,"})
                             return false}"});,"})
                     default: any;,"});,"})
-                        return true}"});,"})
-            }) }) ;,"});,"})
+                        return true}"});,"});
+}) }) ;,"});,"})
         // Apply sorting;,"});,"})
         if(sortConfig) {}"});,"})
             result.sort((a, b) => {}"});,"})
@@ -67,8 +67,8 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
     const { virtualItems, containerProps, listProps } = useVirtualScroll(paginatedData {}"});,"})
         itemHeight: 60,;,"});,"})
         containerHeight: height - 120, // Account for header and controls;,"});,"})
-        overscan: 5;,"});,"})
-    }) ;,"});,"})
+        overscan: 5;,"});,"});
+}) ;,"});,"})
     // Handle sorting;,"});,"})
     const handleSort = useCallback((key) => {}"});,"})
         if(!enableSorting);,"});,"})
@@ -86,10 +86,10 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
             const newFilters = prev.filter(f => f.key !== key);,"});,"})
             if(value.trim()) {}"});,"})
                 newFilters.push({ key, value, operator });,"});,"})
-            return newFilters;'';,"});,"})
-        });''';,"});,"})
-        trackEvent('table',filter_applied', String(key), null { operator, value });,"});,"})
-    }, [trackEvent]);,"});,"})
+            return newFilters;'';,"});,"});
+});''';,"});,"})
+        trackEvent('table',filter_applied', String(key), null { operator, value });,"});,"});
+}, [trackEvent]);,"});,"})
     // Handle selection;,"});,"})
     const handleSelectionChange = useCallback((item, checked) => {}"});,"})
         const itemKey = String(item.id || JSON.stringify(item));,"});,"})
@@ -106,8 +106,8 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
             setSelectedItems(allKeys);,"});,"})
             onSelectionChange?.(paginatedData)}"});,"})
             setSelectedItems(new Set());,"});,"})
-            onSelectionChange?.([])}"});,"})
-    }, [paginatedData, onSelectionChange]);,"});,"})
+            onSelectionChange?.([])}"});,"});
+}, [paginatedData, onSelectionChange]);,"});,"})
     // Export data;,"});,"})
     const handleExport = useCallback(() => {}"});,"})
         if(onExport) {}"});,"})
@@ -180,11 +180,11 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
         <AnimatePresence>;,"});,"})
           {showFilters && (<motion.div initial = {}"});,"})
   { opacity: 0,;,"});,"})
-  height: 0;,"});,"})
+  height: 0;,"});,"});
 }} animate = {}"});,"})
   { opacity: 1,';,"});,"})
-  height: 'auto';,"});,"})
-}} exit = {}"});,"})
+  height: 'auto';,"});,"});
+}} exit = {}"});,"});
 }} className="mt-4 p-4 bg-white dark:bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500">"""";,"});,"})
               <h4 className="font-medium text-gray-900 dark:text-white mb-3">Advanced Filters</h4>"""";,"});,"})
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">"""";,"});,"})
@@ -193,7 +193,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                       {column.header}"});,"})
                     </label>;,"});,"})
                     <select onChange = {}"});,"})
-  (e) => handleFilterChange(column.key, e.target.value,contains');,"});,"})
+  (e) => handleFilterChange(column.key, e.target.value,contains');,"});,"});
 } className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">"""";,"});,"})
                       <option value="">No filter</option>"""";,"});,"})
                       <option value="contains">Contains</option>"""";,"});,"})
@@ -227,7 +227,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
             {virtualItems.map((item, index) => (<motion.div key={String(item.id || index)} initial = {}"});,"})
   y: 20;,"});,"})
   { opacity: 1,;,"});,"})
-  y: 0;,"});,"})
+  y: 0;,"});,"});
 }} className={`flex items - center px - 4 py - 3 border - b border - gray - 100 dark:border - gray - 600 hover:bg - gray - 50 dark:hover:bg - gray - 700 transition - colors ${onRowClick ? 'cursor - pointer' : ''} ${selectedItems.has (String (item.id || JSON.stringify (item) ) ) ? 'bg - blue - 50 dark:bg - blue - 900 / 20' : ''}`} onClick = { () => onRowClick?. (item,;,"});,"})
   index) }>""";,"});,"})
                 {enableSelection && (<div className="w - 8 mr - 2">""";,"});,"})
@@ -235,14 +235,14 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
   e.target.checked) } onClick={ (e) => e.stopPropagation () } className="w - 4 h - 4 text - blue - 600 border - gray - 300 rounded focus:ring - blue - 500"/>;,"});,"})
                   </div>) }"});,"})
                 {columns.map (column => (<div key={String (column.key) } className={`flex - 1 px - 2 py - 1 ${column.width ? `w-${column.width}` : ''}`} style={{ width: column.width }}>;,"});,"})
-                    {renderCell (column, item, index) }"});,"})
+                    {renderCell (column, item, index) }"});,"});
 }} className={`flex items-center px-4 py-3 border-b border-gray-100 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors ${onRowClick ? 'cursor-pointer' : ''} ${selectedItems.has(String(item.id || JSON.stringify(item))) ? 'bg-blue-50 dark:bg-blue-900/20' : ''}`} onClick = {}"});,"})
   () => onRowClick?.(item,;,"});,"})
-  index);,"});,"})
+  index);,"});,"});
 }>"""";,"});,"})
                     <input type="checkbox" checked={selectedItems.has(String(item.id || JSON.stringify(item)))} onChange = {}"});,"})
   (e) => handleSelectionChange(item,;,"});,"})
-  e.target.checked);,"});,"})
+  e.target.checked);,"});,"});
 } onClick={(e) => e.stopPropagation()} className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"/>;,"});,"})
                 {columns.map(column => (<div key={String(column.key)} className={`flex-1 px-2 py-1 ${column.width ? `w-${column.width}` : ''}`} style={{ width: column.width }}>;,"});,"})
                     {renderCell(column, item, index)}"});,"})
@@ -264,7 +264,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
             <div className="flex items-center gap-2">;,"});,"})
               <button onClick = {}"});,"})
   () => setCurrentPage(prev => Math.max(1,;,"});,"})
-  prev - 1));,"});,"})
+  prev - 1));,"});,"});
 } disabled={currentPage === 1} className="px-3 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">;,"});,"})
                 Previous;,"});,"})
               {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {}"});,"})
@@ -277,7 +277,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                     {page}"});,"})
                   </button>) }) }"});,"})
   () => setCurrentPage(prev => Math.min(totalPages,;,"});,"})
-  prev + 1));,"});,"})
+  prev + 1));,"});,"});
 } disabled={currentPage === totalPages} className="px-3 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">;,"});,"})
                 Next;,"});,"})
     </div>)};'"`;,"});,"})
@@ -327,7 +327,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
 import { useVirtualScroll } from '../hooks/useVirtualScroll.jsx';""
 export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = '', onRowClick, onSelectionChange, onExport }) => {""
     const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true})';'
-""
+"";
 }
 import { useState, useMemo, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';

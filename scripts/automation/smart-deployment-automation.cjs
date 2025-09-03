@@ -276,8 +276,8 @@ class SmartDeploymentAutomation {;
       environment: this.environment,
       steps: this.deploymentSteps,
       totalDuration: Date.now() - this.startTime,
-      success: this.deploymentSteps.every(step => step.status === `success`)
-    };
+      success: this.deploymentSteps.every(step => step.status === `success`);
+};
     
     const reportPath = path.join(this.projectRoot, `automation/logs`, `deployment-report.json`);
     ;
@@ -354,8 +354,8 @@ class SmartDeploymentAutomation {;
       
       this.log(`✅ Smart deployment completed successfully!`);
       this.log(`Total deployment time: ${report.totalDuration}ms`);
-      
-    } catch (error) {  
+      ;
+} catch (error) {  
       this.log(`❌ Deployment failed: ${error.message  }`);
       
       if (backupPath) {

@@ -44,13 +44,13 @@ export const OrganizationSchema = () => {
       'https://linkedin.com/company/ziontechgroup,https://twitter.com/ziontechgroup'],
     "foundingDate": "2020",
     "numberOfEmployees": "50-100",
-    "industry": "Technology Services"
-  }
+    "industry": "Technology Services";
+}
     foundingDate: '2020',
     numberOfEmployees: '50-100',
     industry: 'Technology Services'};
 
-  return <StructuredData data={organizationData} />
+  return <StructuredData data={organizationData} />;
 };
 
 export const WebSiteSchema = () => {
@@ -64,8 +64,8 @@ export const WebSiteSchema = () => {
     "potentialAction": {
       "@type": "SearchAction",
       "target": "https://ziontechgroup.com/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
+      "query-input": "required name=search_term_string";
+}
   }
     '@context': 'https://schema.org',
     '@type': 'WebSite',
@@ -83,7 +83,7 @@ export const WebSiteSchema = () => {
       'query-input': 'required name=search_term_string',
       target: 'https://ziontechgroup.com/search?q={search_term_string},query-input': 'required name=search_term_string'}};
 
-  return <StructuredData data={websiteData} />
+  return <StructuredData data={websiteData} />;
 };
 
 export const ServiceSchema = () => {
@@ -123,14 +123,14 @@ export const ServiceSchema = () => {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Business Intelligence"
-          }
+            "name": "Business Intelligence";
+}
         }
       ]
-    }
+}
   }
 
-  return <StructuredData data={serviceData} />
+  return <StructuredData data={serviceData} />;
 }
         {'
           '@type': 'Offer',

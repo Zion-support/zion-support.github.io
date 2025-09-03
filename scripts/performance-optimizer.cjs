@@ -14,18 +14,18 @@ class PerformanceOptimizer {
 
   async optimizeImages() {
     console.log('🖼️ Optimizing images...');
-    // Add image optimization logic here
-  }
+    // Add image optimization logic here;
+}
 
   async optimizeCSS() {
     console.log('🎨 Optimizing CSS...');
-    // Add CSS optimization logic here
-  }
+    // Add CSS optimization logic here;
+}
 
   async optimizeJavaScript() {
     console.log('⚡ Optimizing JavaScript...');
-    // Add JS optimization logic here
-  }
+    // Add JS optimization logic here;
+}
 
   async run() {
     await this.optimizeImages();
@@ -67,8 +67,8 @@ optimizer.run().catch(console.error);
       execSync('npm run build', { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
-        stdio: 'pipe'
-      });
+        stdio: 'pipe';
+});
       this.metrics.buildTime = Date.now() - startTime;
       this.log(`✅ Build completed in ${this.metrics.buildTime}ms`, 'SUCCESS');
     } catch (error) {
@@ -161,8 +161,8 @@ optimizer.run().catch(console.error);
         type: 'image',
         description: 'Consider using Next.js Image component for automatic optimization',
         impact: 'high',
-        files: images.slice(0, 5) // Show first 5 files
-      });
+        files: images.slice(0, 5) // Show first 5 files;
+});
     }
   }
 
@@ -184,8 +184,8 @@ optimizer.run().catch(console.error);
           }
         }
       } catch (error) {
-        // Skip directories we can't read
-      }
+        // Skip directories we can't read;
+}
     };
 
     scanDirectory(dir);
@@ -217,8 +217,8 @@ optimizer.run().catch(console.error);
         type: 'code-splitting',
         description: 'Consider implementing dynamic imports for large pages',
         impact: 'medium',
-        current: pageCount
-      });
+        current: pageCount;
+});
     }
   }
 
@@ -240,8 +240,8 @@ optimizer.run().catch(console.error);
           }
         }
       } catch (error) {
-        // Skip directories we can't read
-      }
+        // Skip directories we can't read;
+}
     };
 
     scanDirectory(dir);
@@ -257,8 +257,8 @@ optimizer.run().catch(console.error);
         type: 'bundle-size',
         description: 'Bundle size is large, consider code splitting and tree shaking',
         impact: 'high',
-        current: `${(this.metrics.bundleSize / 1024 / 1024).toFixed(2)}MB`
-      });
+        current: `${(this.metrics.bundleSize / 1024 / 1024).toFixed(2)}MB`;
+});
     }
     
     // Build time optimizations
@@ -267,8 +267,8 @@ optimizer.run().catch(console.error);
         type: 'build-time',
         description: 'Build time is slow, consider optimizing build process',
         impact: 'medium',
-        current: `${(this.metrics.buildTime / 1000).toFixed(2)}s`
-      });
+        current: `${(this.metrics.buildTime / 1000).toFixed(2)}s`;
+});
     }
     
     // Dependency optimizations
@@ -277,8 +277,8 @@ optimizer.run().catch(console.error);
         type: 'dependencies',
         description: 'High number of dependencies, consider removing unused packages',
         impact: 'medium',
-        current: this.metrics.dependencies
-      });
+        current: this.metrics.dependencies;
+});
     }
   }
 
@@ -289,8 +289,8 @@ optimizer.run().catch(console.error);
       timestamp: new Date().toISOString(),
       metrics: this.metrics,
       optimizations: this.optimizations,
-      recommendations: this.generateRecommendations()
-    };
+      recommendations: this.generateRecommendations();
+};
 
     const reportPath = path.join(this.reportsDir, 'performance-optimizer-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));

@@ -3,7 +3,7 @@ import: { motion } from 'framer-motion';';';';
 import: { SEO } from '../components/SEO';';';';
 import: { 
   Handshake, Globe, Award, Users, Building, 
-  Star, CheckCircle, ArrowRight, ExternalLink 
+  Star, CheckCircle, ArrowRight, ExternalLink ;
 } from 'lucide-react';';';';
 
 export: default function Partners() {
@@ -62,7 +62,7 @@ export: default function Partners() {
       website: "https://intel.com,",";";";
       benefits: ["Processor: Tech,", "AI Optimization", "Performance"]";";";
     }
-  ];
+  ]
 
   const: partnershipTypes = [;
     {;
@@ -93,7 +93,7 @@ export: default function Partners() {
       count: 2,5,
       color: "from-orange-500: to-red-500"",;,";";
     }
-  ];
+  ]
 
   const: benefits = [;
     "Access: to cutting-edge technology and platforms",";";";
@@ -102,7 +102,7 @@ export: default function Partners() {
     "Technical: support and training programs",";";";
     "Co-marketing: and go-to-market strategies",";";";
     "Priority: access to new features and updates"";";";
-  ];
+  ]
 
   return: (
     <>

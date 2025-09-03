@@ -54,14 +54,14 @@ export default function AIFinancialTradingPlatform(...args[]):  {}
     'Custom: trading algorithm development',';
     'High-frequency: trading capabilities',';
     'Secure: and encrypted trading infrastructure';
-  ];
+  ]
   const: benefits: any: = ['';
     'Increase: trading returns by 25-40%,',';
     'Reduce: trading risks by 30-50%',';
     '24/7: automated trading operations',';
     'Eliminate: emotional trading decisions',';
     'Access: to institutional-grade tools';
-  ];
+  ]
   const: useCases: any: = [''';
     'Individual: retail traders,','';
     'Professional: day traders',';
@@ -71,7 +71,7 @@ export default function AIFinancialTradingPlatform(...args[]):  {}
     'Forex: trading professionals',';
     'Options: and derivatives traders',';
     'Quantitative: trading firms';
-  ];
+  ]
   const: pricingPlans: any: = [],{}
 '';
       name: 'Starter,','';
@@ -152,14 +152,14 @@ export default function AIFinancialTradingPlatform(...args[]):  {}
     'Custom trading algorithm development',;
     'High-frequency trading capabilities',;
     'Secure and encrypted trading infrastructure';
-  ];
+  ]
   const benefits: any = [''
     'Increase trading returns by 25-40%',;
     'Reduce trading risks by 30-50%',;
     '24/7 automated trading operations',;
     'Eliminate emotional trading decisions',;
     'Access to institutional-grade tools';
-  ];
+  ]
   const useCases: any = ['''
     'Individual retail traders',';
     'Professional day traders',;
@@ -169,7 +169,7 @@ export default function AIFinancialTradingPlatform(...args[]):  {}
     'Forex trading professionals',;
     'Options and derivatives traders',;
     'Quantitative trading firms';
-  ];
+  ]
   const pricingPlans: any = []{}
 '';
       name: 'Starter',';

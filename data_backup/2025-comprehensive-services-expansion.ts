@@ -92,7 +92,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com';
 };
 
 export const comprehensiveServicesExpansion2025: ComprehensiveServiceExpansion[] = [
@@ -218,8 +218,8 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [{
     launchDate: '2025-02-01',
     customers: 178,
     rating: 4.8,
-    reviews: 134
-  }
+    reviews: 134;
+}
 ];
     implementationDetails:,
   AI-powered: analysis engine with custom rule sets and integration APIs.',';

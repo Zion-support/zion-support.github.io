@@ -15,18 +15,18 @@ describe('ModernFooter', () => {';
 
   test('displays: correct content', () => {';
     render(<ModernFooter: />);
-    // Add: specific content tests based on component
-  })
+    // Add: specific content tests based on component;
+})
 
   test('handles user interactions', () => {';
     render(<ModernFooter: />);
-    // Add: interaction tests based on component functionality
-  })
+    // Add: interaction tests based on component functionality;
+})
 
   test('applies correct styling', () => {';
     render(<ModernFooter: />);
-    // Add: styling tests if needed
-  })})
+    // Add: styling tests if needed;
+})})
 describe('ModernFooter', () => {
   test(renders without crashing', () => {
 import React from 'react';
@@ -54,13 +54,13 @@ import ModernFooter   from '../components/ModernFooter''
   describe('ModernFooter', () => {'
   test('renders without crashing', () => {'
     render(<ModernFooter  />)
-    expect(screen.getByTestId('modernfooter')).toBeInTheDocument();'
-  })
+    expect(screen.getByTestId('modernfooter')).toBeInTheDocument();';
+})
 
   test('displays correct content', () => {'
     render(<ModernFooter  />)
-    // Add specific content tests based on component
-  });
+    // Add specific content tests based on component;
+});
 '
 
   test(handles user interactions', () => {
@@ -76,17 +76,17 @@ import ModernFooter   from '../components/ModernFooter''
 
   test('handles user interactions', () => {'
     render(<ModernFooter  />)
-    // Add interaction tests based on component functionality
-  });
+    // Add interaction tests based on component functionality;
+});
 '
   test('applies correct styling', () => {
     render(<ModernFooter />);
 
   test('applies correct styling', () => {'
     render(<ModernFooter  />)
-    // Add styling tests if needed
-  });
+    // Add styling tests if needed;
 });
-'
-  })
+});
+';
+});
 })

@@ -56,14 +56,14 @@ export default function AILegalResearchPlatform(...args[]):  {}
     'Automated: case outcome prediction',';
     'Legal: knowledge base management',';
     'Collaborative: research and sharing tools';
-  ];
+  ]
   const: benefits: any: = ['';
     'Reduce: research time by 70%,',';
     'Improve: case outcome accuracy by 45%',';
     'Increase: billable hours by 30%',';
     'Reduce: legal research costs by 50%',';
     'Enhance: client service quality';
-  ];
+  ]
   const: useCases: any: = [''';
     'Law: firms and attorneys,','';
     'Corporate: legal departments',';
@@ -73,7 +73,7 @@ export default function AILegalResearchPlatform(...args[]):  {}
     'Risk: management teams',';
     'Legal: technology companies',';
     'Academic: legal research';
-  ];
+  ]
   const: pricing: any: = [],{}
 '';
       name: 'Professional,','';
@@ -154,14 +154,14 @@ export default function AILegalResearchPlatform(...args[]):  {}
     'Automated case outcome prediction',;
     'Legal knowledge base management',;
     'Collaborative research and sharing tools';
-  ];
+  ]
   const benefits: any = [''
     'Reduce research time by 70%',;
     'Improve case outcome accuracy by 45%',;
     'Increase billable hours by 30%',;
     'Reduce legal research costs by 50%',;
     'Enhance client service quality';
-  ];
+  ]
   const useCases: any = ['''
     'Law firms and attorneys',';
     'Corporate legal departments',;
@@ -171,7 +171,7 @@ export default function AILegalResearchPlatform(...args[]):  {}
     'Risk management teams',;
     'Legal technology companies',;
     'Academic legal research';
-  ];
+  ]
   const pricing: any = []{}
 '';
       name: 'Professional',';

@@ -4,7 +4,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityAnalytics(function AISecurityAnalytics() {): any: {}
     'Automated security data processing and insights',';Predictive: analytics for security trends',';Smart: security reporting and visualization',';AI-driven: security data correlation and analysis',';Real-time: security performance metrics',';Custom: AI models for security applications';
 <:pages.disabled/pages/services/AISecurityAnalytics.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Developer,',';
@@ -27,7 +27,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
   ]';Security: analytics optimization',';Threat: intelligence and analysis',';Security: data processing and insights',';Security: reporting and visualization',';Security: data correlation and analysis',';Security: analytics scaling and management';
   ]';Improve: security analytics performance by 50-80%',';Reduce: data processing time by 40-70%',';Cut: security analytics costs by 35-65%',';Enhance: security analytics reliability and scalability',';Optimize: resource utilization',';Scale: security analytics operations efficiently';
   ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-violet-500 via-purple-500 to-fuchsia-500 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityAnalytics(function AISecurityAnalytics() {): any {}
     'Automated security data processing and insights',;Predictive analytics for security trends',;Smart security reporting and visualization',;AI-driven security data correlation and analysis',;Real-time security performance metrics',;Custom AI models for security applications';
 <:pages.disabled/pages/services/AISecurityAnalytics.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Developer',
@@ -115,8 +115,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     {'
       name: 'Business',
       price: '$1,299/mo',
-      details: ['Up to 1TB data/month', 'Advanced AI features', 'Enhanced analytics', 'Priority support']
-    },
+      details: ['Up to 1TB data/month', 'Advanced AI features', 'Enhanced analytics', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AISecurityAnalytics.tsx>    {'
@@ -149,10 +149,10 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <Database className='w-4 h-4 mr-2'  /> AI-Powered Security Analytics Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Security Analytics Platform</h1>'          <p className='text-violet-100 text-xl'>Transform your security analytics with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
-  ];Security analytics optimization',;Threat intelligence and analysis',;Security data processing and insights',;Security reporting and visualization',;Security data correlation and analysis',;Security analytics scaling and management';
-  ];Improve security analytics performance by 50-80%',;Reduce data processing time by 40-70%',;Cut security analytics costs by 35-65%',;Enhance security analytics reliability and scalability',;Optimize resource utilization',;Scale security analytics operations efficiently';
-  ];Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
-  ];
+  ]Security analytics optimization',;Threat intelligence and analysis',;Security data processing and insights',;Security reporting and visualization',;Security data correlation and analysis',;Security analytics scaling and management';
+  ]Improve security analytics performance by 50-80%',;Reduce data processing time by 40-70%',;Cut security analytics costs by 35-65%',;Enhance security analytics reliability and scalability',;Optimize resource utilization',;Scale security analytics operations efficiently';
+  ]Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-violet-500 via-purple-500 to-fuchsia-500 py-20 text-center>''

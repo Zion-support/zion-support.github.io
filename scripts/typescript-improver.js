@@ -327,8 +327,8 @@ function generateTypeScriptReport() {
         'Use const assertions for immutable data',
         'Consider using branded types for IDs',
       recommendations: [
-        'Consider using strict TypeScript configuration,Add proper error handling with typed error objects,Use discriminated unions for better type safety,Implement proper API response typing,Add JSDoc comments for complex functions,Use const assertions for immutable data,Consider using branded types for IDs']
-    }
+        'Consider using strict TypeScript configuration,Add proper error handling with typed error objects,Use discriminated unions for better type safety,Implement proper API response typing,Add JSDoc comments for complex functions,Use const assertions for immutable data,Consider using branded types for IDs'];
+}
   };
 '
   fs.writeFileSync('typescript-improvement-report.json', JSON.stringify(report, null, 2));
@@ -343,7 +343,7 @@ async function main() {'
     'src/**/*.{ts,tsx},
     'pages/**/*.{ts,tsx},
     'components/**/*.{ts,tsx}
-  ];
+  ]
 
   const excludeDirs = ['
     'node_modules',
@@ -358,11 +358,11 @@ async function main() {'
     'components.disabled'
   const patterns = [
     'src/**/*.{ts,tsx},pages/**/*.{ts,tsx},components/**/*.{ts,tsx}'
-  ];
+  ]
 
   const excludeDirs = [
     'node_modules,.next,build,dist,scripts,automation,automation_backup,src.disabled,pages.disabled,components.disabled'
-  ];
+  ]
 
   for (const pattern of patterns) {
     const files = await glob(pattern, {'
@@ -397,8 +397,8 @@ function generateTypeScriptReport() {;
 // Main improvement function;
 async function main() {;
   console.log('🔧 Starting TypeScript improvements...\n');';  const patterns = [;
-    'src/**/*.{ts,tsx}',';    'pages/**/*.{ts,tsx}',';    'components/**/*.{ts,tsx}',';  ];;
+    'src/**/*.{ts,tsx}',';    'pages/**/*.{ts,tsx}',';    'components/**/*.{ts,tsx}',';  ]
   const excludeDirs = [;
-    'node_modules',';    '.next',';    'build',';    'dist',';    'scripts',';    'automation',';    'automation_backup',';    'src.disabled',';    'pages.disabled',';    'components.disabled',';  ];;
+    'node_modules',';    '.next',';    'build',';    'dist',';    'scripts',';    'automation',';    'automation_backup',';    'src.disabled',';    'pages.disabled',';    'components.disabled',';  ]
   for (const pattern of patterns) {;
     const files = await glob(pattern, {;);      "ignore": excludeDirs.map(dir => `**/${dir}/* */)

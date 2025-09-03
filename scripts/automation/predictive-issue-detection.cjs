@@ -699,7 +699,7 @@ class PredictiveIssueDetection {;
       { pattern: /eval\s*\(/g, penalty: 20 },;
       { pattern: /innerHTML\s*=/g, penalty: 15 },;
       { pattern: /localStorage\s*\[\s*[^]]*\+\s*[^]]*\]/g, penalty: 10 },;
-    ];
+    ]
 
     for (const file of files) {
       const content = fs.readFileSync(file, `utf8`);
@@ -750,13 +750,13 @@ class PredictiveIssueDetection {;
   async collectSystemMetrics() {
     try {
       const memoryInfo = execSync(`free -m`, { encoding: 'utf8' });
-      const cpuInfo = execSync('top -bn1 | grep "Cpu(s)"', {
+      const cpuInfo = execSync('top -bn1 | grep "Cpu(s)", {
         encoding: 'utf8',
 ;
   async collectSystemMetrics() {;
     try {;
       const memoryInfo = execSync('free -m', { encoding: 'utf8' });
-      const cpuInfo = execSync('top -bn1 | grep "Cpu(s)"', {;
+      const cpuInfo = execSync('top -bn1 | grep "Cpu(s)", {;
         encoding: 'utf8',;
       });
 ;
@@ -828,8 +828,8 @@ class PredictiveIssueDetection {;
       // npm commands may fail if there are issues;
       dependencyMetrics.error = error.message;
       }
-
-    } catch (error) {;
+;
+} catch (error) {;
       // npm commands may fail if there are issues;
       dependencyMetrics.error = error.message;
     }
@@ -894,8 +894,8 @@ class PredictiveIssueDetection {;
     } catch (error) {  
       metrics.error = error.message;
       }
-
-    } catch (error) {;
+;
+} catch (error) {;
       metrics.error = error.message;
     }
 ;
@@ -935,8 +935,8 @@ class PredictiveIssueDetection {;
     } catch (error) {  
       metrics.error = error.message;
       }
-
-    } catch (error) {;
+;
+} catch (error) {;
       metrics.error = error.message;
     }
 ;

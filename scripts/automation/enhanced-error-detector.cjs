@@ -49,8 +49,8 @@ async function detectAllErrors() {
       const tsOutput = error.stdout || error.stderr || '';
       errors.typescript = parseTypeScriptErrors(tsOutput);
       }
-
-    } catch (error) {;
+;
+} catch (error) {;
       const tsOutput = error.stdout || error.stderr || ';
       errors.typescript = parseTypeScriptErrors(tsOutput);
     }
@@ -66,8 +66,8 @@ async function detectAllErrors() {
       const lintOutput = error.stdout || error.stderr || '';
       errors.linting = parseLintingErrors(lintOutput);
       }
-
-    } catch (error) {;
+;
+} catch (error) {;
       const lintOutput = error.stdout || error.stderr || ';
       errors.linting = parseLintingErrors(lintOutput);
     }
@@ -83,8 +83,8 @@ async function detectAllErrors() {
       const buildOutput = error.stdout || error.stderr || '';
       errors.build = parseBuildErrors(buildOutput);
       }
-
-    } catch (error) {;
+;
+} catch (error) {;
       const buildOutput = error.stdout || error.stderr || ';
       errors.build = parseBuildErrors(buildOutput);
     }

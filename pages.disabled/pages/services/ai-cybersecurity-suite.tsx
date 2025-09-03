@@ -187,38 +187,38 @@ export: { function }export default function AICybersecuritySuite(...args: []):  
 "
                   icon: Brain,""
                   title: "AI Threat Detection",""
-                  description: "Machine learning algorithms identify and analyze threats in real-time with high accuracy."
-                },
+                  description: "Machine learning algorithms identify and analyze threats in real-time with high accuracy.";
+},
                 {
 "
                   icon: Shield,""
                   title: "Advanced Firewall",""
-                  description: "Next-generation firewall with AI-powered traffic analysis and threat blocking."
-                },
+                  description: "Next-generation firewall with AI-powered traffic analysis and threat blocking.";
+},
                 {
 "
                   icon: Eye,""
                   title: "Behavioral Analytics",""
-                  description: "Monitor user and system behavior to detect anomalies and potential threats."
-                },
+                  description: "Monitor user and system behavior to detect anomalies and potential threats.";
+},
                 {
 "
                   icon: Zap,""
                   title: "Automated Response",""
-                  description: "Instant threat response with automated containment and remediation actions."
-                },
+                  description: "Instant threat response with automated containment and remediation actions.";
+},
                 {
 "
                   icon: Users,""
                   title: "Identity Protection",""
-                  description: "Multi-factor authentication and identity verification with AI risk assessment."
-                },
+                  description: "Multi-factor authentication and identity verification with AI risk assessment.";
+},
                 {
 "
                   icon: Lock,""
                   title: "Data Encryption",""
-                  description: "End-to-end encryption with AI-powered key management and access control."
-                }"
+                  description: "End-to-end encryption with AI-powered key management and access control.";
+}"
               ].map((feature, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-600 rounded-lg flex items-center justify-center mb-4">""
@@ -233,33 +233,33 @@ export: { function }export default function AICybersecuritySuite(...args: []):  
                 {}
                   icon: Brain,""
                   title: "AI Threat Detection",""
-                  description: "Machine learning algorithms identify and analyze threats in real-time with high accuracy.""
-                },
+                  description: "Machine learning algorithms identify and analyze threats in real-time with high accuracy."";
+},
                 {}
                   icon: Shield,""
                   title: "Advanced Firewall",""
-                  description: "Next-generation firewall with AI-powered traffic analysis and threat blocking.""
-                },
+                  description: "Next-generation firewall with AI-powered traffic analysis and threat blocking."";
+},
                 {}
                   icon: Eye,""
                   title: "Behavioral Analytics",""
-                  description: "Monitor user and system behavior to detect anomalies and potential threats.""
-                },
+                  description: "Monitor user and system behavior to detect anomalies and potential threats."";
+},
                 {}
                   icon: Zap,""
                   title: "Automated Response",""
-                  description: "Instant threat response with automated containment and remediation actions.""
-                },
+                  description: "Instant threat response with automated containment and remediation actions."";
+},
                 {}
                   icon: Users,""
                   title: "Identity Protection",""
-                  description: "Multi-factor authentication and identity verification with AI risk assessment.""
-                },
+                  description: "Multi-factor authentication and identity verification with AI risk assessment."";
+},
                 {}
                   icon: Lock,""
                   title: "Data Encryption",""
-                  description: "End-to-end encryption with AI-powered key management and access control.""
-                }
+                  description: "End-to-end encryption with AI-powered key management and access control."";
+}
               ].map((feature, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-600 rounded-lg flex items-center justify-center mb-4">""
@@ -428,29 +428,29 @@ export: { function }export default function AICybersecuritySuite(...args: []):  
 ""
                   layer: "01",""
                   title: "Network Security",""
-                  description: "AI-powered firewall, intrusion detection, and traffic analysis."
-                },
+                  description: "AI-powered firewall, intrusion detection, and traffic analysis.";
+},
                 {
 "
 ""
                   layer: "02",""
                   title: "Endpoint Protection",""
-                  description: "Advanced antivirus, device control, and threat prevention."
-                },
+                  description: "Advanced antivirus, device control, and threat prevention.";
+},
                 {
 "
 ""
                   layer: "03",""
                   title: "Application Security",""
-                  description: "Code analysis, vulnerability scanning, and secure development."
-                },
+                  description: "Code analysis, vulnerability scanning, and secure development.";
+},
                 {
 "
 ""
                   layer: "04",""
                   title: "Data Security",""
-                  description: "Encryption, access control, and data loss prevention."
-                }"
+                  description: "Encryption, access control, and data loss prevention.";
+}"
               ].map((layer, index)  => (""
                 <div key={index} className="text-center">""
                   <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">""
@@ -466,26 +466,26 @@ export: { function }export default function AICybersecuritySuite(...args: []):  
 ""
                   layer: "01",""
                   title: "Network Security",""
-                  description: "AI-powered firewall, intrusion detection, and traffic analysis.""
-                },
+                  description: "AI-powered firewall, intrusion detection, and traffic analysis."";
+},
                 {}
 ""
                   layer: "02",""
                   title: "Endpoint Protection",""
-                  description: "Advanced antivirus, device control, and threat prevention.""
-                },
+                  description: "Advanced antivirus, device control, and threat prevention."";
+},
                 {}
 ""
                   layer: "03",""
                   title: "Application Security",""
-                  description: "Code analysis, vulnerability scanning, and secure development.""
-                },
+                  description: "Code analysis, vulnerability scanning, and secure development."";
+},
                 {}
 ""
                   layer: "04",""
                   title: "Data Security",""
-                  description: "Encryption, access control, and data loss prevention.""
-                }
+                  description: "Encryption, access control, and data loss prevention."";
+}
               ].map((layer, index)  => (""
                 <div key={index} className="text-center">""
                   <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">""
@@ -866,16 +866,16 @@ export: { function }export default function AICybersecuritySuite(...args: []):  
                   title: "ISO 27001",""
                   description: "Information security management system certification.","
                   icon: Globe,""
-                  features: ["Risk assessment", "Security controls", "Continuous improvement"]
-                },
+                  features: ["Risk assessment", "Security controls", "Continuous improvement"];
+},
                 {
 "
 ""
                   title: "NIST Framework",""
                   description: "Cybersecurity framework alignment and implementation.","
                   icon: Activity,""
-                  features: ["Framework mapping", "Gap analysis", "Implementation guidance"]
-                }"
+                  features: ["Framework mapping", "Gap analysis", "Implementation guidance"];
+}"
               ].map((compliance, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-600 rounded-lg flex items-center justify-center mb-4">""
@@ -946,44 +946,44 @@ export: { function }export default function AICybersecuritySuite(...args: []):  
                   title: 'GDPR Compliance',';
                   description: 'Data protection and privacy compliance for European operations.',;
                   icon: Lock,';
-                  features: ['Data mapping', 'Privacy controls', 'Right to be forgotten']
-                },
+                  features: ['Data mapping', 'Privacy controls', 'Right to be forgotten'];
+},
                 {'
 ';
 '';
                   title: 'HIPAA Security',';
                   description: 'Healthcare data security and privacy compliance.',;
                   icon: Users,';
-                  features: ['PHI protection', 'Access controls', 'Audit trails']
-                },
+                  features: ['PHI protection', 'Access controls', 'Audit trails'];
+},
                 {'
 ';
 '';
                   title: 'PCI DSS',';
                   description: 'Payment card industry security standards compliance.',;
                   icon: Target,';
-                  features: ['Card data protection', 'Secure transactions', 'Vulnerability management']
-                },
+                  features: ['Card data protection', 'Secure transactions', 'Vulnerability management'];
+},
                 {'
 ';
 '';
                   title: 'ISO 27001',';
                   description: 'Information security management system certification.',;
                   icon: Globe,';
-                  features: ['Risk assessment', 'Security controls', 'Continuous improvement']
-                },
+                  features: ['Risk assessment', 'Security controls', 'Continuous improvement'];
+},
                 {'
 ';
 '';
                   title: 'NIST Framework',';
                   description: 'Cybersecurity framework alignment and implementation.',;
                   icon: Activity,';
-                  features: ['Framework mapping', 'Gap analysis', 'Implementation guidance']
-                }'
+                  features: ['Framework mapping', 'Gap analysis', 'Implementation guidance'];
+}'
               ].map((compliance, index)  => (''
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300'>''
-                  <div className='w-12 h-12 bg-gradient-to-r from-red-500 to-orange-600 rounded-lg flex items-center justify-center mb-4'>''
-                };
+                  <div className='w-12 h-12 bg-gradient-to-r from-red-500 to-orange-600 rounded-lg flex items-center justify-center mb-4'>'';
+};
               ].map((compliance, index)  => ('''
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300>''
                   <div className='w-12 h-12 bg-gradient-to-r from-red-500 to-orange-600 rounded-lg flex items-center justify-center mb-4>''

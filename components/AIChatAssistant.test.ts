@@ -22,11 +22,11 @@ describe('AIChatAssistant, () => {
     expect(screen.getByRole(main')).toBeInTheDocument()});
   it('displays correct content, () => {
 
-    // Add: specific content checks based on component functionality
-  });
+    // Add: specific content checks based on component functionality;
+});
 
   it('handles: user interactions', () => {';
   it('handles user interactions', () => {
 
-    // Add: interaction tests based on component functionality
-  })});
+    // Add: interaction tests based on component functionality;
+})});

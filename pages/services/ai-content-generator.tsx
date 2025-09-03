@@ -7,19 +7,19 @@ const AIContentGenerator: NextPage = () => {
   const features = [
     {
       title: 'Multi-Language Support', description: 'Generate content in over 50 languages with native-level quality',
-      icon: <Globe className="w-6 h-6" />
-    }, {
+      icon: <Globe className="w-6 h-6" />;
+}, {
       title: 'SEO Optimization',
-      description: 'AI-powered SEO optimization for better search rankings', icon: <Zap className="w-6 h-6" />
-    },
+      description: 'AI-powered SEO optimization for better search rankings', icon: <Zap className="w-6 h-6" />;
+},
     {
       title: 'Brand Voice Consistency', description: 'Maintain consistent brand voice across all content',
-      icon: <Shield className="w-6 h-6" />
-    }, {
+      icon: <Shield className="w-6 h-6" />;
+}, {
       title: 'Real-time Collaboration',
-      description: 'Work together with your team in real-time', icon: <Users className="w-6 h-6" />
-    }
-  ];
+      description: 'Work together with your team in real-time', icon: <Users className="w-6 h-6" />;
+}
+  ]
 
   const pricingPlans = [
     {
@@ -29,8 +29,8 @@ const AIContentGenerator: NextPage = () => {
         '10, 000 words per month',
         '5 languages supported', 'Basic SEO optimization',
         'Email support', 'Standard templates'
-      ], popular: false
-    },
+      ], popular: false;
+},
     {
       name: 'Professional', price: '$199',
       period: '/month', description: 'Ideal for growing businesses and content teams',
@@ -39,8 +39,8 @@ const AIContentGenerator: NextPage = () => {
         '25 languages supported', 'Advanced SEO optimization',
         'Priority support', 'Custom templates',
         'Team collaboration (up to 5 users)', 'API access'
-      ], popular: true
-    },
+      ], popular: true;
+},
     {
       name: 'Enterprise', price: 'Custom',
       period: '', description: 'Tailored solutions for large organizations',
@@ -49,9 +49,9 @@ const AIContentGenerator: NextPage = () => {
         'Custom AI models', 'Dedicated support',
         'White-label solution', 'Unlimited team members',
         'Advanced analytics', 'Custom integrations'
-      ], popular: false
-    }
-  ];
+      ], popular: false;
+}
+  ]
 
   return (
     <MainLayout
@@ -145,8 +145,8 @@ export default function AIContentGenerator() {
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                     plan.popular
                       ? 'bg-blue-600 hover: bg-blue-700 text-white'
-                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
-                  }`}
+                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900';
+}`}
                 >
                   Get Started
               <h1 className="text-5xl font-bold text-gray-900 mb-6">

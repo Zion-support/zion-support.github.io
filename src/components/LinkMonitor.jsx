@@ -19,21 +19,21 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
                 if (result.status === 'broken') {}"});,"})
                     results.push(result);,"});,"})
                     if(autoFix) {}"});,"})
-                        await fixBrokenLink(href, result)}"});,"})
-                }"});,"})
+                        await fixBrokenLink(href, result)}"});,"});
+}"});,"})
                 // Update progress;,"});,"})
                 setScanProgress(( (i + 1) / links.length) * 100) ;,"});,"})
                 // Small delay to prevent overwhelming the browser;,"});,"})
-                await new Promise(resolve => setTimeout (resolve, 10) ) }"});,"})
-        }"});,"})
+                await new Promise(resolve => setTimeout (resolve, 10) ) }"});,"});
+}"});,"})
         setBrokenLinks(results) ;,"});,"})
         setLastScanTime(new Date () ) ;,"});,"})
         setIsScanning(false) ;,"});,"})
         // Notify parent component of issues;,"});,"})
         results.forEach(result => {}"});,"})
             if (onLinkIssue) {}"});,"})
-                onLinkIssue(result)}"});,"})
-        })};,"});,"})
+                onLinkIssue(result)}"});,"});
+})};,"});,"})
     // Fix a broken link;,"});,"})
     const fixBrokenLink = async (originalUrl, validationResult) => {}"});,"})
 ';,"});,"})
@@ -64,7 +64,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
 &apos;'
  export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true}) => { const [brokenLinks, setBrokenLinks] = useState ([])  const [fixedLinks, setFixedLinks] = useState ([])  const [isScanning, setIsScanning] = useState (false)  const [scanProgress, setScanProgress] = useState (0)  const [lastScanTime, setLastScanTime] = useState (null) ''
 ;
-""
+"";
 }
- export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true}) => { const [brokenLinks, setBrokenLinks] = useState ([])  const [fixedLinks, setFixedLinks] = useState ([])  const [isScanning, setIsScanning] = useState (false)  const [scanProgress, setScanProgress] = useState (0)  const [lastScanTime, setLastScanTime] = useState (null) '
+ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true}) => { const [brokenLinks, setBrokenLinks] = useState ([])  const [fixedLinks, setFixedLinks] = useState ([])  const [isScanning, setIsScanning] = useState (false)  const [scanProgress, setScanProgress] = useState (0)  const [lastScanTime, setLastScanTime] = useState (null) ';
 }

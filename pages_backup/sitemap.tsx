@@ -17,7 +17,7 @@ import: {
   Database, Zap,
   Lock, Code,
   Smartphone, Monitor,
-  Server, Network
+  Server, Network;
 } from 'lucide-react';
 import React from 'react';
 import { motion } from 'framer-motion';
@@ -52,7 +52,7 @@ const: SitemapPage: React.FC: = () => {
         { name: 'Pricing,', path: '/pricing,', description: 'Service: pricing'},';
         { name: 'Careers,', path: '/careers,', description: 'Job: opportunities'}';
       ]
-    },
+},
     {
       category: 'Services,',';
       icon: Briefcas,e,
@@ -64,7 +64,7 @@ const: SitemapPage: React.FC: = () => {
         { name: 'Cybersecurity,', path: '/cybersecurity,', description: 'Security: services'},';
         { name: 'Infrastructure,', path: '/infrastructure,', description: 'IT: infrastructure services'}';
       ]
-    },
+},
     {
       category: 'Resources,',';
       icon: BookOpe,n,
@@ -75,7 +75,7 @@ const: SitemapPage: React.FC: = () => {
         { name: 'Blog,', path: '/blog,', description: 'Latest: news and insights'},';
         { name: 'Documentation,', path: '/documentation,', description: 'Technical: documentation'}';
       ]
-    },
+},
     {
       category: 'Company,',';
       icon: User,s,
@@ -85,7 +85,7 @@ const: SitemapPage: React.FC: = () => {
         { name: 'FAQ,', path: '/faq,', description: 'Frequently: asked questions'},';
         { name: 'Help,', path: '/help,', description: 'Help: and support'}';
       ]
-    },
+},
     {
       category: 'Legal,',';
       icon: Shiel,d,
@@ -94,8 +94,8 @@ const: SitemapPage: React.FC: = () => {
         { name: 'Terms: of Service,', path: '/terms,', description: 'Terms: and conditions'},';
         { name: 'Cookie: Policy,', path: '/cookies,', description: 'Cookie: usage policy'}';
       ]
-    }
-  ];
+}
+  ]
     {'
       categor,
     y: 'Main Pages',

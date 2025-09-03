@@ -43,7 +43,7 @@ describe('research-development', () => {
 '
   it('displays expected content', () => {
     render(<research-development />);
-    // Add more specific tests here
-  });
+    // Add more specific tests here;
+});
 });
 '

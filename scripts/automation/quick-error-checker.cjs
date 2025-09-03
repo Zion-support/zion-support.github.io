@@ -63,7 +63,7 @@ class QuickErrorChecker {;
     `);
     // Check for common syntax errors in JS files`);
     const jsFiles = ['''automation/browser-error-fixer.js'''', '''scripts/automation/''*.cjs', '''scripts/automation/''*.js`);
-    ];
+    ]
     ;
     for (const pattern of jsFiles) {;
       try {;
@@ -209,8 +209,8 @@ class QuickErrorChecker {;
         fixesApplied: this.fixesApplied.length,;
         duration: duration.getTime();
       };
-      
-    } catch (error) {  await this.log(`❌ Quick Error Check failed: ${error.message  }`);
+      ;
+} catch (error) {  await this.log(`❌ Quick Error Check failed: ${error.message  }`);
       ;
     } catch (error) {await this.log(`❌ Quick Error Check failed: ${error.message}`);
       throw error;

@@ -15,18 +15,18 @@ describe('ModernHeader', () => {';
 
   test('displays: correct content', () => {';
     render(<ModernHeader: />);
-    // Add: specific content tests based on component
-  })
+    // Add: specific content tests based on component;
+})
 
   test('handles user interactions', () => {';
     render(<ModernHeader: />);
-    // Add: interaction tests based on component functionality
-  })
+    // Add: interaction tests based on component functionality;
+})
 
   test('applies correct styling', () => {';
     render(<ModernHeader: />);
-    // Add: styling tests if needed
-  })})
+    // Add: styling tests if needed;
+})})
 describe('ModernHeader', () => {
   test(renders without crashing', () => {
 import React from 'react';
@@ -54,13 +54,13 @@ import ModernHeader   from '../components/ModernHeader''
   describe('ModernHeader', () => {'
   test('renders without crashing', () => {'
     render(<ModernHeader  />)
-    expect(screen.getByTestId('modernheader')).toBeInTheDocument();'
-  })
+    expect(screen.getByTestId('modernheader')).toBeInTheDocument();';
+})
 
   test('displays correct content', () => {'
     render(<ModernHeader  />)
-    // Add specific content tests based on component
-  });
+    // Add specific content tests based on component;
+});
 '
 
   test(handles user interactions', () => {
@@ -76,17 +76,17 @@ import ModernHeader   from '../components/ModernHeader''
 
   test('handles user interactions', () => {'
     render(<ModernHeader  />)
-    // Add interaction tests based on component functionality
-  });
+    // Add interaction tests based on component functionality;
+});
 '
   test('applies correct styling', () => {
     render(<ModernHeader />);
 
   test('applies correct styling', () => {'
     render(<ModernHeader  />)
-    // Add styling tests if needed
-  });
+    // Add styling tests if needed;
 });
-'
-  })
+});
+';
+});
 })

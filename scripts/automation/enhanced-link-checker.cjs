@@ -69,8 +69,8 @@ class EnhancedLinkChecker {
         console.log('⚠️ No recognized build system found, skipping build...');
         return false;
       }
-    } catch (error) {  
-    } catch (error) {;
+    } catch (error) {  ;
+} catch (error) {;
       console.log('❌ Build failed, but continuing with link checking...');
       console.log('💡 This is normal if the project has build issues');
       return false;
@@ -606,7 +606,7 @@ ${
         .map(link =>- **${link.source}** → ${link.url} (${link.status}${link.error ? ' - ${link.error} : ``})
         )
         .join(`\n`)
-    : `✅ No broken internal links found!`
+    : `✅ No broken internal links found!`;
 }
 
 ### External Broken Links (${brokenExternal.length})
@@ -645,7 +645,7 @@ ${
   brokenInternal.length > 0? `1. **Fix Internal Links**: ${brokenInternal.length} broken internal links need immediate attention;
 2. **Update Routes**: Ensure all internal routes are properly configured;
 3. **Check Build Output**: Verify that all internal links are correctly generated`
-    : `1. ✅ All internal links are working correctly`
+    : `1. ✅ All internal links are working correctly`;
 }
 
 ${
@@ -770,8 +770,8 @@ async function main() {;
 ;
   try {;
     await linkChecker.runLinkCheck();
-  } catch (error) {  
-  } catch (error) {;
+  } catch (error) {  ;
+} catch (error) {;
     console.error('❌ Link checker automation failed:', error);
     process.exit(1);
     }

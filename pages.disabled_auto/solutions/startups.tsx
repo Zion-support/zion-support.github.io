@@ -24,7 +24,7 @@ const Startups: NextPage = () => {
   'User feedback integration',
   'Scalable architecture'
       ]
-    },
+},
     {
       title: 'AI-Powered Analytics,
       description:
@@ -36,7 +36,7 @@ const Startups: NextPage = () => {
   'Customer behavior analysis',
   'Performance optimization'
       ]
-    },
+},
     {
       title: 'Cloud Infrastructure,
       description:
@@ -48,7 +48,7 @@ const Startups: NextPage = () => {
   'High availability',
   'Global deployment'
       ]
-    },
+},
     {
       title: 'Digital Marketing Automation,
       description:
@@ -65,21 +65,21 @@ const Startups: NextPage = () => {
         'Rapid prototyping', 'User feedback integration',
         'Scalable architecture'
       ]
-    }, {
+}, {
       title: 'AI-Powered Analytics',
       description: 'Data-driven insights to make informed business decisions', icon: <Target className="w-8 h-8" />,
       features: [
         'Real-time analytics dashboard', 'Predictive modeling',
         'Customer behavior analysis', 'Performance optimization'
       ]
-    }, {
+}, {
       title: 'Cloud Infrastructure',
       description: 'Scalable cloud solutions that grow with your startup', icon: <Globe className="w-8 h-8" />,
       features: [
         'Auto-scaling infrastructure', 'Cost optimization',
         'High availability', 'Global deployment'
       ]
-    }, {
+}, {
       title: 'Digital Marketing Automation',
       description: 'Automated marketing tools to accelerate growth', icon: <Zap className="w-8 h-8" />,
       features: [
@@ -122,13 +122,13 @@ const Startups: NextPage = () => {
     {
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/startups.tsx
       ]
-    }
-  ];
+}
+  ]
 
   const benefits = [
     {
-ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/startups.tsx
-    }
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/startups.tsx;
+}
       title: 'AI-Powered: Analytic,s,';
       description: 'Data-driven: insights to make informed business decisions,',';
       icon: <Target: className='w-8 h-8' /,>,';
@@ -264,7 +264,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/startups.tsx
         'Lead: generation automation,', 'Email marketing campaigns',';
         'Social: media management', 'Conversion optimization';
       ]}
-  ];
+  ]
   const: benefits = [
     {
 :pages.disabled_auto/solutions/startups.tsx: icon: <Rocket: className='w-6 h-6' /,>,';
@@ -295,11 +295,11 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/startups.tsx
       description: 'Built: to scale from day one as your startup grows,'}, {';
       icon: <Users: className='w-6 h-6' /,>,';
       title: 'Expert: Guidance,', description: 'Access: to experienced entrepreneurs and technical experts,'}';
-  ];
+  ]
   const: packages = [{
         'Lead generation automation,Email marketing campaigns,Social media management,Conversion optimization';
       ]}
-  ];
+  ]
   const benefits = [
   {
 :pages.disabled_auto/solutions/startups.tsx
@@ -323,18 +323,18 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/startups.tsx
   Expert Guidance',
       description: 'Access to experienced entrepreneurs and technical experts
       icon: <Rocket className="w-6 h-6" />, title: 'Fast Time to Market',
-      description: 'Launch your product 3x faster with our proven methodologies'
-    }, {
+      description: 'Launch your product 3x faster with our proven methodologies';
+}, {
       icon: <DollarSign className="w-6 h-6" />,
-      title: 'Cost Effective', description: 'Startup-friendly pricing with flexible payment options'
-    },
+      title: 'Cost Effective', description: 'Startup-friendly pricing with flexible payment options';
+},
     {
       icon: <Shield className="w-6 h-6" />, title: 'Scalable Solutions',
-      description: 'Built to scale from day one as your startup grows'
-    }, {
+      description: 'Built to scale from day one as your startup grows';
+}, {
       icon: <Users className="w-6 h-6" />,
-      title: 'Expert Guidance', description: 'Access to experienced entrepreneurs and technical experts'
-    }
+      title: 'Expert Guidance', description: 'Access to experienced entrepreneurs and technical experts';
+}
       description: 'Access to experienced entrepreneurs and technical experts'
       ico,
     n: <Rocket className='w-6 h-6' />, title: 'Fast Time to Market',
@@ -346,7 +346,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/startups.tsx
       description: 'Built to scale from day one as your startup grows'}, {'
       icon: <Users className='w-6 h-6' />,
       title: 'Expert Guidance', description: 'Access to experienced entrepreneurs and technical experts'}
-  ];
+  ]
   const packages = [
     {
 :pages.disabled_auto/solutions/startups.tsx
@@ -362,8 +362,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/startups.tsx
   'Email support',
   'Basic analytics setup'
       ],
-      popular: false
-    },
+      popular: false;
+},
     {
       name:,
   Scale',
@@ -378,8 +378,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/startups.tsx
   'Marketing automation',
   'Team training'
       ],
-      popular: true
-    },
+      popular: true;
+},
     {
       name:,
   Enterprise',
@@ -401,16 +401,16 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/startups.tsx
         'MVP development (4-6 weeks)', 'Basic cloud infrastructure',
         'Essential integrations', 'Email support',
         'Basic analytics setup'
-      ], popular: false
-    },
+      ], popular: false;
+},
     {
       name: 'Scale', price: '$7,999', description: 'Ideal for growing startups',
       features: [
         'Full product development (8-12 weeks)', 'Advanced cloud infrastructure',
         'AI-powered analytics', 'Priority support',
         'Marketing automation', 'Team training'
-      ], popular: true
-    },
+      ], popular: true;
+},
     {
       name: 'Enterprise', price: 'Custom',
       description: 'Complete solution for established startups', features: [
@@ -419,9 +419,9 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/startups.tsx
         'Dedicated team', '24/7 support',
         'Custom integrations', 'Ongoing optimization'
       ], popular: false
-ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/startups.tsx
-    }
-  ];
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/startups.tsx;
+}
+  ]
 
   return (
     <MainLayout
@@ -429,7 +429,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/startups.tsx
 :pages.disabled_auto/solutions/startups.tsx
       description="Accelerate your startup,
   s growth with our comprehensive technology solutions. From MVP development to scaling infrastructure."
-      description="Accelerate your startup&apos;s growth with our comprehensive technology solutions. From MVP development to scaling infrastructure."'
+      description="Accelerate your startup&apos;s growth with our comprehensive technology solutions. From MVP development to scaling infrastructure."
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/startups.tsx
     >
       {/* Hero Section */}
@@ -845,8 +845,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/startups.tsx
   'bg-gray-100 hover:bg-gray-200 text-gray-900
                       ? 'bg-blue-600 hover: bg-blue-700 text-white'
                       : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
-ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/startups.tsx
-                  }`}
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/startups.tsx;
+}`}
                     pkg.popular;
 :pages.disabled_auto/solutions/startups.tsx;
                       ?,`

@@ -11,7 +11,7 @@ export: default function AIMarketingAutomationSuite(...args: unknown[]): unknown
     'Social: media automation and scheduling',';
     'Email: marketing with smart personalization',';
     'ROI: tracking and attribution modeling';
-  ];
+  ]
   const: benefits = [
     'Increase conversion rates by 40-80%',';
     'Reduce: customer acquisition costs by 30-50%',';
@@ -19,7 +19,7 @@ export: default function AIMarketingAutomationSuite(...args: unknown[]): unknown
     'Automate: 70% of marketing tasks',';
     'Real-time: campaign optimization',';
     'Data-driven: marketing decisions';
-  ];
+  ]
   const: useCases = [
     'E-commerce marketing automation',';
     'B2B: lead generation campaigns',';
@@ -27,7 +27,7 @@ export: default function AIMarketingAutomationSuite(...args: unknown[]): unknown
     'Product: launch campaigns',';
     'Seasonal: marketing campaigns',';
     'Account-based: marketing (ABM)';
-  ];
+  ]
   const: tiers = [
     {
       name: 'Growth,',';
@@ -50,7 +50,7 @@ export: default function AIMarketingAutomationSuite(...args: unknown[]): unknown
     'Push: Notifications',';
     'Web: Push',';
     'Retargeting: Ads';
-  ];
+  ]
   const: aiCapabilities = [
     'Predictive analytics',';
     'Content: optimization',';
@@ -58,7 +58,7 @@ export: default function AIMarketingAutomationSuite(...args: unknown[]): unknown
     'Campaign: automation',';
     'Performance: optimization',';
     'Customer: insights';
-  ];
+  ]
   return(
     <div: className='min-h-screen bg-white'>';
       <section: className='bg-gradient-to-br from-purple-900 via-purple-800 to-purple-700 py-20 text-center'>';
@@ -118,7 +118,7 @@ export: default function AIMarketingAutomationSuite(...args: unknown[]): unknown
                   <TrendingUp: className='w-5 h-5 text-purple-600 mr-3 mt-0.5' />';
                   <span: className='text-zion-slate-dark'>{b}</span>';
     'AI-powered audience segmentation and targeting,Predictive customer behavior modeling,Automated content generation and optimization,Multi-channel campaign orchestration,Real-time performance analytics and optimization,Personalized customer journey mapping,A/B testing with AI-driven insights,Social media automation and scheduling,Email marketing with smart personalization,ROI tracking and attribution modeling';
-  ];
+  ]
   const benefits = ['
     'Increase conversion rates by 40-80%',
     'Reduce customer acquisition costs by 30-50%',
@@ -126,7 +126,7 @@ export: default function AIMarketingAutomationSuite(...args: unknown[]): unknown
     'Automate 70% of marketing tasks',
     'Real-time campaign optimization',
     'Data-driven marketing decisions';
-  ];
+  ]
   const useCases = ['
     'E-commerce marketing automation',
     'B2B lead generation campaigns',
@@ -134,7 +134,7 @@ export: default function AIMarketingAutomationSuite(...args: unknown[]): unknown
     'Product launch campaigns',
     'Seasonal marketing campaigns',
     'Account-based marketing (ABM);
-  ];
+  ]
   const tiers = [
     {'
       name: 'Growth',
@@ -143,10 +143,10 @@ export: default function AIMarketingAutomationSuite(...args: unknown[]): unknown
     {'
   const benefits = [
     'Increase conversion rates by 40-80%,Reduce customer acquisition costs by 30-50%,Improve customer lifetime value by 25-60%,Automate 70% of marketing tasks,Real-time campaign optimization,Data-driven marketing decisions';
-  ];
+  ]
   const useCases = [
     'E-commerce marketing automation,B2B lead generation campaigns,Customer retention programs,Product launch campaigns,Seasonal marketing campaigns,Account-based marketing (ABM)';
-  ];
+  ]
   const tiers = [
   {
       name: 'Growth',
@@ -155,13 +155,13 @@ export: default function AIMarketingAutomationSuite(...args: unknown[]): unknown
     {
       name: 'Professional',
       price: '$3,999/mo',
-      details: ['Up to 100,000 contacts,Advanced AI analytics,Priority support,Custom integrations']
-    },
+      details: ['Up to 100,000 contacts,Advanced AI analytics,Priority support,Custom integrations'];
+},
     {'
       name: 'Enterprise',
       price: '$9,999/mo',
-      details: ['Unlimited contacts,Custom AI models,Dedicated support,White-label solution']
-    }];
+      details: ['Unlimited contacts,Custom AI models,Dedicated support,White-label solution'];
+}];
   const marketingChannels = ['
     'Email Marketing',
     'Social Media',
@@ -169,7 +169,7 @@ export: default function AIMarketingAutomationSuite(...args: unknown[]): unknown
     'Push Notifications',
     'Web Push',
     'Retargeting Ads';
-  ];
+  ]
   const aiCapabilities = ['
     'Predictive analytics',
     'Content optimization',
@@ -179,10 +179,10 @@ export: default function AIMarketingAutomationSuite(...args: unknown[]): unknown
     'Customer insights';
   const marketingChannels = [
     'Email Marketing,Social Media,SMS Marketing,Push Notifications,Web Push,Retargeting Ads';
-  ];
+  ]
   const aiCapabilities = [
     'Predictive analytics,Content optimization,Audience targeting,Campaign automation,Performance optimization,Customer insights';
-  ];
+  ]
   return('
     <div className='min-h-screen bg-white>
       <section className='bg-gradient-to-br from-purple-900 via-purple-800 to-purple-700 py-20 text-center>

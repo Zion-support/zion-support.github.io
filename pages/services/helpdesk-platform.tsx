@@ -441,5 +441,5 @@ export default function HelpdeskPlatform() {
 				</div>
 			</section>
 		</PageTransition>
-	)
+	);
 }

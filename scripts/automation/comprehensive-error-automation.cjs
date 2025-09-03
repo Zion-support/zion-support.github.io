@@ -81,8 +81,8 @@ class ComprehensiveErrorAutomation {;
       await this.saveStats();
 ;
       console.log('✅ Comprehensive Error Automation completed successfully!');
-    } catch (error) {  
-    } catch (error) {;
+    } catch (error) {  ;
+} catch (error) {;
       console.error('❌ Comprehensive Error Automation failed:', error);
       this.stats.totalRuns++;
       this.stats.failedRuns++;
@@ -104,8 +104,8 @@ class ComprehensiveErrorAutomation {;
     if (fs.existsSync(statsFile)) {;
       try {;
         this.stats = JSON.parse(fs.readFileSync(statsFile, 'utf8'));
-      } catch (error) {  
-      } catch (error) {;
+      } catch (error) {  ;
+} catch (error) {;
         console.warn('Could not load existing stats:', error.message);
         }
     }
@@ -160,12 +160,12 @@ class ComprehensiveErrorAutomation {;
 ;
       // Run Prettier format check;
       console.log('  Running Prettier format check...');
-      execSync('npx prettier --check "src/**/*.{js,jsx,ts,tsx}"', {;
+      execSync('npx prettier --check "src/**/*.{js,jsx,ts,tsx}", {;
         cwd: this.projectRoot,;
         stdio: 'pipe',;
       });
-    } catch (error) {  
-    } catch (error) {;
+    } catch (error) {  ;
+} catch (error) {;
       await this.logError('Code quality checks failed', error);
       }
   }

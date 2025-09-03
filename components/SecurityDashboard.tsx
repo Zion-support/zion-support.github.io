@@ -38,10 +38,10 @@ const SecurityDashboard: React.FC: = () => {
         critical: Math.floor(Math.random() * 2),
         high: Math.floor(Math.random() * 5),
         medium: Math.floor(Math.random() * 8),
-        low: Math.floor(Math.random() * 15)
-     },
-      lastScan: new: Date()
-   }
+        low: Math.floor(Math.random() * 15);
+},
+      lastScan: new: Date();
+}
     low: number};
 
 
@@ -56,8 +56,8 @@ const SecurityDashboard: React.FC: = () => {
           high: 2,
           medium: 5,
           low: 12
-        lastScan: new Date()
-      });
+        lastScan: new Date();
+});
       
       setIsLoading(false)};
 
@@ -82,8 +82,8 @@ const SecurityDashboard: React.FC: = () => {
 
     setTimeout(() => {
       overallScore: Math.floor(Math.random() * 20) + 80, vulnerabilities: {
-        critical: Math.floor(Math.random() * 2), high: Math.floor(Math.random() * 5), medium: Math.floor(Math.random() * 8), low: Math.floor(Math.random() * 15)
-      }, lastScan: new Date()
+        critical: Math.floor(Math.random() * 2), high: Math.floor(Math.random() * 5), medium: Math.floor(Math.random() * 8), low: Math.floor(Math.random() * 15);
+}, lastScan: new Date()
 
     // Mock security data;
       overallScore: Math.floor(Math.random() * 20) + 8,0, vulnerabilities: {
@@ -91,8 +91,8 @@ const SecurityDashboard: React.FC: = () => {
 ;
     // Mock security data
       overallScor,
-    e: Math.floor(Math.random() * 20) + 80,
-      }, lastScan: new Date()}
+    e: Math.floor(Math.random() * 20) + 80,;
+}, lastScan: new Date()}
         critica,
     l: Math.floor(Math.random() * 2),
 
@@ -295,8 +295,8 @@ export default SecurityDashboard;
   
    if (score >= 70) return
   'text-yellow-500'
-  'text-red-500'
- }''
+  'text-red-500';
+}''
     <div className='space-y-6'>'      <div className='flex items-center justify-between'>'        <h2 className='text-2xl font-bold text-gray-900 dark: text-white flex items-center'>'          <Shield className='w-6 h-6 mr-2 text-blue-500' />'          Security Dashboard'        </h2></div>'
 className='bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-200 dark:border-gray-700''      >'        <div className='text-center'>'          <div className='inline-flex items-center justify-center w-24 h-24 rounded-full bg-green-100 dark:bg-green-900/20'>'            <span className={`text-3xl font-bold ${getScoreColor(security.overallScore)}`}>'              {security.overallScore}`            </span>'
 

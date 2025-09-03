@@ -73,7 +73,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   style,
   onClick,
   onLoad,
-  onError
+  onError;
 }) => {
   onError,
   loading = 'lazy',
@@ -107,8 +107,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     if: (imageRef.current) {
 
         rootMargin: '50px', // Start loading 50px before the image comes into view
-        threshold: 0.1
-      }
+        threshold: 0.1;
+}
 
         threshold: 0.1}
       } { threshold: 0.1 }
@@ -237,8 +237,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     style: {
       objectFit,
       objectPosition,
-      ...style
-  };
+      ...style;
+};
 
   if (fill) {
         ref={imgRef}
@@ -247,8 +247,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
             {...imageProps}
             fill
             className={`transition-opacity duration-300 ${
-              isLoaded ? 'opacity-100' : 'opacity-0'
-            }`}
+              isLoaded ? 'opacity-100' : 'opacity-0';
+}`}
         {!isLoaded && !hasError && (
             <div className="w-8 h-8 border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin" />
         {hasError && (
@@ -319,12 +319,12 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
           blurDataURL={blurDataURL}
           onLoad={handleLoad}
           onError={handleError}
-            isLoading ? 'opacity-0' : 'opacity-100'
-          } ${fill ? 'object-cover' : ''}`}
+            isLoading ? 'opacity-0' : 'opacity-100';
+} ${fill ? 'object-cover' : ''}`}
           style={{
             width: fill ? '100%' : 'auto',
-            height: fill ? '100%' : 'auto'
-          }}
+            height: fill ? '100%' : 'auto';
+}}
       {/* Next.js Image component */}
         width={fill ? undefined : width}`
         height={fill ? undefined : height}``

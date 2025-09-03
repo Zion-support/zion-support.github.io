@@ -220,8 +220,8 @@ review,
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
+      website: 'https://ziontechgroup.com';
+},
       mobil,
     e:,
   +1 302 464 0950',
@@ -235,8 +235,8 @@ review,
     launchDate: '2025-01-22',
     customers: 67,
     rating: 4.8,
-    reviews: 45
-  },
+    reviews: 45;
+},
   {
     id: 'blockchain-payment-processing-platform',
     name: 'Blockchain Payment Processing Platform',
@@ -350,8 +350,8 @@ review,
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
+      website: 'https://ziontechgroup.com';
+},
       mobil,
     e:,
   +1 302 464 0950',
@@ -365,8 +365,8 @@ review,
     launchDate: '2025-01-28',
     customers: 89,
     rating: 4.7,
-    reviews: 56
-  },
+    reviews: 56;
+},
   {
     id: 'quantum-financial-modeling-platform',
     name: 'Quantum Financial Modeling Platform',
@@ -479,8 +479,8 @@ review,
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
+      website: 'https://ziontechgroup.com';
+},
       mobil,
     e:,
   +1 302 464 0950',
@@ -494,8 +494,8 @@ review,
     launchDate: '2025-02-03',
     customers: 23,
     rating: 4.9,
-    reviews: 18
-  },
+    reviews: 18;
+},
   {
     id: 'ai-powered-insurance-underwriting',
     name: 'AI-Powered Insurance Underwriting',
@@ -608,8 +608,8 @@ review,
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
+      website: 'https://ziontechgroup.com';
+},
       mobil,
     e:,
   +1 302 464 0950',
@@ -623,8 +623,8 @@ review,
     launchDate: '2025-02-08',
     customers: 134,
     rating: 4.6,
-    reviews: 78
-  },
+    reviews: 78;
+},
   {
     id: 'regtech-compliance-automation-platform',
     name: 'RegTech Compliance Automation Platform',
@@ -715,8 +715,8 @@ review,
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
+      website: 'https://ziontechgroup.com';
+},
       mobil,
     e:,
   +1 302 464 0950',
@@ -730,6 +730,6 @@ review,
     launchDate: '2025-02-12',
     customers: 89,
     rating: 4.5,
-    reviews: 52
-  }
+    reviews: 52;
+}
 ];

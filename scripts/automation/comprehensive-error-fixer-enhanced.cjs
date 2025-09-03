@@ -93,8 +93,8 @@ class ComprehensiveErrorFixer {;
       const result = execSync('npx tsc --noEmit --pretty false', { 
         encoding: 'utf8', 
         cwd: this.projectRoot,
-        stdio: 'pipe'
-      });
+        stdio: 'pipe';
+});
       
       // If we get here, no TypeScript errors;
       this.log('No TypeScript errors detected', 'SUCCESS');
@@ -109,8 +109,8 @@ class ComprehensiveErrorFixer {;
             message: line,
             severity: `error`,
             file: this.extractFilePath(line),
-            line: this.extractLineNumber(line)
-            });
+            line: this.extractLineNumber(line);
+});
         }
       });
       
@@ -225,8 +225,8 @@ class ComprehensiveErrorFixer {;
             message: line,
             severity: line.includes('error') ? `error` : `warning`,
             file: this.extractFilePath(line),
-            line: this.extractLineNumber(line)
-            });
+            line: this.extractLineNumber(line);
+});
         }
       });
       
@@ -241,8 +241,8 @@ class ComprehensiveErrorFixer {;
       const result = execSync('npm run build', { 
         encoding: 'utf8', 
         cwd: this.projectRoot,
-        stdio: 'pipe'
-    } catch (error) {;
+        stdio: 'pipe';
+} catch (error) {;
       const output = error.stdout || error.stderr || ';
       const lines = output.split('\n').filter(line => line.trim());
       ;
@@ -284,8 +284,8 @@ class ComprehensiveErrorFixer {;
             message: line,
             severity: `error`,
             file: this.extractFilePath(line),
-            line: this.extractLineNumber(line)
-            });
+            line: this.extractLineNumber(line);
+});
         }
       });
       
@@ -300,8 +300,8 @@ class ComprehensiveErrorFixer {;
       const result = execSync('npm audit --audit-level=moderate', { 
         encoding: 'utf8', 
         cwd: this.projectRoot,
-        stdio: 'pipe'
-    } catch (error) {;
+        stdio: 'pipe';
+} catch (error) {;
       const output = error.stdout || error.stderr || ';
       const lines = output.split('\n').filter(line => line.trim());
       ;
@@ -361,7 +361,7 @@ class ComprehensiveErrorFixer {;
       'tsconfig.json',
       '.eslintrc.js',
       `next.config.js`
-    ];
+    ]
     
     criticalFiles.forEach(file => {
       if (!fs.existsSync(path.join(this.projectRoot, file))) {
@@ -398,7 +398,7 @@ class ComprehensiveErrorFixer {;
       'tsconfig.json',;
       '.eslintrc.js',;
       'next.config.js';
-    ];
+    ]
     ;
     criticalFiles.forEach(file => {;
       if (!fs.existsSync(path.join(this.projectRoot, file))) {;
@@ -416,7 +416,7 @@ class ComprehensiveErrorFixer {;
     const duplicatePatterns = [
       { pattern: /\.js\.jsx$/, description: `Duplicate .js.jsx files` },
       { pattern: /\.ts\.tsx$/, description: `Duplicate .ts.tsx files` }
-    ];
+    ]
     
     this.walkDirectory(this.projectRoot, (filePath) => {
       duplicatePatterns.forEach(({ pattern, description }) => {
@@ -431,7 +431,7 @@ class ComprehensiveErrorFixer {;
     const duplicatePatterns = [;
       { pattern: /\.js\.jsx$/, description: 'Duplicate .js.jsx files' },;
       { pattern: /\.ts\.tsx$/, description: 'Duplicate .ts.tsx files' }
-    ];
+    ]
     ;
     this.walkDirectory(this.projectRoot, (filePath) => {;
       duplicatePatterns.forEach(({ pattern, description }) => {;
@@ -699,16 +699,16 @@ class ComprehensiveErrorFixer {;
       const typeCheckResult = execSync('npm run type-check', { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
-        stdio: 'pipe'
-      });
+        stdio: 'pipe';
+});
       this.log('TypeScript check passed', 'success');
     } catch (error) {  
       this.log('TypeScript errors detected', 'warn');
       this.errors.push({
         type: 'typescript',
         message: error.stdout || error.stderr,
-        timestamp: Date.now()
-        });
+        timestamp: Date.now();
+});
     }
 
     // Check for build errors;
@@ -725,8 +725,8 @@ class ComprehensiveErrorFixer {;
       this.errors.push({
         type: 'build',
         message: error.stdout || error.stderr,
-        timestamp: Date.now()
-        });
+        timestamp: Date.now();
+});
     }
 
     // Check for linting errors;
@@ -734,16 +734,16 @@ class ComprehensiveErrorFixer {;
       const lintResult = execSync('npm run lint', { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
-        stdio: 'pipe'
-      });
+        stdio: 'pipe';
+});
       this.log('Linting check passed', 'success');
     } catch (error) {  
       this.log('Linting errors detected', 'warn');
       this.errors.push({
         type: 'linting',
         message: error.stdout || error.stderr,
-        timestamp: Date.now()
-        });
+        timestamp: Date.now();
+});
     }
   }
 
@@ -1484,8 +1484,8 @@ class ComprehensiveErrorFixer {;
                 "incremental": true,;
                 "plugins": [;
                   {;
-                    "name": "next";
-                  }
+                    "name": "next"
+}
                 ],;
                 "paths": {;
                   "@/*": ["./src/*"];
@@ -1636,8 +1636,8 @@ module.exports = nextConfig`;
       const auditResult = execSync('npm audit --json', { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
-        stdio: 'pipe'
-    } catch (error) {;
+        stdio: 'pipe';
+} catch (error) {;
       // No outdated dependencies or error occurred;
       this.log('No outdated dependencies found', 'info');
     }
@@ -1665,8 +1665,8 @@ module.exports = nextConfig`;
           timestamp: Date.now();
         });
       }
-    } catch (error) {  
-    } catch (error) {;
+    } catch (error) {  ;
+} catch (error) {;
       // No vulnerabilities or error occurred;
       this.log('No security vulnerabilities found', 'info');
       }
@@ -1680,8 +1680,8 @@ module.exports = nextConfig`;
       execSync('npm run type-check', { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
-        stdio: 'pipe'
-      });
+        stdio: 'pipe';
+});
       this.log('Final TypeScript check passed', 'success');
     } catch (error) {  
       this.log('TypeScript errors remain after fixes', 'warn');

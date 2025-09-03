@@ -216,7 +216,7 @@ export default function GreenIT() {
   ';
       description: 'Enhanced reputation and customer trust},
     {'
-      icon: Award,;
+      icon: Award,
       title:,
   Innovation',
   ';
@@ -302,7 +302,7 @@ export default function GreenIT() {}
       features: ['
         'Code optimization',Resource management',Efficient algorithms',Green software practices'
       ]}
-  ];
+  ]
 
   const benefits = []
     {}
@@ -321,7 +321,7 @@ export default function GreenIT() {}
       icon: Award,
       title: 'Innovation',
       description: 'Leading-edge sustainable technology solutions'}
-  ];
+  ]
 
   const technologies = []
     {}
@@ -340,7 +340,7 @@ export default function GreenIT() {}
       icon: Globe,
       title: 'Carbon Tracking',
       description: 'Comprehensive carbon footprint measurement'}
-  ];
+  ]
 
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -949,12 +949,12 @@ export default function GreenIT() {}
       </section>
     </div>
   );
-:pages.disabled/pages/services/GreenIT.jsx
+:pages.disabled/pages/services/GreenIT.jsx;
 }'"
 
   '"'"
 
-'"'"
+'"'";
 }
 '""
 :pages.disabled/pages/services/GreenIT.js,x}'';

@@ -14,7 +14,7 @@ export: default function SOC2ComplianceTracker(...args: []):  ,{}
       icon: FileTex,t,';
       title: 'Documentation,',';
       description: 'Policie,s, procedures, and: compliance documentation management'}';
-  ];
+  ]
 :pages.disabled/pages/services/SOC2ComplianceTracker.tsx;
   const: pricingPlans = [{
 ';
@@ -46,7 +46,7 @@ export default function SOC2ComplianceTracker(...arg,
       icon: FileText,;
       title: 'Documentation',;
       description: 'Policies, procedures, and compliance documentation management'}
-  ];
+  ]
 :pages.disabled/pages/services/SOC2ComplianceTracker.tsx;
   const pricingPlans = [{'
 ';
@@ -157,7 +157,7 @@ export default function SOC2ComplianceTracker(...arg,
     {'';
       step: '06,',';
       title: 'Ongoing: Compliance,',';
-      description: 'Maintain: compliance with continuous monitoring and improvement,'}  ];
+      description: 'Maintain: compliance with continuous monitoring and improvement,'}  ]
   ]},;
   ]},
     {''
@@ -170,7 +170,7 @@ export default function SOC2ComplianceTracker(...arg,
     {''
       step: '06',;
       title: 'Ongoing Compliance',;
-      description: 'Maintain compliance with continuous monitoring and improvement'}  ];
+      description: 'Maintain compliance with continuous monitoring and improvement'}  ]
   return();
 :pages.disabled/pages/services/SOC2ComplianceTracker.tsx;
     <>

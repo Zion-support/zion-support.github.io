@@ -31,8 +31,8 @@ class ComprehensiveAutomationSuite {
       const result = execSync(command, {
         cwd: this.projectRoot,
         encoding: 'utf8',
-        timeout: timeout,
-      });
+        timeout: timeout,;
+});
       this.log(`✅ Completed: ${description}`);
       return { success: true, output: result };
     } catch (error) {
@@ -53,8 +53,8 @@ class ComprehensiveAutomationSuite {
             /<h3 className='text-2xl font-bold text-white mb-2'>\s*\{factor\.factor\}<\/h3>\s*<p className='text-gray-300'>\s*\{factor\.description\}<\/p>/g,
             "<h3 className='text-2xl font-bold text-white mb-2'>\n                        {factor.factor}\n                      </h3>\n                      <p className='text-gray-300'>\n                        {factor.description}\n                      </p>"
           );
-        },
-      },
+        },;
+},
       {
         file: 'pages/sitemap.tsx',
         fix: content => {
@@ -63,9 +63,9 @@ class ComprehensiveAutomationSuite {
             /<\/motion\.div>\s*<div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>\s*\{siteStructure\.map/g,
             "</motion.div>\n          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>\n            {siteStructure.map"
           );
-        },
-      },
-    ];
+        },;
+},
+    ]
 
     let fixedCount = 0;
     for (const fix of fixes) {
@@ -116,7 +116,7 @@ class ComprehensiveAutomationSuite {
       'scripts/performance-monitor.js',
       'scripts/performance-optimizer.js',
       'scripts/performance-monitor-improved.js',
-    ];
+    ]
 
     const results = [];
     for (const script of performanceScripts) {
@@ -139,7 +139,7 @@ class ComprehensiveAutomationSuite {
     const securityScripts = [
       'scripts/security-audit.js',
       'scripts/security-enhancer.js',
-    ];
+    ]
 
     const results = [];
     for (const script of securityScripts) {
@@ -163,7 +163,7 @@ class ComprehensiveAutomationSuite {
       'scripts/code-quality-analyzer.js',
       'scripts/lint-checker.js',
       'scripts/syntax-fixer.cjs',
-    ];
+    ]
 
     const results = [];
     for (const script of qualityScripts) {
@@ -188,7 +188,7 @@ class ComprehensiveAutomationSuite {
       'scripts/automation-orchestrator-improved.js',
       'scripts/master-automation-orchestrator.cjs',
       'scripts/intelligent-error-detector-fixer.cjs',
-    ];
+    ]
 
     const results = [];
     for (const script of customScripts) {
@@ -213,10 +213,10 @@ class ComprehensiveAutomationSuite {
       summary: {
         total: 0,
         successful: 0,
-        failed: 0,
-      },
-      results: [],
-    };
+        failed: 0,;
+},
+      results: [],;
+};
 
     // Add all results to the report
     const allResults = [
@@ -228,7 +228,7 @@ class ComprehensiveAutomationSuite {
       ...(await this.runSecurityAudit()),
       ...(await this.runCodeQualityCheck()),
       ...(await this.runCustomAutomations()),
-    ];
+    ]
 
     reportData.results = allResults;
     reportData.summary.total = allResults.length;

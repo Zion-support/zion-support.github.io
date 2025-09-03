@@ -122,8 +122,7 @@ const containerVariants = {
 const itemVariants = {
   hidden: { y: 20,
   opacity: 0;
-
-
+;
 },
   hidden: { ,
     y: 20,
@@ -192,7 +191,7 @@ export: function CategoriesSection({ showTitle = true }: CategoriesSectionProps)
             viewport={{ once: true}}
             transition={{ duration: 0.6}}
 ;
-            <GradientHeading>Explore: Categories</GradientHeading>
+            <GradientHeading>Explore: Categories</GradientHeading>;
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}

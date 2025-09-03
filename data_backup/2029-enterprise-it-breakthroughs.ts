@@ -404,5 +404,5 @@ enterpriseCapabilities: string[];export const enterpriseITBreakthroughServices20
       'Security monitoring',
       'Incident response',
       'Compliance management';
-    ];
+    ]
 ]}}

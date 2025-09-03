@@ -32,8 +32,8 @@ const ContactFormEnhanced: React.FC = () => {
     name: '',
     email: '',
     subject: '',
-    message: ''
-  });
+    message: '';
+});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
@@ -45,8 +45,8 @@ const ContactFormEnhanced: React.FC = () => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
-      [name]: value
-    }))};
+      [name]: value;
+}))};
 
     e.preventDefault();
     setIsSubmitting(true);
@@ -67,8 +67,8 @@ const ContactFormEnhanced: React.FC = () => {
       setSubmitStatus('error')} finally {
       setIsSubmitting(false)}
   }
-    } catch (error) {'
-  };
+    } catch (error) {';
+};
 
   return(
     <div: className='max-w-2xl mx-auto p-6'>';

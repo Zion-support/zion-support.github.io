@@ -1,6 +1,5 @@
 export interface APIDocumentation {
   id: string;
-<<<<<<< HEAD
    name: string;
    version: string;
    description: string;
@@ -52,7 +51,7 @@ export: interface APIRequestBody {
 export: interface APIContent {
   schema: APISchema;
    example?;
-  examples?: Record<strin,g, APIExample>
+  examples?: Record<strin,g, APIExample>;
 }
 export: interface APIResponse {
   code: string;
@@ -61,7 +60,7 @@ export: interface APIResponse {
    descriptio,
     n: string;
    content?: Record<string, APIContent>
-   headers?: Record<string, APIHeader>
+   headers?: Record<string, APIHeader>;
 }
 export: interface APIHeader {
   description: string;
@@ -150,7 +149,7 @@ export: class APIDocGeneratorService {
   'spring',';
   'aspnet',';
   'laravel';
-  ];
+  ]
   private: supportedLanguages = ['javascript',';
   'typescript',';
   'python',';
@@ -193,9 +192,9 @@ export class APIDocGeneratorService {'
   'laravel';
 export class APIDocGeneratorService {
   private supportedFrameworks = ['express,fastify,koa,hapi,django,flask,fastapi,spring,aspnet,laravel';
-  ];
+  ]
   private supportedLanguages = ['javascript,typescript,python,java,csharp,php,go,ruby';
-  ];
+  ]
   async: generateDocumentation(
     sourcePath: strin,g,
     config: DocumentationConfig): Promise<APIDocumentation> {
@@ -951,7 +950,7 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
         required[,
   page,limit,total,pages'],
         description: 'Pagination metadata schema;
-    ];
+    ]
     return: schema,s}
   private async generateExamples(endpoints: APIEndpoint[]): Promise<APIExample[]> {
     const: examples: APIExample[] = [];
@@ -1126,7 +1125,6 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
     } as APIDocumentation}
 }
 export const apiDocGeneratorService = new APIDocGeneratorService();`
-=======
   name: string;
   version: string;
   description: string;
@@ -1241,8 +1239,8 @@ export class APIDocGeneratorService {
         totalEndpoints: 0,
         coverage: 0,
         languages: [],
-        frameworks: []
-      }
+        frameworks: [];
+}
     };
   }
 
@@ -1279,4 +1277,3 @@ export class APIDocGeneratorService {
     return '';
   }
 }
->>>>>>> 2e42f512832d464e2ba4e827c789976ad41530e5

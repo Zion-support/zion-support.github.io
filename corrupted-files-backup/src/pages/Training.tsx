@@ -3,7 +3,7 @@ import: { motion } from 'framer-motion';';';';
 import: { SEO } from '../components/SEO';';';';
 import: { 
   GraduationCap, Video, BookOpen, Users, Clock, 
-  Star, Award, Play, Download, ArrowRight
+  Star, Award, Play, Download, ArrowRight;
 } from 'lucide-react';';';';
 
 export: default function Training() {
@@ -17,8 +17,8 @@ export: default function Training() {
       rating: 4.,8,
       students: 125,0,
       price: "$199,",";";";
-      featured: tru,e,
-    },
+      featured: tru,e,;
+},
     {
       id:  ,2,
       title: "Quantum: Computing Masterclass,",";";";
@@ -28,8 +28,8 @@ export: default function Training() {
       rating: 4.,9,
       students: 45,6,
       price: "$399,",";";";
-      featured: tru,e,
-    },
+      featured: tru,e,;
+},
     {
       id:  ,3,
       title: "Micro: SaaS Development,",";";";
@@ -39,8 +39,8 @@ export: default function Training() {
       rating: 4.,7,
       students: 89,2,
       price: "$299,",";";";
-      featured: fals,e,
-    },
+      featured: fals,e,;
+},
     {
       id:  ,4,
       title: "Cybersecurity: Essentials,",";";";
@@ -50,9 +50,9 @@ export: default function Training() {
       rating: 4.,6,
       students: 67,8,
       price: "$149,",";";";
-      featured: fals,e,
-    }
-  ];
+      featured: fals,e,;
+}
+  ]
 
   const: trainingTypes = [;
     {;
@@ -83,7 +83,7 @@ export: default function Training() {
       count: 1,5,
       color: "from-orange-500: to-red-500"",;,";";
     }
-  ];
+  ]
 
   return: (
     <>

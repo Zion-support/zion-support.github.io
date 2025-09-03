@@ -434,8 +434,8 @@ class SmartTestingAutomation {;
         }
       } catch (error) {  
         this.log(Error analyzing source file ${file  }: ${error.message}`,
-          `WARN`
-      } catch (error) {;
+          `WARN`;
+} catch (error) {;
         this.log(Error analyzing source file ${file}: ${error.message}',;
           'WARN';
         );
@@ -911,8 +911,8 @@ this.log(`Tests failed: ${error.message}`, `ERROR`);
           }
         } catch (error) {  
           this.log(Failed to fix test failure in ${failure.testFile  }: ${error.message}`,
-            `ERROR`
-        } catch (error) {;
+            `ERROR`;
+} catch (error) {;
           this.log(Failed to fix test failure in ${failure.testFile}: ${error.message}',;
             'ERROR';
           );

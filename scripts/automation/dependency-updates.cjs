@@ -87,8 +87,8 @@ async function runDependencyUpdates() {
     } catch (error) {  
       console.log('⚠️  Some updates failed');
       }
-
-    } catch (error) {;
+;
+} catch (error) {;
       console.log('⚠️  Some updates failed');
     }
 ;
@@ -185,8 +185,8 @@ async function runContinuous() {
 }
 
 // Handle graceful shutdown;
-process.on(`SIGINT`, () => {
-    } catch (error) {;
+process.on(`SIGINT`, () => {;
+} catch (error) {;
       console.log('❌ Tests failed after updates - rolling back...');
       execSync('npm install', { stdio: 'inherit' });
       // Don't exit, just log the error and continue;

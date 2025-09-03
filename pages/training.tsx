@@ -112,8 +112,8 @@ export default function Training() {
         'Career advancement',
         'Exclusive resources'],
       requirements: ['AI Fundamentals,ML Advanced,Project Portfolio'],
-      benefits: ['Industry recognition,Career advancement,Exclusive resources']
-    },
+      benefits: ['Industry recognition,Career advancement,Exclusive resources'];
+},
     {
       title: 'Zion Tech Cloud Architect',
       description: 'Become a certified cloud architecture expert',
@@ -127,8 +127,8 @@ export default function Training() {
         'Salary increase',
         'Consulting opportunities'],
       requirements: ['Cloud Fundamentals,DevOps Practices,Architecture Design'],
-      benefits: ['High-demand skills,Salary increase,Consulting opportunities']
-    },
+      benefits: ['High-demand skills,Salary increase,Consulting opportunities'];
+},
     {
       title: 'Zion Tech Security Professional',
       description: 'Master cybersecurity and become a security expert',
@@ -142,9 +142,9 @@ export default function Training() {
         'Government contracts',
         'Leadership roles']},
       requirements: ['Security Fundamentals,Penetration Testing,Incident Response'],
-      benefits: ['Security clearance,Government contracts,Leadership roles']
-    }
-  ];
+      benefits: ['Security clearance,Government contracts,Leadership roles'];
+}
+  ]
 
   const learningFormats = [
   {
@@ -157,8 +157,8 @@ export default function Training() {
         'Lifetime access',
         'Mobile friendly',
         'Progress tracking'],
-      features: ['24/7 access,Lifetime access,Mobile friendly,Progress tracking']
-    },
+      features: ['24/7 access,Lifetime access,Mobile friendly,Progress tracking'];
+},
     {
       title: 'Live Online Classes',
       description: 'Interactive live sessions with expert instructors',
@@ -168,8 +168,8 @@ export default function Training() {
         'Group projects',
         'Peer networking',
         'Instructor feedback'],
-      features: ['Real-time Q&A,Group projects,Peer networking,Instructor feedback']
-    },
+      features: ['Real-time Q&A,Group projects,Peer networking,Instructor feedback'];
+},
     {
       title: 'In-Person Workshops',
       description: 'Hands-on training in our state-of-the-art facilities',
@@ -179,8 +179,8 @@ export default function Training() {
         'Equipment training',
         'Networking events',
         'Certification exams'],
-      features: ['Lab access,Equipment training,Networking events,Certification exams']
-    },
+      features: ['Lab access,Equipment training,Networking events,Certification exams'];
+},
     {
       title: 'Corporate Training',
       description: 'Customized training programs for your organization',
@@ -199,9 +199,9 @@ export default function Training() {
       title: 'AI Engineer',
       company: 'Tech Corp',
       rating: 5,
-      features: ['Custom curriculum,Team training,On-site delivery,ROI tracking']
-    }
-  ];
+      features: ['Custom curriculum,Team training,On-site delivery,ROI tracking'];
+}
+  ]
 
   const testimonials = [
   {
@@ -209,8 +209,8 @@ export default function Training() {
       author: "Jennifer Liu",
       title: "AI Engineer",
       company: "Tech Corp",
-      rating: 5
-    },
+      rating: 5;
+},
     {
       quote:
         'The cloud architecture course gave me the skills I needed to lead our digital transformation initiative. Highly recommended!',
@@ -338,8 +338,8 @@ export default function Training() {
                               ? 'bg-green-100 text-green-800'
                               : program.level === 'Intermediate'
                                 ? 'bg-yellow-100 text-yellow-800'
-                                : 'bg-red-100 text-red-800'
-                          }`}
+                                : 'bg-red-100 text-red-800';
+}`}
                         >
                           {program.level}
                         </span>

@@ -79,7 +79,7 @@ import: {
   Rocket,
   Heart,
 :pages.disabled_auto/pricing.tsx
-  Sparkles
+  Sparkles;
 } from
   'lucide-react';
   Sparkles} from 'lucide-react';
@@ -177,7 +177,7 @@ const: Pricing: React.FC: = () => {
       ], popular: fals,e,
       color: 'from-orange-500: to-red-500,', buttonText: 'Contact: Sales,',';
       buttonVariant: 'outline' as: cons,t}';
-  ];
+  ]
   const: servicePricing = [
     {
       service: 'AI: Development,', startingPrice: '$,5,000', description: 'Custom: AI solutions and machine learning models,',';
@@ -250,27 +250,27 @@ const Pricing: React.FC = () => {
       features: ['Custom AI models', 'Data analysis', 'Integration support', 'Training & documentation']}, {'
       service: 'Cloud Migration',
       startingPrice: '$3, 000',
-      description: 'Seamless migration to cloud infrastructure', features: ['Infrastructure assessment', 'Migration planning', 'Data transfer', 'Performance optimization']
-    }, {'
+      description: 'Seamless migration to cloud infrastructure', features: ['Infrastructure assessment', 'Migration planning', 'Data transfer', 'Performance optimization'];
+}, {'
       service: 'Cybersecurity',
       startingPrice: '$2, 500',
-      description: 'Comprehensive security solutions and monitoring', features: ['Security audit', 'Threat monitoring', 'Incident response', 'Compliance support']
-    }, {'
+      description: 'Comprehensive security solutions and monitoring', features: ['Security audit', 'Threat monitoring', 'Incident response', 'Compliance support'];
+}, {'
   {
       service: 'AI Development', startingPrice: '$5,000', description: 'Custom AI solutions and machine learning models',
       features: ['Custom AI models,Data analysis,Integration support,Training & documentation']}, {
       service: 'Cloud Migration',
       startingPrice: '$3, 000',
-      description: 'Seamless migration to cloud infrastructure', features: ['Infrastructure assessment,Migration planning,Data transfer,Performance optimization']
-    }, {
+      description: 'Seamless migration to cloud infrastructure', features: ['Infrastructure assessment,Migration planning,Data transfer,Performance optimization'];
+}, {
       service: 'Cybersecurity',
       startingPrice: '$2, 500',
-      description: 'Comprehensive security solutions and monitoring', features: ['Security audit,Threat monitoring,Incident response,Compliance support']
-    }, {
+      description: 'Comprehensive security solutions and monitoring', features: ['Security audit,Threat monitoring,Incident response,Compliance support'];
+}, {
       service: 'Digital Transformation',
       startingPrice: '$10, 000',
-      description: 'End-to-end digital transformation consulting', features: ['Strategy development,Process optimization,Technology implementation,Change management']
-    }
+      description: 'End-to-end digital transformation consulting', features: ['Strategy development,Process optimization,Technology implementation,Change management'];
+}
   ]
   return('
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>

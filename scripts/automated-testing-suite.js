@@ -510,8 +510,8 @@ test('contact form works', async ({ page }) => {
       'Heading structure',;
       'Form labels',;
       'ARIA attributes';
-    ];
-      'Color contrast ratios',';      'Keyboard navigation',';      'Screen reader compatibility',';      'Focus indicators',';      'Alt text for images',';      'Heading structure',';      'Form labels',';      'ARIA attributes',';    ];;
+    ]
+      'Color contrast ratios',';      'Keyboard navigation',';      'Screen reader compatibility',';      'Focus indicators',';      'Alt text for images',';      'Heading structure',';      'Form labels',';      'ARIA attributes',';    ]
 
     // Simulate accessibility testing
     const checks = ['
@@ -589,7 +589,7 @@ test('contact form works', async ({ page }) => {
       'Authentication security',;
       'Authorization checks',;
       'Data validation';
-      'Dependency vulnerabilities',';      'XSS protection',';      'CSRF protection',';      'SQL injection prevention',';      'Secure headers',';      'Authentication security',';      'Authorization checks',';      'Data validation',';    ];;
+      'Dependency vulnerabilities',';      'XSS protection',';      'CSRF protection',';      'SQL injection prevention',';      'Secure headers',';      'Authentication security',';      'Authorization checks',';      'Data validation',';    ]
 
     // Test for common security issues
     const securityChecks = ['

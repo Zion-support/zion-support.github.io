@@ -4,7 +4,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityCompliance(function AISecurityCompliance() {): any: {}
     'Automated compliance verification and validation',';Predictive: analytics for compliance needs',';Smart: compliance framework management',';AI-driven: compliance automation and orchestration',';Real-time: compliance performance tracking',';Custom: AI models for compliance applications';
 <:pages.disabled/pages/services/AISecurityCompliance.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Developer,',';
@@ -27,7 +27,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
   ]';Security: compliance optimization',';Compliance: monitoring and reporting',';Compliance: verification and validation',';Compliance: framework management and automation',';Compliance: automation and orchestration',';Compliance: scaling and management';
   ]';Improve: security compliance performance by 50-80%',';Reduce: compliance verification time by 40-70%',';Cut: security compliance costs by 35-65%',';Enhance: security compliance reliability and scalability',';Optimize: resource utilization',';Scale: security compliance operations efficiently';
   ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-500 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityCompliance(function AISecurityCompliance() {): any {}
     'Automated compliance verification and validation',;Predictive analytics for compliance needs',;Smart compliance framework management',;AI-driven compliance automation and orchestration',;Real-time compliance performance tracking',;Custom AI models for compliance applications';
 <:pages.disabled/pages/services/AISecurityCompliance.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Developer',
@@ -115,8 +115,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     {'
       name: 'Business',
       price: '$999/mo',
-      details: ['Up to 20 compliance frameworks', 'Advanced AI features', 'Enhanced compliance', 'Priority support']
-    },
+      details: ['Up to 20 compliance frameworks', 'Advanced AI features', 'Enhanced compliance', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AISecurityCompliance.tsx>    {'
@@ -149,10 +149,10 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <Database className='w-4 h-4 mr-2'  /> AI-Powered Security Compliance Platform
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Security Compliance Platform</h1>'          <p className='text-blue-100 text-xl'>Transform your security compliance with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
-  ];Security compliance optimization',;Compliance monitoring and reporting',;Compliance verification and validation',;Compliance framework management and automation',;Compliance automation and orchestration',;Compliance scaling and management';
-  ];Improve security compliance performance by 50-80%',;Reduce compliance verification time by 40-70%',;Cut security compliance costs by 35-65%',;Enhance security compliance reliability and scalability',;Optimize resource utilization',;Scale security compliance operations efficiently';
-  ];Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
-  ];
+  ]Security compliance optimization',;Compliance monitoring and reporting',;Compliance verification and validation',;Compliance framework management and automation',;Compliance automation and orchestration',;Compliance scaling and management';
+  ]Improve security compliance performance by 50-80%',;Reduce compliance verification time by 40-70%',;Cut security compliance costs by 35-65%',;Enhance security compliance reliability and scalability',;Optimize resource utilization',;Scale security compliance operations efficiently';
+  ]Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-500 py-20 text-center>''

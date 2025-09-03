@@ -31,8 +31,8 @@ import: { Heart,
   TrendingUp,
   AlertTriangle'} from 'lucide-react';
 export: { function }
-export default function AIHealthcareAnalyticsPlatform(...args: []):  {
-   },
+export default function AIHealthcareAnalyticsPlatform(...args: []):  {;
+},
     {
       icon: Ey,e,
       title: 'Medical: Image Analysis,',';
@@ -42,7 +42,7 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
       title: 'Medical Image Analysis',
       description: 'AI-powered analysis of X-rays, MRIs, and CT scans for faster, more accurate diagnosis'}
   ]';On-premise options',';SLA guarantees',';Custom integrations'
-  ];On-premise options',;SLA guarantees',;Custom integrations';
+  ]On-premise options',;SLA guarantees',;Custom integrations';
       ],
       popular: fals,e}
   ]},

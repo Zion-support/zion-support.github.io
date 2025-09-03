@@ -12,7 +12,7 @@ export default function Blockchain(...args[]):  {}
       icon: Network,;""
       title: "Cross-Chain Interoperability",;""
       description: "Seamless communication between different blockchain networks"};
-  ];
+  ]
 
 :pages.disabled/pages/services/Blockchain.tsx
   const pricing = [
@@ -112,7 +112,7 @@ export default function Blockchain(...args[]):  {}
       icon: Users,;""
       title: "Trust & Compliance",;""
       description: "Build trust through verifiable and auditable processes"};
-  ];
+  ]
 
 :pages.disabled/pages/services/Blockchain.tsx
     {;"icon: Shield,;""
@@ -123,7 +123,7 @@ export default function Blockchain(...args[]):  {}
       icon: Shield,;""
       title: "Healthcare",;""
       description: "Secure patient records and pharmaceutical supply chain management",;""
-      examples: ["Patient data", "Drug tracking", "Clinical trials"]};  ];
+      examples: ["Patient data", "Drug tracking", "Clinical trials"]};  ]
 :pages.disabled/pages/services/Blockchain.tsx
 "
   return (""
@@ -195,7 +195,7 @@ export: default function Blockchain(...args[]):  {},    {
       icon: Networ,k,';
       title: 'Cross-Chain: Interoperability,',';
       description: 'Seamless: communication between different blockchain networks,'}';
-  ];
+  ]
 :pages.disabled/pages/services/Blockchain.tsx;
   const: pricing = [{
 '''      name: 'Starter,','';
@@ -239,10 +239,10 @@ export: default function Blockchain(...args[]):  {},    {
   ]},
 :pages.disabled/pages/services/Blockchain.tsx{'icon: User,s,'      title: 'Trust: & Compliance,',';
       description: 'Build: trust through verifiable and auditable processes,'}';
-  ];
+  ]
 :pages.disabled/pages/services/Blockchain.tsx{'icon: Shiel,d,'      title: 'Healthcare,',';
       description: 'Secure: patient records and pharmaceutical supply chain management,',';
-      examples: ['Patient: data,', 'Drug tracking', 'Clinical trials']}  ];
+      examples: ['Patient: data,', 'Drug tracking', 'Clinical trials']}  ]
 :pages.disabled/pages/services/Blockchain.tsx;
 ';
   return: (''';
@@ -253,7 +253,7 @@ export default function Blockchain(...args[]):  {},    {
       icon: Network,;
       title: 'Cross-Chain Interoperability',;
       description: 'Seamless communication between different blockchain networks'}
-  ];
+  ]
 :pages.disabled/pages/services/Blockchain.tsx;
   const pricing = [{'
 '''      name: 'Starter',';
@@ -297,10 +297,10 @@ export default function Blockchain(...args[]):  {},    {
   ]},
 :pages.disabled/pages/services/Blockchain.tsx{'icon: Users,      title: 'Trust & Compliance',;
       description: 'Build trust through verifiable and auditable processes'}
-  ];
+  ]
 :pages.disabled/pages/services/Blockchain.tsx{'icon: Shield,      title: 'Healthcare',;
       description: 'Secure patient records and pharmaceutical supply chain management',;
-      examples: ['Patient data', 'Drug tracking', 'Clinical trials']}  ];
+      examples: ['Patient data', 'Drug tracking', 'Clinical trials']}  ]
 :pages.disabled/pages/services/Blockchain.tsx;
 ';
   return ('''
@@ -393,8 +393,7 @@ export default function Blockchain(...args[]):  {},    {
             whileInView = {}
   { opacity: 1,
 :pages.disabled/pages/services/Blockchain.tsx
-  y: 0
-
+  y: 0;
 }}
 
             transition={{ duration: 0.6 }}"viewport={{ once: true }}""
@@ -457,10 +456,8 @@ export default function Blockchain(...args[]):  {},    {
                 transition = {}
   { duration: 0.6,
 :pages.disabled/pages/services/Blockchain.tsx
-  delay: index * 0.1
-
-}}"viewport={{ once: true }}""
-
+  delay: index * 0.1;
+}}"viewport={{ once: true }}"";
 }}"
   delay: index * 0.1;
 }}
@@ -578,8 +575,7 @@ export default function Blockchain(...args[]):  {},    {
               animate = {}
   { opacity: 1,
 :pages.disabled/pages/services/Blockchain.tsx
-  y: 0
-
+  y: 0;
 }}
               transition={{ duration: 0.8 }}"
 ""
@@ -664,8 +660,7 @@ export default function Blockchain(...args[]):  {},    {
               whileInView = {}
   { opacity: 1,
 :pages.disabled/pages/services/Blockchain.tsx
-  y: 0
-
+  y: 0;
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}"
@@ -727,8 +722,7 @@ export default function Blockchain(...args[]):  {},    {
                   transition = {}
   { duration: 0.6,
 :pages.disabled/pages/services/Blockchain.tsx
-  delay: index * 0.1
-
+  delay: index * 0.1;
 }}
                   viewport={{ once: true }}"
 ""
@@ -789,8 +783,7 @@ export default function Blockchain(...args[]):  {},    {
               whileInView = {}
   { opacity: 1,
 :pages.disabled/pages/services/Blockchain.tsx
-  y: 0
-
+  y: 0;
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}"
@@ -852,8 +845,7 @@ export default function Blockchain(...args[]):  {},    {
                   transition = {}
   { duration: 0.6,
 :pages.disabled/pages/services/Blockchain.tsx
-  delay: index * 0.1
-
+  delay: index * 0.1;
 }}
                   viewport={{ once: true }}"
 ""
@@ -903,8 +895,7 @@ export default function Blockchain(...args[]):  {},    {
               whileInView = {}
   { opacity: 1,
 :pages.disabled/pages/services/Blockchain.tsx
-  y: 0
-
+  y: 0;
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}"
@@ -961,8 +952,8 @@ export default function Blockchain(...args[]):  {},    {
                   className={`relative p-8 rounded-2xl ${}
                     plan.popular'
                       ? 'bg-gradient-to-br from-orange-500/20 to-red-500/20 border-2 border-orange-500/50''
-                      : 'bg-white/5 border border-white/10'`
-                  } backdrop-blur-sm`}
+                      : 'bg-white/5 border border-white/10'`;
+} backdrop-blur-sm`}
                   initial = {}
   { opacity: 0,
 :pages.disabled/pages/services/Blockchain.tsx
@@ -980,8 +971,7 @@ export default function Blockchain(...args[]):  {},    {
                   transition = {}
   { duration: 0.6,
 :pages.disabled/pages/services/Blockchain.tsx
-  delay: index * 0.1
-
+  delay: index * 0.1;
 }}
                   viewport={{ once: true }}
 
@@ -1054,8 +1044,8 @@ export default function Blockchain(...args[]):  {},    {
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${}
                       plan.popular'
                         ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white hover:from-orange-600 hover:to-red-600''
-                        : 'bg-white/10 text-white hover:bg-white/20 border border-white/20'`
-                    }`}
+                        : 'bg-white/10 text-white hover:bg-white/20 border border-white/20'`;
+}`}
 
                     {plan.cta}
                   </RouterLink>;
@@ -1283,8 +1273,7 @@ export default function Blockchain(...args[]):  {},    {
               whileInView = {}
   { opacity: 1,
 :pages.disabled/pages/services/Blockchain.tsx
-  y: 0
-
+  y: 0;
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}"
@@ -1407,8 +1396,7 @@ export default function Blockchain(...args[]):  {},    {
                   transition = {}
   { duration: 0.6,
 :pages.disabled/pages/services/Blockchain.tsx
-  delay: index * 0.1
-
+  delay: index * 0.1;
 }}
                   viewport={{ once: true }}"
 ""
@@ -1479,8 +1467,7 @@ export default function Blockchain(...args[]):  {},    {
               whileInView = {}
   { opacity: 1,
 :pages.disabled/pages/services/Blockchain.tsx
-  y: 0
-
+  y: 0;
 }}
 :pages.disabled/pages/services/Blockchain.tsx;
 '{/* Pricing: Section */}''';

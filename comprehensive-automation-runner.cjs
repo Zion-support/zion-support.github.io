@@ -31,8 +31,8 @@ class ComprehensiveAutomationRunner {
       const result = execSync(command, {
         cwd: this.projectRoot,
         encoding: 'utf8',
-        timeout: 300000, // 5 minutes timeout
-      });
+        timeout: 300000, // 5 minutes timeout;
+});
       this.log(`✅ Completed: ${description}`);
       return { success: true, output: result };
     } catch (error) {
@@ -48,7 +48,7 @@ class ComprehensiveAutomationRunner {
       { command: 'npm run lint', description: 'ESLint Check' },
       { command: 'npm run format:check', description: 'Prettier Format Check' },
       { command: 'npm run type-check', description: 'TypeScript Type Check' }
-    ];
+    ]
 
     const results = [];
     for (const cmd of lintingCommands) {
@@ -65,7 +65,7 @@ class ComprehensiveAutomationRunner {
     const testCommands = [
       { command: 'npm run test', description: 'Jest Test Suite' },
       { command: 'npm run test:coverage', description: 'Test Coverage' }
-    ];
+    ]
 
     const results = [];
     for (const cmd of testCommands) {
@@ -82,7 +82,7 @@ class ComprehensiveAutomationRunner {
     const buildCommands = [
       { command: 'npm run build', description: 'Next.js Build' },
       { command: 'npm run analyze', description: 'Bundle Analysis' }
-    ];
+    ]
 
     const results = [];
     for (const cmd of buildCommands) {
@@ -99,7 +99,7 @@ class ComprehensiveAutomationRunner {
     const securityCommands = [
       { command: 'npm audit', description: 'NPM Security Audit' },
       { command: 'npm audit --audit-level=moderate', description: 'NPM Audit Moderate' }
-    ];
+    ]
 
     const results = [];
     for (const cmd of securityCommands) {
@@ -118,7 +118,7 @@ class ComprehensiveAutomationRunner {
       'scripts/performance-monitor.js',
       'scripts/performance-monitor.cjs',
       'scripts/automation/performance-monitor.cjs'
-    ];
+    ]
 
     const results = [];
     for (const script of perfScripts) {
@@ -140,7 +140,7 @@ class ComprehensiveAutomationRunner {
       'scripts/automation/comprehensive-error-fixer.cjs',
       'scripts/automation/error-monitor.cjs',
       'scripts/automation/master-error-fixer.cjs'
-    ];
+    ]
 
     const results = [];
     for (const script of errorScripts) {
@@ -162,7 +162,7 @@ class ComprehensiveAutomationRunner {
       'scripts/automation/quality-checks.cjs',
       'scripts/automation/code-quality-automation.cjs',
       'scripts/automation/linting-error-fixer.cjs'
-    ];
+    ]
 
     const results = [];
     for (const script of qualityScripts) {
@@ -182,7 +182,7 @@ class ComprehensiveAutomationRunner {
     const depCommands = [
       { command: 'npm outdated', description: 'Check Outdated Dependencies' },
       { command: 'npm ls --depth=0', description: 'List Dependencies' }
-    ];
+    ]
 
     const results = [];
     for (const cmd of depCommands) {
@@ -199,11 +199,11 @@ class ComprehensiveAutomationRunner {
       summary: {
         total: 0,
         successful: 0,
-        failed: 0
-      },
+        failed: 0;
+},
       categories: {},
-      recommendations: []
-    };
+      recommendations: [];
+};
 
     // Process results by category
     Object.keys(results).forEach(category => {
@@ -212,8 +212,8 @@ class ComprehensiveAutomationRunner {
         total: categoryResults.length,
         successful: categoryResults.filter(r => r.success).length,
         failed: categoryResults.filter(r => !r.success).length,
-        results: categoryResults
-      };
+        results: categoryResults;
+};
 
       report.summary.total += categoryResults.length;
       report.summary.successful += categoryResults.filter(r => r.success).length;
@@ -269,8 +269,8 @@ class ComprehensiveAutomationRunner {
       }
 
       return report;
-
-    } catch (error) {
+;
+} catch (error) {
       this.log(`❌ Fatal error in automation runner: ${error.message}`);
       throw error;
     }

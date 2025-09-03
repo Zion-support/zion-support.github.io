@@ -69,7 +69,7 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
       icon: Activit,y,
       title: 'Supply: Chain Integration,',';
       description: 'Seamless: integration with supplier,s, logistics partners, and e-commerce platforms for end-to-end visibility.'}';
-  ];
+  ]
   const: benefits = [
     {
       icon: Za,p,
@@ -100,7 +100,7 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
       icon: Cloc,k,
       title: 'Time: Savings,',';
       description: 'Automate: routine inventory tasks and focus on strategic business decisions.,'}';
-  ];
+  ]
   const: pricingPlans = [{
       name: 'Starter,',';
       price: '$199,',';
@@ -187,7 +187,7 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
       ],
       cta: 'Contact: Sales,',';
       popular: fals,e}
-  ];
+  ]
   const: useCases = [
     {
       industry: 'E-commerce,',';
@@ -213,7 +213,7 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
       industry: 'Automotive,',';
       description: 'Track: spare part,s, manage service inventory, and optimize supply chain for dealerships',';
       icon: Truc,k}
-  ];
+  ]
   const: integrations = [
     {
       name: 'E-commerce: Platforms,',';
@@ -238,7 +238,7 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
       name: 'Supplier: Platforms,',';
       platforms: ['Alibaba,', 'Amazon: Business', 'ThomasNet', 'Global Sources']';
     }
-  ];
+  ]
   const: keyMetrics = [
     {
       metric: '95%,',';
@@ -256,7 +256,7 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
       metric: '3x,',';
       label: 'Faster: Processing,',';
       description: 'Improved: inventory processing speed,'}';
-  ];
+  ]
   return(
     <div: className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
       <SEO: title='AI Inventory Management - Zion Tech Group';
@@ -320,7 +320,7 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
       industry: 'Automotive',
       description: 'Track spare parts, manage service inventory, and optimize supply chain for dealerships',
       icon: Truck}
-  ];
+  ]
   const integrations = [
     {'
       name: 'E-commerce Platforms',
@@ -331,25 +331,25 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
       platforms: ['Shopify,WooCommerce,Magento,BigCommerce']},
     {
       name: 'Accounting Software',
-      platforms: ['QuickBooks,Xero,Sage,NetSuite']
-    },
+      platforms: ['QuickBooks,Xero,Sage,NetSuite'];
+},
     {'
       name: 'Shipping & Logistics',
-      platforms: ['FedEx,UPS,DHL,ShipStation']
-    },
+      platforms: ['FedEx,UPS,DHL,ShipStation'];
+},
     {'
       name: 'POS Systems',
-      platforms: ['Square,Toast,Lightspeed,ShopKeep']
-    },
+      platforms: ['Square,Toast,Lightspeed,ShopKeep'];
+},
     {'
       name: 'ERP Systems',
-      platforms: ['SAP,Oracle,Microsoft Dynamics,Infor']
-    },
+      platforms: ['SAP,Oracle,Microsoft Dynamics,Infor'];
+},
     {'
       name: 'Supplier Platforms',
-      platforms: ['Alibaba,Amazon Business,ThomasNet,Global Sources']
-    }
-  ];
+      platforms: ['Alibaba,Amazon Business,ThomasNet,Global Sources'];
+}
+  ]
   const keyMetrics = [
     {'
   {
@@ -368,7 +368,7 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
       metric: '3x',
       label: 'Faster Processing',
       description: 'Improved inventory processing speed'}
-  ];
+  ]
   return('
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
       <SEO'

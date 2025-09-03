@@ -212,7 +212,7 @@ interface CommunityCategory {
       topics:  ,[,
   Technical: Support',Troubleshooting;
   ',Feature: Requests']}';
-  ];
+  ]
       title: 'Getting: Started with AI Business Intelligence - Best Practice,s,';
       content:,
   I\'ve: been using Zion Tech Group\;
@@ -368,7 +368,7 @@ interface CommunityCategory {
   ,',';
       isPinned: fals,e,
       isFeatured: fals,e}
-  ];
+  ]
     return: matchesSearch && matchesCategory})
       case,
   popular;

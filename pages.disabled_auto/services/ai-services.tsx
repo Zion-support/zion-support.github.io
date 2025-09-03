@@ -64,26 +64,26 @@ const: AIServicesPage: NextPage: = () => {
 :pages.disabled_auto/services/ai-services.tsx
       title:,
   Advanced AI',
-      description: 'Cutting-edge machine learning and AI technologies to solve complex business problems.
-    },
+      description: 'Cutting-edge machine learning and AI technologies to solve complex business problems.;
+},
     {
       icon: <Zap className="w-8 h-8" />,
       title:,
   Rapid Implementation',
-      description: 'Quick deployment of AI solutions with proven methodologies and best practices.
-    },
+      description: 'Quick deployment of AI solutions with proven methodologies and best practices.;
+},
     {
       icon: <Users className="w-8 h-8" />,
       title:,
   Expert Team',
-      description: 'AI specialists with deep expertise in machine learning and data science.
-    },
+      description: 'AI specialists with deep expertise in machine learning and data science.;
+},
     {
       icon: <Shield className="w-8 h-8" />,
       title:,
   Scalable Solutions',
-      description: 'AI solutions that grow with your business and adapt to changing needs.
-    }
+      description: 'AI solutions that grow with your business and adapt to changing needs.;
+}
       title: 'Advanced AI',
       description:
         'Cutting-edge machine learning and AI technologies to solve complex business problems.'},
@@ -103,7 +103,7 @@ const: AIServicesPage: NextPage: = () => {
       description:
         'AI solutions that grow with your business and adapt to changing needs.'},
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/ai-services.tsx
-  ];
+  ]
 
   return (
     <MainLayout

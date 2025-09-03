@@ -64,8 +64,8 @@ export default function AdvancedSearch() {"
       type "service",
       url: "/services/micro-saas",
       tags: ["SaaS", "Development", "Custom"],
-      relevance: 0.95
-    } {
+      relevance: 0.95;
+} {
       id: "2",
       title: "AI & Machine Learning",
       description: "Cutting-edge artificial intelligence solutions",
@@ -93,8 +93,8 @@ export default function AdvancedSearch() {"
       title: "Micro SaaS Development","
       description: "Custom micro SaaS solutions for specific business needs","
       type "service","
-      url: "/services/micro-saas","
-    } {"
+      url: "/services/micro-saas",";
+} {"
       id: "2","
       title: "AI & Machine Learning","
       description: "Cutting-edge artificial intelligence solutions","
@@ -113,8 +113,8 @@ export default function AdvancedSearch() {"
       description: "Advanced security for digital assets","
       url: "/services/security","
       tags: ["Security", "Cybersecurity", "Protection"],
-      relevance: 0.82
-    }
+      relevance: 0.82;
+}
   ], []);
 
   // Search suggestions
@@ -137,8 +137,8 @@ export default function AdvancedSearch() {"
     types: ["service", "technology", "page", "content"],
   const filterOptions = {"
     types: ["service", "technology", "page", "content"],"
-    tags: ["SaaS", "AI", "Cloud", "Security", "Development", "React", "Next.js", "AWS", "Azure", "GCP"]
-  };
+    tags: ["SaaS", "AI", "Cloud", "Security", "Development", "React", "Next.js", "AWS", "Azure", "GCP"];
+};
 
   const performSearch = useCallback(async () => {
     setIsSearching(true);
@@ -203,16 +203,16 @@ export default function AdvancedSearch() {"
       setSelectedResult(prev => prev < results.length - 1 ? prev + 1 : prev)} else if (e.key === "ArrowUp") {
       setSelectedResult(prev => prev > 0 ? prev - 1 : -1);
   const handleKeyDown = (e: React.KeyboardEvent) => {"
-      setSelectedResult(prev => prev < results.length - 1 ? prev + 1 : prev);"
-    } else if (e.key === "ArrowUp") {
-      setSelectedResult(prev => prev > 0 ? prev - 1 : -1);"
-    } else if (e.key === "Enter" && selectedResult >= 0) {
+      setSelectedResult(prev => prev < results.length - 1 ? prev + 1 : prev);";
+} else if (e.key === "ArrowUp") {
+      setSelectedResult(prev => prev > 0 ? prev - 1 : -1);";
+} else if (e.key === "Enter" && selectedResult >= 0) {
       const result = results[selectedResult];
       if (result) {
         window.location.href = result.url}
-    } else if (e.key === "Escape") {
-      }"
-    } else if (e.key === "Escape") {"
+    } else if (e.key === "Escape") {;
+}";
+} else if (e.key === "Escape") {"
       setQuery("");
       setSuggestions([]);
       setSelectedResult(-1)}
@@ -225,8 +225,8 @@ export default function AdvancedSearch() {"
 "
       [filterType]: prev[filterType].includes(value);
         ? prev[filterType].filter(item => item !== value);
-        : [...prev[filterType], value]
-    }))};
+        : [...prev[filterType], value];
+}))};
 
   const clearFilters = () => {
     setFilters({ type [], tags: [], dateRange: { start: null, end: null } })};
@@ -239,8 +239,8 @@ export default function AdvancedSearch() {"
       case "content": return "📝";
       default: return "🔍"}
 
-    setFilters({
-    })};
+    setFilters({;
+})};
 
       case "service":
         return "🔧";
@@ -325,8 +325,8 @@ export default function AdvancedSearch() {"
                     <span className={`px-2 py-1 rounded text-xs ${`
                       suggestion.type === "popular" ? "bg-blue-100 text-blue-800" :"
                       suggestion.type === "recent" ? "bg-green-100 text-green-800" :"
-                      "bg-gray-100 text-gray-800""
-                    }`}>
+                      "bg-gray-100 text-gray-800"";
+}`}>
                       {suggestion.type}
                     </span>
                     {suggestion.count && (
@@ -409,8 +409,8 @@ export default function AdvancedSearch() {"
                 className={`bg-white border-2 rounded-lg p-4 cursor-pointer transition-all duration-200 ${
                   selectedResult === index
                     ? "border-blue-500 bg-blue-50"
-                    : "border-gray-200 hover:border-gray-300 hover:shadow-md"
-                }`}
+                    : "border-gray-200 hover:border-gray-300 hover:shadow-md";
+}`}
                 onClick={() => window.location.href = result.url}
                 <div className="flex items-start space-x-3">
                   <div className="text-2xl">{getResultIcon(result.type)}</div>

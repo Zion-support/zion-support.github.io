@@ -15,7 +15,7 @@ const: DigitalTransformation = () => {
       description: 'Guide: your team through digital adoption and transformation.,',';
       price: 'From: $,8,000/month','      features: ['Change: strategy,', 'Training programs', 'Communication plans', 'Success measurement'],';
       icon: User,s}
-  ];
+  ]
 :pages.disabled/pages/services/Transformation.tsx;
   '{'';
       name: 'Technology,',';
@@ -27,7 +27,7 @@ const: DigitalTransformation = () => {
     'Improved: data insights and decision making',';
     'Reduced: operational costs and manual work',';
     'Faster: time to market for new products',';Better: competitive positioning in the market';
-  ];
+  ]
 :pages.disabled/pages/services/Transformation.tsx;
 ';
   return: (''';
@@ -78,11 +78,9 @@ const DigitalTransformation: any = () => {}
       price: "From $25,000/project",""
       features: ["System assessment", "Modernization planning", "Data migration", "Integration services"],
 :pages.disabled/pages/services/Transformation.tsx
-      icon: RefreshCw
-
-    },"{;""
-
-    },"
+      icon: RefreshCw;
+},"{;"";
+},"
       icon: RefreshCw;
     },
     {;""
@@ -104,14 +102,14 @@ const DigitalTransformation: any = () => {}
       description: 'Guide your team through digital adoption and transformation.',;
       price: 'From $8,000/month',      features: ['Change strategy', 'Training programs', 'Communication plans', 'Success measurement'],
       icon: Users}
-  ];
+  ]
 :pages.disabled/pages/services/Transformation.tsx;
   '{''
       name: 'Technology',;
       description: 'Modernize your technology stack and infrastructure',;
       icon: BarChart3,;
       features: ['Cloud migration', 'API integration', 'Data modernization', 'Security enhancement']}
-  ];
+  ]
 "
 
   const benefits = [;"""Increased operational efficiency and productivity",;""
@@ -123,7 +121,7 @@ const DigitalTransformation: any = () => {}
       description: "Modernize your technology stack and infrastructure",;
       icon: BarChart3,;""
       features: ["Cloud migration", "API integration", "Data modernization", "Security enhancement"]};
-  ];
+  ]
 
   const benefits: any = [;""
     "Increased operational efficiency and productivity",;""
@@ -131,7 +129,7 @@ const DigitalTransformation: any = () => {}
     "Improved data insights and decision making",;""
     "Reduced operational costs and manual work",;""
     "Faster time to market for new products",;"    "Better competitive positioning in the market";
-  ];
+  ]
 :pages.disabled/pages/services/Transformation.tsx
 "
   return (""
@@ -175,7 +173,7 @@ const DigitalTransformation: any = () => {}
     'Improved data insights and decision making',;
     'Reduced operational costs and manual work',;
     'Faster time to market for new products',;Better competitive positioning in the market';
-  ];
+  ]
 :pages.disabled/pages/services/Transformation.tsx;
 '
   return (''

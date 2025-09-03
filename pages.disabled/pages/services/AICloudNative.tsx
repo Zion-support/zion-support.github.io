@@ -4,7 +4,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AICloudNative(function AICloudNative() {): any: {}
     'Automated cloud native monitoring and alerting',';Predictive: analytics for cloud native scaling',';Smart: cloud native security and compliance',';AI-driven: cloud native automation and orchestration',';Real-time: cloud native analytics and insights',';Custom: AI models for cloud native applications';
 <:pages.disabled/pages/services/AICloudNative.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Developer,',';
@@ -27,7 +27,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
   ]';Cloud: native optimization',';Cloud: native management',';Performance: monitoring and analytics',';Security: and compliance monitoring',';Automation: and orchestration',';Cloud: native scaling and management';
   ]';Improve: cloud native performance by 50-80%',';Reduce: cloud native deployment time by 40-70%',';Cut: operational costs by 35-65%',';Enhance: cloud native reliability and scalability',';Optimize: resource utilization',';Scale: cloud native operations efficiently';
   ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-sky-500 via-blue-500 to-indigo-500 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AICloudNative(function AICloudNative() {): any {}
     'Automated cloud native monitoring and alerting',;Predictive analytics for cloud native scaling',;Smart cloud native security and compliance',;AI-driven cloud native automation and orchestration',;Real-time cloud native analytics and insights',;Custom AI models for cloud native applications';
 <:pages.disabled/pages/services/AICloudNative.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Developer',
@@ -115,8 +115,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     {'
       name: 'Business',
       price: '$999/mo',
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support']
-    },
+      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AICloudNative.tsx>    {'
@@ -149,10 +149,10 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <Database className='w-4 h-4 mr-2'  /> AI-Powered Cloud Native Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Cloud Native Platform</h1>'          <p className='text-sky-100 text-xl'>Transform your cloud native operations with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
-  ];Cloud native optimization',;Cloud native management',;Performance monitoring and analytics',;Security and compliance monitoring',;Automation and orchestration',;Cloud native scaling and management';
-  ];Improve cloud native performance by 50-80%',;Reduce cloud native deployment time by 40-70%',;Cut operational costs by 35-65%',;Enhance cloud native reliability and scalability',;Optimize resource utilization',;Scale cloud native operations efficiently';
-  ];Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
-  ];
+  ]Cloud native optimization',;Cloud native management',;Performance monitoring and analytics',;Security and compliance monitoring',;Automation and orchestration',;Cloud native scaling and management';
+  ]Improve cloud native performance by 50-80%',;Reduce cloud native deployment time by 40-70%',;Cut operational costs by 35-65%',;Enhance cloud native reliability and scalability',;Optimize resource utilization',;Scale cloud native operations efficiently';
+  ]Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-sky-500 via-blue-500 to-indigo-500 py-20 text-center>''

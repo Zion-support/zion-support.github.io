@@ -47,9 +47,9 @@ const PerformanceOptimizedHero = memo(() => {}"});,"})
     const loadTimer = setTimeout(() => setIsLoaded(true), 500);,"});,"})
     return () => {}"});,"})
       clearTimeout(timer);,"});,"})
-      clearTimeout(loadTimer);,"});,"})
-    };,"});,"})
-  }, []);,"});,"})
+      clearTimeout(loadTimer);,"});,"});
+};,"});,"});
+}, []);,"});,"})
   const stats = [];,"});,"})
     {}"});,"})
 ';,"});,"})
@@ -81,7 +81,7 @@ const PerformanceOptimizedHero = memo(() => {}"});,"})
       label: 'Service Coverage',';,"});,"})
       icon: '🌍',';,"});,"})
       color: 'from-green-400 to-teal-400'}"});,"})
-  ];,"});,"})
+  ],"});,"})
   if (!isVisible) {}"});,"})
 """;,"});,"})
     return ("""";,"});,"})
@@ -93,8 +93,8 @@ const PerformanceOptimizedHero = memo(() => {}"});,"})
           </p>;,"});,"})
         </div>;,"});,"})
       </section>;,"});,"})
-    );,"});,"})
-  }"});,"})
+    );,"});,"});
+}"});,"})
   return()""";,"});,"})
     <section"""";,"});,"})
       className="relative py-20 px-4 overflow-hidden"""";,"});,"})
@@ -202,7 +202,7 @@ const PerformanceOptimizedHero = memo(() => {}"});,"})
         </>;,"});,"})
       )}"});,"})
     </section>;,"});,"})
-  );,"});,"})
+  );,"});,"});
 });,"});,"})
 PerformanceOptimizedHero.displayName = 'PerformanceOptimizedHero';,"});,"})
 export default PerformanceOptimizedHero;,"});,"})
@@ -509,7 +509,7 @@ export { HeroStats, PerformanceOptimizedHero };
 export { HeroStats, PerformanceOptimizedHero };
 ;
 export { HeroStats, PerformanceOptimizedHero };
-  )", "
+  )", ";
 })''
 PerformanceOptimizedHero.displayName = 'PerformanceOptimizedHero'
 export default PerformanceOptimizedHero

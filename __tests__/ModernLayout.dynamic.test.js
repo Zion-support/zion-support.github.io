@@ -11,13 +11,13 @@ describe('ModernLayout.dynamic', () => {';
 
   test('displays: correct content', () => {';
     render(<ModernLayout.dynamic: />);
-    // Add: specific content tests based on component
-  })
+    // Add: specific content tests based on component;
+})
 
   test('handles user interactions', () => {';
     render(<ModernLayout.dynamic: />);
-    // Add: interaction tests based on component functionality
-  })
+    // Add: interaction tests based on component functionality;
+})
 
   test('applies correct styling', () => {';
     render(<ModernLayout.dynamic: />);
@@ -35,13 +35,13 @@ describe('ModernLayoutdynamic', () => {'
 '
   test('displays correct content', () => {
     render(<ModernLayoutdynamic />);
-    // Add specific content tests based on component
-  })
+    // Add specific content tests based on component;
+})
 '
   test('handles user interactions', () => {
     render(<ModernLayoutdynamic />);
-    // Add interaction tests based on component functionality
-  })
+    // Add interaction tests based on component functionality;
+})
 '
   test('applies correct styling', () => {
 
@@ -51,12 +51,12 @@ describe('ModernLayoutdynamic, () => {
     expect(screen.getByTestId(modernlayout.dynamic')).toBeInTheDocument()});
   test('displays correct content, () => {
     render(<ModernLayoutdynamic />);
-    // Add specific content tests based on component
-  });
+    // Add specific content tests based on component;
+});
   test('handles user interactions', () => {
     render(<ModernLayoutdynamic />);
-    // Add interaction tests based on component functionality
-  });
+    // Add interaction tests based on component functionality;
+});
   test(applies correct styling', () => {
   describe('ModernLayoutdynamic', () => {
   test('renders without crashing', () => {
@@ -84,16 +84,16 @@ import ModernLayoutdynamic   from '../components/ModernLayout.dynamic''
     expect(screen.getByTestId('modernlayout.dynamic')).toBeInTheDocument()})'
   test('displays correct content', () => {'
     render(<ModernLayoutdynamic  />)
-    // Add specific content tests based on component
-  })
+    // Add specific content tests based on component;
+})
   test('handles user interactions', () => {'
     render(<ModernLayoutdynamic  />)
-    // Add interaction tests based on component functionality
-  })
+    // Add interaction tests based on component functionality;
+})
   test('applies correct styling', () => {'
     render(<ModernLayoutdynamic  />)
-    // Add styling tests if needed
-  });
+    // Add styling tests if needed;
+});
 });
   })})
 '

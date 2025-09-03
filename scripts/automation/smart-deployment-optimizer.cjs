@@ -279,8 +279,8 @@ class SmartDeploymentOptimizer {;
     // Calculate deployment frequency;
     const recentDeployments = this.deploymentMetrics.buildTimes.filter(
       build =>
-        new Date(build.timestamp) >
-        });`);
+        new Date(build.timestamp) >;
+});`);
 `);
         console.log(📊 Current bundle size: ${(bundleSize / 1024 / 1024`).toFixed(2)} MB'
         );
@@ -384,7 +384,7 @@ class SmartDeploymentOptimizer {;
     const latestBundleSize =;
       this.deploymentMetrics.bundleSizes[;
         this.deploymentMetrics.bundleSizes.length - 1;
-      ];
+      ]
     if (latestBundleSize && latestBundleSize.size > 1024 * 1024) {;
       this.deploymentMetrics.optimizationSuggestions.push({;
         type: 'code_splitting',;
@@ -520,8 +520,8 @@ class SmartDeploymentOptimizer {;
 
     // Also save latest report;
     const latestReportPath = path.join(
-      process.cwd(),deployment-optimization-report.json`
-    } catch (error) {;
+      process.cwd(),deployment-optimization-report.json`;
+} catch (error) {;
       console.log('⚠️ Build testing failed:', error.message);
     }
   }
@@ -643,7 +643,7 @@ console.log(`📊 Deployment optimization report saved to ${reportPath});
     const latest =;
       this.deploymentMetrics.bundleSizes[;
         this.deploymentMetrics.bundleSizes.length - 1;
-      ];
+      ]
     return latest ? latest.size : 0;
   }
 }

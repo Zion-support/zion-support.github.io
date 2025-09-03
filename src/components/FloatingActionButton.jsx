@@ -18,7 +18,7 @@ const FloatingActionButton = ({ className = '' }) => {}"});,"})
       label: 'Email',';,"});,"})
       action: () => window.open('mailto:info@ziontechgroup.com',_self'),';,"});,"})
       color: 'bg-purple-500 hover:bg-purple-600'}"});,"})
-  ];,"});,"})
+  ],"});,"})
   return ();,"});,"})
     <div className={`fixed bottom-6 right-6 z-50 ${className}`}>;,"});,"})
       <AnimatePresence>;,"});,"})
@@ -74,7 +74,7 @@ const FloatingActionButton = ({ className = '' }) => {}"});,"})
               initial={{ rotate: 90, opacity: 0 }}"});,"})
               exit={{ rotate: -90, opacity: 0 }}"});,"})
               <Plus className="w-6 h-6" />;,"});,"})
-    </div>) ;,"});,"})
+    </div>) ;,"});,"});
 };,"});,"})
 ;,"});,"})
 export default FloatingActionButton;,"});,"})
@@ -148,7 +148,7 @@ const FloatingActionButton = ({ className = ' }) => {}
       color: 'bg-purple-500 hover:bg-purple-600'}
   ]
   return ()
-  ];
+  ]
   return ();
     <div className={`fixed bottom-6 right-6 z-50 ${className}`}>;
       <AnimatePresence> {isOpen && (;

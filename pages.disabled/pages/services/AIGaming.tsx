@@ -4,7 +4,7 @@ import: { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
 import: { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Users, BarChart3 export default function AIGaming(function AIGaming() {): any: {}
     'Automated content generation and procedural creation',';Predictive: analytics for player engagement and retention',';Real-time: matchmaking and player pairing optimization',';Smart: anti-cheat and security systems',';Integration: with major gaming engines and platforms',';Custom: AI models for gaming-specific insights';
 <:pages.disabled/pages/services/AIGaming.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Indie: Developer,',';
@@ -37,7 +37,7 @@ import: { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
   ]';Player: engagement and retention optimization',';Game: difficulty and balance adjustment',';Content: generation and procedural creation',';Matchmaking: and player pairing',';Anti-cheat: and security systems',';Monetization: and in-game economy optimization';
   ]';Increase: player engagement by 35-55%',';Improve: player retention by 40-60%',';Cut: development costs by 25-40%',';Optimize: game balance and difficulty',';Enhance: player experience and satisfaction',';Scale: gaming operations efficiently';
   ]';Mobile: Gaming',';PC: Gaming',';Console: Gaming',';VR/AR: Gaming',';Esports: & Competitive Gaming',';Educational: & Serious Games';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-purple-600 via-violet-600 to-indigo-600 py-20 text-center'>''';
@@ -61,7 +61,7 @@ import { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 import { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Users, BarChart3 export default function AIGaming(function AIGaming() {): any {}
     'Automated content generation and procedural creation',;Predictive analytics for player engagement and retention',;Real-time matchmaking and player pairing optimization',;Smart anti-cheat and security systems',;Integration with major gaming engines and platforms',;Custom AI models for gaming-specific insights';
 <:pages.disabled/pages/services/AIGaming.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Indie Developer',
@@ -70,8 +70,8 @@ import { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     {'
       name: 'Mid-size Studio',
       price: '$799/mo',
-      details: ['Up to 100,000 players', 'Advanced AI features', 'Custom reports', 'Priority support']
-    },
+      details: ['Up to 100,000 players', 'Advanced AI features', 'Custom reports', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AIGaming.tsx>    {'
@@ -99,9 +99,9 @@ import { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
         <div className='max-w-5xl mx-auto px-6'>''
           <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>''
 :pages.disabled/pages/services/AIGaming.tsx
-  ];Player engagement and retention optimization',;Game difficulty and balance adjustment',;Content generation and procedural creation',;Matchmaking and player pairing',;Anti-cheat and security systems',;Monetization and in-game economy optimization';
-  ];Increase player engagement by 35-55%',;Improve player retention by 40-60%',;Cut development costs by 25-40%',;Optimize game balance and difficulty',;Enhance player experience and satisfaction',;Scale gaming operations efficiently';
-  ];
+  ]Player engagement and retention optimization',;Game difficulty and balance adjustment',;Content generation and procedural creation',;Matchmaking and player pairing',;Anti-cheat and security systems',;Monetization and in-game economy optimization';
+  ]Increase player engagement by 35-55%',;Improve player retention by 40-60%',;Cut development costs by 25-40%',;Optimize game balance and difficulty',;Enhance player experience and satisfaction',;Scale gaming operations efficiently';
+  ]
   const industries = [';
     'Mobile Gaming',;
     'PC Gaming',;
@@ -109,9 +109,9 @@ import { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'VR/AR Gaming',;
     'Esports & Competitive Gaming',;Educational & Serious Games';
       details: ['Unlimited players',Custom AI models',Full platform integration',24/7 dedicated support'] }];Player engagement and retention optimization',;Game difficulty and balance adjustment',;Content generation and procedural creation',;Matchmaking and player pairing',;Anti-cheat and security systems',;Monetization and in-game economy optimization';
-  ];Increase player engagement by 35-55%',;Improve player retention by 40-60%',;Cut development costs by 25-40%',;Optimize game balance and difficulty',;Enhance player experience and satisfaction',;Scale gaming operations efficiently';
-  ];Mobile Gaming',;PC Gaming',;Console Gaming',;VR/AR Gaming',;Esports & Competitive Gaming',;Educational & Serious Games';
-  ];
+  ]Increase player engagement by 35-55%',;Improve player retention by 40-60%',;Cut development costs by 25-40%',;Optimize game balance and difficulty',;Enhance player experience and satisfaction',;Scale gaming operations efficiently';
+  ]Mobile Gaming',;PC Gaming',;Console Gaming',;VR/AR Gaming',;Esports & Competitive Gaming',;Educational & Serious Games';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-purple-600 via-violet-600 to-indigo-600 py-20 text-center>''

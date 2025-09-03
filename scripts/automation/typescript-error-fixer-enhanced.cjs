@@ -54,8 +54,8 @@ class TypeScriptErrorFixer {;
       return { 
         success: false, 
         error: error.message, 
-        output: error.stdout || error.stderr || ''
-        };
+        output: error.stdout || error.stderr || '';
+};
     ;
     console.log(`'🔧 Enhanced TypeScript Error Fixer Started');
     
@@ -180,10 +180,10 @@ class TypeScriptErrorFixer {;
     
     // Common type fixes;
     const typeFixes = ['{
-        pattern: /const\s+(\w+):\s*any\s*=/g', 'replacement: 'const $1: unknown ='
-      }', '{
-        pattern: /function\s+(\w+)\s*\(\s*\)\s*:\s*any\s*{/g', 'replacement: 'function $1(): unknown {'
-      }', '{
+        pattern: /const\s+(\w+):\s*any\s*=/g', 'replacement: 'const $1: unknown =';
+}', '{
+        pattern: /function\s+(\w+)\s*\(\s*\)\s*:\s*any\s*{/g', 'replacement: 'function $1(): unknown {';
+}', '{
         pattern: /:\s*any\s*\[\']/g,
         replacement: ': unknown[]'
 ;
@@ -199,7 +199,7 @@ class TypeScriptErrorFixer {;
         pattern: /:\s*any\s*\[\']/g,;
         replacement: ': unknown[]';
       }
-    ];
+    ]
 ;
     const files = await this.findFiles('src', ['.ts', '.tsx']);
     ;
@@ -445,8 +445,8 @@ export default function ${componentName}() {;
       await this.log(`✅ TypeScript error fixing completed!`);await this.log(`📊 Total fixes applied: ${report.totalFixes}`);
       ;
       return report;
-      
-    } catch (error) {  await this.log(`❌ Error in TypeScript fixer: ${error.message  }`, `ERROR`);
+      ;
+} catch (error) {  await this.log(`❌ Error in TypeScript fixer: ${error.message  }`, `ERROR`);
       ;
     } catch (error) {await this.log(`❌ Error in TypeScript fixer: ${error.message}`, 'ERROR');
       throw error;

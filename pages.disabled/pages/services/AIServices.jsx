@@ -787,7 +787,7 @@ const AIServices = () => {
             freeTrial: 'Introductory session',
             rating: 4.8,
             reviewCount: 223}
-    ];;
+    ]
     const categories = ['All Services', 'Strategy', 'ML', 'NLP', 'Vision', 'Analytics', 'Automation', 'Ethics', 'Infrastructure', 'Integration', 'Training']
 :pages.disabled/pages/services/AIServices.jsx
     return ('

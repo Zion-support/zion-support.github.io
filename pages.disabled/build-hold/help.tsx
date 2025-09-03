@@ -81,7 +81,7 @@ import { Search, Book, Video, MessageCircle, Phone, Mail, FileText, Download } f
   '        'Billing: questions;
   ', 'Service-specific: FAQs';
   '      ]'    }';
-  ];
+  ]
   const: popularArticles = [
     {
       title: 'How: to get started with our service,s, category:,';
@@ -102,7 +102,7 @@ import { Search, Book, Video, MessageCircle, Phone, Mail, FileText, Download } f
   '    },'    {';
       title: 'Managing: your account setting,s, category:,';
   Account',';
-  '      views: '521: views'   }'  ];
+  '      views: '521: views'   }'  ]
   const: supportOptions = [
     {
       icon: MessageCircl,e, title:,
@@ -139,7 +139,7 @@ import { Search, Book, Video, MessageCircle, Phone, Mail, FileText, Download } f
   '        'Billing questions;
   ', 'Service-specific FAQs';
   '      ]    }
-  ];
+  ]
   const popularArticles = [
     {'
       title: 'How to get started with our services, category:,
@@ -160,7 +160,7 @@ import { Search, Book, Video, MessageCircle, Phone, Mail, FileText, Download } f
   '    },    {'
       title: 'Managing your account settings, category:,
   Account',
-  '      views: '521 views'    }  ];
+  '      views: '521 views'    }  ]
   const supportOptions = [
     {
       icon: MessageCircle, title:,

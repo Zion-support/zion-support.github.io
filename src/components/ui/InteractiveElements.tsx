@@ -29,7 +29,7 @@ import React {useState, useEffect } from 'react' ;
 import {motion, useAnimation, useInView } from 'framer-motion' import {useRef } from 'react' import {ArrowRight, Sparkles, Zap, Star, Heart, ThumbsUp } from 'lucide-react' interface InteractiveButtonProps {
 import React { useState, useEffect } from &apos;
 import { motion } from &apos;framer-motion';;react&apos; import { motion, useAnimation, useInView } from &apos;framer-motion&apos; import { useRef } from &apos;react&apos; import { ArrowRight, Sparkles, Zap, Star, Heart, ThumbsUp } from &apos;lucide-react&apos; interface InteractiveButtonProps {
-""
+"";
 }
   children: React.ReactNode;
    variant?: &apos;primary&apos; | &apos;secondary&apos; | &apos;ghost&apos; | &apos;gradient';

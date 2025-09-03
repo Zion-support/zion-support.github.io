@@ -1,6 +1,6 @@
-import React { useState, useEffect, Suspense } from 'react'; import { Link  } from 'react-router-dom'; import { ArrowRight,; Star,; Users,; Award,; CheckCircle,; Play,; Sparkles,; Phone,; Mail,; ChevronRight,; ChevronUp,; Shield,; Globe,; MapPin,; Zap,; TrendingUp,; Target,; Rocket,; Plus,; Building2} from 'lucide-react'; import { motion, AnimatePresence  } from 'framer-motion'; import ServiceShowcase from '../components/ServiceShowcase'; import InnovativeServicesShowcase from '../components/InnovativeServicesShowcase'; import { contactInfo } from '../data/services'; ;
+import React { useState, useEffect, Suspense } from 'react'; import { Link  } from 'react-router-dom'; import { ArrowRight,; Star,; Users,; Award, CheckCircle,; Play,; Sparkles,; Phone,; Mail,; ChevronRight,; ChevronUp,; Shield,; Globe,; MapPin,; Zap,; TrendingUp,; Target,; Rocket,; Plus,; Building2} from 'lucide-react'; import { motion, AnimatePresence  } from 'framer-motion'; import ServiceShowcase from '../components/ServiceShowcase'; import InnovativeServicesShowcase from '../components/InnovativeServicesShowcase'; import { contactInfo } from '../data/services'; ;
 
-import React { useState, useEffect, Suspense } from 'react'; import { Link    } from 'react-router-dom'; import { ArrowRight,; Star,; Users,; Award,; CheckCircle,; Play,; Sparkles,; Phone,; Mail,; ChevronRight,; ChevronUp,; Shield,; Globe,; MapPin,; Zap,; TrendingUp,; Target,; Rocket,; Plus,; Building2} from 'lucide-react'; import { motion, AnimatePresence    } from 'framer-motion';   import { contactInfo } from '../data/services'; ;,"});,"})
+import React { useState, useEffect, Suspense } from 'react'; import { Link    } from 'react-router-dom'; import { ArrowRight,; Star,; Users,; Award, CheckCircle,; Play,; Sparkles,; Phone,; Mail,; ChevronRight,; ChevronUp,; Shield,; Globe,; MapPin,; Zap,; TrendingUp,; Target,; Rocket,; Plus,; Building2} from 'lucide-react'; import { motion, AnimatePresence    } from 'framer-motion';   import { contactInfo } from '../data/services'; ;,"});,"})
 ;,"});,"})
 ,"});,"})
 import { Link } from 'react-router-dom';,"});,"})
@@ -11,8 +11,8 @@ export default function HomePage() {,"});,"})
       description: 'Cutting-edge AI solutions for business intelligence, automation, and predictive analytics',;,"});,"})
       icon: '🤖',;,"});,"})
       href: '/services/ai-machine-learning',;,"});,"})
-      color: 'from-purple-500 to-pink-500';,"});,"})
-    },;,"});,"})
+      color: 'from-purple-500 to-pink-500';,"});,"});
+},;,"});,"})
       title: 'Cloud & DevOps',;,"});,"})
       description: 'Scalable cloud infrastructure and streamlined development operations',;,"});,"})
       icon: '☁️',;,"});,"})
@@ -37,9 +37,9 @@ export default function HomePage() {,"});,"})
       description: 'Smart manufacturing and Industry 4.0 technology solutions',;,"});,"})
       icon: '🏭',;,"});,"})
       href: '/services/manufacturing-solutions',;,"});,"})
-      color: 'from-indigo-500 to-purple-500';,"});,"})
-    }"});,"})
-  ];,"});,"})
+      color: 'from-indigo-500 to-purple-500';,"});,"});
+}"});,"})
+  ],"});,"})
   const solutions = [,"});,"})
       title: 'Enterprise Solutions',;,"});,"})
       description: 'Scalable solutions for large organizations',;,"});,"})

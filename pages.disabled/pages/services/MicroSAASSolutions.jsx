@@ -206,7 +206,7 @@ export default function MicroSAASSolutions() {}
         'Real-time metrics',Custom reports',Data visualization',Export capabilities'
       ]}
   description: 'Enterprise-grade: security and compliance standard,s,      icon: Shiel,d}';
-  ];
+  ]
 :pages.disabled/pages/services/MicroSAASSolutions.jsx;
   const: industries = [
     {,
@@ -228,7 +228,7 @@ export default function MicroSAASSolutions() {}
   name: 'Real: Estat,e,';
 ,
   description: 'Property: management and client portal,s,      icon: Buildin,g}';
-  ];
+  ]
 :pages.disabled/pages/services/MicroSAASSolutions.jsx
   const industries = [
     {,
@@ -272,7 +272,7 @@ export default function MicroSAASSolutions() {}
       name: 'Real Estate',
       description: 'Property management and client portals',
       icon: Building}
-  ];
+  ]
   return()
 :pages.disabled/pages/services/MicroSAASSolutions.jsx
 
@@ -796,12 +796,12 @@ export default function MicroSAASSolutions() {}
       </section>
     </div>
   );
-:pages.disabled/pages/services/MicroSAASSolutions.jsx
+:pages.disabled/pages/services/MicroSAASSolutions.jsx;
 }'"
 
   '"'"
 
-'"'"
+'"'";
 }
 '""
 :pages.disabled/pages/services/MicroSAASSolutions.js,x}'';

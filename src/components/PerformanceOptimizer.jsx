@@ -12,7 +12,7 @@ export const PerformanceOptimizer = ({ children }) => { const location = useLoca
 &apos;'
  export const PerformanceOptimizer = ({ children }) => { const location = useLocation () ''
 ;
-""
+"";
 }
- export const PerformanceOptimizer = ({ children }) => { const location = useLocation () '
+ export const PerformanceOptimizer = ({ children }) => { const location = useLocation () ';
 }

@@ -42,11 +42,11 @@ class DependencyMonitor {
     // // // // // // // // console.log(logEntry.trim())
 
     try {
-      fs.appendFileSync(this.logFile, logEntry)
-    } catch (error) {
+      fs.appendFileSync(this.logFile, logEntry);
+} catch (error) {
       // // // // // // // console.error(
-  'Failed to write to log file:', error.message)
-    }
+  'Failed to write to log file:', error.message);
+}
   }
 
   async startMonitoring() {
@@ -57,25 +57,25 @@ class DependencyMonitor {
     // Schedule regular dependency checks
     cron.schedule(
   '0 */2 * * *', () => {
-      this.performDependencyCheck()
-    })
+      this.performDependencyCheck();
+})
 
     // Schedule daily security audit
     cron.schedule(
   '0 1 * * *', () => {
-      this.performSecurityAudit()
-    })
+      this.performSecurityAudit();
+})
 
     // Schedule weekly dependency updates
     cron.schedule(
   '0 7 * * 0', () => {
-      this.performWeeklyUpdates()
-    })
+      this.performWeeklyUpdates();
+})
 
     // Initial dependency check
     setTimeout(() => {
-      this.performDependencyCheck()
-    }, 15000)
+      this.performDependencyCheck();
+}, 15000)
 
     this.log(
   'Dependency monitoring started successfully')
@@ -93,15 +93,14 @@ class DependencyMonitor {
 
       if (issues.length > 0) {
         this.log(`Found ${issues.length} dependency issues, attempting fixes...`)
-        await this.autoFixDependencyIssues(issues)
-      } else {
+        await this.autoFixDependencyIssues(issues);
+} else {
         this.log(
-  'No dependency issues detected, all packages are up to date')
+  'No dependency issues detected, all packages are up to date');
+} catch (error) {
 
-    } catch (error) {
-
-      this.log(`Dependency check failed: ${error.message}`, , ERROR')
-    } finally {
+      this.log(`Dependency check failed: ${error.message}`, , ERROR');
+} finally {
       this.monitoring = false
 
 
@@ -113,29 +112,29 @@ class DependencyMonitor {
     if (outdatedPackages.length > 0) {
       issues.push({
         type: 'outdated_packages, severity:
-  'medium', description: `${outdatedPackages.length} outdated packages found`, details: outdatedPackages
-      })
+  'medium', description: `${outdatedPackages.length} outdated packages found`, details: outdatedPackages;
+})
 
     // Check for missing dependencies
     if (await this.hasMissingDependencies()) {
       issues.push({
-        type:, missing_dependencies', severity: 'high, description:, Missing critical dependencies detected'
-      })
+        type:, missing_dependencies', severity: 'high, description:, Missing critical dependencies detected';
+})
 
     // Check for peer dependency issues
     const peerDependencyIssues = await this.checkPeerDependencies()
     if (peerDependencyIssues.length > 0) {
       issues.push({
         type: 'peer_dependency_issues, severity:
-  'medium', description: `${peerDependencyIssues.length} peer dependency issues found`, details: peerDependencyIssues
-      })
+  'medium', description: `${peerDependencyIssues.length} peer dependency issues found`, details: peerDependencyIssues;
+})
 
     // Check for dependency conflicts
     const dependencyConflicts = await this.checkDependencyConflicts()
     if (dependencyConflicts.length > 0) {
       issues.push({
-        type:, dependency_conflicts', severity: 'high, description: `${dependencyConflicts.length} dependency conflicts detected`, details: dependencyConflicts
-      })
+        type:, dependency_conflicts', severity: 'high, description: `${dependencyConflicts.length} dependency conflicts detected`, details: dependencyConflicts;
+})
 
     return issues
 
@@ -143,25 +142,25 @@ class DependencyMonitor {
     try {
       const result = execSync(
   'npm outdated --json', {
-        cwd: this.projectRoot, encoding:, utf8', stdio: 'pipe
-      })
+        cwd: this.projectRoot, encoding:, utf8', stdio: 'pipe;
+})
 
       if (result.trim()) {
         const outdated = JSON.parse(result)
         return Object.keys(outdated).map(pkg => ({
-          name: pkg, current: outdated[pkg].current, wanted: outdated[pkg].wanted, latest: outdated[pkg].latest
-        }))
+          name: pkg, current: outdated[pkg].current, wanted: outdated[pkg].wanted, latest: outdated[pkg].latest;
+}))
 
-      return []
-    } catch (error) {
+      return [];
+} catch (error) {
       // npm outdated returns non-zero if there are outdated packages
       if (error.stdout) {
         try {
           const outdated = JSON.parse(error.stdout)
           return Object.keys(outdated).map(pkg => ({
-            name: pkg, current: outdated[pkg].current, wanted: outdated[pkg].wanted, latest: outdated[pkg].latest
-          }))
-        } catch (parseError) {
+            name: pkg, current: outdated[pkg].current, wanted: outdated[pkg].wanted, latest: outdated[pkg].latest;
+}));
+} catch (parseError) {
           return []
 
 
@@ -188,14 +187,14 @@ class DependencyMonitor {
       for (const dep of requiredDeps) {
         if (packageJson.dependencies && packageJson.dependencies[dep]) {
           try {
-            require.resolve(dep)
-          } catch (e) {
+            require.resolve(dep);
+} catch (e) {
             return true // Missing dependency
 
 
 
-      return false
-    } catch (error) {
+      return false;
+} catch (error) {
       return true
 
 
@@ -203,8 +202,8 @@ class DependencyMonitor {
     try {
       const result = execSync(
   'npm ls --json', {
-        cwd: this.projectRoot, encoding:, utf8', stdio: 'pipe
-      })
+        cwd: this.projectRoot, encoding:, utf8', stdio: 'pipe;
+})
 
       const dependencies = JSON.parse(result)
       const issues = []
@@ -215,12 +214,11 @@ class DependencyMonitor {
           if (problem.includes(
   'peer dep missing') || problem.includes(
   'peer dependency')) {
-            issues.push(problem)
+            issues.push(problem);
+})
 
-        })
-
-      return issues
-    } catch (error) {
+      return issues;
+} catch (error) {
       // npm ls returns non-zero if there are issues
       if (error.stdout) {
         try {
@@ -232,12 +230,11 @@ class DependencyMonitor {
               if (problem.includes(
   'peer dep missing') || problem.includes(
   'peer dependency')) {
-                issues.push(problem)
+                issues.push(problem);
+})
 
-            })
-
-          return issues
-        } catch (parseError) {
+          return issues;
+} catch (parseError) {
           return []
 
 
@@ -248,8 +245,8 @@ class DependencyMonitor {
     try {
       const result = execSync(
   'npm ls --json', {
-        cwd: this.projectRoot, encoding:, utf8', stdio: 'pipe
-      })
+        cwd: this.projectRoot, encoding:, utf8', stdio: 'pipe;
+})
 
       const dependencies = JSON.parse(result)
       const issues = []
@@ -260,12 +257,11 @@ class DependencyMonitor {
           if (problem.includes(
   'conflict') || problem.includes(
   'incompatible')) {
-            issues.push(problem)
+            issues.push(problem);
+})
 
-        })
-
-      return issues
-    } catch (error) {
+      return issues;
+} catch (error) {
       // npm ls returns non-zero if there are issues
       if (error.stdout) {
         try {
@@ -277,12 +273,11 @@ class DependencyMonitor {
               if (problem.includes(
   'conflict') || problem.includes(
   'incompatible')) {
-                issues.push(problem)
+                issues.push(problem);
+})
 
-            })
-
-          return issues
-        } catch (parseError) {
+          return issues;
+} catch (parseError) {
           return []
 
 
@@ -312,9 +307,8 @@ class DependencyMonitor {
             break
 
         this.dependenciesUpdated++
-        this.log(`Successfully fixed: ${issue.type}`)
-
-      } catch (error) {
+        this.log(`Successfully fixed: ${issue.type}`);
+} catch (error) {
         this.log(`Failed to fix ${issue.type}: ${error.message}`, 'ERROR')
 
 
@@ -335,17 +329,16 @@ class DependencyMonitor {
       execSync(
   'npm update', {
         cwd: this.projectRoot, stdio:
-  'inherit'
-      })
+  'inherit';
+})
 
       this.log(
   'Packages updated successfully')
 
       // Update the report
       const updatedReport = `${reportContent}\n\nUpdate completed successfully at ${new Date().toISOString()}`
-      fs.writeFileSync(reportPath, updatedReport)
-
-    } catch (error) {
+      fs.writeFileSync(reportPath, updatedReport);
+} catch (error) {
       throw new Error(`Failed to update packages: ${error.message}`)
 
 
@@ -357,11 +350,11 @@ class DependencyMonitor {
       execSync(
   'npm install', {
         cwd: this.projectRoot, stdio:
-  'inherit'
-      })
+  'inherit';
+})
       this.log(
-  'Dependencies installed successfully')
-    } catch (error) {
+  'Dependencies installed successfully');
+} catch (error) {
       throw new Error(`Failed to install dependencies: ${error.message}`)
 
 
@@ -374,11 +367,11 @@ class DependencyMonitor {
       execSync(
   'npm install --legacy-peer-deps', {
         cwd: this.projectRoot, stdio:
-  'inherit'
-      })
+  'inherit';
+})
       this.log(
-  'Peer dependency issues resolved')
-    } catch (error) {
+  'Peer dependency issues resolved');
+} catch (error) {
       this.log(`Failed to auto-fix peer dependencies: ${error.message}`, 'WARN')
 
       // Create a report for manual resolution
@@ -398,11 +391,11 @@ class DependencyMonitor {
       execSync(
   'npm install --force', {
         cwd: this.projectRoot, stdio:
-  'inherit'
-      })
+  'inherit';
+})
       this.log(
-  'Dependency conflicts resolved')
-    } catch (error) {
+  'Dependency conflicts resolved');
+} catch (error) {
       this.log(`Failed to auto-fix dependency conflicts: ${error.message}`, 'WARN')
 
       // Create a report for manual resolution
@@ -420,8 +413,8 @@ class DependencyMonitor {
     try {
       const result = execSync(
   'npm audit --json', {
-        cwd: this.projectRoot, encoding:, utf8', stdio: 'pipe
-      })
+        cwd: this.projectRoot, encoding:, utf8', stdio: 'pipe;
+})
 
       const audit = JSON.parse(result)
 
@@ -430,12 +423,11 @@ class DependencyMonitor {
         this.log(`Found ${this.vulnerabilitiesFound} security vulnerabilities`, 'WARN')
 
         // Try to auto-fix vulnerabilities
-        await this.autoFixSecurityVulnerabilities(audit)
-      } else {
+        await this.autoFixSecurityVulnerabilities(audit);
+} else {
         this.log(
-  'No security vulnerabilities found')
-
-    } catch (error) {
+  'No security vulnerabilities found');
+} catch (error) {
       this.log(`Security audit failed: ${error.message}`, 'ERROR')
 
 
@@ -448,17 +440,16 @@ class DependencyMonitor {
       execSync(
   'npm audit fix', {
         cwd: this.projectRoot, stdio:
-  'inherit'
-      })
+  'inherit';
+})
       this.log(
   'Security vulnerabilities auto-fixed')
 
       // Create a report
       const reportContent = `Security Audit Report - ${new Date().toISOString()}\n\nVulnerabilities found: ${this.vulnerabilitiesFound}\nAuto-fix attempted and completed.`
 
-      fs.writeFileSync(reportPath, reportContent)
-
-    } catch (error) {
+      fs.writeFileSync(reportPath, reportContent);
+} catch (error) {
       this.log(`Failed to auto-fix vulnerabilities: ${error.message}`, 'WARN')
 
       // Create a detailed report for manual resolution
@@ -491,9 +482,8 @@ class DependencyMonitor {
       await this.performSafeUpdates()
 
       this.log(
-  'Weekly dependency updates completed')
-
-    } catch (error) {
+  'Weekly dependency updates completed');
+} catch (error) {
       this.log(`Weekly dependency updates failed: ${error.message}`, 'ERROR')
 
 
@@ -501,8 +491,8 @@ class DependencyMonitor {
     try {
       const result = execSync(
   'npm outdated --json', {
-        cwd: this.projectRoot, encoding:, utf8', stdio: 'pipe
-      })
+        cwd: this.projectRoot, encoding:, utf8', stdio: 'pipe;
+})
 
       if (result.trim()) {
         const outdated = JSON.parse(result)
@@ -513,14 +503,14 @@ class DependencyMonitor {
   '.')[0]
             const latest = pkgInfo.latest.split(
   '.')[0]
-            return current !== latest // Major version change
-          })
+            return current !== latest // Major version change;
+})
           .map(pkg => ({
-            name: pkg, current: outdated[pkg].current, latest: outdated[pkg].latest
-          }))
+            name: pkg, current: outdated[pkg].current, latest: outdated[pkg].latest;
+}))
 
-      return []
-    } catch (error) {
+      return [];
+} catch (error) {
       return []
 
 
@@ -530,11 +520,11 @@ class DependencyMonitor {
       execSync(
   'npm update', {
         cwd: this.projectRoot, stdio:
-  'inherit'
-      })
+  'inherit';
+})
       this.log(
-  'Safe updates completed')
-    } catch (error) {
+  'Safe updates completed');
+} catch (error) {
       this.log(`Safe updates failed: ${error.message}`, 'WARN')
 
 
@@ -554,19 +544,15 @@ const stats = fs.statSync(filePath);const stats = fs.statSync(filePath)
 
             if (now - stats.mtime.getTime() > maxAge) {
               fs.unlinkSync(filePath)
-              this.log(`Removed old report: ${file}`)
-
-
-
-
-    } catch (error) {
+              this.log(`Removed old report: ${file}`);
+} catch (error) {
       this.log(`Report cleanup failed: ${error.message}`, 'WARN')
 
 
   getStats() {
     return {
-      vulnerabilitiesFound: this.vulnerabilitiesFound, dependenciesUpdated: this.dependenciesUpdated, monitoring: this.monitoring, uptime: process.uptime()
-    }
+      vulnerabilitiesFound: this.vulnerabilitiesFound, dependenciesUpdated: this.dependenciesUpdated, monitoring: this.monitoring, uptime: process.uptime();
+}
 
   async stop() {
     this.log(
@@ -574,8 +560,8 @@ const stats = fs.statSync(filePath);const stats = fs.statSync(filePath)
 
     this.monitoring = false
     this.log(
-  'Dependency monitoring stopped')
-  }
+  'Dependency monitoring stopped');
+}
 }
 
 // Export the class
@@ -598,15 +584,13 @@ if (require.main === module) {
 process.on(
   'SIGINT', async () => {
   if (monitor) {
-    await monitor.stop()
-
+    await monitor.stop();
 })
 
 process.on(
   'SIGTERM', async () => {
   if (monitor) {
-    await monitor.stop()
-
+    await monitor.stop();
 })
 
 // Start the monitor
@@ -616,6 +600,6 @@ const monitor = new DependencyMonitor()
 setInterval(() => {
   // Heartbeat
   const stats = monitor.getStats()
-  monitor.log(`Monitor heartbeat - Vulnerabilities: ${stats.vulnerabilitiesFound}, Dependencies Updated: ${stats.dependenciesUpdated}, Uptime: ${Math.round(stats.uptime)}s`)
-}, 900000) // Every 15 minutes
+  monitor.log(`Monitor heartbeat - Vulnerabilities: ${stats.vulnerabilitiesFound}, Dependencies Updated: ${stats.dependenciesUpdated}, Uptime: ${Math.round(stats.uptime)}s`);
+}, 900000) // Every 15 minutes;
 }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}

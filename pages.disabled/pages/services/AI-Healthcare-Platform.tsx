@@ -814,14 +814,14 @@ const: AIHealthcarePlatform: React.FC: = () => {const [activeTa,b, setActiveTab]
 '
                   tier.popular''
                     ? 'border-green-500 scale-105'''`
-                    : 'border-green-500/20'``
-                }`}
+                    : 'border-green-500/20'``;
+}`}
               >"
                 className={`relative bg-gradient-to-br from-slate-800/80 to-green-800/80 backdrop-blur-sm rounded-2xl p-8 border-2 ${}
                   tier.popular'
                     ? 'border-green-500 scale-105''
-  '`: 'border-green-500/20``
-                }`}
+  '`: 'border-green-500/20``;
+}`}
 
               >"{tier.popular && (""
 

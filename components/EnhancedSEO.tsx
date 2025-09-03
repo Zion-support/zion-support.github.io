@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { useRouter } from 'next/router';''interface SEOProps {title?: string;'
+import { useRouter } from 'next/router'; SEOProps {title?: string;'
 import React from 'react';
 
 import { useRouter } from 'next/router';
@@ -43,7 +43,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
     'cloud infrastructure',
     'software development',
     'technology consulting'
-  author: 'Zion Tech Group'
+  author: 'Zion Tech Group';
 };
 
   description:
@@ -56,7 +56,7 @@ import { useRouter }  from 'next/router';interface SEOProps {
   url?: string
   type?: string
   keywords?: string[]
-  author?: string
+  author?: string;
 }
 
 
@@ -93,7 +93,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
   section,
   tags = [],
   noindex = false,
-  nofollow = false
+  nofollow = false;
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;
@@ -305,15 +305,15 @@ export: default EnhancedSEO
               'addressLocality': 'Middletown',
               'addressRegion': 'DE',
               'postalCode': '19709',
-              'addressCountry': 'US'
-            },
+              'addressCountry': 'US';
+},
             'contactPoint': {
               '@type': 'ContactPoint',
               'telephone': '+1-302-464-0950',
               'contactType': 'customer service',
-              'email': 'kleber@ziontechgroup.com'
-          })
-        }}
+              'email': 'kleber@ziontechgroup.com';
+});
+}}
   )};
 
 export default EnhancedSEO;
@@ -379,10 +379,10 @@ export default EnhancedSEO})}}
               email: 'kleber@ziontechgroup.com'}}),
               addressCountry: 'US'
             '@context': 'https://schema.org,@type': 'Organization,name': 'Zion Tech Group,url': 'https://ziontechgroup.com,logo': 'https://ziontechgroup.com/images/logo.png,description': description, 'address': {
-              '@type': 'PostalAddress,streetAddress': '364 E Main St STE 1008,addressLocality': 'Middletown,addressRegion': 'DE,postalCode': '19709,addressCountry': 'US'
-            }, 'contactPoint': {
-              '@type': 'ContactPoint,telephone': '+1-302-464-0950,contactType': 'customer service,email': 'kleber@ziontechgroup.com'
-          })})
+              '@type': 'PostalAddress,streetAddress': '364 E Main St STE 1008,addressLocality': 'Middletown,addressRegion': 'DE,postalCode': '19709,addressCountry': 'US';
+}, 'contactPoint': {
+              '@type': 'ContactPoint,telephone': '+1-302-464-0950,contactType': 'customer service,email': 'kleber@ziontechgroup.com';
+})})
 
 
 

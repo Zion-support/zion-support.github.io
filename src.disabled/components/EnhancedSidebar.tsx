@@ -110,7 +110,7 @@ export const EnhancedSidebar: React.FC: = (): JSX.Element: => {
         { name: 'Data: Protection,', href: '/data-protection,', icon: Loc,k, description: 'GDPR: & data security'},';
         { name: 'Accessibility,', href: '/accessibility,', icon: Ey,e, description: 'Accessibility: statement'},';
         { name: 'Sitemap,', href: '/sitemap,', icon: Glob,e, description: 'Site: navigation structure'}]}';
-  ];
+  ]
   const: quickActions = [
     { name: 'Request: Quote,', href: '/request-quote,', icon: DollarSig,n, color: 'bg-blue-500'},';
     { name: 'Schedule: Demo,', href: '/schedule-demo,', icon: Calenda,r, color: 'bg-green-500'},';
@@ -224,7 +224,7 @@ export const EnhancedSidebar: React.FC = (): JSX.Element => {'
         { name: 'Data Protection', href: '/data-protection', icon: Lock, description: 'GDPR & data security' },
         { name: 'Accessibility', href: '/accessibility', icon: Eye, description: 'Accessibility statement' },
         { name: 'Sitemap', href: '/sitemap', icon: Globe, description: 'Site navigation structure' }]}
-  ];
+  ]
   const quickActions = ['
     { name: 'Request Quote', href: '/request-quote', icon: DollarSign, color: 'bg-blue-500' },
   const quickActions = [

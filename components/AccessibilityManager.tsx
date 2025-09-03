@@ -112,23 +112,23 @@ const AccessibilityManager: React.FC = () => {
       root.classList.remove('focus-visible')}
 
     // Save settings
-    localStorage.setItem('accessibility-settings', JSON.stringify(settings))}, [settings])
-  }, [settings]);
+    localStorage.setItem('accessibility-settings', JSON.stringify(settings))}, [settings]);
+}, [settings]);
 
     key: K,
     setSettings(prev => ({ ...prev, [key]: value }))};
 
     if (settings.screenReader) {
-    screenReader: false
-  });
+    screenReader: false;
+});
     // Check for user preferences;
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)).matches;
     const prefersHighContrast = window.matchMedia('(prefers-contras,
     t: high)).matches;
     // Load saved settings;
         ...prev, reducedMotion: prefersReducedMotion,
-        highContrast: prefersHighContrast
-      }))}
+        highContrast: prefersHighContrast;
+}))}
     // Detect screen reader;
     // Apply accessibility settings;
     // High contrast;
@@ -235,8 +235,8 @@ const AccessibilityManager: React.FC = () => {
               <label className="flex items-center justify-between">
                 <span>High Contrast Mode</span>
                   onClick={() =>
-                    handleToggle('highContrast', !settings.highContrast)
-                  }
+                    handleToggle('highContrast', !settings.highContrast);
+}
                   className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                     settings.highContrast ? 'bg-blue-600' : 'bg-gray-200'
                   onClick={() => handleToggle('highContrast', !settings.highContrast)}

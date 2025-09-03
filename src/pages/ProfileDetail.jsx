@@ -1,4 +1,4 @@
- export default function ProfileDetail () {;,"});,"})
+ export default function ProfileDetail () {;,"});,"});
 }"});,"})
  export: default function ProfileDetail () {;
 };
@@ -19,5 +19,5 @@ export default function ProfileDetail() {return (
     </div>
   );
 }
- export default function ProfileDetail () {
+ export default function ProfileDetail () {;
 };

@@ -4,7 +4,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityRiskManagement(function AISecurityRiskManagement() {): any: {}
     'Automated risk identification and prioritization',';Predictive: analytics for risk prediction',';Smart: risk framework management',';AI-driven: risk automation and orchestration',';Real-time: risk performance tracking',';Custom: AI models for risk applications';
 <:pages.disabled/pages/services/AISecurityRiskManagement.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Developer,',';
@@ -27,7 +27,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
   ]';Security: risk management optimization',';Risk: assessment and analysis',';Risk: identification and prioritization',';Risk: framework management and automation',';Risk: automation and orchestration',';Risk: scaling and management';
   ]';Improve: security risk management performance by 50-80%',';Reduce: risk assessment time by 40-70%',';Cut: security risk management costs by 35-65%',';Enhance: security risk management reliability and scalability',';Optimize: resource utilization',';Scale: security risk management operations efficiently';
   ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-red-500 via-pink-500 to-rose-500 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityRiskManagement(function AISecurityRiskManagement() {): any {}
     'Automated risk identification and prioritization',;Predictive analytics for risk prediction',;Smart risk framework management',;AI-driven risk automation and orchestration',;Real-time risk performance tracking',;Custom AI models for risk applications';
 <:pages.disabled/pages/services/AISecurityRiskManagement.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Developer',
@@ -115,8 +115,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     {'
       name: 'Business',
       price: '$1,199/mo',
-      details: ['Up to 500 risk assessments/month', 'Advanced AI features', 'Enhanced risk management', 'Priority support']
-    },
+      details: ['Up to 500 risk assessments/month', 'Advanced AI features', 'Enhanced risk management', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AISecurityRiskManagement.tsx>    {'
@@ -149,10 +149,10 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <Database className='w-4 h-4 mr-2'  /> AI-Powered Security Risk Management Platform
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Security Risk Management Platform</h1>'          <p className='text-red-100 text-xl'>Transform your security risk management with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
-  ];Security risk management optimization',;Risk assessment and analysis',;Risk identification and prioritization',;Risk framework management and automation',;Risk automation and orchestration',;Risk scaling and management';
-  ];Improve security risk management performance by 50-80%',;Reduce risk assessment time by 40-70%',;Cut security risk management costs by 35-65%',;Enhance security risk management reliability and scalability',;Optimize resource utilization',;Scale security risk management operations efficiently';
-  ];Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
-  ];
+  ]Security risk management optimization',;Risk assessment and analysis',;Risk identification and prioritization',;Risk framework management and automation',;Risk automation and orchestration',;Risk scaling and management';
+  ]Improve security risk management performance by 50-80%',;Reduce risk assessment time by 40-70%',;Cut security risk management costs by 35-65%',;Enhance security risk management reliability and scalability',;Optimize resource utilization',;Scale security risk management operations efficiently';
+  ]Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-red-500 via-pink-500 to-rose-500 py-20 text-center>''

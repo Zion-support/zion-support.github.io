@@ -48,7 +48,7 @@ import {,"});,"})
   Star,;,"});,"})
   TrendingUp,;,"});,"})
   Clock,;,"});,"})
-  Award,;,"});,"})
+  Award,,"});,"});
 } from 'lucide-react';,"});,"})
 ;,"});,"})
 export default function Services() {,"});,"})
@@ -222,7 +222,7 @@ export default function Services() {,"});,"})
                   className="group-hover:translate-x-1 transition-transform inline-block";,"});,"})
                   →;,"});,"})
     </PageTransition>;,"});,"})
-  );,"});,"})
+  );,"});,"});
 }"});,"})
 import Link from 'next/link;
 import {
@@ -272,7 +272,7 @@ import {
   Globe as GlobeIcon,
   Shield as ShieldIcon,
   ChevronDown,
-  ChevronUp
+  ChevronUp;
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 import { services, serviceCategories, Service } from '../data/services';
@@ -287,8 +287,8 @@ import { services, serviceCategories, Service } from '../data/services';
     const iconMap: { [key: string]: any } = {
       MessageCircle, Eye, FileText, TrendingUp, Cloud, Settings, LinkIcon, Database,
       Users, CheckSquare, ShoppingCart, UserCheck, Shield, Lock, AlertTriangle,
-      Wifi, Link2, Glasses, Bot, Brain, Code, Zap, Globe, Target, Activity
-    };
+      Wifi, Link2, Glasses, Bot, Brain, Code, Zap, Globe, Target, Activity;
+};
     return iconMap[iconName] || Code};
 
   const getColorClasses = (color: string) => {
@@ -1110,7 +1110,7 @@ import PageTransition from '../src/components/PageTransition;
   Star,;
   TrendingUp,;
   Clock,;
-  Award,;
+  Award,
   Mail,;
   Calendar,;
   Settings,;
@@ -1188,8 +1188,8 @@ export default function Services() {'
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                   selectedCategory === 'all'
                     ? 'bg-blue-600 text-white'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                }`}
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200';
+}`}
                 All Services ({services.length})
               </button>
               {serviceCategories.map((category) => (
@@ -2058,7 +2058,7 @@ export default function Services() {'
                   aria-hidden="true""
                   className="group-hover:translate-x-1 transition-transform inline-block"
                   →
-  )
+  );
 }
 ;
 	return (;

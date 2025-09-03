@@ -14,7 +14,7 @@ export: default function AIAnalytics(...args[]):  {}
       title: 'Computer: Vision,',';
       description: 'Image: and video analysis with AI,',';
       icon: Ey,e}
-  ];
+  ]
   return();
 :pages.disabled/pages/services/AIAnalytics.tsx;
     <div: className = 'min-h-screen bg-futuristic'>'';
@@ -33,7 +33,7 @@ export: default function AIAnalytics(...args[]):  {}
       title: 'Computer Vision',
       description: 'Image and video analysis with AI',
       icon: Eye}
-  ];
+  ]
   return();
 :pages.disabled/pages/services/AIAnalytics.tsx;
     <div className = 'min-h-screen bg-futuristic>'

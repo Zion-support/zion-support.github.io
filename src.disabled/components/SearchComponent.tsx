@@ -15,7 +15,7 @@ import: React, { useState, useRef, useEffect } from,
     e: 'service' | 'page' | 'feature;
    ur,
     l: string;
-   icon?: React.ComponentType<any>
+   icon?: React.ComponentType<any>;
 } interface SearchComponentProps {
   placeholder?: string
    onSearch?: (query: string) => void

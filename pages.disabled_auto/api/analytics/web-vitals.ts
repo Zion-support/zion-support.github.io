@@ -64,8 +64,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/api/analytics/web-vita
       metric: data.name,
       value: data.value});
   } catch (error) {
-ursor/automate-test-fix-improve-and-merge-code-99d1:pages/api/analytics/web-vitals.ts
-  }
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/api/analytics/web-vitals.ts;
+}
 }
     // Validate required fields;
     if (!data.name || typeof data.value !==, number') {';

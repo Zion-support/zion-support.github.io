@@ -11,7 +11,7 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
     // Preload critical resources
     const preloadCriticalResources = () => {
       const criticalFonts = ['https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap'
-      ];
+      ]
       
       criticalFonts.forEach(font => {
         const link = document.createElement('link');
@@ -47,16 +47,16 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
         })} { rootMargin: '50px' }
 
 ;,"});,"})
-import { useEffect } from 'react';''interface PerformanceOptimizerProps {,"});,"})
-  children: React.ReactNode;,"});,"})
+import { useEffect } from 'react'; PerformanceOptimizerProps {,"});,"})
+  children: React.ReactNode;,"});,"});
 }export const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({ children }) => {,"});,"})
   useEffect ( () => {,"});,"})
     // Preload critical resources;,"});,"})
 const preloadCriticalResources = () => {,"});,"})
       const criticalFonts = [,"});,"})
-        'https: //fonts.googleapis.com / css2?family = Orbitron:wght@400;600 & display = swap''      ];'criticalFonts.forEach (font => {,"});,"})
-        const link = document.createElement ('link') ;'        link.rel = 'preload';'        link.as = 'style';'        link.href = font;'        document.head.appendChild (link) }) ;,"});,"})
-    };,"});,"})
+        'https: //fonts.googleapis.com / css2?family = Orbitron:wght@400;600 & display = swap''      ]'criticalFonts.forEach (font => {,"});,"})
+        const link = document.createElement ('link') ;'        link.rel = 'preload';'        link.as = 'style';'        link.href = font;'        document.head.appendChild (link) }) ;,"});,"});
+};,"});,"})
     // Optimize images;,"});,"})
 const optimizeImages = () => {,"});,"})
       const images = document.querySelectorAll ('img') ;'      images.forEach (img => {'        if (!img.loading) {,"});,"})
@@ -70,28 +70,28 @@ const observer = new IntersectionObserver ( (entries) => {,"});,"})
           if (entry.isIntersecting) {,"});,"})
             const target = entry.target as HTMLElement;,"});,"})
             if (target.dataset.src) {,"});,"})
-target.style.backgroundImage = `url (${target.dataset.src}) `;`              target.removeAttribute ('data - src') ;'              observer.unobserve (target) ;'            };,"});,"})
-        }) ;,"});,"})
-      } { rootMargin: '50px' }') ;'// Observe lazy load elements;,"});,"})
+target.style.backgroundImage = `url (${target.dataset.src}) `;`              target.removeAttribute ('data - src') ;'              observer.unobserve (target) ;'            };,"});,"});
+}) ;,"});,"});
+} { rootMargin: '50px' }') ;'// Observe lazy load elements;,"});,"})
     const lazyElements = document.querySelectorAll ('[data - src]') ;'    lazyElements.forEach (el => observer.observe (el) ) ;'return () => {,"});,"})
-      observer.disconnect () ;,"});,"})
-  }, []) ;,"});,"})
+      observer.disconnect () ;,"});,"});
+}, []) ;,"});,"})
 import { useEffect } from 'react';,"});,"})
 export default function Page() {,"});,"})
-interface PerformanceOptimizerProps { children: React.ReactNode;,"});,"})
- }"});,"})
+interface PerformanceOptimizerProps { children: React.ReactNode;,"});,"});
+}"});,"})
 export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {,"});,"})
   useEffect(() => {,"});,"})
     // Preload critical resources;,"});,"})
       const criticalFonts = ['https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap';,"});,"})
-      ];,"});,"})
+      ],"});,"})
       criticalFonts.forEach(font => {,"});,"})
         const link = document.createElement('link');,"});,"})
         link.rel = 'preload';,"});,"})
         link.as = 'style';,"});,"})
         link.href = font;,"});,"})
-        document.head.appendChild(link);,"});,"})
-      });,"});,"})
+        document.head.appendChild(link);,"});,"});
+});,"});,"})
     // Optimize images;,"});,"})
       const images = document.querySelectorAll('img');,"});,"})
       images.forEach(img => {,"});,"})
@@ -108,16 +108,16 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
             if(target.dataset.src) {,"});,"})
               target.style.backgroundImage = `url(${target.dataset.src})`;,"});,"})
               target.removeAttribute('data-src');,"});,"})
-              observer.unobserve(target);,"});,"})
-      },;,"});,"})
+              observer.unobserve(target);,"});,"});
+},;,"});,"})
       { rootMargin: '50px'  }"});,"})
     );,"});,"})
     // Observe lazy load elements;,"});,"})
     const lazyElements = document.querySelectorAll('[data-src]');,"});,"})
     lazyElements.forEach(el => observer.observe(el));,"});,"})
     return () => {,"});,"})
-      observer.disconnect();,"});,"})
-  }, []);,"});,"})
+      observer.disconnect();,"});,"});
+}, []);,"});,"})
   return <>{children}</>;,"});,"})
 import { useEffect } from 'react';interface PerformanceOptimizerProps {
    children: React.ReactNode}export const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({ children }) => {
@@ -129,7 +129,7 @@ import {useEffect } from 'react'';interface PerformanceOptimizerProps {'
     // Preload critical resources;
 const preloadCriticalResources = () => {""
       const criticalFonts = [';https: //fonts.googleapis.com / css2?family = Orbitro,
-    n:wght@400;600 & display = swap''      ];criticalFonts.forEach (font => {""
+    n:wght@400;600 & display = swap''      ]criticalFonts.forEach (font => {""
         const link = document.createElement ('link') '        link.rel = 'preload'        link.as = 'style'        link.href = font'        document.head.appendChild (link) })}
     // Optimize images;
 const optimizeImages = () => {'
@@ -171,18 +171,18 @@ const observer = new IntersectionObserver ( (entries) => {
             if (target.dataset.src) {
 target.style.backgroundImage = `url (${target.dataset.src}) `              target.removeAttribute ('data - src') '              observer.unobserve (target) '            }
         })} { rootMargin: '50px'   }') ';// Observe lazy load elements;
-    const lazyElements = document.querySelectorAll ('[data - src]') '    lazyElements.forEach (el => observer.observe (el) ) 'return () => {
-        })} { rootMargin: '50px' }') ';// Observe lazy load elements;
+    const lazyElements = document.querySelectorAll ('[data - src]') '    lazyElements.forEach (el => observer.observe (el) ) 'return () => {;
+})} { rootMargin: '50px' }') ';// Observe lazy load elements;
     const lazyElements = document.querySelectorAll ('[data - src]') '    lazyElements.forEach (el => observer.observe (el) ) ';return () => {
       observer.disconnect () }
   }, []) ;
-  return <>{children}</>
+  return <>{children}</>;
 };
   return <>{children}</>;
 const observer = new IntersectionObserver ( (entries) => {entries.forEach (entry => {
     // Set up intersection observer for lazy loading;&apos;
-            if (target.dataset.src) {""
-          }","
+            if (target.dataset.src) {"";
+}",";
 })} { rootMargin: '50px' }) ';// Observe lazy load elements;""
     const lazyElements = document.querySelectorAll ('[data - src]) '    lazyElements.forEach (el => observer.observe (el) ) ';return () => {
           if (entry.isIntersecting) {}}}
@@ -199,16 +199,16 @@ target.style.backgroundImage = `url (${target.dataset.src}) `              targe
       observer.disconnect()}}, []);
 
   return <>{children}</>}}})} { rootMargin: &apos;50px&apos}&apos;) ';// Observe lazy load elements;&apos;&apos;
-    const lazyElements = document.querySelectorAll (&apos [data - src]&apos;) &apos;    lazyElements.forEach (el => observer.observe (el) ) ';return () => {
-  }, []) 
+    const lazyElements = document.querySelectorAll (&apos [data - src]&apos;) &apos;    lazyElements.forEach (el => observer.observe (el) ) ';return () => {;
+}, []) 
   return&apos;&apos; <>{children}</>
 "``
             const target = entry.target as HTMLElement;""
-target.style.backgroundImage = `url (${target.dataset.src}) `              target.removeAttribute ('data - src') '              observer.unobserve (target) '            }", "
+target.style.backgroundImage = `url (${target.dataset.src}) `              target.removeAttribute ('data - src') '              observer.unobserve (target) '            }", ";
 }","})} { rootMargin: '50px' }') ';// Observe lazy load elements;""
             const target = entry.target as HTMLElement;"
-            if (target.dataset.src) {"
-          }"})} {rootMargin: '50px' }') ';// Observe lazy load elements;"
+            if (target.dataset.src) {";
+}"})} {rootMargin: '50px' }') ';// Observe lazy load elements;"
     const lazyElements = document.querySelectorAll ('[data - src]') '    lazyElements.forEach (el => observer.observe (el) ) ';return () => {observer.disconnect () }
 target.style.backgroundImage = `url (${target.dataset.src}) `              target.removeAttribute ('data - src') '              observer.unobserve (target) '            }"},})} { rootMargin: '50px' }') ';// Observe lazy load elements;"
   return <>{children}</>}"`"

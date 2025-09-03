@@ -187,8 +187,8 @@ function findHtmlFiles(dir) {;
 ;
     if (stat.isDirectory()) {;
       files.push(...findHtmlFiles(fullPath));
-    } else if (item.endsWith(`.html')) {
-    } else if (item.endsWith('.html')) {;
+    } else if (item.endsWith(`.html')) {;
+} else if (item.endsWith('.html')) {;
       files.push(fullPath);
     }
   }

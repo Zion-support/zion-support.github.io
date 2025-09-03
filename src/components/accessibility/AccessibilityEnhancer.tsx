@@ -97,10 +97,10 @@ export const AccessibilityEnhancer: React.FC = () => {
           headings});
         const isGoodAccessibility = altTexts >= images.length * 0.8 && headings >= 3;
         setIsAccessible(isGoodAccessibility)}
-          headings
-        });
-
-    };
+          headings;
+});
+;
+};
 
     checkAccessibility();
     
@@ -203,8 +203,8 @@ export const AccessibilityEnhancer: React.FC = () => {
       modals.forEach(modal => {
         if (!modal.getAttribute(&apos;aria-modal&apos;)) {
           modal.setAttribute(&apos;aria-modal&apos;, &apos;true&apos;)}
-
-  };&apos};
+;
+};&apos};
 
   const toggleHighContrast = () => {
     setHighContrast(!highContrast);
@@ -310,7 +310,7 @@ export const AccessibilityEnhancer: React.FC = () => {
       <div className="space-y-2">"
         <button onClick={toggleHighContrast}``
           className={`w-full text-xs py-1 px-2 rounded transition-colors ${""
-            highContrast ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300',``
+            highContrast ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300',``;
 }`}" >""
           {highContrast ? 'Disable' : 'Enable'} High Contrast
         </button>
@@ -333,7 +333,7 @@ export const AccessibilityEnhancer: React.FC = () => {
       <div className="space-y-2">`
         <button onClick={toggleHighContrast}`"`"
           className={`w-full text-xs py-1 px-2 rounded transition-colors ${"`"
-            highContrast ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300', `",`"
+            highContrast ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300', `",`";
 }`}"" >""
         <button onClick={toggleLargeText}`"`"
             largeText ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300', `",`"

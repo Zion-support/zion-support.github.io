@@ -99,7 +99,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
     { name: 'Event Management', href: '/solutions/event-management', icon: Calendar },
     { name: 'Project Management', href: '/solutions/project-management', icon: BarChart3 },
     { name: 'Workflow Automation', href: '/solutions/workflow-automation', icon: Zap }
-  ];
+  ]
 
   const resources = [
   { name: 'Documentation', href: '/docs', icon: FileText },
@@ -129,7 +129,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   { icon: Phone, text: '+1 302 464 0950', href: 'tel:+13024640950' },
     { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
     { icon: MapPin, text: '364 E Main St STE 1008, Middletown DE 19709', href: '#' }
-  ];
+  ]
 
   const socialLinks = [
   { icon: Linkedin, href: '#', label: 'LinkedIn' },
@@ -170,8 +170,8 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                 className={`flex items-center space-x-3 py-2 px-3 rounded-lg transition-colors ${
                   router.pathname === item.href
                     ? 'bg-blue-100 text-blue-600'
-                    : 'text-gray-600 hover:text-blue-600 hover:bg-gray-50'
-                }`}
+                    : 'text-gray-600 hover:text-blue-600 hover:bg-gray-50';
+}`}
               >
                 <item.icon className="w-4 h-4" />
                 <span className="text-sm">{item.name}</span>
@@ -240,8 +240,8 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                   className={`flex items-center space-x-3 py-2 px-3 rounded-lg transition-colors ${
                     router.pathname === item.href
                       ? 'bg-blue-100 text-blue-600'
-                      : 'text-gray-600 hover:text-blue-600 hover:bg-gray-50'
-                  }`}
+                      : 'text-gray-600 hover:text-blue-600 hover:bg-gray-50';
+}`}
                 >
                   <item.icon className="w-4 h-4" />
                   <span className="text-sm">{item.name}</span>

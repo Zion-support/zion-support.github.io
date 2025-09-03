@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';''interface SEOProps {title: string;'
+import { Helmet } from 'react-helmet-async'; SEOProps {title: string;'
   description: string;
 ursor/automate-test-fix-improve-and-merge-code-99d1
 import Head from 'next/head';
@@ -55,7 +55,7 @@ title, description,
   tags = [],
   noindex = false,
   nofollow = false,
-  canonical
+  canonical;
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`;
@@ -72,8 +72,8 @@ title, description,
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Delaware',
-      addressCountry: 'US'
-    },
+      addressCountry: 'US';
+},
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+1-302-464-0950',
@@ -95,7 +95,7 @@ title, description,
       'Blockchain Solutions',
       'IoT Intelligence'
     ]
-  };
+};
 
   return (
     <Head>
@@ -173,7 +173,7 @@ title, description,
               'https: //twitter.com/ziontechgroup,',';
               'https: //github.com/ziontechgroup'';
          })
-  siteName = 'Zion Tech Group'
+  siteName = 'Zion Tech Group';
 }) => {'
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;`
   siteName = 'Zion Tech Group'}) => {
@@ -338,8 +338,8 @@ title, description,
       
       {/* Structured Data */}
       {structuredData && (
-            __html: JSON.stringify(structuredData)
-          }}
+            __html: JSON.stringify(structuredData);
+}}
         />
       
       {/* Default Organization Structured Data */}
@@ -354,8 +354,8 @@ title, description,
               "telephone": "+1-302-464-0950",
               "email": "contact@ziontechgroup.com"
               "https://twitter.com/ziontechgroup",
-              "https://github.com/ziontechgroup"
-          })})
+              "https://github.com/ziontechgroup";
+})})
     </Head>
   )};
 export default SEO

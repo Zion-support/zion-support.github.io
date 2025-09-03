@@ -41,6 +41,6 @@ describe('Signup', () => {"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
 "
     render(<Signup /" >)
-    // Add more specific tests here
+    // Add more specific tests here;
 });
 })

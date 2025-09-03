@@ -40,8 +40,8 @@ const ModernNavigation = () => {const [isOpen, setIsOpen] = useState(false);
       dropdown: [
         { name: 'AI Solutions', href: '/ai-services', icon: Brain, description: 'Cutting-edge AI services' } {name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Scalable infrastructure' } {name: 'Cybersecurity', href: '/services/ai-compliance-copilot', icon: Shield, description: 'Advanced security' } {name: 'Edge & IoT', href: '/services/edge-computing-platform', icon: Zap, description: 'IoT solutions' } {name: 'Digital Transformation', href: '/it-services', icon: Users, description: 'Business transformation' }
       ]
-    } {name: 'About', href: '/about' } {name: 'Contact', href: '/contact' }
-  ];
+} {name: 'About', href: '/about' } {name: 'Contact', href: '/contact' }
+  ]
 
   const contactInfo = ['
     { icon: Phone, text: '+1 302 464 0950', href: 'te,
@@ -56,8 +56,8 @@ const ModernNavigation = () => {const [isOpen, setIsOpen] = useState(false);
 
   return ('
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${`
-      isScrolled ? 'bg-gray-900/95 backdrop-blur-md border-b border-cyan-400/20' : 'bg-transparent''
-    }`}>`
+      isScrolled ? 'bg-gray-900/95 backdrop-blur-md border-b border-cyan-400/20' : 'bg-transparent'';
+}`}>`
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
         <div className="flex items-center justify-between h-16 lg:h-20">"
           <Link to="/" className="flex items-center space-x-2 group">"
@@ -88,8 +88,8 @@ const ModernNavigation = () => {const [isOpen, setIsOpen] = useState(false);
                     >
                       <span>{item.name}</span>"
                       <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${`
-                        activeDropdown === item.name ? 'rotate-180' : '''
-                      }`} />
+                        activeDropdown === item.name ? 'rotate-180' : ''';
+}`} />
                     </button>
                     <AnimatePresence>
                       {activeDropdown === item.name && (
@@ -132,8 +132,8 @@ const ModernNavigation = () => {const [isOpen, setIsOpen] = useState(false);
                 ) : (
                     to={item.href}"
                     className={`text-gray-300 hover:text-cyan-300 transition-colors duration-200 py-2 ${`
-                      location.pathname === item.href ? 'text-cyan-400' : '''
-                    }`}
+                      location.pathname === item.href ? 'text-cyan-400' : ''';
+}`}
                   <Link to={item.href} className={`text-gray-300 hover: text-cyan-300 transition-colors duration-200 py-2 ${ location.pathname === item.href ? 'text-cyan-400' : '' }`} >
                     {item.name}
 `

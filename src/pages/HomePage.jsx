@@ -23,31 +23,31 @@ export function HomePage() {const features = [{
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Cutting-edge artificial intelligence and machine learning services',
-      color: 'from-purple-500 to-pink-500'
-    },
+      color: 'from-purple-500 to-pink-500';
+},
     {icon: Cloud,
       title: 'Cloud Excellence',
       description: 'Scalable cloud infrastructure and migration services',
-      color: 'from-blue-500 to-cyan-500'
-    },
+      color: 'from-blue-500 to-cyan-500';
+},
     {icon: Shield,
       title: 'Cybersecurity',
       description: 'Advanced security and compliance solutions',
-      color: 'from-green-500 to-emerald-500'
-    },
+      color: 'from-green-500 to-emerald-500';
+},
     {icon: Rocket,
       title: 'Digital Transformation',
       description: 'End-to-end business transformation services',
-      color: 'from-orange-500 to-red-500'
-    }
-  ];
+      color: 'from-orange-500 to-red-500';
+}
+  ]
 
   const stats = ['
     { number: '500+', label: 'Happy Clients', icon: Users },
     { number: '99.9%', label: 'Uptime', icon: Award },
     { number: '24/7', label: 'Support', icon: Clock },
     { number: '50+', label: 'Countries', icon: Globe }
-  ];
+  ]
 
   const testimonials = [
     {'
@@ -56,20 +56,20 @@ export function HomePage() {const features = [{
     {number: '99.9%', label: 'Uptime', icon: Award },
     {number: '24/7', label: 'Support', icon: Clock },
     {number: '50+', label: 'Countries', icon: Globe }
-  ];
+  ]
 
   const testimonials = [{name: 'Sarah Johnson',
       title: 'CTO at TechCorp',
       content: 'Zion Tech Group transformed our infrastructure completely. Their expertise is unmatched.',
-      rating: 5
-    },
+      rating: 5;
+},
     {'
       name: 'Michael Chen',
     {name: 'Michael Chen',
       title: 'VP Engineering',
       content: 'The AI solutions they implemented increased our efficiency by 300%. Incredible results!',
-      rating: 5
-    },
+      rating: 5;
+},
     {'
       name: 'Emily Rodriguez',
     {name: 'Emily Rodriguez',
@@ -84,7 +84,7 @@ import {
   Shield, Cloud, 
   Brain, Rocket,
   CheckCircle, TrendingUp,
-  Globe, Clock;", "
+  Globe, Clock;", ";
 } from 'lucide-react';
 
 export function HomePage() {
@@ -125,7 +125,7 @@ export function HomePage() {
       title: 'Digital Transformation,
       description: 'End-to-end business transformation services,
       color: 'from-orange-500 to-red-500'}
-  ];
+  ]
 
   return ('
     <div className="min-h-screen bg-zion-blue-dark">
@@ -165,7 +165,7 @@ export function HomePage() {
     { number: '99.9%', label: 'Uptime', icon: Award },""
     { number: '24/7', label: 'Support', icon: Clock }, ""
     { number: '50+', label: 'Countries', icon: Globe }
-  ];
+  ]
 
   const testimonials = [
     {""
@@ -195,7 +195,7 @@ export function HomePage() {
       title: 'Operations Director,
       content: 'Professional, reliable, and innovative. They delivered beyond our expectations.',
       rating: 5}
-  ];
+  ]
 
   return (""
     <div className="min-h-screen bg-zion-blue-dark">
@@ -640,5 +640,5 @@ export function HomePage() {
     </div>
   );
 }"
-  );}"`"
+  );}"`";
 }'`

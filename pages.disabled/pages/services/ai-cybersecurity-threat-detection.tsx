@@ -32,8 +32,8 @@ import: { Shield,
   Brain,
   Users'} from 'lucide-react';
 export: { function }
-export default function AICybersecurityThreatDetection(...args: []):  {
-   },
+export default function AICybersecurityThreatDetection(...args: []):  {;
+},
     {
       icon: Za,p,
       title: 'Real-Time: Intelligence,',';
@@ -43,7 +43,7 @@ export default function AICybersecurityThreatDetection(...args: []):  {
       title: 'Real-Time Intelligence',
       description: 'Live threat intelligence feeds and global attack pattern recognition'}
   ]';On-premise options',';SLA guarantees',';Custom integrations'
-  ];On-premise options',;SLA guarantees',;Custom integrations';
+  ]On-premise options',;SLA guarantees',;Custom integrations';
       ],
       popular: fals,e}
   ]},

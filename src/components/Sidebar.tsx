@@ -31,7 +31,7 @@ export const Sidebar: React.FC = () => {,"});,"})
             <li><a href="/contact" className="hover:text-blue-600">Contact</a></li>;,"});,"})
       </nav>;,"});,"})
     </aside>;,"});,"})
-  );,"});,"})
+  );,"});,"});
 };,"});,"})
 import { Link } from 'react-router-dom';';
 import {
@@ -43,7 +43,7 @@ import { Link } from 'react-router-dom';
   Database,;
   Network,;
   Users,;
-  Award,;
+  Award,
   ShoppingCart,;
   HelpCircle,;
   ChevronRight} from 'lucide-react';
@@ -69,7 +69,7 @@ export const Sidebar: React.FC = () => {
       icon: Network,;
       links: [ { name: 'Network Solutions', href: '/services/network-solutions' }, { name: 'IoT Edge Computing', href: '/services/iot-edge-computing' }, { name: 'Digital Twin Platform', href: '/services/digital-twin' }, { name: 'Smart City Infrastructure', href: '/services/ai-smart-city-infrastructure-management' }
       ]}
-  ];
+  ]
   const companyLinks = [ { name: 'About Us', href: '/about', icon: Users }, { name: 'Our Team', href: '/team', icon: Award }, { name: 'Careers', href: '/careers', icon: Users }, { name: 'Partners', href: '/partners', icon: Award }, { name: 'Contact', href: '/contact', icon: HelpCircle }
   const marketplaceLinks = [ { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart }, { name: 'Products', href: '/marketplace/products', icon: ShoppingCart }, { name: 'Talent', href: '/marketplace/talent', icon: Users }, { name: 'Equipment', href: '/marketplace/equipment', icon: Network }
   return(;
@@ -94,7 +94,7 @@ export const Sidebar: React.FC = () => {
 import {Brain, Cloud,
   Shield, Code,
   Database, Network,;
-  Users, Award,;
+  Users, Award,
   ShoppingCart, HelpCircle,;
 import { Link } from &apos;react-router-dom';
   Brain,
@@ -193,7 +193,7 @@ export const Sidebar: React.FC = () => {}
       ]} { title: 'Infrastructure',
       icon: Network, links: [
         { name: 'Network Solutions', href: '/services/network-solutions' } { name: 'IoT Edge Computing', href: '/services/iot-edge-computing' } { name: 'Digital Twin Platform', href: '/services/digital-twin' } { name: 'Smart City Infrastructure', href: '/services/ai-smart-city-infrastructure-management' }
-  ];&apos;
+  ]&apos;
   const companyLinks = [
     { name: &apos;About Us&apos;, href: &apos;/about&apos;, icon: Users } { name: &apos;Our Team&apos;, href: &apos;/team&apos;, icon: Award } { name: &apos;Careers&apos;, href: &apos;/careers&apos;, icon: Users } { name: &apos;Partners&apos;, href: &apos;/partners&apos;, icon: Award } { name: &apos;Contact&apos;, href: &apos;/contact&apos;, icon: HelpCircle }
   const marketplaceLinks = [

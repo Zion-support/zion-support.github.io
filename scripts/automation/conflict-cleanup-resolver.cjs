@@ -248,8 +248,8 @@ this.log(`✅ Resolved conflicts in: ${filePath}`);
       this.cleanupStats.conflictsResolved++;
     } catch (error) {  
       this.log(❌ Failed to resolve conflicts in ${filePath  }: ${error.message}`,
-        `ERROR`
-    } catch (error) {;
+        `ERROR`;
+} catch (error) {;
       this.log(❌ Failed to resolve conflicts in ${filePath}: ${error.message}',;
         'ERROR';
       );
@@ -416,8 +416,8 @@ this.log(`✅ Resolved conflicts in: ${filePath}`);
         .split('\n')
         .filter(line => line.startsWith('DD '))
         .map(line => line.substring(3));
-    } catch (error) {  
-        } catch (error) {;
+    } catch (error) {  ;
+} catch (error) {;
           this.log(⚠️ Failed to remove deleted file ${file}: ${error.message}',;
             'WARN';
           );
@@ -453,7 +453,7 @@ this.log(`✅ Resolved conflicts in: ${filePath}`);
       this.log('✅ Added all resolved files');
 
       // Commit the merge;
-      execSync('git commit -m "Auto-resolve merge conflicts and cleanup"', {
+      execSync('git commit -m "Auto-resolve merge conflicts and cleanup", {
         stdio: 'pipe'});
       this.log('✅ Committed merge resolution');
 
@@ -496,7 +496,7 @@ if (require.main === module) {
       this.log('✅ Added all resolved files');
 ;
       // Commit the merge;
-      execSync('git commit -m "Auto-resolve merge conflicts and cleanup"', {;
+      execSync('git commit -m "Auto-resolve merge conflicts and cleanup", {;
         stdio: 'pipe',;
       });
       this.log('✅ Committed merge resolution');

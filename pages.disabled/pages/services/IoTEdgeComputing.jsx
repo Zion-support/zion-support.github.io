@@ -187,13 +187,13 @@ export default function IoTEdgeComputingServices() {
 export default function IoTEdgeComputingServices() {}
   const industries = ['
     'Smart Cities & Municipalities',Manufacturing & Industry 4.0',Healthcare & Medical Devices',Agriculture & Precision Farming',Energy & Utilities',Transportation & Logistics',Retail & Smart Stores',Building Management & Smart Homes'
-  ];
+  ]
   const technologies = ['
     'LoRaWAN & NB-IoT',5G & Edge Computing',MQTT & CoAP Protocols',Kubernetes & Docker',Apache Kafka & Spark',TensorFlow Lite & ONNX',AWS IoT & Azure IoT',Google Cloud IoT & IBM Watson'
-  ];
+  ]
   const benefits = ['
     'Real-time data processing and insights',Reduced latency and improved performance',Lower bandwidth and cloud costs',Enhanced security and privacy',Scalable IoT deployments',Predictive maintenance and optimization'
-  ];
+  ]
   const useCases = []
     {}
       title: 'Smart Manufacturing',
@@ -219,7 +219,7 @@ export default function IoTEdgeComputingServices() {}
         'Precision farming, crop monitoring, irrigation control, and livestock management.',
       roi: '15-30% yield improvement',
       implementation: '6-10 weeks'}
-  ];
+  ]
   return()
     <div className="min-h-screen bg-background">
       <SEO""
@@ -1469,14 +1469,12 @@ export default function IoTEdgeComputingServices() {}
       </section>
     </div>
   );
-:pages.disabled/pages/services/IoTEdgeComputing.jsx
-
+:pages.disabled/pages/services/IoTEdgeComputing.jsx;
 }
   '"
-'"'"
-
+'"'";
 }'"
-'"'"
+'"'";
 }
 '""
 :pages.disabled/pages/services/IoTEdgeComputing.js,x}

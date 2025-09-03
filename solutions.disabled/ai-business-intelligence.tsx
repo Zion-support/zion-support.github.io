@@ -11,27 +11,27 @@ export default function AIBusinessIntelligence() {
       icon: BarChart3,
       title: 'Data Analytics & Visualization',
       description: 'Transform raw data into actionable insights with advanced analytics and interactive dashboards.',
-      features: ['Real-time Dashboards', 'Predictive Analytics', 'Data Visualization', 'KPI Monitoring']
-    },
+      features: ['Real-time Dashboards', 'Predictive Analytics', 'Data Visualization', 'KPI Monitoring'];
+},
     {
       icon: Brain,
       title: 'AI-Powered Insights',
       description: 'Leverage machine learning and AI to uncover hidden patterns and predict future trends.',
-      features: ['Machine Learning Models', 'Predictive Analytics', 'Anomaly Detection', 'Recommendation Engines']
-    },
+      features: ['Machine Learning Models', 'Predictive Analytics', 'Anomaly Detection', 'Recommendation Engines'];
+},
     {
       icon: Database,
       title: 'Data Integration',
       description: 'Connect and consolidate data from multiple sources for comprehensive business intelligence.',
-      features: ['ETL Processes', 'Data Warehousing', 'API Integration', 'Real-time Data Sync']
-    },
+      features: ['ETL Processes', 'Data Warehousing', 'API Integration', 'Real-time Data Sync'];
+},
     {
       icon: TrendingUp,
       title: 'Performance Optimization',
       description: 'Optimize business processes and decision-making with data-driven insights and recommendations.',
-      features: ['Process Optimization', 'Cost Analysis', 'Revenue Optimization', 'Operational Efficiency']
-    }
-  ];
+      features: ['Process Optimization', 'Cost Analysis', 'Revenue Optimization', 'Operational Efficiency'];
+}
+  ]
 
   const industries = [
     { name: 'E-commerce', description: 'Customer behavior analysis and sales optimization' },
@@ -40,14 +40,14 @@ export default function AIBusinessIntelligence() {
     { name: 'Manufacturing', description: 'Supply chain optimization and quality control' },
     { name: 'Retail', description: 'Inventory management and customer insights' },
     { name: 'Marketing', description: 'Campaign performance and customer segmentation' }
-  ];
+  ]
 
   const stats = [
     { number: '40%', label: 'Cost Reduction', icon: TrendingUp },
     { number: '60%', label: 'Faster Decisions', icon: Clock },
     { number: '85%', label: 'Accuracy Improvement', icon: Award },
     { number: '24/7', label: 'Real-time Insights', icon: Globe }
-  ];
+  ]
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">

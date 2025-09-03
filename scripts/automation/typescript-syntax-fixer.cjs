@@ -249,8 +249,8 @@ class TypeScriptSyntaxFixer {;
     } catch (error) {  
       // Skip inaccessible directories;
       }
-
-    } catch (error) {;
+;
+} catch (error) {;
       // Skip inaccessible directories;
     }
 ;

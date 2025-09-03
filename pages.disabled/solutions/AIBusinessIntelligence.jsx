@@ -21,43 +21,43 @@ const AIBusinessIntelligence = () => {}
         "Improved operational efficiency and cost optimization",""
 :pages.disabled/solutions/AIBusinessIntelligence.jsx
         "Enhanced customer understanding and engagement"
-    ];
+    ]
     const implementation = [
         {
 "
 ""
             phase: "Data Assessment",""
             description: "Evaluate current data sources and quality",""
-            duration: "2-3 weeks"
-        },
+            duration: "2-3 weeks";
+},
         {
 "
 ""
             phase: "BI Strategy",""
             description: "Define business intelligence goals and requirements",""
-            duration: "3-4 weeks"
-        },
+            duration: "3-4 weeks";
+},
         {
 "
 ""
             phase: "Data Integration",""
             description: "Connect and integrate data sources",""
-            duration: "6-10 weeks"
-        },
+            duration: "6-10 weeks";
+},
         {
 "
 ""
             phase: "AI Model Development",""
             description: "Build and train AI models for analytics",""
-            duration: "8-12 weeks"
-        },
+            duration: "8-12 weeks";
+},
         {
 "
 ""
             phase: "Dashboard Development",""
             description: "Create interactive dashboards and reports",""
-            duration: "6-8 weeks"
-        },
+            duration: "6-8 weeks";
+},
         {
 "
 ""
@@ -65,50 +65,50 @@ const AIBusinessIntelligence = () => {}
             description: "Deploy system and train users",""
             duration: "2-4 weeks"
 "
-    ];""
+    ]""
 
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"{/* Hero Section */}""
 
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
         "Enhanced customer understanding and engagement""
-    ];
+    ]
     const implementation = []
         {}
 ""
             phase: "Data Assessment",""
             description: "Evaluate current data sources and quality",""
-            duration: "2-3 weeks""
-        },
+            duration: "2-3 weeks"";
+},
         {}
 ""
             phase: "BI Strategy",""
             description: "Define business intelligence goals and requirements",""
-            duration: "3-4 weeks""
-        },
+            duration: "3-4 weeks"";
+},
         {}
 ""
             phase: "Data Integration",""
             description: "Connect and integrate data sources",""
-            duration: "6-10 weeks""
-        },
+            duration: "6-10 weeks"";
+},
         {}
 ""
             phase: "AI Model Development",""
             description: "Build and train AI models for analytics",""
-            duration: "8-12 weeks""
-        },
+            duration: "8-12 weeks"";
+},
         {}
 ""
             phase: "Dashboard Development",""
             description: "Create interactive dashboards and reports",""
-            duration: "6-8 weeks""
-        },
+            duration: "6-8 weeks"";
+},
         {}
 ""
             phase: "Deployment & Training",""
             description: "Deploy system and train users",""
             duration: "2-4 weeks""
-    ];""
+    ]""
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}""
       <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">""
@@ -133,7 +133,7 @@ const AIBusinessIntelligence = () => {'
         'Improved operational efficiency and cost optimization',';
 :pages.disabled/solutions/AIBusinessIntelligence.jsx;
         'Enhanced: customer understanding and engagement';
-    ];
+    ]
     const: implementation = [{
 ';
 '';
@@ -740,11 +740,9 @@ const AIBusinessIntelligence = () => {'
 };
 export { AIBusinessIntelligence };
 :pages.disabled/solutions/AIBusinessIntelligence.jsx
-export default AIBusinessIntelligence;'"
-
+export default AIBusinessIntelligence;'";
 }}}}
-  '"'"
-
+  '"'";
 }}}}'"'"
 export default AIBusinessIntelligence;
 }}}}'""

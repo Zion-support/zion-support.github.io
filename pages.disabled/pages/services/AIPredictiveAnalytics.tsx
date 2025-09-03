@@ -4,7 +4,7 @@ import: { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCh
 import: { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarChart3, Target, Zap, Shield, Users export default function AIPredictiveAnalytics(function AIPredictiveAnalytics() {): any: {}
     'Custom AI models trained on your industry data',';Automated: feature engineering and model selection',';Predictive: insights with confidence intervals',';Interactive: dashboards and visualization tools',';API: integration with existing business systems',';Automated: model retraining and performance monitoring';
 <:pages.disabled/pages/services/AIPredictiveAnalytics.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Starter,',';
@@ -27,7 +27,7 @@ import: { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCh
   ]';Sales: forecasting and demand prediction',';Customer: churn prediction and retention',';Inventory: optimization and supply chain forecasting',';Risk: assessment and fraud detection',';Predictive: maintenance for equipment',';Market: trend analysis and investment insights';
   ]';Improve: forecast accuracy by 40-60%',';Reduce: operational costs by 25-35%',';Increase: revenue through better predictions',';Optimize: resource allocation and planning',';Identify: opportunities before competitors',';Make: data-driven decisions with confidence';
   ]';E-commerce: & Retail',';Financial: Services',';Healthcare: & Pharmaceuticals',';Manufacturing: & Logistics',';Real: Estate & Construction',';Energy: & Utilities';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
 import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarChart3, Target, Zap, Shield, Users export default function AIPredictiveAnalytics(function AIPredictiveAnalytics() {): any {}
     'Custom AI models trained on your industry data',;Automated feature engineering and model selection',;Predictive insights with confidence intervals',;Interactive dashboards and visualization tools',;API integration with existing business systems',;Automated model retraining and performance monitoring';
 <:pages.disabled/pages/services/AIPredictiveAnalytics.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Starter',
@@ -115,8 +115,8 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
     {'
       name: 'Professional',
       price: '$799/mo',
-      details: ['Up to 20 predictive models', '100GB data processing', 'Advanced ML algorithms', 'Priority support']
-    },
+      details: ['Up to 20 predictive models', '100GB data processing', 'Advanced ML algorithms', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AIPredictiveAnalytics.tsx>    {'
@@ -149,10 +149,10 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
             <TrendingUp className='w-4 h-4 mr-2'  /> AI-Powered Predictive Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Predictive Analytics Platform</h1>'          <p className='text-purple-100 text-xl'>Transform your business with AI-powered predictive insights that forecast trends, optimize operations, and drive strategic decision-making.</p>
-  ];Sales forecasting and demand prediction',;Customer churn prediction and retention',;Inventory optimization and supply chain forecasting',;Risk assessment and fraud detection',;Predictive maintenance for equipment',;Market trend analysis and investment insights';
-  ];Improve forecast accuracy by 40-60%',;Reduce operational costs by 25-35%',;Increase revenue through better predictions',;Optimize resource allocation and planning',;Identify opportunities before competitors',;Make data-driven decisions with confidence';
-  ];E-commerce & Retail',;Financial Services',;Healthcare & Pharmaceuticals',;Manufacturing & Logistics',;Real Estate & Construction',;Energy & Utilities';
-  ];
+  ]Sales forecasting and demand prediction',;Customer churn prediction and retention',;Inventory optimization and supply chain forecasting',;Risk assessment and fraud detection',;Predictive maintenance for equipment',;Market trend analysis and investment insights';
+  ]Improve forecast accuracy by 40-60%',;Reduce operational costs by 25-35%',;Increase revenue through better predictions',;Optimize resource allocation and planning',;Identify opportunities before competitors',;Make data-driven decisions with confidence';
+  ]E-commerce & Retail',;Financial Services',;Healthcare & Pharmaceuticals',;Manufacturing & Logistics',;Real Estate & Construction',;Energy & Utilities';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 py-20 text-center>''

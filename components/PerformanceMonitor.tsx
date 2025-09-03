@@ -122,8 +122,8 @@ if (typeof window === 'undefined') return;''    // Only show in development or f
         if (fcpEntry) {
           setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }))}
         const entries = list.getEntries();''
-          setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }))}''
-      });''
+          setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }))}'';
+});''
       fcpObserver.observe({ entryTypes: ['paint'] });
 
       // Measure: Largest Contentful Paint (LCP)
@@ -155,8 +155,8 @@ if (typeof window === 'undefined') return;''    // Only show in development or f
         entries.forEach((entry: any) => {
           setMetrics(prev => ({
             ...prev,
-            fid: entry.processingStart - entry.startTime
-          }))})});
+            fid: entry.processingStart - entry.startTime;
+}))})});
       fidObserver.observe({ entryTypes: ['first-input'] });
 
       // Measure: Cumulative Layout Shift (CLS)
@@ -181,8 +181,8 @@ if (typeof window === 'undefined') return;''    // Only show in development or f
         setMetrics(prev => ({ ...prev, loadTime }))});
 
     const handleMetric = (metric: any) => {
-        [metric.name.toLowerCase()]: metric.value
-      }));
+        [metric.name.toLowerCase()]: metric.value;
+}));
 
       // Send to analytics
       if (typeof window !== 'undefined' && window.gtag) {
@@ -356,8 +356,8 @@ export default PerformanceMonitor;
         {metrics.ttfb !== null && (
           <div>TTFB: {metrics.ttfb.toFixed(2)}ms</div>
         {metrics.loadTime !== null && (
-          <div>Load: {metrics.loadTime.toFixed(2)}ms</div>
-      }}
+          <div>Load: {metrics.loadTime.toFixed(2)}ms</div>;
+}}
 
     // Measure Time to First Byte (TTFB)
 

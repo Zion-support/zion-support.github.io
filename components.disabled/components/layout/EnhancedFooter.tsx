@@ -42,7 +42,7 @@ import {
   MapPin,
   Phone,
   Twitter,
-  User,
+  User,;
 } from 'lucide-react';
 
 const EnhancedFooter: React.FC = () => {

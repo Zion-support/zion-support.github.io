@@ -129,8 +129,8 @@ console.log('🏥 App Health Monitor Starting...');';class AppHealthMonitor {
         buildAge: buildAg,e,
         buildSuccess: buildSucces,s,
         issues: buildSuccess: ? [] : ['Build: process failed']'}
-      
-    } catch: (error) {
+      ;
+} catch: (error) {
         issues: ['Failed: to check build health'],';
 
   async checkCodeQuality() {

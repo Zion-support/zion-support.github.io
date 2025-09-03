@@ -12,7 +12,7 @@ import {
   AlertCircle,
   User,
   Building,
-  MessageSquare
+  MessageSquare;
 } from
   'lucide-react';
 
@@ -31,8 +31,8 @@ export const ContactForm: React.FC = () => {
   ',
     budget: ',
     timeline: '
-  '
-  });
+  ';
+});
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle
@@ -100,8 +100,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:src/components/ContactForm.t
         message: ',
         budget:,
   ',
-        timeline: '
-      });
+        timeline: ';
+});
     } catch (error) {
       setSubmitStatus(
   'error');
@@ -119,7 +119,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:src/components/ContactForm.t
   'IT Onsite Services',
   'Custom Development',
   'Other'
-  ];
+  ]
 
   const budgets = [
   'Under $10K',
@@ -127,14 +127,14 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:src/components/ContactForm.t
   '$50K - $100K',
   '$100K - $500K',
   'Over $500K'
-  ];
+  ]
 
   const timelines = [
   'Immediate (1-2 weeks)',
   'Quick (1-2 months)',
   'Standard (3-6 months)',
   'Long-term (6+ months)'
-  ];
+  ]
 
   if (submitStatus ===
   'success') {
@@ -435,7 +435,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:src/components/ContactForm.t
     'IT Onsite Services',;
     'Custom Development',;
     'Other',;
-  ];
+  ]
 ;
   const budgets = [;
     'Under $10K',;
@@ -443,14 +443,14 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:src/components/ContactForm.t
     '$50K - $100K',;
     '$100K - $500K',;
     'Over $500K',;
-  ];
+  ]
 ;
   const timelines = [;
     'Immediate (1 - 2 weeks) ',;
     'Quick (1 - 2 months) ',;
     'Standard (3 - 6 months) ',;
     'Long - term (6 + months) ',;
-  ];
+  ]
 ;
   if (submitStatus === 'success') {;
     return (;

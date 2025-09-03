@@ -18,8 +18,8 @@ const PerformanceMonitor: React.FC = () => {
     fid: null,
     cls: null,
     ttfb: null,
-    loadTime: null,
-  });
+    loadTime: null,;
+});
 
   const [isVisible, setIsVisible] = useState(false);
 
@@ -59,8 +59,8 @@ const PerformanceMonitor: React.FC = () => {
         entries.forEach((entry: any) => {
           setMetrics(prev => ({
             ...prev,
-            fid: entry.processingStart - entry.startTime,
-          }));
+            fid: entry.processingStart - entry.startTime,;
+}));
         });
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
@@ -84,8 +84,8 @@ const PerformanceMonitor: React.FC = () => {
         entries.forEach((entry: any) => {
           setMetrics(prev => ({
             ...prev,
-            ttfb: entry.responseStart - entry.requestStart,
-          }));
+            ttfb: entry.responseStart - entry.requestStart,;
+}));
         });
       });
       navigationObserver.observe({ entryTypes: ['navigation'] });

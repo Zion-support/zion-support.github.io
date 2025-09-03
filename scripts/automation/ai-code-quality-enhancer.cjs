@@ -826,8 +826,8 @@ class AICodeQualityEnhancer {;
         }
       } catch (error) {  
         this.log(Failed to apply fix for ${fix.file  }: ${error.message}`,
-          `ERROR`
-      } catch (error) {;
+          `ERROR`;
+} catch (error) {;
         this.log(Failed to apply fix for ${fix.file}: ${error.message}',;
           'ERROR';
         );
@@ -875,8 +875,8 @@ class AICodeQualityEnhancer {;
       return false;
     } catch (error) {  
       this.log(Error applying fix to ${improvement.file  }: ${error.message}`,
-        `ERROR`
-    } catch (error) {;
+        `ERROR`;
+} catch (error) {;
       this.log(Error applying fix to ${improvement.file}: ${error.message}',;
         'ERROR';
       );

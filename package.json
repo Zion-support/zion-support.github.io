@@ -74,7 +74,7 @@
     "build:production": "NODE_ENV=production next build",
     "dev:fast": "next dev --turbo",
     "lint:check": "eslint . --ext .ts,.tsx,.js,.jsx --max-warnings 0"
-  },
+},
   "dependencies": {
     "@esbuild/linux-x64": "^0.21.5",
     "@hookform/resolvers": "^5.2.1",
@@ -95,10 +95,7 @@
     "@radix-ui/react-scroll-area": "^1.0.5",
     "@radix-ui/react-select": "^2.0.0",
     "@radix-ui/react-separator": "^1.0.3",
-<<<<<<< HEAD
-=======
     "@radix-ui/react-dialog": "^1.0.5",
->>>>>>> 2e42f512832d464e2ba4e827c789976ad41530e5
     "@radix-ui/react-slider": "^1.1.2",
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/react-switch": "^1.0.3",
@@ -126,7 +123,7 @@
     "tailwind-merge": "^3.3.1",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "5.9.2"
-  },
+},
   "devDependencies": {
     "@babel/plugin-transform-class-properties": "^7.27.1",
     "@babel/preset-env": "^7.28.3",
@@ -155,15 +152,15 @@
     "tailwindcss": "^3.3.5",
     "ts-jest": "^29.4.1",
     "typescript": "5.9.2"
-  },
+},
   "engines": {
     "node": ">=18.0.0",
     "npm": ">=10.0.0"
-  },
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Zion-Holdings/zion.app.git"
-  },
+},
   "keywords": [
     "nextjs",
     "react",

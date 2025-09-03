@@ -4,7 +4,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIPostgreSQL(function AIPostgreSQL() {): any: {}
     'Automated PostgreSQL performance monitoring',';Predictive: analytics for database scaling',';Smart: PostgreSQL security and compliance',';AI-driven: PostgreSQL automation and orchestration',';Real-time: PostgreSQL analytics and insights',';Custom: AI models for PostgreSQL applications';
 <:pages.disabled/pages/services/AIPostgreSQL.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Developer,',';
@@ -27,7 +27,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
   ]';PostgreSQL: query optimization',';Database: indexing and partitioning',';Performance: monitoring and analytics',';Security: and compliance monitoring',';Automation: and orchestration',';Database: scaling and management';
   ]';Improve: query performance by 50-80%',';Reduce: storage costs by 40-70%',';Cut: operational costs by 35-65%',';Enhance: database reliability and scalability',';Optimize: resource utilization',';Scale: PostgreSQL operations efficiently';
   ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-500 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIPostgreSQL(function AIPostgreSQL() {): any {}
     'Automated PostgreSQL performance monitoring',;Predictive analytics for database scaling',;Smart PostgreSQL security and compliance',;AI-driven PostgreSQL automation and orchestration',;Real-time PostgreSQL analytics and insights',;Custom AI models for PostgreSQL applications';
 <:pages.disabled/pages/services/AIPostgreSQL.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Developer',
@@ -115,8 +115,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     {'
       name: 'Business',
       price: '$599/mo',
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support']
-    },
+      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AIPostgreSQL.tsx>    {'
@@ -149,10 +149,10 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <Database className='w-4 h-4 mr-2'  /> AI-Powered PostgreSQL Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI PostgreSQL Platform</h1>'          <p className='text-indigo-100 text-xl'>Transform your PostgreSQL operations with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
-  ];PostgreSQL query optimization',;Database indexing and partitioning',;Performance monitoring and analytics',;Security and compliance monitoring',;Automation and orchestration',;Database scaling and management';
-  ];Improve query performance by 50-80%',;Reduce storage costs by 40-70%',;Cut operational costs by 35-65%',;Enhance database reliability and scalability',;Optimize resource utilization',;Scale PostgreSQL operations efficiently';
-  ];Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
-  ];
+  ]PostgreSQL query optimization',;Database indexing and partitioning',;Performance monitoring and analytics',;Security and compliance monitoring',;Automation and orchestration',;Database scaling and management';
+  ]Improve query performance by 50-80%',;Reduce storage costs by 40-70%',;Cut operational costs by 35-65%',;Enhance database reliability and scalability',;Optimize resource utilization',;Scale PostgreSQL operations efficiently';
+  ]Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-500 py-20 text-center>''

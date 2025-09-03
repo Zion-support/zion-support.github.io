@@ -164,8 +164,8 @@ class IntelligentBuildPipeline {;
   savePipelineConfig() {
     try {
       const configPath = path.join(
-        this.projectRoot,build-pipeline.config.json`
-      },;
+        this.projectRoot,build-pipeline.config.json`;
+},;
       optimization: {;
         autoParallelization: true,;
         cacheOptimization: true,;
@@ -796,8 +796,8 @@ class IntelligentBuildPipeline {;
       }
 ;
       return unusedDeps;
-    } catch (error) {  
-    } catch (error) {;
+    } catch (error) {  ;
+} catch (error) {;
       return [];
       }
   }
@@ -840,8 +840,8 @@ class IntelligentBuildPipeline {;
           const content = fs.readFileSync(filePath, `utf8`);
           if (
             content.includes(`from `${dependencyName}``) ||content.includes(`require(`${dependencyName}`)`)
-          ) {
-        } else if (;
+          ) {;
+} else if (;
           file.endsWith('.js') ||;
           file.endsWith('.ts') ||;
           file.endsWith('.tsx');
@@ -897,8 +897,8 @@ class IntelligentBuildPipeline {;
       }
 ;
       return duplicates;
-    } catch (error) {  
-    } catch (error) {;
+    } catch (error) {  ;
+} catch (error) {;
       return [];
       }
   }
@@ -1465,8 +1465,8 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
     try {
       // Create cache directories;
       const cacheDirs = ['.cache', '''node_modules/.cache'''];
-      for (const cacheDir of cacheDirs) {
-    } catch (error) {;
+      for (const cacheDir of cacheDirs) {;
+} catch (error) {;
       return { success: false, message: error.message };
     }
   }
@@ -1499,8 +1499,8 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
   }
 
   async optimizeDependencies() {
-    try {
-    } catch (error) {;
+    try {;
+} catch (error) {;
       return { success: false, message: error.message };
     }
   }
@@ -1537,8 +1537,8 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
   }
 
   async optimizeBundleSize() {
-    try {
-    } catch (error) {;
+    try {;
+} catch (error) {;
       return { success: false, message: error.message };
     }
   }
@@ -1575,8 +1575,8 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
   }
 
   async optimizeMemoryUsage() {
-    try {
-    } catch (error) {;
+    try {;
+} catch (error) {;
       return { success: false, message: error.message };
     }
   }

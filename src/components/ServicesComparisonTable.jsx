@@ -17,8 +17,8 @@ export function ServicesComparisonTable() {}"});,"})
       <Check className="w-4 h-4 text-green-500" />""";,"});,"})
     ) : ("""";,"});,"})
       <X className="w-4 h-4 text-red-500" />;,"});,"})
-    );,"});,"})
-  };""";,"});,"})
+    );,"});,"});
+};""";,"});,"})
   return ("""";,"});,"})
     <div className="py-16 bg-slate-50 dark:bg-slate-900">"""";,"});,"})
       <div className="container mx-auto px-4">"""";,"});,"})
@@ -66,8 +66,8 @@ export function ServicesComparisonTable() {}"});,"})
                     View {category}"});,"})
                   </Button>;,"});,"})
                 </CardContent>;,"});,"})
-              </Card>;,"});,"})
-          })}"});,"})
+              </Card>;,"});,"});
+})}"});,"})
         {/* Detailed Comparison Table */}"""";,"});,"})
         <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg overflow-hidden">"""";,"});,"})
           <div className="overflow-x-auto">;,"});,"})
@@ -174,7 +174,7 @@ export function ServicesComparisonTable() {}"});,"})
                       </Badge>""";,"});,"})
                     <Button className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">;,"});,"})
                       Learn More;,"});,"})
-            )}"});,"})
+            )}"});,"});
 }'""";,"});,"})
 '"'""";,"});,"})
 import { Check, X, Star, Clock, Phone, Mail } from 'lucide - react'';
@@ -230,7 +230,7 @@ import {}"
       <Check className='w-4 h-4 text-green-500' /" >''''"
     ) : (''''
       <X className='w-4 h-4 text-red-500' /" >"
-    );", "
+    );", ";
 }';'
       <X className='w-4 h-4 text-red-500' /" >
     );"}
@@ -395,10 +395,10 @@ import {}"
                       Learn More
               )
             )}
-  )}'"""
+  )}'""";
 }'''';
 '''''';
-  )", "
-}'""",'"
+  )", ";
+}'""",'";
 }''''
 ''''''

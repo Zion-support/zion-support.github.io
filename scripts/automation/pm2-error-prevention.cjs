@@ -294,8 +294,8 @@ class PM2ErrorPrevention {;
         stdio: 'pipe'});
 
       const unusedImportCount = (result.match(/``unused/g``) || []).length;
-
-    } else {;
+;
+} else {;
       console.log(`'✅ No syntax issues found');
 
       if (this.config.autoFix) {`);
@@ -355,8 +355,8 @@ class PM2ErrorPrevention {;
       });
 ;
       console.log('✅ TypeScript errors auto-fixed');
-    } catch (error) {  
-    } catch (error) {;
+    } catch (error) {  ;
+} catch (error) {;
       console.error('❌ Failed to auto-fix TypeScript errors:', error);
       }
   }
@@ -378,8 +378,8 @@ class PM2ErrorPrevention {;
       });
 ;
       console.log('✅ Import issues auto-fixed');
-    } catch (error) {  
-    } catch (error) {;
+    } catch (error) {  ;
+} catch (error) {;
       console.error('❌ Failed to auto-fix import issues:', error);
       }
   }
@@ -401,8 +401,8 @@ class PM2ErrorPrevention {;
       });
 ;
       console.log('✅ Syntax issues auto-fixed');
-    } catch (error) {  
-    } catch (error) {;
+    } catch (error) {  ;
+} catch (error) {;
       console.error('❌ Failed to auto-fix syntax issues:', error);
       }
   }
@@ -424,8 +424,8 @@ class PM2ErrorPrevention {;
       });
 ;
       console.log('✅ Unused imports auto-fixed');
-    } catch (error) {  
-    } catch (error) {;
+    } catch (error) {  ;
+} catch (error) {;
       console.error('❌ Failed to auto-fix unused imports:', error);
       }
   }

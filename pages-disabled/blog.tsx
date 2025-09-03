@@ -16,8 +16,8 @@ const Blog: NextPage = () => {
       readTime: '5 min read',
       category: 'AI & Technology',
       image: '/blog/ai-future.jpg',
-      featured: true
-    },
+      featured: true;
+},
     {
       id: 2,
       title: 'Digital Transformation: A Complete Guide for Modern Businesses',
@@ -27,8 +27,8 @@ const Blog: NextPage = () => {
       readTime: '8 min read',
       category: 'Digital Transformation',
       image: '/blog/digital-transformation.jpg',
-      featured: false
-    },
+      featured: false;
+},
     {
       id: 3,
       title: 'Micro SaaS Development: Building Scalable Solutions',
@@ -38,8 +38,8 @@ const Blog: NextPage = () => {
       readTime: '6 min read',
       category: 'Development',
       image: '/blog/micro-saas.jpg',
-      featured: false
-    },
+      featured: false;
+},
     {
       id: 4,
       title: 'Cloud Migration Strategies: Best Practices and Common Pitfalls',
@@ -49,8 +49,8 @@ const Blog: NextPage = () => {
       readTime: '7 min read',
       category: 'Cloud Computing',
       image: '/blog/cloud-migration.jpg',
-      featured: false
-    },
+      featured: false;
+},
     {
       id: 5,
       title: 'Cybersecurity in 2024: Protecting Your Digital Assets',
@@ -60,8 +60,8 @@ const Blog: NextPage = () => {
       readTime: '6 min read',
       category: 'Security',
       image: '/blog/cybersecurity.jpg',
-      featured: false
-    },
+      featured: false;
+},
     {
       id: 6,
       title: 'The Rise of Quantum Computing: Implications for Business',
@@ -71,9 +71,9 @@ const Blog: NextPage = () => {
       readTime: '9 min read',
       category: 'Emerging Tech',
       image: '/blog/quantum-computing.jpg',
-      featured: false
-    }
-  ];
+      featured: false;
+}
+  ]
 
   const categories = [
     'All Posts',
@@ -83,7 +83,7 @@ const Blog: NextPage = () => {
     'Cloud Computing',
     'Security',
     'Emerging Tech'
-  ];
+  ]
 
   const featuredPost = blogPosts.find(post => post.featured);
   const regularPosts = blogPosts.filter(post => !post.featured);
@@ -128,8 +128,8 @@ const Blog: NextPage = () => {
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                       index === 0 
                         ? 'bg-blue-600 text-white' 
-                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                    }`}
+                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200';
+}`}
                   >
                     {category}
                   </button>

@@ -12,7 +12,7 @@ import {
   Cookie,
   Database,
   Globe,
-  BarChart3
+  BarChart3;
 } from 'lucide-react';
 
 export default function Cookies() {

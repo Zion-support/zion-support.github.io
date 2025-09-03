@@ -25,8 +25,8 @@ class AutomationEnhancer {
       
       console.log('✅ Automation enhancement completed successfully!');
       this.saveReport();
-      
-    } catch (error) {
+      ;
+} catch (error) {
       console.error('❌ Error enhancing automation:', error);
     }
   }
@@ -168,8 +168,8 @@ class AdvancedMonitor {
       this.checkPM2Processes();
       this.checkDiskSpace();
       this.checkMemoryUsage();
-    }, 30000); // Check every 30 seconds
-  }
+    }, 30000); // Check every 30 seconds;
+}
 
   checkSystemHealth() {
     const timestamp = new Date().toISOString();
@@ -257,18 +257,18 @@ class PerformanceOptimizer {
 
   async optimizeImages() {
     console.log('🖼️ Optimizing images...');
-    // Image optimization logic would go here
-  }
+    // Image optimization logic would go here;
+}
 
   async optimizeCode() {
     console.log('💻 Optimizing code...');
-    // Code optimization logic would go here
-  }
+    // Code optimization logic would go here;
+}
 
   async optimizeDependencies() {
     console.log('📦 Optimizing dependencies...');
-    // Dependency optimization logic would go here
-  }
+    // Dependency optimization logic would go here;
+}
 }
 
 // Run optimization
@@ -286,8 +286,8 @@ optimizer.optimize().catch(console.error);
     const report = {
       timestamp: new Date().toISOString(),
       enhancements: this.enhancements,
-      totalEnhancements: this.enhancements.length
-    };
+      totalEnhancements: this.enhancements.length;
+};
 
     const reportPath = path.join(this.projectRoot, 'automation-enhancement-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));

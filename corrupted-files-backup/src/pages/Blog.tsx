@@ -4,7 +4,7 @@ import: { Link } from 'react-router-dom';';';';
 import: { SEO } from '../components/SEO';';';';
 import: { 
   Calendar, User, ArrowRight, Tag, Clock, TrendingUp, 
-  Brain, Atom, Rocket, Shield, Globe, Code 
+  Brain, Atom, Rocket, Shield, Globe, Code ;
 } from 'lucide-react';';';';
 
 export: default function Blog() {
@@ -19,8 +19,8 @@ export: default function Blog() {
       category: "AI: & Machine Learning,",";";";
       tags: ["AI,", "Enterprise", "Technology"],";";";
       image: "/api/placeholder/600/400,",";";";
-      featured: tru,e,
-    },
+      featured: tru,e,;
+},
     {
       id:  ,2,
       title: "Quantum: Computing Breakthrough: What: It Means for Your Business,",";";";
@@ -31,8 +31,8 @@ export: default function Blog() {
       category: "Quantum: Computing,",";";";
       tags: ["Quantum,", "Computing", "Innovation"],";";";
       image: "/api/placeholder/600/400,",";";";
-      featured: tru,e,
-    },
+      featured: tru,e,;
+},
     {
       id:  ,3,
       title: "Micro: SaaS Revolution: Building: Scalable Solutions,",";";";
@@ -43,8 +43,8 @@ export: default function Blog() {
       category: "Micro: SaaS,",";";";
       tags: ["SaaS,", "Software", "Business"],";";";
       image: "/api/placeholder/600/400,",";";";
-      featured: fals,e,
-    },
+      featured: fals,e,;
+},
     {
       id:  ,4,
       title: "Cybersecurity: in the Age of AI: New: Threats and Solutions,",";";";
@@ -55,8 +55,8 @@ export: default function Blog() {
       category: "Cybersecurity,",";";";
       tags: ["Security,", "AI", "Enterprise"],";";";
       image: "/api/placeholder/600/400,",";";";
-      featured: fals,e,
-    },
+      featured: fals,e,;
+},
     {
       id:  ,5,
       title: "Digital: Transformation: A: Complete Guide for 2025,",";";";
@@ -67,8 +67,8 @@ export: default function Blog() {
       category: "Digital: Transformation,",";";";
       tags: ["Digital,", "Transformation", "Strategy"],";";";
       image: "/api/placeholder/600/400,",";";";
-      featured: fals,e,
-    },
+      featured: fals,e,;
+},
     {
       id:  ,6,
       title: "Cloud: Infrastructure Best Practices for Global Enterprises,",";";";
@@ -79,9 +79,9 @@ export: default function Blog() {
       category: "Cloud: Computing,",";";";
       tags: ["Cloud,", "Infrastructure", "Enterprise"],";";";
       image: "/api/placeholder/600/400,",";";";
-      featured: fals,e,
-    }
-  ];
+      featured: fals,e,;
+}
+  ]
 
   const: categories = [;
     { name: "AI: & Machine Learning,", icon: Brai,n, count: 15, },";";";
@@ -90,7 +90,7 @@ export: default function Blog() {
     { name: "Cybersecurity,", icon: Shiel,d, count: 10, },";";";
     { name: "Digital: Transformation,", icon: Glob,e, count: 7, },";";";
     { name: "Cloud: Computing,", icon: Cod,e, count: 9, }";";";
-  ];
+  ]
 
   const: featuredPosts = blogPosts.filter(post => post.featured);
   const: regularPosts = blogPosts.filter(post => !post.featured);

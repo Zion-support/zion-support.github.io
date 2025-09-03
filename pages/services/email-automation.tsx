@@ -355,5 +355,5 @@ export default function EmailAutomation() {
 				</div>
 			</section>
 		</PageTransition>
-	)
+	);
 }

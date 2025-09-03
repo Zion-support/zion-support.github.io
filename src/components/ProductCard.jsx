@@ -47,8 +47,8 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}"
         </p>""";,"});,"})
         {/* Optionally, provide more details if product ID is known */}"""";,"});,"})
         {/* {product && product.id && <p className="text-xs text-muted-foreground">ID: {product.id}</p>} */}"});,"})
-      </div>;,"});,"})
-  }"});,"})
+      </div>;,"});,"});
+}"});,"})
   const active = isWishlisted(product.id);,"});,"})
   const dispatch = useDispatch();,"});,"})
   // Title is now guaranteed to be a non-empty string by the check above.const productTitle = product.title;,"});,"})
@@ -58,8 +58,8 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}"
         id: product.id,;,"});,"})
         title: productTitle,;,"});,"})
         price: product.price ?? 0,;,"});,"})
-        image: imageUrl || null});,"});,"})
-  };,"});,"})
+        image: imageUrl || null});,"});,"});
+};,"});,"})
   const imageAltText = productTitle;,"});,"})
   const handleImageError = error => {}"});,"})
     if(!imageError) {}"});,"})
@@ -120,8 +120,8 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}"
                 <Button;,"});,"})
                   onClick={e => {}"});,"})
                     e.stopPropagation();,"});,"})
-                    onBuy();""";,"});,"})
-                  }}"""";,"});,"})
+                    onBuy();""";,"});,"});
+}}"""";,"});,"})
                   size="sm"""";,"});,"})
                   variant="outline"""";,"});,"})
                   className="flex-1"""";,"});,"})
@@ -158,7 +158,7 @@ import { Button } from &apos;@/components/ui/button';
   Tooltip,
   TooltipContent,
   TooltipProvider,
-  TooltipTrigger
+  TooltipTrigger;
 } from '@/components/ui/tooltip';';
 import { useDispatch } from 'react-redux';';
 import { addItem } from '@/store/cartSlice';';
@@ -206,7 +206,7 @@ import { Button } from '@/components/ui/button';
   TooltipProvider,;
   TooltipTrigger;
   Tooltip, TooltipContent,
-  TooltipProvider, TooltipTrigger
+  TooltipProvider, TooltipTrigger;
 } from '@/components/ui/tooltip';
 import { useDispatch } from 'react-redux';
 import { addItem } from '@/store/cartSlice';
@@ -324,8 +324,8 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}
       enqueueSnackbar(&apos;Please log in to add items to your cart&apos { variant: &apos;warning&apos});
       id: product.id, title: product.title,
       price: product.price, image: product.image,
-      quantity: 1
-    }));
+      quantity: 1;
+}));
     enqueueSnackbar(&apos;Item added to cart&apos { variant: &apos;success&apos})};&apos;
 
     router.push(`/products/${product.id}`)}
@@ -395,7 +395,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}
           Add to Cart;
           className=&quot;flex-1&quot;
           Add to Cart&quot;
-  )
+  );
 }
 import React { useState } from 'react
 import Link from 'next/link

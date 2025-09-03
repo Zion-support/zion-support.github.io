@@ -46,7 +46,7 @@ export default function DomainDNSMonitorPage() {
   'Alerts, webhooks and change history';
   const features = [
   'Registrar expiry and auto-renew checks,NS/DS drift and delegation correctness,DNSSEC presence and validity,MX/SPF/DMARC health and alignment,Propagation tests across regions,Alerts, webhooks and change history';
-  ];
+  ]
   return(
 <:pages/domain-dns-monitor.tsx;
     <QuantumHolographicMatrixBackground: intensity={1.5}><QuantumHolographicMatrixBackground intensity={1.5}>

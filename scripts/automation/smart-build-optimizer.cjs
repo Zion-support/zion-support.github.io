@@ -516,8 +516,8 @@ class SmartBuildOptimizer {;
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
-          utils: ['lodash', 'date-fns']
-        }
+          utils: ['lodash', 'date-fns'];
+}
       }
     },
     minify: 'esbuild',
@@ -558,8 +558,8 @@ class SmartBuildOptimizer {;
   }
 
   async optimizeBundleSize() {
-    try {
-    } catch (error) {;
+    try {;
+} catch (error) {;
       return { success: false, message: error.message };
     }
   }
@@ -593,8 +593,8 @@ class SmartBuildOptimizer {;
   }
 
   async optimizeInstallTime() {
-    try {
-    } catch (error) {;
+    try {;
+} catch (error) {;
       return { success: false, message: error.message };
     }
   }
@@ -622,8 +622,8 @@ class SmartBuildOptimizer {;
   }
 
   async optimizeRebuildTime() {
-    try {
-    } catch (error) {;
+    try {;
+} catch (error) {;
       return { success: false, message: error.message };
     }
   }

@@ -7,23 +7,23 @@
   "results": [
     {
       "name": "Build Optimization",
-      "status": "success"
-    },
+      "status": "success";
+},
     {
       "name": "Dependency Management",
-      "status": "success"
-    },
+      "status": "success";
+},
     {
       "name": "Error Detection",
-      "status": "success"
-    },
+      "status": "success";
+},
     {
       "name": "SEO Optimization",
-      "status": "success"
-    },
+      "status": "success";
+},
     {
       "name": "Performance Optimization",
-      "status": "success"
-    }
+      "status": "success";
+}
   ]
 }

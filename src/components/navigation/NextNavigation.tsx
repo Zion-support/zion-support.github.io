@@ -18,7 +18,7 @@ import {
   Code,
   Database,
   Network,
-  Settings
+  Settings;
 } from 'lucide-react';
 
 const NextNavigation = () => {
@@ -46,61 +46,61 @@ const NextNavigation = () => {
           name: 'AI Services', 
           href: '/ai-services', 
           icon: Brain, 
-          description: 'Cutting-edge AI solutions' 
-        },
+          description: 'Cutting-edge AI solutions' ;
+},
         { 
           name: 'IT Services', 
           href: '/it-services', 
           icon: Cloud, 
-          description: 'Enterprise IT infrastructure' 
-        },
+          description: 'Enterprise IT infrastructure' ;
+},
         { 
           name: 'Micro SaaS', 
           href: '/micro-saas', 
           icon: Code, 
-          description: 'Custom software solutions' 
-        },
+          description: 'Custom software solutions' ;
+},
         { 
           name: 'Cybersecurity', 
           href: '/services#cybersecurity', 
           icon: Shield, 
-          description: 'Advanced security solutions' 
-        },
+          description: 'Advanced security solutions' ;
+},
         { 
           name: 'Cloud & DevOps', 
           href: '/services#cloud', 
           icon: Database, 
-          description: 'Scalable cloud infrastructure' 
-        },
+          description: 'Scalable cloud infrastructure' ;
+},
         { 
           name: 'Digital Transformation', 
           href: '/services#ai', 
           icon: Zap, 
-          description: 'Business transformation' 
-        }
-      ] 
-    },
+          description: 'Business transformation' ;
+}
+      ] ;
+},
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' }
-  ];
+  ]
 
   const contactInfo = [
     { 
       icon: Phone, 
       text: '+1 302 464 0950', 
-      href: 'tel:+13024640950' 
-    },
+      href: 'tel:+13024640950' ;
+},
     { 
       icon: Mail, 
       text: 'kleber@ziontechgroup.com', 
-      href: 'mailto:kleber@ziontechgroup.com' 
-    },
+      href: 'mailto:kleber@ziontechgroup.com' ;
+},
     { 
       icon: MapPin, 
       text: '364 E Main St STE 1008, Middletown DE 19709', 
-      href: '#' 
-    }
-  ];
+      href: '#' ;
+}
+  ]
 
   const toggleDropdown = (name: string) => {
     setActiveDropdown(activeDropdown === name ? null : name);
@@ -113,8 +113,8 @@ const NextNavigation = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-gray-900/95 backdrop-blur-md border-b border-cyan-400/20' : 'bg-transparent'
-    }`}>
+      isScrolled ? 'bg-gray-900/95 backdrop-blur-md border-b border-cyan-400/20' : 'bg-transparent';
+}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
@@ -139,8 +139,8 @@ const NextNavigation = () => {
                     >
                       <span>{item.name}</span>
                       <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                        activeDropdown === item.name ? 'rotate-180' : ''
-                      }`} />
+                        activeDropdown === item.name ? 'rotate-180' : '';
+}`} />
                     </button>
                     <AnimatePresence>
                       {activeDropdown === item.name && (
@@ -181,8 +181,8 @@ const NextNavigation = () => {
                   <Link
                     href={item.href}
                     className={`text-gray-300 hover:text-cyan-300 transition-colors duration-200 py-2 ${
-                      router.pathname === item.href ? 'text-cyan-400' : ''
-                    }`}
+                      router.pathname === item.href ? 'text-cyan-400' : '';
+}`}
                   >
                     {item.name}
                   </Link>
@@ -254,8 +254,8 @@ const NextNavigation = () => {
                         >
                           <span>{item.name}</span>
                           <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                            activeDropdown === item.name ? 'rotate-180' : ''
-                          }`} />
+                            activeDropdown === item.name ? 'rotate-180' : '';
+}`} />
                         </button>
                         <AnimatePresence>
                           {activeDropdown === item.name && (
@@ -288,8 +288,8 @@ const NextNavigation = () => {
                         className={`block px-3 py-2 rounded-lg transition-colors duration-200 ${
                           router.pathname === item.href 
                             ? 'text-cyan-400 bg-cyan-400/10' 
-                            : 'text-gray-300 hover:text-cyan-300 hover:bg-gray-800/50'
-                        }`}
+                            : 'text-gray-300 hover:text-cyan-300 hover:bg-gray-800/50';
+}`}
                       >
                         {item.name}
                       </Link>

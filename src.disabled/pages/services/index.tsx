@@ -31,7 +31,7 @@ const ServicesIndex: React.FC = () => {;
     { to: '/services/automated-follow-ups', label: 'Automated Follow-Ups' },;
     { to: '/services/ai-seo-optimizer', label: 'AI SEO Optimizer' },;
 ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/services/index.tsx
-  ];
+  ]
   return (;
     <div className="max-w-5xl mx-auto px-4 py-12 text-white">";
       <h1 className="text-4xl font-bold mb-6">Services</h1>";

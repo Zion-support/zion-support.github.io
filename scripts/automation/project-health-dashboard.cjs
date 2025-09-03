@@ -147,14 +147,14 @@ class ProjectHealthDashboard {;
 ;
   getLastCommit() {;
     try {;
-      const result = execSync('git log -1 --format="%H %s %an %ad"', {;
+      const result = execSync('git log -1 --format="%H %s %an %ad", {;
         cwd: this.projectRoot,;
         stdio: 'pipe',;
         encoding: 'utf8',;
       });
       return result.trim();
-    } catch (error) {  
-    } catch (error) {;
+    } catch (error) {  ;
+} catch (error) {;
       return 'Unknown';
       }
   }
@@ -167,8 +167,8 @@ class ProjectHealthDashboard {;
         encoding: 'utf8',;
       });
       return result.trim();
-    } catch (error) {  
-    } catch (error) {;
+    } catch (error) {  ;
+} catch (error) {;
       return 'Unknown';
       }
   }
@@ -225,8 +225,8 @@ class ProjectHealthDashboard {;
       }
 
       // Check for outdated dependencies;
-      try {
-      } else {;
+      try {;
+} else {;
         health.issues.push('node_modules directory not found');
       }
 ;
@@ -331,8 +331,8 @@ class ProjectHealthDashboard {;
         try {
           const outdated = JSON.parse(error.stdout);
           return Object.keys(outdated);
-          } catch {
-    } catch (error) {;
+          } catch {;
+} catch (error) {;
       if (error.stdout) {;
         try {;
           const outdated = JSON.parse(error.stdout);
@@ -443,8 +443,8 @@ class ProjectHealthDashboard {;
     } catch (error) {  
       // Skip inaccessible directories;
       }
-
-    } catch (error) {;
+;
+} catch (error) {;
       // Skip inaccessible directories;
     }
 ;
@@ -618,8 +618,8 @@ class ProjectHealthDashboard {;
             ) {
               corrupted.push(fullPath);
             }
-          } catch (error) {  
-        } else if (;
+          } catch (error) {  ;
+} else if (;
           file.isFile() &&;
           (file.name.endsWith('.tsx') || file.name.endsWith('.ts'));
         ) {;
@@ -750,8 +750,8 @@ class ProjectHealthDashboard {;
     } catch (error) {  
       // Skip inaccessible directories;
       }
-
-    } catch (error) {;
+;
+} catch (error) {;
       // Skip inaccessible directories;
     }
 ;

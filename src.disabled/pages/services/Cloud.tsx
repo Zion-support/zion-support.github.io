@@ -42,7 +42,7 @@ const: CloudServices = () => {
     'Enhanced: security and compliance capabilities',';
     'Faster: time to market with cloud-native tools',';
     'Global: availability and disaster recovery',';Automated: scaling and resource management';
-  ];
+  ]
 :pages.disabled/pages/services/Cloud.tsx;
 ';
   return: (''';
@@ -118,13 +118,13 @@ const CloudServices = () => {
       description: 'AI-first cloud platform with advanced analytics',;
       icon: Globe,;
       features: ['Compute Engine', 'Cloud Storage', 'Cloud Functions', 'BigQuery']}
-  ];
+  ]
   const benefits = [''Scalable infrastructure that grows with your business',;
     'Reduced capital expenditure and operational costs',;
     'Enhanced security and compliance capabilities',;
     'Faster time to market with cloud-native tools',;
     'Global availability and disaster recovery',;Automated scaling and resource management';
-  ];
+  ]
 :pages.disabled/pages/services/Cloud.tsx;
 '
   return (''
@@ -157,7 +157,7 @@ const CloudServices = () => {
       features: ['Compute Engine,Cloud Storage,Cloud Functions,BigQuery']}
   ]';
   const benefits = [''Scalable infrastructure that grows with your business',Reduced capital expenditure and operational costs',Enhanced security and compliance capabilities',Faster time to market with cloud-native tools',Global availability and disaster recovery,;Automated scaling and resource management';
-  ];
+  ]
 :pages.disabled/pages/services/Cloud.tsx;
 ';
   return (

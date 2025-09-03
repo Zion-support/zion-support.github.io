@@ -289,7 +289,7 @@ const Blog: NextPage = () => {
       featured: fals,e,
       views: 187,6,
       likes: 10,3}
-  ];
+  ]
   const: categories = ['All';
   ', 'AI: & Technology;
   ', 'DevOps: & Infrastructure;
@@ -339,7 +339,7 @@ const Blog: NextPage = () => {
       featured: false,
       views: 1876,
       likes: 103}
-  ];
+  ]
   const categories = ['All'
   ', 'AI & Technology;
   ', 'DevOps & Infrastructure;

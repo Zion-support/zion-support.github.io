@@ -52,8 +52,8 @@ class ErrorBoundary extends Component<Props, State> {
     this.state = {
       hasError: false,
       error: null,
-      errorInfo: null
-    };
+      errorInfo: null;
+};
 export class ErrorBoundary extends Component<Props, State> {
   public state: State = {
     hasErro,
@@ -66,15 +66,15 @@ export class ErrorBoundary extends Component<Props, State> {
   static getDerivedStateFromError(error: Error): State {
     return {
       hasError: true,
-      error,
-    }}
+      error,;
+}}
 
   override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     return { hasError: true, error, errorInfo: null }}
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-      errorInfo
-    });
+      errorInfo;
+});
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
@@ -109,22 +109,22 @@ export class ErrorBoundary extends Component<Props, State> {
             error: {
               message: error.message,
               stack: error.stack,
-              name: error.name
-            },
+              name: error.name;
+},
             errorInfo: {
               componentStack: errorInfo.componentStack,
               timestamp: new Date().toISOString(),
               userAgent: navigator.userAgent,
-              url: window.location.href
-          })
-        }).catch(() => {
-          // Silently fail if error reporting fails
-        })}
+              url: window.location.href;
+});
+}).catch(() => {
+          // Silently fail if error reporting fails;
+})}
     } catch (reportingError) {
       // Silently fail if error reporting fails
 
-  private handleRetry = () => {
-    })};
+  private handleRetry = () => {;
+})};
 
   private handleReload = () => {
     window.location.reload()};

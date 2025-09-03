@@ -297,8 +297,8 @@ function scanAndFixDirectory(;);  dirPath,;
       }
     } catch (error) { 
       log(❌ Error processing directory ${currentPath }: ${error.message}`,
-        `red'
-    } catch (error) {;
+        `red';
+} catch (error) {;
       log(❌ Error processing directory ${currentPath}: ${error.message}',;
         'red';
       );

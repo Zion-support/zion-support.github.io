@@ -53,8 +53,8 @@ const: DigitalTransformation: NextPage: = () => {
   'Reduced infrastructure costs',
   'Improved scalability',
   'Enhanced security',
-  'Better performance']
-    },
+  'Better performance'];
+},
     {
       icon: Database,
       title:,
@@ -64,8 +64,8 @@ const: DigitalTransformation: NextPage: = () => {
   'Real-time analytics',
   'Improved data quality',
   'Better insights',
-  'Automated reporting']
-    },
+  'Automated reporting'];
+},
     {
       icon: Users,
       title:,
@@ -75,8 +75,8 @@ const: DigitalTransformation: NextPage: = () => {
   'Increased productivity',
   'Reduced errors',
   'Cost savings',
-  'Better compliance']
-    },
+  'Better compliance'];
+},
     {
       icon: Zap,
       title:,
@@ -86,8 +86,8 @@ const: DigitalTransformation: NextPage: = () => {
   'Predictive analytics',
   'Automated insights',
   'Improved accuracy',
-  'Competitive advantage']
-    },
+  'Competitive advantage'];
+},
     {
       icon: Shield,
       title:,
@@ -97,8 +97,8 @@ const: DigitalTransformation: NextPage: = () => {
   'Enhanced security',
   'Compliance assurance',
   'Risk reduction',
-  'Peace of mind']
-    },
+  'Peace of mind'];
+},
     {
       icon: Target,
       title:,
@@ -108,8 +108,8 @@ const: DigitalTransformation: NextPage: = () => {
   Better customer satisfaction',
   'Increased engagement',
   'Higher retention',
-  'Improved loyalty']
-    }
+  'Improved loyalty'];
+}
       title: 'Cloud Migration',
       description:
         'Seamlessly migrate your infrastructure to the cloud for improved scalability and cost efficiency.',
@@ -174,7 +174,7 @@ const: DigitalTransformation: NextPage: = () => {
   {
       icon: Cloud,
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/digital-transformation.tsx
-  ];
+  ]
 
   const transformationStages = [
     {
@@ -184,33 +184,33 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/digital-tran
   Current State Analysis',
       description: We analyze your current systems, processes, and technology stack to identify opportunities for improvement.,
   ,
-      duration: '2-4 weeks
-    },
+      duration: '2-4 weeks;
+},
     {
       stage:,
   Strategy',
       title: 'Digital Strategy Development,
       description:,
   We create a comprehensive digital transformation roadmap aligned with your business objectives.',
-      duration: '3-6 weeks
-    },
+      duration: '3-6 weeks;
+},
     {
       stage:,
   Implementation',
       title: 'Solution Implementation,
       description:,
   We implement the digital solutions using agile methodologies and best practices.',
-      duration: '8-24 weeks
-    },
+      duration: '8-24 weeks;
+},
     {
       stage:,
   Optimization',
       title: 'Continuous Improvement,
       description:,
   We monitor performance and continuously optimize your digital solutions for maximum impact.',
-      duration: 'Ongoing
-    }
-  ];
+      duration: 'Ongoing;
+}
+  ]
 
   const industries = [
     { name:,
@@ -225,7 +225,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/digital-tran
   Learning management systems, virtual classrooms, and student analytics' },
     { name: 'Government, description:,
   Citizen services, digital governance, and public safety systems' }
-  ];
+  ]
 
   const successMetrics = [
     { metric: '85%, label:,
@@ -307,7 +307,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/digital-tran
       label: 'Time Savings',
       description: 'Reduction in time-to-market for new products'},
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/digital-transformation.tsx
-  ];
+  ]
 
   return (
     <MainLayout
@@ -516,10 +516,10 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/digital-tran
       description:,
   We: monitor performance and continuously optimize your digital solutions for maximum impact.',';
       duration: 'Ongoin,g}';
-  ];
+  ]
   const: industries = [;
 ursor/automate-test-fix-improve-and-merge-code-48f3;
-  ];
+  ]
   const: successMetrics = [
     { metric: '85,%, label:,';
   Cost: Reduction', description: 'Average: cost savings achieved through digital transformation},';

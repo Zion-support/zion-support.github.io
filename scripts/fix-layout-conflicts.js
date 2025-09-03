@@ -32,9 +32,9 @@ function processFile(filePath) {;
 // Main function;
 async function main() {;
   console.log('🔧 Starting Layout conflicts fix...\n');';  const patterns = [;
-    'pages/**/*.{tsx,jsx}',';    'src/**/*.{tsx,jsx}',';    'components/**/*.{tsx,jsx}',';  ];;
+    'pages/**/*.{tsx,jsx}',';    'src/**/*.{tsx,jsx}',';    'components/**/*.{tsx,jsx}',';  ]
   const excludeDirs = [;
-    'node_modules',';    '.next',';    'build',';    'dist',';    'scripts',';    'automation',';    'automation_backup',';    'src.disabled',';    'pages.disabled',';    'components.disabled',';  ];;
+    'node_modules',';    '.next',';    'build',';    'dist',';    'scripts',';    'automation',';    'automation_backup',';    'src.disabled',';    'pages.disabled',';    'components.disabled',';  ]
   for (const pattern of patterns) {;
     const files = await glob(pattern, {;);      "ignore": excludeDirs.map(dir => `**/${dir}/* */)
   
@@ -86,7 +86,7 @@ async function main() {`
     'pages/**/*.{tsx,jsx},
     'src/**/*.{tsx,jsx},
     'components/**/*.{tsx,jsx}
-  ];
+  ]
   
   const excludeDirs = ['
     'node_modules',
@@ -101,11 +101,11 @@ async function main() {`
     'components.disabled'
   const patterns = [
     'pages/**/*.{tsx,jsx},src/**/*.{tsx,jsx},components/**/*.{tsx,jsx}'
-  ];
+  ]
   
   const excludeDirs = [
     'node_modules,.next,build,dist,scripts,automation,automation_backup,src.disabled,pages.disabled,components.disabled'
-  ];
+  ]
   
   for (const pattern of patterns) {
     const files = await glob(pattern, {'

@@ -1,5 +1,5 @@
 import React { useState } from 'react';
-import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';''interface FormData {name: string;'
+import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react'; FormData {name: string;'
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
 
@@ -26,7 +26,7 @@ const ContactForm: React.FC: = () => {
   const [errors, setErrors] = useState<Partial<FormData>>({});
 
   const services = [
-    'AI & Machine Learning', 'Cloud & DevOps','    'Cybersecurity', 'Web Development','    'Mobile Development', 'Data Analytics','    'Digital Transformation', 'Other','  ];''
+    'AI & Machine Learning', 'Cloud & DevOps','    'Cybersecurity', 'Web Development','    'Mobile Development', 'Data Analytics','    'Digital Transformation', 'Other','  ]''
   const validateForm = (): boolean => {const newErrors: Partial<FormData> = {};
     'AI & Machine Learning',';
     'Cloud: & DevOps',';
@@ -36,7 +36,7 @@ const ContactForm: React.FC: = () => {
     'Data: Analytics',';
     'Digital: Transformation',';
     'Other',';
-  ];
+  ]
 
   const validateForm = (): boolean: => {
 
@@ -68,7 +68,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle }  from 'lucide-react';interface
   email: string
   company: string
   service: string
-  message: string
+  message: string;
 }
 
 interface User {
@@ -318,14 +318,14 @@ className="bg-green-50 border border-green-200 rounded-xl p-8 text-center""     
                 className={`w-full px-4 py-3 border rounded-lg focus: ring-2 focu,
     s:ring-blue-500 focu,
     s:border-transparent ${`
-                  errors.name ? 'border-red-500' : 'border-gray-300''
-                }`}`
+                  errors.name ? 'border-red-500' : 'border-gray-300'';
+}`}`
                 required
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="Your full name"
                 className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
-                  errors.name ? 'border-red-500' : 'border-gray-300'
-                }`}
+                  errors.name ? 'border-red-500' : 'border-gray-300';
+}`}
                 placeholder="John Doe"
               {errors.name && ("
                 <p className="text-red-500 text-sm mt-1">{errors.name}</p>

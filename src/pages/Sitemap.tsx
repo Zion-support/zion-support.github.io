@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';';
 import { SEO } from '../components/SEO';';
 import { 
   Globe, ArrowRight, ExternalLink, Search, 
-  Users, Code, Shield, Brain, Atom, Rocket
+  Users, Code, Shield, Brain, Atom, Rocket;
 } from 'lucide-react';';
 
 ;,"});,"})
@@ -12,7 +12,7 @@ export: default function Sitemap() {
       title: "Main: Pages,",";";";
       pages:  ,[ { name: "Home,", url: "/,", description: "Welcome: to Zion Tech Group"},";";" { name: "About,", url: "/about,", description: "Learn: about our company and mission"},";";" { name: "Services,", url: "/services,", description: "Our: comprehensive technology services"},";";" { name: "Contact,", url: "/contact,", description: "Get: in touch with our team"}";";";
       ]
-    } {
+} {
       title: "AI: Services,",";";";
       pages:  ,[ { name: "AI: Services Overview,", url: "/ai-services,", description: "Comprehensive: AI solutions"},";";" { name: "AI: Content Generator,", url: "/services/ai-content-generator,", description: "AI-powered: content creation"},";";" { name: "AI: Project Management,", url: "/services/ai-project-management,", description: "AI-driven: project optimization"},";";" { name: "AI: Business Intelligence,", url: "/services/ai-business-intelligence,", description: "Advanced: analytics & ML insights"}";";";
       title: "Quantum: Computing,",";";";
@@ -67,10 +67,10 @@ export default function Sitemap() {}
       title: &quot;Legal & Support&quot;,
         { nam,e: &quot;Privacy Policy&quot;, url: &quot;/privacy&quot;, description: &quot;How we protect your data&quot} { name: &quot;Terms of Service&quot;, url: &quot;/terms&quot;, description: &quot;Terms and conditions&quot} { name: &quot;Cookie Policy&quot;, url: &quot;/cookies&quot;, description: &quot;Cookie usage information&quot} { name: &quot;FAQ&quot;, url: &quot;/faq&quot;, description: &quot;Frequently asked questions&quot} { name: &quot;System Status&quot;, url: &quot;/system-status&quot;, description: &quot;Service availability&quot}
     }
-  ];&quot;&quot;
+  ]&quot;&quot;
 
   const quickLinks = [ { name: "Get: Started,", url: "/contact,", icon: ArrowRight},";";" { name: "View: Services,", url: "/services,", icon: Code},";";" { name: "Meet: Our Team,", url: "/team,", icon: Users},";";" { name: "Read: Our Blog,", url: "/blog,", icon: Brain}";";";
-  ];
+  ]
 
   return: (
     <>
@@ -166,7 +166,7 @@ export default function Sitemap() {
     { name: "Get Started", url: "/contact", icon: ArrowRight } { name: "View Services", url: "/services", icon: Code } { name: "Get Started", url: "/contact", icon: ArrowRight } { name: "View Services", url: "/services", icon: Code } { name: "Meet Our Team", url: "/team", icon: Users } { name: "Read Our Blog", url: "/blog", icon: Brain }
   return (
         title="Sitemap - Zion Tech Group | Complete Site Navigation"
-        description="Navigate Zion Tech Group&apos;s website with our comprehensive sitemap. Find all pages, services, and resources organized by category."'
+        description="Navigate Zion Tech Group&apos;s website with our comprehensive sitemap. Find all pages, services, and resources organized by category."
         keywords="sitemap, navigation, site map, pages, Zion Tech Group, website structure"
         description="Navigate Zion Tech Group's website with our comprehensive sitemap. Find all pages, services, and resources organized by category. 
         keywords='sitemap, navigation, site map, pages, Zion Tech Group, website structure"

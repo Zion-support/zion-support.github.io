@@ -1,21 +1,21 @@
 {
-  "timestamp": "2025-09-03T02:27:08.545Z",
+  "timestamp": "2025-09-03T02:45:33.543Z",
   "securityAudit": {
-    "success": false,
-    "error": "Command failed: npm audit --audit-level=moderate\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error code ENOLOCK\nnpm error audit This command requires an existing lockfile.\nnpm error audit Try creating one first with: npm i --package-lock-only\nnpm error audit Original error: loadVirtual requires existing shrinkwrap file\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-03T02_27_08_587Z-debug-0.log\n"
-  },
+    "success": true,
+    "output": "found 0 vulnerabilities\n";
+},
   "performanceCheck": {
     "success": false,
-    "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: next: not found\n"
-  },
+    "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error\n\n> Build error occurred\nSyntaxError: Unexpected token ';'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n";
+},
   "qualityChecks": [
     {
       "name": "File Structure Check",
       "success": true,
       "result": {
         "missing": [],
-        "isValid": true
-      }
+        "isValid": true;
+}
     },
     {
       "name": "Dependency Check",
@@ -41,7 +41,6 @@
           "@radix-ui/react-scroll-area",
           "@radix-ui/react-select",
           "@radix-ui/react-separator",
-          "@radix-ui/react-sheet",
           "@radix-ui/react-slider",
           "@radix-ui/react-slot",
           "@radix-ui/react-switch",
@@ -61,7 +60,6 @@
           "next",
           "openai",
           "path",
-          "postcss",
           "react",
           "react-datepicker",
           "react-dom",
@@ -100,8 +98,8 @@
           "ts-jest",
           "typescript"
         ],
-        "totalDeps": 75
-      }
+        "totalDeps": 73;
+}
     },
     {
       "name": "Configuration Check",
@@ -114,8 +112,8 @@
           "eslint.config.js"
         ],
         "missing": [],
-        "coverage": 100
-      }
+        "coverage": 100;
+}
     }
   ]
 }

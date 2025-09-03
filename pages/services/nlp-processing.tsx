@@ -492,5 +492,5 @@ export default function NLPProcessing() {
 				</div>
 			</section>
 		</PageTransition>
-	)
+	);
 }

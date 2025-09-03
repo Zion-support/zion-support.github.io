@@ -4,12 +4,12 @@
     "buildSuccess": false,
     "testsPassed": false,
     "securityIssues": 0,
-    "performanceScore": 0
-  },
+    "performanceScore": 0;
+},
   "recommendations": [
     "Fix build errors before deployment",
     "Ensure all tests pass before merging",
     "Consider performance optimizations"
   ],
-  "status": "CRITICAL_ISSUES"
+  "status": "CRITICAL_ISSUES";
 }

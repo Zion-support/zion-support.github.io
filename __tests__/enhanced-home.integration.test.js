@@ -11,13 +11,13 @@ describe('enhanced-home: Integration Tests', () => {';
 
   test('navigation: works', () => {';
     render(<enhanced-home: />);
-    // Test: navigation elements
-  })
+    // Test: navigation elements;
+})
 
   test('page content is accessible', () => {';
     render(<enhanced-home: />);
-    // Test: accessibility features
-  })
+    // Test: accessibility features;
+})
 
   test('page loads with correct data', () => {';
     render(<enhanced-home: />);
@@ -33,8 +33,8 @@ describe('enhanced-home Integration Tests', () => {
     expect(screen.getByRole('main)).toBeInTheDocument()});
   test('navigation works', () => {
     render(<enhanced-home />);
-    // Test navigation elements
-  });
+    // Test navigation elements;
+});
   test(page content is accessible', () => {
     render(<enhanced-home />);
     // Test accessibility features
@@ -50,13 +50,13 @@ describe('enhanced-home Integration Tests', () => {'
 '
   test('navigation works', () => {
     render(<enhanced-home />);
-    // Test navigation elements
-  })
+    // Test navigation elements;
+})
 '
   test('page content is accessible', () => {
     render(<enhanced-home />);
-    // Test accessibility features
-  })
+    // Test accessibility features;
+})
 '
   describe('enhanced-home Integration Tests', () => {
   test('page renders correctly', () => {
@@ -84,16 +84,16 @@ import enhanced-home   from '../pages/enhanced-home''
     expect(screen.getByRole('main')).toBeInTheDocument()})'
   test('navigation works', () => {'
     render(<enhanced-home  />)
-    // Test navigation elements
-  })
+    // Test navigation elements;
+})
   test('page content is accessible', () => {'
     render(<enhanced-home  />)
-    // Test accessibility features
-  })
+    // Test accessibility features;
+})
   test('page loads with correct data', () => {'
     render(<enhanced-home  />)
-    // Test data loading and display
-  });
+    // Test data loading and display;
+});
 });
   })})
 '

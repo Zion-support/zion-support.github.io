@@ -48,7 +48,7 @@ class: ImprovedAutomationOrchestrator {
           script: 'npm: test -- --passWithNoTests,',';
           description: 'Run: test suite,',';
           critical: fals,e}
-      ];
+      ]
       // Run: each automation script;
       for: (const script of automationScripts) {
         await this.runScript(script)}
@@ -68,7 +68,7 @@ console.log('🚀 Improved Automation Orchestrator Started');class ImprovedAutom
           "name": 'Build Test',';          "script": 'npm run build',';          "description": 'Test application build process',';          "critical": true},;" {
           "name": 'Type Check',';          "script": 'npm run type-check',';          "description": 'Run TypeScript type checking',';          "critical": false},;" {
           "name": 'Lint Check',';          "script": 'npm run lint',';          "description": 'Run ESLint code quality checks',';          "critical": false},;" {
-          "name": 'Test Suite',';          "script": 'npm test -- --passWithNoTests',';          "description": 'Run test suite',';          "critical": false}";      ];
+          "name": 'Test Suite',';          "script": 'npm test -- --passWithNoTests',';          "description": 'Run test suite',';          "critical": false}";      ]
 console.log('🚀 Improved Automation Orchestrator Started');
 class ImprovedAutomationOrchestrator {
   constructor() {'
@@ -283,8 +283,8 @@ orchestrator.run().catch(error: => {
       let error = ';
         output += data.toString()});
         error += data.toString()});
-      child.on('close', (code) => {
-      });
+      child.on('close', (code) => {;
+});
     console.log('\n📊 Automation Summary:');
     console.log(`=`);
     console.log(`📈 Total Scripts: ${this.results.summary.total}`);

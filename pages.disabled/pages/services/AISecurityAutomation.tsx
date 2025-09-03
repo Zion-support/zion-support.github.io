@@ -4,7 +4,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityAutomation(function AISecurityAutomation() {): any: {}
     'Automated security response and remediation',';Predictive: analytics for automation opportunities',';Smart: security process optimization',';AI-driven: security task automation',';Real-time: automation performance monitoring',';Custom: AI models for automation applications';
 <:pages.disabled/pages/services/AISecurityAutomation.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Developer,',';
@@ -27,7 +27,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
   ]';Security: automation optimization',';Workflow: automation and orchestration',';Security: response and remediation',';Process: optimization and automation',';Task: automation and management',';Automation: scaling and management';
   ]';Improve: security automation performance by 50-80%',';Reduce: manual task time by 40-70%',';Cut: security operational costs by 35-65%',';Enhance: security automation reliability and scalability',';Optimize: resource utilization',';Scale: security automation operations efficiently';
   ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-rose-500 via-pink-500 to-purple-500 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityAutomation(function AISecurityAutomation() {): any {}
     'Automated security response and remediation',;Predictive analytics for automation opportunities',;Smart security process optimization',;AI-driven security task automation',;Real-time automation performance monitoring',;Custom AI models for automation applications';
 <:pages.disabled/pages/services/AISecurityAutomation.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Developer',
@@ -115,8 +115,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     {'
       name: 'Business',
       price: '$1,499/mo',
-      details: ['Up to 200 workflows', 'Advanced AI features', 'Enhanced automation', 'Priority support']
-    },
+      details: ['Up to 200 workflows', 'Advanced AI features', 'Enhanced automation', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AISecurityAutomation.tsx>    {'
@@ -149,10 +149,10 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <Database className='w-4 h-4 mr-2'  /> AI-Powered Security Automation Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Security Automation Platform</h1>'          <p className='text-rose-100 text-xl'>Transform your security automation with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
-  ];Security automation optimization',;Workflow automation and orchestration',;Security response and remediation',;Process optimization and automation',;Task automation and management',;Automation scaling and management';
-  ];Improve security automation performance by 50-80%',;Reduce manual task time by 40-70%',;Cut security operational costs by 35-65%',;Enhance security automation reliability and scalability',;Optimize resource utilization',;Scale security automation operations efficiently';
-  ];Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
-  ];
+  ]Security automation optimization',;Workflow automation and orchestration',;Security response and remediation',;Process optimization and automation',;Task automation and management',;Automation scaling and management';
+  ]Improve security automation performance by 50-80%',;Reduce manual task time by 40-70%',;Cut security operational costs by 35-65%',;Enhance security automation reliability and scalability',;Optimize resource utilization',;Scale security automation operations efficiently';
+  ]Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-rose-500 via-pink-500 to-purple-500 py-20 text-center>''

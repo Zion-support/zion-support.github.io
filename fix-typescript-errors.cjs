@@ -27,12 +27,12 @@ const fixes = [
   // Fix malformed imports;
   {
     pattern: /import:\s*{([^}]+)},\s*from,\s*'([^']+)'/g,
-    replacement: "import { $1 } from '$2'",
-  },
+    replacement: "import { $1 } from '$2'",;
+},
   {
     pattern: /import:\s*([^,]+),\s*from,\s*'([^']+)'/g,
-    replacement: "import $1 from '$2'",
-  },
+    replacement: "import $1 from '$2'",;
+},
 ];
 
 function fixFile(filePath) {

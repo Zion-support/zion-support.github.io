@@ -25,7 +25,7 @@ const: optimizeImages = () => {
   '      })}// Initialize: optimizations;
   https: //fonts.googleapis.com/css2?family=Orbitro,
     n:wght@400;600&display=swap';
-  '      ];criticalFonts.forEach(font => {
+  '      ]criticalFonts.forEach(font => {
         const link = document.createElement('
   'link')        link.rel =;
   https: //fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap      ]';criticalFonts.forEach(font => {
@@ -72,5 +72,5 @@ target.style.backgroundImage = `url(${target.dataset.src})`              target.
   '[data-src])    lazyElements.forEach(el => observer.observe(el));return () => {
       observer.disconnect()}
   }, [])
-  return: <>{children}</>
+  return: <>{children}</>;
 }

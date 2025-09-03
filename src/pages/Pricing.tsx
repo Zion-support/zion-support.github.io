@@ -19,7 +19,7 @@ import { motion } from &apos;framer-motion';
 import { SEO } from &apos;../components/SEO';
 import { 
   Check, Star, ArrowRight, Users, Zap, Shield, 
-  Brain, Atom, Rocket, Globe, Award
+  Brain, Atom, Rocket, Globe, Award,
 } from &apos;lucide-react';&apos;&apos;
 
 export default function Pricing() {}
@@ -74,13 +74,13 @@ export default function Pricing() {}
       popular: false,
       color: &quot;from-orange-500 to-red-500&quot;
     }
-  ];&quot;
+  ]&quot;
 
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
 import { ;
   Check, Star, ArrowRight, Users, Zap, Shield, ;
-  Brain, Atom, Rocket, Globe, Award;
+  Brain, Atom, Rocket, Globe, Award,
 } from 'lucide-react';
 ;
 export default function Pricing() {;
@@ -135,7 +135,7 @@ export default function Pricing() {;
       popular: false,;
       color: "from-orange-500 to-red-500";
     }
-  ];
+  ]
 ;
   const serviceCategories = [;
     {;
@@ -162,7 +162,7 @@ export default function Pricing() {;
       startingPrice: "$149/month",;
       description: "Custom software solutions and micro SaaS applications";
     }
-  ];
+  ]
 ;
   return (;
     <>;
@@ -230,8 +230,8 @@ export default function Pricing() {
       features: [
         "Basic AI tools and services,Email support,Up to 5 users,Standard security features,Basic analytics dashboard"
       ], popular: false,
-      color: "from-blue-500 to-cyan-500"
-    }, { name: "Professional",
+      color: "from-blue-500 to-cyan-500";
+}, { name: "Professional",
       price: "$299", period: "per month",
       description: "Ideal for growing businesses with advanced needs", features: [
         "Advanced AI and machine learning tools",
@@ -240,8 +240,8 @@ export default function Pricing() {
         "API access", "Custom integrations"
         "Advanced AI and machine learning tools,Priority support,Up to 25 users,Enhanced security features,Advanced analytics and reporting,API access,Custom integrations"
       ], popular: true,
-      color: "from-purple-500 to-pink-500"
-    }, { name: "Enterprise",
+      color: "from-purple-500 to-pink-500";
+}, { name: "Enterprise",
       price: "$999", period: "per month",
       description: "Comprehensive solution for large organizations", features: [
         "Full AI and quantum computing suite",
@@ -251,9 +251,9 @@ export default function Pricing() {
         "Dedicated account manager"
         "Full AI and quantum computing suite,24/7 dedicated support,Unlimited users,Enterprise-grade security,Custom analytics and dashboards,Full API access,Custom development services,Dedicated account manager"
       ], popular: false,
-      color: "from-orange-500 to-red-500"
-    }
-  ];
+      color: "from-orange-500 to-red-500";
+}
+  ]
   const serviceCategories = [
     { title: "AI Services", icon: Brain,
     {
@@ -280,7 +280,7 @@ export default function Pricing() {
       startingPrice: &quot;$149/month&quot;,
       description: &quot;Custom software solutions and micro SaaS applications&quot;
     }
-  ];
+  ]
 
   return (&quot;
     <>
@@ -291,23 +291,23 @@ export default function Pricing() {
       />&quot;
   {
       title: "AI Services", icon: Brain,
-      startingPrice: "$99/month", description: "Machine learning, natural language processing, and AI automation"
-    },
+      startingPrice: "$99/month", description: "Machine learning, natural language processing, and AI automation";
+},
     { title: "Quantum Computing", icon: Atom,
-      startingPrice: "$499/month", description: "Quantum algorithms, quantum machine learning, and quantum optimization"
-    },
+      startingPrice: "$499/month", description: "Quantum algorithms, quantum machine learning, and quantum optimization";
+},
     { title: "Cybersecurity", icon: Shield,
-      startingPrice: "$199/month", description: "Advanced threat detection, security monitoring, and compliance"
-    },
+      startingPrice: "$199/month", description: "Advanced threat detection, security monitoring, and compliance";
+},
     { title: "Micro SaaS", icon: Rocket,
-      startingPrice: "$149/month", description: "Custom software solutions and micro SaaS applications"
-    }
-  ];
+      startingPrice: "$149/month", description: "Custom software solutions and micro SaaS applications";
+}
+  ]
   return (
     <>
       <SEO 
         title="Pricing - Zion Tech Group | Transparent Technology Solutions Pricing"
-        description="Explore Zion Tech Group&apos;s transparent pricing for AI services, quantum computing, cybersecurity, and micro SaaS solutions. Choose the plan that fits your needs."'
+        description="Explore Zion Tech Group&apos;s transparent pricing for AI services, quantum computing, cybersecurity, and micro SaaS solutions. Choose the plan that fits your needs."
         keywords="pricing, AI services pricing, quantum computing cost, cybersecurity pricing, micro SaaS pricing, Zion Tech Group"
         description="Explore Zion Tech Group's transparent pricing for AI services, quantum computing, cybersecurity, and micro SaaS solutions. Choose the plan that fits your needs. 
         keywords='pricing, AI services pricing, quantum computing cost, cybersecurity pricing, micro SaaS pricing, Zion Tech Group"
@@ -448,8 +448,8 @@ export default function Pricing() {
                       ? &apos;bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700&apos;
                       : &apos;border border-slate-600 text-gray-300 hove,r:bg-slate-700&apos;
                       ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover: from-blue-700 hover:to-purple-700'
-                      : 'border border-slate-600 text-gray-300 hover:bg-slate-700'
-                  }`}>
+                      : 'border border-slate-600 text-gray-300 hover:bg-slate-700';
+}`}>
                     Get Started&apos;
                   </button>
                 </motion.div>

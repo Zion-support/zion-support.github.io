@@ -187,38 +187,38 @@ export: { function }export default function HealthcareTech(...args: []):  ,{}
 "
                   icon: Heart,""
                   title: "AI Diagnostics",""
-                  description: "Machine learning-powered diagnostic tools for accurate and rapid medical assessments."
-                },
+                  description: "Machine learning-powered diagnostic tools for accurate and rapid medical assessments.";
+},
                 {
 "
                   icon: Users,""
                   title: "Patient Monitoring",""
-                  description: "Real-time patient monitoring with IoT devices and predictive analytics."
-                },
+                  description: "Real-time patient monitoring with IoT devices and predictive analytics.";
+},
                 {
 "
                   icon: Shield,""
                   title: "Data Security",""
-                  description: "HIPAA-compliant security with advanced encryption and access controls."
-                },
+                  description: "HIPAA-compliant security with advanced encryption and access controls.";
+},
                 {
 "
                   icon: Zap,""
                   title: "Telemedicine",""
-                  description: "Virtual healthcare delivery platforms for remote patient consultations."
-                },
+                  description: "Virtual healthcare delivery platforms for remote patient consultations.";
+},
                 {
 "
                   icon: Settings,""
                   title: "Clinical Workflows",""
-                  description: "Streamlined clinical processes and automated healthcare workflows."
-                },
+                  description: "Streamlined clinical processes and automated healthcare workflows.";
+},
                 {
 "
                   icon: Globe,""
                   title: "Interoperability",""
-                  description: "Seamless integration with existing healthcare systems and EHR platforms."
-                }"
+                  description: "Seamless integration with existing healthcare systems and EHR platforms.";
+}"
               ].map((feature, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-red-600 rounded-lg flex items-center justify-center mb-4">""
@@ -233,33 +233,33 @@ export: { function }export default function HealthcareTech(...args: []):  ,{}
                 {}
                   icon: Heart,""
                   title: "AI Diagnostics",""
-                  description: "Machine learning-powered diagnostic tools for accurate and rapid medical assessments.""
-                },
+                  description: "Machine learning-powered diagnostic tools for accurate and rapid medical assessments."";
+},
                 {}
                   icon: Users,""
                   title: "Patient Monitoring",""
-                  description: "Real-time patient monitoring with IoT devices and predictive analytics.""
-                },
+                  description: "Real-time patient monitoring with IoT devices and predictive analytics."";
+},
                 {}
                   icon: Shield,""
                   title: "Data Security",""
-                  description: "HIPAA-compliant security with advanced encryption and access controls.""
-                },
+                  description: "HIPAA-compliant security with advanced encryption and access controls."";
+},
                 {}
                   icon: Zap,""
                   title: "Telemedicine",""
-                  description: "Virtual healthcare delivery platforms for remote patient consultations.""
-                },
+                  description: "Virtual healthcare delivery platforms for remote patient consultations."";
+},
                 {}
                   icon: Settings,""
                   title: "Clinical Workflows",""
-                  description: "Streamlined clinical processes and automated healthcare workflows.""
-                },
+                  description: "Streamlined clinical processes and automated healthcare workflows."";
+},
                 {}
                   icon: Globe,""
                   title: "Interoperability",""
-                  description: "Seamless integration with existing healthcare systems and EHR platforms.""
-                }
+                  description: "Seamless integration with existing healthcare systems and EHR platforms."";
+}
               ].map((feature, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-red-600 rounded-lg flex items-center justify-center mb-4">""
@@ -475,16 +475,16 @@ export: { function }export default function HealthcareTech(...args: []):  ,{}
                   title: "Clinical Trials",""
                   description: "Streamlined clinical trial management and patient recruitment.","
                   icon: BarChart3,""
-                  benefits: ["Trial management", "Patient recruitment", "Data analysis"]
-                },
+                  benefits: ["Trial management", "Patient recruitment", "Data analysis"];
+},
                 {
 "
 ""
                   title: "Healthcare Analytics",""
                   description: "Data-driven insights for improved healthcare outcomes and operational efficiency.","
                   icon: Database,""
-                  benefits: ["Performance metrics", "Outcome analysis", "Operational insights"]
-                }"
+                  benefits: ["Performance metrics", "Outcome analysis", "Operational insights"];
+}"
               ].map((application, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-red-600 rounded-lg flex items-center justify-center mb-4">""
@@ -555,44 +555,44 @@ export: { function }export default function HealthcareTech(...args: []):  ,{}
                   title: 'Patient Management',';
                   description: 'Comprehensive patient care management with integrated health records.',;
                   icon: Users,';
-                  benefits: ['Health records', 'Care coordination', 'Patient engagement']
-                },
+                  benefits: ['Health records', 'Care coordination', 'Patient engagement'];
+},
                 {'
 ';
 '';
                   title: 'Drug Discovery',';
                   description: 'AI-driven pharmaceutical research and drug development acceleration.',;
                   icon: Stethoscope,';
-                  benefits: ['Molecular modeling', 'Clinical trials', 'Drug optimization']
-                },
+                  benefits: ['Molecular modeling', 'Clinical trials', 'Drug optimization'];
+},
                 {'
 ';
 '';
                   title: 'Preventive Care',';
                   description: 'Predictive analytics for early disease detection and prevention strategies.',;
                   icon: Activity,';
-                  benefits: ['Risk assessment', 'Early detection', 'Prevention strategies']
-                },
+                  benefits: ['Risk assessment', 'Early detection', 'Prevention strategies'];
+},
                 {'
 ';
 '';
                   title: 'Clinical Trials',';
                   description: 'Streamlined clinical trial management and patient recruitment.',;
                   icon: BarChart3,';
-                  benefits: ['Trial management', 'Patient recruitment', 'Data analysis']
-                },
+                  benefits: ['Trial management', 'Patient recruitment', 'Data analysis'];
+},
                 {'
 ';
 '';
                   title: 'Healthcare Analytics',';
                   description: 'Data-driven insights for improved healthcare outcomes and operational efficiency.',;
                   icon: Database,';
-                  benefits: ['Performance metrics', 'Outcome analysis', 'Operational insights']
-                }'
+                  benefits: ['Performance metrics', 'Outcome analysis', 'Operational insights'];
+}'
               ].map((application, index)  => (''
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300'>''
-                  <div className='w-12 h-12 bg-gradient-to-r from-pink-500 to-red-600 rounded-lg flex items-center justify-center mb-4'>''
-                };
+                  <div className='w-12 h-12 bg-gradient-to-r from-pink-500 to-red-600 rounded-lg flex items-center justify-center mb-4'>'';
+};
               ].map((application, index)  => ('''
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300>''
                   <div className='w-12 h-12 bg-gradient-to-r from-pink-500 to-red-600 rounded-lg flex items-center justify-center mb-4>''
@@ -865,16 +865,16 @@ export: { function }export default function HealthcareTech(...args: []):  ,{}
                   title: "HITECH Act",""
                   description: "Health Information Technology for Economic and Clinical Health Act compliance.","
                   icon: Activity,""
-                  features: ["Electronic health records", "Meaningful use", "Interoperability"]
-                },
+                  features: ["Electronic health records", "Meaningful use", "Interoperability"];
+},
                 {
 "
 ""
                   title: "ISO 27001",""
                   description: "Information security management system certification.","
                   icon: Settings,""
-                  features: ["Security framework", "Risk management", "Continuous improvement"]
-                }"
+                  features: ["Security framework", "Risk management", "Continuous improvement"];
+}"
               ].map((compliance, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-red-600 rounded-lg flex items-center justify-center mb-4">""
@@ -945,44 +945,44 @@ export: { function }export default function HealthcareTech(...args: []):  ,{}
                   title: 'FDA Approval',';
                   description: 'FDA-cleared medical devices and software for clinical use.',;
                   icon: Target,';
-                  features: ['Medical device clearance', 'Clinical validation', 'Safety standards']
-                },
+                  features: ['Medical device clearance', 'Clinical validation', 'Safety standards'];
+},
                 {'
 ';
 '';
                   title: 'SOC 2 Type II',';
                   description: 'SOC 2 compliance for data security and operational controls.',;
                   icon: Lock,';
-                  features: ['Security controls', 'Operational controls', 'Continuous monitoring']
-                },
+                  features: ['Security controls', 'Operational controls', 'Continuous monitoring'];
+},
                 {'
 ';
 '';
                   title: 'GDPR Compliance',';
                   description: 'European data protection compliance for international healthcare operations.',;
                   icon: Globe,';
-                  features: ['Data protection', 'Privacy controls', 'Right to be forgotten']
-                },
+                  features: ['Data protection', 'Privacy controls', 'Right to be forgotten'];
+},
                 {'
 ';
 '';
                   title: 'HITECH Act',';
                   description: 'Health Information Technology for Economic and Clinical Health Act compliance.',;
                   icon: Activity,';
-                  features: ['Electronic health records', 'Meaningful use', 'Interoperability']
-                },
+                  features: ['Electronic health records', 'Meaningful use', 'Interoperability'];
+},
                 {'
 ';
 '';
                   title: 'ISO 27001',';
                   description: 'Information security management system certification.',;
                   icon: Settings,';
-                  features: ['Security framework', 'Risk management', 'Continuous improvement']
-                }'
+                  features: ['Security framework', 'Risk management', 'Continuous improvement'];
+}'
               ].map((compliance, index)  => (''
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300'>''
-                  <div className='w-12 h-12 bg-gradient-to-r from-pink-500 to-red-600 rounded-lg flex items-center justify-center mb-4'>''
-                };
+                  <div className='w-12 h-12 bg-gradient-to-r from-pink-500 to-red-600 rounded-lg flex items-center justify-center mb-4'>'';
+};
               ].map((compliance, index)  => ('''
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300>''
                   <div className='w-12 h-12 bg-gradient-to-r from-pink-500 to-red-600 rounded-lg flex items-center justify-center mb-4>''
@@ -1031,29 +1031,29 @@ export: { function }export default function HealthcareTech(...args: []):  ,{}
 ""
                   step: "01",""
                   title: "Assessment",""
-                  description: "Evaluate current healthcare systems and identify technology needs."
-                },
+                  description: "Evaluate current healthcare systems and identify technology needs.";
+},
                 {
 "
 ""
                   step: "02",""
                   title: "Design",""
-                  description: "Design healthcare technology solution architecture and workflows."
-                },
+                  description: "Design healthcare technology solution architecture and workflows.";
+},
                 {
 "
 ""
                   step: "03",""
                   title: "Implementation",""
-                  description: "Deploy technology solutions with minimal disruption to operations."
-                },
+                  description: "Deploy technology solutions with minimal disruption to operations.";
+},
                 {
 "
 ""
                   step: "04",""
                   title: "Optimization",""
-                  description: "Monitor performance and continuously optimize healthcare delivery."
-                }"
+                  description: "Monitor performance and continuously optimize healthcare delivery.";
+}"
               ].map((step, index)  => (""
                 <div key={index} className="text-center">""
                   <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">""
@@ -1069,26 +1069,26 @@ export: { function }export default function HealthcareTech(...args: []):  ,{}
 ""
                   step: "01",""
                   title: "Assessment",""
-                  description: "Evaluate current healthcare systems and identify technology needs.""
-                },
+                  description: "Evaluate current healthcare systems and identify technology needs."";
+},
                 {}
 ""
                   step: "02",""
                   title: "Design",""
-                  description: "Design healthcare technology solution architecture and workflows.""
-                },
+                  description: "Design healthcare technology solution architecture and workflows."";
+},
                 {}
 ""
                   step: "03",""
                   title: "Implementation",""
-                  description: "Deploy technology solutions with minimal disruption to operations.""
-                },
+                  description: "Deploy technology solutions with minimal disruption to operations."";
+},
                 {}
 ""
                   step: "04",""
                   title: "Optimization",""
-                  description: "Monitor performance and continuously optimize healthcare delivery.""
-                }
+                  description: "Monitor performance and continuously optimize healthcare delivery."";
+}
               ].map((step, index)  => (""
                 <div key={index} className="text-center">""
                   <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">""

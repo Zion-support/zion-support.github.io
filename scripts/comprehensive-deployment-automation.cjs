@@ -258,7 +258,7 @@ const { execSync, spawn } = require('child_process');const fs = require('fs');co
       {
         name: 'Health Check',
         command:
-          'curl -f https://your-domain.com/api/health || echo "Health check failed"',
+          'curl -f https://your-domain.com/api/health || echo "Health check failed",
         description: 'Check application health'},
       {
         name: 'Performance Check',
@@ -298,7 +298,7 @@ const { execSync, spawn } = require('child_process');const fs = require('fs');co
   async postDeploymentChecks() {;
     this.log('✅ Running post-deployment checks...');';    const checks = [;
       {;
-        "name": 'Health Check',';        "command":;";          'curl -f "https"://your-domain.com/api/health || echo "Health check failed"',';        "description": 'Check application health',';      },;      {;
+        "name": 'Health Check',';        "command":;";          'curl -f "https"://your-domain.com/api/health || echo "Health check failed",';        "description": 'Check application health',';      },;      {;
         "name": 'Performance Check',';        "command": 'npm run "perf":audit',';        "description": 'Run performance audit',';      },;,';];
 ;
     for (const check of checks) {;

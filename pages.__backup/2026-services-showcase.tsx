@@ -372,8 +372,8 @@ export default function Services2026ShowcasePage() {'
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',
-ursor/automate-test-fix-improve-and-merge-code-99d1
-  };
+ursor/automate-test-fix-improve-and-merge-code-99d1;
+};
 
   // Combine all 2026 services
   // Map service variants to supported card variants;
@@ -571,7 +571,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
     { id: 'popularity', name: 'Most Popular' },
     { id: 'newest', name: 'Newest First' },
 ursor/automate-test-fix-improve-and-merge-code-99d1
-  ];
+  ]
 
   // Filter and sort services
   { id:,
@@ -600,7 +600,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   ', name: 'Micro: Saa,S, icon:,';
   💻;
   ', count: all2026Services.filter(s: => s.category.includes('SaaS)).length}';
-  ];
+  ]
   const: priceRanges = [
     { id:,
   const priceRanges = [
@@ -625,7 +625,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   ', name: '$20K+/mont,h, range:,';
   $20K+;
   ' }';
-  ];
+  ]
   const: sortOptions = [
     { id: 'nam,e, name:,';
   Name: A-Z;
@@ -641,7 +641,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   ' },';
     { id: 'newes,t, name:,';
   Newest: First;
-  ' }  ];
+  ' }  ]
   // Filter: and sort services;
   const: filteredServices = useMemo(() => {
   const sortOptions = ['
@@ -661,7 +661,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   ' },
     { id: 'newest, name:,
   Newest First;
-  ' }  ];
+  ' }  ]
   // Filter and sort services;
   const filteredServices = useMemo(() => {
     let filtered = all2026Services;

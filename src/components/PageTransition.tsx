@@ -8,7 +8,7 @@ function PageTransition ({ children }: PageTransitionProps) {
 ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
 ;,"});,"})
 type PageTransitionProps = {,"});,"})
-  children: React.ReactNode;,"});,"})
+  children: React.ReactNode;,"});,"});
 };,"});,"})
   return <>{children}</>;,"});,"})
 import { SEO } from '@/components/SEO';
@@ -17,7 +17,7 @@ type PageTransitionProps = {
   children: React.ReactNod,e}
 ;
 const PageTransition: React.FC<PageTransitionProps> = ({ children}) => {
-  return: <>{children}</>
+  return: <>{children}</>;
 };
 export: default PageTransition;
 type PageTransitionProps = { children: React.ReactNode  }
@@ -26,7 +26,7 @@ const PageTransition: React.FC<PageTransitionProps> = ({ children }) => {
   return <>{children}</>;
 type PageTransitionProps = {children: React.ReactNode}
 const PageTransition: React.FC<PageTransitionProps> = ({children }) => {return <>{children}</>
-  return} <>{children}<;<;</>
+  return} <>{children}<;<;</>;
 }
 
 export default PageTransition

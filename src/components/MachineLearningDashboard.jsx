@@ -4,8 +4,8 @@ import { Brain, Play, Square, Download, Upload, BarChart3, TrendingUp, Activity,
 ;,"});,"})
 export const MachineLearningDashboard = ({ className = '' }) => {,"});,"})
     const { trackEvent } = useAnalytics({        enableTracking: true,;,"});,"})
-        enableUserBehaviorTracking: true;,"});,"})
-    });,"});,"})
+        enableUserBehaviorTracking: true;,"});,"});
+});,"});,"})
     const [activeTab, setActiveTab] = useState('overview');,"});,"})
     const [showCreateModel, setShowCreateModel] = useState(false);,"});,"})
     const [showImportModel, setShowImportModel] = useState(false);,"});,"})
@@ -28,22 +28,22 @@ export const MachineLearningDashboard = ({ className = '' }) => {,"});,"})
                 framework: newModelForm.framework;,"});,"})
             setNewModelForm({ name: '', type 'classification', framework: 'tensorflow' });,"});,"})
             setShowCreateModel(false);,"});,"})
-            trackEvent('ml',dashboard',model_created')}"});,"})
-    }, [newModelForm, createModel, trackEvent]);,"});,"})
+            trackEvent('ml',dashboard',model_created')}"});,"});
+}, [newModelForm, createModel, trackEvent]);,"});,"})
     const hyperparameters = {}"});,"})
   learningRate: 0.001,;,"});,"})
             batchSize: 32,;,"});,"})
             epochs: 100,';,"});,"})
-  optimizer: 'adam';,"});,"})
+  optimizer: 'adam';,"});,"});
 };,"});,"})
         try {}"});,"})
             await startTraining(modelId, hyperparameters);,"});,"})
-            // // // // // // // // console.error('Training failed:', error);,"});,"})
-        }';,"});,"})
+            // // // // // // // // console.error('Training failed:', error);,"});,"});
+}';,"});,"})
             trackEvent('ml',dashboard',training_started')}"});,"})
         catch (error) {}"});,"})
-            // console.error('Training failed:', error)}"});,"})
-    }, [startTraining, trackEvent]);,"});,"})
+            // console.error('Training failed:', error)}"});,"});
+}, [startTraining, trackEvent]);,"});,"})
     const handleStopTraining = useCallback((jobId) => {}"});,"})
         stopTraining(jobId);,"});,"})
         trackEvent('ml',dashboard',training_stopped')}, [stopTraining, trackEvent]);,"});,"})
@@ -61,16 +61,16 @@ export const MachineLearningDashboard = ({ className = '' }) => {,"});,"})
                 setPredictionForm({ modelId: '', input: '' });,"});,"})
                 // // // // // // // // console.error('Prediction failed:', error);,"});,"})
                 trackEvent('ml',dashboard',prediction_made')}"});,"})
-                // console.error('Prediction failed:', error)}"});,"})
-        }"});,"})
-    }, [predictionForm, makePrediction, trackEvent]);,"});,"})
+                // console.error('Prediction failed:', error)}"});,"});
+}"});,"});
+}, [predictionForm, makePrediction, trackEvent]);,"});,"})
     const handleExportModel = useCallback((modelId) => {}"});,"})
             const modelData = exportModel(modelId);,"});,"})
             navigator.clipboard.writeText(modelData);,"});,"})
             // // // // // // // // console.error('Export failed:', error);,"});,"})
             trackEvent('ml',dashboard',model_exported')}"});,"})
-            // console.error('Export failed:', error)}"});,"})
-    }, [exportModel, trackEvent]);,"});,"})
+            // console.error('Export failed:', error)}"});,"});
+}, [exportModel, trackEvent]);,"});,"})
     const handleImportModel = useCallback((event) => {}"});,"})
         const file = event.target.files?.[0];,"});,"})
         if(file) {}"});,"})
@@ -83,8 +83,8 @@ export const MachineLearningDashboard = ({ className = '' }) => {,"});,"})
             reader.readAsText(file);'';,"});,"})
                     trackEvent('ml',dashboard',model_imported')}"});,"})
                     // console.error('Import failed:', error)}"});,"})
-            reader.readAsText(file) }"});,"})
-    }, [importModel, trackEvent]) ;,"});,"})
+            reader.readAsText(file) }"});,"});
+}, [importModel, trackEvent]) ;,"});,"})
     const getStatusColor = (status) => {}"});,"})
         switch (status) {}"});,"})
             case 'deployed': return 'text-green-600 bg-green-100';''';,"});,"})
@@ -153,12 +153,12 @@ export const MachineLearningDashboard = ({ className = '' }) => {,"});,"})
         <AnimatePresence mode="wait">'"'""";,"});,"})
           {activeTab === 'overview' && (<motion.div key="overview" initial = {}"});,"})
   { opacity: 0,;,"});,"})
-  y: 20;,"});,"})
+  y: 20;,"});,"});
 }} animate = {}"});,"})
   { opacity: 1,;,"});,"})
-  y: 0;,"});,"})
+  y: 0;,"});,"});
 }} exit = {}"});,"})
-  y: -20;,"});,"})
+  y: -20;,"});,"});
 }} className="space-y-6">""";,"});,"})
               {/* Key Metrics */}"""";,"});,"})
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">"""";,"});,"})
@@ -207,7 +207,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {,"});,"})
                         </span>;,"});,"})
                     </div>) ) }"});,"})
             </motion.div>)}'""";,"});,"})
-          {activeTab === 'models' && (<motion.div key="models" initial = {}"});,"})
+          {activeTab === 'models' && (<motion.div key="models" initial = {}"});,"});
 }} className="space-y-4">"""";,"});,"})
               <div className="flex items-center justify-between">"""";,"});,"})
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white">AI Models</h3>"""";,"});,"})
@@ -220,16 +220,16 @@ export const MachineLearningDashboard = ({ className = '' }) => {,"});,"})
                 {showCreateModel && (<motion.div initial = {}"});,"})
   height: 0;,"});,"})
   { opacity: 1,';,"});,"})
-  height: 'auto';,"});,"})
+  height: 'auto';,"});,"});
 }} className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">"""";,"});,"})
                     <h4 className="font-medium text-gray-900 dark:text-white mb-3">Create New Model</h4>"""";,"});,"})
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">"""";,"});,"})
                       <input type="text" placeholder="Model Name" value={newModelForm.name} onChange = {}"});,"})
   (e) => setNewModelForm(prev => ({ ...prev,;,"});,"})
-  name: e.target.value;,"});,"})
+  name: e.target.value;,"});,"});
 }))} className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"/>;,"});,"})
                       <select value={newModelForm.type} onChange = {}"});,"})
-  type e.target.value;,"});,"})
+  type e.target.value;,"});,"});
 }))} className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white">"""";,"});,"})
                         <option value="classification">Classification</option>"""";,"});,"})
                         <option value="regression">Regression</option>"""";,"});,"})
@@ -362,7 +362,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {,"});,"})
                     {isPredicting ? (<Loader2 className="w-4 h-4 inline mr-2 animate-spin"/>) : (<Target className="w-4 h-4 inline mr-2"/>)}"});,"})
                     Make Prediction;,"});,"})
                 <textarea placeholder="Enter input data (JSON format)" value={predictionForm.input} onChange = {}"});,"})
-  input: e.target.value;,"});,"})
+  input: e.target.value;,"});,"});
 }))} rows={3} className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"/>;,"});,"})
               {/* Recent Predictions */}"""";,"});,"})
                 <h4 className="font-medium text-gray-900 dark:text-white mb-3">Recent Predictions</h4>"""";,"});,"})
@@ -499,7 +499,7 @@ export const MachineLearningDashboard = ({ className = &apos;&apos}) => {&apos}&
         enableUserBehaviorTracking: true})';&apos;&apos;
     const [activeTab, setActiveTab] = useState(&apos;overview&apos;);&apos;
 export const MachineLearningDashboard = ({ className = '' }) => {""
-""
+"";
 }
 import React { useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';

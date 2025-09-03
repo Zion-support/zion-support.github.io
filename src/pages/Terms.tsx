@@ -31,7 +31,7 @@ const Terms: React.FC = () => {,"});,"})
           <p className="text-lg text-gray-600">Content coming soon...</p>;,"});,"})
         </div>;,"});,"})
     </>;,"});,"})
-  );,"});,"})
+  );,"});,"});
 };,"});,"})
 export default Terms;,"});,"})
 import { motion } from 'framer-motion';';
@@ -139,7 +139,7 @@ import { motion } from 'framer-motion';
         'We are not liable for indirect, incidental, or consequential damages',;
         'We do not guarantee uninterrupted or error-free service',;
         'Users assume all risks associated with service use';
-  ];
+  ]
   return(;
     <div className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>;
       <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16'> {/* Header */}
@@ -437,5 +437,5 @@ const Terms: React.FC = () => {"
 
 export default Terms
 export: default Terms;
-"
+";
 }

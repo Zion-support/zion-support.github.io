@@ -54,8 +54,8 @@ class IntelligentGitWorkflowAutomator {
         timestamp: new Date().toISOString(),
         workflowHistory: this.workflowHistory,
         totalWorkflows: this.workflowHistory.length,
-        lastRun: Date.now()
-      };
+        lastRun: Date.now();
+};
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
     } catch (error) {
       this.log(`Failed to save workflow history: ${error.message}`, 'error');
@@ -72,8 +72,8 @@ class IntelligentGitWorkflowAutomator {
         commits: await this.getRecentCommits(),
         remotes: await this.getRemotes(),
         conflicts: await this.checkForConflicts(),
-        stashes: await this.getStashes()
-      };
+        stashes: await this.getStashes();
+};
 
       this.log(`Git Status Analysis:`);
       this.log(`  - Current Branch: ${status.branch}`);
@@ -97,8 +97,8 @@ class IntelligentGitWorkflowAutomator {
       const branch = execSync('git branch --show-current', { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
-        stdio: 'pipe' 
-      }).trim();
+        stdio: 'pipe' ;
+}).trim();
       return branch;
     } catch (error) {
       return 'unknown';
@@ -110,16 +110,16 @@ class IntelligentGitWorkflowAutomator {
       const statusOutput = execSync('git status --porcelain', { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
-        stdio: 'pipe' 
-      });
+        stdio: 'pipe' ;
+});
       
       const lines = statusOutput.trim().split('\n').filter(line => line.trim());
       const status = {
         modified: [],
         staged: [],
         untracked: [],
-        deleted: []
-      };
+        deleted: [];
+};
       
       lines.forEach(line => {
         const statusCode = line.substring(0, 2);
@@ -151,16 +151,16 @@ class IntelligentGitWorkflowAutomator {
       const commitsOutput = execSync('git log --oneline -10', { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
-        stdio: 'pipe' 
-      });
+        stdio: 'pipe' ;
+});
       
       const lines = commitsOutput.trim().split('\n').filter(line => line.trim());
       return lines.map(line => {
         const [hash, ...messageParts] = line.split(' ');
         return {
           hash,
-          message: messageParts.join(' ')
-        };
+          message: messageParts.join(' ');
+};
       });
     } catch (error) {
       return [];
@@ -172,8 +172,8 @@ class IntelligentGitWorkflowAutomator {
       const remotesOutput = execSync('git remote -v', { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
-        stdio: 'pipe' 
-      });
+        stdio: 'pipe' ;
+});
       
       const lines = remotesOutput.trim().split('\n').filter(line => line.trim());
       return lines.map(line => {
@@ -190,8 +190,8 @@ class IntelligentGitWorkflowAutomator {
       const statusOutput = execSync('git status --porcelain', { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
-        stdio: 'pipe' 
-      });
+        stdio: 'pipe' ;
+});
       
       const lines = statusOutput.trim().split('\n').filter(line => line.trim());
       const conflicts = [];
@@ -213,8 +213,8 @@ class IntelligentGitWorkflowAutomator {
       const stashesOutput = execSync('git stash list', { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
-        stdio: 'pipe' 
-      });
+        stdio: 'pipe' ;
+});
       
       const lines = stashesOutput.trim().split('\n').filter(line => line.trim());
       return lines.map(line => {
@@ -222,8 +222,8 @@ class IntelligentGitWorkflowAutomator {
         if (match) {
           return {
             index: parseInt(match[1]),
-            message: match[2]
-          };
+            message: match[2];
+};
         }
         return { index: 0, message: line };
       });
@@ -242,8 +242,8 @@ class IntelligentGitWorkflowAutomator {
       if (status.modified.length > 0 || status.untracked.length > 0) {
         execSync('git add .', { 
           cwd: this.projectRoot, 
-          stdio: 'pipe' 
-        });
+          stdio: 'pipe' ;
+});
         this.log(`Staged ${status.modified.length + status.untracked.length} files`);
       }
       
@@ -251,8 +251,8 @@ class IntelligentGitWorkflowAutomator {
       const stagedOutput = execSync('git diff --cached --name-only', { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
-        stdio: 'pipe' 
-      });
+        stdio: 'pipe' ;
+});
       
       if (stagedOutput.trim()) {
         const stagedFiles = stagedOutput.trim().split('\n');
@@ -260,15 +260,15 @@ class IntelligentGitWorkflowAutomator {
         
         execSync(`git commit -m "${commitMessage}"`, { 
           cwd: this.projectRoot, 
-          stdio: 'pipe' 
-        });
+          stdio: 'pipe' ;
+});
         
         commits.push({
           message: commitMessage,
           files: stagedFiles,
           success: true,
-          timestamp: new Date().toISOString()
-        });
+          timestamp: new Date().toISOString();
+});
         
         this.log(`✅ Committed changes: ${commitMessage}`);
       } else {
@@ -291,8 +291,8 @@ class IntelligentGitWorkflowAutomator {
       'package.json': 'chore',
       'package-lock.json': 'chore',
       '.gitignore': 'chore',
-      'README': 'docs'
-    };
+      'README': 'docs';
+};
     
     let type = 'feat';
     let scope = '';
@@ -333,8 +333,8 @@ class IntelligentGitWorkflowAutomator {
       execSync(`git push origin ${currentBranch}`, { 
         cwd: this.projectRoot, 
         stdio: 'pipe',
-        timeout: 60000 
-      });
+        timeout: 60000 ;
+});
       
       this.log(`✅ Successfully pushed to origin/${currentBranch}`);
       return { success: true, branch: currentBranch };
@@ -360,22 +360,22 @@ class IntelligentGitWorkflowAutomator {
           // Add resolved file
           execSync(`git add ${conflictFile}`, { 
             cwd: this.projectRoot, 
-            stdio: 'pipe' 
-          });
+            stdio: 'pipe' ;
+});
           
           resolutions.push({
             file: conflictFile,
             success: true,
-            method: resolution.method
-          });
+            method: resolution.method;
+});
           
           this.log(`✅ Resolved conflict in ${conflictFile}`);
         } else {
           resolutions.push({
             file: conflictFile,
             success: false,
-            error: resolution.error
-          });
+            error: resolution.error;
+});
           
           this.log(`❌ Failed to resolve conflict in ${conflictFile}: ${resolution.error}`, 'error');
         }
@@ -383,8 +383,8 @@ class IntelligentGitWorkflowAutomator {
         resolutions.push({
           file: conflictFile,
           success: false,
-          error: error.message
-        });
+          error: error.message;
+});
         
         this.log(`❌ Error resolving conflict in ${conflictFile}: ${error.message}`, 'error');
       }
@@ -472,8 +472,8 @@ class IntelligentGitWorkflowAutomator {
         success: true, 
         title: prTitle, 
         body: prBody, 
-        branch: currentBranch 
-      };
+        branch: currentBranch ;
+};
     } catch (error) {
       this.log(`❌ PR creation failed: ${error.message}`, 'error');
       return { success: false, error: error.message };
@@ -490,8 +490,8 @@ class IntelligentGitWorkflowAutomator {
       const branchesOutput = execSync('git branch -a', { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
-        stdio: 'pipe' 
-      });
+        stdio: 'pipe' ;
+});
       
       const branches = branchesOutput.trim().split('\n').map(line => line.trim().replace('* ', ''));
       
@@ -499,8 +499,8 @@ class IntelligentGitWorkflowAutomator {
       const mergedOutput = execSync('git branch --merged', { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
-        stdio: 'pipe' 
-      });
+        stdio: 'pipe' ;
+});
       
       const mergedBranches = mergedOutput.trim().split('\n').map(line => line.trim().replace('* ', ''));
       
@@ -510,14 +510,14 @@ class IntelligentGitWorkflowAutomator {
           try {
             execSync(`git branch -d ${branch}`, { 
               cwd: this.projectRoot, 
-              stdio: 'pipe' 
-            });
+              stdio: 'pipe' ;
+});
             
             cleanupActions.push({
               action: 'delete-merged-branch',
               branch,
-              success: true
-            });
+              success: true;
+});
             
             this.log(`✅ Deleted merged branch: ${branch}`);
           } catch (error) {
@@ -525,8 +525,8 @@ class IntelligentGitWorkflowAutomator {
               action: 'delete-merged-branch',
               branch,
               success: false,
-              error: error.message
-            });
+              error: error.message;
+});
             
             this.log(`❌ Failed to delete branch ${branch}: ${error.message}`, 'error');
           }
@@ -558,8 +558,8 @@ class IntelligentGitWorkflowAutomator {
         push: pushResult,
         conflictResolutions,
         pullRequest: prResult,
-        cleanup: cleanupActions
-      },
+        cleanup: cleanupActions;
+},
       summary: {
         branch: status.branch,
         filesModified: status.status.modified.length,
@@ -569,10 +569,10 @@ class IntelligentGitWorkflowAutomator {
         commitsCreated: commits.filter(c => c.success).length,
         pushSuccess: pushResult.success,
         prCreated: prResult.success,
-        branchesCleaned: cleanupActions.filter(a => a.success).length
-      },
-      recommendations: this.generateWorkflowRecommendations(status)
-    };
+        branchesCleaned: cleanupActions.filter(a => a.success).length;
+},
+      recommendations: this.generateWorkflowRecommendations(status);
+};
 
     const reportFile = path.join(this.projectRoot, 'logs/intelligent-git-workflow-intelligence.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
@@ -618,8 +618,8 @@ class IntelligentGitWorkflowAutomator {
       this.workflowHistory.push({
         timestamp: new Date().toISOString(),
         report: report,
-        summary: report.summary
-      });
+        summary: report.summary;
+});
       
       this.saveWorkflowHistory();
 
@@ -633,8 +633,8 @@ class IntelligentGitWorkflowAutomator {
       this.log(`   - Push Success: ${report.summary.pushSuccess ? 'Yes' : 'No'}`);
       this.log(`   - PR Created: ${report.summary.prCreated ? 'Yes' : 'No'}`);
       this.log(`   - Branches Cleaned: ${report.summary.branchesCleaned}`);
-
-    } catch (error) {
+;
+} catch (error) {
       this.log(`❌ Git Workflow Automator failed: ${error.message}`, 'error');
       throw error;
     }

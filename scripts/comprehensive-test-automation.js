@@ -194,8 +194,8 @@ test('Performance: test - Page load time', async ({ page }) => {';
         console.log(`⚠️ No Jest configuration found, skipping unit tests`);
         this.warnings.push('No Jest configuration found')}
       console.log(`❌ Unit tests failed:`, error.message);
-        console.log(`✅ Unit tests: ${this.testResults.unit.passed} passed, ${this.testResults.unit.failed} failed`)} else {`
-    } catch (error) {'
+        console.log(`✅ Unit tests: ${this.testResults.unit.passed} passed, ${this.testResults.unit.failed} failed`)} else {`;
+} catch (error) {'
         console.log(`✅ Unit "tests": ${this.testResults.unit.passed} passed, ${this.testResults.unit.failed} failed`)} else {`;        console.log('⚠️ No Jest configuration found, skipping unit tests');        this.warnings.push('No Jest configuration found')}'} catch (error) {      console.log('❌ Unit tests "failed":', error.message);      this.testResults.unit.failed++;      this.errors.push(`Unit tests "failed": ${error.message}`)}`}
   async runIntegrationTests() {
     console.log('🔗 Running integration tests...');    try {      // Check for integration test files;

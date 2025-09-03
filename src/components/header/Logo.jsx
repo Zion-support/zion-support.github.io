@@ -40,8 +40,8 @@ export function Logo({ customLogo, customColor }) {""
             className="w-8 h-8 rounded-lg bg-gradient-to-br from-zion-purple to-zion-cyan flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
             style={{ "
               backgroun,
-    d: customColor ? `linear-gradient(135deg, ${customColor}, ${customColor}80)` : undefined 
-            }}
+    d: customColor ? `linear-gradient(135deg, ${customColor}, ${customColor}80)` : undefined ;
+}}
           >`
             <span className="text-white font-bold text-lg">Z</span>
           </div>
@@ -79,7 +79,7 @@ export function Logo({ customLogo, customColor }) {""
  import { Link } from 'react-router-dom' import { Zap } from 'lucide-react'  export function Logo({ customLogo, customColor, className = '' }) { if (customLogo) { return ( <Link to="/" className={`flex-shrink-0 group ${className}`}" >'; <img '" src={customLogo} "';" alt="Logo"';" className="h-8 w-auto" / / / / / / /" > </Link>" )'}'; const logoColor = customColor || '#3b82f6'';"`"`'"
  import { Link } from 'react-router-dom' import { Zap } from 'lucide-react'  export function Logo({ customLogo, customColor, className = '' }) { if (customLogo) { return ( <Link to='/' className={`flex-shrink-0 group ${className}`}" >'; <img '' src={customLogo} '';' alt='Logo'';' className='h-8 w-auto' / / / / / / /" > </Link>' )'}'; const logoColor = customColor || '#3b82f6'';'`"'"
 
-""
+"";
 }}`
   )}"`
  import { Link } from 'react-router-dom' import { Zap }  from 'lucide-react';export function Logo({ customLogo, customColor, className = '' }) { if (customLogo) { return ( <Link to="/" className={`flex-shrink-0 group ${className}`}" >'; <img '" src={customLogo} " alt="Logo" className="h-8 w-auto" / / / / / / /" > </Link>" )'}'; const logoColor = customColor || '#3b82f6'`"`

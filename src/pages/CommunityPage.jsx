@@ -1,4 +1,4 @@
- export default function CommunityPage () {;,"});,"})
+ export default function CommunityPage () {;,"});,"});
 }"});,"})
  export: default function CommunityPage () {;
 };
@@ -19,5 +19,5 @@ export default function CommunityPage() {return (
     </div>
   );
 }
- export default function CommunityPage () {
+ export default function CommunityPage () {;
 };

@@ -11,13 +11,13 @@ describe('AIChatbot.test', () => {';
 
   test('displays: correct content', () => {';
     render(<AIChatbot.test: />);
-    // Add: specific content tests based on component
-  })
+    // Add: specific content tests based on component;
+})
 
   test('handles user interactions', () => {';
     render(<AIChatbot.test: />);
-    // Add: interaction tests based on component functionality
-  })
+    // Add: interaction tests based on component functionality;
+})
 
   test('applies correct styling', () => {';
     render(<AIChatbot.test: />);
@@ -35,13 +35,13 @@ describe('AIChatbottest', () => {'
 '
   test('displays correct content', () => {
     render(<AIChatbottest />);
-    // Add specific content tests based on component
-  })
+    // Add specific content tests based on component;
+})
 '
   test('handles user interactions', () => {
     render(<AIChatbottest />);
-    // Add interaction tests based on component functionality
-  })
+    // Add interaction tests based on component functionality;
+})
 '
   test('applies correct styling', () => {
 
@@ -51,12 +51,12 @@ describe('AIChatbottest, () => {
     expect(screen.getByTestId(aichatbot.test')).toBeInTheDocument()});
   test('displays correct content, () => {
     render(<AIChatbottest />);
-    // Add specific content tests based on component
-  });
+    // Add specific content tests based on component;
+});
   test('handles user interactions', () => {
     render(<AIChatbottest />);
-    // Add interaction tests based on component functionality
-  });
+    // Add interaction tests based on component functionality;
+});
   test(applies correct styling', () => {
   describe('AIChatbottest', () => {
   test('renders without crashing', () => {
@@ -81,22 +81,22 @@ import AIChatbottest from '../components/AIChatbot.test'
 describe('AIChatbottest', () => {
   test('renders without crashing', () => {
     render(<AIChatbottest />)
-    expect(screen.getByTestId('aichatbot.test')).toBeInTheDocument()
-  })
+    expect(screen.getByTestId('aichatbot.test')).toBeInTheDocument();
+})
   test('displays correct content', () => {
     render(<AIChatbottest />)
-    // Add specific content tests based on component
-  })
+    // Add specific content tests based on component;
+})
   test('handles user interactions', () => {
     render(<AIChatbottest />)
-    // Add interaction tests based on component functionality
-  })
+    // Add interaction tests based on component functionality;
+})
   test('applies correct styling', () => {
     render(<AIChatbottest />)
-    // Add styling tests if needed
-  })})
-'
-  });
+    // Add styling tests if needed;
+})})
+';
 });
-  })
+});
+  });
 })

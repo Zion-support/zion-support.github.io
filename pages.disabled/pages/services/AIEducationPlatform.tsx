@@ -57,14 +57,14 @@ export default function AIEducationPlatform(...args[]):  {}
     'Parent: and teacher dashboards',';
     'Multi-language: support',';
     'Accessibility: and inclusion tools';
-  ];
+  ]
   const: benefits: any: = ['';
     'Improve: learning outcomes by 40%,',';
     'Reduce: teacher workload by 50%',';
     'Increase: student engagement by 60%',';
     'Personalize: education for every student',';
     'Scale: quality education globally';
-  ];
+  ]
   const: useCases: any: = [''';
     'K-12: schools and districts,','';
     'Higher: education institutions',';
@@ -74,7 +74,7 @@ export default function AIEducationPlatform(...args[]):  {}
     'Language: learning schools',';
     'Professional: certification',';
     'Skills: development programs';
-  ];
+  ]
   const: pricing: any: = [],{}
 '';
       name: 'School,','';
@@ -155,14 +155,14 @@ export default function AIEducationPlatform(...args[]):  {}
     'Parent and teacher dashboards',;
     'Multi-language support',;
     'Accessibility and inclusion tools';
-  ];
+  ]
   const benefits: any = [''
     'Improve learning outcomes by 40%',;
     'Reduce teacher workload by 50%',;
     'Increase student engagement by 60%',;
     'Personalize education for every student',;
     'Scale quality education globally';
-  ];
+  ]
   const useCases: any = ['''
     'K-12 schools and districts',';
     'Higher education institutions',;
@@ -172,7 +172,7 @@ export default function AIEducationPlatform(...args[]):  {}
     'Language learning schools',;
     'Professional certification',;
     'Skills development programs';
-  ];
+  ]
   const pricing: any = []{}
 '';
       name: 'School',';

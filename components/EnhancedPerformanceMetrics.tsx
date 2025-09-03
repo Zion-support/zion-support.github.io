@@ -15,7 +15,7 @@ import React from 'react'; interface PerformanceMetric { id: string; name: strin
   Clock, Zap,
   Activity, BarChart3,
   Database, Users,
-  ArrowUpRight, ArrowDownRight
+  ArrowUpRight, ArrowDownRight;
 } from 'lucide-react';
 
 interface PerformanceMetric {
@@ -48,7 +48,7 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({
   subtitle = "Monitor your system's performance with live data and intelligent insights",
 const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({'
   title = 'Real-Time Performance Metrics', subtitle = 'Monitor your system\'s performance with live data and intelligent insights','
-  showCharts = true, autoRefresh = true
+  showCharts = true, autoRefresh = true;
 }) => {
   const [metrics, setMetrics] = useState<PerformanceMetric[]>([
     {
@@ -71,8 +71,8 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({'
       target: 150,
       status: "excellent",
       icon: Clock,
-      description: "Average API response time across all endpoints"
-    } {
+      description: "Average API response time across all endpoints";
+} {
       id: "throughput",
       name: "Throughput",
       value: 15420,
@@ -119,8 +119,8 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({'
       unit: 'ms',
       changeType: 'decrease',
       status: 'excellent',
-      description: 'Average API response time across all endpoints'
-    } {'
+      description: 'Average API response time across all endpoints';
+} {'
       id: 'throughput',
       name: 'Throughput',
       unit: 'req/s',
@@ -166,8 +166,8 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({'
       id: 'active-users',
       name: 'Active Users',
       unit: '',
-      description: 'Concurrent users currently online'
-    }
+      description: 'Concurrent users currently online';
+}
   ]);
 
   const [selectedMetric, setSelectedMetric] = useState<string | null>(null);
@@ -183,8 +183,8 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({'
           ...metric,
           value: metric.value + (Math.random() - 0.5) * metric.value * 0.1,
           change: metric.change + (Math.random() - 0.5) * 2
-          ...metric, value: metric.value + (Math.random() - 0.5) * metric.value * 0.1, change: metric.change + (Math.random() - 0.5) * 2
-        }))
+          ...metric, value: metric.value + (Math.random() - 0.5) * metric.value * 0.1, change: metric.change + (Math.random() - 0.5) * 2;
+}))
       )}, 5000);
 
     return () => clearInterval(interval)}, [autoRefresh]);
@@ -313,8 +313,8 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({'
                     : 'text-gray-600 hover:text-gray-900 hove,
     r:bg-gray-100''
                     ? 'bg-blue-600 text-white shadow-lg'
-                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
-                }`}
+                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100';
+}`}
                 {range}
               </button>
             ))}
@@ -399,8 +399,8 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({'
                           ? 'bg-red-500'
                           : metric.value / metric.target > 0.7'
                           ? 'bg-yellow-500''
-                          : 'bg-green-500''
-                      }`}`
+                          : 'bg-green-500'';
+}`}`
                           ? "bg-red-500"
                           : metric.value / metric.target > 0.7
                           ? "bg-yellow-500"

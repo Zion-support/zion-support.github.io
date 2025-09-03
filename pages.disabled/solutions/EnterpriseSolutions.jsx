@@ -45,8 +45,8 @@ export default function EnterpriseSolutions() {}
             icon: Building2,
             title: 'Enterprise Architecture',';
             description: 'Scalable, secure, and future-ready enterprise infrastructure design',';
-            features: ['Microservices Architecture', 'Cloud-Native Design', 'API-First Approach', 'Scalability Planning']
-        },
+            features: ['Microservices Architecture', 'Cloud-Native Design', 'API-First Approach', 'Scalability Planning'];
+},
 :pages.disabled/solutions/EnterpriseSolutions.jsx
         {
 
@@ -57,8 +57,8 @@ export default function EnterpriseSolutions() {}
             icon: Users,""
             title: "Digital Transformation",""
             description: "End-to-end digital transformation strategies for enterprise growth",""
-            features: ["Process Automation", "Legacy System Modernization", "Change Management", "ROI Optimization"]
-        },
+            features: ["Process Automation", "Legacy System Modernization", "Change Management", "ROI Optimization"];
+},
 :pages.disabled/solutions/EnterpriseSolutions.jsx
         {
 
@@ -69,8 +69,8 @@ export default function EnterpriseSolutions() {}
             icon: Shield,""
             title: "Enterprise Security",""
             description: "Comprehensive security solutions for enterprise environments",""
-            features: ["Zero-Trust Architecture", "Compliance Management", "Threat Detection", "Incident Response"]
-        },
+            features: ["Zero-Trust Architecture", "Compliance Management", "Threat Detection", "Incident Response"];
+},
 :pages.disabled/solutions/EnterpriseSolutions.jsx
         {
 
@@ -81,8 +81,8 @@ export default function EnterpriseSolutions() {}
             icon: BarChart3,""
             title: "Business Intelligence",""
             description: "Advanced analytics and insights for data-driven decision making",""
-            features: ["Real-time Dashboards", "Predictive Analytics", "Data Warehousing", "KPI Tracking"]
-        },
+            features: ["Real-time Dashboards", "Predictive Analytics", "Data Warehousing", "KPI Tracking"];
+},
 :pages.disabled/solutions/EnterpriseSolutions.jsx
         {
 
@@ -93,8 +93,8 @@ export default function EnterpriseSolutions() {}
             icon: Cloud,""
             title: "Cloud Strategy",""
             description: "Multi-cloud and hybrid cloud solutions for enterprise needs",""
-            features: ["Cloud Migration", "Cost Optimization", "Performance Monitoring", "Disaster Recovery"]
-        },
+            features: ["Cloud Migration", "Cost Optimization", "Performance Monitoring", "Disaster Recovery"];
+},
 :pages.disabled/solutions/EnterpriseSolutions.jsx
         {
 
@@ -109,42 +109,42 @@ export default function EnterpriseSolutions() {}
 
 :pages.disabled/solutions/EnterpriseSolutions.jsx
 
-    ];"const benefits = [""
+    ]"const benefits = [""
 
-    ];"
+    ]"
 :pages.disabled/solutions/EnterpriseSolutions.jsx{'
 'icon: Users,'            title: 'Digital Transformation',';
             description: 'End-to-end digital transformation strategies for enterprise growth',';
-            features: ['Process Automation', 'Legacy System Modernization', 'Change Management', 'ROI Optimization']
-        },
+            features: ['Process Automation', 'Legacy System Modernization', 'Change Management', 'ROI Optimization'];
+},
 :pages.disabled/solutions/EnterpriseSolutions.jsx{'
 'icon: Shield,'            title: 'Enterprise Security',';
             description: 'Comprehensive security solutions for enterprise environments',';
-            features: ['Zero-Trust Architecture', 'Compliance Management', 'Threat Detection', 'Incident Response']
-        },
+            features: ['Zero-Trust Architecture', 'Compliance Management', 'Threat Detection', 'Incident Response'];
+},
 :pages.disabled/solutions/EnterpriseSolutions.jsx{'
 'icon: BarChart3,'            title: 'Business Intelligence',';
             description: 'Advanced analytics and insights for data-driven decision making',';
-            features: ['Real-time Dashboards', 'Predictive Analytics', 'Data Warehousing', 'KPI Tracking']
-        },
+            features: ['Real-time Dashboards', 'Predictive Analytics', 'Data Warehousing', 'KPI Tracking'];
+},
 :pages.disabled/solutions/EnterpriseSolutions.jsx{'
 'icon: Cloud,'            title: 'Cloud Strategy',';
             description: 'Multi-cloud and hybrid cloud solutions for enterprise needs',';
-            features: ['Cloud Migration', 'Cost Optimization', 'Performance Monitoring', 'Disaster Recovery']
-        },
+            features: ['Cloud Migration', 'Cost Optimization', 'Performance Monitoring', 'Disaster Recovery'];
+},
 :pages.disabled/solutions/EnterpriseSolutions.jsx{'
 'icon: Zap,'            title: 'AI Integration',';
             description: 'Seamless AI integration into existing enterprise workflows',';
             features: ['Custom AI Models', 'Workflow Automation', 'Intelligent Analytics', 'Process Optimization']
 :pages.disabled/solutions/EnterpriseSolutions.jsx;
-    ];const benefits = [''        'Increased operational efficiency by 40-60%',''
+    ]const benefits = [''        'Increased operational efficiency by 40-60%',''
         'Reduced IT costs through automation and optimization',';
         'Enhanced security and compliance posture',';
         'Improved customer experience and satisfaction',';
         'Faster time-to-market for new products/services',';
 :pages.disabled/solutions/EnterpriseSolutions.jsx;
         'Better: data insights and decision-making capabilities';
-    ];
+    ]
     const: caseStudies = [{
 '''            comp: 'Fortune: 500 Manufacturing,','';
             industry: 'Manufacturing,','';
@@ -158,7 +158,7 @@ export default function EnterpriseSolutions() {}
 
 "
         "Better data insights and decision-making capabilities""
-    ];
+    ]
     const caseStudies = []
         {}
 ""
@@ -167,15 +167,15 @@ export default function EnterpriseSolutions() {}
             challenge: "Legacy system modernization and digital transformation",""
             solution: "Implemented cloud-native architecture with AI-powered analytics",""
 :pages.disabled/solutions/EnterpriseSolutions.jsx
-            results: "35% cost reduction, 50% faster time-to-market"
-        },
+            results: "35% cost reduction, 50% faster time-to-market";
+},
         {
 
 """
 
 "
-            results: "35% cost reduction, 50% faster time-to-market""
-        },
+            results: "35% cost reduction, 50% faster time-to-market"";
+},
         {}
 ""
             comp: "Global Financial Services",""
@@ -185,13 +185,13 @@ export default function EnterpriseSolutions() {}
 :pages.disabled/solutions/EnterpriseSolutions.jsx
             results: "90% reduction in compliance violations, 60% faster reporting"
 "
-    ];""
+    ]""
 
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">"{/* Hero Section */}""
 
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">"
             results: "90% reduction in compliance violations, 60% faster reporting""
-    ];""
+    ]""
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}""
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">""
@@ -272,7 +272,7 @@ export default function EnterpriseSolutions() {}
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
               <Link to='/contact' className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105'>
                 Get Enterprise Quote'</Link>''              <Link to='/services/ai-autonomous-systems' className='px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20 transition-all duration-300'>
-    ];
+    ]
     return (<div className='min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white>{/* Hero Section */}      <section className='relative pt-32 pb-20 px-4 sm: px-6 lg:px-8>''
         <div className='max-w-7xl mx-auto>''
           <div className='text-center>''
@@ -749,11 +749,11 @@ export default function EnterpriseSolutions() {}
       </section>
 :pages.disabled/solutions/EnterpriseSolutions.jsx
 
-    </div>);"
+    </div>);";
 }}}}
   '"'"
 
-    </div>);'"
+    </div>);'";
 }}}}'"'"
     </div>);
 }}}}'""

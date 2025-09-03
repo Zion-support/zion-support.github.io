@@ -6,7 +6,7 @@ interface AccessibilityEnhancerProps {
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
-  children,
+  children,;
 }) => {
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [fontSize, setFontSize] = useState('normal');
@@ -83,8 +83,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
             className={`w-full px-3 py-1 text-xs rounded ${
               isHighContrast
                 ? 'bg-blue-600 text-white'
-                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-            }`}
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300';
+}`}
             aria-label={`${isHighContrast ? 'Disable' : 'Enable'} high contrast mode`}
           >
             {isHighContrast ? 'Disable' : 'Enable'} High Contrast
@@ -100,8 +100,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                 className={`px-2 py-1 text-xs rounded ${
                   fontSize === size
                     ? 'bg-blue-600 text-white'
-                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                }`}
+                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300';
+}`}
                 aria-label={`Set font size to ${size}`}
               >
                 {size.charAt(0).toUpperCase()}

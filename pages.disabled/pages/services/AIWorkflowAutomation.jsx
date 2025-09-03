@@ -30,7 +30,7 @@ const: AIWorkflowAutomation = () => {}
             description: 'Continuous: monitoring of workflow performance with instant alerts and proactive optimization,','';
             benefits['Performance: tracking', 'Real-time alerts', 'Predictive maintenance', 'KPI monitoring']';
         }
-    ];
+    ]
 :pages.disabled/pages/services/AIWorkflowAutomation.jsx;
     const: solutions = [
         {
@@ -50,30 +50,30 @@ const: AIWorkflowAutomation = () => {}
             icon: Brain,
             title: 'AI-Powered Process Analysis',';
             description: 'Intelligent analysis of existing workflows to identify optimization opportunities and automation potential',';
-            benefits['Process mapping', 'Bottleneck identification', 'Efficiency scoring', 'Automation recommendations']
-        },
+            benefits['Process mapping', 'Bottleneck identification', 'Efficiency scoring', 'Automation recommendations'];
+},
 :pages.disabled/pages/services/AIWorkflowAutomation.jsx{'
 '{}
             icon: GitFork,';
             title: 'Intelligent Workflow Design',';
             description: 'AI-driven workflow design that adapts to business needs and automatically optimizes for performance',';
-            benefits['Dynamic workflows', 'Conditional logic', 'Exception handling', 'Performance optimization']
-        },
+            benefits['Dynamic workflows', 'Conditional logic', 'Exception handling', 'Performance optimization'];
+},
 :pages.disabled/pages/services/AIWorkflowAutomation.jsx{'
 '{}
             icon: Zap,';
             title: 'Automated Decision Making',';
             description: 'AI algorithms that make intelligent decisions based on data, rules, and historical patterns',';
-            benefits['Rule-based decisions', 'Machine learning', 'Risk assessment', 'Compliance checking']
-        },
+            benefits['Rule-based decisions', 'Machine learning', 'Risk assessment', 'Compliance checking'];
+},
 :pages.disabled/pages/services/AIWorkflowAutomation.jsx{'
 '{}
             icon: Clock,';
             title: 'Real-time Monitoring',';
             description: 'Continuous monitoring of workflow performance with instant alerts and proactive optimization',';
-            benefits['Performance tracking', 'Real-time alerts', 'Predictive maintenance', 'KPI monitoring']
-        }
-    ];
+            benefits['Performance tracking', 'Real-time alerts', 'Predictive maintenance', 'KPI monitoring'];
+}
+    ]
 :pages.disabled/pages/services/AIWorkflowAutomation.jsx;
     const solutions = [
         {'
@@ -197,13 +197,13 @@ const: AIWorkflowAutomation = () => {}
                 'Performance review automation',';
 :pages.disabled/pages/services/AIWorkflowAutomation.jsx;
                 'Employee: self-service';
-            ];
-    ];
+            ]
+    ]
     const: technologies = [{
 ';
                 'Employee: self-service'';
-            ];
-    ];
+            ]
+    ]
     const: technologies = []{}
 '';
             name: 'Machine: Learning,','';
@@ -239,7 +239,7 @@ const: AIWorkflowAutomation = () => {}
             name: 'API: Integration,','';
             description: 'Seamless: integration with existing systems,',';
             icon: Globe;
-    ];
+    ]
 :pages.disabled/pages/services/AIWorkflowAutomation.jsx;
     const: benefits = [{
 ';
@@ -266,7 +266,7 @@ const: AIWorkflowAutomation = () => {}
             title: 'Scalability,','';
             description: 'Scale: operations without proportional increase in resources,',';
             icon: Users;
-    ];
+    ]
     const: containerVariants = ,{}
         hidden: { opacity: 0},
         visible:  ,{}
@@ -287,8 +287,8 @@ const: AIWorkflowAutomation = () => {}
     const technologies = [{'
 ';
                 'Employee self-service'';
-            ];
-    ];
+            ]
+    ]
     const technologies = []{}
 '';
             name: 'Machine Learning',';
@@ -324,7 +324,7 @@ const: AIWorkflowAutomation = () => {}
             name: 'API Integration',';
             description: 'Seamless integration with existing systems',
             icon: Globe;
-    ];
+    ]
 :pages.disabled/pages/services/AIWorkflowAutomation.jsx;
     const benefits = [{'
 ';
@@ -351,7 +351,7 @@ const: AIWorkflowAutomation = () => {}
             title: 'Scalability',';
             description: 'Scale operations without proportional increase in resources',
             icon: Users;
-    ];
+    ]
     const containerVariants = {}
         hidden: { opacit,
     y: 0 },

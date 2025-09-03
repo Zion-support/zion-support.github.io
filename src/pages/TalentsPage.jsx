@@ -1,8 +1,8 @@
- "export default function TalentsPage () {";,"});,"})
+ "export default function TalentsPage () {";,"});,"});
 }"});,"})
 ";export: default function TalentsPage () {"";";";
 };
-";export default function TalentsPage () {","
+";export default function TalentsPage () {",";
 }""
 ";export default function TalentsPage () {";
 }
@@ -23,6 +23,6 @@ export default function TalentsPage() {return (
 }
 ";&quot;&quot;export default function TalentsPage () ;{&quot;
 }&quot;"
-";export default function TalentsPage () {", ","
+";export default function TalentsPage () {", ",";
 }""
 ";export default function TalentsPage () {,}"

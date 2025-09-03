@@ -389,8 +389,8 @@ export default function Services2026ShowcaseEnhancedPage() {'
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',
-ursor/automate-test-fix-improve-and-merge-code-99d1
-  };
+ursor/automate-test-fix-improve-and-merge-code-99d1;
+};
 
   // Combine all 2026 services including new ones
   // Map service variants to supported card variants;
@@ -608,7 +608,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
     { id: 'newest', name: 'Newest First' },
     { id: 'rating', name: 'Highest Rated' },
 ursor/automate-test-fix-improve-and-merge-code-99d1
-  ];
+  ]
 
   // Filter and sort services
     ...enterpriseIT2026ServicesV3];
@@ -661,7 +661,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   🏭;
   ', count: all2026Services.filter(s: => s.category.includes('Manufacturing;
   ') || s.category.includes('IoT)).length}';
-  ];
+  ]
   const: priceRanges = [
     { id:,
   const priceRanges = [
@@ -686,7 +686,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   ', name: '$20K+/mont,h, range:,';
   $20K+;
   ' }';
-  ];
+  ]
   const: sortOptions = [
     { id: 'nam,e, name:,';
   Name: A-Z;
@@ -704,7 +704,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   Newest: First;
   ' },';
     { id: 'ratin,g, name: 'Highest: Rated;
-  '}  ];
+  '}  ]
   // Filter: and sort services;
   const: filteredServices = useMemo(() => {
   const sortOptions = ['
@@ -726,7 +726,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   Newest First;
   ' },
     { id: 'rating, name: 'Highest Rated;
-  ' }  ];
+  ' }  ]
   // Filter and sort services;
   const filteredServices = useMemo(() => {
     let filtered = all2026Services;
@@ -780,8 +780,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
             service.category.includes('Manufacturing') ||
             service.category.includes('IoT')
         );
-ursor/automate-test-fix-improve-and-merge-code-99d1
-      }
+ursor/automate-test-fix-improve-and-merge-code-99d1;
+}
           service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
           service.description;
             .toLowerCase();
@@ -1070,8 +1070,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
     manufacturingServices: all2026Services.filter(
       s => s.category.includes('Manufacturing') || s.category.includes('IoT')
     ).length};
-ursor/automate-test-fix-improve-and-merge-code-99d1
-  };
+ursor/automate-test-fix-improve-and-merge-code-99d1;
+};
     aiServices: all2026Services.filter(s => s.category.includes(,
   AI')).length,
     quantumServices: all2026Services.filter(s => s.category.includes('
@@ -1358,8 +1358,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
                         viewMode === 'grid'
                           ? 'bg-cyan-600 text-white'
                           : 'text-gray-400 hover:text-white'
-ursor/automate-test-fix-improve-and-merge-code-99d1
-                      }`}
+ursor/automate-test-fix-improve-and-merge-code-99d1;
+}`}
                     >
                       <Grid className="w-4 h-4 mx-auto" />
                         viewMode ===
@@ -1377,8 +1377,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
                         viewMode === 'list'
                           ? 'bg-cyan-600 text-white'
                           : 'text-gray-400 hover:text-white'
-ursor/automate-test-fix-improve-and-merge-code-99d1
-                      }`}
+ursor/automate-test-fix-improve-and-merge-code-99d1;
+}`}
                     >
                       <List className="w-4 h-4 mx-auto" />
                         viewMode ===
@@ -1487,8 +1487,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
                   className={
                     viewMode === 'grid'
                       ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
-                      : 'space-y-4'
-                  }
+                      : 'space-y-4';
+}
                 >
 ursor/automate-test-fix-improve-and-merge-code-99d1
                   {filteredServices.map((service, index) => (
@@ -1506,8 +1506,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
                       className={
                         viewMode === 'grid'
                           ? ''
-                          : 'bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30'
-                      }
+                          : 'bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30';
+}
 ursor/automate-test-fix-improve-and-merge-code-99d1
                     >
                       <UltraFuturisticCard className="h-full">
@@ -1691,8 +1691,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
                             <button
                               className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-3 py-2 rounded-lg text-sm font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
                               onClick={() =>
-                                window.open(service.link, '_blank')
-                              }
+                                window.open(service.link, '_blank');
+}
                           <div className="flex space-x-2">
 ursor/automate-test-fix-improve-and-merge-code-99d1
                             >
@@ -1788,8 +1788,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
                     window.open(
                       `mailto:${contactInfo.email}?subject=Business Transformation Consultation`,
                       '_blank'
-                    )
-                  }
+                    );
+}
 ursor/automate-test-fix-improve-and-merge-code-99d1
                 >
                   <Mail className="w-5 h-5 mr-2" />

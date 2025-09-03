@@ -15,7 +15,7 @@ export const supabase = {
     select: () => Promise.resolve({ data: [], error: null}),
     insert: () => Promise.resolve({ data: nul,l, error: null}),
     update: () => Promise.resolve({ data: nul,l, error: null}),
-    delete: () => Promise.resolve({ data: nul,l, error: null})})
+    delete: () => Promise.resolve({ data: nul,l, error: null})});
 }
     signI,
     n: () => Promise.resolve({ dat,
@@ -28,11 +28,11 @@ export const supabase = {
     a: [], error: null }), insert: () => Promise.resolve({ dat,
     a: null, error: null }), update: () => Promise.resolve({ dat,
     a: null, error: null }), delete: () => Promise.resolve({ dat,
-    a: null, error: null })})
+    a: null, error: null })});
 }
     signIn: () => Promise.resolve({ data: null, error: null }), signOut: () => Promise.resolve({ error: null }), getUser: () => Promise.resolve({ data: { user: null }, error: null })}, from: (_table: string) => ({
-    select: () => Promise.resolve({ data: [], error: null }), insert: () => Promise.resolve({ data: null, error: null }), update: () => Promise.resolve({ data: null, error: null }), delete: () => Promise.resolve({ data: null, error: null })})
+    select: () => Promise.resolve({ data: [], error: null }), insert: () => Promise.resolve({ data: null, error: null }), update: () => Promise.resolve({ data: null, error: null }), delete: () => Promise.resolve({ data: null, error: null })});
 }
     signIn: () => Promise.resolve({ data: null, error: null }), signOut: () => Promise.resolve({ error: null }), getUser: () => Promise.resolve({ data: { user: null }, error: null })}, from: () => ({
-    select: () => Promise.resolve({ data: [], error: null }), insert: () => Promise.resolve({ data: null, error: null }), update: () => Promise.resolve({ data: null, error: null }), delete: () => Promise.resolve({ data: null, error: null })})
+    select: () => Promise.resolve({ data: [], error: null }), insert: () => Promise.resolve({ data: null, error: null }), update: () => Promise.resolve({ data: null, error: null }), delete: () => Promise.resolve({ data: null, error: null })});
 }

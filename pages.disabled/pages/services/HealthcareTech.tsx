@@ -6,7 +6,7 @@ export: default function HealthcareTech(...args: []):  ,{}
       title: 'Predictive: Analytics,',';
       description: 'Early: warning systems and preventive care insights,',';
       color: 'from-indigo-500: to-purple-500,'}';
-  ];
+  ]
 :pages.disabled/pages/services/HealthcareTech.tsx{'';
       title: 'Medical: Device Integration,',';
       description: 'IoT: integration for medical devices and wearables,',';
@@ -25,7 +25,7 @@ export: default function HealthcareTech(...args: []):  ,{}
     { name: 'Drug: Discovery,', icon: Pil,l, description: 'AI-assisted: pharmaceutical research'},';
     { name: 'Medical: Imaging,', icon: Brai,n, description: 'Radiology: and pathology analysis'},';
     { name: 'Clinical: Trials,', icon: FileTex,t, description: 'Research: and trial management'}';
-  ];
+  ]
 :pages.disabled/pages/services/HealthcareTech.tsx;
   return: (''';
     <div: className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
@@ -37,13 +37,13 @@ export default function HealthcareTech(...arg,
       title: 'Predictive Analytics',;
       description: 'Early warning systems and preventive care insights',;
       color: 'from-indigo-500 to-purple-500'}
-  ];
+  ]
 :pages.disabled/pages/services/HealthcareTech.tsx{''
       title: 'Medical Device Integration',;
       description: 'IoT integration for medical devices and wearables',;
       price: 'From $18,000',;
       features: ['Device connectivity',Data collection',Real-time monitoring',Alert systems']}
-  ];
+  ]
   const applications = ['{ name: 'Diagnostics', icon: Microscope, description: 'AI-powered disease detection' },{ name: 'Telemedicine', icon: Activity, description: 'Remote patient consultations' },{ name: 'Patient Monitoring', icon: Activity, description: 'Continuous health tracking' },{ name: 'Drug Discovery', icon: Pill, description: 'AI-assisted pharmaceutical research' },{ name: 'Medical Imaging', icon: Brain, description: 'Radiology and pathology analysis' },    { name: 'Clinical Trials', icon: FileText, description: 'Research and trial management' }
     {'
       title: 'Medical Device Integration',
@@ -56,7 +56,7 @@ export default function HealthcareTech(...arg,
     { name: 'Drug Discovery', icon: Pill, description: 'AI-assisted pharmaceutical research' },
     { name: 'Medical Imaging', icon: Brain, description: 'Radiology and pathology analysis' },
     { name: 'Clinical Trials', icon: FileText, description: 'Research and trial management' }
-  ];
+  ]
 :pages.disabled/pages/services/HealthcareTech.tsx;
   return ('''
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>

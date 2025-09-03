@@ -4,8 +4,8 @@ import { render, screen } from '@testing-library/react';,"});,"})
 describe('NewsletterForm', () => {,"});,"})
   it('renders without crashing', () => {,"});,"})
     render(<NewsletterForm />);,"});,"})
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,"});,"})
-  });,"});,"})
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,"});,"});
+});,"});,"})
   it('displays expected content', () => {,"});,"})
     // Add specific test assertions based on component content;,"});,"})
 import { render, screen } from '@testing-library/react';';
@@ -61,7 +61,7 @@ describe('NewsletterForm', () => {"
     // Add specific test assertions based on component content});
 ""
     render(<NewsletterForm /" >)
-    // Add specific test assertions based on component content
+    // Add specific test assertions based on component content;
 })
-"
+";
 }}

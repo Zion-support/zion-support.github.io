@@ -27,8 +27,8 @@ const SEOOptimizer = () => {}"});,"})
                     headings['AI-Powered Business Solutions',Comprehensive IT Services',Micro-SaaS Solutions'],;''';,"});,"})
                     images['/images/hero-ai-solutions.jpg',/images/hero-it-services.jpg'],;''';,"});,"})
                     links['/services',/ai-solutions',/about',/contact'],;''';,"});,"})
-                    keywords['AI solutions',quantum computing',cybersecurity',digital transformation'];,"});,"})
-                },;,"});,"})
+                    keywords['AI solutions',quantum computing',cybersecurity',digital transformation'];,"});,"});
+},;,"});,"})
                 {}"});,"})
 ';,"});,"})
 '';,"});,"})
@@ -39,8 +39,8 @@ const SEOOptimizer = () => {}"});,"})
                     headings['AI Solutions',Cloud & DevOps',Cybersecurity',Digital Transformation'],;''';,"});,"})
                     images['/images/services-overview.jpg'],;''';,"});,"})
                     links['/ai-solutions',/cloud-devops',/cybersecurity',/about'],;''';,"});,"})
-                    keywords['technology services',AI solutions',cloud infrastructure',cybersecurity'];,"});,"})
-                },;,"});,"})
+                    keywords['technology services',AI solutions',cloud infrastructure',cybersecurity'];,"});,"});
+},;,"});,"})
                 {}"});,"})
 ';,"});,"})
 '';,"});,"})
@@ -51,9 +51,9 @@ const SEOOptimizer = () => {}"});,"})
                     headings['Machine Learning',Predictive Analytics',AI Automation',Business Intelligence'],;''';,"});,"})
                     images['/images/ai-solutions.jpg'],;''';,"});,"})
                     links['/services',/about',/contact'],;''';,"});,"})
-                    keywords['artificial intelligence',machine learning',predictive analytics',AI automation'];,"});,"})
-                }"});,"})
-            ];,"});,"})
+                    keywords['artificial intelligence',machine learning',predictive analytics',AI automation'];,"});,"});
+}"});,"})
+            ],"});,"})
             const pageAnalyses = samplePages.map(page => {}"});,"})
                 const score = calculateSEOScore(page);,"});,"})
                 const issues = identifySEOIssues(page);,"});,"})
@@ -68,8 +68,8 @@ const SEOOptimizer = () => {}"});,"})
                     keywords: page.keywords,;,"});,"})
                     score,;,"});,"})
                     issues,;,"});,"})
-                    recommendations;,"});,"})
-                }}) ;,"});,"})
+                    recommendations;,"});,"});
+}}) ;,"});,"})
             const totalPages = pageAnalyses.length;,"});,"})
             const averageScore = Math.round(pageAnalyses.reduce ( (sum, page) => sum + page.score, 0) / totalPages) ;,"});,"})
             const pagesWithIssues = pageAnalyses.filter(page => page.issues.length > 0) .length;,"});,"})
@@ -89,16 +89,16 @@ const SEOOptimizer = () => {}"});,"})
                 pagesWithIssues,;,"});,"})
                 topIssues,;,"});,"})
                 pageAnalyses,;,"});,"})
-                summary;,"});,"})
-            }) }"});,"})
+                summary;,"});,"});
+}) }"});,"})
         catch (error) {}"});,"})
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
             // console.error('Error analyzing SEO:', error)}"});,"})
         finally {}"});,"})
-            setIsAnalyzing(false)}"});,"})
-    }, []);,"});,"})
+            setIsAnalyzing(false)}"});,"});
+}, []);,"});,"})
     useEffect(() => {}"});,"})
         // Auto-analyze SEO when component mounts;,"});,"})
         analyzeSEO()}, [analyzeSEO]);,"});,"})
@@ -491,7 +491,7 @@ const SEOOptimizer = () => {}
                     headings['AI-Powered Business Solutions', Comprehensive IT Services',Micro-SaaS Solutions'], ';'
                     images['/images/hero-ai-solutions.jpg', /images/hero-it-services.jpg'], ';''
                     links['/services', /ai-solutions',/about', /contact'], ';''
-                    keywords['AI solutions', quantum computing',cybersecurity', digital transformation'], '
+                    keywords['AI solutions', quantum computing',cybersecurity', digital transformation'], ';
 }, {}""
 ''
 ''
@@ -502,7 +502,7 @@ const SEOOptimizer = () => {}
                     headings['AI Solutions', Cloud & DevOps',Cybersecurity', Digital Transformation'], ';''
                     images['/images/services-overview.jpg'], ';'
                     links['/ai-solutions', /cloud-devops',/cybersecurity', /about'], ';''
-                    keywords['technology services', AI solutions',cloud infrastructure', cybersecurity'], '
+                    keywords['technology services', AI solutions',cloud infrastructure', cybersecurity'], ';
 }, {}""
 ''
 ''

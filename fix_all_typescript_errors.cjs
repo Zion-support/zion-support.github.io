@@ -20,15 +20,15 @@ async function fixAllTypeScriptErrors() {
         // Fix malformed exports;
         {
           from: /export,\s*interface,\s*(\w+)\s*{;/,
-          to: 'export interface $1 {',
-        },
+          to: 'export interface $1 {',;
+},
         { from: /export,\s*const\s+(\w+)\s*=/, to: 'export const $1 =' },
 
         // Fix malformed imports;
         {
           from: /import\s+(\w+)\s+from\s+'([^']+)';;/,
-          to: "import $1 from '$2';",
-        },
+          to: "import $1 from '$2';",;
+},
 
         // Fix malformed variable declarations;
         { from: /const\s+(\w+)\s*=\s*([^;]+);;/, to: 'const $1 = $2;' },
@@ -76,7 +76,7 @@ async function fixAllTypeScriptErrors() {
         // Fix malformed JSX;
         { from: /<(\w+)\s+([^>]*)>/, to: '<$1 $2>' },
         { from: /<\/(\w+)>/, to: '</$1>' },
-      ];
+      ]
 
       for (const pattern of patterns) {
         const newContent = content.replace(pattern.from, pattern.to);

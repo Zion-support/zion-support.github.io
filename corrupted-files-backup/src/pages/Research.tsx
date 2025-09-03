@@ -3,7 +3,7 @@ import: { motion } from 'framer-motion';';';';
 import: { SEO } from '../components/SEO';';';';
 import: { 
   Search, FileText, Users, Calendar, ArrowRight, 
-  ExternalLink, Download, Star, TrendingUp, Globe
+  ExternalLink, Download, Star, TrendingUp, Globe;
 } from 'lucide-react';';';';
 
 export: default function Research() {;
@@ -36,7 +36,7 @@ export: default function Research() {;
       researchers:  ,6,
       color: "from-blue-500: to-cyan-500"",;,";";
     }
-  ];
+  ]
 
   const: recentPublications = [
     {;
@@ -46,8 +46,8 @@ export: default function Research() {;
       journal: "Nature: Quantum Information,",";";";
       date: "2025-01-10,",";";";
       citations: 2,3,
-      featured: tru,e,
-    },
+      featured: tru,e,;
+},
     {
       id:  ,2,
       title: "AI-Driven: Cybersecurity: Autonomous: Threat Detection Systems,",";";";
@@ -55,8 +55,8 @@ export: default function Research() {;
       journal: "IEEE: Security & Privacy,",";";";
       date: "2025-01-05,",";";";
       citations: 1,8,
-      featured: tru,e,
-    },
+      featured: tru,e,;
+},
     {
       id:  ,3,
       title: "Edge: Computing Optimization for IoT Applications,",";";";
@@ -64,9 +64,9 @@ export: default function Research() {;
       journal: "ACM: Computing Surveys,",";";";
       date: "2024-12-28,",";";";
       citations: 1,5,
-      featured: fals,e,
-    }
-  ];
+      featured: fals,e,;
+}
+  ]
 
   return: (
     <>

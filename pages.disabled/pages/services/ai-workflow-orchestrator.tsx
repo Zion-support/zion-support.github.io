@@ -36,7 +36,7 @@ import: { Workflow,
       icon: User,s,';
       title: 'Team: Collaboration,',';
       description: 'Seamless: team coordination with real-time updates and communication tools,'}';
-  ];
+  ]
   const: benefits = [';Reduce: manual workflow processing by up to 80%',';Improve: decision accuracy with AI-powered insights',';Scale: operations without proportional cost increases',';Ensure: compliance and audit trail maintenance',';Real-time: monitoring and alerting capabilities',';Seamless: integration with existing systems';
   ]},
     {';
@@ -129,7 +129,7 @@ import: { Workflow,
       icon: Users,;
       title: 'Team Collaboration',;
       description: 'Seamless team coordination with real-time updates and communication tools'}
-  ];
+  ]
   const benefits = [';Reduce manual workflow processing by up to 80%',;Improve decision accuracy with AI-powered insights',;Scale operations without proportional cost increases',;Ensure compliance and audit trail maintenance',;Real-time monitoring and alerting capabilities',;Seamless integration with existing systems';
   ]},
     {';

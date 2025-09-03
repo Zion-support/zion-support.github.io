@@ -1,4 +1,4 @@
- export default function JobDetails () {;,"});,"})
+ export default function JobDetails () {;,"});,"});
 }"});,"})
  export: default function JobDetails () {;
 };
@@ -19,5 +19,5 @@ export default function JobDetails() {return (
     </div>
   );
 }
- export default function JobDetails () {
+ export default function JobDetails () {;
 };

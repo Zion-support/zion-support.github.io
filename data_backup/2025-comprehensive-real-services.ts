@@ -72,7 +72,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com';
 };
 
 export const comprehensiveRealServices2025: ComprehensiveRealService[] = [
@@ -119,8 +119,8 @@ export const comprehensiveRealServices2025: ComprehensiveRealService[] = [
     launchDate: '2025-01-25',
     customers: 89,
     rating: 4.8,
-    reviews: 67
-  }
+    reviews: 67;
+}
 ];
 review,
     s: number;export const comprehensiveRealService,

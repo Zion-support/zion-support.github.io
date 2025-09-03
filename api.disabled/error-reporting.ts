@@ -49,8 +49,8 @@ export default async function handler(
       message: errorReport.error.message,
       stack: errorReport.error.stack,
       url: errorReport.url,
-      timestamp: errorReport.timestamp,
-    });
+      timestamp: errorReport.timestamp,;
+});
 
     // Send to external error monitoring services
     await sendToErrorMonitoringServices(errorReport);
@@ -75,27 +75,27 @@ async function sendToErrorMonitoringServices(errorReport: ErrorReport) {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'X-Sentry-Auth': `Sentry sentry_version=7, sentry_key=${process.env.SENTRY_KEY}`,
-        },
+          'X-Sentry-Auth': `Sentry sentry_version=7, sentry_key=${process.env.SENTRY_KEY}`,;
+},
         body: JSON.stringify({
           message: errorReport.error.message,
           stacktrace: {
-            frames: parseStackTrace(errorReport.error.stack),
-          },
+            frames: parseStackTrace(errorReport.error.stack),;
+},
           tags: {
             component: 'frontend',
-            url: errorReport.url,
-          },
+            url: errorReport.url,;
+},
           user: {
-            id: errorReport.userId,
-          },
+            id: errorReport.userId,;
+},
           extra: {
             userAgent: errorReport.userAgent,
             sessionId: errorReport.sessionId,
-            componentStack: errorReport.errorInfo.componentStack,
-          },
-        }),
-      });
+            componentStack: errorReport.errorInfo.componentStack,;
+},;
+}),;
+});
     }
 
     // LogRocket
@@ -104,16 +104,16 @@ async function sendToErrorMonitoringServices(errorReport: ErrorReport) {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${process.env.LOGROCKET_API_KEY}`,
-        },
+          'Authorization': `Bearer ${process.env.LOGROCKET_API_KEY}`,;
+},
         body: JSON.stringify({
           message: errorReport.error.message,
           stack: errorReport.error.stack,
           url: errorReport.url,
           userAgent: errorReport.userAgent,
-          timestamp: errorReport.timestamp,
-        }),
-      });
+          timestamp: errorReport.timestamp,;
+}),;
+});
     }
 
     // Custom webhook
@@ -121,10 +121,10 @@ async function sendToErrorMonitoringServices(errorReport: ErrorReport) {
       await fetch(process.env.ERROR_WEBHOOK_URL, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(errorReport),
-      });
+          'Content-Type': 'application/json',;
+},
+        body: JSON.stringify(errorReport),;
+});
     }
   } catch (error) {
     console.error('Failed to send to error monitoring services:', error);
@@ -141,15 +141,15 @@ function parseStackTrace(stack?: string) {
         function: match[1],
         filename: match[2],
         lineno: parseInt(match[3]),
-        colno: parseInt(match[4]),
-      };
+        colno: parseInt(match[4]),;
+};
     }
     return {
       function: line.trim(),
       filename: 'unknown',
       lineno: 0,
-      colno: 0,
-    };
+      colno: 0,;
+};
   });
 }
 
@@ -160,7 +160,7 @@ function isCriticalError(errorReport: ErrorReport): boolean {
     /network error/i,
     /failed to fetch/i,
     /script error/i,
-  ];
+  ]
 
   return criticalPatterns.some(pattern => 
     pattern.test(errorReport.error.message)
@@ -174,8 +174,8 @@ async function sendCriticalErrorAlert(errorReport: ErrorReport) {
       await fetch('/api/send-alert-email', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-        },
+          'Content-Type': 'application/json',;
+},
         body: JSON.stringify({
           to: process.env.ALERT_EMAIL,
           subject: 'Critical Error Alert - Zion Tech Group',
@@ -189,9 +189,9 @@ async function sendCriticalErrorAlert(errorReport: ErrorReport) {
             
             Stack Trace:
             ${errorReport.error.stack}
-          `,
-        }),
-      });
+          `,;
+}),;
+});
     }
 
     // Send Slack notification
@@ -199,8 +199,8 @@ async function sendCriticalErrorAlert(errorReport: ErrorReport) {
       await fetch(process.env.SLACK_WEBHOOK_URL, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-        },
+          'Content-Type': 'application/json',;
+},
         body: JSON.stringify({
           text: `🚨 Critical Error Alert`,
           attachments: [{
@@ -209,22 +209,22 @@ async function sendCriticalErrorAlert(errorReport: ErrorReport) {
               {
                 title: 'Error Message',
                 value: errorReport.error.message,
-                short: false,
-              },
+                short: false,;
+},
               {
                 title: 'URL',
                 value: errorReport.url,
-                short: true,
-              },
+                short: true,;
+},
               {
                 title: 'Timestamp',
                 value: errorReport.timestamp,
-                short: true,
-              },
-            ],
-          }],
-        }),
-      });
+                short: true,;
+},
+            ],;
+}],;
+}),;
+});
     }
   } catch (error) {
     console.error('Failed to send critical error alert:', error);

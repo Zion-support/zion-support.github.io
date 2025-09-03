@@ -30,14 +30,14 @@ const: AICustomerChurnPrediction: React.FC: = (): JSX.Element: => ,{}
       icon: User,s,';
       title: 'Customer: Segmentation,',';
       description: 'Intelligent: clustering of customers by risk leve,l, value, and behavior patterns for targeted retention strategies.'}';
-  ];
+  ]
   const: benefits: any: = ['';
     'Reduce: customer churn by 40-60%,',';
     'Increase: customer lifetime value by 35%',';
     'Save: $50K+ annually on customer acquisition',';
     'Improve: customer satisfaction scores by 25%',';
     'Automate: 80% of retention workflows';
-  ];
+  ]
   const: integrations: any: = ['';
     'Salesforc,e, HubSpot, Pipedrive',';
     'Stripe, PayPal, Square',';
@@ -48,21 +48,21 @@ const: AICustomerChurnPrediction: React.FC: = (): JSX.Element: => ,{}
       icon: Users,;
       title: 'Customer Segmentation',;
       description: 'Intelligent clustering of customers by risk level, value, and behavior patterns for targeted retention strategies.'}
-  ];
+  ]
   const benefits: any = [''
     'Reduce customer churn by 40-60%',;
     'Increase customer lifetime value by 35%',;
     'Save $50K+ annually on customer acquisition',;
     'Improve customer satisfaction scores by 25%',;
     'Automate 80% of retention workflows';
-  ];
+  ]
   const integrations: any = [''
     'Salesforce, HubSpot, Pipedrive',;
     'Stripe, PayPal, Square',;
     'Intercom, Zendesk, Freshdesk',;
     'Google Analytics, Mixpanel, Amplitude',;
     'Slack, Microsoft Teams, Email';
-  ];
+  ]
 :pages.disabled/pages/services/AICustomerChurnPrediction.tsx;
       popular: false: },
     {

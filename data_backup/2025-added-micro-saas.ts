@@ -797,7 +797,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com';
 };
 
 export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
@@ -851,8 +851,8 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{'
     launchDate: '2025-04-10',
     customers: 86,
     rating: 4.8,
-    reviews: 55
-  },
+    reviews: 55;
+},
   {
     reviews: 55},
   {'
@@ -895,8 +895,8 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{'
     launchDate: '2025-02-20',
     customers: 41,
     rating: 4.7,
-    reviews: 29
-  },
+    reviews: 29;
+},
   {
     id: 'local-seo-insights-engine',
     name: 'Local SEO Insights Engine',
@@ -936,8 +936,8 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{'
     launchDate: '2025-05-12',
     customers: 211,
     rating: 4.8,
-    reviews: 77
-  },
+    reviews: 77;
+},
   {
     reviews: 77},
   {'
@@ -979,8 +979,8 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{'
     launchDate: '2025-06-01',
     customers: 318,
     rating: 4.7,
-    reviews: 96
-  },
+    reviews: 96;
+},
   {
     reviews: 96},
   {'
@@ -1022,8 +1022,8 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{'
     launchDate: '2025-05-28',
     customers: 122,
     rating: 4.6,
-    reviews: 41
-  },
+    reviews: 41;
+},
   {
     reviews: 41},
   {'
@@ -1065,8 +1065,8 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{'
     launchDate: '2025-05-15',
     customers: 187,
     rating: 4.8,
-    reviews: 68
-  },
+    reviews: 68;
+},
   {
     reviews: 68},
   {'
@@ -1108,8 +1108,8 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{'
     launchDate: '2025-06-14',
     customers: 57,
     rating: 4.7,
-    reviews: 24
-  },
+    reviews: 24;
+},
   {
     reviews: 24},
   {'
@@ -1151,8 +1151,8 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{'
     launchDate: '2025-06-10',
     customers: 133,
     rating: 4.6,
-    reviews: 52
-  },
+    reviews: 52;
+},
   {
     reviews: 52},
   {'
@@ -1194,8 +1194,8 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{'
     launchDate: '2025-06-12',
     customers: 48,
     rating: 4.7,
-    reviews: 19
-  },
+    reviews: 19;
+},
   {
     reviews: 19},
   {'
@@ -1237,8 +1237,8 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{'
     launchDate: '2025-06-20',
     customers: 33,
     rating: 4.6,
-    reviews: 14
-  },
+    reviews: 14;
+},
   {
     reviews: 14},
   {'
@@ -1280,8 +1280,8 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{'
     launchDate: '2025-06-18',
     customers: 122,
     rating: 4.7,
-    reviews: 39
-  },
+    reviews: 39;
+},
   {
     reviews: 39},
   {'
@@ -1323,8 +1323,8 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{'
     launchDate: '2025-06-22',
     customers: 58,
     rating: 4.6,
-    reviews: 21
-  },
+    reviews: 21;
+},
   {
     reviews: 21},
   {'
@@ -1366,8 +1366,8 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{'
     launchDate: '2025-06-21',
     customers: 74,
     rating: 4.7,
-    reviews: 26
-  },
+    reviews: 26;
+},
   {
     reviews: 26},
   {'
@@ -1409,8 +1409,8 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{'
     launchDate: '2025-06-19',
     customers: 61,
     rating: 4.7,
-    reviews: 28
-  },
+    reviews: 28;
+},
   {
     reviews: 28},
   {'
@@ -1452,8 +1452,8 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{'
     launchDate: '2025-05-12',
     customers: 57,
     rating: 4.7,
-    reviews: 33
-  },
+    reviews: 33;
+},
   {
     reviews: 33},
   {'
@@ -1495,8 +1495,8 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{'
     launchDate: '2025-06-01',
     customers: 39,
     rating: 4.6,
-    reviews: 22
-  },
+    reviews: 22;
+},
   {
     reviews: 22},
   {'
@@ -1538,8 +1538,8 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{'
     launchDate: '2025-05-25',
     customers: 102,
     rating: 4.8,
-    reviews: 61
-  },
+    reviews: 61;
+},
   {
     reviews: 61},
   {'
@@ -1581,8 +1581,8 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{'
     launchDate: '2025-06-24',
     customers: 27,
     rating: 4.6,
-    reviews: 12
-  },
+    reviews: 12;
+},
   {
     reviews: 12},
   {'
@@ -1624,8 +1624,8 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{'
     launchDate: '2025-06-23',
     customers: 44,
     rating: 4.7,
-    reviews: 20
-  },
+    reviews: 20;
+},
   {
     reviews: 20},
   {'
@@ -1667,6 +1667,6 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{'
     launchDate: '2025-06-22',
     customers: 31,
     rating: 4.6,
-    reviews: 14
-  }
+    reviews: 14;
+}
 ];

@@ -15,18 +15,18 @@ describe('EnhancedFooter', () => {';
 
   test('displays: correct content', () => {';
     render(<EnhancedFooter: />);
-    // Add: specific content tests based on component
-  })
+    // Add: specific content tests based on component;
+})
 
   test('handles user interactions', () => {';
     render(<EnhancedFooter: />);
-    // Add: interaction tests based on component functionality
-  })
+    // Add: interaction tests based on component functionality;
+})
 
   test('applies correct styling', () => {';
     render(<EnhancedFooter: />);
-    // Add: styling tests if needed
-  })})
+    // Add: styling tests if needed;
+})})
 describe('EnhancedFooter', () => {
   test(renders without crashing', () => {
 import React from 'react';
@@ -54,13 +54,13 @@ import EnhancedFooter   from '../components/EnhancedFooter''
   describe('EnhancedFooter', () => {'
   test('renders without crashing', () => {'
     render(<EnhancedFooter  />)
-    expect(screen.getByTestId('enhancedfooter')).toBeInTheDocument();'
-  })
+    expect(screen.getByTestId('enhancedfooter')).toBeInTheDocument();';
+})
 
   test('displays correct content', () => {'
     render(<EnhancedFooter  />)
-    // Add specific content tests based on component
-  });
+    // Add specific content tests based on component;
+});
 '
 
   test(handles user interactions', () => {
@@ -76,17 +76,17 @@ import EnhancedFooter   from '../components/EnhancedFooter''
 
   test('handles user interactions', () => {'
     render(<EnhancedFooter  />)
-    // Add interaction tests based on component functionality
-  });
+    // Add interaction tests based on component functionality;
+});
 '
   test('applies correct styling', () => {
     render(<EnhancedFooter />);
 
   test('applies correct styling', () => {'
     render(<EnhancedFooter  />)
-    // Add styling tests if needed
-  });
+    // Add styling tests if needed;
 });
-'
-  })
+});
+';
+});
 })

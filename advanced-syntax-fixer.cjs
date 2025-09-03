@@ -38,49 +38,49 @@ class AdvancedSyntaxFixer {
         // Fix missing semicolons after import statements
         {
           pattern: /^import\s+.*from\s+['"][^'"]+['"]\s*$/gm,
-          replacement: (match) => match.endsWith(';') ? match : match + ';'
-        },
+          replacement: (match) => match.endsWith(';') ? match : match + ';';
+},
         // Fix missing semicolons after variable declarations
         {
           pattern: /(const|let|var)\s+\w+\s*=\s*[^;]+$/gm,
-          replacement: (match) => match.endsWith(';') ? match : match + ';'
-        },
+          replacement: (match) => match.endsWith(';') ? match : match + ';';
+},
         // Fix missing commas in object literals
         {
           pattern: /(\w+):\s*([^,}\n]+)(\n\s*[^,}])/g,
-          replacement: '$1: $2,$3'
-        },
+          replacement: '$1: $2,$3';
+},
         // Fix missing semicolons after function declarations
         {
           pattern: /function\s+\w+\s*\([^)]*\)\s*\{[^}]*\}\s*$/gm,
-          replacement: (match) => match.endsWith(';') ? match : match + ';'
-        },
+          replacement: (match) => match.endsWith(';') ? match : match + ';';
+},
         // Fix missing semicolons after arrow functions
         {
           pattern: /const\s+\w+\s*=\s*\([^)]*\)\s*=>\s*[^;]+$/gm,
-          replacement: (match) => match.endsWith(';') ? match : match + ';'
-        },
+          replacement: (match) => match.endsWith(';') ? match : match + ';';
+},
         // Fix missing semicolons after return statements
         {
           pattern: /return\s+[^;]+$/gm,
-          replacement: (match) => match.endsWith(';') ? match : match + ';'
-        },
+          replacement: (match) => match.endsWith(';') ? match : match + ';';
+},
         // Fix missing semicolons after export statements
         {
           pattern: /export\s+(const|let|var|function|class|default)\s+[^;]+$/gm,
-          replacement: (match) => match.endsWith(';') ? match : match + ';'
-        },
+          replacement: (match) => match.endsWith(';') ? match : match + ';';
+},
         // Fix missing semicolons after React component declarations
         {
           pattern: /(const|let|var)\s+\w+\s*=\s*\([^)]*\)\s*=>\s*\{[^}]*\}\s*$/gm,
-          replacement: (match) => match.endsWith(';') ? match : match + ';'
-        },
+          replacement: (match) => match.endsWith(';') ? match : match + ';';
+},
         // Fix missing semicolons after JSX returns
         {
           pattern: /return\s*\(\s*<[^>]+>.*<\/[^>]+>\s*\)\s*$/gm,
-          replacement: (match) => match.endsWith(';') ? match : match + ';'
-        }
-      ];
+          replacement: (match) => match.endsWith(';') ? match : match + ';';
+}
+      ]
 
       for (const fix of fixes) {
         const newContent = fixedContent.replace(fix.pattern, fix.replacement);
@@ -105,14 +105,14 @@ class AdvancedSyntaxFixer {
         // Fix missing semicolons after object destructuring
         {
           pattern: /(const|let|var)\s*\{[^}]+\}\s*=\s*[^;]+$/gm,
-          replacement: (match) => match.endsWith(';') ? match : match + ';'
-        },
+          replacement: (match) => match.endsWith(';') ? match : match + ';';
+},
         // Fix missing semicolons after array destructuring
         {
           pattern: /(const|let|var)\s*\[[^\]]+\]\s*=\s*[^;]+$/gm,
-          replacement: (match) => match.endsWith(';') ? match : match + ';'
-        }
-      ];
+          replacement: (match) => match.endsWith(';') ? match : match + ';';
+}
+      ]
 
       for (const fix of specificFixes) {
         const newContent = fixedContent.replace(fix.pattern, fix.replacement);
@@ -167,7 +167,7 @@ class AdvancedSyntaxFixer {
     const allFiles = [
       ...this.getAllFiles(srcDir),
       ...this.getAllFiles(pagesDir)
-    ];
+    ]
 
     this.log(`📁 Found ${allFiles.length} files to check`);
 
@@ -183,8 +183,8 @@ class AdvancedSyntaxFixer {
       fixedFiles: this.fixedFiles.length,
       errors: this.errors.length,
       fixedFileList: this.fixedFiles,
-      errorList: this.errors
-    };
+      errorList: this.errors;
+};
   }
 
   generateReport(results) {
@@ -192,8 +192,8 @@ class AdvancedSyntaxFixer {
       timestamp: new Date().toISOString(),
       summary: results,
       fixedFiles: this.fixedFiles,
-      errors: this.errors
-    };
+      errors: this.errors;
+};
 
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
     this.log(`📊 Report generated: ${this.reportFile}`);

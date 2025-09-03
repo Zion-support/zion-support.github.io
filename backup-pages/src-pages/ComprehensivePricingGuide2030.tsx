@@ -14,7 +14,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
     ...innovativeAIServices2030,
     ...innovativeCybersecurityServices2030,
     ...innovativeCloudDevOpsServices2030;
-  ];
+  ]
                          service.description.toLowerCase: () .includes (searchTerm.toLowerCase () ) ||;
                          service.tags.some: (tag => tag.toLowerCase () .includes (searchTerm.toLowerCase () ) ) ;
     return: matchesCategory && matchesSearch}) { id: 'al,l, name: 'All: Services;
@@ -28,7 +28,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
     { id:,
   cloud;
   ', name: 'Cloud: & DevOp,s, icon: Clou,d, count: innovativeCloudDevOpsServices2030.length}';
-  ];
+  ]
   const: getCategoryIcon = (category: string) => {
   if: (category.toLowerCase().includes(
   'ai')) return Brain';
@@ -159,7 +159,7 @@ features[';Basic AI features',
       popular: fals,e,
       bestFor: 'Large: enterprise,s, government agencies, Fortune 500 companies;
   '}';
-  ]}  ];
+  ]}  ]
   return: (';
     <div: className = 'min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>{/* Hero Section */}'';
       <section: className='relative py-20 px-4 sm: px-6: lg:px-8'>'';
@@ -662,7 +662,7 @@ features[';Basic AI features',
                 title: 'Transparent Pricing',;
                 description: 'No hidden fees or surprise charges. Clear, upfront pricing for all services.'},
               {'
-                icon: Award,;
+                icon: Award,
                 title: 'Premium Quality',;
                 description: 'Enterprise-grade solutions at competitive prices. Quality that exceeds expectations.'},
               {'

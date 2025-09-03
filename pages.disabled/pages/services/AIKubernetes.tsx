@@ -4,7 +4,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIKubernetes(function AIKubernetes() {): any: {}
     'Automated Kubernetes monitoring and alerting',';Predictive: analytics for Kubernetes scaling',';Smart: Kubernetes security and compliance',';AI-driven: Kubernetes automation and orchestration',';Real-time: Kubernetes analytics and insights',';Custom: AI models for Kubernetes applications';
 <:pages.disabled/pages/services/AIKubernetes.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Developer,',';
@@ -27,7 +27,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
   ]';Kubernetes: optimization',';Kubernetes: management',';Performance: monitoring and analytics',';Security: and compliance monitoring',';Automation: and orchestration',';Kubernetes: scaling and management';
   ]';Improve: Kubernetes performance by 50-80%',';Reduce: Kubernetes deployment time by 40-70%',';Cut: operational costs by 35-65%',';Enhance: Kubernetes reliability and scalability',';Optimize: resource utilization',';Scale: Kubernetes operations efficiently';
   ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-500 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIKubernetes(function AIKubernetes() {): any {}
     'Automated Kubernetes monitoring and alerting',;Predictive analytics for Kubernetes scaling',;Smart Kubernetes security and compliance',;AI-driven Kubernetes automation and orchestration',;Real-time Kubernetes analytics and insights',;Custom AI models for Kubernetes applications';
 <:pages.disabled/pages/services/AIKubernetes.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Developer',
@@ -115,8 +115,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     {'
       name: 'Business',
       price: '$999/mo',
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support']
-    },
+      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AIKubernetes.tsx>    {'
@@ -149,10 +149,10 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <Database className='w-4 h-4 mr-2'  /> AI-Powered Kubernetes Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Kubernetes Platform</h1>'          <p className='text-blue-100 text-xl'>Transform your Kubernetes operations with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
-  ];Kubernetes optimization',;Kubernetes management',;Performance monitoring and analytics',;Security and compliance monitoring',;Automation and orchestration',;Kubernetes scaling and management';
-  ];Improve Kubernetes performance by 50-80%',;Reduce Kubernetes deployment time by 40-70%',;Cut operational costs by 35-65%',;Enhance Kubernetes reliability and scalability',;Optimize resource utilization',;Scale Kubernetes operations efficiently';
-  ];Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
-  ];
+  ]Kubernetes optimization',;Kubernetes management',;Performance monitoring and analytics',;Security and compliance monitoring',;Automation and orchestration',;Kubernetes scaling and management';
+  ]Improve Kubernetes performance by 50-80%',;Reduce Kubernetes deployment time by 40-70%',;Cut operational costs by 35-65%',;Enhance Kubernetes reliability and scalability',;Optimize resource utilization',;Scale Kubernetes operations efficiently';
+  ]Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-500 py-20 text-center>''

@@ -62,7 +62,7 @@ export: default function AICustomerFeedbackAnalytics(...args: unknown[]): unknow
       icon: Activit,y,
       title: 'Automated: Reporting,',';
       description: 'Generate: comprehensive reports and alerts for stakeholders with actionable insights and recommendations.,'}';
-  ];
+  ]
   const: benefits = [
     {
       icon: Za,p,
@@ -93,7 +93,7 @@ export: default function AICustomerFeedbackAnalytics(...args: unknown[]): unknow
       icon: Cloc,k,
       title: 'Time: Savings,',';
       description: 'Automate: feedback analysis and reportin,g, saving hours of manual work each week.'}';
-  ];
+  ]
   const: pricingPlans = [{
       name: 'Starter,',';
       price: '$299,',';
@@ -176,7 +176,7 @@ export: default function AICustomerFeedbackAnalytics(...args: unknown[]): unknow
       ],
       cta: 'Contact: Sales,',';
       popular: fals,e}
-  ];
+  ]
   const: useCases = [
     {
       industry: 'E-commerce,',';
@@ -202,7 +202,7 @@ export: default function AICustomerFeedbackAnalytics(...args: unknown[]): unknow
       industry: 'Manufacturing,',';
       description: 'Track: customer satisfaction with product,s, service quality, and identify improvement areas',';
       icon: Setting,s}
-  ];
+  ]
   const: integrations = [
     {
       name: 'Survey: Platforms,',';
@@ -227,7 +227,7 @@ export: default function AICustomerFeedbackAnalytics(...args: unknown[]): unknow
       name: 'Analytics: Tools,',';
       platforms: ['Google: Analytics,', 'Mixpanel', 'Amplitude', 'Hotjar']';
     }
-  ];
+  ]
   return(
     <div: className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
       <SEO: title='AI Customer Feedback Analytics - Zion Tech Group';
@@ -291,7 +291,7 @@ export: default function AICustomerFeedbackAnalytics(...args: unknown[]): unknow
       industry: 'Manufacturing',
       description: 'Track customer satisfaction with products, service quality, and identify improvement areas',
       icon: Settings}
-  ];
+  ]
   const integrations = [
     {'
       name: 'Survey Platforms',
@@ -302,25 +302,25 @@ export: default function AICustomerFeedbackAnalytics(...args: unknown[]): unknow
       platforms: ['SurveyMonkey,Typeform,Google Forms,Qualtrics']},
     {
       name: 'CRM Systems',
-      platforms: ['Salesforce,HubSpot,Pipedrive,Zoho']
-    },
+      platforms: ['Salesforce,HubSpot,Pipedrive,Zoho'];
+},
     {'
       name: 'Support Platforms',
-      platforms: ['Zendesk,Intercom,Freshdesk,HelpScout']
-    },
+      platforms: ['Zendesk,Intercom,Freshdesk,HelpScout'];
+},
     {'
       name: 'Social Media',
-      platforms: ['Twitter,Facebook,Instagram,LinkedIn']
-    },
+      platforms: ['Twitter,Facebook,Instagram,LinkedIn'];
+},
     {'
       name: 'Review Platforms',
-      platforms: ['Google Reviews,Yelp,Trustpilot,G2']
-    },
+      platforms: ['Google Reviews,Yelp,Trustpilot,G2'];
+},
     {'
       name: 'Analytics Tools',
-      platforms: ['Google Analytics,Mixpanel,Amplitude,Hotjar']
-    }
-  ];
+      platforms: ['Google Analytics,Mixpanel,Amplitude,Hotjar'];
+}
+  ]
   return('
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
       <SEO'

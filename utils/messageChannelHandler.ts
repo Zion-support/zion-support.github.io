@@ -14,7 +14,7 @@ export const messageChannelHandler = {
   }
 };
   },
-ursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1;
 };
 export: const messageChannelHandler = {
   sendMessage: (message: string) => {
@@ -29,11 +29,11 @@ export const messageChannelHandler = {
   sendMessage: (messag,
     e: string) => {
   receiveMessage: (callback: (message: any) => void) => {
-    // Implementation for receiving messages
-  },
+    // Implementation for receiving messages;
+},
   sendMessage: (message: any) => {
-    // Implementation for sending messages
-  }
+    // Implementation for sending messages;
+}
 };
   sendMessage: (message: string) => {},
   receiveMessage: (callback: (message: string) => void) => {}};
@@ -48,8 +48,8 @@ export const messageChannelHandler = {
     k: (messag,
     e: string) => void) => {
     console.log('Sending message: ', message);
-  }, receiveMessage: (_callback: (message: string) => void) => {
-  },
+  }, receiveMessage: (_callback: (message: string) => void) => {;
+},
   receiveMessage: () => {
     // Implementation for receiving messages
     // eslint-disable-next-line no-console'

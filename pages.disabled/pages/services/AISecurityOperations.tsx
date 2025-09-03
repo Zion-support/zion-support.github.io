@@ -4,7 +4,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityOperations(function AISecurityOperations() {): any: {}
     'Automated incident detection and response',';Predictive: analytics for security threats',';Smart: security orchestration and automation',';AI-driven: security analytics and insights',';Real-time: security performance monitoring',';Custom: AI models for security applications';
 <:pages.disabled/pages/services/AISecurityOperations.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Developer,',';
@@ -27,7 +27,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
   ]';Security: operations optimization',';Security: monitoring and alerting',';Incident: detection and response',';Security: orchestration and automation',';Security: analytics and insights',';Security: scaling and management';
   ]';Improve: security operations performance by 50-80%',';Reduce: incident response time by 40-70%',';Cut: security operational costs by 35-65%',';Enhance: security operations reliability and scalability',';Optimize: resource utilization',';Scale: security operations efficiently';
   ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-slate-500 via-blue-500 to-indigo-500 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityOperations(function AISecurityOperations() {): any {}
     'Automated incident detection and response',;Predictive analytics for security threats',;Smart security orchestration and automation',;AI-driven security analytics and insights',;Real-time security performance monitoring',;Custom AI models for security applications';
 <:pages.disabled/pages/services/AISecurityOperations.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Developer',
@@ -115,8 +115,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     {'
       name: 'Business',
       price: '$1,799/mo',
-      details: ['Up to 10,000 events/day', 'Advanced AI features', 'Enhanced monitoring', 'Priority support']
-    },
+      details: ['Up to 10,000 events/day', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AISecurityOperations.tsx>    {'
@@ -149,10 +149,10 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <Database className='w-4 h-4 mr-2'  /> AI-Powered Security Operations Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Security Operations Platform</h1>'          <p className='text-slate-100 text-xl'>Transform your security operations with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
-  ];Security operations optimization',;Security monitoring and alerting',;Incident detection and response',;Security orchestration and automation',;Security analytics and insights',;Security scaling and management';
-  ];Improve security operations performance by 50-80%',;Reduce incident response time by 40-70%',;Cut security operational costs by 35-65%',;Enhance security operations reliability and scalability',;Optimize resource utilization',;Scale security operations efficiently';
-  ];Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
-  ];
+  ]Security operations optimization',;Security monitoring and alerting',;Incident detection and response',;Security orchestration and automation',;Security analytics and insights',;Security scaling and management';
+  ]Improve security operations performance by 50-80%',;Reduce incident response time by 40-70%',;Cut security operational costs by 35-65%',;Enhance security operations reliability and scalability',;Optimize resource utilization',;Scale security operations efficiently';
+  ]Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-slate-500 via-blue-500 to-indigo-500 py-20 text-center>''

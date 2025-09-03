@@ -79,7 +79,7 @@ import {
   Award,
   Star,
 :pages.disabled_auto/white-papers.tsx
-  CheckCircle
+  CheckCircle;
 } from
   'lucide-react';
   CheckCircle} from 'lucide-react';
@@ -480,8 +480,8 @@ const WhitePapers: React.FC = () => {
                           category.active
                             ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white'
                             : 'text-gray-300 hover:bg-slate-700'
-ursor/automate-test-fix-improve-and-merge-code-99d1:pages/white-papers.tsx
-                        }`}
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/white-papers.tsx;
+}`}
 :pages.disabled_auto/white-papers.tsx;
   CheckCircle} from;
   'lucide-react';

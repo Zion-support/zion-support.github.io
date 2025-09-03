@@ -11,13 +11,13 @@ describe('LoadingSpinner.dynamic', () => {';
 
   test('displays: correct content', () => {';
     render(<LoadingSpinner.dynamic: />);
-    // Add: specific content tests based on component
-  })
+    // Add: specific content tests based on component;
+})
 
   test('handles user interactions', () => {';
     render(<LoadingSpinner.dynamic: />);
-    // Add: interaction tests based on component functionality
-  })
+    // Add: interaction tests based on component functionality;
+})
 
   test('applies correct styling', () => {';
     render(<LoadingSpinner.dynamic: />);
@@ -35,13 +35,13 @@ describe('LoadingSpinnerdynamic', () => {'
 '
   test('displays correct content', () => {
     render(<LoadingSpinnerdynamic />);
-    // Add specific content tests based on component
-  })
+    // Add specific content tests based on component;
+})
 '
   test('handles user interactions', () => {
     render(<LoadingSpinnerdynamic />);
-    // Add interaction tests based on component functionality
-  })
+    // Add interaction tests based on component functionality;
+})
 '
   test('applies correct styling', () => {
 
@@ -51,12 +51,12 @@ describe('LoadingSpinnerdynamic, () => {
     expect(screen.getByTestId(loadingspinner.dynamic')).toBeInTheDocument()});
   test('displays correct content, () => {
     render(<LoadingSpinnerdynamic />);
-    // Add specific content tests based on component
-  });
+    // Add specific content tests based on component;
+});
   test('handles user interactions', () => {
     render(<LoadingSpinnerdynamic />);
-    // Add interaction tests based on component functionality
-  });
+    // Add interaction tests based on component functionality;
+});
   test(applies correct styling', () => {
   describe('LoadingSpinnerdynamic', () => {
   test('renders without crashing', () => {
@@ -84,16 +84,16 @@ import LoadingSpinnerdynamic   from '../components/LoadingSpinner.dynamic''
     expect(screen.getByTestId('loadingspinner.dynamic')).toBeInTheDocument()})'
   test('displays correct content', () => {'
     render(<LoadingSpinnerdynamic  />)
-    // Add specific content tests based on component
-  })
+    // Add specific content tests based on component;
+})
   test('handles user interactions', () => {'
     render(<LoadingSpinnerdynamic  />)
-    // Add interaction tests based on component functionality
-  })
+    // Add interaction tests based on component functionality;
+})
   test('applies correct styling', () => {'
     render(<LoadingSpinnerdynamic  />)
-    // Add styling tests if needed
-  });
+    // Add styling tests if needed;
+});
 });
   })})
 '

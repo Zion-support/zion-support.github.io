@@ -46,7 +46,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com';
 };
 
 export const cuttingEdgeEmergingTechServices2025: CuttingEdgeEmergingTechService[] = [
@@ -93,8 +93,8 @@ export const cuttingEdgeEmergingTechServices2025: CuttingEdgeEmergingTechService
     launchDate: '2025-02-10',
     customers: 23,
     rating: 4.9,
-    reviews: 18
-  }
+    reviews: 18;
+}
 ];
 export const cuttingEdgeEmergingTechServices2025 = [{
     id:,

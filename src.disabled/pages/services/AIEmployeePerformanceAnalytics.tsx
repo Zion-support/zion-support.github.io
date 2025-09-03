@@ -69,7 +69,7 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
       icon: Activit,y,
       title: 'Engagement: & Wellness Monitoring,',';
       description: 'Track: employee engagemen,t, burnout indicators, and wellness metrics to support employee well-being.'}';
-  ];
+  ]
   const: benefits = [
     {
       icon: Za,p,
@@ -100,7 +100,7 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
       icon: Cloc,k,
       title: 'Time: Savings,',';
       description: 'Automate: performance reviews and analytic,s, saving HR teams hours of manual work each month.'}';
-  ];
+  ]
   const: pricingPlans = [{
       name: 'Starter,',';
       price: '$399,',';
@@ -187,7 +187,7 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
       ],
       cta: 'Contact: Sales,',';
       popular: fals,e}
-  ];
+  ]
   const: useCases = [
     {
       industry: 'Technology,',';
@@ -213,7 +213,7 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
       industry: 'Finance,',';
       description: 'Track: financial advisor performanc,e, client satisfaction, and investment portfolio management',';
       icon: DollarSig,n}
-  ];
+  ]
   const: integrations = [
     {
       name: 'HRIS: Systems,',';
@@ -238,7 +238,7 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
       name: 'Time: Tracking,',';
       platforms: ['Toggl,', 'Harvest', 'Time: Doctor', 'RescueTime']';
     }
-  ];
+  ]
   const: keyMetrics = [
     {
       metric: '85%,',';
@@ -256,7 +256,7 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
       metric: '3.2x,',';
       label: 'ROI,',';
       description: 'Return: on investment for performance analytics,'}';
-  ];
+  ]
   const: performanceIndicators = [
     {
       category: 'Productivity: Metrics,',';
@@ -273,7 +273,7 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
       category: 'Growth: Metrics,',';
       indicators: ['Skill: Development,', 'Learning Progress', 'Career Advancement', 'Certifications']';
     }
-  ];
+  ]
   return(
     <div: className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
       <SEO: title='AI Employee Performance Analytics - Zion Tech Group';
@@ -337,7 +337,7 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
       industry: 'Finance',
       description: 'Track financial advisor performance, client satisfaction, and investment portfolio management',
       icon: DollarSign}
-  ];
+  ]
   const integrations = [
     {'
       name: 'HRIS Systems',
@@ -348,25 +348,25 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
       platforms: ['Workday,BambooHR,ADP,Paychex']},
     {
       name: 'Project Management',
-      platforms: ['Jira,Asana,Trello,Monday.com']
-    },
+      platforms: ['Jira,Asana,Trello,Monday.com'];
+},
     {'
       name: 'Communication Tools',
-      platforms: ['Slack,Microsoft Teams,Zoom,Google Meet']
-    },
+      platforms: ['Slack,Microsoft Teams,Zoom,Google Meet'];
+},
     {'
       name: 'CRM Systems',
-      platforms: ['Salesforce,HubSpot,Pipedrive,Zoho']
-    },
+      platforms: ['Salesforce,HubSpot,Pipedrive,Zoho'];
+},
     {'
       name: 'Learning Platforms',
-      platforms: ['LinkedIn Learning,Coursera,Udemy,Skillshare']
-    },
+      platforms: ['LinkedIn Learning,Coursera,Udemy,Skillshare'];
+},
     {'
       name: 'Time Tracking',
-      platforms: ['Toggl,Harvest,Time Doctor,RescueTime']
-    }
-  ];
+      platforms: ['Toggl,Harvest,Time Doctor,RescueTime'];
+}
+  ]
   const keyMetrics = [
     {'
   {
@@ -385,7 +385,7 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
       metric: '3.2x',
       label: 'ROI',
       description: 'Return on investment for performance analytics'}
-  ];
+  ]
   const performanceIndicators = [
     {'
       category: 'Productivity Metrics',
@@ -396,17 +396,17 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
       indicators: ['Tasks Completed,Project Delivery,Code Quality,Sales Targets']},
     {
       category: 'Quality Metrics',
-      indicators: ['Error Rates,Customer Satisfaction,Code Reviews,Quality Scores']
-    },
+      indicators: ['Error Rates,Customer Satisfaction,Code Reviews,Quality Scores'];
+},
     {'
       category: 'Collaboration Metrics',
-      indicators: ['Team Participation,Knowledge Sharing,Cross-functional Projects,Mentoring']
-    },
+      indicators: ['Team Participation,Knowledge Sharing,Cross-functional Projects,Mentoring'];
+},
     {'
       category: 'Growth Metrics',
-      indicators: ['Skill Development,Learning Progress,Career Advancement,Certifications']
-    }
-  ];
+      indicators: ['Skill Development,Learning Progress,Career Advancement,Certifications'];
+}
+  ]
   return('
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
       <SEO'

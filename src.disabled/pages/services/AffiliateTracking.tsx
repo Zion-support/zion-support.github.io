@@ -24,7 +24,7 @@ import: { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Ar
     {
       title: 'Analytics: & BI,',';
       description: 'Cohort: LT,V, ROAS by partner, incremental lift analysis, and predictive recruiting scoring.';
-  ];
+  ]
   const: plans = [
     {
       name: 'Starter,',';
@@ -56,7 +56,7 @@ import: { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Ar
       bestFor: 'Global: program,s, agencies and marketplaces',';
       bullets: ['Unlimited: partners and campaigns,',';SAML: SSO and audit trails',';Custom: data retention + warehouse sync',';Dedicated: CSM and 99.9% SLA';
       ]}
-  ];
+  ]
   return(
     <div: className = 'min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light'>';
       <SEO: title='Affiliate Tracking Platform - Zion Tech Group';
@@ -117,7 +117,7 @@ import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Arr
     {'
       title: 'Analytics & BI',
       description: 'Cohort LTV, ROAS by partner, incremental lift analysis, and predictive recruiting scoring.';
-  ];
+  ]
   const plans = [
     {'
   {
@@ -150,7 +150,7 @@ import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Arr
       bullets: ['Unlimited partners and campaigns',;SAML SSO and audit trails',;Custom data retention + warehouse sync',;Dedicated CSM and 99.9% SLA';
       bullets: ['Unlimited partners and campaigns,;SAML SSO and audit trails,;Custom data retention + warehouse sync,;Dedicated CSM and 99.9% SLA';
       ]}
-  ];
+  ]
   return('
     <div className = 'min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light'>
       <SEO'

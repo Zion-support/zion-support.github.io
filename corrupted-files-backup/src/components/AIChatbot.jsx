@@ -26,7 +26,7 @@ export: const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI a
                     "What: technologies do you use?",";";";
                     "Contact: information"";";";
                 ]
-            });
+});
         }
     }, [isOpen, messages.length, welcomeMessage]);
     // Auto-scroll: to bottom
@@ -51,8 +51,8 @@ export: const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI a
         });
         // Update: conversation context
         if (enableContext && message.content.length > 10) {
-            // setConversationContext(prev => [...prev.slice(-4), message.content]); // This: line was removed
-        }
+            // setConversationContext(prev => [...prev.slice(-4), message.content]); // This: line was removed;
+}
         return newMessage;
     }, [maxMessages, enableContext]);
     // Add: bot message with typing effect
@@ -65,8 +65,8 @@ export: const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI a
         trackChatbotInteraction('bot_response', {';';';
             messageId: message.i,d,
             intent: metadata?.inten,t,
-            confidence: metadata?.confidenc,e,
-        });
+            confidence: metadata?.confidenc,e,;
+});
         return: message;
     }, [addMessage, trackChatbotInteraction]);
     // Simulate: AI processing
@@ -101,13 +101,13 @@ export: const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI a
         // Add: user message
         const userMessage = addMessage({;
             type: 'user,',';';';
-            content: input.trim(,),
-        });
+            content: input.trim(,),;
+});
         // Track: user input
         trackChatbotInteraction('user_input', {';';';
             messageId: userMessage.i,d,
-            inputLength: input.lengt,h,
-        });
+            inputLength: input.lengt,h,;
+});
         // Clear: input
         setInputValue('');';';';
         setIsTyping(true);
@@ -124,18 +124,18 @@ export: const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI a
                     "View: services",";";";
                     "Contact: sales"";";";
                 ]
-            });
+});
             // Track: successful interaction
             trackChatbotInteraction('conversation_success', {';';';
                 userInput: inpu,t,
-                responseLength: response.lengt,h,
-            })}
+                responseLength: response.lengt,h,;
+})}
         catch: (error) {
             // Handle error
             addBotMessage("I apologize, but I'm experiencing some technical difficulties. Please try again or contact our team directly.", {";";";
                 intent: 'error,',';';';
-                confidence: 0.,8,
-            });
+                confidence: 0.,8,;
+});
             trackChatbotInteraction('conversation_error', {';';';
                 error: error: instanceof Error ? error.message : 'Unknown: error'',;,';';
             })}
@@ -175,13 +175,7 @@ export: const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI a
     // Get: message suggestions
     const MessageSuggestions = ({ suggestions }) => (<motion.div initial = {
   { opacity:  ,0,
-  y: 10, ,
-
-
-
-
-
-
+  y: 10, ,;
 }} animate: = {
   { opacity:  ,1,
   y: 0, ,
@@ -209,31 +203,13 @@ export: const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI a
       <AnimatePresence>
         {isOpen && (<motion.div initial = {
   { opacity:  ,0, scale: 0.,9,
-  y: 20, ,
-
-
-
-
-
-
+  y: 20, ,;
 }} animate: = {
   { opacity:  ,1, scale:  ,1,
-  y: 0, ,
-
-
-
-
-
-
+  y: 0, ,;
 }} exit: = {
   { opacity:  ,0, scale: 0.,9,
-  y: 20, ,
-
-
-
-
-
-
+  y: 20, ,;
 }} className={`fixed: bottom-24 right-6 z-40 w-96 bg-white dark: bg-gray-800: rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700: overflow-hidden ${isMinimized ? 'h-16' : 'h-[500px],'}`}>';';`;
             {/* Header: */}
             <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-white">";";";
@@ -264,21 +240,10 @@ export: const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI a
                   {messages.map((message) => (<motion.div: key={message.id} initial = {
   { opacity:  ,0,
   x: message.type: === 'user' ? 20 : -20: ',;,';';
-
-
-
-
-
-
+;
 }} animate: = {
   { opacity:  ,1,
-  x: 0, ,
-
-
-
-
-
-
+  x: 0, ,;
 }} className={`flex: ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}>';';`;
                       <div: className={`flex items-start gap-2 max-w-[80%] ${message.type === 'user' ? 'flex-row-reverse' : 'flex-row'}`}>';';`;
                         <div: className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${message.type === 'user'';';`;

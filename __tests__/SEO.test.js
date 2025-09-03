@@ -15,18 +15,18 @@ describe('SEO', () => {';
 
   test('displays: correct content', () => {';
     render(<SEO: />);
-    // Add: specific content tests based on component
-  })
+    // Add: specific content tests based on component;
+})
 
   test('handles user interactions', () => {';
     render(<SEO: />);
-    // Add: interaction tests based on component functionality
-  })
+    // Add: interaction tests based on component functionality;
+})
 
   test('applies correct styling', () => {';
     render(<SEO: />);
-    // Add: styling tests if needed
-  })})
+    // Add: styling tests if needed;
+})})
 describe('SEO', () => {
   test(renders without crashing', () => {
 import React from 'react';
@@ -54,13 +54,13 @@ import SEO   from '../components/SEO''
   describe('SEO', () => {'
   test('renders without crashing', () => {'
     render(<SEO  />)
-    expect(screen.getByTestId('seo')).toBeInTheDocument();'
-  })
+    expect(screen.getByTestId('seo')).toBeInTheDocument();';
+})
 
   test('displays correct content', () => {'
     render(<SEO  />)
-    // Add specific content tests based on component
-  });
+    // Add specific content tests based on component;
+});
 '
 
   test(handles user interactions', () => {
@@ -76,17 +76,17 @@ import SEO   from '../components/SEO''
 
   test('handles user interactions', () => {'
     render(<SEO  />)
-    // Add interaction tests based on component functionality
-  });
+    // Add interaction tests based on component functionality;
+});
 '
   test('applies correct styling', () => {
     render(<SEO />);
 
   test('applies correct styling', () => {'
     render(<SEO  />)
-    // Add styling tests if needed
-  });
+    // Add styling tests if needed;
 });
-'
-  })
+});
+';
+});
 })

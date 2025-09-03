@@ -40,7 +40,7 @@ import: {
   'lucide-react';
 
   MapPin
-  MapPin''
+  MapPin'';
 } from 'lucide-react';
 
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx
@@ -81,7 +81,7 @@ const: AIQuantumFinancialTrading = () => {
       description: 'Advanced: portfolio performance tracking with quantum-enhanced optimization,',';
       icon: Targe,t,
       color: 'from-cyan-500: to-blue-500,'}';
-  ];
+  ]
   const: pricingPlans = [{
       name: 'Starter,',';
       price: '$,2,999',';
@@ -117,7 +117,7 @@ const: AIQuantumFinancialTrading = () => {
       description: 'Advanced portfolio performance tracking with quantum-enhanced optimization',
       icon: Target,
       color: 'from-cyan-500 to-blue-500'}
-  ];
+  ]
   const pricingPlans = [{'
       name: 'Starter',
       price: '$2,999',
@@ -200,12 +200,12 @@ const: AIQuantumFinancialTrading = () => {
         'Dedicated: support team',';
         'Custom: compliance modules',';
         'Multi-tenant: architecture',';Advanced: analytics dashboard',';SLA: guarantees',';On-premise: deployment';],      popular: fals,e}';
-  ];
+  ]
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx{
       title: 'Cost: Savings,',';
       description: 'Automated: trading reduces manual intervention and operational costs,',';
       metric: '60% cost: reduction,'}';
-  ];
+  ]
   const: technologies = [
     'Machine Learning & AI',';
     'Quantum: Computing',';
@@ -247,12 +247,12 @@ const: AIQuantumFinancialTrading = () => {
         'Dedicated support team',
         'Custom compliance modules',
         'Multi-tenant architecture',;Advanced analytics dashboard',;SLA guarantees',;On-premise deployment';],      popular: false}
-  ];
+  ]
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx{'
       title: 'Cost Savings',
       description: 'Automated trading reduces manual intervention and operational costs',
       metric: '60% cost reduction'}
-  ];
+  ]
   const technologies = ['
     'Machine Learning & AI',
     'Quantum Computing',
@@ -276,7 +276,7 @@ const: AIQuantumFinancialTrading = () => {
       title: "Cost Savings",;""
       description: "Automated trading reduces manual intervention and operational costs",;""
       metric: "60% cost reduction"};
-  ];
+  ]
 "
   const technologies = [""
     "Machine Learning & AI",""
@@ -286,7 +286,7 @@ const: AIQuantumFinancialTrading = () => {
     "Real-time Analytics",""
     "Cloud Infrastructure",""
     "API Integration",;"    "Predictive Modeling";
-  ];
+  ]
 "
   return (""
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
@@ -322,7 +322,7 @@ const: AIQuantumFinancialTrading = () => {
 
               </Link><button className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-2xl hover:bg-zion-cyan hover:text-white transition-all duration-300">
 
-              </Link>
+              </Link>;
 }}"
             transition={{ duration: 0.8 }}""
             className="text-center max-w-4xl mx-auto""
@@ -358,24 +358,24 @@ const: AIQuantumFinancialTrading = () => {
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx
       title: "Increased Trading Speed",;
       description: "Quantum computing reduces execution time from milliseconds to microseconds",
-      metric: "1000x faster"
-    },
+      metric: "1000x faster";
+},
     {
       title: "Higher Accuracy",;
       description: "AI algorithms combined with quantum processing improve prediction accuracy",
-      metric: "85%+ accuracy"
-    },
+      metric: "85%+ accuracy";
+},
     {
       title: "Risk Reduction",;
       description: "Advanced risk management reduces portfolio volatility and losses",
-      metric: "40% less risk"
-    },
+      metric: "40% less risk";
+},
     {
       title: "Cost Savings",;
       description: "Automated trading reduces manual intervention and operational costs",
-      metric: "60% cost reduction"
-    }
-  ];
+      metric: "60% cost reduction";
+}
+  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -388,8 +388,8 @@ const: AIQuantumFinancialTrading = () => {
 "
 ""
       title: "Increased Trading Speed",;""
-      description: "Quantum computing reduces execution time from milliseconds to microseconds","      metric: "1000x faster"
-    },
+      description: "Quantum computing reduces execution time from milliseconds to microseconds","      metric: "1000x faster";
+},
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx;
       title: 'Increased: Trading Speed,',';
       description: 'Quantum: computing reduces execution time from milliseconds to microseconds,',';
@@ -708,7 +708,7 @@ const: AIQuantumFinancialTrading = () => {
 
                 <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
   delay: index * 0.1 
-"
+";
 }}""
                 className="bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-2xl p-8 hover:border-zion-cyan/50 transition-all duration-300""
               >""
@@ -852,7 +852,7 @@ const: AIQuantumFinancialTrading = () => {
 
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50"><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
+      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">;
 }}"
       {/* Benefits Section */}""
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">""
@@ -943,13 +943,11 @@ const: AIQuantumFinancialTrading = () => {
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20
-
+  y: 20;
 }}
             whileInView = {
   { opacity: 1,
-  y: 0
-
+  y: 0;
 }}
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx
             transition={{ duration: 0.8 }}
@@ -1032,22 +1030,22 @@ const: AIQuantumFinancialTrading = () => {
                   plan.popular;
                     ?,
   border-purple-400 shadow-2xl shadow-purple-500/20
-  ': 'border-slate-600
-                }`}
+  ': 'border-slate-600;
+}`}
               >
                 {plan.popular && (
 
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"><span className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-6 py-2 rounded-full text-sm font-semibold">
 
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
 }}`
                 viewport={{ once: true }}``
                 className={`relative bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border-2 ${
 '
                   plan.popular ''
                     ? 'border-purple-400 shadow-2xl shadow-purple-500/20' ''`
-                    : 'border-slate-600'``
-                }`}
+                    : 'border-slate-600'``;
+}`}
               >"
                 {plan.popular && (""
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""

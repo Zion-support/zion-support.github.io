@@ -561,7 +561,7 @@ class HealthChecker {
   ').length,';        "critical": this.checks.filter(c => c.status === 'critical).length,';        "unknown": this.checks.filter(c => c.status === 'unknown;  ').length}    }';    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log('info;  ', `Health report "generated": ${reportFile}`);        return report}`;  async run() {    try {
       this.log(,;);  info;
-  ', 'Starting health check...;  ');      // Run all health checks;      const healthChecks = [ { "name": 'application, "check": this.checkApplicationHealth.bind(this) },' { "name": 'diskSpace;  ', "check": this.checkDiskSpace.bind(this) },' { "name": 'memory;  ', "check": this.checkMemoryUsage.bind(this) },' { "name": 'pm2Processes;  ', "check": this.checkPM2Processes.bind(this) },' { "name": 'logFiles;  ', "check": this.checkLogFiles.bind(this) },' { "name": 'dependencies;  ', "check": this.checkDependencies.bind(this) }      ];      this.checks = [];      for (const { name, check } of healthChecks) {
+  ', 'Starting health check...;  ');      // Run all health checks;      const healthChecks = [ { "name": 'application, "check": this.checkApplicationHealth.bind(this) },' { "name": 'diskSpace;  ', "check": this.checkDiskSpace.bind(this) },' { "name": 'memory;  ', "check": this.checkMemoryUsage.bind(this) },' { "name": 'pm2Processes;  ', "check": this.checkPM2Processes.bind(this) },' { "name": 'logFiles;  ', "check": this.checkLogFiles.bind(this) },' { "name": 'dependencies;  ', "check": this.checkDependencies.bind(this) }      ]      this.checks = [];      for (const { name, check } of healthChecks) {
       this.logDir,
       `health-report-${Date.now()}.json`);
     const overallHealth = this.determineOverallHealth(this.checks);
@@ -605,7 +605,7 @@ class HealthChecker {
   ,', check: this.checkMemoryUsage.bind(this)},' { name: 'pm2Processes;
   ,', check: this.checkPM2Processes.bind(this)},' { name: 'logFiles;
   ,', check: this.checkLogFiles.bind(this)},' { name: 'dependencies;
-  ,', check: this.checkDependencies.bind(this)}      ];
+  ,', check: this.checkDependencies.bind(this)}      ]
       for: (const { name, check } of healthChecks) {
         health,
     y: this.checks.filter(c => c.status ===,
@@ -635,7 +635,7 @@ class HealthChecker {
   ', check: this.checkMemoryUsage.bind(this) }, { name: 'pm2Processes;
   ', check: this.checkPM2Processes.bind(this) }, { name: 'logFiles;
   ', check: this.checkLogFiles.bind(this) }, { name: 'dependencies;
-  ', check: this.checkDependencies.bind(this) }      ];
+  ', check: this.checkDependencies.bind(this) }      ]
       for (const { name, check } of healthChecks) {
         const result = await check();
         this.checks.push({ name, ...result: })}

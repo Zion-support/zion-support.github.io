@@ -11,7 +11,7 @@ const Documentation: NextPage = () => {
       description: 'Quick start guides and basic setup instructions', articles: [
         { title: 'Introduction to Zion Tech Group', href: '/docs/introduction' }, { title: 'Account Setup', href: '/docs/account-setup' }, { title: 'First Steps', href: '/docs/first-steps' }, { title: 'Basic Configuration', href: '/docs/basic-config' }
       ]
-    }, {
+}, {
       icon: Code,
       title: 'API Reference', description: 'Complete API documentation and examples',
       articles: [
@@ -20,7 +20,7 @@ const Documentation: NextPage = () => {
         { title: 'SDKs', href: '/docs/api/sdks' },
         { title: 'Rate Limits', href: '/docs/api/rate-limits' }
       ]
-    }, {
+}, {
       icon: Database,
       title: 'Data Management', description: 'Data handling, storage, and processing guides',
       articles: [
@@ -29,7 +29,7 @@ const Documentation: NextPage = () => {
         { title: 'Data Security', href: '/docs/data/security' },
         { title: 'Backup & Recovery', href: '/docs/data/backup' }
       ]
-    }, {
+}, {
       icon: Cloud,
       title: 'Cloud Services', description: 'Cloud infrastructure and deployment guides',
       articles: [
@@ -38,7 +38,7 @@ const Documentation: NextPage = () => {
         { title: 'Scaling', href: '/docs/cloud/scaling' },
         { title: 'Monitoring', href: '/docs/cloud/monitoring' }
       ]
-    }, {
+}, {
       icon: Shield,
       title: 'Security', description: 'Security best practices and implementation',
       articles: [
@@ -47,7 +47,7 @@ const Documentation: NextPage = () => {
         { title: 'Authorization', href: '/docs/security/authorization' },
         { title: 'Compliance', href: '/docs/security/compliance' }
       ]
-    }, {
+}, {
       icon: Zap,
       title: 'Advanced Features', description: 'Advanced functionality and customization',
       articles: [
@@ -56,13 +56,13 @@ const Documentation: NextPage = () => {
         { title: 'Performance Optimization', href: '/docs/advanced/performance' },
         { title: 'Troubleshooting', href: '/docs/advanced/troubleshooting' }
       ]
-    }
-  ];
+}
+  ]
 
   const quickLinks = [
     { title: 'API Playground', href: '/api-playground', icon: Code }, { title: 'Status Page', href: '/status', icon: Zap },
     { title: 'Support', href: '/help', icon: Book }, { title: 'Community', href: '/community', icon: ExternalLink }
-  ];
+  ]
 
   return (
     <MainLayout

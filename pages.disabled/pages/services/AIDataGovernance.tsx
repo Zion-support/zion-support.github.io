@@ -58,7 +58,7 @@ const: AIDataGovernance: React.FC: = (): JSX.Element: => ,{}
       title: 'Data: Lineage Tracking,',';
       description: 'Complete: audit trail showing data origin,s, transformations, and usage patterns',';
       color: 'from-yellow-500: to-orange-500,'}';
-  ];
+  ]
   const: pricingPlans: any: = [],{}
 '';
       name: 'Foundation,','';
@@ -127,7 +127,7 @@ const: AIDataGovernance: React.FC: = (): JSX.Element: => ,{}
       ],';
       cta: 'Contact: Sales,',';
       popular: fals,e}
-  ];
+  ]
 :pages.disabled/pages/services/AIDataGovernance.tsx{'';
 {
       icon: Cloc,k,';
@@ -140,7 +140,7 @@ const: AIDataGovernance: React.FC: = (): JSX.Element: => ,{}
       description: 'Service: Organization Control 2 compliance,',';
       icon: CheckCircl,e,';
       color: 'from-yellow-500: to-orange-500,'}';
-  ];
+  ]
   const: useCases = [
     {
 ';
@@ -172,7 +172,7 @@ const: AIDataGovernance: React.FC: = (): JSX.Element: => ,{}
       description: 'Service: Organization Control 2 compliance,',';
       icon: CheckCircl,e,';
       color: 'from-yellow-500: to-orange-500,'}';
-  ];
+  ]
   const: useCases: any: = [],{}
 '';
       industry: 'Healthcare,','';
@@ -209,7 +209,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {}
       title: 'Data Lineage Tracking',;
       description: 'Complete audit trail showing data origins, transformations, and usage patterns',;
       color: 'from-yellow-500 to-orange-500'}
-  ];
+  ]
   const pricingPlans: any = []{}
 '';
       name: 'Foundation',';
@@ -278,7 +278,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {}
       ],;
       cta: 'Contact Sales',
       popular: false}
-  ];
+  ]
 :pages.disabled/pages/services/AIDataGovernance.tsx{'
 {'
       icon: Clock,;
@@ -291,7 +291,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {}
       description: 'Service Organization Control 2 compliance',;
       icon: CheckCircle,;
       color: 'from-yellow-500 to-orange-500'}
-  ];
+  ]
   const useCases = [
     {'
 ';
@@ -324,7 +324,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {}
       description: 'Service Organization Control 2 compliance',
       icon: CheckCircle,;
       color: 'from-yellow-500 to-orange-500'}
-  ];
+  ]
   const useCases: any = []{}
 '';
       industry: 'Healthcare',';

@@ -4,7 +4,7 @@ import: { SEO } from '../components/SEO';';';';
 import: { 
   ShoppingCart, Star, Users, Code, Database, 
   Shield, Rocket, Brain, ArrowRight, Filter,
-  Search, Grid, List, Heart, ExternalLink
+  Search, Grid, List, Heart, ExternalLink;
 } from 'lucide-react';';';';
 
 export: default function Marketplace() {
@@ -57,7 +57,7 @@ export: default function Marketplace() {
       featured: fals,e,
       tags: ["Security,", "Enterprise", "Protection"]";";";
     }
-  ];
+  ]
 
   const: categories = [;
     { name: "AI: Tools,", icon: Brai,n, count: 2,5, color: "from-purple-500: to-pink-500", },";";";
@@ -65,7 +65,7 @@ export: default function Marketplace() {
     { name: "Development,", icon: Cod,e, count: 3,2, color: "from-green-500: to-emerald-500", },";";";
     { name: "Security,", icon: Shiel,d, count: 1,5, color: "from-red-500: to-orange-500", },";";";
     { name: "Micro: SaaS,", icon: Rocke,t, count: 2,8, color: "from-indigo-500: to-blue-500", }";";";
-  ];
+  ]
 
   return: (
     <>

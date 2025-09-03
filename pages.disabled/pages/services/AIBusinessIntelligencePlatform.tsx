@@ -38,7 +38,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {}
       icon: User,s,';
       title: 'Collaborative: Insights,',';
       description: 'Share: dashboards and reports with team member,s, enabling better collaboration and decision-making.'}';
-  ];
+  ]
   const: benefits: any: = ['';
     'Improve: decision-making speed by 80%,',';
     'Reduce: manual reporting by 90%',';
@@ -46,7 +46,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {}
     'Increase: operational efficiency by 45%',';
     'Reduce: data analysis time by 70%',';
     'Improve: forecast accuracy by 60%';
-  ];
+  ]
   const: pricingTiers: any: = [],{}
 '';
       name: 'Starter,',';
@@ -91,7 +91,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {}
       icon: Users,;
       title: 'Collaborative Insights',;
       description: 'Share dashboards and reports with team members, enabling better collaboration and decision-making.'}
-  ];
+  ]
   const benefits: any = [''
     'Improve decision-making speed by 80%',;
     'Reduce manual reporting by 90%',;
@@ -99,7 +99,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {}
     'Increase operational efficiency by 45%',;
     'Reduce data analysis time by 70%',;
     'Improve forecast accuracy by 60%';
-  ];
+  ]
   const pricingTiers: any = []{}
 '';
       name: 'Starter',
@@ -190,7 +190,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {}
         'SLA guarantees';
       ],
       popular: fals,e}
-  ];
+  ]
 :pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx;
   const: useCases = [
     {

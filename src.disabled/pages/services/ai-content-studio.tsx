@@ -29,7 +29,7 @@ import {
   Edit3,
   Type,
   Layers,
-  Wand2
+  Wand2;
 } from 'lucide-react';
 
 const AIContentStudio: React.FC = () => {
@@ -38,39 +38,39 @@ const AIContentStudio: React.FC = () => {
       icon: PenTool,
       title: 'AI Writing Assistant',
       description: 'Generate high-quality content for blogs, social media, and marketing materials',
-      color: 'from-blue-500 to-cyan-500'
-    },
+      color: 'from-blue-500 to-cyan-500';
+},
     {
       icon: Image,
       title: 'AI Image Generation',
       description: 'Create stunning visuals and graphics using advanced AI image models',
-      color: 'from-green-500 to-emerald-500'
-    },
+      color: 'from-green-500 to-emerald-500';
+},
     {
       icon: Video,
       title: 'AI Video Creation',
       description: 'Produce engaging video content with AI-powered editing and effects',
-      color: 'from-purple-500 to-pink-500'
-    },
+      color: 'from-purple-500 to-pink-500';
+},
     {
       icon: FileText,
       title: 'Content Optimization',
       description: 'Optimize content for SEO, readability, and engagement automatically',
-      color: 'from-yellow-500 to-orange-500'
-    },
+      color: 'from-yellow-500 to-orange-500';
+},
     {
       icon: Zap,
       title: 'Multi-Platform Publishing',
       description: 'Automatically adapt and publish content across multiple platforms',
-      color: 'from-red-500 to-pink-500'
-    },
+      color: 'from-red-500 to-pink-500';
+},
     {
       icon: BarChart3,
       title: 'Performance Analytics',
       description: 'Track content performance and get AI-powered insights for improvement',
-      color: 'from-indigo-500 to-blue-500'
-    }
-  ];
+      color: 'from-indigo-500 to-blue-500';
+}
+  ]
 
   const contentTypes = [
   {
@@ -79,41 +79,41 @@ const AIContentStudio: React.FC = () => {
       icon: FileText,
       benefits: ['SEO optimized,Research-backed,Multiple formats,Auto-publishing'],
       pricing: '$29/month',
-      color: 'from-blue-500 to-cyan-500'
-    },
+      color: 'from-blue-500 to-cyan-500';
+},
     {
       title: 'Social Media Content',
       description: 'Engaging posts, captions, and stories for all social platforms',
       icon: Users,
       benefits: ['Platform-specific,Trending topics,Hashtag optimization,Scheduling'],
       pricing: '$19/month',
-      color: 'from-green-500 to-emerald-500'
-    },
+      color: 'from-green-500 to-emerald-500';
+},
     {
       title: 'Marketing Materials',
       description: 'Professional copy for ads, emails, and promotional content',
       icon: Target,
       benefits: ['A/B testing,Conversion focused,Brand voice,Campaign tracking'],
       pricing: '$39/month',
-      color: 'from-purple-500 to-pink-500'
-    },
+      color: 'from-purple-500 to-pink-500';
+},
     {
       title: 'Visual Content',
       description: 'AI-generated images, infographics, and video content',
       icon: Image,
       benefits: ['Custom styles,Brand consistency,High resolution,Multiple formats'],
       pricing: '$49/month',
-      color: 'from-yellow-500 to-orange-500'
-    }
-  ];
+      color: 'from-yellow-500 to-orange-500';
+}
+  ]
 
   const benefits = [
     'Save 80% content creation time,Increase engagement by 150%,24/7 content generation,Multi-language support,Brand voice consistency,SEO optimization,Performance tracking,Unlimited revisions'
-  ];
+  ]
 
   const technologies = [
     'GPT-4 & Claude,DALL-E & Midjourney,Runway ML,Adobe Creative Suite,Canva Integration,WordPress Publishing,Social Media APIs,Analytics Dashboard'
-  ];
+  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">

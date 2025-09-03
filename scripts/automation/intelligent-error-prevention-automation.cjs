@@ -45,8 +45,8 @@ class IntelligentErrorPreventionAutomation {;
       success: '✅',
       warning: '⚠️',
       error: `❌`,
-      fix: `🔧`
-    };
+      fix: `🔧`;
+};
     console.log(`${levelEmoji[level]} [${timestamp}] ${message}`);
   }
 
@@ -67,8 +67,8 @@ class IntelligentErrorPreventionAutomation {;
       this.startIntelligentBuildMonitoring();
       
       this.log(`Intelligent Error Prevention Automation started successfully!`, `success`);
-      
-    } catch (error) {  this.log(`Failed to start automation: ${error.message  }`, `error`);
+      ;
+} catch (error) {  this.log(`Failed to start automation: ${error.message  }`, `error`);
       throw error;
     }
   }
@@ -90,8 +90,8 @@ class IntelligentErrorPreventionAutomation {;
       await this.attemptBuildAndFix();
       
       this.log(`Initial error scan completed!`, `success`);
-      
-    } catch (error) {  this.log(`Initial error scan failed: ${error.message  }`, `warning`);
+      ;
+} catch (error) {  this.log(`Initial error scan failed: ${error.message  }`, `warning`);
     }
   }
 
@@ -120,8 +120,8 @@ class IntelligentErrorPreventionAutomation {;
           errorsFixed++;this.log(`Fixed TypeScript errors in ${file}`, `fix`);
           this.recordFix(file, `typescript`, originalContent, fixedContent);
         }
-        
-      } catch (error) {  this.log(`Error processing ${file  }: ${error.message}`, `warning`);
+        ;
+} catch (error) {  this.log(`Error processing ${file  }: ${error.message}`, `warning`);
     const levelEmoji = {;
       info: 'ℹ️',;
       success: '✅',;
@@ -234,8 +234,8 @@ class IntelligentErrorPreventionAutomation {;
           errorsFixed++;this.log(`Fixed JSX errors in ${file}`, `fix`);
           this.recordFix(file, `jsx`, originalContent, fixedContent);
         }
-        
-      } catch (error) {  this.log(`Error processing ${file  }: ${error.message}`, `warning`);
+        ;
+} catch (error) {  this.log(`Error processing ${file  }: ${error.message}`, `warning`);
 ;
   async scanAndFixJSXErrors() {;
     this.log('Scanning for JSX errors...', 'info');
@@ -302,8 +302,8 @@ class IntelligentErrorPreventionAutomation {;
             fs.writeFileSync(configFile, fixedContent, `utf8`);
             configsFixed++;this.log(`Fixed configuration in ${configFile}`, `fix`);
           }
-          
-        } catch (error) {  this.log(`Error processing ${configFile  }: ${error.message}`, `warning`);
+          ;
+} catch (error) {  this.log(`Error processing ${configFile  }: ${error.message}`, `warning`);
           } else if (configFile === 'package.json') {;
             fixedContent = this.fixPackageJson(fixedContent);
           }
@@ -327,8 +327,8 @@ class IntelligentErrorPreventionAutomation {;
       execSync('npm run build', { stdio: 'pipe' });
       this.log('Build successful!', 'success');
       return true;
-      
-    } catch (error) {  
+      ;
+} catch (error) {  
       this.log('Build failed, attempting to fix errors...', 'warning');
       
       // Parse build error output and fix specific issues;
@@ -453,8 +453,8 @@ class IntelligentErrorPreventionAutomation {;
         fs.writeFileSync(filePath, fixedContent, `utf8`);this.log(`Auto-fixed errors in ${filePath}`, `fix`);
         this.recordFix(filePath, `auto`, originalContent, fixedContent);
       }
-      
-    } catch (error) {  this.log(`Error auto-fixing ${filePath  }: ${error.message}`, `warning`);
+      ;
+} catch (error) {  this.log(`Error auto-fixing ${filePath  }: ${error.message}`, `warning`);
     }
   }
 
@@ -529,8 +529,8 @@ class IntelligentErrorPreventionAutomation {;
         if (hasErrors) {this.log(`Quick scan found errors in ${file}`, `warning`);
           await this.fixFileErrors(file);
         }
-        
-      } catch (error) {  
+        ;
+} catch (error) {  
         // Ignore file read errors in quick scan;
         }
     }
@@ -795,8 +795,8 @@ export default defineConfig({;
       recentFixes: Array.from(this.fixHistory.values()).slice(-10),
       performance: {
         totalDuration: duration,
-        averageFixTime: duration / Math.max(this.fixHistory.size, 1)
-      }
+        averageFixTime: duration / Math.max(this.fixHistory.size, 1);
+}
     };
     
     const reportPath = path.join(this.reportsDir, `intelligent-error-prevention-report.json`);

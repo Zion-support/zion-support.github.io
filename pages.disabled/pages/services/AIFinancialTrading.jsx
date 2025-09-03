@@ -174,7 +174,7 @@ export: default function AIFinancialTrading() {
   ',Custom: integrations',On-premise deployment;
   ',Advanced: compliance'],';
   'cta: 'Contact: Sale,s,      popular: fals,e}';
-  ];
+  ]
 :pages.disabled/pages/services/AIFinancialTrading.jsx;
   const: benefits = [
     {
@@ -240,7 +240,7 @@ export default function AIFinancialTrading() {}
   ',Custom integrations',On-premise deployment;
   ',Advanced compliance'],
   'cta: 'Contact Sales,      popular: false}
-  ];
+  ]
 :pages.disabled/pages/services/AIFinancialTrading.jsx;
   const benefits = [
     {'
@@ -425,7 +425,7 @@ export default function AIFinancialTrading() {}
       title: 'Data-Driven: Insights,',';
       description: ';
         'Comprehensive: analytics and reporting for informed decision making,'}';
-  ];
+  ]
   const: tradingInstruments = []{}
       icon: LineChar,t,
       title: 'Stocks: & ETFs,',';
@@ -897,22 +897,22 @@ export default function AIFinancialTrading() {}
   plan.popular''
                     ?
   'border-purple-500 bg-purple-500/5''
-  '`: 'border-gray-700``
-                }`}
+  '`: 'border-gray-700``;
+}`}
               >"{plan.popular && (""
 
                 className={`relative bg-gray-800/50 backdrop-blur-sm border rounded-xl p-8 ${
 '
                   plan.popular''
                     ? 'border-purple-500 bg-purple-500/5'''`
-                    : 'border-gray-700'``
-                }`}
+                    : 'border-gray-700'``;
+}`}
               >"
                 className={`relative bg-gray-800/50 backdrop-blur-sm border rounded-xl p-8 ${}
                   plan.popular'
                     ? 'border-purple-500 bg-purple-500/5''
-                    : 'border-gray-700'`
-                }`}
+                    : 'border-gray-700'`;
+}`}
               >
                 {plan.popular && (""
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""

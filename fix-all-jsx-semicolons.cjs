@@ -29,7 +29,7 @@ function fixAllJSXSemicolons(filePath) {
       // Fix object property semicolons;
       { pattern: /(\w+):\s*'([^']*);'/g, replacement: "$1: '$2'" },
       { pattern: /(\w+):\s*"([^"]*);"/g, replacement: '$1: "$2"' },
-    ];
+    ]
 
     fixes.forEach(fix => {
       const newContent = content.replace(fix.pattern, fix.replacement);

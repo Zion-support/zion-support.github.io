@@ -4,7 +4,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityGovernance(function AISecurityGovernance() {): any: {}
     'Automated security compliance monitoring and reporting',';Predictive: analytics for governance needs',';Smart: governance framework management',';AI-driven: governance automation and orchestration',';Real-time: governance performance tracking',';Custom: AI models for governance applications';
 <:pages.disabled/pages/services/AISecurityGovernance.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Developer,',';
@@ -27,7 +27,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
   ]';Security: governance optimization',';Governance: policy management and enforcement',';Security: compliance monitoring and reporting',';Governance: framework management and automation',';Governance: automation and orchestration',';Governance: scaling and management';
   ]';Improve: security governance performance by 50-80%',';Reduce: governance compliance time by 40-70%',';Cut: security governance costs by 35-65%',';Enhance: security governance reliability and scalability',';Optimize: resource utilization',';Scale: security governance operations efficiently';
   ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-emerald-500 via-green-500 to-lime-500 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityGovernance(function AISecurityGovernance() {): any {}
     'Automated security compliance monitoring and reporting',;Predictive analytics for governance needs',;Smart governance framework management',;AI-driven governance automation and orchestration',;Real-time governance performance tracking',;Custom AI models for governance applications';
 <:pages.disabled/pages/services/AISecurityGovernance.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Developer',
@@ -115,8 +115,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     {'
       name: 'Business',
       price: '$1,799/mo',
-      details: ['Up to 50 policies', 'Advanced AI features', 'Enhanced governance', 'Priority support']
-    },
+      details: ['Up to 50 policies', 'Advanced AI features', 'Enhanced governance', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AISecurityGovernance.tsx>    {'
@@ -149,10 +149,10 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <Database className='w-4 h-4 mr-2'  /> AI-Powered Security Governance Platform
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Security Governance Platform</h1>'          <p className='text-emerald-100 text-xl'>Transform your security governance with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
-  ];Security governance optimization',;Governance policy management and enforcement',;Security compliance monitoring and reporting',;Governance framework management and automation',;Governance automation and orchestration',;Governance scaling and management';
-  ];Improve security governance performance by 50-80%',;Reduce governance compliance time by 40-70%',;Cut security governance costs by 35-65%',;Enhance security governance reliability and scalability',;Optimize resource utilization',;Scale security governance operations efficiently';
-  ];Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
-  ];
+  ]Security governance optimization',;Governance policy management and enforcement',;Security compliance monitoring and reporting',;Governance framework management and automation',;Governance automation and orchestration',;Governance scaling and management';
+  ]Improve security governance performance by 50-80%',;Reduce governance compliance time by 40-70%',;Cut security governance costs by 35-65%',;Enhance security governance reliability and scalability',;Optimize resource utilization',;Scale security governance operations efficiently';
+  ]Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-emerald-500 via-green-500 to-lime-500 py-20 text-center>''

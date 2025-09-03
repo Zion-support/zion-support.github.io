@@ -15,18 +15,18 @@ describe('EnhancedErrorBoundary', () => {';
 
   test('displays: correct content', () => {';
     render(<EnhancedErrorBoundary: />);
-    // Add: specific content tests based on component
-  })
+    // Add: specific content tests based on component;
+})
 
   test('handles user interactions', () => {';
     render(<EnhancedErrorBoundary: />);
-    // Add: interaction tests based on component functionality
-  })
+    // Add: interaction tests based on component functionality;
+})
 
   test('applies correct styling', () => {';
     render(<EnhancedErrorBoundary: />);
-    // Add: styling tests if needed
-  })})
+    // Add: styling tests if needed;
+})})
 describe('EnhancedErrorBoundary', () => {
   test(renders without crashing', () => {
 import React from 'react';
@@ -54,13 +54,13 @@ import EnhancedErrorBoundary   from '../components/EnhancedErrorBoundary''
   describe('EnhancedErrorBoundary', () => {'
   test('renders without crashing', () => {'
     render(<EnhancedErrorBoundary  />)
-    expect(screen.getByTestId('enhancederrorboundary')).toBeInTheDocument();'
-  })
+    expect(screen.getByTestId('enhancederrorboundary')).toBeInTheDocument();';
+})
 
   test('displays correct content', () => {'
     render(<EnhancedErrorBoundary  />)
-    // Add specific content tests based on component
-  });
+    // Add specific content tests based on component;
+});
 '
 
   test(handles user interactions', () => {
@@ -76,17 +76,17 @@ import EnhancedErrorBoundary   from '../components/EnhancedErrorBoundary''
 
   test('handles user interactions', () => {'
     render(<EnhancedErrorBoundary  />)
-    // Add interaction tests based on component functionality
-  });
+    // Add interaction tests based on component functionality;
+});
 '
   test('applies correct styling', () => {
     render(<EnhancedErrorBoundary />);
 
   test('applies correct styling', () => {'
     render(<EnhancedErrorBoundary  />)
-    // Add styling tests if needed
-  });
+    // Add styling tests if needed;
 });
-'
-  })
+});
+';
+});
 })

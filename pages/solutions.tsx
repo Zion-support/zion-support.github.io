@@ -136,8 +136,8 @@ export default function Solutions() {
       href: '/solutions/enterprise',
       description: 'Comprehensive technology solutions for large organizations and enterprises.',
       features: ['Scalable Architecture,Enterprise Security,Integration Services,24/7 Support'],
-      href: '/solutions/enterprise'
-    },
+      href: '/solutions/enterprise';
+},
     {
       icon: Users,
       title: 'Small Business Solutions',
@@ -151,8 +151,8 @@ export default function Solutions() {
       href: '/solutions/small-business',
       description: 'Cost-effective technology solutions designed for small and medium businesses.',
       features: ['Affordable Pricing,Quick Deployment,Easy Management,Local Support'],
-      href: '/solutions/small-business'
-    },
+      href: '/solutions/small-business';
+},
     {
       icon: Zap,
       title: 'Startup Solutions',
@@ -166,8 +166,8 @@ export default function Solutions() {
       href: '/solutions/startups',
       description: 'Rapid development and deployment solutions for startups and new ventures.',
       features: ['Fast Time-to-Market,MVP Development,Scalable Infrastructure,Growth Support'],
-      href: '/solutions/startups'
-    },
+      href: '/solutions/startups';
+},
     {
       icon: Target,
       title: 'Custom Development',
@@ -181,8 +181,8 @@ export default function Solutions() {
       href: '/solutions/custom-development',
       description: 'Tailored software solutions built specifically for your unique business needs.',
       features: ['Bespoke Solutions,Flexible Architecture,Custom Integrations,Ongoing Evolution'],
-      href: '/solutions/custom-development'
-    },
+      href: '/solutions/custom-development';
+},
     {
       icon: Globe,
       title: 'Digital Transformation',
@@ -196,9 +196,9 @@ export default function Solutions() {
       href: '/solutions/digital-transformation'},
       description: 'Transform your business processes with modern digital solutions.',
       features: ['Process Automation,Digital Workflows,Data Analytics,Cloud Migration'],
-      href: '/solutions/digital-transformation'
-    }
-  ];
+      href: '/solutions/digital-transformation';
+}
+  ]
 
   const benefits = [
   {
@@ -233,7 +233,7 @@ export default function Solutions() {
     'Professional Services',
     'Non-Profit Organizations',
     'Healthcare & Medical,Financial Services,E-commerce & Retail,Manufacturing,Education,Real Estate,Professional Services,Non-Profit Organizations'
-  ];
+  ]
 
   return (
     <>
@@ -654,10 +654,10 @@ export default function Solutions() {
         </section>
       </div>
     </Layout>
-  )
+  );
 }
       </main>
     </>
   );
-}"
+}";
 }

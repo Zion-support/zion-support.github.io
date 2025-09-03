@@ -11,8 +11,8 @@ export function MobileMenu({ isOpen, onClose, user, onNavigate }) {
 export function MobileMenu({isOpen, onClose, user, onNavigate }) {const navigationItems = [{
       name: 'Home',
       href: '/',
-      icon: Home
-    } {'
+      icon: Home;
+} {'
       name: 'Services',
       href: '/services',
       icon: Briefcase,
@@ -48,7 +48,7 @@ export function MobileMenu({isOpen, onClose, user, onNavigate }) {const navigati
     } {name: 'Support',
       children: [{ name: 'Help Center', href: '/support' } {name: 'Documentation', href: '/docs' } {name: 'Training', href: '/training' } {name: 'Contact', href: '/contact' }
     }
-  ];
+  ]
 
   const handleNavigation = (path) => {onNavigate(path)};
 
@@ -284,5 +284,5 @@ import { X, ChevronRight, Home, Briefcase, Target, Building, FileText, Video, Ma
               <DollarSign className="h-4 w-4" /" >"
               <span>Request Quote</span>
   )}"
-  )}""
+  )}"";
 }"

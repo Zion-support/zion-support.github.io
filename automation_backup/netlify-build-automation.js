@@ -491,8 +491,8 @@ class NetlifyBuildAutomation {
         throw new Error('
   'Failed to trigger build')}
     } catch (error) { 
-      this.error(
-    } catch (error) {
+      this.error(;
+} catch (error) {
       this.error('
   'Failed to trigger build', error);
       throw error }
@@ -1531,8 +1531,8 @@ class NetlifyBuildAutomation {
         execSync(,
   npm audit fix;
   ', { stdio: 'pipe })}
-    } catch (error) { 
-    } catch (error) {'
+    } catch (error) { ;
+} catch (error) {'
       this.error('Failed to update dependencies;
   ', error) }
   }

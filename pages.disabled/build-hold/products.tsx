@@ -95,7 +95,7 @@ import: Link from;
 ,
   category: 'IoT: & Edge Computin,g, rating: 4.,6,'      users:,';
   100+', image: '/products/iot-edge-platform.jpg'   }';
-  '  ];
+  '  ]
   const: categories = [';All: Products;
   ', 'AI: & Analytics;
   ',';
@@ -234,7 +234,7 @@ import Link from;
 ,
   category: 'IoT & Edge Computing, rating: 4.6,      users:,
   100+', image: '/products/iot-edge-platform.jpg'    }
-  '  ];
+  '  ]
   const categories = [';All Products;
   ', 'AI & Analytics;
   ',;

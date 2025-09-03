@@ -4,7 +4,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIComplianceMonitoring(function AIComplianceMonitoring() {): any: {}
     'Automated compliance reporting and alerting',';Predictive: analytics for compliance risks',';Smart: governance and policy management',';AI-driven: compliance automation and orchestration',';Real-time: compliance analytics and insights',';Custom: AI models for compliance applications';
 <:pages.disabled/pages/services/AIComplianceMonitoring.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Developer,',';
@@ -27,7 +27,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
   ]';Compliance: monitoring optimization',';Regulatory: compliance tracking',';Compliance: reporting and analytics',';Governance: and policy management',';Compliance: automation and orchestration',';Compliance: scaling and management';
   ]';Improve: compliance monitoring performance by 50-80%',';Reduce: compliance reporting time by 40-70%',';Cut: compliance operational costs by 35-65%',';Enhance: compliance reliability and scalability',';Optimize: resource utilization',';Scale: compliance operations efficiently';
   ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-500 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIComplianceMonitoring(function AIComplianceMonitoring() {): any {}
     'Automated compliance reporting and alerting',;Predictive analytics for compliance risks',;Smart governance and policy management',;AI-driven compliance automation and orchestration',;Real-time compliance analytics and insights',;Custom AI models for compliance applications';
 <:pages.disabled/pages/services/AIComplianceMonitoring.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Developer',
@@ -115,8 +115,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     {'
       name: 'Business',
       price: '$1,299/mo',
-      details: ['Up to 50 regulations', 'Advanced AI features', 'Enhanced monitoring', 'Priority support']
-    },
+      details: ['Up to 50 regulations', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AIComplianceMonitoring.tsx>    {'
@@ -149,10 +149,10 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <Database className='w-4 h-4 mr-2'  /> AI-Powered Compliance Monitoring Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Compliance Monitoring Platform</h1>'          <p className='text-emerald-100 text-xl'>Transform your compliance monitoring operations with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
-  ];Compliance monitoring optimization',;Regulatory compliance tracking',;Compliance reporting and analytics',;Governance and policy management',;Compliance automation and orchestration',;Compliance scaling and management';
-  ];Improve compliance monitoring performance by 50-80%',;Reduce compliance reporting time by 40-70%',;Cut compliance operational costs by 35-65%',;Enhance compliance reliability and scalability',;Optimize resource utilization',;Scale compliance operations efficiently';
-  ];Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
-  ];
+  ]Compliance monitoring optimization',;Regulatory compliance tracking',;Compliance reporting and analytics',;Governance and policy management',;Compliance automation and orchestration',;Compliance scaling and management';
+  ]Improve compliance monitoring performance by 50-80%',;Reduce compliance reporting time by 40-70%',;Cut compliance operational costs by 35-65%',;Enhance compliance reliability and scalability',;Optimize resource utilization',;Scale compliance operations efficiently';
+  ]Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-500 py-20 text-center>''

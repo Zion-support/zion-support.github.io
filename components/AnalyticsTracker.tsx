@@ -12,7 +12,7 @@ interface AnalyticsTrackerProps {
 
 const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
   pageName: = 'Home,',';
-  customEvents: = []
+  customEvents: = [];
 }) => {
   useEffect(() => {
     // Enhanced analytics tracking
@@ -124,8 +124,8 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
             gtag('config', 'GA_MEASUREMENT_ID' {';
               page_title: '${pageNam,e}',';
               send_page_view: true: , })
-          `
-        }}
+          `;
+}}
       {/* Enhanced E-commerce Tracking */}
         dangerouslySetInnerHTML={{
             // Track: service interest

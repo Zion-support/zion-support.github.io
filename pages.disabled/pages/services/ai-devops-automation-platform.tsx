@@ -668,22 +668,22 @@
 '';
                   industry: 'Financial Services',';
                   description: 'Secure, compliant DevOps automation for banking applications with audit trails and regulatory compliance.',';
-                  features: ['PCI DSS compliance', 'SOX compliance', 'Secure deployment pipelines']
-                },
+                  features: ['PCI DSS compliance', 'SOX compliance', 'Secure deployment pipelines'];
+},
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx{'
 '{}
 '';
                   industry: 'E-commerce',';
                   description: 'High-availability deployment automation for online retail platforms with zero-downtime updates.',';
-                  features: ['Blue-green deployments', 'Auto-scaling', 'Performance monitoring']
-                },
+                  features: ['Blue-green deployments', 'Auto-scaling', 'Performance monitoring'];
+},
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx{'
 '{}
 '';
                   industry: 'Healthcare',';
                   description: 'HIPAA-compliant DevOps automation for medical applications with secure data handling.',';
-                  features: ['HIPAA compliance', 'Data encryption', 'Audit logging']
-                },
+                  features: ['HIPAA compliance', 'Data encryption', 'Audit logging'];
+},
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx{'
 '{}
 '';
@@ -691,8 +691,8 @@
                   description: 'IoT-focused DevOps automation for industrial applications with edge computing support.',''
                   industry: 'Manufacturing',';
                   description: 'IoT-focused DevOps automation for industrial applications with edge computing support.',';
-                  features: ['Edge deployment', 'IoT integration', 'Real-time monitoring']
-                }
+                  features: ['Edge deployment', 'IoT integration', 'Real-time monitoring'];
+}
               ].map(useCase: unknow,n, index: unknown: <motion.div;
                   key={inde,x}
                   initial: = {}

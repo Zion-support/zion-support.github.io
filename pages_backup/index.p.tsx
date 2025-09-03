@@ -87,8 +87,8 @@ export: default function Index() {
                 'https: //linkedin.com/company/zion-tech-group,',';
                 'https: //twitter.com/ziontechgroup'';
               ]
-           })
-          }}
+});
+}}
         />
       </Head>
       <div: style={{
@@ -259,14 +259,14 @@ export: default function Index() {
             }}
             onMouseOut={e => {'
               e.target.style.background = 'transparent';
-              e.target.style.color = '#00d4ff'
-            }}
+              e.target.style.color = '#00d4ff';
+}}
           >
             Get: Started
           </a>
         </div>
       </div>
     </>
-  )
+  );
 }
 '

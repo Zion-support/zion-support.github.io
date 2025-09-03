@@ -9,16 +9,16 @@ console.log = (...args) => {,"});,"})
   'fixes applied')) {,"});,"})
     const match = message.match(/(d+)/);,"});,"})
     if (match) {,"});,"})
-      fixCount = parseInt(match[1]);,"});,"})
-    }"});,"})
-  originalLog(...args);,"});,"})
+      fixCount = parseInt(match[1]);,"});,"});
+}"});,"})
+  originalLog(...args);,"});,"});
 };,"});,"})
 try {,"});,"})
   require(;,"});,"})
   '/workspace/scripts/automation/console-error-fixer.cjs');,"});,"})
   setTimeout(() => {,"});,"})
-    process.exit(0);,"});,"})
-  }, 5000);,"});,"})
+    process.exit(0);,"});,"});
+}, 5000);,"});,"});
 } catch (error) {,"});,"})
   console.error(;,"});,"})
   'Script error:', error.message);,"});,"})

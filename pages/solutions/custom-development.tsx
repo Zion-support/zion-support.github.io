@@ -8,53 +8,53 @@ const CustomDevelopment: NextPage = () => {
   const developmentServices = [
     {
       icon: Code, title: 'Web Application Development',
-      description: 'Custom web applications built with modern frameworks and technologies.', features: ['React, Vue.js, Angular', 'Node.js, Python, PHP', 'Responsive design', 'API integration']
-    }, {
+      description: 'Custom web applications built with modern frameworks and technologies.', features: ['React, Vue.js, Angular', 'Node.js, Python, PHP', 'Responsive design', 'API integration'];
+}, {
       icon: Smartphone,
       title: 'Mobile App Development', description: 'Native and cross-platform mobile applications for iOS and Android.',
-      features: ['React Native, Flutter', 'Swift, Kotlin', 'App Store optimization', 'Push notifications']
-    }, {
+      features: ['React Native, Flutter', 'Swift, Kotlin', 'App Store optimization', 'Push notifications'];
+}, {
       icon: Globe,
       title: 'E-commerce Solutions', description: 'Complete e-commerce platforms with payment integration and inventory management.',
-      features: ['Shopping cart functionality', 'Payment gateway integration', 'Inventory management', 'Order tracking']
-    }, {
+      features: ['Shopping cart functionality', 'Payment gateway integration', 'Inventory management', 'Order tracking'];
+}, {
       icon: Database,
       title: 'Database Design & Management', description: 'Custom database solutions optimized for performance and scalability.',
-      features: ['MySQL, PostgreSQL, MongoDB', 'Data modeling', 'Performance optimization', 'Backup & recovery']
-    }, {
+      features: ['MySQL, PostgreSQL, MongoDB', 'Data modeling', 'Performance optimization', 'Backup & recovery'];
+}, {
       icon: Zap,
       title: 'API Development', description: 'RESTful and GraphQL APIs for seamless integration between systems.',
-      features: ['RESTful APIs', 'GraphQL endpoints', 'Authentication & authorization', 'Rate limiting']
-    }, {
+      features: ['RESTful APIs', 'GraphQL endpoints', 'Authentication & authorization', 'Rate limiting'];
+}, {
       icon: Shield,
       title: 'Security Implementation', description: 'Comprehensive security measures to protect your applications and data.',
-      features: ['SSL/TLS encryption', 'Authentication systems', 'Data validation', 'Security audits']
-    }
-  ];
+      features: ['SSL/TLS encryption', 'Authentication systems', 'Data validation', 'Security audits'];
+}
+  ]
 
   const developmentProcess = [
     {
       step: '01', title: 'Discovery & Planning',
-      description: 'We analyze your requirements and create a detailed project roadmap.'
-    }, {
+      description: 'We analyze your requirements and create a detailed project roadmap.';
+}, {
       step: '02',
-      title: 'Design & Architecture', description: 'Our team designs the system architecture and user interface.'
-    },
+      title: 'Design & Architecture', description: 'Our team designs the system architecture and user interface.';
+},
     {
       step: '03', title: 'Development',
-      description: 'We build your solution using agile methodologies and best practices.'
-    }, {
+      description: 'We build your solution using agile methodologies and best practices.';
+}, {
       step: '04',
-      title: 'Testing & Quality Assurance', description: 'Comprehensive testing ensures your solution works flawlessly.'
-    },
+      title: 'Testing & Quality Assurance', description: 'Comprehensive testing ensures your solution works flawlessly.';
+},
     {
       step: '05', title: 'Deployment & Launch',
-      description: 'We deploy your solution and provide launch support.'
-    }, {
+      description: 'We deploy your solution and provide launch support.';
+}, {
       step: '06',
-      title: 'Maintenance & Support', description: 'Ongoing support and maintenance to keep your solution running smoothly.'
-    }
-  ];
+      title: 'Maintenance & Support', description: 'Ongoing support and maintenance to keep your solution running smoothly.';
+}
+  ]
 
   const technologies = [
     { name: 'React', category: 'Frontend' },
@@ -69,7 +69,7 @@ const CustomDevelopment: NextPage = () => {
     { name: 'AWS', category: 'Cloud' },
     { name: 'Azure', category: 'Cloud' },
     { name: 'Docker', category: 'DevOps' }
-  ];
+  ]
 
   return (
     <MainLayout

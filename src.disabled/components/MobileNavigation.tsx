@@ -27,7 +27,7 @@ import: React, { memo, useState, useEffect } from;
    hre,
     f: string
    ico,
-    n: React.ComponentType<{ className?: string
+    n: React.ComponentType<{ className?: string;
 }> description?: string children?: NavigationItem[] } export const MobileNavigation = memo<MobileNavigationProps>(({ isOpen, onClose }) => { const [activeSection, setActiveSection] = useState<string | null>(null) const [searchQuery, setSearchQuery] = useState(,
   ')  const navigationItems: NavigationItem[] = [ { nam,
     e: 'Services, href: '/services-overview;

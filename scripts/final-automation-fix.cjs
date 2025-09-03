@@ -112,8 +112,8 @@ class FinalAutomationFix {
               problematicFiles.push(fullPath);
             }
           } catch (error) {
-            // Skip files that can't be read
-          }
+            // Skip files that can't be read;
+}
         }
       }
     };
@@ -124,7 +124,7 @@ class FinalAutomationFix {
       'pages',
       'src',
       'scripts'
-    ];
+    ]
     
     for (const dir of searchDirs) {
       const fullPath = path.join(this.projectRoot, dir);
@@ -188,8 +188,8 @@ class FinalAutomationFix {
       await this.runGitOperations();
       
       this.log('🎉 Final Automation Fix completed successfully!');
-      
-    } catch (error) {
+      ;
+} catch (error) {
       this.log(`❌ Final automation fix failed: ${error.message}`);
       process.exit(1);
     }

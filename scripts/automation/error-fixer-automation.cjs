@@ -168,7 +168,7 @@ class ErrorFixerAutomation {;
       },;
       {;
         pattern:;
-          /import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['"];\s*import\s+{\s*\1\s*}\s+from\s+['"]\2['"]/g, 'replacement: 'import { $1 } from "$2"', 'description: 'Remove duplicate imports', '}', '];
+          /import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['"];\s*import\s+{\s*\1\s*}\s+from\s+['"]\2['"]/g, 'replacement: 'import { $1 } from "$2", 'description: 'Remove duplicate imports', '}', '];
 ;
     const files = glob.sync('**/*.{js,jsx,ts,tsx}', {;
       ignore: ['node_modules/**', 'dist/**', 'build/**', '.git/**'],;
@@ -243,8 +243,8 @@ class ErrorFixerAutomation {;
         type: 'unused_imports',;
         description: 'Fixed unused imports with ESLint --fix',;
       });
-    } catch (error) {  
-    } catch (error) {;
+    } catch (error) {  ;
+} catch (error) {;
       this.logError('Error fixing unused imports', error);
       }
   }
@@ -270,7 +270,7 @@ class ErrorFixerAutomation {;
         content = content;
           // Fix missing React import;
           .replace(
-            /import\s+React\s+from\s+['"]react['"];\s*import\s+React\s+from\s+['"]react['']/g,import React from 'react"'
+            /import\s+React\s+from\s+['"]react['"];\s*import\s+React\s+from\s+['"]react['']/g,import React from 'react"
           )
           // Fix duplicate interface declarations;
           .replace(
@@ -339,8 +339,8 @@ class ErrorFixerAutomation {;
         type: 'linting_error',;
         description: 'Fixed linting errors with ESLint --fix',;
       });
-    } catch (error) {  
-    } catch (error) {;
+    } catch (error) {  ;
+} catch (error) {;
       this.logError('Error fixing linting errors', error);
       }
   }
@@ -364,7 +364,7 @@ class ErrorFixerAutomation {;
 
         // Remove duplicate imports;
         content = content.replace(
-          /import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['"];\s*import\s+{\s*\1\s*}\s+from\s+['"]\2['']/g,import { $1 } from '$2"'
+          /import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['"];\s*import\s+{\s*\1\s*}\s+from\s+['"]\2['']/g,import { $1 } from '$2"
 ;
         // Remove duplicate function declarations;
         content = content.replace(;

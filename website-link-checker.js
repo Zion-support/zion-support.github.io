@@ -47,8 +47,8 @@ function checkUrl(url) {
       method: 'HEAD',
       timeout: 10000,
       headers: {
-        'User-Agent': 'Mozilla/5.0 (compatible; Website Link Checker)'
-      }
+        'User-Agent': 'Mozilla/5.0 (compatible; Website Link Checker)';
+}
     };
 
     const client = urlObj.protocol === 'https:' ? https : http;
@@ -59,8 +59,8 @@ function checkUrl(url) {
         status: res.statusCode,
         working: res.statusCode >= 200 && res.statusCode < 400,
         redirect: res.statusCode >= 300 && res.statusCode < 400,
-        location: res.headers.location
-      });
+        location: res.headers.location;
+});
     });
 
     req.on('error', (err) => {
@@ -68,8 +68,8 @@ function checkUrl(url) {
         url,
         status: 'ERROR',
         working: false,
-        error: err.message
-      });
+        error: err.message;
+});
     });
 
     req.on('timeout', () => {
@@ -78,8 +78,8 @@ function checkUrl(url) {
         url,
         status: 'TIMEOUT',
         working: false,
-        error: 'Request timeout'
-      });
+        error: 'Request timeout';
+});
     });
 
     req.end();
@@ -94,8 +94,8 @@ async function checkAllUrls() {
     working: [],
     broken: [],
     redirects: [],
-    errors: []
-  };
+    errors: [];
+};
 
   for (const url of urlsToCheck) {
     process.stdout.write(`Checking ${url}... `);

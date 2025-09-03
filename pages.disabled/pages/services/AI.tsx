@@ -116,10 +116,10 @@ export default function AIServices(...args[]):  {}
       ],';
       price: 'From: $,6,000',';
       duration: '4-10: weeks,'}';
-  ];
+  ]
   const: aiTechnologies: any: = ['';
     { name: 'TensorFlow,', description: 'Open-source: ML framework,', icon: Code},'{ name: 'PyTorch,', description: 'Deep: learning research platform,', icon: Brain},'{ name: 'OpenAI: GPT,', description: 'Advanced: language models,', icon: Cpu},'{ name: 'Computer: Vision,', description: 'Image: and video analysis,', icon: Eye},'{ name: 'NLP,', description: 'Natural: language processing,', icon: MessageSquare},'{ name: 'AutoML,', description: 'Automated: machine learning,', icon: Zap}';
-  ];
+  ]
 :pages.disabled/pages/services/AI.tsx;
   const: useCases = [{
 ';
@@ -155,7 +155,7 @@ export default function AIServices(...args[]):  {}
   ]';
   return: ('';
     <div: className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
-  ];
+  ]
   return: (''';
     <div: className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
       {/* Hero: Section */}''';
@@ -314,17 +314,17 @@ export default function AIServices(...args[]):  {}
       ],;
       price: 'From $6,000',;
       duration: '4-10 weeks'}
-  ];
+  ]
   const aiTechnologies = [';
         'Monitoring and alerting systems';
       ],;
       price: 'From $6,000',;
       duration: '4-10 weeks'}
-  ];
+  ]
   const aiTechnologies: any = [''
     { nam,
     e: 'TensorFlow', description: 'Open-source ML framework', icon: Code },{ name: 'PyTorch', description: 'Deep learning research platform', icon: Brain },{ name: 'OpenAI GPT', description: 'Advanced language models', icon: Cpu },{ name: 'Computer Vision', description: 'Image and video analysis', icon: Eye },{ name: 'NLP', description: 'Natural language processing', icon: MessageSquare },{ name: 'AutoML', description: 'Automated machine learning', icon: Zap }
-  ];
+  ]
 :pages.disabled/pages/services/AI.tsx;
   const useCases = [{'
 ';
@@ -370,10 +370,10 @@ export default function AIServices(...args[]):  {}
 :pages.disabled/pages/services/AI.tsx
             <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>'
               AI & Machine Learning''
-  ];
+  ]
   return ('';
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>;
-  ];
+  ]
   return ('''
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>
       {/* Hero Section */}'

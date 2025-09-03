@@ -21,7 +21,7 @@ class SpecificSyntaxFixer {
     // Fix the specific JSX issue
     content = content.replace(
       /<\/a>\s*<a\s*href="mailto:kleber@ziontechgroup.com"/g,
-      '</a>\n                <a\n                  href="mailto:kleber@ziontechgroup.com"'
+      '</a>\n                <a\n                  href="mailto:kleber@ziontechgroup.com"
     );
 
     fs.writeFileSync(filePath, content, 'utf8');
@@ -88,7 +88,7 @@ class SpecificSyntaxFixer {
       () => this.fixContactPage(),
       () => this.fixPricingGuidePage(),
       () => this.fixSitemapPage(),
-    ];
+    ]
 
     let fixedCount = 0;
     for (const fix of fixes) {

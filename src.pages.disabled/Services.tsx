@@ -146,7 +146,7 @@ const Services: React.FC = (): JSX.Element => {
     { id: 'security', name: 'Cybersecurity', icon: Shield },
     { id: 'digital', name: 'Digital Transformation', icon: Zap },
     { id: 'micro-saas', name: 'Micro-SaaS', icon: Rocket }
-  ];
+  ]
   const coreServices = [
   {
       category: 'ai',
@@ -246,7 +246,7 @@ const Services: React.FC = (): JSX.Element => {
       features: ['CI/CD Pipelines,Infrastructure as Code,Monitoring,Automation'],
       pricing: '$6,000 - $35,000',
       color: 'from-indigo-500 to-purple-500'}
-  ];
+  ]
   const microSaasServices = [
   {
       title: 'AI Sales Email Optimizer',
@@ -314,7 +314,7 @@ const Services: React.FC = (): JSX.Element => {
       ctaLink: '/contact',
       icon: Rocket,
       color: 'from-teal-500 to-cyan-500'}
-  ];
+  ]
   const innovativeAIServices = [
   {
       title: 'AI Autonomous Research Assistant',
@@ -382,7 +382,7 @@ const Services: React.FC = (): JSX.Element => {
       ctaLink: '/services/ai-financial-risk-management',
       icon: Shield,
       color: 'from-red-500 to-orange-500'}
-  ];
+  ]
   const filteredServices = activeCategory === 'all';
     ? coreServices: anyanyanyanyanyanyanyanyanyanyanyanyanycoreServices.filter(service              => service.category === activeCategory)
   return(

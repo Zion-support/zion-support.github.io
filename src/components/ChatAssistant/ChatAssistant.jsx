@@ -26,14 +26,14 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
                 setDisplayGuestMessages(initialMessages);,"});,"})
                 setStoredGuestMessages(initialMessages); // Persist if initialMessages are provided;,"});,"})
             else {}"});,"})
-                setDisplayGuestMessages(storedGuestMessages)}"});,"})
-        }"});,"})
-    }, [isGuest, initialMessages, storedGuestMessages, setStoredGuestMessages, recipient.id]);,"});,"})
+                setDisplayGuestMessages(storedGuestMessages)}"});,"});
+}"});,"});
+}, [isGuest, initialMessages, storedGuestMessages, setStoredGuestMessages, recipient.id]);,"});,"})
     // Effect for logged-in user messages;,"});,"})
         if(!isGuest) {}"});,"})
             // Update state if initialMessages prop changes(e.g. new conversation loaded);,"});,"})
-            setLoggedInMessages(initialMessages)}"});,"})
-    }, [isGuest, initialMessages, recipient.id]);,"});,"})
+            setLoggedInMessages(initialMessages)}"});,"});
+}, [isGuest, initialMessages, recipient.id]);,"});,"})
     // Determine currentMessages and setCurrentMessages based on isGuest;,"});,"})
     const currentMessages = isGuest ? displayGuestMessages : loggedInMessages;,"});,"})
     const setCurrentMessages = (valueOrFn) => {}"});,"})
@@ -42,12 +42,12 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
             setDisplayGuestMessages(newMessages);,"});,"})
             setStoredGuestMessages(newMessages); // Always update localStorage for guests;,"});,"})
             const newMessages = valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn;,"});,"})
-            setLoggedInMessages(newMessages)}"});,"})
-    };,"});,"})
+            setLoggedInMessages(newMessages)}"});,"});
+};,"});,"})
     const debouncedApiCallParams = useDebounce(pendingApiCallParams, 3000);,"});,"})
         if(debouncedApiCallParams) {}"});,"})
-            onSendMessage(debouncedApiCallParams.message, debouncedApiCallParams.conversationId)}"});,"})
-    }, [debouncedApiCallParams, onSendMessage]);,"});,"})
+            onSendMessage(debouncedApiCallParams.message, debouncedApiCallParams.conversationId)}"});,"});
+}, [debouncedApiCallParams, onSendMessage]);,"});,"})
         scrollToBottom()}, [currentMessages]); // currentMessages will correctly refer to either guest or logged-in state;,"});,"})
     const scrollToBottom = () => {}"});,"})
 ';,"});,"})
@@ -80,8 +80,8 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
         const handleKey = (e) => {}"});,"})
             if (e.key === 'Escape') {}"});,"})
                 e.preventDefault();,"});,"})
-                handleModalCancel()}';,"});,"})
-        };'';,"});,"})
+                handleModalCancel()}';,"});,"});
+};'';,"});,"})
         const removeTrap = guestModalRef.current ? focusManagement.trapFocus(guestModalRef.current) : null;''';,"});,"})
         document.addEventListener('keydown', handleKey);,"});,"})
         return () => {}"});,"})
@@ -152,7 +152,7 @@ import React {useState, useEffect, useRef, useContext } from 'react' import {Aut
 import {X } from 'lucide-react' import {focusManagement } from '@/utils/accessibility' export function ChatAssistant({isOpen, onClose, recipient, conversationId, initialMessages = [], onSendMessage, contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated';";"
 import React { useState, useEffect, useRef, useContext } from &apos;react&apos; import { AuthContext } from &apos;../../context/auth/AuthContext&apos;&apos;&apos; import { useDebounce } from &apos;../../hooks/useDebounce&apos;&apos;&apos; import { useLocalStorage } from &apos;../../hooks/useLocalStorage&apos;&apos;&apos; import { ChatMessage } from &apos;./ChatMessage&apos;&apos;&apos; import { ChatInput } from &apos;./ChatInput&apos;&apos;&apos; import { Avatar, AvatarFallback, AvatarImage } from &apos;@/components/ui/avatar&apos;&apos;&apos; import { Button } from &apos;@/components/ui/button&apos;&apos;&apos; import { X } from &apos;lucide-react&apos; import { focusManagement } from &apos;@/utils/accessibility&apos;&apos;' export function ChatAssistant({ isOpen, onClose, recipient, conversationId, initialMessages = [], onSendMessage, contextHeader }) {} const auth = useContext(AuthContext) ;const isGuest = !auth?.isAuthenticated';";&quot;"
 import React { useState, useEffect, useRef, useContext } from 'react' import { AuthContext } from '../../context/auth/AuthContext'';'' import { useDebounce } from '../../hooks/useDebounce'';'' import { useLocalStorage } from '../../hooks/useLocalStorage'';'' import { ChatMessage } from './ChatMessage'';'' import { ChatInput } from './ChatInput'';'' import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'';'' import { Button } from '@/components/ui/button'';'' import { X } from 'lucide-react' import { focusManagement } from '@/utils/accessibility' export function ChatAssistant({ isOpen, onClose, recipient, conversationId, initialMessages = [], onSendMessage, contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated';";"
-""
+"";
 }
 import React { useState, useEffect, useRef, useContext } from 'react' import { AuthContext }  from '../../context/auth/AuthContext;'' import { useDebounce }  from '../../hooks/useDebounce;'' import { useLocalStorage }  from '../../hooks/useLocalStorage;'' import { ChatMessage }  from './ChatMessage;'' import { ChatInput }  from './ChatInput;'' import { Avatar, AvatarFallback, AvatarImage }  from '@/components/ui/avatar;'' import { Button }  from '@/components/ui/button;'' import { X } from 'lucide-react' import { focusManagement }  from '@/utils/accessibility';export function ChatAssistant({ isOpen, onClose, recipient, conversationId, initialMessages = [], onSendMessage, contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated;"
 "

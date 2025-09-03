@@ -31,7 +31,7 @@ const TransformationServices: React.FC = () => {,"});,"})
           <p className="text-lg text-gray-600">Content coming soon...</p>;,"});,"})
         </div>;,"});,"})
     </>;,"});,"})
-  );,"});,"})
+  );,"});,"});
 };,"});,"})
 export default TransformationServices;,"});,"})
 import { SEO } from '../components/SEO';';
@@ -89,6 +89,6 @@ const TransformationServices: React.FC = () => {"
           <h1 className='text-4xl font-bold text-gray-900 mb-8'>TransformationServices</h1>"
           <p className='text-lg text-gray-600'>Content coming soon...</p>
   )}
-""
+"";
 }
 "

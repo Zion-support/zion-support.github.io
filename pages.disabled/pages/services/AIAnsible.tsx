@@ -4,7 +4,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIAnsible(function AIAnsible() {): any: {}
     'Automated Ansible monitoring and alerting',';Predictive: analytics for Ansible scaling',';Smart: Ansible security and compliance',';AI-driven: Ansible automation and orchestration',';Real-time: Ansible analytics and insights',';Custom: AI models for Ansible applications';
 <:pages.disabled/pages/services/AIAnsible.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Developer,',';
@@ -27,7 +27,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
   ]';Ansible: optimization',';Ansible: management',';Performance: monitoring and analytics',';Security: and compliance monitoring',';Automation: and orchestration',';Ansible: scaling and management';
   ]';Improve: Ansible performance by 50-80%',';Reduce: Ansible deployment time by 40-70%',';Cut: operational costs by 35-65%',';Enhance: Ansible reliability and scalability',';Optimize: resource utilization',';Scale: Ansible operations efficiently';
   ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-red-500 via-pink-500 to-purple-500 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIAnsible(function AIAnsible() {): any {}
     'Automated Ansible monitoring and alerting',;Predictive analytics for Ansible scaling',;Smart Ansible security and compliance',;AI-driven Ansible automation and orchestration',;Real-time Ansible analytics and insights',;Custom AI models for Ansible applications';
 <:pages.disabled/pages/services/AIAnsible.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Developer',
@@ -115,8 +115,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     {'
       name: 'Business',
       price: '$799/mo',
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support']
-    },
+      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AIAnsible.tsx>    {'
@@ -149,10 +149,10 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <Database className='w-4 h-4 mr-2'  /> AI-Powered Ansible Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Ansible Platform</h1>'          <p className='text-red-100 text-xl'>Transform your Ansible operations with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
-  ];Ansible optimization',;Ansible management',;Performance monitoring and analytics',;Security and compliance monitoring',;Automation and orchestration',;Ansible scaling and management';
-  ];Improve Ansible performance by 50-80%',;Reduce Ansible deployment time by 40-70%',;Cut operational costs by 35-65%',;Enhance Ansible reliability and scalability',;Optimize resource utilization',;Scale Ansible operations efficiently';
-  ];Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
-  ];
+  ]Ansible optimization',;Ansible management',;Performance monitoring and analytics',;Security and compliance monitoring',;Automation and orchestration',;Ansible scaling and management';
+  ]Improve Ansible performance by 50-80%',;Reduce Ansible deployment time by 40-70%',;Cut operational costs by 35-65%',;Enhance Ansible reliability and scalability',;Optimize resource utilization',;Scale Ansible operations efficiently';
+  ]Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-red-500 via-pink-500 to-purple-500 py-20 text-center>''

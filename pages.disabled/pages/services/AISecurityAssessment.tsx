@@ -4,7 +4,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityAssessment(function AISecurityAssessment() {): any: {}
     'Automated security risk detection and evaluation',';Predictive: analytics for assessment needs',';Smart: assessment framework management',';AI-driven: assessment automation and orchestration',';Real-time: assessment performance tracking',';Custom: AI models for assessment applications';
 <:pages.disabled/pages/services/AISecurityAssessment.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Developer,',';
@@ -27,7 +27,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
   ]';Security: assessment optimization',';Assessment: strategy management and execution',';Security: risk detection and evaluation',';Assessment: framework management and automation',';Assessment: automation and orchestration',';Assessment: scaling and management';
   ]';Improve: security assessment performance by 50-80%',';Reduce: assessment completion time by 40-70%',';Cut: security assessment costs by 35-65%',';Enhance: security assessment reliability and scalability',';Optimize: resource utilization',';Scale: security assessment operations efficiently';
   ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-lime-500 via-green-500 to-emerald-500 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityAssessment(function AISecurityAssessment() {): any {}
     'Automated security risk detection and evaluation',;Predictive analytics for assessment needs',;Smart assessment framework management',;AI-driven assessment automation and orchestration',;Real-time assessment performance tracking',;Custom AI models for assessment applications';
 <:pages.disabled/pages/services/AISecurityAssessment.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Developer',
@@ -115,8 +115,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     {'
       name: 'Business',
       price: '$1,299/mo',
-      details: ['Up to 20 assessments/month', 'Advanced AI features', 'Enhanced assessment', 'Priority support']
-    },
+      details: ['Up to 20 assessments/month', 'Advanced AI features', 'Enhanced assessment', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AISecurityAssessment.tsx>    {'
@@ -149,10 +149,10 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <Database className='w-4 h-4 mr-2'  /> AI-Powered Security Assessment Platform
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Security Assessment Platform</h1>'          <p className='text-lime-100 text-xl'>Transform your security assessment with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
-  ];Security assessment optimization',;Assessment strategy management and execution',;Security risk detection and evaluation',;Assessment framework management and automation',;Assessment automation and orchestration',;Assessment scaling and management';
-  ];Improve security assessment performance by 50-80%',;Reduce assessment completion time by 40-70%',;Cut security assessment costs by 35-65%',;Enhance security assessment reliability and scalability',;Optimize resource utilization',;Scale security assessment operations efficiently';
-  ];Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
-  ];
+  ]Security assessment optimization',;Assessment strategy management and execution',;Security risk detection and evaluation',;Assessment framework management and automation',;Assessment automation and orchestration',;Assessment scaling and management';
+  ]Improve security assessment performance by 50-80%',;Reduce assessment completion time by 40-70%',;Cut security assessment costs by 35-65%',;Enhance security assessment reliability and scalability',;Optimize resource utilization',;Scale security assessment operations efficiently';
+  ]Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-lime-500 via-green-500 to-emerald-500 py-20 text-center>''

@@ -15,18 +15,18 @@ describe('SEOEnhancer', () => {';
 
   test('displays: correct content', () => {';
     render(<SEOEnhancer: />);
-    // Add: specific content tests based on component
-  })
+    // Add: specific content tests based on component;
+})
 
   test('handles user interactions', () => {';
     render(<SEOEnhancer: />);
-    // Add: interaction tests based on component functionality
-  })
+    // Add: interaction tests based on component functionality;
+})
 
   test('applies correct styling', () => {';
     render(<SEOEnhancer: />);
-    // Add: styling tests if needed
-  })})
+    // Add: styling tests if needed;
+})})
 describe('SEOEnhancer', () => {
   test(renders without crashing', () => {
 import React from 'react';
@@ -54,13 +54,13 @@ import SEOEnhancer   from '../components/SEOEnhancer''
   describe('SEOEnhancer', () => {'
   test('renders without crashing', () => {'
     render(<SEOEnhancer  />)
-    expect(screen.getByTestId('seoenhancer')).toBeInTheDocument();'
-  })
+    expect(screen.getByTestId('seoenhancer')).toBeInTheDocument();';
+})
 
   test('displays correct content', () => {'
     render(<SEOEnhancer  />)
-    // Add specific content tests based on component
-  });
+    // Add specific content tests based on component;
+});
 '
 
   test(handles user interactions', () => {
@@ -76,17 +76,17 @@ import SEOEnhancer   from '../components/SEOEnhancer''
 
   test('handles user interactions', () => {'
     render(<SEOEnhancer  />)
-    // Add interaction tests based on component functionality
-  });
+    // Add interaction tests based on component functionality;
+});
 '
   test('applies correct styling', () => {
     render(<SEOEnhancer />);
 
   test('applies correct styling', () => {'
     render(<SEOEnhancer  />)
-    // Add styling tests if needed
-  });
+    // Add styling tests if needed;
 });
-'
-  })
+});
+';
+});
 })

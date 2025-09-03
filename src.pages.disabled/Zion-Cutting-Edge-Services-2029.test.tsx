@@ -14,11 +14,11 @@ import { render, screen } from '@testing-library/react'
 import Zion-Cutting-Edge-Services-2029  from './Zion-Cutting-Edge-Services-2029'describe('Zion-Cutting-Edge-Services-2029', () => {
   it('renders without crashing', () => {
     render(<Zion-Cutting-Edge-Services-2029 />)
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()
-  })
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+})
 
   it('displays expected content', () => {
     render(<Zion-Cutting-Edge-Services-2029 />)
-    // Add specific test assertions based on component content
-  })
+    // Add specific test assertions based on component content;
+});
 })

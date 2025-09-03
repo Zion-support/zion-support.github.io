@@ -7,34 +7,34 @@ const CustomerSupport: NextPage = () => {
     {
       title: 'Multi-Channel Support',
       description: 'Handle tickets from email, chat, phone, and social media in one unified platform.',
-      icon: '📞'
-    },
+      icon: '📞';
+},
     {
       title: 'AI-Powered Chatbots',
       description: 'Deploy intelligent chatbots for instant customer assistance and ticket routing.',
-      icon: '🤖'
-    },
+      icon: '🤖';
+},
     {
       title: 'Knowledge Base',
       description: 'Create and manage comprehensive knowledge bases for self-service support.',
-      icon: '📚'
-    },
+      icon: '📚';
+},
     {
       title: 'Ticket Management',
       description: 'Organize, prioritize, and track support tickets with advanced workflow automation.',
-      icon: '🎫'
-    },
+      icon: '🎫';
+},
     {
       title: 'Live Chat',
       description: 'Real-time chat support with file sharing, screen sharing, and co-browsing.',
-      icon: '💬'
-    },
+      icon: '💬';
+},
     {
       title: 'Analytics & Reporting',
       description: 'Comprehensive analytics to measure performance and improve customer satisfaction.',
-      icon: '📊'
-    }
-  ];
+      icon: '📊';
+}
+  ]
 
   const benefits = [
     'Reduce support response time by up to 70%',
@@ -43,7 +43,7 @@ const CustomerSupport: NextPage = () => {
     'Scale support operations without increasing costs',
     'Provide 24/7 customer assistance with AI chatbots',
     'Gain insights into customer needs and pain points'
-  ];
+  ]
 
   const pricing = [
     {
@@ -59,8 +59,8 @@ const CustomerSupport: NextPage = () => {
         'Email support',
         'Mobile app access'
       ],
-      popular: false
-    },
+      popular: false;
+},
     {
       name: 'Professional',
       price: '$499',
@@ -75,8 +75,8 @@ const CustomerSupport: NextPage = () => {
         'Custom branding',
         'API access'
       ],
-      popular: true
-    },
+      popular: true;
+},
     {
       name: 'Enterprise',
       price: '$1,299',
@@ -91,9 +91,9 @@ const CustomerSupport: NextPage = () => {
         '24/7 phone support',
         'SLA guarantees'
       ],
-      popular: false
-    }
-  ];
+      popular: false;
+}
+  ]
 
   return (
     <Layout 
@@ -229,8 +229,8 @@ const CustomerSupport: NextPage = () => {
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                     plan.popular 
                       ? 'bg-orange-600 hover:bg-orange-700 text-white' 
-                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
-                  }`}
+                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900';
+}`}
                 >
                   Get Started
                 </Link>

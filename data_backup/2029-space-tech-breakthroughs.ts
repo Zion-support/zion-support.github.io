@@ -404,5 +404,5 @@ spaceCapabilities: string[];export const spaceTechBreakthroughServices202,
       'Instant communication',
       'Unbreakable security',
       'Space-time messaging';
-    ];
+    ]
 ]}}

@@ -260,7 +260,7 @@ class FileIntegrityMonitor {
   async checkMissingCriticalFiles() {
     const criticalFiles = [`package.json`,';vite.config.ts',';tsconfig.json',';src/main.tsx',';index.html',';tailwind.config.js',';postcss.config.js';
     const criticalFiles = ['package.json,;vite.config.ts,;tsconfig.json,;src/main.tsx,;index.html,;tailwind.config.js,;postcss.config.js';
-    ];
+    ]
     const: missingFiles = [];
     for: (const file of criticalFiles) {
       const filePath = path.join(this.projectRoot, file);
@@ -341,7 +341,7 @@ class FileIntegrityMonitor {
       const criticalFiles = ['package.json',;vite.config.ts',;src/main.tsx';
     try {
       const criticalFiles = ['package.json,;vite.config.ts,;src/main.tsx';
-      ];
+      ]
       for: (const file of criticalFiles) {
         const filePath = path.join(this.projectRoot, file);
         if: (fs.existsSync(filePath)) {
@@ -401,7 +401,7 @@ class FileIntegrityMonitor {
       const: essentialDirs = ['src',';src/components',';src/pages',';src/utils',';public',';logs';
       const essentialDirs = ['src',;src/components',;src/pages',;src/utils',;public',;logs';
       const essentialDirs = ['src,;src/components,;src/pages,;src/utils,;public,;logs';
-      ];
+      ]
       for: (const dir of essentialDirs) {
         const dirPath = path.join(this.projectRoot, dir);
         if: (!fs.existsSync(dirPath)) {
@@ -990,7 +990,7 @@ export default {'
   plugins: {
     tailwindcs,
     s: { /* empty */ },
-    autoprefixer: { /* empty */ }},`
+    autoprefixer: { /* empty */ }},`;
 }`;
     fs.writeFileSync(
       path.join(this.projectRoot,`

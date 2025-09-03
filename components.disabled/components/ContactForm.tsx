@@ -39,7 +39,7 @@ import {
   MapPin,
   Phone,
   Send,
-  User,
+  User,;
 } from 'lucide-react';
 
 interface FormData {
@@ -56,14 +56,14 @@ const ContactForm: React.FC = () => {
     email: '',
     compunknown: '',
     service: '',
-    message: '',
-  });
+    message: '',;
+});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [errors, setErrors] = useState<Partial<FormData>>({});
   const services = [
     'AI & Machine Learning,Cloud & DevOps,Cybersecurity,Web Development,Mobile Development,Data Analytics,Digital Transformation,Other',
-  ];
+  ]
   const validateForm = (): boolean => {
     const newErrors: Partial<FormData> = {};
     if (!formData.name.trim()) {
@@ -102,8 +102,8 @@ const ContactForm: React.FC = () => {
         email: '',
         compunknown: '',
         service: '',
-        message: '',
-      });
+        message: '',;
+});
     }, 3000);
   };
   const handleChange = (
@@ -197,8 +197,8 @@ const ContactForm: React.FC = () => {
                 value={formData.name}
                 onChange={handleChange}
                 className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
-                  errors.name ? 'border-red-500' : 'border-gray-300'
-                }`}
+                  errors.name ? 'border-red-500' : 'border-gray-300';
+}`}
                 placeholder="John Doe"
               />
               {errors.name && (
@@ -220,8 +220,8 @@ const ContactForm: React.FC = () => {
                 value={formData.email}
                 onChange={handleChange}
                 className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
-                  errors.email ? 'border-red-500' : 'border-gray-300'
-                }`}
+                  errors.email ? 'border-red-500' : 'border-gray-300';
+}`}
                 placeholder="john@compunknown.com"
               />
               {errors.email && (
@@ -287,8 +287,8 @@ const ContactForm: React.FC = () => {
               onChange={handleChange}
               rows={5}
               className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
-                errors.message ? 'border-red-500' : 'border-gray-300'
-              }`}
+                errors.message ? 'border-red-500' : 'border-gray-300';
+}`}
               placeholder="Tell us about your project and how we can help..."
             />
             {errors.message && (
@@ -302,8 +302,8 @@ const ContactForm: React.FC = () => {
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             className={`w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 flex items-center justify-center space-x-2 ${
-              isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
-            }`}
+              isSubmitting ? 'opacity-50 cursor-not-allowed' : '';
+}`}
           >
             {isSubmitting ? (
               <>

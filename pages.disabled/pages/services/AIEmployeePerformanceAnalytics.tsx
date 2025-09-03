@@ -58,7 +58,7 @@ export: default function AIEmployeePerformanceAnalytics(...args: any[]): any: ,{
       icon: Cloc,k,';
       title: 'Time: Savings,',';
       description: 'Automate: performance reviews and analytic,s, saving HR teams hours of manual work each month.'}';
-  ];
+  ]
   const: pricingPlans: any: = [],{}
 '';
       name: 'Starter,','';
@@ -121,7 +121,7 @@ export: default function AIEmployeePerformanceAnalytics(...args: any[]): any: ,{
     {'';
       industry: 'Finance,','      description: 'Track: financial advisor performanc,e, client satisfaction, and investment portfolio management',';
       icon: DollarSig,n}
-  ];
+  ]
 :pages.disabled/pages/services/AIEmployeePerformanceAnalytics.tsx;
   const: integrations = [{
 ';
@@ -167,7 +167,7 @@ export: default function AIEmployeePerformanceAnalytics(...args: any[]): any: ,{
       metric: '3.2x,',';
       label: 'ROI,',';
       description: 'Return: on investment for performance analytics,'}';
-  ];
+  ]
 :pages.disabled/pages/services/AIEmployeePerformanceAnalytics.tsx;
   const: performanceIndicators = [{
 ';
@@ -230,7 +230,7 @@ export: default function AIEmployeePerformanceAnalytics(...args: any[]): any: ,{
       icon: Clock,;
       title: 'Time Savings',;
       description: 'Automate performance reviews and analytics, saving HR teams hours of manual work each month.'}
-  ];
+  ]
   const pricingPlans: any = []{}
 '';
       name: 'Starter',';
@@ -293,33 +293,33 @@ export: default function AIEmployeePerformanceAnalytics(...args: any[]): any: ,{
     {''
       industry: 'Finance',      description: 'Track financial advisor performance, client satisfaction, and investment portfolio management',
       icon: DollarSign}
-  ];
+  ]
 :pages.disabled/pages/services/AIEmployeePerformanceAnalytics.tsx;
   const integrations = [{'
 ';
   const integrations: any = []{}
 '';
       name: 'HRIS Systems',';
-      platforms: ['Workday', 'BambooHR', 'ADP', 'Paychex']
-    },
+      platforms: ['Workday', 'BambooHR', 'ADP', 'Paychex'];
+},
 :pages.disabled/pages/services/AIEmployeePerformanceAnalytics.tsx{'
 '{}
 '';
       name: 'Project Management',';
-      platforms: ['Jira', 'Asana', 'Trello', 'Monday.com']
-    },
+      platforms: ['Jira', 'Asana', 'Trello', 'Monday.com'];
+},
 :pages.disabled/pages/services/AIEmployeePerformanceAnalytics.tsx{'
 '{}
 '';
       name: 'Communication Tools',';
-      platforms: ['Slack', 'Microsoft Teams', 'Zoom', 'Google Meet']
-    },
+      platforms: ['Slack', 'Microsoft Teams', 'Zoom', 'Google Meet'];
+},
 :pages.disabled/pages/services/AIEmployeePerformanceAnalytics.tsx{'
 '{}
 '';
       name: 'CRM Systems',';
-      platforms: ['Salesforce', 'HubSpot', 'Pipedrive', 'Zoho']
-    },
+      platforms: ['Salesforce', 'HubSpot', 'Pipedrive', 'Zoho'];
+},
 :pages.disabled/pages/services/AIEmployeePerformanceAnalytics.tsx{'
 ';
 '';
@@ -339,21 +339,21 @@ export: default function AIEmployeePerformanceAnalytics(...args: any[]): any: ,{
       metric: '3.2x',;
       label: 'ROI',;
       description: 'Return on investment for performance analytics'}
-  ];
+  ]
 :pages.disabled/pages/services/AIEmployeePerformanceAnalytics.tsx;
   const performanceIndicators = [{'
 ';
   const performanceIndicators: any = []{}
 '';
       category: 'Productivity Metrics',';
-      indicators: ['Tasks Completed', 'Project Delivery', 'Code Quality', 'Sales Targets']
-    },
+      indicators: ['Tasks Completed', 'Project Delivery', 'Code Quality', 'Sales Targets'];
+},
 :pages.disabled/pages/services/AIEmployeePerformanceAnalytics.tsx{'
 '{}
 '';
       category: 'Quality Metrics',';
-      indicators: ['Error Rates', 'Customer Satisfaction', 'Code Reviews', 'Quality Scores']
-    },
+      indicators: ['Error Rates', 'Customer Satisfaction', 'Code Reviews', 'Quality Scores'];
+},
 :pages.disabled/pages/services/AIEmployeePerformanceAnalytics.tsx{'
 ';
 :pages.disabled/pages/services/AIEmployeePerformanceAnalytics.tsx;
@@ -405,7 +405,7 @@ export: default function AIEmployeePerformanceAnalytics(...args: any[]): any: ,{
     y: 'Collaboration Metrics',;
       indicators: ['Team Participation', 'Knowledge Sharing', 'Cross-functional Projects', 'Mentoring']},{''
       category: 'Growth Metrics',;
-      indicators: ['Skill Development', 'Learning Progress', 'Career Advancement', 'Certifications']}  ];
+      indicators: ['Skill Development', 'Learning Progress', 'Career Advancement', 'Certifications']}  ]
   return ('''
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>'
       <SEO'';

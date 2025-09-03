@@ -4,7 +4,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIVirtualReality(function AIVirtualReality() {): any: {}
     'Automated VR monitoring and alerting',';Predictive: analytics for VR scaling',';Smart: VR security and compliance',';AI-driven: VR automation and orchestration',';Real-time: VR analytics and insights',';Custom: AI models for VR applications';
 <:pages.disabled/pages/services/AIVirtualReality.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Developer,',';
@@ -27,7 +27,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
   ]';VR: optimization',';VR: content management',';Performance: monitoring and analytics',';Security: and compliance monitoring',';Automation: and orchestration',';VR: scaling and management';
   ]';Improve: VR performance by 50-80%',';Reduce: VR development time by 40-70%',';Cut: operational costs by 35-65%',';Enhance: VR reliability and scalability',';Optimize: resource utilization',';Scale: VR operations efficiently';
   ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-indigo-500 via-blue-500 to-cyan-500 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIVirtualReality(function AIVirtualReality() {): any {}
     'Automated VR monitoring and alerting',;Predictive analytics for VR scaling',;Smart VR security and compliance',;AI-driven VR automation and orchestration',;Real-time VR analytics and insights',;Custom AI models for VR applications';
 <:pages.disabled/pages/services/AIVirtualReality.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Developer',
@@ -115,8 +115,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     {'
       name: 'Business',
       price: '$999/mo',
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support']
-    },
+      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AIVirtualReality.tsx>    {'
@@ -149,10 +149,10 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <Database className='w-4 h-4 mr-2'  /> AI-Powered VR Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Virtual Reality Platform</h1>'          <p className='text-indigo-100 text-xl'>Transform your VR operations with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
-  ];VR optimization',;VR content management',;Performance monitoring and analytics',;Security and compliance monitoring',;Automation and orchestration',;VR scaling and management';
-  ];Improve VR performance by 50-80%',;Reduce VR development time by 40-70%',;Cut operational costs by 35-65%',;Enhance VR reliability and scalability',;Optimize resource utilization',;Scale VR operations efficiently';
-  ];Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
-  ];
+  ]VR optimization',;VR content management',;Performance monitoring and analytics',;Security and compliance monitoring',;Automation and orchestration',;VR scaling and management';
+  ]Improve VR performance by 50-80%',;Reduce VR development time by 40-70%',;Cut operational costs by 35-65%',;Enhance VR reliability and scalability',;Optimize resource utilization',;Scale VR operations efficiently';
+  ]Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-indigo-500 via-blue-500 to-cyan-500 py-20 text-center>''

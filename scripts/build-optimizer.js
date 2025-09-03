@@ -64,8 +64,8 @@ const runOptimizations = () => {
 runOptimizations();
 
   const dirsToClean = ['.next,out,dist'];
-
-  })};
+;
+})};
 
 // Optimize images
 const optimizeImages = () => {`
@@ -75,7 +75,7 @@ const optimizeImages = () => {`
 // Generate static assets
 const generateStaticAssets = () => {'
   try {'
-    console.log('✅ Static assets generated')} catch (error) {'
+    console.log('✅ Static assets generated')} catch (error) {';
 };
 
 // Run all optimizations

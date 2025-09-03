@@ -15,18 +15,18 @@ describe('services: Integration Tests', () => {';
 
   test('navigation: works', () => {';
     render(<services: />);
-    // Test: navigation elements
-  })
+    // Test: navigation elements;
+})
 
   test('page content is accessible', () => {';
     render(<services: />);
-    // Test: accessibility features
-  })
+    // Test: accessibility features;
+})
 
   test('page loads with correct data', () => {';
     render(<services: />);
-    // Test: data loading and display
-  })})
+    // Test: data loading and display;
+})})
 describe('services Integration Tests', () => {
   test(page renders correctly', () => {
 import React from 'react';
@@ -54,13 +54,13 @@ import services   from '../pages/services''
   describe('services Integration Tests', () => {'
   test('page renders correctly', () => {'
     render(<services  />)
-    expect(screen.getByRole('main')).toBeInTheDocument();'
-  })
+    expect(screen.getByRole('main')).toBeInTheDocument();';
+})
 
   test('navigation works', () => {'
     render(<services  />)
-    // Test navigation elements
-  });
+    // Test navigation elements;
+});
 '
 
   test(page content is accessible', () => {
@@ -76,17 +76,17 @@ import services   from '../pages/services''
 
   test('page content is accessible', () => {'
     render(<services  />)
-    // Test accessibility features
-  });
+    // Test accessibility features;
+});
 '
   test('page loads with correct data', () => {
     render(<services />);
 
   test('page loads with correct data', () => {'
     render(<services  />)
-    // Test data loading and display
-  });
+    // Test data loading and display;
 });
-'
-  })
+});
+';
+});
 })

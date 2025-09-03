@@ -41,6 +41,6 @@ describe('Profile', () => {"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
 "
     render(<Profile /" >)
-    // Add more specific tests here
+    // Add more specific tests here;
 });
 })

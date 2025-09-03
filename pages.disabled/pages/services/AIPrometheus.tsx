@@ -4,7 +4,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIPrometheus(function AIPrometheus() {): any: {}
     'Automated Prometheus monitoring and alerting',';Predictive: analytics for Prometheus scaling',';Smart: Prometheus security and compliance',';AI-driven: Prometheus automation and orchestration',';Real-time: Prometheus analytics and insights',';Custom: AI models for Prometheus applications';
 <:pages.disabled/pages/services/AIPrometheus.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Developer,',';
@@ -27,7 +27,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
   ]';Prometheus: optimization',';Prometheus: management',';Performance: monitoring and analytics',';Security: and compliance monitoring',';Automation: and orchestration',';Prometheus: scaling and management';
   ]';Improve: Prometheus performance by 50-80%',';Reduce: Prometheus query time by 40-70%',';Cut: operational costs by 35-65%',';Enhance: Prometheus reliability and scalability',';Optimize: resource utilization',';Scale: Prometheus operations efficiently';
   ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-yellow-500 via-orange-500 to-red-500 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIPrometheus(function AIPrometheus() {): any {}
     'Automated Prometheus monitoring and alerting',;Predictive analytics for Prometheus scaling',;Smart Prometheus security and compliance',;AI-driven Prometheus automation and orchestration',;Real-time Prometheus analytics and insights',;Custom AI models for Prometheus applications';
 <:pages.disabled/pages/services/AIPrometheus.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Developer',
@@ -115,8 +115,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     {'
       name: 'Business',
       price: '$799/mo',
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support']
-    },
+      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AIPrometheus.tsx>    {'
@@ -149,10 +149,10 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <Database className='w-4 h-4 mr-2'  /> AI-Powered Prometheus Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Prometheus Platform</h1>'          <p className='text-yellow-100 text-xl'>Transform your Prometheus operations with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
-  ];Prometheus optimization',;Prometheus management',;Performance monitoring and analytics',;Security and compliance monitoring',;Automation and orchestration',;Prometheus scaling and management';
-  ];Improve Prometheus performance by 50-80%',;Reduce Prometheus query time by 40-70%',;Cut operational costs by 35-65%',;Enhance Prometheus reliability and scalability',;Optimize resource utilization',;Scale Prometheus operations efficiently';
-  ];Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
-  ];
+  ]Prometheus optimization',;Prometheus management',;Performance monitoring and analytics',;Security and compliance monitoring',;Automation and orchestration',;Prometheus scaling and management';
+  ]Improve Prometheus performance by 50-80%',;Reduce Prometheus query time by 40-70%',;Cut operational costs by 35-65%',;Enhance Prometheus reliability and scalability',;Optimize resource utilization',;Scale Prometheus operations efficiently';
+  ]Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-yellow-500 via-orange-500 to-red-500 py-20 text-center>''

@@ -37,10 +37,10 @@ export default async function handler(
     // For now, we&apos;ll just acknowledge receipt''
     res.status(200).json({ 
       success: true, message: 'Web vitals data received',
-      metric: data.name, value: data.value 
-    });
-
-  } catch (error) {
+      metric: data.name, value: data.value ;
+});
+;
+} catch (error) {
     console.error('Error processing web vitals: ', error);
     res.status(500).json({ error: 'Internal server error' });
   }

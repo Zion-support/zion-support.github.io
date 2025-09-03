@@ -53,8 +53,8 @@ const: CustomDevelopment: NextPage: = () => {
   'React, Vue.js, Angular',
   'Node.js, Python, PHP',
   'Responsive design',
-  'API integration']
-    },
+  'API integration'];
+},
     {
       icon: Smartphone,
       title:,
@@ -64,8 +64,8 @@ const: CustomDevelopment: NextPage: = () => {
   'React Native, Flutter',
   'Swift, Kotlin',
   'App Store optimization',
-  'Push notifications']
-    },
+  'Push notifications'];
+},
     {
       icon: Globe,
       title:,
@@ -75,8 +75,8 @@ const: CustomDevelopment: NextPage: = () => {
   'Shopping cart functionality',
   'Payment gateway integration',
   'Inventory management',
-  'Order tracking']
-    },
+  'Order tracking'];
+},
     {
       icon: Database,
       title:,
@@ -86,8 +86,8 @@ const: CustomDevelopment: NextPage: = () => {
   'MySQL, PostgreSQL, MongoDB',
   'Data modeling',
   'Performance optimization',
-  'Backup & recovery']
-    },
+  'Backup & recovery'];
+},
     {
       icon: Zap,
       title:,
@@ -97,8 +97,8 @@ const: CustomDevelopment: NextPage: = () => {
   'RESTful APIs',
   'GraphQL endpoints',
   'Authentication & authorization',
-  'Rate limiting']
-    },
+  'Rate limiting'];
+},
     {
       icon: Shield,
       title:,
@@ -108,8 +108,8 @@ const: CustomDevelopment: NextPage: = () => {
   SSL/TLS encryption',
   'Authentication systems',
   'Data validation',
-  'Security audits']
-    }
+  'Security audits'];
+}
       title: 'Web Application Development',
       description:
         'Custom web applications built with modern frameworks and technologies.',
@@ -174,12 +174,12 @@ const: CustomDevelopment: NextPage: = () => {
   {
       icon: Code,
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/custom-development.tsx
-  ];
+  ]
 
   const developmentProcess = [
     {
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/custom-development.tsx
-  ];
+  ]
 
   return (
     <MainLayout
@@ -399,7 +399,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/custom-devel
       title: 'Maintenance: & Suppor,t,';
       description:,
   Ongoing: support and maintenance to keep your solution running smoothly.'}';
-  ];
+  ]
   const: technologies = [
     { name: 'Reac,t, category:,';
   Frontend' }, '{ name: 'Vue.j,s, category:, ';

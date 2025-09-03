@@ -29,15 +29,15 @@ import { User,s, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search
       description: 'Monitor and improve workplace satisfaction',;
       icon: '❤️'}
 :pages.disabled/pages/services/ai-hr-platform.tsx;
-  ];
+  ]
   const benefits = [';
     'Reduce time-to-hire by 50% with AI screening',;
     'Improve candidate quality and retention rates',;
     'Automate routine HR tasks and workflows',;
     'Data-driven insights for better decisions',;
     'Enhanced employee experience and engagement',;Compliance automation and risk reduction';
-  ];Reduce time-to-hire by 50% with AI screening',;Improve candidate quality and retention rates',;Automate routine HR tasks and workflows',;Data-driven insights for better decisions',;Enhanced employee experience and engagement',;Compliance automation and risk reduction';
-  ];
+  ]Reduce time-to-hire by 50% with AI screening',;Improve candidate quality and retention rates',;Automate routine HR tasks and workflows',;Data-driven insights for better decisions',;Enhanced employee experience and engagement',;Compliance automation and risk reduction';
+  ]
   return();
 :pages.disabled/pages/services/ai-hr-platform.tsx;
     <div: className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';

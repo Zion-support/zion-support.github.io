@@ -4,7 +4,7 @@ import: { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
 import: { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Activity, BarChart3 export default function AIHealthcare(function AIHealthcare() {): any: {}
     'Automated medical record processing and coding',';Predictive: analytics for patient outcomes',';Drug: interaction and adverse event monitoring',';Telemedicine: and remote patient monitoring',';Integration: with major EHR and healthcare systems',';Custom: AI models for specialized medical domains';
 <:pages.disabled/pages/services/AIHealthcare.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Small: Practice,',';
@@ -27,7 +27,7 @@ import: { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
   ]';Medical: imaging and radiology analysis',';Patient: diagnosis and treatment planning',';Electronic: health record optimization',';Drug: discovery and clinical trials',';Population: health management',';Medical: research and data analysis';
   ]';Improve: diagnostic accuracy by 20-35%',';Reduce: medical errors by 30-50%',';Cut: administrative costs by 25-40%',';Accelerate: treatment decisions by 40-60%',';Enhance: patient outcomes and satisfaction',';Scale: healthcare operations efficiently';
   ]';Hospitals: & Health Systems',';Medical: Practices & Clinics',';Radiology: & Imaging Centers',';Pharmaceutical: Companies',';Research: Institutions',';Health: Insurance Providers';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-red-600 via-pink-600 to-rose-600 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
 import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Activity, BarChart3 export default function AIHealthcare(function AIHealthcare() {): any {}
     'Automated medical record processing and coding',;Predictive analytics for patient outcomes',;Drug interaction and adverse event monitoring',;Telemedicine and remote patient monitoring',;Integration with major EHR and healthcare systems',;Custom AI models for specialized medical domains';
 <:pages.disabled/pages/services/AIHealthcare.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Small Practice',
@@ -115,8 +115,8 @@ import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
     {'
       name: 'Medium Practice',
       price: '$999/mo',
-      details: ['Up to 10,000 patients', 'Advanced AI features', 'Custom reports', 'Priority support']
-    },
+      details: ['Up to 10,000 patients', 'Advanced AI features', 'Custom reports', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AIHealthcare.tsx>    {'
@@ -149,10 +149,10 @@ import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
             <Heart className='w-4 h-4 mr-2'  /> AI-Powered Healthcare Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Healthcare Platform</h1>'          <p className='text-pink-100 text-xl'>Transform healthcare delivery with AI-powered tools that enhance diagnosis, optimize treatment, and improve patient outcomes.</p>
-  ];Medical imaging and radiology analysis',;Patient diagnosis and treatment planning',;Electronic health record optimization',;Drug discovery and clinical trials',;Population health management',;Medical research and data analysis';
-  ];Improve diagnostic accuracy by 20-35%',;Reduce medical errors by 30-50%',;Cut administrative costs by 25-40%',;Accelerate treatment decisions by 40-60%',;Enhance patient outcomes and satisfaction',;Scale healthcare operations efficiently';
-  ];Hospitals & Health Systems',;Medical Practices & Clinics',;Radiology & Imaging Centers',;Pharmaceutical Companies',;Research Institutions',;Health Insurance Providers';
-  ];
+  ]Medical imaging and radiology analysis',;Patient diagnosis and treatment planning',;Electronic health record optimization',;Drug discovery and clinical trials',;Population health management',;Medical research and data analysis';
+  ]Improve diagnostic accuracy by 20-35%',;Reduce medical errors by 30-50%',;Cut administrative costs by 25-40%',;Accelerate treatment decisions by 40-60%',;Enhance patient outcomes and satisfaction',;Scale healthcare operations efficiently';
+  ]Hospitals & Health Systems',;Medical Practices & Clinics',;Radiology & Imaging Centers',;Pharmaceutical Companies',;Research Institutions',;Health Insurance Providers';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-red-600 via-pink-600 to-rose-600 py-20 text-center>''

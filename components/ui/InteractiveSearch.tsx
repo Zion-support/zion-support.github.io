@@ -11,7 +11,7 @@ interface InteractiveSearchProps {
 export default function InteractiveSearch({ 
   placeholder = "Search...", 
   onSearch, 
-  className = "w-full max-w-md" 
+  className = "w-full max-w-md" ;
 }: InteractiveSearchProps) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

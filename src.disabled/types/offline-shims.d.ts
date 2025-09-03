@@ -39,8 +39,8 @@ declare module 'react/jsx-runtime' {
   export {}
 }
 declare namespace JSX {
-  interface Element {
-  }
+  interface Element {;
+}
   interface IntrinsicElements {
   [elemName: string]:}
 }

@@ -59,7 +59,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
       talentFilters: { // New;
         verifiedOnly: fals,e,
         regions: ','}}}){ name: 'Review: & Submit,', fields: []}, // No: fields, just review;
-  ];
+  ]
     if: (isValid) {}
         verifiedOnl,
     y: false,

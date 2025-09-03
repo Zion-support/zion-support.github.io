@@ -205,8 +205,8 @@ class SmartDependencyOptimizer {;
 ;
       return { optimizations: appliedOpts, results, recommendations };
     } catch (error) {  
-      this.log( `Smart Dependency Optimization failed: ${error.message  }`,ERROR`
-    } catch (error) {;
+      this.log( `Smart Dependency Optimization failed: ${error.message  }`,ERROR`;
+} catch (error) {;
       this.log( `Smart Dependency Optimization failed: ${error.message}',ERROR';
       );
       throw error;
@@ -531,8 +531,8 @@ class SmartDependencyOptimizer {;
     } catch (error) {  
       // Ignore errors in package-lock analysis;
       }
-
-    } catch (error) {;
+;
+} catch (error) {;
       // Ignore errors in package-lock analysis;
     }
 ;
@@ -626,7 +626,7 @@ class SmartDependencyOptimizer {;
       if (packageVersions[pkg].length > 1) {;
         const uniqueVersions = [;
           ...new Set(packageVersions[pkg].map(p => p.version)),;
-        ];
+        ]
         if (uniqueVersions.length > 1) {;
           duplicates.push({;
             package: pkg,;
@@ -686,8 +686,8 @@ class SmartDependencyOptimizer {;
       const packageJsonPath = path.join(
         this.projectRoot,node_modules`,
         packageName,
-        `package.json`
-    } catch (error) {;
+        `package.json`;
+} catch (error) {;
       // Ignore peer dependency check errors;
     }
 ;
@@ -1022,8 +1022,8 @@ return `${major}.${minor + 1}.${patch}`;
       }
     } catch (error) {  
       this.log(Safe optimization application failed: ${error.message  }`,
-        `ERROR`
-    } catch (error) {;
+        `ERROR`;
+} catch (error) {;
       this.log(Safe optimization application failed: ${error.message}',;
         'ERROR';
       );
@@ -1188,8 +1188,8 @@ this.log(`✅ Smart Dependency Optimization completed successfully`);this.log(`�
       return result;
     } catch (error) {  
       this.log(
-        `❌ Smart Dependency Optimization failed: ${error.message  }`,ERROR`
-    } catch (error) {;
+        `❌ Smart Dependency Optimization failed: ${error.message  }`,ERROR`;
+} catch (error) {;
       this.log(;
         `❌ Smart Dependency Optimization failed: ${error.message}',ERROR';
       );

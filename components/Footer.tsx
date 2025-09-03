@@ -11,7 +11,7 @@ import {
   Instagram,
   Brain,
   ArrowUp,
-  Heart
+  Heart;
 } from 'lucide-react';
 
 const Footer = () => {
@@ -77,7 +77,7 @@ const Footer = () => {
 
   const socialLinks = [
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin } { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter } { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook } { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram }
-  ];
+  ]
 
   Globe,
   ArrowUp} from 'lucide-react';

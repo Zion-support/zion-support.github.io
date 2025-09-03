@@ -54,8 +54,8 @@ class SmartSecurityAuditor {
         timestamp: new Date().toISOString(),
         securityHistory: this.securityHistory,
         totalAudits: this.securityHistory.length,
-        lastRun: Date.now()
-      };
+        lastRun: Date.now();
+};
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
     } catch (error) {
       this.log(`Failed to save security history: ${error.message}`, 'error');
@@ -71,8 +71,8 @@ class SmartSecurityAuditor {
       configuration: await this.auditConfiguration(),
       files: await this.auditFiles(),
       network: await this.auditNetworkSecurity(),
-      authentication: await this.auditAuthentication()
-    };
+      authentication: await this.auditAuthentication();
+};
 
     this.log(`Security Audit Results:`);
     this.log(`  - Dependency Vulnerabilities: ${audit.dependencies.vulnerabilities.length}`);
@@ -96,8 +96,8 @@ class SmartSecurityAuditor {
         const auditOutput = execSync('npm audit --json', { 
           cwd: this.projectRoot, 
           encoding: 'utf8',
-          stdio: 'pipe' 
-        });
+          stdio: 'pipe' ;
+});
         
         const audit = JSON.parse(auditOutput);
         if (audit.vulnerabilities) {
@@ -110,8 +110,8 @@ class SmartSecurityAuditor {
               description: vuln.description,
               fixAvailable: vuln.fixAvailable,
               via: vuln.via,
-              type: 'dependency'
-            });
+              type: 'dependency';
+});
           });
         }
       } catch (error) {
@@ -129,8 +129,8 @@ class SmartSecurityAuditor {
                   description: vuln.description,
                   fixAvailable: vuln.fixAvailable,
                   via: vuln.via,
-                  type: 'dependency'
-                });
+                  type: 'dependency';
+});
               });
             }
           } catch (parseError) {
@@ -145,8 +145,8 @@ class SmartSecurityAuditor {
         critical: vulnerabilities.filter(v => v.severity === 'critical').length,
         high: vulnerabilities.filter(v => v.severity === 'high').length,
         medium: vulnerabilities.filter(v => v.severity === 'medium').length,
-        low: vulnerabilities.filter(v => v.severity === 'low').length
-      };
+        low: vulnerabilities.filter(v => v.severity === 'low').length;
+};
     } catch (error) {
       this.log(`Dependency audit failed: ${error.message}`, 'error');
       return { vulnerabilities: [], count: 0, critical: 0, high: 0, medium: 0, low: 0 };
@@ -171,8 +171,8 @@ class SmartSecurityAuditor {
         critical: issues.filter(i => i.severity === 'critical').length,
         high: issues.filter(i => i.severity === 'high').length,
         medium: issues.filter(i => i.severity === 'medium').length,
-        low: issues.filter(i => i.severity === 'low').length
-      };
+        low: issues.filter(i => i.severity === 'low').length;
+};
     } catch (error) {
       this.log(`Code audit failed: ${error.message}`, 'error');
       return { issues: [], count: 0, critical: 0, high: 0, medium: 0, low: 0 };
@@ -198,8 +198,8 @@ class SmartSecurityAuditor {
           }
         }
       } catch (error) {
-        // Skip directories we can't read
-      }
+        // Skip directories we can't read;
+}
     };
     
     scanDirectory(this.projectRoot);
@@ -238,7 +238,7 @@ class SmartSecurityAuditor {
         { pattern: /console\.log/, severity: 'low', message: 'Console.log statements may leak sensitive information' },
         { pattern: /alert\s*\(/, severity: 'low', message: 'Alert statements may leak sensitive information' },
         { pattern: /confirm\s*\(/, severity: 'low', message: 'Confirm statements may leak sensitive information' }
-      ];
+      ]
       
       lines.forEach((line, index) => {
         securityPatterns.forEach(({ pattern, severity, message }) => {
@@ -249,8 +249,8 @@ class SmartSecurityAuditor {
               severity,
               message,
               code: line.trim(),
-              type: 'code'
-            });
+              type: 'code';
+});
           }
         });
       });
@@ -276,7 +276,7 @@ class SmartSecurityAuditor {
         '.env.production',
         'netlify.toml',
         'vercel.json'
-      ];
+      ]
       
       for (const configFile of configFiles) {
         if (fs.existsSync(configFile)) {
@@ -291,8 +291,8 @@ class SmartSecurityAuditor {
         critical: issues.filter(i => i.severity === 'critical').length,
         high: issues.filter(i => i.severity === 'high').length,
         medium: issues.filter(i => i.severity === 'medium').length,
-        low: issues.filter(i => i.severity === 'low').length
-      };
+        low: issues.filter(i => i.severity === 'low').length;
+};
     } catch (error) {
       this.log(`Configuration audit failed: ${error.message}`, 'error');
       return { issues: [], count: 0, critical: 0, high: 0, medium: 0, low: 0 };
@@ -312,7 +312,7 @@ class SmartSecurityAuditor {
         { pattern: /token\s*[:=]\s*['"`][^'"`]+['"`]/, severity: 'high', message: 'Hardcoded token in configuration' },
         { pattern: /debug\s*:\s*true/, severity: 'medium', message: 'Debug mode enabled in production configuration' },
         { pattern: /NODE_ENV\s*[:=]\s*['"`]development['"`]/, severity: 'medium', message: 'Development environment in production' }
-      ];
+      ]
       
       lines.forEach((line, index) => {
         configPatterns.forEach(({ pattern, severity, message }) => {
@@ -323,8 +323,8 @@ class SmartSecurityAuditor {
               severity,
               message,
               code: line.trim(),
-              type: 'configuration'
-            });
+              type: 'configuration';
+});
           }
         });
       });
@@ -353,7 +353,7 @@ class SmartSecurityAuditor {
         'public-key.pem',
         'id_rsa',
         'id_rsa.pub'
-      ];
+      ]
       
       for (const sensitiveFile of sensitiveFiles) {
         if (fs.existsSync(sensitiveFile)) {
@@ -361,8 +361,8 @@ class SmartSecurityAuditor {
             file: sensitiveFile,
             severity: 'high',
             message: 'Sensitive file found in repository',
-            type: 'file'
-          });
+            type: 'file';
+});
         }
       }
       
@@ -379,12 +379,12 @@ class SmartSecurityAuditor {
               severity: 'medium',
               message: 'File has overly permissive permissions',
               permissions,
-              type: 'file'
-            });
+              type: 'file';
+});
           }
         } catch (error) {
-          // Skip files we can't check
-        }
+          // Skip files we can't check;
+}
       };
       
       // Check permissions for key files
@@ -401,8 +401,8 @@ class SmartSecurityAuditor {
         critical: issues.filter(i => i.severity === 'critical').length,
         high: issues.filter(i => i.severity === 'high').length,
         medium: issues.filter(i => i.severity === 'medium').length,
-        low: issues.filter(i => i.severity === 'low').length
-      };
+        low: issues.filter(i => i.severity === 'low').length;
+};
     } catch (error) {
       this.log(`File audit failed: ${error.message}`, 'error');
       return { issues: [], count: 0, critical: 0, high: 0, medium: 0, low: 0 };
@@ -427,8 +427,8 @@ class SmartSecurityAuditor {
         critical: issues.filter(i => i.severity === 'critical').length,
         high: issues.filter(i => i.severity === 'high').length,
         medium: issues.filter(i => i.severity === 'medium').length,
-        low: issues.filter(i => i.severity === 'low').length
-      };
+        low: issues.filter(i => i.severity === 'low').length;
+};
     } catch (error) {
       this.log(`Network security audit failed: ${error.message}`, 'error');
       return { issues: [], count: 0, critical: 0, high: 0, medium: 0, low: 0 };
@@ -447,7 +447,7 @@ class SmartSecurityAuditor {
         { pattern: /axios\.get\s*\(\s*['"`]http:/, severity: 'medium', message: 'HTTP axios request detected' },
         { pattern: /XMLHttpRequest.*http:/, severity: 'medium', message: 'HTTP XMLHttpRequest detected' },
         { pattern: /websocket.*ws:\/\//, severity: 'medium', message: 'Unencrypted WebSocket connection' }
-      ];
+      ]
       
       lines.forEach((line, index) => {
         networkPatterns.forEach(({ pattern, severity, message }) => {
@@ -458,8 +458,8 @@ class SmartSecurityAuditor {
               severity,
               message,
               code: line.trim(),
-              type: 'network'
-            });
+              type: 'network';
+});
           }
         });
       });
@@ -488,8 +488,8 @@ class SmartSecurityAuditor {
         critical: issues.filter(i => i.severity === 'critical').length,
         high: issues.filter(i => i.severity === 'high').length,
         medium: issues.filter(i => i.severity === 'medium').length,
-        low: issues.filter(i => i.severity === 'low').length
-      };
+        low: issues.filter(i => i.severity === 'low').length;
+};
     } catch (error) {
       this.log(`Authentication audit failed: ${error.message}`, 'error');
       return { issues: [], count: 0, critical: 0, high: 0, medium: 0, low: 0 };
@@ -508,7 +508,7 @@ class SmartSecurityAuditor {
         { pattern: /root\s*[:=]\s*['"`][^'"`]+['"`]/, severity: 'medium', message: 'Hardcoded root credentials' },
         { pattern: /jwt.*secret.*['"`][^'"`]+['"`]/, severity: 'high', message: 'Hardcoded JWT secret' },
         { pattern: /session.*secret.*['"`][^'"`]+['"`]/, severity: 'high', message: 'Hardcoded session secret' }
-      ];
+      ]
       
       lines.forEach((line, index) => {
         authPatterns.forEach(({ pattern, severity, message }) => {
@@ -519,8 +519,8 @@ class SmartSecurityAuditor {
               severity,
               message,
               code: line.trim(),
-              type: 'authentication'
-            });
+              type: 'authentication';
+});
           }
         });
       });
@@ -543,8 +543,8 @@ class SmartSecurityAuditor {
         execSync('npm audit fix', { 
           cwd: this.projectRoot, 
           stdio: 'pipe',
-          timeout: 120000 
-        });
+          timeout: 120000 ;
+});
         fixes.push({ type: 'dependencies', success: true, count: audit.dependencies.vulnerabilities.length });
         this.log('✅ Dependency vulnerabilities fixed');
       } catch (error) {
@@ -592,10 +592,10 @@ class SmartSecurityAuditor {
                        audit.files.critical + audit.network.critical + audit.authentication.critical,
         highIssues: audit.dependencies.high + audit.code.high + audit.configuration.high + 
                    audit.files.high + audit.network.high + audit.authentication.high,
-        fixesApplied: fixes.filter(f => f.success).length
-      },
-      recommendations: this.generateSecurityRecommendations(audit)
-    };
+        fixesApplied: fixes.filter(f => f.success).length;
+},
+      recommendations: this.generateSecurityRecommendations(audit);
+};
 
     const reportFile = path.join(this.projectRoot, 'logs/smart-security-auditor-intelligence.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
@@ -690,8 +690,8 @@ class SmartSecurityAuditor {
       this.securityHistory.push({
         timestamp: new Date().toISOString(),
         report: report,
-        securityScore: report.securityScore
-      });
+        securityScore: report.securityScore;
+});
       
       this.saveSecurityHistory();
 
@@ -701,8 +701,8 @@ class SmartSecurityAuditor {
       this.log(`   - Critical Issues: ${report.summary.criticalIssues}`);
       this.log(`   - High Issues: ${report.summary.highIssues}`);
       this.log(`   - Fixes Applied: ${report.summary.fixesApplied}`);
-
-    } catch (error) {
+;
+} catch (error) {
       this.log(`❌ Security Auditor failed: ${error.message}`, 'error');
       throw error;
     }

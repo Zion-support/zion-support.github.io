@@ -7,50 +7,50 @@ export default function MicroSaaS() {
       icon: Rocket,
       title: 'SaaS Development',
       description: 'Build scalable, cloud-native SaaS applications from concept to deployment.',
-      features: ['Custom SaaS Platforms', 'Multi-tenant Architecture', 'API Development', 'Third-party Integrations']
-    },
+      features: ['Custom SaaS Platforms', 'Multi-tenant Architecture', 'API Development', 'Third-party Integrations'];
+},
     {
       icon: Cloud,
       title: 'Cloud Infrastructure',
       description: 'Deploy and manage your SaaS on robust, scalable cloud infrastructure.',
-      features: ['AWS & Azure Deployment', 'Auto-scaling Solutions', 'Load Balancing', 'CDN Integration']
-    },
+      features: ['AWS & Azure Deployment', 'Auto-scaling Solutions', 'Load Balancing', 'CDN Integration'];
+},
     {
       icon: Shield,
       title: 'Security & Compliance',
       description: 'Ensure your SaaS meets the highest security and compliance standards.',
-      features: ['Data Encryption', 'GDPR Compliance', 'SOC 2 Certification', 'Security Audits']
-    },
+      features: ['Data Encryption', 'GDPR Compliance', 'SOC 2 Certification', 'Security Audits'];
+},
     {
       icon: Settings,
       title: 'Maintenance & Support',
       description: 'Ongoing maintenance and support to keep your SaaS running smoothly.',
-      features: ['24/7 Monitoring', 'Regular Updates', 'Performance Optimization', 'Technical Support']
-    }
-  ];
+      features: ['24/7 Monitoring', 'Regular Updates', 'Performance Optimization', 'Technical Support'];
+}
+  ]
 
   const benefits = [
     {
       icon: DollarSign,
       title: 'Cost Effective',
-      description: 'Reduce infrastructure costs with efficient, scalable solutions.'
-    },
+      description: 'Reduce infrastructure costs with efficient, scalable solutions.';
+},
     {
       icon: Zap,
       title: 'Fast Deployment',
-      description: 'Get your SaaS to market quickly with our agile development process.'
-    },
+      description: 'Get your SaaS to market quickly with our agile development process.';
+},
     {
       icon: Users,
       title: 'Scalable Growth',
-      description: 'Build solutions that grow with your user base and business needs.'
-    },
+      description: 'Build solutions that grow with your user base and business needs.';
+},
     {
       icon: Globe,
       title: 'Global Reach',
-      description: 'Deploy worldwide with cloud infrastructure and global CDN.'
-    }
-  ];
+      description: 'Deploy worldwide with cloud infrastructure and global CDN.';
+}
+  ]
 
   const features = ['
     'Multi-tenant Architecture',
@@ -61,7 +61,7 @@ export default function MicroSaaS() {
     'Automated Testing & CI/CD',
     'Database Optimization',
     'Mobile-responsive Design'
-  ];
+  ]
 
   return (
     <>

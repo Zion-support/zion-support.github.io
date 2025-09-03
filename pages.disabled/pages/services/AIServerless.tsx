@@ -4,7 +4,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIServerless(function AIServerless() {): any: {}
     'Automated serverless monitoring and alerting',';Predictive: analytics for serverless scaling',';Smart: serverless security and compliance',';AI-driven: serverless automation and orchestration',';Real-time: serverless analytics and insights',';Custom: AI models for serverless applications';
 <:pages.disabled/pages/services/AIServerless.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Developer,',';
@@ -27,7 +27,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
   ]';Serverless: optimization',';Serverless: management',';Performance: monitoring and analytics',';Security: and compliance monitoring',';Automation: and orchestration',';Serverless: scaling and management';
   ]';Improve: serverless performance by 50-80%',';Reduce: serverless costs by 40-70%',';Cut: operational costs by 35-65%',';Enhance: serverless reliability and scalability',';Optimize: resource utilization',';Scale: serverless operations efficiently';
   ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-teal-500 via-cyan-500 to-blue-500 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIServerless(function AIServerless() {): any {}
     'Automated serverless monitoring and alerting',;Predictive analytics for serverless scaling',;Smart serverless security and compliance',;AI-driven serverless automation and orchestration',;Real-time serverless analytics and insights',;Custom AI models for serverless applications';
 <:pages.disabled/pages/services/AIServerless.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Developer',
@@ -115,8 +115,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     {'
       name: 'Business',
       price: '$799/mo',
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support']
-    },
+      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AIServerless.tsx>    {'
@@ -149,10 +149,10 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <Database className='w-4 h-4 mr-2'  /> AI-Powered Serverless Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Serverless Platform</h1>'          <p className='text-teal-100 text-xl'>Transform your serverless operations with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
-  ];Serverless optimization',;Serverless management',;Performance monitoring and analytics',;Security and compliance monitoring',;Automation and orchestration',;Serverless scaling and management';
-  ];Improve serverless performance by 50-80%',;Reduce serverless costs by 40-70%',;Cut operational costs by 35-65%',;Enhance serverless reliability and scalability',;Optimize resource utilization',;Scale serverless operations efficiently';
-  ];Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
-  ];
+  ]Serverless optimization',;Serverless management',;Performance monitoring and analytics',;Security and compliance monitoring',;Automation and orchestration',;Serverless scaling and management';
+  ]Improve serverless performance by 50-80%',;Reduce serverless costs by 40-70%',;Cut operational costs by 35-65%',;Enhance serverless reliability and scalability',;Optimize resource utilization',;Scale serverless operations efficiently';
+  ]Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-teal-500 via-cyan-500 to-blue-500 py-20 text-center>''

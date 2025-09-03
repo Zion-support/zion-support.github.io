@@ -65,7 +65,7 @@ export function NotificationProvider({ children, maxNotifications = 5 }: Notific
 export function NotificationProvider({
   children,
   maxNotifications = 5}: NotificationProviderProps) {
-  maxNotifications = 5
+  maxNotifications = 5;
 }: NotificationProviderProps) {
   const [notifications, setNotifications] = useState<Notification[]>([]);
 
@@ -84,8 +84,8 @@ export function NotificationProvider({
         duration: 5000,
         dismissible: true,
         ...notification};
-        ...notification
-      };
+        ...notification;
+};
 
       setNotifications(prev => {
         const updated = [newNotification, ...prev];
@@ -105,8 +105,8 @@ export function NotificationProvider({
 
       // Auto-dismiss
 
-    // Auto-dismiss
-  }, [maxNotifications, removeNotification]);
+    // Auto-dismiss;
+}, [maxNotifications, removeNotification]);
 
   const clearAll = useCallback(() => {
     setNotifications([])}, []);
@@ -120,8 +120,8 @@ export function NotificationProvider({
         notifications,
         addNotification,
         removeNotification,
-        clearAll
-      }}
+        clearAll;
+}}
       {children}
       <NotificationContainer />
     </NotificationContext.Provider>
@@ -308,8 +308,8 @@ export const useNotificationActions = () => {
         type "success",
         title,
         message,
-        ...options
-      })},
+        ...options;
+})},
 
   const showError = useCallback(
       addNotification({ type "error", title, message, ...options });
@@ -369,8 +369,8 @@ export function NotificationExample() {
             action: {
               label: "View Details",
               onClick: () => alert("Action clicked!")
-            duration: 10000
-          })}
+            duration: 10000;
+})}
           className="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors"
   const { showSuccess, showError, showWarning, showInfo } =
     useNotificationActions();
@@ -381,8 +381,8 @@ export function NotificationExample() {
           onClick={() => showSuccess('Success!', 'Operation completed successfully.')}
       <div className="grid grid-cols-2 md: grid-cols-4 gap-4">
           onClick={() =>
-            showSuccess('Success!', 'Operation completed successfully.')
-          }
+            showSuccess('Success!', 'Operation completed successfully.');
+}
           className="bg-green-600 text-white px-4 py-2 rounded hover: bg-green-700 transition-colors"
           onClick={() => showSuccess('Success!,Operation completed successfully.')}
           onClick={() => showError('Error!', 'Something went wrong. Please try again.')}
@@ -408,9 +408,9 @@ export function NotificationExample() {
                 onClick: () => alert('Action clicked!')},
               duration: 10000})
           className="bg-purple-600 text-white px-6 py-3 rounded-lg hover: bg-purple-700 transition-colors"
-            showSuccess("Custom Action", "Click the action button below." {
-            })
+            showSuccess("Custom Action", "Click the action button below." {;
+})
           onClick={() => showSuccess('Custom Action,Click the action button below.' {
               onClick: () => alert('Action clicked!')
-          Show Custom Action Notification
+          Show Custom Action Notification;
 }"

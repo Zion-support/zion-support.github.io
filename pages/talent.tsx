@@ -13,8 +13,8 @@ export default function Talent() {
       location: "San Francisco, CA",
       type: "Full-time",
       experience: "5+ years",
-      description: "Lead the development of cutting-edge AI solutions and machine learning models."
-    },
+      description: "Lead the development of cutting-edge AI solutions and machine learning models.";
+},
     {
       id: 2,
       title: "Cloud Solutions Architect",
@@ -22,8 +22,8 @@ export default function Talent() {
       location: "Remote",
       type: "Full-time",
       experience: "7+ years",
-      description: "Design and implement scalable cloud architectures for enterprise clients."
-    },
+      description: "Design and implement scalable cloud architectures for enterprise clients.";
+},
     {
       id: 3,
       title: "Full Stack Developer",
@@ -31,8 +31,8 @@ export default function Talent() {
       location: "San Francisco, CA",
       type: "Full-time",
       experience: "3+ years",
-      description: "Build modern web applications using React, Node.js, and cloud technologies."
-    },
+      description: "Build modern web applications using React, Node.js, and cloud technologies.";
+},
     {
       id: 4,
       title: "DevOps Engineer",
@@ -40,8 +40,8 @@ export default function Talent() {
       location: "Remote",
       type: "Full-time",
       experience: "4+ years",
-      description: "Manage infrastructure, CI/CD pipelines, and ensure system reliability."
-    },
+      description: "Manage infrastructure, CI/CD pipelines, and ensure system reliability.";
+},
     {
       id: 5,
       title: "Business Development Manager",
@@ -49,8 +49,8 @@ export default function Talent() {
       location: "San Francisco, CA",
       type: "Full-time",
       experience: "5+ years",
-      description: "Drive growth by building relationships with enterprise clients and partners."
-    },
+      description: "Drive growth by building relationships with enterprise clients and partners.";
+},
     {
       id: 6,
       title: "UX/UI Designer",
@@ -58,9 +58,9 @@ export default function Talent() {
       location: "Remote",
       type: "Full-time",
       experience: "3+ years",
-      description: "Create intuitive and beautiful user experiences for our digital products."
-    }
-  ];
+      description: "Create intuitive and beautiful user experiences for our digital products.";
+}
+  ]
 
   const benefits = [
     "Competitive salary and equity",
@@ -71,7 +71,7 @@ export default function Talent() {
     "Team building events",
     "Unlimited PTO",
     "401(k) matching"
-  ];
+  ]
 
   return (
     <PageTransition>

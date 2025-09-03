@@ -11,16 +11,16 @@ const ContactForm = () => {;,"});,"})
         comp: '',;,"});,"})
         phone: '',;,"});,"})
         service: '',;,"});,"})
-        message: '';,"});,"})
-    });,"});,"})
+        message: '';,"});,"});
+});,"});,"})
     const [isSubmitting, setIsSubmitting] = useState(false);,"});,"})
     const [submitStatus, setSubmitStatus] = useState('idle');,"});,"})
     const handleInputChange = (e) => {;,"});,"})
         const { name, value } = e.target;,"});,"})
         setFormData(prev => ({;,"});,"})
             ...prev,;,"});,"})
-            [name]: value;,"});,"})
-        }))};,"});,"})
+            [name]: value;,"});,"});
+}))};,"});,"})
     const handleSubmit = async (e) => {;,"});,"})
         e.preventDefault();,"});,"})
         setIsSubmitting(true);,"});,"})
@@ -36,16 +36,16 @@ const ContactForm = () => {;,"});,"})
                 comp: '',;,"});,"})
                 phone: '',;,"});,"})
                 service: '',;,"});,"})
-                message: '';,"});,"})
-            });,"});,"})
+                message: '';,"});,"});
+});,"});,"})
             setSubmitStatus('success');,"});,"})
             setTimeout(() => setSubmitStatus('idle'), 5000)}"});,"})
         catch (error) {;,"});,"})
             setSubmitStatus('error');,"});,"})
             setTimeout(() => setSubmitStatus('idle'), 5000)}"});,"})
         finally {;,"});,"})
-            setIsSubmitting(false)}"});,"})
-    };,"});,"})
+            setIsSubmitting(false)}"});,"});
+};,"});,"})
     const isFormValid = formData.firstName && formData.lastName && formData.email && formData.message;,"});,"})
     return (<div className="max-w-2xl mx-auto">;,"});,"})
       {submitStatus === 'success' && (<div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">;,"});,"})
@@ -260,7 +260,7 @@ export { ContactForm };,"});,"})
  const ContactForm = () => { const [formData, setFormData] = useState ({ firstName: ', lastName: ', email: ', comp: ', phone: ', service: ', message: '})  const [isSubmitting, setIsSubmitting] = useState (false)  const [submitStatus, setSubmitStatus] = useState ('idle')  const handleInputChange = e => { const { name, value } = e.target setFormData (prev => ({ ...prev, [name]: value}) )  } const handleSubmit = async e => { e.preventDefault ()  setIsSubmitting (true)  setSubmitStatus ('idle')  try {'''";
  const ContactForm = () => { const [formData, setFormData] = useState ({ firstName: ', lastName: ', email: ', comp: ', phone: ', service: ', message: '})  const [isSubmitting, setIsSubmitting] = useState (false)  const [submitStatus, setSubmitStatus] = useState ('idle')  const handleInputChange = e => { const { name, value } = e.target setFormData (prev => ({ ...prev, [name]: value}) )  } const handleSubmit = async e => { e.preventDefault ()  setIsSubmitting (true)  setSubmitStatus ('idle')  try {'''""
 
-""
+"";
 }}}
 import React from 'react';
 import { SEO } from '@/components/SEO';

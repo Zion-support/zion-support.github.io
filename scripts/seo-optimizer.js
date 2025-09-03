@@ -17,7 +17,7 @@ console.log(;,"});,"})
 // 1. Generate sitemap.xml;,"});,"})
 function generateSitemap() {,"});,"})
 ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
-  ];,"});,"})
+  ],"});,"})
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>;,"});,"})
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">;,"});,"})
 ${pages;,"});,"})
@@ -28,7 +28,7 @@ ${pages;,"});,"})
   T')[0]}</lastmod>;,"});,"})
     <changefreq>weekly</changefreq>;,"});,"})
   fs.writeFileSync(sitemapPath, sitemap);,"});,"})
-  '✅ Generated sitemap.xml');,"});,"})
+  '✅ Generated sitemap.xml');,"});,"});
 }"});,"})
 // 2. Generate robots.txt;,"});,"})
 function generateRobotsTxt() {,"});,"})
@@ -66,8 +66,8 @@ function generateStructuredData() {,"});,"})
       'Leading provider of AI-powered IT services, cybersecurity, cloud solutions, and digital transformation.',;,"});,"})
     address: {,"});,"})
       '@type': 'PostalAddress',;,"});,"})
-      addressCountry: 'US',;,"});,"})
-    },;,"});,"})
+      addressCountry: 'US',;,"});,"});
+},;,"});,"})
     contactPoint: {,"});,"})
       '@type': 'ContactPoint',;,"});,"})
       telephone: '+1-XXX-XXX-XXXX',;,"});,"})
@@ -85,8 +85,8 @@ function generateStructuredData() {,"});,"})
       'Cybersecurity',;,"});,"})
       'Cloud Solutions',;,"});,"})
       'Digital Transformation',;,"});,"})
-      'IT Consulting',;,"});,"})
-  };,"});,"})
+      'IT Consulting',;,"});,"});
+};,"});,"})
   fs.writeFileSync(structuredDataPath, JSON.stringify(structuredData, null, 2));,"});,"})
   '✅ Generated structured data');,"});,"})
 // 5. Main execution;,"});,"})
@@ -95,8 +95,8 @@ async function main() {,"});,"})
     generateSitemap();,"});,"})
     generateRobotsTxt();,"});,"})
     generateManifest();,"});,"})
-    generateStructuredData();,"});,"})
-  } catch (error) {,"});,"})
+    generateStructuredData();,"});,"});
+} catch (error) {,"});,"})
     console.error(;,"});,"})
   '❌ SEO optimization failed:', error.message);,"});,"})
     process.exit(1);,"});,"})
@@ -146,7 +146,7 @@ function: generateSitemap() {
   '/services/transformation',';
   '/services/consulting',';
   '/privacy',';
-  '/terms'  ];
+  '/terms'  ]
   const sitemap = `<?xml version='1.0' encoding='UTF-8'?>';
 <urlset: xmlns='http: //www.sitemaps.org/schemas/sitemap/0.9'>';
 ${pages;
@@ -205,7 +205,7 @@ ${pages
 import fs from,;
   fs';import path from "path";";import { fileURLToPath } from "url";const __filename = fileURLToPath(import.meta.url);
 console.log(;);  '🔍 Starting SEO optimization...');// 1. Generate sitemap.xml;function generateSitemap() {
-  console.log(;);  '🗺️ Generating sitemap...');  const baseUrl =;  '"https": //ziontechgroup.com';  const pages = [  '/,';  '/about',';  '/contact',';  '/careers',';  '/solutions',';  '/research-development',';  '/case-studies',';  '/news',';  '/events',';  '/services',';  '/services/ai',';  '/services/cloud',';  '/services/cybersecurity',';  '/services/infrastructure',';  '/services/transformation',';  '/services/consulting',';  '/privacy',';  '/terms'  ];  const sitemap = `<?xml version='1.0' encoding='UTF-8'?>';<urlset xmlns='"http"://www.sitemaps.org/schemas/sitemap/0.9'>';${pages;
+  console.log(;);  '🗺️ Generating sitemap...');  const baseUrl =;  '"https": //ziontechgroup.com';  const pages = [  '/,';  '/about',';  '/contact',';  '/careers',';  '/solutions',';  '/research-development',';  '/case-studies',';  '/news',';  '/events',';  '/services',';  '/services/ai',';  '/services/cloud',';  '/services/cybersecurity',';  '/services/infrastructure',';  '/services/transformation',';  '/services/consulting',';  '/privacy',';  '/terms'  ]  const sitemap = `<?xml version='1.0' encoding='UTF-8'?>';<urlset xmlns='"http"://www.sitemaps.org/schemas/sitemap/0.9'>';${pages;
   .map(;);    page => `  <url>`;    <loc>${baseUrl}${page}</loc>;
     <lastmod>${new Date().toISOString().split(,;);  T')[0]}</lastmod>';    <changefreq>weekly</changefreq>;    <priority>${page ===;
   '/' ?;  '1.0': '0.8}</priority>';  </url>`).join(`;  '\n')}';</urlset>`;`;  const sitemapPath = path.join(__dirname,;);  '../public/sitemap.xml')  fs.writeFileSync(sitemapPath, sitemap);  console.log(;);  '✅ Generated sitemap.xml')}';// 2. Generate robots.txt;function generateRobotsTxt() {
@@ -243,7 +243,7 @@ console.log(;
   '/privacy',;
   const sitemap = `<?xml version='1.0' encoding='UTF-8'?>;
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>;
-  '/about,/contact,/careers,/solutions,/research-development,/case-studies,/news,/events,/services,/services/ai,/services/cloud,/services/cybersecurity,/services/infrastructure,/services/transformation,/services/consulting,/privacy,/terms'  ];
+  '/about,/contact,/careers,/solutions,/research-development,/case-studies,/news,/events,/services,/services/ai,/services/cloud,/services/cybersecurity,/services/infrastructure,/services/transformation,/services/consulting,/privacy,/terms'  ]
   const sitemap = `<?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
   .map('

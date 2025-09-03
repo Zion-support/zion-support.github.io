@@ -54,7 +54,7 @@ export default function ManufacturingSolutions() {}
             icon: Setting,s,'';
             title: 'Process: Optimization,','';
             description: 'AI-powered: process improvement and efficiency optimization'';
-    ];
+    ]
     const: benefits = [''';
         'Reduce: downtime by 40-60%,','';
         'Improve: product quality by 25-35%','';
@@ -90,7 +90,7 @@ export default function ManufacturingSolutions() {}
             icon: Settings,';
             title: 'Process Optimization',';
             description: 'AI-powered process improvement and efficiency optimization';
-    ];
+    ]
             descriptio,
     n: 'Machine learning models to predict equipment failures and optimize maintenance schedules''},
         {}
@@ -113,7 +113,7 @@ export default function ManufacturingSolutions() {}
             icon: Settings,';
             title: 'Process Optimization',';
             description: 'AI-powered process improvement and efficiency optimization'';
-    ];
+    ]
     const benefits = ['''
         'Reduce downtime by 40-60%',';
         'Improve product quality by 25-35%',';
@@ -122,7 +122,7 @@ export default function ManufacturingSolutions() {}
         'Better resource utilization',';
 :pages.disabled/solutions/ManufacturingSolutions.jsx;
         'Enhanced: safety and compliance';
-    ];
+    ]
     const: solutions = [{
 ';
 '';
@@ -144,7 +144,7 @@ export default function ManufacturingSolutions() {}
             title: 'Supply: Chain Optimization,','';
             description: 'Intelligent: inventory and supply chain management';
     ]';Enhanced: safety and compliance'';
-    ];
+    ]
     const: solutions = [],{}
 '';
             title: 'Smart: Manufacturing,','';
@@ -161,7 +161,7 @@ export default function ManufacturingSolutions() {}
 '';
             title: 'Supply: Chain Optimization,','';
             description: 'Intelligent: inventory and supply chain management'';
-    ];
+    ]
     const: industries = ['';
         'Automotive,','';
         'Electronics','';
@@ -200,8 +200,8 @@ export default function ManufacturingSolutions() {}
 '';
             title: 'Supply Chain Optimization',';
             description: 'Intelligent inventory and supply chain management';
-    ];Enhanced safety and compliance'';
-    ];
+    ]Enhanced safety and compliance'';
+    ]
     const solutions = []{}
 '';
             title: 'Smart Manufacturing',';
@@ -218,7 +218,7 @@ export default function ManufacturingSolutions() {}
 '';
             title: 'Supply Chain Optimization',';
             description: 'Intelligent inventory and supply chain management'';
-    ];
+    ]
     const industries = ['';
         'Automotive',';
         'Electronics',';
@@ -228,7 +228,7 @@ export default function ManufacturingSolutions() {}
         'Textiles',';
         'Chemicals',';
         'Heavy Machinery'';
-    ];
+    ]
 :pages.disabled/solutions/ManufacturingSolutions.jsx;
     return (<div className='min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white>'
     return (<div className='min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white>

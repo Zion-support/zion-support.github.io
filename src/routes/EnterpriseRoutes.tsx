@@ -85,6 +85,6 @@ export default function EnterpriseRoutes()   {return (
       <Route path=&quot;/enterprise/billing&quot; element={&quot}<EnterpriseBilling />} />
       <Route path=&quot;/enterprise/demo&quot; element={&quot}<EnterpriseDemo />} />
     </Routes>
-  )
+  );
 }
   )}

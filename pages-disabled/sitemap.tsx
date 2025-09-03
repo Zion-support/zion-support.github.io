@@ -17,7 +17,7 @@ import {
   MessageSquare,
   Shield,
   Zap,
-  Globe
+  Globe;
 } from 'lucide-react';
 
 const SitemapPage: React.FC = () => {

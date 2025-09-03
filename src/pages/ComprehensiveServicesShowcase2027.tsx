@@ -75,7 +75,7 @@ import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from '../data/ultimateInnovativeSer
   Activity,
   Gauge,
   ShieldCheck,
-  X
+  X;
 } from 'lucide-react';';
 
 ;,"});,"})
@@ -120,7 +120,7 @@ import { comprehensiveServices } from &apos;../data/comprehensiveServices';
   Target, Lightbulb,
   BarChart3, PieChart,
   Activity, Gauge,
-  ShieldCheck, X'
+  ShieldCheck, X';
 } from 'lucide-react';
 // Import our existing service data'
   BarChart3, PieChart,;
@@ -207,13 +207,13 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
         features: service.features, benefits: service.benefits,
         pricing: { starter: service.pricing.starter, professional: service.pricing.professional,
           enterprise: service.pricing.enterprise, currency: service.pricing.currency,
-          billingCycle: service.pricing.billingCycle
-        }, rating: service.rating,
+          billingCycle: service.pricing.billingCycle;
+}, rating: service.rating,
         reviewCount: service.reviewCount, launchDate: service.launchDate,
         status: service.status, marketPrice: service.marketPrice,
         estimatedDelivery: service.estimatedDelivery, website: service.website,
-        contactInfo: service.contactInfo
-      })});
+        contactInfo: service.contactInfo;
+})});
     // Add services from comprehensiveServices
     comprehensiveServices.forEach(service => {
       services.push({
@@ -344,8 +344,8 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {""
       case 'rating': filtered.sort((a, b) => b.rating - a.rating);
       case 'newest': filtered.sort((a, b) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime());
 
-    return filtered}, [allServices, searchTerm, selectedCategory, sortBy])
-  }, [allServices, searchTerm, selectedCategory, sortBy]);&apos}, [allServices, searchTerm, selectedCategory, sortBy]);
+    return filtered}, [allServices, searchTerm, selectedCategory, sortBy]);
+}, [allServices, searchTerm, selectedCategory, sortBy]);&apos}, [allServices, searchTerm, selectedCategory, sortBy]);
   const getCategoryIcon = (category: string) => {switch (category) {
     switch (sortBy) {"
         break;""
@@ -475,8 +475,8 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {""
       case 'Metaverse': return <Globe className="w-6 h-6" /" >;"
       case 'Robotics': return <Factory className="w-6 h-6" /" >;"
       case 'Space Technology': return <Satellite className="w-6 h-6" /" >;"
-      default: return <Lightbulb className="w-6 h-6" /" >;, "
-  };
+      default: return <Lightbulb className="w-6 h-6" /" >;, ";
+};
   const getStatusColor = (status: string) => {switch (status.toLowerCase()) {
   const getStatusColor = (status: string) => {
     switch (status.toLowerCase()) {"

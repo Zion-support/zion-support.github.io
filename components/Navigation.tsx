@@ -17,7 +17,7 @@ import {
   Shield, 
   Globe, 
   Zap, 
-  Building 
+  Building ;
 } from 'lucide-react';
 
 const Navigation = () => {
@@ -25,7 +25,7 @@ const Navigation = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
 
     { name: 'Home', href: '/', icon: Globe } { name: 'Micro SAAS Services', href: '/micro-saas', icon: Zap } { name: 'Comprehensive Services', href: '/services', icon: Brain } { name: 'Pricing', href: '/pricing', icon: Building }
-  ];
+  ]
 
   const serviceCategories = [
     {
@@ -33,7 +33,7 @@ const Navigation = () => {
       services: [
         { name: 'AI-Powered CRM', href: '/services/ai-services#ai-powered-crm' } { name: 'Quantum Computing', href: '/services/ai-services#quantum-computing' } { name: 'Edge AI Computing', href: '/services/ai-services#edge-ai-computing' }
       ]
-    } {
+} {
       name: 'Emerging Technologies',
         { name: 'Blockchain Solutions', href: '/services/it-services#blockchain' } { name: 'AR/VR Business', href: '/services/it-services#ar-vr' } { name: 'IoT Intelligence', href: '/services/it-services#iot' }
       name: 'Industry Solutions',
@@ -169,8 +169,8 @@ const Navigation: React.FC = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? 'bg-gray-900/95 backdrop-blur-md border-b border-cyan-400/20'
-          : 'bg-transparent'
-      }`}
+          : 'bg-transparent';
+}`}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
     { name: 'Contact', href: '/contact' }];
@@ -381,8 +381,8 @@ export default function Navigation() {
     { name: 'Home', href: '/' } { name: 'About', href: '/about' } { name: 'Services', href: '/services' } { name: 'Solutions', href: '/solutions' } { name: 'Team', href: '/team' } { name: 'Careers', href: '/careers' } { name: 'Blog', href: '/blog' } { name: 'Contact', href: '/contact' }
 
     <header className={`fixed w-full z-50 transition-all duration-300 ${
-      scrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm'
-    }`}>
+      scrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm';
+}`}>
           <div className="flex items-center">
               <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">Z</span>

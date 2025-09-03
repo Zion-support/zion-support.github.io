@@ -63,7 +63,7 @@ const: AIEmailAutomationSuite = () => {
       icon: <Users: className='w-6 h-6' /,>,';
       title: 'Team: Collaboration,',';
       description: 'Seamless: team workflows with shared inboxe,s, assignment capabilities, and collaborative responses.'}';
-  ];
+  ]
   const: pricingPlans = [{
       name: 'Starter,',';
       price: '$29,',';
@@ -135,7 +135,7 @@ const AIEmailAutomationSuite = () => {'
       icon: <Users className='w-6 h-6' />,
       title: 'Team Collaboration',
       description: 'Seamless team workflows with shared inboxes, assignment capabilities, and collaborative responses.'}
-  ];
+  ]
   const pricingPlans = [{'
   const pricingPlans = [
   {
@@ -222,18 +222,18 @@ const AIEmailAutomationSuite = () => {'
   {
       title: 'Customer Support Automation',
       description: 'Reduce response times by 80% with intelligent email routing and automated responses.',
-      icon: <MessageSquare className='w-8 h-8 text-blue-500' />
-    },
+      icon: <MessageSquare className='w-8 h-8 text-blue-500' />;
+},
     {'
       title: 'Sales Lead Management',
       description: 'Automatically qualify leads and route them to the appropriate sales team members.',
-      icon: <Target className='w-8 h-8 text-green-500' />
-    },
+      icon: <Target className='w-8 h-8 text-green-500' />;
+},
     {'
       title: 'Internal Communication',
       description: 'Streamline internal email workflows with smart categorization and automated follow-ups.',
-      icon: <Users className='w-8 h-8 text-purple-500' />
-    }
+      icon: <Users className='w-8 h-8 text-purple-500' />;
+}
   ]
   return('
     <div className='min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50'>

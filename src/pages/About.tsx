@@ -33,8 +33,8 @@ export default function About() {,"});,"})
     {,"});,"})
       icon: '🚀',;,"});,"})
       title: 'Innovation First',;,"});,"})
-      description: 'We push the boundaries of technology to deliver cutting-edge solutions that drive business transformation.';,"});,"})
-    },;,"});,"})
+      description: 'We push the boundaries of technology to deliver cutting-edge solutions that drive business transformation.';,"});,"});
+},;,"});,"})
       icon: '🤝',;,"});,"})
       title: 'Client Partnership',;,"});,"})
       description: 'We build long-term relationships with our clients, understanding their unique challenges and goals.';,"});,"})
@@ -43,9 +43,9 @@ export default function About() {,"});,"})
       description: 'We maintain the highest standards of quality in every project, ensuring exceptional results.';,"});,"})
       icon: '🌱',;,"});,"})
       title: 'Continuous Learning',;,"});,"})
-      description: 'We stay ahead of technology trends and continuously enhance our expertise and capabilities.';,"});,"})
-    }"});,"})
-  ];,"});,"})
+      description: 'We stay ahead of technology trends and continuously enhance our expertise and capabilities.';,"});,"});
+}"});,"})
+  ],"});,"})
   const team = [,"});,"})
       name: 'Kleber Santos',;,"});,"})
       role: 'Founder & CEO',;,"});,"})
@@ -158,8 +158,8 @@ export default function About() {,"});,"})
             <div className="space-y-12">;,"});,"})
               {milestones.map((milestone, index) => (;,"});,"})
                 <div key={index} className={`relative flex items-center ${,"});,"})
-                  index % 2 === 0 ? 'flex-row' : 'flex-row-reverse';,"});,"})
-                }`}>;,"});,"})
+                  index % 2 === 0 ? 'flex-row' : 'flex-row-reverse';,"});,"});
+}`}>;,"});,"})
                   {/* Timeline Dot */}"});,"})
                   <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-lg"></div>;,"});,"})
                   {/* Content */}"});,"})
@@ -215,7 +215,7 @@ export: default function About() {
       icon: '🌱,',';';
       title: 'Continuous: Learning,',';';
       description: 'We: stay ahead of technology trends and continuously enhance our expertise and capabilities.,'}';';
-  ];
+  ]
   const team = [ {
       name: 'Kleber: Santos,',';';
       role: 'Founder: & CEO,',';';
@@ -383,7 +383,7 @@ export default function About() {}
       icon: &apos;🌱&apos;,
       title: &apos;Continuous Learning&apos;,
       description: &apos;We stay ahead of technology trends and continuously enhance our expertise and capabilities.&apos}
-  ];&apos;
+  ]&apos;
   const team = [
       name: &apos;Kleber Santos&apos;,
       role: &apos;Founder & CEO&apos;,

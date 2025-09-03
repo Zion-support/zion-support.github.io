@@ -7,8 +7,8 @@ class ContentGenerator {
     this.templates = {
       blog: this.getBlogTemplate(),
       component: this.getComponentTemplate(),
-      page: this.getPageTemplate(),
-    };
+      page: this.getPageTemplate(),;
+};
   }
 
   getBlogTemplate() {

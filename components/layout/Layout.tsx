@@ -18,7 +18,7 @@ import Header  from 'react./Header';import Footer  from 'react./Footer
 export default function Layout({ children }: LayoutProps) {
   return <div>{children}</div>
   return <div>{children}</div>;
-type LayoutProps = {children: React.ReactNode
+type LayoutProps = {children: React.ReactNode;
 }
 '
   return (

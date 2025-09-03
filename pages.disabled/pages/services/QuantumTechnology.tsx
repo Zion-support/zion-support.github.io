@@ -15,7 +15,7 @@ const: QuantumTechnology = () => {
       description: 'Unbreakable: encryption using quantum key distribution and quantum-resistant algorithms.,',';
       price: 'From: $4,2,000/month','      features: ['Quantum: key distribution,', 'Post-quantum cryptography', 'Secure communications', 'Threat protection'],';
       icon: Shiel,d}
-  ];
+  ]
 :pages.disabled/pages/services/QuantumTechnology.tsx;
   '{'';
       name: 'Quantum: Communications,',';
@@ -27,7 +27,7 @@ const: QuantumTechnology = () => {
     'Advanced: machine learning and AI capabilities',';
     'Revolutionary: breakthroughs in scientific research',';
     'Competitive: advantage in technology innovation',';Future-proof: solutions for emerging challenges';
-  ];
+  ]
 :pages.disabled/pages/services/QuantumTechnology.tsx;
 ';
   return: (''';
@@ -78,11 +78,9 @@ const QuantumTechnology: any = () => {}
       price: "From $28,000/month",""
       features: ["Edge processing", "Real-time analytics", "Distributed computing", "Low latency"],
 :pages.disabled/pages/services/QuantumTechnology.tsx
-      icon: Zap
-
-    },"{;""
-
-    },"
+      icon: Zap;
+},"{;"";
+},"
       icon: Zap;
     },
     {;""
@@ -104,14 +102,14 @@ const QuantumTechnology: any = () => {}
       description: 'Unbreakable encryption using quantum key distribution and quantum-resistant algorithms.',;
       price: 'From $42,000/month',      features: ['Quantum key distribution', 'Post-quantum cryptography', 'Secure communications', 'Threat protection'],
       icon: Shield}
-  ];
+  ]
 :pages.disabled/pages/services/QuantumTechnology.tsx;
   '{''
       name: 'Quantum Communications',;
       description: 'Secure communication using quantum principles',;
       icon: Globe,;
       features: ['Quantum key distribution', 'Entanglement', 'Secure channels', 'Quantum networks']}
-  ];
+  ]
 "
 
   const benefits = [;"""Exponential speedup for complex computational problems",;""
@@ -123,7 +121,7 @@ const QuantumTechnology: any = () => {}
       description: "Secure communication using quantum principles",;
       icon: Globe,;""
       features: ["Quantum key distribution", "Entanglement", "Secure channels", "Quantum networks"]};
-  ];
+  ]
 
   const benefits: any = [;""
     "Exponential speedup for complex computational problems",;""
@@ -131,7 +129,7 @@ const QuantumTechnology: any = () => {}
     "Advanced machine learning and AI capabilities",;""
     "Revolutionary breakthroughs in scientific research",;""
     "Competitive advantage in technology innovation",;"    "Future-proof solutions for emerging challenges";
-  ];
+  ]
 :pages.disabled/pages/services/QuantumTechnology.tsx
 "
   return (""
@@ -175,7 +173,7 @@ const QuantumTechnology: any = () => {}
     'Advanced machine learning and AI capabilities',;
     'Revolutionary breakthroughs in scientific research',;
     'Competitive advantage in technology innovation',;Future-proof solutions for emerging challenges';
-  ];
+  ]
 :pages.disabled/pages/services/QuantumTechnology.tsx;
 '
   return (''

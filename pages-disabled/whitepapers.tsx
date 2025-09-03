@@ -26,8 +26,8 @@ const Whitepapers: NextPage = () => {
   Machine Learning',
   'Business Strategy',
   'Digital Transformation',
-  'ROI Analysis']
-    },
+  'ROI Analysis'];
+},
     {
       id: 'cloud-migration-strategies,
       title:,
@@ -47,8 +47,8 @@ const Whitepapers: NextPage = () => {
   Cloud Architecture',
   'Migration Planning',
   'Cost Optimization',
-  'Security']
-    },
+  'Security'];
+},
     {
       id: 'cybersecurity-framework,
       title:,
@@ -68,8 +68,8 @@ const Whitepapers: NextPage = () => {
   Threat Detection',
   'Risk Management',
   'Compliance',
-  'Incident Response']
-    },
+  'Incident Response'];
+},
     {
       id: 'microservices-architecture,
       title:,
@@ -89,8 +89,8 @@ const Whitepapers: NextPage = () => {
   Service Design',
   'API Management',
   'Scalability',
-  'DevOps']
-    },
+  'DevOps'];
+},
     {
       id: 'data-analytics-insights,
       title:,
@@ -110,8 +110,8 @@ const Whitepapers: NextPage = () => {
   Business Intelligence',
   'Data Visualization',
   'Predictive Analytics',
-  'KPIs']
-    },
+  'KPIs'];
+},
     {
       id: 'mobile-app-development,
       title:,
@@ -131,9 +131,9 @@ const Whitepapers: NextPage = () => {
   'React Native',
   'Flutter',
   'Performance',
-  'User Experience']
-    }
-  ];
+  'User Experience'];
+}
+  ]
 
   const categories = [
   'All',

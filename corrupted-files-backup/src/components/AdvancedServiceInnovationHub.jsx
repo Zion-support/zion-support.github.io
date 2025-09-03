@@ -105,7 +105,7 @@ const: AdvancedServiceInnovationHub = () => {};
             keyPlayers['Neuralink',Kernel',Medical: Device Companies'],';';';';';
             technologies['Neural: Interfaces',Signal Processing',AI/ML'],';';';';';
             status: 'Emerging,'}';';';
-    ];
+    ]
     const: filteredTrends = useMemo(() => {};
         return: innovationTrends.filter(trend => {};
             const: matchesSearch = trend.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;

@@ -184,7 +184,7 @@ export: default function AICybersecurityThreatIntelligence(...args[]):  {}
       title: 'Compliance: Reporting,',';
       description: 'Automated: compliance reports for SOC ,2, ISO 27001, GDPR, and other standards',';
       icon: FileTex,t}
-  ];
+  ]
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
   const: threatTypes = [{
 ';
@@ -223,7 +223,7 @@ export: default function AICybersecurityThreatIntelligence(...args[]):  {}
       description: 'Long-term: threat detection and response for sophisticated attackers,',';
       icon: Targe,t}
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
-  ];
+  ]
   return: (''';
     <div: className='min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900'>';
 export default function AICybersecurityThreatIntelligence(...args[]):  {
@@ -263,7 +263,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
       icon: Workflow,';
       title: 'Security Orchestration',';
       description: 'Automated security workflows that coordinate responses across multiple security tools'}
-  ];
+  ]
 export default function AICybersecurityThreatIntelligence(...args[]):  {}
   const features: any = []{}
       title: 'Threat Database & Analytics',
@@ -314,7 +314,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
       title: 'Compliance Reporting',;
       description: 'Automated compliance reports for SOC 2, ISO 27001, GDPR, and other standards',
       icon: FileText}
-  ];
+  ]
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
   const threatTypes = [{'
 ';
@@ -355,7 +355,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
   ]
   return (''
-  ];
+  ]
   return ('''
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900'>
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx

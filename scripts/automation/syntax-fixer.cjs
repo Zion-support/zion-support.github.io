@@ -340,7 +340,7 @@ export default ${name.toLowerCase()};
         this.removeCorruptContent,;
         this.fixModuleSystemErrors,;
         this.fixCommonSyntaxErrors;
-      ];
+      ]
       ;
       for (let i = 0; i < fixes.length; i++) {;
         let result;
@@ -419,8 +419,8 @@ export default ${name.toLowerCase()};
     this.filesProcessed = 0;
     
     const srcDir = path.join(this.projectRoot, `src`);
-    if (fs.existsSync(srcDir)) {
-    } catch (error) {;
+    if (fs.existsSync(srcDir)) {;
+} catch (error) {;
       this.log('error', `Error scanning directory ${dirPath}:`, error.message);
     }
   }
@@ -450,8 +450,8 @@ export default ${name.toLowerCase()};
       duration,
       filesProcessed: this.filesProcessed,
       fixesApplied: this.fixesApplied,
-      status: `completed`
-    };
+      status: `completed`;
+};
     
     const reportFile = path.join(this.projectRoot, `syntax-error-fixer-report.json`);
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));

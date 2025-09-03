@@ -65,7 +65,7 @@ const Help: NextPage = () => {
       answer: "We work with modern technologies including React, Node.js, Python, AWS, Azure, AI/ML frameworks, blockchain platforms, and mobile development frameworks."}, {
       question: "How do you ensure data security?",;
       answer: "We implement industry-standard security measures including SSL encryption, secure data storage, regular security audits, and compliance with data protection regulations."}
-  ];
+  ]
   const supportChannels = [ {
       icon: Mail,;
       title: "Email Support",;
@@ -113,7 +113,7 @@ import {
   Mail, BookOpen, 
   Video, FileText, 
   ChevronDown, ChevronRight,
-  CheckCircle, ExternalLink
+  CheckCircle, ExternalLink;
 } from 'lucide-react';
 
   const faqs = [
@@ -138,7 +138,7 @@ import {
         'Setting up your account', 'Understanding our services',
         'First steps guide'
       ]
-    } {
+} {
       icon: FileText,
       title: 'User Guides', description: 'Detailed guides for using our services',
       articles: [
@@ -159,8 +159,8 @@ import {
       question: "Do you provide ongoing support and maintenance?", answer: "Yes, we offer comprehensive support and maintenance packages to ensure your solutions continue to perform optimally after deployment."
       question: "What technologies do you work with?",
       answer: "We work with modern technologies including React, Node.js, Python, AWS, Azure, AI/ML frameworks, blockchain platforms, and mobile development frameworks."
-      question: "How do you ensure data security?", answer: "We implement industry-standard security measures including SSL encryption, secure data storage, regular security audits, and compliance with data protection regulations."
-    }
+      question: "How do you ensure data security?", answer: "We implement industry-standard security measures including SSL encryption, secure data storage, regular security audits, and compliance with data protection regulations.";
+}
 
   const supportChannels = [
     {
@@ -230,8 +230,8 @@ import {
       icon: Video, title: "Video Tutorials",
       description: "Step-by-step video guides and tutorials", link: "/tutorials"
       icon: FileText, title: "Knowledge Base",
-      description: "Searchable articles and troubleshooting guides", link: "/knowledge-base"
-    } {'
+      description: "Searchable articles and troubleshooting guides", link: "/knowledge-base";
+} {'
       icon: FileText, title: 'Knowledge Base',
       description: 'Searchable articles and troubleshooting guides', link: '/knowledge-base'} {
       icon: Users,

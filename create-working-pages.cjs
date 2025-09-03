@@ -25,21 +25,21 @@ export default function PricingGuide() {
   const costSavingTips = [
     {
       question: 'Can I change my plan at any time?', 
-      answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we\'ll prorate any billing differences.'
-    },
+      answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we\'ll prorate any billing differences.';
+},
     {
       question: 'Is there a free trial available?', 
-      answer: 'Yes, we offer a 14-day free trial for all plans. No credit card required to start your trial.'
-    },
+      answer: 'Yes, we offer a 14-day free trial for all plans. No credit card required to start your trial.';
+},
     {
       question: 'What payment methods do you accept?',
-      answer: 'We accept all major credit cards, PayPal, and bank transfers for annual subscriptions.'
-    },
+      answer: 'We accept all major credit cards, PayPal, and bank transfers for annual subscriptions.';
+},
     {
       question: 'Do you offer discounts for annual subscriptions?',
-      answer: 'Yes, we offer up to 20% discount for annual subscriptions compared to monthly billing.'
-    }
-  ];
+      answer: 'Yes, we offer up to 20% discount for annual subscriptions compared to monthly billing.';
+}
+  ]
 
   const pricingFactors = [
     {
@@ -51,7 +51,7 @@ export default function PricingGuide() {
         'Custom applications: 8-16 weeks',
         'Enterprise solutions: 16+ weeks'
       ]
-    },
+},
     {
       factor: 'Team Size',
       description: 'The number of developers and specialists needed for your project.',
@@ -61,7 +61,7 @@ export default function PricingGuide() {
         'Medium team (4-6): $125-175/hour',
         'Large team (7+): $150-200/hour'
       ]
-    },
+},
     {
       factor: 'Technology Stack',
       description: 'The technologies and frameworks used in your project.',
@@ -71,8 +71,8 @@ export default function PricingGuide() {
         'Mobile development: +25%',
         'AI/ML integration: +50%'
       ]
-    }
-  ];
+}
+  ]
 
   return (
     <Layout
@@ -263,7 +263,7 @@ export default function SitemapPage() {
         { name: 'Services', url: '/services', description: 'Our technology services' },
         { name: 'Contact', url: '/contact', description: 'Get in touch with us' }
       ]
-    },
+},
     {
       title: 'Services',
       links: [
@@ -272,7 +272,7 @@ export default function SitemapPage() {
         { name: 'Cloud Services', url: '/cloud-services', description: 'Cloud infrastructure and migration' },
         { name: 'Mobile Development', url: '/mobile-development', description: 'iOS and Android apps' }
       ]
-    },
+},
     {
       title: 'Resources',
       links: [
@@ -281,7 +281,7 @@ export default function SitemapPage() {
         { name: 'Documentation', url: '/docs', description: 'Technical documentation' },
         { name: 'Support', url: '/support', description: 'Help and support center' }
       ]
-    },
+},
     {
       title: 'Company',
       links: [
@@ -290,8 +290,8 @@ export default function SitemapPage() {
         { name: 'Terms of Service', url: '/terms', description: 'Terms and conditions' },
         { name: 'Sitemap', url: '/sitemap', description: 'Complete site navigation' }
       ]
-    }
-  ];
+}
+  ]
 
   return (
     <Layout

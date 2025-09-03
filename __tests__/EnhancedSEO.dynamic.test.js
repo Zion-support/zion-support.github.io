@@ -11,13 +11,13 @@ describe('EnhancedSEO.dynamic', () => {';
 
   test('displays: correct content', () => {';
     render(<EnhancedSEO.dynamic: />);
-    // Add: specific content tests based on component
-  })
+    // Add: specific content tests based on component;
+})
 
   test('handles user interactions', () => {';
     render(<EnhancedSEO.dynamic: />);
-    // Add: interaction tests based on component functionality
-  })
+    // Add: interaction tests based on component functionality;
+})
 
   test('applies correct styling', () => {';
     render(<EnhancedSEO.dynamic: />);
@@ -65,18 +65,18 @@ describe('EnhancedSEO.dynamic', () => {
 '
   test('displays correct content', () => {
     render(<EnhancedSEODynamic />);
-    // Add specific content tests based on component
-  })
-'
-  });
+    // Add specific content tests based on component;
+})
+';
+});
   test('handles user interactions', () => {
     render(<EnhancedSEODynamic />);
-    // Add interaction tests based on component functionality
-  });
+    // Add interaction tests based on component functionality;
+});
   test(applies correct styling', () => {
     render(<EnhancedSEOdynamic />);
-    // Add styling tests if needed
-  });
+    // Add styling tests if needed;
+});
 });
   })
 '
@@ -92,14 +92,14 @@ import EnhancedSEOdynamic   from '../components/EnhancedSEO.dynamic''
     expect(screen.getByTestId('enhancedseo.dynamic')).toBeInTheDocument()})'
   test('displays correct content', () => {'
     render(<EnhancedSEOdynamic  />)
-    // Add specific content tests based on component
-  })
+    // Add specific content tests based on component;
+})
   test('handles user interactions', () => {'
     render(<EnhancedSEOdynamic  />)
-    // Add interaction tests based on component functionality
-  })
+    // Add interaction tests based on component functionality;
+})
   test('applies correct styling', () => {'
     render(<EnhancedSEOdynamic  />)
-    // Add styling tests if needed
-  })})
+    // Add styling tests if needed;
+})})
 '

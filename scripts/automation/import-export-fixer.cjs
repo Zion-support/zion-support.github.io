@@ -81,8 +81,8 @@ class ImportExportFixer {;
 
   async fixImportExportIssues() {
     this.log(`Fixing import/export issues...`, `info`);
-    
-    } catch (error) {;
+    ;
+} catch (error) {;
       this.log(`Error during import/export fixing: ${error.message}`);
     }
   }

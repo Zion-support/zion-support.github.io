@@ -16,8 +16,8 @@ class SimpleAutomationOrchestrator {
       errors: [],
       fixes: [],
       improvements: [],
-      newScripts: []
-    };
+      newScripts: [];
+};
   }
 
   ensureDirectories() {
@@ -53,8 +53,8 @@ class SimpleAutomationOrchestrator {
         name: stepName,
         status: 'success',
         duration: duration,
-        result: result
-      });
+        result: result;
+});
       this.log('Completed step: ' + stepName + ' (' + duration + 'ms)');
       return result;
     } catch (error) {
@@ -63,13 +63,13 @@ class SimpleAutomationOrchestrator {
         name: stepName,
         status: 'error',
         duration: duration,
-        error: error.message
-      });
+        error: error.message;
+});
       this.results.errors.push({
         step: stepName,
         error: error.message,
-        timestamp: new Date().toISOString()
-      });
+        timestamp: new Date().toISOString();
+});
       this.log('Failed step: ' + stepName + ' - ' + error.message, 'ERROR');
       return null;
     }
@@ -85,8 +85,8 @@ class SimpleAutomationOrchestrator {
         execSync('npm install --no-audit --no-fund', { 
           cwd: this.projectRoot, 
           stdio: 'pipe',
-          timeout: 300000
-        });
+          timeout: 300000;
+});
         this.log('Dependencies installed successfully');
         return { installed: true };
       } catch (error) {
@@ -95,8 +95,8 @@ class SimpleAutomationOrchestrator {
           execSync('yarn install --silent', { 
             cwd: this.projectRoot, 
             stdio: 'pipe',
-            timeout: 300000
-          });
+            timeout: 300000;
+});
           this.log('Dependencies installed with yarn');
           return { installed: true, method: 'yarn' };
         } catch (yarnError) {
@@ -120,8 +120,8 @@ class SimpleAutomationOrchestrator {
       execSync('npx tsc --noEmit', { 
         cwd: this.projectRoot, 
         stdio: 'pipe',
-        timeout: 60000
-      });
+        timeout: 60000;
+});
       tests.push({ name: 'TypeScript compilation', status: 'pass' });
       this.log('TypeScript compilation passed');
     } catch (error) {
@@ -134,8 +134,8 @@ class SimpleAutomationOrchestrator {
       execSync('npx eslint . --max-warnings 0', { 
         cwd: this.projectRoot, 
         stdio: 'pipe',
-        timeout: 60000
-      });
+        timeout: 60000;
+});
       tests.push({ name: 'ESLint', status: 'pass' });
       this.log('ESLint passed');
     } catch (error) {
@@ -158,8 +158,8 @@ class SimpleAutomationOrchestrator {
         execSync('node ' + fixImportScript, { 
           cwd: this.projectRoot, 
           stdio: 'pipe',
-          timeout: 120000
-        });
+          timeout: 120000;
+});
         fixes.push({ type: 'imports', status: 'fixed' });
         this.log('Import issues fixed');
       }
@@ -174,8 +174,8 @@ class SimpleAutomationOrchestrator {
         execSync('node ' + fixSyntaxScript, { 
           cwd: this.projectRoot, 
           stdio: 'pipe',
-          timeout: 120000
-        });
+          timeout: 120000;
+});
         fixes.push({ type: 'syntax', status: 'fixed' });
         this.log('Syntax issues fixed');
       }
@@ -234,8 +234,8 @@ class EnhancedErrorChecker {
       const result = execSync('npx tsc --noEmit --pretty', { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
-        timeout: 60000
-      });
+        timeout: 60000;
+});
       this.log('No TypeScript errors found');
       return { errors: 0, output: result };
     } catch (error) {
@@ -249,8 +249,8 @@ class EnhancedErrorChecker {
     
     const results = {
       timestamp: new Date().toISOString(),
-      typescript: await this.checkTypeScriptErrors()
-    };
+      typescript: await this.checkTypeScriptErrors();
+};
 
     this.log('Enhanced Error Checker completed');
     return results;
@@ -285,14 +285,14 @@ module.exports = EnhancedErrorChecker;`;
 
       // Commit changes
       const commitMessage = 'feat: automation improvements and fixes - ' + new Date().toISOString();
-      execSync('git commit -m "' + commitMessage + '"', { cwd: this.projectRoot });
+      execSync('git commit -m "' + commitMessage + '", { cwd: this.projectRoot });
       this.log('Changes committed');
 
       // Push to current branch
       const currentBranch = execSync('git branch --show-current', { 
         cwd: this.projectRoot, 
-        encoding: 'utf8' 
-      }).trim();
+        encoding: 'utf8' ;
+}).trim();
       
       execSync('git push origin ' + currentBranch, { cwd: this.projectRoot });
       this.log('Changes pushed to ' + currentBranch);
@@ -301,15 +301,15 @@ module.exports = EnhancedErrorChecker;`;
         committed: true, 
         pushed: true, 
         branch: currentBranch,
-        message: commitMessage 
-      };
+        message: commitMessage ;
+};
     } catch (error) {
       this.log('Git operations failed: ' + error.message, 'ERROR');
       return { 
         committed: false, 
         pushed: false, 
-        error: error.message 
-      };
+        error: error.message ;
+};
     }
   }
 
@@ -319,8 +319,8 @@ module.exports = EnhancedErrorChecker;`;
     try {
       const currentBranch = execSync('git branch --show-current', { 
         cwd: this.projectRoot, 
-        encoding: 'utf8' 
-      }).trim();
+        encoding: 'utf8' ;
+}).trim();
 
       if (currentBranch === 'main') {
         this.log('Already on main branch');
@@ -346,14 +346,14 @@ module.exports = EnhancedErrorChecker;`;
       return { 
         merged: true, 
         fromBranch: currentBranch,
-        toBranch: 'main' 
-      };
+        toBranch: 'main' ;
+};
     } catch (error) {
       this.log('Merge failed: ' + error.message, 'ERROR');
       return { 
         merged: false, 
-        error: error.message 
-      };
+        error: error.message ;
+};
     }
   }
 
@@ -381,8 +381,8 @@ module.exports = EnhancedErrorChecker;`;
       
       this.results.status = 'completed';
       this.log('Simple Automation Orchestrator completed successfully!');
-      
-    } catch (error) {
+      ;
+} catch (error) {
       this.results.status = 'failed';
       this.log('Simple Automation Orchestrator failed: ' + error.message, 'ERROR');
     } finally {

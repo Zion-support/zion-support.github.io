@@ -11,13 +11,13 @@ describe('Footer.dynamic', () => {';
 
   test('displays: correct content', () => {';
     render(<Footer.dynamic: />);
-    // Add: specific content tests based on component
-  })
+    // Add: specific content tests based on component;
+})
 
   test('handles user interactions', () => {';
     render(<Footer.dynamic: />);
-    // Add: interaction tests based on component functionality
-  })
+    // Add: interaction tests based on component functionality;
+})
 
   test('applies correct styling', () => {';
     render(<Footer.dynamic: />);
@@ -35,13 +35,13 @@ describe('Footerdynamic', () => {'
 '
   test('displays correct content', () => {
     render(<Footerdynamic />);
-    // Add specific content tests based on component
-  })
+    // Add specific content tests based on component;
+})
 '
   test('handles user interactions', () => {
     render(<Footerdynamic />);
-    // Add interaction tests based on component functionality
-  })
+    // Add interaction tests based on component functionality;
+})
 '
   test('applies correct styling', () => {
 
@@ -51,12 +51,12 @@ describe('Footerdynamic, () => {
     expect(screen.getByTestId(footer.dynamic')).toBeInTheDocument()});
   test('displays correct content, () => {
     render(<Footerdynamic />);
-    // Add specific content tests based on component
-  });
+    // Add specific content tests based on component;
+});
   test('handles user interactions', () => {
     render(<Footerdynamic />);
-    // Add interaction tests based on component functionality
-  });
+    // Add interaction tests based on component functionality;
+});
   test(applies correct styling', () => {
   describe('Footerdynamic', () => {
   test('renders without crashing', () => {
@@ -84,16 +84,16 @@ import Footerdynamic   from '../components/Footer.dynamic''
     expect(screen.getByTestId('footer.dynamic')).toBeInTheDocument()})'
   test('displays correct content', () => {'
     render(<Footerdynamic  />)
-    // Add specific content tests based on component
-  })
+    // Add specific content tests based on component;
+})
   test('handles user interactions', () => {'
     render(<Footerdynamic  />)
-    // Add interaction tests based on component functionality
-  })
+    // Add interaction tests based on component functionality;
+})
   test('applies correct styling', () => {'
     render(<Footerdynamic  />)
-    // Add styling tests if needed
-  });
+    // Add styling tests if needed;
+});
 });
   })})
 '

@@ -10,7 +10,7 @@ import {
   Facebook,
   Instagram,
   ArrowRight,
-  Heart
+  Heart;
 } from 'lucide-react';
 
 const ImprovedFooter: React.FC = () => {
@@ -55,7 +55,7 @@ const ImprovedFooter: React.FC = () => {
       { name: 'Cookie Policy', href: '/cookies' },
       { name: 'GDPR Compliance', href: '/gdpr' }
     ]
-  };
+};
 
   const socialLinks = [
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
@@ -63,7 +63,7 @@ const ImprovedFooter: React.FC = () => {
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github },
     { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
     { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram }
-  ];
+  ]
 
   return (
     <footer className="bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 text-white">

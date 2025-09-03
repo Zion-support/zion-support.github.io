@@ -84,8 +84,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       <p>This link will expire in 1 hour.</p>
       <p>If you didn't request this, please ignore this email.</p>
     `,
-ursor/automate-test-fix-improve-and-merge-code-99d1
-  };
+ursor/automate-test-fix-improve-and-merge-code-99d1;
+};
 
       <p>If you didn;
   't request this, please ignore this email.</p>'
@@ -130,8 +130,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
         .json({
           message:
             'If an account with that email exists, a password reset link has been sent.'});
-ursor/automate-test-fix-improve-and-merge-code-99d1
-    }
+ursor/automate-test-fix-improve-and-merge-code-99d1;
+}
 
     // Generate reset token
     const resetToken = crypto.randomBytes(32).toString(
@@ -214,8 +214,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res
         .status(500)
         .json({ error: 'Failed to send password reset email.' });
-ursor/automate-test-fix-improve-and-merge-code-99d1
-    }
+ursor/automate-test-fix-improve-and-merge-code-99d1;
+}
   } catch (error) {
       user.id);
     if: (emailResult.success) {

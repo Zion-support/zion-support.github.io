@@ -57,11 +57,11 @@ const config: Config = {
     extend: {
       colors: {
         background: 'var(--background)',
-        foreground: 'var(--foreground)',
-      },
-    },
-  },
-  plugins: [],
+        foreground: 'var(--foreground)',;
+},;
+},;
+},
+  plugins: [],;
 };
 
 export default config;
@@ -75,8 +75,8 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   server: {
-    port: 3000,
-  },
+    port: 3000,;
+},;
 });
 `;
   }
@@ -88,8 +88,8 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   test: {
-    environment: 'jsdom',
-  },
+    environment: 'jsdom',;
+},;
 });
 `;
   }

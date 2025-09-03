@@ -53,12 +53,12 @@ export function Header() {
     { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' }
   ]
-  ];
+  ]
 
   return ('
     <header className={`fixed w-full z-50 transition-all duration-300 ${`
-      scrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm''
-    }`}>`
+      scrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm'';
+}`}>`
       <div className="max-w-7xl mx-auto px-4 sm:px-6 l,
     g:px-8">"
   return (
@@ -66,8 +66,8 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
     <header className={`fixed w-full z-50 transition-all duration-300 ${
   return (<header className={`fixed w-full z-50 transition-all duration-300 ${
-      scrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm'
-    }`}>
+      scrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm';
+}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}"
@@ -94,8 +94,8 @@ export function Header() {
                 className={`text-sm font-medium transition-colors ${
                   router.pathname === item.href`
                     ? 'text-blue-600''
-                    : 'text-gray-700 hover:text-blue-600''
-                }`}
+                    : 'text-gray-700 hover:text-blue-600'';
+}`}
               >
                 {item.name}
               </Link>
@@ -183,8 +183,8 @@ export function Header() {
                     router.pathname === item.href`
                       ? 'text-blue-600 bg-blue-50''
                       : 'text-gray-700 hover:text-blue-600 hove,
-    r:bg-gray-50''
-                  }`}
+    r:bg-gray-50'';
+}`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}
@@ -211,8 +211,8 @@ export function Header() {
                   className={`block px-3 py-2 text-base font-medium rounded-md ${
                     router.pathname === item.href
                       ? 'text-blue-600 bg-blue-50'
-                      : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
-                  }`} onClick={() => setMobileMenuOpen(false)}
+                      : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50';
+}`} onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}
                 </Link>
@@ -255,8 +255,8 @@ export function Header() {
         )}
       </div>
     </header>
-  )
+  );
 }
   );
-}"
+}";
 }

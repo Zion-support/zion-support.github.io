@@ -259,7 +259,7 @@ const CloudDevOps = () => {}
       description:'
         'Scalable database solutions with high availability and disaster recovery.',
       features: ['AWS RDS',Azure SQL',MongoDB Atlas',Redis']}
-  ];
+  ]
 
   const platforms = []
     {}
@@ -278,7 +278,7 @@ const CloudDevOps = () => {}
       name: 'Multi-Cloud',
       description: 'Hybrid and multi-cloud strategy implementation',
       icon: '🌐'}
-  ];
+  ]
 
   const devOpsTools = []
     {}
@@ -293,7 +293,7 @@ const CloudDevOps = () => {}
     {}
       category: 'Security',
       tools: ['Vault',AWS IAM',Azure AD',Google IAM',Prisma Cloud']}
-  ];
+  ]
 
   tools: ['Vault,AWS IAM',Azure AD;
   ',Google IAM',Prisma Cloud;

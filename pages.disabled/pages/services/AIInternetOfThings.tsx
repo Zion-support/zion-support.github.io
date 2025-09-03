@@ -4,7 +4,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIInternetOfThings(function AIInternetOfThings() {): any: {}
     'Automated IoT monitoring and alerting',';Predictive: analytics for IoT scaling',';Smart: IoT security and compliance',';AI-driven: IoT automation and orchestration',';Real-time: IoT analytics and insights',';Custom: AI models for IoT applications';
 <:pages.disabled/pages/services/AIInternetOfThings.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Developer,',';
@@ -27,7 +27,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
   ]';IoT: optimization',';IoT: device management',';Performance: monitoring and analytics',';Security: and compliance monitoring',';Automation: and orchestration',';IoT: scaling and management';
   ]';Improve: IoT performance by 50-80%',';Reduce: IoT management time by 40-70%',';Cut: operational costs by 35-65%',';Enhance: IoT reliability and scalability',';Optimize: resource utilization',';Scale: IoT operations efficiently';
   ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-500 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIInternetOfThings(function AIInternetOfThings() {): any {}
     'Automated IoT monitoring and alerting',;Predictive analytics for IoT scaling',;Smart IoT security and compliance',;AI-driven IoT automation and orchestration',;Real-time IoT analytics and insights',;Custom AI models for IoT applications';
 <:pages.disabled/pages/services/AIInternetOfThings.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Developer',
@@ -115,8 +115,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     {'
       name: 'Business',
       price: '$999/mo',
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support']
-    },
+      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AIInternetOfThings.tsx>    {'
@@ -149,10 +149,10 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <Database className='w-4 h-4 mr-2'  /> AI-Powered IoT Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Internet of Things Platform</h1>'          <p className='text-emerald-100 text-xl'>Transform your IoT operations with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
-  ];IoT optimization',;IoT device management',;Performance monitoring and analytics',;Security and compliance monitoring',;Automation and orchestration',;IoT scaling and management';
-  ];Improve IoT performance by 50-80%',;Reduce IoT management time by 40-70%',;Cut operational costs by 35-65%',;Enhance IoT reliability and scalability',;Optimize resource utilization',;Scale IoT operations efficiently';
-  ];Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
-  ];
+  ]IoT optimization',;IoT device management',;Performance monitoring and analytics',;Security and compliance monitoring',;Automation and orchestration',;IoT scaling and management';
+  ]Improve IoT performance by 50-80%',;Reduce IoT management time by 40-70%',;Cut operational costs by 35-65%',;Enhance IoT reliability and scalability',;Optimize resource utilization',;Scale IoT operations efficiently';
+  ]Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-500 py-20 text-center>''

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';,"});,"})
 const ServiceCard = ({ title, description, icon, price, category, features, isPopular = false, isNew = false, href = '/services' }) => {}"});,"})
     const cardVariants = {}"});,"})
   hidden: { opacity: 0, y: 20,;,"});,"})
-  scale: 0.95;,"});,"})
+  scale: 0.95;,"});,"});
 },;,"});,"})
         visible: {}"});,"})
             opacity: 1,;,"});,"})
@@ -18,8 +18,8 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
             scale: 1.02,;,"});,"})
 """;,"});,"})
                 duration: 0.3,"""";,"});,"})
-                ease: "easeOut""";,"});,"})
-    };,"});,"})
+                ease: "easeOut""";,"});,"});
+};,"});,"})
     const iconVariants = {}"});,"})
   hidden: { scale: 0.8,;,"});,"})
   opacity: 0;,"});,"})
@@ -29,18 +29,18 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
                 duration: 0.6,"""";,"});,"})
                 ease: "easeInOut""";,"});,"})
     const featureVariants = {}"});,"})
-            x: 5,;,"});,"})
+            x: 5,;,"});,"});
 }"});,"})
     const badgeVariants = {}"});,"})
   hidden: { scale: 0,;,"});,"})
-                ease: "backOut""";,"});,"})
-    };"""";,"});,"})
+                ease: "backOut""";,"});,"});
+};"""";,"});,"})
     return (<motion.div variants={cardVariants} initial="hidden" whileInView="visible" whileHover="hover" viewport={{ once: true }} className="group relative h-full">;""";,"});,"})
       {/* Enhanced Popular Badge */}"""";,"});,"})
       {isPopular && (<motion.div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10" initial={{ scale: 0 }} animate={{ scale: 1 }} transition = {}"});,"})
 """";,"});,"})
   { delay: 0.2, type "spring",;,"});,"})
-  stiffness: 300;,"});,"})
+  stiffness: 300;,"});,"});
 }}>"""";,"});,"})
           <div className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg animate-pulse">;,"});,"})
             ⭐ Most Popular;,"});,"})
@@ -49,10 +49,10 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
       {/* Enhanced New Badge */}"""";,"});,"})
       {isNew && (<motion.div className="absolute -top-3 right-4 z-10" initial = {}"});,"})
   { scale: 0,;,"});,"})
-  rotate: -180;,"});,"})
+  rotate: -180;,"});,"});
 }} animate = {}"});,"})
   { scale: 1,;,"});,"})
-  rotate: 0;,"});,"})
+  rotate: 0;,"});,"});
 }} transition = {}"});,"})
   { delay: 0.3, type "spring",;,"});,"})
           <div className="bg-gradient-to-r from-zion-purple via-zion-cyan to-zion-blue text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg animate-bounce">;,"});,"})
@@ -66,7 +66,7 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
   { y: [0, -5,;,"});,"})
   0];,"});,"})
   { duration: 3, repeat: Infinity,""";,"});,"})
-  { duration: 3, repeat: Infinity,"""";,"});,"})
+  { duration: 3, repeat: Infinity,"""";,"});,"});
 }}>;,"});,"})
           {icon}"});,"})
         </motion.div>;,"});,"})
@@ -122,7 +122,7 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
         <div className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-zion-purple/50 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-float transition-all duration-500 delay-200"/>"""";,"});,"})
         <div className="absolute top-1/2 left-2 w-1 h-1 bg-zion-blue/50 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-float transition-all duration-500 delay-400"/>;,"});,"})
     </motion.div>)};,"});,"})
-export default ServiceCard;,"});,"})
+export default ServiceCard;,"});,"});
 }}}}}}}}}}"});,"})
 ;,"});,"})
 export { ServiceCard };,"});,"})

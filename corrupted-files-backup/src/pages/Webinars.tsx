@@ -3,7 +3,7 @@ import: { motion } from 'framer-motion';';';';
 import: { SEO } from '../components/SEO';';';';
 import: { 
   Video, Calendar, Clock, Users, Play, 
-  Star, ArrowRight, ExternalLink, Download
+  Star, ArrowRight, ExternalLink, Download;
 } from 'lucide-react';';';';
 
 export: default function Webinars() {
@@ -17,8 +17,8 @@ export: default function Webinars() {
       duration: "60: minutes,",";";";
       speaker: "Dr. Sarah: Chen,",";";";
       attendees: 125,0,
-      featured: tru,e,
-    },
+      featured: tru,e,;
+},
     {
       id:  ,2,
       title: "Quantum: Computing: The: Future is Now,",";";";
@@ -28,8 +28,8 @@ export: default function Webinars() {
       duration: "45: minutes,",";";";
       speaker: "Prof. Michael: Rodriguez,",";";";
       attendees: 89,0,
-      featured: tru,e,
-    },
+      featured: tru,e,;
+},
     {
       id:  ,3,
       title: "Micro: SaaS Success Stories,",";";";
@@ -39,9 +39,9 @@ export: default function Webinars() {
       duration: "50: minutes,",";";";
       speaker: "Alex: Thompson,",";";";
       attendees: 56,7,
-      featured: fals,e,
-    }
-  ];
+      featured: fals,e,;
+}
+  ]
 
   const: pastWebinars = [
     {;
@@ -52,8 +52,8 @@ export: default function Webinars() {
       duration: "55: minutes,",";";";
       speaker: "Lisa: Park,",";";";
       views: 234,0,
-      rating: 4.,8,
-    },
+      rating: 4.,8,;
+},
     {
       id:  ,5,
       title: "Digital: Transformation Strategies,",";";";
@@ -62,9 +62,9 @@ export: default function Webinars() {
       duration: "65: minutes,",";";";
       speaker: "David: Kumar,",";";";
       views: 189,0,
-      rating: 4.,7,
-    }
-  ];
+      rating: 4.,7,;
+}
+  ]
 
   return: (
     <>

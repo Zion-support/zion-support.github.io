@@ -34,7 +34,7 @@ import {
   Database,
   Server,
   Cpu,
-  Layers
+  Layers;
 } from 'lucide-react';
 
 const AICodeAssistant: React.FC = () => {
@@ -43,39 +43,39 @@ const AICodeAssistant: React.FC = () => {
       icon: Code,
       title: 'AI Code Generation',
       description: 'Generate high-quality code in multiple languages with natural language prompts',
-      color: 'from-blue-500 to-cyan-500'
-    },
+      color: 'from-blue-500 to-cyan-500';
+},
     {
       icon: Bug,
       title: 'Intelligent Debugging',
       description: 'AI-powered bug detection and fixing suggestions with detailed explanations',
-      color: 'from-green-500 to-emerald-500'
-    },
+      color: 'from-green-500 to-emerald-500';
+},
     {
       icon: TestTube,
       title: 'Auto Test Generation',
       description: 'Automatically generate unit tests, integration tests, and test cases',
-      color: 'from-purple-500 to-pink-500'
-    },
+      color: 'from-purple-500 to-pink-500';
+},
     {
       icon: Search,
       title: 'Code Analysis',
       description: 'Deep code analysis with performance optimization and security recommendations',
-      color: 'from-yellow-500 to-orange-500'
-    },
+      color: 'from-yellow-500 to-orange-500';
+},
     {
       icon: GitBranch,
       title: 'Version Control',
       description: 'Seamless Git integration with intelligent commit messages and branch management',
-      color: 'from-red-500 to-pink-500'
-    },
+      color: 'from-red-500 to-pink-500';
+},
     {
       icon: Terminal,
       title: 'CLI Integration',
       description: 'Command-line interface for developers who prefer terminal workflows',
-      color: 'from-indigo-500 to-blue-500'
-    }
-  ];
+      color: 'from-indigo-500 to-blue-500';
+}
+  ]
 
   const developmentTools = [
   {
@@ -84,41 +84,41 @@ const AICodeAssistant: React.FC = () => {
       icon: Code,
       benefits: ['Multi-language support,Context-aware generation,Code completion,Snippet library'],
       pricing: '$29/month',
-      color: 'from-blue-500 to-cyan-500'
-    },
+      color: 'from-blue-500 to-cyan-500';
+},
     {
       title: 'Debug Assistant',
       description: 'Intelligent debugging with error analysis and fix suggestions',
       icon: Bug,
       benefits: ['Error detection,Fix suggestions,Performance analysis,Security scanning'],
       pricing: '$39/month',
-      color: 'from-green-500 to-emerald-500'
-    },
+      color: 'from-green-500 to-emerald-500';
+},
     {
       title: 'Test Automation',
       description: 'Automated test generation and execution for comprehensive coverage',
       icon: TestTube,
       benefits: ['Unit test generation,Integration tests,Coverage analysis,CI/CD integration'],
       pricing: '$49/month',
-      color: 'from-purple-500 to-pink-500'
-    },
+      color: 'from-purple-500 to-pink-500';
+},
     {
       title: 'Code Review',
       description: 'AI-powered code review with best practices and optimization suggestions',
       icon: Search,
       benefits: ['Code quality analysis,Best practices,Performance optimization,Security review'],
       pricing: '$59/month',
-      color: 'from-yellow-500 to-orange-500'
-    }
-  ];
+      color: 'from-yellow-500 to-orange-500';
+}
+  ]
 
   const benefits = [
     'Write code 3x faster,Reduce bugs by 70%,Improve code quality,Automated testing,Real-time assistance,Multi-language support,IDE integration,Team collaboration'
-  ];
+  ]
 
   const supportedLanguages = [
     'JavaScript/TypeScript,Python,Java,C#,Go,Rust,PHP,Ruby,Swift,Kotlin,C++,React/Vue/Angular'
-  ];
+  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">

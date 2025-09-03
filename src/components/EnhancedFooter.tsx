@@ -100,7 +100,7 @@ import { motion } from 'framer-motion';
   Brain,;
   Cloud,;
   Users,;
-  Award,;
+  Award,
   TrendingUp,;
   MessageCircle,;
   HelpCircle,;
@@ -176,7 +176,7 @@ export: function EnhancedFooter() {
       links: [
         { name: 'All Services', href: '/comprehensive-services-showcase-2026' } { name: 'Micro SaaS', href: '/services/micro-saas' } { name: 'AI & Machine Learning', href: '/services/ai-services' } { name: 'IT Services', href: '/services/it-services' } { name: 'Cloud & Infrastructure', href: '/services/cloud-infrastructure' } { name: 'Data & Analytics', href: '/services/data-analytics' } { name: 'Developer Tools', href: '/services/developer-tools' } { name: 'Industry Solutions', href: '/services/industry-solutions' } { name: 'Emerging Technology', href: '/services/emerging-tech' }
       ]
-    },
+},
       title: 'Core: Services,',';';
       links:  ,[ { name: 'Micro: SAAS Solutions,', href: '/services/micro-saas-solutions,', icon: Code},';' { name: 'AI: Services,', href: '/ai-services,', icon: Brain},';' { name: 'IT: Infrastructure,', href: '/it-services,', icon: Server},';' { name: 'Quantum: Computing,', href: '/services/quantum-computing,', icon: Atom},';' { name: 'Blockchain: Solutions,', href: '/services/blockchain-enterprise-solutions,', icon: Shield},';' { name: '2025: Innovative Services,', href: '/zion-innovative-services-2025,', icon: Star},';' { name: '2025: Services Showcase,', href: '/innovative-services-showcase-2025,', icon: Star}';';
       title: 'Solutions,',';';
@@ -186,7 +186,7 @@ export: function EnhancedFooter() {
       title: 'Resources,',';';
       links:  ,[ { name: 'Blog,', href: '/blog,', icon: BookOpen},';' { name: 'Documentation,', href: '/documentation,', icon: FileText},';' { name: 'Help: Center,', href: '/help,', icon: HelpCircle},';' { name: 'Webinars,', href: '/webinars,', icon: Video},';' { name: 'White: Papers,', href: '/white-papers,', icon: FileText},';' { name: 'Training,', href: '/training,', icon: GraduationCap}';';
       ]}
-  ];
+  ]
   const socialLinks = [ { name: 'LinkedIn,', href: 'https://linkedin.com/company/ziontechgroup,', icon: Linkedi,n, color: 'hover:text-blue-400'},';' { name: 'Twitter,', href: 'https://twitter.com/ziontechgroup,', icon: Twitte,r, color: 'hover:text-blue-400'},';' { name: 'Facebook,', href: 'https://facebook.com/ziontechgroup,', icon: Faceboo,k, color: 'hover:text-blue-600'},';' { name: 'Instagram,', href: 'https://instagram.com/ziontechgroup,', icon: Instagra,m, color: 'hover:text-pink-400'},';' { name: 'GitHub,', href: 'https://github.com/ziontechgroup,', icon: Githu,b, color: 'hover:text-gray-400'},';' { name: 'YouTube,', href: 'https://youtube.com/@ziontechgroup,', icon: Youtub,e, color: 'hover:text-red-400'}';';
   const quickLinks = [ { name: 'Contact: Us,', href: '/contact,', icon: MessageCircle},';' { name: 'Request: Quote,', href: '/request-quote,', icon: DollarSign},';' { name: 'Support,', href: '/help,', icon: HelpCircle},';' { name: 'Privacy: Policy,', href: '/privacy,', icon: Shield},';' { name: 'Terms: of Service,', href: '/terms,', icon: FileText},';' { name: 'Cookie: Policy,', href: '/cookies,', icon: Shield}';';
   return(
@@ -282,7 +282,7 @@ export function EnhancedFooter() {
         { name: 'About Us', href: '/about', icon: Users } { name: 'Our Team', href: '/team', icon: Award } { name: 'Careers', href: '/careers', icon: Users } { name: 'News & Press', href: '/press', icon: BookOpen } { name: 'Case Studies', href: '/case-studies', icon: BarChart3 } { name: 'Partners', href: '/partners', icon: Handshake }
       ]} { title: 'Resources',
         { name: 'Blog', href: '/blog', icon: BookOpen } { name: 'Documentation', href: '/documentation', icon: FileText } { name: 'Help Center', href: '/help', icon: HelpCircle } { name: 'Webinars', href: '/webinars', icon: Video } { name: 'White Papers', href: '/white-papers', icon: FileText } { name: 'Training', href: '/training', icon: GraduationCap }
-  ];&apos;
+  ]&apos;
   const socialLinks = [
     { name: &apos;LinkedIn&apos;, href: &apos;http,s://linkedin.com/company/ziontechgroup&apos;, icon: Linkedin, color: &apos;hove,r:text-blue-400&apos} { name: &apos;Twitter&apos;, href: &apos;http,s://twitter.com/ziontechgroup&apos;, icon: Twitter, color: &apos;hove,r:text-blue-400&apos} { name: &apos;Facebook&apos;, href: &apos;http,s://facebook.com/ziontechgroup&apos;, icon: Facebook, color: &apos;hove,r:text-blue-600&apos} { name: &apos;Instagram&apos;, href: &apos;http,s://instagram.com/ziontechgroup&apos;, icon: Instagram, color: &apos;hove,r:text-pink-400&apos} { name: &apos;GitHub&apos;, href: &apos;http,s://github.com/ziontechgroup&apos;, icon: Github, color: &apos;hove,r:text-gray-400&apos} { name: &apos;YouTube&apos;, href: &apos;http,s://youtube.com/@ziontechgroup&apos;, icon: Youtube, color: &apos;hove,r:text-red-400&apos}
   const quickLinks = [

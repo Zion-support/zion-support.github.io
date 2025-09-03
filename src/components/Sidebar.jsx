@@ -26,7 +26,7 @@ import {
   Mail, MapPin,
   Building, TestTube,
   Newspaper, X,
-  Code;", "
+  Code;", ";
 } from 'lucide-react';
 
 export function Sidebar({ isOpen = false, onClose }) {
@@ -147,7 +147,7 @@ export function Sidebar({ isOpen = false, onClose }) {
         { name: 'Partnership', href: '/partners', icon: Users, description: 'Become a Partner' }, ""
         { name: 'Careers', href: '/careers', icon: Briefcase, description: 'Join Our Team' }
       ]}
-  ];
+  ]
 
   const isActive = (href) => {""
     if (href === '/') {""
@@ -176,7 +176,7 @@ export function Sidebar({ isOpen = false, onClose }) {
         {name: 'Contact', href: '/contact', icon: Mail },
         {name: 'Blog', href: '/blog', icon: FileText }
       ]
-    },
+},
     {title: 'Core Services',
       items: [{ name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure & Automation' },
         {name: 'Digital Twin', href: '/services/digital-twin', icon: Globe, description: 'Simulation & Monitoring' },
@@ -185,7 +185,7 @@ export function Sidebar({ isOpen = false, onClose }) {
         {name: 'IT Infrastructure', href: '/services/infrastructure', icon: Server, description: 'Hardware & Networks' },
         {name: 'Digital Transformation', href: '/services/transformation', icon: Rocket, description: 'Business Evolution' }
       ]
-    },
+},
     {title: 'Industry Solutions',
       items: [{ name: 'Manufacturing', href: '/solutions/manufacturing', icon: Cpu, description: 'Smart Factory Solutions' },
         {name: 'Financial Services', href: '/solutions/financial', icon: DollarSign, description: 'FinTech & Banking' },
@@ -194,7 +194,7 @@ export function Sidebar({ isOpen = false, onClose }) {
         {name: 'Education', href: '/solutions/education', icon: BookOpen, description: 'EdTech & Learning' },
         {name: 'Energy', href: '/solutions/energy', icon: Zap, description: 'Renewable & Smart Grid' }
       ]
-    },
+},
     {title: 'Resources',
       items: [{ name: 'White Papers', href: '/white-papers', icon: FileText, description: 'Industry Insights' },
         {name: 'Webinars', href: '/webinars', icon: Video, description: 'Expert Knowledge' },
@@ -203,7 +203,7 @@ export function Sidebar({ isOpen = false, onClose }) {
         {name: 'API Reference', href: '/api', icon: Code, description: 'Developer Resources' },
         {name: 'Status Page', href: '/status', icon: BarChart3, description: 'System Health' }
       ]
-    },
+},
     {title: 'Support',
       items: [{ name: 'Help Center', href: '/support', icon: HelpCircle, description: 'Self-Service Support' },
         {name: 'Contact Us', href: '/contact', icon: MessageCircle, description: 'Get in Touch' },
@@ -218,7 +218,7 @@ export function Sidebar({ isOpen = false, onClose }) {
         { name: 'Contact', href: '/contact', icon: Mail },
         { name: 'Blog', href: '/blog', icon: FileText }
       ]
-    },
+},
     {'
       title: 'Core Services',
       items: ['
@@ -230,7 +230,7 @@ export function Sidebar({ isOpen = false, onClose }) {
         { name: 'IT Infrastructure', href: '/services/infrastructure', icon: Server, description: 'Hardware & Networks' },
         { name: 'Digital Transformation', href: '/services/transformation', icon: Rocket, description: 'Business Evolution' }
       ]
-    },
+},
     {'
       title: 'Industry Solutions',
       items: ['
@@ -249,7 +249,7 @@ export function Sidebar({ isOpen = false, onClose }) {
         { name: 'Cloud Services', href: '/services/cloud-services', icon: Cloud, description: 'Cloud Infrastructure' },
         { name: 'AI Development', href: '/services/ai-development', icon: Brain, description: 'AI Development Services' }
       ]
-    },
+},
     {
       title: 'Solutions',
       items: [
@@ -260,7 +260,7 @@ export function Sidebar({ isOpen = false, onClose }) {
         { name: 'Project Management', href: '/solutions/project-management', icon: Briefcase, description: 'Project Tracking' },
         { name: 'Workflow Automation', href: '/solutions/workflow-automation', icon: Zap, description: 'Process Automation' }
       ]
-    },
+},
     {'
       title: 'Resources',
       items: ['
@@ -276,7 +276,7 @@ export function Sidebar({ isOpen = false, onClose }) {
         { name: 'Search', href: '/search', icon: Search, description: 'Find Content' },
         { name: 'Press', href: '/press', icon: Newspaper, description: 'News & Updates' }
       ]
-    },
+},
     {'
       title: 'Support',
       items: ['
@@ -287,8 +287,8 @@ export function Sidebar({ isOpen = false, onClose }) {
         { name: 'Careers', href: '/careers', icon: Briefcase, description: 'Join Our Team' },
         { name: 'Team', href: '/team', icon: Users, description: 'Meet Our Team' }
       ]
-    }
-  ];
+}
+  ]
 
   const isActive = (href) => {'
     if (href === '/') {'
@@ -365,8 +365,8 @@ export function Sidebar({ isOpen = false, onClose }) {
         fixed top-0 left-0 h-full w-64 bg-gray-900 border-r border-gray-700 
         transform transition-transform duration-300 ease-in-out z-50
         ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
-        lg:relative lg:inset-0`
-      }>
+        lg:relative lg:inset-0`;
+}>
         {/* Header */}
         <div className="flex items-center justify-between p-4 border-b border-gray-700">
           <div className="flex items-center space-x-2">
@@ -412,8 +412,8 @@ export function Sidebar({ isOpen = false, onClose }) {
                           ${isActive(item.href)`
                             ? 'text-zion-cyan bg-zion-purple/10 border-r-2 border-zion-cyan''
                             : 'text-zion-slate-light hover:text-white hove,
-    r:bg-zion-purple/10'
-                          }
+    r:bg-zion-purple/10';
+}
                         `}
                         onClick={onClose}
                       >`
@@ -440,9 +440,9 @@ export function Sidebar({ isOpen = false, onClose }) {
                           <span className="text-xs text-zion-slate-light opacity-0 group-hover: opacity-100 transition-opacity">
                           ${isActive(item.href)
                             ? 'text-blue-400 bg-blue-900/20 border-r-2 border-blue-400'
-                            : 'text-gray-300 hover:text-white hover:bg-gray-800'
-                          }`
-                        }
+                            : 'text-gray-300 hover:text-white hover:bg-gray-800';
+}`;
+}
                         onClick={onClose}>
                         <item.icon className="h-4 w-4 mr-3 flex-shrink-0" />
                         <span className="flex-1">{item.name}</span>
@@ -536,5 +536,5 @@ export function Sidebar({ isOpen = false, onClose }) {
   );}"`"
     </>
   );
-}"
+}";
 }

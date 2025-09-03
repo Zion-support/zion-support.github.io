@@ -28,8 +28,8 @@ class ComprehensiveSyntaxFixer {
         // Fix missing semicolons after import statements
         {
           pattern: /^import\s+.*from\s+['"][^'"]+['"]\s*$/gm,
-          replacement: (match) => match.endsWith(';') ? match : match + ';'
-        },
+          replacement: (match) => match.endsWith(';') ? match : match + ';';
+},
         // Fix unterminated string literals
         {
           pattern: /(['"])([^'"]*?)(\n|$)/g,
@@ -41,13 +41,13 @@ class ComprehensiveSyntaxFixer {
         // Fix missing commas in object literals
         {
           pattern: /(\w+):\s*([^}\n]+)(\n\s*[^}])/g,
-          replacement: '$1: $2,$3'
-        },
+          replacement: '$1: $2,$3';
+},
         // Fix missing semicolons after variable declarations
         {
           pattern: /(const|let|var)\s+\w+\s*=\s*[^;]+$/gm,
-          replacement: (match) => match.endsWith(';') ? match : match + ';'
-        },
+          replacement: (match) => match.endsWith(';') ? match : match + ';';
+},
         // Fix JSX syntax issues
         {
           pattern: /<(\w+)([^>]*?)>/g,
@@ -58,7 +58,7 @@ class ComprehensiveSyntaxFixer {
             return match;
           }
         }
-      ];
+      ]
 
       for (const fix of fixes) {
         const newContent = fixedContent.replace(fix.pattern, fix.replacement);
@@ -407,7 +407,7 @@ class ComprehensiveSyntaxFixer {
     const allFiles = [
       ...this.getAllFiles(srcDir),
       ...this.getAllFiles(pagesDir)
-    ];
+    ]
 
     this.log(`📁 Found ${allFiles.length} files to check`);
 
@@ -423,8 +423,8 @@ class ComprehensiveSyntaxFixer {
       fixedFiles: this.fixedFiles.length,
       errors: this.errors.length,
       fixedFileList: this.fixedFiles,
-      errorList: this.errors
-    };
+      errorList: this.errors;
+};
   }
 
   generateReport(results) {
@@ -432,8 +432,8 @@ class ComprehensiveSyntaxFixer {
       timestamp: new Date().toISOString(),
       summary: results,
       fixedFiles: this.fixedFiles,
-      errors: this.errors
-    };
+      errors: this.errors;
+};
 
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
     this.log(`📊 Report generated: ${this.reportFile}`);

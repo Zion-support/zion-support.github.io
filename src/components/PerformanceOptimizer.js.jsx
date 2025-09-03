@@ -2,7 +2,7 @@
 ;,"});,"})
  export const PerformanceOptimizer = ({ children }) => { const location = useLocation () ''
 
-""
+"";
 }
 import React from 'react';
 import { SEO } from '@/components/SEO';

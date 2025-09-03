@@ -11,13 +11,13 @@ describe('InteractiveElements.dynamic', () => {';
 
   test('displays: correct content', () => {';
     render(<InteractiveElements.dynamic: />);
-    // Add: specific content tests based on component
-  })
+    // Add: specific content tests based on component;
+})
 
   test('handles user interactions', () => {';
     render(<InteractiveElements.dynamic: />);
-    // Add: interaction tests based on component functionality
-  })
+    // Add: interaction tests based on component functionality;
+})
 
   test('applies correct styling', () => {';
     render(<InteractiveElements.dynamic: />);
@@ -35,13 +35,13 @@ describe('InteractiveElementsdynamic', () => {'
 '
   test('displays correct content', () => {
     render(<InteractiveElementsdynamic />);
-    // Add specific content tests based on component
-  })
+    // Add specific content tests based on component;
+})
 '
   test('handles user interactions', () => {
     render(<InteractiveElementsdynamic />);
-    // Add interaction tests based on component functionality
-  })
+    // Add interaction tests based on component functionality;
+})
 '
   test('applies correct styling', () => {
 
@@ -51,12 +51,12 @@ describe('InteractiveElementsdynamic, () => {
     expect(screen.getByTestId(interactiveelements.dynamic')).toBeInTheDocument()});
   test('displays correct content, () => {
     render(<InteractiveElementsdynamic />);
-    // Add specific content tests based on component
-  });
+    // Add specific content tests based on component;
+});
   test('handles user interactions', () => {
     render(<InteractiveElementsdynamic />);
-    // Add interaction tests based on component functionality
-  });
+    // Add interaction tests based on component functionality;
+});
   test(applies correct styling', () => {
   describe('InteractiveElementsdynamic', () => {
   test('renders without crashing', () => {
@@ -84,16 +84,16 @@ import InteractiveElementsdynamic   from '../components/InteractiveElements.dyna
     expect(screen.getByTestId('interactiveelements.dynamic')).toBeInTheDocument()})'
   test('displays correct content', () => {'
     render(<InteractiveElementsdynamic  />)
-    // Add specific content tests based on component
-  })
+    // Add specific content tests based on component;
+})
   test('handles user interactions', () => {'
     render(<InteractiveElementsdynamic  />)
-    // Add interaction tests based on component functionality
-  })
+    // Add interaction tests based on component functionality;
+})
   test('applies correct styling', () => {'
     render(<InteractiveElementsdynamic  />)
-    // Add styling tests if needed
-  });
+    // Add styling tests if needed;
+});
 });
   })})
 '

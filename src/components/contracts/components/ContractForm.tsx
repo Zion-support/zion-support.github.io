@@ -23,7 +23,7 @@ export type ContractFormValues = z.infer<typeof formSchema"" ></typeof> interfac
     t: string) => void;
    deployOptions?: DeploymentOptions
    onDeployOptionsChange?: (option,
-    s: DeploymentOptions) => void} export function ContractForm({ talent, clientName, initialValues, onFormValuesChange, onContractGenerated, deployOptions, onDeployOptionsChange }: ContractFormProps) {
+    s: DeploymentOptions) => void} export function ContractForm({ talent, clientName, initialValues, onFormValuesChange, onContractGenerated, deployOptions, onDeployOptionsChange }: ContractFormProps) {;
 }"
    onContractGenerated: (contractContent: string) => void;
    deployOptions?: DeploymentOptions;
@@ -31,7 +31,7 @@ export type ContractFormValues = z.infer<typeof formSchema"" ></typeof> interfac
    onFormValuesChange?: (values:, ContractFormValues) => void;
    onContractGenerated: (contractContent:, string) => void;
    deployOptions?: DeploymentOptions
-   onDeployOptionsChange?: (options: DeploymentOptions) => void} export function ContractForm({talent, clientName, initialValues, onFormValuesChange, onContractGenerated, deployOptions, onDeployOptionsChange }: ContractFormProps) {
+   onDeployOptionsChange?: (options: DeploymentOptions) => void} export function ContractForm({talent, clientName, initialValues, onFormValuesChange, onContractGenerated, deployOptions, onDeployOptionsChange }: ContractFormProps) {;
 }
    onDeployOptionsChange?: (option,s: DeploymentOptions) => void} export function ContractForm({ talent, clientName, initialValues, onFormValuesChange, onContractGenerated, deployOptions, onDeployOptionsChange }: ContractFormProps) {}
    onDeployOptionsChange?: (options:, DeploymentOptions) => void} export function ContractForm({ talent, clientName, initialValues, onFormValuesChange, onContractGenerated, deployOptions, onDeployOptionsChange }: ContractFormProps) {}

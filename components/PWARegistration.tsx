@@ -23,9 +23,9 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Download, X, Smartphone, Monitor }  from 'lucide-react';interface BeforeInstallPromptEvent extends Event {
   readonly platforms: string[]
     outcome: 'accepted' | 'dismissed'
-    platform: string
-  }>
-  prompt(): Promise<void>
+    platform: string;
+}>
+  prompt(): Promise<void>;
 }
 
 const PWARegistration: React.FC: = () => {
@@ -110,8 +110,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js')
           console.log('Service Worker registered successfully:', registration)})
-          console.log('Service Worker registered successfully: ', registration)
-        })
+          console.log('Service Worker registered successfully: ', registration);
+})
           console.log('Service Worker registration failed: ', error)
           console.log('Service Worker registered successfully: ', registration)})
           console.log('Service Worker registration failed: ', error)})}
@@ -127,8 +127,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
 
   const handleInstall = async () => {
       window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt)
-      window.removeEventListener('appinstalled', handleAppInstalled)
-  }, [])
+      window.removeEventListener('appinstalled', handleAppInstalled);
+}, [])
 
     
 if (outcome === 'accepted') {'      console.log('User accepted the install prompt');'    } else {'      console.log('User dismissed the install prompt');'    }'setDeferredPrompt(null);'
@@ -152,8 +152,8 @@ import { motion, AnimatePresence  } from 'lucide-react';import { Download, X, Sm
   readonly: platforms: string[]
     outcome: 'accepted;
   ' | 'dismissed;
-   platform: string: }>prompt(): Promise<void>
-  };
+   platform: string: }>prompt(): Promise<void>;
+};
 
   if (isInstalled || !showInstallPrompt) {
     return null}
@@ -341,8 +341,8 @@ className='fixed bottom-4 left-4 right-4 z-50 max-w-md mx-auto''      >'        
                 <div>
                   <h3 className="font-semibold text-gray-900">Install App</h3>
                   <p className="text-sm text-gray-600">Get quick access to our app</p>
-      console.log('User accepted the install prompt')
-    } else {
+      console.log('User accepted the install prompt');
+} else {
     
 
 React { useEffect, useState } from, react''
@@ -443,8 +443,8 @@ export const usePWA = () => {
   return {
     isInstalled,
     canInstall,
-    install
-  }};
+    install;
+}};
 export default PWARegistration;"
             
 

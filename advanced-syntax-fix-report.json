@@ -1531,8 +1531,8 @@
       "/workspace/pages/services.tsx",
       "/workspace/pages/terms.tsx"
     ],
-    "errorList": []
-  },
+    "errorList": [];
+},
   "fixedFiles": [
     "/workspace/src/App.jsx",
     "/workspace/src/App.optimized.tsx",
@@ -3060,5 +3060,5 @@
     "/workspace/pages/services.tsx",
     "/workspace/pages/terms.tsx"
   ],
-  "errors": []
+  "errors": [];
 }

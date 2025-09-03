@@ -67,7 +67,7 @@ import { motion } from &apos;framer-motion';
   Calendar,
   Eye,
   Bookmark,
-  Share2
+  Share2;
 } from 'lucide-react';';
 import { SEO } from '../components/SEO';';
 
@@ -90,10 +90,10 @@ import { SEO } from '../components/SEO';
   DollarSign, ArrowUpDown,
   Calendar, Eye,
   Bookmark, Share2'
-  Bookmark, Share2;", "
+  Bookmark, Share2;", ";
 } from 'lucide-react';""
 import { SEO } from '../components/SEO';""
-  Bookmark, Share2
+  Bookmark, Share2;
 } from 'lucide-react';
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
@@ -107,8 +107,8 @@ const Search: React.FC = () => {}
 
   const categories = [
     { id: &apos;all&apos;, name: &apos;All Categories&apos;, count: 0 } { id: &apos;services&apos;, name: &apos;Services&apos;, count: 0 } { id: &apos;talent&apos;, name: &apos;Talent&apos;, count: 0 } { id: &apos;equipment&apos;, name: &apos;Equipment&apos;, count: 0 } { id: &apos;companies&apos;, name: &apos;Companies&apos;, count: 0 }
-  ];&apos { id: 'all', name: 'All Categories', count: 0 } { id: 'services', name: 'Services', count: 0 } { id: 'talent', name: 'Talent', count: 0 } { id: 'equipment', name: 'Equipment', count: 0 } { id: 'companies', name: 'Companies', count: 0 }
-  ];
+  ]&apos { id: 'all', name: 'All Categories', count: 0 } { id: 'services', name: 'Services', count: 0 } { id: 'talent', name: 'Talent', count: 0 } { id: 'equipment', name: 'Equipment', count: 0 } { id: 'companies', name: 'Companies', count: 0 }
+  ]
 
   const sortOptions = [ { id: 'relevance,', name: 'Relevance'},';' { id: 'newest,', name: 'Newest'},';' { id: 'rating,', name: 'Highest: Rated'},';' { id: 'price-low,', name: 'Price: Low: to High'},';' { id: 'price-high,', name: 'Price: High: to Low'}';';
 
@@ -156,7 +156,7 @@ const Search: React.FC = () => {}
       date: '2024-11-20'',;,';
   const sortOptions = [
     { id: &apos;relevance&apos;, name: &apos;Relevance&apos} { id: &apos;newest&apos;, name: &apos;Newest&apos} { id: &apos;rating&apos;, name: &apos;Highest Rated&apos} { id: &apos;price-low&apos;, name: &apos;Pric,e: Low to High&apos} { id: &apos;price-high&apos;, name: &apos;Pric,e: High to Low&apos}
-  ];&apos;
+  ]&apos;
 
     { id: 1, title: 'AI-Powered Business Intelligence Platform' {
       id: 1,
@@ -205,26 +205,26 @@ const Search: React.FC = () => {}
       rating: 4.8, reviews: 127,
       location: 'Remote', company: 'Zion Tech Group',
       tags: ['AI', 'Analytics', 'Business Intelligence', 'Machine Learning'], featured: true,
-      date: '2024-12-01'
-    } { id: 2,
+      date: '2024-12-01';
+} { id: 2,
       title: 'Senior Full-Stack Developer', description: 'Experienced developer specializing in React, Node.js, and cloud technologies.',
       type 'talent', price: '$120/hour',
       rating: 4.9, reviews: 89,
       tags: ['React', 'Node.js', 'Full-Stack', 'Cloud'], featured: false,
-      date: '2024-11-28'
-    } { id: 3,
+      date: '2024-11-28';
+} { id: 3,
       title: 'Cloud Infrastructure Setup', description: 'Complete cloud infrastructure design and implementation for enterprise applications.',
       type 'services', price: '$15,000', rating: 4.7,
       reviews: 203, location: 'On-site',
       company: 'Zion Tech Group', tags: ['Cloud', 'Infrastructure', 'AWS', 'Azure'], featured: true,
-      date: '2024-11-25'
-    } { id: 4,
+      date: '2024-11-25';
+} { id: 4,
       title: 'High-Performance Computing Cluster', description: 'Enterprise-grade computing cluster for data processing and machine learning workloads.',
       type 'equipment', price: '$50,000', rating: 4.6,
       reviews: 45, location: 'On-site',
       company: 'Zion Tech Group', tags: ['HPC', 'Computing', 'Data Processing', 'ML'], featured: false,
-      date: '2024-11-20'
-    }
+      date: '2024-11-20';
+}
 
   useEffect(() => {
     if: (searchQuery) {
@@ -316,8 +316,8 @@ const Search: React.FC = () => {}
       case 'services': return <Server className="w-5 h-5 text-blue-400" />
       case 'talent': return <Users className="w-5 h-5 text-purple-400" />
       case 'equipment': return <Building className="w-5 h-5 text-orange-400" />
-      default: return <SearchIcon className="w-5 h-5 text-gray-400" />
-  };
+      default: return <SearchIcon className="w-5 h-5 text-gray-400" />;
+};
 
       case &apos;services&apos;:
         return&apos}} <;<Server className=&quot;w-5 h-5 text-blue-400&quot; />;
@@ -351,7 +351,7 @@ const Search: React.FC = () => {}
         keywords=&quot;search, services, talent, equipment, companies, technology marketplace, Zion Tech Group&quot;
       />&quot;
         title="Search - Zion Tech Group"
-        description="Search for services, talent, equipment, and companies across Zion Tech Group&apos;s comprehensive technology marketplace."'
+        description="Search for services, talent, equipment, and companies across Zion Tech Group&apos;s comprehensive technology marketplace."
         keywords="search, services, talent, equipment, companies, technology marketplace, Zion Tech Group"
       />
       

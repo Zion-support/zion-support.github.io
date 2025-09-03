@@ -14,7 +14,7 @@ import {
   BarChart3,
   Shield,
   Globe,
-  Clock
+  Clock;
 } from 'lucide-react';
 
 export default function WorkflowAutomation() {
@@ -22,34 +22,34 @@ export default function WorkflowAutomation() {
     {
       icon: Zap,
       title: 'Process Automation',
-      description: 'Automate repetitive business processes with custom workflows and triggers.'
-    },
+      description: 'Automate repetitive business processes with custom workflows and triggers.';
+},
     {
       icon: Settings,
       title: 'Integration APIs',
-      description: 'Connect with hundreds of third-party applications and services.'
-    },
+      description: 'Connect with hundreds of third-party applications and services.';
+},
     {
       icon: Workflow,
       title: 'Custom Workflows',
-      description: 'Build custom workflows with drag-and-drop workflow designer.'
-    },
+      description: 'Build custom workflows with drag-and-drop workflow designer.';
+},
     {
       icon: BarChart3,
       title: 'Monitoring & Analytics',
-      description: 'Track workflow performance and identify optimization opportunities.'
-    },
+      description: 'Track workflow performance and identify optimization opportunities.';
+},
     {
       icon: Shield,
       title: 'Security & Compliance',
-      description: 'Enterprise-grade security with compliance monitoring and audit trails.'
-    },
+      description: 'Enterprise-grade security with compliance monitoring and audit trails.';
+},
     {
       icon: Clock,
       title: 'Real-time Processing',
-      description: 'Execute workflows in real-time with high-performance infrastructure.'
-    }
-  ];
+      description: 'Execute workflows in real-time with high-performance infrastructure.';
+}
+  ]
 
   return (
     <>
@@ -143,5 +143,5 @@ export default function WorkflowAutomation() {
         </div>
       </section>
     </>
-  )
+  );
 }

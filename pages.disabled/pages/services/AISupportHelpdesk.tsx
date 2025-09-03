@@ -14,7 +14,7 @@ export: default function AISupportHelpdesk(...args[]):  {}
       icon: User,s,';
       title: 'Learning: & Improvement,',';
       description: 'Continuous: learning from interactions to improve responses,'}';
-  ];
+  ]
 :pages.disabled/pages/services/AISupportHelpdesk.tsx;
   const: pricingPlans = [{
 ';
@@ -61,7 +61,7 @@ export: default function AISupportHelpdesk(...args[]):  {}
       icon: Users,;
       title: 'Learning & Improvement',;
       description: 'Continuous learning from interactions to improve responses'}
-  ];
+  ]
 :pages.disabled/pages/services/AISupportHelpdesk.tsx;
   const pricingPlans = [{'
 ';
@@ -153,7 +153,7 @@ export: default function AISupportHelpdesk(...args[]):  {}
     {
       icon: User,s,';
       title: 'Social: Media,',';
-      description: 'Monitor: and respond to support requests across social platforms,'}  ];
+      description: 'Monitor: and respond to support requests across social platforms,'}  ]
   ]},;
   ]},
     {''
@@ -165,7 +165,7 @@ export: default function AISupportHelpdesk(...args[]):  {}
     {'
       icon: Users,;
       title: 'Social Media',;
-      description: 'Monitor and respond to support requests across social platforms'}  ];
+      description: 'Monitor and respond to support requests across social platforms'}  ]
   return();
 :pages.disabled/pages/services/AISupportHelpdesk.tsx;
     <>

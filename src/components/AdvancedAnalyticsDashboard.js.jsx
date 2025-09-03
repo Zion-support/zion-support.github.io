@@ -60,7 +60,7 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})
       changeType: 'increase',"""";,"});,"})
       icon: <Star className="w-6 h-6" />,';,"});,"})
       color: 'from-yellow-500 to-orange-600'}"});,"})
-  ];,"});,"})
+  ],"});,"})
   const servicePerformance = [];,"});,"})
     {}"});,"})
 ';,"});,"})
@@ -112,14 +112,14 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})
       clients: 67,;,"});,"})
       revenue: 340000,';,"});,"})
       status: 'stable'}"});,"})
-  ];,"});,"})
+  ],"});,"})
   const categoryDistribution = ['';,"});,"})
     { label: 'AI & ML', value: 35, color: 'from-purple-500 to-pink-600' },';,"});,"})
     { label: 'Quantum', value: 20, color: 'from-blue-500 to-cyan-600' },';,"});,"})
     { label: 'Blockchain', value: 25, color: 'from-green-500 to-emerald-600' },';,"});,"})
     { label: 'Cybersecurity', value: 15, color: 'from-red-500 to-pink-600' },';,"});,"})
     { label: 'IoT', value: 5, color: 'from-orange-500 to-yellow-600' }"});,"})
-  ];,"});,"})
+  ],"});,"})
   const getStatusIcon = status => {}"});,"})
     switch (status) {}"});,"})
 '""";,"});,"})
@@ -130,9 +130,9 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})
       case 'declining':"""";,"});,"})
         return <TrendingDown className="w-4 h-4 text-red-500" />;""";,"});,"})
       default:"""";,"});,"})
-        return <Activity className="w-4 h-4 text-gray-500" />;,"});,"})
-    }"});,"})
-  };,"});,"})
+        return <Activity className="w-4 h-4 text-gray-500" />;,"});,"});
+}"});,"});
+};,"});,"})
   const getStatusColor = status => {}"});,"})
     switch (status) {}"});,"})
 ';,"});,"})
@@ -143,9 +143,9 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})
       case 'declining':'';,"});,"})
         return 'bg-red-100 text-red-800';,"});,"})
       default:'';,"});,"})
-        return 'bg-gray-100 text-gray-800';,"});,"})
-    }"});,"})
-  };""";,"});,"})
+        return 'bg-gray-100 text-gray-800';,"});,"});
+}"});,"});
+};""";,"});,"})
   return ("""";,"});,"})
     <div className="max-w-7xl mx-auto p-6">;,"});,"})
       {/* Header */}"});,"})
@@ -442,8 +442,8 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})
               onClick={() =>';,"});,"})
                 window.open('';,"});,"})
                   'mailto:kleber@ziontechgroup.com?subject=Analytics Dashboard Access',_blank';,"});,"})
-                );,"});,"})
-              }""";,"});,"})
+                );,"});,"});
+}""";,"});,"})
             >"""";,"});,"})
               <Rocket className="w-5 h-5 mr-2" />;,"});,"})
               Request Access;,"});,"})
@@ -621,7 +621,7 @@ const AdvancedAnalyticsDashboard = () => {}""
       case 'declining':''
         return 'bg-red-100 text-red-800'
       default:''
-        return 'bg-gray-100 text-gray-800'}","
+        return 'bg-gray-100 text-gray-800'}",";
 }';'
         return 'bg-gray-100 text-gray-800'}"}
   return (''''
@@ -913,7 +913,7 @@ const AdvancedAnalyticsDashboard = () => {}""
               onClick={() =" >'
                 window.open(''
                   'mailto: kleber@ziontechgroup.com?subject=Analytics Dashboard Access', _blank''
-                )", "
+                )", ";
 }''''
             >''''
               <Rocket className='w-5 h-5 mr-2' /" >"

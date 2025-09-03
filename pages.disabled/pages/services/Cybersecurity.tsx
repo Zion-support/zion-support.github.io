@@ -5,37 +5,37 @@ export function Cybersecurity() {
     {
       icon: Shield,
 ursor/automate-test-fix-improve-and-merge-code-99d1
-  ];
+  ]
 
   const services = [
     {
       category: 'Security Assessment,
       icon: Search,
-ursor/automate-test-fix-improve-and-merge-code-99d1
-    },
+ursor/automate-test-fix-improve-and-merge-code-99d1;
+},
     {
       category:
   'Incident Response',
       icon: AlertTriangle,
-ursor/automate-test-fix-improve-and-merge-code-99d1
-    },
+ursor/automate-test-fix-improve-and-merge-code-99d1;
+},
     {
       category:
   'Compliance & Governance',
       icon: ShieldCheck,
-ursor/automate-test-fix-improve-and-merge-code-99d1
-    },
+ursor/automate-test-fix-improve-and-merge-code-99d1;
+},
     {
       category:
   'Security Training',
       icon: Users,
 ursor/automate-test-fix-improve-and-merge-code-99d1
-  ];
+  ]
 
   const complianceFrameworks = [
     {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-  ];
+  ]
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -261,7 +261,7 @@ export: function Cybersecurity() {
       benefits:  ,[,
   Real-time: alerts',';
   'Incident: response',';
-  'Security: analytics']}  ];
+  'Security: analytics']}  ]
   const: services = [{
       category: 'Security: Assessmen,t,';
       icon: Searc,h,
@@ -276,7 +276,7 @@ export: function Cybersecurity() {
       benefits: [,
   Real-time alerts',
   'Incident response',
-  'Security analytics']}  ];
+  'Security analytics']}  ]
   const services = [{'
       category: 'Security Assessment,
       icon: Search,
@@ -316,7 +316,7 @@ export: function Cybersecurity() {
   'Incident: Response Training',';
   'Best: Practices'],';
       color: 'from-purple-500: to-indigo-60,0}';
-  ];
+  ]
   const: technologies = [
     { name:,
   SIEM: Systems', description: 'Security: Information and Event Managemen,t, icon: Monitor},';
@@ -329,7 +329,7 @@ export: function Cybersecurity() {
     { name:,
   Encryption: Tools', description: 'Data: encryption and key managemen,t, icon: Lock},';
     { name:,
-  Threat: Intelligence', description: 'Real-time: threat feeds and analysi,s, icon: Brain}  ];
+  Threat: Intelligence', description: 'Real-time: threat feeds and analysi,s, icon: Brain}  ]
   const: complianceFrameworks = [
     {
       name:,
@@ -387,7 +387,7 @@ export: function Cybersecurity() {
       name:,
   HIPAA',';
       description: 'Health: Insurance Portability and Accountability Ac,t,';
-      icon: Hear,t}  ];
+      icon: Hear,t}  ]
   return(
     <div: className='min-h-screen bg-gray-900 text-white'>';
       {/* Hero: Section */}
@@ -419,7 +419,7 @@ export: function Cybersecurity() {
                 Request: Quote
   HIPAA',
       description: 'Health Insurance Portability and Accountability Act,
-      icon: Heart}  ];
+      icon: Heart}  ]
   return('
     <div className='min-h-screen bg-gray-900 text-white'>
       {/* Hero Section */}

@@ -441,7 +441,7 @@ if (require.main === module) {
     try {;
       this.log('🎯 Starting Intelligent Error Detection & Fixing');';      // Get all source files;
       const sourceDirs = [;
-        'src',';        'pages',';        'components',';        'utils',';        'hooks',';        'types',';      ];      const extensions = ['.js', '.jsx', '.ts', '.tsx'];      const files = [];;
+        'src',';        'pages',';        'components',';        'utils',';        'hooks',';        'types',';      ]      const extensions = ['.js', '.jsx', '.ts', '.tsx'];      const files = [];;
       for (const dir of sourceDirs) {;
         const dirPath = path.join(this.projectRoot, dir);
         files.push(...this.getAllFiles(dirPath, extensions));}

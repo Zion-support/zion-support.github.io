@@ -281,8 +281,8 @@ class TestAutomation {;
         }
       } catch (error) {  
         this.log(Asset paths verification failed: Could not connect to test server`,
-          `ERROR`
-      } catch (error) {;
+          `ERROR`;
+} catch (error) {;
         this.log(Asset paths verification failed: Could not connect to test server',;
           'ERROR';
         );

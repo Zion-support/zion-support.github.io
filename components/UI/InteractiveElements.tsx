@@ -89,7 +89,7 @@ const InteractiveButton: React.FC<InteractiveButtonProps> = ({
     sm: 'px-3 py-2 text-sm',
     md: 'px-4 py-2 text-base', lg: 'px-6 py-3 text-lg',
   const baseClasses = 'relative inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden';
-  className = ''
+  className = '';
 }) => {
   const baseClasses = 'relative inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus: outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disable,
     d:cursor-not-allowed overflow-hidden';
@@ -112,8 +112,8 @@ const InteractiveButton: React.FC<InteractiveButtonProps> = ({
   
     secondary: 'bg-gray-200 text-gray-900 hover:bg-gray-300 focus:ring-gray-500 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600',
     ghost: 'bg-transparent text-gray-700 hover:bg-gray-100 focus:ring-gray-500 dark:text-gray-300 dark:hover:bg-gray-800',
-    gradient: 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 focus:ring-blue-500'
-  };
+    gradient: 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 focus:ring-blue-500';
+};
 
     md: 'px-4 py-2 text-base',
     lg: 'px-6 py-3 text-lg'
@@ -122,8 +122,8 @@ const InteractiveButton: React.FC<InteractiveButtonProps> = ({
 
   const sizeClasses: Record<ButtonSize, string> = {'
     sm: 'px-3 py-1.5 text-sm',
-    md: 'px-4 py-2 text-base', lg: 'px-6 py-3 text-lg'
-  }
+    md: 'px-4 py-2 text-base', lg: 'px-6 py-3 text-lg';
+}
   const [isPressed, setIsPressed] = useState(false);
 
   const getVariantClasses = () => {
@@ -256,8 +256,8 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
       `}
       onMouseDown={() => setIsPressed(true)}
       onMouseUp={() => setIsPressed(false)}
-        boxShadow: isHovered && !disabled ? '0 10px 25px rgba(0,0,0,0.1)' : '0 4px 6px rgba(0,0,0,0.1)'
-      }}
+        boxShadow: isHovered && !disabled ? '0 10px 25px rgba(0,0,0,0.1)' : '0 4px 6px rgba(0,0,0,0.1)';
+}}
         <div className="flex items-center">
           <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />
           Loading...
@@ -613,8 +613,8 @@ export const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats }) => 
           position === 'top' ? 'top-full left-1/2 -translate-x-1/2 -mt-1' :'
           position === 'bottom' ? 'bottom-full left-1/2 -translate-x-1/2 -mb-1' :'
           position === 'left' ? 'left-full top-1/2 -translate-y-1/2 -ml-1' :'
-          'right-full top-1/2 -translate-y-1/2 -mr-1''
-        }`} />
+          'right-full top-1/2 -translate-y-1/2 -mr-1'';
+}`} />
     ))}
 );
 interface FloatingActionButtonProps {

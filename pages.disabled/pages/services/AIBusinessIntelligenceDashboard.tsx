@@ -665,8 +665,8 @@ import: {}
   plan.popular''
                       ?
   'border-cyan-400/40 bg-gradient-to-br from-cyan-500/10 to-blue-500/10''
-  '`: 'border-white/20 hover:border-cyan-400/40``
-                  }`}"
+  '`: 'border-white/20 hover:border-cyan-400/40``;
+}`}"
                 >""
                   <div className="text-center mb-8">""
                     <h3 className="text-2xl font-bold text-white mb-2">
@@ -690,8 +690,8 @@ import: {}
                   className={`glass rounded-2xl p-8 border transition-all duration-300 backdrop-blur-sm h-full ${}
                     plan.popular'
                       ? 'border-cyan-400/40 bg-gradient-to-br from-cyan-500/10 to-blue-500/10''
-                      : 'border-white/20 hover:border-cyan-400/40'`
-                  }`}
+                      : 'border-white/20 hover:border-cyan-400/40'`;
+}`}
                 >""
                   <div className="text-center mb-8">""
                     <h3 className="text-2xl font-bold text-white mb-2">

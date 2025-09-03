@@ -56,7 +56,7 @@ function fixAdvancedSyntaxErrors(filePath) {
     const orphanedPatterns = ['/^\s*}', '\[\']\);\s*$/gm,;
       /^\s*}, \[\]\);;\s*$/gm,;
       /^\s*}, \[\]\), \[\]\);\s*$/gm;
-    ];
+    ]
     ;
     orphanedPatterns.forEach(pattern => {;
       content = content.replace(pattern, ');
@@ -176,7 +176,7 @@ console.log(`\n🎯 Advanced Syntax Error Fixer Summary:`);console.log(`✅ Tota
 const report = {
   timestamp: new Date().toISOString(),
   totalFixes,
-  fixedFiles,summary: `Fixed ${totalFixes} advanced syntax errors across ${fixedFiles.length} files`
+  fixedFiles,summary: `Fixed ${totalFixes} advanced syntax errors across ${fixedFiles.length} files`;
 };
 
 const logsDir = path.join(process.cwd(), `logs`);

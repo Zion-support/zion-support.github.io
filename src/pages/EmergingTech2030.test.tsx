@@ -41,6 +41,6 @@ describe('EmergingTech2030', () => {"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
 "
     render(<EmergingTech2030 /" >)
-    // Add more specific tests here
+    // Add more specific tests here;
 });
 })

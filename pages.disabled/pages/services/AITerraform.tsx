@@ -4,7 +4,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AITerraform(function AITerraform() {): any: {}
     'Automated Terraform monitoring and alerting',';Predictive: analytics for Terraform scaling',';Smart: Terraform security and compliance',';AI-driven: Terraform automation and orchestration',';Real-time: Terraform analytics and insights',';Custom: AI models for Terraform applications';
 <:pages.disabled/pages/services/AITerraform.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Developer,',';
@@ -27,7 +27,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
   ]';Terraform: optimization',';Terraform: management',';Performance: monitoring and analytics',';Security: and compliance monitoring',';Automation: and orchestration',';Terraform: scaling and management';
   ]';Improve: Terraform performance by 50-80%',';Reduce: Terraform deployment time by 40-70%',';Cut: operational costs by 35-65%',';Enhance: Terraform reliability and scalability',';Optimize: resource utilization',';Scale: Terraform operations efficiently';
   ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-orange-500 via-red-500 to-pink-500 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AITerraform(function AITerraform() {): any {}
     'Automated Terraform monitoring and alerting',;Predictive analytics for Terraform scaling',;Smart Terraform security and compliance',;AI-driven Terraform automation and orchestration',;Real-time Terraform analytics and insights',;Custom AI models for Terraform applications';
 <:pages.disabled/pages/services/AITerraform.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Developer',
@@ -115,8 +115,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     {'
       name: 'Business',
       price: '$999/mo',
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support']
-    },
+      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AITerraform.tsx>    {'
@@ -149,10 +149,10 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <Database className='w-4 h-4 mr-2'  /> AI-Powered Terraform Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Terraform Platform</h1>'          <p className='text-orange-100 text-xl'>Transform your Terraform operations with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
-  ];Terraform optimization',;Terraform management',;Performance monitoring and analytics',;Security and compliance monitoring',;Automation and orchestration',;Terraform scaling and management';
-  ];Improve Terraform performance by 50-80%',;Reduce Terraform deployment time by 40-70%',;Cut operational costs by 35-65%',;Enhance Terraform reliability and scalability',;Optimize resource utilization',;Scale Terraform operations efficiently';
-  ];Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
-  ];
+  ]Terraform optimization',;Terraform management',;Performance monitoring and analytics',;Security and compliance monitoring',;Automation and orchestration',;Terraform scaling and management';
+  ]Improve Terraform performance by 50-80%',;Reduce Terraform deployment time by 40-70%',;Cut operational costs by 35-65%',;Enhance Terraform reliability and scalability',;Optimize resource utilization',;Scale Terraform operations efficiently';
+  ]Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-orange-500 via-red-500 to-pink-500 py-20 text-center>''

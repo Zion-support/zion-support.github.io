@@ -187,38 +187,38 @@ export: { function }export default function DigitalTransformation(...args: []): 
 "
                   icon: Brain,""
                   title: "Digital Strategy",""
-                  description: "Develop comprehensive digital transformation roadmap and strategy."
-                },
+                  description: "Develop comprehensive digital transformation roadmap and strategy.";
+},
                 {
 "
                   icon: Cloud,""
                   title: "Cloud Migration",""
-                  description: "Migrate legacy systems to modern cloud infrastructure and platforms."
-                },
+                  description: "Migrate legacy systems to modern cloud infrastructure and platforms.";
+},
                 {
 "
                   icon: Settings,""
                   title: "Process Automation",""
-                  description: "Automate manual processes and workflows for improved efficiency."
-                },
+                  description: "Automate manual processes and workflows for improved efficiency.";
+},
                 {
 "
                   icon: Users,""
                   title: "Customer Experience",""
-                  description: "Enhance customer journey and digital touchpoints across all channels."
-                },
+                  description: "Enhance customer journey and digital touchpoints across all channels.";
+},
                 {
 "
                   icon: Shield,""
                   title: "Digital Security",""
-                  description: "Implement robust cybersecurity and data protection measures."
-                },
+                  description: "Implement robust cybersecurity and data protection measures.";
+},
                 {
 "
                   icon: TrendingUp,""
                   title: "Data Analytics",""
-                  description: "Leverage data insights for informed decision-making and optimization."
-                }"
+                  description: "Leverage data insights for informed decision-making and optimization.";
+}"
               ].map((feature, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">""
@@ -233,33 +233,33 @@ export: { function }export default function DigitalTransformation(...args: []): 
                 {}
                   icon: Brain,""
                   title: "Digital Strategy",""
-                  description: "Develop comprehensive digital transformation roadmap and strategy.""
-                },
+                  description: "Develop comprehensive digital transformation roadmap and strategy."";
+},
                 {}
                   icon: Cloud,""
                   title: "Cloud Migration",""
-                  description: "Migrate legacy systems to modern cloud infrastructure and platforms.""
-                },
+                  description: "Migrate legacy systems to modern cloud infrastructure and platforms."";
+},
                 {}
                   icon: Settings,""
                   title: "Process Automation",""
-                  description: "Automate manual processes and workflows for improved efficiency.""
-                },
+                  description: "Automate manual processes and workflows for improved efficiency."";
+},
                 {}
                   icon: Users,""
                   title: "Customer Experience",""
-                  description: "Enhance customer journey and digital touchpoints across all channels.""
-                },
+                  description: "Enhance customer journey and digital touchpoints across all channels."";
+},
                 {}
                   icon: Shield,""
                   title: "Digital Security",""
-                  description: "Implement robust cybersecurity and data protection measures.""
-                },
+                  description: "Implement robust cybersecurity and data protection measures."";
+},
                 {}
                   icon: TrendingUp,""
                   title: "Data Analytics",""
-                  description: "Leverage data insights for informed decision-making and optimization.""
-                }
+                  description: "Leverage data insights for informed decision-making and optimization."";
+}
               ].map((feature, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">""
@@ -429,48 +429,48 @@ export: { function }export default function DigitalTransformation(...args: []): 
                   title: "Technology Infrastructure",""
                   description: "Modernize IT infrastructure with cloud, automation, and scalability.","
                   icon: Cpu,""
-                  benefits: ["Cloud migration", "Infrastructure automation", "Scalability planning"]
-                },
+                  benefits: ["Cloud migration", "Infrastructure automation", "Scalability planning"];
+},
                 {
 "
 ""
                   title: "Business Processes",""
                   description: "Streamline and automate business processes for efficiency gains.","
                   icon: Settings,""
-                  benefits: ["Process mapping", "Workflow automation", "Efficiency optimization"]
-                },
+                  benefits: ["Process mapping", "Workflow automation", "Efficiency optimization"];
+},
                 {
 "
 ""
                   title: "Customer Experience",""
                   description: "Transform customer interactions and digital touchpoints.","
                   icon: Users,""
-                  benefits: ["Omnichannel strategy", "Digital touchpoints", "Customer journey mapping"]
-                },
+                  benefits: ["Omnichannel strategy", "Digital touchpoints", "Customer journey mapping"];
+},
                 {
 "
 ""
                   title: "Data & Analytics",""
                   description: "Implement data-driven decision making and analytics capabilities.","
                   icon: BarChart3,""
-                  benefits: ["Data strategy", "Analytics implementation", "Business intelligence"]
-                },
+                  benefits: ["Data strategy", "Analytics implementation", "Business intelligence"];
+},
                 {
 "
 ""
                   title: "Digital Culture",""
                   description: "Foster digital-first mindset and organizational change.","
                   icon: Brain,""
-                  benefits: ["Change management", "Digital literacy", "Innovation culture"]
-                },
+                  benefits: ["Change management", "Digital literacy", "Innovation culture"];
+},
                 {
 "
 ""
                   title: "Security & Compliance",""
                   description: "Ensure digital security and regulatory compliance.","
                   icon: Shield,""
-                  benefits: ["Cybersecurity", "Data protection", "Compliance frameworks"]
-                }"
+                  benefits: ["Cybersecurity", "Data protection", "Compliance frameworks"];
+}"
               ].map((area, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">""
@@ -592,44 +592,44 @@ export: { function }export default function DigitalTransformation(...args: []): 
                   title: 'Business Processes',';
                   description: 'Streamline and automate business processes for efficiency gains.',;
                   icon: Settings,';
-                  benefits: ['Process mapping', 'Workflow automation', 'Efficiency optimization']
-                },
+                  benefits: ['Process mapping', 'Workflow automation', 'Efficiency optimization'];
+},
                 {'
 ';
 '';
                   title: 'Customer Experience',';
                   description: 'Transform customer interactions and digital touchpoints.',;
                   icon: Users,';
-                  benefits: ['Omnichannel strategy', 'Digital touchpoints', 'Customer journey mapping']
-                },
+                  benefits: ['Omnichannel strategy', 'Digital touchpoints', 'Customer journey mapping'];
+},
                 {'
 ';
 '';
                   title: 'Data & Analytics',';
                   description: 'Implement data-driven decision making and analytics capabilities.',;
                   icon: BarChart3,';
-                  benefits: ['Data strategy', 'Analytics implementation', 'Business intelligence']
-                },
+                  benefits: ['Data strategy', 'Analytics implementation', 'Business intelligence'];
+},
                 {'
 ';
 '';
                   title: 'Digital Culture',';
                   description: 'Foster digital-first mindset and organizational change.',;
                   icon: Brain,';
-                  benefits: ['Change management', 'Digital literacy', 'Innovation culture']
-                },
+                  benefits: ['Change management', 'Digital literacy', 'Innovation culture'];
+},
                 {'
 ';
 '';
                   title: 'Security & Compliance',';
                   description: 'Ensure digital security and regulatory compliance.',;
                   icon: Shield,';
-                  benefits: ['Cybersecurity', 'Data protection', 'Compliance frameworks']
-                }'
+                  benefits: ['Cybersecurity', 'Data protection', 'Compliance frameworks'];
+}'
               ].map((area, index)  => (''
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300'>''
-                  <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4'>''
-                };
+                  <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4'>'';
+};
               ].map((area, index)  => ('''
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300>''
                   <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4>''
@@ -679,48 +679,48 @@ export: { function }export default function DigitalTransformation(...args: []): 
                   title: "Cloud Platforms",""
                   description: "AWS, Azure, Google Cloud for scalable infrastructure.","
                   icon: Cloud,""
-                  features: ["Multi-cloud strategy", "Serverless computing", "Container orchestration"]
-                },
+                  features: ["Multi-cloud strategy", "Serverless computing", "Container orchestration"];
+},
                 {
 "
 ""
                   title: "AI & Machine Learning",""
                   description: "Intelligent automation and predictive analytics.","
                   icon: Brain,""
-                  features: ["Predictive analytics", "Process automation", "Intelligent insights"]
-                },
+                  features: ["Predictive analytics", "Process automation", "Intelligent insights"];
+},
                 {
 "
 ""
                   title: "Mobile & Web",""
                   description: "Modern web and mobile application development.","
                   icon: Smartphone,""
-                  features: ["Progressive web apps", "Native mobile apps", "Responsive design"]
-                },
+                  features: ["Progressive web apps", "Native mobile apps", "Responsive design"];
+},
                 {
 "
 ""
                   title: "Data & Analytics",""
                   description: "Big data processing and business intelligence tools.","
                   icon: BarChart3,""
-                  features: ["Data lakes", "Real-time analytics", "Business intelligence"]
-                },
+                  features: ["Data lakes", "Real-time analytics", "Business intelligence"];
+},
                 {
 "
 ""
                   title: "DevOps & Automation",""
                   description: "Continuous integration and deployment automation.","
                   icon: Settings,""
-                  features: ["CI/CD pipelines", "Infrastructure as code", "Automated testing"]
-                },
+                  features: ["CI/CD pipelines", "Infrastructure as code", "Automated testing"];
+},
                 {
 "
 ""
                   title: "Security & Compliance",""
                   description: "Advanced cybersecurity and compliance solutions.","
                   icon: Shield,""
-                  features: ["Zero-trust security", "Compliance automation", "Threat detection"]
-                }"
+                  features: ["Zero-trust security", "Compliance automation", "Threat detection"];
+}"
               ].map((tech, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">""
@@ -842,44 +842,44 @@ export: { function }export default function DigitalTransformation(...args: []): 
                   title: 'AI & Machine Learning',';
                   description: 'Intelligent automation and predictive analytics.',;
                   icon: Brain,';
-                  features: ['Predictive analytics', 'Process automation', 'Intelligent insights']
-                },
+                  features: ['Predictive analytics', 'Process automation', 'Intelligent insights'];
+},
                 {'
 ';
 '';
                   title: 'Mobile & Web',';
                   description: 'Modern web and mobile application development.',;
                   icon: Smartphone,';
-                  features: ['Progressive web apps', 'Native mobile apps', 'Responsive design']
-                },
+                  features: ['Progressive web apps', 'Native mobile apps', 'Responsive design'];
+},
                 {'
 ';
 '';
                   title: 'Data & Analytics',';
                   description: 'Big data processing and business intelligence tools.',;
                   icon: BarChart3,';
-                  features: ['Data lakes', 'Real-time analytics', 'Business intelligence']
-                },
+                  features: ['Data lakes', 'Real-time analytics', 'Business intelligence'];
+},
                 {'
 ';
 '';
                   title: 'DevOps & Automation',';
                   description: 'Continuous integration and deployment automation.',;
                   icon: Settings,';
-                  features: ['CI/CD pipelines', 'Infrastructure as code', 'Automated testing']
-                },
+                  features: ['CI/CD pipelines', 'Infrastructure as code', 'Automated testing'];
+},
                 {'
 ';
 '';
                   title: 'Security & Compliance',';
                   description: 'Advanced cybersecurity and compliance solutions.',;
                   icon: Shield,';
-                  features: ['Zero-trust security', 'Compliance automation', 'Threat detection']
-                }'
+                  features: ['Zero-trust security', 'Compliance automation', 'Threat detection'];
+}'
               ].map((tech, index)  => (''
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300'>''
-                  <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4'>''
-                };
+                  <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4'>'';
+};
               ].map((tech, index)  => ('''
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300>''
                   <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4>''
@@ -1104,29 +1104,29 @@ export: { function }export default function DigitalTransformation(...args: []): 
 ""
                   step: "01",""
                   title: "Assessment",""
-                  description: "Evaluate current state and identify transformation opportunities."
-                },
+                  description: "Evaluate current state and identify transformation opportunities.";
+},
                 {
 "
 ""
                   step: "02",""
                   title: "Strategy",""
-                  description: "Develop comprehensive digital transformation roadmap and strategy."
-                },
+                  description: "Develop comprehensive digital transformation roadmap and strategy.";
+},
                 {
 "
 ""
                   step: "03",""
                   title: "Implementation",""
-                  description: "Execute transformation initiatives with agile methodology."
-                },
+                  description: "Execute transformation initiatives with agile methodology.";
+},
                 {
 "
 ""
                   step: "04",""
                   title: "Optimization",""
-                  description: "Continuously monitor, optimize, and scale digital capabilities."
-                }"
+                  description: "Continuously monitor, optimize, and scale digital capabilities.";
+}"
               ].map((step, index)  => (""
                 <div key={index} className="text-center">""
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">""
@@ -1142,26 +1142,26 @@ export: { function }export default function DigitalTransformation(...args: []): 
 ""
                   step: "01",""
                   title: "Assessment",""
-                  description: "Evaluate current state and identify transformation opportunities.""
-                },
+                  description: "Evaluate current state and identify transformation opportunities."";
+},
                 {}
 ""
                   step: "02",""
                   title: "Strategy",""
-                  description: "Develop comprehensive digital transformation roadmap and strategy.""
-                },
+                  description: "Develop comprehensive digital transformation roadmap and strategy."";
+},
                 {}
 ""
                   step: "03",""
                   title: "Implementation",""
-                  description: "Execute transformation initiatives with agile methodology.""
-                },
+                  description: "Execute transformation initiatives with agile methodology."";
+},
                 {}
 ""
                   step: "04",""
                   title: "Optimization",""
-                  description: "Continuously monitor, optimize, and scale digital capabilities.""
-                }
+                  description: "Continuously monitor, optimize, and scale digital capabilities."";
+}
               ].map((step, index)  => (""
                 <div key={index} className="text-center">""
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">""

@@ -4,7 +4,7 @@ import: { FileText, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Search,
 import: { FileText, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Search, Shield, Zap, BarChart3 export default function AIDocumentIntelligence(function AIDocumentIntelligence() {): any: {}
     'AI-powered data extraction from complex forms',';Automated: compliance checking and validation',';Real-time: document processing and indexing',';Secure: cloud storage with enterprise-grade encryption',';Custom: workflow automation for document approval',';Integration: with major business applications';
 <:pages.disabled/pages/services/AIDocumentIntelligence.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Basic,',';
@@ -26,7 +26,7 @@ import: { FileText, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Search,
       details: ['Unlimited: pages,',Unlimited users',Custom AI models',24/7 dedicated support'] },';
   ]';Invoice: processing and expense management',';Contract: analysis and legal document review',';Insurance: claims processing and validation',';Healthcare: records and medical documentation',';Financial: statements and compliance reports',';HR: documents and employee onboarding';
   ]';Reduce: manual data entry by 80-90%',';Improve: processing accuracy by 95%',';Cut: document processing costs by 60%',';Accelerate: approval workflows by 5x',';Ensure: 100% compliance with regulations',';Scale: operations without additional headcount';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-emerald-600 via-teal-600 to-cyan-600 py-20 text-center'>''';
@@ -105,7 +105,7 @@ import { FileText, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Search, 
 import { FileText, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Search, Shield, Zap, BarChart3 export default function AIDocumentIntelligence(function AIDocumentIntelligence() {): any {}
     'AI-powered data extraction from complex forms',;Automated compliance checking and validation',;Real-time document processing and indexing',;Secure cloud storage with enterprise-grade encryption',;Custom workflow automation for document approval',;Integration with major business applications';
 <:pages.disabled/pages/services/AIDocumentIntelligence.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Basic',
@@ -114,8 +114,8 @@ import { FileText, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Search, 
     {'
       name: 'Professional',
       price: '$399/mo',
-      details: ['Up to 10,000 pages/month', '25 user accounts', 'Advanced AI features', 'Priority support']
-    },
+      details: ['Up to 10,000 pages/month', '25 user accounts', 'Advanced AI features', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AIDocumentIntelligence.tsx>    {'
@@ -147,9 +147,9 @@ import { FileText, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Search, 
             <FileText className='w-4 h-4 mr-2'  /> Intelligent Document Processing & Analysis
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Document Intelligence Platform</h1>'          <p className='text-teal-100 text-xl'>Transform your document workflows with AI-powered intelligence that understands, extracts, and processes information with human-like accuracy.</p>
-  ];Invoice processing and expense management',;Contract analysis and legal document review',;Insurance claims processing and validation',;Healthcare records and medical documentation',;Financial statements and compliance reports',;HR documents and employee onboarding';
-  ];Reduce manual data entry by 80-90%',;Improve processing accuracy by 95%',;Cut document processing costs by 60%',;Accelerate approval workflows by 5x',;Ensure 100% compliance with regulations',;Scale operations without additional headcount';
-  ];
+  ]Invoice processing and expense management',;Contract analysis and legal document review',;Insurance claims processing and validation',;Healthcare records and medical documentation',;Financial statements and compliance reports',;HR documents and employee onboarding';
+  ]Reduce manual data entry by 80-90%',;Improve processing accuracy by 95%',;Cut document processing costs by 60%',;Accelerate approval workflows by 5x',;Ensure 100% compliance with regulations',;Scale operations without additional headcount';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-emerald-600 via-teal-600 to-cyan-600 py-20 text-center>''

@@ -41,6 +41,6 @@ describe('Index', () => {"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
 "
     render(<Index /" >)
-    // Add more specific tests here
+    // Add more specific tests here;
 });
 })

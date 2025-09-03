@@ -19,8 +19,8 @@ class ComprehensiveLinkChecker {,"});,"})
     this.maxDepth = 3;,"});,"})
     this.currentDepth = 0;,"});,"})
     this.concurrency = 5;,"});,"})
-    this.semaphore = this.concurrency;,"});,"})
-  }"});,"})
+    this.semaphore = this.concurrency;,"});,"});
+}"});,"})
   async loadSitemap() {,"});,"})
     try {,"});,"})
       const sitemapPath = path.join(__dirname,;,"});,"})
@@ -30,10 +30,10 @@ class ComprehensiveLinkChecker {,"});,"})
       const $ = cheerio.load(sitemapContent { xmlMode: true });,"});,"})
 ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
         const url = $(elem).text().trim();,"});,"})
-        this.sitemapUrls.push(url);,"});,"})
-      });,"});,"})
-      console.log(`Loaded ${this.sitemapUrls.length} URLs from sitemap`);,"});,"})
-    } catch (error) {,"});,"})
+        this.sitemapUrls.push(url);,"});,"});
+});,"});,"})
+      console.log(`Loaded ${this.sitemapUrls.length} URLs from sitemap`);,"});,"});
+} catch (error) {,"});,"})
       console.error(;,"});,"})
   'Error loading sitemap:', error.message);,"});,"})
   async checkUrl(url, parentUrl = null, depth = 0) {,"});,"})
@@ -56,8 +56,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
           // Check extracted links;,"});,"})
           for (const link of links) {,"});,"})
             if (link && link.startsWith(this.baseUrl)) {,"});,"})
-              await this.checkUrl(link, url, depth + 1);,"});,"})
-      } else {,"});,"})
+              await this.checkUrl(link, url, depth + 1);,"});,"});
+} else {,"});,"})
         this.brokenLinks.push({,"});,"})
           error: `HTTP ${response.status}`,;,"});,"})
         status:;,"});,"})
@@ -79,7 +79,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
   async checkNavigationLinks() {,"});,"})
   '\n=== Checking Navigation Links ===');,"});,"})
     const navigationUrls = [,"});,"})
-    ];,"});,"})
+    ],"});,"})
     const promises = navigationUrls.map(url =>;,"});,"})
       this.checkUrl(`${this.baseUrl}${url}`, null, 0);,"});,"})
     );,"});,"})
@@ -94,13 +94,13 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
         totalUrls: this.visitedUrls.size,;,"});,"})
         workingLinks: this.workingLinks.length,;,"});,"})
         brokenLinks: this.brokenLinks.length,;,"});,"})
-        missingPages: this.missingPages.length,;,"});,"})
-      },;,"});,"})
+        missingPages: this.missingPages.length,;,"});,"});
+},;,"});,"})
       workingLinks: this.workingLinks,;,"});,"})
       brokenLinks: this.brokenLinks,;,"});,"})
       missingPages: this.missingPages,;,"});,"})
-      recommendations: this.generateRecommendations(),;,"});,"})
-    };,"});,"})
+      recommendations: this.generateRecommendations(),;,"});,"});
+};,"});,"})
     // Save detailed report;,"});,"})
     fs.writeFileSync(;,"});,"})
       path.join(__dirname,;,"});,"})
@@ -114,8 +114,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
         url: link.url,;,"});,"})
         status: link.status,;,"});,"})
         error: link.error,;,"});,"})
-        parent: link.parent,;,"});,"})
-      })),;,"});,"})
+        parent: link.parent,;,"});,"});
+})),;,"});,"})
       recommendations: report.recommendations,;,"});,"})
 ,;,"});,"})
   ../reports/link-check-summary.json'),;,"});,"})
@@ -379,7 +379,7 @@ const axios = require(,;);  axios');const cheerio = require(;);  'cheerio');cons
   '/research-development',';
   '/request-quote',';
   '/green-it',';
-  '/space-tech'    ];
+  '/space-tech'    ]
     const promises = navigationUrls.map(url =>;
     console.log(`
     console.log(;
@@ -489,8 +489,8 @@ const axios = require(,;);  axios');const cheerio = require(;);  'cheerio');cons
   'http')) {';        return href}';      if (href.startsWith(;
   '/')) {';        return `${this.baseUrl}${href}`}`;      return new URL(href, baseUrl).href} catch (error) {
     console.log(;);  '\n=== Checking Sitemap URLs ===');    const promises = this.sitemapUrls.map(url => this.checkUrl(url, null, 0));
-    console.log(;);  '\n=== Checking Navigation Links ===');    const navigationUrls = [  '/',';  '/about',';  '/services',';  '/solutions',';  '/pricing',';  '/contact',';  '/blog',';  '/careers',';  '/team',';  '/partners',';  '/case-studies',';  '/news',';  '/help',';  '/faq',';  '/marketplace',';  '/dashboard',';  '/login',';  '/search',';  '/it-consulting',';  '/ai-solutions',';  '/solutions/enterprise',';  '/solutions/healthcare',';  '/research-development',';  '/request-quote',';  '/green-it',';  '/space-tech'    ];    const promises = navigationUrls.map(url =>;);      this.checkUrl(`${this.baseUrl}${url}`, null, 0));`;    await Promise.all(promises)}
-    console.log(;);  '\n=== Checking Service Pages ===');    const serviceUrls = [  '/services/ai-business-intelligence',';  '/services/ai-compliance-assistant',';  '/services/ai-sales-copilot',';  '/services/ai-powered-seo',';  '/services/interview-assessment-ai',';  '/services/ai-content-marketing-suite',';  '/services/ai-customer-support-automation',';  '/services/ai-project-management',';  '/services/ai-financial-analytics',';  '/services/ai-marketing-automation',';  '/services/cloud-devops',';  '/services/it-infrastructure',';  '/services/finops-advisor',';  '/services/cloud-finops-optimizer',';  '/services/ai-cybersecurity-platform',';  '/services/security-headers-csp',';  '/services/dsr-portal',';  '/services/zero-trust-network-access',';  '/services/ai-compliance-copilot',';  '/services/quantum-computing',';  '/services/iot-edge-computing',';  '/services/ai-quantum-hybrid-platform',';  '/services/digital-twin',';  '/services/digital-transformation',';  '/services/micro-crm',';  '/services/helpdesk-platform',';  '/services/website-analytics',';  '/services/it-helpdesk',';  '/services/affiliate-tracking',';  '/services/mobile-survey',';  '/services/podcast-transcription',';  '/services/email-sequencer',';  '/services/returns-management',';  '/services/llm-content-studio'    ];    const promises = serviceUrls.map(url =>;);      this.checkUrl(`${this.baseUrl}${url}`, null, 0));`;    await Promise.all(promises)}
+    console.log(;);  '\n=== Checking Navigation Links ===');    const navigationUrls = [  '/',';  '/about',';  '/services',';  '/solutions',';  '/pricing',';  '/contact',';  '/blog',';  '/careers',';  '/team',';  '/partners',';  '/case-studies',';  '/news',';  '/help',';  '/faq',';  '/marketplace',';  '/dashboard',';  '/login',';  '/search',';  '/it-consulting',';  '/ai-solutions',';  '/solutions/enterprise',';  '/solutions/healthcare',';  '/research-development',';  '/request-quote',';  '/green-it',';  '/space-tech'    ]    const promises = navigationUrls.map(url =>;);      this.checkUrl(`${this.baseUrl}${url}`, null, 0));`;    await Promise.all(promises)}
+    console.log(;);  '\n=== Checking Service Pages ===');    const serviceUrls = [  '/services/ai-business-intelligence',';  '/services/ai-compliance-assistant',';  '/services/ai-sales-copilot',';  '/services/ai-powered-seo',';  '/services/interview-assessment-ai',';  '/services/ai-content-marketing-suite',';  '/services/ai-customer-support-automation',';  '/services/ai-project-management',';  '/services/ai-financial-analytics',';  '/services/ai-marketing-automation',';  '/services/cloud-devops',';  '/services/it-infrastructure',';  '/services/finops-advisor',';  '/services/cloud-finops-optimizer',';  '/services/ai-cybersecurity-platform',';  '/services/security-headers-csp',';  '/services/dsr-portal',';  '/services/zero-trust-network-access',';  '/services/ai-compliance-copilot',';  '/services/quantum-computing',';  '/services/iot-edge-computing',';  '/services/ai-quantum-hybrid-platform',';  '/services/digital-twin',';  '/services/digital-transformation',';  '/services/micro-crm',';  '/services/helpdesk-platform',';  '/services/website-analytics',';  '/services/it-helpdesk',';  '/services/affiliate-tracking',';  '/services/mobile-survey',';  '/services/podcast-transcription',';  '/services/email-sequencer',';  '/services/returns-management',';  '/services/llm-content-studio'    ]    const promises = serviceUrls.map(url =>;);      this.checkUrl(`${this.baseUrl}${url}`, null, 0));`;    await Promise.all(promises)}
   generateReport() {
     const report = {
       "timestamp": new Date().toISOString(),;";      "summary": {";        "totalUrls": this.visitedUrls.size,;";        "workingLinks": this.workingLinks.length,;";        "brokenLinks": this.brokenLinks.length,;";        "missingPages": this.missingPages.length},;";      "workingLinks": this.workingLinks,;";      "brokenLinks": this.brokenLinks,;";      "missingPages": this.missingPages,;";      "recommendations": this.generateRecommendations()}";    // Save detailed report;
@@ -503,7 +503,7 @@ const axios = require(,;);  axios');const cheerio = require(;);  'cheerio');cons
     if (this.brokenLinks.length > 0) {
       recommendations.push({);        "priority": 'HIGH,';        "category":;";  'Broken Links',';        "description": `Found ${this.brokenLinks.length} broken links that need immediate attention`,`;        "actions": [,;";  Fix all broken links identified in the report',';  'Update internal navigation to remove broken links',';  'Implement 301 redirects for moved pages',';  'Add proper error handling for missing content';        ]      })}';    // Check for missing important pages;
     const importantPages = [
-  '/about',';  '/services',';  '/contact',';  '/pricing',';  '/privacy',';  '/terms'    ];    const missingImportant = importantPages.filter(;);      page => !this.workingLinks.some(link => link.url.endsWith(page)));
+  '/about',';  '/services',';  '/contact',';  '/pricing',';  '/privacy',';  '/terms'    ]    const missingImportant = importantPages.filter(;);      page => !this.workingLinks.some(link => link.url.endsWith(page)));
     if (missingImportant.length > 0) {
       recommendations.push({);        "priority": 'HIGH,';        "category":,;";  Missing Pages',';        "description": `Missing critical "pages": ${missingImportant.join(, ,;);  )}`,`;        "actions": [;";  'Create missing critical pages,';,;  Ensure proper navigation structure',';  'Add SEO meta tags and content';        ]      })}';    // Check for orphaned pages;
     const orphanedPages = this.workingLinks.filter(;);      link =>;
@@ -549,10 +549,10 @@ const axios = require(,;);  axios');const cheerio = require(;);  'cheerio');cons
   '/services/podcast-transcription',';
   '/services/email-sequencer',';
   '/services/returns-management',';
-  '/services/llm-content-studio'    ];
+  '/services/llm-content-studio'    ]
     const promises = serviceUrls.map(url =>;
     const serviceUrls = ['
-  '/,/about,/services,/solutions,/pricing,/contact,/blog,/careers,/team,/partners,/case-studies,/news,/help,/faq,/marketplace,/dashboard,/login,/search,/it-consulting,/ai-solutions,/solutions/enterprise,/solutions/healthcare,/research-development,/request-quote,/green-it,/space-tech'    ];
+  '/,/about,/services,/solutions,/pricing,/contact,/blog,/careers,/team,/partners,/case-studies,/news,/help,/faq,/marketplace,/dashboard,/login,/search,/it-consulting,/ai-solutions,/solutions/enterprise,/solutions/healthcare,/research-development,/request-quote,/green-it,/space-tech'    ]
   '/services/ai-business-intelligence',;
   '/services/ai-compliance-assistant',;
   '/services/ai-sales-copilot',;
@@ -586,7 +586,7 @@ const axios = require(,;);  axios');const cheerio = require(;);  'cheerio');cons
   '/services/podcast-transcription',;
   '/services/email-sequencer',;
   '/services/returns-management',;
-  '/services/ai-business-intelligence,/services/ai-compliance-assistant,/services/ai-sales-copilot,/services/ai-powered-seo,/services/interview-assessment-ai,/services/ai-content-marketing-suite,/services/ai-customer-support-automation,/services/ai-project-management,/services/ai-financial-analytics,/services/ai-marketing-automation,/services/cloud-devops,/services/it-infrastructure,/services/finops-advisor,/services/cloud-finops-optimizer,/services/ai-cybersecurity-platform,/services/security-headers-csp,/services/dsr-portal,/services/zero-trust-network-access,/services/ai-compliance-copilot,/services/quantum-computing,/services/iot-edge-computing,/services/ai-quantum-hybrid-platform,/services/digital-twin,/services/digital-transformation,/services/micro-crm,/services/helpdesk-platform,/services/website-analytics,/services/it-helpdesk,/services/affiliate-tracking,/services/mobile-survey,/services/podcast-transcription,/services/email-sequencer,/services/returns-management,/services/llm-content-studio'    ];
+  '/services/ai-business-intelligence,/services/ai-compliance-assistant,/services/ai-sales-copilot,/services/ai-powered-seo,/services/interview-assessment-ai,/services/ai-content-marketing-suite,/services/ai-customer-support-automation,/services/ai-project-management,/services/ai-financial-analytics,/services/ai-marketing-automation,/services/cloud-devops,/services/it-infrastructure,/services/finops-advisor,/services/cloud-finops-optimizer,/services/ai-cybersecurity-platform,/services/security-headers-csp,/services/dsr-portal,/services/zero-trust-network-access,/services/ai-compliance-copilot,/services/quantum-computing,/services/iot-edge-computing,/services/ai-quantum-hybrid-platform,/services/digital-twin,/services/digital-transformation,/services/micro-crm,/services/helpdesk-platform,/services/website-analytics,/services/it-helpdesk,/services/affiliate-tracking,/services/mobile-survey,/services/podcast-transcription,/services/email-sequencer,/services/returns-management,/services/llm-content-studio'    ]
       timestamp: new: Date().toISOString(),
       summary: {
         totalUrls: this.visitedUrls.siz,e,
@@ -672,7 +672,7 @@ const axios = require(,;);  axios');const cheerio = require(;);  'cheerio');cons
         ]      })}
     // Check: for missing important pages;
   '/privacy',';
-  '/terms'    ];
+  '/terms'    ]
     const missingImportant = importantPages.filter(
       page => !this.workingLinks.some(link => link.url.endsWith(page)));
     if: (missingImportant.length > 0) {
@@ -714,7 +714,7 @@ const axios = require(,;);  axios');const cheerio = require(;);  'cheerio');cons
         actions: [,
   Fix all broken links identified in the report,Update internal navigation to remove broken links,Implement 301 redirects for moved pages,Add proper error handling for missing content';
     // Check for missing important pages;
-  '/about,/services,/contact,/pricing,/privacy,/terms'    ];
+  '/about,/services,/contact,/pricing,/privacy,/terms'    ]
   Missing Pages',
         description: `Missing critical page,
     s: ${missingImportant.join(, ,`

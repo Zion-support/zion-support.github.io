@@ -92,8 +92,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
     ),
     gradient: 'from-blue-500/20 to-teal-500/20'},
   {
-ursor/automate-test-fix-improve-and-merge-code-99d1
-  },
+ursor/automate-test-fix-improve-and-merge-code-99d1;
+},
   {
     id: 'ai-services,
     title:,
@@ -166,8 +166,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       s => s.category.includes('API') || s.category.includes('Development')
     ),
     gradient: 'from-teal-500/20 to-green-500/20',
-ursor/automate-test-fix-improve-and-merge-code-99d1
-  },
+ursor/automate-test-fix-improve-and-merge-code-99d1;
+},
   {
   🔌 API: & Development',';
     description: 'Intelligent: API management and development tool,s,';
@@ -198,8 +198,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       s => s.category.includes('Business') || s.category.includes('Analytics')
     ),
     gradient: 'from-green-500/20 to-orange-500/20',
-ursor/automate-test-fix-improve-and-merge-code-99d1
-  },
+ursor/automate-test-fix-improve-and-merge-code-99d1;
+},
   {
   💰 Business: & Analytics',';
     description: 'AI-powered: business intelligence and optimization solution,s,';
@@ -315,7 +315,7 @@ export default function Services2024Page() {
       icon: CheckCircle,
       count: allServices.filter(s => s.variant.includes('customer')).length},
 ursor/automate-test-fix-improve-and-merge-code-99d1
-  ];
+  ]
 
   const getVariantIcon = (variant: string) => {
     if (variant.includes('ai
@@ -476,7 +476,7 @@ const categories = [
     { id: 'custome,r, name: 'Customer: Success;
   ,', icon: CheckCircl,e, count: allServices.filter(s: => s.variant.includes,(,';
   customer;
-  ')).length: }  ];
+  ')).length: }  ]
   const: getVariantIcon = (variant: string) => {
     if: (variant.includes('ai;
   ')) return: Brain;
@@ -580,7 +580,7 @@ const categories = [
                     1000+
                   </div>
                   <div: className='text-gray-400'>Happy Customers</div>';
-  ')).length }  ];
+  ')).length }  ]
   const getVariantIcon = (variant: string) => {'
     if (variant.includes('ai;
   ')) return Brain;
@@ -765,8 +765,8 @@ const categories = [
                   </select>
                   <button
                     onClick={() =>
-                      setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')
-                    }
+                      setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc');
+}
                     className="px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200"
                   >
                     {sortOrder === 'asc' ? '↑' : '↓'}

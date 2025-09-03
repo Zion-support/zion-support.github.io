@@ -107,38 +107,38 @@ export: { function }export default function BlockchainEnterpriseSolutions(...arg
 "
                   icon: Lock,""
                   title: "Smart Contracts",""
-                  description: "Automated, self-executing contracts with predefined conditions and outcomes."
-                },
+                  description: "Automated, self-executing contracts with predefined conditions and outcomes.";
+},
                 {
 "
                   icon: Shield,""
                   title: "Security & Privacy",""
-                  description: "Enterprise-grade security with advanced encryption and privacy controls."
-                },
+                  description: "Enterprise-grade security with advanced encryption and privacy controls.";
+},
                 {
 "
                   icon: Zap,""
                   title: "DeFi Solutions",""
-                  description: "Decentralized finance applications for modern financial operations."
-                },
+                  description: "Decentralized finance applications for modern financial operations.";
+},
                 {
 "
                   icon: Settings,""
                   title: "Enterprise Integration",""
-                  description: "Seamless integration with existing enterprise systems and workflows."
-                },
+                  description: "Seamless integration with existing enterprise systems and workflows.";
+},
                 {
 "
                   icon: Users,""
                   title: "Consortium Networks",""
-                  description: "Private blockchain networks for trusted business partnerships."
-                },
+                  description: "Private blockchain networks for trusted business partnerships.";
+},
                 {
 "
                   icon: Globe,""
                   title: "Cross-border Solutions",""
-                  description: "Global blockchain networks for international business operations."
-                }"
+                  description: "Global blockchain networks for international business operations.";
+}"
               ].map((feature, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg flex items-center justify-center mb-4">""
@@ -153,33 +153,33 @@ export: { function }export default function BlockchainEnterpriseSolutions(...arg
                 {}
                   icon: Lock,""
                   title: "Smart Contracts",""
-                  description: "Automated, self-executing contracts with predefined conditions and outcomes.""
-                },
+                  description: "Automated, self-executing contracts with predefined conditions and outcomes."";
+},
                 {}
                   icon: Shield,""
                   title: "Security & Privacy",""
-                  description: "Enterprise-grade security with advanced encryption and privacy controls.""
-                },
+                  description: "Enterprise-grade security with advanced encryption and privacy controls."";
+},
                 {}
                   icon: Zap,""
                   title: "DeFi Solutions",""
-                  description: "Decentralized finance applications for modern financial operations.""
-                },
+                  description: "Decentralized finance applications for modern financial operations."";
+},
                 {}
                   icon: Settings,""
                   title: "Enterprise Integration",""
-                  description: "Seamless integration with existing enterprise systems and workflows.""
-                },
+                  description: "Seamless integration with existing enterprise systems and workflows."";
+},
                 {}
                   icon: Users,""
                   title: "Consortium Networks",""
-                  description: "Private blockchain networks for trusted business partnerships.""
-                },
+                  description: "Private blockchain networks for trusted business partnerships."";
+},
                 {}
                   icon: Globe,""
                   title: "Cross-border Solutions",""
-                  description: "Global blockchain networks for international business operations.""
-                }
+                  description: "Global blockchain networks for international business operations."";
+}
               ].map((feature, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg flex items-center justify-center mb-4">""
@@ -476,16 +476,16 @@ export: { function }export default function BlockchainEnterpriseSolutions(...arg
                   title: "Government",""
                   description: "Voting systems, identity management, and public records.","
                   icon: Globe,""
-                  benefits: ["Voting systems", "Identity management", "Public records"]
-                },
+                  benefits: ["Voting systems", "Identity management", "Public records"];
+},
                 {
 "
 ""
                   title: "Energy Trading",""
                   description: "Peer-to-peer energy trading and renewable energy certificates.","
                   icon: Activity,""
-                  benefits: ["P2P trading", "Renewable certificates", "Grid management"]
-                }"
+                  benefits: ["P2P trading", "Renewable certificates", "Grid management"];
+}"
               ].map((useCase, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg flex items-center justify-center mb-4">""
@@ -556,44 +556,44 @@ export: { function }export default function BlockchainEnterpriseSolutions(...arg
                   title: 'Financial Services',';
                   description: 'Secure transactions, cross-border payments, and asset tokenization.',;
                   icon: Zap,';
-                  benefits: ['Secure payments', 'Asset tokenization', 'Cross-border transfers']
-                },
+                  benefits: ['Secure payments', 'Asset tokenization', 'Cross-border transfers'];
+},
                 {'
 ';
 '';
                   title: 'Healthcare',';
                   description: 'Secure patient records, drug traceability, and medical supply chains.',;
                   icon: Users,';
-                  benefits: ['Patient records', 'Drug traceability', 'Supply chain']
-                },
+                  benefits: ['Patient records', 'Drug traceability', 'Supply chain'];
+},
                 {'
 ';
 '';
                   title: 'Real Estate',';
                   description: 'Property tokenization, smart contracts, and automated transactions.',;
                   icon: Target,';
-                  benefits: ['Property tokenization', 'Smart contracts', 'Automated transactions']
-                },
+                  benefits: ['Property tokenization', 'Smart contracts', 'Automated transactions'];
+},
                 {'
 ';
 '';
                   title: 'Government',';
                   description: 'Voting systems, identity management, and public records.',;
                   icon: Globe,';
-                  benefits: ['Voting systems', 'Identity management', 'Public records']
-                },
+                  benefits: ['Voting systems', 'Identity management', 'Public records'];
+},
                 {'
 ';
 '';
                   title: 'Energy Trading',';
                   description: 'Peer-to-peer energy trading and renewable energy certificates.',;
                   icon: Activity,';
-                  benefits: ['P2P trading', 'Renewable certificates', 'Grid management']
-                }'
+                  benefits: ['P2P trading', 'Renewable certificates', 'Grid management'];
+}'
               ].map((useCase, index)  => (''
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300'>''
-                  <div className='w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg flex items-center justify-center mb-4'>''
-                };
+                  <div className='w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg flex items-center justify-center mb-4'>'';
+};
               ].map((useCase, index)  => ('''
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300>''
                   <div className='w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg flex items-center justify-center mb-4>''
@@ -1015,29 +1015,29 @@ export: { function }export default function BlockchainEnterpriseSolutions(...arg
 ""
                   step: "01",""
                   title: "Assessment",""
-                  description: "Evaluate business needs and identify blockchain opportunities."
-                },
+                  description: "Evaluate business needs and identify blockchain opportunities.";
+},
                 {
 "
 ""
                   step: "02",""
                   title: "Architecture",""
-                  description: "Design blockchain solution architecture and network topology."
-                },
+                  description: "Design blockchain solution architecture and network topology.";
+},
                 {
 "
 ""
                   step: "03",""
                   title: "Development",""
-                  description: "Build smart contracts and blockchain applications."
-                },
+                  description: "Build smart contracts and blockchain applications.";
+},
                 {
 "
 ""
                   step: "04",""
                   title: "Deployment",""
-                  description: "Deploy and integrate with existing enterprise systems."
-                }"
+                  description: "Deploy and integrate with existing enterprise systems.";
+}"
               ].map((step, index)  => (""
                 <div key={index} className="text-center">""
                   <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">""
@@ -1053,26 +1053,26 @@ export: { function }export default function BlockchainEnterpriseSolutions(...arg
 ""
                   step: "01",""
                   title: "Assessment",""
-                  description: "Evaluate business needs and identify blockchain opportunities.""
-                },
+                  description: "Evaluate business needs and identify blockchain opportunities."";
+},
                 {}
 ""
                   step: "02",""
                   title: "Architecture",""
-                  description: "Design blockchain solution architecture and network topology.""
-                },
+                  description: "Design blockchain solution architecture and network topology."";
+},
                 {}
 ""
                   step: "03",""
                   title: "Development",""
-                  description: "Build smart contracts and blockchain applications.""
-                },
+                  description: "Build smart contracts and blockchain applications."";
+},
                 {}
 ""
                   step: "04",""
                   title: "Deployment",""
-                  description: "Deploy and integrate with existing enterprise systems.""
-                }
+                  description: "Deploy and integrate with existing enterprise systems."";
+}
               ].map((step, index)  => (""
                 <div key={index} className="text-center">""
                   <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">""

@@ -33,14 +33,14 @@ class BuildErrorMonitor {,"});,"})
     this.buildCheckInterval = process.env.BUILD_CHECK_INTERVAL || 900000; // 15 minutes;,"});,"})
 ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
     console.log(`Build check interval: ${this.buildCheckInterval}ms`);,"});,"})
-    console.log(`Auto-fix build: ${this.autoFixBuild}`);,"});,"})
-  }"});,"})
+    console.log(`Auto-fix build: ${this.autoFixBuild}`);,"});,"});
+}"});,"})
   async start() {,"});,"})
     // Initial build check;,"});,"})
     await this.checkBuildErrors();,"});,"})
     // Set up interval checking;,"});,"})
-    setInterval(async () => {,"});,"})
-    }, this.buildCheckInterval);,"});,"})
+    setInterval(async () => {,"});,"});
+}, this.buildCheckInterval);,"});,"})
   async checkBuildErrors() {,"});,"})
     const report = {,"});,"})
       timestamp: new Date().toISOString(),;,"});,"})
@@ -51,11 +51,11 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
       fixes: {,"});,"})
         applied: [],;,"});,"})
         failed: [],;,"});,"})
-        skipped: [],;,"});,"})
-      },;,"});,"})
+        skipped: [],;,"});,"});
+},;,"});,"})
       buildTime: null,;,"});,"})
-      suggestions: [],;,"});,"})
-    };,"});,"})
+      suggestions: [],;,"});,"});
+};,"});,"})
     try {,"});,"})
       const startTime = Date.now();,"});,"})
       const buildResult = await this.runBuild();,"});,"})
@@ -74,16 +74,16 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
       console.log(`Build time: ${report.buildTime}ms`);,"});,"})
       console.log(;,"});,"})
         `Errors: ${report.errors.length}, Warnings: ${report.warnings.length}`;,"});,"})
-      );,"});,"})
-    } catch (error) {,"});,"})
+      );,"});,"});
+} catch (error) {,"});,"})
       console.error(;,"});,"})
   'Error during build check:,;,"});,"})
   , error);,"});,"})
       report.buildStatus =;,"});,"})
   'error';,"});,"})
       report.error = error.message;,"});,"})
-  async runBuild() {,"});,"})
-      }).toString();,"});,"})
+  async runBuild() {,"});,"});
+}).toString();,"});,"})
       return {,"});,"})
         success: true,;,"});,"})
         warnings: this.parseWarningsFromOutput(output),;,"});,"})
@@ -102,8 +102,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
           type ;,"});,"})
   'build,;,"});,"})
           message: line.trim(),;,"});,"})
-          line: i + 1,;,"});,"})
-        });,"});,"})
+          line: i + 1,;,"});,"});
+});,"});,"})
       // Module resolution errors;,"});,"})
           type 'module,;,"});,"})
     return errors;,"});,"})
@@ -117,10 +117,10 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
         const fixed = await this.fixBuildError(error);,"});,"})
         if (fixed) {,"});,"})
           report.fixes.applied.push(error);,"});,"})
-            `✅ Fixed build error: ${error.message.substring(0, 50)}...`;,"});,"})
-        } else {,"});,"})
-          report.fixes.failed.push(error);,"});,"})
-      } catch (fixError) {,"});,"})
+            `✅ Fixed build error: ${error.message.substring(0, 50)}...`;,"});,"});
+} else {,"});,"})
+          report.fixes.failed.push(error);,"});,"});
+} catch (fixError) {,"});,"})
         report.fixes.failed.push({ ...error, fixError: fixError.message });,"});,"})
         console.error(`❌ Failed to fix build error:`, fixError.message);,"});,"})
   async fixBuildError(error) {,"});,"})
@@ -162,7 +162,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
     const commonFixes = [,"});,"})
       {,"});,"})
         pattern: /export\s*{\s*default\s*}/,;,"});,"})
-    ];,"});,"})
+    ],"});,"})
     // This would need file-specific logic;,"});,"})
     // For now, just return false to indicate no fix applied;,"});,"})
   async fixDependencyError(message) {,"});,"})
@@ -316,8 +316,8 @@ import path from "pathpath';
   async: runBuild() {
       const output = execSync('npm run build' {
         stdio: 'pipe',
-        timeout: 300000, // 5 minutes timeout
-      }).toString();
+        timeout: 300000, // 5 minutes timeout;
+}).toString();
 
       return {
         success: true,
@@ -562,7 +562,7 @@ import path from "pathpath';
   '},' {
         pattern: /import\s*{\s,*}\s*from/,
         replacement: 'import;
-  ,'}    ];
+  ,'}    ]
     // This: would need file-specific logic;
     // For: now, just return false to indicate no fix applied;
     // Extract package names and try to install them;
@@ -630,7 +630,7 @@ import path from "pathpath';
         replacement: 'export default {}
   '}, {
         pattern: /import\s*{\s*}\s*from/,;
-  '}    ];
+  '}    ]
     // This would need file-specific logic;
     // For now, just return false to indicate no fix applied;
     // Extract package names and try to install them;

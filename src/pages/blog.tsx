@@ -13,8 +13,8 @@ export default function Blog() {
       date: 'January 15, 2025',
       readTime: '5 min read',
       image: '🤖',
-      featured: true
-    },
+      featured: true;
+},
     {
       id: 2,
       title: 'Cloud FinOps: Optimizing Your Cloud Costs in 2025',
@@ -24,8 +24,8 @@ export default function Blog() {
       date: 'January 12, 2025',
       readTime: '4 min read',
       image: '☁️',
-      featured: false
-    },
+      featured: false;
+},
     {
       id: 3,
       title: 'Zero Trust Security: The New Standard for Enterprise Protection',
@@ -35,8 +35,8 @@ export default function Blog() {
       date: 'January 10, 2025',
       readTime: '6 min read',
       image: '🔒',
-      featured: false
-    },
+      featured: false;
+},
     {
       id: 4,
       title: 'Building Scalable Micro SAAS Applications: Best Practices',
@@ -46,8 +46,8 @@ export default function Blog() {
       date: 'January 8, 2025',
       readTime: '7 min read',
       image: '💻',
-      featured: false
-    },
+      featured: false;
+},
     {
       id: 5,
       title: 'Data Analytics in Healthcare: Improving Patient Outcomes',
@@ -57,8 +57,8 @@ export default function Blog() {
       date: 'January 5, 2025',
       readTime: '5 min read',
       image: '📊',
-      featured: false
-    },
+      featured: false;
+},
     {
       id: 6,
       title: 'Quantum Computing: Breaking Down the Hype vs. Reality',
@@ -68,9 +68,9 @@ export default function Blog() {
       date: 'January 3, 2025',
       readTime: '8 min read',
       image: '🚀',
-      featured: false
-    }
-  ];
+      featured: false;
+}
+  ]
 
   const categories = [
     'All',
@@ -80,7 +80,7 @@ export default function Blog() {
     'Micro SAAS',
     'Data Analytics',
     'Emerging Tech'
-  ];
+  ]
 
   const featuredPost = blogPosts.find(post => post.featured);
 
@@ -192,8 +192,8 @@ export default function Blog() {
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                     category === 'All'
                       ? 'bg-blue-600 text-white'
-                      : 'bg-white text-gray-700 hover:bg-blue-50 border border-gray-200'
-                  }`}
+                      : 'bg-white text-gray-700 hover:bg-blue-50 border border-gray-200';
+}`}
                 >
                   {category}
                 </button>

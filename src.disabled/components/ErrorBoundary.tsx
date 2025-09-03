@@ -2,7 +2,7 @@
 import React, { Component, ErrorInfo, ReactNode } from
   'react';'
   'interface Props {
-import React, { Component, ErrorInfo, ReactNode } from 'react';''interface Props {;
+import React, { Component, ErrorInfo, ReactNode } from 'react'; Props {;
 export class ErrorBoundary extends Component < Props, State> {;
 
 ursor/automate-test-fix-improve-and-merge-code-99d1:src/components/ErrorBoundary.tsx

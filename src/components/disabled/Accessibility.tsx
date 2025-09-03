@@ -24,7 +24,7 @@ import { useState, useEffect } from 'react.ts' import { motion, AnimatePresence 
 import {useState, useEffect } from 'react.ts' import {motion, AnimatePresence } from 'framer-motion.ts' import {Accessibility as AccessibilityIcon, Type, Eye, Volume2, Keyboard, X, Plus, Minus, Contrast, Sun, Moon, Settings } from 'lucide-react'  interface AccessibilitySettings {
 import { useState, useEffect } from &apos;
 import { motion } from &apos;framer-motion';;react.ts&apos; import { motion, AnimatePresence } from &apos;framer-motion.ts&apos; import {  Accessibility as AccessibilityIcon, Type, Eye, Volume2, Keyboard, X, Plus, Minus, Contrast, Sun, Moon, Settings } from &apos;lucide-react&apos;  interface AccessibilitySettings {
-""
+"";
 }
    fontSize: number;
    highContrast: boolean;

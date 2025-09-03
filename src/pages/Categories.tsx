@@ -21,7 +21,7 @@ import { Brain, Cloud, Shield, Code, Database, Network } from 'lucide-react';
 ;
 const Categories: React.FC = () => {
   const categories = [ { name: 'AI Services', icon: Brain, count: 25 }, { name: 'Cloud Solutions', icon: Cloud, count: 15 }, { name: 'Cybersecurity', icon: Shield, count: 12 }, { name: 'Development', icon: Code, count: 18 }, { name: 'Data Analytics', icon: Database, count: 10 }, { name: 'Infrastructure', icon: Network, count: 8 }
-  ];
+  ]
   return(;
     <div className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>;
       <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>;

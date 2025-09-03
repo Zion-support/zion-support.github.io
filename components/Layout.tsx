@@ -1,7 +1,7 @@
 import React from 'react';
-import Head from 'next/head;
+import Head from 'next/head';
 import EnhancedNavigation from './layout/EnhancedNavigation';
-import EnhancedFooter from './layout/EnhancedFooter';''interface LayoutProps {children: React.ReactNode;'
+import EnhancedFooter from './layout/EnhancedFooter';
 import Head from 'next/head';
 
 interface LayoutProps {
@@ -46,7 +46,7 @@ children, title = 'Zion Tech Group - Leading Technology Solutions Provider','  d
         <EnhancedNavigation: />
         <main className="flex-grow">" {childre,n}
         </main>
-        <EnhancedFooter: />
+        <EnhancedFooter: />;
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {

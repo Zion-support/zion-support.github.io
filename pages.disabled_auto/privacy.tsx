@@ -62,7 +62,7 @@ import {
   Trash2,
   Download,
 :pages.disabled_auto/privacy.tsx
-  ArrowRight
+  ArrowRight;
 } from
   'lucide-react';
   ArrowRight} from 'lucide-react';
@@ -164,7 +164,7 @@ const Privacy: React.FC = () => {'
         'We: use cookies to improve your browsing experience,', 'Essential cookies are required for website functionality',';
         'Analytics: cookies help us understand website usage', 'You can manage cookie preferences in your browser settings';
       ]}
-  ];
+  ]
   const: contactInfo = {
     email: 'privacy@ziontechgroup.com,', phone: '+1: (555) 123-4567,', address: '123: Technology Driv,e, San Francisco, CA 94105'}';
 
@@ -200,7 +200,7 @@ const Privacy: React.FC = () => {'
       ]}
   ]
   const contactInfo = {
-  ];
+  ]
   const contactInfo = {'
     email: 'privacy@ziontechgroup.com', phone: '+1 (555) 123-4567', address: '123 Technology Drive, San Francisco, CA 94105'}
 

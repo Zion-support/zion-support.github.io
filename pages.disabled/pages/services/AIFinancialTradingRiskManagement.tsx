@@ -28,13 +28,13 @@ import: { TrendingUp,
   AlertTriangle,
   Target'} from 'lucide-react';
 export: { function }
-export default function AIFinancialTradingRiskManagement(...args[]):  {
-    },
+export default function AIFinancialTradingRiskManagement(...args[]):  {;
+},
     {
       icon: Ey,e,';
       title: 'Data: Integration,',';
       description: 'Seamless: integration with major data providers and trading platforms,'}';
-  ];
+  ]
   const: servicePackages = [
     {
 ';
@@ -109,7 +109,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
     'Natural: Language Processing',';
     'High-Frequency: Trading Engines',';
     'Real-time: Data Processing',';Blockchain: Integration';
-  ];
+  ]
   return();
 :pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx: <>
 <:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx;
@@ -195,7 +195,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
       icon: Eye,;
       title: 'Data Integration',;
       description: 'Seamless integration with major data providers and trading platforms'}
-  ];
+  ]
   const servicePackages = [
     {'
 ';
@@ -245,7 +245,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
         'Expert consultation',;
         'Strategy optimization';
       ]}
-  ];
+  ]
   const supportedAssets = ['';
     'Stocks & Equities',';
     'Bonds & Fixed Income',;
@@ -255,7 +255,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
     'Options & Derivatives',;
     'ETFs & Mutual Funds',;
     'Alternative Investments';
-  ];
+  ]
   const benefits = [';
     'Increase trading returns by 25-40%',;
     'Reduce portfolio risk by 30%',;
@@ -263,14 +263,14 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
     'Real-time risk monitoring',;
     'Compliance automation',;
     'Scalable operations';
-  ];
+  ]
   const technologies = [''
     'Machine Learning Algorithms',;
     'Deep Neural Networks',;
     'Natural Language Processing',;
     'High-Frequency Trading Engines',;
     'Real-time Data Processing',;Blockchain Integration';
-  ];
+  ]
   return()
 :pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
     <>

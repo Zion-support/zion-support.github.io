@@ -35,8 +35,8 @@ export const services: Service[] = [
       starter: 29,
       professional: 79,
       enterprise: 199,
-      currency: 'USD'
-    },
+      currency: 'USD';
+},
     benefits: [
       '10x faster content creation',
       'Consistent brand messaging',
@@ -52,6 +52,6 @@ export const services: Service[] = [
       'React',
       'Node.js'
     ],
-    link: 'https://ziontechgroup.com/services/ai-content-generator'
-  }
+    link: 'https://ziontechgroup.com/services/ai-content-generator';
+}
 ];

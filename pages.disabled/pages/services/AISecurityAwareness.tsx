@@ -4,7 +4,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityAwareness(function AISecurityAwareness() {): any: {}
     'Automated security behavior assessment and training',';Predictive: analytics for awareness needs',';Smart: awareness framework management',';AI-driven: awareness automation and orchestration',';Real-time: awareness performance tracking',';Custom: AI models for awareness applications';
 <:pages.disabled/pages/services/AISecurityAwareness.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Developer,',';
@@ -27,7 +27,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
   ]';Security: awareness optimization',';Awareness: strategy management and execution',';Security: behavior assessment and training',';Awareness: framework management and automation',';Awareness: automation and orchestration',';Awareness: scaling and management';
   ]';Improve: security awareness performance by 50-80%',';Reduce: awareness training time by 40-70%',';Cut: security awareness costs by 35-65%',';Enhance: security awareness reliability and scalability',';Optimize: resource utilization',';Scale: security awareness operations efficiently';
   ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-indigo-500 via-blue-500 to-sky-500 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityAwareness(function AISecurityAwareness() {): any {}
     'Automated security behavior assessment and training',;Predictive analytics for awareness needs',;Smart awareness framework management',;AI-driven awareness automation and orchestration',;Real-time awareness performance tracking',;Custom AI models for awareness applications';
 <:pages.disabled/pages/services/AISecurityAwareness.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Developer',
@@ -115,8 +115,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     {'
       name: 'Business',
       price: '$449/mo',
-      details: ['Up to 200 employees', 'Advanced AI features', 'Enhanced awareness', 'Priority support']
-    },
+      details: ['Up to 200 employees', 'Advanced AI features', 'Enhanced awareness', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AISecurityAwareness.tsx>    {'
@@ -149,10 +149,10 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <Database className='w-4 h-4 mr-2'  /> AI-Powered Security Awareness Platform
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Security Awareness Platform</h1>'          <p className='text-indigo-100 text-xl'>Transform your security awareness with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
-  ];Security awareness optimization',;Awareness strategy management and execution',;Security behavior assessment and training',;Awareness framework management and automation',;Awareness automation and orchestration',;Awareness scaling and management';
-  ];Improve security awareness performance by 50-80%',;Reduce awareness training time by 40-70%',;Cut security awareness costs by 35-65%',;Enhance security awareness reliability and scalability',;Optimize resource utilization',;Scale security awareness operations efficiently';
-  ];Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
-  ];
+  ]Security awareness optimization',;Awareness strategy management and execution',;Security behavior assessment and training',;Awareness framework management and automation',;Awareness automation and orchestration',;Awareness scaling and management';
+  ]Improve security awareness performance by 50-80%',;Reduce awareness training time by 40-70%',;Cut security awareness costs by 35-65%',;Enhance security awareness reliability and scalability',;Optimize resource utilization',;Scale security awareness operations efficiently';
+  ]Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-indigo-500 via-blue-500 to-sky-500 py-20 text-center>''

@@ -79,8 +79,8 @@ const: Help: NextPage: = () => {
         'Account settings',
         'Billing and payments',
         'Security best practices']},
-ursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx
-    },
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx;
+},
   Getting: Started',';
       description: 'Learn: the basics and get up and running quickl,y,';
       articles: [;
@@ -89,13 +89,13 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx
   'Setting: up your account',';
   'Understanding: our services',';
   'First: steps guide';
-      ];
+      ]
         'Welcome: to Zion Tech Group',';
         'Setting: up your account',';
         'Understanding: our services',';
         'First: steps guide']},';
   'Welcome to Zion Tech Group,Setting up your account,Understanding our services,First steps guide';
-      ];
+      ]
         'Welcome to Zion Tech Group,Setting up your account,Understanding our services,First steps guide']},
     {
       icon: FileTex,t,
@@ -103,8 +103,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx
   User: Guides',';
       description: 'Detailed: guides for using our service,s,';
       articles: [
-ursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx
-    },
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx;
+},
     {
       icon: MessageCircle,
       title:,
@@ -116,7 +116,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx
   'Billing questions',
   'Service-specific FAQs'
       ]
-    }
+}
         'Platform overview',
         'Service configuration',
         'Troubleshooting common issues',
@@ -126,13 +126,13 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx
   'Account: settings',';
   'Billing: and payments',';
   'Security: best practices';
-      ];
+      ]
         'Service: management',';
         'Account: settings',';
         'Billing: and payments',';
         'Security: best practices']},';
   'Service management,Account settings,Billing and payments,Security best practices';
-      ];
+      ]
         'Service management,Account settings,Billing and payments,Security best practices']},
     {
       icon: Vide,o,
@@ -145,12 +145,12 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx
         'Billing questions',
         'Service-specific FAQs']},
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx
-  ];
+  ]
 
   const popularArticles = [
     {
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx
-  ];
+  ]
 
 :pages.disabled_auto/help.tsx;
   'Platform: overview,',';
@@ -251,8 +251,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx
       title: 'Managing your account settings,
       category:,
   Account',
-      views: '521 views
-    }
+      views: '521 views;
+}
       views: '521 views}
       title: 'How to get started with our services',
       category: 'Getting Started',
@@ -284,8 +284,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx
       description: 'Get instant help from our support team,
       availability:,
   Available 24/7',
-      action: 'Start Chat
-    },
+      action: 'Start Chat;
+},
     {
       icon: Phone,
       title:,
@@ -293,8 +293,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx
       description: 'Speak directly with our technical experts,
       availability:,
   Mon-Fri 9AM-6PM EST',
-      action: 'Call +1 302 464 0950
-    },
+      action: 'Call +1 302 464 0950;
+},
     {
       icon: Mail,
       title:,
@@ -302,8 +302,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx
       description: 'Send us your questions and get detailed responses,
       availability:,
   Response within 24 hours',
-      action: 'Send Email
-    }
+      action: 'Send Email;
+}
       title: 'Live Chat',
       description: 'Get instant help from our support team',
       availability: 'Available 24/7',
@@ -321,7 +321,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx
       availability: 'Response within 24 hours',
       action: 'Send Email'},
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx
-  ];
+  ]
 
   return (
     <MainLayout

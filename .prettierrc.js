@@ -23,5 +23,5 @@ export default {
   bracketSpacing: true,
   jsxSingleQuote: true,
   quoteProps: 'as-needed'};
-'
+';
 }

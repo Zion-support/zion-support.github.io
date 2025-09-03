@@ -4,7 +4,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityOrchestration(function AISecurityOrchestration() {): any: {}
     'Automated security process coordination and automation',';Predictive: analytics for orchestration needs',';Smart: orchestration framework management',';AI-driven: orchestration automation and coordination',';Real-time: orchestration performance tracking',';Custom: AI models for orchestration applications';
 <:pages.disabled/pages/services/AISecurityOrchestration.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Developer,',';
@@ -27,7 +27,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
   ]';Security: orchestration optimization',';Security: workflow management and execution',';Security: process coordination and automation',';Orchestration: framework management and automation',';Orchestration: automation and coordination',';Orchestration: scaling and management';
   ]';Improve: security orchestration performance by 50-80%',';Reduce: orchestration completion time by 40-70%',';Cut: security orchestration costs by 35-65%',';Enhance: security orchestration reliability and scalability',';Optimize: resource utilization',';Scale: security orchestration operations efficiently';
   ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-purple-500 via-violet-500 to-fuchsia-500 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityOrchestration(function AISecurityOrchestration() {): any {}
     'Automated security process coordination and automation',;Predictive analytics for orchestration needs',;Smart orchestration framework management',;AI-driven orchestration automation and coordination',;Real-time orchestration performance tracking',;Custom AI models for orchestration applications';
 <:pages.disabled/pages/services/AISecurityOrchestration.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Developer',
@@ -115,8 +115,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     {'
       name: 'Business',
       price: '$1,299/mo',
-      details: ['Up to 100 workflows', 'Advanced AI features', 'Enhanced orchestration', 'Priority support']
-    },
+      details: ['Up to 100 workflows', 'Advanced AI features', 'Enhanced orchestration', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AISecurityOrchestration.tsx>    {'
@@ -149,10 +149,10 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <Database className='w-4 h-4 mr-2'  /> AI-Powered Security Orchestration Platform
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Security Orchestration Platform</h1>'          <p className='text-purple-100 text-xl'>Transform your security orchestration with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
-  ];Security orchestration optimization',;Security workflow management and execution',;Security process coordination and automation',;Orchestration framework management and automation',;Orchestration automation and coordination',;Orchestration scaling and management';
-  ];Improve security orchestration performance by 50-80%',;Reduce orchestration completion time by 40-70%',;Cut security orchestration costs by 35-65%',;Enhance security orchestration reliability and scalability',;Optimize resource utilization',;Scale security orchestration operations efficiently';
-  ];Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
-  ];
+  ]Security orchestration optimization',;Security workflow management and execution',;Security process coordination and automation',;Orchestration framework management and automation',;Orchestration automation and coordination',;Orchestration scaling and management';
+  ]Improve security orchestration performance by 50-80%',;Reduce orchestration completion time by 40-70%',;Cut security orchestration costs by 35-65%',;Enhance security orchestration reliability and scalability',;Optimize resource utilization',;Scale security orchestration operations efficiently';
+  ]Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-purple-500 via-violet-500 to-fuchsia-500 py-20 text-center>''

@@ -33,7 +33,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   ogType = 'website',
   twitterCard = 'summary_large_image',
   noindex = false,
-  structuredData
+  structuredData;
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const canonicalUrl = canonical || 'https://ziontechgroup.com';
@@ -159,8 +159,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       
       {/* Structured Data */}
           type="application/ld+json"
-            __html: JSON.stringify(structuredData)
-          }}
+            __html: JSON.stringify(structuredData);
+}}
         />
       )}
       
@@ -174,8 +174,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
               'foundingDate': '2020',
               'address': {
                 '@type': 'PostalAddress',
-                'addressCountry': 'US'
-              },
+                'addressCountry': 'US';
+},
               'contactPoint': {
                 '@type': 'ContactPoint',
                 'contactType': 'customer service',
@@ -187,8 +187,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
               'offers': {
                 '@type': 'AggregateOffer',
                 'offerCount': '500+',
-                'description': 'Technology solutions and services'
-              }
+                'description': 'Technology solutions and services';
+}
             })
     </Head>
 ;

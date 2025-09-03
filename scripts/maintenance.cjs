@@ -20,13 +20,13 @@ const fs = require('fs');';const path = require('path');';const { execSync } = r
       const dirPath = path.join(this.projectRoot, dir);
       if (fs.existsSync(dirPath)) {;
         try {;
-          execSync(`rm -rf "${dirPath}"`, { "cwd": this.projectRoot });";          this.log(`✅ Cleaned ${dir}`);`;          cleaned++;,
+          execSync(`rm -rf "${dirPath}"`, { "cwd": this.projectRoot });";          this.log(`✅ Cleaned ${dir}`);`;          cleaned++;,;
 } catch (error) {;
           this.log(`❌ Failed to clean ${dir}: ${error.message}`);`;        }
       }
     }
 ;
-    return { cleaned };,
+    return { cleaned };,;
 }
 ;
   async updateDependencies() {;
@@ -49,7 +49,7 @@ const fs = require('fs');';const path = require('path');';const { execSync } = r
         try {;
           // Use ImageMagick or similar tool to optimize images;
           // This is a placeholder - you would need to install imagemagick;
-          this.log(`📸 Found "image": ${path.relative(publicDir, image)}`);`;          optimized++;,
+          this.log(`📸 Found "image": ${path.relative(publicDir, image)}`);`;          optimized++;,;
 } catch (error) {;
           this.log(`❌ Failed to optimize ${image}: ${error.message}`);`;        }
       }
@@ -67,13 +67,13 @@ const fs = require('fs');';const path = require('path');';const { execSync } = r
       const stat = fs.statSync(fullPath);
 ;
       if (stat.isDirectory()) {;
-        images = images.concat(this.findImages(fullPath));,
+        images = images.concat(this.findImages(fullPath));,;
 } else if (/.(jpg|jpeg|png|gif|webp|svg)$/i.test(item)) {;
-        images.push(fullPath);,
+        images.push(fullPath);,;
 }
     }
 ;
-    return images;,
+    return images;,;
 }
 ;
   async generateReport() {;
@@ -84,7 +84,7 @@ const fs = require('fs');';const path = require('path');';const { execSync } = r
       `maintenance-report-${Date.now()}.json``;    );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 ;
-    this.log(`📊 Report "saved": ${reportPath}`);`;    return report;,
+    this.log(`📊 Report "saved": ${reportPath}`);`;    return report;,;
 }
 ;
   async run() {;

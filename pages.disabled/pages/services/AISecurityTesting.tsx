@@ -4,7 +4,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityTesting(function AISecurityTesting() {): any: {}
     'Automated security vulnerability detection and assessment',';Predictive: analytics for testing needs',';Smart: testing framework management',';AI-driven: testing automation and orchestration',';Real-time: testing performance tracking',';Custom: AI models for testing applications';
 <:pages.disabled/pages/services/AISecurityTesting.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Developer,',';
@@ -27,7 +27,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
   ]';Security: testing optimization',';Testing: strategy management and execution',';Security: vulnerability detection and assessment',';Testing: framework management and automation',';Testing: automation and orchestration',';Testing: scaling and management';
   ]';Improve: security testing performance by 50-80%',';Reduce: testing completion time by 40-70%',';Cut: security testing costs by 35-65%',';Enhance: security testing reliability and scalability',';Optimize: resource utilization',';Scale: security testing operations efficiently';
   ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-violet-500 via-purple-500 to-fuchsia-500 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityTesting(function AISecurityTesting() {): any {}
     'Automated security vulnerability detection and assessment',;Predictive analytics for testing needs',;Smart testing framework management',;AI-driven testing automation and orchestration',;Real-time testing performance tracking',;Custom AI models for testing applications';
 <:pages.disabled/pages/services/AISecurityTesting.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Developer',
@@ -115,8 +115,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     {'
       name: 'Business',
       price: '$999/mo',
-      details: ['Up to 50 applications', 'Advanced AI features', 'Enhanced testing', 'Priority support']
-    },
+      details: ['Up to 50 applications', 'Advanced AI features', 'Enhanced testing', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AISecurityTesting.tsx>    {'
@@ -149,10 +149,10 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <Database className='w-4 h-4 mr-2'  /> AI-Powered Security Testing Platform
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Security Testing Platform</h1>'          <p className='text-violet-100 text-xl'>Transform your security testing with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
-  ];Security testing optimization',;Testing strategy management and execution',;Security vulnerability detection and assessment',;Testing framework management and automation',;Testing automation and orchestration',;Testing scaling and management';
-  ];Improve security testing performance by 50-80%',;Reduce testing completion time by 40-70%',;Cut security testing costs by 35-65%',;Enhance security testing reliability and scalability',;Optimize resource utilization',;Scale security testing operations efficiently';
-  ];Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
-  ];
+  ]Security testing optimization',;Testing strategy management and execution',;Security vulnerability detection and assessment',;Testing framework management and automation',;Testing automation and orchestration',;Testing scaling and management';
+  ]Improve security testing performance by 50-80%',;Reduce testing completion time by 40-70%',;Cut security testing costs by 35-65%',;Enhance security testing reliability and scalability',;Optimize resource utilization',;Scale security testing operations efficiently';
+  ]Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-violet-500 via-purple-500 to-fuchsia-500 py-20 text-center>''

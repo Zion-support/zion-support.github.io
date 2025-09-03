@@ -10,7 +10,7 @@ interface LoadingProps {
 export default function Loading({ 
   size = 'md', 
   text = 'Loading...', 
-  fullScreen = false 
+  fullScreen = false ;
 }: LoadingProps) {
   const sizeClasses = {
     sm: 'w-4 h-4',
@@ -59,8 +59,8 @@ export function SkeletonText({ lines = 3 }: { lines?: number, }) {
         <div
           key={i}
           className={`h-3 bg-gray-200 rounded ${
-            i === lines - 1 ? 'w-2/3' : 'w-full'
-          }`}
+            i === lines - 1 ? 'w-2/3' : 'w-full';
+}`}
         ></di></div>
       ))}
     </div>

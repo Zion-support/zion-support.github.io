@@ -8,7 +8,7 @@ interface FuturisticAnimatedBackground2029Props extends React.PropsWithChildren<
 
 const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground2029Props> = ({
   children,
-  className = ''
+  className = '';
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null)}> {
 '
@@ -419,8 +419,8 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
   1) 100%)'';
         className="w-full h-full"
         style={{
-          background: 'radial-gradient(ellipse at center, rgba(20, 20, 40, 0.8) 0%, rgba(0, 0, 0, 1) 100%)'
-        }}
+          background: 'radial-gradient(ellipse at center, rgba(20, 20, 40, 0.8) 0%, rgba(0, 0, 0, 1) 100%)';
+}}
         style = {
 
 "

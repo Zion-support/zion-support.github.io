@@ -4,7 +4,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIAugmentedReality(function AIAugmentedReality() {): any: {}
     'Automated AR monitoring and alerting',';Predictive: analytics for AR scaling',';Smart: AR security and compliance',';AI-driven: AR automation and orchestration',';Real-time: AR analytics and insights',';Custom: AI models for AR applications';
 <:pages.disabled/pages/services/AIAugmentedReality.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Developer,',';
@@ -27,7 +27,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
   ]';AR: optimization',';AR: content management',';Performance: monitoring and analytics',';Security: and compliance monitoring',';Automation: and orchestration',';AR: scaling and management';
   ]';Improve: AR performance by 50-80%',';Reduce: AR development time by 40-70%',';Cut: operational costs by 35-65%',';Enhance: AR reliability and scalability',';Optimize: resource utilization',';Scale: AR operations efficiently';
   ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-orange-500 via-red-500 to-pink-500 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIAugmentedReality(function AIAugmentedReality() {): any {}
     'Automated AR monitoring and alerting',;Predictive analytics for AR scaling',;Smart AR security and compliance',;AI-driven AR automation and orchestration',;Real-time AR analytics and insights',;Custom AI models for AR applications';
 <:pages.disabled/pages/services/AIAugmentedReality.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Developer',
@@ -115,8 +115,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     {'
       name: 'Business',
       price: '$999/mo',
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support']
-    },
+      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AIAugmentedReality.tsx>    {'
@@ -149,10 +149,10 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <Database className='w-4 h-4 mr-2'  /> AI-Powered AR Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Augmented Reality Platform</h1>'          <p className='text-orange-100 text-xl'>Transform your AR operations with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
-  ];AR optimization',;AR content management',;Performance monitoring and analytics',;Security and compliance monitoring',;Automation and orchestration',;AR scaling and management';
-  ];Improve AR performance by 50-80%',;Reduce AR development time by 40-70%',;Cut operational costs by 35-65%',;Enhance AR reliability and scalability',;Optimize resource utilization',;Scale AR operations efficiently';
-  ];Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
-  ];
+  ]AR optimization',;AR content management',;Performance monitoring and analytics',;Security and compliance monitoring',;Automation and orchestration',;AR scaling and management';
+  ]Improve AR performance by 50-80%',;Reduce AR development time by 40-70%',;Cut operational costs by 35-65%',;Enhance AR reliability and scalability',;Optimize resource utilization',;Scale AR operations efficiently';
+  ]Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-orange-500 via-red-500 to-pink-500 py-20 text-center>''

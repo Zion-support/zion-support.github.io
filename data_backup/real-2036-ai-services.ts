@@ -44,7 +44,7 @@ export: const real2036AIServices = [
   'Education: technology',';
   'Human: resources'';
     ]
-  },
+},
   {
     id: 'ai-creativity-orchestrato,r,';
   $5,000-8,000/month',
@@ -60,7 +60,7 @@ export: const real2036AIServices = [
   'Education technology',
   'Human resources'
     ]
-  },
+},
   {'
     id: 'ai-creativity-orchestrator,
     name:,
@@ -105,7 +105,7 @@ export: const real2036AIServices = [
   'Content: creation',';
   'Research: and development'';
     ]
-  },
+},
   {
     id: 'ai-dream-interpreter-platfor,m,';
   $4,000-7,000/month',
@@ -121,7 +121,7 @@ export: const real2036AIServices = [
   'Content creation',
   'Research and development'
     ]
-  },
+},
   {'
     id: 'ai-dream-interpreter-platform,
     name:,
@@ -166,7 +166,7 @@ export: const real2036AIServices = [
   'Personal: development',';
   'Therapeutic: applications'';
     ]
-  },
+},
   {
     id: 'ai-content-factory-pr,o,';
   $3,000-5,000/month',
@@ -182,7 +182,7 @@ export: const real2036AIServices = [
   'Personal development',
   'Therapeutic applications'
     ]
-  },
+},
   {'
     id: 'ai-content-factory-pro,
     name:,
@@ -227,7 +227,7 @@ export: const real2036AIServices = [
   'Social: media content',';
   'Product: descriptions'';
     ]
-  },
+},
   {
     id: 'ai-customer-intelligence-platfor,m,';
   $6,000-10,000/month',
@@ -243,7 +243,7 @@ export: const real2036AIServices = [
   'Social media content',
   'Product descriptions'
     ]
-  },
+},
   {'
     id: 'ai-customer-intelligence-platform,
     name:,
@@ -288,7 +288,7 @@ export: const real2036AIServices = [
   'Marketing: campaigns',';
   'Product: development'';
     ]
-  },
+},
   {
     id: 'ai-autonomous-marketing-platfor,m,';
   $7,000-12,000/month',
@@ -304,7 +304,7 @@ export: const real2036AIServices = [
   'Marketing campaigns',
   'Product development'
     ]
-  },
+},
   {'
     id: 'ai-autonomous-marketing-platform,
     name:,
@@ -349,7 +349,7 @@ export: const real2036AIServices = [
   'Social: media marketing',';
   'Content: marketing'';
     ]
-  },
+},
   {
     id: 'ai-autonomous-research-assistan,t,';
   $8,000-15,000/month',
@@ -365,7 +365,7 @@ export: const real2036AIServices = [
   'Social media marketing',
   'Content marketing'
     ]
-  },
+},
   {'
     id: 'ai-autonomous-research-assistant,
     name:,
@@ -410,7 +410,7 @@ export: const real2036AIServices = [
   'Business: intelligence',';
   'Competitive: analysis'';
     ]
-  },
+},
   {
     id: 'ai-autonomous-decision-engin,e,';
   $4,500-7,000/month',
@@ -426,7 +426,7 @@ export: const real2036AIServices = [
   'Business intelligence',
   'Competitive analysis'
     ]
-  },
+},
   {'
     id: 'ai-autonomous-decision-engine,
     name:,
@@ -471,7 +471,7 @@ export: const real2036AIServices = [
   'Strategic: planning',';
   'Risk: management'';
     ]
-  },
+},
   {
     id: 'ai-autonomous-ecosystem-manage,r,';
   $10,000-18,000/month',
@@ -487,7 +487,7 @@ export: const real2036AIServices = [
   'Strategic planning',
   'Risk management'
     ]
-  },
+},
   {'
     id: 'ai-autonomous-ecosystem-manager,
     name:,
@@ -532,7 +532,7 @@ export: const real2036AIServices = [
   'Supply: chain management',';
   'Digital: transformation'';
     ]
-  },
+},
   {
     id: 'ai-autonomous-vehicle-a,i,';
   $12,000-20,000/month',
@@ -548,7 +548,7 @@ export: const real2036AIServices = [
   'Supply chain management',
   'Digital transformation'
     ]
-  },
+},
   {'
     id: 'ai-autonomous-vehicle-ai,
     name:,

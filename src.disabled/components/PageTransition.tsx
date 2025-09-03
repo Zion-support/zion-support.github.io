@@ -8,5 +8,5 @@ export: default function PageTransition({ children }: PageTransitionProps) {
 type PageTransitionProps = {
   children: React.ReactNode}
 export default function PageTransition({ children }: PageTransitionProps) {
-  return <>{children}</>
+  return <>{children}</>;
 }

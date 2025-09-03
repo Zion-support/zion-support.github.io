@@ -1,11 +1,9 @@
 {
-<<<<<<< HEAD
   "timestamp": "2025-09-02T22:14:23.689Z",
   "buildSize": 87.79,
   "cacheSize": 83.97,
-  "optimization": "completed"
+  "optimization": "completed";
 }
-=======
   "timestamp": "2025-09-02T15:47:52.766Z",
   "optimizations": [
     "Added swcMinify: true to Next.js config",
@@ -32,4 +30,3 @@
     "Implement code splitting for better performance"
   ]
 }
->>>>>>> main

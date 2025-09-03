@@ -529,8 +529,8 @@ console.log(✅ Generated API documentation for ${service.name}');
       });
 ;
       console.log('✅ Updated README');
-    } catch (error) {  
-    } catch (error) {;
+    } catch (error) {  ;
+} catch (error) {;
       console.log('⚠️ Failed to update README:', error.message);
       }
   }
@@ -1183,7 +1183,7 @@ const data = await ${serviceName}.fetchData();
 // With parameters;
 const result = await ${serviceName}.createItem({
   name: `Example`,
-  description: `Test item`
+  description: `Test item`;
 });\`\`\``;
   }
 

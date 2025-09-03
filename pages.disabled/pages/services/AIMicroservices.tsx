@@ -4,7 +4,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIMicroservices(function AIMicroservices() {): any: {}
     'Automated microservices monitoring and alerting',';Predictive: analytics for microservices scaling',';Smart: microservices security and compliance',';AI-driven: microservices automation and orchestration',';Real-time: microservices analytics and insights',';Custom: AI models for microservices applications';
 <:pages.disabled/pages/services/AIMicroservices.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Developer,',';
@@ -27,7 +27,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
   ]';Microservices: optimization',';Microservices: management',';Performance: monitoring and analytics',';Security: and compliance monitoring',';Automation: and orchestration',';Microservices: scaling and management';
   ]';Improve: microservices performance by 50-80%',';Reduce: microservices deployment time by 40-70%',';Cut: operational costs by 35-65%',';Enhance: microservices reliability and scalability',';Optimize: resource utilization',';Scale: microservices operations efficiently';
   ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-lime-500 via-green-500 to-emerald-500 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIMicroservices(function AIMicroservices() {): any {}
     'Automated microservices monitoring and alerting',;Predictive analytics for microservices scaling',;Smart microservices security and compliance',;AI-driven microservices automation and orchestration',;Real-time microservices analytics and insights',;Custom AI models for microservices applications';
 <:pages.disabled/pages/services/AIMicroservices.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Developer',
@@ -115,8 +115,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     {'
       name: 'Business',
       price: '$999/mo',
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support']
-    },
+      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AIMicroservices.tsx>    {'
@@ -149,10 +149,10 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <Database className='w-4 h-4 mr-2'  /> AI-Powered Microservices Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Microservices Platform</h1>'          <p className='text-lime-100 text-xl'>Transform your microservices operations with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
-  ];Microservices optimization',;Microservices management',;Performance monitoring and analytics',;Security and compliance monitoring',;Automation and orchestration',;Microservices scaling and management';
-  ];Improve microservices performance by 50-80%',;Reduce microservices deployment time by 40-70%',;Cut operational costs by 35-65%',;Enhance microservices reliability and scalability',;Optimize resource utilization',;Scale microservices operations efficiently';
-  ];Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
-  ];
+  ]Microservices optimization',;Microservices management',;Performance monitoring and analytics',;Security and compliance monitoring',;Automation and orchestration',;Microservices scaling and management';
+  ]Improve microservices performance by 50-80%',;Reduce microservices deployment time by 40-70%',;Cut operational costs by 35-65%',;Enhance microservices reliability and scalability',;Optimize resource utilization',;Scale microservices operations efficiently';
+  ]Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-lime-500 via-green-500 to-emerald-500 py-20 text-center>''

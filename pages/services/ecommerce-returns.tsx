@@ -7,34 +7,34 @@ const EcommerceReturns: NextPage = () => {
     {
       title: 'Automated Return Requests',
       description: 'Streamline return requests with automated workflows and approval processes.',
-      icon: '🔄'
-    },
+      icon: '🔄';
+},
     {
       title: 'Return Label Generation',
       description: 'Automatically generate and send return labels to customers.',
-      icon: '🏷️'
-    },
+      icon: '🏷️';
+},
     {
       title: 'Return Tracking',
       description: 'Track return status from request to refund with real-time updates.',
-      icon: '📦'
-    },
+      icon: '📦';
+},
     {
       title: 'Inventory Management',
       description: 'Automatically update inventory when returns are processed.',
-      icon: '📊'
-    },
+      icon: '📊';
+},
     {
       title: 'Refund Processing',
       description: 'Automated refund processing with multiple payment methods.',
-      icon: '💳'
-    },
+      icon: '💳';
+},
     {
       title: 'Analytics & Insights',
       description: 'Comprehensive analytics to understand return patterns and reduce returns.',
-      icon: '📈'
-    }
-  ];
+      icon: '📈';
+}
+  ]
 
   const benefits = [
     'Reduce return processing time by up to 80%',
@@ -43,7 +43,7 @@ const EcommerceReturns: NextPage = () => {
     'Gain insights into return patterns and reasons',
     'Reduce operational costs and manual work',
     'Integrate seamlessly with existing e-commerce platforms'
-  ];
+  ]
 
   const pricing = [
     {
@@ -59,8 +59,8 @@ const EcommerceReturns: NextPage = () => {
         'Email support',
         'Standard integrations'
       ],
-      popular: false
-    },
+      popular: false;
+},
     {
       name: 'Professional',
       price: '$399',
@@ -75,8 +75,8 @@ const EcommerceReturns: NextPage = () => {
         'Custom branding',
         'API access'
       ],
-      popular: true
-    },
+      popular: true;
+},
     {
       name: 'Enterprise',
       price: '$999',
@@ -91,9 +91,9 @@ const EcommerceReturns: NextPage = () => {
         '24/7 phone support',
         'SLA guarantees'
       ],
-      popular: false
-    }
-  ];
+      popular: false;
+}
+  ]
 
   return (
     <Layout 
@@ -229,8 +229,8 @@ const EcommerceReturns: NextPage = () => {
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                     plan.popular 
                       ? 'bg-teal-600 hover:bg-teal-700 text-white' 
-                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
-                  }`}
+                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900';
+}`}
                 >
                   Get Started
                 </Link>

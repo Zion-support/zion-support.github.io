@@ -12,7 +12,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
         {isOpen && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={() => setIsOpen(false)}>;,"});,"})
             <motion.div initial = {;,"});,"})
   { scale: 0.9,;,"});,"})
-  opacity: 0;,"});,"})
+  opacity: 0;,"});,"});
 }} animate = {;,"});,"})
 ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
                 <p className="text-xs text-zion-slate-light text-center">;,"});,"})
@@ -444,10 +444,10 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
               <div className="mt-6 pt-4 border-t border-zion-cyan/20">";"";"";
   opacity: 0}} animate = {;
   { scale: 1,;
-  opacity: 1;""
+  opacity: 1;"";
 }} exit = {;";"
   { scale: 0.9,;";"
-  opacity: 0;";"";"
+  opacity: 0;";"";";
 }} className="bg-zion-blue-dark border border-zion-cyan/20 rounded-2xl p-6 max-w-md w-full max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>;"";""
               {/* Header */}";"";"
               <div className="flex items-center justify-between mb-6">";"";"
@@ -1123,7 +1123,7 @@ import React, { useState, useEffect, createContext, useContext } from 'react'; i
         return () => document.removeEventListener('keydown', handleTabKey)}, [isActive])};"";""
 // Screen Reader Only Text";"";"
 export const SrOnly = ({ children }) => (<span className="sr-only">{children}</span>);";"
-export default AccessibilityPanel;"";""
+export default AccessibilityPanel;"";"";
 }}}}}}}}}}}}}}}";"";"
                         firstFocusableElement.focus()}';
         document.addEventListener(;
@@ -1148,7 +1148,7 @@ export const SrOnly = ({ children }) => (<span className='sr-only'>{children}</s
 export default AccessibilityPanel';'}}}}}}}}}}}}}}}'';"import React, { useState, useEffect, createContext, useContext } from 'react' import { motion, AnimatePresence    } from 'framer-motion'  import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X import { Button } from '../ui/button' const AccessibilityContext = createContext(undefined) export const useAccessibility = () => { const context = useContext(AccessibilityContext) if(!context) { throw new Error('useAccessibility must be used within an AccessibilityProvider')  return context }";
 ;""
 import { Accessibility, Eye, EyeOff, High, Keyboard, Minimize, Open, Save, Settings, Skip, Volume2, VolumeX, X } from 'lucide-react'; import { Button } from '../ui/button' const AccessibilityContext = createContext(null) export const useAccessibility = () => { const context = useContext(AccessibilityContext) if(!context) { throw new Error('useAccessibility must be used within an AccessibilityProvider')} return context};
-;""
+;"";
 }
                         e.preventDefault();
                         firstFocusableElement.focus()};
@@ -1196,5 +1196,5 @@ export const SrOnly = ({ children }) => (<span className='sr-only'>{children}</s
 export default AccessibilityPanel}}}}}}}}}}}}}}}'import React, { useState, useEffect, createContext, useContext } from 'react' import { motion, AnimatePresence    } from 'framer-motion'  import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X import { Button }  from '../ui/button';const AccessibilityContext = createContext(undefined) export const useAccessibility = () => { const context = useContext(AccessibilityContext) if(!context) { throw new Error('useAccessibility must be used within an AccessibilityProvider')  return context }";
 ;"
 import { Accessibility, Eye, EyeOff, High, Keyboard, Minimize, Open, Save, Settings, Skip, Volume2, VolumeX, X } from 'lucide-react'; import { Button }  from '../ui/button';const AccessibilityContext = createContext(null) export const useAccessibility = () => { const context = useContext(AccessibilityContext) if(!context) { throw new Error('useAccessibility must be used within an AccessibilityProvider')} return context};
-;"
+;";
 }

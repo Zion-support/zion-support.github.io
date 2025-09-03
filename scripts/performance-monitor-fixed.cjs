@@ -31,8 +31,8 @@ class PerformanceMonitor {
       build: {
         hasBuildArtifacts: false,
         buildTime: 0,
-        bundleSize: 0
-      }
+        bundleSize: 0;
+}
     };
   }
 
@@ -95,8 +95,8 @@ class PerformanceMonitor {
         rss: Math.round(memoryInfo.rss / 1024 / 1024), // MB
         heapUsed: Math.round(memoryInfo.heapUsed / 1024 / 1024), // MB
         heapTotal: Math.round(memoryInfo.heapTotal / 1024 / 1024), // MB
-        external: Math.round(memoryInfo.external / 1024 / 1024) // MB
-      };
+        external: Math.round(memoryInfo.external / 1024 / 1024) // MB;
+};
       
       // CPU usage
       const startUsage = process.cpuUsage();
@@ -104,8 +104,8 @@ class PerformanceMonitor {
       const endUsage = process.cpuUsage(startUsage);
       this.metrics.system.cpu = {
         user: Math.round(endUsage.user / 1000), // ms
-        system: Math.round(endUsage.system / 1000) // ms
-      };
+        system: Math.round(endUsage.system / 1000) // ms;
+};
       
       // Process info
       this.metrics.system.process = {
@@ -113,8 +113,8 @@ class PerformanceMonitor {
         uptime: Math.round(process.uptime()),
         version: process.version,
         platform: process.platform,
-        arch: process.arch
-      };
+        arch: process.arch;
+};
       
       console.log('✅ System metrics collected');
     } catch (error) {
@@ -177,29 +177,29 @@ class PerformanceMonitor {
       const distPath = path.join(this.projectRoot, 'dist');
       if (fs.existsSync(distPath)) {
         const distSize = this.getDirectorySize(distPath);
-        this.metrics.application.buildSize = Math.round(distSize / 1024 / 1024); // MB
-      }
+        this.metrics.application.buildSize = Math.round(distSize / 1024 / 1024); // MB;
+}
       
       // Check node_modules size
       const nodeModulesPath = path.join(this.projectRoot, 'node_modules');
       if (fs.existsSync(nodeModulesPath)) {
         const nodeModulesSize = this.getDirectorySize(nodeModulesPath);
-        this.metrics.application.dependenciesSize = Math.round(nodeModulesSize / 1024 / 1024); // MB
-      }
+        this.metrics.application.dependenciesSize = Math.round(nodeModulesSize / 1024 / 1024); // MB;
+}
       
       // Check source code size
       const srcPath = path.join(this.projectRoot, 'src');
       if (fs.existsSync(srcPath)) {
         const srcSize = this.getDirectorySize(srcPath);
-        this.metrics.application.sourceSize = Math.round(srcSize / 1024); // KB
-      }
+        this.metrics.application.sourceSize = Math.round(srcSize / 1024); // KB;
+}
       
       // Count files
       this.metrics.application.fileCounts = {
         source: this.countFiles(srcPath, ['.ts', '.tsx', '.js', '.jsx']),
         components: this.countFiles(path.join(srcPath, 'components'), ['.tsx', '.jsx']),
-        pages: this.countFiles(path.join(srcPath, 'pages'), ['.tsx', '.jsx'])
-      };
+        pages: this.countFiles(path.join(srcPath, 'pages'), ['.tsx', '.jsx']);
+};
       
       console.log('✅ Application metrics collected');
     } catch (error) {
@@ -217,7 +217,7 @@ class PerformanceMonitor {
         'dist/css',
         'dist/js',
         'dist/assets'
-      ];
+      ]
       
       this.metrics.build.hasBuildArtifacts = buildFiles.some(file => 
         fs.existsSync(path.join(this.projectRoot, file))
@@ -262,8 +262,8 @@ class PerformanceMonitor {
         fid: Math.random() * 100 + 10, // 10-110ms
         cls: Math.random() * 0.1, // 0-0.1
         fcp: Math.random() * 2000 + 500, // 0.5-2.5 seconds
-        ttfb: Math.random() * 500 + 100, // 100-600ms
-      };
+        ttfb: Math.random() * 500 + 100, // 100-600ms;
+};
     } catch (error) {
       console.error('Error collecting web metrics:', error.message);
     }

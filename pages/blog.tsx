@@ -17,7 +17,7 @@ import {
   Database, Network,
   Code, Rocket,
   Target, Globe,
-  Phone, Mail
+  Phone, Mail;
 } from 'lucide-react';
 import type { NextPage } from 'next';
 import Layout from '../components/Layout;
@@ -40,8 +40,8 @@ const Blog: NextPage: = () => {,
       excerpt: "Explore the latest AI trends shaping the business landscape in 2025 and how companies can leverage these technologies for competitive advantage.", author: "Sarah Johnson",
       date: "2025-01-15", readTime: "8 min read",
       category: "AI Trends", image: "/api/placeholder/600/400",
-      tags: ["AI", "Business", "Trends", "2025"], featured: true
-    } {
+      tags: ["AI", "Business", "Trends", "2025"], featured: true;
+} {
       id: 2, title: "Building Scalable AI Solutions: Best Practices and Architecture",
       excerpt: "Learn the essential principles for designing and implementing AI solutions that can scale with your business growth.", author: "Michael Chen",
       date: "2025-01-12", readTime: "12 min read",
@@ -106,7 +106,7 @@ const Blog: NextPage: = () => {,
       date: "2023-12-25,",";";";
       category: "Blockchain,",";";";
       slug: "blockchain-technology-beyond-cryptocurrency"",;,";"}
-  ];
+  ]
 
   const categories = [
     "All: Posts",";";";
@@ -220,8 +220,8 @@ export default function Blog() {
       readTime: '5 min read',
       category: 'AI & Technology',
       image: '/api/placeholder/400/250',
-      slug: 'future-of-ai-in-business-2025'
-    } {'
+      slug: 'future-of-ai-in-business-2025';
+} {'
       title: 'Micro Saa,
     S: Building Scalable Solutions for Modern Businesses',
       excerpt: 'Learn how micro SaaS architecture can help you build cost-effective, scalable solutions for your business needs.',
@@ -259,8 +259,8 @@ export default function Blog() {
       author: 'Alex Thompson',
       date: '2025-01-03',
       category: 'Web Development',
-      slug: 'high-performance-web-applications'
-    }
+      slug: 'high-performance-web-applications';
+}
 const Layout = dynamic(() => import('../components/Layout') { ssr: false });;
 const Link = dynamic(() => import('next/link') { ssr: false });;
 import { Header } from '../src/components/Header';
@@ -553,8 +553,8 @@ import { Calendar, User, ArrowRight, Tag, Search } from 'lucide-react';
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                     index === 0 `
                       ? 'bg-blue-600 text-white' '
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200''
-                  }`}
+                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'';
+}`}
                   {category}
                 </button>
             {/* Blog Posts */}

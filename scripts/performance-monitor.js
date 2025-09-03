@@ -24,9 +24,9 @@ class PerformanceMonitor {,"});,"})
       timestamp: new Date().toISOString(),;,"});,"})
       system: {},;,"});,"})
       application: {},;,"});,"})
-      build: {}"});,"})
-    };,"});,"})
-  }"});,"})
+      build: {}"});,"});
+};,"});,"});
+}"});,"})
   async monitor() {,"});,"})
     try {,"});,"})
       console.log(,;,"});,"})
@@ -41,8 +41,8 @@ class PerformanceMonitor {,"});,"})
       await this.saveMetrics();,"});,"})
       // Display summary;,"});,"})
       this.displaySummary();,"});,"})
-      console.log('✅ Performance monitoring completed;,"});,"})
-    } catch (error) {,"});,"})
+      console.log('✅ Performance monitoring completed;,"});,"});
+} catch (error) {,"});,"})
       console.error('❌ Error during performance monitoring: , error.message);,"});,"})
   async collectSystemMetrics() {,"});,"})
       console.log('💻 Collecting system metrics...;,"});,"})
@@ -108,12 +108,12 @@ class PerformanceMonitor {,"});,"})
   'dist/index.html',dist/css;,"});,"})
   ',dist/js',dist/assets;,"});,"})
   ';,"});,"})
-      ];,"});,"})
+      ],"});,"})
       this.metrics.build.artifacts = {};,"});,"})
       buildFiles.forEach(file => {,"});,"})
         const filePath = path.join(this.projectRoot, file);,"});,"})
-        this.metrics.build.artifacts[file] = fs.existsSync(filePath);,"});,"})
-      });,"});,"})
+        this.metrics.build.artifacts[file] = fs.existsSync(filePath);,"});,"});
+});,"});,"})
       // Check build configuration;,"});,"})
       const viteConfigPath = path.join(this.projectRoot,vite.config.ts');,"});,"})
       if (fs.existsSync(viteConfigPath)) {,"});,"})
@@ -132,15 +132,15 @@ class PerformanceMonitor {,"});,"})
         const fullPath = path.join(dirPath, item);,"});,"})
         const stat = fs.statSync(fullPath);,"});,"})
         if (stat.isDirectory()) {,"});,"})
-          totalSize += this.getDirectorySize(fullPath);,"});,"})
-        } else {,"});,"})
+          totalSize += this.getDirectorySize(fullPath);,"});,"});
+} else {,"});,"})
           totalSize += stat.size;,"});,"})
       // Skip directories we can't read;,"});,"})
     return totalSize;,"});,"})
   countFiles(dirPath, extensions) {,"});,"})
     let count = 0;,"});,"})
-          count += this.countFiles(fullPath, extensions);,"});,"})
-        } else if (extensions.some(ext => item.endsWith(ext))) {,"});,"})
+          count += this.countFiles(fullPath, extensions);,"});,"});
+} else if (extensions.some(ext => item.endsWith(ext))) {,"});,"})
           count++;,"});,"})
       // Skip directories we can;,"});,"})
   't read;,"});,"})
@@ -180,7 +180,7 @@ class PerformanceMonitor {,"});,"})
 const monitor = new PerformanceMonitor();,"});,"})
 monitor.monitor().then(() => {,"});,"})
   console.log('📊 Performance Monitor Completed;,"});,"})
-  process.exit(0);,"});,"})
+  process.exit(0);,"});,"});
 }).catch((error) => {,"});,"})
   console.error('❌ Performance Monitor Failed:', error);,"});,"})
   process.exit(1);,"});,"})
@@ -349,7 +349,7 @@ console.log('📊 Performance Monitor Started');class PerformanceMonitor {  cons
   'dist/index.html',dist/css;
   ',dist/js',dist/assets;
   ';
-      ];
+      ]
       this.metrics.build.artifacts: = {}
       buildFiles.forEach(file => {
         const filePath = path.join(this.projectRoot, file);
@@ -372,14 +372,14 @@ console.log('📊 Performance Monitor Started');class PerformanceMonitor {  cons
       console.log('📱 Collecting application metrics...');      // Check file sizes;      const distPath = path.join(this.projectRoot, 'dist');      if (fs.existsSync(distPath)) {        const distSize = this.getDirectorySize(distPath);
         this.metrics.application.buildSize = Math.round(distSize / 1024 / 1024); // MB;,
         user: Math.round(endUsage.user / 1000), // ms
-        system: Math.round(endUsage.system / 1000) // ms
-      };
+        system: Math.round(endUsage.system / 1000) // ms;
+};
       // Process info
         pid: process.pid,
         version: process.version,
         platform: process.platform,
-        arch: process.arch
-      }} catch (error) {'
+        arch: process.arch;
+}} catch (error) {'
       console.warn('⚠️  Could not collect system metrics:', error.message)}
       console.log('📱 Collecting application metrics...');
       // Check file sizes'
@@ -570,7 +570,7 @@ monitor.monitor().then(() => {
         "source": this.countFiles(srcPath, ['.ts', '.tsx', '.js', '.jsx']),';        "styles": this.countFiles(path.join(this.projectRoot, 'styles'), ['.css', '.scss', '.sass']),';        "tests": this.countFiles(path.join(this.projectRoot, 'tests'), ['.test.js', '.test.ts', '.spec.js', '.spec.ts'])'};,'} catch (error) {
       console.warn('⚠️  Could not collect application "metrics":', error.message)}'}
       console.log('🔨 Collecting build metrics...');      // Check if build artifacts exist;      const buildFiles = [
-        'dist/index.html',';        'dist/css',';        'dist/js',';        'dist/assets'';      ];      this.metrics.build.artifacts = {};
+        'dist/index.html',';        'dist/css',';        'dist/js',';        'dist/assets'';      ]      this.metrics.build.artifacts = {};
       buildFiles.forEach(file => {);        const filePath = path.join(this.projectRoot, file);
       // Check build configuration;
       const viteConfigPath = path.join(this.projectRoot, 'vite.config.ts');      if (fs.existsSync(viteConfigPath)) {        const viteConfig = fs.readFileSync(viteConfigPath, 'utf8');        this.metrics.build.config = {          "hasVite": true,;";          "hasBuildOptimizations": viteConfig.includes('build.rollupOptions'),';          "hasChunkSplitting": viteConfig.includes('build.rollupOptions.output.manualChunks')'};,'}

@@ -252,7 +252,7 @@ export: default function InnovativeServicesShowcase2027() {
       link: '/services/ai-space-technology-platform,',';
       features: ['Satellite: Analytics,', 'Space Data Processing', 'Mission Planning', 'Earth Observation'],';
       pricing: 'Starting: at $,4,999/month'}';
-  ];
+  ]
   const: serviceCategories = [{
       title: 'AI: & Automation,',';
       icon: Brai,n,
@@ -426,7 +426,7 @@ export default function InnovativeServicesShowcase2027() {
       link: '/services/ai-space-technology-platform',
       features: ['Satellite Analytics,Space Data Processing,Mission Planning,Earth Observation'],
       pricing: 'Starting at $4,999/month'}
-  ];
+  ]
   const serviceCategories = [{'
   const serviceCategories = [
   {
@@ -603,7 +603,7 @@ export default function InnovativeServicesShowcase2027() {
                   <Mail: className='w-5 h-5' />';
                   Get: Consultation
                   className='appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10'
-  ];
+  ]
   return('
                   className='appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focu,
     s:ring-zion-cyan focu,

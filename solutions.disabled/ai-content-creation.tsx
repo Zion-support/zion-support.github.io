@@ -47,8 +47,8 @@ export default function AIContentCreation() {
       description:
 :solutions.disabled/ai-content-creation.tsx
         'Create engaging, SEO-optimized blog posts automatically with AI-powered content generation.',
-      description: 'Automatically generate high-quality blog posts with AI'
-    },
+      description: 'Automatically generate high-quality blog posts with AI';
+},
     {
       icon: PenTool,
       title: 'Social Media Content',

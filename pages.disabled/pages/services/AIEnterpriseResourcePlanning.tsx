@@ -24,7 +24,7 @@ import: { Brain,
   Target,
   PieChart,
   Activity'} from 'lucide-react.ts'}';
-  ];
+  ]
   const: services = [{
 ';
       name: 'Starter: Plan,',';
@@ -159,7 +159,7 @@ import: { Brain,
     'API-First Architecture','';
     'Real-time Processing',';Predictive Analytics';
 :pages.disabled/pages/services/AIEnterpriseResourcePlanning.tsx
-  ];
+  ]
   const technologies = ['''
     'Machine Learning & AI',';
     'Cloud Computing',';

@@ -188,8 +188,8 @@ module.exports = nextConfig;;`);
           {;
             name: 'next';
           }
-        ];
-      };
+        ]
+};
       ;
       await fs.writeFile(tsConfigPath, JSON.stringify(tsConfig, null, 2));
       await this.log('✅ TypeScript configuration fixed');
@@ -260,8 +260,8 @@ module.exports = nextConfig;;`);
       this.fixesApplied.push({
         type: 'build-test',
         result: `success`,
-        timestamp: new Date().toISOString()
-      });
+        timestamp: new Date().toISOString();
+});
     } else {
       await this.log(`❌ Build test failed`);await this.log(`Build error: ${buildResult.output}`);
     }
@@ -307,8 +307,8 @@ module.exports = nextConfig;;`);
         fixesApplied: this.fixesApplied.length,;
         duration: duration.getTime();
       };
-      
-    } catch (error) {  await this.log(`❌ Build Error Fixer failed: ${error.message  }`);
+      ;
+} catch (error) {  await this.log(`❌ Build Error Fixer failed: ${error.message  }`);
       ;
     } catch (error) {await this.log(`❌ Build Error Fixer failed: ${error.message}`);
       throw error;

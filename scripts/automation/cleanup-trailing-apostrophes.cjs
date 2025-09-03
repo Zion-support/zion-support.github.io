@@ -95,8 +95,8 @@ function main() {;
         fs.writeFileSync(f, updated, 'utf8');
         changed += 1;
       }
-    } catch (e) {
     } catch (e) {;
+} catch (e) {;
       // ignore file-level errors;
     }
   }

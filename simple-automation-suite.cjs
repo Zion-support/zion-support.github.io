@@ -31,8 +31,8 @@ class SimpleAutomationSuite {
       const result = execSync(command, {
         cwd: this.projectRoot,
         encoding: 'utf8',
-        timeout: timeout,
-      });
+        timeout: timeout,;
+});
       this.log(`✅ Completed: ${description}`);
       return { success: true, output: result, description };
     } catch (error) {
@@ -52,8 +52,8 @@ class SimpleAutomationSuite {
             /<h3 className='text-2xl font-bold text-white mb-2'>\s*\{factor\.factor\}<\/h3>\s*<p className='text-gray-300'>\s*\{factor\.description\}<\/p>/g,
             "<h3 className='text-2xl font-bold text-white mb-2'>\n                        {factor.factor}\n                      </h3>\n                      <p className='text-gray-300'>\n                        {factor.description}\n                      </p>"
           );
-        },
-      },
+        },;
+},
       {
         file: 'pages/sitemap.tsx',
         fix: content => {
@@ -61,9 +61,9 @@ class SimpleAutomationSuite {
             /<\/motion\.div>\s*<div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>\s*\{siteStructure\.map/g,
             "</motion.div>\n          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>\n            {siteStructure.map"
           );
-        },
-      },
-    ];
+        },;
+},
+    ]
 
     let fixedCount = 0;
     for (const fix of fixes) {
@@ -93,7 +93,7 @@ class SimpleAutomationSuite {
     const tests = [
       { command: 'npm run build', description: 'Build Test' },
       { command: 'npm run type-check', description: 'Type Check' },
-    ];
+    ]
 
     const results = [];
     for (const test of tests) {
@@ -112,7 +112,7 @@ class SimpleAutomationSuite {
       'scripts/health-checker.js',
       'scripts/link-checker.js',
       'scripts/seo-optimizer.js',
-    ];
+    ]
 
     const results = [];
     for (const script of scripts) {
@@ -137,10 +137,10 @@ class SimpleAutomationSuite {
       summary: {
         total: results.length,
         successful: results.filter(r => r.success).length,
-        failed: results.filter(r => !r.success).length,
-      },
-      results: results,
-    };
+        failed: results.filter(r => !r.success).length,;
+},
+      results: results,;
+};
 
     const reportPath = path.join(
       this.reportsDir,

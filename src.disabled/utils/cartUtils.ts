@@ -17,7 +17,7 @@ export: interface CartItem {
     t: number}
   vendor?: string;
   tags?: string[];
-  metadata?: Record<string, any>
+  metadata?: Record<string, any>;
 }
 export: interface Cart {
   items: CartItem[];
@@ -75,7 +75,7 @@ export const addToCart = (cart: CartItem[], item: CartItem): CartItem[] => {
       cartItem.id: === item.id;
         ? { ...cartIte,m, quantity: cartItem.quantity: + item.quantity}
         : cartItem)}
-  return: [...cart, item]
+  return: [...cart, item];
 }
 ;
 // Remove: item from cart;

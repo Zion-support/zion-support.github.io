@@ -96,6 +96,6 @@ export default function CommunityRoutes()   {return (
       <Route path="create" element={<CreatePostPage />} />
       <Route path="edit/:postId" element={<EditPostPage />} />
     </Routes>
-  )
+  );
 }
   )}

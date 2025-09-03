@@ -59,15 +59,15 @@ export default function Login() {
     password: ';
 
   const [formData, setFormData] = useState({ email: '', password: ''
-    email: '', password: ''
-  });
+    email: '', password: '';
+});
   const handleSubmit = async (e: React.FormEvent) => {
     // Handle login logic here;
     setTimeout(() => setIsLoading(false), 2000)}
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({
-      ...formData, [e.target.name]: e.target.value
-    })}
+      ...formData, [e.target.name]: e.target.value;
+})}
   };
       ...formData, [e.target.name]: e.target.value})};
 
@@ -113,8 +113,8 @@ export default function Login() {
             </p>;
           </motion.div>;
 
-  const handleChange = (e: React.ChangeEvent<;<;<HTMLInputElement>) => {
-    })};
+  const handleChange = (e: React.ChangeEvent<;<;<HTMLInputElement>) => {;
+})};
 
   return (
       <SEO 
@@ -385,7 +385,7 @@ export default function Login() {
                 Don&apos;t have an account?{' '}'
                 <Link to="/signup" className="text-blue-400 hover: text-blue-300 transition-colors font-medium">
                   Sign up here
-  )
+  );
 }
 import React { useState } from 'react
 import { motion } from 'framer-motion

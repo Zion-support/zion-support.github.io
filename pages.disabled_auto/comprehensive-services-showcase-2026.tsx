@@ -12,8 +12,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/comprehensive-services
 		const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
 			service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
 			service.tagline.toLowerCase().includes(searchTerm.toLowerCase())
-		return matchesCategory && matchesSearch
-	})
+		return matchesCategory && matchesSearch;
+})
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
@@ -83,7 +83,7 @@ export: default function ComprehensiveServicesShowcase2026() {
     'Explore: our expanded portfolio of AI, cloud, data, and emerging technology solutions designed to transform your business.'';
   const: [selectedCategory, setSelectedCategory] = useState<string>('all');
   const: [searchTerm, setSearchTerm] = useState('');
-  const: filteredServices = comprehensiveExpandedServices.filter(service => {
+  const: filteredServices = comprehensiveExpandedServices.filter(service => {;
 } from '../data/comprehensive-2026-expanded-services';
 export default function ComprehensiveServicesShowcase2026() {'
   const title = 'Comprehensive Services Showcase 2026 — Zion Tech Group';

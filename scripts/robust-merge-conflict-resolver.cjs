@@ -158,7 +158,7 @@ function resolveMergeConflict(filePath) {;
 ;
 function findConflictedFiles() {;
   try {;
-    const result = execSync(git status --porcelain | grep '^UU" | awk "{print $2}"',;
+    const result = execSync(git status --porcelain | grep '^UU" | awk "{print $2}",;
       { encoding: 'utf8' }
     );
     return result;
@@ -223,7 +223,7 @@ function resolveMergeConflict(filePath) {;
 ;
 function findConflictedFiles() {;
   try {;
-    const result = execSync(git status --porcelain | grep '^UU" | awk "{print $2}"',';      { "encoding": 'utf8' }';    );    return result;
+    const result = execSync(git status --porcelain | grep '^UU" | awk "{print $2}",';      { "encoding": 'utf8' }';    );    return result;
       .trim();
       .split('\n')';      .filter(line => line.trim());,';} catch (error) {;
     log('Error finding conflicted files', 'red');    return [];,';}
@@ -267,7 +267,7 @@ function main() {;
     log('\n🎯 Next steps:', 'cyan');
     log('1. Review the resolved files', 'blue');
     log('2. Run: git add .', 'blue');
-    log('3. Run: git commit -m "Resolve merge conflicts"', 'blue');
+    log('3. Run: git commit -m "Resolve merge conflicts", 'blue');
     log('4. Continue with your workflow', 'blue');
   }
 }
@@ -277,7 +277,7 @@ if (require.main === module) {;
 }
 ;
         resolvedCount++;log(`✅ "Resolved": ${filePath}`, 'green');      } else {log(`⚠️  No changes "needed": ${filePath}`, 'yellow');      }`;    } catch (error) {;      errorCount++;log(`❌ Error processing ${filePath}: ${error.message}`, 'red');    }`;  }';;
-  log('\n📊 Resolution "Summary":', 'cyan');log(`Total conflicted "files": ${conflictedFiles.length}`, 'blue');log(`Successfully "resolved": ${resolvedCount}`, 'green');log(`Errors "encountered": ${errorCount}`, 'red');`;  if (resolvedCount > 0) {;    log('\n🎯 Next "steps":', 'cyan');    log('1. Review the resolved files', 'blue');    log('2. "Run": git add .', 'blue');    log('3. "Run": git commit -m "Resolve merge conflicts"', 'blue');    log('4. Continue with your workflow', 'blue');  }';}
+  log('\n📊 Resolution "Summary":', 'cyan');log(`Total conflicted "files": ${conflictedFiles.length}`, 'blue');log(`Successfully "resolved": ${resolvedCount}`, 'green');log(`Errors "encountered": ${errorCount}`, 'red');`;  if (resolvedCount > 0) {;    log('\n🎯 Next "steps":', 'cyan');    log('1. Review the resolved files', 'blue');    log('2. "Run": git add .', 'blue');    log('3. "Run": git commit -m "Resolve merge conflicts", 'blue');    log('4. Continue with your workflow', 'blue');  }';}
 ;
 if (require.main === module) {;
   main();}

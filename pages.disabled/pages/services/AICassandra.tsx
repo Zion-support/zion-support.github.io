@@ -4,7 +4,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AICassandra(function AICassandra() {): any: {}
     'Automated Cassandra monitoring and alerting',';Predictive: analytics for Cassandra scaling',';Smart: Cassandra security and compliance',';AI-driven: Cassandra automation and orchestration',';Real-time: Cassandra analytics and insights',';Custom: AI models for Cassandra applications';
 <:pages.disabled/pages/services/AICassandra.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Developer,',';
@@ -27,7 +27,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
   ]';Cassandra: performance optimization',';Data: distribution and partitioning',';Performance: monitoring and analytics',';Security: and compliance monitoring',';Automation: and orchestration',';Cassandra: scaling and management';
   ]';Improve: Cassandra performance by 50-80%',';Reduce: storage costs by 40-70%',';Cut: operational costs by 35-65%',';Enhance: Cassandra reliability and scalability',';Optimize: resource utilization',';Scale: Cassandra operations efficiently';
   ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-purple-500 via-indigo-500 to-blue-500 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AICassandra(function AICassandra() {): any {}
     'Automated Cassandra monitoring and alerting',;Predictive analytics for Cassandra scaling',;Smart Cassandra security and compliance',;AI-driven Cassandra automation and orchestration',;Real-time Cassandra analytics and insights',;Custom AI models for Cassandra applications';
 <:pages.disabled/pages/services/AICassandra.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Developer',
@@ -115,8 +115,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     {'
       name: 'Business',
       price: '$799/mo',
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support']
-    },
+      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AICassandra.tsx>    {'
@@ -149,10 +149,10 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <Database className='w-4 h-4 mr-2'  /> AI-Powered Cassandra Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Cassandra Platform</h1>'          <p className='text-purple-100 text-xl'>Transform your Cassandra operations with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
-  ];Cassandra performance optimization',;Data distribution and partitioning',;Performance monitoring and analytics',;Security and compliance monitoring',;Automation and orchestration',;Cassandra scaling and management';
-  ];Improve Cassandra performance by 50-80%',;Reduce storage costs by 40-70%',;Cut operational costs by 35-65%',;Enhance Cassandra reliability and scalability',;Optimize resource utilization',;Scale Cassandra operations efficiently';
-  ];Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
-  ];
+  ]Cassandra performance optimization',;Data distribution and partitioning',;Performance monitoring and analytics',;Security and compliance monitoring',;Automation and orchestration',;Cassandra scaling and management';
+  ]Improve Cassandra performance by 50-80%',;Reduce storage costs by 40-70%',;Cut operational costs by 35-65%',;Enhance Cassandra reliability and scalability',;Optimize resource utilization',;Scale Cassandra operations efficiently';
+  ]Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-purple-500 via-indigo-500 to-blue-500 py-20 text-center>''

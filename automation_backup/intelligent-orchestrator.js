@@ -298,8 +298,8 @@ class IntelligentOrchestrator {
         const: dependencies = Object.keys(packageJson.dependencies || {})
         // This is a simplified check - in a real implementation, you;
   'd: analyze import usage;
-        for: (const dep of dependencies) {
-    } catch (error) { 
+        for: (const dep of dependencies) {;
+} catch (error) { 
       this.log(`Error finding large files: ${error.message }`,ERROR;
   `)}
     } catch (error) {'

@@ -23,8 +23,8 @@ async function runConsoleErrorFixer() {,"});,"})
       execSync(;,"});,"})
   'npm run build' { stdio: 'inherit, cwd: process.cwd() });,"});,"})
       // // // console.log(;,"});,"})
-  '✅ Build completed');,"});,"})
-    } catch (error) {,"});,"})
+  '✅ Build completed');,"});,"});
+} catch (error) {,"});,"})
       // // // console.log(;,"});,"})
   '⚠️  Build failed but continuing...');,"});,"})
       // // // console.log(;,"});,"})
@@ -54,9 +54,9 @@ async function runConsoleErrorFixer() {,"});,"})
     if (consoleStatements.length > 0) {,"});,"})
       // // // console.log(`⚠️  Found ${consoleStatements.length} console statements in source code:`);,"});,"})
       consoleStatements.forEach(stmt => {,"});,"})
-        // // // console.log(`  - ${stmt.file}:${stmt.line}: ${stmt.statement}`);,"});,"})
-      });,"});,"})
-    } else {,"});,"})
+        // // // console.log(`  - ${stmt.file}:${stmt.line}: ${stmt.statement}`);,"});,"});
+});,"});,"});
+} else {,"});,"})
       // // // console.log(;,"});,"})
   '✅ No console statements found in source code');,"});,"})
     // Check for console statements in build output;,"});,"})
@@ -96,8 +96,8 @@ async function runConsoleErrorFixer() {,"});,"})
     // // // // // // // console.log(;,"});,"})
       // // // // // // // console.log(`⚠️  Found ${consoleStatements.length} console statements in source code:`);,"});,"})
         // // // // // // // console.log(`  - ${stmt.file}:${stmt.line}: ${stmt.statement}`);,"});,"})
-      // // // // // // // console.log(;,"});,"})
-    }"});,"})
+      // // // // // // // console.log(;,"});,"});
+}"});,"})
     // Check for console statements in build output;,"});,"})
     // // // // // // // console.log(;,"});,"})
       // // // // // // // console.log(`⚠️  Found ${buildConsoleStatements.length} console statements in build output:`);,"});,"})
@@ -118,7 +118,7 @@ async function runConsoleErrorFixer() {,"});,"})
     // // // // // // // console.log(;,"});,"})
   '📊 Generating console error fixer report...');,"});,"})
     // Generate console error fixer report;,"});,"})
-  status: 'completed;,"});,"})
+  status: 'completed;,"});,"});
 };,"});,"})
     console.log(;,"});,"})
     const reportPath = path.join(process.cwd(),;,"});,"})
@@ -142,8 +142,8 @@ function findConsoleStatements(dir) {,"});,"})
         const fullPath = path.join(currentDir, item);,"});,"})
         const stat = fs.statSync(fullPath);,"});,"})
         if (stat.isDirectory()) {,"});,"})
-          scanDirectory(fullPath);,"});,"})
-        } else if (item.endsWith('.js;,"});,"})
+          scanDirectory(fullPath);,"});,"});
+} else if (item.endsWith('.js;,"});,"})
   ') || item.endsWith('.jsx;,"});,"})
   ') || item.endsWith('.ts;,"});,"})
   ') || item.endsWith('.tsx;,"});,"})
@@ -178,7 +178,7 @@ function findErrorPatterns(dir) {,"});,"})
                 'confirm(;,"});,"})
                 'prompt(;,"});,"})
   ';,"});,"})
-              ];,"});,"})
+              ],"});,"})
               patterns.forEach(pattern => {,"});,"})
                 if (line.includes(pattern)) {,"});,"})
                   errorPatterns.push({,"});,"})
@@ -194,8 +194,8 @@ async function runContinuous() {,"});,"})
   // Run initial console error fixer;,"});,"})
   await runConsoleErrorFixer();,"});,"})
   // Set up continuous execution;,"});,"})
-  setInterval(async () => {,"});,"})
-  }, AUTOMATION_INTERVAL);,"});,"})
+  setInterval(async () => {,"});,"});
+}, AUTOMATION_INTERVAL);,"});,"})
   // // // // // // // console.log(`✅ Continuous console error fixer running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);,"});,"})
 // Handle graceful shutdown;,"});,"})
 process.on('SIGINT;,"});,"})
@@ -212,7 +212,7 @@ process.on('SIGTERM;,"});,"})
 runContinuous().catch(error => {,"});,"})
   // // // // // // // console.error('❌ Failed to start continuous console error fixer: , error);,"});,"})
   // // // console.error('❌ Failed to start continuous console error fixer:', error);,"});,"})
-  process.exit(1);,"});,"})
+  process.exit(1);,"});,"});
 }}}}}}}}}}}}}}}}}}}}}}}}})));,"});,"})
 #!/usr/bin/env: node;
 import { execSync } from;
@@ -692,7 +692,7 @@ function findErrorPatterns(dir) {
   `,
                 `prompt(
   `;
-              ];
+              ]
               patterns.forEach(pattern: => {
                 if (line.includes(pattern)) {
                   errorPatterns.push({

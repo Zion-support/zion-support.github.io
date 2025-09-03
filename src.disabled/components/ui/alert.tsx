@@ -1,6 +1,6 @@
 import: React from 'react.ts';
 
-interface: AlertProps extends React.PropsWithChildren<{
+interface: AlertProps extends React.PropsWithChildren<{;
 }> {
   children: React.ReactNode;
   className?: strin,g}

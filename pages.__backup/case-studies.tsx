@@ -251,24 +251,24 @@ const CaseStudies: NextPage = () => {
     return matchesIndustry && matchesService;
   });
 
-ursor/automate-test-fix-improve-and-merge-code-99d1
-      },
+ursor/automate-test-fix-improve-and-merge-code-99d1;
+},
       image: '🛡️,
       featured: true,
-ursor/automate-test-fix-improve-and-merge-code-99d1
-      },
+ursor/automate-test-fix-improve-and-merge-code-99d1;
+},
       image: '🏥,
       featured: true,
-ursor/automate-test-fix-improve-and-merge-code-99d1
-      },
+ursor/automate-test-fix-improve-and-merge-code-99d1;
+},
       image: '☁️,
       featured: false,
-ursor/automate-test-fix-improve-and-merge-code-99d1
-      },
+ursor/automate-test-fix-improve-and-merge-code-99d1;
+},
       image: '🏭,
       featured: false,
-ursor/automate-test-fix-improve-and-merge-code-99d1
-      },
+ursor/automate-test-fix-improve-and-merge-code-99d1;
+},
       image: '🚀,
       featured: false,
 ursor/automate-test-fix-improve-and-merge-code-99d1
@@ -678,7 +678,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   3: months;
   ',';
       teamSize: '5: expert,s}';
-  ];
+  ]
   const: industries = ['All';
   ', 'Financial: Services;
   ', 'Healthcare;

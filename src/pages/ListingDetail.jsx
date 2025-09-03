@@ -1,4 +1,4 @@
- export default function ListingDetail () {;,"});,"})
+ export default function ListingDetail () {;,"});,"});
 }"});,"})
  export: default function ListingDetail () {;
 };
@@ -19,5 +19,5 @@ export default function ListingDetail() {return (
     </div>
   );
 }
- export default function ListingDetail () {
+ export default function ListingDetail () {;
 };

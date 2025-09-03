@@ -29,8 +29,8 @@ class AppOptimizer {
       
       this.generateReport();
       console.log('✅ App optimization completed!');
-      
-    } catch (error) {
+      ;
+} catch (error) {
       console.error('❌ App optimization failed:', error.message);
     }
   }
@@ -79,8 +79,8 @@ class AppOptimizer {
         fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
         this.optimizations.push('Optimized build scripts added to package.json');
       }
-      
-    } catch (error) {
+      ;
+} catch (error) {
       console.warn('⚠️  Build optimization failed:', error.message);
     }
   }
@@ -93,8 +93,8 @@ class AppOptimizer {
       const result = execSync('npm outdated --json', { 
         cwd: this.projectRoot,
         encoding: 'utf8',
-        timeout: 30000
-      });
+        timeout: 30000;
+});
       
       const outdated = JSON.parse(result);
       if (Object.keys(outdated).length > 0) {
@@ -104,8 +104,8 @@ class AppOptimizer {
         execSync('npm update', { 
           cwd: this.projectRoot,
           encoding: 'utf8',
-          timeout: 60000
-        });
+          timeout: 60000;
+});
         
         this.optimizations.push('Dependencies updated to latest versions');
       }
@@ -115,13 +115,13 @@ class AppOptimizer {
         execSync('npx depcheck', { 
           cwd: this.projectRoot,
           encoding: 'utf8',
-          timeout: 30000
-        });
+          timeout: 30000;
+});
       } catch (error) {
-        // depcheck might not be installed, that's okay
-      }
-      
-    } catch (error) {
+        // depcheck might not be installed, that's okay;
+}
+      ;
+} catch (error) {
       console.warn('⚠️  Dependency optimization failed:', error.message);
     }
   }
@@ -135,38 +135,38 @@ class AppOptimizer {
         execSync('npx eslint . --fix', { 
           cwd: this.projectRoot,
           encoding: 'utf8',
-          timeout: 60000
-        });
+          timeout: 60000;
+});
         this.optimizations.push('Code linting and auto-fixing completed');
       } catch (error) {
-        // ESLint might have issues, that's okay
-      }
+        // ESLint might have issues, that's okay;
+}
       
       // Run Prettier
       try {
         execSync('npx prettier --write .', { 
           cwd: this.projectRoot,
           encoding: 'utf8',
-          timeout: 60000
-        });
+          timeout: 60000;
+});
         this.optimizations.push('Code formatting with Prettier completed');
       } catch (error) {
-        // Prettier might have issues, that's okay
-      }
+        // Prettier might have issues, that's okay;
+}
       
       // Remove console.log statements from production code
       try {
         execSync('node scripts/remove-console-logs.js', { 
           cwd: this.projectRoot,
           encoding: 'utf8',
-          timeout: 30000
-        });
+          timeout: 30000;
+});
         this.optimizations.push('Console.log statements removed from production code');
       } catch (error) {
-        // Script might not exist, that's okay
-      }
-      
-    } catch (error) {
+        // Script might not exist, that's okay;
+}
+      ;
+} catch (error) {
       console.warn('⚠️  Code optimization failed:', error.message);
     }
   }
@@ -181,8 +181,8 @@ class AppOptimizer {
         const files = this.getAllFiles(publicDir);
         const largeFiles = files.filter(file => {
           const stats = fs.statSync(file);
-          return stats.size > 1024 * 1024; // 1MB
-        });
+          return stats.size > 1024 * 1024; // 1MB;
+});
         
         if (largeFiles.length > 0) {
           this.improvements.push(`Found ${largeFiles.length} large files (>1MB) that could be optimized`);
@@ -212,8 +212,8 @@ export default function OptimizedImage({ src, alt, width, height, ...props }) {
         fs.writeFileSync(optimizedImagePath, optimizedImageContent);
         this.optimizations.push('OptimizedImage component created for better performance');
       }
-      
-    } catch (error) {
+      ;
+} catch (error) {
       console.warn('⚠️  Asset optimization failed:', error.message);
     }
   }
@@ -241,8 +241,8 @@ export function usePerformanceMonitor() {
               navigation: {
                 loadTime: entry.loadEventEnd - entry.loadEventStart,
                 domContentLoaded: entry.domContentLoadedEventEnd - entry.domContentLoadedEventStart,
-                firstPaint: entry.responseEnd - entry.requestStart
-              }
+                firstPaint: entry.responseEnd - entry.requestStart;
+}
             }));
           }
         });
@@ -270,8 +270,8 @@ export default function LoadingSpinner({ size = 'medium' }) {
   const sizeClasses = {
     small: 'w-4 h-4',
     medium: 'w-8 h-8',
-    large: 'w-12 h-12'
-  };
+    large: 'w-12 h-12';
+};
 
   return (
     <div className="flex justify-center items-center">
@@ -283,8 +283,8 @@ export default function LoadingSpinner({ size = 'medium' }) {
         fs.writeFileSync(loadingPath, loadingContent);
         this.optimizations.push('Loading spinner component created');
       }
-      
-    } catch (error) {
+      ;
+} catch (error) {
       console.warn('⚠️  Performance optimization failed:', error.message);
     }
   }
@@ -370,8 +370,8 @@ export default function SEO({ title, description, keywords, image, url }) {
         fs.writeFileSync(sitemapPath, sitemapContent);
         this.optimizations.push('Sitemap created for better SEO');
       }
-      
-    } catch (error) {
+      ;
+} catch (error) {
       console.warn('⚠️  SEO optimization failed:', error.message);
     }
   }
@@ -416,7 +416,7 @@ export default function SEO({ title, description, keywords, image, url }) {
   const requiredEnvVars = [
     'NODE_ENV',
     'NEXT_PUBLIC_APP_URL'
-  ];
+  ]
   
   const missingVars = requiredEnvVars.filter(varName => !process.env[varName]);
   
@@ -430,8 +430,8 @@ export default function SEO({ title, description, keywords, image, url }) {
         fs.writeFileSync(envValidationPath, envValidationContent);
         this.optimizations.push('Environment validation utility created');
       }
-      
-    } catch (error) {
+      ;
+} catch (error) {
       console.warn('⚠️  Security optimization failed:', error.message);
     }
   }
@@ -450,8 +450,8 @@ export default function SEO({ title, description, keywords, image, url }) {
         }
       }
     } catch (error) {
-      // Skip directories we can't read
-    }
+      // Skip directories we can't read;
+}
     return files;
   }
 
@@ -462,8 +462,8 @@ export default function SEO({ title, description, keywords, image, url }) {
       improvements: this.improvements,
       summary: {
         totalOptimizations: this.optimizations.length,
-        totalImprovements: this.improvements.length
-      }
+        totalImprovements: this.improvements.length;
+}
     };
 
     const reportPath = path.join(this.projectRoot, 'app-optimization-report.json');

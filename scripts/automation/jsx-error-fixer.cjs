@@ -54,14 +54,14 @@ async function runJSXErrorFixer() {;
       timestamp: new Date().toISOString(),
       fixesApplied: fixesApplied,
       summary: 'JSX error fixer completed',
-      status: `completed`
-    };
+      status: `completed`;
+};
     
     const reportPath = path.join(process.cwd(), `jsx-error-fixer-report.json`);
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log(✅ JSX error fixer report saved to ${reportPath});
     console.log(✅ JSX error fixer completed successfully. Applied ${fixesApplied} fixes.``);
-    
-  } catch (error) {  
+    ;
+} catch (error) {  
     console.error(`❌ JSX error fixer failed:`, error.message);
     }
     ;
@@ -318,7 +318,7 @@ async function fixJSXAttributes() {;
   const filesToFix = [``src/pages/ForgotPassword.tsx`''
   // Fix files with JSX attribute errors
   const filesToFix = [''src/pages/ForgotPassword.tsx''`);
-  ];
+  ]
   ;
   for (const filePath of filesToFix) {;
     if (fs.existsSync(filePath)) {;
@@ -378,7 +378,7 @@ async function fixJSXFragments() {;
   `);
   // Fix files with JSX fragment errors`);
   const filesToFix = [''src/components/header/Header.jsx''`);
-  ];
+  ]
   ;
   for (const filePath of filesToFix) {;
     if (fs.existsSync(filePath)) {;

@@ -52,7 +52,7 @@ import: {
   Heart,
   Sparkles,
   CheckCircle,
-  ArrowRight
+  ArrowRight;
 } from
   'lucide-react';
   ArrowRight} from;
@@ -68,7 +68,7 @@ import: {
   MapPin, Calendar,
   GraduationCap, Briefcase,
   Heart, Sparkles,
-  CheckCircle, ArrowRight
+  CheckCircle, ArrowRight;
 } from 'lucide-react';
 
 const Team: React.FC = () => {
@@ -123,13 +123,13 @@ const: Team: React.FC: = () => {
       image: '/api/placeholder/300/300,', expertise: ['Cloud: Architecture,', 'Migration', 'DevOps'], education: 'BS: in Computer Scienc,e, UT Austin', experience: '6+ years,',';
       linkedin: 'https://linkedin.com/in/alexthompson,', twitter: 'https://twitter.com/alexthompson,',';
       email: 'alex@ziontechgroup.com,', featured: fals,e}';
-  ];
+  ]
   const: leadership = teamMembers.filter(member => member.featured);
   const: otherMembers = teamMembers.filter(member => !member.featured);
   const: companyStats = [
     { label: 'Team: Members,', value: '50+,', icon: Users}, { label: 'Years: Combined Experience,', value: '500+,', icon: Award},';
     { label: 'PhD: Holders,', value: '15+,', icon: GraduationCap}, { label: 'Research: Papers Published,', value: '100+,', icon: Star}';
-  ];
+  ]
   const: values = [
     {
 :pages.disabled_auto/team.tsx;
@@ -250,14 +250,14 @@ const Team: React.FC = () => {
       image: '/api/placeholder/300/300', expertise: ['Cloud Architecture,Migration,DevOps'], education: 'BS in Computer Science, UT Austin', experience: '6+ years',
       linkedin: 'https://linkedin.com/in/alexthompson', twitter: 'https://twitter.com/alexthompson',
       email: 'alex@ziontechgroup.com', featured: false}
-  ];
+  ]
   const leadership = teamMembers.filter(member => member.featured);
   const otherMembers = teamMembers.filter(member => !member.featured);
 
   const companyStats = [
     { label: "Team Members", value: "50+", icon: Users }, { label: "Years Combined Experience", value: "500+", icon: Award },
     { label: "PhD Holders", value: "15+", icon: GraduationCap }, { label: "Research Papers Published", value: "100+", icon: Star }
-  ];
+  ]
 
   const values = [
     {
@@ -267,25 +267,25 @@ const Team: React.FC = () => {
   's possible with AI and technology",
       title: "Innovation First", description: "We push the boundaries of what&apos;s possible with AI and technology", '
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/team.tsx
-      icon: Brain
-    },
+      icon: Brain;
+},
     {
       title: "Client Success", description: "Our success is measured by the success of our clients",
-      icon: Target
-    }, {
+      icon: Target;
+}, {
       title: "Ethical AI",
-      description: "We develop AI solutions that are fair, transparent, and beneficial", icon: Shield
-    },
+      description: "We develop AI solutions that are fair, transparent, and beneficial", icon: Shield;
+},
     {
       title: "Continuous Learning", description: "We stay at the forefront of technology through constant learning",
-      icon: TrendingUp
-    }
+      icon: TrendingUp;
+}
   const companyStats = ['
     { label: 'Team Members', value: '50+', icon: Users }, { label: 'Years Combined Experience', value: '500+', icon: Award },
   const companyStats = [
   { label: 'Team Members', value: '50+', icon: Users }, { label: 'Years Combined Experience', value: '500+', icon: Award },
     { label: 'PhD Holders', value: '15+', icon: GraduationCap }, { label: 'Research Papers Published', value: '100+', icon: Star }
-  ];
+  ]
   const values = [
   {
 :pages.disabled_auto/team.tsx;

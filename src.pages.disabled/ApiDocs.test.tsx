@@ -14,11 +14,11 @@ import { render, screen } from '@testing-library/react'
 import ApiDocs  from './ApiDocs'describe('ApiDocs', () => {
   it('renders without crashing', () => {
     render(<ApiDocs />)
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()
-  })
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+})
 
   it('displays expected content', () => {
     render(<ApiDocs />)
-    // Add specific test assertions based on component content
-  })
+    // Add specific test assertions based on component content;
+});
 })

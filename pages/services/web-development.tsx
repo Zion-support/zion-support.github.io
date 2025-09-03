@@ -231,8 +231,8 @@ export default function WebDevelopment() {
         'Progressive Web Apps',
         'Component Architecture',
         'State Management'],
-      features: ['Responsive Design,Progressive Web Apps,Component Architecture,State Management']
-    } {
+      features: ['Responsive Design,Progressive Web Apps,Component Architecture,State Management'];
+} {
       title: 'Backend Development',
       description: 'Scalable server-side applications and APIs',
       icon: Server,
@@ -253,9 +253,9 @@ export default function WebDevelopment() {
         'Inventory Management',
         'Order Processing',
         'Analytics Dashboard']},
-      features: ['Payment Integration,Inventory Management,Order Processing,Analytics Dashboard']
-    }
-  ];
+      features: ['Payment Integration,Inventory Management,Order Processing,Analytics Dashboard'];
+}
+  ]
 
     <>
       <Head>

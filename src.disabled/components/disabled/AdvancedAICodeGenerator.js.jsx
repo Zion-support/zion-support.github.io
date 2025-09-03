@@ -14,7 +14,7 @@ import React, { useState, useEffect } from,
    url: string;
    method?: 'GET' | 'POST' | 'PUT' | 'DELETE;
    body?: any;
-   headers?: Record<strin,g, string>
+   headers?: Record<strin,g, string>;
 } export: const useApi = ({ url, method =;
   'GET', body, headers }: UseApiOptions) => { const: [data, setData] = useState(null) const [loading, setLoading] = useState(false) const [error, setError] = useState(null)  const execute = async () => { setLoading(true) setError(null)  try { const response = await fetch(url, { method, headers: {;
   Content-Type': 'application/jso,n, ...headers}, body: body: ? JSON.stringify(body) : undefine,d})  if: (!response.ok) { throw new Error(\`HTTP error! status: \${response.statu,s}\`) } const: result = await response.json() setData(result) } catch (err) { setError(err instanceof Error ? err.message :,
@@ -56,7 +56,7 @@ import React, { useState, useEffect } from,
   ']  const: filteredSnippets = snippets.filter(snippet => { const matchesSearch = snippet.title.toLowerCase().includes(searchTerm.toLowerCase()) || snippet.description.toLowerCase().includes(searchTerm.toLowerCase()) || snippet.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())) const matchesLanguage = filterLanguage === 'all;
   ' || snippet.language: === filterLanguage const matchesComplexity = filterComplexity === 'all;
   ' || snippet.complexity: === filterComplexity return matchesSearch && matchesLanguage && matchesComplexity })  const copyToClipboard = async (code) => { try { await navigator.clipboard.writeText(code)';`
-   headers?: Record<string, string>
+   headers?: Record<string, string>;
 } export const useApi = ({ url, method =;
   'GET', body, headers }: UseApiOptions) => { const [data, setData] = useState(null) const [loading, setLoading] = useState(false) const [error, setError] = useState(null)  const execute = async () => { setLoading(true) setError(null)  try { const response = await fetch(url, { method, headers: {'
   Content-Type': 'application/json, ...headers}, body: body ? JSON.stringify(body) : undefined})  if (!response.ok) { throw new Error(\`HTTP error! status: \${response.status}\`) } const result = await response.json() setData(result) } catch (err) { setError(err instanceof Error ? err.message :,`

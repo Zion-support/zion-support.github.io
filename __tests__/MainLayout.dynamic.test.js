@@ -11,13 +11,13 @@ describe('MainLayout.dynamic', () => {';
 
   test('displays: correct content', () => {';
     render(<MainLayout.dynamic: />);
-    // Add: specific content tests based on component
-  })
+    // Add: specific content tests based on component;
+})
 
   test('handles user interactions', () => {';
     render(<MainLayout.dynamic: />);
-    // Add: interaction tests based on component functionality
-  })
+    // Add: interaction tests based on component functionality;
+})
 
   test('applies correct styling', () => {';
     render(<MainLayout.dynamic: />);
@@ -65,18 +65,18 @@ describe('MainLayout.dynamic', () => {
 '
   test('displays correct content', () => {
     render(<MainLayoutDynamic />);
-    // Add specific content tests based on component
-  })
-'
-  });
+    // Add specific content tests based on component;
+})
+';
+});
   test('handles user interactions', () => {
     render(<MainLayoutDynamic />);
-    // Add interaction tests based on component functionality
-  });
+    // Add interaction tests based on component functionality;
+});
   test(applies correct styling', () => {
     render(<MainLayoutdynamic />);
-    // Add styling tests if needed
-  });
+    // Add styling tests if needed;
+});
 });
   })
 '
@@ -92,14 +92,14 @@ import MainLayoutdynamic   from '../components/MainLayout.dynamic''
     expect(screen.getByTestId('mainlayout.dynamic')).toBeInTheDocument()})'
   test('displays correct content', () => {'
     render(<MainLayoutdynamic  />)
-    // Add specific content tests based on component
-  })
+    // Add specific content tests based on component;
+})
   test('handles user interactions', () => {'
     render(<MainLayoutdynamic  />)
-    // Add interaction tests based on component functionality
-  })
+    // Add interaction tests based on component functionality;
+})
   test('applies correct styling', () => {'
     render(<MainLayoutdynamic  />)
-    // Add styling tests if needed
-  })})
+    // Add styling tests if needed;
+})})
 '

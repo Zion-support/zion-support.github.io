@@ -90,7 +90,7 @@ class SyntaxFixer {;
       { pattern: /^\s*["']\s*$/, replacement: ' },;
       { pattern: /description:\s*['"]$/, replacement: 'description: ' },;
       { pattern: /['"]$\n\s*['"]/, replacement: ' },;
-    ];
+    ]
 ;
     try {;
       const { stdout } = await execAsync(;
@@ -124,7 +124,7 @@ class SyntaxFixer {;
   async findSyntaxErrors() {;
     const syntaxPatterns = [;
       {;
-        "pattern": /const\s+\w+\s*=\s*lazy\s*\(\s*['"]/,";        "replacement": 'const $1 = lazy(',';      },;);      { "pattern": /\)\s*\(\s*["']/, "replacement": ')(' },';      { "pattern": /["']\s*\(\s*$/, "replacement": '(' },';      { "pattern": /^\s*["']\s*$/, "replacement": '' },';      { "pattern": /"description":\s*['"]$/, "replacement": '"description": ' },';      { "pattern": /['"]$\n\s*['"]/, "replacement": '' },';    ];;
+        "pattern": /const\s+\w+\s*=\s*lazy\s*\(\s*['"]/,";        "replacement": 'const $1 = lazy(',';      },;);      { "pattern": /\)\s*\(\s*["']/, "replacement": ')(' },';      { "pattern": /["']\s*\(\s*$/, "replacement": '(' },';      { "pattern": /^\s*["']\s*$/, "replacement": '' },';      { "pattern": /"description":\s*['"]$/, "replacement": '"description": ' },';      { "pattern": /['"]$\n\s*['"]/, "replacement": '' },';    ]
     try {;
       const { stdout } = await execAsync(;);        `find ${this.projectRoot}/src -name "*.js" -o -name "*.jsx" -o -name "*.ts" -o -name "*.tsx" | head -50`";      );`;      const files = stdout;";        .trim();
         .split('\n')';        .filter(line => line);;
@@ -174,8 +174,8 @@ class SyntaxFixer {;
 
       // Simple merge conflict resolution - take the HEAD version;
       const fixed = content;
-        .replace(/        .replace(/\n[\s\S]*?        .replace(/
-    } catch (error) {;
+        .replace(/        .replace(/\n[\s\S]*?        .replace(/;
+} catch (error) {;
       await this.log(`Error finding syntax errors: ${error.message}`, 'ERROR');
       return [];
     }
@@ -194,8 +194,8 @@ class SyntaxFixer {;
     } catch (error) { 
       await this.log(
         `Failed to fix merge conflict in ${filePath }: ${error.message}`,
-        `ERROR`
-    } catch (error) {;
+        `ERROR`;
+} catch (error) {;
       await this.log(;
         `Failed to fix merge conflict in ${filePath}: ${error.message}`,;
         'ERROR';
@@ -257,10 +257,10 @@ class SyntaxFixer {;
         { from: /['"]$/gm, to: '"' },;
         // Fix semicolon at end of import;
         { from: /import.*;\s*;$/gm, to: match => match.replace(';;', ';') },;
-      ];
+      ]
 ;
           "from": /const\s+(\w+)\s*=\s*lazy\s*\(\s*['"]([^'"]*)/g,";          "to": 'const $1 = lazy(',';        },;);        // Fix unterminated strings in JSX;
-        { "from": /\)\s*\(\s*["']/g, "to": ')(' },';        { "from": /["']\s*\(\s*$/gm, "to": '(' },';        { "from": /^\s*["']\s*$/gm, "to": '' },';        // Fix object property syntax;        { "from": /"description":\s*['"]$/gm, "to": '"description": ' },';        { "from": /['"]$/gm, "to": '"' },';        // Fix semicolon at end of import;        { "from": /import.*;\s*;$/gm, "to": match => match.replace(';;', ';') },';      ];;
+        { "from": /\)\s*\(\s*["']/g, "to": ')(' },';        { "from": /["']\s*\(\s*$/gm, "to": '(' },';        { "from": /^\s*["']\s*$/gm, "to": '' },';        // Fix object property syntax;        { "from": /"description":\s*['"]$/gm, "to": '"description": ' },';        { "from": /['"]$/gm, "to": '"' },';        // Fix semicolon at end of import;        { "from": /import.*;\s*;$/gm, "to": match => match.replace(';;', ';') },';      ]
       for (const fix of fixes) {;
         const newContent = content.replace(fix.from, fix.to);
         if (newContent !== content) {;
@@ -279,8 +279,8 @@ class SyntaxFixer {;
     } catch (error) { 
       await this.log(
         `Failed to fix syntax errors in ${filePath }: ${error.message}`,
-        `ERROR`
-    } catch (error) {;
+        `ERROR`;
+} catch (error) {;
       await this.log(;
         `Failed to fix syntax errors in ${filePath}: ${error.message}`,;
         'ERROR';

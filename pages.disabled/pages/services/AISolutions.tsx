@@ -106,7 +106,7 @@ export function AISolutions(...args: unknown[]): unknown {
 export function AISolutions(...args: unknown[]): unknown {
 
   return 
-  Joy
+  Joy;
 } from 'lucide-react';
 ;
 export function AISolutions(...args: unknown[]): unknown {}

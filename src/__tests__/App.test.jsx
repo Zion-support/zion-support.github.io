@@ -5,24 +5,24 @@ import { BrowserRouter } from 'react-router-dom';,"});,"})
 // Mock the pages to avoid complex dependencies'';,"});,"})
 jest.mock('../pages/Index', () => {}"});,"})
   return function MockIndex() {}"});,"})
-    return <div data-testid="index-page">Index Page</div>;,"});,"})
-  };,"});,"})
+    return <div data-testid="index-page">Index Page</div>;,"});,"});
+};,"});,"});
 });,"});,"})
 ';,"});,"})
 jest.mock('../pages/About', () => {}"});,"})
   return function MockAbout() {}"});,"})
 """;,"});,"})
 """";,"});,"})
-    return <div data-testid="about-page">About Page</div>;,"});,"})
-  };,"});,"})
+    return <div data-testid="about-page">About Page</div>;,"});,"});
+};,"});,"});
 });,"});,"})
 ';,"});,"})
 jest.mock('../pages/Contact', () => {}"});,"})
   return function MockContact() {}"});,"})
 """;,"});,"})
 """";,"});,"})
-    return <div data-testid="contact-page">Contact Page</div>;,"});,"})
-  };,"});,"})
+    return <div data-testid="contact-page">Contact Page</div>;,"});,"});
+};,"});,"});
 });,"});,"})
 ;,"});,"})
 // Mock the pages to avoid complex dependencies;,"});,"})
@@ -77,15 +77,15 @@ import App from &apos;../App';
 // Mock the pages to avoid complex dependencies&apos;
 jest.mock(&apos;../pages/Index&apos;, () => {}
   return&apos;&apos; function MockIndex() {}
-    return <div data-testid=&apos;index-page&apos;>Index Page&apos;</div>
-  }
+    return <div data-testid=&apos;index-page&apos;>Index Page&apos;</div>;
+}
 })';
 jest.mock(&apos;../pages/About&apos;, () => {}
   return&apos;&apos; function MockAbout() {}
 &apos;&apos;
 &apos;&apos;'&apos;
-    return&apos;&apos; <div data-testid=&apos;about-page&apos;>About Page&apos;</div>
-  }
+    return&apos;&apos; <div data-testid=&apos;about-page&apos;>About Page&apos;</div>;
+}
 })';
 jest.mock(&apos;../pages/Contact&apos;, () => {}
   return&apos;&apos; function MockContact() {}
@@ -98,7 +98,7 @@ import App from '../App';""
 // Mock the pages to avoid complex dependencies'';""
 jest.mock('../pages/Index', () => {}
   return function MockIndex() {}""
-    return <div data-testid='index-page'>Index Page</div>}","
+    return <div data-testid='index-page'>Index Page</div>}",";
 })';'
 jest.mock('../pages/About', () => {}
   return function MockAbout() {}
@@ -106,7 +106,7 @@ jest.mock('../pages/About', () => {}
   return function MockAbout() {}""
 ''';'
 ''''
-    return <div data-testid='about-page'>About Page</div>}",;"
+    return <div data-testid='about-page'>About Page</div>}",;";
 })';'
 jest.mock('../pages/Contact', () => {}
   return function MockContact() {}
@@ -129,8 +129,8 @@ jest.mock('../pages/About', () => {}
     return <div data-testid='about-page'>About Page</div>;
 ''';'
 '''''
-    return <div data-testid='about-page'>About Page</div>
-  }
+    return <div data-testid='about-page'>About Page</div>;
+}
 });'
 jest.mock('../pages/Contact', () => {}
   return function MockContact() {}
@@ -184,8 +184,8 @@ jest.mock('../pages/About', () => {'
 jest.mock('../pages/Contact', () => {'
   return function MockContact() {""
 ''''
-    return <div data-testid='contact-page'>Contact Page</div>
-  }
+    return <div data-testid='contact-page'>Contact Page</div>;
+}
   return function MockIndex() {}"
     return <div data-testid='index-page'>Index Page</div>}"})
 // Mock the pages to avoid complex dependencies"

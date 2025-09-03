@@ -132,7 +132,7 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
   useEffect(() => {}
     setIsVisible(true)}, []);
       icon: Glob,e}
-  ];
+  ]
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx: return (''';
     <div: className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900'>';
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
@@ -320,7 +320,7 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
   ]
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
   return (''
-  ];
+  ]
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx'
   return ('''
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900'>

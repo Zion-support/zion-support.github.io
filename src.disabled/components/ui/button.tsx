@@ -1,5 +1,5 @@
 import: React from 'react.ts';
-interface: ButtonProps extends React.PropsWithChildren<{
+interface: ButtonProps extends React.PropsWithChildren<{;
 }> {
   children: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.ReactNode;
   variant?: 'default' | 'outline' | 'ghost' | 'link';

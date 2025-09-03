@@ -7,34 +7,34 @@ const AIEmailResponder: NextPage = () => {
     {
       title: 'Smart Email Classification',
       description: 'Automatically categorize emails by priority, type, and urgency using AI.',
-      icon: '📧'
-    },
+      icon: '📧';
+},
     {
       title: 'Auto-Response Generation',
       description: 'Generate contextual, personalized responses for common inquiries.',
-      icon: '🤖'
-    },
+      icon: '🤖';
+},
     {
       title: 'Sentiment Analysis',
       description: 'Analyze email sentiment to prioritize urgent or negative messages.',
-      icon: '😊'
-    },
+      icon: '😊';
+},
     {
       title: 'Multi-Language Support',
       description: 'Process and respond to emails in multiple languages automatically.',
-      icon: '🌍'
-    },
+      icon: '🌍';
+},
     {
       title: 'Integration Ready',
       description: 'Seamlessly integrate with Gmail, Outlook, and other email platforms.',
-      icon: '🔗'
-    },
+      icon: '🔗';
+},
     {
       title: 'Learning Capabilities',
       description: 'Continuously learns from your responses to improve accuracy over time.',
-      icon: '🧠'
-    }
-  ];
+      icon: '🧠';
+}
+  ]
 
   const benefits = [
     'Reduce email response time by up to 90%',
@@ -43,7 +43,7 @@ const AIEmailResponder: NextPage = () => {
     'Free up time for complex, high-value tasks',
     'Maintain consistent brand voice in all communications',
     'Scale customer support without increasing team size'
-  ];
+  ]
 
   const pricing = [
     {
@@ -58,8 +58,8 @@ const AIEmailResponder: NextPage = () => {
         'Standard integrations',
         'Basic analytics'
       ],
-      popular: false
-    },
+      popular: false;
+},
     {
       name: 'Professional',
       price: '$199',
@@ -74,8 +74,8 @@ const AIEmailResponder: NextPage = () => {
         'Multi-language support',
         'Custom templates'
       ],
-      popular: true
-    },
+      popular: true;
+},
     {
       name: 'Enterprise',
       price: '$499',
@@ -90,9 +90,9 @@ const AIEmailResponder: NextPage = () => {
         'Advanced reporting',
         '24/7 phone support'
       ],
-      popular: false
-    }
-  ];
+      popular: false;
+}
+  ]
 
   return (
     <Layout 
@@ -228,8 +228,8 @@ const AIEmailResponder: NextPage = () => {
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                     plan.popular 
                       ? 'bg-purple-600 hover:bg-purple-700 text-white' 
-                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
-                  }`}
+                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900';
+}`}
                 >
                   Get Started
                 </Link>

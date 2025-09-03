@@ -27,8 +27,8 @@ class AppOptimizer {
       const result = execSync(command, {
         cwd: this.projectRoot,
         encoding: 'utf8',
-        timeout: 300000,
-      });
+        timeout: 300000,;
+});
       this.log(`✅ Completed: ${description}`);
       return { success: true, output: result };
     } catch (error) {
@@ -55,8 +55,8 @@ class AppOptimizer {
     return {
       success: true,
       filesFound: imageFiles.length,
-      files: imageFiles.slice(0, 10) // Show first 10 files
-    };
+      files: imageFiles.slice(0, 10) // Show first 10 files;
+};
   }
 
   findImageFiles(dir) {
@@ -112,8 +112,8 @@ class AppOptimizer {
     const performanceChecks = {
       buildTime: await this.measureBuildTime(),
       bundleSize: await this.analyzeBundleSize(),
-      imageOptimization: await this.optimizeImages()
-    };
+      imageOptimization: await this.optimizeImages();
+};
 
     return performanceChecks;
   }
@@ -131,8 +131,8 @@ class AppOptimizer {
     return {
       success: result.success,
       buildTime: buildTime,
-      buildTimeSeconds: Math.round(buildTime / 1000)
-    };
+      buildTimeSeconds: Math.round(buildTime / 1000);
+};
   }
 
   async generateReport(results) {
@@ -141,11 +141,11 @@ class AppOptimizer {
       summary: {
         totalChecks: Object.keys(results).length,
         successful: Object.values(results).filter(r => r.success).length,
-        failed: Object.values(results).filter(r => !r.success).length
-      },
+        failed: Object.values(results).filter(r => !r.success).length;
+},
       results: results,
-      recommendations: this.generateRecommendations(results)
-    };
+      recommendations: this.generateRecommendations(results);
+};
 
     const reportFile = path.join(this.reportsDir, 'app-optimization-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
@@ -161,16 +161,16 @@ class AppOptimizer {
       recommendations.push({
         type: 'performance',
         message: 'Build time is slow. Consider optimizing dependencies and code splitting.',
-        buildTime: results.buildTime.buildTimeSeconds
-      });
+        buildTime: results.buildTime.buildTimeSeconds;
+});
     }
 
     if (results.imageOptimization && results.imageOptimization.filesFound > 20) {
       recommendations.push({
         type: 'images',
         message: 'Many images found. Consider implementing image optimization.',
-        imageCount: results.imageOptimization.filesFound
-      });
+        imageCount: results.imageOptimization.filesFound;
+});
     }
 
     return recommendations;

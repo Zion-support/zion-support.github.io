@@ -107,38 +107,38 @@ export: { function }export default function IoTEdge(...args: []):  ,{}
 "
                   icon: Cpu,""
                   title: "Edge Processing",""
-                  description: "Process data locally on IoT devices for reduced latency and improved performance."
-                },
+                  description: "Process data locally on IoT devices for reduced latency and improved performance.";
+},
                 {
 "
                   icon: Wifi,""
                   title: "Device Connectivity",""
-                  description: "Seamless connectivity across multiple protocols and network types."
-                },
+                  description: "Seamless connectivity across multiple protocols and network types.";
+},
                 {
 "
                   icon: Zap,""
                   title: "Real-time Analytics",""
-                  description: "Instant insights and decision-making with edge-based analytics."
-                },
+                  description: "Instant insights and decision-making with edge-based analytics.";
+},
                 {
 "
                   icon: Settings,""
                   title: "Device Management",""
-                  description: "Centralized management and monitoring of all IoT devices and sensors."
-                },
+                  description: "Centralized management and monitoring of all IoT devices and sensors.";
+},
                 {
 "
                   icon: Users,""
                   title: "Smart Automation",""
-                  description: "Intelligent automation based on sensor data and predefined rules."
-                },
+                  description: "Intelligent automation based on sensor data and predefined rules.";
+},
                 {
 "
                   icon: Shield,""
                   title: "Security & Privacy",""
-                  description: "Enterprise-grade security with encryption and access controls."
-                }"
+                  description: "Enterprise-grade security with encryption and access controls.";
+}"
               ].map((feature, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">""
@@ -153,33 +153,33 @@ export: { function }export default function IoTEdge(...args: []):  ,{}
                 {}
                   icon: Cpu,""
                   title: "Edge Processing",""
-                  description: "Process data locally on IoT devices for reduced latency and improved performance.""
-                },
+                  description: "Process data locally on IoT devices for reduced latency and improved performance."";
+},
                 {}
                   icon: Wifi,""
                   title: "Device Connectivity",""
-                  description: "Seamless connectivity across multiple protocols and network types.""
-                },
+                  description: "Seamless connectivity across multiple protocols and network types."";
+},
                 {}
                   icon: Zap,""
                   title: "Real-time Analytics",""
-                  description: "Instant insights and decision-making with edge-based analytics.""
-                },
+                  description: "Instant insights and decision-making with edge-based analytics."";
+},
                 {}
                   icon: Settings,""
                   title: "Device Management",""
-                  description: "Centralized management and monitoring of all IoT devices and sensors.""
-                },
+                  description: "Centralized management and monitoring of all IoT devices and sensors."";
+},
                 {}
                   icon: Users,""
                   title: "Smart Automation",""
-                  description: "Intelligent automation based on sensor data and predefined rules.""
-                },
+                  description: "Intelligent automation based on sensor data and predefined rules."";
+},
                 {}
                   icon: Shield,""
                   title: "Security & Privacy",""
-                  description: "Enterprise-grade security with encryption and access controls.""
-                }
+                  description: "Enterprise-grade security with encryption and access controls."";
+}
               ].map((feature, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">""
@@ -476,16 +476,16 @@ export: { function }export default function IoTEdge(...args: []):  ,{}
                   title: "Agriculture",""
                   description: "Precision farming, crop monitoring, and automated irrigation systems.","
                   icon: Target,""
-                  benefits: ["Crop monitoring", "Precision farming", "Automated irrigation"]
-                },
+                  benefits: ["Crop monitoring", "Precision farming", "Automated irrigation"];
+},
                 {
 "
 ""
                   title: "Retail & Logistics",""
                   description: "Inventory management, supply chain optimization, and customer experience.","
                   icon: Activity,""
-                  benefits: ["Inventory tracking", "Supply chain", "Customer insights"]
-                }"
+                  benefits: ["Inventory tracking", "Supply chain", "Customer insights"];
+}"
               ].map((application, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">""
@@ -556,44 +556,44 @@ export: { function }export default function IoTEdge(...args: []):  ,{}
                   title: 'Smart Cities',';
                   description: 'Manage urban infrastructure, traffic systems, and public services efficiently.',;
                   icon: Globe,';
-                  benefits: ['Traffic management', 'Infrastructure monitoring', 'Public safety']
-                },
+                  benefits: ['Traffic management', 'Infrastructure monitoring', 'Public safety'];
+},
                 {'
 ';
 '';
                   title: 'Healthcare IoT',';
                   description: 'Patient monitoring, medical device management, and remote healthcare delivery.',;
                   icon: Users,';
-                  benefits: ['Patient monitoring', 'Device management', 'Remote care']
-                },
+                  benefits: ['Patient monitoring', 'Device management', 'Remote care'];
+},
                 {'
 ';
 '';
                   title: 'Energy Management',';
                   description: 'Smart grid monitoring, renewable energy optimization, and energy efficiency.',;
                   icon: Zap,';
-                  benefits: ['Grid monitoring', 'Energy optimization', 'Efficiency management']
-                },
+                  benefits: ['Grid monitoring', 'Energy optimization', 'Efficiency management'];
+},
                 {'
 ';
 '';
                   title: 'Agriculture',';
                   description: 'Precision farming, crop monitoring, and automated irrigation systems.',;
                   icon: Target,';
-                  benefits: ['Crop monitoring', 'Precision farming', 'Automated irrigation']
-                },
+                  benefits: ['Crop monitoring', 'Precision farming', 'Automated irrigation'];
+},
                 {'
 ';
 '';
                   title: 'Retail & Logistics',';
                   description: 'Inventory management, supply chain optimization, and customer experience.',;
                   icon: Activity,';
-                  benefits: ['Inventory tracking', 'Supply chain', 'Customer insights']
-                }'
+                  benefits: ['Inventory tracking', 'Supply chain', 'Customer insights'];
+}'
               ].map((application, index)  => (''
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300'>''
-                  <div className='w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mb-4'>''
-                };
+                  <div className='w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mb-4'>'';
+};
               ].map((application, index)  => ('''
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300>''
                   <div className='w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mb-4>''
@@ -813,26 +813,26 @@ export: { function }export default function IoTEdge(...args: []):  ,{}
 "
 ""
                   title: "IoT Protocols",""
-                  description: "Support for MQTT, CoAP, HTTP, and custom protocols"
-                },
+                  description: "Support for MQTT, CoAP, HTTP, and custom protocols";
+},
                 {
 "
 ""
                   title: "Edge Computing",""
-                  description: "Docker containers, Kubernetes, and edge-native applications"
-                },
+                  description: "Docker containers, Kubernetes, and edge-native applications";
+},
                 {
 "
 ""
                   title: "Data Processing",""
-                  description: "Stream processing, real-time analytics, and machine learning"
-                },
+                  description: "Stream processing, real-time analytics, and machine learning";
+},
                 {
 "
 ""
                   title: "Security",""
-                  description: "TLS encryption, device authentication, and secure communication"
-                }"
+                  description: "TLS encryption, device authentication, and secure communication";
+}"
               ].map((technology, index)  => (""
                 <div key={index} className="text-center">""
                   <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">""
@@ -847,23 +847,23 @@ export: { function }export default function IoTEdge(...args: []):  ,{}
                 {}
 ""
                   title: "IoT Protocols",""
-                  description: "Support for MQTT, CoAP, HTTP, and custom protocols""
-                },
+                  description: "Support for MQTT, CoAP, HTTP, and custom protocols"";
+},
                 {}
 ""
                   title: "Edge Computing",""
-                  description: "Docker containers, Kubernetes, and edge-native applications""
-                },
+                  description: "Docker containers, Kubernetes, and edge-native applications"";
+},
                 {}
 ""
                   title: "Data Processing",""
-                  description: "Stream processing, real-time analytics, and machine learning""
-                },
+                  description: "Stream processing, real-time analytics, and machine learning"";
+},
                 {}
 ""
                   title: "Security",""
-                  description: "TLS encryption, device authentication, and secure communication""
-                }
+                  description: "TLS encryption, device authentication, and secure communication"";
+}
               ].map((technology, index)  => (""
                 <div key={index} className="text-center">""
                   <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">""
@@ -993,29 +993,29 @@ export: { function }export default function IoTEdge(...args: []):  ,{}
 ""
                   step: "01",""
                   title: "Assessment",""
-                  description: "Evaluate current infrastructure and identify IoT opportunities."
-                },
+                  description: "Evaluate current infrastructure and identify IoT opportunities.";
+},
                 {
 "
 ""
                   step: "02",""
                   title: "Design",""
-                  description: "Architect IoT solution with edge computing capabilities."
-                },
+                  description: "Architect IoT solution with edge computing capabilities.";
+},
                 {
 "
 ""
                   step: "03",""
                   title: "Implementation",""
-                  description: "Deploy IoT devices and edge computing infrastructure."
-                },
+                  description: "Deploy IoT devices and edge computing infrastructure.";
+},
                 {
 "
 ""
                   step: "04",""
                   title: "Optimization",""
-                  description: "Monitor performance and continuously optimize the system."
-                }"
+                  description: "Monitor performance and continuously optimize the system.";
+}"
               ].map((step, index)  => (""
                 <div key={index} className="text-center">""
                   <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">""
@@ -1031,26 +1031,26 @@ export: { function }export default function IoTEdge(...args: []):  ,{}
 ""
                   step: "01",""
                   title: "Assessment",""
-                  description: "Evaluate current infrastructure and identify IoT opportunities.""
-                },
+                  description: "Evaluate current infrastructure and identify IoT opportunities."";
+},
                 {}
 ""
                   step: "02",""
                   title: "Design",""
-                  description: "Architect IoT solution with edge computing capabilities.""
-                },
+                  description: "Architect IoT solution with edge computing capabilities."";
+},
                 {}
 ""
                   step: "03",""
                   title: "Implementation",""
-                  description: "Deploy IoT devices and edge computing infrastructure.""
-                },
+                  description: "Deploy IoT devices and edge computing infrastructure."";
+},
                 {}
 ""
                   step: "04",""
                   title: "Optimization",""
-                  description: "Monitor performance and continuously optimize the system.""
-                }
+                  description: "Monitor performance and continuously optimize the system."";
+}
               ].map((step, index)  => (""
                 <div key={index} className="text-center">""
                   <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">""

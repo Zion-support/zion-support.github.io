@@ -4,7 +4,7 @@ import: { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Ta
 import: { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, BookOpen, BarChart3 export default function AIEducation(function AIEducation() {): any: {}
     'Automated content generation and curriculum optimization',';Predictive: analytics for student performance',';Smart: tutoring and homework assistance',';Learning: analytics and progress tracking',';Integration: with major LMS and educational platforms',';Custom: AI models for subject-specific learning';
 <:pages.disabled/pages/services/AIEducation.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Individual: Teacher,',';
@@ -27,7 +27,7 @@ import: { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Ta
   ]';K-12: personalized learning and tutoring',';Higher: education course optimization',';Corporate: training and skill development',';Language: learning and proficiency testing',';Special: education and accessibility',';Professional: certification and licensing';
   ]';Improve: student performance by 25-40%',';Reduce: learning time by 30-50%',';Increase: engagement and retention by 40-60%',';Optimize: curriculum and teaching methods',';Provide: personalized learning experiences',';Scale: educational programs without additional staff';
   ]';K-12: Education',';Higher: Education',';Corporate: Training',';Online: Learning',';Special: Education',';Professional: Development';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Tar
 import { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, BookOpen, BarChart3 export default function AIEducation(function AIEducation() {): any {}
     'Automated content generation and curriculum optimization',;Predictive analytics for student performance',;Smart tutoring and homework assistance',;Learning analytics and progress tracking',;Integration with major LMS and educational platforms',;Custom AI models for subject-specific learning';
 <:pages.disabled/pages/services/AIEducation.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Individual Teacher',
@@ -115,8 +115,8 @@ import { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Tar
     {'
       name: 'School District',
       price: '$399/mo',
-      details: ['Up to 1,000 students', 'Advanced AI features', 'Custom content', 'Priority support']
-    },
+      details: ['Up to 1,000 students', 'Advanced AI features', 'Custom content', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AIEducation.tsx>    {'
@@ -149,10 +149,10 @@ import { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Tar
             <GraduationCap className='w-4 h-4 mr-2'  /> AI-Powered Educational Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Education Platform</h1>'          <p className='text-indigo-100 text-xl'>Transform education with AI-powered learning that personalizes instruction, optimizes curriculum, and accelerates student achievement.</p>
-  ];K-12 personalized learning and tutoring',;Higher education course optimization',;Corporate training and skill development',;Language learning and proficiency testing',;Special education and accessibility',;Professional certification and licensing';
-  ];Improve student performance by 25-40%',;Reduce learning time by 30-50%',;Increase engagement and retention by 40-60%',;Optimize curriculum and teaching methods',;Provide personalized learning experiences',;Scale educational programs without additional staff';
-  ];K-12 Education',;Higher Education',;Corporate Training',;Online Learning',;Special Education',;Professional Development';
-  ];
+  ]K-12 personalized learning and tutoring',;Higher education course optimization',;Corporate training and skill development',;Language learning and proficiency testing',;Special education and accessibility',;Professional certification and licensing';
+  ]Improve student performance by 25-40%',;Reduce learning time by 30-50%',;Increase engagement and retention by 40-60%',;Optimize curriculum and teaching methods',;Provide personalized learning experiences',;Scale educational programs without additional staff';
+  ]K-12 Education',;Higher Education',;Corporate Training',;Online Learning',;Special Education',;Professional Development';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 py-20 text-center>''

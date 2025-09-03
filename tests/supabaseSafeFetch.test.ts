@@ -140,7 +140,7 @@ it(
   Object.defineProperty(window'navigator', {
     value: { onLine: false }, writable: true})
   const result = await client.checkOnline()
-  expect(result).toBe(false)
+  expect(result).toBe(false);
 })
 
 // Test that checkOnline returns false when navigator is offline

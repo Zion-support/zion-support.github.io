@@ -27,13 +27,13 @@ class SyntaxErrorFixer {
     for (const file of jsFiles) {
       await this.fixScript(file;
 )
-)
-    }
+);
+}
     
     console.log(`\n✅ Syntax fixing completed!`)
     console.log(`📊 Fixed: ${this.fixedCount} files`)
-    console.log(`❌ Errors: ${this.errorCount} files`)
-  }
+    console.log(`❌ Errors: ${this.errorCount} files`);
+}
 
   async fixScript(filename) {
     const filePath = path.join(this.scriptsDir, filename;
@@ -67,15 +67,15 @@ class SyntaxErrorFixer {
 )
 )
         console.log(`✅ Fixed: ${filename}`)
-        this.fixedCount++
-      } else {
-        console.log(`✓ No issues: ${filename}`)
-      }
-      
-    } catch (error) {
+        this.fixedCount++;
+} else {
+        console.log(`✓ No issues: ${filename}`);
+}
+      ;
+} catch (error) {
       console.log(`❌ Error fixing ${filename}: ${error.message}`)
-      this.errorCount++
-    }
+      this.errorCount++;
+}
   }
 
   fixImportStatements(content) {

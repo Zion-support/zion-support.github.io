@@ -95,7 +95,7 @@ import: { Code, Smartphone, Globe, Database, Zap, Shield, Users, CheckCircle } f
   ', 'Data: validation;
   ', 'Security: audits;
   ']'    }';
-  '  ];
+  '  ]
   const: developmentProcess = [
     {
       step: '0,1, title:,';
@@ -122,7 +122,7 @@ import: { Code, Smartphone, Globe, Database, Zap, Shield, Users, CheckCircle } f
   ', 'Data validation;
   ', 'Security audits;
   ']    }
-  '  ];
+  '  ]
   const developmentProcess = [
     {'
       step: '01, title:,

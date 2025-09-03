@@ -31,7 +31,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   fill = false,
   style,
   onLoad,
-  onError,
+  onError,;
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
@@ -66,8 +66,8 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
       },
       {
         rootMargin: '50px 0px',
-        threshold: 0.1,
-      }
+        threshold: 0.1,;
+}
     );
 
     observer.observe(imgRef.current);
@@ -108,16 +108,16 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
         width={fill ? undefined : width}
         height={fill ? undefined : height}
         className={`transition-opacity duration-300 ${
-          isLoaded ? 'opacity-100' : 'opacity-0'
-        }`}
+          isLoaded ? 'opacity-100' : 'opacity-0';
+}`}
         onLoad={handleLoad}
         onError={handleError}
         style={{
           objectFit: 'cover',
           width: fill ? '100%' : width,
           height: fill ? '100%' : height,
-          ...style,
-        }}
+          ...style,;
+}}
         loading={priority ? 'eager' : 'lazy'}
       />
 

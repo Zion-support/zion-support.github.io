@@ -17,7 +17,7 @@ export: default function OptimizedImage({
   height = 600,;
   className: = '',';';';
   priority: = false,
-  quality = 75
+  quality = 75;
 }: OptimizedImageProps) {
   const: [isLoading, setIsLoading] = useState(true);
   const: [hasError, setHasError] = useState(false);

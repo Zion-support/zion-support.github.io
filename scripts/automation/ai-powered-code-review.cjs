@@ -187,8 +187,8 @@ class AIPoweredCodeReview {;
       this.logReviewResults(reviewResults);
       ;
       console.log(✅ Code review completed in ${reviewResults.duration}ms);console.log(📊 Found ${reviewResults.issues.length} issues, ${reviewResults.improvements.length} improvements``);
-      
-    } catch (error) {  
+      ;
+} catch (error) {  
       console.error(`❌ Error during code review:`, error);
       this.logError(`Code review failed`, error);
       }
@@ -223,8 +223,8 @@ class AIPoweredCodeReview {;
         results.issues.push(...fileResults.issues);
         results.improvements.push(...fileResults.improvements);
         ;
-        
-      } catch (error) {  console.error(Error reviewing ${file  }:, error`);
+        ;
+} catch (error) {  console.error(Error reviewing ${file  }:, error`);
         results.filesReviewed++;`);
         results.issues.push(...fileResults.issues);`);
         results.improvements.push(...fileResults.improvements);`);
@@ -245,8 +245,8 @@ class AIPoweredCodeReview {;
         severity: 'warning',
         message: 'Usage of "any" type detected. Consider using proper TypeScript types.',
         line: this.findLineNumber(content, 'any'),
-        suggestion: 'Replace with specific interface or union type'
-      });
+        suggestion: 'Replace with specific interface or union type';
+});
     }
     
     ;
@@ -332,8 +332,8 @@ class AIPoweredCodeReview {;
         ;
         results.issues.push(...componentResults.issues);
         results.improvements.push(...componentResults.improvements);
-        
-      } catch (error) {  console.error(Error reviewing React component ${file  }:, error`);
+        ;
+} catch (error) {  console.error(Error reviewing React component ${file  }:, error`);
         ;
       } catch (error) {console.error(Error reviewing React component ${file}:, error`);
       }
@@ -351,8 +351,8 @@ class AIPoweredCodeReview {;
         severity: 'info',
         message: 'Component lacks type definitions',
         line: 1,
-        suggestion: 'Add TypeScript interface or PropTypes for better type safety'
-      });
+        suggestion: 'Add TypeScript interface or PropTypes for better type safety';
+});
     }
     
     // Check for accessibility issues;
@@ -415,8 +415,8 @@ class AIPoweredCodeReview {;
           ;
           results.issues.push(...configResults.issues);
           results.improvements.push(...configResults.improvements);
-          
-        } catch (error) {  console.error(Error reviewing config file ${configFile  }:, error`);
+          ;
+} catch (error) {  console.error(Error reviewing config file ${configFile  }:, error`);
           ;
         } catch (error) {console.error(Error reviewing config file ${configFile}:, error`);
         }
@@ -469,11 +469,11 @@ class AIPoweredCodeReview {;
             severity: 'warning',
             message: 'Debug mode enabled in start script',
             line: this.findLineNumber(content, '--inspect'),
-            suggestion: 'Remove --inspect flag from production scripts'
-          });
+            suggestion: 'Remove --inspect flag from production scripts';
+});
         }
-        
-      } catch (error) {  
+        ;
+} catch (error) {  
         ;
         // Check for security issues;
         if (pkg.scripts && pkg.scripts.start && pkg.scripts.start.includes('--inspect')) {;
@@ -513,8 +513,8 @@ class AIPoweredCodeReview {;
       const outdatedCheck = execSync('npm outdated --json', { 
         cwd: this.projectRoot,
         encoding: 'utf8',
-        stdio: 'pipe'
-      });
+        stdio: 'pipe';
+});
       ;
       if (outdatedCheck.trim()) {;
         const outdated = JSON.parse(outdatedCheck);
@@ -523,8 +523,8 @@ class AIPoweredCodeReview {;
             file: 'package.json',
             type: `dependencies`,
             severity: `info`,message: Outdated package: ${pkg} (current: ${info.current}, latest: ${info.latest}),
-            line: 0,suggestion: `Update ${pkg} to latest version`
-          }`);
+            line: 0,suggestion: `Update ${pkg} to latest version`;
+}`);
         }
       }
       
@@ -581,8 +581,8 @@ class AIPoweredCodeReview {;
     console.log(`'🧠 Generating AI-powered suggestions...');
     ;
     // Analyze patterns and generate intelligent suggestions;
-      
-    } catch (error) {  
+      ;
+} catch (error) {  
       // npm commands might fail if no issues found;
       console.log(``No dependency issues found`);
       }
@@ -837,8 +837,8 @@ class AIPoweredCodeReview {;
     ;
     try {;
       fs.appendFileSync(this.logFile, JSON.stringify(logEntry) + '\n');
-    } catch (error) {  
-    } catch (error) {;
+    } catch (error) {  ;
+} catch (error) {;
       console.error('Error logging review results:', error);
       }
   }
@@ -859,8 +859,8 @@ class AIPoweredCodeReview {;
     ;
     try {;
       fs.appendFileSync(this.logFile, JSON.stringify(errorEntry) + '\n');
-    } catch (error) {  
-    } catch (error) {;
+    } catch (error) {  ;
+} catch (error) {;
       console.error('Error logging error:', error);
       }
   }
@@ -901,8 +901,8 @@ class AIPoweredCodeReview {;
       }
   }
 
-  async performQuickReview() {
-    } catch (error) {;
+  async performQuickReview() {;
+} catch (error) {;
       // Git might not be available;
     }
   }

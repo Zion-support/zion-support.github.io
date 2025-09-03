@@ -16,8 +16,8 @@ export default function ComprehensiveServicesShowcase2026() {
 		const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
 			service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
 			service.tagline.toLowerCase().includes(searchTerm.toLowerCase())
-		return matchesCategory && matchesSearch
-	})
+		return matchesCategory && matchesSearch;
+})
 
 	const popularServices = comprehensiveExpandedServices.filter(service => service.popular)
 
@@ -88,8 +88,8 @@ export default function ComprehensiveServicesShowcase2026() {
 								className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
 									selectedCategory === 'all'
 										? 'bg-blue-600 text-white'
-										: 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-								}`}
+										: 'bg-gray-100 text-gray-700 hover:bg-gray-200';
+}`}
 							>
 								All Services
 							</button>
@@ -100,8 +100,8 @@ export default function ComprehensiveServicesShowcase2026() {
 									className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
 										selectedCategory === category.name
 											? 'bg-blue-600 text-white'
-											: 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-									}`}
+											: 'bg-gray-100 text-gray-700 hover:bg-gray-200';
+}`}
 								>
 									{category.icon} {category.name}
 								</button>
@@ -282,8 +282,8 @@ export default function ComprehensiveServicesShowcase2026() {
 									))}
 								</div>
 							</div>
-						)
-					})}
+						);
+})}
 
 					{/* No Results */}
 					{filteredServices.length === 0 && (
@@ -362,5 +362,5 @@ export default function ComprehensiveServicesShowcase2026() {
 				</div>
 			</section>
 		</PageTransition>
-	)
+	);
 }

@@ -104,8 +104,8 @@ class EnhancedProjectImprovements {;
       await this.applyBuildOptimizations();
       
       this.generateImprovementsReport();
-      
-    } catch (error) {  this.log(❌ Error during improvements: ${error.message  }, `ERROR``);
+      ;
+} catch (error) {  this.log(❌ Error during improvements: ${error.message  }, `ERROR``);
     }
   }
 
@@ -205,8 +205,8 @@ export const securityConfig = {;
 // Enhanced security configuration
 export const securityConfig = {
   // Content Security Policy;
-  csp: {default-src': ["'self''],script-src': ["'self'", "'unsafe-inline''],style-src': ["'self'", "'unsafe-inline''],img-src': ["'self'", 'data:', 'https:'],connect-src': ["'self'", 'https:'],font-src': ["'self'", 'https:'],object-src': ["'none''],media-src': ["'self''],frame-src': ["'none'']
-  },
+  csp: {default-src': ["'self''],script-src': ["'self'", "'unsafe-inline''],style-src': ["'self'", "'unsafe-inline''],img-src': ["'self'", 'data:', 'https:'],connect-src': ["'self'", 'https:'],font-src': ["'self'", 'https:'],object-src': ["'none''],media-src': ["'self''],frame-src': ["'none''];
+},
   
   // Security headers;
   headers: {X-Content-Type-Options': 'nosniff',X-Frame-Options': 'DENY',X-XSS-Protection': '1; mode=block',Referrer-Policy': 'strict-origin-when-cross-origin',Permissions-Policy': 'camera=(), microphone=(), geolocation=()'
@@ -336,8 +336,8 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   const sizeMap = {
     small: 'w-4 h-4',
     medium: `w-8 h-8`,
-    large: `w-12 h-12`
-  };
+    large: `w-12 h-12`;
+};
 
   return (
     <div className="flex flex-col items-center justify-center p-4">
@@ -349,8 +349,8 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     
     fs.writeFileSync(path.join(this.projectRoot, ``src/components/ui/LoadingSpinner.tsx`'), loadingComponent);
     medium: 'w-8 h-8',
-    large: 'w-12 h-12'
-  };
+    large: 'w-12 h-12';
+};
 ;
   return (;
     <div className="flex flex-col items-center justify-center p-4">;
@@ -662,8 +662,8 @@ const nextConfig = {;
             key: 'X-Content-Type-Options', 'value: 'nosniff', '}', '{;
             key: 'Referrer-Policy', 'value: 'strict-origin-when-cross-origin', '}', '],;
       },;
-    ];
-  },;
+    ]
+},;
   ;
   // Bundle analyzer;
   webpack: (config, { dev, isServer }) => {;

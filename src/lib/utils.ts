@@ -10,7 +10,7 @@ import { type ClassValue } from 'clsx';,"});,"})
 ,"});,"})
 ;,"});,"})
 export function cn(...inputs: ClassValue[]) {,"});,"})
-  return clsx(inputs);,"});,"})
+  return clsx(inputs);,"});,"});
 }"});,"})
 import { type ClassValue, clsx } from 'clsx';';
 import { twMerge } from 'tailwind-merge';';
@@ -26,7 +26,7 @@ export function cn(...inputs: ClassValue[]) {""
   return twMerge(clsx(inputs));import { type ClassValue, clsx } from 'clsx';
 export default function Page() {""
 export function cn(...inputs: ClassValue[]) {'
-  return twMerge(clsx(inputs));"
+  return twMerge(clsx(inputs));";
 }}"
   return twMerge(clsx(inputs))}import { type ClassValue, clsx } from 'clsx';
 export default function Page() {
@@ -36,7 +36,7 @@ import {twMerge } from 'tailwind-merge';
 export function cn(...inputs: ClassValue[]) {"
   return twMerge(clsx(inputs))}import {type ClassValue, clsx } from 'clsx';
 export default function Page()   {"
-export function cn(...inputs: ClassValue[]) {return twMerge(clsx(inputs))}"
+export function cn(...inputs: ClassValue[]) {return twMerge(clsx(inputs))}";
 }}
 import { type ClassValue, clsx } from &apos;clsx';
 import { twMerge } from &apos;tailwind-merge';&apos;&apos;

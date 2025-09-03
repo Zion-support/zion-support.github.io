@@ -29,8 +29,8 @@ export default function Index() {,"});,"})
               "description": "Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.",;,"});,"})
               "address": {,"});,"})
                 "@type": "PostalAddress",;,"});,"})
-                "addressCountry": "US";,"});,"})
-              },;,"});,"})
+                "addressCountry": "US";,"});,"});
+},;,"});,"})
               "contactPoint": {,"});,"})
                 "@type": "ContactPoint",;,"});,"})
                 "contactType": "customer service",;,"});,"})
@@ -38,9 +38,9 @@ export default function Index() {,"});,"})
               "sameAs": [;,"});,"})
                 "https://linkedin.com/company/zion-tech-group",;,"});,"})
                 "https://twitter.com/ziontechgroup";,"});,"})
-              ];,"});,"})
-            });,"});,"})
-          }}"});,"})
+              ],"});,"});
+});,"});,"});
+}}"});,"})
         />;,"});,"})
       </Head>;,"});,"})
       <div style={{,"});,"})
@@ -52,8 +52,8 @@ export default function Index() {,"});,"})
         flexDirection: 'column',;,"});,"})
         alignItems: 'center',;,"});,"})
         justifyContent: 'center',;,"});,"})
-        textAlign: 'center';,"});,"})
-      }}>;,"});,"})
+        textAlign: 'center';,"});,"});
+}}>;,"});,"})
         <h1 style={{,"});,"})
           fontSize: '3rem',;,"});,"})
           fontWeight: 'bold',;,"});,"})
@@ -102,10 +102,10 @@ export default function Index() {,"});,"})
             Get Started;,"});,"})
         </div>;,"});,"})
     </>;,"});,"})
-  );,"});,"})
+  );,"});,"});
 }"});,"})
 import React from 'react';
-import Head from 'next/head;
+import Head from 'next/head';
 import Head from 'next/head';
 ;
 export default function Index() {
@@ -167,15 +167,15 @@ const Head = dynamic(() => import('next/head') { ssr: false });;
               'name': 'Zion Tech Group', 'url': 'https://ziontechgroup.com',
               'logo': 'https://ziontechgroup.com/logo.png', 'description': 'Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.', 'address': {'
                 '@type': 'PostalAddress',
-                'addressCountry': 'US''
-              }, 'contactPoint': {'
+                'addressCountry': 'US'';
+}, 'contactPoint': {'
                 '@type': 'ContactPoint',
-                'contactType': 'customer service', 'url': 'https://ziontechgroup.com/contact'
-              },
+                'contactType': 'customer service', 'url': 'https://ziontechgroup.com/contact';
+},
               'sameAs': ['
                 'https://linkedin.com/company/zion-tech-group', 'https://twitter.com/ziontechgroup'
               ]
-            })}}
+})}}
         />
       </Head>
       <div: style={{
@@ -212,8 +212,8 @@ const Head = dynamic(() => import('next/head') { ssr: false });;
         background: 'linear-gradient(135deg, #0b1220 0%, #1a2332 100%), minHeight: '100vh',
         display: 'flex', flexDirection: 'column',
         alignItems: 'center', justifyContent: 'center',
-        textAlign: 'center'
-      }}>;
+        textAlign: 'center';
+}}>;
         <h1 style={{'
           fontSize: '3rem', fontWeight: 'bold',
           marginBottom: '1rem', background: 'linear-gradient(45deg, #00d4ff, #0099cc), WebkitBackgroundClip: 'text',
@@ -226,15 +226,15 @@ const Head = dynamic(() => import('next/head') { ssr: false });;
           Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.
           display: 'flex',
           gap: '1rem', flexWrap: 'wrap',
-          justifyContent: 'center'
-        }}>
+          justifyContent: 'center';
+}}>
           <a'
             href='/services'
             style={{'
               padding: '12px 24px', background: 'linear-gradient(45deg, #00d4ff, #0099cc), color: 'white',
               textDecoration: 'none', borderRadius: '8px',
-              fontWeight: '600', transition: 'transform 0.2s'
-            }}
+              fontWeight: '600', transition: 'transform 0.2s';
+}}
             onMouseOver={(e) => e.target.style.transform = 'translateY(-2px)}
             onMouseOut={(e) => e.target.style.transform = 'translateY(0)}
           >
@@ -322,7 +322,7 @@ const Head = dynamic(() => import('next/head') { ssr: false });;
             Get: Started
         </div>
     </>
-  )
+  );
 }
             Get Started;
         </div>;

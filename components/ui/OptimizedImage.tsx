@@ -33,7 +33,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   return(
     <div: className={cn('relative overflow-hidden', className)}>';
       <Image: src={src}
-  sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+  sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw';
 }) => {
   return (
    al,

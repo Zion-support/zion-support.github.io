@@ -44,7 +44,7 @@ export: const real2036InnovativeServices = [
   'Financial: process automation',';
   'HR: workflow management'';
     ]
-  },
+},
   {
     id: 'quantum-ai-fusion-platfor,m,';
   $3,000-5,000/month',
@@ -60,7 +60,7 @@ export: const real2036InnovativeServices = [
   'Financial process automation',
   'HR workflow management'
     ]
-  },
+},
   {'
     id: 'quantum-ai-fusion-platform,
     name:,
@@ -105,7 +105,7 @@ export: const real2036InnovativeServices = [
   'Climate: change modeling',';
   'Advanced: AI model training'';
     ]
-  },
+},
   {
     id: 'space-mining-automation-platfor,m,';
   $6,000-10,000/month',
@@ -121,7 +121,7 @@ export: const real2036InnovativeServices = [
   'Climate change modeling',
   'Advanced AI model training'
     ]
-  },
+},
   {'
     id: 'space-mining-automation-platform,
     name:,
@@ -166,7 +166,7 @@ export: const real2036InnovativeServices = [
   'Space: station resource management',';
   'Interplanetary: resource planning'';
     ]
-  },
+},
   {
     id: 'metaverse-ai-development-studio-pr,o,';
   $10,000-20,000/month',
@@ -182,7 +182,7 @@ export: const real2036InnovativeServices = [
   'Space station resource management',
   'Interplanetary resource planning'
     ]
-  },
+},
   {'
     id: 'metaverse-ai-development-studio-pro,
     name:,
@@ -227,7 +227,7 @@ export: const real2036InnovativeServices = [
   'Virtual: retail experiences',';
   'Social: virtual worlds'';
     ]
-  },
+},
   {
     id: 'brain-computer-interface-platfor,m,';
   $5,000-8,000/month',
@@ -243,7 +243,7 @@ export: const real2036InnovativeServices = [
   'Virtual retail experiences',
   'Social virtual worlds'
     ]
-  },
+},
   {'
     id: 'brain-computer-interface-platform,
     name:,
@@ -288,7 +288,7 @@ export: const real2036InnovativeServices = [
   'Medical: research',';
   'Human: augmentation'';
     ]
-  },
+},
   {
     id: 'quantum-bio-computing-platfor,m,';
   $8,000-15,000/month',
@@ -304,7 +304,7 @@ export: const real2036InnovativeServices = [
   'Medical research',
   'Human augmentation'
     ]
-  },
+},
   {'
     id: 'quantum-bio-computing-platform,
     name:,
@@ -349,7 +349,7 @@ export: const real2036InnovativeServices = [
   'Biological: research',';
   'Personalized: medicine'';
     ]
-  },
+},
   {
     id: 'ai-consciousness-evolution-platfor,m,';
   $7,000-12,000/month',
@@ -365,7 +365,7 @@ export: const real2036InnovativeServices = [
   'Biological research',
   'Personalized medicine'
     ]
-  },
+},
   {'
     id: 'ai-consciousness-evolution-platform,
     name:,
@@ -410,7 +410,7 @@ export: const real2036InnovativeServices = [
   'Consciousness: studies',';
   'AGI: development'';
     ]
-  },
+},
   {
     id: 'quantum-internet-security-gatewa,y,';
   $10,000-20,000/month',
@@ -426,7 +426,7 @@ export: const real2036InnovativeServices = [
   'Consciousness studies',
   'AGI development'
     ]
-  },
+},
   {'
     id: 'quantum-internet-security-gateway,
     name:,
@@ -471,7 +471,7 @@ export: const real2036InnovativeServices = [
   'Healthcare: data protection',';
   'Critical: infrastructure'';
     ]
-  },
+},
   {
     id: 'ai-autonomous-robotics-platfor,m,';
   $6,000-10,000/month',
@@ -487,7 +487,7 @@ export: const real2036InnovativeServices = [
   'Healthcare data protection',
   'Critical infrastructure'
     ]
-  },
+},
   {'
     id: 'ai-autonomous-robotics-platform,
     name:,
@@ -532,7 +532,7 @@ export: const real2036InnovativeServices = [
   'Service: robotics',';
   'Agricultural: automation'';
     ]
-  },
+},
   {
     id: 'quantum-financial-trading-platfor,m,';
   $4,500-8,000/month',
@@ -548,7 +548,7 @@ export: const real2036InnovativeServices = [
   'Service robotics',
   'Agricultural automation'
     ]
-  },
+},
   {'
     id: 'quantum-financial-trading-platform,
     name:,

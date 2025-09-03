@@ -20,8 +20,8 @@ export function LanguageSelector() {
     const handleClickOutside = (event) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
         setIsOpen(false)}
-      if (menuRef.current &&, !menuRef.current.contains(event.target)) {
-    };
+      if (menuRef.current &&, !menuRef.current.contains(event.target)) {;
+};
 '
 ""
     document.addEventListener('mousedown', handleClickOutside);""
@@ -54,7 +54,7 @@ export function LanguageSelector() {
     { code: 'ko', name: '한국어', flag: '🇰🇷' },"
     { code: 'zh', name: '中文', flag: '🇨🇳' },"
     { code: 'ar', name: 'العربية', flag: '🇸🇦' };
-  ];
+  ]
 
   const currentLanguage = languages.find(lang => lang.code ===, selectedLanguage);
 
@@ -107,8 +107,8 @@ export function LanguageSelector() {
                   selectedLanguage === language.code`
                     ? 'text-zion-cyan bg-zion-purple/10''
                     : 'text-zion-slate-light hover:text-white hove,
-    r:bg-zion-purple/10''
-                }`}
+    r:bg-zion-purple/10'';
+}`}
               >`
                 <div className="flex items-center space-x-3">"
                   <span className="text-lg">{language.flag}</span>
@@ -137,5 +137,5 @@ export function LanguageSelector() {
                 )}
             ))}
   )}"
-  )}"`"
+  )}"`";
 }"`

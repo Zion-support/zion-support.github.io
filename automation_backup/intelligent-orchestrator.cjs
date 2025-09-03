@@ -34,35 +34,35 @@ class IntelligentOrchestrator {
       {
         name: 'lint-manager',
         path: 'lint-automation-manager.cjs',
-        priority: 'medium',
-      },
+        priority: 'medium',;
+},
       {
         name: 'code-quality',
         path: 'code-quality-monitor.cjs',
-        priority: 'medium',
-      },
+        priority: 'medium',;
+},
       {
         name: 'performance',
         path: 'performance-optimizer.cjs',
-        priority: 'low',
-      },
+        priority: 'low',;
+},
       {
         name: 'content-generator',
         path: 'content-generator.cjs',
-        priority: 'low',
-      },
+        priority: 'low',;
+},
       { name: 'seo-optimizer', path: 'seo-optimizer.cjs', priority: 'medium' },
       {
         name: 'security-scanner',
         path: 'security-scanner.cjs',
-        priority: 'high',
-      },
+        priority: 'high',;
+},
       {
         name: 'test-generator',
         path: 'test-generator.cjs',
-        priority: 'medium',
-      },
-    ];
+        priority: 'medium',;
+},
+    ]
 
     for (const system of systems) {
       const systemPath = path.join(__dirname, system.path);
@@ -73,8 +73,8 @@ class IntelligentOrchestrator {
           status: `available`,
           lastRun: null,
           successRate: 0,
-          averageExecutionTime: 0,
-        });
+          averageExecutionTime: 0,;
+});
       }
     }
   }
@@ -93,8 +93,8 @@ class IntelligentOrchestrator {
       const result = execSync(`node "${system.path}"`, {
         encoding: `utf8`,
         stdio: `pipe`,
-        ...options,
-      });
+        ...options,;
+});
 
       const executionTime = Date.now() - startTime;
       this.updateSystemMetrics(systemName, true, executionTime);
@@ -185,8 +185,8 @@ class IntelligentOrchestrator {
       hasSEOMissing: false,
       hasMissingTests: false,
       lastBuildTime: null,
-      codeComplexity: 0,
-    };
+      codeComplexity: 0,;
+};
 
     try {
       // Check for lint errors;
@@ -258,8 +258,8 @@ class IntelligentOrchestrator {
     const currentData = this.learningData.get(learningKey) || {
       totalRuns: 0,
       successfulRuns: 0,
-      averageExecutionTime: 0,
-    };
+      averageExecutionTime: 0,;
+};
 
     currentData.totalRuns++;
     if (result.success) {
@@ -351,8 +351,8 @@ class IntelligentOrchestrator {
       timestamp: new Date().toISOString(),
       systems: {},
       learningData: {},
-      recommendations: [],
-    };
+      recommendations: [],;
+};
 
     // System performance data;
     for (const [name, system] of this.automationSystems) {
@@ -361,8 +361,8 @@ class IntelligentOrchestrator {
         successRate: system.successRate,
         averageExecutionTime: system.averageExecutionTime,
         lastRun: system.lastRun?.toISOString(),
-        status: system.status,
-      };
+        status: system.status,;
+};
     }
 
     // Learning data;
@@ -370,8 +370,8 @@ class IntelligentOrchestrator {
       report.learningData[key] = {
         successRate: data.successfulRuns / data.totalRuns,
         averageExecutionTime: data.averageExecutionTime,
-        totalRuns: data.totalRuns,
-      };
+        totalRuns: data.totalRuns,;
+};
     }
 
     // Generate recommendations;
@@ -426,8 +426,8 @@ class IntelligentOrchestrator {
       running: true,
       systemsCount: this.automationSystems.size,
       learningDataSize: this.learningData.size,
-      report: this.generateIntelligenceReport(),
-    };
+      report: this.generateIntelligenceReport(),;
+};
 
     this.log(`📊 Status: ${status.running ? 'Running' : 'Stopped'}`);
     this.log(`📊 Systems: ${status.systemsCount}`);

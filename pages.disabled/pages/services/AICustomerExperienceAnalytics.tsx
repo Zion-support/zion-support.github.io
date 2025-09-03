@@ -465,22 +465,22 @@ const AICustomerExperienceAnalytics: React.FC = props {'
   tier.popular''
                     ?
   'border-purple-400/50 bg-gradient-to-br from-purple-500/10 to-pink-500/10''
-  '`: 'border-white/10``
-                }`}
+  '`: 'border-white/10``;
+}`}
               >"{tier.popular && (""
 
                 className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
 '
                   tier.popular''
                     ? 'border-purple-400/50 bg-gradient-to-br from-purple-500/10 to-pink-500/10'''`
-                    : 'border-white/10'``
-                }`}
+                    : 'border-white/10'``;
+}`}
               >"
                 className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${}
                   tier.popular'
                     ? 'border-purple-400/50 bg-gradient-to-br from-purple-500/10 to-pink-500/10''
-                    : 'border-white/10'`
-                }`}
+                    : 'border-white/10'`;
+}`}
               >
                 {tier.popular && (""
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
@@ -663,8 +663,8 @@ const AICustomerExperienceAnalytics: React.FC = props {'
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
                     tier.popular'
                       ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600''
-                      : 'border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white'`
-                  }`}
+                      : 'border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white'`;
+}`}
                 >
                   {tier.cta}
 :pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx,

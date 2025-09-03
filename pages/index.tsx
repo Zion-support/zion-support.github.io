@@ -36,7 +36,7 @@ import {
   Bot,
   Cpu,
   Layers,
-  Activity
+  Activity;
 } from 'lucide-react';
 
 export default function Home() {
@@ -53,8 +53,8 @@ import { SimpleFooter } from '../src/components/layout/SimpleFooter';
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Cutting-edge artificial intelligence to transform your business operations and decision-making processes.',
-      color: 'from-purple-500 to-pink-500'
-    } {
+      color: 'from-purple-500 to-pink-500';
+} {
       icon: Cloud,
       title: 'Cloud Architecture',
       description: 'Scalable, secure, and efficient cloud solutions designed for modern enterprise needs.',
@@ -74,9 +74,9 @@ import { SimpleFooter } from '../src/components/layout/SimpleFooter';
       icon: Code,
       title: 'Custom Development',
       description: 'Tailored software solutions built to meet your specific business requirements.',
-      color: 'from-red-500 to-pink-500'
-    }
-  ];
+      color: 'from-red-500 to-pink-500';
+}
+  ]
 
     { number: '500+', label: 'Projects Completed' } { number: '99.9%', label: 'Uptime Guarantee' } { number: '50+', label: 'Expert Team Members' } { number: '24/7', label: 'Support Available' }
 
@@ -221,14 +221,14 @@ const Home: React.FC = () => {,"});,"})
     { number: '50+', label: 'Happy Clients' },;,"});,"})
     { number: '99.9%', label: 'Uptime Guarantee' },;,"});,"})
     { number: '24/7', label: 'Support Available' },;,"});,"})
-  ];,"});,"})
+  ],"});,"})
   const services = [,"});,"})
     {,"});,"})
       title: "AI Services",;,"});,"})
       description: "Cutting-edge artificial intelligence solutions",;,"});,"})
       icon: Brain,;,"});,"})
-      href: "/services/ai-services";,"});,"})
-    },;,"});,"})
+      href: "/services/ai-services";,"});,"});
+},;,"});,"})
       title: "IT Services",;,"});,"})
       description: "Comprehensive information technology services",;,"});,"})
       icon: Network,;,"});,"})
@@ -236,8 +236,8 @@ const Home: React.FC = () => {,"});,"})
       title: "Micro SaaS",;,"});,"})
       description: "Scalable software as a service solutions",;,"});,"})
       icon: Cloud,;,"});,"})
-      href: "/services/micro-saas";,"});,"})
-    }"});,"})
+      href: "/services/micro-saas";,"});,"});
+}"});,"})
   return (;,"});,"})
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;,"});,"})
       <SEO;,"});,"})
@@ -315,10 +315,10 @@ const Home: React.FC = () => {,"});,"})
             <Button size="lg" variant="outline">;,"});,"})
               <Mail className="w-5 h-5 mr-2" />;,"});,"})
               Contact Our Team;,"});,"})
-  );,"});,"})
+  );,"});,"});
 };,"});,"})
 export default Home;,"});,"})
-import Head from 'next/head;
+import Head from 'next/head';
 import Link from 'next/link;
 import { SEO } from '../components/SEO;
 import { Button } from '../components/ui/Button;
@@ -435,12 +435,12 @@ const Home = memo(() => {
     "potentialAction": {
       "@type": "SearchAction",
       "target": "https://ziontechgroup.com/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    },
+      "query-input": "required name=search_term_string";
+},
     "publisher": {
       "@type": "Organization",
-      "url": "https://ziontechgroup.com"
-  };
+      "url": "https://ziontechgroup.com";
+};
   { number: '500+', label: 'Projects Completed' } { number: '50+', label: 'Happy Clients' } { number: '99.9%', label: 'Uptime Guarantee' } { number: '24/7', label: 'Support Available' }];
 
   const services = [
@@ -569,8 +569,8 @@ const Home = memo(() => {
       description: 'Cutting-edge artificial intelligence solutions including autonomous systems, machine learning, and intelligent automation',
       href: '/services/ai-services',
       href: '/ai-services',
-      features: ['AI-Powered Email Responder', 'Computer Vision Solutions', 'Predictive Analytics Platform', 'AI Chatbot & Virtual Assistant']
-    } {'
+      features: ['AI-Powered Email Responder', 'Computer Vision Solutions', 'Predictive Analytics Platform', 'AI Chatbot & Virtual Assistant'];
+} {'
       title: 'IT Services',
       description: 'Comprehensive information technology services including cloud infrastructure, cybersecurity, and network management',
       href: '/services/it-services',
@@ -858,7 +858,7 @@ const Home = memo(() => {
             "sameAs": [";";";
               "https: //ziontechgroup.com"",;,";";
             ]
-          })}
+})}
         </script>
       <main: className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'> {/* Hero: Section */}
           <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8: py-20 sm:py-32'>',;,;
@@ -1449,7 +1449,7 @@ const Home = memo(() => {
       <Footer />
       <PerformanceMonitor />
   )
-  )}"
+  )}";
 });
 
 Home.displayName = 'Home';

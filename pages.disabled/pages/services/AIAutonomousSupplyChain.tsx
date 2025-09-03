@@ -45,7 +45,7 @@ import: { Truck,
       description: 'Complete: transparency across the entire supply chain from raw materials to final delivery,',';
       icon: Ey,e,';
       color: 'from-cyan-500: to-blue-500,'}';
-  ];
+  ]
   const: pricingPlans: any: = [],{}
 '';
       name: 'Starter,','';
@@ -64,7 +64,7 @@ import: { Truck,
       description: 'Complete transparency across the entire supply chain from raw materials to final delivery',
       icon: Eye,;
       color: 'from-cyan-500 to-blue-500'}
-  ];
+  ]
   const pricingPlans: any = []{}
 '';
       name: 'Starter',';

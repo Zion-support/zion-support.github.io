@@ -18,7 +18,7 @@ import {
   Users,
   Bot,
   Phone,
-  Mail
+  Mail;
 } from 'lucide-react';
 
 const AICustomerSupportPlatform: React.FC = () => {
@@ -26,34 +26,34 @@ const AICustomerSupportPlatform: React.FC = () => {
     {
       icon: Bot,
       title: "AI-Powered Chatbots",
-      description: "Intelligent chatbots that understand context, provide instant responses, and escalate complex issues to human agents seamlessly."
-    },
+      description: "Intelligent chatbots that understand context, provide instant responses, and escalate complex issues to human agents seamlessly.";
+},
     {
       icon: MessageSquare,
       title: "Multi-Channel Support",
-      description: "Unified support across live chat, email, phone, social media, and messaging apps with consistent experience."
-    },
+      description: "Unified support across live chat, email, phone, social media, and messaging apps with consistent experience.";
+},
     {
       icon: Brain,
       title: "Smart Ticket Routing",
-      description: "AI automatically categorizes and routes tickets to the right agents based on expertise and workload."
-    },
+      description: "AI automatically categorizes and routes tickets to the right agents based on expertise and workload.";
+},
     {
       icon: BarChart3,
       title: "Real-Time Analytics",
-      description: "Comprehensive dashboards with customer satisfaction scores, response times, and agent performance metrics."
-    },
+      description: "Comprehensive dashboards with customer satisfaction scores, response times, and agent performance metrics.";
+},
     {
       icon: Shield,
       title: "Knowledge Base AI",
-      description: "Automatically updated knowledge base with AI-powered search and intelligent article suggestions."
-    },
+      description: "Automatically updated knowledge base with AI-powered search and intelligent article suggestions.";
+},
     {
       icon: Globe,
       title: "24/7 Availability",
-      description: "Round-the-clock customer support with AI handling common queries and human agents for complex issues."
-    }
-  ];
+      description: "Round-the-clock customer support with AI handling common queries and human agents for complex issues.";
+}
+  ]
 
   const benefits = [
     "Reduce response time by 70%",
@@ -62,30 +62,30 @@ const AICustomerSupportPlatform: React.FC = () => {
     "Scale support without hiring more agents",
     "Improve first-call resolution rates",
     "Reduce support costs by 60%"
-  ];
+  ]
 
   const integrations = [
     {
       title: "CRM Integration",
       description: "Seamlessly integrate with Salesforce, HubSpot, and other CRM platforms for complete customer context.",
-      icon: Users
-    },
+      icon: Users;
+},
     {
       title: "E-commerce Platforms",
       description: "Connect with Shopify, WooCommerce, and Magento for order tracking and product support.",
-      icon: Target
-    },
+      icon: Target;
+},
     {
       title: "Communication Tools",
       description: "Integrate with Slack, Microsoft Teams, and other collaboration tools for internal coordination.",
-      icon: MessageSquare
-    },
+      icon: MessageSquare;
+},
     {
       title: "Analytics Platforms",
       description: "Connect with Google Analytics, Mixpanel, and other tools for comprehensive customer insights.",
-      icon: BarChart3
-    }
-  ];
+      icon: BarChart3;
+}
+  ]
 
   const pricing = [
     {
@@ -100,7 +100,7 @@ const AICustomerSupportPlatform: React.FC = () => {
         "Standard templates",
         "Email support"
       ]
-    },
+},
     {
       name: "Professional",
       price: "$80",
@@ -114,8 +114,8 @@ const AICustomerSupportPlatform: React.FC = () => {
         "Priority support",
         "Analytics dashboard"
       ],
-      popular: true
-    },
+      popular: true;
+},
     {
       name: "Enterprise",
       price: "$150",
@@ -130,8 +130,8 @@ const AICustomerSupportPlatform: React.FC = () => {
         "White-label solution",
         "SSO integration"
       ]
-    }
-  ];
+}
+  ]
 
   return (
     <>
@@ -341,8 +341,8 @@ const AICustomerSupportPlatform: React.FC = () => {
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                       plan.popular 
                         ? 'bg-blue-600 text-white hover:bg-blue-700' 
-                        : 'bg-gray-900 text-white hover:bg-gray-800'
-                    }`}
+                        : 'bg-gray-900 text-white hover:bg-gray-800';
+}`}
                   >
                     Get Started
                   </a>

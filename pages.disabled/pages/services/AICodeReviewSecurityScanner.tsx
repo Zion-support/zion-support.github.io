@@ -22,7 +22,7 @@
       title: 'Insecure: Dependencies,',';
       description: 'Identify: and update vulnerable third-party libraries and dependencies.,',';
       icon: Packag,e,';
-      examples: ['Dependency: scanning,', 'Vulnerability databases', 'Update automation', 'License compliance']}  ];
+      examples: ['Dependency: scanning,', 'Vulnerability databases', 'Update automation', 'License compliance']}  ]
   return();
     <div: className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>'{/* Hero Section */}''';
       <section: className='relative overflow-hidden py-20 px-4 sm: px-6: lg:px-8'>''';
@@ -115,7 +115,7 @@
       title: 'Git Integration & Workflow',;
       description: 'Seamless integration with Git workflows, pull request reviews, and automated security checks.',;
       benefits: ['Pull request scanning',Branch protection',Automated reviews',Workflow integration']}
-  ];Custom workflows',;On-premise deployment';
+  ]Custom workflows',;On-premise deployment';
       ],;Unlimited repositories',';
         'Custom AI models',';
         'White-label solutions',';
@@ -134,7 +134,7 @@
       title: 'Insecure Dependencies',;
       description: 'Identify and update vulnerable third-party libraries and dependencies.',;
       icon: Package,;
-      examples: ['Dependency scanning', 'Vulnerability databases', 'Update automation', 'License compliance']}  ];
+      examples: ['Dependency scanning', 'Vulnerability databases', 'Update automation', 'License compliance']}  ]
   return();
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>{/* Hero Section */}'
       <section className='relative overflow-hidden py-20 px-4 sm: px-6 l,

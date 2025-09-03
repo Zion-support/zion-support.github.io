@@ -28,37 +28,37 @@ export default function CloudDevOps() {
       icon: Cloud,
       title: 'Cloud Infrastructure',
       description:
-        'Scalable cloud solutions on AWS, Azure, and Google Cloud Platform',
-    },
+        'Scalable cloud solutions on AWS, Azure, and Google Cloud Platform',;
+},
     {
       icon: GitBranch,
       title: 'CI/CD Pipelines',
       description:
-        'Automated deployment pipelines for faster, reliable releases',
-    },
+        'Automated deployment pipelines for faster, reliable releases',;
+},
     {
       icon: Monitor,
       title: 'Monitoring & Logging',
       description:
-        'Comprehensive monitoring and logging solutions for optimal performance',
-    },
+        'Comprehensive monitoring and logging solutions for optimal performance',;
+},
     {
       icon: Shield,
       title: 'Security & Compliance',
-      description: 'Enterprise-grade security and compliance frameworks',
-    },
+      description: 'Enterprise-grade security and compliance frameworks',;
+},
     {
       icon: Database,
       title: 'Database Management',
-      description: 'Optimized database solutions and migration services',
-    },
+      description: 'Optimized database solutions and migration services',;
+},
     {
       icon: Zap,
       title: 'Performance Optimization',
       description:
-        'Infrastructure optimization for maximum efficiency and cost savings',
-    },
-  ];
+        'Infrastructure optimization for maximum efficiency and cost savings',;
+},
+  ]
 
   const services = [
     {
@@ -69,8 +69,8 @@ export default function CloudDevOps() {
         'Data Migration',
         'Application Modernization',
         'Post-Migration Support',
-      ],
-    },
+      ],;
+},
     {
       title: 'DevOps Implementation',
       description:
@@ -80,8 +80,8 @@ export default function CloudDevOps() {
         'Infrastructure as Code',
         'Container Orchestration',
         'Monitoring & Alerting',
-      ],
-    },
+      ],;
+},
     {
       title: 'Cloud Architecture',
       description: 'Design and implement scalable, secure cloud architectures',
@@ -90,8 +90,8 @@ export default function CloudDevOps() {
         'Security Implementation',
         'Cost Optimization',
         'Disaster Recovery',
-      ],
-    },
+      ],;
+},
     {
       title: 'Managed Services',
       description:
@@ -101,9 +101,9 @@ export default function CloudDevOps() {
         'Incident Response',
         'Performance Tuning',
         'Security Updates',
-      ],
-    },
-  ];
+      ],;
+},
+  ]
 
   const technologies = [
     { name: 'AWS', category: 'Cloud Platforms' },
@@ -118,14 +118,14 @@ export default function CloudDevOps() {
     { name: 'Prometheus', category: 'Monitoring' },
     { name: 'Grafana', category: 'Monitoring' },
     { name: 'ELK Stack', category: 'Logging' },
-  ];
+  ]
 
   const stats = [
     { number: '99.9%', label: 'Uptime Guarantee' },
     { number: '50%', label: 'Cost Reduction' },
     { number: '10x', label: 'Faster Deployments' },
     { number: '24/7', label: 'Support Available' },
-  ];
+  ]
 
   return (
     <>

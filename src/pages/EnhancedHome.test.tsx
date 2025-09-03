@@ -41,6 +41,6 @@ describe('EnhancedHome', () => {"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
 "
     render(<EnhancedHome /" >)
-    // Add more specific tests here
+    // Add more specific tests here;
 });
 })

@@ -34,7 +34,7 @@ import {
   Workflow,
   MessageCircle,
   Phone,
-  Mail
+  Mail;
 } from
   'lucide-react';
 
@@ -44,38 +44,38 @@ const AIAutonomousVehiclePlatform = () => {
       title: "Advanced Perception Systems",
       description: "Multi-sensor fusion with LiDAR, radar, cameras, and ultrasonic sensors for 360° environmental awareness",
       icon: Eye,
-      color: "text-blue-400"
-    },
+      color: "text-blue-400";
+},
     {
       title: "AI Decision Making",
       description: "Real-time neural networks for instant decision making in complex traffic scenarios",
       icon: Brain,
-      color: "text-purple-400"
-    },
+      color: "text-purple-400";
+},
     {
       title: "Predictive Analytics",
       description: "ML-powered prediction of traffic patterns, pedestrian behavior, and road conditions",
       icon: TrendingUp,
-      color: "text-green-400"
-    },
+      color: "text-green-400";
+},
     {
       title: "Edge Computing",
       description: "On-board processing for ultra-low latency responses and offline operation capability",
       icon: Cpu,
-      color: "text-cyan-400"
-    },
+      color: "text-cyan-400";
+},
     {
       title: "Cybersecurity",
       description: "Advanced threat detection and prevention for vehicle systems and communications",
       icon: Shield,
-      color: "text-red-400"
-    },
+      color: "text-red-400";
+},
     {
       title: "Cloud Integration",
       description: "Seamless cloud connectivity for updates, data sharing, and fleet management",
       icon: Cloud,
-      color: "text-indigo-400"
-    }
+      color: "text-indigo-400";
+}
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -107,7 +107,7 @@ const AIAutonomousVehiclePlatform = () => {;
       color: "text-indigo-400";
     };
 ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/services/ai-autonomous-vehicle-platform.tsx
-  ];
+  ]
 ;
   const useCases = [;
     {";
@@ -126,7 +126,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/services/ai-autono
       description: "Autonomous vehicles for mining, construction, and agriculture", icon: Target,";
       benefits: ["Hazardous environment operation", "24/7 productivity", "Precision operations"];
     };
-  ];
+  ]
 ;
   const pricing = [;
     {";
@@ -161,7 +161,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/services/ai-autono
       ], cta: "Contact Sales",;
       popular: false;
     };
-  ];
+  ]
 ;
   const benefits = [;
     {";
@@ -178,7 +178,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/services/ai-autono
       icon: TrendingUp,";
       title: "Scalability", description: "Easy fleet expansion and management through cloud-based systems";
     };
-  ];
+  ]
 ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/services/ai-autonomous-vehicle-platform.tsx
   );
 };

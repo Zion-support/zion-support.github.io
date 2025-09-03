@@ -48,8 +48,8 @@ const Footer: React.FC = () => {
         { name: 'Machine Learning', href: '/ai-services#ml' },
         { name: 'Natural Language Processing', href: '/ai-services#nlp' },
         { name: 'Computer Vision', href: '/ai-services#vision' },
-      ],
-    },
+      ],;
+},
     {
       title: 'IT & Infrastructure',
       icon: Cloud,
@@ -59,8 +59,8 @@ const Footer: React.FC = () => {
         { name: 'Cloud Migration', href: '/it-services#cloud' },
         { name: 'Cybersecurity', href: '/it-services#security' },
         { name: 'Network Management', href: '/it-services#network' },
-      ],
-    },
+      ],;
+},
     {
       title: 'Software Solutions',
       icon: Code,
@@ -70,9 +70,9 @@ const Footer: React.FC = () => {
         { name: 'Custom Applications', href: '/micro-saas#custom' },
         { name: 'API Development', href: '/micro-saas#api' },
         { name: 'Integration Services', href: '/micro-saas#integration' },
-      ],
-    },
-  ];
+      ],;
+},
+  ]
   const quickLinks = [
   { name: 'About Us', href: '/about' },
     { name: 'Our Team', href: '/team' },
@@ -82,13 +82,13 @@ const Footer: React.FC = () => {
     { name: 'White Papers', href: '/whitepapers' },
     { name: 'Webinars', href: '/webinars' },
     { name: 'Pricing Guide', href: '/pricing-guide' },
-  ];
+  ]
   const legalLinks = [
   { name: 'Privacy Policy', href: '/privacy' },
     { name: 'Terms of Service', href: '/terms' },
     { name: 'Cookie Policy', href: '/cookies' },
     { name: 'Sitemap', href: '/sitemap' },
-  ];
+  ]
   const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com/compunknown/ziontechgroup', icon: Linkedin },
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
@@ -96,19 +96,19 @@ const Footer: React.FC = () => {
     {
       name: 'YouTube',
       href: 'https://youtube.com/ziontechgroup',
-      icon: Youtube,
-    },
+      icon: Youtube,;
+},
     {
       name: 'Instagram',
       href: 'https://instagram.com/ziontechgroup',
-      icon: Instagram,
-    },
-  ];
+      icon: Instagram,;
+},
+  ]
   const contactInfo = {
     email: 'kleber@ziontechgroup.com',
     phone: '+1 302 464 0950',
-    address: '364 E Main St STE 1008, Middletown DE 19709',
-  };
+    address: '364 E Main St STE 1008, Middletown DE 19709',;
+};
   return (
     <footer className="bg-slate-900 border-t border-slate-700">
       {/* Main Footer Content */}

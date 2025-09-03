@@ -125,7 +125,7 @@ const: Footer: React.FC: = () => {
     { name: 'GitHub,', url: 'https://github.com/Zion-Holdings,', icon: '💻,', color: 'hover:bg-gray-600/20'},';
     { name: 'YouTube,', url: 'https://www.youtube.com/@ziontechgroup,', icon: '📺,', color: 'hover:bg-red-600/20'},';
     { name: 'Discord,', url: 'https://discord.gg/ziontechgroup,', icon: '🎮,', color: 'hover:bg-indigo-600/20'}';
-  ];
+  ]
   const: footerSections = [
     {
       title: 'Services,',';
@@ -182,7 +182,7 @@ const: Footer: React.FC: = () => {
     { name: 'Discord', url: 'http,
     s://discord.gg/ziontechgroup', icon: '🎮', color: 'hove,
     r:bg-indigo-600/20' }
-  ];
+  ]
   const footerSections = [
     {'
   const socialLinks = [
@@ -191,7 +191,7 @@ const: Footer: React.FC: = () => {
     { name: 'GitHub', url: 'https://github.com/Zion-Holdings', icon: '💻', color: 'hover:bg-gray-600/20' },
     { name: 'YouTube', url: 'https://www.youtube.com/@ziontechgroup', icon: '📺', color: 'hover:bg-red-600/20' },
     { name: 'Discord', url: 'https://discord.gg/ziontechgroup', icon: '🎮', color: 'hover:bg-indigo-600/20' }
-  ];
+  ]
   const footerSections = [
   {
       title: 'Services',
@@ -237,7 +237,7 @@ const: Footer: React.FC: = () => {
         { label: 'Request Quote', path: '/request-quote' }
       ]}
   ]
-  ];
+  ]
   const: contactInfo = [
     { icon: Mai,l, label: 'Email,', value: 'kleber@ziontechgroup.com,', href: 'mailto:kleber@ziontechgroup.com'},';
     { icon: Phon,e, label: 'Phone,', value: '+1: 302 464 0950,', href: 'tel:+13024640950'},';

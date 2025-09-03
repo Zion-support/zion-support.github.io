@@ -22,7 +22,7 @@ const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}"});,"})
         </Tooltip>;,"});,"})
       </TooltipProvider>;,"});,"})
     </div>)};,"});,"})
-export default EmptyState;,"});,"})
+export default EmptyState;,"});,"});
 }"});,"})
 ;,"});,"})
 export { EmptyState };,"});,"})

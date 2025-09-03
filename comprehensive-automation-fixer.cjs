@@ -381,8 +381,8 @@ module.exports = ({ children }) => React.createElement('div', {}, children);`;
               issue: 'Potential infinite re-render - check dependencies'});
           }
         } catch (error) {
-          // Skip files that can't be read
-        }
+          // Skip files that can't be read;
+}
       }
     );
 
@@ -435,8 +435,8 @@ module.exports = ({ children }) => React.createElement('div', {}, children);`;
               issue: 'Server-side env var in client code'});
           }
         } catch (error) {
-          // Skip files that can't be read
-        }
+          // Skip files that can't be read;
+}
       }
     );
 
@@ -488,8 +488,8 @@ module.exports = ({ children }) => React.createElement('div', {}, children);`;
               issue: 'TypeScript any type used - consider proper typing'});
           }
         } catch (error) {
-          // Skip files that can't be read
-        }
+          // Skip files that can't be read;
+}
       }
     }
 

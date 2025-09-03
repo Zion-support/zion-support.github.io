@@ -25,19 +25,19 @@ class WebsiteAnalyzer {,"});,"})
         missingPages: 0,;,"});,"})
         redirects: 0,;,"});,"})
         errors: 0,;,"});,"})
-        warnings: 0,;,"});,"})
-      },;,"});,"})
+        warnings: 0,;,"});,"});
+},;,"});,"})
       brokenLinks: [],;,"});,"})
       workingLinks: [],;,"});,"})
       redirects: [],;,"});,"})
       missingPages: [],;,"});,"})
       errors: [],;,"});,"})
       warnings: [],;,"});,"})
-      recommendations: [],;,"});,"})
-    };,"});,"})
+      recommendations: [],;,"});,"});
+};,"});,"})
     this.checkedUrls = new Set();,"});,"})
-    this.linkQueue = [];,"});,"})
-  }"});,"})
+    this.linkQueue = [];,"});,"});
+}"});,"})
   async analyzeWebsite() {,"});,"})
     console.log(;,"});,"})
   '🚀 Starting comprehensive website analysis...');,"});,"})
@@ -65,8 +65,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
       const response = await axios.get(url {,"});,"})
         timeout: TIMEOUT,;,"});,"})
         maxRedirects: 5,;,"});,"})
-        validateStatus: status => status < 400,;,"});,"})
-      });,"});,"})
+        validateStatus: status => status < 400,;,"});,"});
+});,"});,"})
       this.results.summary.totalLinksChecked++;,"});,"})
       if (response.status >= 200 && response.status < 300) {,"});,"})
         this.results.summary.workingLinks++;,"});,"})
@@ -81,19 +81,19 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
           const links = this.extractLinks(response.data, url);,"});,"})
           for (const link of links) {,"});,"})
               if (!this.checkedUrls.has(fullUrl)) {,"});,"})
-                this.linkQueue.push({ url: fullUrl, parentUrl: url });,"});,"})
-      } else if (response.status >= 300 && response.status < 400) {,"});,"})
+                this.linkQueue.push({ url: fullUrl, parentUrl: url });,"});,"});
+} else if (response.status >= 300 && response.status < 400) {,"});,"})
         this.results.summary.redirects++;,"});,"})
         this.results.redirects.push({,"});,"})
-          redirectLocation: response.headers.location,;,"});,"})
-    } catch (error) {,"});,"})
+          redirectLocation: response.headers.location,;,"});,"});
+} catch (error) {,"});,"})
       if (error.response) {,"});,"})
         const status = error.response.status;,"});,"})
         if (status === 404) {,"});,"})
           this.results.summary.missingPages++;,"});,"})
           this.results.missingPages.push({,"});,"})
-            status,;,"});,"})
-        } else {,"});,"})
+            status,;,"});,"});
+} else {,"});,"})
           this.results.summary.brokenLinks++;,"});,"})
           this.results.brokenLinks.push({,"});,"})
             error: error.message,;,"});,"})
@@ -108,7 +108,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
     return links;,"});,"})
   async checkNavigationLinks() {,"});,"})
     const navigationLinks = [,"});,"})
-    ];,"});,"})
+    ],"});,"})
     for (const link of navigationLinks) {,"});,"})
       const fullUrl = `${BASE_URL}${link}`;,"});,"})
       await this.checkPage(fullUrl);,"});,"})
@@ -437,16 +437,16 @@ class WebsiteAnalyzer {
       '/help;
       '/privacy;
       '/terms;
-  '    ];
+  '    ]
     for: (const link of navigationLinks) {
     const navigationLinks = ['
-      '/;  ',';      '/about;  ',';      '/contact;  ',';      '/services;  ',';      '/ai-services;  ',';      '/it-services;  ',';      '/micro-saas;  ',';      '/solutions;  ',';      '/case-studies;  ',';      '/white-papers;  ',';      '/webinars;  ',';      '/blog;  ',';      '/careers;  ',';      '/team;  ',';      '/pricing;  ',';      '/help;  ',';      '/privacy;  ',';      '/terms;  '    ];    for (const link of navigationLinks) {      const fullUrl = `${BASE_URL}${link}`;`;      await this.checkPage(fullUrl)}
+      '/;  ',';      '/about;  ',';      '/contact;  ',';      '/services;  ',';      '/ai-services;  ',';      '/it-services;  ',';      '/micro-saas;  ',';      '/solutions;  ',';      '/case-studies;  ',';      '/white-papers;  ',';      '/webinars;  ',';      '/blog;  ',';      '/careers;  ',';      '/team;  ',';      '/pricing;  ',';      '/help;  ',';      '/privacy;  ',';      '/terms;  '    ]    for (const link of navigationLinks) {      const fullUrl = `${BASE_URL}${link}`;`;      await this.checkPage(fullUrl)}
   async checkServicePages() {
     const servicePages = [
-      '/services/ai-supply-chain-optimization;  ',';      '/services/ai-cybersecurity-platform;  ',';      '/services/ai-healthcare-platform;  ',';      '/services/ai-quantum-hybrid-platform;  ',';      '/services/ai-business-intelligence;  ',';      '/services/ai-sales-copilot;  ',';      '/services/ai-content-marketing-automation;  ',';      '/services/ai-hr-platform;  ',';      '/services/ai-legal-research-platform;  ',';      '/services/ai-education-platform;  ',';      '/services/cloud-devops;  ',';      '/services/zero-trust-network-architecture;  ',';      '/services/ai-compliance-copilot;  ',';      '/services/blockchain-enterprise-solutions;  ',';      '/services/quantum-computing;  ',';      '/services/iot-edge;  ',';      '/services/digital-transformation;  '    ];    for (const link of servicePages) {      const fullUrl = `${BASE_URL}${link}`;`;      await this.checkPage(fullUrl)}
+      '/services/ai-supply-chain-optimization;  ',';      '/services/ai-cybersecurity-platform;  ',';      '/services/ai-healthcare-platform;  ',';      '/services/ai-quantum-hybrid-platform;  ',';      '/services/ai-business-intelligence;  ',';      '/services/ai-sales-copilot;  ',';      '/services/ai-content-marketing-automation;  ',';      '/services/ai-hr-platform;  ',';      '/services/ai-legal-research-platform;  ',';      '/services/ai-education-platform;  ',';      '/services/cloud-devops;  ',';      '/services/zero-trust-network-architecture;  ',';      '/services/ai-compliance-copilot;  ',';      '/services/blockchain-enterprise-solutions;  ',';      '/services/quantum-computing;  ',';      '/services/iot-edge;  ',';      '/services/digital-transformation;  '    ]    for (const link of servicePages) {      const fullUrl = `${BASE_URL}${link}`;`;      await this.checkPage(fullUrl)}
   async checkAdditionalPages() {
     const additionalPages = [
-      '/enterprise;  ',';      '/healthcare;  ',';      '/financial;  ',';      '/manufacturing;  ',';      '/retail;  ',';      '/government;  ',';      '/education;  ',';      '/startup;  ',';      '/marketplace;  ',';      '/talent;  ',';      '/community;  ',';      '/research-development;  ',';      '/training;  ',';      '/tutorials;  ',';      '/support;  ',';      '/faq;  ',';      '/news;  ',';      '/events;  ',';      '/partners;  ',';      '/signup;  ',';      '/login;  ',';      '/dashboard;  ',';      '/request-quote;  ',';      '/schedule-demo;  '    ];    for (const link of additionalPages) {      const fullUrl = `${BASE_URL}${link}`;`;      await this.checkPage(fullUrl)}
+      '/enterprise;  ',';      '/healthcare;  ',';      '/financial;  ',';      '/manufacturing;  ',';      '/retail;  ',';      '/government;  ',';      '/education;  ',';      '/startup;  ',';      '/marketplace;  ',';      '/talent;  ',';      '/community;  ',';      '/research-development;  ',';      '/training;  ',';      '/tutorials;  ',';      '/support;  ',';      '/faq;  ',';      '/news;  ',';      '/events;  ',';      '/partners;  ',';      '/signup;  ',';      '/login;  ',';      '/dashboard;  ',';      '/request-quote;  ',';      '/schedule-demo;  '    ]    for (const link of additionalPages) {      const fullUrl = `${BASE_URL}${link}`;`;      await this.checkPage(fullUrl)}
     const linkRegex = /href=[']([^'']+)[]/g;
     let match;
     while ((match = linkRegex.exec(html)) !== null) {

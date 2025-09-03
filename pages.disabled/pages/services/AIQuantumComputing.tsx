@@ -4,7 +4,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIQuantumComputing(function AIQuantumComputing() {): any: {}
     'Automated quantum monitoring and alerting',';Predictive: analytics for quantum scaling',';Smart: quantum security and compliance',';AI-driven: quantum automation and orchestration',';Real-time: quantum analytics and insights',';Custom: AI models for quantum applications';
 <:pages.disabled/pages/services/AIQuantumComputing.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Developer,',';
@@ -27,7 +27,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
   ]';Quantum: optimization',';Quantum: algorithm management',';Performance: monitoring and analytics',';Security: and compliance monitoring',';Automation: and orchestration',';Quantum: scaling and management';
   ]';Improve: quantum performance by 50-80%',';Reduce: quantum processing time by 40-70%',';Cut: operational costs by 35-65%',';Enhance: quantum reliability and scalability',';Optimize: resource utilization',';Scale: quantum operations efficiently';
   ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-violet-500 via-purple-500 to-indigo-500 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIQuantumComputing(function AIQuantumComputing() {): any {}
     'Automated quantum monitoring and alerting',;Predictive analytics for quantum scaling',;Smart quantum security and compliance',;AI-driven quantum automation and orchestration',;Real-time quantum analytics and insights',;Custom AI models for quantum applications';
 <:pages.disabled/pages/services/AIQuantumComputing.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Developer',
@@ -115,8 +115,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     {'
       name: 'Business',
       price: '$1,499/mo',
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support']
-    },
+      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AIQuantumComputing.tsx>    {'
@@ -149,10 +149,10 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <Database className='w-4 h-4 mr-2'  /> AI-Powered Quantum Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Quantum Computing Platform</h1>'          <p className='text-violet-100 text-xl'>Transform your quantum operations with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
-  ];Quantum optimization',;Quantum algorithm management',;Performance monitoring and analytics',;Security and compliance monitoring',;Automation and orchestration',;Quantum scaling and management';
-  ];Improve quantum performance by 50-80%',;Reduce quantum processing time by 40-70%',;Cut operational costs by 35-65%',;Enhance quantum reliability and scalability',;Optimize resource utilization',;Scale quantum operations efficiently';
-  ];Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
-  ];
+  ]Quantum optimization',;Quantum algorithm management',;Performance monitoring and analytics',;Security and compliance monitoring',;Automation and orchestration',;Quantum scaling and management';
+  ]Improve quantum performance by 50-80%',;Reduce quantum processing time by 40-70%',;Cut operational costs by 35-65%',;Enhance quantum reliability and scalability',;Optimize resource utilization',;Scale quantum operations efficiently';
+  ]Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-violet-500 via-purple-500 to-indigo-500 py-20 text-center>''

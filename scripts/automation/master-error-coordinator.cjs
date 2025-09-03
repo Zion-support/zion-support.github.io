@@ -122,8 +122,8 @@ class MasterErrorCoordinator {;
         this.errors.push({
           process: process.name,
           error: error.message,
-          timestamp: new Date().toISOString()
-      } catch (error) {await this.log(`❌ Error running ${process.name}: ${error.message}`);
+          timestamp: new Date().toISOString();
+} catch (error) {await this.log(`❌ Error running ${process.name}: ${error.message}`);
         this.errors.push({;
           process: process.name,;
           error: error.message,;
@@ -175,8 +175,8 @@ class MasterErrorCoordinator {;
           name: check.name,
           success: false,
           error: error.message,
-          timestamp: new Date().toISOString()
-        });
+          timestamp: new Date().toISOString();
+});
       }
     }
     
@@ -240,8 +240,8 @@ class MasterErrorCoordinator {;
         this.fixes.push({
           type: `emergency-fix`,
           name: fix.name,
-          timestamp: new Date().toISOString()
-        });
+          timestamp: new Date().toISOString();
+});
       } catch (error) {  await this.log(`❌ Failed to apply ${fix.name  }: ${error.message}`);
         this.errors.push({
           fix: fix.name,
@@ -376,8 +376,8 @@ class MasterErrorCoordinator {;
       await this.log(`✅ Master Error Coordinator completed`);await this.log(`📈 Summary: ${report.summary.successfulProcesses}/${report.summary.totalProcesses} processes successful`);await this.log(`📈 Errors: ${report.summary.totalErrors}, Fixes: ${report.summary.totalFixes}`);
       ;
       return report;
-      
-    } catch (error) {  await this.log(`❌ Master Error Coordinator failed: ${error.message  }`);
+      ;
+} catch (error) {  await this.log(`❌ Master Error Coordinator failed: ${error.message  }`);
       ;
     } catch (error) {await this.log(`❌ Master Error Coordinator failed: ${error.message}`);
       throw error;

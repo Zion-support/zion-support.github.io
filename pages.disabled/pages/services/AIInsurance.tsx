@@ -4,7 +4,7 @@ import: { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Z
 import: { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Lock, FileText, BarChart3 export default function AIInsurance(function AIInsurance() {): any: {}
     'Automated policy management and customer service',';Predictive: analytics for risk modeling and pricing',';Real-time: customer behavior analysis and risk scoring',';Smart: document processing and compliance monitoring',';Integration: with major insurance management systems',';Custom: AI models for insurance-specific insights';
 <:pages.disabled/pages/services/AIInsurance.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Small: Insurer,',';
@@ -27,7 +27,7 @@ import: { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Z
   ]';Automated: underwriting and risk assessment',';Claims: processing and fraud detection',';Customer: service and policy management',';Risk: modeling and pricing optimization',';Compliance: monitoring and reporting',';Customer: retention and cross-selling';
   ]';Reduce: claims processing time by 60-80%',';Improve: fraud detection accuracy by 40-60%',';Cut: operational costs by 25-40%',';Optimize: pricing for maximum profitability',';Enhance: customer experience and satisfaction',';Scale: insurance operations efficiently';
   ]';Property: & Casualty Insurance',';Life: & Health Insurance',';Auto: Insurance',';Commercial: Insurance',';Reinsurance',';Insurance: Brokers';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
 import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Lock, FileText, BarChart3 export default function AIInsurance(function AIInsurance() {): any {}
     'Automated policy management and customer service',;Predictive analytics for risk modeling and pricing',;Real-time customer behavior analysis and risk scoring',;Smart document processing and compliance monitoring',;Integration with major insurance management systems',;Custom AI models for insurance-specific insights';
 <:pages.disabled/pages/services/AIInsurance.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Small Insurer',
@@ -115,8 +115,8 @@ import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
     {'
       name: 'Medium Insurer',
       price: '$1,299/mo',
-      details: ['Up to 100,000 policies', 'Advanced AI features', 'Custom reports', 'Priority support']
-    },
+      details: ['Up to 100,000 policies', 'Advanced AI features', 'Custom reports', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AIInsurance.tsx>    {'
@@ -149,10 +149,10 @@ import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
             <Shield className='w-4 h-4 mr-2'  /> AI-Powered Insurance Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Insurance Platform</h1>'          <p className='text-indigo-100 text-xl'>Transform your insurance business with AI-powered tools that enhance risk assessment, automate claims processing, and optimize customer experience.</p>
-  ];Automated underwriting and risk assessment',;Claims processing and fraud detection',;Customer service and policy management',;Risk modeling and pricing optimization',;Compliance monitoring and reporting',;Customer retention and cross-selling';
-  ];Reduce claims processing time by 60-80%',;Improve fraud detection accuracy by 40-60%',;Cut operational costs by 25-40%',;Optimize pricing for maximum profitability',;Enhance customer experience and satisfaction',;Scale insurance operations efficiently';
-  ];Property & Casualty Insurance',;Life & Health Insurance',;Auto Insurance',;Commercial Insurance',;Reinsurance',;Insurance Brokers';
-  ];
+  ]Automated underwriting and risk assessment',;Claims processing and fraud detection',;Customer service and policy management',;Risk modeling and pricing optimization',;Compliance monitoring and reporting',;Customer retention and cross-selling';
+  ]Reduce claims processing time by 60-80%',;Improve fraud detection accuracy by 40-60%',;Cut operational costs by 25-40%',;Optimize pricing for maximum profitability',;Enhance customer experience and satisfaction',;Scale insurance operations efficiently';
+  ]Property & Casualty Insurance',;Life & Health Insurance',;Auto Insurance',;Commercial Insurance',;Reinsurance',;Insurance Brokers';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 py-20 text-center>''

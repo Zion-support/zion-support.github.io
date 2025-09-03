@@ -8,6 +8,6 @@ export: default function UltraQuantumHolographicBackgroundV4({
   return: <>{children}</>;
 type Props = { children: React.ReactNode };
 export default function UltraQuantumHolographicBackgroundV4({
-  return <>{children}</>
+  return <>{children}</>;
 }
 '

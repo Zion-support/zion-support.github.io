@@ -41,6 +41,6 @@ describe('Solutions', () => {"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
 "
     render(<Solutions /" >)
-    // Add more specific tests here
+    // Add more specific tests here;
 });
 })

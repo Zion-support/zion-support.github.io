@@ -19,8 +19,8 @@ class FrontMaximizer {,"});,"})
     this.projectRoot = path.resolve(__dirname,..;,"});,"})
   ');,"});,"})
     this.optimizations = [];,"});,"})
-    this.issues = [];,"});,"})
-  }"});,"})
+    this.issues = [];,"});,"});
+}"});,"})
   async maximize() {,"});,"})
     try {,"});,"})
       console.log('🔍 Analyzing frontend for optimization opportunities...;,"});,"})
@@ -34,8 +34,8 @@ class FrontMaximizer {,"});,"})
       await this.analyzeAssetOptimization();,"});,"})
       // Generate optimization report;,"});,"})
       await this.generateReport();,"});,"})
-      console.log('✅ Front maximizer analysis completed;,"});,"})
-    } catch (error) {,"});,"})
+      console.log('✅ Front maximizer analysis completed;,"});,"});
+} catch (error) {,"});,"})
       console.error('❌ Error during front maximization: , error.message);,"});,"})
   async analyzeBuildConfig() {,"});,"})
       console.log('⚙️  Analyzing build configuration...;,"});,"})
@@ -56,8 +56,8 @@ class FrontMaximizer {,"});,"})
         if (!viteConfig.includes('server.hmr;,"});,"})
           this.optimizations.push('Enable HMR for better development experience;,"});,"})
         if (!viteConfig.includes('preview.port;,"});,"})
-          this.optimizations.push('Configure preview port for testing;,"});,"})
-      } else {,"});,"})
+          this.optimizations.push('Configure preview port for testing;,"});,"});
+} else {,"});,"})
         this.issues.push('Vite configuration file not found;,"});,"})
       this.issues.push(`Could not analyze build config: ${error.message}`);,"});,"})
   async analyzeBundleSize() {,"});,"})
@@ -74,8 +74,8 @@ class FrontMaximizer {,"});,"})
           totalJsSize += stats.size;,"});,"})
           const sizeMB = Math.round(stats.size / 1024 / 1024 * 100) / 100;,"});,"})
           if (sizeMB > 1) {,"});,"})
-            this.optimizations.push(`Large JS bundle detected: ${path.basename(file)} (${sizeMB}MB) - consider code splitting`);,"});,"})
-        });,"});,"})
+            this.optimizations.push(`Large JS bundle detected: ${path.basename(file)} (${sizeMB}MB) - consider code splitting`);,"});,"});
+});,"});,"})
         // Calculate CSS bundle sizes;,"});,"})
         cssFiles.forEach(file => {,"});,"})
           totalCssSize += stats.size;,"});,"})
@@ -146,11 +146,11 @@ class FrontMaximizer {,"});,"})
           const fullPath = path.join(scanDir, item);,"});,"})
           const stat = fs.statSync(fullPath);,"});,"})
           if (stat.isDirectory()) {,"});,"})
-            scanDirectory(fullPath);,"});,"})
-          } else if (stat.isFile() && extArray.some(ext => item.endsWith(ext))) {,"});,"})
+            scanDirectory(fullPath);,"});,"});
+} else if (stat.isFile() && extArray.some(ext => item.endsWith(ext))) {,"});,"})
             files.push(fullPath);,"});,"})
-        // Skip directories we can't read;,"});,"})
-    };,"});,"})
+        // Skip directories we can't read;,"});,"});
+};,"});,"})
     scanDirectory(dir);,"});,"})
     return files;,"});,"})
   async generateReport() {,"});,"})
@@ -158,8 +158,8 @@ class FrontMaximizer {,"});,"})
       timestamp: new Date().toISOString(),;,"});,"})
       summary: {,"});,"})
         optimizations: this.optimizations.length,;,"});,"})
-        issues: this.issues.length;,"});,"})
-      },;,"});,"})
+        issues: this.issues.length;,"});,"});
+},;,"});,"})
       optimizations: this.optimizations,;,"});,"})
       issues: this.issues,;,"});,"})
       recommendations: this.generateRecommendations();,"});,"})
@@ -199,7 +199,7 @@ class FrontMaximizer {,"});,"})
 const maximizer = new FrontMaximizer();,"});,"})
 maximizer.maximize().then(() => {,"});,"})
   '🚀 Front Maximizer Completed');,"});,"})
-  process.exit(0);,"});,"})
+  process.exit(0);,"});,"});
 }).catch((error) => {,"});,"})
   console.error(;,"});,"})
   '❌ Front Maximizer Failed:', error);,"});,"})
@@ -345,13 +345,13 @@ console.log(;);  '🚀 Front Maximizer Started');class FrontMaximizer {  constru
           this.optimizations.push('Enable HMR for better development experience;
         if (!viteConfig.includes('preview.port;
           this.optimizations.push('Configure preview port for testing;
-      } else {'
-    } catch (error) {'
+      } else {';
+} catch (error) {'
       this.issues.push(`Could not analyze build config: ${error.message}`)}
   async analyzeBundleSize() {
-    try {`
-      } else {
-    } catch (error) {
+    try {`;
+} else {;
+} catch (error) {
       if (fs.existsSync(distPath)) {
         let totalJsSize = 0;
         let totalCssSize = 0;
@@ -499,8 +499,8 @@ console.log(;);  '🚀 Front Maximizer Started');class FrontMaximizer {  constru
     const extArray = Array.isArray(extensions) ? extensions : [extensions];
         for (const item of items) {
           const fullPath = path.join(scanDir, item);
-          if (stat.isDirectory()) {
-      } catch (error) {`
+          if (stat.isDirectory()) {;
+} catch (error) {`
         // Skip directories we can't read}
     return files}
   async generateReport() {

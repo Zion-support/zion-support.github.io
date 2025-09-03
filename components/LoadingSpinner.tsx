@@ -1,5 +1,5 @@
 import React from 'react';
-import { Loader2 } from 'lucide-react';''interface LoadingSpinnerProps {'
+import { Loader2 } from 'lucide-react'; LoadingSpinnerProps {'
   size?: 'sm' | 'md' | 'lg';'  text?: string;'  className?: string;
 
 interface LoadingSpinnerProps {
@@ -10,13 +10,13 @@ interface LoadingSpinnerProps {
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'medium',
   color = 'blue-600',
-  className = ''
+  className = '';
 }) => {
   const sizeClasses = {
     small: 'h-4 w-4',
     medium: 'h-8 w-8',
-    large: 'h-12 w-12'
-  };
+    large: 'h-12 w-12';
+};
 
   return (
     <div className={`flex items-center justify-center ${className}`}>
@@ -43,7 +43,7 @@ export default function LoadingSpinner({
   size = "md",
   color = "primary",
   text,
-  fullScreen = false
+  fullScreen = false;
 }: LoadingSpinnerProps) {
     sm: "w-6 h-6",
     md: "w-12 h-12",
@@ -75,7 +75,7 @@ export default function LoadingSpinner({
 
 // Pulse loading variant
 export function LoadingPulse({
-  color = "primary"
+  color = "primary";
 }: Omit<LoadingSpinnerProps, "text" | "fullScreen">) {
 
     primary: "bg-blue-600",
@@ -87,22 +87,22 @@ export function LoadingPulse({
           key={i}
           className={`${sizeClasses[size]} ${colorClasses[color]} rounded-full animate-pulse`}
           style={{
-            animationDelay: `${i * 0.2}s`
-          }}
+            animationDelay: `${i * 0.2}s`;
+}}
       ))}
 
 // Skeleton loading variant
 export function LoadingSkeleton({
   lines = 3,
-  className = ""
+  className = "";
 }: {
   lines?: number;
   className?: string}) {
     <div className={`animate-pulse ${className}`}>
       {Array.from({ length: lines }).map((_, i) => (
           className={`h-4 bg-gray-200 rounded mb-3 ${
-            i === lines - 1 ? "w-3/4" : "w-full"
-          }`}
+            i === lines - 1 ? "w-3/4" : "w-full";
+}`}
 }
 import React from 'react'
 import { Loader2 } from 'lucide-react'
@@ -134,7 +134,7 @@ export default function LoadingSpinner({'
 
 // Pulse loading variant
 export function LoadingPulse({"
-  color = 'primary''
+  color = 'primary'';
 }: Omit<LoadingSpinnerProps, 'text' | 'fullScreen'>) {
 
     primary: 'bg-blue-600',

@@ -524,38 +524,38 @@ export { function };export default function AISupplyChainOptimization(...args: [
 "
                   icon: Brain,""
                   title: "AI-Powered Forecasting",""
-                  description: "Predict demand patterns and optimize inventory levels with machine learning."
-                },
+                  description: "Predict demand patterns and optimize inventory levels with machine learning.";
+},
                 {
 "
                   icon: TrendingUp,""
                   title: "Route Optimization",""
-                  description: "Optimize delivery routes and reduce transportation costs with AI algorithms."
-                },
+                  description: "Optimize delivery routes and reduce transportation costs with AI algorithms.";
+},
                 {
 "
                   icon: BarChart3,""
                   title: "Real-time Analytics",""
-                  description: "Monitor supply chain performance with live dashboards and insights."
-                },
+                  description: "Monitor supply chain performance with live dashboards and insights.";
+},
                 {
 "
                   icon: Users,""
                   title: "Supplier Management",""
-                  description: "Manage supplier relationships and performance with intelligent scoring."
-                },
+                  description: "Manage supplier relationships and performance with intelligent scoring.";
+},
                 {
 "
                   icon: Shield,""
                   title: "Risk Management",""
-                  description: "Identify and mitigate supply chain risks with predictive analytics."
-                },
+                  description: "Identify and mitigate supply chain risks with predictive analytics.";
+},
                 {
 "
                   icon: Database,""
                   title: "Inventory Optimization",""
-                  description: "Optimize stock levels and reduce carrying costs with AI insights."
-                }"
+                  description: "Optimize stock levels and reduce carrying costs with AI insights.";
+}"
               ].map((feature, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">""
@@ -567,33 +567,33 @@ export { function };export default function AISupplyChainOptimization(...args: [
                 {}
                   icon: Brain,""
                   title: "AI-Powered Forecasting",""
-                  description: "Predict demand patterns and optimize inventory levels with machine learning.""
-                },
+                  description: "Predict demand patterns and optimize inventory levels with machine learning."";
+},
                 {}
                   icon: TrendingUp,""
                   title: "Route Optimization",""
-                  description: "Optimize delivery routes and reduce transportation costs with AI algorithms.""
-                },
+                  description: "Optimize delivery routes and reduce transportation costs with AI algorithms."";
+},
                 {}
                   icon: BarChart3,""
                   title: "Real-time Analytics",""
-                  description: "Monitor supply chain performance with live dashboards and insights.""
-                },
+                  description: "Monitor supply chain performance with live dashboards and insights."";
+},
                 {}
                   icon: Users,""
                   title: "Supplier Management",""
-                  description: "Manage supplier relationships and performance with intelligent scoring.""
-                },
+                  description: "Manage supplier relationships and performance with intelligent scoring."";
+},
                 {}
                   icon: Shield,""
                   title: "Risk Management",""
-                  description: "Identify and mitigate supply chain risks with predictive analytics.""
-                },
+                  description: "Identify and mitigate supply chain risks with predictive analytics."";
+},
                 {}
                   icon: Database,""
                   title: "Inventory Optimization",""
-                  description: "Optimize stock levels and reduce carrying costs with AI insights.""
-                }
+                  description: "Optimize stock levels and reduce carrying costs with AI insights."";
+}
               ].map((feature, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">""
@@ -632,48 +632,48 @@ export { function };export default function AISupplyChainOptimization(...args: [
                   title: "Demand Forecasting",""
                   description: "AI-powered demand prediction and planning optimization.","
                   icon: Brain,""
-                  benefits: ["Machine learning models", "Seasonal analysis", "Trend prediction"]
-                },
+                  benefits: ["Machine learning models", "Seasonal analysis", "Trend prediction"];
+},
                 {
 "
 ""
                   title: "Inventory Management",""
                   description: "Smart inventory optimization and stock level management.","
                   icon: Database,""
-                  benefits: ["Safety stock optimization", "Reorder point calculation", "ABC analysis"]
-                },
+                  benefits: ["Safety stock optimization", "Reorder point calculation", "ABC analysis"];
+},
                 {
 "
 ""
                   title: "Transportation",""
                   description: "Route optimization and transportation cost reduction.","
                   icon: Truck,""
-                  benefits: ["Route planning", "Load optimization", "Cost reduction"]
-                },
+                  benefits: ["Route planning", "Load optimization", "Cost reduction"];
+},
                 {
 "
 ""
                   title: "Supplier Optimization",""
                   description: "Supplier performance management and selection optimization.","
                   icon: Users,""
-                  benefits: ["Performance scoring", "Risk assessment", "Cost optimization"]
-                },
+                  benefits: ["Performance scoring", "Risk assessment", "Cost optimization"];
+},
                 {
 "
 ""
                   title: "Warehouse Operations",""
                   description: "Warehouse layout and process optimization.","
                   icon: Settings,""
-                  benefits: ["Layout optimization", "Process automation", "Space utilization"]
-                },
+                  benefits: ["Layout optimization", "Process automation", "Space utilization"];
+},
                 {
 "
 ""
                   title: "Risk Management",""
                   description: "Supply chain risk identification and mitigation strategies.","
                   icon: Shield,""
-                  benefits: ["Risk assessment", "Mitigation planning", "Contingency strategies"]
-                }"
+                  benefits: ["Risk assessment", "Mitigation planning", "Contingency strategies"];
+}"
               ].map((area, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">""
@@ -691,43 +691,43 @@ export { function };export default function AISupplyChainOptimization(...args: [
                   title: "Demand Forecasting",""
                   description: "AI-powered demand prediction and planning optimization.",
                   icon: Brain,""
-                  benefits: ["Machine learning models", "Seasonal analysis", "Trend prediction"]
-                },
+                  benefits: ["Machine learning models", "Seasonal analysis", "Trend prediction"];
+},
                 {}
 ""
                   title: "Inventory Management",""
                   description: "Smart inventory optimization and stock level management.",
                   icon: Database,""
-                  benefits: ["Safety stock optimization", "Reorder point calculation", "ABC analysis"]
-                },
+                  benefits: ["Safety stock optimization", "Reorder point calculation", "ABC analysis"];
+},
                 {}
 ""
                   title: "Transportation",""
                   description: "Route optimization and transportation cost reduction.",
                   icon: Truck,""
-                  benefits: ["Route planning", "Load optimization", "Cost reduction"]
-                },
+                  benefits: ["Route planning", "Load optimization", "Cost reduction"];
+},
                 {}
 ""
                   title: "Supplier Optimization",""
                   description: "Supplier performance management and selection optimization.",
                   icon: Users,""
-                  benefits: ["Performance scoring", "Risk assessment", "Cost optimization"]
-                },
+                  benefits: ["Performance scoring", "Risk assessment", "Cost optimization"];
+},
                 {}
 ""
                   title: "Warehouse Operations",""
                   description: "Warehouse layout and process optimization.",
                   icon: Settings,""
-                  benefits: ["Layout optimization", "Process automation", "Space utilization"]
-                },
+                  benefits: ["Layout optimization", "Process automation", "Space utilization"];
+},
                 {}
 ""
                   title: "Risk Management",""
                   description: "Supply chain risk identification and mitigation strategies.",
                   icon: Shield,""
-                  benefits: ["Risk assessment", "Mitigation planning", "Contingency strategies"]
-                }
+                  benefits: ["Risk assessment", "Mitigation planning", "Contingency strategies"];
+}
               ].map((area, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">""
@@ -773,48 +773,48 @@ export { function };export default function AISupplyChainOptimization(...args: [
                   title: "Machine Learning",""
                   description: "Advanced ML algorithms for pattern recognition and prediction.","
                   icon: Brain,""
-                  features: ["Pattern recognition", "Predictive modeling", "Continuous learning"]
-                },
+                  features: ["Pattern recognition", "Predictive modeling", "Continuous learning"];
+},
                 {
 "
 ""
                   title: "Predictive Analytics",""
                   description: "Forecast future trends and optimize decision-making.","
                   icon: TrendingUp,""
-                  features: ["Trend analysis", "Scenario planning", "Risk prediction"]
-                },
+                  features: ["Trend analysis", "Scenario planning", "Risk prediction"];
+},
                 {
 "
 ""
                   title: "Real-time Processing",""
                   description: "Instant data processing and decision-making capabilities.","
                   icon: Zap,""
-                  features: ["Live data streams", "Instant insights", "Real-time optimization"]
-                },
+                  features: ["Live data streams", "Instant insights", "Real-time optimization"];
+},
                 {
 "
 ""
                   title: "Natural Language Processing",""
                   description: "Process and analyze unstructured supply chain data.","
                   icon: Eye,""
-                  features: ["Document analysis", "Sentiment analysis", "Data extraction"]
-                },
+                  features: ["Document analysis", "Sentiment analysis", "Data extraction"];
+},
                 {
 "
 ""
                   title: "Computer Vision",""
                   description: "Visual inspection and quality control automation.","
                   icon: Eye,""
-                  features: ["Quality inspection", "Damage detection", "Process monitoring"]
-                },
+                  features: ["Quality inspection", "Damage detection", "Process monitoring"];
+},
                 {
 "
 ""
                   title: "Optimization Algorithms",""
                   description: "Advanced algorithms for complex optimization problems.","
                   icon: Calculator,""
-                  features: ["Linear programming", "Genetic algorithms", "Heuristic optimization"]
-                }"
+                  features: ["Linear programming", "Genetic algorithms", "Heuristic optimization"];
+}"
               ].map((capability, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">""
@@ -832,43 +832,43 @@ export { function };export default function AISupplyChainOptimization(...args: [
                   title: "Machine Learning",""
                   description: "Advanced ML algorithms for pattern recognition and prediction.",
                   icon: Brain,""
-                  features: ["Pattern recognition", "Predictive modeling", "Continuous learning"]
-                },
+                  features: ["Pattern recognition", "Predictive modeling", "Continuous learning"];
+},
                 {}
 ""
                   title: "Predictive Analytics",""
                   description: "Forecast future trends and optimize decision-making.",
                   icon: TrendingUp,""
-                  features: ["Trend analysis", "Scenario planning", "Risk prediction"]
-                },
+                  features: ["Trend analysis", "Scenario planning", "Risk prediction"];
+},
                 {}
 ""
                   title: "Real-time Processing",""
                   description: "Instant data processing and decision-making capabilities.",
                   icon: Zap,""
-                  features: ["Live data streams", "Instant insights", "Real-time optimization"]
-                },
+                  features: ["Live data streams", "Instant insights", "Real-time optimization"];
+},
                 {}
 ""
                   title: "Natural Language Processing",""
                   description: "Process and analyze unstructured supply chain data.",
                   icon: Eye,""
-                  features: ["Document analysis", "Sentiment analysis", "Data extraction"]
-                },
+                  features: ["Document analysis", "Sentiment analysis", "Data extraction"];
+},
                 {}
 ""
                   title: "Computer Vision",""
                   description: "Visual inspection and quality control automation.",
                   icon: Eye,""
-                  features: ["Quality inspection", "Damage detection", "Process monitoring"]
-                },
+                  features: ["Quality inspection", "Damage detection", "Process monitoring"];
+},
                 {}
 ""
                   title: "Optimization Algorithms",""
                   description: "Advanced algorithms for complex optimization problems.",
                   icon: Calculator,""
-                  features: ["Linear programming", "Genetic algorithms", "Heuristic optimization"]
-                }
+                  features: ["Linear programming", "Genetic algorithms", "Heuristic optimization"];
+}
               ].map((capability, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">""
@@ -1008,8 +1008,8 @@ export { function };export default function AISupplyChainOptimization(...args: [
   tier.popular'
   '
                     ? 'border-blue-500 scale-105''
-  '`: 'border-blue-500/20``
-                }`}
+  '`: 'border-blue-500/20``;
+}`}
               >"{tier.popular && (""
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                     <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -1129,29 +1129,29 @@ export { function };export default function AISupplyChainOptimization(...args: [
 
                   step: "01",""
                   title: "Assessment",""
-                  description: "Evaluate current supply chain performance and identify optimization opportunities."
-                },
+                  description: "Evaluate current supply chain performance and identify optimization opportunities.";
+},
                 {
 "
 ""
                   step: "02",""
                   title: "Strategy",""
-                  description: "Develop comprehensive AI optimization strategy and implementation roadmap."
-                },
+                  description: "Develop comprehensive AI optimization strategy and implementation roadmap.";
+},
                 {
 "
 ""
                   step: "03",""
                   title: "Implementation",""
-                  description: "Deploy AI tools and establish optimization processes and workflows."
-                },
+                  description: "Deploy AI tools and establish optimization processes and workflows.";
+},
                 {
 "
 ""
                   step: "04",""
                   title: "Optimization",""
-                  description: "Continuously monitor, optimize, and improve supply chain performance."
-                }"
+                  description: "Continuously monitor, optimize, and improve supply chain performance.";
+}"
               ].map((step, index)  => (""
                 <div key={index} className="text-center">""
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">""
@@ -1164,26 +1164,26 @@ export { function };export default function AISupplyChainOptimization(...args: [
 ""
                   step: "01",""
                   title: "Assessment",""
-                  description: "Evaluate current supply chain performance and identify optimization opportunities.""
-                },
+                  description: "Evaluate current supply chain performance and identify optimization opportunities."";
+},
                 {}
 ""
                   step: "02",""
                   title: "Strategy",""
-                  description: "Develop comprehensive AI optimization strategy and implementation roadmap.""
-                },
+                  description: "Develop comprehensive AI optimization strategy and implementation roadmap."";
+},
                 {}
 ""
                   step: "03",""
                   title: "Implementation",""
-                  description: "Deploy AI tools and establish optimization processes and workflows.""
-                },
+                  description: "Deploy AI tools and establish optimization processes and workflows."";
+},
                 {}
 ""
                   step: "04",""
                   title: "Optimization",""
-                  description: "Continuously monitor, optimize, and improve supply chain performance.""
-                }
+                  description: "Continuously monitor, optimize, and improve supply chain performance."";
+}
               ].map((step, index)  => (""
                 <div key={index} className="text-center">""
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">""

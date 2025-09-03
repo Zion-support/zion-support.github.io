@@ -41,6 +41,6 @@ describe('PrivacyPolicy', () => {"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
 "
     render(<PrivacyPolicy /" >)
-    // Add more specific tests here
+    // Add more specific tests here;
 });
 })

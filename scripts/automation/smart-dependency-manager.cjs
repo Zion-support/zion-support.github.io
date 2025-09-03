@@ -62,8 +62,8 @@ class SmartDependencyManager {;
       await this.generateReport();
 ;
       console.log(`'✅ Smart Dependency Analysis completed successfully');
-    } catch (error) {  
-    } catch (error) {;
+    } catch (error) {  ;
+} catch (error) {;
 
       console.log(`✅ Smart Dependency Analysis completed successfully`);
     } catch (error) {
@@ -476,8 +476,8 @@ console.log(`✅ Applied ${updatesApplied} smart updates`);
     try {const packageJsonPath = require.resolve(`${packageName}/package.json`);
       const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, `utf8`));
       return packageJson.version;
-    } catch (error) {  
-    } catch (error) {;
+    } catch (error) {  ;
+} catch (error) {;
       return null;
       }
   }

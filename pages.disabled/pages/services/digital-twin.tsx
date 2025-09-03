@@ -107,38 +107,38 @@ export: { function }export default function DigitalTwin(...args: []):  ,{}
 "
                   icon: Cpu,""
                   title: "Real-time Monitoring",""
-                  description: "Continuous monitoring of physical assets with instant virtual representation updates."
-                },
+                  description: "Continuous monitoring of physical assets with instant virtual representation updates.";
+},
                 {
 "
                   icon: Eye,""
                   title: "Predictive Analytics",""
-                  description: "AI-powered predictions for maintenance, performance, and failure prevention."
-                },
+                  description: "AI-powered predictions for maintenance, performance, and failure prevention.";
+},
                 {
 "
                   icon: Zap,""
                   title: "Simulation & Testing",""
-                  description: "Test scenarios and changes in the virtual environment before physical implementation."
-                },
+                  description: "Test scenarios and changes in the virtual environment before physical implementation.";
+},
                 {
 "
                   icon: Settings,""
                   title: "Performance Optimization",""
-                  description: "Identify bottlenecks and optimize operations based on digital twin insights."
-                },
+                  description: "Identify bottlenecks and optimize operations based on digital twin insights.";
+},
                 {
 "
                   icon: Users,""
                   title: "Collaborative Planning",""
-                  description: "Enable teams to work together on virtual models and simulations."
-                },
+                  description: "Enable teams to work together on virtual models and simulations.";
+},
                 {
 "
                   icon: Globe,""
                   title: "IoT Integration",""
-                  description: "Seamlessly connect with IoT sensors and devices for real-time data."
-                }"
+                  description: "Seamlessly connect with IoT sensors and devices for real-time data.";
+}"
               ].map((feature, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4">""
@@ -153,33 +153,33 @@ export: { function }export default function DigitalTwin(...args: []):  ,{}
                 {}
                   icon: Cpu,""
                   title: "Real-time Monitoring",""
-                  description: "Continuous monitoring of physical assets with instant virtual representation updates.""
-                },
+                  description: "Continuous monitoring of physical assets with instant virtual representation updates."";
+},
                 {}
                   icon: Eye,""
                   title: "Predictive Analytics",""
-                  description: "AI-powered predictions for maintenance, performance, and failure prevention.""
-                },
+                  description: "AI-powered predictions for maintenance, performance, and failure prevention."";
+},
                 {}
                   icon: Zap,""
                   title: "Simulation & Testing",""
-                  description: "Test scenarios and changes in the virtual environment before physical implementation.""
-                },
+                  description: "Test scenarios and changes in the virtual environment before physical implementation."";
+},
                 {}
                   icon: Settings,""
                   title: "Performance Optimization",""
-                  description: "Identify bottlenecks and optimize operations based on digital twin insights.""
-                },
+                  description: "Identify bottlenecks and optimize operations based on digital twin insights."";
+},
                 {}
                   icon: Users,""
                   title: "Collaborative Planning",""
-                  description: "Enable teams to work together on virtual models and simulations.""
-                },
+                  description: "Enable teams to work together on virtual models and simulations."";
+},
                 {}
                   icon: Globe,""
                   title: "IoT Integration",""
-                  description: "Seamlessly connect with IoT sensors and devices for real-time data.""
-                }
+                  description: "Seamlessly connect with IoT sensors and devices for real-time data."";
+}
               ].map((feature, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4">""
@@ -476,16 +476,16 @@ export: { function }export default function DigitalTwin(...args: []):  ,{}
                   title: "Transportation",""
                   description: "Fleet management, route optimization, and vehicle performance monitoring.","
                   icon: Target,""
-                  benefits: ["Fleet management", "Route optimization", "Performance monitoring"]
-                },
+                  benefits: ["Fleet management", "Route optimization", "Performance monitoring"];
+},
                 {
 "
 ""
                   title: "Buildings & Facilities",""
                   description: "Building management, energy efficiency, and maintenance optimization.","
                   icon: Activity,""
-                  benefits: ["Building management", "Energy efficiency", "Maintenance optimization"]
-                }"
+                  benefits: ["Building management", "Energy efficiency", "Maintenance optimization"];
+}"
               ].map((application, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4">""
@@ -556,44 +556,44 @@ export: { function }export default function DigitalTwin(...args: []):  ,{}
                   title: 'Smart Cities',';
                   description: 'Manage urban infrastructure, traffic systems, and public services efficiently.',;
                   icon: Globe,';
-                  benefits: ['Traffic optimization', 'Infrastructure monitoring', 'Public services']
-                },
+                  benefits: ['Traffic optimization', 'Infrastructure monitoring', 'Public services'];
+},
                 {'
 ';
 '';
                   title: 'Healthcare',';
                   description: 'Patient monitoring, medical device management, and treatment optimization.',;
                   icon: Users,';
-                  benefits: ['Patient monitoring', 'Device management', 'Treatment optimization']
-                },
+                  benefits: ['Patient monitoring', 'Device management', 'Treatment optimization'];
+},
                 {'
 ';
 '';
                   title: 'Energy & Utilities',';
                   description: 'Grid monitoring, renewable energy optimization, and infrastructure management.',;
                   icon: Zap,';
-                  benefits: ['Grid monitoring', 'Energy optimization', 'Infrastructure management']
-                },
+                  benefits: ['Grid monitoring', 'Energy optimization', 'Infrastructure management'];
+},
                 {'
 ';
 '';
                   title: 'Transportation',';
                   description: 'Fleet management, route optimization, and vehicle performance monitoring.',;
                   icon: Target,';
-                  benefits: ['Fleet management', 'Route optimization', 'Performance monitoring']
-                },
+                  benefits: ['Fleet management', 'Route optimization', 'Performance monitoring'];
+},
                 {'
 ';
 '';
                   title: 'Buildings & Facilities',';
                   description: 'Building management, energy efficiency, and maintenance optimization.',;
                   icon: Activity,';
-                  benefits: ['Building management', 'Energy efficiency', 'Maintenance optimization']
-                }'
+                  benefits: ['Building management', 'Energy efficiency', 'Maintenance optimization'];
+}'
               ].map((application, index)  => (''
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300'>''
-                  <div className='w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4'>''
-                };
+                  <div className='w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4'>'';
+};
               ].map((application, index)  => ('''
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300>''
                   <div className='w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4>''

@@ -1,6 +1,6 @@
 import: React from 'react.ts';
 
-interface: CheckboxProps extends React.PropsWithChildren<{
+interface: CheckboxProps extends React.PropsWithChildren<{;
 }> {
   checked: anyanyanyanyanyanyanyanyanyanyanyanyanyanyboolean;
   onChange: (checked: boolean)                => void;

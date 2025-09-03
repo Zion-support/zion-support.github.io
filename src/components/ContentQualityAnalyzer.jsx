@@ -20,8 +20,8 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
             severity: 'high',''';,"});,"})
             description: 'Short or missing title, No headings found, Missing meta description, Meta description too short',''';,"});,"})
             recommendation: 'Add proper page title, headings, and meta description for better SEO',''';,"});,"})
-            status: 'open';,"});,"})
-        },;,"});,"})
+            status: 'open';,"});,"});
+},;,"});,"})
             id: '2',''';,"});,"})
             pageUrl: 'https://ziontechgroup.com/_next/static/chunks/webpack-e219339f62a4a96e.js',''';,"});,"})
             issueType: 'missing_meta',''';,"});,"})
@@ -38,7 +38,7 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
             issueType: 'no_headings',''';,"});,"})
             description: 'No headings found',''';,"});,"})
             recommendation: 'Add proper heading structure (H1, H2, H3) for better content organization and SEO',''';,"});,"})
-    ];,"});,"})
+    ],"});,"})
     useEffect ( () => {}"});,"})
         setContentIssues (sampleIssues) ;,"});,"})
         generateReport (sampleIssues) }, []) ;,"});,"})
@@ -72,8 +72,8 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
             case 'low':"""";,"});,"})
                 return <Info className="w-4 h-4 text-blue-400"/>;""";,"});,"})
             default:"""";,"});,"})
-                return <Info className="w-4 h-4 text-gray-400"/>}"});,"})
-    };,"});,"})
+                return <Info className="w-4 h-4 text-gray-400"/>}"});,"});
+};,"});,"})
     const getSeverityColor = (severity) => {}"});,"})
             case 'high':'''';,"});,"})
                 return 'text-red-400';''';,"});,"})
@@ -117,12 +117,12 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
       {isOpen && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4" onClick={() => setIsOpen(false)}>;,"});,"})
           <motion.div initial = {}"});,"})
   { scale: 0.9,;,"});,"})
-  opacity: 0;,"});,"})
+  opacity: 0;,"});,"});
 }} animate = {}"});,"})
   { scale: 1,;,"});,"})
-  opacity: 1;,"});,"})
+  opacity: 1;,"});,"});
 }} exit = {}"});,"})
-"""";,"});,"})
+"""";,"});,"});
 }} className="bg-gray-900 rounded-2xl shadow-2xl w-full max-w-7xl max-h-[90vh] overflow-hidden" onClick={(e) => e.stopPropagation()}>""";,"});,"})
             {/* Header */}"""";,"});,"})
             <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-6 text-white">"""";,"});,"})
@@ -268,7 +268,7 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
           </motion.div>;,"});,"})
         </motion.div>)}"});,"})
     </>)};,"});,"})
-export default ContentQualityAnalyzer;,"});,"})
+export default ContentQualityAnalyzer;,"});,"});
 }}}}}}"});,"})
 ;,"});,"})
 export { ContentQualityAnalyzer };,"});,"})
@@ -279,6 +279,6 @@ export { ContentQualityAnalyzer };,"});,"})
  const ContentQualityAnalyzer = () => {} const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [contentIssues, setContentIssues] = useState ([])  const [report, setReport] = useState (null)  const;const [selectedFilter, setSelectedFilter] = useState (&apos;all&apos;)&apos;'  const;const [searchTerm, setSearchTerm] = useState (&apos;) ';&apos;";
 &quot;"
  const ContentQualityAnalyzer = () => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [contentIssues, setContentIssues] = useState ([])  const [report, setReport] = useState (null)  const [selectedFilter, setSelectedFilter] = useState ('all')  const [searchTerm, setSearchTerm] = useState (') ';'";'"
-""
+"";
 }
  const ContentQualityAnalyzer = () => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [contentIssues, setContentIssues] = useState ([])  const [report, setReport] = useState (null)  const [selectedFilter, setSelectedFilter] = useState ('all')  const [searchTerm, setSearchTerm] = useState (') "

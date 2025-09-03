@@ -16,7 +16,7 @@ const EnhancedServicesShowcase = () => {}"});,"})
         { id: 'it-services', name: 'IT Services', icon: '🖥️' },''';,"});,"})
         { id: 'ai-services', name: 'AI Services', icon: '🤖' },''';,"});,"})
         { id: 'emerging-tech', name: 'Emerging Tech', icon: '🚀' }"});,"})
-    ];,"});,"})
+    ],"});,"})
     const filteredServices = enhancedServices2025.filter(service => {}"});,"})
         const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;,"});,"})
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;,"});,"})
@@ -28,42 +28,42 @@ const EnhancedServicesShowcase = () => {}"});,"})
             opacity: 1,;,"});,"})
             transition: {}"});,"})
                 staggerChildren: 0.1,;,"});,"})
-                delayChildren: 0.2;,"});,"})
-    };,"});,"})
+                delayChildren: 0.2;,"});,"});
+};,"});,"})
     const itemVariants = {}"});,"})
   hidden: { opacity: 0,;,"});,"})
-  y: 20;,"});,"})
+  y: 20;,"});,"});
 },;,"});,"})
             y: 0,;,"});,"})
             transition: { duration: 0.5 }"});,"})
-""";,"});,"})
-    };"""";,"});,"})
+""";,"});,"});
+};"""";,"});,"})
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">""";,"});,"})
       {/* Hero Section */}"""";,"});,"})
       <section className="py-20 px-4 sm:px-6 lg:px-8">"""";,"});,"})
         <div className="max-w-7xl mx-auto text-center">"""";,"});,"})
           <motion.h1 className="text-4xl md:text-6xl font-bold mb-6" initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,;,"});,"});
 }} whileInView = {}"});,"})
   { opacity: 1,;,"});,"})
-  y: 0;,"});,"})
+  y: 0;,"});,"});
 }} transition={{ duration: 0.6 }}>""";,"});,"})
             Comprehensive"""";,"});,"})
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">"""";,"});,"})
               {" "}Technology Solutions;,"});,"})
             </span>""";,"});,"})
           </motion.h1>"""";,"});,"})
-          <motion.p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto" initial = {}"});,"})
+          <motion.p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto" initial = {}"});,"});
 }} transition = {}"});,"})
   { duration: 0.6,;,"});,"})
-  delay: 0.2;,"});,"})
+  delay: 0.2;,"});,"});
 }}>;,"});,"})
             Discover our extensive portfolio of innovative micro SAAS services, enterprise IT solutions,;,"});,"})
             cutting - edge AI services, and emerging technology solutions designed to transform your business.;,"});,"})
           </motion.p>;,"});,"})
           {/* Contact Information */}"""";,"});,"})
           <motion.div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 mb-8 max-w-2xl mx-auto" initial = {}"});,"})
-  delay: 0.4;,"});,"})
+  delay: 0.4;,"});,"});
 }}>"""";,"});,"})
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">"""";,"});,"})
               <div className="text-center">"""";,"});,"})
@@ -148,11 +148,11 @@ const EnhancedServicesShowcase = () => {}"});,"})
       {/* Enhanced CTA Section */}"""";,"});,"})
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">"""";,"});,"})
         <div className="max-w-4xl mx-auto text-center">"""";,"});,"})
-          <motion.h2 className="text-3xl md:text-4xl font-bold text-white mb-6" initial = {}"});,"})
+          <motion.h2 className="text-3xl md:text-4xl font-bold text-white mb-6" initial = {}"});,"});
 }} transition={{ duration: 0.6 }}>;,"});,"})
             Ready to Transform Your Business?""";,"});,"})
           </motion.h2>"""";,"});,"})
-          <motion.p className="text-xl text-gray-300 mb-8" initial = {}"});,"})
+          <motion.p className="text-xl text-gray-300 mb-8" initial = {}"});,"});
 }}>';,"});,"})
             Let's discuss how our innovative services can help drive your success and competitive advantage;,"});,"})
           </motion.p>""";,"});,"})
@@ -180,7 +180,7 @@ const EnhancedServicesShowcase = () => {}"});,"})
             <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>"""";,"});,"})
             <p>Website: <a href="https://ziontechgroup.com" className="text-blue-400 hover:text-blue-300">https://ziontechgroup.com</a></p>;,"});,"})
     </div>)};,"});,"})
-export default EnhancedServicesShowcase;,"});,"})
+export default EnhancedServicesShowcase;,"});,"});
 }}}"});,"})
 export { EnhancedServicesShowcase };,"});,"})
 import React { useState } from 'react';
@@ -213,7 +213,7 @@ import { enhancedServices2025 } from &apos;../data/enhanced-services-2025';&apos
   const [selectedCategory, setSelectedCategory] = useState(&apos;all&apos;)';&apos;&apos;
   const [searchTerm, setSearchTerm] = useState(&apos;&apos;)';&apos;&apos;
   const categories = [&apos;&apos { id: &apos;all&apos;, name: &apos;All Services&apos;, icon: &apos;🌟&apos},&apos { id: &apos;micro-saas&apos;, name: &apos;Micro SAAS&apos;, icon: &apos;💻&apos},&apos { id: &apos;it-services&apos;, name: &apos;IT Services&apos;, icon: &apos;🖥️&apos},&apos { id: &apos;ai-services&apos;, name: &apos;AI Services&apos;, icon: &apos;🤖&apos},&apos { id: &apos;emerging-tech&apos;, name: &apos;Emerging Tech&apos;, icon: &apos;🚀&apos}
-  ];&apos;&apos;
+  ]&apos;&apos;
 import React { useState } from 'react'';'
 import { Link } from 'react-router-dom'';'
 import { motion } from 'framer-motion'';'
@@ -223,7 +223,7 @@ import { motion } from 'framer-motion'';'
   const [searchTerm, setSearchTerm] = useState('')';'
   const categories = [''
     { id: 'all', name: 'All Services', icon: '🌟' }, '{ id: 'micro-saas', name: 'Micro SAAS', icon: '💻' },'{ id: 'it-services', name: 'IT Services', icon: '🖥️' }, '{ id: 'ai-services', name: 'AI Services', icon: '🤖' },'{ id: 'emerging-tech', name: 'Emerging Tech', icon: '🚀' }
-  ];
+  ]
   const filteredServices = enhancedServices2025.filter(service => {}
     const;const;const matchesSearch =;
       service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;

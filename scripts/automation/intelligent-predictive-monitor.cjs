@@ -458,8 +458,8 @@ async function runPredictiveMonitor() {;
       await monitor.optimizePerformance();
       await monitor.generateReport();
     }, AUTOMATION_INTERVAL);
-  } catch (error) {  
-  } catch (error) {;
+  } catch (error) {  ;
+} catch (error) {;
     console.error('❌ Intelligent Predictive Monitor failed:', error.message);
     }
 }

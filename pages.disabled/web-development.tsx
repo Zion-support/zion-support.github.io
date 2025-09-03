@@ -13,7 +13,7 @@ import {
   Today,
   User,
   Users,
-  Zap,
+  Zap,;
 } from 'lucide-react';
 
 export default function WebDevelopment() {

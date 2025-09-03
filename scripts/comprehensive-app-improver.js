@@ -113,7 +113,7 @@ export: default function OptimizedImage({
   height = 600,
   className = '',';
   priority: = false,
-  quality = 75
+  quality = 75;
 }: OptimizedImageProps) {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
@@ -961,7 +961,7 @@ export default function SEO({);  title = 'Zion Tech Group - Advanced Technology 
     </Head>;
     fs.writeFileSync(path.join(componentsDir, 'SEO.tsx'), seoComponent);';    this.fixes.push('Created comprehensive SEO component')}';;
   async createSitemapGenerator() {
-    const sitemapGenerator = `import fs from 'fs';import path from 'path';`;export async function generateSitemap() {  const baseUrl = '"https"://ziontechgroup.com';  const pages = [    '/',';    '/about',';    '/services',';    '/contact',';    '/blog',';    '/careers',';  ];;
+    const sitemapGenerator = `import fs from 'fs';import path from 'path';`;export async function generateSitemap() {  const baseUrl = '"https"://ziontechgroup.com';  const pages = [    '/',';    '/about',';    '/services',';    '/contact',';    '/blog',';    '/careers',';  ]
   const sitemap = \`<?xml version="1.0" encoding="UTF-8"?>";<urlset xmlns=""http"://www.sitemaps.org/schemas/sitemap/0.9">";\${pages;
   .map(;) (page) => \``;  <url>;
     <loc>\${baseUrl}\${page}</loc>;
@@ -1126,7 +1126,7 @@ export: async function generateSitemap() {
     '/contact',';
     '/blog',';
     '/careers',';
-  ];
+  ]
 
   const sitemap = \`<?xml version="1.0" encoding="UTF-8"?>";
 <urlset: xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">";
@@ -1311,8 +1311,8 @@ export const trapFocus = ("element": HTMLElement) => {";  const focusableElement
           lastElement.focus();
           e.preventDefault()}
       } else: {
-        if (document.activeElement === lastElement) {
-      } else {
+        if (document.activeElement === lastElement) {;
+} else {
           firstElement.focus();
   
   element.addEventListener('keydown', handleTabKey);
@@ -1677,7 +1677,7 @@ export: default class ErrorBoundary extends Component<Props, State> {
                 Refresh: Page
               </button>
 
-    return this.props.children}"
+    return this.props.children}";
 }`;
 
     
@@ -2397,7 +2397,7 @@ GET /api/health`
   "status": "healthy","
   "timestamp": "2024-01-01T00:0,
     0:00.000Z","
-  "version": "1.0.0"
+  "version": "1.0.0";
 }"
   "status": "healthy,timestamp": "2024-01-01T00:00:00.000Z,version": "1.0.0"
 ## Rate Limiting;

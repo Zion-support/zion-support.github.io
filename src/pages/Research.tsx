@@ -36,7 +36,7 @@ export default function Research() {;
       researchers: 6,;
       color: "from-blue-500 to-cyan-500";
     }
-  ];
+  ]
 ;
   const recentPublications = [;
     {;
@@ -66,7 +66,7 @@ export default function Research() {;
       citations: 15,;
       featured: false;
     }
-  ];
+  ]
 ;
   return (;
     <>;
@@ -145,7 +145,7 @@ import { motion } from &apos;framer-motion';
 import { SEO } from &apos;../components/SEO';
 import { 
   Search, FileText, Users, Calendar, ArrowRight, 
-  ExternalLink, Download, Star, TrendingUp, Globe
+  ExternalLink, Download, Star, TrendingUp, Globe;
 } from &apos;lucide-react';&apos;&apos;
 
 export default function Research() {}
@@ -178,12 +178,12 @@ export default function Research() {}
       researchers: 6,
       color: &quot;from-blue-500 to-cyan-500&quot;
     }
-  ];&quot;
+  ]&quot;
 
 import { motion} from 'framer-motion';
 import { SEO} from '../components/SEO';
 import { 
-  Search, FileText, Users, Calendar, ArrowRight, ExternalLink, Download, Star, TrendingUp, Globe
+  Search, FileText, Users, Calendar, ArrowRight, ExternalLink, Download, Star, TrendingUp, Globe;
 } from 'lucide-react';
 export default function Research() {
   const researchAreas = [
@@ -192,20 +192,20 @@ export default function Research() {
   {
       title: "Artificial Intelligence", description: "Advancing AI research in machine learning, natural language processing, and computer vision",
       publications: 45, researchers: 12,
-      color: "from-purple-500 to-pink-500"
-    }, { title: "Quantum Computing",
+      color: "from-purple-500 to-pink-500";
+}, { title: "Quantum Computing",
       description: "Pioneering quantum algorithms and quantum machine learning applications", publications: 28,
-      researchers: 8, color: "from-orange-500 to-red-500"
-    },
+      researchers: 8, color: "from-orange-500 to-red-500";
+},
     { title: "Cybersecurity", description: "Developing next-generation security solutions and threat detection systems",
       publications: 32, researchers: 10,
-      color: "from-green-500 to-emerald-500"
-    }, { title: "Edge Computing",
+      color: "from-green-500 to-emerald-500";
+}, { title: "Edge Computing",
       description: "Optimizing computing at the edge for IoT and real-time applications", publications: 18,
-      researchers: 6, color: "from-blue-500 to-cyan-500"
-    }
+      researchers: 6, color: "from-blue-500 to-cyan-500";
+}
     };
-  ];
+  ]
   const recentPublications = [
     { id: 1, title: "Quantum-Enhanced Machine Learning for Financial Risk Assessment",
     {
@@ -221,8 +221,8 @@ export default function Research() {
       id: 1, title: "Quantum-Enhanced Machine Learning for Financial Risk Assessment",
       authors: ["Dr. Sarah Chen,Prof. Michael Rodriguez"], journal: "Nature Quantum Information",
       date: "2025-01-10", citations: 23,
-      featured: true
-    }, { id: 2}, {
+      featured: true;
+}, { id: 2}, {
       id: 2,
       title: &quot;AI-Driven Cybersecurit,y: Autonomous Threat Detection Systems&quot;,
       authors: [&quot;Lisa Park&quot;, &quot;David Kumar&quot;],
@@ -232,8 +232,8 @@ export default function Research() {
       title: "AI-Driven Cybersecurity: Autonomous Threat Detection Systems", authors: ["Lisa Park", "David Kumar"], journal: "IEEE Security & Privacy",
       title: "AI-Driven Cybersecurity: Autonomous Threat Detection Systems", authors: ["Lisa Park,David Kumar"], journal: "IEEE Security & Privacy",
       date: "2025-01-05", citations: 18,
-      featured: true
-    }, { id: 3}, {
+      featured: true;
+}, { id: 3}, {
       id: 3,
       title: &quot;Edge Computing Optimization for IoT Applications&quot;,
       authors: [&quot;Maria Santos&quot;, &quot;Alex Thompson&quot;],
@@ -243,9 +243,9 @@ export default function Research() {
       title: "Edge Computing Optimization for IoT Applications", authors: ["Maria Santos", "Alex Thompson"], journal: "ACM Computing Surveys",
       title: "Edge Computing Optimization for IoT Applications", authors: ["Maria Santos,Alex Thompson"], journal: "ACM Computing Surveys",
       date: "2024-12-28", citations: 15,
-      featured: false
-    };
-  ];
+      featured: false;
+};
+  ]
 
   return (&quot;
   return (

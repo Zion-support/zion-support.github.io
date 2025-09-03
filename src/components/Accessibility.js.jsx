@@ -17,9 +17,9 @@ export const useAccessibility = () => {}"});,"})
 ''';,"});,"})
     throw new Error('''';,"});,"})
       'useAccessibility must be used within an AccessibilityProvider';,"});,"})
-    );,"});,"})
-  }"});,"})
-  return context;,"});,"})
+    );,"});,"});
+}"});,"})
+  return context;,"});,"});
 };,"});,"})
 // Accessibility Provider Component;,"});,"})
 export const AccessibilityProvider = ({ children }) => {}"});,"})
@@ -38,9 +38,9 @@ export const AccessibilityProvider = ({ children }) => {}"});,"})
       setHighContrast(settings.highContrast || false);,"});,"})
       setReducedMotion(settings.reducedMotion || false);,"});,"})
       setFontSize(settings.fontSize || 'medium');,"});,"})
-      setColorBlindMode(settings.colorBlindMode || 'none');,"});,"})
-    }"});,"})
-  }, []);,"});,"})
+      setColorBlindMode(settings.colorBlindMode || 'none');,"});,"});
+}"});,"});
+}, []);,"});,"})
   // Save settings to localStorage;,"});,"})
   useEffect(() => {}"});,"})
     const settings = {}"});,"})
@@ -51,8 +51,8 @@ export const AccessibilityProvider = ({ children }) => {}"});,"})
     localStorage.setItem('''';,"});,"})
       'zion-accessibility-settings',;,"});,"})
       JSON.stringify(settings);,"});,"})
-    );,"});,"})
-  }, [highContrast, reducedMotion, fontSize, colorBlindMode]);,"});,"})
+    );,"});,"});
+}, [highContrast, reducedMotion, fontSize, colorBlindMode]);,"});,"})
   // Apply accessibility settings to document;,"});,"})
   useEffect(() => {}"});,"})
     const root = document.documentElement;,"});,"})
@@ -61,25 +61,25 @@ export const AccessibilityProvider = ({ children }) => {}"});,"})
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
-      root.classList.add('high-contrast');,"});,"})
-    } else {}"});,"})
+      root.classList.add('high-contrast');,"});,"});
+} else {}"});,"})
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
-      root.classList.remove('high-contrast');,"});,"})
-    }"});,"})
+      root.classList.remove('high-contrast');,"});,"});
+}"});,"})
     // Reduced motion;,"});,"})
     if (reducedMotion) {}"});,"})
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
-      root.classList.add('reduced-motion');,"});,"})
-    } else {}"});,"})
+      root.classList.add('reduced-motion');,"});,"});
+} else {}"});,"})
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
-      root.classList.remove('reduced-motion');,"});,"})
-    }'';,"});,"})
+      root.classList.remove('reduced-motion');,"});,"});
+}'';,"});,"})
     // Font size''';,"});,"})
     root.style.fontSize ='''';,"});,"})
       fontSize === 'small' ? '14px' : fontSize === 'large' ? '18px' : '16px';'';,"});,"})
@@ -91,8 +91,8 @@ export const AccessibilityProvider = ({ children }) => {}"});,"})
           ? 'url(#protanopia)''''';,"});,"})
           : colorBlindMode === 'deuteranopia''''';,"});,"})
             ? 'url(#deuteranopia)''''';,"});,"})
-            : 'url(#tritanopia);,"});,"})
-  }, [highContrast, reducedMotion, fontSize, colorBlindMode]);,"});,"})
+            : 'url(#tritanopia);,"});,"});
+}, [highContrast, reducedMotion, fontSize, colorBlindMode]);,"});,"})
   const toggleReducedMotion = () => setReducedMotion(!reducedMotion);,"});,"})
   const value = {}"});,"})
     highContrast,;,"});,"})
@@ -107,7 +107,7 @@ export const AccessibilityProvider = ({ children }) => {}"});,"})
     <AccessibilityContext.Provider value={value}>;,"});,"})
       {children}"});,"})
     </AccessibilityContext.Provider>;,"});,"})
-  );,"});,"})
+  );,"});,"});
 };,"});,"})
 // Accessibility Panel Component;,"});,"})
 export const AccessibilityPanel = () => {}"});,"})
@@ -131,8 +131,8 @@ export const AccessibilityPanel = () => {}"});,"})
         event.key === 'A';,"});,"})
       ) {}"});,"})
         event.preventDefault();,"});,"})
-        setIsOpen(!isOpen);,"});,"})
-      }"});,"})
+        setIsOpen(!isOpen);,"});,"});
+}"});,"})
       // Ctrl/Cmd + Shift + H to toggle high contrast;,"});,"})
       if();,"});,"})
         (event.ctrlKey || event.metaKey) &&';,"});,"})
@@ -140,8 +140,8 @@ export const AccessibilityPanel = () => {}"});,"})
         event.key === 'H';,"});,"})
       ) {}"});,"})
         event.preventDefault();,"});,"})
-        toggleHighContrast();,"});,"})
-      }"});,"})
+        toggleHighContrast();,"});,"});
+}"});,"})
       // Ctrl/Cmd + Shift + M to toggle reduced motion;,"});,"})
       if();,"});,"})
         (event.ctrlKey || event.metaKey) &&';,"});,"})
@@ -149,12 +149,12 @@ export const AccessibilityPanel = () => {}"});,"})
         event.key === 'M';,"});,"})
       ) {}"});,"})
         event.preventDefault();,"});,"})
-        toggleReducedMotion();,"});,"})
-      }'';,"});,"})
-    };''';,"});,"})
+        toggleReducedMotion();,"});,"});
+}'';,"});,"});
+};''';,"});,"})
     window.addEventListener('keydown', handleKeyDown);''';,"});,"})
-    return () => window.removeEventListener('keydown', handleKeyDown);,"});,"})
-  }, [isOpen, toggleHighContrast, toggleReducedMotion]);,"});,"})
+    return () => window.removeEventListener('keydown', handleKeyDown);,"});,"});
+}, [isOpen, toggleHighContrast, toggleReducedMotion]);,"});,"})
   return ();,"});,"})
     <>;,"});,"})
       {/* Floating Accessibility Button */}"});,"})
@@ -220,8 +220,8 @@ export const AccessibilityPanel = () => {}"});,"})
 ';,"});,"})
                       highContrast'';,"});,"})
                         ? 'bg-zion-cyan text-white''';,"});,"})
-                        : 'border-zion-cyan/30 text-zion-cyan';,"});,"})
-                    }"});,"})
+                        : 'border-zion-cyan/30 text-zion-cyan';,"});,"});
+}"});,"})
                   >""";,"});,"})
                     {highContrast ? ("""";,"});,"})
                       <Eye className="w-4 h-4" />""";,"});,"})
@@ -249,8 +249,8 @@ export const AccessibilityPanel = () => {}"});,"})
 ';,"});,"})
                       reducedMotion'';,"});,"})
                         ? 'bg-zion-cyan text-white''';,"});,"})
-                        : 'border-zion-cyan/30 text-zion-cyan';,"});,"})
-                    }"});,"})
+                        : 'border-zion-cyan/30 text-zion-cyan';,"});,"});
+}"});,"})
                   >""";,"});,"})
                     {reducedMotion ? ("""";,"});,"})
                       <VolumeX className="w-4 h-4" />""";,"});,"})
@@ -275,8 +275,8 @@ export const AccessibilityPanel = () => {}"});,"})
 ''';,"});,"})
                           fontSize === size'''';,"});,"})
                             ? 'bg-zion-cyan text-white''''';,"});,"})
-                            : 'border-zion-cyan/30 text-zion-cyan';,"});,"})
-                        }"});,"})
+                            : 'border-zion-cyan/30 text-zion-cyan';,"});,"});
+}"});,"})
                       >;,"});,"})
                         {size.charAt(0).toUpperCase() + size.slice(1)}"});,"})
                       </Button>;,"});,"})
@@ -295,8 +295,8 @@ export const AccessibilityPanel = () => {}"});,"})
                           key={mode}"});,"})
                           variant={}"});,"})
 ';,"});,"})
-                            colorBlindMode === mode ? 'default' : 'outline'""";,"});,"})
-                          }"""";,"});,"})
+                            colorBlindMode === mode ? 'default' : 'outline'""";,"});,"});
+}"""";,"});,"})
                           size="sm""";,"});,"})
                           onClick={() => setColorBlindMode(mode)}"});,"})
                           className={}"});,"})
@@ -305,8 +305,8 @@ export const AccessibilityPanel = () => {}"});,"})
 ''';,"});,"})
                             colorBlindMode === mode'''';,"});,"})
                               ? 'bg-zion-cyan text-white''''';,"});,"})
-                              : 'border-zion-cyan/30 text-zion-cyan';,"});,"})
-                          }"});,"})
+                              : 'border-zion-cyan/30 text-zion-cyan';,"});,"});
+}"});,"})
                         >;,"});,"})
                           {mode.charAt(0).toUpperCase() + mode.slice(1)}"});,"})
                         </Button>;,"});,"})
@@ -355,7 +355,7 @@ export const AccessibilityPanel = () => {}"});,"})
         )}"});,"})
       </AnimatePresence>;,"});,"})
     </>;,"});,"})
-  );,"});,"})
+  );,"});,"});
 };,"});,"})
 // Skip to Content Link;,"});,"})
 export const SkipToContent = () => (""";,"});,"})
@@ -382,19 +382,19 @@ export const useFocusTrap = isActive => {}"});,"})
         if(e.shiftKey) {}"});,"})
           if(document.activeElement === firstFocusableElement) {}"});,"})
             e.preventDefault();,"});,"})
-            lastFocusableElement.focus();,"});,"})
-          }"});,"})
-        } else {}"});,"})
+            lastFocusableElement.focus();,"});,"});
+}"});,"});
+} else {}"});,"})
           if(document.activeElement === lastFocusableElement) {}"});,"})
             e.preventDefault();,"});,"})
-            firstFocusableElement.focus();,"});,"})
-          }"});,"})
-        }';,"});,"})
-      }'';,"});,"})
-    };''';,"});,"})
+            firstFocusableElement.focus();,"});,"});
+}"});,"});
+}';,"});,"});
+}'';,"});,"});
+};''';,"});,"})
     document.addEventListener('keydown', handleTabKey);''';,"});,"})
-    return () => document.removeEventListener('keydown', handleTabKey);,"});,"})
-  }, [isActive]);,"});,"})
+    return () => document.removeEventListener('keydown', handleTabKey);,"});,"});
+}, [isActive]);,"});,"});
 };,"});,"})
 // Screen Reader Only Text""";,"});,"})
 export const SrOnly = ({ children }) => ("""";,"});,"})
@@ -473,7 +473,7 @@ export const AccessibilityProvider = ({ children }) => {}
 ''
 ''
 ''''
-      root.classList.remove('reduced-motion')', '
+      root.classList.remove('reduced-motion')', ';
 }''
     // Font size''''
     root.style.fontSize =''''
@@ -486,7 +486,7 @@ export const AccessibilityProvider = ({ children }) => {}
           ? 'url(#protanopia)'''''
           : colorBlindMode === 'deuteranopia'''''
             ? 'url(#deuteranopia)'''''
-            : 'url(#tritanopia), '
+            : 'url(#tritanopia), ';
 }, [highContrast, reducedMotion, fontSize, colorBlindMode])
   const toggleReducedMotion = () => setReducedMotion(!reducedMotion)
   const value = {}
@@ -527,10 +527,10 @@ export const AccessibilityPanel = () => {}
         event.key === 'M'
       ) {}
         event.preventDefault()""
-        toggleReducedMotion()', '
+        toggleReducedMotion()', ';
 }''}';'
     window.addEventListener('keydown', handleKeyDown)';'
-    return () => window.removeEventListener('keydown', handleKeyDown)}, [isOpen, toggleHighContrast, toggleReducedMotion])
+    return () => window.removeEventListener('keydown', handleKeyDown)}, [isOpen, toggleHighContrast, toggleReducedMotion]);
 }
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)}, [isOpen, toggleHighContrast, toggleReducedMotion])
@@ -676,7 +676,7 @@ export const AccessibilityPanel = () => {}
                         <Button key={mode}
                           variant={}""
 ''
-                            colorBlindMode === mode ? 'default' : 'outline'''', '
+                            colorBlindMode === mode ? 'default' : 'outline'''', ';
 }''''
                           size='sm'''
                           onClick={() =" > setColorBlindMode(mode)}"
@@ -766,8 +766,8 @@ export const useFocusTrap = isActive => {}
         } else {}
           if(document.activeElement === lastFocusableElement) {}
             e.preventDefault()
-            firstFocusableElement.focus()}","
-}', '
+            firstFocusableElement.focus()}",";
+}', ';
 }''}';'
     document.addEventListener('keydown', handleTabKey)';'
     return () => document.removeEventListener('keydown', handleTabKey)}, [isActive])}""
@@ -776,7 +776,7 @@ export const SrOnly = ({ children }) => (''''
   <span className='sr-only'>{children}</span>
 )""
 export default AccessibilityPanel'';''
-'''''"'"
+'''''"'";
 }
     document.addEventListener('keydown', handleTabKey)
     return () => document.removeEventListener('keydown', handleTabKey)}, [isActive])}"

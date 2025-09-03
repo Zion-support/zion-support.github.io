@@ -4,8 +4,8 @@
   "summary": {
     "totalFiles": 1542,
     "fixes": 1542,
-    "success": true
-  },
+    "success": true;
+},
   "logs": [
     "[2025-09-02T14:56:08.002Z] [INFO] Starting comprehensive error fixing...",
     "[2025-09-02T14:56:08.002Z] [INFO] Fixing common syntax errors...",
@@ -4362,5 +4362,5 @@
     "fixed_hooks/useResponsive.ts",
     "syntax_errors"
   ],
-  "recommendations": ["Review fixed syntax errors to ensure correctness"]
+  "recommendations": ["Review fixed syntax errors to ensure correctness"];
 }

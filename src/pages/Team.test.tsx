@@ -41,6 +41,6 @@ describe('Team', () => {"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
 "
     render(<Team /" >)
-    // Add more specific tests here
+    // Add more specific tests here;
 });
 })

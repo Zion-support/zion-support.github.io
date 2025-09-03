@@ -12,7 +12,7 @@ export default function FuturisticHero({
   children, 
   title, 
   subtitle, 
-  className = "bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20" 
+  className = "bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20" ;
 }: FuturisticHeroProps) {
   return (
     <div className={className}>

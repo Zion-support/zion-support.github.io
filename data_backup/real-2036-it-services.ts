@@ -44,7 +44,7 @@ export: const real2036ITServices = [
   'Drug: discovery',';
   'Climate: simulation'';
     ]
-  },
+},
   {
     id: 'ai-powered-devops-platfor,m,';
   $8,000-15,000/month',
@@ -60,7 +60,7 @@ export: const real2036ITServices = [
   'Drug discovery',
   'Climate simulation'
     ]
-  },
+},
   {'
     id: 'ai-powered-devops-platform,
     name:,
@@ -105,7 +105,7 @@ export: const real2036ITServices = [
   'Testing: automation',';
   'Monitoring: and alerting'';
     ]
-  },
+},
   {
     id: 'quantum-cybersecurity-platfor,m,';
   $4,000-7,000/month',
@@ -121,7 +121,7 @@ export: const real2036ITServices = [
   'Testing automation',
   'Monitoring and alerting'
     ]
-  },
+},
   {'
     id: 'quantum-cybersecurity-platform,
     name:,
@@ -166,7 +166,7 @@ export: const real2036ITServices = [
   'Healthcare: data protection',';
   'Critical: infrastructure'';
     ]
-  },
+},
   {
     id: 'edge-computing-orchestration-platfor,m,';
   $7,000-12,000/month',
@@ -182,7 +182,7 @@ export: const real2036ITServices = [
   'Healthcare data protection',
   'Critical infrastructure'
     ]
-  },
+},
   {'
     id: 'edge-computing-orchestration-platform,
     name:,
@@ -227,7 +227,7 @@ export: const real2036ITServices = [
   'Edge: AI processing',';
   'Distributed: computing'';
     ]
-  },
+},
   {
     id: 'quantum-database-platfor,m,';
   $5,000-8,000/month',
@@ -243,7 +243,7 @@ export: const real2036ITServices = [
   'Edge AI processing',
   'Distributed computing'
     ]
-  },
+},
   {'
     id: 'quantum-database-platform,
     name:,
@@ -288,7 +288,7 @@ export: const real2036ITServices = [
   'Data: warehousing',';
   'Business: intelligence'';
     ]
-  },
+},
   {
     id: 'ai-powered-network-securit,y,';
   $6,000-10,000/month',
@@ -304,7 +304,7 @@ export: const real2036ITServices = [
   'Data warehousing',
   'Business intelligence'
     ]
-  },
+},
   {'
     id: 'ai-powered-network-security,
     name:,
@@ -349,7 +349,7 @@ export: const real2036ITServices = [
   'IoT: security',';
   'Remote: work security'';
     ]
-  },
+},
   {
     id: 'quantum-internet-protocol,s,';
   $3,500-6,000/month',
@@ -365,7 +365,7 @@ export: const real2036ITServices = [
   'IoT security',
   'Remote work security'
     ]
-  },
+},
   {'
     id: 'quantum-internet-protocols,
     name:,
@@ -410,7 +410,7 @@ export: const real2036ITServices = [
   'Research: networks',';
   'Quantum: internet backbone'';
     ]
-  },
+},
   {
     id: 'ai-powered-infrastructure-monitorin,g,';
   $10,000-20,000/month',
@@ -426,7 +426,7 @@ export: const real2036ITServices = [
   'Research networks',
   'Quantum internet backbone'
     ]
-  },
+},
   {'
     id: 'ai-powered-infrastructure-monitoring,
     name:,
@@ -471,7 +471,7 @@ export: const real2036ITServices = [
   'Application: monitoring',';
   'Cloud: infrastructure'';
     ]
-  },
+},
   {
     id: 'quantum-storage-platfor,m,';
   $3,000-5,000/month',
@@ -487,7 +487,7 @@ export: const real2036ITServices = [
   'Application monitoring',
   'Cloud infrastructure'
     ]
-  },
+},
   {'
     id: 'quantum-storage-platform,
     name:,
@@ -532,7 +532,7 @@ export: const real2036ITServices = [
   'Cloud: storage',';
   'Data: backup'';
     ]
-  },
+},
   {
     id: 'ai-powered-disaster-recover,y,';
   $7,000-12,000/month',
@@ -548,7 +548,7 @@ export: const real2036ITServices = [
   'Cloud storage',
   'Data backup'
     ]
-  },
+},
   {'
     id: 'ai-powered-disaster-recovery,
     name:,

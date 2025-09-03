@@ -664,14 +664,14 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
 '
                   tier.popular''
                     ? 'border-red-500 scale-105'''`
-                    : 'border-red-500/20'``
-                }`}
+                    : 'border-red-500/20'``;
+}`}
               >"
                 className={`relative bg-gradient-to-br from-slate-800/80 to-red-800/80 backdrop-blur-sm rounded-2xl p-8 border-2 ${}
                   tier.popular'
                     ? 'border-red-500 scale-105''
-  '`: 'border-red-500/20``
-                }`}
+  '`: 'border-red-500/20``;
+}`}
 
               >"{tier.popular && (""
 

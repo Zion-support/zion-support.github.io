@@ -56,8 +56,8 @@ async function runFrontMaximizer() {
       console.log(`'⚠️  Build failed but continuing...');
       return;
       }
-    
-    } catch (error) {
+    ;
+} catch (error) {
       console.log(`⚠️  Build failed but continuing...`);
       return;
     }
@@ -82,8 +82,8 @@ async function runFrontMaximizer() {
     } catch (error) {  
       console.log('⚠️  Image optimization failed but continuing...');
       }
-    
-    } catch (error) {;
+    ;
+} catch (error) {;
       console.log('⚠️  Image optimization failed but continuing...');
     }
     ;
@@ -95,8 +95,8 @@ async function runFrontMaximizer() {
     } catch (error) {  
       console.log('ℹ️  CSS optimization not available');
       }
-    
-    } catch (error) {;
+    ;
+} catch (error) {;
       console.log('ℹ️  CSS optimization not available');
     }
     ;
@@ -108,8 +108,8 @@ async function runFrontMaximizer() {
     } catch (error) {  
       console.log('⚠️  Bundle analysis failed but continuing...');
       }
-    
-    } catch (error) {;
+    ;
+} catch (error) {;
       console.log('⚠️  Bundle analysis failed but continuing...');
     }
     ;
@@ -131,15 +131,15 @@ async function runFrontMaximizer() {
     const report = {
       timestamp: new Date().toISOString(),
       summary: 'Front maximizer completed',
-      status: `completed`
-    };
+      status: `completed`;
+};
     
     const reportPath = path.join(process.cwd(), `front-maximizer-report.json`);
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log(✅ Front maximizer report saved to ${reportPath});
     
     console.log(`✅ Continuous front maximizer completed successfully`);
-    
-  } catch (error) {  
+    ;
+} catch (error) {  
     console.error(`❌ Continuous front maximizer failed:`, error.message);
     // Don`t exit, just log the error and continue;
     }
@@ -152,8 +152,8 @@ async function runContinuous() {console.log(🚀 Starting continuous front maxim
   await runFrontMaximizer();
   
   // Set up continuous execution;
-  setInterval(async () => {
-    } catch (error) {;
+  setInterval(async () => {;
+} catch (error) {;
       console.log('⚠️  Critical CSS extraction failed but continuing...');
     }
     ;

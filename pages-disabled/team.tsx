@@ -40,7 +40,7 @@ import {
   Heart,
   Sparkles,
   CheckCircle,
-  ArrowRight
+  ArrowRight;
 } from
   'lucide-react';
 
@@ -58,8 +58,8 @@ const Team: React.FC = () => {
       linkedin: "https://linkedin.com/in/sarahjohnson",
       twitter: "https://twitter.com/sarahjohnson",
       email: "sarah@ziontechgroup.com",
-      featured: true
-    },
+      featured: true;
+},
     {
       id: 2,
       name: "Michael Chen",
@@ -72,8 +72,8 @@ const Team: React.FC = () => {
       linkedin: "https://linkedin.com/in/michaelchen",
       twitter: "https://twitter.com/michaelchen",
       email: "michael@ziontechgroup.com",
-      featured: true
-    },
+      featured: true;
+},
     {
       id: 3,
       name: "Emily Rodriguez",
@@ -86,8 +86,8 @@ const Team: React.FC = () => {
       linkedin: "https://linkedin.com/in/emilyrodriguez",
       twitter: "https://twitter.com/emilyrodriguez",
       email: "emily@ziontechgroup.com",
-      featured: true
-    },
+      featured: true;
+},
     {
       id: 4,
       name: "David Kim",
@@ -100,8 +100,8 @@ const Team: React.FC = () => {
       linkedin: "https://linkedin.com/in/davidkim",
       twitter: "https://twitter.com/davidkim",
       email: "david@ziontechgroup.com",
-      featured: false
-    },
+      featured: false;
+},
     {
       id: 5,
       name: "Lisa Wang",
@@ -114,8 +114,8 @@ const Team: React.FC = () => {
       linkedin: "https://linkedin.com/in/lisawang",
       twitter: "https://twitter.com/lisawang",
       email: "lisa@ziontechgroup.com",
-      featured: false
-    },
+      featured: false;
+},
     {
       id: 6,
       name: "James Wilson",
@@ -128,8 +128,8 @@ const Team: React.FC = () => {
       linkedin: "https://linkedin.com/in/jameswilson",
       twitter: "https://twitter.com/jameswilson",
       email: "james@ziontechgroup.com",
-      featured: false
-    },
+      featured: false;
+},
     {
       id: 7,
       name: "Maria Garcia",
@@ -142,8 +142,8 @@ const Team: React.FC = () => {
       linkedin: "https://linkedin.com/in/mariagarcia",
       twitter: "https://twitter.com/mariagarcia",
       email: "maria@ziontechgroup.com",
-      featured: false
-    },
+      featured: false;
+},
     {
       id: 8,
       name: "Alex Thompson",
@@ -156,9 +156,9 @@ const Team: React.FC = () => {
       linkedin: "https://linkedin.com/in/alexthompson",
       twitter: "https://twitter.com/alexthompson",
       email: "alex@ziontechgroup.com",
-      featured: false
-    }
-  ];
+      featured: false;
+}
+  ]
 
   const leadership = teamMembers.filter(member => member.featured);
   const otherMembers = teamMembers.filter(member => !member.featured);
@@ -168,31 +168,31 @@ const Team: React.FC = () => {
     { label: "Years Combined Experience", value: "500+", icon: Award },
     { label: "PhD Holders", value: "15+", icon: GraduationCap },
     { label: "Research Papers Published", value: "100+", icon: Star }
-  ];
+  ]
 
   const values = [
     {
       title: "Innovation First",
       description: "We push the boundaries of what
   's possible with AI and technology",
-      icon: Brain
-    },
+      icon: Brain;
+},
     {
       title: "Client Success",
       description: "Our success is measured by the success of our clients",
-      icon: Target
-    },
+      icon: Target;
+},
     {
       title: "Ethical AI",
       description: "We develop AI solutions that are fair, transparent, and beneficial",
-      icon: Shield
-    },
+      icon: Shield;
+},
     {
       title: "Continuous Learning",
       description: "We stay at the forefront of technology through constant learning",
-      icon: TrendingUp
-    }
-  ];
+      icon: TrendingUp;
+}
+  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">

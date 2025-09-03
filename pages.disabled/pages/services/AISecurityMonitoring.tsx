@@ -4,7 +4,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityMonitoring(function AISecurityMonitoring() {): any: {}
     'Automated security threat detection and assessment',';Predictive: analytics for monitoring needs',';Smart: monitoring framework management',';AI-driven: monitoring automation and orchestration',';Real-time: monitoring performance tracking',';Custom: AI models for monitoring applications';
 <:pages.disabled/pages/services/AISecurityMonitoring.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Developer,',';
@@ -27,7 +27,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
   ]';Security: monitoring optimization',';Monitoring: strategy management and execution',';Security: threat detection and assessment',';Monitoring: framework management and automation',';Monitoring: automation and orchestration',';Monitoring: scaling and management';
   ]';Improve: security monitoring performance by 50-80%',';Reduce: threat detection time by 40-70%',';Cut: security monitoring costs by 35-65%',';Enhance: security monitoring reliability and scalability',';Optimize: resource utilization',';Scale: security monitoring operations efficiently';
   ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-slate-500 via-gray-500 to-zinc-500 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityMonitoring(function AISecurityMonitoring() {): any {}
     'Automated security threat detection and assessment',;Predictive analytics for monitoring needs',;Smart monitoring framework management',;AI-driven monitoring automation and orchestration',;Real-time monitoring performance tracking',;Custom AI models for monitoring applications';
 <:pages.disabled/pages/services/AISecurityMonitoring.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Developer',
@@ -115,8 +115,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     {'
       name: 'Business',
       price: '$799/mo',
-      details: ['Up to 50 systems', 'Advanced AI features', 'Enhanced monitoring', 'Priority support']
-    },
+      details: ['Up to 50 systems', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AISecurityMonitoring.tsx>    {'
@@ -149,10 +149,10 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <Database className='w-4 h-4 mr-2'  /> AI-Powered Security Monitoring Platform
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Security Monitoring Platform</h1>'          <p className='text-slate-100 text-xl'>Transform your security monitoring with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
-  ];Security monitoring optimization',;Monitoring strategy management and execution',;Security threat detection and assessment',;Monitoring framework management and automation',;Monitoring automation and orchestration',;Monitoring scaling and management';
-  ];Improve security monitoring performance by 50-80%',;Reduce threat detection time by 40-70%',;Cut security monitoring costs by 35-65%',;Enhance security monitoring reliability and scalability',;Optimize resource utilization',;Scale security monitoring operations efficiently';
-  ];Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
-  ];
+  ]Security monitoring optimization',;Monitoring strategy management and execution',;Security threat detection and assessment',;Monitoring framework management and automation',;Monitoring automation and orchestration',;Monitoring scaling and management';
+  ]Improve security monitoring performance by 50-80%',;Reduce threat detection time by 40-70%',;Cut security monitoring costs by 35-65%',;Enhance security monitoring reliability and scalability',;Optimize resource utilization',;Scale security monitoring operations efficiently';
+  ]Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-slate-500 via-gray-500 to-zinc-500 py-20 text-center>''

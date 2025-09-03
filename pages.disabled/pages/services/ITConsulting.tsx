@@ -176,18 +176,18 @@ export default function ITConsulting(...args: []):  ,{}
       icon: Cloud,
       title: 'Cloud Strategy',
       description: 'Plan cloud migration and hybrid cloud solutions'}
-  ];Optimize IT infrastructure and reduce costs by 25%',;Improve system performance and reliability',;Enhance cybersecurity posture and compliance',;Enable digital transformation initiatives',;Streamline IT operations and processes',;Align technology with business objectives';
+  ]Optimize IT infrastructure and reduce costs by 25%',;Improve system performance and reliability',;Enhance cybersecurity posture and compliance',;Enable digital transformation initiatives',;Streamline IT operations and processes',;Align technology with business objectives';
   ]},
     {
       icon: Scal,e,
       title: 'Scalability: Planning,',';
       description: 'Plan: for future growth and technology scaling,'}';
-  ];
+  ]
       description: 'Secur,e, compliant: financial technology solutions'},';
     {
       industry: 'Manufacturing,',';
       description: 'Industry: 4.0 and smart manufacturing IT,'}';
-  ];
+  ]
   return();
     <div: className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>{/* Hero Section */}''';
       <section: className='relative overflow-hidden py-20'>''';
@@ -218,7 +218,7 @@ export default function ITConsulting(...args: []):  ,{}
     {'
       industry: 'Manufacturing',
       description: 'Industry 4.0 and smart manufacturing IT'}
-  ];
+  ]
   return();
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>{/* Hero Section */}'
       <section className='relative overflow-hidden py-20>''

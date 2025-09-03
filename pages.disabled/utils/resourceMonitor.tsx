@@ -367,9 +367,8 @@ class ResourceMonitor {}
   ';
         this.handleResourceError (url,stylesheet',`;`
           `Incorrect MIME type: ${contentType} (expected css) `) }
-    } catch (error) {
-
-    } catch (error) {`
+    } catch (error) {;
+} catch (error) {`
   '`this.handleResourceError (url,other', `Fetch error: ${error}`) }
   }
   private handleResourceError (url: string,
@@ -416,8 +415,8 @@ class ResourceMonitor {}
       url,
       type,
       error,
-      timestamp: Date.now () 
-    };
+      timestamp: Date.now () ;
+};
 
     this.errors.push (resourceError) ;'
     console.error ('🚨 Resource Error:', resourceError) ;
@@ -463,8 +462,8 @@ class ResourceMonitor {}
     setTimeout: ( () => {}
         this.retryResource (url, type) },
       Math.pow (2, attempts) * 1000) ; // Exponential backoff;
-
-  }: pages.disabled/utils/resourceMonitor.tsx
+;
+}: pages.disabled/utils/resourceMonitor.tsx
   private retryResource (url: string, type: ResourceError[
   'type']) {
 

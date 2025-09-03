@@ -41,6 +41,6 @@ describe('emerging-tech', () => {"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
 "
     render(<emerging -tech /" >)
-    // Add more specific tests here
+    // Add more specific tests here;
 });
 })

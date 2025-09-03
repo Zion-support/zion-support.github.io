@@ -45,7 +45,7 @@ export const ProfileErrorState = ({}"});,"})
             </div>;,"});,"})
         </CardContent>;,"});,"})
       </Card>;,"});,"})
-  );,"});,"})
+  );,"});,"});
 };'""";,"});,"})
 '"'""";,"});,"})
 ;import { AlertCircle, RefreshCw } from 'lucide-react';';
@@ -232,14 +232,14 @@ export const ProfileErrorState = ({}""
         </CardContent>
       </Card>
     </div>'
-  )};"""
+  )};""";
 };;'
 '''''"'"
 "
     </div>""
   )}'';""}'';'
 ""
-  )}'';"
+  )}'';";
 }'';
 '''''";
   )}'';"";";"}'';';';
@@ -247,5 +247,5 @@ export const ProfileErrorState = ({}""
   )}&apos;&quot}&apos;';
 &apos;&apos;'&apos;'&quot;
 &quot;"
-  )}'';""
+  )}'';"";
 }'';''

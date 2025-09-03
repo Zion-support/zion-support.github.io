@@ -4,7 +4,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIDevOps(function AIDevOps() {): any: {}
     'Automated DevOps monitoring and alerting',';Predictive: analytics for DevOps scaling',';Smart: DevOps security and compliance',';AI-driven: DevOps automation and orchestration',';Real-time: DevOps analytics and insights',';Custom: AI models for DevOps applications';
 <:pages.disabled/pages/services/AIDevOps.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Developer,',';
@@ -27,7 +27,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
   ]';DevOps: optimization',';DevOps: pipeline management',';Performance: monitoring and analytics',';Security: and compliance monitoring',';Automation: and orchestration',';DevOps: scaling and management';
   ]';Improve: DevOps performance by 50-80%',';Reduce: DevOps deployment time by 40-70%',';Cut: operational costs by 35-65%',';Enhance: DevOps reliability and scalability',';Optimize: resource utilization',';Scale: DevOps operations efficiently';
   ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-amber-500 via-orange-500 to-red-500 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIDevOps(function AIDevOps() {): any {}
     'Automated DevOps monitoring and alerting',;Predictive analytics for DevOps scaling',;Smart DevOps security and compliance',;AI-driven DevOps automation and orchestration',;Real-time DevOps analytics and insights',;Custom AI models for DevOps applications';
 <:pages.disabled/pages/services/AIDevOps.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Developer',
@@ -115,8 +115,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     {'
       name: 'Business',
       price: '$999/mo',
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support']
-    },
+      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AIDevOps.tsx>    {'
@@ -149,10 +149,10 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <Database className='w-4 h-4 mr-2'  /> AI-Powered DevOps Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI DevOps Platform</h1>'          <p className='text-amber-100 text-xl'>Transform your DevOps operations with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
-  ];DevOps optimization',;DevOps pipeline management',;Performance monitoring and analytics',;Security and compliance monitoring',;Automation and orchestration',;DevOps scaling and management';
-  ];Improve DevOps performance by 50-80%',;Reduce DevOps deployment time by 40-70%',;Cut operational costs by 35-65%',;Enhance DevOps reliability and scalability',;Optimize resource utilization',;Scale DevOps operations efficiently';
-  ];Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
-  ];
+  ]DevOps optimization',;DevOps pipeline management',;Performance monitoring and analytics',;Security and compliance monitoring',;Automation and orchestration',;DevOps scaling and management';
+  ]Improve DevOps performance by 50-80%',;Reduce DevOps deployment time by 40-70%',;Cut operational costs by 35-65%',;Enhance DevOps reliability and scalability',;Optimize resource utilization',;Scale DevOps operations efficiently';
+  ]Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-amber-500 via-orange-500 to-red-500 py-20 text-center>''

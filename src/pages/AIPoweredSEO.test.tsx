@@ -41,6 +41,6 @@ describe('AIPoweredSEO', () => {"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
 "
     render(<AIPoweredSEO /" >)
-    // Add more specific tests here
+    // Add more specific tests here;
 });
 })

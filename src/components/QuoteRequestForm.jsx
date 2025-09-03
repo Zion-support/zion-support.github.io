@@ -43,7 +43,7 @@ export const QuoteRequestForm = () => {}"});,"})
     { value: 'consulting', label: 'IT Consulting & Strategy' },';,"});,"})
     { value: 'custom-development', label: 'Custom Software Development' },';,"});,"})
     { value: 'other', label: 'Other Services' }"});,"})
-  ];,"});,"})
+  ],"});,"})
 ';,"});,"})
   const timelineOptions = ['';,"});,"})
     { value: 'asap', label: 'ASAP (Within 1 week)},';,"});,"})
@@ -52,7 +52,7 @@ export const QuoteRequestForm = () => {}"});,"})
     { value: '2-3-months', label: '2-3 months' },';,"});,"})
     { value: '3-6-months', label: '3-6 months' },';,"});,"})
     { value: '6-months-plus', label: '6+ months' }"});,"})
-  ];,"});,"})
+  ],"});,"})
 ';,"});,"})
   const budgetRanges = ['';,"});,"})
     { value: 'under-5k', label: 'Under $5,000' },';,"});,"})
@@ -62,14 +62,14 @@ export const QuoteRequestForm = () => {}"});,"})
     { value: '50k-100k', label: '$50,000 - $100,000' },';,"});,"})
     { value: '100k-plus', label: '$100,000+' },';,"});,"})
     { value: 'to-be-discussed', label: 'To be discussed' }"});,"})
-  ];,"});,"})
+  ],"});,"})
 ';,"});,"})
   const urgencyLevels = ['';,"});,"})
     { value: 'low', label: 'Low - Planning phase' },';,"});,"})
     { value: 'medium', label: 'Medium - Ready to start soon' },';,"});,"})
     { value: 'high', label: 'High - Need to start immediately' },';,"});,"})
     { value: 'critical', label: 'Critical - Emergency situation' }"});,"})
-  ];,"});,"})
+  ],"});,"})
 ;,"});,"})
   const handleChange = (field, value) => {}"});,"})
     setFormData(prev => ({}"});,"})
@@ -80,9 +80,9 @@ export const QuoteRequestForm = () => {}"});,"})
     if(errors[field]) {}"});,"})
       setErrors(prev => ({}"});,"})
         ...prev,';,"});,"})
-        [field]: ''}));,"});,"})
-    }"});,"})
-  };,"});,"})
+        [field]: ''}));,"});,"});
+}"});,"});
+};,"});,"})
 ;,"});,"})
   const validateForm = () => {}"});,"})
     const newErrors = {};,"});,"})
@@ -101,15 +101,15 @@ export const QuoteRequestForm = () => {}"});,"})
       newErrors.agreeToTerms = 'You must agree to the terms and conditions';,"});,"})
 ;,"});,"})
     setErrors(newErrors) ;,"});,"})
-    return Object.keys(newErrors) .length === 0;,"});,"})
-  };,"});,"})
+    return Object.keys(newErrors) .length === 0;,"});,"});
+};,"});,"})
 ;,"});,"})
   const handleSubmit = async e => {}"});,"})
     e.preventDefault();,"});,"})
 ;,"});,"})
     if(!validateForm()) {}"});,"})
-      return;,"});,"})
-    }"});,"})
+      return;,"});,"});
+}"});,"})
 ;,"});,"})
     setIsSubmitting(true) ;,"});,"})
 ;,"});,"})
@@ -135,16 +135,16 @@ export const QuoteRequestForm = () => {}"});,"})
         urgency: 'medium',''';,"});,"})
         contactMethod: 'email',;,"});,"})
         agreeToTerms: false,;,"});,"})
-        agreeToMarketing: false});,"});,"})
-    } catch (error) {}"});,"})
+        agreeToMarketing: false});,"});,"});
+} catch (error) {}"});,"})
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
-      // console.error('Error submitting form:', error);,"});,"})
-    } finally {}"});,"})
-      setIsSubmitting(false);,"});,"})
-    }"});,"})
-  };,"});,"})
+      // console.error('Error submitting form:', error);,"});,"});
+} finally {}"});,"})
+      setIsSubmitting(false);,"});,"});
+}"});,"});
+};,"});,"})
 ;,"});,"})
   if(isSubmitted) {}"});,"})
     return();,"});,"})
@@ -161,8 +161,8 @@ export const QuoteRequestForm = () => {}"});,"})
             Submit Another Request;,"});,"})
           </Button>;,"});,"})
         </CardContent>;,"});,"})
-      </Card>) ;,"});,"})
-  }"});,"})
+      </Card>) ;,"});,"});
+}"});,"})
 """;,"});,"})
   return ("""";,"});,"})
     <Card className="max-w-4xl mx-auto">"""";,"});,"})
@@ -392,8 +392,8 @@ export const QuoteRequestForm = () => {}"});,"})
                 id="terms""";,"});,"})
                 checked={formData.agreeToTerms}"});,"})
                 onCheckedChange={checked =>';,"});,"})
-                  handleChange('agreeToTerms', checked);,"});,"})
-                }""";,"});,"})
+                  handleChange('agreeToTerms', checked);,"});,"});
+}""";,"});,"})
               />"""";,"});,"})
               <label htmlFor="terms" className="text-sm text-gray-700">'""";,"});,"})
                 I agree to the{' '}"""";,"});,"})
@@ -412,8 +412,8 @@ export const QuoteRequestForm = () => {}"});,"})
                 id="marketing""";,"});,"})
                 checked={formData.agreeToMarketing}"});,"})
                 onCheckedChange={checked =>';,"});,"})
-                  handleChange('agreeToMarketing', checked);,"});,"})
-                }""";,"});,"})
+                  handleChange('agreeToMarketing', checked);,"});,"});
+}""";,"});,"})
               />"""";,"});,"})
               <label htmlFor="marketing" className="text-sm text-gray-700">;,"});,"})
                 I agree to receive marketing communications from Zion Tech Group;,"});,"})
@@ -442,7 +442,7 @@ export const QuoteRequestForm = () => {}"});,"})
           </div>;,"});,"})
         </form>;,"});,"})
       </CardContent>;,"});,"})
-    </Card>) ;,"});,"})
+    </Card>) ;,"});,"});
 };'""";,"});,"})
 '"'""";,"});,"})
 import React, {useState } from 'react';"
@@ -492,7 +492,7 @@ export const QuoteRequestForm = () => {}
   ]';&apos;&apos;
   const urgencyLevels = [&apos;&apos;
     { value: &apos;low&apos;, label: &apos;Low - Planning phase&apos; },&apos;{ value: &apos;medium&apos;, label: &apos;Medium - Ready to start soon&apos; },&apos;{ value: &apos;high&apos;, label: &apos;High - Need to start immediately&apos; },&apos;{ value: &apos;critical&apos;, label: &apos;Critical - Emergency situation&apos; }
-  ];&apos;&apos;
+  ]&apos;&apos;
 import React, { useState } from 'react';""
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';""
 import { Button } from './ui/Button.jsx';""
@@ -575,7 +575,7 @@ export const QuoteRequestForm = () => {}
   ]';'
   const urgencyLevels = [''
     { value: 'low', label: 'Low - Planning phase' },'{ value: 'medium', label: 'Medium - Ready to start soon' },'{ value: 'high', label: 'High - Need to start immediately' },'{ value: 'critical', label: 'Critical - Emergency situation' }'
-  ];
+  ]
   const handleChange = (field, value) => {}
     setFormData(prev => ({}
       ...prev,;
@@ -1444,14 +1444,14 @@ export const QuoteRequestForm = () => {}
         </form>
       </CardContent>
     </Card>) ;
-}'';"
+}'';";
 }'';
 '''''';
     </Card>) }&apos;&quot;
 }&apos;';
 &apos;&apos;'&apos;&apos;'
 &apos;'
-    </Card>) }'';""
+    </Card>) }'';"";
 }'';''
 ''''''
 import React, { useState } from 'react

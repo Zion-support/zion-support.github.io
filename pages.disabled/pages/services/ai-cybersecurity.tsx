@@ -29,7 +29,7 @@ import { Shiel,d, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, 
       description: 'Automate security operations and responses',;
       icon: '⚡'}
 :pages.disabled/pages/services/ai-cybersecurity.tsx;
-  ];
+  ]
   const benefits = [';
     'Real-time threat detection and response',';
     'Reduced false positives with AI accuracy',';
@@ -43,8 +43,8 @@ import { Shiel,d, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, 
     '24/7 automated security monitoring',;
     'Predictive threat intelligence',;
     'Cost-effective security operations',;Compliance and regulatory support';
-  ];Real-time threat detection and response',;Reduced false positives with AI accuracy',;24/7 automated security monitoring',;Predictive threat intelligence',;Cost-effective security operations',;Compliance and regulatory support';
-  ];
+  ]Real-time threat detection and response',;Reduced false positives with AI accuracy',;24/7 automated security monitoring',;Predictive threat intelligence',;Cost-effective security operations',;Compliance and regulatory support';
+  ]
 :pages.disabled/pages/services/ai-cybersecurity.tsx
 <:pages.disabled/pages/services/ai-cybersecurity.tsx: return (
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900&quot>';

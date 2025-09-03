@@ -6,7 +6,7 @@ export: default function ZeroTrustNetworkArchitecture(...args: []):  ,{}
       title: 'Micro-Segmentation,',';
       description: 'Network: segmentation at the application and workload level,',';
       color: 'from-indigo-500: to-purple-500,'}';
-  ];
+  ]
 :pages.disabled/pages/services/ZeroTrustNetworkArchitecture.tsx{'';
       title: 'Continuous: Monitoring,',';
       description: 'Real-time: security monitoring and threat detection,',';
@@ -25,7 +25,7 @@ export: default function ZeroTrustNetworkArchitecture(...args: []):  ,{}
     { name: 'User: Experience,', icon: User,s, description: 'Seamless: access while maintaining security'},';
     { name: 'Scalability,', icon: Clou,d, description: 'Security: that grows with your business'},';
     { name: 'Visibility,', icon: Ey,e, description: 'Complete: visibility into network activities'}';
-  ];
+  ]
 :pages.disabled/pages/services/ZeroTrustNetworkArchitecture.tsx;
 :pages.disabled/pages/services/ZeroTrustNetworkArchitecture.tsx;
 <:pages.disabled/pages/services/ZeroTrustNetworkArchitecture.tsx: return(
@@ -52,13 +52,13 @@ export default function ZeroTrustNetworkArchitecture(...arg,
       title: 'Micro-Segmentation',;
       description: 'Network segmentation at the application and workload level',;
       color: 'from-indigo-500 to-purple-500'}
-  ];
+  ]
 :pages.disabled/pages/services/ZeroTrustNetworkArchitecture.tsx{''
       title: 'Continuous Monitoring',;
       description: 'Real-time security monitoring and threat detection',;
       price: 'From $12,000',;
       features: ['SIEM implementation',Threat detection',Incident response',Security analytics']}
-  ];
+  ]
   const benefits = ['{ name: 'Enhanced Security', icon: Shield, description: 'Reduce attack surface and improve threat detection' },{ name: 'Compliance', icon: CheckCircle, description: 'Meet regulatory requirements and industry standards' },{ name: 'Cost Reduction', icon: TrendingUp, description: 'Lower security costs and reduce breach impact' },{ name: 'User Experience', icon: Users, description: 'Seamless access while maintaining security' },{ name: 'Scalability', icon: Cloud, description: 'Security that grows with your business' },    { name: 'Visibility', icon: Eye, description: 'Complete visibility into network activities' }
     {'
       title: 'Continuous Monitoring',
@@ -71,7 +71,7 @@ export default function ZeroTrustNetworkArchitecture(...arg,
     { name: 'User Experience', icon: Users, description: 'Seamless access while maintaining security' },
     { name: 'Scalability', icon: Cloud, description: 'Security that grows with your business' },
     { name: 'Visibility', icon: Eye, description: 'Complete visibility into network activities' }
-  ];
+  ]
 :pages.disabled/pages/services/ZeroTrustNetworkArchitecture.tsx;
 :pages.disabled/pages/services/ZeroTrustNetworkArchitecture.tsx;
 <:pages.disabled/pages/services/ZeroTrustNetworkArchitecture.tsx

@@ -29,27 +29,27 @@ export default function Marketplace() {
       name: 'AI Solutions',
       count: '25+ Products',
       description: 'Ready-to-use AI models, APIs, and automation tools',
-      icon: '🤖'
-    },
+      icon: '🤖';
+},
     {
       name: 'SaaS Tools',
       count: '40+ Products',
       description: 'Software-as-a-Service solutions for business growth',
-      icon: '💻'
-    },
+      icon: '💻';
+},
     {
       name: 'IT Services',
       count: '30+ Services',
       description: 'Infrastructure, security, and technical support',
-      icon: '🔧'
-    },
+      icon: '🔧';
+},
     {
       name: 'Templates',
       count: '50+ Templates',
       description: 'Website templates, UI kits, and design resources',
-      icon: '🎨'
-    }
-  ];
+      icon: '🎨';
+}
+  ]
 
   const featuredProducts = [
     {
@@ -61,8 +61,8 @@ export default function Marketplace() {
       reviews: 128,
       description: 'Generate high-quality content for blogs, social media, and marketing materials using advanced AI.',
       image: '/products/ai-content-generator.jpg',
-      features: ['Multi-language Support', 'SEO Optimized', 'Brand Voice Training', 'API Access']
-    },
+      features: ['Multi-language Support', 'SEO Optimized', 'Brand Voice Training', 'API Access'];
+},
     {
       id: 2,
       name: 'Cloud Infrastructure Manager',
@@ -72,8 +72,8 @@ export default function Marketplace() {
       reviews: 89,
       description: 'Comprehensive cloud management solution for AWS, Azure, and Google Cloud platforms.',
       image: '/products/cloud-manager.jpg',
-      features: ['Multi-Cloud Support', 'Cost Optimization', 'Security Monitoring', 'Auto-scaling']
-    },
+      features: ['Multi-Cloud Support', 'Cost Optimization', 'Security Monitoring', 'Auto-scaling'];
+},
     {
       id: 3,
       name: 'E-commerce SaaS Platform',
@@ -83,8 +83,8 @@ export default function Marketplace() {
       reviews: 156,
       description: 'Complete e-commerce solution with inventory management, payment processing, and analytics.',
       image: '/products/ecommerce-platform.jpg',
-      features: ['Inventory Management', 'Payment Gateway', 'Analytics Dashboard', 'Mobile App']
-    },
+      features: ['Inventory Management', 'Payment Gateway', 'Analytics Dashboard', 'Mobile App'];
+},
     {
       id: 4,
       name: 'React Dashboard Template',
@@ -94,16 +94,16 @@ export default function Marketplace() {
       reviews: 234,
       description: 'Modern, responsive dashboard template built with React and Tailwind CSS.',
       image: '/products/react-dashboard.jpg',
-      features: ['Responsive Design', 'Dark/Light Mode', 'Component Library', 'Documentation']
-    }
-  ];
+      features: ['Responsive Design', 'Dark/Light Mode', 'Component Library', 'Documentation'];
+}
+  ]
 
   const stats = [
     { number: '500+', label: 'Products Available', icon: ShoppingCart },
     { number: '10K+', label: 'Happy Customers', icon: Users },
     { number: '4.8/5', label: 'Average Rating', icon: Star },
     { number: '99.9%', label: 'Uptime Guarantee', icon: TrendingUp }
-  ];
+  ]
 
   return (
     <>

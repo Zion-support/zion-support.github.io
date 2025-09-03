@@ -43,6 +43,6 @@ export default function InteractiveStats({
             <div className="text-gray-600 text-sm">{stat.description}</div>
           )}
       ))}
-  )
+  );
 }
 "

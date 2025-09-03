@@ -12,7 +12,7 @@ const Status: NextPage = () => {
   const services = [
     {
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/status.tsx
-  ];
+  ]
 
 :pages.disabled_auto/status.tsx;
 import: React from,
@@ -58,8 +58,8 @@ const Status: NextPage = () => {
       uptime: '99.9%,
       responseTime:,
   120ms',
-      lastIncident: 'No incidents in the past 30 days
-    },
+      lastIncident: 'No incidents in the past 30 days;
+},
     {
       name:,
   API Services',
@@ -68,8 +68,8 @@ const Status: NextPage = () => {
   99.8%',
       responseTime: '85ms,
       lastIncident:,
-  No incidents in the past 30 days'
-    },
+  No incidents in the past 30 days';
+},
     {
       name: 'Database,
       status:,
@@ -77,8 +77,8 @@ const Status: NextPage = () => {
       uptime: '99.9%,
       responseTime:,
   45ms',
-      lastIncident: 'No incidents in the past 30 days
-    },
+      lastIncident: 'No incidents in the past 30 days;
+},
     {
       name:,
   Cloud Infrastructure',
@@ -87,8 +87,8 @@ const Status: NextPage = () => {
   99.7%',
       responseTime: '200ms,
       lastIncident:,
-  No incidents in the past 30 days'
-    },
+  No incidents in the past 30 days';
+},
     {
       name: 'CDN,
       status:,
@@ -96,8 +96,8 @@ const Status: NextPage = () => {
       uptime: '99.9%,
       responseTime:,
   50ms',
-      lastIncident: 'No incidents in the past 30 days
-    },
+      lastIncident: 'No incidents in the past 30 days;
+},
     {
       name:,
   Monitoring',
@@ -106,8 +106,8 @@ const Status: NextPage = () => {
   100%',
       responseTime: '30ms,
       lastIncident:,
-  No incidents in the past 30 days'
-    }
+  No incidents in the past 30 days';
+}
 } from 'lucide-react';
 const: Status: NextPage: = () => {
   const services = [
@@ -266,8 +266,8 @@ ursor/automate-test-fix-improve-and-merge-code-48f,3}  }
   2025-01-20',
       description: 'Scheduled maintenance window for API services completed successfully.,
       impact:
-  'minor'
-    },
+  'minor';
+},
     {
       id: 2,
       title:,
@@ -277,8 +277,8 @@ ursor/automate-test-fix-improve-and-merge-code-48f,3}  }
   2025-01-15',
       description: 'Temporary performance degradation in database queries has been resolved.,
       impact:
-  'minor'
-    }
+  'minor';
+}
       title: 'Scheduled Maintenance - API Services',
       status: 'resolved',
       date: '2025-01-20',
@@ -294,7 +294,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f,3}  }
         'Temporary performance degradation in database queries has been resolved.',
       impact: 'minor'},
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/status.tsx
-  ];
+  ]
 
   return (
     <MainLayout
@@ -605,14 +605,14 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/status.tsx
                             incident.impact ===,
   minor
   ' ? 'bg-yellow-100 text-yellow-800
-  ': 'bg-red-100 text-red-800
-                          }`}>
+  ': 'bg-red-100 text-red-800;
+}`}>
                           <span
                             className={`px-2 py-1 rounded-full text-xs font-medium ${
                               incident.impact === 'minor'
                                 ? 'bg-yellow-100 text-yellow-800'
-                                : 'bg-red-100 text-red-800'
-                            }`}
+                                : 'bg-red-100 text-red-800';
+}`}
                           >
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/status.tsx
                             {incident.impact} impact

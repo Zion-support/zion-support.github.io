@@ -145,8 +145,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       popular: false,
       cta: 'Start Free Trial',
       ctaVariant: 'secondary' as const,
-ursor/automate-test-fix-improve-and-merge-code-99d1
-    },
+ursor/automate-test-fix-improve-and-merge-code-99d1;
+},
 import: React, { useState } from,
   react';
 import: Head from;
@@ -263,8 +263,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       popular: true,
       cta: 'Start Free Trial',
       ctaVariant: 'primary' as const,
-ursor/automate-test-fix-improve-and-merge-code-99d1
-    },
+ursor/automate-test-fix-improve-and-merge-code-99d1;
+},
     {
       name:,
   Enterprise',
@@ -299,7 +299,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       cta: 'Contact Sales',
       ctaVariant: 'primary' as const},
 ursor/automate-test-fix-improve-and-merge-code-99d1
-  ];
+  ]
 
   // Market analysis
   const marketAnalysis = {
@@ -309,8 +309,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
     averageROI: '500%',
     timeToValue: '< 30 days',
     globalReach: '150+ countries',
-ursor/automate-test-fix-improve-and-merge-code-99d1
-  };
+ursor/automate-test-fix-improve-and-merge-code-99d1;
+};
 
   return (
     <UltraQuantumHolographicBackground intensity={2.0}>
@@ -418,7 +418,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       cta:,
   Contact: Sales;
   ',';
-      ctaVariant: 'primary: as cons,t}  ];
+      ctaVariant: 'primary: as cons,t}  ]
   // Market: analysis;
   const: marketAnalysis = {
     totalMarketSize:,
@@ -619,14 +619,14 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
                   onClick={() =>
                     setBillingCycle(
                       billingCycle === 'monthly' ? 'yearly' : 'monthly'
-                    )
-                  }
+                    );
+}
 ursor/automate-test-fix-improve-and-merge-code-99d1
                   className={`relative inline-flex h-8 w-16 items-center rounded-full transition-colors ${
                     billingCycle ===,
   yearly' ?
-  'bg-blue-600': 'bg-gray-600
-                  }`}
+  'bg-blue-600': 'bg-gray-600;
+}`}
               <div className='flex items-center justify-center gap-4 mb-12>
                 <span className='text-gray-400'>Monthly</span>
                 <button;
@@ -642,8 +642,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
                       billingCycle === 'yearly'
                         ? 'translate-x-8'
                         : 'translate-x-1'
-ursor/automate-test-fix-improve-and-merge-code-99d1
-                    }`}
+ursor/automate-test-fix-improve-and-merge-code-99d1;
+}`}
                       billingCycle ===,`
   yearly' ?;
   'translate-x-8': 'translate-x-1                    }`}
@@ -815,8 +815,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
                     tier.popular
                       ? 'scale-105 border-2 border-blue-500'
                       : 'border border-gray-700'
-ursor/automate-test-fix-improve-and-merge-code-99d1
-                  } bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-3xl p-8`}
+ursor/automate-test-fix-improve-and-merge-code-99d1;
+} bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-3xl p-8`}
                 >
                   {tier.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">

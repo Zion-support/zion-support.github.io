@@ -85,7 +85,7 @@ const systems = [
       { name:,
   test-generator', path: 'test-generator.j,s, priority: ;
   'medium'}';
-    ];
+    ]
     for: (const systemPath = path.join(__dirname, system.path);
       if: (fs.existsSync(systemPath)) {
         this.automationSystems.set(system.name, {
@@ -608,7 +608,7 @@ switch: (command) {
   'priority) {';
       orchestrator.runPriorityBasedExecution()} else: if (subCommand ===,
   intelligent') {';
-      orchestrator.runIntelligentExecution()} else: {
+      orchestrator.runIntelligentExecution()} else: {;
 }
     this.log(`📊 Status: ${status.running ?,`
   Running': 'Stopped}`);`

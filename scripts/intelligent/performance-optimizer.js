@@ -54,8 +54,8 @@ class SmartPerformanceOptimizer {
         timestamp: new Date().toISOString(),
         optimizationHistory: this.optimizationHistory,
         totalOptimizations: this.optimizationHistory.length,
-        lastRun: Date.now()
-      };
+        lastRun: Date.now();
+};
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
     } catch (error) {
       this.log(`Failed to save optimization history: ${error.message}`, 'error');
@@ -70,8 +70,8 @@ class SmartPerformanceOptimizer {
       bundleSize: await this.analyzeBundleSize(),
       memoryUsage: await this.analyzeMemoryUsage(),
       fileCount: await this.countFiles(),
-      dependencies: await this.analyzeDependencies()
-    };
+      dependencies: await this.analyzeDependencies();
+};
 
     this.log(`Performance Analysis Results:`);
     this.log(`  - Build Time: ${metrics.buildTime}ms`);
@@ -96,8 +96,8 @@ class SmartPerformanceOptimizer {
       execSync('npm run build', { 
         cwd: this.projectRoot, 
         stdio: 'pipe',
-        timeout: 300000 
-      });
+        timeout: 300000 ;
+});
       
       return Date.now() - startTime;
     } catch (error) {
@@ -131,8 +131,8 @@ class SmartPerformanceOptimizer {
       };
 
       const sizeInBytes = calculateSize('.next');
-      return (sizeInBytes / (1024 * 1024)).toFixed(2); // Convert to MB
-    } catch (error) {
+      return (sizeInBytes / (1024 * 1024)).toFixed(2); // Convert to MB;
+} catch (error) {
       this.log(`Bundle size analysis failed: ${error.message}`, 'error');
       return 0;
     }
@@ -141,8 +141,8 @@ class SmartPerformanceOptimizer {
   async analyzeMemoryUsage() {
     try {
       const usage = process.memoryUsage();
-      return (usage.heapUsed / (1024 * 1024)).toFixed(2); // Convert to MB
-    } catch (error) {
+      return (usage.heapUsed / (1024 * 1024)).toFixed(2); // Convert to MB;
+} catch (error) {
       this.log(`Memory usage analysis failed: ${error.message}`, 'error');
       return 0;
     }
@@ -208,21 +208,21 @@ class SmartPerformanceOptimizer {
         
         const bundleAnalyzerConfig = `
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
+  enabled: process.env.ANALYZE === 'true',;
 });
 
 module.exports = withBundleAnalyzer({
   // Your existing config here
   experimental: {
     optimizeCss: true,
-    optimizePackageImports: ['lucide-react', 'framer-motion'],
-  },
+    optimizePackageImports: ['lucide-react', 'framer-motion'],;
+},
   compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
-  },
+    removeConsole: process.env.NODE_ENV === 'production',;
+},
   images: {
-    formats: ['image/webp', 'image/avif'],
-  },
+    formats: ['image/webp', 'image/avif'],;
+},;
 });
 `;
 
@@ -233,8 +233,8 @@ module.exports = withBundleAnalyzer({
       execSync('ANALYZE=true npm run build', { 
         cwd: this.projectRoot, 
         stdio: 'pipe',
-        timeout: 300000 
-      });
+        timeout: 300000 ;
+});
 
       this.log('✅ Bundle optimization completed');
       return true;
@@ -252,21 +252,21 @@ module.exports = withBundleAnalyzer({
       execSync('npx depcheck', { 
         cwd: this.projectRoot, 
         stdio: 'pipe',
-        timeout: 60000 
-      });
+        timeout: 60000 ;
+});
 
       // Update dependencies to latest compatible versions
       execSync('npm update', { 
         cwd: this.projectRoot, 
         stdio: 'pipe',
-        timeout: 120000 
-      });
+        timeout: 120000 ;
+});
 
       // Clean npm cache
       execSync('npm cache clean --force', { 
         cwd: this.projectRoot, 
-        stdio: 'pipe' 
-      });
+        stdio: 'pipe' ;
+});
 
       this.log('✅ Dependency optimization completed');
       return true;
@@ -328,23 +328,23 @@ module.exports = withBundleAnalyzer({
       execSync('npm run lint:fix', { 
         cwd: this.projectRoot, 
         stdio: 'pipe',
-        timeout: 60000 
-      });
+        timeout: 60000 ;
+});
 
       // Format code
       execSync('npm run format', { 
         cwd: this.projectRoot, 
         stdio: 'pipe',
-        timeout: 60000 
-      });
+        timeout: 60000 ;
+});
 
       // Remove console.logs in production
       if (process.env.NODE_ENV === 'production') {
         execSync('npx babel src --out-dir src-optimized --plugins=babel-plugin-transform-remove-console', { 
           cwd: this.projectRoot, 
           stdio: 'pipe',
-          timeout: 60000 
-        });
+          timeout: 60000 ;
+});
       }
 
       this.log('✅ Code optimization completed');
@@ -362,21 +362,21 @@ module.exports = withBundleAnalyzer({
       // Clean build directories
       execSync('rm -rf .next dist', { 
         cwd: this.projectRoot, 
-        stdio: 'pipe' 
-      });
+        stdio: 'pipe' ;
+});
 
       // Clear caches
       execSync('npm cache clean --force', { 
         cwd: this.projectRoot, 
-        stdio: 'pipe' 
-      });
+        stdio: 'pipe' ;
+});
 
       // Run optimized build
       execSync('npm run build', { 
         cwd: this.projectRoot, 
         stdio: 'pipe',
-        timeout: 300000 
-      });
+        timeout: 300000 ;
+});
 
       this.log('✅ Build optimization completed');
       return true;
@@ -395,7 +395,7 @@ module.exports = withBundleAnalyzer({
       { name: 'Image Optimization', fn: () => this.optimizeImages() },
       { name: 'Code Optimization', fn: () => this.optimizeCode() },
       { name: 'Build Optimization', fn: () => this.optimizeBuild() }
-    ];
+    ]
 
     const results = [];
     
@@ -436,11 +436,11 @@ module.exports = withBundleAnalyzer({
         bundleSizeImprovement: beforeMetrics.bundleSize > 0 && afterMetrics.bundleSize > 0 ? 
           ((beforeMetrics.bundleSize - afterMetrics.bundleSize) / beforeMetrics.bundleSize * 100).toFixed(2) : 0,
         memoryImprovement: beforeMetrics.memoryUsage > 0 && afterMetrics.memoryUsage > 0 ? 
-          ((beforeMetrics.memoryUsage - afterMetrics.memoryUsage) / beforeMetrics.memoryUsage * 100).toFixed(2) : 0
-      },
+          ((beforeMetrics.memoryUsage - afterMetrics.memoryUsage) / beforeMetrics.memoryUsage * 100).toFixed(2) : 0;
+},
       optimizationResults,
-      recommendations: this.generatePerformanceRecommendations(beforeMetrics, afterMetrics)
-    };
+      recommendations: this.generatePerformanceRecommendations(beforeMetrics, afterMetrics);
+};
 
     const reportFile = path.join(this.projectRoot, 'logs/smart-performance-optimizer-intelligence.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
@@ -482,8 +482,8 @@ module.exports = withBundleAnalyzer({
       this.optimizationHistory.push({
         timestamp: new Date().toISOString(),
         report: report,
-        improvements: report.improvements
-      });
+        improvements: report.improvements;
+});
       
       this.saveOptimizationHistory();
 
@@ -492,8 +492,8 @@ module.exports = withBundleAnalyzer({
       this.log(`   - Bundle Size Improvement: ${report.improvements.bundleSizeImprovement}%`);
       this.log(`   - Memory Improvement: ${report.improvements.memoryImprovement}%`);
       this.log(`   - Optimizations Applied: ${report.optimizationResults.filter(r => r.success).length}/${report.optimizationResults.length}`);
-
-    } catch (error) {
+;
+} catch (error) {
       this.log(`❌ Performance Optimizer failed: ${error.message}`, 'error');
       throw error;
     }

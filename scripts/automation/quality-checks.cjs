@@ -49,8 +49,8 @@ async function runQualityChecks() {
     } catch (error) {  
       console.log(`'⚠️  ESLint issues found but continuing...');
       }
-
-    } catch (error) {
+;
+} catch (error) {
       console.log(`⚠️  ESLint issues found but continuing...`);
     }
 ;
@@ -62,8 +62,8 @@ async function runQualityChecks() {
     } catch (error) {  
       console.log('⚠️  Type checking issues found but continuing...');
       }
-
-    } catch (error) {;
+;
+} catch (error) {;
       console.log('⚠️  Type checking issues found but continuing...');
     }
 ;
@@ -75,8 +75,8 @@ async function runQualityChecks() {
     } catch (error) {  
       console.log('⚠️  Tests failed but continuing...');
       }
-
-    } catch (error) {;
+;
+} catch (error) {;
       console.log('⚠️  Tests failed but continuing...');
     }
 ;
@@ -88,8 +88,8 @@ async function runQualityChecks() {
     } catch (error) {  
       console.log('ℹ️  Code coverage not available');
       }
-
-    } catch (error) {;
+;
+} catch (error) {;
       console.log('ℹ️  Code coverage not available');
     }
 ;
@@ -101,8 +101,8 @@ async function runQualityChecks() {
     } catch (error) {  
       console.log('ℹ️  Dead code checker not available');
       }
-
-    } catch (error) {;
+;
+} catch (error) {;
       console.log('ℹ️  Dead code checker not available');
     }
 ;
@@ -114,8 +114,8 @@ async function runQualityChecks() {
     } catch (error) {  
       console.log('ℹ️  Circular dependency checker not available');
       }
-
-    } catch (error) {;
+;
+} catch (error) {;
       console.log('ℹ️  Circular dependency checker not available');
     }
 ;
@@ -163,8 +163,8 @@ async function runContinuous() {
 }
 
 // Handle graceful shutdown;
-process.on(`SIGINT`, () => {
-    } catch (error) {;
+process.on(`SIGINT`, () => {;
+} catch (error) {;
       console.log('ℹ️  Duplicate code checker not available');
     }
 ;

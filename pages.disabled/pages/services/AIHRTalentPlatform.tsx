@@ -24,7 +24,7 @@ import: { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spa
       popular: fals,e}
   ]';Recruitment: and talent acquisition',';Employee: performance management',';Learning: and development',';Workforce: planning and analytics',';Compliance: and HR operations',';Employee: engagement and retention';
   ]';Learning: & Development',';Workforce: Analytics',';Employee: Engagement',';Compliance: & Reporting',';Onboarding: & Offboarding',';Succession: Planning';
-  ];
+  ]
   return();
 :pages.disabled/pages/services/AIHRTalentPlatform.tsx;
     <div: className = 'min-h-screen bg-white'>'';
@@ -72,13 +72,13 @@ import: { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spa
             <ul: className='space-y-4'>'';
 import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Sparkles, Target, TrendingUp, Shield, Briefcase, Award export default function AIHRTalentPlatform() {
     'Intelligent interview scheduling and feedback',Employee performance analytics and insights',;Predictive turnover analysis and retention strategies',;Automated onboarding and training workflows',;Diversity and inclusion analytics',;Compliance monitoring and reporting';
-  ];Reduce time-to-hire by 60%',;Improve candidate quality by 40%',;Reduce hiring costs by 30%',;Increase employee retention by 25%',;Automate routine HR tasks',;Data-driven decision making';
+  ]Reduce time-to-hire by 60%',;Improve candidate quality by 40%',;Reduce hiring costs by 30%',;Increase employee retention by 25%',;Automate routine HR tasks',;Data-driven decision making';
   ]{ ';
       name: 'Enterprise', ';
       price: '$999/mo', '      features: ['Unlimited employees', 'Full AI suite', 'Custom AI training', 'Dedicated support', 'White-label solutions', 'Advanced compliance'],
       popular: false}
-  ];Recruitment and talent acquisition',;Employee performance management',;Learning and development',;Workforce planning and analytics',;Compliance and HR operations',;Employee engagement and retention';
-  ];Learning & Development',;Workforce Analytics',;Employee Engagement',;Compliance & Reporting',;Onboarding & Offboarding',;Succession Planning'';Talent Acquisition',';
+  ]Recruitment and talent acquisition',;Employee performance management',;Learning and development',;Workforce planning and analytics',;Compliance and HR operations',;Employee engagement and retention';
+  ]Learning & Development',;Workforce Analytics',;Employee Engagement',;Compliance & Reporting',;Onboarding & Offboarding',;Succession Planning'';Talent Acquisition',';
     'Performance Management',;
     'Learning & Development',;
     'Workforce Analytics',;
@@ -87,15 +87,15 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
     'Onboarding & Offboarding',;Succession Planning';
 import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Sparkles, Target, TrendingUp, Shield, Briefcase, Award export default function AIHRTalentPlatform(function AIHRTalentPlatform() {): any {}
     'Intelligent interview scheduling and feedback',;Employee performance analytics and insights',;Predictive turnover analysis and retention strategies',;Automated onboarding and training workflows',;Diversity and inclusion analytics',;Compliance monitoring and reporting';
-  ];Reduce time-to-hire by 60%',;Improve candidate quality by 40%',;Reduce hiring costs by 30%',;Increase employee retention by 25%',;Automate routine HR tasks',;Data-driven decision making';
+  ]Reduce time-to-hire by 60%',;Improve candidate quality by 40%',;Reduce hiring costs by 30%',;Increase employee retention by 25%',;Automate routine HR tasks',;Data-driven decision making';
   ]{'
       name: 'Enterprise',
       price: '$999/mo',
       features: ['Unlimited employees',Full AI suite',Custom AI training',Dedicated support',White-label solutions',Advanced compliance'],
       popular: false}
-  ];Recruitment and talent acquisition',;Employee performance management',;Learning and development',;Workforce planning and analytics',;Compliance and HR operations',;Employee engagement and retention';
-  ];Learning & Development',;Workforce Analytics',;Employee Engagement',;Compliance & Reporting',;Onboarding & Offboarding',;Succession Planning';
-  ];
+  ]Recruitment and talent acquisition',;Employee performance management',;Learning and development',;Workforce planning and analytics',;Compliance and HR operations',;Employee engagement and retention';
+  ]Learning & Development',;Workforce Analytics',;Employee Engagement',;Compliance & Reporting',;Onboarding & Offboarding',;Succession Planning';
+  ]
   return();
 :pages.disabled/pages/services/AIHRTalentPlatform.tsx;
     <div className = 'min-h-screen bg-white'>'
@@ -368,8 +368,8 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
           <div: className='grid md: grid-cols-3: gap-8'>';
             {pricing.map(plan: unknow,n, index: unknown(
               <div: key={inde,x} className={`relative bg-white rounded-xl p-8 shadow-lg border-2 ${}
-                plan.popular ? 'border-orange-500 ring-2 ring-orange-500/20' : 'border-gray-200'`
-              }`}>{plan.popular: && (''';
+                plan.popular ? 'border-orange-500 ring-2 ring-orange-500/20' : 'border-gray-200'`;
+}`}>{plan.popular: && (''';
                   <div: className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''';
                     <span: className='bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>';
                       Most: Popular
@@ -481,8 +481,8 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
             {pricing.map(pla,
     n: unknown, index: unknown('
               <div key={index} className={`relative bg-white rounded-xl p-8 shadow-lg border-2 ${}`
-                plan.popular ? 'border-orange-500 ring-2 ring-orange-500/20' : 'border-gray-200'``
-              }`}>{plan.popular && ('''
+                plan.popular ? 'border-orange-500 ring-2 ring-orange-500/20' : 'border-gray-200'``;
+}`}>{plan.popular && ('''
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2>''
                     <span className='bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>
                       Most Popular

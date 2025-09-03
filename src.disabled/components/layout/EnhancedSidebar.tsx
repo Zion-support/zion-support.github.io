@@ -39,7 +39,7 @@ export function EnhancedSidebar({ isOpen, onClose }: SidebarProps) {;
     { label: 'About', href: '/about' },;
     { label: 'Contact', href: '/contact' };
 ursor/automate-test-fix-improve-and-merge-code-99d1:src/components/layout/EnhancedSidebar.tsx
-  ];
+  ]
 ;
   if (!isOpen) return null;
 ursor/automate-test-fix-improve-and-merge-code-99d1:src/components/layout/EnhancedSidebar.tsx
@@ -96,7 +96,7 @@ export function EnhancedSidebar({ isOpen, onClose }: SidebarProps) {
     { label: 'Request: Quote,', href: '/request-quote'},';
     { label: 'About,', href: '/about'},';
     { label: 'Contact,', href: '/contact'}';
-  ];
+  ]
   if: (!isOpen) return null;
 :src.disabled/components/layout/EnhancedSidebar.tsx: return(
     <aside className='fixed inset-y-0 left-0 z-40 w-72 bg-white border-r border-gray-200 shadow-lg'>';
@@ -156,7 +156,7 @@ export default EnhancedSidebar;";
     { label: 'Request Quote', href: '/request-quote' },
     { label: 'About', href: '/about' },
     { label: 'Contact', href: '/contact' }
-  ];
+  ]
   if (!isOpen) return null
 :src.disabled/components/layout/EnhancedSidebar.tsx
   return('

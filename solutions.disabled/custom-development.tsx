@@ -10,34 +10,34 @@ export default function CustomDevelopment() {
     {
       icon: Code,
       title: 'Full-Stack Development',
-      description: 'Complete web and mobile applications built with modern technologies and best practices'
-    },
+      description: 'Complete web and mobile applications built with modern technologies and best practices';
+},
     {
       icon: Database,
       title: 'Database Design',
-      description: 'Scalable database architectures optimized for performance and reliability'
-    },
+      description: 'Scalable database architectures optimized for performance and reliability';
+},
     {
       icon: Cloud,
       title: 'Cloud Integration',
-      description: 'Seamless cloud deployment and integration with AWS, Azure, and Google Cloud'
-    },
+      description: 'Seamless cloud deployment and integration with AWS, Azure, and Google Cloud';
+},
     {
       icon: Shield,
       title: 'Security First',
-      description: 'Enterprise-grade security measures built into every application'
-    },
+      description: 'Enterprise-grade security measures built into every application';
+},
     {
       icon: Zap,
       title: 'Performance Optimization',
-      description: 'Lightning-fast applications with optimized code and infrastructure'
-    },
+      description: 'Lightning-fast applications with optimized code and infrastructure';
+},
     {
       icon: Users,
       title: 'User Experience',
-      description: 'Intuitive interfaces designed with user-centered design principles'
-    }
-  ];
+      description: 'Intuitive interfaces designed with user-centered design principles';
+}
+  ]
 
   const technologies = [
     { name: 'React & Next.js', description: 'Modern frontend frameworks' },
@@ -46,40 +46,40 @@ export default function CustomDevelopment() {
     { name: 'PostgreSQL & MongoDB', description: 'Reliable database systems' },
     { name: 'Docker & Kubernetes', description: 'Containerization and orchestration' },
     { name: 'AWS & Azure', description: 'Cloud infrastructure and services' }
-  ];
+  ]
 
   const process = [
     {
       step: '01',
       title: 'Discovery & Planning',
-      description: 'We analyze your requirements and create a detailed project roadmap'
-    },
+      description: 'We analyze your requirements and create a detailed project roadmap';
+},
     {
       step: '02',
       title: 'Design & Architecture',
-      description: 'Create wireframes, mockups, and technical architecture'
-    },
+      description: 'Create wireframes, mockups, and technical architecture';
+},
     {
       step: '03',
       title: 'Development',
-      description: 'Agile development with regular updates and testing'
-    },
+      description: 'Agile development with regular updates and testing';
+},
     {
       step: '04',
       title: 'Testing & QA',
-      description: 'Comprehensive testing to ensure quality and performance'
-    },
+      description: 'Comprehensive testing to ensure quality and performance';
+},
     {
       step: '05',
       title: 'Deployment',
-      description: 'Smooth deployment with monitoring and support'
-    },
+      description: 'Smooth deployment with monitoring and support';
+},
     {
       step: '06',
       title: 'Maintenance',
-      description: 'Ongoing support and feature enhancements'
-    }
-  ];
+      description: 'Ongoing support and feature enhancements';
+}
+  ]
 
   return (
     <>

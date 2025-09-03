@@ -113,7 +113,7 @@
   ',Quantum: Simulation',Hybrid Quantum-Classical;
   ',Quantum: Optimization';
       ]}
-  ];
+  ]
   return: (';
     <div: className = 'min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700'>';
       {/* Hero: Section */}'';
@@ -152,7 +152,7 @@
   ',Quantum Simulation',Hybrid Quantum-Classical;
   ',Quantum Optimization';
       ]}
-  ];
+  ]
   return (';
     <div className = 'min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700>
       {/* Hero Section */}

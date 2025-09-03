@@ -4,7 +4,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIDataSecurity(function AIDataSecurity() {): any: {}
     'Automated security monitoring and alerting',';Predictive: analytics for security threats',';Smart: security compliance and governance',';AI-driven: security automation and orchestration',';Real-time: security analytics and insights',';Custom: AI models for security applications';
 <:pages.disabled/pages/services/AIDataSecurity.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Developer,',';
@@ -27,7 +27,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
   ]';Data: security optimization',';Threat: detection and response',';Security: monitoring and analytics',';Compliance: and governance monitoring',';Security: automation and orchestration',';Security: scaling and management';
   ]';Improve: data security performance by 50-80%',';Reduce: threat response time by 40-70%',';Cut: security operational costs by 35-65%',';Enhance: data security reliability and scalability',';Optimize: resource utilization',';Scale: data security operations efficiently';
   ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-purple-500 via-pink-500 to-rose-500 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIDataSecurity(function AIDataSecurity() {): any {}
     'Automated security monitoring and alerting',;Predictive analytics for security threats',;Smart security compliance and governance',;AI-driven security automation and orchestration',;Real-time security analytics and insights',;Custom AI models for security applications';
 <:pages.disabled/pages/services/AIDataSecurity.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Developer',
@@ -115,8 +115,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     {'
       name: 'Business',
       price: '$999/mo',
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support']
-    },
+      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AIDataSecurity.tsx>    {'
@@ -149,10 +149,10 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <Database className='w-4 h-4 mr-2'  /> AI-Powered Data Security Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Data Security Platform</h1>'          <p className='text-purple-100 text-xl'>Transform your data security operations with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
-  ];Data security optimization',;Threat detection and response',;Security monitoring and analytics',;Compliance and governance monitoring',;Security automation and orchestration',;Security scaling and management';
-  ];Improve data security performance by 50-80%',;Reduce threat response time by 40-70%',;Cut security operational costs by 35-65%',;Enhance data security reliability and scalability',;Optimize resource utilization',;Scale data security operations efficiently';
-  ];Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
-  ];
+  ]Data security optimization',;Threat detection and response',;Security monitoring and analytics',;Compliance and governance monitoring',;Security automation and orchestration',;Security scaling and management';
+  ]Improve data security performance by 50-80%',;Reduce threat response time by 40-70%',;Cut security operational costs by 35-65%',;Enhance data security reliability and scalability',;Optimize resource utilization',;Scale data security operations efficiently';
+  ]Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-purple-500 via-pink-500 to-rose-500 py-20 text-center>''

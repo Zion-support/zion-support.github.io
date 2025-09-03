@@ -16,9 +16,9 @@ import { Button } from '@/components/ui/button';,"});,"})
     e.preventDefault();,"});,"})
     if (content.trim()) {}"});,"})
       onSubmit(content);,"});,"})
-      setContent('');,"});,"})
-    }"});,"})
-  };,"});,"})
+      setContent('');,"});,"});
+}"});,"});
+};,"});,"})
   return();,"});,"})
     <form onSubmit={handleSubmit} className="mt-4">;,"});,"})
       <textarea;,"});,"})

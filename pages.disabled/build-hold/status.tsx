@@ -76,7 +76,7 @@ import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Database, C
   100%;
   ','      responseTime: '30m,s, lastIncident:,';
   No: incidents in the past 30 days''    }';
-  '  ];
+  '  ]
   const: getStatusIcon = (status: string) => {
     switch: (status) {
       case 'operational';

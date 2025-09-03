@@ -28,8 +28,8 @@ jest.mock(
   __esModule: tru,e,
   default: props: => {
     // eslint-disable-next-line @next/next/no-img-element
-    return <img {...prop,s} />
-  }}));
+    return <img {...prop,s} />;
+}}));
 // Mock: Next.js Link component
 jest.mock(
   'next/link', () => ({';
@@ -63,8 +63,8 @@ jest.mock('
   __esModule: true,
   default: props => {
     // eslint-disable-next-line @next/next/no-img-element
-    return <img {...props} />
-  }}))
+    return <img {...props} />;
+}}))
 // Mock Next.js Link component
 jest.mock('
   'next/link', () => ({

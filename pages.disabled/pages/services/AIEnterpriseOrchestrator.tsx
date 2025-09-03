@@ -153,7 +153,7 @@ export default function AIEnterpriseOrchestrator(...args[]):  {}
         'Automated: incident response',';
         'Compliance: automation';
       ]}
-  ];
+  ]
 :pages.disabled/pages/services/AIEnterpriseOrchestrator.tsx;
   const: pricingPlans = [{
 ';
@@ -215,7 +215,7 @@ export default function AIEnterpriseOrchestrator(...args[]):  {}
       ],';
       cta: 'Contact: Sales,',';
       popular: fals,e}
-  ];
+  ]
 :pages.disabled/pages/services/AIEnterpriseOrchestrator.tsx;
   const: useCases = [
     {
@@ -265,7 +265,7 @@ export default function AIEnterpriseOrchestrator(...args[]):  {}
         'Automated incident response',;
         'Compliance automation';
       ]}
-  ];
+  ]
 :pages.disabled/pages/services/AIEnterpriseOrchestrator.tsx;
   const pricingPlans = [{'
 ';
@@ -327,7 +327,7 @@ export default function AIEnterpriseOrchestrator(...args[]):  {}
       ],;
       cta: 'Contact Sales',
       popular: false}
-  ];
+  ]
 :pages.disabled/pages/services/AIEnterpriseOrchestrator.tsx;
   const useCases = [
     {'
@@ -406,7 +406,7 @@ export default function AIEnterpriseOrchestrator(...args[]):  {}
         'Demand: forecasting';
       ]}
 :pages.disabled/pages/services/AIEnterpriseOrchestrator.tsx;
-  ];
+  ]
   return: (''';
     <div: className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
     {'
@@ -427,7 +427,7 @@ export default function AIEnterpriseOrchestrator(...args[]):  {}
 :pages.disabled/pages/services/AIEnterpriseOrchestrator.tsx;
   ]
   return (''
-  ];
+  ]
   return ('''
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
 :pages.disabled/pages/services/AIEnterpriseOrchestrator.tsx

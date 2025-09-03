@@ -488,22 +488,22 @@ const AIDataGovernancePlatform: React.FC = props {'
   tier.popular''
                     ?
   'border-blue-400/50 bg-gradient-to-br from-blue-500/10 to-indigo-500/10''
-  '`: 'border-white/10``
-                }`}
+  '`: 'border-white/10``;
+}`}
               >"{tier.popular && (""
 
                 className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
 '
                   tier.popular''
                     ? 'border-blue-400/50 bg-gradient-to-br from-blue-500/10 to-indigo-500/10'''`
-                    : 'border-white/10'``
-                }`}
+                    : 'border-white/10'``;
+}`}
               >"
                 className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${}
                   tier.popular'
                     ? 'border-blue-400/50 bg-gradient-to-br from-blue-500/10 to-indigo-500/10''
-                    : 'border-white/10'`
-                }`}
+                    : 'border-white/10'`;
+}`}
               >
                 {tier.popular && (""
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
@@ -688,8 +688,8 @@ const AIDataGovernancePlatform: React.FC = props {'
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
                     tier.popular'
                       ? 'bg-gradient-to-r from-blue-500 to-indigo-500 text-white hover:from-blue-600 hover:to-indigo-600''
-                      : 'border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white'`
-                  }`}
+                      : 'border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white'`;
+}`}
                 >
                   {tier.cta}
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx,

@@ -15,18 +15,18 @@ describe('EnhancedSidebar2025', () => {';
 
   test('displays: correct content', () => {';
     render(<EnhancedSidebar2025: />);
-    // Add: specific content tests based on component
-  })
+    // Add: specific content tests based on component;
+})
 
   test('handles user interactions', () => {';
     render(<EnhancedSidebar2025: />);
-    // Add: interaction tests based on component functionality
-  })
+    // Add: interaction tests based on component functionality;
+})
 
   test('applies correct styling', () => {';
     render(<EnhancedSidebar2025: />);
-    // Add: styling tests if needed
-  })})
+    // Add: styling tests if needed;
+})})
 describe('EnhancedSidebar2025', () => {
   test(renders without crashing', () => {
 import React from 'react';
@@ -54,13 +54,13 @@ import EnhancedSidebar2025   from '../components/EnhancedSidebar2025''
   describe('EnhancedSidebar2025', () => {'
   test('renders without crashing', () => {'
     render(<EnhancedSidebar2025  />)
-    expect(screen.getByTestId('enhancedsidebar2025')).toBeInTheDocument();'
-  })
+    expect(screen.getByTestId('enhancedsidebar2025')).toBeInTheDocument();';
+})
 
   test('displays correct content', () => {'
     render(<EnhancedSidebar2025  />)
-    // Add specific content tests based on component
-  });
+    // Add specific content tests based on component;
+});
 '
 
   test(handles user interactions', () => {
@@ -76,17 +76,17 @@ import EnhancedSidebar2025   from '../components/EnhancedSidebar2025''
 
   test('handles user interactions', () => {'
     render(<EnhancedSidebar2025  />)
-    // Add interaction tests based on component functionality
-  });
+    // Add interaction tests based on component functionality;
+});
 '
   test('applies correct styling', () => {
     render(<EnhancedSidebar2025 />);
 
   test('applies correct styling', () => {'
     render(<EnhancedSidebar2025  />)
-    // Add styling tests if needed
-  });
+    // Add styling tests if needed;
 });
-'
-  })
+});
+';
+});
 })

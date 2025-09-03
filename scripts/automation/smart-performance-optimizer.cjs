@@ -60,8 +60,8 @@ class SmartPerformanceOptimizer {;
       const buildOutput = execSync(`npm run build`, { 
         encoding: 'utf8', 
         cwd: this.projectRoot,
-        stdio: 'pipe'
-      });
+        stdio: 'pipe';
+});
       
       // Analyze dist folder;
       const distPath = path.join(this.projectRoot, `dist`);
@@ -97,8 +97,8 @@ class SmartPerformanceOptimizer {;
       ;
       await this.saveBundleAnalysis(analysis);
       return analysis;
-      
-    } catch (error) {  this.log(`Bundle analysis failed: ${error.message  }`, `ERROR`);
+      ;
+} catch (error) {  this.log(`Bundle analysis failed: ${error.message  }`, `ERROR`);
       return null;
     }
   }
@@ -135,8 +135,8 @@ class SmartPerformanceOptimizer {;
           stats.largestFiles.push({
             file: path.relative(distPath, file),
             size: size,
-            sizeKB: Math.round(size / 1024)
-          });
+            sizeKB: Math.round(size / 1024);
+});
         }
         
         // Estimate compression potential;
@@ -251,8 +251,8 @@ class SmartPerformanceOptimizer {;
       // Start dev server for performance testing;
       const devProcess = spawn('npm', ['run', `dev`], {
         cwd: this.projectRoot,
-        stdio: `pipe`
-      });
+        stdio: `pipe`;
+});
       
       // Wait for server to start;
       await new Promise(resolve => setTimeout(resolve, 10000));
@@ -278,8 +278,8 @@ class SmartPerformanceOptimizer {;
       devProcess.kill();
       ;
       return performanceMetrics;
-      
-    } catch (error) {  this.log(`Runtime performance measurement failed: ${error.message  }`, `ERROR`);
+      ;
+} catch (error) {  this.log(`Runtime performance measurement failed: ${error.message  }`, `ERROR`);
       return null;
     }
   }
@@ -320,8 +320,8 @@ class SmartPerformanceOptimizer {;
       metrics.totalBlockingTime = Math.random() * 500 + 100; // 100-600ms;
       metrics.cumulativeLayoutShift = Math.random() * 0.1; // 0-0.1;
       this.log(`Performance metrics collected: FCP=${Math.round(metrics.firstContentfulPaint)}ms, LCP=${Math.round(metrics.largestContentfulPaint)}ms`);
-      
-    } catch (error) {  this.log(`Performance test execution failed: ${error.message  }`, `ERROR`);
+      ;
+} catch (error) {  this.log(`Performance test execution failed: ${error.message  }`, `ERROR`);
       ;
     } catch (error) {this.log(`Performance test execution failed: ${error.message}`, 'ERROR');
     }
@@ -340,8 +340,8 @@ class SmartPerformanceOptimizer {;
       execSync('npm run build', { 
         encoding: `utf8`, 
         cwd: this.projectRoot,
-        stdio: `pipe`
-      });
+        stdio: `pipe`;
+});
       const buildTime = Date.now() - startTime;
       
       // Apply build optimizations;
@@ -350,24 +350,24 @@ class SmartPerformanceOptimizer {;
           execSync(strategy.command, { 
             encoding: `utf8`, 
             cwd: this.projectRoot,
-            stdio: `pipe`
-          });
+            stdio: `pipe`;
+});
           
           optimizations.push({
             name: strategy.name,
             impact: strategy.impact,
             status: `SUCCESS`,
-            timestamp: new Date().toISOString()
-          });
-          
-        } catch (error) {  this.log(`Build optimization ${strategy.name  } failed: ${error.message}`, `WARN`);
+            timestamp: new Date().toISOString();
+});
+          ;
+} catch (error) {  this.log(`Build optimization ${strategy.name  } failed: ${error.message}`, `WARN`);
           optimizations.push({
             name: strategy.name,
             impact: strategy.impact,
             status: `FAILED`,
             error: error.message,
-            timestamp: new Date().toISOString()
-          });
+            timestamp: new Date().toISOString();
+});
         }
       }
       
@@ -440,8 +440,8 @@ class SmartPerformanceOptimizer {;
         improvementPercentage: improvementPercentage,
         optimizations: optimizations;
       };
-      
-    } catch (error) {  this.log(`Build optimization failed: ${error.message  }`, `ERROR`);
+      ;
+} catch (error) {  this.log(`Build optimization failed: ${error.message  }`, `ERROR`);
       return null;
     }
   }
@@ -474,17 +474,17 @@ class SmartPerformanceOptimizer {;
           execSync(strategy.command, { 
             encoding: `utf8`, 
             cwd: this.projectRoot,
-            stdio: `pipe`
-          });
+            stdio: `pipe`;
+});
           
           optimizations.push({
             name: strategy.name,
             impact: strategy.impact,
             status: `SUCCESS`,
-            timestamp: new Date().toISOString()
-          });
-          
-        } catch (error) {  this.log(`Runtime optimization ${strategy.name  } failed: ${error.message}`, `WARN`);
+            timestamp: new Date().toISOString();
+});
+          ;
+} catch (error) {  this.log(`Runtime optimization ${strategy.name  } failed: ${error.message}`, `WARN`);
           optimizations.push({
             name: strategy.name,
             impact: strategy.impact,
@@ -516,8 +516,8 @@ class SmartPerformanceOptimizer {;
       }
       ;
       return optimizations;
-      
-    } catch (error) {  this.log(`Runtime optimization failed: ${error.message  }`, `ERROR`);
+      ;
+} catch (error) {  this.log(`Runtime optimization failed: ${error.message  }`, `ERROR`);
       return [];
     }
   }

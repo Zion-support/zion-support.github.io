@@ -111,7 +111,7 @@ const SecurityEnhancer: React.FC = () => {
           const suspiciousPatterns = [
             /<script/i, /javascript: /,i,
             /on\w+\s*=/i, /eval\(/i,
-            /expression\(/i:  ];
+            /expression\(/i:  ]
       // Detect iframe injection attempts
       iframes.forEach(iframe => {
           !iframe.src.startsWith(window.location.origin) &&
@@ -148,7 +148,7 @@ const SecurityEnhancer: React.FC = () => {
             /<script/i, /javascript: /i,;
             /on\w+\s*=/i, /eval\(/i,;
             /expression\(/i;
-          ];
+          ]
           for (const [key, value] of formData.entries()) {
             if (typeof value === 'string') {
               suspiciousPatterns.forEach(pattern => {
@@ -190,8 +190,8 @@ const SecurityEnhancer: React.FC = () => {
       monitorSuspiciousActivity()}, 30000); // Check every 30 seconds;
     return () => {
       clearInterval(securityInterval)}}, [])
-  return (
-  }, []);
+  return (;
+}, []);
   return (;
       <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
       <meta httpEquiv="X-Frame-Options" content="DENY" />

@@ -41,6 +41,6 @@ describe('Accessibility', () => {"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
 "
     render(<Accessibility /" >)
-    // Add more specific tests here
+    // Add more specific tests here;
 });
 })

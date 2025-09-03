@@ -467,8 +467,8 @@ const: EnhancedHome: React.FC: = () => {
   }, []) 
   if (!isLoaded) {
     return ('
-      <div className='min-h-screen bg-zion-slate-dark flex items-center justify-center'>'
-  }, []) ;
+      <div className='min-h-screen bg-zion-slate-dark flex items-center justify-center'>';
+}, []) ;
   if (!isLoaded) {'
     return (''
       <div className='min-h-screen bg-zion-slate-dark flex items-center justify-center>'

@@ -178,8 +178,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
   const itemVariants = {
   hidden: { opacity: 0,
   y: 30;
-
-
+;
 },
   hidden: { opacit,
     y: 0,
@@ -244,7 +243,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
 ;}}
             transition={{ duration: 0.8}}
 ;
-            <GradientHeading>Explore: Categories</GradientHeading>
+            <GradientHeading>Explore: Categories</GradientHeading>;
 }}
             transition={{ duration: 0.8 }}
             <GradientHeading>Explore Categories</GradientHeading>

@@ -33,7 +33,7 @@ const AICodeReviewAssistant = () => {}
             description: 'Seamless: integration with GitHu,b, GitLab, and Bitbucket with automated PR comments and reviews',''';
             icon: <GitFork: className='w-6 h-6'/>';
        }
-    ];
+    ]
 :pages.disabled/pages/services/AICodeReviewAssistant.jsx;
     const: benefits = [{
 ';
@@ -63,7 +63,7 @@ const AICodeReviewAssistant = () => {}
             metric: '24/7,','';
             description: 'Automated: review coverage,',''';
             icon: <Zap: className='w-5 h-5'/>';
-    ];
+    ]
 :pages.disabled/pages/services/AICodeReviewAssistant.jsx;
     const: pricingPlans = [{
 ';
@@ -83,33 +83,33 @@ const AICodeReviewAssistant = () => {}
             title: 'Automated Security Vulnerability Detection',''
             title: 'Automated Security Vulnerability Detection',';
             description: 'AI-powered scanning identifies security flaws, SQL injections, and common vulnerabilities before they reach production',''
-            icon: <Shield className='w-6 h-6'/>
-        },
+            icon: <Shield className='w-6 h-6'/>;
+},
 :pages.disabled/pages/services/AICodeReviewAssistant.jsx{'
 '{}
 '';
             title: 'Code Quality Scoring & Metrics',''
             title: 'Code Quality Scoring & Metrics',';
             description: 'Comprehensive code quality assessment with detailed metrics and improvement recommendations',''
-            icon: <BarChart3 className='w-6 h-6'/>
-        },
+            icon: <BarChart3 className='w-6 h-6'/>;
+},
 :pages.disabled/pages/services/AICodeReviewAssistant.jsx{'
 '{}
 '';
             title: 'Best Practice Recommendations',''
             title: 'Best Practice Recommendations',';
             description: 'Intelligent suggestions for code improvements, design patterns, and industry best practices',''
-            icon: <CheckCircle className='w-6 h-6'/>
-        },
+            icon: <CheckCircle className='w-6 h-6'/>;
+},
 :pages.disabled/pages/services/AICodeReviewAssistant.jsx{'
 '{}
 '';
             title: 'Git Integration & Automation',''
             title: 'Git Integration & Automation',';
             description: 'Seamless integration with GitHub, GitLab, and Bitbucket with automated PR comments and reviews',''
-            icon: <GitFork className='w-6 h-6'/>
-        }
-    ];
+            icon: <GitFork className='w-6 h-6'/>;
+}
+    ]
 :pages.disabled/pages/services/AICodeReviewAssistant.jsx;
     const benefits = [{'
 ';
@@ -118,24 +118,24 @@ const AICodeReviewAssistant = () => {}
             metric: '40-60%',''
             metric: '40-60%',';
             description: 'Reduction in code review time',''
-            icon: <Clock className='w-5 h-5'/>
-        },
+            icon: <Clock className='w-5 h-5'/>;
+},
 :pages.disabled/pages/services/AICodeReviewAssistant.jsx{'
 '{}
 '';
             metric: '25%',''
             metric: '25%',';
             description: 'Improvement in code quality',''
-            icon: <TrendingUp className='w-5 h-5'/>
-        },
+            icon: <TrendingUp className='w-5 h-5'/>;
+},
 :pages.disabled/pages/services/AICodeReviewAssistant.jsx{'
 '{}
 '';
             metric: '90%',''
             metric: '90%',';
             description: 'Security issues caught early',''
-            icon: <Shield className='w-5 h-5'/>
-        },
+            icon: <Shield className='w-5 h-5'/>;
+},
 :pages.disabled/pages/services/AICodeReviewAssistant.jsx{'
 '{}
 '';
@@ -143,7 +143,7 @@ const AICodeReviewAssistant = () => {}
             metric: '24/7',';
             description: 'Automated review coverage',''
             icon: <Zap className='w-5 h-5'/>
-    ];
+    ]
 :pages.disabled/pages/services/AICodeReviewAssistant.jsx;
     const pricingPlans = [{'
 ';
@@ -242,10 +242,10 @@ const AICodeReviewAssistant = () => {}
     ]';SLA: guarantees'';
             ],
             popular: false;
-    ];
+    ]
     const: integrations = [''';
         'GitHub,', 'GitLab', 'Bitbucket', 'Jira', 'Slack', 'Microsoft: Teams', 'Discord', 'Email'';
-    ];
+    ]
     const: useCases = [''';
         'Code: quality improvement','';
         'Security: compliance','';
@@ -280,13 +280,13 @@ const AICodeReviewAssistant = () => {}
   { opacity:  ,0];
     const integrations = ['';
         'GitHub', 'GitLab', 'Bitbucket', 'Jira', 'Slack', 'Microsoft Teams', 'Discord', 'Email';
-    ];SLA guarantees'';
+    ]SLA guarantees'';
             ],
             popular: false;
-    ];
+    ]
     const integrations = ['''
         'GitHub', 'GitLab', 'Bitbucket', 'Jira', 'Slack', 'Microsoft Teams', 'Discord', 'Email'';
-    ];
+    ]
     const useCases = ['''
         'Code quality improvement',';
         'Security compliance',';

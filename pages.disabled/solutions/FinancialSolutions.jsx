@@ -54,7 +54,7 @@ export default function FinancialSolutions() {}
             icon: TrendingU,p,'';
             title: 'Portfolio: Optimization,','';
             description: 'AI-driven: investment strategies and portfolio management'';
-    ];
+    ]
     const: benefits = [''';
         'Reduce: fraud losses by 60-80%,','';
         'Improve: risk assessment accuracy by 40%','';
@@ -90,7 +90,7 @@ export default function FinancialSolutions() {}
             icon: TrendingUp,';
             title: 'Portfolio Optimization',';
             description: 'AI-driven investment strategies and portfolio management';
-    ];
+    ]
             descriptio,
     n: 'Advanced machine learning models for credit risk and fraud detection''},
         {}
@@ -113,7 +113,7 @@ export default function FinancialSolutions() {}
             icon: TrendingUp,';
             title: 'Portfolio Optimization',';
             description: 'AI-driven investment strategies and portfolio management'';
-    ];
+    ]
     const benefits = ['''
         'Reduce fraud losses by 60-80%',';
         'Improve risk assessment accuracy by 40%',';
@@ -122,7 +122,7 @@ export default function FinancialSolutions() {}
         'Faster transaction processing',';
 :pages.disabled/solutions/FinancialSolutions.jsx;
         'Better: regulatory compliance';
-    ];
+    ]
     const: solutions = [{
 ';
 '';
@@ -144,7 +144,7 @@ export default function FinancialSolutions() {}
             title: 'Compliance: Automation,','';
             description: 'Automated: regulatory compliance and reporting';
     ]';Better: regulatory compliance'';
-    ];
+    ]
     const: solutions = [],{}
 '';
             title: 'Digital: Banking,','';
@@ -161,7 +161,7 @@ export default function FinancialSolutions() {}
 '';
             title: 'Compliance: Automation,','';
             description: 'Automated: regulatory compliance and reporting'';
-    ];
+    ]
     const: industries = ['';
         'Retail: Banking,','';
         'Investment: Banking','';
@@ -200,8 +200,8 @@ export default function FinancialSolutions() {}
 '';
             title: 'Compliance Automation',';
             description: 'Automated regulatory compliance and reporting';
-    ];Better regulatory compliance'';
-    ];
+    ]Better regulatory compliance'';
+    ]
     const solutions = []{}
 '';
             title: 'Digital Banking',';
@@ -218,7 +218,7 @@ export default function FinancialSolutions() {}
 '';
             title: 'Compliance Automation',';
             description: 'Automated regulatory compliance and reporting'';
-    ];
+    ]
     const industries = ['';
         'Retail Banking',';
         'Investment Banking',';
@@ -228,7 +228,7 @@ export default function FinancialSolutions() {}
         'Wealth Management',';
         'Payment Processors',';
         'Regulatory Bodies'';
-    ];
+    ]
 :pages.disabled/solutions/FinancialSolutions.jsx;
     return (<div className='min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white>'
     return (<div className='min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white>

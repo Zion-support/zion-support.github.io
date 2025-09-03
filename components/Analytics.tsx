@@ -95,7 +95,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {
     script1.src = `https: //www.googletagmanager.com/gtag/js?id=${trackingId}`;
     document.head.appendChild(script1);`
 const Analytics: React.FC<AnalyticsProps> = ({ 
-  trackingId = process.env['NEXT_PUBLIC_GA_TRACKING_ID'] 
+  trackingId = process.env['NEXT_PUBLIC_GA_TRACKING_ID'] ;
 }) => {
     if (!trackingId || typeof window === 'undefined') return;
     
@@ -115,8 +115,8 @@ if (!trackingId || typeof window === 'undefined') return;''    // Load Google An
 
       function gtag(){dataLayer.push(arguments)}`
       gtag('config', '${trackingId} {
-        page_title: document.title, page_location: window.location.href,
-      });
+        page_title: document.title, page_location: window.location.href,;
+});
 
     // Track page views on route changes
     const handleRouteChange = () => {`
@@ -128,8 +128,8 @@ if (!trackingId || typeof window === 'undefined') return;''    // Load Google An
 
     // Track page views on route changes
       if (typeof window.gtag !== 'undefined') {
-        window.gtag('config', trackingId {
-    };
+        window.gtag('config', trackingId {;
+};
 
     // Listen for route changes (Next.js)
     

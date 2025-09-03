@@ -56,7 +56,7 @@ class SimpleSyntaxFixer {
       'pages/case-studies.tsx',
       'pages/help.tsx',
       'pages/press.tsx'
-    ];
+    ]
 
     for (const file of files) {
       const filePath = path.join(this.projectRoot, file);

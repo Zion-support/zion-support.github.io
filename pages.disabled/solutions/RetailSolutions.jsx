@@ -54,7 +54,7 @@ export default function RetailSolutions() {}
             icon: Smartphon,e,'';
             title: 'Omnichannel: Experience,','';
             description: 'Seamless: integration across online and offline retail channels'';
-    ];
+    ]
     const: benefits = [''';
         'Increase: sales by 25-40%,','';
         'Improve: customer retention by 30%','';
@@ -90,7 +90,7 @@ export default function RetailSolutions() {}
             icon: Smartphone,';
             title: 'Omnichannel Experience',';
             description: 'Seamless integration across online and offline retail channels';
-    ];
+    ]
             descriptio,
     n: 'Machine learning models to understand customer behavior and preferences''},
         {}
@@ -113,7 +113,7 @@ export default function RetailSolutions() {}
             icon: Smartphone,';
             title: 'Omnichannel Experience',';
             description: 'Seamless integration across online and offline retail channels'';
-    ];
+    ]
     const benefits = ['''
         'Increase sales by 25-40%',';
         'Improve customer retention by 30%',';
@@ -122,7 +122,7 @@ export default function RetailSolutions() {}
         'Better marketing ROI',';
 :pages.disabled/solutions/RetailSolutions.jsx;
         'Streamlined: operations';
-    ];
+    ]
     const: solutions = [{
 ';
 '';
@@ -144,7 +144,7 @@ export default function RetailSolutions() {}
             title: 'Marketing: Automation,','';
             description: 'AI-driven: marketing campaigns and personalization';
     ]';Streamlined: operations'';
-    ];
+    ]
     const: solutions = [],{}
 '';
             title: 'E-commerce: Platform,','';
@@ -161,7 +161,7 @@ export default function RetailSolutions() {}
 '';
             title: 'Marketing: Automation,','';
             description: 'AI-driven: marketing campaigns and personalization'';
-    ];
+    ]
     const: retailTypes = ['';
         'Fashion: & Apparel,','';
         'Electronics','';
@@ -200,8 +200,8 @@ export default function RetailSolutions() {}
 '';
             title: 'Marketing Automation',';
             description: 'AI-driven marketing campaigns and personalization';
-    ];Streamlined operations'';
-    ];
+    ]Streamlined operations'';
+    ]
     const solutions = []{}
 '';
             title: 'E-commerce Platform',';
@@ -218,7 +218,7 @@ export default function RetailSolutions() {}
 '';
             title: 'Marketing Automation',';
             description: 'AI-driven marketing campaigns and personalization'';
-    ];
+    ]
     const retailTypes = ['';
         'Fashion & Apparel',';
         'Electronics',';
@@ -228,7 +228,7 @@ export default function RetailSolutions() {}
         'Books & Media',';
         'Food & Beverage',';
         'Automotive'';
-    ];
+    ]
 :pages.disabled/solutions/RetailSolutions.jsx;
     return (<div className='min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white>'
     return (<div className='min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white>

@@ -83,8 +83,8 @@ class MasterErrorDetectorFixer {;
       return { 
         success: false, 
         error: error.message, 
-        output: error.stdout || error.stderr || ''
-        };
+        output: error.stdout || error.stderr || '';
+};
 ;
   async log(message, type = 'INFO') {;
     const timestamp = new Date().toISOString();const logMessage = `[${timestamp}] [${type}] ${message}`;
@@ -134,8 +134,8 @@ class MasterErrorDetectorFixer {;
         type: `typescript`,
         count: errors.length,
         details: errors,
-        severity: `high`
-      });
+        severity: `high`;
+});
       await this.log(❌ Found ${errors.length} TypeScript errors, `ERROR``);
       return errors;
     }
@@ -478,8 +478,8 @@ class MasterErrorDetectorFixer {;
   async run() {
     try {
       await this.log(`🚀 Starting comprehensive error detection and fixing...`);
-      
-      }, {}),;
+      ;
+}, {}),;
       errors: this.errors,;
       fixes: this.fixes,;
       summary: {;
@@ -519,8 +519,8 @@ class MasterErrorDetectorFixer {;
       await this.log(`✅ Error detection and fixing completed!`);await this.log(`📊 Total errors found: ${report.totalErrors}`);await this.log(`🔧 Errors fixed: ${this.fixes.length}`);
       ;
       return report;
-      
-    } catch (error) {  await this.log(`❌ Error in master error detector: ${error.message  }`, `ERROR`);
+      ;
+} catch (error) {  await this.log(`❌ Error in master error detector: ${error.message  }`, `ERROR`);
       ;
     } catch (error) {await this.log(`❌ Error in master error detector: ${error.message}`, 'ERROR');
       throw error;

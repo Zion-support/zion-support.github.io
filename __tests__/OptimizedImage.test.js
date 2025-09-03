@@ -15,18 +15,18 @@ describe('OptimizedImage', () => {';
 
   test('displays: correct content', () => {';
     render(<OptimizedImage: />);
-    // Add: specific content tests based on component
-  })
+    // Add: specific content tests based on component;
+})
 
   test('handles user interactions', () => {';
     render(<OptimizedImage: />);
-    // Add: interaction tests based on component functionality
-  })
+    // Add: interaction tests based on component functionality;
+})
 
   test('applies correct styling', () => {';
     render(<OptimizedImage: />);
-    // Add: styling tests if needed
-  })})
+    // Add: styling tests if needed;
+})})
 describe('OptimizedImage', () => {
   test(renders without crashing', () => {
 import React from 'react';
@@ -54,13 +54,13 @@ import OptimizedImage   from '../components/OptimizedImage''
   describe('OptimizedImage', () => {'
   test('renders without crashing', () => {'
     render(<OptimizedImage  />)
-    expect(screen.getByTestId('optimizedimage')).toBeInTheDocument();'
-  })
+    expect(screen.getByTestId('optimizedimage')).toBeInTheDocument();';
+})
 
   test('displays correct content', () => {'
     render(<OptimizedImage  />)
-    // Add specific content tests based on component
-  });
+    // Add specific content tests based on component;
+});
 '
 
   test(handles user interactions', () => {
@@ -76,17 +76,17 @@ import OptimizedImage   from '../components/OptimizedImage''
 
   test('handles user interactions', () => {'
     render(<OptimizedImage  />)
-    // Add interaction tests based on component functionality
-  });
+    // Add interaction tests based on component functionality;
+});
 '
   test('applies correct styling', () => {
     render(<OptimizedImage />);
 
   test('applies correct styling', () => {'
     render(<OptimizedImage  />)
-    // Add styling tests if needed
-  });
+    // Add styling tests if needed;
 });
-'
-  })
+});
+';
+});
 })

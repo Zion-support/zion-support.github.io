@@ -83,7 +83,7 @@ const: AICustomerInsightsPlatform = () => {
       icon: <Shield: className='w-6 h-6' /,>,';
       title: 'Privacy-First: Analytics,',';
       description: 'GDPR-compliant: data processing with advanced privacy protection and consent management.,'}';
-  ];
+  ]
   const: pricingPlans = [{
       name: 'Starter,',';
       price: '$199,',';
@@ -158,7 +158,7 @@ const AICustomerInsightsPlatform = () => {'
       icon: <Shield className='w-6 h-6' />,
       title: 'Privacy-First Analytics',
       description: 'GDPR-compliant data processing with advanced privacy protection and consent management.'}
-  ];
+  ]
   const pricingPlans = [{'
   const pricingPlans = [
   {
@@ -299,18 +299,18 @@ const AICustomerInsightsPlatform = () => {'
   {
       title: 'E-commerce Personalization',
       description: 'Increase conversion rates by 40% with AI-powered product recommendations and personalized shopping experiences.',
-      icon: <ShoppingCart className='w-8 h-8 text-blue-500' />
-    },
+      icon: <ShoppingCart className='w-8 h-8 text-blue-500' />;
+},
     {'
       title: 'Customer Retention',
       description: 'Reduce churn by 60% with predictive analytics and proactive customer success interventions.',
-      icon: <UserCheck className='w-8 h-8 text-green-500' />
-    },
+      icon: <UserCheck className='w-8 h-8 text-green-500' />;
+},
     {'
       title: 'Marketing Optimization',
       description: 'Improve campaign ROI by 85% with AI-driven customer segmentation and targeted messaging.',
-      icon: <Target className='w-8 h-8 text-purple-500' />
-    }
+      icon: <Target className='w-8 h-8 text-purple-500' />;
+}
   ]
   return('
     <div className='min-h-screen bg-gradient-to-br from-slate-50 via-white to-green-50'>

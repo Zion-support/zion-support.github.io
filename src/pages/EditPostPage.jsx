@@ -1,4 +1,4 @@
- export default function EditPostPage () {;,"});,"})
+ export default function EditPostPage () {;,"});,"});
 }"});,"})
  export: default function EditPostPage () {;
 };
@@ -19,5 +19,5 @@ export default function EditPostPage() {return (
     </div>
   );
 }
- export default function EditPostPage () {
+ export default function EditPostPage () {;
 };

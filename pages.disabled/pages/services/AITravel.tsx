@@ -4,7 +4,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AITravel(function AITravel() {): any: {}
     'Automated travel monitoring and alerting',';Predictive: analytics for travel scaling',';Smart: travel security and compliance',';AI-driven: travel automation and orchestration',';Real-time: travel analytics and insights',';Custom: AI models for travel applications';
 <:pages.disabled/pages/services/AITravel.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Developer,',';
@@ -27,7 +27,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
   ]';Travel: optimization',';Travel: planning and management',';Performance: monitoring and analytics',';Security: and compliance monitoring',';Automation: and orchestration',';Travel: scaling and management';
   ]';Improve: travel performance by 50-80%',';Reduce: travel planning time by 40-70%',';Cut: operational costs by 35-65%',';Enhance: travel reliability and scalability',';Optimize: resource utilization',';Scale: travel operations efficiently';
   ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-rose-500 via-pink-500 to-purple-500 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AITravel(function AITravel() {): any {}
     'Automated travel monitoring and alerting',;Predictive analytics for travel scaling',;Smart travel security and compliance',;AI-driven travel automation and orchestration',;Real-time travel analytics and insights',;Custom AI models for travel applications';
 <:pages.disabled/pages/services/AITravel.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Developer',
@@ -115,8 +115,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     {'
       name: 'Business',
       price: '$799/mo',
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support']
-    },
+      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AITravel.tsx>    {'
@@ -149,10 +149,10 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <Database className='w-4 h-4 mr-2'  /> AI-Powered Travel Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Travel Platform</h1>'          <p className='text-rose-100 text-xl'>Transform your travel operations with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
-  ];Travel optimization',;Travel planning and management',;Performance monitoring and analytics',;Security and compliance monitoring',;Automation and orchestration',;Travel scaling and management';
-  ];Improve travel performance by 50-80%',;Reduce travel planning time by 40-70%',;Cut operational costs by 35-65%',;Enhance travel reliability and scalability',;Optimize resource utilization',;Scale travel operations efficiently';
-  ];Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
-  ];
+  ]Travel optimization',;Travel planning and management',;Performance monitoring and analytics',;Security and compliance monitoring',;Automation and orchestration',;Travel scaling and management';
+  ]Improve travel performance by 50-80%',;Reduce travel planning time by 40-70%',;Cut operational costs by 35-65%',;Enhance travel reliability and scalability',;Optimize resource utilization',;Scale travel operations efficiently';
+  ]Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-rose-500 via-pink-500 to-purple-500 py-20 text-center>''

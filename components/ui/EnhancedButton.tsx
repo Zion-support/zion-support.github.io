@@ -14,7 +14,7 @@ export default function EnhancedButton({
   onClick, 
   className = '', 
   disabled = false,
-  type = 'button'
+  type = 'button';
 }: EnhancedButtonProps) {
   return (
     <button

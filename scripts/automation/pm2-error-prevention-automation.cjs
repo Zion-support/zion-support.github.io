@@ -402,8 +402,8 @@ class ErrorPreventionAutomation {;
       timestamp: new Date().toISOString(),
       errorsFixed: this.fixCount,
       errorsEncountered: this.errorCount,
-      status: this.errorCount === 0 ? `SUCCESS` : `PARTIAL_SUCCESS`,summary: `Fixed ${this.fixCount} errors, encountered ${this.errorCount} issues`
-    };
+      status: this.errorCount === 0 ? `SUCCESS` : `PARTIAL_SUCCESS`,summary: `Fixed ${this.fixCount} errors, encountered ${this.errorCount} issues`;
+};
 
     const reportPath = path.join(this.projectRoot, ``automation/logs/error-prevention-report.json``);
 ;
@@ -463,8 +463,8 @@ class ErrorPreventionAutomation {;
       }
       
       this.log(`PM2 Error Prevention Automation completed`);
-      
-    } catch (error) {  this.log(`Fatal error in automation: ${error.message  }`, true);
+      ;
+} catch (error) {  this.log(`Fatal error in automation: ${error.message  }`, true);
 ;
   async run() {;
     this.log('Starting PM2 Error Prevention Automation...');

@@ -65,7 +65,7 @@ import React, { useEffect, useState, useCallback }  from 'react';interface Analy
    conversionRate: number;
    topPages: string[];""
    userJourney: string[]} export const AnalyticsMonitor: React.FC = () => { const [events, setEvents] = useState < AnalyticsEvent[]> ([])  const [performance, setPerformance] = useState < PerformanceMetrics | null> (null)  const [userBehavior, setUserBehavior] = useState < UserBehavior> ({ pageViews: 0, sessionDuration: 0, bounceRate: 0, conversionRate: 0, topPages: [], userJourney: [] })  const [isTracking, setIsTracking] = useState (false)  const [sessionId] = useState ( () => generateSessionId () )  ';'
-""
+"";
 }
    topPages: string[];
    userJourne,y: string[]}&apos; export const AnalyticsMonitor: React.FC = () => {} const [events, setEvents] = useState < AnalyticsEvent[]> ([])  const [performance, setPerformance] = useState < PerformanceMetrics | null> (null)  const [userBehavior, setUserBehavior] = useState < UserBehavior> ({ pageViews: 0, sessionDuration: 0, bounceRate: 0, conversionRate: 0, topPages: [], userJourney: [] })  const [isTracking, setIsTracking] = useState (false)  const;const;const [sessionId] = useState ( () => generateSessionId () )  ';
@@ -73,5 +73,5 @@ import React, { useEffect, useState, useCallback }  from 'react';interface Analy
    userJourney: string[]} export const AnalyticsMonitor: React.FC = () => { const [events, setEvents] = useState < AnalyticsEvent[]> ([])  const [performance, setPerformance] = useState < PerformanceMetrics | null> (null)  const [userBehavior, setUserBehavior] = useState < UserBehavior> ({ pageViews: 0, sessionDuration: 0, bounceRate: 0, conversionRate: 0, topPages: [], userJourney: [] })  const [isTracking, setIsTracking] = useState (false)  const [sessionId] = useState ( () => generateSessionId () )  ';'
    topPages: string[];"
    userJourney: string[]} export const AnalyticsMonitor: React.FC = () => { const [events, setEvents] = useState < AnalyticsEvent[]> ([])  const [performance, setPerformance] = useState < PerformanceMetrics | null> (null)  const [userBehavior, setUserBehavior] = useState < UserBehavior> ({ pageViews: 0, sessionDuration: 0, bounceRate: 0, conversionRate: 0, topPages: [], userJourney: [] })  const [isTracking, setIsTracking] = useState (false)  const [sessionId] = useState ( () => generateSessionId () )  
-"
+";
 }

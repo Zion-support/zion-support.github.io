@@ -10,8 +10,8 @@ const nextConfig = {
     // Allow production builds to successfully complete even if
     // there are type errors.
   experimental: {
-    // Removed deprecated options
-  },
+    // Removed deprecated options;
+},
   typescript: {
     ignoreBuildErrors: true},
   images: {
@@ -65,15 +65,15 @@ const nextConfig = {
   swcMinify: true,
   experimental: {
     optimizeCss: true,
-    optimizePackageImports: ['@radix-ui/react-icons', 'lucide-react']
-  },
+    optimizePackageImports: ['@radix-ui/react-icons', 'lucide-react'];
+},
   compiler: {
-    removeConsole: process.env.NODE_ENV === 'production'
-  },
+    removeConsole: process.env.NODE_ENV === 'production';
+},
   images: {
     domains: ['localhost'],
-    formats: ['image/webp', 'image/avif']
-  },
+    formats: ['image/webp', 'image/avif'];
+},
   async headers() {
     return [
       {
@@ -81,20 +81,20 @@ const nextConfig = {
         headers: [
           {
             key: 'X-Frame-Options',
-            value: 'DENY'
-          },
+            value: 'DENY';
+},
           {
             key: 'X-Content-Type-Options',
-            value: 'nosniff'
-          },
+            value: 'nosniff';
+},
           {
             key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin'
-          }
+            value: 'origin-when-cross-origin';
+}
         ]
-      }
-    ];
-  }
+}
+    ]
+}
 };
 
 module.exports = nextConfig;

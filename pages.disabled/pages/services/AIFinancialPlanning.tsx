@@ -67,7 +67,7 @@ export: default function AIFinancialPlanning(...args: any[]): any: ,{}
       icon: Cloc,k,';
       title: 'Time: Savings,',';
       description: 'Automate: financial tasks and focus on what matters most with intelligent automation.,'}';
-  ];
+  ]
   const: pricingPlans: any: = [],{}
 '';
       name: 'Basic,','';
@@ -128,7 +128,7 @@ export: default function AIFinancialPlanning(...args: any[]): any: ,{}
     {'';
       industry: 'Investment: Management,','      description: 'Build: and manage investment portfolios with AI-driven insights,',';
       icon: TrendingU,p}
-  ];
+  ]
 :pages.disabled/pages/services/AIFinancialPlanning.tsx;
   const: integrations = [{
 ';
@@ -174,7 +174,7 @@ export: default function AIFinancialPlanning(...args: any[]): any: ,{}
       metric: '3x,',';
       label: 'Faster: Planning,',';
       description: 'Faster: financial planning process,'}';
-  ];
+  ]
 :pages.disabled/pages/services/AIFinancialPlanning.tsx;
   const: planningAreas = [{
 ';
@@ -237,7 +237,7 @@ export: default function AIFinancialPlanning(...args: any[]): any: ,{}
       icon: Clock,;
       title: 'Time Savings',;
       description: 'Automate financial tasks and focus on what matters most with intelligent automation.'}
-  ];
+  ]
   const pricingPlans: any = []{}
 '';
       name: 'Basic',';
@@ -298,33 +298,33 @@ export: default function AIFinancialPlanning(...args: any[]): any: ,{}
     {''
       industry: 'Investment Management',      description: 'Build and manage investment portfolios with AI-driven insights',
       icon: TrendingUp}
-  ];
+  ]
 :pages.disabled/pages/services/AIFinancialPlanning.tsx;
   const integrations = [{'
 ';
   const integrations: any = []{}
 '';
       name: 'Banking & Credit Cards',';
-      platforms: ['Chase', 'Bank of America', 'Wells Fargo', 'American Express']
-    },
+      platforms: ['Chase', 'Bank of America', 'Wells Fargo', 'American Express'];
+},
 :pages.disabled/pages/services/AIFinancialPlanning.tsx{'
 '{}
 '';
       name: 'Investment Platforms',';
-      platforms: ['Robinhood', 'Fidelity', 'Vanguard', 'Charles Schwab']
-    },
+      platforms: ['Robinhood', 'Fidelity', 'Vanguard', 'Charles Schwab'];
+},
 :pages.disabled/pages/services/AIFinancialPlanning.tsx{'
 '{}
 '';
       name: 'Accounting Software',';
-      platforms: ['QuickBooks', 'Xero', 'FreshBooks', 'Wave']
-    },
+      platforms: ['QuickBooks', 'Xero', 'FreshBooks', 'Wave'];
+},
 :pages.disabled/pages/services/AIFinancialPlanning.tsx{'
 '{}
 '';
       name: 'Tax Software',';
-      platforms: ['TurboTax', 'H&R Block', 'TaxAct', 'Credit Karma Tax']
-    },
+      platforms: ['TurboTax', 'H&R Block', 'TaxAct', 'Credit Karma Tax'];
+},
 :pages.disabled/pages/services/AIFinancialPlanning.tsx{'
 ';
 '';
@@ -344,21 +344,21 @@ export: default function AIFinancialPlanning(...args: any[]): any: ,{}
       metric: '3x',;
       label: 'Faster Planning',;
       description: 'Faster financial planning process'}
-  ];
+  ]
 :pages.disabled/pages/services/AIFinancialPlanning.tsx;
   const planningAreas = [{'
 ';
   const planningAreas: any = []{}
 '';
       category: 'Budgeting',';
-      areas: ['Expense Tracking', 'Income Management', 'Spending Analysis', 'Budget Optimization']
-    },
+      areas: ['Expense Tracking', 'Income Management', 'Spending Analysis', 'Budget Optimization'];
+},
 :pages.disabled/pages/services/AIFinancialPlanning.tsx{'
 '{}
 '';
       category: 'Investing',';
-      areas: ['Portfolio Analysis', 'Risk Assessment', 'Asset Allocation', 'Market Insights']
-    },
+      areas: ['Portfolio Analysis', 'Risk Assessment', 'Asset Allocation', 'Market Insights'];
+},
 :pages.disabled/pages/services/AIFinancialPlanning.tsx{'
 ';
 :pages.disabled/pages/services/AIFinancialPlanning.tsx;
@@ -410,7 +410,7 @@ export: default function AIFinancialPlanning(...args: any[]): any: ,{}
     y: 'Tax Planning',;
       areas: ['Deduction Optimization', 'Tax Strategy', 'Filing Assistance', 'Year-round Planning']},{''
       category: 'Goal Planning',;
-      areas: ['Retirement Planning', 'Debt Management', 'Emergency Fund', 'Major Purchases']}  ];
+      areas: ['Retirement Planning', 'Debt Management', 'Emergency Fund', 'Major Purchases']}  ]
   return ('''
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>'
       <SEO'';

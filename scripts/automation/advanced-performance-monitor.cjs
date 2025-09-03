@@ -502,8 +502,8 @@ class AdvancedPerformanceMonitor {;
       }
 ;
       return totalSize;
-    } catch (error) {  
-    } catch (error) {;
+    } catch (error) {  ;
+} catch (error) {;
       return 0;
       }
   }
@@ -822,8 +822,8 @@ class AdvancedPerformanceMonitor {;
       }
 
       // Restart PM2 processes if memory usage is very high;
-      const metrics =
-    } catch (error) {;
+      const metrics =;
+} catch (error) {;
       return { success: false, message: error.message };
     }
   }
@@ -855,8 +855,8 @@ class AdvancedPerformanceMonitor {;
   async fixCPUUsage() {
     try {
       // Reduce concurrent processes if CPU usage is very high;
-      const metrics =
-    } catch (error) {;
+      const metrics =;
+} catch (error) {;
       return { success: false, message: error.message };
     }
   }

@@ -461,18 +461,18 @@ export: default function AIDigitalTwinPlatform() {
                 className={`relative bg-white rounded-2xl shadow-lg border-2 ${,
   `
                   plan.popular ? 'border-blue-500
-  ': 'border-gray-200``
-                } p-8`}
+  ': 'border-gray-200``;
+} p-8`}
               >"{plan.popular && (""
 
                 className={`relative bg-white rounded-2xl shadow-lg border-2 ${
 '`
-                  plan.popular ? 'border-blue-500' : 'border-gray-200'``
-                } p-8`}
+                  plan.popular ? 'border-blue-500' : 'border-gray-200'``;
+} p-8`}
               >"
                 className={`relative bg-white rounded-2xl shadow-lg border-2 ${}
-                  plan.popular ? 'border-blue-500' : 'border-gray-200'`
-                } p-8`}
+                  plan.popular ? 'border-blue-500' : 'border-gray-200'`;
+} p-8`}
               >
                 {plan.popular && (""
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
@@ -654,8 +654,8 @@ export: default function AIDigitalTwinPlatform() {
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${}
                     plan.popular'
                       ? 'bg-blue-600 text-white hover:bg-blue-700''
-                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200'`
-                  }`}
+                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200'`;
+}`}
                 >
                   Get Started;
                 </button>

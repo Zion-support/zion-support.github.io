@@ -30,17 +30,17 @@ export default function Contact() {,"});,"})
     company: '',;,"});,"})
     phone: '',;,"});,"})
     service: '',;,"});,"})
-    message: '';,"});,"})
-  });,"});,"})
+    message: '';,"});,"});
+});,"});,"})
   const [isSubmitting, setIsSubmitting] = useState(false);,"});,"})
   const [submitSuccess, setSubmitSuccess] = useState(false);,"});,"})
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {,"});,"})
     const { name, value } = e.target;,"});,"})
     setFormData(prev => ({,"});,"})
       ...prev,;,"});,"})
-      [name]: value;,"});,"})
-    }));,"});,"})
-  };,"});,"})
+      [name]: value;,"});,"});
+}));,"});,"});
+};,"});,"})
   const handleSubmit = async (e: React.FormEvent) => {,"});,"})
     e.preventDefault();,"});,"})
     setIsSubmitting(true);,"});,"})
@@ -51,8 +51,8 @@ export default function Contact() {,"});,"})
     // Reset form after success;,"});,"})
     setTimeout(() => {,"});,"})
       setSubmitSuccess(false);,"});,"})
-      setFormData({,"});,"})
-    }, 5000);,"});,"})
+      setFormData({,"});,"});
+}, 5000);,"});,"})
   const services = [,"});,"})
     'AI & Machine Learning',;,"});,"})
     'Cloud & DevOps',;,"});,"})
@@ -61,14 +61,14 @@ export default function Contact() {,"});,"})
     'Financial Solutions',;,"});,"})
     'Manufacturing Solutions',;,"});,"})
     'Other';,"});,"})
-  ];,"});,"})
+  ],"});,"})
   const contactMethods = [,"});,"})
     {,"});,"})
       icon: '📍',;,"});,"})
       title: 'Office Address',;,"});,"})
       details: '364 E Main St STE 1008, Middletown DE 19709',;,"});,"})
-      link: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709';,"});,"})
-    },;,"});,"})
+      link: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709';,"});,"});
+},;,"});,"})
       icon: '📧',;,"});,"})
       title: 'Email',;,"});,"})
       details: 'kleber@ziontechgroup.com',;,"});,"})
@@ -80,8 +80,8 @@ export default function Contact() {,"});,"})
       icon: '🌐',;,"});,"})
       title: 'Website',;,"});,"})
       details: 'ziontechgroup.com',;,"});,"})
-      link: 'https://ziontechgroup.com';,"});,"})
-    }"});,"})
+      link: 'https://ziontechgroup.com';,"});,"});
+}"});,"})
   const officeHours = [,"});,"})
     { day: 'Monday - Friday', hours: '9:00 AM - 6:00 PM EST' },;,"});,"})
     { day: 'Saturday', hours: '10:00 AM - 4:00 PM EST' },;,"});,"})
@@ -305,7 +305,7 @@ export default function Contact() {}
     'Financial: Solutions',';';
     'Manufacturing: Solutions',';';
     'Other';';
-  ];
+  ]
   const contactMethods = [ {
       icon: '📍,',';';
       title: 'Office: Address,',';';
@@ -494,7 +494,7 @@ export default function Contact() {}
     &apos;Financial Solutions&apos;,
     &apos;Manufacturing Solutions&apos;,
     &apos;Other';
-  ];&apos;&apos;
+  ]&apos;&apos;
   const contactMethods = [
     {
       icon: &apos;📍&apos;,
@@ -513,7 +513,7 @@ export default function Contact() {}
       title: &apos;Website&apos;,
       details: &apos;ziontechgroup.com&apos;,
       link: &apos;http,s://ziontechgroup.com&apos}
-  ];&apos;
+  ]&apos;
         firstName: '', lastName: '',
         message: ''})}, 5000)}
     'AI & Machine Learning', 'Cloud & DevOps',

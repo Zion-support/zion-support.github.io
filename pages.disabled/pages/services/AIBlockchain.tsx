@@ -4,7 +4,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIBlockchain(function AIBlockchain() {): any: {}
     'Automated blockchain monitoring and alerting',';Predictive: analytics for blockchain scaling',';Smart: blockchain security and compliance',';AI-driven: blockchain automation and orchestration',';Real-time: blockchain analytics and insights',';Custom: AI models for blockchain applications';
 <:pages.disabled/pages/services/AIBlockchain.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Developer,',';
@@ -27,7 +27,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
   ]';Blockchain: optimization',';Smart: contract management',';Performance: monitoring and analytics',';Security: and compliance monitoring',';Automation: and orchestration',';Blockchain: scaling and management';
   ]';Improve: blockchain performance by 50-80%',';Reduce: transaction processing time by 40-70%',';Cut: operational costs by 35-65%',';Enhance: blockchain reliability and scalability',';Optimize: resource utilization',';Scale: blockchain operations efficiently';
   ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-sky-500 via-blue-500 to-indigo-500 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIBlockchain(function AIBlockchain() {): any {}
     'Automated blockchain monitoring and alerting',;Predictive analytics for blockchain scaling',;Smart blockchain security and compliance',;AI-driven blockchain automation and orchestration',;Real-time blockchain analytics and insights',;Custom AI models for blockchain applications';
 <:pages.disabled/pages/services/AIBlockchain.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Developer',
@@ -115,8 +115,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     {'
       name: 'Business',
       price: '$999/mo',
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support']
-    },
+      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AIBlockchain.tsx>    {'
@@ -149,10 +149,10 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <Database className='w-4 h-4 mr-2'  /> AI-Powered Blockchain Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Blockchain Platform</h1>'          <p className='text-sky-100 text-xl'>Transform your blockchain operations with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
-  ];Blockchain optimization',;Smart contract management',;Performance monitoring and analytics',;Security and compliance monitoring',;Automation and orchestration',;Blockchain scaling and management';
-  ];Improve blockchain performance by 50-80%',;Reduce transaction processing time by 40-70%',;Cut operational costs by 35-65%',;Enhance blockchain reliability and scalability',;Optimize resource utilization',;Scale blockchain operations efficiently';
-  ];Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
-  ];
+  ]Blockchain optimization',;Smart contract management',;Performance monitoring and analytics',;Security and compliance monitoring',;Automation and orchestration',;Blockchain scaling and management';
+  ]Improve blockchain performance by 50-80%',;Reduce transaction processing time by 40-70%',;Cut operational costs by 35-65%',;Enhance blockchain reliability and scalability',;Optimize resource utilization',;Scale blockchain operations efficiently';
+  ]Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-sky-500 via-blue-500 to-indigo-500 py-20 text-center>''

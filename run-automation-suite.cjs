@@ -31,8 +31,8 @@ class AutomationSuiteRunner {
       const result = execSync(command, {
         cwd: this.projectRoot,
         encoding: 'utf8',
-        timeout: 300000, // 5 minutes timeout
-      });
+        timeout: 300000, // 5 minutes timeout;
+});
       this.log(`✅ Completed: ${description}`);
       return { success: true, output: result };
     } catch (error) { 
@@ -42,50 +42,34 @@ class AutomationSuiteRunner {
   }
 
   async runAutomationScripts() {
-    this.log(`🎯 Starting Automation Suite Execution`);
+    this.log('🎯 Starting Automation Suite Execution');
 
     const scripts = [
       {
         command: 'npm run lint',
-        description: 'ESLint Check'
+        description: 'ESLint Check';
+},
+      {
         command: 'npm run lint:fix',
-        description: 'ESLint Fix'},
+        description: 'ESLint Fix';
+},
       {
         command: 'npm run type-check',
-        description: 'TypeScript Type Check'},
+        description: 'TypeScript Type Check';
+},
       {
         command: 'npm run test',
-        description: 'Test Suite'},
+        description: 'Test Suite';
+},
       {
         command: 'npm run build',
-        description: 'Build Application'}];
+        description: 'Build Application';
+}
+    ]
 
-    const logMessage = `[${timestamp}] ${message}`;`;    console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + '\n');  }
-;
-  async runCommand(command, description) {;
-    this.log(`🚀 "Starting": ${description}`);`;    try {;
-      const result = execSync(command, {;);        "cwd": this.projectRoot,;
-        "encoding": 'utf8',';        "timeout": 300000, // 5 minutes timeout;});
-      this.log(`✅ "Completed": ${description}`);`;      return { "success": true, "output": result };} catch (error) {;
-      this.log(`❌ "Failed": ${description} - ${error.message}`);`;      return { "success": false, "error": error.message };}
-  }
-;
-  async runAutomationScripts() {;
-    this.log('🎯 Starting Automation Suite Execution');
-    const scripts = [;
-      {;
-        "command": 'npm run "lint":fix',';        "description": 'ESLint Fix',';      },;
-      {;
-        "command": 'npm run type-check',';        "description": 'TypeScript Type Check',';      },;
-      {;
-        "command": 'npm run test',';        "description": 'Test Suite',';      },;
-      {;
-        "command": 'npm run build',';        "description": 'Build Application',';      },;];
-;
     const results = [];
-;
-    for (const script of scripts) {;
+
+    for (const script of scripts) {
       const result = await this.runCommand(script.command, script.description);
       results.push({ ...script, ...result });
     }
@@ -166,7 +150,7 @@ class AutomationSuiteRunner {
 ;
   async detectErrors() {;
     const errorPatterns = [;
-      'SyntaxError',';      'TypeError',';      'ReferenceError',';      'Module not found',';      'Cannot resolve',';      'Unexpected token',';    ];
+      'SyntaxError',';      'TypeError',';      'ReferenceError',';      'Module not found',';      'Cannot resolve',';      'Unexpected token',';    ]
 ;
     const errors = [];
     const srcDir = path.join(this.projectRoot, 'src');

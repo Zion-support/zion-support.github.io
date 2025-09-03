@@ -24,7 +24,7 @@ export default function AICustomerExperienceSupport(...args: any[]): any {}
     'Personalized customer journey mapping and optimization',;
     'Real-time analytics and performance monitoring dashboard',;
     'Integration with CRM, helpdesk, and e-commerce platforms',;
-  ];
+  ]
 
   '
     'Increase customer satisfaction scores by 35-50%
@@ -35,7 +35,7 @@ export default function AICustomerExperienceSupport(...args: any[]): any {}
   'Improve customer retention rates by 25-40%',;'
   'Generate 20-30% more upsell opportunities',;'
   'Achieve 99.9% support ticket resolution rate',;
-  ];
+  ]
 
   '
     'Self-Service Knowledge Base
@@ -46,7 +46,7 @@ export default function AICustomerExperienceSupport(...args: any[]): any {}
   'Voice Assistant Integration',;'
   'WhatsApp Business API',;'
   'SMS Support Automation',;
-  ];
+  ]
 
   '
     'Smart Escalation
@@ -57,7 +57,7 @@ export default function AICustomerExperienceSupport(...args: any[]): any {}
   'Behavioral Analysis',;'
   'Proactive Support',;'
   'Performance Optimization',;
-  ];
+  ]
 
   '
     'Freshdesk
@@ -68,7 +68,7 @@ export default function AICustomerExperienceSupport(...args: any[]): any {}
   'Magento',;'
   'Slack',;'
   'Microsoft Teams',;
-  ];
+  ]
 
   '
 
@@ -123,7 +123,7 @@ export default function AICustomerExperienceSupport(...args: any[]): any {}
     { name: 'Salesforce', url: 'https://www.salesforce.com/' },;'    { name: 'Analytics', url: 'https://analytics.google.com/' },;
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx
 
-  ];
+  ]
 
   return()
     <div className = "min-h-screen bg-futuristic">""

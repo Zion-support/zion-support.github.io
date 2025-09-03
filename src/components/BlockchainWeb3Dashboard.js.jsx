@@ -5,8 +5,8 @@ import { Wallet, Smartphone, Coins, Image, TrendingUp, BarChart3, Plus, Send, Do
 ;,"});,"})
 export const BlockchainWeb3Dashboard = ({ className = '' }) => {;,"});,"})
     const { trackEvent } = useAnalytics({        enableTracking: true,;,"});,"})
-        enableUserBehaviorTracking: true;,"});,"})
-    });,"});,"})
+        enableUserBehaviorTracking: true;,"});,"});
+});,"});,"})
     const [activeTab, setActiveTab] = useState('overview');,"});,"})
     const [showMintNFT, setShowMintNFT] = useState(false);,"});,"})
     const [showSendTransaction, setShowSendTransaction] = useState(false);,"});,"})
@@ -17,16 +17,16 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;,"});,"})
 ''';,"});,"})
         name: '',''';,"});,"})
         description: '',''';,"});,"})
-        image: '';,"});,"})
-    });,"});,"})
+        image: '';,"});,"});
+});,"});,"})
     const [transactionForm, setTransactionForm] = useState({}"});,"})
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
         to: '',''';,"});,"})
         value: '',''';,"});,"})
-        data: '';,"});,"})
-    });,"});,"})
+        data: '';,"});,"});
+});,"});,"})
     const handleConnectWallet = useCallback(async () => {}"});,"})
         try {}"});,"})
             await connectWallet();,"});,"})
@@ -35,8 +35,8 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;,"});,"})
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
-            // console.error('Failed to connect wallet:', error)}"});,"})
-    }, [connectWallet, trackEvent]);,"});,"})
+            // console.error('Failed to connect wallet:', error)}"});,"});
+}, [connectWallet, trackEvent]);,"});,"})
     const handleMintNFT = useCallback(async () => {}"});,"})
         if(nftForm.name.trim() && wallet) {}"});,"})
             try {}"});,"})
@@ -44,9 +44,9 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;,"});,"})
   name: nftForm.name,;,"});,"})
                     description: nftForm.description,;,"});,"})
   image: nftForm.image || `https://via.placeholder.com/300x300/6366f1/ffffff?text=${nftForm.name```;,"});,"})
-```'`;,"});,"})
-}`'';,"});,"})
-                };''';,"});,"})
+```'`;,"});,"});
+}`'';,"});,"});
+};''';,"});,"})
                 await mintNFT(contracts[1]?.address || '', metadata);''';,"});,"})
                 setNftForm({ name: '', description: '', image: '' });'';,"});,"})
                 setShowMintNFT(false);''';,"});,"})
@@ -55,9 +55,9 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;,"});,"})
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
-                // console.error('Failed to mint NFT:', error)}"});,"})
-        }"});,"})
-    }, [nftForm, wallet, contracts, mintNFT, trackEvent]);,"});,"})
+                // console.error('Failed to mint NFT:', error)}"});,"});
+}"});,"});
+}, [nftForm, wallet, contracts, mintNFT, trackEvent]);,"});,"})
     const handleSendTransaction = useCallback(async () => {}"});,"})
         if(transactionForm.to.trim() && transactionForm.value && wallet) {}"});,"})
             try {}"});,"})
@@ -69,17 +69,17 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;,"});,"})
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
-                // console.error('Failed to send transaction:', error)}"});,"})
-        }"});,"})
-    }, [transactionForm, wallet, sendTransaction, trackEvent]) ;,"});,"})
+                // console.error('Failed to send transaction:', error)}"});,"});
+}"});,"});
+}, [transactionForm, wallet, sendTransaction, trackEvent]) ;,"});,"})
     const getStatusColor = (status) => {}"});,"})
         switch (status) {}"});,"})
 ';,"});,"})
             case 'confirmed': return 'text-green-600 bg-green-100';,"});,"})
             case 'pending': return 'text-yellow-600 bg-yellow-100';,"});,"})
             case 'failed': return 'text-red-600 bg-red-100';,"});,"})
-            default: return 'text-gray-600 bg-gray-100'}`;,"});,"})
-    };``;,"});,"})
+            default: return 'text-gray-600 bg-gray-100'}`;,"});,"});
+};``;,"});,"})
     return (<div className={`bg-white dark:bg-gray-900 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 ${className}`}>""";,"});,"})
       {/* Header */}"""";,"});,"})
       <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">"""";,"});,"})
@@ -157,14 +157,14 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;,"});,"})
 '"'""";,"});,"})
           {activeTab === 'contracts' && (<motion.div key="contracts" initial = {}"});,"})
   { opacity: 0,;,"});,"})
-  y: 20;,"});,"})
+  y: 20;,"});,"});
 }} animate = {}"});,"})
   { opacity: 1,;,"});,"})
-  y: 0;,"});,"})
+  y: 0;,"});,"});
 }} exit = {}"});,"})
   { opacity: 0,;,"});,"})
   y: -20 """;,"});,"})
-"""";,"});,"})
+"""";,"});,"});
 }} className="space-y-4">"""";,"});,"})
               <div className="flex items-center justify-between">"""";,"});,"})
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Smart Contracts</h3>;,"});,"})
@@ -179,7 +179,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;,"});,"})
                 events['Event1',;,"});,"})
   'Event2'];,"});,"})
             """;,"});,"})
-"""";,"});,"})
+"""";,"});,"});
 })} className="px-3 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700">;"""";,"});,"})
                   <Plus className="w-4 h-4 inline mr-2"/>;,"});,"})
                   Add Contract;,"});,"})
@@ -226,14 +226,14 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;,"});,"})
 '"'""";,"});,"})
           {activeTab === 'nfts' && (<motion.div key="nfts" initial = {}"});,"})
   { opacity: 0,;,"});,"})
-  y: 20;,"});,"})
+  y: 20;,"});,"});
 }} animate = {}"});,"})
   { opacity: 1,;,"});,"})
-  y: 0;,"});,"})
+  y: 0;,"});,"});
 }} exit = {}"});,"})
   { opacity: 0,;,"});,"})
   y: -20 """;,"});,"})
-"""";,"});,"})
+"""";,"});,"});
 }} className="space-y-4">"""";,"});,"})
               <div className="flex items-center justify-between">"""";,"});,"})
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white">NFT Collection</h3>"""";,"});,"})
@@ -282,14 +282,14 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;,"});,"})
 '"'""";,"});,"})
           {activeTab === 'defi' && (<motion.div key="defi" initial = {}"});,"})
   { opacity: 0,;,"});,"})
-  y: 20;,"});,"})
+  y: 20;,"});,"});
 }} animate = {}"});,"})
   { opacity: 1,;,"});,"})
-  y: 0;,"});,"})
+  y: 0;,"});,"});
 }} exit = {}"});,"})
   { opacity: 0,;,"});,"})
   y: -20 """;,"});,"})
-"""";,"});,"})
+"""";,"});,"});
 }} className="space-y-4">"""";,"});,"})
               <div className="flex items-center justify-between">"""";,"});,"})
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white">DeFi Positions</h3>;,"});,"})
@@ -303,7 +303,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;,"});,"})
                 apy: 12.5,';,"});,"})
   rewards: '125';,"});,"})
             """;,"});,"})
-"""";,"});,"})
+"""";,"});,"});
 })} className="px-3 py-2 text-sm font-medium text-white bg-green-600 rounded-lg hover:bg-green-700">"""";,"});,"})
                   <Plus className="w-4 h-4 inline mr-2"/>;,"});,"})
                   Add Position;,"});,"})
@@ -355,14 +355,14 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;,"});,"})
 '"'""";,"});,"})
           {activeTab === 'transactions' && (<motion.div key="transactions" initial = {}"});,"})
   { opacity: 0,;,"});,"})
-  y: 20;,"});,"})
+  y: 20;,"});,"});
 }} animate = {}"});,"})
   { opacity: 1,;,"});,"})
-  y: 0;,"});,"})
+  y: 0;,"});,"});
 }} exit = {}"});,"})
   { opacity: 0,;,"});,"})
   y: -20 """;,"});,"})
-"""";,"});,"})
+"""";,"});,"});
 }} className="space-y-4">"""";,"});,"})
               <div className="flex items-center justify-between">"""";,"});,"})
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Transaction History</h3>"""";,"});,"})
@@ -444,14 +444,14 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;,"});,"})
         {showMintNFT && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">;,"});,"})
             <motion.div initial = {}"});,"})
   { scale: 0.9,;,"});,"})
-  opacity: 0;,"});,"})
+  opacity: 0;,"});,"});
 }} animate = {}"});,"})
   { scale: 1,;,"});,"})
-  opacity: 1;,"});,"})
+  opacity: 1;,"});,"});
 }} exit = {}"});,"})
   { scale: 0.9,;,"});,"})
   opacity: 0 """;,"});,"})
-"""";,"});,"})
+"""";,"});,"});
 }} className="bg-white dark:bg-gray-800 rounded-lg p-6 w-full max-w-md mx-4">"""";,"});,"})
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Mint New NFT</h3>""";,"});,"})
               """";,"});,"})
@@ -463,7 +463,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;,"});,"})
                   <input type="text" value={nftForm.name} onChange = {}"});,"})
   (e) => setNftForm(prev => ({ ...prev,;,"});,"})
   name: e.target.value """;,"});,"})
-"""";,"});,"})
+"""";,"});,"});
 }))} className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="NFT Name"/>;,"});,"})
                 </div>;,"});,"})
                 """;,"});,"})
@@ -474,7 +474,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;,"});,"})
                   <textarea value={nftForm.description} onChange = {}"});,"})
   (e) => setNftForm(prev => ({ ...prev,;,"});,"})
   description: e.target.value """;,"});,"})
-"""";,"});,"})
+"""";,"});,"});
 }))} className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="NFT Description" rows={3}/>;,"});,"})
                 </div>;,"});,"})
                 """;,"});,"})
@@ -485,7 +485,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;,"});,"})
                   <input type="url" value={nftForm.image} onChange = {}"});,"})
   (e) => setNftForm(prev => ({ ...prev,;,"});,"})
   image: e.target.value """;,"});,"})
-"""";,"});,"})
+"""";,"});,"});
 }))} className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="https://example.com/image.jpg"/>;,"});,"})
                 </div>;,"});,"})
               </div>""";,"});,"})
@@ -507,14 +507,14 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;,"});,"})
         {showSendTransaction && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">;,"});,"})
             <motion.div initial = {}"});,"})
   { scale: 0.9,;,"});,"})
-  opacity: 0;,"});,"})
+  opacity: 0;,"});,"});
 }} animate = {}"});,"})
   { scale: 1,;,"});,"})
-  opacity: 1;,"});,"})
+  opacity: 1;,"});,"});
 }} exit = {}"});,"})
   { scale: 0.9,;,"});,"})
   opacity: 0 """;,"});,"})
-"""";,"});,"})
+"""";,"});,"});
 }} className="bg-white dark:bg-gray-800 rounded-lg p-6 w-full max-w-md mx-4">"""";,"});,"})
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Send Transaction</h3>""";,"});,"})
               """";,"});,"})
@@ -526,7 +526,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;,"});,"})
                   <input type="text" value={transactionForm.to} onChange = {}"});,"})
   (e) => setTransactionForm(prev => ({ ...prev,;,"});,"})
   to: e.target.value """;,"});,"})
-"""";,"});,"})
+"""";,"});,"});
 }))} className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="0x..."/>;,"});,"})
                 </div>;,"});,"})
                 """;,"});,"})
@@ -537,7 +537,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;,"});,"})
                   <input type="number" step="0.001" value={transactionForm.value} onChange = {}"});,"})
   (e) => setTransactionForm(prev => ({ ...prev,;,"});,"})
   value: e.target.value """;,"});,"})
-"""";,"});,"})
+"""";,"});,"});
 }))} className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="0.1"/>;,"});,"})
                 </div>;,"});,"})
                 """;,"});,"})
@@ -548,7 +548,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;,"});,"})
                   <textarea value={transactionForm.data} onChange = {}"});,"})
   (e) => setTransactionForm(prev => ({ ...prev,;,"});,"})
   data: e.target.value """;,"});,"})
-"""";,"});,"})
+"""";,"});,"});
 }))} className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="0x..." rows={3}/>;,"});,"})
                 </div>;,"});,"})
               </div>""";,"});,"})
@@ -576,7 +576,7 @@ import { motion, AnimatePresence } from 'framer-motion
 import { Wallet, Smartphone, Coins, Image, TrendingUp, BarChart3, Plus, Send, Download, Loader2 }  from 'lucide-react';
 ;"
 export const BlockchainWeb3Dashboard = ({ className = '' }) => {
-    const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true","
+    const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true",";
 })''
     const [activeTab, setActiveTab] = useState('overview')
     const [showMintNFT, setShowMintNFT] = useState(false)
@@ -622,8 +622,8 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
             try {}
                 const metadata = {}
   name: nftForm.name, description: nftForm.description, image: nftForm.image || `https://via.placeholder.com/300x300/6366f1/ffffff?text=${nftForm.name```"`"
-```'`", `'"
-}`'';", "
+```'`", `'";
+}`'';", ";
 }';'
                 await mintNFT(contracts[1]?.address || '', metadata)';'
                 setNftForm({ name: '', description: '', image: '' })''
@@ -631,7 +631,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                 trackEvent('blockchain', dashboard',nft_minted')}
             catch (error) {}""
   name: nftForm.name, description: nftForm.description, image: nftForm.image || `https://via.placeholder.com/300x300/6366f1/ffffff?text=${nftForm.name```"`
-```'`",`
+```'`",`;
 }`'}
                 await mintNFT(contracts[1]?.address || '', metadata)
                 setNftForm({ name: '', description: '', image: '' })'
@@ -665,7 +665,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
             case 'confirmed': return 'text-green-600 bg-green-100'
             case 'pending': return 'text-yellow-600 bg-yellow-100'
             case 'failed': return 'text-red-600 bg-red-100'`
-            default: return 'text-gray-600 bg-gray-100'}`, `
+            default: return 'text-gray-600 bg-gray-100'}`, `;
 }`"`"
     return (<div className={`bg-white dark: bg-gray-900 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 ${className}`}" >''''"
       {/* Header */}''''

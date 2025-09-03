@@ -1,5 +1,4 @@
 // HTML sanitization utility to prevent CSP violations
-<<<<<<< HEAD
 // HTML sanitization utility to prevent CSP violations
 export function sanitizeHtml(html: string): string {
   // Remove script tags
@@ -59,12 +58,10 @@ export function sanitizeHtml(html: string): string {
 export function sanitizeUrl(url: string): string {
   // Remove javascript: URLs;
   return url.replace(/javascript: /gi, '')}
-=======
 export function sanitizeHtml(html: string): string {
   // Remove script tags
   let sanitized = html.replace(/<script\b[^<]*(?: (?!<\/script>)<[^<]*)*<\/script>/gi, '');
   
->>>>>>> 2e42f512832d464e2ba4e827c789976ad41530e5
   // Remove event handlers
   sanitized = sanitized.replace(/\s*on\w+\s*=\s*['"][^'"]*['"]/g, '');
   
@@ -72,13 +69,10 @@ export function sanitizeHtml(html: string): string {
   sanitized = sanitized.replace(/javascript:/gi, '');
   
   // Remove data: URLs that might contain scripts
-<<<<<<< HEAD
   sanitized = sanitized.replace(/data:text\/html/gi, "");
   sanitized = sanitized.replace(/data:text\/html/gi, '');
-=======
   sanitized = sanitized.replace(/data:text\/html/gi, '');
   
->>>>>>> 2e42f512832d464e2ba4e827c789976ad41530e5
   return sanitized;
 }
 
@@ -89,7 +83,6 @@ export function sanitizeUrl(url: string): string {
 
 export function sanitizeCss(css: string): string {
   // Remove potentially dangerous CSS
-<<<<<<< HEAD
   return css.replace(/expression\s*\(/gi, "");
 }
   // Remove javascrip,
@@ -102,7 +95,5 @@ export function sanitizeCss(css: string): string {
   // Remove potentially dangerous CSS'
   return css.replace(/expression\s*\(/gi, '');
 }
-=======
   return css.replace(/expression\s*\(/gi, '');
 }
->>>>>>> 2e42f512832d464e2ba4e827c789976ad41530e5

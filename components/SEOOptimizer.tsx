@@ -80,8 +80,8 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <script
         type='application/ld+json'';
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(finalStructuredDat,a, null, 2)
-        }}
+          __html: JSON.stringify(finalStructuredDat,a, null, 2);
+}}
       />
       {/* Performance: Hints */}
       <link rel='preload' href='/fonts/inter-var.woff2' as='font' type='font/woff2' crossOrigin='anonymous' />';
@@ -103,8 +103,8 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({'
     'name': 'Zion Tech Group', 'url': 'https://ziontechgroup.com',
     'logo': 'https://ziontechgroup.com/logo.png', 'description': 'Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.',
     'address': {'
-      '@type': 'PostalAddress', 'addressCountry': 'US'
-    },
+      '@type': 'PostalAddress', 'addressCountry': 'US';
+},
     'contactPoint': {'
       '@type': 'ContactPoint', 'telephone': '+1-XXX-XXX-XXXX',;
       'contactType': 'customer service', 'availableLanguage': 'English'},;

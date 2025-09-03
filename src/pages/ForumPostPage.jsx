@@ -1,4 +1,4 @@
- export default function ForumPostPage () {;,"});,"})
+ export default function ForumPostPage () {;,"});,"});
 }"});,"})
  export: default function ForumPostPage () {;
 };
@@ -19,5 +19,5 @@ export default function ForumPostPage() {return (
     </div>
   );
 }
- export default function ForumPostPage () {
+ export default function ForumPostPage () {;
 };

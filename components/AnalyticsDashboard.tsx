@@ -80,8 +80,8 @@ export default function AnalyticsDashboard() {
           lcp: 2800,
           fid: 45,
           cls: 0.08,
-          ttfb: 180
-        },
+          ttfb: 180;
+},
           deviceType: { mobile: 45, desktop: 48, tablet: 7 },
           browser: { Chrome: 65, Safari: 20, Firefox: 10, Edge: 5 },
           country: { "United States": 60, Canada: 15, "United Kingdom": 10, Germany: 8, Other: 7 }
@@ -108,8 +108,8 @@ export default function AnalyticsDashboard() {
             "Canada": 15,"
             "United Kingdom": 10,"
             "Germany": 8,"
-            "Other": 7
-          }
+            "Other": 7;
+}
       });
       setIsLoading(false)};
 
@@ -251,8 +251,8 @@ export default function AnalyticsDashboard() {
               <div className="space-y-3">"
                     analyticsData.performance.fcp < 1800"
                       ? "text-green-400""
-                      : "text-red-400"
-                  }>
+                      : "text-red-400";
+}>
                     {analyticsData.performance.fcp}ms
                   <span>Largest Contentful Paint</span>
                     analyticsData.performance.lcp < 2500
@@ -330,5 +330,5 @@ export default function AnalyticsDashboard() {
           {/* Countries */}"
             <h3 className="text-xl font-bold mb-4">Top Countries</h3>"
                   key={country}"
-                  <span>{country}</span>"
+                  <span>{country}</span>";
 }"

@@ -64,26 +64,26 @@ const: ITServicesPage: NextPage: = () => {
 :pages.disabled_auto/services/it-services.tsx
       title:,
   Enterprise Security',
-      description: 'Bank-level security protocols and compliance standards to protect your business data.
-    },
+      description: 'Bank-level security protocols and compliance standards to protect your business data.;
+},
     {
       icon: <Zap className="w-8 h-8" />,
       title:,
   Performance Optimization',
-      description: 'Optimize your infrastructure for maximum performance and efficiency.
-    },
+      description: 'Optimize your infrastructure for maximum performance and efficiency.;
+},
     {
       icon: <Users className="w-8 h-8" />,
       title:,
   Expert Team',
-      description: 'Experienced IT professionals with deep expertise in enterprise solutions.
-    },
+      description: 'Experienced IT professionals with deep expertise in enterprise solutions.;
+},
     {
       icon: <Globe className="w-8 h-8" />,
       title:,
   Global Support',
-      description: '24/7 support and monitoring to ensure your systems run smoothly.
-    }
+      description: '24/7 support and monitoring to ensure your systems run smoothly.;
+}
       title: 'Enterprise Security',
       description:
         'Bank-level security protocols and compliance standards to protect your business data.'},
@@ -103,7 +103,7 @@ const: ITServicesPage: NextPage: = () => {
       description:
         '24/7 support and monitoring to ensure your systems run smoothly.'},
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/it-services.tsx
-  ];
+  ]
 
   return (
     <MainLayout

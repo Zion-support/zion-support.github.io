@@ -73,8 +73,8 @@ const { execSync, spawn } = require('child_process');const fs = require('fs');co
       ;
       this.log('Dependency health check completed', 'success');
       return { outdated, audit, peerIssues };
-    } catch (error) { 
-    } catch (error) {;
+    } catch (error) { ;
+} catch (error) {;
       this.log('Dependency check failed, will attempt fixes', 'warn');
       return null;
      }
@@ -164,8 +164,8 @@ const { execSync, spawn } = require('child_process');const fs = require('fs');co
       
       this.log('Code quality checks completed', 'success');
       return true;
-    } catch (error) { 
-        } catch (fixError) {;
+    } catch (error) { ;
+} catch (fixError) {;
           this.log('ESLint auto-fix failed', 'error');
         }
       }
@@ -289,7 +289,7 @@ const { execSync, spawn } = require('child_process');const fs = require('fs');co
       const keyFiles = [next.config.js',;
         'tsconfig.json',package.json',;
         'ecosystem.config.cjs';
-      ];
+      ]
       ;
       for (const file of keyFiles) {;
         if (fs.existsSync(file)) {;
@@ -308,7 +308,7 @@ const { execSync, spawn } = require('child_process');const fs = require('fs');co
           }
         }
       this.log('Identifying build issues...');      ;      // Check for syntax errors in key files;
-      const keyFiles = [next.config.js',';        'tsconfig.json',package.json',';        'ecosystem.config.cjs'';      ];      ;
+      const keyFiles = [next.config.js',';        'tsconfig.json',package.json',';        'ecosystem.config.cjs'';      ]      ;
       for (const file of keyFiles) {;
         if (fs.existsSync(file)) {;
           try {;
@@ -320,8 +320,8 @@ const { execSync, spawn } = require('child_process');const fs = require('fs');co
       if (filesWithConflicts.length > 0) {this.log(`Found merge conflicts in: ${filesWithConflicts.join(', ')}`, `error`);
         this.errors.push({ type: 'merge_conflicts', files: filesWithConflicts });
       }
-      
-    } catch (error) { 
+      ;
+} catch (error) { 
       ;
       // Check for merge conflicts;
       const filesWithConflicts = await this.findMergeConflicts();
@@ -407,8 +407,8 @@ const { execSync, spawn } = require('child_process');const fs = require('fs');co
       logs: this.logs,
       errors: this.errors,
       fixes: this.fixes,
-      recommendations: this.generateRecommendations()
-      } catch (error) {;
+      recommendations: this.generateRecommendations();
+} catch (error) {;
         this.log('Tests failed', 'warn');
         return false;
       }
@@ -501,8 +501,8 @@ const { execSync, spawn } = require('child_process');const fs = require('fs');co
       
       this.log('Full automation completed successfully', `success`);
       return report;
-      
-    } catch (error) { this.log(`Full automation failed: ${error.message }`, `error`);
+      ;
+} catch (error) { this.log(`Full automation failed: ${error.message }`, `error`);
       ;
       // Fix merge conflicts first;
       recommendations.push('Review and fix identified errors manually');    }';    ;
@@ -583,8 +583,8 @@ async function main() {;
     ;
     await automation.generateReport();
     process.exit(0);
-    
-  } catch (error) { automation.log(`Fatal error: ${error.message }`, `error`);
+    ;
+} catch (error) { automation.log(`Fatal error: ${error.message }`, `error`);
     ;
   } catch (error) {automation.log(`Fatal error: ${error.message}`, 'error');
     await automation.generateReport();

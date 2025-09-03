@@ -27,8 +27,8 @@ const AdvancedServiceInnovationHub = () => {}"});,"})
             investment: '$50B+',''';,"});,"})
             keyPlayers['IBM',Google',Microsoft',Startups'],;''';,"});,"})
             technologies['Quantum Computing',Quantum Algorithms',Quantum Software'],;''';,"});,"})
-            status: 'Emerging';,"});,"})
-        },;,"});,"})
+            status: 'Emerging';,"});,"});
+},;,"});,"})
             id: 'ai-consciousness',''';,"});,"})
             title: 'AI Consciousness & General Intelligence',''';,"});,"})
             description: 'Development of self-aware AI systems with human-like reasoning and consciousness.',''';,"});,"})
@@ -71,7 +71,7 @@ const AdvancedServiceInnovationHub = () => {}"});,"})
             investment: '$80B+',''';,"});,"})
             keyPlayers['Neuralink',Kernel',Medical Device Companies'],;''';,"});,"})
             technologies['Neural Interfaces',Signal Processing',AI/ML'],;''';,"});,"})
-    ];,"});,"})
+    ],"});,"})
     const filteredTrends = useMemo(() => {}"});,"})
         return innovationTrends.filter(trend => {}"});,"})
             const matchesSearch = trend.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;,"});,"})
@@ -82,8 +82,8 @@ const AdvancedServiceInnovationHub = () => {}"});,"})
             case 'High': return 'bg-red-100 text-red-800';''';,"});,"})
             case 'Medium': return 'bg-yellow-100 text-yellow-800';''';,"});,"})
             case 'Low': return 'bg-green-100 text-green-800';''';,"});,"})
-            default: return 'bg-gray-100 text-gray-800'}"});,"})
-    };,"});,"})
+            default: return 'bg-gray-100 text-gray-800'}"});,"});
+};,"});,"})
     const getStatusColor = (status) => {}"});,"})
         switch (status) {}"});,"})
             case 'Emerging': return 'bg-blue-100 text-blue-800';''';,"});,"})
@@ -99,8 +99,8 @@ const AdvancedServiceInnovationHub = () => {}"});,"})
             case 'space-tech': return <Satellite className="w-5 h-5"/>;'"'""";,"});,"})
             case 'green-tech': return <Leaf className="w-5 h-5"/>;'"'""";,"});,"})
             case 'biotech-ai': return <Dna className="w-5 h-5"/>;"""";,"});,"})
-            default: return <Cpu className="w-5 h-5"/>}"});,"})
-    };'""";,"});,"})
+            default: return <Cpu className="w-5 h-5"/>}"});,"});
+};'""";,"});,"})
     const categories = ['"'""";,"});,"})
         { id: 'all', name: 'All Categories', icon: <Globe className="w-4 h-4"/> },"'""";,"});,"})
         { id: 'quantum', name: 'Quantum Technology', icon: <Atom className="w-4 h-4"/> },"'""";,"});,"})
@@ -108,17 +108,17 @@ const AdvancedServiceInnovationHub = () => {}"});,"})
         { id: 'space-tech', name: 'Space Technology', icon: <Satellite className="w-4 h-4"/> },"'""";,"});,"})
         { id: 'green-tech', name: 'Green Technology', icon: <Leaf className="w-4 h-4"/> },"'""";,"});,"})
         { id: 'biotech-ai', name: 'Biotech AI', icon: <Dna className="w-4 h-4"/> }""";,"});,"})
-    ];"""";,"});,"})
+    ]"""";,"});,"})
     return (<div className="max-w-7xl mx-auto p-6">;,"});,"})
       {/* Header */}"});,"})
       <motion.div initial = {}"});,"})
   { opacity: 0,;,"});,"})
-  y: 20;,"});,"})
+  y: 20;,"});,"});
 }} animate = {}"});,"})
   { opacity: 1,;,"});,"})
   y: 0;,"});,"})
 """;,"});,"})
-"""";,"});,"})
+"""";,"});,"});
 }} className="mb-8">"""";,"});,"})
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">""";,"});,"})
           <div>"""";,"});,"})
@@ -141,7 +141,7 @@ const AdvancedServiceInnovationHub = () => {}"});,"})
       </motion.div>';,"});,"})
       {/* Innovation Trends View */}''';,"});,"})
       {viewMode === 'trends' && (<>;,"});,"})
-          {/* Filters */}"});,"})
+          {/* Filters */}"});,"});
 }} transition={{ delay: 0.1 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">"""";,"});,"})
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">""";,"});,"})
                 <label className="block text-sm font-medium text-zion-slate-dark mb-2">Category</label>"""";,"});,"})
@@ -166,11 +166,11 @@ const AdvancedServiceInnovationHub = () => {}"});,"})
                 <label className="block text-sm font-medium text-zion-slate-dark mb-2">Search</label>"""";,"});,"})
                 <Input placeholder="Search trends..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full"/>;,"});,"})
           </motion.div>;,"});,"})
-          {/* Trends Grid */}"});,"})
+          {/* Trends Grid */}"});,"});
 }} transition={{ delay: 0.2 }} className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">;,"});,"})
             {filteredTrends.map((trend, index) => (<motion.div key={trend.id} initial = {}"});,"})
   x: index % 2 === 0 ? -20 : 20;,"});,"})
-  x: 0;,"});,"})
+  x: 0;,"});,"});
 }} transition={{ delay: 0.1 * index }}>"""";,"});,"})
                 <Card className="h-full hover:shadow-lg transition-shadow">""";,"});,"})
                   <CardHeader>"""";,"});,"})
@@ -218,7 +218,7 @@ const AdvancedServiceInnovationHub = () => {}"});,"})
         </>) }"});,"})
 ;,"});,"})
       {/* Future Roadmap View */}';,"});,"})
-      {viewMode === 'roadmap' && (<motion.div initial = {}"});,"})
+      {viewMode === 'roadmap' && (<motion.div initial = {}"});,"});
 }} transition={{ delay: 0.1 }} className="space-y-6">;,"});,"})
           {futureRoadmap.map((roadmap, index) => (<motion.div key={roadmap.id} initial = {}"});,"})
   x: -20;,"});,"})
@@ -262,7 +262,7 @@ const AdvancedServiceInnovationHub = () => {}"});,"})
                             {opportunity}"});,"})
         </motion.div>) }"});,"})
       {/* Strategic Insights View */}';,"});,"})
-      {viewMode === 'insights' && (<motion.div initial = {}"});,"})
+      {viewMode === 'insights' && (<motion.div initial = {}"});,"});
 }} transition={{ delay: 0.1 }} className="space-y-6">"""";,"});,"})
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">;,"});,"})
             <Card>""";,"});,"})
@@ -316,7 +316,7 @@ const AdvancedServiceInnovationHub = () => {}"});,"})
                       Build quantum internet infrastructure""";,"});,"})
                       Develop synthetic biology capabilities""";,"});,"})
                       Invest in fusion energy research;,"});,"})
-      {/* CTA Section */}"});,"})
+      {/* CTA Section */}"});,"});
 }} transition={{ delay: 0.4 }} className="mt-12 text-center">"""";,"});,"})
         <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">"""";,"});,"})
           <h3 className="text-3xl font-bold mb-4">Ready to Shape the Future?</h3>"""";,"});,"})
@@ -326,7 +326,7 @@ const AdvancedServiceInnovationHub = () => {}"});,"})
           </p>"""";,"});,"})
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"""";,"});,"})
             <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick = {}"});,"})
-  () => window.open('mailto:kleber@ziontechgroup.com?subject=Innovation Strategy Consultation',_blank');,"});,"})
+  () => window.open('mailto:kleber@ziontechgroup.com?subject=Innovation Strategy Consultation',_blank');,"});,"});
 }>"""";,"});,"})
               <Users className="w-5 h-5 mr-2"/>;,"});,"})
               Get Innovation Strategy""";,"});,"})
@@ -337,7 +337,7 @@ const AdvancedServiceInnovationHub = () => {}"});,"})
               Speak with an Expert;,"});,"})
             </Button>;,"});,"})
     </div>)};,"});,"})
-export default AdvancedServiceInnovationHub;,"});,"})
+export default AdvancedServiceInnovationHub;,"});,"});
 }}}}}}"});,"})
 export { AdvancedServiceInnovationHub };,"});,"})
 import React { useState, useMemo } from 'react';
@@ -434,7 +434,7 @@ import { Input } from &apos;./ui/input';&apos;&apos;
             keyPlayers[&apos;Neuralink&apos;,Kernel&apos;,Medical Device Companies&apos;],';
             technologies[&apos;Neural Interfaces&apos;,Signal Processing&apos;,AI/ML&apos;],';
             status: &apos;Emerging&apos}
-    ];&apos;&apos;
+    ]&apos;&apos;
 import React { useState, useMemo } from 'react'';'
 import { motion } from 'framer-motion'';'
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card'';'
@@ -560,7 +560,7 @@ import { Badge } from './ui/badge'';'';'
             keyPlayers['Neuralink', Kernel',Medical Device Companies'], ';
             technologies['Neural Interfaces', Signal Processing',AI/ML'], ';
             status: 'Emerging'}
-    ];
+    ]
     const filteredTrends = useMemo(() => {}
         return innovationTrends.filter(trend => {}
             const;const;const matchesSearch = trend.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
@@ -628,8 +628,8 @@ import { Badge } from './ui/badge'';'';'
             case 'ai': return <Brain className='w-5 h-5'/>''''''
             case 'space-tech': return <Satellite className='w-5 h-5'/>''''''
             case 'green-tech': return <Leaf className='w-5 h-5'/>''''''
-            case 'biotech-ai': return <Dna className='w-5 h-5'/>''''
-    }''''
+            case 'biotech-ai': return <Dna className='w-5 h-5'/>'''';
+}''''
     const categories = [''''''{ id: 'all', name: 'All Categories', icon: <Globe className='w-4 h-4'/> }, '''''{ id: 'quantum', name: 'Quantum Technology', icon: <Atom className='w-4 h-4'/> },'''''{ id: 'ai', name: 'Artificial Intelligence', icon: <Brain className='w-4 h-4'/> }, '''''{ id: 'space-tech', name: 'Space Technology', icon: <Satellite className='w-4 h-4'/> },'''''{ id: 'green-tech', name: 'Green Technology', icon: <Leaf className='w-4 h-4'/> }, '''''{ id: 'biotech-ai', name: 'Biotech AI', icon: <Dna className='w-4 h-4'/> }''';
     ]''''
     return (<div className='max-w-7xl mx-auto p-6'>

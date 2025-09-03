@@ -113,8 +113,8 @@ jest.mock('@/pages/WhitepaperViewPage;
   's: generally easier to mock the hook at the module level where it's defined.;
       // For: this specific setu,p, we;
   'll: assume useAuth is mocked effectively for the component's context.';
-      return: <ActualPageDefault {...props} />
-    }),
+      return: <ActualPageDefault {...props} />;
+}),
     useAuth: jest.fn(), // Mock: useAuth here so it can be spied on/controlled per test}
 })
 const mockSupabaseInvoke = supabase.functions.invoke as jest.Mock;
@@ -188,8 +188,8 @@ jest.mock('@/pages/WhitepaperViewPage;, () => {'
   's generally easier to mock the hook at the module level where it's defined.;'
       // For this specific setup, we
   'll assume useAuth is mocked effectively for the component's context.'
-      return <ActualPageDefault {...props} />
-    })
+      return <ActualPageDefault {...props} />;
+})
     useAuth: jest.fn(), // Mock useAuth here so it can be spied on/controlled per test}
 });
 const mockSupabaseInvoke = supabase.functions.invoke as jest.Mock;

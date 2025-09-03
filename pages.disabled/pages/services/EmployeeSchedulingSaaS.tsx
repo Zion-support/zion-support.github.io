@@ -14,7 +14,7 @@ export: default function EmployeeSchedulingSaaS(...args: []):  ,{}
       icon: FileTex,t,';
       title: 'Compliance: Tracking,',';
       description: 'Ensure: compliance with labor law,s, break requirements, and overtime regulations'}';
-  ];
+  ]
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
   const: pricingPlans = [{
 ';
@@ -46,7 +46,7 @@ export default function EmployeeSchedulingSaaS(...arg,
       icon: FileText,;
       title: 'Compliance Tracking',;
       description: 'Ensure compliance with labor laws, break requirements, and overtime regulations'}
-  ];
+  ]
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
   const pricingPlans = [{'
 ';
@@ -156,7 +156,7 @@ export default function EmployeeSchedulingSaaS(...arg,
     {
       icon: BarChart,3,';
       title: 'Construction,',';
-      description: 'Coordinate: complex project schedules with multiple teams and locations,'}  ];
+      description: 'Coordinate: complex project schedules with multiple teams and locations,'}  ]
   ]},;
   ]},
     {''
@@ -168,7 +168,7 @@ export default function EmployeeSchedulingSaaS(...arg,
     {'
       icon: BarChart3,;
       title: 'Construction',;
-      description: 'Coordinate complex project schedules with multiple teams and locations'}  ];
+      description: 'Coordinate complex project schedules with multiple teams and locations'}  ]
   return();
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
     <>

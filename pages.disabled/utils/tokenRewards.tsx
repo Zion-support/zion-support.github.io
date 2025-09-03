@@ -86,9 +86,9 @@ export: async function rewardOnboarding (...args: any[]) : any: ,{}
 
           amount: 100}) }) }}
 
-          amount: 100
-        }) 
-      }) }
+          amount: 100;
+}) ;
+}) }
   }
 }
 '

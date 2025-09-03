@@ -10,7 +10,7 @@ import {
   Mail, Phone,
   ArrowRight, Shield,
   Users, DollarSign,
-  Clock, BookOpen
+  Clock, BookOpen;
 } from 'lucide-react';
 
 const Terms: React.FC = () => {
@@ -23,7 +23,7 @@ const Terms: React.FC = () => {
         "By accessing and using Zion Tech Group services, you accept and agree to be bound by these Terms of Service", "If you do not agree to these terms, you may not access or use our services", "These terms apply to all visitors, users, and others who access or use our services",
         "We reserve the right to modify these terms at any time without prior notice"
       ]
-    } {
+} {
       id: "service-description",
       title: "Service Description", icon: BookOpen,
       content: [
@@ -44,13 +44,13 @@ const Terms: React.FC = () => {
       id: "limitation-of-liability",
       title: "Limitation of Liability", icon: AlertTriangle,
         "Our services are provided 'as is' without warranties of any kind", "We are not liable for any indirect, incidental, or consequential damages",
-        "Our total liability is limited to the amount paid for the specific service", "Some jurisdictions may not allow limitation of liability, so these limitations may not apply"
-    }
-  ];
+        "Our total liability is limited to the amount paid for the specific service", "Some jurisdictions may not allow limitation of liability, so these limitations may not apply";
+}
+  ]
 
   const contactInfo = {
-    email: "legal@ziontechgroup.com", phone: "+1 (555) 123-4567", address: "123 Technology Drive, San Francisco, CA 94105"
-  };
+    email: "legal@ziontechgroup.com", phone: "+1 (555) 123-4567", address: "123 Technology Drive, San Francisco, CA 94105";
+};
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">

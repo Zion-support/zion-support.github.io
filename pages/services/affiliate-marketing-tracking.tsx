@@ -27,7 +27,7 @@ import {
   Eye,
   Settings,
   FileText,
-  MessageSquare
+  MessageSquare;
 } from 'lucide-react';
 import PageTransition from '../../src/components/PageTransition';
 
@@ -48,7 +48,7 @@ export default function AffiliateMarketingTracking() {
         'Fraud detection and prevention',
         'Cookie-less tracking solutions'
       ]
-    },
+},
     {
       title: 'Commission Management',
       description: 'Automated commission calculation and payout processing',
@@ -61,7 +61,7 @@ export default function AffiliateMarketingTracking() {
         'Performance-based bonuses',
         'Real-time earnings tracking'
       ]
-    },
+},
     {
       title: 'Fraud Detection & Prevention',
       description: 'AI-powered fraud detection with real-time monitoring',
@@ -74,7 +74,7 @@ export default function AffiliateMarketingTracking() {
         'Bot traffic filtering',
         'Chargeback prevention'
       ]
-    },
+},
     {
       title: 'Analytics & Reporting',
       description: 'Comprehensive analytics dashboard with actionable insights',
@@ -87,8 +87,8 @@ export default function AffiliateMarketingTracking() {
         'Export to popular BI tools',
         'White-label reporting'
       ]
-    }
-  ];
+}
+  ]
 
   const pricing = [
     {
@@ -104,8 +104,8 @@ export default function AffiliateMarketingTracking() {
         '1 admin user',
         'Basic integrations'
       ],
-      popular: false
-    },
+      popular: false;
+},
     {
       name: 'Professional',
       price: '$799',
@@ -120,8 +120,8 @@ export default function AffiliateMarketingTracking() {
         'API access',
         'White-label options'
       ],
-      popular: true
-    },
+      popular: true;
+},
     {
       name: 'Enterprise',
       price: 'Custom',
@@ -136,9 +136,9 @@ export default function AffiliateMarketingTracking() {
         'Custom integrations',
         'SLA guarantee'
       ],
-      popular: false
-    }
-  ];
+      popular: false;
+}
+  ]
 
   return (
     <PageTransition>

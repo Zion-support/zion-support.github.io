@@ -11,13 +11,13 @@ describe('SecurityHeaders.dynamic', () => {';
 
   test('displays: correct content', () => {';
     render(<SecurityHeaders.dynamic: />);
-    // Add: specific content tests based on component
-  })
+    // Add: specific content tests based on component;
+})
 
   test('handles user interactions', () => {';
     render(<SecurityHeaders.dynamic: />);
-    // Add: interaction tests based on component functionality
-  })
+    // Add: interaction tests based on component functionality;
+})
 
   test('applies correct styling', () => {';
     render(<SecurityHeaders.dynamic: />);
@@ -35,13 +35,13 @@ describe('SecurityHeadersdynamic', () => {'
 '
   test('displays correct content', () => {
     render(<SecurityHeadersdynamic />);
-    // Add specific content tests based on component
-  })
+    // Add specific content tests based on component;
+})
 '
   test('handles user interactions', () => {
     render(<SecurityHeadersdynamic />);
-    // Add interaction tests based on component functionality
-  })
+    // Add interaction tests based on component functionality;
+})
 '
   test('applies correct styling', () => {
 
@@ -53,13 +53,13 @@ describe('SecurityHeadersdynamic, () => {
 
   test('displays correct content, () => {
     render(<SecurityHeadersdynamic />);
-    // Add specific content tests based on component
-  });
+    // Add specific content tests based on component;
+});
 
   test('handles user interactions', () => {
     render(<SecurityHeadersdynamic />);
-    // Add interaction tests based on component functionality
-  });
+    // Add interaction tests based on component functionality;
+});
 
   test(applies correct styling', () => {
   describe('SecurityHeadersdynamic', () => {
@@ -88,16 +88,16 @@ import SecurityHeadersdynamic   from '../components/SecurityHeaders.dynamic''
     expect(screen.getByTestId('securityheaders.dynamic')).toBeInTheDocument()})'
   test('displays correct content', () => {'
     render(<SecurityHeadersdynamic  />)
-    // Add specific content tests based on component
-  })
+    // Add specific content tests based on component;
+})
   test('handles user interactions', () => {'
     render(<SecurityHeadersdynamic  />)
-    // Add interaction tests based on component functionality
-  })
+    // Add interaction tests based on component functionality;
+})
   test('applies correct styling', () => {'
     render(<SecurityHeadersdynamic  />)
-    // Add styling tests if needed
-  });
+    // Add styling tests if needed;
+});
 });
   })})
 '

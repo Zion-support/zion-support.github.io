@@ -271,8 +271,8 @@ this.log(Found ${issues.length} system issues`);
         });
       } catch (recoveryError) {
         this.log(❌ Error applying recovery strategy: ${recoveryError.message}`,
-          `ERROR`
-      } catch (recoveryError) {;
+          `ERROR`;
+} catch (recoveryError) {;
         this.log(❌ Error applying recovery strategy: ${recoveryError.message}',;
           'ERROR';
         );
@@ -615,8 +615,8 @@ this.log(`✅ Merge conflicts recovered in ${filePath}`);
       return true;
     } catch (error) {  
       this.log(❌ Failed to recover merge conflicts in ${filePath  }: ${error.message}`,
-        `ERROR`
-    } catch (error) {;
+        `ERROR`;
+} catch (error) {;
       this.log(❌ Failed to recover merge conflicts in ${filePath}: ${error.message}',;
         'ERROR';
       );
@@ -657,8 +657,8 @@ this.log(`❌ Could not recover encoding issues in ${filePath}`);
       return false;
     } catch (error) {  
       this.log(❌ Failed to recover encoding issues in ${filePath  }: ${error.message}`,
-        `ERROR`
-    } catch (error) {;
+        `ERROR`;
+} catch (error) {;
       this.log(❌ Failed to recover encoding issues in ${filePath}: ${error.message}',;
         'ERROR';
       );
@@ -716,8 +716,8 @@ this.log(✅ Unreadable file recovered: ${filePath}`);
       return true;
     } catch (error) {  
       this.log(❌ Failed to recover unreadable file ${filePath  }: ${error.message}`,
-        `ERROR`
-    } catch (error) {;
+        `ERROR`;
+} catch (error) {;
       this.log(❌ Failed to recover unreadable file ${filePath}: ${error.message}',;
         'ERROR';
     } catch (error) {`);

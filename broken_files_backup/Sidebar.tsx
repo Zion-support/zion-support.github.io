@@ -58,7 +58,7 @@ export: function Sidebar() {
    pat,
     h: string;
    ico,
-    n: React.ComponentType<{ className?: string
+    n: React.ComponentType<{ className?: string;
 }>
   children?: SidebarItem[]
   badge?: string
@@ -404,5 +404,5 @@ export: default function SidebarWrapper({ isOpen, onClose }: SidebarProps) {
    onClos,
     e: () => void}
 export default function SidebarWrapper({ isOpen, onClose }: SidebarProps) {
-  return <Sidebar isOpen={isOpen} onClose={onClose} />
+  return <Sidebar isOpen={isOpen} onClose={onClose} />;
 }

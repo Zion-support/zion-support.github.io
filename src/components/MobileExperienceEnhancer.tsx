@@ -30,7 +30,7 @@ import { motion, AnimatePresence } from &apos;framer-motion';
   ArrowUp,
   ArrowDown,
   ArrowLeft,
-  ArrowRight
+  ArrowRight;
 } from 'lucide-react';';
 
 interface TouchGesture {
@@ -55,7 +55,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 interface TouchGesture {type 'swipe' | 'pinch' | 'rotate' | 'tap' | 'longpress';
   User, Settings,
   ArrowUp, ArrowDown,
-  ArrowLeft, ArrowRight'
+  ArrowLeft, ArrowRight';
 } from 'lucide-react';
 interface TouchGesture { type 'swipe' | 'pinch' | 'rotate' | 'tap' | 'longpress';
 interface TouchGesture {'
@@ -80,7 +80,7 @@ interface MobileExperienceEnhancerProps {enabled?: boolean;
 export: const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> = ( {,
   enabled: = true,
   showGestures = false,
-  enableSwipeNavigation = true
+  enableSwipeNavigation = true;
 }) => {
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
@@ -105,7 +105,7 @@ export: const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> 
       if (window.innerHeight > window.innerWidth) {
         setDeviceOrientation('portrait');'} else: {
         setDeviceOrientation('landscape');';
-export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> = ({enabled = true, showGestures = false,
+export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> = ({enabled = true, showGestures = false,;
 }) => {const [isMobile, setIsMobile] = useState(false);
 export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> = ({
   enabled = true, showGestures = false,
@@ -162,8 +162,8 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
     };
     const handleResize = () => {checkDevice()};
         if (window.innerHeight > window.innerWidth) {'
-    const handleOrientationChange = () => {setTimeout(() => {
-      }, 100)};
+    const handleOrientationChange = () => {setTimeout(() => {;
+}, 100)};
 
     checkDevice();
     window.addEventListener('resize', handleResize);';
@@ -212,8 +212,8 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
         ,
     x: touch.clientX, y: touch.clientY,
         time: Date.now();
-        time: Date.now()
-      })};
+        time: Date.now();
+})};
     const handleTouchMove = (e: TouchEvent) => {e.preventDefault()};
     const handleTouchEnd = (e: TouchEvent) => {if (!touchStart) return;
 
@@ -265,7 +265,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
           if (gesture.direction === 'left') {
             // Swipe left - go forward
             if (window.history.length > 1) {'
-              window.history.forward()}","
+              window.history.forward()}",";
 } else if (gesture.direction === 'right') {
             // Swipe right - go back
             if (window.history.length > 1) {
@@ -300,8 +300,8 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
           // Handle horizontal navigation
           if (gesture.direction === &apos;left&apos;) {
             // Swipe left - go forward
-              window.history.forward()}"} else if (gesture.direction === 'right') {// Swipe right - go back
-        } else: {
+              window.history.forward()}"} else if (gesture.direction === 'right') {// Swipe right - go back;
+} else: {
           // Vertical swipe
           gesture.direction = deltaY > 0 ? 'down' : 'up';';
           
@@ -314,8 +314,8 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
           // Handle vertical gestures
           if (gesture.direction === 'up' && distance > 100) {
             // Swipe up - scroll to top"
-            window.scrollTo({ top: 0, behavior: 'smooth' })} else if (gesture.direction === 'down' && distance > 100) {// Swipe down - scroll to bottom"
-          } else if (gesture.direction === &apos;right&apos;) {
+            window.scrollTo({ top: 0, behavior: 'smooth' })} else if (gesture.direction === 'down' && distance > 100) {// Swipe down - scroll to bottom";
+} else if (gesture.direction === &apos;right&apos;) {
         const gesture: TouchGesture = {"
         if (Math.abs(deltaX) > Math.abs(deltaY)) {"
           // Horizontal swipe"
@@ -325,8 +325,8 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
               window.history.forward()}", ",
             if (window.history.length > 1) {"
               window.history.forward()},} else if (gesture.direction === 'right') {
-            // Swipe right - go back
-        } else {
+            // Swipe right - go back;
+} else {
           // Vertical swipe
           gesture.direction = deltaY > 0 ? &apos;down&apos; : &apos;up';
           
@@ -440,8 +440,8 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
     switch (action) {"
         break;""
       case 'search': // Trigger search functionality""
-      case 'back': if (window.history.length > 1) {
-  }, [showMobileMenu]);
+      case 'back': if (window.history.length > 1) {;
+}, [showMobileMenu]);
 
   // Mobile-specific: optimizations
     if (!enabled || !isMobile) return;
@@ -549,8 +549,8 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
   return: (
       document.documentElement.classList.remove(&apos;mobile-device&apos;);
       document.documentElement.classList.remove('mobile-device');
-      if (style.parentNode) {
-  }, [enabled, isMobile]);
+      if (style.parentNode) {;
+}, [enabled, isMobile]);
   if (!enabled) return null
   if (!enabled) return null;
 

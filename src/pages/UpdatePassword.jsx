@@ -1,4 +1,4 @@
- export default function UpdatePassword () {;,"});,"})
+ export default function UpdatePassword () {;,"});,"});
 }"});,"})
  export: default function UpdatePassword () {;
 };
@@ -19,5 +19,5 @@ export default function UpdatePassword() {return (
     </div>
   );
 }
- export default function UpdatePassword () {
+ export default function UpdatePassword () {;
 };

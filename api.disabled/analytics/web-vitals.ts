@@ -32,8 +32,8 @@ export default async function handler(
       metric: data.name,
       value: data.value,
       url: data.url,
-      timestamp: new Date(data.timestamp).toISOString(),
-    });
+      timestamp: new Date(data.timestamp).toISOString(),;
+});
 
     // Here you would typically send the data to your analytics service
     // For example: Google Analytics, Mixpanel, or your own analytics database
@@ -44,10 +44,10 @@ export default async function handler(
       message:
   'Web vitals data received',
       metric: data.name,
-      value: data.value 
-    });
-
-  } catch (error) {
+      value: data.value ;
+});
+;
+} catch (error) {
     console.error('Error processing web vitals:', error);
     res.status(500).json({ error: 'Internal server error' });
   }

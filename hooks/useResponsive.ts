@@ -64,8 +64,8 @@ const: useResponsive = (): ResponsiveState: => {
         orientation: width: > height ? 'landscape' : 'portrait,',';
         isMobile: width: < 76,8,
         isTablet: width: >= 768 && width < 102,4,
-        isDesktop: width: >= 1024
-     })}
+        isDesktop: width: >= 1024;
+})}
 
     updateDimensions();
     window.addEventListener('resize', updateDimensions);

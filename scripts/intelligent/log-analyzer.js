@@ -54,8 +54,8 @@ class IntelligentLogAnalyzer {
         timestamp: new Date().toISOString(),
         analysisHistory: this.analysisHistory,
         totalAnalyses: this.analysisHistory.length,
-        lastRun: Date.now()
-      };
+        lastRun: Date.now();
+};
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
     } catch (error) {
       this.log(`Failed to save analysis history: ${error.message}`, 'error');
@@ -71,8 +71,8 @@ class IntelligentLogAnalyzer {
       securityEvents: await this.analyzeSecurityEvents(),
       usagePatterns: await this.analyzeUsagePatterns(),
       anomalies: await this.detectAnomalies(),
-      trends: await this.analyzeTrends()
-    };
+      trends: await this.analyzeTrends();
+};
 
     this.log(`Log Analysis Results:`);
     this.log(`  - Error Patterns: ${analysis.errorPatterns.patterns.length}`);
@@ -109,8 +109,8 @@ class IntelligentLogAnalyzer {
                     files: new Set(),
                     firstOccurrence: null,
                     lastOccurrence: null,
-                    examples: []
-                  };
+                    examples: [];
+};
                 }
                 
                 errorCounts[pattern].count++;
@@ -125,8 +125,8 @@ class IntelligentLogAnalyzer {
                   errorCounts[pattern].examples.push({
                     line: index + 1,
                     content: line.trim(),
-                    file: logFile
-                  });
+                    file: logFile;
+});
                 }
               }
             }
@@ -139,15 +139,15 @@ class IntelligentLogAnalyzer {
       // Convert to array and sort by count
       const patterns = Object.values(errorCounts).map(pattern => ({
         ...pattern,
-        files: Array.from(pattern.files)
-      })).sort((a, b) => b.count - a.count);
+        files: Array.from(pattern.files);
+})).sort((a, b) => b.count - a.count);
       
       return {
         patterns,
         totalErrors: patterns.reduce((sum, p) => sum + p.count, 0),
         uniquePatterns: patterns.length,
-        topErrors: patterns.slice(0, 10)
-      };
+        topErrors: patterns.slice(0, 10);
+};
     } catch (error) {
       this.log(`Error pattern analysis failed: ${error.message}`, 'error');
       return { patterns: [], totalErrors: 0, uniquePatterns: 0, topErrors: [] };
@@ -192,7 +192,7 @@ class IntelligentLogAnalyzer {
       { regex: /Connection refused/, pattern: 'Connection refused' },
       { regex: /Timeout/, pattern: 'Timeout' },
       { regex: /Permission denied/, pattern: 'Permission denied' }
-    ];
+    ]
     
     for (const { regex, pattern } of patterns) {
       if (regex.test(line)) {
@@ -233,8 +233,8 @@ class IntelligentLogAnalyzer {
                   content: line.trim(),
                   type: issue.type,
                   severity: issue.severity,
-                  timestamp: this.extractTimestamp(line)
-                });
+                  timestamp: this.extractTimestamp(line);
+});
               }
             }
           });
@@ -247,8 +247,8 @@ class IntelligentLogAnalyzer {
         issues: performanceIssues,
         count: performanceIssues.length,
         byType: this.groupByType(performanceIssues),
-        bySeverity: this.groupBySeverity(performanceIssues)
-      };
+        bySeverity: this.groupBySeverity(performanceIssues);
+};
     } catch (error) {
       this.log(`Performance analysis failed: ${error.message}`, 'error');
       return { issues: [], count: 0, byType: {}, bySeverity: {} };
@@ -317,8 +317,8 @@ class IntelligentLogAnalyzer {
                   content: line.trim(),
                   type: event.type,
                   severity: event.severity,
-                  timestamp: this.extractTimestamp(line)
-                });
+                  timestamp: this.extractTimestamp(line);
+});
               }
             }
           });
@@ -331,8 +331,8 @@ class IntelligentLogAnalyzer {
         events: securityEvents,
         count: securityEvents.length,
         byType: this.groupByType(securityEvents),
-        bySeverity: this.groupBySeverity(securityEvents)
-      };
+        bySeverity: this.groupBySeverity(securityEvents);
+};
     } catch (error) {
       this.log(`Security analysis failed: ${error.message}`, 'error');
       return { events: [], count: 0, byType: {}, bySeverity: {} };
@@ -394,8 +394,8 @@ class IntelligentLogAnalyzer {
         hourlyUsage,
         dailyUsage,
         peakHour: Object.keys(hourlyUsage).reduce((a, b) => hourlyUsage[a] > hourlyUsage[b] ? a : b, 0),
-        peakDay: Object.keys(dailyUsage).reduce((a, b) => dailyUsage[a] > dailyUsage[b] ? a : b, '')
-      };
+        peakDay: Object.keys(dailyUsage).reduce((a, b) => dailyUsage[a] > dailyUsage[b] ? a : b, '');
+};
     } catch (error) {
       this.log(`Usage pattern analysis failed: ${error.message}`, 'error');
       return { patterns: [], hourlyUsage: {}, dailyUsage: {}, peakHour: 0, peakDay: '' };
@@ -425,8 +425,8 @@ class IntelligentLogAnalyzer {
               type: 'high_error_rate',
               severity: 'high',
               value: errorRate.toFixed(2),
-              description: `High error rate: ${errorRate.toFixed(2)}%`
-            });
+              description: `High error rate: ${errorRate.toFixed(2)}%`;
+});
           }
           
           // Detect sudden spikes in activity
@@ -447,8 +447,8 @@ class IntelligentLogAnalyzer {
                 type: 'activity_spike',
                 severity: 'medium',
                 value: count,
-                description: `Activity spike at hour ${hour}: ${count} events (avg: ${avgActivity.toFixed(2)})`
-              });
+                description: `Activity spike at hour ${hour}: ${count} events (avg: ${avgActivity.toFixed(2)})`;
+});
             }
           });
         } catch (error) {
@@ -460,8 +460,8 @@ class IntelligentLogAnalyzer {
         anomalies,
         count: anomalies.length,
         byType: this.groupByType(anomalies),
-        bySeverity: this.groupBySeverity(anomalies)
-      };
+        bySeverity: this.groupBySeverity(anomalies);
+};
     } catch (error) {
       this.log(`Anomaly detection failed: ${error.message}`, 'error');
       return { anomalies: [], count: 0, byType: {}, bySeverity: {} };
@@ -488,8 +488,8 @@ class IntelligentLogAnalyzer {
               type: 'error_trend',
               trend: errorTrend.trend,
               change: errorTrend.change,
-              description: `Error trend: ${errorTrend.trend} (${errorTrend.change}% change)`
-            });
+              description: `Error trend: ${errorTrend.trend} (${errorTrend.change}% change)`;
+});
           }
           
           // Analyze performance trends
@@ -500,8 +500,8 @@ class IntelligentLogAnalyzer {
               type: 'performance_trend',
               trend: performanceTrend.trend,
               change: performanceTrend.change,
-              description: `Performance trend: ${performanceTrend.trend} (${performanceTrend.change}% change)`
-            });
+              description: `Performance trend: ${performanceTrend.trend} (${performanceTrend.change}% change)`;
+});
           }
         } catch (error) {
           this.log(`Failed to analyze trends in ${logFile}: ${error.message}`, 'warn');
@@ -512,8 +512,8 @@ class IntelligentLogAnalyzer {
         trends,
         count: trends.length,
         byType: this.groupByType(trends),
-        byTrend: this.groupByTrend(trends)
-      };
+        byTrend: this.groupByTrend(trends);
+};
     } catch (error) {
       this.log(`Trend analysis failed: ${error.message}`, 'error');
       return { trends: [], count: 0, byType: {}, byTrend: {} };
@@ -608,8 +608,8 @@ class IntelligentLogAnalyzer {
             action: 'truncated',
             originalSize: sizeInMB.toFixed(2),
             newSize: (lastLines.length / (1024 * 1024)).toFixed(2),
-            success: true
-          });
+            success: true;
+});
         }
         
         // Remove old log files (> 30 days)
@@ -625,16 +625,16 @@ class IntelligentLogAnalyzer {
             file: logFile,
             action: 'deleted',
             age: ageInDays.toFixed(2),
-            success: true
-          });
+            success: true;
+});
         }
       } catch (error) {
         cleanupActions.push({
           file: logFile,
           action: 'cleanup',
           success: false,
-          error: error.message
-        });
+          error: error.message;
+});
         
         this.log(`Failed to cleanup ${logFile}: ${error.message}`, 'error');
       }
@@ -661,10 +661,10 @@ class IntelligentLogAnalyzer {
         anomalies: analysis.anomalies.count,
         trends: analysis.trends.count,
         cleanupActions: cleanupActions.length,
-        successfulCleanups: cleanupActions.filter(a => a.success).length
-      },
-      recommendations: this.generateLogRecommendations(analysis)
-    };
+        successfulCleanups: cleanupActions.filter(a => a.success).length;
+},
+      recommendations: this.generateLogRecommendations(analysis);
+};
 
     const reportFile = path.join(this.projectRoot, 'logs/intelligent-log-analyzer-intelligence.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
@@ -717,8 +717,8 @@ class IntelligentLogAnalyzer {
       this.analysisHistory.push({
         timestamp: new Date().toISOString(),
         report: report,
-        summary: report.summary
-      });
+        summary: report.summary;
+});
       
       this.saveAnalysisHistory();
 
@@ -731,8 +731,8 @@ class IntelligentLogAnalyzer {
       this.log(`   - Trends: ${report.summary.trends}`);
       this.log(`   - Cleanup Actions: ${report.summary.cleanupActions}`);
       this.log(`   - Successful Cleanups: ${report.summary.successfulCleanups}`);
-
-    } catch (error) {
+;
+} catch (error) {
       this.log(`❌ Log Analyzer failed: ${error.message}`, 'error');
       throw error;
     }

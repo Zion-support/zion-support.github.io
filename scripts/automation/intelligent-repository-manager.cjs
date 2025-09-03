@@ -43,7 +43,7 @@ const CONFIG = {
   AUTO_MERGE_ENABLED: process.env.AUTO_MERGE_ENABLED === 'true',
   CONFLICT_RESOLUTION_MODE: process.env.CONFLICT_RESOLUTION_MODE || 'intelligent',
   GIT_AUTOMATION_MODE: process.env.GIT_AUTOMATION_MODE === 'true',
-  PM2_PATH: process.env.PM2_PATH || `pm2`
+  PM2_PATH: process.env.PM2_PATH || `pm2`;
 };
 
 // Utility functions;
@@ -225,16 +225,16 @@ const intelligentConflictResolution = (conflictedFiles, branchName) => {log(`Res
             }
           } catch (error) {  log(`Failed to resolve conflict in ${file  }: ${error}`, `ERROR`);
           }
-        } else if (fileExt === `.md` || fileExt === `.txt`) {
-        } else if (fileExt === '.md' || fileExt === '.txt') {;
+        } else if (fileExt === `.md` || fileExt === `.txt`) {;
+} else if (fileExt === '.md' || fileExt === '.txt') {;
           // For documentation, try to merge both versions;
           try {const result = gitCommand(`checkout --theirs "${file}"`, { silent: true });
             if (result.success) {log(`Resolved conflict in ${file} using `theirs` strategy`);
             }
           } catch (error) {  log(`Failed to resolve conflict in ${file  }: ${error}`, `ERROR`);
           }
-        } else {
         } else {;
+} else {;
           // For other files, use default strategy;
           try {const result = gitCommand(`checkout --ours "${file}"`, { silent: true });
             if (result.success) {log(`Resolved conflict in ${file} using default strategy`);
@@ -556,8 +556,8 @@ const executeIntelligentMerging = async () => {;
     } catch (error) {  
       failureCount++;log(`Error processing branch ${branchInfo.branch  }: ${error.message}`, `ERROR`);
     }
-    
-      } else {;
+    ;
+} else {;
         failureCount++;log(`Failed to merge branch: ${branchInfo.branch}`, 'ERROR');
       }
     } catch (error) {;
@@ -689,11 +689,11 @@ const main = async () => {
       timestamp: new Date().toISOString(),
       healthMetrics,
       cleanedBranches: cleanedCount,
-      status: `completed`
-    };
+      status: `completed`;
+};
     log(`Repository management cycle completed successfully: ${JSON.stringify(summary, null, 2)}`);
-    
-  } catch (error) {  log(`Repository management cycle failed: ${error.message  }`, `ERROR`);log(`Stack trace: ${error.stack}`, `ERROR`);
+    ;
+} catch (error) {  log(`Repository management cycle failed: ${error.message  }`, `ERROR`);log(`Stack trace: ${error.stack}`, `ERROR`);
   }
 };
 

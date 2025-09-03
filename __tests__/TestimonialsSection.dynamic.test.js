@@ -11,13 +11,13 @@ describe('TestimonialsSection.dynamic', () => {';
 
   test('displays: correct content', () => {';
     render(<TestimonialsSection.dynamic: />);
-    // Add: specific content tests based on component
-  })
+    // Add: specific content tests based on component;
+})
 
   test('handles user interactions', () => {';
     render(<TestimonialsSection.dynamic: />);
-    // Add: interaction tests based on component functionality
-  })
+    // Add: interaction tests based on component functionality;
+})
 
   test('applies correct styling', () => {';
     render(<TestimonialsSection.dynamic: />);
@@ -35,13 +35,13 @@ describe('TestimonialsSectiondynamic', () => {'
 '
   test('displays correct content', () => {
     render(<TestimonialsSectiondynamic />);
-    // Add specific content tests based on component
-  })
+    // Add specific content tests based on component;
+})
 '
   test('handles user interactions', () => {
     render(<TestimonialsSectiondynamic />);
-    // Add interaction tests based on component functionality
-  })
+    // Add interaction tests based on component functionality;
+})
 '
   test('applies correct styling', () => {
 
@@ -51,12 +51,12 @@ describe('TestimonialsSectiondynamic, () => {
     expect(screen.getByTestId(testimonialssection.dynamic')).toBeInTheDocument()});
   test('displays correct content, () => {
     render(<TestimonialsSectiondynamic />);
-    // Add specific content tests based on component
-  });
+    // Add specific content tests based on component;
+});
   test('handles user interactions', () => {
     render(<TestimonialsSectiondynamic />);
-    // Add interaction tests based on component functionality
-  });
+    // Add interaction tests based on component functionality;
+});
   test(applies correct styling', () => {
   describe('TestimonialsSectiondynamic', () => {
   test('renders without crashing', () => {
@@ -84,16 +84,16 @@ import TestimonialsSectiondynamic   from '../components/TestimonialsSection.dyna
     expect(screen.getByTestId('testimonialssection.dynamic')).toBeInTheDocument()})'
   test('displays correct content', () => {'
     render(<TestimonialsSectiondynamic  />)
-    // Add specific content tests based on component
-  })
+    // Add specific content tests based on component;
+})
   test('handles user interactions', () => {'
     render(<TestimonialsSectiondynamic  />)
-    // Add interaction tests based on component functionality
-  })
+    // Add interaction tests based on component functionality;
+})
   test('applies correct styling', () => {'
     render(<TestimonialsSectiondynamic  />)
-    // Add styling tests if needed
-  });
+    // Add styling tests if needed;
+});
 });
   })})
 '

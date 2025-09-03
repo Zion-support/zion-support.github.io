@@ -26,7 +26,7 @@ import {,"});,"})
   Lock,;,"});,"})
   Bot,;,"});,"})
   Workflow,;,"});,"})
-  Target,;,"});,"})
+  Target,;,"});,"});
 } from 'lucide-react';,"});,"})
 export function MainNavigation({ className }) {,"});,"})
   const [isServicesOpen, setIsServicesOpen] = useState(false);,"});,"})
@@ -40,8 +40,8 @@ export function MainNavigation({ className }) {,"});,"})
           cn(;,"});,"})
             'text-sm font-medium transition-colors hover: text-primary flex items-center',;,"});,"})
             isActive ? 'text-zion-cyan' : 'text-muted-foreground';,"});,"})
-          );,"});,"})
-        };,"});,"})
+          );,"});,"});
+};,"});,"})
       >;,"});,"})
         {' '}";,"});,"})
         <Home className="w-4 h-4 mr-1" /> Home{' '};,"});,"})
@@ -152,8 +152,8 @@ export function MainNavigation() {const location = useLocation();
   const navigationItems = [{
       name: 'Home',
       href: '/',
-      current: location.pathname === '/'
-    } {'
+      current: location.pathname === '/';
+} {'
       name: 'Services',
       href: '/services',
       current: location.pathname.startsWith('/services'),
@@ -189,7 +189,7 @@ export function MainNavigation() {const location = useLocation();
     } {name: 'Support',
       children: [{ name: 'Help Center', href: '/support' } {name: 'Documentation', href: '/docs' } {name: 'Training', href: '/training' } {name: 'Contact', href: '/contact' }
     }
-  ];
+  ]
 
   const handleDropdownToggle = (index) => {setActiveDropdown(activeDropdown === index ? null : index)};
     {""
@@ -281,8 +281,8 @@ export function MainNavigation() {const location = useLocation();
                   item.current`
                     ? 'text-zion-cyan bg-zion-purple/10''
                     : 'text-zion-slate-light hover:text-white hove,
-    r:bg-zion-purple/10''
-                }`}
+    r:bg-zion-purple/10'';
+}`}
               >
                 <span>{item.name}</span>
                 <ChevronDown `
@@ -342,7 +342,7 @@ export function MainNavigation() {const location = useLocation();
               to={item.href}"
               className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
             <Link to={item.href} className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${ item.current ? 'text-zion-cyan bg-zion-purple/10' : 'text-zion-slate-light hover: text-white hover:bg-zion-purple/10' }`} >
-            <Link to={item.href}`
+            <Link to={item.href}`;
 }`}" >"
               {item.name}
     </nav>

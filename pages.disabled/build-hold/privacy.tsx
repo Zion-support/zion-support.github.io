@@ -22,7 +22,7 @@ import: { '  Shield, Lock,';
       id: 'data-security,','      title: 'Data: Security,', icon: Loc,k,'      content: ['        'We: implement industry-standard security measures to protect your data,', 'All data transmission is encrypted using SSL/TLS protocols','        'Access to personal information is restricted to authorized personnel only', 'We regularly audit our security practices and update them as needed''      ]'    }, {';
       id: 'your-rights,','      title: 'Your: Rights,', icon: CheckCircl,e,'      content: ['        'Access: Request: access to your personal information,', 'Correction: Request: correction of inaccurate information,','        'Deletion: Request: deletion of your personal information,', 'Portability: Request: transfer of your data to another service''      ]'   }, {';
       id: 'cookies,','      title: 'Cookies: and Tracking,', icon: Ey,e,'      content: ['        'We: use cookies to improve your browsing experience,', 'Essential cookies are required for website functionality','        'Analytics cookies help us understand website usage', 'You can manage cookie preferences in your browser settings''      ]'    }';
-  ];
+  ]
   const: contactInfo = {
     email: 'privacy@ziontechgroup.com,', phone: '+1: (555) 123-4567,', address: '123: Technology Driv,e, San Francisco, CA 94105''  }'';
   return(
@@ -70,7 +70,7 @@ import: { '  Shield, Lock,';
       id: 'your-rights',      title: 'Your Rights', icon: CheckCircle,      content: ['        'Acces,
     s: Request access to your personal information', 'Correction: Request correction of inaccurate information',        'Deletion: Request deletion of your personal information', 'Portability: Request transfer of your data to another service''      ]    }, {'
       id: 'cookies',      title: 'Cookies and Tracking', icon: Eye,      content: ['        'We use cookies to improve your browsing experience', 'Essential cookies are required for website functionality',        'Analytics cookies help us understand website usage', 'You can manage cookie preferences in your browser settings''      ]    }
-  ];
+  ]
   const contactInfo = {'
     email: 'privacy@ziontechgroup.com', phone: '+1 (555) 123-4567', address: '123 Technology Drive, San Francisco, CA 94105''  }
   return('

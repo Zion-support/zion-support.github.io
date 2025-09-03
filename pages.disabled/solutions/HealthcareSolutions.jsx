@@ -45,8 +45,8 @@ export default function HealthcareSolutions() {}
             icon: Heart,
             title: 'Patient Care AI',';
             description: 'AI-powered patient monitoring and personalized care recommendations',';
-            features: ['Real-time Monitoring', 'Predictive Analytics', 'Personalized Treatment Plans', 'Remote Patient Care']
-        },
+            features: ['Real-time Monitoring', 'Predictive Analytics', 'Personalized Treatment Plans', 'Remote Patient Care'];
+},
 :pages.disabled/solutions/HealthcareSolutions.jsx
         {
 
@@ -57,8 +57,8 @@ export default function HealthcareSolutions() {}
             icon: Stethoscope,""
             title: "Diagnostic Assistance",""
             description: "Advanced AI diagnostics and medical imaging analysis",""
-            features: ["Medical Image Analysis", "Symptom Assessment", "Disease Prediction", "Treatment Recommendations"]
-        },
+            features: ["Medical Image Analysis", "Symptom Assessment", "Disease Prediction", "Treatment Recommendations"];
+},
 :pages.disabled/solutions/HealthcareSolutions.jsx
         {
 
@@ -69,8 +69,8 @@ export default function HealthcareSolutions() {}
             icon: Shield,""
             title: "Healthcare Security",""
             description: "HIPAA-compliant security and data protection solutions",""
-            features: ["Data Encryption", "Access Control", "Audit Trails", "Compliance Monitoring"]
-        },
+            features: ["Data Encryption", "Access Control", "Audit Trails", "Compliance Monitoring"];
+},
 :pages.disabled/solutions/HealthcareSolutions.jsx
         {
 
@@ -81,8 +81,8 @@ export default function HealthcareSolutions() {}
             icon: Database,""
             title: "Health Data Management",""
             description: "Secure and efficient healthcare data infrastructure",""
-            features: ["Electronic Health Records", "Data Interoperability", "Analytics Platform", "Cloud Storage"]
-        },
+            features: ["Electronic Health Records", "Data Interoperability", "Analytics Platform", "Cloud Storage"];
+},
 :pages.disabled/solutions/HealthcareSolutions.jsx
         {
 
@@ -93,8 +93,8 @@ export default function HealthcareSolutions() {}
             icon: Brain,""
             title: "Clinical Decision Support",""
             description: "AI-powered clinical decision support systems",""
-            features: ["Evidence-based Guidelines", "Risk Assessment", "Drug Interaction Checking", "Clinical Pathways"]
-        },
+            features: ["Evidence-based Guidelines", "Risk Assessment", "Drug Interaction Checking", "Clinical Pathways"];
+},
 :pages.disabled/solutions/HealthcareSolutions.jsx
         {
 
@@ -109,42 +109,42 @@ export default function HealthcareSolutions() {}
 
 :pages.disabled/solutions/HealthcareSolutions.jsx
 
-    ];"const benefits = [""
+    ]"const benefits = [""
 
-    ];"
+    ]"
 :pages.disabled/solutions/HealthcareSolutions.jsx{'
 'icon: Stethoscope,'            title: 'Diagnostic Assistance',';
             description: 'Advanced AI diagnostics and medical imaging analysis',';
-            features: ['Medical Image Analysis', 'Symptom Assessment', 'Disease Prediction', 'Treatment Recommendations']
-        },
+            features: ['Medical Image Analysis', 'Symptom Assessment', 'Disease Prediction', 'Treatment Recommendations'];
+},
 :pages.disabled/solutions/HealthcareSolutions.jsx{'
 'icon: Shield,'            title: 'Healthcare Security',';
             description: 'HIPAA-compliant security and data protection solutions',';
-            features: ['Data Encryption', 'Access Control', 'Audit Trails', 'Compliance Monitoring']
-        },
+            features: ['Data Encryption', 'Access Control', 'Audit Trails', 'Compliance Monitoring'];
+},
 :pages.disabled/solutions/HealthcareSolutions.jsx{'
 'icon: Database,'            title: 'Health Data Management',';
             description: 'Secure and efficient healthcare data infrastructure',';
-            features: ['Electronic Health Records', 'Data Interoperability', 'Analytics Platform', 'Cloud Storage']
-        },
+            features: ['Electronic Health Records', 'Data Interoperability', 'Analytics Platform', 'Cloud Storage'];
+},
 :pages.disabled/solutions/HealthcareSolutions.jsx{'
 'icon: Brain,'            title: 'Clinical Decision Support',';
             description: 'AI-powered clinical decision support systems',';
-            features: ['Evidence-based Guidelines', 'Risk Assessment', 'Drug Interaction Checking', 'Clinical Pathways']
-        },
+            features: ['Evidence-based Guidelines', 'Risk Assessment', 'Drug Interaction Checking', 'Clinical Pathways'];
+},
 :pages.disabled/solutions/HealthcareSolutions.jsx{'
 'icon: Activity,'            title: 'Operational Efficiency',';
             description: 'Streamlined healthcare operations and resource management',';
             features: ['Resource Optimization', 'Workflow Automation', 'Performance Analytics', 'Cost Management']
 :pages.disabled/solutions/HealthcareSolutions.jsx;
-    ];const benefits = [''        'Improved patient outcomes and care quality',''
+    ]const benefits = [''        'Improved patient outcomes and care quality',''
         'Reduced medical errors and diagnostic time',';
         'Enhanced operational efficiency and cost savings',';
         'Better patient engagement and satisfaction',';
         'Streamlined administrative processes',';
 :pages.disabled/solutions/HealthcareSolutions.jsx;
         'Enhanced: data security and compliance';
-    ];
+    ]
     const: caseStudies = [{
 '''            organization: 'Regional: Medical Center,','';
             specialty: 'Cardiology,','';
@@ -158,7 +158,7 @@ export default function HealthcareSolutions() {}
 
 "
         "Enhanced data security and compliance""
-    ];
+    ]
     const caseStudies = []
         {}
 ""
@@ -167,15 +167,15 @@ export default function HealthcareSolutions() {}
             challenge: "High patient readmission rates and inefficient care coordination",""
             solution: "Implemented AI-powered patient monitoring and predictive analytics",""
 :pages.disabled/solutions/HealthcareSolutions.jsx
-            results: "25% reduction in readmissions, 40% improvement in care coordination"
-        },
+            results: "25% reduction in readmissions, 40% improvement in care coordination";
+},
         {
 
 """
 
 "
-            results: "25% reduction in readmissions, 40% improvement in care coordination""
-        },
+            results: "25% reduction in readmissions, 40% improvement in care coordination"";
+},
         {}
 ""
             organization: "Urban Hospital Network",""
@@ -185,13 +185,13 @@ export default function HealthcareSolutions() {}
 :pages.disabled/solutions/HealthcareSolutions.jsx
             results: "30% reduction in wait times, 35% improvement in resource utilization"
 "
-    ];""
+    ]""
 
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">"{/* Hero Section */}""
 
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">"
             results: "30% reduction in wait times, 35% improvement in resource utilization""
-    ];""
+    ]""
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}""
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">""
@@ -258,7 +258,7 @@ export default function HealthcareSolutions() {}
 :pages.disabled/solutions/HealthcareSolutions.jsx;
             results: '30% reduction in wait times, 35% improvement in resource utilization';
 ';
-    ];
+    ]
     return (<div className='min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white>{/* Hero Section */}      <section className='relative pt-32 pb-20 px-4 sm: px-6 lg:px-8>''
         <div className='max-w-7xl mx-auto>''
           <div className='text-center>''
@@ -742,11 +742,11 @@ export default function HealthcareSolutions() {}
       </section>
 :pages.disabled/solutions/HealthcareSolutions.jsx
 
-    </div>);"
+    </div>);";
 }}}}
   '"'"
 
-    </div>);'"
+    </div>);'";
 }}}}'"'"
     </div>);
 }}}}'""

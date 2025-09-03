@@ -22,7 +22,7 @@ import { Link } from &apos;react-router-dom';
 import { SEO } from &apos;../components/SEO';
 import { 
   Calendar, User, ArrowRight, Tag, Clock, TrendingUp, 
-  Brain, Atom, Rocket, Shield, Globe, Code 
+  Brain, Atom, Rocket, Shield, Globe, Code ;
 } from &apos;lucide-react';&apos;&apos;
 
 export default function Blog() {}
@@ -119,7 +119,7 @@ export default function Blog() {;
       image: "/api/placeholder/600/400",;
       featured: false;
     }
-  ];
+  ]
 ;
   const categories = [;
     { name: "AI & Machine Learning", icon: Brain, count: 15 },;
@@ -128,7 +128,7 @@ export default function Blog() {;
     { name: "Cybersecurity", icon: Shield, count: 10 },;
     { name: "Digital Transformation", icon: Globe, count: 7 },;
     { name: "Cloud Computing", icon: Code, count: 9 }
-  ];
+  ]
 ;
   const featuredPosts = blogPosts.filter(post => post.featured);
   const regularPosts = blogPosts.filter(post => !post.featured);
@@ -179,8 +179,8 @@ export default function Blog() {
       excerpt: "Explore the latest AI trends transforming enterprise operations and how businesses can leverage these technologies for competitive advantage.", author: "Dr. Sarah Chen",
       date: "2025-01-15", readTime: "8 min read",
       category: "AI & Machine Learning", tags: ["AI,Enterprise,Technology"], image: "/api/placeholder/600/400",
-      featured: true
-    }, { id: 2}, {
+      featured: true;
+}, { id: 2}, {
       id: 2,
       title: &quot;Quantum Computing Breakthroug,h: What It Means for Your Business&quot;,
       excerpt: &quot;Understanding the latest quantum computing advances and their practical applications in solving complex business problems.&quot;,
@@ -195,8 +195,8 @@ export default function Blog() {
       readTime: "12 min read", category: "Quantum Computing",
       tags: ["Quantum", "Computing", "Innovation"], image: "/api/placeholder/600/400",
       tags: ["Quantum,Computing,Innovation"], image: "/api/placeholder/600/400",
-      featured: true
-    }, { id: 3}, {
+      featured: true;
+}, { id: 3}, {
       id: 3,
       title: &quot;Micro SaaS Revolutio,n: Building Scalable Solutions&quot;,
       excerpt: &quot;How micro SaaS platforms are changing the software landscape and creating new opportunities for businesses.&quot;,
@@ -211,8 +211,8 @@ export default function Blog() {
       readTime: "6 min read", category: "Micro SaaS",
       tags: ["SaaS", "Software", "Business"], image: "/api/placeholder/600/400",
       tags: ["SaaS,Software,Business"], image: "/api/placeholder/600/400",
-      featured: false
-    }, { id: 4}, {
+      featured: false;
+}, { id: 4}, {
       id: 4,
       title: &quot;Cybersecurity in the Age of A,I: New Threats and Solutions&quot;,
       excerpt: &quot;Examining how AI is both creating new security challenges and providing innovative solutions to protect enterprise data.&quot;,
@@ -227,8 +227,8 @@ export default function Blog() {
       readTime: "10 min read", category: "Cybersecurity",
       tags: ["Security", "AI", "Enterprise"], image: "/api/placeholder/600/400",
       tags: ["Security,AI,Enterprise"], image: "/api/placeholder/600/400",
-      featured: false
-    }, { id: 5}, {
+      featured: false;
+}, { id: 5}, {
       id: 5,
       title: &quot;Digital Transformatio,n: A Complete Guide for 2025&quot;,
       excerpt: &quot;Comprehensive strategies for successful digital transformation initiatives in modern enterprises.&quot;,
@@ -243,8 +243,8 @@ export default function Blog() {
       readTime: "15 min read", category: "Digital Transformation",
       tags: ["Digital", "Transformation", "Strategy"], image: "/api/placeholder/600/400",
       tags: ["Digital,Transformation,Strategy"], image: "/api/placeholder/600/400",
-      featured: false
-    }, { id: 6}, {
+      featured: false;
+}, { id: 6}, {
       id: 6,
       title: &quot;Cloud Infrastructure Best Practices for Global Enterprises&quot;,
       excerpt: &quot;Essential guidelines for designing and managing cloud infrastructure that scales with your business needs.&quot;,
@@ -254,9 +254,9 @@ export default function Blog() {
       category: &quot;Cloud Computing&quot;,
       tags: [&quot;Cloud&quot;, &quot;Infrastructure&quot;, &quot;Enterprise&quot;],
       image: &quot;/api/placeholder/600/400&quot;,
-      featured: false
-    }
-  ];&quot;
+      featured: false;
+}
+  ]&quot;
 
   const categories = [
     { name: &quot;AI & Machine Learning&quot;, icon: Brain, count: 15 },
@@ -265,22 +265,22 @@ export default function Blog() {
     { name: &quot;Cybersecurity&quot;, icon: Shield, count: 10 },
     { name: &quot;Digital Transformation&quot;, icon: Globe, count: 7 },
     { name: &quot;Cloud Computing&quot;, icon: Code, count: 9 }
-  ];&quot;
+  ]&quot;
 
       title: "Cloud Infrastructure Best Practices for Global Enterprises", excerpt: "Essential guidelines for designing and managing cloud infrastructure that scales with your business needs.",
       author: "Maria Santos", date: "2025-01-03",
       readTime: "9 min read", category: "Cloud Computing",
       tags: ["Cloud", "Infrastructure", "Enterprise"], image: "/api/placeholder/600/400",
       tags: ["Cloud,Infrastructure,Enterprise"], image: "/api/placeholder/600/400",
-      featured: false
-    }
-  ];
+      featured: false;
+}
+  ]
   const categories = [
     { name: "AI & Machine Learning", icon: Brain, count: 15 }, { name: "Quantum Computing", icon: Atom, count: 8 },
   { name: "AI & Machine Learning", icon: Brain, count: 15 }, { name: "Quantum Computing", icon: Atom, count: 8 },
     { name: "Micro SaaS", icon: Rocket, count: 12 }, { name: "Cybersecurity", icon: Shield, count: 10 },
     { name: "Digital Transformation", icon: Globe, count: 7 }, { name: "Cloud Computing", icon: Code, count: 9 }
-  ];
+  ]
   const featuredPosts = blogPosts.filter(post => post.featured);
   const regularPosts = blogPosts.filter(post => !post.featured)
   return (
@@ -291,7 +291,7 @@ export default function Blog() {
         keywords=&quot;technology blog, AI insights, quantum computing, cybersecurity, digital transformation, tech news&quot;
       />&quot;
         title="Blog - Zion Tech Group | Technology Insights & Industry News"
-        description="Stay updated with the latest insights on AI, quantum computing, cybersecurity, and emerging technologies from Zion Tech Group&apos;s expert team."'
+        description="Stay updated with the latest insights on AI, quantum computing, cybersecurity, and emerging technologies from Zion Tech Group&apos;s expert team."
         keywords="technology blog, AI insights, quantum computing, cybersecurity, digital transformation, tech news"
         description="Stay updated with the latest insights on AI, quantum computing, cybersecurity, and emerging technologies from Zion Tech Group's expert team. 
         keywords='technology blog, AI insights, quantum computing, cybersecurity, digital transformation, tech news"

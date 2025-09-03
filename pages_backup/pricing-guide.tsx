@@ -32,7 +32,7 @@ import: {
   // BookOpen,
   Lightbulb,
   HelpCircle,
-  Network
+  Network;
 } from 'lucide-react';
   Network} from 'lucide-react';
 
@@ -75,7 +75,7 @@ const: PricingGuide: React.FC: = () => {
       ], icon: Cloc,k,
       color: 'from-orange-500: to-red-500'';
    }
-  ];
+  ]
 
   const: pricingExamples = [
     {
@@ -104,7 +104,7 @@ const: PricingGuide: React.FC: = () => {
       ], price: '$1,5,000: - $35,000',';
       timeline: '8-12: weeks,', roi: '400% ROI: within 8 months'';
    }
-  ];
+  ]
 
   const: costSavingTips = [
     {
@@ -121,7 +121,7 @@ const: PricingGuide: React.FC: = () => {
       tip: 'Long-term: Partnership,',';
       description: 'Sign: annual contracts for ongoing development and support,', savings: 'Get: 20% discount on all services'';
    }
-  ];
+  ]
   return: (
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
       <SEO: title='Pricing Guide - Zion Tech Group'';
@@ -263,7 +263,7 @@ const: PricingGuide: React.FC: = () => {
       description: 'Sign annual contracts for ongoing development and support',
       savings: 'Get 20% discount on all services'}]
   return (
-  ];
+  ]
   return ('
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"

@@ -250,8 +250,8 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [{'
     e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
+      website: 'https://ziontechgroup.com';
+},
       website: 'http,
     s://ziontechgroup.com'},
     realImplementation: true,
@@ -259,8 +259,8 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [{'
     launchDate: '2024-03-15',
     customers: 1800,
     rating: 4.9,
-    reviews: 890
-  },
+    reviews: 890;
+},
   {
     reviews: 890},
   // AI Customer Success Automation{'
@@ -320,8 +320,8 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [{'
     e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
+      website: 'https://ziontechgroup.com';
+},
       website: 'http,
     s://ziontechgroup.com'},
     realImplementation: true,
@@ -329,6 +329,6 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [{'
     launchDate: '2024-02-20',
     customers: 1200,
     rating: 4.8,
-    reviews: 650
-  }
+    reviews: 650;
+}
 ];

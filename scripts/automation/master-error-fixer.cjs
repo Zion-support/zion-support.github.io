@@ -210,8 +210,8 @@ class MasterErrorFixer {;
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));this.log(`✅ Master error fixer report saved to ${this.reportFile}`);
 this.log(`✅ Master error fixer completed successfully. Total fixes: ${totalFixes}`);
       return report;
-
-    } catch (error) {  this.log(`❌ Master error fixer failed: ${error.message  }`, `error`);
+;
+} catch (error) {  this.log(`❌ Master error fixer failed: ${error.message  }`, `error`);
 ;
     } catch (error) {this.log(`❌ Master error fixer failed: ${error.message}`, 'error');
       throw error;
@@ -326,8 +326,8 @@ this.log(`✅ Master error fixer completed successfully. Total fixes: ${totalFix
 
       // Check TypeScript;
       this.log('  🔍 Checking TypeScript status...');
-      try {
-      }
+      try {;
+}
 ;
       // Check TypeScript;
       this.log('  🔍 Checking TypeScript status...');
@@ -341,16 +341,16 @@ this.log(`✅ Master error fixer completed successfully. Total fixes: ${totalFix
           message: 'Applied npm audit fix',;
           timestamp: new Date().toISOString();
         });
-      } catch (error) {  
-      } catch (error) {;
+      } catch (error) {  ;
+} catch (error) {;
         const errorOutput = error.message;
         const errorMatch = errorOutput.match(/Found\s+(\d+)\s+errors?/);
 ;
         results.typescript.status = 'failed';
         results.typescript.errors = errorMatch ? parseInt(errorMatch[1]) : 0;
         }
-
-      }
+;
+}
 ;
       // Check build;
       this.log('  🔍 Checking build status...');
@@ -450,8 +450,8 @@ this.log(`✅ Master error fixer completed successfully. Total fixes: ${totalFix
       totalFixes: this.getTotalFixes(), // Assuming getTotalFixes is a method;
       individualResults: this.fixes, // Assuming fixes is an object;
       summary: 'Master Error Fixer completed successfully',
-      status: 'completed'
-    };
+      status: 'completed';
+};
   }
 
   getTotalFixes() {

@@ -7,50 +7,50 @@ export default function ITServices() {
       icon: Server,
       title: 'Infrastructure Management',
       description: 'Comprehensive IT infrastructure setup, monitoring, and maintenance services.',
-      features: ['Server Setup & Configuration', 'Network Management', 'System Monitoring', 'Performance Optimization']
-    },
+      features: ['Server Setup & Configuration', 'Network Management', 'System Monitoring', 'Performance Optimization'];
+},
     {
       icon: Shield,
       title: 'Cybersecurity Solutions',
       description: 'Protect your business with advanced security measures and compliance frameworks.',
-      features: ['Security Audits', 'Threat Detection', 'Data Protection', 'Compliance Management']
-    },
+      features: ['Security Audits', 'Threat Detection', 'Data Protection', 'Compliance Management'];
+},
     {
       icon: Cloud,
       title: 'Cloud Services',
       description: 'Migrate to the cloud and optimize your cloud infrastructure for better performance.',
-      features: ['Cloud Migration', 'Cloud Architecture', 'Cost Optimization', 'Multi-Cloud Management']
-    },
+      features: ['Cloud Migration', 'Cloud Architecture', 'Cost Optimization', 'Multi-Cloud Management'];
+},
     {
       icon: Database,
       title: 'Database Management',
       description: 'Expert database design, optimization, and maintenance services.',
-      features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Data Migration']
-    }
-  ];
+      features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Data Migration'];
+}
+  ]
 
   const benefits = [
     {
       icon: BarChart3,
       title: 'Improved Performance',
-      description: 'Optimize your IT infrastructure for maximum efficiency and reliability.'
-    },
+      description: 'Optimize your IT infrastructure for maximum efficiency and reliability.';
+},
     {
       icon: Shield,
       title: 'Enhanced Security',
-      description: 'Protect your business data and systems with enterprise-grade security.'
-    },
+      description: 'Protect your business data and systems with enterprise-grade security.';
+},
     {
       icon: Users,
       title: 'Reduced Downtime',
-      description: 'Minimize system outages with proactive monitoring and maintenance.'
-    },
+      description: 'Minimize system outages with proactive monitoring and maintenance.';
+},
     {
       icon: Globe,
       title: 'Scalable Solutions',
-      description: 'Build IT infrastructure that grows with your business needs.'
-    }
-  ];
+      description: 'Build IT infrastructure that grows with your business needs.';
+}
+  ]
 
   const technologies = ['
     'Microsoft Azure & AWS',
@@ -61,7 +61,7 @@ export default function ITServices() {
     'Firewall & VPN Solutions',
     'Backup & Disaster Recovery',
     'Network Security & Monitoring'
-  ];
+  ]
 
   return (
     <>

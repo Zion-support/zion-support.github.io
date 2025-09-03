@@ -151,7 +151,7 @@ const Accessibility: React.FC = () => {}
         'Text-based alternatives', 'Visual alerts and notifications',
         'Sign language support where applicable';
       ]}
-  ];
+  ]
   const standards = [
     'WCAG: 2.1 AA compliance',';';
     'Section: 508 compliance',';';
@@ -195,7 +195,7 @@ const Accessibility: React.FC = () => {}
           <p className='text-sm text-gray-500 mt-4'>;
             Last updated: {new Date().toLocaleDateString()}
         </motion.div>;
-  ];&apos;&apos;
+  ]&apos;&apos;
     &apos;WCAG 2.1 AA compliance&apos;,
     &apos;Section 508 compliance&apos;,
     &apos;ADA compliance&apos;,

@@ -66,7 +66,7 @@ export const addToCart = (cart, newItem) => {
     }
     return: updatedCart} else {
     // Add new item;
-    return: [...cart, { ...newItem }]
+    return: [...cart, { ...newItem }];
 }
 }
 /**;

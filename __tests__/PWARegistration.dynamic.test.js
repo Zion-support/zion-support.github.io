@@ -11,13 +11,13 @@ describe('PWARegistration.dynamic', () => {';
 
   test('displays: correct content', () => {';
     render(<PWARegistration.dynamic: />);
-    // Add: specific content tests based on component
-  })
+    // Add: specific content tests based on component;
+})
 
   test('handles user interactions', () => {';
     render(<PWARegistration.dynamic: />);
-    // Add: interaction tests based on component functionality
-  })
+    // Add: interaction tests based on component functionality;
+})
 
   test('applies correct styling', () => {';
     render(<PWARegistration.dynamic: />);
@@ -35,13 +35,13 @@ describe('PWARegistrationdynamic', () => {'
 '
   test('displays correct content', () => {
     render(<PWARegistrationdynamic />);
-    // Add specific content tests based on component
-  })
+    // Add specific content tests based on component;
+})
 '
   test('handles user interactions', () => {
     render(<PWARegistrationdynamic />);
-    // Add interaction tests based on component functionality
-  })
+    // Add interaction tests based on component functionality;
+})
 '
   test('applies correct styling', () => {
 
@@ -51,12 +51,12 @@ describe('PWARegistrationdynamic, () => {
     expect(screen.getByTestId(pwaregistration.dynamic')).toBeInTheDocument()});
   test('displays correct content, () => {
     render(<PWARegistrationdynamic />);
-    // Add specific content tests based on component
-  });
+    // Add specific content tests based on component;
+});
   test('handles user interactions', () => {
     render(<PWARegistrationdynamic />);
-    // Add interaction tests based on component functionality
-  });
+    // Add interaction tests based on component functionality;
+});
   test(applies correct styling', () => {
   describe('PWARegistrationdynamic', () => {
   test('renders without crashing', () => {
@@ -84,16 +84,16 @@ import PWARegistrationdynamic   from '../components/PWARegistration.dynamic''
     expect(screen.getByTestId('pwaregistration.dynamic')).toBeInTheDocument()})'
   test('displays correct content', () => {'
     render(<PWARegistrationdynamic  />)
-    // Add specific content tests based on component
-  })
+    // Add specific content tests based on component;
+})
   test('handles user interactions', () => {'
     render(<PWARegistrationdynamic  />)
-    // Add interaction tests based on component functionality
-  })
+    // Add interaction tests based on component functionality;
+})
   test('applies correct styling', () => {'
     render(<PWARegistrationdynamic  />)
-    // Add styling tests if needed
-  });
+    // Add styling tests if needed;
+});
 });
   })})
 '

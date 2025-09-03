@@ -478,8 +478,8 @@ class EnhancedProjectErrorFixer {;
           }
         } catch (error) {  
           this.log(Warning: Could not process ${file  }: ${error.message}`,
-            `WARN`
-        } catch (error) {;
+            `WARN`;
+} catch (error) {;
           this.log(Warning: Could not process ${file}: ${error.message}',;
             'WARN';
           );

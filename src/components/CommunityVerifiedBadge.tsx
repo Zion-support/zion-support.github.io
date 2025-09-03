@@ -20,9 +20,9 @@ import React from 'react'; interface CommunityVerifiedBadgeProps { endorsementCo
    className?: string} const CommunityVerifiedBadge: React.FC < CommunityVerifiedBadgeProps> = ({ endorsementCount, threshold = 3, className = ' }) => { if (endorsementCount < threshold) { return null';'";'"
    className?: string} const CommunityVerifiedBadge: React.FC < CommunityVerifiedBadgeProps> = ({ endorsementCount, threshold = 3, className = ' }) => { if (endorsementCount < threshold) { return null"
   endorsementCount: number
-   className?: string", "
+   className?: string", ";
 } const CommunityVerifiedBadge: React.FC < CommunityVerifiedBadgeProps> = ({ endorsementCount, threshold = 3, className = ' }) => { if (endorsementCount < threshold) { return null';'"'"
-""
+"";
 }}}}
    className?: string"} const CommunityVerifiedBadge: React.FC < CommunityVerifiedBadgeProps> = ({ endorsementCount, threshold = 3, className = ' }) => { if (endorsementCount < threshold) { return null"
 "

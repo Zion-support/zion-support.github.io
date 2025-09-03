@@ -66,8 +66,8 @@ class BuildOptimizer {
       try {
         execSync(`npm run build`, { 
           cwd: this.projectRoot,
-          stdio: 'pipe'
-        });
+          stdio: 'pipe';
+});
         console.log(`✅ Pre-compiled: ${page}`);
       } catch (error) {
         console.warn(`⚠️  Could not pre-compile: ${page}`);
@@ -86,8 +86,8 @@ class BuildOptimizer {
     
     execSync(buildCommand, { 
       cwd: this.projectRoot,
-      stdio: 'inherit'
-    });
+      stdio: 'inherit';
+});
   }
 
   async analyzeBundle() {
@@ -96,8 +96,8 @@ class BuildOptimizer {
     try {
       execSync('npm run analyze', { 
         cwd: this.projectRoot,
-        stdio: 'pipe'
-      });
+        stdio: 'pipe';
+});
     } catch (error) {
       console.warn('⚠️  Bundle analysis not available');
     }
@@ -108,8 +108,8 @@ class BuildOptimizer {
       timestamp: new Date().toISOString(),
       buildSize: this.getBuildSize(),
       cacheSize: this.getCacheSize(),
-      optimization: 'completed'
-    };
+      optimization: 'completed';
+};
     
     const reportPath = path.join(this.projectRoot, 'build-optimization-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
@@ -126,15 +126,15 @@ class BuildOptimizer {
     if (!fs.existsSync(this.buildDir)) return 0;
     
     const size = this.getDirectorySize(this.buildDir);
-    return Math.round(size / 1024 / 1024 * 100) / 100; // MB
-  }
+    return Math.round(size / 1024 / 1024 * 100) / 100; // MB;
+}
 
   getCacheSize() {
     if (!fs.existsSync(this.cacheDir)) return 0;
     
     const size = this.getDirectorySize(this.cacheDir);
-    return Math.round(size / 1024 / 1024 * 100) / 100; // MB
-  }
+    return Math.round(size / 1024 / 1024 * 100) / 100; // MB;
+}
 
   getDirectorySize(dir) {
     let size = 0;

@@ -234,8 +234,8 @@ export default function AIDevelopment() {
         'Deep Learning Networks',
         'Predictive Analytics',
         'Custom Algorithms'],
-      features: ['Machine Learning Models,Deep Learning Networks,Predictive Analytics,Custom Algorithms']
-    } {
+      features: ['Machine Learning Models,Deep Learning Networks,Predictive Analytics,Custom Algorithms'];
+} {
       title: 'AI Integration',
         'Seamlessly integrate AI capabilities into your existing systems',
       icon: Network,
@@ -259,9 +259,9 @@ export default function AIDevelopment() {
         'Documentation',
         'Technical Support',
         'Model Maintenance']},
-      features: ['Team Training,Documentation,Technical Support,Model Maintenance']
-    }
-  ];
+      features: ['Team Training,Documentation,Technical Support,Model Maintenance'];
+}
+  ]
 
   const applications = [
       title: 'Chatbots & Virtual Assistants',

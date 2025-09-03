@@ -170,8 +170,8 @@ class ContentGenerator {
     this.templates = {
       blog: this.getBlogTemplate(),
       component: this.getComponentTemplate(),
-      page: this.getPageTemplate()
-    };
+      page: this.getPageTemplate();
+};
   }
 
   getBlogTemplate() {
@@ -330,8 +330,8 @@ class SEOOptimizer {
       hasKeywords: /meta.*keywords/.test(content),
       hasOpenGraph: /og:/i.test(content),
       hasTwitterCard: /twitter:/i.test(content),
-      hasStructuredData: /application\\/ld\\+json/.test(content)
-    };
+      hasStructuredData: /application\\/ld\\+json/.test(content);
+};
     
     this.seoData.set(route, seoData);
   }
@@ -424,8 +424,8 @@ class SecurityScanner {
             type: 'vulnerable-dependency',
             package: pkg,
             version: version,
-            severity: 'medium'
-          });
+            severity: 'medium';
+});
           this.securityScore -= 10;
         }
       }
@@ -439,7 +439,7 @@ class SecurityScanner {
       { pattern: /eval\\(/, description: 'Use of eval() function', severity: 'high' },
       { pattern: /innerHTML/, description: 'Potential XSS vulnerability', severity: 'medium' },
       { pattern: /localStorage/, description: 'Sensitive data in localStorage', severity: 'low' }
-    ];
+    ]
     
     this.scanFiles(patterns);
   }
@@ -453,8 +453,8 @@ class SecurityScanner {
         this.vulnerabilities.push({
           type: 'missing-security-headers',
           description: 'No security headers configured',
-          severity: 'medium'
-        });
+          severity: 'medium';
+});
         this.securityScore -= 15;
       }
     }
@@ -531,8 +531,8 @@ class TestGenerator {
     this.testTemplates = {
       component: this.getComponentTestTemplate(),
       page: this.getPageTestTemplate(),
-      utility: this.getUtilityTestTemplate()
-    };
+      utility: this.getUtilityTestTemplate();
+};
   }
 
   getComponentTestTemplate() {

@@ -15,18 +15,18 @@ describe('Layout', () => {';
 
   test('displays: correct content', () => {';
     render(<Layout: />);
-    // Add: specific content tests based on component
-  })
+    // Add: specific content tests based on component;
+})
 
   test('handles user interactions', () => {';
     render(<Layout: />);
-    // Add: interaction tests based on component functionality
-  })
+    // Add: interaction tests based on component functionality;
+})
 
   test('applies correct styling', () => {';
     render(<Layout: />);
-    // Add: styling tests if needed
-  })})
+    // Add: styling tests if needed;
+})})
 describe('Layout', () => {
   test(renders without crashing', () => {
 import React from 'react';
@@ -54,13 +54,13 @@ import Layout   from '../components/Layout''
   describe('Layout', () => {'
   test('renders without crashing', () => {'
     render(<Layout  />)
-    expect(screen.getByTestId('layout')).toBeInTheDocument();'
-  })
+    expect(screen.getByTestId('layout')).toBeInTheDocument();';
+})
 
   test('displays correct content', () => {'
     render(<Layout  />)
-    // Add specific content tests based on component
-  });
+    // Add specific content tests based on component;
+});
 '
 
   test(handles user interactions', () => {
@@ -76,17 +76,17 @@ import Layout   from '../components/Layout''
 
   test('handles user interactions', () => {'
     render(<Layout  />)
-    // Add interaction tests based on component functionality
-  });
+    // Add interaction tests based on component functionality;
+});
 '
   test('applies correct styling', () => {
     render(<Layout />);
 
   test('applies correct styling', () => {'
     render(<Layout  />)
-    // Add styling tests if needed
-  });
+    // Add styling tests if needed;
 });
-'
-  })
+});
+';
+});
 })

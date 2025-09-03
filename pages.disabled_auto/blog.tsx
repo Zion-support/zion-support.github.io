@@ -80,7 +80,7 @@ import {
   Globe,
   Phone,
 :pages.disabled_auto/blog.tsx
-  Mail
+  Mail;
 } from
   'lucide-react';
   Mail} from 'lucide-react';
@@ -599,8 +599,8 @@ const Blog: React.FC = () => {
                           category.active
                             ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white'
                             : 'text-gray-300 hover:bg-slate-700'
-ursor/automate-test-fix-improve-and-merge-code-99d1:pages/blog.tsx
-                        }`}
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/blog.tsx;
+}`}
 :pages.disabled_auto/blog.tsx;
                           category.active;
                             ?,

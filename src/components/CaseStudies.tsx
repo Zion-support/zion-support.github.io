@@ -10,10 +10,10 @@ interface CaseStudy {
   results: {
     metric: string
     value: string
-    icon: React.ReactNode
-  }[]
+    icon: React.ReactNode;
+}[]
   technologies: string[]
-  duration: string
+  duration: string;
 }
 
 const caseStudies: CaseStudy[] = [{
@@ -25,8 +25,8 @@ const caseStudies: CaseStudy[] = [{
       { metric: 'Response Time', value: '85% faster', icon: <TrendingUp className="w-5 h-5" /> } { metric: 'Customer Satisfaction', value: '+32%', icon: <CheckCircle className="w-5 h-5" /> } { metric: 'Cost Reduction', value: '40%', icon: <DollarSign className="w-5 h-5" /> }
     ],
     technologies: ['OpenAI GPT-4', 'LangChain', 'React', 'Node.js', 'PostgreSQL'],
-    duration: '3 months'
-  } {
+    duration: '3 months';
+} {
     id: '2',
     title: 'Cloud-Native Data Platform Migration',
     description: 'Migrated legacy data infrastructure to modern cloud-native platform with real-time analytics capabilities.',
@@ -150,10 +150,10 @@ interface CaseStudy { id: string;,"});,"})
   results: {,"});,"})
     metric: string;,"});,"})
     value: string;,"});,"})
-    icon: React.ReactNode;,"});,"})
-   }[];,"});,"})
+    icon: React.ReactNode;,"});,"});
+}[];,"});,"})
   technologies: string[];,"});,"})
-  duration: string;,"});,"})
+  duration: string;,"});,"});
 }"});,"})
 ;,"});,"})
 const caseStudies: CaseStudy[] = [{ id: '1',;,"});,"})
@@ -166,8 +166,8 @@ const caseStudies: CaseStudy[] = [{ id: '1',;,"});,"})
       { metric: 'Cost Reduction', value: '40%', icon: <DollarSign className="w-5 h-5" /> }"});,"})
     ],;,"});,"})
     technologies: ['OpenAI GPT-4', 'LangChain', 'React', 'Node.js', 'PostgreSQL'],;,"});,"})
-    duration: '3 months';,"});,"})
-  },;,"});,"})
+    duration: '3 months';,"});,"});
+},;,"});,"})
   { id: '2',;,"});,"})
     title: 'Cloud-Native Data Platform Migration',;,"});,"})
     description: 'Migrated legacy data infrastructure to modern cloud-native platform with real-time analytics capabilities.',;,"});,"})

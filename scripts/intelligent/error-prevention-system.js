@@ -54,7 +54,7 @@ class IntelligentErrorPreventionSystem {
         { pattern: /Build failed/, fix: 'build-fix' },
         { pattern: /Out of memory/, fix: 'memory-fix' },
       ]
-    };
+};
   }
 
   loadFixHistory() {
@@ -75,8 +75,8 @@ class IntelligentErrorPreventionSystem {
         timestamp: new Date().toISOString(),
         fixHistory: this.fixHistory,
         totalFixes: this.fixHistory.length,
-        lastRun: Date.now()
-      };
+        lastRun: Date.now();
+};
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
     } catch (error) {
       this.log(`Failed to save fix history: ${error.message}`, 'error');
@@ -90,7 +90,7 @@ class IntelligentErrorPreventionSystem {
       './logs/zion-website-error.log',
       './logs/error-monitor-error.log',
       './logs/health-checker-error.log'
-    ];
+    ]
 
     const errors = [];
     
@@ -107,8 +107,8 @@ class IntelligentErrorPreventionSystem {
                 file: logFile,
                 line: line,
                 error: error,
-                timestamp: new Date().toISOString()
-              });
+                timestamp: new Date().toISOString();
+});
             }
           }
         } catch (error) {
@@ -166,8 +166,8 @@ class IntelligentErrorPreventionSystem {
         error: error,
         fix: error.error.fix,
         timestamp: new Date().toISOString(),
-        success: true
-      });
+        success: true;
+});
 
       this.log(`✅ Successfully applied fix: ${error.error.fix}`, 'success');
       return true;
@@ -180,8 +180,8 @@ class IntelligentErrorPreventionSystem {
         fix: error.error.fix,
         timestamp: new Date().toISOString(),
         success: false,
-        error: fixError.message
-      });
+        error: fixError.message;
+});
 
       return false;
     }
@@ -195,15 +195,15 @@ class IntelligentErrorPreventionSystem {
       execSync('npm run lint:fix', { 
         cwd: this.projectRoot, 
         stdio: 'pipe',
-        timeout: 60000 
-      });
+        timeout: 60000 ;
+});
       
       // Run TypeScript compiler to check for type errors
       execSync('npm run type-check', { 
         cwd: this.projectRoot, 
         stdio: 'pipe',
-        timeout: 60000 
-      });
+        timeout: 60000 ;
+});
       
       this.log('✅ Syntax errors fixed successfully');
     } catch (error) {
@@ -220,8 +220,8 @@ class IntelligentErrorPreventionSystem {
       execSync('npm install', { 
         cwd: this.projectRoot, 
         stdio: 'pipe',
-        timeout: 120000 
-      });
+        timeout: 120000 ;
+});
       
       this.log('✅ Import issues fixed successfully');
     } catch (error) {
@@ -238,8 +238,8 @@ class IntelligentErrorPreventionSystem {
       execSync('npx tsc --noEmit --strict', { 
         cwd: this.projectRoot, 
         stdio: 'pipe',
-        timeout: 60000 
-      });
+        timeout: 60000 ;
+});
       
       this.log('✅ Type issues fixed successfully');
     } catch (error) {
@@ -255,14 +255,14 @@ class IntelligentErrorPreventionSystem {
       // Clean install dependencies
       execSync('rm -rf node_modules package-lock.json', { 
         cwd: this.projectRoot, 
-        stdio: 'pipe' 
-      });
+        stdio: 'pipe' ;
+});
       
       execSync('npm install', { 
         cwd: this.projectRoot, 
         stdio: 'pipe',
-        timeout: 180000 
-      });
+        timeout: 180000 ;
+});
       
       this.log('✅ Dependency issues fixed successfully');
     } catch (error) {
@@ -278,15 +278,15 @@ class IntelligentErrorPreventionSystem {
       // Clean build directory
       execSync('rm -rf .next dist', { 
         cwd: this.projectRoot, 
-        stdio: 'pipe' 
-      });
+        stdio: 'pipe' ;
+});
       
       // Run build
       execSync('npm run build', { 
         cwd: this.projectRoot, 
         stdio: 'pipe',
-        timeout: 300000 
-      });
+        timeout: 300000 ;
+});
       
       this.log('✅ Build issues fixed successfully');
     } catch (error) {
@@ -302,14 +302,14 @@ class IntelligentErrorPreventionSystem {
       // Clear npm cache
       execSync('npm cache clean --force', { 
         cwd: this.projectRoot, 
-        stdio: 'pipe' 
-      });
+        stdio: 'pipe' ;
+});
       
       // Clear Next.js cache
       execSync('rm -rf .next', { 
         cwd: this.projectRoot, 
-        stdio: 'pipe' 
-      });
+        stdio: 'pipe' ;
+});
       
       this.log('✅ Memory issues fixed successfully');
     } catch (error) {
@@ -326,7 +326,7 @@ class IntelligentErrorPreventionSystem {
       { name: 'Type Check', command: 'npm run type-check' },
       { name: 'Lint Check', command: 'npm run lint' },
       { name: 'Build Test', command: 'npm run build' }
-    ];
+    ]
 
     const results = [];
     
@@ -336,8 +336,8 @@ class IntelligentErrorPreventionSystem {
         execSync(check.command, { 
           cwd: this.projectRoot, 
           stdio: 'pipe',
-          timeout: 120000 
-        });
+          timeout: 120000 ;
+});
         results.push({ name: check.name, status: 'passed' });
         this.log(`✅ ${check.name} passed`);
       } catch (error) {
@@ -359,12 +359,12 @@ class IntelligentErrorPreventionSystem {
         successfulFixes: this.fixHistory.filter(f => f.success).length,
         failedFixes: this.fixHistory.filter(f => !f.success).length,
         successRate: this.fixHistory.length > 0 ? 
-          (this.fixHistory.filter(f => f.success).length / this.fixHistory.length * 100).toFixed(2) : 0
-      },
+          (this.fixHistory.filter(f => f.success).length / this.fixHistory.length * 100).toFixed(2) : 0;
+},
       errorCategories: this.getErrorCategoryStats(),
       recommendations: this.generateRecommendations(),
-      fixHistory: this.fixHistory.slice(-10) // Last 10 fixes
-    };
+      fixHistory: this.fixHistory.slice(-10) // Last 10 fixes;
+};
 
     const reportFile = path.join(this.projectRoot, 'logs/intelligent-error-prevention-intelligence.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
@@ -429,8 +429,8 @@ class IntelligentErrorPreventionSystem {
       this.log(`   - Fixes applied: ${fixedCount}`);
       this.log(`   - Preventive checks: ${checkResults.filter(r => r.status === 'passed').length}/${checkResults.length}`);
       this.log(`   - Success rate: ${report.systemHealth.successRate}%`);
-
-    } catch (error) {
+;
+} catch (error) {
       this.log(`❌ Error Prevention System failed: ${error.message}`, 'error');
       throw error;
     }

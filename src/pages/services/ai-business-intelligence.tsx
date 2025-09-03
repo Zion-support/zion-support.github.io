@@ -17,7 +17,7 @@ import {
   Eye, Filter,
   Download, Share2,
   AlertTriangle, Zap,
-  Globe, Clock;", "
+  Globe, Clock;", ";
 } from 'lucide-react';
 
 const AIBusinessIntelligence: React.FC = () => {
@@ -61,7 +61,7 @@ const AIBusinessIntelligence: React.FC = () => {
       title: 'Multi-Platform Access', ""
       description: 'Access your data from anywhere with web, mobile, and API access',""
       color: 'from-indigo-500 to-blue-500'}
-  ];
+  ]
 
   const analyticsTypes = [
     {""
@@ -92,7 +92,7 @@ const AIBusinessIntelligence: React.FC = () => {
       benefits: ['Process optimization', 'Resource utilization', 'Performance monitoring', 'Efficiency metrics'], ""
       pricing: '$99/month',""
       color: 'from-yellow-500 to-orange-500'}
-  ];
+  ]
 
   const benefits = [""
     'Make data-driven decisions', ""
@@ -131,7 +131,7 @@ const AIBusinessIntelligence: React.FC = () => {
       title: 'Multi-Platform Access,
       description: 'Access your data from anywhere with web, mobile, and API access,
       color: 'from-indigo-500 to-blue-500'}
-  ];
+  ]
 
   const analyticsTypes = [
   {"
@@ -162,7 +162,7 @@ const AIBusinessIntelligence: React.FC = () => {
       benefits: ['Process optimization,Resource utilization,Performance monitoring,Efficiency metrics'],"
       pricing: '$99/month,
       color: 'from-yellow-500 to-orange-500'}
-  ];
+  ]
 
   const benefits = ["
     'Make data-driven decisions,

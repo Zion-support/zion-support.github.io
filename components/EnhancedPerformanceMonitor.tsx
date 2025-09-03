@@ -68,7 +68,7 @@ import { Activity, AlertTriangle, CheckCircle }  from 'lucide-react';interface P
   fid: number
   cls: number
   ttfb: number
-  score: number
+  score: number;
 }
 
   score: number}
@@ -127,8 +127,8 @@ const finalMetrics = {
 observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });'      } catch (error) {'        console.warn('Performance Observer not supported: ', error);'      }'// Fallback timeout
       setTimeout(() => {
         resolve({
-          fcp: 0, lcp: 0, fid: 0, cls: 0, ttfb: 0, fmp: 0, tti: 0, score: 0
-        })}, 5000)})}, [calculateOverallScore]);
+          fcp: 0, lcp: 0, fid: 0, cls: 0, ttfb: 0, fmp: 0, tti: 0, score: 0;
+})}, 5000)})}, [calculateOverallScore]);
 
 const updateMetrics = useCallback(async () => {setIsLoading(true);
       // Simulate API call to get performance metrics
@@ -144,8 +144,8 @@ const updateMetrics = useCallback(async () => {setIsLoading(true);
         fid: Math.random() * 100 + 10,
         cls: Math.random() * 0.3,
         ttfb: Math.random() * 500 + 100,
-        score: Math.random() * 100
-      };
+        score: Math.random() * 100;
+};
 
         score: Math.random() * 100};
 
@@ -157,8 +157,8 @@ const updateMetrics = useCallback(async () => {setIsLoading(true);
       if (newMetrics.fcp > 1800) {
           type 'warning',
           message: 'First Contentful Paint is slow',
-          metric: 'FCP'
-        })}
+          metric: 'FCP';
+})}
       
           metric: 'FCP',
           type 'warning', message: 'First Contentful Paint is slow',
@@ -178,8 +178,8 @@ const updateMetrics = useCallback(async () => {setIsLoading(true);
       console.error('Error updating metrics: ', error)} finally {
           metric: 'LCP',
 
-      console.error('Error updating metrics:', error)} finally {
-  }, []);
+      console.error('Error updating metrics:', error)} finally {;
+}, []);
 
   useEffect(() => {
     updateMetrics();
@@ -188,8 +188,8 @@ const updateMetrics = useCallback(async () => {setIsLoading(true);
       const interval = setInterval(updateMetrics, refreshInterval);
       return () => clearInterval(interval)}
     
-    return () => {}; // Return empty cleanup function
-  }, [updateMetrics, autoRefresh, refreshInterval]);
+    return () => {}; // Return empty cleanup function;
+}, [updateMetrics, autoRefresh, refreshInterval]);
 
     if (score >= 90) return 'text-green-500';
     if (score >= 70) return 'text-yellow-500';
@@ -351,8 +351,8 @@ animate={{ opacity: 1, height: 'auto' }}'                exit={{ opacity: 0, hei
                     className={`p-4 rounded-lg border-l-4 ${`
                       alert.type === 'error''
                         ? 'bg-red-900/20 border-red-500 text-red-200''
-                        : 'bg-yellow-900/20 border-yellow-500 text-yellow-200''
-                    }`}
+                        : 'bg-yellow-900/20 border-yellow-500 text-yellow-200'';
+}`}
                   >`
                     <div className="flex items-center">"
                       {alert.type === 'error' ? ('
@@ -375,8 +375,8 @@ className="flex items-center justify-center text-green-600 dark:text-green-400 b
             <h3 className="text-lg font-semibold mb-4">First Contentful Paint</h3>"
             <div className="text-3xl font-bold mb-2">{Math.round(metrics.fcp)}ms</div>"
             <div className={`text-sm ${`
-              metrics.fcp < 1800 ? 'text-green-400' : 'text-red-400''
-            }`}>`
+              metrics.fcp < 1800 ? 'text-green-400' : 'text-red-400'';
+}`}>`
               {metrics.fcp < 1800 ? 'Good' : 'Needs Improvement'}
 '
             <h3 className="text-lg font-semibold mb-4">Largest Contentful Paint</h3>"
@@ -409,8 +409,8 @@ className="flex items-center justify-center text-green-600 dark:text-green-400 b
 export default EnhancedPerformanceMonitor;"
 export default EnhancedPerformanceMonitor;
     updateMetrics()
-    return () => clearInterval(interval)
-  }, [updateMetrics])
+    return () => clearInterval(interval);
+}, [updateMetrics])
 
 
     <div className="bg-white dark: bg-gray-800 rounded-lg shadow-lg p-6 border border-gray-200 dark:border-gray-700">
@@ -488,8 +488,8 @@ export default EnhancedPerformanceMonitor;
           <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">FCP</div>
           <div className="text-lg font-semibold text-gray-900 dark:text-white">
           <div className={`text-xs ${
-            metrics.fcp < 1800 ? 'text-green-600' : 'text-red-600'
-          }`}>
+            metrics.fcp < 1800 ? 'text-green-600' : 'text-red-600';
+}`}>
 
           <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">LCP</div>
             metrics.lcp < 2500 ? 'text-green-600' : 'text-red-600'

@@ -595,8 +595,8 @@ class EnhancedSecurityAutomation {
             }
         });
       }
-
-          } catch (error) {;
+;
+} catch (error) {;
             // Skip files that can't be read;
           }
         });
@@ -795,13 +795,13 @@ class EnhancedSecurityAutomation {
 ${
   report.summary.criticalVulnerabilities > 0? 1. **CRITICAL**: Fix ${report.summary.criticalVulnerabilities} critical vulnerabilities immediately;
 2. **CRITICAL**: Update packages with critical security issues;
-    : `1. ✅ No critical vulnerabilities found`
+    : `1. ✅ No critical vulnerabilities found`;
 }
 
 ${
   report.summary.highVulnerabilities > 0? 3. **HIGH**: Address ${report.summary.highVulnerabilities} high-risk vulnerabilities;
 4. **HIGH**: Review and update high-risk packages;
-    : `2. ✅ No high-risk vulnerabilities found`
+    : `2. ✅ No high-risk vulnerabilities found`;
 }
 
 ${
@@ -841,7 +841,7 @@ ${
 ${`);
   report.summary.potentialSecrets > 0? 5. **SECRETS**: Remove or secure ${report.summary.potentialSecrets} hardcoded secrets`);
 6. **SECRETS**: Use environment variables for sensitive data`
-    : '3. ✅ No hardcoded secrets found'
+    : '3. ✅ No hardcoded secrets found';
 }
 ;
 ## 📚 Recommendations;

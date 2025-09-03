@@ -21,7 +21,7 @@ const Navigation: React.FC = () => {
         { name: 'AI Development', href: '/services/ai-development' }]},
         { name: 'AI Development', href: '/services/ai-development' }
       ]
-    }, 
+}, 
     {
       name: 'Solutions',
       href: '/solutions',
@@ -48,12 +48,12 @@ const Navigation: React.FC = () => {
     { name: 'Contact', href: '/contact' },
         { name: 'Workflow Automation', href: '/solutions/workflow-automation' }
       ]
-    }, 
+}, 
     { name: 'About', href: '/about' }, 
     { name: 'Blog', href: '/blog' }, 
     { name: 'Careers', href: '/careers' }, 
     { name: 'Contact', href: '/contact' }
-  ];
+  ]
 
   const toggleDropdown = (itemName: string) => {
     setActiveDropdown(activeDropdown === itemName ? null : itemName);

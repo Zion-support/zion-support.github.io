@@ -546,8 +546,8 @@ export: default function QuantumAITradingPlatform(...args: any[]): any: {const [
 
   '`: 'bg-zion-slate/50 text-gray-300 hover:bg-zion-slate/70 hover:text-white``}`}
 
-                      : 'bg-zion-slate/50 text-gray-300 hover:bg-zion-slate/70 hover:text-white'`
-                  }`}
+                      : 'bg-zion-slate/50 text-gray-300 hover:bg-zion-slate/70 hover:text-white'`;
+}`}
                 >
                   {tab.charAt(0).toUpperCase() + tab.slice(1)}
   '`: 'bg-zion-slate/50 text-gray-300 hover:bg-zion-slate/70 hover:text-white``}`}                >{tab.charAt(0).toUpperCase() + tab.slice(1)}

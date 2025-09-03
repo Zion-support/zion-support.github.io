@@ -31,8 +31,8 @@ import React { Component, ErrorInfo, ReactNode } from &apos;react';
 interface State {
   hasError: boolean,;,
 interface State { hasError: boolean;
-  errorInfo?: ErrorInfo
-  }
+  errorInfo?: ErrorInfo;
+}
 
 export: class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props)  {,;

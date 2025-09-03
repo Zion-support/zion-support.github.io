@@ -67,58 +67,58 @@ const ITSolutions = () => {
 "
             icon: Settings,""
             title: "System Integration",""
-            description: "Seamless integration of existing and new IT systems"
-        },
+            description: "Seamless integration of existing and new IT systems";
+},
         {
 "
             icon: Monitor,""
             title: "IT Support",""
-            description: "24/7 IT support and maintenance services"
-        },
+            description: "24/7 IT support and maintenance services";
+},
         {
 "
             icon: Database,""
             title: "Data Management",""
-            description: "Comprehensive data management and backup solutions"
-        },
+            description: "Comprehensive data management and backup solutions";
+},
         {
 "
             icon: Shield,""
             title: "IT Security",""
             description: "Multi-layered security for your IT infrastructure"
 
-    ];"const benefits = [""
+    ]"const benefits = [""
 
-    ];"
+    ]"
 const ITSolutions = () => {}
     const features = []
         {}
             icon: Settings,""
             title: "System Integration",""
-            description: "Seamless integration of existing and new IT systems""
-        },
+            description: "Seamless integration of existing and new IT systems"";
+},
         {}
             icon: Monitor,""
             title: "IT Support",""
-            description: "24/7 IT support and maintenance services""
-        },
+            description: "24/7 IT support and maintenance services"";
+},
         {}
             icon: Database,""
             title: "Data Management",""
-            description: "Comprehensive data management and backup solutions""
-        },
+            description: "Comprehensive data management and backup solutions"";
+},
         {}
             icon: Shield,""
             title: "IT Security",""
             description: "Multi-layered security for your IT infrastructure""
-    ];
+    ]
     const benefits = [""
         "Improved system reliability and performance",""
         "Reduced IT operational costs",""
         "Enhanced data security and compliance",""
         "Streamlined business processes",""
         "Expert technical support and maintenance""
-    ];""
+    ]""
     return (<div className="min-h-screen bg-background">""
       <SEO title="IT Solutions - Zion Tech Group" description="Comprehensive IT solutions to optimize your business operations and technology infrastructure." keywords="IT solutions, system integration, IT support, data management, IT security" canonical="https://ziontechgroup.com/services/it-solutions"/>
 :pages.disabled/pages/services/ITSolutions.jsx
@@ -135,13 +135,11 @@ const ITSolutions = () => {}
           <motion.h1 className="text-5xl md:text-6xl font-bold mb-6" initial = {
 
   { opacity: 0,
-  y: 20
-
+  y: 20;
 }} animate = {
 
   { opacity: 1,
-  y: 0
-
+  y: 0;
 }} transition={{ duration: 0.8 }}>"
             IT Solutions for""
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">""
@@ -151,18 +149,15 @@ const ITSolutions = () => {}
           <motion.p className="text-xl md:text-2xl text-teal-100 max-w-4xl mx-auto leading-relaxed mb-8" initial = {
 
   { opacity: 0,
-  y: 20
-
+  y: 20;
 }} animate = {
 
   { opacity: 1,
-  y: 0
-
+  y: 0;
 }} transition = {
 
   { duration: 0.8,
-  delay: 0.2
-
+  delay: 0.2;
 }}>
 
             Optimize your IT infrastructure with our comprehensive solutions designed to improveefficiency, security, and performance across your organization.
@@ -201,7 +196,7 @@ const ITSolutions = () => {
         'Enhanced data security and compliance','';
         'Streamlined business processes','';
         'Expert technical support and maintenance''
-    ];const benefits = [''        'Improved system reliability and performance',';
+    ]const benefits = [''        'Improved system reliability and performance',';
         'Reduced IT operational costs',';
         'Enhanced data security and compliance',';
         'Streamlined business processes',';
@@ -246,25 +241,22 @@ const ITSolutions = () => {
           <motion.div initial = {}
   { opacity: 0,
 :pages.disabled/pages/services/ITSolutions.jsx
-  y: 20
-
+  y: 20;
 }} animate = {
 
   { opacity: 1,
-  y: 0
-
+  y: 0;
 }} transition = {
 
   { duration: 0.8,
 :pages.disabled/pages/services/ITSolutions.jsx
-  delay: 0.4
-
+  delay: 0.4;
 }}>"y: 20;
-
+;
 }}>"
   delay: 0.4 
 
-"
+";
 }}>""
   y: 20;
 }} animate = {}
@@ -321,19 +313,16 @@ const ITSolutions = () => {
             {features.map((feature, index) => (<motion.div key={feature.title} className="text-center p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-all duration-300" initial = {
 
   { opacity: 0,
-  y: 20
-
+  y: 20;
 }} whileInView = {
 
   { opacity: 1,
-  y: 0
-
+  y: 0;
 }} transition = {
 
   { duration: 0.6,
 :pages.disabled/pages/services/ITSolutions.jsx
-  delay: index * 0.1
-
+  delay: index * 0.1;
 }} viewport={{ once: true }}>"
                 <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">"
                   <feature.icon className="w-8 h-8 text-teal-600"/>
@@ -344,7 +333,7 @@ const ITSolutions = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>"
   delay: index * 0.1 
 
-"
+";
 }} viewport={{ once: true }}>""
                 <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">""
                   <feature.icon className="w-8 h-8 text-teal-600"/>"
@@ -397,19 +386,16 @@ const ITSolutions = () => {
               {benefits.map((benefit, index) => (<motion.div key={index} className="flex items-center p-4 bg-white rounded-lg shadow-sm" initial = {
 
   { opacity: 0,
-  x: -20
-
+  x: -20;
 }} whileInView = {
 
   { opacity: 1,
-  x: 0
-
+  x: 0;
 }} transition = {
 
   { duration: 0.6,
 :pages.disabled/pages/services/ITSolutions.jsx
-  delay: index * 0.1
-
+  delay: index * 0.1;
 }} viewport={{ once: true }}>"
                   <div className="w-8 h-8 bg-teal-100 rounded-full flex items-center justify-center mr-4">"
                     <TrendingUp className="w-4 h-4 text-teal-600"/>
@@ -419,7 +405,7 @@ const ITSolutions = () => {
                   </div>"
   delay: index * 0.1 
 
-"
+";
 }} viewport={{ once: true }}>""
                   <div className="w-8 h-8 bg-teal-100 rounded-full flex items-center justify-center mr-4">""
                     <TrendingUp className="w-4 h-4 text-teal-600"/>"
@@ -638,11 +624,9 @@ const ITSolutions = () => {
 };
 export { ITSolutions };
 :pages.disabled/pages/services/ITSolutions.jsx
-export default ITSolutions;'"
-
+export default ITSolutions;'";
 }}
-  '"'"
-
+  '"'";
 }}'"'"
 export default ITSolutions;
 }}'""

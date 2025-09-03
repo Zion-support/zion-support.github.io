@@ -57,8 +57,8 @@ export function MobileNavigation() {}
     <div className="lg: hidden">
       <Button
         variant="ghost"
-        size="sm"
-  };
+        size="sm";
+};
     <div className="lg:hidden">;
       <Button;
         variant="ghost";
@@ -98,7 +98,7 @@ export function MobileNavigation() {}
           </div>;
       )}
     </div>
-  )
+  );
 }
 import React { useState } from 'react
 import { Link } from 'react-router-dom

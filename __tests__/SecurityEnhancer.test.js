@@ -15,18 +15,18 @@ describe('SecurityEnhancer', () => {';
 
   test('displays: correct content', () => {';
     render(<SecurityEnhancer: />);
-    // Add: specific content tests based on component
-  })
+    // Add: specific content tests based on component;
+})
 
   test('handles user interactions', () => {';
     render(<SecurityEnhancer: />);
-    // Add: interaction tests based on component functionality
-  })
+    // Add: interaction tests based on component functionality;
+})
 
   test('applies correct styling', () => {';
     render(<SecurityEnhancer: />);
-    // Add: styling tests if needed
-  })})
+    // Add: styling tests if needed;
+})})
 describe('SecurityEnhancer', () => {
   test(renders without crashing', () => {
 import React from 'react';
@@ -54,13 +54,13 @@ import SecurityEnhancer   from '../components/SecurityEnhancer''
   describe('SecurityEnhancer', () => {'
   test('renders without crashing', () => {'
     render(<SecurityEnhancer  />)
-    expect(screen.getByTestId('securityenhancer')).toBeInTheDocument();'
-  })
+    expect(screen.getByTestId('securityenhancer')).toBeInTheDocument();';
+})
 
   test('displays correct content', () => {'
     render(<SecurityEnhancer  />)
-    // Add specific content tests based on component
-  });
+    // Add specific content tests based on component;
+});
 '
 
   test(handles user interactions', () => {
@@ -76,17 +76,17 @@ import SecurityEnhancer   from '../components/SecurityEnhancer''
 
   test('handles user interactions', () => {'
     render(<SecurityEnhancer  />)
-    // Add interaction tests based on component functionality
-  });
+    // Add interaction tests based on component functionality;
+});
 '
   test('applies correct styling', () => {
     render(<SecurityEnhancer />);
 
   test('applies correct styling', () => {'
     render(<SecurityEnhancer  />)
-    // Add styling tests if needed
-  });
+    // Add styling tests if needed;
 });
-'
-  })
+});
+';
+});
 })

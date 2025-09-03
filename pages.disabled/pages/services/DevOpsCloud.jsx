@@ -80,7 +80,7 @@ export default function DevOpsCloudServices() {}
                 'Reduced infrastructure costs by 30-50%,Improved scalability and flexibility',Enhanced disaster recovery
   ',Better resource utilization'
             ]
-        },
+},
 :pages.disabled/pages/services/DevOpsCloud.jsx
         {
 
@@ -149,7 +149,7 @@ export default function DevOpsCloudServices() {}
                 'Faster time to market,Reduced deployment errors',Improved code quality
   ',Enhanced team productivity'
             ]
-        },
+},
 :pages.disabled/pages/services/DevOpsCloud.jsx
         {
 
@@ -218,7 +218,7 @@ export default function DevOpsCloudServices() {}
                 'Consistent infrastructure deployment,Reduced manual configuration errors',Faster environment provisioning
   ',Better cost control and visibility'
             ]
-        },
+},
 :pages.disabled/pages/services/DevOpsCloud.jsx
         {
 
@@ -287,7 +287,7 @@ export default function DevOpsCloudServices() {}
                 'Improved application scalability,Better resource utilization',Enhanced deployment flexibility
   ',Reduced operational overhead'
             ]
-        },
+},
 :pages.disabled/pages/services/DevOpsCloud.jsx
         {
 
@@ -356,7 +356,7 @@ export default function DevOpsCloudServices() {}
                 'Improved development velocity,Better team collaboration',Reduced operational costs
   ',Enhanced software quality'
             ]
-        },
+},
 :pages.disabled/pages/services/DevOpsCloud.jsx
         {
 
@@ -391,8 +391,8 @@ export default function DevOpsCloudServices() {}
                 'Proactive: issue detectio,n,Improved system reliability,';
   ,Better: user experience;
   ',Data-driven: optimization';
-            ];
-    ];: pages.disabled/pages/services/DevOpsCloud.jsx: const cloudProviders = [{
+            ]
+    ]: pages.disabled/pages/services/DevOpsCloud.jsx: const cloudProviders = [{
   ';
             name: Amazon: Web Services (AWS),
 ,
@@ -452,7 +452,7 @@ export default function DevOpsCloudServices() {}
   ',Improved: system reliability and uptime',Reduced infrastructure costs;
   ',Enhanced: security and compliance',Better scalability and performance;
   ',Improved: team collaboration and productivity';
-    ];: pages.disabled/pages/services/DevOpsCloud.jsx: const useCases = [{
+    ]: pages.disabled/pages/services/DevOpsCloud.jsx: const useCases = [{
   ';
             title: 'Microservices: Migratio,n,';
             description:,
@@ -558,9 +558,9 @@ export default function DevOpsCloudServices() {}
   ',Data-driven optimization'
             ]
 
-    ];: pages.disabled/pages/services/DevOpsCloud.jsx
+    ]: pages.disabled/pages/services/DevOpsCloud.jsx
 
-    ];
+    ]
 :pages.disabled/pages/services/DevOpsCloud.jsx
     const cloudProviders = [
         {
@@ -573,8 +573,8 @@ export default function DevOpsCloudServices() {}
                 'Proactive issue detection,Improved system reliability,
   ,Better user experience;
   ',Data-driven optimization';
-            ];
-    ];: pages.disabled/pages/services/DevOpsCloud.jsx    const cloudProviders = [{'
+            ]
+    ]: pages.disabled/pages/services/DevOpsCloud.jsx    const cloudProviders = [{'
   ';
             name:Amazon Web Services (AWS),
 ,
@@ -627,27 +627,27 @@ export default function DevOpsCloudServices() {}
             name: 'Amazon Web Services (AWS),
             services: 'EC2, S3, Lambda, RDS, EKS',
             strengths: 'Market leader, extensive services',
-            pricing: 'Competitive, pay-as-you-use'
-        },
+            pricing: 'Competitive, pay-as-you-use';
+},
         {}
             name: 'Microsoft Azure',
             services: 'Virtual Machines, Blob Storage, Functions, AKS',
             strengths: 'Enterprise integration, hybrid cloud',
-            pricing: 'Enterprise discounts, reserved instances'
-        },
+            pricing: 'Enterprise discounts, reserved instances';
+},
         {}
             name: 'Google Cloud Platform (GCP),
             services: 'Compute Engine, Cloud Storage, Cloud Functions, GKE',
             strengths: 'AI/ML capabilities, global network',
-            pricing: 'Sustained use discounts, committed use'
-        },
+            pricing: 'Sustained use discounts, committed use';
+},
         {}
             name: 'Multi-Cloud Strategy',
             services: 'Cross-platform orchestration, hybrid solutions',
             strengths: 'Vendor independence, best-of-breed',
             pricing: 'Optimized for each workload'
 
-    ];'
+    ]'
     const industries = ['
   '
         'Financial Services & Banking,Healthcare & Life Sciences,
@@ -655,7 +655,7 @@ export default function DevOpsCloudServices() {}
   ',Media & Entertainment',Manufacturing & Logistics
   ',Education & Research',Government & Public Sector
   ',Startups & Scale-ups'
-    ];'
+    ]'
     const technologies = ['
   '
         'AWS, Azure, GCP
@@ -663,7 +663,7 @@ export default function DevOpsCloudServices() {}
   ',Jenkins & GitLab CI',Prometheus & Grafana
   ',ELK Stack & Splunk',Istio & Linkerd
   ',Helm & ArgoCD'
-    ];'
+    ]'
 
     const benefits = ['
   '
@@ -671,12 +671,12 @@ export default function DevOpsCloudServices() {}
   ',Improved system reliability and uptime',Reduced infrastructure costs
   ',Enhanced security and compliance',Better scalability and performance
   ',Improved team collaboration and productivity'
-    ];: pages.disabled/pages/services/DevOpsCloud.jsx
+    ]: pages.disabled/pages/services/DevOpsCloud.jsx
 
     const benefits = [''
         'Faster software delivery and deployment',Improved system reliability and uptime',Reduced infrastructure costs',Enhanced security and compliance',Better scalability and performance',Improved team collaboration and productivity'
   ,pricing: 'Optimized for each workload';
-    ];
+    ]
     const industries = [';
   ';
         'Financial Services & Banking,Healthcare & Life Sciences,
@@ -684,7 +684,7 @@ export default function DevOpsCloudServices() {}
   ',Media & Entertainment',Manufacturing & Logistics;
   ',Education & Research',Government & Public Sector;
   ',Startups & Scale-ups';
-    ];
+    ]
     const technologies = [';
   ';
         'AWS, Azure, GCP;
@@ -692,14 +692,14 @@ export default function DevOpsCloudServices() {}
   ',Jenkins & GitLab CI',Prometheus & Grafana;
   ',ELK Stack & Splunk',Istio & Linkerd;
   ',Helm & ArgoCD';
-    ];
+    ]
     const benefits = [''
   ';
         'Faster software delivery and deployment;
   ',Improved system reliability and uptime',Reduced infrastructure costs;
   ',Enhanced security and compliance',Better scalability and performance;
   ',Improved team collaboration and productivity';
-    ];: pages.disabled/pages/services/DevOpsCloud.jsx    const useCases = [{'
+    ]: pages.disabled/pages/services/DevOpsCloud.jsx    const useCases = [{'
   ';
             title: 'Microservices Migration,;
             description:,
@@ -736,7 +736,7 @@ export default function DevOpsCloudServices() {}
             implementation:
   '12-20 weeks'
 "
-    ];""
+    ]""
     return (<div className="min-h-screen bg-background">""
       <SEO title="DevOps & Cloud Services - Zion Tech Group" description="Comprehensive DevOps consulting, cloud migration, CI/CD pipelines, and infrastructure automation services for modern software delivery." keywords="DevOps services, cloud migration, CI/CD, Kubernetes, infrastructure as code, cloud consulting, automation" canonical="https://ziontechgroup.com/services/devops-cloud"/>
 
@@ -748,27 +748,27 @@ export default function DevOpsCloudServices() {}
             title: 'Microservices Migration',
             description: 'Legacy monolithic application migration to microservices architecture with container orchestration.',
             roi: '40-60% cost reduction',
-            implementation: '20-32 weeks'
-        },
+            implementation: '20-32 weeks';
+},
         {}
             title: 'Multi-Cloud Strategy',
             description: 'Implementation of multi-cloud architecture for improved resilience and cost optimization.',
             roi: '25-45% cost savings',
-            implementation: '16-24 weeks'
-        },
+            implementation: '16-24 weeks';
+},
         {}
             title: 'DevOps Transformation',
             description: 'Complete organizational DevOps transformation with process optimization and tool implementation.',
             roi: '30-50% efficiency improvement',
-            implementation: '24-36 weeks'
-        },
+            implementation: '24-36 weeks';
+},
         {}
             title: 'Cloud-Native Development',
             description: 'Modern cloud-native application development with CI/CD and infrastructure automation.',
             roi: '35-55% faster delivery',
             implementation: '12-20 weeks'
 
-    ];""
+    ]""
     return (<div className="min-h-screen bg-background">""
       <SEO title="DevOps & Cloud Services - Zion Tech Group" description="Comprehensive DevOps consulting, cloud migration, CI/CD pipelines, and infrastructure automation services for modern software delivery." keywords="DevOps services, cloud migration, CI/CD, Kubernetes, infrastructure as code, cloud consulting, automation" canonical="https://ziontechgroup.com/services/devops-cloud"/>
 
@@ -790,7 +790,7 @@ export default function DevOpsCloudServices() {}
             implementation:;
   '12-20 weeks';
 ';
-    ];
+    ]
     return (<div className='min-h-screen bg-background>''
       <SEO title='DevOps & Cloud Services - Zion Tech Group' description='Comprehensive DevOps consulting, cloud migration, CI/CD pipelines, and infrastructure automation services for modern software delivery.' keywords='DevOps services, cloud migration, CI/CD, Kubernetes, infrastructure as code, cloud consulting, automation' canonical='https://ziontechgroup.com/services/devops-cloud'/>
 '{/* Hero Section */}      <section className='relative bg-gradient-to-br from-orange-900 via-red-900 to-pink-900 text-white py-20>''
@@ -1750,11 +1750,9 @@ export default function DevOpsCloudServices() {}
         </div>
       </section>
 :pages.disabled/pages/services/DevOpsCloud.jsx
-    </div>);'"
-
+    </div>);'";
 }}}}}
-  '"'"
-
+  '"'";
 }}}}}'"'"
     </div>);
 }}}}}'""

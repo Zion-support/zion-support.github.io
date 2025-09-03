@@ -352,10 +352,10 @@ const DigitalTransformation = () => {}
         'Cloud Migration',API Integration',Microservices',DevOps Practices'
       ],
       icon: '🏗️'}
-  ];
+  ]
   const benefits = ['
     'Increased operational efficiency by 50%',Enhanced customer experience and satisfaction',Reduced operational costs and waste',Improved decision-making with real-time data',Competitive advantage in the digital marketplace'
-  ];
+  ]
   const transformationApproach = []
     {}
       step: 'Assessment',
@@ -373,7 +373,7 @@ const DigitalTransformation = () => {}
       step: 'Optimization',
       icon: '📈',
       description: 'Continuous improvement and scaling'}
-  ];
+  ]
   ';
       description: 'Continuous improvement and scaling}]
   return()

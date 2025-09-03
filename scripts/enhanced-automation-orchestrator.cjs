@@ -39,8 +39,8 @@ class EnhancedAutomationOrchestrator {
         cwd: this.projectRoot,
         encoding: 'utf8',
         timeout: 300000, // 5 minutes timeout
-        stdio: 'pipe'
-      });
+        stdio: 'pipe';
+});
       this.log(`✅ Completed: ${description}`, 'SUCCESS');
       this.results[category] = { success: true, output: result, errors: [] };
       return { success: true, output: result };
@@ -58,7 +58,7 @@ class EnhancedAutomationOrchestrator {
       { cmd: 'npm run lint', desc: 'ESLint Check' },
       { cmd: 'npm run lint:fix', desc: 'ESLint Auto-fix' },
       { cmd: 'npm run type-check', desc: 'TypeScript Type Check' }
-    ];
+    ]
 
     for (const { cmd, desc } of lintCommands) {
       await this.runCommand(cmd, desc, 'linting');
@@ -71,7 +71,7 @@ class EnhancedAutomationOrchestrator {
     const testCommands = [
       { cmd: 'npm run test', desc: 'Unit Tests' },
       { cmd: 'npm run test:coverage', desc: 'Test Coverage' }
-    ];
+    ]
 
     for (const { cmd, desc } of testCommands) {
       await this.runCommand(cmd, desc, 'testing');
@@ -84,7 +84,7 @@ class EnhancedAutomationOrchestrator {
     const buildCommands = [
       { cmd: 'npm run build', desc: 'Production Build' },
       { cmd: 'npm run build:analyze', desc: 'Build Analysis' }
-    ];
+    ]
 
     for (const { cmd, desc } of buildCommands) {
       await this.runCommand(cmd, desc, 'building');
@@ -115,7 +115,7 @@ class EnhancedAutomationOrchestrator {
     const securityCommands = [
       { cmd: 'npm audit', desc: 'Security Audit' },
       { cmd: 'npm audit fix', desc: 'Security Fix' }
-    ];
+    ]
 
     for (const { cmd, desc } of securityCommands) {
       await this.runCommand(cmd, desc, 'security');
@@ -130,11 +130,11 @@ class EnhancedAutomationOrchestrator {
       summary: {
         total: Object.keys(this.results).length,
         successful: Object.values(this.results).filter(r => r.success).length,
-        failed: Object.values(this.results).filter(r => !r.success).length
-      },
+        failed: Object.values(this.results).filter(r => !r.success).length;
+},
       results: this.results,
-      recommendations: this.generateRecommendations()
-    };
+      recommendations: this.generateRecommendations();
+};
 
     const reportPath = path.join(this.reportsDir, 'enhanced-automation-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));

@@ -50,8 +50,8 @@ const: Partners: NextPage: = () => {
       benefits: [
   'Joint product development',
   'Shared resources',
-  'Market expansion']
-    },
+  'Market expansion'];
+},
     {
       icon: Award,
       title:,
@@ -60,8 +60,8 @@ const: Partners: NextPage: = () => {
       benefits: [
   'API integrations',
   'Technical support',
-  'Co-marketing opportunities']
-    },
+  'Co-marketing opportunities'];
+},
     {
       icon: Users,
       title:,
@@ -70,8 +70,8 @@ const: Partners: NextPage: = () => {
       benefits: [
   'Revenue sharing',
   'Training programs',
-  'Marketing support']
-    },
+  'Marketing support'];
+},
     {
       icon: Globe,
       title:,
@@ -80,8 +80,8 @@ const: Partners: NextPage: = () => {
       benefits: [,
   Local expertise',
   'Regional support',
-  'Cultural adaptation']
-    }
+  'Cultural adaptation'];
+}
       title: 'Strategic Partners',
       description:
         'Long-term partnerships that drive mutual growth and innovation.',
@@ -114,12 +114,12 @@ const: Partners: NextPage: = () => {
   {
       icon: Handshake,
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
-  ];
+  ]
 
   const currentPartners = [
     {
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
-  ];
+  ]
 
 :pages.disabled_auto/partners.tsx;
       title:,
@@ -316,8 +316,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
   /api/placeholder/200/100',
       description: 'CRM and customer experience solutions,
       category:
-  'Technology Partner'
-    }
+  'Technology Partner';
+}
       category:;
   'Technology Partner'}
       name: 'Microsoft',
@@ -357,26 +357,26 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
 :pages.disabled_auto/partners.tsx
       title:,
   Access to Cutting-Edge Technology',
-      description: 'Leverage the latest innovations and technologies from our partners.
-    },
+      description: 'Leverage the latest innovations and technologies from our partners.;
+},
     {
       icon: Users,
       title:,
   Expanded Market Reach',
-      description: 'Tap into new markets and customer segments through our partner network.
-    },
+      description: 'Tap into new markets and customer segments through our partner network.;
+},
     {
       icon: Award,
       title:,
   Enhanced Credibility',
-      description: 'Build trust with customers through our established partner relationships.
-    },
+      description: 'Build trust with customers through our established partner relationships.;
+},
     {
       icon: CheckCircle,
       title:,
   Comprehensive Support',
-      description: 'Access to expert support and resources from our partner ecosystem.
-    }
+      description: 'Access to expert support and resources from our partner ecosystem.;
+}
       title: 'Access to Cutting-Edge Technology',
       description:
         'Leverage the latest innovations and technologies from our partners.'},
@@ -396,7 +396,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
       description:
         'Access to expert support and resources from our partner ecosystem.'},
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
-  ];
+  ]
 
   return (
     <MainLayout

@@ -79,7 +79,7 @@ export: default function ForumCategories(...args[]: any):  {
         title: 'Digital: transformation case studies,',';
         author: 'BusinessAnalyst,',';
         date: '2024-01-10';
-  ];
+  ]
   return(
     <section: className = 'py-16 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple relative overflow-hidden'>';
       {/* Background: decorative elements *,/}
@@ -210,7 +210,7 @@ export default function ForumCategories(...args[]: any):  {
     e: 'Digital transformation case studies',
         author: 'BusinessAnalyst',
         date: '2024-01-10';
-  ];
+  ]
   return('
     <section className = 'py-16 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple relative overflow-hidden'>
       {/* Background decorative elements */}

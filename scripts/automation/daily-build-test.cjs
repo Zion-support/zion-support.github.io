@@ -49,8 +49,8 @@ async function runDailyBuildTest() {
     } catch (error) {  
       console.log(`'⚠️  Dependency installation failed but continuing...');
       }
-
-    } catch (error) {
+;
+} catch (error) {
       console.log(`⚠️  Dependency installation failed but continuing...`);
     }
 ;
@@ -62,8 +62,8 @@ async function runDailyBuildTest() {
     } catch (error) {  
       console.log('⚠️  Linting failed but continuing...');
       }
-
-    } catch (error) {;
+;
+} catch (error) {;
       console.log('⚠️  Linting failed but continuing...');
     }
 ;
@@ -75,8 +75,8 @@ async function runDailyBuildTest() {
     } catch (error) {  
       console.log('⚠️  Type checking issues found but continuing...');
       }
-
-    } catch (error) {;
+;
+} catch (error) {;
       console.log('⚠️  Type checking issues found but continuing...');
     }
 ;
@@ -88,8 +88,8 @@ async function runDailyBuildTest() {
     } catch (error) {  
       console.log('⚠️  Tests failed but continuing...');
       }
-
-    } catch (error) {;
+;
+} catch (error) {;
       console.log('⚠️  Tests failed but continuing...');
     }
 ;
@@ -102,8 +102,8 @@ async function runDailyBuildTest() {
       console.log('⚠️  Build failed but continuing...');
       return;
       }
-
-    } catch (error) {;
+;
+} catch (error) {;
       console.log('⚠️  Build failed but continuing...');
       return;
     }
@@ -167,8 +167,8 @@ async function runContinuous() {
 }
 
 // Handle graceful shutdown;
-process.on(`SIGINT`, () => {
-    } catch (error) {;
+process.on(`SIGINT`, () => {;
+} catch (error) {;
       console.log('⚠️  Performance tests failed but continuing...');
     }
 ;

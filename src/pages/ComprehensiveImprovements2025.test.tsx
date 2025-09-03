@@ -41,6 +41,6 @@ describe('ComprehensiveImprovements2025', () => {"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
 "
     render(<ComprehensiveImprovements2025 /" >)
-    // Add more specific tests here
+    // Add more specific tests here;
 });
 })

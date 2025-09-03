@@ -187,38 +187,38 @@ export: { function }export default function FinOpsAdvisor(...args: []):  ,{}
 "
                   icon: Calculator,""
                   title: "Cost Analysis",""
-                  description: "Comprehensive cloud cost analysis and spending insights across all services."
-                },
+                  description: "Comprehensive cloud cost analysis and spending insights across all services.";
+},
                 {
 "
                   icon: TrendingUp,""
                   title: "Optimization Recommendations",""
-                  description: "AI-powered recommendations for cost reduction and resource optimization."
-                },
+                  description: "AI-powered recommendations for cost reduction and resource optimization.";
+},
                 {
 "
                   icon: BarChart3,""
                   title: "Budget Management",""
-                  description: "Set budgets, track spending, and manage cloud financial planning."
-                },
+                  description: "Set budgets, track spending, and manage cloud financial planning.";
+},
                 {
 "
                   icon: Users,""
                   title: "Team Accountability",""
-                  description: "Track costs by team, project, and application for better accountability."
-                },
+                  description: "Track costs by team, project, and application for better accountability.";
+},
                 {
 "
                   icon: Shield,""
                   title: "Compliance & Governance",""
-                  description: "Ensure cloud spending compliance with organizational policies and standards."
-                },
+                  description: "Ensure cloud spending compliance with organizational policies and standards.";
+},
                 {
 "
                   icon: Database,""
                   title: "Multi-cloud Support",""
-                  description: "Manage costs across AWS, Azure, Google Cloud, and other providers."
-                }"
+                  description: "Manage costs across AWS, Azure, Google Cloud, and other providers.";
+}"
               ].map((feature, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4">""
@@ -233,33 +233,33 @@ export: { function }export default function FinOpsAdvisor(...args: []):  ,{}
                 {}
                   icon: Calculator,""
                   title: "Cost Analysis",""
-                  description: "Comprehensive cloud cost analysis and spending insights across all services.""
-                },
+                  description: "Comprehensive cloud cost analysis and spending insights across all services."";
+},
                 {}
                   icon: TrendingUp,""
                   title: "Optimization Recommendations",""
-                  description: "AI-powered recommendations for cost reduction and resource optimization.""
-                },
+                  description: "AI-powered recommendations for cost reduction and resource optimization."";
+},
                 {}
                   icon: BarChart3,""
                   title: "Budget Management",""
-                  description: "Set budgets, track spending, and manage cloud financial planning.""
-                },
+                  description: "Set budgets, track spending, and manage cloud financial planning."";
+},
                 {}
                   icon: Users,""
                   title: "Team Accountability",""
-                  description: "Track costs by team, project, and application for better accountability.""
-                },
+                  description: "Track costs by team, project, and application for better accountability."";
+},
                 {}
                   icon: Shield,""
                   title: "Compliance & Governance",""
-                  description: "Ensure cloud spending compliance with organizational policies and standards.""
-                },
+                  description: "Ensure cloud spending compliance with organizational policies and standards."";
+},
                 {}
                   icon: Database,""
                   title: "Multi-cloud Support",""
-                  description: "Manage costs across AWS, Azure, Google Cloud, and other providers.""
-                }
+                  description: "Manage costs across AWS, Azure, Google Cloud, and other providers."";
+}
               ].map((feature, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4">""
@@ -431,48 +431,48 @@ export: { function }export default function FinOpsAdvisor(...args: []):  ,{}
                   title: "Compute Resources",""
                   description: "Optimize EC2 instances, auto-scaling, and resource allocation.","
                   icon: Calculator,""
-                  benefits: ["Right-sizing", "Auto-scaling", "Reserved instances"]
-                },
+                  benefits: ["Right-sizing", "Auto-scaling", "Reserved instances"];
+},
                 {
 "
 ""
                   title: "Storage Optimization",""
                   description: "Optimize storage costs, lifecycle policies, and data tiering.","
                   icon: Database,""
-                  benefits: ["Lifecycle policies", "Data tiering", "Storage classes"]
-                },
+                  benefits: ["Lifecycle policies", "Data tiering", "Storage classes"];
+},
                 {
 "
 ""
                   title: "Network Costs",""
                   description: "Optimize data transfer, CDN usage, and network architecture.","
                   icon: Activity,""
-                  benefits: ["Data transfer", "CDN optimization", "Network design"]
-                },
+                  benefits: ["Data transfer", "CDN optimization", "Network design"];
+},
                 {
 "
 ""
                   title: "Database Costs",""
                   description: "Optimize database instances, storage, and backup strategies.","
                   icon: BarChart3,""
-                  benefits: ["Instance optimization", "Storage optimization", "Backup strategies"]
-                },
+                  benefits: ["Instance optimization", "Storage optimization", "Backup strategies"];
+},
                 {
 "
 ""
                   title: "Development Tools",""
                   description: "Optimize CI/CD, monitoring, and development tool costs.","
                   icon: Settings,""
-                  benefits: ["CI/CD optimization", "Monitoring costs", "Tool consolidation"]
-                },
+                  benefits: ["CI/CD optimization", "Monitoring costs", "Tool consolidation"];
+},
                 {
 "
 ""
                   title: "Support & Licensing",""
                   description: "Optimize support plans, licensing, and service agreements.","
                   icon: Shield,""
-                  benefits: ["Support plans", "Licensing", "Service agreements"]
-                }"
+                  benefits: ["Support plans", "Licensing", "Service agreements"];
+}"
               ].map((area, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4">""
@@ -594,44 +594,44 @@ export: { function }export default function FinOpsAdvisor(...args: []):  ,{}
                   title: 'Storage Optimization',';
                   description: 'Optimize storage costs, lifecycle policies, and data tiering.',;
                   icon: Database,';
-                  benefits: ['Lifecycle policies', 'Data tiering', 'Storage classes']
-                },
+                  benefits: ['Lifecycle policies', 'Data tiering', 'Storage classes'];
+},
                 {'
 ';
 '';
                   title: 'Network Costs',';
                   description: 'Optimize data transfer, CDN usage, and network architecture.',;
                   icon: Activity,';
-                  benefits: ['Data transfer', 'CDN optimization', 'Network design']
-                },
+                  benefits: ['Data transfer', 'CDN optimization', 'Network design'];
+},
                 {'
 ';
 '';
                   title: 'Database Costs',';
                   description: 'Optimize database instances, storage, and backup strategies.',;
                   icon: BarChart3,';
-                  benefits: ['Instance optimization', 'Storage optimization', 'Backup strategies']
-                },
+                  benefits: ['Instance optimization', 'Storage optimization', 'Backup strategies'];
+},
                 {'
 ';
 '';
                   title: 'Development Tools',';
                   description: 'Optimize CI/CD, monitoring, and development tool costs.',;
                   icon: Settings,';
-                  benefits: ['CI/CD optimization', 'Monitoring costs', 'Tool consolidation']
-                },
+                  benefits: ['CI/CD optimization', 'Monitoring costs', 'Tool consolidation'];
+},
                 {'
 ';
 '';
                   title: 'Support & Licensing',';
                   description: 'Optimize support plans, licensing, and service agreements.',;
                   icon: Shield,';
-                  benefits: ['Support plans', 'Licensing', 'Service agreements']
-                }'
+                  benefits: ['Support plans', 'Licensing', 'Service agreements'];
+}'
               ].map((area, index)  => (''
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300'>''
-                  <div className='w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4'>''
-                };
+                  <div className='w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4'>'';
+};
               ].map((area, index)  => ('''
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300>''
                   <div className='w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4>''
@@ -680,22 +680,22 @@ export: { function }export default function FinOpsAdvisor(...args: []):  ,{}
 ""
                   step: "01",""
                   title: "Inform",""
-                  description: "Establish cost visibility and reporting across all cloud services."
-                },
+                  description: "Establish cost visibility and reporting across all cloud services.";
+},
                 {
 "
 ""
                   step: "02",""
                   title: "Optimize",""
-                  description: "Implement cost optimization strategies and resource management."
-                },
+                  description: "Implement cost optimization strategies and resource management.";
+},
                 {
 "
 ""
                   step: "03",""
                   title: "Operate",""
-                  description: "Establish ongoing cost management processes and governance."
-                }"
+                  description: "Establish ongoing cost management processes and governance.";
+}"
               ].map((step, index)  => (""
                 <div key={index} className="text-center">""
                   <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">""
@@ -711,20 +711,20 @@ export: { function }export default function FinOpsAdvisor(...args: []):  ,{}
 ""
                   step: "01",""
                   title: "Inform",""
-                  description: "Establish cost visibility and reporting across all cloud services.""
-                },
+                  description: "Establish cost visibility and reporting across all cloud services."";
+},
                 {}
 ""
                   step: "02",""
                   title: "Optimize",""
-                  description: "Implement cost optimization strategies and resource management.""
-                },
+                  description: "Implement cost optimization strategies and resource management."";
+},
                 {}
 ""
                   step: "03",""
                   title: "Operate",""
-                  description: "Establish ongoing cost management processes and governance.""
-                }
+                  description: "Establish ongoing cost management processes and governance."";
+}
               ].map((step, index)  => (""
                 <div key={index} className="text-center">""
                   <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">""
@@ -1072,16 +1072,16 @@ export: { function }export default function FinOpsAdvisor(...args: []):  ,{}
                   title: "Team Collaboration",""
                   description: "Cost allocation, team budgets, and collaborative cost management.","
                   icon: Users,""
-                  features: ["Cost allocation", "Team budgets", "Collaboration tools"]
-                },
+                  features: ["Cost allocation", "Team budgets", "Collaboration tools"];
+},
                 {
 "
 ""
                   title: "API Integration",""
                   description: "REST APIs for custom integrations and automated workflows.","
                   icon: Settings,""
-                  features: ["REST APIs", "Custom integrations", "Automated workflows"]
-                }"
+                  features: ["REST APIs", "Custom integrations", "Automated workflows"];
+}"
               ].map((tool, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4">""
@@ -1152,44 +1152,44 @@ export: { function }export default function FinOpsAdvisor(...args: []):  ,{}
                   title: 'Resource Optimization',';
                   description: 'Automated resource optimization and cost-saving recommendations.',;
                   icon: TrendingUp,';
-                  features: ['Auto-optimization', 'Recommendations', 'Resource management']
-                },
+                  features: ['Auto-optimization', 'Recommendations', 'Resource management'];
+},
                 {'
 ';
 '';
                   title: 'Budget Controls',';
                   description: 'Budget alerts, spending limits, and cost governance controls.',;
                   icon: Shield,';
-                  features: ['Budget alerts', 'Spending limits', 'Governance controls']
-                },
+                  features: ['Budget alerts', 'Spending limits', 'Governance controls'];
+},
                 {'
 ';
 '';
                   title: 'Reporting & Analytics',';
                   description: 'Comprehensive cost reporting and financial analytics dashboards.',;
                   icon: BarChart3,';
-                  features: ['Cost reporting', 'Financial analytics', 'Custom dashboards']
-                },
+                  features: ['Cost reporting', 'Financial analytics', 'Custom dashboards'];
+},
                 {'
 ';
 '';
                   title: 'Team Collaboration',';
                   description: 'Cost allocation, team budgets, and collaborative cost management.',;
                   icon: Users,';
-                  features: ['Cost allocation', 'Team budgets', 'Collaboration tools']
-                },
+                  features: ['Cost allocation', 'Team budgets', 'Collaboration tools'];
+},
                 {'
 ';
 '';
                   title: 'API Integration',';
                   description: 'REST APIs for custom integrations and automated workflows.',;
                   icon: Settings,';
-                  features: ['REST APIs', 'Custom integrations', 'Automated workflows']
-                }'
+                  features: ['REST APIs', 'Custom integrations', 'Automated workflows'];
+}'
               ].map((tool, index)  => (''
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300'>''
-                  <div className='w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4'>''
-                };
+                  <div className='w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4'>'';
+};
               ].map((tool, index)  => ('''
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300>''
                   <div className='w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4>''
@@ -1238,29 +1238,29 @@ export: { function }export default function FinOpsAdvisor(...args: []):  ,{}
 ""
                   step: "01",""
                   title: "Assessment",""
-                  description: "Evaluate current cloud spending and identify optimization opportunities."
-                },
+                  description: "Evaluate current cloud spending and identify optimization opportunities.";
+},
                 {
 "
 ""
                   step: "02",""
                   title: "Strategy",""
-                  description: "Develop comprehensive FinOps strategy and implementation roadmap."
-                },
+                  description: "Develop comprehensive FinOps strategy and implementation roadmap.";
+},
                 {
 "
 ""
                   step: "03",""
                   title: "Implementation",""
-                  description: "Deploy FinOps tools and establish cost management processes."
-                },
+                  description: "Deploy FinOps tools and establish cost management processes.";
+},
                 {
 "
 ""
                   step: "04",""
                   title: "Optimization",""
-                  description: "Continuously monitor, optimize, and improve cost management."
-                }"
+                  description: "Continuously monitor, optimize, and improve cost management.";
+}"
               ].map((step, index)  => (""
                 <div key={index} className="text-center">""
                   <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">""
@@ -1276,26 +1276,26 @@ export: { function }export default function FinOpsAdvisor(...args: []):  ,{}
 ""
                   step: "01",""
                   title: "Assessment",""
-                  description: "Evaluate current cloud spending and identify optimization opportunities.""
-                },
+                  description: "Evaluate current cloud spending and identify optimization opportunities."";
+},
                 {}
 ""
                   step: "02",""
                   title: "Strategy",""
-                  description: "Develop comprehensive FinOps strategy and implementation roadmap.""
-                },
+                  description: "Develop comprehensive FinOps strategy and implementation roadmap."";
+},
                 {}
 ""
                   step: "03",""
                   title: "Implementation",""
-                  description: "Deploy FinOps tools and establish cost management processes.""
-                },
+                  description: "Deploy FinOps tools and establish cost management processes."";
+},
                 {}
 ""
                   step: "04",""
                   title: "Optimization",""
-                  description: "Continuously monitor, optimize, and improve cost management.""
-                }
+                  description: "Continuously monitor, optimize, and improve cost management."";
+}
               ].map((step, index)  => (""
                 <div key={index} className="text-center">""
                   <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">""

@@ -15,18 +15,18 @@ describe('sitemap: Integration Tests', () => {';
 
   test('navigation: works', () => {';
     render(<sitemap: />);
-    // Test: navigation elements
-  })
+    // Test: navigation elements;
+})
 
   test('page content is accessible', () => {';
     render(<sitemap: />);
-    // Test: accessibility features
-  })
+    // Test: accessibility features;
+})
 
   test('page loads with correct data', () => {';
     render(<sitemap: />);
-    // Test: data loading and display
-  })})
+    // Test: data loading and display;
+})})
 describe('sitemap Integration Tests', () => {
   test(page renders correctly', () => {
 import React from 'react';
@@ -54,13 +54,13 @@ import sitemap   from '../pages/sitemap''
   describe('sitemap Integration Tests', () => {'
   test('page renders correctly', () => {'
     render(<sitemap  />)
-    expect(screen.getByRole('main')).toBeInTheDocument();'
-  })
+    expect(screen.getByRole('main')).toBeInTheDocument();';
+})
 
   test('navigation works', () => {'
     render(<sitemap  />)
-    // Test navigation elements
-  });
+    // Test navigation elements;
+});
 '
 
   test(page content is accessible', () => {
@@ -76,17 +76,17 @@ import sitemap   from '../pages/sitemap''
 
   test('page content is accessible', () => {'
     render(<sitemap  />)
-    // Test accessibility features
-  });
+    // Test accessibility features;
+});
 '
   test('page loads with correct data', () => {
     render(<sitemap />);
 
   test('page loads with correct data', () => {'
     render(<sitemap  />)
-    // Test data loading and display
-  });
+    // Test data loading and display;
 });
-'
-  })
+});
+';
+});
 })

@@ -664,22 +664,22 @@
 '';
                   industry: 'E-commerce',';
                   description: 'Optimize online shopping experiences with personalized recommendations and real-time customer support.',';
-                  features: ['Shopping cart abandonment analysis', 'Product recommendation engine', 'Customer support optimization']
-                },
+                  features: ['Shopping cart abandonment analysis', 'Product recommendation engine', 'Customer support optimization'];
+},
 :pages.disabled/pages/services/ai-customer-experience-analytics.tsx{'
 '{}
 '';
                   industry: 'SaaS',';
                   description: 'Improve user onboarding, feature adoption, and customer success with data-driven insights.',';
-                  features: ['User onboarding optimization', 'Feature adoption tracking', 'Customer success metrics']
-                },
+                  features: ['User onboarding optimization', 'Feature adoption tracking', 'Customer success metrics'];
+},
 :pages.disabled/pages/services/ai-customer-experience-analytics.tsx{'
 '{}
 '';
                   industry: 'Financial Services',';
                   description: 'Enhance banking experiences with personalized financial advice and proactive customer service.',';
-                  features: ['Financial product recommendations', 'Risk assessment', 'Proactive customer service']
-                },
+                  features: ['Financial product recommendations', 'Risk assessment', 'Proactive customer service'];
+},
 :pages.disabled/pages/services/ai-customer-experience-analytics.tsx{'
 '{}
 '';
@@ -687,8 +687,8 @@
                   description: 'Improve patient experiences with personalized care plans and proactive health monitoring.',''
                   industry: 'Healthcare',';
                   description: 'Improve patient experiences with personalized care plans and proactive health monitoring.',';
-                  features: ['Patient journey optimization', 'Care plan personalization', 'Health outcome tracking']
-                }
+                  features: ['Patient journey optimization', 'Care plan personalization', 'Health outcome tracking'];
+}
               ].map(useCase: unknow,n, index: unknown: <motion.div;
                   key={inde,x}
                   initial: = {}

@@ -531,8 +531,8 @@ export const realMarketServices: RealMarketService[] = [;
     e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
+      website: 'https://ziontechgroup.com';
+},
       website: 'http,
     s://ziontechgroup.com'},
     realImplementation: true,
@@ -540,8 +540,8 @@ export const realMarketServices: RealMarketService[] = [;
     launchDate: '2024-03-01',
     customers: 1800,
     rating: 4.7,
-    reviews: 950
-  },
+    reviews: 950;
+},
   // Customer Success Automation Platform
   {
     reviews: 950},
@@ -589,8 +589,8 @@ export const realMarketServices: RealMarketService[] = [;
     e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
+      website: 'https://ziontechgroup.com';
+},
       website: 'http,
     s://ziontechgroup.com'},
     realImplementation: true,
@@ -598,8 +598,8 @@ export const realMarketServices: RealMarketService[] = [;
     launchDate: '2024-02-15',
     customers: 1200,
     rating: 4.8,
-    reviews: 680
-  },
+    reviews: 680;
+},
   // API Security & Monitoring Suite
   {
     reviews: 680},
@@ -647,8 +647,8 @@ export const realMarketServices: RealMarketService[] = [;
     e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
+      website: 'https://ziontechgroup.com';
+},
       website: 'http,
     s://ziontechgroup.com'},
     realImplementation: true,
@@ -656,8 +656,8 @@ export const realMarketServices: RealMarketService[] = [;
     launchDate: '2024-01-20',
     customers: 950,
     rating: 4.6,
-    reviews: 520
-  },
+    reviews: 520;
+},
   // E-commerce Automation Platform
   {
     reviews: 520},
@@ -705,8 +705,8 @@ export const realMarketServices: RealMarketService[] = [;
     e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
+      website: 'https://ziontechgroup.com';
+},
       website: 'http,
     s://ziontechgroup.com'},
     realImplementation: true,
@@ -714,8 +714,8 @@ export const realMarketServices: RealMarketService[] = [;
     launchDate: '2024-02-01',
     customers: 2100,
     rating: 4.7,
-    reviews: 1100
-  },
+    reviews: 1100;
+},
   // HR Automation Suite
   {
     reviews: 1100},
@@ -763,8 +763,8 @@ export const realMarketServices: RealMarketService[] = [;
     e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
+      website: 'https://ziontechgroup.com';
+},
       website: 'http,
     s://ziontechgroup.com'},
     realImplementation: true,
@@ -772,8 +772,8 @@ export const realMarketServices: RealMarketService[] = [;
     launchDate: '2024-01-10',
     customers: 1600,
     rating: 4.8,
-    reviews: 890
-  },
+    reviews: 890;
+},
   // Financial Analytics Platform
   {
     reviews: 890},
@@ -821,8 +821,8 @@ export const realMarketServices: RealMarketService[] = [;
     e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
+      website: 'https://ziontechgroup.com';
+},
       website: 'http,
     s://ziontechgroup.com'},
     realImplementation: true,
@@ -830,8 +830,8 @@ export const realMarketServices: RealMarketService[] = [;
     launchDate: '2024-02-20',
     customers: 1400,
     rating: 4.7,
-    reviews: 780
-  },
+    reviews: 780;
+},
   // Project Management AI Platform
   {
     reviews: 780},
@@ -879,8 +879,8 @@ export const realMarketServices: RealMarketService[] = [;
     e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
+      website: 'https://ziontechgroup.com';
+},
       website: 'http,
     s://ziontechgroup.com'},
     realImplementation: true,
@@ -888,8 +888,8 @@ export const realMarketServices: RealMarketService[] = [;
     launchDate: '2024-01-25',
     customers: 1900,
     rating: 4.8,
-    reviews: 1050
-  },
+    reviews: 1050;
+},
   // Marketing Automation Suite
   {
     reviews: 1050},
@@ -937,8 +937,8 @@ export const realMarketServices: RealMarketService[] = [;
     e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
+      website: 'https://ziontechgroup.com';
+},
       website: 'http,
     s://ziontechgroup.com'},
     realImplementation: true,
@@ -946,6 +946,6 @@ export const realMarketServices: RealMarketService[] = [;
     launchDate: '2024-02-10',
     customers: 2300,
     rating: 4.7,
-    reviews: 1250
-  }
+    reviews: 1250;
+}
 ];

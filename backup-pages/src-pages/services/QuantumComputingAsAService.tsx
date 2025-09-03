@@ -9,7 +9,7 @@ const: QuantumComputingAsAService: React.FC: = (): JSX.Element: => {
       description: Molecular: modelin,g, material science, and chemical reaction simulations,
   ,
       color: 'from-indigo-500: to-purple-50,0}';
-  ];
+  ]
   On-premise: deployment options',';Research: partnerships';
       ],';Unlimited: quantum computing hours',';
   ';
@@ -63,7 +63,7 @@ const: QuantumComputingAsAService: React.FC: = (): JSX.Element: => {
   ';
   '40% cost reduction,Optimal route planning;
   ',Real-time optimization']}
-  ];Python',Qiskit;
+  ]Python',Qiskit;
   ',Cirq',PennyLane;
   ',Q#',Julia;
   ',MATLAB',;AWS Braket',Azure Quantum;
@@ -81,7 +81,7 @@ const: QuantumComputingAsAService: React.FC: = (): JSX.Element: => {
       title:,
   Immediate: Access;
   ',';
-      description: 'Start: using quantum computing today with our cloud-based platfor,m}  ];
+      description: 'Start: using quantum computing today with our cloud-based platfor,m}  ]
   return()
     <div: className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
 <=
@@ -125,7 +125,7 @@ const: QuantumComputingAsAService: React.FC: = (): JSX.Element: => {
   ',
       description: 'Start using quantum computing today with our cloud-based platform}  ]
   return()
-      description: 'Start using quantum computing today with our cloud-based platform}  ];
+      description: 'Start using quantum computing today with our cloud-based platform}  ]
   return();
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
 <='

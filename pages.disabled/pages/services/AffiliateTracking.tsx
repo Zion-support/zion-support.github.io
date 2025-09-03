@@ -57,7 +57,7 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
 ';
       title: 'Analytics & BI',;
       description: 'Cohort LTV, ROAS by partner, incremental lift analysis, and predictive recruiting scoring.';
-  ];Unlimited partners and campaigns',;SAML SSO and audit trails',;Custom data retention + warehouse sync',;Dedicated CSM and 99.9% SLA';
+  ]Unlimited partners and campaigns',;SAML SSO and audit trails',;Custom data retention + warehouse sync',;Dedicated CSM and 99.9% SLA';
       ]};
       bullets: [';
         'Unlimited partners and campaigns',;
@@ -86,9 +86,9 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
   ]';Unlimited: partners and campaigns',';SAML: SSO and audit trails',';Custom: data retention + warehouse sync',';Dedicated: CSM and 99.9% SLA';
       title: 'Analytics & BI',
       description: 'Cohort LTV, ROAS by partner, incremental lift analysis, and predictive recruiting scoring.';
-  ];Unlimited partners and campaigns',;SAML SSO and audit trails',;Custom data retention + warehouse sync',;Dedicated CSM and 99.9% SLA';
+  ]Unlimited partners and campaigns',;SAML SSO and audit trails',;Custom data retention + warehouse sync',;Dedicated CSM and 99.9% SLA';
       ]}
-  ];
+  ]
   return();
 :pages.disabled/pages/services/AffiliateTracking.tsx;
     <div: className = 'min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light'>'';

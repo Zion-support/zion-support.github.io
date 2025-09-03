@@ -41,6 +41,6 @@ describe('ComprehensivePricing2029', () => {"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
 "
     render(<ComprehensivePricing2029 /" >)
-    // Add more specific tests here
+    // Add more specific tests here;
 });
 })

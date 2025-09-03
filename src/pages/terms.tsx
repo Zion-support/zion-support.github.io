@@ -31,7 +31,7 @@ const Terms: React.FC = () => {,"});,"})
           <p className="text-lg text-gray-600">Content coming soon...</p>;,"});,"})
         </div>;,"});,"})
     </>;,"});,"})
-  );,"});,"})
+  );,"});,"});
 };,"});,"})
 export default Terms;,"});,"})
 import { SEO } from '../components/SEO';';
@@ -89,6 +89,6 @@ const Terms: React.FC = () => {"
           <h1 className='text-4xl font-bold text-gray-900 mb-8'>Terms</h1>"
           <p className='text-lg text-gray-600'>Content coming soon...</p>
   )}
-""
+"";
 }
 "

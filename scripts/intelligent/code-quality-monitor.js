@@ -54,8 +54,8 @@ class SmartCodeQualityMonitor {
         timestamp: new Date().toISOString(),
         qualityHistory: this.qualityHistory,
         totalChecks: this.qualityHistory.length,
-        lastRun: Date.now()
-      };
+        lastRun: Date.now();
+};
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
     } catch (error) {
       this.log(`Failed to save quality history: ${error.message}`, 'error');
@@ -72,8 +72,8 @@ class SmartCodeQualityMonitor {
       complexity: await this.analyzeComplexity(),
       maintainability: await this.analyzeMaintainability(),
       security: await this.analyzeSecurity(),
-      performance: await this.analyzePerformance()
-    };
+      performance: await this.analyzePerformance();
+};
 
     this.log(`Code Quality Analysis Results:`);
     this.log(`  - Linting Issues: ${analysis.linting.issues.length}`);
@@ -94,8 +94,8 @@ class SmartCodeQualityMonitor {
       const output = execSync('npm run lint -- --format=json', { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
-        stdio: 'pipe' 
-      });
+        stdio: 'pipe' ;
+});
       
       const results = JSON.parse(output);
       const issues = [];
@@ -108,8 +108,8 @@ class SmartCodeQualityMonitor {
             column: message.column,
             severity: message.severity,
             rule: message.ruleId,
-            message: message.message
-          });
+            message: message.message;
+});
         });
       });
       
@@ -117,8 +117,8 @@ class SmartCodeQualityMonitor {
         issues,
         totalFiles: results.length,
         errorCount: issues.filter(i => i.severity === 2).length,
-        warningCount: issues.filter(i => i.severity === 1).length
-      };
+        warningCount: issues.filter(i => i.severity === 1).length;
+};
     } catch (error) {
       // ESLint returns non-zero exit code when issues are found
       if (error.stdout) {
@@ -134,8 +134,8 @@ class SmartCodeQualityMonitor {
                 column: message.column,
                 severity: message.severity,
                 rule: message.ruleId,
-                message: message.message
-              });
+                message: message.message;
+});
             });
           });
           
@@ -143,8 +143,8 @@ class SmartCodeQualityMonitor {
             issues,
             totalFiles: results.length,
             errorCount: issues.filter(i => i.severity === 2).length,
-            warningCount: issues.filter(i => i.severity === 1).length
-          };
+            warningCount: issues.filter(i => i.severity === 1).length;
+};
         } catch (parseError) {
           this.log(`Failed to parse linting results: ${parseError.message}`, 'warn');
           return { issues: [], totalFiles: 0, errorCount: 0, warningCount: 0 };
@@ -161,13 +161,13 @@ class SmartCodeQualityMonitor {
       const output = execSync('npm run type-check', { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
-        stdio: 'pipe' 
-      });
+        stdio: 'pipe' ;
+});
       
       return {
         errors: [],
-        success: true
-      };
+        success: true;
+};
     } catch (error) {
       // TypeScript returns non-zero exit code when errors are found
       const errors = [];
@@ -183,16 +183,16 @@ class SmartCodeQualityMonitor {
               line: parseInt(match[1]),
               column: parseInt(match[2]),
               code: match[3],
-              message: match[4]
-            });
+              message: match[4];
+});
           }
         }
       });
       
       return {
         errors,
-        success: false
-      };
+        success: false;
+};
     }
   }
 
@@ -203,8 +203,8 @@ class SmartCodeQualityMonitor {
       const output = execSync('npm run test:coverage', { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
-        stdio: 'pipe' 
-      });
+        stdio: 'pipe' ;
+});
       
       // Parse coverage from output
       const coverageMatch = output.match(/All files\s+\|\s+(\d+\.\d+)/);
@@ -212,14 +212,14 @@ class SmartCodeQualityMonitor {
       
       return {
         coverage,
-        success: true
-      };
+        success: true;
+};
     } catch (error) {
       this.log(`Test coverage analysis failed: ${error.message}`, 'warn');
       return {
         coverage: 0,
-        success: false
-      };
+        success: false;
+};
     }
   }
 
@@ -242,8 +242,8 @@ class SmartCodeQualityMonitor {
       return {
         score: averageComplexity.toFixed(2),
         totalFiles: fileCount,
-        highComplexityFiles: files.filter(f => this.calculateFileComplexity(f) > 10).length
-      };
+        highComplexityFiles: files.filter(f => this.calculateFileComplexity(f) > 10).length;
+};
     } catch (error) {
       this.log(`Complexity analysis failed: ${error.message}`, 'warn');
       return { score: 0, totalFiles: 0, highComplexityFiles: 0 };
@@ -269,8 +269,8 @@ class SmartCodeQualityMonitor {
           }
         }
       } catch (error) {
-        // Skip directories we can't read
-      }
+        // Skip directories we can't read;
+}
     };
     
     scanDirectory(this.projectRoot);
@@ -296,7 +296,7 @@ class SmartCodeQualityMonitor {
         /&&/g,
         /\|\|/g,
         /\?/g
-      ];
+      ]
       
       complexityPatterns.forEach(pattern => {
         const matches = content.match(pattern);
@@ -330,8 +330,8 @@ class SmartCodeQualityMonitor {
       return {
         index: averageMaintainability.toFixed(2),
         totalFiles: fileCount,
-        lowMaintainabilityFiles: files.filter(f => this.calculateMaintainabilityIndex(f) < 50).length
-      };
+        lowMaintainabilityFiles: files.filter(f => this.calculateMaintainabilityIndex(f) < 50).length;
+};
     } catch (error) {
       this.log(`Maintainability analysis failed: ${error.message}`, 'warn');
       return { index: 0, totalFiles: 0, lowMaintainabilityFiles: 0 };
@@ -388,8 +388,8 @@ class SmartCodeQualityMonitor {
         issues,
         totalFiles: files.length,
         criticalIssues: issues.filter(i => i.severity === 'critical').length,
-        highIssues: issues.filter(i => i.severity === 'high').length
-      };
+        highIssues: issues.filter(i => i.severity === 'high').length;
+};
     } catch (error) {
       this.log(`Security analysis failed: ${error.message}`, 'warn');
       return { issues: [], totalFiles: 0, criticalIssues: 0, highIssues: 0 };
@@ -410,7 +410,7 @@ class SmartCodeQualityMonitor {
         { pattern: /sessionStorage\.setItem/, severity: 'medium', message: 'Sensitive data in sessionStorage' },
         { pattern: /password.*=.*['"]/, severity: 'high', message: 'Hardcoded password detected' },
         { pattern: /api[Kk]ey.*=.*['"]/, severity: 'high', message: 'Hardcoded API key detected' }
-      ];
+      ]
       
       lines.forEach((line, index) => {
         securityPatterns.forEach(({ pattern, severity, message }) => {
@@ -420,8 +420,8 @@ class SmartCodeQualityMonitor {
               line: index + 1,
               severity,
               message,
-              code: line.trim()
-            });
+              code: line.trim();
+});
           }
         });
       });
@@ -448,8 +448,8 @@ class SmartCodeQualityMonitor {
         issues,
         totalFiles: files.length,
         criticalIssues: issues.filter(i => i.severity === 'critical').length,
-        highIssues: issues.filter(i => i.severity === 'high').length
-      };
+        highIssues: issues.filter(i => i.severity === 'high').length;
+};
     } catch (error) {
       this.log(`Performance analysis failed: ${error.message}`, 'warn');
       return { issues: [], totalFiles: 0, criticalIssues: 0, highIssues: 0 };
@@ -468,7 +468,7 @@ class SmartCodeQualityMonitor {
         { pattern: /console\.log/, severity: 'low', message: 'Remove console.log in production' },
         { pattern: /\.innerHTML\s*\+/, severity: 'high', message: 'Use DocumentFragment for multiple DOM updates' },
         { pattern: /document\.getElementById.*for/, severity: 'medium', message: 'Cache DOM elements in loops' }
-      ];
+      ]
       
       lines.forEach((line, index) => {
         performancePatterns.forEach(({ pattern, severity, message }) => {
@@ -478,8 +478,8 @@ class SmartCodeQualityMonitor {
               line: index + 1,
               severity,
               message,
-              code: line.trim()
-            });
+              code: line.trim();
+});
           }
         });
       });
@@ -502,8 +502,8 @@ class SmartCodeQualityMonitor {
         execSync('npm run lint:fix', { 
           cwd: this.projectRoot, 
           stdio: 'pipe',
-          timeout: 60000 
-        });
+          timeout: 60000 ;
+});
         fixes.push({ type: 'linting', success: true, count: analysis.linting.issues.length });
         this.log('✅ Linting issues fixed');
       } catch (error) {
@@ -518,8 +518,8 @@ class SmartCodeQualityMonitor {
       execSync('npm run format', { 
         cwd: this.projectRoot, 
         stdio: 'pipe',
-        timeout: 60000 
-      });
+        timeout: 60000 ;
+});
       fixes.push({ type: 'formatting', success: true });
       this.log('✅ Formatting issues fixed');
     } catch (error) {
@@ -552,10 +552,10 @@ class SmartCodeQualityMonitor {
         complexityScore: analysis.complexity.score,
         maintainabilityIndex: analysis.maintainability.index,
         securityIssues: analysis.security.issues.length,
-        performanceIssues: analysis.performance.issues.length
-      },
-      recommendations: this.generateQualityRecommendations(analysis)
-    };
+        performanceIssues: analysis.performance.issues.length;
+},
+      recommendations: this.generateQualityRecommendations(analysis);
+};
 
     const reportFile = path.join(this.projectRoot, 'logs/smart-code-quality-monitor-intelligence.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
@@ -627,8 +627,8 @@ class SmartCodeQualityMonitor {
       this.qualityHistory.push({
         timestamp: new Date().toISOString(),
         report: report,
-        qualityScore: report.qualityScore
-      });
+        qualityScore: report.qualityScore;
+});
       
       this.saveQualityHistory();
 
@@ -640,8 +640,8 @@ class SmartCodeQualityMonitor {
       this.log(`   - Security Issues: ${report.summary.securityIssues}`);
       this.log(`   - Performance Issues: ${report.summary.performanceIssues}`);
       this.log(`   - Auto-fixes Applied: ${report.fixes.filter(f => f.success).length}`);
-
-    } catch (error) {
+;
+} catch (error) {
       this.log(`❌ Code Quality Monitor failed: ${error.message}`, 'error');
       throw error;
     }

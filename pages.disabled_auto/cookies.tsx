@@ -34,7 +34,7 @@ import: {
   Database,
   CheckCircle} from 'lucide-react';
 
-const Cookies: NextPage = () => {
+const Cookies: NextPage = () => {;
 } from 'lucide-react';
 const: Cookies: NextPage: = () => {
   const cookieTypes = [
@@ -45,7 +45,7 @@ const: Cookies: NextPage: = () => {
   {
       icon: Cookie,
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/cookies.tsx
-  ];
+  ]
 
 :pages.disabled_auto/cookies.tsx;
       title:,
@@ -129,8 +129,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/cookies.tsx
       examples: ['
   'Ad targeting',
   'Campaign tracking',
-  'Conversion measurement']
-    }
+  'Conversion measurement'];
+}
   'Conversion measurement']}
       examples: [
   'Ad targeting,Campaign tracking,Conversion measurement']}
@@ -164,20 +164,20 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/cookies.tsx
 :pages.disabled_auto/cookies.tsx
       title:,
   Cookie Consent',
-      description: 'We obtain your consent before setting non-essential cookies.
-    },
+      description: 'We obtain your consent before setting non-essential cookies.;
+},
     {
       icon: Settings,
       title:,
   Cookie Management',
-      description: 'You can manage your cookie preferences at any time.
-    },
+      description: 'You can manage your cookie preferences at any time.;
+},
     {
       icon: CheckCircle,
       title:,
   Transparency',
-      description: 'We provide clear information about the cookies we use.
-    }
+      description: 'We provide clear information about the cookies we use.;
+}
       title: 'Cookie Consent',
       description:
         'We obtain your consent before setting non-essential cookies.'},
@@ -190,7 +190,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/cookies.tsx
       title: 'Transparency',
       description: 'We provide clear information about the cookies we use.'},
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/cookies.tsx
-  ];
+  ]
 
   return (
     <MainLayout

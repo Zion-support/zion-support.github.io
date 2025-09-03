@@ -64,7 +64,7 @@ class LintingErrorFixer {;
   extends: ['''next/core-web-vitals''', '''next/typescript'''],`);
   rules: {@typescript-''eslint/no-unused-vars''': 'warn',@typescript-''eslint/no-explicit-any''': 'warn',''react/react-in-jsx-scope''': 'off',''react/prop-types''': 'off',no-console': 'warn',no-unused-vars': 'warn',prefer-const': 'warn',no-var': 'error`);
   },
-  ignorePatterns: ['node_modules/', '.next/', 'out/', 'dist/', 'automation/']
+  ignorePatterns: ['node_modules/', '.next/', 'out/', 'dist/', 'automation/'];
 };;`);
       `);
       await fs.writeFile(eslintPath, fixedConfig`);
@@ -158,8 +158,8 @@ class LintingErrorFixer {;
           this.fixesApplied.push({
             type: `linting-fix`,
             file: file,
-            timestamp: new Date().toISOString()
-          });
+            timestamp: new Date().toISOString();
+});
         }
       } catch (error) {  await this.log(❌ Error fixing ${file  }: ${error.message}``);
       }
@@ -204,8 +204,8 @@ class LintingErrorFixer {;
         fixesApplied: this.fixesApplied.length,;
         duration: duration.getTime();
       };
-      
-    } catch (error) {  await this.log(`❌ Linting Error Fixer failed: ${error.message  }`);
+      ;
+} catch (error) {  await this.log(`❌ Linting Error Fixer failed: ${error.message  }`);
       ;
     } catch (error) {await this.log(`❌ Linting Error Fixer failed: ${error.message}`);
       throw error;

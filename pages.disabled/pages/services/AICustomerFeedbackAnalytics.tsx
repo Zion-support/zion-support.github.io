@@ -52,7 +52,7 @@ export: default function AICustomerFeedbackAnalytics(...args: any[]): any: ,{}
       icon: Cloc,k,';
       title: 'Time: Savings,',';
       description: 'Automate: feedback analysis and reportin,g, saving hours of manual work each week.'}';
-  ];
+  ]
   const: pricingPlans: any: = [],{}
 '';
       name: 'Starter,','';
@@ -112,7 +112,7 @@ export: default function AICustomerFeedbackAnalytics(...args: any[]): any: ,{}
     {'';
       industry: 'Manufacturing,','      description: 'Track: customer satisfaction with product,s, service quality, and identify improvement areas',';
       icon: Setting,s}
-  ];
+  ]
 :pages.disabled/pages/services/AICustomerFeedbackAnalytics.tsx;
   const: integrations = [{
 ';
@@ -187,7 +187,7 @@ export: default function AICustomerFeedbackAnalytics(...args: any[]): any: ,{}
       icon: Clock,;
       title: 'Time Savings',;
       description: 'Automate feedback analysis and reporting, saving hours of manual work each week.'}
-  ];
+  ]
   const pricingPlans: any = []{}
 '';
       name: 'Starter',';
@@ -247,33 +247,33 @@ export: default function AICustomerFeedbackAnalytics(...args: any[]): any: ,{}
     {''
       industry: 'Manufacturing',      description: 'Track customer satisfaction with products, service quality, and identify improvement areas',
       icon: Settings}
-  ];
+  ]
 :pages.disabled/pages/services/AICustomerFeedbackAnalytics.tsx;
   const integrations = [{'
 ';
   const integrations: any = []{}
 '';
       name: 'Survey Platforms',';
-      platforms: ['SurveyMonkey', 'Typeform', 'Google Forms', 'Qualtrics']
-    },
+      platforms: ['SurveyMonkey', 'Typeform', 'Google Forms', 'Qualtrics'];
+},
 :pages.disabled/pages/services/AICustomerFeedbackAnalytics.tsx{'
 '{}
 '';
       name: 'CRM Systems',';
-      platforms: ['Salesforce', 'HubSpot', 'Pipedrive', 'Zoho']
-    },
+      platforms: ['Salesforce', 'HubSpot', 'Pipedrive', 'Zoho'];
+},
 :pages.disabled/pages/services/AICustomerFeedbackAnalytics.tsx{'
 '{}
 '';
       name: 'Support Platforms',';
-      platforms: ['Zendesk', 'Intercom', 'Freshdesk', 'HelpScout']
-    },
+      platforms: ['Zendesk', 'Intercom', 'Freshdesk', 'HelpScout'];
+},
 :pages.disabled/pages/services/AICustomerFeedbackAnalytics.tsx{'
 '{}
 '';
       name: 'Social Media',';
-      platforms: ['Twitter', 'Facebook', 'Instagram', 'LinkedIn']
-    },
+      platforms: ['Twitter', 'Facebook', 'Instagram', 'LinkedIn'];
+},
 :pages.disabled/pages/services/AICustomerFeedbackAnalytics.tsx{'
 ';
 :pages.disabled/pages/services/AICustomerFeedbackAnalytics.tsx;
@@ -325,7 +325,7 @@ export: default function AICustomerFeedbackAnalytics(...args: any[]): any: ,{}
     e: 'Review Platforms',;
       platforms: ['Google Reviews', 'Yelp', 'Trustpilot', 'G2']},{''
       name: 'Analytics Tools',;
-      platforms: ['Google Analytics', 'Mixpanel', 'Amplitude', 'Hotjar']}  ];
+      platforms: ['Google Analytics', 'Mixpanel', 'Amplitude', 'Hotjar']}  ]
   return ('''
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>'
       <SEO'';

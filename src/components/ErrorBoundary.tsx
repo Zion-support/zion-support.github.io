@@ -3,13 +3,13 @@ import React { Component, ErrorInfo, ReactNode } from 'react';
 import React { Component, ErrorInfo, ReactNode } from 'react';,"});,"})
 ;,"});,"})
 interface Props { children: ReactNode;,"});,"})
-  fallback?: ReactNode;,"});,"})
- }"});,"})
+  fallback?: ReactNode;,"});,"});
+}"});,"})
 interface State { hasError: boolean;,"});,"})
   error?: Error;,"});,"})
 export class ErrorBoundary extends Component<Props, State> {,"});,"})
-  public state: State = { hasError: false;,"});,"})
-   };,"});,"})
+  public state: State = { hasError: false;,"});,"});
+};,"});,"})
   public static getDerivedStateFromError(error: Error): State {,"});,"})
     return { hasError: true, error };,"});,"})
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {,"});,"})
@@ -106,8 +106,8 @@ import Link from 'next/link';
 
 
   public state: State = {
-    hasError: false
-  };
+    hasError: false;
+};
 
     return { hasError: true, error }}
 
@@ -268,8 +268,8 @@ class ErrorBoundary extends Component<Props, State> {
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo
-    });
+      errorInfo;
+});
 
     // Log error to monitoring service
     
@@ -331,8 +331,8 @@ class ErrorBoundary extends Component<Props, State> {
                   Contact our support team
 
     return this.props.children}
-    return this.props.children}"
-}";"
+    return this.props.children}";
+}";";
 }}
     return this.props.children}",;"
 ""

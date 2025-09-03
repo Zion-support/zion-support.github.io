@@ -4,7 +4,7 @@ import: { Trophy, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Z
 import: { Trophy, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Users, BarChart3 export default function AISports(function AISports() {): any: {}
     'Automated injury prevention and risk assessment',';Predictive: analytics for player development',';Real-time: game strategy and tactical analysis',';Smart: scouting and talent identification',';Integration: with major sports analytics platforms',';Custom: AI models for sports-specific insights';
 <:pages.disabled/pages/services/AISports.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Amateur: Team,',';
@@ -27,7 +27,7 @@ import: { Trophy, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Z
   ]';Player: performance analysis and optimization',';Training: program design and monitoring',';Injury: prevention and risk assessment',';Game: strategy and tactical analysis',';Scouting: and talent identification',';Fan: engagement and marketing optimization';
   ]';Improve: player performance by 20-40%',';Reduce: injury risk by 30-50%',';Cut: training costs by 25-40%',';Optimize: game strategy and tactics',';Enhance: player development and scouting',';Scale: sports operations efficiently';
   ]';Professional: Sports Teams',';College: & University Athletics',';Youth: Sports Organizations',';Sports: Training Facilities',';Sports: Analytics & Media',';Sports: Technology Companies';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Trophy, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
 import { Trophy, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Users, BarChart3 export default function AISports(function AISports() {): any {}
     'Automated injury prevention and risk assessment',;Predictive analytics for player development',;Real-time game strategy and tactical analysis',;Smart scouting and talent identification',;Integration with major sports analytics platforms',;Custom AI models for sports-specific insights';
 <:pages.disabled/pages/services/AISports.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Amateur Team',
@@ -115,8 +115,8 @@ import { Trophy, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
     {'
       name: 'Professional Team',
       price: '$599/mo',
-      details: ['Up to 100 players', 'Advanced AI features', 'Custom reports', 'Priority support']
-    },
+      details: ['Up to 100 players', 'Advanced AI features', 'Custom reports', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AISports.tsx>    {'
@@ -149,10 +149,10 @@ import { Trophy, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
             <Trophy className='w-4 h-4 mr-2'  /> AI-Powered Sports Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Sports Platform</h1>'          <p className='text-emerald-100 text-xl'>Transform your sports organization with AI-powered tools that enhance player performance, optimize training, and maximize success.</p>
-  ];Player performance analysis and optimization',;Training program design and monitoring',;Injury prevention and risk assessment',;Game strategy and tactical analysis',;Scouting and talent identification',;Fan engagement and marketing optimization';
-  ];Improve player performance by 20-40%',;Reduce injury risk by 30-50%',;Cut training costs by 25-40%',;Optimize game strategy and tactics',;Enhance player development and scouting',;Scale sports operations efficiently';
-  ];Professional Sports Teams',;College & University Athletics',;Youth Sports Organizations',;Sports Training Facilities',;Sports Analytics & Media',;Sports Technology Companies';
-  ];
+  ]Player performance analysis and optimization',;Training program design and monitoring',;Injury prevention and risk assessment',;Game strategy and tactical analysis',;Scouting and talent identification',;Fan engagement and marketing optimization';
+  ]Improve player performance by 20-40%',;Reduce injury risk by 30-50%',;Cut training costs by 25-40%',;Optimize game strategy and tactics',;Enhance player development and scouting',;Scale sports operations efficiently';
+  ]Professional Sports Teams',;College & University Athletics',;Youth Sports Organizations',;Sports Training Facilities',;Sports Analytics & Media',;Sports Technology Companies';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600 py-20 text-center>''

@@ -4,7 +4,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AI5GNetwork(function AI5GNetwork() {): any: {}
     'Automated 5G monitoring and alerting',';Predictive: analytics for 5G scaling',';Smart: 5G security and compliance',';AI-driven: 5G automation and orchestration',';Real-time: 5G analytics and insights',';Custom: AI models for 5G applications';
 <:pages.disabled/pages/services/AI5GNetwork.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Developer,',';
@@ -27,7 +27,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
   ]';5G: optimization',';5G: network management',';Performance: monitoring and analytics',';Security: and compliance monitoring',';Automation: and orchestration',';5G: scaling and management';
   ]';Improve: 5G performance by 50-80%',';Reduce: 5G deployment time by 40-70%',';Cut: operational costs by 35-65%',';Enhance: 5G reliability and scalability',';Optimize: resource utilization',';Scale: 5G operations efficiently';
   ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-blue-500 via-cyan-500 to-teal-500 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AI5GNetwork(function AI5GNetwork() {): any {}
     'Automated 5G monitoring and alerting',;Predictive analytics for 5G scaling',;Smart 5G security and compliance',;AI-driven 5G automation and orchestration',;Real-time 5G analytics and insights',;Custom AI models for 5G applications';
 <:pages.disabled/pages/services/AI5GNetwork.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Developer',
@@ -115,8 +115,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     {'
       name: 'Business',
       price: '$1,499/mo',
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support']
-    },
+      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AI5GNetwork.tsx>    {'
@@ -149,10 +149,10 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <Database className='w-4 h-4 mr-2'  /> AI-Powered 5G Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI 5G Network Platform</h1>'          <p className='text-blue-100 text-xl'>Transform your 5G operations with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
-  ];5G optimization',;5G network management',;Performance monitoring and analytics',;Security and compliance monitoring',;Automation and orchestration',;5G scaling and management';
-  ];Improve 5G performance by 50-80%',;Reduce 5G deployment time by 40-70%',;Cut operational costs by 35-65%',;Enhance 5G reliability and scalability',;Optimize resource utilization',;Scale 5G operations efficiently';
-  ];Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
-  ];
+  ]5G optimization',;5G network management',;Performance monitoring and analytics',;Security and compliance monitoring',;Automation and orchestration',;5G scaling and management';
+  ]Improve 5G performance by 50-80%',;Reduce 5G deployment time by 40-70%',;Cut operational costs by 35-65%',;Enhance 5G reliability and scalability',;Optimize resource utilization',;Scale 5G operations efficiently';
+  ]Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-blue-500 via-cyan-500 to-teal-500 py-20 text-center>''

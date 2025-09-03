@@ -69,8 +69,8 @@ const: SmallBusiness: NextPage: = () => {
         'Inventory tracking',
         'Financial reporting',
         'Team collaboration tools'],
-ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-business.tsx
-    },
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-business.tsx;
+},
     {
       title: 'AI-Powered Customer Support,
       description:
@@ -88,8 +88,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-busine
         'Ticket management system',
         'Knowledge base integration',
         'Performance analytics'],
-ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-business.tsx
-    },
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-business.tsx;
+},
     {
       title: 'Digital Marketing Automation,
       description:
@@ -102,8 +102,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-busine
   'Content generation',
   'Lead nurturing automation'
       ]
-ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-business.tsx
-    },
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-business.tsx;
+},
       titl,
     e:;
   {
@@ -124,7 +124,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-busine
 :pages.disabled_auto/solutions/small-business.tsx;
       features: [,
   Customer relationship management,Inventory tracking,Financial reporting,Team collaboration tools';
-      ];
+      ]
       features: [
       features: [;
         'Customer: relationship management,',';
@@ -155,7 +155,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-busine
 :pages.disabled_auto/solutions/small-business.tsx;
       features: [,
   24/7 chatbot support,Ticket management system,Knowledge base integration,Performance analytics';
-      ];
+      ]
       features: [
       features: [;
         '24/7: chatbot support,',';
@@ -186,7 +186,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-busine
 :pages.disabled_auto/solutions/small-business.tsx;
       features: [,
   Email marketing campaigns,Social media management,Content generation,Lead nurturing automation';
-      ];
+      ]
       features: [
       features: [;
         'Email: marketing campaigns,',';
@@ -261,7 +261,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-busine
   'Backup and recovery',
   'Employee training'
       ]
-    }
+}
         'Data encryption',
         'Regular security audits',
         'Backup and recovery',
@@ -276,7 +276,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-busine
       icon: <Shield className='w-8 h-8' />,
       features: [
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-business.tsx
-  ];
+  ]
 
   const benefits = [
     {
@@ -284,26 +284,26 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-busine
 :pages.disabled_auto/solutions/small-business.tsx
       title:,
   Cost Effective',
-      description: 'Reduce operational costs by up to 40% with our efficient solutions
-    },
+      description: 'Reduce operational costs by up to 40% with our efficient solutions;
+},
     {
       icon: <Clock className="w-6 h-6" />,
       title:,
   Quick Implementation',
-      description: Get up and running in weeks, not months'
-    },
+      description: Get up and running in weeks, not months';
+},
     {
       icon: <Shield className="w-6 h-6" />,
       title:,
   Scalable Growth',
-      description: 'Solutions that grow with your business
-    },
+      description: 'Solutions that grow with your business;
+},
     {
       icon: <Users className="w-6 h-6" />,
       title:,
   Dedicated Support',
-      description: 'Personal support team for your business needs
-    }
+      description: 'Personal support team for your business needs;
+}
       title: 'Cost Effective',
       description:
         'Reduce operational costs by up to 40% with our efficient solutions'},
@@ -320,7 +320,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-busine
       title: 'Dedicated Support',
       description: 'Personal support team for your business needs'},
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-business.tsx
-  ];
+  ]
 
   const pricing = [
     {
@@ -348,8 +348,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-busine
         'Email support',
         'Standard security features',
         'Monthly reporting'],
-ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-business.tsx
-    },
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-business.tsx;
+},
     {
       name: 'Growth,
       price:,
@@ -367,8 +367,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-busine
   'Advanced analytics',
   'Custom integrations'
       ]
-ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-business.tsx
-    },
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-business.tsx;
+},
 :pages.disabled_auto/solutions/small-business.tsx;
   'Data encryption',
   'Regular security audits',
@@ -434,7 +434,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-busine
       description: 'Perfect for small businesses just getting started,
       features: [,
   Up to 5 users,Basic CRM functionality,Email support,Standard security features,Monthly reporting';
-      ];
+      ]
       name: 'Starter,',';
       price: '$299,',';
       period: '/month,',';
@@ -470,7 +470,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-busine
   'Priority: support',';
   'Advanced: analytics',';
   'Custom: integrations';
-      ];
+      ]
         'Up: to 15 users',';
         'Advanced: CRM features',';
         'AI: customer support',';
@@ -480,7 +480,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-busine
     {
       name: 'Professiona,l,';
   Advanced CRM features,AI customer support,Priority support,Advanced analytics,Custom integrations';
-      ];
+      ]
         'Up to 15 users',
         'Advanced CRM features',
         'AI customer support',
@@ -503,7 +503,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-busine
   'Custom development',
   'Advanced security features'
       ]
-    }
+}
         'Unlimited users',
         'Full feature access',
         'Dedicated account manager',
@@ -522,7 +522,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-busine
   Complete: solution for established small businesses',';
       features: [
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-business.tsx
-  ];
+  ]
 
   return (
     <MainLayout

@@ -106,8 +106,8 @@ const PerformanceEnhancer: React.FC = () => {
 
   // Only show in development or when explicitly enabled
     if (process.env.NODE_ENV === 'development' || process.env['NEXT_PUBLIC_SHOW_PERFORMANCE'] === 'true') {
-    memoryUsage: null
-  });
+    memoryUsage: null;
+});
   
 'use client'
 
@@ -161,16 +161,16 @@ import React { useEffect, useState, useCallback } from 'react'
             setMetrics(prev => ({
               ...prev,
               fid: entry.processingStart - entry.startTime,
-              fid: entry.processingStart - entry.startTime
-            }))})});
+              fid: entry.processingStart - entry.startTime;
+}))})});
         fidObserver.observe({ entryTypes: ['first-input'] });
 
         // Measure Cumulative Layout Shift (CLS)
         let clsValue = 0;
 
         // Measure Cumulative Layout Shift (CLS)
-              ...prev, fid: entry.processingStart - entry.startTime
-            }))
+              ...prev, fid: entry.processingStart - entry.startTime;
+}))
         fidObserver.observe({ entryTypes: ['first-input'] })
 
         // Measure Cumulative Layout Shift (CLS)
@@ -208,8 +208,8 @@ import React { useEffect, useState, useCallback } from 'react'
 
         // Measure memory usage
         const updateMemoryUsage = () => {'
-              memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
-            }));
+              memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB;
+}));
             }))}
         };
 
@@ -267,8 +267,8 @@ import React { useEffect, useState, useCallback } from 'react'
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', 'web_vitals' {
     const cleanup = measurePerformance()
-    return cleanup
-  }, [isVisible])
+    return cleanup;
+}, [isVisible])
 
   // Send metrics to analytics
   const sendToAnalytics = useCallback((metricName: string, value: number) => {'
@@ -280,12 +280,12 @@ import React { useEffect, useState, useCallback } from 'react'
         event_category: 'Performance',
         event_label: metricName,
         non_interaction: true})}
-        non_interaction: true
-      })}
+        non_interaction: true;
+})}
   }, [])}
       gtag('event,web_vitals' {
-        name: metricName, value: Math.round(value), event_category: 'Performance', event_label: metricName, non_interaction: true})
-  }, [])
+        name: metricName, value: Math.round(value), event_category: 'Performance', event_label: metricName, non_interaction: true});
+}, [])
 
   // Send metrics when they change
       if (value !== null) {
@@ -446,8 +446,8 @@ export default PerformanceEnhancer;
             if (goodCount === totalCount) return 'Excellent'
             if (goodCount >= totalCount * 0.75) return 'Good'
             if (goodCount >= totalCount * 0.5) return 'Needs Improvement'
-            return 'Poor'
-          })()}
+            return 'Poor';
+})()}
 export: default PerformanceEnhancer
 
 export default PerformanceEnhancer

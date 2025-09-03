@@ -230,8 +230,8 @@ class PM2SyncMonitor {
       if (this.isRunning) {
         await this.cleanup();
       }
-    }, 300000); // 5 minutes
-  }
+    }, 300000); // 5 minutes;
+}
 
   async performHealthCheck() {
     try {
@@ -816,7 +816,7 @@ class PM2SyncMonitor {
   async commitChanges() {;
     this.log('Committing uncommitted changes...');
     execSync('git add .', { cwd: this.config.projectRoot, stdio: 'pipe' });
-    execSync('git commit -m "Auto-commit: Uncommitted changes"', {;
+    execSync('git commit -m "Auto-commit: Uncommitted changes", {;
       cwd: this.config.projectRoot,;
       stdio: 'pipe',;
     });
@@ -837,7 +837,7 @@ class PM2SyncMonitor {
       try {
         execSync('git checkout --theirs .', { cwd: this.config.projectRoot, stdio: 'pipe' });
         execSync('git add .', { cwd: this.config.projectRoot, stdio: 'pipe' });
-        execSync('git commit -m "Auto-commit: Resolved conflicts with remote-first strategy"', {
+        execSync('git commit -m "Auto-commit: Resolved conflicts with remote-first strategy", {
           cwd: this.config.projectRoot,
           stdio: 'pipe'});
       } catch (commitError) {
@@ -864,7 +864,7 @@ class PM2SyncMonitor {
       try {
         execSync('git checkout --theirs .', { cwd: this.config.projectRoot, stdio: 'pipe' });
         execSync('git add .', { cwd: this.config.projectRoot, stdio: 'pipe' });
-        execSync('git commit -m "Auto-commit: Resolved conflicts with remote-first strategy"', {
+        execSync('git commit -m "Auto-commit: Resolved conflicts with remote-first strategy", {
           cwd: this.config.projectRoot,
           stdio: 'pipe'});
       } catch (commitError) {
@@ -958,8 +958,8 @@ class PM2SyncMonitor {
       // Get system performance data
       const output = execSync('pm2 monit --no-daemon', { 
         encoding: 'utf8',
-        timeout: 5000 
-      });
+        timeout: 5000 ;
+});
 
       // Parse performance data (simplified)
       this.metrics.performance = {
@@ -1006,8 +1006,8 @@ class PM2SyncMonitor {
         timeout: 5000});
 
       // Parse memory usage and restart if necessary;
-      if (output.includes('Memory usage high')) {
-    } catch (error) {;
+      if (output.includes('Memory usage high')) {;
+} catch (error) {;
       return { usagePercent: 0 };
     }
   }
@@ -1325,8 +1325,8 @@ if (require.main === module) {;
   // Keep the process alive
   setInterval(() => {
     if (global.pm2SyncMonitor && global.pm2SyncMonitor.isRunning) {
-      // Process is healthy
-    }
+      // Process is healthy;
+}
   }, 60000);
 }
 ;

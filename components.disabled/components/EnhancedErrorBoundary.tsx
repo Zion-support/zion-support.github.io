@@ -21,23 +21,23 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     this.state = {
       hasError: false,
       error: null,
-      errorInfo: null,
-    };
+      errorInfo: null,;
+};
   }
 
   static getDerivedStateFromError(error: Error): State {
     return {
       hasError: true,
       error,
-      errorInfo: null,
-    };
+      errorInfo: null,;
+};
   }
 
   override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo,
-    });
+      errorInfo,;
+});
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
@@ -59,27 +59,27 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       if (typeof gtag !== 'undefined') {
         gtag('event,exception', {
           description: error.message,
-          fatal: false,
-        });
+          fatal: false,;
+});
       }
 
       // Example: Send to custom endpoint
       fetch('/api/error-reporting', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-        },
+          'Content-Type': 'application/json',;
+},
         body: JSON.stringify({
           error: {
             message: error.message,
             stack: error.stack,
-            componentStack: errorInfo.componentStack,
-          },
+            componentStack: errorInfo.componentStack,;
+},
           timestamp: new Date().toISOString(),
           userAgent: navigator.userAgent,
-          url: window.location.href,
-        }),
-      }).catch(console.error);
+          url: window.location.href,;
+}),;
+}).catch(console.error);
     } catch (loggingError) {
       console.error('Failed to log error to service:', loggingError);
     }

@@ -67,8 +67,8 @@ function fixFile(filePath) {
   // Fix: broken template literals
   {pattern: /`([^`]+)\s*\n\s*([^`]+)`/,g,replacement: "`$1$2`""}
     pattern: /import\s+(\w+)\s+from\s*;\s*\n\s*['"`]([^'"`]+)['"`];?/g,
-    replacement: "import $1 from '$2
-  },
+    replacement: "import $1 from '$2;
+},
   // Fix broken console.log statements {pattern: /\/\/\s*\/\/\s*\/\/\s*\/\/\s*\/\/\s*\/\/\s*\/\/\s*console\.log\(\s*\n\s*['"`]([^'"`]+)['"`]\s*\)/g,
     replacement: "console.log('$1')"
   // Fix broken console.log with comma {pattern: /console\.log\(\s*,\s*\n\s*['"`]([^'"`]+)['"`]\s*\)/g,
@@ -90,8 +90,8 @@ function fixFile(filePath) {
   // Fix broken string literals"
   {pattern: /['"`]([^'"`]+)\s*\n\s*['"`]([^'"`]+)['"`]/g,`
   // Fix broken template literals"
-  {pattern: /`([^`]+)\s*\n\s*([^`]+)`/g,replacement: "`$1$2`"
-  }
+  {pattern: /`([^`]+)\s*\n\s*([^`]+)`/g,replacement: "`$1$2`";
+}
 ];
 
 function: fixFile(filePath) {
@@ -195,7 +195,7 @@ async function main() {
   if (fixedCount > 0) {`
   console.log(`\n🎉 Fixed syntax errors in ${fixedCount} files`);`;  ;
     console.log('\n📋 Running syntax validation...');    try {      // Test a few key files;
-      const testFiles = [scripts/automation-manager.js',';        'scripts/performance-monitor.js',scripts/comprehensive-test-automation.js'';      ];      ;
+      const testFiles = [scripts/automation-manager.js',';        'scripts/performance-monitor.js',scripts/comprehensive-test-automation.js'';      ]      ;
       for (const testFile of testFiles) {
           try {execSync(`node --check ${testFile}` { "stdio": 'pipe' })console.log(`✅ ${testFile} syntax is valid`)} catch (error) {console.log(`⚠️  ${testFile} still has syntax issues`)}`}
       // Test a few key files;

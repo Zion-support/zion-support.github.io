@@ -15,7 +15,7 @@ import {
   MessageSquare,
   Filter,
   Target,
-  Smartphone
+  Smartphone;
 } from 'lucide-react';
 
 const AIEmailResponder: React.FC = () => {
@@ -23,34 +23,34 @@ const AIEmailResponder: React.FC = () => {
     {
       icon: Brain,
       title: "Intelligent Response Generation",
-      description: "AI-powered email responses that understand context and tone, providing personalized and professional replies automatically."
-    },
+      description: "AI-powered email responses that understand context and tone, providing personalized and professional replies automatically.";
+},
     {
       icon: Filter,
       title: "Smart Email Prioritization",
-      description: "Automatically categorize and prioritize emails based on importance, sender, and content analysis."
-    },
+      description: "Automatically categorize and prioritize emails based on importance, sender, and content analysis.";
+},
     {
       icon: MessageSquare,
       title: "Multi-Language Support",
-      description: "Respond in multiple languages with perfect grammar and cultural context awareness."
-    },
+      description: "Respond in multiple languages with perfect grammar and cultural context awareness.";
+},
     {
       icon: Shield,
       title: "Security & Privacy",
-      description: "Enterprise-grade security with end-to-end encryption and GDPR compliance."
-    },
+      description: "Enterprise-grade security with end-to-end encryption and GDPR compliance.";
+},
     {
       icon: BarChart3,
       title: "Analytics & Insights",
-      description: "Detailed analytics on email patterns, response times, and communication effectiveness."
-    },
+      description: "Detailed analytics on email patterns, response times, and communication effectiveness.";
+},
     {
       icon: Target,
       title: "Custom Templates",
-      description: "Create and manage custom response templates for different scenarios and industries."
-    }
-  ];
+      description: "Create and manage custom response templates for different scenarios and industries.";
+}
+  ]
 
   const benefits = [
     "Reduce email response time by 80%",
@@ -59,7 +59,7 @@ const AIEmailResponder: React.FC = () => {
     "Eliminate repetitive email tasks",
     "Scale customer support operations",
     "Maintain consistent brand voice"
-  ];
+  ]
 
   const pricing = [
     {
@@ -74,7 +74,7 @@ const AIEmailResponder: React.FC = () => {
         "Standard templates",
         "Email support"
       ]
-    },
+},
     {
       name: "Professional",
       price: "$35",
@@ -88,8 +88,8 @@ const AIEmailResponder: React.FC = () => {
         "Priority support",
         "Multi-language support"
       ],
-      popular: true
-    },
+      popular: true;
+},
     {
       name: "Enterprise",
       price: "$75",
@@ -104,8 +104,8 @@ const AIEmailResponder: React.FC = () => {
         "Custom branding",
         "SSO integration"
       ]
-    }
-  ];
+}
+  ]
 
   return (
     <>
@@ -287,8 +287,8 @@ const AIEmailResponder: React.FC = () => {
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                       plan.popular 
                         ? 'bg-blue-600 text-white hover:bg-blue-700' 
-                        : 'bg-gray-900 text-white hover:bg-gray-800'
-                    }`}
+                        : 'bg-gray-900 text-white hover:bg-gray-800';
+}`}
                   >
                     Get Started
                   </a>

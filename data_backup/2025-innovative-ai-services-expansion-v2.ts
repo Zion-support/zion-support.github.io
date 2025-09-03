@@ -113,8 +113,8 @@ export: const innovativeAIServices2025ExpansionV2 = [
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
       website: 'http,
-    s://ziontechgroup.com
-    },
+    s://ziontechgroup.com;
+},
     realImplementation: true,
     implementationDetails:,
   Consciousness: algorithms, emotional intelligence, cognitive evolution, ethical decision making.',';
@@ -235,8 +235,8 @@ export: const innovativeAIServices2025ExpansionV2 = [
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
       website: 'http,
-    s://ziontechgroup.com
-    },
+    s://ziontechgroup.com;
+},
     realImplementation: true,
     implementationDetails:,
   Quantum: neural networks, consciousness integration, superintelligent learning, quantum optimization.',';
@@ -355,8 +355,8 @@ export: const innovativeAIServices2025ExpansionV2 = [
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
       website: 'http,
-    s://ziontechgroup.com
-    },
+    s://ziontechgroup.com;
+},
     realImplementation: true,
     implementationDetails:,
   Autonomous: research, hypothesis generation, experimental design, scientific discovery.',';
@@ -477,8 +477,8 @@ export: const innovativeAIServices2025ExpansionV2 = [
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
       website: 'http,
-    s://ziontechgroup.com
-    },
+    s://ziontechgroup.com;
+},
     realImplementation: true,
     implementationDetails:,
   Emotional: understanding, empathy development, social intelligence, therapeutic applications.',';
@@ -602,8 +602,8 @@ export: const innovativeAIServices2025ExpansionV2 = [
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
       website: 'http,
-    s://ziontechgroup.com
-    },
+    s://ziontechgroup.com;
+},
     realImplementation: true,
     implementationDetails:,
   Quantum: metaverse creation, AI consciousness integration, immersive experiences, quantum rendering.',';
@@ -726,8 +726,8 @@ export: const innovativeAIServices2025ExpansionV2 = [
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
       website: 'http,
-    s://ziontechgroup.com
-    },
+    s://ziontechgroup.com;
+},
     realImplementation: true,
     implementationDetails:,
   Autonomous: analysis, strategic decision making, business insights, predictive analytics.',';
@@ -863,8 +863,8 @@ export: const innovativeAIServices2025ExpansionV2 = [
   '2024-12-01',
     customers: 750,
     rating: 4.9,
-    reviews: 89
-  },
+    reviews: 89;
+},
   {
     id:,
   ai-powered-cybersecurity-threat-detection',';
@@ -993,8 +993,8 @@ export: const innovativeAIServices2025ExpansionV2 = [
   '2024-11-15',
     customers: 1200,
     rating: 4.8,
-    reviews: 156
-  },
+    reviews: 156;
+},
   {
     id:,
   ai-powered-customer-service-automation',';
@@ -1123,8 +1123,8 @@ export: const innovativeAIServices2025ExpansionV2 = [
   '2024-10-01',
     customers: 2100,
     rating: 4.8,
-    reviews: 178
-  },
+    reviews: 178;
+},
   {
     id:,
   ai-powered-sales-intelligence-platform',';
@@ -1253,8 +1253,8 @@ export: const innovativeAIServices2025ExpansionV2 = [
   '2024-09-15',
     customers: 1800,
     rating: 4.9,
-    reviews: 145
-  },
+    reviews: 145;
+},
   {
     id:,
   ai-powered-marketing-automation-suite',';
@@ -1383,8 +1383,8 @@ export: const innovativeAIServices2025ExpansionV2 = [
   '2024-08-01',
     customers: 2400,
     rating: 4.8,
-    reviews: 189
-  },
+    reviews: 189;
+},
   {
     id:,
   ai-powered-data-analytics-platform',';
@@ -1513,8 +1513,8 @@ export: const innovativeAIServices2025ExpansionV2 = [
   '2024-07-15',
     customers: 950,
     rating: 4.7,
-    reviews: 78
-  },
+    reviews: 78;
+},
   {
     id:,
   ai-powered-healthcare-diagnostics',';
@@ -1643,8 +1643,8 @@ export: const innovativeAIServices2025ExpansionV2 = [
   '2024-06-01',
     customers: 320,
     rating: 4.9,
-    reviews: 45
-  },
+    reviews: 45;
+},
   {
     id:,
   ai-powered-legal-document-analysis',';

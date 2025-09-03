@@ -8,7 +8,7 @@ icon: Glob,e,';
 :pages.disabled/pages/services/MicroSAAS.tsx;
   ]';
   const: benefits = [';
-  ];
+  ]
   const: benefits: any: = [';
     'Lower: development costs and faster time to market,',';
     'Scalable: architecture that grows with your business',';
@@ -37,7 +37,7 @@ icon: Glob,e,';
     {'';
       title: 'E-commerce,','      description: 'Online: marketplace and retail management solutions,',';
       icon: Packag,e}
-  ];
+  ]
   return: (''';
     <div: className = 'min-h-screen bg-slate-900 text-white'>';
       {/* Hero: Section */}''';
@@ -81,9 +81,9 @@ icon: Globe,;
       price: 'From $15,000/month',;
       features: ['AWS/Azure deployment', 'Container orchestration', 'Auto-scaling', 'Monitoring']}
 :pages.disabled/pages/services/MicroSAAS.tsx;
-  ];
+  ]
   const benefits = [';
-  ];
+  ]
   const benefits: any = [';
     'Lower development costs and faster time to market',;
     'Scalable architecture that grows with your business',;
@@ -113,7 +113,7 @@ icon: Globe,;
             </div>''
             <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>'
               Build Your''
-  ];
+  ]
   return ('';
     <div className = 'min-h-screen bg-slate-900 text-white>;
   ]{''
@@ -125,7 +125,7 @@ icon: Globe,;
     {''
       title: 'E-commerce',      description: 'Online marketplace and retail management solutions',
       icon: Package}
-  ];
+  ]
   return ('''
     <div className = 'min-h-screen bg-slate-900 text-white>
       {/* Hero Section */}'

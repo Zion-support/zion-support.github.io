@@ -20,8 +20,8 @@ const PerformanceEnhancer: React.FC = () => {
     cls: null,
     ttfb: null,
     loadTime: null,
-    memoryUsage: null,
-  });
+    memoryUsage: null,;
+});
   const [isVisible, setIsVisible] = useState(false);
 
   // Only show in development or when explicitly enabled
@@ -68,8 +68,8 @@ const PerformanceEnhancer: React.FC = () => {
           entries.forEach((entry: any) => {
             setMetrics(prev => ({
               ...prev,
-              fid: entry.processingStart - entry.startTime,
-            }));
+              fid: entry.processingStart - entry.startTime,;
+}));
           });
         });
         fidObserver.observe({ entryTypes: ['first-input'] });
@@ -93,8 +93,8 @@ const PerformanceEnhancer: React.FC = () => {
           entries.forEach((entry: any) => {
             setMetrics(prev => ({
               ...prev,
-              ttfb: entry.responseStart - entry.requestStart,
-            }));
+              ttfb: entry.responseStart - entry.requestStart,;
+}));
           });
         });
         navigationObserver.observe({ entryTypes: ['navigation'] });
@@ -111,8 +111,8 @@ const PerformanceEnhancer: React.FC = () => {
             const memory = (performance as any).memory;
             setMetrics(prev => ({
               ...prev,
-              memoryUsage: memory.usedJSHeapSize / 1024 / 1024, // Convert to MB
-            }));
+              memoryUsage: memory.usedJSHeapSize / 1024 / 1024, // Convert to MB;
+}));
           }
         };
 
@@ -143,8 +143,8 @@ const PerformanceEnhancer: React.FC = () => {
         value: Math.round(value),
         event_category: 'Performance',
         event_label: metricName,
-        non_interaction: true,
-      });
+        non_interaction: true,;
+});
     }
   }, []);
 

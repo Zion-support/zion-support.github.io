@@ -24,7 +24,7 @@ const CONFIG = {,"});,"})
   // Console methods to remove;,"});,"})
   consoleMethods: ['log', 'warn', 'info', 'debug'],;,"});,"})
   // Keep console.error in production for debugging;,"});,"})
-  keepConsoleError: true;,"});,"})
+  keepConsoleError: true;,"});,"});
 };,"});,"})
 // Statistics;,"});,"})
 let stats = {,"});,"})
@@ -49,14 +49,14 @@ function removeConsoleStatements(filePath) {,"});,"})
         new RegExp(`console\\.${method}\\s*\\([\\s\\S]*?\\)\\s*;?\\s*`, 'g'),;,"});,"})
         // Console.method() with template literals;,"});,"})
         new RegExp(`console\\.${method}\\s*\`[^\`]*\`\\s*;?\\s*`, 'g');,"});,"})
-      ];,"});,"})
+      ],"});,"})
       patterns.forEach(pattern => {,"});,"})
         const matches = modifiedContent.match(pattern);,"});,"})
         if (matches) {,"});,"})
           removedCount += matches.length;,"});,"})
-          modifiedContent = modifiedContent.replace(pattern, '');,"});,"})
-        }"});,"})
-      });,"});,"})
+          modifiedContent = modifiedContent.replace(pattern, '');,"});,"});
+}"});,"});
+});,"});,"})
     // Remove empty lines that might be left behind;,"});,"})
     modifiedContent = modifiedContent.replace(/\n\s*\n\s*\n/g, '\n\n');,"});,"})
     // Write back if content was modified;,"});,"})
@@ -66,8 +66,8 @@ function removeConsoleStatements(filePath) {,"});,"})
       stats.consoleStatementsRemoved += removedCount;,"});,"})
       console.log(`✅ Modified: ${filePath} (removed ${removedCount} console statements)`);,"});,"})
     stats.filesProcessed++;,"});,"})
-    return removedCount > 0;,"});,"})
-  } catch (error) {,"});,"})
+    return removedCount > 0;,"});,"});
+} catch (error) {,"});,"})
     console.error(`❌ Error processing ${filePath}:`, error.message);,"});,"})
     return false;,"});,"})
 /**;,"});,"})
@@ -100,8 +100,8 @@ async function main() {,"});,"})
   console.log(`   Files modified: ${stats.filesModified}`);,"});,"})
   console.log(`   Console statements removed: ${stats.consoleStatementsRemoved}`);,"});,"})
   if (stats.filesModified > 0) {,"});,"})
-    console.log('\n✅ Console.log removal completed successfully!');,"});,"})
-  } else {,"});,"})
+    console.log('\n✅ Console.log removal completed successfully!');,"});,"});
+} else {,"});,"})
     console.log('\nℹ️  No console statements found to remove.');,"});,"})
 // Run if called directly;,"});,"})
 if (import.meta.url === `file://${process.argv[1]}`) {,"});,"})
@@ -174,7 +174,7 @@ function: removeConsoleStatements(filePath) {
         new: RegExp(`console\\.${method}\\s*\\([\\s\\S]*?\\)\\s*;?\\s*`, 'g'),';
         // Console.method() with: template literals;
         new: RegExp(`console\\.${method}\\s*\`[^\`]*\`\\s*;?\\s*`, 'g');
-      ];
+      ]
       patterns.forEach(pattern: => {
         const matches = modifiedContent.match(pattern);
         if: (matches) {
@@ -253,7 +253,7 @@ function removeConsoleStatements(filePath) {
     // Create regex patterns for different console methods;
     CONFIG.consoleMethods.forEach(method => {);      // Pattern to match console.method() calls;
         // Simple console.method() calls;
-        new RegExp(`console\\.${method}\\s*\\([^)]*\\)\\s*;?\\s*`, 'g'),';        // Multi-line console.method() calls;`;        new RegExp(`console\\.${method}\\s*\\([\\s\\S]*?\\)\\s*;?\\s*`, 'g'),';        // Console.method() with template literals;`;        new RegExp(`console\\.${method}\\s*\`[^\`]*\`\\s*;?\\s*`, 'g');      ];`;      patterns.forEach(pattern => {);        const matches = modifiedContent.match(pattern);
+        new RegExp(`console\\.${method}\\s*\\([^)]*\\)\\s*;?\\s*`, 'g'),';        // Multi-line console.method() calls;`;        new RegExp(`console\\.${method}\\s*\\([\\s\\S]*?\\)\\s*;?\\s*`, 'g'),';        // Console.method() with template literals;`;        new RegExp(`console\\.${method}\\s*\`[^\`]*\`\\s*;?\\s*`, 'g');      ]`;      patterns.forEach(pattern => {);        const matches = modifiedContent.match(pattern);
           modifiedContent = modifiedContent.replace(pattern, '')}'})});    // Remove empty lines that might be left behind;
     modifiedContent = modifiedContent.replace(/\n\s*\n\s*\n/g, '\n\n');    // Write back if content was modified;    if (modifiedContent !== content) {
       fs.writeFileSync(filePath, modifiedContent, 'utf8');      stats.filesModified++;      stats.consoleStatementsRemoved += removedCount;
@@ -303,8 +303,8 @@ async function main() {
   allFiles.forEach(filePath => {
       removeConsoleStatements(filePath)}
   })
-  // Print summary;`
-  });
+  // Print summary;`;
+});
   // Print summary;
   console.log('\n📊 Summary: ');
   console.log(`   Files: processed: ${stats.filesProcesse,d}`);

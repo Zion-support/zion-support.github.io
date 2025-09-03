@@ -9,5 +9,5 @@ export default function UltraQuantumHolographicBackgroundV4({
   children}: Props) {
 
   return <>{children}</>
-:components/disabled/ui/UltraQuantumHolographicBackgroundV4.tsx
+:components/disabled/ui/UltraQuantumHolographicBackgroundV4.tsx;
 }

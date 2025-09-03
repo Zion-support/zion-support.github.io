@@ -94,6 +94,6 @@ export default function TalentRoutes()   {return (
       <Route path="saved" element={<SavedTalentsPage />} />
       <Route path="create" element={<CreateTalentProfile />} />
     </Routes>
-  )
+  );
 }
   )}

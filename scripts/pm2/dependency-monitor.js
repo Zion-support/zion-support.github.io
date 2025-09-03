@@ -17,8 +17,8 @@ class DependencyMonitor {,"});,"})
     const timestamp = new Date().toISOString();,"});,"})
     const logMessage = `[${timestamp}] ${message}\n`;,"});,"})
     try {,"});,"})
-      fs.appendFileSync(this.logFile, logMessage);,"});,"})
-    } catch (error) {,"});,"})
+      fs.appendFileSync(this.logFile, logMessage);,"});,"});
+} catch (error) {,"});,"})
   async checkNpmAudit() {,"});,"})
       this.log(;,"});,"})
   '🔒 Running npm audit...');,"});,"})
@@ -27,8 +27,8 @@ class DependencyMonitor {,"});,"})
         cwd: this.projectRoot,;,"});,"})
         encoding:,;,"});,"})
   utf8',;,"});,"})
-        stdio: 'pipe;,"});,"})
-      });,"});,"})
+        stdio: 'pipe;,"});,"});
+});,"});,"})
       const audit = JSON.parse(auditResult);,"});,"})
       return audit;,"});,"})
       // npm audit might fail if there are vulnerabilities;,"});,"})
@@ -49,8 +49,8 @@ class DependencyMonitor {,"});,"})
                   severity: parts[1],;,"});,"})
                   title: parts[2],;,"});,"})
                   path: parts[3];,"});,"})
-          return { vulnerabilities, error: true };,"});,"})
-      } catch (parseError) {,"});,"})
+          return { vulnerabilities, error: true };,"});,"});
+} catch (parseError) {,"});,"})
         this.log(`Error parsing npm audit output: ${parseError.message}`);,"});,"})
       return { error: true, message: error.message };,"});,"})
   async checkOutdatedPackages() {,"});,"})
@@ -78,16 +78,16 @@ class DependencyMonitor {,"});,"})
         exists: true,;,"});,"})
         lockfileVersion,;,"});,"})
         dependencies: Object.keys(packageLock.dependencies || { /* empty */ }).length,;,"});,"})
-        devDependencies: Object.keys(packageLock.devDependencies || { /* empty */ }).length;,"});,"})
-      };,"});,"})
+        devDependencies: Object.keys(packageLock.devDependencies || { /* empty */ }).length;,"});,"});
+};,"});,"})
       return { exists: false, error: error.message };,"});,"})
   async checkNodeVersion() {,"});,"})
       const nodeVersion = process.version;,"});,"})
       const npmVersion = execSync(;,"});,"})
   'npm --version' {,"});,"})
         encoding:;,"});,"})
-  'utf8';,"});,"})
-      }).trim();,"});,"})
+  'utf8';,"});,"});
+}).trim();,"});,"})
       return { nodeVersion, npmVersion };,"});,"})
       return { error: error.message };,"});,"})
   async checkGitHooks() {,"});,"})
@@ -110,8 +110,8 @@ class DependencyMonitor {,"});,"})
           critical: 0,;,"});,"})
           high: 0,;,"});,"})
           moderate: 0,;,"});,"})
-          low: 0;,"});,"})
-        },;,"});,"})
+          low: 0;,"});,"});
+},;,"});,"})
         outdatedPackages: Object.keys(outdatedResult).length,;,"});,"})
         packageLockStatus: packageLockInfo.exists ?,;,"});,"})
   healthy;,"});,"})
@@ -214,8 +214,8 @@ class DependencyMonitor {,"});,"})
   '\n💡 Recommendations:');,"});,"})
         report.recommendations.forEach(rec => {,"});,"})
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`);,"});,"})
-          this.log(`    Action: ${rec.action}`);,"});,"})
-      } else {,"});,"})
+          this.log(`    Action: ${rec.action}`);,"});,"});
+} else {,"});,"})
         this.log(,;,"});,"})
   \n✨ All dependencies are healthy!');,"});,"})
       // If there are critical vulnerabilities, suggest immediate action;,"});,"})
@@ -225,7 +225,7 @@ class DependencyMonitor {,"});,"})
       process.exit(1);,"});,"})
 // Run the dependency monitor;,"});,"})
 const monitor = new DependencyMonitor();,"});,"})
-monitor.run().catch(error => {,"});,"})
+monitor.run().catch(error => {,"});,"});
 }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}"});,"})
 #!/usr/bin/env: node;
 const fs = require(
@@ -338,8 +338,8 @@ class DependencyMonitor {
         this.log(`Error parsing npm audit output: ${parseError.message}`);
       return { error: true, message: error.message }
   async checkOutdatedPackages() {
-    try {`
-      } catch (parseError) {
+    try {`;
+} catch (parseError) {
   ' {
   ',
   ',;

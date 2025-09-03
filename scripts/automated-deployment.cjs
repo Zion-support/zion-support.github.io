@@ -16,7 +16,7 @@ class AutomatedDeployment {
       { name: 'Build application', command: 'NODE_OPTIONS="--max-old-space-size=8192" npm run build' },
       { name: 'Run tests', command: 'npm test' },
       { name: 'Security audit', command: 'npm audit --audit-level=moderate' }
-    ];
+    ]
     
     for (const step of steps) {
       try {
@@ -27,8 +27,8 @@ class AutomatedDeployment {
       } catch (error) {
         this.deploymentSteps.push({ name: step.name, status: 'FAILED', error: error.message });
         console.log(`❌ ${step.name} failed: ${error.message}`);
-        break; // Stop deployment on failure
-      }
+        break; // Stop deployment on failure;
+}
     }
     
     this.saveDeploymentLog();

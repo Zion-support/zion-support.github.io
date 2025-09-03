@@ -18,8 +18,8 @@ class EnhancedPerformanceMonitor {
       memoryUsage: 0,
       cpuUsage: 0,
       errorCount: 0,
-      warningCount: 0
-    };
+      warningCount: 0;
+};
     this.startTime = Date.now();
   }
 
@@ -40,8 +40,8 @@ class EnhancedPerformanceMonitor {
       await this.generatePerformanceReport();
       
       this.log('🎉 Performance monitoring completed!', 'success');
-      
-    } catch (error) {
+      ;
+} catch (error) {
       this.log(`Performance monitoring failed: ${error.message}`, 'error');
       process.exit(1);
     }
@@ -124,9 +124,8 @@ class EnhancedPerformanceMonitor {
       
       // Get CPU usage (simplified)
       const cpuUsage = process.cpuUsage();
-      this.metrics.cpuUsage = (cpuUsage.user + cpuUsage.system) / 1000000; // seconds
-      
-    } catch (error) {
+      this.metrics.cpuUsage = (cpuUsage.user + cpuUsage.system) / 1000000; // seconds;
+} catch (error) {
       this.log(`Could not monitor system resources: ${error.message}`, 'error');
     }
   }
@@ -139,8 +138,8 @@ class EnhancedPerformanceMonitor {
       duration: Date.now() - this.startTime,
       metrics: this.metrics,
       recommendations: this.generateRecommendations(),
-      score: this.calculatePerformanceScore()
-    };
+      score: this.calculatePerformanceScore();
+};
 
     const reportPath = path.join(process.cwd(), 'performance-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));

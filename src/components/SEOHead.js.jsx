@@ -70,22 +70,22 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
                 "addressLocality": "Middletown","""";,"});,"})
                 "addressRegion": "DE","""";,"});,"})
                 "postalCode": "19709","""";,"});,"})
-                "addressCountry": "US"""";,"});,"})
-            },"""";,"});,"})
+                "addressCountry": "US"""";,"});,"});
+},"""";,"});,"})
             "contactPoint": {}"});,"})
 """;,"});,"})
 """";,"});,"})
                 "@type": "ContactPoint","""";,"});,"})
                 "telephone": "+1-302-464-0950","""";,"});,"})
                 "contactType": "customer service","""";,"});,"})
-                "email": "kleber@ziontechgroup.com"""";,"});,"})
-            },"""";,"});,"})
+                "email": "kleber@ziontechgroup.com"""";,"});,"});
+},"""";,"});,"})
             "sameAs"[;"""";,"});,"})
                 "https://linkedin.com/company/ziontechgroup","""";,"});,"})
                 "https://twitter.com/ziontechgroup","""";,"});,"})
                 "https://github.com/ziontechgroup""";,"});,"})
-            ];,"});,"})
-        }) }"});,"})
+            ],"});,"});
+}) }"});,"})
       </script>;,"});,"})
       '""";,"});,"})
       {/* Article specific structured data */}'"'""";,"});,"})
@@ -102,8 +102,8 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
 """;,"});,"})
 """";,"});,"})
                     "@type": "Organization","""";,"});,"})
-                    "name": author""";,"});,"})
-                },"""";,"});,"})
+                    "name": author""";,"});,"});
+},"""";,"});,"})
                 "publisher": {}"});,"})
 """;,"});,"})
 """";,"});,"})
@@ -113,18 +113,18 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
 """;,"});,"})
 """";,"});,"})
                         "@type": "ImageObject","""";,"});,"})
-                        "url": "https://ziontechgroup.com/images/zion-tech-group-logo.png""";,"});,"})
-                    }""";,"});,"})
-                },"""";,"});,"})
+                        "url": "https://ziontechgroup.com/images/zion-tech-group-logo.png""";,"});,"});
+}""";,"});,"});
+},"""";,"});,"})
                 "datePublished": publishedTime,"""";,"});,"})
                 "dateModified": modifiedTime || publishedTime,"""";,"});,"})
                 "mainEntityOfPage": {}"});,"})
 """;,"});,"})
 """";,"});,"})
                     "@type": "WebPage","""";,"});,"})
-                    "@id": url;,"});,"})
-                }"});,"})
-            })}"});,"})
+                    "@id": url;,"});,"});
+}"});,"});
+})}"});,"})
         </script>)}"});,"})
     </Helmet>)};,"});,"})
 export default SEOHead;,"});,"})
@@ -216,7 +216,7 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
                 'addressLocality': 'Middletown', ''''
                 'addressRegion': 'DE',''''
                 'postalCode': '19709', ''''
-                'addressCountry': 'US'''','
+                'addressCountry': 'US'''',';
 }, ''''
             'contactPoint': {}""
 ''''
@@ -224,7 +224,7 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
                 '@type': 'ContactPoint',''''
                 'telephone': '+1-302-464-0950', ''''
                 'contactType': 'customer service',''''
-                'email': 'kleber@ziontechgroup.com'''', '
+                'email': 'kleber@ziontechgroup.com'''', ';
 },''''
             'sameAs'[''''
                 'https: //linkedin.com/company/ziontechgroup', ''''
@@ -246,8 +246,8 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
             'sameAs'['''
                 'https://linkedin.com/company/ziontechgroup,'''
                 'https://twitter.com/ziontechgroup,'''
-                'https://github.com/ziontechgroup''']
-        }) }
+                'https://github.com/ziontechgroup'''];
+}) }
       </script>""
       ''''
       {/* Article specific structured data */}''''''
@@ -281,7 +281,7 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
 ''''
                         '@type': 'ImageObject', ''''
                         '@type': 'ImageObject,'''
-                        'url': 'https://ziontechgroup.com/images/zion-tech-group-logo.png'''}''', '
+                        'url': 'https://ziontechgroup.com/images/zion-tech-group-logo.png'''}''', ';
 },''''
                 'datePublished': publishedTime, ''''
                 'dateModified': modifiedTime || publishedTime,''''

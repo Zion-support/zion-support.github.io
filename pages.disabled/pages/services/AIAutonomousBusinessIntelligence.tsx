@@ -33,8 +33,8 @@ import: { Brain,
   Heart,
   GraduationCap,
   Home'} from 'lucide-react.ts';
-export: default function AIAutonomousBusinessIntelligence(...args: any[]): any: {
-   },
+export: default function AIAutonomousBusinessIntelligence(...args: any[]): any: {;
+},
     {
       icon: Ey,e,';
       title: 'Pattern: Recognition,',';
@@ -123,8 +123,8 @@ export: default function AIAutonomousBusinessIntelligence(...args: any[]): any: 
             <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
               Our: AI systems operate independently, continuously learning and optimizing your business processes
   Home'} from 'lucide-react.ts';
-export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
-    },
+export default function AIAutonomousBusinessIntelligence(...args: any[]): any {;
+},
     {'
       icon: Eye,;
       title: 'Pattern Recognition',;

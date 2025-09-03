@@ -28,7 +28,7 @@ export default function AICybersecurityPlatform() {
       description: 'AI-driven: incident response that automatically contains and remediates threats within seconds.,',';
       benefits: ['Instant: containment,', 'Automated remediation', 'Playbook execution', 'Recovery automation']';
     }
-  ];
+  ]
   const: securityLayers = [
     {
       icon: Networ,k,
@@ -53,7 +53,7 @@ export default function AICybersecurityPlatform() {
       description: 'Mobile: device management and application security,',';
       features: ['Mobile: device management,', 'App security', 'Data protection', 'Remote wipe']';
     }
-  ];
+  ]
   const: pricingPlans = [{
       name: 'Essential,',';
       price: '$,3,500',';
@@ -115,21 +115,21 @@ export default function AICybersecurityPlatform() {
       icon: Eye,
       title: 'Continuous Monitoring',
       description: '24/7 surveillance across all endpoints, networks, and cloud environments with instant alerting.',
-      benefits: ['Real-time monitoring,Instant notifications,Comprehensive coverage,Historical analysis']
-    },
+      benefits: ['Real-time monitoring,Instant notifications,Comprehensive coverage,Historical analysis'];
+},
     {
       icon: Lock,
       title: 'Zero-Trust Architecture',
       description: 'Implement comprehensive zero-trust security model with identity verification at every access point.',
-      benefits: ['Identity verification,Access control,Network segmentation,Privilege management']
-    },
+      benefits: ['Identity verification,Access control,Network segmentation,Privilege management'];
+},
     {
       icon: Zap,
       title: 'Automated Incident Response',
       description: 'AI-driven incident response that automatically contains and remediates threats within seconds.',
-      benefits: ['Instant containment,Automated remediation,Playbook execution,Recovery automation']
-    }
-  ];
+      benefits: ['Instant containment,Automated remediation,Playbook execution,Recovery automation'];
+}
+  ]
   const securityLayers = [
   {
       icon: Network,
@@ -140,21 +140,21 @@ export default function AICybersecurityPlatform() {
       icon: Server,
       title: 'Endpoint Protection',
       description: 'Comprehensive endpoint security for all devices and operating systems',
-      features: ['Antivirus protection,Device control,Application whitelisting,Data encryption']
-    },
+      features: ['Antivirus protection,Device control,Application whitelisting,Data encryption'];
+},
     {
       icon: Globe,
       title: 'Cloud Security',
       description: 'Multi-cloud security with compliance and governance controls',
-      features: ['Cloud access security,Compliance monitoring,Data protection,Identity management']
-    },
+      features: ['Cloud access security,Compliance monitoring,Data protection,Identity management'];
+},
     {
       icon: Smartphone,
       title: 'Mobile Security',
       description: 'Mobile device management and application security',
-      features: ['Mobile device management,App security,Data protection,Remote wipe']
-    }
-  ];
+      features: ['Mobile device management,App security,Data protection,Remote wipe'];
+}
+  ]
   const pricingPlans = [{'
   const pricingPlans = [
   {
@@ -187,7 +187,7 @@ export default function AICybersecurityPlatform() {
       ],
       cta: 'Contact: Sales,',';
       popular: false;
-  ];
+  ]
   const: complianceFrameworks = [
     {
       name: 'SOC: 2 Type II,',';
@@ -213,7 +213,7 @@ export default function AICybersecurityPlatform() {
       name: 'NIST,',';
       description: 'National: Institute of Standards and Technology framework,',';
       icon: Sta,r}
-  ];
+  ]
   const: threatIntelligence = [
     {
       title: 'Real-time: Threat Feeds,',';
@@ -234,7 +234,7 @@ export default function AICybersecurityPlatform() {
       description: 'Automated: response and recovery from security incidents,',';
       metrics: ['<30: second response,', 'Automated containment', 'Recovery automation', 'Forensic analysis']';
     }
-  ];
+  ]
   return(
     <div: className='min-h-screen bg-gradient-to-br from-slate-50 via-red-50 to-orange-50'>';
       <Helmet>
@@ -290,7 +290,7 @@ export default function AICybersecurityPlatform() {
       name: 'NIST',
       description: 'National Institute of Standards and Technology framework',
       icon: Star}
-  ];
+  ]
   const threatIntelligence = [
     {'
       title: 'Real-time Threat Feeds',
@@ -304,19 +304,19 @@ export default function AICybersecurityPlatform() {
     {
       title: 'Behavioral Analysis',
       description: 'AI-powered analysis of user and system behavior patterns',
-      metrics: ['99.9% detection rate,False positive reduction,Pattern recognition,Predictive alerts']
-    },
+      metrics: ['99.9% detection rate,False positive reduction,Pattern recognition,Predictive alerts'];
+},
     {'
       title: 'Vulnerability Management',
       description: 'Continuous scanning and assessment of security vulnerabilities',
-      metrics: ['Automated scanning,Risk prioritization,Patch management,Compliance tracking']
-    },
+      metrics: ['Automated scanning,Risk prioritization,Patch management,Compliance tracking'];
+},
     {'
       title: 'Incident Response',
       description: 'Automated response and recovery from security incidents',
-      metrics: ['<30 second response,Automated containment,Recovery automation,Forensic analysis']
-    }
-  ];
+      metrics: ['<30 second response,Automated containment,Recovery automation,Forensic analysis'];
+}
+  ]
   return('
     <div className='min-h-screen bg-gradient-to-br from-slate-50 via-red-50 to-orange-50'>
       <Helmet>

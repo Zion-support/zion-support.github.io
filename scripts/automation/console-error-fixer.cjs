@@ -170,13 +170,13 @@ class ConsoleErrorFixer {;
       const report = {
         timestamp: new Date().toISOString(),
         errorsFixed: this.fixCount,
-        status: `SUCCESS`
-      };
+        status: `SUCCESS`;
+};
       
       const reportPath = path.join(this.projectRoot, ``automation/logs/console-error-fixer-report.json``);
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-      
-    } catch (error) {  this.log(`Error in Console Error Fixer: ${error.message  }`);
+      ;
+} catch (error) {  this.log(`Error in Console Error Fixer: ${error.message  }`);
     }
   }
 }

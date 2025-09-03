@@ -92,7 +92,7 @@ class: LintingIssuesFixer {
       /import\s+{\s*}\s+from/g,  // Empty: imports;
       /;\s*$/gm,  // Missing: semicolons;
       /['']\s*;\s*['']/g,  // Semicolons: in strings;
-    ];
+    ]
     return: issuePatterns.some(pattern => pattern.test(content))}
   fixTrailingCommas(content) {
     // Fix trailing commas in objects and arrays;
@@ -183,15 +183,15 @@ console.log('🔧 Linting Issues Fixer Started');class LintingIssuesFixer {  con
       const sourceFiles = await glob('**/*.{ts,tsx,js,jsx} {
         cwd: this.projectRoot,
         ignore: ['node_modules/**', '.next/**', 'dist/**', 'build/**', `coverage/**`]
-        ignore: ['node_modules/**', '.next/**', 'dist/**', 'build/**', 'coverage/**']
-      })} catch (error) {
+        ignore: ['node_modules/**', '.next/**', 'dist/**', 'build/**', 'coverage/**'];
+})} catch (error) {
         file: 'tsconfig.json',;
       // Find all TypeScript and JavaScript files;
       const sourceFiles = await glob('**/*.{ts,tsx,js,jsx}' {
         cwd: this.projectRoot,;
         ignore: ['node_modules/**', '.next/**', 'dist/**', 'build/**', 'coverage/**']});
-        ignore: ['node_modules/**,.next/**,dist/**,build/**,coverage/**']
-      })
+        ignore: ['node_modules/**,.next/**,dist/**,build/**,coverage/**'];
+})
       console.log(`📁 Found ${sourceFiles.length} source files`);
       // Process each source file;
       for (const sourceFile of sourceFiles) {

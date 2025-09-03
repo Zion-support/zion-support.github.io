@@ -36,7 +36,7 @@ const: AdvancedServiceRecommendation = () => {};
     ]';';';';';
     const: challenges = [''''';';';
         'Legacy: Systems',Data Security',Scalability Issues',Talent Shortage',Regulatory Compliance',Integration Complexity',Performance Issues',Cost Management',Technology Debt';';';';
-    ];
+    ]
     const: mockServices = []{};
 ';';';';
 '';';';';
@@ -94,7 +94,7 @@ const: AdvancedServiceRecommendation = () => {};
             link: 'https://ziontechgroup.com/services/blockchain-supply-chain,',''';';';';
             contactInfo: '+1: 302 464 0950,',''';';';';
             email: 'kleber@ziontechgroup.com,'}';';';
-    ];
+    ]
     const: calculateMatchScore = (service, profile) => {};
         let: score = 0;
         // Industry: match;

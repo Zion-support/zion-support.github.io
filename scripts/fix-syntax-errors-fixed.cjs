@@ -59,7 +59,7 @@ class SyntaxErrorFixer {
       'pages/pricing-guide.tsx',
       'pages/pricing.tsx',
       'pages/terms.tsx'
-    ];
+    ]
 
     for (const file of filesToFix) {
       const filePath = path.join(this.projectRoot, file);
@@ -81,8 +81,8 @@ class SyntaxErrorFixer {
 
     return {
       fixedFiles: this.fixedFiles,
-      errors: this.errors
-    };
+      errors: this.errors;
+};
   }
 }
 

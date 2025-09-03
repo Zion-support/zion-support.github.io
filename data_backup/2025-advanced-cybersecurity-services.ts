@@ -348,7 +348,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com';
 };
 
 export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] = [
@@ -402,8 +402,8 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     launchDate: '2024-12-01',
     customers: 28,
     rating: 4.9,
-    reviews: 67
-  },
+    reviews: 67;
+},
   {
     reviews: 67},
   {'
@@ -451,8 +451,8 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     launchDate: '2024-11-20',
     customers: 15,
     rating: 4.8,
-    reviews: 23
-  },
+    reviews: 23;
+},
   {
     reviews: 23},
   {'
@@ -500,8 +500,8 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     launchDate: '2024-10-15',
     customers: 42,
     rating: 4.7,
-    reviews: 89
-  },
+    reviews: 89;
+},
   {
     reviews: 89},
   {'
@@ -549,8 +549,8 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     launchDate: '2024-09-30',
     customers: 18,
     rating: 4.9,
-    reviews: 45
-  },
+    reviews: 45;
+},
   {
     reviews: 45},
   {'
@@ -598,8 +598,8 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     launchDate: '2024-08-20',
     customers: 35,
     rating: 4.6,
-    reviews: 78
-  },
+    reviews: 78;
+},
   {
     reviews: 78},
   {'
@@ -647,6 +647,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     launchDate: '2024-07-25',
     customers: 52,
     rating: 4.5,
-    reviews: 96
-  }
+    reviews: 96;
+}
 ];

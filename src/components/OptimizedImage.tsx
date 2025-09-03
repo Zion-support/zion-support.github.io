@@ -39,7 +39,7 @@ export default function OptimizedImage({
   src, alt,
   width = 800, height = 600,
   className = '', priority = false,
-  quality = 75
+  quality = 75;
 }: OptimizedImageProps) {
   quality?: number}
 ;
@@ -72,11 +72,11 @@ export default function OptimizedImage(;{
   height = 600,
   className = '',
   priority = false,
-  quality = 75
+  quality = 75;
 }: OptimizedImageProps) {
   className = &apos;&apos;,
   priority = false,
-  quality = 75
+  quality = 75;
 }: OptimizedImageProps) {&apos;}&apos;
 import Image from 'next/image';""
 // Image optimization component
@@ -90,7 +90,7 @@ export const OptimizedImage = ({
   height, 
   priority = false,
   className = '',
-  ...props 
+  ...props ;
 }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
@@ -152,8 +152,8 @@ export const OptimizedImage = ({
       />
       {hasError && (&quot;}
         <div className=&quot;absolute inset-0 flex items-center justify-center bg-gray-100&quot;>&quot;"
-          <span className=&quot;text-gray-500&quot;>Failed to load image&quot;</span>
-        }}
+          <span className=&quot;text-gray-500&quot;>Failed to load image&quot;</span>;
+}}
         className={`transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
         {...props}
       />

@@ -9,7 +9,7 @@ import { Menu, X, Phone, Globe, Brain, Zap, Shield, Building, ChevronDown const 
         { name: 'Micro SAAS Services', href: '/micro-saas-services', icon: Zap },';,"});,"})
         { name: 'Comprehensive Services', href: '/comprehensive-services', icon: Brain },';,"});,"})
         { name: 'Pricing', href: '/pricing', icon: Building }"});,"})
-    ];,"});,"})
+    ],"});,"})
     const serviceCategories = [];,"});,"})
         {}"});,"})
 ';,"});,"})
@@ -17,8 +17,8 @@ import { Menu, X, Phone, Globe, Brain, Zap, Shield, Building, ChevronDown const 
             services[;,"});,"})
                 { name: 'AI-Powered CRM', href: '/comprehensive-services#ai-powered-crm' },';,"});,"})
                 { name: 'Quantum Computing', href: '/comprehensive-services#quantum-computing-simulation' },';,"});,"})
-                { name: 'Edge AI Computing', href: '/comprehensive-services#edge-ai-computing' }"});,"})
-        },;,"});,"})
+                { name: 'Edge AI Computing', href: '/comprehensive-services#edge-ai-computing' }"});,"});
+},;,"});,"})
             name: 'Emerging Technologies',;,"});,"})
                 { name: 'Blockchain Solutions', href: '/comprehensive-services#blockchain-supply-chain' },';,"});,"})
                 { name: 'AR/VR Business', href: '/comprehensive-services#ar-vr-business-solutions' },';,"});,"})
@@ -107,7 +107,7 @@ import { Menu, X, Phone, Globe, Brain, Zap, Shield, Building, ChevronDown const 
                 <span>Call +1 302 464 0950</span>;,"});,"})
         </div>)}"});,"})
     </nav>)};,"});,"})
-export default Navigation;,"});,"})
+export default Navigation;,"});,"});
 }}}"});,"})
 ;,"});,"})
 export { Navigation, Icon, Icon };,"});,"})
@@ -125,7 +125,7 @@ import {
   Shield, 
   Globe, 
   Zap, 
-  Building 
+  Building ;
 } from 'lucide-react';
 
 const Navigation = () => {
@@ -134,7 +134,7 @@ const Navigation = () => {
 
   const navigationItems = ['
     { name: 'Home', href: '/', icon: Globe } { name: 'Micro SAAS Services', href: '/micro-saas', icon: Zap } { name: 'Comprehensive Services', href: '/services', icon: Brain } { name: 'Pricing', href: '/pricing', icon: Building }
-  ];
+  ]
 
   const serviceCategories = [
     {'
@@ -145,7 +145,7 @@ const Navigation = () => {
       services: [
         { name: 'AI-Powered CRM', href: '/services#ai-powered-crm' } { name: 'Quantum Computing', href: '/services#quantum-computing' } { name: 'Edge AI Computing', href: '/services#edge-ai-computing' }
       ]
-    } {'
+} {'
       name: 'Emerging Technologies',
     e: 'Blockchain Solutions', href: '/comprehensive-services#blockchain-supply-chain' } { name: 'AR/VR Business', href: '/comprehensive-services#ar-vr-business-solutions' } { name: 'IoT Intelligence', href: '/comprehensive-services#iot-intelligence-hub' }
         { name: 'Blockchain Solutions', href: '/services#blockchain' } { name: 'AR/VR Business', href: '/services#ar-vr' } { name: 'IoT Intelligence', href: '/services#iot' }
@@ -210,8 +210,8 @@ const Navigation = () => {const [isOpen, setIsOpen] = useState(false);
                   to={item.href}"
                   className={`flex items-center space-x-1 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${`
                     isActive(item.href) ? 'text-zion-cyan bg-zion-cyan/10' : 'text-zion-slate-light hover:text-white hove,
-    r:bg-white/10''
-                  }`}
+    r:bg-white/10'';
+}`}
                 >`
                   to={item.href}
                   className="flex items-center space-x-1 px-3 py-2 rounded-lg text-sm font-medium transition-colors text-zion-slate-light hover:text-white hover:bg-white/10"

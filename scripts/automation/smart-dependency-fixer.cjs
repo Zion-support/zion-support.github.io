@@ -168,8 +168,8 @@ async function runSmartDependencyFixer() {
     issues.fixed = fixedIssues;
 
     // Step 6: Run npm install to ensure everything is properly installed;
-    console.log(`🔧 Step 6: Running npm install to ensure proper installation...'
-    } catch (error) {;
+    console.log(`🔧 Step 6: Running npm install to ensure proper installation...';
+} catch (error) {;
       console.log('✅ No missing packages found');
     }
 ;
@@ -339,8 +339,8 @@ async function autoFixDependencyIssues(issues) {;
         type: 'missing',;
         message: 'Reinstalled all packages',;
       });
-    } catch (error) {  
-    } catch (error) {;
+    } catch (error) {  ;
+} catch (error) {;
       console.log('⚠️  Could not install missing packages');
       }
   }
@@ -357,8 +357,8 @@ async function autoFixDependencyIssues(issues) {;
         type: 'peerDependencies',;
         message: 'Fixed peer dependency issues with legacy flag',;
       });
-    } catch (error) {  
-    } catch (error) {;
+    } catch (error) {  ;
+} catch (error) {;
       console.log('⚠️  Could not fix peer dependency issues');
       }
   }
@@ -398,8 +398,8 @@ async function verifyDependencyFixes(issues) {;
     }
 
   // Check for dependency conflicts again;
-  try {
-  } catch (error) {;
+  try {;
+} catch (error) {;
     console.log('✅ No security vulnerabilities found');
   }
 ;
@@ -445,8 +445,8 @@ if (require.main === module) {
 
   // Set up continuous monitoring;
   setInterval(runSmartDependencyFixer, AUTOMATION_INTERVAL);
-  console.log(🔄 Smart dependency fixer will run every ${AUTOMATION_INTERVAL / 3600000} hours`
-  } catch (error) {;
+  console.log(🔄 Smart dependency fixer will run every ${AUTOMATION_INTERVAL / 3600000} hours`;
+} catch (error) {;
     console.log('✅ No missing packages found');
   }
 }

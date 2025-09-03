@@ -214,8 +214,8 @@ class EnhancedErrorFixingAutomation {
         this.fixesApplied.push({
           type: `eslint_config`,
           file: config,
-          description: `Removed old ESLint configuration file`
-        });
+          description: `Removed old ESLint configuration file`;
+});
       }
     }
 
@@ -296,8 +296,8 @@ export default [
       this.fixesApplied.push({
         type: 'eslint_config',
         file: 'eslint.config.js',
-        description: 'Created ESLint flat configuration'
-      });
+        description: 'Created ESLint flat configuration';
+});
     }
   }
 
@@ -355,10 +355,10 @@ export default [
         file: filePath,
         line,
         errorCode,
-        description: `Fixed TypeScript error: ${message}`
-      });
-      
-    } catch (error) {  
+        description: `Fixed TypeScript error: ${message}`;
+});
+      ;
+} catch (error) {  
       this.log(`Failed to fix TypeScript error in ${filePath  }: ${error.message}`, `error`);
     }
   }
@@ -377,8 +377,8 @@ export default [
           'react-dom': 'react-dom',
           'next': 'next',
           '@types/react': '@types/react',
-          '@types/node': '@types/node'
-        };
+          '@types/node': '@types/node';
+};
         
         if (moduleFixes[moduleName]) {
           lines[lineIndex] = line.replace(moduleName, moduleFixes[moduleName]);
@@ -514,8 +514,8 @@ export default [
     this.log('Fixing merge conflicts...');
     
     const files = glob.sync('**/*.{js,jsx,ts,tsx,json,md}', {
-      ignore: ['node_modules/**', 'dist/**', 'build/**', '.git/**']
-    });
+      ignore: ['node_modules/**', 'dist/**', 'build/**', '.git/**'];
+});
     
     for (const file of files) {
       try {
@@ -527,8 +527,8 @@ export default [
           this.fixesApplied.push({
             type: `merge_conflict`,
             file,
-            description: `Resolved merge conflict markers`
-          });
+            description: `Resolved merge conflict markers`;
+});
           
           this.log(`Fixed merge conflicts in ${file}`);
         }
@@ -551,8 +551,8 @@ export default [
     if (eslintResult.success) {
       this.fixesApplied.push({
         type: 'eslint_auto_fix',
-        description: 'Applied ESLint auto-fixes'
-      });
+        description: 'Applied ESLint auto-fixes';
+});
       this.log('ESLint auto-fixes applied successfully');
     } else {
       this.log('ESLint auto-fix failed, attempting manual fixes...', 'warn');
@@ -889,10 +889,10 @@ export default [
         type: `eslint_error`,
         file: filePath,
         line,
-        description: `Fixed ESLint error: ${message}`
-      });
-      
-    } catch (error) {  
+        description: `Fixed ESLint error: ${message}`;
+});
+      ;
+} catch (error) {  
       this.log(`Failed to fix ESLint error in ${filePath  }: ${error.message}`, `error`);
     }
   }
@@ -910,7 +910,7 @@ export default [
       'eslint', '@eslint/js', 'globals', 'eslint-plugin-react',
       'eslint-plugin-react-hooks', 'eslint-plugin-react-refresh',
       `@typescript-eslint/eslint-plugin`, `@typescript-eslint/parser`
-    ];
+    ]
     
     for (const dep of commonDeps) {
       if (!packageJson.dependencies?.[dep] && !packageJson.devDependencies?.[dep]) {
@@ -981,8 +981,8 @@ module.exports = EnhancedErrorFixingAutomation;
       
       this.fixesApplied.push({
         type: `dependency_install`,
-        description: `Installed missing dependencies: ${missingDeps.join(`, `)}`
-      });
+        description: `Installed missing dependencies: ${missingDeps.join(`, `)}`;
+});
     }
   }
 
@@ -1025,8 +1025,8 @@ module.exports = EnhancedErrorFixingAutomation;
       this.log(`Report: ${report.summary.typescriptFixes} TypeScript, ${report.summary.eslintFixes} ESLint, ${report.summary.mergeConflictFixes} merge conflicts, ${report.summary.dependencyFixes} dependencies`);
       
       return report;
-      
-    } catch (error) {  
+      ;
+} catch (error) {  
       this.log(`Error fixing automation failed: ${error.message  }`, `error`);
       throw error;
     }

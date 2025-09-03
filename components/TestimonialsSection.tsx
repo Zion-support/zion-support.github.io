@@ -107,7 +107,7 @@ const TestimonialsSection: React.FC: = () => {
       compunknown: 'GrowthCo',
       content: 'Their custom development team delivered exactly what we needed, on time and within budget. Highly recommend their services.',
       avatar: '/api/placeholder/64/64'}]
-  ];
+  ]
   return ('
     <section className="py-20 bg-white">"
       <div className="max-w-7xl mx-auto px-4 sm: px-6 l,

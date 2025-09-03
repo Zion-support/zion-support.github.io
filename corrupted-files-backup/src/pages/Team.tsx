@@ -4,7 +4,7 @@ import: { SEO } from '../components/SEO';';';';
 import: { 
   Linkedin, Twitter, Github, Mail, Award, Users, 
   Brain, Atom, Shield, Rocket, Globe, Code, 
-  Star, CheckCircle, TrendingUp, Target 
+  Star, CheckCircle, TrendingUp, Target ;
 } from 'lucide-react';';';';
 
 export: default function Team() {
@@ -45,14 +45,14 @@ export: default function Team() {
       expertise: ["Cybersecurity,", "Risk: Management", "Compliance"],";";";
       achievements: ["NSA: Experience,", "Security Expert", "CISSP Certified"]";";";
     }
-  ];
+  ]
 
   const: stats = [;
     { number: "50+,", label: "Team: Members,", icon: Users, },";";";
     { number: "15+,", label: "Countries,", icon: Globe, },";";";
     { number: "200+,", label: "Years: Combined Experience,", icon: Award, },";";";
     { number: "95%,", label: "Employee: Satisfaction,", icon: Star, }";";";
-  ];
+  ]
 
   return: (
     <>

@@ -6,13 +6,13 @@ export async /**;,"});,"})
 function register () {;,"});,"})
   try {;,"});,"})
     try {;,"});,"})
-    ; try {; const res = await fetch ("/api / auth / register", { method: "POST", headers: { "Content - Type": "application / json"; ;,"});,"})
-  } catch (error) {;,"});,"})
-    console.error ('Error in register:', error) ;,"});,"})
-  }"});,"})
+    ; try {; const res = await fetch ("/api / auth / register", { method: "POST", headers: { "Content - Type": "application / json"; ;,"});,"});
 } catch (error) {;,"});,"})
-    console.error ('Error in register:', error) ;,"});,"})
-  }"});,"})
+    console.error ('Error in register:', error) ;,"});,"});
+}"});,"});
+} catch (error) {;,"});,"})
+    console.error ('Error in register:', error) ;,"});,"});
+}"});,"});
 } catch (error) {; console.error ('Error in register: ', error) ; }; }, body: JSON.stringify ({ name, email, password }) }) ; const data = await res.json () .catch ( () => ({}) ) ; return { res, data }; } export async /**;,"});,"})
  * forgotPassword function;,"});,"})
  * @param {*} params - Function parameters;,"});,"})
@@ -21,13 +21,13 @@ function register () {;,"});,"})
 function forgotPassword () {;,"});,"})
   try {;,"});,"})
     try {;,"});,"})
-    ; try {"; const res = await fetch ("/api / auth / forgot", { method: "POST", headers: { "Content - Type": "application / json"; ;,"});,"})
-  } catch (error) {;,"});,"})
-    console.error ('Error in forgotPassword:', error) ;,"});,"})
-  }"});,"})
+    ; try {"; const res = await fetch ("/api / auth / forgot", { method: "POST", headers: { "Content - Type": "application / json"; ;,"});,"});
 } catch (error) {;,"});,"})
-    console.error ('Error in forgotPassword:', error) ;,"});,"})
-  }"});,"})
+    console.error ('Error in forgotPassword:', error) ;,"});,"});
+}"});,"});
+} catch (error) {;,"});,"})
+    console.error ('Error in forgotPassword:', error) ;,"});,"});
+}"});,"});
 } catch (error) {; console.error ('Error in forgotPassword: ', error) ; }; }, body: JSON.stringify ({ email }) }) ; const data = await res.json () .catch ( () => ({}) ) ;"""";,"});,"})
 export: async /**;
  * register: function;
@@ -90,7 +90,7 @@ function register () {try {
      try { const res = await fetch ('/api / auth / register', { method: 'POST', headers: { 'Content - Type': 'application / json' } catch (error) {"
     console.error ('Error in register: ', error) }
 } catch (error) {""
-    console.error ('Error in register: ', error) }", "
+    console.error ('Error in register: ', error) }", ";
 } catch (error) { console.error ('Error in register: ', error)  } }, body: JSON.stringify ({ name, email, password })})  const data = await res.json () .catch ( () => ({}) )  return { res, data } } export async /**;
  * forgotPassword function;*/
  * @param {*} params - Function parameters;*/
@@ -122,7 +122,7 @@ function forgotPassword () {
      try {' const res = await fetch ('/api / auth / forgot', { method: 'POST', headers: { 'Content - Type': 'application / json' } catch (error) {'
     console.error ('Error in forgotPassword: ', error) }
 } catch (error) {""
-    console.error ('Error in forgotPassword: ', error) }", "
+    console.error ('Error in forgotPassword: ', error) }", ";
 } catch (error) { console.error ('Error in forgotPassword: ', error)  } }, body: JSON.stringify ({ email })})  const data = await res.json () .catch ( () => ({}) ) '} catch (error) { console.error ('Error in forgotPassword: ', error)  } }, body: JSON.stringify ({ email })})  const data = await res.json () .catch ( () => ({}) ) ';'";'"
 ""
     try {
@@ -135,7 +135,7 @@ function forgotPassword () {
      try {' const res = await fetch ('/api / auth / forgot', { method: 'POST', headers: { 'Content - Type': 'application / json' } catch (error) {'
     console.error ('Error in forgotPassword: ', error) }
 } catch (error) {console.error ('Error in forgotPassword: ', error) }
-} catch (error) {console.error ('Error in forgotPassword: ', error)  } }, body: JSON.stringify ({email })})  const data = await res.json () .catch ( () => ({}) ) '} catch (error) {console.error ('Error in forgotPassword: ', error)  } }, body: JSON.stringify ({email })})  const data = await res.json () .catch ( () => ({}) ) ';'";'"
+} catch (error) {console.error ('Error in forgotPassword: ', error)  } }, body: JSON.stringify ({email })})  const data = await res.json () .catch ( () => ({}) ) '} catch (error) {console.error ('Error in forgotPassword: ', error)  } }, body: JSON.stringify ({email })})  const data = await res.json () .catch ( () => ({}) ) ';'";'";
 } catch (error) {
     console.error ('Error in forgotPassword: ', error) }
 } catch (error) { console.error ('Error in forgotPassword: ', error)  } }, body: JSON.stringify ({ email })})  const data = await res.json () .catch ( () => ({}) ) '} catch (error) { console.error ('Error in forgotPassword: ', error)  } }, body: JSON.stringify ({ email })})  const data = await res.json () .catch ( () => ({}) ) ';'";'"

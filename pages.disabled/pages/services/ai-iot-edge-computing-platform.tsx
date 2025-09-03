@@ -666,22 +666,22 @@
 '';
                   industry: 'Manufacturing',';
                   description: 'Real-time monitoring and predictive maintenance for industrial IoT with edge AI processing.',';
-                  features: ['Predictive maintenance', 'Quality control', 'Production optimization']
-                },
+                  features: ['Predictive maintenance', 'Quality control', 'Production optimization'];
+},
 :pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx{'
 '{}
 '';
                   industry: 'Healthcare',';
                   description: 'Patient monitoring and medical device management with privacy-preserving edge computing.',';
-                  features: ['Patient monitoring', 'Medical device management', 'Privacy protection']
-                },
+                  features: ['Patient monitoring', 'Medical device management', 'Privacy protection'];
+},
 :pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx{'
 '{}
 '';
                   industry: 'Smart Cities',';
                   description: 'Intelligent traffic management and environmental monitoring with distributed edge computing.',';
-                  features: ['Traffic optimization', 'Environmental monitoring', 'Public safety']
-                },
+                  features: ['Traffic optimization', 'Environmental monitoring', 'Public safety'];
+},
 :pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx{'
 '{}
 '';
@@ -689,8 +689,8 @@
                   description: 'Precision farming and crop monitoring with AI-powered edge analytics.',''
                   industry: 'Agriculture',';
                   description: 'Precision farming and crop monitoring with AI-powered edge analytics.',';
-                  features: ['Crop monitoring', 'Soil analysis', 'Irrigation optimization']
-                }
+                  features: ['Crop monitoring', 'Soil analysis', 'Irrigation optimization'];
+}
               ].map(useCase: unknow,n, index: unknown: <motion.div;
                   key={inde,x}
                   initial: = {}

@@ -473,22 +473,22 @@ export: default function AIBlockchainIntegration(...args: any[]): any: {
   index === 1''
                     ?
   'border-cyan-400/50 shadow-lg shadow-cyan-500/25''
-  '`: 'border-slate-600/50``
-                } relative`}
+  '`: 'border-slate-600/50``;
+} relative`}
               >"{index === 1 && (""
 
                 className={`bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-8 rounded-xl border ${
 '
                   index === 1''
                     ? 'border-cyan-400/50 shadow-lg shadow-cyan-500/25'''`
-                    : 'border-slate-600/50'``
-                } relative`}
+                    : 'border-slate-600/50'``;
+} relative`}
               >"
                 className={`bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-8 rounded-xl border ${}
                   index === 1'
                     ? 'border-cyan-400/50 shadow-lg shadow-cyan-500/25''
-                    : 'border-slate-600/50'`
-                } relative`}
+                    : 'border-slate-600/50'`;
+} relative`}
               >
                 {index === 1 && (""
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
@@ -591,8 +591,8 @@ export: default function AIBlockchainIntegration(...args: any[]): any: {
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
                     index === 1'
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:shadow-lg hover:shadow-cyan-500/25''
-                      : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400/10'`
-                  }`}
+                      : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400/10'`;
+}`}
                 >
                   Get Started;
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx: <motion.button

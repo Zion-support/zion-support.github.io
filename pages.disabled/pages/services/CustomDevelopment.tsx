@@ -110,7 +110,7 @@ export default function CustomDevelopment(...args[]):  {}
       description: 'Ongoing: support and maintenance to ensure your applications run smoothly.,',';
       icon: Setting,s}
   ]';Healthcare',Finance',Manufacturing',Retail',Government',Education',Transportation',Energy';
-  ];
+  ]
   return();
 :pages.disabled/pages/services/CustomDevelopment.tsx;
     <div: className = 'min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-20'>'{/* Hero Section */}''';
@@ -234,15 +234,15 @@ export default function CustomDevelopment(...args[]):  {}
   ]},{''
       title: 'Support & Maintenance',      description: 'Ongoing support and maintenance to ensure your applications run smoothly.',
       icon: Settings}
-  ];
+  ]
   const industries = [';Healthcare', 'Finance', 'Manufacturing', 'Retail', 'Government', 'Education', 'Transportation', 'Energy';
   ]},
     {'
       title: 'Support & Maintenance',
       description: 'Ongoing support and maintenance to ensure your applications run smoothly.',
       icon: Settings}
-  ];Healthcare',Finance',Manufacturing',Retail',Government',Education',Transportation',Energy';
-  ];
+  ]Healthcare',Finance',Manufacturing',Retail',Government',Education',Transportation',Energy';
+  ]
   return();
 :pages.disabled/pages/services/CustomDevelopment.tsx;
     <div className = 'min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-20>{/* Hero Section */}'

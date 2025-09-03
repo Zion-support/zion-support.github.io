@@ -38,7 +38,7 @@ function fixAllRemainingSemicolons(filePath) {
       // Fix any remaining semicolons in JSX;
       { pattern: /;\s*>/g, replacement: '>' },
       { pattern: /;\s*\/>/g, replacement: '/>' },
-    ];
+    ]
 
     fixes.forEach(fix => {
       const newContent = content.replace(fix.pattern, fix.replacement);

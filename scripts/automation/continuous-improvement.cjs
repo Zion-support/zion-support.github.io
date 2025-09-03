@@ -71,8 +71,8 @@ async function runContinuousImprovement() {
     } catch (error) {  
       console.log('⚠️  Tests failed but continuing...');
       }
-
-    } catch (error) {;
+;
+} catch (error) {;
       console.log('⚠️  Tests failed but continuing...');
     }
 ;
@@ -83,8 +83,8 @@ async function runContinuousImprovement() {
     } catch (error) {  
       console.log('✅ All dependencies are up to date');
       }
-
-    } catch (error) {;
+;
+} catch (error) {;
       console.log('✅ All dependencies are up to date');
     }
 ;
@@ -96,8 +96,8 @@ async function runContinuousImprovement() {
     } catch (error) {  
       console.log('⚠️  Build failed but continuing...');
       }
-
-    } catch (error) {;
+;
+} catch (error) {;
       console.log('⚠️  Build failed but continuing...');
     }
 ;
@@ -147,8 +147,8 @@ async function runContinuous() {
 }
 
 // Handle graceful shutdown;
-process.on(`SIGINT`, () => {
-    } catch (error) {;
+process.on(`SIGINT`, () => {;
+} catch (error) {;
       console.log('⚠️  Bundle analysis failed but continuing...');
     }
 ;

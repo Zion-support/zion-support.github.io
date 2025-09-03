@@ -73,7 +73,7 @@ export default function EnhancedFooter() {
     { name: 'Twitter', icon: Twitter, href: 'https://twitter.com/ziontechgroup' },
     { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup' },
     { name: 'Instagram', icon: Instagram, href: 'https://instagram.com/ziontechgroup' }
-  ];
+  ]
 
   return (
     <footer className="bg-gray-900 text-white">

@@ -41,6 +41,6 @@ describe('SpaceTech', () => {"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
 "
     render(<SpaceTech /" >)
-    // Add more specific tests here
+    // Add more specific tests here;
 });
 })

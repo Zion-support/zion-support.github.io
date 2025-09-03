@@ -23,7 +23,7 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({'
   title = 'Zion Tech Group - Leading Technology Solutions Provider', description = 'Transform your business with cutting-edge AI, IT, and Micro SaaS solutions. Expert team, proven results, 24/7 support.',
   keywords = 'AI services, IT solutions, Micro SaaS, cloud computing, cybersecurity, business automation, technology consulting', canonical,
   ogImage = 'https: //ziontechgroup.com/og-image.jpg', ogType = 'website',
-  twitterCard = 'summary_large_image', structuredData
+  twitterCard = 'summary_large_image', structuredData;
 }) => {
   useEffect(() => {'
     // Update page title dynamically""
@@ -33,7 +33,7 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({'
 export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({title = 'Zion Tech Group - Leading Technology Solutions Provider', description = 'Transform your business with cutting-edge AI, IT, and Micro SaaS solutions. Expert team, proven results, 24/7 support.',
   keywords = 'AI services, IT solutions, Micro SaaS, cloud computing, cybersecurity, business automation, technology consulting', canonical,
   ogImage = 'https: //ziontechgroup.com/og-image.jpg', ogType = 'website',
-  twitterCard = 'summary_large_image', structuredData
+  twitterCard = 'summary_large_image', structuredData;
 }) => {useEffect(() => {
     // Update page title dynamically"
     if (typeof document !== 'undefined') {
@@ -87,7 +87,7 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title = 'Zion Tech Group - Leading Technology Solutions Provider', description = 'Transform your business with cutting-edge AI, IT, and Micro SaaS solutions. Expert team, proven results, 24/7 support.',
   keywords = 'AI services, IT solutions, Micro SaaS, cloud computing, cybersecurity, business automation, technology consulting', canonical,
   ogImage = 'https: //ziontechgroup.com/og-image.jpg', ogType = 'website',
-  twitterCard = 'summary_large_image', structuredData
+  twitterCard = 'summary_large_image', structuredData;
 }) => {
   useEffect(() => {
     // Update page title dynamically
@@ -103,8 +103,8 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
           if (entry.entryType === &apos;navigation&apos;) {
             console.log(&apos;Page load time:&apos;, entry.duration);
           if (entry.entryType === 'navigation') {
-            // Page load time logged (removed console.log for production)
-          }
+            // Page load time logged (removed console.log for production);
+}
         });
       });
       observer.observe({ entryTypes: ['navigation']   });
@@ -118,12 +118,12 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     "address": {"
       "@type": "PostalAddress", "streetAddress": "364 E Main St STE 1008","
       "addressLocality": "Middletown", "addressRegion": "DE","
-      "postalCode": "19709", "addressCountry": "US"
-    },"
+      "postalCode": "19709", "addressCountry": "US";
+},"
     "contactPoint": {"
       "@type": "ContactPoint", "telephone": "+1-302-464-0950","
-      "contactType": "customer service", "email": "kleber@ziontechgroup.com"
-    },"
+      "contactType": "customer service", "email": "kleber@ziontechgroup.com";
+},"
     "sameAs": ["
       "https://ziontechgroup.com"
   const defaultStructuredData = {"@context": "https: //schema.org", "@type": "Organization",
@@ -159,16 +159,16 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     "address": {
       "@type": "PostalAddress", "streetAddress": "364 E Main St STE 1008",
       "addressLocality": "Middletown", "addressRegion": "DE",
-      "postalCode": "19709", "addressCountry": "US"
-    },
+      "postalCode": "19709", "addressCountry": "US";
+},
     "contactPoint": {"@type": "ContactPoint", "telephone": "+1-302-464-0950",
-      "contactType": "customer service", "email": "kleber@ziontechgroup.com"
-    },
+      "contactType": "customer service", "email": "kleber@ziontechgroup.com";
+},
     "sameAs": ["https: //ziontechgroup.com"
     &quot;sameAs&quot;: [
       &quot;https://ziontechgroup.com&quot;
     ]
-  }
+}
   };
 
   return (&quot;
@@ -309,12 +309,12 @@ export default SEOEnhancer;""
       {/* Structured Data */}&quot;
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData || defaultStructuredData)
-          }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData || defaultStructuredData);
+}}
         type=&quot;application/ld+json&quot;
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData || defaultStructuredData)
-        }}
+          __html: JSON.stringify(structuredData || defaultStructuredData);
+}}
       />
       
       {/* Performance hints */}&quot;

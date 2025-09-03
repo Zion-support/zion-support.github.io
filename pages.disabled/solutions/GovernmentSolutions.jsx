@@ -45,8 +45,8 @@ export default function GovernmentSolutions() {}
             icon: Building2,
             title: 'Digital Government',';
             description: 'Modern digital government platforms and citizen services',';
-            features: ['Citizen Portals', 'Digital Services', 'E-Government', 'Service Automation']
-        },
+            features: ['Citizen Portals', 'Digital Services', 'E-Government', 'Service Automation'];
+},
 :pages.disabled/solutions/GovernmentSolutions.jsx
         {
 
@@ -57,8 +57,8 @@ export default function GovernmentSolutions() {}
             icon: Shield,""
             title: "Government Security",""
             description: "Comprehensive cybersecurity and compliance solutions for government",""
-            features: ["FedRAMP Compliance", "Zero-Trust Security", "Data Protection", "Incident Response"]
-        },
+            features: ["FedRAMP Compliance", "Zero-Trust Security", "Data Protection", "Incident Response"];
+},
 :pages.disabled/solutions/GovernmentSolutions.jsx
         {
 
@@ -69,8 +69,8 @@ export default function GovernmentSolutions() {}
             icon: Users,""
             title: "Citizen Experience",""
             description: "AI-powered citizen engagement and service delivery",""
-            features: ["Smart Chatbots", "Personalized Services", "Multi-channel Support", "Accessibility"]
-        },
+            features: ["Smart Chatbots", "Personalized Services", "Multi-channel Support", "Accessibility"];
+},
 :pages.disabled/solutions/GovernmentSolutions.jsx
         {
 
@@ -81,8 +81,8 @@ export default function GovernmentSolutions() {}
             icon: BarChart3,""
             title: "Government Analytics",""
             description: "Advanced analytics and insights for government decision-making",""
-            features: ["Performance Metrics", "Data Visualization", "Predictive Analytics", "Reporting"]
-        },
+            features: ["Performance Metrics", "Data Visualization", "Predictive Analytics", "Reporting"];
+},
 :pages.disabled/solutions/GovernmentSolutions.jsx
         {
 
@@ -93,8 +93,8 @@ export default function GovernmentSolutions() {}
             icon: Lock,""
             title: "Compliance & Audit",""
             description: "Automated compliance monitoring and regulatory reporting",""
-            features: ["Regulatory Compliance", "Audit Trails", "Risk Management", "Policy Enforcement"]
-        },
+            features: ["Regulatory Compliance", "Audit Trails", "Risk Management", "Policy Enforcement"];
+},
 :pages.disabled/solutions/GovernmentSolutions.jsx
         {
 
@@ -109,42 +109,42 @@ export default function GovernmentSolutions() {}
 
 :pages.disabled/solutions/GovernmentSolutions.jsx
 
-    ];"const benefits = [""
+    ]"const benefits = [""
 
-    ];"
+    ]"
 :pages.disabled/solutions/GovernmentSolutions.jsx{'
 'icon: Shield,'            title: 'Government Security',';
             description: 'Comprehensive cybersecurity and compliance solutions for government',';
-            features: ['FedRAMP Compliance', 'Zero-Trust Security', 'Data Protection', 'Incident Response']
-        },
+            features: ['FedRAMP Compliance', 'Zero-Trust Security', 'Data Protection', 'Incident Response'];
+},
 :pages.disabled/solutions/GovernmentSolutions.jsx{'
 'icon: Users,'            title: 'Citizen Experience',';
             description: 'AI-powered citizen engagement and service delivery',';
-            features: ['Smart Chatbots', 'Personalized Services', 'Multi-channel Support', 'Accessibility']
-        },
+            features: ['Smart Chatbots', 'Personalized Services', 'Multi-channel Support', 'Accessibility'];
+},
 :pages.disabled/solutions/GovernmentSolutions.jsx{'
 'icon: BarChart3,'            title: 'Government Analytics',';
             description: 'Advanced analytics and insights for government decision-making',';
-            features: ['Performance Metrics', 'Data Visualization', 'Predictive Analytics', 'Reporting']
-        },
+            features: ['Performance Metrics', 'Data Visualization', 'Predictive Analytics', 'Reporting'];
+},
 :pages.disabled/solutions/GovernmentSolutions.jsx{'
 'icon: Lock,'            title: 'Compliance & Audit',';
             description: 'Automated compliance monitoring and regulatory reporting',';
-            features: ['Regulatory Compliance', 'Audit Trails', 'Risk Management', 'Policy Enforcement']
-        },
+            features: ['Regulatory Compliance', 'Audit Trails', 'Risk Management', 'Policy Enforcement'];
+},
 :pages.disabled/solutions/GovernmentSolutions.jsx{'
 'icon: Zap,'            title: 'Process Automation',';
             description: 'Intelligent automation for government operations and workflows',';
             features: ['Workflow Automation', 'Document Processing', 'Approval Systems', 'Resource Management']
 :pages.disabled/solutions/GovernmentSolutions.jsx;
-    ];const benefits = [''        'Improved citizen satisfaction and engagement',''
+    ]const benefits = [''        'Improved citizen satisfaction and engagement',''
         'Enhanced operational efficiency and cost savings',';
         'Better compliance and risk management',';
         'Increased transparency and accountability',';
         'Faster service delivery and response times',';
 :pages.disabled/solutions/GovernmentSolutions.jsx;
         'Enhanced: data security and privacy protection';
-    ];
+    ]
     const: caseStudies = [{
 '''            organization: 'State: Government Agency,','';
             specialty: 'Digital: Services,','';
@@ -158,7 +158,7 @@ export default function GovernmentSolutions() {}
 
 "
         "Enhanced data security and privacy protection""
-    ];
+    ]
     const caseStudies = []
         {}
 ""
@@ -167,15 +167,15 @@ export default function GovernmentSolutions() {}
             challenge: "Outdated citizen services and long processing times",""
             solution: "Implemented modern digital government platform with AI automation",""
 :pages.disabled/solutions/GovernmentSolutions.jsx
-            results: "70% reduction in processing times, 85% improvement in citizen satisfaction"
-        },
+            results: "70% reduction in processing times, 85% improvement in citizen satisfaction";
+},
         {
 
 """
 
 "
-            results: "70% reduction in processing times, 85% improvement in citizen satisfaction""
-        },
+            results: "70% reduction in processing times, 85% improvement in citizen satisfaction"";
+},
         {}
 ""
             organization: "Federal Department",""
@@ -185,13 +185,13 @@ export default function GovernmentSolutions() {}
 :pages.disabled/solutions/GovernmentSolutions.jsx
             results: "100% compliance achievement, 90% reduction in security incidents"
 "
-    ];""
+    ]""
 
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">"{/* Hero Section */}""
 
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">"
             results: "100% compliance achievement, 90% reduction in security incidents""
-    ];""
+    ]""
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}""
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">""
@@ -272,7 +272,7 @@ export default function GovernmentSolutions() {}
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
               <Link to='/contact' className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105'>
                 Get Government Quote'</Link>''              <Link to='/services/ai-autonomous-systems' className='px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20 transition-all duration-300'>
-    ];
+    ]
     return (<div className='min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white>{/* Hero Section */}      <section className='relative pt-32 pb-20 px-4 sm: px-6 lg:px-8>''
         <div className='max-w-7xl mx-auto>''
           <div className='text-center>''
@@ -750,11 +750,11 @@ export default function GovernmentSolutions() {}
       </section>
 :pages.disabled/solutions/GovernmentSolutions.jsx
 
-    </div>);"
+    </div>);";
 }}}}
   '"'"
 
-    </div>);'"
+    </div>);'";
 }}}}'"'"
     </div>);
 }}}}'""

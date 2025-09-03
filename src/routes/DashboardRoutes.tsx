@@ -10,8 +10,8 @@ const Dashboard = lazy(() => import('../pages/Dashboard'));'const ClientDashboar
   return (
     <Suspense fallback={<LoadingSpinner />}><Routes>
         <Route path="/dashboard" element={"          <ProtectedRoute>"            <Dashboard />
-          </ProtectedRoute>
-        } />
+          </ProtectedRoute>;
+} />
         <Route path="/client-dashboard" element={"          <ProtectedRoute>"            <ClientDashboard />
         <Route path="/talent-dashboard" element={"          <ProtectedRoute>"            <TalentDashboard />
         <Route path="/creator-dashboard" element={"          <ProtectedRoute>"            <CreatorDashboard />
@@ -43,8 +43,8 @@ const DashboardRoutes: React.FC = () => {,"});,"})
         <Route path="/dashboard" element={,"});,"})
           <ProtectedRoute>;,"});,"})
             <Dashboard />;,"});,"})
-          </ProtectedRoute>;,"});,"})
-        } />;,"});,"})
+          </ProtectedRoute>;,"});,"});
+} />;,"});,"})
         <Route path="/client-dashboard" element={,"});,"})
             <ClientDashboard />;,"});,"})
         <Route path="/talent-dashboard" element={,"});,"})
@@ -61,7 +61,7 @@ const DashboardRoutes: React.FC = () => {,"});,"})
             <ProjectRoom />;,"});,"})
       </Routes>;,"});,"})
     </Suspense>;,"});,"})
-  );,"});,"})
+  );,"});,"});
 };,"});,"})
 export default DashboardRoutes;,"});,"})
 import { Route, Routes    } from 'react-router-dom';
@@ -92,7 +92,7 @@ const DashboardRoutes: React.FC = () => {'
         <Route path='/dashboard' element={'
           <ProtectedRoute" >"
             <Dashboard /" >
-          </ProtectedRoute>,"
+          </ProtectedRoute>,";
 } />""
         <Route path='/client-dashboard' element={'
             <ClientDashboard /" >
@@ -233,6 +233,6 @@ const DashboardRoutes: React.FC = () => {""
     <;</Suspense>
   )}
 ;"
-""
+"";
 }
 "

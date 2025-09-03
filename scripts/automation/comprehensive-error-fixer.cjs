@@ -85,7 +85,7 @@ class ComprehensiveErrorFixer {;
       'src/context/auth/AuthContext.tsx',;
       'src/context/auth/profileMapper.ts',;
       'src/context/auth/useAuthEventHandlers.ts',;
-    ];
+    ]
 ;
     for (const filePath of filesToFix) {;
       if (fs.existsSync(filePath)) {;
@@ -154,7 +154,7 @@ class ComprehensiveErrorFixer {;
       'src/components/home/ServicesShowcase.jsx',;
       'src/layout/PrimaryNav.jsx',;
       'src/legal/TermsOfService.tsx',;
-    ];
+    ]
 ;
     for (const filePath of filesToFix) {;
       if (fs.existsSync(filePath)) {;
@@ -205,8 +205,8 @@ class ComprehensiveErrorFixer {;
     try {
       // Run ESLint auto-fix;
       const result = execSync(`npx eslint . --ext .js,.jsx,.ts,.tsx --fix 2>&1`, { 
-        encoding: `utf8` 
-      });
+        encoding: `utf8` ;
+});
       
       if (result.includes(`Fixed`)) {
 ;
@@ -294,7 +294,7 @@ class ComprehensiveErrorFixer {;
       'src/hooks/usePerformance.jsx',;
       'src/utils/productionLogger.js',;
       'src/utils/safeStorage.js',;
-    ];
+    ]
 ;
     for (const filePath of filesToFix) {;
       if (fs.existsSync(filePath)) {;
@@ -422,8 +422,8 @@ class ComprehensiveErrorFixer {;
         await this.generateErrorReport();
         
         this.log(`Comprehensive error fixing completed successfully!`);
-        
-      } catch (error) {  
+        ;
+} catch (error) {  
         this.log(`Error during automation: ${error.message  }`);;
         this.errorReport.errorsFound.push({
           type: `automation_error`,
@@ -589,8 +589,8 @@ class ComprehensiveErrorFixer {;
       } else {
         this.log(`Some checks failed, but errors were fixed`);
       }
-      
-    } catch (error) {  
+      ;
+} catch (error) {  
       this.log(`Error in Comprehensive Error Fixer: ${error.message  }`);;
     }
   }
@@ -701,8 +701,8 @@ class ComprehensiveErrorFixer {;
     try {;
       execSync('npx tsc --noEmit', { stdio: 'pipe' });
       return true;
-    } catch (error) {  
-    } catch (error) {;
+    } catch (error) {  ;
+} catch (error) {;
       this.log('Type check failed');
       return false;
       }
@@ -713,8 +713,8 @@ class ComprehensiveErrorFixer {;
     try {;
       execSync('npx eslint . --fix', { stdio: 'pipe' });
       return true;
-    } catch (error) {  
-    } catch (error) {;
+    } catch (error) {  ;
+} catch (error) {;
       this.log('Lint failed');
       return false;
       }

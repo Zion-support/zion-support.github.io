@@ -20,7 +20,7 @@ class AutomationSyntaxFixer {
       'scripts/**/*.js',
       'scripts/**/*.cjs',
       'scripts/**/*.mjs'
-    ];
+    ]
 
     const allScripts = [];
     for (const pattern of patterns) {
@@ -54,7 +54,7 @@ class AutomationSyntaxFixer {
       
       // Fix malformed object properties
       { pattern: /(\w+):\s*([^,}]+)(?=\s*[,}])/g, replacement: '$1: $2' },
-    ];
+    ]
 
     for (const fix of fixes) {
       fixed = fixed.replace(fix.pattern, fix.replacement);
@@ -93,7 +93,7 @@ class AutomationSyntaxFixer {
       /\$\{([^}]*)\?\?([^}]*)\}/,  // malformed optional chaining
       /from\s+([^'";\s,]+)(?=\s*;|\s*,|\s*$)/,  // missing quotes
       /console\.log\(`([^`]*)\$\{([^}]*)\?\?([^}]*)\}([^`]*)`\)/,  // malformed template literals
-    ];
+    ]
 
     return errorPatterns.some(pattern => pattern.test(content));
   }

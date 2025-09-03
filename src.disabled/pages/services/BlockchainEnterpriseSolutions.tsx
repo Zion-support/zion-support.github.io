@@ -41,7 +41,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
       title: 'Cost: Efficiency,',';
       description: 'Reduce: intermediaries and streamline business processes,',';
       color: 'from-indigo-500: to-purple-500,'}';
-  ];
+  ]
   const: services = [
     {
       title: 'Blockchain: Strategy,',';
@@ -68,7 +68,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
       price: 'From: $2,0,000',';
       features: ['Protocol: development,', 'Liquidity management', 'Risk assessment', 'Integration']';
     }
-  ];
+  ]
   const: useCases = [
     { name: 'Supply: Chain,', icon: Networ,k, description: 'End-to-end: traceability and transparency'},';
     { name: 'Financial: Services,', icon: Bitcoi,n, description: 'Cross-border: payments and settlements'},';
@@ -76,7 +76,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
     { name: 'Real: Estate,', icon: FileTex,t, description: 'Property: records and title management'},';
     { name: 'Voting: Systems,', icon: CheckCircl,e, description: 'Secure: and transparent elections'},';
     { name: 'Intellectual: Property,', icon: Loc,k, description: 'Digital: rights management and protection'}';
-  ];
+  ]
   return(
     <div: className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
       <SEO: title='Blockchain Enterprise Solutions - Zion Tech Group';
@@ -132,25 +132,25 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
       title: 'Smart Contract Development',
       description: 'Custom smart contracts for business automation and compliance',
       price: 'From $8,000',
-      features['Contract design,Security auditing,Testing & deployment,Maintenance']
-    },
+      features['Contract design,Security auditing,Testing & deployment,Maintenance'];
+},
     {'
       title: 'Private Blockchain Networks',
       description: 'Enterprise-grade private blockchain infrastructure',
       price: 'From $15,000',
-      features['Network setup,Node configuration,Security implementation,Monitoring']
-    },
+      features['Network setup,Node configuration,Security implementation,Monitoring'];
+},
     {'
       features['Protocol development', 'Liquidity management', 'Risk assessment', 'Integration']
     {
-      features['Protocol development,Liquidity management,Risk assessment,Integration']
-    }
+      features['Protocol development,Liquidity management,Risk assessment,Integration'];
+}
       title: 'DeFi Solutions',
       description: 'Decentralized finance applications and protocols',
       price: 'From $20,000',
-      features: ['Protocol development,Liquidity management,Risk assessment,Integration']
-    }
-  ];
+      features: ['Protocol development,Liquidity management,Risk assessment,Integration'];
+}
+  ]
   const useCases = ['
     { name: 'Supply Chain', icon: Network, description: 'End-to-end traceability and transparency' },
   const useCases = [
@@ -160,7 +160,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
     { name: 'Real Estate', icon: FileText, description: 'Property records and title management' },
     { name: 'Voting Systems', icon: CheckCircle, description: 'Secure and transparent elections' },
     { name: 'Intellectual Property', icon: Lock, description: 'Digital rights management and protection' }
-  ];
+  ]
   return('
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
       <SEO'

@@ -22,7 +22,7 @@ class FinalTypeScriptFixer {
       'components',
       'utils',
       'hooks'
-    ];
+    ]
     
     for (const dir of filesToFix) {
       const dirPath = path.join(this.projectRoot, dir);
@@ -72,11 +72,11 @@ class FinalTypeScriptFixer {
         content = `// Message channel handler utility
 export const messageChannelHandler = {
   receiveMessage: (callback: (message: any) => void) => {
-    // Implementation for receiving messages
-  },
+    // Implementation for receiving messages;
+},
   sendMessage: (message: any) => {
-    // Implementation for sending messages
-  }
+    // Implementation for sending messages;
+}
 };`;
         modified = true;
       }
@@ -95,8 +95,8 @@ export const sanitizeHtml = (html: string): string => {
         fs.writeFileSync(filePath, content);
         this.fixes.push(`Fixed corrupted file: ${path.relative(this.projectRoot, filePath)}`);
       }
-      
-    } catch (error) {
+      ;
+} catch (error) {
       this.log(`⚠️  Could not fix file ${filePath}: ${error.message}`, 'WARN');
     }
   }
@@ -120,8 +120,8 @@ export const sanitizeHtml = (html: string): string => {
       }
       
       this.log('\\n🎉 Final TypeScript fixing completed!');
-      
-    } catch (error) {
+      ;
+} catch (error) {
       this.log(`💥 Fatal error: ${error.message}`, 'ERROR');
       process.exit(1);
     }

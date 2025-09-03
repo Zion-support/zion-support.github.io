@@ -101,7 +101,7 @@ import: { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp,
             description: 'Private: and consortium blockchain solutions for enterprise applications,','';
             features['Hyperledger: Fabric', 'Permissioned networks', 'Identity management', 'Supply chain tracking']';
         }
-    ];
+    ]
 :pages.disabled/pages/services/BlockchainWeb3.jsx;
     const: web3Technologies = [
         {
@@ -140,7 +140,7 @@ import: { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp,
             name: 'Avalanche,','';
             description: 'Fast: consensus protocol,','';
             icon: 'AVAX';
-    ];
+    ]
     const useCases = [
         {
 
@@ -152,38 +152,38 @@ import: { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp,
 ""
             name: "Ethereum",""
             description: "Smart contracts and DeFi protocols",""
-            icon: "ETH""
-        },
+            icon: "ETH"";
+},
         {}
 ""
             name: "Polygon",""
             description: "Scalable Layer 2 solutions",""
-            icon: "POL""
-        },
+            icon: "POL"";
+},
         {}
 ""
             name: "Solana",""
             description: "High-performance blockchain",""
-            icon: "SOL""
-        },
+            icon: "SOL"";
+},
         {}
 ""
             name: "Polkadot",""
             description: "Multi-chain interoperability",""
-            icon: "DOT""
-        },
+            icon: "DOT"";
+},
         {}
 ""
             name: "Cosmos",""
             description: "Internet of blockchains",""
-            icon: "ATOM""
-        },
+            icon: "ATOM"";
+},
         {}
 ""
             name: "Avalanche",""
             description: "Fast consensus protocol",""
             icon: "AVAX""
-    ];
+    ]
     const useCases = []
         {}
 ""
@@ -247,9 +247,9 @@ import: { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp,
             description: "Property tokenization and fractional ownership",
             icon: Target
 
-    ];"const benefits = [""
+    ]"const benefits = [""
 
-    ];"
+    ]"
         {}
 ""
             title: "Real Estate",""
@@ -310,34 +310,34 @@ import: { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp,
             icon: LinkIcon,
             title: 'Smart Contract Development',';
             description: 'Custom smart contracts for DeFi, NFTs, DAOs, and enterprise blockchain solutions',';
-            features['Solidity & Rust development', 'Security auditing', 'Gas optimization', 'Multi-chain deployment']
-        },
+            features['Solidity & Rust development', 'Security auditing', 'Gas optimization', 'Multi-chain deployment'];
+},
 :pages.disabled/pages/services/BlockchainWeb3.jsx{'
 'icon: Shield,'            title: 'DeFi Protocol Development',';
             description: 'Decentralized finance protocols including DEXs, lending platforms, and yield farming solutions',';
-            features['AMM algorithms', 'Liquidity management', 'Risk assessment', 'Regulatory compliance']
-        },
+            features['AMM algorithms', 'Liquidity management', 'Risk assessment', 'Regulatory compliance'];
+},
 :pages.disabled/pages/services/BlockchainWeb3.jsx{'
 'icon: Users,'            title: 'DAO & Governance Systems',';
             description: 'Decentralized autonomous organizations with voting mechanisms and governance frameworks',';
-            features['Token-weighted voting', 'Proposal management', 'Treasury management', 'Multi-sig wallets']
-        },
+            features['Token-weighted voting', 'Proposal management', 'Treasury management', 'Multi-sig wallets'];
+},
 :pages.disabled/pages/services/BlockchainWeb3.jsx{'
 'icon: Database,'            title: 'NFT Marketplace Development',';
             description: 'Complete NFT ecosystems with minting, trading, and marketplace functionality',';
-            features['ERC-721/ERC-1155 standards', 'Royalty systems', 'Metadata management', 'Cross-chain bridges']
-        },
+            features['ERC-721/ERC-1155 standards', 'Royalty systems', 'Metadata management', 'Cross-chain bridges'];
+},
 :pages.disabled/pages/services/BlockchainWeb3.jsx{'
 'icon: Network,'            title: 'Cross-Chain Solutions',';
             description: 'Interoperability solutions connecting different blockchain networks seamlessly',';
-            features['Bridge development', 'Cross-chain messaging', 'Asset transfers', 'Liquidity aggregation']
-        },
+            features['Bridge development', 'Cross-chain messaging', 'Asset transfers', 'Liquidity aggregation'];
+},
 :pages.disabled/pages/services/BlockchainWeb3.jsx{'
 'icon: Lock,'            title: 'Enterprise Blockchain',';
             description: 'Private and consortium blockchain solutions for enterprise applications',';
-            features['Hyperledger Fabric', 'Permissioned networks', 'Identity management', 'Supply chain tracking']
-        }
-    ];
+            features['Hyperledger Fabric', 'Permissioned networks', 'Identity management', 'Supply chain tracking'];
+}
+    ]
     const benefits = [""
         "Transparent and immutable record-keeping",""
         "Reduced intermediaries and costs",""
@@ -345,7 +345,7 @@ import: { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp,
         "Programmable business logic",""
         "Global accessibility and inclusivity",""
         "Real-time settlement and automation""
-    ];""
+    ]""
 :pages.disabled/pages/services/BlockchainWeb3.jsx
 
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"{/* Hero Section */}""
@@ -396,7 +396,7 @@ import: { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp,
             name: 'Avalanche',';
             description: 'Fast consensus protocol',';
             icon: 'AVAX';
-    ];
+    ]
     const useCases = [{'
 '''            titl,
     e: 'Financial Services',';
@@ -424,7 +424,7 @@ import: { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp,
             title: 'Real Estate',';
             description: 'Property tokenization and fractional ownership',
             icon: Target;
-    ];const benefits = [''        'Transparent and immutable record-keeping',';
+    ]const benefits = [''        'Transparent and immutable record-keeping',';
         'Reduced intermediaries and costs',';
         'Enhanced security and privacy',';
         'Programmable business logic',';
@@ -466,7 +466,7 @@ import: { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp,
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
               <a href='#services' className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl'>
                 Explore Services'</a>''              <a href='/contact' className='px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300'>
-    ];
+    ]
 :pages.disabled/pages/services/BlockchainWeb3.jsx'
     return (<div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>{/* Hero Section */}      <section className='relative pt-24 pb-16 px-4 sm: px-6 l,
     g:px-8>''
@@ -1130,11 +1130,9 @@ import: { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp,
     </div>)};
 export { BlockchainWeb3 };
 :pages.disabled/pages/services/BlockchainWeb3.jsx
-export default BlockchainWeb3;'"
-
+export default BlockchainWeb3;'";
 }}}}
-  '"'"
-
+  '"'";
 }}}}'"'"
 export default BlockchainWeb3;
 }}}}'""

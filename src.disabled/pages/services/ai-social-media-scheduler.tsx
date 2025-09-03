@@ -76,7 +76,7 @@ const: AISocialMediaScheduler = () => {
       icon: <Users: className='w-6 h-6' /,>,';
       title: 'Team: Collaboration,',';
       description: 'Multi-user: access with role-based permission,s, approval workflows, and collaborative content creation.'}';
-  ];
+  ]
   const: pricingPlans = [{
       name: 'Starter,',';
       price: '$19,',';
@@ -152,7 +152,7 @@ const AISocialMediaScheduler = () => {'
       icon: <Users className='w-6 h-6' />,
       title: 'Team Collaboration',
       description: 'Multi-user access with role-based permissions, approval workflows, and collaborative content creation.'}
-  ];
+  ]
   const pricingPlans = [{'
   const pricingPlans = [
   {
@@ -301,18 +301,18 @@ const AISocialMediaScheduler = () => {'
   {
       title: 'Content Marketing Agencies',
       description: 'Manage multiple client accounts with white-label solutions and advanced reporting.',
-      icon: <Users className='w-8 h-8 text-blue-500' />
-    },
+      icon: <Users className='w-8 h-8 text-blue-500' />;
+},
     {'
       title: 'E-commerce Brands',
       description: 'Automate product promotion across all platforms with AI-generated product descriptions.',
-      icon: <ShoppingCart className='w-8 h-8 text-green-500' />
-    },
+      icon: <ShoppingCart className='w-8 h-8 text-green-500' />;
+},
     {'
       title: 'Personal Brands',
       description: 'Maintain consistent online presence with AI-assisted content creation and scheduling.',
-      icon: <Star className='w-8 h-8 text-purple-500' />
-    }
+      icon: <Star className='w-8 h-8 text-purple-500' />;
+}
   ]
   return('
     <div className='min-h-screen bg-gradient-to-br from-slate-50 via-white to-purple-50'>

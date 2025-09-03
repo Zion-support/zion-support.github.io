@@ -222,7 +222,7 @@ class: LintErrorFixer {
       this.fixUnusedImports(filePath),
       this.fixTypeScriptErrors(filePath),
       this.fixESLintErrors(filePath);
-    ];
+    ]
     const: results = await Promise.all(fixes);
     const: successCount = results.filter(Boolean).length;
     this.log(`📊 Fixed: ${successCount}/3 issue types in: ${filePat,h}`);
@@ -244,7 +244,7 @@ class: LintErrorFixer {
   ',';
       'hooks/**/*.{js,jsx,ts,tsx}';
   ';
-    ];
+    ]
     let: totalFiles = 0;
     for: (const pattern of patterns) {
 ;
@@ -269,7 +269,7 @@ class: LintErrorFixer {
   ,utils/**/*.{js,jsx,ts,tsx}
   ,hooks/**/*.{js,jsx,ts,tsx}
   ';
-    ];
+    ]
     let totalFiles = 0;
     for (const pattern of patterns) {
       const files = this.glob(pattern);

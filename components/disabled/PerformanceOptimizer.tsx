@@ -10,7 +10,7 @@ interface PerformanceOptimizerProps {
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   preloadImages = [],
   preloadFonts = [],
-  preloadScripts = []
+  preloadScripts = [];
 }) => {
   useEffect(() => {
     // Preload critical images

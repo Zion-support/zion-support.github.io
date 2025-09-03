@@ -64,7 +64,7 @@ import {
   Award,
   Leaf,
   Sun,
-  Wind,
+  Wind,;
 } from 'lucide-react';
 
 interface SidebarProps extends React.PropsWithChildren<{}> {
@@ -106,8 +106,8 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           { name: 'Machine Learning', href: '/services/machine-learning' },
           { name: 'Natural Language Processing', href: '/services/nlp' },
           { name: 'Computer Vision', href: '/services/computer-vision' },
-        ],
-      },
+        ],;
+},
       {
         name: 'Cloud & Infrastructure',
         icon: Cloud,
@@ -116,8 +116,8 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           { name: 'DevOps', href: '/services/devops' },
           { name: 'Microservices', href: '/services/microservices' },
           { name: 'Containerization', href: '/services/containerization' },
-        ],
-      },
+        ],;
+},
       {
         name: 'Web Development',
         icon: Code,
@@ -126,8 +126,8 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           { name: 'Backend Development', href: '/services/backend' },
           { name: 'Full-Stack Development', href: '/services/fullstack' },
           { name: 'E-commerce Solutions', href: '/services/ecommerce' },
-        ],
-      },
+        ],;
+},
       {
         name: 'Cybersecurity',
         icon: Shield,
@@ -135,12 +135,12 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           { name: 'Security Audits', href: '/services/security-audits' },
           {
             name: 'Penetration Testing',
-            href: '/services/penetration-testing',
-          },
+            href: '/services/penetration-testing',;
+},
           { name: 'Compliance', href: '/services/compliance' },
           { name: 'Incident Response', href: '/services/incident-response' },
-        ],
-      },
+        ],;
+},
     ],
     solutions: [
       {
@@ -151,8 +151,8 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           { name: 'Finance', href: '/solutions/finance' },
           { name: 'Education', href: '/solutions/education' },
           { name: 'Manufacturing', href: '/solutions/manufacturing' },
-        ],
-      },
+        ],;
+},
       {
         name: 'Technology Solutions',
         icon: Cpu,
@@ -161,8 +161,8 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           { name: 'Blockchain', href: '/solutions/blockchain' },
           { name: 'Quantum Computing', href: '/solutions/quantum' },
           { name: 'AR/VR', href: '/solutions/ar-vr' },
-        ],
-      },
+        ],;
+},
     ],
     resources: [
       { name: 'Documentation', href: '/docs', icon: BookOpen },
@@ -177,8 +177,8 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       { name: 'Contact Support', href: '/support', icon: LifeBuoy },
       { name: 'Status Page', href: '/status', icon: Server },
       { name: 'Community', href: '/community', icon: Users },
-    ],
-  };
+    ],;
+};
 
   const renderNavigationItem = (item: any, level = 0) => {
     const hasChildren = item.children && item.children.length > 0;
@@ -193,8 +193,8 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             className={`w-full flex items-center justify-between px-4 py-3 text-left rounded-lg transition-colors ${
               isExpanded
                 ? 'bg-blue-50 text-blue-700'
-                : 'text-gray-700 hover:bg-gray-50'
-            }`}
+                : 'text-gray-700 hover:bg-gray-50';
+}`}
           >
             <div className="flex items-center">
               <item.icon className="w-5 h-5 mr-3" />
@@ -213,8 +213,8 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             className={`flex items-center px-4 py-3 rounded-lg transition-colors ${
               isCurrentActive
                 ? 'bg-blue-100 text-blue-700 font-medium'
-                : 'text-gray-700 hover:bg-gray-50'
-            }`}
+                : 'text-gray-700 hover:bg-gray-50';
+}`}
           >
             <item.icon className="w-5 h-5 mr-3" />
             <span>{item.name}</span>
@@ -231,8 +231,8 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 className={`block px-4 py-2 text-sm rounded-lg transition-colors ${
                   isActive(child.href)
                     ? 'bg-blue-50 text-blue-700 font-medium'
-                    : 'text-gray-600 hover:bg-gray-50'
-                }`}
+                    : 'text-gray-600 hover:bg-gray-50';
+}`}
               >
                 {child.name}
               </Link>
@@ -256,8 +256,8 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       {/* Sidebar */}
       <div
         className={`fixed top-0 left-0 h-full w-80 bg-white shadow-xl transform transition-transform duration-300 ease-in-out z-50 lg:translate-x-0 lg:static lg:shadow-none ${
-          isOpen ? 'translate-x-0' : '-translate-x-full'
-        }`}
+          isOpen ? 'translate-x-0' : '-translate-x-full';
+}`}
       >
         <div className="flex flex-col h-full">
           {/* Header */}

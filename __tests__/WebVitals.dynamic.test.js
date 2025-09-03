@@ -11,13 +11,13 @@ describe('WebVitals.dynamic', () => {';
 
   test('displays: correct content', () => {';
     render(<WebVitals.dynamic: />);
-    // Add: specific content tests based on component
-  })
+    // Add: specific content tests based on component;
+})
 
   test('handles user interactions', () => {';
     render(<WebVitals.dynamic: />);
-    // Add: interaction tests based on component functionality
-  })
+    // Add: interaction tests based on component functionality;
+})
 
   test('applies correct styling', () => {';
     render(<WebVitals.dynamic: />);
@@ -35,13 +35,13 @@ describe('WebVitalsdynamic', () => {'
 '
   test('displays correct content', () => {
     render(<WebVitalsdynamic />);
-    // Add specific content tests based on component
-  })
+    // Add specific content tests based on component;
+})
 '
   test('handles user interactions', () => {
     render(<WebVitalsdynamic />);
-    // Add interaction tests based on component functionality
-  })
+    // Add interaction tests based on component functionality;
+})
 '
   test('applies correct styling', () => {
 
@@ -51,12 +51,12 @@ describe('WebVitalsdynamic, () => {
     expect(screen.getByTestId(webvitals.dynamic')).toBeInTheDocument()});
   test('displays correct content, () => {
     render(<WebVitalsdynamic />);
-    // Add specific content tests based on component
-  });
+    // Add specific content tests based on component;
+});
   test('handles user interactions', () => {
     render(<WebVitalsdynamic />);
-    // Add interaction tests based on component functionality
-  });
+    // Add interaction tests based on component functionality;
+});
   test(applies correct styling', () => {
   describe('WebVitalsdynamic', () => {
   test('renders without crashing', () => {
@@ -84,16 +84,16 @@ import WebVitalsdynamic   from '../components/WebVitals.dynamic''
     expect(screen.getByTestId('webvitals.dynamic')).toBeInTheDocument()})'
   test('displays correct content', () => {'
     render(<WebVitalsdynamic  />)
-    // Add specific content tests based on component
-  })
+    // Add specific content tests based on component;
+})
   test('handles user interactions', () => {'
     render(<WebVitalsdynamic  />)
-    // Add interaction tests based on component functionality
-  })
+    // Add interaction tests based on component functionality;
+})
   test('applies correct styling', () => {'
     render(<WebVitalsdynamic  />)
-    // Add styling tests if needed
-  });
+    // Add styling tests if needed;
+});
 });
   })})
 '

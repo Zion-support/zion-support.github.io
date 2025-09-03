@@ -68,8 +68,8 @@ Sitemap: ${baseUrl}/sitemap.xml;,"});,"})
 # Crawl-delay for respectful crawling;,"});,"})
 Crawl-delay: 1`;,"});,"})
     fs.writeFileSync(robotsPath, robots);,"});,"})
-    console.log('Robots.txt generated successfully at:', robotsPath);,"});,"})
-  }"});,"})
+    console.log('Robots.txt generated successfully at:', robotsPath);,"});,"});
+}"});,"})
 // Run the generator;,"});,"})
 generateSitemap();,"});,"})
 import fs from,

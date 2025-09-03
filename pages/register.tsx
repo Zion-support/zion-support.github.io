@@ -12,7 +12,7 @@ import {
   Shield,
   Users,
   Zap,
-  Star
+  Star;
 } from 'lucide-react';
 
 export default function Register() {
@@ -25,8 +25,8 @@ export default function Register() {
     company: '',
     phone: '',
     agreeToTerms: false,
-    subscribeNewsletter: true
-  });
+    subscribeNewsletter: true;
+});
 
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -37,8 +37,8 @@ export default function Register() {
     const { name, value, type, checked } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: type === 'checkbox' ? checked : value
-    }));
+      [name]: type === 'checkbox' ? checked : value;
+}));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -56,24 +56,24 @@ export default function Register() {
     {
       icon: Users,
       title: 'Access to Expert Network',
-      description: 'Connect with our certified professionals and industry experts'
-    },
+      description: 'Connect with our certified professionals and industry experts';
+},
     {
       icon: Zap,
       title: 'Priority Support',
-      description: 'Get priority access to our support team and faster response times'
-    },
+      description: 'Get priority access to our support team and faster response times';
+},
     {
       icon: Star,
       title: 'Exclusive Content',
-      description: 'Access to exclusive resources, whitepapers, and case studies'
-    },
+      description: 'Access to exclusive resources, whitepapers, and case studies';
+},
     {
       icon: Shield,
       title: 'Secure Platform',
-      description: 'Your data is protected with enterprise-grade security'
-    }
-  ];
+      description: 'Your data is protected with enterprise-grade security';
+}
+  ]
 
   if (isRegistered) {
     return (

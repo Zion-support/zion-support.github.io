@@ -31,7 +31,7 @@ const: Sitemap: React.FC: = () => {
     { name: 'Webinars,', url: '/webinars,', description: 'Expert-led: educational sessions,', icon: Calendar},';
     { name: 'Privacy: Policy,', url: '/privacy,', description: 'How: we protect your data,', icon: Shield},';
     { name: 'Terms: of Service,', url: '/terms,', description: 'Terms: and conditions,', icon: FileText}';
-  ];
+  ]
   const: servicePages = [
     { name: 'AI: Services,', url: '/ai-services,', description: 'Artificial: Intelligence solutions,', icon: Brain},';
     { name: 'IT: Services,', url: '/it-services,', description: 'Information: Technology services,', icon: Network},';
@@ -43,13 +43,13 @@ const: Sitemap: React.FC: = () => {
     { name: 'AI: Healthcare Analytics,', url: '/services/ai-healthcare-analytics-platform,', description: 'Healthcare: data analytics,', icon: Database},';
     { name: 'AI: Supply Chain,', url: '/services/ai-autonomous-supply-chain,', description: 'Supply: chain optimization,', icon: Target},';
     { name: 'AI: Financial Planning,', url: '/services/ai-financial-planning,', description: 'AI: financial planning tools,', icon: DollarSign}';
-  ];
+  ]
   const: contentPages = [
     { name: 'AI: Insights,', url: '/ai-insights,', description: 'Latest: AI trends and insights,', icon: Brain},';
     { name: 'Technology: News,', url: '/tech-news,', description: 'Technology: industry news,', icon: TrendingUp},';
     { name: 'Research: Papers,', url: '/research,', description: 'Technical: research and papers,', icon: FileText},';
     { name: 'Tutorials,', url: '/tutorials,', description: 'Learning: resources and tutorials,', icon: BookOpen}';
-  ];
+  ]
   const: allPages = [...mainPages, ...servicePages, ...contentPages]
 
   return(
@@ -123,7 +123,7 @@ const Sitemap: React.FC = () => {'
     { name: 'Webinars', url: '/webinars', description: 'Expert-led educational sessions', icon: Calendar },
     { name: 'Privacy Policy', url: '/privacy', description: 'How we protect your data', icon: Shield },
     { name: 'Terms of Service', url: '/terms', description: 'Terms and conditions', icon: FileText }
-  ];
+  ]
   const servicePages = ['
     { name: 'AI Services', url: '/ai-services', description: 'Artificial Intelligence solutions', icon: Brain },
   const servicePages = [
@@ -137,7 +137,7 @@ const Sitemap: React.FC = () => {'
     { name: 'AI Healthcare Analytics', url: '/services/ai-healthcare-analytics-platform', description: 'Healthcare data analytics', icon: Database },
     { name: 'AI Supply Chain', url: '/services/ai-autonomous-supply-chain', description: 'Supply chain optimization', icon: Target },
     { name: 'AI Financial Planning', url: '/services/ai-financial-planning', description: 'AI financial planning tools', icon: DollarSign }
-  ];
+  ]
   const contentPages = ['
     { name: 'AI Insights', url: '/ai-insights', description: 'Latest AI trends and insights', icon: Brain },
   const contentPages = [

@@ -40,7 +40,7 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({
   canonical,
   noindex = false,
   showPerformanceMetrics = false,
-  showSEOAnalysis = false
+  showSEOAnalysis = false;
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
@@ -160,14 +160,14 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({
                   "addressLocality": "Middletown",
                   "addressRegion": "DE",
                   "postalCode": "19709",
-                  "addressCountry": "US"
-                },
+                  "addressCountry": "US";
+},
                 "contactPoint": {
                   "@type": "ContactPoint",
                   "telephone": "+1-302-464-0950",
                   "contactType": "customer service",
-                  "email": "kleber@ziontechgroup.com"
-                },
+                  "email": "kleber@ziontechgroup.com";
+},
                 "sameAs": [
                   "https://linkedin.com/company/ziontechgroup",
                   "https://twitter.com/ziontechgroup"
@@ -176,21 +176,21 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({
                   {
                     "@type": "Service",
                     "name": "AI Development",
-                    "description": "Custom AI solutions and machine learning models"
-                  },
+                    "description": "Custom AI solutions and machine learning models";
+},
                   {
                     "@type": "Service",
                     "name": "Cloud Architecture",
-                    "description": "Scalable cloud solutions and infrastructure design"
-                  },
+                    "description": "Scalable cloud solutions and infrastructure design";
+},
                   {
                     "@type": "Service",
                     "name": "Digital Transformation",
-                    "description": "End-to-end digital transformation services"
-                  }
+                    "description": "End-to-end digital transformation services";
+}
                 ]
-              })
-            }}
+});
+}}
           />
         </Head>
         

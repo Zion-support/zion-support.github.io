@@ -4,7 +4,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIEdgeComputing(function AIEdgeComputing() {): any: {}
     'Automated edge monitoring and alerting',';Predictive: analytics for edge scaling',';Smart: edge security and compliance',';AI-driven: edge automation and orchestration',';Real-time: edge analytics and insights',';Custom: AI models for edge applications';
 <:pages.disabled/pages/services/AIEdgeComputing.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Developer,',';
@@ -27,7 +27,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
   ]';Edge: optimization',';Edge: device management',';Performance: monitoring and analytics',';Security: and compliance monitoring',';Automation: and orchestration',';Edge: scaling and management';
   ]';Improve: edge performance by 50-80%',';Reduce: edge processing time by 40-70%',';Cut: operational costs by 35-65%',';Enhance: edge reliability and scalability',';Optimize: resource utilization',';Scale: edge operations efficiently';
   ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-green-500 via-emerald-500 to-teal-500 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIEdgeComputing(function AIEdgeComputing() {): any {}
     'Automated edge monitoring and alerting',;Predictive analytics for edge scaling',;Smart edge security and compliance',;AI-driven edge automation and orchestration',;Real-time edge analytics and insights',;Custom AI models for edge applications';
 <:pages.disabled/pages/services/AIEdgeComputing.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Developer',
@@ -115,8 +115,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     {'
       name: 'Business',
       price: '$999/mo',
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support']
-    },
+      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AIEdgeComputing.tsx>    {'
@@ -149,10 +149,10 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <Database className='w-4 h-4 mr-2'  /> AI-Powered Edge Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Edge Computing Platform</h1>'          <p className='text-green-100 text-xl'>Transform your edge operations with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
-  ];Edge optimization',;Edge device management',;Performance monitoring and analytics',;Security and compliance monitoring',;Automation and orchestration',;Edge scaling and management';
-  ];Improve edge performance by 50-80%',;Reduce edge processing time by 40-70%',;Cut operational costs by 35-65%',;Enhance edge reliability and scalability',;Optimize resource utilization',;Scale edge operations efficiently';
-  ];Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
-  ];
+  ]Edge optimization',;Edge device management',;Performance monitoring and analytics',;Security and compliance monitoring',;Automation and orchestration',;Edge scaling and management';
+  ]Improve edge performance by 50-80%',;Reduce edge processing time by 40-70%',;Cut operational costs by 35-65%',;Enhance edge reliability and scalability',;Optimize resource utilization',;Scale edge operations efficiently';
+  ]Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-green-500 via-emerald-500 to-teal-500 py-20 text-center>''

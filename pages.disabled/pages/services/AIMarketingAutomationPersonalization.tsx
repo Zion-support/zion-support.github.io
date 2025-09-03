@@ -24,7 +24,7 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
     'Customer journey mapping and automated nurturing sequences',;
     'Advanced analytics and ROI tracking with attribution modeling',;
     'Integration with major CRM, e-commerce, and advertising platforms',;
-  ];
+  ]
 
   '
     'Increase conversion rates by 40-60% with personalization
@@ -35,7 +35,7 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
   'Generate 35-50% more qualified leads through automation',;'
   'Boost customer lifetime value by 20-35%',;'
   'Achieve 99.9% campaign delivery and tracking accuracy',;
-  ];
+  ]
 
   '
     'Content Marketing
@@ -46,7 +46,7 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
   'Video Marketing',;'
   'Voice & Chatbot Marketing',;'
   'Location-Based Marketing',;
-  ];
+  ]
 
   '
     'Lead Scoring & Qualification
@@ -57,7 +57,7 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
   'A/B Testing Automation',;'
   'Performance Prediction',;'
   'ROI Optimization',;
-  ];
+  ]
 
   '
     'Shopify
@@ -68,7 +68,7 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
   'Google Ads',;'
   'LinkedIn Ads',;'
   'TikTok Ads',;
-  ];
+  ]
 
   '
 
@@ -123,7 +123,7 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
     { name: 'PostgreSQL', url: 'https://www.postgresql.org/' },;'    { name: 'Elasticsearch', url: 'https://www.elastic.co/' },;
 :pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
 
-  ];
+  ]
 
   return()
     <div className = "min-h-screen bg-futuristic">""

@@ -441,5 +441,5 @@ export default function ComputerVision() {
 				</div>
 			</section>
 		</PageTransition>
-	)
+	);
 }

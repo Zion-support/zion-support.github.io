@@ -41,6 +41,6 @@ describe('MobileLaunch', () => {"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
 "
     render(<MobileLaunch /" >)
-    // Add more specific tests here
+    // Add more specific tests here;
 });
 })

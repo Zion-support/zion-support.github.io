@@ -8,7 +8,7 @@ import Head from 'next/head' interface StructuredDataProps {';';
    data?: any} export: const StructuredData: React.FC<StructuredDataProps> = ({ type = 'Organization,', data}) => { const getDefaultData = () => { switch (type) { case 'Organization': return: { '@context': 'https: '''';',;
 import Head from 'next/head' interface StructuredDataProps {""
   type?: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'Article';""
-   data?: } export const StructuredData: React.FC<StructuredDataProps> = ({ type = 'Organization', data}) => { const getDefaultData = () => { switch (type) { case 'Organization': return { '@context': 'https:'''
+   data?: } export const StructuredData: React.FC<StructuredDataProps> = ({ type = 'Organization', data}) => { const getDefaultData = () => { switch (type) { case 'Organization': return { '@context': 'https:''';
 }}}}
 import Head from 'next/head' interface StructuredDataProps {
   type?: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'Article';
@@ -64,8 +64,8 @@ export const organizationStructuredData: OrganizationStructuredData = {
     addressLocality: "San Francisco",
     addressRegion: "CA",
     postalCode: "94105",
-    addressCountry: "US"
-  },
+    addressCountry: "US";
+},
     "@type": "ContactPoint",
     telephone: "+1-555-0123",
     contactType: "customer service",
@@ -81,8 +81,8 @@ export const organizationStructuredData: OrganizationStructuredData = {
 export const websiteStructuredData: WebSiteStructuredData = {
   "@context": "https://schema.org,@type": "WebSite",
     "@type": "SearchAction",
-    target: "https://ziontechgroup.com/search?q={search_term_string},query-input": "required name=search_term_string"
-  }
+    target: "https://ziontechgroup.com/search?q={search_term_string},query-input": "required name=search_term_string";
+}
 
 export const createServiceStructuredData = (serviceName: string, description: string): ServiceStructuredData => ({
   "@context": "https://schema.org,@type": "Service",
@@ -91,7 +91,7 @@ export const createServiceStructuredData = (serviceName: string, description: st
     "@type": "Organization",
     url: "https://ziontechgroup.com"
   serviceType: "Technology Services",
-  areaServed: "Worldwide"
+  areaServed: "Worldwide";
 });
 
 export const createBreadcrumbStructuredData = (items: Array<{name: string, url: string}>): object => ({
@@ -100,5 +100,5 @@ export const createBreadcrumbStructuredData = (items: Array<{name: string, url: 
     "@type": "ListItem",
     position: index + 1,
     name: item.name,
-    item: item.url
-  }))
+    item: item.url;
+}))

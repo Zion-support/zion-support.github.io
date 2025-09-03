@@ -57,8 +57,8 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {
       gtag('js', new Date());
       gtag('config,${trackingId}', {
         page_title: document.title, page_location: window.location.href,
-        send_page_view: true
-      })
+        send_page_view: true;
+})
     `;
     document.head.appendChild(script2);
     // Track page views on route changes
@@ -66,8 +66,8 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {
       if (typeof gtag !== 'undefined') {
         gtag('config', trackingId, {
           page_title: document.title,
-          page_location: window.location.href,
-        });
+          page_location: window.location.href,;
+});
       }
     };
 
@@ -113,8 +113,8 @@ export const trackEvent = (
     gtag('event', action, {
       event_category: category,
       event_label: label,
-      value: value,
-    });
+      value: value,;
+});
   }
 };
 
@@ -122,8 +122,8 @@ export const trackPageView = (url: string, title: string) => {
   if (typeof gtag !== 'undefined') {
     gtag('config', process.env['NEXT_PUBLIC_GA_TRACKING_ID'] || '', {
       page_title: title,
-      page_location: url,
-    });
+      page_location: url,;
+});
   }
 };
 

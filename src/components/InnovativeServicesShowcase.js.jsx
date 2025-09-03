@@ -17,7 +17,7 @@ const InnovativeServicesShowcase = () => {;,"});,"})
         { id: 'microsaas', name: 'Micro SAAS Services', count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.length },;,"});,"})
         { id: 'it', name: 'IT Services', count: innovativeITServices2025.length },;,"});,"})
         { id: 'ai', name: 'AI Services', count: innovativeAIServices2025.length }"});,"})
-    ];,"});,"})
+    ],"});,"})
     const getServicesByTab = () => {;,"});,"})
         switch (activeTab) {;,"});,"})
             case 'microsaas':;,"});,"})
@@ -27,8 +27,8 @@ const InnovativeServicesShowcase = () => {;,"});,"})
             case 'ai':;,"});,"})
                 return innovativeAIServices2025;,"});,"})
             default:;,"});,"})
-                return []}"});,"})
-    };,"});,"})
+                return []}"});,"});
+};,"});,"})
     const handleServiceClick = (service) => {;,"});,"})
         setSelectedService(service)};,"});,"})
     const closeModal = () => {;,"});,"})
@@ -81,8 +81,8 @@ const InnovativeServicesShowcase = () => {;,"});,"})
 '''`;,"});,"})
                   activeTab === tab.id'''`'`;,"});,"})
                     ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white'''`'`'`;,"});,"})
-                    : 'bg-white/10 text-gray-300 hover:bg-white/20'````;,"});,"})
-                }`}"});,"})
+                    : 'bg-white/10 text-gray-300 hover:bg-white/20'````;,"});,"});
+}`}"});,"})
               >;,"});,"})
                 {tab.name} ({tab.count});,"});,"})
               </button>;,"});,"})
@@ -506,7 +506,7 @@ const InnovativeServicesShowcase = () => {""
 '''`"`'"
                   activeTab === tab.id'''`'`"`"
                     ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white'''`'`'`"`"
-                    : 'bg-white/10 text-gray-300 hover:bg-white/20'````, `
+                    : 'bg-white/10 text-gray-300 hover:bg-white/20'````, `;
 }`}
               >
                 {tab.name} ({tab.count})

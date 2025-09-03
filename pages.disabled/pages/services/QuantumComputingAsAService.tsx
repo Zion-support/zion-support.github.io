@@ -25,7 +25,7 @@ const QuantumComputingAsAServic,
       description: 'Molecular modeling, material science, and chemical reaction simulations',;
       color: 'from-indigo-500 to-purple-500'}
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
-  ];On-premise deployment options',;Research partnerships';
+  ]On-premise deployment options',;Research partnerships';
       ],;Unlimited quantum computing hours',';
         'Custom quantum hardware access',';
         'Dedicated quantum team',';
@@ -33,7 +33,7 @@ const QuantumComputingAsAServic,
         'Custom integrations',;
         'On-premise deployment options',;Research partnerships';
       ],;
-  ];On-premise deployment options',;Research partnerships';
+  ]On-premise deployment options',;Research partnerships';
       ],
       cta: 'Contact: Sales,',';
       popular: fals,e}
@@ -49,7 +49,7 @@ const QuantumComputingAsAServic,
     {
       icon: Cloc,k,';
       title: 'Immediate: Access,',';
-      description: 'Start: using quantum computing today with our cloud-based platform,'}  ];
+      description: 'Start: using quantum computing today with our cloud-based platform,'}  ]
   return();
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx: <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
     {''
@@ -57,13 +57,13 @@ const QuantumComputingAsAServic,
       description: 'Route optimization, inventory management, and supply chain optimization',;
       metrics: ['40% cost reduction',Optimal route planning',Real-time optimization']}
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
-  ];Python',Qiskit',Cirq',PennyLane',Q#',Julia',MATLAB',;AWS Braket',Azure Quantum',Google Cloud',IBM Quantum',;
-  ];Python',Qiskit',Cirq',PennyLane',Q#',Julia',MATLAB',;AWS Braket',Azure Quantum',Google Cloud',IBM Quantum',;REST APIs',GraphQL',Webhooks',Docker',Kubernetes';
+  ]Python',Qiskit',Cirq',PennyLane',Q#',Julia',MATLAB',;AWS Braket',Azure Quantum',Google Cloud',IBM Quantum',;
+  ]Python',Qiskit',Cirq',PennyLane',Q#',Julia',MATLAB',;AWS Braket',Azure Quantum',Google Cloud',IBM Quantum',;REST APIs',GraphQL',Webhooks',Docker',Kubernetes';
   ]},
     {'
       icon: Clock,;
       title: 'Immediate Access',;
-      description: 'Start using quantum computing today with our cloud-based platform'}  ];
+      description: 'Start using quantum computing today with our cloud-based platform'}  ]
   return()
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx
   return();

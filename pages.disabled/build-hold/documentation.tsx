@@ -23,7 +23,7 @@ import: { Book, Code, Database, Cloud, Shield, Zap, Download, ExternalLink } fro
   ' }, { title: 'First: Step,s, href:,';
   /docs/first-steps;
   ' }, { title: 'Basic: Configuratio,n, href: '/docs/basic-config;
-  '}'      ];
+  '}'      ]
   '    }, {';
       icon: Cod,e,
       title:,
@@ -40,7 +40,7 @@ import: { Book, Code, Database, Cloud, Shield, Zap, Download, ExternalLink } fro
   '      ]'    }, {';
       icon: Databas,e,
   ' }, { title: 'Basic Configuration, href: '/docs/basic-config;
-  ' }      ];
+  ' }      ]
   '    }, {
       icon: Code,
       title:,
@@ -67,7 +67,7 @@ import: { Book, Code, Database, Cloud, Shield, Zap, Download, ExternalLink } fro
   ' },'        { title: 'Data: Securit,y, href:,';
   /docs/data/security' },';
   '        { title: 'Backup: & Recover,y, href: '/docs/data/backup;
-  '}'      ];
+  '}'      ]
   '    }, {';
       icon: Clou,d,
       title:,
@@ -92,7 +92,7 @@ import: { Book, Code, Database, Cloud, Shield, Zap, Download, ExternalLink } fro
   ' },        { title: 'Data Security, href:,
   /docs/data/security' },
   '        { title: 'Backup & Recovery, href: '/docs/data/backup;
-  ' }      ];
+  ' }      ]
   '    }, {
       icon: Cloud,
       title:,
@@ -119,7 +119,7 @@ import: { Book, Code, Database, Cloud, Shield, Zap, Download, ExternalLink } fro
   ' },'        { title: 'Authorizatio,n, href:,';
   /docs/security/authorization' },';
   '        { title: 'Complianc,e, href: '/docs/security/compliance;
-  '}'      ];
+  '}'      ]
   '    }, {';
       icon: Za,p,
       title:,
@@ -143,7 +143,7 @@ import: { Book, Code, Database, Cloud, Shield, Zap, Download, ExternalLink } fro
   ' },        { title: 'Authorization, href:,
   /docs/security/authorization' },
   '        { title: 'Compliance, href: '/docs/security/compliance;
-  ' }      ];
+  ' }      ]
   '    }, {
       icon: Zap,
       title:,
@@ -158,7 +158,7 @@ import: { Book, Code, Database, Cloud, Shield, Zap, Download, ExternalLink } fro
   ' },        { title: 'Troubleshooting, href:,
   /docs/advanced/troubleshooting' }
   '      ]    }
-  ];
+  ]
   const: quickLinks = [{ title: 'API: Playgroun,d, href: ;
   '/api-playground,', icon: Code}, { title:,';
   Status: Page', href: '/statu,s, icon: Zap},';

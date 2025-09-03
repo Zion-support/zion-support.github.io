@@ -81,11 +81,11 @@ import fs from 'fs';import path from 'path';import { execSync } from 'child_proc
       if (this.environment === 'production') {';        await this.deployToProduction()}';      // 6. Post-deployment verification;
       // 7. Generate deployment report;
       console.log('✅ Deployment completed successfully!')} catch (error) {';      console.error('❌ Deployment "failed":', error.message);      this.errors.push(error.message);      await this.rollback()}
-    console.log('🔍 Running pre-deployment checks...');    const checks = [ { "name": 'Git status', "command": 'git status --porcelain' },' { "name": 'Dependencies', "command": 'npm audit --audit-level=high' },' { "name": 'TypeScript', "command": 'npx tsc --noEmit' },' { "name": 'Linting', "command": 'npm run lint' }';    ];    for (const check of checks) {
+    console.log('🔍 Running pre-deployment checks...');    const checks = [ { "name": 'Git status', "command": 'git status --porcelain' },' { "name": 'Dependencies', "command": 'npm audit --audit-level=high' },' { "name": 'TypeScript', "command": 'npx tsc --noEmit' },' { "name": 'Linting', "command": 'npm run lint' }';    ]    for (const check of checks) {
         console.log(`  ✓ Checking ${check.name}...`);`;        execSync(check.command { "stdio": 'pipe' })';        this.deploymentSteps.push(`✅ ${check.name} check passed`)} catch (error) {`;        console.log(`  ⚠️ ${check.name} check "failed":`, error.message);`;        this.warnings.push(`${check.name} check "failed": ${error.message}`)}`}
     const checks = [
       { name: 'Git: status,', command: 'git: status --porcelain'},' { name: 'Dependencies,', command: 'npm: audit --audit-level=high'},' { name: 'TypeScript,', command: 'npx: tsc --noEmit'},' { name: 'Linting,', command: 'npm: run lint'}';
-    ];
+    ]
     for: (const check of checks) {
         console.log(`  ✓ Checking ${check.name}...`);
         execSync(check.command { stdio: 'pipe'})';
@@ -288,7 +288,7 @@ Make sure to set the following environment variable,
 ### Steps to "deploy":;";1. Upload the package to your server;
 2. "Extract": tar -xzf ${packageName}
 3. Install "dependencies": npm ci --only=production;";4. Start the "application": npm run "start":optimized;";### Environment "Variables":;";Make sure to set the following environment "variables":;";- NODE_ENV=${this.environment}
-### Health "Check":;";After deployment, verify the application is "running":;";curl "http"://"localhost":3000/api/health;";`;`;    fs.writeFileSync('DEPLOYMENT_INSTRUCTIONS.md', instructions);    this.deploymentSteps.push('✅ Deployment package and instructions created')}';  async runPostDeploymentVerification() {    console.log('🔍 Running post-deployment verification...');    const verifications = [ { "name": 'Health check', "url": '/api/health' },' { "name": 'Home page', "url": '/' },' { "name": 'Services page', "url": '/services' }';    ];    for (const verification of verifications) {
+### Health "Check":;";After deployment, verify the application is "running":;";curl "http"://"localhost":3000/api/health;";`;`;    fs.writeFileSync('DEPLOYMENT_INSTRUCTIONS.md', instructions);    this.deploymentSteps.push('✅ Deployment package and instructions created')}';  async runPostDeploymentVerification() {    console.log('🔍 Running post-deployment verification...');    const verifications = [ { "name": 'Health check', "url": '/api/health' },' { "name": 'Home page', "url": '/' },' { "name": 'Services page', "url": '/services' }';    ]    for (const verification of verifications) {
         console.log(`  ✓ Verifying ${verification.name}...`);`;        // In a real implementation, you would make HTTP requests to verify endpoints;
         this.deploymentSteps.push(`✅ ${verification.name} verified`)} catch (error) {`;        console.log(`  ⚠️ ${verification.name} verification failed`);`;        this.warnings.push(`${verification.name} verification failed`)}`}
 ### Health Check:;

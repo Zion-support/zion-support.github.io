@@ -7,17 +7,17 @@ export default function Header() {,"});,"})
   const location = useLocation();,"});,"})
   useEffect(() => {,"});,"})
     const handleScroll = () => {,"});,"})
-      setScrolled(window.scrollY > 50);,"});,"})
-    };,"});,"})
+      setScrolled(window.scrollY > 50);,"});,"});
+};,"});,"})
     window.addEventListener('scroll', handleScroll);,"});,"})
-    return () => window.removeEventListener('scroll', handleScroll);,"});,"})
-  }, []);,"});,"})
+    return () => window.removeEventListener('scroll', handleScroll);,"});,"});
+}, []);,"});,"})
   const navigation = [,"});,"})
     {,"});,"})
       name: 'Home',;,"});,"})
       href: '/',;,"});,"})
-      current: location.pathname === '/';,"});,"})
-    },;,"});,"})
+      current: location.pathname === '/';,"});,"});
+},;,"});,"})
       name: 'Services',;,"});,"})
       href: '/services',;,"});,"})
       current: location.pathname.startsWith('/services'),;,"});,"})
@@ -29,7 +29,7 @@ export default function Header() {,"});,"})
         { name: 'Financial Solutions', href: '/services/financial-solutions' },;,"});,"})
         { name: 'Manufacturing Solutions', href: '/services/manufacturing-solutions' },;,"});,"})
         { name: 'Industry Solutions', href: '/services/industry-solutions' }"});,"})
-      ];,"});,"})
+      ],"});,"})
       name: 'Solutions',;,"});,"})
       href: '/solutions',;,"});,"})
       current: location.pathname.startsWith('/solutions'),;,"});,"})
@@ -55,14 +55,14 @@ export default function Header() {,"});,"})
         { name: 'Documentation', href: '/docs' }"});,"})
       name: 'Contact',;,"});,"})
       href: '/contact',;,"});,"})
-      current: location.pathname === '/contact';,"});,"})
-    }"});,"})
+      current: location.pathname === '/contact';,"});,"});
+}"});,"})
   return (;,"});,"})
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${,"});,"})
       scrolled;,"});,"})
         ? 'bg-white/95 backdrop-blur-xl border-b border-gray-200 shadow-lg';,"});,"})
-        : 'bg-white/90 backdrop-blur-md';,"});,"})
-    }`}>;,"});,"})
+        : 'bg-white/90 backdrop-blur-md';,"});,"});
+}`}>;,"});,"})
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;,"});,"})
         <div className="flex items-center justify-between h-16 lg:h-20">;,"});,"})
           {/* Logo */}"});,"})
@@ -102,8 +102,8 @@ export default function Header() {,"});,"})
                         ))}"});,"})
                 ) : (;,"});,"})
                     to={item.href}"});,"})
-                    className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${,"});,"})
-                    }`}"});,"})
+                    className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${,"});,"});
+}`}"});,"})
                 )}"});,"})
           </nav>;,"});,"})
           {/* CTA Button */}"});,"})
@@ -247,7 +247,7 @@ export default function Header() {
       name: 'Contact',;
       href: '/contact',;
       current: location.pathname === '/contact'}
-  ];
+  ]
   return(;
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         ? 'bg-white/95 backdrop-blur-xl border-b border-gray-200 shadow-lg';

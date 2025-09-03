@@ -18,7 +18,7 @@ const Careers: NextPage = () => {
       title="Careers at Zion Tech Group - Join Our Team"
 :pages.disabled_auto/careers.tsx
       description="Join Zion Tech Group and be part of a team thats transforming businesses through innovative technology solutions. Explore career opportunities and grow with us."
-      description="Join Zion Tech Group and be part of a team that&apos;s transforming businesses through innovative technology solutions. Explore career opportunities and grow with us."'
+      description="Join Zion Tech Group and be part of a team that&apos;s transforming businesses through innovative technology solutions. Explore career opportunities and grow with us."
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/careers.tsx
     >
       {/* Hero Section */}

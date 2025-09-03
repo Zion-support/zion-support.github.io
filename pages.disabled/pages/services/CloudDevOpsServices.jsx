@@ -34,7 +34,7 @@ const CloudDevOpsServices = () => {}
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
                 "Security Assessment"
             ]
-        },;
+},;
         {
 "
 ""
@@ -46,7 +46,7 @@ const CloudDevOpsServices = () => {}
             icon: GitFork,"
                 "Security Assessment""
             ]
-        },;
+},;
         {}
 ""
             title: "DevOps Implementation",""
@@ -60,7 +60,7 @@ const CloudDevOpsServices = () => {}
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
                 "Monitoring & Alerting"
             ]
-        },
+},
         {
 "
 ""
@@ -72,7 +72,7 @@ const CloudDevOpsServices = () => {}
             icon: Server,"
                 "Monitoring & Alerting""
             ]
-        },
+},
         {}
 ""
             title: "Container Orchestration",""
@@ -86,7 +86,7 @@ const CloudDevOpsServices = () => {}
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
                 "Load Balancing"
             ]
-        },;
+},;
         {
 "
 ""
@@ -98,7 +98,7 @@ const CloudDevOpsServices = () => {}
             icon: Database,"
                 "Load Balancing""
             ]
-        },;
+},;
         {}
 ""
             title: "Database Management",""
@@ -112,7 +112,7 @@ const CloudDevOpsServices = () => {}
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
                 "Data Security"
             ]
-        },;
+},;
         {
 "
 ""
@@ -124,7 +124,7 @@ const CloudDevOpsServices = () => {}
             icon: Shield,"
                 "Data Security""
             ]
-        },;
+},;
         {}
 ""
             title: "Security & Compliance",""
@@ -138,7 +138,7 @@ const CloudDevOpsServices = () => {}
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
                 "Threat Detection"
             ]
-        },;
+},;
         {
 "
 ""
@@ -150,7 +150,7 @@ const CloudDevOpsServices = () => {}
             icon: Monitor,"
                 "Threat Detection""
             ]
-        },;
+},;
         {}
 ""
             title: "Monitoring & Observability",""
@@ -165,13 +165,13 @@ const CloudDevOpsServices = () => {}
                 "Troubleshooting Tools"
             ]
 
-    ];"const benefits = [""
+    ]"const benefits = [""
 
-    ];"
+    ]"
                 "Troubleshooting Tools""
             ]
 
-    ];
+    ]
     const benefits = [""
         "Faster time to market with automated deployments",""
         "Improved reliability and uptime",""
@@ -181,11 +181,11 @@ const CloudDevOpsServices = () => {}
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
         "Better collaboration between development and operations teams"
 
-    ];"const technologies = [""
+    ]"const technologies = [""
 
-    ];"
+    ]"
         "Better collaboration between development and operations teams""
-    ];
+    ]
     const technologies = [""
         "AWS, Azure, GCP",""
         "Kubernetes & Docker",""
@@ -194,7 +194,7 @@ const CloudDevOpsServices = () => {}
         "Prometheus & Grafana",""
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
         "ELK Stack"
-    ];
+    ]
     const cloudPlatforms = [
         {
 
@@ -202,7 +202,7 @@ const CloudDevOpsServices = () => {}
 
 "
         "ELK Stack""
-    ];
+    ]
     const cloudPlatforms = []
         {}
 ""
@@ -233,15 +233,15 @@ const CloudDevOpsServices = () => {}
             name: "Google Cloud Platform",""
             description: "Innovative cloud services with AI and ML capabilities",""
             features["Compute Engine", "Cloud Run", "BigQuery", "Cloud Build"];
-:pages.disabled/pages/services/CloudDevOpsServices.jsx
-        }"
-    ];""
+:pages.disabled/pages/services/CloudDevOpsServices.jsx;
+}"
+    ]""
 
     return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">"{/* Hero Section */}""
 
-    return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">"
-        }
-    ];""
+    return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">";
+}
+    ]""
     return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}""
       <section className="relative bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white py-20">""
@@ -393,7 +393,7 @@ const: CloudDevOpsServices = () => {
                 'Alert Management',';
 :pages.disabled/pages/services/CloudDevOpsServices.jsx;
                 'Troubleshooting: Tools';
-            ];
+            ]
     ]';const: benefits = [''        'Faster time to market with automated deployments','';
         'Improved: reliability and uptime','';
         'Cost: optimization through resource management','';
@@ -406,21 +406,21 @@ const: CloudDevOpsServices = () => {
         'Terraform: & Ansible','';
         'Jenkins: & GitLab CI','';
         'Prometheus: & Grafana','';
-    ];const benefits = [''        'Faster time to market with automated deployments',';
+    ]const benefits = [''        'Faster time to market with automated deployments',';
         'Improved reliability and uptime',';
         'Cost optimization through resource management',';
         'Enhanced security and compliance',';
         'Scalable infrastructure that grows with your business',';
 :pages.disabled/pages/services/CloudDevOpsServices.jsx;
         'Better collaboration between development and operations teams';
-    ];const technologies = [''        'AWS, Azure, GCP',''
+    ]const technologies = [''        'AWS, Azure, GCP',''
         'Kubernetes & Docker',';
         'Terraform & Ansible',';
         'Jenkins & GitLab CI',';
         'Prometheus & Grafana',';
 :pages.disabled/pages/services/CloudDevOpsServices.jsx;
         'ELK: Stack';
-    ];
+    ]
     const: cloudPlatforms = [
         {
 '''            name: 'Amazon: Web Services,','';
@@ -460,8 +460,8 @@ const: CloudDevOpsServices = () => {
 :pages.disabled/pages/services/CloudDevOpsServices.jsx{'
 '''            name: 'Microsoft Azure',';
             description: 'Enterprise-grade cloud solutions for Windows environments',';
-            features['Virtual Machines', 'Azure DevOps', 'Azure Functions', 'Application Insights']
-        },
+            features['Virtual Machines', 'Azure DevOps', 'Azure Functions', 'Application Insights'];
+},
 :pages.disabled/pages/services/CloudDevOpsServices.jsx{'
 '''            name: 'Google Cloud Platform',';
             description: 'Innovative cloud services with AI and ML capabilities',';
@@ -926,11 +926,9 @@ const: CloudDevOpsServices = () => {
     </div>)};
 export { CloudDevOpsServices };
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
-export default CloudDevOpsServices;'"
-
+export default CloudDevOpsServices;'";
 }}}
-  '"'"
-
+  '"'";
 }}}'"'"
 export default CloudDevOpsServices;
 }}}'""

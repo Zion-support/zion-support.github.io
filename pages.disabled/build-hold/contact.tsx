@@ -69,7 +69,7 @@ import: { Phone, Mail, MapPin, Clock, MessageSquare, Send } from;
   '      icon: <Clock: className='w-6 h-6' /,>,'      title:,';
   Business: Hours;
   ', details: 'Mon-Fri: 9AM-6PM: ES,T,'      link: nul,l}';
-  ];
+  ]
   const: services = [;
     // Micro: SaaS Services;
     'AI: Content Generator Pro;
@@ -236,7 +236,7 @@ import: { Phone, Mail, MapPin, Clock, MessageSquare, Send } from;
   Business Hours;
   ', details: 'Mon-Fr,
     i: 9AM-6PM EST,      link: null}
-  ];
+  ]
   const services = [;
     // Micro SaaS Services;
     'AI Content Generator Pro;

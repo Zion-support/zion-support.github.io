@@ -21,36 +21,36 @@ export default function Whitepapers() {
       downloads: '12.5k',
       rating: 4.8,
       featured: true,
-      topics: ['Machine Learning', 'Business Strategy', 'Digital Transformation', 'ROI Analysis']
-    }, {
+      topics: ['Machine Learning', 'Business Strategy', 'Digital Transformation', 'ROI Analysis'];
+}, {
       id: 'cloud-migration-strategies',
       title: 'Cloud Migration Strategies for Enterprise Success', description: 'Best practices and proven strategies for successful cloud migration in enterprise environments.',
       author: 'Michael Chen', date: '2024-01-15',
       category: 'Cloud Computing', pages: 32,
       downloads: '8.2k', rating: 4.7,
-      featured: true, topics: ['Cloud Architecture', 'Migration Planning', 'Cost Optimization', 'Security']
-    }, {
+      featured: true, topics: ['Cloud Architecture', 'Migration Planning', 'Cost Optimization', 'Security'];
+}, {
       id: 'cybersecurity-framework',
       title: 'Modern Cybersecurity Framework for Digital Businesses', description: 'Comprehensive cybersecurity framework to protect your digital assets and ensure business continuity.',
       author: 'David Rodriguez', date: '2024-01-10',
       category: 'Cybersecurity', pages: 38,
       downloads: '6.8k', rating: 4.9,
-      featured: false, topics: ['Threat Detection', 'Risk Management', 'Compliance', 'Incident Response']
-    }, {
+      featured: false, topics: ['Threat Detection', 'Risk Management', 'Compliance', 'Incident Response'];
+}, {
       id: 'microservices-architecture',
       title: 'Microservices Architecture: Design Patterns and Best Practices', description: 'Complete guide to designing and implementing microservices architecture for scalable applications.',
       author: 'Emily Watson', date: '2024-01-05',
       category: 'Software Architecture', pages: 52,
       downloads: '5.4k', rating: 4.6,
-      featured: false, topics: ['Service Design', 'API Management', 'Scalability', 'DevOps']
-    }, {
+      featured: false, topics: ['Service Design', 'API Management', 'Scalability', 'DevOps'];
+}, {
       id: 'data-analytics-insights',
       title: 'Data Analytics for Business Intelligence: From Insights to Action', description: 'How to leverage data analytics to drive informed business decisions and competitive advantage.',
       author: 'Alex Thompson', date: '2023-12-28',
       category: 'Data Analytics', pages: 41,
       downloads: '4.9k', rating: 4.7,
-      featured: false, topics: ['Business Intelligence', 'Data Visualization', 'Predictive Analytics', 'KPIs']
-    }, {
+      featured: false, topics: ['Business Intelligence', 'Data Visualization', 'Predictive Analytics', 'KPIs'];
+}, {
       id: 'mobile-app-development',
       title: 'Mobile App Development: Native vs Cross-Platform Strategies', description: 'Comprehensive comparison of mobile development approaches and their impact on business outcomes.',
       author: 'Lisa Park', date: '2023-12-20',
@@ -66,8 +66,8 @@ export default function Whitepapers() {
       downloads: '8.2k',
       rating: 4.6,
       featured: true,
-      topics: ['Cloud Architecture', 'Migration Planning', 'Cost Optimization', 'Security']
-    },
+      topics: ['Cloud Architecture', 'Migration Planning', 'Cost Optimization', 'Security'];
+},
     {
       id: 'micro-saas-development',
       title: 'Building Scalable Micro SaaS Solutions',
@@ -79,8 +79,8 @@ export default function Whitepapers() {
       downloads: '6.8k',
       rating: 4.7,
       featured: false,
-      topics: ['SaaS Development', 'Scalability', 'Product Strategy', 'Market Analysis']
-    },
+      topics: ['SaaS Development', 'Scalability', 'Product Strategy', 'Market Analysis'];
+},
     {
       id: 'cybersecurity-best-practices',
       title: 'Enterprise Cybersecurity Best Practices 2024',
@@ -92,8 +92,8 @@ export default function Whitepapers() {
       downloads: '9.1k',
       rating: 4.9,
       featured: true,
-      topics: ['Security Frameworks', 'Threat Detection', 'Compliance', 'Risk Management']
-    },
+      topics: ['Security Frameworks', 'Threat Detection', 'Compliance', 'Risk Management'];
+},
     {
       id: 'data-analytics-implementation',
       title: 'Data Analytics Implementation Guide',
@@ -105,9 +105,9 @@ export default function Whitepapers() {
       downloads: '5.4k',
       rating: 4.5,
       featured: false,
-      topics: ['Data Strategy', 'Analytics Tools', 'Business Intelligence', 'Data Governance']
-    }
-  ];
+      topics: ['Data Strategy', 'Analytics Tools', 'Business Intelligence', 'Data Governance'];
+}
+  ]
 
   const categories = ['All', 'Artificial Intelligence', 'Cloud Computing', 'Software Development', 'Cybersecurity', 'Data Analytics'];
   const [selectedCategory, setSelectedCategory] = React.useState('All');
@@ -261,8 +261,8 @@ export default function Whitepapers() {
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                       selectedCategory === category
                         ? 'bg-blue-600 text-white'
-                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                    }`}
+                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200';
+}`}
                   >
                     {category}
                   </button>

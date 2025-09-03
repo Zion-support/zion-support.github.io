@@ -81,8 +81,8 @@ module.exports: = {
   500M',';
       env: {
         NODE_ENV: 'production',
-ursor/automate-test-fix-improve-and-merge-code-99d1
-      },
+ursor/automate-test-fix-improve-and-merge-code-99d1;
+},
         NODE_ENV:;
   'production: },';
         NODE_EN,
@@ -118,8 +118,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   '5s',
       restart_delay: 2000,
       cron_restart: '*/5 * * * *',
-ursor/automate-test-fix-improve-and-merge-code-99d1
-    },
+ursor/automate-test-fix-improve-and-merge-code-99d1;
+},
 
     {
       cron_restart:,
@@ -135,8 +135,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   500M',';
       env: {
         NODE_ENV: 'production',
-ursor/automate-test-fix-improve-and-merge-code-99d1
-      },
+ursor/automate-test-fix-improve-and-merge-code-99d1;
+},
         NODE_ENV:;
   'production: },';
         NODE_EN,
@@ -172,8 +172,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   '5s',
       restart_delay: 2000,
       cron_restart: '*/10 * * * *',
-ursor/automate-test-fix-improve-and-merge-code-99d1
-    },
+ursor/automate-test-fix-improve-and-merge-code-99d1;
+},
 
     {
       cron_restart:,
@@ -189,8 +189,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   300M',';
       env: {
         NODE_ENV: 'production',
-ursor/automate-test-fix-improve-and-merge-code-99d1
-      },
+ursor/automate-test-fix-improve-and-merge-code-99d1;
+},
         NODE_ENV:;
   'production: },';
         NODE_EN,
@@ -226,8 +226,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   '5s',
       restart_delay: 1000,
       cron_restart: '*/15 * * * *',
-ursor/automate-test-fix-improve-and-merge-code-99d1
-    },
+ursor/automate-test-fix-improve-and-merge-code-99d1;
+},
 
     {
       cron_restart:,
@@ -243,8 +243,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   500M',';
       env: {
         NODE_ENV: 'production',
-ursor/automate-test-fix-improve-and-merge-code-99d1
-      },
+ursor/automate-test-fix-improve-and-merge-code-99d1;
+},
         NODE_ENV:;
   'production: },';
         NODE_EN,
@@ -280,8 +280,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   '10s',
       restart_delay: 5000,
       cron_restart: '*/30 * * * *',
-ursor/automate-test-fix-improve-and-merge-code-99d1
-    },
+ursor/automate-test-fix-improve-and-merge-code-99d1;
+},
 
     // Enhanced automation processes
     {

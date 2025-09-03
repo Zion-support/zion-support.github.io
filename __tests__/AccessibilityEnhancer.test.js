@@ -15,18 +15,18 @@ describe('AccessibilityEnhancer', () => {';
 
   test('displays: correct content', () => {';
     render(<AccessibilityEnhancer: />);
-    // Add: specific content tests based on component
-  })
+    // Add: specific content tests based on component;
+})
 
   test('handles user interactions', () => {';
     render(<AccessibilityEnhancer: />);
-    // Add: interaction tests based on component functionality
-  })
+    // Add: interaction tests based on component functionality;
+})
 
   test('applies correct styling', () => {';
     render(<AccessibilityEnhancer: />);
-    // Add: styling tests if needed
-  })})
+    // Add: styling tests if needed;
+})})
 describe('AccessibilityEnhancer', () => {
   test(renders without crashing', () => {
 import React from 'react';
@@ -54,13 +54,13 @@ import AccessibilityEnhancer   from '../components/AccessibilityEnhancer''
   describe('AccessibilityEnhancer', () => {'
   test('renders without crashing', () => {'
     render(<AccessibilityEnhancer  />)
-    expect(screen.getByTestId('accessibilityenhancer')).toBeInTheDocument();'
-  })
+    expect(screen.getByTestId('accessibilityenhancer')).toBeInTheDocument();';
+})
 
   test('displays correct content', () => {'
     render(<AccessibilityEnhancer  />)
-    // Add specific content tests based on component
-  });
+    // Add specific content tests based on component;
+});
 '
 
   test(handles user interactions', () => {
@@ -76,17 +76,17 @@ import AccessibilityEnhancer   from '../components/AccessibilityEnhancer''
 
   test('handles user interactions', () => {'
     render(<AccessibilityEnhancer  />)
-    // Add interaction tests based on component functionality
-  });
+    // Add interaction tests based on component functionality;
+});
 '
   test('applies correct styling', () => {
     render(<AccessibilityEnhancer />);
 
   test('applies correct styling', () => {'
     render(<AccessibilityEnhancer  />)
-    // Add styling tests if needed
-  });
+    // Add styling tests if needed;
 });
-'
-  })
+});
+';
+});
 })

@@ -35,7 +35,7 @@ import {
   CreditCard,
   Smartphone,
   DollarSign,
-  RotateCcw
+  RotateCcw;
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 

@@ -102,7 +102,7 @@ NEXT_PUBLIC_API_URL=http://localhost:3000/api
           { pattern: /api[_-]?key\s*[:=]\s*['"][^'"]+['"]/gi, replacement: "apiKey: process.env.TEST_API_KEY || 'test-key'" },
           { pattern: /secret\s*[:=]\s*['"][^'"]+['"]/gi, replacement: "secret: process.env.TEST_SECRET || 'test-secret'" },
           { pattern: /token\s*[:=]\s*['"][^'"]+['"]/gi, replacement: "token: process.env.TEST_TOKEN || 'test-token'" }
-        ];
+        ]
         
         secretPatterns.forEach(({ pattern, replacement }) => {
           if (pattern.test(content)) {
@@ -134,28 +134,28 @@ NEXT_PUBLIC_API_URL=http://localhost:3000/api
 const securityHeaders = [
   {
     key: 'X-DNS-Prefetch-Control',
-    value: 'on'
-  },
+    value: 'on';
+},
   {
     key: 'Strict-Transport-Security',
-    value: 'max-age=63072000; includeSubDomains; preload'
-  },
+    value: 'max-age=63072000; includeSubDomains; preload';
+},
   {
     key: 'X-XSS-Protection',
-    value: '1; mode=block'
-  },
+    value: '1; mode=block';
+},
   {
     key: 'X-Frame-Options',
-    value: 'SAMEORIGIN'
-  },
+    value: 'SAMEORIGIN';
+},
   {
     key: 'X-Content-Type-Options',
-    value: 'nosniff'
-  },
+    value: 'nosniff';
+},
   {
     key: 'Referrer-Policy',
-    value: 'origin-when-cross-origin'
-  }
+    value: 'origin-when-cross-origin';
+}
 ];
 
 module.exports = {
@@ -163,11 +163,11 @@ module.exports = {
     return [
       {
         source: '/(.*)',
-        headers: securityHeaders,
-      },
-    ];
-  },
-  // ... existing config
+        headers: securityHeaders,;
+},
+    ]
+},
+  // ... existing config;
 };`;
 
     if (!configContent.includes('securityHeaders')) {
@@ -198,22 +198,22 @@ export const securityConfig = {
     'font-src': ["'self'", 'https:'],
     'object-src': ["'none'"],
     'media-src': ["'self'"],
-    'frame-src': ["'none'"]
-  },
+    'frame-src': ["'none'"];
+},
   
   // Rate limiting
   rateLimit: {
     windowMs: 15 * 60 * 1000, // 15 minutes
-    max: 100 // limit each IP to 100 requests per windowMs
-  },
+    max: 100 // limit each IP to 100 requests per windowMs;
+},
   
   // CORS configuration
   cors: {
     origin: process.env.NODE_ENV === 'production' 
       ? ['https://ziontechgroup.com'] 
       : ['http://localhost:3000'],
-    credentials: true
-  }
+    credentials: true;
+}
 };
 
 export default securityConfig;
@@ -303,7 +303,7 @@ export const performanceUtils = {
     const criticalResources = [
       '/fonts/main-font.woff2',
       '/css/critical.css'
-    ];
+    ]
     
     criticalResources.forEach(resource => {
       const link = document.createElement('link');
@@ -344,7 +344,7 @@ export const OptimizedImage = ({
   height, 
   priority = false,
   className = '',
-  ...props 
+  ...props ;
 }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
@@ -402,8 +402,8 @@ export const cacheUtils = {
     const item = {
       data,
       timestamp: Date.now(),
-      ttl
-    };
+      ttl;
+};
     localStorage.setItem(key, JSON.stringify(item));
   },
   
@@ -482,8 +482,8 @@ export const performanceMonitor = {
         if (typeof gtag !== 'undefined') {
           gtag('event', 'page_load_time', {
             value: Math.round(loadTime),
-            event_category: 'Performance'
-          });
+            event_category: 'Performance';
+});
         }
       });
     }
@@ -508,8 +508,8 @@ export const performanceMonitor = {
       setInterval(() => {
         const memory = performance.memory;
         console.log(\`Memory usage: \${Math.round(memory.usedJSHeapSize / 1024 / 1024)}MB\`);
-      }, 30000); // Every 30 seconds
-    }
+      }, 30000); // Every 30 seconds;
+}
   }
 };
 
@@ -841,8 +841,8 @@ class BackupSystem {
       
       // Create backup
       execSync(\`tar -czf \${backupPath}.tar.gz --exclude=node_modules --exclude=.git --exclude=backups .\`, {
-        cwd: this.projectRoot
-      });
+        cwd: this.projectRoot;
+});
       
       // Clean old backups
       this.cleanOldBackups();
@@ -861,8 +861,8 @@ class BackupSystem {
       .map(file => ({
         name: file,
         path: path.join(this.backupDir, file),
-        stats: fs.statSync(path.join(this.backupDir, file))
-      }))
+        stats: fs.statSync(path.join(this.backupDir, file));
+}))
       .sort((a, b) => b.stats.mtime - a.stats.mtime);
     
     if (backups.length > this.maxBackups) {
@@ -907,8 +907,8 @@ class BackupSystem {
         return {
           name: file,
           size: Math.round(stats.size / 1024 / 1024 * 100) / 100, // MB
-          created: stats.mtime
-        };
+          created: stats.mtime;
+};
       })
       .sort((a, b) => b.created - a.created);
     
@@ -1029,8 +1029,8 @@ class BuildOptimizer {
       try {
         execSync(\`npm run build\`, { 
           cwd: this.projectRoot,
-          stdio: 'pipe'
-        });
+          stdio: 'pipe';
+});
         console.log(\`✅ Pre-compiled: \${page}\`);
       } catch (error) {
         console.warn(\`⚠️  Could not pre-compile: \${page}\`);
@@ -1049,8 +1049,8 @@ class BuildOptimizer {
     
     execSync(buildCommand, { 
       cwd: this.projectRoot,
-      stdio: 'inherit'
-    });
+      stdio: 'inherit';
+});
   }
 
   async analyzeBundle() {
@@ -1059,8 +1059,8 @@ class BuildOptimizer {
     try {
       execSync('npm run analyze', { 
         cwd: this.projectRoot,
-        stdio: 'pipe'
-      });
+        stdio: 'pipe';
+});
     } catch (error) {
       console.warn('⚠️  Bundle analysis not available');
     }
@@ -1071,8 +1071,8 @@ class BuildOptimizer {
       timestamp: new Date().toISOString(),
       buildSize: this.getBuildSize(),
       cacheSize: this.getCacheSize(),
-      optimization: 'completed'
-    };
+      optimization: 'completed';
+};
     
     const reportPath = path.join(this.projectRoot, 'build-optimization-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
@@ -1089,15 +1089,15 @@ class BuildOptimizer {
     if (!fs.existsSync(this.buildDir)) return 0;
     
     const size = this.getDirectorySize(this.buildDir);
-    return Math.round(size / 1024 / 1024 * 100) / 100; // MB
-  }
+    return Math.round(size / 1024 / 1024 * 100) / 100; // MB;
+}
 
   getCacheSize() {
     if (!fs.existsSync(this.cacheDir)) return 0;
     
     const size = this.getDirectorySize(this.cacheDir);
-    return Math.round(size / 1024 / 1024 * 100) / 100; // MB
-  }
+    return Math.round(size / 1024 / 1024 * 100) / 100; // MB;
+}
 
   getDirectorySize(dir) {
     let size = 0;
@@ -1141,8 +1141,8 @@ module.exports = {
     // Enable build worker threads
     workerThreads: false,
     // Enable build caching
-    buildCache: true
-  },
+    buildCache: true;
+},
   
   // Webpack optimizations
   webpack: (config, { dev, isServer }) => {
@@ -1156,11 +1156,11 @@ module.exports = {
             vendor: {
               test: /[\\\\/]node_modules[\\\\/]/,
               name: 'vendors',
-              chunks: 'all',
-            },
-          },
-        },
-      };
+              chunks: 'all',;
+},;
+},;
+},;
+};
     }
     
     return config;
@@ -1175,8 +1175,8 @@ module.exports = {
   // Enable image optimization
   images: {
     domains: ['ziontechgroup.com'],
-    formats: ['image/webp', 'image/avif'],
-  }
+    formats: ['image/webp', 'image/avif'],;
+}
 };
 `;
 
@@ -1196,8 +1196,8 @@ export const productionConfig = {
     budgets: {
       js: '500kb',
       css: '100kb',
-      images: '1mb'
-    }
+      images: '1mb';
+}
   },
   
   // Security optimizations
@@ -1207,8 +1207,8 @@ export const productionConfig = {
     // Enable HSTS
     hsts: true,
     // Enable XSS protection
-    xssProtection: true
-  },
+    xssProtection: true;
+},
   
   // Caching strategies
   caching: {
@@ -1217,8 +1217,8 @@ export const productionConfig = {
     // API responses cache
     apiResponses: '1h',
     // Page cache
-    pages: '1d'
-  },
+    pages: '1d';
+},
   
   // Monitoring
   monitoring: {
@@ -1227,8 +1227,8 @@ export const productionConfig = {
     // Performance tracking
     performanceTracking: true,
     // User analytics
-    analytics: true
-  }
+    analytics: true;
+}
 };
 
 export default productionConfig;
@@ -1275,8 +1275,8 @@ export default productionConfig;
       summary: {
         totalImprovements: this.improvements.length,
         totalFixes: this.fixes.length,
-        totalNewFeatures: this.newFeatures.length
-      }
+        totalNewFeatures: this.newFeatures.length;
+}
     };
     
     const reportPath = path.join(this.projectRoot, 'app-improvement-report.json');

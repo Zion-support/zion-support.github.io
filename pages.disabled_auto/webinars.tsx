@@ -81,7 +81,7 @@ import {
   Download,
   Bookmark,
 :pages.disabled_auto/webinars.tsx
-  ExternalLink
+  ExternalLink;
 } from
   'lucide-react';
   ExternalLink} from 'lucide-react';
@@ -336,8 +336,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
                         variant={
                           featuredWebinar.status === 'upcoming'
                             ? 'default'
-                            : 'secondary'
-                        }
+                            : 'secondary';
+}
                         className="text-xs"
                       >
                         {featuredWebinar.status === 'upcoming'
@@ -691,8 +691,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
                                 variant={
                                   webinar.status === 'upcoming'
                                     ? 'default'
-                                    : 'secondary'
-                                }
+                                    : 'secondary';
+}
                                 className="text-xs"
                               >
                                 {webinar.status === 'upcoming'
@@ -828,8 +828,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
                           category.active
                             ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white'
                             : 'text-gray-300 hover:bg-slate-700'
-ursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
-                        }`}
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx;
+}`}
 :pages.disabled_auto/webinars.tsx;
                           category.active;
                             ?,

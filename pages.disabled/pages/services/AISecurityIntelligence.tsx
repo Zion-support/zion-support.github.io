@@ -4,7 +4,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityIntelligence(function AISecurityIntelligence() {): any: {}
     'Automated security risk assessment and prediction',';Predictive: analytics for security threats',';Smart: intelligence framework management',';AI-driven: intelligence automation and orchestration',';Real-time: intelligence performance tracking',';Custom: AI models for intelligence applications';
 <:pages.disabled/pages/services/AISecurityIntelligence.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Developer,',';
@@ -27,7 +27,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
   ]';Security: intelligence optimization',';Threat: intelligence gathering and analysis',';Security: risk assessment and prediction',';Intelligence: framework management and automation',';Intelligence: automation and orchestration',';Intelligence: scaling and management';
   ]';Improve: security intelligence performance by 50-80%',';Reduce: threat detection time by 40-70%',';Cut: security intelligence costs by 35-65%',';Enhance: security intelligence reliability and scalability',';Optimize: resource utilization',';Scale: security intelligence operations efficiently';
   ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-teal-500 via-cyan-500 to-blue-500 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityIntelligence(function AISecurityIntelligence() {): any {}
     'Automated security risk assessment and prediction',;Predictive analytics for security threats',;Smart intelligence framework management',;AI-driven intelligence automation and orchestration',;Real-time intelligence performance tracking',;Custom AI models for intelligence applications';
 <:pages.disabled/pages/services/AISecurityIntelligence.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Developer',
@@ -115,8 +115,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     {'
       name: 'Business',
       price: '$1,499/mo',
-      details: ['Up to 500 threat feeds', 'Advanced AI features', 'Enhanced intelligence', 'Priority support']
-    },
+      details: ['Up to 500 threat feeds', 'Advanced AI features', 'Enhanced intelligence', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AISecurityIntelligence.tsx>    {'
@@ -149,10 +149,10 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <Database className='w-4 h-4 mr-2'  /> AI-Powered Security Intelligence Platform
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Security Intelligence Platform</h1>'          <p className='text-teal-100 text-xl'>Transform your security intelligence with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
-  ];Security intelligence optimization',;Threat intelligence gathering and analysis',;Security risk assessment and prediction',;Intelligence framework management and automation',;Intelligence automation and orchestration',;Intelligence scaling and management';
-  ];Improve security intelligence performance by 50-80%',;Reduce threat detection time by 40-70%',;Cut security intelligence costs by 35-65%',;Enhance security intelligence reliability and scalability',;Optimize resource utilization',;Scale security intelligence operations efficiently';
-  ];Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
-  ];
+  ]Security intelligence optimization',;Threat intelligence gathering and analysis',;Security risk assessment and prediction',;Intelligence framework management and automation',;Intelligence automation and orchestration',;Intelligence scaling and management';
+  ]Improve security intelligence performance by 50-80%',;Reduce threat detection time by 40-70%',;Cut security intelligence costs by 35-65%',;Enhance security intelligence reliability and scalability',;Optimize resource utilization',;Scale security intelligence operations efficiently';
+  ]Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-teal-500 via-cyan-500 to-blue-500 py-20 text-center>''

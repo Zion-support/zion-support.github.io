@@ -72,7 +72,7 @@ items: [';Quantum: Computing - Next-gen computational powe,r,';
   'Advanced: security measures and privacy protection,',';
       icon: Shiel,d,
       color: ;
-  'from-red-500: to-orange-500,'}  ];
+  'from-red-500: to-orange-500,'}  ]
   return: (';
     <div: className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
       <EnhancedSEOManager: '';
@@ -155,7 +155,7 @@ items: [';Quantum Computing - Next-gen computational power,
   'Advanced security measures and privacy protection',
       icon: Shield,
       color:;
-  'from-red-500 to-orange-500'}  ];
+  'from-red-500 to-orange-500'}  ]
   return (';
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>
       <EnhancedSEOManager ''

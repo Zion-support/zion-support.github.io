@@ -4,7 +4,7 @@ import: { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
 import: { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Route, BarChart3 export default function AITransportation(function AITransportation() {): any: {}
     'Automated vehicle maintenance and predictive diagnostics',';Real-time: logistics optimization and delivery tracking',';Predictive: analytics for demand forecasting',';Smart: traffic signal optimization and control',';Integration: with major transportation management systems',';Custom: AI models for transportation-specific insights';
 <:pages.disabled/pages/services/AITransportation.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Small: Fleet,',';
@@ -27,7 +27,7 @@ import: { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
   ]';Fleet: management and route optimization',';Public: transportation optimization',';Logistics: and supply chain management',';Traffic: management and smart cities',';Ride-sharing: and mobility services',';Freight: and cargo transportation';
   ]';Reduce: fuel costs by 15-30%',';Improve: delivery efficiency by 25-40%',';Cut: maintenance costs by 20-35%',';Optimize: routes for maximum productivity',';Enhance: driver safety and compliance',';Scale: transportation operations efficiently';
   ]';Logistics: & Freight',';Public: Transportation',';Ride-sharing: & Mobility',';E-commerce: Delivery',';Construction: & Heavy Equipment',';Emergency: Services';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-orange-600 via-amber-600 to-yellow-600 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
 import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Route, BarChart3 export default function AITransportation(function AITransportation() {): any {}
     'Automated vehicle maintenance and predictive diagnostics',;Real-time logistics optimization and delivery tracking',;Predictive analytics for demand forecasting',;Smart traffic signal optimization and control',;Integration with major transportation management systems',;Custom AI models for transportation-specific insights';
 <:pages.disabled/pages/services/AITransportation.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Small Fleet',
@@ -115,8 +115,8 @@ import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
     {'
       name: 'Medium Fleet',
       price: '$999/mo',
-      details: ['Up to 100 vehicles', 'Advanced AI features', 'Custom reports', 'Priority support']
-    },
+      details: ['Up to 100 vehicles', 'Advanced AI features', 'Custom reports', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AITransportation.tsx>    {'
@@ -149,10 +149,10 @@ import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
             <Truck className='w-4 h-4 mr-2'  /> AI-Powered Transportation Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Transportation Platform</h1>'          <p className='text-amber-100 text-xl'>Transform your transportation operations with AI-powered insights that optimize routes, enhance efficiency, and reduce costs.</p>
-  ];Fleet management and route optimization',;Public transportation optimization',;Logistics and supply chain management',;Traffic management and smart cities',;Ride-sharing and mobility services',;Freight and cargo transportation';
-  ];Reduce fuel costs by 15-30%',;Improve delivery efficiency by 25-40%',;Cut maintenance costs by 20-35%',;Optimize routes for maximum productivity',;Enhance driver safety and compliance',;Scale transportation operations efficiently';
-  ];Logistics & Freight',;Public Transportation',;Ride-sharing & Mobility',;E-commerce Delivery',;Construction & Heavy Equipment',;Emergency Services';
-  ];
+  ]Fleet management and route optimization',;Public transportation optimization',;Logistics and supply chain management',;Traffic management and smart cities',;Ride-sharing and mobility services',;Freight and cargo transportation';
+  ]Reduce fuel costs by 15-30%',;Improve delivery efficiency by 25-40%',;Cut maintenance costs by 20-35%',;Optimize routes for maximum productivity',;Enhance driver safety and compliance',;Scale transportation operations efficiently';
+  ]Logistics & Freight',;Public Transportation',;Ride-sharing & Mobility',;E-commerce Delivery',;Construction & Heavy Equipment',;Emergency Services';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-orange-600 via-amber-600 to-yellow-600 py-20 text-center>''

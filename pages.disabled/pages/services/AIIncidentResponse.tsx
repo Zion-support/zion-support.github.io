@@ -4,7 +4,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIIncidentResponse(function AIIncidentResponse() {): any: {}
     'Automated incident triage and prioritization',';Predictive: analytics for incident prevention',';Smart: response automation and orchestration',';AI-driven: incident investigation and forensics',';Real-time: incident analytics and insights',';Custom: AI models for incident applications';
 <:pages.disabled/pages/services/AIIncidentResponse.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Developer,',';
@@ -27,7 +27,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
   ]';Incident: response optimization',';Threat: detection and analysis',';Incident: triage and prioritization',';Response: automation and orchestration',';Incident: investigation and forensics',';Incident: scaling and management';
   ]';Improve: incident response performance by 50-80%',';Reduce: incident resolution time by 40-70%',';Cut: incident operational costs by 35-65%',';Enhance: incident response reliability and scalability',';Optimize: resource utilization',';Scale: incident response operations efficiently';
   ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-red-500 via-orange-500 to-amber-500 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIIncidentResponse(function AIIncidentResponse() {): any {}
     'Automated incident triage and prioritization',;Predictive analytics for incident prevention',;Smart response automation and orchestration',;AI-driven incident investigation and forensics',;Real-time incident analytics and insights',;Custom AI models for incident applications';
 <:pages.disabled/pages/services/AIIncidentResponse.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Developer',
@@ -115,8 +115,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     {'
       name: 'Business',
       price: '$1,599/mo',
-      details: ['Up to 500 incidents/month', 'Advanced AI features', 'Enhanced monitoring', 'Priority support']
-    },
+      details: ['Up to 500 incidents/month', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AIIncidentResponse.tsx>    {'
@@ -149,10 +149,10 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <Database className='w-4 h-4 mr-2'  /> AI-Powered Incident Response Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Incident Response Platform</h1>'          <p className='text-red-100 text-xl'>Transform your incident response operations with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
-  ];Incident response optimization',;Threat detection and analysis',;Incident triage and prioritization',;Response automation and orchestration',;Incident investigation and forensics',;Incident scaling and management';
-  ];Improve incident response performance by 50-80%',;Reduce incident resolution time by 40-70%',;Cut incident operational costs by 35-65%',;Enhance incident response reliability and scalability',;Optimize resource utilization',;Scale incident response operations efficiently';
-  ];Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
-  ];
+  ]Incident response optimization',;Threat detection and analysis',;Incident triage and prioritization',;Response automation and orchestration',;Incident investigation and forensics',;Incident scaling and management';
+  ]Improve incident response performance by 50-80%',;Reduce incident resolution time by 40-70%',;Cut incident operational costs by 35-65%',;Enhance incident response reliability and scalability',;Optimize resource utilization',;Scale incident response operations efficiently';
+  ]Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-red-500 via-orange-500 to-amber-500 py-20 text-center>''

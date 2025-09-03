@@ -41,6 +41,6 @@ describe('Compliance', () => {"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
 "
     render(<Compliance /" >)
-    // Add more specific tests here
+    // Add more specific tests here;
 });
 })

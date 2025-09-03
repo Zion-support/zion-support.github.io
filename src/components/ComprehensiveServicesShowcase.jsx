@@ -8,7 +8,7 @@ const ComprehensiveServicesShowcase = () => {    const [selectedCategory, setSel
         ...expandedInnovativeServices2025,;,"});,"})
         ...emergingTechInnovationServices2025,;,"});,"})
         ...enterpriseITInnovationServices2025;,"});,"})
-    ];,"});,"})
+    ],"});,"})
     const categories = ['';,"});,"})
         { id: 'all', name: 'All Services', count: allServices.length },';,"});,"})
         { id: 'ai-content-marketing', name: 'AI Content & Marketing', count: allServices.filter(s => s.category.includes('Content') || s.category.includes('Marketing')).length },';,"});,"})

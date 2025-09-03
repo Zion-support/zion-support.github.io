@@ -48,8 +48,8 @@ export default async function handler(
       name: event.name,
       category: event.category,
       timestamp: event.timestamp,
-      session_id: event.session_id,
-    });
+      session_id: event.session_id,;
+});
 
     // Send to external analytics services
     await sendToExternalServices(event);
@@ -68,8 +68,8 @@ async function sendToExternalServices(event: AnalyticsEvent) {
       await fetch(`https://www.google-analytics.com/mp/collect?measurement_id=${process.env.GA_MEASUREMENT_ID}&api_secret=${process.env.GA_API_SECRET}`, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-        },
+          'Content-Type': 'application/json',;
+},
         body: JSON.stringify({
           client_id: event.user_id,
           events: [{
@@ -78,11 +78,11 @@ async function sendToExternalServices(event: AnalyticsEvent) {
               event_category: event.category,
               event_label: event.label,
               value: event.value,
-              ...event.custom_parameters,
-            },
-          }],
-        }),
-      });
+              ...event.custom_parameters,;
+},;
+}],;
+}),;
+});
     }
 
     // Mixpanel
@@ -90,8 +90,8 @@ async function sendToExternalServices(event: AnalyticsEvent) {
       await fetch('https://api.mixpanel.com/track', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-        },
+          'Content-Type': 'application/json',;
+},
         body: JSON.stringify({
           event: event.name,
           properties: {
@@ -101,10 +101,10 @@ async function sendToExternalServices(event: AnalyticsEvent) {
             label: event.label,
             value: event.value,
             ...event.custom_parameters,
-            timestamp: event.timestamp,
-          },
-        }),
-      });
+            timestamp: event.timestamp,;
+},;
+}),;
+});
     }
 
     // Custom webhook
@@ -112,10 +112,10 @@ async function sendToExternalServices(event: AnalyticsEvent) {
       await fetch(process.env.ANALYTICS_WEBHOOK_URL, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(event),
-      });
+          'Content-Type': 'application/json',;
+},
+        body: JSON.stringify(event),;
+});
     }
   } catch (error) {
     console.error('Failed to send to external services:', error);

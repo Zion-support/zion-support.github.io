@@ -527,22 +527,22 @@
 '';
                   title: 'Static Application Security Testing (SAST),';
                   description: 'Analyzes source code to identify security vulnerabilities, coding errors, and compliance issues without executing the application.',';
-                  benefits: ['Early vulnerability detection', 'No runtime overhead', 'Comprehensive code coverage']
-                },
+                  benefits: ['Early vulnerability detection', 'No runtime overhead', 'Comprehensive code coverage'];
+},
 :pages.disabled/pages/services/ai-code-review-security.tsx{'
 '{}
 '';
                   title: 'Dynamic Application Security Testing (DAST),';
                   description: 'Tests running applications to identify security vulnerabilities from an external attacker's perspective.',';
-                  benefits: ['Real-world attack simulation', 'Runtime vulnerability detection', 'External threat perspective']
-                },
+                  benefits: ['Real-world attack simulation', 'Runtime vulnerability detection', 'External threat perspective'];
+},
 :pages.disabled/pages/services/ai-code-review-security.tsx{'
 '{}
 '';
                   title: 'Software Composition Analysis (SCA),';
                   description: 'Identifies vulnerabilities in third-party dependencies, open-source components, and libraries.',';
-                  benefits: ['Dependency vulnerability tracking', 'License compliance', 'Supply chain security']
-                },
+                  benefits: ['Dependency vulnerability tracking', 'License compliance', 'Supply chain security'];
+},
 :pages.disabled/pages/services/ai-code-review-security.tsx{'
 '{}
 '';
@@ -550,8 +550,8 @@
                   description: 'Combines SAST and DAST approaches to provide real-time security analysis during application execution.',''
                   title: 'Interactive Application Security Testing (IAST),';
                   description: 'Combines SAST and DAST approaches to provide real-time security analysis during application execution.',';
-                  benefits: ['Real-time analysis', 'Accurate vulnerability detection', 'Minimal false positives']
-                }
+                  benefits: ['Real-time analysis', 'Accurate vulnerability detection', 'Minimal false positives'];
+}
               ].map(approach: unknow,n, index: unknown: <motion.div;
                   key={inde,x}
                   initial: = {}
@@ -873,22 +873,22 @@
 '';
                   industry: 'Financial Services',';
                   description: 'Secure banking applications, payment systems, and trading platforms with compliance-focused security analysis.',';
-                  features: ['PCI DSS compliance', 'SOX compliance', 'Real-time fraud detection']
-                },
+                  features: ['PCI DSS compliance', 'SOX compliance', 'Real-time fraud detection'];
+},
 :pages.disabled/pages/services/ai-code-review-security.tsx{'
 '{}
 '';
                   industry: 'Healthcare',';
                   description: 'Protect patient data and ensure HIPAA compliance in medical software and telemedicine platforms.',';
-                  features: ['HIPAA compliance', 'Patient data protection', 'Medical device security']
-                },
+                  features: ['HIPAA compliance', 'Patient data protection', 'Medical device security'];
+},
 :pages.disabled/pages/services/ai-code-review-security.tsx{'
 '{}
 '';
                   industry: 'E-commerce',';
                   description: 'Secure online shopping platforms, payment gateways, and customer data management systems.',';
-                  features: ['Payment security', 'Customer data protection', 'Fraud prevention']
-                },
+                  features: ['Payment security', 'Customer data protection', 'Fraud prevention'];
+},
 :pages.disabled/pages/services/ai-code-review-security.tsx{'
 '{}
 '';
@@ -896,8 +896,8 @@
                   description: 'Secure government applications, citizen portals, and critical infrastructure systems.',''
                   industry: 'Government',';
                   description: 'Secure government applications, citizen portals, and critical infrastructure systems.',';
-                  features: ['FedRAMP compliance', 'FISMA compliance', 'National security standards']
-                }
+                  features: ['FedRAMP compliance', 'FISMA compliance', 'National security standards'];
+}
               ].map(useCase: unknow,n, index: unknown: <motion.div;
                   key={inde,x}
                   initial: = {}

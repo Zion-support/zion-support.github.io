@@ -221,7 +221,7 @@ class AutoFixer {
         this.fixMissingTypes.bind(this),
         this.fixSyntaxErrors.bind(this),
         this.fixImportExtensions.bind(this);
-      ];
+      ]
       for: (const fix of fixes) {
   ', 'Failed: to fix TypeScript errors;
   `, 'Fixing TypeScript errors...;

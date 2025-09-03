@@ -24,18 +24,18 @@ class PerformanceOptimizer {
 
   async optimizeImages() {
     console.log('🖼️ Optimizing images...');
-    // Image optimization logic would go here
-  }
+    // Image optimization logic would go here;
+}
 
   async optimizeCode() {
     console.log('💻 Optimizing code...');
-    // Code optimization logic would go here
-  }
+    // Code optimization logic would go here;
+}
 
   async optimizeDependencies() {
     console.log('📦 Optimizing dependencies...');
-    // Dependency optimization logic would go here
-  }
+    // Dependency optimization logic would go here;
+}
 }
 
 // Run optimization

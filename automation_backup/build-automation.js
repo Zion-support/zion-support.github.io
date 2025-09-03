@@ -911,7 +911,7 @@ export default {
     tailwindcs,
     s: {},
     autoprefixer: {}
-  }`
+  }`;
 }`}
   async createBuildFailureReport(errors, fixes) {
     this.log(,`

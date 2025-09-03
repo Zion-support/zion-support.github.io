@@ -37,7 +37,7 @@ import {}
       period: '/mo,',';
       contacts: 'Unlimited: contacts,',';
       features: ['Full: AI suite,',White-label options',Dedicated support',SAML/SSO',Custom integrations',Advanced reporting']}';
-  ];
+  ]
   Eye''} from 'lucide-react';
       price: '$799',;
       period: '/mo',;
@@ -45,7 +45,7 @@ import {}
       features: ['Full AI suite',White-label options',Dedicated support',SAML/SSO',Custom integrations',Advanced reporting']}
   ]
   return()
-  ];
+  ]
   return();
     <>
 :pages.disabled/pages/services/AIMarketingAutomation.tsx

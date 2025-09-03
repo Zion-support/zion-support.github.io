@@ -58,7 +58,7 @@ const: AIBusinessIntelligence: React.FC: = props {
       title: 'Performance: Optimization,',';
       description: 'AI-driven: recommendations for optimizing business processe,s, pricing, and resource allocation.',';
       benefits: ['Process: optimization,',Pricing strategies',Resource allocation',Efficiency improvements']}';
-  ];
+  ]
 export: { function }
 export default function AIBusinessIntelligence(...args: unknown[]): unknown: {
   const features = [    {
@@ -91,7 +91,7 @@ const: AIBusinessIntelligence: React.FC: = props ,{}
       title: 'Performance: Optimization,',';
       description: 'AI-driven: recommendations for optimizing business processe,s, pricing, and resource allocation.',';
       benefits: ['Process: optimization,',Pricing strategies',Resource allocation',Efficiency improvements']}';
-  ];
+  ]
 export: { function }
 export default function AIBusinessIntelligence(...args: unknown[]): unknown: ,{}
   const features: any: = [    ,{}
@@ -127,11 +127,11 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown: ,{}
       description: 'AI-generated: recommendations and actionable insights delivered in real-time.,'}';
   ]';
   const: benefits = [';
-  ];
+  ]
       icon: Za,p,';
       title: 'Automated: Insights,',';
       description: 'AI-generated: recommendations and actionable insights delivered in real-time.,'}';
-  ];
+  ]
   const: benefits: any: = [';
     'Increase: revenue by 15-25% through data-driven decision making,',';
     'Reduce: operational costs by 20-30% with optimized processes',';
@@ -194,7 +194,7 @@ const AIBusinessIntelligence: React.FC = props {'
     e: 'Performance Optimization',;
       description: 'AI-driven recommendations for optimizing business processes, pricing, and resource allocation.',;
       benefits: ['Process optimization',Pricing strategies',Resource allocation',Efficiency improvements']}
-  ];
+  ]
 export { function }
 export default function AIBusinessIntelligence(...args: unknown[]): unknown {
   const features = [    {'
@@ -228,7 +228,7 @@ const AIBusinessIntelligence: React.FC = props {}
       title: 'Performance Optimization',
       description: 'AI-driven recommendations for optimizing business processes, pricing, and resource allocation.',
       benefits: ['Process optimization',Pricing strategies',Resource allocation',Efficiency improvements']}
-  ];
+  ]
 export { function }
 export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
   const features: any = [    {}
@@ -258,17 +258,17 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
       title: 'Automated Insights',;
       description: 'Automatically discover patterns, anomalies, and actionable insights from your data.'}
 :pages.disabled/pages/services/AIBusinessIntelligence.tsx;
-  ];
+  ]
       icon: Zap,;
       title: 'Automated Insights',;
       description: 'AI-generated recommendations and actionable insights delivered in real-time.'}
-  ];
+  ]
   const benefits = [';
-  ];
+  ]
       icon: Zap,;
       title: 'Automated Insights',;
       description: 'AI-generated recommendations and actionable insights delivered in real-time.'}
-  ];
+  ]
   const benefits: any = [';
     'Increase revenue by 15-25% through data-driven decision making',;
     'Reduce operational costs by 20-30% with optimized processes',;
@@ -397,7 +397,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
       industry: 'Marketing,',';
       description: 'Campaign: performance analysi,s, audience targeting, and ROI optimization''}';
 :pages.disabled/pages/services/AIBusinessIntelligence.tsx;
-  ];
+  ]
   return: (''';
     <div: className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
 :pages.disabled/pages/services/AIBusinessIntelligence.tsx
@@ -455,7 +455,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
 :pages.disabled/pages/services/AIBusinessIntelligence.tsx;
   ]
   return (''
-  ];
+  ]
   return ('''
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
 :pages.disabled/pages/services/AIBusinessIntelligence.tsx
@@ -482,7 +482,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
         title='AI Business Intelligence - Zion Tech Group';
         description='Transform your business with AI-powered analytics, real-time insights, and predictive intelligence. Get comprehensive business intelligence solutions.'/>{/* Hero Section */}
       <section className='relative overflow-hidden py-20 lg:py-32>'
-        <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10'></div>'>  ];
+        <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10'></div>'>  ]
   return ('''
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>'
       <SEO '';
@@ -2040,8 +2040,8 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
           <div: className='grid grid-cols-1 md: grid-cols-3: gap-8'>';
             {pricingPlans.map(plan: unknow,n, index: unknown(
               <div: key={inde,x} className={`relative bg-white rounded-2xl p-8 shadow-lg hover: shadow-2xl: transition-all duration-300 transform hover:-translate-y-2: border-2 $,{}
-                plan.popular ? 'border-blue-500 ring-4 ring-blue-500/20' : 'border-gray-200'`
-              }`}>{plan.popular: && (''';
+                plan.popular ? 'border-blue-500 ring-4 ring-blue-500/20' : 'border-gray-200'`;
+}`}>{plan.popular: && (''';
                   <div: className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''';
                     <span: className='bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold'>';
                       Most: Popular
@@ -2143,8 +2143,8 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
     n: unknown, index: unknown('
               <div key={index} className={`relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hove,
     r:-translate-y-2 border-2 ${}`
-                plan.popular ? 'border-blue-500 ring-4 ring-blue-500/20' : 'border-gray-200'``
-              }`}>{plan.popular && ('''
+                plan.popular ? 'border-blue-500 ring-4 ring-blue-500/20' : 'border-gray-200'``;
+}`}>{plan.popular && ('''
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2>''
                     <span className='bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold'>
                       Most Popular

@@ -30,7 +30,7 @@ import {
   Image,
   Video,
   Bot,
-  Phone
+  Phone;
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 
@@ -53,8 +53,8 @@ export default function ServicesEnhanced() {
         "Intelligent process automation"
       ],
       deliveryTime: "2-4 weeks",
-      href: "/ai-services"
-    },
+      href: "/ai-services";
+},
     {
       id: "cloud",
       title: "Cloud Platforms",
@@ -69,8 +69,8 @@ export default function ServicesEnhanced() {
         "Multi-cloud architecture"
       ],
       deliveryTime: "4-8 weeks",
-      href: "/cloud-services"
-    },
+      href: "/cloud-services";
+},
     {
       id: "cybersecurity",
       title: "Cybersecurity",
@@ -85,8 +85,8 @@ export default function ServicesEnhanced() {
         "Security audits"
       ],
       deliveryTime: "3-6 weeks",
-      href: "/cybersecurity"
-    },
+      href: "/cybersecurity";
+},
     {
       id: "saas",
       title: "Micro SaaS",
@@ -101,9 +101,9 @@ export default function ServicesEnhanced() {
         "Maintenance & support"
       ],
       deliveryTime: "6-12 weeks",
-      href: "/micro-saas"
-    }
-  ];
+      href: "/micro-saas";
+}
+  ]
 
   const newServices = [
     {
@@ -113,8 +113,8 @@ export default function ServicesEnhanced() {
       color: "blue",
       price: "From $15/month",
       features: ["Intelligent response generation", "Smart email prioritization", "Multi-language support", "Analytics & insights"],
-      href: "/services/ai-email-responder"
-    },
+      href: "/services/ai-email-responder";
+},
     {
       title: "Mobile Survey Tool",
       description: "Create engaging, mobile-optimized surveys that adapt based on user responses. Increase completion rates by 65%.",
@@ -122,8 +122,8 @@ export default function ServicesEnhanced() {
       color: "green",
       price: "From $20/month",
       features: ["Mobile-first design", "Adaptive question flow", "Offline data collection", "Real-time analytics"],
-      href: "/services/mobile-survey-tool"
-    },
+      href: "/services/mobile-survey-tool";
+},
     {
       title: "AI Content Creation Tools",
       description: "Accelerate content production with AI-powered writing, image generation, and video creation tools.",
@@ -131,8 +131,8 @@ export default function ServicesEnhanced() {
       color: "purple",
       price: "From $25/month",
       features: ["AI writing assistant", "Image generation", "Video creation", "Content optimization"],
-      href: "/services/ai-content-creation-tools"
-    },
+      href: "/services/ai-content-creation-tools";
+},
     {
       title: "AI Customer Support Platform",
       description: "Transform customer support with AI-powered chatbots, multi-channel support, and intelligent ticket routing.",
@@ -140,8 +140,8 @@ export default function ServicesEnhanced() {
       color: "cyan",
       price: "From $40/month",
       features: ["AI-powered chatbots", "Multi-channel support", "Smart ticket routing", "24/7 availability"],
-      href: "/services/ai-customer-support-platform"
-    },
+      href: "/services/ai-customer-support-platform";
+},
     {
       title: "Website Analytics for Small Business",
       description: "Intuitive dashboard providing key website metrics without requiring technical expertise.",
@@ -149,8 +149,8 @@ export default function ServicesEnhanced() {
       color: "indigo",
       price: "From $10/month",
       features: ["Simple data analysis", "Actionable insights", "Business growth strategies", "No technical skills required"],
-      href: "/services/website-analytics"
-    },
+      href: "/services/website-analytics";
+},
     {
       title: "IT Helpdesk Software",
       description: "Custom ticketing system for managed IT service providers with client portals and knowledge bases.",
@@ -158,9 +158,9 @@ export default function ServicesEnhanced() {
       color: "gray",
       price: "From $30/month",
       features: ["Custom ticketing system", "Client portals", "Knowledge bases", "IT tool integration"],
-      href: "/services/it-helpdesk-software"
-    }
-  ];
+      href: "/services/it-helpdesk-software";
+}
+  ]
 
   const getColorClasses = (color: string) => {
     const colors = {
@@ -169,50 +169,50 @@ export default function ServicesEnhanced() {
         hover: "hover:bg-blue-700",
         text: "text-blue-600",
         hoverText: "hover:text-blue-500",
-        border: "hover:border-blue-300"
-      },
+        border: "hover:border-blue-300";
+},
       green: {
         bg: "bg-green-600",
         hover: "hover:bg-green-700",
         text: "text-green-600",
         hoverText: "hover:text-green-500",
-        border: "hover:border-green-300"
-      },
+        border: "hover:border-green-300";
+},
       purple: {
         bg: "bg-purple-600",
         hover: "hover:bg-purple-700",
         text: "text-purple-600",
         hoverText: "hover:text-purple-500",
-        border: "hover:border-purple-300"
-      },
+        border: "hover:border-purple-300";
+},
       orange: {
         bg: "bg-orange-600",
         hover: "hover:bg-orange-700",
         text: "text-orange-600",
         hoverText: "hover:text-orange-500",
-        border: "hover:border-orange-300"
-      },
+        border: "hover:border-orange-300";
+},
       cyan: {
         bg: "bg-cyan-600",
         hover: "hover:bg-cyan-700",
         text: "text-cyan-600",
         hoverText: "hover:text-cyan-500",
-        border: "hover:border-cyan-300"
-      },
+        border: "hover:border-cyan-300";
+},
       indigo: {
         bg: "bg-indigo-600",
         hover: "hover:bg-indigo-700",
         text: "text-indigo-600",
         hoverText: "hover:text-indigo-500",
-        border: "hover:border-indigo-300"
-      },
+        border: "hover:border-indigo-300";
+},
       gray: {
         bg: "bg-gray-600",
         hover: "hover:bg-gray-700",
         text: "text-gray-600",
         hoverText: "hover:text-gray-500",
-        border: "hover:border-gray-300"
-      }
+        border: "hover:border-gray-300";
+}
     };
     return colors[color as keyof typeof colors] || colors.blue;
   };

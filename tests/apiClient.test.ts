@@ -45,7 +45,7 @@ vi.mock(
   '@/integrations/supabase/client, () => ({
   supabase: { auth: { signOut: vi.fn().mockResolvedValue({})} }
 }));
-describe('apiClient interceptor', () => {
+describe('apiClient interceptor', () => {;
 }))
 describe(
   'apiClient interceptor', () => {

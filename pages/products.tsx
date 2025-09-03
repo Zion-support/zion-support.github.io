@@ -14,8 +14,8 @@ export default function Products() {
         'Multi-source data integration'
       ], pricing: 'Starting at $299/month',
       category: 'AI & Analytics', rating: 4.9,
-      users: '500+', image: '/products/ai-bi-platform.jpg'
-    },
+      users: '500+', image: '/products/ai-bi-platform.jpg';
+},
     {
       title: 'Cloud Migration Suite', description: 'Seamlessly migrate your infrastructure to the cloud with our comprehensive migration tools.',
       features: [
@@ -24,8 +24,8 @@ export default function Products() {
         '24/7 migration support'
       ], pricing: 'Starting at $199/month',
       category: 'Cloud Computing', rating: 4.8,
-      users: '300+', image: '/products/cloud-migration.jpg'
-    },
+      users: '300+', image: '/products/cloud-migration.jpg';
+},
     {
       title: 'Cybersecurity Monitoring System', description: 'Protect your business with our advanced threat detection and response platform.',
       features: [
@@ -34,8 +34,8 @@ export default function Products() {
         '24/7 SOC support'
       ], pricing: 'Starting at $399/month',
       category: 'Cybersecurity', rating: 4.9,
-      users: '200+', image: '/products/cybersecurity-monitoring.jpg'
-    },
+      users: '200+', image: '/products/cybersecurity-monitoring.jpg';
+},
     {
       title: 'Micro SaaS Development Kit', description: 'Build and launch your own micro SaaS products with our comprehensive development framework.',
       features: [
@@ -44,8 +44,8 @@ export default function Products() {
         'Deployment automation'
       ], pricing: 'Starting at $149/month',
       category: 'SaaS Development', rating: 4.7,
-      users: '150+', image: '/products/micro-saas-kit.jpg'
-    },
+      users: '150+', image: '/products/micro-saas-kit.jpg';
+},
     {
       title: 'Digital Transformation Hub', description: 'Accelerate your digital transformation with our integrated suite of modernization tools.',
       features: [
@@ -54,8 +54,8 @@ export default function Products() {
         'ROI tracking'
       ], pricing: 'Starting at $249/month',
       category: 'Digital Transformation', rating: 4.8,
-      users: '400+', image: '/products/digital-transformation.jpg'
-    },
+      users: '400+', image: '/products/digital-transformation.jpg';
+},
     {
       title: 'IoT Edge Computing Platform', description: 'Connect and manage your IoT devices with our powerful edge computing solution.',
       features: [
@@ -64,16 +64,16 @@ export default function Products() {
         'Remote monitoring'
       ], pricing: 'Starting at $179/month',
       category: 'IoT & Edge Computing', rating: 4.6,
-      users: '100+', image: '/products/iot-edge-platform.jpg'
-    }
-  ];
+      users: '100+', image: '/products/iot-edge-platform.jpg';
+}
+  ]
 
   const categories = [
     'All Products', 'AI & Analytics',
     'Cloud Computing', 'Cybersecurity',
     'SaaS Development', 'Digital Transformation',
     'IoT & Edge Computing'
-  ];
+  ]
       id: 1,
       name: "AI-Powered Analytics Platform",
       description: "Transform your data into actionable insights with our advanced AI analytics platform.",
@@ -86,8 +86,8 @@ export default function Products() {
         "Automated reporting"
       ],
       category: "AI Solutions",
-      pricing: "Starting at $2,999/month"
-    },
+      pricing: "Starting at $2,999/month";
+},
     {
       id: 2,
       name: "Cloud Infrastructure Suite",
@@ -101,8 +101,8 @@ export default function Products() {
         "Disaster recovery"
       ],
       category: "Cloud Solutions",
-      pricing: "Starting at $1,999/month"
-    },
+      pricing: "Starting at $1,999/month";
+},
     {
       id: 3,
       name: "Cybersecurity Shield",
@@ -116,8 +116,8 @@ export default function Products() {
         "Security training"
       ],
       category: "Security",
-      pricing: "Starting at $1,499/month"
-    },
+      pricing: "Starting at $1,499/month";
+},
     {
       id: 4,
       name: "IoT Management Platform",
@@ -131,8 +131,8 @@ export default function Products() {
         "Custom integrations"
       ],
       category: "IoT Solutions",
-      pricing: "Starting at $2,499/month"
-    },
+      pricing: "Starting at $2,499/month";
+},
     {
       id: 5,
       name: "Blockchain Solutions",
@@ -146,8 +146,8 @@ export default function Products() {
         "Digital identity"
       ],
       category: "Blockchain",
-      pricing: "Custom pricing"
-    },
+      pricing: "Custom pricing";
+},
     {
       id: 6,
       name: "Global Connectivity Suite",
@@ -161,9 +161,9 @@ export default function Products() {
         "Performance optimization"
       ],
       category: "Networking",
-      pricing: "Starting at $999/month"
-    }
-  ];
+      pricing: "Starting at $999/month";
+}
+  ]
 
   const categories = ["All", "AI Solutions", "Cloud Solutions", "Security", "IoT Solutions", "Blockchain", "Networking"];
 
@@ -209,8 +209,8 @@ export default function Products() {
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                   category === "All"
                     ? "bg-blue-600 text-white"
-                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-                }`}
+                    : "bg-gray-100 text-gray-700 hover:bg-gray-200";
+}`}
               >
                 {category}
               </button>

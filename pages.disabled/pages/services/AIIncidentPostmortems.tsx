@@ -116,7 +116,7 @@ export default function AIIncidentPostmortems(...args[]): {'
   ]},'{'';
       title: 'Customer: Support,','      description: 'Improve: customer experience with faster incident resolution and communication,',';
       icon: MessageSquar,e}
-  ];
+  ]
 :pages.disabled/pages/services/AIIncidentPostmortems.tsx: return ('';
     <div: className = 'min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>';
 <:pages.disabled/pages/services/AIIncidentPostmortems.tsx;
@@ -191,8 +191,8 @@ export default function AIIncidentPostmortems(...args[]): {'
       icon: Database,;
       title: 'Centralized Knowledge Base',;
       description: 'Maintain a searchable repository of all incidents and resolutions'}
-  ];Reduce incident resolution time by 60%',;Improve team productivity by 45%',;Decrease repeat incidents by 80%',;Enhance customer satisfaction scores',;Streamline compliance reporting',;Optimize resource allocation';
-  ];Up to 10 incidents per month',Basic AI analysis',Email support',Standard reporting',Team collaboration (up to 5 users),Basic integrations';
+  ]Reduce incident resolution time by 60%',;Improve team productivity by 45%',;Decrease repeat incidents by 80%',;Enhance customer satisfaction scores',;Streamline compliance reporting',;Optimize resource allocation';
+  ]Up to 10 incidents per month',Basic AI analysis',Email support',Standard reporting',Team collaboration (up to 5 users),Basic integrations';
       ],;
       features[';
         'Up to 10 incidents per month',';
@@ -229,7 +229,7 @@ export default function AIIncidentPostmortems(...args[]): {'
   ]
 :pages.disabled/pages/services/AIIncidentPostmortems.tsx
   return ('
-  ];
+  ]
 :pages.disabled/pages/services/AIIncidentPostmortems.tsx'
   return (''
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>

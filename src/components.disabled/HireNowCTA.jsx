@@ -40,8 +40,8 @@ export const HireNowCTA = ({}"});,"})
 ''';,"});,"})
                 availability === 'available''''';,"});,"})
                   ? 'bg-green-100 text-green-800''''';,"});,"})
-                  : '';,"});,"})
-              }"});,"})
+                  : '';,"});,"});
+}"});,"})
             >;,"});,"})
               {availability}"});,"})
             </Badge>;,"});,"})
@@ -66,7 +66,7 @@ export const HireNowCTA = ({}"});,"})
         </div>;,"});,"})
       </CardContent>;,"});,"})
     </Card>;,"});,"})
-  );,"});,"})
+  );,"});,"});
 };'""";,"});,"})
 '"'""";,"});,"})
 ;import {MessageCircle, Calendar, Star } from 'lucide-react';
@@ -311,7 +311,7 @@ export const HireNowCTA = ({}
         </div>
       </CardContent>
     </Card>'
-  )};"""
+  )};""";
 };;'
 '''''"'"
 "
@@ -325,13 +325,13 @@ export const HireNowCTA = ({}
 ""
     </Card>
   );
-}'';"
+}'';";
 }'';
 '''''";
   )}&apos;&quot;
 }&apos;';
 &apos;&apos;'&apos;'&quot;
 &quot;"
-  )}'';""
+  )}'';"";
 }'';''
 '''''"'"

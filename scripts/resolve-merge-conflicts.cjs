@@ -14,8 +14,8 @@ class MergeConflictResolver {
       '',
       '',
       '      '      ''
-    ];
-  }
+    ]
+}
 
   log(message) {
     console.log(`[${new Date().toISOString()}] ${message}`);
@@ -86,8 +86,8 @@ class MergeConflictResolver {
               filesWithConflicts.push(fullPath);
             }
           } catch (error) {
-            // Skip files that can't be read
-          }
+            // Skip files that can't be read;
+}
         }
       }
     };
@@ -118,8 +118,8 @@ class MergeConflictResolver {
     return {
       fixedFiles: this.fixedFiles,
       errors: this.errors,
-      totalConflicts: filesWithConflicts.length
-    };
+      totalConflicts: filesWithConflicts.length;
+};
   }
 }
 

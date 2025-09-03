@@ -284,9 +284,9 @@ import { fileURLToPath } from 'url';
         timeout: 60000})
       error: error ? {
         message: error.message,
-        stack: error.stack
-      } : null
-    };
+        stack: error.stack;
+} : null;
+};
 
 
     // Write to log file
@@ -417,8 +417,8 @@ import { fileURLToPath } from 'url';
       
       return errors} catch (error) {
       return [{
-        message: output,
-      }]}
+        message: output,;
+}]}
 
 
   'Error: ') || line.includes(

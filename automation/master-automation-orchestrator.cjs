@@ -31,8 +31,8 @@ class MasterAutomationOrchestrator {
       const result = execSync(`node ${scriptPath}`, { 
         cwd: this.projectRoot,
         stdio: 'inherit',
-        encoding: 'utf8'
-      });
+        encoding: 'utf8';
+});
       
       const duration = Date.now() - startTime;
       this.log(`✅ ${scriptName} completed successfully in ${duration}ms`);
@@ -40,18 +40,18 @@ class MasterAutomationOrchestrator {
       return {
         success: true,
         duration,
-        errors: []
-      };
-      
-    } catch (error) {
+        errors: [];
+};
+      ;
+} catch (error) {
       const duration = Date.now() - startTime;
       this.log(`❌ ${scriptName} failed: ${error.message}`, 'ERROR');
       
       return {
         success: false,
         duration,
-        errors: [error.message]
-      };
+        errors: [error.message];
+};
     }
   }
 
@@ -115,8 +115,8 @@ class MasterAutomationOrchestrator {
     try {
       execSync('yarn build', { 
         cwd: this.projectRoot,
-        stdio: 'inherit'
-      });
+        stdio: 'inherit';
+});
       
       const duration = Date.now() - startTime;
       this.log(`✅ Build test completed successfully in ${duration}ms`);
@@ -124,18 +124,18 @@ class MasterAutomationOrchestrator {
       this.results.buildTest = {
         success: true,
         duration,
-        errors: []
-      };
-      
-    } catch (error) {
+        errors: [];
+};
+      ;
+} catch (error) {
       const duration = Date.now() - startTime;
       this.log(`❌ Build test failed: ${error.message}`, 'ERROR');
       
       this.results.buildTest = {
         success: false,
         duration,
-        errors: [error.message]
-      };
+        errors: [error.message];
+};
     }
   }
 
@@ -151,8 +151,8 @@ class MasterAutomationOrchestrator {
         totalPhases: Object.keys(this.results).length,
         successfulPhases: Object.values(this.results).filter(r => r.success).length,
         failedPhases: Object.values(this.results).filter(r => !r.success).length,
-        overallSuccess: Object.values(this.results).every(r => r.success)
-      }
+        overallSuccess: Object.values(this.results).every(r => r.success);
+}
     };
     
     // Save report to file
@@ -206,8 +206,8 @@ class MasterAutomationOrchestrator {
         this.log('\\n⚠️  SOME AUTOMATION PHASES HAD ISSUES');
         this.log('Please review the report and fix any remaining issues.');
       }
-      
-    } catch (error) {
+      ;
+} catch (error) {
       this.log(`💥 Fatal error in orchestrator: ${error.message}`, 'ERROR');
       await this.generateFinalReport();
       process.exit(1);

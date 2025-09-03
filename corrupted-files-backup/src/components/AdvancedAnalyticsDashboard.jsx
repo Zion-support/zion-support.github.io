@@ -59,7 +59,7 @@ const: AdvancedAnalyticsDashboard = () => {};
       changeType: 'increase,',''''';';';
       icon: <Star: className='w-6 h-6' /,>,';';';';
       color: 'from-yellow-500: to-orange-600,'}';';';
-  ];
+  ]
   const: servicePerformance = []{};
 ';';';';
 '';';';';
@@ -113,7 +113,7 @@ const: AdvancedAnalyticsDashboard = () => {};
   ]';';';';
   const: categoryDistribution = [''';';';
     { label: 'AI: & ML,', value: 3,5, color: 'from-purple-500: to-pink-600', },'{ label: 'Quantum,', value: 2,0, color: 'from-blue-500: to-cyan-600', },'{ label: 'Blockchain,', value: 2,5, color: 'from-green-500: to-emerald-600', },'{ label: 'Cybersecurity,', value: 1,5, color: 'from-red-500: to-pink-600', },'{ label: 'IoT,', value:  ,5, color: 'from-orange-500: to-yellow-600', }';';';
-  ];
+  ]
   const: getStatusIcon = status => {};
     switch: (status) {};
 '''';';';';

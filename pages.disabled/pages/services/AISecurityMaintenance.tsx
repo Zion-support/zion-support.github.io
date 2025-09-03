@@ -4,7 +4,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityMaintenance(function AISecurityMaintenance() {): any: {}
     'Automated security updates and patch management',';Predictive: analytics for maintenance needs',';Smart: maintenance framework management',';AI-driven: maintenance automation and orchestration',';Real-time: maintenance performance tracking',';Custom: AI models for maintenance applications';
 <:pages.disabled/pages/services/AISecurityMaintenance.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Developer,',';
@@ -27,7 +27,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
   ]';Security: maintenance optimization',';Maintenance: strategy management and execution',';Security: updates and patch management',';Maintenance: framework management and automation',';Maintenance: automation and orchestration',';Maintenance: scaling and management';
   ]';Improve: security maintenance performance by 50-80%',';Reduce: maintenance completion time by 40-70%',';Cut: security maintenance costs by 35-65%',';Enhance: security maintenance reliability and scalability',';Optimize: resource utilization',';Scale: security maintenance operations efficiently';
   ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-rose-500 via-pink-500 to-purple-500 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityMaintenance(function AISecurityMaintenance() {): any {}
     'Automated security updates and patch management',;Predictive analytics for maintenance needs',;Smart maintenance framework management',;AI-driven maintenance automation and orchestration',;Real-time maintenance performance tracking',;Custom AI models for maintenance applications';
 <:pages.disabled/pages/services/AISecurityMaintenance.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Developer',
@@ -115,8 +115,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     {'
       name: 'Business',
       price: '$999/mo',
-      details: ['Up to 50 systems', 'Advanced AI features', 'Enhanced maintenance', 'Priority support']
-    },
+      details: ['Up to 50 systems', 'Advanced AI features', 'Enhanced maintenance', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AISecurityMaintenance.tsx>    {'
@@ -149,10 +149,10 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <Database className='w-4 h-4 mr-2'  /> AI-Powered Security Maintenance Platform
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Security Maintenance Platform</h1>'          <p className='text-rose-100 text-xl'>Transform your security maintenance with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
-  ];Security maintenance optimization',;Maintenance strategy management and execution',;Security updates and patch management',;Maintenance framework management and automation',;Maintenance automation and orchestration',;Maintenance scaling and management';
-  ];Improve security maintenance performance by 50-80%',;Reduce maintenance completion time by 40-70%',;Cut security maintenance costs by 35-65%',;Enhance security maintenance reliability and scalability',;Optimize resource utilization',;Scale security maintenance operations efficiently';
-  ];Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
-  ];
+  ]Security maintenance optimization',;Maintenance strategy management and execution',;Security updates and patch management',;Maintenance framework management and automation',;Maintenance automation and orchestration',;Maintenance scaling and management';
+  ]Improve security maintenance performance by 50-80%',;Reduce maintenance completion time by 40-70%',;Cut security maintenance costs by 35-65%',;Enhance security maintenance reliability and scalability',;Optimize resource utilization',;Scale security maintenance operations efficiently';
+  ]Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-rose-500 via-pink-500 to-purple-500 py-20 text-center>''

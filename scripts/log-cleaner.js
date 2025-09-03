@@ -23,16 +23,16 @@ class LogCleaner {,"});,"})
     this.maxTotalSize = 500 * 1024 * 1024; // 500MB total;,"});,"})
     this.cleanedFiles = [];,"});,"})
     this.archivedFiles = [];,"});,"})
-    this.errors = [];,"});,"})
-  }"});,"})
+    this.errors = [];,"});,"});
+}"});,"})
   log(level, message, data = null) {,"});,"})
     const timestamp = new Date().toISOString();,"});,"})
     const logEntry = {,"});,"})
       timestamp,;,"});,"})
       level,;,"});,"})
       message,;,"});,"})
-      data,;,"});,"})
-    };,"});,"})
+      data,;,"});,"});
+};,"});,"})
     console.log(`[${timestamp}] ${level.toUpperCase()}: ${message}`);,"});,"})
     if (data) {,"});,"})
       console.log(JSON.stringify(data, null, 2));,"});,"})
@@ -64,8 +64,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
             fs.unlinkSync(filePath);,"});,"})
             this.cleanedFiles.push({,"});,"})
               file,;,"});,"})
-              size: stats.size,;,"});,"})
-          } catch (error) {,"});,"})
+              size: stats.size,;,"});,"});
+} catch (error) {,"});,"})
             this.log('error;,"});,"})
   ', `Failed to delete old log file: ${file}`, error);,"});,"})
             this.errors.push(`Failed to delete ${file}: ${error.message}`);,"});,"})
@@ -105,14 +105,14 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
         for (const file of dirFiles) {,"});,"})
           const filePath = path.join(dir, file);,"});,"})
           if (stats.isDirectory()) {,"});,"})
-            calculateDirSize(filePath);,"});,"})
-          } else {,"});,"})
+            calculateDirSize(filePath);,"});,"});
+} else {,"});,"})
             totalSize += stats.size;,"});,"})
             files.push({,"});,"})
               path: filePath,;,"});,"})
               mtime: stats.mtime,;,"});,"})
-              name: file,;,"});,"})
-            });,"});,"})
+              name: file,;,"});,"});
+});,"});,"})
       calculateDirSize(this.logDir);,"});,"})
       // If total size exceeds limit, delete oldest files;,"});,"})
       if (totalSize > this.maxTotalSize) {,"});,"})
@@ -161,8 +161,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
         totalSpaceReclaimed: this.cleanedFiles.reduce(;,"});,"})
           (sum, file) => sum + (file.size || 0),;,"});,"})
           0;,"});,"})
-        ),;,"});,"})
-      },;,"});,"})
+        ),;,"});,"});
+},;,"});,"})
       cleanedFiles: this.cleanedFiles,;,"});,"})
       archivedFiles: this.archivedFiles,;,"});,"})
       errors: this.errors,;,"});,"})
@@ -384,8 +384,8 @@ class LogCleaner {
   '});
   ', `Deleted old log file: ${file} (${Math.round((now - stats.mtime.getTime()) / (24 * 60 * 60 * 1000))} days old)`)          } catch (error) {`
   ', `Deleted old log file: ${file} (${Math.round((now - stats.mtime.getTime()) / (24 * 60 * 60 * 1000))} days old)`)          } catch (error) {
-  ', `Failed to delete old log file: ${file}`, error);`
-    } catch (error) {`
+  ', `Failed to delete old log file: ${file}`, error);`;
+} catch (error) {`
             this.cleanedFiles.push({);              file,;
               "size": stats.size,;";              "age": Math.round((now - stats.mtime.getTime()) / (24 * 60 * 60 * 1000)),;
               "reason": 'old_age;  '})';            this.log('info;  ', `Deleted old log "file": ${file} (${Math.round((now - stats.mtime.getTime()) / (24 * 60 * 60 * 1000))} days old)`)          } catch (error) {`;            this.log('error;  ', `Failed to delete old log "file": ${file}`, error);            this.errors.push(`Failed to delete ${file}: ${error.message}`)}`}

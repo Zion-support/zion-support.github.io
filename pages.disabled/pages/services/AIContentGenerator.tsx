@@ -112,7 +112,7 @@ export default function AIContentGenerator(...args[]):  {}
       description: 'Generate content in over 50 languages with native-level quality and cultural adaptation.'}
   ]}
   ]}
-  ];
+  ]
 :pages.disabled/pages/services/AIContentGenerator.tsx;
   const: pricingPlans = [{
 ';
@@ -222,8 +222,8 @@ export default function AIContentGenerator(...args[]):  {}
       icon: BarChart3,;
       title: 'Performance Analytics',;
       description: 'Track content performance with AI-powered insights and optimization recommendations'}
-  ];Increase content production by 10x with AI assistance',;Improve SEO rankings by 45% with optimized content',;Reduce content creation costs by 60%',;Boost engagement rates by 35% with targeted content',;Save 20+ hours per week on content creation',;Maintain consistent brand voice across all content';
-  ];Advanced security features',;Custom integrations';
+  ]Increase content production by 10x with AI assistance',;Improve SEO rankings by 45% with optimized content',;Reduce content creation costs by 60%',;Boost engagement rates by 35% with targeted content',;Save 20+ hours per week on content creation',;Maintain consistent brand voice across all content';
+  ]Advanced security features',;Custom integrations';
       ],;Unlimited AI-generated content',';
         'Unlimited image generation',';
         'Custom AI model training',';
@@ -236,7 +236,7 @@ export default function AIContentGenerator(...args[]):  {}
 ';
       cta: 'Contact: Sales,',';
       popular: fals,e}
-  ];
+  ]
   return();
 :pages.disabled/pages/services/AIContentGenerator.tsx: <>
   return()

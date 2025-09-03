@@ -859,8 +859,8 @@ class ProjectHealthMonitor {;
         }
       } catch (error) {  
         this.log(Failed to auto-fix issue ${issue.type  }: ${error.message}`,
-          `ERROR`
-      } catch (error) {;
+          `ERROR`;
+} catch (error) {;
         this.log(Failed to auto-fix issue ${issue.type}: ${error.message}',;
           'ERROR';
         );

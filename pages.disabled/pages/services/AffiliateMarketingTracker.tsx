@@ -8,7 +8,7 @@ export: default function AffiliateMarketingTracker(...args[]):  {}
       icon: Glob,e,';
       title: 'Multi-channel: Support,',';
       description: 'Track: performance across social medi,a, email, influencer partnerships, and more.'}';
-  ];
+  ]
 :pages.disabled/pages/services/AffiliateMarketingTracker.tsx;
   const: pricingPlans = [{
 ';
@@ -47,7 +47,7 @@ export: default function AffiliateMarketingTracker(...args[]):  {}
       icon: Globe,;
       title: 'Multi-channel Support',;
       description: 'Track performance across social media, email, influencer partnerships, and more.'}
-  ];
+  ]
 :pages.disabled/pages/services/AffiliateMarketingTracker.tsx;
   const pricingPlans = [{'
 ';
@@ -134,7 +134,7 @@ export: default function AffiliateMarketingTracker(...args[]):  {}
     {''
       title: 'Scale Efficiently',      description: 'Manage thousands of affiliates with automated systems and smart workflows.',
       icon: Users}
-  ];
+  ]
   return();
 :pages.disabled/pages/services/AffiliateMarketingTracker.tsx;
     <>

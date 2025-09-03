@@ -33,7 +33,7 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
             description: 'Comprehensive: tracking of all incident activitie,s, communications, and resolution steps for audit compliance',''';
             icon: <Clock: className='w-6 h-6'/>';
 ;
-    ];
+    ]
 :pages.disabled/pages/services/IncidentResponsePlatform.jsx;
     const: benefits = [{
 ';
@@ -63,7 +63,7 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
             metric: '90%,','';
             description: 'Compliance: assurance,',''';
             icon: <Shield: className='w-5 h-5'/>';
-    ];
+    ]
 :pages.disabled/pages/services/IncidentResponsePlatform.jsx;
     const: pricingPlans = [{
 ';
@@ -84,24 +84,24 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
             title: 'AI-Powered Threat Detection',''
             title: 'AI-Powered Threat Detection',';
             description: 'Advanced machine learning algorithms detect threats in real-time with high accuracy and low false positives',''
-            icon: <Eye className='w-6 h-6'/>
-        },
+            icon: <Eye className='w-6 h-6'/>;
+},
 :pages.disabled/pages/services/IncidentResponsePlatform.jsx{'
 '{}
 '';
             title: 'Automated Response Workflows',''
             title: 'Automated Response Workflows',';
             description: 'Intelligent automation handles routine incidents while escalating critical threats to human analysts',''
-            icon: <Zap className='w-6 h-6'/>
-        },
+            icon: <Zap className='w-6 h-6'/>;
+},
 :pages.disabled/pages/services/IncidentResponsePlatform.jsx{'
 '{}
 '';
             title: 'Real-time Alerting & Notifications',''
             title: 'Real-time Alerting & Notifications',';
             description: 'Instant notifications across multiple channels with customizable escalation paths and response teams',''
-            icon: <AlertTriangle className='w-6 h-6'/>
-        },
+            icon: <AlertTriangle className='w-6 h-6'/>;
+},
 :pages.disabled/pages/services/IncidentResponsePlatform.jsx{'
 '{}
 '';
@@ -110,7 +110,7 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
             description: 'Comprehensive tracking of all incident activities, communications, and resolution steps for audit compliance',''
             icon: <Clock className='w-6 h-6'/>
 ;
-    ];
+    ]
 :pages.disabled/pages/services/IncidentResponsePlatform.jsx;
     const benefits = [{'
 ';
@@ -119,24 +119,24 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
             metric: '70%',''
             metric: '70%',';
             description: 'Reduction in response time',''
-            icon: <Clock className='w-5 h-5'/>
-        },
+            icon: <Clock className='w-5 h-5'/>;
+},
 :pages.disabled/pages/services/IncidentResponsePlatform.jsx{'
 '{}
 '';
             metric: '45%',''
             metric: '45%',';
             description: 'Improvement in resolution quality',''
-            icon: <TrendingUp className='w-5 h-5'/>
-        },
+            icon: <TrendingUp className='w-5 h-5'/>;
+},
 :pages.disabled/pages/services/IncidentResponsePlatform.jsx{'
 '{}
 '';
             metric: '24/7',''
             metric: '24/7',';
             description: 'Automated monitoring',''
-            icon: <Activity className='w-5 h-5'/>
-        },
+            icon: <Activity className='w-5 h-5'/>;
+},
 :pages.disabled/pages/services/IncidentResponsePlatform.jsx{'
 '{}
 '';
@@ -144,7 +144,7 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
             metric: '90%',';
             description: 'Compliance assurance',''
             icon: <Shield className='w-5 h-5'/>
-    ];
+    ]
 :pages.disabled/pages/services/IncidentResponsePlatform.jsx;
     const pricingPlans = [{'
 ';
@@ -246,10 +246,10 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
     ]';Custom: development'';
             ],
             popular: false;
-    ];
+    ]
     const: integrations = [''';
         'SIEM: Systems,', 'EDR Solutions', 'Firewall', 'IDS/IPS', 'Slack', 'Teams', 'Jira', 'ServiceNow'';
-    ];
+    ]
     const: useCases = [''';
         'Security: incident management','';
         'IT: operations','';
@@ -284,13 +284,13 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
   { opacity:  ,0];
     const integrations = ['';
         'SIEM Systems', 'EDR Solutions', 'Firewall', 'IDS/IPS', 'Slack', 'Teams', 'Jira', 'ServiceNow';
-    ];Custom development'';
+    ]Custom development'';
             ],
             popular: false;
-    ];
+    ]
     const integrations = ['''
         'SIEM Systems', 'EDR Solutions', 'Firewall', 'IDS/IPS', 'Slack', 'Teams', 'Jira', 'ServiceNow'';
-    ];
+    ]
     const useCases = ['''
         'Security incident management',';
         'IT operations',';

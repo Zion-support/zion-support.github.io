@@ -10,57 +10,57 @@ export default function EnterpriseSolutions() {
     {
       icon: Building2,
       title: 'Enterprise Architecture',
-      description: 'Scalable, secure, and maintainable systems designed for large organizations'
-    },
+      description: 'Scalable, secure, and maintainable systems designed for large organizations';
+},
     {
       icon: Shield,
       title: 'Security & Compliance',
-      description: 'Enterprise-grade security with SOC2, GDPR, and industry-specific compliance'
-    },
+      description: 'Enterprise-grade security with SOC2, GDPR, and industry-specific compliance';
+},
     {
       icon: Users,
       title: 'User Management',
-      description: 'Advanced identity and access management with SSO and role-based permissions'
-    },
+      description: 'Advanced identity and access management with SSO and role-based permissions';
+},
     {
       icon: BarChart,
       title: 'Business Intelligence',
-      description: 'Comprehensive analytics and reporting for data-driven decision making'
-    },
+      description: 'Comprehensive analytics and reporting for data-driven decision making';
+},
     {
       icon: Cloud,
       title: 'Cloud Infrastructure',
-      description: 'Hybrid and multi-cloud solutions with high availability and disaster recovery'
-    },
+      description: 'Hybrid and multi-cloud solutions with high availability and disaster recovery';
+},
     {
       icon: Database,
       title: 'Data Management',
-      description: 'Enterprise data lakes, warehouses, and real-time processing systems'
-    }
-  ];
+      description: 'Enterprise data lakes, warehouses, and real-time processing systems';
+}
+  ]
 
   const features = [
     {
       title: 'Scalability',
       description: 'Handle millions of users and transactions with auto-scaling infrastructure',
-      benefits: ['Auto-scaling', 'Load balancing', 'Microservices architecture', 'Container orchestration']
-    },
+      benefits: ['Auto-scaling', 'Load balancing', 'Microservices architecture', 'Container orchestration'];
+},
     {
       title: 'Security',
       description: 'Bank-level security with comprehensive threat protection and monitoring',
-      benefits: ['Zero-trust architecture', 'End-to-end encryption', 'Security monitoring', 'Compliance automation']
-    },
+      benefits: ['Zero-trust architecture', 'End-to-end encryption', 'Security monitoring', 'Compliance automation'];
+},
     {
       title: 'Integration',
       description: 'Seamless integration with existing enterprise systems and third-party services',
-      benefits: ['API management', 'Legacy system integration', 'Real-time sync', 'Data transformation']
-    },
+      benefits: ['API management', 'Legacy system integration', 'Real-time sync', 'Data transformation'];
+},
     {
       title: 'Support',
       description: '24/7 enterprise support with dedicated account management and SLA guarantees',
-      benefits: ['Dedicated support team', 'SLA guarantees', 'Priority response', 'Custom training']
-    }
-  ];
+      benefits: ['Dedicated support team', 'SLA guarantees', 'Priority response', 'Custom training'];
+}
+  ]
 
   const industries = [
     { name: 'Financial Services', description: 'Banking, insurance, and fintech solutions with regulatory compliance' },
@@ -69,7 +69,7 @@ export default function EnterpriseSolutions() {
     { name: 'Manufacturing', description: 'IoT integration, supply chain management, and industrial automation' },
     { name: 'Retail & E-commerce', description: 'Large-scale e-commerce platforms and retail management systems' },
     { name: 'Education', description: 'Learning management systems and educational technology platforms' }
-  ];
+  ]
 
   const technologies = [
     { name: 'Kubernetes', description: 'Container orchestration and management' },
@@ -80,7 +80,7 @@ export default function EnterpriseSolutions() {
     { name: 'Redis/Memcached', description: 'High-performance caching' },
     { name: 'PostgreSQL/MongoDB', description: 'Enterprise database solutions' },
     { name: 'Elasticsearch', description: 'Search and analytics engine' }
-  ];
+  ]
 
   return (
     <>

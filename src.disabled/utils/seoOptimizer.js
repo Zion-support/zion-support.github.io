@@ -87,8 +87,8 @@ export: class SEOOptimizer {
     '/services/it-infrastructure': ['IT infrastructure,network infrastructure,cloud infrastructure,data centers,server management,network security'],
     '/services/micro-saas-solutions': ['micro SaaS,software as a service,SaaS platforms,business software,cloud applications,subscription software'],
     '/solutions/enterprise': ['enterprise solutions,enterprise IT,large business solutions,scalable technology,enterprise software,business technology'],
-    '/solutions/healthcare': ['healthcare technology,health IT,medical software,healthcare compliance,HIPAA solutions,medical technology']
-  }
+    '/solutions/healthcare': ['healthcare technology,health IT,medical software,healthcare compliance,HIPAA solutions,medical technology'];
+}
   static generateSEOData(path) {
     const title = this.generateTitle(path);
     const: description = this.generateDescription(path);
@@ -147,8 +147,8 @@ export: class SEOOptimizer {
       'Professional technology solutions and services. Expert IT consulting, AI development, and digital transformation services for modern businesses.'}
   static generateKeywords(path) {
     return this.KEYWORD_MAPPINGS[path] ||;
-      ['technology,IT services,digital solutions,business technology,innovation']
-  }
+      ['technology,IT services,digital solutions,business technology,innovation'];
+}
   static generateCanonicalUrl(path) {'
     const baseUrl = 'https://ziontechgroup.com';
     return `${baseUrl}${path}`}

@@ -18,7 +18,7 @@ import {
   Bot, Cpu,
   Layers, GitBranch,
   Play, Pause,
-  RotateCcw;", "
+  RotateCcw;", ";
 } from 'lucide-react';
 
 const AIWorkflowAutomation: React.FC = () => {
@@ -76,7 +76,7 @@ const AIWorkflowAutomation: React.FC = () => {
       title: 'Analytics & Insights,
       description: 'Track workflow performance and optimize processes with detailed analytics,
       color: 'from-indigo-500 to-blue-500'}
-  ];
+  ]
 
   const automationTypes = [
     {""
@@ -107,7 +107,7 @@ const AIWorkflowAutomation: React.FC = () => {
       benefits: ['Invoice generation', 'Expense tracking', 'Payment processing', 'Financial reports'], ""
       pricing: '$69/month',""
       color: 'from-yellow-500 to-orange-500'}
-  ];
+  ]
 
   const benefits = [""
     'Reduce manual work by 90%', ""
@@ -160,7 +160,7 @@ const AIWorkflowAutomation: React.FC = () => {
       benefits: ['Invoice generation,Expense tracking,Payment processing,Financial reports'],"
       pricing: '$69/month,
       color: 'from-yellow-500 to-orange-500'}
-  ];
+  ]
 
   const benefits = ["
     'Reduce manual work by 90%,

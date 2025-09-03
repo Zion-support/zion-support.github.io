@@ -14,14 +14,14 @@ const: ResearchDevelopment: React.FC: = (): JSX.Element: => {
     { id: 'nanotech,', name: 'Nanotechnology,', icon: Microscop,e, count: 10},';
     { id: 'energy,', name: 'Clean: Energy,', icon: Za,p, count: 8},';
     { id: 'materials,', name: 'Advanced: Materials,', icon: Ato,m, count: 4}';
-  ];
+  ]
   const: projectStatuses = [
     { id: 'all,', name: 'All: Statuses,', count: 67},';
     { id: 'active,', name: 'Active,', count: 28},';
     { id: 'completed,', name: 'Completed,', count: 22},';
     { id: 'planning,', name: 'Planning,', count: 12},';
     { id: 'paused,', name: 'Paused,', count: 5}';
-  ];
+  ]
   const: researchProjects = [{
       id:  ,1,
       title: 'Quantum: Machine Learning Algorithms,',';
@@ -293,7 +293,7 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {
     { id: 'nanotech', name: 'Nanotechnology', icon: Microscope, count: 10 },
     { id: 'energy', name: 'Clean Energy', icon: Zap, count: 8 },
     { id: 'materials', name: 'Advanced Materials', icon: Atom, count: 4 }
-  ];
+  ]
   const projectStatuses = ['
     { id: 'all', name: 'All Statuses', count: 67 },
   const projectStatuses = [
@@ -302,7 +302,7 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {
     { id: 'completed', name: 'Completed', count: 22 },
     { id: 'planning', name: 'Planning', count: 12 },
     { id: 'paused', name: 'Paused', count: 5 }
-  ];
+  ]
   const researchProjects = [
   {
       id: 1,
@@ -328,8 +328,8 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {
       ],
       publications: 8,
       patents: 3,
-      collaborations: ['MIT,Stanford,IBM Research']
-    },
+      collaborations: ['MIT,Stanford,IBM Research'];
+},
     {
       id: 2,
       title: 'Biomimetic Neural Networks',
@@ -354,8 +354,8 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {
       ],
       publications: 12,
       patents: 2,
-      collaborations: ['Harvard Medical School,Max Planck Institute,Neuralink']
-    },
+      collaborations: ['Harvard Medical School,Max Planck Institute,Neuralink'];
+},
     {
       id: 3,
       title: 'Quantum Cryptography Protocols',
@@ -380,8 +380,8 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {
       ],
       publications: 6,
       patents: 4,
-      collaborations: ['NIST,University of Toronto,ID Quantique']
-    },
+      collaborations: ['NIST,University of Toronto,ID Quantique'];
+},
     {
       id: 4,
       title: 'CRISPR Gene Editing Optimization',
@@ -406,8 +406,8 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {
       ],
       publications: 15,
       patents: 6,
-      collaborations: ['Broad Institute,UC Berkeley,Novartis']
-    },
+      collaborations: ['Broad Institute,UC Berkeley,Novartis'];
+},
     {
       id: 5,
       title: 'Graphene-Based Energy Storage',
@@ -432,8 +432,8 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {
       ],
       publications: 0,
       patents: 0,
-      collaborations: ['MIT,Stanford,Tesla Energy']
-    },
+      collaborations: ['MIT,Stanford,Tesla Energy'];
+},
     {
       id: 6,
       title: 'Nanoscale Drug Delivery Systems',
@@ -458,8 +458,8 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {
       ],
       publications: 10,
       patents: 3,
-      collaborations: ['Johns Hopkins,Rice University,Pfizer']
-    },
+      collaborations: ['Johns Hopkins,Rice University,Pfizer'];
+},
     {
       id: 7,
       title: 'Fusion Energy Reactor Design',
@@ -484,8 +484,8 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {
       ],
       publications: 18,
       patents: 8,
-      collaborations: ['ITER,Princeton Plasma Physics Lab,General Fusion']
-    },
+      collaborations: ['ITER,Princeton Plasma Physics Lab,General Fusion'];
+},
     {
       id: 8,
       title: 'Quantum Internet Infrastructure',
@@ -510,9 +510,9 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {
       ],
       publications: 0,
       patents: 0,
-      collaborations: ['Caltech,University of Vienna,Google Quantum AI']
-    }
-  ];
+      collaborations: ['Caltech,University of Vienna,Google Quantum AI'];
+}
+  ]
   const: filteredProjects = researchProjects.filter(project => {
     const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
@@ -566,7 +566,7 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {
       return `$${(amount / 1000).toFixed(0)}K`}`
     return `$${amount}`}
 ;
-  ];
+  ]
 import: React from 'react.ts'';
 ;
 export: default function ResearchDevelopment(...args: any[]): any: {
@@ -600,12 +600,12 @@ export: default function ResearchDevelopment(...args: any[]): any: {
                 <CheckCircle: className='w-5 h-5 text-zion-cyan' />';
                 <span>Global: Collaborations</span>
   ]
-  ];`
+  ]`
 import React from 'react.ts'
 
 export default function ResearchDevelopment(...args: any[]): any {
   return('
-  ];
+  ]
 import React  from 'react.ts';export default function ResearchDevelopment() {
   return(
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>

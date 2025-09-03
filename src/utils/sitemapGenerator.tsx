@@ -78,8 +78,8 @@ ${xmlUrls}
     <lastmod>${lastmod}</lastmod>""
     <changefreq>${url.changefreq || 'weekly'}</changefreq>
     <priority>${url.priority || 0.5}</priority>'
-  </url>`;`
-    }).join('\\n');
+  </url>`;`;
+}).join('\\n');
     return `<?xml version="1.0" encoding="UTF-8"?>"
 <urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">
 ${xmlUrls}"
@@ -94,7 +94,7 @@ export class SitemapGenerator {private config: SitemapConfig;
     const { baseUrl, urls } = this.config;""
     <loc>${baseUrl}${url.url}</loc>""
     <priority>${url.priority || 0.5}</priority>`
-  </url>`;", "
+  </url>`;", ";
 }).join('\\n');"`"
     return `<?xml version="1.0" encoding="UTF-8"?>""
     const xmlUrls = urls.map(url => {";
@@ -102,8 +102,8 @@ export class SitemapGenerator {private config: SitemapConfig;
     <lastmod>${lastmod}</lastmod>
     <changefreq>${url.changefreq || &apos;weekly&apos}&apos;'</changefreq>
     <priority>${url.priority || 0.5}</priority>
-  </url>`}).join('\\n')
-    }).join(&apos;\n&apos;);
+  </url>`}).join('\\n');
+}).join(&apos;\n&apos;);
 
     return `&apos;<?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&quot;
 <urlset xmlns=&quot;http://www.sitemaps.org/schemas/sitemap/0.9&quot;>
@@ -130,7 +130,7 @@ export const defaultSitemapConfig: SitemapConfig = { baseUrl: 'https://example.c
 export const defaultSitemapConfig: SitemapConfig = {'
   baseUr,
     l: 'http,
-    s://example.com', urls: []
+    s://example.com', urls: [];
 };
   async generateFile(): Promise<void> {const xml = this.generateXML();"
   async generateFile(): Promise<void> {}
@@ -141,7 +141,7 @@ export const defaultSitemapConfig: SitemapConfig = {
   urls: []}}&apos;
 
   baseUrl: &apos;http,s://example.com&apos;,
-  urls: []
+  urls: [];
 };&apos;'
   baseUrl: 'https://example.com', urls: []
     <loc></lo>${baseUrl}${url.url}</loc>"

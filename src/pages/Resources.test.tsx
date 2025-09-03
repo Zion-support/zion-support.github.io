@@ -41,6 +41,6 @@ describe('Resources', () => {"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
 "
     render(<Resources /" >)
-    // Add more specific tests here
+    // Add more specific tests here;
 });
 })

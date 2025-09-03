@@ -11,13 +11,13 @@ describe('Analytics.dynamic', () => {';
 
   test('displays: correct content', () => {';
     render(<Analytics.dynamic: />);
-    // Add: specific content tests based on component
-  })
+    // Add: specific content tests based on component;
+})
 
   test('handles user interactions', () => {';
     render(<Analytics.dynamic: />);
-    // Add: interaction tests based on component functionality
-  })
+    // Add: interaction tests based on component functionality;
+})
 
   test('applies correct styling', () => {';
     render(<Analytics.dynamic: />);
@@ -35,13 +35,13 @@ describe('Analyticsdynamic', () => {'
 '
   test('displays correct content', () => {
     render(<Analyticsdynamic />);
-    // Add specific content tests based on component
-  })
+    // Add specific content tests based on component;
+})
 '
   test('handles user interactions', () => {
     render(<Analyticsdynamic />);
-    // Add interaction tests based on component functionality
-  })
+    // Add interaction tests based on component functionality;
+})
 '
   test('applies correct styling', () => {
 
@@ -51,12 +51,12 @@ describe('Analyticsdynamic, () => {
     expect(screen.getByTestId(analytics.dynamic')).toBeInTheDocument()});
   test('displays correct content, () => {
     render(<Analyticsdynamic />);
-    // Add specific content tests based on component
-  });
+    // Add specific content tests based on component;
+});
   test('handles user interactions', () => {
     render(<Analyticsdynamic />);
-    // Add interaction tests based on component functionality
-  });
+    // Add interaction tests based on component functionality;
+});
   test(applies correct styling', () => {
   describe('Analyticsdynamic', () => {
   test('renders without crashing', () => {
@@ -84,16 +84,16 @@ import Analyticsdynamic   from '../components/Analytics.dynamic''
     expect(screen.getByTestId('analytics.dynamic')).toBeInTheDocument()})'
   test('displays correct content', () => {'
     render(<Analyticsdynamic  />)
-    // Add specific content tests based on component
-  })
+    // Add specific content tests based on component;
+})
   test('handles user interactions', () => {'
     render(<Analyticsdynamic  />)
-    // Add interaction tests based on component functionality
-  })
+    // Add interaction tests based on component functionality;
+})
   test('applies correct styling', () => {'
     render(<Analyticsdynamic  />)
-    // Add styling tests if needed
-  });
+    // Add styling tests if needed;
+});
 });
   })})
 '

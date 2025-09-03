@@ -78,8 +78,8 @@ import React, { useState } from;
   Cardiology', description: Heart disease detection, ECG analysis, and cardiovascular imaging'}, {'' icon: <Brain className='w-8 h-8 text-blue-500' />, title:,
   Neurology', description: Brain tumor detection, stroke diagnosis, and neurological disorders'}, {'' icon: <Eye className='w-8 h-8 text-green-500' />, title:,
   Radiology', description: Chest X-ray analysis, bone fracture detection, and organ imaging'}, {'' icon: <Microscope className='w-8 h-8 text-purple-500' />, title:,
-  Pathology', description: Tissue analysis, cancer detection, and cellular pathology,
-  }]  const pricingPlans = [
+  Pathology', description: Tissue analysis, cancer detection, and cellular pathology,;
+}]  const pricingPlans = [
   { name: 'Starter, price:,
   $299', period: '/month, description:,
   Perfect for small clinics and individual practitioners', features: [';Up to 100 scans/month,

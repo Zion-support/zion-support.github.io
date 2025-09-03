@@ -77,7 +77,7 @@ import React { useEffect }  from 'react';interface PerformanceMetrics {
    fid?: number
    cls?: number
    ttfb?: number
-   fmp?: number
+   fmp?: number;
 }
 
 
@@ -233,13 +233,13 @@ const PerformanceMonitor: React.FC = () => {
             metric_5: 'ttfb'},
           value: Math.round(metrics.fcp || 0),
           non_interaction: true});
-            metric_5: 'ttfb'
-          },
-          non_interaction: true
-        }) (window as any).gtag('event,web_vitals' {
+            metric_5: 'ttfb';
+},
+          non_interaction: true;
+}) (window as any).gtag('event,web_vitals' {
           event_category: 'Performance', event_label: 'Core Web Vitals', custom_map: {
-            metric_1: 'fcp', metric_2: 'lcp', metric_3: 'fid', metric_4: 'cls', metric_5: 'ttfb'
-          }, value: Math.round(metrics.fcp || 0), non_interaction: true
+            metric_1: 'fcp', metric_2: 'lcp', metric_3: 'fid', metric_4: 'cls', metric_5: 'ttfb';
+}, value: Math.round(metrics.fcp || 0), non_interaction: true
 
       // Send to custom analytics endpoint
       if (process.env.NODE_ENV === 'production') {
@@ -249,8 +249,8 @@ const PerformanceMonitor: React.FC = () => {
             url: window.location.href,
             timestamp: Date.now(),
             metrics
-            metrics}),
-        }).catch(console.error)}
+            metrics}),;
+}).catch(console.error)}
     };
 
     // Send metrics when page is about to unload
@@ -294,8 +294,8 @@ export default PerformanceMonitor'
       fidObserver.disconnect()
       clsObserver.disconnect()
       fmpObserver.disconnect()
-      window.removeEventListener('beforeunload', sendMetrics)
-  }, [])
+      window.removeEventListener('beforeunload', sendMetrics);
+}, [])
 
   return null; // This component doesn&apos;t render anything''
 

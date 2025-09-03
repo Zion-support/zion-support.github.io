@@ -41,6 +41,6 @@ describe('accessibility-auditor', () => {"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
 "
     render(<accessibility -auditor /" >)
-    // Add more specific tests here
+    // Add more specific tests here;
 });
 })

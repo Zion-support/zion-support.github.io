@@ -365,7 +365,7 @@ export: interface PerformanceMetrics {
   cls?: number;
   // Cumulative Layout Shift
   ttfb?: number;
-  // Time to First Byte
+  // Time to First Byte;
 }
 export interface AccessibilitySettings {
   highContrast: boolean;

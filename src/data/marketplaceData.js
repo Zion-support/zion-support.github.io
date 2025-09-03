@@ -251,7 +251,7 @@ export const serviceCategories = [
       'Data Mining',
       'Neural Networks'
     ]
-  },
+},
   {'
     id: 'cloud-devops',
     name: 'Cloud & DevOps',
@@ -267,8 +267,8 @@ export const serviceCategories = [
       'AI Chatbots', ""
       'Recommendation Systems',""
       'Data Mining', ""
-      'Neural Networks']
-  }, {""
+      'Neural Networks'];
+}, {""
     id: 'cloud-devops',""
     name: 'Cloud & DevOps', ""
     description: 'Scalable infrastructure and automated operations',""
@@ -280,8 +280,8 @@ export const serviceCategories = [
       'CI/CD Pipelines',""
       'Monitoring & Logging', ""
       'Auto Scaling',""
-      'Load Balancing']
-  }, {""
+      'Load Balancing'];
+}, {""
     id: 'cybersecurity',""
     name: 'Cybersecurity', ""
     description: 'Protection and compliance solutions',""
@@ -293,8 +293,8 @@ export const serviceCategories = [
       'Security Monitoring',""
       'Compliance Management', ""
       'Identity & Access Management',""
-      'Data Protection']
-  }, {""
+      'Data Protection'];
+}, {""
     id: 'digital-transformation',""
     name: 'Digital Transformation', ""
     description: 'Business evolution through technology',""
@@ -320,8 +320,8 @@ export const serviceCategories = [
       'AI Chatbots,
       'Recommendation Systems,
       'Data Mining,
-      'Neural Networks']
-  },
+      'Neural Networks'];
+},
   {id: 'cloud-devops',
     name: 'Cloud & DevOps',
     description: 'Scalable infrastructure and automated operations',
@@ -335,7 +335,7 @@ export const serviceCategories = [
       'Auto Scaling',
       'Load Balancing'
     ]
-  },
+},
   {'
     id: 'cybersecurity',
     name: 'Cybersecurity',
@@ -356,7 +356,7 @@ export const serviceCategories = [
       'Identity & Access Management',
       'Data Protection'
     ]
-  },
+},
   {'
     id: 'digital-transformation',
     name: 'Digital Transformation',
@@ -377,7 +377,7 @@ export const serviceCategories = [
       'Digital Adoption',
       'Innovation Consulting'
     ]
-  }
+}
 ];
 
 export const industrySolutions = [
@@ -394,7 +394,7 @@ export const industrySolutions = [
       'Asset Management',
       'Performance Monitoring'
     ]
-  },
+},
   {'
     id: 'financial',
     name: 'Financial Services',
@@ -418,8 +418,8 @@ export const industrySolutions = [{id: 'manufacturing',
       'CI/CD Pipelines,
       'Monitoring & Logging,
       'Auto Scaling,
-      'Load Balancing']
-  },
+      'Load Balancing'];
+},
   {"
     id: 'cybersecurity,
     name: 'Cybersecurity,
@@ -433,8 +433,8 @@ export const industrySolutions = [{id: 'manufacturing',
       'Security Monitoring,
       'Compliance Management,
       'Identity & Access Management,
-      'Data Protection']
-  },
+      'Data Protection'];
+},
   {"
     id: 'digital-transformation,
     name: 'Digital Transformation,
@@ -448,8 +448,8 @@ export const industrySolutions = [{id: 'manufacturing',
       'Legacy Modernization,
       'Business Process Reengineering,
       'Digital Adoption,
-      'Innovation Consulting']
-  }
+      'Innovation Consulting'];
+}
 ];
 
 export const industrySolutions = [
@@ -464,8 +464,8 @@ export const industrySolutions = [
       'Supply Chain Optimization', ""
       'Production Planning',""
       'Asset Management', ""
-      'Performance Monitoring']
-  }, {""
+      'Performance Monitoring'];
+}, {""
     id: 'financial',""
     name: 'Financial Services', ""
     description: 'FinTech and banking solutions',""
@@ -475,8 +475,8 @@ export const industrySolutions = [
       'Risk Analytics',""
       'Compliance Automation', ""
       'Customer Onboarding',""
-      'Fraud Detection']
-  }, {""
+      'Fraud Detection'];
+}, {""
     id: 'healthcare',""
     name: 'Healthcare', ""
     description: 'Digital health and medical technology',""
@@ -486,8 +486,8 @@ export const industrySolutions = [
       'Medical Imaging',""
       'Patient Management', ""
       'Clinical Decision Support',""
-      'Healthcare Analytics']
-  }, {""
+      'Healthcare Analytics'];
+}, {""
     id: 'retail',""
     name: 'Retail', ""
     description: 'E-commerce and omnichannel solutions',""
@@ -509,8 +509,8 @@ export const industrySolutions = [
       'Supply Chain Optimization,
       'Production Planning,
       'Asset Management,
-      'Performance Monitoring']
-  },
+      'Performance Monitoring'];
+},
   {id: 'financial',
     name: 'Financial Services',
     description: 'FinTech and banking solutions',
@@ -522,7 +522,7 @@ export const industrySolutions = [
       'Customer Onboarding',
       'Fraud Detection'
     ]
-  },
+},
   {'
     id: 'healthcare',
     name: 'Healthcare',
@@ -541,7 +541,7 @@ export const industrySolutions = [
       'Clinical Decision Support',
       'Healthcare Analytics'
     ]
-  },
+},
   {'
     id: 'retail',
     name: 'Retail',
@@ -560,7 +560,7 @@ export const industrySolutions = [
       'Personalization',
       'Mobile Commerce'
     ]
-  }
+}
 ];
 
 export const testimonials = [{id: 1,
@@ -569,16 +569,16 @@ export const testimonials = [{id: 1,
     company: 'TechCorp Industries',
     content: 'Zion Tech Group transformed our legacy systems into a modern, scalable cloud infrastructure. Their expertise in DevOps and automation has increased our deployment speed by 300%.',
     rating: 5,
-    avatar: '/avatars/sarah.jpg'
-  },
+    avatar: '/avatars/sarah.jpg';
+},
   {id: 2,
     name: 'Michael Chen',
     title: 'VP of Engineering',
     company: 'InnovateBank',
     content: 'The AI-powered fraud detection system from Zion Tech Group has reduced our false positives by 60% while maintaining 99.9% accuracy. Outstanding results!',
     rating: 5,
-    avatar: '/avatars/michael.jpg'
-  },
+    avatar: '/avatars/michael.jpg';
+},
   {id: 3,
     name: 'Emily Rodriguez',
     title: 'Operations Director',
@@ -594,8 +594,8 @@ export const testimonials = [{id: 1,
       'Risk Analytics,
       'Compliance Automation,
       'Customer Onboarding,
-      'Fraud Detection']
-  },
+      'Fraud Detection'];
+},
   {"
     id: 'healthcare,
     name: 'Healthcare,
@@ -607,8 +607,8 @@ export const testimonials = [{id: 1,
       'Medical Imaging,
       'Patient Management,
       'Clinical Decision Support,
-      'Healthcare Analytics']
-  },
+      'Healthcare Analytics'];
+},
   {"
     id: 'retail,
     name: 'Retail,
@@ -620,8 +620,8 @@ export const testimonials = [{id: 1,
       'Customer Analytics,
       'Omnichannel Integration,
       'Personalization,
-      'Mobile Commerce']
-  }
+      'Mobile Commerce'];
+}
 ];
 
 export const caseStudies = [
@@ -643,7 +643,7 @@ export const testimonials = [
     id: 2,""
     name: 'Michael Chen', ""
     title: 'VP of Engineering',""
-    company: 'InnovateBank', ""
+    company: 'InnovateBank', "";
 },
   {
     id: 2,"
@@ -656,7 +656,7 @@ export const testimonials = [
     id: 3,""
     name: 'Emily Rodriguez', ""
     title: 'Operations Director',""
-    company: 'GreenManufacturing Co.', ""
+    company: 'GreenManufacturing Co.', "";
 },
   {
     id: 3,"
@@ -678,8 +678,8 @@ export const caseStudies = [{id: 'cloud-migration-bank',
       '99.9% uptime achieved',
       'Deployment time reduced from weeks to hours'
     ],
-    technologies: ['AWS', 'Azure', 'Kubernetes', 'Terraform', 'Jenkins']
-  },
+    technologies: ['AWS', 'Azure', 'Kubernetes', 'Terraform', 'Jenkins'];
+},
   {'
     id: 'ai-manufacturing',
   {id: 'ai-manufacturing',
@@ -693,8 +693,8 @@ export const caseStudies = [{id: 'cloud-migration-bank',
       '25% improvement in product quality',
       '15% increase in overall efficiency'
     ],
-    technologies: ['Python', 'TensorFlow', 'IoT Sensors', 'Real-time Analytics']
-  },
+    technologies: ['Python', 'TensorFlow', 'IoT Sensors', 'Real-time Analytics'];
+},
   {'
     id: 'cybersecurity-healthcare',
   {id: 'cybersecurity-healthcare',
@@ -708,8 +708,8 @@ export const caseStudies = [{id: 'cloud-migration-bank',
       'Zero security breaches in 2 years',
       '50% faster incident response time'
     ],
-    technologies: ['SIEM', 'EDR', 'Vulnerability Scanning', 'Compliance Automation']
-  }
+    technologies: ['SIEM', 'EDR', 'Vulnerability Scanning', 'Compliance Automation'];
+}
 ];
 export const caseStudies = [
   {""

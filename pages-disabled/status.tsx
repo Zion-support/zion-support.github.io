@@ -12,49 +12,49 @@ const SystemStatus: NextPage = () => {
       uptime: '99.9%',
       responseTime: '120ms',
       lastIncident: 'No incidents in the past 30 days',
-      icon: Globe
-    },
+      icon: Globe;
+},
     {
       name: 'API Services',
       status: 'operational',
       uptime: '99.8%',
       responseTime: '85ms',
       lastIncident: 'No incidents in the past 30 days',
-      icon: Server
-    },
+      icon: Server;
+},
     {
       name: 'Database',
       status: 'operational',
       uptime: '99.9%',
       responseTime: '45ms',
       lastIncident: 'No incidents in the past 30 days',
-      icon: Database
-    },
+      icon: Database;
+},
     {
       name: 'Cloud Infrastructure',
       status: 'operational',
       uptime: '99.9%',
       responseTime: '200ms',
       lastIncident: 'No incidents in the past 30 days',
-      icon: Cloud
-    },
+      icon: Cloud;
+},
     {
       name: 'CDN',
       status: 'operational',
       uptime: '99.9%',
       responseTime: '50ms',
       lastIncident: 'No incidents in the past 30 days',
-      icon: Activity
-    },
+      icon: Activity;
+},
     {
       name: 'Email Services',
       status: 'operational',
       uptime: '99.7%',
       responseTime: '300ms',
       lastIncident: 'No incidents in the past 30 days',
-      icon: Server
-    }
-  ];
+      icon: Server;
+}
+  ]
 
   const recentIncidents = [
     {
@@ -63,25 +63,25 @@ const SystemStatus: NextPage = () => {
       status: 'resolved',
       date: '2024-11-15',
       duration: '2 hours',
-      description: 'Scheduled maintenance window for API infrastructure updates. All services were restored successfully.'
-    },
+      description: 'Scheduled maintenance window for API infrastructure updates. All services were restored successfully.';
+},
     {
       id: 2,
       title: 'Database Performance Issue',
       status: 'resolved',
       date: '2024-10-28',
       duration: '45 minutes',
-      description: 'Temporary performance degradation in database queries. Issue was resolved by optimizing query performance.'
-    },
+      description: 'Temporary performance degradation in database queries. Issue was resolved by optimizing query performance.';
+},
     {
       id: 3,
       title: 'CDN Outage',
       status: 'resolved',
       date: '2024-10-10',
       duration: '1 hour',
-      description: 'CDN provider experienced regional outage affecting content delivery. Service was restored after provider resolution.'
-    }
-  ];
+      description: 'CDN provider experienced regional outage affecting content delivery. Service was restored after provider resolution.';
+}
+  ]
 
   const getStatusIcon = (status: string) => {
     switch (status) {

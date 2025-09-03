@@ -43,7 +43,7 @@ export default function AIFinancialTradingPlatform(...args: []):  ,{}
       icon: Eye,
       title: 'Market Sentiment Analysis',
       description: 'AI analyzes news, social media, and market data to gauge investor sentiment'}
-  ];Unlimited portfolio size',;On-premise options',;SLA guarantees';
+  ]Unlimited portfolio size',;On-premise options',;SLA guarantees';
       ],
       popular: fals,e}
   ]},
@@ -55,13 +55,13 @@ export default function AIFinancialTradingPlatform(...args: []):  ,{}
     {
       title: 'Commodities,',';
       description: 'AI-driven: insights for gol,d, oil, and other commodity markets',';
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx:  ];
+:pages.disabled/pages/services/ai-financial-trading-platform.tsx:  ]
   return();
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx: <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
     {'
       title: 'Commodities',
       description: 'AI-driven insights for gold, oil, and other commodity markets',
-:pages.disabled/pages/services/ai-financial-trading-platform.tsx  ];
+:pages.disabled/pages/services/ai-financial-trading-platform.tsx  ]
   return()
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx
   return();

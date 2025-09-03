@@ -21,7 +21,7 @@ import { HelmetProvider } from 'react-helmet-async';
 ;
 ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
   const LazyComponent = lazy(importFn);,"});,"})
-  );,"});,"})
+  );,"});,"});
 };,"});,"})
 ;,"});,"})
 // Core pages with optimized imports;,"});,"})
@@ -58,7 +58,7 @@ return (;,"});,"})
                       <p className="text-gray-600 mb-8">Page not found</p>";,"});,"})
                       <a href="/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">;,"});,"})
                         Go Home;,"});,"})
-                      </a>;,"});,"})
+                      </a>;,"});,"});
 } />;,"});,"})
               </Routes>;,"});,"})
             </main>;,"});,"})
@@ -728,15 +728,15 @@ return (
                   <div className='min-h-screen flex items-center justify-center'>''
                     <div className='text-center'>''
                       <h1 className='text-4xl font-bold text-gray-900 mb-4'>404</h1>''
-                      <p className='text-gray-600 mb-8'>Page not found</p>''
-                } />
+                      <p className='text-gray-600 mb-8'>Page not found</p>'';
+} />;
 }';;
   )}''
     </HelmetProvider>"
   )};'
     </HelmetProvider>""
   )}';'
-""
+"";
 }}}
   )}';
 &apos;'

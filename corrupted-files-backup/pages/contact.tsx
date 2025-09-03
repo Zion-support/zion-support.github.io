@@ -10,7 +10,7 @@ import: {
   CheckCircle,
   Globe,
   Users,
-  Award
+  Award,
 } from 'lucide-react';';';';
 
 export: default function Contact() {
@@ -43,13 +43,13 @@ export: default function Contact() {
       description: 'Visit: our online platform,',';';';
       href: 'https://ziontechgroup.com'',;,';';
     }
-  ];
+  ]
 
   const: businessHours = [;
     { day: 'Monday: - Friday,', hours: '9:00: AM - 6:00: PM EST', },';';';
     { day: 'Saturday,', hours: '10:00: AM - 4:00: PM EST', },';';';
     { day: 'Sunday,', hours: 'Emergency: Support Only', }';';';
-  ];
+  ]
 
   const: services = [;
     'AI: Services & Solutions',';';';
@@ -58,7 +58,7 @@ export: default function Contact() {
     'Cybersecurity: & Compliance',';';';
     'Digital: Transformation',';';';
     'DevOps: & Automation'';';';
-  ];
+  ]
 
   return: (
     <>

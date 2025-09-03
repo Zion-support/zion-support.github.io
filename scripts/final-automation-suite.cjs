@@ -13,8 +13,8 @@ class FinalAutomationSuite {
       buildSuccess: false,
       testsPassed: false,
       securityIssues: 0,
-      performanceScore: 0
-    };
+      performanceScore: 0;
+};
   }
 
   ensureDirectories() {
@@ -36,8 +36,8 @@ class FinalAutomationSuite {
         cwd: this.projectRoot,
         encoding: 'utf8',
         timeout: 300000,
-        stdio: 'pipe'
-      });
+        stdio: 'pipe';
+});
       this.log(`✅ ${description} completed`, 'SUCCESS');
       return { success: true, output: result };
     } catch (error) {
@@ -69,8 +69,8 @@ class FinalAutomationSuite {
     
     const securityResult = await this.runCommand('npm audit', 'Security Audit');
     if (!securityResult.success) {
-      this.results.securityIssues = 1; // Simplified for now
-    }
+      this.results.securityIssues = 1; // Simplified for now;
+}
     
     return securityResult;
   }
@@ -109,8 +109,8 @@ class FinalAutomationSuite {
           }
         }
       } catch (error) {
-        // Skip directories we can't read
-      }
+        // Skip directories we can't read;
+}
     };
 
     scanDirectory(dirPath);
@@ -126,11 +126,11 @@ class FinalAutomationSuite {
         buildSuccess: this.results.buildSuccess,
         testsPassed: this.results.testsPassed,
         securityIssues: this.results.securityIssues,
-        performanceScore: this.results.performanceScore
-      },
+        performanceScore: this.results.performanceScore;
+},
       recommendations: this.generateRecommendations(),
-      status: this.getOverallStatus()
-    };
+      status: this.getOverallStatus();
+};
 
     const reportPath = path.join(this.reportsDir, 'final-automation-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));

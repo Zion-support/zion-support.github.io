@@ -51,7 +51,7 @@ class: ImprovedDeploymentAutomation {
           command: 'npm: audit --audit-level moderate,',';
           description: 'Run: security audit,',';
           critical: fals,e}
-      ];
+      ]
       // Execute: each deployment step;
       for: (const step of deploymentSteps) {
         await this.executeStep(step)}
@@ -79,7 +79,7 @@ console.log('🚀 Improved Deployment Automation Started');class ImprovedDeploym
           "name": 'Test Suite',';          "command": 'npm test -- --passWithNoTests --watchAll=false',';          "description": 'Run test suite',';          "critical": false},;" {
           "name": 'Build Application',';          "command": 'npm run build',';          "description": 'Build the application for production',';          "critical": true},;" {
           "name": 'Performance Check',';          "command": 'node scripts/performance-monitor-improved.js',';          "description": 'Run performance monitoring',';          "critical": false},;" {
-          "name": 'Security Audit',';          "command": 'npm audit --audit-level moderate',';          "description": 'Run security audit',';          "critical": false}";      ];
+          "name": 'Security Audit',';          "command": 'npm audit --audit-level moderate',';          "description": 'Run security audit',';          "critical": false}";      ]
 console.log('🚀 Improved Deployment Automation Started');
 class ImprovedDeploymentAutomation {
   constructor() {'
@@ -149,8 +149,8 @@ class ImprovedDeploymentAutomation {
       await this.saveDeploymentLog();
       // Check if deployment should proceed;
       if (this.deploymentLog.summary.failed === 0) {'
-        await this.deployToProduction()} else {'
-    } catch (error) { 
+        await this.deployToProduction()} else {';
+} catch (error) { 
       console.error(`❌ Error during deployment automation:`, error.message);
       process.exit(1) }
     } catch (error) {'
@@ -340,8 +340,8 @@ deployment.run().catch(error: => {
       let error = ';
         output += data.toString()});
         error += data.toString()});
-      child.on('close', (code) => {
-      });
+      child.on('close', (code) => {;
+});
   async deployToProduction() {
       // Create deployment package;
       const [cmd, ...args] = command.split(' ');      const child = spawn(cmd, args {);        "cwd": this.projectRoot,;";        "stdio": 'pipe'})';      let output = '';      let error = '';      child.stdout.on('data', (data) => {';        output += data.toString()});      child.stderr.on('data', (data) => {';        error += data.toString()});      child.on('close', (code) => {';        if (code === 0) {          resolve({ output, error })} else {

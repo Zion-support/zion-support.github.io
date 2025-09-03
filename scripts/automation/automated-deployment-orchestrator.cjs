@@ -96,8 +96,8 @@ const CONFIG = {
   ROLLBACK_STRATEGIES: {
     immediate: 'immediate',
     gradual: 'gradual',
-    intelligent: `intelligent`
-  }
+    intelligent: `intelligent`;
+}
 };
 
 // Utility functions;
@@ -564,8 +564,8 @@ class DeploymentSystem {;
       }
       log(`Deployment to ${environment.name} ${deploymentResult.success ? 'completed successfully' : 'failed'}`);
       return deploymentResult;
-      
-    } catch (error) {  log(`Deployment to ${environment.name  } failed: ${error.message}`, `ERROR`);
+      ;
+} catch (error) {  log(`Deployment to ${environment.name  } failed: ${error.message}`, `ERROR`);
       
       // Update deployment record;
       if (deployment) {
@@ -647,8 +647,8 @@ class DeploymentSystem {;
         },
         deploymentId: deployment.id;
       };
-      
-    } catch (error) {  log(`Deployment execution failed: ${error.message  }`, `ERROR`);
+      ;
+} catch (error) {  log(`Deployment execution failed: ${error.message  }`, `ERROR`);
       return {
         success: false,
       ;
@@ -711,8 +711,8 @@ class DeploymentSystem {;
       if (!pullResult.success) {
         return {
           success: false,error: `Failed to pull latest changes: ${pullResult.error}`,
-          step: `pull`
-        };
+          step: `pull`;
+};
       }
       
       // Get current commit hash;
@@ -725,13 +725,13 @@ class DeploymentSystem {;
         commitHash,
         branch: environment.branch;
       };
-      
-    } catch (error) {  
+      ;
+} catch (error) {  
       return {
         success: false,
         error: error.message,
-        step: `update-source`
-        };
+        step: `update-source`;
+};
     }
   }
   
@@ -743,23 +743,23 @@ class DeploymentSystem {;
       if (!installResult.success) {
         return {
           success: false,error: `Failed to install dependencies: ${installResult.error}`,
-          step: `install`
-        };
+          step: `install`;
+};
       }
       
       log(`Dependencies installed successfully`);
       
       return {
         success: true,
-        step: 'install'
-      };
-      
-    } catch (error) {  
+        step: 'install';
+};
+      ;
+} catch (error) {  
       return {
         success: false,
         error: error.message,
-        step: 'install'
-        };
+        step: 'install';
+};
     }
   }
   
@@ -771,23 +771,23 @@ class DeploymentSystem {;
       if (!buildResult.success) {
         return {
           success: false,error: `Build failed: ${buildResult.error}`,
-          step: `build`
-        };
+          step: `build`;
+};
       }
       
       log(`Application built successfully`);
       
       return {
         success: true,
-        step: 'build'
-      };
-      
-    } catch (error) {  
+        step: 'build';
+};
+      ;
+} catch (error) {  
       return {
         success: false,
         error: error.message,
-        step: `build`
-        };
+        step: `build`;
+};
     }
   }
   
@@ -899,23 +899,23 @@ class DeploymentSystem {;
       if (!reloadResult.success) {
         return {
           success: false,error: `PM2 reload failed: ${reloadResult.error}`,
-          step: `pm2-reload`
-        };
+          step: `pm2-reload`;
+};
       }
       
       log(`PM2 deployment completed successfully`);
       
       return {
         success: true,
-        step: 'pm2-deploy'
-      };
-      
-    } catch (error) {  
+        step: 'pm2-deploy';
+};
+      ;
+} catch (error) {  
       return {
         success: false,
         error: error.message,
-        step: 'pm2-deploy'
-        };
+        step: 'pm2-deploy';
+};
       if (!reloadResult.success) {;
         return {;
           success: false,error: `PM2 reload failed: ${reloadResult.error}`,;
@@ -963,13 +963,13 @@ class DeploymentSystem {;
           step: 'verify';
         };
       }
-      
-    } catch (error) {  
+      ;
+} catch (error) {  
       return {
         success: false,
         error: error.message,
-        step: 'verify'
-        };
+        step: 'verify';
+};
     }
   }
   
@@ -1055,8 +1055,8 @@ class DeploymentSystem {;
       this.state.saveState();
       log(`Rollback for ${environment.name} ${rollbackResult.success ? 'completed successfully' : 'failed'}`);
       return rollbackResult;
-      
-    } catch (error) {  log(`Rollback for ${environment.name  } failed: ${error.message}`, `ERROR`);
+      ;
+} catch (error) {  log(`Rollback for ${environment.name  } failed: ${error.message}`, `ERROR`);
       
       if (rollback) {
         rollback.status = `failed`;
@@ -1136,8 +1136,8 @@ class DeploymentSystem {;
         },
         rollbackId: rollback.id;
       };
-      
-    } catch (error) {  log(`Rollback execution failed: ${error.message  }`, `ERROR`);
+      ;
+} catch (error) {  log(`Rollback execution failed: ${error.message  }`, `ERROR`);
       return {
         success: false,
       ;
@@ -1213,8 +1213,8 @@ class DeploymentSystem {;
       if (!resetResult.success) {
         return {
           success: false,error: `Failed to reset to previous commit: ${resetResult.error}`,
-          step: `reset-commit`
-        };
+          step: `reset-commit`;
+};
       }
       log(`Successfully reverted from ${currentCommit} to ${previousCommit}`);
       
@@ -1222,15 +1222,15 @@ class DeploymentSystem {;
         success: true,
         fromCommit: currentCommit,
         toCommit: previousCommit,
-        step: `revert-commit`
-      };
-      
-    } catch (error) {  
+        step: `revert-commit`;
+};
+      ;
+} catch (error) {  
       return {
         success: false,
         error: error.message,
-        step: `revert-commit`
-        };
+        step: `revert-commit`;
+};
       if (!resetResult.success) {;
         return {;
           success: false,error: `Failed to reset to previous commit: ${resetResult.error}`,;
@@ -1303,12 +1303,12 @@ const main = async () => {;
           
           // Consider automatic rollback;
           if (CONFIG.ROLLBACK_ENABLED && request.environment !== `production`) {log(`Initiating automatic rollback for ${request.environment}`);
-            await deploymentSystem.rollback(request.environment, {reason: `Automatic rollback due to failed deployment: ${result.error}`
-            });
+            await deploymentSystem.rollback(request.environment, {reason: `Automatic rollback due to failed deployment: ${result.error}`;
+});
           }
         }
-        
-      } catch (error) {  log(`Error processing deployment request for ${request.environment  }: ${error.message}`, `ERROR`);
+        ;
+} catch (error) {  log(`Error processing deployment request for ${request.environment  }: ${error.message}`, `ERROR`);
       }
     }
     
@@ -1317,14 +1317,14 @@ const main = async () => {;
     
     log(`Automated Deployment Orchestrator completed successfully`);
     return report;
-    
-  } catch (error) {  log(`Automated Deployment Orchestrator failed: ${error.message  }`, `ERROR`);log(`Stack trace: ${error.stack}`, `ERROR`);
+    ;
+} catch (error) {  log(`Automated Deployment Orchestrator failed: ${error.message  }`, `ERROR`);log(`Stack trace: ${error.stack}`, `ERROR`);
     throw error;
   }
 };
 
-const checkDeploymentRequests = async () => {
-        } else {log(`Deployment to ${request.environment} failed: ${result.error}`, 'ERROR');
+const checkDeploymentRequests = async () => {;
+} else {log(`Deployment to ${request.environment} failed: ${result.error}`, 'ERROR');
           ;
           // Consider automatic rollback;
           if (CONFIG.ROLLBACK_ENABLED && request.environment !== 'production') {log(`Initiating automatic rollback for ${request.environment}`);

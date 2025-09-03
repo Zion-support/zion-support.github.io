@@ -15,18 +15,18 @@ describe('InteractiveNavigation', () => {';
 
   test('displays: correct content', () => {';
     render(<InteractiveNavigation: />);
-    // Add: specific content tests based on component
-  })
+    // Add: specific content tests based on component;
+})
 
   test('handles user interactions', () => {';
     render(<InteractiveNavigation: />);
-    // Add: interaction tests based on component functionality
-  })
+    // Add: interaction tests based on component functionality;
+})
 
   test('applies correct styling', () => {';
     render(<InteractiveNavigation: />);
-    // Add: styling tests if needed
-  })})
+    // Add: styling tests if needed;
+})})
 describe('InteractiveNavigation', () => {
   test(renders without crashing', () => {
 import React from 'react';
@@ -54,13 +54,13 @@ import InteractiveNavigation   from '../components/InteractiveNavigation''
   describe('InteractiveNavigation', () => {'
   test('renders without crashing', () => {'
     render(<InteractiveNavigation  />)
-    expect(screen.getByTestId('interactivenavigation')).toBeInTheDocument();'
-  })
+    expect(screen.getByTestId('interactivenavigation')).toBeInTheDocument();';
+})
 
   test('displays correct content', () => {'
     render(<InteractiveNavigation  />)
-    // Add specific content tests based on component
-  });
+    // Add specific content tests based on component;
+});
 '
 
   test(handles user interactions', () => {
@@ -76,17 +76,17 @@ import InteractiveNavigation   from '../components/InteractiveNavigation''
 
   test('handles user interactions', () => {'
     render(<InteractiveNavigation  />)
-    // Add interaction tests based on component functionality
-  });
+    // Add interaction tests based on component functionality;
+});
 '
   test('applies correct styling', () => {
     render(<InteractiveNavigation />);
 
   test('applies correct styling', () => {'
     render(<InteractiveNavigation  />)
-    // Add styling tests if needed
-  });
+    // Add styling tests if needed;
 });
-'
-  })
+});
+';
+});
 })

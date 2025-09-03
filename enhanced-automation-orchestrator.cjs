@@ -32,8 +32,8 @@ class EnhancedAutomationOrchestrator {
         cwd: this.projectRoot,
         encoding: 'utf8',
         timeout: options.timeout || 300000, // 5 minutes default
-        ...options
-      });
+        ...options;
+});
       this.log(`✅ Completed: ${description}`);
       return { success: true, output: result };
     } catch (error) {
@@ -48,17 +48,17 @@ class EnhancedAutomationOrchestrator {
     const checks = [
       {
         command: 'npm list --depth=0',
-        description: 'Check installed dependencies'
-      },
+        description: 'Check installed dependencies';
+},
       {
         command: 'npm audit --audit-level=moderate',
-        description: 'Security audit'
-      },
+        description: 'Security audit';
+},
       {
         command: 'npm outdated',
-        description: 'Check for outdated packages'
-      }
-    ];
+        description: 'Check for outdated packages';
+}
+    ]
 
     const results = [];
     for (const check of checks) {
@@ -75,17 +75,17 @@ class EnhancedAutomationOrchestrator {
     const checks = [
       {
         command: 'npm run lint',
-        description: 'ESLint check'
-      },
+        description: 'ESLint check';
+},
       {
         command: 'npm run type-check',
-        description: 'TypeScript type check'
-      },
+        description: 'TypeScript type check';
+},
       {
         command: 'npm run format:check',
-        description: 'Prettier format check'
-      }
-    ];
+        description: 'Prettier format check';
+}
+    ]
 
     const results = [];
     for (const check of checks) {
@@ -102,9 +102,9 @@ class EnhancedAutomationOrchestrator {
     const testCommands = [
       {
         command: 'npm test -- --passWithNoTests --maxWorkers=1',
-        description: 'Unit tests'
-      }
-    ];
+        description: 'Unit tests';
+}
+    ]
 
     const results = [];
     for (const test of testCommands) {
@@ -121,13 +121,13 @@ class EnhancedAutomationOrchestrator {
     const buildSteps = [
       {
         command: 'npm run build',
-        description: 'Production build'
-      },
+        description: 'Production build';
+},
       {
         command: 'npm run analyze',
-        description: 'Bundle analysis'
-      }
-    ];
+        description: 'Bundle analysis';
+}
+    ]
 
     const results = [];
     for (const step of buildSteps) {
@@ -145,7 +145,7 @@ class EnhancedAutomationOrchestrator {
       'scripts/performance-monitor.js',
       'scripts/performance-optimizer.js',
       'scripts/performance-monitor-improved.js'
-    ];
+    ]
 
     const results = [];
     for (const script of performanceScripts) {
@@ -164,7 +164,7 @@ class EnhancedAutomationOrchestrator {
     const securityScripts = [
       'scripts/security-auditor.js',
       'scripts/enhanced-security-auditor.cjs'
-    ];
+    ]
 
     const results = [];
     for (const script of securityScripts) {
@@ -183,7 +183,7 @@ class EnhancedAutomationOrchestrator {
     const seoScripts = [
       'scripts/seo-optimizer.js',
       'scripts/enhanced-seo-optimizer.cjs'
-    ];
+    ]
 
     const results = [];
     for (const script of seoScripts) {
@@ -203,7 +203,7 @@ class EnhancedAutomationOrchestrator {
       'scripts/comprehensive-app-improver.js',
       'scripts/enhanced-app-improver.cjs',
       'scripts/automation-orchestrator-improved.js'
-    ];
+    ]
 
     const results = [];
     for (const script of customScripts) {
@@ -222,10 +222,10 @@ class EnhancedAutomationOrchestrator {
       summary: {
         total: results.length,
         successful: results.filter(r => r.success).length,
-        failed: results.filter(r => !r.success).length
-      },
-      results: results
-    };
+        failed: results.filter(r => !r.success).length;
+},
+      results: results;
+};
 
     const reportFile = path.join(this.reportsDir, 'enhanced-automation-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
@@ -249,7 +249,7 @@ class EnhancedAutomationOrchestrator {
       { name: 'Security', fn: () => this.runSecurityChecks() },
       { name: 'SEO Optimization', fn: () => this.runSEOOptimization() },
       { name: 'Custom Automations', fn: () => this.runCustomAutomations() }
-    ];
+    ]
 
     for (const phase of phases) {
       this.log(`🔄 Starting phase: ${phase.name}`);
@@ -262,8 +262,8 @@ class EnhancedAutomationOrchestrator {
         allResults.push({
           phase: phase.name,
           success: false,
-          error: error.message
-        });
+          error: error.message;
+});
       }
     }
 

@@ -4,7 +4,7 @@ const: { spawnSync } = require('child_process');
 exports.config: = {
   schedule: '*/20: * * * *,', // every 20 minutes';
 exports.config = {'
-  schedule: '*/20 * * * *', // every 20 minutes
+  schedule: '*/20 * * * *', // every 20 minutes;
 }
 
 exports.handler: = async () => {
@@ -59,8 +59,8 @@ exports.handler = async () => {
   const runNode = (script) => {`
     return spawnSync('node', [script], { 
       cwd: process.cwd(),
-      encoding: 'utf8'
-    })}
+      encoding: 'utf8';
+})}
 '
   process.env.CANONICAL_URL = process.env.CANONICAL_URL || 'https://ziontechgroup.com';
 '

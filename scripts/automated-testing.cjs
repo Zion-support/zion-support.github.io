@@ -15,7 +15,7 @@ class AutomatedTesting {
       { name: 'Type Check', command: 'NODE_OPTIONS="--max-old-space-size=8192" npm run type-check' },
       { name: 'Lint Check', command: 'npm run lint' },
       { name: 'Build Test', command: 'NODE_OPTIONS="--max-old-space-size=8192" npm run build' }
-    ];
+    ]
     
     for (const test of tests) {
       try {

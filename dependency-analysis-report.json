@@ -51,7 +51,7 @@
     "tailwindcss": "^3.3.5",
     "ts-jest": "^29.4.1",
     "typescript": "5.9.2"
-  },
+},
   "recommendations": [
     "Regularly update dependencies",
     "Use exact versions for critical packages",

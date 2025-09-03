@@ -132,6 +132,6 @@ export default function WebDevelopment() {
         </div>
       </section>
     </div>
-  )
+  );
 }
 "

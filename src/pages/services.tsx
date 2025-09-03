@@ -27,7 +27,7 @@ const Services: React.FC = () => {,"});,"})
           <p className="text-lg text-gray-600">Content coming soon...</p>;,"});,"})
         </div>;,"});,"})
     </>;,"});,"})
-  );,"});,"})
+  );,"});,"});
 };,"});,"})
 export default Services;,"});,"})
 import { SEO } from '../components/SEO';';
@@ -41,8 +41,8 @@ export default function Services() {
       services: [
           name: 'AI Business Intelligence',
           description: 'Transform your data into actionable insights with AI-powered analytics and reporting.',
-          features: ['Predictive Analytics', 'Real-time Dashboards', 'Custom ML Models', 'Data Visualization']
-        } {
+          features: ['Predictive Analytics', 'Real-time Dashboards', 'Custom ML Models', 'Data Visualization'];
+} {
           name: 'AI Sales Copilot',
           description: 'Automate and optimize your sales process with intelligent lead scoring and follow-up.',
           features: ['Lead Scoring', 'Automated Follow-ups', 'Sales Forecasting', 'CRM Integration']
@@ -51,8 +51,8 @@ export default function Services() {
           features: ['Regulatory Monitoring', 'Automated Reporting', 'Risk Assessment', 'Audit Trails']
           name: 'AI Workflow Automation',
           description: 'Streamline business processes with intelligent automation and decision-making.',
-          features: ['Process Automation', 'Smart Routing', 'Decision Trees', 'Performance Analytics']
-        }
+          features: ['Process Automation', 'Smart Routing', 'Decision Trees', 'Performance Analytics'];
+}
       ]
       category: 'Cloud & DevOps',
       icon: '☁️',
@@ -129,7 +129,7 @@ export default function Services() {
           name: 'AR/VR Applications',
           description: 'Create immersive experiences with augmented and virtual reality.',
           features: ['3D Modeling', 'Interactive Experiences', 'Cross-platform Support', 'Content Creation']
-  ];
+  ]
 
   const getColorClasses = (color: string) => {
     const colorMap: { [key: string]: string } = {
@@ -138,8 +138,8 @@ export default function Services() {
       red: 'bg-red-100 text-red-800 border-red-200',
       green: 'bg-green-100 text-green-800 border-green-200',
       indigo: 'bg-indigo-100 text-indigo-800 border-indigo-200',
-      yellow: 'bg-yellow-100 text-yellow-800 border-yellow-200'
-    };
+      yellow: 'bg-yellow-100 text-yellow-800 border-yellow-200';
+};
     return colorMap[color] || 'bg-gray-100 text-gray-800 border-gray-200'};
 
   return (

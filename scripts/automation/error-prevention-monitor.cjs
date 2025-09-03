@@ -249,8 +249,8 @@ this.log(Found ${potentialErrors.length} potential error patterns`);
           timestamp: new Date().toISOString(),;
         });
       } catch (fixError) {
-        this.log( `❌ Error applying preventive fix: ${fixError.message}`,ERROR`
-      } catch (fixError) {;
+        this.log( `❌ Error applying preventive fix: ${fixError.message}`,ERROR`;
+} catch (fixError) {;
         this.log( `❌ Error applying preventive fix: ${fixError.message}',ERROR';
         );
         fixResults.push({;
@@ -327,8 +327,8 @@ this.log(Found ${potentialErrors.length} potential error patterns`);
       return false;
     } catch (fixError) {
       this.log(❌ Failed to apply preventive fix: ${fixError.message}`,
-        `ERROR`
-    } catch (fixError) {;
+        `ERROR`;
+} catch (fixError) {;
       this.log(❌ Failed to apply preventive fix: ${fixError.message}',;
         'ERROR';
       );

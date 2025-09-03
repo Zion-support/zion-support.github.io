@@ -130,8 +130,8 @@ class DependencyErrorResolver {;
         });
       } catch (resolutionError) {
         this.log(❌ Error resolving dependency issue: ${resolutionError.message}`,
-          `ERROR`
-      } catch (resolutionError) {;
+          `ERROR`;
+} catch (resolutionError) {;
         this.log(❌ Error resolving dependency issue: ${resolutionError.message}',;
           'ERROR';
         );
@@ -405,8 +405,8 @@ this.log(`📄 Report generated: ${reportFile}`);
         report,;
       };
     } catch (error) {  
-      this.log( `💥 Dependency Error Resolver failed: ${error.message  }`,ERROR`
-    } catch (error) {;
+      this.log( `💥 Dependency Error Resolver failed: ${error.message  }`,ERROR`;
+} catch (error) {;
       this.log( `💥 Dependency Error Resolver failed: ${error.message}',ERROR';
       );
       throw error;

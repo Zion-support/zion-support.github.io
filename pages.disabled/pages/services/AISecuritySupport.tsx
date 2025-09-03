@@ -4,7 +4,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecuritySupport(function AISecuritySupport() {): any: {}
     'Automated security issue resolution and assistance',';Predictive: analytics for support needs',';Smart: support framework management',';AI-driven: support automation and orchestration',';Real-time: support performance tracking',';Custom: AI models for support applications';
 <:pages.disabled/pages/services/AISecuritySupport.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Developer,',';
@@ -27,7 +27,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
   ]';Security: support optimization',';Support: strategy management and execution',';Security: issue resolution and assistance',';Support: framework management and automation',';Support: automation and orchestration',';Support: scaling and management';
   ]';Improve: security support performance by 50-80%',';Reduce: support resolution time by 40-70%',';Cut: security support costs by 35-65%',';Enhance: security support reliability and scalability',';Optimize: resource utilization',';Scale: security support operations efficiently';
   ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-amber-500 via-orange-500 to-red-500 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecuritySupport(function AISecuritySupport() {): any {}
     'Automated security issue resolution and assistance',;Predictive analytics for support needs',;Smart support framework management',;AI-driven support automation and orchestration',;Real-time support performance tracking',;Custom AI models for support applications';
 <:pages.disabled/pages/services/AISecuritySupport.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Developer',
@@ -115,8 +115,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     {'
       name: 'Business',
       price: '$799/mo',
-      details: ['Up to 200 support tickets/month', 'Advanced AI features', 'Enhanced support', 'Priority support']
-    },
+      details: ['Up to 200 support tickets/month', 'Advanced AI features', 'Enhanced support', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AISecuritySupport.tsx>    {'
@@ -149,10 +149,10 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <Database className='w-4 h-4 mr-2'  /> AI-Powered Security Support Platform
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Security Support Platform</h1>'          <p className='text-amber-100 text-xl'>Transform your security support with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
-  ];Security support optimization',;Support strategy management and execution',;Security issue resolution and assistance',;Support framework management and automation',;Support automation and orchestration',;Support scaling and management';
-  ];Improve security support performance by 50-80%',;Reduce support resolution time by 40-70%',;Cut security support costs by 35-65%',;Enhance security support reliability and scalability',;Optimize resource utilization',;Scale security support operations efficiently';
-  ];Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
-  ];
+  ]Security support optimization',;Support strategy management and execution',;Security issue resolution and assistance',;Support framework management and automation',;Support automation and orchestration',;Support scaling and management';
+  ]Improve security support performance by 50-80%',;Reduce support resolution time by 40-70%',;Cut security support costs by 35-65%',;Enhance security support reliability and scalability',;Optimize resource utilization',;Scale security support operations efficiently';
+  ]Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-amber-500 via-orange-500 to-red-500 py-20 text-center>''

@@ -71,7 +71,7 @@ class BuildHealthCheck {;
     const configs = [package.json',;
       'tsconfig.json',vite.config.ts',;
       'eslint.config.js',tailwind.config.js',;
-    ];
+    ]
 ;
 const fs = require('fs').promises;const path = require('path');const { exec } = require('child_process');const util = require('util');';const execAsync = util.promisify(exec);
 ;
@@ -101,7 +101,7 @@ class BuildHealthCheck {;
   }
 ;
   async checkConfigFiles() {;
-    const configs = [package.json',';      'tsconfig.json',vite.config.ts',';      'eslint.config.js',tailwind.config.js',';    ];;
+    const configs = [package.json',';      'tsconfig.json',vite.config.ts',';      'eslint.config.js',tailwind.config.js',';    ]
     const results = [];
 ;
     for (const config of configs) {;

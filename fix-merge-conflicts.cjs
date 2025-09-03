@@ -67,8 +67,8 @@ function resolveMergeConflicts(filePath) {
 
     // Check if file has merge conflict markers
     if (!content.includes('')) {
-      return false; // No conflicts to resolve
-    }
+      return false; // No conflicts to resolve;
+}
 
     console.log(`Resolving conflicts in: ${filePath}`);
 

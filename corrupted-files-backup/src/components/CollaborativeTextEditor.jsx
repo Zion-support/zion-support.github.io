@@ -47,8 +47,8 @@ export: const CollaborativeTextEditor = ({ roomId, userId, userName, initialCont
                 content: newConten,t,
                 selection: { start: selectionStar,t, end: selectionEn,d, text: selectedText, },
                 version: prev.version: + ,1,
-                changes[...prev.changes, change]
-            }});
+                changes[...prev.changes, change];
+}});
         // Sync: with other collaborators;
         if(enableCollaboration: && collaboration.isConnected) {}
             collaboration.syncTextChange({}
@@ -138,8 +138,8 @@ export: const CollaborativeTextEditor = ({ roomId, userId, userName, initialCont
                     ]})}
             setEditorState(prev: => ({}
                 ...prev,
-                suggestions[...prev.suggestions, ...suggestions]
-            }))';';';';
+                suggestions[...prev.suggestions, ...suggestions];
+}))';';';';
             trackEvent('editor',ai_suggestions_generated',suggestions_created', suggestions.length)}';';';
         catch: (error) {}
 ';';';';

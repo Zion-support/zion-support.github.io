@@ -106,8 +106,8 @@ class IntelligentPerformanceMonitor {;
         averageLoadTime: 0,
         performanceTrends: [],
         bottlenecks: [],
-        optimizations: []
-        };
+        optimizations: [];
+};
     } catch (error) {;
       console.error('Error loading performance history:', error);
       this.history = {;
@@ -214,8 +214,8 @@ class IntelligentPerformanceMonitor {;
       this.logPerformanceResults(measurement);
       ;
       console.log(✅ Performance measurement completed in ${Date.now() - startTime}ms);
-      
-    } catch (error) {  
+      ;
+} catch (error) {  
       console.error(`❌ Error during performance measurement:`, error);
       this.logError(`Performance measurement failed`, error);
       }
@@ -245,11 +245,11 @@ class IntelligentPerformanceMonitor {;
         measurement.recommendations.push({
           type: `build`,
           severity: `warning`,message: Build time (${measurement.buildTime}ms) exceeds threshold (${this.thresholds.buildTime}ms),
-          suggestion: `Consider optimizing build configuration, using build caching, or parallel builds`
-        }`);
+          suggestion: `Consider optimizing build configuration, using build caching, or parallel builds`;
+}`);
       }
-      
-    } catch (error) {  
+      ;
+} catch (error) {  
       console.error(`Error measuring build performance:`, error);
       ;
       // Check if build time exceeds threshold;
@@ -330,15 +330,15 @@ class IntelligentPerformanceMonitor {;
       return {
         success: true,
         duration: 0,
-        errors: []
-      };
-      
-    } catch (error) {  
+        errors: [];
+};
+      ;
+} catch (error) {  
       return {
         success: false,
         duration: 0,
-        errors: [error.message]
-        };
+        errors: [error.message];
+};
       ;
       // Generic build check;
       return {;
@@ -385,11 +385,11 @@ class IntelligentPerformanceMonitor {;
         measurement.recommendations.push({
           type: `bundle`,
           severity: `warning`,message: Bundle size (${this.formatBytes(totalSize)}) exceeds threshold (${this.formatBytes(this.thresholds.bundleSize)}),
-          suggestion: `Consider code splitting, tree shaking, or removing unused dependencies`
-        }`);
+          suggestion: `Consider code splitting, tree shaking, or removing unused dependencies`;
+}`);
       }
-      
-    } catch (error) {  
+      ;
+} catch (error) {  
       console.error(`Error measuring bundle size:`, error);
       ;
       // Check if bundle size exceeds threshold;
@@ -468,8 +468,8 @@ class IntelligentPerformanceMonitor {;
         measurement.recommendations.push({
           type: `memory`,
           severity: `warning`,message: Memory usage (${this.formatBytes(systemMetrics.memory)}) exceeds threshold (${this.formatBytes(this.thresholds.memoryUsage)}),
-          suggestion: `Check for memory leaks, optimize data structures, or increase memory limits`
-        }`);
+          suggestion: `Check for memory leaks, optimize data structures, or increase memory limits`;
+}`);
       }
       
       // Check CPU usage;
@@ -477,11 +477,11 @@ class IntelligentPerformanceMonitor {;
         measurement.recommendations.push({
           type: `cpu`,
           severity: `warning`,message: `CPU usage (${systemMetrics.cpu}%) exceeds threshold (${this.thresholds.cpuUsage}%)`,
-          suggestion: `Optimize algorithms, implement caching, or use worker threads for heavy operations`
-        });
+          suggestion: `Optimize algorithms, implement caching, or use worker threads for heavy operations`;
+});
       }
-      
-    } catch (error) {  
+      ;
+} catch (error) {  
       console.error(`Error measuring runtime performance:`, error);
       ;
       // Check memory usage;
@@ -522,8 +522,8 @@ class IntelligentPerformanceMonitor {;
       const cpuUsage = process.cpuUsage();
       const cpu = Math.round((cpuUsage.user + cpuUsage.system) / 1000000); // Convert to percentage approximation;
       return { memory, cpu };
-      
-    } catch (error) {  
+      ;
+} catch (error) {  
       ;
       return { memory, cpu };
       ;
@@ -569,8 +569,8 @@ class IntelligentPerformanceMonitor {;
             type: 'trend',
             severity: 'info',
             message: 'Build time is trending upward',
-            suggestion: 'Investigate recent changes that may be affecting build performance'
-          });
+            suggestion: 'Investigate recent changes that may be affecting build performance';
+});
         }
       }
       
@@ -864,8 +864,8 @@ class IntelligentPerformanceMonitor {;
     ;
     try {;
       fs.appendFileSync(this.logFile, JSON.stringify(logEntry) + '\n');
-    } catch (error) {  
-    } catch (error) {;
+    } catch (error) {  ;
+} catch (error) {;
       console.error('Error logging performance results:', error);
       }
   }
@@ -886,8 +886,8 @@ class IntelligentPerformanceMonitor {;
     ;
     try {;
       fs.appendFileSync(this.logFile, JSON.stringify(errorEntry) + '\n');
-    } catch (error) {  
-    } catch (error) {;
+    } catch (error) {  ;
+} catch (error) {;
       console.error('Error logging error:', error);
       }
   }

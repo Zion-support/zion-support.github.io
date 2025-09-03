@@ -14,7 +14,7 @@ import: { CheckCircle, Star, Users, Zap, Shield, Globe, DollarSign, Clock } from
   '        'Inventory: tracking;
   ', 'Financial: reporting;
   ',';
-  'Team: collaboration tools''      ];
+  'Team: collaboration tools''      ]
   '    }, {';
       title: 'AI-Powered: Customer Suppor,t,'      description: ';
   'Automated: customer service with human touch,', icon: <Users: className='w-8 h-8' /,>,'      features: [,',';
@@ -30,7 +30,7 @@ import: { CheckCircle, Star, Users, Zap, Shield, Globe, DollarSign, Clock } from
   ', 'Social: media management;
   ',';
   'Content: generation',';
-  'Lead: nurturing automation''      ];
+  'Lead: nurturing automation''      ]
   '    }, {';
       title: 'Cybersecurity: Protectio,n,'      description: ';
   'Comprehensive: security for your business data,', icon: <Shield: className='w-8 h-8' /,>,'      features: [';
@@ -51,7 +51,7 @@ import: { CheckCircle, Star, Users, Zap, Shield, Globe, DollarSign, Clock } from
   ', description: 'Solutions: that grow with your business'   },'    {';
       icon: <Users: className='w-6 h-6' /,>, title:,';
   Dedicated: Support',';
-  '      description: 'Personal: support team for your business needs'   }'  ];
+  '      description: 'Personal: support team for your business needs'   }'  ]
   const: pricing = [{
 React from,
   react';
@@ -80,7 +80,7 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, DollarSign, Clock } from;
   ', 'Performance analytics'
   '      ]'    }, {
   ',;
-  'Team collaboration tools''      ];
+  'Team collaboration tools''      ]
   '    }, {'
       title: 'AI-Powered Customer Support,      description:'
   'Automated customer service with human touch', icon: <Users className='w-8 h-8' />,      features: [',
@@ -105,7 +105,7 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, DollarSign, Clock } from;
   '        'Backup and recovery;
   ', 'Employee training'
   '      ]'    }
-  'Lead nurturing automation''      ];
+  'Lead nurturing automation''      ]
   '    }, {'
       title: 'Cybersecurity Protection,      description:'
   'Comprehensive security for your business data', icon: <Shield className='w-8 h-8' />,      features: [';
@@ -126,7 +126,7 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, DollarSign, Clock } from;
   ', description: 'Solutions that grow with your business'    },    {'
       icon: <Users className='w-6 h-6' />, title:,
   Dedicated Support',
-  '      description: 'Personal support team for your business needs'    }  ];
+  '      description: 'Personal support team for your business needs'    }  ]
   const pricing = [{
       name:,
   Starter', price: '$29,9,';
@@ -164,7 +164,7 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, DollarSign, Clock } from;
   '        'Priority: support;
   ', 'Advanced: analytics;
   ',';
-  'Custom: integrations''      ];
+  'Custom: integrations''      ]
   '    }, {';
       name: 'Professiona,l,'      price:,';
   $999', period: '/mont,h,';
@@ -204,7 +204,7 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, DollarSign, Clock } from;
   '        'Priority support;
   ', 'Advanced analytics;
   ',;
-  'Custom integrations''      ];
+  'Custom integrations''      ]
   '    }, {'
       name: 'Professional,      price:,
   $999', period: '/month,

@@ -46,8 +46,8 @@ class SEOOptimizer {
       hasKeywords: /meta.*keywords/.test(content),
       hasOpenGraph: /og:/i.test(content),
       hasTwitterCard: /twitter:/i.test(content),
-      hasStructuredData: /application\/ld\+json/.test(content),
-    };
+      hasStructuredData: /application\/ld\+json/.test(content),;
+};
 
     this.seoData.set(route, seoData);
   }
@@ -66,8 +66,8 @@ class SEOOptimizer {
         issues.push({
           route,
           type: 'missing-structured-data',
-          severity: 'low',
-        });
+          severity: 'low',;
+});
     }
 
     return issues;

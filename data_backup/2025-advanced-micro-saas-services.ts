@@ -46,7 +46,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com';
 };
 
 export const advancedMicroSaasServices2025: AdvancedMicroSaasService[] = [
@@ -93,8 +93,8 @@ export const advancedMicroSaasServices2025: AdvancedMicroSaasService[] = [
     launchDate: '2025-01-15',
     customers: 234,
     rating: 4.8,
-    reviews: 178
-  }
+    reviews: 178;
+}
 ];
 export const advancedMicroSaasServices2025 = [{
     id:,

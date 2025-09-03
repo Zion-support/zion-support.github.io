@@ -17,8 +17,8 @@ export function ServicesComparisonTable() {}"});,"})
       <Check className="w-4 h-4 text-green-500" />""";,"});,"})
     ) : ("""";,"});,"})
       <X className="w-4 h-4 text-red-500" />;,"});,"})
-    );,"});,"})
-  };""";,"});,"})
+    );,"});,"});
+};""";,"});,"})
   return ("""";,"});,"})
     <div className="py-16 bg-slate-50 dark:bg-slate-900">"""";,"});,"})
       <div className="container mx-auto px-4">"""";,"});,"})
@@ -67,8 +67,8 @@ export function ServicesComparisonTable() {}"});,"})
                   </Button>;,"});,"})
                 </CardContent>;,"});,"})
               </Card>;,"});,"})
-            );,"});,"})
-          })}"});,"})
+            );,"});,"});
+})}"});,"})
         </div>;,"});,"})
 """;,"});,"})
         {/* Detailed Comparison Table */}"""";,"});,"})
@@ -303,7 +303,7 @@ export function ServicesComparisonTable() {}"});,"})
         </div>;,"});,"})
       </div>;,"});,"})
     </div>;,"});,"})
-  );,"});,"})
+  );,"});,"});
 }'""";,"});,"})
 '"'""";,"});,"})
 import { Check, X, Star, Clock, Phone, Mail } from 'lucide - react'';
@@ -345,7 +345,7 @@ import {}"
       <Check className='w-4 h-4 text-green-500' /" >''''"
     ) : (''''
       <X className='w-4 h-4 text-red-500' /" >"
-    );", "
+    );", ";
 }';'
       <X className='w-4 h-4 text-red-500' /" >
     );"}
@@ -633,10 +633,10 @@ import {}"
       </div>
     </div>
   );
-}'"""
+}'""";
 }'''';
 '''''';
-  )", "
-}'""",'"
+  )", ";
+}'""",'";
 }''''
 ''''''

@@ -34,14 +34,14 @@ class LintErrorAutoFixer {,"});,"})
 ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
     console.log(`Lint check interval: ${this.lintCheckInterval}ms`);,"});,"})
     console.log(`Auto-fix lint: ${this.autoFixLint}`);,"});,"})
-    console.log(`Max warnings: ${this.maxWarnings}`);,"});,"})
-  }"});,"})
+    console.log(`Max warnings: ${this.maxWarnings}`);,"});,"});
+}"});,"})
   async start() {,"});,"})
     // Initial lint check;,"});,"})
     await this.checkAndFixLintErrors();,"});,"})
     // Set up interval checking;,"});,"})
-    setInterval(async () => {,"});,"})
-    }, this.lintCheckInterval);,"});,"})
+    setInterval(async () => {,"});,"});
+}, this.lintCheckInterval);,"});,"})
   async checkAndFixLintErrors() {,"});,"})
     const report = {,"});,"})
       timestamp: new Date().toISOString(),;,"});,"})
@@ -50,15 +50,15 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
         totalWarnings: 0,;,"});,"})
         fixesApplied: 0,;,"});,"})
         fixesFailed: 0,;,"});,"})
-        fixesSkipped: 0,;,"});,"})
-      },;,"});,"})
+        fixesSkipped: 0,;,"});,"});
+},;,"});,"})
       errors: [],;,"});,"})
       warnings: [],;,"});,"})
       fixes: {,"});,"})
         applied: [],;,"});,"})
         failed: [],;,"});,"})
-        skipped: [],;,"});,"})
-    };,"});,"})
+        skipped: [],;,"});,"});
+};,"});,"})
     try {,"});,"})
       // Run ESLint;,"});,"})
       const lintResult = await this.runLint();,"});,"})
@@ -75,15 +75,15 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
       console.log(;,"});,"})
         `Errors: ${report.summary.totalErrors}, Warnings: ${report.summary.totalWarnings}`;,"});,"})
       );,"});,"})
-        `✅ Fixed: ${report.summary.fixesApplied}, ❌ Failed: ${report.summary.fixesFailed}, ⏭️ Skipped: ${report.summary.fixesSkipped}`;,"});,"})
-    } catch (error) {,"});,"})
+        `✅ Fixed: ${report.summary.fixesApplied}, ❌ Failed: ${report.summary.fixesFailed}, ⏭️ Skipped: ${report.summary.fixesSkipped}`;,"});,"});
+} catch (error) {,"});,"})
       console.error(;,"});,"})
   'Error during lint check:,;,"});,"})
   , error);,"});,"})
       report.error = error.message;,"});,"})
   async runLint() {,"});,"})
-      // Try to run ESLint with auto-fix first;,"});,"})
-      }).toString();,"});,"})
+      // Try to run ESLint with auto-fix first;,"});,"});
+}).toString();,"});,"})
       return {,"});,"})
         success: true,;,"});,"})
       const output = error.stdout;,"});,"})
@@ -104,8 +104,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
           column: parseInt(column),;,"});,"})
           severity: sev,;,"});,"})
           message: message.trim(),;,"});,"})
-          rule: rule.trim(),;,"});,"})
-        });,"});,"})
+          rule: rule.trim(),;,"});,"});
+});,"});,"})
     return issues;,"});,"})
   async autoFixLintIssues(report) {,"});,"})
       // First try ESLint;,"});,"})
@@ -122,11 +122,11 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
           if (fixed) {,"});,"})
             report.fixes.applied.push(issue);,"});,"})
             report.summary.fixesApplied++;,"});,"})
-              `✅ Fixed lint issue: ${issue.rule} in ${issue.file}:${issue.line}`;,"});,"})
-          } else {,"});,"})
+              `✅ Fixed lint issue: ${issue.rule} in ${issue.file}:${issue.line}`;,"});,"});
+} else {,"});,"})
             report.fixes.failed.push(issue);,"});,"})
-            report.summary.fixesFailed++;,"});,"})
-        } catch (fixError) {,"});,"})
+            report.summary.fixesFailed++;,"});,"});
+} catch (fixError) {,"});,"})
           report.fixes.failed.push({ ...issue, fixError: fixError.message });,"});,"})
             `❌ Failed to fix lint issue in ${issue.file}:`,;,"});,"})
             fixError.message;,"});,"})
@@ -186,8 +186,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
       lines[lineIndex] = `// ${line} // Console statement disabled`;,"});,"})
   fixQuotes(lines, lineIndex, message) {,"});,"})
       // Convert double quotes to single quotes;,"});,"})
-      lines[lineIndex] = line.replace(/"/g, "'");,"});,"})
-    } else if (message.includes(;,"});,"})
+      lines[lineIndex] = line.replace(/"/g, "'");,"});,"});
+} else if (message.includes(;,"});,"})
   'double quotes')) {,"});,"})
       // Convert single quotes to double quotes;,"});,"})
       lines[lineIndex] = line.replace(/;,"});,"})
@@ -371,8 +371,8 @@ import path from "pathpath';
       // Try to run ESLint with auto-fix first
       const output = execSync('npm run lint' {
         stdio: 'pipe',
-        timeout: 120000, // 2 minutes timeout
-      }).toString();
+        timeout: 120000, // 2 minutes timeout;
+}).toString();
 
       return {
         success: true,
@@ -494,8 +494,8 @@ import path from "pathpath';
           report.summary.fixesFailed++;
             `❌ Failed: to fix lint issue in ${issue.file}:`,
               `✅ Fixed lint issue: ${issue.rule } in ${issue.file}:${issue.line}`)} else {
-              `✅ Fixed lint issue: ${issue.rule} in ${issue.file}:${issue.line}`)} else {
-        } catch (fixError) {
+              `✅ Fixed lint issue: ${issue.rule} in ${issue.file}:${issue.line}`)} else {;
+} catch (fixError) {
           report.fixes.failed.push({ ...issue, fixError: fixError.message });
             `❌ Failed to fix lint issue in ${issue.file}:`,
             `❌ Failed to fix lint issue in ${issue.file}:`,;

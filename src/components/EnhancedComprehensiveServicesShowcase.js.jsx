@@ -17,14 +17,14 @@ const EnhancedComprehensiveServicesShowcase = () => {;,"});,"})
         ...advancedInnovativeServicesExpansionV3.map(service => ({;,"});,"})
             ...service,;,"});,"})
             type: 'Advanced AI & Innovation',;,"});,"})
-            displayPrice: service.price;,"});,"})
-        })),;,"});,"})
+            displayPrice: service.price;,"});,"});
+})),;,"});,"})
         ...specializedEnterpriseSolutions2025.map(service => ({;,"});,"})
             ...service,;,"});,"})
             type: 'Specialized Enterprise',;,"});,"})
-            displayPrice: service.price;,"});,"})
-        }));,"});,"})
-    ];,"});,"})
+            displayPrice: service.price;,"});,"});
+}));,"});,"})
+    ],"});,"})
     const filteredServices = allServices.filter(service => {;,"});,"})
         const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;,"});,"})
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;,"});,"})
@@ -34,7 +34,7 @@ const EnhancedComprehensiveServicesShowcase = () => {;,"});,"})
         { id: 'all', name: 'All Services', count: allServices.length },;,"});,"})
         { id: 'Advanced AI & Innovation', name: 'Advanced AI & Innovation', count: advancedInnovativeServicesExpansionV3.length },;,"});,"})
         { id: 'Specialized Enterprise', name: 'Specialized Enterprise', count: specializedEnterpriseSolutions2025.length }"});,"})
-    ];,"});,"})
+    ],"});,"})
     const handleServiceClick = (service) => {;,"});,"})
         setSelectedService(service)};,"});,"})
     const closeModal = () => {;,"});,"})
@@ -116,8 +116,8 @@ const EnhancedComprehensiveServicesShowcase = () => {;,"});,"})
 '''`;,"});,"})
                   activeCategory === category.id'''`'`;,"});,"})
                     ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white'''`'`'`;,"});,"})
-                    : 'bg-white/10 backdrop-blur-lg border border-white/20 text-gray-300 hover:bg-white/20'````;,"});,"})
-                }`}"});,"})
+                    : 'bg-white/10 backdrop-blur-lg border border-white/20 text-gray-300 hover:bg-white/20'````;,"});,"});
+}`}"});,"})
               >;,"});,"})
                 {category.name} ({category.count});,"});,"})
               </button>;,"});,"})
@@ -570,7 +570,7 @@ const EnhancedComprehensiveServicesShowcase = () => {""
 '''`"`'"
                   activeCategory === category.id'''`'`"`"
                     ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white'''`'`'`"`"
-                    : 'bg-white/10 backdrop-blur-lg border border-white/20 text-gray-300 hover:bg-white/20'````, `
+                    : 'bg-white/10 backdrop-blur-lg border border-white/20 text-gray-300 hover:bg-white/20'````, `;
 }`}
               >
                 {category.name} ({category.count})

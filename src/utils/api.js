@@ -46,6 +46,6 @@ export const api = {async get(url) {
     return response.json()}
 }`
 "``
-';'
+';';
 }"`"
 "`"`

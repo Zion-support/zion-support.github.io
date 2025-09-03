@@ -7,8 +7,8 @@ const ContactFormEnhanced: React.FC = () => {
     name: '',
     email: '',
     subject: '',
-    message: ''
-  });
+    message: '';
+});
   
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
@@ -17,8 +17,8 @@ const ContactFormEnhanced: React.FC = () => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
-    }));
+      [name]: value;
+}));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {

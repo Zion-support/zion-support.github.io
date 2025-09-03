@@ -418,5 +418,5 @@ export default function AIContentTools() {
 				</div>
 			</section>
 		</PageTransition>
-	)
+	);
 }

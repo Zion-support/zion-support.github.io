@@ -59,8 +59,8 @@ const { execSync } = require('child_process');const fs = require('fs');const pat
 ;
       this.log('Common syntax errors fixed', 'success');
       this.fixes.push('syntax_errors');
-    } catch (error) { 
-    } catch (error) {;
+    } catch (error) { ;
+} catch (error) {;
       this.log('Syntax error fixing failed', 'error');
      }
   }
@@ -70,7 +70,7 @@ const { execSync } = require('child_process');const fs = require('fs');const pat
       'pages',components',;
       'utils',hooks',;
       'types',;
-    ];
+    ]
     const extensions = ['.js', '.jsx', '.ts', '.tsx'];
     const files = [];
 ;
@@ -88,7 +88,7 @@ const { execSync } = require('child_process');const fs = require('fs');const pat
 ;
   findSourceFiles() {;
     const sourceDirs = [;
-      'src',';      'pages',';      'components',';      'utils',';      'hooks',';      'types',';    ];    const extensions = ['.js', '.jsx', '.ts', '.tsx'];    const files = [];;
+      'src',';      'pages',';      'components',';      'utils',';      'hooks',';      'types',';    ]    const extensions = ['.js', '.jsx', '.ts', '.tsx'];    const files = [];;
     for (const dir of sourceDirs) {;
       if (fs.existsSync(dir)) {;
         this.findFilesRecursively(dir, extensions, files);}
@@ -383,8 +383,8 @@ const { execSync } = require('child_process');const fs = require('fs');const pat
       execSync('npm run format', { stdio: 'pipe' });
       this.log('Prettier formatting completed', 'success');
       this.fixes.push('prettier_formatting');
-    } catch (error) { 
-    } catch (error) {;
+    } catch (error) { ;
+} catch (error) {;
       this.log('Prettier formatting failed', 'warn');
      }
   }
@@ -395,8 +395,8 @@ const { execSync } = require('child_process');const fs = require('fs');const pat
       execSync('npm run lint -- --fix', { stdio: 'pipe' });
       this.log('ESLint auto-fix completed', 'success');
       this.fixes.push('eslint_auto_fix');
-    } catch (error) { 
-    } catch (error) {;
+    } catch (error) { ;
+} catch (error) {;
       this.log('ESLint auto-fix failed', 'warn');
      }
   }

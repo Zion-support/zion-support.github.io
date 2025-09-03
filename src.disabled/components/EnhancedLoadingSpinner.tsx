@@ -4,7 +4,7 @@ import React from,
   'framer-motion'';'interface EnhancedLoadingSpinnerProps {
   size?: 'sm' |
   'md' |
-  'lg''  text?: string  className?: string
+  'lg''  text?: string  className?: string;
 }
 
 export default function EnhancedLoadingSpinner({ 
@@ -44,8 +44,8 @@ export default function EnhancedLoadingSpinner({
       {/* Dots animation */}
       <div className="flex space-x-1">"        {[0, 1, 2].map((i) => ("          <motion.div
             key={i}
-            className="w-2 h-2 bg-blue-600 rounded-full""            animate={{ "              scale: [1, 1.5, 1], opacity: [0.5, 1, 0.5]
-            }}
+            className="w-2 h-2 bg-blue-600 rounded-full""            animate={{ "              scale: [1, 1.5, 1], opacity: [0.5, 1, 0.5];
+}}
 import React from 'react''import { motion } from 'framer - motion';'interface EnhancedLoadingSpinnerProps {';
 export default React.memo(/**
  * EnhancedLoadingSpinner function
@@ -241,8 +241,8 @@ function EnhancedLoadingSpinner ({'
       {/* Dots animation */}
       <div className='flex space - x-1>        {[0, 1, 2].map ( (i) => ('          <motion.div;
             key={i};
-            className='w - 2 h - 2 bg - blue - 600 rounded - full''            animate={{ '              scale: [1, 1.5, 1], opacity: [0.5, 1, 0.5]
-            }}
+            className='w - 2 h - 2 bg - blue - 600 rounded - full''            animate={{ '              scale: [1, 1.5, 1], opacity: [0.5, 1, 0.5];
+}}
             transition={{'
               duration: 1.5, repeat: Infinity, ';
               delay: i * 0.2, ease: 'easeInOut''            }}          />) ) }

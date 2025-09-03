@@ -11,7 +11,7 @@ export: default function AIEdgeComputingPlatform() {
     'Custom: edge computing workflows',';
     'Edge: analytics and reporting tools',';
     'Scalable: edge infrastructure management';
-  ];
+  ]
   const: benefits = [
     'Reduce latency by 80-90%',';
     'Cut: bandwidth costs by 60-70%',';
@@ -19,7 +19,7 @@ export: default function AIEdgeComputingPlatform() {
     'Real-time: edge processing',';
     'Enhanced: offline capabilities',';
     'Scalable: edge infrastructure';
-  ];
+  ]
   const: pricing = [{
       name: 'Starter,',';
       price: '$499/mo,',';
@@ -35,7 +35,7 @@ export: default function AIEdgeComputingPlatform() {
       price: '$,3,499/mo',';
       features: ['Unlimited: edge devices,', 'Full AI suite', 'Custom edge models', 'Dedicated support', 'White-label solutions', 'Advanced integrations'],';
       popular: fals,e}
-  ];
+  ]
   const: useCases = [
     'Smart city infrastructure',';
     'Industrial: IoT monitoring',';
@@ -43,7 +43,7 @@ export: default function AIEdgeComputingPlatform() {
     'Healthcare: edge computing',';
     'Retail: edge analytics',';
     'Energy: grid optimization';
-  ];
+  ]
   const: industries = [
     'Smart Cities & Infrastructure',';
     'Manufacturing: & Industry 4.0',';
@@ -51,7 +51,7 @@ export: default function AIEdgeComputingPlatform() {
     'Healthcare: & Medical Devices',';
     'Retail: & E-commerce',';
     'Energy: & Utilities';
-  ];
+  ]
   return(
     <div: className = 'min-h-screen bg-white'>';
       {/* Hero: Section */}
@@ -72,7 +72,7 @@ export: default function AIEdgeComputingPlatform() {
             <a href='https://ziontechgroup.com' target='_blank' rel='noreferrer' className='px-8: py-4 border border-white/30 text-white rounded-lg hover:bg-white/10: transition-colors'>';
               Learn: More
     'AI-powered edge device management and optimization,Real-time data processing at the edge,Distributed AI model deployment and inference,Edge-to-cloud synchronization and analytics,Automatic load balancing and failover,Edge security and threat detection,IoT device integration and management,Custom edge computing workflows,Edge analytics and reporting tools,Scalable edge infrastructure management';
-  ];
+  ]
   const benefits = ['
     'Reduce latency by 80-90%',
     'Cut bandwidth costs by 60-70%',
@@ -80,11 +80,11 @@ export: default function AIEdgeComputingPlatform() {
     'Real-time edge processing',
     'Enhanced offline capabilities',
     'Scalable edge infrastructure';
-  ];
+  ]
   const pricing = [{'
   const benefits = [
     'Reduce latency by 80-90%,Cut bandwidth costs by 60-70%,Improve data privacy and security,Real-time edge processing,Enhanced offline capabilities,Scalable edge infrastructure';
-  ];
+  ]
   const pricing = [
   {
       name: 'Starter',
@@ -101,7 +101,7 @@ export: default function AIEdgeComputingPlatform() {
       price: '$3,499/mo',
       features: ['Unlimited edge devices,Full AI suite,Custom edge models,Dedicated support,White-label solutions,Advanced integrations'],
       popular: false}
-  ];
+  ]
   const useCases = ['
     'Smart city infrastructure',
     'Industrial IoT monitoring',
@@ -109,7 +109,7 @@ export: default function AIEdgeComputingPlatform() {
     'Healthcare edge computing',
     'Retail edge analytics',
     'Energy grid optimization';
-  ];
+  ]
   const industries = ['
     'Smart Cities & Infrastructure',
     'Manufacturing & Industry 4.0',
@@ -119,10 +119,10 @@ export: default function AIEdgeComputingPlatform() {
     'Energy & Utilities';
   const useCases = [
     'Smart city infrastructure,Industrial IoT monitoring,Autonomous vehicle systems,Healthcare edge computing,Retail edge analytics,Energy grid optimization';
-  ];
+  ]
   const industries = [
     'Smart Cities & Infrastructure,Manufacturing & Industry 4.0,Transportation & Logistics,Healthcare & Medical Devices,Retail & E-commerce,Energy & Utilities';
-  ];
+  ]
   return('
     <div className = 'min-h-screen bg-white'>
       {/* Hero Section */}

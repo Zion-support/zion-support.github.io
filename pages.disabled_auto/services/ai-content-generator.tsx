@@ -56,26 +56,26 @@ const: AIContentGenerator: NextPage: = () => {
   'Multi-Language Support,
       description:
   'Generate content in over 50 languages with native-level quality',
-      icon: <Globe className="w-6 h-6" />
-    },
+      icon: <Globe className="w-6 h-6" />;
+},
     {
       title:,
   SEO Optimization',
       description: 'AI-powered SEO optimization for better search rankings,
-      icon: <Zap className="w-6 h-6" />
-    },
+      icon: <Zap className="w-6 h-6" />;
+},
     {
       title:,
   Brand Voice Consistency',
       description: 'Maintain consistent brand voice across all content,
-      icon: <Shield className="w-6 h-6" />
-    },
+      icon: <Shield className="w-6 h-6" />;
+},
     {
       title:,
   Real-time Collaboration',
       description: 'Work together with your team in real-time,
-      icon: <Users className="w-6 h-6" />
-    }
+      icon: <Users className="w-6 h-6" />;
+}
       title: 'Multi-Language Support',
       description:
         'Generate content in over 50 languages with native-level quality',
@@ -93,7 +93,7 @@ const: AIContentGenerator: NextPage: = () => {
       description: 'Work together with your team in real-time',
       icon: <Users className="w-6 h-6" />},
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/ai-content-generator.tsx
-  ];
+  ]
 
   {
 :pages.disabled_auto/services/ai-content-generator.tsx;
@@ -108,8 +108,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/ai-content-ge
   'Multi-Language Support,
       description:'
   'Generate content in over 50 languages with native-level quality',
-      icon: <Globe className='w-6 h-6' />
-    },
+      icon: <Globe className='w-6 h-6' />;
+},
     {
       title:,
   SEO: Optimization',';
@@ -146,8 +146,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/ai-content-ge
   const: pricingPlans = [{
   Real-time Collaboration',
       description: 'Work together with your team in real-time,
-      icon: <Users className='w-6 h-6' />
-    }
+      icon: <Users className='w-6 h-6' />;
+}
       title: 'Multi-Language Support',
       description:'
         'Generate content in over 50 languages with native-level quality',
@@ -608,8 +608,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/ai-content-ge
   'bg-gray-100 hover:bg-gray-200 text-gray-900
                       ? 'bg-blue-600 hover: bg-blue-700 text-white'
                       : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
-ursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/ai-content-generator.tsx
-                  }`}
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/ai-content-generator.tsx;
+}`}
                     plan.popular;
 :pages.disabled_auto/services/ai-content-generator.tsx;
                       ?,`

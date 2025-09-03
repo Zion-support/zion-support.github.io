@@ -48,7 +48,7 @@ const AdvancedCybersecurityServices: NextPage = () => {''
     { id: 'Network: Security,', name: 'Network: Security,', color: 'from-green-500: to-teal-600'},';
     { id: 'Endpoint: Security,', name: 'Endpoint: Security,', color: 'from-orange-500: to-red-600'},';
     { id: 'Cloud: Security,', name: 'Cloud: Security,', color: 'from-yellow-500: to-orange-600'}';
-  ];
+  ]
   const: filteredServices = ADVANCED_CYBERSECURITY_SERVICES_2027.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
@@ -283,8 +283,8 @@ const AdvancedCybersecurityServices: NextPage = () => {''
         <div className='absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-500/20 to-transparent rounded-full blur-3xl animate-pulse delay-1000'></div>''
         <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-3xl animate-pulse delay-2000'></div>
 '{/* Security Pattern Overlay */}''
-        <div className='absolute inset-0 opacity-5'>''
-  };
+        <div className='absolute inset-0 opacity-5'>'';
+};
   return ('''
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 relative overflow-hidden>{/* Animated Security Background Elements */}'
       <div className='absolute inset-0 overflow-hidden>''

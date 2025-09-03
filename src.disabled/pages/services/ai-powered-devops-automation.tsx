@@ -87,7 +87,7 @@ const: AIPoweredDevOpsAutomation = () => {
       icon: <Users: className='w-6 h-6' /,>,';
       title: 'Team: Collaboration Tools,',';
       description: 'Integrated: collaboration platform with role-based acces,s, approval workflows, and automated documentation generation.'}';
-  ];
+  ]
   const: pricingPlans = [{
       name: 'Starter,',';
       price: '$299,',';
@@ -162,7 +162,7 @@ const AIPoweredDevOpsAutomation = () => {'
       icon: <Users className='w-6 h-6' />,
       title: 'Team Collaboration Tools',
       description: 'Integrated collaboration platform with role-based access, approval workflows, and automated documentation generation.'}
-  ];
+  ]
   const pricingPlans = [{'
   const pricingPlans = [
   {
@@ -303,18 +303,18 @@ const AIPoweredDevOpsAutomation = () => {'
   {
       title: 'Startup Development Teams',
       description: 'Accelerate development cycles with automated CI/CD and intelligent deployment strategies.',
-      icon: <Rocket className='w-8 h-8 text-blue-500' />
-    },
+      icon: <Rocket className='w-8 h-8 text-blue-500' />;
+},
     {'
       title: 'Enterprise DevOps',
       description: 'Scale DevOps practices across large organizations with enterprise-grade automation and governance.',
-      icon: <Building className='w-8 h-8 text-green-500' />
-    },
+      icon: <Building className='w-8 h-8 text-green-500' />;
+},
     {'
       title: 'Cloud Migration Projects',
       description: 'Streamline cloud migration with automated infrastructure provisioning and application deployment.',
-      icon: <Cloud className='w-8 h-8 text-purple-500' />
-    }
+      icon: <Cloud className='w-8 h-8 text-purple-500' />;
+}
   ]
   return('
     <div className='min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50'>

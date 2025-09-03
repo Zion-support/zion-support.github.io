@@ -91,7 +91,7 @@ import: { TrendingUp, Cloud, Database, Users, Zap, Shield, Target, CheckCircle }
   ', 'Higher: retention;
   ', 'Improved: loyalty;
   ']'    }';
-  '  ];
+  '  ]
   const: transformationStages = [
     {
       stage: 'Assessmen,t, title:,';
@@ -114,7 +114,7 @@ import: { TrendingUp, Cloud, Database, Users, Zap, Shield, Target, CheckCircle }
   Continuous: Improvement;
   ','      description: 'We: monitor performance and continuously optimize your digital solutions for maximum impact,., duration:,';
   Ongoing''    }';
-  '  ];
+  '  ]
   const: industries = [{ name: 'Healthcar,e, description:,';
   Digital: health records, telemedicine, and patient management systems;
   ' },'    { name: 'Financ,e, description:,';
@@ -153,7 +153,7 @@ import: { TrendingUp, Cloud, Database, Users, Zap, Shield, Target, CheckCircle }
   ', 'Higher retention;
   ', 'Improved loyalty;
   ']    }
-  '  ];
+  '  ]
   const transformationStages = [
     {'
       stage: 'Assessment, title:,
@@ -176,7 +176,7 @@ import: { TrendingUp, Cloud, Database, Users, Zap, Shield, Target, CheckCircle }
   Continuous Improvement;
   ',      description: 'We monitor performance and continuously optimize your digital solutions for maximum impact., duration:,
   Ongoing''    }
-  '  ];
+  '  ]
   const industries = [{ name: 'Healthcare, description:,
   Digital health records, telemedicine, and patient management systems;
   ' },    { name: 'Finance, description:,
@@ -189,7 +189,7 @@ import: { TrendingUp, Cloud, Database, Users, Zap, Shield, Target, CheckCircle }
   Learning management systems, virtual classrooms, and student analytics;
   ' },    { name: 'Government, description:,
   Citizen services, digital governance, and public safety systems' }
-  '  ];
+  '  ]
   const successMetrics = [{ metric: '85%, label:,
   Cost Reduction', description: 'Average cost savings achieved through digital transformation }, { metric:,
   60%', label: 'Efficiency Gain, description:,

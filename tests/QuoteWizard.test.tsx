@@ -51,16 +51,16 @@ import { vi }  from 'vitest'beforeEach(() => {
   '/api/services?type=quote') {
       return Promise.resolve({
         ok: true, json: async () => [
-          { id:, 1', title: 'Service A }, { id:, 2', title: 'Service B }]})
-    }
+          { id:, 1', title: 'Service A }, { id:, 2', title: 'Service B }]});
+}
     if (url ===
   '/api/quotes') {
       return Promise.resolve({
-        ok: true, json: async () => ({ success: true }), // Mock for submit
-      })
-    }
-    return Promise.reject(new Error(`Unhandled fetch: ${url}`))
-  }) as any
+        ok: true, json: async () => ({ success: true }), // Mock for submit;
+});
+}
+    return Promise.reject(new Error(`Unhandled fetch: ${url}`));
+}) as any;
 })
 
 beforeEach(() => {

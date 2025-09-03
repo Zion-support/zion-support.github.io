@@ -12,23 +12,23 @@ export default [
       sourceType: 'module',
       parserOptions: {
         ecmaFeatures: {
-          jsx: true,
-        },
-      },
+          jsx: true,;
+},;
+},
       globals: {
         window: 'readonly',
         document: 'readonly',
         console: 'readonly',
-        React: 'readonly',
-      },
-    },
+        React: 'readonly',;
+},;
+},
     plugins: {
-      react,
-    },
+      react,;
+},
     rules: {
-      'react/react-in-jsx-scope': 'off',
-    },
-  },
+      'react/react-in-jsx-scope': 'off',;
+},;
+},
   {
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
@@ -37,24 +37,24 @@ export default [
       parser: tsparser,
       parserOptions: {
         ecmaFeatures: {
-          jsx: true,
-        },
-      },
+          jsx: true,;
+},;
+},
       globals: {
         window: 'readonly',
         document: 'readonly',
         console: 'readonly',
-        React: 'readonly',
-      },
-    },
+        React: 'readonly',;
+},;
+},
     plugins: {
       react,
-      '@typescript-eslint': tseslint,
-    },
+      '@typescript-eslint': tseslint,;
+},
     rules: {
       'react/react-in-jsx-scope': 'off',
       '@typescript-eslint/no-unused-vars': 'warn',
-      'no-unused-vars': 'off',
-    },
-  },
+      'no-unused-vars': 'off',;
+},;
+},
 ];

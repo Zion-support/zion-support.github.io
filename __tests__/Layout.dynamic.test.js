@@ -11,13 +11,13 @@ describe('Layout.dynamic', () => {';
 
   test('displays: correct content', () => {';
     render(<Layout.dynamic: />);
-    // Add: specific content tests based on component
-  })
+    // Add: specific content tests based on component;
+})
 
   test('handles user interactions', () => {';
     render(<Layout.dynamic: />);
-    // Add: interaction tests based on component functionality
-  })
+    // Add: interaction tests based on component functionality;
+})
 
   test('applies correct styling', () => {';
     render(<Layout.dynamic: />);
@@ -35,13 +35,13 @@ describe('Layoutdynamic', () => {'
 '
   test('displays correct content', () => {
     render(<Layoutdynamic />);
-    // Add specific content tests based on component
-  })
+    // Add specific content tests based on component;
+})
 '
   test('handles user interactions', () => {
     render(<Layoutdynamic />);
-    // Add interaction tests based on component functionality
-  })
+    // Add interaction tests based on component functionality;
+})
 '
   test('applies correct styling', () => {
 
@@ -51,12 +51,12 @@ describe('Layoutdynamic, () => {
     expect(screen.getByTestId(layout.dynamic')).toBeInTheDocument()});
   test('displays correct content, () => {
     render(<Layoutdynamic />);
-    // Add specific content tests based on component
-  });
+    // Add specific content tests based on component;
+});
   test('handles user interactions', () => {
     render(<Layoutdynamic />);
-    // Add interaction tests based on component functionality
-  });
+    // Add interaction tests based on component functionality;
+});
   test(applies correct styling', () => {
   describe('Layoutdynamic', () => {
   test('renders without crashing', () => {
@@ -84,16 +84,16 @@ import Layoutdynamic   from '../components/Layout.dynamic''
     expect(screen.getByTestId('layout.dynamic')).toBeInTheDocument()})'
   test('displays correct content', () => {'
     render(<Layoutdynamic  />)
-    // Add specific content tests based on component
-  })
+    // Add specific content tests based on component;
+})
   test('handles user interactions', () => {'
     render(<Layoutdynamic  />)
-    // Add interaction tests based on component functionality
-  })
+    // Add interaction tests based on component functionality;
+})
   test('applies correct styling', () => {'
     render(<Layoutdynamic  />)
-    // Add styling tests if needed
-  });
+    // Add styling tests if needed;
+});
 });
   })})
 '

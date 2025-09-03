@@ -243,8 +243,8 @@ class LinkCheckerAutomation {;
     this.log(`Checking external links...');
     try {
       const distPath = path.join(this.projectRoot, `dist`);
-
-    } catch (error) {this.log(`Internal link check failed: ${error.message}`, 'ERROR');
+;
+} catch (error) {this.log(`Internal link check failed: ${error.message}`, 'ERROR');
       return {;
         success: false,;
         error: error.message,;

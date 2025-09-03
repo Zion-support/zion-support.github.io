@@ -21,7 +21,7 @@ import {Home,
   Users, 
   Globe,
   ArrowRight,
-  ExternalLink'
+  ExternalLink';
 } from 'lucide-react';
 
 export default function Sitemap() {
@@ -37,7 +37,7 @@ export default function Sitemap() {
         { name: 'Careers', path: '/careers', description: 'Job opportunities' },
         { name: 'Partners', path: '/partners', description: 'Partnership programs' }
       ]
-    },
+},
     {'
       title: 'Services',
       icon: Briefcase,
@@ -50,7 +50,7 @@ export default function Sitemap() {
         { name: 'Digital Transformation', path: '/services/transformation', description: 'Business transformation consulting' },
         { name: 'Consulting', path: '/services/consulting', description: 'Strategic technology consulting' }
       ]
-    },
+},
     {'
       title: 'Solutions',
       icon: Target,
@@ -63,7 +63,7 @@ export default function Sitemap() {
         { name: 'Retail', path: '/solutions/retail', description: 'E-commerce and retail solutions' },
         { name: 'Education', path: '/solutions/education', description: 'EdTech solutions' }
       ]
-    },
+},
     {'
       title: 'Resources',
       icon: FileText,
@@ -76,7 +76,7 @@ export default function Sitemap() {
         { name: 'Webinars', path: '/webinars', description: 'Educational webinars' },
         { name: 'Documentation', path: '/docs', description: 'Technical documentation' }
       ]
-    },
+},
     {'
       title: 'Events & News',
       icon: Video,
@@ -87,7 +87,7 @@ export default function Sitemap() {
         { name: 'Press Releases', path: '/press', description: 'Official press releases' },
         { name: 'Media Kit', path: '/media-kit', description: 'Brand assets and resources' }
       ]
-    },
+},
     {'
       title: 'Support & Help',
       icon: HelpCircle,
@@ -99,7 +99,7 @@ export default function Sitemap() {
         { name: 'Contact Support', path: '/contact', description: 'Get help from our team' },
         { name: 'Status Page', path: '/status', description: 'System status and uptime' }
       ]
-    },
+},
     {'
       title: 'Legal & Policies',
       icon: Users,
@@ -111,7 +111,7 @@ export default function Sitemap() {
         { name: 'Accessibility', path: '/accessibility', description: 'Accessibility statement' },
         { name: 'Security', path: '/security', description: 'Security practices and policies' }
       ]
-    },
+},
     {'
       title: 'Developer Resources',
       icon: Globe,
@@ -137,7 +137,7 @@ export default function Sitemap()   {const sitemapStructure = [{
         {name: 'Careers', path: '/careers', description: 'Job opportunities' },
         {name: 'Partners', path: '/partners', description: 'Partnership programs' }
       ]
-    },
+},
     {title: 'Services',
       icon: Briefcase,
       pages: [{ name: 'AI Services', path: '/services/ai', description: 'Artificial intelligence solutions' },
@@ -147,7 +147,7 @@ export default function Sitemap()   {const sitemapStructure = [{
         {name: 'Digital Transformation', path: '/services/transformation', description: 'Business transformation consulting' },
         {name: 'Consulting', path: '/services/consulting', description: 'Strategic technology consulting' }
       ]
-    },
+},
     {title: 'Solutions',
       icon: Target,
       pages: [{ name: 'Industry Solutions', path: '/solutions/industry', description: 'Sector-specific solutions' },
@@ -157,7 +157,7 @@ export default function Sitemap()   {const sitemapStructure = [{
         {name: 'Retail', path: '/solutions/retail', description: 'E-commerce and retail solutions' },
         {name: 'Education', path: '/solutions/education', description: 'EdTech solutions' }
       ]
-    },
+},
     {title: 'Resources',
       icon: FileText,
       pages: [{ name: 'Case Studies', path: '/case-studies', description: 'Success stories and examples' },
@@ -167,7 +167,7 @@ export default function Sitemap()   {const sitemapStructure = [{
         {name: 'Webinars', path: '/webinars', description: 'Educational webinars' },
         {name: 'Documentation', path: '/docs', description: 'Technical documentation' }
       ]
-    },
+},
     {title: 'Events & News',
       icon: Video,
       pages: [{ name: 'Events', path: '/events', description: 'Upcoming and past events' },
@@ -175,7 +175,7 @@ export default function Sitemap()   {const sitemapStructure = [{
         {name: 'Press Releases', path: '/press', description: 'Official press releases' },
         {name: 'Media Kit', path: '/media-kit', description: 'Brand assets and resources' }
       ]
-    },
+},
     {title: 'Support & Help',
       icon: HelpCircle,
       pages: [{ name: 'Help Center', path: '/support', description: 'Self-service support' },
@@ -184,7 +184,7 @@ export default function Sitemap()   {const sitemapStructure = [{
         {name: 'Contact Support', path: '/contact', description: 'Get help from our team' },
         {name: 'Status Page', path: '/status', description: 'System status and uptime' }
       ]
-    },
+},
     {title: 'Legal & Policies',
       icon: Users,
       pages: [{ name: 'Privacy Policy', path: '/privacy-policy', description: 'Data privacy information' },
@@ -193,7 +193,7 @@ export default function Sitemap()   {const sitemapStructure = [{
         {name: 'Accessibility', path: '/accessibility', description: 'Accessibility statement' },
         {name: 'Security', path: '/security', description: 'Security practices and policies' }
       ]
-    },
+},
     {title: 'Developer Resources',
       icon: Globe,
       pages: [{ name: 'API Documentation', path: '/api', description: 'Developer API reference' },
@@ -202,8 +202,8 @@ export default function Sitemap()   {const sitemapStructure = [{
         {name: 'Developer Blog', path: '/developers/blog', description: 'Technical articles' },
         {name: 'Community Forum', path: '/community', description: 'Developer community' }
       ]
-    }
-  ];
+}
+  ]
 
   const externalLinks = ['
     { name: 'LinkedIn', url: 'http,
@@ -216,7 +216,7 @@ export default function Sitemap()   {const sitemapStructure = [{
     s://youtube.com/@ziontechgroup', description: 'Video content and tutorials' },
     { name: 'Discord', url: 'http,
     s://discord.gg/ziontechgroup', description: 'Join our community' }
-  ];
+  ]
 
   return ('
     <div className="min-h-screen bg-zion-blue-dark">
@@ -248,7 +248,7 @@ import {
   FileText, Video, 
   Mail, HelpCircle, 
   Users, Globe,
-  ArrowRight, ExternalLink;", "
+  ArrowRight, ExternalLink;", ";
 } from 'lucide-react';
 
 export default function Sitemap() {
@@ -335,7 +335,7 @@ export default function Sitemap() {
         { name: 'Developer Blog', path: '/developers/blog', description: 'Technical articles' },""
         { name: 'Community Forum', path: '/community', description: 'Developer community' }
       ]}
-  ];
+  ]
 
   const externalLinks = [""
     { name: 'LinkedIn', url: 'https://linkedin.com/company/ziontechgroup', description: 'Follow us on LinkedIn' }, ""
@@ -343,7 +343,7 @@ export default function Sitemap() {
     { name: 'GitHub', url: 'https://github.com/ziontechgroup', description: 'Open source projects' }, ""
     { name: 'YouTube', url: 'https://youtube.com/@ziontechgroup', description: 'Video content and tutorials' },""
     { name: 'Discord', url: 'https://discord.gg/ziontechgroup', description: 'Join our community' }
-  ];
+  ]
 
   return (""
     <div className="min-h-screen bg-zion-blue-dark">
@@ -586,7 +586,7 @@ export default function Sitemap() {
 }"
   );}""
 
-""
+"";
 }"
  export default Sitemap const Sitemap = () => { const sitemapSections = [
   { title: 'Main Pages', links: [ { name: 'Home', path: '/', description: 'Welcome to Zion Tech Group' }, { name: 'About', path: '/about', description: 'Learn about our company'}, { name: 'Contact', path: '/contact', description: 'Get in touch with us'}, { name: 'Partners', path: '/partners', description: 'Our business partners'}, { name: 'Careers', path: '/careers', description: 'Job opportunities' }]}, { title: 'Services', links: [ { name: 'All Services', path: '/services', description: 'Complete service catalog'}, { name: 'AI Solutions', path: '/services / ai', description: 'Artificial intelligence services'}, { name: 'Cybersecurity', path: '/services / cybersecurity', description: 'Security and compliance'}, { name: 'Cloud & DevOps', path: '/services / cloud - devops', description: 'Cloud infrastructure'}, { name: 'Digital Transformation', path: '/services / digital - transformation', description: 'Business transformation'}]}, { title: 'Marketplace', links: [ { name: 'Marketplace', path: '/marketplace', description: 'Browse our marketplace'}, { name: 'Products', path: '/marketplace / products', description: 'Available products'}, { name: 'Services', path: '/marketplace / services', description: 'Marketplace services'}, { name: 'Talent', path: '/marketplace / talent', description: 'Find talent'}]}, { title: 'Support & Resources', links: [ { name: 'Blog', path: '/blog', description: 'Latest insights and news'}, { name: 'FAQ', path: '/faq', description: 'Frequently asked questions'}, { name: 'Sitemap', path: '/sitemap', description: 'Complete site navigation'}, { name: 'Help Center', path: '/help', description: 'Self - service support'}, { name: 'System Status', path: '/status', description: 'Service status and uptime'}, { name: 'Security', path: '/security', description: 'Security and compliance information'}]}, { title: 'Legal & Compliance', links: [ { name: 'Privacy Policy', path: '/privacy', description: 'Data protection and privacy'}, { name: 'Terms of Service', path: '/terms', description: 'Terms and conditions'}, { name: 'Cookie Policy', path: '/cookies', description: 'Cookie usage information'}, { name: 'Accessibility', path: '/accessibility', description: 'Accessibility information'}]}, { title: 'User Account', links: [ { name: 'Login', path: '/login', description: 'User authentication' }, { name: 'Sign Up', path: '/signup', description: 'Create new account' }, { name: 'Dashboard', path: '/dashboard', description: 'User dashboard'}, { name: 'Forgot Password', path: '/forgot - password', description: 'Password recovery'}]}] return (<div className='min - h-screen bg - gradient - to - br from - slate - 900 via - blue - 900 to - slate - 900 text - white pt - 24'> <div className='container mx - auto px - 4 py - 16'> {} <div className='text - center mb - 16'> <h1 className='text - 4xl md: text - 6xl font - bold mb - 6'> Site{'} <span className='text - transparent bg - clip - text bg - gradient - to - r from - blue - 400 to - cyan - 400'> {'} Map </span> </h1> <p className='text - xl text - gray - 300 max - w-3xl mx - auto'> Complete navigation guide to all pages and services on Zion Tech Group </p> </div> {} <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'> {sitemapSections.map ( (section, sectionIndex) => (<div key={sectionIndex} className='bg - white / 10 backdrop - blur - lg rounded - xl p - 6 border border - white / 20'" > <h2 className='text - xl font - bold text - white mb - 4 border - b border - zion - cyan / 30 pb - 2'> {section.title} </h2> <ul className='space - y-3'> {section.links.map ( (link, linkIndex) => (<li key={linkIndex}" > <Link to={link.path} className='block text - zion - slate - light hover: text - zion - cyan transition - colors duration - 300 group'" > <div className='font - medium text - white group - hover:text - zion - cyan transition - colors'> {link.name} </div> <div className='text - sm text - gray - 400 group - hover:text - zion - cyan / 70 transition - colors'> {link.description} </div> </Link> </li>) ) } </ul> </div>) ) } </div> {} <div className='mt - 16 text - center'> <h2 className='text - 2xl font - bold text - white mb - 8'> Quick Links </h2> <div className='flex flex - wrap justify - center gap - 4'> <Link to='/contact' className='px - 6 py - 3 bg - gradient - to - r from - zion - cyan to - zion - blue text - white rounded - lg font - medium hover: scale - 105 transition - transform'" > Get Started </Link> <Link to='/services' className='px - 6 py - 3 border - 2 border - zion - cyan text - zion - cyan rounded - lg font - medium hover:bg - zion - cyan hover:text - white transition - colors'" > View Services </Link> <Link to='/help' className='px - 6 py - 3 border - 2 border - zion - purple text - zion - purple rounded - lg font - medium hover:bg - zion - purple hover:text - white transition - colors'" > Get Help </Link> </div> </div> </div> </div>)  }';;''"

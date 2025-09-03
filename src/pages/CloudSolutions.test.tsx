@@ -41,6 +41,6 @@ describe('CloudSolutions', () => {"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
 "
     render(<CloudSolutions /" >)
-    // Add more specific tests here
+    // Add more specific tests here;
 });
 })

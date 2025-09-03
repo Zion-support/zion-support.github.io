@@ -51,7 +51,7 @@ const Footer: React.FC = () => {
       { name: 'Documentation', href: '/docs' }, 
       { name: 'Support', href: '/support' }
     ]
-  };
+};
 
   return (
     <footer className="bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 text-white">

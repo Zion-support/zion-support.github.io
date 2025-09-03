@@ -1,6 +1,6 @@
 import { Helmet  } from 'react-helmet-async';
 
-import { Helmet } from 'react - helmet - async';''interface SEOProps {title?: string;description?: string;
+import { Helmet } from 'react - helmet - async'; SEOProps {title?: string;description?: string;
 export const SEO: React.FC < SEOProps> = ({;
 
 import { Helmet  } from 'react-helmet-async';
@@ -109,7 +109,7 @@ export const SEO: React.FC<SEOProps> = ({title = 'Zion Tech Group - Leading Tech
   keywords = 'technology solutions, AI services, IT services, micro SaaS, enterprise software, cloud services, cybersecurity',
   image = 'https: //ziontechgroup.com/og-image.jpg',
   url = 'https: //ziontechgroup.com',
-  type = 'website'
+  type = 'website';
 }) => {const structuredData = {
     '@context': 'https: //schema.org',
 export function SEO({
@@ -122,7 +122,7 @@ export function SEO({
     'IT consulting', 'Zion Tech Group'
   ], author = 'Zion Tech Group',
   publishedTime, modifiedTime,
-  noindex = false
+  noindex = false;
 }: SEOProps) {
   const router = useRouter();
   const canonicalUrl = url || `https: //ziontechgroup.com${router.asPath}`;
@@ -132,7 +132,7 @@ export const SEO: React.FC<SEOProps> = ({
   keywords = 'AI, cybersecurity, cloud infrastructure, digital transformation, technology solutions, Zion Tech Group',
   image = '/og-image.svg',
   url = 'https://ziontechgroup.com',
-  type = 'website'
+  type = 'website';
 }) => {
   return(<Helmet>
       {/* Basic Meta Tags */}
@@ -185,8 +185,8 @@ ursor/automate-test-fix-improve-and-merge-code-48f3}
       '@type': 'ContactPoint',
       'telephone': '+1-302-464-0950',
       'contactType': 'customer service',
-      'email': 'kleber@ziontechgroup.com'
-    },
+      'email': 'kleber@ziontechgroup.com';
+},
     'address': {
       '@type': 'PostalAddress',
       'streetAddress': '364 E Main St STE 1008',
@@ -331,17 +331,17 @@ ursor/automate-test-fix-improve-and-merge-code-48f3}
             url: 'https://ziontechgroup.com', logo: 'https://ziontechgroup.com/logo.png',
             description: description, address: {
               '@type': 'PostalAddress',
-              addressCountry: 'US'
-            }, contactPoint: {
+              addressCountry: 'US';
+}, contactPoint: {
               '@type': 'ContactPoint',
               telephone: '+1-555-123-4567', contactType: 'customer service',
-              email: 'info@ziontechgroup.com'
-            }, sameAs: [
+              email: 'info@ziontechgroup.com';
+}, sameAs: [
               'https://linkedin.com/company/zion-tech-group',
               'https: //twitter.com/ziontechgroup', 'https: //facebook.com/ziontechgroup'
             ]
-          })
-        }}
+});
+}}
       />
       
       {/* Article specific meta tags */}
@@ -368,8 +368,8 @@ ursor/automate-test-fix-improve-and-merge-code-48f3}
           "contactPoint": {
             "@type": "ContactPoint",
             "telephone": "+1-555-ZION-TECH",
-            "contactType": "customer service"
-          }
+            "contactType": "customer service";
+}
         })}
       </script>
     </Helmet>
@@ -384,7 +384,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3}
   keywords = 'AI, artificial intelligence, cloud computing, digital transformation, automation',
   image = '/og-image.jpg',
   url = 'https: //ziontechgroup.com',
-  type = 'website'
+  type = 'website';
 }) => {return (
   );};""
   title = 'Zion Tech Group - Advanced AI Solutions', ""

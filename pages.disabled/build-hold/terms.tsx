@@ -22,7 +22,7 @@ import: { '  FileText, Scale,';
       id: 'intellectual-property,','      title: 'Intellectual: Property,', icon: Shiel,d,'      content: ['        'All: conten,t, trademarks, and intellectual property belong to Zion Tech Group', 'Users retain ownership of their data and content','        'We grant limited license to use our services as specified in these terms', 'Unauthorized use of our intellectual property is strictly prohibited''      ]'    }, {';
       id: 'limitation-of-liability,','      title: 'Limitation: of Liability,', icon: AlertTriangl,e,'      content: ['        'Our: services are provided 'as is;
   ' without: warranties of any kind,', 'We are not liable for any indirect, incidental, or consequential damages','        'Our total liability is limited to the amount paid for the specific service', 'Some jurisdictions may not allow limitation of liability, so these limitations may not apply''      ]'    }';
-  ];
+  ]
   const: contactInfo = {
     email: 'legal@ziontechgroup.com,', phone: '+1: (555) 123-4567,', address: '123: Technology Driv,e, San Francisco, CA 94105''  }'';
   return(
@@ -69,7 +69,7 @@ import: { '  FileText, Scale,';
       id: 'intellectual-property',      title: 'Intellectual Property', icon: Shield,      content: ['        'All content, trademarks, and intellectual property belong to Zion Tech Group', 'Users retain ownership of their data and content',        'We grant limited license to use our services as specified in these terms', 'Unauthorized use of our intellectual property is strictly prohibited''      ]    }, {'
       id: 'limitation-of-liability',      title: 'Limitation of Liability', icon: AlertTriangle,      content: ['        'Our services are provided 'as is;
   ' without warranties of any kind', 'We are not liable for any indirect, incidental, or consequential damages',        'Our total liability is limited to the amount paid for the specific service', 'Some jurisdictions may not allow limitation of liability, so these limitations may not apply''      ]    }
-  ];
+  ]
   const contactInfo = {'
     email: 'legal@ziontechgroup.com', phone: '+1 (555) 123-4567', address: '123 Technology Drive, San Francisco, CA 94105''  }
   return('

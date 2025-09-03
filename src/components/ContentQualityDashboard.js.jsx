@@ -26,8 +26,8 @@ const ContentQualityDashboard = ({ className = '' }) => {    const [isOpen, setI
                     content: 'Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology.',''';,"});,"})
                     metaDescription: 'Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services.',''';,"});,"})
                     images['/images/hero-ai-solutions.jpg',/images/hero-it-services.jpg'],;''';,"});,"})
-                    links['/services',/ai-solutions',/about',/contact'];,"});,"})
-                },;,"});,"})
+                    links['/services',/ai-solutions',/about',/contact'];,"});,"});
+},;,"});,"})
                 {}"});,"})
 ';,"});,"})
 '';,"});,"})
@@ -37,8 +37,8 @@ const ContentQualityDashboard = ({ className = '' }) => {    const [isOpen, setI
                     content: 'We offer a wide range of technology services including AI solutions, cloud infrastructure, cybersecurity, and digital transformation. Our expert team delivers innovative solutions tailored to your business needs.',''';,"});,"})
                     metaDescription: 'Comprehensive technology services including AI solutions, cloud infrastructure, cybersecurity, and digital transformation.',''';,"});,"})
                     images['/images/services-overview.jpg'],;''';,"});,"})
-                    links['/ai-solutions',/cloud-devops',/cybersecurity',/about'];,"});,"})
-                },;,"});,"})
+                    links['/ai-solutions',/cloud-devops',/cybersecurity',/about'];,"});,"});
+},;,"});,"})
                 {}"});,"})
 ';,"});,"})
 '';,"});,"})
@@ -48,8 +48,8 @@ const ContentQualityDashboard = ({ className = '' }) => {    const [isOpen, setI
                     content: 'Cutting-edge artificial intelligence solutions for modern businesses. Machine learning, predictive analytics, and AI automation to drive innovation and efficiency.',''';,"});,"})
                     metaDescription: 'Cutting-edge artificial intelligence solutions including machine learning, predictive analytics, and AI automation.',''';,"});,"})
                     images['/images/ai-solutions.jpg'],;''';,"});,"})
-                    links['/services',/about',/contact'];,"});,"})
-                },;,"});,"})
+                    links['/services',/about',/contact'];,"});,"});
+},;,"});,"})
                 {}"});,"})
 ';,"});,"})
 '';,"});,"})
@@ -59,8 +59,8 @@ const ContentQualityDashboard = ({ className = '' }) => {    const [isOpen, setI
                     content: 'Learn about Zion Tech Group, our mission, values, and commitment to delivering innovative technology solutions. Discover our team of experts and our journey in the tech industry.',''';,"});,"})
                     metaDescription: 'Learn about Zion Tech Group, our mission, values, and commitment to delivering innovative technology solutions.',''';,"});,"})
                     images['/images/about-team.jpg'],;''';,"});,"})
-                    links['/services',/team',/contact',/mission'];,"});,"})
-                },;,"});,"})
+                    links['/services',/team',/contact',/mission'];,"});,"});
+},;,"});,"})
                 {}"});,"})
 ';,"});,"})
 '';,"});,"})
@@ -70,9 +70,9 @@ const ContentQualityDashboard = ({ className = '' }) => {    const [isOpen, setI
                     content: 'Contact Zion Tech Group for all your technology needs. Our team is ready to help you transform your business with cutting-edge solutions.',''';,"});,"})
                     metaDescription: 'Contact Zion Tech Group for all your technology needs. Our team is ready to help you transform your business.',''';,"});,"})
                     images['/images/contact-office.jpg'],;''';,"});,"})
-                    links['/services',/about',/team'];,"});,"})
-                }"});,"})
-            ];,"});,"})
+                    links['/services',/about',/team'];,"});,"});
+}"});,"})
+            ],"});,"})
             for(const page of samplePages) {}"});,"})
                 contentAnalyzer.analyzePageContent(page.url, page.title, page.content, page.metaDescription, page.images, page.links)}"});,"})
             const newReport = contentAnalyzer.generateReport();,"});,"})
@@ -83,8 +83,8 @@ const ContentQualityDashboard = ({ className = '' }) => {    const [isOpen, setI
 ''';,"});,"})
             // console.error('Error analyzing pages:', error)}"});,"})
         finally {}"});,"})
-            setIsLoading(false)}"});,"})
-    }, [contentAnalyzer]);,"});,"})
+            setIsLoading(false)}"});,"});
+}, [contentAnalyzer]);,"});,"})
     useEffect(() => {}"});,"})
         // Auto-analyze pages when component mounts;,"});,"})
         analyzeAllPages()}, [analyzeAllPages]);,"});,"})
@@ -107,8 +107,8 @@ const ContentQualityDashboard = ({ className = '' }) => {    const [isOpen, setI
                     case 'poor': any;,"});,"})
                         return page.overallScore < 40;,"});,"})
                     default: any;,"});,"})
-                        return true}"});,"})
-            }) }"});,"})
+                        return true}"});,"});
+}) }"});,"})
         return filtered};,"});,"})
     const getStatusColor = (score) => {}"});,"})
         if (score >= 80)';,"});,"})
@@ -364,7 +364,7 @@ export { ContentQualityDashboard };,"});,"})
  const ContentQualityDashboard = ({ className = ' }) => { const [isOpen, setIsOpen] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const [searchTerm, setSearchTerm] = useState (')  const [filterStatus, setFilterStatus] = useState ('all')  const contentAnalyzer = ContentQualityAnalyzer.getInstance ()  const analyzeAllPages = useCallback (async () => { setIsLoading (true)  try {''";
  const ContentQualityDashboard = ({ className = ' }) => { const [isOpen, setIsOpen] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const [searchTerm, setSearchTerm] = useState (')  const [filterStatus, setFilterStatus] = useState ('all')  const contentAnalyzer = ContentQualityAnalyzer.getInstance ()  const analyzeAllPages = useCallback (async () => { setIsLoading (true)  try {''""
 
-""
+"";
 }}}
 import React from 'react';
 import { SEO } from '@/components/SEO';

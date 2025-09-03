@@ -61,10 +61,10 @@ export default function BreadcrumbNavigation() {return (
    className?: string
    showHome?: boolean}&apos; export const BreadcrumbNavigation: React.FC<BreadcrumbNavigationProps> = ({ items = [], className = &apos;&apos;, showHome = true }) => {&apos;}&apos; const;const location = useLocation() ';
 &apos;'
-   showHome?: boolean", "
+   showHome?: boolean", ";
 } export const BreadcrumbNavigation: React.FC<BreadcrumbNavigationProps> = ({ items = [], className = '', showHome = true }) => { const location = useLocation() ''
-;""
+;"";
 }}
    showHome?: boolean} export const BreadcrumbNavigation: React.FC<BreadcrumbNavigationProps> = ({ items = [], className = '', showHome = true }) => { const location = useLocation() ';'
-   showHome?: boolean"} export const BreadcrumbNavigation: React.FC<BreadcrumbNavigationProps> = ({ items = [], className = '', showHome = true }) => { const location = useLocation() 
+   showHome?: boolean"} export const BreadcrumbNavigation: React.FC<BreadcrumbNavigationProps> = ({ items = [], className = '', showHome = true }) => { const location = useLocation() ;
 }}

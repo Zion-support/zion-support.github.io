@@ -10,22 +10,22 @@ export const securityConfig = {
     'font-src': ["'self'", 'https:'],
     'object-src': ["'none'"],
     'media-src': ["'self'"],
-    'frame-src': ["'none'"]
-  },
+    'frame-src': ["'none'"];
+},
   
   // Rate limiting
   rateLimit: {
     windowMs: 15 * 60 * 1000, // 15 minutes
-    max: 100 // limit each IP to 100 requests per windowMs
-  },
+    max: 100 // limit each IP to 100 requests per windowMs;
+},
   
   // CORS configuration
   cors: {
     origin: process.env.NODE_ENV === 'production' 
       ? ['https://ziontechgroup.com'] 
       : ['http://localhost:3000'],
-    credentials: true
-  }
+    credentials: true;
+}
 };
 
 export default securityConfig;

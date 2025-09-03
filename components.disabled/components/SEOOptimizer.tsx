@@ -67,8 +67,8 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   // Default structured data for organization
   const defaultStructuredData = {
     '@context': 'https://schema.org,@type': 'Organization,name': 'Zion Tech Group,url': 'https://ziontechgroup.com,logo': 'https://ziontechgroup.com/logo.png,description': 'Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.,address': {
-      '@type': 'PostalAddress,addressCountry': 'US'
-    },
+      '@type': 'PostalAddress,addressCountry': 'US';
+},
     'contactPoint': {
       '@type': 'ContactPoint,telephone': '+1-XXX-XXX-XXXX',;
       'contactType': 'customer service,availableLanguage': 'English';
@@ -77,8 +77,8 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       'https://linkedin.com/company/zion-tech-group,https: //twitter.com/ziontechgroup';
     ], 'foundingDate': '2020',;
     'numberOfEmployees': '50+,industry': 'Technology Services';
-:components.disabled/components/SEOOptimizer.tsx
-  };
+:components.disabled/components/SEOOptimizer.tsx;
+};
 ;
   const finalStructuredData = structuredData || defaultStructuredData;
 ;
@@ -108,8 +108,8 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         content={
           ogImage.startsWith('http')
             ? ogImage
-            : `https://ziontechgroup.com${ogImage}`
-        }
+            : `https://ziontechgroup.com${ogImage}`;
+}
       />
       <meta property="og:type" content={ogType} />
       <meta property="og:url" content={currentUrl} />
@@ -124,8 +124,8 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         content={
           ogImage.startsWith('http')
             ? ogImage
-            : `https://ziontechgroup.com${ogImage}`
-        }
+            : `https://ziontechgroup.com${ogImage}`;
+}
       />
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
@@ -176,8 +176,8 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         type='application/ld+json';
         dangerouslySetInnerHTML={{;
           __html: JSON.stringify(finalStructuredData, null, 2);
-:components.disabled/components/SEOOptimizer.tsx
-        }}
+:components.disabled/components/SEOOptimizer.tsx;
+}}
       />;
       {/* Performance Hints */}
       <link

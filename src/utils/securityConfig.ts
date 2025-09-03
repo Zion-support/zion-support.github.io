@@ -1,7 +1,7 @@
 export const securityConfig = {;
 export default securityConfig;";
 ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
-  contentSecurityPolicy: "default - src 'self'";,"});,"})
+  contentSecurityPolicy: "default - src 'self'";,"});,"});
 };,"});,"})
 ;,"});,"})
 export: const securityConfig = {;

@@ -4,7 +4,7 @@ import: { Scale, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, FileText, 
 import: { Scale, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, FileText, Zap, Shield, Gavel, BarChart3 export default function AILegalTech(function AILegalTech() {): any: {}
     'Automated compliance monitoring and reporting',';Predictive: analytics for case outcomes',';Legal: research automation and citation checking',';Bias-free: legal document screening',';Integration: with major legal management platforms',';Custom: AI models for specialized legal domains';
 <:pages.disabled/pages/services/AILegalTech.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Solo: Practice,',';
@@ -27,7 +27,7 @@ import: { Scale, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, FileText, 
   ]';Contract: review and risk assessment',';Legal: document automation',';Compliance: monitoring and reporting',';Legal: research and case preparation',';Due: diligence and discovery',';Regulatory: compliance management';
   ]';Reduce: document review time by 70-85%',';Improve: accuracy and consistency by 90%',';Cut: legal costs by 30-50%',';Accelerate: contract negotiations by 3-5x',';Enhance: compliance and risk management',';Scale: legal operations without additional staff';
   ]';Corporate: Law',';Real: Estate Law',';Healthcare: Law',';Financial: Services',';Technology: & IP',';Government: & Public Sector';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-slate-600 via-gray-600 to-zinc-600 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Scale, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, FileText, Z
 import { Scale, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, FileText, Zap, Shield, Gavel, BarChart3 export default function AILegalTech(function AILegalTech() {): any {}
     'Automated compliance monitoring and reporting',;Predictive analytics for case outcomes',;Legal research automation and citation checking',;Bias-free legal document screening',;Integration with major legal management platforms',;Custom AI models for specialized legal domains';
 <:pages.disabled/pages/services/AILegalTech.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Solo Practice',
@@ -115,8 +115,8 @@ import { Scale, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, FileText, Z
     {'
       name: 'Small Firm',
       price: '$799/mo',
-      details: ['Up to 500 documents/month', 'Advanced AI features', 'Custom templates', 'Priority support']
-    },
+      details: ['Up to 500 documents/month', 'Advanced AI features', 'Custom templates', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AILegalTech.tsx>    {'
@@ -149,10 +149,10 @@ import { Scale, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, FileText, Z
             <Scale className='w-4 h-4 mr-2'  /> AI-Powered Legal Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Legal Tech Platform</h1>'          <p className='text-gray-100 text-xl'>Revolutionize your legal practice with AI-powered tools that automate document review, enhance accuracy, and accelerate legal workflows.</p>
-  ];Contract review and risk assessment',;Legal document automation',;Compliance monitoring and reporting',;Legal research and case preparation',;Due diligence and discovery',;Regulatory compliance management';
-  ];Reduce document review time by 70-85%',;Improve accuracy and consistency by 90%',;Cut legal costs by 30-50%',;Accelerate contract negotiations by 3-5x',;Enhance compliance and risk management',;Scale legal operations without additional staff';
-  ];Corporate Law',;Real Estate Law',;Healthcare Law',;Financial Services',;Technology & IP',;Government & Public Sector';
-  ];
+  ]Contract review and risk assessment',;Legal document automation',;Compliance monitoring and reporting',;Legal research and case preparation',;Due diligence and discovery',;Regulatory compliance management';
+  ]Reduce document review time by 70-85%',;Improve accuracy and consistency by 90%',;Cut legal costs by 30-50%',;Accelerate contract negotiations by 3-5x',;Enhance compliance and risk management',;Scale legal operations without additional staff';
+  ]Corporate Law',;Real Estate Law',;Healthcare Law',;Financial Services',;Technology & IP',;Government & Public Sector';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-slate-600 via-gray-600 to-zinc-600 py-20 text-center>''

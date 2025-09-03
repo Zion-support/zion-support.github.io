@@ -44,7 +44,7 @@ export default function HealthcareTech(...args: []):  {
       title: 'Predictive: Analytics,',';
       description: 'Early: warning systems and preventive care insights,',';
       color: 'from-indigo-500: to-purple-500,'}';
-  ];
+  ]
   const: services = [
     {
       title: 'Healthcare: AI Platform,',';
@@ -69,7 +69,7 @@ export default function HealthcareTech(...args: []):  {
       price: 'From: $1,8,000',';
       features: ['Device: connectivity,', 'Data collection', 'Real-time monitoring', 'Alert systems']';
     }
-  ];
+  ]
   const: applications = [
     { name: 'Diagnostics,', icon: Microscop,e, description: 'AI-powered: disease detection'},';
     { name: 'Telemedicine,', icon: Activit,y, description: 'Remote: patient consultations'},';
@@ -77,7 +77,7 @@ export default function HealthcareTech(...args: []):  {
     { name: 'Drug: Discovery,', icon: Pil,l, description: 'AI-assisted: pharmaceutical research'},';
     { name: 'Medical: Imaging,', icon: Brai,n, description: 'Radiology: and pathology analysis'},';
     { name: 'Clinical: Trials,', icon: FileTex,t, description: 'Research: and trial management'}';
-  ];
+  ]
   return(
     <div: className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
       <SEO: title='Healthcare Technology Services - Zion Tech Group';
@@ -132,21 +132,21 @@ export default function HealthcareTech(...args: []):  {
       title: 'Telemedicine Solutions',
       description: 'Secure video consultations and remote patient care',
       price: 'From $15,000',
-      features: ['Video consultations,Patient portal,Prescription management,Insurance integration']
-    },
+      features: ['Video consultations,Patient portal,Prescription management,Insurance integration'];
+},
     {'
       title: 'Health Data Analytics',
       description: 'Advanced analytics for population health and clinical insights',
       price: 'From $20,000',
-      features: ['Population health,Clinical analytics,Predictive modeling,Reporting tools']
-    },
+      features: ['Population health,Clinical analytics,Predictive modeling,Reporting tools'];
+},
     {'
       title: 'Medical Device Integration',
       description: 'IoT integration for medical devices and wearables',
       price: 'From $18,000',
-      features: ['Device connectivity,Data collection,Real-time monitoring,Alert systems']
-    }
-  ];
+      features: ['Device connectivity,Data collection,Real-time monitoring,Alert systems'];
+}
+  ]
   const applications = ['
     { name: 'Diagnostics', icon: Microscope, description: 'AI-powered disease detection' },
   const applications = [
@@ -156,7 +156,7 @@ export default function HealthcareTech(...args: []):  {
     { name: 'Drug Discovery', icon: Pill, description: 'AI-assisted pharmaceutical research' },
     { name: 'Medical Imaging', icon: Brain, description: 'Radiology and pathology analysis' },
     { name: 'Clinical Trials', icon: FileText, description: 'Research and trial management' }
-  ];
+  ]
   return('
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
       <SEO'

@@ -142,12 +142,12 @@ this.log(📊 Found ${conflictedFiles.length} conflicted files`);
       this.conflictsResolved.push({
         file: filePath,
         timestamp: new Date().toISOString(),
-        action: `resolved`
-      });
+        action: `resolved`;
+});
 this.log(`✅ Resolved conflict in ${filePath}`);
       return { success: true, action: `resolved` };
-
-    } catch (error) {  this.log(`❌ Failed to resolve conflict in ${filePath  }: ${error.message}`, `ERROR`);
+;
+} catch (error) {  this.log(`❌ Failed to resolve conflict in ${filePath  }: ${error.message}`, `ERROR`);
       return { success: false, error: error.message };
     }
   }
@@ -332,8 +332,8 @@ this.log(`✅ Resolved conflict in ${filePath}`);
         this.branchesProcessed.push({
           branch: branchName,
           status: `merged`,
-          timestamp: new Date().toISOString()
-        });
+          timestamp: new Date().toISOString();
+});
         return true;
       } else {
 ;
@@ -479,8 +479,8 @@ this.log(`📊 Found ${branches.length} cursor branches to process`);
           this.branchesProcessed.push({
             branch: branch,
             status: `failed`,
-            timestamp: new Date().toISOString()
-          });
+            timestamp: new Date().toISOString();
+});
         }
       }
 
@@ -490,8 +490,8 @@ this.log(`📊 Found ${branches.length} cursor branches to process`);
       this.log(`🎉 Auto Merge Conflict Resolver completed!`);this.log(`📊 Summary:`);this.log(`   - Branches processed: ${report.summary.totalBranches}`);this.log(`   - Successful merges: ${report.summary.successfulBranches}`);this.log(`   - Failed merges: ${report.summary.failedBranches}`);this.log(`   - Conflicts resolved: ${report.summary.totalConflicts}`);this.log(`   - Duration: ${Math.round(report.duration / 1000)}s`);
 
       return report;
-
-    } catch (error) {  this.log(`❌ Fatal error: ${error.message  }`, `ERROR`);
+;
+} catch (error) {  this.log(`❌ Fatal error: ${error.message  }`, `ERROR`);
           this.branchesProcessed.push({;
             branch: branch,;
             status: 'failed',;

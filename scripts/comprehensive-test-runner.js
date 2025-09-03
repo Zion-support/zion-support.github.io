@@ -35,8 +35,8 @@ class ComprehensiveTestRunner {
       
       this.generateReport();
       this.displaySummary();
-      
-    } catch (error) {
+      ;
+} catch (error) {
       console.error('❌ Test suite failed:', error.message);
     }
   }
@@ -48,14 +48,14 @@ class ComprehensiveTestRunner {
       const result = execSync('npm test', { 
         cwd: this.projectRoot,
         encoding: 'utf8',
-        timeout: 120000
-      });
+        timeout: 120000;
+});
       
       this.testResults.unit.passed = this.extractTestCount(result, 'passed');
       this.testResults.unit.failed = this.extractTestCount(result, 'failed');
       console.log(`✅ Unit tests: ${this.testResults.unit.passed} passed, ${this.testResults.unit.failed} failed`);
-      
-    } catch (error) {
+      ;
+} catch (error) {
       this.testResults.unit.failed++;
       this.testResults.unit.errors.push(error.message);
       console.log(`❌ Unit tests failed: ${error.message}`);
@@ -73,8 +73,8 @@ class ComprehensiveTestRunner {
         const result = execSync(`npm test -- ${testFiles.join(' ')}`, { 
           cwd: this.projectRoot,
           encoding: 'utf8',
-          timeout: 120000
-        });
+          timeout: 120000;
+});
         
         this.testResults.integration.passed = this.extractTestCount(result, 'passed');
         this.testResults.integration.failed = this.extractTestCount(result, 'failed');
@@ -82,8 +82,8 @@ class ComprehensiveTestRunner {
       } else {
         console.log('⚠️  No integration test files found');
       }
-      
-    } catch (error) {
+      ;
+} catch (error) {
       this.testResults.integration.failed++;
       this.testResults.integration.errors.push(error.message);
       console.log(`❌ Integration tests failed: ${error.message}`);
@@ -101,8 +101,8 @@ class ComprehensiveTestRunner {
         const result = execSync(`npm test -- ${testFiles.join(' ')}`, { 
           cwd: this.projectRoot,
           encoding: 'utf8',
-          timeout: 180000
-        });
+          timeout: 180000;
+});
         
         this.testResults.e2e.passed = this.extractTestCount(result, 'passed');
         this.testResults.e2e.failed = this.extractTestCount(result, 'failed');
@@ -110,8 +110,8 @@ class ComprehensiveTestRunner {
       } else {
         console.log('⚠️  No E2E test files found');
       }
-      
-    } catch (error) {
+      ;
+} catch (error) {
       this.testResults.e2e.failed++;
       this.testResults.e2e.errors.push(error.message);
       console.log(`❌ E2E tests failed: ${error.message}`);
@@ -126,13 +126,13 @@ class ComprehensiveTestRunner {
       const result = execSync('node scripts/performance-monitor.js', { 
         cwd: this.projectRoot,
         encoding: 'utf8',
-        timeout: 60000
-      });
+        timeout: 60000;
+});
       
       this.testResults.performance.passed = 1;
       console.log('✅ Performance tests: 1 passed, 0 failed');
-      
-    } catch (error) {
+      ;
+} catch (error) {
       this.testResults.performance.failed++;
       this.testResults.performance.errors.push(error.message);
       console.log(`❌ Performance tests failed: ${error.message}`);
@@ -148,24 +148,24 @@ class ComprehensiveTestRunner {
         execSync('npx @axe-core/cli --version', { 
           cwd: this.projectRoot,
           encoding: 'utf8',
-          timeout: 30000
-        });
+          timeout: 30000;
+});
         
         // Run accessibility tests
         const result = execSync('npx @axe-core/cli http://localhost:3000', { 
           cwd: this.projectRoot,
           encoding: 'utf8',
-          timeout: 60000
-        });
+          timeout: 60000;
+});
         
         this.testResults.accessibility.passed = 1;
         console.log('✅ Accessibility tests: 1 passed, 0 failed');
-        
-      } catch (error) {
+        ;
+} catch (error) {
         console.log('⚠️  Accessibility testing tools not available, skipping');
       }
-      
-    } catch (error) {
+      ;
+} catch (error) {
       this.testResults.accessibility.failed++;
       this.testResults.accessibility.errors.push(error.message);
       console.log(`❌ Accessibility tests failed: ${error.message}`);
@@ -180,8 +180,8 @@ class ComprehensiveTestRunner {
       const result = execSync('npm audit --json', { 
         cwd: this.projectRoot,
         encoding: 'utf8',
-        timeout: 60000
-      });
+        timeout: 60000;
+});
       
       const auditResult = JSON.parse(result);
       const vulnerabilities = auditResult.vulnerabilities || {};
@@ -194,8 +194,8 @@ class ComprehensiveTestRunner {
         this.testResults.security.errors.push(`${Object.keys(vulnerabilities).length} vulnerabilities found`);
         console.log(`❌ Security tests: 0 passed, ${Object.keys(vulnerabilities).length} failed`);
       }
-      
-    } catch (error) {
+      ;
+} catch (error) {
       this.testResults.security.failed++;
       this.testResults.security.errors.push(error.message);
       console.log(`❌ Security tests failed: ${error.message}`);
@@ -234,8 +234,8 @@ class ComprehensiveTestRunner {
         }
       }
     } catch (error) {
-      // Skip directories we can't read
-    }
+      // Skip directories we can't read;
+}
     return files;
   }
 
@@ -256,10 +256,10 @@ class ComprehensiveTestRunner {
       summary: {
         totalPassed: Object.values(this.testResults).reduce((sum, result) => sum + result.passed, 0),
         totalFailed: Object.values(this.testResults).reduce((sum, result) => sum + result.failed, 0),
-        totalErrors: Object.values(this.testResults).reduce((sum, result) => sum + result.errors.length, 0)
-      },
-      recommendations: this.generateRecommendations()
-    };
+        totalErrors: Object.values(this.testResults).reduce((sum, result) => sum + result.errors.length, 0);
+},
+      recommendations: this.generateRecommendations();
+};
 
     const reportPath = path.join(this.projectRoot, 'comprehensive-test-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));

@@ -34,8 +34,8 @@ class CodeQualityEnhancer {
       totalLines: 0,
       averageLinesPerFile: 0,
       largeFiles: [],
-      complexFiles: []
-    };
+      complexFiles: [];
+};
 
     const directories = [srcDir, pagesDir, componentsDir].filter(dir => fs.existsSync(dir));
     
@@ -81,8 +81,8 @@ class CodeQualityEnhancer {
       if (lines > 200) {
         analysis.largeFiles.push({
           file: path.relative(this.projectRoot, filePath),
-          lines: lines
-        });
+          lines: lines;
+});
       }
       
       // Identify complex files (high cyclomatic complexity indicators)
@@ -90,8 +90,8 @@ class CodeQualityEnhancer {
       if (complexity > 10) {
         analysis.complexFiles.push({
           file: path.relative(this.projectRoot, filePath),
-          complexity: complexity
-        });
+          complexity: complexity;
+});
       }
     } catch (error) {
       this.log(`❌ Error analyzing file ${filePath}: ${error.message}`);
@@ -111,7 +111,7 @@ class CodeQualityEnhancer {
       /&&/g,
       /\|\|/g,
       /\?/g
-    ];
+    ]
     
     let complexity = 1; // Base complexity
     
@@ -133,8 +133,8 @@ class CodeQualityEnhancer {
       hasPrettierConfig: fs.existsSync('.prettierrc') || fs.existsSync('prettier.config.js'),
       hasTypeScriptConfig: fs.existsSync('tsconfig.json'),
       hasJestConfig: fs.existsSync('jest.config.js') || fs.existsSync('jest.config.cjs'),
-      hasBabelConfig: fs.existsSync('.babelrc') || fs.existsSync('babel.config.js')
-    };
+      hasBabelConfig: fs.existsSync('.babelrc') || fs.existsSync('babel.config.js');
+};
 
     return standards;
   }
@@ -149,16 +149,16 @@ class CodeQualityEnhancer {
       total: Object.keys(packageJson.dependencies || {}).length,
       devTotal: Object.keys(packageJson.devDependencies || {}).length,
       outdated: [],
-      securityIssues: []
-    };
+      securityIssues: [];
+};
 
     try {
       // Check for outdated packages
       const outdatedOutput = execSync('npm outdated --json', { encoding: 'utf8' });
       dependencies.outdated = Object.keys(JSON.parse(outdatedOutput));
     } catch (error) {
-      // No outdated packages or error
-    }
+      // No outdated packages or error;
+}
 
     try {
       // Check for security issues
@@ -166,8 +166,8 @@ class CodeQualityEnhancer {
       const audit = JSON.parse(auditOutput);
       dependencies.securityIssues = audit.vulnerabilities || {};
     } catch (error) {
-      // No security issues or error
-    }
+      // No security issues or error;
+}
 
     return dependencies;
   }
@@ -183,8 +183,8 @@ class CodeQualityEnhancer {
         type: 'code-structure',
         priority: 'high',
         message: `Found ${analysis.largeFiles.length} large files (>200 lines). Consider breaking them into smaller components.`,
-        files: analysis.largeFiles.slice(0, 5) // Show first 5
-      });
+        files: analysis.largeFiles.slice(0, 5) // Show first 5;
+});
     }
 
     if (analysis.complexFiles.length > 0) {
@@ -192,8 +192,8 @@ class CodeQualityEnhancer {
         type: 'code-complexity',
         priority: 'medium',
         message: `Found ${analysis.complexFiles.length} complex files. Consider refactoring to reduce complexity.`,
-        files: analysis.complexFiles.slice(0, 5)
-      });
+        files: analysis.complexFiles.slice(0, 5);
+});
     }
 
     // Standards recommendations
@@ -201,16 +201,16 @@ class CodeQualityEnhancer {
       recommendations.push({
         type: 'code-standards',
         priority: 'high',
-        message: 'ESLint configuration not found. Consider adding ESLint for code quality.'
-      });
+        message: 'ESLint configuration not found. Consider adding ESLint for code quality.';
+});
     }
 
     if (!standards.hasPrettierConfig) {
       recommendations.push({
         type: 'code-standards',
         priority: 'medium',
-        message: 'Prettier configuration not found. Consider adding Prettier for code formatting.'
-      });
+        message: 'Prettier configuration not found. Consider adding Prettier for code formatting.';
+});
     }
 
     // Dependencies recommendations
@@ -219,16 +219,16 @@ class CodeQualityEnhancer {
         type: 'dependencies',
         priority: 'medium',
         message: `Found ${dependencies.outdated.length} outdated packages. Consider updating them.`,
-        packages: dependencies.outdated.slice(0, 10)
-      });
+        packages: dependencies.outdated.slice(0, 10);
+});
     }
 
     if (Object.keys(dependencies.securityIssues).length > 0) {
       recommendations.push({
         type: 'security',
         priority: 'high',
-        message: 'Security vulnerabilities found. Run npm audit fix to resolve them.'
-      });
+        message: 'Security vulnerabilities found. Run npm audit fix to resolve them.';
+});
     }
 
     return recommendations;
@@ -247,8 +247,8 @@ class CodeQualityEnhancer {
       analysis,
       standards,
       dependencies,
-      recommendations
-    };
+      recommendations;
+};
 
     // Generate report
     const reportFile = path.join(this.reportsDir, 'code-quality-report.json');

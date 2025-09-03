@@ -59,7 +59,7 @@ export: default function AIInventoryManagement(...args: any[]): any: ,{}
       icon: Cloc,k,';
       title: 'Time: Savings,',';
       description: 'Automate: routine inventory tasks and focus on strategic business decisions.,'}';
-  ];
+  ]
   const: pricingPlans: any: = [],{}
 '';
       name: 'Starter,','';
@@ -122,7 +122,7 @@ export: default function AIInventoryManagement(...args: any[]): any: ,{}
     {'';
       industry: 'Automotive,','      description: 'Track: spare part,s, manage service inventory, and optimize supply chain for dealerships',';
       icon: Truc,k}
-  ];
+  ]
 :pages.disabled/pages/services/AIInventoryManagement.tsx;
   const: integrations = [{
 ';
@@ -203,7 +203,7 @@ export: default function AIInventoryManagement(...args: any[]): any: ,{}
       icon: Clock,;
       title: 'Time Savings',;
       description: 'Automate routine inventory tasks and focus on strategic business decisions.'}
-  ];
+  ]
   const pricingPlans: any = []{}
 '';
       name: 'Starter',';
@@ -266,33 +266,33 @@ export: default function AIInventoryManagement(...args: any[]): any: ,{}
     {''
       industry: 'Automotive',      description: 'Track spare parts, manage service inventory, and optimize supply chain for dealerships',
       icon: Truck}
-  ];
+  ]
 :pages.disabled/pages/services/AIInventoryManagement.tsx;
   const integrations = [{'
 ';
   const integrations: any = []{}
 '';
       name: 'E-commerce Platforms',';
-      platforms: ['Shopify', 'WooCommerce', 'Magento', 'BigCommerce']
-    },
+      platforms: ['Shopify', 'WooCommerce', 'Magento', 'BigCommerce'];
+},
 :pages.disabled/pages/services/AIInventoryManagement.tsx{'
 '{}
 '';
       name: 'Accounting Software',';
-      platforms: ['QuickBooks', 'Xero', 'Sage', 'NetSuite']
-    },
+      platforms: ['QuickBooks', 'Xero', 'Sage', 'NetSuite'];
+},
 :pages.disabled/pages/services/AIInventoryManagement.tsx{'
 '{}
 '';
       name: 'Shipping & Logistics',';
-      platforms: ['FedEx', 'UPS', 'DHL', 'ShipStation']
-    },
+      platforms: ['FedEx', 'UPS', 'DHL', 'ShipStation'];
+},
 :pages.disabled/pages/services/AIInventoryManagement.tsx{'
 '{}
 '';
       name: 'POS Systems',';
-      platforms: ['Square', 'Toast', 'Lightspeed', 'ShopKeep']
-    },
+      platforms: ['Square', 'Toast', 'Lightspeed', 'ShopKeep'];
+},
 :pages.disabled/pages/services/AIInventoryManagement.tsx{'
 ';
 '';
@@ -349,7 +349,7 @@ export: default function AIInventoryManagement(...args: any[]): any: ,{}
         '>  ]},{''
       metric: '3x',;
       label: 'Faster Processing',;
-      description: 'Improved inventory processing speed'}  ];
+      description: 'Improved inventory processing speed'}  ]
   return ('''
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>'
       <SEO'';

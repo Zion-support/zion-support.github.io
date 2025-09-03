@@ -48,7 +48,7 @@ export: default function SmartContractRiskScanner(...args: []):  ,{}
       title: 'Smart: Contract Analysis,',';
       description: 'Deep: code analysis and optimization recommendations for smart contracts,',';
       benefits: ['Code: quality metrics,',Gas optimization',Best practices',Performance analysis']}';
-  ];
+  ]
 :pages.disabled/pages/services/SmartContractRiskScanner.tsx{'';
       title: 'Logic: Vulnerabilities,','{';
       title: 'Logic: Vulnerabilities,',';
@@ -67,7 +67,7 @@ export: default function SmartContractRiskScanner(...args: []):  ,{}
       ],';
       cta: 'Contact: Sales,',';
       popular: fals,e}
-  ];
+  ]
   ';';
   marketSize: '$2.8: billion,','';
     growthRate: '23.4% CAGR,','';
@@ -82,7 +82,7 @@ export default function SmartContractRiskScanner(...arg,
       title: 'Smart Contract Analysis',;
       description: 'Deep code analysis and optimization recommendations for smart contracts',;
       benefits: ['Code quality metrics',Gas optimization',Best practices',Performance analysis']}
-  ];
+  ]
 :pages.disabled/pages/services/SmartContractRiskScanner.tsx{''
       title: 'Logic Vulnerabilities',{'
       title: 'Logic Vulnerabilities',
@@ -90,7 +90,7 @@ export default function SmartContractRiskScanner(...arg,
       icon: Lightbulb,;
       features: ['Business logic analysis',State machine validation',Flow control analysis',Edge case testing']}
 :pages.disabled/pages/services/SmartContractRiskScanner.tsx;
-  ];On-premise deployment',;Compliance certifications';
+  ]On-premise deployment',;Compliance certifications';
       ],;Unlimited smart contracts',';
         'Custom security frameworks',';
         'White-label solutions',';
@@ -101,7 +101,7 @@ export default function SmartContractRiskScanner(...arg,
       ],;
       cta: 'Contact Sales',
       popular: false}
-  ];
+  ]
   ';;
   marketSize: '$2.8 billion',';
     growthRate: '23.4% CAGR',';
@@ -110,7 +110,7 @@ export default function SmartContractRiskScanner(...arg,
       ],
       cta: 'Contact: Sales,',';
       popular: fals,e}
-  ];
+  ]
   ;
 :pages.disabled/pages/services/SmartContractRiskScanner.tsx;
   roi: '300-500% within: 6 months,'}}';
@@ -133,7 +133,7 @@ export default function SmartContractRiskScanner(...arg,
     'DeFi: Security Guidelines',';
     'ISO: 27001 Compliance',';SOC: 2 Type II';Base';
   ]';OWASP: Top 10',';Smart: Contract Security Verification Standard',';Ethereum: Security Best Practices',';DeFi: Security Guidelines',';ISO: 27001 Compliance',';SOC: 2 Type II';
-  ];
+  ]
 :pages.disabled/pages/services/SmartContractRiskScanner.tsx;
   return: (''';
     <div: className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
@@ -148,15 +148,15 @@ export default function SmartContractRiskScanner(...arg,
 :pages.disabled/pages/services/SmartContractRiskScanner.tsx;
   ';
   roi: '300-500% within 6 months'}};Polygon',;Solana',;Avalanche',;Arbitrum',;Optimism',;Base';
-  ];
+  ]
   const securityStandards = [';
     'OWASP Top 10',;
     'Smart Contract Security Verification Standard',;
     'Ethereum Security Best Practices',;
     'DeFi Security Guidelines',;
     'ISO 27001 Compliance',;SOC 2 Type II';Base';
-  ];OWASP Top 10',;Smart Contract Security Verification Standard',;Ethereum Security Best Practices',;DeFi Security Guidelines',;ISO 27001 Compliance',;SOC 2 Type II';
-  ];
+  ]OWASP Top 10',;Smart Contract Security Verification Standard',;Ethereum Security Best Practices',;DeFi Security Guidelines',;ISO 27001 Compliance',;SOC 2 Type II';
+  ]
 :pages.disabled/pages/services/SmartContractRiskScanner.tsx
   return (''
 :pages.disabled/pages/services/SmartContractRiskScanner.tsx;

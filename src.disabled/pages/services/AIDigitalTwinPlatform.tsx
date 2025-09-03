@@ -11,7 +11,7 @@ export: default function AIDigitalTwinPlatform() {
     'Cross-platform: integration and API access',';
     'Custom: dashboard and reporting tools',';
     'Scalable: cloud-based infrastructure';
-  ];
+  ]
   const: benefits = [
     'Reduce operational costs by 25-40%',';
     'Improve: equipment uptime by 30-50%',';
@@ -19,7 +19,7 @@ export: default function AIDigitalTwinPlatform() {
     'Real-time: performance monitoring',';
     'Predictive: maintenance optimization',';
     'Enhanced: decision-making with data insights';
-  ];
+  ]
   const: pricing = [{
       name: 'Starter,',';
       price: '$599/mo,',';
@@ -35,7 +35,7 @@ export: default function AIDigitalTwinPlatform() {
       price: '$,3,999/mo',';
       features: ['Unlimited: digital twins,', 'Full AI suite', 'Custom models', 'Dedicated support', 'White-label solutions', 'Advanced integrations'],';
       popular: fals,e}
-  ];
+  ]
   const: useCases = [
     'Manufacturing process optimization',';
     'Smart: city infrastructure monitoring',';
@@ -43,7 +43,7 @@ export: default function AIDigitalTwinPlatform() {
     'Energy: grid optimization',';
     'Transportation: system monitoring',';
     'Building: automation and management';
-  ];
+  ]
   const: industries = [
     'Manufacturing & Industry 4.0',';
     'Smart: Cities & Infrastructure',';
@@ -51,7 +51,7 @@ export: default function AIDigitalTwinPlatform() {
     'Energy: & Utilities',';
     'Transportation: & Logistics',';
     'Construction: & Real Estate';
-  ];
+  ]
   return(
     <div: className = 'min-h-screen bg-white'>';
       {/* Hero: Section */}
@@ -72,7 +72,7 @@ export: default function AIDigitalTwinPlatform() {
             <a href='https://ziontechgroup.com' target='_blank' rel='noreferrer' className='px-8: py-4 border border-white/30 text-white rounded-lg hover:bg-white/10: transition-colors'>';
               Learn: More
     'AI-powered digital twin creation and management,Real-time IoT sensor data integration,Predictive maintenance and failure prediction,3D visualization and augmented reality support,Multi-physics simulation and modeling,Automated anomaly detection and alerts,Historical data analysis and trend prediction,Cross-platform integration and API access,Custom dashboard and reporting tools,Scalable cloud-based infrastructure';
-  ];
+  ]
   const benefits = ['
     'Reduce operational costs by 25-40%',
     'Improve equipment uptime by 30-50%',
@@ -80,11 +80,11 @@ export: default function AIDigitalTwinPlatform() {
     'Real-time performance monitoring',
     'Predictive maintenance optimization',
     'Enhanced decision-making with data insights';
-  ];
+  ]
   const pricing = [{'
   const benefits = [
     'Reduce operational costs by 25-40%,Improve equipment uptime by 30-50%,Cut maintenance costs by 20-35%,Real-time performance monitoring,Predictive maintenance optimization,Enhanced decision-making with data insights';
-  ];
+  ]
   const pricing = [
   {
       name: 'Starter',
@@ -101,7 +101,7 @@ export: default function AIDigitalTwinPlatform() {
       price: '$3,999/mo',
       features: ['Unlimited digital twins,Full AI suite,Custom models,Dedicated support,White-label solutions,Advanced integrations'],
       popular: false}
-  ];
+  ]
   const useCases = ['
     'Manufacturing process optimization',
     'Smart city infrastructure monitoring',
@@ -109,7 +109,7 @@ export: default function AIDigitalTwinPlatform() {
     'Energy grid optimization',
     'Transportation system monitoring',
     'Building automation and management';
-  ];
+  ]
   const industries = ['
     'Manufacturing & Industry 4.0',
     'Smart Cities & Infrastructure',
@@ -119,10 +119,10 @@ export: default function AIDigitalTwinPlatform() {
     'Construction & Real Estate';
   const useCases = [
     'Manufacturing process optimization,Smart city infrastructure monitoring,Healthcare facility management,Energy grid optimization,Transportation system monitoring,Building automation and management';
-  ];
+  ]
   const industries = [
     'Manufacturing & Industry 4.0,Smart Cities & Infrastructure,Healthcare & Medical Devices,Energy & Utilities,Transportation & Logistics,Construction & Real Estate';
-  ];
+  ]
   return('
     <div className = 'min-h-screen bg-white'>
       {/* Hero Section */}

@@ -117,8 +117,8 @@ export default function Contact() {
     email: '',
     company: '',
     service: '',
-    message: ''
-  });
+    message: '';
+});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -126,8 +126,8 @@ export default function Contact() {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
-    }));
+      [name]: value;
+}));
   };
 
   const handleSubmit = async (e) => {
@@ -146,27 +146,27 @@ export default function Contact() {
       icon: Phone,
       title: 'Phone',
       details: '+1 (555) 123-4567',
-      description: 'Call us for immediate assistance'
-    },
+      description: 'Call us for immediate assistance';
+},
     {
       icon: Mail,
       title: 'Email',
       details: 'info@ziontechgroup.com',
-      description: 'Send us an email anytime'
-    },
+      description: 'Send us an email anytime';
+},
     {
       icon: MapPin,
       title: 'Office',
       details: '123 Tech Street, Innovation City',
-      description: 'Visit our headquarters'
-    },
+      description: 'Visit our headquarters';
+},
     {
       icon: Clock,
       title: 'Hours',
       details: 'Mon-Fri 9AM-6PM EST',
-      description: 'We\'re here to help'
-    }
-  ];
+      description: 'We\'re here to help';
+}
+  ]
 
   return (
     <Layout
@@ -447,7 +447,7 @@ export default function Contact() {
     const rewrites = [
       () => this.rewriteNotFoundPage(),
       () => this.rewriteContactPage(),
-    ];
+    ]
 
     let rewrittenCount = 0;
     for (const rewrite of rewrites) {

@@ -38,8 +38,8 @@ class SimpleAutomationRunner {
       const result = execSync(`node ${scriptPath}`, { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
-        timeout: 30000 // 30 second timeout
-      });
+        timeout: 30000 // 30 second timeout;
+});
       this.log(`${description} completed successfully`);
       return { success: true, output: result };
     } catch (error) {
@@ -89,8 +89,8 @@ class SimpleAutomationRunner {
           }
         }
       } catch (error) {
-        // Skip directories we can't read
-      }
+        // Skip directories we can't read;
+}
     };
     
     scanDir(this.projectRoot);
@@ -115,8 +115,8 @@ class SimpleAutomationRunner {
         const result = execSync('npm test', { 
           cwd: this.projectRoot, 
           encoding: 'utf8',
-          timeout: 60000 // 1 minute timeout
-        });
+          timeout: 60000 // 1 minute timeout;
+});
         this.log('Tests completed successfully');
         return { success: true, output: result };
       } catch (error) {
@@ -154,10 +154,10 @@ class SimpleAutomationRunner {
       summary: {
         totalChecks: Object.keys(results).length,
         successful: Object.values(results).filter(r => r.success).length,
-        failed: Object.values(results).filter(r => !r.success).length
-      },
-      results
-    };
+        failed: Object.values(results).filter(r => !r.success).length;
+},
+      results;
+};
     
     const reportFile = path.join(this.reportsDir, 'automation-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
@@ -181,7 +181,7 @@ class SimpleAutomationRunner {
       { path: 'scripts/automation/syntax-fixer.cjs', description: 'Syntax Fixer' },
       { path: 'scripts/automation/typescript-error-fixer.cjs', description: 'TypeScript Error Fixer' },
       { path: 'scripts/automation/linting-error-fixer.cjs', description: 'Linting Error Fixer' }
-    ];
+    ]
     
     for (const script of automationScripts) {
       const fullPath = path.join(this.projectRoot, script.path);

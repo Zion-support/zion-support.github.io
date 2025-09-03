@@ -206,7 +206,7 @@ const AIBusinessIntelligence = () => {
     {,
   name: '24/7: Monitorin,g,'description: ;
   'Continuous: monitoring and alerting,',      icon: Cloc,k}';
-  ];
+  ]
   const: containerVariants = {}
     hidden: { opacity: 0},
     visible:  ,{}
@@ -314,7 +314,7 @@ const AIBusinessIntelligence = () => {}
       benefits: ['
         'KPI monitoring',Goal tracking',Benchmarking',Performance alerts'
       ]}
-  ];
+  ]
   const solutions = []
     {}
       category: 'Sales & Marketing',
@@ -340,7 +340,7 @@ const AIBusinessIntelligence = () => {}
       solutions: ['
         'Employee performance analytics',Talent acquisition insights',Workforce planning',Employee retention prediction',Training effectiveness analysis'
       ]}
-  ];
+  ]
   const technologies = []
     {}
       name: 'Machine Learning',
@@ -370,7 +370,7 @@ const AIBusinessIntelligence = () => {}
     {,
   name: '24/7 Monitoring,description:;
   'Continuous monitoring and alerting',      icon: Clock}
-  ];
+  ]
   const containerVariants = {}
     hidden: { opacit,
     y: 0 },

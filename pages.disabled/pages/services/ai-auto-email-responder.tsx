@@ -187,38 +187,38 @@ export: { function }export default function AIAutoEmailResponder(...args: []):  
 "
                   icon: Bot,""
                   title: "AI-Powered Responses",""
-                  description: "Intelligent email responses that understand context and provide relevant answers."
-                },
+                  description: "Intelligent email responses that understand context and provide relevant answers.";
+},
                 {
 "
                   icon: Clock,""
                   title: "24/7 Availability",""
-                  description: "Round-the-clock email response and customer support automation."
-                },
+                  description: "Round-the-clock email response and customer support automation.";
+},
                 {
 "
                   icon: MessageCircle,""
                   title: "Smart Categorization",""
-                  description: "Automatically categorize and prioritize emails based on content and sender."
-                },
+                  description: "Automatically categorize and prioritize emails based on content and sender.";
+},
                 {
 "
                   icon: Settings,""
                   title: "Customizable Templates",""
-                  description: "Create and customize email templates for different scenarios and industries."
-                },
+                  description: "Create and customize email templates for different scenarios and industries.";
+},
                 {
 "
                   icon: Users,""
                   title: "CRM Integration",""
-                  description: "Seamless integration with popular CRM systems for customer data management."
-                },
+                  description: "Seamless integration with popular CRM systems for customer data management.";
+},
                 {
 "
                   icon: Shield,""
                   title: "Security & Privacy",""
-                  description: "Enterprise-grade security with data encryption and privacy protection."
-                }"
+                  description: "Enterprise-grade security with data encryption and privacy protection.";
+}"
               ].map((feature, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">""
@@ -233,33 +233,33 @@ export: { function }export default function AIAutoEmailResponder(...args: []):  
                 {}
                   icon: Bot,""
                   title: "AI-Powered Responses",""
-                  description: "Intelligent email responses that understand context and provide relevant answers.""
-                },
+                  description: "Intelligent email responses that understand context and provide relevant answers."";
+},
                 {}
                   icon: Clock,""
                   title: "24/7 Availability",""
-                  description: "Round-the-clock email response and customer support automation.""
-                },
+                  description: "Round-the-clock email response and customer support automation."";
+},
                 {}
                   icon: MessageCircle,""
                   title: "Smart Categorization",""
-                  description: "Automatically categorize and prioritize emails based on content and sender.""
-                },
+                  description: "Automatically categorize and prioritize emails based on content and sender."";
+},
                 {}
                   icon: Settings,""
                   title: "Customizable Templates",""
-                  description: "Create and customize email templates for different scenarios and industries.""
-                },
+                  description: "Create and customize email templates for different scenarios and industries."";
+},
                 {}
                   icon: Users,""
                   title: "CRM Integration",""
-                  description: "Seamless integration with popular CRM systems for customer data management.""
-                },
+                  description: "Seamless integration with popular CRM systems for customer data management."";
+},
                 {}
                   icon: Shield,""
                   title: "Security & Privacy",""
-                  description: "Enterprise-grade security with data encryption and privacy protection.""
-                }
+                  description: "Enterprise-grade security with data encryption and privacy protection."";
+}
               ].map((feature, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">""
@@ -429,48 +429,48 @@ export: { function }export default function AIAutoEmailResponder(...args: []):  
                   title: "Customer Support",""
                   description: "Automated responses to common customer inquiries and support requests.","
                   icon: Users,""
-                  benefits: ["FAQ responses", "Ticket routing", "Support escalation"]
-                },
+                  benefits: ["FAQ responses", "Ticket routing", "Support escalation"];
+},
                 {
 "
 ""
                   title: "Sales & Marketing",""
                   description: "Lead nurturing, follow-ups, and automated sales communication.","
                   icon: Target,""
-                  benefits: ["Lead nurturing", "Follow-ups", "Sales automation"]
-                },
+                  benefits: ["Lead nurturing", "Follow-ups", "Sales automation"];
+},
                 {
 "
 ""
                   title: "Appointment Booking",""
                   description: "Automated scheduling, confirmations, and reminder emails.","
                   icon: Clock,""
-                  benefits: ["Scheduling", "Confirmations", "Reminders"]
-                },
+                  benefits: ["Scheduling", "Confirmations", "Reminders"];
+},
                 {
 "
 ""
                   title: "Order Management",""
                   description: "Order confirmations, shipping updates, and delivery notifications.","
                   icon: Activity,""
-                  benefits: ["Order confirmations", "Shipping updates", "Delivery tracking"]
-                },
+                  benefits: ["Order confirmations", "Shipping updates", "Delivery tracking"];
+},
                 {
 "
 ""
                   title: "Internal Communication",""
                   description: "Team notifications, project updates, and comp announcements.","
                   icon: MessageCircle,""
-                  benefits: ["Team notifications", "Project updates", "Announcements"]
-                },
+                  benefits: ["Team notifications", "Project updates", "Announcements"];
+},
                 {
 "
 ""
                   title: "Feedback Collection",""
                   description: "Automated surveys, review requests, and customer feedback gathering.","
                   icon: BarChart3,""
-                  benefits: ["Surveys", "Review requests", "Feedback collection"]
-                }"
+                  benefits: ["Surveys", "Review requests", "Feedback collection"];
+}"
               ].map((useCase, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">""
@@ -592,44 +592,44 @@ export: { function }export default function AIAutoEmailResponder(...args: []):  
                   title: 'Sales & Marketing',';
                   description: 'Lead nurturing, follow-ups, and automated sales communication.',;
                   icon: Target,';
-                  benefits: ['Lead nurturing', 'Follow-ups', 'Sales automation']
-                },
+                  benefits: ['Lead nurturing', 'Follow-ups', 'Sales automation'];
+},
                 {'
 ';
 '';
                   title: 'Appointment Booking',';
                   description: 'Automated scheduling, confirmations, and reminder emails.',;
                   icon: Clock,';
-                  benefits: ['Scheduling', 'Confirmations', 'Reminders']
-                },
+                  benefits: ['Scheduling', 'Confirmations', 'Reminders'];
+},
                 {'
 ';
 '';
                   title: 'Order Management',';
                   description: 'Order confirmations, shipping updates, and delivery notifications.',;
                   icon: Activity,';
-                  benefits: ['Order confirmations', 'Shipping updates', 'Delivery tracking']
-                },
+                  benefits: ['Order confirmations', 'Shipping updates', 'Delivery tracking'];
+},
                 {'
 ';
 '';
                   title: 'Internal Communication',';
                   description: 'Team notifications, project updates, and comp announcements.',;
                   icon: MessageCircle,';
-                  benefits: ['Team notifications', 'Project updates', 'Announcements']
-                },
+                  benefits: ['Team notifications', 'Project updates', 'Announcements'];
+},
                 {'
 ';
 '';
                   title: 'Feedback Collection',';
                   description: 'Automated surveys, review requests, and customer feedback gathering.',;
                   icon: BarChart3,';
-                  benefits: ['Surveys', 'Review requests', 'Feedback collection']
-                }'
+                  benefits: ['Surveys', 'Review requests', 'Feedback collection'];
+}'
               ].map((useCase, index)  => (''
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300'>''
-                  <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4'>''
-                };
+                  <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4'>'';
+};
               ].map((useCase, index)  => ('''
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300>''
                   <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4>''
@@ -678,29 +678,29 @@ export: { function }export default function AIAutoEmailResponder(...args: []):  
 ""
                   step: "01",""
                   title: "Email Reception",""
-                  description: "AI system receives and analyzes incoming emails in real-time."
-                },
+                  description: "AI system receives and analyzes incoming emails in real-time.";
+},
                 {
 "
 ""
                   step: "02",""
                   title: "Content Analysis",""
-                  description: "Natural language processing analyzes email content and intent."
-                },
+                  description: "Natural language processing analyzes email content and intent.";
+},
                 {
 "
 ""
                   step: "03",""
                   title: "Response Generation",""
-                  description: "AI generates appropriate responses based on context and templates."
-                },
+                  description: "AI generates appropriate responses based on context and templates.";
+},
                 {
 "
 ""
                   step: "04",""
                   title: "Delivery & Logging",""
-                  description: "Automated responses are sent and logged in CRM systems."
-                }"
+                  description: "Automated responses are sent and logged in CRM systems.";
+}"
               ].map((step, index)  => (""
                 <div key={index} className="text-center">""
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">""
@@ -716,26 +716,26 @@ export: { function }export default function AIAutoEmailResponder(...args: []):  
 ""
                   step: "01",""
                   title: "Email Reception",""
-                  description: "AI system receives and analyzes incoming emails in real-time.""
-                },
+                  description: "AI system receives and analyzes incoming emails in real-time."";
+},
                 {}
 ""
                   step: "02",""
                   title: "Content Analysis",""
-                  description: "Natural language processing analyzes email content and intent.""
-                },
+                  description: "Natural language processing analyzes email content and intent."";
+},
                 {}
 ""
                   step: "03",""
                   title: "Response Generation",""
-                  description: "AI generates appropriate responses based on context and templates.""
-                },
+                  description: "AI generates appropriate responses based on context and templates."";
+},
                 {}
 ""
                   step: "04",""
                   title: "Delivery & Logging",""
-                  description: "Automated responses are sent and logged in CRM systems.""
-                }
+                  description: "Automated responses are sent and logged in CRM systems."";
+}
               ].map((step, index)  => (""
                 <div key={index} className="text-center">""
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">""
@@ -1091,16 +1091,16 @@ export: { function }export default function AIAutoEmailResponder(...args: []):  
                   title: "Marketing Tools",""
                   description: "Mailchimp, Constant Contact, and email marketing platforms.","
                   icon: Target,""
-                  features: ["Mailchimp", "Constant Contact", "Email Marketing"]
-                },
+                  features: ["Mailchimp", "Constant Contact", "Email Marketing"];
+},
                 {
 "
 ""
                   title: "Support Systems",""
                   description: "Zendesk, Freshdesk, and customer support platforms.","
                   icon: Users,""
-                  features: ["Zendesk", "Freshdesk", "Support Systems"]
-                }"
+                  features: ["Zendesk", "Freshdesk", "Support Systems"];
+}"
               ].map((integration, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">""
@@ -1171,44 +1171,44 @@ export: { function }export default function AIAutoEmailResponder(...args: []):  
                   title: 'CRM Systems',';
                   description: 'Salesforce, HubSpot, Pipedrive, and other CRM platforms.',;
                   icon: Database,';
-                  features: ['Salesforce', 'HubSpot', 'Pipedrive', 'Custom CRM']
-                },
+                  features: ['Salesforce', 'HubSpot', 'Pipedrive', 'Custom CRM'];
+},
                 {'
 ';
 '';
                   title: 'Business Tools',';
                   description: 'Slack, Teams, Zapier, and other business applications.',;
                   icon: Settings,';
-                  features: ['Slack', 'Teams', 'Zapier', 'API Integration']
-                },
+                  features: ['Slack', 'Teams', 'Zapier', 'API Integration'];
+},
                 {'
 ';
 '';
                   title: 'Analytics Platforms',';
                   description: 'Google Analytics, Mixpanel, and other analytics tools.',;
                   icon: BarChart3,';
-                  features: ['Google Analytics', 'Mixpanel', 'Custom Analytics']
-                },
+                  features: ['Google Analytics', 'Mixpanel', 'Custom Analytics'];
+},
                 {'
 ';
 '';
                   title: 'Marketing Tools',';
                   description: 'Mailchimp, Constant Contact, and email marketing platforms.',;
                   icon: Target,';
-                  features: ['Mailchimp', 'Constant Contact', 'Email Marketing']
-                },
+                  features: ['Mailchimp', 'Constant Contact', 'Email Marketing'];
+},
                 {'
 ';
 '';
                   title: 'Support Systems',';
                   description: 'Zendesk, Freshdesk, and customer support platforms.',;
                   icon: Users,';
-                  features: ['Zendesk', 'Freshdesk', 'Support Systems']
-                }'
+                  features: ['Zendesk', 'Freshdesk', 'Support Systems'];
+}'
               ].map((integration, index)  => (''
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300'>''
-                  <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4'>''
-                };
+                  <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4'>'';
+};
               ].map((integration, index)  => ('''
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300>''
                   <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4>''

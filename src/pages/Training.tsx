@@ -52,7 +52,7 @@ export default function Training() {;
       price: "$149",;
       featured: false;
     }
-  ];
+  ]
 ;
   const trainingTypes = [;
     {;
@@ -72,7 +72,7 @@ export default function Training() {;
     {;
       title: "Certification Programs",;
       description: "Comprehensive programs with industry-recognized certificates",;
-      icon: Award,;
+      icon: Award,
       count: 8,;
       color: "from-purple-500 to-pink-500";
     },;
@@ -100,7 +100,7 @@ import { motion } from &apos;framer-motion';
 import { SEO } from &apos;../components/SEO';
 import { 
   GraduationCap, Video, BookOpen, Users, Clock, 
-  Star, Award, Play, Download, ArrowRight
+  Star, Award, Play, Download, ArrowRight;
 } from &apos;lucide-react';&apos;&apos;
 
 export default function Training() {}
@@ -117,7 +117,7 @@ export default function Training() {}
 import { motion} from 'framer-motion';
 import { SEO} from '../components/SEO';
 import { 
-  GraduationCap, Video, BookOpen, Users, Clock, Star, Award, Play, Download, ArrowRight
+  GraduationCap, Video, BookOpen, Users, Clock, Star, Award, Play, Download, ArrowRight;
 } from 'lucide-react';
 export default function Training() {
   const courses = [
@@ -128,8 +128,8 @@ export default function Training() {
       description: "Learn the basics of artificial intelligence and machine learning", duration: "8 hours",
       level: "Beginner", rating: 4.8,
       students: 1250, price: "$199",
-      featured: true
-    }, { id: 2}, {
+      featured: true;
+}, { id: 2}, {
       id: 2,
       title: &quot;Quantum Computing Masterclass&quot;,
       description: &quot;Advanced quantum computing concepts and applications&quot;,
@@ -138,8 +138,8 @@ export default function Training() {
       rating: 4.9,
       students: 456,
       price: &quot;$399&quot;,
-      featured: true
-    },
+      featured: true;
+},
     {
       id: 3,
       title: &quot;Micro SaaS Development&quot;,
@@ -152,14 +152,14 @@ export default function Training() {
       title: "Quantum Computing Masterclass", description: "Advanced quantum computing concepts and applications",
       duration: "12 hours", level: "Advanced",
       rating: 4.9, students: 456,
-      price: "$399", featured: true
-    },
+      price: "$399", featured: true;
+},
     { id: 3, title: "Micro SaaS Development",
       description: "Build and launch successful micro SaaS applications", duration: "10 hours",
       level: "Intermediate", rating: 4.7,
       students: 892, price: "$299",
-      featured: false
-    }, { id: 4}, {
+      featured: false;
+}, { id: 4}, {
       id: 4,
       title: &quot;Cybersecurity Essentials&quot;,
       description: &quot;Essential cybersecurity practices for modern applications&quot;,
@@ -168,17 +168,17 @@ export default function Training() {
       rating: 4.6,
       students: 678,
       price: &quot;$149&quot;,
-      featured: false
-    }
-  ];&quot;
+      featured: false;
+}
+  ]&quot;
 
       title: "Cybersecurity Essentials", description: "Essential cybersecurity practices for modern applications",
       duration: "6 hours", level: "Beginner",
       rating: 4.6, students: 678,
-      price: "$149", featured: false
-    }
+      price: "$149", featured: false;
+}
     };
-  ];
+  ]
   const trainingTypes = [
     { title: "Online Courses", description: "Self-paced learning with video content and exercises",
     {
@@ -211,20 +211,20 @@ export default function Training() {
   {
       title: "Online Courses", description: "Self-paced learning with video content and exercises",
       icon: Video, count: 25,
-      color: "from-blue-500 to-cyan-500"
-    }, { title: "Live Workshops",
+      color: "from-blue-500 to-cyan-500";
+}, { title: "Live Workshops",
       description: "Interactive sessions with expert instructors", icon: Users,
-      count: 12, color: "from-green-500 to-emerald-500"
-    },
+      count: 12, color: "from-green-500 to-emerald-500";
+},
     { title: "Certification Programs", description: "Comprehensive programs with industry-recognized certificates",
       icon: Award, count: 8,
-      color: "from-purple-500 to-pink-500"
-    }, { title: "Corporate Training",
+      color: "from-purple-500 to-pink-500";
+}, { title: "Corporate Training",
       description: "Customized training solutions for enterprise teams", icon: GraduationCap,
-      count: 15, color: "from-orange-500 to-red-500"
-    }
+      count: 15, color: "from-orange-500 to-red-500";
+}
     };
-  ];
+  ]
 ;
   return (;
     <>;

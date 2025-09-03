@@ -23,8 +23,8 @@ class DeploymentAutomator {
         encoding: 'utf8', 
         cwd: this.projectRoot,
         stdio: options.silent ? 'pipe' : 'inherit',
-        ...options 
-      });
+        ...options ;
+});
       return result;
     } catch (error) {
       this.log(`Command failed: ${command} - ${error.message}`, 'ERROR');
@@ -40,7 +40,7 @@ class DeploymentAutomator {
       { name: 'TypeScript Check', command: 'npx tsc --noEmit' },
       { name: 'Linting Check', command: 'npx eslint . --ext .js,.jsx,.ts,.tsx' },
       { name: 'Build Test', command: 'yarn build' }
-    ];
+    ]
     
     for (const check of checks) {
       const result = await this.runCommand(check.command, { silent: true });
@@ -75,8 +75,8 @@ class DeploymentAutomator {
         this.deploymentSteps.push('ℹ️  No changes to commit');
         return false;
       }
-      
-    } catch (error) {
+      ;
+} catch (error) {
       this.log(`❌ Failed to commit changes: ${error.message}`, 'ERROR');
       this.errors.push(error.message);
       return false;
@@ -126,8 +126,8 @@ class DeploymentAutomator {
         this.deploymentSteps.push('ℹ️  Already on main branch');
         return true;
       }
-      
-    } catch (error) {
+      ;
+} catch (error) {
       this.log(`❌ Failed to merge to main: ${error.message}`, 'ERROR');
       this.errors.push(error.message);
       return false;
@@ -143,8 +143,8 @@ class DeploymentAutomator {
         totalSteps: this.deploymentSteps.length,
         successfulSteps: this.deploymentSteps.filter(step => step.startsWith('✅')).length,
         failedSteps: this.deploymentSteps.filter(step => step.startsWith('❌')).length,
-        totalErrors: this.errors.length
-      }
+        totalErrors: this.errors.length;
+}
     };
     
     const reportPath = path.join(this.projectRoot, 'deployment-report.json');
@@ -203,8 +203,8 @@ class DeploymentAutomator {
         this.log('\\n⚠️  DEPLOYMENT COMPLETED WITH SOME ISSUES');
         this.log('Please review the errors and fix them manually.');
       }
-      
-    } catch (error) {
+      ;
+} catch (error) {
       this.log(`💥 Fatal error in deployment: ${error.message}`, 'ERROR');
       await this.generateDeploymentReport();
       process.exit(1);

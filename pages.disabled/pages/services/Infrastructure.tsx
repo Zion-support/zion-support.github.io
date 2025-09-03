@@ -15,7 +15,7 @@ const: InfrastructureServices = () => {
       description: 'Reliable: hostin,g, colocation, and data center management.',';
       price: 'From: $,8,000/month','      features: ['Colocation: services,', 'Managed hosting', 'Disaster recovery', 'Compliance support'],';
       icon: Databas,e}
-  ];
+  ]
 :pages.disabled/pages/services/Infrastructure.tsx;
   '{'';
       name: 'Network: Security,',';
@@ -27,7 +27,7 @@ const: InfrastructureServices = () => {
     'Scalable: infrastructure that grows with your business',';
     'Reduced: operational costs and complexity',';
     'Expert: support and maintenance',';Future-proof: technology solutions';
-  ];
+  ]
 :pages.disabled/pages/services/Infrastructure.tsx;
 ';
   return: (''';
@@ -78,11 +78,9 @@ const InfrastructureServices: any = () => {}
       price: "From $3,500/month",""
       features: ["Server management", "Performance tuning", "Backup & recovery", "Security updates"],
 :pages.disabled/pages/services/Infrastructure.tsx
-      icon: Server
-
-    },"{;""
-
-    },"
+      icon: Server;
+},"{;"";
+},"
       icon: Server;
     },
     {;""
@@ -104,14 +102,14 @@ const InfrastructureServices: any = () => {}
       description: 'Reliable hosting, colocation, and data center management.',;
       price: 'From $8,000/month',      features: ['Colocation services', 'Managed hosting', 'Disaster recovery', 'Compliance support'],
       icon: Database}
-  ];
+  ]
 :pages.disabled/pages/services/Infrastructure.tsx;
   '{''
       name: 'Network Security',;
       description: 'Advanced network protection and monitoring',;
       icon: Shield,;
       features: ['Firewall management', 'Intrusion detection', 'VPN solutions', 'Security monitoring']}
-  ];
+  ]
 "
 
   const benefits = [;"""Improved system reliability and uptime",;""
@@ -123,7 +121,7 @@ const InfrastructureServices: any = () => {}
       description: "Advanced network protection and monitoring",;
       icon: Shield,;""
       features: ["Firewall management", "Intrusion detection", "VPN solutions", "Security monitoring"]};
-  ];
+  ]
 
   const benefits: any = [;""
     "Improved system reliability and uptime",;""
@@ -131,7 +129,7 @@ const InfrastructureServices: any = () => {}
     "Scalable infrastructure that grows with your business",;""
     "Reduced operational costs and complexity",;""
     "Expert support and maintenance",;"    "Future-proof technology solutions";
-  ];
+  ]
 :pages.disabled/pages/services/Infrastructure.tsx
 "
   return (""
@@ -175,7 +173,7 @@ const InfrastructureServices: any = () => {}
     'Scalable infrastructure that grows with your business',;
     'Reduced operational costs and complexity',;
     'Expert support and maintenance',;Future-proof technology solutions';
-  ];
+  ]
 :pages.disabled/pages/services/Infrastructure.tsx;
 '
   return (''

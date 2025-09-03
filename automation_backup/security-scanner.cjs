@@ -16,8 +16,8 @@ class SecurityScanner {
     console.log(`Security scan completed. Score: ${this.securityScore}/100`);
     return {
       score: this.securityScore,
-      vulnerabilities: this.vulnerabilities,
-    };
+      vulnerabilities: this.vulnerabilities,;
+};
   }
 
   scanDependencies() {
@@ -25,8 +25,8 @@ class SecurityScanner {
       const packageJson = JSON.parse(fs.readFileSync(`package.json`, 'utf8'));
       const dependencies = {
         ...packageJson.dependencies,
-        ...packageJson.devDependencies,
-      };
+        ...packageJson.devDependencies,;
+};
 
       // Check for known vulnerable packages;
       const vulnerablePackages = ['lodash', 'moment']; // Example;
@@ -36,8 +36,8 @@ class SecurityScanner {
             type: 'vulnerable-dependency',
             package: pkg,
             version: version,
-            severity: 'medium',
-          });
+            severity: 'medium',;
+});
           this.securityScore -= 10;
         }
       }
@@ -51,19 +51,19 @@ class SecurityScanner {
       {
         pattern: /eval\(/,
         description: 'Use of eval() function',
-        severity: 'high',
-      },
+        severity: 'high',;
+},
       {
         pattern: /innerHTML/,
         description: 'Potential XSS vulnerability',
-        severity: 'medium',
-      },
+        severity: 'medium',;
+},
       {
         pattern: /localStorage/,
         description: 'Sensitive data in localStorage',
-        severity: 'low',
-      },
-    ];
+        severity: 'low',;
+},
+    ]
 
     this.scanFiles(patterns);
   }
@@ -77,8 +77,8 @@ class SecurityScanner {
         this.vulnerabilities.push({
           type: 'missing-security-headers',
           description: 'No security headers configured',
-          severity: 'medium',
-        });
+          severity: 'medium',;
+});
         this.securityScore -= 15;
       }
     }
@@ -123,8 +123,8 @@ class SecurityScanner {
           type: 'code-vulnerability',
           file: filePath,
           description: pattern.description,
-          severity: pattern.severity,
-        });
+          severity: pattern.severity,;
+});
 
         if (pattern.severity === 'high') this.securityScore -= 20;
         else if (pattern.severity === 'medium') this.securityScore -= 10;

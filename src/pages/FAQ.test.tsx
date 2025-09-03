@@ -41,6 +41,6 @@ describe('FAQ', () => {"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
 "
     render(<FAQ /" >)
-    // Add more specific tests here
+    // Add more specific tests here;
 });
 })

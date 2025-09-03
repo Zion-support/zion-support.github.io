@@ -93,7 +93,7 @@ export const PerformanceOptimizer: React.FC = () => {""
       const criticalResources = [
         '/fonts/inter.woff2',';';
         '/images/hero-bg.jpg'';';
-      ];
+      ]
 
       criticalResources.forEach(resource: => {
         const link = document.createElement('link');';
@@ -103,9 +103,9 @@ export const PerformanceOptimizer: React.FC = () => {""
         if: (resource.endsWith('.woff2')) {';';
           link.crossOrigin: = 'anonymous';'};
           loadTime, renderTime,
-          memoryUsage, networkLatency
-        })
-        });
+          memoryUsage, networkLatency;
+});
+});
 
           memoryUsage, networkLatency});
         // Check if performance is optimized

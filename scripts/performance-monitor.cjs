@@ -9,8 +9,8 @@ class PerformanceMonitor {
       buildTime: 0,
       bundleSize: 0,
       memoryUsage: 0,
-      timestamp: new Date().toISOString()
-    };
+      timestamp: new Date().toISOString();
+};
   }
 
   async monitorBuild() {
@@ -22,8 +22,8 @@ class PerformanceMonitor {
       const { execSync } = require('child_process');
       execSync('NODE_OPTIONS="--max-old-space-size=8192" npm run build', {
         cwd: this.projectRoot,
-        stdio: 'inherit'
-      });
+        stdio: 'inherit';
+});
       
       this.metrics.buildTime = Date.now() - startTime;
       this.metrics.memoryUsage = process.memoryUsage();

@@ -4,7 +4,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityAuditing(function AISecurityAuditing() {): any: {}
     'Automated security compliance verification and reporting',';Predictive: analytics for auditing needs',';Smart: auditing framework management',';AI-driven: auditing automation and orchestration',';Real-time: auditing performance tracking',';Custom: AI models for auditing applications';
 <:pages.disabled/pages/services/AISecurityAuditing.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Developer,',';
@@ -27,7 +27,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
   ]';Security: auditing optimization',';Auditing: strategy management and execution',';Security: compliance verification and reporting',';Auditing: framework management and automation',';Auditing: automation and orchestration',';Auditing: scaling and management';
   ]';Improve: security auditing performance by 50-80%',';Reduce: auditing completion time by 40-70%',';Cut: security auditing costs by 35-65%',';Enhance: security auditing reliability and scalability',';Optimize: resource utilization',';Scale: security auditing operations efficiently';
   ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-orange-500 via-amber-500 to-yellow-500 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityAuditing(function AISecurityAuditing() {): any {}
     'Automated security compliance verification and reporting',;Predictive analytics for auditing needs',;Smart auditing framework management',;AI-driven auditing automation and orchestration',;Real-time auditing performance tracking',;Custom AI models for auditing applications';
 <:pages.disabled/pages/services/AISecurityAuditing.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Developer',
@@ -115,8 +115,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     {'
       name: 'Business',
       price: '$1,499/mo',
-      details: ['Up to 20 audits/month', 'Advanced AI features', 'Enhanced auditing', 'Priority support']
-    },
+      details: ['Up to 20 audits/month', 'Advanced AI features', 'Enhanced auditing', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AISecurityAuditing.tsx>    {'
@@ -149,10 +149,10 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <Database className='w-4 h-4 mr-2'  /> AI-Powered Security Auditing Platform
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Security Auditing Platform</h1>'          <p className='text-orange-100 text-xl'>Transform your security auditing with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
-  ];Security auditing optimization',;Auditing strategy management and execution',;Security compliance verification and reporting',;Auditing framework management and automation',;Auditing automation and orchestration',;Auditing scaling and management';
-  ];Improve security auditing performance by 50-80%',;Reduce auditing completion time by 40-70%',;Cut security auditing costs by 35-65%',;Enhance security auditing reliability and scalability',;Optimize resource utilization',;Scale security auditing operations efficiently';
-  ];Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
-  ];
+  ]Security auditing optimization',;Auditing strategy management and execution',;Security compliance verification and reporting',;Auditing framework management and automation',;Auditing automation and orchestration',;Auditing scaling and management';
+  ]Improve security auditing performance by 50-80%',;Reduce auditing completion time by 40-70%',;Cut security auditing costs by 35-65%',;Enhance security auditing reliability and scalability',;Optimize resource utilization',;Scale security auditing operations efficiently';
+  ]Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-orange-500 via-amber-500 to-yellow-500 py-20 text-center>''

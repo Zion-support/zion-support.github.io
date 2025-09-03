@@ -29,7 +29,7 @@ function fixFinalSemicolons(filePath) {
       { pattern: /type="([^"]*);"/g, replacement: 'type="$1"' },
       // Fix import statements that got corrupted;
       { pattern: /}\s*import\s+/g, replacement: '}\n\nimport ' },
-    ];
+    ]
 
     fixes.forEach(fix => {
       const newContent = content.replace(fix.pattern, fix.replacement);

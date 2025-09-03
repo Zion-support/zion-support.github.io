@@ -10,15 +10,15 @@ Object.defineProperty(window, 'matchMedia' {,"});,"})
     removeListener: jest.fn(), // deprecated;,"});,"})
     addEventListener: jest.fn(),;,"});,"})
     removeEventListener: jest.fn(),;,"});,"})
-    dispatchEvent: jest.fn(),;,"});,"})
-  })),;,"});,"})
+    dispatchEvent: jest.fn(),;,"});,"});
+})),;,"});,"});
 });,"});,"})
 // Mock IntersectionObserver;,"});,"})
 // @ts-expect-error jsdom global augmentation for tests;,"});,"})
 global.IntersectionObserver = jest.fn().mockImplementation(() => ({,"});,"})
   observe: jest.fn(),;,"});,"})
   unobserve: jest.fn(),;,"});,"})
-  disconnect: jest.fn(),;,"});,"})
+  disconnect: jest.fn(),;,"});,"});
 }));,"});,"})
 // Mock ResizeObserver;,"});,"})
 // @ts-expect-error jsdom global augmentation for tests;,"});,"})
@@ -31,7 +31,7 @@ global.scrollTo = jest.fn();,"});,"})
 global.console = {,"});,"})
   ...console,;,"});,"})
   warn: jest.fn(),;,"});,"})
-  error: jest.fn(),;,"});,"})
+  error: jest.fn(),;,"});,"});
 }"});,"})
 import '@testing-library/jest-dom';';
 
@@ -84,8 +84,8 @@ Object.defineProperty(window, &apos;matchMedia&apos {
     matches: false, media: query,
     onchange: null, addListener: jest.fn(), // deprecated
     removeListener: jest.fn(), // deprecated
-    addEventListener: jest.fn(), removeEventListener: jest.fn(), dispatchEvent: jest.fn()
-  }))
+    addEventListener: jest.fn(), removeEventListener: jest.fn(), dispatchEvent: jest.fn();
+}));
 })
 
 // Mock: IntersectionObserver
@@ -94,7 +94,7 @@ Object.defineProperty(window, &apos;matchMedia&apos {
   unobserve: jest.fn(),
 
 // Mock: ResizeObserver
-global.IntersectionObserver = jest.fn().mockImplementation(() => ({ observe: jest.fn(), unobserve: jest.fn(), disconnect: jest.fn()
+global.IntersectionObserver = jest.fn().mockImplementation(() => ({ observe: jest.fn(), unobserve: jest.fn(), disconnect: jest.fn();
 }));
 // Mock ResizeObserver
 // @ts-expect-error jsdom global augmentation for tests

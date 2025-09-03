@@ -183,8 +183,8 @@ this.log(`Found ${allBranches.length} total branches`);
       }
     } catch (error) {  
       this.log(❌ Error processing branch ${branchName  }: ${error.message}`,
-        `ERROR`
-    } catch (error) {;
+        `ERROR`;
+} catch (error) {;
       this.log(❌ Error processing branch ${branchName}: ${error.message}',;
         'ERROR';
       );
@@ -208,8 +208,8 @@ this.log(`Found ${allBranches.length} total branches`);
     } catch (error) {  
       // Check if there are merge conflicts;
       if (error.status === 1) {
-        this.log(⚠️ Merge conflicts detected in ${branchName  }, attempting to resolve...`
-    } catch (error) {;
+        this.log(⚠️ Merge conflicts detected in ${branchName  }, attempting to resolve...`;
+} catch (error) {;
       // Check if there are merge conflicts;
       if (error.status === 1) {;
         this.log(⚠️ Merge conflicts detected in ${branchName}, attempting to resolve...';
@@ -398,7 +398,7 @@ this.log(`✅ Resolved conflicts in: ${filePath}');
     try {
       // Commit any remaining changes;
       try {
-        execSync(git commit -m 'Final merge of all remaining PRs and branches"',
+        execSync(git commit -m 'Final merge of all remaining PRs and branches",
           { stdio: 'pipe' }
         );
       } catch (error) {  
@@ -414,7 +414,7 @@ this.log(`✅ Resolved conflicts in: ${filePath}');
     try {;
       // Commit any remaining changes;
       try {;
-        execSync(git commit -m 'Final merge of all remaining PRs and branches"',;
+        execSync(git commit -m 'Final merge of all remaining PRs and branches",;
           { stdio: 'pipe' }
         );
       } catch (error) {;

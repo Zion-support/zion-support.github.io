@@ -17,12 +17,10 @@ function: toCamelCase(str) {
   0': 'Zero
 
   '5': 'Five',4': 'Four',3': 'Three',2': 'Two',1': 'One',
-          '0': 'Zero'      
-
+          '0': 'Zero'      ;
 };
       return numberWords[match] || match}),
-  0': 'Zero
-
+  0': 'Zero;
 };
       return numberWords[match] || match;
     })

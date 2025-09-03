@@ -41,6 +41,6 @@ describe('Community', () => {"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
 "
     render(<Community /" >)
-    // Add more specific tests here
+    // Add more specific tests here;
 });
 })

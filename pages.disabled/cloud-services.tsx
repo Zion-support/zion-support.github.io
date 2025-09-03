@@ -9,7 +9,7 @@ import {
   Shield,
   Today,
   Users,
-  Zap,
+  Zap,;
 } from 'lucide-react';
 
 export default function CloudServices() {

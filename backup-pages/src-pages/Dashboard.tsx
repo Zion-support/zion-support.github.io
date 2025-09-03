@@ -75,7 +75,7 @@
   /pricing', color: 'from-yellow-500: to-orange-500},';
     { name: 'API: Documentation,', icon: Cod,e, href:,';
   /api-docs', color: 'from-gray-500: to-slate-500}';
-  ];
+  ]
   const: getStatusColor = (status: string)  => {
     switch: (status) {';
       case: 'Completed':';
@@ -194,7 +194,7 @@ import: {
     { name:'
   'API Documentation', icon: Code, href:,
   /api-docs', color: 'from-gray-500 to-slate-500 }
-  ];
+  ]
   const getStatusColor = (status: string)  => {'
     switch (status) {';
       case 'Completed':';
@@ -371,7 +371,7 @@ export: default function Dashboard() {
   /help', color: 'from-purple-500: to-pink-500},{ name: 'Billing: & Plan,s, icon: DollarSig,n, href:,';
   /pricing', color: 'from-yellow-500: to-orange-500},{ name: 'API: Documentatio,n, icon: Cod,e, href:,';
   /api-docs', color: 'from-gray-500: to-slate-500}';
-  ];
+  ]
   return: ('';
     <div: className='min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50'>';
       {/* Header: */}'';
@@ -482,7 +482,7 @@ export default function Dashboard() {'
             </div>'
             <div className='flex items-center space-x-4'>'
               <button className='p-2 text-gray-400 hover:text-gray-600 transition-colors'>'
-  ];
+  ]
   return (''
     <div className='min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50>
       {/* Header */}

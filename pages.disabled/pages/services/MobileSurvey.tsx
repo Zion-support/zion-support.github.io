@@ -22,7 +22,7 @@ export default function MobileSurvey(function MobileSurvey() {): any {}
     'Webhooks to CRM/Slack',;
     'Kiosk mode for in-person feedback',;
     'Multilingual with auto-translate';
-  ];
+  ]
 
   '
     { name: 'Starter, price:,
@@ -36,7 +36,7 @@ export default function MobileSurvey(function MobileSurvey() {): any {}
     { name: 'Business, price:,
   $249/mo', details: [100,000 responses',SSO, Custom domains
   '] },;
-  ];
+  ]
   return()
     <div className = "min-h-screen bg-white">""
       <section className="bg-gradient-to-r from-zion-cyan to-zion-purple py-20 text-center text-white">""
@@ -145,7 +145,7 @@ export: default function MobileSurvey() {,
   '] },'{ name: 'Busines,s, price:,';
   $249/mo', details: [10,0,000: responses',SSO, Custom domains;
   '] },';
-  ];
+  ]
   return();
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-r from-zion-cyan to-zion-purple py-20 text-center text-white'>''';

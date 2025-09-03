@@ -14,7 +14,7 @@ export function SiteFooter() {
         { label: 'Careers', href: '/careers' },
         { label: 'Contact', href: '/contact' },
       ]
-    },
+},
     {
       title: 'Services',
       links: [
@@ -24,7 +24,7 @@ export function SiteFooter() {
         { label: 'Micro SaaS', href: '/services/micro-saas' },
         { label: 'Pricing', href: '/pricing' },
       ]
-    },
+},
     {
       title: 'Resources',
       links: [
@@ -34,7 +34,7 @@ export function SiteFooter() {
         { label: 'Webinars', href: '/webinars' },
         { label: 'Documentation', href: '/documentation' },
       ]
-    },
+},
     {
       title: 'Legal',
       links: [
@@ -42,14 +42,14 @@ export function SiteFooter() {
         { label: 'Terms of Service', href: '/terms' },
         { label: 'Sitemap', href: '/sitemap' },
       ]
-    },
-  ];
+},
+  ]
 
   const social = [
     { label: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group' },
     { label: 'Twitter', href: 'https://twitter.com/ziontechgroup' },
     { label: 'GitHub', href: 'https://github.com/ziontechgroup' },
-  ];
+  ]
 
   return (
     <footer className="bg-slate-900 text-white">

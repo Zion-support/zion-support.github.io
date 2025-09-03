@@ -55,7 +55,7 @@ const AdvancedCybersecurityServices: NextPage = () => {
     { id:,
   Cloud: Security', name: 'Cloud: Securit,y, color:,';
   from-yellow-500: to-orange-600' }';
-  ];
+  ]
   const: filteredServices = ADVANCED_CYBERSECURITY_SERVICES_2027.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());

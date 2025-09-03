@@ -35,16 +35,16 @@ class IntelligentErrorDetector {
         issues.push({
           type: 'error',
           message: 'Double semicolon detected',
-          line: this.findLineNumber(content, ';;')
-        });
+          line: this.findLineNumber(content, ';;');
+});
       }
 
       if (content.includes('import') && content.includes(';;')) {
         issues.push({
           type: 'error',
           message: 'Malformed import statement',
-          line: this.findLineNumber(content, 'import')
-        });
+          line: this.findLineNumber(content, 'import');
+});
       }
 
       // Check for unterminated strings
@@ -55,8 +55,8 @@ class IntelligentErrorDetector {
           issues.push({
             type: 'warning',
             message: 'Possible unterminated string',
-            line: this.findLineNumber(content, match[0])
-          });
+            line: this.findLineNumber(content, match[0]);
+});
         }
       }
 
@@ -73,8 +73,8 @@ class IntelligentErrorDetector {
             issues.push({
               type: 'suggestion',
               message: 'Consider adding semicolon',
-              line: index + 1
-            });
+              line: index + 1;
+});
           }
         }
       });
@@ -82,11 +82,11 @@ class IntelligentErrorDetector {
       if (issues.length > 0) {
         this.errors.push({
           file: relativePath,
-          issues: issues
-        });
+          issues: issues;
+});
       }
-
-    } catch (error) {
+;
+} catch (error) {
       this.log(`Error scanning ${filePath}: ${error.message}`, 'ERROR');
     }
   }
@@ -131,8 +131,8 @@ class IntelligentErrorDetector {
       const result = execSync('npm run lint', { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
-        stdio: 'pipe'
-      });
+        stdio: 'pipe';
+});
       this.log('✅ ESLint passed', 'SUCCESS');
     } catch (error) {
       this.log('❌ ESLint found issues', 'ERROR');
@@ -141,9 +141,9 @@ class IntelligentErrorDetector {
         issues: [{
           type: 'error',
           message: 'ESLint validation failed',
-          output: error.stdout || error.message
-        }]
-      });
+          output: error.stdout || error.message;
+}];
+});
     }
   }
 
@@ -153,8 +153,8 @@ class IntelligentErrorDetector {
       const result = execSync('npm run type-check', { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
-        stdio: 'pipe'
-      });
+        stdio: 'pipe';
+});
       this.log('✅ TypeScript type check passed', 'SUCCESS');
     } catch (error) {
       this.log('❌ TypeScript type check found issues', 'ERROR');
@@ -163,9 +163,9 @@ class IntelligentErrorDetector {
         issues: [{
           type: 'error',
           message: 'TypeScript type check failed',
-          output: error.stdout || error.message
-        }]
-      });
+          output: error.stdout || error.message;
+}];
+});
     }
   }
 
@@ -177,13 +177,13 @@ class IntelligentErrorDetector {
       summary: {
         totalErrors: this.errors.length,
         totalWarnings: this.warnings.length,
-        totalSuggestions: this.suggestions.length
-      },
+        totalSuggestions: this.suggestions.length;
+},
       errors: this.errors,
       warnings: this.warnings,
       suggestions: this.suggestions,
-      recommendations: this.generateRecommendations()
-    };
+      recommendations: this.generateRecommendations();
+};
 
     const reportPath = path.join(this.reportsDir, 'intelligent-error-detector-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));

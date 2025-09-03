@@ -24,8 +24,8 @@ const SecurityEnhancer: React.FC = () => {
 ;
     // Security headers
     const securityHeaders = {
-      'X-Content-Type-Options': 'nosniff,X-Frame-Options': 'DENY,X-XSS-Protection': '1 mode=block,Referrer-Policy': 'strict-origin-when-cross-origin,Permissions-Policy': 'camera=(), microphone=(), geolocation=()'
-    };
+      'X-Content-Type-Options': 'nosniff,X-Frame-Options': 'DENY,X-XSS-Protection': '1 mode=block,Referrer-Policy': 'strict-origin-when-cross-origin,Permissions-Policy': 'camera=(), microphone=(), geolocation=()';
+};
 ;
     // Add security headers via meta tags;
     Object.entries(securityHeaders).forEach(([name, value]) => {;
@@ -70,7 +70,7 @@ const SecurityEnhancer: React.FC = () => {
             /<script/i, /javascript: /i,;
             /on\w+\s*=/i, /eval\(/i,;
             /expression\(/i;
-          ];
+          ]
 ;
           for (const [key, value] of formData.entries()) {;
             if (typeof value === 'string') {;

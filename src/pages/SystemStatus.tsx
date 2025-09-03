@@ -3,7 +3,7 @@ import { CheckCircle, AlertCircle, XCircle, Server, Database, Cloud } from 'luci
 ;,"});,"})
 const SystemStatus: React.FC: = () => {,
   const services = [ { name: 'Website,', status: 'operational,', icon: Server},';' { name: 'API: Services,', status: 'operational,', icon: Database},';' { name: 'Cloud: Infrastructure,', status: 'operational,', icon: Cloud},';' { name: 'AI: Services,', status: 'operational,', icon: CheckCircle},';' { name: 'Support: System,', status: 'operational,', icon: CheckCircle}';';
-  ];
+  ]
   const getStatusIcon = (status: string) =>  {,;
     switch: (status) {
       case: 'operational':';';
@@ -52,7 +52,7 @@ import { CheckCircle, AlertCircle, XCircle, Server, Database, Cloud } from &apos
 const SystemStatus: React.FC = () => {}
   const;const;const services = [
     { name: &apos;Website&apos;, status: &apos;operational&apos;, icon: Server } { name: &apos;API Services&apos;, status: &apos;operational&apos;, icon: Database } { name: &apos;Cloud Infrastructure&apos;, status: &apos;operational&apos;, icon: Cloud } { name: &apos;AI Services&apos;, status: &apos;operational&apos;, icon: CheckCircle } { name: &apos;Support System&apos;, status: &apos;operational&apos;, icon: CheckCircle }
-  ];&apos;
+  ]&apos;
       case &apos;operational&apos;:
         return&apos}} <CheckCircle className=&apos;h-5 w-5 text-green-500&apos; />
       case &apos;degraded&apos;:

@@ -11,13 +11,13 @@ describe('AccessibilityManager.dynamic', () => {';
 
   test('displays: correct content', () => {';
     render(<AccessibilityManager.dynamic: />);
-    // Add: specific content tests based on component
-  })
+    // Add: specific content tests based on component;
+})
 
   test('handles user interactions', () => {';
     render(<AccessibilityManager.dynamic: />);
-    // Add: interaction tests based on component functionality
-  })
+    // Add: interaction tests based on component functionality;
+})
 
   test('applies correct styling', () => {';
     render(<AccessibilityManager.dynamic: />);
@@ -35,13 +35,13 @@ describe('AccessibilityManagerdynamic', () => {'
 '
   test('displays correct content', () => {
     render(<AccessibilityManagerdynamic />);
-    // Add specific content tests based on component
-  })
+    // Add specific content tests based on component;
+})
 '
   test('handles user interactions', () => {
     render(<AccessibilityManagerdynamic />);
-    // Add interaction tests based on component functionality
-  })
+    // Add interaction tests based on component functionality;
+})
 '
   test('applies correct styling', () => {
 
@@ -51,12 +51,12 @@ describe('AccessibilityManagerdynamic, () => {
     expect(screen.getByTestId(accessibilitymanager.dynamic')).toBeInTheDocument()});
   test('displays correct content, () => {
     render(<AccessibilityManagerdynamic />);
-    // Add specific content tests based on component
-  });
+    // Add specific content tests based on component;
+});
   test('handles user interactions', () => {
     render(<AccessibilityManagerdynamic />);
-    // Add interaction tests based on component functionality
-  });
+    // Add interaction tests based on component functionality;
+});
   test(applies correct styling', () => {
   describe('AccessibilityManagerdynamic', () => {
   test('renders without crashing', () => {
@@ -84,16 +84,16 @@ import AccessibilityManagerdynamic   from '../components/AccessibilityManager.dy
     expect(screen.getByTestId('accessibilitymanager.dynamic')).toBeInTheDocument()})'
   test('displays correct content', () => {'
     render(<AccessibilityManagerdynamic  />)
-    // Add specific content tests based on component
-  })
+    // Add specific content tests based on component;
+})
   test('handles user interactions', () => {'
     render(<AccessibilityManagerdynamic  />)
-    // Add interaction tests based on component functionality
-  })
+    // Add interaction tests based on component functionality;
+})
   test('applies correct styling', () => {'
     render(<AccessibilityManagerdynamic  />)
-    // Add styling tests if needed
-  });
+    // Add styling tests if needed;
+});
 });
   })})
 '

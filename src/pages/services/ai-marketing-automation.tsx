@@ -20,7 +20,7 @@ import {
   Globe, Clock,
   Send, UserPlus,
   UserCheck, Activity,
-  DollarSign;", "
+  DollarSign;", ";
 } from 'lucide-react';
 
 const AIMarketingAutomation: React.FC = () => {
@@ -64,7 +64,7 @@ const AIMarketingAutomation: React.FC = () => {
       title: 'Predictive Analytics', ""
       description: 'Predict customer behavior and optimize campaigns for maximum ROI',""
       color: 'from-indigo-500 to-blue-500'}
-  ];
+  ]
 
   const marketingChannels = [
     {""
@@ -95,7 +95,7 @@ const AIMarketingAutomation: React.FC = () => {
       benefits: ['Cross-platform', 'Dynamic ads', 'Audience insights', 'Conversion tracking'], ""
       pricing: '$59/month',""
       color: 'from-yellow-500 to-orange-500'}
-  ];
+  ]
 
   const benefits = [""
     'Increase conversions by 200%', ""
@@ -134,7 +134,7 @@ const AIMarketingAutomation: React.FC = () => {
       title: 'Predictive Analytics,
       description: 'Predict customer behavior and optimize campaigns for maximum ROI,
       color: 'from-indigo-500 to-blue-500'}
-  ];
+  ]
 
   const marketingChannels = [
   {"
@@ -165,7 +165,7 @@ const AIMarketingAutomation: React.FC = () => {
       benefits: ['Cross-platform,Dynamic ads,Audience insights,Conversion tracking'],"
       pricing: '$59/month,
       color: 'from-yellow-500 to-orange-500'}
-  ];
+  ]
 
   const benefits = ["
     'Increase conversions by 200%,

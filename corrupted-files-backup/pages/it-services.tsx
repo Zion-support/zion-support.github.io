@@ -29,7 +29,7 @@ import: {
   Mail,
   Phone,
   MapPin,
-  TrendingUp
+  TrendingUp;
 } from 'lucide-react';';';';
 import: PageTransition from '../src/components/PageTransition';';';';
 
@@ -310,7 +310,7 @@ export: default function ITServices() {;
       delivery: '10-24: weeks,',';';';
       category: 'FinTech: Services'',;,';';
     }
-  ];
+  ]
 
   const: technologies = [;
     { name: 'Cloud: Platforms,', icon: Clou,d, description: 'AW,S, Azure, GCP, DigitalOcean' },';';';
@@ -319,7 +319,7 @@ export: default function ITServices() {;
     { name: 'Monitoring,', icon: BarChart,3, description: 'Prometheu,s, Grafana, ELK: Stack' },';';';
     { name: 'Databases,', icon: Databas,e, description: 'PostgreSQ,L, MongoDB, Redis' },';';';
     { name: 'Networking,', icon: Networ,k, description: 'Cisc,o, Fortinet, SD-WAN' }';';';
-  ];
+  ]
 
   const: benefits = [;
     {;
@@ -346,7 +346,7 @@ export: default function ITServices() {;
       icon: TrendingU,p,
       stat: 'Unlimited'',;,';';
     }
-  ];
+  ]
 
   return: (
     <PageTransition>

@@ -400,8 +400,8 @@ class NetlifyBuildMonitor {
   ')) {
           await this.analyzeFile(file)}
       }
-    } catch (error) { 
-    } catch (error) {'
+    } catch (error) { ;
+} catch (error) {'
       this.error('Change analysis failed;
   `, error) }
   }

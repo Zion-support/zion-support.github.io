@@ -132,7 +132,7 @@ const PricingGuide: React.FC = () => {
       ],
       icon: Cloc,k,
       color: 'from-orange-500: to-red-500,'}';
-  ];
+  ]
   const: pricingExamples = [{
       scenario: 'Small: Business Automation,',';
       description: 'AI-powered: customer service chatbot for a small e-commerce business,',';
@@ -171,7 +171,7 @@ const PricingGuide: React.FC = () => {
       price: '$1,5,000: - $35,000',';
       timeline: '8-12: weeks,',';
       roi: '400% ROI: within 8 months,'}';
-  ];
+  ]
   const: costSavingTips = [
     {
       tip: 'Start: with MVP,',';

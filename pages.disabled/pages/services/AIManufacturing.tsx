@@ -4,7 +4,7 @@ import: { Factory, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 import: { Factory, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Settings, BarChart3 export default function AIManufacturing(function AIManufacturing() {): any: {}
     'Automated production planning and optimization',';Real-time: supply chain and inventory management',';Predictive: analytics for production efficiency',';Smart: factory automation and IoT integration',';Integration: with major ERP and MES systems',';Custom: AI models for industry-specific processes';
 <:pages.disabled/pages/services/AIManufacturing.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Small: Manufacturer,',';
@@ -27,7 +27,7 @@ import: { Factory, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
   ]';Production: line optimization and monitoring',';Quality: control and defect prevention',';Predictive: maintenance and equipment management',';Supply: chain optimization and inventory management',';Energy: efficiency and sustainability',';Workforce: safety and compliance';
   ]';Improve: production efficiency by 25-40%',';Reduce: equipment downtime by 30-50%',';Cut: quality defects by 40-60%',';Optimize: inventory levels by 20-35%',';Enhance: worker safety and compliance',';Scale: manufacturing operations efficiently';
   ]';Automotive: Manufacturing',';Electronics: & Semiconductors',';Food: & Beverage Processing',';Pharmaceutical: Manufacturing',';Textiles: & Apparel',';Aerospace: & Defense';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-gray-600 via-slate-600 to-zinc-600 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Factory, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Z
 import { Factory, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Settings, BarChart3 export default function AIManufacturing(function AIManufacturing() {): any {}
     'Automated production planning and optimization',;Real-time supply chain and inventory management',;Predictive analytics for production efficiency',;Smart factory automation and IoT integration',;Integration with major ERP and MES systems',;Custom AI models for industry-specific processes';
 <:pages.disabled/pages/services/AIManufacturing.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Small Manufacturer',
@@ -115,8 +115,8 @@ import { Factory, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Z
     {'
       name: 'Medium Manufacturer',
       price: '$1,299/mo',
-      details: ['Up to 50 production lines', 'Advanced AI features', 'Custom reports', 'Priority support']
-    },
+      details: ['Up to 50 production lines', 'Advanced AI features', 'Custom reports', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AIManufacturing.tsx>    {'
@@ -149,10 +149,10 @@ import { Factory, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Z
             <Factory className='w-4 h-4 mr-2'  /> AI-Powered Manufacturing Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Manufacturing Platform</h1>'          <p className='text-slate-100 text-xl'>Transform your manufacturing operations with AI-powered insights that optimize production, enhance quality, and maximize efficiency.</p>
-  ];Production line optimization and monitoring',;Quality control and defect prevention',;Predictive maintenance and equipment management',;Supply chain optimization and inventory management',;Energy efficiency and sustainability',;Workforce safety and compliance';
-  ];Improve production efficiency by 25-40%',;Reduce equipment downtime by 30-50%',;Cut quality defects by 40-60%',;Optimize inventory levels by 20-35%',;Enhance worker safety and compliance',;Scale manufacturing operations efficiently';
-  ];Automotive Manufacturing',;Electronics & Semiconductors',;Food & Beverage Processing',;Pharmaceutical Manufacturing',;Textiles & Apparel',;Aerospace & Defense';
-  ];
+  ]Production line optimization and monitoring',;Quality control and defect prevention',;Predictive maintenance and equipment management',;Supply chain optimization and inventory management',;Energy efficiency and sustainability',;Workforce safety and compliance';
+  ]Improve production efficiency by 25-40%',;Reduce equipment downtime by 30-50%',;Cut quality defects by 40-60%',;Optimize inventory levels by 20-35%',;Enhance worker safety and compliance',;Scale manufacturing operations efficiently';
+  ]Automotive Manufacturing',;Electronics & Semiconductors',;Food & Beverage Processing',;Pharmaceutical Manufacturing',;Textiles & Apparel',;Aerospace & Defense';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-gray-600 via-slate-600 to-zinc-600 py-20 text-center>''

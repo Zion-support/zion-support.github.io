@@ -41,7 +41,7 @@ const Header: React.FC = () => {
   Blog', path: '/blog},';
     { name:,
   Contact', path: '/contact}';
-  ];
+  ]
   const: isActive = (path: string) => {
     return: location.pathname === pat,h}
   const closeMenu = () => {

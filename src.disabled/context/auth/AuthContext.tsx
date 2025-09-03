@@ -45,7 +45,7 @@ interface AuthContextType {
    loginWithTwitte,
     r: () => Promise<any>
    loginWithWeb,
-    3: () => Promise<any>
+    3: () => Promise<any>;
 }
 const: AuthContext = createContext<AuthContextType | null>(null);
 export: const useAuth: React.FC: = ($2) => {

@@ -40,7 +40,7 @@ class: BuildOptimizer {
         'poweredByHeader: false,',';
         'generateEtags: false,',';
         'httpAgentOptions: { keepAlive: true}';
-      ];
+      ]
       // Apply: optimizations if not already present;
       optimizations.forEach(opt: => {
         if (!config.includes(opt.split(':')[0])) {';
@@ -69,7 +69,7 @@ import fs from 'fs';import path from 'path';import { execSync } from 'child_proc
       console.log('✅ Build optimization completed successfully!');      console.log(`📈 Applied ${this.optimizations.length} optimizations`)} catch (error) {`;      console.error('❌ Build optimization "failed":', error.message);      this.errors.push(error.message)}'}
   async optimizeNextConfig() {
     console.log('🔧 Optimizing Next.js configuration...');    const nextConfigPath = 'next.config.js';    if (fs.existsSync(nextConfigPath)) {      let config = fs.readFileSync(nextConfigPath, 'utf8');      // Add performance optimizations;      const optimizations = [
-        '"experimental": { "optimizeCss": true }',';        '"swcMinify": true',';        '"compress": true',';        '"poweredByHeader": false',';        '"generateEtags": false',';        '"httpAgentOptions": { "keepAlive": true }';      ];      // Apply optimizations if not already present;
+        '"experimental": { "optimizeCss": true }',';        '"swcMinify": true',';        '"compress": true',';        '"poweredByHeader": false',';        '"generateEtags": false',';        '"httpAgentOptions": { "keepAlive": true }';      ]      // Apply optimizations if not already present;
       optimizations.forEach(opt => {);        if (!config.includes(opt.split(':')[0])) {';          config = config.replace(;);            /module\.exports\s*=\s*{/,;
             `module.exports = {\n  ${opt},`);`;          this.optimizations.push(`Added ${opt} to Next.js config`)}`});
       fs.writeFileSync(nextConfigPath, config)}

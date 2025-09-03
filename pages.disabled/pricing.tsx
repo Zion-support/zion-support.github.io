@@ -20,8 +20,8 @@ export default function Pricing() {
       ],
       popular: false,
       cta: 'Get Started',
-      href: '/contact',
-    },
+      href: '/contact',;
+},
     {
       name: 'Professional',
       price: '$7,999',
@@ -39,8 +39,8 @@ export default function Pricing() {
       ],
       popular: true,
       cta: 'Most Popular',
-      href: '/contact',
-    },
+      href: '/contact',;
+},
     {
       name: 'Enterprise',
       price: 'Custom',
@@ -60,59 +60,59 @@ export default function Pricing() {
       ],
       popular: false,
       cta: 'Contact Sales',
-      href: '/contact',
-    },
-  ];
+      href: '/contact',;
+},
+  ]
 
   const addOns = [
     {
       name: 'Additional Support Hours',
       price: '$150',
       period: 'per hour',
-      description: 'Extra support hours for your project needs',
-    },
+      description: 'Extra support hours for your project needs',;
+},
     {
       name: 'Priority Support',
       price: '$500',
       period: 'per month',
-      description: 'Faster response times and dedicated support',
-    },
+      description: 'Faster response times and dedicated support',;
+},
     {
       name: 'Custom Integrations',
       price: '$2,000',
       period: 'per integration',
-      description: 'Custom third-party integrations and APIs',
-    },
+      description: 'Custom third-party integrations and APIs',;
+},
     {
       name: 'Training & Documentation',
       price: '$1,000',
       period: 'per session',
-      description: 'Team training and comprehensive documentation',
-    },
-  ];
+      description: 'Team training and comprehensive documentation',;
+},
+  ]
 
   const faqs = [
     {
       question: 'Can I change my plan at any time?',
       answer:
-        'Yes, you can upgrade or downgrade your plan at any time. Changes will be prorated and take effect immediately.',
-    },
+        'Yes, you can upgrade or downgrade your plan at any time. Changes will be prorated and take effect immediately.',;
+},
     {
       question: 'What is included in the support hours?',
       answer:
-        'Support hours include bug fixes, minor updates, technical assistance, and general maintenance tasks.',
-    },
+        'Support hours include bug fixes, minor updates, technical assistance, and general maintenance tasks.',;
+},
     {
       question: 'Do you offer custom pricing for large projects?',
       answer:
-        'Yes, we offer custom pricing for enterprise clients and large-scale projects. Contact us for a personalized quote.',
-    },
+        'Yes, we offer custom pricing for enterprise clients and large-scale projects. Contact us for a personalized quote.',;
+},
     {
       question: 'What payment methods do you accept?',
       answer:
-        'We accept all major credit cards, bank transfers, and can accommodate enterprise billing arrangements.',
-    },
-  ];
+        'We accept all major credit cards, bank transfers, and can accommodate enterprise billing arrangements.',;
+},
+  ]
 
   return (
     <>
@@ -151,8 +151,8 @@ export default function Pricing() {
                   className={`relative bg-white border rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow ${
                     plan.popular
                       ? 'border-blue-500 ring-2 ring-blue-500'
-                      : 'border-gray-200'
-                  }`}
+                      : 'border-gray-200';
+}`}
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -190,8 +190,8 @@ export default function Pricing() {
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-colors ${
                       plan.popular
                         ? 'bg-blue-600 text-white hover:bg-blue-700'
-                        : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-                    }`}
+                        : 'bg-gray-100 text-gray-900 hover:bg-gray-200';
+}`}
                   >
                     {plan.cta}
                   </Link>

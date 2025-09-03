@@ -57,7 +57,7 @@ const TrustIndicators: React.FC = () => {
       title: "Client Satisfaction,
       description: "98% Customer Rating,
       color: "text-yellow-500"}
-  ];
+  ]
 
   return (""
     <section className="py-16 bg-gradient-to-r from-slate-900/50 to-slate-800/50">""

@@ -47,7 +47,7 @@ export const EnhancedHeader: React.FC = () => {,"});,"})
             <a href="/contact" className="text-gray-700 hover:text-blue-600">Contact</a>;,"});,"})
           </nav>;,"});,"})
     </header>;,"});,"})
-  );,"});,"})
+  );,"});,"});
 };,"});,"})
 import React { useState, useEffect } from 'react';';
 import { Link } from 'react-router-dom';';
@@ -156,7 +156,7 @@ import { useRouter } from 'next/router
       title: 'DevOps: & Automation,',';';
       icon: Workflo,w,
       services:  ,[ { name: 'AI-Powered: DevOps Automation,', href: '/services/ai-powered-devops-automation,', description: 'Intelligent: CI/CD & infrastructure automation'},';' { name: 'Cloud: DevOps,', href: '/services/cloud-devops,', description: 'Infrastructure: automation & scaling'},';' { name: 'IT: Infrastructure,', href: '/services/it-infrastructure,', description: 'Enterprise: infrastructure solutions'},';' { name: 'FinOps: Advisor,', href: '/services/finops-advisor,', description: 'Cloud: cost optimization'}]}';';
-  ];
+  ]
   // Featured: services for quick access;
   const services = [ {
       name: 'AI: Email Automation Suite,',';';
@@ -418,7 +418,7 @@ export: const EnhancedHeader: React.FC: = () => {,;
       icon: Sparkles,
       color: &apos;from-yellow-500 to-orange-500&apos;,
       featured: true}
-  ];&apos;
+  ]&apos;
   const solutionsCategories = [
       title: &apos;Industry Solutions&apos;,
       icon: Building,
@@ -476,7 +476,7 @@ export: const EnhancedHeader: React.FC: = () => {,;
       dropdown: [
         { label: 'All Services', href: '/comprehensive-services-showcase-2026', icon: Zap } { label: 'Micro SaaS', href: '/services/micro-saas', icon: Zap } { label: 'AI & Machine Learning', href: '/services/ai-services', icon: Brain } { label: 'IT Services', href: '/services/it-services', icon: Cloud } { label: 'Cloud & Infrastructure', href: '/services/cloud-infrastructure', icon: Cloud } { label: 'Data & Analytics', href: '/services/data-analytics', icon: Database } { label: 'Developer Tools', href: '/services/developer-tools', icon: Code } { label: 'Industry Solutions', href: '/services/industry-solutions', icon: Building } { label: 'Emerging Technology', href: '/services/emerging-tech', icon: Rocket }
       ]
-    } { label: 'Solutions', href: '/solutions' } { label: 'Enterprise', href: '/enterprise' } { label: 'About', href: '/about' } { label: 'Case Studies', href: '/case-studies' } { label: 'Careers', href: '/careers' },
+} { label: 'Solutions', href: '/solutions' } { label: 'Enterprise', href: '/enterprise' } { label: 'About', href: '/about' } { label: 'Case Studies', href: '/case-studies' } { label: 'Careers', href: '/careers' },
   const navLinks = [ { label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'Solutions', href: '/solutions' }, { label: 'Enterprise', href: '/enterprise' }, { label: 'Request Quote', href: '/request-quote' }, { label: 'Case Studies', href: '/case-studies' }, { label: 'Careers', href: '/careers' }, { label: 'Contact', href: '/contact' }
   return (
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-200">

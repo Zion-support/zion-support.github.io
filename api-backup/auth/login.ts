@@ -61,8 +61,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       return res
         .status(400)
         .json({ error: 'Email and password are required.' });
-ursor/automate-test-fix-improve-and-merge-code-99d1
-    }
+ursor/automate-test-fix-improve-and-merge-code-99d1;
+}
 
     // Attempt to sign in with Supabase
    code?: strin,g}

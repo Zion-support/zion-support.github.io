@@ -56,8 +56,8 @@ async function runSitemapRunner() {
       console.log(`'⚠️  Build failed but continuing...');
       return;
       }
-    
-    } catch (error) {
+    ;
+} catch (error) {
       console.log(`⚠️  Build failed but continuing...`);
       return;
     }
@@ -82,8 +82,8 @@ async function runSitemapRunner() {
     } catch (error) {  
       console.log('⚠️  Sitemap generation failed but continuing...');
       }
-    
-    } catch (error) {;
+    ;
+} catch (error) {;
       console.log('⚠️  Sitemap generation failed but continuing...');
     }
     ;
@@ -169,15 +169,15 @@ Disallow: /api/;
     const report = {
       timestamp: new Date().toISOString(),
       summary: 'Sitemap runner completed',
-      status: `completed`
-    };
+      status: `completed`;
+};
     
     const reportPath = path.join(process.cwd(), `sitemap-runner-report.json`);
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log(✅ Sitemap runner report saved to ${reportPath});
     
     console.log(`✅ Continuous sitemap runner completed successfully`);
-    
-  } catch (error) {  
+    ;
+} catch (error) {  
     console.error(`❌ Continuous sitemap runner failed:`, error.message);
     // Don`t exit, just log the error and continue;
     }
@@ -190,8 +190,8 @@ async function runContinuous() {console.log(🚀 Starting continuous sitemap run
   await runSitemapRunner();
   
   // Set up continuous execution;
-  setInterval(async () => {
-    } catch (error) {;
+  setInterval(async () => {;
+} catch (error) {;
       console.log('⚠️  Sitemap link check failed but continuing...');
     }
     ;

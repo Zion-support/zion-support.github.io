@@ -4,7 +4,7 @@ import: { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
 import: { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Building, BarChart3 export default function AIRealEstate(function AIRealEstate() {): any: {}
     'Automated market trend forecasting',';Predictive: analytics for investment opportunities',';Smart: contract automation and management',';Virtual: property tours and 3D visualization',';Integration: with major real estate platforms',';Custom: AI models for local market insights';
 <:pages.disabled/pages/services/AIRealEstate.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Individual: Agent,',';
@@ -27,7 +27,7 @@ import: { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
   ]';Residential: property valuation and sales',';Commercial: real estate investment analysis',';Property: management and optimization',';Market: research and trend analysis',';Investment: portfolio management',';Development: project feasibility studies';
   ]';Improve: property valuation accuracy by 25-40%',';Reduce: time-to-sale by 30-50%',';Increase: commission revenue by 20-35%',';Optimize: pricing strategies for maximum profit',';Enhance: client satisfaction and retention',';Scale: operations without additional staff';
   ]';Residential: Real Estate',';Commercial: Real Estate',';Property: Management',';Real: Estate Investment',';Development: & Construction',';Property: Technology';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-amber-600 via-orange-600 to-red-600 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
 import { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Building, BarChart3 export default function AIRealEstate(function AIRealEstate() {): any {}
     'Automated market trend forecasting',;Predictive analytics for investment opportunities',;Smart contract automation and management',;Virtual property tours and 3D visualization',;Integration with major real estate platforms',;Custom AI models for local market insights';
 <:pages.disabled/pages/services/AIRealEstate.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Individual Agent',
@@ -115,8 +115,8 @@ import { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
     {'
       name: 'Small Agency',
       price: '$599/mo',
-      details: ['Up to 500 properties', 'Advanced AI features', 'Custom reports', 'Priority support']
-    },
+      details: ['Up to 500 properties', 'Advanced AI features', 'Custom reports', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AIRealEstate.tsx>    {'
@@ -149,10 +149,10 @@ import { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
             <Home className='w-4 h-4 mr-2'  /> AI-Powered Real Estate Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Real Estate Platform</h1>'          <p className='text-orange-100 text-xl'>Transform your real estate business with AI-powered insights that enhance property valuation, optimize pricing, and accelerate sales.</p>
-  ];Residential property valuation and sales',;Commercial real estate investment analysis',;Property management and optimization',;Market research and trend analysis',;Investment portfolio management',;Development project feasibility studies';
-  ];Improve property valuation accuracy by 25-40%',;Reduce time-to-sale by 30-50%',;Increase commission revenue by 20-35%',;Optimize pricing strategies for maximum profit',;Enhance client satisfaction and retention',;Scale operations without additional staff';
-  ];Residential Real Estate',;Commercial Real Estate',;Property Management',;Real Estate Investment',;Development & Construction',;Property Technology';
-  ];
+  ]Residential property valuation and sales',;Commercial real estate investment analysis',;Property management and optimization',;Market research and trend analysis',;Investment portfolio management',;Development project feasibility studies';
+  ]Improve property valuation accuracy by 25-40%',;Reduce time-to-sale by 30-50%',;Increase commission revenue by 20-35%',;Optimize pricing strategies for maximum profit',;Enhance client satisfaction and retention',;Scale operations without additional staff';
+  ]Residential Real Estate',;Commercial Real Estate',;Property Management',;Real Estate Investment',;Development & Construction',;Property Technology';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-amber-600 via-orange-600 to-red-600 py-20 text-center>''

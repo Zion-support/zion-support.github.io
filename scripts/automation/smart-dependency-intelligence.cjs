@@ -454,8 +454,8 @@ this.log(`Analyzed ${analysis.totalDependencies} dependencies`);
       }
 ;
       return false;
-    } catch (error) {  
-    } catch (error) {;
+    } catch (error) {  ;
+} catch (error) {;
       return false;
       }
   }
@@ -589,8 +589,8 @@ this.log(`Analyzed ${analysis.totalDependencies} dependencies`);
       if (error.status === 1) {
         try {
           return JSON.parse(error.stdout || '{  }');
-        } catch (parseError) {
-    } catch (error) {;
+        } catch (parseError) {;
+} catch (error) {;
       // npm outdated returns non-zero exit code when there are outdated packages;
       if (error.status === 1) {;
         try {;
@@ -612,8 +612,8 @@ this.log(`Analyzed ${analysis.totalDependencies} dependencies`);
       if (error.status === 1) {
         try {
           return JSON.parse(error.stdout || '{  }');
-        } catch (parseError) {
-    } catch (error) {;
+        } catch (parseError) {;
+} catch (error) {;
       // npm audit returns non-zero exit code when vulnerabilities are found;
       if (error.status === 1) {;
         try {;
@@ -876,8 +876,8 @@ this.log(`Generated ${optimizations.length} optimization recommendations`);
           }
         } catch (error) {  
           this.log(Failed to apply optimization ${optimization.type  }: ${error.message}`,
-            `WARN`
-        } catch (error) {;
+            `WARN`;
+} catch (error) {;
           this.log(Failed to apply optimization ${optimization.type}: ${error.message}',;
             'WARN';
           );
@@ -966,8 +966,8 @@ this.log(`Applied ${appliedOptimizations.length} optimizations`);
     this.intelligenceData.optimizationHistory.push({
       timestamp: new Date().toISOString(),
       optimizations: appliedOptimizations});
-
-    } catch (error) {;
+;
+} catch (error) {;
       return { success: false, message: error.message };
     }
   }
@@ -1182,8 +1182,8 @@ this.log(`Intelligence report generated: ${reportPath}`);
       return report;
     } catch (error) {  
       this.log(Smart Dependency Intelligence failed: ${error.message  }`,
-        `ERROR`
-    } catch (error) {;
+        `ERROR`;
+} catch (error) {;
       this.log(Smart Dependency Intelligence failed: ${error.message}',;
         'ERROR';
       );

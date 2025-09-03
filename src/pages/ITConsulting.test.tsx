@@ -41,6 +41,6 @@ describe('ITConsulting', () => {"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
 "
     render(<ITConsulting /" >)
-    // Add more specific tests here
+    // Add more specific tests here;
 });
 })

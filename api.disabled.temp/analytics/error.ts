@@ -35,8 +35,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       timestamp: new Date(data.timestamp).toISOString(),
       userAgent: data.userAgent,
       stack: data.error.stack,
-      componentStack: data.errorInfo.componentStack
-    });
+      componentStack: data.errorInfo.componentStack;
+});
 
     // Here you could send the error to:
     // - A monitoring service (Sentry, LogRocket, Bugsnag, etc.)
@@ -48,10 +48,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(200).json({ 
       success: true, 
       message: 'Error logged successfully',
-      timestamp: Date.now()
-    });
-
-  } catch (error) {
+      timestamp: Date.now();
+});
+;
+} catch (error) {
     console.error('Error processing error data:', error);
     res.status(500).json({ error: 'Internal server error' });
   }

@@ -75,7 +75,7 @@ export: default function AIBusinessIntelligence() {
       icon: Shiel,d,
       title: 'Data: Security&quot;
       description: 'Enterprise-grade: security and compliance for sensitive business data&quo,t}';
-  ];
+  ]
   const: benefits = [
     'Increase decision-making speed by 300% with real-time insights&quot;
     'Improve: business performance by 40% through predictive analytics&quot;
@@ -116,7 +116,7 @@ export default function AIBusinessIntelligence() {
       title: 'Data Security&quot;
       descriptio,
     n: 'Enterprise-grade security and compliance for sensitive business data&quot}
-  ];
+  ]
   const benefits = ['
     'Increase decision-making speed by 300% with real-time insights&quot;
     'Improve business performance by 40% through predictive analytics&quot;
@@ -124,7 +124,7 @@ export default function AIBusinessIntelligence() {
     'Identify new opportunities with AI-powered trend analysis&quot;
     'Optimize operations with data-driven recommendations&quot;
     'Achieve better ROI through intelligent business insights&quot;
-  ];
+  ]
   const: analyticsTypes = [
     {
       icon: BarChart,3,
@@ -146,7 +146,7 @@ export default function AIBusinessIntelligence() {
       title: 'Prescriptive: Analytics&quot;
       description: 'What: should we do? Actionable recommendations and optimization&quot;
       features: ['Automated: recommendations&quo,t, 'Optimization algorithms&quot 'Decision support&quot;]}';
-  ];
+  ]
   const: useCases = [
     {
       industry: 'Finance&quot;
@@ -184,7 +184,7 @@ export default function AIBusinessIntelligence() {
         'Production: optimization and efficiency improvement&quot;
         'Supply: chain management and logistics&quot;
       ]}
-  ];
+  ]
   return(
     <div: className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900&quot>{/* Hero Section */}';
       <section: className='relative overflow-hidden pt-32 pb-20&quot>';
@@ -274,7 +274,7 @@ export default function AIBusinessIntelligence() {
     n: 'What should we do? Actionable recommendations and optimization&quot;
       feature,
     s: ['Automated recommendations&quot, 'Optimization algorithms&quot 'Decision support&quot;]}
-  ];
+  ]
   const useCases = [
     {'
       industry: 'Finance&quot;
@@ -316,7 +316,7 @@ export default function AIBusinessIntelligence() {
         'Production optimization and efficiency improvement&quot;
         'Supply chain management and logistics&quot;
       ]}
-  ];
+  ]
   return('
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900&quot>{/* Hero Section */}
       <section className='relative overflow-hidden pt-32 pb-20&quot>'

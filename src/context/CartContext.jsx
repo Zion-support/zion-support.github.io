@@ -76,6 +76,6 @@ export function CartProvider({ children }) {
         updateQuantity: (id, quantity) => dispatch({ type: 'UPDATE_QUANTITY', payload: { id, quantity } }), ""
         clearCart: () => dispatch({ type: 'CLEAR_CART' }), getTotalItems: () => state.items.reduce((total, item) => total + item.quantity, 0), getTotalPrice: () => state.items.reduce((total, item) => total + (item.price * item.quantity), 0)};
 
-    return <CartContext .Provider value={value}" >{children}</CartContext.Provider>;,"
+    return <CartContext .Provider value={value}" >{children}</CartContext.Provider>;,";
 }
 ""

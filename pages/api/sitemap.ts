@@ -12,7 +12,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     '/auth', '/auth/callback',
     '/auth/forgot-password', '/auth/reset-password',
     '/auth/verify'
-  ];
+  ]
 
   const blogPages = [
     '/blog/5g-technology-and-its-impact-on-iot',
@@ -21,7 +21,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     '/blog/augmented-reality-in-enterprise-applications',
     '/blog/blockchain-technology-in-modern-business-solutions',
     '/blog/cloud-native-architecture-best-practices'
-  ];
+  ]
 
   const servicePages = [
     '/services/ai-autonomous-business-operations-platform',
@@ -32,7 +32,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     '/services/blockchain-solutions',
     '/services/cloud-infrastructure',
     '/services/iot-platforms'
-  ];
+  ]
 
   const allPages = [...staticPages, ...blogPages, ...servicePages];
 

@@ -41,6 +41,6 @@ describe('ComprehensiveZionTechPricing2025', () => {"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
 "
     render(<ComprehensiveZionTechPricing2025 /" >)
-    // Add more specific tests here
+    // Add more specific tests here;
 });
 })

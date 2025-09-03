@@ -14,8 +14,8 @@ class DeploymentAutomation {
       environment: process.env.NODE_ENV || 'development',
       branch: this.getCurrentBranch(),
       commit: this.getCurrentCommit(),
-      status: 'pending'
-    };
+      status: 'pending';
+};
     
     // Ensure logs directory exists
     if (!fs.existsSync(this.logDir)) {
@@ -58,16 +58,16 @@ class DeploymentAutomation {
         cwd: this.projectRoot,
         encoding: 'utf8',
         stdio: options.silent ? 'pipe' : 'inherit',
-        ...options
-      });
+        ...options;
+});
       
       const duration = Date.now() - startTime;
       this.deploymentResults.steps.push({
         name,
         status: 'success',
         duration,
-        command
-      });
+        command;
+});
       
       this.log(`Completed: ${name} (${duration}ms)`);
       return result;
@@ -78,8 +78,8 @@ class DeploymentAutomation {
         status: 'failed',
         duration,
         command,
-        error: error.message
-      });
+        error: error.message;
+});
       
       this.log(`Failed: ${name} - ${error.message}`, 'ERROR');
       throw error;
@@ -171,8 +171,8 @@ class DeploymentAutomation {
       await this.runStep('Save PM2 configuration', 'pm2 save');
       
       this.log('Production deployment completed successfully');
-      
-    } catch (error) {
+      ;
+} catch (error) {
       this.log(`Production deployment failed: ${error.message}`, 'ERROR');
       throw error;
     }
@@ -193,8 +193,8 @@ class DeploymentAutomation {
       );
       
       this.log('Staging deployment completed successfully');
-      
-    } catch (error) {
+      ;
+} catch (error) {
       this.log(`Staging deployment failed: ${error.message}`, 'ERROR');
       throw error;
     }
@@ -223,8 +223,8 @@ class DeploymentAutomation {
       }
       
       this.log('Post-deployment tests completed');
-      
-    } catch (error) {
+      ;
+} catch (error) {
       this.log(`Post-deployment tests failed: ${error.message}`, 'WARN');
     }
   }
@@ -261,8 +261,8 @@ class DeploymentAutomation {
       branch: this.deploymentResults.branch,
       commit: this.deploymentResults.commit,
       environment: this.deploymentResults.environment,
-      duration: this.deploymentResults.steps.reduce((sum, step) => sum + step.duration, 0)
-    };
+      duration: this.deploymentResults.steps.reduce((sum, step) => sum + step.duration, 0);
+};
     
     // Save notification (in real app, you'd send to Slack, email, etc.)
     const notificationFile = path.join(this.logDir, 'deployment-notifications.json');
@@ -314,8 +314,8 @@ class DeploymentAutomation {
       this.log(`✅ Deployment to ${environment} completed successfully`);
       
       return this.deploymentResults;
-      
-    } catch (error) {
+      ;
+} catch (error) {
       this.deploymentResults.status = 'failed';
       this.log(`❌ Deployment failed: ${error.message}`, 'ERROR');
       

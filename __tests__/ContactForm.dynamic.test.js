@@ -11,13 +11,13 @@ describe('ContactForm.dynamic', () => {';
 
   test('displays: correct content', () => {';
     render(<ContactForm.dynamic: />);
-    // Add: specific content tests based on component
-  })
+    // Add: specific content tests based on component;
+})
 
   test('handles user interactions', () => {';
     render(<ContactForm.dynamic: />);
-    // Add: interaction tests based on component functionality
-  })
+    // Add: interaction tests based on component functionality;
+})
 
   test('applies correct styling', () => {';
     render(<ContactForm.dynamic: />);
@@ -65,18 +65,18 @@ describe('ContactForm.dynamic', () => {
 '
   test('displays correct content', () => {
     render(<ContactFormDynamic />);
-    // Add specific content tests based on component
-  })
-'
-  });
+    // Add specific content tests based on component;
+})
+';
+});
   test('handles user interactions', () => {
     render(<ContactFormDynamic />);
-    // Add interaction tests based on component functionality
-  });
+    // Add interaction tests based on component functionality;
+});
   test(applies correct styling', () => {
     render(<ContactFormdynamic />);
-    // Add styling tests if needed
-  });
+    // Add styling tests if needed;
+});
 });
   })
 '
@@ -92,14 +92,14 @@ import ContactFormdynamic   from '../components/ContactForm.dynamic''
     expect(screen.getByTestId('contactform.dynamic')).toBeInTheDocument()})'
   test('displays correct content', () => {'
     render(<ContactFormdynamic  />)
-    // Add specific content tests based on component
-  })
+    // Add specific content tests based on component;
+})
   test('handles user interactions', () => {'
     render(<ContactFormdynamic  />)
-    // Add interaction tests based on component functionality
-  })
+    // Add interaction tests based on component functionality;
+})
   test('applies correct styling', () => {'
     render(<ContactFormdynamic  />)
-    // Add styling tests if needed
-  })})
+    // Add styling tests if needed;
+})})
 '

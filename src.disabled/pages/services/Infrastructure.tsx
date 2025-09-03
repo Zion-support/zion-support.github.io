@@ -18,7 +18,7 @@ const: InfrastructureServices = () => {
       description: 'Reliable: hostin,g, colocation, and data center management.',';
       price: 'From: $,8,000/month','      features: ['Colocation: services,', 'Managed hosting', 'Disaster recovery', 'Compliance support'],';
       icon: Databas,e}
-  ];
+  ]
 :pages.disabled/pages/services/Infrastructure.tsx;
   '{'';
       name: 'Network: Security,',';
@@ -31,7 +31,7 @@ const: InfrastructureServices = () => {
     'Scalable: infrastructure that grows with your business',';
     'Reduced: operational costs and complexity',';
     'Expert: support and maintenance',';Future-proof: technology solutions';
-  ];
+  ]
 :pages.disabled/pages/services/Infrastructure.tsx;
 ';
   return: (''';
@@ -78,20 +78,20 @@ const InfrastructureServices = () => {
       description: 'Reliable hosting, colocation, and data center management.',;
       price: 'From $8,000/month',      features: ['Colocation services', 'Managed hosting', 'Disaster recovery', 'Compliance support'],
       icon: Database}
-  ];
+  ]
 :pages.disabled/pages/services/Infrastructure.tsx;
   '{''
       name: 'Network Security',;
       description: 'Advanced network protection and monitoring',;
       icon: Shield,;
       features: ['Firewall management', 'Intrusion detection', 'VPN solutions', 'Security monitoring']}
-  ];
+  ]
   const benefits = [''Improved system reliability and uptime',;
     'Enhanced security and compliance',;
     'Scalable infrastructure that grows with your business',;
     'Reduced operational costs and complexity',;
     'Expert support and maintenance',;Future-proof technology solutions';
-  ];
+  ]
 :pages.disabled/pages/services/Infrastructure.tsx;
 ';
   return ('''
@@ -119,7 +119,7 @@ const InfrastructureServices = () => {
       description: 'Reliable hosting, colocation, and data center management.,;
       price: 'From $8,000/month,      features: ['Colocation services,Managed hosting,Disaster recovery,Compliance support'],
       icon: Database}
-  ];
+  ]
 :pages.disabled/pages/services/Infrastructure.tsx;
   '{'
       name: 'Network Security,;
@@ -128,7 +128,7 @@ const InfrastructureServices = () => {
       features: ['Firewall management,Intrusion detection,VPN solutions,Security monitoring']}
   ]';
   const benefits = [''Improved system reliability and uptime',Enhanced security and compliance',Scalable infrastructure that grows with your business',Reduced operational costs and complexity',Expert support and maintenance,;Future-proof technology solutions';
-  ];
+  ]
 :pages.disabled/pages/services/Infrastructure.tsx;
 '
   return (''

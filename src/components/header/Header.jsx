@@ -86,8 +86,8 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
           backgroundColor: '#000000', // Default dark background'
       ? {primaryColor,
           backgroundColor: '#000000', // Default dark background
-          textColor: '#ffffff', // Default light text
-        }
+          textColor: '#ffffff', // Default light text;
+}
       : undefined);
       
   const headerStyle = effectiveTheme
@@ -119,8 +119,8 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${
         isScrolled`
           ? 'bg-zion-blue-dark/95 backdrop-blur-xl border-b border-zion-purple/30 shadow-2xl shadow-zion-purple/20''
-          : 'bg-zion-blue-dark/90 backdrop-blur-md border-b border-zion-purple/20''
-      }`}
+          : 'bg-zion-blue-dark/90 backdrop-blur-md border-b border-zion-purple/20'';
+}`}
       style={headerStyle}
     >
       {/* Animated background pattern */}`
@@ -284,5 +284,5 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
           setIsMobileMenuOpen(false)}}
     </header>
   )}"
-  )}"`"
+  )}"`";
 }"`

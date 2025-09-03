@@ -137,8 +137,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
           type='application/ld+json'
 :components.disabled/components/seo/SEOHead.tsx
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredData)
-          }}
+            __html: JSON.stringify(structuredData);
+}}
         />
       )}
       {/* Default Structured Data for Organization */}
@@ -169,8 +169,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
               'foundingDate': '2020',
               'address': {
                 '@type': 'PostalAddress',
-                'addressCountry': 'US'
-              },
+                'addressCountry': 'US';
+},
               'contactPoint': {
 :components.disabled/components/seo/SEOHead.tsx
                 '@type': 'ContactPoint',
@@ -183,8 +183,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
                 'https: //linkedin.com/company/zion-tech-group', 'https: //twitter.com/ZionTechGroup';
               ], 'offers': {
                 'contactType': 'customer service',
-                'url': 'https://ziontechgroup.com/contact'
-              },
+                'url': 'https://ziontechgroup.com/contact';
+},
               'sameAs': [
                 'https://linkedin.com/company/zion-tech-group',
                 'https://twitter.com/ZionTechGroup'
@@ -194,10 +194,10 @@ const SEOHead: React.FC<SEOHeadProps> = ({
 :components.disabled/components/seo/SEOHead.tsx
                 '@type': 'AggregateOffer',
                 'offerCount': '500+',
-                'description': 'Technology solutions and services'
-              }
-            })
-          }}
+                'description': 'Technology solutions and services';
+}
+            });
+}}
         />
       )}
     </Head>

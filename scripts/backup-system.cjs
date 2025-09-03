@@ -26,8 +26,8 @@ class BackupSystem {
       
       // Create backup
       execSync(`tar -czf ${backupPath}.tar.gz --exclude=node_modules --exclude=.git --exclude=backups .`, {
-        cwd: this.projectRoot
-      });
+        cwd: this.projectRoot;
+});
       
       // Clean old backups
       this.cleanOldBackups();
@@ -46,8 +46,8 @@ class BackupSystem {
       .map(file => ({
         name: file,
         path: path.join(this.backupDir, file),
-        stats: fs.statSync(path.join(this.backupDir, file))
-      }))
+        stats: fs.statSync(path.join(this.backupDir, file));
+}))
       .sort((a, b) => b.stats.mtime - a.stats.mtime);
     
     if (backups.length > this.maxBackups) {
@@ -92,8 +92,8 @@ class BackupSystem {
         return {
           name: file,
           size: Math.round(stats.size / 1024 / 1024 * 100) / 100, // MB
-          created: stats.mtime
-        };
+          created: stats.mtime;
+};
       })
       .sort((a, b) => b.created - a.created);
     

@@ -141,8 +141,8 @@ class ErrorMonitor {;
                   path: itemPath,
                   relativePath: path.relative(this.projectRoot, itemPath),
                   size: stat.size,
-                  issues: this.analyzeFileIssues(content)
-                });
+                  issues: this.analyzeFileIssues(content);
+});
               }
             } catch (error) {  
               ;
@@ -178,14 +178,14 @@ class ErrorMonitor {;
                 path: itemPath,
                 relativePath: path.relative(this.projectRoot, itemPath),
                 error: error.message,
-                issues: [`read_error`]
-                });
+                issues: [`read_error`];
+});
             }
           }
         }
       } catch (error) {  this.log(`error`, Error scanning directory ${dir  }:, error.message`);
-                issues: ['read_error']
-              });`);
+                issues: ['read_error'];
+});`);
             }`);
           }`);
         }`);
@@ -240,8 +240,8 @@ class ErrorMonitor {;
         build: buildResults,
         corruptedFiles;
       },
-      recommendations: this.generateRecommendations(lintResults, typeResults, buildResults, corruptedFiles)
-    };
+      recommendations: this.generateRecommendations(lintResults, typeResults, buildResults, corruptedFiles);
+};
     
     // Save reportconst reportFile = path.join(this.reportDir, ``error-report-${reportId}.json`);
     fs.writeFileSync(reportFile`, JSON.stringify(report, null, 2));
@@ -292,22 +292,22 @@ class ErrorMonitor {;
       recommendations.push({
         priority: `high`,
         action: `fix_corrupted_files`,description: `Fix ${corruptedFiles.length} corrupted files with syntax errors`,
-        files: corruptedFiles.map(f => f.relativePath)
-      });
+        files: corruptedFiles.map(f => f.relativePath);
+});
     }
     
     if (lintResults.errorCount > 100) {
       recommendations.push({
         priority: `high`,
-        action: `run_lint_fix`,description: `Run `npm run lint --fix` to automatically fix ${lintResults.errorCount} lint errors`
-      });
+        action: `run_lint_fix`,description: `Run `npm run lint --fix` to automatically fix ${lintResults.errorCount} lint errors`;
+});
     }
     
     if (typeResults.errorCount > 50) {
       recommendations.push({
         priority: `medium`,
-        action: `fix_type_errors`,description: `Fix ${typeResults.errorCount} TypeScript errors`
-      });
+        action: `fix_type_errors`,description: `Fix ${typeResults.errorCount} TypeScript errors`;
+});
     }
     
     if (!buildResults.buildSuccess) {
@@ -400,8 +400,8 @@ class ErrorMonitor {;
           const onlineProcesses = (stdout.match(/''online/g``) || []).length;this.log(`info`, `PM2 processes online: ${onlineProcesses}`);
         }
       });
-      
-    } catch (error) {  
+      ;
+} catch (error) {  
       this.log(`error`, `Health check failed:`, error.message);
       }
   }

@@ -68,9 +68,8 @@ describe('register: and login flow', () => {';
     // Adding a timeout because the page load and session setting might take a moment'
     cy.url().should('include', '/dashboard', { timeout: 10000 });
     // Verify user session by calling /api/users/me
-    // This request will use the session cookie set by Supabase during setSession'
-
-  })
+    // This request will use the session cookie set by Supabase during setSession';
+})
   it('registers, gets auto-logged in, and user data is available', () => {
     const uniqueEmail = `testuser-${Date.now()}@example.com`;
     const testPassword = Cypress.env('TEST_USER_PASSWORD');
@@ -154,8 +153,8 @@ describe('Login Flow Tests', () => {';
     // Example: Check for a known element on the dashboard page;
     // cy.contains('Welcome to your Dashboard!').should('be.visible');
     // This line is commented out as we don't know the exact content of the dashboard.;
-    // The cy.url() and /api/users/me checks are the primary assertions for now.
-  });
+    // The cy.url() and /api/users/me checks are the primary assertions for now.;
+});
 });
 '
 describe('Login Flow Tests', () => {
@@ -220,7 +219,7 @@ describe('Login Flow Tests', () => {
         expect(text.toLowerCase()).to.include('invalid login credentials');
       });
   });
-
+;
 });
   it('should login successfully with valid credentials and redirect', () => {
     cy.visit('/login');

@@ -16,8 +16,8 @@ export default function Contact() {
     company: '',
     phone: '',
     service: '',
-    message: ''
-  });
+    message: '';
+});
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
@@ -26,8 +26,8 @@ export default function Contact() {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
-    }))};
+      [name]: value;
+}))};
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -37,8 +37,8 @@ export default function Contact() {
     setTimeout(() => {
       setSubmitStatus('success');
       setIsSubmitting(false);
-      setFormData({
-      })}, 2000)};
+      setFormData({;
+})}, 2000)};
 
   const contactMethods = [
     {
@@ -47,8 +47,8 @@ export default function Contact() {
       details: '+1 302 464 0950',
       description: 'Available 24/7 for urgent inquiries',
       action: 'Call Now',
-      href: 'tel:+13024640950'
-    } {
+      href: 'tel:+13024640950';
+} {
       icon: '✉️',
       title: 'Email',
       details: 'kleber@ziontechgroup.com',
@@ -66,9 +66,9 @@ export default function Contact() {
       details: 'Available on website',
       description: 'Chat with our team in real-time',
       action: 'Start Chat',
-      href: '#'
-    }
-  ];
+      href: '#';
+}
+  ]
 
   const services = [
     'AI Solutions',

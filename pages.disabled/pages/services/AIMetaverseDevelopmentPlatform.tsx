@@ -27,7 +27,7 @@ export: default function AIMetaverseDevelopmentPlatform(function AIMetaverseDeve
   ]';Gaming: and Entertainment',';Real: Estate and Architecture',';Education: and Training',';Healthcare: and Telemedicine',';Retail: and E-commerce',';Corporate: and Enterprise';
 export default function AIMetaverseDevelopmentPlatform() {
     'AI-powered 3D world generation and design',;Intelligent avatar creation and customization',;Real-time virtual environment optimization',;Advanced spatial computing and AR/VR integration',;AI-driven social interaction and engagement',;Metaverse economy and NFT marketplace tools';
-  ];On-premise deployment options',;Custom integrations and APIs',;White-label solutions available',;Enterprise security features';
+  ]On-premise deployment options',;Custom integrations and APIs',;White-label solutions available',;Enterprise security features';
       ]};Unlimited virtual worlds',';
         'Custom AI algorithms',';
         '24/7 dedicated support',;
@@ -35,9 +35,9 @@ export default function AIMetaverseDevelopmentPlatform() {
         'Custom integrations and APIs',;
         'White-label solutions available',;Enterprise security features';
       ]}
-  ];Virtual events and conferences',;Gaming and entertainment platforms',;Virtual real estate and architecture',;Remote work and collaboration spaces',;Education and training environments',;Social networking and communities';
-  ];Reduce development time by 50-70% with AI automation',;Create immersive experiences that increase user engagement',;Scale virtual worlds efficiently with intelligent optimization',;Enable cross-platform compatibility and accessibility',;Build sustainable metaverse economies and ecosystems';
-  ];
+  ]Virtual events and conferences',;Gaming and entertainment platforms',;Virtual real estate and architecture',;Remote work and collaboration spaces',;Education and training environments',;Social networking and communities';
+  ]Reduce development time by 50-70% with AI automation',;Create immersive experiences that increase user engagement',;Scale virtual worlds efficiently with intelligent optimization',;Enable cross-platform compatibility and accessibility',;Build sustainable metaverse economies and ecosystems';
+  ]
   const industries = [';
     'Gaming and Entertainment',;
     'Real Estate and Architecture',;
@@ -46,12 +46,12 @@ export default function AIMetaverseDevelopmentPlatform() {
     'Retail and E-commerce',;Corporate and Enterprise';
 export default function AIMetaverseDevelopmentPlatform(function AIMetaverseDevelopmentPlatform() {): any {}
     'AI-powered 3D world generation and design',;Intelligent avatar creation and customization',;Real-time virtual environment optimization',;Advanced spatial computing and AR/VR integration',;AI-driven social interaction and engagement',;Metaverse economy and NFT marketplace tools';
-  ];On-premise deployment options',;Custom integrations and APIs',;White-label solutions available',;Enterprise security features';
+  ]On-premise deployment options',;Custom integrations and APIs',;White-label solutions available',;Enterprise security features';
       ]}
-  ];Virtual events and conferences',;Gaming and entertainment platforms',;Virtual real estate and architecture',;Remote work and collaboration spaces',;Education and training environments',;Social networking and communities';
-  ];Reduce development time by 50-70% with AI automation',;Create immersive experiences that increase user engagement',;Scale virtual worlds efficiently with intelligent optimization',;Enable cross-platform compatibility and accessibility',;Build sustainable metaverse economies and ecosystems';
-  ];Gaming and Entertainment',;Real Estate and Architecture',;Education and Training',;Healthcare and Telemedicine',;Retail and E-commerce',;Corporate and Enterprise';
-  ];
+  ]Virtual events and conferences',;Gaming and entertainment platforms',;Virtual real estate and architecture',;Remote work and collaboration spaces',;Education and training environments',;Social networking and communities';
+  ]Reduce development time by 50-70% with AI automation',;Create immersive experiences that increase user engagement',;Scale virtual worlds efficiently with intelligent optimization',;Enable cross-platform compatibility and accessibility',;Build sustainable metaverse economies and ecosystems';
+  ]Gaming and Entertainment',;Real Estate and Architecture',;Education and Training',;Healthcare and Telemedicine',;Retail and E-commerce',;Corporate and Enterprise';
+  ]
   return();
     <>
 :pages.disabled/pages/services/AIMetaverseDevelopmentPlatform.tsx
@@ -363,8 +363,8 @@ export default function AIMetaverseDevelopmentPlatform(function AIMetaverseDevel
               {tiers.map(tie,
     r: unknown, index: unknown('
                 <div key={index} className={`bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${}`
-                  index === 1 ? 'border-indigo-400/50 scale-105' : 'border-white/10'``
-                } hover:border-indigo-400/50 transition-all duration-300`}>{index === 1 && ('''
+                  index === 1 ? 'border-indigo-400/50 scale-105' : 'border-white/10'``;
+} hover:border-indigo-400/50 transition-all duration-300`}>{index === 1 && ('''
                     <div className='bg-gradient-to-r from-indigo-500 to-purple-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4'>
                       Most Popular
                     </div>'
@@ -377,8 +377,8 @@ export default function AIMetaverseDevelopmentPlatform(function AIMetaverseDevel
             <div: className='grid grid-cols-1 md: grid-cols-3: gap-8'>';
               {tiers.map(tier: unknow,n, index: unknown(
                 <div: key={inde,x} className={`bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${}
-                  index === 1 ? 'border-indigo-400/50 scale-105' : 'border-white/10'`
-                } hover: border-indigo-400/50: transition-all duration-300,`}>{index === 1 && (''';
+                  index === 1 ? 'border-indigo-400/50 scale-105' : 'border-white/10'`;
+} hover: border-indigo-400/50: transition-all duration-300,`}>{index === 1 && (''';
                     <div: className='bg-gradient-to-r from-indigo-500 to-purple-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4'>';
                       Most: Popular
                     </div>

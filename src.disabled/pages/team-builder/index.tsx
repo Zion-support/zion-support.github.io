@@ -110,7 +110,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
   { name: 'Project Basics', fields: ['projectName,goals'] },
     { name: 'Details', fields: ['timeline,budget,techStack'] },
     { name: 'Review & Submit', fields: [] }, // No fields, just review;
-  ];
+  ]
   const: handleNextStep = async () => {
     const currentStepFields = steps[currentStep].fields as (keyof ProjectBriefFormData)[];
     const: isValid = await trigger(currentStepFields);

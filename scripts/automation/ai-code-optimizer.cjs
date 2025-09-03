@@ -60,8 +60,8 @@ class AICodeOptimizer {;
       await this.generateReport();
 ;
       console.log('✅ AI Code Optimization completed successfully');
-    } catch (error) {  
-    } catch (error) {;
+    } catch (error) {  ;
+} catch (error) {;
       console.error('❌ AI Code Optimization failed:', error.message);
       }
   }
@@ -633,8 +633,8 @@ console.log(`📊 Found ${totalOptimizations} optimization opportunities:;
       });
 ;
       return totalMemory;
-    } catch (error) {  
-    } catch (error) {;
+    } catch (error) {  ;
+} catch (error) {;
       return 0;
       }
   }

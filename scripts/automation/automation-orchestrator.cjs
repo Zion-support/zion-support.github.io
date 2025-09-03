@@ -546,8 +546,8 @@ class AutomationOrchestrator {;
     }
 
     // Generate recommendations;
-    if (report.summary.unhealthyProcesses > 0) {
-      } else if (health.status === 'unhealthy') {;
+    if (report.summary.unhealthyProcesses > 0) {;
+} else if (health.status === 'unhealthy') {;
         report.summary.unhealthyProcesses++;
       } else if (process.status === 'errored') {;
         report.summary.erroredProcesses++;

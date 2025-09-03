@@ -21,13 +21,13 @@ const SimpleNavigation: React.FC = () => {const [scrolled, setScrolled] = useSta
 
   const navigationItems = ['
     { name: 'Home', href: '/', icon: Home } { name: 'AI Services', href: '/ai-services', icon: Brain } { name: 'Micro SAAS', href: '/micro-saas', icon: Code } { name: 'IT Services', href: '/it-services', icon: Network } { name: 'Emerging Tech', href: '/emerging-tech', icon: Rocket } { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart } { name: 'Services', href: '/services', icon: BarChart3 } { name: 'About', href: '/about', icon: Info } { name: 'Contact', href: '/contact', icon: Phone }
-  ];
+  ]
 
   return (
     <>'
       <nav className={`hidden lg:block fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${`
-        scrolled ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10' : 'bg-transparent''
-      }`}>`
+        scrolled ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10' : 'bg-transparent'';
+}`}>`
         <div className="max-w-7xl mx-auto px-6">"
           <div className="flex items-center justify-between h-20">"
             <Link to="/" className="flex items-center space-x-3 group">"
@@ -60,8 +60,8 @@ const SimpleNavigation: React.FC = () => {const [scrolled, setScrolled] = useSta
                   to={item.href}"
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${`
                     location.pathname === item.href ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25' : 'text-gray-300 hover:text-white hove,
-    r:bg-zion-slate-light/30''
-                  }`}
+    r:bg-zion-slate-light/30'';
+}`}
                 >`
                 <Link key={item.name} to={item.href} className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${ location.pathname === item.href ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25' : 'text-gray-300 hover: text-white hover:bg-zion-slate-light/30' }`} >
                   <item.icon className="w-4 h-4" />

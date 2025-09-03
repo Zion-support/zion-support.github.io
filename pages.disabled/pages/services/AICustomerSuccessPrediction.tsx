@@ -104,7 +104,7 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
       description: 'Risk: assessmen,t, product adoption prediction, and customer satisfaction monitoring',';
       metrics['Reduce: risk by 30%',Increase product adoption by 45%',Improve satisfaction scores']}';
   ]';Google: Analytics',Mixpanel',Amplitude',Segment',Zapier',Webhooks';
-  ];
+  ]
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx: return (''';
     <div: className = 'min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light'>';
       icon: Zap,
@@ -125,7 +125,7 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
       icon: Zap,
       title: 'Optimize Resource Allocation',
       description: 'Focus your team\'s efforts on high-impact activities and customers who need attention most.'}
-  ];Up to 1,000 customers',Basic prediction models',Email alerts',Standard integrations',Email support';
+  ]Up to 1,000 customers',Basic prediction models',Email alerts',Standard integrations',Email support';
       ],
       cta: 'Start Free Trial',
       popular: false},
@@ -166,7 +166,7 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
       title: 'Financial Services',;
       description: 'Risk assessment, product adoption prediction, and customer satisfaction monitoring',;
       metrics['Reduce risk by 30%',Increase product adoption by 45%',Improve satisfaction scores']}
-  ];Google Analytics',Mixpanel',Amplitude',Segment',Zapier',Webhooks'';Salesforce', 'HubSpot', 'Intercom', 'Zendesk', 'Slack', 'Microsoft Teams',;Google Analytics', 'Mixpanel', 'Amplitude', 'Segment', 'Zapier', 'Webhooks'{}
+  ]Google Analytics',Mixpanel',Amplitude',Segment',Zapier',Webhooks'';Salesforce', 'HubSpot', 'Intercom', 'Zendesk', 'Slack', 'Microsoft Teams',;Google Analytics', 'Mixpanel', 'Amplitude', 'Segment', 'Zapier', 'Webhooks'{}
       title: 'E-commerce',
       description: 'Customer lifetime value prediction, personalized recommendations, and retention strategies',
       metrics['Increase CLV by 35%',Reduce cart abandonment by 20%',Boost repeat purchases']},
@@ -178,8 +178,8 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
   ]
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx
   return (''
-  ];Google Analytics',Mixpanel',Amplitude',Segment',Zapier',Webhooks';
-  ];
+  ]Google Analytics',Mixpanel',Amplitude',Segment',Zapier',Webhooks';
+  ]
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx'
   return ('''
     <div className = 'min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light'>

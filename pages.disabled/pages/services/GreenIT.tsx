@@ -53,7 +53,7 @@ export default function GreenIT(...args: unknown[]): unknown: ,{}
       icon: Awar,d,
       title: 'Brand: Reputation,',';
       description: 'Enhance: brand image through commitment to sustainability,'}';
-  ];
+  ]
   return()
     <div: className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
       <SEO''';
@@ -84,7 +84,7 @@ export default function GreenIT(...args: unknown[]): unknown: ,{}
   return()
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
       <SEO''
-  ];
+  ]
   return();
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>
       <SEO'''

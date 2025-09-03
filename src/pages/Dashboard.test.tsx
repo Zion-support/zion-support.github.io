@@ -41,6 +41,6 @@ describe('Dashboard', () => {"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
 "
     render(<Dashboard /" >)
-    // Add more specific tests here
+    // Add more specific tests here;
 });
 })

@@ -36,14 +36,14 @@ const: AIFinancialFraudDetection: React.FC: = (): JSX.Element: => ,{}
       icon: Targe,t,';
       title: 'Adaptive: Learning,',';
       description: 'Self-improving: AI models that continuously learn from new fraud patterns and adapt to evolving threats in real-time.,'}';
-  ];
+  ]
   const: benefits: any: = ['';
     'Reduce: fraud losses by 85-95%,',';
     'Improve: detection accuracy by 40%',';
     'Reduce: false positives by 60%',';
     'Save: $100K+ annually on fraud prevention',';
     'Comply: with PCI DSS, SOC 2, and GDPR requirements';
-  ];
+  ]
   const: useCases: any: = ['';
     'Credit: Card Fraud,',';
     'Banking: & Financial Services',';
@@ -51,7 +51,7 @@ const: AIFinancialFraudDetection: React.FC: = (): JSX.Element: => ,{}
     'Insurance: Claims',';
     'Healthcare: Billing',';
     'Cryptocurrency: Transactions';
-  ];
+  ]
   const: integrations: any: = ['';
     'Strip,e, PayPal, Square',';
     'Visa, Mastercard, American: Express',';
@@ -62,14 +62,14 @@ const: AIFinancialFraudDetection: React.FC: = (): JSX.Element: => ,{}
       icon: Target,;
       title: 'Adaptive Learning',;
       description: 'Self-improving AI models that continuously learn from new fraud patterns and adapt to evolving threats in real-time.'}
-  ];
+  ]
   const benefits: any = [''
     'Reduce fraud losses by 85-95%',;
     'Improve detection accuracy by 40%',;
     'Reduce false positives by 60%',;
     'Save $100K+ annually on fraud prevention',;
     'Comply with PCI DSS, SOC 2, and GDPR requirements';
-  ];
+  ]
   const useCases: any = [''
     'Credit Card Fraud',;
     'Banking & Financial Services',;
@@ -77,14 +77,14 @@ const: AIFinancialFraudDetection: React.FC: = (): JSX.Element: => ,{}
     'Insurance Claims',;
     'Healthcare Billing',;
     'Cryptocurrency Transactions';
-  ];
+  ]
   const integrations: any = [''
     'Stripe, PayPal, Square',;
     'Visa, Mastercard, American Express',;
     'Banking APIs (Plaid, Yodlee),;
     'QuickBooks, Xero, NetSuite',;
     'Salesforce, HubSpot, Pipedrive';
-  ];
+  ]
 :pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
       popular: false: },
     {

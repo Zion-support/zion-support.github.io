@@ -59,8 +59,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
                         Go Home;,"});,"})
                       </a>;,"});,"})
                     </div>;,"});,"})
-                  </div>;,"});,"})
-                } />;,"});,"})
+                  </div>;,"});,"});
+} />;,"});,"})
               </Routes>;,"});,"})
               </main>;,"});,"})
             </div>;,"});,"})
@@ -130,7 +130,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
         </div>;,"});,"})
       </div>;,"});,"})
     </ErrorBoundary>;,"});,"})
-  );,"});,"})
+  );,"});,"});
 }"});,"})
 ;,"});,"})
 export default App;,"});,"})
@@ -1077,8 +1077,8 @@ function App() {
                       element={
                         <div className="min-h-screen">
                           <Home />
-                        </div>
-                      }
+                        </div>;
+}
                     />
                     <Route path="/about" element={<About />} />
                     <Route path="/contact" element={<Contact />} />

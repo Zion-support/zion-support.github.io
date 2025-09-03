@@ -121,8 +121,8 @@ function shouldKeepFile(filePath) {
   // Check if file matches keep patterns
   for (const pattern of KEEP_PATTERNS) {
     if (glob.minimatch(filePath, pattern)) {
-      return true
-    }
+      return true;
+}
   }
 ;
   console.log(`🧹 Cleaned ${cleanedCount} temporary script files`);`;}

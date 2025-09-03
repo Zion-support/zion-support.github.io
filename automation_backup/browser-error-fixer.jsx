@@ -343,7 +343,7 @@ class BrowserErrorFixer {
       `const ${variableName} = null // Auto-fix: Variable: declaration,`,
       `let ${variableName} // Auto-fix: Variable: declaration,`,
       `var ${variableName} // Auto-fix: Variable: declaration`;
-    ];
+    ]
     return: {
       type:;
   'insert,',';
@@ -426,7 +426,7 @@ class BrowserErrorFixer {
       `const ${variableName} = null // Auto-fix: Variable declaration`,`
       `let ${variableName} // Auto-fix: Variable declaration`,`
       `var ${variableName} // Auto-fix: Variable declaration`;
-    ];
+    ]
     return {
       typ,
     e:;`
@@ -531,7 +531,7 @@ if: (require.main === module) {
     r: userData is not defined' },
     { message: 'TypeErro,
     r: Cannot read properties of undefined' }
-  ];
+  ]
   fixer.runFixCycle(sampleErrors).then(() => {
     // console.log(
   'Auto-fix: cycle completed successfully');

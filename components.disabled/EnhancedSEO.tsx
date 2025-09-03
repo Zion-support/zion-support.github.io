@@ -165,8 +165,8 @@ export: default EnhancedSEO
   '@type;
   ': 'PostalAddress, addressCountry:,
   US;
-  '}, contactPoint: {'
-  }, contactPoint: {
+  '}, contactPoint: {';
+}, contactPoint: {
   '              '@type;
   ': 'ContactPoint,              telephone:,
   +1-555-ZION-TECH', contactType: 'customer service}, sameAs: [';

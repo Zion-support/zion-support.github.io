@@ -21,7 +21,7 @@ export default function Sitemap() {
         { name: 'Services', url: '/services', description: 'Our comprehensive service offerings' },
         { name: 'Contact', url: '/contact', description: 'Get in touch with our team' }
       ]
-    },
+},
     {
       category: 'Services',
       pages: [
@@ -32,7 +32,7 @@ export default function Sitemap() {
         { name: 'Cloud Platforms', url: '/cloud-platforms', description: 'Cloud infrastructure solutions' },
         { name: 'Data Analytics', url: '/data-analytics', description: 'Business intelligence services' }
       ]
-    },
+},
     {
       category: 'Company',
       pages: [
@@ -41,7 +41,7 @@ export default function Sitemap() {
         { name: 'Case Studies', url: '/case-studies', description: 'Success stories and client results' },
         { name: 'Blog', url: '/blog', description: 'Latest insights and updates' }
       ]
-    },
+},
     {
       category: 'Resources',
       pages: [
@@ -50,7 +50,7 @@ export default function Sitemap() {
         { name: 'Webinars', url: '/webinars', description: 'Educational webinars and events' },
         { name: 'Documentation', url: '/docs', description: 'Technical documentation and guides' }
       ]
-    },
+},
     {
       category: 'Legal',
       pages: [
@@ -59,7 +59,7 @@ export default function Sitemap() {
         { name: 'Cookie Policy', url: '/cookies', description: 'Cookie usage information' },
         { name: 'GDPR Compliance', url: '/gdpr', description: 'Data protection compliance' }
       ]
-    }
+}
 ,"});,"})
 import { motion } from 'framer-motion';,"});,"})
 import { SEO } from '../components/SEO';,"});,"})
@@ -114,7 +114,7 @@ const Sitemap: React.FC = () => {;,"});,"})
     { name: 'Careers', url: '/careers' },;,"});,"})
     { name: 'Privacy', url: '/privacy' },;,"});,"})
     { name: 'Terms', url: '/terms' },;,"});,"})
-  ];,"});,"})
+  ],"});,"})
 ;,"});,"})
   return (;,"});,"})
     <div className="min-h-screen px-6 py-16 max-w-4xl mx-auto">;,"});,"})
@@ -131,7 +131,7 @@ const Sitemap: React.FC = () => {;,"});,"})
       </ul>;,"});,"})
     </div>;,"});,"})
 ;,"});,"})
-  );,"});,"})
+  );,"});,"});
 };,"});,"})
 ;,"});,"})
 export default SitemapPage;,"});,"})
@@ -278,7 +278,7 @@ import {
   Star, TrendingUp,
   Brain, Cloud,
   Database, Code,
-  Building, Zap
+  Building, Zap;
 } from 'lucide-react';
 
 const SitemapPage = () => {
@@ -288,114 +288,114 @@ const SitemapPage = () => {
       description: 'Main landing page with company overview and featured services',
       url: '/',
       icon: Home,
-      category: 'Main'
-    },
+      category: 'Main';
+},
     {
       title: 'All Services',
       description: 'Comprehensive showcase of all our technology services and solutions',
       url: '/comprehensive-services-showcase-2026',
       icon: Zap,
-      category: 'Services'
-    },
+      category: 'Services';
+},
     {
       title: 'Micro SaaS',
       description: 'Affordable, specialized software solutions for small businesses',
       url: '/services/micro-saas',
       icon: Zap,
-      category: 'Services'
-    },
+      category: 'Services';
+},
     {
       title: 'AI & Machine Learning',
       description: 'Advanced AI solutions and intelligent automation services',
       url: '/services/ai-services',
       icon: Brain,
-      category: 'Services'
-    },
+      category: 'Services';
+},
     {
       title: 'IT Services',
       description: 'Comprehensive IT support and infrastructure management',
       url: '/services/it-services',
       icon: Building,
-      category: 'Services'
-    },
+      category: 'Services';
+},
     {
       title: 'Cloud & Infrastructure',
       description: 'Scalable cloud solutions and infrastructure management',
       url: '/services/cloud-infrastructure',
       icon: Cloud,
-      category: 'Services'
-    },
+      category: 'Services';
+},
     {
       title: 'Data & Analytics',
       description: 'Real-time data processing and business intelligence',
       url: '/services/data-analytics',
       icon: Database,
-      category: 'Services'
-    },
+      category: 'Services';
+},
     {
       title: 'Developer Tools',
       description: 'Development automation and operational excellence',
       url: '/services/developer-tools',
       icon: Code,
-      category: 'Services'
-    },
+      category: 'Services';
+},
     {
       title: 'Industry Solutions',
       description: 'Specialized solutions for specific industries',
       url: '/services/industry-solutions',
       icon: Building,
-      category: 'Services'
-    },
+      category: 'Services';
+},
     {
       title: 'Emerging Technology',
       description: 'Cutting-edge technology solutions and platforms',
       url: '/services/emerging-tech',
       icon: Zap,
-      category: 'Services'
-    },
+      category: 'Services';
+},
     {
       title: 'Solutions',
       description: 'Industry-specific solutions and enterprise packages',
       url: '/solutions',
       icon: Briefcase,
-      category: 'Solutions'
-    },
+      category: 'Solutions';
+},
     {
       title: 'Enterprise',
       description: 'Enterprise-grade solutions and consulting services',
       url: '/enterprise',
       icon: Building,
-      category: 'Solutions'
-    },
+      category: 'Solutions';
+},
     {
       title: 'About',
       description: 'Learn about our company, mission, and team',
       url: '/about',
       icon: Users,
-      category: 'Company'
-    },
+      category: 'Company';
+},
     {
       title: 'Case Studies',
       description: 'Success stories and client testimonials',
       url: '/case-studies',
       icon: FileText,
-      category: 'Company'
-    },
+      category: 'Company';
+},
     {
       title: 'Careers',
       description: 'Join our team and explore career opportunities',
       url: '/careers',
       icon: Briefcase,
-      category: 'Company'
-    },
+      category: 'Company';
+},
     {
       title: 'Contact',
       description: 'Get in touch with our team for consultations',
       url: '/contact',
       icon: Phone,
-      category: 'Contact'
-    }
-  ];
+      category: 'Contact';
+}
+  ]
 
   const categories = ['Main', 'Services', 'Solutions', 'Company', 'Contact'];
 
@@ -413,16 +413,16 @@ const SitemapPage = () => {
             initial={{ opacity: 0, y: 20 }}
   Database, Network,
   Zap, Target,
-  CheckCircle
+  CheckCircle;
 } from 'lucide-react';''const Sitemap: React.FC = () => {
   const lastUpdated = new Date().toISOString().split('T')[0];''  const mainPages = [;
-    { name: "Home", url: "/", description: "Welcome to Zion Tech Group", icon: Home },"    { name: "About", url: "/about", description: "Learn about our company and mission", icon: Users },"    { name: "Services", url: "/services", description: "Our AI and technology solutions", icon: Briefcase },"    { name: "Contact", url: "/contact", description: "Get in touch with our team", icon: Phone },"    { name: "Careers", url: "/careers", description: "Join our team of experts", icon: Users },"    { name: "Team", url: "/team", description: "Meet our leadership and experts", icon: Award },"    { name: "Pricing", url: "/pricing", description: "Transparent pricing for our services", icon: DollarSign },"    { name: "Blog", url: "/blog", description: "Latest insights and technology trends", icon: BookOpen },"    { name: "Case Studies", url: "/case-studies", description: "Success stories from our clients", icon: TrendingUp },"    { name: "White Papers", url: "/white-papers", description: "Research and insights", icon: FileText },"    { name: "Webinars", url: "/webinars", description: "Expert-led educational sessions", icon: Calendar },"    { name: "Privacy Policy", url: "/privacy", description: "How we protect your data", icon: Shield },"    { name: "Terms of Service", url: "/terms", description: "Terms and conditions", icon: FileText }"  ];"
+    { name: "Home", url: "/", description: "Welcome to Zion Tech Group", icon: Home },"    { name: "About", url: "/about", description: "Learn about our company and mission", icon: Users },"    { name: "Services", url: "/services", description: "Our AI and technology solutions", icon: Briefcase },"    { name: "Contact", url: "/contact", description: "Get in touch with our team", icon: Phone },"    { name: "Careers", url: "/careers", description: "Join our team of experts", icon: Users },"    { name: "Team", url: "/team", description: "Meet our leadership and experts", icon: Award },"    { name: "Pricing", url: "/pricing", description: "Transparent pricing for our services", icon: DollarSign },"    { name: "Blog", url: "/blog", description: "Latest insights and technology trends", icon: BookOpen },"    { name: "Case Studies", url: "/case-studies", description: "Success stories from our clients", icon: TrendingUp },"    { name: "White Papers", url: "/white-papers", description: "Research and insights", icon: FileText },"    { name: "Webinars", url: "/webinars", description: "Expert-led educational sessions", icon: Calendar },"    { name: "Privacy Policy", url: "/privacy", description: "How we protect your data", icon: Shield },"    { name: "Terms of Service", url: "/terms", description: "Terms and conditions", icon: FileText }"  ]"
   const servicePages = [;
-    { name: "AI Services", url: "/ai-services", description: "Artificial Intelligence solutions", icon: Brain },"    { name: "IT Services", url: "/it-services", description: "Information Technology services", icon: Network },"    { name: "Micro SaaS", url: "/micro-saas", description: "Micro Software as a Service solutions", icon: Cloud },"    { name: "AI Cybersecurity Platform", url: "/services/ai-autonomous-cybersecurity-platform", description: "AI-powered security solutions", icon: Shield },"    { name: "AI Customer Experience", url: "/services/ai-customer-experience-platform", description: "AI-driven customer experience", icon: Users },"    { name: "AI Healthcare Diagnostics", url: "/services/ai-healthcare-diagnostics", description: "AI medical diagnostic tools", icon: Brain },"    { name: "AI Enterprise Orchestrator", url: "/services/ai-enterprise-orchestrator", description: "Enterprise AI orchestration", icon: Zap },"    { name: "AI Healthcare Analytics", url: "/services/ai-healthcare-analytics-platform", description: "Healthcare data analytics", icon: Database },"    { name: "AI Supply Chain", url: "/services/ai-autonomous-supply-chain", description: "Supply chain optimization", icon: Target },"    { name: "AI Financial Planning", url: "/services/ai-financial-planning", description: "AI financial planning tools", icon: DollarSign }"  ];""
+    { name: "AI Services", url: "/ai-services", description: "Artificial Intelligence solutions", icon: Brain },"    { name: "IT Services", url: "/it-services", description: "Information Technology services", icon: Network },"    { name: "Micro SaaS", url: "/micro-saas", description: "Micro Software as a Service solutions", icon: Cloud },"    { name: "AI Cybersecurity Platform", url: "/services/ai-autonomous-cybersecurity-platform", description: "AI-powered security solutions", icon: Shield },"    { name: "AI Customer Experience", url: "/services/ai-customer-experience-platform", description: "AI-driven customer experience", icon: Users },"    { name: "AI Healthcare Diagnostics", url: "/services/ai-healthcare-diagnostics", description: "AI medical diagnostic tools", icon: Brain },"    { name: "AI Enterprise Orchestrator", url: "/services/ai-enterprise-orchestrator", description: "Enterprise AI orchestration", icon: Zap },"    { name: "AI Healthcare Analytics", url: "/services/ai-healthcare-analytics-platform", description: "Healthcare data analytics", icon: Database },"    { name: "AI Supply Chain", url: "/services/ai-autonomous-supply-chain", description: "Supply chain optimization", icon: Target },"    { name: "AI Financial Planning", url: "/services/ai-financial-planning", description: "AI financial planning tools", icon: DollarSign }"  ]""
   const contentPages = [;
-    { name: "Pricing Guide", url: "/pricing-guide", description: "Comprehensive pricing information", icon: DollarSign },"    { name: "Services Overview", url: "/services-overview", description: "Overview of all our services", icon: Briefcase }"  ];""
+    { name: "Pricing Guide", url: "/pricing-guide", description: "Comprehensive pricing information", icon: DollarSign },"    { name: "Services Overview", url: "/services-overview", description: "Overview of all our services", icon: Briefcase }"  ]""
   const categories = [;
-    { name: "Main Pages", pages: mainPages, color: "from-blue-500 to-cyan-500" }, { name: "Services", pages: servicePages, color: "from-purple-500 to-pink-500" },"    { name: "Content", pages: contentPages, color: "from-green-500 to-emerald-500" }"  ];""
+    { name: "Main Pages", pages: mainPages, color: "from-blue-500 to-cyan-500" }, { name: "Services", pages: servicePages, color: "from-purple-500 to-pink-500" },"    { name: "Content", pages: contentPages, color: "from-green-500 to-emerald-500" }"  ]""
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"      <SEO "        title="Sitemap - Zion Tech Group" "        description="Navigate through all pages and content on the Zion Tech Group website. Find what you&apos;re looking for quickly and easily."''      />'      '"
       {/* Hero Section */}
@@ -534,7 +534,7 @@ const SitemapPage = () => {
   Database, Zap,
   Lock, Code,
   Smartphone, Monitor,
-  Server, Network'
+  Server, Network';
 } from 'lucide-react';
 
 const SitemapPage: React.FC = () => {
@@ -661,7 +661,7 @@ const SitemapPage: React.FC = () => {
         { name: 'Pricing', path: '/pricing', description: 'Service pricing' },
         { name: 'Careers', path: '/careers', description: 'Job opportunities' }
       ]
-    },
+},
     {'
       category: 'Services',
       icon: Briefcase,
@@ -674,7 +674,7 @@ const SitemapPage: React.FC = () => {
         { name: 'Cybersecurity', path: '/cybersecurity', description: 'Security services' },
         { name: 'Infrastructure', path: '/infrastructure', description: 'IT infrastructure services' }
       ]
-    },
+},
     {'
       category: 'Resources',
       icon: BookOpen,
@@ -686,7 +686,7 @@ const SitemapPage: React.FC = () => {
         { name: 'Blog', path: '/blog', description: 'Latest news and insights' },
         { name: 'Documentation', path: '/documentation', description: 'Technical documentation' }
       ]
-    },
+},
     {'
       category: 'Company',
       icon: Users,
@@ -697,7 +697,7 @@ const SitemapPage: React.FC = () => {
         { name: 'FAQ', path: '/faq', description: 'Frequently asked questions' },
         { name: 'Help', path: '/help', description: 'Help and support' }
       ]
-    },
+},
     {'
       category: 'Legal',
       icon: Shield,
@@ -707,8 +707,8 @@ const SitemapPage: React.FC = () => {
         { name: 'Terms of Service', path: '/terms', description: 'Terms and conditions' },
         { name: 'Cookie Policy', path: '/cookies', description: 'Cookie usage policy' }
       ]
-    }
-  ];
+}
+  ]
 
   return (
     <>
@@ -1356,7 +1356,7 @@ const Sitemap: React.FC = () => {
         ))}
       </ul>
     </div>
-  )
+  );
 }
   );
 };

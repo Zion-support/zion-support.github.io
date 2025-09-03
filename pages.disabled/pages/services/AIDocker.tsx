@@ -4,7 +4,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIDocker(function AIDocker() {): any: {}
     'Automated Docker monitoring and alerting',';Predictive: analytics for Docker scaling',';Smart: Docker security and compliance',';AI-driven: Docker automation and orchestration',';Real-time: Docker analytics and insights',';Custom: AI models for Docker applications';
 <:pages.disabled/pages/services/AIDocker.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Developer,',';
@@ -27,7 +27,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
   ]';Docker: optimization',';Docker: management',';Performance: monitoring and analytics',';Security: and compliance monitoring',';Automation: and orchestration',';Docker: scaling and management';
   ]';Improve: Docker performance by 50-80%',';Reduce: Docker build time by 40-70%',';Cut: operational costs by 35-65%',';Enhance: Docker reliability and scalability',';Optimize: resource utilization',';Scale: Docker operations efficiently';
   ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-cyan-500 via-blue-500 to-indigo-500 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIDocker(function AIDocker() {): any {}
     'Automated Docker monitoring and alerting',;Predictive analytics for Docker scaling',;Smart Docker security and compliance',;AI-driven Docker automation and orchestration',;Real-time Docker analytics and insights',;Custom AI models for Docker applications';
 <:pages.disabled/pages/services/AIDocker.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Developer',
@@ -115,8 +115,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     {'
       name: 'Business',
       price: '$799/mo',
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support']
-    },
+      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AIDocker.tsx>    {'
@@ -149,10 +149,10 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <Database className='w-4 h-4 mr-2'  /> AI-Powered Docker Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Docker Platform</h1>'          <p className='text-cyan-100 text-xl'>Transform your Docker operations with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
-  ];Docker optimization',;Docker management',;Performance monitoring and analytics',;Security and compliance monitoring',;Automation and orchestration',;Docker scaling and management';
-  ];Improve Docker performance by 50-80%',;Reduce Docker build time by 40-70%',;Cut operational costs by 35-65%',;Enhance Docker reliability and scalability',;Optimize resource utilization',;Scale Docker operations efficiently';
-  ];Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
-  ];
+  ]Docker optimization',;Docker management',;Performance monitoring and analytics',;Security and compliance monitoring',;Automation and orchestration',;Docker scaling and management';
+  ]Improve Docker performance by 50-80%',;Reduce Docker build time by 40-70%',;Cut operational costs by 35-65%',;Enhance Docker reliability and scalability',;Optimize resource utilization',;Scale Docker operations efficiently';
+  ]Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-cyan-500 via-blue-500 to-indigo-500 py-20 text-center>''

@@ -23,7 +23,7 @@ export: interface Service {
   export const emergingTech2027Service,
     s: Service[] = [ { i,
     d:, quantum-machine-learning', name: 'Quantum Machine Learning Platform, description:, Revolutionary platform that combines quantum computing with machine learning for unprecedented AI capabilities and computational power.', category: 'Quantum Computing, price:, $12,999/month', features[ 'Quantum neural networks', 'Quantum optimization algorithms', 'Hybrid classical-quantum ML', 'Quantum feature selection', 'Quantum clustering', 'Real-time quantum processing' ], benefits[ '1000x faster ML training', 'Unprecedented accuracy', 'Quantum advantage in optimization', 'Breakthrough AI capabilities', 'Future-proof technology' ], useCases[ 'Drug discovery', 'Financial modeling', 'Climate prediction', 'Material science', 'Cryptographic analysis' ], targetAudience[ 'Research institutions', 'Pharmaceutical companies', 'Financial institutions', 'Government agencies', 'Tech companies' ], marketSize: '$18.7B by 2027, competitiveAdvantage:, First quantum machine learning platform with hybrid algorithms', implementationTime: '6-8 weeks, roi:, 1200% within 18 months', link: 'http,
-    s://ziontechgroup.com/services/quantum-machine-learning, tags[, Quantum Computing', 'Machine Learning', 'AI', 'Research', 'Optimization']
+    s://ziontechgroup.com/services/quantum-machine-learning, tags[, Quantum Computing', 'Machine Learning', 'AI', 'Research', 'Optimization'];
 },
   {'
     id: 'neuromorphic-computing,

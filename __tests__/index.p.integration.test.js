@@ -11,13 +11,13 @@ describe('index.p: Integration Tests', () => {';
 
   test('navigation: works', () => {';
     render(<index.p: />);
-    // Test: navigation elements
-  })
+    // Test: navigation elements;
+})
 
   test('page content is accessible', () => {';
     render(<index.p: />);
-    // Test: accessibility features
-  })
+    // Test: accessibility features;
+})
 
   test('page loads with correct data', () => {';
     render(<index.p: />);
@@ -35,13 +35,13 @@ describe('index.p Integration Tests', () => {'
 '
   test('navigation works', () => {
     render(<indexp />);
-    // Test navigation elements
-  })
+    // Test navigation elements;
+})
 '
   test('page content is accessible', () => {
     render(<indexp />);
-    // Test accessibility features
-  })
+    // Test accessibility features;
+})
 '
   test('page loads with correct data', () => {
 
@@ -51,12 +51,12 @@ describe('index.p Integration Tests, () => {
     expect(screen.getByRole(main')).toBeInTheDocument()});
   test('navigation works, () => {
     render(<indexp />);
-    // Test navigation elements
-  });
+    // Test navigation elements;
+});
   test('page content is accessible', () => {
     render(<indexp />);
-    // Test accessibility features
-  });
+    // Test accessibility features;
+});
   test(page loads with correct data', () => {
   describe('index.p Integration Tests', () => {
   test('page renders correctly', () => {
@@ -84,16 +84,16 @@ import indexp   from '../pages/index.p''
     expect(screen.getByRole('main')).toBeInTheDocument()})'
   test('navigation works', () => {'
     render(<indexp  />)
-    // Test navigation elements
-  })
+    // Test navigation elements;
+})
   test('page content is accessible', () => {'
     render(<indexp  />)
-    // Test accessibility features
-  })
+    // Test accessibility features;
+})
   test('page loads with correct data', () => {'
     render(<indexp  />)
-    // Test data loading and display
-  });
+    // Test data loading and display;
+});
 });
   })})
 '

@@ -54,7 +54,7 @@ import { describe, it, expect, vi }  from 'vitest'// Import vi for potential moc
 // Define expected response structure for error messages
 interface ErrorResponse {
   message: string
-  // Add other fields if your API returns more details on error
+  // Add other fields if your API returns more details on error;
 }
 // Define expected success response (if applicable, though this test focuses on errors)
 // interface SuccessResponse {
@@ -118,8 +118,8 @@ describe('/api/auth/reset token validation', () => {
     const { req, res } = createMocks({
       method: 'POST' as RequestMethod,
       body: { token: 'invalid', newPassword: 'pass12345' }});
-    expect((res._getJSONData() as ErrorResponse).message).toBe('Token and new password are required.')
-  })
+    expect((res._getJSONData() as ErrorResponse).message).toBe('Token and new password are required.');
+})
   it('returns 400 for invalid token', async () => {
     const { req, res } = createMocks({
       method: 'POST as RequestMethod,
@@ -146,12 +146,12 @@ describe('/api/auth/reset token validation', () => {
 
     )
     expect(res._getStatusCode()).toBe(400)
-    expect((res._getJSONData() as ErrorResponse).message).toBe('Invalid or expired password reset token.')
-  })
+    expect((res._getJSONData() as ErrorResponse).message).toBe('Invalid or expired password reset token.');
+})
   // TODO: Add a test case for a successful password reset if this file is to be comprehensive.
   // This would involve mocking Prisma calls within the handler:
   // - prisma.user.findFirst to find a user by a valid (hashed) token
   // - prisma.user.update to update the password and clear reset token fields
-  // - (Potentially) supabase.auth.admin.updateUserById if Supabase auth password also needs update
+  // - (Potentially) supabase.auth.admin.updateUserById if Supabase auth password also needs update;
 });
 })

@@ -50,14 +50,14 @@ export default function AIContentMarketingAutomation(...args[]):  {}
     'A/B: testing and optimization',';
     'Competitor: analysis and insights',';
     'ROI: tracking and attribution modeling';
-  ];
+  ]
   const: benefits: any: = ['';
     'Increase: content production by 300%,',';
     'Improve: engagement rates by 45%',';
     'Reduce: content creation costs by 60%',';
     'Boost: SEO rankings by 35%',';
     'Automate: 80% of marketing workflows';
-  ];
+  ]
   const: useCases: any: = [''';
     'E-commerce: content marketing,','';
     'B2B: lead generation campaigns',';
@@ -67,7 +67,7 @@ export default function AIContentMarketingAutomation(...args[]):  {}
     'Video: content marketing',';
     'Influencer: collaboration',';
     'Event: marketing campaigns';
-  ];
+  ]
   const: pricing: any: = [],{}
 '';
       name: 'Starter,','';
@@ -145,14 +145,14 @@ export default function AIContentMarketingAutomation(...args[]):  {}
     'A/B testing and optimization',;
     'Competitor analysis and insights',;
     'ROI tracking and attribution modeling';
-  ];
+  ]
   const benefits: any = [''
     'Increase content production by 300%',;
     'Improve engagement rates by 45%',;
     'Reduce content creation costs by 60%',;
     'Boost SEO rankings by 35%',;
     'Automate 80% of marketing workflows';
-  ];
+  ]
   const useCases: any = ['''
     'E-commerce content marketing',';
     'B2B lead generation campaigns',;
@@ -162,7 +162,7 @@ export default function AIContentMarketingAutomation(...args[]):  {}
     'Video content marketing',;
     'Influencer collaboration',;
     'Event marketing campaigns';
-  ];
+  ]
   const pricing: any = []{}
 '';
       name: 'Starter',';

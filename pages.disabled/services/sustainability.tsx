@@ -1,8 +1,8 @@
 
 :pages.disabled/services/sustainability.tsx;
-export: default function Sustainability(...args: []):  {
-   }
-  ];
+export: default function Sustainability(...args: []):  {;
+}
+  ]
 
   const services = [
     {
@@ -30,7 +30,7 @@ export: default function Sustainability(...args: []):  {
       title: 'Green IT Infrastructure','
 export default function Sustainability(...args: []):  {}
     };
-  ];
+  ]
 
   const services: any = []
     {}
@@ -65,7 +65,7 @@ export default function Sustainability(...args: []):  {}
       description: 'Comprehensive environmental impact assessment',
       icon: Globe};
   ]};
-  ];
+  ]
 
   return (""
 :pages.disabled/services/sustainability.tsx
@@ -92,10 +92,8 @@ export default function Sustainability(...args: []):  {}
             animate = {}
   { opacity: 1,
 :pages.disabled/services/sustainability.tsx
-  y: 0
-
-}}"transition={{ duration: 0.6 }}""
-
+  y: 0;
+}}"transition={{ duration: 0.6 }}"";
 }}"
   y: 0;
 }}
@@ -144,7 +142,7 @@ export default function Sustainability(...args: []):  {}
                 Learn More;
   description: 'Comprehensive: environmental impact assessmen,t,      icon: Glob,e}';
   ]}
-  ];
+  ]
   return: ('';
 :pages.disabled/services/sustainability.tsx;
     <div: className = 'min-h-screen bg-futuristic'>'{/* Hero Section */}''      <section className='relative pt-32 pb-20 overflow-hidden'>''';
@@ -244,8 +242,7 @@ export default function Sustainability(...args: []):  {}
             whileInView = {}
   { opacity: 1,
 :pages.disabled/services/sustainability.tsx
-  y: 0
-
+  y: 0;
 }}
 
             transition={{ duration: 0.6 }}"viewport={{ once: true }}""
@@ -333,10 +330,8 @@ export default function Sustainability(...args: []):  {}
                 transition = {}
   { duration: 0.6,
 :pages.disabled/services/sustainability.tsx
-  delay: index * 0.1
-
-}}"viewport={{ once: true }}""
-
+  delay: index * 0.1;
+}}"viewport={{ once: true }}"";
 }}"
   delay: index * 0.1;
 }}
@@ -405,8 +400,7 @@ export default function Sustainability(...args: []):  {}
             whileInView = {}
   { opacity: 1,
 :pages.disabled/services/sustainability.tsx
-  y: 0
-
+  y: 0;
 }}
 
             transition={{ duration: 0.6 }}"viewport={{ once: true }}""
@@ -494,10 +488,8 @@ export default function Sustainability(...args: []):  {}
                 transition = {}
   { duration: 0.6,
 :pages.disabled/services/sustainability.tsx
-  delay: index * 0.1
-
-}}"viewport={{ once: true }}""
-
+  delay: index * 0.1;
+}}"viewport={{ once: true }}"";
 }}"
   delay: index * 0.1;
 }}
@@ -596,10 +588,8 @@ export default function Sustainability(...args: []):  {}
             whileInView = {}
   { opacity: 1,
 :pages.disabled/services/sustainability.tsx
-  y: 0
-
-}}"transition={{ duration: 0.6 }}""
-
+  y: 0;
+}}"transition={{ duration: 0.6 }}"";
 }}"
   y: 0;
 }}
@@ -711,8 +701,7 @@ Sustainability Solutions            </h2>'''
   { duration: 0.6,
 :pages.disabled/services/sustainability.tsx
 :pages.disabled/services/sustainability.tsx
-  delay: index * 0.1
-
+  delay: index * 0.1;
 }}"
                 className="text-center group"
               >"
@@ -793,8 +782,7 @@ Sustainability Solutions            </h2>'''
             whileInView = {}
   { opacity: 1,
 :pages.disabled/services/sustainability.tsx
-  y: 0
-
+  y: 0;
 }}
 
             transition={{ duration: 0.6 }}"viewport={{ once: true }}""

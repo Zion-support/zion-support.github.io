@@ -152,8 +152,8 @@ class BuildHealthMonitor {;
       // Save report;
       const timestamp = Date.now();
       const reportPath = path.join(
-        this.projectRoot,error-reports`, `build-health-report-${timestamp}.json`
-      } catch (error) {;
+        this.projectRoot,error-reports`, `build-health-report-${timestamp}.json`;
+} catch (error) {;
         report.bundleSize = {;
           status: 'error',;
           details: error.message,;

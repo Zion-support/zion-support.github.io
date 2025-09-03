@@ -73,7 +73,7 @@ export default function Marketplace() {;
       featured: false,;
       tags: ["Security", "Enterprise", "Protection"];
     }
-  ];
+  ]
 ;
   const categories = [;
     { name: "AI Tools", icon: Brain, count: 25, color: "from-purple-500 to-pink-500" },;
@@ -81,7 +81,7 @@ export default function Marketplace() {;
     { name: "Development", icon: Code, count: 32, color: "from-green-500 to-emerald-500" },;
     { name: "Security", icon: Shield, count: 15, color: "from-red-500 to-orange-500" },;
     { name: "Micro SaaS", icon: Rocket, count: 28, color: "from-indigo-500 to-blue-500" }
-  ];
+  ]
 ;
   return (;
     <>;
@@ -135,7 +135,7 @@ export default function Marketplace() {;
                 <motion.div;
 import { 
   ShoppingCart, Star, Users, Code, Database, Shield, Rocket, Brain, ArrowRight, Filter,
-  Search, Grid, List, Heart, ExternalLink
+  Search, Grid, List, Heart, ExternalLink;
 } from &apos;lucide-react';&apos;&apos;
 
 export default function Marketplace() {}
@@ -150,8 +150,8 @@ export default function Marketplace() {}
       reviews: 124,
       image: &quot;/api/placeholder/300/200&quot;,
       featured: true,
-      tags: [&quot;AI&quot;, &quot;Content&quot;, &quot;NLP&quot;]
-    },
+      tags: [&quot;AI&quot;, &quot;Content&quot;, &quot;NLP&quot;];
+},
     {
       id: 2,
       name: &quot;Quantum Analytics Dashboard&quot;,
@@ -162,8 +162,8 @@ export default function Marketplace() {}
       reviews: 89,
       image: &quot;/api/placeholder/300/200&quot;,
       featured: true,
-      tags: [&quot;Quantum&quot;, &quot;Analytics&quot;, &quot;Dashboard&quot;]
-    },
+      tags: [&quot;Quantum&quot;, &quot;Analytics&quot;, &quot;Dashboard&quot;];
+},
     {
       id: 3,
       name: &quot;Micro SaaS Starter Kit&quot;,
@@ -174,8 +174,8 @@ export default function Marketplace() {}
       reviews: 156,
       image: &quot;/api/placeholder/300/200&quot;,
       featured: false,
-      tags: [&quot;SaaS&quot;, &quot;Development&quot;, &quot;Starter&quot;]
-    },
+      tags: [&quot;SaaS&quot;, &quot;Development&quot;, &quot;Starter&quot;];
+},
     {
       id: 4,
       name: &quot;Cybersecurity Suite&quot;,
@@ -186,9 +186,9 @@ export default function Marketplace() {}
       reviews: 67,
       image: &quot;/api/placeholder/300/200&quot;,
       featured: false,
-      tags: [&quot;Security&quot;, &quot;Enterprise&quot;, &quot;Protection&quot;]
-    }
-  ];&quot;
+      tags: [&quot;Security&quot;, &quot;Enterprise&quot;, &quot;Protection&quot;];
+}
+  ]&quot;
 
   const categories = [
     { name: &quot;AI Tools&quot;, icon: Brain, count: 25, color: &quot;from-purple-500 to-pink-500&quot; },
@@ -196,7 +196,7 @@ export default function Marketplace() {}
     { name: &quot;Development&quot;, icon: Code, count: 32, color: &quot;from-green-500 to-emerald-500&quot; },
     { name: &quot;Security&quot;, icon: Shield, count: 15, color: &quot;from-red-500 to-orange-500&quot; },
     { name: &quot;Micro SaaS&quot;, icon: Rocket, count: 28, color: &quot;from-indigo-500 to-blue-500&quot; }
-  ];
+  ]
 
   return (&quot;
     <>
@@ -215,49 +215,49 @@ export default function Marketplace() {
       description: "Advanced AI-powered content creation tool with natural language processing", price: "$99/month",
       category: "AI Tools", rating: 4.8,
       reviews: 124, image: "/api/placeholder/300/200",
-      featured: true, tags: ["AI", "Content", "NLP"]
-    }, { id: 2,
-      featured: true, tags: ["AI,Content,NLP"]
-    }, {
+      featured: true, tags: ["AI", "Content", "NLP"];
+}, { id: 2,
+      featured: true, tags: ["AI,Content,NLP"];
+}, {
       id: 2,
       name: "Quantum Analytics Dashboard", description: "Real-time analytics dashboard powered by quantum computing algorithms",
       price: "$299/month", category: "Analytics",
       rating: 4.9, reviews: 89,
       image: "/api/placeholder/300/200", featured: true,
-      tags: ["Quantum", "Analytics", "Dashboard"]
-    }, { id: 3,
-      tags: ["Quantum,Analytics,Dashboard"]
-    }, {
+      tags: ["Quantum", "Analytics", "Dashboard"];
+}, { id: 3,
+      tags: ["Quantum,Analytics,Dashboard"];
+}, {
       id: 3,
       name: "Micro SaaS Starter Kit", description: "Complete toolkit for building and launching micro SaaS applications",
       price: "$199/month", category: "Development",
       rating: 4.7, reviews: 156,
       image: "/api/placeholder/300/200", featured: false,
-      tags: ["SaaS", "Development", "Starter"]
-    }, { id: 4,
-      tags: ["SaaS,Development,Starter"]
-    }, {
+      tags: ["SaaS", "Development", "Starter"];
+}, { id: 4,
+      tags: ["SaaS,Development,Starter"];
+}, {
       id: 4,
       name: "Cybersecurity Suite", description: "Comprehensive security solution for enterprise applications",
       price: "$499/month", category: "Security",
       rating: 4.9, reviews: 67,
       image: "/api/placeholder/300/200", featured: false,
       tags: ["Security", "Enterprise", "Protection"]
-      tags: ["Security,Enterprise,Protection"]
-    }
-  ];
+      tags: ["Security,Enterprise,Protection"];
+}
+  ]
   const categories = [
   { name: "AI Tools", icon: Brain, count: 25, color: "from-purple-500 to-pink-500" },
     { name: "Analytics", icon: Database, count: 18, color: "from-blue-500 to-cyan-500" },
     { name: "Development", icon: Code, count: 32, color: "from-green-500 to-emerald-500" },
     { name: "Security", icon: Shield, count: 15, color: "from-red-500 to-orange-500" },
     { name: "Micro SaaS", icon: Rocket, count: 28, color: "from-indigo-500 to-blue-500" }
-  ];
+  ]
   return (
     <>
       <SEO 
         title="Marketplace - Zion Tech Group | Technology Solutions & Tools"
-        description="Discover and purchase cutting-edge technology solutions, AI tools, and micro SaaS applications from Zion Tech Group&apos;s marketplace."'
+        description="Discover and purchase cutting-edge technology solutions, AI tools, and micro SaaS applications from Zion Tech Group&apos;s marketplace."
         keywords="marketplace, technology solutions, AI tools, micro SaaS, software, Zion Tech Group"
         description="Discover and purchase cutting-edge technology solutions, AI tools, and micro SaaS applications from Zion Tech Group's marketplace. 
         keywords='marketplace, technology solutions, AI tools, micro SaaS, software, Zion Tech Group"

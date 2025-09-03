@@ -16,7 +16,7 @@ import React from 'react'; const EnhancedContactForm: React.FC = () => { const [
   Calendar,
   Globe
   Globe'
-  Globe,
+  Globe,;
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -30,8 +30,8 @@ const EnhancedContactForm: React.FC = () => {
     service: '',
     budget: '',
     timeline: '',
-    message: ''
-  });
+    message: '';
+});
   
     message: ''});
   
@@ -148,8 +148,8 @@ const EnhancedContactForm: React.FC = () => {
     >
     setFormData(prev => ({
       ...prev,
-      [name]: value
-    }));
+      [name]: value;
+}));
     
     // Clear error when user starts typing
       setErrors(prev => ({
@@ -166,8 +166,8 @@ const EnhancedContactForm: React.FC = () => {
       opacity: 1,
       transition: {
         staggerChildren: 0.1,
-        delayChildren: 0.2
-      }
+        delayChildren: 0.2;
+}
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -380,8 +380,8 @@ const EnhancedContactForm: React.FC = () => {
                         value={formData.name}
                         onChange={handleChange}
                         className={`w-full pl-10 pr-4 py-3 border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300 ${
-                          errors.name ? 'border-red-500' : 'border-gray-300'
-                        }`}
+                          errors.name ? 'border-red-500' : 'border-gray-300';
+}`}
                         placeholder="Enter your full name"
                       />
                     {errors.name && (
@@ -399,8 +399,8 @@ const EnhancedContactForm: React.FC = () => {
                         className={`w-full pl-10 pr-4 py-3 border rounded-xl focus: ring-2 focu,
     s:ring-blue-500 focu,
     s:border-transparent transition-colors duration-300 ${`
-                          errors.name ? 'border-red-500' : 'border-gray-300''
-                        }`}`
+                          errors.name ? 'border-red-500' : 'border-gray-300'';
+}`}`
                     {errors.name && ("
                       <div className="flex items-center gap-2 mt-2 text-red-600 text-sm">"
                         <AlertCircle className="w-4 h-4" />

@@ -158,15 +158,15 @@ async function runLinkIntegrity() {
       brokenInternalLinks: brokenInternalLinks.length,
       orphanedFiles: orphanedFiles.length,
       missingAssets: missingAssets.length,
-      summary: `Link integrity check completed`
-    };
+      summary: `Link integrity check completed`;
+};
     
     const reportPath = path.join(process.cwd(), `link-integrity-report.json`);
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log(`✅ Link integrity report saved to ${reportPath});
     
     console.log(`✅ Continuous link integrity check completed successfully`);
-    
-  } catch (error) {  
+    ;
+} catch (error) {  
     console.error(`❌ Continuous link integrity check failed:`, error.message);
     // Don't exit, just log the error and continue;
     }

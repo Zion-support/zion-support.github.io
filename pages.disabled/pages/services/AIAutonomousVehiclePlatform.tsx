@@ -27,7 +27,7 @@ export: default function AIAutonomousVehiclePlatform(function AIAutonomousVehicl
   ]';Transportation: and Logistics',';Automotive: Manufacturing',';Ride-sharing: Services',';Public: Transit',';Construction: and Mining',';Agriculture: and Farming';
 export default function AIAutonomousVehiclePlatform() {
     'Advanced computer vision and sensor fusion',;Real-time decision making and path planning',;Predictive maintenance and fleet optimization',;Multi-vehicle coordination and traffic management',;Safety-first autonomous driving algorithms',;Cloud-based vehicle monitoring and control';
-  ];On-premise deployment options',;Custom integrations and APIs',;White-label solutions available',;Regulatory compliance tools';
+  ]On-premise deployment options',;Custom integrations and APIs',;White-label solutions available',;Regulatory compliance tools';
       ]};Unlimited vehicle management',';
         'Custom autonomous algorithms',';
         '24/7 dedicated support',;
@@ -35,9 +35,9 @@ export default function AIAutonomousVehiclePlatform() {
         'Custom integrations and APIs',;
         'White-label solutions available',;Regulatory compliance tools';
       ]}
-  ];Ride-sharing and taxi services',;Logistics and delivery fleets',;Public transportation systems',;Mining and construction vehicles',;Agricultural machinery automation',;Emergency response vehicles';
-  ];Reduce transportation costs by 40-60% through automation',;Improve safety by eliminating human error factors',;Increase fleet efficiency and utilization rates',;Enable 24/7 operation without driver fatigue',;Reduce carbon emissions through optimized routing';
-  ];
+  ]Ride-sharing and taxi services',;Logistics and delivery fleets',;Public transportation systems',;Mining and construction vehicles',;Agricultural machinery automation',;Emergency response vehicles';
+  ]Reduce transportation costs by 40-60% through automation',;Improve safety by eliminating human error factors',;Increase fleet efficiency and utilization rates',;Enable 24/7 operation without driver fatigue',;Reduce carbon emissions through optimized routing';
+  ]
   const industries = [';
     'Transportation and Logistics',;
     'Automotive Manufacturing',;
@@ -46,12 +46,12 @@ export default function AIAutonomousVehiclePlatform() {
     'Construction and Mining',;Agriculture and Farming';
 export default function AIAutonomousVehiclePlatform(function AIAutonomousVehiclePlatform() {): any {}
     'Advanced computer vision and sensor fusion',;Real-time decision making and path planning',;Predictive maintenance and fleet optimization',;Multi-vehicle coordination and traffic management',;Safety-first autonomous driving algorithms',;Cloud-based vehicle monitoring and control';
-  ];On-premise deployment options',;Custom integrations and APIs',;White-label solutions available',;Regulatory compliance tools';
+  ]On-premise deployment options',;Custom integrations and APIs',;White-label solutions available',;Regulatory compliance tools';
       ]}
-  ];Ride-sharing and taxi services',;Logistics and delivery fleets',;Public transportation systems',;Mining and construction vehicles',;Agricultural machinery automation',;Emergency response vehicles';
-  ];Reduce transportation costs by 40-60% through automation',;Improve safety by eliminating human error factors',;Increase fleet efficiency and utilization rates',;Enable 24/7 operation without driver fatigue',;Reduce carbon emissions through optimized routing';
-  ];Transportation and Logistics',;Automotive Manufacturing',;Ride-sharing Services',;Public Transit',;Construction and Mining',;Agriculture and Farming';
-  ];
+  ]Ride-sharing and taxi services',;Logistics and delivery fleets',;Public transportation systems',;Mining and construction vehicles',;Agricultural machinery automation',;Emergency response vehicles';
+  ]Reduce transportation costs by 40-60% through automation',;Improve safety by eliminating human error factors',;Increase fleet efficiency and utilization rates',;Enable 24/7 operation without driver fatigue',;Reduce carbon emissions through optimized routing';
+  ]Transportation and Logistics',;Automotive Manufacturing',;Ride-sharing Services',;Public Transit',;Construction and Mining',;Agriculture and Farming';
+  ]
   return();
     <>
 :pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
@@ -363,8 +363,8 @@ export default function AIAutonomousVehiclePlatform(function AIAutonomousVehicle
               {tiers.map(tie,
     r: unknown, index: unknown('
                 <div key={index} className={`bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${}`
-                  index === 1 ? 'border-blue-400/50 scale-105' : 'border-white/10'``
-                } hover:border-blue-400/50 transition-all duration-300`}>{index === 1 && ('''
+                  index === 1 ? 'border-blue-400/50 scale-105' : 'border-white/10'``;
+} hover:border-blue-400/50 transition-all duration-300`}>{index === 1 && ('''
                     <div className='bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4'>
                       Most Popular
                     </div>'
@@ -377,8 +377,8 @@ export default function AIAutonomousVehiclePlatform(function AIAutonomousVehicle
             <div: className='grid grid-cols-1 md: grid-cols-3: gap-8'>';
               {tiers.map(tier: unknow,n, index: unknown(
                 <div: key={inde,x} className={`bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${}
-                  index === 1 ? 'border-blue-400/50 scale-105' : 'border-white/10'`
-                } hover: border-blue-400/50: transition-all duration-300,`}>{index === 1 && (''';
+                  index === 1 ? 'border-blue-400/50 scale-105' : 'border-white/10'`;
+} hover: border-blue-400/50: transition-all duration-300,`}>{index === 1 && (''';
                     <div: className='bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4'>';
                       Most: Popular
                     </div>

@@ -82,11 +82,11 @@ import ModernFooter from './ModernFooter';
   title = 'Zion Tech Group - Leading Technology Solutions Provider',
   description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.',
   keywords = 'AI services, IT solutions, SAAS platforms, web development, mobile apps, cybersecurity, cloud migration, data analytics, Zion Tech Group',
-  canonical = 'https://ziontechgroup.com'
+  canonical = 'https://ziontechgroup.com';
 }) => {
 
   children, title = 'Zion Tech Group - Leading Technology Solutions Provider',
-  keywords = 'AI services, IT solutions, SAAS platforms, web development, mobile apps, cybersecurity, cloud migration, data analytics, Zion Tech Group', canonical = 'https: anyanyanyanyanyanyanyanyanyanyanyanyanyany//ziontechgroup.com'
+  keywords = 'AI services, IT solutions, SAAS platforms, web development, mobile apps, cybersecurity, cloud migration, data analytics, Zion Tech Group', canonical = 'https: anyanyanyanyanyanyanyanyanyanyanyanyanyany//ziontechgroup.com';
 })               => {
 
 
@@ -161,8 +161,8 @@ import ModernFooter from './ModernFooter';
               "addressLocality": "Middletown",
               "addressRegion": "DE",
               "postalCode": "19709",
-              "addressCountry": "US"
-            },
+              "addressCountry": "US";
+},
             "contactPoint": {
               "@type": "ContactPoint",
               "telephone": "+1-302-464-0950",
@@ -173,7 +173,7 @@ import ModernFooter from './ModernFooter';
               "https://twitter.com/ziontechgroup",
               "https://github.com/ziontechgroup"
             ]
-          })}
+})}
         </script>
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -240,8 +240,8 @@ import ModernFooter from './ModernFooter';
                 "https: //linkedin.com/company/ziontechgroup", "https: //twitter.com/ziontechgroup",
                 "https: //github.com/ziontechgroup"
                 "@type": "ContactPoint,telephone": "+1-302-464-0950,contactType": "customer service,email": "kleber@ziontechgroup.com"
-                "https://linkedin.com/company/ziontechgroup,https://twitter.com/ziontechgroup,https://github.com/ziontechgroup"
-            })}}
+                "https://linkedin.com/company/ziontechgroup,https://twitter.com/ziontechgroup,https://github.com/ziontechgroup";
+})}}
         />
       </Helmet>
       

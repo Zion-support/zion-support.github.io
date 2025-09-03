@@ -114,8 +114,8 @@ class ContinuousErrorMonitor {;
     return new Promise(resolve => {
       const errorFixerPath = path.join(
         this.projectRoot,scripts`,
-        `automation',comprehensive-error-fixer.cjs'
-    } catch (error) {;
+        `automation',comprehensive-error-fixer.cjs';
+} catch (error) {;
       this.errorCount++;this.log(`Error during error fixer execution: ${error.message}');
     } finally {;
       this.isRunning = false;

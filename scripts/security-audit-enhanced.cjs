@@ -44,8 +44,8 @@ class SecurityAuditEnhanced {
       const result = execSync('npm audit --json', { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
-        timeout: 60000
-      });
+        timeout: 60000;
+});
       
       const auditData = JSON.parse(result);
       
@@ -56,8 +56,8 @@ class SecurityAuditEnhanced {
             package: packageName,
             severity: vuln.severity,
             description: vuln.description,
-            recommendation: `Update ${packageName} to version ${vuln.fixAvailable?.version || 'latest'}`
-          });
+            recommendation: `Update ${packageName} to version ${vuln.fixAvailable?.version || 'latest'}`;
+});
           
           // Deduct points based on severity
           switch (vuln.severity) {
@@ -117,8 +117,8 @@ class SecurityAuditEnhanced {
             line: index + 1,
             severity: 'low',
             description: 'Console.log statement found in production code',
-            recommendation: 'Remove or comment out console.log statements for production'
-          });
+            recommendation: 'Remove or comment out console.log statements for production';
+});
           this.securityScore -= 1;
         }
       });
@@ -132,7 +132,7 @@ class SecurityAuditEnhanced {
       /api[_-]?key\s*[:=]\s*['"][^'"]+['"]/i,
       /secret\s*[:=]\s*['"][^'"]+['"]/i,
       /token\s*[:=]\s*['"][^'"]+['"]/i
-    ];
+    ]
     
     files.forEach(file => {
       try {
@@ -145,14 +145,14 @@ class SecurityAuditEnhanced {
               file: path.relative(this.projectRoot, file),
               severity: 'high',
               description: 'Potential hardcoded secret found',
-              recommendation: 'Move secrets to environment variables'
-            });
+              recommendation: 'Move secrets to environment variables';
+});
             this.securityScore -= 10;
           }
         });
       } catch (error) {
-        // Skip files that can't be read
-      }
+        // Skip files that can't be read;
+}
     });
   }
 
@@ -169,13 +169,13 @@ class SecurityAuditEnhanced {
             file: path.relative(this.projectRoot, file),
             severity: 'moderate',
             description: 'Insecure HTTP protocol used',
-            recommendation: 'Use HTTPS instead of HTTP for production'
-          });
+            recommendation: 'Use HTTPS instead of HTTP for production';
+});
           this.securityScore -= 5;
         }
       } catch (error) {
-        // Skip files that can't be read
-      }
+        // Skip files that can't be read;
+}
     });
   }
 
@@ -202,8 +202,8 @@ class SecurityAuditEnhanced {
       this.recommendations.push({
         type: 'configuration',
         description: 'Add security headers to Next.js configuration',
-        recommendation: 'Configure security headers like X-Frame-Options, X-Content-Type-Options, etc.'
-      });
+        recommendation: 'Configure security headers like X-Frame-Options, X-Content-Type-Options, etc.';
+});
       this.securityScore -= 5;
     }
   }
@@ -231,13 +231,13 @@ class SecurityAuditEnhanced {
             file: path.relative(this.projectRoot, file),
             severity: 'moderate',
             description: 'Environment variables might be logged',
-            recommendation: 'Remove console.log statements that might expose sensitive data'
-          });
+            recommendation: 'Remove console.log statements that might expose sensitive data';
+});
           this.securityScore -= 5;
         }
       } catch (error) {
-        // Skip files that can't be read
-      }
+        // Skip files that can't be read;
+}
     });
   }
 
@@ -254,13 +254,13 @@ class SecurityAuditEnhanced {
             file: path.relative(this.projectRoot, file),
             severity: 'low',
             description: 'Debug information found in code',
-            recommendation: 'Remove debug statements for production'
-          });
+            recommendation: 'Remove debug statements for production';
+});
           this.securityScore -= 2;
         }
       } catch (error) {
-        // Skip files that can't be read
-      }
+        // Skip files that can't be read;
+}
     });
   }
 
@@ -289,8 +289,8 @@ class SecurityAuditEnhanced {
               script: scriptName,
               severity: 'high',
               description: 'Insecure script configuration found',
-              recommendation: 'Remove unsafe flags from scripts'
-            });
+              recommendation: 'Remove unsafe flags from scripts';
+});
             this.securityScore -= 15;
           }
         });
@@ -311,8 +311,8 @@ class SecurityAuditEnhanced {
           this.recommendations.push({
             type: 'gitignore',
             description: `Add ${entry} to .gitignore`,
-            recommendation: `Ensure ${entry} is not committed to version control`
-          });
+            recommendation: `Ensure ${entry} is not committed to version control`;
+});
           this.securityScore -= 3;
         }
       });
@@ -351,8 +351,8 @@ class SecurityAuditEnhanced {
         critical: this.vulnerabilities.filter(v => v.severity === 'critical').length,
         high: this.vulnerabilities.filter(v => v.severity === 'high').length,
         moderate: this.vulnerabilities.filter(v => v.severity === 'moderate').length,
-        low: this.vulnerabilities.filter(v => v.severity === 'low').length
-      }
+        low: this.vulnerabilities.filter(v => v.severity === 'low').length;
+}
     };
     
     const reportPath = path.join(this.projectRoot, 'security-audit-report.json');

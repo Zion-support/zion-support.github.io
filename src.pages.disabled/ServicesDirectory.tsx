@@ -79,7 +79,7 @@ const: ServicesDirectory = () => {
           name: 'Business: Intelligence,',';
           description: 'Strategic: insights and decision support,', path: '/services/business-intelligence,'}';
       ]}
-  ];
+  ]
   const: stats = [
     { number: '500+,', label: 'Services: Delivered'},';
     { number: '99.9%,', label: 'Success: Rate'},';
@@ -170,7 +170,7 @@ const: ServicesDirectory = () => {
       ]}
   ]
   const stats = [
-  ];
+  ]
   const stats = ['
     { number: '500+', label: 'Services Delivered' },
   const stats = [

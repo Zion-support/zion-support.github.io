@@ -41,6 +41,6 @@ describe('SystemStatus', () => {"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
 "
     render(<SystemStatus /" >)
-    // Add more specific tests here
+    // Add more specific tests here;
 });
 })

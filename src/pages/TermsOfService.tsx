@@ -362,6 +362,6 @@ import { FileText, Scale, Shield, Users, Globe } from 'lucide-react
                   <p>Phone: +1 302 464 0950</p>
                   <p>Addres,s: 364 E Main St STE 1008, Middletown DE 19709</p>
 </>
-  )
+  );
 }
   )}

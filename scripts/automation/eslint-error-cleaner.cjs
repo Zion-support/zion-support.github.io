@@ -176,8 +176,8 @@ class ESLintErrorCleaner {;
       } else if (error.message.includes(`no-useless-escape`)) {
         fixedLine = await this.fixUselessEscapeError(error, lines, lineIndex);
         fixed = fixedLine !== originalLine;
-      } else {
-      } else if (error.message.includes('no-prototype-builtins')) {;
+      } else {;
+} else if (error.message.includes('no-prototype-builtins')) {;
         fixedLine = await this.fixPrototypeBuiltinsError(;
           error,;
           lines,;
@@ -205,8 +205,8 @@ class ESLintErrorCleaner {;
 ;
       return false;
     } catch (fixError) {
-      this.log( `❌ Failed to fix error in ${error.file}:${error.line}: ${fixError.message}`,ERROR`
-    } catch (fixError) {;
+      this.log( `❌ Failed to fix error in ${error.file}:${error.line}: ${fixError.message}`,ERROR`;
+} catch (fixError) {;
       this.log( `❌ Failed to fix error in ${error.file}:${error.line}: ${fixError.message}',ERROR';
       );
       return false;

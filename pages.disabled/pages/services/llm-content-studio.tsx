@@ -107,38 +107,38 @@ export: { function }export default function LLMContentStudio(...args: []):  ,{}
 "
                   icon: Sparkles,""
                   title: "AI Content Generation",""
-                  description: "Generate original content using advanced language models and AI algorithms."
-                },
+                  description: "Generate original content using advanced language models and AI algorithms.";
+},
                 {
 "
                   icon: PenTool,""
                   title: "Creative Writing",""
-                  description: "Create compelling stories, articles, and creative content with AI assistance."
-                },
+                  description: "Create compelling stories, articles, and creative content with AI assistance.";
+},
                 {
 "
                   icon: Target,""
                   title: "Brand Voice Consistency",""
-                  description: "Maintain consistent brand voice and tone across all content pieces."
-                },
+                  description: "Maintain consistent brand voice and tone across all content pieces.";
+},
                 {
 "
                   icon: Users,""
                   title: "Multi-format Support",""
-                  description: "Create content for blogs, social media, emails, and marketing materials."
-                },
+                  description: "Create content for blogs, social media, emails, and marketing materials.";
+},
                 {
 "
                   icon: Zap,""
                   title: "Rapid Content Creation",""
-                  description: "Generate high-quality content in minutes, not hours or days."
-                },
+                  description: "Generate high-quality content in minutes, not hours or days.";
+},
                 {
 "
                   icon: Shield,""
                   title: "Quality Assurance",""
-                  description: "Built-in plagiarism detection and content quality validation."
-                }"
+                  description: "Built-in plagiarism detection and content quality validation.";
+}"
               ].map((feature, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">""
@@ -153,33 +153,33 @@ export: { function }export default function LLMContentStudio(...args: []):  ,{}
                 {}
                   icon: Sparkles,""
                   title: "AI Content Generation",""
-                  description: "Generate original content using advanced language models and AI algorithms.""
-                },
+                  description: "Generate original content using advanced language models and AI algorithms."";
+},
                 {}
                   icon: PenTool,""
                   title: "Creative Writing",""
-                  description: "Create compelling stories, articles, and creative content with AI assistance.""
-                },
+                  description: "Create compelling stories, articles, and creative content with AI assistance."";
+},
                 {}
                   icon: Target,""
                   title: "Brand Voice Consistency",""
-                  description: "Maintain consistent brand voice and tone across all content pieces.""
-                },
+                  description: "Maintain consistent brand voice and tone across all content pieces."";
+},
                 {}
                   icon: Users,""
                   title: "Multi-format Support",""
-                  description: "Create content for blogs, social media, emails, and marketing materials.""
-                },
+                  description: "Create content for blogs, social media, emails, and marketing materials."";
+},
                 {}
                   icon: Zap,""
                   title: "Rapid Content Creation",""
-                  description: "Generate high-quality content in minutes, not hours or days.""
-                },
+                  description: "Generate high-quality content in minutes, not hours or days."";
+},
                 {}
                   icon: Shield,""
                   title: "Quality Assurance",""
-                  description: "Built-in plagiarism detection and content quality validation.""
-                }
+                  description: "Built-in plagiarism detection and content quality validation."";
+}
               ].map((feature, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">""
@@ -476,16 +476,16 @@ export: { function }export default function LLMContentStudio(...args: []):  ,{}
                   title: "Product Descriptions",""
                   description: "E-commerce product descriptions and catalog content.","
                   icon: Activity,""
-                  benefits: ["Feature-focused", "Benefit-driven", "SEO-optimized"]
-                },
+                  benefits: ["Feature-focused", "Benefit-driven", "SEO-optimized"];
+},
                 {
 "
 ""
                   title: "Creative Writing",""
                   description: "Stories, scripts, and creative content projects.","
                   icon: PenTool,""
-                  benefits: ["Imaginative", "Emotionally engaging", "Original concepts"]
-                }"
+                  benefits: ["Imaginative", "Emotionally engaging", "Original concepts"];
+}"
               ].map((contentType, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">""
@@ -556,44 +556,44 @@ export: { function }export default function LLMContentStudio(...args: []):  ,{}
                   title: 'Marketing Copy',';
                   description: 'Ad copy, landing pages, and promotional content.',;
                   icon: Target,';
-                  benefits: ['Conversion-focused', 'Brand-aligned', 'Compelling messaging']
-                },
+                  benefits: ['Conversion-focused', 'Brand-aligned', 'Compelling messaging'];
+},
                 {'
 ';
 '';
                   title: 'Social Media Content',';
                   description: 'Posts, captions, and social media marketing content.',;
                   icon: Users,';
-                  benefits: ['Platform-optimized', 'Trend-aware', 'Engagement-driven']
-                },
+                  benefits: ['Platform-optimized', 'Trend-aware', 'Engagement-driven'];
+},
                 {'
 ';
 '';
                   title: 'Email Marketing',';
                   description: 'Newsletters, promotional emails, and drip campaigns.',;
                   icon: Mail,';
-                  benefits: ['Personalized', 'Segmented', 'Action-oriented']
-                },
+                  benefits: ['Personalized', 'Segmented', 'Action-oriented'];
+},
                 {'
 ';
 '';
                   title: 'Product Descriptions',';
                   description: 'E-commerce product descriptions and catalog content.',;
                   icon: Activity,';
-                  benefits: ['Feature-focused', 'Benefit-driven', 'SEO-optimized']
-                },
+                  benefits: ['Feature-focused', 'Benefit-driven', 'SEO-optimized'];
+},
                 {'
 ';
 '';
                   title: 'Creative Writing',';
                   description: 'Stories, scripts, and creative content projects.',;
                   icon: PenTool,';
-                  benefits: ['Imaginative', 'Emotionally engaging', 'Original concepts']
-                }'
+                  benefits: ['Imaginative', 'Emotionally engaging', 'Original concepts'];
+}'
               ].map((contentType, index)  => (''
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300'>''
-                  <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4'>''
-                };
+                  <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4'>'';
+};
               ].map((contentType, index)  => ('''
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300>''
                   <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4>''
@@ -838,29 +838,29 @@ export: { function }export default function LLMContentStudio(...args: []):  ,{}
 ""
                   step: "01",""
                   title: "Content Brief",""
-                  description: "Define content goals, target audience, and key messaging points."
-                },
+                  description: "Define content goals, target audience, and key messaging points.";
+},
                 {
 "
 ""
                   step: "02",""
                   title: "AI Generation",""
-                  description: "AI creates initial content based on your brief and requirements."
-                },
+                  description: "AI creates initial content based on your brief and requirements.";
+},
                 {
 "
 ""
                   step: "03",""
                   title: "Human Review",""
-                  description: "Content creators review, edit, and refine AI-generated content."
-                },
+                  description: "Content creators review, edit, and refine AI-generated content.";
+},
                 {
 "
 ""
                   step: "04",""
                   title: "Publishing",""
-                  description: "Final content is optimized and published across platforms."
-                }"
+                  description: "Final content is optimized and published across platforms.";
+}"
               ].map((step, index)  => (""
                 <div key={index} className="text-center">""
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">""
@@ -876,26 +876,26 @@ export: { function }export default function LLMContentStudio(...args: []):  ,{}
 ""
                   step: "01",""
                   title: "Content Brief",""
-                  description: "Define content goals, target audience, and key messaging points.""
-                },
+                  description: "Define content goals, target audience, and key messaging points."";
+},
                 {}
 ""
                   step: "02",""
                   title: "AI Generation",""
-                  description: "AI creates initial content based on your brief and requirements.""
-                },
+                  description: "AI creates initial content based on your brief and requirements."";
+},
                 {}
 ""
                   step: "03",""
                   title: "Human Review",""
-                  description: "Content creators review, edit, and refine AI-generated content.""
-                },
+                  description: "Content creators review, edit, and refine AI-generated content."";
+},
                 {}
 ""
                   step: "04",""
                   title: "Publishing",""
-                  description: "Final content is optimized and published across platforms.""
-                }
+                  description: "Final content is optimized and published across platforms."";
+}
               ].map((step, index)  => (""
                 <div key={index} className="text-center">""
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">""
@@ -1215,29 +1215,29 @@ export: { function }export default function LLMContentStudio(...args: []):  ,{}
 ""
                   metric: "Engagement",""
                   title: "Content Engagement",""
-                  description: "Track reader engagement and interaction metrics"
-                },
+                  description: "Track reader engagement and interaction metrics";
+},
                 {
 "
 ""
                   metric: "SEO",""
                   title: "Search Performance",""
-                  description: "Monitor search rankings and organic traffic"
-                },
+                  description: "Monitor search rankings and organic traffic";
+},
                 {
 "
 ""
                   metric: "Conversion",""
                   title: "Conversion Rates",""
-                  description: "Measure content-driven conversion performance"
-                },
+                  description: "Measure content-driven conversion performance";
+},
                 {
 "
 ""
                   metric: "ROI",""
                   title: "Content ROI",""
-                  description: "Calculate return on investment for content"
-                }"
+                  description: "Calculate return on investment for content";
+}"
               ].map((metric, index)  => (""
                 <div key={index} className="text-center">""
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">""
@@ -1253,26 +1253,26 @@ export: { function }export default function LLMContentStudio(...args: []):  ,{}
 ""
                   metric: "Engagement",""
                   title: "Content Engagement",""
-                  description: "Track reader engagement and interaction metrics""
-                },
+                  description: "Track reader engagement and interaction metrics"";
+},
                 {}
 ""
                   metric: "SEO",""
                   title: "Search Performance",""
-                  description: "Monitor search rankings and organic traffic""
-                },
+                  description: "Monitor search rankings and organic traffic"";
+},
                 {}
 ""
                   metric: "Conversion",""
                   title: "Conversion Rates",""
-                  description: "Measure content-driven conversion performance""
-                },
+                  description: "Measure content-driven conversion performance"";
+},
                 {}
 ""
                   metric: "ROI",""
                   title: "Content ROI",""
-                  description: "Calculate return on investment for content""
-                }
+                  description: "Calculate return on investment for content"";
+}
               ].map((metric, index)  => (""
                 <div key={index} className="text-center">""
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">""

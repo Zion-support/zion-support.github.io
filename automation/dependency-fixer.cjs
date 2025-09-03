@@ -66,8 +66,8 @@ class DependencyFixer {
       // Write back the fixed package.json
       fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
       this.log('✅ Package.json fixed successfully');
-      
-    } catch (error) {
+      ;
+} catch (error) {
       this.log(`❌ Failed to fix package.json: ${error.message}`, 'ERROR');
       this.errors.push(error.message);
     }
@@ -96,8 +96,8 @@ class DependencyFixer {
       }
       
       this.log('✅ Cleanup completed');
-      
-    } catch (error) {
+      ;
+} catch (error) {
       this.log(`❌ Failed to clean: ${error.message}`, 'ERROR');
       this.errors.push(error.message);
     }
@@ -110,14 +110,14 @@ class DependencyFixer {
       // Try yarn first (it worked before)
       execSync('yarn install --ignore-engines', { 
         cwd: this.projectRoot,
-        stdio: 'inherit'
-      });
+        stdio: 'inherit';
+});
       
       this.fixes.push('Dependencies installed with yarn');
       this.log('✅ Dependencies installed successfully');
       return true;
-      
-    } catch (error) {
+      ;
+} catch (error) {
       this.log(`❌ Yarn install failed: ${error.message}`, 'ERROR');
       this.errors.push(error.message);
       return false;
@@ -130,13 +130,13 @@ class DependencyFixer {
     try {
       execSync('yarn audit --fix', { 
         cwd: this.projectRoot,
-        stdio: 'inherit'
-      });
+        stdio: 'inherit';
+});
       
       this.fixes.push('Security vulnerabilities fixed');
       this.log('✅ Security audit completed');
-      
-    } catch (error) {
+      ;
+} catch (error) {
       this.log(`⚠️  Audit fix had issues: ${error.message}`, 'WARN');
     }
   }
@@ -147,14 +147,14 @@ class DependencyFixer {
     try {
       execSync('yarn build', { 
         cwd: this.projectRoot,
-        stdio: 'inherit'
-      });
+        stdio: 'inherit';
+});
       
       this.fixes.push('Build test successful');
       this.log('✅ Build test passed');
       return true;
-      
-    } catch (error) {
+      ;
+} catch (error) {
       this.log(`❌ Build test failed: ${error.message}`, 'ERROR');
       this.errors.push(error.message);
       return false;
@@ -195,8 +195,8 @@ class DependencyFixer {
       }
       
       this.log('\\n🎉 Dependency fixing completed!');
-      
-    } catch (error) {
+      ;
+} catch (error) {
       this.log(`💥 Fatal error: ${error.message}`, 'ERROR');
       process.exit(1);
     }

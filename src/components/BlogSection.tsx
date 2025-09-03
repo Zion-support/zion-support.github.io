@@ -19,7 +19,7 @@ export default function BlogSection() {return (
     </div>
   );
 }
-export function BlogSection(...args[]): {
+export function BlogSection(...args[]): {;
 }
 import React from 'react';
 import { SEO } from '@/components/SEO';

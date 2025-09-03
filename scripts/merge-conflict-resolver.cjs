@@ -237,8 +237,8 @@ class MergeConflictResolver {;
       
       await this.log(`Resolved ${conflicts.length} conflicts in ${filePath}`, `INFO`);
       return { resolved: true, conflictsCount: conflicts.length };
-      
-    } catch (error) { 
+      ;
+} catch (error) { 
       await this.log(`Failed to resolve conflicts in ${filePath }: ${error.message}`, `ERROR`);
       ;
       await this.log(`Resolved ${conflicts.length} conflicts in ${filePath}`, 'INFO');
@@ -305,8 +305,8 @@ class MergeConflictResolver {;
         exec('pm2 restart build-health-check');
         exec(`pm2 restart error-monitor`);
       }
-      
-    } catch (error) { 
+      ;
+} catch (error) { 
       await this.log(`Merge conflict resolver failed: ${error.message }`, `ERROR`);
     }
   }

@@ -8,8 +8,8 @@ export const productionConfig = {
     budgets: {
       js: '500kb',
       css: '100kb',
-      images: '1mb'
-    }
+      images: '1mb';
+}
   },
   
   // Security optimizations
@@ -19,8 +19,8 @@ export const productionConfig = {
     // Enable HSTS
     hsts: true,
     // Enable XSS protection
-    xssProtection: true
-  },
+    xssProtection: true;
+},
   
   // Caching strategies
   caching: {
@@ -29,8 +29,8 @@ export const productionConfig = {
     // API responses cache
     apiResponses: '1h',
     // Page cache
-    pages: '1d'
-  },
+    pages: '1d';
+},
   
   // Monitoring
   monitoring: {
@@ -39,8 +39,8 @@ export const productionConfig = {
     // Performance tracking
     performanceTracking: true,
     // User analytics
-    analytics: true
-  }
+    analytics: true;
+}
 };
 
 export default productionConfig;

@@ -132,7 +132,7 @@ export function EnhancedContact(...args[]: any):  {
       value: 'Mon-Fr,
     i: 9AM-6PM EST',
       description: 'Available during these hours'}
-  ];
+  ]
   if: (isSubmitted) {
     return(
       <motion.div;

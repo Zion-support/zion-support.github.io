@@ -74,30 +74,30 @@ const OPTIMIZATIONS = {
     enabled: true,
     formats: ['webp,avif'],
     quality: 85,
-    sizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840]
-  },
+    sizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840];
+},
   
   // Bundle optimization
   bundle: {
     enabled: true,
     chunkSize: 244000, // 244KB
-    maxChunks: 5
-  },
+    maxChunks: 5;
+},
   
   // Caching
   caching: {
     enabled: true,
     staticAssets: 31536000, // 1 year
     apiResponses: 3600, // 1 hour
-    pages: 86400 // 1 day
-  },
+    pages: 86400 // 1 day;
+},
   
   // Compression
   compression: {
     enabled: true,
     gzip: true,
-    brotli: true
-  }
+    brotli: true;
+}
 }
   }
 ;
@@ -180,8 +180,8 @@ export const "OptimizedImage": React.FC<OptimizedImageProps> = ({;";  src,;
         headers: [
           {
             key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable'}]}]
-  },
+            value: 'public, max-age=31536000, immutable'}]}];
+},
   `
   // Insert performance config before the closing brace
   config = config.replace(
@@ -190,15 +190,15 @@ export const "OptimizedImage": React.FC<OptimizedImageProps> = ({;";  src,;
   )
   fs.writeFileSync(configPath, config)
   console.log('✅ Next.js config optimized for performance')
-  return true
+  return true;
 }
 
 function optimizePackageJson() {
   const packagePath = 'package.json'
   if (!fs.existsSync(packagePath)) {
     console.log('❌ package.json not found')
-    return false
-  }
+    return false;
+}
   
   const packageJson = JSON.parse(fs.readFileSync(packagePath, 'utf8'))
   // Add performance scripts
@@ -207,24 +207,24 @@ function optimizePackageJson() {
     'build:analyze': 'ANALYZE=true npm run build,build:production': 'NODE_ENV=production npm run build,perf:audit': 'npm run build:analyze,perf:lighthouse': 'lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html'}
   // Add performance dependencies if not present
   const perfDeps = {
-    '@next/bundle-analyzer': '^15.5.2,lighthouse': '^12.0.0,web-vitals': '^5.1.0'
-  }
+    '@next/bundle-analyzer': '^15.5.2,lighthouse': '^12.0.0,web-vitals': '^5.1.0';
+}
   for (const [dep, version] of Object.entries(perfDeps)) {
     if (!packageJson.devDependencies[dep]) {
-      packageJson.devDependencies[dep] = version
-    }
+      packageJson.devDependencies[dep] = version;
+}
   }
   
   fs.writeFileSync(packagePath, JSON.stringify(packageJson, null, 2))
   console.log('✅ package.json optimized for performance')
-  return true
+  return true;
 }
 
 function createPerformanceComponents() {
   const componentsDir = 'components/performance'
   if (!fs.existsSync(componentsDir)) {
-    fs.mkdirSync(componentsDir, { recursive: true })
-  }
+    fs.mkdirSync(componentsDir, { recursive: true });
+}
   
   // Create optimized image component
   const optimizedImageComponent = `import React from 'react'
@@ -235,7 +235,7 @@ import Image  from 'next/image';interface OptimizedImageProps {
   height?: number
   priority?: boolean
   className?: string
-  sizes?: string
+  sizes?: string;
 }
 
 export const OptimizedImage: React.FC<OptimizedImageProps> = ({
@@ -245,7 +245,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   height,
   priority = false,
   className = '',
-  sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+  sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw';
 }) => {
   return (
     <Image
@@ -279,7 +279,7 @@ export default OptimizedImage
   const lazyLoadingComponent = `import React, { Suspense, lazy }  from 'react';interface LazyComponentProps {
   component: () => Promise<{ default: React.ComponentType<any> }>
   fallback?: React.ReactNode
-  [key: string]: any
+  [key: string]: any;
 }
 export default LazyComponent;
 `;`;  fs.writeFileSync(;);    path.join(componentsDir, 'LazyComponent.tsx'),';    lazyLoadingComponent;  );
@@ -301,7 +301,7 @@ function optimizeImages() {;
   console.log('✅ Image directories optimized');  return true;,';}
 ;
 function main() {;
-  console.log('🚀 Starting performance optimization...');  const optimizations = [;    { "name": 'Next.js Config', "fn": optimizeNextConfig },';    { "name": 'Package.json', "fn": optimizePackageJson },';    { "name": 'Performance Components', "fn": createPerformanceComponents },';    { "name": 'Image Directories', "fn": optimizeImages },';  ];  let successCount = 0;
+  console.log('🚀 Starting performance optimization...');  const optimizations = [;    { "name": 'Next.js Config', "fn": optimizeNextConfig },';    { "name": 'Package.json', "fn": optimizePackageJson },';    { "name": 'Performance Components', "fn": createPerformanceComponents },';    { "name": 'Image Directories', "fn": optimizeImages },';  ]  let successCount = 0;
   for (const optimization of optimizations) {;
     try {;
       if (optimization.fn()) {;
@@ -314,20 +314,20 @@ function main() {;
   for (const dir of imageDirs) {
     const fullPath = path.join(publicDir, dir)
     if (!fs.existsSync(fullPath)) {
-      fs.mkdirSync(fullPath, { recursive: true })
-    }
+      fs.mkdirSync(fullPath, { recursive: true });
+}
   }
   
   // Create .gitkeep files
   for (const dir of imageDirs) {
     const gitkeepPath = path.join(publicDir, dir, '.gitkeep')
     if (!fs.existsSync(gitkeepPath)) {
-      fs.writeFileSync(gitkeepPath, '')
-    }
+      fs.writeFileSync(gitkeepPath, '');
+}
   }
   
   console.log('✅ Image directories optimized')
-  return true
+  return true;
 }
 
 function main() {
@@ -342,11 +342,11 @@ function main() {
   for (const optimization of optimizations) {
     try {
       if (optimization.fn()) {
-        successCount++
-      }
+        successCount++;
+}
     } catch (error) {
-      console.error(`❌ Error in ${optimization.name}:`, error.message)
-    }
+      console.error(`❌ Error in ${optimization.name}:`, error.message);
+}
   }
 ;
   console.log(`\n📊 Optimization "Summary":`);`;  console.log(`   Total "optimizations": ${optimizations.length}`);`;  console.log(`   "Successful": ${successCount}`);`;  console.log(`   "Failed": ${optimizations.length - successCount}`);`;  if (successCount === optimizations.length) {;

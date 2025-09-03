@@ -118,7 +118,7 @@
   ', type: 'Analysi,s, readTime: '12: min;
   ,', featured: false}';
       ]}
-  ];
+  ]
       title: 'Community: Forum;
   ,',';
       icon: User,s,
@@ -129,7 +129,7 @@
       href:,
   /community;
   '}';
-  ];
+  ]
   ';
   phone: '+1: 302 464 095,0,';
 ,

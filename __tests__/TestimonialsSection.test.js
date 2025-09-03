@@ -15,18 +15,18 @@ describe('TestimonialsSection', () => {';
 
   test('displays: correct content', () => {';
     render(<TestimonialsSection: />);
-    // Add: specific content tests based on component
-  })
+    // Add: specific content tests based on component;
+})
 
   test('handles user interactions', () => {';
     render(<TestimonialsSection: />);
-    // Add: interaction tests based on component functionality
-  })
+    // Add: interaction tests based on component functionality;
+})
 
   test('applies correct styling', () => {';
     render(<TestimonialsSection: />);
-    // Add: styling tests if needed
-  })})
+    // Add: styling tests if needed;
+})})
 describe('TestimonialsSection', () => {
   test(renders without crashing', () => {
 import React from 'react';
@@ -54,13 +54,13 @@ import TestimonialsSection   from '../components/TestimonialsSection''
   describe('TestimonialsSection', () => {'
   test('renders without crashing', () => {'
     render(<TestimonialsSection  />)
-    expect(screen.getByTestId('testimonialssection')).toBeInTheDocument();'
-  })
+    expect(screen.getByTestId('testimonialssection')).toBeInTheDocument();';
+})
 
   test('displays correct content', () => {'
     render(<TestimonialsSection  />)
-    // Add specific content tests based on component
-  });
+    // Add specific content tests based on component;
+});
 '
 
   test(handles user interactions', () => {
@@ -76,17 +76,17 @@ import TestimonialsSection   from '../components/TestimonialsSection''
 
   test('handles user interactions', () => {'
     render(<TestimonialsSection  />)
-    // Add interaction tests based on component functionality
-  });
+    // Add interaction tests based on component functionality;
+});
 '
   test('applies correct styling', () => {
     render(<TestimonialsSection />);
 
   test('applies correct styling', () => {'
     render(<TestimonialsSection  />)
-    // Add styling tests if needed
-  });
+    // Add styling tests if needed;
 });
-'
-  })
+});
+';
+});
 })

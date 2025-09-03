@@ -861,8 +861,8 @@ async function runFinalChecks() {
     } catch (error) {  
       console.log('  ⚠️  Lint check still has issues');
       }
-
-    } catch (error) {;
+;
+} catch (error) {;
       console.log('  ⚠️  Lint check still has issues');
     }
 ;

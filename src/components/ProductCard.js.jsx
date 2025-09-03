@@ -54,8 +54,8 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}"
         {/* Optionally, provide more details if product ID is known */}"""";,"});,"})
         {/* {product && product.id && <p className="text-xs text-muted-foreground">ID: {product.id}</p>} */}"});,"})
       </div>;,"});,"})
-    );,"});,"})
-  }"});,"})
+    );,"});,"});
+}"});,"})
   const active = isWishlisted(product.id);,"});,"})
   const dispatch = useDispatch();,"});,"})
   // Title is now guaranteed to be a non-empty string by the check above.const productTitle = product.title;,"});,"})
@@ -66,17 +66,17 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}"
         title: productTitle,;,"});,"})
         price: product.price ?? 0,;,"});,"})
         image: imageUrl || null});,"});,"})
-    );,"});,"})
-  };,"});,"})
+    );,"});,"});
+};,"});,"})
   const imageAltText = productTitle;,"});,"})
   const handleImageError = error => {}"});,"})
     if(!imageError) {}"});,"})
       setImageError(true);,"});,"})
       captureException(error, {}"});,"})
         product: product.id,;,"});,"})
-        imageUrl});,"});,"})
-    }"});,"})
-  };,"});,"})
+        imageUrl});,"});,"});
+}"});,"});
+};,"});,"})
   const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw';,"});,"})
   return()""";,"});,"})
     <div"""";,"});,"})
@@ -136,8 +136,8 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}"
                 <Button;,"});,"})
                   onClick={e => {}"});,"})
                     e.stopPropagation();,"});,"})
-                    onBuy();""";,"});,"})
-                  }}"""";,"});,"})
+                    onBuy();""";,"});,"});
+}}"""";,"});,"})
                   size="sm"""";,"});,"})
                   variant="outline"""";,"});,"})
                   className="flex-1"""";,"});,"})
@@ -194,7 +194,7 @@ import { useWishlist } from '@/hooks/useWishlist';""
 import { Button } from '@/components/ui/button';
 import {
   Tooltip, TooltipContent,
-  TooltipProvider, TooltipTrigger;", "
+  TooltipProvider, TooltipTrigger;", ";
 } from '@/components/ui/tooltip';""
 import { useDispatch } from 'react-redux';""
 import { addItem } from '@/store/cartSlice';""
@@ -212,7 +212,7 @@ import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
-  TooltipTrigger'
+  TooltipTrigger';
 } from '@/components/ui/tooltip';
 import { useDispatch } from 'react-redux';
 import { addItem } from '@/store/cartSlice';
@@ -388,8 +388,8 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}
                 >
                   <Heart'
                     className={`h-4 w-4 ${`
-                      active ? 'fill-red-500 text-red-500' : 'text-gray-600''
-                    }`}
+                      active ? 'fill-red-500 text-red-500' : 'text-gray-600'';
+}`}
                   />
                 </Button>
               </TooltipTrigger>
@@ -403,7 +403,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}
                   className='absolute top-2 right-2 h-8 w-8 bg-white/80 hover: bg-white'
                   onClick={handleWishlistToggle}" >`"
                   <Heart className={`h-4 w-4 ${""
-                      active ? 'fill-red-500 text-red-500' : 'text-gray-600', `
+                      active ? 'fill-red-500 text-red-500' : 'text-gray-600', `;
 }`}
                   /" >"
                 </Button>

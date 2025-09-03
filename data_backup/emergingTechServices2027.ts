@@ -180,8 +180,8 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [;
     e: 'Quantum speed advantage',
       scalability: 'Global quantum network',
       security: 'Quantum-secured',
-      compliance['NIST', 'ISO 27001', 'FedRAMP', 'SOC 2']
-    },
+      compliance['NIST', 'ISO 27001', 'FedRAMP', 'SOC 2'];
+},
     roi: '1000-2000%',
     estimatedDelivery: '24-36 weeks',
     contactInfo: {'
@@ -298,8 +298,8 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [;
     e: 'Space-optimized quantum processing',
       scalability: 'Multi-satellite constellation',
       security: 'Space-grade security',
-      compliance['NASA standards', 'Space safety', 'International treaties']
-    },
+      compliance['NASA standards', 'Space safety', 'International treaties'];
+},
     roi: '1500-3000%',
     estimatedDelivery: '36-48 weeks',
     contactInfo: {'
@@ -416,8 +416,8 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [;
     e: 'Biological parallel processing',
       scalability: 'Cellular network expansion',
       security: 'Biological security protocols',
-      compliance['FDA', 'NIH', 'Research ethics', 'Biosafety']
-    },
+      compliance['FDA', 'NIH', 'Research ethics', 'Biosafety'];
+},
     roi: '800-1500%',
     estimatedDelivery: '18-24 weeks',
     contactInfo: {'
@@ -534,8 +534,8 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [;
     e: 'Neuromorphic processing',
       scalability: 'Neural network expansion',
       security: 'Cognitive security',
-      compliance['AI ethics', 'Research standards', 'Industry best practices']
-    },
+      compliance['AI ethics', 'Research standards', 'Industry best practices'];
+},
     roi: '600-1200%',
     estimatedDelivery: '20-28 weeks',
     contactInfo: {'
@@ -640,8 +640,8 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [;
     e: 'Fusion-powered computing',
       scalability: 'Modular fusion systems',
       security: 'Energy security protocols',
-      compliance['Nuclear safety', 'Environmental standards', 'Energy regulations']
-    },
+      compliance['Nuclear safety', 'Environmental standards', 'Energy regulations'];
+},
     roi: '1200-2500%',
     estimatedDelivery: '48-60 weeks',
     contactInfo: {'

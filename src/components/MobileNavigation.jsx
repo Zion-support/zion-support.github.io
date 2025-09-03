@@ -12,8 +12,8 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
     // Close menu when clicking outside;,"});,"})
         const handleClickOutside = (event) => {}"});,"})
             if (menuRef.current && !menuRef.current.contains(event.target)) {}"});,"})
-                onToggle()}"});,"})
-        };,"});,"})
+                onToggle()}"});,"});
+};,"});,"})
         if (isOpen) {}"});,"})
 ';,"});,"})
 '';,"});,"})
@@ -34,8 +34,8 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
                 { label: 'Cloud Services', href: '/services/cloud' },''';,"});,"})
                 { label: 'Digital Transformation', href: '/services/transformation' },''';,"});,"})
                 { label: 'Consulting', href: '/services/consulting' }"});,"})
-            ];,"});,"})
-        },;,"});,"})
+            ],"});,"});
+},;,"});,"})
             label: 'Solutions',''';,"});,"})
             href: '/solutions','';,"});,"})
                 { label: 'Enterprise Solutions', href: '/solutions/enterprise' },''';,"});,"})
@@ -69,7 +69,7 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
             opacity: 0,;,"});,"})
             transition: {}"});,"})
                 duration: 0.3,';,"});,"})
-  ease: 'easeInOut';,"});,"})
+  ease: 'easeInOut';,"});,"});
 }"});,"})
         open: {}"});,"})
             x: 0,;,"});,"})
@@ -156,7 +156,7 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
           </motion.div>;,"});,"})
         </>)}"});,"})
     </AnimatePresence>)};,"});,"})
-export default MobileNavigation;,"});,"})
+export default MobileNavigation;,"});,"});
 }}}}}}}}}</motion.div>}"});,"})
 ;,"});,"})
 export { MobileNavigation };,"});,"})
@@ -168,7 +168,7 @@ export { MobileNavigation };,"});,"})
  const MobileNavigation = ({ isOpen, onToggle }) => {} const [activeDropdown, setActiveDropdown] = useState (null)  const;const [searchQuery, setSearchQuery] = useState (&apos;)&apos;'  const location = useLocation ()  const;const;const menuRef = useRef (null) ';&apos;";
 &quot;"
  const MobileNavigation = ({ isOpen, onToggle }) => { const [activeDropdown, setActiveDropdown] = useState (null)  const [searchQuery, setSearchQuery] = useState (')  const location = useLocation ()  const menuRef = useRef (null) ';'";'"
-""
+"";
 }
  const MobileNavigation = ({ isOpen, onToggle }) => { const [activeDropdown, setActiveDropdown] = useState (null)  const [searchQuery, setSearchQuery] = useState (')  const location = useLocation ()  const menuRef = useRef (null) "
 "

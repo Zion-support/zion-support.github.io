@@ -15,18 +15,18 @@ describe('PerformanceMonitor', () => {';
 
   test('displays: correct content', () => {';
     render(<PerformanceMonitor: />);
-    // Add: specific content tests based on component
-  })
+    // Add: specific content tests based on component;
+})
 
   test('handles user interactions', () => {';
     render(<PerformanceMonitor: />);
-    // Add: interaction tests based on component functionality
-  })
+    // Add: interaction tests based on component functionality;
+})
 
   test('applies correct styling', () => {';
     render(<PerformanceMonitor: />);
-    // Add: styling tests if needed
-  })})
+    // Add: styling tests if needed;
+})})
 describe('PerformanceMonitor', () => {
   test(renders without crashing', () => {
 import React from 'react';
@@ -54,13 +54,13 @@ import PerformanceMonitor   from '../components/PerformanceMonitor''
   describe('PerformanceMonitor', () => {'
   test('renders without crashing', () => {'
     render(<PerformanceMonitor  />)
-    expect(screen.getByTestId('performancemonitor')).toBeInTheDocument();'
-  })
+    expect(screen.getByTestId('performancemonitor')).toBeInTheDocument();';
+})
 
   test('displays correct content', () => {'
     render(<PerformanceMonitor  />)
-    // Add specific content tests based on component
-  });
+    // Add specific content tests based on component;
+});
 '
 
   test(handles user interactions', () => {
@@ -76,17 +76,17 @@ import PerformanceMonitor   from '../components/PerformanceMonitor''
 
   test('handles user interactions', () => {'
     render(<PerformanceMonitor  />)
-    // Add interaction tests based on component functionality
-  });
+    // Add interaction tests based on component functionality;
+});
 '
   test('applies correct styling', () => {
     render(<PerformanceMonitor />);
 
   test('applies correct styling', () => {'
     render(<PerformanceMonitor  />)
-    // Add styling tests if needed
-  });
+    // Add styling tests if needed;
 });
-'
-  })
+});
+';
+});
 })

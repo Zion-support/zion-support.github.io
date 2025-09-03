@@ -11,7 +11,7 @@ import {
   FileText, CheckCircle,
   AlertTriangle, Globe,
   Settings, Trash2,
-  Download, ArrowRight
+  Download, ArrowRight;
 } from 'lucide-react';
 
 const Privacy: React.FC = () => {
@@ -25,7 +25,7 @@ const Privacy: React.FC = () => {
         "Technical Data: IP address, browser type, device information, and cookies",
         "Communication Data: Messages, emails, and other communications with us"
       ]
-    } {
+} {
       id: "how-we-use-information",
       title: "How We Use Your Information", icon: Settings,
       content: [
@@ -46,13 +46,13 @@ const Privacy: React.FC = () => {
       id: "cookies",
       title: "Cookies and Tracking", icon: Eye,
         "We use cookies to improve your browsing experience", "Essential cookies are required for website functionality",
-        "Analytics cookies help us understand website usage", "You can manage cookie preferences in your browser settings"
-    }
-  ];
+        "Analytics cookies help us understand website usage", "You can manage cookie preferences in your browser settings";
+}
+  ]
 
   const contactInfo = {
-    email: "privacy@ziontechgroup.com", phone: "+1 (555) 123-4567", address: "123 Technology Drive, San Francisco, CA 94105"
-  };
+    email: "privacy@ziontechgroup.com", phone: "+1 (555) 123-4567", address: "123 Technology Drive, San Francisco, CA 94105";
+};
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">

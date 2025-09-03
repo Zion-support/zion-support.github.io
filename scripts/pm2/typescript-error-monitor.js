@@ -34,14 +34,14 @@ class TypeScriptErrorMonitor {,"});,"})
 ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
     console.log(`Check interval: ${this.checkInterval}ms`);,"});,"})
     console.log(`Auto-fix enabled: ${this.autoFixEnabled}`);,"});,"})
-    console.log(`Max errors per run: ${this.maxErrorsPerRun}`);,"});,"})
-  }"});,"})
+    console.log(`Max errors per run: ${this.maxErrorsPerRun}`);,"});,"});
+}"});,"})
   async start() {,"});,"})
     // Initial check;,"});,"})
     await this.checkAndFixTypeScriptErrors();,"});,"})
     // Set up interval checking;,"});,"})
-    setInterval(async () => {,"});,"})
-    }, this.checkInterval);,"});,"})
+    setInterval(async () => {,"});,"});
+}, this.checkInterval);,"});,"})
   async checkAndFixTypeScriptErrors() {,"});,"})
     const report = {,"});,"})
       timestamp: new Date().toISOString(),;,"});,"})
@@ -49,15 +49,15 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
         totalErrors: 0,;,"});,"})
         fixesApplied: 0,;,"});,"})
         fixesFailed: 0,;,"});,"})
-        fixesSkipped: 0,;,"});,"})
-      },;,"});,"})
+        fixesSkipped: 0,;,"});,"});
+},;,"});,"})
       errors: [],;,"});,"})
       fixes: {,"});,"})
         applied: [],;,"});,"})
         failed: [],;,"});,"})
         skipped: [],;,"});,"})
-      recommendations: [],;,"});,"})
-    };,"});,"})
+      recommendations: [],;,"});,"});
+};,"});,"})
     try {,"});,"})
       // Run TypeScript compiler to get errors;,"});,"})
       const errors = await this.getTypeScriptErrors();,"});,"})
@@ -69,11 +69,11 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
             if (fixed) {,"});,"})
               report.fixes.applied.push(error);,"});,"})
               report.summary.fixesApplied++;,"});,"})
-              console.log(`✅ Fixed TS error: ${error.file}:${error.line}`);,"});,"})
-            } else {,"});,"})
+              console.log(`✅ Fixed TS error: ${error.file}:${error.line}`);,"});,"});
+} else {,"});,"})
               report.fixes.failed.push(error);,"});,"})
-              report.summary.fixesFailed++;,"});,"})
-          } catch (fixError) {,"});,"})
+              report.summary.fixesFailed++;,"});,"});
+} catch (fixError) {,"});,"})
             report.fixes.failed.push({ ...error, fixError: fixError.message });,"});,"})
             console.error(;,"});,"})
               `❌ Failed to fix TS error in ${error.file}:`,;,"});,"})
@@ -88,8 +88,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
       console.log(`📊 TypeScript check complete.`);,"});,"})
       console.log(`Total errors: ${report.summary.totalErrors}`);,"});,"})
       console.log(;,"});,"})
-        `✅ Fixed: ${report.summary.fixesApplied}, ❌ Failed: ${report.summary.fixesFailed}, ⏭️ Skipped: ${report.summary.fixesSkipped}`;,"});,"})
-    } catch (error) {,"});,"})
+        `✅ Fixed: ${report.summary.fixesApplied}, ❌ Failed: ${report.summary.fixesFailed}, ⏭️ Skipped: ${report.summary.fixesSkipped}`;,"});,"});
+} catch (error) {,"});,"})
   'Error during TypeScript check:,;,"});,"})
   , error);,"});,"})
       report.error = error.message;,"});,"})
@@ -115,8 +115,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
           line: parseInt(line),;,"});,"})
           column: parseInt(col),;,"});,"})
           code,;,"});,"})
-          message: message.trim(),;,"});,"})
-        });,"});,"})
+          message: message.trim(),;,"});,"});
+});,"});,"})
     return errors;,"});,"})
   async fixTypeScriptError(error) {,"});,"})
       const { file, line, message, code } = error;,"});,"})
@@ -340,8 +340,8 @@ import path from "pathpath';
       report.errors = errors.slice(0, this.maxErrorsPerRun) // Limit errors processed;
       if (this.autoFixEnabled) {
             if (fixed) {
-              console.log(`✅ Fixed TS error: ${error.file}:${error.line}`)} else {
-          } catch (fixError) {
+              console.log(`✅ Fixed TS error: ${error.file}:${error.line}`)} else {;
+} catch (fixError) {
             report.fixes.failed.push({ ...error, fixError: fixError.message });
             console.error(`
               `❌ Failed to fix TS error in ${error.file}:`} catch (fixError) {

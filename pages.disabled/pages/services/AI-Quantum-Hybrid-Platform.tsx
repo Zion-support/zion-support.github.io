@@ -561,14 +561,14 @@ const: AIQuantumHybridPlatform: React.FC: = () => {const [activeTa,b, setActiveT
 '
                   tier.popular''
                     ? 'border-purple-500 scale-105'''`
-                    : 'border-purple-500/20'``
-                }`}
+                    : 'border-purple-500/20'``;
+}`}
               >"
                 className={`relative bg-gradient-to-br from-slate-800/80 to-purple-800/80 backdrop-blur-sm rounded-2xl p-8 border-2 ${}
                   tier.popular'
                     ? 'border-purple-500 scale-105''
-  '`: 'border-purple-500/20``
-                }`}
+  '`: 'border-purple-500/20``;
+}`}
 
               >"{tier.popular && (""
 

@@ -260,7 +260,7 @@ interface SearchResult {
       lastUpdated: ;
   '2024-11-20,',';
       icon: FileTex,t}
-  ];
+  ]
   useEffect: ( () => {
     if (searchQuery) {
       performSearch()}

@@ -5,16 +5,16 @@ import { Users, MessageSquare, Sparkles, Save, Download, Loader2 } from 'lucide-
 ;,"});,"})
 export const CollaborativeTextEditor = ({ roomId, userId, userName, initialContent = '', enableAI = true, enableCollaboration = true, enableVersioning = true, className = '', onSave, onExport }) => {;,"});,"})
     const { trackEvent } = useAnalytics({        enableTracking: true,;,"});,"})
-        enableUserBehaviorTracking: true;,"});,"})
-    });,"});,"})
+        enableUserBehaviorTracking: true;,"});,"});
+});,"});,"})
     const [editorState, setEditorState] = useState({}"});,"})
         content: initialContent,';,"});,"})
         selection: { start: 0, end: 0, text: '' },;,"});,"})
         version: 0,;,"});,"})
         changes[],;,"});,"})
         suggestions[],;,"});,"})
-        conflicts[];,"});,"})
-    });,"});,"})
+        conflicts[];,"});,"});
+});,"});,"})
     const [showSuggestions] = useState(true);,"});,"})
     const [showCollaborators, setShowCollaborators] = useState(false);,"});,"})
     const [isProcessing, setIsProcessing] = useState(false);,"});,"})
@@ -31,8 +31,8 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         enableSelection: true,'';,"});,"})
         enableTextSync: true,''';,"});,"})
         conflictResolution: 'client',;,"});,"})
-        messageRetention: 1000;,"});,"})
-    }) ;,"});,"})
+        messageRetention: 1000;,"});,"});
+}) ;,"});,"})
     // Handle text changes;,"});,"})
     const handleTextChange = useCallback((event) => {}"});,"})
         const newContent = event.target.value;,"});,"})
@@ -46,15 +46,15 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                 length: Math.abs(newContent.length-prev.content.length) ,;,"});,"})
                 timestamp: new Date () ,;,"});,"})
                 userId,;,"});,"})
-                version: prev.version + 1;,"});,"})
-            };,"});,"})
+                version: prev.version + 1;,"});,"});
+};,"});,"})
             return {}"});,"})
                 ...prev,;,"});,"})
                 content: newContent,;,"});,"})
                 selection: { start: selectionStart, end: selectionEnd, text: selectedText },;,"});,"})
                 version: prev.version + 1,;,"});,"})
-                changes[...prev.changes, change];,"});,"})
-            }}) ;,"});,"})
+                changes[...prev.changes, change];,"});,"});
+}}) ;,"});,"})
         // Sync with other collaborators;,"});,"})
         if(enableCollaboration && collaboration.isConnected) {}"});,"})
             collaboration.syncTextChange({}"});,"})
@@ -64,8 +64,8 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                 type: 'text_change',;,"});,"})
                 content: newContent,;,"});,"})
                 selection: { start: selectionStart, end: selectionEnd },;,"});,"})
-                version: editorState.version + 1;,"});,"})
-            })}';,"});,"})
+                version: editorState.version + 1;,"});,"});
+})}';,"});,"})
         // Track text change'';,"});,"})
         trackEvent('editor',text_changed',content_modified', newContent.length)}, [enableCollaboration, collaboration, editorState.version, trackEvent]);,"});,"})
     // Handle selection change;,"});,"})
@@ -76,12 +76,12 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         const text = target.value.slice(start, end);,"});,"})
         setEditorState(prev => ({}"});,"})
             ...prev,;,"});,"})
-            selection: { start, end, text }"});,"})
-        }) ) ;,"});,"})
+            selection: { start, end, text }"});,"});
+}) ) ;,"});,"})
         // Sync selection with collaborators;,"});,"})
         if(enableCollaboration && collaboration.isConnected) {}"});,"})
-            collaboration.updateSelection(start, end, text)}"});,"})
-    }, [enableCollaboration, collaboration]);,"});,"})
+            collaboration.updateSelection(start, end, text)}"});,"});
+}, [enableCollaboration, collaboration]);,"});,"})
     // Handle cursor movement;,"});,"})
     const handleCursorMove = useCallback((event) => {}"});,"})
         if(!enableCollaboration || !collaboration.isConnected);,"});,"})
@@ -110,8 +110,8 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                     position: editorState.content.indexOf('its'),""";,"});,"})
                     length: 3,"'""";,"});,"})
                     reason: "Consider using 'it's' (contraction of 'it is') instead of 'its' (possessive)","'""";,"});,"})
-                    alternatives["it's", "it is"];,"});,"})
-                })}';,"});,"})
+                    alternatives["it's", "it is"];,"});,"});
+})}';,"});,"})
             // Style suggestions'';,"});,"})
             if (editorState.content.includes('very')) {}"});,"})
                 suggestions.push({}"});,"})
@@ -124,8 +124,8 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                     position: editorState.content.indexOf('very'),""";,"});,"})
                     length: 4,"'""";,"});,"})
                     reason: "Consider using a more specific adjective instead of 'very'","""";,"});,"})
-                    alternatives["extremely", "highly", "remarkably", "exceptionally"];,"});,"})
-                })}';,"});,"})
+                    alternatives["extremely", "highly", "remarkably", "exceptionally"];,"});,"});
+})}';,"});,"})
             // Completion suggestions'';,"});,"})
             if (editorState.content.endsWith('The main benefits')) {}"});,"})
                 suggestions.push({}"});,"})
@@ -142,19 +142,19 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                         " include improved efficiency, cost savings, and enhanced user experience.","""";,"});,"})
                         " are numerous and well-documented in industry research.","""";,"});,"})
                         " can be measured through key performance indicators.""";,"});,"})
-                    ];,"});,"})
-                })}"});,"})
+                    ],"});,"});
+})}"});,"})
             setEditorState(prev => ({}"});,"})
                 ...prev,;,"});,"})
-                suggestions[...prev.suggestions, ...suggestions];,"});,"})
-            }));,"});,"})
+                suggestions[...prev.suggestions, ...suggestions];,"});,"});
+}));,"});,"})
             // // // // // // // // console.error('Failed to generate AI suggestions:', error);,"});,"})
             trackEvent('editor',ai_suggestions_failed',generation_error', undefined, {}"});,"})
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
-                error: error instanceof Error ? error.message : 'Unknown error';,"});,"})
-            }) ;,"});,"})
+                error: error instanceof Error ? error.message : 'Unknown error';,"});,"});
+}) ;,"});,"})
 ;,"});,"})
         finally {}"});,"})
             setIsProcessing(false);,"});,"})
@@ -169,11 +169,11 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
-                error: error instanceof Error ? error.message : 'Unknown error';,"});,"})
-            }) }"});,"})
+                error: error instanceof Error ? error.message : 'Unknown error';,"});,"});
+}) }"});,"})
         finally {}"});,"})
-            setIsProcessing(false)}"});,"})
-    }, [enableAI, editorState.content, trackEvent]);,"});,"})
+            setIsProcessing(false)}"});,"});
+}, [enableAI, editorState.content, trackEvent]);,"});,"})
     // Apply AI suggestion;,"});,"})
     const applySuggestion = useCallback((suggestion) => {}"});,"})
         setEditorState(prev => {}"});,"})
@@ -192,10 +192,10 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         if(editorRef.current) {}"});,"})
             editorRef.current.focus();,"});,"})
             const newPosition = suggestion.position + suggestion.text.length;,"});,"})
-            editorRef.current.setSelectionRange(newPosition, newPosition);'';,"});,"})
-        }''';,"});,"})
-        trackEvent('editor',ai_suggestion_applied', suggestion.type, null, { suggestionId: suggestion.id });,"});,"})
-    }, [editorState.content, trackEvent]);,"});,"})
+            editorRef.current.setSelectionRange(newPosition, newPosition);'';,"});,"});
+}''';,"});,"})
+        trackEvent('editor',ai_suggestion_applied', suggestion.type, null, { suggestionId: suggestion.id });,"});,"});
+}, [editorState.content, trackEvent]);,"});,"})
     // Save content;,"});,"})
     const handleSave = useCallback(() => {}"});,"})
         onSave?.(editorState.content);,"});,"})
@@ -227,10 +227,10 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
             a.href = url;````;,"});,"})
             a.download = `document.${format}`;,"});,"})
             a.click();,"});,"})
-            window.URL.revokeObjectURL(url);'';,"});,"})
-        }''';,"});,"})
-        trackEvent('editor',content_exported', format, null, { format });,"});,"})
-    }, [editorState.content, onExport, trackEvent]);,"});,"})
+            window.URL.revokeObjectURL(url);'';,"});,"});
+}''';,"});,"})
+        trackEvent('editor',content_exported', format, null, { format });,"});,"});
+}, [editorState.content, onExport, trackEvent]);,"});,"})
     // Handle collaboration text changes;,"});,"})
     useEffect(() => {}"});,"})
         const handleCollaborationTextChange = (event) => {}"});,"})
@@ -242,14 +242,14 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                     return {}"});,"})
                         ...prev,;,"});,"})
                         content: message.payload.content,;,"});,"})
-                        version: Math.max(prev.version, message.payload.version);,"});,"})
-                    };,"});,"})
-                });,"});,"})
+                        version: Math.max(prev.version, message.payload.version);,"});,"});
+};,"});,"});
+});,"});,"})
                 trackEvent('editor',collaboration_sync',text_synced', null, {}"});,"})
                     userId: message.userId,;,"});,"})
-                    version: message.payload.version;,"});,"})
-                })}"});,"})
-        };,"});,"})
+                    version: message.payload.version;,"});,"});
+})}"});,"});
+};,"});,"})
         window.addEventListener('collaborationTextChange', handleCollaborationTextChange);,"});,"})
         return () => {}"});,"})
 ';,"});,"})
@@ -262,16 +262,16 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
             return;,"});,"})
         const autoSaveInterval = setInterval(() => {}"});,"})
             if(editorState.content !== initialContent) {}"});,"})
-                handleSave()}"});,"})
-        }, 30000); // Auto-save every 30 seconds;,"});,"})
+                handleSave()}"});,"});
+}, 30000); // Auto-save every 30 seconds;,"});,"})
         return () => clearInterval(autoSaveInterval)}, [editorState.content, initialContent, enableVersioning, handleSave]);,"});,"})
     // Generate suggestions when content changes significantly;,"});,"})
     useEffect(() => {}"});,"})
         if(!enableAI) return;,"});,"})
         const debounceTimer = setTimeout(() => {}"});,"})
             if(editorState.content.length > 100) {}"});,"})
-                generateAISuggestions()}"});,"})
-        }, 3000);`;,"});,"})
+                generateAISuggestions()}"});,"});
+}, 3000);`;,"});,"})
         return () => clearTimeout(debounceTimer)}, [editorState.content, enableAI, generateAISuggestions]);``;,"});,"})
     return (<div className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>""";,"});,"})
       {/* Header */}"""";,"});,"})
@@ -338,12 +338,12 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
               <div className="space-y-3">;,"});,"})
                 {editorState.suggestions.map(suggestion => (<motion.div key={suggestion.id} initial = {}"});,"})
   { opacity: 0,;,"});,"})
-  x: 20;,"});,"})
+  x: 20;,"});,"});
 }} animate = {}"});,"})
   { opacity: 1,;,"});,"})
   x: 0;,"});,"})
 """;,"});,"})
-"""";,"});,"})
+"""";,"});,"});
 }} className="p-3 bg-white dark:bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500">"'"`;,"});,"})
                     <div className="flex items-start justify-between mb-2">'`'`;,"});,"})
                       <span className={`text-xs px-2 py-1 rounded-full ${suggestion.type === 'grammar' ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300' :''`;,"});,"})
@@ -430,15 +430,15 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
       {enableCollaboration && (<div ref={collaborationRef} className="absolute inset-0 pointer-events-none" style={{ zIndex: 10 }}>;,"});,"})
           {collaboration.activeCursors.map(({ x, y, user }) => (<motion.div key={user.id} initial = {}"});,"})
   { opacity: 0,;,"});,"})
-  scale: 0;,"});,"})
+  scale: 0;,"});,"});
 }} animate = {}"});,"})
   { opacity: 1,;,"});,"})
-  scale: 1;,"});,"})
+  scale: 1;,"});,"});
 }} exit = {}"});,"})
   { opacity: 0,;,"});,"})
   scale: 0;,"});,"})
 """;,"});,"})
-"""";,"});,"})
+"""";,"});,"});
 }} className="absolute w-4 h-4" style = {}"});,"})
   {}"});,"})
                     left: x,;,"});,"})
@@ -446,7 +446,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                     transform: 'translate(-50%,;,"});,"})
   -50%);,"});,"})
 ;,"});,"})
-""";,"});,"})
+""";,"});,"});
 }}>;"""";,"});,"})
               <div className="w-full h-full rounded-full border-2 border-white shadow-lg" style={{ backgroundColor: user.color }}></div>"""";,"});,"})
               <div className="absolute top-5 left-0 bg-gray-800 text-white text-xs px-2 py-1 rounded whitespace-nowrap">;,"});,"})
@@ -508,7 +508,7 @@ import { Users, MessageSquare, Sparkles, Save, Download, Loader2 } from 'lucide-
 export const CollaborativeTextEditor = ({ roomId, userId, userName, initialContent = '', enableAI = true, enableCollaboration = true, enableVersioning = true, className = '', onSave, onExport }) => {
     const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true});
     const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true})
-""
+"";
 }
 import React, { useState, useCallback, useEffect, useRef } from 'react
 import { motion } from 'framer-motion
@@ -591,8 +591,8 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
             return {}
                 ...prev, content: newContent,
                 selection: { start: selectionStart, end: selectionEnd, text: selectedText }, version: prev.version + 1,
-                changes[...prev.changes, change]
-            }})
+                changes[...prev.changes, change];
+}})
         // Sync with other collaborators;
         if(enableCollaboration && collaboration.isConnected) {}
             collaboration.syncTextChange({}
@@ -714,8 +714,8 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                     position: editorState.content.indexOf(&apos;its&apos;),&apos;&apos;
                     length: 3,&apos;&apos;'&apos;
                     reason: &apos;Consider using &apos;it&apos;s&apos; (contraction of &apos;it is&apos;) instead of &apos;its&apos; (possessive)&apos;,'&apos;&apos;'';
-                    alternatives[&apos;it&apos;s&apos;, &apos;it is&apos;]
-                })}';
+                    alternatives[&apos;it&apos;s&apos;, &apos;it is&apos;];
+})}';
             // Style suggestions&apos;
             if (editorState.content.includes(&apos;very&apos;)) {}
                 suggestions.push({}
@@ -728,8 +728,8 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                     position: editorState.content.indexOf(&apos;very&apos;),&apos;&apos;
                     length: 4,&apos;&apos;'&apos;
                     reason: &apos;Consider using a more specific adjective instead of &apos;very&apos;&apos;,&apos;&apos;'';
-                    alternatives[&apos;extremely&apos;, &apos;highly&apos;, &apos;remarkably&apos;, &apos;exceptionally&apos;]
-                })}';
+                    alternatives[&apos;extremely&apos;, &apos;highly&apos;, &apos;remarkably&apos;, &apos;exceptionally&apos;];
+})}';
             // Completion suggestions&apos;
             if (editorState.content.endsWith(&apos;The main benefits&apos;)) {}
                 suggestions.push({}
@@ -775,8 +775,8 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                     position: editorState.content.indexOf('its'), ''';'
                     length: 3, ''''';'
                     reason: 'Consider using 'it&apos;s' (contraction of 'it is') instead of 'its' (possessive)', ''''';
-                    alternatives['it&apos;s', 'it is']'
-                })}';'
+                    alternatives['it&apos;s', 'it is']';
+})}';'
             // Style suggestions'';
             if (editorState.content.includes('very')) {}
                 suggestions.push({}
@@ -788,8 +788,8 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                     position: editorState.content.indexOf('very'), ''';'
                     length: 4, ''''';'
                     reason: 'Consider using a more specific adjective instead of 'very'', '''';
-                    alternatives['extremely', 'highly', 'remarkably', 'exceptionally']
-                })}';'
+                    alternatives['extremely', 'highly', 'remarkably', 'exceptionally'];
+})}';'
             // Completion suggestions'';
             if (editorState.content.endsWith('The main benefits')) {}
                 suggestions.push({}
@@ -807,8 +807,8 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                         ' can be measured through key performance indicators.''';
                     ]})}
             setEditorState(prev => ({}
-                ...prev, suggestions[...prev.suggestions, ...suggestions]
-            }))';'
+                ...prev, suggestions[...prev.suggestions, ...suggestions];
+}))';'
             trackEvent('editor', ai_suggestions_generated',suggestions_created', suggestions.length)}
         catch (error) {}
 ';'
@@ -980,8 +980,8 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         const debounceTimer = setTimeout(() => {}
             if(editorState.content.length > 100) {}
                 generateAISuggestions()}
-        }, 3000)`
         }, 3000)`;
+}, 3000)`;
         return () => clearTimeout(debounceTimer)}, [editorState.content, enableAI, generateAISuggestions])`;
     return (<div className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>''{/* Header */}'';
       <div className='bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-white'>'';
@@ -1392,5 +1392,5 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
 '`'`
     </div>)}''`;
 ''`''`
-"
+";
 }

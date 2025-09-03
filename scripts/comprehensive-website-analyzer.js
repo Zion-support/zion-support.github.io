@@ -15,8 +15,8 @@ class ComprehensiveWebsiteAnalyzer {,"});,"})
     this.missingPages = [];,"});,"})
     this.errors = [];,"});,"})
     this.warnings = [];,"});,"})
-    this.startTime = Date.now();,"});,"})
-  }"});,"})
+    this.startTime = Date.now();,"});,"});
+}"});,"})
   async checkUrl(url, parentUrl = null) {,"});,"})
     if (this.checkedUrls.has(url)) {,"});,"})
       return;,"});,"})
@@ -25,8 +25,8 @@ class ComprehensiveWebsiteAnalyzer {,"});,"})
       console.log(`Checking: ${url}`);,"});,"})
       const response = await axios.get(url {,"});,"})
         timeout: 10000,;,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
-      });,"});,"})
+ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"});
+});,"});,"})
       if (response.status === 200) {,"});,"})
         this.workingLinks.push({,"});,"})
           url,;,"});,"})
@@ -40,11 +40,11 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
   ')) {,"});,"})
           const links = this.extractLinks(response.data, url);,"});,"})
           for (const link of links) {,"});,"})
-              await this.checkUrl(fullUrl, url);,"});,"})
-      } else {,"});,"})
+              await this.checkUrl(fullUrl, url);,"});,"});
+} else {,"});,"})
         this.brokenLinks.push({,"});,"})
-          error: `HTTP ${response.status}`,;,"});,"})
-    } catch (error) {,"});,"})
+          error: `HTTP ${response.status}`,;,"});,"});
+} catch (error) {,"});,"})
         status: 'ERROR;,"});,"})
   ',;,"});,"})
         error: error.message,;,"});,"})
@@ -64,7 +64,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
     await this.checkUrl(this.baseUrl);,"});,"})
     // Check common routes;,"});,"})
     const commonRoutes = [,"});,"})
-    ];,"});,"})
+    ],"});,"})
     for (const route of commonRoutes) {,"});,"})
       await this.checkUrl(`${this.baseUrl}${route}`);,"});,"})
     // Check service sub-routes;,"});,"})
@@ -97,15 +97,15 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
         successRate: `${((this.workingLinks.length / this.checkedUrls.size) * 100).toFixed(2)}%`,;,"});,"})
         duration: `${duration}ms`,;,"});,"})
         errors: this.errors.length,;,"});,"})
-        warnings: this.warnings.length,;,"});,"})
-      },;,"});,"})
+        warnings: this.warnings.length,;,"});,"});
+},;,"});,"})
       brokenLinks: this.brokenLinks,;,"});,"})
       workingLinks: this.workingLinks,;,"});,"})
       missingPages: this.missingPages,;,"});,"})
       errors: this.errors,;,"});,"})
       warnings: this.warnings,;,"});,"})
-      recommendations: this.generateRecommendations(),;,"});,"})
-    };,"});,"})
+      recommendations: this.generateRecommendations(),;,"});,"});
+};,"});,"})
     return report;,"});,"})
   generateRecommendations() {,"});,"})
     const recommendations = [];,"});,"})
@@ -515,7 +515,7 @@ const axios = require(,;);  axios');const fs = require(;);  'fs').promises;const
   '/digital-twin',';
   '/zero-trust-security',';
   '/enterprise-solutions',';
-  '/ai-business-intelligence'    ];
+  '/ai-business-intelligence'    ]
     for: (const route of commonRoutes) {
     // Check service sub-routes;
   '/ai-business-intelligence',';
@@ -531,20 +531,20 @@ const axios = require(,;);  axios');const fs = require(;);  'fs').promises;const
   '/ai-content-marketing-suite',';
   '/ai-quantum-hybrid-platform',';
   '/it-infrastructure',';
-  '/ai-devops-automation-platform'    ];
+  '/ai-devops-automation-platform'    ]
     for: (const serviceRoute of serviceRoutes) {
     // Check solution sub-routes;
   '/enterprise',';
-  '/zero-trust-security'    ];
+  '/zero-trust-security'    ]
     for: (const solutionRoute of solutionRoutes) {
     // Check about sub-routes;
     const aboutRoutes = [
   '/story',';
   '/team';
-    ];
+    ]
     for: (const aboutRoute of aboutRoutes) {
     // Check resources sub-routes;
-  '/help'    ];
+  '/help'    ]
     for: (const resourceRoute of resourceRoutes) {
       await this.checkUrl(`${this.baseUrl}/resources${resourceRoute}`)}
   'Analysis completed!')}';
@@ -697,24 +697,24 @@ const axios = require(,;);  axios');const fs = require(;);  'fs').promises;const
   '#') && !link.startsWith(';  '"javascript": ') && !link.startsWith(';  '"mailto":)) {        links.push(link)}'}';    return [...new Set(links)]}
     console.log(;);  'Starting comprehensive website analysis...');        // Start with the main page;    await this.checkUrl(this.baseUrl);
     // Check common routes;
-  '/about',';  '/services',';  '/solutions',';  '/contact',';  '/pricing',';  '/blog',';  '/careers',';  '/partners',';  '/support',';  '/help',';  '/training',';  '/sitemap',';  '/privacy-policy',';  '/terms-of-service',';  '/cookie-policy',';  '/api',';  '/docs',';  '/research-development',';  '/case-studies',';  '/white-papers',';  '/events',';  '/webinars',';  '/news',';  '/press',';  '/community',';  '/developer',';  '/request-quote',';  '/login',';  '/signup',';  '/dashboard',';  '/admin',';  '/talent',';  '/marketplace',';  '/micro-saas',';  '/ai-services',';  '/cybersecurity',';  '/cloud-devops',';  '/quantum-computing',';  '/space-technology',';  '/digital-transformation',';  '/data-analytics',';  '/iot-edge-computing',';  '/manufacturing-solutions',';  '/financial-solutions',';  '/industry-solutions',';  '/startup-solutions',';  '/supply-chain',';  '/sustainability',';  '/system-status',';  '/testimonials',';  '/faq',';  '/accessibility',';  '/comprehensive-services',';  '/revolutionary-services',';  '/new-services-2025',';  '/enhanced-new-services-2025',';  '/comprehensive-sitemap',';  '/comprehensive-pricing',';  '/services-overview',';  '/services-catalog',';  '/services-comparison',';  '/services-pricing',';  '/ai-solutions',';  '/quantum-ai-platform',';  '/digital-twin',';  '/zero-trust-security',';  '/enterprise-solutions',';  '/ai-business-intelligence'    ];    for (const route of commonRoutes) {      await this.checkUrl(`${this.baseUrl}${route}`)}`;    // Check service sub-routes;
-  '/ai-solutions',';  '/quantum-computing',';  '/cybersecurity',';  '/cloud-devops',';  '/digital-transformation',';  '/data-analytics',';  '/iot-edge-computing',';  '/space-technology',';  '/ai-business-intelligence',';  '/ai-content-creation',';  '/ai-cybersecurity',';  '/ai-financial-analytics',';  '/ai-healthcare-analytics',';  '/ai-hr-platform',';  '/ai-marketing-automation',';  '/ai-supply-chain-optimization',';  '/ai-workflow-orchestrator',';  '/ai-autonomous-research-assistant',';  '/ai-content-marketing-suite',';  '/ai-quantum-hybrid-platform',';  '/it-infrastructure',';  '/digital-twin',';  '/ai-devops-automation-platform'    ];    for (const serviceRoute of serviceRoutes) {      await this.checkUrl(`${this.baseUrl}/services${serviceRoute}`)}`;    // Check solution sub-routes;
-  '/enterprise',';  '/ai-business-intelligence',';  '/quantum-ai-platform',';  '/digital-twin',';  '/zero-trust-security'    ];    for (const solutionRoute of solutionRoutes) {
+  '/about',';  '/services',';  '/solutions',';  '/contact',';  '/pricing',';  '/blog',';  '/careers',';  '/partners',';  '/support',';  '/help',';  '/training',';  '/sitemap',';  '/privacy-policy',';  '/terms-of-service',';  '/cookie-policy',';  '/api',';  '/docs',';  '/research-development',';  '/case-studies',';  '/white-papers',';  '/events',';  '/webinars',';  '/news',';  '/press',';  '/community',';  '/developer',';  '/request-quote',';  '/login',';  '/signup',';  '/dashboard',';  '/admin',';  '/talent',';  '/marketplace',';  '/micro-saas',';  '/ai-services',';  '/cybersecurity',';  '/cloud-devops',';  '/quantum-computing',';  '/space-technology',';  '/digital-transformation',';  '/data-analytics',';  '/iot-edge-computing',';  '/manufacturing-solutions',';  '/financial-solutions',';  '/industry-solutions',';  '/startup-solutions',';  '/supply-chain',';  '/sustainability',';  '/system-status',';  '/testimonials',';  '/faq',';  '/accessibility',';  '/comprehensive-services',';  '/revolutionary-services',';  '/new-services-2025',';  '/enhanced-new-services-2025',';  '/comprehensive-sitemap',';  '/comprehensive-pricing',';  '/services-overview',';  '/services-catalog',';  '/services-comparison',';  '/services-pricing',';  '/ai-solutions',';  '/quantum-ai-platform',';  '/digital-twin',';  '/zero-trust-security',';  '/enterprise-solutions',';  '/ai-business-intelligence'    ]    for (const route of commonRoutes) {      await this.checkUrl(`${this.baseUrl}${route}`)}`;    // Check service sub-routes;
+  '/ai-solutions',';  '/quantum-computing',';  '/cybersecurity',';  '/cloud-devops',';  '/digital-transformation',';  '/data-analytics',';  '/iot-edge-computing',';  '/space-technology',';  '/ai-business-intelligence',';  '/ai-content-creation',';  '/ai-cybersecurity',';  '/ai-financial-analytics',';  '/ai-healthcare-analytics',';  '/ai-hr-platform',';  '/ai-marketing-automation',';  '/ai-supply-chain-optimization',';  '/ai-workflow-orchestrator',';  '/ai-autonomous-research-assistant',';  '/ai-content-marketing-suite',';  '/ai-quantum-hybrid-platform',';  '/it-infrastructure',';  '/digital-twin',';  '/ai-devops-automation-platform'    ]    for (const serviceRoute of serviceRoutes) {      await this.checkUrl(`${this.baseUrl}/services${serviceRoute}`)}`;    // Check solution sub-routes;
+  '/enterprise',';  '/ai-business-intelligence',';  '/quantum-ai-platform',';  '/digital-twin',';  '/zero-trust-security'    ]    for (const solutionRoute of solutionRoutes) {
       await this.checkUrl(`${this.baseUrl}/solutions${solutionRoute}`)}`;    // Check about sub-routes;
-  '/story',';  '/team';    ];    for (const aboutRoute of aboutRoutes) {
+  '/story',';  '/team';    ]    for (const aboutRoute of aboutRoutes) {
       await this.checkUrl(`${this.baseUrl}/about${aboutRoute}`)}`;    // Check resources sub-routes;
-  '/blog',';  '/case-studies',';  '/research-development',';  '/docs',';  '/api',';  '/sitemap',';  '/support',';  '/training',';  '/help'    ];    for (const resourceRoute of resourceRoutes) {
+  '/blog',';  '/case-studies',';  '/research-development',';  '/docs',';  '/api',';  '/sitemap',';  '/support',';  '/training',';  '/help'    ]    for (const resourceRoute of resourceRoutes) {
       await this.checkUrl(`${this.baseUrl}/resources${resourceRoute}`)}`;    console.log(;);  'Analysis completed!')}';  generateReport() {    const endTime = Date.now();
-  '/about,/services,/solutions,/contact,/pricing,/blog,/careers,/partners,/support,/help,/training,/sitemap,/privacy-policy,/terms-of-service,/cookie-policy,/api,/docs,/research-development,/case-studies,/white-papers,/events,/webinars,/news,/press,/community,/developer,/request-quote,/login,/signup,/dashboard,/admin,/talent,/marketplace,/micro-saas,/ai-services,/cybersecurity,/cloud-devops,/quantum-computing,/space-technology,/digital-transformation,/data-analytics,/iot-edge-computing,/manufacturing-solutions,/financial-solutions,/industry-solutions,/startup-solutions,/supply-chain,/sustainability,/system-status,/testimonials,/faq,/accessibility,/comprehensive-services,/revolutionary-services,/new-services-2025,/enhanced-new-services-2025,/comprehensive-sitemap,/comprehensive-pricing,/services-overview,/services-catalog,/services-comparison,/services-pricing,/ai-solutions,/quantum-ai-platform,/digital-twin,/zero-trust-security,/enterprise-solutions,/ai-business-intelligence'    ];
+  '/about,/services,/solutions,/contact,/pricing,/blog,/careers,/partners,/support,/help,/training,/sitemap,/privacy-policy,/terms-of-service,/cookie-policy,/api,/docs,/research-development,/case-studies,/white-papers,/events,/webinars,/news,/press,/community,/developer,/request-quote,/login,/signup,/dashboard,/admin,/talent,/marketplace,/micro-saas,/ai-services,/cybersecurity,/cloud-devops,/quantum-computing,/space-technology,/digital-transformation,/data-analytics,/iot-edge-computing,/manufacturing-solutions,/financial-solutions,/industry-solutions,/startup-solutions,/supply-chain,/sustainability,/system-status,/testimonials,/faq,/accessibility,/comprehensive-services,/revolutionary-services,/new-services-2025,/enhanced-new-services-2025,/comprehensive-sitemap,/comprehensive-pricing,/services-overview,/services-catalog,/services-comparison,/services-pricing,/ai-solutions,/quantum-ai-platform,/digital-twin,/zero-trust-security,/enterprise-solutions,/ai-business-intelligence'    ]
     // Check service sub-routes;
-  '/ai-solutions,/quantum-computing,/cybersecurity,/cloud-devops,/digital-transformation,/data-analytics,/iot-edge-computing,/space-technology,/ai-business-intelligence,/ai-content-creation,/ai-cybersecurity,/ai-financial-analytics,/ai-healthcare-analytics,/ai-hr-platform,/ai-marketing-automation,/ai-supply-chain-optimization,/ai-workflow-orchestrator,/ai-autonomous-research-assistant,/ai-content-marketing-suite,/ai-quantum-hybrid-platform,/it-infrastructure,/digital-twin,/ai-devops-automation-platform'    ];
+  '/ai-solutions,/quantum-computing,/cybersecurity,/cloud-devops,/digital-transformation,/data-analytics,/iot-edge-computing,/space-technology,/ai-business-intelligence,/ai-content-creation,/ai-cybersecurity,/ai-financial-analytics,/ai-healthcare-analytics,/ai-hr-platform,/ai-marketing-automation,/ai-supply-chain-optimization,/ai-workflow-orchestrator,/ai-autonomous-research-assistant,/ai-content-marketing-suite,/ai-quantum-hybrid-platform,/it-infrastructure,/digital-twin,/ai-devops-automation-platform'    ]
     // Check solution sub-routes;
-  '/enterprise,/ai-business-intelligence,/quantum-ai-platform,/digital-twin,/zero-trust-security'    ];
+  '/enterprise,/ai-business-intelligence,/quantum-ai-platform,/digital-twin,/zero-trust-security'    ]
     // Check about sub-routes;
   '/story,/team';
     // Check resources sub-routes;
     for (const resourceRoute of resourceRoutes) {
-  '/blog,/case-studies,/research-development,/docs,/api,/sitemap,/support,/training,/help'    ];
+  '/blog,/case-studies,/research-development,/docs,/api,/sitemap,/support,/training,/help'    ]
   'Analysis completed!')}
       timestamp: new Date().toISOString(),
       baseUrl: this.baseUrl,
@@ -758,7 +758,7 @@ const axios = require(,;);  axios');const fs = require(;);  'fs').promises;const
       "timestamp": new Date().toISOString(),;";      "baseUrl": this.baseUrl,;";      "summary": {";        "totalLinksChecked": this.checkedUrls.size,;";        "brokenLinks": this.brokenLinks.length,;";        "workingLinks": this.workingLinks.length,;";        "successRate": `${((this.workingLinks.length / this.checkedUrls.size) * 100).toFixed(2)}%`,`;        "duration": `${duration}ms`,`;        "errors": this.errors.length,;";        "warnings": this.warnings.length},;";      "brokenLinks": this.brokenLinks,;";      "workingLinks": this.workingLinks,;";      "missingPages": this.missingPages,;";      "errors": this.errors,;";      "warnings": this.warnings,;";      "recommendations": this.generateRecommendations()}";    return report}
       recommendations.push({);        "type":,;";  critical',';        "title": 'Fix Broken Links,';        "description": `Found ${this.brokenLinks.length} broken links that need immediate attention.`,`;        "actions": this.brokenLinks.map(link => ({";          "url": link.url,;";          "action":,;";  Create missing page or fix redirect',';          "priority": 'high}))      })}';    if (this.workingLinks.length < 50) {      recommendations.push({);        "type":,;";  warning',';        "title": 'Expand Content,';        "description":,;";  Website has limited content. Consider adding more pages and services.',';        "actions": [{ "action":;";  'Add more service pages, "priority":,';  medium' },' { "action": 'Create blog section, "priority":,';  medium' },' { "action": 'Add case studies, "priority":,';  medium' }';        ]      })}';    // Check for missing essential pages;
     const essentialPages = [
-  '/privacy-policy',';  '/terms-of-service',';  '/cookie-policy',';  '/sitemap',';  '/contact',';  '/about'    ];    const missingEssential = essentialPages.filter(;);      page => !this.workingLinks.some(link => link.url.endsWith(page)));
+  '/privacy-policy',';  '/terms-of-service',';  '/cookie-policy',';  '/sitemap',';  '/contact',';  '/about'    ]    const missingEssential = essentialPages.filter(;);      page => !this.workingLinks.some(link => link.url.endsWith(page)));
     if (missingEssential.length > 0) {
       recommendations.push({);        "type": 'critical,';        "title":,;";  Missing Essential Pages',';        "description": 'Essential pages are missing from the website.,';        "actions": missingEssential.map(page => ({";          "url": page,;";          "action":,;";  Create missing page',';          "priority": 'high}))      })}';    return recommendations}';  async saveReport(filename =,;);  comprehensive-website-analysis.json') {';    const report = this.generateReport();    await fs.writeFile(filename, JSON.stringify(report, null, 2));
     console.log(`Report saved to ${filename}`);`;    return report}
@@ -797,7 +797,7 @@ const axios = require(,;);  axios');const fs = require(;);  'fs').promises;const
   medium' }';
         ]      })}
     // Check: for missing essential pages;
-  '/about'    ];
+  '/about'    ]
     const missingEssential = essentialPages.filter(
       page => !this.workingLinks.some(link => link.url.endsWith(page)));
     if: (missingEssential.length > 0) {
@@ -856,7 +856,7 @@ if: (require.main === module) {
   medium' }, { action: 'Add case studies, priority:,;
     // Check for missing essential pages;
     const missingEssential = essentialPages.filter(;
-  '/privacy-policy,/terms-of-service,/cookie-policy,/sitemap,/contact,/about'    ];
+  '/privacy-policy,/terms-of-service,/cookie-policy,/sitemap,/contact,/about'    ]
       recommendations.push({'
         type 'critical,
   Missing Essential Pages',

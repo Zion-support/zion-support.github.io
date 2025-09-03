@@ -11,7 +11,7 @@ import {
   BarChart3, 
   Palette, 
   CheckCircle,
-  ArrowRight 
+  ArrowRight ;
 } from 'lucide-react';
 
   const stats = [
@@ -21,15 +21,15 @@ import {
   const benefits = [
     {
       icon: <DollarSign className="w-8 h-8" />, title: 'Competitive Pricing',
-      description: 'Transparent, market-competitive pricing with flexible plans to fit your budget and scale with your business.'
-    },
+      description: 'Transparent, market-competitive pricing with flexible plans to fit your budget and scale with your business.';
+},
     {
       icon: <Target className="w-8 h-8" />, title: 'Proven Results',
-      description: 'Track record of successful implementations with measurable ROI and client satisfaction across all industries.'
-    }, {
+      description: 'Track record of successful implementations with measurable ROI and client satisfaction across all industries.';
+}, {
       icon: <Rocket className="w-8 h-8" />,
-      title: 'Fast Implementation', description: 'Rapid deployment and implementation with minimal downtime, getting you up and running quickly.'
-    }, {
+      title: 'Fast Implementation', description: 'Rapid deployment and implementation with minimal downtime, getting you up and running quickly.';
+}, {
       icon: <Award className="w-8 h-8" />,
       title: 'Expert Support', description: '24/7 expert support from our experienced team of developers, engineers, and AI specialists.'
 const ServicesIndex: NextPage = () => {
@@ -40,65 +40,65 @@ const ServicesIndex: NextPage = () => {
       description: 'Custom AI solutions and machine learning models tailored to your business needs.',
       features: ['Machine Learning Models', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
       href: '/services/ai-model-development-chat',
-      color: 'blue'
-    },
+      color: 'blue';
+},
     {
       icon: Globe,
       title: 'Web Development',
       description: 'Modern, responsive web applications built with cutting-edge technologies.',
       features: ['React/Next.js Applications', 'E-commerce Solutions', 'Progressive Web Apps', 'API Development'],
       href: '/services/web-application-development-chat',
-      color: 'green'
-    },
+      color: 'green';
+},
     {
       icon: Smartphone,
       title: 'Mobile Development',
       description: 'Native and cross-platform mobile applications for iOS and Android.',
       features: ['iOS Development', 'Android Development', 'React Native', 'Flutter Apps'],
       href: '/services/mobile-app-development-chat',
-      color: 'purple'
-    },
+      color: 'purple';
+},
     {
       icon: Cloud,
       title: 'Cloud Solutions',
       description: 'Scalable cloud infrastructure and migration services for modern applications.',
       features: ['AWS/Azure/GCP', 'Cloud Migration', 'DevOps & CI/CD', 'Container Orchestration'],
       href: '/services/cloud-migration-services-chat',
-      color: 'orange'
-    },
+      color: 'orange';
+},
     {
       icon: Shield,
       title: 'Cybersecurity',
       description: 'Comprehensive security solutions to protect your digital assets.',
       features: ['Security Audits', 'Penetration Testing', 'Compliance', 'Incident Response'],
       href: '/services/network-security-chat',
-      color: 'red'
-    },
+      color: 'red';
+},
     {
       icon: BarChart3,
       title: 'Data Analytics',
       description: 'Transform your data into actionable insights with advanced analytics.',
       features: ['Business Intelligence', 'Data Visualization', 'Predictive Modeling', 'Real-time Analytics'],
       href: '/services/business-intelligence-chat',
-      color: 'indigo'
-    },
+      color: 'indigo';
+},
     {
       icon: Palette,
       title: 'UI/UX Design',
       description: 'User-centered design solutions that enhance user experience and engagement.',
       features: ['User Research', 'Wireframing', 'Prototyping', 'Design Systems'],
       href: '/services/ui-ux-design-chat',
-      color: 'pink'
-    },
+      color: 'pink';
+},
     {
       icon: CheckCircle,
       title: 'Quality Assurance',
       description: 'Comprehensive testing services to ensure your applications perform flawlessly.',
       features: ['Automated Testing', 'Performance Testing', 'Security Testing', 'User Acceptance Testing'],
       href: '/services/quality-assurance-testing-chat',
-      color: 'teal'
-    }
-  ];
+      color: 'teal';
+}
+  ]
 
   const getColorClasses = (color: string) => {
     const colorMap: { [key: string]: string } = {
@@ -109,8 +109,8 @@ const ServicesIndex: NextPage = () => {
       red: 'bg-red-100 text-red-600',
       indigo: 'bg-indigo-100 text-indigo-600',
       pink: 'bg-pink-100 text-pink-600',
-      teal: 'bg-teal-100 text-teal-600'
-    };
+      teal: 'bg-teal-100 text-teal-600';
+};
     return colorMap[color] || 'bg-gray-100 text-gray-600';
   };
 

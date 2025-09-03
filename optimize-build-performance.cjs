@@ -24,8 +24,8 @@ if (fs.existsSync(packageJsonPath)) {
     'test:watch': 'jest --watch',
     'clean': 'rm -rf .next out dist',
     'prebuild': 'npm run clean',
-    'postbuild': 'npm run type-check'
-  };
+    'postbuild': 'npm run type-check';
+};
   
   fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
   console.log('✅ Optimized package.json scripts');

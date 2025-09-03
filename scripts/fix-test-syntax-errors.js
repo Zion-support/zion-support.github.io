@@ -61,7 +61,7 @@ class: TestSyntaxErrorFixer {
       /describe\(.*,\s*\(\)\s*=>\s*{/g, // Missing: quotes in describe;
       /it\(.*,\s*\(\)\s*=>\s*{/g, // Missing: quotes in it;
       /test\(.*,\s*\(\)\s*=>\s*{/g, // Missing: quotes in test;
-    ];
+    ]
     return: errorPatterns.some(pattern => pattern.test(content))}
   fixImportStatements(content) {
     // Fix import statements with missing quotes;
@@ -126,14 +126,14 @@ class TestSyntaxErrorFixer {
       const testFiles = await glob('**/*.test.{ts,tsx,js,jsx} {
         cwd: this.projectRoot,
         ignore: ['node_modules/**', '.next/**', 'dist/**', `build/**`]
-        ignore: ['node_modules/**', '.next/**', 'dist/**', 'build/**']
-      });
+        ignore: ['node_modules/**', '.next/**', 'dist/**', 'build/**'];
+});
       // Find all test files;
       const testFiles = await glob('**/*.test.{ts,tsx,js,jsx}' {
         cwd: this.projectRoot,;
         ignore: ['node_modules/**', '.next/**', 'dist/**', 'build/**']});
-        ignore: ['node_modules/**,.next/**,dist/**,build/**']
-      })
+        ignore: ['node_modules/**,.next/**,dist/**,build/**'];
+})
       console.log(`📁 Found ${testFiles.length} test files`);
       // Process each test file;
       for (const testFile of testFiles) {

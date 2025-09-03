@@ -6,8 +6,8 @@ import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe,
   Phone, Mail, MapPin, ChevronRight, ChevronDown, 
   Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, 
   Award, Clock, Heart, Lightbulb, Users, FileText, 
-  HelpCircle, BookOpen, Target, TrendingUp, Star
-              } from 'lucide-react.ts';
+  HelpCircle, BookOpen, Target, TrendingUp, Star;
+} from 'lucide-react.ts';
 
 interface SidebarItem {
 
@@ -21,7 +21,7 @@ import {
   X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, Phone, Mail, MapPin, 
   ChevronRight, ChevronDown, Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, 
   Eye, Award, Clock, Heart, Lightbulb, Users, FileText, HelpCircle, BookOpen, 
-  Target, TrendingUp, Star
+  Target, TrendingUp, Star;
 } from 'lucide-react';
 
   X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, 
@@ -57,7 +57,7 @@ const sidebarSections = [
 
         name: 'Emerging Tech', '        href: '/emerging-tech', icon: Sparkles, '        description: 'Future technologies and innovations', subItems['          { name: 'Brain-Computer Interface', href: '/brain-computer-interface' } { name: 'Autonomous Vehicle AI', href: '/autonomous-vehicle-ai' } { name: 'Advanced Robotics', href: '/advanced-robotics' } { name: 'Biotechnology Platform', href: '/biotechnology-platform' }'        ]''
     ]
-  } {
+} {
 
     title: 'Industry Solutions', '    icon: Target, color: 'from-purple-500 to-pink-600', '    items['      {'
 
@@ -92,7 +92,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
 
         name: 'Resources', '        href: '/resources', icon: BookOpen, '        description: 'Educational content and documentation', subItems['          { name: 'Documentation', href: '/docs' } { name: 'API Reference', href: '/api-docs' } { name: 'Blog & News', href: '/blog' } { name: 'Case Studies', href: '/case-studies' } { name: 'Whitepapers', href: '/whitepapers' } { name: 'Webinars', href: '/webinars' }'        ]'      } {'
 
-        name: 'Support', '        href: '/support', icon: HelpCircle, '        description: 'Get help and support', subItems['          { name: 'Contact Support', href: '/contact-support' } { name: anyanyanyanyanyanyanyanyanyanyanyanyany&apos;Training Programs', href: '/training';'},;'          { name: 'Community Forum', href: '/community' },;'          { name: 'Knowledge Base', href: '/knowledge-base' };'        ];'      };];'
+        name: 'Support', '        href: '/support', icon: HelpCircle, '        description: 'Get help and support', subItems['          { name: 'Contact Support', href: '/contact-support' } { name: anyanyanyanyanyanyanyanyanyanyanyanyany&apos;Training Programs', href: '/training';'},;'          { name: 'Community Forum', href: '/community' },;'          { name: 'Knowledge Base', href: '/knowledge-base' };'        ]'      };];'
     title: anyanyanyanyanyanyanyanyanyanyanyanyany'Revolutionary: Services,',';
     icon: Za,p,
     color: 'from-cyan-500: to-blue-600,',';
@@ -138,7 +138,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
 const contactInfo = {
   mobile: '+1-302-464-0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008, Middletown, DE 19709'
+  address: '364 E Main St STE 1008, Middletown, DE 19709';
 };
 
   {'
@@ -310,8 +310,8 @@ const contactInfo = {
     e: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution' } { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem' } { name: 'AI Ethics & Governance', href: '/ai-ethics-governance' } { name: 'AI Creativity Studio', href: '/ai-creativity-studio' } { name: 'AI Education Platform', href: '/ai-education-platform' } { name: 'AI Healthcare Diagnostics', href: '/ai-healthcare-diagnostics' } { name: 'AI Financial Intelligence', href: '/ai-financial-intelligence' } { name: 'AI Sustainability Platform', href: '/ai-sustainability-platform' }
         ],
         isNew: true,
-        badge: 'Revolutionary'
-      } {'
+        badge: 'Revolutionary';
+} {'
         href: '/quantum-computing',
     e: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure' } { name: 'Quantum Bio-Computing', href: '/quantum-bio-computing' } { name: 'Quantum Energy Platform', href: '/quantum-energy-platform' } { name: 'Quantum Materials Discovery', href: '/quantum-materials-discovery' } { name: 'Quantum Robotics', href: '/quantum-robotics' } { name: 'Quantum Internet Security', href: '/quantum-internet-security' } { name: 'Quantum Logistics', href: '/quantum-logistics-optimization' } { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity-platform' }
     e: 'Edge Computing Orchestrator', href: '/edge-computing-orchestration' } { name: 'Zero Trust Security Platform', href: '/zero-trust-network-architecture' } { name: 'Blockchain Enterprise Platform', href: '/blockchain-infrastructure-platform' } { name: 'AI-Powered DevOps', href: '/ai-powered-devops' } { name: 'Quantum Networking', href: '/quantum-networking' } { name: 'Autonomous IT Operations', href: '/autonomous-it-operations' } { name: 'Quantum Data Center', href: '/quantum-data-center' } { name: 'Quantum Cloud Migration', href: '/quantum-cloud-migration' }
@@ -659,8 +659,8 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({ isOpen, onClo
                     expandedSections.has(section.title) ? 'rotate-180' : ''';
                 <ChevronDown
                   className={`w-4 h-4 text-gray-400 transition-transform duration-300 ${
-                    expandedSections.has(section.title) ? 'rotate-180' : ''
-                  }`}
+                    expandedSections.has(section.title) ? 'rotate-180' : '';
+}`}
 
                   <motion.div: initial = {
 
@@ -734,8 +734,8 @@ className="space-y-2 ml-6"""                    {section.items.map((item, itemIn
                                   item.isNew ? 'bg-green-100 text-green-800' :
                                   item.isHot ? 'bg-red-100 text-red-800' :
                                   item.isPremium ? 'bg-purple-100 text-purple-800' :
-                                  'bg-gray-100 text-gray-800'
-                                }`}>
+                                  'bg-gray-100 text-gray-800';
+}`}>
                                   {item.badge}
 
                         {/* Sub-items: */}

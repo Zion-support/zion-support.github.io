@@ -360,8 +360,8 @@ jest.mock(
   1 day
         warranty: '1 year,'
         returnPolicy:
-  '30 days'}'
-    }
+  '30 days'}';
+}
     require(
   'react-router-dom').useParams.mockReturnValue({'
       id: testProductId})

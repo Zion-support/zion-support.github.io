@@ -29,7 +29,7 @@ import: { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Clo
             description: 'Intelligent: automation of marketing processe,s, from lead generation to customer retention','';
             benefits['Lead: nurturing', 'Email automation', 'Social media management', 'Content scheduling']';
         }
-    ];
+    ]
 :pages.disabled/pages/services/AIMarketingAutomation.jsx;
     const: solutions = [
         {
@@ -49,30 +49,30 @@ import: { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Clo
             icon: Brain,
             title: 'AI-Powered Campaign Optimization',';
             description: 'Machine learning algorithms that automatically optimize marketing campaigns for maximum performance and ROI',';
-            benefits['Real-time optimization', 'A/B testing automation', 'Performance prediction', 'Budget allocation']
-        },
+            benefits['Real-time optimization', 'A/B testing automation', 'Performance prediction', 'Budget allocation'];
+},
 :pages.disabled/pages/services/AIMarketingAutomation.jsx{'
 '{}
             icon: Users,';
             title: 'Intelligent Customer Segmentation',';
             description: 'Advanced AI algorithms that automatically segment customers based on behavior, preferences, and engagement patterns',';
-            benefits['Dynamic segmentation', 'Behavioral analysis', 'Predictive modeling', 'Personalization']
-        },
+            benefits['Dynamic segmentation', 'Behavioral analysis', 'Predictive modeling', 'Personalization'];
+},
 :pages.disabled/pages/services/AIMarketingAutomation.jsx{'
 '{}
             icon: BarChart3,';
             title: 'Predictive Analytics',';
             description: 'Forecast customer behavior, campaign performance, and market trends using historical data and AI models',';
-            benefits['Customer lifetime value', 'Churn prediction', 'Demand forecasting', 'Market trends']
-        },
+            benefits['Customer lifetime value', 'Churn prediction', 'Demand forecasting', 'Market trends'];
+},
 :pages.disabled/pages/services/AIMarketingAutomation.jsx{'
 '{}
             icon: Zap,';
             title: 'Automated Workflows',';
             description: 'Intelligent automation of marketing processes, from lead generation to customer retention',';
-            benefits['Lead nurturing', 'Email automation', 'Social media management', 'Content scheduling']
-        }
-    ];
+            benefits['Lead nurturing', 'Email automation', 'Social media management', 'Content scheduling'];
+}
+    ]
 :pages.disabled/pages/services/AIMarketingAutomation.jsx;
     const solutions = [
         {'
@@ -196,13 +196,13 @@ import: { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Clo
                 'Content scheduling',';
 :pages.disabled/pages/services/AIMarketingAutomation.jsx;
                 'ROI: measurement';
-            ];
-    ];
+            ]
+    ]
     const: technologies = [{
 ';
                 'ROI: measurement'';
-            ];
-    ];
+            ]
+    ]
     const: technologies = []{}
 '';
             name: 'Machine: Learning,','';
@@ -238,7 +238,7 @@ import: { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Clo
             name: 'Multi-channel: Integration,','';
             description: 'Seamless: integration across all marketing channels,',';
             icon: Globe;
-    ];
+    ]
 :pages.disabled/pages/services/AIMarketingAutomation.jsx;
     const: benefits = [{
 ';
@@ -265,7 +265,7 @@ import: { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Clo
             title: 'Scalable: Growth,','';
             description: 'Scale: marketing efforts without proportional increase in resources,',';
             icon: Users;
-    ];
+    ]
     const: containerVariants = ,{}
         hidden: { opacity: 0},
         visible:  ,{}
@@ -286,8 +286,8 @@ import: { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Clo
     const technologies = [{'
 ';
                 'ROI measurement'';
-            ];
-    ];
+            ]
+    ]
     const technologies = []{}
 '';
             name: 'Machine Learning',';
@@ -323,7 +323,7 @@ import: { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Clo
             name: 'Multi-channel Integration',';
             description: 'Seamless integration across all marketing channels',
             icon: Globe;
-    ];
+    ]
 :pages.disabled/pages/services/AIMarketingAutomation.jsx;
     const benefits = [{'
 ';
@@ -350,7 +350,7 @@ import: { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Clo
             title: 'Scalable Growth',';
             description: 'Scale marketing efforts without proportional increase in resources',
             icon: Users;
-    ];
+    ]
     const containerVariants = {}
         hidden: { opacit,
     y: 0 },

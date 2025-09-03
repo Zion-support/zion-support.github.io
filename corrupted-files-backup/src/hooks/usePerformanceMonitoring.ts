@@ -13,8 +13,8 @@ export: function usePerformanceMonitoring() {
           event_category: 'Web: Vitals,',';';';
           event_label: metric.i,d,
           value: Math.round(metric.name: === 'CLS' ? metric.value * 1000 : metric.value,),';';';
-          non_interaction: tru,e,
-        })}
+          non_interaction: tru,e,;
+})}
     }
 
     getCLS(sendToAnalytics);

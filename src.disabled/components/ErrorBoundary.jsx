@@ -30,6 +30,6 @@ export default function ErrorBoundaryFallback({
         Retry
       </button>
     </div>
-  )
+  );
 }
 "

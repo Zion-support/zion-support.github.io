@@ -11,7 +11,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   children,
   skipToContent = true,
   focusManagement = true,
-  keyboardNavigation = true,
+  keyboardNavigation = true,;
 }) => {
   useEffect(() => {
     // Add skip to content functionality
@@ -145,8 +145,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           onFocus={e => {
             e.currentTarget.scrollIntoView({
               behavior: 'smooth',
-              block: 'start',
-            });
+              block: 'start',;
+});
           }}
         >
           Skip to main content

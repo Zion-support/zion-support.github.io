@@ -31,8 +31,8 @@ class FinalAutomationSuite {
       const result = execSync(command, {
         cwd: this.projectRoot,
         encoding: 'utf8',
-        timeout: 300000, // 5 minutes timeout
-      });
+        timeout: 300000, // 5 minutes timeout;
+});
       this.log(`✅ Completed: ${description}`);
       return { success: true, output: result };
     } catch (error) {
@@ -82,8 +82,8 @@ class AutoDeployment {
 
 const deployment = new AutoDeployment();
 deployment.deploy();
-`
-      },
+`;
+},
       {
         name: 'code-quality-checker.cjs',
         content: `
@@ -114,8 +114,8 @@ class CodeQualityChecker {
           issues.push({
             file,
             type: 'console.log',
-            message: 'Console.log statement found in production code'
-          });
+            message: 'Console.log statement found in production code';
+});
         }
         
         // Check for TODO comments
@@ -123,8 +123,8 @@ class CodeQualityChecker {
           issues.push({
             file,
             type: 'todo',
-            message: 'TODO or FIXME comment found'
-          });
+            message: 'TODO or FIXME comment found';
+});
         }
         
         // Check for large files
@@ -132,12 +132,12 @@ class CodeQualityChecker {
           issues.push({
             file,
             type: 'large-file',
-            message: 'File is larger than 10KB'
-          });
+            message: 'File is larger than 10KB';
+});
         }
       } catch (error) {
-        // Skip files that can't be read
-      }
+        // Skip files that can't be read;
+}
     }
     
     console.log(\`📊 Found \${issues.length} code quality issues\`);
@@ -181,8 +181,8 @@ class CodeQualityChecker {
 
 const checker = new CodeQualityChecker();
 checker.checkCodeQuality();
-`
-      },
+`;
+},
       {
         name: 'dependency-updater.cjs',
         content: `
@@ -223,8 +223,8 @@ class DependencyUpdater {
 
 const updater = new DependencyUpdater();
 updater.updateDependencies();
-`
-      },
+`;
+},
       {
         name: 'performance-monitor.cjs',
         content: `
@@ -243,8 +243,8 @@ class PerformanceMonitor {
       timestamp: new Date().toISOString(),
       memory: process.memoryUsage(),
       uptime: process.uptime(),
-      cpu: process.cpuUsage()
-    };
+      cpu: process.cpuUsage();
+};
     
     // Check bundle size
     const buildDir = path.join(this.projectRoot, '.next');
@@ -295,9 +295,9 @@ class PerformanceMonitor {
 
 const monitor = new PerformanceMonitor();
 monitor.monitorPerformance();
-`
-      }
-    ];
+`;
+}
+    ]
 
     const scriptsDir = path.join(this.projectRoot, 'scripts', 'additional');
     if (!fs.existsSync(scriptsDir)) {
@@ -358,7 +358,7 @@ monitor.monitorPerformance();
           'Add security scanning',
           'Set up automated backups'
         ]
-      },
+},
       nextSteps: [
         'Review and test all automation scripts',
         'Set up monitoring dashboards',
@@ -368,7 +368,7 @@ monitor.monitorPerformance();
         'Configure security scanning',
         'Set up backup procedures'
       ]
-    };
+};
 
     const reportPath = path.join(this.reportsDir, 'final-automation-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
@@ -405,8 +405,8 @@ monitor.monitorPerformance();
       }
 
       return report;
-
-    } catch (error) {
+;
+} catch (error) {
       this.log(`❌ Fatal error in final automation suite: ${error.message}`);
       throw error;
     }

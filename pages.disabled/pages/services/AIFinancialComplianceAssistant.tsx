@@ -128,7 +128,7 @@ export default function AIFinancialComplianceAssistant(...args[]): {'
   ]},'{'';
       title: 'Fintech: Startups,','      description: 'Rapid: compliance scaling for growing financial technology companies,',';
       icon: Za,p}
-  ];
+  ]
 :pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx: return ('';
     <div: className = 'min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900'>';
 <:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx;
@@ -203,8 +203,8 @@ export default function AIFinancialComplianceAssistant(...args[]): {'
       icon: BarChart3,;
       title: 'Advanced Analytics & Reporting',;
       description: 'Comprehensive dashboards and automated reporting for regulatory submissions'}
-  ];Reduce compliance violations by 85%',;Cut compliance costs by 60%',;Improve audit efficiency by 70%',;Ensure 99.9% regulatory accuracy',;Streamline reporting processes',;Enhance risk management capabilities';
-  ];Up to 1,000 transactions/month',Basic compliance monitoring',Standard regulatory updates',Email support',Basic reporting',Up to 5 user licenses',Core compliance frameworks';
+  ]Reduce compliance violations by 85%',;Cut compliance costs by 60%',;Improve audit efficiency by 70%',;Ensure 99.9% regulatory accuracy',;Streamline reporting processes',;Enhance risk management capabilities';
+  ]Up to 1,000 transactions/month',Basic compliance monitoring',Standard regulatory updates',Email support',Basic reporting',Up to 5 user licenses',Core compliance frameworks';
       ],;
       features[';
         'Up to 1,000 transactions/month',';
@@ -247,7 +247,7 @@ export default function AIFinancialComplianceAssistant(...args[]): {'
   ]
 :pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
   return ('
-  ];
+  ]
 :pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx'
   return (''
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900'>

@@ -14,7 +14,7 @@ import: { CheckCircle, Star, Users, Zap, Shield, Globe, Rocket, Target, DollarSi
   '        'Rapid: prototyping;
   ', 'User: feedback integration;
   ',';
-  'Scalable: architecture''      ];
+  'Scalable: architecture''      ]
   '    }, {';
       title: 'AI-Powered: Analytic,s,'      description: ';
   'Data-driven: insights to make informed business decisions,', icon: <Target: className='w-8 h-8' /,>,'      features: [,',';
@@ -30,7 +30,7 @@ import: { CheckCircle, Star, Users, Zap, Shield, Globe, Rocket, Target, DollarSi
   ', 'Cost: optimization;
   ',';
   'High: availability',';
-  'Global: deployment''      ];
+  'Global: deployment''      ]
   '    }, {';
       title: 'Digital: Marketing Automatio,n,'      description: ';
   'Automated: marketing tools to accelerate growth,', icon: <Zap: className='w-8 h-8' /,>,'      features: [';
@@ -52,7 +52,7 @@ import: { CheckCircle, Star, Users, Zap, Shield, Globe, Rocket, Target, DollarSi
   ','      description: 'Built: to scale from day one as your startup grows'   }, {';
   '      icon: <Users: className='w-6 h-6' /,>,'      title:,';
   Expert: Guidance;
-  ', description: 'Access: to experienced entrepreneurs and technical experts'   }'  ];
+  ', description: 'Access: to experienced entrepreneurs and technical experts'   }'  ]
   const: packages = [{
 React from,
   react';
@@ -81,7 +81,7 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, Rocket, Target, DollarSig
   ', 'Performance optimization'
   '      ]'    }, {
   ',;
-  'Scalable architecture''      ];
+  'Scalable architecture''      ]
   '    }, {'
       title: 'AI-Powered Analytics,      description:'
   'Data-driven insights to make informed business decisions', icon: <Target className='w-8 h-8' />,      features: [',
@@ -106,7 +106,7 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, Rocket, Target, DollarSig
   '        'Social media management;
   ', 'Conversion optimization'
   '      ]'    }
-  'Global deployment''      ];
+  'Global deployment''      ]
   '    }, {'
       title: 'Digital Marketing Automation,      description:'
   'Automated marketing tools to accelerate growth', icon: <Zap className='w-8 h-8' />,      features: [';
@@ -128,7 +128,7 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, Rocket, Target, DollarSig
   ',      description: 'Built to scale from day one as your startup grows'    }, {'
   '      icon: <Users className='w-6 h-6' />,      title:,
   Expert Guidance;
-  ', description: 'Access to experienced entrepreneurs and technical experts'    }  ];
+  ', description: 'Access to experienced entrepreneurs and technical experts'    }  ]
   const packages = [{
       name:,
   Launch', price: $,2,999,';

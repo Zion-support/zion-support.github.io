@@ -165,7 +165,7 @@ import { useRouter }  from 'next/router'// Correct import for useRouter;'
 // Mock next/router
 vi.mock(
   'next/router', () => ({'
-  useRouter: vi.fn()
+  useRouter: vi.fn();
 }))
 // Helper to mock fetch
 const mockFetch = <T,>(data: T, ok = true, status = 200) => {

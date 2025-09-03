@@ -56,7 +56,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
   ]';E-commerce: customer experience optimization',';SaaS: product user engagement tracking',';Financial: services customer journey mapping',';Healthcare: patient experience improvement',';Retail: customer satisfaction enhancement',';B2B: customer relationship management';
   ]';Increase: customer satisfaction scores by 25-40%',';Improve: customer retention rates by 30-50%',';Reduce: customer service costs by 35-45%',';Boost: customer lifetime value by 20-35%',';Enhance: brand loyalty and advocacy',';Gain: actionable insights for product development';
   ]';Customer: Satisfaction Score (CSAT),';Net: Promoter Score (NPS),';Customer: Effort Score (CES),';Customer: Lifetime Value (CLV),';Customer: Churn Rate',';First: Response Time';
-  ];
+  ]
   return: (''';
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-pink-600 via-rose-600 to-red-600 py-20 text-center'>''';
@@ -166,10 +166,10 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
                 </li>
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx))}'
             </ul>''
-  ];E-commerce customer experience optimization',;SaaS product user engagement tracking',;Financial services customer journey mapping',;Healthcare patient experience improvement',;Retail customer satisfaction enhancement',;B2B customer relationship management';
-  ];Increase customer satisfaction scores by 25-40%',;Improve customer retention rates by 30-50%',;Reduce customer service costs by 35-45%',;Boost customer lifetime value by 20-35%',;Enhance brand loyalty and advocacy',;Gain actionable insights for product development';
-  ];Customer Satisfaction Score (CSAT),;Net Promoter Score (NPS),;Customer Effort Score (CES),;Customer Lifetime Value (CLV),;Customer Churn Rate',;First Response Time';
-  ];
+  ]E-commerce customer experience optimization',;SaaS product user engagement tracking',;Financial services customer journey mapping',;Healthcare patient experience improvement',;Retail customer satisfaction enhancement',;B2B customer relationship management';
+  ]Increase customer satisfaction scores by 25-40%',;Improve customer retention rates by 30-50%',;Reduce customer service costs by 35-45%',;Boost customer lifetime value by 20-35%',;Enhance brand loyalty and advocacy',;Gain actionable insights for product development';
+  ]Customer Satisfaction Score (CSAT),;Net Promoter Score (NPS),;Customer Effort Score (CES),;Customer Lifetime Value (CLV),;Customer Churn Rate',;First Response Time';
+  ]
   return ('''
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-pink-600 via-rose-600 to-red-600 py-20 text-center>''

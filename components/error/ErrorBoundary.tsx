@@ -109,8 +109,8 @@ class ErrorBoundary extends Component<Props, State> {
 
   override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
       error,
-      errorInfo
-    });
+      errorInfo;
+});
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
@@ -130,8 +130,8 @@ class ErrorBoundary extends Component<Props, State> {
     fetch('/api/analytics/error' {'
       method: 'POST',
       headers: {'
-        'Content-Type': 'application/json'
-      },
+        'Content-Type': 'application/json';
+},
           message: error.message,
         'Content-Type': 'application/json'}, body: JSON.stringify({
           message: error.message, stack: error.stack, name: error.name}, errorInfo: {
@@ -148,9 +148,9 @@ class ErrorBoundary extends Component<Props, State> {
     k: errorInfo.componentStack
         url: window.location.href,
         timestamp: Date.now(),
-        userAgent: navigator.userAgent
-      })
-    }).catch(console.error)};
+        userAgent: navigator.userAgent;
+});
+}).catch(console.error)};
 
   private handleRetry = () => {
     this.setState({ hasError: false, error: undefined, errorInfo: undefined })};

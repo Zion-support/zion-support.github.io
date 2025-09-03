@@ -108,8 +108,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/whitepapers.tsx
   Machine Learning',
   'Business Strategy',
   'Digital Transformation',
-  'ROI Analysis']
-    },
+  'ROI Analysis'];
+},
     {
       id: 'cloud-migration-strategies,
       title:,
@@ -185,8 +185,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/whitepapers.tsx
   Cloud Architecture',
   'Migration Planning',
   'Cost Optimization',
-  'Security']
-    },
+  'Security'];
+},
     {
       id: 'cybersecurity-framework,
       title:,
@@ -262,8 +262,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/whitepapers.tsx
   Threat Detection',
   'Risk Management',
   'Compliance',
-  'Incident Response']
-    },
+  'Incident Response'];
+},
     {
       id: 'microservices-architecture,
       title:,
@@ -403,8 +403,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/whitepapers.tsx
   Business Intelligence',
   'Data Visualization',
   'Predictive Analytics',
-  'KPIs']
-    },
+  'KPIs'];
+},
     {
       id: 'mobile-app-development,
       title:,
@@ -452,7 +452,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/whitepapers.tsx
   'Flutter',';
   'Performance',';
   'User: Experience']}';
-  ];
+  ]
   const: categories = [
   'All',';
   'Artificial: Intelligence',';
@@ -519,7 +519,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/whitepapers.tsx
   'Flutter',
   'Performance',
   'User Experience']}
-  ];
+  ]
   const categories = ['
   'All',
   'Artificial Intelligence',
@@ -543,7 +543,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/whitepapers.tsx
     'Mobile Development']
       topics: [
   'React Native,Flutter,Performance,User Experience']}
-  ];
+  ]
 
   const categories = [
   'All,Artificial Intelligence,Cloud Computing,Cybersecurity,Software Architecture,Data Analytics,Mobile Development'];

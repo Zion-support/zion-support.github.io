@@ -226,8 +226,8 @@ this.log(`Found ${fileStats.length} changed files`);
         const fileAnalysis = await this.analyzeJavaScriptFile(file);
         analysis.issues.push(...fileAnalysis.issues);
         analysis.metrics[file.path] = fileAnalysis.metrics;
-      } else if (file.extension === `.css` || file.extension === `.scss`) {
-      } else if (file.extension === '.css' || file.extension === '.scss') {;
+      } else if (file.extension === `.css` || file.extension === `.scss`) {;
+} else if (file.extension === '.css' || file.extension === '.scss') {;
         const fileAnalysis = await this.analyzeCSSFile(file);
         analysis.issues.push(...fileAnalysis.issues);
         analysis.metrics[file.path] = fileAnalysis.metrics;
@@ -450,7 +450,7 @@ this.log(`Found ${fileStats.length} changed files`);
         message: 'Potential localStorage injection vulnerability',;
         severity: 'MEDIUM',;
       },;
-    ];
+    ]
 ;
     for (const pattern of securityPatterns) {;
       const matches = content.match(pattern.pattern);
@@ -654,8 +654,8 @@ this.log(`Generated ${suggestions.length} intelligent suggestions`);
           }
         } catch (error) {  
           this.log(Failed to apply fix for ${suggestion.title  }: ${error.message}`,
-            `WARN`
-        } catch (error) {;
+            `WARN`;
+} catch (error) {;
           this.log(Failed to apply fix for ${suggestion.title}: ${error.message}',;
             'WARN';
           );

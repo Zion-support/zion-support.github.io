@@ -26,7 +26,7 @@ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) =
   quantum['#00ffff',#ff00ff',#ffff00',#00ff00'],;''';,"});,"})
             neon['#ff0080',#8000ff',#00ffff',#ffff00'],;''';,"});,"})
             holographic['#ff6b6b',#4ecdc4',#45b7d1',;''';,"});,"})
-  '#96ceb4'];,"});,"})
+  '#96ceb4'];,"});,"});
 };,"});,"})
         const selectedColors = colors[theme];,"});,"})
         // Create particles;,"});,"})
@@ -38,8 +38,8 @@ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) =
                 vy: (Math.random() - 0.5) * 2,;,"});,"})
                 size: Math.random() * 3 + 1,;,"});,"})
                 opacity: Math.random() * 0.5 + 0.3,;,"});,"})
-                color: selectedColors[Math.floor(Math.random() * selectedColors.length)];,"});,"})
-            })}"});,"})
+                color: selectedColors[Math.floor(Math.random() * selectedColors.length)];,"});,"});
+})}"});,"})
         const animate = () => {}"});,"})
             ctx.clearRect(0, 0, canvas.width, canvas.height);,"});,"})
             // Update and draw particles;,"});,"})
@@ -72,8 +72,8 @@ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) =
                         ctx.lineTo(otherParticle.x, otherParticle.y);'`'`;,"});,"})
                         ctx.strokeStyle = `${particle.color}${Math.floor((1 - distance / 150) * 0.3 * 255).toString(16).padStart(2,0')}`;,"});,"})
                         ctx.lineWidth = 1;,"});,"})
-                        ctx.stroke()}"});,"})
-                })});,"});,"})
+                        ctx.stroke()}"});,"});
+})});,"});,"})
             // Add quantum effects'';,"});,"})
             if (theme === 'quantum') {}"});,"})
                 ctx.save();,"});,"})
@@ -99,8 +99,8 @@ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) =
                         ctx.arc(particle.x, particle.y, particle.size * 2, 0, Math.PI * 2);,"});,"})
                         ctx.strokeStyle = particle.color;,"});,"})
                         ctx.lineWidth = 1;,"});,"})
-                        ctx.stroke()}"});,"})
-                });,"});,"})
+                        ctx.stroke()}"});,"});
+});,"});,"})
                 ctx.restore()}';,"});,"})
             // Add holographic effects'';,"});,"})
             if (theme === 'holographic') {}"});,"})
@@ -136,7 +136,7 @@ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) =
     return (<canvas ref={canvasRef} className="fixed inset-0 pointer-events-none z-0" style = {}"});,"})
   {}"});,"})
             opacity: intensity,';,"});,"})
-  filter: theme === 'quantum' ? 'blur(0.5px)' : 'none';,"});,"})
+  filter: theme === 'quantum' ? 'blur(0.5px)' : 'none';,"});,"});
 }}/>)};,"});,"})
 export default UltraFuturisticBackground2034;,"});,"})
 ;,"});,"})
@@ -216,7 +216,7 @@ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) =
                         ctx.lineTo(otherParticle.x, otherParticle.y)'`;'`"`"
                         ctx.strokeStyle = `${particle.color}${Math.floor((1 - distance / 150) * 0.3 * 255).toString(16).padStart(2, 0')}`'
                         ctx.lineWidth = 1
-                        ctx.stroke()}", "
+                        ctx.stroke()}", ";
 })})''
             // Add quantum effects''
             if (theme === 'quantum') {}""

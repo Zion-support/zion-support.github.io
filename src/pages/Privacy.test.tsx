@@ -41,6 +41,6 @@ describe('Privacy', () => {"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
 "
     render(<Privacy /" >)
-    // Add more specific tests here
+    // Add more specific tests here;
 });
 })

@@ -12,14 +12,14 @@ const EnhancedServicesShowcase = () => {}"});,"})
     { id: 'it-services', name: 'IT Services', icon: '🖥️' },';,"});,"})
     { id: 'ai-services', name: 'AI Services', icon: '🤖' },';,"});,"})
     { id: 'emerging-tech', name: 'Emerging Tech', icon: '🚀' }"});,"})
-  ];,"});,"})
+  ],"});,"})
   const filteredServices = enhancedServices2025.filter(service => {}"});,"})
     const matchesSearch =;,"});,"})
       service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;,"});,"})
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;,"});,"})
       service.tagline.toLowerCase().includes(searchTerm.toLowerCase());,"});,"})
-    return matchesCategory && matchesSearch;,"});,"})
-  });,"});,"})
+    return matchesCategory && matchesSearch;,"});,"});
+});,"});,"})
   const containerVariants = {}"});,"})
     hidden: { opacity: 0 },;,"});,"})
     visible: {}"});,"})
@@ -104,8 +104,8 @@ const EnhancedServicesShowcase = () => {}"});,"})
 ';,"});,"})
                     selectedCategory === category.id'';,"});,"})
                       ? 'bg-blue-600 border-blue-400 text-white'''`;,"});,"})
-                      : 'bg-white/10 border-white/20 text-gray-300 hover:bg-white/20 hover:border-white/40'``;,"});,"})
-                  }`}""";,"});,"})
+                      : 'bg-white/10 border-white/20 text-gray-300 hover:bg-white/20 hover:border-white/40'``;,"});,"});
+}`}""";,"});,"})
                 >"""";,"});,"})
                   <span className="mr-2">{category.icon}</span>;,"});,"})
                   {category.name}"});,"})
@@ -252,8 +252,8 @@ const EnhancedServicesShowcase = () => {}"});,"})
                 onClick={() => {}"});,"})
 ';,"});,"})
                   setSelectedCategory('all');,"});,"})
-                  setSearchTerm('');""";,"});,"})
-                }}"""";,"});,"})
+                  setSearchTerm('');""";,"});,"});
+}}"""";,"});,"})
                 className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300""";,"});,"})
               >;,"});,"})
                 View All Services;,"});,"})
@@ -464,7 +464,7 @@ const EnhancedServicesShowcase = () => {}""
 ''
                     selectedCategory === category.id''`
                       ? 'bg-blue-600 border-blue-400 text-white'''`"`"
-                      : 'bg-white/10 border-white/20 text-gray-300 hover:bg-white/20 hover:border-white/40'``", `"
+                      : 'bg-white/10 border-white/20 text-gray-300 hover:bg-white/20 hover:border-white/40'``", `";
 }`}''''
                 >''''
                   <span className='mr-2'>{category.icon}</span>

@@ -228,8 +228,8 @@ export default function CloudServices() {
         'Data Migration',
         'Application Migration',
         'Performance Optimization'],
-      features: ['Assessment & Planning,Data Migration,Application Migration,Performance Optimization']
-    } {
+      features: ['Assessment & Planning,Data Migration,Application Migration,Performance Optimization'];
+} {
       title: 'Cloud Architecture',
       description: 'Design and implement robust, scalable cloud architectures',
       icon: Network,
@@ -252,9 +252,9 @@ export default function CloudServices() {
         'Network Security',
         'Data Encryption',
         'Compliance Monitoring']},
-      features: ['Identity Management,Network Security,Data Encryption,Compliance Monitoring']
-    }
-  ];
+      features: ['Identity Management,Network Security,Data Encryption,Compliance Monitoring'];
+}
+  ]
 
   const platforms = [
   { name: 'Amazon Web Services (AWS)', category: 'Cloud Platform' } { name: 'Microsoft Azure', category: 'Cloud Platform' } { name: 'Google Cloud Platform', category: 'Cloud Platform' } { name: 'Docker', category: 'Containerization' } { name: 'Kubernetes', category: 'Orchestration' } { name: 'Terraform', category: 'Infrastructure as Code' } { name: 'Jenkins', category: 'CI/CD' } { name: 'GitLab CI', category: 'CI/CD' } { name: 'Prometheus', category: 'Monitoring' } { name: 'Grafana', category: 'Visualization' }];

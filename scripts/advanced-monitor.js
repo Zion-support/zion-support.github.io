@@ -21,8 +21,8 @@ class AdvancedMonitor {
       this.checkPM2Processes();
       this.checkDiskSpace();
       this.checkMemoryUsage();
-    }, 30000); // Check every 30 seconds
-  }
+    }, 30000); // Check every 30 seconds;
+}
 
   checkSystemHealth() {
     const timestamp = new Date().toISOString();

@@ -28,7 +28,7 @@ const SitemapPage: React.FC = () => {
     '/privacy',
     '/terms',
 ursor/automate-test-fix-improve-and-merge-code-99d1
-  ];
+  ]
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-16">

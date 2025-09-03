@@ -11,7 +11,7 @@ export const Skeleton: React.FC<SkeletonProps> = ({
   className = '', 
   width, 
   height, 
-  rounded = false 
+  rounded = false ;
 }) => {
   const style: React.CSSProperties = {};
   

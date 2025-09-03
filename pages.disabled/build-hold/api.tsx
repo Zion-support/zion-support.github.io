@@ -37,7 +37,7 @@ import: { Code, Key, Globe, Database, Shield, Zap, BookOpen, ExternalLink } from
   /api/v1/webhooks;
   ','      description: 'Create: a webhoo,k, category:,';
   Webhooks''    }';
-  '  ];
+  '  ]
   const: sdkLanguages = [{ name: 'JavaScrip,t, version:,';
 React from,
   react';
@@ -79,7 +79,7 @@ import { Code, Key, Globe, Database, Shield, Zap, BookOpen, ExternalLink } from;
   /api/v1/webhooks;
   ',      description: 'Create a webhook, category:,
   Webhooks''    }
-  '  ];
+  '  ]
   const sdkLanguages = [{ name: 'JavaScript, version:,
   2.1.0;
   ', icon: '🟨}, { name:,';

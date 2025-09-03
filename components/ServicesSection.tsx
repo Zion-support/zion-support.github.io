@@ -88,8 +88,8 @@ const ServicesSection: React.FC = () => {
       title: 'AI Services',
       description: 'Machine learning, natural language processing, and AI-powered automation solutions.',
       features: ['Machine Learning Models', 'NLP Solutions', 'AI Automation', 'Predictive Analytics'],
-      link: '/ai-services'
-    } {
+      link: '/ai-services';
+} {
       icon: Cloud,
       title: 'Cloud Services',
       description: 'Scalable cloud infrastructure and migration services for modern businesses.',
@@ -114,9 +114,9 @@ const ServicesSection: React.FC = () => {
       title: 'Micro SaaS',
       description: 'Lightweight, focused software solutions that solve specific business problems.',
       features: ['Rapid Development', 'Cost-Effective', 'Scalable', 'User-Friendly'],
-      link: '/micro-saas'
-    }
-  ];
+      link: '/micro-saas';
+}
+  ]
 
   return (
     <section className="py-20 bg-gray-50">
@@ -148,8 +148,8 @@ const ServicesSection: React.FC = () => {
     n: Brain,
       features: ['Machine Learning Models,NLP Solutions,AI Automation,Predictive Analytics'],
       link: '/ai-services'} {
-      features: ['Cloud Migration', 'Infrastructure Setup', 'Auto-scaling', 'Cost Optimization'],
-    },
+      features: ['Cloud Migration', 'Infrastructure Setup', 'Auto-scaling', 'Cost Optimization'],;
+},
       features: ['Cloud Migration,Infrastructure Setup,DevOps Solutions,Monitoring'],
       link: '/cloud-services'} {
       features: ['Security Audits', 'Threat Detection', 'Compliance', 'Incident Response'],
@@ -174,8 +174,8 @@ const ServicesSection: React.FC = () => {
     y: 1,
       transition: {
         staggerChildre,
-    n: 0.1
-  };
+    n: 0.1;
+};
 
   const itemVariants = {
     y: 0, y: 20 },

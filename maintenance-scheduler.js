@@ -9,8 +9,8 @@ class MaintenanceScheduler {
       { name: 'Dependency Updates', command: 'npm outdated', frequency: 'weekly' },
       { name: 'Code Quality Check', command: 'node code-quality-checker.js', frequency: 'daily' },
       { name: 'Performance Analysis', command: 'node performance-analyzer.js', frequency: 'weekly' }
-    ];
-  }
+    ]
+}
 
   runDailyMaintenance() {
     console.log('Running daily maintenance tasks...');

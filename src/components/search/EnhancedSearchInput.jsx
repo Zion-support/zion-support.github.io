@@ -21,7 +21,7 @@ export function EnhancedSearchInput({value,
   placeholder = "Search...","
   suggestions = [], 
   placeholder = "Search...",
-  className = ""
+  className = "";
 }) {const [isOpen, setIsOpen] = useState(false);
   suggestions = [], "
   placeholder = "Search...,
@@ -45,8 +45,8 @@ export function EnhancedSearchInput({value,
 
   useEffect(() => {const handleClickOutside = (event) => {
       if (inputRef.current && !inputRef.current.contains(event.target) &&
-          suggestionsRef.current && !suggestionsRef.current.contains(event.target)) {
-    };
+          suggestionsRef.current && !suggestionsRef.current.contains(event.target)) {;
+};
 "
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
@@ -100,7 +100,7 @@ export function EnhancedSearchInput({value,
     'Cloud Migration',
     'Cybersecurity',
     'Digital Transformation'
-  ];
+  ]
 
   const popularSearches = ['
     'Micro SAAS',
@@ -117,11 +117,11 @@ export function EnhancedSearchInput({value,
         <input type="text" value={value} onChange={(e) => onChange(e.target.value)}
   const getSuggestionIcon = (suggestion) => {
     const lowerSuggestion = suggestion.toLowerCase();""
-      return Briefcase;", "
+      return Briefcase;", ";
 } else if (lowerSuggestion.includes('user') || lowerSuggestion.includes('team')) {
-      return Users;", "
+      return Users;", ";
 } else if (lowerSuggestion.includes('document') || lowerSuggestion.includes('guide')) {
-      return FileText;", "
+      return FileText;", ";
 } else if (lowerSuggestion.includes('trend') || lowerSuggestion.includes('popular')) {
       return TrendingUp} else {
       return Globe}
@@ -207,8 +207,8 @@ export function EnhancedSearchInput({value,
                       index === highlightedIndex`
                         ? 'text-white bg-zion-purple/20''
                         : 'text-zion-slate-light hover:text-white hove,
-    r:bg-zion-purple/10''
-                    }`}
+    r:bg-zion-purple/10'';
+}`}
                   >`
                     <Icon className="h-4 w-4 mr-3 text-zion-cyan flex-shrink-0" />"
                   <button key={suggestion} onClick={() => handleSuggestionSelect(suggestion)}

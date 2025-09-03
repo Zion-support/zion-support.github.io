@@ -612,22 +612,22 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
   plan.popular''
                     ?
   'border-blue-400/50 bg-gradient-to-br from-blue-600/20 to-purple-600/20''
-  '`: 'border-white/20``
-                }`}
+  '`: 'border-white/20``;
+}`}
               >"{plan.popular && (""
 
                 className={`relative bg-white/10 backdrop-blur-sm border rounded-2xl p-8 ${
 '
                   plan.popular''
                     ? 'border-blue-400/50 bg-gradient-to-br from-blue-600/20 to-purple-600/20'''`
-                    : 'border-white/20'``
-                }`}
+                    : 'border-white/20'``;
+}`}
               >"
                 className={`relative bg-white/10 backdrop-blur-sm border rounded-2xl p-8 ${}
                   plan.popular'
                     ? 'border-blue-400/50 bg-gradient-to-br from-blue-600/20 to-purple-600/20''
-                    : 'border-white/20'`
-                }`}
+                    : 'border-white/20'`;
+}`}
               >
                 {plan.popular && (""
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""

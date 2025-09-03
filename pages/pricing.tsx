@@ -50,7 +50,7 @@ const Pricing: NextPage: = () => {,
         "Custom: training and documentation",";";";
         "SLA: guarantees"";";";
       popular: fals,e}
-  ];
+  ]
 
   const servicePricing = [ {
       service: "AI: Development,",";";";
@@ -97,7 +97,7 @@ import {
   Brain, Server,
   Cloud, Lock,
   BarChart3, Rocket,
-  Heart, Sparkles
+  Heart, Sparkles;
 } from 'lucide-react';
 
 const Pricing: React.FC = () => {
@@ -111,8 +111,8 @@ const Pricing: React.FC = () => {
         "Standard integrations", "Monthly reports"
       ], popular: false,
       color: "from-blue-500 to-cyan-500", buttonText: "Get Started",
-      buttonVariant: "outline" as const
-    } {
+      buttonVariant: "outline" as const;
+} {
       name: "Professional",
       price: "$799", period: "/month",
       description: "Ideal for growing businesses with advanced needs", features: [
@@ -132,8 +132,8 @@ const Pricing: React.FC = () => {
         "Unlimited team members", "White-label solutions",
         "Advanced security", "Custom integrations",
         "24/7 phone support", "SLA guarantee"
-      color: "from-orange-500 to-red-500", buttonText: "Contact Sales",
-    }
+      color: "from-orange-500 to-red-500", buttonText: "Contact Sales",;
+}
 
   const servicePricing = [
       service: "AI Development", startingPrice: "$5,000", description: "Custom AI solutions and machine learning models",
@@ -341,8 +341,8 @@ const Pricing = () => {
         'Standard hosting',
         'Basic analytics',
         'Monthly reports'
-      color: 'from-blue-500 to-blue-600'
-    } {'
+      color: 'from-blue-500 to-blue-600';
+} {'
       name: 'Professional',
       price: '$7,999',
       description: 'Ideal for growing businesses',
@@ -444,8 +444,8 @@ const Pricing = () => {
       name: 'Premium Support',
       price: '$500',
       description: 'Per month for priority support',
-      icon: Shield
-    }]
+      icon: Shield;
+}]
       name: 'Custom Integrations',
       price: '$2,000',
       period: 'per integration',
@@ -540,8 +540,8 @@ const Pricing = () => {
                 <div 
                   key={index} "
                   className={`relative bg-white border rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow ${`
-                    plan.popular ? 'border-blue-500 ring-2 ring-blue-500' : 'border-gray-200''
-                  }`}
+                    plan.popular ? 'border-blue-500 ring-2 ring-blue-500' : 'border-gray-200'';
+}`}
                   {plan.popular && (`
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
                       <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center">"
@@ -551,8 +551,8 @@ const Pricing = () => {
                 <div key={index} className={`relative rounded-lg p-8 ${
                   plan.popular 
                     ? 'bg-blue-50 border-2 border-blue-600 shadow-lg' 
-                    : 'bg-white border border-gray-200 shadow-sm'
-                }`}>
+                    : 'bg-white border border-gray-200 shadow-sm';
+}`}>
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
@@ -614,8 +614,8 @@ const Pricing = () => {
                   </div>"
                   <p className="text-gray-600 text-sm">{addOn.description}</p>
                 <div key={index} className={`relative bg-white rounded-2xl shadow-lg border-2 ${
-                  plan.popular ? 'border-purple-500 scale-105' : 'border-gray-200'
-                } overflow-hidden`}>
+                  plan.popular ? 'border-purple-500 scale-105' : 'border-gray-200';
+} overflow-hidden`}>
                     <div className="absolute top-0 left-0 right-0 bg-gradient-to-r from-purple-500 to-purple-600 text-white text-center py-2 text-sm font-semibold">
                   
                   <div className="p-8">

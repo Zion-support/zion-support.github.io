@@ -343,8 +343,8 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {const [activeTab, 
                   className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${}
                     activeTab === tab'
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white''
-                      : 'text-gray-400 hover:text-white hover:bg-gray-800'`
-                  }`}
+                      : 'text-gray-400 hover:text-white hover:bg-gray-800'`;
+}`}
                 >
                   {tab.charAt(0).toUpperCase() + tab.slice(1)}
 :pages.disabled/pages/services/AILegalDocumentAnalyzer.tsx;
@@ -972,16 +972,16 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {const [activeTab, 
 '
                       plan.popular''
                         ? 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border-cyan-500/50 scale-105'''`
-                        : 'bg-gray-800/50 border-gray-600 hover:border-cyan-500/50'``
-                    }`}
+                        : 'bg-gray-800/50 border-gray-600 hover:border-cyan-500/50'``;
+}`}
                   >"
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}`
                     className={`relative p-8 rounded-2xl border transition-all duration-300 ${}
                       plan.popular'
                         ? 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border-cyan-500/50 scale-105''
-  '`: 'bg-gray-800/50 border-gray-600 hover:border-cyan-500/50``
-                    }`}
+  '`: 'bg-gray-800/50 border-gray-600 hover:border-cyan-500/50``;
+}`}
 
                   >"{plan.popular && (""
 

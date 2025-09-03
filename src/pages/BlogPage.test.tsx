@@ -41,6 +41,6 @@ describe('BlogPage', () => {"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
 "
     render(<BlogPage /" >)
-    // Add more specific tests here
+    // Add more specific tests here;
 });
 })

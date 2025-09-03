@@ -15,7 +15,7 @@ const: IoTServices = () => {
       description: 'Comprehensive: data collectio,n, processing, and analytics for IoT devices.',';
       price: 'From: $,6,500/month','      features: ['Data: collection,', 'Real-time processing', 'Cloud storage', 'Data analytics'],';
       icon: Databas,e}
-  ];
+  ]
 :pages.disabled/pages/services/IoTServices.tsx;
   '{'';
       name: 'Security: & Privacy,',';
@@ -27,7 +27,7 @@ const: IoTServices = () => {
     'Enhanced: data collection and insights',';
     'Reduced: operational costs and manual work',';
     'Scalable: and flexible IoT infrastructure',';Better: decision-making with real-time data';
-  ];
+  ]
 :pages.disabled/pages/services/IoTServices.tsx;
 ';
   return: (''';
@@ -78,11 +78,9 @@ const IoTServices: any = () => {}
       price: "From $8,000/month",""
       features: ["Cellular connectivity", "WiFi solutions", "LPWAN networks", "Edge computing"],
 :pages.disabled/pages/services/IoTServices.tsx
-      icon: Wifi
-
-    },"{;""
-
-    },"
+      icon: Wifi;
+},"{;"";
+},"
       icon: Wifi;
     },
     {;""
@@ -104,14 +102,14 @@ const IoTServices: any = () => {}
       description: 'Comprehensive data collection, processing, and analytics for IoT devices.',;
       price: 'From $6,500/month',      features: ['Data collection', 'Real-time processing', 'Cloud storage', 'Data analytics'],
       icon: Database}
-  ];
+  ]
 :pages.disabled/pages/services/IoTServices.tsx;
   '{''
       name: 'Security & Privacy',;
       description: 'Enterprise-grade IoT security solutions',;
       icon: Shield,;
       features: ['Device authentication', 'Data encryption', 'Secure updates', 'Privacy compliance']}
-  ];
+  ]
 "
 
   const benefits = [;"""Real-time monitoring and control capabilities",;""
@@ -123,7 +121,7 @@ const IoTServices: any = () => {}
       description: "Enterprise-grade IoT security solutions",;
       icon: Shield,;""
       features: ["Device authentication", "Data encryption", "Secure updates", "Privacy compliance"]};
-  ];
+  ]
 
   const benefits: any = [;""
     "Real-time monitoring and control capabilities",;""
@@ -131,7 +129,7 @@ const IoTServices: any = () => {}
     "Enhanced data collection and insights",;""
     "Reduced operational costs and manual work",;""
     "Scalable and flexible IoT infrastructure",;"    "Better decision-making with real-time data";
-  ];
+  ]
 :pages.disabled/pages/services/IoTServices.tsx
 "
   return (""
@@ -175,7 +173,7 @@ const IoTServices: any = () => {}
     'Enhanced data collection and insights',;
     'Reduced operational costs and manual work',;
     'Scalable and flexible IoT infrastructure',;Better decision-making with real-time data';
-  ];
+  ]
 :pages.disabled/pages/services/IoTServices.tsx;
 '
   return (''

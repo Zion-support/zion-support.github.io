@@ -34,8 +34,8 @@ class ErrorMonitor {
       const result = execSync('npx tsc --noEmit', { 
         cwd: this.projectRoot,
         encoding: 'utf8',
-        stdio: 'pipe'
-      });
+        stdio: 'pipe';
+});
       return { status: 'clean', errors: [] };
     } catch (error) {
       const errors = error.stdout || error.stderr || error.message;
@@ -50,8 +50,8 @@ class ErrorMonitor {
       const result = execSync('npm run lint', { 
         cwd: this.projectRoot,
         encoding: 'utf8',
-        stdio: 'pipe'
-      });
+        stdio: 'pipe';
+});
       return { status: 'clean', errors: [] };
     } catch (error) {
       const errors = error.stdout || error.stderr || error.message;
@@ -66,8 +66,8 @@ class ErrorMonitor {
       const result = execSync('npm run build', { 
         cwd: this.projectRoot,
         encoding: 'utf8',
-        stdio: 'pipe'
-      });
+        stdio: 'pipe';
+});
       return { status: 'clean', errors: [] };
     } catch (error) {
       const errors = error.stdout || error.stderr || error.message;
@@ -82,8 +82,8 @@ class ErrorMonitor {
       const result = execSync('npm test', { 
         cwd: this.projectRoot,
         encoding: 'utf8',
-        stdio: 'pipe'
-      });
+        stdio: 'pipe';
+});
       return { status: 'clean', errors: [] };
     } catch (error) {
       const errors = error.stdout || error.stderr || error.message;
@@ -126,7 +126,7 @@ class ErrorMonitor {
       /connection refused/i,
       /not found/i,
       /permission denied/i
-    ];
+    ]
     
     const foundErrors = [];
     
@@ -142,8 +142,8 @@ class ErrorMonitor {
                 file: logFile,
                 line: index + 1,
                 content: line.trim(),
-                timestamp: new Date().toISOString()
-              });
+                timestamp: new Date().toISOString();
+});
             }
           });
         });
@@ -309,8 +309,8 @@ class ErrorMonitor {;
       summary: {
         totalErrors: 0,
         criticalIssues: 0,
-        warnings: 0
-      }
+        warnings: 0;
+}
     };
     
     // Calculate summary
@@ -365,8 +365,8 @@ class ErrorMonitor {;
       this.log('info', 'Running syntax fixer...');
       execSync('node scripts/automation/syntax-error-fixer.cjs', { 
         cwd: this.projectRoot,
-        stdio: 'pipe'
-      });
+        stdio: 'pipe';
+});
       this.log('info', 'Syntax fixer completed');
     } catch (error) {
       this.log('warn', `Syntax fixer failed: ${error.message}`);
@@ -377,8 +377,8 @@ class ErrorMonitor {;
       this.log('info', 'Running TypeScript fixer...');
       execSync('node scripts/automation/typescript-error-fixer.cjs', { 
         cwd: this.projectRoot,
-        stdio: 'pipe'
-      });
+        stdio: 'pipe';
+});
       this.log('info', 'TypeScript fixer completed');
     } catch (error) {
       this.log('warn', `TypeScript fixer failed: ${error.message}`);

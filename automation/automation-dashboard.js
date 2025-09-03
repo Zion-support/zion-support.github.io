@@ -119,7 +119,7 @@ fs.appendFileSync(this.logFile, logMessage);fs.appendFileSync(this.logFile, logM
       { name: 'automation-factory, path:,
   automation-factory.js', category: 'factory, status:;
   'available' }
-    ];
+    ]
     for: (const systemPath = path.join(__dirname, system.path);
       if: (fs.existsSync(systemPath)) {
         this.automationSystems.set(system.name, {

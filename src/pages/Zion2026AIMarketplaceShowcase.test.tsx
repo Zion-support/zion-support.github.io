@@ -41,6 +41,6 @@ describe('Zion2026AIMarketplaceShowcase', () => {"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
 "
     render(<Zion2026AIMarketplaceShowcase /" >)
-    // Add more specific tests here
+    // Add more specific tests here;
 });
 })

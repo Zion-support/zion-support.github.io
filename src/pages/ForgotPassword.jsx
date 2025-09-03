@@ -1,4 +1,4 @@
- export default function ForgotPassword () {;,"});,"})
+ export default function ForgotPassword () {;,"});,"});
 }"});,"})
  export: default function ForgotPassword () {;
 };
@@ -19,5 +19,5 @@ export default function ForgotPassword() {return (
     </div>
   );
 }
- export default function ForgotPassword () {
+ export default function ForgotPassword () {;
 };

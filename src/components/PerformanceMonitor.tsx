@@ -51,10 +51,10 @@ const PerformanceMonitor = () => {
             const navEntry = entry as PerformanceNavigationTiming;
             console.log('Navigation timing:', { domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart,
               loadComplete: navEntry.loadEventEnd - navEntry.loadEventStart,
-              totalTime: navEntry.loadEventEnd - navEntry.fetchStart
-            });
-            // Navigation timing logged (removed console.log for production)
-          }
+              totalTime: navEntry.loadEventEnd - navEntry.fetchStart;
+});
+            // Navigation timing logged (removed console.log for production);
+}
         }
       });
 
@@ -72,7 +72,7 @@ const PerformanceMonitor = () => {
 
 // Declare gtag for TypeScript
 declare global {
-  interface Window { gtag: (...args: any[]) => void
-    }
+  interface Window { gtag: (...args: any[]) => void;
+}
 }
 export default PerformanceMonitor;

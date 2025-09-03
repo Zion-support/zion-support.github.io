@@ -9,50 +9,50 @@ export default function AIServices() {
       icon: Brain,
       title: 'AI Model Development',
       description: 'Custom AI models tailored to your specific business needs and use cases.',
-      features: ['Machine Learning Models', 'Deep Learning Solutions', 'Natural Language Processing', 'Computer Vision']
-    },
+      features: ['Machine Learning Models', 'Deep Learning Solutions', 'Natural Language Processing', 'Computer Vision'];
+},
     {
       icon: Zap,
       title: 'AI Automation',
       description: 'Streamline your operations with intelligent automation solutions.',
-      features: ['Process Automation', 'Workflow Optimization', 'Intelligent Document Processing', 'Predictive Analytics']
-    },
+      features: ['Process Automation', 'Workflow Optimization', 'Intelligent Document Processing', 'Predictive Analytics'];
+},
     {
       icon: Target,
       title: 'AI Strategy Consulting',
       description: 'Strategic guidance to help you leverage AI for maximum business impact.',
-      features: ['AI Roadmap Planning', 'Technology Assessment', 'Implementation Strategy', 'ROI Analysis']
-    },
+      features: ['AI Roadmap Planning', 'Technology Assessment', 'Implementation Strategy', 'ROI Analysis'];
+},
     {
       icon: Shield,
       title: 'AI Security & Compliance',
       description: 'Ensure your AI solutions are secure, compliant, and trustworthy.',
-      features: ['AI Security Audits', 'Compliance Frameworks', 'Data Privacy Protection', 'Ethical AI Guidelines']
-    }
-  ];
+      features: ['AI Security Audits', 'Compliance Frameworks', 'Data Privacy Protection', 'Ethical AI Guidelines'];
+}
+  ]
 
   const benefits = [
     {
       icon: BarChart3,
       title: 'Increased Efficiency',
-      description: 'Automate repetitive tasks and optimize processes for better productivity.'
-    },
+      description: 'Automate repetitive tasks and optimize processes for better productivity.';
+},
     {
       icon: Target,
       title: 'Better Decision Making',
-      description: 'Leverage data-driven insights to make informed business decisions.'
-    },
+      description: 'Leverage data-driven insights to make informed business decisions.';
+},
     {
       icon: Users,
       title: 'Enhanced Customer Experience',
-      description: 'Deliver personalized experiences and improved customer service.'
-    },
+      description: 'Deliver personalized experiences and improved customer service.';
+},
     {
       icon: Globe,
       title: 'Competitive Advantage',
-      description: 'Stay ahead of the competition with cutting-edge AI capabilities.'
-    }
-  ];
+      description: 'Stay ahead of the competition with cutting-edge AI capabilities.';
+}
+  ]
 
   const useCases = ['
     'Predictive Analytics for Business Intelligence',
@@ -63,7 +63,7 @@ export default function AIServices() {
     'Natural Language Processing Applications',
     'Process Automation and Optimization',
     'Customer Sentiment Analysis'
-  ];
+  ]
 
   return (
     <>

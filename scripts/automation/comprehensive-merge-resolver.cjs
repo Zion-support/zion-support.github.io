@@ -190,8 +190,8 @@ this.log(`Found ${branches.length} remote branches`);
       }
     } catch (error) {  
       this.log(❌ Error processing branch ${branchName  }: ${error.message}`,
-        `ERROR`
-    } catch (error) {;
+        `ERROR`;
+} catch (error) {;
       this.log(❌ Error processing branch ${branchName}: ${error.message}',;
         'ERROR';
       );
@@ -235,8 +235,8 @@ this.log(`Found ${branches.length} remote branches`);
     } catch (error) {  
       // Check if there are merge conflicts;
       if (error.status === 1) {
-        this.log(⚠️ Merge conflicts detected in ${branchName  }, attempting to resolve...`
-    } catch (error) {;
+        this.log(⚠️ Merge conflicts detected in ${branchName  }, attempting to resolve...`;
+} catch (error) {;
       // Check if there are merge conflicts;
       if (error.status === 1) {;
         this.log(⚠️ Merge conflicts detected in ${branchName}, attempting to resolve...';

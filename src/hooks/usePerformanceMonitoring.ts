@@ -20,8 +20,8 @@ export const usePerformanceMonitoring = () => {
   const [metrics, setMetrics] = useState({
     loadTime: 0,
     renderTime: 0,
-    memoryUsage: 0
-  });
+    memoryUsage: 0;
+});
 
   useEffect(() => {
     const startTime = performance.now();
@@ -43,8 +43,8 @@ export function usePerformanceMonitoring() {
       if (performance.memory) {
         setMetrics({
           loadTime, renderTime: endTime - startTime,
-          memoryUsage: performance.memory.usedJSHeapSize / 1024 / 1024
-        });
+          memoryUsage: performance.memory.usedJSHeapSize / 1024 / 1024;
+});
       }
     };
 
@@ -81,7 +81,7 @@ export function reportWebVitals(metric) {;
 
 export function reportWebVitals(metric) {
   console.log(&apos;Web Vitals:&apos;, metric)}&apos;'
-  // Web Vitals logged (removed console.log for production)
+  // Web Vitals logged (removed console.log for production);
 }
 const UsePerformanceMonitoring: React.FC = () => {
   return (

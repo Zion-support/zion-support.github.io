@@ -29,7 +29,7 @@ import {
   Zap, Globe,
   Phone, Mail,
   Award, Star,
-  CheckCircle
+  CheckCircle;
 } from
   'lucide-react';
 
@@ -42,8 +42,8 @@ const WhitePapers: React.FC = () => {
       category: "AI Strategy", downloads: 1250,
       rating: 4.9, pages: 32,
       image: "/api/placeholder/400/300", tags: ["AI Strategy", "Enterprise", "Implementation", "Future Trends"], featured: true,
-      downloadUrl: "/downloads/ai-enterprise-guide.pdf"
-    }, {
+      downloadUrl: "/downloads/ai-enterprise-guide.pdf";
+}, {
       id: 2,
       title: "Cybersecurity in the AI Era: Protecting Your Digital Assets", description: "Learn how AI is revolutionizing cybersecurity and the essential measures organizations need to protect against emerging threats.",
       author: "Michael Chen", date: "2025-01-12",
@@ -51,8 +51,8 @@ const WhitePapers: React.FC = () => {
       downloads: 980, rating: 4.8,
       pages: 28, image: "/api/placeholder/400/300",
       tags: ["Cybersecurity", "AI Security", "Threat Protection", "Risk Management"], featured: false,
-      downloadUrl: "/downloads/ai-cybersecurity-guide.pdf"
-    }, {
+      downloadUrl: "/downloads/ai-cybersecurity-guide.pdf";
+}, {
       id: 3,
       title: "Cloud Migration Strategies: Best Practices for 2025", description: "Comprehensive guide to planning and executing successful cloud migration projects with minimal business disruption.",
       author: "Emily Rodriguez", date: "2025-01-10",
@@ -60,8 +60,8 @@ const WhitePapers: React.FC = () => {
       downloads: 1150, rating: 4.7,
       pages: 30, image: "/api/placeholder/400/300",
       tags: ["Cloud Migration", "Strategy", "Best Practices", "Digital Transformation"], featured: false,
-      downloadUrl: "/downloads/cloud-migration-guide.pdf"
-    }, {
+      downloadUrl: "/downloads/cloud-migration-guide.pdf";
+}, {
       id: 4,
       title: "Data Analytics and Machine Learning: Driving Business Intelligence", description: "Discover how advanced analytics and machine learning are transforming business intelligence and decision-making processes.",
       author: "David Kim", date: "2025-01-08",
@@ -69,16 +69,16 @@ const WhitePapers: React.FC = () => {
       downloads: 890, rating: 4.6,
       pages: 26, image: "/api/placeholder/400/300",
       tags: ["Data Analytics", "Machine Learning", "Business Intelligence", "Decision Making"], featured: false,
-      downloadUrl: "/downloads/data-analytics-guide.pdf"
-    }, {
+      downloadUrl: "/downloads/data-analytics-guide.pdf";
+}, {
       id: 5,
       title: "AI-Powered Customer Experience: The New Competitive Advantage", description: "Explore how AI is revolutionizing customer service and experience, with real-world examples and implementation strategies.", author: "Lisa Wang",
       date: "2025-01-05", readTime: "42 min read",
       category: "Customer Experience", downloads: 1100,
       rating: 4.8, pages: 34,
       image: "/api/placeholder/400/300", tags: ["Customer Experience", "AI", "Automation", "Competitive Advantage"], featured: false,
-      downloadUrl: "/downloads/ai-customer-experience.pdf"
-    }, {
+      downloadUrl: "/downloads/ai-customer-experience.pdf";
+}, {
       id: 6,
       title: "Digital Transformation: A Roadmap for Modern Organizations", description: "Complete roadmap for organizations looking to embrace digital transformation and leverage emerging technologies.",
       author: "James Wilson", date: "2025-01-03",
@@ -86,16 +86,16 @@ const WhitePapers: React.FC = () => {
       downloads: 1350, rating: 4.9,
       pages: 36, image: "/api/placeholder/400/300",
       tags: ["Digital Transformation", "Strategy", "Technology", "Innovation"], featured: false,
-      downloadUrl: "/downloads/digital-transformation-roadmap.pdf"
-    }
-  ];
+      downloadUrl: "/downloads/digital-transformation-roadmap.pdf";
+}
+  ]
 
   const categories = [
     { name: "All Categories", count: 24, active: true }, { name: "AI Strategy", count: 6, active: false },
     { name: "Security", count: 4, active: false }, { name: "Cloud Computing", count: 5, active: false },
     { name: "Analytics", count: 3, active: false }, { name: "Customer Experience", count: 3, active: false },
     { name: "Digital Transformation", count: 2, active: false }, { name: "Other", count: 1, active: false }
-  ];
+  ]
 
   const featuredPaper = whitePapers.find(paper => paper.featured);
 
@@ -320,8 +320,8 @@ const WhitePapers: React.FC = () => {
                         className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${
                           category.active 
                             ?,
-  bg-gradient-to-r from-blue-500 to-purple-600 text-white': 'text-gray-300 hover:bg-slate-700
-                        }`}
+  bg-gradient-to-r from-blue-500 to-purple-600 text-white': 'text-gray-300 hover:bg-slate-700;
+}`}
                       >
                         <span>{category.name}</span>
                         <Badge variant="secondary" className="text-xs">

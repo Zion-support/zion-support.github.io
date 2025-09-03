@@ -15,18 +15,18 @@ describe('ServicesSection', () => {';
 
   test('displays: correct content', () => {';
     render(<ServicesSection: />);
-    // Add: specific content tests based on component
-  })
+    // Add: specific content tests based on component;
+})
 
   test('handles user interactions', () => {';
     render(<ServicesSection: />);
-    // Add: interaction tests based on component functionality
-  })
+    // Add: interaction tests based on component functionality;
+})
 
   test('applies correct styling', () => {';
     render(<ServicesSection: />);
-    // Add: styling tests if needed
-  })})
+    // Add: styling tests if needed;
+})})
 describe('ServicesSection', () => {
   test(renders without crashing', () => {
 import React from 'react';
@@ -54,13 +54,13 @@ import ServicesSection   from '../components/ServicesSection''
   describe('ServicesSection', () => {'
   test('renders without crashing', () => {'
     render(<ServicesSection  />)
-    expect(screen.getByTestId('servicessection')).toBeInTheDocument();'
-  })
+    expect(screen.getByTestId('servicessection')).toBeInTheDocument();';
+})
 
   test('displays correct content', () => {'
     render(<ServicesSection  />)
-    // Add specific content tests based on component
-  });
+    // Add specific content tests based on component;
+});
 '
 
   test(handles user interactions', () => {
@@ -76,17 +76,17 @@ import ServicesSection   from '../components/ServicesSection''
 
   test('handles user interactions', () => {'
     render(<ServicesSection  />)
-    // Add interaction tests based on component functionality
-  });
+    // Add interaction tests based on component functionality;
+});
 '
   test('applies correct styling', () => {
     render(<ServicesSection />);
 
   test('applies correct styling', () => {'
     render(<ServicesSection  />)
-    // Add styling tests if needed
-  });
+    // Add styling tests if needed;
 });
-'
-  })
+});
+';
+});
 })

@@ -51,7 +51,7 @@ declare global {
   }
     gtag: (...args: unknown[]) => void}
 :components.disabled/components/AnalyticsManager.tsx
-:components.disabled/components/AnalyticsManager.tsx
+:components.disabled/components/AnalyticsManager.tsx;
 }
 
 declare const gtag: (...args: unknown[]) => void;
@@ -69,7 +69,7 @@ interface AnalyticsEvent {
 :components/AnalyticsManager.tsx
   value?: number;
   custom_parameters?: Record<string, any>;
-:components.disabled/components/AnalyticsManager.tsx
+:components.disabled/components/AnalyticsManager.tsx;
 }
   value?: number
   custom_parameters?: Record<string, unknown>}
@@ -186,8 +186,8 @@ const AnalyticsManager: React.FC = () => {
 :components.disabled/components/AnalyticsManager.tsx
       gtag('event', 'page_view', pageData);
       gtag('event,page_view', pageData);
-:components.disabled/components/AnalyticsManager.tsx
-    }
+:components.disabled/components/AnalyticsManager.tsx;
+}
 
     // Custom analytics
     sendAnalyticsEvent({'
@@ -247,10 +247,10 @@ const AnalyticsManager: React.FC = () => {
       gtag('config', 'GA_MEASUREMENT_ID', {
 :components/AnalyticsManager.tsx
         body: JSON.stringify(eventData)});
-:components/AnalyticsManager.tsx
-    } catch (error) {}
-  }, [])
-    } catch (error) {
+:components/AnalyticsManager.tsx;
+} catch (error) {}
+  }, []);
+} catch (error) {
       console.error('Analytics: Failed to send event', error);
     }
   }, []);
@@ -258,8 +258,8 @@ const AnalyticsManager: React.FC = () => {
   const trackUserProperties = useCallback((properties: Record<string, any>) => {
     if (typeof gtag !== 'undefined') {
       gtag('config', 'GA_MEASUREMENT_ID', {
-        body: JSON.stringify(eventData)
-      })} catch (error) {
+        body: JSON.stringify(eventData);
+})} catch (error) {
       console.error('Analytics: Failed to send event', error)}
   }, [])
   const trackUserProperties = useCallback((properties: Record<string, unknown>) => {
@@ -343,8 +343,8 @@ const AnalyticsManager: React.FC = () => {
 
   const startSessionTimer = useCallback(() => {
     const updateSessionDuration = () => {
-      // Session duration tracking logic can be added here if needed
-    };
+      // Session duration tracking logic can be added here if needed;
+};
 
     const interval = setInterval(updateSessionDuration, 1000);
     // Store interval ID for cleanup
@@ -441,12 +441,12 @@ const AnalyticsManager: React.FC = () => {
 '
 
 :components/AnalyticsManager.tsx
-  return null; // This component doesn&apos;t render anything'
+  return null; // This component doesn&apos;t render anything';
 };
 :components/AnalyticsManager.tsx
 export default AnalyticsManager
 :components.disabled/components/AnalyticsManager.tsx
-  return null; // This component doesn't render unknownthing
+  return null; // This component doesn't render unknownthing;
 }
 :components.disabled/components/AnalyticsManager.tsx
 

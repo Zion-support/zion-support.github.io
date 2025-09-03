@@ -438,8 +438,8 @@ this.log(`Dashboard generated successfully at ${htmlPath}`);
                                         ? `bg-green-500 text-white`
                                         : process.status === 'errored'
                                           ? `bg-red-500 text-white`
-                                          : `bg-yellow-500 text-black`
-                                    }">${process.status}</span>
+                                          : `bg-yellow-500 text-black`;
+}">${process.status}</span>
                                 </td>
                                 <td class="py-2">${(process.memory / 1024 / 1024).toFixed(1)} MB</td>
                                 <td class="py-2">${process.cpu}%</td>
@@ -463,8 +463,8 @@ this.log(`Dashboard generated successfully at ${htmlPath}`);
                         <span class=`px-3 py-1 rounded text-sm font-medium ${
                           dashboard.codeQuality.metrics.typescript.status ===passed'
                             ? 'bg-green-500 text-white'
-                            : 'bg-red-500 text-white'
-                        }">${dashboard.codeQuality.metrics.typescript.status}</span>
+                            : 'bg-red-500 text-white';
+}">${dashboard.codeQuality.metrics.typescript.status}</span>
                         <span class="ml-2 text-gray-400">${dashboard.codeQuality.metrics.typescript.errors} errors</span>
                     </div>
                 </div>
@@ -474,8 +474,8 @@ this.log(`Dashboard generated successfully at ${htmlPath}`);
                         <span class=`px-3 py-1 rounded text-sm font-medium ${
                           dashboard.codeQuality.metrics.eslint.status ===passed`
                             ? `bg-green-500 text-white`
-                            : `bg-red-500 text-white`
-                        }">${dashboard.codeQuality.metrics.eslint.status}</span>
+                            : `bg-red-500 text-white`;
+}">${dashboard.codeQuality.metrics.eslint.status}</span>
                         <span class="ml-2 text-gray-400">${dashboard.codeQuality.metrics.eslint.issues} issues</span>
                     </div>
                 </div>

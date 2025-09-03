@@ -206,8 +206,8 @@ class TargetedMergeResolver {;
       }
     } catch (error) {  
       this.log(❌ Error processing branch ${branchName  }: ${error.message}`,
-        `ERROR`
-    } catch (error) {;
+        `ERROR`;
+} catch (error) {;
       this.log(❌ Error processing branch ${branchName}: ${error.message}',;
         'ERROR';
       );
@@ -231,8 +231,8 @@ class TargetedMergeResolver {;
     } catch (error) {  
       // Check if there are merge conflicts;
       if (error.status === 1) {
-        this.log(⚠️ Merge conflicts detected in ${branchName  }, attempting to resolve...`
-    } catch (error) {;
+        this.log(⚠️ Merge conflicts detected in ${branchName  }, attempting to resolve...`;
+} catch (error) {;
       // Check if there are merge conflicts;
       if (error.status === 1) {;
         this.log(⚠️ Merge conflicts detected in ${branchName}, attempting to resolve...';
@@ -499,7 +499,7 @@ this.log(`✅ Resolved conflicts in: ${filePath}');
     try {
       // Commit any remaining changes;
       try {
-        execSync('git commit -m "Auto-resolve merge conflicts"', {
+        execSync('git commit -m "Auto-resolve merge conflicts", {
           stdio: 'pipe'});
       } catch (error) {  
         // No changes to commit;
@@ -550,7 +550,7 @@ if (require.main === module) {
     try {;
       // Commit any remaining changes;
       try {;
-        execSync('git commit -m "Auto-resolve merge conflicts"', {;
+        execSync('git commit -m "Auto-resolve merge conflicts", {;
           stdio: 'pipe',;
         });
       } catch (error) {;

@@ -8,7 +8,7 @@ import {
   Globe, Smartphone,
   Monitor, Tablet,
   Download, Share2,
-  Heart, MessageCircle
+  Heart, MessageCircle;
 } from 'lucide-react';
 
 interface AnalyticsData {
@@ -85,7 +85,7 @@ interface EnhancedAnalyticsProps {
 const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   showRealTime = true,
   autoRefresh = true,
-  refreshInterval = 30000
+  refreshInterval = 30000;
 }) => {
   const [analytics, setAnalytics] = useState<AnalyticsData | null>(null);
   const [loading, setLoading] = useState(true);
@@ -106,11 +106,11 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       scrollDepth: 68.5,
       clickThroughRate: 12.3,
       timeOnPage: 3.8,
-      socialShares: 245
-    },
+      socialShares: 245;
+},
     realTimeUsers: 127,
-    conversionRate: 8.7
-  };
+    conversionRate: 8.7;
+};
 
   useEffect(() => {
     const fetchAnalytics = async () => {
@@ -127,8 +127,8 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       const interval = setInterval(fetchAnalytics, refreshInterval);
       return () => clearInterval(interval)}
     
-    return () => {}; // Return empty cleanup function
-  }, [autoRefresh, refreshInterval]);
+    return () => {}; // Return empty cleanup function;
+}, [autoRefresh, refreshInterval]);
 
 const formatNumber = (num: number): string => {
     if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';'    if (num >= 1000) return (num / 1000).toFixed(1) + 'K';'    return num.toString();'  };'
@@ -142,8 +142,8 @@ const formatNumber = (num: number): string => {
 
   if (!analytics) {
     return (
-<div className="flex items-center justify-center p-8">"        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>"      </div>"    );"
-  }
+<div className="flex items-center justify-center p-8">"        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>"      </div>"    );";
+}
 
     <div className="space-y-6">"      {/* Header */}"      <div className="flex items-center justify-between">"        <h2 className="text-2xl font-bold text-gray-900 dark: text-white flex items-center">"          <BarChart3 className="w-6 h-6 mr-2 text-blue-500" />"          Analytics Dashboard"        </h2>
         <div className="flex items-center space-x-4">"          <select"            value={timeRange}
@@ -187,8 +187,8 @@ const EnhancedAnalytics: React.FC = () => {
     uniqueVisitors: 0,
     bounceRate: 0,
     avgSessionDuration: 0,
-    realTimeUsers: 0
-  });
+    realTimeUsers: 0;
+});
   
   
 
@@ -207,8 +207,8 @@ const EnhancedAnalytics: React.FC = () => {
         ], trafficSources: [{ source: 'Organic Search', percentage: 45 } { source: 'Direct', percentage: 30 } { source: 'Social Media', percentage: 15 } { source: 'Referral', percentage: 10 }
         ], deviceTypes: [{ device: 'Desktop', percentage: 55 } { device: 'Mobile', percentage: 35 } { device: 'Tablet', percentage: 10 }
         ], realTimeUsers: 23})} catch (error) {
-      console.error('Error fetching analytics data: ', error)} finally {
-  }, [selectedTimeRange])
+      console.error('Error fetching analytics data: ', error)} finally {;
+}, [selectedTimeRange])
         topPages: ['
           { pag,
     e: '/', views: 3421 } { page: '/services', views: 2156 } { page: '/about', views: 1892 } { page: '/contact', views: 1234 }
@@ -216,8 +216,8 @@ const EnhancedAnalytics: React.FC = () => {
           { sourc,
     e: 'Organic Search', percentage: 45 } { source: 'Direct', percentage: 30 } { source: 'Social Media', percentage: 15 } { source: 'Referral', percentage: 10 }
           { device: 'Desktop', percentage: 55 } { device: 'Mobile', percentage: 35 } { device: 'Tablet', percentage: 10 }
-        realTimeUsers: 23
-      })} catch (error) {
+        realTimeUsers: 23;
+})} catch (error) {
         deviceTypes: ['
           { devic,
     e: 'Desktop', percentage: 55 } { device: 'Mobile', percentage: 35 } { device: 'Tablet', percentage: 10 }
@@ -231,8 +231,8 @@ const EnhancedAnalytics: React.FC = () => {
           { source: "Direct", percentage: 45 } { source: "Google", percentage: 30 } { source: "Social Media", percentage: 15 } { source: "Referrals", percentage: 10 }
           { device: "Desktop", percentage: 48 } { device: "Mobile", percentage: 45 } { device: "Tablet", percentage: 7 }
       })} catch (error) {'
-      console.error('Failed to fetch analytics data:', error)} finally {
-  }, [selectedTimeRange]);
+      console.error('Failed to fetch analytics data:', error)} finally {;
+}, [selectedTimeRange]);
 
     fetchAnalyticsData()}, [fetchAnalyticsData])
   const StatCard: React.FC<{

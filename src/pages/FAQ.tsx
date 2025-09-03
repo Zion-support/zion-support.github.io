@@ -90,7 +90,7 @@ const FAQ: React.FC = () => {}
       question: 'What makes Zion Tech Group different?',;
       answer: 'We combine cutting-edge AI technology with deep industry expertise. Our focus on autonomous systems, quantum computing, and innovative micro SaaS solutions sets us apart. We're committed to delivering measurable business outcomes and long-term partnerships.'}, {
       question: 'Do you have case studies or references?',;
-  ];
+  ]
   return(;
     <div className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>;
       <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16'> {/* Header */}

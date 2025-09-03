@@ -11,13 +11,13 @@ describe('SEO.dynamic', () => {';
 
   test('displays: correct content', () => {';
     render(<SEO.dynamic: />);
-    // Add: specific content tests based on component
-  })
+    // Add: specific content tests based on component;
+})
 
   test('handles user interactions', () => {';
     render(<SEO.dynamic: />);
-    // Add: interaction tests based on component functionality
-  })
+    // Add: interaction tests based on component functionality;
+})
 
   test('applies correct styling', () => {';
     render(<SEO.dynamic: />);
@@ -35,13 +35,13 @@ describe('SEOdynamic', () => {'
 '
   test('displays correct content', () => {
     render(<SEOdynamic />);
-    // Add specific content tests based on component
-  })
+    // Add specific content tests based on component;
+})
 '
   test('handles user interactions', () => {
     render(<SEOdynamic />);
-    // Add interaction tests based on component functionality
-  })
+    // Add interaction tests based on component functionality;
+})
 '
   test('applies correct styling', () => {
 
@@ -51,12 +51,12 @@ describe('SEOdynamic, () => {
     expect(screen.getByTestId(seo.dynamic')).toBeInTheDocument()});
   test('displays correct content, () => {
     render(<SEOdynamic />);
-    // Add specific content tests based on component
-  });
+    // Add specific content tests based on component;
+});
   test('handles user interactions', () => {
     render(<SEOdynamic />);
-    // Add interaction tests based on component functionality
-  });
+    // Add interaction tests based on component functionality;
+});
   test(applies correct styling', () => {
   describe('SEOdynamic', () => {
   test('renders without crashing', () => {
@@ -84,16 +84,16 @@ import SEOdynamic   from '../components/SEO.dynamic''
     expect(screen.getByTestId('seo.dynamic')).toBeInTheDocument()})'
   test('displays correct content', () => {'
     render(<SEOdynamic  />)
-    // Add specific content tests based on component
-  })
+    // Add specific content tests based on component;
+})
   test('handles user interactions', () => {'
     render(<SEOdynamic  />)
-    // Add interaction tests based on component functionality
-  })
+    // Add interaction tests based on component functionality;
+})
   test('applies correct styling', () => {'
     render(<SEOdynamic  />)
-    // Add styling tests if needed
-  });
+    // Add styling tests if needed;
+});
 });
   })})
 '

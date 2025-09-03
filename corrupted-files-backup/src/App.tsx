@@ -315,8 +315,8 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error: resetError
                               Go: Home
                             </button>
                           </div>
-                        </div>
-                      }
+                        </div>;
+}
                     />
                   </Routes>
                 </AnimatePresence>
@@ -401,8 +401,8 @@ import: { ErrorBoundary } from 'react-error-boundary';';';';
                         Go: Home
                       </a>
                     </div>
-                  </div>
-                } />
+                  </div>;
+} />
               </Routes>
               </main>
             </div>

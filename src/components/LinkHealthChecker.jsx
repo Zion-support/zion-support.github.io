@@ -11,8 +11,8 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
                 return {}"});,"})
                     url,';,"});,"})
                     status: 'external',;,"});,"})
-                    responseTime: Date.now() - startTime;,"});,"})
-                }}';,"});,"})
+                    responseTime: Date.now() - startTime;,"});,"});
+}}';,"});,"})
             // Check if it's a mailto or tel link'';,"});,"})
             if (url.startsWith('mailto:') || url.startsWith('tel:')) {}"});,"})
                     status: 'healthy',;,"});,"})
@@ -20,13 +20,13 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
             if (url.startsWith('/') || url.includes('ziontechgroup.com')) {}"});,"})
                     responseTime: Date.now () - startTime;,"});,"})
             // For external links, we could implement actual health checking'';,"});,"})
-            // For now, we'll mark them as external;,"});,"})
-            }}"});,"})
+            // For now, we'll mark them as external;,"});,"});
+}}"});,"})
         catch(error) {}"});,"})
                 status: 'broken',;,"});,"})
                 responseTime: Date.now() - startTime,';,"});,"})
-                error: error instanceof Error ? error.message : 'Unknown error';,"});,"})
-    };,"});,"})
+                error: error instanceof Error ? error.message : 'Unknown error';,"});,"});
+};,"});,"})
     const checkAllLinks = async () => {}"});,"})
         setIsChecking(true);,"});,"})
         setLinkStatuses(links.map(link => ({ url: link.url, status: 'checking' })));,"});,"})
@@ -140,7 +140,7 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
             Great job! All links are working properly.Your website is in excellent health.</p>;,"});,"})
         </div>)}"});,"})
     </div>)};,"});,"})
-export default LinkHealthChecker;,"});,"})
+export default LinkHealthChecker;,"});,"});
 }}}}}}}}}"});,"})
 ;,"});,"})
 export { LinkHealthChecker };,"});,"})
@@ -153,7 +153,7 @@ export { LinkHealthChecker };,"});,"})
  const LinkHealthChecker = ({ links, className = &apos}) => {&apos} const [linkStatuses, setLinkStatuses] = useState ([])  const [isChecking, setIsChecking] = useState (false)  const checkLinkHealth = async url => {} const;const;const startTime = Date.now ()  try {&apos;&apos;'";
 &quot}"
  const LinkHealthChecker = ({ links, className = ' }) => { const [linkStatuses, setLinkStatuses] = useState ([])  const [isChecking, setIsChecking] = useState (false)  const checkLinkHealth = async url => { const startTime = Date.now ()  try {'''";"
-""
+"";
 }}}
  const LinkHealthChecker = ({ links, className=' }) => { const [linkStatuses, setLinkStatuses] = useState ([])  const [isChecking, setIsChecking] = useState (false)  const checkLinkHealth = async url => { const startTime = Date.now ()  try {'
 "

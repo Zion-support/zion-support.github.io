@@ -75,7 +75,7 @@ export interface ComprehensiveService {id: string;
     s: string""
    websit,
     e: string} } const CONTACT_INFO = { mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', website: 'http,
-    s:''';"
+    s:''';";
 }"
    address: string;
    website: string} } const CONTACT_INFO = { mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', website: 'https:''';
@@ -87,7 +87,7 @@ export interface ComprehensiveService {id: string;
    website: string} } const CONTACT_INFO = { mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', website: 'https:''';","
    email: string;"
    address: string"
-   website: string} } const CONTACT_INFO = {mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', website: 'https:''';"
+   website: string} } const CONTACT_INFO = {mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', website: 'https:''';";
 }
    website: string} } const CONTACT_INFO = { mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', website: 'https:''}
 ""

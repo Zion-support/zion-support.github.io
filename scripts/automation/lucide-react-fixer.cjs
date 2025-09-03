@@ -113,8 +113,8 @@ class LucideReactIconFixer {;
       if (fixes.length > 0 && errors.length === 0) {
         await this.commitFixes(fixes);
       }
-
-    } catch (error) {  
+;
+} catch (error) {  
       this.log(`Icon fix automation failed: ${error.message  }`, `ERROR`);
         await this.commitFixes(fixes);`);
       }`);
@@ -204,8 +204,8 @@ class LucideReactIconFixer {;
         fs.writeFileSync(filePath, newContent);this.log(`✅ Fixed icon imports in ${path.basename(filePath)}`);
         return { type: `icon_imports`, file: filePath, fix: `fixed_icon_imports` };
       }
-
-    } catch (error) {  this.log(`Error fixing icon imports in ${filePath  }: ${error.message}`, `WARN`);
+;
+} catch (error) {  this.log(`Error fixing icon imports in ${filePath  }: ${error.message}`, `WARN`);
 ;
     } catch (error) {this.log(`Error fixing icon imports in ${filePath}: ${error.message}`, 'WARN');
     }
@@ -280,8 +280,8 @@ class LucideReactIconFixer {;
     let newContent = content;
 
     // Common invalid icon mappings;
-    const iconMappings = {UserHeart': 'Heart',UserEdit2': 'UserEdit',UserSearch2': 'Search',UserList2': 'Users2',UserSettings2': 'Settings2',UserShield2': 'Shield',UserStar2': 'Star',Device': 'Monitor',Desktop': 'Monitor'
-    };
+    const iconMappings = {UserHeart': 'Heart',UserEdit2': 'UserEdit',UserSearch2': 'Search',UserList2': 'Users2',UserSettings2': 'Settings2',UserShield2': 'Shield',UserStar2': 'Star',Device': 'Monitor',Desktop': 'Monitor';
+};
 
     // Replace invalid icon names;
     for (const [`invalid`, `valid`] of Object.entries(iconMappings)) {const regex = new RegExp(`\\b${invalid}\\b`, `g`);
@@ -385,7 +385,7 @@ class LucideReactIconFixer {;
   isIconUsed(iconName, content) {;
     // Check if icon is used in JSX or as a component;
     const patterns = [new RegExp(`<${iconName}[\\s/>]`, 'g'),new RegExp(`</${iconName}>`, 'g'),new RegExp(`\\b${iconName}\\b`, 'g');
-    ];
+    ]
 ;
     for (const pattern of patterns) {;
       if (pattern.test(content)) {;

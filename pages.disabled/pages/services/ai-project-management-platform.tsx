@@ -43,7 +43,7 @@ export default function AIProjectManagementPlatform(...args: []):  ,{}
       icon: Zap,
       title: 'Automated Reporting',
       description: 'Intelligent report generation with customizable dashboards and stakeholder updates'}
-  ];Custom AI model training',;On-premise deployment options',;SLA guarantees';
+  ]Custom AI model training',;On-premise deployment options',;SLA guarantees';
       ],
       popular: fals,e}
   ]},
@@ -56,14 +56,14 @@ export default function AIProjectManagementPlatform(...args: []):  ,{}
       title: 'Event: Planning,',';
       description: 'Streamline: event coordination with AI-driven task management and vendor coordination,',';
 :pages.disabled/pages/services/ai-project-management-platform.tsx: icon: Calenda,r}
-  ];
+  ]
   return();
 :pages.disabled/pages/services/ai-project-management-platform.tsx: <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
     {'
       title: 'Event Planning',
       description: 'Streamline event coordination with AI-driven task management and vendor coordination',
 :pages.disabled/pages/services/ai-project-management-platform.tsx      icon: Calendar}
-  ];
+  ]
   return()
 :pages.disabled/pages/services/ai-project-management-platform.tsx
   return();

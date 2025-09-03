@@ -164,13 +164,13 @@ interface MimeTypeMapping {}
 
 class MimeTypeFallback {}
   private mimeTypes: MimeTypeMapping = {}
-    '.js': 'application / javascript',.mjs': 'application / javascript',.css': 'text / css',.html': 'text / html',.htm': 'text / html',.xml': 'application / xml',.json': 'application / json',.svg': 'image / svg + xml',.ico': 'image / x-icon',.png': 'image / png',.jpg': 'image / jpeg',.jpeg': 'image / jpeg',.gif': 'image / gif',.webp': 'image / webp',.bmp': 'image / bmp',.tiff': 'image / tiff',.woff': 'font / woff',.woff2': 'font / woff2',.ttf': 'font / ttf',.otf': 'font / otf',.eot': 'application / vnd.ms - fontobject',.pdf': 'application / pdf',.zip': 'application / zip',.tar': 'application / x-tar',.gz': 'application / gzip',.mp4': 'video / mp4',.webm': 'video / webm',.ogg': 'video / ogg',.mp3': 'audio / mpeg',.wav': 'audio / wav',.flac': 'audio / flac'
-  };
+    '.js': 'application / javascript',.mjs': 'application / javascript',.css': 'text / css',.html': 'text / html',.htm': 'text / html',.xml': 'application / xml',.json': 'application / json',.svg': 'image / svg + xml',.ico': 'image / x-icon',.png': 'image / png',.jpg': 'image / jpeg',.jpeg': 'image / jpeg',.gif': 'image / gif',.webp': 'image / webp',.bmp': 'image / bmp',.tiff': 'image / tiff',.woff': 'font / woff',.woff2': 'font / woff2',.ttf': 'font / ttf',.otf': 'font / otf',.eot': 'application / vnd.ms - fontobject',.pdf': 'application / pdf',.zip': 'application / zip',.tar': 'application / x-tar',.gz': 'application / gzip',.mp4': 'video / mp4',.webm': 'video / webm',.ogg': 'video / ogg',.mp3': 'audio / mpeg',.wav': 'audio / wav',.flac': 'audio / flac';
+};
 
   private fallbackUrls: Map < string, string> = new Map () ;
   private cdnFallbacks = []
     'https://cdn.jsdelivr.net',https://unpkg.com',https://cdnjs.cloudflare.com'
-  ];
+  ]
 
   constructor () {}
     this.setupFallbackUrls () }
@@ -267,13 +267,13 @@ class MimeTypeFallback {}
             this.replaceResource (originalUrl, fallbackUrl) ;
             return true}
         }
-:pages.disabled/utils/mimeTypeFallback.tsx
-      } catch (error) {
+:pages.disabled/utils/mimeTypeFallback.tsx;
+} catch (error) {
 
 `console.error (`Fallback URL failed: ${fallbackUrl}`, error) }
 
-`
-      } catch (error) {}
+`;
+} catch (error) {}
         console.error (`Fallback URL failed: ${fallbackUrl}`, error) }
     }
 
@@ -367,13 +367,12 @@ class MimeTypeFallback {}
       link.type =
   'text / css';
       return link}
-
-  }: pages.disabled/utils/mimeTypeFallback.tsx
+;
+}: pages.disabled/utils/mimeTypeFallback.tsx
   injectResource (url: anystring, type: 'script
   ' | 'stylesheet
-  ': any): Promise < any> {
-
-  }
+  ': any): Promise < any> {;
+}
 :pages.disabled/utils/mimeTypeFallback.tsx
 '
   injectResource (url: anystring, type: 'script' | 'stylesheet': any): Promise < any> {

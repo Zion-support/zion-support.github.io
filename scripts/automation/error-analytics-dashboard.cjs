@@ -152,8 +152,8 @@ class ErrorAnalyticsDashboard {;
             this.processErrorReport(data);
           }
         } catch (error) {  
-          this.log( `Failed to parse error report ${file  }: ${error.message}`,WARN`
-        } catch (error) {;
+          this.log( `Failed to parse error report ${file  }: ${error.message}`,WARN`;
+} catch (error) {;
           this.log( `Failed to parse error report ${file}: ${error.message}',WARN';
           );
         }
@@ -869,8 +869,8 @@ this.log(`📄 Dashboard generated: ${dashboardFile}`);
       };
     } catch (error) {  
       this.log(
-        `💥 Error Analytics Dashboard failed: ${error.message  }`,ERROR`
-    } catch (error) {;
+        `💥 Error Analytics Dashboard failed: ${error.message  }`,ERROR`;
+} catch (error) {;
       this.log(;
         `💥 Error Analytics Dashboard failed: ${error.message}',ERROR';
       );

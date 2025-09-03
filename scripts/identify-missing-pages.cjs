@@ -9,7 +9,7 @@ async function identifyMissingPages() {;
     // Extract routes from App.tsx;
     const routeMatches = appContent.match(/path="([^"]+)"/g);
     const routes = routeMatches;
-      ? routeMatches.map(match => match.replace('path="', ').replace('"', '));
+      ? routeMatches.map(match => match.replace('path=", ').replace('", '));
       : [];
 ;
     // Get all page files;
@@ -31,7 +31,7 @@ const fs = require('fs').promises;const path = require('path');';async function 
   try {;
     // Read App.tsx to extract routes;
     const appContent = await fs.readFile('src/App.tsx', 'utf8');';    // Extract routes from App.tsx;
-    const routeMatches = appContent.match(/path="([^"]+)"/g);";    const routes = routeMatches;";      ? routeMatches.map(match => match.replace('path="', '').replace('"', ''))';      : [];;
+    const routeMatches = appContent.match(/path="([^"]+)"/g);";    const routes = routeMatches;";      ? routeMatches.map(match => match.replace('path=", '').replace('", ''))';      : [];;
     // Get all page files;
     const pagesDir = 'src/pages';    const pageFiles = await getAllFiles(pagesDir);
 ;

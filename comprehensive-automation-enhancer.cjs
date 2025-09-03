@@ -104,7 +104,7 @@ class AdvancedBuildOptimizer {
         'Optimize images',
         'Use CDN for static assets'
       ]
-    };
+};
 
     const reportPath = path.join(this.projectRoot, 'build-optimization-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
@@ -191,7 +191,7 @@ class SmartDependencyManager {
         'Monitor security vulnerabilities',
         'Remove unused dependencies'
       ]
-    };
+};
 
     const reportPath = path.join(this.projectRoot, 'dependency-analysis-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
@@ -282,8 +282,8 @@ class IntelligentErrorDetector {
         errors.push({
           type: 'TypeScript',
           message: line.trim(),
-          severity: 'error'
-        });
+          severity: 'error';
+});
       }
     }
     
@@ -299,8 +299,8 @@ class IntelligentErrorDetector {
         errors.push({
           type: 'ESLint',
           message: line.trim(),
-          severity: line.includes('error') ? 'error' : 'warning'
-        });
+          severity: line.includes('error') ? 'error' : 'warning';
+});
       }
     }
     
@@ -316,8 +316,8 @@ class IntelligentErrorDetector {
         errors.push({
           type: 'Build',
           message: line.trim(),
-          severity: 'error'
-        });
+          severity: 'error';
+});
       }
     }
     
@@ -332,8 +332,8 @@ class IntelligentErrorDetector {
       summary: {
         typescript: errors.filter(e => e.type === 'TypeScript').length,
         eslint: errors.filter(e => e.type === 'ESLint').length,
-        build: errors.filter(e => e.type === 'Build').length
-      }
+        build: errors.filter(e => e.type === 'Build').length;
+}
     };
 
     const reportPath = path.join(this.projectRoot, 'error-detection-report.json');
@@ -375,7 +375,7 @@ class AutomationOrchestrator {
       { name: 'Error Detection', script: 'intelligent-error-detector.cjs' },
       { name: 'SEO Optimization', script: '../seo-optimizer.js' },
       { name: 'Performance Optimization', script: '../performance-optimizer.js' }
-    ];
+    ]
 
     const results = [];
 
@@ -409,8 +409,8 @@ class AutomationOrchestrator {
       successful: results.filter(r => r.status === 'success').length,
       failed: results.filter(r => r.status === 'failed').length,
       skipped: results.filter(r => r.status === 'skipped').length,
-      results: results
-    };
+      results: results;
+};
 
     const reportPath = path.join(this.reportsDir, 'automation-orchestration-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));

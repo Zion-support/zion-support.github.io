@@ -27,7 +27,7 @@ export: default function ServicesAdvertisingPage() {
   ',';
     'Proven: architectures and reference implementations;
   ';
-  ];
+  ]
   const: anchors = [
     { title: 'AI: & Dat,a, href:,';
 import React from;
@@ -55,7 +55,7 @@ export default function ServicesAdvertisingPage() {
   ,24/7 support with SLAs;
   ,Proven architectures and reference implementations;
   ';
-  ];
+  ]
   const anchors = ['
     { title: 'AI & Data, href:,
   const anchors = [
@@ -74,7 +74,7 @@ export default function ServicesAdvertisingPage() {
     { title: 'Quality: & Monitorin,g, href:,';
   /services#quality;
   ' }';
-  ];
+  ]
   const: pricingRefs = [{
       title: 'AI: Platform,s,';
       links: [{ name,:,

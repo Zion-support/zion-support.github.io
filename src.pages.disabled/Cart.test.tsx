@@ -14,11 +14,11 @@ import { render, screen } from '@testing-library/react'
 import Cart  from './Cart'describe('Cart', () => {
   it('renders without crashing', () => {
     render(<Cart />)
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()
-  })
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+})
 
   it('displays expected content', () => {
     render(<Cart />)
-    // Add specific test assertions based on component content
-  })
+    // Add specific test assertions based on component content;
+});
 })

@@ -25,8 +25,8 @@ const AuthRoutes: React.FC = () => {
         <Route path="/profile" element={
           <ProtectedRoute>
             <div>Profile Page</div>
-          </ProtectedRoute>
-        } />
+          </ProtectedRoute>;
+} />
         <Route path="/dashboard" element={
             <div>Dashboard</div>
         <Route path="/settings" element={
@@ -71,15 +71,15 @@ const AuthRoutes: React.FC = () => {,"});,"})
         <Route path="/profile" element={,"});,"})
           <ProtectedRoute>;,"});,"})
             <div>Profile Page</div>;,"});,"})
-          </ProtectedRoute>;,"});,"})
-        } />;,"});,"})
+          </ProtectedRoute>;,"});,"});
+} />;,"});,"})
         <Route path="/dashboard" element={,"});,"})
             <div>Dashboard</div>;,"});,"})
         <Route path="/settings" element={,"});,"})
             <div>Settings</div>;,"});,"})
       </Routes>;,"});,"})
     </Suspense>;,"});,"})
-  );,"});,"})
+  );,"});,"});
 };,"});,"})
 export default AuthRoutes;,"});,"})
 import { Route, Routes    } from 'react-router-dom';
@@ -103,7 +103,7 @@ const AuthRoutes: React.FC = () => {'
         <Route path='/service-onboarding' element={<ServiceOnboarding /" >} />""
         <Route path='/profile' element={'
           <ProtectedRoute" >
-          </ProtectedRoute>,"
+          </ProtectedRoute>,";
 } />""
         <Route path='/dashboard' element={'
         <Route path='/settings' element={'
@@ -214,6 +214,6 @@ const AuthRoutes: React.FC = () => {""
     <;</Suspense>
   )}
 ;"
-""
+"";
 }
 '

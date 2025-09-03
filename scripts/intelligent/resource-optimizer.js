@@ -54,8 +54,8 @@ class SmartResourceOptimizer {
         timestamp: new Date().toISOString(),
         optimizationHistory: this.optimizationHistory,
         totalOptimizations: this.optimizationHistory.length,
-        lastRun: Date.now()
-      };
+        lastRun: Date.now();
+};
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
     } catch (error) {
       this.log(`Failed to save optimization history: ${error.message}`, 'error');
@@ -71,8 +71,8 @@ class SmartResourceOptimizer {
       cpu: await this.analyzeCpuUsage(),
       network: await this.analyzeNetworkUsage(),
       processes: await this.analyzeProcessUsage(),
-      files: await this.analyzeFileUsage()
-    };
+      files: await this.analyzeFileUsage();
+};
 
     this.log(`Resource Usage Analysis:`);
     this.log(`  - Memory Usage: ${analysis.memory.usage}%`);
@@ -100,8 +100,8 @@ class SmartResourceOptimizer {
         external: (usage.external / (1024 * 1024)).toFixed(2),
         usage: usagePercentage.toFixed(2),
         rss: (usage.rss / (1024 * 1024)).toFixed(2),
-        arrayBuffers: (usage.arrayBuffers / (1024 * 1024)).toFixed(2)
-      };
+        arrayBuffers: (usage.arrayBuffers / (1024 * 1024)).toFixed(2);
+};
 
       return memoryAnalysis;
     } catch (error) {
@@ -119,8 +119,8 @@ class SmartResourceOptimizer {
         nodeModulesSize: await this.calculateNodeModulesSize(),
         buildSize: await this.calculateBuildSize(),
         logSize: await this.calculateLogSize(),
-        cacheSize: await this.calculateCacheSize()
-      };
+        cacheSize: await this.calculateCacheSize();
+};
 
       const totalSize = Object.values(diskAnalysis).reduce((sum, size) => sum + parseFloat(size || 0), 0);
       diskAnalysis.total = totalSize.toFixed(2);
@@ -154,8 +154,8 @@ class SmartResourceOptimizer {
       };
 
       const sizeInBytes = calculateSize(this.projectRoot);
-      return (sizeInBytes / (1024 * 1024)).toFixed(2); // Convert to MB
-    } catch (error) {
+      return (sizeInBytes / (1024 * 1024)).toFixed(2); // Convert to MB;
+} catch (error) {
       return 0;
     }
   }
@@ -185,8 +185,8 @@ class SmartResourceOptimizer {
       };
 
       const sizeInBytes = calculateSize('node_modules');
-      return (sizeInBytes / (1024 * 1024)).toFixed(2); // Convert to MB
-    } catch (error) {
+      return (sizeInBytes / (1024 * 1024)).toFixed(2); // Convert to MB;
+} catch (error) {
       return 0;
     }
   }
@@ -216,8 +216,8 @@ class SmartResourceOptimizer {
       };
 
       const sizeInBytes = calculateSize('.next');
-      return (sizeInBytes / (1024 * 1024)).toFixed(2); // Convert to MB
-    } catch (error) {
+      return (sizeInBytes / (1024 * 1024)).toFixed(2); // Convert to MB;
+} catch (error) {
       return 0;
     }
   }
@@ -241,8 +241,8 @@ class SmartResourceOptimizer {
         }
       }
 
-      return (totalSize / (1024 * 1024)).toFixed(2); // Convert to MB
-    } catch (error) {
+      return (totalSize / (1024 * 1024)).toFixed(2); // Convert to MB;
+} catch (error) {
       return 0;
     }
   }
@@ -276,8 +276,8 @@ class SmartResourceOptimizer {
         }
       }
 
-      return (totalSize / (1024 * 1024)).toFixed(2); // Convert to MB
-    } catch (error) {
+      return (totalSize / (1024 * 1024)).toFixed(2); // Convert to MB;
+} catch (error) {
       return 0;
     }
   }
@@ -292,8 +292,8 @@ class SmartResourceOptimizer {
         usage: 25, // Placeholder - would need proper CPU usage calculation
         user: usage.user,
         system: usage.system,
-        total: usage.user + usage.system
-      };
+        total: usage.user + usage.system;
+};
 
       return cpuAnalysis;
     } catch (error) {
@@ -311,8 +311,8 @@ class SmartResourceOptimizer {
         usage: 10, // Placeholder
         bytesIn: 0,
         bytesOut: 0,
-        connections: 0
-      };
+        connections: 0;
+};
 
       return networkAnalysis;
     } catch (error) {
@@ -328,8 +328,8 @@ class SmartResourceOptimizer {
       const pm2Status = execSync('pm2 jlist', { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
-        stdio: 'pipe' 
-      });
+        stdio: 'pipe' ;
+});
       
       const processes = JSON.parse(pm2Status);
       const runningProcesses = processes.filter(proc => proc.pm2_env.status === 'online');
@@ -344,9 +344,9 @@ class SmartResourceOptimizer {
           status: proc.pm2_env.status,
           memory: proc.monit.memory,
           cpu: proc.monit.cpu,
-          uptime: proc.pm2_env.uptime
-        }))
-      };
+          uptime: proc.pm2_env.uptime;
+}));
+};
 
       return processAnalysis;
     } catch (error) {
@@ -364,8 +364,8 @@ class SmartResourceOptimizer {
         totalSize: await this.calculateProjectSize(),
         largestFiles: await this.findLargestFiles(),
         duplicateFiles: await this.findDuplicateFiles(),
-        unusedFiles: await this.findUnusedFiles()
-      };
+        unusedFiles: await this.findUnusedFiles();
+};
 
       return fileAnalysis;
     } catch (error) {
@@ -417,8 +417,8 @@ class SmartResourceOptimizer {
             largestFiles.push({
               path: fullPath,
               size: stat.size,
-              sizeMB: (stat.size / (1024 * 1024)).toFixed(2)
-            });
+              sizeMB: (stat.size / (1024 * 1024)).toFixed(2);
+});
           }
         }
       };
@@ -453,8 +453,8 @@ class SmartResourceOptimizer {
               duplicates.push({
                 hash,
                 files: [fileHashes.get(hash), fullPath],
-                size: stat.size
-              });
+                size: stat.size;
+});
             } else {
               fileHashes.set(hash, fullPath);
             }
@@ -519,8 +519,8 @@ class SmartResourceOptimizer {
               unusedFiles.push({
                 path: fullPath,
                 size: stat.size,
-                sizeMB: (stat.size / (1024 * 1024)).toFixed(2)
-              });
+                sizeMB: (stat.size / (1024 * 1024)).toFixed(2);
+});
             }
           }
         }
@@ -602,8 +602,8 @@ class SmartResourceOptimizer {
       // Clean npm cache
       execSync('npm cache clean --force', { 
         cwd: this.projectRoot, 
-        stdio: 'pipe' 
-      });
+        stdio: 'pipe' ;
+});
       optimizations.push({ type: 'npm_cache_cleanup', success: true });
       this.log('✅ Cleaned npm cache');
       
@@ -645,16 +645,16 @@ class SmartResourceOptimizer {
       // Restart PM2 processes to free memory
       execSync('pm2 restart all', { 
         cwd: this.projectRoot, 
-        stdio: 'pipe' 
-      });
+        stdio: 'pipe' ;
+});
       optimizations.push({ type: 'process_restart', success: true });
       this.log('✅ Restarted PM2 processes');
       
       // Optimize PM2 configuration
       execSync('pm2 save', { 
         cwd: this.projectRoot, 
-        stdio: 'pipe' 
-      });
+        stdio: 'pipe' ;
+});
       optimizations.push({ type: 'pm2_save', success: true });
       this.log('✅ Saved PM2 configuration');
       
@@ -725,8 +725,8 @@ class SmartResourceOptimizer {
       execSync('npx depcheck', { 
         cwd: this.projectRoot, 
         stdio: 'pipe',
-        timeout: 60000 
-      });
+        timeout: 60000 ;
+});
       optimizations.push({ type: 'dependency_check', success: true });
       this.log('✅ Checked for unused dependencies');
       
@@ -734,8 +734,8 @@ class SmartResourceOptimizer {
       execSync('npm update', { 
         cwd: this.projectRoot, 
         stdio: 'pipe',
-        timeout: 120000 
-      });
+        timeout: 120000 ;
+});
       optimizations.push({ type: 'dependency_update', success: true });
       this.log('✅ Updated dependencies');
       
@@ -755,7 +755,7 @@ class SmartResourceOptimizer {
       { name: 'Process Optimization', fn: () => this.optimizeProcesses() },
       { name: 'File Optimization', fn: () => this.optimizeFiles() },
       { name: 'Dependency Optimization', fn: () => this.optimizeDependencies() }
-    ];
+    ]
 
     const results = [];
     
@@ -795,8 +795,8 @@ class SmartResourceOptimizer {
         memoryImprovement: ((beforeAnalysis.memory.usage - afterAnalysis.memory.usage) / beforeAnalysis.memory.usage * 100).toFixed(2),
         diskImprovement: ((beforeAnalysis.disk.usage - afterAnalysis.disk.usage) / beforeAnalysis.disk.usage * 100).toFixed(2),
         cpuImprovement: ((beforeAnalysis.cpu.usage - afterAnalysis.cpu.usage) / beforeAnalysis.cpu.usage * 100).toFixed(2),
-        fileCountImprovement: ((beforeAnalysis.files.count - afterAnalysis.files.count) / beforeAnalysis.files.count * 100).toFixed(2)
-      },
+        fileCountImprovement: ((beforeAnalysis.files.count - afterAnalysis.files.count) / beforeAnalysis.files.count * 100).toFixed(2);
+},
       summary: {
         totalOptimizations: optimizationResults.length,
         successfulOptimizations: optimizationResults.filter(r => r.success).length,
@@ -804,10 +804,10 @@ class SmartResourceOptimizer {
         diskUsage: afterAnalysis.disk.usage,
         cpuUsage: afterAnalysis.cpu.usage,
         fileCount: afterAnalysis.files.count,
-        processCount: afterAnalysis.processes.count
-      },
-      recommendations: this.generateResourceRecommendations(afterAnalysis)
-    };
+        processCount: afterAnalysis.processes.count;
+},
+      recommendations: this.generateResourceRecommendations(afterAnalysis);
+};
 
     const reportFile = path.join(this.projectRoot, 'logs/smart-resource-optimizer-intelligence.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
@@ -856,8 +856,8 @@ class SmartResourceOptimizer {
       this.optimizationHistory.push({
         timestamp: new Date().toISOString(),
         report: report,
-        summary: report.summary
-      });
+        summary: report.summary;
+});
       
       this.saveOptimizationHistory();
 
@@ -871,8 +871,8 @@ class SmartResourceOptimizer {
       this.log(`   - Successful Optimizations: ${report.summary.successfulOptimizations}`);
       this.log(`   - Memory Improvement: ${report.improvements.memoryImprovement}%`);
       this.log(`   - Disk Improvement: ${report.improvements.diskImprovement}%`);
-
-    } catch (error) {
+;
+} catch (error) {
       this.log(`❌ Resource Optimizer failed: ${error.message}`, 'error');
       throw error;
     }

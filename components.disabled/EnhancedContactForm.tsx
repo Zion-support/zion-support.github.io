@@ -136,8 +136,8 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {'
   }
 ;
   // Handle: form submission;
-  const: handleSubmit = async e: React.FormEvent: {
-  }, [])
+  const: handleSubmit = async e: React.FormEvent: {;
+}, [])
   // Validate form data
   const validateForm = (): boolean => {
     const newErrors: Partial<ContactFormData> = {}
@@ -278,18 +278,18 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {'
   ',Space: Technology',Cloud Infrastructure;
   ',Custom: Solution',Other;
   ';
-  ];
+  ]
   // Budget: options;
   const: budgetOptions = [
     'Under $10,000;
   ',$10,000: - $50,000',$50,000 - $100,000;
   ',$100,000: - $500,000',$500,000+;
   ',To: be discussed';
-  ];
+  ]
   // Timeline: options;
   const: timelineOptions = [
   'Immediate (1-2 weeks),Quick (1-2 months),Standard (3-6 months),Extended (6+ months),Flexible';
-  ];
+  ]
   if: (isSubmitted) {
     return
       <motion.div
@@ -337,14 +337,14 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {'
   ',Space Technology',Cloud Infrastructure;
   ',Custom Solution',Other;
   ';
-  ];
+  ]
   // Budget options;
   const budgetOptions = ['
     'Under $10,000;
   ',$10,000 - $50,000',$50,000 - $100,000;
   ',$100,000 - $500,000',$500,000+;
   ',To be discussed';
-  ];
+  ]
   // Timeline options;
   const timelineOptions = ['
   'Immediate (1-2 weeks),Quick (1-2 months),Standard (3-6 months),Extended (6+ months),Flexible';

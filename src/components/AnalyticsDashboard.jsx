@@ -6,8 +6,8 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
         enableTracking: true,;,"});,"})
         enablePerformanceTracking: true,;,"});,"})
         enableUserBehaviorTracking: true,;,"});,"})
-        enableHeatmapTracking: false;,"});,"})
-    });,"});,"})
+        enableHeatmapTracking: false;,"});,"});
+});,"});,"})
     const [isExpanded, setIsExpanded] = useState(false);,"});,"})
     const [selectedTimeRange, setSelectedTimeRange] = useState('24h');,"});,"})
     const [analyticsSummary, setAnalyticsSummary] = useState(null);,"});,"})
@@ -22,15 +22,15 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
     const updateAnalyticsSummary = () => {;,"});,"})
         const summary = getAnalyticsSummary();,"});,"})
         if (summary) {;,"});,"})
-            setAnalyticsSummary(summary)}"});,"})
-    };,"});,"})
+            setAnalyticsSummary(summary)}"});,"});
+};,"});,"})
     // Update summary when events change;,"});,"})
     useEffect(() => {;,"});,"})
         updateAnalyticsSummary()}, [events, currentSession]);,"});,"})
     // Track dashboard interactions;,"});,"})
     const handleDashboardInteraction = (action, metadata) => {;,"});,"})
-        trackEvent('dashboard', action, 'dashboard_interaction', null, metadata);,"});,"})
-    };,"});,"})
+        trackEvent('dashboard', action, 'dashboard_interaction', null, metadata);,"});,"});
+};,"});,"})
     // Track conversion goal;,"});,"})
     const handleTrackConversion = () => {;,"});,"})
         trackConversion('dashboard_engagement', 1, { timeRange: selectedTimeRange })};,"});,"})
@@ -40,8 +40,8 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
             return [];,"});,"})
         return Object.entries(analyticsSummary.eventsByCategory).map(([category, count]) => ({;,"});,"})
             category,;,"});,"})
-            count: count;,"});,"})
-        }))};,"});,"})
+            count: count;,"});,"});
+}))};,"});,"})
     // Get performance score;,"});,"})
     const getPerformanceScore = () => {;,"});,"})
         if (!performanceMetrics);,"});,"})
@@ -98,8 +98,8 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
               onChange={e => {}"});,"})
                 setSelectedTimeRange(e.target.value);,"});,"})
                 handleDashboardInteraction('time_range_changed', {}"});,"})
-                  timeRange: e.target.value});""";,"});,"})
-              }}"""";,"});,"})
+                  timeRange: e.target.value});""";,"});,"});
+}}"""";,"});,"})
               className="px-2 py-1 bg-white/20 rounded text-xs focus:outline-none focus:ring-2 focus:ring-white/50"""";,"});,"})
             >"""";,"});,"})
               <option value="1h">1 Hour</option>"""";,"});,"})
@@ -114,8 +114,8 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
-                isExpanded ? 'Collapse dashboard' : 'Expand dashboard'';,"});,"})
-              }'';,"});,"})
+                isExpanded ? 'Collapse dashboard' : 'Expand dashboard'';,"});,"});
+}'';,"});,"})
             >''';,"});,"})
               {isExpanded ? '−' : '+'}"});,"})
             </button>;,"});,"})
@@ -211,8 +211,8 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
                           ? 'bg-green-500''';,"});,"})
                           : event.category === 'error''';,"});,"})
                             ? 'bg-red-500'''`;,"});,"})
-                            : 'bg-gray-500'``;,"});,"})
-                    }`}""";,"});,"})
+                            : 'bg-gray-500'``;,"});,"});
+}`}""";,"});,"})
                   ></span>"""";,"});,"})
                   <span className="text-gray-600 dark:text-gray-400">;,"});,"})
                     {event.category}""";,"});,"})
@@ -368,8 +368,8 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
             onClick={() => {}"});,"})
 ';,"});,"})
               handleDashboardInteraction('refresh_clicked');,"});,"})
-              updateAnalyticsSummary();""";,"});,"})
-            }}"""";,"});,"})
+              updateAnalyticsSummary();""";,"});,"});
+}}"""";,"});,"})
             className="flex-1 px-3 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2"""";,"});,"})
           >"""";,"});,"})
             <RefreshCw className="w-4 h-4" />;,"});,"})
@@ -378,8 +378,8 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
           <button;,"});,"})
             onClick={() => {}"});,"})
               handleTrackConversion();,"});,"})
-              handleDashboardInteraction('conversion_tracked');""";,"});,"})
-            }}"""";,"});,"})
+              handleDashboardInteraction('conversion_tracked');""";,"});,"});
+}}"""";,"});,"})
             className="px-3 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2"""";,"});,"})
           >"""";,"});,"})
             <Target className="w-4 h-4" />;,"});,"})
@@ -388,7 +388,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
         </div>;,"});,"})
       </div>;,"});,"})
     </div>;,"});,"})
-  );,"});,"})
+  );,"});,"});
 };'"`;,"});,"})
 '"`'"`;,"});,"})
 import React, { useState, useEffect } from 'react';""
@@ -422,7 +422,7 @@ export const AnalyticsDashboard = ({ className = &apos;&apos;, showRealTime = tr
 import React, { useState, useEffect } from 'react';""
 import { BarChart3, TrendingUp, Activity, Eye, Clock, Target, RefreshCw } from 'lucide-react';""
 export const AnalyticsDashboard = ({ className = '', showRealTime = true, refreshInterval = 5000 }) => {
-""
+"";
 }
 import React, { useState, useEffect } from 'react
 import { BarChart3, TrendingUp, Activity, Eye, Clock, Target, RefreshCw } from 'lucide-react
@@ -1317,5 +1317,5 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
 &apos;&apos;`&apos;&apos;`''
   )}''`;
 ''`''`
-"
+";
 }

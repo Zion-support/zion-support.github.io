@@ -23,7 +23,7 @@ const Brochure = () => {
         'Predictive Analytics',
         'AI Integration Services'
       ]
-    },
+},
     {
       title: 'IT Services Portfolio',
       description: 'Complete overview of our information technology services and infrastructure solutions',
@@ -40,7 +40,7 @@ const Brochure = () => {
         'Performance Optimization',
         '24/7 Technical Support'
       ]
-    },
+},
     {
       title: 'Micro SaaS Solutions',
       description: 'Detailed information about our software-as-a-service development and deployment services',
@@ -57,7 +57,7 @@ const Brochure = () => {
         'Analytics & Reporting',
         'Scalability Solutions'
       ]
-    },
+},
     {
       title: 'Complete Solutions Guide',
       description: 'Comprehensive overview of all our services, case studies, and success stories',
@@ -74,31 +74,31 @@ const Brochure = () => {
         'Implementation Process',
         'Support & Maintenance'
       ]
-    }
-  ];
+}
+  ]
 
   const benefits = [
     {
       title: 'Detailed Service Information',
       description: 'Comprehensive details about our offerings, capabilities, and methodologies',
-      icon: FileText
-    },
+      icon: FileText;
+},
     {
       title: 'Case Studies & Success Stories',
       description: 'Real-world examples of how we\'ve helped businesses achieve their goals',
-      icon: Star
-    },
+      icon: Star;
+},
     {
       title: 'Technical Specifications',
       description: 'In-depth technical details about our solutions and implementation processes',
-      icon: Shield
-    },
+      icon: Shield;
+},
     {
       title: 'Pricing & Package Information',
       description: 'Transparent pricing information and service packages to help you plan your budget',
-      icon: Zap
-    }
-  ];
+      icon: Zap;
+}
+  ]
 
   const testimonials = [
     {
@@ -106,23 +106,23 @@ const Brochure = () => {
       company: 'InnovateTech Solutions',
       role: 'CEO',
       content: 'The brochures provided excellent detail about the services. It helped us make an informed decision about partnering with Zion Tech Group.',
-      rating: 5
-    },
+      rating: 5;
+},
     {
       name: 'David Thompson',
       company: 'Global Enterprises',
       role: 'CTO',
       content: 'Very comprehensive and well-organized. The case studies were particularly helpful in understanding the potential impact.',
-      rating: 5
-    },
+      rating: 5;
+},
     {
       name: 'Lisa Wang',
       company: 'StartupHub',
       role: 'Founder',
       content: 'The technical specifications in the brochures gave us confidence in their expertise. Highly recommended!',
-      rating: 5
-    }
-  ];
+      rating: 5;
+}
+  ]
 
   return (
     <>

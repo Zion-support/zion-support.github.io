@@ -893,7 +893,7 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
     </section>)}'''';
 '''''";
     </section>'
-  )}"""'""
+  )}"""'"";
 }'';
 '''''''
 ""
@@ -902,13 +902,13 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
     </section>
   )}'"""";";"}'''';';
 ''''''';';
-  )}&apos;&quot;&quot;"
+  )}&apos;&quot;&quot;";
 }&apos;&apos;'';
 &apos;'
-  )}'"""'"
-}''''
+  )}'"""'";
+}'''';
 }'''';
     </section>"
   )}'"""'"}'''
-''''''
+'''''';
 }

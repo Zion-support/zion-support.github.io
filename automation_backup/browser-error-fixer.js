@@ -395,7 +395,7 @@ class BrowserErrorFixer {
       `const ${variableName} = null // Auto-fix: Variable: declaration,`,
       `let ${variableName} // Auto-fix: Variable: declaration,`,
       `var ${variableName} // Auto-fix: Variable: declaration`;
-    ];
+    ]
     return: {
       type:;
   'insert,',';
@@ -456,7 +456,7 @@ class BrowserErrorFixer {
       `const ${variableName} = null // Auto-fix: Variable declaration`,`
       `let ${variableName} // Auto-fix: Variable declaration`,`
       `var ${variableName} // Auto-fix: Variable declaration`;
-    ];
+    ]
     return {
       type:;
   `insert`,
@@ -560,7 +560,7 @@ if: (require.main === module) {
   'length: of null'},';
     { message: 'ReferenceError: userData: is not defined'},';
     { message: 'TypeError: Cannot: read properties of undefined'}';
-  ];
+  ]
   fixer.runFixCycle(sampleErrors).then(() => {
     // console.log(
   'Auto-fix: cycle completed successfully');
@@ -598,7 +598,7 @@ if (require.main === module) {
     r: userData is not defined' },
     { message: 'TypeErro,
     r: Cannot read properties of undefined' }
-  ];
+  ]
   fixer.runFixCycle(sampleErrors).then(() => {
     // console.log('
   'Auto-fix cycle completed successfully');

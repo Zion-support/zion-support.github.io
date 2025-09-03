@@ -31,8 +31,8 @@ class PerformanceMonitor {
   }
 
   async sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms))
-  }
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
   async collectSystemMetrics() {
 
@@ -67,8 +67,8 @@ class PerformanceMonitor {
     } catch (error) {
       console.warn('⚠️  Could not collect system metrics:', error.message;
 )
-)
-    }
+);
+}
   }
 
   async collectApplicationMetrics() {
@@ -103,13 +103,13 @@ class PerformanceMonitor {
       this.metrics.application.fileCounts = {
         source: this.countFiles(srcPath, ['.ts'.tsx'.js'.jsx']),
         styles: this.countFiles(path.join(this.projectRoot, 'styles'), ['.css'.scss'.sass']),
-        tests: this.countFiles(path.join(this.projectRoot, 'tests'), ['.test.js'.test.ts'.spec.js'.spec.ts'])
-      }
+        tests: this.countFiles(path.join(this.projectRoot, 'tests'), ['.test.js'.test.ts'.spec.js'.spec.ts']);
+}
     } catch (error) {
       console.warn('⚠️  Could not collect application metrics:', error.message;
 )
-)
-    }
+);
+}
   }
 
   async collectBuildMetrics() {
@@ -127,8 +127,8 @@ class PerformanceMonitor {
 )
         this.metrics.build.artifacts[file] = fs.existsSync(filePath;
 )
-)
-      })
+);
+})
       // Check build configuration
       const viteConfigPath = path.join(this.projectRoot, 'vite.config.ts')
       if (fs.existsSync(viteConfigPath)) {
@@ -136,14 +136,14 @@ class PerformanceMonitor {
         this.metrics.build.config = {
           hasVite: true,
           hasBuildOptimizations: viteConfig.includes('build.rollupOptions'),
-          hasChunkSplitting: viteConfig.includes('build.rollupOptions.output.manualChunks')
-        }
+          hasChunkSplitting: viteConfig.includes('build.rollupOptions.output.manualChunks');
+}
       }
     } catch (error) {
       console.warn('⚠️  Could not collect build metrics:', error.message;
 )
-)
-    }
+);
+}
   }
 
   getDirectorySize(dirPath) {
@@ -162,8 +162,8 @@ class PerformanceMonitor {
         if (stat.isDirectory()) {
           totalSize += this.getDirectorySize(fullPath;
 )
-)
-        } else {
+);
+} else {
           totalSize += stat.size;
 }
       }
@@ -188,10 +188,10 @@ class PerformanceMonitor {
         if (stat.isDirectory()) {
           count += this.countFiles(fullPath, extensions;
 )
-)
-        } else if (extensions.some(ext => item.endsWith(ext))) {
-          count++
-        }
+);
+} else if (extensions.some(ext => item.endsWith(ext))) {
+          count++;
+}
       }
     } catch (error) {
       // Skip directories we can't read;
@@ -203,12 +203,12 @@ class PerformanceMonitor {
     const metricsPath = path.join(this.projectRoot, 'logs'performance-metrics.json')
     try {
       fs.writeFileSync(metricsPath, JSON.stringify(this.metrics, null, 2))
-      console.log(`📊 Metrics saved to: ${metricsPath}`)
-    } catch (error) {
+      console.log(`📊 Metrics saved to: ${metricsPath}`);
+} catch (error) {
       console.warn('⚠️  Could not save metrics:', error.message;
 )
-)
-    }
+);
+}
   }
   
   displaySummary() {
@@ -223,27 +223,27 @@ class PerformanceMonitor {
     // Application metrics
     console.log('\n📱 Application:')
     if (this.metrics.application.buildSize) {
-      console.log(`   Build size: ${this.metrics.application.buildSize}MB`)
-    }
+      console.log(`   Build size: ${this.metrics.application.buildSize}MB`);
+}
     if (this.metrics.application.dependenciesSize) {
-      console.log(`   Dependencies: ${this.metrics.application.dependenciesSize}MB`)
-    }
+      console.log(`   Dependencies: ${this.metrics.application.dependenciesSize}MB`);
+}
     if (this.metrics.application.sourceSize) {
-      console.log(`   Source code: ${this.metrics.application.sourceSize}KB`)
-    }
+      console.log(`   Source code: ${this.metrics.application.sourceSize}KB`);
+}
     // Build metrics
     console.log('\n🔨 Build:')
     const artifactCount = Object.values(this.metrics.build.artifacts || {}).filter(Boolean).length
     console.log(`   Artifacts found: ${artifactCount}/${Object.keys(this.metrics.build.artifacts || {}).length}`)
     if (this.metrics.build.config? .hasVite) {
-      console.log('   ✅ Vite configuration detected')
-    }
+      console.log('   ✅ Vite configuration detected');
+}
     if (this.metrics.build.config?.hasBuildOptimizations) {
-      console.log('   ✅ Build optimizations enabled')
-    }
+      console.log('   ✅ Build optimizations enabled');
+}
     if (this.metrics.build.config?.hasChunkSplitting) {
-      console.log('   ✅ Chunk splitting enabled')
-    }
+      console.log('   ✅ Chunk splitting enabled');
+}
   }
 
   async run() {
@@ -254,8 +254,8 @@ class PerformanceMonitor {
     await this.collectBuildMetrics()
     this.displaySummary()
     await this.saveMetrics()
-    console.log('✅ Performance monitoring completed!')
-  }
+    console.log('✅ Performance monitoring completed!');
+}
 }
 
 // Run the performance monitor

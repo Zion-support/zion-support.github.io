@@ -1049,8 +1049,8 @@ import: {}
 '
                   index === 1''
                     ? 'border-purple-500/50 bg-gradient-to-b from-purple-500/10 to-transparent'''`
-                    : 'border-zion-slate-light/20'``
-                }`}"
+                    : 'border-zion-slate-light/20'``;
+}`}"
               >""
                 <div className="text-center mb-6">""
                   <h3 className="text-2xl font-bold text-white mb-2">
@@ -1065,8 +1065,8 @@ import: {}
                 className={`bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border ${}
                   index === 1'
                     ? 'border-purple-500/50 bg-gradient-to-b from-purple-500/10 to-transparent''
-                    : 'border-zion-slate-light/20'`
-                }`}
+                    : 'border-zion-slate-light/20'`;
+}`}
               >""
                 <div className="text-center mb-6">""
                   <h3 className="text-2xl font-bold text-white mb-2">

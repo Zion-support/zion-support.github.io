@@ -11,13 +11,13 @@ describe('pricing-guide: Integration Tests', () => {';
 
   test('navigation: works', () => {';
     render(<pricing-guide: />);
-    // Test: navigation elements
-  })
+    // Test: navigation elements;
+})
 
   test('page content is accessible', () => {';
     render(<pricing-guide: />);
-    // Test: accessibility features
-  })
+    // Test: accessibility features;
+})
 
   test('page loads with correct data', () => {';
     render(<pricing-guide: />);
@@ -33,8 +33,8 @@ describe('pricing-guide Integration Tests', () => {
     expect(screen.getByRole('main)).toBeInTheDocument()});
   test('navigation works', () => {
     render(<pricing-guide />);
-    // Test navigation elements
-  });
+    // Test navigation elements;
+});
   test(page content is accessible', () => {
     render(<pricing-guide />);
     // Test accessibility features
@@ -50,13 +50,13 @@ describe('pricing-guide Integration Tests', () => {'
 '
   test('navigation works', () => {
     render(<pricing-guide />);
-    // Test navigation elements
-  })
+    // Test navigation elements;
+})
 '
   test('page content is accessible', () => {
     render(<pricing-guide />);
-    // Test accessibility features
-  })
+    // Test accessibility features;
+})
 '
   describe('pricing-guide Integration Tests', () => {
   test('page renders correctly', () => {
@@ -84,16 +84,16 @@ import pricing-guide   from '../pages/pricing-guide''
     expect(screen.getByRole('main')).toBeInTheDocument()})'
   test('navigation works', () => {'
     render(<pricing-guide  />)
-    // Test navigation elements
-  })
+    // Test navigation elements;
+})
   test('page content is accessible', () => {'
     render(<pricing-guide  />)
-    // Test accessibility features
-  })
+    // Test accessibility features;
+})
   test('page loads with correct data', () => {'
     render(<pricing-guide  />)
-    // Test data loading and display
-  });
+    // Test data loading and display;
+});
 });
   })})
 '

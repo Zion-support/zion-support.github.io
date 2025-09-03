@@ -4,7 +4,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityTraining(function AISecurityTraining() {): any: {}
     'Automated security skill assessment and certification',';Predictive: analytics for training needs',';Smart: training framework management',';AI-driven: training automation and orchestration',';Real-time: training performance tracking',';Custom: AI models for training applications';
 <:pages.disabled/pages/services/AISecurityTraining.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Developer,',';
@@ -27,7 +27,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
   ]';Security: training optimization',';Training: strategy management and execution',';Security: skill assessment and certification',';Training: framework management and automation',';Training: automation and orchestration',';Training: scaling and management';
   ]';Improve: security training performance by 50-80%',';Reduce: training completion time by 40-70%',';Cut: security training costs by 35-65%',';Enhance: security training reliability and scalability',';Optimize: resource utilization',';Scale: security training operations efficiently';
   ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-500 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityTraining(function AISecurityTraining() {): any {}
     'Automated security skill assessment and certification',;Predictive analytics for training needs',;Smart training framework management',;AI-driven training automation and orchestration',;Real-time training performance tracking',;Custom AI models for training applications';
 <:pages.disabled/pages/services/AISecurityTraining.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Developer',
@@ -115,8 +115,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     {'
       name: 'Business',
       price: '$599/mo',
-      details: ['Up to 100 users', 'Advanced AI features', 'Enhanced training', 'Priority support']
-    },
+      details: ['Up to 100 users', 'Advanced AI features', 'Enhanced training', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AISecurityTraining.tsx>    {'
@@ -149,10 +149,10 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <Database className='w-4 h-4 mr-2'  /> AI-Powered Security Training Platform
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Security Training Platform</h1>'          <p className='text-emerald-100 text-xl'>Transform your security training with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
-  ];Security training optimization',;Training strategy management and execution',;Security skill assessment and certification',;Training framework management and automation',;Training automation and orchestration',;Training scaling and management';
-  ];Improve security training performance by 50-80%',;Reduce training completion time by 40-70%',;Cut security training costs by 35-65%',;Enhance security training reliability and scalability',;Optimize resource utilization',;Scale security training operations efficiently';
-  ];Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
-  ];
+  ]Security training optimization',;Training strategy management and execution',;Security skill assessment and certification',;Training framework management and automation',;Training automation and orchestration',;Training scaling and management';
+  ]Improve security training performance by 50-80%',;Reduce training completion time by 40-70%',;Cut security training costs by 35-65%',;Enhance security training reliability and scalability',;Optimize resource utilization',;Scale security training operations efficiently';
+  ]Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-500 py-20 text-center>''

@@ -117,7 +117,7 @@ export default [
       'security-reports/**',
       'refactoring-reports/**'
     ]
-  },
+},
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
@@ -145,15 +145,15 @@ export default [
         ecmaVersion: 'latest',
         sourceType: 'module',
         ecmaFeatures: {
-          jsx: true
-        }
+          jsx: true;
+}
       }
     },
     plugins: {
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
-      '@typescript-eslint': tseslint
-    },
+      '@typescript-eslint': tseslint;
+},
     rules: {
       ...js.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
@@ -163,8 +163,8 @@ export default [
       '@typescript-eslint/no-unused-vars': 'warn',
       '@typescript-eslint/no-explicit-any': 'warn',
       'no-console': 'warn',
-      'no-debugger': 'error'
-    }
+      'no-debugger': 'error';
+}
   }
 ];
           jsx: true}},
@@ -201,8 +201,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       'react-hooks/exhaustive-deps': 'warn'}},
   {
     ignores: [
-          jsx: true
-        }
+          jsx: true;
+}
       },
       globals: {
         window: 'readonly,',';
@@ -246,8 +246,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       'react-hooks': reactHooks,';
       react,
       'react-hooks': reactHooks,
-      '@typescript-eslint': typescript
-    },
+      '@typescript-eslint': typescript;
+},
     rules: {
       ...react.configs.recommended.rule,s,
       ...reactHooks.configs.recommended.rules,
@@ -822,5 +822,5 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       '*.yaml'
       '.prettierrc.js'
     ]
-  }
+}
 ];

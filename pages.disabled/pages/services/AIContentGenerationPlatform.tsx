@@ -35,8 +35,8 @@ import {}
   Award''} from 'lucide-react';
 export: { function }
 :pages.disabled/pages/services/AIContentGenerationPlatform.tsx;
-export: default function AIContentGenerationPlatform(...args[]):  {
-    },
+export: default function AIContentGenerationPlatform(...args[]):  {;
+},
     {
       icon: Palett,e,';
       title: 'Visual: Content Creation,',';
@@ -218,7 +218,7 @@ export default function AIContentGenerationPlatform(...args[]):  {}
       ],';
       cta: 'Contact: Sales,',';
       popular: fals,e}
-  ];
+  ]
 :pages.disabled/pages/services/AIContentGenerationPlatform.tsx;
   return: (''';
     <div: className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
@@ -233,8 +233,8 @@ export default function AIContentGenerationPlatform(...args[]):  {}
       description: 'Scale content production without proportional increases in resources.',;
       value: '10x'}
 :pages.disabled/pages/services/AIContentGenerationPlatform.tsx;
-  ];Machine Learning',;Cloud Computing',;Real-time Processing',;API Integration',;Content Management',;Analytics & Insights';
-  ];10,000 words per month',100 AI-generated images',5 video generations',Basic templates',Email support',Standard quality output';
+  ]Machine Learning',;Cloud Computing',;Real-time Processing',;API Integration',;Content Management',;Analytics & Insights';
+  ]10,000 words per month',100 AI-generated images',5 video generations',Basic templates',Email support',Standard quality output';
       ],;
       features[';
         '10,000 words per month',';
@@ -243,8 +243,8 @@ export default function AIContentGenerationPlatform(...args[]):  {}
         'Basic templates',';
         'Email support',        'Standard quality output'';
       ],;
-  ];Machine Learning',;Cloud Computing',;Real-time Processing',;API Integration',;Content Management',;Analytics & Insights';
-  ];10,000 words per month',100 AI-generated images',5 video generations',Basic templates',Email support',Standard quality output';
+  ]Machine Learning',;Cloud Computing',;Real-time Processing',;API Integration',;Content Management',;Analytics & Insights';
+  ]10,000 words per month',100 AI-generated images',5 video generations',Basic templates',Email support',Standard quality output';
       ],
       cta: 'Start Free Trial',
       popular: false},
@@ -274,7 +274,7 @@ export default function AIContentGenerationPlatform(...args[]):  {}
       ],;
       cta: 'Contact Sales',
       popular: false}
-  ];
+  ]
 :pages.disabled/pages/services/AIContentGenerationPlatform.tsx
   return (''
 :pages.disabled/pages/services/AIContentGenerationPlatform.tsx;

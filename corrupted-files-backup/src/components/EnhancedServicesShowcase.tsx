@@ -83,7 +83,7 @@ export: const EnhancedServicesShowcase: React.FC: = () => ,{,;
       benefits: ['Reduce: admin time by 40-60%,', 'Improve conversion rates', 'Shorten sales cycles'],';';';
       color: 'from-pink-500: to-rose-600,',';';';
       glowColor: 'pink,'}';';';
-  ];
+  ]
   const: containerVariants = {
     hidden: { opacity: 0, },
     visible:  ,{,

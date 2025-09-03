@@ -31,8 +31,8 @@ class AdvancedAppImprovementSuite {
       const result = execSync(command, {
         cwd: this.projectRoot,
         encoding: 'utf8',
-        timeout: 300000, // 5 minutes timeout
-      });
+        timeout: 300000, // 5 minutes timeout;
+});
       this.log(`✅ Completed: ${description}`);
       return { success: true, output: result };
     } catch (error) {
@@ -47,13 +47,13 @@ class AdvancedAppImprovementSuite {
     const optimizations = [
       {
         command: 'npm run analyze',
-        description: 'Bundle Analysis'
-      },
+        description: 'Bundle Analysis';
+},
       {
         command: 'npx next-bundle-analyzer',
-        description: 'Next.js Bundle Analysis'
-      }
-    ];
+        description: 'Next.js Bundle Analysis';
+}
+    ]
 
     const results = [];
     for (const opt of optimizations) {
@@ -79,18 +79,18 @@ class PerformanceOptimizer {
 
   async optimizeImages() {
     console.log('🖼️ Optimizing images...');
-    // Add image optimization logic here
-  }
+    // Add image optimization logic here;
+}
 
   async optimizeCSS() {
     console.log('🎨 Optimizing CSS...');
-    // Add CSS optimization logic here
-  }
+    // Add CSS optimization logic here;
+}
 
   async optimizeJavaScript() {
     console.log('⚡ Optimizing JavaScript...');
-    // Add JS optimization logic here
-  }
+    // Add JS optimization logic here;
+}
 
   async run() {
     await this.optimizeImages();
@@ -130,28 +130,28 @@ class SecurityEnhancer {
 const securityHeaders = [
   {
     key: 'X-DNS-Prefetch-Control',
-    value: 'on'
-  },
+    value: 'on';
+},
   {
     key: 'Strict-Transport-Security',
-    value: 'max-age=63072000; includeSubDomains; preload'
-  },
+    value: 'max-age=63072000; includeSubDomains; preload';
+},
   {
     key: 'X-XSS-Protection',
-    value: '1; mode=block'
-  },
+    value: '1; mode=block';
+},
   {
     key: 'X-Frame-Options',
-    value: 'SAMEORIGIN'
-  },
+    value: 'SAMEORIGIN';
+},
   {
     key: 'X-Content-Type-Options',
-    value: 'nosniff'
-  },
+    value: 'nosniff';
+},
   {
     key: 'Referrer-Policy',
-    value: 'origin-when-cross-origin'
-  }
+    value: 'origin-when-cross-origin';
+}
 ];
 
 module.exports = { securityHeaders };
@@ -170,40 +170,40 @@ const cspHeader = {
   'Content-Security-Policy': [
     {
       key: 'default-src',
-      value: "'self'"
-    },
+      value: "'self'";
+},
     {
       key: 'script-src',
-      value: "'self' 'unsafe-eval' 'unsafe-inline'"
-    },
+      value: "'self' 'unsafe-eval' 'unsafe-inline'";
+},
     {
       key: 'style-src',
-      value: "'self' 'unsafe-inline'"
-    },
+      value: "'self' 'unsafe-inline'";
+},
     {
       key: 'img-src',
-      value: "'self' blob: data: https:"
-    },
+      value: "'self' blob: data: https:";
+},
     {
       key: 'font-src',
-      value: "'self' https:"
-    },
+      value: "'self' https:";
+},
     {
       key: 'object-src',
-      value: "'none'"
-    },
+      value: "'none'";
+},
     {
       key: 'base-uri',
-      value: "'self'"
-    },
+      value: "'self'";
+},
     {
       key: 'form-action',
-      value: "'self'"
-    },
+      value: "'self'";
+},
     {
       key: 'frame-ancestors',
-      value: "'none'"
-    }
+      value: "'none'";
+}
   ]
 };
 
@@ -319,14 +319,14 @@ export const metaTags = {
     description: 'Professional web development services with cutting-edge technology and innovative solutions.',
     type: 'website',
     url: 'https://bolt.new.zion.app',
-    image: 'https://bolt.new.zion.app/og-image.jpg'
-  },
+    image: 'https://bolt.new.zion.app/og-image.jpg';
+},
   twitter: {
     card: 'summary_large_image',
     title: 'Bolt.new Zion App - Advanced Web Development Solutions',
     description: 'Professional web development services with cutting-edge technology and innovative solutions.',
-    image: 'https://bolt.new.zion.app/og-image.jpg'
-  }
+    image: 'https://bolt.new.zion.app/og-image.jpg';
+}
 };
 
 export default metaTags;
@@ -377,12 +377,12 @@ export const errorTracking = {
     environment: process.env.NODE_ENV,
     tracesSampleRate: 1.0,
     replaysSessionSampleRate: 0.1,
-    replaysOnErrorSampleRate: 1.0
-  },
+    replaysOnErrorSampleRate: 1.0;
+},
   logging: {
     level: process.env.NODE_ENV === 'production' ? 'error' : 'debug',
-    format: 'json'
-  }
+    format: 'json';
+}
 };
 
 export default errorTracking;
@@ -399,14 +399,14 @@ export default errorTracking;
 // Analytics configuration
 export const analytics = {
   googleAnalytics: {
-    measurementId: process.env.GA_MEASUREMENT_ID
-  },
+    measurementId: process.env.GA_MEASUREMENT_ID;
+},
   customEvents: {
     pageView: true,
     userInteraction: true,
     performance: true,
-    errors: true
-  }
+    errors: true;
+}
 };
 
 export default analytics;
@@ -429,16 +429,16 @@ app.get('/health', (req, res) => {
     timestamp: new Date().toISOString(),
     uptime: process.uptime(),
     memory: process.memoryUsage(),
-    version: process.env.npm_package_version || '1.0.0'
-  });
+    version: process.env.npm_package_version || '1.0.0';
+});
 });
 
 app.get('/ready', (req, res) => {
   // Add readiness checks here
   res.status(200).json({
     status: 'ready',
-    timestamp: new Date().toISOString()
-  });
+    timestamp: new Date().toISOString();
+});
 });
 
 module.exports = app;
@@ -472,8 +472,8 @@ setup.run().catch(console.error);
       summary: {
         total: 0,
         successful: 0,
-        failed: 0
-      },
+        failed: 0;
+},
       categories: {},
       improvements: [
         'Bundle size optimization',
@@ -489,7 +489,7 @@ setup.run().catch(console.error);
         'Implement progressive web app features',
         'Add internationalization support'
       ]
-    };
+};
 
     // Process results by category
     Object.keys(results).forEach(category => {
@@ -498,8 +498,8 @@ setup.run().catch(console.error);
         total: categoryResults.length,
         successful: categoryResults.filter(r => r.success).length,
         failed: categoryResults.filter(r => !r.success).length,
-        results: categoryResults
-      };
+        results: categoryResults;
+};
 
       report.summary.total += categoryResults.length;
       report.summary.successful += categoryResults.filter(r => r.success).length;
@@ -538,8 +538,8 @@ setup.run().catch(console.error);
       }
 
       return report;
-
-    } catch (error) {
+;
+} catch (error) {
       this.log(`❌ Fatal error in improvement suite: ${error.message}`);
       throw error;
     }

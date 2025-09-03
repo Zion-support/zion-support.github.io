@@ -41,7 +41,7 @@ class EnhancedTestingAutomation {
   async runUnitTests() {;
     console.log(`'🧪 Running Unit Tests...');
     try {;
-      const output = execSync(npm run test:unit || npm test || echo 'No unit tests found"',;
+      const output = execSync(npm run test:unit || npm test || echo 'No unit tests found",;
         {;
           encoding: 'utf8',;
           cwd: process.cwd(),;
@@ -49,7 +49,7 @@ class EnhancedTestingAutomation {
   async runUnitTests() {
     console.log(`🧪 Running Unit Tests...`);
     try {
-      const output = execSync(npm run test:unit || npm test || echo 'No unit tests found"',
+      const output = execSync(npm run test:unit || npm test || echo 'No unit tests found",
         {
           encoding: 'utf8',
           cwd: process.cwd()}
@@ -92,13 +92,13 @@ class EnhancedTestingAutomation {
       });
 
       // Run integration tests;
-      const output = execSync(npm run test:integration || echo 'No integration tests found"',
+      const output = execSync(npm run test:integration || echo 'No integration tests found",
         {
           encoding: 'utf8',
           cwd: process.cwd(),
 ;
       // Run integration tests;
-      const output = execSync(npm run test:integration || echo 'No integration tests found"',;
+      const output = execSync(npm run test:integration || echo 'No integration tests found",;
         {;
           encoding: 'utf8',;
           cwd: process.cwd(),;
@@ -145,7 +145,7 @@ class EnhancedTestingAutomation {
 ;
       if (hasPlaywright) {;
         console.log('🎭 Running Playwright tests...');
-        const output = execSync(npm run test:e2e || npx playwright test || echo 'No Playwright tests found"',;
+        const output = execSync(npm run test:e2e || npx playwright test || echo 'No Playwright tests found",;
           {;
             encoding: 'utf8',;
             cwd: process.cwd(),;
@@ -154,7 +154,7 @@ class EnhancedTestingAutomation {
         this.testResults.e2e.results = output;
       } else if (hasCypress) {;
         console.log('🎭 Running Cypress tests...');
-        const output = execSync(npm run test:e2e || npx cypress run || echo 'No Cypress tests found"',;
+        const output = execSync(npm run test:e2e || npx cypress run || echo 'No Cypress tests found",;
           {;
             encoding: 'utf8',;
             cwd: process.cwd(),;
@@ -202,7 +202,7 @@ class EnhancedTestingAutomation {
 ;
       if (hasLighthouse) {;
         console.log('💡 Running Lighthouse performance tests...');
-        const output = execSync(npm run test:lighthouse || npx lhci autorun || echo 'No Lighthouse tests found"',;
+        const output = execSync(npm run test:lighthouse || npx lhci autorun || echo 'No Lighthouse tests found",;
           {;
             encoding: 'utf8',;
             cwd: process.cwd(),;
@@ -258,14 +258,14 @@ class EnhancedTestingAutomation {
 ;
       if (hasAxe) {;
         console.log(`'♿ Running axe-core accessibility tests...');
-        const output = execSync(npm run test:accessibility || echo 'No accessibility tests found"',;
+        const output = execSync(npm run test:accessibility || echo 'No accessibility tests found",;
           {;
             encoding: 'utf8',;
             cwd: process.cwd(),;
 
       if (hasAxe) {
         console.log(`♿ Running axe-core accessibility tests...`);
-        const output = execSync(npm run test:accessibility || echo 'No accessibility tests found"',
+        const output = execSync(npm run test:accessibility || echo 'No accessibility tests found",
           {
             encoding: 'utf8',
             cwd: process.cwd()}
@@ -332,7 +332,7 @@ class EnhancedTestingAutomation {
 ;
       if (hasCoverage) {;
         console.log('📊 Coverage data found, generating report...');
-        const output = execSync(npm run test:coverage || echo 'No coverage script found"',;
+        const output = execSync(npm run test:coverage || echo 'No coverage script found",;
           {;
             encoding: 'utf8',;
             cwd: process.cwd(),;
@@ -350,7 +350,7 @@ class EnhancedTestingAutomation {
               cwd: process.cwd(),
         try {;
           const output = execSync(;
-            'npm test -- --coverage || echo "Coverage generation failed"',;
+            'npm test -- --coverage || echo "Coverage generation failed",;
             {;
               encoding: 'utf8',;
               cwd: process.cwd(),;

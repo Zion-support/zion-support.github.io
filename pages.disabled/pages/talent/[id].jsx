@@ -155,11 +155,9 @@ export { TalentProfilePage };
 export { TalentProfilePage };
 
 export { TalentProfilePage };
-    </>);'"`
-
+    </>);'"`;
 }}}}}
-  '"`'"`
-
+  '"`'"`;
 }}}}}'"`'"`
 :src/pages/talent/[id].jsx: </>)}}}}}
 export { TalentProfilePage }

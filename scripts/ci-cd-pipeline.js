@@ -63,7 +63,7 @@ class: CICDPipeline {
           name: 'Deploy: to Production,',';
           description: 'Deploy: to production environment,',';
           skip: this.pipelineLog.environment: !== 'production,'}';
-      ];
+      ]
       // Execute: each pipeline stage;
       for: (const stage of pipelineStages) {
         await this.executeStage(stage)}
@@ -102,7 +102,7 @@ console.log('🔄 CI/CD Pipeline Started');class CICDPipeline {  constructor() {
           "name": 'Security Scanning',';          "description": 'Run security vulnerability scans',';          "critical": false,;";          "skip": false},;" {
           "name": 'Build Application',';          "description": 'Build application for production',';          "critical": true,;";          "skip": false},;" {
           "name": 'Performance Testing',';          "description": 'Run performance tests',';          "critical": false,;";          "skip": false},;" {
-          "name": 'Deploy to Staging',';          "description": 'Deploy to staging environment',';          "critical": true,;";          "skip": this.pipelineLog.environment === 'development'},' {          "name": 'Deploy to Production',';          "description": 'Deploy to production environment',';          "critical": true,;";          "skip": this.pipelineLog.environment !== 'production'}';      ];      // Execute each pipeline stage;
+          "name": 'Deploy to Staging',';          "description": 'Deploy to staging environment',';          "critical": true,;";          "skip": this.pipelineLog.environment === 'development'},' {          "name": 'Deploy to Production',';          "description": 'Deploy to production environment',';          "critical": true,;";          "skip": this.pipelineLog.environment !== 'production'}';      ]      // Execute each pipeline stage;
       for (const stage of pipelineStages) {
 console.log('🔄 CI/CD Pipeline Started');
 class CICDPipeline {
@@ -193,11 +193,11 @@ class CICDPipeline {
       await this.savePipelineLog();
       // Check if pipeline should proceed;
       if (this.pipelineLog.summary.failed === 0) {'
-        process.exit(0)} else {'
-    } catch (error) {'
+        process.exit(0)} else {';
+} catch (error) {'
       if (this.pipelineLog.summary.failed === 0) {
-        process.exit(0)} else {
-    } catch (error) {
+        process.exit(0)} else {;
+} catch (error) {
         console.log('✅ CI/CD Pipeline completed successfully!');        process.exit(0)} else {        console.log('❌ CI/CD Pipeline failed. Please check the logs.');        process.exit(1)}'} catch (error) {
       console.error('❌ Error during CI/CD "Pipeline":', error.message);      this.pipelineLog.summary.failed++;      await this.savePipelineLog();
   async executeStage(stage) {

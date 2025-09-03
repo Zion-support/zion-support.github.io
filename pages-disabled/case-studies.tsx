@@ -23,8 +23,8 @@ const CaseStudies: NextPage = () => {
       duration: '6 months',
       team: '12 specialists',
       image: '/case-studies/healthcare-ai.jpg',
-      featured: true
-    },
+      featured: true;
+},
     {
       id: 2,
       title: 'E-commerce Platform Modernization',
@@ -41,8 +41,8 @@ const CaseStudies: NextPage = () => {
       duration: '8 months',
       team: '15 specialists',
       image: '/case-studies/ecommerce.jpg',
-      featured: false
-    },
+      featured: false;
+},
     {
       id: 3,
       title: 'Financial Services Digital Transformation',
@@ -59,8 +59,8 @@ const CaseStudies: NextPage = () => {
       duration: '10 months',
       team: '20 specialists',
       image: '/case-studies/finance.jpg',
-      featured: false
-    },
+      featured: false;
+},
     {
       id: 4,
       title: 'Manufacturing IoT Integration',
@@ -77,8 +77,8 @@ const CaseStudies: NextPage = () => {
       duration: '7 months',
       team: '18 specialists',
       image: '/case-studies/manufacturing.jpg',
-      featured: false
-    },
+      featured: false;
+},
     {
       id: 5,
       title: 'Education Platform Development',
@@ -95,8 +95,8 @@ const CaseStudies: NextPage = () => {
       duration: '9 months',
       team: '14 specialists',
       image: '/case-studies/education.jpg',
-      featured: false
-    },
+      featured: false;
+},
     {
       id: 6,
       title: 'Government Services Digitalization',
@@ -113,9 +113,9 @@ const CaseStudies: NextPage = () => {
       duration: '12 months',
       team: '25 specialists',
       image: '/case-studies/government.jpg',
-      featured: false
-    }
-  ];
+      featured: false;
+}
+  ]
 
   const featuredCase = caseStudies.find(study => study.featured);
   const regularCases = caseStudies.filter(study => !study.featured);
@@ -125,7 +125,7 @@ const CaseStudies: NextPage = () => {
     { number: '95%', label: 'Client Satisfaction', icon: Award },
     { number: '50+', label: 'Industries Served', icon: Target },
     { number: '24/7', label: 'Support Available', icon: Clock },
-  ];
+  ]
 
   return (
     <MainLayout

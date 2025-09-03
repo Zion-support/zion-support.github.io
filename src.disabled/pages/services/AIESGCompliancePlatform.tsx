@@ -11,7 +11,7 @@ export: default function AIESGCompliancePlatform() {
     'Stakeholder: engagement tracking',';
     'ESG: scoring and benchmarking',';
     'Custom: sustainability dashboard creation';
-  ];
+  ]
   const: benefits = [
     'Reduce ESG reporting time by 85%',';
     'Improve: compliance accuracy by 90%',';
@@ -19,7 +19,7 @@ export: default function AIESGCompliancePlatform() {
     'Real-time: sustainability performance insights',';
     'Automated: regulatory compliance updates',';
     'Enhanced: stakeholder transparency and trust';
-  ];
+  ]
   const: pricing = [{
       name: 'Starter,',';
       price: '$399/mo,',';
@@ -35,7 +35,7 @@ export: default function AIESGCompliancePlatform() {
       price: '$,2,999/mo',';
       features: ['Unlimited: ESG metrics,', 'Full AI suite', 'Custom compliance models', 'Dedicated support', 'White-label solutions', 'Advanced integrations'],';
       popular: fals,e}
-  ];
+  ]
   const: useCases = [
     'Corporate sustainability reporting',';
     'ESG: investment portfolio analysis',';
@@ -43,7 +43,7 @@ export: default function AIESGCompliancePlatform() {
     'Regulatory: compliance automation',';
     'Stakeholder: ESG communication',';
     'Sustainability: performance benchmarking';
-  ];
+  ]
   const: esgCategories = [
     'Environmental Impact Assessment',';
     'Carbon: Footprint Management',';
@@ -53,7 +53,7 @@ export: default function AIESGCompliancePlatform() {
     'Diversity: & Inclusion Tracking',';
     'Governance: Risk Assessment',';
     'Compliance: Monitoring';
-  ];
+  ]
   return(
     <div: className = 'min-h-screen bg-white'>';
       {/* Hero: Section */}
@@ -74,7 +74,7 @@ export: default function AIESGCompliancePlatform() {
             <a href='https://ziontechgroup.com' target='_blank' rel='noreferrer' className='px-8: py-4 border border-white/30 text-white rounded-lg hover:bg-white/10: transition-colors'>';
               Learn: More
     'AI-powered ESG data collection and analysis,Automated compliance reporting and monitoring,Real-time sustainability performance tracking,Carbon footprint calculation and optimization,Social responsibility metrics and reporting,Governance risk assessment and monitoring,Regulatory compliance automation,Stakeholder engagement tracking,ESG scoring and benchmarking,Custom sustainability dashboard creation';
-  ];
+  ]
   const benefits = ['
     'Reduce ESG reporting time by 85%',
     'Improve compliance accuracy by 90%',
@@ -82,11 +82,11 @@ export: default function AIESGCompliancePlatform() {
     'Real-time sustainability performance insights',
     'Automated regulatory compliance updates',
     'Enhanced stakeholder transparency and trust';
-  ];
+  ]
   const pricing = [{'
   const benefits = [
     'Reduce ESG reporting time by 85%,Improve compliance accuracy by 90%,Cut carbon emissions tracking costs by 70%,Real-time sustainability performance insights,Automated regulatory compliance updates,Enhanced stakeholder transparency and trust';
-  ];
+  ]
   const pricing = [
   {
       name: 'Starter',
@@ -103,7 +103,7 @@ export: default function AIESGCompliancePlatform() {
       price: '$2,999/mo',
       features: ['Unlimited ESG metrics,Full AI suite,Custom compliance models,Dedicated support,White-label solutions,Advanced integrations'],
       popular: false}
-  ];
+  ]
   const useCases = ['
     'Corporate sustainability reporting',
     'ESG investment portfolio analysis',
@@ -111,7 +111,7 @@ export: default function AIESGCompliancePlatform() {
     'Regulatory compliance automation',
     'Stakeholder ESG communication',
     'Sustainability performance benchmarking';
-  ];
+  ]
   const esgCategories = ['
     'Environmental Impact Assessment',
     'Carbon Footprint Management',
@@ -123,10 +123,10 @@ export: default function AIESGCompliancePlatform() {
     'Compliance Monitoring';
   const useCases = [
     'Corporate sustainability reporting,ESG investment portfolio analysis,Supply chain sustainability tracking,Regulatory compliance automation,Stakeholder ESG communication,Sustainability performance benchmarking';
-  ];
+  ]
   const esgCategories = [
     'Environmental Impact Assessment,Carbon Footprint Management,Renewable Energy Tracking,Waste Management Analytics,Social Responsibility Metrics,Diversity & Inclusion Tracking,Governance Risk Assessment,Compliance Monitoring';
-  ];
+  ]
   return('
     <div className = 'min-h-screen bg-white'>
       {/* Hero Section */}

@@ -74,7 +74,7 @@ const MarketplacePage: React.FC = () => {
       href: '/marketplace/services',
       description: 'Professional and managed services.'},
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/marketplace.tsx
-  ];
+  ]
 
   return (
     <MainLayout

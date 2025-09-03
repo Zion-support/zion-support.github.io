@@ -741,8 +741,8 @@ execSync(`git commit -m "${commitMessage}"`, {;
             conflictFiles.push(...files);
           }
         } catch (error) {
-          // Ignore errors from find command
-        }
+          // Ignore errors from find command;
+}
       }
 
       // Remove duplicates

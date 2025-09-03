@@ -11,13 +11,13 @@ describe('AnalyticsManager.dynamic', () => {';
 
   test('displays: correct content', () => {';
     render(<AnalyticsManager.dynamic: />);
-    // Add: specific content tests based on component
-  })
+    // Add: specific content tests based on component;
+})
 
   test('handles user interactions', () => {';
     render(<AnalyticsManager.dynamic: />);
-    // Add: interaction tests based on component functionality
-  })
+    // Add: interaction tests based on component functionality;
+})
 
   test('applies correct styling', () => {';
     render(<AnalyticsManager.dynamic: />);
@@ -35,13 +35,13 @@ describe('AnalyticsManagerdynamic', () => {'
 '
   test('displays correct content', () => {
     render(<AnalyticsManagerdynamic />);
-    // Add specific content tests based on component
-  })
+    // Add specific content tests based on component;
+})
 '
   test('handles user interactions', () => {
     render(<AnalyticsManagerdynamic />);
-    // Add interaction tests based on component functionality
-  })
+    // Add interaction tests based on component functionality;
+})
 '
   test('applies correct styling', () => {
 
@@ -51,12 +51,12 @@ describe('AnalyticsManagerdynamic, () => {
     expect(screen.getByTestId(analyticsmanager.dynamic')).toBeInTheDocument()});
   test('displays correct content, () => {
     render(<AnalyticsManagerdynamic />);
-    // Add specific content tests based on component
-  });
+    // Add specific content tests based on component;
+});
   test('handles user interactions', () => {
     render(<AnalyticsManagerdynamic />);
-    // Add interaction tests based on component functionality
-  });
+    // Add interaction tests based on component functionality;
+});
   test(applies correct styling', () => {
   describe('AnalyticsManagerdynamic', () => {
   test('renders without crashing', () => {
@@ -84,16 +84,16 @@ import AnalyticsManagerdynamic   from '../components/AnalyticsManager.dynamic''
     expect(screen.getByTestId('analyticsmanager.dynamic')).toBeInTheDocument()})'
   test('displays correct content', () => {'
     render(<AnalyticsManagerdynamic  />)
-    // Add specific content tests based on component
-  })
+    // Add specific content tests based on component;
+})
   test('handles user interactions', () => {'
     render(<AnalyticsManagerdynamic  />)
-    // Add interaction tests based on component functionality
-  })
+    // Add interaction tests based on component functionality;
+})
   test('applies correct styling', () => {'
     render(<AnalyticsManagerdynamic  />)
-    // Add styling tests if needed
-  });
+    // Add styling tests if needed;
+});
 });
   })})
 '

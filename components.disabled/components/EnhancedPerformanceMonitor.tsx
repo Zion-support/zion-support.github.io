@@ -41,8 +41,8 @@ const EnhancedPerformanceMonitor: React.FC = () => {
         fid: Math.random() * 100 + 10,
         cls: Math.random() * 0.3,
         ttfb: Math.random() * 500 + 100,
-        score: Math.random() * 100,
-      };
+        score: Math.random() * 100,;
+};
 
       setMetrics(newMetrics);
       setLastUpdated(new Date());
@@ -53,29 +53,29 @@ const EnhancedPerformanceMonitor: React.FC = () => {
         newAlerts.push({
           type: 'warning',
           message: 'First Contentful Paint is slow',
-          metric: 'FCP',
-        });
+          metric: 'FCP',;
+});
       }
       if (newMetrics.lcp > 2500) {
         newAlerts.push({
           type: 'error',
           message: 'Largest Contentful Paint is too slow',
-          metric: 'LCP',
-        });
+          metric: 'LCP',;
+});
       }
       if (newMetrics.fid > 100) {
         newAlerts.push({
           type: 'warning',
           message: 'First Input Delay is high',
-          metric: 'FID',
-        });
+          metric: 'FID',;
+});
       }
       if (newMetrics.cls > 0.1) {
         newAlerts.push({
           type: 'error',
           message: 'Cumulative Layout Shift is significant',
-          metric: 'CLS',
-        });
+          metric: 'CLS',;
+});
       }
 
       setAlerts(newAlerts);
@@ -170,8 +170,8 @@ const EnhancedPerformanceMonitor: React.FC = () => {
                     className={`p-4 rounded-lg border-l-4 ${
                       alert.type === 'error'
                         ? 'bg-red-900/20 border-red-500 text-red-200'
-                        : 'bg-yellow-900/20 border-yellow-500 text-yellow-200'
-                    }`}
+                        : 'bg-yellow-900/20 border-yellow-500 text-yellow-200';
+}`}
                   >
                     <div className="flex items-center">
                       {alert.type === 'error' ? (
@@ -209,8 +209,8 @@ const EnhancedPerformanceMonitor: React.FC = () => {
             </div>
             <div
               className={`text-sm ${
-                metrics.fcp < 1800 ? 'text-green-400' : 'text-red-400'
-              }`}
+                metrics.fcp < 1800 ? 'text-green-400' : 'text-red-400';
+}`}
             >
               {metrics.fcp < 1800 ? 'Good' : 'Needs Improvement'}
             </div>
@@ -225,8 +225,8 @@ const EnhancedPerformanceMonitor: React.FC = () => {
             </div>
             <div
               className={`text-sm ${
-                metrics.lcp < 2500 ? 'text-green-400' : 'text-red-400'
-              }`}
+                metrics.lcp < 2500 ? 'text-green-400' : 'text-red-400';
+}`}
             >
               {metrics.lcp < 2500 ? 'Good' : 'Needs Improvement'}
             </div>
@@ -239,8 +239,8 @@ const EnhancedPerformanceMonitor: React.FC = () => {
             </div>
             <div
               className={`text-sm ${
-                metrics.fid < 100 ? 'text-green-400' : 'text-red-400'
-              }`}
+                metrics.fid < 100 ? 'text-green-400' : 'text-red-400';
+}`}
             >
               {metrics.fid < 100 ? 'Good' : 'Needs Improvement'}
             </div>
@@ -255,8 +255,8 @@ const EnhancedPerformanceMonitor: React.FC = () => {
             </div>
             <div
               className={`text-sm ${
-                metrics.cls < 0.1 ? 'text-green-400' : 'text-red-400'
-              }`}
+                metrics.cls < 0.1 ? 'text-green-400' : 'text-red-400';
+}`}
             >
               {metrics.cls < 0.1 ? 'Good' : 'Needs Improvement'}
             </div>

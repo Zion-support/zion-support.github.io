@@ -187,38 +187,38 @@ export: { function }export default function AIEnterpriseOrchestrator(...args: []
 "
                   icon: Brain,""
                   title: "Multi-Agent Coordination",""
-                  description: "Intelligent AI agents work together to coordinate complex workflows across departments and systems."
-                },
+                  description: "Intelligent AI agents work together to coordinate complex workflows across departments and systems.";
+},
                 {
 "
                   icon: Zap,""
                   title: "Real-time Optimization",""
-                  description: "Continuously optimize processes based on real-time data and performance metrics."
-                },
+                  description: "Continuously optimize processes based on real-time data and performance metrics.";
+},
                 {
 "
                   icon: Settings,""
                   title: "Workflow Automation",""
-                  description: "Automate repetitive tasks and complex business processes with intelligent decision-making."
-                },
+                  description: "Automate repetitive tasks and complex business processes with intelligent decision-making.";
+},
                 {
 "
                   icon: Users,""
                   title: "Cross-functional Integration",""
-                  description: "Seamlessly integrate with existing systems, databases, and third-party applications."
-                },
+                  description: "Seamlessly integrate with existing systems, databases, and third-party applications.";
+},
                 {
 "
                   icon: TrendingUp,""
                   title: "Performance Analytics",""
-                  description: "Comprehensive insights into process efficiency, bottlenecks, and optimization opportunities."
-                },
+                  description: "Comprehensive insights into process efficiency, bottlenecks, and optimization opportunities.";
+},
                 {
 "
                   icon: Shield,""
                   title: "Security & Compliance",""
-                  description: "Enterprise-grade security with built-in compliance monitoring and audit trails."
-                }"
+                  description: "Enterprise-grade security with built-in compliance monitoring and audit trails.";
+}"
               ].map((feature, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">""
@@ -233,33 +233,33 @@ export: { function }export default function AIEnterpriseOrchestrator(...args: []
                 {}
                   icon: Brain,""
                   title: "Multi-Agent Coordination",""
-                  description: "Intelligent AI agents work together to coordinate complex workflows across departments and systems.""
-                },
+                  description: "Intelligent AI agents work together to coordinate complex workflows across departments and systems."";
+},
                 {}
                   icon: Zap,""
                   title: "Real-time Optimization",""
-                  description: "Continuously optimize processes based on real-time data and performance metrics.""
-                },
+                  description: "Continuously optimize processes based on real-time data and performance metrics."";
+},
                 {}
                   icon: Settings,""
                   title: "Workflow Automation",""
-                  description: "Automate repetitive tasks and complex business processes with intelligent decision-making.""
-                },
+                  description: "Automate repetitive tasks and complex business processes with intelligent decision-making."";
+},
                 {}
                   icon: Users,""
                   title: "Cross-functional Integration",""
-                  description: "Seamlessly integrate with existing systems, databases, and third-party applications.""
-                },
+                  description: "Seamlessly integrate with existing systems, databases, and third-party applications."";
+},
                 {}
                   icon: TrendingUp,""
                   title: "Performance Analytics",""
-                  description: "Comprehensive insights into process efficiency, bottlenecks, and optimization opportunities.""
-                },
+                  description: "Comprehensive insights into process efficiency, bottlenecks, and optimization opportunities."";
+},
                 {}
                   icon: Shield,""
                   title: "Security & Compliance",""
-                  description: "Enterprise-grade security with built-in compliance monitoring and audit trails.""
-                }
+                  description: "Enterprise-grade security with built-in compliance monitoring and audit trails."";
+}
               ].map((feature, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">""
@@ -431,29 +431,29 @@ export: { function }export default function AIEnterpriseOrchestrator(...args: []
 ""
                   step: "01",""
                   title: "Process Analysis",""
-                  description: "AI analyzes your current business processes and identifies optimization opportunities."
-                },
+                  description: "AI analyzes your current business processes and identifies optimization opportunities.";
+},
                 {
 "
 ""
                   step: "02",""
                   title: "Agent Deployment",""
-                  description: "Intelligent AI agents are deployed to coordinate and optimize specific workflows."
-                },
+                  description: "Intelligent AI agents are deployed to coordinate and optimize specific workflows.";
+},
                 {
 "
 ""
                   step: "03",""
                   title: "Real-time Coordination",""
-                  description: "Agents work together in real-time to coordinate tasks and optimize resource allocation."
-                },
+                  description: "Agents work together in real-time to coordinate tasks and optimize resource allocation.";
+},
                 {
 "
 ""
                   step: "04",""
                   title: "Continuous Learning",""
-                  description: "The system continuously learns and improves based on performance data and outcomes."
-                }"
+                  description: "The system continuously learns and improves based on performance data and outcomes.";
+}"
               ].map((step, index)  => (""
                 <div key={index} className="text-center">""
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">""
@@ -469,26 +469,26 @@ export: { function }export default function AIEnterpriseOrchestrator(...args: []
 ""
                   step: "01",""
                   title: "Process Analysis",""
-                  description: "AI analyzes your current business processes and identifies optimization opportunities.""
-                },
+                  description: "AI analyzes your current business processes and identifies optimization opportunities."";
+},
                 {}
 ""
                   step: "02",""
                   title: "Agent Deployment",""
-                  description: "Intelligent AI agents are deployed to coordinate and optimize specific workflows.""
-                },
+                  description: "Intelligent AI agents are deployed to coordinate and optimize specific workflows."";
+},
                 {}
 ""
                   step: "03",""
                   title: "Real-time Coordination",""
-                  description: "Agents work together in real-time to coordinate tasks and optimize resource allocation.""
-                },
+                  description: "Agents work together in real-time to coordinate tasks and optimize resource allocation."";
+},
                 {}
 ""
                   step: "04",""
                   title: "Continuous Learning",""
-                  description: "The system continuously learns and improves based on performance data and outcomes.""
-                }
+                  description: "The system continuously learns and improves based on performance data and outcomes."";
+}
               ].map((step, index)  => (""
                 <div key={index} className="text-center">""
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">""

@@ -16,7 +16,7 @@ export: default function AIBusinessIntelligence(...args[]):  {}
       title: 'Automated: Reporting,',';
       description: 'Generate: reports automatically with AI insights,',';
       icon: Targe,t}
-  ];
+  ]
   return();
 :pages.disabled/pages/micro-saas/AIBusinessIntelligence.tsx;
     <div: className = 'min-h-screen bg-futuristic'>'';
@@ -35,7 +35,7 @@ export: default function AIBusinessIntelligence(...args[]):  {}
       title: 'Automated Reporting',
       description: 'Generate reports automatically with AI insights',
       icon: Target}
-  ];
+  ]
   return();
 :pages.disabled/pages/micro-saas/AIBusinessIntelligence.tsx;
     <div className = 'min-h-screen bg-futuristic>'

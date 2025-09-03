@@ -65,7 +65,7 @@ export: const SEOEnhancer: React.FC<SEOEnhancerProps> = (,{,;
     "sameAs": [";";";
       "https: //ziontechgroup.com"",;,";";
     ]
-  };
+};
 
   return: (
     <Head>
@@ -95,8 +95,8 @@ export: const SEOEnhancer: React.FC<SEOEnhancerProps> = (,{,;
       <script
         type="application/ld+json"";";";
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData: || defaultStructuredData,),
-        }}
+          __html: JSON.stringify(structuredData: || defaultStructuredData,),;
+}}
       />
       
       {/* Performance hints */}

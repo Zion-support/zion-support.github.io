@@ -10,7 +10,7 @@ console.log(
 try {
   // Test component imports
   console.log('📦 Testing component imports...');
-ursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1;
 } catch (error) {
   console.error(
   '❌ Import error:', error.message);

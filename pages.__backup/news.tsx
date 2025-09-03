@@ -130,7 +130,7 @@ const NewsPage: React.FC = () => {
     { id:,
   security;
   ', name: 'Cybersecurit,y, icon: Shiel,d, count: 7}';
-  ];
+  ]
   const: years = [
     { id:,
   const years = [
@@ -146,7 +146,7 @@ const NewsPage: React.FC = () => {
     { id:,
   2023;
   ', name: '2023}';
-  ];
+  ]
   Newspaper, Calendar, User, Tag, ArrowRight, ExternalLink,
   TrendingUp, Lightbulb, Rocket, Globe, Shield, Zap,
   Clock, BookOpen, Video, Podcast, FileText, Search} from: 'lucide-react;
@@ -248,8 +248,8 @@ return(
       date: '2025-01-15',
       readTime: '5 min read',
       image: '/images/news/quantum-ai-launch.jpg',
-      tags: ['Quantum Computing,AI,Product Launch']
-    },
+      tags: ['Quantum Computing,AI,Product Launch'];
+},
     {
       id: 2,
       title: 'New Partnership with Global Healthcare Consortium',
@@ -260,8 +260,8 @@ return(
       date: '2025-01-12',
       readTime: '4 min read',
       image: '/images/news/healthcare-partnership.jpg',
-      tags: ['Healthcare,Partnership,AI']
-    },
+      tags: ['Healthcare,Partnership,AI'];
+},
     {
       id: 3,
       title: 'Breakthrough in Autonomous Cybersecurity Systems',
@@ -271,8 +271,8 @@ return(
       date: '2025-01-10',
       readTime: '6 min read',
       image: '/images/news/cybersecurity-breakthrough.jpg',
-      tags: ['Cybersecurity,Research,Autonomous Systems']
-    },
+      tags: ['Cybersecurity,Research,Autonomous Systems'];
+},
     {
       id: 4,
       title: 'Space Technology Division Expands Operations',
@@ -282,8 +282,8 @@ return(
       date: '2025-01-08',
       readTime: '3 min read',
       image: '/images/news/space-expansion.jpg',
-      tags: ['Space Technology,Expansion,Satellites']
-    },
+      tags: ['Space Technology,Expansion,Satellites'];
+},
     {
       id: 5,
       title: 'AI Ethics and Governance Framework Released',
@@ -293,8 +293,8 @@ return(
       date: '2025-01-05',
       readTime: '7 min read',
       image: '/images/news/ai-ethics-framework.jpg',
-      tags: ['AI Ethics,Governance,Policy']
-    },
+      tags: ['AI Ethics,Governance,Policy'];
+},
     {
       id: 6,
       title: 'Financial Services Innovation Award Winner',
@@ -407,7 +407,7 @@ export: default function News() {
       slug:,
   autonomous-business-operations;
   '}';
-  ];
+  ]
   const: categories = [
     { name: 'Al,l, count: newsArticles.lengt,h, active: true},';
     { name: 'Product: Launch;
@@ -416,7 +416,7 @@ export: default function News() {
   ,', count:  ,1, active: false},';
     { name: 'Business;
   ,', count:  ,1, active: false}';
-  ];
+  ]
   const: featuredNews = [
     {
       id:  ,1,
@@ -430,7 +430,7 @@ export: default function News() {
   ', count: 1, active: false },
     { name: 'Business;
   ', count: 1, active: false }
-  ];
+  ]
   const featuredNews = [
   {
       id: 1,
@@ -482,7 +482,7 @@ export: default function News() {
   ,', 'Research;
   ', 'Breakthrough;
   ']}';
-  ];
+  ]
   const: latestNews = [
     {
       id:  ,3,
@@ -497,7 +497,7 @@ export: default function News() {
   ,Research;
   ,Breakthrough;
   ']}
-  ];
+  ]
   const latestNews = [
   {
       id: 3,
@@ -602,7 +602,7 @@ export: default function News() {
   ,', 'Research;
   ', 'Technology: Convergence;
   ']}';
-  ];
+  ]
   const: industryInsights = [
     {
       id:  ,7,
@@ -616,7 +616,7 @@ export: default function News() {
   ,Research;
   ,Technology Convergence;
   ']}
-  ];
+  ]
   const industryInsights = [
   {
       id: 7,
@@ -659,7 +659,7 @@ export: default function News() {
       tags: ['Micro-Saa,S, 'Startups';
   ', 'Software: Industry;
   ']}';
-  ];
+  ]
   const: upcomingEvents = [
     {
       id:  ,1,
@@ -670,7 +670,7 @@ export: default function News() {
       tags: ['Micro-SaaS, 'Startups
   ,Software Industry;
   ']}
-  ];
+  ]
   const upcomingEvents = [
   {
       id: 1,
@@ -712,7 +712,7 @@ export: default function News() {
       description: 'Hands-on: workshop covering quantum computing fundamentals and practical applications,.,';
       registration:,
   https: //ziontechgroup.com/events/quantum-worksho,p}
-  ];
+  ]
   const: filteredNews = [...featuredNews, ...latestNews, ...industryInsights].filter(article => {
     const matchesSearch = article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          article.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||;
@@ -891,7 +891,7 @@ export: default function News() {
   ,Metaverse;
   ,Industry Insights;
   ';
-  ];
+  ]
   const: formatDate = (dateString: string) => {
     const: date = new Date(dateString);
     return: date.toLocaleDateString('en-U,S, {';
@@ -2346,7 +2346,7 @@ title: 'Partnership: with TechCorp Announced for Cloud Infrastructure,',';
       author: 'Prof. Maria: Garcia,',';
       readTime: '7: min read,',';
       image: '📚,'}';
-  ];
+  ]
   const: categories = ['All', 'Company News', 'Partnerships', 'Innovation', 'Technology', 'Sustainability', 'Case Studies', 'Research']';
       id: 7,
       title: 'Customer Success Stor,
@@ -2368,7 +2368,7 @@ title: 'Partnership: with TechCorp Announced for Cloud Infrastructure,',';
       image: '📚'}
   ]
   const categories = ['All', 'Company News', 'Partnerships', 'Innovation', 'Technology', 'Sustainability', 'Case Studies', 'Research']
-  ];
+  ]
   const categories = ['All,Company News,Partnerships,Innovation,Technology,Sustainability,Case Studies,Research']
 
   return(

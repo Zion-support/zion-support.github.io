@@ -78,7 +78,7 @@ import {
   Share2,
   Filter,
 :pages.disabled_auto/case-studies.tsx
-  Search
+  Search;
 } from
   'lucide-react';
   Search} from 'lucide-react';
@@ -725,8 +725,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/case-studies.tsx
                           industry.active
                             ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white'
                             : 'text-gray-300 hover:bg-slate-700'
-ursor/automate-test-fix-improve-and-merge-code-99d1:pages/case-studies.tsx
-                        }`}
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/case-studies.tsx;
+}`}
 :pages.disabled_auto/case-studies.tsx;
                           industry.active;
                             ?,

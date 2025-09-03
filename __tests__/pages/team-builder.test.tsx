@@ -614,8 +614,8 @@ global.fetch = jest.fn();
       target: { valu,
     e: '$1000 }})
       json: async () => ({ error:,
-  AI failed miserably
-   })});
+  AI failed miserably;
+})});
     render(<TeamBuilderPage />);
     // Fill form quickly to get to submit;
     fireEvent.input(screen.getByLabelText(/Project Name/i), {

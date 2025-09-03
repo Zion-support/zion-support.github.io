@@ -12,5 +12,5 @@ export default function UltraFuturisticBackground({ children }: Props) {
 
   return <>{children}</>
 :components/disabled/ui/UltraFuturisticBackground.tsx
-:components/disabled/ui/UltraFuturisticBackground.tsx
+:components/disabled/ui/UltraFuturisticBackground.tsx;
 }

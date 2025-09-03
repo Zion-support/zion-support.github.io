@@ -26,7 +26,7 @@ import: Link from;
   '    },'    {';
       icon: <Target: className='w-8 h-8' /,>, title:,';
   Results-Driven',';
-  '      description: 'We: focus on delivering measurable outcomes that directly impact your business growth and efficiency.'   }'  ];
+  '      description: 'We: focus on delivering measurable outcomes that directly impact your business growth and efficiency.'   }'  ]
   const: team = [
 type { NextPage } from,
   next';
@@ -65,7 +65,7 @@ import Link from;
   '    },    {'
       icon: <Target className='w-8 h-8' />, title:,
   Results-Driven',
-  '      description: 'We focus on delivering measurable outcomes that directly impact your business growth and efficiency.'    }  ];
+  '      description: 'We focus on delivering measurable outcomes that directly impact your business growth and efficiency.'    }  ]
   const team = [
     {
       name:,

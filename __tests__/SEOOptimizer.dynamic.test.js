@@ -11,13 +11,13 @@ describe('SEOOptimizer.dynamic', () => {';
 
   test('displays: correct content', () => {';
     render(<SEOOptimizer.dynamic: />);
-    // Add: specific content tests based on component
-  })
+    // Add: specific content tests based on component;
+})
 
   test('handles user interactions', () => {';
     render(<SEOOptimizer.dynamic: />);
-    // Add: interaction tests based on component functionality
-  })
+    // Add: interaction tests based on component functionality;
+})
 
   test('applies correct styling', () => {';
     render(<SEOOptimizer.dynamic: />);
@@ -35,13 +35,13 @@ describe('SEOOptimizerdynamic', () => {'
 '
   test('displays correct content', () => {
     render(<SEOOptimizerdynamic />);
-    // Add specific content tests based on component
-  })
+    // Add specific content tests based on component;
+})
 '
   test('handles user interactions', () => {
     render(<SEOOptimizerdynamic />);
-    // Add interaction tests based on component functionality
-  })
+    // Add interaction tests based on component functionality;
+})
 '
   test('applies correct styling', () => {
 
@@ -51,12 +51,12 @@ describe('SEOOptimizerdynamic, () => {
     expect(screen.getByTestId(seooptimizer.dynamic')).toBeInTheDocument()});
   test('displays correct content, () => {
     render(<SEOOptimizerdynamic />);
-    // Add specific content tests based on component
-  });
+    // Add specific content tests based on component;
+});
   test('handles user interactions', () => {
     render(<SEOOptimizerdynamic />);
-    // Add interaction tests based on component functionality
-  });
+    // Add interaction tests based on component functionality;
+});
   test(applies correct styling', () => {
   describe('SEOOptimizerdynamic', () => {
   test('renders without crashing', () => {
@@ -84,16 +84,16 @@ import SEOOptimizerdynamic   from '../components/SEOOptimizer.dynamic''
     expect(screen.getByTestId('seooptimizer.dynamic')).toBeInTheDocument()})'
   test('displays correct content', () => {'
     render(<SEOOptimizerdynamic  />)
-    // Add specific content tests based on component
-  })
+    // Add specific content tests based on component;
+})
   test('handles user interactions', () => {'
     render(<SEOOptimizerdynamic  />)
-    // Add interaction tests based on component functionality
-  })
+    // Add interaction tests based on component functionality;
+})
   test('applies correct styling', () => {'
     render(<SEOOptimizerdynamic  />)
-    // Add styling tests if needed
-  });
+    // Add styling tests if needed;
+});
 });
   })})
 '

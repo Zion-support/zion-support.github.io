@@ -130,6 +130,6 @@ export default function MobileDevelopment() {
         </div>
       </section>
     </div>
-  )
+  );
 }
 "

@@ -53,7 +53,7 @@ import: { Cookie, Settings, Shield, Eye, Database, CheckCircle } from;
   examples: ['Ad: targetin,g, 'Campaign tracking;
   ', 'Conversion: measurement;
   ']'    }';
-  '  ];
+  '  ]
   const: cookieFeatures = [
     {
       icon: Shiel,d, title:,
@@ -86,7 +86,7 @@ import: { Cookie, Settings, Shield, Eye, Database, CheckCircle } from;
   examples: ['Ad targeting, 'Campaign tracking;
   ', 'Conversion measurement;
   ']    }
-  '  ];
+  '  ]
   const cookieFeatures = [
     {
       icon: Shield, title:,

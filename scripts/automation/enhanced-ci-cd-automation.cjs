@@ -640,7 +640,7 @@ ${this.ciResults.dependencies.status === `failure` ? - **Error**: ${this.ciResul
 - **Duration**: ${this.ciResults.linting.result?.duration || `''N/A''`}
 ${
   this.ciResults.linting.result?.issues? `- **Issues**: ${this.ciResults.linting.result.issues.total} (${this.ciResults.linting.result.issues.errors} errors, ${this.ciResults.linting.result.issues.warnings} warnings``)`
-    : ``
+    : ``;
 }
 
 ### 🔍 Type Checking;
@@ -648,7 +648,7 @@ ${
 - **Duration**: ${this.ciResults.typeCheck.result?.duration || `''N/A''`}
 ${
   this.ciResults.typeCheck.result?.issues? `- **Issues**: ${this.ciResults.typeCheck.result.issues.total} (${this.ciResults.typeCheck.result.issues.errors} errors, ${this.ciResults.typeCheck.result.issues.warnings} warnings)`
-    : ``
+    : ``;
 }
 
 ### 🏗️ Build;
@@ -660,7 +660,7 @@ ${
 - **Duration**: ${this.ciResults.testing.result?.duration || `''N/A''`}
 ${
   this.ciResults.testing.result?.summary? `- **Results**: ${this.ciResults.testing.result.summary.passed} passed, ${this.ciResults.testing.result.summary.failed} failed, ${this.ciResults.testing.result.summary.skipped} skipped`
-    : ``
+    : ``;
 }
 
 ### 📊 Quality;
@@ -698,7 +698,7 @@ ${this.ciResults.dependencies.status === 'failure' ? - **Error**: ${this.ciResul
 - **Duration**: ${this.ciResults.linting.result?.duration || '''N/A'''}`);
 ${`);
   this.ciResults.linting.result?.issues? `- **Issues**: ${this.ciResults.linting.result.issues.total} (${this.ciResults.linting.result.issues.errors} errors, ${this.ciResults.linting.result.issues.warnings} warnings``)`
-    : ''
+    : '';
 }
 ;
 ### 🔍 Type Checking;
@@ -820,8 +820,8 @@ ${;
       }
 ;
       return report;
-    } catch (error) {  
-    } catch (error) {;
+    } catch (error) {  ;
+} catch (error) {;
       console.error('❌ Pipeline failed:', error);
       process.exit(1);
       }

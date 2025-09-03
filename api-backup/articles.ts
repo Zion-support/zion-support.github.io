@@ -14,7 +14,7 @@ interface HelpArticle {
     e: string;
   conten,
     t: string;
-  // Or perhaps a summary if content is too large
+  // Or perhaps a summary if content is too large;
 }
 
 interface ErrorResponse {
@@ -22,5 +22,5 @@ interface ErrorResponse {
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  // Implementation here
+  // Implementation here;
 }

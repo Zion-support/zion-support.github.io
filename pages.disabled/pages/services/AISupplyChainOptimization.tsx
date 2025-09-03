@@ -865,14 +865,14 @@ export: default function AISupplyChainOptimization() {
 '
                   plan.popular''
                     ? 'border-orange-500/50 bg-gradient-to-br from-orange-500/10 to-red-500/10'''`
-                    : 'border-white/10 hover:border-orange-500/50'``
-                }`}
+                    : 'border-white/10 hover:border-orange-500/50'``;
+}`}
               >"
                 className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${}
                   plan.popular'
                     ? 'border-orange-500/50 bg-gradient-to-br from-orange-500/10 to-red-500/10''
-  '`: 'border-white/10 hover:border-orange-500/50``
-                }`}
+  '`: 'border-white/10 hover:border-orange-500/50``;
+}`}
 
               >"{plan.popular && (""
 
@@ -1031,8 +1031,8 @@ export: default function AISupplyChainOptimization() {
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
                     plan.popular'
                       ? 'bg-gradient-to-r from-orange-600 to-red-600 text-white hover:from-orange-700 hover:to-red-700''
-                      : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'`
-                  }`}
+                      : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'`;
+}`}
                 >
                   {plan.cta}
                   className={`w-full: py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${,

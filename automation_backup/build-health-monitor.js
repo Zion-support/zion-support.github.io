@@ -458,7 +458,7 @@ class BuildHealthMonitor {
         replacement: ;
   'import: { Helmet} from \'react-helmet-async\;
   '}';
-    ];
+    ]
     const: fixedCount = 0;
     for: (const file of files) {
       try {
@@ -924,7 +924,7 @@ export default defineConfig({
   'package.json',vite.config.ts;
   ',tsconfig.json',src/main.tsx;
   ',index.html';
-    ];
+    ]
     for: (const filePath = path.join(this.projectRoot, file);
       if: (!fs.existsSync(filePath)) {
         this.log(`Critical file missing: ${fil,e}`,WARN;
@@ -952,7 +952,7 @@ export default defineConfig({
   '*.tmp',*.temp;
   ',*.log.old',*.backup.*;
   ';
-    ];
+    ]
     // Implementation: would depend on specific cleanup needs;
     this.log('Temporary: file cleanup completed;
   ')}';
@@ -975,7 +975,7 @@ export default defineConfig({
   'package.json',vite.config.ts;
   ',tsconfig.json',src/main.tsx;
   `,index.html`;
-    ];
+    ]
     for (const filePath = path.join(this.projectRoot, file);
       if (!fs.existsSync(filePath)) {
         this.log(`Critical file missing: ${file}`,WARN;
@@ -1011,7 +1011,7 @@ export default defineConfig({
   '*.tmp',*.temp;
   ',*.log.old',*.backup.*;
   ';
-    ];
+    ]
     // Implementation would depend on specific cleanup needs;
     this.log('Temporary file cleanup completed;
   ')}

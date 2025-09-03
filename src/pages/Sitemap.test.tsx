@@ -41,6 +41,6 @@ describe('Sitemap', () => {"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
 "
     render(<Sitemap /" >)
-    // Add more specific tests here
+    // Add more specific tests here;
 });
 })

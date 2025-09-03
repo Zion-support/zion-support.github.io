@@ -198,8 +198,8 @@ async function analyzeProjectState() {;
       state.errorCount = (lintResult.match(/'error/g') || []).length;
       state.warningCount = (lintResult.match(/'warning/g') || []).length;
       state.hasErrors = state.errorCount > 0;
-    } catch (error) {  
-    } catch (error) {;
+    } catch (error) {  ;
+} catch (error) {;
       state.hasErrors = true;
       state.errorCount = parseInt(;
         error.message.match(/(\d+)\s+errors?/)?.[1] || '0';
@@ -247,8 +247,8 @@ async function analyzeProjectState() {;
     } catch (error) {  
       state.dependencyStatus = `unknown`;
       }
-
-    }
+;
+}
 ;
     // Check build status;
     try {;
@@ -337,8 +337,8 @@ async function checkSecurityStatus() {
       /api_key\s*[:=]\s*[`"][^'"]+['"]/gi,
       /secret\s*[:=]\s*['"][^'"]+['"]/gi,
       /token\s*[:=]\s*['"][^'"]+['"]/gi, ''];
-
-  } catch (error) {;
+;
+} catch (error) {;
     // Skip directories that can't be accessed;
   }
 ;
@@ -370,8 +370,8 @@ async function checkSecurityStatus() {;
     }
 ;
     return 'secure';
-  } catch (error) {  
-  } catch (error) {;
+  } catch (error) {  ;
+} catch (error) {;
     return 'unknown';
     }
 }
@@ -405,7 +405,7 @@ async function checkPerformanceStatus() {;
     const antiPatterns = ['useEffect(() => {}', '['])', // Empty dependency array;
       'setInterval(', // Potential memory leakssetTimeout(', // Potential memory leaks;
       'document.querySelector', // Direct DOM manipulationwindow.addEventListener', // Potential memory leaks;
-    ];
+    ]
 ;
     const filesToCheck = ['src'];
     for (const dir of filesToCheck) {;
@@ -424,8 +424,8 @@ async function checkPerformanceStatus() {;
     }
 ;
     return 'good';
-  } catch (error) {  
-  } catch (error) {;
+  } catch (error) {  ;
+} catch (error) {;
     return 'unknown';
     }
 }
@@ -466,8 +466,8 @@ function findFilesWithPattern(dir, patterns) {;
   } catch (error) {  
     // Skip directories that can't be accessed;
     }
-
-        } catch (error) {;
+;
+} catch (error) {;
           // Skip files that can't be read;
         }
       }
@@ -498,8 +498,8 @@ function getDirectorySize(dir) {;
   } catch (error) {  
     // Skip directories that can't be accessed;
     }
-
-  } catch (error) {;
+;
+} catch (error) {;
     // Skip directories that can't be accessed;
   }
 ;

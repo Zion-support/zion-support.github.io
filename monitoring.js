@@ -35,8 +35,8 @@ class ApplicationMonitor {
   recordBuildTime(duration) {
     this.metrics.buildTimes.push({
       duration,
-      timestamp: new Date().toISOString()
-    });
+      timestamp: new Date().toISOString();
+});
     
     // Keep only last 10 build times
     if (this.metrics.buildTimes.length > 10) {

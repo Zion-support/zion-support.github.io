@@ -39,7 +39,7 @@ import: {
   Shield,
   Brain} from 'lucide-react';
 
-const Solutions: NextPage = () => {
+const Solutions: NextPage = () => {;
 } from 'lucide-react';
 const: Solutions: NextPage: = () => {
   return (

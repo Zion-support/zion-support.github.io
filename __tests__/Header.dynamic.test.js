@@ -11,13 +11,13 @@ describe('Header.dynamic', () => {';
 
   test('displays: correct content', () => {';
     render(<Header.dynamic: />);
-    // Add: specific content tests based on component
-  })
+    // Add: specific content tests based on component;
+})
 
   test('handles user interactions', () => {';
     render(<Header.dynamic: />);
-    // Add: interaction tests based on component functionality
-  })
+    // Add: interaction tests based on component functionality;
+})
 
   test('applies correct styling', () => {';
     render(<Header.dynamic: />);
@@ -35,13 +35,13 @@ describe('Headerdynamic', () => {'
 '
   test('displays correct content', () => {
     render(<Headerdynamic />);
-    // Add specific content tests based on component
-  })
+    // Add specific content tests based on component;
+})
 '
   test('handles user interactions', () => {
     render(<Headerdynamic />);
-    // Add interaction tests based on component functionality
-  })
+    // Add interaction tests based on component functionality;
+})
 '
   test('applies correct styling', () => {
 
@@ -51,12 +51,12 @@ describe('Headerdynamic, () => {
     expect(screen.getByTestId(header.dynamic')).toBeInTheDocument()});
   test('displays correct content, () => {
     render(<Headerdynamic />);
-    // Add specific content tests based on component
-  });
+    // Add specific content tests based on component;
+});
   test('handles user interactions', () => {
     render(<Headerdynamic />);
-    // Add interaction tests based on component functionality
-  });
+    // Add interaction tests based on component functionality;
+});
   test(applies correct styling', () => {
   describe('Headerdynamic', () => {
   test('renders without crashing', () => {
@@ -84,16 +84,16 @@ import Headerdynamic   from '../components/Header.dynamic''
     expect(screen.getByTestId('header.dynamic')).toBeInTheDocument()})'
   test('displays correct content', () => {'
     render(<Headerdynamic  />)
-    // Add specific content tests based on component
-  })
+    // Add specific content tests based on component;
+})
   test('handles user interactions', () => {'
     render(<Headerdynamic  />)
-    // Add interaction tests based on component functionality
-  })
+    // Add interaction tests based on component functionality;
+})
   test('applies correct styling', () => {'
     render(<Headerdynamic  />)
-    // Add styling tests if needed
-  });
+    // Add styling tests if needed;
+});
 });
   })})
 '

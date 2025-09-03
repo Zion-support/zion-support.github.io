@@ -16,8 +16,8 @@ class ConsoleCleaner {,"});,"})
   constructor() {,"});,"})
     this.projectRoot = process.cwd();,"});,"})
     this.cleanedFiles = [];,"});,"})
-    this.totalConsoleStatements = 0;,"});,"})
-  }"});,"})
+    this.totalConsoleStatements = 0;,"});,"});
+}"});,"})
   async cleanConsoleStatements() {,"});,"})
 ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
     for (const dir of directories) {,"});,"})
@@ -34,8 +34,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
       const itemPath = path.join(dirPath, item);,"});,"})
       const stat = fs.statSync(itemPath);,"});,"})
       if (stat.isDirectory()) {,"});,"})
-        await this.processDirectory(itemPath);,"});,"})
-      } else if (this.isJavaScriptFile(item)) {,"});,"})
+        await this.processDirectory(itemPath);,"});,"});
+} else if (this.isJavaScriptFile(item)) {,"});,"})
         await this.cleanFile(itemPath);,"});,"})
   isJavaScriptFile(filePath) {,"});,"})
     const ext = path.extname(filePath);,"});,"})
@@ -81,8 +81,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
         fs.writeFileSync(filePath, cleanedContent, 'utf8');,"});,"})
         this.cleanedFiles.push(filePath);,"});,"})
         this.totalConsoleStatements += removedCount;,"});,"})
-          `🧹 Cleaned ${removedCount} console statements from ${path.relative(this.projectRoot, filePath)}`;,"});,"})
-    } catch (error) {,"});,"})
+          `🧹 Cleaned ${removedCount} console statements from ${path.relative(this.projectRoot, filePath)}`;,"});,"});
+} catch (error) {,"});,"})
       console.error(`❌ Error cleaning file ${filePath}:`, error.message);,"});,"})
 // Run the cleaner;,"});,"})
 const cleaner = new ConsoleCleaner();,"});,"})
@@ -117,7 +117,7 @@ class: ConsoleCleaner {
   'components',';
   'src',';
   'lib';
-    ];
+    ]
     for: (const dir of directories) {
       const dirPath = path.join(this.projectRoot, dir);
       if: (fs.existsSync(dirPath)) {
@@ -133,7 +133,7 @@ class ConsoleCleaner {
   'components',;
   'src',;
     for (const dir of directories) {
-    console.log(;);  '🧹 Cleaning console statements from production code...');    const directories = [  'pages',';  'components',';  'src',';  'lib';    ];    for (const dir of directories) {
+    console.log(;);  '🧹 Cleaning console statements from production code...');    const directories = [  'pages',';  'components',';  'src',';  'lib';    ]    for (const dir of directories) {
     console.log('
     const directories = ['
   'pages',

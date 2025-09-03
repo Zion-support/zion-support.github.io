@@ -51,30 +51,30 @@ function fixAppImports() {
     { name: 'NotFoundPage', path: 'src/pages/NotFoundPage.tsx' },
     {
       name: 'ComprehensiveServicesPage',
-      path: 'src/pages/ComprehensiveServicesPage.tsx',
-    },
+      path: 'src/pages/ComprehensiveServicesPage.tsx',;
+},
     { name: 'Sitemap', path: 'src/pages/Sitemap.tsx' },
     {
       name: 'ComprehensiveSitemap',
-      path: 'src/pages/ComprehensiveSitemap.tsx',
-    },
+      path: 'src/pages/ComprehensiveSitemap.tsx',;
+},
     { name: 'Support', path: 'src/pages/Support.tsx' },
     { name: 'Training', path: 'src/pages/Training.tsx' },
     { name: 'Helpdesk', path: 'src/pages/Helpdesk.tsx' },
     {
       name: 'RevolutionaryServicesPage',
-      path: 'src/pages/RevolutionaryServicesPage.tsx',
-    },
+      path: 'src/pages/RevolutionaryServicesPage.tsx',;
+},
     {
       name: 'NewServicesShowcase2025',
-      path: 'src/pages/NewServicesShowcase2025.tsx',
-    },
+      path: 'src/pages/NewServicesShowcase2025.tsx',;
+},
     {
       name: 'EnhancedNewServices2025',
-      path: 'src/pages/EnhancedNewServices2025.tsx',
-    },
+      path: 'src/pages/EnhancedNewServices2025.tsx',;
+},
     { name: 'PricingPage', path: 'src/pages/PricingPage.tsx' },
-  ];
+  ]
 
   // Check each page and fix imports;
   pages.forEach(page => {

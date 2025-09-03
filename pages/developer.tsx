@@ -13,7 +13,7 @@ import {
   CheckCircle,
   Zap,
   Globe,
-  Database
+  Database;
 } from 'lucide-react';
 
 const Developer: NextPage = () => {
@@ -28,8 +28,8 @@ const Developer: NextPage = () => {
         'Code Examples',
         'Best Practices'
       ],
-      link: '/docs'
-    },
+      link: '/docs';
+},
     {
       icon: Code,
       title: 'Code Samples',
@@ -40,8 +40,8 @@ const Developer: NextPage = () => {
         'Python Scripts',
         'Mobile SDKs'
       ],
-      link: '/examples'
-    },
+      link: '/examples';
+},
     {
       icon: Users,
       title: 'Community',
@@ -52,9 +52,9 @@ const Developer: NextPage = () => {
         'Stack Overflow',
         'Developer Blog'
       ],
-      link: '/community'
-    }
-  ];
+      link: '/community';
+}
+  ]
 
   const tutorials = [
     {
@@ -62,50 +62,50 @@ const Developer: NextPage = () => {
       description: 'Learn how to integrate AI services into your application',
       duration: '15 min read',
       difficulty: 'Beginner',
-      tags: ['AI', 'JavaScript', 'API']
-    },
+      tags: ['AI', 'JavaScript', 'API'];
+},
     {
       title: 'Cloud Deployment Best Practices',
       description: 'Deploy your applications to the cloud with confidence',
       duration: '25 min read',
       difficulty: 'Intermediate',
-      tags: ['Cloud', 'DevOps', 'AWS']
-    },
+      tags: ['Cloud', 'DevOps', 'AWS'];
+},
     {
       title: 'Building Scalable APIs',
       description: 'Create robust and scalable API endpoints',
       duration: '30 min read',
       difficulty: 'Advanced',
-      tags: ['API', 'Node.js', 'Performance']
-    }
-  ];
+      tags: ['API', 'Node.js', 'Performance'];
+}
+  ]
 
   const tools = [
     {
       name: 'Zion CLI',
       description: 'Command-line interface for managing your projects',
       icon: Code,
-      link: '/cli'
-    },
+      link: '/cli';
+},
     {
       name: 'API Explorer',
       description: 'Interactive tool for testing our APIs',
       icon: Globe,
-      link: '/api-explorer'
-    },
+      link: '/api-explorer';
+},
     {
       name: 'Code Generator',
       description: 'Generate boilerplate code for common patterns',
       icon: Zap,
-      link: '/generator'
-    },
+      link: '/generator';
+},
     {
       name: 'Database Manager',
       description: 'Manage your databases with our web interface',
       icon: Database,
-      link: '/database'
-    }
-  ];
+      link: '/database';
+}
+  ]
 
   return (
     <>
@@ -192,8 +192,8 @@ const Developer: NextPage = () => {
                       <span className={`px-3 py-1 rounded-full text-sm font-medium ${
                         tutorial.difficulty === 'Beginner' ? 'bg-green-100 text-green-800' :
                         tutorial.difficulty === 'Intermediate' ? 'bg-yellow-100 text-yellow-800' :
-                        'bg-red-100 text-red-800'
-                      }`}>
+                        'bg-red-100 text-red-800';
+}`}>
                         {tutorial.difficulty}
                       </span>
                       <span className="text-sm text-gray-500">{tutorial.duration}</span>

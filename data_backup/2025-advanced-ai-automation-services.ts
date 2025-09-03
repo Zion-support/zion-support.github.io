@@ -306,7 +306,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com';
 };
 
 export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
@@ -367,8 +367,8 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     launchDate: '2025-01-20',
     customers: 89,
     rating: 4.8,
-    reviews: 67
-  },
+    reviews: 67;
+},
   {
     reviews: 67},
   {'
@@ -415,8 +415,8 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     launchDate: '2025-02-15',
     customers: 45,
     rating: 4.7,
-    reviews: 32
-  },
+    reviews: 32;
+},
   {
     reviews: 32},
   {'
@@ -463,8 +463,8 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     launchDate: '2025-01-25',
     customers: 156,
     rating: 4.9,
-    reviews: 98
-  },
+    reviews: 98;
+},
   {
     reviews: 98},
   {'
@@ -511,8 +511,8 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     launchDate: '2025-02-10',
     customers: 234,
     rating: 4.8,
-    reviews: 145
-  },
+    reviews: 145;
+},
   {
     reviews: 145},
   {'
@@ -559,8 +559,8 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     launchDate: '2025-02-20',
     customers: 67,
     rating: 4.6,
-    reviews: 43
-  }
+    reviews: 43;
+}
 ];
 
 export default advancedAIAutomationServices2025;

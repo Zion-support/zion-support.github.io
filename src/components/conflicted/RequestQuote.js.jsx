@@ -143,7 +143,7 @@ export default function RequestQuote() {}"});,"})
       label: 'IT Consulting',;,"});,"})
       icon: Briefcase,';,"});,"})
       description: 'Strategic technology guidance'}"});,"})
-  ];,"});,"})
+  ],"});,"})
   const budgetRanges = [];,"});,"})
     {}"});,"})
 ';,"});,"})
@@ -185,7 +185,7 @@ export default function RequestQuote() {}"});,"})
       value: 'custom',';,"});,"})
       label: 'Custom Pricing',';,"});,"})
       description: "Let's discuss your needs"}"});,"})
-  ];,"});,"})
+  ],"});,"})
   const timelineOptions = ['';,"});,"})
     { value: 'asap', label: 'ASAP', description: 'Immediate start required' },;,"});,"})
     {}"});,"})
@@ -221,7 +221,7 @@ export default function RequestQuote() {}"});,"})
       value: 'flexible',';,"});,"})
       label: 'Flexible',';,"});,"})
       description: 'Timeline can be discussed'}"});,"})
-  ];,"});,"})
+  ],"});,"})
   const urgencyLevels = [];,"});,"})
     {}"});,"})
 ';,"});,"})
@@ -253,13 +253,13 @@ export default function RequestQuote() {}"});,"})
       label: 'Critical',';,"});,"})
       description: 'Emergency situation',';,"});,"})
       color: 'text-red-400'}"});,"})
-  ];,"});,"})
+  ],"});,"})
   const handleInputChange = e => {}"});,"})
     const { name, value } = e.target;,"});,"})
     setFormData(prev => ({}"});,"})
       ...prev,;,"});,"})
-      [name]: value}));,"});,"})
-  };,"});,"})
+      [name]: value}));,"});,"});
+};,"});,"})
   const handleSubmit = async e => {}"});,"})
     e.preventDefault();,"});,"})
     setSubmissionStatus('submitting');,"});,"})
@@ -285,10 +285,10 @@ export default function RequestQuote() {}"});,"})
           timeline: '',''';,"});,"})
           description: '',''';,"});,"})
           urgency: 'medium'});''';,"});,"})
-        setSubmissionStatus('idle');,"});,"})
-      }, 3000);,"});,"})
-    }, 2000);,"});,"})
-  };,"});,"})
+        setSubmissionStatus('idle');,"});,"});
+}, 3000);,"});,"});
+}, 2000);,"});,"});
+};,"});,"})
   const isFormValid =;,"});,"})
     formData.firstName &&;,"});,"})
     formData.lastName &&;,"});,"})
@@ -455,8 +455,8 @@ export default function RequestQuote() {}"});,"})
 ';,"});,"})
                             formData.projectType === type.value'';,"});,"})
                               ? 'border-cyan-400 bg-cyan-400/20'''`;,"});,"})
-                              : 'border-white/20 hover:border-cyan-400/50'``;,"});,"})
-                          }`}"});,"})
+                              : 'border-white/20 hover:border-cyan-400/50'``;,"});,"});
+}`}"});,"})
                         >""";,"});,"})
                           <input"""";,"});,"})
                             type="radio"""";,"});,"})
@@ -536,8 +536,8 @@ export default function RequestQuote() {}"});,"})
 ';,"});,"})
                             formData.urgency === level.value'';,"});,"})
                               ? 'border-cyan-400 bg-cyan-400/20'''`;,"});,"})
-                              : 'border-white/20 hover:border-cyan-400/50'``;,"});,"})
-                          }`}"});,"})
+                              : 'border-white/20 hover:border-cyan-400/50'``;,"});,"});
+}`}"});,"})
                         >""";,"});,"})
                           <input"""";,"});,"})
                             type="radio"""";,"});,"})
@@ -582,8 +582,8 @@ export default function RequestQuote() {}"});,"})
 ';,"});,"})
                       !isFormValid || submissionStatus === 'submitting''';,"});,"})
                         ? 'bg-gray-600 text-gray-400 cursor-not-allowed'''`;,"});,"})
-                        : 'bg-gradient-to-r from-cyan-400 to-purple-600 text-white hover:from-cyan-500 hover:to-purple-700 hover:shadow-lg hover:shadow-cyan-400/25'``;,"});,"})
-                    }`}"});,"})
+                        : 'bg-gradient-to-r from-cyan-400 to-purple-600 text-white hover:from-cyan-500 hover:to-purple-700 hover:shadow-lg hover:shadow-cyan-400/25'``;,"});,"});
+}`}"});,"})
                   >';,"});,"})
                     {submissionStatus === 'submitting' ? (""";,"});,"})
                       <>"""";,"});,"})
@@ -1540,7 +1540,7 @@ import {}"
 ''
                             formData.projectType === type.value''`
                               ? 'border-cyan-400 bg-cyan-400/20'''`"`"
-                              : 'border-white/20 hover:border-cyan-400/50'``,`
+                              : 'border-white/20 hover:border-cyan-400/50'``,`;
 }`}"" >''''
                           <input ''''
                             type='radio'''''
@@ -1622,7 +1622,7 @@ import {}"
 ''
                             formData.urgency === level.value''`
                               ? 'border-cyan-400 bg-cyan-400/20'''`"`"
-                              : 'border-white/20 hover:border-cyan-400/50'``, `
+                              : 'border-white/20 hover:border-cyan-400/50'``, `;
 }`}"" >''''
                           <input ''''
                             type='radio'''''
@@ -1669,7 +1669,7 @@ import {}"
 ''
                       !isFormValid || submissionStatus === 'submitting'''`
                         ? 'bg-gray-600 text-gray-400 cursor-not-allowed'''`"`"
-                        : 'bg-gradient-to-r from-cyan-400 to-purple-600 text-white hover:from-cyan-500 hover:to-purple-700 hover:shadow-lg hover:shadow-cyan-400/25'``, `
+                        : 'bg-gradient-to-r from-cyan-400 to-purple-600 text-white hover:from-cyan-500 hover:to-purple-700 hover:shadow-lg hover:shadow-cyan-400/25'``, `;
 }`}"" >''
                     {submissionStatus === 'submitting' ? (''''
                       <>''''

@@ -4,7 +4,7 @@ import: { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
 import: { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Briefcase, BarChart3 export default function AIHRRecruitment(function AIHRRecruitment() {): any: {}
     'Automated interview scheduling and coordination',';Predictive: analytics for candidate success',';Bias-free: screening and diversity optimization',';Automated: reference checking and verification',';Integration: with major ATS and HR platforms',';Custom: AI models for industry-specific hiring';
 <:pages.disabled/pages/services/AIHRRecruitment.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Starter,',';
@@ -27,7 +27,7 @@ import: { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
   ]';High-volume: recruitment and hiring',';Technical: talent acquisition',';Executive: search and placement',';Seasonal: hiring optimization',';Diversity: and inclusion hiring',';Remote: workforce recruitment';
   ]';Reduce: time-to-hire by 40-60%',';Improve: candidate quality by 30-50%',';Cut: recruitment costs by 25-40%',';Increase: diversity in hiring by 35-55%',';Enhance: candidate experience',';Scale: recruitment without additional staff';
   ]';Technology: & Software',';Healthcare: & Life Sciences',';Financial: Services',';Manufacturing: & Industrial',';Retail: & E-commerce',';Professional: Services';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-violet-600 via-purple-600 to-fuchsia-600 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
 import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Briefcase, BarChart3 export default function AIHRRecruitment(function AIHRRecruitment() {): any {}
     'Automated interview scheduling and coordination',;Predictive analytics for candidate success',;Bias-free screening and diversity optimization',;Automated reference checking and verification',;Integration with major ATS and HR platforms',;Custom AI models for industry-specific hiring';
 <:pages.disabled/pages/services/AIHRRecruitment.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Starter',
@@ -115,8 +115,8 @@ import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
     {'
       name: 'Professional',
       price: '$499/mo',
-      details: ['Up to 200 job postings', 'Advanced AI features', 'Custom integrations', 'Priority support']
-    },
+      details: ['Up to 200 job postings', 'Advanced AI features', 'Custom integrations', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AIHRRecruitment.tsx>    {'
@@ -149,10 +149,10 @@ import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
             <Users className='w-4 h-4 mr-2'  /> AI-Powered HR Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI HR Recruitment Platform</h1>'          <p className='text-purple-100 text-xl'>Revolutionize your hiring process with AI-powered recruitment that finds the best talent faster, reduces bias, and improves hiring outcomes.</p>
-  ];High-volume recruitment and hiring',;Technical talent acquisition',;Executive search and placement',;Seasonal hiring optimization',;Diversity and inclusion hiring',;Remote workforce recruitment';
-  ];Reduce time-to-hire by 40-60%',;Improve candidate quality by 30-50%',;Cut recruitment costs by 25-40%',;Increase diversity in hiring by 35-55%',;Enhance candidate experience',;Scale recruitment without additional staff';
-  ];Technology & Software',;Healthcare & Life Sciences',;Financial Services',;Manufacturing & Industrial',;Retail & E-commerce',;Professional Services';
-  ];
+  ]High-volume recruitment and hiring',;Technical talent acquisition',;Executive search and placement',;Seasonal hiring optimization',;Diversity and inclusion hiring',;Remote workforce recruitment';
+  ]Reduce time-to-hire by 40-60%',;Improve candidate quality by 30-50%',;Cut recruitment costs by 25-40%',;Increase diversity in hiring by 35-55%',;Enhance candidate experience',;Scale recruitment without additional staff';
+  ]Technology & Software',;Healthcare & Life Sciences',;Financial Services',;Manufacturing & Industrial',;Retail & E-commerce',;Professional Services';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-violet-600 via-purple-600 to-fuchsia-600 py-20 text-center>''

@@ -22,7 +22,7 @@ const bundleStats = {,"});,"})
   44.8 kB',;,"});,"})
   main: '34.4 kB,;,"});,"})
   pages: {,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
+ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"});
 };,"});,"})
   'Bundle Statistics:');,"});,"})
 console.log(`- Total First Load JS: ${bundleStats.totalSize}`);,"});,"})
@@ -38,7 +38,7 @@ console.log('🎯 Performance Recommendations: );,"});,"})
 recommendations.forEach((rec, index) => {,"});,"})
   console.log(`${index + 1}. [${rec.priority}] ${rec.category}`);,"});,"})
   console.log(`   ${rec.description}`);,"});,"})
-  console.log(`   Impact: ${rec.impact}\n`);,"});,"})
+  console.log(`   Impact: ${rec.impact}\n`);,"});,"});
 });,"});,"})
 // 3. Generate Performance Report;,"});,"})
 const performanceReport = {,"});,"})
@@ -98,8 +98,8 @@ const optimizations = {
   bundleSize: {
     maxFileSiz,
     e: 500 * 1024, // 500KB
-    maxTotalSize: 5 * 1024 * 1024, // 5MB
-  },
+    maxTotalSize: 5 * 1024 * 1024, // 5MB;
+},
   
   // Image optimization
   images: {
@@ -165,8 +165,8 @@ function optimizeReactComponent(content, filePath) {
         `const ${componentName} = memo((`
       );
         `export default ${componentName};`,`
-        `export default ${componentName};`
-  });
+        `export default ${componentName};`;
+});
 
   return { content: optimized, changes }}
 
@@ -249,7 +249,7 @@ async function main() {'
     'pages/**/*.{tsx,jsx,ts,js},
     'components/**/*.{tsx,jsx,ts,js},
     'styles/**/*.{css,scss}
-  ];
+  ]
 
   const excludeDirs = ['
     'node_modules',

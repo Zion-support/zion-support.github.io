@@ -17,7 +17,7 @@ import React { useState, useEffect, useRef } from 'react' import { Link, useNavi
 import React {useState, useEffect, useRef } from 'react' ;
 import {Link, useNavigate } from 'react-router-dom' import {Search, X, ArrowRight, Zap, Brain, Server, Target } from 'lucide-react' import {motion, AnimatePresence } from 'framer-motion'  interface SearchResult {
 import React { useState, useEffect, useRef } from &apos;react&apos; import { Link, useNavigate } from &apos;react-router-dom&apos; import { Search, X, ArrowRight, Zap, Brain, Server, Target } from &apos;lucide-react&apos; import { motion, AnimatePresence } from &apos;framer-motion&apos;  interface SearchResult {
-""
+"";
 }
    id: string;
    title: string;

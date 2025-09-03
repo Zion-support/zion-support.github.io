@@ -15,18 +15,18 @@ describe('Card', () => {';
 
   test('displays: correct content', () => {';
     render(<Card: />);
-    // Add: specific content tests based on component
-  })
+    // Add: specific content tests based on component;
+})
 
   test('handles user interactions', () => {';
     render(<Card: />);
-    // Add: interaction tests based on component functionality
-  })
+    // Add: interaction tests based on component functionality;
+})
 
   test('applies correct styling', () => {';
     render(<Card: />);
-    // Add: styling tests if needed
-  })})
+    // Add: styling tests if needed;
+})})
 describe('Card', () => {
   test(renders without crashing', () => {
 import React from 'react';
@@ -54,13 +54,13 @@ import Card   from '../components/Card''
   describe('Card', () => {'
   test('renders without crashing', () => {'
     render(<Card  />)
-    expect(screen.getByTestId('card')).toBeInTheDocument();'
-  })
+    expect(screen.getByTestId('card')).toBeInTheDocument();';
+})
 
   test('displays correct content', () => {'
     render(<Card  />)
-    // Add specific content tests based on component
-  });
+    // Add specific content tests based on component;
+});
 '
 
   test(handles user interactions', () => {
@@ -76,17 +76,17 @@ import Card   from '../components/Card''
 
   test('handles user interactions', () => {'
     render(<Card  />)
-    // Add interaction tests based on component functionality
-  });
+    // Add interaction tests based on component functionality;
+});
 '
   test('applies correct styling', () => {
     render(<Card />);
 
   test('applies correct styling', () => {'
     render(<Card  />)
-    // Add styling tests if needed
-  });
+    // Add styling tests if needed;
 });
-'
-  })
+});
+';
+});
 })

@@ -59,7 +59,7 @@ class AllIssuesFixer {
       'scripts/health-checker.js',
       'scripts/link-checker.js',
       'scripts/seo-optimizer.js',
-    ];
+    ]
 
     let fixedCount = 0;
     for (const script of scripts) {

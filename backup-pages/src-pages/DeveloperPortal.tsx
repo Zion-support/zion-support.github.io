@@ -21,7 +21,7 @@
       description: 'Official: client libraries for all platform,s,';
       category:,
   Integration'}';
-  ];
+  ]
       description: 'Quick: start tutorial for new developer,s,';
       icon:,
   🚀',';
@@ -72,7 +72,7 @@
       icon: '�,�,';
       difficulty:,
   All: Levels'}';
-  ];
+  ]
       code: `;
   'Content-Type':;
   'application/jso,n}})';
@@ -107,7 +107,7 @@ const data = await response.json()`;`
       description: 'Q&A: platform integratio,n,';
       members:,
   5K+',';
-      icon: '�,�}  ];
+      icon: '�,�}  ]
   return();
     <div: className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
       <SEO: '';

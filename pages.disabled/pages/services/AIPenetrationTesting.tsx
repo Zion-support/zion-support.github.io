@@ -4,7 +4,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIPenetrationTesting(function AIPenetrationTesting() {): any: {}
     'Automated security assessment and reporting',';Predictive: analytics for security risks',';Smart: testing methodology and planning',';AI-driven: testing automation and orchestration',';Real-time: testing analytics and insights',';Custom: AI models for testing applications';
 <:pages.disabled/pages/services/AIPenetrationTesting.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Developer,',';
@@ -27,7 +27,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
   ]';Penetration: testing optimization',';Vulnerability: discovery and exploitation',';Security: assessment and reporting',';Testing: methodology and planning',';Testing: automation and orchestration',';Testing: scaling and management';
   ]';Improve: penetration testing performance by 50-80%',';Reduce: testing completion time by 40-70%',';Cut: testing operational costs by 35-65%',';Enhance: testing reliability and scalability',';Optimize: resource utilization',';Scale: testing operations efficiently';
   ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-gray-500 via-slate-500 to-zinc-500 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIPenetrationTesting(function AIPenetrationTesting() {): any {}
     'Automated security assessment and reporting',;Predictive analytics for security risks',;Smart testing methodology and planning',;AI-driven testing automation and orchestration',;Real-time testing analytics and insights',;Custom AI models for testing applications';
 <:pages.disabled/pages/services/AIPenetrationTesting.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Developer',
@@ -115,8 +115,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     {'
       name: 'Business',
       price: '$1,999/mo',
-      details: ['Up to 20 applications', 'Advanced AI features', 'Enhanced testing', 'Priority support']
-    },
+      details: ['Up to 20 applications', 'Advanced AI features', 'Enhanced testing', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AIPenetrationTesting.tsx>    {'
@@ -149,10 +149,10 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <Database className='w-4 h-4 mr-2'  /> AI-Powered Penetration Testing Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Penetration Testing Platform</h1>'          <p className='text-gray-100 text-xl'>Transform your penetration testing operations with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
-  ];Penetration testing optimization',;Vulnerability discovery and exploitation',;Security assessment and reporting',;Testing methodology and planning',;Testing automation and orchestration',;Testing scaling and management';
-  ];Improve penetration testing performance by 50-80%',;Reduce testing completion time by 40-70%',;Cut testing operational costs by 35-65%',;Enhance testing reliability and scalability',;Optimize resource utilization',;Scale testing operations efficiently';
-  ];Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
-  ];
+  ]Penetration testing optimization',;Vulnerability discovery and exploitation',;Security assessment and reporting',;Testing methodology and planning',;Testing automation and orchestration',;Testing scaling and management';
+  ]Improve penetration testing performance by 50-80%',;Reduce testing completion time by 40-70%',;Cut testing operational costs by 35-65%',;Enhance testing reliability and scalability',;Optimize resource utilization',;Scale testing operations efficiently';
+  ]Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-gray-500 via-slate-500 to-zinc-500 py-20 text-center>''

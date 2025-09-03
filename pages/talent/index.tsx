@@ -10,7 +10,7 @@ import {
   CheckCircle,
   Briefcase,
   GraduationCap,
-  Heart
+  Heart;
 } from 'lucide-react';
 
 const TalentIndex: NextPage = () => {
@@ -27,7 +27,7 @@ const TalentIndex: NextPage = () => {
         'Experience with cloud platforms (AWS/Azure)',
         'Strong problem-solving skills'
       ]
-    },
+},
     {
       title: 'AI/ML Engineer',
       location: 'Remote',
@@ -40,7 +40,7 @@ const TalentIndex: NextPage = () => {
         'Strong background in machine learning algorithms',
         'Experience with data pipelines'
       ]
-    },
+},
     {
       title: 'DevOps Engineer',
       location: 'New York, NY',
@@ -53,7 +53,7 @@ const TalentIndex: NextPage = () => {
         'Knowledge of AWS/Azure services',
         'Experience with monitoring tools'
       ]
-    },
+},
     {
       title: 'UI/UX Designer',
       location: 'Los Angeles, CA',
@@ -66,31 +66,31 @@ const TalentIndex: NextPage = () => {
         'Strong portfolio of design work',
         'Experience with user research'
       ]
-    }
-  ];
+}
+  ]
 
   const benefits = [
     {
       icon: Heart,
       title: 'Health & Wellness',
-      description: 'Comprehensive health insurance, dental, vision, and wellness programs.'
-    },
+      description: 'Comprehensive health insurance, dental, vision, and wellness programs.';
+},
     {
       icon: GraduationCap,
       title: 'Learning & Development',
-      description: 'Annual learning budget, conference attendance, and skill development programs.'
-    },
+      description: 'Annual learning budget, conference attendance, and skill development programs.';
+},
     {
       icon: Briefcase,
       title: 'Flexible Work',
-      description: 'Remote work options, flexible hours, and work-life balance initiatives.'
-    },
+      description: 'Remote work options, flexible hours, and work-life balance initiatives.';
+},
     {
       icon: Users,
       title: 'Team Culture',
-      description: 'Collaborative environment, team events, and inclusive workplace culture.'
-    }
-  ];
+      description: 'Collaborative environment, team events, and inclusive workplace culture.';
+}
+  ]
 
   return (
     <MainLayout 

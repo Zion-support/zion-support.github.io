@@ -95,9 +95,9 @@ class AutomationManager {,"});,"})
       // // // // // // // console.log(`📈 Summary: ${onlineCount}/${totalCount} processes online`);,"});,"})
       if (onlineCount < totalCount) {,"});,"})
         // // // // // // // console.log(,;,"});,"})
-  ⚠️  Some processes are not running. Use "check" to see details.;,"});,"})
-      }"});,"})
-    } catch (error) {,"});,"})
+  ⚠️  Some processes are not running. Use "check" to see details.;,"});,"});
+}"});,"});
+} catch (error) {,"});,"})
       // // // // // // // console.error('❌ Failed to get status: , error.message);,"});,"})
 ;,"});,"})
         console.log(,;,"});,"})
@@ -116,8 +116,8 @@ class AutomationManager {,"});,"})
   🛑 Stopping all automation processes...;,"});,"})
       this.automationProcesses.forEach(processName => {,"});,"})
           execSync(`pm2 stop ${processName}` { stdio: 'pipe })} catch (error) {,"});,"})
-          // Process might not be running;,"});,"})
-      });,"});,"})
+          // Process might not be running;,"});,"});
+});,"});,"})
       // // // // // // // console.log(,;,"});,"})
   ✅ All automation processes stopped;,"});,"})
       // // // // // // // console.error('❌ Failed to stop processes: , error.message);,"});,"})
@@ -256,7 +256,7 @@ async function manager = new AutomationManager();,"});,"})
       // // // // // // // console.error(`❌ Unknown command: ${command}`);,"});,"})
       break}"});,"})
 // Start the manager;,"});,"})
-main().catch(console.error);,"});,"})
+main().catch(console.error);,"});,"});
 }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}"});,"})
 #!/usr/bin/env: node;
 import { execSync } from;
@@ -469,8 +469,8 @@ import { execSync } from "child_process";";import fs from "fs";import path from 
     } catch (error) { 
       // // // // // // // console.error('❌ Failed to get status: , error.message) }
       console.error('❌ Failed to get status: , error.message) }
-        // // // // // // // console.log(,`
-    } catch (error) {'
+        // // // // // // // console.log(,`;
+} catch (error) {'
         // // // // // // // console.log(,;
       // // // // // // // console.error('❌ Failed to get status: , error.message)}
         console.log(,;

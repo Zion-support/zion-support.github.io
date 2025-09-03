@@ -23,8 +23,8 @@ async function fetchPage(url) {
   try {
     const res = await axios.get(url, {
       timeout: 15000,
-      validateStatus: () => true,
-    });
+      validateStatus: () => true,;
+});
     return { status: res.status, html: res.data };
   } catch (e) {
     return { status: 0, html: '' };

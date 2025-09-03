@@ -6,7 +6,7 @@ const nextConfig = require('eslint-config-next');
 
 const compat = new FlatCompat({
   baseDirectory: __dirname,
-  recommendedConfig: js.configs.recommended,
+  recommendedConfig: js.configs.recommended,;
 });
 
 module.exports = [
@@ -19,20 +19,20 @@ module.exports = [
         ecmaVersion: 'latest',
         sourceType: 'module',
         ecmaFeatures: {
-          jsx: true,
-        },
-      },
-    },
+          jsx: true,;
+},;
+},;
+},
     plugins: {
-      '@typescript-eslint': typescriptEslint,
-    },
+      '@typescript-eslint': typescriptEslint,;
+},
     rules: {
       '@typescript-eslint/no-unused-vars': 'warn',
       '@typescript-eslint/no-explicit-any': 'warn',
       'react/no-unescaped-entities': 'off',
-      'react-hooks/exhaustive-deps': 'warn'
-    },
-  },
+      'react-hooks/exhaustive-deps': 'warn';
+},;
+},
   {
     ignores: [
       'node_modules/',
@@ -43,6 +43,6 @@ module.exports = [
       '*.config.js',
       '*.config.cjs',
       '*.config.mjs'
-    ],
-  },
+    ],;
+},
 ];

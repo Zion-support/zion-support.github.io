@@ -11,19 +11,19 @@ export default function LoadingSpinner({
   size = 'md',
   color = 'primary',
   text,
-  fullScreen = false,
+  fullScreen = false,;
 }: LoadingSpinnerProps) {
   const sizeClasses = {
     sm: 'w-6 h-6',
     md: 'w-12 h-12',
-    lg: 'w-16 h-16',
-  };
+    lg: 'w-16 h-16',;
+};
 
   const colorClasses = {
     primary: 'border-blue-600',
     secondary: 'border-purple-600',
-    white: 'border-white',
-  };
+    white: 'border-white',;
+};
 
   const spinner = (
     <div className="flex flex-col items-center justify-center">
@@ -51,19 +51,19 @@ export default function LoadingSpinner({
 // Pulse loading variant
 export function LoadingPulse({
   size = 'md',
-  color = 'primary',
+  color = 'primary',;
 }: Omit<LoadingSpinnerProps, 'text' | 'fullScreen'>) {
   const sizeClasses = {
     sm: 'w-6 h-6',
     md: 'w-12 h-12',
-    lg: 'w-16 h-16',
-  };
+    lg: 'w-16 h-16',;
+};
 
   const colorClasses = {
     primary: 'bg-blue-600',
     secondary: 'bg-purple-600',
-    white: 'bg-white',
-  };
+    white: 'bg-white',;
+};
 
   return (
     <div className="flex space-x-2">
@@ -72,8 +72,8 @@ export function LoadingPulse({
           key={i}
           className={`${sizeClasses[size]} ${colorClasses[color]} rounded-full animate-pulse`}
           style={{
-            animationDelay: `${i * 0.2}s`,
-          }}
+            animationDelay: `${i * 0.2}s`,;
+}}
         />
       ))}
     </div>
@@ -83,7 +83,7 @@ export function LoadingPulse({
 // Skeleton loading variant
 export function LoadingSkeleton({
   lines = 3,
-  className = '',
+  className = '',;
 }: {
   lines?: number;
   className?: string;
@@ -94,8 +94,8 @@ export function LoadingSkeleton({
         <div
           key={i}
           className={`h-4 bg-gray-200 rounded mb-3 ${
-            i === lines - 1 ? 'w-3/4' : 'w-full'
-          }`}
+            i === lines - 1 ? 'w-3/4' : 'w-full';
+}`}
         />
       ))}
     </div>

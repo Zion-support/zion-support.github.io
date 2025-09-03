@@ -1,10 +1,10 @@
-import React from 'react'; export default function ExpensiveComponent() { const [data, setData] = useState([]); const [loading, setLoading] = useState(true); useEffect(() => {
+import React from 'react'; export default function ExpensiveComponent() { const [data, setData] = useState([]); const [loading, setLoading] = useState(true); useEffect(() => {;
 }
 
 ;,"});,"})
  export default function ExpensiveComponent () { const [data, setData] = useState ([]) ; const [loading, setLoading] = useState (true) ; useEffect ( () => {'';,"});,"})
 ;,"});,"})
- export default function ExpensiveComponent() { const [data, setData] = useState([]); const [loading, setLoading] = useState(true); useEffect(() => {;,"});,"})
+ export default function ExpensiveComponent() { const [data, setData] = useState([]); const [loading, setLoading] = useState(true); useEffect(() => {;,"});,"});
 }"});,"})
 import React, { useState, useEffect } from 'react';,"});,"})
 export default function ExpensiveComponent() {}"});,"})
@@ -18,10 +18,10 @@ export default function ExpensiveComponent() {}"});,"})
         (_, i) => Math.sqrt(i) * Math.PI * Math.random();,"});,"})
       );,"});,"})
       setData(expensiveData);,"});,"})
-      setLoading(false);,"});,"})
-    }, 2000);,"});,"})
-    return () => clearTimeout(timer);,"});,"})
-  }, []);,"});,"})
+      setLoading(false);,"});,"});
+}, 2000);,"});,"})
+    return () => clearTimeout(timer);,"});,"});
+}, []);,"});,"})
   if(loading) {}"});,"})
     return();,"});,"})
       <div className="text-center p-8">"""";,"});,"})

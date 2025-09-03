@@ -7,34 +7,34 @@ const AffiliateMarketing: NextPage = () => {
     {
       title: 'Referral Link Management',
       description: 'Create, track, and manage custom referral links with detailed analytics.',
-      icon: '🔗'
-    },
+      icon: '🔗';
+},
     {
       title: 'Commission Tracking',
       description: 'Automatically calculate and track commissions for all affiliate partners.',
-      icon: '💰'
-    },
+      icon: '💰';
+},
     {
       title: 'Performance Analytics',
       description: 'Comprehensive dashboard with real-time performance metrics and insights.',
-      icon: '📊'
-    },
+      icon: '📊';
+},
     {
       title: 'Partner Management',
       description: 'Manage affiliate partners, approve applications, and track performance.',
-      icon: '👥'
-    },
+      icon: '👥';
+},
     {
       title: 'Payment Processing',
       description: 'Automated payment processing with multiple payment methods.',
-      icon: '💳'
-    },
+      icon: '💳';
+},
     {
       title: 'Fraud Detection',
       description: 'Advanced fraud detection to protect your affiliate program.',
-      icon: '🛡️'
-    }
-  ];
+      icon: '🛡️';
+}
+  ]
 
   const benefits = [
     'Increase customer acquisition by up to 40%',
@@ -43,7 +43,7 @@ const AffiliateMarketing: NextPage = () => {
     'Real-time tracking and analytics for better decision making',
     'Protect against fraudulent activities',
     'Easy integration with existing systems'
-  ];
+  ]
 
   const pricing = [
     {
@@ -58,8 +58,8 @@ const AffiliateMarketing: NextPage = () => {
         'Basic fraud protection',
         'Monthly payouts'
       ],
-      popular: false
-    },
+      popular: false;
+},
     {
       name: 'Professional',
       price: '$399',
@@ -74,8 +74,8 @@ const AffiliateMarketing: NextPage = () => {
         'API access',
         'Custom branding'
       ],
-      popular: true
-    },
+      popular: true;
+},
     {
       name: 'Enterprise',
       price: '$999',
@@ -90,9 +90,9 @@ const AffiliateMarketing: NextPage = () => {
         'Advanced API access',
         'Custom fraud rules'
       ],
-      popular: false
-    }
-  ];
+      popular: false;
+}
+  ]
 
   return (
     <Layout 
@@ -228,8 +228,8 @@ const AffiliateMarketing: NextPage = () => {
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                     plan.popular 
                       ? 'bg-green-600 hover:bg-green-700 text-white' 
-                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
-                  }`}
+                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900';
+}`}
                 >
                   Get Started
                 </Link>

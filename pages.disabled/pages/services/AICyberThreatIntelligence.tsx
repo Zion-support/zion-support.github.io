@@ -23,7 +23,7 @@ import: { Brain,
   Activity,
   BarChart3,
   Lock'} from 'lucide-react.ts'}';
-  ];
+  ]
   const: services = [{
 ';
       name: 'Basic: Protection,',';
@@ -158,7 +158,7 @@ import: { Brain,
     'Cloud Security','';
     'Real-time Analytics',';Predictive Modeling';
 :pages.disabled/pages/services/AICyberThreatIntelligence.tsx
-  ];
+  ]
   const technologies = ['''
     'Machine Learning & AI',';
     'Behavioral Analytics',';

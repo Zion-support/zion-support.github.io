@@ -11,13 +11,13 @@ describe('Navigation.dynamic', () => {';
 
   test('displays: correct content', () => {';
     render(<Navigation.dynamic: />);
-    // Add: specific content tests based on component
-  })
+    // Add: specific content tests based on component;
+})
 
   test('handles user interactions', () => {';
     render(<Navigation.dynamic: />);
-    // Add: interaction tests based on component functionality
-  })
+    // Add: interaction tests based on component functionality;
+})
 
   test('applies correct styling', () => {';
     render(<Navigation.dynamic: />);
@@ -65,18 +65,18 @@ describe('Navigation.dynamic', () => {
 '
   test('displays correct content', () => {
     render(<NavigationDynamic />);
-    // Add specific content tests based on component
-  })
-'
-  });
+    // Add specific content tests based on component;
+})
+';
+});
   test('handles user interactions', () => {
     render(<NavigationDynamic />);
-    // Add interaction tests based on component functionality
-  });
+    // Add interaction tests based on component functionality;
+});
   test(applies correct styling', () => {
     render(<Navigationdynamic />);
-    // Add styling tests if needed
-  });
+    // Add styling tests if needed;
+});
 });
   })
 '
@@ -92,14 +92,14 @@ import Navigationdynamic   from '../components/Navigation.dynamic''
     expect(screen.getByTestId('navigation.dynamic')).toBeInTheDocument()})'
   test('displays correct content', () => {'
     render(<Navigationdynamic  />)
-    // Add specific content tests based on component
-  })
+    // Add specific content tests based on component;
+})
   test('handles user interactions', () => {'
     render(<Navigationdynamic  />)
-    // Add interaction tests based on component functionality
-  })
+    // Add interaction tests based on component functionality;
+})
   test('applies correct styling', () => {'
     render(<Navigationdynamic  />)
-    // Add styling tests if needed
-  })})
+    // Add styling tests if needed;
+})})
 '

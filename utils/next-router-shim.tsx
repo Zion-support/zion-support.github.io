@@ -56,8 +56,8 @@ export function useLocation() {
     search: query ? `?${query}` : '',
     hash, 
     state: undefined as unknown,
-    key: 'next'
-  }}
+    key: 'next';
+}}
 export const BrowserRouter: React.FC<React.PropsWithChildren<{}>> = ({ children }) => <>{children}</>
 export const MemoryRouter = BrowserRouter;
 export const HashRouter = BrowserRouter;

@@ -20,28 +20,28 @@ class SecurityEnhancer {
 const securityHeaders = [
   {
     key: 'X-DNS-Prefetch-Control',
-    value: 'on'
-  },
+    value: 'on';
+},
   {
     key: 'Strict-Transport-Security',
-    value: 'max-age=63072000; includeSubDomains; preload'
-  },
+    value: 'max-age=63072000; includeSubDomains; preload';
+},
   {
     key: 'X-XSS-Protection',
-    value: '1; mode=block'
-  },
+    value: '1; mode=block';
+},
   {
     key: 'X-Frame-Options',
-    value: 'SAMEORIGIN'
-  },
+    value: 'SAMEORIGIN';
+},
   {
     key: 'X-Content-Type-Options',
-    value: 'nosniff'
-  },
+    value: 'nosniff';
+},
   {
     key: 'Referrer-Policy',
-    value: 'origin-when-cross-origin'
-  }
+    value: 'origin-when-cross-origin';
+}
 ];
 
 module.exports = { securityHeaders };
@@ -60,40 +60,40 @@ const cspHeader = {
   'Content-Security-Policy': [
     {
       key: 'default-src',
-      value: "'self'"
-    },
+      value: "'self'";
+},
     {
       key: 'script-src',
-      value: "'self' 'unsafe-eval' 'unsafe-inline'"
-    },
+      value: "'self' 'unsafe-eval' 'unsafe-inline'";
+},
     {
       key: 'style-src',
-      value: "'self' 'unsafe-inline'"
-    },
+      value: "'self' 'unsafe-inline'";
+},
     {
       key: 'img-src',
-      value: "'self' blob: data: https:"
-    },
+      value: "'self' blob: data: https:";
+},
     {
       key: 'font-src',
-      value: "'self' https:"
-    },
+      value: "'self' https:";
+},
     {
       key: 'object-src',
-      value: "'none'"
-    },
+      value: "'none'";
+},
     {
       key: 'base-uri',
-      value: "'self'"
-    },
+      value: "'self'";
+},
     {
       key: 'form-action',
-      value: "'self'"
-    },
+      value: "'self'";
+},
     {
       key: 'frame-ancestors',
-      value: "'none'"
-    }
+      value: "'none'";
+}
   ]
 };
 
@@ -218,8 +218,8 @@ export class SecurityUtils {
       '<': '&lt;',
       '>': '&gt;',
       '"': '&quot;',
-      "'": '&#039;'
-    };
+      "'": '&#039;';
+};
     
     return text.replace(/[&<>"']/g, (m) => map[m]);
   }
@@ -302,7 +302,7 @@ SENTRY_DSN=your_sentry_dsn_here
         'Configure rate limiting',
         'Test security measures'
       ]
-    };
+};
     
     const reportPath = path.join(this.reportsDir, 'security-enhancement-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));

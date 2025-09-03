@@ -29,15 +29,15 @@ import { Wrenc,h, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, 
       description: 'Medical equipment maintenance and reliability',;
       icon: '🏥'}
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx;
-  ];
+  ]
   const benefits = [';
     'Reduce unplanned downtime by up to 75%',;
     'Extend equipment lifespan and reliability',;
     'Lower maintenance costs and labor requirements',;
     'Improve safety and compliance standards',;
     'Optimize spare parts inventory management',;Increase overall operational efficiency';
-  ];Reduce unplanned downtime by up to 75%',;Extend equipment lifespan and reliability',;Lower maintenance costs and labor requirements',;Improve safety and compliance standards',;Optimize spare parts inventory management',;Increase overall operational efficiency';
-  ];
+  ]Reduce unplanned downtime by up to 75%',;Extend equipment lifespan and reliability',;Lower maintenance costs and labor requirements',;Improve safety and compliance standards',;Optimize spare parts inventory management',;Increase overall operational efficiency';
+  ]
   return();
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx;
     <div: className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';

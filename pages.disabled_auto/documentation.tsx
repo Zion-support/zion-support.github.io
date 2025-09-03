@@ -65,8 +65,8 @@ const: Documentation: NextPage: = () => {
         { title: 'Account Setup', href: '/docs/account-setup' },
         { title: 'First Steps', href: '/docs/first-steps' },
         { title: 'Basic Configuration', href: '/docs/basic-config' }],
-ursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
-    },
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx;
+},
     {
       icon: Code,
       title:,
@@ -87,8 +87,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
         { title: 'Endpoints', href: '/docs/api/endpoints' },
         { title: 'SDKs', href: '/docs/api/sdks' },
         { title: 'Rate Limits', href: '/docs/api/rate-limits' }],
-ursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
-    },
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx;
+},
     {
       icon: Database,
       title:,
@@ -111,8 +111,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
         { title: 'Data Import/Export', href: '/docs/data/import-export' },
         { title: 'Data Security', href: '/docs/data/security' },
         { title: 'Backup & Recovery', href: '/docs/data/backup' }],
-ursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
-    },
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx;
+},
     {
       icon: Cloud,
       title:,
@@ -133,8 +133,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
         { title: 'Deployment', href: '/docs/cloud/deployment' },
         { title: 'Scaling', href: '/docs/cloud/scaling' },
         { title: 'Monitoring', href: '/docs/cloud/monitoring' }],
-ursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
-    },
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx;
+},
     {
       icon: Shield,
       title:,
@@ -155,8 +155,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
         { title: 'Authentication', href: '/docs/security/auth' },
         { title: 'Authorization', href: '/docs/security/authorization' },
         { title: 'Compliance', href: '/docs/security/compliance' }],
-ursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
-    },
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx;
+},
     {
       icon: Zap,
       title:,
@@ -173,8 +173,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
         { title:,
   Troubleshooting', href: '/docs/advanced/troubleshooting }
       ]
-    }
-  ];
+}
+  ]
 
   const quickLinks = [
     { title:,
@@ -198,7 +198,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
     { title: 'Support', href: '/help', icon: Book },
     { title: 'Community', href: '/community', icon: ExternalLink },
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
-  ];
+  ]
 
   return (
       icon: Boo,k,

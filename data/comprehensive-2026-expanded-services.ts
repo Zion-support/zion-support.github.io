@@ -39,7 +39,7 @@ export interface ComprehensiveService {
 const contact = {
   mobile: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
-  address: "364 E Main St STE 1008 Middletown DE 19709"
+  address: "364 E Main St STE 1008 Middletown DE 19709";
 };
 
 export const comprehensiveExpandedServices: ComprehensiveService[] = [
@@ -81,8 +81,8 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-01-15',
     customers: 85,
     rating: 4.8,
-    reviews: 47
-  },
+    reviews: 47;
+},
   {
     id: 'ai-powered-sales-intelligence',
     name: 'AI Sales Intelligence Platform',
@@ -120,8 +120,8 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-02-01',
     customers: 62,
     rating: 4.6,
-    reviews: 38
-  },
+    reviews: 38;
+},
   {
     id: 'ai-content-personalization-engine',
     name: 'AI Content Personalization Engine',
@@ -159,8 +159,8 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-01-20',
     customers: 73,
     rating: 4.7,
-    reviews: 41
-  },
+    reviews: 41;
+},
 
   // Cloud & Infrastructure Services
   {
@@ -200,8 +200,8 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-01-10',
     customers: 128,
     rating: 4.9,
-    reviews: 89
-  },
+    reviews: 89;
+},
   {
     id: 'zero-trust-security-platform',
     name: 'Zero Trust Security Platform',
@@ -239,8 +239,8 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-01-05',
     customers: 156,
     rating: 4.8,
-    reviews: 112
-  },
+    reviews: 112;
+},
   {
     id: 'kubernetes-autonomous-operations',
     name: 'Kubernetes Autonomous Operations',
@@ -278,8 +278,8 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-02-15',
     customers: 94,
     rating: 4.7,
-    reviews: 67
-  },
+    reviews: 67;
+},
 
   // Data & Analytics Services
   {
@@ -319,8 +319,8 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-01-25',
     customers: 78,
     rating: 4.8,
-    reviews: 56
-  },
+    reviews: 56;
+},
   {
     id: 'ai-powered-business-intelligence',
     name: 'AI-Powered Business Intelligence',
@@ -358,8 +358,8 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-02-10',
     customers: 112,
     rating: 4.6,
-    reviews: 78
-  },
+    reviews: 78;
+},
 
   // Developer Tools & DevOps
   {
@@ -399,8 +399,8 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-02-20',
     customers: 156,
     rating: 4.7,
-    reviews: 98
-  },
+    reviews: 98;
+},
   {
     id: 'autonomous-deployment-platform',
     name: 'Autonomous Deployment Platform',
@@ -438,8 +438,8 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-01-30',
     customers: 89,
     rating: 4.8,
-    reviews: 67
-  },
+    reviews: 67;
+},
 
   // Industry-Specific Solutions
   {
@@ -479,8 +479,8 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-01-15',
     customers: 45,
     rating: 4.9,
-    reviews: 34
-  },
+    reviews: 34;
+},
   {
     id: 'fintech-fraud-detection-ai',
     name: 'FinTech Fraud Detection AI',
@@ -518,8 +518,8 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-02-01',
     customers: 67,
     rating: 4.8,
-    reviews: 52
-  },
+    reviews: 52;
+},
 
   // Micro SaaS Services
   {
@@ -559,8 +559,8 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-01-20',
     customers: 234,
     rating: 4.8,
-    reviews: 156
-  },
+    reviews: 156;
+},
   {
     id: 'smart-inventory-management',
     name: 'Smart Inventory Management',
@@ -598,8 +598,8 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-01-15',
     customers: 189,
     rating: 4.7,
-    reviews: 134
-  },
+    reviews: 134;
+},
   {
     id: 'ai-customer-support-chatbot',
     name: 'AI Customer Support Chatbot',
@@ -637,8 +637,8 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-01-10',
     customers: 312,
     rating: 4.6,
-    reviews: 198
-  },
+    reviews: 198;
+},
   {
     id: 'automated-social-media-manager',
     name: 'Automated Social Media Manager',
@@ -676,8 +676,8 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-02-01',
     customers: 167,
     rating: 4.5,
-    reviews: 112
-  },
+    reviews: 112;
+},
 
   // IT Services
   {
@@ -717,8 +717,8 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-01-05',
     customers: 145,
     rating: 4.8,
-    reviews: 98
-  },
+    reviews: 98;
+},
   {
     id: 'cybersecurity-assessment-platform',
     name: 'Cybersecurity Assessment Platform',
@@ -756,8 +756,8 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-01-12',
     customers: 98,
     rating: 4.7,
-    reviews: 67
-  },
+    reviews: 67;
+},
   {
     id: 'cloud-migration-consulting',
     name: 'Cloud Migration Consulting',
@@ -795,8 +795,8 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-01-25',
     customers: 67,
     rating: 4.9,
-    reviews: 45
-  },
+    reviews: 45;
+},
 
   // Advanced AI Services
   {
@@ -836,8 +836,8 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-01-18',
     customers: 156,
     rating: 4.8,
-    reviews: 89
-  },
+    reviews: 89;
+},
   {
     id: 'ai-predictive-maintenance',
     name: 'AI Predictive Maintenance',
@@ -875,8 +875,8 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-02-05',
     customers: 78,
     rating: 4.7,
-    reviews: 56
-  },
+    reviews: 56;
+},
 
   // Emerging Technology Services
   {
@@ -916,8 +916,8 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-03-01',
     customers: 23,
     rating: 4.9,
-    reviews: 18
-  },
+    reviews: 18;
+},
   {
     id: 'blockchain-enterprise-platform',
     name: 'Blockchain Enterprise Platform',
@@ -955,8 +955,8 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-02-15',
     customers: 34,
     rating: 4.7,
-    reviews: 28
-  }
+    reviews: 28;
+}
 ];
 
 export const serviceCategories = [
@@ -965,55 +965,55 @@ export const serviceCategories = [
     description: 'Affordable, specialized software solutions for small businesses',
     services: comprehensiveExpandedServices.filter(s => s.category === 'Micro SaaS'),
     icon: '💼',
-    color: 'from-blue-600 to-cyan-700'
-  },
+    color: 'from-blue-600 to-cyan-700';
+},
   {
     name: 'AI & Machine Learning',
     description: 'Intelligent automation and decision-making systems',
     services: comprehensiveExpandedServices.filter(s => s.category === 'AI & Machine Learning'),
     icon: '🤖',
-    color: 'from-purple-600 to-pink-700'
-  },
+    color: 'from-purple-600 to-pink-700';
+},
   {
     name: 'IT Services',
     description: 'Comprehensive IT support and infrastructure management',
     services: comprehensiveExpandedServices.filter(s => s.category === 'IT Services'),
     icon: '🛠️',
-    color: 'from-indigo-600 to-blue-700'
-  },
+    color: 'from-indigo-600 to-blue-700';
+},
   {
     name: 'Cloud & Infrastructure',
     description: 'Scalable cloud solutions and infrastructure management',
     services: comprehensiveExpandedServices.filter(s => s.category === 'Cloud & Infrastructure'),
     icon: '☁️',
-    color: 'from-green-600 to-emerald-700'
-  },
+    color: 'from-green-600 to-emerald-700';
+},
   {
     name: 'Data & Analytics',
     description: 'Real-time data processing and business intelligence',
     services: comprehensiveExpandedServices.filter(s => s.category === 'Data & Analytics'),
     icon: '📊',
-    color: 'from-teal-600 to-green-700'
-  },
+    color: 'from-teal-600 to-green-700';
+},
   {
     name: 'Developer Tools & DevOps',
     description: 'Development automation and operational excellence',
     services: comprehensiveExpandedServices.filter(s => s.category === 'Developer Tools & DevOps'),
     icon: '⚙️',
-    color: 'from-cyan-600 to-blue-700'
-  },
+    color: 'from-cyan-600 to-blue-700';
+},
   {
     name: 'Industry Solutions',
     description: 'Specialized solutions for specific industries',
     services: comprehensiveExpandedServices.filter(s => s.category === 'Industry Solutions'),
     icon: '🏢',
-    color: 'from-orange-600 to-red-700'
-  },
+    color: 'from-orange-600 to-red-700';
+},
   {
     name: 'Emerging Technology',
     description: 'Cutting-edge technology solutions and platforms',
     services: comprehensiveExpandedServices.filter(s => s.category === 'Emerging Technology'),
     icon: '🚀',
-    color: 'from-violet-600 to-purple-700'
-  }
+    color: 'from-violet-600 to-purple-700';
+}
 ];

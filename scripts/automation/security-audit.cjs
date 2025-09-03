@@ -71,8 +71,8 @@ async function runSecurityAudit() {
     } catch (error) {  
       console.log('⚠️  Known vulnerabilities detected');
       }
-
-    } catch (error) {;
+;
+} catch (error) {;
       console.log('⚠️  Known vulnerabilities detected');
     }
 ;
@@ -83,8 +83,8 @@ async function runSecurityAudit() {
     } catch (error) {  
       console.log('✅ All packages are up to date');
       }
-
-    } catch (error) {;
+;
+} catch (error) {;
       console.log('✅ All packages are up to date');
     }
 ;
@@ -132,8 +132,8 @@ async function runContinuous() {
 }
 
 // Handle graceful shutdown;
-process.on(`SIGINT`, () => {
-    } catch (error) {;
+process.on(`SIGINT`, () => {;
+} catch (error) {;
       console.log('ℹ️  No additional security scan available');
     }
 ;

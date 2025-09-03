@@ -60,14 +60,14 @@ const ServiceCategory = ({ category, services }) => {}"});,"})
       'Supply Chain & Logistics': <Truck className="w-6 h-6" />,"'""";,"});,"})
       'Real Estate & Property': <Home className="w-6 h-6" />,"'""";,"});,"})
       'Legal & Compliance': <Lock className="w-6 h-6" />};"""";,"});,"})
-    return iconMap[categoryName] || <Briefcase className="w-6 h-6" />;,"});,"})
-  };,"});,"})
+    return iconMap[categoryName] || <Briefcase className="w-6 h-6" />;,"});,"});
+};,"});,"})
   const getCategoryColor = categoryName => {}"});,"})
     const colorMap = {}"});,"})
 ';,"});,"})
       'AI & Machine Learning': 'from-purple-500 to-indigo-600',Cybersecurity & Compliance': 'from-red-500 to-pink-600',Data & Analytics': 'from-blue-500 to-cyan-600',Business Process': 'from-green-500 to-emerald-600',Marketing & Sales': 'from-orange-500 to-red-600',Financial Services': 'from-yellow-500 to-orange-600',Healthcare & Life Sciences': 'from-pink-500 to-rose-600',Education & Training': 'from-indigo-500 to-purple-600',Supply Chain & Logistics': 'from-teal-500 to-green-600',Real Estate & Property': 'from-amber-500 to-yellow-600',Legal & Compliance': 'from-slate-500 to-gray-600'};,"});,"})
-    return colorMap[categoryName] || 'from-zion-purple to-zion-purple-dark';,"});,"})
-  };""";,"});,"})
+    return colorMap[categoryName] || 'from-zion-purple to-zion-purple-dark';,"});,"});
+};""";,"});,"})
   return ("""";,"});,"})
     <div className="space-y-6">"""";,"});,"})
       <div className="flex items-center space-x-3 mb-6">;,"});,"})
@@ -165,8 +165,8 @@ const ServiceCategory = ({ category, services }) => {}"});,"})
                     size="sm"""";,"});,"})
                     className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white""";,"});,"})
                     onClick={() =>';,"});,"})
-                      window.open('https://ziontechgroup.com',_blank');,"});,"})
-                    }"});,"})
+                      window.open('https://ziontechgroup.com',_blank');,"});,"});
+}"});,"})
                   >;,"});,"})
                     Get Started;,"});,"})
                   </Button>;,"});,"})
@@ -183,7 +183,7 @@ const ServiceCategory = ({ category, services }) => {}"});,"})
         ))}"});,"})
       </div>;,"});,"})
     </div>;,"});,"})
-  );,"});,"})
+  );,"});,"});
 };""";,"});,"})
 const BenefitsSection = () => ("""";,"});,"})
   <section className="py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg">"""";,"});,"})
@@ -332,8 +332,8 @@ const ContactSection = () => ("""";,"});,"})
           size="lg"""";,"});,"})
           className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white""";,"});,"})
           onClick={() =>';,"});,"})
-            window.open('mailto:kleber@ziontechgroup.com',_blank');,"});,"})
-          }"});,"})
+            window.open('mailto:kleber@ziontechgroup.com',_blank');,"});,"});
+}"});,"})
         >;,"});,"})
           Contact Sales Team;,"});,"})
         </Button>""";,"});,"})
@@ -467,9 +467,9 @@ const ServiceCategory = ({ category, services }) => {}
       'Healthcare & Life Sciences': <Heart className='w-6 h-6' /" >, ''''''"
       'Education & Training': <GraduationCap className='w-6 h-6' /" >,''''''"
       'Supply Chain & Logistics': <Truck className='w-6 h-6' /" >, ''''''"
-      'Real Estate & Property': <Home className='w-6 h-6' /" >,''''';"'
+      'Real Estate & Property': <Home className='w-6 h-6' /" >,''''';"
       'Legal & Compliance': <Lock className='w-6 h-6' /" >}';'''"
-    return iconMap[categoryName] || <Briefcase className='w-6 h-6' /" >, "
+    return iconMap[categoryName] || <Briefcase className='w-6 h-6' /" >, ";
 }
   const getCategoryColor = categoryName => {}
     const colorMap = {}""
@@ -609,7 +609,7 @@ const ServiceCategory = ({ category, services }) => {}
         ))}
       </div>
     </div>
-  )", "
+  )", ";
 }';'
   )"}
 const BenefitsSection = () => (''''
@@ -759,7 +759,7 @@ const ContactSection = () => (''''
           size='lg'''''
           className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'''
           onClick={() =" >''"
-            window.open('mailto: kleber@ziontechgroup.com', _blank'), '
+            window.open('mailto: kleber@ziontechgroup.com', _blank'), ';
 }
         >
           Contact Sales Team""

@@ -39,7 +39,7 @@ import: {
   Globe,
   CheckCircle} from 'lucide-react';
 
-const EnterpriseSolutions: NextPage = () => {
+const EnterpriseSolutions: NextPage = () => {;
 } from 'lucide-react';
 const: EnterpriseSolutions: NextPage: = () => {
   return (

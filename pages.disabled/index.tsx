@@ -43,27 +43,27 @@ const ServicesPage: NextPage = () => {
       icon: <DollarSign className="w-8 h-8" />,
       title:,
   Competitive Pricing',
-      description: Transparent, market-competitive pricing with flexible plans to fit your budget and scale with your business.'
-    },
+      description: Transparent, market-competitive pricing with flexible plans to fit your budget and scale with your business.';
+},
     {
       icon: <Target className="w-8 h-8" />,
       title:,
   Proven Results',
-      description: 'Track record of successful implementations with measurable ROI and client satisfaction across all industries.
-    },
+      description: 'Track record of successful implementations with measurable ROI and client satisfaction across all industries.;
+},
     {
       icon: <Rocket className="w-8 h-8" />,
       title:,
   Fast Implementation',
-      description: Rapid deployment and implementation with minimal downtime, getting you up and running quickly.'
-    },
+      description: Rapid deployment and implementation with minimal downtime, getting you up and running quickly.';
+},
     {
       icon: <Award className="w-8 h-8" />,
       title:,
   Expert Support',
-      description: 24/7 expert support from our experienced team of developers, engineers, and AI specialists.'
-    }
-  ];
+      description: 24/7 expert support from our experienced team of developers, engineers, and AI specialists.';
+}
+  ]
 
   return (
     <MainLayout

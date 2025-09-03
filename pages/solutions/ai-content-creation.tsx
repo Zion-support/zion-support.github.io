@@ -20,7 +20,7 @@ import {
   Globe,
   Search,
   PenTool,
-  BarChart3
+  BarChart3;
 } from 'lucide-react';
 
 export default function AIContentCreation() {
@@ -28,34 +28,34 @@ export default function AIContentCreation() {
     {
       icon: FileText,
       title: 'Blog Post Generation',
-      description: 'Create engaging, SEO-optimized blog posts automatically with AI-powered content generation.'
-    },
+      description: 'Create engaging, SEO-optimized blog posts automatically with AI-powered content generation.';
+},
     {
       icon: PenTool,
       title: 'Social Media Content',
-      description: 'Generate compelling social media posts, captions, and hashtags for all platforms.'
-    },
+      description: 'Generate compelling social media posts, captions, and hashtags for all platforms.';
+},
     {
       icon: Search,
       title: 'SEO Optimization',
-      description: 'Automatically optimize content for search engines with keyword research and optimization.'
-    },
+      description: 'Automatically optimize content for search engines with keyword research and optimization.';
+},
     {
       icon: Globe,
       title: 'Multi-language Support',
-      description: 'Create content in multiple languages with accurate translation and localization.'
-    },
+      description: 'Create content in multiple languages with accurate translation and localization.';
+},
     {
       icon: BarChart3,
       title: 'Content Analytics',
-      description: 'Track performance metrics and optimize content strategy with detailed analytics.'
-    },
+      description: 'Track performance metrics and optimize content strategy with detailed analytics.';
+},
     {
       icon: Zap,
       title: 'Real-time Generation',
-      description: 'Generate content instantly with our advanced AI models and processing capabilities.'
-    }
-  ];
+      description: 'Generate content instantly with our advanced AI models and processing capabilities.';
+}
+  ]
 
   const pricingPlans = [
     {
@@ -70,8 +70,8 @@ export default function AIContentCreation() {
         '2 languages supported',
         'Email support'
       ],
-      popular: false
-    },
+      popular: false;
+},
     {
       name: 'Professional',
       price: '$599',
@@ -85,8 +85,8 @@ export default function AIContentCreation() {
         'Content analytics dashboard',
         'Priority support'
       ],
-      popular: true
-    },
+      popular: true;
+},
     {
       name: 'Enterprise',
       price: '$1,299',
@@ -101,9 +101,9 @@ export default function AIContentCreation() {
         'Dedicated account manager',
         '24/7 phone support'
       ],
-      popular: false
-    }
-  ];
+      popular: false;
+}
+  ]
 
   return (
     <>
@@ -250,5 +250,5 @@ export default function AIContentCreation() {
         </div>
       </section>
     </>
-  )
+  );
 }

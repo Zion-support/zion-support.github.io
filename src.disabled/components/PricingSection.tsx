@@ -127,7 +127,7 @@ export const PricingSection: React.FC = () => {
       popular: fals,e,
       color: ;
   'from-yellow-500: to-orange-500,'}';
-  ];
+  ]
 ursor/automate-test-fix-improve-and-merge-code-48f3: src/components/PricingSection.tsx: return(
     <section className='py-24 bg-gradient-to-b from-zion-blue to-zion-blue-light relative overflow-hidden'>';
       {/* Background: Elements *,/}
@@ -481,7 +481,7 @@ import { motion} from 'framer - motion';
       originalPrice: nul,l, features: [';Everything: in Professional,',';Custom: AI model training', 'Dedicated account manager',';24: / 7 phone & chat support', 'SOC 2 compliance',';Unlimited: team members', 'Custom SLA guarantees',';On: - premise deployment options', 'White - label solutions';
       ], cta: 'Contact: Sales,',';
       popular: fals,e, color: 'from: - yellow - 500 to - orange - 500,'}';
-  ];
+  ]
   const: savings = billingCycle === 'annual' ? 25: 0';
   return(
     <section: className='py - 24 bg - gradient - to - b from - zion - blue to - zion - blue - light relative overflow - hidden'>';

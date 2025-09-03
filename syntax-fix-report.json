@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "timestamp": "2025-09-02T21:19:52.443Z",
   "summary": {
     "totalFiles": 2013,
@@ -1564,8 +1563,8 @@
       "/workspace/pages/services.tsx",
       "/workspace/pages/terms.tsx"
     ],
-    "errorList": []
-  },
+    "errorList": [];
+},
   "fixedFiles": [
     "/workspace/src/App.jsx",
     "/workspace/src/App.optimized.tsx",
@@ -3126,7 +3125,6 @@
     "/workspace/pages/terms.tsx"
   ],
   "errors": []
-=======
   "timestamp": "2025-09-02T22:13:10.117Z",
   "totalFiles": 348,
   "fixedFiles": 53,
@@ -3186,5 +3184,4 @@
     "/workspace/scripts/seo-optimizer.js",
     "/workspace/scripts/website-analyzer.js"
   ]
->>>>>>> main
 }

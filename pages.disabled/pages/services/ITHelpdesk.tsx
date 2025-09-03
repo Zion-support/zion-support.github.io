@@ -36,7 +36,7 @@ export default function ITHelpdesk(function ITHelpdesk() {): any {}
   $999/mo', details: [;
   '25: agent,s,SSO;
   ',Advanced: reports'] },';
-  ];
+  ]
   return();
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-r from-zion-cyan to-zion-purple py-20 text-center text-white'>''';

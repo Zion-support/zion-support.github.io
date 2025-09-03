@@ -14,7 +14,7 @@ import React from 'react'; import { Helmet  } from 'react-helmet-async'; ; inter
    image?: string;
    url?: string;""
    type?: 'website' | 'article' | 'service';""
-   structuredData?: object} export function SEOHead ({ title = 'Zion Tech Group - Leading AI, Quantum Computing & Advanced Technology Solutions', description = 'Transform your business with cutting - edge AI, quantum computing, cybersecurity, and digital transformation solutions. Trusted by 1000 + companies worldwide.', keywords = 'AI solutions, quantum computing, cybersecurity, digital transformation, cloud services, DevOps, machine learning, space technology', image = '/images / zion - tech - group - og.jpg', url = 'https:'''
+   structuredData?: object} export function SEOHead ({ title = 'Zion Tech Group - Leading AI, Quantum Computing & Advanced Technology Solutions', description = 'Transform your business with cutting - edge AI, quantum computing, cybersecurity, and digital transformation solutions. Trusted by 1000 + companies worldwide.', keywords = 'AI solutions, quantum computing, cybersecurity, digital transformation, cloud services, DevOps, machine learning, space technology', image = '/images / zion - tech - group - og.jpg', url = 'https:''';
 }
    url?: string;"
    type?: 'website' | 'article' | 'service';"
@@ -35,7 +35,7 @@ import React from 'react'; import { Helmet  } from 'react-helmet-async'; ; inter
    image?: string
    url?: string""
    type?: 'website' | 'article' | 'service'
-   structuredData?: object", "
+   structuredData?: object", ";
 } export function SEOHead ({ title = 'Zion Tech Group - Leading AI, Quantum Computing & Advanced Technology Solutions', description = 'Transform your business with cutting - edge AI, quantum computing, cybersecurity, and digital transformation solutions. Trusted by 1000 + companies worldwide.', keywords = 'AI solutions, quantum computing, cybersecurity, digital transformation, cloud services, DevOps, machine learning, space technology', image = '/images / zion - tech - group - og.jpg', url = 'https: '''
 ;""
 import Head from 'next/head';
@@ -54,7 +54,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   url,
   type = 'website',
   noindex = false,
-  structuredData
+  structuredData;
 }) => {
   const router = useRouter();
   const canonicalUrl = url || `https://ziontechgroup.com${router.asPath}`;
@@ -100,8 +100,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredData)
-          }}
+            __html: JSON.stringify(structuredData);
+}}
         />
       )}
       
@@ -115,8 +115,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
             "description": "Leading provider of revolutionary AI services, IT solutions, and micro SaaS development",
             "address": {
               "@type": "PostalAddress",
-              "addressCountry": "US"
-            },
+              "addressCountry": "US";
+},
             "contactPoint": {
               "@type": "ContactPoint",
               "telephone": "+1-XXX-XXX-XXXX",
@@ -128,8 +128,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
             ],
             "foundingDate": "2020",
             "numberOfEmployees": "50-100",
-            "industry": "Information Technology"
-          })
+            "industry": "Information Technology";
+})
     </Head>
   )};
 

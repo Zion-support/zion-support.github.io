@@ -13,8 +13,8 @@ export default function Footer() {,"});,"})
         { name: 'Digital Transformation', href: '/services/digital-transformation' },;,"});,"})
         { name: 'Financial Solutions', href: '/services/financial-solutions' },;,"});,"})
         { name: 'Manufacturing Solutions', href: '/services/manufacturing-solutions' }"});,"})
-      ];,"});,"})
-    },;,"});,"})
+      ],"});,"});
+},;,"});,"})
       title: 'Solutions',;,"});,"})
         { name: 'Enterprise Solutions', href: '/solutions/enterprise' },;,"});,"})
         { name: 'Startup Solutions', href: '/solutions/startup' },;,"});,"})
@@ -40,8 +40,8 @@ export default function Footer() {,"});,"})
         { name: 'FAQ', href: '/faq' },;,"});,"})
         { name: 'Support', href: '/support' },;,"});,"})
         { name: 'System Status', href: '/system-status' },;,"});,"})
-        { name: 'Request Quote', href: '/request-quote' }"});,"})
-    }"});,"})
+        { name: 'Request Quote', href: '/request-quote' }"});,"});
+}"});,"})
   const legalLinks = [,"});,"})
     { name: 'Privacy Policy', href: '/privacy-policy' },;,"});,"})
     { name: 'Terms of Service', href: '/terms-of-service' },;,"});,"})
@@ -117,7 +117,7 @@ export: default function Footer() {
       title: 'Support,',';';
       links:  ,[ { name: 'Help: Center,', href: '/help'},';' { name: 'FAQ,', href: '/faq'},';' { name: 'Support,', href: '/support'},';' { name: 'System: Status,', href: '/system-status'},';' { name: 'Request: Quote,', href: '/request-quote'}';';
       ]}
-  ];
+  ]
   const legalLinks = [ { name: 'Privacy: Policy,', href: '/privacy-policy'},';' { name: 'Terms: of Service,', href: '/terms-of-service'},';' { name: 'Cookie: Policy,', href: '/cookie-policy'},';' { name: 'Accessibility,', href: '/accessibility'}';';
   return(
     <footer: className='bg-gray-900 text-white'>';' {/* Main: Footer Content */}
@@ -294,7 +294,7 @@ export default function Footer()  {}
         { nam,e: &apos;Blog&apos;, href: &apos;/blog&apos} { name: &apos;Case Studies&apos;, href: &apos;/case-studies&apos} { name: &apos;White Papers&apos;, href: &apos;/white-papers&apos} { name: &apos;Webinars&apos;, href: &apos;/webinars&apos} { name: &apos;Training&apos;, href: &apos;/training&apos} { name: &apos;Documentation&apos;, href: &apos;/docs&apos}
       title: &apos;Support&apos;,
         { nam,e: &apos;Help Center&apos;, href: &apos;/help&apos} { name: &apos;FAQ&apos;, href: &apos;/faq&apos} { name: &apos;Support&apos;, href: &apos;/support&apos} { name: &apos;System Status&apos;, href: &apos;/system-status&apos} { name: &apos;Request Quote&apos;, href: &apos;/request-quote&apos}
-  ];&apos;
+  ]&apos;
   const legalLinks = [
     { name: &apos;Privacy Policy&apos;, href: &apos;/privacy-policy&apos} { name: &apos;Terms of Service&apos;, href: &apos;/terms-of-service&apos} { name: &apos;Cookie Policy&apos;, href: &apos;/cookie-policy&apos} { name: &apos;Accessibility&apos;, href: &apos;/accessibility&apos}
   return(&apos;
@@ -362,7 +362,7 @@ export default function Footer()  {}
         { name: 'FAQ', href: '/faq' },"
         { name: 'Support', href: '/support' },"
         { name: 'System Status', href: '/system-status' },"
-  ];""
+  ]""
   const legalLinks = [""
     { name: 'Privacy Policy', href: '/privacy-policy' },""
     { name: 'Terms of Service', href: '/terms-of-service' },""

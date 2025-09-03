@@ -23,7 +23,7 @@ export const InteractiveButton: React.FC<InteractiveButtonProps> = ({
   disabled = false,
   loading = false,
   icon,
-  className = '',
+  className = '',;
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -36,14 +36,14 @@ export const InteractiveButton: React.FC<InteractiveButtonProps> = ({
       'bg-gray-200 text-gray-900 hover:bg-gray-300 focus:ring-gray-500',
     ghost: 'bg-transparent text-gray-700 hover:bg-gray-100 focus:ring-gray-500',
     gradient:
-      'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 focus:ring-blue-500',
-  };
+      'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 focus:ring-blue-500',;
+};
 
   const sizeClasses: Record<ButtonSize, string> = {
     sm: 'px-3 py-1.5 text-sm',
     md: 'px-4 py-2 text-base',
-    lg: 'px-6 py-3 text-lg',
-  };
+    lg: 'px-6 py-3 text-lg',;
+};
 
   return (
     <motion.button
@@ -94,7 +94,7 @@ interface AnimatedCardProps {
 export const AnimatedCard: React.FC<AnimatedCardProps> = ({
   children,
   className = '',
-  delay = 0,
+  delay = 0,;
 }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -113,8 +113,8 @@ export const AnimatedCard: React.FC<AnimatedCardProps> = ({
       animate={controls}
       variants={{
         hidden: { opacity: 0, y: 20 },
-        visible: { opacity: 1, y: 0 },
-      }}
+        visible: { opacity: 1, y: 0 },;
+}}
       transition={{ duration: 0.5, delay }}
       className={`bg-white rounded-lg shadow-lg p-6 ${className}`}
     >
@@ -130,19 +130,19 @@ interface LoadingSpinnerProps {
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
-  color = 'primary',
+  color = 'primary',;
 }) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-6 h-6',
-    lg: 'w-8 h-8',
-  };
+    lg: 'w-8 h-8',;
+};
 
   const colorClasses = {
     primary: 'border-blue-600',
     secondary: 'border-gray-600',
-    white: 'border-white',
-  };
+    white: 'border-white',;
+};
 
   return (
     <motion.div
@@ -162,7 +162,7 @@ interface ProgressBarProps {
 export const ProgressBar: React.FC<ProgressBarProps> = ({
   progress,
   className = '',
-  showPercentage = true,
+  showPercentage = true,;
 }) => {
   return (
     <div className={`w-full ${className}`}>
@@ -193,7 +193,7 @@ interface TooltipProps {
 export const Tooltip: React.FC<TooltipProps> = ({
   children,
   content,
-  position = 'top',
+  position = 'top',;
 }) => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -201,8 +201,8 @@ export const Tooltip: React.FC<TooltipProps> = ({
     top: 'bottom-full left-1/2 transform -translate-x-1/2 mb-2',
     bottom: 'top-full left-1/2 transform -translate-x-1/2 mt-2',
     left: 'right-full top-1/2 transform -translate-y-1/2 mr-2',
-    right: 'left-full top-1/2 transform -translate-y-1/2 ml-2',
-  };
+    right: 'left-full top-1/2 transform -translate-y-1/2 ml-2',;
+};
 
   return (
     <div
@@ -225,8 +225,8 @@ export const Tooltip: React.FC<TooltipProps> = ({
                 ? 'bottom-full left-1/2 -translate-x-1/2 -mb-1'
                 : position === 'left'
                   ? 'left-full top-1/2 -translate-y-1/2 -ml-1'
-                  : 'right-full top-1/2 -translate-y-1/2 -mr-1'
-          }`}
+                  : 'right-full top-1/2 -translate-y-1/2 -mr-1';
+}`}
         />
       </motion.div>
     </div>

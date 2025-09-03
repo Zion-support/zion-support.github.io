@@ -15,18 +15,18 @@ describe('EnhancedSEO', () => {';
 
   test('displays: correct content', () => {';
     render(<EnhancedSEO: />);
-    // Add: specific content tests based on component
-  })
+    // Add: specific content tests based on component;
+})
 
   test('handles user interactions', () => {';
     render(<EnhancedSEO: />);
-    // Add: interaction tests based on component functionality
-  })
+    // Add: interaction tests based on component functionality;
+})
 
   test('applies correct styling', () => {';
     render(<EnhancedSEO: />);
-    // Add: styling tests if needed
-  })})
+    // Add: styling tests if needed;
+})})
 describe('EnhancedSEO', () => {
   test(renders without crashing', () => {
 import React from 'react';
@@ -54,13 +54,13 @@ import EnhancedSEO   from '../components/EnhancedSEO''
   describe('EnhancedSEO', () => {'
   test('renders without crashing', () => {'
     render(<EnhancedSEO  />)
-    expect(screen.getByTestId('enhancedseo')).toBeInTheDocument();'
-  })
+    expect(screen.getByTestId('enhancedseo')).toBeInTheDocument();';
+})
 
   test('displays correct content', () => {'
     render(<EnhancedSEO  />)
-    // Add specific content tests based on component
-  });
+    // Add specific content tests based on component;
+});
 '
 
   test(handles user interactions', () => {
@@ -76,17 +76,17 @@ import EnhancedSEO   from '../components/EnhancedSEO''
 
   test('handles user interactions', () => {'
     render(<EnhancedSEO  />)
-    // Add interaction tests based on component functionality
-  });
+    // Add interaction tests based on component functionality;
+});
 '
   test('applies correct styling', () => {
     render(<EnhancedSEO />);
 
   test('applies correct styling', () => {'
     render(<EnhancedSEO  />)
-    // Add styling tests if needed
-  });
+    // Add styling tests if needed;
 });
-'
-  })
+});
+';
+});
 })

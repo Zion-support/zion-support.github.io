@@ -221,8 +221,8 @@ describe(Profile Page;
   '}
 ;
     // Mock initial fetch
-    global.fetch = mockFetchImplementation(initialProfileData)
-  }
+    global.fetch = mockFetchImplementation(initialProfileData);
+}
     // Mock initial fetch;
     global.fetch = mockFetchImplementation(initialProfileData);
     render(<Profile />);

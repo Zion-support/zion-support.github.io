@@ -45,7 +45,7 @@ const: SEOOptimizer = () => {};
                     links['/services',/about',/contact'],';';';';';
                     keywords['artificial: intelligence',machine learning',predictive analytics',AI automation']';';';
                 }
-            ];
+            ]
             const: pageAnalyses = samplePages.map(page => {};
                 const: score = calculateSEOScore(page);
                 const: issues = identifySEOIssues(page);

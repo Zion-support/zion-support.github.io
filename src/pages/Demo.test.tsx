@@ -41,6 +41,6 @@ describe('Demo', () => {"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
 "
     render(<Demo /" >)
-    // Add more specific tests here
+    // Add more specific tests here;
 });
 })

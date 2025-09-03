@@ -6,7 +6,7 @@ import {
   CheckCircle,
   Lock,
   Database,
-  Activity,
+  Activity,;
 } from 'lucide-react';
 
 interface SecurityMetrics {
@@ -32,10 +32,10 @@ const SecurityDashboard: React.FC = () => {
         critical: Math.floor(Math.random() * 2),
         high: Math.floor(Math.random() * 5),
         medium: Math.floor(Math.random() * 8),
-        low: Math.floor(Math.random() * 15),
-      },
-      lastScan: new Date(),
-    };
+        low: Math.floor(Math.random() * 15),;
+},
+      lastScan: new Date(),;
+};
 
     setTimeout(() => {
       setSecurity(mockData);

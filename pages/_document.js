@@ -32,11 +32,11 @@ export default function Document() {;,"});,"})
             __html: `;,"});,"})
               if ('serviceWorker' in navigator) {;,"});,"})
                 window.addEventListener('load', function() {;,"});,"})
-                  navigator.serviceWorker.register('/sw.js');,"});,"})
-                });,"});,"})
-              }"});,"})
-            `,;,"});,"})
-          }}"});,"})
+                  navigator.serviceWorker.register('/sw.js');,"});,"});
+});,"});,"});
+}"});,"})
+            `,;,"});,"});
+}}"});,"})
         />;,"});,"})
       </Head>;,"});,"})
       <body>;,"});,"})
@@ -44,7 +44,7 @@ export default function Document() {;,"});,"})
         <NextScript />;,"});,"})
       </body>;,"});,"})
     </Html>;,"});,"})
-  );,"});,"})
+  );,"});,"});
 }"});,"})
 import { Html, Head, Main, NextScript } from 'next/document';
 export default function Document() {;

@@ -79,7 +79,7 @@ class AutomationScriptFixer {;
       this.log(`✅ Fixed ${this.fixedCount} script files`);`;
       // Run some key automation scripts;
       const keyScripts = [;
-        'scripts/performance-monitor.js',';        'scripts/health-checker.js',';        'scripts/seo-optimizer.js',';        'scripts/website-analyzer.js',';        'scripts/link-checker.js',';        'scripts/error-monitor.js',';        'scripts/continuous-improvement.js',';        'scripts/dependency-updater.js',';      ];
+        'scripts/performance-monitor.js',';        'scripts/health-checker.js',';        'scripts/seo-optimizer.js',';        'scripts/website-analyzer.js',';        'scripts/link-checker.js',';        'scripts/error-monitor.js',';        'scripts/continuous-improvement.js',';        'scripts/dependency-updater.js',';      ]
 ;
       const results = [];
 ;

@@ -36,7 +36,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   style,
   onClick,
   onLoad,
-  onError,
+  onError,;
 }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
@@ -56,8 +56,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       },
       {
         threshold: 0.1,
-        rootMargin: '50px',
-      }
+        rootMargin: '50px',;
+}
     );
 
     if (imageRef.current) {
@@ -142,12 +142,12 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         priority={priority}
         placeholder={placeholder}
         blurDataURL={
-          placeholder === 'blur' ? blurDataURL || defaultBlurDataURL : undefined
-        }
+          placeholder === 'blur' ? blurDataURL || defaultBlurDataURL : undefined;
+}
         sizes={sizes}
         className={`transition-opacity duration-300 ${
-          isLoading ? 'opacity-0' : 'opacity-100'
-        }`}
+          isLoading ? 'opacity-0' : 'opacity-100';
+}`}
         onLoad={handleLoad}
         onError={handleError}
       />

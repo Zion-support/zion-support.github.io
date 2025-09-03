@@ -42,6 +42,6 @@ describe('events', () => {"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
 "
     render(<events /" >)
-    // Add more specific tests here
+    // Add more specific tests here;
 });
 })

@@ -197,7 +197,7 @@ import: { NextApiRequest, NextApiResponse } from;
   ',;
   '/chat-content/sustainable-technology-practices',
   '/chat-content/technology-implementation-strategies',
-  '  ];
+  '  ]
   const allPages = [
     ...staticPages, ...blogPages,
     ...servicePages, ...categoryPages,

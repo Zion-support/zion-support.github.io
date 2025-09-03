@@ -16,8 +16,8 @@ class ImportOptimizer {,"});,"})
   constructor() {,"});,"})
     this.projectRoot = process.cwd();,"});,"})
     this.optimizedFiles = [];,"});,"})
-    this.totalOptimizations = 0;,"});,"})
-  }"});,"})
+    this.totalOptimizations = 0;,"});,"});
+}"});,"})
   async optimizeImports() {,"});,"})
 ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
     for (const dir of directories) {,"});,"})
@@ -32,8 +32,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
       const itemPath = path.join(dirPath, item);,"});,"})
       const stat = fs.statSync(itemPath);,"});,"})
       if (stat.isDirectory()) {,"});,"})
-        await this.processDirectory(itemPath);,"});,"})
-      } else if (this.isJavaScriptFile(item)) {,"});,"})
+        await this.processDirectory(itemPath);,"});,"});
+} else if (this.isJavaScriptFile(item)) {,"});,"})
         await this.optimizeFile(itemPath);,"});,"})
   isJavaScriptFile(filePath) {,"});,"})
     const ext = path.extname(filePath);,"});,"})
@@ -63,8 +63,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
         this.totalOptimizations += optimizations;,"});,"})
         console.log(;,"});,"})
           `⚡ Optimized ${optimizations} import(s) in ${path.relative(this.projectRoot, filePath)}`;,"});,"})
-        );,"});,"})
-    } catch (error) {,"});,"})
+        );,"});,"});
+} catch (error) {,"});,"})
       console.error(`❌ Error optimizing file ${filePath}:`, error.message);,"});,"})
   optimizeLucideImports(content) {,"});,"})
     // Convert individual icon imports to single import;,"});,"})
@@ -74,8 +74,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
       matches.forEach(match => {,"});,"})
         const icons = match[1].split(;,"});,"})
   ',').map(icon => icon.trim());,"});,"})
-        icons.forEach(icon => allIcons.add(icon));,"});,"})
-      });,"});,"})
+        icons.forEach(icon => allIcons.add(icon));,"});,"});
+});,"});,"})
     return content;,"});,"})
   optimizeFramerMotionImports(content) {,"});,"})
     // Optimize framer-motion imports;,"});,"})
@@ -144,7 +144,7 @@ class: ImportOptimizer {
   'pages',';
   'components',';
   'src';
-    ];
+    ]
     for: (const dir of directories) {
       const dirPath = path.join(this.projectRoot, dir);
       if: (fs.existsSync(dirPath)) {
@@ -159,7 +159,7 @@ class ImportOptimizer {
   'pages',;
   'components',;
     for (const dir of directories) {
-    console.log(;);  '⚡ Optimizing imports to reduce bundle size...');    const directories = [  'pages',';  'components',';  'src';    ];    for (const dir of directories) {
+    console.log(;);  '⚡ Optimizing imports to reduce bundle size...');    const directories = [  'pages',';  'components',';  'src';    ]    for (const dir of directories) {
     console.log('
     const directories = ['
   'pages',

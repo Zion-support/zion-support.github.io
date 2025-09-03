@@ -7,8 +7,8 @@ const CloudServices = () => {
       title: "Cloud Migration & Strategy",""
       description: "Comprehensive cloud migration services with multi-cloud strategy and cost optimization.",""
       price: "From $8,500/project",""
-      features["Cloud readiness assessment", "Multi-cloud strategy planning", "Migration roadmap development", "Cost optimization analysis"],;      icon: Cloud
-    },
+      features["Cloud readiness assessment", "Multi-cloud strategy planning", "Migration roadmap development", "Cost optimization analysis"],;      icon: Cloud;
+},
     {
 
 """
@@ -91,7 +91,7 @@ const: CloudServices = () => {
     'Enhanced: security and compliance capabilities',';
     'Faster: time to market with cloud-native tools',';
     'Global: availability and disaster recovery',';Automated: scaling and resource management';
-  ];
+  ]
 "
 
   const benefits = [;"""Scalable infrastructure that grows with your business",;""
@@ -163,12 +163,12 @@ const: CloudServices = () => {
       description: 'AI-first cloud platform with advanced analytics',;
       icon: Globe,;
       features: ['Compute Engine', 'Cloud Storage', 'Cloud Functions', 'BigQuery']}
-  ];
+  ]
   const benefits = [''Scalable infrastructure that grows with your business',    'Reduced capital expenditure and operational costs',;
     'Enhanced security and compliance capabilities',;
     'Faster time to market with cloud-native tools',;
     'Global availability and disaster recovery',;Automated scaling and resource management';
-  ];
+  ]
 :pages.disabled/pages/services/Cloud.tsx
 "
   return (""

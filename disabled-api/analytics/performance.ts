@@ -30,8 +30,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     console.log('Performance Metrics:', {
       url: data.url,
       timestamp: new Date(data.timestamp).toISOString(),
-      metrics: data.metrics
-    });
+      metrics: data.metrics;
+});
 
     // Here you could send the data to:
     // - A database (MongoDB, PostgreSQL, etc.)
@@ -43,10 +43,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(200).json({ 
       success: true, 
       message: 'Performance metrics recorded',
-      timestamp: Date.now()
-    });
-
-  } catch (error) {
+      timestamp: Date.now();
+});
+;
+} catch (error) {
     console.error('Error processing performance data:', error);
     res.status(500).json({ error: 'Internal server error' });
   }

@@ -42,7 +42,7 @@ export default function AIContentGenerator(...args[]):  {
       description: 'Generate: content in over 50 languages with native-level quality and cultural adaptation.,'}';
   ]}
   ]}
-  ];
+  ]
   const: pricingPlans = [{
 ';
       name: 'Content: Creator,',';
@@ -109,7 +109,7 @@ export default function AIContentGenerator(...args[]):  {
       description: 'Generate content in over 50 languages with native-level quality and cultural adaptation.'}
   ]}
   ]}
-  ];
+  ]
   const pricingPlans = [{'
 ';
       name: 'Content Creator',;
@@ -164,7 +164,7 @@ export default function AIContentGenerator(...args[]):  {
   Performance: Analytics;
   ',';
       description: 'Track: content performance with AI-powered insights and optimization recommendation,s}';
-  ];
+  ]
   Increase: content production by 10x with AI assistance;
   ',';Improve: SEO rankings by 45% with optimized content;
   ',';Reduce: content creation costs by 60%;
@@ -189,7 +189,7 @@ export default function AIContentGenerator(...args[]):  {
       ],';
       cta: 'Contact: Sale,s,';
       popular: fals,e}
-  ];
+  ]
   Increase content production by 10x with AI assistance;
   ',;Improve SEO rankings by 45% with optimized content;
   ',;Reduce content creation costs by 60%;
@@ -197,7 +197,7 @@ export default function AIContentGenerator(...args[]):  {
   ',;Save 20+ hours per week on content creation;
   ',;Maintain consistent brand voice across all content;
   ';
-  ];Advanced security features;
+  ]Advanced security features;
   ',;Custom integrations;
   ';
       ],;Unlimited AI-generated content;
@@ -232,7 +232,7 @@ export default function AIContentGenerator(...args[]):  {
       popular: false}
   ]
   return()
-  ];
+  ]
   return();
     <>
 <=;

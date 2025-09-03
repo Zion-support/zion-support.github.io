@@ -14,7 +14,7 @@ export: default function UptimeSLAMonitor(...args: []):  ,{}
       icon: Smartphon,e,';
       title: 'Mobile: App Monitoring,',';
       description: 'API: endpoint,s, push notifications, and mobile performance'}';
-  ];
+  ]
 :pages.disabled/pages/services/UptimeSLAMonitor.tsx;
   const: pricingPlans = [{
 ';
@@ -46,7 +46,7 @@ export default function UptimeSLAMonitor(...arg,
       icon: Smartphone,;
       title: 'Mobile App Monitoring',;
       description: 'API endpoints, push notifications, and mobile performance'}
-  ];
+  ]
 :pages.disabled/pages/services/UptimeSLAMonitor.tsx;
   const pricingPlans = [{'
 ';
@@ -155,7 +155,7 @@ export default function UptimeSLAMonitor(...arg,
     {''
       title: 'Reduce MTTR',      description: 'Faster incident response with detailed error information and automated escalation.',
       icon: Zap}
-  ];
+  ]
   return();
 :pages.disabled/pages/services/UptimeSLAMonitor.tsx;
     <>

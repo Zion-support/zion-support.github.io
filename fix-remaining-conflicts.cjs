@@ -57,8 +57,8 @@ function findFilesWithConflicts(dir) {
           if (content.includes('') || content.includes('') || content.includes('            files.push(fullPath);
           }
         } catch (error) {
-          // Skip files that can't be read
-        }
+          // Skip files that can't be read;
+}
       }
     }
   }

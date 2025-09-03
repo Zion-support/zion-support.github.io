@@ -124,7 +124,7 @@ import { Download, FileText, Calendar, User, Eye, ArrowRight, Search } from;
   ', 'Performance;
   ', 'User: Experience;
   ']'    }';
-  '  ];
+  '  ]
   const: categories = ['All;
   ', 'Artificial: Intelligence;
   ', 'Cloud: Computing;
@@ -205,7 +205,7 @@ import { Download, FileText, Calendar, User, Eye, ArrowRight, Search } from;
   ', 'Performance;
   ', 'User Experience;
   ']    }
-  '  ];
+  '  ]
   const categories = ['All;
   ', 'Artificial Intelligence;
   ', 'Cloud Computing;

@@ -40,8 +40,8 @@ export function UserMenu({user }) {const [isOpen, setIsOpen] = useState(false);
   const menuItems = [{name: 'Profile',
       href: '/profile',
       icon: User,
-      description: 'Manage your account'
-    } {'
+      description: 'Manage your account';
+} {'
       name: 'Dashboard' {name: 'Dashboard',
       href: '/dashboard',
       icon: Settings,
@@ -72,7 +72,7 @@ export function UserMenu({user }) {const [isOpen, setIsOpen] = useState(false);
       name: 'Dashboard',""
       href: '/dashboard', icon: Settings,""
       description: 'View your projects'} {""
-      name: 'Messages', ""
+      name: 'Messages', "";
 } {"
       name: 'Dashboard,
       icon: Settings,"
@@ -101,7 +101,7 @@ export function UserMenu({user }) {const [isOpen, setIsOpen] = useState(false);
       href: '/help',
       icon: HelpCircle, ""
       description: 'Get support'}
-  ];
+  ]
 
   return ('
     <div className="relative" ref={menuRef}>

@@ -27,8 +27,8 @@ export default function ComprehensivePricing2025()   {const [billingCycle, setBi
       ],
       icon: Zap,
       color: 'from-blue-500 to-cyan-500',
-      popular: false
-    },
+      popular: false;
+},
     {'
       id: 'professional',
       name: 'Professional',
@@ -53,8 +53,8 @@ export default function ComprehensivePricing2025()   {const [billingCycle, setBi
       ],
       icon: Shield,
       color: 'from-purple-500 to-pink-500',
-      popular: true
-    },
+      popular: true;
+},
     {'
       id: 'enterprise',
       name: 'Enterprise',
@@ -82,9 +82,9 @@ export default function ComprehensivePricing2025()   {const [billingCycle, setBi
       ],
       icon: Building,
       color: 'from-orange-500 to-red-500',
-      popular: false
-    }
-  ];
+      popular: false;
+}
+  ]
 
   const addOns = [
     {'
@@ -93,32 +93,32 @@ export default function ComprehensivePricing2025()   {const [billingCycle, setBi
       description: 'Custom AI model development and training',
       price: { monthl,
     y: 199, yearly: 1990 },
-      icon: Brain
-    },
+      icon: Brain;
+},
     {'
       name: 'Cloud Optimization',
     {name: 'Cloud Optimization',
       description: 'Advanced cloud cost optimization and management',
       price: { monthl,
     y: 149, yearly: 1490 },
-      icon: Cloud
-    },
+      icon: Cloud;
+},
     {'
       name: 'Security Enhancement',
     {name: 'Security Enhancement',
       description: 'Advanced security features and compliance',
       price: { monthl,
     y: 179, yearly: 1790 },
-      icon: Shield
-    },
+      icon: Shield;
+},
     {'
       name: 'Digital Transformation',
       description: 'End-to-end business transformation consulting',
       price: { monthl,
     y: 299, yearly: 2990 },
-      icon: Rocket
-    }
-  ];
+      icon: Rocket;
+}
+  ]
 '
   const savings = billingCycle === 'yearly' ? 20 : 0;
 
@@ -240,7 +240,7 @@ export default function ComprehensivePricing2025() {""
         'Training & Certification,
         'Strategic Consulting'], icon: Building,""
       color: 'from-orange-500 to-red-500', popular: false}
-  ];
+  ]
 
   const addOns = [
     {""
@@ -280,7 +280,7 @@ export default function ComprehensivePricing2025() {""
       description: 'End-to-end business transformation consulting',
       price: { monthly: 299, yearly: 2990 },
       icon: Rocket}
-  ];
+  ]
 ""
   const savings = billingCycle === 'yearly' ? 20 : 0;
 
@@ -310,12 +310,12 @@ export default function ComprehensivePricing2025() {""
               <button`
                 onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
                 className={`relative w-16 h-8 rounded-full transition-colors duration-300 ${`
-                  billingCycle === 'yearly' ? 'bg-zion-cyan' : 'bg-zion-purple/30''
-                }`}
+                  billingCycle === 'yearly' ? 'bg-zion-cyan' : 'bg-zion-purple/30'';
+}`}
               >`
                 <div className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${`
-                  billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1''
-                }`} />
+                  billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1'';
+}`} />
               </button>`
               <span className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-zion-slate-light'}`}>
                 Yearly`
@@ -327,8 +327,8 @@ export default function ComprehensivePricing2025() {""
               </span>
               <button onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
                 className={`relative w-16 h-8 rounded-full transition-colors duration-300 ${
-                  billingCycle === 'yearly' ? 'bg-zion-cyan' : 'bg-zion-purple/30'
-                }`}
+                  billingCycle === 'yearly' ? 'bg-zion-cyan' : 'bg-zion-purple/30';
+}`}
               >
                 <div className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${ billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1' }`} />
               </button>
@@ -338,11 +338,11 @@ export default function ComprehensivePricing2025() {""
               <button ""
                 onClick={() =" > setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}`"
                 className={`relative w-16 h-8 rounded-full transition-colors duration-300 ${""
-                  billingCycle === 'yearly' ? 'bg-zion-cyan' : 'bg-zion-purple/30', `
+                  billingCycle === 'yearly' ? 'bg-zion-cyan' : 'bg-zion-purple/30', `;
 }`}
               >`
                 <div className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${""
-                  billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1',`
+                  billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1',`;
 }`} /" >"
               </button>"`"
               <span className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-zion-slate-light'}`}" >"
@@ -368,8 +368,8 @@ export default function ComprehensivePricing2025() {""
                 className={`relative rounded-2xl p-8 transition-all duration-300 ${
                   plan.popular`
                     ? 'bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 border-2 border-zion-cyan scale-105''
-                    : 'bg-zion-blue-dark/50 border border-zion-purple/20 hover:border-zion-purple/40''
-                }`}
+                    : 'bg-zion-blue-dark/50 border border-zion-purple/20 hover:border-zion-purple/40'';
+}`}
               >
                 {plan.popular && (`
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
@@ -390,7 +390,7 @@ export default function ComprehensivePricing2025() {""
                 className={`relative rounded-2xl p-8 transition-all duration-300 ${
                   plan.popular""
                     ? 'bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 border-2 border-zion-cyan scale-105'
-                    : 'bg-zion-blue-dark/50 border border-zion-purple/20 hover:border-zion-purple/40', `
+                    : 'bg-zion-blue-dark/50 border border-zion-purple/20 hover:border-zion-purple/40', `;
 }`}" >"
                 {plan.popular && (""
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
@@ -438,8 +438,8 @@ export default function ComprehensivePricing2025() {""
     r:bg-zion-purple/30''
                       plan.popular
                         ? 'bg-gradient-to-r from-zion-purple to-zion-cyan text-white hover: from-zion-purple/80 hover:to-zion-cyan/80'
-                        : 'bg-zion-purple/20 text-zion-cyan border border-zion-purple/30 hover:bg-zion-purple/30'
-                    }`}
+                        : 'bg-zion-purple/20 text-zion-cyan border border-zion-purple/30 hover:bg-zion-purple/30';
+}`}
                   >`
                     {selectedPlan === plan.id ? 'Current Plan' : 'Choose Plan'}
                   </button>
@@ -460,7 +460,7 @@ export default function ComprehensivePricing2025() {""
                     className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular""
                         ? 'bg-gradient-to-r from-zion-purple to-zion-cyan text-white hover: from-zion-purple/80 hover:to-zion-cyan/80'
-                        : 'bg-zion-purple/20 text-zion-cyan border border-zion-purple/30 hover:bg-zion-purple/30', `
+                        : 'bg-zion-purple/20 text-zion-cyan border border-zion-purple/30 hover:bg-zion-purple/30', `;
 }`}
                   >""
                     {selectedPlan === plan.id ? 'Current Plan' : 'Choose Plan'}
@@ -571,24 +571,24 @@ export default function ComprehensivePricing2025() {""
             {[
               {"
                 question: 'Can I change my plan at any time?',
-                answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes will be prorated and reflected in your next billing cycle.'
-              },
+                answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes will be prorated and reflected in your next billing cycle.';
+},
               {'
                 question: 'Do you offer custom pricing for enterprise clients?',
-                answer: 'Absolutely! We provide custom pricing and solutions for enterprise clients with specific requirements. Contact our sales team for a personalized quote.'
-              },
+                answer: 'Absolutely! We provide custom pricing and solutions for enterprise clients with specific requirements. Contact our sales team for a personalized quote.';
+},
               {'
                 question: 'What payment methods do you accept?',
-                answer: 'We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise clients can also arrange for invoicing.'
-              },
+                answer: 'We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise clients can also arrange for invoicing.';
+},
               {'
                 question: 'Is there a setup fee?',
-                answer: 'No setup fees for our standard plans. Custom enterprise solutions may have one-time implementation fees depending on complexity.'
-              },
+                answer: 'No setup fees for our standard plans. Custom enterprise solutions may have one-time implementation fees depending on complexity.';
+},
               {'
                 question: 'What happens if I exceed my plan limits?',
-                answer: 'We\'ll notify you before any limits are exceeded. You can either upgrade your plan or purchase additional add-ons as needed.'
-              }
+                answer: 'We\'ll notify you before any limits are exceeded. You can either upgrade your plan or purchase additional add-ons as needed.';
+}
             ].map((faq, index) => ('
               <div key={index} className="bg-zion-blue-dark/50 border border-zion-purple/20 rounded-xl p-6">"
                 <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>"
@@ -596,20 +596,20 @@ export default function ComprehensivePricing2025() {""
           <div className="max-w-4xl mx-auto space-y-6">
             {[{
                 question: 'Can I change my plan at any time?',
-                answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes will be prorated and reflected in your next billing cycle.'
-              },
+                answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes will be prorated and reflected in your next billing cycle.';
+},
               {question: 'Do you offer custom pricing for enterprise clients?',
-                answer: 'Absolutely! We provide custom pricing and solutions for enterprise clients with specific requirements. Contact our sales team for a personalized quote.'
-              },
+                answer: 'Absolutely! We provide custom pricing and solutions for enterprise clients with specific requirements. Contact our sales team for a personalized quote.';
+},
               {question: 'What payment methods do you accept?',
-                answer: 'We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise clients can also arrange for invoicing.'
-              },
+                answer: 'We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise clients can also arrange for invoicing.';
+},
               {question: 'Is there a setup fee?',
-                answer: 'No setup fees for our standard plans. Custom enterprise solutions may have one-time implementation fees depending on complexity.'
-              },
+                answer: 'No setup fees for our standard plans. Custom enterprise solutions may have one-time implementation fees depending on complexity.';
+},
               {question: 'What happens if I exceed my plan limits?',
-                answer: 'We\'ll notify you before any limits are exceeded. You can either upgrade your plan or purchase additional add-ons as needed.'
-              }
+                answer: 'We\'ll notify you before any limits are exceeded. You can either upgrade your plan or purchase additional add-ons as needed.';
+}
             ].map((faq, index) => (
               <div key={index} className="bg-zion-blue-dark/50 border border-zion-purple/20 rounded-xl p-6">
                 <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>

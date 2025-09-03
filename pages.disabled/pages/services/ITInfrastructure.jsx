@@ -218,7 +218,7 @@ const ITInfrastructure = () => {}
         'Performance Monitoring',Bottleneck Analysis',Optimization Strategies',Capacity Planning'
       ],
       icon: '⚡'}
-  ];
+  ]
 
   const infrastructureAreas = []
     {}
@@ -241,7 +241,7 @@ const ITInfrastructure = () => {}
       solutions: ['
         'Storage arrays',Backup systems',Cloud storage',Data protection'
       ]}
-  ];
+  ]
 
   ,VPN solutions',Network security;
   ']},

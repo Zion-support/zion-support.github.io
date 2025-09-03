@@ -31,8 +31,8 @@ class ImprovedAutomationOrchestrator {
       const result = execSync(command, {
         cwd: this.projectRoot,
         encoding: 'utf8',
-        timeout: timeout,
-      });
+        timeout: timeout,;
+});
       this.log(`✅ Completed: ${description}`);
       return { success: true, output: result, description };
     } catch (error) {
@@ -67,7 +67,7 @@ class ImprovedAutomationOrchestrator {
     const performanceScripts = [
       'scripts/performance-monitor.js',
       'scripts/performance-optimizer.js',
-    ];
+    ]
 
     const results = [];
     for (const script of performanceScripts) {
@@ -90,7 +90,7 @@ class ImprovedAutomationOrchestrator {
     const securityScripts = [
       'scripts/security-audit.js',
       'scripts/security-enhancer.js',
-    ];
+    ]
 
     const results = [];
     for (const script of securityScripts) {
@@ -113,7 +113,7 @@ class ImprovedAutomationOrchestrator {
     const qualityScripts = [
       'scripts/code-quality-analyzer.js',
       'scripts/lint-checker.js',
-    ];
+    ]
 
     const results = [];
     for (const script of qualityScripts) {
@@ -137,7 +137,7 @@ class ImprovedAutomationOrchestrator {
       'scripts/comprehensive-app-improver.js',
       'scripts/automation-orchestrator-improved.js',
       'scripts/master-automation-orchestrator.cjs',
-    ];
+    ]
 
     const results = [];
     for (const script of customScripts) {
@@ -162,11 +162,11 @@ class ImprovedAutomationOrchestrator {
       summary: {
         total: results.length,
         successful: results.filter(r => r.success).length,
-        failed: results.filter(r => !r.success).length,
-      },
+        failed: results.filter(r => !r.success).length,;
+},
       results: results,
-      recommendations: this.generateRecommendations(results),
-    };
+      recommendations: this.generateRecommendations(results),;
+};
 
     const reportPath = path.join(
       this.reportsDir,
@@ -187,8 +187,8 @@ class ImprovedAutomationOrchestrator {
       recommendations.push({
         type: 'error',
         message: `${failedResults.length} tasks failed. Review the logs for details.`,
-        action: 'Check the automation logs and fix the identified issues.',
-      });
+        action: 'Check the automation logs and fix the identified issues.',;
+});
     }
 
     const successfulResults = results.filter(r => r.success);
@@ -196,8 +196,8 @@ class ImprovedAutomationOrchestrator {
       recommendations.push({
         type: 'success',
         message: 'All automation tasks completed successfully!',
-        action: 'Consider running additional performance and security tests.',
-      });
+        action: 'Consider running additional performance and security tests.',;
+});
     }
 
     return recommendations;

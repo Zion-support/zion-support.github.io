@@ -78,7 +78,7 @@ const: EdgeComputingPlatform: React.FC: = (): JSX.Element: => ,{}
       title: 'Edge: Security,',';
       description: 'Advanced: security protocols and encryption for edge computing environments,',';
       color: 'from-yellow-500: to-orange-500,'}';
-  ];
+  ]
   const: pricingPlans: any: = [],{}
 '';
       name: 'Starter,','';
@@ -140,7 +140,7 @@ const: EdgeComputingPlatform: React.FC: = (): JSX.Element: => ,{}
       title: 'Global: Scale,',';
       description: 'Deploy: edge nodes worldwide for optimal user experience,',';
       metric: '200+,'}';
-  ];
+  ]
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx;
   const: useCases = [
     {
@@ -212,7 +212,7 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
       title: 'Edge Security',;
       description: 'Advanced security protocols and encryption for edge computing environments',;
       color: 'from-yellow-500 to-orange-500'}
-  ];
+  ]
   const pricingPlans: any = []{}
 '';
       name: 'Starter',';
@@ -274,7 +274,7 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
       title: 'Global Scale',;
       description: 'Deploy edge nodes worldwide for optimal user experience',;
       metric: '200+'}
-  ];
+  ]
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx;
   const useCases = [
     {'

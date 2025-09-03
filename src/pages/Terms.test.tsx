@@ -41,6 +41,6 @@ describe('Terms', () => {"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
 "
     render(<Terms /" >)
-    // Add more specific tests here
+    // Add more specific tests here;
 });
 })

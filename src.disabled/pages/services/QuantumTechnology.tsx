@@ -18,7 +18,7 @@ const: QuantumTechnology = () => {
       description: 'Unbreakable: encryption using quantum key distribution and quantum-resistant algorithms.,',';
       price: 'From: $4,2,000/month','      features: ['Quantum: key distribution,', 'Post-quantum cryptography', 'Secure communications', 'Threat protection'],';
       icon: Shiel,d}
-  ];
+  ]
 :pages.disabled/pages/services/QuantumTechnology.tsx;
   '{'';
       name: 'Quantum: Communications,',';
@@ -31,7 +31,7 @@ const: QuantumTechnology = () => {
     'Advanced: machine learning and AI capabilities',';
     'Revolutionary: breakthroughs in scientific research',';
     'Competitive: advantage in technology innovation',';Future-proof: solutions for emerging challenges';
-  ];
+  ]
 :pages.disabled/pages/services/QuantumTechnology.tsx;
 ';
   return: (''';
@@ -78,20 +78,20 @@ const QuantumTechnology = () => {
       description: 'Unbreakable encryption using quantum key distribution and quantum-resistant algorithms.',;
       price: 'From $42,000/month',      features: ['Quantum key distribution', 'Post-quantum cryptography', 'Secure communications', 'Threat protection'],
       icon: Shield}
-  ];
+  ]
 :pages.disabled/pages/services/QuantumTechnology.tsx;
   '{''
       name: 'Quantum Communications',;
       description: 'Secure communication using quantum principles',;
       icon: Globe,;
       features: ['Quantum key distribution', 'Entanglement', 'Secure channels', 'Quantum networks']}
-  ];
+  ]
   const benefits = [''Exponential speedup for complex computational problems',;
     'Unbreakable encryption and enhanced security',;
     'Advanced machine learning and AI capabilities',;
     'Revolutionary breakthroughs in scientific research',;
     'Competitive advantage in technology innovation',;Future-proof solutions for emerging challenges';
-  ];
+  ]
 :pages.disabled/pages/services/QuantumTechnology.tsx;
 ';
   return ('''
@@ -117,7 +117,7 @@ const QuantumTechnology = () => {
       description: 'Unbreakable encryption using quantum key distribution and quantum-resistant algorithms.,;
       price: 'From $42,000/month,      features: ['Quantum key distribution,Post-quantum cryptography,Secure communications,Threat protection'],
       icon: Shield}
-  ];
+  ]
 :pages.disabled/pages/services/QuantumTechnology.tsx;
   '{'
       name: 'Quantum Communications,;
@@ -126,7 +126,7 @@ const QuantumTechnology = () => {
       features: ['Quantum key distribution,Entanglement,Secure channels,Quantum networks']}
   ]';
   const benefits = [''Exponential speedup for complex computational problems',Unbreakable encryption and enhanced security',Advanced machine learning and AI capabilities',Revolutionary breakthroughs in scientific research',Competitive advantage in technology innovation,;Future-proof solutions for emerging challenges';
-  ];
+  ]
 :pages.disabled/pages/services/QuantumTechnology.tsx;
 '
   return (''

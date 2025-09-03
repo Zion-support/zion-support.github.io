@@ -62,7 +62,7 @@ export default function Partners() {;
       website: "https://intel.com",;
       benefits: ["Processor Tech", "AI Optimization", "Performance"];
     }
-  ];
+  ]
 ;
   const partnershipTypes = [;
     {;
@@ -82,7 +82,7 @@ export default function Partners() {;
     {;
       title: "Research Partners",;
       description: "Academic institutions and research organizations",;
-      icon: Award,;
+      icon: Award,
       count: 15,;
       color: "from-purple-500 to-pink-500";
     },;
@@ -93,7 +93,7 @@ export default function Partners() {;
       count: 25,;
       color: "from-orange-500 to-red-500";
     }
-  ];
+  ]
 ;
   const benefits = [;
     "Access to cutting-edge technology and platforms",;
@@ -102,7 +102,7 @@ export default function Partners() {;
     "Technical support and training programs",;
     "Co-marketing and go-to-market strategies",;
     "Priority access to new features and updates";
-  ];
+  ]
 ;
   return (;
     <>;
@@ -172,7 +172,7 @@ import { motion } from &apos;framer-motion';
 import { SEO } from &apos;../components/SEO';
 import { 
   Handshake, Globe, Award, Users, Building, 
-  Star, CheckCircle, ArrowRight, ExternalLink 
+  Star, CheckCircle, ArrowRight, ExternalLink ;
 } from &apos;lucide-react';&apos;&apos;
 
 export default function Partners() {}
@@ -184,8 +184,8 @@ export default function Partners() {}
       description: &quot;Strategic partnership in cloud computing and AI solutions&quot;,
       logo: &quot;/api/placeholder/200/100&quot;,
       website: &quot;http,s://microsoft.com&quot;,
-      benefits: [&quot;Azure Integration&quot;, &quot;AI Services&quot;, &quot;Enterprise Solutions&quot;]
-    },
+      benefits: [&quot;Azure Integration&quot;, &quot;AI Services&quot;, &quot;Enterprise Solutions&quot;];
+},
     {
       id: 2,
       name: &quot;Google Cloud&quot;,
@@ -193,8 +193,8 @@ export default function Partners() {}
       description: &quot;Advanced cloud infrastructure and machine learning platforms&quot;,
       logo: &quot;/api/placeholder/200/100&quot;,
       website: &quot;http,s://cloud.google.com&quot;,
-      benefits: [&quot;GCP Services&quot;, &quot;ML Platforms&quot;, &quot;Data Analytics&quot;]
-    },
+      benefits: [&quot;GCP Services&quot;, &quot;ML Platforms&quot;, &quot;Data Analytics&quot;];
+},
     {
       id: 3,
       name: &quot;IBM&quot;,
@@ -202,8 +202,8 @@ export default function Partners() {}
       description: &quot;Quantum computing research and development collaboration&quot;,
       logo: &quot;/api/placeholder/200/100&quot;,
       website: &quot;http,s://ibm.com&quot;,
-      benefits: [&quot;Quantum Systems&quot;, &quot;Research Collaboration&quot;, &quot;Enterprise AI&quot;]
-    },
+      benefits: [&quot;Quantum Systems&quot;, &quot;Research Collaboration&quot;, &quot;Enterprise AI&quot;];
+},
     {
       id: 4,
       name: &quot;Amazon Web Services&quot;,
@@ -211,8 +211,8 @@ export default function Partners() {}
       description: &quot;Comprehensive cloud services and infrastructure solutions&quot;,
       logo: &quot;/api/placeholder/200/100&quot;,
       website: &quot;http,s://aws.amazon.com&quot;,
-      benefits: [&quot;AWS Services&quot;, &quot;Infrastructure&quot;, &quot;Global Reach&quot;]
-    },
+      benefits: [&quot;AWS Services&quot;, &quot;Infrastructure&quot;, &quot;Global Reach&quot;];
+},
     {
       id: 5,
       name: &quot;NVIDIA&quot;,
@@ -220,8 +220,8 @@ export default function Partners() {}
       description: &quot;Advanced GPU solutions for AI and machine learning workloads&quot;,
       logo: &quot;/api/placeholder/200/100&quot;,
       website: &quot;http,s://nvidia.com&quot;,
-      benefits: [&quot;GPU Solutions&quot;, &quot;AI Acceleration&quot;, &quot;Deep Learning&quot;]
-    },
+      benefits: [&quot;GPU Solutions&quot;, &quot;AI Acceleration&quot;, &quot;Deep Learning&quot;];
+},
     {
       id: 6,
       name: &quot;Intel&quot;,
@@ -229,22 +229,22 @@ export default function Partners() {}
       description: &quot;Advanced processor technologies and AI optimization&quot;,
       logo: &quot;/api/placeholder/200/100&quot;,
       website: &quot;http,s://intel.com&quot;,
-      benefits: [&quot;Processor Tech&quot;, &quot;AI Optimization&quot;, &quot;Performance&quot;]
-    }
-  ];&quot;
+      benefits: [&quot;Processor Tech&quot;, &quot;AI Optimization&quot;, &quot;Performance&quot;];
+}
+  ]&quot;
 
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
 import { 
-  Handshake, Globe, Award, Users, Building, Star, CheckCircle, ArrowRight, ExternalLink 
+  Handshake, Globe, Award, Users, Building, Star, CheckCircle, ArrowRight, ExternalLink ;
 } from 'lucide-react';
 export default function Partners() {
   const partners = [
     { id: 1, name: "Microsoft",
       category: "Technology Partner", description: "Strategic partnership in cloud computing and AI solutions",
       logo: "/api/placeholder/200/100", website: "https://microsoft.com",
-      benefits: ["Azure Integration", "AI Services", "Enterprise Solutions"]
-    }, { id: 2,
+      benefits: ["Azure Integration", "AI Services", "Enterprise Solutions"];
+}, { id: 2,
     {
       id: 1, name: "Microsoft",
       category: "Technology Partner", description: "Strategic partnership in cloud computing and AI solutions",
@@ -254,43 +254,43 @@ export default function Partners() {
       id: 1, name: "Microsoft",
       category: "Technology Partner", description: "Strategic partnership in cloud computing and AI solutions",
       logo: "/api/placeholder/200/100", website: "https://microsoft.com",
-      benefits: ["Azure Integration,AI Services,Enterprise Solutions"]
-    }, {
+      benefits: ["Azure Integration,AI Services,Enterprise Solutions"];
+}, {
       id: 2,
       name: "Google Cloud", category: "Cloud Partner",
       description: "Advanced cloud infrastructure and machine learning platforms", logo: "/api/placeholder/200/100",
-      website: "https://cloud.google.com", benefits: ["GCP Services", "ML Platforms", "Data Analytics"]
-    }, { id: 3,
-      website: "https://cloud.google.com", benefits: ["GCP Services,ML Platforms,Data Analytics"]
-    }, {
+      website: "https://cloud.google.com", benefits: ["GCP Services", "ML Platforms", "Data Analytics"];
+}, { id: 3,
+      website: "https://cloud.google.com", benefits: ["GCP Services,ML Platforms,Data Analytics"];
+}, {
       id: 3,
       name: "IBM", category: "Quantum Computing Partner",
       description: "Quantum computing research and development collaboration", logo: "/api/placeholder/200/100",
-      website: "https://ibm.com", benefits: ["Quantum Systems", "Research Collaboration", "Enterprise AI"]
-    }, { id: 4,
-      website: "https://ibm.com", benefits: ["Quantum Systems,Research Collaboration,Enterprise AI"]
-    }, {
+      website: "https://ibm.com", benefits: ["Quantum Systems", "Research Collaboration", "Enterprise AI"];
+}, { id: 4,
+      website: "https://ibm.com", benefits: ["Quantum Systems,Research Collaboration,Enterprise AI"];
+}, {
       id: 4,
       name: "Amazon Web Services", category: "Cloud Infrastructure Partner",
       description: "Comprehensive cloud services and infrastructure solutions", logo: "/api/placeholder/200/100",
-      website: "https://aws.amazon.com", benefits: ["AWS Services", "Infrastructure", "Global Reach"]
-    }, { id: 5,
-      website: "https://aws.amazon.com", benefits: ["AWS Services,Infrastructure,Global Reach"]
-    }, {
+      website: "https://aws.amazon.com", benefits: ["AWS Services", "Infrastructure", "Global Reach"];
+}, { id: 5,
+      website: "https://aws.amazon.com", benefits: ["AWS Services,Infrastructure,Global Reach"];
+}, {
       id: 5,
       name: "NVIDIA", category: "AI Hardware Partner",
       description: "Advanced GPU solutions for AI and machine learning workloads", logo: "/api/placeholder/200/100",
-      website: "https://nvidia.com", benefits: ["GPU Solutions", "AI Acceleration", "Deep Learning"]
-    }, { id: 6,
-      website: "https://nvidia.com", benefits: ["GPU Solutions,AI Acceleration,Deep Learning"]
-    }, {
+      website: "https://nvidia.com", benefits: ["GPU Solutions", "AI Acceleration", "Deep Learning"];
+}, { id: 6,
+      website: "https://nvidia.com", benefits: ["GPU Solutions,AI Acceleration,Deep Learning"];
+}, {
       id: 6,
       name: "Intel", category: "Technology Partner",
       description: "Advanced processor technologies and AI optimization", logo: "/api/placeholder/200/100",
       website: "https://intel.com", benefits: ["Processor Tech", "AI Optimization", "Performance"]
-      website: "https://intel.com", benefits: ["Processor Tech,AI Optimization,Performance"]
-    }
-  ];
+      website: "https://intel.com", benefits: ["Processor Tech,AI Optimization,Performance"];
+}
+  ]
   const partnershipTypes = [
     { title: "Technology Partners", description: "Leading technology companies providing cutting-edge solutions",
     {
@@ -321,7 +321,7 @@ export default function Partners() {
       count: 25,
       color: &quot;from-orange-500 to-red-500&quot;
     }
-  ];&quot;
+  ]&quot;
 
   const benefits = [
     &quot;Access to cutting-edge technology and platforms&quot;,
@@ -330,31 +330,31 @@ export default function Partners() {
     &quot;Technical support and training programs&quot;,
     &quot;Co-marketing and go-to-market strategies&quot;,
     &quot;Priority access to new features and updates&quot;
-  ];
+  ]
 
   return (&quot;
   {
       title: "Technology Partners", description: "Leading technology companies providing cutting-edge solutions",
       icon: Building, count: 12,
-      color: "from-blue-500 to-cyan-500"
-    }, { title: "Cloud Partners",
+      color: "from-blue-500 to-cyan-500";
+}, { title: "Cloud Partners",
       description: "Global cloud providers enabling scalable infrastructure", icon: Globe,
-      count: 8, color: "from-green-500 to-emerald-500"
-    },
+      count: 8, color: "from-green-500 to-emerald-500";
+},
     { title: "Research Partners", description: "Academic institutions and research organizations",
       icon: Award, count: 15,
-      color: "from-purple-500 to-pink-500"
-    }, { title: "Channel Partners",
+      color: "from-purple-500 to-pink-500";
+}, { title: "Channel Partners",
       description: "Distribution and implementation partners worldwide", icon: Handshake,
-      count: 25, color: "from-orange-500 to-red-500"
-    }
-  ];
+      count: 25, color: "from-orange-500 to-red-500";
+}
+  ]
   const benefits = [
     "Access to cutting-edge technology and platforms", "Joint research and development opportunities",
     "Global market reach and distribution channels", "Technical support and training programs",
     "Co-marketing and go-to-market strategies", "Priority access to new features and updates"
     "Access to cutting-edge technology and platforms,Joint research and development opportunities,Global market reach and distribution channels,Technical support and training programs,Co-marketing and go-to-market strategies,Priority access to new features and updates"
-  ];
+  ]
   return (
     <>
       <SEO 

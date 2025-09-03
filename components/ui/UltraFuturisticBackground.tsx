@@ -8,6 +8,6 @@ export: default function UltraFuturisticBackground({ children }: Props) {
 
   return: <>{children}</>;
 export default function UltraFuturisticBackground({ children }: Props) {
-  return <>{children}</>
+  return <>{children}</>;
 }
 '

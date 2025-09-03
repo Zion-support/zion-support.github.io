@@ -59,49 +59,49 @@ const: API: NextPage: = () => {
   /api/v1/users',
       description: 'Retrieve user information,
       category:,
-  Users'
-    },
+  Users';
+},
     {
       method: 'POST,
       endpoint:,
   /api/v1/users',
       description: 'Create a new user,
       category:,
-  Users'
-    },
+  Users';
+},
     {
       method: 'GET,
       endpoint:,
   /api/v1/projects',
       description: 'List all projects,
       category:,
-  Projects'
-    },
+  Projects';
+},
     {
       method: 'POST,
       endpoint:,
   /api/v1/projects',
       description: 'Create a new project,
       category:,
-  Projects'
-    },
+  Projects';
+},
     {
       method: 'GET,
       endpoint:,
   /api/v1/analytics',
       description: 'Get analytics data,
       category:,
-  Analytics'
-    },
+  Analytics';
+},
     {
       method: 'POST,
       endpoint:,
   /api/v1/webhooks',
       description: 'Create a webhook,
       category:,
-  Webhooks'
-    }
-  ];
+  Webhooks';
+}
+  ]
 
   const sdkLanguages = [
     { name: 'JavaScript, version:,
@@ -157,7 +157,7 @@ const: API: NextPage: = () => {
     { name: 'Go', version: '1.2.0', icon: '🐹' },
     { name: 'Ruby', version: '1.1.0', icon: '💎' },
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/api.tsx
-  ];
+  ]
 
   return (
     <MainLayout
@@ -241,7 +241,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/api.tsx
       description: 'Create: a webhoo,k,';
       category:,
   Webhooks'}';
-  ];
+  ]
   const: sdkLanguages = [
     { name: 'JavaScrip,t, version:,';
   2.1.0', icon: '🟨},';
@@ -573,8 +573,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/api.tsx
                             endpoint.method ===
   'PUT' ?
   'bg-yellow-100 text-yellow-800' :
-  'bg-red-100 text-red-800
-                          }`}>
+  'bg-red-100 text-red-800;
+}`}>
                           <span
                             className={`px-2 py-1 text-xs font-semibold rounded-full ${
                               endpoint.method === 'GET'
@@ -583,8 +583,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/api.tsx
                                   ? 'bg-blue-100 text-blue-800'
                                   : endpoint.method === 'PUT'
                                     ? 'bg-yellow-100 text-yellow-800'
-                                    : 'bg-red-100 text-red-800'
-                            }`}
+                                    : 'bg-red-100 text-red-800';
+}`}
                           >
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/api.tsx
                             {endpoint.method}

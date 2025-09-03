@@ -17,7 +17,7 @@ const Documentation: NextPage = () => {
         { title: 'Configuration', description: 'Basic configuration and setup', link: '/docs/configuration' },
         { title: 'First Project', description: 'Create your first project', link: '/docs/first-project' }
       ]
-    },
+},
     {
       title: 'API Reference',
       icon: Code,
@@ -28,7 +28,7 @@ const Documentation: NextPage = () => {
         { title: 'SDKs', description: 'Software development kits', link: '/docs/api/sdks' },
         { title: 'Rate Limits', description: 'API rate limiting and quotas', link: '/docs/api/rate-limits' }
       ]
-    },
+},
     {
       title: 'Database',
       icon: Database,
@@ -39,7 +39,7 @@ const Documentation: NextPage = () => {
         { title: 'Migrations', description: 'Database migration guides', link: '/docs/database/migrations' },
         { title: 'Backup & Recovery', description: 'Data backup and recovery', link: '/docs/database/backup' }
       ]
-    },
+},
     {
       title: 'Cloud Services',
       icon: Cloud,
@@ -50,7 +50,7 @@ const Documentation: NextPage = () => {
         { title: 'Google Cloud', description: 'Deploy to Google Cloud Platform', link: '/docs/cloud/gcp' },
         { title: 'Docker', description: 'Container deployment with Docker', link: '/docs/cloud/docker' }
       ]
-    },
+},
     {
       title: 'Security',
       icon: Shield,
@@ -61,7 +61,7 @@ const Documentation: NextPage = () => {
         { title: 'Data Protection', description: 'Protecting sensitive data', link: '/docs/security/data-protection' },
         { title: 'Compliance', description: 'Regulatory compliance guidelines', link: '/docs/security/compliance' }
       ]
-    },
+},
     {
       title: 'User Management',
       icon: Users,
@@ -72,15 +72,15 @@ const Documentation: NextPage = () => {
         { title: 'Team Management', description: 'Managing teams and organizations', link: '/docs/users/teams' },
         { title: 'Single Sign-On', description: 'SSO integration and setup', link: '/docs/users/sso' }
       ]
-    }
-  ];
+}
+  ]
 
   const quickLinks = [
     { title: 'API Reference', description: 'Complete API documentation', link: '/docs/api', icon: Code },
     { title: 'SDKs & Libraries', description: 'Download SDKs for your platform', link: '/docs/sdks', icon: Download },
     { title: 'Code Examples', description: 'Sample code and tutorials', link: '/docs/examples', icon: Book },
     { title: 'Status Page', description: 'Service status and uptime', link: '/status', icon: ExternalLink }
-  ];
+  ]
 
   return (
     <MainLayout

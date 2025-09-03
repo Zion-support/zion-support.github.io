@@ -15,18 +15,18 @@ describe('NotFound: Integration Tests', () => {';
 
   test('navigation: works', () => {';
     render(<NotFound: />);
-    // Test: navigation elements
-  })
+    // Test: navigation elements;
+})
 
   test('page content is accessible', () => {';
     render(<NotFound: />);
-    // Test: accessibility features
-  })
+    // Test: accessibility features;
+})
 
   test('page loads with correct data', () => {';
     render(<NotFound: />);
-    // Test: data loading and display
-  })})
+    // Test: data loading and display;
+})})
 describe('NotFound Integration Tests', () => {
   test(page renders correctly', () => {
 import React from 'react';
@@ -54,13 +54,13 @@ import NotFound   from '../pages/NotFound''
   describe('NotFound Integration Tests', () => {'
   test('page renders correctly', () => {'
     render(<NotFound  />)
-    expect(screen.getByRole('main')).toBeInTheDocument();'
-  })
+    expect(screen.getByRole('main')).toBeInTheDocument();';
+})
 
   test('navigation works', () => {'
     render(<NotFound  />)
-    // Test navigation elements
-  });
+    // Test navigation elements;
+});
 '
 
   test(page content is accessible', () => {
@@ -76,17 +76,17 @@ import NotFound   from '../pages/NotFound''
 
   test('page content is accessible', () => {'
     render(<NotFound  />)
-    // Test accessibility features
-  });
+    // Test accessibility features;
+});
 '
   test('page loads with correct data', () => {
     render(<NotFound />);
 
   test('page loads with correct data', () => {'
     render(<NotFound  />)
-    // Test data loading and display
-  });
+    // Test data loading and display;
 });
-'
-  })
+});
+';
+});
 })

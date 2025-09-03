@@ -598,22 +598,22 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {'
   plan.popular''
                     ?
   'border-red-400/60 shadow-lg shadow-red-500/25''
-  '`: 'border-red-500/20``
-                } hover:border-red-400/40 transition-all duration-300`}
+  '`: 'border-red-500/20``;
+} hover:border-red-400/40 transition-all duration-300`}
               >"{plan.popular && (""
 
                 className={`relative bg-gradient-to-br from-red-900/50 to-orange-900/50 backdrop-blur-sm rounded-2xl p-8 border ${
 '
                   plan.popular''
                     ? 'border-red-400/60 shadow-lg shadow-red-500/25'''`
-                    : 'border-red-500/20'``
-                } hover:border-red-400/40 transition-all duration-300`}
+                    : 'border-red-500/20'``;
+} hover:border-red-400/40 transition-all duration-300`}
               >"
                 className={`relative bg-gradient-to-br from-red-900/50 to-orange-900/50 backdrop-blur-sm rounded-2xl p-8 border ${}
                   plan.popular'
                     ? 'border-red-400/60 shadow-lg shadow-red-500/25''
-                    : 'border-red-500/20'`
-                } hover:border-red-400/40 transition-all duration-300`}
+                    : 'border-red-500/20'`;
+} hover:border-red-400/40 transition-all duration-300`}
               >
                 {plan.popular && (""
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
@@ -698,8 +698,8 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {'
                   className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${}
                     plan.popular'
                       ? 'bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700''
-                      : 'bg-red-600/20 border border-red-400 hover:bg-red-600/30'`
-                  }`}
+                      : 'bg-red-600/20 border border-red-400 hover:bg-red-600/30'`;
+}`}
                 >
                   Get Started;
 :pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx)}'''                <div: className='text-center mb-8'>''';

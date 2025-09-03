@@ -4,7 +4,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIKafka(function AIKafka() {): any: {}
     'Automated Kafka monitoring and alerting',';Predictive: analytics for Kafka scaling',';Smart: Kafka security and compliance',';AI-driven: Kafka automation and orchestration',';Real-time: Kafka analytics and insights',';Custom: AI models for Kafka applications';
 <:pages.disabled/pages/services/AIKafka.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Developer,',';
@@ -27,7 +27,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
   ]';Kafka: optimization',';Kafka: management',';Performance: monitoring and analytics',';Security: and compliance monitoring',';Automation: and orchestration',';Kafka: scaling and management';
   ]';Improve: Kafka performance by 50-80%',';Reduce: Kafka latency by 40-70%',';Cut: operational costs by 35-65%',';Enhance: Kafka reliability and scalability',';Optimize: resource utilization',';Scale: Kafka operations efficiently';
   ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-green-500 via-emerald-500 to-teal-500 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIKafka(function AIKafka() {): any {}
     'Automated Kafka monitoring and alerting',;Predictive analytics for Kafka scaling',;Smart Kafka security and compliance',;AI-driven Kafka automation and orchestration',;Real-time Kafka analytics and insights',;Custom AI models for Kafka applications';
 <:pages.disabled/pages/services/AIKafka.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Developer',
@@ -115,8 +115,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     {'
       name: 'Business',
       price: '$999/mo',
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support']
-    },
+      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AIKafka.tsx>    {'
@@ -149,10 +149,10 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <Database className='w-4 h-4 mr-2'  /> AI-Powered Kafka Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Kafka Platform</h1>'          <p className='text-green-100 text-xl'>Transform your Kafka operations with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
-  ];Kafka optimization',;Kafka management',;Performance monitoring and analytics',;Security and compliance monitoring',;Automation and orchestration',;Kafka scaling and management';
-  ];Improve Kafka performance by 50-80%',;Reduce Kafka latency by 40-70%',;Cut operational costs by 35-65%',;Enhance Kafka reliability and scalability',;Optimize resource utilization',;Scale Kafka operations efficiently';
-  ];Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
-  ];
+  ]Kafka optimization',;Kafka management',;Performance monitoring and analytics',;Security and compliance monitoring',;Automation and orchestration',;Kafka scaling and management';
+  ]Improve Kafka performance by 50-80%',;Reduce Kafka latency by 40-70%',;Cut operational costs by 35-65%',;Enhance Kafka reliability and scalability',;Optimize resource utilization',;Scale Kafka operations efficiently';
+  ]Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-green-500 via-emerald-500 to-teal-500 py-20 text-center>''

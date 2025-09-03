@@ -1,7 +1,7 @@
 :src.disabled/components/community/PostCard.tsx;
 import: React from 'react.ts';
 
-interface: PostCardProps extends React.PropsWithChildren<{
+interface: PostCardProps extends React.PropsWithChildren<{;
 }> {
 post: {
     id: string;

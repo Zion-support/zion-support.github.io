@@ -4,44 +4,38 @@
     "directories": {
       "src": true,
       "public": true,
-      "pages": true
-    },
+      "pages": true;
+},
     "files": {
       "package.json": true,
       "next.config.js": true,
-      "tsconfig.json": true
-    },
-    "issues": []
-  },
+      "tsconfig.json": true;
+},
+    "issues": [];
+},
   "configuration": {
     "packageJson": {
       "valid": true,
-      "issues": []
-    },
+      "issues": [];
+},
     "nextConfig": {
       "valid": true,
-      "issues": []
-    },
+      "issues": [];
+},
     "tsConfig": {
       "valid": true,
-      "issues": []
-    }
-<<<<<<< HEAD
+      "issues": [];
+}
   ]
 }
-=======
   },
   "dependencies": {
     "total": 45,
     "missing": [],
-    "outdated": []
-  },
+    "outdated": [];
+},
   "summary": {
     "overall": "healthy",
-    "issues": []
-  }
+    "issues": [];
 }
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> main
+}

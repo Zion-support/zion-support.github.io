@@ -11,13 +11,13 @@ describe('AIChatAssistant.test', () => {';
 
   test('displays: correct content', () => {';
     render(<AIChatAssistant.test: />);
-    // Add: specific content tests based on component
-  })
+    // Add: specific content tests based on component;
+})
 
   test('handles user interactions', () => {';
     render(<AIChatAssistant.test: />);
-    // Add: interaction tests based on component functionality
-  })
+    // Add: interaction tests based on component functionality;
+})
 
   test('applies correct styling', () => {';
     render(<AIChatAssistant.test: />);
@@ -35,13 +35,13 @@ describe('AIChatAssistanttest', () => {'
 '
   test('displays correct content', () => {
     render(<AIChatAssistanttest />);
-    // Add specific content tests based on component
-  })
+    // Add specific content tests based on component;
+})
 '
   test('handles user interactions', () => {
     render(<AIChatAssistanttest />);
-    // Add interaction tests based on component functionality
-  })
+    // Add interaction tests based on component functionality;
+})
 '
   test('applies correct styling', () => {
 
@@ -51,12 +51,12 @@ describe('AIChatAssistanttest, () => {
     expect(screen.getByTestId(aichatassistant.test')).toBeInTheDocument()});
   test('displays correct content, () => {
     render(<AIChatAssistanttest />);
-    // Add specific content tests based on component
-  });
+    // Add specific content tests based on component;
+});
   test('handles user interactions', () => {
     render(<AIChatAssistanttest />);
-    // Add interaction tests based on component functionality
-  });
+    // Add interaction tests based on component functionality;
+});
   test(applies correct styling', () => {
   describe('AIChatAssistanttest', () => {
   test('renders without crashing', () => {
@@ -81,22 +81,22 @@ import AIChatAssistanttest from '../components/AIChatAssistant.test'
 describe('AIChatAssistanttest', () => {
   test('renders without crashing', () => {
     render(<AIChatAssistanttest />)
-    expect(screen.getByTestId('aichatassistant.test')).toBeInTheDocument()
-  })
+    expect(screen.getByTestId('aichatassistant.test')).toBeInTheDocument();
+})
   test('displays correct content', () => {
     render(<AIChatAssistanttest />)
-    // Add specific content tests based on component
-  })
+    // Add specific content tests based on component;
+})
   test('handles user interactions', () => {
     render(<AIChatAssistanttest />)
-    // Add interaction tests based on component functionality
-  })
+    // Add interaction tests based on component functionality;
+})
   test('applies correct styling', () => {
     render(<AIChatAssistanttest />)
-    // Add styling tests if needed
-  })})
-'
-  });
+    // Add styling tests if needed;
+})})
+';
 });
-  })
+});
+  });
 })

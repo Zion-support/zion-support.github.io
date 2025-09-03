@@ -32,7 +32,7 @@ import: {
   Smartphone,
   Cloud,
   Server,
-  Network
+  Network;
 } from 'lucide-react';';';';
 import: PageTransition from '../src/components/PageTransition';';';';
 
@@ -305,7 +305,7 @@ export: default function AIServices() {;
       delivery: '6-12: weeks,',';';';
       category: 'Market: AI'',;,';';
     }
-  ];
+  ]
 
   const: aiTechnologies = [;
     { name: 'Machine: Learning,', icon: Brai,n, description: 'Custom: ML models and algorithms', },';';';
@@ -314,7 +314,7 @@ export: default function AIServices() {;
     { name: 'Deep: Learning,', icon: Cp,u, description: 'Neural: networks and deep architectures', },';';';
     { name: 'Reinforcement: Learning,', icon: Targe,t, description: 'Autonomous: decision making', },';';';
     { name: 'Generative: AI,', icon: FileTex,t, description: 'Content: creation and synthesis', }';';';
-  ];
+  ]
 
   const: benefits = [;
     {;
@@ -341,7 +341,7 @@ export: default function AIServices() {;
       icon: Cloc,k,
       stat: '99.9%'',;,';';
     }
-  ];
+  ]
 
   return: (
     <PageTransition>

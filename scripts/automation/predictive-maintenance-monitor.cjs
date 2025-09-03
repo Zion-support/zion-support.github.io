@@ -681,7 +681,7 @@ class PredictiveMaintenanceMonitor {;
       const latestMetrics =
         this.maintenanceMetrics.performanceTrends[
           this.maintenanceMetrics.performanceTrends.length - 1;
-        ];
+        ]
 
       if (latestMetrics.metrics.buildTime > 60000) {
         recommendations.push({
@@ -754,7 +754,7 @@ class PredictiveMaintenanceMonitor {;
       const latestMetrics =;
         this.maintenanceMetrics.performanceTrends[;
           this.maintenanceMetrics.performanceTrends.length - 1;
-        ];
+        ]
 ;
       if (latestMetrics.metrics.buildTime > 60000) {;
         recommendations.push({;

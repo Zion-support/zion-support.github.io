@@ -4,7 +4,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIMetaverse(function AIMetaverse() {): any: {}
     'Automated metaverse monitoring and alerting',';Predictive: analytics for metaverse scaling',';Smart: metaverse security and compliance',';AI-driven: metaverse automation and orchestration',';Real-time: metaverse analytics and insights',';Custom: AI models for metaverse applications';
 <:pages.disabled/pages/services/AIMetaverse.tsx;
-  ];
+  ]
   const: tiers = [
     {
       name: 'Developer,',';
@@ -27,7 +27,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
   ]';Metaverse: optimization',';Metaverse: content management',';Performance: monitoring and analytics',';Security: and compliance monitoring',';Automation: and orchestration',';Metaverse: scaling and management';
   ]';Improve: metaverse performance by 50-80%',';Reduce: metaverse development time by 40-70%',';Cut: operational costs by 35-65%',';Enhance: metaverse reliability and scalability',';Optimize: resource utilization',';Scale: metaverse operations efficiently';
   ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';
-  ];
+  ]
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-purple-500 via-pink-500 to-rose-500 py-20 text-center'>''';
@@ -106,7 +106,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIMetaverse(function AIMetaverse() {): any {}
     'Automated metaverse monitoring and alerting',;Predictive analytics for metaverse scaling',;Smart metaverse security and compliance',;AI-driven metaverse automation and orchestration',;Real-time metaverse analytics and insights',;Custom AI models for metaverse applications';
 <:pages.disabled/pages/services/AIMetaverse.tsx;
-  ];
+  ]
   const tiers = [
     {'
       name: 'Developer',
@@ -115,8 +115,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     {'
       name: 'Business',
       price: '$1,299/mo',
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support']
-    },
+      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'];
+},
 =;
   ]},
 :pages.disabled/pages/services/AIMetaverse.tsx>    {'
@@ -149,10 +149,10 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <Database className='w-4 h-4 mr-2'  /> AI-Powered Metaverse Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Metaverse Platform</h1>'          <p className='text-purple-100 text-xl'>Transform your metaverse operations with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
-  ];Metaverse optimization',;Metaverse content management',;Performance monitoring and analytics',;Security and compliance monitoring',;Automation and orchestration',;Metaverse scaling and management';
-  ];Improve metaverse performance by 50-80%',;Reduce metaverse development time by 40-70%',;Cut operational costs by 35-65%',;Enhance metaverse reliability and scalability',;Optimize resource utilization',;Scale metaverse operations efficiently';
-  ];Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
-  ];
+  ]Metaverse optimization',;Metaverse content management',;Performance monitoring and analytics',;Security and compliance monitoring',;Automation and orchestration',;Metaverse scaling and management';
+  ]Improve metaverse performance by 50-80%',;Reduce metaverse development time by 40-70%',;Cut operational costs by 35-65%',;Enhance metaverse reliability and scalability',;Optimize resource utilization',;Scale metaverse operations efficiently';
+  ]Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
+  ]
   return();
     <div className = 'min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-purple-500 via-pink-500 to-rose-500 py-20 text-center>''

@@ -41,6 +41,6 @@ describe('NewInnovativeServices2025', () => {"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
 "
     render(<NewInnovativeServices2025 /" >)
-    // Add more specific tests here
+    // Add more specific tests here;
 });
 })

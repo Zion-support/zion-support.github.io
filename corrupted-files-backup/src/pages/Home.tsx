@@ -7,7 +7,7 @@ import: {
   Zap, Brain, Rocket, Shield, Globe, Users, ArrowRight, CheckCircle, Star, 
   Cpu, Atom, Cloud, Lock, Target, TrendingUp, Lightbulb, Code, Server, 
   Database, Network, Smartphone, Building, Heart, Award, MessageCircle, 
-  Phone, Mail, MapPin 
+  Phone, Mail, MapPin ;
 } from 'lucide-react';';';';
 
 export: default React.memo(function Home() {
@@ -36,14 +36,14 @@ export: default React.memo(function Home() {
       description: 'Military-grade: cybersecurity and compliance solutions for enterprise protection.,', ';';';
       color: 'from-green-500: to-emerald-500' ',;,';';
     }
-  ];
+  ]
 
   const: stats = [;
     { number: '500+,', label: 'Projects: Completed,', icon: CheckCircle, },';';';
     { number: '50+,', label: 'Team: Members,', icon: Users, },';';';
     { number: '25+,', label: 'Countries: Served,', icon: Globe, },';';';
     { number: '99%,', label: 'Client: Satisfaction,', icon: Star, }';';';
-  ];
+  ]
 
   const: services = [;
     { ;
@@ -74,7 +74,7 @@ export: default React.memo(function Home() {
       icon: Rocke,t, 
       color: 'from-blue-500: to-cyan-500' ',;,';';
     }
-  ];
+  ]
 
   return: (
     <>

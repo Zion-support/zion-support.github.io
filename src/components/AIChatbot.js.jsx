@@ -8,8 +8,8 @@ import { MessageCircle, Send, Bot, User, X, Minimize2, Maximize2, Loader2, Spark
 ;,"});,"})
 export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI assistant. How can I help you today?", maxMessages = 50, enableSuggestions = true, enableContext = true, responseDelay = 1000 }) => {;,"});,"})
     const { trackEvent } = useAnalytics({        enableTracking: true,;,"});,"})
-        enableUserBehaviorTracking: true;,"});,"})
-    });,"});,"})
+        enableUserBehaviorTracking: true;,"});,"});
+});,"});,"})
     const [isOpen, setIsOpen] = useState(false);,"});,"})
     const [isMinimized, setIsMinimized] = useState(false);'';,"});,"})
     const [messages, setMessages] = useState([]);''';,"});,"})
@@ -29,9 +29,9 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
                     "How can I get a quote?","""";,"});,"})
                     "What technologies do you use?","""";,"});,"})
                     "Contact information""";,"});,"})
-                ];,"});,"})
-            })}"});,"})
-    }, [isOpen, messages.length, welcomeMessage]);,"});,"})
+                ],"});,"});
+})}"});,"});
+}, [isOpen, messages.length, welcomeMessage]);,"});,"})
     // Auto-scroll to bottom;,"});,"})
     useEffect(() => {}"});,"})
 ';,"});,"})
@@ -49,18 +49,18 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
         const newMessage = {}"});,"})
   ...message,;,"});,"})
   id: `msg_${Date.now()```;,"});,"})
-````;,"});,"})
+````;,"});,"});
 }_${Math.random().toString(36).substr(2, 9)}`,;,"});,"})
-            timestamp: new Date();,"});,"})
-        };,"});,"})
+            timestamp: new Date();,"});,"});
+};,"});,"})
         setMessages(prev => {}"});,"})
             const updated = [...prev, newMessage];,"});,"})
             // Keep only the last maxMessages;,"});,"})
             return updated.slice(-maxMessages)});,"});,"})
         // Update conversation context;,"});,"})
         if(enableContext && message.content.length > 10) {}"});,"})
-            // setConversationContext(prev => [...prev.slice(-4), message.content]); // This line was removed;,"});,"})
-        }"});,"})
+            // setConversationContext(prev => [...prev.slice(-4), message.content]); // This line was removed;,"});,"});
+}"});,"})
         return newMessage}, [maxMessages, enableContext]);,"});,"})
     // Add bot message with typing effect;,"});,"})
     const addBotMessage = useCallback((content, metadata) => {}"});,"})
@@ -70,14 +70,14 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
 ''';,"});,"})
             type: 'bot',;,"});,"})
             content,;,"});,"})
-            metadata;,"});,"})
-        });,"});,"})
+            metadata;,"});,"});
+});,"});,"})
         // Track bot response'';,"});,"})
         trackChatbotInteraction('bot_response', {}"});,"})
             messageId: message.id,;,"});,"})
             intent: metadata?.intent,;,"});,"})
-            confidence: metadata?.confidence;,"});,"})
-        });,"});,"})
+            confidence: metadata?.confidence;,"});,"});
+});,"});,"})
         return message}, [addMessage, trackChatbotInteraction]);,"});,"})
     // Simulate AI processing;,"});,"})
     const simulateAIProcessing = useCallback(async (userInput) => {}"});,"})
@@ -116,13 +116,13 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
         const userMessage = addMessage({}"});,"})
 ';,"});,"})
             type: 'user',;,"});,"})
-            content: input.trim();,"});,"})
-        });,"});,"})
+            content: input.trim();,"});,"});
+});,"});,"})
         // Track user input'';,"});,"})
         trackChatbotInteraction('user_input', {}"});,"})
             messageId: userMessage.id,;,"});,"})
-            inputLength: input.length;,"});,"})
-        });,"});,"})
+            inputLength: input.length;,"});,"});
+});,"});,"})
         // Clear input'';,"});,"})
         setInputValue('');,"});,"})
         setIsTyping(true);,"});,"})
@@ -139,30 +139,30 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
                     "Get a quote","""";,"});,"})
                     "View services","""";,"});,"})
                     "Contact sales""";,"});,"})
-                ];,"});,"})
-            });,"});,"})
+                ],"});,"});
+});,"});,"})
             // Track successful interaction'';,"});,"})
             trackChatbotInteraction('conversation_success', {}"});,"})
                 userInput: input,;,"});,"})
-                responseLength: response.length;,"});,"})
-            })}"});,"})
+                responseLength: response.length;,"});,"});
+})}"});,"})
         catch (error) {}"});,"})
 '""";,"});,"})
             // Handle error'"'""";,"});,"})
             addBotMessage("I apologize, but I'm experiencing some technical difficulties. Please try again or contact our team directly.", {}"});,"})
 ';,"});,"})
                 intent: 'error',;,"});,"})
-                confidence: 0.8;,"});,"})
-            });,"});,"})
+                confidence: 0.8;,"});,"});
+});,"});,"})
             trackChatbotInteraction('conversation_error', {}"});,"})
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
-                error: error instanceof Error ? error.message : 'Unknown error';,"});,"})
-            })}"});,"})
+                error: error instanceof Error ? error.message : 'Unknown error';,"});,"});
+})}"});,"})
         finally {}"});,"})
-            setIsTyping(false)}"});,"})
-    }, [addMessage, addBotMessage, simulateAIProcessing, trackChatbotInteraction]);,"});,"})
+            setIsTyping(false)}"});,"});
+}, [addMessage, addBotMessage, simulateAIProcessing, trackChatbotInteraction]);,"});,"})
     // Handle form submission;,"});,"})
     const handleSubmit = useCallback((e) => {}"});,"})
         e.preventDefault();,"});,"})
@@ -197,11 +197,11 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
     // Get message suggestions;,"});,"})
     const MessageSuggestions = ({ suggestions }) => (<motion.div initial = {}"});,"})
   { opacity: 0,;,"});,"})
-  y: 10;,"});,"})
+  y: 10;,"});,"});
 }} animate = {}"});,"})
   { opacity: 1,;,"});,"})
   y: 0 """;,"});,"})
-"""";,"});,"})
+"""";,"});,"});
 }} className="flex flex-wrap gap-2 mt-3">"""";,"});,"})
       {suggestions.map((suggestion, index) => (<button key={index} onClick={() => handleSuggestionClick(suggestion)} className="px-3 py-1 text-xs bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full hover:bg-blue-200 dark:hover:bg-blue-900/50 transition-colors">;,"});,"})
           {suggestion}"});,"})
@@ -219,14 +219,14 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
       <AnimatePresence>;,"});,"})
         {isOpen && (<motion.div initial = {}"});,"})
   { opacity: 0, scale: 0.9,;,"});,"})
-  y: 20;,"});,"})
+  y: 20;,"});,"});
 }} animate = {}"});,"})
   { opacity: 1, scale: 1,;,"});,"})
-  y: 0;,"});,"})
+  y: 0;,"});,"});
 }} exit = {}"});,"})
   { opacity: 0, scale: 0.9,;,"});,"})
   y: 20 '`;,"});,"})
-'`'`;,"});,"})
+'`'`;,"});,"});
 }} className={`fixed bottom-24 right-6 z-40 w-96 bg-white dark:bg-gray-800 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden ${isMinimized ? 'h-16' : 'h-[500px]'}`}>""";,"});,"})
             {/* Header */}"""";,"});,"})
             <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-white">"""";,"});,"})
@@ -255,11 +255,11 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
                 <div className="flex-1 p-4 space-y-4 overflow-y-auto max-h-80">;,"});,"})
                   {messages.map((message) => (<motion.div key={message.id} initial = {}"});,"})
   { opacity: 0,';,"});,"})
-  x: message.type === 'user' ? 20 : -20;,"});,"})
+  x: message.type === 'user' ? 20 : -20;,"});,"});
 }} animate = {}"});,"})
   { opacity: 1,;,"});,"})
   x: 0 '`;,"});,"})
-'`'`;,"});,"})
+'`'`;,"});,"});
 }} className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}>'`'`;,"});,"})
                       <div className={`flex items-start gap-2 max-w-[80%] ${message.type === 'user' ? 'flex-row-reverse' : 'flex-row'}`}>'`'`;,"});,"})
                         <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${message.type === 'user'''`;,"});,"})
@@ -316,8 +316,8 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
 '"`'"`;,"});,"})
 ' export const AIChatbot = ({ welcomeMessage = 'Hello! I'm Zion Tech Group's AI assistant.How can I help you today?', maxMessages = 50, enableSuggestions = true, enableContext = true, responseDelay = 1000 }) => { const { trackEvent } = useAnalytics({ enableTracking: true, enableUserBehaviorTracking: true }) const [isOpen, setIsOpen] = useState(false) const [isMinimized, setIsMinimized] = useState(false) const [messages, setMessages] = useState([]) const [inputValue, setInputValue] = useState(') const [isTyping, setIsTyping] = useState(false) const messagesEndRef = useRef(null) const inputRef = useRef(null);
 ' export const AIChatbot = ({ welcomeMessage = 'Hello! I&apos;m Zion Tech Group&apos;s AI assistant.How can I help you today?', maxMessages = 50, enableSuggestions = true, enableContext = true, responseDelay = 1000 }) => { const { trackEvent } = useAnalytics({ enableTracking: true, enableUserBehaviorTracking: true }) const [isOpen, setIsOpen] = useState(false) const [isMinimized, setIsMinimized] = useState(false) const [messages, setMessages] = useState([]) const [inputValue, setInputValue] = useState(') const [isTyping, setIsTyping] = useState(false) const messagesEndRef = useRef(null) const inputRef = useRef(null)
-""
+"";
 }
 ' export const AIChatbot = ({ welcomeMessage = 'Hello! I'm Zion Tech Group's AI assistant.How can I help you today?', maxMessages = 50, enableSuggestions = true, enableContext = true, responseDelay = 1000 }) => { const { trackEvent } = useAnalytics({ enableTracking: true, enableUserBehaviorTracking: true }) const [isOpen, setIsOpen] = useState(false) const [isMinimized, setIsMinimized] = useState(false) const [messages, setMessages] = useState([]) const [inputValue, setInputValue] = useState(') const [isTyping, setIsTyping] = useState(false) const messagesEndRef = useRef(null) const inputRef = useRef(null)
-"
+";
 };
