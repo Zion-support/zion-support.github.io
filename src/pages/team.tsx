@@ -1,41 +1,41 @@
 import React from 'react';
-import { ;
-  Users, ;
-  Award, ;
-  Star, ;
-  Linkedin, ;
-  Twitter, ;
-  Mail, ;
-  Building2,;
-  Lightbulb,;
-  Rocket,;
-  Shield,;
-  Brain,;
-  Zap;,
+import { 
+  Users, 
+  Award, 
+  Star, 
+  Linkedin, 
+  Twitter, 
+  Mail, 
+  Building2,
+  Lightbulb,
+  Rocket,
+  Shield,
+  Brain,
+  Zap
 } from 'lucide-react';
-;
-export default function TeamPage() {;
-  const leadership = [;
-    {;
-      name: "Kleber Santos",;
-      title: "Founder & CEO",;
-      bio: "Visionary leader with over 15 years of experience in technology innovation and business transformation. Passionate about leveraging AI and emerging technologies to solve complex business challenges.",;
-      image: "/images/team/kleber-santos.jpg",;
-      linkedin: "https://linkedin.com/in/klebersantos",;
-      twitter: "https://twitter.com/klebersantos",;
-      email: "kleber@ziontechgroup.com",;
-      expertise: ["AI Strategy", "Business Innovation", "Technology Leadership"];,
-},;
-    {;
-      name: "Dr. Sarah Chen",;
-      title: "Chief Technology Officer",;
-      bio: "Former Google AI researcher with a PhD in Computer Science from Stanford. Expert in machine learning, quantum computing, and scalable AI systems.",;
-      image: "/images/team/sarah-chen.jpg",;
-      linkedin: "https://linkedin.com/in/sarahchen",;
-      twitter: "https://twitter.com/sarahchen",;
-      email: "sarah@ziontechgroup.com",;
-      expertise: ["Machine Learning", "Quantum Computing", "AI Architecture"];,
-},;
+
+export default function TeamPage() {
+  const leadership = [
+    {
+      name: "Kleber Santos",
+      title: "Founder & CEO",
+      bio: "Visionary leader with over 15 years of experience in technology innovation and business transformation. Passionate about leveraging AI and emerging technologies to solve complex business challenges.",
+      image: "/images/team/kleber-santos.jpg",
+      linkedin: "https://linkedin.com/in/klebersantos",
+      twitter: "https://twitter.com/klebersantos",
+      email: "kleber@ziontechgroup.com",
+      expertise: ["AI Strategy", "Business Innovation", "Technology Leadership"]
+    },
+    {
+      name: "Dr. Sarah Chen",
+      title: "Chief Technology Officer",
+      bio: "Former Google AI researcher with a PhD in Computer Science from Stanford. Expert in machine learning, quantum computing, and scalable AI systems.",
+      image: "/images/team/sarah-chen.jpg",
+      linkedin: "https://linkedin.com/in/sarahchen",
+      twitter: "https://twitter.com/sarahchen",
+      email: "sarah@ziontechgroup.com",
+      expertise: ["Machine Learning", "Quantum Computing", "AI Architecture"]
+    },
     {;
       name: "Marcus Rodriguez",;
       title: "Chief Operations Officer",;
