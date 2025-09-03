@@ -9,10 +9,6 @@ const nextConfig = {
     ignoreBuildErrors: true,
     ignoreDuringBuilds: true
   },
-  typescript: {
-    ignoreBuildErrors: true
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
-  },
   experimental: {
     optimizeCss: true,
     scrollRestoration: true,
@@ -27,25 +23,15 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === 'production',
     optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']
   },
-  images: {
-    domains: ['images.unsplash.com', 'via.placeholder.com'],
-    formats: ['image/webp', 'image/avif']
-  },
-  compress: true,
-  compiler: {
-    removeConsole: process.env.NODE_ENV === 'production'
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
-  },
   webpack: (config, { dev, isServer }) => {
     if (!dev && !isServer) {
       config.resolve.alias = {
         ...config.resolve.alias,
         '@': new URL('./src', import.meta.url).pathname,
-        '@': new URL('./src', import.meta.url).pathname
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
       };
     }
-    return config},
+    return config;
+  },
   async headers() {
     return [
       {
@@ -65,6 +51,7 @@ const nextConfig = {
           },
         ],
       },
+<<<<<<< HEAD
     ];
   },
             value: 'DENY'
@@ -82,6 +69,10 @@ const nextConfig = {
     ]
   }
 >>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+=======
+    ]
+}
+>>>>>>> bed1281027a24aaeef68a2d422f0b11dfeb0badd
 };
 
 export default nextConfig;

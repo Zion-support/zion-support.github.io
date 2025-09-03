@@ -18,26 +18,13 @@ import {
   DollarSign,
   Calendar,
   Award,
-  Shield} from 'lucide-react';
-const NotFound: React.FC = () => {
-  const quickLinks = [
-    { name: 'Home', url: '/', icon: Home },
-    { name: 'Services', url: '/services', icon: Briefcase },
-    { name: 'About', url: '/about', icon: Users },
-    { name: 'Contact', url: '/contact', icon: Phone },
-    { name: 'Blog', url: '/blog', icon: BookOpen },
-    { name: 'Pricing', url: '/pricing', icon: DollarSign },
-    { name: 'Team', url: '/team', icon: Award },
-    { name: 'Webinars', url: '/webinars', icon: Calendar },
-    { name: 'White Papers', url: '/white-papers', icon: FileText },
-  Award,
   Shield,
-  Search} from 'lucide-react';
+  Search
+} from 'lucide-react';
 
 export default function Custom404() {
   const quickLinks = [
     { name: 'Home', url: '/', icon: Home },
-  { name: 'Home', url: '/', icon: Home }, 
     { name: 'Services', url: '/services', icon: Briefcase },
     { name: 'Solutions', url: '/solutions', icon: Award },
     { name: 'About', url: '/about', icon: Users },
