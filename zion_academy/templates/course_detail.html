@@ -19,9 +19,10 @@
 
   <section class="course-lessons">
     <h3>Lessons</h3>
-    {% if course.lessons and course.lessons.all()|length > 0 %}
+    {% set lessons_list = course.lessons or [] %}
+    {% if lessons_list|length > 0 %}
     <ul>
-      {% for lesson in course.lessons|sort(attribute='lesson_order') %}
+      {% for lesson in lessons_list|sort(attribute='lesson_order') %}
       <li>
         <a
           href="{{ url_for('lesson_detail', course_id=course.id, lesson_id=lesson.id) }}"
