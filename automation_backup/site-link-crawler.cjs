@@ -1,5 +1,4 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 const axios = require('axios');
 const cheerio = require('cheerio');
 const urlLib = require('url');
@@ -24,8 +23,8 @@ async function fetchPage(url) {
   try {
     const res = await axios.get(url, {
       timeout: 15000,
-      validateStatus: () => true,
-    });
+      validateStatus: () => true,;
+});
     return { status: res.status, html: res.data };
   } catch (e) {
     return { status: 0, html: '' };
@@ -62,7 +61,7 @@ async function fetchPage(url) {
     });
   }
 
-  // Verify collected URLs
+  // Verify collected URLs;
   const statuses = [];
   for (const url of Array.from(visited)) {
     const { status } = await fetchPage(url);
@@ -78,7 +77,7 @@ async function fetchPage(url) {
     JSON.stringify(
       { start: START_URL, total: visited.size, broken, statuses },
       null,
-      2
+      2;
     )
   );
   console.log(

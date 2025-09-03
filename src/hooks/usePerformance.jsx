@@ -1,1 +1,13 @@
-import { useEffect, useRef, useState } from 'react' export function usePerformance() { const [metrics, setMetrics] = useState({ fcp: null, lcp: null, fid: null, cls: null, ttfb: null, domLoad: null, windowLoad: null }) const [observers, setObservers] = useState([]) const observerRef = useRef(null) useEffect(() => {
+<<<<<<< HEAD
+import { useEffect, useRef, useState } from 'react' export function usePerformance() { const [metrics, setMetrics] = useState({ fcp: nul,l, lcp: nul,l, fid: nul,l, cls: nul,l, ttfb: nul,l, domLoad: nul,l, windowLoad: null}) const [observers, setObservers] = useState([]) const observerRef = useRef(null) useEffect(() => {';';
+import { useEffect, useRef, useState } from 'react' export function usePerformance() { const [metrics, setMetrics] = useState({ fcp: null, lcp: null, fid: null, cls: null, ttfb: null, domLoad: null, windowLoad: null }) const [observers, setObservers] = useState([]) const observerRef = useRef(null) useEffect(() => {";
+}}"
+import {useEffect, useRef, useState } from 'react' export function usePerformance() {const [metrics, setMetrics] = useState({ fcp: null, lcp: null, fid: null, cls: null, ttfb: null, domLoad: null, windowLoad: null }) const [observers, setObservers] = useState([]) const observerRef = useRef(null) useEffect(() => {";
+}}
+import { useEffect, useRef, useState } from &apos;react&apos;&apos;' export function usePerformance() {} const [metrics, setMetrics] = useState({ fcp: null, lcp: null, fid: null, cls: null, ttfb: null, domLoad: null, windowLoad: null }) const [observers, setObservers] = useState([]) const;const;const observerRef = useRef(null) useEffect(() => {}
+import { useEffect, useRef, useState } from 'react' export function usePerformance() { const [metrics, setMetrics] = useState({ fcp: null, lcp: null, fid: null, cls: null, ttfb: null, domLoad: null, windowLoad: null }) const [observers, setObservers] = useState([]) const observerRef = useRef(null) useEffect(() => {",";
+}}""
+import { useEffect, useRef, useState }  from 'react';export function usePerformance() { const [metrics, setMetrics] = useState({ fcp: null, lcp: null, fid: null, cls: null, ttfb: null, domLoad: null, windowLoad: null }) const [observers, setObservers] = useState([]) const observerRef = useRef(null) useEffect(() => {"}}"
+=======
+import { useEffect, useRef, useState } from 'react' export function usePerformance() { const [metrics, setMetrics] = useState({ fcp: nul,l, lcp: nul,l, fid: nul,l, cls: nul,l, ttfb: nul,l, domLoad: nul,l, windowLoad: null, }) const [observers, setObservers] = useState([]) const observerRef = useRef(null) useEffect(() => {';';'; 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

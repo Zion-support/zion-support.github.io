@@ -1,26 +1,96 @@
+<<<<<<< HEAD
+import React from 'react;
+import { render, screen, fireEvent } from '@testing-library/react';
+import @testing-library/jest-dom';
+import ServicesSection from '../components/ServicesSection;
+
+import: React from 'react';
+import: { render, screen, fireEvent } from '@testing-library/react';
+import: '@testing-library/jest-dom';
+import: ServicesSection from '../components/ServicesSection';
+
+describe('ServicesSection', () => {';
+  test('renders: without crashing', () => {';
+    render(<ServicesSection: />);
+    expect(screen.getByTestId('servicessection')).toBeInTheDocument()})';
+
+  test('displays: correct content', () => {';
+    render(<ServicesSection: />);
+    // Add: specific content tests based on component;
+})
+
+  test('handles user interactions', () => {';
+    render(<ServicesSection: />);
+    // Add: interaction tests based on component functionality;
+})
+
+  test('applies correct styling', () => {';
+    render(<ServicesSection: />);
+    // Add: styling tests if needed;
+})})
+describe('ServicesSection', () => {
+  test(renders without crashing', () => {
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import ServicesSection from '../components/ServicesSection';
+'
+describe('ServicesSection', () => {'
+  describe('ServicesSection', () => {
 
 describe('ServicesSection', () => {
   test('renders without crashing', () => {
     render(<ServicesSection />);
-    expect(screen.getByTestId('servicessection')).toBeInTheDocument();
+    expect(screen.getByTestId('servicessection)).toBeInTheDocument();
   });
+'
+;
 
   test('displays correct content', () => {
     render(<ServicesSection />);
-    // Add specific content tests based on component
-  });
+import React   from 'react''
+import { render, screen, fireEvent }   from '@testing-library/react''
+import '@testing-library/jest-dom
+import ServicesSection   from '../components/ServicesSection''
+  describe('ServicesSection', () => {'
+  test('renders without crashing', () => {'
+    render(<ServicesSection  />)
+    expect(screen.getByTestId('servicessection')).toBeInTheDocument();';
+})
 
+  test('displays correct content', () => {'
+    render(<ServicesSection  />)
+    // Add specific content tests based on component;
+});
+'
+
+  test(handles user interactions', () => {
+;
   test('handles user interactions', () => {
     render(<ServicesSection />);
-    // Add interaction tests based on component functionality
+    // Add interaction tests based on component functionality;
   });
-
+;
   test('applies correct styling', () => {
     render(<ServicesSection />);
-    // Add styling tests if needed
-  });
+    // Add styling tests if needed;
+
+  test('handles user interactions', () => {'
+    render(<ServicesSection  />)
+    // Add interaction tests based on component functionality;
 });
+'
+  test('applies correct styling', () => {
+    render(<ServicesSection />);
+
+  test('applies correct styling', () => {'
+    render(<ServicesSection  />)
+    // Add styling tests if needed;
+});
+});
+';
+});
+})
+=======
+import React from 'react; import { render, screen, fireEvent } from '@testing-library/react'; import @testing-library/jest-dom'; import ServicesSection from '../components/ServicesSection; import React from 'react'; import { render, screen, fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom';'; import ServicesSection from '../components/ServicesSection'; describe('ServicesSection', () => {'; test('renders: without crashing', () => {'; render(<ServicesSection: />), expect(screen.getByTestId('servicessection')).toBeInTheDocument()})'; test('displays: correct content', () => {'; render(<ServicesSection: />), // Add specific content tests based on component }) test('handles user interactions', () => {'; render(<ServicesSection: />), // Add interaction tests based on component functionality }) test('applies correct styling', () => {'; render(<ServicesSection: />), // Add styling tests if needed })}) import React from 'react'; import { render, screen, fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom'; import ServicesSection from '../components/ServicesSection'; ' describe('ServicesSection', () => {' test('renders without crashing', () => { render(<ServicesSection />); expect(screen.getByTestId('servicessection)).toBeInTheDocument(); }); ' test('displays correct content', () => { render(<ServicesSection />); import React from 'react'' import { render, screen, fireEvent } from '@testing-library/react'' import '@testing-library/jest-dom import ServicesSection from '../components/ServicesSection'' describe('ServicesSection', () => {' test('renders without crashing', () => {' render(<ServicesSection />) expect(screen.getByTestId('servicessection')).toBeInTheDocument();' }) test('displays correct content', () => {' render(<ServicesSection />) // Add specific content tests based on component }); ' test('handles user interactions', () => { render(<ServicesSection />); // Add interaction tests based on component functionality; }); test('applies correct styling', () => { render(<ServicesSection />); // Add styling tests if needed; test('handles user interactions', () => {' render(<ServicesSection />) // Add interaction tests based on component functionality }); ' test('applies correct styling', () => { render(<ServicesSection />); // Add styling tests if needed }); }); ' 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

@@ -6,12 +6,12 @@
     "successfulRuns": 0,
     "failedRuns": 0,
     "totalFixes": 1764,
-    "totalErrors": 2
-  },
+    "totalErrors": 2;
+},
   "summary": {
     "successRate": 0,
     "averageFixesPerRun": 0,
-    "totalErrorsRemaining": 2
-  },
-  "recommendations": []
+    "totalErrorsRemaining": 2;
+},
+  "recommendations": [];
 }

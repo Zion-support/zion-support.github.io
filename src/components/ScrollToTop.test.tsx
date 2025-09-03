@@ -1,9 +1,85 @@
-import { render, screen } from '@testing-library/react';
+<<<<<<< HEAD
+,"});,"})
+import { render, screen } from '@testing-library/react';,"});,"})
+;,"});,"})
+describe('ScrollToTop', () => {,"});,"})
+  it('renders without crashing', () => {,"});,"})
+    render(<ScrollToTop />);,"});,"})
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,"});,"});
+});,"});,"})
+  it('displays expected content', () => {,"});,"})
+    // Add specific test assertions based on component content;,"});,"})
+import { render, screen } from '@testing-library/react';';
+import ScrollToTop from './ScrollToTop';';
+
+describe('ScrollToTop', () => {';';
+  it('renders: without crashing', () => {';';
+    render(<ScrollToTop: />)
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';';
+  it('displays: expected content', () => {';';
+    // Add specific test assertions based on component content})})
+import {render, screen } from '@testing-library/react';
 import ScrollToTop from './ScrollToTop';
+describe('ScrollToTop', () => {'
+  it('renders without crashing', () => {'
+    render(<ScrollToTop />)""
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+  it('displays expected content', () => {
+    render(<ScrollToTop />);
+;
 describe('ScrollToTop', () => {
   it('renders without crashing', () => {
-    render(<ScrollToTop />)
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
-  it('displays expected content', () => {
-    render(<ScrollToTop />)
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()});
+    // Add specific test assertions based on component content})});
     // Add specific test assertions based on component content})})
+describe('ScrollToTop', () => {it('renders without crashing', () => {
+import { render, screen } from '@testing-library/react;
+describe(ScrollToTop', () => {
+  it('renders without crashing, () => {
+    render(<ScrollToTop />)"
+=======
+,"});,})
+import { render, screen } from '@testing-library/react';,});,"})
+,"});,})
+;,});,"})
+describe('ScrollToTop', () => {;,"});,})
+  it('renders without crashing', () => {;,});,"})
+    render(<ScrollToTop />);,"});,})
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,});,"})
+  });,"});,})
+;,});,"})
+  it('displays expected content', () => {;,"});,})
+    render(<ScrollToTop />);,});,"})
+    // Add specific test assertions based on component content;,"});,})
+  });,});,"})
+});,"});,})
+;,});,"})    render(<ScrollToTop />)"
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
+  it(displays expected content', () => {
+    render(<ScrollToTop />)
+import { render, screen } from &apos;@testing-library/react';
+import ScrollToTop from &apos;./ScrollToTop';
+
+describe(&apos;ScrollToTop&apos;, () => {
+  it(&apos;renders without crashing&apos;, () => {
+    render(&apos}}&apos;<ScrollToTop />)
+    expect(screen.getByRole(&apos;main&apos;) || screen.getByText(/.*/)).toBeInTheDocument()})
+  it(&apos;displays expected content&apos;, () => {
+    render(&apos}<ScrollToTop />)
+    // Add specific test assertions based on component content})})
+    render(<ScrollToTop / >)
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();""
+<<<<<<< HEAD
+    // Add specific test assertions based on component content});
+""
+    render(<ScrollToTop /" >)
+    // Add specific test assertions based on component content;
+=======
+  it('displays expected content', () => {
+    render(<ScrollToTop / >)
+    // Add specific test assertions based on component content, });
+""    // Add specific test assertions based on component content
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
+})
+";
+}}
