@@ -1,40 +1,37 @@
 
 :pages.disabled/pages/services/IoTServices.tsx;
 const IoTServices = () => {
-  const iotServices = [{title: 'IoT Device Development','';
-      description: 'Custom IoT device design and development for your specific use case.','';
-      price: 'From $15,000/project','';
-      features: ['Hardware design', 'Firmware development', 'Sensor integration', 'Power management'],
+  const iotServices = [
+  {title: 'IoT Device Development,';
+      description: 'Custom IoT device design and development for your specific use case.,';
+      price: 'From $15,000/project,';
+      features: ['Hardware design,Firmware development,Sensor integration,Power management'],
       icon: Cog},
 :pages.disabled/pages/services/IoTServices.tsx{
 ''';
-      title: 'IoT Connectivity Solutions','';
-      description: 'Secure and reliable connectivity for your IoT ecosystem.','';
-      price: 'From $8,000/month','';
-      features: ['Cellular connectivity', 'WiFi solutions', 'LPWAN networks', 'Edge computing'],
+      title: 'IoT Connectivity Solutions,';
+      description: 'Secure and reliable connectivity for your IoT ecosystem.,';
+      price: 'From $8,000/month,';
+      features: ['Cellular connectivity,WiFi solutions,LPWAN networks,Edge computing'],
 :pages.disabled/pages/services/IoTServices.tsx;
       icon: Wifi},'{'
-      title: 'IoT Data Management',';
-      description: 'Comprehensive data collection, processing, and analytics for IoT devices.',';
-      price: 'From $6,500/month','      features: ['Data collection', 'Real-time processing', 'Cloud storage', 'Data analytics'],
+      title: 'IoT Data Management,;
+      description: 'Comprehensive data collection, processing, and analytics for IoT devices.,;
+      price: 'From $6,500/month,      features: ['Data collection,Real-time processing,Cloud storage,Data analytics'],
       icon: Database}
   ];
 :pages.disabled/pages/services/IoTServices.tsx;
   '{'
-      name: 'Security & Privacy',';
-      description: 'Enterprise-grade IoT security solutions',';
+      name: 'Security & Privacy,;
+      description: 'Enterprise-grade IoT security solutions,;
       icon: Shield,';
-      features: ['Device authentication', 'Data encryption', 'Secure updates', 'Privacy compliance']}
+      features: ['Device authentication,Data encryption,Secure updates,Privacy compliance']}
   ]';
-  const benefits = [''Real-time monitoring and control capabilities',';
-    'Improved operational efficiency and automation',';
-    'Enhanced data collection and insights',';
-    'Reduced operational costs and manual work',';
-    'Scalable and flexible IoT infrastructure',';Better decision-making with real-time data';
+  const benefits = [''Real-time monitoring and control capabilities',Improved operational efficiency and automation',Enhanced data collection and insights',Reduced operational costs and manual work',Scalable and flexible IoT infrastructure,;Better decision-making with real-time data';
   ];
 :pages.disabled/pages/services/IoTServices.tsx;
 ';
-  return (''
+  return (
     <div className = 'min-h-screen bg-slate-900 text-white'>'{/* Hero Section */}''
       <section className='relative pt-24 pb-16 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-7xl mx-auto text-center'>''
@@ -74,8 +71,7 @@ const IoTServices = () => {
               operations and unlock new possibilities.
             </p>
 :pages.disabled/pages/services/IoTServices.tsx
-          </div>';
-''
+          </div>'
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>'{iotServices.map((service, index) => (''
               <div key={index} className='bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300'>''
                 <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4'>''
@@ -109,8 +105,7 @@ const IoTServices = () => {
               scalable IoT solutions.
             </p>
 :pages.disabled/pages/services/IoTServices.tsx
-          </div>';
-''
+          </div>'
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>'{iotTechnologies.map((tech, index) => (''
               <div key={index} className='bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300'>''
                 <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4'>''

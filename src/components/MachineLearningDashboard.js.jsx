@@ -1,6 +1,5 @@
-import React, { useState, useCallback } from 'react'
-import { motion, AnimatePresence } from 'framer-motion';"
-import { Brain, Play, Square, Download, Upload, BarChart3, TrendingUp, Activity, Zap, Target, CheckCircle, XCircle, Loader2, Plus, Eye, Trash2 } from 'lucide-react'
+import React, { useState, useCallback }  from 'react';import { motion, AnimatePresence } from 'framer-motion
+import { Brain, Play, Square, Download, Upload, BarChart3, TrendingUp, Activity, Zap, Target, CheckCircle, XCircle, Loader2, Plus, Eye, Trash2 }  from 'lucide-react';
 ;"
 export const MachineLearningDashboard = ({ className = '' }) => {
     const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true",
@@ -13,15 +12,15 @@ export const MachineLearningDashboard = ({ className = '' }) => {
 '
 ''
 '''
-        name: '','''
-        type: 'classification','''
+        name: ',''
+        type: 'classification,''
         framework: 'tensorflow',
 })
     const [predictionForm, setPredictionForm] = useState({}"
 '
 ''
 '''
-        modelId: '','''
+        modelId: ',''
         input: '',
 })
     const handleCreateModel = useCallback(() => {}
@@ -124,13 +123,13 @@ export const MachineLearningDashboard = ({ className = '' }) => {
     const getModelTypeIcon = (type) => {}
         switch(type) {}"
 ''''
-'''''';"
-            case 'classification': return <Target className='w-4 h-4'/" >'';'''
-            case 'regression': return <TrendingUp className='w-4 h-4'/" >'';'''
-            case 'clustering': return <Activity className='w-4 h-4'/" >'';'''
-            case 'nlp': return <Brain className='w-4 h-4'/" >'';'''
-            case 'computer_vision': return <Eye className='w-4 h-4'/" >'';'''
-            case 'recommendation': return <Zap className='w-4 h-4'/" >';''
+'''''
+            case 'classification': return <Target className='w-4 h-4'/" >'''
+            case 'regression': return <TrendingUp className='w-4 h-4'/" >'''
+            case 'clustering': return <Activity className='w-4 h-4'/" >'''
+            case 'nlp': return <Brain className='w-4 h-4'/" >'''
+            case 'computer_vision': return <Eye className='w-4 h-4'/" >'''
+            case 'recommendation': return <Zap className='w-4 h-4'/" >'
             default: return <Brain className='w-4 h-4'/" >}
     }"
     return (<div className={`bg-white dark:bg-gray-900 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 ${className}`}" >'''
@@ -448,7 +447,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
               <div className='space-y-4'>
                 {trainingJobs.map((job) => {}"
 '''
-                const model = models.find(m => m.id === job.modelId)';''
+                const model = models.find(m => m.id === job.modelId)'
                 return (<div key={job.id} className='bg-gray-50 dark:bg-gray-800 p-4 rounded-lg'>''''
                       <div className='flex items-center justify-between mb-3'>''''
                         <div className='flex items-center space-x-3'>''''
@@ -557,7 +556,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                 <div className='space-y-3'>
                   {predictions.slice(0, 5).map((prediction) => {}"
 '''
-                const model = models.find(m => m.id === prediction.modelId)';''
+                const model = models.find(m => m.id === prediction.modelId)'
                 return (<div key={prediction.id} className='bg-white dark:bg-gray-700 p-3 rounded-lg'>''''
                         <div className='flex items-center justify-between mb-2'>''''
                           <div className='flex items-center space-x-2'>''''

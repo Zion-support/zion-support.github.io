@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
-import Head from 'next/head'
-interface PerformanceOptimizerProps {
+import Head  from 'next/head';interface PerformanceOptimizerProps {
   preloadImages?: string[]
   preloadFonts?: string[]
   criticalCSS?: string
@@ -32,7 +31,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       })
 
       try {
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] })
+        observer.observe({ entryTypes: ['largest-contentful-paint,first-input,layout-shift'] })
       } catch (e) {
         // Fallback for browsers that don't support all entry types
         console.log('Performance monitoring not fully supported')

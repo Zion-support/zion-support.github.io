@@ -1,16 +1,16 @@
-import React from 'react';"
-import { Link } from 'react-router-dom';"
+import React from 'react
+import { Link } from 'react-router-dom
 import { X, ChevronRight, Home, Briefcase, Target, Building, FileText, Video, Mail, Brain, Cloud, Shield, Server, Rocket, Users, HelpCircle, DollarSign } from 'lucide-react';
 
 export function MobileMenu({ isOpen, onClose, user, onNavigate }) {
   const navigationItems = [
-    {"
-      name: 'Home',"
+  {"
+      name: 'Home,
       href: '/',
       icon: Home,
 },
     {"
-      name: 'Services',"
+      name: 'Services,
       href: '/services',
       icon: Briefcase,
       children: ["
@@ -22,7 +22,7 @@ export function MobileMenu({ isOpen, onClose, user, onNavigate }) {
       ],
 },
     {"
-      name: 'Solutions',"
+      name: 'Solutions,
       href: '/solutions',
       icon: Target,
       children: ["
@@ -34,7 +34,7 @@ export function MobileMenu({ isOpen, onClose, user, onNavigate }) {
       ],
 },
     {"
-      name: 'About',"
+      name: 'About,
       href: '/about',
       icon: Building,
       children: ["
@@ -45,7 +45,7 @@ export function MobileMenu({ isOpen, onClose, user, onNavigate }) {
       ],
 },
     {"
-      name: 'Resources',"
+      name: 'Resources,
       href: '#',
       icon: FileText,
       children: ["
@@ -59,7 +59,7 @@ export function MobileMenu({ isOpen, onClose, user, onNavigate }) {
       ],
 },
     {"
-      name: 'Support',"
+      name: 'Support,
       href: '/support',
       icon: HelpCircle,
       children: ["
@@ -96,7 +96,7 @@ export function MobileMenu({ isOpen, onClose, user, onNavigate }) {
             <span className="text-white font-semibold">Zion Tech Group</span>
           </div>
           <button onClick={onClose}"
-            className="p-2 text-zion-slate-light hover:text-white hover:bg-zion-purple/10 rounded-lg transition-colors"" >"
+            className='p-2 text-zion-slate-light hover:text-white hover:bg-zion-purple/10 rounded-lg transition-colors  >'
             <X className="h-5 w-5" /" >
           </button>
         </div>

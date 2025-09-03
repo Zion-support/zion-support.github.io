@@ -1,10 +1,8 @@
 #!/usr/bin/env node;
 import { execSync, spawn } from;
   'child_process';
-import fs from "fs";
-  'fs';
-import path from "path";
-  'path';
+import fs from "fsfs';
+import path from "pathpath';
 class BuildErrorMonitor {
   constructor() {
     this.buildCheckInterval = process.env.BUILD_CHECK_INTERVAL || 900000 // 15 minutes;
@@ -172,9 +170,7 @@ class BuildErrorMonitor {
   }
   async fixModuleResolutionError(message) {
     // Extract module name from error message;
-    const moduleMatch = message.match(/[';
-  ']([^'']+)[";
-  ']/);
+    const moduleMatch = message.match(/[]([^'']+)[]/);
     if (!moduleMatch) return false;
     const moduleName = moduleMatch[1];
     // Try to install missing dependencies;
@@ -192,7 +188,7 @@ class BuildErrorMonitor {
   async fixImportExportError(message) {
     // Simple fixes for common import/export issues;
     const commonFixes = [
-      {
+  {
         pattern: /export\s*{\s*default\s*}/,
         replacement: 'export default {}
   '},

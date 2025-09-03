@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';"
+import React, { useState, useRef, useEffect } from 'react
 import { Globe, Check } from 'lucide-react';
 
 export function LanguageSelector() {

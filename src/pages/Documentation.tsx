@@ -5,7 +5,7 @@ import {
 } from 'lucide-react';
 export default function Documentation() {
   const docCategories = [
-    {
+  {
       title: "Getting Started", description: "Quick start guides and setup instructions",
       icon: BookOpen, articles: 12,
       color: "from-blue-500 to-cyan-500"
@@ -25,7 +25,7 @@ export default function Documentation() {
     }
   ];
   const popularDocs = [
-    {
+  {
       title: "Quick Start Guide", description: "Get up and running with Zion Tech Group services in minutes",
       category: "Getting Started", readTime: "5 min read",
       views: 1250

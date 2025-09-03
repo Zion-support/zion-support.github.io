@@ -60,4 +60,40 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://ziontechgroup.com/help</loc>
+    <lastmod>2025-01-27T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/search</loc>
+    <lastmod>2025-01-27T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/sitemap</loc>
+    <lastmod>2025-01-27T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/privacy</loc>
+    <lastmod>2025-01-27T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/terms</loc>
+    <lastmod>2025-01-27T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/cookies</loc>
+    <lastmod>2025-01-27T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
 </urlset>

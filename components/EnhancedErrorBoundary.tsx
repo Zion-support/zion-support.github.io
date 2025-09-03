@@ -38,7 +38,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     try {
       // Example: Send to analytics;
       if (typeof gtag !== 'undefined') {
-        gtag('event', 'exception', {
+        gtag('event,exception', {
           description: error.message, fatal: false})}
       // Example: Send to custom endpoint;
       fetch('/api/error-reporting', {

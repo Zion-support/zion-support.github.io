@@ -2,9 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { Shield, AlertTriangle, CheckCircle, Lock, Database, Activity } from 'lucide-react'
 interface SecurityMetrics {
-import React, { useEffect, useState  } from 'react'
-  'react'
-import { motion  } from 'lucide-react';import { Shield, AlertTriangle, CheckCircle, Lock, Database, Activity  } from 'lucide-react'';interface SecurityMetrics {
+import React, { useEffect, useState  }  from 'reactreact'
+import { motion  } from 'lucide-react';import { Shield, AlertTriangle, CheckCircle, Lock, Database, Activity  }  from 'lucide-react;interface SecurityMetrics {
   overallScore: number
   vulnerabilities: {
     critical: number

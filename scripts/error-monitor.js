@@ -10,8 +10,8 @@ const __dirname = path.dirname(__filename);
 
 class ErrorMonitor {
   constructor() {
-    this.logDir = path.join(__dirname, '..', 'logs');
-    this.errorReportDir = path.join(__dirname, '..', 'error-reports');
+    this.logDir = path.join(__dirname, '..,logs');
+    this.errorReportDir = path.join(__dirname, '..,error-reports');
     this.maxLogSize = 10 * 1024 * 1024; // 10MB
     this.errorThreshold = 5; // Number of errors before triggering fixes
     this.errors = [];
@@ -50,7 +50,7 @@ class ErrorMonitor {
 
   async checkTypeScriptErrors() {
     try {
-      this.log('info', 'Checking TypeScript errors...');
+      this.log('info,Checking TypeScript errors...');
       
       // Check for TypeScript compilation errors
       const result = execSync('npx tsc --noEmit --skipLibCheck', { 
@@ -58,11 +58,11 @@ class ErrorMonitor {
         stdio: 'pipe'
       });
       
-      this.log('info', 'No TypeScript errors found');
+      this.log('info,No TypeScript errors found');
       return { hasErrors: false, errors: [] };
     } catch (error) {
       const errorOutput = error.stdout || error.stderr || error.message;
-      this.log('error', 'TypeScript errors detected', error);
+      this.log('error,TypeScript errors detected', error);
       
       const errors = this.parseTypeScriptErrors(errorOutput);
       this.errors.push(...errors);
@@ -73,7 +73,7 @@ class ErrorMonitor {
 
   async checkLintingErrors() {
     try {
-      this.log('info', 'Checking linting errors...');
+      this.log('info,Checking linting errors...');
       
       // Check for ESLint errors
       const result = execSync('npx eslint . --ext .js,.jsx,.ts,.tsx --format json', { 
@@ -81,11 +81,11 @@ class ErrorMonitor {
         stdio: 'pipe'
       });
       
-      this.log('info', 'No linting errors found');
+      this.log('info,No linting errors found');
       return { hasErrors: false, errors: [] };
     } catch (error) {
       const errorOutput = error.stdout || error.stderr || error.message;
-      this.log('error', 'Linting errors detected', error);
+      this.log('error,Linting errors detected', error);
       
       const errors = this.parseLintingErrors(errorOutput);
       this.errors.push(...errors);
@@ -96,7 +96,7 @@ class ErrorMonitor {
 
   async checkBuildErrors() {
     try {
-      this.log('info', 'Checking build errors...');
+      this.log('info,Checking build errors...');
       
       // Try to build the project
       const result = execSync('npm run build', { 
@@ -104,11 +104,11 @@ class ErrorMonitor {
         stdio: 'pipe'
       });
       
-      this.log('info', 'Build completed successfully');
+      this.log('info,Build completed successfully');
       return { hasErrors: false, errors: [] };
     } catch (error) {
       const errorOutput = error.stdout || error.stderr || error.message;
-      this.log('error', 'Build errors detected', error);
+      this.log('error,Build errors detected', error);
       
       const errors = this.parseBuildErrors(errorOutput);
       this.errors.push(...errors);
@@ -181,7 +181,7 @@ class ErrorMonitor {
 
   async generateErrorReport() {
     if (this.errors.length === 0) {
-      this.log('info', 'No errors to report');
+      this.log('info,No errors to report');
       return;
     }
 
@@ -223,17 +223,17 @@ class ErrorMonitor {
     try {
       // Run auto-fix scripts
       execSync('node scripts/auto-fixer.js', { stdio: 'inherit' });
-      this.log('info', 'Auto-fix completed');
+      this.log('info,Auto-fix completed');
       
       // Clear errors after successful fix
       this.errors = [];
     } catch (error) {
-      this.log('error', 'Auto-fix failed', error);
+      this.log('error,Auto-fix failed', error);
     }
   }
 
   async runMonitoringCycle() {
-    this.log('info', 'Starting error monitoring cycle...');
+    this.log('info,Starting error monitoring cycle...');
     
     try {
       // Check for different types of errors
@@ -247,14 +247,14 @@ class ErrorMonitor {
         await this.triggerAutoFix();
       }
       
-      this.log('info', 'Error monitoring cycle completed');
+      this.log('info,Error monitoring cycle completed');
     } catch (error) {
-      this.log('error', 'Error monitoring cycle failed', error);
+      this.log('error,Error monitoring cycle failed', error);
     }
   }
 
   async start() {
-    this.log('info', 'Error Monitor started');
+    this.log('info,Error Monitor started');
     
     // Run initial check
     await this.runMonitoringCycle();

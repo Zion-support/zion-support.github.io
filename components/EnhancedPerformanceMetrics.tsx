@@ -204,7 +204,7 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({
           className="flex justify-center mb-12"
         >
           <div className="bg-white rounded-2xl shadow-lg p-2 border border-gray-200">
-            {(['1h', '6h', '24h', '7d'] as const).map((range) => (
+            {(['1h,6h,24h,7d'] as const).map((range) => (
               <button
                 key={range}
                 onClick={() => setTimeRange(range)}

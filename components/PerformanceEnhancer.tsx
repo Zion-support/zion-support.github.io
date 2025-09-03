@@ -1,8 +1,7 @@
 'use client'
 
 import React, { useEffect, useState, useCallback } from 'react'
-// import { usePerformanceOptimization } from '../src/utils/performanceOptimizer'
-interface PerformanceMetrics {
+// import { usePerformanceOptimization }  from '../src/utils/performanceOptimizer';interface PerformanceMetrics {
   fcp: number | null
    lcp: number | null
    fid: number | null
@@ -122,7 +121,7 @@ const PerformanceEnhancer: React.FC = () => {
   // Send metrics to analytics
   const sendToAnalytics = useCallback((metricName: string, value: number) => {
     if (typeof gtag !== 'undefined') {
-      gtag('event', 'web_vitals', {
+      gtag('event,web_vitals', {
         name: metricName, value: Math.round(value), event_category: 'Performance', event_label: metricName, non_interaction: true})
     }
   }, [])

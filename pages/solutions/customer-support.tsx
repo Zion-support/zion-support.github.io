@@ -20,7 +20,7 @@ import {
 
 export default function CustomerSupport() {
   const features = [
-    {
+  {
       icon: Bot,
       title: 'AI Chatbots',
       description:

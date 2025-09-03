@@ -34,12 +34,7 @@ class BuildOptimizer {
       let config = fs.readFileSync(nextConfigPath, 'utf8');
       // Add performance optimizations;
       const optimizations = [
-        'experimental: { optimizeCss: true }',
-        'swcMinify: true',
-        'compress: true',
-        'poweredByHeader: false',
-        'generateEtags: false',
-        'httpAgentOptions: { keepAlive: true }';
+        'experimental: { optimizeCss: true },swcMinify: true,compress: true,poweredByHeader: false,generateEtags: false,httpAgentOptions: { keepAlive: true }';
       ];
       // Apply optimizations if not already present;
       optimizations.forEach(opt => {
@@ -59,8 +54,7 @@ class BuildOptimizer {
       // Add performance optimizations;
       const optimizations = {
         'incremental': true,
-        'tsBuildInfoFile': '.next/tsbuildinfo',
-        'skipLibCheck': true,
+        'tsBuildInfoFile': '.next/tsbuildinfo,skipLibCheck': true,
         'forceConsistentCasingInFileNames': true}
       Object.entries(optimizations).forEach(([key, value]) => {
         if (!(key in config.compilerOptions)) {
@@ -76,12 +70,7 @@ class BuildOptimizer {
       const pkg = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
       // Add optimized build scripts;
       const optimizedScripts = {
-        'build:optimized': 'NEXT_TELEMETRY_DISABLED=1 NEXT_DISABLE_ESLINT=1 next build',
-        'build:analyze': 'ANALYZE=true npm run build:optimized',
-        'build:production': 'NODE_ENV=production npm run build:optimized',
-        'build:fast': 'NEXT_TELEMETRY_DISABLED=1 next build --no-lint',
-        'dev:optimized': 'NEXT_TELEMETRY_DISABLED=1 next dev --turbo',
-        'start:optimized': 'NODE_ENV=production next start -p 3000'}
+        'build:optimized': 'NEXT_TELEMETRY_DISABLED=1 NEXT_DISABLE_ESLINT=1 next build,build:analyze': 'ANALYZE=true npm run build:optimized,build:production': 'NODE_ENV=production npm run build:optimized,build:fast': 'NEXT_TELEMETRY_DISABLED=1 next build --no-lint,dev:optimized': 'NEXT_TELEMETRY_DISABLED=1 next dev --turbo,start:optimized': 'NODE_ENV=production next start -p 3000'}
       Object.entries(optimizedScripts).forEach(([key, value]) => {
         if (!(key in pkg.scripts)) {
           pkg.scripts[key] = value;
@@ -140,11 +129,7 @@ fi;
       errors: this.errors,
       warnings: this.warnings,
       recommendations: [
-        'Use npm run build:optimized for production builds',
-        'Enable SWC minification for faster builds',
-        'Use incremental TypeScript compilation',
-        'Consider using Next.js Image optimization',
-        'Implement code splitting for better performance';
+        'Use npm run build:optimized for production builds,Enable SWC minification for faster builds,Use incremental TypeScript compilation,Consider using Next.js Image optimization,Implement code splitting for better performance';
       ]}
     fs.writeFileSync('build-optimization-report.json', JSON.stringify(report, null, 2));
     this.optimizations.push('Generated performance report')}

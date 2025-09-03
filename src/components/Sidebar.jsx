@@ -1,4 +1,4 @@
-import React, { useState } from 'react';"
+import React, { useState } from 'react
 import { Link, useLocation } from 'react-router-dom';
 import { 
   ChevronDown, 
@@ -50,7 +50,7 @@ import {
 
 export function Sidebar({ isOpen = false, onClose }) {
   const location = useLocation();"
-  const [expandedSections, setExpandedSections] = useState(['services', 'solutions']);
+  const [expandedSections, setExpandedSections] = useState(['services,solutions']);
 
   const toggleSection = (sectionName) => {
     setExpandedSections(prev => 
@@ -61,7 +61,7 @@ export function Sidebar({ isOpen = false, onClose }) {
 };
 
   const navigationSections = [
-    {"
+  {"
       title: 'Main',
       items: ["
         { name: 'Home', href: '/', icon: Home },"
@@ -155,7 +155,7 @@ export function Sidebar({ isOpen = false, onClose }) {
             <span className="text-white font-semibold">Zion Tech</span>
           </div>
           <button onClick={onClose}"
-            className="lg:hidden p-1 text-zion-slate-light hover:text-white hover:bg-zion-purple/10 rounded"" >"
+            className='lg:hidden p-1 text-zion-slate-light hover:text-white hover:bg-zion-purple/10 rounded  >'
             <X className="h-5 w-5" /" >
           </button>
         </div>

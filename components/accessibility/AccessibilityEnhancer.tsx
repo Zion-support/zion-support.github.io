@@ -114,7 +114,7 @@ export const generateAccessibleId = (prefix: string, text: string): string => {
 export const announceToScreenReader = (message: string, priority: 'polite' | 'assertive' = 'polite') => {
   const announcement = document.createElement('div');
   announcement.setAttribute('aria-live', priority);
-  announcement.setAttribute('aria-atomic', 'true');
+  announcement.setAttribute('aria-atomic,true');
   announcement.className = 'sr-only';
   announcement.textContent = message;
   document.body.appendChild(announcement);

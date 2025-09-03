@@ -249,25 +249,25 @@ export function NotificationExample() {
       <h2 className="text-2xl font-bold">Notification Examples</h2>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         <button
-          onClick={() => showSuccess('Success!', 'Operation completed successfully.')}
+          onClick={() => showSuccess('Success!,Operation completed successfully.')}
           className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-colors"
         >
           Show Success
         </button>
         <button
-          onClick={() => showError('Error!', 'Something went wrong. Please try again.')}
+          onClick={() => showError('Error!,Something went wrong. Please try again.')}
           className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition-colors"
         >
           Show Error
         </button>
         <button
-          onClick={() => showWarning('Warning!', 'Please review your input before proceeding.')}
+          onClick={() => showWarning('Warning!,Please review your input before proceeding.')}
           className="bg-yellow-600 text-white px-4 py-2 rounded hover:bg-yellow-700 transition-colors"
         >
           Show Warning
         </button>
         <button
-          onClick={() => showInfo('Info', 'Here is some helpful information.')}
+          onClick={() => showInfo('Info,Here is some helpful information.')}
           className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors"
         >
           Show Info
@@ -275,7 +275,7 @@ export function NotificationExample() {
       </div>
       <div className="mt-8">
         <button
-          onClick={() => showSuccess('Custom Action', 'Click the action button below.', {
+          onClick={() => showSuccess('Custom Action,Click the action button below.', {
             action: {
               label: 'View Details',
               onClick: () => alert('Action clicked!')

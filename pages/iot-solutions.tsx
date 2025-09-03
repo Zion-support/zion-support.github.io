@@ -6,7 +6,7 @@ import { Wifi, Cpu, Database, Shield, ArrowRight, CheckCircle } from 'lucide-rea
 
 export default function IoTSolutions() {
   const features = [
-    {
+  {
       icon: Wifi,
       title: 'Device Connectivity',
       description: 'Seamless connection and communication between IoT devices and systems'
@@ -29,16 +29,11 @@ export default function IoTSolutions() {
   ];
 
   const benefits = [
-    'Real-time monitoring and control',
-    'Predictive maintenance capabilities',
-    'Improved operational efficiency',
-    'Cost reduction through automation',
-    'Enhanced customer experiences',
-    'Data-driven decision making'
+    'Real-time monitoring and control,Predictive maintenance capabilities,Improved operational efficiency,Cost reduction through automation,Enhanced customer experiences,Data-driven decision making'
   ];
 
   const industries = [
-    {
+  {
       title: 'Manufacturing',
       description: 'Smart factories with connected machines and predictive maintenance'
     },

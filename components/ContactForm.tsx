@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react'
-interface FormData {
+import { Mail, Phone, MapPin, Send, CheckCircle }  from 'lucide-react';interface FormData {
   name: string
   email: string
   company: string

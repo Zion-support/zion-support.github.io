@@ -87,7 +87,7 @@ const AnalyticsManager: React.FC = () => {
   const initializeAnalytics = useCallback(() => {
     // Initialize Google Analytics
     if (typeof gtag !== 'undefined') {
-      gtag('config', 'GA_MEASUREMENT_ID', {
+      gtag('config,GA_MEASUREMENT_ID', {
         page_title: document.title,
         page_location: window.location.href,
         custom_map: {
@@ -150,7 +150,7 @@ const AnalyticsManager: React.FC = () => {
 
     // Google Analytics
     if (typeof gtag !== 'undefined') {
-      gtag('event', 'page_view', pageData);
+      gtag('event,page_view', pageData);
     }
 
     // Custom analytics
@@ -211,7 +211,7 @@ const AnalyticsManager: React.FC = () => {
   }, [])
   const trackUserProperties = useCallback((properties: Record<string, unknown>) => {
     if (typeof gtag !== 'undefined') {
-      gtag('config', 'GA_MEASUREMENT_ID', {
+      gtag('config,GA_MEASUREMENT_ID', {
         custom_map: properties,
       });
     }
@@ -228,22 +228,22 @@ const AnalyticsManager: React.FC = () => {
   const trackPerformance = useCallback((metrics: PerformanceMetrics) => {
     // Google Analytics
     if (typeof gtag !== 'undefined') {
-      gtag('event', 'web_vitals', {
+      gtag('event,web_vitals', {
         name: 'FCP',
         value: Math.round(metrics.fcp),
         event_category: 'Performance',
       });
-      gtag('event', 'web_vitals', {
+      gtag('event,web_vitals', {
         name: 'LCP',
         value: Math.round(metrics.lcp),
         event_category: 'Performance',
       });
-      gtag('event', 'web_vitals', {
+      gtag('event,web_vitals', {
         name: 'FID',
         value: Math.round(metrics.fid),
         event_category: 'Performance',
       });
-      gtag('event', 'web_vitals', {
+      gtag('event,web_vitals', {
         name: 'CLS',
         value: Math.round(metrics.cls * 1000),
         event_category: 'Performance',

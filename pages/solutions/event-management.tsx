@@ -20,7 +20,7 @@ import {
 
 export default function EventManagement() {
   const features = [
-    {
+  {
       icon: Users,
       title: 'Event Registration',
       description:

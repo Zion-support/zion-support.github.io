@@ -211,8 +211,7 @@ class BrowserErrorMonitor {
   , fixError);
       this.stats.failedFixes++;
   identifyFixStrategy(error) {
-    const message = error.message || error.failureReason || ';
-  ';
+    const message = error.message || error.failureReason || ;
     for (const [category, patterns] of Object.entries(CONFIG.errorPatterns)) {
       for (const [pattern, strategy] of Object.entries(patterns)) {
         if (message.includes(pattern)) {
