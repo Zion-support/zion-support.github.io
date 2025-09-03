@@ -148,12 +148,10 @@
     "build:production": "NODE_ENV=production npm run build",
     "dev:fast": "npm run dev -- --turbo",
     "lint:check": "eslint . --ext .ts,.tsx,.js,.jsx --max-warnings 0"
->>>>>>> dfee9eda3360d0bf305cf0bfd98adba996a85c23
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
-<<<<<<< HEAD
     "@magneticwatermelon/mcp-toolkit": "^1.1.4",
     "@modelcontextprotocol/sdk": "^1.17.1",
     "@modelcontextprotocol/server-filesystem": "^2025.7.29",
@@ -165,7 +163,6 @@
     "@types/react-datepicker": "^6.2.0",
     "@types/react-dom": "17.0.26",
     "autoprefixer": "^10.4.21",
-=======
     "@hookform/resolvers": "^5.2.1",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-alert-dialog": "^1.0.5",
@@ -199,7 +196,6 @@
     "@tailwindcss/forms": "^0.5.10",
     "@tailwindcss/typography": "^0.5.16",
     "@tanstack/react-query": "^5.85.5",
->>>>>>> dfee9eda3360d0bf305cf0bfd98adba996a85c23
     "axios": "^1.11.0",
     "cheerio": "^1.1.2",
     "child_process": "^1.0.2",
@@ -216,7 +212,6 @@
     "https": "^1.0.0",
     "import-fresh": "^3.3.1",
     "lucide-react": "^0.536.0",
-<<<<<<< HEAD
     "next": "^12.3.4",
     "node-cron": "^4.2.1",
     "openai": "^5.11.0",
@@ -249,8 +244,7 @@
     "tailwindcss": "^3.4.0",
     "ts-node": "^10.9.2",
     "typescript": "4.9.5",
-    "web-vitals": "^5.1.0"
-=======
+    "web-vitals": "^5.1.0",
     "next": "^14.0.4",
     "node-cron": "^4.2.1",
     "openai": "^5.11.0",
@@ -305,7 +299,6 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.0.0",
     "vite": "^5.4.19"
->>>>>>> dfee9eda3360d0bf305cf0bfd98adba996a85c23
   },
   "engines": {
     "node": ">=18.0.0",
