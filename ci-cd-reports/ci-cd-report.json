@@ -5,15 +5,14 @@
     "total": 6,
     "passed": 2,
     "failed": 3,
-    "skipped": 1
-  },
+    "skipped": 1},
   "results": {
     "dependencies": {
       "status": "success",
       "result": {
         "duration": "5563ms",
-        "output": "Dependencies installed successfully"
-      }
+        "output": "Dependencies installed successfully";
+}
     },
     "linting": {
       "status": "failure",
@@ -23,8 +22,7 @@
         "issues": {
           "total": 1,
           "errors": 0,
-          "warnings": 1
-        }
+          "warnings": 1}
       }
     },
     "typeCheck": {
@@ -35,8 +33,7 @@
         "issues": {
           "total": 182,
           "errors": 182,
-          "warnings": 0
-        }
+          "warnings": 0}
       }
     },
     "build": {
@@ -44,15 +41,15 @@
       "result": {
         "duration": "7740ms",
         "output": "Build completed successfully",
-        "buildSize": "4.40 MB"
-      }
+        "buildSize": "4.40 MB";
+}
     },
     "testing": {
       "status": "skipped",
       "result": {
         "reason": "No test scripts configured",
-        "output": "Tests skipped"
-      }
+        "output": "Tests skipped";
+}
     },
     "quality": {
       "status": "failure",
@@ -65,8 +62,7 @@
           "lintingPassed": false,
           "typeCheckPassed": false,
           "testsPassed": false,
-          "dependenciesInstalled": true
-        }
+          "dependenciesInstalled": true}
       }
     }
   },
@@ -79,7 +75,6 @@
       "lintingPassed": false,
       "typeCheckPassed": false,
       "testsPassed": false,
-      "dependenciesInstalled": true
-    }
+      "dependenciesInstalled": true}
   }
 }

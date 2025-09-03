@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Minimal security config to resolve merge conflict
 export const securityHeaders = {
     contentSecurityPolicy: "default-src 'self'",
@@ -6,3 +7,10 @@ export const securityHeaders = {
 };
 
 export type SecurityHeaders = typeof securityHeaders;
+=======
+// comment
+export const securityConfig = {}
+
+
+export default securityConfig
+>>>>>>> main

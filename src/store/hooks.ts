@@ -1,1 +1,17 @@
+<<<<<<< HEAD
 import { useDispatch, useSelector  } from 'react-redux'; ; export const useAppDispatch = () => useDispatch(); export const useAppSelector = useSelector; ;
+=======
+import React from "react"
+  );
+export default function Hooks() {
+  return (
+    <div className="min-h-screen bg-white">
+      <div className="max-w-4xl mx-auto px-6 py-16">
+        <h1 className="text-4xl font-bold text-gray-900 mb-8">Hooks</h1>
+        <p className="text-lg text-gray-600 mb-8">
+          This is a placeholder component for hooks.
+        </p>
+      </div>
+  )
+}
+>>>>>>> main
