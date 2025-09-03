@@ -7,23 +7,23 @@ const path = require('path');
 function resolveMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    
+
     // Check if file has merge conflict markers
     if (!content.includes('<<<<<<< HEAD')) {
       return false; // No conflicts to resolve
     }
-    
+
     console.log(`Resolving conflicts in: ${filePath}`);
-    
+
     // Split content by conflict markers and keep HEAD version
     const lines = content.split('\n');
     const resolvedLines = [];
     let inConflict = false;
     let keepLines = false;
-    
+
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
-      
+
       if (line.includes('<<<<<<< HEAD')) {
         inConflict = true;
         keepLines = true;
@@ -36,12 +36,12 @@ function resolveMergeConflicts(filePath) {
         keepLines = false;
         continue;
       }
-      
+
       if (!inConflict || keepLines) {
         resolvedLines.push(line);
       }
     }
-    
+
     const resolvedContent = resolvedLines.join('\n');
     fs.writeFileSync(filePath, resolvedContent, 'utf8');
     return true;
@@ -55,11 +55,11 @@ function resolveMergeConflicts(filePath) {
 function processDirectory(dirPath) {
   const items = fs.readdirSync(dirPath);
   let totalFixed = 0;
-  
+
   for (const item of items) {
     const fullPath = path.join(dirPath, item);
     const stat = fs.statSync(fullPath);
-    
+
     if (stat.isDirectory()) {
       // Skip node_modules and .git directories
       if (item === 'node_modules' || item === '.git') {
@@ -75,7 +75,7 @@ function processDirectory(dirPath) {
       }
     }
   }
-  
+
   return totalFixed;
 }
 

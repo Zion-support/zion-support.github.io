@@ -1,28 +1,69 @@
-'use client'
-import React, { useState, useRef, useEffect } from 'react'
-import Image from 'next/image'
+<<<<<<< HEAD
+'use client';''
+''
+import Image from 'next/image';''
+=======
+'use client';
+
+import Image from 'next/image';
+>>>>>>> main
+import { useState, useRef, useEffect } from 'react';
+
 interface OptimizedImageProps {
-'use client, ';'''
-  'import Image from 'next/image
-  ';interface OptimizedImageProps {
-  src: string
-  alt: string
-  width?: number
-  height?: number
-  className?: string
-  priority?: boolean
-  quality?: number
-  placeholder?: 'blur' | 'empty'
-  blurDataURL?: string
-  sizes?: string
-  fill?: boolean
-  style?: React.CSSProperties
-  onClick?: () => void
-  onLoad?: () => void
-  onError?: () => void
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  className?: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+  priority?: boolean;''
+  quality?: number;''
+=======
+  priority?: boolean;
+  quality?: number;
+>>>>>>> main
+  placeholder?: 'blur' | 'empty';
+  blurDataURL?: string;
+  sizes?: string;
+  fill?: boolean;
+  style?: React.CSSProperties;
+  onClick?: () => void;
+  onLoad?: () => void;
+  onError?: () => void;
+<<<<<<< HEAD
+=======
+  loading?: 'lazy' | 'eager';
+  objectFit?: 'contain' | 'cover' | 'fill' | 'none' | 'scale-down';
+  objectPosition?: string;
+>>>>>>> main
 }
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
+<<<<<<< HEAD
+
+  src, alt,
+  width, ''
+  height,''
+  className = '', priority = false,''
+  quality = 75, ''
+<<<<<<< HEAD
+  placeholder = 'empty',
+  blurDataURL, sizes,
+  fill = false, style,
+  onClick, onLoad,
+  onError}) => {
+
+=======
+  placeholder = 'empty',
+  blurDataURL, sizes,
+  fill = false, style,
+  onClick, onLoad,
+  onError}) => {
+
+=======
   src,
   alt,
   width,
@@ -37,185 +78,392 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   style,
   onClick,
   onLoad,
-  onError
+  onError,
+  loading = 'lazy',
+  objectFit = 'cover',
+  objectPosition = 'center'
 }) => {
-
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
-src, alt, width,  , ''
-  '  height, '''
-  '  className = '', priority = false, '''
-  '  quality = 75, '''
-  '  placeholder = 'empty
-  ', '  blurDataURL, sizes, '  fill = false, style, '
-  onClick, onLoad, onError}) => {
-  const [isLoading, setIsLoading] = useState(true)
-  const [hasError, setHasError] = useState(false)
-  const [isInView, setIsInView] = useState(priority)
-  const imageRef = useRef<HTMLDivElement>(null)
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> main
+  const [isLoading, setIsLoading] = useState(true);
+  const [hasError, setHasError] = useState(false);
+  const [isInView, setIsInView] = useState(priority);
+  const imageRef = useRef<HTMLDivElement>(null);
 
   // Intersection Observer for lazy loading
   useEffect(() => {
-    if (priority) return
+    if (priority) return;
+
+=======
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [hasError, setHasError] = useState(false);
+  const [isInView, setIsInView] = useState(false);
+  const imgRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+>>>>>>> main
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsInView(true)
-          observer.disconnect()
+          setIsInView(true);
+          observer.disconnect();
         }
-      },
-      {
-        rootMargin: '50px', // Start loading 50px before the image comes into view
-        threshold: 0.1
-      }
-    )
-    if (imageRef.current) {
+<<<<<<< HEAD
+      }, {
+''
 
-const observer = new IntersectionObserver();([entry]) => {
-        if (entry.isIntersecting) {
-          setIsInView(true)
-          observer.disconnect()
-        }
-}, {
-''''''
-  '        rootMargin: '50px, // Start loading 50px before the image comes into view'        threshold: 0.1}'
-  '    );if (imageRef.current) {'
-      observer.observe(imageRef.current)
+=======
+<<<<<<< HEAD
+      }, {
+''
+''
+>>>>>>> main
+        rootMargin: '50px', // Start loading 50px before the image comes into view
+        threshold: 0.1}
+=======
+      },
+<<<<<<< HEAD
+      { threshold: 0.1 }
+=======
+      {
+<<<<<<< HEAD
+        threshold: 0.1,
+        rootMargin: '50px'
+      }
+>>>>>>> main
+    );
+
+    if (imageRef.current) {
+      observer.observe(imageRef.current);
     }
 
-    return () => observer.disconnect()
-  }, [priority])
-  // Handle image load
+    return () => observer.disconnect();
+  }, [priority]);
+
   const handleLoad = () => {
-    setIsLoading(false)
-    onLoad?.()
-  }
-  // Handle image error
+    setIsLoading(false);
+    setHasError(false);
+    onLoad?.();
+  };
+
   const handleError = () => {
-    setHasError(true)
-    setIsLoading(false)
-    onError?.()
-  }
-  // Fallback image for errors
+    setIsLoading(false);
+    setHasError(true);
+    onError?.();
+  };
+
+  // Generate a simple blur placeholder if none provided
+  const defaultBlurDataURL = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=';
+
+<<<<<<< HEAD
+    return()
+      <div''
+        className={`flex items-center justify-center bg-gray-200 dark: bg-gray-700 text-gray-500 dark:text-gray-400 ${className}`}''
+        style={{ width: fill ? '100%' : width, height: fill ? '100%' : height }}
+      >
+        <div className="text-center">""
+<<<<<<< HEAD
+          <svg""
+            className="mx-auto h-8 w-8 mb-2"""
+            fill="none"""
+            viewBox="0 0 24 24"""
+            stroke="currentColor"
+          >""
+            <path""
+              strokeLinecap="round"""
+              strokeLinejoin="round"""
+              strokeWidth={2}""
+              d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+            />""
+          </svg>""
+          <p className="text-xs">Image failed to load</p>
+=======
+=======
   if (hasError) {
     return (
       <div
-        className={`bg-gray-200 dark:bg-gray-700 flex items-center justify-center ${className}`}
-        style={{ width: fill ? '100%' : width, height: fill ? '100%' : height }}
+        ref={imageRef}
+        className={`flex items-center justify-center bg-gray-200 text-gray-500 ${className}`}
+        style={style}
+        onClick={onClick}
       >
-        <span className="text-gray-500 text-sm">Failed to load image</span>
+        <div className="text-center">
+          <svg className="w-8 h-8 mx-auto mb-2" fill="currentColor" viewBox="0 0 20 20">
+            <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
+          </svg>
+          <p className="text-sm">Failed to load image</p>
+>>>>>>> main
+        </div>
       </div>
-    )
+    );
   }
 
-  // Loading skeleton
   if (!isInView) {
     return (
       <div
         ref={imageRef}
-        className={`bg-gray-200 dark:bg-gray-700 animate-pulse ${className}`}
-        style={{ width: fill ? '100%' : width, height: fill ? '100%' : height }}
+        className={`bg-gray-200 animate-pulse ${className}`}
+        style={style}
       />
-    )
+=======
+'
+
+        rootMargin: '50px', // Start loading 50px before the image comes into view
+        threshold: 0.1}
+>>>>>>> main
+    );
+
+    if (imgRef.current) {
+      observer.observe(imgRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  const handleLoad = () => {
+    setIsLoaded(true);
+    onLoad?.();
+  };
+
+  const handleError = () => {
+    setHasError(true);
+    onError?.();
+  };
+
+  const imageProps = {
+    src,
+    alt,
+    quality,
+    priority,
+    placeholder,
+    blurDataURL,
+    sizes,
+    onLoad: handleLoad,
+    onError: handleError,
+    style: {
+      objectFit,
+      objectPosition,
+      ...style
+    }
+  };
+
+  if (fill) {
+    return (
+      <div
+        ref={imgRef}
+        className={`relative overflow-hidden ${className}`}
+        style={style}
+        onClick={onClick}
+      >
+<<<<<<< HEAD
+        {isInView && !hasError && (
+          <Image
+            {...imageProps}
+            fill
+            className={`transition-opacity duration-300 ${
+              isLoaded ? 'opacity-100' : 'opacity-0'
+            }`}
+          />
+        )}
+        {!isLoaded && !hasError && (
+          <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
+            <div className="w-8 h-8 border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin" />
+          </div>
+        )}
+        {hasError && (
+          <div className="absolute inset-0 bg-gray-100 flex items-center justify-center">
+            <div className="text-gray-400 text-center">
+              <svg className="w-12 h-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <p className="text-sm">Failed to load image</p>
+            </div>
+          </div>
+        )}
+=======
+        <div className="text-center">"
+>>>>>>> main
+          <svg""
+            className='mx-auto h-8 w-8 mb-2'
+            fill="none"""
+            viewBox="0 0 24 24"""
+            stroke="currentColor"
+          >""
+            <path""
+              strokeLinecap="round"""
+              strokeLinejoin="round"""
+              strokeWidth={2}""
+              d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+            />""
+          </svg>""
+          <p className="text-xs">Image failed to load</p>
+        </div>
+>>>>>>> main
+      </div>
+>>>>>>> main
+    );
   }
 
-  return (
-    <div
-      ref={imageRef}
+<<<<<<< HEAD
+  // Loading skeleton
+  if (!isInView) {
+
+    return()
+      <div`
+        ref={imageRef}`'`'
+        className={`bg-gray-200 dark: bg-gray-700 animate-pulse ${className}`}''
+        style={{ width: fill ? '100%' : width, height: fill ? '100%' : height }}
+      />
+    );
+  }
+
+  return()
+    <div`
+      ref={imageRef}``
       className={`relative ${className}`}
       style={style}
       onClick={onClick}
     >
-      {/* Loading overlay */}
+      {/* Loading overlay */}""
+      {isLoading && (""
+        <div className="absolute inset-0 bg-gray-200 dark: bg-gray-700 animate-pulse z-10" />
+<<<<<<< HEAD
+=======
+=======
+  return (
+    <div
+<<<<<<< HEAD
+      ref={imageRef}
+      className={`relative overflow-hidden ${className}`}
+      style={style}
+      onClick={onClick}
+    >
       {isLoading && (
-        <div className="absolute inset-0 bg-gray-200 dark:bg-gray-700 animate-pulse z-10" />
+        <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
+          <div className="w-8 h-8 border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin" />
+        </div>
+>>>>>>> main
+>>>>>>> main
       )}
       
-      {/* Next.js Image component */}
       <Image
         src={src}
         alt={alt}
         width={fill ? undefined : width}
         height={fill ? undefined : height}
-        className={`transition-opacity duration-300 ${
-          isLoading ? 'opacity-0' : 'opacity-100'
-        }`}
-        priority={priority}
+        fill={fill}
         quality={quality}
+        priority={priority}
         placeholder={placeholder}
-
-  // Handle image load
-const handleLoad = () => {;setIsLoading(false)
-    onLoad?.()
-  }
-
-  // Handle image error
-const handleError = () => {;setHasError(true)
-    setIsLoading(false)
-    onError?.()
-  }
-
-  // Fallback image for errors
-  if (hasError) {
-ursor/automate-test-fix-improve-and-merge-code-48f3
-  // Loading skeleton
-  if (!isInView) {
-return()
-      <div``        ref={imageRef}`'`'
-  '        className={`bg-gray-200 dark: bg-gray-700 animate-pulse ${className}`}', '        style={{ width: fill ? '100% : width, height: fill ? '100%
-  ' : height }}'      />
-  '    )`  }
-
-  return()
-    <div``      ref={imageRef}```      className={`relative ${className}`}`      style={style}
+        blurDataURL={placeholder === 'blur' ? (blurDataURL || defaultBlurDataURL) : undefined}
+        sizes={sizes}
+=======
+      ref={imgRef}
+      className={`relative overflow-hidden ${className}`}
       onClick={onClick}
     >
-      {/* Loading overlay */}'''      {isLoading && ('''        <div className='absolute inset-0 bg-gray-200 dark: bg-gray-700 animate-pulse z-10' />'      )}'{/* Next.js Image component */}
+      {isInView && !hasError && (
+        <Image
+          {...imageProps}
+          width={width}
+          height={height}
+          loading={loading}
+          className={`transition-opacity duration-300 ${
+            isLoaded ? 'opacity-100' : 'opacity-0'
+          }`}
+        />
+      )}
+<<<<<<< HEAD
+      {!isLoaded && !hasError && (
+        <div 
+          className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center"
+          style={{ width, height }}
+        >
+          <div className="w-8 h-8 border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin" />
+        </div>
+      )}
+      {hasError && (
+        <div 
+          className="absolute inset-0 bg-gray-100 flex items-center justify-center"
+          style={{ width, height }}
+        >
+          <div className="text-gray-400 text-center">
+            <svg className="w-12 h-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            <p className="text-sm">Failed to load image</p>
+          </div>
+=======
+
+      {/* Next.js Image component */}
       <Image
         src={src}
         alt={alt}
-width={fill ? undefined : width}``        height={fill ? undefined : height}```        className={`transition-opacity duration-300 ${`, ''''
-  '`'          isLoading ?
-  'opacity-0': 'opacity-100'``        }`}'        priority={priority}`        quality={quality}placeholder={placeholder}'
+        width={fill ? undefined : width}`
+        height={fill ? undefined : height}``
+>>>>>>> main
+        className={`transition-opacity duration-300 ${
+''
+''`
+          isLoading ? 'opacity-0' : 'opacity-100'``
+        }`}
+<<<<<<< HEAD
+        onLoad={handleLoad}
+        onError={handleError}
+      />
+=======
+        priority={priority}
+        quality={quality}
+        placeholder={placeholder}
         blurDataURL={blurDataURL}
         sizes={sizes}
         fill={fill}
         onLoad={handleLoad}
         onError={handleError}
         style={{
-          objectFit: fill ? 'cover' : 'contain'
-        }}
+<<<<<<< HEAD
+''
+=======
+<<<<<<< HEAD
+''
+''
+=======
+'
+>>>>>>> main
+
+>>>>>>> main
+          objectFit: fill ? 'cover' : 'contain'}}
       />
-      
-      {/* Loading spinner */}
-      {isLoading && (
-        <div className="absolute inset-0 flex items-center justify-center z-20">
+
+      {/* Loading spinner */}""
+      {isLoading && (""
+        <div className="absolute inset-0 flex items-center justify-center z-20">""
           <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+>>>>>>> main
         </div>
       )}
+>>>>>>> main
     </div>
-  )
-}
+  );
+};
+
+<<<<<<< HEAD
 // HOC for wrapping components with image optimization
 export const withImageOptimization = <P extends object>(
   Component: React.ComponentType<P>
 ) => {
-  return (props: P) => (
-    <Component {...props} />
-  )
-}
-export default OptimizedImage
-        style={{, ''''
-  '          objectFit: fill ? 'cover
-  ' : 'contain}}'      />
-  '
-      {/* Loading spinner */}'''      {isLoading && ('''        <div className='absolute inset-0 flex items-center justify-center z-20'>'''          <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600'></div>'        </div>'      )}</div>  )
-}
 
-// HOC for wrapping components with image optimization
-export const withImageOptimization = <P extends object>(;Component: React.ComponentType<P>
-) => {
   return (props: P) => (
     <Component {...props} />
-  )
-}''`
-  '''export default OptimizedImage''`;''`''`
+  );
+};
+'"`'"
+<<<<<<< HEAD
+export default OptimizedImage;'"`'"`
+=======
+export default OptimizedImage;'"`'"`
+=======
+export default OptimizedImage;
+>>>>>>> main
+>>>>>>> main

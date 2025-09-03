@@ -6,7 +6,8 @@ import React, { useState } from,
   '../data/servicesData'  export default function ComprehensivePricingGuide2032() { const [selectedCategory, setSelectedCategory] = useState(
   'all') const [priceRange, setPriceRange] = useState(
   'all') const [sortBy, setSortBy] = useState(
-  'price')  const categories = [ { id: 'all, name:;
+  'price')  const categories = [
+  { id: 'all, name:;
   'All Services', icon: Globe, count: INNOVATIVE_SERVICES.length }, { id:,
   AI & Analytics', name: 'AI & Analytics, icon: Brain, count: INNOVATIVE_SERVICES.filter(s => s.category.includes(,
   AI')).length }, { id: 'Cybersecurity, name:;
@@ -43,7 +44,8 @@ import React, { useState } from,
   'Manufacturing & AI', icon: Factory, count: INNOVATIVE_SERVICES.filter(s => s.category.includes(,
   Manufacturing')).length }, { id: 'Space Tech, name:
   'Space Tech & AI', icon: Satellite, count: INNOVATIVE_SERVICES.filter(s => s.category.includes(,
-  Space')).length } ]  const priceRanges = [ { id: 'all, name:,
+  Space')).length } ]  const priceRanges = [
+  { id: 'all, name:,
   All Prices', range: 'All }, { id:,
   budget', name: 'Budget ($0 - $999), range:,
   0-999' }, { id: 'professional, name:,
@@ -51,7 +53,8 @@ import React, { useState } from,
   enterprise', name: Enterprise ($3,000 - $5, 999),
   , range: '3000-5999 }, { id:,
   premium', name: Premium ($6,000+),
-  , range: '6000+ } ]  const sortOptions = [ { id:,
+  , range: '6000+ } ]  const sortOptions = [
+  { id:,
   price', name: 'Price: Low to High, icon: DollarSign }, { id:,
   price-desc', name: 'Price: High to Low, icon: DollarSign }, { id:,
   roi', name: 'ROI: High to Low, icon: TrendingUp }, { id:,
@@ -73,4 +76,4 @@ import React, { useState } from,
   'Revolutionary': 3 } return innovationOrder[a.innovationLevel] - innovationOrder[b.innovationLevel] case,
   delivery':  const aDelivery = parseInt(a.estimatedDelivery.split(
   '-')[0]) const bDelivery = parseInt(b.estimatedDelivery.split(
-  '-)[0]) return aDelivery - bDelivery default: return 0 } })  const contactInfo = { phone: '+1 302 464 0950', '';' email: 'kleber@ziontechgroup.com', '';' website: 'https:'''
+  '-)[0]) return aDelivery - bDelivery default: return 0 } })  const contactInfo = { phone: '+1 302 464 0950, email: 'kleber@ziontechgroup.com, website: 'https:'''

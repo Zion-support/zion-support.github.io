@@ -26,7 +26,7 @@ class AutoFixScheduler {
   }
 
   async start() {
-    console.log(`'⏰ Starting Auto-Fix Scheduler...');
+    console.log(`⏰ Starting Auto-Fix Scheduler...`);
 
     // Create logs directory if it doesn't exist
     this.ensureLogsDirectory();
@@ -53,7 +53,7 @@ class AutoFixScheduler {
         this.lastRun = history.lastRun || this.lastRun;
         this.fixHistory = history.fixHistory || [];
       } catch (error) {
-        console.log(`'⚠️  Could not load fix history, starting fresh');
+        console.log(`⚠️  Could not load fix history, starting fresh`);
       }
     }
   }
@@ -68,7 +68,7 @@ class AutoFixScheduler {
   }
 
   startScheduling() {
-    console.log(`'📅 Setting up fix schedules...');
+    console.log(`📅 Setting up fix schedules...`);
 
     // Check every minute for scheduled tasks
     setInterval(() => {
@@ -406,7 +406,7 @@ execSync(node ${tempFile}, { cwd: this.projectRoot, stdio: 'inherit' }`);
       };
 
       const reportPath = path.join(
-        this.projectRoot,logs',
+        this.projectRoot, 'logs',
         'project-health-report.json'
       );
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));

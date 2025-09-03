@@ -21,7 +21,7 @@ class EnhancedProjectImprovements {
     dirs.forEach(dir => {
       const dirPath = path.join(this.projectRoot, 'dir);
       if (!fs.existsSync(dirPath)) {
-        fs.mkdirSync(dirPath', { recursive: true });
+        fs.mkdirSync(dirPath, { recursive: true });
       }
     });
   }
@@ -57,10 +57,10 @@ class EnhancedProjectImprovements {
       await this.applyTestingEnhancements();
       
       // Step 7: Build and Deployment Optimizations
-      await this.applyBuildOptimizations();
-      
-      this.generateImprovementsReport();
-      
+      await this.applyBuildOptimizations();`);
+      `);
+      this.generateImprovementsReport();`);
+      `);
     } catch (error) {this.log(❌ Error during improvements: ${error.message}, 'ERROR'`);
     }
   }
@@ -107,7 +107,7 @@ export const performanceMonitor = {
     this.log('🔒 Applying Security Enhancements...');
     
     // Enhanced security configuration
-    const securityConfig = '
+    const securityConfig = `);
 // Enhanced security configuration
 export const securityConfig = {
   // Content Security Policy
@@ -115,7 +115,7 @@ export const securityConfig = {
   },
   
   // Security headers
-  headers: {X-Content-Type-Options': 'nosniff',X-Frame-Options': 'DENY',X-XSS-Protection': '1; mode=block',Referrer-Policy': 'strict-origin-when-cross-origin',Permissions-Policy': 'camera=(), microphone=(), geolocation=()'
+  headers: {X-Content-Type-Options': 'nosniff',X-Frame-Options': 'DENY',X-XSS-Protection': '1; mode=block',Referrer-Policy': 'strict-origin-when-cross-origin',Permissions-Policy': 'camera=(), microphone=(), geolocation=()`);
   },
   
   // Input validation
@@ -165,13 +165,13 @@ export const securityConfig = {
     fs.writeFileSync(path.join(this.projectRoot, 'tsconfig.json'), JSON.stringify(tsConfig, null, 2));
     this.improvementsApplied++;
     this.improvementsList.push('TypeScript strict mode configuration');
-    
-    // Add ESLint rules for better code quality
-    const eslintConfig = '
+    `);
+    // Add ESLint rules for better code quality`);
+    const eslintConfig = `);
 module.exports = {
   extends: ['eslint:recommended'', 'plugin:''react/recommended''', 'plugin:react-''hooks/recommended'''', 'plugin:@typescript-''eslint/recommended''', 'plugin:''prettier/recommended''''],
   plugins: ['react', '@typescript-eslint', 'prettier'],
-  rules: {''prettier/prettier''': 'error',''react/react-in-jsx-scope''': 'off',''react/prop-types''': 'off',@typescript-''eslint/no-unused-vars''': 'error',@typescript-''eslint/no-explicit-any''': 'warn',@typescript-''eslint/explicit-function-return-type''': 'warn',@typescript-''eslint/no-non-null-assertion''': 'warn',prefer-const': 'error',no-var': 'error',object-shorthand': 'error',prefer-template': 'error'
+  rules: {''prettier/prettier''': 'error',''react/react-in-jsx-scope''': 'off',''react/prop-types''': 'off',@typescript-''eslint/no-unused-vars''': 'error',@typescript-''eslint/no-explicit-any''': 'warn',@typescript-''eslint/explicit-function-return-type''': 'warn',@typescript-''eslint/no-non-null-assertion''': 'warn',prefer-const': 'error',no-var': 'error',object-shorthand': 'error',prefer-template': 'error`);
   }
 };;
     
@@ -194,8 +194,8 @@ interface LoadingSpinnerProps {
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
   size = 'medium', 
-  color = '#3b82f6',
-  text = 'Loading...'
+  color = '#3b82f6',`);
+  text = 'Loading...'`);
 }`) => {
   const sizeMap = {
     small: 'w-4 h-4',
@@ -458,8 +458,8 @@ module.exports = nextConfig;;
     
     this.log('📊 Improvements Report Generated');this.log(`✅ Total improvements applied: ${this.improvementsApplied}`);this.log(`📄 Report saved to: ${this.improvementsFile}`);
     
-    console.log(`'\n🎉 PROJECT IMPROVEMENTS COMPLETED!');console.log(`📊 Total improvements: ${this.improvementsApplied});
-    console.log(`'📋 Applied improvements:');
+    console.log(`\n🎉 PROJECT IMPROVEMENTS COMPLETED!`);console.log(`📊 Total improvements: ${this.improvementsApplied});`);
+    console.log(`📋 Applied improvements:`);
     this.improvementsList.forEach((improvement, index) => {console.log(   ${index + 1}. ${improvement}`);
     });
   }

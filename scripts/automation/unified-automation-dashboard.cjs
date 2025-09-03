@@ -39,10 +39,10 @@ class UnifiedAutomationDashboard {
     }
   }
 
-  async getPM2Status() {
-    try {
-      const output = execSync('pm2 jlist', { encoding: 'utf8' });
-      return JSON.parse(output);
+  async getPM2Status() {`);
+    try {`);
+      const output = execSync('pm2 jlist', { encoding: 'utf8' });`);
+      return JSON.parse(output);`);
     } catch (error) {this.log(Failed to get PM2 status: ${error.message}, 'ERROR'`);
       return [];
     }
