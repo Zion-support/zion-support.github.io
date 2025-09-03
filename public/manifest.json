@@ -67,7 +67,10 @@
       "src": "/screenshot-narrow.png",
       "sizes": "750x1334",
       "type": "image/png",
-      "form_factor": "narrow"      "short_name": "AI",
+      "form_factor": "narrow"
+    },
+    {
+      "short_name": "AI",
       "description": "Explore our AI services",
       "url": "/ai-services",
       "icons": [
