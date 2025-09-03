@@ -2,4 +2,5 @@ import dynamic from 'next/dynamic';
 const Navigation = dynamic(() => import('./Navigation'), {
   loading: () => <p>Loading...</p>,
 });
+
 export default Navigation;

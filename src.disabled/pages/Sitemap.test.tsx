@@ -1,5 +1,4 @@
 describe (
-  'Sitemap', () => {}' it ('renders without crashing
-  ', () => {} render (<Sitemap />) '; expect (screen.getByRole (
+  'Sitemap', () => {}' it('renders without crashing', () => {} render (<Sitemap />) ' expect (screen.getByRole (
   'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content
   ', () => {} render (<Sitemap />) ''

@@ -47,8 +47,12 @@ export default function Index() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
+<<<<<<< HEAD
               '@context': 'https://schema.org',
               '@type': 'Organization',
+=======
+              '@context': 'https://schema.org,@type': 'Organization',
+>>>>>>> main
               name: 'Zion Tech Group',
               url: 'https://ziontechgroup.com',
               logo: 'https://ziontechgroup.com/logo.png',
@@ -64,8 +68,12 @@ export default function Index() {
                 url: 'https://ziontechgroup.com/contact',
               },
               sameAs: [
+<<<<<<< HEAD
                 'https://linkedin.com/company/zion-tech-group',
                 'https://twitter.com/ziontechgroup',
+=======
+                'https://linkedin.com/company/zion-tech-group,https://twitter.com/ziontechgroup',
+>>>>>>> main
               ],
             }),
           }}

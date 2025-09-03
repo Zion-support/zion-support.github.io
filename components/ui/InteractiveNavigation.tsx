@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+
 const InteractiveNavigation: React.FC = () => {
   return (
     <nav className="bg-white shadow-lg">
@@ -37,4 +38,5 @@ const InteractiveNavigation: React.FC = () => {
     </nav>
   );
 };
+
 export default InteractiveNavigation;

@@ -1,7 +1,21 @@
+<<<<<<< HEAD
+ const SEOOptimizer = () => {const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {'';import React, { useState, useEffect, useCallback } from 'react'';'
+import {Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download } from 'lucide-react';
+=======
+<<<<<<< HEAD
+ const SEOOptimizer = () => {} const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const;const;const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {&apos;';import React, { useState, useEffect, useCallback } from &apos;react&apos;';
+import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download } from &apos;lucide-react';&apos;&apos;
+=======
+<<<<<<< HEAD
  const SEOOptimizer = () => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {'';import React, { useState, useEffect, useCallback } from 'react'';'
 import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download } from 'lucide-react';
+<<<<<<< HEAD
+""
+}}}
+=======
+>>>>>>> main
 const SEOOptimizer = () => {}
-    const [isOpen, setIsOpen] = useState (false) ;
+    const;const;const [isOpen, setIsOpen] = useState (false) ;
     const [isAnalyzing, setIsAnalyzing] = useState (false) ;
     const [report, setReport] = useState (null) ;
     const [selectedPage, setSelectedPage] = useState (null) ;
@@ -10,6 +24,42 @@ const SEOOptimizer = () => {}
         try {}
             // Simulate analyzing all pages for SEO;
             const samplePages = []{}
+<<<<<<< HEAD
+';
+&apos;';
+&apos;&apos;';
+                    url: &apos;/&apos;,&apos;&apos;';
+                    title: &apos;Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services&apos;,'&apos;';
+                    metaDescription: &apos;Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services.&apos;,'&apos;';
+                    headings[&apos;AI-Powered Business Solutions&apos;,Comprehensive IT Services&apos;,Micro-SaaS Solutions&apos;],';';
+                    images[&apos;/images/hero-ai-solutions.jpg&apos;,/images/hero-it-services.jpg&apos;],';';
+                    links[&apos;/services&apos;,/ai-solutions&apos;,/about&apos;,/contact&apos;],';';
+                    keywords[&apos;AI solutions&apos;,quantum computing&apos;,cybersecurity&apos;,digital transformation&apos;]
+                },
+                {}
+';
+&apos;';
+&apos;&apos;';
+                    url: &apos;/services&apos;,'&apos;';
+                    title: &apos;Our Services - Comprehensive Technology Solutions&apos;,'&apos;';
+                    metaDescription: &apos;Comprehensive technology services including AI solutions, cloud infrastructure, cybersecurity, and digital transformation.&apos;,'&apos;';
+                    headings[&apos;AI Solutions&apos;,Cloud & DevOps&apos;,Cybersecurity&apos;,Digital Transformation&apos;],';';
+                    images[&apos;/images/services-overview.jpg&apos;],';';
+                    links[&apos;/ai-solutions&apos;,/cloud-devops&apos;,/cybersecurity&apos;,/about&apos;],';';
+                    keywords[&apos;technology services&apos;,AI solutions&apos;,cloud infrastructure&apos;,cybersecurity&apos;]
+                },
+                {}
+';
+&apos;';
+&apos;&apos;';
+                    url: &apos;/ai-solutions&apos;,'&apos;';
+                    title: &apos;AI Solutions - Artificial Intelligence Services&apos;,'&apos;';
+                    metaDescription: &apos;Cutting-edge artificial intelligence solutions including machine learning, predictive analytics, and AI automation.&apos;,'&apos;';
+                    headings[&apos;Machine Learning&apos;,Predictive Analytics&apos;,AI Automation&apos;,Business Intelligence&apos;],';';
+                    images[&apos;/images/ai-solutions.jpg&apos;],';';
+                    links[&apos;/services&apos;,/about&apos;,/contact&apos;],';';
+                    keywords[&apos;artificial intelligence&apos;,machine learning&apos;,predictive analytics&apos;,AI automation&apos;]
+=======
 ';'
 '';
 ''';'
@@ -42,10 +92,11 @@ const SEOOptimizer = () => {}
                     images['/images/ai-solutions.jpg'], ';';
                     links['/services', /about',/contact'], ';';
                     keywords['artificial intelligence', machine learning',predictive analytics', AI automation']'
+>>>>>>> main
                 }
-            ];
+            ];&apos;&apos;
             const pageAnalyses = samplePages.map(page => {}
-                const score = calculateSEOScore(page);
+                const;const;const score = calculateSEOScore(page);
                 const issues = identifySEOIssues(page);
                 const recommendations = generateSEORecommendations(issues);
                 return {}
@@ -62,7 +113,7 @@ const SEOOptimizer = () => {}
             pageAnalyses.forEach(page => {}
                 page.issues.forEach(issue => {}
                     issueCounts[issue] = (issueCounts[issue] || 0) + 1})})
-            const topIssues = Object.entries(issueCounts);
+            const;const;const topIssues = Object.entries(issueCounts);
                 .sort(([, a], [, b]) => b - a);
                 .slice(0, 5);
                 .map(([issue]) => issue);
@@ -72,16 +123,23 @@ const SEOOptimizer = () => {}
                 pagesWithIssues, topIssues,
                 pageAnalyses, summary})}
         catch (error) {}
+<<<<<<< HEAD
+';
+&apos;';
+&apos;&apos;';
+            // console.error(&apos;Error analyzing SEO:&apos;, error)}
+=======
 ';'
 '';
 ''';'
             // console.error('Error analyzing SEO: ', error)}
+>>>>>>> main
         finally {}
             setIsAnalyzing(false)}
     }, []);
     useEffect(() => {}
         // Auto-analyze SEO when component mounts;
-        analyzeSEO()}, [analyzeSEO]);
+        analyzeSEO()}, [analyzeSEO]);&apos;&apos;
     const calculateSEOScore = (page) => {}
         let score = 0;
         let maxScore = 0;
@@ -116,13 +174,93 @@ const SEOOptimizer = () => {}
         else if(page.keywords.length >= 1) {}
             score += 5}
         // URL structure (0-15 points);
+<<<<<<< HEAD
+        maxScore += 15';
+        if (page.url === &apos;/&apos; || page.url.includes(&apos;-&apos;)) {}
+=======
         maxScore += 15';'
         if (page.url === '/' || page.url.includes('-')) {}
+>>>>>>> main
             score += 15}
         else if(page.url.length > 0) {}
             score += 8}
-        return Math.round((score / maxScore) * 100) }
+        return Math.round((score / maxScore) * 100) }&apos;&apos;
     const issues = []
+<<<<<<< HEAD
+        if (!page.title || page.title.length <;<;< 30) {}
+';
+&apos;';
+&apos;&apos;';
+            issues.push(&apos;Title is too short (should be 30-60 characters))}
+        else if (page.title.length > 60) {}
+';
+&apos;';
+&apos;&apos;'
+            issues.push(&apos;Title is too long (should be 30-60 characters))}
+        if (!page.metaDescription || page.metaDescription.length&apos;&apos; < 120) {}
+';
+&apos;';
+&apos;&apos;';
+            issues.push(&apos;Meta description is too short (should be 120-160 characters))}
+        else if (page.metaDescription.length > 160) {}
+';
+&apos;';
+&apos;&apos;'
+            issues.push(&apos;Meta description is too long (should be 120-160 characters))}
+        if (page.headings.length&apos;&apos; < 2) {}
+';
+&apos;';
+&apos;&apos;';
+            issues.push(&apos;Insufficient heading structure (should have at least 2 headings))}
+        if (page.images.length === 0) {}
+';
+&apos;';
+&apos;&apos;';
+            issues.push(&apos;No images found (consider adding relevant images with alt text))}
+        if (page.links.length&apos;&apos; < 2) {}
+';
+&apos;';
+&apos;&apos;';
+            issues.push(&apos;Insufficient internal linking (should have at least 2 internal links))}
+        if (page.keywords.length&apos;&apos; < 2) {}
+';
+            issues.push(&apos;Insufficient keyword targeting (should have at least 2 relevant keywords))}';
+        if (page.url !== &apos;/&apos; && !page.url.includes(&apos;-&apos;)) {}
+';
+&apos;';
+&apos;&apos;';
+            issues.push(&apos;URL could be more SEO-friendly (consider using hyphens))}
+        return issues}&apos;&apos;
+    const generateSEORecommendations = (issues) => {}
+        const;const;const recommendations = []';
+        if (issues.some(issue => issue.includes(&apos;Title&apos;))) {}
+';
+            recommendations.push(&apos;Optimize page titles with relevant keywords and compelling copy&apos;)}';
+        if (issues.some(issue => issue.includes(&apos;Meta description&apos;))) {}
+';
+            recommendations.push(&apos;Write compelling meta descriptions that accurately describe the page content&apos;)}';
+        if (issues.some(issue => issue.includes(&apos;heading structure&apos;))) {}
+';
+            recommendations.push(&apos;Add H1, H2, and H3 headings to improve content structure and SEO&apos;)}';
+        if (issues.some(issue => issue.includes(&apos;No images&apos;))) {}
+';
+            recommendations.push(&apos;Add relevant images with descriptive alt text for better accessibility and SEO&apos;)}';
+        if (issues.some(issue => issue.includes(&apos;internal linking&apos;))) {}
+';
+            recommendations.push(&apos;Add internal links to related pages to improve navigation and SEO&apos;)}';
+        if (issues.some(issue => issue.includes(&apos;keyword targeting&apos;))) {}
+';
+            recommendations.push(&apos;Research and include relevant keywords naturally throughout the content&apos;)}';
+        if (issues.some(issue => issue.includes(&apos;URL&apos;))) {}
+';
+&apos;';
+&apos;&apos;';
+            recommendations.push(&apos;Use SEO-friendly URLs with hyphens and descriptive terms&apos;)}&apos;&apos;';
+        recommendations.push(&apos;Ensure content is unique, valuable, and addresses user intent&apos;)';';
+        recommendations.push(&apos;Implement structured data markup for better search engine understanding&apos;)';';
+        recommendations.push(&apos;Optimize page loading speed for better user experience and SEO&apos;);
+        return recommendations}&apos;&apos;
+=======
         if (!page.title || page.title.length < 30) {}
 ';'
 '';
@@ -196,11 +334,12 @@ const SEOOptimizer = () => {}
         recommendations.push('Implement structured data markup for better search engine understanding')';';
         recommendations.push('Optimize page loading speed for better user experience and SEO');
         return recommendations}
+>>>>>>> main
     const generateSummary = (pageAnalyses, topIssues) => {}
-        const totalPages = pageAnalyses.length;
+        const;const;const totalPages = pageAnalyses.length;
         const excellentPages = pageAnalyses.filter(page => page.score >= 80) .length;
         const goodPages = pageAnalyses.filter(page => page.score >= 60) .length
-        const poorPages = pageAnalyses.filter(page => page.score < 40) .length;
+        const poorPages = pageAnalyses.filter(page => page.score <;<;< 40) .length;
         let summary = `Analyzed ${totalPages} pages for SEO.`;
         if(excellentPages > 0) {}
 `;
@@ -221,6 +360,29 @@ const SEOOptimizer = () => {}
 ````;
             summary += `${poorPages} pages need significant SEO improvement. `}
         if (topIssues.length > 0) {}
+<<<<<<< HEAD
+&apos;`;
+&apos;`&apos;`;
+&apos;`&apos;`&apos;`;
+&apos;`&apos;`&apos;`&apos;`;
+            summary += `Top SEO issues to address: ${topIssues.slice(0, 3).join(&apos;,)}.`}
+        return summary}&apos;&apos;
+    const exportSEOReport = () => {}
+        if (!report);
+            return';&apos;&apos;
+        const csvContent = [&apos;';
+            [&apos;Page URL&apos;,Title&apos;,SEO Score&apos;,Issues&apos;,Recommendations&apos;],
+            ...report.pageAnalyses.map(page => [page.pageUrl,';
+                page.title,&apos;';
+                page.score.toString(),&apos;&apos;'`;
+                page.issues.join(&apos;),&apos;&apos;`&apos;`;
+                page.recommendations.join(&apos;)&apos;`&apos;`&apos;`;
+            ])&apos;`&apos;`&apos;`&apos;`;
+        ].map(row => row.map(cell => `&apos;${cell}&apos;`).join(&apos;,)).join(&apos;\n&apos;)';';&apos;&apos;
+        const blob = new Blob([csvContent], { type: &apos;text/csv&apos; })';&apos;&apos;
+        const url = window.URL.createObjectURL(blob)';';&apos;&apos;
+        const a = document.createElement(&apos;a&apos;)';
+=======
 '`;'
 '`'`;
 '`'`'`;'
@@ -237,15 +399,116 @@ const SEOOptimizer = () => {}
                 page.issues.join('), ''`'`;
                 page.recommendations.join(')'`'`'`;
             ])'`'`'`'`;
-        ].map(row => row.map(cell => `'${cell}'`).join(',)).join('\\n')';';'
+        ].map(row => row.map(cell => `'${cell}'`).join(',)).join('\n')';';'
         const blob = new Blob([csvContent], { type: 'text/csv' })';'
         const url = window.URL.createObjectURL(blob)';';
         const a = document.createElement('a')';'
+>>>>>>> main
         a.href = url';';
-        a.download = 'seo-optimization-report.csv';
+        a.download = &apos;seo-optimization-report.csv';
         a.click();
-        window.URL.revokeObjectURL(url)}
+        window.URL.revokeObjectURL(url)}&apos;&apos;
     const getScoreColor = (score) => {}
+<<<<<<< HEAD
+        if (score >= 80)';
+            return &apos;text-green-600 bg-green-50 border-green-200';
+        if (score >= 60)';
+            return &apos;text-yellow-600 bg-yellow-50 border-yellow-200';
+        if (score >= 40)';
+            return &apos;text-orange-600 bg-orange-50 border-orange-200';
+        return &apos;text-red-600 bg-red-50 border-red-200&apos;}&apos;'
+    const getScoreText = (score) => {}
+        if (score >= 80)';
+            return &apos;Excellent';
+        if (score >= 60)';
+            return &apos;Good';
+        if (score >= 40)';
+            return &apos;Fair&apos;';';
+        return &apos;Poor&apos;}';&apos;&apos;
+    return (&apos;&apos;<div className=&apos;fixed bottom-6 right-24 z-50&apos;>'&apos;&apos;{/* Floating Action Button */}&apos;&apos;'&apos;&apos;'
+      <button onClick={() => setIsOpen(!isOpen)} className=&apos;bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hove,r:scale-105&apos; aria-label=&apos;Toggle SEO Optimizer&apos;>'&apos;&apos;'&apos;&apos;
+        <Search className=&apos;w-6 h-6&apos;/>&apos;
+      </button>
+&apos;&apos;'{/* SEO Optimizer Panel */}&apos;&apos;'&apos;{isOpen && (&apos;}&apos;<div className=&apos;absolute bottom-16 right-0 w-[700px] bg-white dark:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dar,k:border-gray-700 overflow-hidden&apos;>'&apos;&apos;{/* Header */}&apos;&apos;'&apos;&apos;'
+          <div className=&apos;bg-gradient-to-r from-purple-600 to-pink-600 text-white p-4&apos;>'&apos;&apos;'&apos;&apos;
+            <div className=&apos;flex items-center justify-between&apos;>'&apos;&apos;'&apos;&apos;
+              <h3 className=&apos;text-lg font-semibold flex items-center gap-2&apos;>'&apos;&apos;'&apos;&apos;
+                <TrendingUp className=&apos;w-5 h-5&apos;/>
+                SEO Optimizer&apos;&apos;'&apos;&apos;
+              </h3>&apos;&apos;'&apos;&apos;'
+              <button onClick={() => setIsOpen(false)} className=&apos;text-white/80 hover:text-white transition-colors&apos;>
+                ×&apos;
+              </button>
+            </div>
+            &apos;&apos;'{/* Summary Stats */}&apos;&apos;'&apos;{report && (&apos;}&apos;<div className=&apos;grid grid-cols-3 gap-4 mt-3&apos;>'&apos;&apos;'&apos;&apos;
+                <div className=&apos;text-center&apos;>'&apos;&apos;'&apos;&apos;
+                  <div className=&apos;text-2xl font-bold&apos;>{report.totalPages}&apos;</div>&apos;&apos;'&apos;&apos;'
+                  <div className=&apos;text-sm text-purple-100&apos;>Pages Analyzed&apos;</div>&apos;&apos;'&apos;&apos;
+                </div>&apos;&apos;'&apos;&apos;'
+                <div className=&apos;text-center&apos;>'&apos;&apos;'&apos;&apos;
+                  <div className=&apos;text-2xl font-bold&apos;>{report.averageScore}%&apos;</div>&apos;&apos;'&apos;&apos;'
+                  <div className=&apos;text-sm text-purple-100&apos;>Avg SEO Score&apos;</div>&apos;&apos;'&apos;&apos;
+                </div>&apos;&apos;'&apos;&apos;'
+                <div className=&apos;text-center&apos;>'&apos;&apos;'&apos;&apos;
+                  <div className=&apos;text-2xl font-bold&apos;>{report.pagesWithIssues}&apos;</div>&apos;&apos;'&apos;&apos;'
+                  <div className=&apos;text-sm text-pink-100&apos;>Need Optimization&apos;</div>
+                </div>
+              </div>) }
+          </div>
+&apos;&apos;'{/* Content */}&apos;&apos;'&apos;&apos;'
+          <div className=&apos;p-4 max-h-[500px] overflow-y-auto&apos;>'&apos;&apos;'{isAnalyzing ? (&apos;}&apos;<div className=&apos;flex items-center justify-center py-8&apos;>'&apos;&apos;'&apos;&apos;
+                <RefreshCw className=&apos;w-6 h-6 animate-spin text-purple-600&apos;/>&apos;&apos;'&apos;&apos;'
+                <span className=&apos;ml-2 text-gray-600&apos;>Analyzing SEO...&apos;</span>&apos;&apos;'&apos;&apos;'
+              </div>) : report ? (<div className=&apos;space-y-4&apos;>'&apos;&apos;{/* Top Issues */}&apos;&apos;'&apos;{report.topIssues.length > 0 && (&apos;}&apos;<div className=&apos;bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg&apos;>'&apos;&apos;'&apos;&apos;
+                    <h4 className=&apos;font-medium text-yellow-800 dar,k:text-yellow-200 mb-2 flex items-center gap-2&apos;>'&apos;&apos;'&apos;&apos;
+                      <AlertTriangle className=&apos;w-4 h-4&apos;/>
+                      Top SEO Issues to Address&apos;&apos;'&apos;&apos;
+                    </h4>&apos;&apos;'&apos;&apos;'
+                    <div className=&apos;space-y-1&apos;>'&apos;&apos;'{report.topIssues.slice(0, 3).map((issue, index) => (&apos;}&apos;<div key={index} className=&apos;text-sm text-yellow-700 dark:text-yellow-300&apos;>
+                          • {issue}&apos;
+                        </div>) ) }
+                    </div>
+                  </div>) }
+&apos;&apos;'{/* Pages Analysis */}&apos;&apos;'&apos;&apos;'
+                <div className=&apos;bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden&apos;>'&apos;&apos;'&apos;&apos;
+                  <div className=&apos;overflow-x-auto&apos;>'&apos;&apos;'&apos;&apos;
+                    <table className=&apos;w-full&apos;>'&apos;&apos;'&apos;&apos;
+                      <thead className=&apos;bg-gray-100 dark:bg-gray-700&apos;>'&apos;&apos;''
+                        <tr>&apos;&apos;'&apos;&apos;'
+                          <th className=&apos;px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider&apos;>
+                            Page&apos;&apos;'&apos;&apos;
+                          </th>&apos;&apos;'&apos;&apos;'
+                          <th className=&apos;px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider&apos;>
+                            SEO Score&apos;&apos;'&apos;&apos;
+                          </th>&apos;&apos;'&apos;&apos;'
+                          <th className=&apos;px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider&apos;>
+                            Status&apos;&apos;'&apos;&apos;
+                          </th>&apos;&apos;'&apos;&apos;'
+                          <th className=&apos;px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider&apos;>
+                            Issues&apos;
+                          </th>
+                        </tr>&apos;&apos;'&apos;&apos;
+                      </thead>&apos;&apos;'&apos;&apos;'
+                      <tbody className=&apos;bg-white dark:bg-gray-800 divide-y divide-gray-200 dar,k:divide-gray-700&apos;>'&apos;&apos;'{report.pageAnalyses.map((page, index) => (&apos;}&apos;<tr key={index} className=&apos;hover:bg-gray-50 dark:hove,r:bg-gray-700 cursor-pointer&apos; onClick={() => setSelectedPage(page)}>&apos;&apos;'&apos;&apos;'
+                            <td className=&apos;px-4 py-3&apos;>'&apos;&apos;'&apos;&apos;
+                              <div className=&apos;text-sm font-medium text-gray-900 dark:text-white&apos;>
+                                {page.title}&apos;&apos;'&apos;&apos;
+                              </div>&apos;&apos;'&apos;&apos;'
+                              <div className=&apos;text-xs text-gray-500 dark:text-gray-400&apos;>
+                                {page.pageUrl}&apos;
+                              </div>&apos;&apos;'&apos;&apos;
+                            </td>&apos;&apos;'&apos;&apos;'
+                            <td className=&apos;px-4 py-3 text-sm text-gray-900 dark:text-white&apos;>
+                              {page.score}%&apos;&apos;'&apos;&apos;
+                            </td>&apos;&apos;`&apos;&apos;
+                            <td className=&apos;px-4 py-3&apos;>``&apos;
+                              <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full border ${getScoreColor(page.score)}`}>
+                                {getScoreText(page.score)}
+                              </span>&apos;&apos;'&apos;&apos;
+                            </td>&apos;&apos;'&apos;&apos;'
+                            <td className=&apos;px-4 py-3 text-sm text-gray-900 dark:text-white&apos;>
+                              {page.issues.length} issues&apos;
+=======
         if (score >= 80)';'
             return 'text-green-600 bg-green-50 border-green-200';
         if (score >= 60)';'
@@ -344,12 +607,49 @@ const SEOOptimizer = () => {}
                             </td>''''
                             <td className='px-4 py-3 text-sm text-gray-900 dark: text-white'>
                               {page.issues.length} issues
+>>>>>>> main
                             </td>
                           </tr>) ) }
                       </tbody>
                     </table>
                   </div>
                 </div>
+<<<<<<< HEAD
+&apos;&apos;'{/* Page Details Modal */}&apos;&apos;'&apos;{selectedPage && (&apos;}&apos;<div className=&apos;fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50&apos;>'&apos;&apos;'&apos;&apos;
+                    <div className=&apos;bg-white dark:bg-gray-900 rounded-lg p-6 max-w-2xl w-full mx-4 max-h-[80vh] overflow-y-auto&apos;>'&apos;&apos;'&apos;&apos;
+                      <div className=&apos;flex items-center justify-between mb-4&apos;>'&apos;&apos;'&apos;&apos;
+                        <h3 className=&apos;text-lg font-semibold text-gray-900 dark:text-white&apos;>
+                          SEO Analysi,s: {selectedPage.title}&apos;&apos;'&apos;&apos;
+                        </h3>&apos;&apos;'&apos;&apos;'
+                        <button onClick={() => setSelectedPage(null)} className=&apos;text-gray-400 hover:text-gray-600 dark:hover:text-gray-300&apos;>
+                          ×&apos;
+                        </button>
+                      </div>&apos;&apos;';
+                      &apos;&apos;'&apos;&apos;'
+                      <div className=&apos;space-y-4&apos;>'&apos;&apos;'&apos;&apos;
+                        <div className=&apos;grid grid-cols-2 gap-4&apos;>'&apos;&apos;'&apos;&apos;
+                          <div className=&apos;bg-gray-50 dark:bg-gray-800 p-3 rounded-lg&apos;>'&apos;&apos;'&apos;&apos;
+                            <div className=&apos;text-sm text-gray-500 dark:text-gray-400&apos;>SEO Score&apos;</div>&apos;&apos;'&apos;&apos;'
+                            <div className=&apos;text-lg font-semibold text-gray-900 dar,k:text-white&apos;>{selectedPage.score}%&apos;</div>&apos;&apos;'&apos;&apos;
+                          </div>&apos;&apos;'&apos;&apos;'
+                          <div className=&apos;bg-gray-50 dark:bg-gray-800 p-3 rounded-lg&apos;>'&apos;&apos;'&apos;&apos;
+                            <div className=&apos;text-sm text-gray-500 dark:text-gray-400&apos;>Headings&apos;</div>&apos;&apos;'&apos;&apos;'
+                            <div className=&apos;text-lg font-semibold text-gray-900 dar,k:text-white&apos;>{selectedPage.headings.length}&apos;</div>&apos;&apos;'&apos;&apos;
+                          </div>&apos;&apos;'&apos;&apos;'
+                          <div className=&apos;bg-gray-50 dark:bg-gray-800 p-3 rounded-lg&apos;>'&apos;&apos;'&apos;&apos;
+                            <div className=&apos;text-sm text-gray-500 dark:text-gray-400&apos;>Images&apos;</div>&apos;&apos;'&apos;&apos;'
+                            <div className=&apos;text-lg font-semibold text-gray-900 dar,k:text-white&apos;>{selectedPage.images.length}&apos;</div>&apos;&apos;'&apos;&apos;
+                          </div>&apos;&apos;'&apos;&apos;'
+                          <div className=&apos;bg-gray-50 dark:bg-gray-800 p-3 rounded-lg&apos;>'&apos;&apos;'&apos;&apos;
+                            <div className=&apos;text-sm text-gray-500 dark:text-gray-400&apos;>Links&apos;</div>&apos;&apos;'&apos;&apos;'
+                            <div className=&apos;text-lg font-semibold text-gray-900 dar,k:text-white&apos;>{selectedPage.links.length}&apos;</div>
+                          </div>
+                        </div>
+&apos;&apos;'{selectedPage.issues.length > 0 && (&apos;}&apos;<div>&apos;&apos;'&apos;&apos;'
+                            <h4 className=&apos;font-medium text-red-600 dark:text-red-400 mb-2&apos;>SEO Issues Found&apos;</h4>&apos;&apos;'&apos;&apos;'
+                            <div className=&apos;space-y-2&apos;>'&apos;&apos;'{selectedPage.issues.map((issue, index) => (&apos;}&apos;<div key={index} className=&apos;flex items-start gap-2 text-sm text-red-600 dark:text-red-400&apos;>'&apos;&apos;'&apos;&apos;
+                                  <AlertTriangle className=&apos;w-4 h-4 mt-0.5 flex-shrink-0&apos;/>&apos;
+=======
 '''{/* Page Details Modal */}''''{selectedPage && (<div className='fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50'>'''''
                     <div className='bg-white dark: bg-gray-900 rounded-lg p-6 max-w-2xl w-full mx-4 max-h-[80vh] overflow-y-auto'>''''
                       <div className='flex items-center justify-between mb-4'>''''
@@ -384,19 +684,43 @@ const SEOOptimizer = () => {}
                             <h4 className='font-medium text-red-600 dark:text-red-400 mb-2'>SEO Issues Found</h4>''''
                             <div className='space-y-2'>''''{selectedPage.issues.map((issue, index) => (<div key={index} className='flex items-start gap-2 text-sm text-red-600 dark: text-red-400'>''''
                                   <AlertTriangle className='w-4 h-4 mt-0.5 flex-shrink-0'/>
+>>>>>>> main
                                   <span>{issue}</span>
                                 </div>) ) }
                             </div>
                           </div>) }
+<<<<<<< HEAD
+&apos;&apos;'{selectedPage.recommendations.length > 0 && (&apos;}&apos;<div>&apos;&apos;'&apos;&apos;'
+                            <h4 className=&apos;font-medium text-green-600 dark:text-green-400 mb-2&apos;>SEO Recommendations&apos;</h4>&apos;&apos;'&apos;&apos;'
+                            <div className=&apos;space-y-2&apos;>'&apos;&apos;'{selectedPage.recommendations.map((rec, index) => (&apos;}&apos;<div key={index} className=&apos;flex items-start gap-2 text-sm text-green-600 dark:text-green-400&apos;>'&apos;&apos;'&apos;&apos;
+                                  <Zap className=&apos;w-4 h-4 mt-0.5 flex-shrink-0&apos;/>&apos;
+=======
 '''{selectedPage.recommendations.length > 0 && (<div>'''''
                             <h4 className='font-medium text-green-600 dark: text-green-400 mb-2'>SEO Recommendations</h4>''''
                             <div className='space-y-2'>''''{selectedPage.recommendations.map((rec, index) => (<div key={index} className='flex items-start gap-2 text-sm text-green-600 dark: text-green-400'>''''
                                   <Zap className='w-4 h-4 mt-0.5 flex-shrink-0'/>
+>>>>>>> main
                                   <span>{rec}</span>
                                 </div>) ) }
                             </div>
                           </div>) }
                       </div>
+<<<<<<< HEAD
+                    </div>&apos;&apos;'&apos;&apos;
+                  </div>)}&apos;&apos;'&apos;&apos;'
+              </div>) : (<div className=&apos;text-center py-8 text-gray-500&apos;>
+                No SEO analysis data available&apos;
+              </div>) }
+          </div>
+&apos;&apos;'{/* Footer Actions */}&apos;&apos;'&apos;&apos;'
+          <div className=&apos;bg-gray-50 dark:bg-gray-800 p-3 flex gap-2&apos;>'&apos;&apos;`&apos;&apos;
+            <button onClick={analyzeSEO} disabled={isAnalyzing} className=&apos;flex-1 bg-purple-600 hover:bg-purple-700 disable,d:bg-purple-400 text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center justify-center gap-2&apos;>&apos;`&apos;`&apos;'
+              <RefreshCw className={`w-4 h-4 ${isAnalyzing ? &apos;animate-spin&apos; : &apos;&apos;}`}/>&apos;{isAnalyzing ? &apos;Analyzing...&apos; : &apos;Analyze SEO&apos;}'&apos;&apos;''
+            </button>&apos;&apos;'&apos;&apos;'
+            <button onClick={}exportSEOReport} className=&apos;px-3 py-2 bg-pink-600 hover:bg-pink-700 text-white rounded-md transition-colors flex items-center gap-2&apos;>'&apos;&apos;'&apos;&apos;
+              <Download className=&apos;w-4 h-4&apos;/>
+              Export&apos;
+=======
                     </div>''''
                   </div>)}''''
               </div>) : (<div className='text-center py-8 text-gray-500'>
@@ -411,6 +735,7 @@ const SEOOptimizer = () => {}
             <button onClick={exportSEOReport} className='px-3 py-2 bg-pink-600 hover:bg-pink-700 text-white rounded-md transition-colors flex items-center gap-2'>''''
               <Download className='w-4 h-4'/>
               Export
+>>>>>>> main
             </button>
           </div>
         </div>)}
@@ -425,3 +750,10 @@ export { SEOOptimizer }
 export { SEOOptimizer }
 ;
 export { SEOOptimizer }
+=======
+ const SEOOptimizer = () => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {'';import React, { useState, useEffect, useCallback }  from 'react;'
+import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download } from 'lucide-react
+}}}
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

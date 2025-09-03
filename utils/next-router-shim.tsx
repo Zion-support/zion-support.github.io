@@ -10,10 +10,9 @@ export const Link: React.FC<LinkProps> = ({ to, href, children, className, onCli
   const resolved = to || href || '/'
   return (
     <NextLink href={resolved} legacyBehavior>
-      <a className={className} onClick={onClick}>{children as any}</a>
+      <a className={className} onClick={onClick}>{children}</a>
     </NextLink>
   )}
-;
 export function useLocation() {
   const router = useRouter();
   const asPath = router.asPath || router.pathname || '/';
@@ -21,10 +20,22 @@ export function useLocation() {
   const hashIndex = asPath.indexOf('#');
   const hash = hashIndex >= 0 ? asPath.substring(hashIndex) : ''
   return {
+<<<<<<< HEAD
     pathname: path, search: query ? `?${query}` : '',
     hash, state: undefined as unknown,
+=======
+<<<<<<< HEAD
+    pathname: path, search: query ? `?${query}` : '',
+    hash, state: undefined as unknown,
+=======
+    pathname: path, 
+    search: query ? `?${query}` : '',
+    hash, 
+    state: undefined as unknown,
+>>>>>>> main
+>>>>>>> main
     key: 'next'
-  } as any}
+  }}
 export const BrowserRouter: React.FC<React.PropsWithChildren<{}>> = ({ children }) => <>{children}</>
 export const MemoryRouter = BrowserRouter;
 export const HashRouter = BrowserRouter;
@@ -32,4 +43,4 @@ export const HashRouter = BrowserRouter;
 export const useHistory = () => ({ push: (url: string) => (window.location.href = url) })
 export const useParams = () => ({})
 export const NavLink = Link;
-export default {} as any
+export default {} as Record<string, unknown>

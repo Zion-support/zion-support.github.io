@@ -1,22 +1,53 @@
-import React, { useState, useEffect } from 'react';
-import { BarChart3, TrendingUp, Activity, Eye, Clock, Target, RefreshCw } from 'lucide-react';
+<<<<<<< HEAD
+import React, {useState, useEffect } from 'react';"
+import {BarChart3, TrendingUp, Activity, Eye, Clock, Target, RefreshCw } from 'lucide-react';
+export const AnalyticsDashboard = ({className='', showRealTime = true, refreshInterval = 5000 }) => {
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';"
+export const AnalyticsDashboard = memo(({ className = '', showRealTime = true, refreshInterval = 5000 }) => {
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect } from &apos;react';
+import { BarChart3, TrendingUp, Activity, Eye, Clock, Target, RefreshCw } from &apos;lucide-react';&apos;&apos;
+
+export const AnalyticsDashboard = ({ className = &apos;&apos;, showRealTime = true, refreshInterval = 5000 }) => {&apos;}&apos;
+    const { isTracking, currentSession, performanceMetrics, events, getAnalyticsSummary, trackEvent, trackConversion } = useAnalytics({
+        enableTracking: true,
+        enablePerformanceTracking: true,
+        enableUserBehaviorTracking: true,
+        enableHeatmapTracking: false})
+    const;const;const [isExpanded, setIsExpanded] = useState(false);
+    const [selectedTimeRange, setSelectedTimeRange] = useState(&apos;24h&apos;);&apos;
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';""
+import { BarChart3, TrendingUp, Activity, Eye, Clock, Target, RefreshCw } from 'lucide-react';""
 export const AnalyticsDashboard = ({ className = '', showRealTime = true, refreshInterval = 5000 }) => {
+""
+}
+=======
+import React, { useState, useEffect } from 'react
+import { BarChart3, TrendingUp, Activity, Eye, Clock, Target, RefreshCw } from 'lucide-react
+export const AnalyticsDashboard = ({ className = '', showRealTime = true, refreshInterval = 5000 }) => {
+<<<<<<< HEAD
     const { isTracking, currentSession, performanceMetrics, events, getAnalyticsSummary, trackEvent, trackConversion } = useAnalytics({
         enableTracking: true, enablePerformanceTracking: true,
         enableUserBehaviorTracking: true, enableHeatmapTracking: false})
     const [isExpanded, setIsExpanded] = useState(false);
     const [selectedTimeRange, setSelectedTimeRange] = useState('24h');
+>>>>>>> main
     const [analyticsSummary, setAnalyticsSummary] = useState(null);
     // Auto-refresh analytics data;
     useEffect(() => {
         if (!showRealTime);
-            return;
+            return;}
         const interval = setInterval(() => {
             updateAnalyticsSummary()}, refreshInterval);
         return () => clearInterval(interval)}, [showRealTime, refreshInterval]);
     // Update analytics summary;
-    const updateAnalyticsSummary = () => {
-        const summary = getAnalyticsSummary();
+    const updateAnalyticsSummary = () => {}
+        const;const;const summary = getAnalyticsSummary();
         if (summary) {
             setAnalyticsSummary(summary)}
     }
@@ -25,11 +56,11 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
         updateAnalyticsSummary()}, [events, currentSession]);
     // Track dashboard interactions;
     const handleDashboardInteraction = (action, metadata) => {
-        trackEvent('dashboard', action, 'dashboard_interaction', null, metadata)}
-    // Track conversion goal;
+        trackEvent(&apos;dashboard&apos;, action, &apos;dashboard_interaction&apos;, null, metadata)}
+    // Track conversion goal;&apos;
     const handleTrackConversion = () => {
-        trackConversion('dashboard_engagement', 1, { timeRange: selectedTimeRange })}
-    // Get events by category for chart;
+        trackConversion(&apos;dashboard_engagement&apos;, 1, { timeRange: selectedTimeRange })}
+    // Get events by category for chart;&apos;
     const getEventsByCategory = () => {
         if (!analyticsSummary?.eventsByCategory);
             return [];
@@ -56,7 +87,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
         return Math.max(0, score)}
     // Format duration
     const formatDuration = (seconds) => {
-        if (seconds < 60);
+        if (seconds} <;<;< 60);
             return `${seconds}s`;
         const minutes = Math.floor(seconds / 60);
         const remainingSeconds = seconds % 60;
@@ -68,6 +99,23 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
         if (num >= 1000);
             return `${(num / 1000).toFixed(1)}K`
         return num.toString()}
+<<<<<<< HEAD
+    return (<div className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dar,k:border-gray-700 overflow-hidden ${className}`}>      {/* Header */}
+      <div className=&apos;bg-gradient-to-r from-purple-500 to-pink-500 p-4 text-white&apos;>'&apos;&apos;'&apos;&apos;
+        <div className=&apos;flex items-center justify-between&apos;>'&apos;&apos;'&apos;&apos;
+          <h3 className=&apos;text-lg font-semibold flex items-center gap-2&apos;>'&apos;&apos;'&apos;&apos;
+            <BarChart3 className=&apos;w-5 h-5&apos; />
+            Analytics Dashboard&apos;&apos;'&apos;&apos;
+          </h3>&apos;&apos;'&apos;&apos;'
+          <div className=&apos;flex items-center gap-2&apos;>
+            {/* Tracking Status */}&apos;`&apos;'
+            <div&apos;`&apos;`;
+              className={`flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium ${isTracking ? &apos;bg-green-500/20 text-green-100&apos; : &apos;bg-red-500/20 text-red-100&apos;}`}
+            >&apos;`&apos;'
+              <div&apos;`&apos;`;
+                className={`w-2 h-2 rounded-full ${isTracking ? &apos;bg-green-400&apos; : &apos;bg-red-400&apos;}`}
+              >&apos;&apos;</div>&apos;{isTracking ? &apos;Tracking&apos; : &apos;Stopped&apos;}&apos;'
+=======
     return (<div className={`bg-white dark: bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>      {/* Header */}
       <div className='bg-gradient-to-r from-purple-500 to-pink-500 p-4 text-white'>''''
         <div className='flex items-center justify-between'>''''
@@ -83,11 +131,32 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
               <div'`'`;
                 className={`w-2 h-2 rounded-full ${isTracking ? 'bg-green-400' : 'bg-red-400'}`}
               ></div>'{isTracking ? 'Tracking' : 'Stopped'}'
+>>>>>>> main
             </div>
             {/* Time Range Selector */}
             <select;
               value={selectedTimeRange}
               onChange={e => {}
+<<<<<<< HEAD
+                setSelectedTimeRange(e.target.value)';
+                handleDashboardInteraction(&apos;time_range_changed&apos;, {}
+                  timeRange: e.target.value})';&apos;}}&apos;&apos;'';
+              className=&apos;px-2 py-1 bg-white/20 rounded text-xs focus:outline-none focus:ring-2 focu,s:ring-white/50&apos;&apos;'&apos;>'&apos;&apos;'&apos;&apos;
+              <option value=&apos;1h&apos;>1 Hour&apos;</option>&apos;&apos;'&apos;&apos;'
+              <option value=&apos;24h&apos;>24 Hours&apos;</option>&apos;&apos;'&apos;&apos;'
+              <option value=&apos;7d&apos;>7 Days&apos;</option>&apos;&apos;'&apos;&apos;'
+              <option value=&apos;30d&apos;>30 Days&apos;</option>
+            </select>
+            <button&apos;&apos;';
+              onClick={() => setIsExpanded(!isExpanded)}&apos;&apos;'';
+              className=&apos;p-1 hover:bg-white/20 rounded transition-colors&apos;&apos;';
+              aria-label={}
+';
+&apos;';
+&apos;&apos;';
+                isExpanded ? &apos;Collapse dashboard&apos; : &apos;Expand dashboard&apos;&apos;}&apos;&apos;
+            >&apos;&apos;'{isExpanded ? &apos;−&apos; : &apos;+&apos;}&apos;&apos;
+=======
                 setSelectedTimeRange(e.target.value)';'
                 handleDashboardInteraction('time_range_changed', {}
                   timeRange: e.target.value})';'}}'''';
@@ -106,10 +175,63 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
 ''';'
                 isExpanded ? 'Collapse dashboard' : 'Expand dashboard''}'''
             >'''{isExpanded ? '−' : '+'}'
+>>>>>>> main
             </button>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+&apos;&apos;'{/* Key Metrics Overview */}&apos;&apos;'&apos;&apos;'
+      <div className=&apos;p-4 border-b border-gray-200 dark:border-gray-700&apos;>'&apos;&apos;'&apos;&apos;
+        <div className=&apos;grid grid-cols-2 m,d:grid-cols-4 gap-4&apos;>'&apos;&apos;{/* Session Duration */}&apos;&apos;'&apos;&apos;'
+          <div className=&apos;text-center p-3 bg-gray-50 dark:bg-gray-700 rounded-lg&apos;>'&apos;&apos;'&apos;&apos;
+            <div className=&apos;flex items-center justify-center mb-2&apos;>'&apos;&apos;'&apos;&apos;
+              <Clock className=&apos;w-5 h-5 text-purple-500&apos; />&apos;&apos;'&apos;&apos;
+            </div>&apos;&apos;'&apos;&apos;'
+            <div className=&apos;text-2xl font-bold text-gray-900 dar,k:text-white&apos;>
+              {analyticsSummary;
+                ? formatDuration(analyticsSummary.sessionDuration)';
+                : &apos;N/A&apos;}'&apos;&apos;''
+            </div>&apos;&apos;'&apos;&apos;'
+            <div className=&apos;text-xs text-gray-600 dark:text-gray-400&apos;>
+              Session Duration&apos;
+            </div>
+          </div>
+&apos;&apos;'{/* Page Views */}&apos;&apos;'&apos;&apos;'
+          <div className=&apos;text-center p-3 bg-gray-50 dark:bg-gray-700 rounded-lg&apos;>'&apos;&apos;'&apos;&apos;
+            <div className=&apos;flex items-center justify-center mb-2&apos;>'&apos;&apos;'&apos;&apos;
+              <Eye className=&apos;w-5 h-5 text-blue-500&apos; />&apos;&apos;'&apos;&apos;
+            </div>&apos;&apos;'&apos;&apos;'
+            <div className=&apos;text-2xl font-bold text-gray-900 dar,k:text-white&apos;>
+              {analyticsSummary?.pageViews || 0}&apos;&apos;'&apos;&apos;
+            </div>&apos;&apos;'&apos;&apos;'
+            <div className=&apos;text-xs text-gray-600 dark:text-gray-400&apos;>
+              Page Views&apos;
+            </div>
+          </div>
+&apos;&apos;'{/* Total Events */}&apos;&apos;'&apos;&apos;'
+          <div className=&apos;text-center p-3 bg-gray-50 dark:bg-gray-700 rounded-lg&apos;>'&apos;&apos;'&apos;&apos;
+            <div className=&apos;flex items-center justify-center mb-2&apos;>'&apos;&apos;'&apos;&apos;
+              <Activity className=&apos;w-5 h-5 text-green-500&apos; />&apos;&apos;'&apos;&apos;
+            </div>&apos;&apos;'&apos;&apos;'
+            <div className=&apos;text-2xl font-bold text-gray-900 dar,k:text-white&apos;>
+              {formatNumber(events.length)}&apos;&apos;'&apos;&apos;
+            </div>&apos;&apos;'&apos;&apos;'
+            <div className=&apos;text-xs text-gray-600 dark:text-gray-400&apos;>
+              Total Events&apos;
+            </div>
+          </div>
+&apos;&apos;'{/* Performance Score */}&apos;&apos;'&apos;&apos;'
+          <div className=&apos;text-center p-3 bg-gray-50 dark:bg-gray-700 rounded-lg&apos;>'&apos;&apos;'&apos;&apos;
+            <div className=&apos;flex items-center justify-center mb-2&apos;>'&apos;&apos;'&apos;&apos;
+              <TrendingUp className=&apos;w-5 h-5 text-orange-500&apos; />&apos;&apos;'&apos;&apos;
+            </div>&apos;&apos;'&apos;&apos;'
+            <div className=&apos;text-2xl font-bold text-gray-900 dar,k:text-white&apos;>
+              {getPerformanceScore()}&apos;&apos;'&apos;&apos;
+            </div>&apos;&apos;'&apos;&apos;'
+            <div className=&apos;text-xs text-gray-600 dark:text-gray-400&apos;>
+              Performance&apos;
+=======
 '''{/* Key Metrics Overview */}'''''
       <div className='p-4 border-b border-gray-200 dark:border-gray-700'>''''
         <div className='grid grid-cols-2 md:grid-cols-4 gap-4'>'''{/* Session Duration */}'''''
@@ -160,10 +282,56 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
             </div>''''
             <div className='text-xs text-gray-600 dark: text-gray-400'>
               Performance
+>>>>>>> main
             </div>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+&apos;&apos;'{/* Real-time Events Feed */}&apos;&apos;'&apos;&apos;'
+      <div className=&apos;p-4 border-b border-gray-200 dark:border-gray-700&apos;>'&apos;&apos;'&apos;&apos;
+        <h4 className=&apos;font-medium text-gray-900 dar,k:text-white mb-3 flex items-center gap-2&apos;>'&apos;&apos;'&apos;&apos;
+          <Activity className=&apos;w-4 h-4&apos; />
+          Real-time Events&apos;&apos;'{showRealTime && (&apos;&apos;'&apos;&apos;}'
+            <div className=&apos;w-2 h-2 bg-green-500 rounded-full animate-pulse&apos;>&apos;'</div>
+          )}
+        </h4>&apos;&apos;';
+&apos;&apos;'&apos;&apos;'
+        <div className=&apos;space-y-2 max-h-32 overflow-y-auto&apos;>
+          {events;
+            .slice(-5);
+            .reverse()
+            .map(event => (&apos;}
+              <div&apos;&apos;';
+                key={event.id}&apos;&apos;'';
+                className=&apos;flex items-center justify-between text-sm p-2 bg-gray-50 dark:bg-gray-700 rounded&apos;&apos;'&apos;>'&apos;&apos;'&apos;&apos;
+                <div className=&apos;flex items-center gap-2&apos;>`&apos;
+                  <span``;
+                    className={`w-2 h-2 rounded-full ${}
+';
+                      event.category === &apos;interaction&apos;&apos;';
+                        ? &apos;bg-blue-500&apos;&apos;';
+                        : event.category === &apos;performance&apos;&apos;';
+                          ? &apos;bg-green-500&apos;&apos;';
+                          : event.category === &apos;error&apos;&apos;';
+                            ? &apos;bg-red-500&apos;&apos;'`;
+                            : &apos;bg-gray-500&apos;``}`}&apos;&apos;'>&apos;&apos;</span>&apos;&apos;'&apos;&apos;'
+                  <span className=&apos;text-gray-600 dark:text-gray-400&apos;>
+                    {event.category}&apos;&apos;'&apos;&apos;
+                  </span>&apos;&apos;'&apos;&apos;'
+                  <span className=&apos;text-gray-800 dark:text-gray-200&apos;>
+                    {event.action}&apos;
+                  </span>&apos;&apos;'&apos;&apos;
+                </div>&apos;&apos;'&apos;&apos;'
+                <span className=&apos;text-xs text-gray-500&apos;>
+                  {new Date(event.timestamp).toLocaleTimeString()}&apos;
+                </span>
+              </div>
+            ))}
+&apos;&apos;'{events.length === 0 && (&apos;&apos;'&apos;&apos;}'
+            <div className=&apos;text-center text-gray-500 text-sm py-4&apos;>
+              No events tracked yet&apos;
+=======
 '''{/* Real-time Events Feed */}'''''
       <div className='p-4 border-b border-gray-200 dark:border-gray-700'>''''
         <h4 className='font-medium text-gray-900 dark:text-white mb-3 flex items-center gap-2'>''''
@@ -207,10 +375,54 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
 '''{events.length === 0 && ('''''
             <div className='text-center text-gray-500 text-sm py-4'>
               No events tracked yet
+>>>>>>> main
             </div>
           )}
         </div>
       </div>
+<<<<<<< HEAD
+      {/* Detailed Analytics */}&apos;&apos;'{isExpanded && (&apos;&apos;'&apos;&apos;}'
+        <div className=&apos;border-t border-gray-200 dark:border-gray-700 p-4 bg-gray-50 dark:bg-gray-800&apos;>'&apos;&apos;'&apos;&apos;
+          <h4 className=&apos;font-medium text-gray-900 dar,k:text-white mb-3&apos;>
+            Detailed Analytics&apos;
+          </h4>
+          {/* Performance Metrics */}&apos;&apos;'{performanceMetrics && (&apos;&apos;'&apos;&apos;}'
+            <div className=&apos;mb-4 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg&apos;>'&apos;&apos;'&apos;&apos;
+              <h5 className=&apos;font-medium text-blue-800 dark:text-blue-200 mb-2&apos;>
+                Performance Metrics&apos;&apos;'&apos;&apos;
+              </h5>&apos;&apos;'&apos;&apos;'
+              <div className=&apos;grid grid-cols-2 gap-3 text-xs&apos;>'&apos;&apos;'&apos;&apos;
+                <div className=&apos;flex justify-between&apos;>'&apos;&apos;'&apos;&apos;
+                  <span className=&apos;text-blue-700 dark:text-blue-300&apos;>
+                    Page Loa,d:&apos;&apos;'&apos;&apos;
+                  </span>&apos;&apos;'&apos;&apos;'
+                  <span className=&apos;font-medium&apos;>
+                    {performanceMetrics.pageLoadTime.toFixed(0)}ms&apos;
+                  </span>&apos;&apos;'&apos;&apos;
+                </div>&apos;&apos;'&apos;&apos;'
+                <div className=&apos;flex justify-between&apos;>'&apos;&apos;'&apos;&apos;
+                  <span className=&apos;text-blue-700 dark:text-blue-300&apos;>
+                    Time to Interactiv,e:&apos;&apos;'&apos;&apos;
+                  </span>&apos;&apos;'&apos;&apos;'
+                  <span className=&apos;font-medium&apos;>
+                    {performanceMetrics.timeToInteractive.toFixed(0)}ms&apos;
+                  </span>&apos;&apos;'&apos;&apos;
+                </div>&apos;&apos;'&apos;&apos;'
+                <div className=&apos;flex justify-between&apos;>'&apos;&apos;'&apos;&apos;
+                  <span className=&apos;text-blue-700 dark:text-blue-300&apos;>
+                    First Pain,t:&apos;&apos;'&apos;&apos;
+                  </span>&apos;&apos;'&apos;&apos;'
+                  <span className=&apos;font-medium&apos;>
+                    {performanceMetrics.firstContentfulPaint.toFixed(0)}ms&apos;
+                  </span>&apos;&apos;'&apos;&apos;
+                </div>&apos;&apos;'&apos;&apos;'
+                <div className=&apos;flex justify-between&apos;>'&apos;&apos;'&apos;&apos;
+                  <span className=&apos;text-blue-700 dark:text-blue-300&apos;>
+                    Layout Shif,t:&apos;&apos;'&apos;&apos;
+                  </span>&apos;&apos;'&apos;&apos;'
+                  <span className=&apos;font-medium&apos;>
+                    {performanceMetrics.cumulativeLayoutShift.toFixed(3)}&apos;
+=======
       {/* Detailed Analytics */}'''{isExpanded && ('''''
         <div className='border-t border-gray-200 dark: border-gray-700 p-4 bg-gray-50 dark:bg-gray-800'>''''
           <h4 className='font-medium text-gray-900 dark:text-white mb-3'>
@@ -252,11 +464,30 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
                   </span>''''
                   <span className='font-medium'>
                     {performanceMetrics.cumulativeLayoutShift.toFixed(3)}
+>>>>>>> main
                   </span>
                 </div>
               </div>
             </div>
           )}
+<<<<<<< HEAD
+&apos;&apos;'{/* Events by Category */}&apos;&apos;'&apos;&apos;'
+          <div className=&apos;mb-4 p-3 bg-green-50 dark:bg-green-900/20 rounded-lg&apos;>'&apos;&apos;'&apos;&apos;
+            <h5 className=&apos;font-medium text-green-800 dar,k:text-green-200 mb-2&apos;>
+              Events by Category&apos;&apos;'&apos;&apos;
+            </h5>&apos;&apos;'&apos;&apos;'
+            <div className=&apos;space-y-2&apos;>
+              {getEventsByCategory().map(item => (&apos;}
+                <div&apos;&apos;';
+                  key={item.category}&apos;&apos;'';
+                  className=&apos;flex items-center justify-between&apos;&apos;'&apos;>'&apos;&apos;'&apos;&apos;
+                  <span className=&apos;text-green-700 dark:text-green-300 text-sm capitalize&apos;>&apos;{item.category.replace(&apos;_&apos;,)}&apos;&apos;'&apos;&apos;
+                  </span>&apos;&apos;'&apos;&apos;'
+                  <div className=&apos;flex items-center gap-2&apos;>'&apos;&apos;'&apos;&apos;
+                    <div className=&apos;w-16 bg-green-200 dark:bg-green-700 rounded-full h-2&apos;>'&apos;&apos;''
+                      <div&apos;&apos;'';
+                        className=&apos;bg-green-500 h-2 rounded-full transition-all duration-300&apos;&apos;';
+=======
 '''{/* Events by Category */}'''''
           <div className='mb-4 p-3 bg-green-50 dark: bg-green-900/20 rounded-lg'>''''
             <h5 className='font-medium text-green-800 dark:text-green-200 mb-2'>
@@ -273,20 +504,65 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
                     <div className='w-16 bg-green-200 dark: bg-green-700 rounded-full h-2'>''''
                       <div'''';
                         className='bg-green-500 h-2 rounded-full transition-all duration-300''';
+>>>>>>> main
                         style={{}
 `;
 ``;
                           width: `${(item.count / Math.max(...getEventsByCategory().map(e => e.count))) * 100}%`}}
+<<<<<<< HEAD
+                      >&apos;&apos;</div>&apos;&apos;'&apos;&apos;
+                    </div>&apos;&apos;'&apos;&apos;'
+                    <span className=&apos;text-green-700 dark:text-green-300 text-sm font-medium w-8 text-right&apos;>
+                      {item.count}&apos;
+=======
                       ></div>''''
                     </div>''''
                     <span className='text-green-700 dark: text-green-300 text-sm font-medium w-8 text-right'>
                       {item.count}
+>>>>>>> main
                     </span>
                   </div>
                 </div>
               ))}
             </div>
           </div>
+<<<<<<< HEAD
+          {/* Session Information */}&apos;&apos;'{currentSession && (&apos;&apos;'&apos;&apos;}'
+            <div className=&apos;mb-4 p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg&apos;>'&apos;&apos;'&apos;&apos;
+              <h5 className=&apos;font-medium text-purple-800 dark:text-purple-200 mb-2&apos;>
+                Session Details&apos;&apos;'&apos;&apos;
+              </h5>&apos;&apos;'&apos;&apos;'
+              <div className=&apos;space-y-2 text-xs&apos;>'&apos;&apos;'&apos;&apos;
+                <div className=&apos;flex justify-between&apos;>'&apos;&apos;'&apos;&apos;
+                  <span className=&apos;text-purple-700 dark:text-purple-300&apos;>
+                    Session I,D:&apos;&apos;'&apos;&apos;
+                  </span>&apos;&apos;'&apos;&apos;'
+                  <span className=&apos;font-medium font-mono text-xs&apos;>
+                    {currentSession.id.slice(-8)}&apos;
+                  </span>&apos;&apos;'&apos;&apos;
+                </div>&apos;&apos;'&apos;&apos;'
+                <div className=&apos;flex justify-between&apos;>'&apos;&apos;'&apos;&apos;
+                  <span className=&apos;text-purple-700 dark:text-purple-300&apos;>
+                    Device Typ,e:&apos;&apos;'&apos;&apos;
+                  </span>&apos;&apos;'&apos;&apos;'
+                  <span className=&apos;font-medium capitalize&apos;>
+                    {currentSession.deviceInfo.type}&apos;
+                  </span>&apos;&apos;'&apos;&apos;
+                </div>&apos;&apos;'&apos;&apos;'
+                <div className=&apos;flex justify-between&apos;>'&apos;&apos;'&apos;&apos;
+                  <span className=&apos;text-purple-700 dark:text-purple-300&apos;>
+                    Scree,n:&apos;&apos;'&apos;&apos;
+                  </span>&apos;&apos;'&apos;&apos;'
+                  <span className=&apos;font-medium&apos;>
+                    {currentSession.deviceInfo.screen.width}×{currentSession.deviceInfo.screen.height}&apos;
+                  </span>&apos;&apos;'&apos;&apos;
+                </div>&apos;&apos;'&apos;&apos;'
+                <div className=&apos;flex justify-between&apos;>'&apos;&apos;'&apos;&apos;
+                  <span className=&apos;text-purple-700 dark:text-purple-300&apos;>
+                    Referre,r:&apos;&apos;'&apos;&apos;
+                  </span>&apos;&apos;'&apos;&apos;'
+                  <span className=&apos;font-medium text-xs max-w-32 truncate&apos;>&apos;{currentSession.referrer || &apos;Direct&apos;}&apos;'
+=======
           {/* Session Information */}'''{currentSession && ('''''
             <div className='mb-4 p-3 bg-purple-50 dark: bg-purple-900/20 rounded-lg'>''''
               <h5 className='font-medium text-purple-800 dark:text-purple-200 mb-2'>
@@ -322,6 +598,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
                     Referrer:''''
                   </span>''''
                   <span className='font-medium text-xs max-w-32 truncate'>'{currentSession.referrer || 'Direct'}'
+>>>>>>> main
                   </span>
                 </div>
               </div>
@@ -329,6 +606,27 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
           )}
         </div>
       )}
+<<<<<<< HEAD
+&apos;&apos;'{/* Controls */}&apos;&apos;'&apos;&apos;'
+      <div className=&apos;p-4 border-t border-gray-200 dark:border-gray-700 bg-gray-50 dar,k:bg-gray-800&apos;>'&apos;&apos;'&apos;&apos;
+        <div className=&apos;flex gap-2&apos;>&apos;'
+          <button;
+            onClick={() => {}
+';
+              handleDashboardInteraction(&apos;refresh_clicked&apos;);
+              updateAnalyticsSummary()';&apos;}}&apos;&apos;'';
+            className=&apos;flex-1 px-3 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2&apos;&apos;'&apos;>'&apos;&apos;'&apos;&apos;
+            <RefreshCw className=&apos;w-4 h-4&apos; />
+            Refresh Data&apos;
+          </button>
+          <button;
+            onClick={() => {}
+              handleTrackConversion()';
+              handleDashboardInteraction(&apos;conversion_tracked&apos;)';&apos;}}&apos;&apos;'';
+            className=&apos;px-3 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2&apos;&apos;'&apos;>'&apos;&apos;'&apos;&apos;
+            <Target className=&apos;w-4 h-4&apos; />
+            Track Goal&apos;
+=======
 '''{/* Controls */}'''''
       <div className='p-4 border-t border-gray-200 dark: border-gray-700 bg-gray-50 dark:bg-gray-800'>''''
         <div className='flex gap-2'>
@@ -348,9 +646,22 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
             className='px-3 py-2 bg-green-500 hover: bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2''''>'''''
             <Target className='w-4 h-4' />
             Track Goal
+>>>>>>> main
           </button>
         </div>
       </div>
     </div>
+<<<<<<< HEAD
+  )}&apos;&apos;`;
+&apos;&apos;`&apos;&apos;`''
+=======
   )}''`;
 ''`''`
+=======
+"
+}
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

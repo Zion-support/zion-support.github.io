@@ -7,6 +7,7 @@ import {
   CardContent,
   CardTitle,
 } from '../components/ui/Card';
+// import { Badge } from '../components/ui/Badge';
 import {
   Map,
   ArrowRight,
@@ -22,7 +23,7 @@ import {
 
 const SitemapPage: React.FC = () => {
   const siteStructure = [
-    {
+  {
       category: 'Main Pages',
       icon: Home,
       pages: [

@@ -31,7 +31,7 @@ class IntelligentOrchestrator {
   }
   loadAutomationSystems() {
     const systems = [
-      { name: 'lint-monitor, path:,
+  { name: 'lint-monitor, path:,
   lint-monitor.js', status: 'available },
       {
         name:,
@@ -277,7 +277,6 @@ class IntelligentOrchestrator {
       totalSystems: this.automationSystems.size,
       accessibleSystems: Array.from(this.automationSystems.values()).filter(
         s => s.isAccessible).length}
-;
     return status}
   stop() {
     this.monitoring = false;

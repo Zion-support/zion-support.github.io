@@ -53,54 +53,45 @@ import {
   'lucide-react';
   Sparkles} from 'lucide-react';
 const Pricing: React.FC = () => {
-  const pricingPlans = [{
+  const pricingPlans = [
+  {
       name: 'Starter', price: '$299',
       period: '/month', description: 'Perfect for small businesses getting started with AI',
       features: [;
-        'AI-powered analytics dashboard', 'Basic automation tools',
-        'Email support', 'Up to 5 team members',
-        'Standard integrations', 'Monthly reports';
+        'AI-powered analytics dashboard,Basic automation tools,Email support,Up to 5 team members,Standard integrations,Monthly reports';
       ], popular: false,
       color: 'from-blue-500 to-cyan-500', buttonText: 'Get Started',
       buttonVariant: 'outline' as const}, {
       name: 'Professional',
       price: '$799', period: '/month',
       description: 'Ideal for growing businesses with advanced needs', features: [;
-        'Advanced AI analytics',
-        'Custom automation workflows', 'Priority support',
-        'Up to 25 team members', 'Advanced integrations',
-        'Real-time reporting', 'API access',
-        'Custom branding';
+        'Advanced AI analytics,Custom automation workflows,Priority support,Up to 25 team members,Advanced integrations,Real-time reporting,API access,Custom branding';
       ], popular: true,
       color: 'from-purple-500 to-pink-500', buttonText: 'Start Free Trial',
       buttonVariant: 'default' as const}, {
       name: 'Enterprise',
       price: 'Custom', period: '',
       description: 'Tailored solutions for large organizations', features: [;
-        'Unlimited AI capabilities',
-        'Custom AI model training', 'Dedicated support team',
-        'Unlimited team members', 'White-label solutions',
-        'Advanced security', 'Custom integrations',
-        '24/7 phone support', 'SLA guarantee';
+        'Unlimited AI capabilities,Custom AI model training,Dedicated support team,Unlimited team members,White-label solutions,Advanced security,Custom integrations,24/7 phone support,SLA guarantee';
       ], popular: false,
       color: 'from-orange-500 to-red-500', buttonText: 'Contact Sales',
       buttonVariant: 'outline' as const}
   ];
   const servicePricing = [
-    {
+  {
       service: 'AI Development', startingPrice: '$5,000', description: 'Custom AI solutions and machine learning models',
-      features: ['Custom AI models', 'Data analysis', 'Integration support', 'Training & documentation']}, {
+      features: ['Custom AI models,Data analysis,Integration support,Training & documentation']}, {
       service: 'Cloud Migration',
       startingPrice: '$3, 000',
-      description: 'Seamless migration to cloud infrastructure', features: ['Infrastructure assessment', 'Migration planning', 'Data transfer', 'Performance optimization']
+      description: 'Seamless migration to cloud infrastructure', features: ['Infrastructure assessment,Migration planning,Data transfer,Performance optimization']
     }, {
       service: 'Cybersecurity',
       startingPrice: '$2, 500',
-      description: 'Comprehensive security solutions and monitoring', features: ['Security audit', 'Threat monitoring', 'Incident response', 'Compliance support']
+      description: 'Comprehensive security solutions and monitoring', features: ['Security audit,Threat monitoring,Incident response,Compliance support']
     }, {
       service: 'Digital Transformation',
       startingPrice: '$10, 000',
-      description: 'End-to-end digital transformation consulting', features: ['Strategy development', 'Process optimization', 'Technology implementation', 'Change management']
+      description: 'End-to-end digital transformation consulting', features: ['Strategy development,Process optimization,Technology implementation,Change management']
     }
   ]
   return(
@@ -257,5 +248,4 @@ const Pricing: React.FC = () => {
       </section>
     </div>
   )}
-;
 export default Pricing

@@ -20,67 +20,59 @@ import {
 } from 'lucide-react';
 const Cookies: NextPage = () => {
   const cookieTypes = [
-    {
+  {
       icon: Cookie,
 :pages.disabled_auto/cookies.tsx;
       title:,
   Essential Cookies',
       description: 'These cookies are necessary for the website to function and cannot be switched off.,
       examples: [;
-  'Authentication',
-  'Security',
-  'Load balancing']},
+  'Authentication,Security,Load balancing']},
     {
       icon: Settings,
       title:,
   Functional Cookies',
       description: 'These cookies enable enhanced functionality and personalization.,
       examples: [
-  'User preferences',
-  'Language settings',
-  'Customization']},
+  'User preferences,Language settings,Customization']},
     {
       icon: Eye,
       title:,
   Analytics Cookies',
       description: 'These cookies help us understand how visitors interact with our website.,
       examples: [
-  'Page views',
-  'User behavior',
-  'Performance metrics']},
+  'Page views,User behavior,Performance metrics']},
     {
       icon: Database,
       title:,
   Marketing Cookies',
       description: 'These cookies are used to deliver relevant advertisements and marketing campaigns.,
       examples: [
-  'Ad targeting',
-  'Campaign tracking',
-  'Conversion measurement']}
+  'Ad targeting,Campaign tracking,Conversion measurement']}
       title: 'Essential Cookies',
       description:;
         'These cookies are necessary for the website to function and cannot be switched off.',
-      examples: ['Authentication', 'Security', 'Load balancing']},
+      examples: ['Authentication,Security,Load balancing']},
     {
       icon: Settings,
       title: 'Functional Cookies',
       description:;
         'These cookies enable enhanced functionality and personalization.',
-      examples: ['User preferences', 'Language settings', 'Customization']},
+      examples: ['User preferences,Language settings,Customization']},
     {
       icon: Eye,
       title: 'Analytics Cookies',
       description:;
         'These cookies help us understand how visitors interact with our website.',
-      examples: ['Page views', 'User behavior', 'Performance metrics']},
+      examples: ['Page views,User behavior,Performance metrics']},
     {
       icon: Database,
       title: 'Marketing Cookies',
       description:;
         'These cookies are used to deliver relevant advertisements and marketing campaigns.',
-      examples: ['Ad targeting', 'Campaign tracking', 'Conversion measurement']}];
+      examples: ['Ad targeting,Campaign tracking,Conversion measurement']}];
   const cookieFeatures = [
-    {
+  {
       icon: Shield,
 :pages.disabled_auto/cookies.tsx;
       title:,
@@ -253,5 +245,4 @@ const Cookies: NextPage = () => {
       </div>
     </MainLayout>
   )}
-;
 export default Cookies

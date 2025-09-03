@@ -19,7 +19,6 @@ const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.Reac
 <Suspense fallback={fallback || <LoadingSpinner />}><LazyComponent {...props} />
     </Suspense>
   )}
-;
 // Core pages with optimized imports;
 const Home = createLazyComponent(() => import('./pages/Home'));
 const About = createLazyComponent(() => import('./pages/About'));
@@ -95,16 +94,15 @@ function App() {
     </HelmetProvider>
   )}
 export default App;
-import React, { Suspense, lazy } from 'react';import { Routes, Route } from 'react-router-dom';import { HelmetProvider } from 'react-helmet-async'';// Core Components;
-import { PerformanceOptimizer } from './components/PerformanceOptimizer';import { SEO } from './components/SEO';import { ErrorBoundary } from './components/ErrorBoundary';import { LoadingSpinner } from './components/ui/loading-spinner'';// Layout Components;
-import { EnhancedHeader } from './components/EnhancedHeader';import { EnhancedFooter } from './components/EnhancedFooter'';// Optimized lazy loading with preloading hints
+import React, { Suspense, lazy } from 'react';import { Routes, Route } from 'react-router-dom';import { HelmetProvider }  from 'react-helmet-async;// Core Components;
+import { PerformanceOptimizer } from './components/PerformanceOptimizer';import { SEO } from './components/SEO';import { ErrorBoundary } from './components/ErrorBoundary';import { LoadingSpinner }  from './components/ui/loading-spinner;// Layout Components;
+import { EnhancedHeader } from './components/EnhancedHeader';import { EnhancedFooter }  from './components/EnhancedFooter;// Optimized lazy loading with preloading hints
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {const LazyComponent = lazy(importFn)
   return(props: any) => (
     <Suspense fallback={fallback || <LoadingSpinner />}>
       <LazyComponent {...props} />
     </Suspense>
   )}
-;
 // Core pages with optimized imports;
 const Home = createLazyComponent(() => import('./pages/Home'))';const About = createLazyComponent(() => import('./pages/About'))';const Contact = createLazyComponent(() => import('./pages/Contact'))';const Careers = createLazyComponent(() => import('./pages/Careers'))';const Services = createLazyComponent(() => import('./pages/Services'))';const Solutions = createLazyComponent(() => import('./pages/Solutions'))';const News = createLazyComponent(() => import('./pages/News'))';const CaseStudies = createLazyComponent(() => import('./pages/CaseStudies'))';const Privacy = createLazyComponent(() => import('./pages/Privacy'))';const Terms = createLazyComponent(() => import('./pages/Terms'))';// Service pages;
 const AIServices = createLazyComponent(() => import('./pages/AIServices'))';const CloudServices = createLazyComponent(() => import('./pages/CloudServices'))';const CybersecurityServices = createLazyComponent(() => import('./pages/CybersecurityServices'))';const InfrastructureServices = createLazyComponent(() => import('./pages/InfrastructureServices'))';const TransformationServices = createLazyComponent(() => import('./pages/TransformationServices'))';const ConsultingServices = createLazyComponent(() => import('./pages/ConsultingServices'))';// Error Fallback Component

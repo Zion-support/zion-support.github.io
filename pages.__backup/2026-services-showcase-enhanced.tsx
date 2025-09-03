@@ -159,7 +159,6 @@ export default function Services2026ShowcaseEnhancedPage() {
   ')) return 'neural;
   ';
     return 'default}
-;
   const contactInfo = {
     mobile:,
   +1 302 464 0950;
@@ -169,7 +168,6 @@ export default function Services2026ShowcaseEnhancedPage() {
   364 E Main St STE 1008 Middletown DE 19709;
   ',
     website: 'https://ziontechgroup.com  }
-;
   // Combine all 2026 services including new ones;
   const all2026Services = [
     ...innovative2026MicroSaasServicesV2,
@@ -180,7 +178,7 @@ export default function Services2026ShowcaseEnhancedPage() {
     ...enterpriseIT2026ServicesV3];
   // Enhanced categories for 2026;
   const categories = [
-    { id:,
+  { id:,
   all;
   ', name: 'All 2026 Services, icon: '🚀;
   ', count: all2026Services.length },
@@ -226,7 +224,7 @@ export default function Services2026ShowcaseEnhancedPage() {
   ') || s.category.includes('IoT)).length }
   ];
   const priceRanges = [
-    { id:,
+  { id:,
   all;
   ', name: 'All Prices, range:,
   All;
@@ -249,7 +247,7 @@ export default function Services2026ShowcaseEnhancedPage() {
   ' }
   ];
   const sortOptions = [
-    { id: 'name, name:,
+  { id: 'name, name:,
   Name A-Z;
   ' },
     { id: 'price-low, name:,
@@ -327,8 +325,7 @@ export default function Services2026ShowcaseEnhancedPage() {
       switch (sortBy) {
         case;
   'price-low':;
-          return parseInt(a.price.replace(/[^0-9]/g, ';
-  ')) - parseInt(b.price.replace(/[^0-9]/g, ''));
+          return parseInt(a.price.replace(/[^0-9]/g, )) - parseInt(b.price.replace(/[^0-9]/g, ''));
         case;
   'price-high':;
           return parseInt(b.price.replace(/[^0-9]/g, ,
@@ -596,8 +593,7 @@ export default function Services2026ShowcaseEnhancedPage() {
                       exit={{ opacity: 0, y: -20 }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                       className={viewMode ===,
-  grid' ? ';
-  ': 'bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30}                    >
+  grid' ? : 'bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30}                    >
                       <UltraFuturisticCard className='h-full'>
                         <div className='p-6'>
                           {/* Service Header */}
