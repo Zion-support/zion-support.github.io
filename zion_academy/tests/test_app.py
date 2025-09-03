@@ -14,6 +14,9 @@ class BaseTestCase(unittest.TestCase):
         self.client = self.app.test_client()
         self.db = main_db
 
+        # Push app context for the duration of each test
+        self.app_context = self.app.app_context()
+        self.app_context.push()
         with self.app.app_context():
             self.db.create_all()
             self.seed_basic_data()
@@ -22,6 +25,8 @@ class BaseTestCase(unittest.TestCase):
         with self.app.app_context():
             self.db.session.remove()
             self.db.drop_all()
+        # Pop the app context we pushed in setUp
+        self.app_context.pop()
 
     def seed_basic_data(self):
         with self.app.app_context():
