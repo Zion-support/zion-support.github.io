@@ -2,85 +2,85 @@ import React from "react"
 import Head from "next/head"
 import Link from "next/link"
 import { 
-  Brain, Server, Cloud, Zap, Shield, BarChart3, 
-  Users, Globe, Smartphone, Database, Lock, CheckCircle,
-  ArrowRight, Star, Phone, Mail, MapPin, Settings,
-  Monitor, Cpu, Network, Code, GitBranch, Rocket,
-  Lightbulb, Activity, TrendingUp, AlertTriangle
+  Brain, Users, MessageSquare, Heart, Star, Zap, 
+  Shield, BarChart3, Globe, Smartphone, Database, 
+  Lock, CheckCircle, ArrowRight, Phone, Mail, MapPin,
+  Settings, Monitor, Cpu, Network, Code, Rocket,
+  Lightbulb, Activity, TrendingUp, Award, Target
 } from "lucide-react"
 
-const AIAutonomousDevOpsPlatform = () => {
+const AICustomerExperienceOrchestrator = () => {
   const features = [
-    "Autonomous Code Deployment",
-    "AI-Powered Infrastructure Management", 
-    "Intelligent Monitoring & Alerting",
-    "Automated Security Scanning",
-    "Self-Healing Infrastructure",
-    "Predictive Scaling",
-    "Zero-Downtime Deployments",
-    "Cost Optimization Engine"
+    "AI-Powered Customer Journey Mapping",
+    "Real-time Sentiment Analysis", 
+    "Predictive Customer Behavior",
+    "Omnichannel Experience Management",
+    "Intelligent Customer Segmentation",
+    "Automated Personalization Engine",
+    "Proactive Issue Resolution",
+    "Customer Lifetime Value Optimization"
   ]
 
   const benefits = [
-    "Reduce deployment time by 80%",
-    "Eliminate 95% of manual DevOps tasks",
-    "Improve system reliability by 99.9%",
-    "Reduce infrastructure costs by 40%",
-    "Accelerate development cycles by 3x",
-    "Minimize security vulnerabilities by 90%"
+    "Increase customer satisfaction by 45%",
+    "Reduce customer churn by 60%",
+    "Improve customer lifetime value by 35%",
+    "Boost Net Promoter Score by 50%",
+    "Reduce support ticket volume by 40%",
+    "Accelerate customer onboarding by 70%"
   ]
 
   const useCases = [
-    "Enterprise Application Deployment",
-    "Microservices Architecture Management",
-    "Cloud Infrastructure Automation",
-    "CI/CD Pipeline Optimization",
-    "Multi-Cloud Operations",
-    "Legacy System Modernization"
+    "E-commerce Customer Experience",
+    "SaaS Customer Success Management",
+    "Financial Services Customer Journey",
+    "Healthcare Patient Experience",
+    "Retail Customer Engagement",
+    "B2B Customer Relationship Management"
   ]
 
   const pricing = [
     {
-      name: "Startup",
-      price: "$1,999/month",
-      details: ["Up to 10 services", "Basic AI automation", "Standard monitoring", "Email support", "99.5% uptime SLA"]
+      name: "Growth",
+      price: "$2,499/month",
+      details: ["Up to 10,000 customers", "Basic AI personalization", "Standard analytics", "Email support", "99.5% uptime SLA"]
     },
     {
       name: "Enterprise", 
       price: "$4,999/month",
-      details: ["Up to 100 services", "Advanced AI automation", "Custom monitoring", "Priority support", "99.9% uptime SLA"]
+      details: ["Up to 100,000 customers", "Advanced AI personalization", "Custom analytics", "Priority support", "99.9% uptime SLA"]
     },
     {
       name: "Enterprise Plus",
       price: "$9,999/month", 
-      details: ["Unlimited services", "Full AI autonomy", "White-label solution", "24/7 dedicated support", "99.99% uptime SLA"]
+      details: ["Unlimited customers", "Full AI orchestration", "White-label solution", "24/7 dedicated support", "99.99% uptime SLA"]
     }
   ]
 
   return (
     <>
       <Head>
-        <title>AI Autonomous DevOps Platform - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered autonomous DevOps platform that eliminates 95% of manual tasks and reduces deployment time by 80%." />
-        <meta name="keywords" content="AI DevOps, autonomous deployment, infrastructure automation, CI/CD, cloud operations" />
+        <title>AI Customer Experience Orchestrator - Zion Tech Group</title>
+        <meta name="description" content="Revolutionary AI-powered customer experience platform that increases satisfaction by 45% and reduces churn by 60% through intelligent orchestration." />
+        <meta name="keywords" content="AI customer experience, customer journey, personalization, customer analytics, CX orchestration" />
       </Head>
       
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 py-20 text-center">
+        <section className="bg-gradient-to-br from-pink-600 via-purple-600 to-indigo-600 py-20 text-center">
           <div className="max-w-6xl mx-auto px-6">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
-              <Server className="w-4 h-4 mr-2" />
-              AI-Powered DevOps Automation
+              <Heart className="w-4 h-4 mr-2" />
+              AI-Powered Customer Experience
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-              AI Autonomous DevOps Platform
+              AI Customer Experience Orchestrator
             </h1>
-            <p className="text-blue-100 text-xl max-w-3xl mx-auto">
-              Transform your DevOps operations with AI-powered automation that eliminates 95% of manual tasks, reduces deployment time by 80%, and ensures 99.9% system reliability.
+            <p className="text-pink-100 text-xl max-w-3xl mx-auto">
+              Transform customer relationships with AI-powered orchestration that increases satisfaction by 45%, reduces churn by 60%, and optimizes every touchpoint in the customer journey.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="#contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+              <Link href="#contact" className="bg-white text-pink-600 px-8 py-3 rounded-lg font-semibold hover:bg-pink-50 transition-colors">
                 Start Free Trial
               </Link>
               <Link href="#demo" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">
@@ -93,18 +93,18 @@ const AIAutonomousDevOpsPlatform = () => {
         {/* Features Section */}
         <section className="py-16 max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Autonomous DevOps Capabilities</h2>
-            <p className="text-gray-600 text-lg">AI-driven automation that handles complex DevOps operations without human intervention</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Intelligent Customer Experience Features</h2>
+            <p className="text-gray-600 text-lg">AI-driven capabilities that create exceptional customer experiences across all touchpoints</p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
               <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
                   <Brain className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature}</h3>
-                <p className="text-gray-600 text-sm">Intelligent automation that learns and adapts to your infrastructure needs</p>
+                <p className="text-gray-600 text-sm">Advanced AI that understands and optimizes every customer interaction</p>
               </div>
             ))}
           </div>
@@ -114,8 +114,8 @@ const AIAutonomousDevOpsPlatform = () => {
         <section className="bg-gray-50 py-16">
           <div className="max-w-6xl mx-auto px-6">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Proven DevOps Transformation Results</h2>
-              <p className="text-gray-600 text-lg">Join 300+ engineering teams that have revolutionized their DevOps with AI automation</p>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Proven Customer Experience Results</h2>
+              <p className="text-gray-600 text-lg">Join 400+ companies that have transformed their customer experience with AI orchestration</p>
             </div>
             
             <div className="grid md:grid-cols-2 gap-8">
@@ -136,7 +136,7 @@ const AIAutonomousDevOpsPlatform = () => {
                 <ul className="space-y-3">
                   {useCases.map((useCase, index) => (
                     <li key={index} className="flex items-center">
-                      <Server className="w-4 h-4 text-blue-500 mr-3" />
+                      <Users className="w-4 h-4 text-pink-500 mr-3" />
                       <span className="text-gray-700">{useCase}</span>
                     </li>
                   ))}
@@ -146,36 +146,36 @@ const AIAutonomousDevOpsPlatform = () => {
           </div>
         </section>
 
-        {/* Technical Architecture */}
+        {/* Customer Journey Visualization */}
         <section className="py-16 max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced AI Architecture</h2>
-            <p className="text-gray-600 text-lg">Built on cutting-edge AI and machine learning technologies</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">AI-Powered Customer Journey Intelligence</h2>
+            <p className="text-gray-600 text-lg">Understand and optimize every step of your customer's journey</p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
-              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center mb-4">
-                <Brain className="w-6 h-6 text-white" />
+              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
+                <Target className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Machine Learning Engine</h3>
-              <p className="text-gray-600">Advanced ML algorithms that learn from your infrastructure patterns and optimize operations automatically.</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Journey Mapping</h3>
+              <p className="text-gray-600">AI automatically maps customer journeys across all touchpoints and identifies optimization opportunities.</p>
+            </div>
+            
+            <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
+              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4">
+                <Zap className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Real-time Personalization</h3>
+              <p className="text-gray-600">Dynamic personalization engine that adapts experiences in real-time based on customer behavior and preferences.</p>
             </div>
             
             <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
-                <Shield className="w-6 h-6 text-white" />
+                <BarChart3 className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Security-First Design</h3>
-              <p className="text-gray-600">Built-in security scanning, vulnerability detection, and compliance monitoring for enterprise-grade protection.</p>
-            </div>
-            
-            <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
-              <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-4">
-                <Zap className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Real-time Optimization</h3>
-              <p className="text-gray-600">Continuous monitoring and optimization of your infrastructure for maximum performance and cost efficiency.</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Predictive Analytics</h3>
+              <p className="text-gray-600">Advanced analytics that predict customer behavior, churn risk, and lifetime value to optimize experiences.</p>
             </div>
           </div>
         </section>
@@ -185,19 +185,19 @@ const AIAutonomousDevOpsPlatform = () => {
           <div className="max-w-6xl mx-auto px-6">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Flexible Pricing Plans</h2>
-              <p className="text-gray-600 text-lg">Choose the plan that scales with your DevOps needs</p>
+              <p className="text-gray-600 text-lg">Choose the plan that scales with your customer base</p>
             </div>
             
             <div className="grid md:grid-cols-3 gap-8">
               {pricing.map((tier, index) => (
-                <div key={index} className={`rounded-xl p-6 shadow-lg ${tier.name === 'Enterprise' ? 'border-2 border-blue-500 bg-blue-50' : 'border border-gray-200 bg-white'}`}>
+                <div key={index} className={`rounded-xl p-6 shadow-lg ${tier.name === 'Enterprise' ? 'border-2 border-pink-500 bg-pink-50' : 'border border-gray-200 bg-white'}`}>
                   {tier.name === 'Enterprise' && (
-                    <div className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold mb-4 inline-block">
+                    <div className="bg-pink-500 text-white px-3 py-1 rounded-full text-sm font-semibold mb-4 inline-block">
                       Most Popular
                     </div>
                   )}
                   <h3 className="text-2xl font-semibold text-gray-900 mb-2">{tier.name}</h3>
-                  <div className="text-3xl font-bold text-blue-600 mb-4">{tier.price}</div>
+                  <div className="text-3xl font-bold text-pink-600 mb-4">{tier.price}</div>
                   <ul className="space-y-3 mb-6">
                     {tier.details.map((detail, detailIndex) => (
                       <li key={detailIndex} className="flex items-center">
@@ -208,7 +208,7 @@ const AIAutonomousDevOpsPlatform = () => {
                   </ul>
                   <Link href="#contact" className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${
                     tier.name === 'Enterprise' 
-                      ? 'bg-blue-600 text-white hover:bg-blue-700' 
+                      ? 'bg-pink-600 text-white hover:bg-pink-700' 
                       : 'bg-gray-900 text-white hover:bg-gray-800'
                   }`}>
                     Get Started
@@ -223,8 +223,8 @@ const AIAutonomousDevOpsPlatform = () => {
         <section id="contact" className="bg-gray-900 text-white py-16">
           <div className="max-w-6xl mx-auto px-6">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Ready to Automate Your DevOps?</h2>
-              <p className="text-gray-300 text-lg">Contact our DevOps automation experts today</p>
+              <h2 className="text-3xl font-bold mb-4">Ready to Transform Customer Experience?</h2>
+              <p className="text-gray-300 text-lg">Contact our customer experience experts today</p>
             </div>
             
             <div className="grid md:grid-cols-2 gap-8">
@@ -232,15 +232,15 @@ const AIAutonomousDevOpsPlatform = () => {
                 <h3 className="text-2xl font-semibold mb-6">Get in Touch</h3>
                 <div className="space-y-4">
                   <div className="flex items-center">
-                    <Phone className="w-5 h-5 text-blue-400 mr-3" />
+                    <Phone className="w-5 h-5 text-pink-400 mr-3" />
                     <a href="tel:+13024640950" className="text-gray-300 hover:text-white">+1 302 464 0950</a>
                   </div>
                   <div className="flex items-center">
-                    <Mail className="w-5 h-5 text-blue-400 mr-3" />
+                    <Mail className="w-5 h-5 text-pink-400 mr-3" />
                     <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-white">kleber@ziontechgroup.com</a>
                   </div>
                   <div className="flex items-center">
-                    <MapPin className="w-5 h-5 text-blue-400 mr-3" />
+                    <MapPin className="w-5 h-5 text-pink-400 mr-3" />
                     <span className="text-gray-300">364 E Main St STE 1008, Middletown DE 19709</span>
                   </div>
                 </div>
@@ -248,8 +248,8 @@ const AIAutonomousDevOpsPlatform = () => {
               
               <div className="bg-white rounded-xl p-6">
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">Start Your Free Trial</h3>
-                <p className="text-gray-600 mb-4">Experience autonomous DevOps automation with our 14-day free trial</p>
-                <Link href="https://ziontechgroup.com/contact" className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-block">
+                <p className="text-gray-600 mb-4">Experience AI-powered customer orchestration with our 14-day free trial</p>
+                <Link href="https://ziontechgroup.com/contact" className="bg-pink-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-pink-700 transition-colors inline-block">
                   Start Free Trial
                 </Link>
               </div>
@@ -261,4 +261,4 @@ const AIAutonomousDevOpsPlatform = () => {
   )
 }
 
-export default AIAutonomousDevOpsPlatform
+export default AICustomerExperienceOrchestrator

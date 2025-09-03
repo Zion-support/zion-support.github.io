@@ -2,85 +2,85 @@ import React from "react"
 import Head from "next/head"
 import Link from "next/link"
 import { 
-  Brain, Server, Cloud, Zap, Shield, BarChart3, 
-  Users, Globe, Smartphone, Database, Lock, CheckCircle,
-  ArrowRight, Star, Phone, Mail, MapPin, Settings,
-  Monitor, Cpu, Network, Code, GitBranch, Rocket,
-  Lightbulb, Activity, TrendingUp, AlertTriangle
+  Cpu, Network, Zap, Globe, Server, Cloud, Database, 
+  Shield, BarChart3, CheckCircle, ArrowRight, Star, 
+  Phone, Mail, MapPin, Settings, Monitor, Activity,
+  TrendingUp, Award, Rocket, Lightbulb, AlertTriangle,
+  Smartphone, Users, Lock, Brain, Target
 } from "lucide-react"
 
-const AIAutonomousDevOpsPlatform = () => {
+const EdgeComputingOrchestrationPlatform = () => {
   const features = [
-    "Autonomous Code Deployment",
-    "AI-Powered Infrastructure Management", 
-    "Intelligent Monitoring & Alerting",
-    "Automated Security Scanning",
-    "Self-Healing Infrastructure",
-    "Predictive Scaling",
-    "Zero-Downtime Deployments",
-    "Cost Optimization Engine"
+    "Distributed Edge Computing",
+    "Real-time Data Processing", 
+    "Intelligent Load Balancing",
+    "Edge-to-Cloud Synchronization",
+    "Autonomous Edge Management",
+    "Low-Latency Computing",
+    "Edge AI Inference",
+    "Dynamic Resource Allocation"
   ]
 
   const benefits = [
-    "Reduce deployment time by 80%",
-    "Eliminate 95% of manual DevOps tasks",
-    "Improve system reliability by 99.9%",
-    "Reduce infrastructure costs by 40%",
-    "Accelerate development cycles by 3x",
-    "Minimize security vulnerabilities by 90%"
+    "Reduce latency by 90%",
+    "Improve application performance by 70%",
+    "Lower bandwidth costs by 60%",
+    "Enable real-time decision making",
+    "Scale computing resources dynamically",
+    "Ensure 99.9% uptime across edge locations"
   ]
 
   const useCases = [
-    "Enterprise Application Deployment",
-    "Microservices Architecture Management",
-    "Cloud Infrastructure Automation",
-    "CI/CD Pipeline Optimization",
-    "Multi-Cloud Operations",
-    "Legacy System Modernization"
+    "IoT Data Processing",
+    "Real-time Video Analytics",
+    "Autonomous Vehicle Computing",
+    "Smart City Infrastructure",
+    "Industrial IoT Monitoring",
+    "Edge AI Applications"
   ]
 
   const pricing = [
     {
-      name: "Startup",
-      price: "$1,999/month",
-      details: ["Up to 10 services", "Basic AI automation", "Standard monitoring", "Email support", "99.5% uptime SLA"]
+      name: "Edge Starter",
+      price: "$3,999/month",
+      details: ["Up to 10 edge nodes", "Basic orchestration", "Standard monitoring", "Email support", "99.5% uptime SLA"]
     },
     {
-      name: "Enterprise", 
-      price: "$4,999/month",
-      details: ["Up to 100 services", "Advanced AI automation", "Custom monitoring", "Priority support", "99.9% uptime SLA"]
+      name: "Edge Enterprise", 
+      price: "$7,999/month",
+      details: ["Up to 100 edge nodes", "Advanced orchestration", "Custom monitoring", "Priority support", "99.9% uptime SLA"]
     },
     {
-      name: "Enterprise Plus",
-      price: "$9,999/month", 
-      details: ["Unlimited services", "Full AI autonomy", "White-label solution", "24/7 dedicated support", "99.99% uptime SLA"]
+      name: "Edge Global",
+      price: "$15,999/month", 
+      details: ["Unlimited edge nodes", "Full orchestration suite", "White-label solution", "24/7 dedicated support", "99.99% uptime SLA"]
     }
   ]
 
   return (
     <>
       <Head>
-        <title>AI Autonomous DevOps Platform - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered autonomous DevOps platform that eliminates 95% of manual tasks and reduces deployment time by 80%." />
-        <meta name="keywords" content="AI DevOps, autonomous deployment, infrastructure automation, CI/CD, cloud operations" />
+        <title>Edge Computing Orchestration Platform - Zion Tech Group</title>
+        <meta name="description" content="Advanced edge computing orchestration platform that reduces latency by 90% and enables real-time processing across distributed edge locations." />
+        <meta name="keywords" content="edge computing, distributed computing, real-time processing, edge orchestration, low-latency computing" />
       </Head>
       
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 py-20 text-center">
+        <section className="bg-gradient-to-br from-green-600 via-teal-600 to-blue-600 py-20 text-center">
           <div className="max-w-6xl mx-auto px-6">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
-              <Server className="w-4 h-4 mr-2" />
-              AI-Powered DevOps Automation
+              <Cpu className="w-4 h-4 mr-2" />
+              Edge Computing Orchestration
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-              AI Autonomous DevOps Platform
+              Edge Computing Orchestration Platform
             </h1>
-            <p className="text-blue-100 text-xl max-w-3xl mx-auto">
-              Transform your DevOps operations with AI-powered automation that eliminates 95% of manual tasks, reduces deployment time by 80%, and ensures 99.9% system reliability.
+            <p className="text-green-100 text-xl max-w-3xl mx-auto">
+              Revolutionize your computing infrastructure with intelligent edge orchestration that reduces latency by 90%, improves performance by 70%, and enables real-time processing across distributed locations.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="#contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+              <Link href="#contact" className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors">
                 Start Free Trial
               </Link>
               <Link href="#demo" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">
@@ -93,18 +93,18 @@ const AIAutonomousDevOpsPlatform = () => {
         {/* Features Section */}
         <section className="py-16 max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Autonomous DevOps Capabilities</h2>
-            <p className="text-gray-600 text-lg">AI-driven automation that handles complex DevOps operations without human intervention</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced Edge Computing Features</h2>
+            <p className="text-gray-600 text-lg">Intelligent orchestration that optimizes computing resources across edge locations</p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
               <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
-                  <Brain className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-500 rounded-lg flex items-center justify-center mb-4">
+                  <Cpu className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature}</h3>
-                <p className="text-gray-600 text-sm">Intelligent automation that learns and adapts to your infrastructure needs</p>
+                <p className="text-gray-600 text-sm">Intelligent edge computing that brings processing power closer to your data sources</p>
               </div>
             ))}
           </div>
@@ -114,8 +114,8 @@ const AIAutonomousDevOpsPlatform = () => {
         <section className="bg-gray-50 py-16">
           <div className="max-w-6xl mx-auto px-6">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Proven DevOps Transformation Results</h2>
-              <p className="text-gray-600 text-lg">Join 300+ engineering teams that have revolutionized their DevOps with AI automation</p>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Edge Computing Performance Results</h2>
+              <p className="text-gray-600 text-lg">Transform your applications with distributed edge computing</p>
             </div>
             
             <div className="grid md:grid-cols-2 gap-8">
@@ -136,7 +136,7 @@ const AIAutonomousDevOpsPlatform = () => {
                 <ul className="space-y-3">
                   {useCases.map((useCase, index) => (
                     <li key={index} className="flex items-center">
-                      <Server className="w-4 h-4 text-blue-500 mr-3" />
+                      <Network className="w-4 h-4 text-green-500 mr-3" />
                       <span className="text-gray-700">{useCase}</span>
                     </li>
                   ))}
@@ -146,36 +146,36 @@ const AIAutonomousDevOpsPlatform = () => {
           </div>
         </section>
 
-        {/* Technical Architecture */}
+        {/* Edge Architecture Overview */}
         <section className="py-16 max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced AI Architecture</h2>
-            <p className="text-gray-600 text-lg">Built on cutting-edge AI and machine learning technologies</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Intelligent Edge Architecture</h2>
+            <p className="text-gray-600 text-lg">Built for distributed computing and real-time processing</p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
-              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center mb-4">
-                <Brain className="w-6 h-6 text-white" />
+              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
+                <Globe className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Machine Learning Engine</h3>
-              <p className="text-gray-600">Advanced ML algorithms that learn from your infrastructure patterns and optimize operations automatically.</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Global Edge Network</h3>
+              <p className="text-gray-600">Distributed edge nodes across multiple geographic locations for optimal performance and redundancy.</p>
             </div>
             
             <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
-                <Shield className="w-6 h-6 text-white" />
+                <Brain className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Security-First Design</h3>
-              <p className="text-gray-600">Built-in security scanning, vulnerability detection, and compliance monitoring for enterprise-grade protection.</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">AI-Powered Orchestration</h3>
+              <p className="text-gray-600">Intelligent resource allocation and workload distribution using machine learning algorithms.</p>
             </div>
             
             <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
               <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-4">
                 <Zap className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Real-time Optimization</h3>
-              <p className="text-gray-600">Continuous monitoring and optimization of your infrastructure for maximum performance and cost efficiency.</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Real-time Processing</h3>
+              <p className="text-gray-600">Ultra-low latency processing capabilities for time-sensitive applications and real-time analytics.</p>
             </div>
           </div>
         </section>
@@ -184,20 +184,20 @@ const AIAutonomousDevOpsPlatform = () => {
         <section className="bg-gray-50 py-16">
           <div className="max-w-6xl mx-auto px-6">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Flexible Pricing Plans</h2>
-              <p className="text-gray-600 text-lg">Choose the plan that scales with your DevOps needs</p>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Edge Computing Pricing Plans</h2>
+              <p className="text-gray-600 text-lg">Scale your edge computing infrastructure with flexible pricing</p>
             </div>
             
             <div className="grid md:grid-cols-3 gap-8">
               {pricing.map((tier, index) => (
-                <div key={index} className={`rounded-xl p-6 shadow-lg ${tier.name === 'Enterprise' ? 'border-2 border-blue-500 bg-blue-50' : 'border border-gray-200 bg-white'}`}>
-                  {tier.name === 'Enterprise' && (
-                    <div className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold mb-4 inline-block">
+                <div key={index} className={`rounded-xl p-6 shadow-lg ${tier.name === 'Edge Enterprise' ? 'border-2 border-green-500 bg-green-50' : 'border border-gray-200 bg-white'}`}>
+                  {tier.name === 'Edge Enterprise' && (
+                    <div className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold mb-4 inline-block">
                       Most Popular
                     </div>
                   )}
                   <h3 className="text-2xl font-semibold text-gray-900 mb-2">{tier.name}</h3>
-                  <div className="text-3xl font-bold text-blue-600 mb-4">{tier.price}</div>
+                  <div className="text-3xl font-bold text-green-600 mb-4">{tier.price}</div>
                   <ul className="space-y-3 mb-6">
                     {tier.details.map((detail, detailIndex) => (
                       <li key={detailIndex} className="flex items-center">
@@ -207,8 +207,8 @@ const AIAutonomousDevOpsPlatform = () => {
                     ))}
                   </ul>
                   <Link href="#contact" className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${
-                    tier.name === 'Enterprise' 
-                      ? 'bg-blue-600 text-white hover:bg-blue-700' 
+                    tier.name === 'Edge Enterprise' 
+                      ? 'bg-green-600 text-white hover:bg-green-700' 
                       : 'bg-gray-900 text-white hover:bg-gray-800'
                   }`}>
                     Get Started
@@ -223,8 +223,8 @@ const AIAutonomousDevOpsPlatform = () => {
         <section id="contact" className="bg-gray-900 text-white py-16">
           <div className="max-w-6xl mx-auto px-6">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Ready to Automate Your DevOps?</h2>
-              <p className="text-gray-300 text-lg">Contact our DevOps automation experts today</p>
+              <h2 className="text-3xl font-bold mb-4">Ready to Deploy Edge Computing?</h2>
+              <p className="text-gray-300 text-lg">Contact our edge computing experts today</p>
             </div>
             
             <div className="grid md:grid-cols-2 gap-8">
@@ -232,15 +232,15 @@ const AIAutonomousDevOpsPlatform = () => {
                 <h3 className="text-2xl font-semibold mb-6">Get in Touch</h3>
                 <div className="space-y-4">
                   <div className="flex items-center">
-                    <Phone className="w-5 h-5 text-blue-400 mr-3" />
+                    <Phone className="w-5 h-5 text-green-400 mr-3" />
                     <a href="tel:+13024640950" className="text-gray-300 hover:text-white">+1 302 464 0950</a>
                   </div>
                   <div className="flex items-center">
-                    <Mail className="w-5 h-5 text-blue-400 mr-3" />
+                    <Mail className="w-5 h-5 text-green-400 mr-3" />
                     <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-white">kleber@ziontechgroup.com</a>
                   </div>
                   <div className="flex items-center">
-                    <MapPin className="w-5 h-5 text-blue-400 mr-3" />
+                    <MapPin className="w-5 h-5 text-green-400 mr-3" />
                     <span className="text-gray-300">364 E Main St STE 1008, Middletown DE 19709</span>
                   </div>
                 </div>
@@ -248,8 +248,8 @@ const AIAutonomousDevOpsPlatform = () => {
               
               <div className="bg-white rounded-xl p-6">
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">Start Your Free Trial</h3>
-                <p className="text-gray-600 mb-4">Experience autonomous DevOps automation with our 14-day free trial</p>
-                <Link href="https://ziontechgroup.com/contact" className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-block">
+                <p className="text-gray-600 mb-4">Experience edge computing orchestration with our 14-day free trial</p>
+                <Link href="https://ziontechgroup.com/contact" className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors inline-block">
                   Start Free Trial
                 </Link>
               </div>
@@ -261,4 +261,4 @@ const AIAutonomousDevOpsPlatform = () => {
   )
 }
 
-export default AIAutonomousDevOpsPlatform
+export default EdgeComputingOrchestrationPlatform
