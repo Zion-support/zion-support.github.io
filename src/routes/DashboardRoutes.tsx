@@ -1,1 +1,80 @@
-import React from 'react'; import { Route, Routes } from 'react-router-dom'; import { ProtectedRoute } from '../components/ProtectedRoute'; import Dashboard from '../pages/dashboard/Dashboard'; import ClientDashboard from '../pages/dashboard/ClientDashboard'; import TalentDashboard from '../pages/dashboard/TalentDashboard'; import CreatorDashboard from '../pages/dashboard/CreatorDashboard'; import Analytics from '../pages/dashboard/Analytics'; import ProjectMilestones from '../pages/dashboard/ProjectMilestones'; import ProjectDetails from '../pages/dashboard/ProjectDetails'; import ProjectRoom from '../pages/dashboard/ProjectRoom'; const DashboardRoutes: React.FC = () => { return ( <Routes> <Route path="/dashboard" element={ <ProtectedRoute> <Dashboard /> </ProtectedRoute> } /> <Route path="/dashboard/client" element={ <ProtectedRoute> <ClientDashboard /> </ProtectedRoute> } /> <Route path="/dashboard/talent" element={ <ProtectedRoute> <TalentDashboard /> </ProtectedRoute> } /> <Route path="/dashboard/creator" element={ <ProtectedRoute> <CreatorDashboard /> </ProtectedRoute> } /> <Route path="/dashboard/analytics" element={ <ProtectedRoute> <Analytics /> </ProtectedRoute> } /> <Route path="/dashboard/projects/:id" element={ <ProtectedRoute> <ProjectDetails /> </ProtectedRoute> } /> <Route path="/dashboard/projects/:id/milestones" element={ <ProtectedRoute> <ProjectMilestones /> </ProtectedRoute> } /> <Route path="/dashboard/projects/:id/room" element={ <ProtectedRoute> <ProjectRoom /> </ProtectedRoute> } /> </Routes> ); }; export default DashboardRoutes;
+<<<<<<< HEAD
+import { Route, Routes  } from 'react-router-dom';
+import { Suspense, lazy } from 'react';
+import { ProtectedRoute } from '../components/ProtectedRoute';
+import LoadingSpinner from '../components/LoadingSpinner';
+
+// Lazy load dashboard pages
+const Dashboard = lazy(() => import('../pages/Dashboard'));
+const ClientDashboard = lazy(() => import('../pages/ClientDashboard'));
+const TalentDashboard = lazy(() => import('../pages/TalentDashboard'));
+const CreatorDashboard = lazy(() => import('../pages/CreatorDashboard'));
+const Analytics = lazy(() => import('../pages/Analytics'));
+const ProjectMilestones = lazy(() => import('../pages/ProjectMilestones'));
+const ProjectDetails = lazy(() => import('../pages/ProjectDetails'));
+const ProjectRoom = lazy(() => import('../pages/ProjectRoom'));
+
+const DashboardRoutes: React.FC = () => {
+  return(<Suspense fallback={<LoadingSpinner />}>
+      <Routes>
+        <Route path="/dashboard" element={
+          <ProtectedRoute>
+            <Dashboard />
+          </ProtectedRoute>
+        } />
+        <Route path="/client-dashboard" element={
+          <ProtectedRoute>
+            <ClientDashboard />
+          </ProtectedRoute>
+        } />
+        <Route path="/talent-dashboard" element={
+          <ProtectedRoute>
+            <TalentDashboard />
+          </ProtectedRoute>
+        } />
+        <Route path="/creator-dashboard" element={
+          <ProtectedRoute>
+            <CreatorDashboard />
+          </ProtectedRoute>
+        } />
+        <Route path="/analytics" element={
+          <ProtectedRoute>
+            <Analytics />
+          </ProtectedRoute>
+        } />
+        <Route path="/project-milestones" element={
+          <ProtectedRoute>
+            <ProjectMilestones />
+          </ProtectedRoute>
+        } />
+        <Route path="/project-details" element={
+          <ProtectedRoute>
+            <ProjectDetails />
+          </ProtectedRoute>
+        } />
+        <Route path="/project-room" element={
+          <ProtectedRoute>
+            <ProjectRoom />
+          </ProtectedRoute>
+        } />
+      </Routes>
+    </Suspense>
+  );
+};
+
+export default DashboardRoutes;
+=======
+import React from "react"
+  );
+export default function Dashboardroutes() {
+  return (
+    <div className="min-h-screen bg-white">
+      <div className="max-w-4xl mx-auto px-6 py-16">
+        <h1 className="text-4xl font-bold text-gray-900 mb-8">Dashboardroutes</h1>
+        <p className="text-lg text-gray-600 mb-8">
+          This is a placeholder component for dashboardroutes.
+        </p>
+      </div>
+  )
+}
+>>>>>>> main

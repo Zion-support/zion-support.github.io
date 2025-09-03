@@ -1,1 +1,5 @@
-describe ("UltimateZionServicesShowcase", () => { it ("renders without crashing", () => { render (<UltimateZionServicesShowcase />) ; expect (screen.getByRole ("main") || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; it ("displays expected content", () => { render (<UltimateZionServicesShowcase />) ;""
+<<<<<<< HEAD
+describe("UltimateZionServicesShowcase", () => { it("renders without crashing", () => { render(<UltimateZionServicesShowcase />) ; expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; it("displays expected content", () => { render(<UltimateZionServicesShowcase />) ;
+=======
+describe("UltimateZionServicesShowcase () => { it(renders without crashing, () => { render(<UltimateZionServicesShowcase />) ; expect(screen.getByRole (main) || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; it(displays expected content", () => { render(<UltimateZionServicesShowcase />) 
+>>>>>>> main
