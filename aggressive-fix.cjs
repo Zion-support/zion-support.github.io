@@ -40,10 +40,9 @@ export default function ${componentName}() {
             Welcome to our ${componentName.toLowerCase()} page
           </p>
         </div>
-         
         <div className="text-center">
-          <Link 
-            to="/contact"  
+          <Link
+            to="/contact"
             className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300"
           >
             Get Started
@@ -59,48 +58,45 @@ import { Link } from "react-router-dom";
 
 export default function ${componentName}() {
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">
+    <div className="min-h-screen bg-gray-50 py-12">;
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+        <div className="text-center">;
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">;
             ${componentName.replace(/([A-Z])/g, " $1").trim()}
-          </h1>
-          <p className="text-xl text-gray-600 mb-12">
-            Welcome to our ${componentName.toLowerCase()} page
-          </p>
-        </div>
-         
-        <div className="text-center">
-          <Link 
-            to="/contact"  
-            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300"
-          >
-            Get Started
-          </Link>
-        </div>
+          </h1>;
+          <p className="text-xl text-gray-600 mb-12">;
+            Welcome to our ${componentName.toLowerCase()} page;
+          </p>;
+        </div>;
+        ;
+        <div className="text-center">;
+          <Link;
+            to="/contact" ;
+            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300";
+          >;
+            Get Started;
+          </Link>;
+        </div>;
       </div>
     </div>
   );
 }`;
   }
- 
   return content;
 }
 
-console.log("Starting aggressive syntax fixes...");
+console.log(`Starting aggressive syntax fixes...`);
 let fixedCount = 0;
-
 filesToRewrite.forEach(filePath => {
   if (fs.existsSync(filePath)) {
     try {
       const content = createBasicPage(filePath);
       fs.writeFileSync(filePath, content, "utf8");
-      console.log("Rewrote: " + filePath);
+      console.log(`Rewrote: ${filePath}`);
       fixedCount++;
     } catch (error) {
-      console.error("Error rewriting " + filePath + ": " + error.message);
+      console.error(`Error rewriting ${filePath}:`, error.message);
     }
   }
 });
-
-console.log("Fixed " + fixedCount + " files.");
+console.log(`Fixed ${fixedCount} files.`);
