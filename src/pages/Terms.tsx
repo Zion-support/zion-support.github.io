@@ -1,72 +1,70 @@
+<<<<<<< HEAD
 import React from 'react';
-import { motion } from 'framer-motion';
-import { FileText, Scale, Shield, AlertTriangle } from 'lucide-react';
+import { SEO } from '../components/SEO';
 
-export default function Terms() {
+const Terms: React.FC = () => {
+  return(<>
+      <SEO title="Terms - Zion Tech Group" />
+      <div className="min-h-screen bg-white py-20">
+        <div className="max-w-4xl mx-auto px-4">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Terms</h1>
+          <p className="text-lg text-gray-600">Content coming soon...</p>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Terms;
+=======
+import React from "react"
+import Head from "next/head"
+import Link from "next/link"
+const Terms = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
-        <div className="container mx-auto px-6 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Terms of <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Service</span>
+    <>
+      <Head>
+        <title>Terms - Zion Tech Group</title>
+        <meta name="description" content="Professional Terms services"  />
+      </Head>
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-8">
+              Terms
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Please read these terms carefully before using our services. By using our services, 
-              you agree to be bound by these terms.
+            <p className="text-xl text-gray-600 mb-12">
+              Professional Terms services and solutions
             </p>
-          </motion.div>
-        </div>
-      </section>
-
-      <section className="py-16">
-        <div className="container mx-auto px-6 max-w-4xl">
-          <div className="bg-white/5 border border-white/10 rounded-xl p-8">
-            <div className="prose prose-invert max-w-none">
-              <h2 className="text-2xl font-bold text-white mb-4">Acceptance of Terms</h2>
-              <p className="text-gray-300 mb-6">
-                By accessing and using Zion Tech Group's services, you accept and agree to be bound 
-                by the terms and provision of this agreement.
-              </p>
-
-              <h2 className="text-2xl font-bold text-white mb-4">Use License</h2>
-              <p className="text-gray-300 mb-6">
-                Permission is granted to temporarily download one copy of the materials on Zion Tech Group's 
-                website for personal, non-commercial transitory viewing only.
-              </p>
-
-              <h2 className="text-2xl font-bold text-white mb-4">Disclaimer</h2>
-              <p className="text-gray-300 mb-6">
-                The materials on Zion Tech Group's website are provided on an 'as is' basis. 
-                Zion Tech Group makes no warranties, expressed or implied, and hereby disclaims 
-                and negates all other warranties.
-              </p>
-
-              <h2 className="text-2xl font-bold text-white mb-4">Limitations</h2>
-              <p className="text-gray-300 mb-6">
-                In no event shall Zion Tech Group or its suppliers be liable for any damages 
-                (including, without limitation, damages for loss of data or profit, or due to 
-                business interruption) arising out of the use or inability to use the materials.
-              </p>
-
-              <h2 className="text-2xl font-bold text-white mb-4">Contact Information</h2>
-              <p className="text-gray-300 mb-6">
-                If you have any questions about these Terms of Service, please contact us at:
-              </p>
-              <div className="flex items-center gap-2 text-cyan-400">
-                <Mail className="w-4 h-4" />
-                <span>kleber@ziontechgroup.com</span>
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h2 className="text-2xl font-semibold mb-4">Our Services</h2>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Professional Solutions</li>
+                  <li>• Expert Implementation</li>
+                  <li>• 24/7 Support</li>
+                  <li>• Custom Development</li>
+                </ul>
               </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Industry Expertise</li>
+                  <li>• Proven Results</li>
+                  <li>• Scalable Solutions</li>
+                  <li>• Competitive Pricing</li>
+                </ul>
+              </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                View Pricing
+              </Link>
+              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
+                Contact Us
+              </Link>
             </div>
-          </div>
-        </div>
-      </section>
-    </div>
+    </>
   );
 }
+export default Terms
+>>>>>>> main
