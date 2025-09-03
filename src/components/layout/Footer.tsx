@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import {
 
   Mail, 
@@ -61,7 +61,7 @@ import {
   Leaf
 } from 'lucide-react';
 
-export function Footer() {
+export default function Footer() {
 
   const currentYear = new Date().getFullYear();
 
@@ -219,7 +219,7 @@ export function Footer() {
               {quickLinks.map((link) => (
                 <li key={link.name}>
                   <Link
-                    to={link.href}
+                    href={link.href}
                     className="text-gray-300 hover:text-zion-purple transition-colors text-sm flex items-center space-x-2 group"
                   >
                     <link.icon className="h-4 w-4 group-hover:text-zion-purple" />
@@ -290,7 +290,7 @@ export function Footer() {
                   {section.links.slice(0, 5).map((link) => (
                     <li key={link.name}>
                       <Link
-                        to={link.href}
+                        href={link.href}
                         className="text-gray-300 hover:text-zion-purple transition-colors text-sm flex items-center space-x-2 group"
                       >
                         <link.icon className="h-4 w-4 group-hover:text-zion-purple" />
@@ -312,11 +312,11 @@ export function Footer() {
             <div className="flex items-center space-x-4 text-sm text-gray-400">
               <span>&copy; {currentYear} Zion Tech Group. All rights reserved.</span>
               <span>•</span>
-              <Link to="/privacy" className="hover:text-zion-purple transition-colors">
+              <Link href="/privacy" className="hover:text-zion-purple transition-colors">
                 Privacy Policy
               </Link>
               <span>•</span>
-              <Link to="/terms" className="hover:text-zion-purple transition-colors">
+              <Link href="/terms" className="hover:text-zion-purple transition-colors">
                 Terms of Service
               </Link>
             </div>
