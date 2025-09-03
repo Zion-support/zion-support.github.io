@@ -6,7 +6,7 @@ from functools import wraps
 from models import db
 # Now that db is initialized with app, import all the models that use this db instance (ensure User, Course, Enrollment, Certificate are here)
 from models import User, Category, Course, Lesson, Quiz, Question, Enrollment, Certificate, LessonCompletion
-from seed_db import seed_data # Assuming seed_db.py is in the same directory
+# Avoid importing seed_db at module import time to prevent circular imports
 from forms import RegistrationForm, LoginForm # Make sure forms.py is in zion_academy directory
 
 app = Flask(__name__)
@@ -44,7 +44,9 @@ def course_list():
     try:
         # Ensure app context for DB operations, especially if called outside a request context sometimes
         with app.app_context():
-            courses_data = Course.query.all()
+            courses_data = Course.query.options(
+                db.selectinload(Course.category)
+            ).all()
     except Exception as e:
         # This error is common if 'flask init-db' hasn't been run yet
         print(f"Error fetching courses: {e}. Run 'flask init-db' if you haven\'t already.") # Escaped apostrophe
@@ -53,6 +55,8 @@ def course_list():
 @app.cli.command('seed-db')
 def seed_db_command():
     """Seeds the database with initial sample data."""
+    # Lazily import to avoid circular import at module level
+    from seed_db import seed_data
     seed_data()
     # No need to print here, seed_data() already prints messages.
     print('Database seeding process initiated from CLI command.')
@@ -62,9 +66,16 @@ def course_detail(course_id):
     course = None
     try:
         with app.app_context():
-            # Query for the course by ID, and also eagerly load its lessons
-            # and category to avoid separate queries in the template.
-            course = Course.query.options(db.joinedload(Course.lessons), db.joinedload(Course.category)).get(course_id)
+            # Eagerly load related category and lessons to avoid detached instances in templates
+            course = (
+                db.session.query(Course)
+                .options(
+                    db.selectinload(Course.category),
+                    db.selectinload(Course.lessons),
+                )
+                .filter(Course.id == course_id)
+                .first()
+            )
     except Exception as e:
         print(f"Error fetching course {course_id}: {e}")
 
