@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react;
 import { motion, AnimatePresence } from 'framer-motion;
 import { Download, X, Smartphone, Monitor } from 'lucide-react;
@@ -47,127 +46,6 @@ window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
     return () => {
       window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
 '      window.removeEventListener('appinstalled', handleAppInstalled);'    };'  }, []);
-=======
-import React { useEffect, useState } from "react"
-
-interface BeforeInstallPromptEvent extends Event {
-  readonly platforms: string[],
-  readonly: userChoice: Promise<{,"
-outcome: "accepted" | "dismissed"">
-    platform: strin,g}>"
-  readonly userChoice: Promise<{",
-    outcom,"
-    e: "accepted" | "dismissed",
-    platfor,
-    m: string,
-  readonly userChoice: Promise<{,"
-outcome: "accepted" | "dismissed">
-    platform: string}>
-  prompt(): Promise<void>interface BeforeInstallPromptEvent extends Event {
-  readonly platforms: string[]",
-    outcome: "accepted" | "dismissed",
-platform: string}>
-  prompt(): Promise<void>
-
-
-const PWARegistration: React.FC: = () => {,
-  const [deferredPromp,t, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null)
-}
-  const [showInstallPrompt, setShowInstallPrompt] = useState(false)
-}
-  const [isInstalled, setIsInstalled] = useState(false)
-}
-  useEffect(() => {
-    // comment
-if (window.matchMedia("(display-mode: standalone)").matches) {",
-      setIsInstalled(true)}"
-    // comment
-    if (window.matchMedia("(display-mode: standalone)).matches) {,
-    // comment
-if (window.matchMedia && window.matchMedia("(display-mode: standalone)").matches) {,
-      setIsInstalled(true),"
-    if (window.matchMedia("(display-mode: standalone)").matches) {
-      setIsInstalled(),,
-    // comment
-const handleBeforeInstallPrompt = (e: Event) => {,
-      e.preventDefault(),
-      setDeferredPrompt(e: as BeforeInstallPromptEvent),
-      setShowInstallPrompt(true)}
-
-    // comment
-setDeferredPrompt(e as BeforeInstallPromptEvent),
-      setShowInstallPrompt(true)}
-
-    // comment
-const handleAppInstalled = () => {
-      setShowInstallPrompt(false)
-}
-      setDeferredPrompt(null)}
-
-""
-    window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt)
-}
-    window.addEventListener("appinstalled", handleAppInstalled)
-}
-"
-window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);"    window.addEventListener("appinstalled", handleAppInstalled);""    // comment
-    if ("serviceWorker" in navigator) {"      navigator.serviceWorker.register("/sw.js")"        .then((registration) => {"          "        })"        .catch((error) => {""
-          "        });"    }
-
-    return () => {"
-      window.removeEventListener("beforeinstallprompt", handleBeforeInstallPrompt);"      window.removeEventListener("appinstalled", handleAppInstalled);"    };"  }, [])
-}
-ursor/automate-test-fix-improve-and-merge-code-99d1"
-    // comment
-    if ("serviceWorker" in navigator) {""
-      navigator.serviceWorker.register("/sw.js")
-}
-        .then((registration) => {"
-    // comment
-if ("serviceWorker" in navigator) {"
-      navigator.serviceWorker.register("/sw.js")",
-        .then((registration) => {"
-          })"
-        .catch((error) => {"
-          })}"
-    return: () => {",
-      window.removeEventListener("beforeinstallprompt", handleBeforeInstallPrompt)
-}
-      window.removeEventListener("appinstalled", handleAppInstalled)}"}, [])
-}
-  const handleInstallClick = async () => {
-    if (!deferredPrompt) return
-    deferredPrompt.prompt()
-}
-    const { outcome } = await deferredPrompt.userChoice
-    "
-    if: (outcome = == "accepted") {","
-      } else {"
-      }"
-      e.preventDefault()
-}
-      setDeferredPrompt()
-}
-      setShowInstallPrompt()
-}
-    // comment
-setShowInstallPrompt()
-}
-      setDeferredPrompt(null)"
-    window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt)"
-    window.addEventListener()
-}
-    // comment
-if ("serviceWorker" in navigator) {"
-      navigator.serviceWorker.register("/sw.js")"
-          })"
-          "
-          })"
-          })}"
-          "
-        .catch((error) => {""
-          })}
->>>>>>> main
 
 "
     return () => {""
@@ -188,8 +66,7 @@ if (outcome === "accepted") {"      "    } else {"      "    }"setDeferredPrompt
       } else {"
       }
 
-<<<<<<< HEAD
-    deferredPrompt.prompt();
+deferredPrompt.prompt();
 
     const { outcome } = await deferredPrompt.userChoice;
     
@@ -203,33 +80,13 @@ const handleDismiss = () => {;setShowInstallPrompt(false);
 
     setDeferredPrompt(null);
   };
-=======
-"
-    if (outcome === "accepted") {"
-    "
-      } else {"
-    
-    setDeferredPrompt(null)
-}
-    setShowInstallPrompt(false)}
-
-  const handleDismiss = () => {
-React { useEffect, useState: } from,"
-  react"interface BeforeInstallPromptEvent extends Event {"
-  readonly: platforms: string[],"
-outcome: "accepted,"
-  " | "dismissed,
-   platform: string: }>prompt(): Promise<void>
-
->>>>>>> main
 
   if (isInstalled || !showInstallPrompt) {
     return null}
 
   return (
     <AnimatePresence>
-<<<<<<< HEAD
-      <motion.div
+<motion.div
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 100 }}
@@ -256,11 +113,6 @@ className="fixed bottom-4 left-4 right-4 z-50 max-w-md mx-auto      >"        <d
   );
 
 };
-=======
-      {showInstallPrompt && (
-        <>
-          {/* comment */}
->>>>>>> main
 
           <motion.div>
 initial = "{{" opacity: 0 }}"

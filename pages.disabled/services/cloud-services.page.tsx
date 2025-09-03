@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
 import { Cloud, Server, Shield, Zap, CheckCircle, ArrowRight, Database, Globe, Lock, TrendingUp } from 'lucide-react';
@@ -192,14 +191,9 @@ const CloudServices: NextPage = () => {
             <h2 className="text-4xl font-bold text-white mb-4">
               Ready to Move to the Cloud?
             </h2>
-<<<<<<< HEAD
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+<p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
               Let our cloud experts help you design, migrate, and optimize your cloud infrastructure 
               for maximum performance and cost efficiency.
-=======
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Let&apos;s discuss your cloud strategy and create a migration plan that transforms your business.
->>>>>>> origin/main
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link
@@ -223,16 +217,4 @@ const CloudServices: NextPage = () => {
   );
 };
 
-export default CloudServices;
-=======
-
-export default function CloudServices() {
-  return (
-    <main className="max-w-4xl mx-auto px-4 py-16">
-      <h1 className="text-3xl font-bold mb-4">Cloud Services</h1>
-      <p className="text-gray-700">Architecture, migration, and SRE.</p>
-    </main>
-  );
-}
-
->>>>>>> main
+export default CloudServices; main

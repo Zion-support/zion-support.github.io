@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -20,37 +19,6 @@ export function ChatBotPanel() {}
 """"
             id: "welcome",""""
             content: "Hi! How can I help you?",""""
-=======
-import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { ScrollArea } from '@/components/ui/scroll-area';
-import { toast } from '@/components/ui/use-toast';
-import { useTheme } from '@/hooks/useTheme';
-import { cn } from '@/lib/utils';
-import { apiClient } from '@/utils/apiClient';
-import { Loader2, Send import { useEffect, useRef, useState } from 'react';
-import { ChatMessage } from './ChatMessage';
- from '@/components/ui/button';"
-import { Input } from '@/components/ui/input';"
-import { ScrollArea } from '@/components/ui/scroll-area';"
-import { toast } from '@/components/ui/use-toast';"
-import { useTheme } from '@/hooks/useTheme';"
-import { cn } from '@/lib/utils';"
-import { apiClient } from '@/utils/apiClient';"
-import { Loader2, Send import { useEffect, useRef, useState } from 'react';"
-import { ChatMessage } from './ChatMessage';"
-import { QuickReplyButton } from './QuickReplyButton';
-,"
-    { id: "match", text: "How do I get matched?" },"
-    { id: "billing", text: "Billing help" },
-];
-export function ChatBotPanel() {
-    const [messages, setMessages] = useState([{
-"
-            id: "welcome","
-            content: "Hi! How can I help you?","
->>>>>>> main
             sender: "bot",
             timestamp: new Date()},
     ]);"

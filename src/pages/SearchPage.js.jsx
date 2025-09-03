@@ -3,6 +3,7 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
 import { generateSearchSuggestions } from "@/data/marketplaceData";
 import { useAISearch } from "@/hooks/useAISearch";
+
 export default function SearchPage() {
     const [params] = useSearchParams();
     const navigate = useNavigate();
@@ -10,14 +11,18 @@ export default function SearchPage() {
     const [query, setQuery] = useState(initial);
     const { results, loading, search } = useAISearch();
     const suggestions = generateSearchSuggestions();
+    
     useEffect(() => {
         if (initial) {
-            search(initial)}
-    }, [initial]);
+            search(initial);
+        }
+    }, [initial, search]);
+    
     const handleSubmit = (e) => {
         e.preventDefault();
-        router(`/search?q=${encodeURIComponent(query)}`);
-        search(query)};
+        navigate(`/search?q=${encodeURIComponent(query)}`);
+        search(query);
+    };
     return (<main className="container mx-auto px-4 py-8">
         <form onSubmit={handleSubmit} className="mb-6">
           <EnhancedSearchInput value={query} onChange={setQuery} searchSuggestions={suggestions} placeholder="Search talent, jobs, and projects..."/>
@@ -34,15 +39,5 @@ export default function SearchPage() {
                 <p className="text-zion-slate-light">{r.description}</p>
               </div>))}
           </div>)}
-      </main>)}
-
-
-export { SearchPage };
-
-export { SearchPage };
-
-export { SearchPage };
-
-export { SearchPage };
-
-export { SearchPage };
+      </main>);
+}

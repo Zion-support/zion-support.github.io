@@ -1,12 +1,9 @@
-<<<<<<< HEAD
-=======
 // comment
 export interface offlineshimsdType {
   id: string
   name: string
   createdAt: Date
 }
-<<<<<<< HEAD
   interface IntrinsicElements {
 
     [elemName: string]: ;
@@ -60,7 +57,3 @@ declare module 'zod' {
 
 export default useEffect;
 export default useRef;
-=======
-  updatedAt: Date,export default offlineshimsdType
->>>>>>> main
->>>>>>> main

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 interface MimeTypeMapping {
   [key: string]: string}
 class MimeTypeFallback {
@@ -169,4 +167,3 @@ class MimeTypeFallback {
 
 export default mimeTypeFallback;
 '"`
->>>>>>> main

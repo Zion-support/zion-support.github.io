@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from "react";
 import { SEO  } from "@/components/SEO";
 export default function AppMinimal() {return (;
@@ -18,4 +16,3 @@ export default function AppMinimal() {return (;
       </div>
   )
 }
->>>>>>> main

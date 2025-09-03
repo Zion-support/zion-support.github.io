@@ -897,8 +897,7 @@ insights to optimize your business performance and make data-driven""
             </Button>
           </div>
       </motion.div>
-<<<<<<< HEAD
-    </div>)};
+</div>)};
 export default AdvancedAnalyticsDashboard;
 
 
@@ -911,17 +910,3 @@ export { AdvancedAnalyticsDashboard };
 export { AdvancedAnalyticsDashboard };
 
 export { AdvancedAnalyticsDashboard };
-=======
-    </div>)}
-
-export default AdvancedAnalyticsDashboard,export { AdvancedAnalyticsDashboard }
-;
-export { AdvancedAnalyticsDashboard }
-;
-export { AdvancedAnalyticsDashboard }
-;
-export { AdvancedAnalyticsDashboard }
-
-"
-export { AdvancedAnalyticsDashboard }"""""
->>>>>>> main

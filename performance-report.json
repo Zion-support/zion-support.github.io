@@ -1,53 +1,6 @@
 {
-<<<<<<< HEAD
-  "timestamp": "2025-09-01T12:00:42.429Z",
+"timestamp": "2025-09-01T12:00:42.429Z",
   "buildSize": 0,
   "largeFiles": [],
   "summary": "Performance monitoring completed"
-=======
-  },
-  "build: {
-    hasBuildArtifacts": true,
-    "buildTime: 0,
-    bundleSize": 0,
-    "scripts: [
-      pm2: start",
-      "pm2: stop,
-      pm2: restart",
-      "pm2: status,
-      pm2: logs",
-      "sitemap,
-      pm2: fastads:start",
-      "pm2: fastads:restart,
-      pm2: fastads:stop",
-      "pm2: cron:start,
-      pm2: cron:restart",
-      "pm2: cron:stop,
-      pm2: bootstrap:logrotate",
-      "functions: run,
-      functions: run:execute",
-      "front: advertise,
-      deps: maintain",
-      "deps: cron:start,
-      netlify: manifest",
-      "netlify: trigger,
-      readme: generate",
-      "search: index,
-      content: fix",
-      "perf: monitor,
-      perf: audit",
-      "dev,
-      build",
-      "start,
-      lint",
-      "lint: fix,
-      type-check",
-      "analyze,
-      format",
-      "format: check,
-      test",
-      "test: watch,
-      test:coverage"
-    ]
->>>>>>> main
 }

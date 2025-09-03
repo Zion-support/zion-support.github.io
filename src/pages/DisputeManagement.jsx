@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 ;
 export default function DisputeManagement() {
@@ -426,6 +425,3 @@ export { DisputeManagement };
 export { DisputeManagement };
 
 export { DisputeManagement };
-=======
-import React from 'react'; export default function DisputeManagement () { const [activeTab, setActiveTab] = useState("overview"); return (<> <SEO title="Dispute Management | Zion Tech Group" description="Admin dashboard for managing and resolving marketplace disputes and conflicts" keywords="dispute management, admin dashboard, conflict resolution, marketplace admin, Zion Tech Group" canonical="https:
->>>>>>> main

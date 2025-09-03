@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect, createContext, useContext } from 'react';'''
 import { motion, AnimatePresence } from 'framer-motion';
 import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X } from 'lucide-react';
@@ -34,15 +33,6 @@ export const AccessibilityProvider = ({ children }) => {}
       setFontSize(settings.fontSize || 'medium');'
       setColorBlindMode(settings.colorBlindMode || 'none');
     }
-=======
-<<<<<<< HEAD
-import React from 'react'; const AccessibilityContext = createContext(null); export const useAccessibility = () => { const context = useContext(AccessibilityContext); if(!context) { throw new Error(" "useAccessibility must be used within an AccessibilityProvider" ); } return context; };
-=======
-import React from "react"; const AccessibilityContext = createContext(null); export const useAccessibility = () => { const context = useContext(AccessibilityContext); if(!context) { throw new Error(" "useAccessibility must be used within an AccessibilityProvider" )} return context};" const AccessibilityContext = createContext(null); export const useAccessibility = () => { const context = useContext(AccessibilityContext); if(!context) { throw new Error(" "useAccessibility must be used within an AccessibilityProvider" )} return context}
-
-<<<<<<< HEAD
-export default function Page() {
->>>>>>> main
   }, []);
   // Save settings to localStorage
   useEffect(() => {
@@ -53,7 +43,6 @@ export default function Page() {
   };
 }, []);, []);
     const settings = {
-=======
 "
 ;,"});,"})"
  const AccessibilityContext = createContext (null) ; export const useAccessibility = () => { const context = useContext (AccessibilityContext) ; if (!context) { throw new Error (" "useAccessibility must be used within an AccessibilityProvider") } return context};"""";,"});,"})"
@@ -451,7 +440,6 @@ export default AccessibilityPanel;""";,"});,"})"
  const AccessibilityContext = createContext (null)  export const useAccessibility = () => { const context = useContext (AccessibilityContext)  if (!context) { throw new Error (" "useAccessibility must be used within an AccessibilityProvider")  } return context }";import React, { useState, useEffect, createContext, useContext }  from "react,
 const AccessibilityContext = createContext()"
 export const useAccessibility = () => {}
->>>>>>> main
 
   const context = useContext(AccessibilityContext)"
   if (!context) {}""
@@ -494,8 +482,7 @@ useEffect(() => {}"
     const settings = {}"
       highContrast, reducedMotion,""
       fontSize,
-<<<<<<< HEAD
-      colorBlindMode};
+colorBlindMode};
     localStorage.setItem('
       'zion-accessibility-settings',
       JSON.stringify(settings)
@@ -512,9 +499,6 @@ useEffect(() => {}"
     const root = document.documentElement;
     // High contrast mode
     if(highContrast) {
-=======
-      colorBlindMode}
->>>>>>> main
 
     localStorage.setItem()
 }
@@ -568,8 +552,7 @@ if (reducedMotion) {}""
     </AccessibilityContext.Provider>
   )}
 
-<<<<<<< HEAD
-    highContrast,
+highContrast,
     reducedMotion,
     fontSize,
     colorBlindMode,
@@ -586,10 +569,6 @@ if (reducedMotion) {}""
   };
 }, []);, []);
     const handleKeyDown = event => {
-=======
-// comment
-export const AccessibilityPanel = () => {}
->>>>>>> main
 
   const [isOpen, setIsOpen] = useState()
 }
@@ -877,8 +856,7 @@ const firstFocusableElement = focusableContent[0]
       if (e.key === "Tab") {}
         if(e.shiftKey) {}
 
-<<<<<<< HEAD
-  useEffect(() => {
+useEffect(() => {
   // TODO: Add dependencies if needed
 
   return () => {
@@ -893,9 +871,6 @@ const firstFocusableElement = focusableContent[0]
     const firstFocusableElement = focusableContent[0];
     const lastFocusableElement = focusableContent[focusableContent.length-1];
     const handleTabKey = e => {
-=======
-          if(document.activeElement === firstFocusableElement) {}
->>>>>>> main
 
             e.preventDefault()
 }            lastFocusableElement.focus()}
@@ -925,4 +900,3 @@ export const SrOnly = ({ children }) => (""""
 )"
 export default AccessibilityPanel""
 """"'""
->>>>>>> main

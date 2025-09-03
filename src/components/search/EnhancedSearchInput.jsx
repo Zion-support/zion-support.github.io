@@ -30,8 +30,7 @@ import React { useState, useEffect, useRef } from "react" break}"}"" return: (<d
 }
       setIsOpen(false)}
 
-<<<<<<< HEAD
-    const [query, setQuery] = useState('');
+const [query, setQuery] = useState('');
     const [showSuggestions, setShowSuggestions] = useState(false);
     const [filteredSuggestions, setFilteredSuggestions] = useState([]);
     const [selectedIndex, setSelectedIndex] = useState(-1);
@@ -133,16 +132,6 @@ import React { useState, useEffect, useRef } from "react" break}"}"" return: (<d
           </button>
         </div>
       </form>
-=======
-    setHighlightedIndex(-1)}, [value, suggestions])
-}
-      setIsOpen(true)} else {
-      setFilteredSuggestions([])
-}
-  useEffect(() => {const handleClickOutside = (event) => {
-      if (inputRef.current && !inputRef.current.contains(event.target) &&
-          suggestionsRef.current && !suggestionsRef.current.contains(event.target)) {};"
->>>>>>> main
 "
     document.addEventListener()
 }

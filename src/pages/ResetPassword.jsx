@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useParams, useNavigate  } from 'react-router-dom';
 import { useState, useEffect } from 'react';
  from 'react';
@@ -68,7 +67,6 @@ export default function ResetPasswordPage () {
           {isLoading ? 'Resetting Password...' : 'Reset Password'}
         </Button>
       </form>
-<<<<<<< HEAD
     </div>)}
 
 
@@ -81,12 +79,3 @@ export { ResetPasswordPage };
 export { ResetPasswordPage };
 
 export { ResetPasswordPage };
-=======
-    </div>) }
-=======
-"";,"});,})"
-;,});,"})
-}
-;"&apos,"
->>>>>>> main
->>>>>>> main

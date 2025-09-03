@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-
-
-  'Quantum Computing Hardware',;
+'Quantum Computing Hardware',;
   'Data Science Consulting',;
   'Blockchain Development Service',;
   'Machine Learning Platform',;
@@ -24,7 +21,6 @@
   ['DevOps',Automation',CI/CD'],;
   ['Network',Security',Threat Detection'];
 ];
-<<<<<<< HEAD
 '
 const sampleImages: unknown = [;''
   'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80',;''
@@ -41,26 +37,8 @@ const categories: Array<any> = [''
   'TechCorp Solutions','''
   'SecureNet Professionals',;'''
 '''
-=======
 
 
-  'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80',;
-  'https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',;
-  'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',;
-  'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',;
-  'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',;
-  'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80';];
-=======
-<<<<<<< HEAD
-import { MarketplaceItem } from '@/src/data/marketplaceData'; const sampleTitles = ['AI-Powered Analytics Platform', 'Cybersecurity Assessment Tool', 'Cloud Migration Service', 'IoT Edge Computing Solution', 'Quantum Computing Hardware', 'Data Science Consulting', 'Blockchain Development Service', 'Machine Learning Platform', 'DevOps Automation Tool', 'Network Security Solution' ]; const sampleDescriptions = ['Advanced analytics platform powered by artificial intelligence for business intelligence and data insights.', 'Comprehensive cybersecurity assessment and monitoring solution for enterprise environments.', 'Professional cloud migration service including planning, execution, and optimization.', 'IoT platform with edge computing capabilities for real-time data processing.', 'State-of-the-art quantum computing components for research and development.', 'Expert data science consulting services for machine learning and analytics projects.', 'Blockchain development and implementation services for decentralized applications.', 'Machine learning platform with pre-trained models and custom training capabilities.', 'DevOps automation tools for continuous integration and deployment pipelines.', 'Network security solution with advanced threat detection and prevention.' ]; const sampleTags = [['AI', 'Analytics', 'Business Intelligence'], ['Security', 'Cybersecurity', 'Monitoring'], ['Cloud', 'Migration', 'Enterprise'], ['IoT', 'Edge Computing', 'Real-time'], ['Quantum', 'Research', 'Hardware'], ['Data Science', 'Machine Learning', 'Consulting'], ['Blockchain', 'Development', 'DApps'], ['Machine Learning', 'AI', 'Platform'], ['DevOps', 'Automation', 'CI/CD'], ['Network', 'Security', 'Threat Detection'] ]; const sampleImages = [ 'https:
-=======
-// comment
-export const generateRandomListing = {}
->>>>>>> main
-
-
-<<<<<<< HEAD
->>>>>>> main
   '$500',$1,200',$2,500',$5,000',$8,500',$15,000',$25,000',$50,000';
 ];
 
@@ -115,7 +93,3 @@ export function generateRandomListings(count: number): MarketplaceItem[] {
     listings.push(generateRandomListing());
 
   return listings}}}'`
-=======
-export default generateRandomListing
->>>>>>> main
->>>>>>> main

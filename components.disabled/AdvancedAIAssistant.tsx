@@ -453,11 +453,9 @@ const AdvancedAIAssistant: React.FC = () => {
           viewport={{ once: true }}
         >
           <div className="text-center mb-16">
-=======
           viewport={{ once: true }}"
           className="text-center mb-16"
         >"
->>>>>>> 910bea804001eb0b17e31c13b5a609089795a3c6
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             AI Assistant
           </h2>"
@@ -466,12 +464,7 @@ const AdvancedAIAssistant: React.FC = () => {
             language processing, and smart recommendations to enhance
             productivity and decision-making.
           </p>
-<<<<<<< HEAD
-        </MDiv>
-=======
-          </div>
-        </motion.div>
->>>>>>> de53bf8378219a66d51babb546e4224272a450d7
+</MDiv>
 
         {/* Quick Stats */}
         <MDiv
@@ -484,7 +477,6 @@ const AdvancedAIAssistant: React.FC = () => {
           <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl border border-gray-700/50 p-6 backdrop-blur-sm">
             <div className="flex items-center justify-between mb-4">
               <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center">
->>>>>>> 910bea804001eb0b17e31c13b5a609089795a3c6
                 <Bot className="w-6 h-6 text-white" />
               </div>"
               <div className="text-right">"

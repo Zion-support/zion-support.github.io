@@ -5,41 +5,24 @@
     {
       "type": "build",
       "message": "\n> zion-tech-group@0.1.0 build\n> next build\n\n   ▲ Next.js 15.5.2\n   - Environments: .env\n   - Experiments (use with caution):\n     ✓ optimizeCss\n     · optimizePackageImports\n\n   Skipping validation of types\n   Skipping linting\n   Creating an optimized production build ...\n ✓ Compiled successfully in 2.4s\n   Collecting page data ...\n   Generating static pages (0/3) ...\n ✓ Generating static pages (3/3)\n   Finalizing page optimization ...\n   Collecting build traces ...\n",
-<<<<<<< HEAD
-      "timestamp": 1756728204914
+"timestamp": 1756728204914
     }
-=======
-      "timestamp": 1756728204914}
->>>>>>> main
   ],
   "fixes": [
     {
       "type": "cache",
       "description": "Cleared build cache",
-<<<<<<< HEAD
-      "timestamp": 1756728204921
+"timestamp": 1756728204921
     },
     {
       "type": "config",
       "description": "Fixed TypeScript configuration",
       "timestamp": 1756728208040
     }
-=======
-      "timestamp": 1756728204921},
-    {
-      "type": "config",
-      "description": "Fixed TypeScript configuration",
-      "timestamp": 1756728208040}
->>>>>>> main
   ],
   "summary": {
     "totalErrors": 1,
     "totalFixes": 2,
-<<<<<<< HEAD
-    "success": false
+"success": false
   }
 }
-=======
-    "success": false}
-}
->>>>>>> main

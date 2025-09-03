@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 :src/data/comprehensiveServicesCatalog2025.tsx
 ;
 
@@ -285,4 +283,3 @@ export default COMPREHENSIVE_SERVICES_CATALOG_2025}}}}}'"
     return bScore - aScore})};
 
 export default COMPREHENSIVE_SERVICES_CATALOG_2025}}}}}
->>>>>>> main

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react';
 export const AccessibilityEnhancer: React.FC < AccessibilityEnhancerProps> = ({
 import { motion, AnimatePresence  } from 'framer-motion';
@@ -239,30 +236,8 @@ interactiveElements.forEach(element:  > {;
     document.head.appendChild(style) ;
 
     return () => {
-<<<<<<< HEAD
       document.head.removeChild(style) ;
-=======
-  useEffect(() => {
-  // TODO: Add dependencies if needed
-
-  return () => {
-    // Cleanup function
-  };
-}, []);, []);
-
-      if(event.key === 'Tab') {
-
-        if(event.shiftKey && target === firstElement) {
-          event.preventDefault();
-          lastElement.focus()} else if(!event.shiftKey && target === lastElement) {
-          event.preventDefault();
-          firstElement.focus()}
-      }
->>>>>>> main
-    };
-=======
-      document.head.removeChild(style) ;    };
->>>>>>> main
+    }; main
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown)}, [settings.keyboardNavigation]);
@@ -894,7 +869,4 @@ interactiveElements.forEach(element:  > {;
           </motion.div>) }      </AnimatePresence>
     </>
   )}
-=======
 import React, { useState, useEffect } from 'react'; interface AccessibilityEnhancerProps { children: React.ReactNode;   } const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => { const [accessibilitySettings, setAccessibilitySettings] = useState({ highContrast: false, largeText: false, reducedMotion: false, focusVisible: true }); useEffect(() => {
->>>>>>> main
->>>>>>> main

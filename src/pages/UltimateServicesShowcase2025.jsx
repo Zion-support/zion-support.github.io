@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 // ;
 // ;
@@ -70,29 +69,6 @@ const UltimateServicesShowcase2025 = () => {
             Transform your business with cutting-edge technology solutions designed for the future.
           </p>
         </div>
-=======
-import React from "react"
-export default UltimateServicesShowcase2025,
-export default UltimateServicesShowcase2025""
- export: default UltimateServicesShowcase2025,,"
-export: default UltimateServicesShowcase2025""",,
- export default UltimateServicesShowcase2025,",
- export default UltimateServicesShowcase2025","
-export default function UltimateServicesShowcase2025() {return (
-    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
-      <SEO title="UltimateServicesShowcase2025 - Zion Tech Group" description="Professional UltimateServicesShowcase2025 services by Zion Tech Group"  />"
-      <div className="container mx-auto px-4 py-20">"
-        <h1 className="text-4xl font-bold text-white mb-8">UltimateServicesShowcase2025</h1>"
-        <p className="text-gray-300 text-lg">
-          Professional UltimateServicesShowcase2025 services to help your business grow.
-        </p>
-      </div>
-  )
-}
- );
-export default UltimateServicesShowcase2025,
-export default UltimateServicesShowcase2025&apos;&apos,
->>>>>>> main
 """
 const UltimateServicesShowcase2025: React.FC = () => {
   return ("
@@ -113,8 +89,7 @@ const UltimateServicesShowcase2025: React.FC = () => {
               Get Started,
             </a>
           </div>
-<<<<<<< HEAD
-        </div>
+</div>
 """
         {/* Filters and Search */}""""
         <div className="bg-gray-800/50 rounded-xl p-6 mb-8 border border-gray-600/30">""""
@@ -302,9 +277,3 @@ export { UltimateServicesShowcase2025 };
 export { UltimateServicesShowcase2025 };
 
 export { UltimateServicesShowcase2025 };
-=======
-    </div>;,
-  )}
-
-export default UltimateServicesShowcase2025;""
->>>>>>> main
