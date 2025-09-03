@@ -17,9 +17,10 @@ function Header(): any {
         
         <div className="header-nav-links">
           <Link href="/" className="header-nav-link">Home</Link>
-          <Link href="/services" className="header-nav-link">All Services</Link>
-          <Link href="/services-catalog" className="header-nav-link">Catalog</Link>
-          <Link href="/pricing" className="header-nav-link">Pricing</Link>
+          <Link href="/solutions" className="header-nav-link">Solutions</Link>
+          <Link href="/services" className="header-nav-link">Services</Link>
+          <Link href="/about" className="header-nav-link">About</Link>
+          <Link href="/careers" className="header-nav-link">Careers</Link>
           <Link href="/contact" className="header-nav-cta">Contact</Link>
         </div>
 
@@ -35,9 +36,10 @@ function Header(): any {
       
       <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
         <Link href="/" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Home</Link>
-        <Link href="/services" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>All Services</Link>
-        <Link href="/services-catalog" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Catalog</Link>
-        <Link href="/pricing" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
+        <Link href="/solutions" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Solutions</Link>
+        <Link href="/services" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Services</Link>
+        <Link href="/about" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>About</Link>
+        <Link href="/careers" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Careers</Link>
         <Link href="/contact" className="header-nav-cta" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
       </div>
     </header>
@@ -62,27 +64,43 @@ function Footer(): any {
           </div>
         </div>
 
+        {/* Solutions */}
+        <div className="footer-section">
+          <h3>Solutions</h3>
+          <Link href="/solutions">All Solutions</Link>
+          <Link href="/micro-saas">Micro SaaS</Link>
+          <Link href="/ai-services">AI Services</Link>
+          <Link href="/it-services">IT Services</Link>
+          <Link href="/enterprise">Enterprise</Link>
+          <div className="text-sm mt-2 space-y-1">
+            <div>• 120+ Micro SaaS Products</div>
+            <div>• 80+ AI Services</div>
+            <div>• 80+ IT Solutions</div>
+          </div>
+        </div>
+
         {/* Services */}
         <div className="footer-section">
           <h3>Services</h3>
           <Link href="/services">All Services</Link>
           <Link href="/services-catalog">Services Catalog</Link>
           <Link href="/pricing">Pricing</Link>
+          <Link href="/faq">FAQ</Link>
           <div className="text-sm mt-2 space-y-1">
-            <div>• 39+ Micro SaaS Products</div>
-            <div>• 28+ AI Services</div>
-            <div>• 35+ IT Solutions</div>
+            <div>• Custom Development</div>
+            <div>• Consulting Services</div>
+            <div>• 24/7 Support</div>
           </div>
         </div>
 
-        {/* Quick Links */}
+        {/* Company */}
         <div className="footer-section">
-          <h3>Quick Links</h3>
-          <Link href="/">Home</Link>
-          <Link href="/contact">Contact Us</Link>
+          <h3>Company</h3>
+          <Link href="/about">About Us</Link>
+          <Link href="/careers">Careers</Link>
+          <Link href="/contact">Contact</Link>
           <Link href="/privacy">Privacy Policy</Link>
           <Link href="/terms">Terms of Service</Link>
-          <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer">Main Website</a>
         </div>
 
         {/* Contact CTA */}
@@ -101,7 +119,8 @@ function Footer(): any {
       <div className="footer-bottom">
         <small>
           © {new Date().getFullYear()} Zion Tech Group. All rights reserved. | 
-          <a href="/privacy">Privacy Policy</a>
+          <Link href="/privacy">Privacy Policy</Link> | 
+          <Link href="/terms">Terms of Service</Link>
         </small>
       </div>
     </footer>
