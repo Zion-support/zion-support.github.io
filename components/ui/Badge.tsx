@@ -1,5 +1,18 @@
 import React from 'react';
-import { cva, type VariantProps } from 'class-variance-authority';
+// Inline minimal cva/VariantProps to avoid external dependency during build
+type VariantProps<T> = T extends (...args: any) => any ? Parameters<T>[0] : never;
+function cva(base: string, config: { variants?: Record<string, Record<string, string>>; defaultVariants?: Record<string, string> } = {}) {
+  return (props: Record<string, string> = {}) => {
+    const classes: string[] = [base];
+    const variants = config.variants ?? {};
+    for (const key of Object.keys(variants)) {
+      const val = props[key];
+      if (val && variants[key][val]) classes.push(variants[key][val]);
+      else if (config.defaultVariants && config.defaultVariants[key]) classes.push(variants[key][config.defaultVariants[key]]);
+    }
+    return classes.join(' ');
+  };
+}
 import { cn } from '../../lib/utils';
 
 const badgeVariants = cva(

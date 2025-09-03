@@ -37,7 +37,7 @@ export default function SEOHead({
     <Head>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={uniqueKeywords.join(,)} />
+      <meta name="keywords" content={uniqueKeywords.join(',')} />
       <meta name="author" content="Zion Tech Group" />
       <meta name="robots" content={`${noIndex ? 'noindex' : 'index'}, ${noFollow ? 'nofollow' : 'follow'}`} />
       
@@ -74,11 +74,22 @@ export default function SEOHead({
       {/* Default organization structured data */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{
         __html: JSON.stringify({
-          "@context": "https://schema.org,@type": "Organization,name": "Zion Tech Group,url": "https://ziontechgroup.com,logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png,description": "Leading provider of AI services, IT solutions, and innovative technology consulting for enterprise digital transformation.,contactPoint": {
-            "@type": "ContactPoint,telephone": "+1-302-464-0950,contactType": "Customer Service,availableLanguage": "English"
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Zion Tech Group",
+          "url": "https://ziontechgroup.com",
+          "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png",
+          "description": "Leading provider of AI services, IT solutions, and innovative technology consulting for enterprise digital transformation.",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-302-464-0950",
+            "contactType": "Customer Service",
+            "availableLanguage": "English"
           },
           "sameAs": [
-            "https://linkedin.com/company/ziontechgroup,https://twitter.com/ziontechgroup,https://github.com/ziontechgroup"
+            "https://linkedin.com/company/ziontechgroup",
+            "https://twitter.com/ziontechgroup",
+            "https://github.com/ziontechgroup"
           ]
         })
       }} />

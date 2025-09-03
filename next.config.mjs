@@ -1,4 +1,5 @@
 import path from 'path';
+import webpack from 'webpack';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -46,6 +47,9 @@ const nextConfig = {
       ...config.resolve.alias,
       'react-router-dom': path.resolve(__dirname, 'utils/next-router-shim.tsx'),
       'react-router': path.resolve(__dirname, 'utils/next-router-shim.tsx'),
+      'framer-motion': path.resolve(__dirname, 'utils/framer-motion-stub.ts'),
+      'framer-motion/dist': path.resolve(__dirname, 'utils/framer-motion-stub.ts'),
+      'framer-motion/dist/es': path.resolve(__dirname, 'utils/framer-motion-stub.ts'),
     };
 
     config.resolve.fallback = {
@@ -54,6 +58,14 @@ const nextConfig = {
       net: false,
       tls: false,
     };
+
+    // Replace any framer-motion imports (including deep paths) with a local stub
+    config.plugins = config.plugins || [];
+    config.plugins.push(
+      new webpack.NormalModuleReplacementPlugin(/^framer-motion(\/.*)?$/, (resource) => {
+        resource.request = path.resolve(__dirname, 'utils/framer-motion-stub.ts');
+      })
+    );
 
     return config;
   },

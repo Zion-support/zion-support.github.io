@@ -2,8 +2,8 @@ import React, { useState, useCallback, memo } from 'react';
 import Link from 'next/link';
 import Navigation from '../src/components/Navigation';
 import Footer from '../src/components/Footer';
-import Sidebar from '../components/Sidebar';
-import SEOHead from '../src/components/SEOHead';
+import Sidebar from '../src/components/Sidebar';
+import SEOHead from '../src/components/seo/SEOHead';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, Brain, Cloud, Database, Network, Target, Phone, Mail, Menu } from 'lucide-react';
 
 const Home = memo(() => {
