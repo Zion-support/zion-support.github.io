@@ -41,11 +41,63 @@ export default function ServicesCatalog() {
             'Forecasting, budgets, and team alerts (Slack/Email)',
             'Executive savings dashboards and benchmarks'
           ],
-          link: '/micro-saas',
+          link: '/services/micro-saas',
           refs: [
             { label: 'AWS Cost Explorer', href: 'https://aws.amazon.com/aws-cost-management/aws-cost-explorer/' },
             { label: 'FinOps Foundation', href: 'https://www.finops.org/' }
           ]
+        },
+        {
+          name: 'Event Management Dashboard',
+          blurb: 'Comprehensive event management platform with ticket sales, attendee tracking, scheduling, and real-time analytics.',
+          price: '$199 – $999/month',
+          eta: '2–3 weeks',
+          bullets: [
+            'Ticket management and sales automation',
+            'Attendee tracking and check-in systems',
+            'Event scheduling and calendar integration',
+            'Real-time analytics and reporting dashboard'
+          ],
+          link: '/services/micro-saas'
+        },
+        {
+          name: 'Customer Support & Helpdesk Platform',
+          blurb: 'Complete customer support solution with ticket management, knowledge base, live chat, and AI-powered chatbots.',
+          price: '$99 – $599/month',
+          eta: '2–4 weeks',
+          bullets: [
+            'Multi-channel ticket management system',
+            'Knowledge base and FAQ automation',
+            'Live chat integration and support',
+            'AI-powered chatbots for instant responses'
+          ],
+          link: '/services/micro-saas'
+        },
+        {
+          name: 'Project Management & Collaboration',
+          blurb: 'Streamlined project management tool with task tracking, team collaboration, time tracking, and resource management.',
+          price: '$79 – $399/month',
+          eta: '2–3 weeks',
+          bullets: [
+            'Task management and workflow automation',
+            'Team collaboration and communication tools',
+            'Time tracking and productivity analytics',
+            'Resource planning and allocation'
+          ],
+          link: '/services/micro-saas'
+        },
+        {
+          name: 'Invoice & Billing Management',
+          blurb: 'Automated invoicing and billing system with payment processing, expense tracking, and financial reporting.',
+          price: '$49 – $299/month',
+          eta: '1–2 weeks',
+          bullets: [
+            'Automated invoice generation and sending',
+            'Payment processing and tracking',
+            'Expense tracking and categorization',
+            'Financial reporting and analytics'
+          ],
+          link: '/services/micro-saas'
         },
         {
           name: 'Headless Commerce Accelerator',
@@ -124,7 +176,59 @@ export default function ServicesCatalog() {
             'Quality, deflection, CSAT analytics',
             'Works with Zendesk, Intercom, Freshdesk'
           ],
-          link: '/ai-services'
+          link: '/services/ai-services'
+        },
+        {
+          name: 'AI-Powered Email Responder',
+          blurb: 'Intelligent email automation that reads, categorizes, and responds to emails with human-like accuracy.',
+          price: '$1,500 – $8,000 setup, $0.05 – $0.15/email',
+          eta: '2–4 weeks',
+          bullets: [
+            'Smart email classification and priority flagging',
+            'Auto-response generation with context awareness',
+            'Sentiment analysis and escalation triggers',
+            'Integration with existing email systems'
+          ],
+          link: '/services/ai-services'
+        },
+        {
+          name: 'AI Document Processing & OCR',
+          blurb: 'Advanced document digitization with intelligent data extraction, form processing, and workflow automation.',
+          price: '$3,000 – $15,000 setup, $0.02 – $0.10/page',
+          eta: '3–6 weeks',
+          bullets: [
+            'OCR and text extraction from various formats',
+            'Intelligent form processing and data validation',
+            'Workflow automation and integration',
+            'Quality assurance and error detection'
+          ],
+          link: '/services/ai-services'
+        },
+        {
+          name: 'AI Voice Assistant & IVR',
+          blurb: 'Intelligent voice assistants and interactive voice response systems with natural language understanding.',
+          price: '$5,000 – $25,000 setup, $0.10 – $0.50/call',
+          eta: '4–8 weeks',
+          bullets: [
+            'Natural language processing and understanding',
+            'Multi-language support and voice analytics',
+            'CRM integration and call routing',
+            'Real-time transcription and sentiment analysis'
+          ],
+          link: '/services/ai-services'
+        },
+        {
+          name: 'AI Fraud Detection & Security',
+          blurb: 'Advanced fraud detection systems using machine learning to identify suspicious activities and prevent losses.',
+          price: '$8,000 – $40,000 setup, $0.01 – $0.05/transaction',
+          eta: '6–12 weeks',
+          bullets: [
+            'Real-time transaction monitoring and analysis',
+            'Pattern recognition and anomaly detection',
+            'Risk scoring and alert management',
+            'Machine learning model training and optimization'
+          ],
+          link: '/services/ai-services'
         }
       ]
     },
@@ -170,7 +274,72 @@ export default function ServicesCatalog() {
             'BI with Looker/Metabase',
             'Data catalog and access governance'
           ],
-          link: '/it-services'
+          link: '/services/it-services'
+        },
+        {
+          name: 'Cloud Architecture & Design',
+          blurb: 'Expert cloud architecture design and implementation for scalable, secure, and cost-effective solutions.',
+          price: '$8,000 – $50,000 project',
+          eta: '4–8 weeks',
+          bullets: [
+            'Cloud strategy and architecture design',
+            'Cost optimization and security implementation',
+            'Scalability and performance planning',
+            'Migration strategy and implementation'
+          ],
+          link: '/services/it-services'
+        },
+        {
+          name: 'Disaster Recovery & Backup',
+          blurb: 'Comprehensive disaster recovery and backup solutions to protect your data and ensure business continuity.',
+          price: '$5,000 – $25,000 setup, $500 – $2,000/month',
+          eta: '2–6 weeks',
+          bullets: [
+            'Backup strategy and implementation',
+            'Disaster recovery planning and testing',
+            'Data replication and synchronization',
+            'Recovery time and point objectives'
+          ],
+          link: '/services/it-services'
+        },
+        {
+          name: 'API Development & Integration',
+          blurb: 'Custom API development and third-party integrations to connect your systems and streamline operations.',
+          price: '$3,000 – $20,000 project',
+          eta: '2–6 weeks',
+          bullets: [
+            'RESTful and GraphQL API development',
+            'Third-party system integrations',
+            'API documentation and testing',
+            'Performance optimization and monitoring'
+          ],
+          link: '/services/it-services'
+        },
+        {
+          name: 'Mobile App Development',
+          blurb: 'Native and cross-platform mobile application development for iOS and Android with modern frameworks.',
+          price: '$10,000 – $100,000 project',
+          eta: '8–16 weeks',
+          bullets: [
+            'Native iOS and Android development',
+            'Cross-platform React Native/Flutter apps',
+            'UI/UX design and user experience optimization',
+            'App store deployment and maintenance'
+          ],
+          link: '/services/it-services'
+        },
+        {
+          name: 'Web Application Development',
+          blurb: 'Custom web application development with modern frameworks, responsive design, and scalable architecture.',
+          price: '$8,000 – $80,000 project',
+          eta: '6–14 weeks',
+          bullets: [
+            'Custom web application development',
+            'Responsive design and mobile optimization',
+            'Scalable architecture and performance optimization',
+            'Modern frameworks and best practices'
+          ],
+          link: '/services/it-services'
         }
       ]
     }

@@ -20,6 +20,24 @@ const HomePage: React.FC = () => {
       description: 'Build and launch successful micro SaaS applications with our comprehensive development services.',
       icon: '🚀',
       link: '/services/micro-saas'
+    },
+    {
+      title: 'Cybersecurity Solutions',
+      description: 'Protect your digital assets with comprehensive security solutions and threat monitoring.',
+      icon: '🛡️',
+      link: '/services/it-services'
+    },
+    {
+      title: 'Mobile App Development',
+      description: 'Native and cross-platform mobile applications for iOS and Android with modern frameworks.',
+      icon: '📱',
+      link: '/services/it-services'
+    },
+    {
+      title: 'Data Analytics & BI',
+      description: 'Transform raw data into actionable insights with advanced analytics and business intelligence.',
+      icon: '📊',
+      link: '/services/it-services'
     }
   ];
 
@@ -83,7 +101,7 @@ const HomePage: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div key={index} className="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
                 <div className="text-4xl mb-4">{service.icon}</div>

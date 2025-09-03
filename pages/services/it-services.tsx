@@ -44,6 +44,69 @@ const ITServicesPage: React.FC = () => {
       features: ['24/7 Support', 'Proactive Monitoring', 'System Maintenance', 'Troubleshooting'],
       pricing: '$1k–$5k/month',
       icon: '🛠️'
+    },
+    {
+      title: 'Cloud Architecture & Design',
+      description: 'Expert cloud architecture design and implementation for scalable, secure, and cost-effective cloud solutions.',
+      features: ['Cloud Strategy', 'Architecture Design', 'Cost Optimization', 'Security Implementation'],
+      pricing: '$8k–$50k project',
+      icon: '🏗️'
+    },
+    {
+      title: 'Disaster Recovery & Backup',
+      description: 'Comprehensive disaster recovery and backup solutions to protect your data and ensure business continuity.',
+      features: ['Backup Strategy', 'Disaster Recovery Planning', 'Data Replication', 'Recovery Testing'],
+      pricing: '$5k–$25k setup, $500–$2k/month',
+      icon: '💾'
+    },
+    {
+      title: 'API Development & Integration',
+      description: 'Custom API development and third-party integrations to connect your systems and streamline operations.',
+      features: ['RESTful APIs', 'GraphQL APIs', 'Third-party Integrations', 'API Documentation'],
+      pricing: '$3k–$20k project',
+      icon: '🔌'
+    },
+    {
+      title: 'Performance Optimization',
+      description: 'System and application performance optimization to improve speed, efficiency, and user experience.',
+      features: ['Performance Analysis', 'Code Optimization', 'Database Tuning', 'Caching Strategies'],
+      pricing: '$2k–$15k project',
+      icon: '⚡'
+    },
+    {
+      title: 'Compliance & Governance',
+      description: 'IT compliance and governance services to ensure your systems meet regulatory requirements and industry standards.',
+      features: ['Compliance Audits', 'Policy Development', 'Risk Assessment', 'Regulatory Reporting'],
+      pricing: '$5k–$30k project',
+      icon: '📋'
+    },
+    {
+      title: 'Mobile App Development',
+      description: 'Native and cross-platform mobile application development for iOS and Android with modern frameworks.',
+      features: ['Native Development', 'Cross-platform Apps', 'UI/UX Design', 'App Store Deployment'],
+      pricing: '$10k–$100k project',
+      icon: '📱'
+    },
+    {
+      title: 'Web Application Development',
+      description: 'Custom web application development with modern frameworks, responsive design, and scalable architecture.',
+      features: ['Custom Development', 'Responsive Design', 'Scalable Architecture', 'Performance Optimization'],
+      pricing: '$8k–$80k project',
+      icon: '🌐'
+    },
+    {
+      title: 'Data Analytics & Business Intelligence',
+      description: 'Data analytics and business intelligence solutions to transform raw data into actionable insights.',
+      features: ['Data Warehousing', 'ETL Processes', 'Dashboard Development', 'Predictive Analytics'],
+      pricing: '$5k–$40k project',
+      icon: '📊'
+    },
+    {
+      title: 'IoT Solutions & Integration',
+      description: 'Internet of Things solutions and device integration to connect and manage smart devices and sensors.',
+      features: ['IoT Architecture', 'Device Integration', 'Data Collection', 'Real-time Monitoring'],
+      pricing: '$10k–$60k project',
+      icon: '🌐'
     }
   ];
 

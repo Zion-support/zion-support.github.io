@@ -6,14 +6,12 @@ const EnhancedFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   const services = [
-    { name: 'AI Development', href: '/services/ai-development' },
-    { name: 'Cloud Services', href: '/services/cloud-services' },
-    { name: 'Blockchain Solutions', href: '/services/blockchain' },
-    { name: 'Data Analytics', href: '/services/data-analytics' },
-    { name: 'Web Development', href: '/services/web-development' },
-    { name: 'Mobile Development', href: '/services/mobile-development' },
-    { name: 'IoT Platforms', href: '/services/iot-platforms' },
-    { name: 'Cybersecurity', href: '/services/cybersecurity' },
+    { name: 'AI Services', href: '/services/ai-services' },
+    { name: 'IT Services', href: '/services/it-services' },
+    { name: 'Micro SaaS', href: '/services/micro-saas' },
+    { name: 'All Services', href: '/services' },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   const company = [

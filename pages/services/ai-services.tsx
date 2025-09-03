@@ -44,6 +44,55 @@ const AIServicesPage: React.FC = () => {
       features: ['Custom Model Training', 'Fine-tuning', 'Model Deployment', 'Performance Optimization'],
       pricing: '$10k–$50k project',
       icon: '🧠'
+    },
+    {
+      title: 'AI-Powered Email Responder',
+      description: 'Intelligent email automation that reads, categorizes, and responds to emails with human-like accuracy and context awareness.',
+      features: ['Smart Email Classification', 'Auto-Response Generation', 'Priority Flagging', 'Sentiment Analysis'],
+      pricing: '$1.5k–$8k setup, $0.05–$0.15/email',
+      icon: '📧'
+    },
+    {
+      title: 'AI Document Processing & OCR',
+      description: 'Advanced document digitization with intelligent data extraction, form processing, and automated workflow integration.',
+      features: ['OCR & Text Extraction', 'Form Processing', 'Data Validation', 'Workflow Automation'],
+      pricing: '$3k–$15k setup, $0.02–$0.10/page',
+      icon: '📄'
+    },
+    {
+      title: 'AI Voice Assistant & IVR',
+      description: 'Intelligent voice assistants and interactive voice response systems with natural language understanding and multi-language support.',
+      features: ['Natural Language Processing', 'Multi-language Support', 'Voice Analytics', 'CRM Integration'],
+      pricing: '$5k–$25k setup, $0.10–$0.50/call',
+      icon: '🎤'
+    },
+    {
+      title: 'AI Fraud Detection & Security',
+      description: 'Advanced fraud detection systems using machine learning to identify suspicious activities and prevent financial losses.',
+      features: ['Real-time Monitoring', 'Pattern Recognition', 'Risk Scoring', 'Alert Management'],
+      pricing: '$8k–$40k setup, $0.01–$0.05/transaction',
+      icon: '🛡️'
+    },
+    {
+      title: 'AI Recommendation Engine',
+      description: 'Personalized recommendation systems that boost engagement and sales through intelligent product and content suggestions.',
+      features: ['Personalization Engine', 'A/B Testing', 'Real-time Updates', 'Analytics Dashboard'],
+      pricing: '$4k–$20k setup, $0.02–$0.10/recommendation',
+      icon: '🎯'
+    },
+    {
+      title: 'AI Code Review & Quality Assurance',
+      description: 'Automated code analysis, bug detection, and quality assurance using AI to improve development efficiency and code quality.',
+      features: ['Automated Code Review', 'Bug Detection', 'Security Scanning', 'Performance Analysis'],
+      pricing: '$2k–$10k setup, $0.05–$0.20/line of code',
+      icon: '💻'
+    },
+    {
+      title: 'AI Inventory & Supply Chain Optimization',
+      description: 'Intelligent inventory management and supply chain optimization using predictive analytics and demand forecasting.',
+      features: ['Demand Forecasting', 'Inventory Optimization', 'Supplier Analytics', 'Cost Reduction'],
+      pricing: '$6k–$30k setup, $0.10–$0.50/transaction',
+      icon: '📦'
     }
   ];
 

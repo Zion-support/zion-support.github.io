@@ -7,10 +7,10 @@ const EnhancedNavigation: React.FC = () => {
   const [servicesOpen, setServicesOpen] = useState(false);
 
   const services = [
-    { name: 'AI Services', href: '/ai-services' },
-    { name: 'IT Services', href: '/it-services' },
-    { name: 'Micro SaaS', href: '/micro-saas' },
-    { name: 'Additional Services', href: '/additional-services' },
+    { name: 'AI Services', href: '/services/ai-services' },
+    { name: 'IT Services', href: '/services/it-services' },
+    { name: 'Micro SaaS', href: '/services/micro-saas' },
+    { name: 'All Services', href: '/services' },
   ];
 
   const products = [

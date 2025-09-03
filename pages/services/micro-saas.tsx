@@ -44,6 +44,69 @@ const MicroSaaSPage: React.FC = () => {
       features: ['Email Automation', 'Segmentation', 'A/B Testing', 'Analytics'],
       pricing: '$149–$699/month',
       icon: '📧'
+    },
+    {
+      title: 'Event Management Dashboard',
+      description: 'Comprehensive event management platform with ticket sales, attendee management, scheduling, and real-time analytics.',
+      features: ['Ticket Management', 'Attendee Tracking', 'Event Scheduling', 'Real-time Analytics'],
+      pricing: '$199–$999/month',
+      icon: '🎪'
+    },
+    {
+      title: 'Customer Support & Helpdesk Platform',
+      description: 'Complete customer support solution with ticket management, knowledge base, live chat, and AI-powered chatbots.',
+      features: ['Ticket Management', 'Knowledge Base', 'Live Chat', 'AI Chatbots'],
+      pricing: '$99–$599/month',
+      icon: '🎧'
+    },
+    {
+      title: 'Project Management & Collaboration',
+      description: 'Streamlined project management tool with task tracking, team collaboration, time tracking, and resource management.',
+      features: ['Task Management', 'Team Collaboration', 'Time Tracking', 'Resource Planning'],
+      pricing: '$79–$399/month',
+      icon: '📋'
+    },
+    {
+      title: 'Invoice & Billing Management',
+      description: 'Automated invoicing and billing system with payment processing, expense tracking, and financial reporting.',
+      features: ['Automated Invoicing', 'Payment Processing', 'Expense Tracking', 'Financial Reports'],
+      pricing: '$49–$299/month',
+      icon: '💰'
+    },
+    {
+      title: 'Social Media Analytics & Management',
+      description: 'Comprehensive social media management platform with scheduling, analytics, engagement tracking, and competitor analysis.',
+      features: ['Content Scheduling', 'Analytics Dashboard', 'Engagement Tracking', 'Competitor Analysis'],
+      pricing: '$99–$499/month',
+      icon: '📱'
+    },
+    {
+      title: 'Lead Generation & CRM',
+      description: 'Intelligent lead generation and customer relationship management system with automated follow-ups and sales pipeline tracking.',
+      features: ['Lead Capture', 'Automated Follow-ups', 'Sales Pipeline', 'Contact Management'],
+      pricing: '$149–$799/month',
+      icon: '🎯'
+    },
+    {
+      title: 'Inventory & Stock Management',
+      description: 'Smart inventory management system with real-time tracking, automated reordering, and supply chain optimization.',
+      features: ['Real-time Tracking', 'Automated Reordering', 'Supply Chain Analytics', 'Cost Optimization'],
+      pricing: '$199–$999/month',
+      icon: '📦'
+    },
+    {
+      title: 'Employee Time & Attendance',
+      description: 'Comprehensive time tracking and attendance management system with payroll integration and productivity analytics.',
+      features: ['Time Tracking', 'Attendance Management', 'Payroll Integration', 'Productivity Analytics'],
+      pricing: '$59–$299/month',
+      icon: '⏰'
+    },
+    {
+      title: 'Website Performance Monitor',
+      description: 'Advanced website monitoring and performance optimization tool with uptime tracking, speed analysis, and SEO insights.',
+      features: ['Uptime Monitoring', 'Speed Analysis', 'SEO Insights', 'Performance Alerts'],
+      pricing: '$29–$199/month',
+      icon: '📊'
     }
   ];
 
