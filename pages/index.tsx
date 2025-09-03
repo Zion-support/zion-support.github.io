@@ -8,7 +8,7 @@ export default function Home() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  }
+  };
   return (
     <>
       <Head>
@@ -47,9 +47,7 @@ export default function Home() {
                 "contactType": "customer service",
                 "email": contact.email
               },
-              "sameAs": [
-                contact.site
-              ]
+              "sameAs": [contact.site]
             })
           }}
         />

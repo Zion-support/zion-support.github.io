@@ -1,21 +1,56 @@
 {
-  "summary": {
-    "totalDuration": "39 seconds",
-    "prsProcessed": 1,
-    "conflictsResolved": 0,
-    "improvementsMade": 1,
-    "testsRun": 0,
-    "deployments": 0,
-    "totalErrors": 0
-  },
-  "results": {
-    "prsProcessed": 1,
-    "conflictsResolved": 0,
-    "improvementsMade": 1,
-    "testsRun": 0,
-    "deployments": 0,
-    "errors": []
-  },
-  "timestamp": "2025-09-03T05:49:15.135Z",
-  "status": "SUCCESS"
+  "total": 8,
+  "successful": 6,
+  "failed": 2,
+  "criticalFailures": 0,
+  "startTime": "2025-09-03T16:47:59.868Z",
+  "successRate": 75,
+  "endTime": "2025-09-03T16:48:18.435Z",
+  "duration": 18567,
+  "recommendations": [
+    "⚠️  Improve automation success rate",
+    "🔧 Review and fix failed automation tasks"
+  ],
+  "tasks": [
+    {
+      "name": "Health Check",
+      "command": "node automation/health-check.cjs",
+      "critical": true
+    },
+    {
+      "name": "Security Scanner",
+      "command": "node automation/security-scanner.cjs",
+      "critical": true
+    },
+    {
+      "name": "App Optimizer",
+      "command": "node automation/app-optimizer.cjs",
+      "critical": false
+    },
+    {
+      "name": "Continuous Improvement",
+      "command": "node automation/continuous-improvement.cjs",
+      "critical": false
+    },
+    {
+      "name": "Performance Monitor",
+      "command": "node scripts/performance-monitor.js",
+      "critical": false
+    },
+    {
+      "name": "Build Test",
+      "command": "npm run build",
+      "critical": true
+    },
+    {
+      "name": "Type Check",
+      "command": "npm run type-check",
+      "critical": false
+    },
+    {
+      "name": "Security Audit",
+      "command": "npm audit --audit-level=moderate",
+      "critical": false
+    }
+  ]
 }
