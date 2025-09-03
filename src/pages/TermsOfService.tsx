@@ -1,8 +1,8 @@
-import { motion } from 'framer-motion';"
-import { SEO } from '../components/SEO';"
-import { motion } from 'framer-motion';"
-import { SEO } from '../components/SEO';"
-import { FileText, Scale, Shield, Users, Globe } from 'lucide-react';"
+import { motion } from 'framer-motion
+import { SEO } from '../components/SEO
+import { motion } from 'framer-motion
+import { SEO } from '../components/SEO
+import { FileText, Scale, Shield, Users, Globe } from 'lucide-react
 import { FileText, Scale, Shield, Users, Globe } from 'lucide-react';
 export default function TermsOfService() {
   return (
@@ -21,7 +21,7 @@ export default function TermsOfService() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}"
               transition={{ duration: 0.8 }}"
-              className="text-center max-w-4xl mx-auto""" >"
+              className='text-center max-w-4xl mx-auto' >"
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 Terms of Service"
               </h1>"
@@ -42,6 +42,17 @@ export default function TermsOfService() {
             <motion .div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+              transition={{ duration: 0.8 }}
+              className="prose prose-lg prose-invert max-w-none"
+            >
+              <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-8 border border-slate-600/50">
+                <h2 className="text-2xl font-bold text-white mb-4">Acceptance of Terms</h2>
+                <p className="text-gray-300 mb-4">
+                  By accessing and using Zion Tech Group&apos;s services, you accept and agree to be bound '
+                  by the terms and provision of this agreement.
+                </p>
+=======
               transition={{ duration: 0.8 }}"
               className="prose prose-lg prose-invert max-w-none"" >"
               <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-8 border border-slate-600/50">"
@@ -50,6 +61,7 @@ export default function TermsOfService() {
                   By accessing and using Zion Tech Group&apos;s services, you accept and agree to be bound '
                   by the terms and provision of this agreement."
                 </p>"
+>>>>>>> main
                 <p className="text-gray-300">
                   If you do not agree to abide by the above, please do not use this service.
                 </p>
@@ -58,11 +70,19 @@ export default function TermsOfService() {
               <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-8 border border-slate-600/50 mt-8">"
                 <h2 className="text-2xl font-bold text-white mb-4">Use License</h2>"
                 <p className="text-gray-300 mb-4">
+<<<<<<< HEAD
+                  Permission is granted to temporarily download one copy of the materials on 
+                  Zion Tech Group&apos;s website for personal, non-commercial transitory viewing only.'
+                </p>
+                <p className="text-gray-300">
+                  This is the grant of a license, not a transfer of title, and under this license you may not: </p>
+=======
                   Permission is granted to temporarily download one copy of the materials on "
                   Zion Tech Group&apos;s website for personal, non-commercial transitory viewing only.'
                 </p>"
                 <p className="text-gray-300">
                   This is the grant of a license, not a transfer of title, and under this license you may not: </p>"
+>>>>>>> main
                 <ul className="text-gray-300 space-y-2 mt-4">
                   <li>• Modify or copy the materials</li>
                   <li>• Use the materials for  commercial purpose</li>
@@ -86,7 +106,11 @@ export default function TermsOfService() {
               <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-8 border border-slate-600/50 mt-8">"
                 <h2 className="text-2xl font-bold text-white mb-4">User Responsibilities</h2>"
                 <p className="text-gray-300 mb-4">
+<<<<<<< HEAD
+                  As a user of our services, you agree to: </p>
+=======
                   As a user of our services, you agree to: </p>"
+>>>>>>> main
                 <ul className="text-gray-300 space-y-2">
                   <li>• Provide accurate and complete information</li>
                   <li>• Maintain the security of your account credentials</li>
@@ -110,7 +134,11 @@ export default function TermsOfService() {
               <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-8 border border-slate-600/50 mt-8">"
                 <h2 className="text-2xl font-bold text-white mb-4">Contact Information</h2>"
                 <p className="text-gray-300 mb-4">
+<<<<<<< HEAD
+                  If you have any questions about these Terms of Service, please contact us: </p>
+=======
                   If you have any questions about these Terms of Service, please contact us: </p>"
+>>>>>>> main
                 <div className="text-gray-300">
                   <p>Email: legal@ziontechgroup.com</p>
                   <p>Phone: +1 302 464 0950</p>
@@ -122,6 +150,11 @@ export default function TermsOfService() {
         </section>
       </div>
 </>
+<<<<<<< HEAD
+  );
+}
+=======
   );,
 }
 "
+>>>>>>> main

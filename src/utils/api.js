@@ -7,10 +7,16 @@ export const api = {
     return response.json()}, async post(url, data) {
     const response = await fetch(url, {
       method: 'POST',
-      headers: {"
+<<<<<<< HEAD
+      headers: {
         'Content-Type': 'application/json', },
       body: JSON.stringify(data), })
+    if (!response.ok) {
+=======
+      headers: { Content-Type': 'application/json', },
+      body: JSON.stringify(data), })
     if (!response.ok) {`
+>>>>>>> main
       throw new Error(`HTTP error! status: ${response.status}`)}
     return response.json()}
 }"`

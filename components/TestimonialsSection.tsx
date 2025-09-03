@@ -38,34 +38,56 @@ import { Star, User } from 'lucide-react';
 
 const TestimonialsSection: React.FC = () => {
   const testimonials = [
-    {
+  {
       name: 'Sarah Johnson',
       role: 'CEO',
+<<<<<<< HEAD
+      company: 'TechStart Inc.',
+      content:
+        'Zion Tech Group transformed our entire digital infrastructure. Their AI solutions increased our efficiency by 40% and their cloud migration was seamless.',
+=======
       compunknown: 'TechStart Inc.',
       content: 'Zion Tech Group transformed our entire digital infrastructure. Their AI solutions increased our efficiency by 40% and their cloud migration was seamless.',
+>>>>>>> main
       rating: 5,
       avatar: '/api/placeholder/64/64',
     },
     {
       name: 'Michael Chen',
       role: 'CTO',
+<<<<<<< HEAD
+      company: 'DataCorp',
+      content:
+        'The cybersecurity audit they performed saved us from a potential breach. Their expertise and attention to detail are unmatched.',
+=======
       compunknown: 'DataCorp',
       content: 'The cybersecurity audit they performed saved us from a potential breach. Their expertise and attention to detail are unmatched.',
+>>>>>>> main
       rating: 5,
       avatar: '/api/placeholder/64/64',
     },
     {
       name: 'Emily Rodriguez',
       role: 'VP of Operations',
+<<<<<<< HEAD
+      company: 'GrowthCo',
+      content:
+        'Their custom development team delivered exactly what we needed, on time and within budget. Highly recommend their services.',
+=======
       compunknown: 'GrowthCo',
       content: 'Their custom development team delivered exactly what we needed, on time and within budget. Highly recommend their services.',
+>>>>>>> main
       rating: 5,
       avatar: '/api/placeholder/64/64',
     },
   ];
   return (
     <section className="py-20 bg-white">
+<<<<<<< HEAD
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+=======
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+>>>>>>> main
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -76,11 +98,19 @@ const TestimonialsSection: React.FC = () => {
             What Our Clients Say
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+<<<<<<< HEAD
+            Don&apos;t just take our word for it. Here&apos;s what our satisfied
+            clients have to say about working with us.
+          </p>
+        </motion.div>
+        <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+=======
             Don't just take our word for it. Here's what our satisfied clients
             have to say about working with us.
           </p>
         </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+>>>>>>> main
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={testimonial.name}
@@ -106,8 +136,17 @@ const TestimonialsSection: React.FC = () => {
                       {testimonial.name.charAt(0)}
                     </div>
                     <div>
+<<<<<<< HEAD
+                      <div className="font-semibold text-gray-900">
+                        {testimonial.name}
+                      </div>
+                      <div className="text-sm text-gray-500">
+                        {testimonial.role}, {testimonial.company}
+                      </div>
+=======
                       <div className='font-semibold text-gray-900'>{testimonial.name}</div>
                       <div className='text-sm text-gray-500'>{testimonial.role}, {testimonial.compunknown}</div>
+>>>>>>> main
                     </div>
                   </div>
                 </CardContent>

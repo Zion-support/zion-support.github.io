@@ -1,6 +1,18 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+<<<<<<< HEAD
+import {
+  Cloud,
+  Server,
+  Shield,
+  Zap,
+  CheckCircle,
+  ArrowRight,
+  Users,
+  Award,
+} from 'lucide-react';
+=======
 import Navigation from '../../src/components/Navigation';
 import Footer from '../../src/components/Footer';
 import { 
@@ -24,7 +36,7 @@ import {
 
 export default function CloudServices() {
   const features = [
-    {
+  {
       icon: Cloud,
       title: 'Scalable Infrastructure',
       description: 'Auto-scaling cloud solutions that grow with your business needs'
@@ -57,34 +69,34 @@ export default function CloudServices() {
   ];
 
   const services = [
-    {
+  {
       title: 'Cloud Migration',
       description: 'Seamless migration of your existing infrastructure to the cloud',
       icon: Server,
-      features: ['Assessment & Planning', 'Data Migration', 'Application Migration', 'Performance Optimization']
+      features: ['Assessment & Planning,Data Migration,Application Migration,Performance Optimization']
     },
     {
       title: 'Cloud Architecture',
       description: 'Design and implement robust, scalable cloud architectures',
       icon: Network,
-      features: ['Microservices Design', 'Load Balancing', 'Auto-scaling', 'Disaster Recovery']
+      features: ['Microservices Design,Load Balancing,Auto-scaling,Disaster Recovery']
     },
     {
       title: 'DevOps & CI/CD',
       description: 'Automated deployment pipelines and infrastructure management',
       icon: Settings,
-      features: ['Continuous Integration', 'Automated Testing', 'Deployment Automation', 'Monitoring & Alerting']
+      features: ['Continuous Integration,Automated Testing,Deployment Automation,Monitoring & Alerting']
     },
     {
       title: 'Cloud Security',
       description: 'Comprehensive security solutions for your cloud infrastructure',
       icon: Shield,
-      features: ['Identity Management', 'Network Security', 'Data Encryption', 'Compliance Monitoring']
+      features: ['Identity Management,Network Security,Data Encryption,Compliance Monitoring']
     }
   ];
 
   const platforms = [
-    { name: 'Amazon Web Services (AWS)', category: 'Cloud Platform' },
+  { name: 'Amazon Web Services (AWS)', category: 'Cloud Platform' },
     { name: 'Microsoft Azure', category: 'Cloud Platform' },
     { name: 'Google Cloud Platform', category: 'Cloud Platform' },
     { name: 'Docker', category: 'Containerization' },
@@ -97,7 +109,7 @@ export default function CloudServices() {
   ];
 
   const benefits = [
-    {
+  {
       icon: TrendingUp,
       title: 'Cost Optimization',
       description: 'Reduce infrastructure costs by up to 40% with optimized cloud resources'
@@ -118,6 +130,7 @@ export default function CloudServices() {
       description: 'Enable remote work and team collaboration with cloud-based tools'
     }
   ];
+>>>>>>> main
 
   return (
     <>
@@ -152,6 +165,250 @@ export default function CloudServices() {
               </div>
             </div>
           </div>
+<<<<<<< HEAD
+          <h1 className="text-5xl md: text-6xl font-bold mb-6">
+            Cloud Services
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">
+              {' '}
+              Solutions
+            </span>
+          </h1>
+          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
+            Scalable cloud solutions and infrastructure design for modern
+            applications that grow with your business.
+          </p>
+
+          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
+            <Link
+              href="/contact"
+              className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"
+            >
+              Get Started Today
+            </Link>
+            <Link
+              href="/services"
+              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"
+            >
+              View All Services
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Our Cloud Services
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Comprehensive cloud solutions designed to optimize performance,
+              security, and scalability.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                <Cloud className="w-8 h-8 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-semibold mb-4">Cloud Migration</h3>
+              <p className="text-gray-600 mb-4">
+                Seamless migration of your applications and data to the cloud
+                with minimal downtime.
+              </p>
+              <ul className="text-sm text-gray-500 space-y-2">
+                <li>• Application Migration</li>
+                <li>• Data Migration</li>
+                <li>• Infrastructure Migration</li>
+                <li>• Zero-Downtime Migration</li>
+              </ul>
+            </div>
+
+            <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                <Server className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold mb-4">
+                Cloud Infrastructure
+              </h3>
+              <p className="text-gray-600 mb-4">
+                Robust and scalable cloud infrastructure designed for high
+                availability and performance.
+              </p>
+              <ul className="text-sm text-gray-500 space-y-2">
+                <li>• Auto-scaling</li>
+                <li>• Load Balancing</li>
+                <li>• High Availability</li>
+                <li>• Disaster Recovery</li>
+              </ul>
+            </div>
+
+            <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                <Shield className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-semibold mb-4">Cloud Security</h3>
+              <p className="text-gray-600 mb-4">
+                Comprehensive security solutions to protect your cloud
+                infrastructure and data.
+              </p>
+              <ul className="text-sm text-gray-500 space-y-2">
+                <li>• Identity & Access Management</li>
+                <li>• Data Encryption</li>
+                <li>• Security Monitoring</li>
+                <li>• Compliance Management</li>
+              </ul>
+            </div>
+
+            <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
+                <Zap className="w-8 h-8 text-orange-600" />
+              </div>
+              <h3 className="text-xl font-semibold mb-4">
+                DevOps & Automation
+              </h3>
+              <p className="text-gray-600 mb-4">
+                Streamlined development and deployment processes with automated
+                CI/CD pipelines.
+              </p>
+              <ul className="text-sm text-gray-500 space-y-2">
+                <li>• CI/CD Pipelines</li>
+                <li>• Infrastructure as Code</li>
+                <li>• Automated Testing</li>
+                <li>• Monitoring & Alerting</li>
+              </ul>
+            </div>
+
+            <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6">
+                <Users className="w-8 h-8 text-red-600" />
+              </div>
+              <h3 className="text-xl font-semibold mb-4">Cloud Consulting</h3>
+              <p className="text-gray-600 mb-4">
+                Expert guidance on cloud strategy, architecture, and best
+                practices.
+              </p>
+              <ul className="text-sm text-gray-500 space-y-2">
+                <li>• Cloud Strategy</li>
+                <li>• Architecture Design</li>
+                <li>• Cost Optimization</li>
+                <li>• Performance Tuning</li>
+              </ul>
+            </div>
+
+            <div className="bg-white rounded-lg p-8 shadow-lg hover: shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+                <Award className="w-8 h-8 text-indigo-600" />
+              </div>
+              <h3 className="text-xl font-semibold mb-4">Managed Services</h3>
+              <p className="text-gray-600 mb-4">
+                Complete management of your cloud infrastructure with 24/7
+                monitoring and support.
+              </p>
+              <ul className="text-sm text-gray-500 space-y-2">
+                <li>• 24/7 Monitoring</li>
+                <li>• Proactive Maintenance</li>
+                <li>• Performance Optimization</li>
+                <li>• Technical Support</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Our Cloud Implementation Process
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We follow a structured approach to ensure successful cloud
+              adoption and optimization.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-white font-bold text-xl">1</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Assessment</h3>
+              <p className="text-gray-600">
+                We assess your current infrastructure and identify cloud
+                opportunities.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-white font-bold text-xl">2</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Planning</h3>
+              <p className="text-gray-600">
+                We develop a comprehensive cloud strategy and migration plan.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-white font-bold text-xl">3</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Implementation</h3>
+              <p className="text-gray-600">
+                We implement your cloud solution with minimal disruption.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-white font-bold text-xl">4</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Optimization</h3>
+              <p className="text-gray-600">
+                We continuously optimize your cloud infrastructure for peak
+                performance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold mb-6">
+            Ready to Move to the Cloud?
+          </h2>
+          <p className="text-xl mb-8 max-w-3xl mx-auto">
+            Let&apos;s discuss how our cloud services can transform your
+            infrastructure and drive business growth.'
+          </p>
+          <div className="flex flex-col sm: flex-row justify-center gap-4">
+            <Link
+              href="/contact"
+              className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"
+            >
+              Schedule a Consultation
+            </Link>
+            <Link
+              href="/services"
+              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"
+            >
+              View All Services
+            </Link>
+          </div>
+        </div>
+      </section>
+    </Layout>
+  );
+};
+
+export default CloudServices;
+=======
         </section>
 
         {/* Features Section */}
@@ -311,3 +568,4 @@ export default function CloudServices() {
     </>
   );
 }
+>>>>>>> main

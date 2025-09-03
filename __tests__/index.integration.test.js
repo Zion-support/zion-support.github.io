@@ -1,26 +1,46 @@
-import React from 'react';';
-import { render, screen } from '@testing-library/react';';
-import '@testing-library/jest-dom';';
-import index from '../pages/index';';
-  describe('index Integration Tests', () => {';
-  test('page renders correctly', () => {';
+<<<<<<< HEAD
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import index from '../pages/index';
+
+describe('index Integration Tests', () => {
+  test('page renders correctly', () => {
     render(<index />);
-    expect(screen.getByRole('main')).toBeInTheDocument();';
+    expect(screen.getByRole('main')).toBeInTheDocument();
   });
-;
-  test('navigation works', () => {';
+
+  test('navigation works', () => {
     render(<index />);
-    // Test navigation elements;
+=======
+import React   from 'react''
+import { render, screen }   from '@testing-library/react''
+import '@testing-library/jest-dom
+import index   from '../pages/index''
+  describe('index Integration Tests', () => {'
+  test('page renders correctly', () => {'
+    render(<index  />)
+    expect(screen.getByRole('main')).toBeInTheDocument();'
+  })
+
+  test('navigation works', () => {'
+    render(<index  />)
+>>>>>>> main
+    // Test navigation elements
   });
-;
-  test('page content is accessible', () => {';
-    render(<index />);
-    // Test accessibility features;
+
+  test('page content is accessible', () => {'
+    render(<index  />)
+    // Test accessibility features
   });
-;
-  test('page loads with correct data', () => {';
-    render(<index />);
-    // Test data loading and display;
+
+  test('page loads with correct data', () => {'
+    render(<index  />)
+    // Test data loading and display
+<<<<<<< HEAD
   });
 });
-;
+=======
+  })
+})
+>>>>>>> main

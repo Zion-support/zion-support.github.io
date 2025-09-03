@@ -37,7 +37,7 @@ class DeploymentAutomation {
   async runPreDeploymentChecks() {
     console.log('🔍 Running pre-deployment checks...');
     const checks = [
-      { name: 'Git status', command: 'git status --porcelain' },
+  { name: 'Git status', command: 'git status --porcelain' },
       { name: 'Dependencies', command: 'npm audit --audit-level=high' },
       { name: 'TypeScript', command: 'npx tsc --noEmit' },
       { name: 'Linting', command: 'npm run lint' }
@@ -136,7 +136,7 @@ curl http://localhost:3000/api/health;
   async runPostDeploymentVerification() {
     console.log('🔍 Running post-deployment verification...');
     const verifications = [
-      { name: 'Health check', url: '/api/health' },
+  { name: 'Health check', url: '/api/health' },
       { name: 'Home page', url: '/' },
       { name: 'Services page', url: '/services' }
     ];
@@ -178,11 +178,7 @@ curl http://localhost:3000/api/health;
       errors: this.errors,
       warnings: this.warnings,
       recommendations: [
-        'Set up automated rollback procedures',
-        'Implement blue-green deployment strategy',
-        'Add comprehensive monitoring and alerting',
-        'Create disaster recovery procedures',
-        'Implement automated security scanning';
+        'Set up automated rollback procedures,Implement blue-green deployment strategy,Add comprehensive monitoring and alerting,Create disaster recovery procedures,Implement automated security scanning';
       ]}
     fs.writeFileSync('deployment-report.json', JSON.stringify(report, null, 2));
     this.deploymentSteps.push('✅ Deployment report generated')}

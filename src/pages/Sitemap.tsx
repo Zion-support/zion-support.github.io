@@ -6,7 +6,11 @@ import {
 } from 'lucide-react';
 export default function Sitemap() {
   const siteStructure = [
+<<<<<<< HEAD
     {
+=======
+  {
+>>>>>>> main
       title: "Main Pages", pages: [
         { name: "Home", url: "/", description: "Welcome to Zion Tech Group" },
         { name: "About", url: "/about", description: "Learn about our company and mission" }, { name: "Services", url: "/services", description: "Our comprehensive technology services" },
@@ -59,15 +63,24 @@ export default function Sitemap() {
     }
   ];
   const quickLinks = [
+<<<<<<< HEAD
     { name: "Get Started", url: "/contact", icon: ArrowRight }, { name: "View Services", url: "/services", icon: Code },
+=======
+  { name: "Get Started", url: "/contact", icon: ArrowRight }, { name: "View Services", url: "/services", icon: Code },
+>>>>>>> main
     { name: "Meet Our Team", url: "/team", icon: Users }, { name: "Read Our Blog", url: "/blog", icon: Brain }
   ];
   return (
     <>
       <SEO 
         title="Sitemap - Zion Tech Group | Complete Site Navigation"
-        description="Navigate Zion Tech Group's website with our comprehensive sitemap. Find all pages, services, and resources organized by category."'
+<<<<<<< HEAD
+        description="Navigate Zion Tech Group&apos;s website with our comprehensive sitemap. Find all pages, services, and resources organized by category."'
         keywords="sitemap, navigation, site map, pages, Zion Tech Group, website structure"
+=======
+        description="Navigate Zion Tech Group's website with our comprehensive sitemap. Find all pages, services, and resources organized by category. 
+        keywords='sitemap, navigation, site map, pages, Zion Tech Group, website structure"
+>>>>>>> main
       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -190,7 +203,7 @@ export default function Sitemap() {
               className="text-center max-w-2xl mx-auto"
             >
               <h2 className="text-3xl font-bold text-white mb-6">
-                Can't Find What You're Looking For?
+                Can&apos;t Find What You&apos;re Looking For?
               </h2>
               <p className="text-gray-300 mb-8">
                 Use our search functionality to find specific content across our website

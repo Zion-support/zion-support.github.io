@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';"
+import React, { useState, useRef, useEffect } from 'react
 import { Search, X, TrendingUp, Clock, FileText, Users, Briefcase, Globe } from 'lucide-react';
 
 export function EnhancedSearchInput({ 
@@ -6,7 +6,7 @@ export function EnhancedSearchInput({
   onChange, 
   onSelectSuggestion, 
   suggestions = [], "
-  placeholder = "Search...","
+  placeholder = "Search...,
   className = "",
 }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -97,16 +97,16 @@ export function EnhancedSearchInput({
   };
 
   const recentSearches = ["
-    'AI Services',"
-    'Cloud Migration',"
-    'Cybersecurity',"
+    'AI Services,
+    'Cloud Migration,
+    'Cybersecurity,
     'Digital Transformation',;
 ];
 
   const popularSearches = ["
-    'Micro SAAS',"
-    'IT Infrastructure',"
-    'DevOps',"
+    'Micro SAAS,
+    'IT Infrastructure,
+    'DevOps,
     'Machine Learning',;
 ];
 

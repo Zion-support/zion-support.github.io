@@ -16,20 +16,15 @@ export default function ServicesAdvertisingPage() {
 				<link rel='canonical' href='https://ziontechgroup.com/services-advertising' />
 			</Head>const benefits = [,
   1000% ROI target with measurable KPIs;
-  ',
-    'Transparent pricing with market references;
-  ',
-    'Fast onboarding with templates and playbooks;
-  ',
-    'Enterprise-grade security and compliance;
-  ',
-    '24/7 support with SLAs;
-  ',
-    'Proven architectures and reference implementations;
+  ,Transparent pricing with market references;
+  ,Fast onboarding with templates and playbooks;
+  ,Enterprise-grade security and compliance;
+  ,24/7 support with SLAs;
+  ,Proven architectures and reference implementations;
   ';
   ];
   const anchors = [
-    { title: 'AI & Data, href:,
+  { title: 'AI & Data, href:,
   /services#ai;
   ' },
     { title: 'Cloud & FinOps, href:,
@@ -45,7 +40,8 @@ export default function ServicesAdvertisingPage() {
   /services#quality;
   ' }
   ];
-  const pricingRefs = [{
+  const pricingRefs = [
+  {
       title: 'AI Platforms,
       links: [{ name:,
   OpenAI;

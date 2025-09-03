@@ -102,32 +102,7 @@ class ComprehensiveLinkChecker {
     console.log(
   '\n=== Checking Navigation Links ===');
     const navigationUrls = [
-  '/',
-  '/about',
-  '/services',
-  '/solutions',
-  '/pricing',
-  '/contact',
-  '/blog',
-  '/careers',
-  '/team',
-  '/partners',
-  '/case-studies',
-  '/news',
-  '/help',
-  '/faq',
-  '/marketplace',
-  '/dashboard',
-  '/login',
-  '/search',
-  '/it-consulting',
-  '/ai-solutions',
-  '/solutions/enterprise',
-  '/solutions/healthcare',
-  '/research-development',
-  '/request-quote',
-  '/green-it',
-  '/space-tech'    ];
+  '/,/about,/services,/solutions,/pricing,/contact,/blog,/careers,/team,/partners,/case-studies,/news,/help,/faq,/marketplace,/dashboard,/login,/search,/it-consulting,/ai-solutions,/solutions/enterprise,/solutions/healthcare,/research-development,/request-quote,/green-it,/space-tech'    ];
     const promises = navigationUrls.map(url =>;
       this.checkUrl(`${this.baseUrl}${url}`, null, 0));
     await Promise.all(promises)}
@@ -135,40 +110,7 @@ class ComprehensiveLinkChecker {
     console.log(
   '\n=== Checking Service Pages ===');
     const serviceUrls = [
-  '/services/ai-business-intelligence',
-  '/services/ai-compliance-assistant',
-  '/services/ai-sales-copilot',
-  '/services/ai-powered-seo',
-  '/services/interview-assessment-ai',
-  '/services/ai-content-marketing-suite',
-  '/services/ai-customer-support-automation',
-  '/services/ai-project-management',
-  '/services/ai-financial-analytics',
-  '/services/ai-marketing-automation',
-  '/services/cloud-devops',
-  '/services/it-infrastructure',
-  '/services/finops-advisor',
-  '/services/cloud-finops-optimizer',
-  '/services/ai-cybersecurity-platform',
-  '/services/security-headers-csp',
-  '/services/dsr-portal',
-  '/services/zero-trust-network-access',
-  '/services/ai-compliance-copilot',
-  '/services/quantum-computing',
-  '/services/iot-edge-computing',
-  '/services/ai-quantum-hybrid-platform',
-  '/services/digital-twin',
-  '/services/digital-transformation',
-  '/services/micro-crm',
-  '/services/helpdesk-platform',
-  '/services/website-analytics',
-  '/services/it-helpdesk',
-  '/services/affiliate-tracking',
-  '/services/mobile-survey',
-  '/services/podcast-transcription',
-  '/services/email-sequencer',
-  '/services/returns-management',
-  '/services/llm-content-studio'    ];
+  '/services/ai-business-intelligence,/services/ai-compliance-assistant,/services/ai-sales-copilot,/services/ai-powered-seo,/services/interview-assessment-ai,/services/ai-content-marketing-suite,/services/ai-customer-support-automation,/services/ai-project-management,/services/ai-financial-analytics,/services/ai-marketing-automation,/services/cloud-devops,/services/it-infrastructure,/services/finops-advisor,/services/cloud-finops-optimizer,/services/ai-cybersecurity-platform,/services/security-headers-csp,/services/dsr-portal,/services/zero-trust-network-access,/services/ai-compliance-copilot,/services/quantum-computing,/services/iot-edge-computing,/services/ai-quantum-hybrid-platform,/services/digital-twin,/services/digital-transformation,/services/micro-crm,/services/helpdesk-platform,/services/website-analytics,/services/it-helpdesk,/services/affiliate-tracking,/services/mobile-survey,/services/podcast-transcription,/services/email-sequencer,/services/returns-management,/services/llm-content-studio'    ];
     const promises = serviceUrls.map(url =>;
       this.checkUrl(`${this.baseUrl}${url}`, null, 0));
     await Promise.all(promises)}
@@ -214,19 +156,11 @@ class ComprehensiveLinkChecker {
   'Broken Links',
         description: `Found ${this.brokenLinks.length} broken links that need immediate attention`,
         actions: [,
-  Fix all broken links identified in the report',
-  'Update internal navigation to remove broken links',
-  'Implement 301 redirects for moved pages',
-  'Add proper error handling for missing content';
+  Fix all broken links identified in the report,Update internal navigation to remove broken links,Implement 301 redirects for moved pages,Add proper error handling for missing content';
         ]      })}
     // Check for missing important pages;
     const importantPages = [
-  '/about',
-  '/services',
-  '/contact',
-  '/pricing',
-  '/privacy',
-  '/terms'    ];
+  '/about,/services,/contact,/pricing,/privacy,/terms'    ];
     const missingImportant = importantPages.filter(
       page => !this.workingLinks.some(link => link.url.endsWith(page)));
     if (missingImportant.length > 0) {
@@ -239,8 +173,7 @@ class ComprehensiveLinkChecker {
         actions: [;
   'Create missing critical pages,
 ,
-  Ensure proper navigation structure',
-  'Add SEO meta tags and content';
+  Ensure proper navigation structure,Add SEO meta tags and content';
         ]      })}
     // Check for orphaned pages;
     const orphanedPages = this.workingLinks.filter(
@@ -254,9 +187,7 @@ class ComprehensiveLinkChecker {
   'Navigation Structure',
         description: `Found ${orphanedPages.length} pages that may be difficult to discover`,
         actions: [;
-  'Review navigation structure',
-  'Add breadcrumbs to deep pages',
-  'Improve internal linking strategy';
+  'Review navigation structure,Add breadcrumbs to deep pages,Improve internal linking strategy';
         ]      })}
     return recommendations}
   async run() {
