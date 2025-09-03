@@ -1,22 +1,22 @@
 import React, { useEffect, useState } from 'react';
-interface AccessibilityEnhancerProps {;
-  children: React.ReactNode;,
+interface AccessibilityEnhancerProps {
+  children: React.ReactNode;
 }
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {;
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [fontSize, setFontSize] = useState('normal');
   const [reducedMotion, setReducedMotion] = useState(false);
-  useEffect(() => {;
-    // Check for user's motion preferences;
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;,
+  useEffect(() => {
+    // Check for user's motion preferences
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     setReducedMotion(prefersReducedMotion);
-    // Apply accessibility settings from localStorage;
+    // Apply accessibility settings from localStorage
     const savedHighContrast = localStorage.getItem('highContrast') === 'true';
     const savedFontSize = localStorage.getItem('fontSize') || 'normal';
     setIsHighContrast(savedHighContrast);
-    setFontSize(savedFontSize);,
-}, []);
-  const applyAccessibilityStyles = (highContrast: boolean, fontSize: string, reducedMotion: boolean) => {;,
+    setFontSize(savedFontSize);
+  }, []);
+  const applyAccessibilityStyles = (highContrast: boolean, fontSize: string, reducedMotion: boolean) => {
     const root = document.documentElement;
     // High contrast mode;
     if (highContrast) {;
