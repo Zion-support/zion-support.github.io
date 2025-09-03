@@ -1,149 +1,238 @@
-import React, { useState, useCallback, memo } from 'react';
+import type { NextPage } from 'next';
 import Link from 'next/link';
-import Navigation from '../src/components/Navigation';
-import Footer from '../src/components/Footer';
-import Sidebar from '../src/components/Sidebar';
-import SEOHead from '../src/components/seo/SEOHead';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, Brain, Cloud, Database, Network, Target, Phone, Mail, Menu } from 'lucide-react';
-;
-const Home = memo(() => {;
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-  ;
-  const handleSidebarToggle = useCallback(() => {;
-    setSidebarOpen(prev => !prev);,
-}, []);
-  ;
-  const handleSidebarClose = useCallback(() => {;
-    setSidebarOpen(false);,
-}, []);
-;
-  const structuredData = {;
-    "@context": "https://schema.org",;
-    "@type": "WebSite",;
-    "name": "Zion Tech Group",;
-    "url": "https://ziontechgroup.com",;
-    "description": "Leading provider of revolutionary AI services, IT solutions, and micro SaaS development",;
-    "potentialAction": {;
-      "@type": "SearchAction",;
-      "target": "https://ziontechgroup.com/search?q={search_term_string}",;
-      "query-input": "required name=search_term_string";,
-},;
-    "publisher": {;
-      "@type": "Organization",;
-      "name": "Zion Tech Group",;
-      "url": "https://ziontechgroup.com";,
-}
-  };
-  const stats = [;
-  { number: '500+', label: 'Projects Completed' },;
-    { number: '50+', label: 'Happy Clients' },;
-    { number: '99.9%', label: 'Uptime Guarantee' },;
-    { number: '24/7', label: 'Support Available' }
-  ];
-  ;
-  const services = [;
-  {;
-      title: 'AI Services',;
-      description: 'Cutting-edge artificial intelligence solutions',;
-      icon: Brain,;
-      href: '/services/ai-services';,
-},;
-    {;
-      title: 'IT Services',;
-      description: 'Comprehensive information technology services',;
-      icon: Network,;
-      href: '/services/it-services';,
-},;
-    {;
-      title: 'Micro SaaS',;
-      description: 'Scalable software as a service solutions',;
-      icon: Cloud,;
-      href: '/services/micro-saas';,
-}
-  ];
-;
-  const features = [;
-  {;
-      icon: Zap,;
-      title: 'Fast Delivery',;
-      description: 'Quick turnaround times without compromising quality';,
-},;
-    {;
-      icon: Shield,;
-      title: 'Enterprise Security',;
-      description: 'Bank-level security and compliance standards';,
-},;
-    {;
-      icon: Users,;
-      title: 'Expert Team',;
-      description: 'Dedicated professionals with years of experience';,
-},;
-    {;
-      icon: Globe,;
-      title: 'Global Reach',;
-      description: 'Serving clients worldwide with local expertise';,
-}
-  ];
-;
-  return (;
-    <>;
-      <SEOHead;
-        title="Zion Tech Group - Leading Technology Solutions Provider";
-        description="Transform your business with cutting-edge AI services, IT solutions, and micro SaaS development. Expert technology consulting and implementation.";
-        keywords="AI services, IT solutions, micro SaaS, technology consulting, digital transformation, cloud services, cybersecurity";
-        structuredData={structuredData}
-      />;
-      ;
-      <Navigation />;
-      <Sidebar isOpen={sidebarOpen} onClose={handleSidebarClose} />;
-      ;
-      <main className="min-h-screen bg-white">;
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20" role="banner" aria-labelledby="hero-heading">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-            <div className="text-center">;
-              <h1 id="hero-heading" className="text-5xl font-bold text-gray-900 mb-6">;
-                Transform Your Business with;
-                <span className="text-blue-600"> Technology</span>;
-              </h1>;
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">;
-                Leading provider of revolutionary AI services, IT solutions, and micro SaaS development. ;
-                We help businesses innovate, scale, and succeed in the digital age.;
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-                <Link href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">;
-                  Get Started;
-                </Link>;
-                <Link href="/services" className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors">;
-                  View Services;
-                </Link>;
-                <button ;
-                  onClick={handleSidebarToggle}
-                  className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors flex items-center justify-center";
-                  aria-label="Open navigation menu";
-                  aria-expanded={sidebarOpen}
-                >;
-                  <Menu className="w-4 h-4 mr-2" />;
-                  Explore Menu;
-                </button>;
-              </div>;
-            </div>;
-          </div>;
-        </section>;
+import { Brain, Cloud, Shield, Users, ArrowRight, CheckCircle } from 'lucide-react';
 
-        {/* Stats Section */}
-        <section className="py-20 bg-white">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">;
-              {stats.map((stat, index) => (;
-                <div key={index} className="text-center">;
-                  <div className="text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>;
-                  <div className="text-gray-600">{stat.label}</div>;
-                </div>;
-              ))}
-            </div>;
-          </div>;
-        </section>;
+const Home: NextPage = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI Development',
+      description: 'Custom AI solutions and machine learning models for your business needs.',
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+      icon: Cloud,
+      title: 'Cloud Architecture',
+      description: 'Scalable cloud solutions and infrastructure design for modern applications.',
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      icon: Shield,
+      title: 'Digital Transformation',
+      description: 'End-to-end digital transformation services to modernize your business.',
+      color: 'from-green-500 to-emerald-500'
+    }
+  ];
+
+  const stats = [
+    { number: '500+', label: 'Projects Completed' },
+    { number: '50+', label: 'Team Members' },
+    { number: '98%', label: 'Client Satisfaction' },
+    { number: '10+', label: 'Years Experience' }
+  ];
+
+  const testimonials = [
+    {
+      quote: "Zion Tech Group transformed our business with their innovative AI solutions. The results exceeded our expectations.",
+      author: "Sarah Johnson",
+      role: "CEO, TechCorp",
+      company: "TechCorp Industries"
+    },
+    {
+      quote: "Their cloud architecture expertise helped us scale our platform to handle millions of users seamlessly.",
+      author: "Michael Chen",
+      role: "CTO, DataFlow",
+      company: "DataFlow Systems"
+    },
+    {
+      quote: "Working with Zion Tech Group was a game-changer for our digital transformation journey.",
+      author: "Emily Rodriguez",
+      role: "VP of Technology",
+      company: "InnovateCorp"
+    }
+  ];
+
+  return (
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              Welcome to Zion Tech Group
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
+              Leading technology solutions provider helping businesses transform their digital presence 
+              with cutting-edge AI, cloud architecture, and innovative development services.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row justify-center gap-6 mb-12">
+              <Link href="/services"><span className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors text-lg">
+                Our Services
+              </span></Link>
+              <Link href="/contact"><span className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-semibold transition-colors text-lg">
+                Get in Touch
+              </span></Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">Why Choose Zion Tech Group?</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              We combine technical expertise with business acumen to deliver solutions 
+              that drive real business value and competitive advantage.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="text-center p-8 bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                <div className={`w-20 h-20 bg-gradient-to-r ${feature.color} rounded-full flex items-center justify-center mx-auto mb-6`}>
+                  <feature.icon className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-semibold mb-4 text-gray-800">{feature.title}</h3>
+                <p className="text-gray-600 text-lg">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-4 gap-8 text-center">
+            {stats.map((stat, index) => (
+              <div key={index}>
+                <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">{stat.number}</div>
+                <div className="text-gray-600 text-lg">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">
+                Transforming Businesses Through Technology
+              </h2>
+              <p className="text-lg text-gray-600 mb-6">
+                At Zion Tech Group, we believe that technology should be an enabler, not a barrier. 
+                Our team of experts works tirelessly to create solutions that are not only powerful 
+                but also intuitive and accessible.
+              </p>
+              <p className="text-lg text-gray-600 mb-8">
+                From startups to enterprise organizations, we've helped businesses across industries 
+                leverage cutting-edge technology to achieve their goals and stay ahead of the competition.
+              </p>
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-green-500" />
+                  <span className="text-gray-700">Custom solutions tailored to your needs</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-green-500" />
+                  <span className="text-gray-700">Expert team with proven track record</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-green-500" />
+                  <span className="text-gray-700">Ongoing support and maintenance</span>
+                </div>
+              </div>
+              <div className="mt-8">
+                <Link 
+                  href="/about" 
+                >
+                  <span className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+                    Learn More About Us
+                    <ArrowRight className="ml-2 w-4 h-4" />
+                  </span>
+                </Link>
+              </div>
+            </div>
+            
+            <div className="bg-gradient-to-br from-blue-400 to-purple-500 rounded-lg p-8 text-white text-center">
+              <div className="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Users className="w-12 h-12" />
+              </div>
+              <h3 className="text-2xl font-bold mb-4">Join Our Team</h3>
+              <p className="text-lg mb-6">
+                We're always looking for talented individuals to join our team and help 
+                shape the future of technology.
+              </p>
+              <Link href="/talent"><span className="bg-white text-blue-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                View Open Positions
+              </span></Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">What Our Clients Say</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Don't just take our word for it. Here's what our clients have to say about 
+              working with Zion Tech Group.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
+                <div className="mb-6">
+                  <div className="flex text-yellow-400 mb-2">
+                    {[...Array(5)].map((_, i) => (
+                      <svg key={i} className="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                      </svg>
+                    ))}
+                  </div>
+                  <p className="text-gray-600 italic text-lg">"{testimonial.quote}"</p>
+                </div>
+                <div>
+                  <p className="font-semibold text-gray-800">{testimonial.author}</p>
+                  <p className="text-gray-600">{testimonial.role}</p>
+                  <p className="text-blue-600 font-medium">{testimonial.company}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-blue-600 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
+          <p className="text-xl mb-8 max-w-3xl mx-auto">
+            Let's discuss how our technology solutions can help you achieve your goals 
+            and stay ahead of the competition.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/contact"><span className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg">
+              Get Started Today
+            </span></Link>
+            <Link href="/services"><span className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-lg font-semibold transition-colors text-lg">
+              Explore Our Services
+            </span></Link>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
 
         {/* Services Section */}
         <section className="py-20 bg-gray-50">;
